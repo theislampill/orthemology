@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "reviewed_result_sha256": "6687a8f2f56290427297bba1cfef6c8c14a58878ffa0010805550f0cd632b0d5",
+  "files": [
+    {
+      "path": "../finite-skyline-readout/RESULT.md",
+      "sha256": "6687a8f2f56290427297bba1cfef6c8c14a58878ffa0010805550f0cd632b0d5",
+      "bytes": 12282,
+      "inspection_scope": "Read full initial result and final comparator/introductory revisions; independently reviewed transport proof."
+    },
+    {
+      "path": "../finite-skyline-readout/controls.py",
+      "sha256": "10b6cf8278c254e67a1e8f61c96f6d8a1df5db4b22f16023d4933fec46d520c4",
+      "bytes": 3217,
+      "inspection_scope": "Read full; independently exercised extraction and resolution functions."
+    },
+    {
+      "path": "../finite-skyline-readout/CONTROL_RESULTS.json",
+      "sha256": "21de5180ec9b7b5fa2bdcc3723af87f2daa7a9d7bdda09da7cf47e1a03064248",
+      "bytes": 1838,
+      "inspection_scope": "Compared complete semantic output against disposable author replay."
+    },
+    {
+      "path": "../finite-skyline-readout/SOURCE_AUDIT.md",
+      "sha256": "cbdbf37f09510bcd97fa08af8c8dd62b249e796465bf5f895accfab20f8bd0eb",
+      "bytes": 1660,
+      "inspection_scope": "Read full."
+    },
+    {
+      "path": "../skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+      "bytes": 10942,
+      "inspection_scope": "Read full; ideal count theorem consumed as already reviewed, not independently re-proved."
+    },
+    {
+      "path": "../skyline-count-information/SOURCE_AUDIT.md",
+      "sha256": "7566656cd2e29eb3a6044514a86df92de554eee042ba4cd0a6b7465dbaceef83",
+      "bytes": 1778,
+      "inspection_scope": "Read full."
+    },
+    {
+      "path": "../full-face-threshold-kl-rate/RESULT.md",
+      "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+      "bytes": 14568,
+      "inspection_scope": "Read observation contract, beginning of transformed-density argument, and sections 4-7. Comparison consumes existing theorem; no independent re-proof of asymptotic C2 calculation."
+    },
+    {
+      "path": "../full-face-threshold-kl-rate/SOURCE_AUDIT.md",
+      "sha256": "5028101157e52889aa845949e4dae7e2e71655bc5768312455056b0e5317cd3f",
+      "bytes": 3906,
+      "inspection_scope": "Read full."
+    },
+    {
+      "path": "../retained-interior-certificate/RESULT.md",
+      "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+      "bytes": 16475,
+      "inspection_scope": "Read sections 1-3 for retained/nonlatched interface and route semantics."
+    },
+    {
+      "path": "../retained-interior-certificate/SOURCE_AUDIT.md",
+      "sha256": "fefdee68383cf0ea813182da8b918be831935774317e18ba609513191d5659f7",
+      "bytes": 3679,
+      "inspection_scope": "Read full."
+    },
+    {
+      "path": "../checkpoints/retained-readout/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.READ_FIRST.md",
+      "sha256": "3e0545e03387735e182a173e15fbdd871e93f7fec12cf80d64fe65807513051e",
+      "bytes": 7389,
+      "inspection_scope": "Read full ninth-checkpoint scope and preservation boundaries."
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "at_utc": "2026-10-08T07:07:35.492259+00:00",
+  "checked": 20,
+  "all_match": true,
+  "entries": [
+    {
+      "path": "DESIGN.md",
+      "matches": true
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "matches": true
+    },
+    {
+      "path": "REPORT.md",
+      "matches": true
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "matches": true
+    },
+    {
+      "path": "RESEARCH_TIME.json",
+      "matches": true
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "matches": true
+    },
+    {
+      "path": "results/ALL_16.txt",
+      "matches": true
+    },
+    {
+      "path": "results/ALL_16_GREEN.txt",
+      "matches": true
+    },
+    {
+      "path": "results/BASELINE.py.txt",
+      "matches": true
+    },
+    {
+      "path": "results/FINAL_REPLAY.txt",
+      "matches": true
+    },
+    {
+      "path": "results/FIRST_GREEN.txt",
+      "matches": true
+    },
+    {
+      "path": "results/FIRST_RED.txt",
+      "matches": true
+    },
+    {
+      "path": "results/PREDICATES.json",
+      "matches": true
+    },
+    {
+      "path": "results/RECOVERED_HASH_CHECK.json",
+      "matches": true
+    },
+    {
+      "path": "results/SELECTION_RED.txt",
+      "matches": true
+    },
+    {
+      "path": "sources/AMERI_READBACK.json",
+      "matches": true
+    },
+    {
+      "path": "src/joint_end.py",
+      "matches": true
+    },
+    {
+      "path": "src/selection_probe.py",
+      "matches": true
+    },
+    {
+      "path": "src/test_joint_end.py",
+      "matches": true
+    },
+    {
+      "path": "src/test_selection_probe.py",
+      "matches": true
+    }
+  ]
+}

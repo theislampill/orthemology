@@ -1,0 +1,16 @@
+[
+  {
+    "path": "../CURRENT_FINDING.md",
+    "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+    "matches_preserved_manifest": true
+  },
+  {
+    "path": "../sources/akmaliyya-canonical-working.txt",
+    "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+    "used_lines": [
+      "L073",
+      "L216–223",
+      "L258–274"
+    ]
+  }
+]

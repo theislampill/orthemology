@@ -1,0 +1,115 @@
+{
+  "cautions": [
+    "The polynomial-budget equivalence is eventual in M and at fixed delta in (0,1/2).",
+    "M^-2 is not the universal tolerance for all polynomial-budget procedures.",
+    "Finite controls supplement, rather than replace, the general proof."
+  ],
+  "controls_independently_run": [
+    {
+      "assertions_passed": 33840,
+      "kind": "author control replay from sibling-only copy",
+      "output": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+      },
+      "output_byte_identical_to_author": true,
+      "program": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+      }
+    },
+    {
+      "assertions_passed": 22073,
+      "families": {
+        "bernoulli_inequality_step": 294,
+        "boundary_error_geometry": 3100,
+        "bracket_constants": 294,
+        "catalogue_final_gap_minimum": 294,
+        "catalogue_strict_gap_order": 294,
+        "clipped_adaptive_exponential_tv_bound": 48,
+        "clipped_adaptive_law_normalization": 48,
+        "clipped_boundary_adaptive_identity": 12,
+        "clipped_endpoint_one": 135,
+        "clipped_endpoint_zero": 135,
+        "clipped_error_band": 3100,
+        "clipped_rate_domain": 3100,
+        "clipped_strict_monotonicity": 2965,
+        "exact_sufficient_gap": 294,
+        "input_digest": 2,
+        "input_digest_unchanged": 2,
+        "looser_budget_log_comparison": 294,
+        "modified_region_command_bound": 920,
+        "modified_region_no_clipping": 920,
+        "modified_region_probability_order": 920,
+        "modified_region_tv_envelope": 920,
+        "numerical_exponential_gap": 294,
+        "numerical_exponential_kernel_bound": 920,
+        "sufficient_command_domain": 294,
+        "sufficient_survival_domain": 294,
+        "unmodified_region_identity": 2180
+      },
+      "kind": "separately implemented exact and Decimal controls",
+      "output": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "b1cba00ac8bc9afc0708de3a43c1977f7bae5b097bcd1d5481adb53175c6a88b"
+      },
+      "program": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "efa792bf29547d5c470fa99992eed4a31c91bd18a48287f89d546fb39e6b4cb6"
+      }
+    }
+  ],
+  "corrections_required": [],
+  "exclusions": [
+    "Sharp minimax constants or exponents",
+    "Optimal or varying confidence dependence",
+    "Expected stopping times",
+    "Mixture/enriched observation recovery",
+    "Physical/empirical/causal/source certification",
+    "Protected integration or T20 closure"
+  ],
+  "guards": {
+    "appendix_controls_rerun_after_domain_clarification": true,
+    "confidence_domain_only_diff_verified": true,
+    "final_author_digests_verified_before_binding": true,
+    "main_review_and_receipt_unchanged": true,
+    "reviewer_modified_author_or_predecessor_files": false
+  },
+  "resolved_corrections": [
+    {
+      "exact_change": "any target error delta>0 -> any target error 0<delta<1/2",
+      "final_appendix_sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+      "initial_appendix_sha256": "39b1d8758a0d633ad37008e132d81312742e0a4a30c1d1f7945fbaed65bb4fb7",
+      "kind": "Explicit confidence domain in appendix Section 2",
+      "resolution": "The stated confidence domain is explicit; both appendix control suites rerun and rebound.",
+      "verified_only_change": true
+    }
+  ],
+  "review_document": {
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "sha256": "cc32f7ea9594ba8252dc746d867b20ee9acf7240b6f6ed5ba584b6c5b984edfd"
+  },
+  "reviewed_artifacts": [
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-08T13:14:31.853217+00:00",
+  "reviewer_task": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "schema_version": 1,
+  "verdict": "PASS",
+  "verdict_scope": "Separate mathematical review of the efficiency appendix, conditional on the bound main model; no release, integration, or closure authority."
+}

@@ -1,0 +1,482 @@
+{
+  "schema": "t20-checkpoint-file-manifest-v1",
+  "classification": "FOURTEENTH_INTERMEDIATE_PRESERVATION_ONLY",
+  "file_count": 95,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 17387,
+      "sha256": "a5f9830eaccc463bb79dc8dcc3920f5a6c2f8f4ffeb554af65b4bb00bd065ff5"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 2613,
+      "sha256": "b24d372c4bf4d4e02866ff1fdd2c5b9ddd7cf2cdddf5a55c1a76b2e0bcf0fbec"
+    },
+    {
+      "path": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+      "bytes": 30499,
+      "sha256": "eab2d42ffe97affbbdc685f2869b3ee7abe41d384f3ea729085befc81de58dc7"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 49394,
+      "sha256": "6ee9c334a24ce737eb4d19929bf7ab4dfa96430bf7a83919f7a683bbe8523fd2"
+    },
+    {
+      "path": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+      "bytes": 342851,
+      "sha256": "a16d74a4cf02245e30f3175e66ef85a993f1617e8d4505029876e59f3a5d180b"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 24206,
+      "sha256": "72d7a1e11dfb3f0c3e815e9ccd79b032a9170bebf3287ef6fec29e244e150a7f"
+    },
+    {
+      "path": "PACKING/binding_controls.py",
+      "bytes": 2520,
+      "sha256": "e6e6a68615bfffc23bddc6dcf85994a9656a7902c9850ef35d801cea094a853b"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 8587,
+      "sha256": "531c7956a687e7313e4cd939d9978654ae2170f9b32bd45811effdb1ed65b0d7"
+    },
+    {
+      "path": "PACKING/integrity_controls.py",
+      "bytes": 2870,
+      "sha256": "30e135f642f5755305f1516501a0362b6eaf2d4f0fff8ef97e51dce8dfc2a4b6"
+    },
+    {
+      "path": "PACKING/safe_extract.py",
+      "bytes": 2604,
+      "sha256": "86e3ed018c1d74e06661fd0f19a693339c86b735c054ac8206e8cb4b172b72f1"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 7935,
+      "sha256": "23bb3f18e8f5642a631c9fed9714d1ca4bdde51e5f85989ec1aaa427f9d02bc4"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 2581,
+      "sha256": "c6a85950ab1ba4d35e3135cf0db94fccfbe08b3ea706e9d7247a45523b083b45"
+    },
+    {
+      "path": "entire-production-rival-review/INPUT_HASHES.sha256",
+      "bytes": 580,
+      "sha256": "86712af71fd2f9c767e29c30cab411d3b45ca883918bdcef5c0f532f440df88f"
+    },
+    {
+      "path": "entire-production-rival-review/REVIEW.md",
+      "bytes": 14197,
+      "sha256": "857c19cfca028bb633622af08045d428271f024d15d4174e6e0729b5514f896e"
+    },
+    {
+      "path": "entire-production-rival-review/REVIEW.sha256",
+      "bytes": 107,
+      "sha256": "3925185a7dca3959ffb025528a0712794841bb745ec19977e2207f1baecdb228"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/INPUT_BINDINGS.json",
+      "bytes": 4275,
+      "sha256": "96e5ca08801a65f824e45fc95efc24b3c6b79e14d89b2ca7fb30651fc61b995f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/MANIFEST.json",
+      "bytes": 2674,
+      "sha256": "7d3ee9a4d2e6d97bcf501c9eb4bd678ca2c6f1758fd5d409cb8add5fab1f6b0b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/MANIFEST.sha256",
+      "bytes": 1549,
+      "sha256": "02913d08b12e461ae6c3114edc91630da49a007d7a3ec7911078263e97fee805"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+      "bytes": 20893,
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REVISION_RECORD.json",
+      "bytes": 439,
+      "sha256": "86c9d396c0963eabda4ebf347cee2d0fb16f2ac36f3b63890715fa0ea2cc5441"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json",
+      "bytes": 3374,
+      "sha256": "902d2d86f16d5cf9a3e9a56e07d0a0011f50910474e1ea32fd5c43d0b8436ded"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/VERIFICATION.json",
+      "bytes": 391,
+      "sha256": "30c5fc1df3d5b99376dbc5fac7e1e36feda62b012a07550ce064976326070097"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/history/PRIOR_FINAL.sha256",
+      "bytes": 126,
+      "sha256": "60cc92df150f58bb6cac5ec7237d3a0316ff5a82e542ba4c0acab815baafa658"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/history/REPORT.before-explicit-effect-relative-precision.md",
+      "bytes": 20589,
+      "sha256": "957c96c91951b19ce4a43c4a91352352bdde37c6912e1c37aebb4c984f2899f9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/INPUT_HASHES.sha256",
+      "bytes": 1267,
+      "sha256": "9d1e1b2cc29c1ad88e6ef11ca68ec9ccec1f0b4498048113fa1c6392bd4870c1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/OUTPUT_HASHES.sha256",
+      "bytes": 425,
+      "sha256": "5ec9eece077ae32a4320fb919cbcf8d50f5d37d3fc2a80b34c858fa10be6d9a9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/RESULT.md",
+      "bytes": 29381,
+      "sha256": "c81a634310e6f7696645f02e9ee885215e57f87919c0d965cf4c746e2a5f2408"
+    },
+    {
+      "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md",
+      "bytes": 4008,
+      "sha256": "d8344b771acb80d48a9a3689335e52e458049423ae4cb4bbcd4ce4d426574472"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/INPUT_BINDINGS.json",
+      "bytes": 2010,
+      "sha256": "25342148209cc7ac3eef2cfd28a8376c8fc31e42463ea3d2fde4fbeb59f2feca"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/MANIFEST.json",
+      "bytes": 1760,
+      "sha256": "5a9897de0c4ca56c8cc145e43de54d4d71544ac17f777754bf0909617f510b8e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/MANIFEST.sha256",
+      "bytes": 80,
+      "sha256": "d890587b141cb70f3f601ad2eea72b1c36739974d42b4f5581a5c6cac5e8091a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json",
+      "bytes": 2723,
+      "sha256": "74e234accafe8768a9a0ae2132ac7505d1593446284946841792f4daf5a480b3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/READING_NOTES.md",
+      "bytes": 3740,
+      "sha256": "dd77ee7a794b212c82c6edf0ff3d821de5ce56adcdde6892d871402926adc085"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+      "bytes": 21513,
+      "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/REVIEW_CORRECTIONS.json",
+      "bytes": 792,
+      "sha256": "639e2ddeb4e27060c6b7cfd0bcd6e898fa84dd0d7d9cdd1a07fc10421c732904"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/VERIFICATION.json",
+      "bytes": 697,
+      "sha256": "7770ce02b25e225d42a4fd8c9ecf3c1afcf99798d1ade2b6cb3ce860bcffb6e8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/history/RESULT.before-review-corrections.md",
+      "bytes": 20557,
+      "sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/CHECKS.json",
+      "bytes": 646,
+      "sha256": "0cd6bb59868c8e0186a2af1b23311c6e45d790d165f725cff6498a3b4ab7616d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/FINAL_READBACK.json",
+      "bytes": 993,
+      "sha256": "806130a8bc485af2ffc80d11a909e0a06fac421e12a13bf9fab1eefd11d4af9f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/FINAL_READBACK.md",
+      "bytes": 2014,
+      "sha256": "544178053f70e06142bb576b903e91c90246bb2789d6021fcd73f8787a90d07e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/INPUT_BINDINGS.json",
+      "bytes": 6197,
+      "sha256": "c0adf704f8439c70821867d6fb3f38711f350d4b77a7b425148da336eac4311f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/MANIFEST.json",
+      "bytes": 1076,
+      "sha256": "2ee99c8def1671d5f4e36f48fdad01fb8f12c1fd95c8ce64110fc873b97571f5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/MANIFEST.sha256",
+      "bytes": 80,
+      "sha256": "0bf5c7a6e5435e37a8215ef76d5e4ea5fe10ada6ced0a3ee5791452a2b232b10"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/METADATA_CHECK.json",
+      "bytes": 695,
+      "sha256": "c675f9341e2bb1c6698b50a53182997ba7456a067888b5fedb8ac818eb4c2f64"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/READING_RECORD.json",
+      "bytes": 3634,
+      "sha256": "120d7f98337582236718d3d7b7de7ca4f394b4df779f3cd9cbb346ce5f31e43b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/REVIEW.md",
+      "bytes": 11374,
+      "sha256": "3a2c0c130261202f1dc4e6feb610b71c7c1ae9eaa9d7802df911a3c4fe456ddc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-actualisation-review/INPUT_HASHES.json",
+      "bytes": 1120,
+      "sha256": "4a2c24485edd20d4143318dc355ec7654ad25a3a4b1b5f815a1ec0af1739e399"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-actualisation-review/REVIEW.md",
+      "bytes": 7492,
+      "sha256": "387fe80cea2031da974ffd426ad6d2b40db8d39b2bc07939ffbed7faa21add9d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/ACTUALISATION_AUDIT.md",
+      "bytes": 6116,
+      "sha256": "31f39e303ad20544caa01395069bf25561b1cb1f361e3862b8ec4ac41510e27d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/INPUT_BINDINGS.json",
+      "bytes": 2222,
+      "sha256": "2512c4f5dae8a28a924217f890b02edbe3c20cfc993a409e0ac86cfc45d81851"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json",
+      "bytes": 1379,
+      "sha256": "87a4384d2638a57113cbc8627e3f756e9df1ecfd0c5f1f3c1d73727c9c503a76"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/MANIFEST.json",
+      "bytes": 5828,
+      "sha256": "0b17f310ce36637bb98f63ce3fde3ea3d6d9b7b9d6791e2185bc2b86ae3fb000"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/MANIFEST.sha256",
+      "bytes": 80,
+      "sha256": "a7033c04183c11f8d59df15058acd11ddee96fee7ad57322dd6379e7aceb4de2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/PRIOR_COVERAGE_SEARCH.json",
+      "bytes": 8232,
+      "sha256": "b3471385b8b0f5a15cad23e90fc8f3425dde6730a86930da9518b7dce2723090"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "bytes": 4823,
+      "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+      "bytes": 17505,
+      "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/VERIFICATION.json",
+      "bytes": 3364,
+      "sha256": "60879e2104789a96b3610801de562d9b76c9e6360e01257d0ed57a722615f18c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/NOTE11_REFINEMENT.json",
+      "bytes": 991,
+      "sha256": "51fda8af3659a54fa498e072f4e271f6c8afc2a065df9d4df98004cabf817de3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md",
+      "bytes": 17095,
+      "sha256": "ea7956ded7d0962ef901471317f6b617b9827af2a89089f2f5fed97603eca499"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt",
+      "bytes": 3581,
+      "sha256": "0171441adaa5fd014961d98d3ef924f4672acfc6de146bccdc87db34886fc954"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+      "bytes": 1594,
+      "sha256": "94dd3179a4705d6f05a140cb7a58f97bb61a0ca8235502d67bc97b9dd2d232a3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/MANIFEST.json",
+      "bytes": 1154,
+      "sha256": "0e6b12793b271fe74788b4280b2eaa6dbd09ad36c39f2350a764ea5e0e93767b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+      "bytes": 3404,
+      "sha256": "d2db5bce9158422dd8e59ff407a1869597cdca52a793765705c75d9c0f33897a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+      "bytes": 7675,
+      "sha256": "c3b5c68d00b4b4d0f6c296fe72642ecc53287d17b2d37fe268aaf996bcc7d85d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "bytes": 22307,
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+      "bytes": 2094,
+      "sha256": "11c26aa51d83d08c8c974ea001661da05c150fa98212109bf946aec645eeba24"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/INPUT_HASHES.json",
+      "bytes": 7494,
+      "sha256": "31cd3b12000c286e433246b783f9fba4d02fe6ea0ff02aae03f1a34394f07ec7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/MANIFEST.json",
+      "bytes": 1152,
+      "sha256": "9af7d07a3a3a6b79edd84d90dfac552bad655169b076927fbf9a512edd836610"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json",
+      "bytes": 5912,
+      "sha256": "fff594a451add1b0a09e7a8baf1be2f4ee257f25d5696b0377fd9d4b37b89d73"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md",
+      "bytes": 10615,
+      "sha256": "a7b589769897f5b3d0d14c2675ee6bef3eb4b47e32562575d3c326df58e1c42c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/VERIFICATION.json",
+      "bytes": 7740,
+      "sha256": "172eaa45c0f57a743db1a4b210054a902a8dab306ebc4cf33ea6987206305830"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power-review/reviewed_RESULT.md",
+      "bytes": 22307,
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/INPUT_BINDINGS.json",
+      "bytes": 3764,
+      "sha256": "bc7daf060062907c514d36211847c397b12856a36535ca0794735d0c358b7698"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/MANIFEST.json",
+      "bytes": 2662,
+      "sha256": "7f30f8e1e0063a898c1968f3f04fe18ed78f9740a9e0fff88892b83e0d3baf7f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/MANIFEST.sha256",
+      "bytes": 80,
+      "sha256": "fee2b91fd88a7a0b5bf042d9afc7efeff87413c002e19f77ad00be2aae1b390e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/READ_FIRST.md",
+      "bytes": 1081,
+      "sha256": "83962aa30afa8835ad5ef65d30f75043cc9720394b282c3ae311bf5de325be13"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "bytes": 23804,
+      "sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json",
+      "bytes": 4393,
+      "sha256": "1eceeb045675e4968919e2e22e45e7999e12feee2741ac66aa4f92100062c763"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "bytes": 24972,
+      "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/INPUT_BINDINGS.json",
+      "bytes": 9594,
+      "sha256": "595f58daa694e0a6c045f9873a94269e6abd5c18c1e05ddca565a5f1a226cea3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/MANIFEST.sha256",
+      "bytes": 245,
+      "sha256": "eab06d6d6a48b6be2e959310b53db6b004c86757a75788d273a2135d3e2a01de"
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/VERIFICATION.json",
+      "bytes": 438,
+      "sha256": "20a83680bf978c6520a83b97e85795f986eca4eed4026dcf4968708484cbdc1c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/particular-reasons-comparison/INPUT_SHA256.txt",
+      "bytes": 2783,
+      "sha256": "293df4cec491006034801a920a99b65d1efb09bdfbf4af32a4f297ffdf2b3829"
+    },
+    {
+      "path": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md",
+      "bytes": 20685,
+      "sha256": "fc29f0403f42aec87c48455d7b078b4653dd13736fa7895c65d1060bd77e2080"
+    },
+    {
+      "path": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md",
+      "bytes": 8553,
+      "sha256": "10f49803cd5cc3f5a9cbce542e75f2603cae9053d73a229438c8669be9b61c8e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/particular-reasons-comparison/VERIFICATION.txt",
+      "bytes": 2099,
+      "sha256": "37382999719c4f7b62ee27798fe48d20d1b40e870f2653af1c92113492213b11"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "bytes": 1820,
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/GALE_PRUSS_TARGETED_RETURN_20261009.json",
+      "bytes": 1190,
+      "sha256": "3d80126a0422e627b8ac220febaa637db54f381b4a1b5aaa31f2a1eb6a6deb51"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/MODAL_PSR_ROOT_READBACK_20261009.json",
+      "bytes": 756,
+      "sha256": "0410a6b80f345a3f9ce8a605c3b4d7bc9cbcac3d7277ee1113f0f854d1f37df0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_TARGETED_RETURN_20261009.json",
+      "bytes": 1548,
+      "sha256": "01831f07aa7fd9ad6f445d4f2f9dce6a83b081777a01a1b0d1e8648afa906feb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "bytes": 5862,
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/OVERDETERMINATION_TARGETED_RETURN_20261009.json",
+      "bytes": 1875,
+      "sha256": "370fedfe2264adbd433742b72ffc166ae3dc860ab9a84aada247893ef0d91e9e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PARTICULAR_REASONS_ARABIC_RETURN_20261009.json",
+      "bytes": 1663,
+      "sha256": "7334978b3faa406452b4082af05ff939742fb5eb17ba4b218b589f322766c0dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PRUSS_LCA_TARGETED_RETURN_20261009.json",
+      "bytes": 2066,
+      "sha256": "ffca0a16cd573b5cc02c9b034f5ded183a73e8a42e9c0fd36ea097a927065005"
+    }
+  ]
+}

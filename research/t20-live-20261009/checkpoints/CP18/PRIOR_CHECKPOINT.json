@@ -1,0 +1,45 @@
+{
+  "checkpoint_number": 17,
+  "zip": {
+    "path": "t20-next-frontier-20261008/checkpoints/simultaneous-production/T20_Simultaneous_Production_and_Source_Return_Intermediate_Checkpoint_20261009.zip",
+    "bytes": 156181,
+    "sha256": "5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3",
+    "library_file_id": "private-library-alias-006",
+    "version": 0
+  },
+  "guide": {
+    "path": "t20-next-frontier-20261008/checkpoints/simultaneous-production/T20_Simultaneous_Production_and_Source_Return_Intermediate_Checkpoint_20261009.READ_FIRST.md",
+    "bytes": 3138,
+    "sha256": "1152775e6d593462cd89ed4c1ee34209224c18ec3f8a05810f34d9e6cf7798e5",
+    "library_file_id": "private-library-alias-019",
+    "version": 0
+  },
+  "prior_registry_by_reference": {
+    "container_zip_sha256": "5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3",
+    "container_root": "T20_Simultaneous_Production_and_Source_Return_Intermediate_Checkpoint_20261009",
+    "manifest_reference": {
+      "path": "t20-next-frontier-20261008/checkpoints/simultaneous-production/T20_Simultaneous_Production_and_Source_Return_Intermediate_Checkpoint_20261009.MANIFEST.json",
+      "bytes": 10884,
+      "sha256": "b0f8fdbacff8edcf4df0f638d9a2f23ca402a935d15c4ef78e86133117e2fd75"
+    },
+    "records": [
+      {
+        "path": "PRIOR_CHECKPOINT.json",
+        "bytes": 2255,
+        "sha256": "dafac8fd16073d3cca26d6461d8e8c47953e951ffa0aa7f80736710269f6fa5d"
+      },
+      {
+        "path": "prior-checkpoints/CHECKPOINT_15_PRIOR_REGISTRY.json",
+        "bytes": 19654,
+        "sha256": "58dfed8a7a75e40cde193a450bfc3783c3c92304e9d61e48e7f1a34a79805a04"
+      },
+      {
+        "path": "prior-checkpoints/CHECKPOINT_16_PRIOR_CHECKPOINT.json",
+        "bytes": 1488,
+        "sha256": "6289e74dbc18cc64abbd26c7d0a9f22ecc8e8acd01f22ce61e697934767e0401"
+      }
+    ],
+    "status": "Exact recorded identities retained by reference, not copied, expanded or revalidated. Retrieve checkpoint17 to follow its unchanged prior registry."
+  },
+  "limits": "No prior ZIP is nested, no prior proof is replayed, and no global historical validation is claimed."
+}

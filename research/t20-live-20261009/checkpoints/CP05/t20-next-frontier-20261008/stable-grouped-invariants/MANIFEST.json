@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-08T14:20:20.671707+00:00",
+  "status": "author checkpoint frozen with independent mathematical pass",
+  "scope": "Conditional polynomial-sample primitive support/zero-flag recovery, separately budgeted weight estimates; no empirical sampling, tractability, physical validation, protected integration or T20 closure",
+  "author_control_families": 13,
+  "review_references": [
+    {
+      "path": "../stable-grouped-invariants-review/REVIEW.md",
+      "sha256": "44c908b9bdf0fcaffa875ce435a30c0c74e6e506aa6f1c76e09328bf483cbd07"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/FINAL_BINDINGS.json",
+      "sha256": "e1f6ea87ac2c22b97927d9f40d812c692780d3a23d2ab1503f4af6a79300a1de"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/WITNESS_REPLAY.md",
+      "sha256": "dfc68794c2c52824922fa9e38add7b1d6076a40c36340d81a320120689c756a6"
+    },
+    {
+      "path": "../stable-grouped-invariants-review/MANIFEST.json",
+      "sha256": "d688d3d1555d02f31e27f49cfdb8fbd807b480da6cc9fdd884fa78926ca8adc9"
+    }
+  ],
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "33cda0de22fd41ef5c5a3594ee402663192bb17ebaa9344eae40ab4c194fc998",
+      "bytes": 3439
+    },
+    {
+      "path": "FINAL_CHECK.json",
+      "sha256": "bc3c36597637d7af2ded7cb55dd11650b0893629cae5ded662ce5e19f21b8afc",
+      "bytes": 1103
+    },
+    {
+      "path": "NEGATIVE_CONTROLS.md",
+      "sha256": "5c91827dfe28897c73e2606397edc86886f034f832c2ece3493dd05cc9a0f639",
+      "bytes": 5061
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "a592c701d7fea7b7343493a7b8beac0355db6e87f908e929e536c8c59677af6a",
+      "bytes": 1226
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "aa27d49c76d89e503c0c49ae19e09cccf7182af0af4834da4328da050fa5e94e",
+      "bytes": 924
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "26d166457d00adf2bae099a0eed045b156a4efc3a645243eb988ead693cd973b",
+      "bytes": 13566
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "023037f4c1c3e779d00e3cdfef4c98bbb85582c8456054e6aae11009825cda55",
+      "bytes": 2159
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326",
+      "bytes": 4991
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "5109c52acf13c4c2d563493bccb627c94be3bd9475cb8af1d80728209c30bd74",
+      "bytes": 4336
+    },
+    {
+      "path": "WEIGHT_ESTIMATION.md",
+      "sha256": "fe92baa99af6213fc6bab026d2d74d3dfb318cf63dc2d2ce3170d3c73a77f32f",
+      "bytes": 2795
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "bb247d16c51a1427fa13226c396bedc3fbab02d1062e353382deabee587c57b9",
+      "bytes": 9541
+    },
+    {
+      "path": "results/GRID_WITNESS.json",
+      "sha256": "521dc54a035408817863d03ad46ce871e47a402b5d056d25dc9916384fe03677",
+      "bytes": 2447
+    },
+    {
+      "path": "results/INITIAL_CONTROL_ATTEMPT.md",
+      "sha256": "a302d66f42214aefd5d73f4f9971e27b282b2efd2425ac922e86e6018381b06f",
+      "bytes": 601
+    },
+    {
+      "path": "results/INITIAL_CONTROL_STDOUT.log",
+      "sha256": "28f6e854c897bdd3e1d41e58302726922d97ceb3c840ff507ff715ffb9b975b7",
+      "bytes": 427
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "3a79888324acb7199f2ee2517e12a1732895da39d6d65b0fb4b143a52c04e000",
+      "bytes": 22831
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "c23acc12409f450ef112caed077d79b63ee18a33e5d6e956e0d8fb6bc895496d",
+      "bytes": 632
+    }
+  ]
+}

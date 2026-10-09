@@ -1,0 +1,23 @@
+{
+  "scope": [
+    "t20-next-frontier-20261008",
+    "normative-wisdom-warrant-20261009",
+    "user-checkpoints/extracted/P15"
+  ],
+  "excluded_dirs": [
+    "research-intermediates",
+    "mathlib",
+    ".lake",
+    "checkpoints",
+    "sources",
+    "source-main"
+  ],
+  "text_records_checked": 1180,
+  "hits": [
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-independent-rival-analysis.md",
+      "match": "Michael Smith"
+    }
+  ],
+  "limit": "Bounded current-record search only; no global novelty claim and no full archive or conversation coverage."
+}

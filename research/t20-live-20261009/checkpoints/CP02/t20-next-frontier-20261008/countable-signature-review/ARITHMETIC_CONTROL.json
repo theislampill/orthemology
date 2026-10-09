@@ -1,0 +1,61 @@
+{
+  "exceptional_base_blocks": [
+    {
+      "base": 3,
+      "k": 2,
+      "denominator_prime": 3,
+      "denominator_valuation": 1,
+      "determinant": 1
+    },
+    {
+      "base": 7,
+      "k": 3,
+      "denominator_prime": 7,
+      "denominator_valuation": 1,
+      "determinant": 2
+    },
+    {
+      "base": 15,
+      "k": 4,
+      "denominator_prime": 3,
+      "denominator_valuation": 1,
+      "determinant": 3
+    },
+    {
+      "base": 31,
+      "k": 5,
+      "denominator_prime": 31,
+      "denominator_valuation": 1,
+      "determinant": 4
+    },
+    {
+      "base": 63,
+      "k": 6,
+      "denominator_prime": 3,
+      "denominator_valuation": 2,
+      "determinant": 10
+    },
+    {
+      "base": 127,
+      "k": 7,
+      "denominator_prime": 127,
+      "denominator_valuation": 1,
+      "determinant": 6
+    },
+    {
+      "base": 255,
+      "k": 8,
+      "denominator_prime": 3,
+      "denominator_valuation": 1,
+      "determinant": 7
+    },
+    {
+      "base": 511,
+      "k": 9,
+      "denominator_prime": 7,
+      "denominator_valuation": 1,
+      "determinant": 8
+    }
+  ],
+  "checked_models_per_base": 16
+}

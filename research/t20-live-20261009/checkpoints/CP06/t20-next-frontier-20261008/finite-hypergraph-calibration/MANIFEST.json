@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-10-08T15:36:32.873615+00:00",
+  "status": "author checkpoint frozen with composite independent mathematical PASS",
+  "scope": "Finite interior incidence fibres; positive unary count recovery; separately scoped unit-boundary point reconstruction and all-command uniform function approximation. No physical certification, finite-sample guarantee, protected integration or T20 closure.",
+  "author_control_families": 12,
+  "review_references": [
+    {
+      "path": "../finite-hypergraph-calibration-review/COMPOSITE_REVIEW_MANIFEST.json",
+      "sha256": "a7c726ccbb380d5688bed42b2cd2fe9df6ba109a7feb4d3d60d53a1cabcc9714"
+    },
+    {
+      "path": "../finite-hypergraph-calibration-review/COMPOSITE_FINAL_VERIFICATION.json",
+      "sha256": "b6184b9728562d455ec43cde33c1a5aeb03cbc264d9a932d5a024a498fd2aa14"
+    },
+    {
+      "path": "../finite-hypergraph-calibration-review/REVIEW_RECEIPT.json",
+      "sha256": "b13d2a444054db8d8a05447a5ffe7c566e4af418b749064258c06bfd73c5300a"
+    },
+    {
+      "path": "../finite-hypergraph-calibration-review/unary_v2_addendum/REVIEW_RECEIPT.json",
+      "sha256": "a865338a2bf493349450d4b9670c6ff65c8f367ae5ca72bcdfa7fac9f2217335"
+    },
+    {
+      "path": "../finite-hypergraph-calibration-review/representation_addendum/REVIEW_RECEIPT.json",
+      "sha256": "df5efcb842e3a10515eb34e28eaad1cd90c9ec9be24a982797b730f2d12cd31d"
+    },
+    {
+      "path": "../finite-hypergraph-calibration-review/packaging_addendum/REVIEW_RECEIPT.json",
+      "sha256": "17dde570ae095d8b5b2f62561ea83ef4c2348ad2295f2d59df9b781ce28e6bf9"
+    }
+  ],
+  "files": [
+    {
+      "path": "ANCHORED_UNARY_COUNT.md",
+      "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c",
+      "bytes": 3925
+    },
+    {
+      "path": "BOUNDARY_POINT_RECONSTRUCTION.md",
+      "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb",
+      "bytes": 6098
+    },
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "ff7900a36e6f87907ffe8de1289fbcbcb68654b5253a9c2e59e031dd1af5df53",
+      "bytes": 2416
+    },
+    {
+      "path": "FINAL_CHECK.json",
+      "sha256": "942b10ac4834ef4a35fbce84e959c9da62219fd9b496fec74ac989597c66c8a2",
+      "bytes": 390
+    },
+    {
+      "path": "LINEAR_RECORD_SCOPE.md",
+      "sha256": "ce6f0e1c26f780edc76ff66f7b1004670dd9300ad90198e46fadea5783afc835",
+      "bytes": 3621
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "b3137fb3bdd473b1b253c4cca8f498f1cbbf00e4241d2685b1149814ada601e1",
+      "bytes": 1476
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "4f48c3e5e936c409915d404840a10e612f4d8750d4405bc01694d746c4c497a2",
+      "bytes": 944
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96",
+      "bytes": 12063
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "230d7342a0f96dcefa97b8731207f6d07edf365a419a953a6d7e8c1d79eef5c8",
+      "bytes": 3068
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "baf0b33572d389e922527769c55ad5c1e877f1b095e7f140461a71fed94df4fe",
+      "bytes": 5618
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "2c1facf6e9e5cd35a4cdc3bc3e522f5a9a510b85b8e4f7a8f4a379fdcbaa750e",
+      "bytes": 5010
+    },
+    {
+      "path": "UNIFORM_CALIBRATION_REPRESENTATION.md",
+      "sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6",
+      "bytes": 4098
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee",
+      "bytes": 9581
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4",
+      "bytes": 2125
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "f6e80ce531b02bab25b9a910ad5a8259b4e38fd2a5e3a07932f5b28c641a4ec1",
+      "bytes": 681
+    }
+  ]
+}

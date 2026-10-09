@@ -1,0 +1,54 @@
+{
+  "classification": "FOURTEENTH_INTERMEDIATE_ADDITIVE_PRESERVATION_ONLY",
+  "checkpoint_ordinal": 14,
+  "assembly_cutoff_utc": "2026-10-09T01:54:50.859419+00:00",
+  "membership_cutoff": [
+    "necessary-concordance-power",
+    "oneness-return-20261009",
+    "original-rival-warrant-audit-20261009",
+    "joint-manifestation-ontology",
+    "modal-psr-bridge",
+    "particular-reasons-comparison",
+    "complete-overdetermination-audit",
+    "creator-uniqueness-bridge"
+  ],
+  "root_assessment_boundary": "Root reassessment written through 2026-10-09 01:46 UTC; user delivery 01:47, per parent handoff. Assembly time is not a research-duration measure.",
+  "excluded_active_or_later": [
+    "epistemic-psr-warrant",
+    "Every unlisted ongoing or later investigation, regardless of timestamp"
+  ],
+  "T20_status": "ACTIVE",
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false,
+  "new_research_duration_credit_seconds": 0,
+  "new_source_reading_credit": false,
+  "new_lean_execution": false,
+  "new_empirical_verification": false,
+  "prior_science_rerun": false,
+  "prior_archives_mutated": false,
+  "current_root_judgement": {
+    "latest": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+    "historical_positive_judgement": {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "bytes": 5862,
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    "earlier_not_silently_renewed": true,
+    "historical_frontier_record": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "bytes": 1820,
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    "frontier_status_note": "The 01:39 in-progress record and its next-operation text are historical; latest root reassessment follows the completed uniqueness audit.",
+    "no_full_metaphysical_plural_original_countermodel": true,
+    "no_universal_nonduplication_theorem": true
+  },
+  "provenance_limits": "Intentional omitted external source bodies are not verification failures. Two unavailable historical revisions are separate retained negative provenance evidence."
+}

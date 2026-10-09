@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-08T12:33:34.047064+00:00",
+  "verdict": "PASS_WITH_SCOPE_CLARIFICATIONS_APPLIED",
+  "author_artifacts": 4,
+  "exact_control_families": 12,
+  "symbolic_identity": "PASS",
+  "author_binding_recheck": "PASS",
+  "outstanding_blocking_findings": [],
+  "scope_exclusions": [
+    "empirical or physical validation",
+    "kernel proof",
+    "author-file modification",
+    "protected repository writes",
+    "integration",
+    "owner acceptance",
+    "T20 closure"
+  ],
+  "separate_frontier_incorporation_receipt": "FRONTIER_INCORPORATION_RECEIPT.json; arbitrary-rate count appendix remains unreviewed here."
+}

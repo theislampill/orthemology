@@ -1,0 +1,162 @@
+{
+  "checks": [
+    {
+      "kind": "explicit input",
+      "path": "finite-replay-sampling-lower-bound/RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-replay-sampling-lower-bound/MANIFEST.json",
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-replay-sampling-lower-bound-review/REVIEW.md",
+      "sha256": "e3e8677f03775f984622495997b2dc0a6a55e50102fb1de03b3995a58f0a3de6"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-replay-sampling-lower-bound-review/REVIEW_RECEIPT.json",
+      "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-panel-replay-robustness/MANIFEST.sha256",
+      "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c"
+    },
+    {
+      "kind": "explicit input",
+      "path": "finite-panel-replay-robustness-review/REVIEW.md",
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf"
+    },
+    {
+      "kind": "explicit input",
+      "path": "dependent-gate-transport/RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997"
+    },
+    {
+      "kind": "explicit input",
+      "path": "dependent-gate-transport/SOURCE_AUDIT.md",
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d"
+    },
+    {
+      "kind": "explicit input",
+      "path": "arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/EXACT_CONTROLS.md",
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/PROSPECTIVE_EVENTS.jsonl",
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/READ_FIRST.md",
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/SOURCE_AUDIT.md",
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/SOURCE_BINDINGS.json",
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/exact_controls.py",
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/results/exact_controls.json",
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2"
+    },
+    {
+      "kind": "lower author manifest payload",
+      "path": "finite-replay-sampling-lower-bound/results/exact_controls.log",
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay/MANIFEST.sha256",
+      "sha256": "03a2b836250eb1b77eb99e3214ebcaff8ecf2e2748442d28bca6851c6a5b46d3"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay/RESULT.md",
+      "sha256": "327b6fb25944ac90e7ecd6010a427993b69400fbdc9b79928d731120b6d62243"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay/SHARED_MARGINAL_BOUNDARY.md",
+      "sha256": "3d55f739d398ed1b4b28253cdb5db34ec9b32d46415e14750a612e35f43b4788"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-review/REVIEW.md",
+      "sha256": "812eb02988e1e2e695e71fcdead1debbd20a9525570b5f3eb68c26b601af208e"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness-review/REVIEW.md",
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/EVENT_RECORD.json",
+      "sha256": "84d2e7557035f64728dff9bd9f7fe2bc20dd1dfe0fc638dd4f1fba078901b1ee"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/EXACT_CONTROLS_OUTPUT.txt",
+      "sha256": "3bf3e5aa977563653ad182a1c63f0c68b52ecb8f36d5c517ae0199a507fa8b05"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/VERIFICATION.md",
+      "sha256": "539badb30aa96eb4c16d630e080e4e4fb8ec626de4d11e062957e49303f21551"
+    },
+    {
+      "kind": "upper manifest payload",
+      "path": "finite-panel-replay-robustness/exact_controls.py",
+      "sha256": "76e2f5b429966995b5dec93ffd5576f7a0168d37733132faba2793cc00a6ace7"
+    }
+  ],
+  "count": 31,
+  "scope": "Hashes only; source reading/review scope is separately stated",
+  "status": "PASS"
+}

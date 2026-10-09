@@ -1,0 +1,137 @@
+{
+  "date_utc": "2026-10-09",
+  "status": "BOUNDED_AUDIT_COMPLETE_WITH_PRIMARY_REPLY_ACCESS_LIMIT",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/INPUT_BINDINGS.json",
+      "bytes": 2222,
+      "sha256": "2512c4f5dae8a28a924217f890b02edbe3c20cfc993a409e0ac86cfc45d81851"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json",
+      "bytes": 1379,
+      "sha256": "87a4384d2638a57113cbc8627e3f756e9df1ecfd0c5f1f3c1d73727c9c503a76"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/VERIFICATION.json",
+      "bytes": 3364,
+      "sha256": "60879e2104789a96b3610801de562d9b76c9e6360e01257d0ed57a722615f18c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/PRIOR_COVERAGE_SEARCH.json",
+      "bytes": 8232,
+      "sha256": "b3471385b8b0f5a15cad23e90fc8f3425dde6730a86930da9518b7dce2723090"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/ACTUALISATION_AUDIT.md",
+      "bytes": 6116,
+      "sha256": "31f39e303ad20544caa01395069bf25561b1cb1f361e3862b8ec4ac41510e27d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "bytes": 4823,
+      "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+      "bytes": 17505,
+      "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "bytes": 279352,
+      "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-author-home-http.html",
+      "bytes": 14180,
+      "sha256": "453761d5f3c42facee28255c0841602be1020a236e674f1b32f2cef3928b59e4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-author-papers-index-http.html",
+      "bytes": 59353,
+      "sha256": "6fe8945d5a32b72e24bbefa379c312f467b63388f479fe3b6a7aff90715b4c0b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.html",
+      "bytes": 486450,
+      "sha256": "39b925091ada11257ced21a7feee22d831a068e736a48ff8376e09949c033e91"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-tail.txt",
+      "bytes": 32057,
+      "sha256": "d48be1699ebaba50d6aeb6dc42fd4b39d1108615777cd9d7e5701660bb6d933e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt",
+      "bytes": 7317,
+      "sha256": "ba2330bff89b5604b42d31151171a430257d893297e2168d68de70b83175d1d4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt",
+      "bytes": 3581,
+      "sha256": "0171441adaa5fd014961d98d3ef924f4672acfc6de146bccdc87db34886fc954"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-extraction.txt",
+      "bytes": 28936,
+      "sha256": "533a39fc5fb31173effc971c80cfb974814a48983dbd9983ba2b90c6a26ba1c9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-section-indexed.txt",
+      "bytes": 3709,
+      "sha256": "cc99537c7fad95c0fc07e2a43a62452e236c025427e3de77b50144c6dfe386d2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss2002-cambridge-abstract.html",
+      "bytes": 732287,
+      "sha256": "3764516f50c0ee480460f6c1a545b83c43a68496ba8bbd2686858053529e74d2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.txt",
+      "bytes": 69371,
+      "sha256": "502ade5170fa33a07b8c7044b38ed1b7d9f41c6cab6ece0ab58a2e5f81ba46c2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt",
+      "bytes": 2912,
+      "sha256": "28fbb71d0c2d8b4f32d16fe6d55b585610f174f8ea308f9d88a2f2f4602b38ba"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.pdf",
+      "bytes": 798693,
+      "sha256": "2165f1e87b02598274ccd49848a6657e2735257e8d87de551b2bf635b50e398c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt",
+      "bytes": 9694,
+      "sha256": "2180c8f53ed4f25fbf3ba1350b53be1215a2503e70fc6f8cc45068fdd2fb5cae"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-indexed-bounded-passages.txt",
+      "bytes": 36557,
+      "sha256": "9ce399f086cd48a538f8b68c0e774ab6b83b4c6ab5f827ad42361a98c77ed1be"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-author-manuscript.txt",
+      "bytes": 26280,
+      "sha256": "1d6583eb418c75c86cb5dcd3f361ced372cc5174f17fb106c146dafeef2f8eb1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/visual/gp1999-p466.png",
+      "bytes": 356034,
+      "sha256": "6da1682a0c803da5d8db5d2ceaf9e0d9ae3dcd75a7c151648a0d89a3b8ed603c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/NOTE11_REFINEMENT.json",
+      "bytes": 991,
+      "sha256": "51fda8af3659a54fa498e072f4e271f6c8afc2a065df9d4df98004cabf817de3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md",
+      "bytes": 17095,
+      "sha256": "ea7956ded7d0962ef901471317f6b617b9827af2a89089f2f5fed97603eca499"
+    }
+  ],
+  "distribution_note": "Raw primary texts are local reference material, not a redistribution deliverable. RESULT.md and ACTUALISATION_AUDIT.md are the authored analysis."
+}

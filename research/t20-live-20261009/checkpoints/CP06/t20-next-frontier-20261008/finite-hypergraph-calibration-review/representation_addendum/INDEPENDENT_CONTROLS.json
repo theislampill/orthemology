@@ -1,0 +1,254 @@
+{
+  "cases": [
+    {
+      "certified_modulus_distance": "1/8",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "1/8",
+      "fixture": 0,
+      "interval_style": 0,
+      "mesh_exponent": 3,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "7/256"
+    },
+    {
+      "certified_modulus_distance": "1/16",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "1/16",
+      "fixture": 0,
+      "interval_style": 0,
+      "mesh_exponent": 4,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "15/1024"
+    },
+    {
+      "certified_modulus_distance": "1/32",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "1/32",
+      "fixture": 0,
+      "interval_style": 0,
+      "mesh_exponent": 5,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "31/4096"
+    },
+    {
+      "certified_modulus_distance": "1/64",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "1/64",
+      "fixture": 0,
+      "interval_style": 0,
+      "mesh_exponent": 6,
+      "polygonal_error": "1/256",
+      "strict_homeomorphism_error": "63/16384"
+    },
+    {
+      "certified_modulus_distance": "1/16",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "1/16",
+      "fixture": 0,
+      "interval_style": 1,
+      "mesh_exponent": 4,
+      "polygonal_error": "1/16",
+      "strict_homeomorphism_error": "7/128"
+    },
+    {
+      "certified_modulus_distance": "1/32",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "1/32",
+      "fixture": 0,
+      "interval_style": 1,
+      "mesh_exponent": 5,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "15/512"
+    },
+    {
+      "certified_modulus_distance": "1/64",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "1/64",
+      "fixture": 0,
+      "interval_style": 1,
+      "mesh_exponent": 6,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "31/2048"
+    },
+    {
+      "certified_modulus_distance": "1/128",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "1/128",
+      "fixture": 0,
+      "interval_style": 1,
+      "mesh_exponent": 7,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "63/8192"
+    },
+    {
+      "certified_modulus_distance": "1/32",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "63/512",
+      "fixture": 1,
+      "interval_style": 0,
+      "mesh_exponent": 5,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "5/64"
+    },
+    {
+      "certified_modulus_distance": "1/64",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "63/1024",
+      "fixture": 1,
+      "interval_style": 0,
+      "mesh_exponent": 6,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "1/32"
+    },
+    {
+      "certified_modulus_distance": "1/128",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "63/2048",
+      "fixture": 1,
+      "interval_style": 0,
+      "mesh_exponent": 7,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "63/4096"
+    },
+    {
+      "certified_modulus_distance": "1/256",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "63/4096",
+      "fixture": 1,
+      "interval_style": 0,
+      "mesh_exponent": 8,
+      "polygonal_error": "1/256",
+      "strict_homeomorphism_error": "125/16384"
+    },
+    {
+      "certified_modulus_distance": "1/32",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "63/512",
+      "fixture": 1,
+      "interval_style": 1,
+      "mesh_exponent": 5,
+      "polygonal_error": "1/16",
+      "strict_homeomorphism_error": "47/512"
+    },
+    {
+      "certified_modulus_distance": "1/64",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "63/1024",
+      "fixture": 1,
+      "interval_style": 1,
+      "mesh_exponent": 6,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "47/1024"
+    },
+    {
+      "certified_modulus_distance": "1/128",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "63/2048",
+      "fixture": 1,
+      "interval_style": 1,
+      "mesh_exponent": 7,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "47/2048"
+    },
+    {
+      "certified_modulus_distance": "1/256",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "63/4096",
+      "fixture": 1,
+      "interval_style": 1,
+      "mesh_exponent": 8,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "47/4096"
+    },
+    {
+      "certified_modulus_distance": "1/256",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "1/8",
+      "fixture": 2,
+      "interval_style": 0,
+      "mesh_exponent": 8,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "59/1024"
+    },
+    {
+      "certified_modulus_distance": "1/512",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "1/16",
+      "fixture": 2,
+      "interval_style": 0,
+      "mesh_exponent": 9,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "61/2048"
+    },
+    {
+      "certified_modulus_distance": "1/1024",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "1/32",
+      "fixture": 2,
+      "interval_style": 0,
+      "mesh_exponent": 10,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "31/2048"
+    },
+    {
+      "certified_modulus_distance": "1/2048",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "1/64",
+      "fixture": 2,
+      "interval_style": 0,
+      "mesh_exponent": 11,
+      "polygonal_error": "1/256",
+      "strict_homeomorphism_error": "125/16384"
+    },
+    {
+      "certified_modulus_distance": "1/512",
+      "epsilon": "1/2",
+      "exact_maximum_increment_at_modulus_distance": "1/16",
+      "fixture": 2,
+      "interval_style": 1,
+      "mesh_exponent": 9,
+      "polygonal_error": "1/16",
+      "strict_homeomorphism_error": "87/1024"
+    },
+    {
+      "certified_modulus_distance": "1/1024",
+      "epsilon": "1/4",
+      "exact_maximum_increment_at_modulus_distance": "1/32",
+      "fixture": 2,
+      "interval_style": 1,
+      "mesh_exponent": 10,
+      "polygonal_error": "1/32",
+      "strict_homeomorphism_error": "333/8192"
+    },
+    {
+      "certified_modulus_distance": "1/2048",
+      "epsilon": "1/8",
+      "exact_maximum_increment_at_modulus_distance": "1/64",
+      "fixture": 2,
+      "interval_style": 1,
+      "mesh_exponent": 11,
+      "polygonal_error": "1/64",
+      "strict_homeomorphism_error": "93/4096"
+    },
+    {
+      "certified_modulus_distance": "1/4096",
+      "epsilon": "1/16",
+      "exact_maximum_increment_at_modulus_distance": "1/128",
+      "fixture": 2,
+      "interval_style": 1,
+      "mesh_exponent": 12,
+      "polygonal_error": "1/128",
+      "strict_homeomorphism_error": "1473/131072"
+    }
+  ],
+  "summary": {
+    "assertions": 251,
+    "discontinuity_no_stop_controls": 10,
+    "largest_mesh_exponent": 12,
+    "nonmonotone_lower_bound_panels": 8,
+    "oracle_calls": 25852,
+    "reconstructions": 24,
+    "scope": "Finite rational polygonal controls support the general proof; observed meshes and calls are not uniform bounds.",
+    "status": "PASS"
+  }
+}

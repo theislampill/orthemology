@@ -1,0 +1,100 @@
+{
+  "date_utc": "2026-10-09",
+  "primary_readings": [
+    {
+      "id": "GP1999",
+      "citation": "Gale and Pruss, A new cosmological argument, Religious Studies 35(4) (1999),461-476, DOI10.1017/S0034412599005004",
+      "file": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.pdf",
+        "bytes": 798693,
+        "sha256": "2165f1e87b02598274ccd49848a6657e2735257e8d87de551b2bf635b50e398c"
+      },
+      "url": "https://appearedtoblogly.wordpress.com/wp-content/uploads/2011/05/pruss-alexander-and-gale-richard-22a-new-cosmological-argument22.pdf",
+      "extent": "Complete 16 article pages plus notes; PDF2-17, printed461-476. PDF1 service cover metadata checked separately.",
+      "continuous_chunks": [
+        {
+          "printed": "461-464",
+          "output_chunk": "a11c4c"
+        },
+        {
+          "printed": "465-468",
+          "output_chunk": "6b9952"
+        },
+        {
+          "printed": "469-472",
+          "output_chunk": "9bc782"
+        },
+        {
+          "printed": "473-476",
+          "output_chunk": "892aca"
+        }
+      ],
+      "visual_return": "PDF7/printed466, to inspect modal-scope prose; source image retained. No other whole visual inspection claimed."
+    },
+    {
+      "id": "O2000",
+      "citation": "Oppy, On A New Cosmological Argument, Religious Studies36(3)(2000),345-353",
+      "file": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-author-manuscript.txt",
+        "bytes": 26280,
+        "sha256": "1d6583eb418c75c86cb5dcd3f361ced372cc5174f17fb106c146dafeef2f8eb1"
+      },
+      "url": "https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27",
+      "extent": "All recovered author manuscript body, endnotes1-5 and final acknowledgments, manuscriptpp1-17. Read text lines1-610 and separately verified final continuation in tail output.",
+      "continuous_chunks": [
+        "3c6976",
+        "7de491",
+        "49e70f",
+        "658697"
+      ],
+      "limit": "Text extraction, no PDF visual authentication; manuscript page numbers not journal pages; no inference depends on corrupt formula glyphs."
+    },
+    {
+      "id": "GP2002",
+      "citation": "Gale and Pruss, A response to Oppy, and to Davey and Clifton, Religious Studies38(1)(2002),89-99, DOI10.1017/S0034412501005923",
+      "extent": "Publisher abstract and metadata only. No full body obtained.",
+      "url": "https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A",
+      "limit": "No criticism adjudicated as unanswered by inaccessible body."
+    },
+    {
+      "id": "Pruss-LCA",
+      "extent": [
+        "2.3.2.1 (basic anti-PSR argument and discussion of explanatory dissectivity)",
+        "2.3.2.2 (nonnecessitating explanation)",
+        "2.3.2.3 (libertarian choices)",
+        "2.3.5 (contrastive explanation)",
+        "4.1.1.6 (Taxicab)",
+        "Notes 10-12"
+      ],
+      "source_record": "LCA_ORIGIN_ACQUISITION.json",
+      "read_receipts": [
+        {
+          "sections": "2.3.2.3,2.3.5,4.1.1.6",
+          "note": "Complete spans appeared in one 5133-token display.",
+          "read_description": "Complete origin-text spans displayed in one 5133-token output; text initially decoded with punctuation replacement characters, then repaired to declared Windows-1252 and checked against header. The continuous files now preserve the correct punctuation.",
+          "source_lines": {
+            "2.3.2.3": "1710-1853",
+            "2.3.5": "1953-2073",
+            "4.1.1.6": "3538-3585"
+          }
+        },
+        {
+          "sections": "2.3.2.1 and definitions",
+          "output_chunk": "22349b"
+        },
+        {
+          "sections": "2.3.2.2 and notes10-12",
+          "output_chunk": "9cea4f"
+        }
+      ]
+    }
+  ],
+  "inherited_inputs": {
+    "T17": "Targeted guide on existence/need and action distinction; main report sections Actual supply and original existential completion / The actual witness and the Necessary Being conclusion, with nearby context. Not a new primary corpus read.",
+    "Dasgupta": "2011 REPORT and MAPPING_TEST; 2014 REPORT; 2016 completion/autonomy addendum inspected. Prior whole-paper credit remains inherited.",
+    "modal_identity": "RESULT inspected including exact de re adapter, Back condition, and scope; existing review scope checked. No new mathematical replay.",
+    "productive_sufficiency": "REPORT sections1-4 and supplied excerpts, especially particular-determination requirement; not a fresh Arabic primary read.",
+    "formal_interface": "OriginalBearerBridge.lean complete read; no Lean execution."
+  },
+  "scope": "No new historical time credit or external validation. No broad literature survey."
+}

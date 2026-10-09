@@ -1,0 +1,74 @@
+{
+  "checkpoint": 22,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "freeze_utc": "2026-10-09T10:36:13.050609+00:00",
+  "prepared_utc": "2026-10-09T10:29:42.907012+00:00",
+  "groups": {
+    "principled-explanation-boundary-20261009": [
+      "INPUT_BINDINGS.json",
+      "MANIFEST.sha256",
+      "READING_RECORD.json",
+      "REPORT.md",
+      "VERIFICATION.json"
+    ],
+    "knowing-production-semantics-20261009": [
+      "ACQUISITION.json",
+      "FILES.sha256",
+      "INPUT_BINDINGS.json",
+      "PRINT_CONTROLS.md",
+      "READING_RECORD.json",
+      "REPORT.md",
+      "VERIFICATION.json"
+    ],
+    "normative-wisdom-warrant-20261009": [
+      "INPUT_BINDINGS.json",
+      "MANIFEST.sha256",
+      "READING_LEDGER.json",
+      "READ_FIRST.md",
+      "REPORT.md",
+      "VERIFICATION.json",
+      "railton-independent-rival-analysis.md",
+      "railton-reading-provenance.json",
+      "james-primary/MANIFEST.sha256",
+      "james-primary/READING_LEDGER.json",
+      "james-primary/REPORT.md",
+      "james-primary/SOURCE_BINDINGS.json"
+    ],
+    "categorical-reasons-bridge-20261009": [
+      "ACCESS_LEDGER.json",
+      "CHECKS.json",
+      "INPUT_BINDINGS.json",
+      "MANIFEST.sha256",
+      "PRIOR_RECORD_CHECK.json",
+      "READING_LEDGER.json",
+      "REPORT.md"
+    ],
+    "root-resumed-research-20261009": [
+      "AFTER_CHECKPOINT21_READING.json",
+      "KNOWING_PRODUCTION_PRINT_CONTROL.json",
+      "NORMATIVE_WISDOM_READING.json",
+      "SMITH_AGENCY_READING.json",
+      "SMITH_AGENCY_FULL_TEXT_RETURN.json"
+    ],
+    "agency-robustness-independent-20261009": [
+      "ANALYSIS.md",
+      "SOURCE_SUMMARY.md",
+      "INPUT_READ_RECEIPT.json",
+      "OUTPUT_MANIFEST.json"
+    ]
+  },
+  "independent_agency_selection": "include",
+  "independent_agency_scope": "The completed independent review finds genuine qualitative comparative warrant and accepts the 2025 direct-capacity repair to the narrower 2024 objection. Necessity of universal intrinsic protective motives remains unestablished, and no fully controlled rival is certified. It demands no numerical metric as a condition of philosophical warrant. The 2024 nonmotivational-reflex allowance is a legitimate unexcluded mechanism class, not a completed countermodel. Finite-vulnerability arguments do not automatically transfer to unreceived original agency. Only the analysis, source summary, reading receipt and unchanged output manifest are included.",
+  "root_final_selection_recorded_utc": "2026-10-09T10:36:13.003841+00:00",
+  "outside_freeze": "New cognitive-efficacy successor research remains outside checkpoint22.",
+  "research_closed": false,
+  "integrated": false,
+  "owner_accepted": false,
+  "confidence_revised_by_packaging": false,
+  "historical_duration_certified": false,
+  "packaging_credited_as_research": false,
+  "new_theorem_or_kernel_result_claimed": false,
+  "research_code_executed": false,
+  "historical_statuses": "Original dates and interim reading labels retained unchanged. Later reports and reading records clarify subsequent developments without rewriting history.",
+  "relationship_to_prior": "Additive and noncumulative. No predecessor archive is embedded. Checkpoint21 delivery bytes and archive identity are pinned."
+}

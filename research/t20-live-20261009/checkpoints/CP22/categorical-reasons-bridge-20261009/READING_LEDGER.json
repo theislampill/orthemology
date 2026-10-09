@@ -1,0 +1,161 @@
+{
+  "reading_status": "Complete continuous reading of three bounded primary texts, including notes/context and references; targeted reflective returns and visual checks",
+  "sources": [
+    {
+      "id": "Smith2024",
+      "title": "Rethinking The Moral Problem",
+      "doi": "10.5937/BPA2437007S",
+      "url": "https://msmith.scholar.princeton.edu/sites/g/files/toruqf7446/files/documents/Smith-The%20Moral%20Problem-Belgrade%20Philosophical%20Annual%202024_0.pdf",
+      "pdf_total_pages": 168,
+      "read_pdf_pages_inclusive": [
+        7,
+        32
+      ],
+      "read_printed_pages_inclusive": [
+        7,
+        32
+      ],
+      "notes_read_inclusive": [
+        1,
+        12
+      ],
+      "includes_references": true,
+      "ordered_read_windows": [
+        "7-12",
+        "13-18",
+        "19-24",
+        "25-32"
+      ],
+      "visual_checks_printed_pages": [
+        23,
+        25,
+        27,
+        28
+      ],
+      "locators": {
+        "former_convergence_failure": "13-18",
+        "goodness_fixing_and_ideality": "19-21",
+        "self_control_and_advice": "21-23, note 11",
+        "social_and_modal_comparison": "23-27",
+        "conditional_convergence_and_scope": "28-30"
+      },
+      "file": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2024-issue.pdf",
+        "bytes": 1150392,
+        "sha256": "91dde78fe9325c0ffd268c867cd1cf94944200a5315909c777adb312062775e6"
+      },
+      "text": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2024-article.txt",
+        "bytes": 84079,
+        "sha256": "ab2879cfa73e02c26c76b7830f845bd10cf8fd060f5e25e0bbb916d28716df86"
+      }
+    },
+    {
+      "id": "Bukoski2016",
+      "title": "A Critique of Smith's Constitutivism",
+      "doi": "10.1086/687339",
+      "url": "https://www.michaelbukoski.com/uploads/5/5/6/3/55633343/bukoski_-_a_critique_of_smiths_constitutivism.pdf",
+      "pdf_total_pages": 31,
+      "read_pdf_pages_inclusive": [
+        1,
+        31
+      ],
+      "read_printed_pages_inclusive": [
+        116,
+        146
+      ],
+      "notes_read_inclusive": [
+        1,
+        54
+      ],
+      "includes_references": true,
+      "reference_format": "References are in footnotes, not a separate bibliography",
+      "ordered_read_windows": [
+        "116-125 (initial output; 116-120 output truncated and then reread fully)",
+        "116-120 (complete repair)",
+        "126-132",
+        "133-139",
+        "140-146"
+      ],
+      "visual_checks_printed_pages": [
+        129,
+        134
+      ],
+      "locators": {
+        "kind_ideal_and_rational_ideal": "122-132",
+        "robustness_and_symmetry": "133-137",
+        "content_and_strong_replies": "137-146"
+      },
+      "file": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/bukoski-2016.pdf",
+        "bytes": 600978,
+        "sha256": "2cf455c43075a185d2f40eb025b0d6757a30c42f5947e2a23358a4e50fc1586d"
+      },
+      "text": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/bukoski-2016.txt",
+        "bytes": 108394,
+        "sha256": "b310b350344e4527b3acb8d01954ebddac3a63f7a11ebe56f9629ecbb9ee381b"
+      }
+    },
+    {
+      "id": "Smith2025",
+      "title": "The Ethics of Agency: An Alternative Approach to Normative Ethics",
+      "url": "https://msmith.scholar.princeton.edu/sites/g/files/toruqf7446/files/documents/Smith-Ethics%20of%20Agency-FINAL.pdf",
+      "pdf_total_pages": 20,
+      "read_pdf_pages_inclusive": [
+        1,
+        20
+      ],
+      "read_manuscript_pages_inclusive": [
+        1,
+        20
+      ],
+      "published_page_range_from_header": [
+        341,
+        366
+      ],
+      "pagination_warning": "20 manuscript pages are not equated to the 26 published pages",
+      "notes": "No separately numbered footnotes appear in this manuscript; all in-text references and final bibliography read",
+      "includes_references": true,
+      "ordered_read_windows": [
+        "1-5",
+        "6-10",
+        "11-15",
+        "16-20"
+      ],
+      "visual_checks_manuscript_pages": [
+        10,
+        11,
+        12,
+        16
+      ],
+      "locators": {
+        "historical_and_methodological_context": "1-9",
+        "reason_ideality_identification": "9-10",
+        "capacity_metric_and_necessity": "10-12",
+        "patienthood_balancing_proviso": "11,13-15",
+        "authority_and_sanctions": "16-17",
+        "nonideal_scope_and_conclusion": "17-20"
+      },
+      "file": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2025-ethics-agency.pdf",
+        "bytes": 314231,
+        "sha256": "74a8b3898567214fe7f85de22d228b77e567bb597efac679fa95be0a4a1f1e30"
+      },
+      "text": {
+        "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2025-ethics-agency.txt",
+        "bytes": 80241,
+        "sha256": "da34695413b11e3f25de10e212f6a09ec233516d07da5ff8b2d54268d5f9f08e"
+      }
+    }
+  ],
+  "not_read": [
+    "Smith 2020 cited chapter; preview-only",
+    "Smith 1994 The Moral Problem as an independent primary source",
+    "Other articles in the 168-page 2024 issue",
+    "Works merely cited by the three sources"
+  ],
+  "distribution": "All source PDFs, extracted text and images remain research intermediates only; excluded from deliverable manifest",
+  "empirical_claims": "No psychological, clinical, social-risk or historical-generalization claims from these texts independently certified",
+  "historical_effort_claim": "No elapsed-time floor or historical-time certification is asserted"
+}

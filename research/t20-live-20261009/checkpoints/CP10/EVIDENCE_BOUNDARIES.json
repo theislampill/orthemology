@@ -1,0 +1,36 @@
+{
+  "classification": "INTERMEDIATE_PRESERVATION_ONLY",
+  "T20_status": "ACTIVE",
+  "owner_handles_integration": true,
+  "protected_integration": false,
+  "GitHub_maintenance": false,
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "research_duration_credit_seconds": 0,
+  "timing": "Preserve existing prospective activity windows. No wall-time-to-active-time inference, overlap summation, waiting credit, reconstructed historical duration, packaging or replay credit.",
+  "kernel": "No new Lean sources or replay. Three written-proof stages; finite and quadrature controls are not general proofs.",
+  "assumptions": [
+    "Known simple hard pair: P0 has n iid product-uniform threshold pairs; P1 has m=n+1 iid Joe-law threshold pairs with F_c(x,y)=1-(1-xy)^c and c=n/(n+1).",
+    "Within-vector thresholds are unchanged throughout separately read nonlatched queries; the endpoint is the OR over coordinate-separable threshold-AND routes.",
+    "Fresh vectors are independent for the statistical test; repeated commands on one vector do not create fresh samples.",
+    "Ideal likelihood/count readout observes the exact endpoint function and hence the minimal antichain. Finite readout instead uses noiseless selectable rational endpoints in the named calibrated command coordinates.",
+    "Comparator uses the same hard pair, common policy, independent resets, fixed per-world error below one half, unconditional terminal correctness, and every independent vector charged from its first observation, including incomplete face-only words."
+  ],
+  "failed_controls_and_revision_history": [
+    "Likelihood direct Joe n=1 corner quadrature at order 48 sums to approximately 1.0000667599. The discrepancy is retained; analytic normalization and exact masses govern. This is visible numerical approximation error, not a failed accepted proof.",
+    "Count negative controls reject zero mean gap, gap 1/n^2, substitution of H_(n+1), and the wrong n=1 quotient; Joe record independence is not used.",
+    "TP2 permutation controls reject a falsely uniform Joe rank-permutation law. A mean gap alone or an O(log^2 n) raw second moment does not establish the asserted variance/rate.",
+    "Finite-grid controls retain strict count-loss examples; unconditional K_L=K is false. Independent controls record 21,055 strict-loss cases. Collision-free is sufficient, not necessary.",
+    "Shared initial review bindings are preserved as historical/superseded; current bindings cover final count comparator and source audit.",
+    "Finite reviewer initial stale-hash guard stopped before replay during a final wording edit. REVIEW.md preserves the failed integrity check and replacement final hash; no mathematical-control run failed. Final disposable author replay passed."
+  ],
+  "excluded_claims": [
+    "External field-wide novelty or priority",
+    "Empirical or physical validation",
+    "Psychological/productive-source architecture",
+    "Philosophical warrant transfer",
+    "Optimal skyline testing or probing rate",
+    "Improved total-probe bound",
+    "Source-body reading beyond explicit scoped records",
+    "Project integration, owner acceptance or T20 closure"
+  ]
+}

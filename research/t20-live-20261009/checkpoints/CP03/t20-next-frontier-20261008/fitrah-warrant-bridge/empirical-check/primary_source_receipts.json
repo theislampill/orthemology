@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "id": "TRACY2011",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0017349",
+      "read_scope": "Targeted direct publisher HTML and downloadable JATS XML inspection of Methods Studies1–5, Results Studies1–5, and relevant Discussion. The file endpoint returned XML despite the temporary .pdf suffix. No participant-data replication or supplementary-file review.",
+      "acquired_bytes_sha256": "0ea70c0dd951112aa33e15d946811674353de803ec14fc9da6f11abb6e77ece6"
+    },
+    {
+      "id": "JARNEFELT2015",
+      "url": "https://www.bu.edu/cdl/files/2015/04/Creator-online-publication1.pdf",
+      "read_scope": "Author-laboratory-hosted published article; selected Methods, Results, controls and General discussion read in PDF text. No participant-data replication. Page images not needed for these text-only findings; an apparent sample-count inconsistency was not resolved or used.",
+      "acquired_bytes_sha256": "c8fcd3c0a6dcd25029ec7a6f2f199323eb5eb524e3542922a24c7b1c91b4ad41"
+    },
+    {
+      "id": "DERVIC2004",
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.ajp.161.12.2303",
+      "read_scope": "Publisher/primary-study indexed text and PubMed abstract read. Direct publisher open returned403 and PubMed open429 after search successfully returned the primary abstract. Whole article/PDF not continuously read; no raw-data review."
+    },
+    {
+      "id": "WELSH2011",
+      "url": "https://www.livescience.com/13534-death-anxiety-intelligent-design-evolution.html",
+      "read_scope": "Media item opened only to establish the citation chain to the primary study; no independent empirical status."
+    }
+  ],
+  "uninspected_requested_items": [
+    "Bloom2007 Religion Is Natural",
+    "Barrett2008 Telegraph interview",
+    "Petrovich2018 monograph and1999 interview",
+    "Boyer2008 Nature essay",
+    "Banerjee/Bloom2014",
+    "Heywood/Bering2014",
+    "Jong/Halberstadt/Bluemke2012"
+  ],
+  "no_claim_of_complete_empirical_bibliography": true
+}

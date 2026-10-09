@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-10-09",
+  "operation": "Complete remaining continuous reading of the same selected Koons1997 author manuscript, at the parent request. No new source or independent witness.",
+  "initial_ledger_preserved": {
+    "path": "READING_LEDGER.json",
+    "sha256": "f1d6b069549808b3811b73ab8c2af27f77311a23828dee71d687a2537fdb1787",
+    "status": "Unchanged historical targeted-reading record; this addendum supplies the later completion status."
+  },
+  "witness_url": "https://lionandlambapologetics.org/wp-content/uploads/2021/03/A-New-Look-at-the-Cosmological-Argument.pdf",
+  "new_continuous_completion": [
+    {
+      "web_lines": "309-438",
+      "extent": "Entire section 7, including all seven corollaries and section 7.1. Figure1 captions/labels and related prose read in extraction; visual layout not authenticated.",
+      "manuscript_pages": "9-13",
+      "read_receipt": "056830"
+    },
+    {
+      "web_lines": "635-905",
+      "extent": "Sections8.10-8.13, section9 concluding discussion, all45 references, and final service footer. No separate conclusion or endnote section occurs after section9.",
+      "manuscript_pages": "19-26",
+      "read_receipt": "d8e9f0"
+    }
+  ],
+  "context_rechecked": [
+    {
+      "web_lines": "0-63",
+      "extent": "Service cover, article heading/date, opening introduction, and acknowledgement footnote; already read, no new first-reading credit.",
+      "read_receipt": "196eb9"
+    },
+    {
+      "web_lines": "436-468",
+      "extent": "Section7-to8 transition and Figure2 extracted labels; \u00a7\u00a78.1-8.9 remain inherited readings.",
+      "read_receipt": "196eb9"
+    }
+  ],
+  "cumulative_scope": "Entire retained manuscript text, all sections1-9, acknowledgement footnote and45 references, covered continuously by the initial readings plus this completion. One manuscript witness, not a second independent witness. Journal text remains uncollated.",
+  "credit_limit": "New continuous-span completion is not a claim that every displayed line was previously unseen. Previously read sections1-6 and8.1-8.9 retain inherited credit only. Earlier incidental capture of section7 or the tail is not credited as prior continuous reading.",
+  "source_capture": "sources/koons1997-completed-web-continuous.txt",
+  "source_capture_extent": {
+    "first_web_line": 0,
+    "last_web_line": 905,
+    "missing_lines": []
+  },
+  "visual_limit": "Screenshot attempts for PDF pages13 and14 (zero-indexed), containing diagrams, failed with content-type/unavailable-screenshot errors. No visual authentication or layout-dependent conclusion claimed. Surrounding prose explicitly states the comparison used in the assessment.",
+  "new_assessment": "The central assessment remains unchanged. Omitted context supplies additional ontological/teleological and induction-related argumentation that must not be attributed to an absent treatment. Exact bounded update is in READING_COMPLETION_ADDENDUM.md.",
+  "out_of_scope": "No new bibliography campaign. Empirical, biological, scientific-historical or cosmological assertions in section9 are read as claims of this source, not independently verified or adopted. No repository/integration/T20 closure/owner acceptance/historical-duration claim."
+}

@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-10-09T09:31:25.493713+00:00",
+  "historically_accepted_artifact_checks": [
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "expected_sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "observed_sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "expected_sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+      "observed_sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+      "matches": true
+    },
+    {
+      "path": "recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "expected_sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "observed_sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "matches": true
+    }
+  ],
+  "input_count": 33,
+  "inputs_match_just_recorded_bindings": true,
+  "verification_scope": "Hash identity and direct source/code inspection only. No model execution, Lean replay, or independent review of this new report.",
+  "existing_artifacts_edited": false,
+  "repo_integration": false,
+  "outreach": false,
+  "closure": false,
+  "report_sha256": "dedcbd009844403c482e2f8fb09a83779987d7b2fb3bfbc219ec1fed3345768e"
+}

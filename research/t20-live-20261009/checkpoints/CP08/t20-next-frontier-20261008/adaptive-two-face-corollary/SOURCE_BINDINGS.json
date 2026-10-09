@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-08T17:19:33.527495+00:00",
+  "status": "Source hashes verified; all 14 predecessor author payloads unchanged",
+  "inputs": [
+    {
+      "path": "../arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "bytes": 13174
+    },
+    {
+      "path": "../arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "bytes": 5833
+    },
+    {
+      "path": "../arbitrary-face-replay-design/MANIFEST.json",
+      "sha256": "e454504588064ed84b4565fbc4656075c456a34b3f812973f1c96c5d4d83af3f",
+      "bytes": 2503
+    },
+    {
+      "path": "../arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+      "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910",
+      "bytes": 6991
+    },
+    {
+      "path": "../arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9",
+      "bytes": 12931
+    }
+  ],
+  "new_external_sources": [],
+  "seventh_checkpoint_membership": "Excluded successor"
+}

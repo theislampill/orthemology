@@ -1,0 +1,70 @@
+{
+  "date_utc": "2026-10-09",
+  "scope": "Source-capture coverage, input-binding stability, and explicit-scope readback checks only; not independent philosophical certification. No source PDF visual authentication was obtained.",
+  "input_bindings_checked_unchanged_since_binding": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/READ_FIRST.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/PUBLIC_SOURCE_SUMMARIES.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/INFERENTIAL_TRANSMISSION_TEST.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation-review/ASSESSMENT.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation-review/INFERENTIAL_TEST_ADDENDUM.md",
+      "matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/dretske-continuation-access/ACCESS_RESULT.md",
+      "matches": true
+    }
+  ],
+  "koons_pruss_web_lines": {
+    "first": 0,
+    "last": 855,
+    "count": 856,
+    "missing": []
+  },
+  "scope_checks": {
+    "actual_1997_separate_from_pruss": true,
+    "two_dimensional_scenarios": true,
+    "plurality_scope": true,
+    "particular_explanans_bridge": true,
+    "supernatural_definition": true,
+    "self_evidence_not_dismissed": true,
+    "origins_answer_preserved": true,
+    "kk_denial_and_fallbacks": true,
+    "maximality_elimination_assessed": true,
+    "actual_mosaic_argument_assessed": true,
+    "chance_vs_calculation": true,
+    "model_breaks_when_bad_world_near": true,
+    "no_actual_human_knowledge_claim": true,
+    "no_broad_biological_campaign": true
+  },
+  "formal_computation": "No arbitrary model-count test or theorem-prover wrapper. Elementary conditional interpretation is presented in writing with adverse controls.",
+  "repo_state": "No git or repository action performed; writes limited to epistemic-psr-warrant/."
+}

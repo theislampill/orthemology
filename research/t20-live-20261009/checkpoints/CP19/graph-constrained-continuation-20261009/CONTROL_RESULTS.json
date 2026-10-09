@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "truth_table_graphs": 75,
+  "nonempty_graph_mask_comparisons": 1023,
+  "pointwise_gate_character_identities": 248,
+  "path4_augmented_ranks": [
+    5,
+    8,
+    10,
+    13,
+    15,
+    16
+  ],
+  "path4_first_full_parity_horizon": 3,
+  "path4_first_endpoint_pair_horizon": 5,
+  "path4_horizon3_retained_masks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    14,
+    15
+  ],
+  "separating_pair": {
+    "normalised_nonnegative": true,
+    "all_horizon3_moments_equal": true,
+    "later_endpoint_event_probabilities": [
+      0,
+      1
+    ],
+    "minimax_error": "1/2"
+  },
+  "two_disconnected_edges_augmented_saturated_rank": 7,
+  "negative_controls": [
+    "complete-graph formula rejected on path endpoints",
+    "downward-closed moment family rejected",
+    "connected-graph saturation rejected on disconnected graph"
+  ],
+  "scope": "Exact finite checks; general theorem separately proved in Lean and prose."
+}

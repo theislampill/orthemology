@@ -1,0 +1,105 @@
+{
+  "runtime": "Python 3.8+ standard library only; no network or external build dependency",
+  "author_checker_reads": "No file dependencies; tables and axioms embedded in unchanged checker",
+  "author_checker_writes_in_isolated_copy_only": [
+    "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+    "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md"
+  ],
+  "independent_checker_reads": [
+    {
+      "path": "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "bytes": 1587,
+      "sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d"
+    },
+    {
+      "path": "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+      "bytes": 5383,
+      "sha256": "f78dcc0dbe1e9b9e602257e61373b8fdfe7da939cf9255c20b44bd5349437043"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "bytes": 1939,
+      "sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b"
+    }
+  ],
+  "independent_checker_writes_in_isolated_copy_only": [
+    "compound-ground-review-20261009/INDEPENDENT_RESULTS.json"
+  ],
+  "historical_and_current_pins": [
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "compound-ground-necessity-20261009/check_compound_ground.py",
+      "recorded_sha256": "75f924c284fed3e497d9e79af8ee8af8cdf392c3668c32eb350de7084372e0eb",
+      "current_sha256": "75f924c284fed3e497d9e79af8ee8af8cdf392c3668c32eb350de7084372e0eb",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+      "recorded_sha256": "f78dcc0dbe1e9b9e602257e61373b8fdfe7da939cf9255c20b44bd5349437043",
+      "current_sha256": "f78dcc0dbe1e9b9e602257e61373b8fdfe7da939cf9255c20b44bd5349437043",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "recorded_sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d",
+      "current_sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "compound-ground-necessity-20261009/REPORT.md",
+      "recorded_sha256": "52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be",
+      "current_sha256": "52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "compound-ground-necessity-20261009/SOURCE_READS.json",
+      "recorded_sha256": "333935de6444edbf2b7b38c9bd5892b9aae68c963c1fafe301181c811989a343",
+      "current_sha256": "333935de6444edbf2b7b38c9bd5892b9aae68c963c1fafe301181c811989a343",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES.sha256",
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "recorded_sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "current_sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "current_match": true,
+      "historical_initial_snapshot": false
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES_INITIAL.sha256",
+      "path": "compound-ground-necessity-20261009/check_compound_ground.py",
+      "recorded_sha256": "1f04555b0ecce04b2cf68d41314a4ebe77cf40bf63da7ab7c570f31a70f6d411",
+      "current_sha256": "75f924c284fed3e497d9e79af8ee8af8cdf392c3668c32eb350de7084372e0eb",
+      "current_match": false,
+      "historical_initial_snapshot": true
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES_INITIAL.sha256",
+      "path": "compound-ground-necessity-20261009/CHECK_RESULTS.json",
+      "recorded_sha256": "2b2974a1c11ee2ffcb0d9591c5e08eae535f421da549e9a69cf9044119b29bc3",
+      "current_sha256": "f78dcc0dbe1e9b9e602257e61373b8fdfe7da939cf9255c20b44bd5349437043",
+      "current_match": false,
+      "historical_initial_snapshot": true
+    },
+    {
+      "record": "compound-ground-review-20261009/INPUT_HASHES_INITIAL.sha256",
+      "path": "compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "recorded_sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d",
+      "current_sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d",
+      "current_match": true,
+      "historical_initial_snapshot": true
+    }
+  ],
+  "canonical_comparison": "Only variable_sharing_cross_values order is normalized; all other structure and values remain exact.",
+  "historical_initial_pin_mismatches": "Expected developmental history; final pins, rather than initial pins, bind the selected current inputs.",
+  "inherited_proof": "Exact 19-line positive proof; included solely as a replay dependency, not credited as new research."
+}

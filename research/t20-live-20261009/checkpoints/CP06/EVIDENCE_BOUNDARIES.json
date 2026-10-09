@@ -1,0 +1,45 @@
+{
+  "new_result_verification": "Written mathematics plus separately scoped internal review and finite executable algebraic controls",
+  "fresh_Lean_or_kernel_verification": false,
+  "empirical_validation": false,
+  "metaphysical_warrant": false,
+  "active_research_duration_certified": false,
+  "packer_assurance_is_research": false,
+  "owner_acceptance": false,
+  "integration": false,
+  "closure": false,
+  "unreplayed_verifiers": [
+    {
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/verify_composite_review.py",
+      "status": "UNREPLAYED_HERE",
+      "reason": "Complete composite verification requires omitted primary-page PNG/OCR and historical raw PDF at its recorded path, plus predecessor corpus. Its frozen prior PASS is preserved but not newly asserted."
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/verify_package.py",
+      "status": "UNREPLAYED_HERE",
+      "reason": "Omitted raw PDF/page body and predecessor inputs. Current standalone author and review controls are replayed separately."
+    },
+    {
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/verify_review.py",
+      "status": "HISTORICAL_SUPERSEDED_ENTRYPOINT_NOT_RUN",
+      "reason": "Refers to the old unary live hash. Composite manifest plus unary-v2 receipt governs the current scope."
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay/verify_final.py",
+      "status": "UNREPLAYED_IN_DELIVERED_EXTRACTION",
+      "source_tree_check": "Read-only PASS during packaging before copy; source snapshot and hashes preserved.",
+      "reason": "Full predecessor review manifest requires five intentionally omitted raw web-tool/source-body snapshots. Portable control and included binding verification do not claim to replace it."
+    },
+    {
+      "path": "t20-next-frontier-20261008/same-threshold-replay-review/verify_evidence.py",
+      "status": "UNREPLAYED_HERE",
+      "reason": "Mutating authoring workflow rewrites timestamped evidence; do not run in a frozen tree. Raw predecessor retrieval corpus omitted."
+    },
+    {
+      "path": "Other preserved original verify_evidence.py, verify_review.py, verification scripts and predecessor scripts",
+      "status": "UNREPLAYED_HERE",
+      "reason": "Only twelve commands in CONTROL_PLAN are executed. Original broad verifiers may require omitted predecessor corpus, raw source snapshots or historical paths; their frozen outputs are evidence history, not fresh passes."
+    }
+  ],
+  "cutoff": "Last included author final binding at 2026-10-08T16:15:27.659356+00:00; later notification, packaging and replay times are assurance only."
+}

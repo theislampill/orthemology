@@ -1,0 +1,130 @@
+{
+  "created_utc": "2026-10-08T15:45:28.232406+00:00",
+  "status": "PASS_SCOPED",
+  "author_manifests": {
+    "MANIFEST.json": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+    "ADDENDUM_MANIFEST.json": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716"
+  },
+  "theorems": [
+    {
+      "id": "joint_cdf",
+      "status": "PASS",
+      "scope": "F_c for every real 0<c<=1; direct derivative/boundary proof and independent nonnegative-mixture derivation"
+    },
+    {
+      "id": "fixed_threshold_paths",
+      "status": "PASS",
+      "scope": "One command-independent threshold pair per occurrence; coordinate-only monotone paths and mutually independent pairs"
+    },
+    {
+      "id": "all_command_equivalence",
+      "status": "PASS",
+      "scope": "Every integer 1<=n<=m on the closed square with shared coordinate homeomorphisms"
+    },
+    {
+      "id": "Joe_identification",
+      "status": "PASS",
+      "scope": "theta=1/c>=1, primary software formula/generator inspections only"
+    },
+    {
+      "id": "homogeneous_count_fibre",
+      "status": "PASS",
+      "scope": "Common joint law, common endpoint-preserving coordinate marginals, mutually independent routes; counts exactly m>=n"
+    },
+    {
+      "id": "heterogeneous_shared_marginal_count_fibre",
+      "status": "PASS",
+      "scope": "Route-specific joint laws but one shared marginal map per root and mutual route independence; counts exactly m>=n"
+    },
+    {
+      "id": "failure_rectangles_and_controls",
+      "status": "PASS",
+      "scope": "Exact c=2 rectangles; distinction from inherited shared-gate, cross-talk and factorization-conditional panel"
+    },
+    {
+      "id": "semantic_guard",
+      "status": "PASS",
+      "scope": "Measurement-inference countermodel only; stochastic independence distinct from original-source independence"
+    },
+    {
+      "id": "source_attribution",
+      "status": "PASS_WITH_EXPLICIT_COVERAGE_LIMITS",
+      "scope": "Targeted primary formula inspection and bibliographic corroboration; no whole-paper or field-wide novelty certification"
+    }
+  ],
+  "findings": [],
+  "independent_controls": {
+    "assertions": 6543,
+    "families": 35
+  },
+  "supplementary_author_replay": {
+    "assertions": 3618,
+    "families": 30,
+    "byte_identical_outputs": true
+  },
+  "excluded_claims": [
+    "occurrence-specific marginal generalization",
+    "route-to-route dependence generalization",
+    "physical validation",
+    "psychological manipulability",
+    "metaphysical counterexample",
+    "harmonious plural Necessary Beings satisfying perfection premises",
+    "new copula family",
+    "whole-paper reading",
+    "field-wide priority",
+    "integration",
+    "T20 closure"
+  ],
+  "evidence": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "4a123eaaa894f8e88485221ab1769b22cde2147116076610cbc41158e6280ab3",
+      "bytes": 14290
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "8fac8e82b1502c62338cb24970cbc9b82a2a1a7369df43c4783d18d26fbb6aae",
+      "bytes": 950
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "53920f1a54dd5f4c8d252b32e8ace8f2c9bcb607170b97da525d18728677ff79",
+      "bytes": 11600
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "3435a295fe60cb49bd48ac26adaf1e4878468683ba6f7903121fcb3bd093e723",
+      "bytes": 6497
+    },
+    {
+      "path": "results/independent_controls.json",
+      "sha256": "034832c33c382170e93badac4f3f7bb742ff7582eb18b2ae867f295ccf5ca928",
+      "bytes": 514102
+    },
+    {
+      "path": "results/independent_controls.log",
+      "sha256": "347421d759412169daf6329f05d203dbb456921e0daef5c58c87eacbad16f084",
+      "bytes": 1467
+    },
+    {
+      "path": "replay/exact_controls.py",
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "bytes": 6916
+    },
+    {
+      "path": "replay/results/exact_controls.json",
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "bytes": 18639
+    },
+    {
+      "path": "replay/results/stdout.log",
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "bytes": 1381
+    },
+    {
+      "path": "verify_evidence.py",
+      "sha256": "362e901d6a529d6922ae51a67679e925b499fabf7d4937915f24340cef5bfc8d",
+      "bytes": 3142
+    }
+  ]
+}

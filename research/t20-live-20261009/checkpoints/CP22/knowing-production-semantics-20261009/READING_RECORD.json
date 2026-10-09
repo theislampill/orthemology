@@ -1,0 +1,160 @@
+{
+  "date_utc": "2026-10-09",
+  "scope": "Bounded knowing-production semantics; source reading and comparative analysis, not integration or closure",
+  "primary_electronic": [
+    {
+      "input": "positive-agency-source-return/sources/dar017.txt",
+      "read_ranges_inclusive": [
+        [
+          605,
+          868
+        ],
+        [
+          923,
+          937
+        ],
+        [
+          957,
+          1053
+        ]
+      ],
+      "credit": "Targeted rereading in separate overlapping chunks. Source reads recorded only for the specified completed ranges; other search hits/navigation are not full-body readings."
+    },
+    {
+      "input": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "read_ranges_inclusive": [
+        [
+          35,
+          46
+        ],
+        [
+          81,
+          109
+        ],
+        [
+          235,
+          240
+        ]
+      ],
+      "credit": "Inherited source rereading; no independent proof-count increment"
+    },
+    {
+      "input": "particular-agency-bridge-20261009/read-selections/bayan002-L0071-L0080.txt",
+      "extent": "Entire selection"
+    },
+    {
+      "input": "particular-agency-bridge-20261009/read-selections/bayan002-L0088-L0103.txt",
+      "extent": "Entire selection"
+    }
+  ],
+  "scan_reads": [
+    {
+      "source": "sources/dtan10.pdf",
+      "pdf_pages": [
+        1,
+        112,
+        113,
+        138,
+        139,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147
+      ],
+      "printed_content_pages": [
+        112,
+        113,
+        138,
+        139,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147
+      ],
+      "extent": "Every displayed page body and apparatus visually inspected; PDF1 title identifies Ibn Taymiyya, Rashad Salim, university publisher, volume10, second edition1411/1991. PDF/printed equality verified at all listed content positions."
+    },
+    {
+      "source": "sources/asbahani-minhaj.pdf",
+      "pdf_pages": [
+        503,
+        504,
+        505,
+        508,
+        820,
+        821,
+        822,
+        823
+      ],
+      "printed_content_pages": [
+        403,
+        404,
+        405,
+        408,
+        720,
+        721,
+        722,
+        723
+      ],
+      "extent": "Entire displayed body and apparatus visually read. 721–722 relevant passage is supplementary witness-ta material in footnote, not ordinary main body. Other edition metadata inherited from actual T19 index; no new manuscript collation."
+    }
+  ],
+  "prior_reports": [
+    {
+      "path": "positive-agency-source-return/REPORT.md",
+      "extent": "Entire report and SOURCE_RECORD.json"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "extent": "Entire report"
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "extent": "Entire report; its results retained, not claimed new"
+    },
+    {
+      "path": "particular-agency-rival-20261009/ROOT_SOURCE_SELECTION.md",
+      "extent": "Entire note"
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "extent": "Entire report; not direct new OConnor reading"
+    },
+    {
+      "path": "particular-agency-rival-20261009/simplicity-comparison/REPORT.md",
+      "extent": "Entire report; not direct new OConnor reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "extent": "Result and source section through §3A; not whole report"
+    },
+    {
+      "path": "essence-attribute-source-return/REPORT.md",
+      "extent": "Selected main findings and source discussions in tool output; bounded Result/§1 reread; not claimed fresh whole-report reading"
+    },
+    {
+      "path": "positive-agency-source-return/sources/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx.txt",
+      "extent": "L25–53 and search-located perfection/agency entries; report reading, not all cited source works"
+    },
+    {
+      "path": "positive-agency-source-return/sources/Arabic_Volume_Reading_Index_Final_v1_20261006.docx.txt",
+      "extent": "A17–A22 and bibliographic source identification; report reading, not whole corpus"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-reading-projections/documents/Orthemology_Seventeenth_Research_Final_v1_20261005.md",
+      "extent": "L117–141,153–173,217–243 plus search-located opening appraisal; historical report claims retained as inherited"
+    }
+  ],
+  "limits": [
+    "No manuscript collation or whole-volume reading claim",
+    "No historical duration or active-time certification",
+    "No new formal model, metaphysical possibility witness, confidence percentage or proof count",
+    "No edits outside own task directory",
+    "Repeated render/extraction access is not independent evidence",
+    "All new PDFs are research witnesses, not redistributed deliverables",
+    "Web size-limit and failed page retrievals are not access denials; alternate allowed public download used"
+  ]
+}

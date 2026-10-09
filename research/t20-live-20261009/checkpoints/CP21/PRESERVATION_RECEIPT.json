@@ -1,0 +1,285 @@
+{
+  "status": "PASS",
+  "freeze_utc": "2026-10-09T09:55:35.904810+00:00",
+  "selected_original_count": 53,
+  "stable_inputs_unchanged_since_preparation": true,
+  "all_selected_inputs_before_after_staging_match": true,
+  "staged_copies_exact": true,
+  "selected_original_json_parsed": [
+    "attestation-context-source-return-20261009/INPUTS.json",
+    "attestation-context-source-return-20261009/MANIFEST.json",
+    "complete-explanation-modal-review-20261009/modal-premise-independence-results.json",
+    "complete-explanation-modal-review-20261009/symmetry-premise-control-results.json",
+    "complete-explanation-source-20261009/SOURCE_LEDGER.json",
+    "complete-explanation-source-20261009/VERIFICATION.json",
+    "explanation-stopping-asymmetry-20261009/INPUT_BINDINGS.json",
+    "explanation-stopping-asymmetry-20261009/READING_RECORD.json",
+    "explanation-stopping-asymmetry-20261009/VERIFICATION.json",
+    "explicability-parity-20261009/ACQUISITION.json",
+    "explicability-parity-20261009/INPUT_BINDINGS.json",
+    "explicability-parity-20261009/PRIOR_COVERAGE.json",
+    "explicability-parity-20261009/READING_RECORD.json",
+    "explicability-parity-20261009/VERIFICATION.json",
+    "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+    "root-resumed-research-20261009/COMPLETE_EXPLANATION_READING.json",
+    "root-resumed-research-20261009/COMPLETE_EXPLANATION_REVIEW.json",
+    "root-resumed-research-20261009/EXPLICABILITY_SOURCE_SELECTION.json",
+    "root-resumed-research-20261009/SUCCESSOR_COMPARATIVE_REVIEW.json",
+    "sovereignty-discriminator-currentness-20261009/INPUT_BINDINGS.json",
+    "sovereignty-discriminator-currentness-20261009/OPERATION_REGISTER.json",
+    "sovereignty-discriminator-currentness-20261009/VERIFICATION.json",
+    "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+    "spinoza-formal-transfer-screen-20261009/READING_LEDGER.json",
+    "spinoza-formal-transfer-screen-20261009/ROOT_ARABIC_FEEDBACK_READING.json",
+    "spinoza-formal-transfer-screen-20261009/VERIFICATION.json",
+    "spinoza-formal-transfer-screen-20261009/commit-metadata.json",
+    "spinoza-formal-transfer-screen-20261009/source-bindings.json"
+  ],
+  "component_checksum_checks": [
+    {
+      "record": "explanation-stopping-asymmetry-20261009/MANIFEST.sha256",
+      "path": "explanation-stopping-asymmetry-20261009/REPORT.md",
+      "sha256": "aab7d5783771c15775e6de2fad644ea7867de9a2678eb48cc1ca9249fafddfe1",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explanation-stopping-asymmetry-20261009/MANIFEST.sha256",
+      "path": "explanation-stopping-asymmetry-20261009/INPUT_BINDINGS.json",
+      "sha256": "a378c5b14a7b108b1a4011315bf14395cc4d343d26d8464d39867e90b34917fe",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explanation-stopping-asymmetry-20261009/MANIFEST.sha256",
+      "path": "explanation-stopping-asymmetry-20261009/READING_RECORD.json",
+      "sha256": "701448abfd0aa771b4badcb2c6f340cd1e99f6e0a5888fa4a9233e0241285f24",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explanation-stopping-asymmetry-20261009/MANIFEST.sha256",
+      "path": "explanation-stopping-asymmetry-20261009/VERIFICATION.json",
+      "sha256": "50139e05cd4a2dd7a69c191c966ee0830f0d02860f326b2a4f582d53e673c8b1",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "path": "sovereignty-discriminator-currentness-20261009/INPUT_BINDINGS.json",
+      "sha256": "3b4e6de52cb10ec0bcda328c32ea6312ed3e25fee4502eadfadfb3dd8f630ede",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "path": "sovereignty-discriminator-currentness-20261009/OPERATION_REGISTER.json",
+      "sha256": "99d40258b5a13cb765fae8fce3314597e3d08657c65e8729802494eaa350607d",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "path": "sovereignty-discriminator-currentness-20261009/REPORT.md",
+      "sha256": "dedcbd009844403c482e2f8fb09a83779987d7b2fb3bfbc219ec1fed3345768e",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "path": "sovereignty-discriminator-currentness-20261009/VERIFICATION.json",
+      "sha256": "7315a01f4609eeab2791dbfba9a2eda533a49572e67645a29e4172fc131abd55",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "path": "sovereignty-discriminator-currentness-20261009/record_bindings.py",
+      "sha256": "1ba0794201bf0bf9651d08ec2f1e9a1b2001f2da64f2e53017105b784452dd16",
+      "matches": true,
+      "distributed": false
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/ACQUISITION.json",
+      "sha256": "b2f58e9241335e7bcc59d294b0ec5af5e0a724877a99f88d291fe6df675b38b4",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/INPUT_BINDINGS.json",
+      "sha256": "7aa7b7f38fcfef3b00f0caf31cc9a1b1d72199e744917f6238877999362ea64e",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/PRIOR_COVERAGE.json",
+      "sha256": "35981f6cfd363e0409d94ed248475918e7b124c780c1e08a5f3a105daf79d5ed",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/READING_RECORD.json",
+      "sha256": "b54be99991f4d190d1d8eab85711ec848772399b5e750f4c7c4913c0270809b5",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/REPORT.md",
+      "sha256": "ec040740608abc6a8e8f14b2e0a09867a239e97ed41a279eaf3092c49267b72d",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "explicability-parity-20261009/SHA256SUMS",
+      "path": "explicability-parity-20261009/VERIFICATION.json",
+      "sha256": "f826bbaeca862aa8328e7b4c4cb2e95c07b4f2c1dc715aa92dd561b3ac26a4a5",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/READING_LEDGER.json",
+      "sha256": "6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/REPORT.md",
+      "sha256": "c1dae1a738fc90e7977f4257a960eef29b76d17ac6121d878361d2aaf18f139e",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/VERIFICATION.json",
+      "sha256": "dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/commit-metadata.json",
+      "sha256": "ca89b0b2783b355af87705ce9feb99f7fc25074831b2bba46710a5e861a45b3a",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/source-bindings.json",
+      "sha256": "9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Axioms.lean",
+      "sha256": "a3f13903d01d37c4d3aea9819489c373595a4e7d0f9697ed56ffaaadb8b86416",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Causation.lean",
+      "sha256": "42d554bedb12665cc8f48037c943f1fd7fc7fcae184a80f430cabf19f9d0e487",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Definitions.lean",
+      "sha256": "6543ee63b7863f55e986202830f61f861d89050c7bdc425199b91484808962d3",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__ModalForm.lean",
+      "sha256": "5005d4d2f840d8731b98c54ac9bbf8486dafa0c6a446b2225a007f9e4e7e0296",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Models__Counterexamples.lean",
+      "sha256": "02e668544642068bddd0e6ffdf6a9c2d2614ba295ee1ef4a4f437602287344a0",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Propositions.lean",
+      "sha256": "987c666a7156d7866ceebb5ecd617e4fa1377f9e038d51d4e4a2bcee8b1dc4e8",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/LICENSE",
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/README.md",
+      "sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/docs__auxiliary_axioms.md",
+      "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/lean-toolchain",
+      "sha256": "6d0d484eeae522e854238a3ea3012246c0104d0544e58df340daad3676cc0f78",
+      "matches": true,
+      "distributed": false
+    },
+    {
+      "record": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "path": "spinoza-formal-transfer-screen-20261009/sources/papers__cluster_a_irreducibility__08_scope.md",
+      "sha256": "e630c2fcb4ad194e3925972ab4c288887a5884e76dcc4b2f3e62bcdcd214d4e9",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "attestation-context-source-return-20261009/MANIFEST.json",
+      "path": "attestation-context-source-return-20261009/EXACT_READING.md",
+      "sha256": "ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "attestation-context-source-return-20261009/MANIFEST.json",
+      "path": "attestation-context-source-return-20261009/INPUTS.json",
+      "sha256": "2aa3c6027c26ba20ceeac0b333a2e53fde8f22e2f57b9745f037770dfc677e79",
+      "matches": true,
+      "distributed": true
+    },
+    {
+      "record": "attestation-context-source-return-20261009/MANIFEST.json",
+      "path": "attestation-context-source-return-20261009/RESULT.md",
+      "sha256": "f7ddcbd238f7fad8406a8475b0f61dea6859515182431c4c3742ec6bc9e93d55",
+      "matches": true,
+      "distributed": true
+    }
+  ],
+  "reference_git_blob_checks": 10,
+  "previous_archive_count_protected": 95,
+  "source_bodies_redistributed": false,
+  "mit_reference_only_exception_files": 10,
+  "uploads": 0,
+  "user_messages": 0,
+  "qualification": "Staging checks only; final archive, fresh extraction, executable controls, negative tests and source protection appear in external VALIDATION_RECEIPT.json."
+}

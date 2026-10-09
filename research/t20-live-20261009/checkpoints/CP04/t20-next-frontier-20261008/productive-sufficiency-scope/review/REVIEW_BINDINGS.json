@@ -1,0 +1,107 @@
+{
+  "reviewed_at_utc": "2026-10-08T12:14:06.091932+00:00",
+  "scope": "Independent bounded interface, source, and replay review; no integration or closure authority",
+  "report_status": "Final report inspected; all three wording qualifications resolved; no blocking findings for the stated bounded diagnostic use",
+  "inputs": [
+    {
+      "path": "PROSPECTIVE_TEST.md",
+      "sha256": "8c19801e53115c970b649df7175422f97fe4204fec129bdf59650896ef01a1ae"
+    },
+    {
+      "path": "ScopeTest.lean",
+      "sha256": "a53b58e88b6b3f7a9dd4b6693a223743e766b96bfc675e59086cb26d277b9d30"
+    },
+    {
+      "path": "verify.sh",
+      "sha256": "3bf13006f8cfdcf88d5d496b2f2f0af6e3a0f4dd5352f577aad892f9879e4da2"
+    },
+    {
+      "path": "negative_controls.py",
+      "sha256": "e1cf6230f3223ca4e5a6136b7f935227ee7e1eb8829819dfcad9ff9e0ba4c57d"
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "initial_review_sha256": "59794b04bc36ef69ec91423099dceefe4317966ee623e1e0c3ffb1fe139f5850"
+    },
+    {
+      "path": "inherited/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54"
+    },
+    {
+      "path": "inherited/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "path": "inherited/BridgeControls.lean",
+      "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8"
+    },
+    {
+      "path": "results/lean-final.log",
+      "sha256": "d8c3ea632838cdd65195514c1da8a508a6127ee9b8bf16e81e10f8c232ae8992"
+    },
+    {
+      "path": "results/NEGATIVE_CONTROLS.json",
+      "sha256": "489ea390807acce019accb27190abf7525c65241469f6496bd14ad5782c0fadf"
+    }
+  ],
+  "primary_sources": [
+    {
+      "path": "../wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "read_scope": "L294\u2013312; continuous L311\u2013359",
+      "textual_caution": "L359 final electronic reference is locally awkward; no emendation or inference relies on it. Positive scope distinction uses explicit L352\u2013355."
+    },
+    {
+      "path": "../wise-determination/sources/bayan5-item961.txt",
+      "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08",
+      "read_scope": "L001\u2013004"
+    },
+    {
+      "path": "../wise-determination/sources/bayan5-item962.txt",
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "read_scope": "L001\u2013011, excluding suspect L002 and opening L009 from evidential use"
+    },
+    {
+      "path": "../bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "read_scope": "L035\u2013046, L081\u2013090, L232\u2013240"
+    }
+  ],
+  "checks": {
+    "exact_original_source_copy": true,
+    "exact_verify_script_replayed_exit_code": 0,
+    "three_negative_controls_replayed": true,
+    "direct_bridge_and_probability_modules_recompiled_trust_zero": true,
+    "ordinary_axioms_only": true,
+    "reviewer_extra_scope_probes_compiled": true
+  },
+  "limits": [
+    "No unrelated inherited scientific suite rerun",
+    "Official mathlib and CalibratedIdentification dependency objects reused",
+    "No new web acquisition, manuscript collation, or scan inspection",
+    "No causal-production or metaphysical possibility certification"
+  ],
+  "disposition": "supported_for_bounded_interface_and_source_scope_only",
+  "final_report_sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "issue": "targetReceived versus contingent B-bearer correspondence",
+      "status": "resolved",
+      "location": "REPORT.md \u00a75, endpoint correspondence bullet"
+    },
+    {
+      "id": "R2",
+      "issue": "unconstrained separate Act occurrence sort",
+      "status": "resolved",
+      "location": "REPORT.md Result and \u00a75, Act bullet"
+    },
+    {
+      "id": "R3",
+      "issue": "Unit standing-record proxy and mere function congruence",
+      "status": "resolved",
+      "location": "REPORT.md \u00a75, theorem summary and Crucial limit"
+    }
+  ]
+}

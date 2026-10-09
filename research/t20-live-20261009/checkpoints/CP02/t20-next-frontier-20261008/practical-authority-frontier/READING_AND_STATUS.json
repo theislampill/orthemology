@@ -1,0 +1,24 @@
+{
+  "status": "Author-frozen for parent review, not owner acceptance or T20 closure",
+  "historical_records": "HISTORICAL_PARAGRAPH_BINDINGS.json",
+  "fresh_direct_primary": {
+    "ameri": {
+      "lead_read": "PDF32–38,48,67–71",
+      "child_read": "Full PDF1–72 inspected; substantive9–72 read continuously",
+      "witness": "Arabic first edition, Takween1437/2016, sourcePDF SHA76fa5d52620078dbe2641e4793325a9de38888b037f45f322d7756785d17d895",
+      "limits": "Overlapping reading of one witness; no independent corroboration; 22-page Elshinawy adaptation separate and not relied on"
+    },
+    "miftah": {
+      "read": "Continuous electronic1076–1087, authorial argument plus supplied apparatus",
+      "witness": "Official Word86 exact inheritedSHA a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+      "old_reading": "Inherited notes1073–1087 already cover the substantive owed-worship argument",
+      "credit": "Quotation/context verification and textual controls only; not whole-book or first-programme discovery",
+      "limit": "Ameri old2:88 print locus not physically collated; official edition bibliographic identity inherited via exact bytes; no new manuscript collation"
+    }
+  },
+  "unchanged_prior_files": true,
+  "protected_repository_changes": false,
+  "final_integration": false,
+  "source_intermediates_excluded_from_delivery": true,
+  "governing_reader_correction": "ameri-reading/scoped-ownership-addendum.md"
+}

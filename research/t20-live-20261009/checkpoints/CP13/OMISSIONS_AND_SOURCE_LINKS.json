@@ -1,0 +1,1218 @@
+{
+  "excluded_source_bodies": [
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-36.png",
+      "bytes": 336941,
+      "sha256": "10206a2eb29dd2ca2f764e6b13cc83583d6d1e2003e60c391be9390b3957cad1",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-37.png",
+      "bytes": 410702,
+      "sha256": "11108bb6f93c39c045c9d7665c03b530131bb19ee4157c716ca13152ed709fd7",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-38.png",
+      "bytes": 335909,
+      "sha256": "cd73e726c2bb0406307ccea9f5f5f22f7abc3380e3786f47cf1063f91952aae2",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-40.png",
+      "bytes": 392739,
+      "sha256": "4a4ed6b9164e15393c220c811abc7d86c8d52b400c71b0110e19164a058e7059",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/source-images/page-44.png",
+      "bytes": 387003,
+      "sha256": "d581b14684e324b355a85a56e1f933d2fa76fe207610b96b243e9ba530a12428",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/dasgupta2011-layout.txt",
+      "bytes": 147635,
+      "sha256": "410023448da4e07357793b188d0c618c2f68f492d7b352bfc487bf263f77e71f",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/dasgupta2011.pdf",
+      "bytes": 653379,
+      "sha256": "1c60972c6ccdeda410ee77537495d6ff7bcd456b778aaf3f06110510d9d07e07",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-01.txt",
+      "bytes": 2534,
+      "sha256": "b334a05b51cb5def9368f087aef82661b31825bab0e51d4f3f840ed043e1baa8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-02.txt",
+      "bytes": 3280,
+      "sha256": "7649135f611b7af9a5cb63c24d836665dc408ad12e9eaea5078636043838d124",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-03.txt",
+      "bytes": 3045,
+      "sha256": "02b4c1602de084ce1e7f6616e50d411fa46889be465a3b75f5cd9a92eb358a5e",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-04.txt",
+      "bytes": 3452,
+      "sha256": "9d4ded2423c34eb76ce3d48c5ccb5cd6716ce4c672aa85a040f52b0c2535ea89",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-05.txt",
+      "bytes": 3065,
+      "sha256": "ea81b76e455e14b5793377779c5961ff07784d1de714858e35e12a46a8092629",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-06.txt",
+      "bytes": 3382,
+      "sha256": "ed477352c344b76848a3d5b2f6efc21bf33bb107f711587708f1e3a672781d01",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-07.txt",
+      "bytes": 3139,
+      "sha256": "a31b9297066fb72a88c6f60d977b1878e234008976022f17737c570b73d11f7e",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-08.txt",
+      "bytes": 3080,
+      "sha256": "a14c5c5964490683b82fd001ab23242d0cbd7ce997490951c9f87ed59811b756",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-09.txt",
+      "bytes": 3361,
+      "sha256": "73f9ffdc6bcebb4faf78769560ef479795417495fcda4287fc8dbf4d9b717e3d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-10.txt",
+      "bytes": 3329,
+      "sha256": "38792829c1c256020536440344c9cf3d60b46c8b051eaf05685d18012913e92d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-11.txt",
+      "bytes": 2807,
+      "sha256": "a42c97a20186b1047074dc4e4ffdcbb27a1dfb20a5345d5a5dfae2fb936a7c69",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-12.txt",
+      "bytes": 2824,
+      "sha256": "5fb7b1b0e9d5a9864a8a935d88350b820334213db1e1002916ee2c5571ed7660",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-13.txt",
+      "bytes": 3253,
+      "sha256": "48240777e7ee593809370bc1af5bdbe4fbd818bad414435dbd5db4fe236f5865",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-14.txt",
+      "bytes": 3240,
+      "sha256": "aeee201d78cbe410e4790fd7cbf7ffde7d24ef41995f233a6307b0fec01a50d1",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-15.txt",
+      "bytes": 3475,
+      "sha256": "5e6ef1b4ca46c56f21d420165473952889ece401789458d011cdd7a483afce7d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-16.txt",
+      "bytes": 3101,
+      "sha256": "93dfcc7956574e563ae3855d0bfb2d4d78ace1e89d7d9a73f61328d3e51313aa",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-17.txt",
+      "bytes": 3227,
+      "sha256": "ef0649f44142a3f94e5c05604431b3fcd41c328f8a52f4cbef75dadc3e6e8a7d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-18.txt",
+      "bytes": 3452,
+      "sha256": "5b1838c77535130fa4134850dcf62e13fa2597d8f7b966283036b27450b39d36",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-19.txt",
+      "bytes": 3451,
+      "sha256": "52b499dd01da4137147ead2795baa299abe764893cedc9f18f71e9f850fac789",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-20.txt",
+      "bytes": 3526,
+      "sha256": "059478c6baba7c87f2ce826cc3d6498d7af8e45542e262727354d54226e3b4c4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-21.txt",
+      "bytes": 3192,
+      "sha256": "805937f131af0293e98cc83393050125c5062d694895aee6a9e2bead7fa1ca6b",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-22.txt",
+      "bytes": 3429,
+      "sha256": "85963728f4488d05933db6fae9b129163b9475a61473427e9b293a43e4579632",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-23.txt",
+      "bytes": 2881,
+      "sha256": "07bf9e59fef5da1103511e36ea73ffb405f8b9bbb85da283e82d35d8091478a1",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-24.txt",
+      "bytes": 3114,
+      "sha256": "3eed4583d5e7a4b7f11af0e46c6861ca1f462fdb366944fee38e3d5ed55c19e3",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-25.txt",
+      "bytes": 3432,
+      "sha256": "a190a87f7c342457de21fb5d037ab946b6afb0f8b5ef75b82418b9804a77689a",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-26.txt",
+      "bytes": 3315,
+      "sha256": "87d2aba8017ffa9e5cfe53db5e937cd2ac0972f908535d72777cb00278215ccb",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-27.txt",
+      "bytes": 2944,
+      "sha256": "371a0a603d1ff455e5ed9b39f4e8ec89531dc2dfa9d903a5354364ae2f6b54c4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-28.txt",
+      "bytes": 3176,
+      "sha256": "576cc1c10d9b028d1364948bbd16e14822b046f48bdbf3ad6c237c1e9f55a1e0",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-29.txt",
+      "bytes": 3295,
+      "sha256": "8c3c02abedd43b6cb2272846ba8ebcb71d772aadf82c8379411bc499e44f2eb3",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-30.txt",
+      "bytes": 3371,
+      "sha256": "c614d8bbe7f9735c7ed8011ce6f9be92e5d8d277b81a62c1dcb3fc01e6d766e9",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-31.txt",
+      "bytes": 3026,
+      "sha256": "fdb4457de7929a15554026d60172e226822836b0db7b5c238fe6e8c48b789326",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-32.txt",
+      "bytes": 3453,
+      "sha256": "d4a9ecc627f56bde352159cb52eb44bf16d37a27517020e9b8bbead0331923df",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-33.txt",
+      "bytes": 2913,
+      "sha256": "ce4d1b66b6eb3ed3eebf0af3b8c14746b1d04f1e12da7d03473a6d41b5741a97",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-34.txt",
+      "bytes": 3204,
+      "sha256": "184d5b1088abf6ab98a1719debc9cdd6008c4be689965d5eb0c72ac57b8ec349",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-35.txt",
+      "bytes": 3211,
+      "sha256": "f38e8bc785db4543e603a7422bf2ff19d56a2a392544e236d19135785b25b27e",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-36.txt",
+      "bytes": 2710,
+      "sha256": "8c398c2b968dba7e4e587836d7ea2d281989e44c068063f1d28471a3ae595563",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-37.txt",
+      "bytes": 3580,
+      "sha256": "bd580b658332ce9e82300ce26b3b260a47c495d61195991cbf90258a346690b8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-38.txt",
+      "bytes": 2773,
+      "sha256": "106e9ec195f8b7ca388150f53edcfa4c3dc7bf1dfd072646139abe6eff52c648",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-39.txt",
+      "bytes": 3289,
+      "sha256": "68679d901f670e47319a35aa6fb93980c67b2b4599f196c1d72dd63de558d965",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-40.txt",
+      "bytes": 3416,
+      "sha256": "847be540c9da6ff08493fc6d0f522a7b655a2d265d7960176240687b15f2f0a4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-41.txt",
+      "bytes": 3767,
+      "sha256": "5821869dfacbe18a35311b5c9de1514afc8d0f51266ce675925c1a72b2ddfd83",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-42.txt",
+      "bytes": 3065,
+      "sha256": "9d351bbd00bcffc0f628c2b99571b69a539a39f4f6e1c998e0a03ed29638c088",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-43.txt",
+      "bytes": 3417,
+      "sha256": "279181808adbe8938feef5ac51f4ae5ad4bc39f383d1f0bf076e534d562f5c6c",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-44.txt",
+      "bytes": 3443,
+      "sha256": "dc10003b75048b47aef3f719878313e2faa6b52bbeddb9fda0d7c11a6f60e303",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-45.txt",
+      "bytes": 3385,
+      "sha256": "aed9e222e56f5ff4707893a2454e2cc15f7e94169c2a8f27a961449c65f03043",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/sources/page-46.txt",
+      "bytes": 2765,
+      "sha256": "b5a756e116aec9849b5915a2571353a066dcc986d335b92abaf601e193c150fc",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+      "bytes": 375665,
+      "sha256": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016.html",
+      "bytes": 378645,
+      "sha256": "dc6660430584470b6eadfd37771a3f2910de7dd469e77043a855d355f68dd155",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-01.txt",
+      "bytes": 2759,
+      "sha256": "ef1e6237f6e92d49f3141f86e94c632ddb11161402656ce161beb73595329eb4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-02.txt",
+      "bytes": 4034,
+      "sha256": "4b680bc9258c21326801f88f17261a4d04734be089df3b410450318508c17ef8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-03.txt",
+      "bytes": 4397,
+      "sha256": "f1958fe7cc7639bb3962d4695cbf9b35580066b8bbafe914b189deeeba357f34",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-04.txt",
+      "bytes": 4479,
+      "sha256": "d7283dd3ec0befba25474b8496d45c12778ebe76e657bc83c8bc78f61395e46d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-05.txt",
+      "bytes": 4022,
+      "sha256": "9b252f49088bdde782bc4848a8c0b521512d31b2db9afb5eb65c53d0b769d757",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-06.txt",
+      "bytes": 4845,
+      "sha256": "1205948e495df50c0bfc91488b657f9404a6e4089e75f551fe84eaa03269f891",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-07.txt",
+      "bytes": 5191,
+      "sha256": "0ea17a6bc5c80e41a55ec812ea79009aad79346e556e19623a788e931de6e89a",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-08.txt",
+      "bytes": 4879,
+      "sha256": "998600901bc34313ce4d8f053d12ab983221be271a939444a7ecffc92b268126",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-09.txt",
+      "bytes": 5117,
+      "sha256": "c973da76c730e370c0dd4fa4452cb1c6186fb0011a580ec7d492715247c31181",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-10.txt",
+      "bytes": 4848,
+      "sha256": "2c324642ae0b245279ced6c0a844c26a5b88349ead69e6266598f1ba38272d81",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-11.txt",
+      "bytes": 4803,
+      "sha256": "9459a0e5bd1f297dcad63969adb17493aaa2e81f38cffc3ae14cf27ff1d451e8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-12.txt",
+      "bytes": 4970,
+      "sha256": "b9e13f303cf5841058dc60f63561aea3d99e078b66a5d0ca21fa9d4c9d2ef06e",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-13.txt",
+      "bytes": 4685,
+      "sha256": "dcd4beb1e57e27525255385aa3f948229e9a188171d0ef2a06a81e40b5e4e887",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-14.txt",
+      "bytes": 4821,
+      "sha256": "10cc8a83658871d57b237cdb0f71753fc5619cec30bf0d8e07e9f95cc445568b",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-15.txt",
+      "bytes": 4650,
+      "sha256": "f5e1899398999a1f58442c0ce885a50a225286f2b50beb96760b9d3b62968af4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-16.txt",
+      "bytes": 4714,
+      "sha256": "eccc62f56dc8c19cac9bd3c03616ff8c924773d3d6be98533c0b990fdbe04a68",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-17.txt",
+      "bytes": 5086,
+      "sha256": "ad9bf83a9e4800688e6569cf2cdb7a900723e463ba22da52682d9a875e42b606",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-18.txt",
+      "bytes": 4847,
+      "sha256": "fb2ed2a61199e0ed23db047686de5f44e660da6749002f3a16c056193ff20ae3",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-19.txt",
+      "bytes": 5094,
+      "sha256": "4decfdc2cc020873a66a6489f5e4e6b6051a0b0b6cd4c230dbb7cae280be3bd1",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-20.txt",
+      "bytes": 4972,
+      "sha256": "7a94609ba9e506be2ccc3c0c27d6330dcf0eea646a60fce20c1d2b374977c629",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-21.txt",
+      "bytes": 4685,
+      "sha256": "0f11f4ad7d6e4584fe778af507ce35dee893bc1eeb8cbf5feaca863bfb55842c",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-22.txt",
+      "bytes": 4702,
+      "sha256": "1d67670d6449b46a9c189dee61cc4497784d9e8ae88073ea2fa51bb6df5d7bb9",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-23.txt",
+      "bytes": 4825,
+      "sha256": "674b14d2b99a69d2d2605a83e63669b2b8a64481735cd990bb99daf49011b9a8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-24.txt",
+      "bytes": 5357,
+      "sha256": "ea1daa660e487e90064fc8b75d2698bebee95016aa6ed364d6166df78790eabe",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-25.txt",
+      "bytes": 4472,
+      "sha256": "a2dfba8156b602f09181422965fa22167bd59b27123eaeb127cb444f5f508ea8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-26.txt",
+      "bytes": 4795,
+      "sha256": "9f5fd99ef86d0b36eaf4ce88c64bb7815535261e9216c79cd68244a67992223c",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-27.txt",
+      "bytes": 4124,
+      "sha256": "958558240bc7819a74f25d8437dc7184547720dfeec9e31ab0a9c20e8851f5ab",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-28.txt",
+      "bytes": 2008,
+      "sha256": "608b17e9a77a9edfc507451b65a2b3db00008082c5acb49d0a3d9b6dc8fd11b4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/dasgupta2014-layout.txt",
+      "bytes": 167791,
+      "sha256": "b41d1dbf1a87b5ebe60085e545ca89a144e157d820f47d181986401f5db0e076",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/dasgupta2014.pdf",
+      "bytes": 610106,
+      "sha256": "e680c92240e6dcd321854725be3b5f084d5d8f0c46bbff7e8934e95892afe508",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-attempt-3.html",
+      "bytes": 4368,
+      "sha256": "5b2743ab3757fe777c18833551fd23cc696e71a7478fd62344a8ea7e98e22c2a",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-01.png",
+      "bytes": 245200,
+      "sha256": "94cd1085b5cfa4342b3228e4c2733b023e1fe557d539524fa2e22e4de9d99fe2",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-05.png",
+      "bytes": 289587,
+      "sha256": "a07fbc877332a37964a362c0cefa2678f4b656e7631250ab68a63447a733ab21",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-11.png",
+      "bytes": 319107,
+      "sha256": "3e6af10aaabd88f3356404edfe68421c5ccc2a83aac69847e79dcf091aa2849c",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-19.png",
+      "bytes": 339895,
+      "sha256": "bc81fd92894033303b3e386b8a66a55766409f659770b262a562fa0477a83e57",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-20.png",
+      "bytes": 321277,
+      "sha256": "bb426204e173e5eec636ae3cd954e1f8cd34f3837c305192a6f4d8ae9dc760b8",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-22.png",
+      "bytes": 313060,
+      "sha256": "8bcd326cf72232bc005b38e10c83ab4f7cbe75633e56198507bc9b088e01ebf7",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-24.png",
+      "bytes": 348685,
+      "sha256": "d5e6610703e9efa4fc724ccc699691916028df89854548f00ad792ace5edd7f4",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "bytes": 13802,
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_INHERITED_DEPENDENCY",
+      "reason": "Inherited source only; no old research rebundling"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/T16_FULL_READER_TEXT_v5.md",
+      "bytes": 241546,
+      "sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_INHERITED_DEPENDENCY",
+      "reason": "Inherited source only; no old research rebundling"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.html",
+      "bytes": 315907,
+      "sha256": "73dd973bbc09ffb649bb0e0e5564a10defc200be59231ffabf285c190f7b86da",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.txt",
+      "bytes": 52409,
+      "sha256": "efb71ed841b52de74c23efda598ddfaa75000e4e739f229ade7c8c73fcbbe615",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.pdf",
+      "bytes": 59057,
+      "sha256": "7694b5b40ace67d0205906ffd5ddbe62944479062d82b70c335fe9ce5aacbb14",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.txt",
+      "bytes": 39051,
+      "sha256": "36344bb01f670271ba6117be969767f3726235a86811108125e1fa837ef86469",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-08.png",
+      "bytes": 169934,
+      "sha256": "62eff20a508334441327a5aaa432b715b53e50ab013011c6aa53a6095746e263",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-09.png",
+      "bytes": 168072,
+      "sha256": "cbcc28f2d99954a01b1c7220b619447b84c2f050ad69aabcb7889b1543b8562d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979-decoded.txt",
+      "bytes": 85968,
+      "sha256": "78da95d6ea9b4d10bff4811581ffa34e44e2a248409d53919b5518e8c6d30a5f",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.pdf",
+      "bytes": 7291313,
+      "sha256": "846039c2e2c9b3b1401a4cb9387279a3071c4e69d5dd85f28dc2878575c69b2b",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.txt",
+      "bytes": 85968,
+      "sha256": "a80487f153238d44cbf6de2d9e2c475ded6e1adc34cf2c846e7947645568df53",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.pdf",
+      "bytes": 5007766,
+      "sha256": "844910ec84480761100cb26c9d88036afb10df7d69f02f6c5d08c7b47885facb",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.txt",
+      "bytes": 49805,
+      "sha256": "4b378ab11f46d002f4ec2fd8d62cda5a3c4e8ba18b0277d99b84770a87d7562c",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-08.png",
+      "bytes": 252289,
+      "sha256": "f68ddcbfa803032f384be10ce055956ea5c7f646fc2f7f96da06e51501dd22f1",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-09.png",
+      "bytes": 259804,
+      "sha256": "be63d461365a1bf7cf2d56eb197c63ca541bba97556e927c517f0c66ac02e09d",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.pdf",
+      "bytes": 226118,
+      "sha256": "4c300df8b71353f2e0df0458156738cfbc0bdd7f889cbe80a912f585c4403134",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.txt",
+      "bytes": 33492,
+      "sha256": "16a3cc88a440c523d2113ea869e87a6ba19f1de8aebf138628c7a54caa471967",
+      "included": false,
+      "classification": "EXTERNAL_RETAINED_SOURCE_BODY",
+      "reason": "Copyright/source-body restraint; preserve hashes, locators and recorded reading scope instead"
+    }
+  ],
+  "source_urls_as_recorded": [
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/1610.09051",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/0810.0812",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://www.shamik.net/papers/dasgupta%20individuals.pdf",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/1610.09051",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/0810.0812",
+      "record": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/1610.09051",
+      "record": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://arxiv.org/pdf/0810.0812",
+      "record": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20individuals.pdf",
+      "record": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md"
+    },
+    {
+      "url_as_recorded": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MAPPING_TEST.md"
+    },
+    {
+      "url_as_recorded": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MAPPING_TEST.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "record": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/wise-determination-continuation/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md"
+    },
+    {
+      "url_as_recorded": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json"
+    },
+    {
+      "url_as_recorded": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md"
+    },
+    {
+      "url_as_recorded": "https://doi.org/10.3998/phimp.16039257.0014.020",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json"
+    },
+    {
+      "url_as_recorded": "https://quod.lib.umich.edu/p/phimp/16039257.0014.020",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json"
+    },
+    {
+      "url_as_recorded": "https://www.philosophersimprint.org/014020/",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json"
+    },
+    {
+      "url_as_recorded": "https://journals.publishing.umich.edu/phimp/",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json"
+    },
+    {
+      "url_as_recorded": "https://quod.lib.umich.edu/p/phimp/3521354.0014.020",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json"
+    },
+    {
+      "url_as_recorded": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+      "record": "t20-next-frontier-20261008/collective-explanation-adequacy-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/experiments/orthemology-v5-successors/source-store/bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532/ARTICLE.md",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md"
+    },
+    {
+      "url_as_recorded": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/experiments/orthemology-v5-successors/source-store/bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532/ARTICLE.md",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/history/RESULT-before-basing-clarification.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/history/RESULT-before-basing-clarification.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/history/RESULT-before-basing-clarification.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty/history/RESULT-before-basing-clarification.md"
+    },
+    {
+      "url_as_recorded": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/experiments/orthemology-v5-successors/source-store/bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532/ARTICLE.md",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md"
+    },
+    {
+      "url_as_recorded": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/experiments/orthemology-v5-successors/source-store/bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532/ARTICLE.md",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md"
+    },
+    {
+      "url_as_recorded": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://pgrim.org/pgrim/Being.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://place.asburyseminary.edu/faithandphilosophy/vol23/iss2/5/",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/591/",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/22/2032/",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://islamweb.net/ar/library/content/108/156/",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md"
+    },
+    {
+      "url_as_recorded": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://pgrim.org/pgrim/Being.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2038&context=faithandphilosophy",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://place.asburyseminary.edu/faithandphilosophy/vol23/iss2/5/",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://philpapers.org/archive/GRIAOT.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://openresearch-repository.anu.edu.au/handle/1885/86558",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json"
+    },
+    {
+      "url_as_recorded": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://philpapers.org/archive/GRIAOT.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://philarchive.org/archive/TORDSK-2",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://pgrim.org/pgrim/Being.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json"
+    },
+    {
+      "url_as_recorded": "https://andrewmbailey.com/dkl/Attitudes_De_Dicto_and_De_Se.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://www.uvm.edu/~lderosse/courses/lang/Perry%281979%29.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://pgrim.org/pgrim/Being.pdf",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://place.asburyseminary.edu/cgi/viewcontent.cgi?article=2038&context=faithandphilosophy",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+    },
+    {
+      "url_as_recorded": "https://link.springer.com/article/10.1007/s11841-026-01169-y",
+      "record": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+    }
+  ],
+  "source_scope_records": [
+    "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+    "t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json",
+    "t20-next-frontier-20261008/modal-grounding-source-review/READING_LEDGER.json",
+    "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/READING_LEDGER.json",
+    "t20-next-frontier-20261008/wise-determination-continuation/SOURCE_READS.json",
+    "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json",
+    "t20-next-frontier-20261008/collective-explanation-adequacy-review/READING_RECEIPT.json",
+    "t20-next-frontier-20261008/de-se-sovereignty/READING_LEDGER.json",
+    "t20-next-frontier-20261008/de-se-sovereignty-review/READING_RECEIPT.json",
+    "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json",
+    "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json"
+  ],
+  "boundaries": "Source PDFs, modern full text, OCR, HTML and page images remain external retained dependencies. No new network/file acquisition. Three selected public-domain Arabic passage returns retained; full Arabic volume not bundled. URLs transcribed from frozen records, not freshly visited.",
+  "excluded_old_research": "All prior archives and inherited source-text payloads omitted; exact identities retained.",
+  "active_excluded": "necessary-concordance-power and every later/unreviewed result excluded entirely."
+}

@@ -1,0 +1,80 @@
+{
+  "recorded_at_utc": "2026-10-09T09:11:47.075736+00:00",
+  "author": "Timothy O'Connor",
+  "title": "Theism and the Scope of Contingency",
+  "volume": "Oxford Studies in Philosophy of Religion, volume 1",
+  "editor": "Jonathan L. Kvanvig",
+  "chapter": 6,
+  "publisher": "Oxford University Press",
+  "publication_date_publisher": "2008-05-15",
+  "printed_pages": "134–149",
+  "print_isbn": "9780199542659",
+  "chapter_doi": "10.1093/oso/9780199542659.003.0006",
+  "source_url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_TheismScopeCont08.pdf",
+  "metadata_sources": [
+    "https://academic.oup.com/book/50040",
+    "https://academic.oup.com/book/50040/chapter-abstract/422045336"
+  ],
+  "metadata_limit": "Volume opened successfully. Chapter metadata obtained from publisher search result; direct chapter open returned redirect-access error. PDF has no imprint leaf. Upload and PDF creation dates are not publication dates.",
+  "pdf_pages": 16,
+  "pdf_bytes": 125179,
+  "pdf_sha256": "aad52f6e8e531f8434e2326ca2b10366bb8fb50bdf410077ad320928475796d4",
+  "read_extent": "Complete chapter, printed 134–149, sections I–III, notes 1–18, and references.",
+  "read_method": "Author PDF web extraction checked against continuous pdftotext -layout local reading in overlapping ranges 1–349, 260–500, 491–691.",
+  "visual_checked_printed_pages": [
+    140,
+    143,
+    144,
+    146
+  ],
+  "ledger": [
+    {
+      "pages": "134–136",
+      "notes": "1–5",
+      "check": "Framework and initial premises; conditional status retained."
+    },
+    {
+      "pages": "137–139",
+      "notes": "6–7",
+      "check": "Objections, replies and changes of explanatory target; interlocutors not independently read."
+    },
+    {
+      "pages": "139–140",
+      "notes": "8–9",
+      "check": "Option individuation and truth-domain assumptions; transport limits assessed."
+    },
+    {
+      "pages": "141–143",
+      "notes": "10–12",
+      "check": "Initial proposal, qualifications, and its revision; provisional argument not mistaken for final conclusion."
+    },
+    {
+      "pages": "144–146",
+      "notes": "13–15",
+      "check": "Necessary versus sufficient direction, memberwise-comparison pressure, and explicit incompleteness control."
+    },
+    {
+      "pages": "146–148",
+      "notes": "16–18",
+      "check": "Final application read without expanding task into a theodicy or empirical-cosmology campaign."
+    },
+    {
+      "pages": "148–149",
+      "notes": "Bibliography",
+      "check": "Entire bibliography read; no cited-work primary reading claimed."
+    }
+  ],
+  "prior_coverage_check": "rg search across existing workspace Markdown and JSON for title, ScopeCont08, and scope of contingency returned no matches before this report.",
+  "inherited_controls": [
+    "wise-particular-determination-return-20261009/REPORT.md",
+    "particular-agency-bridge-20261009/REPORT.md",
+    "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+    "particular-agency-rival-20261009/ROOT_SOURCE_SELECTION.md",
+    "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/RESULT.md"
+  ],
+  "comparison_limit": "Arabic and 2009 findings inherited from reports. No new Arabic primary reading; no 1999 Simplicity and Creation reading; no re-credit of inherited allocation/history distinctions.",
+  "source_synopsis_word_count": 93,
+  "formal_work": "Written elementary order-theoretic witness only, as requested by the parent: threshold-shifted linear arrays and a conditional improvement-closure consequence. Joint feasibility and normative strict matched improvement are expressly extra assumptions. No computation, finite table, new theorem claim, Lean, or metaphysical-possibility inference.",
+  "redistribution": "PDF, extraction, and page images are private research witnesses, not deliverables for redistribution.",
+  "status": "READ_COMPLETE; BOUNDED_ASSESSMENT_WRITTEN; NO_INTEGRATION_OR_CLOSURE"
+}

@@ -1,0 +1,161 @@
+{
+  "donor_quantifiers": {
+    "counterassignments_to_every_source_every_perfection": 10,
+    "interpretation": "Quantifier structure only; source and perfection labels do not certify original agents.",
+    "satisfying_assignments": 17,
+    "witness": {
+      "gives": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "has": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    }
+  },
+  "eligibility": {
+    "conclusion": "O and P imply K",
+    "countervaluations_to_full_implication": 0,
+    "full_premise_valuation_count": 184,
+    "independent_acquisition_donor_consolidation_combinations": 8,
+    "interpretation": "Logical implication and minimal premise set only; not a metaphysical countermodel.",
+    "necessary_premise_removal_witnesses": {
+      "nonreceptive_pure_lack_is_deficient": {
+        "D": false,
+        "H": true,
+        "K": false,
+        "O": true,
+        "P": true,
+        "R": false,
+        "consolidation": false,
+        "donor": false,
+        "identity_acquisition": false
+      },
+      "original_requires_unrestricted_perfection": {
+        "D": true,
+        "H": false,
+        "K": false,
+        "O": true,
+        "P": true,
+        "R": false,
+        "consolidation": false,
+        "donor": false,
+        "identity_acquisition": false
+      },
+      "receptive_pure_lack_is_deficient": {
+        "D": false,
+        "H": true,
+        "K": false,
+        "O": true,
+        "P": true,
+        "R": true,
+        "consolidation": false,
+        "donor": false,
+        "identity_acquisition": false
+      },
+      "unrestricted_perfection_excludes_pure_deficiency": {
+        "D": true,
+        "H": true,
+        "K": false,
+        "O": true,
+        "P": true,
+        "R": false,
+        "consolidation": false,
+        "donor": false,
+        "identity_acquisition": false
+      }
+    },
+    "original_and_pure_valuation_count": 8,
+    "valuation_count": 512
+  },
+  "universal_dependence": {
+    "conclusion": "At most one original; existence is not proved.",
+    "created_effect_domain_assignment": {
+      "created_effects": [
+        2
+      ],
+      "depends": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "originals": [
+        0,
+        1
+      ]
+    },
+    "full_external_domain_exhaustive_checks": {
+      "1": {
+        "accepted_relational_assignments": 2,
+        "possible_original_cardinalities": [
+          0,
+          1
+        ]
+      },
+      "2": {
+        "accepted_relational_assignments": 6,
+        "possible_original_cardinalities": [
+          0,
+          1
+        ]
+      },
+      "3": {
+        "accepted_relational_assignments": 76,
+        "possible_original_cardinalities": [
+          0,
+          1
+        ]
+      },
+      "4": {
+        "accepted_relational_assignments": 4352,
+        "possible_original_cardinalities": [
+          0,
+          1
+        ]
+      }
+    },
+    "interpretation": "All uses of depends must have the SAME completion relation and respect; own attributes and abstractions are outside the actual distinct external bearer domain.",
+    "remove_independence_assignment": {
+      "depends": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "originals": [
+        0,
+        1
+      ]
+    },
+    "remove_universality_assignment": {
+      "depends": [],
+      "originals": [
+        0,
+        1
+      ]
+    },
+    "scope_of_assignment": "Preserves created-only universality and underivedness relation constraints. Denies universality over distinct external originals. Does not establish genuine joint original efficacy or satisfy the full source hierarchy."
+  }
+}

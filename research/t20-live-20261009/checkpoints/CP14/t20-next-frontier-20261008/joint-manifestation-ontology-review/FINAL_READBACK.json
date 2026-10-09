@@ -1,0 +1,22 @@
+{
+  "scope": "Final amended-hash delta readback only",
+  "prior_result": {
+    "path": "t20-next-frontier-20261008/joint-manifestation-ontology/history/RESULT.before-review-corrections.md",
+    "sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b"
+  },
+  "final_result": {
+    "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+    "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9"
+  },
+  "source_manifest_sha256": "5a9897de0c4ca56c8cc145e43de54d4d71544ac17f777754bf0909617f510b8e",
+  "source_manifest_entries_verified": 11,
+  "source_capsule_words": 168,
+  "R1_resolved": true,
+  "R2_resolved": true,
+  "passive_identity_qualification_checked": true,
+  "metadata_access_disclosure_checked": true,
+  "additional_temporal_scope_sentence_checked": true,
+  "blocking_findings": [],
+  "prior_source_reading_repeated": false,
+  "final_readback_sha256": "544178053f70e06142bb576b903e91c90246bb2789d6021fcd73f8787a90d07e"
+}

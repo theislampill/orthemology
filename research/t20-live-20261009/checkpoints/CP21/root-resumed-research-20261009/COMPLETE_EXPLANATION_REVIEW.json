@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-10-09T09:26:48.145962+00:00",
+  "root_review": "Read complete final report, source ledger, verification, modal assessment and checker. Prior direct source reading retained in COMPLETE_EXPLANATION_READING.json.",
+  "files": [
+    {
+      "path": "complete-explanation-source-20261009/REPORT.md",
+      "sha256": "d4ee327370d09a8f994457a3adbc7e97449268d8706776aa8d86da8a6dbb4757"
+    },
+    {
+      "path": "complete-explanation-source-20261009/SOURCE_LEDGER.json",
+      "sha256": "25fea7e3b8ca5840ceae7565192e1eb90466ac641becdb917db47e6d4a63a335"
+    },
+    {
+      "path": "complete-explanation-source-20261009/VERIFICATION.json",
+      "sha256": "86767b5ad92ac0db7b8e9610a0ed53b36958e56073a8e0e37f3338b1e7f7ef14"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/independent-modal-assessment.md",
+      "sha256": "07e8fffcdfdcc049c6230bfaccb94393b9965dc7226e0c6c8961fd79778db402"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/modal-premise-independence.py",
+      "sha256": "798ef318afb661b350738ebc9eb22d3059f9062b1e58f73020020d1475d8c120"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/modal-premise-independence-results.json",
+      "sha256": "697669e0e00ee9a859a638db97e35527724a9dda7f4b6394ed8f70438dddebb3"
+    }
+  ],
+  "fresh_replay": "Independent two-world Python control byte-identical; seven thin valuations, two failures; five stronger valuations, zero failures. Finite premise-independence only, no Lean or metaphysical-possibility certification.",
+  "decision": "Rich essential dependency reading is textually supported; thin necessity control has no defeater credit against it. Exhaustiveness and substantive adequacy remain philosophical conditions. No new reason here to downgrade actual productive Completion.",
+  "checkpoint20_status": "Excluded; successor evidence only.",
+  "inherited_inputs_unchanged": true,
+  "t20": "ACTIVE; no closure/integration/owner acceptance or duration certification"
+}

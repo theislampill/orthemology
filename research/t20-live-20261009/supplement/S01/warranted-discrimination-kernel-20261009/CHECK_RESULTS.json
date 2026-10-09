@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-09T11:39:49.606589+00:00",
+  "command": "bash warranted-discrimination-kernel-20261009/replay.sh",
+  "exit_code": 0,
+  "printed_principal_theorem_axiom_sets": 13,
+  "printed_control_theorem_axiom_sets": 4,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx_found": false,
+  "accepted_sources": [
+    "CertificateFrontier.lean",
+    "Controls.lean"
+  ],
+  "mutation_rejections": {
+    "CostBlind": true,
+    "CurrentCost": true,
+    "InfinitePrice": true
+  },
+  "inherited_inputs_verified_unchanged": 12,
+  "frozen_kernel_inputs_hash_verified": 6,
+  "scope": "Theorem 1 support/cost-pair canonical frontier; no Bellman or epistemic certification"
+}

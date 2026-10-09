@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "bound_artifacts_rechecked": 72,
+  "frozen_predecessor_payloads": 50,
+  "replays": [
+    {
+      "script": "exact_controls.py",
+      "status": "PASS",
+      "byte_identical_json_and_log": true
+    },
+    {
+      "script": "panel_controls.py",
+      "status": "PASS",
+      "byte_identical_json_and_log": true
+    }
+  ],
+  "before_after_identity": true,
+  "scope": "Artifact identity and reproducibility only; no new proof, physical certification, integration or T20 closure."
+}

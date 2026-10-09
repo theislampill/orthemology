@@ -1,0 +1,80 @@
+{
+  "repository": "https://github.com/Nakammura/spinoza-ethica-lean",
+  "commit": "6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+  "license": "MIT; original LICENSE retained unchanged",
+  "retained_files": [
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Definitions.lean",
+      "repository_path": "Ethica/Pars1/Definitions.lean",
+      "git_blob_sha1": "2517ddd3fdd159e2ce0e4dc4d5deabba1eddae72",
+      "sha256": "6543ee63b7863f55e986202830f61f861d89050c7bdc425199b91484808962d3",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Axioms.lean",
+      "repository_path": "Ethica/Pars1/Axioms.lean",
+      "git_blob_sha1": "75d21ecdbdb2c17e265ca000283ef2266366762f",
+      "sha256": "a3f13903d01d37c4d3aea9819489c373595a4e7d0f9697ed56ffaaadb8b86416",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__ModalForm.lean",
+      "repository_path": "Ethica/Pars1/ModalForm.lean",
+      "git_blob_sha1": "c60e09c1bba1317dd3ef4baeea52d9a156f8d433",
+      "sha256": "5005d4d2f840d8731b98c54ac9bbf8486dafa0c6a446b2225a007f9e4e7e0296",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Causation.lean",
+      "repository_path": "Ethica/Pars1/Causation.lean",
+      "git_blob_sha1": "a4c72a94548447617ae599a71b6757553b592d4e",
+      "sha256": "42d554bedb12665cc8f48037c943f1fd7fc7fcae184a80f430cabf19f9d0e487",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Propositions.lean",
+      "repository_path": "Ethica/Pars1/Propositions.lean",
+      "git_blob_sha1": "9e3b5833235f588686ffacfb98094f797e5280c3",
+      "sha256": "987c666a7156d7866ceebb5ecd617e4fa1377f9e038d51d4e4a2bcee8b1dc4e8",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/docs__auxiliary_axioms.md",
+      "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md",
+      "git_blob_sha1": "37429eb5d9688e71b0c6bb974d78fc4f5c053809",
+      "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/papers__cluster_a_irreducibility__08_scope.md",
+      "repository_path": "papers/cluster_a_irreducibility/08_scope.md",
+      "git_blob_sha1": "2d7129525d3fa995ea5721b028c1a54ef6ae4c17",
+      "sha256": "e630c2fcb4ad194e3925972ab4c288887a5884e76dcc4b2f3e62bcdcd214d4e9",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/README.md",
+      "repository_path": "README.md",
+      "git_blob_sha1": "937c24bc6d7c051c22398bc84f370ca65580b6a1",
+      "sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Models__Counterexamples.lean",
+      "repository_path": "Ethica/Pars1/Models/Counterexamples.lean",
+      "git_blob_sha1": "87822603c1161add600e23a0ac4919c024fabc2d",
+      "sha256": "02e668544642068bddd0e6ffdf6a9c2d2614ba295ee1ef4a4f437602287344a0",
+      "executed": false
+    },
+    {
+      "archive_path": "spinoza-formal-transfer-screen-20261009/sources/LICENSE",
+      "repository_path": "LICENSE",
+      "git_blob_sha1": "9ab7646d2f3262fdb9be15ba6082a8df662a801e",
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "executed": false
+    }
+  ],
+  "execution_allowed_by_this_verifier": false,
+  "build_or_kernel_replay_claimed": false,
+  "scope": "Source inspection and byte identity only. The manuscript and pinned repository have different premise packages; no substantive transport is certified."
+}

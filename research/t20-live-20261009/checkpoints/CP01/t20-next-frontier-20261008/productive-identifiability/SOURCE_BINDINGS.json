@@ -1,0 +1,67 @@
+{
+  "recorded_utc": "2026-10-08T07:26:53.812276+00:00",
+  "root": "Common extracted evidence root",
+  "files": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py",
+      "kind": "runtime",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "bytes": 14477,
+      "scope": "Actual recovered direct-rule fixtures and their typed support schema."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "kind": "runtime",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "scope": "Current ordinary diagonal contexts, fixed exercises, targets and supports; no stochastic law imported."
+    },
+    {
+      "path": "t20-continuation-20261008/effect-production/RESULT.md",
+      "kind": "predecessor",
+      "sha256": "ea50cdaff7420489df813e4d4148158ce3bed636817755bc509bb3a9effdb74a",
+      "bytes": 24841,
+      "scope": "Frozen nineteen-check operation; used as starting boundary, not rerun for research credit."
+    },
+    {
+      "path": "t20-continuation-20261008/effect-production/src/production_contract.py",
+      "kind": "predecessor",
+      "sha256": "6542abda33036db36c8f903076c95cddfe1e177d14a0e576b9a23e099f914b03",
+      "bytes": 11530,
+      "scope": "Earlier typed effects/operative routes/certificates and occurrence refinements."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/causal-abstraction/RESULT.md",
+      "kind": "ancestry",
+      "sha256": "9166f0ee3bf7533b07d3a754935c713e99fcc9f6f7b89ce27d572ba72b8672ab",
+      "bytes": 8042,
+      "scope": "Inherited fibre and fine-intervention limitations."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/tensor-geometry-lineage/README.md",
+      "kind": "ancestry",
+      "sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "bytes": 25083,
+      "scope": "Retained H tensor and continuation crosswalk; no whole-manuscript reread claim."
+    },
+    {
+      "path": "t20-next-frontier-20261008/identification-review/results/H_THEOREM_4_2_SOURCE.json",
+      "kind": "primary_ancestry",
+      "sha256": "8f41f4e8e1d9c7469adda2e952b57477f3818a3dddb1d33380d87b6869178dfd",
+      "bytes": 3343,
+      "scope": "Exact original H Theorem4.2/Cor4.3 excerpt read, at pinned Git commit and blob. Subsection scope only."
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/sources/majmu20-item2031.txt",
+      "kind": "primary_source_control",
+      "sha256": "3e1e9d7cf90050e9bea91b2653a91dd656e1fa446cc0c0428430b15ded38932b",
+      "bytes": 13228,
+      "scope": "L007\u2013018 read; confirms inherited basic-versus-complete hukm distinction, no discovery or whole-chapter reading claim."
+    }
+  ],
+  "runtime_dependencies": [
+    "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py",
+    "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py"
+  ],
+  "scope": "All old inputs read-only. No prior result replay or source count is credited as new research."
+}

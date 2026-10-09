@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-08T19:40:50.609708+00:00",
+  "checks": [
+    {
+      "name": "Current RESULT exact reviewed digest",
+      "pass": true
+    },
+    {
+      "name": "Snapshot byte identity",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: REVIEW.md",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: reviewed_RESULT.md",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: independent_controls.py",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: CONTROL_RESULTS.json",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: CONTROL_NOTES.md",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: SOURCE_BINDINGS.json",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: RESEARCH_EVENTS.jsonl",
+      "pass": true
+    },
+    {
+      "name": "Review artifact: RESEARCH_ACCOUNTING.json",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: RESULT.md in arbitrary-face-replay-design",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: RESULT.md in adaptive-two-face-corollary",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: REVIEW_RECEIPT.json in arbitrary-face-replay-design-final-review",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: REVIEW_RECEIPT.json in adaptive-two-face-corollary-review",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: SOURCE_AUDIT.md in full-face-threshold-information",
+      "pass": true
+    },
+    {
+      "name": "Read-only source unchanged: NEGATIVE_CONTROLS.md in full-face-threshold-information",
+      "pass": true
+    },
+    {
+      "name": "Fresh independent control exit 0",
+      "pass": true
+    },
+    {
+      "name": "Fresh controls byte-identical to recorded output",
+      "pass": true
+    },
+    {
+      "name": "All nineteen control groups PASS",
+      "pass": true
+    }
+  ],
+  "empirical_validation": false,
+  "author_files_modified": false
+}

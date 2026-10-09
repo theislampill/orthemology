@@ -1,0 +1,88 @@
+{
+  "recorded_at_utc": "2026-10-08T19:22:46.258191+00:00",
+  "scope": "Scratch research and independent review",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/CONTROL_RESULTS.json",
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "bytes": 2934
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/READ_FIRST.md",
+      "sha256": "550d7f632d54c46f3cc51471434588cb49b2dd2882b13410cd8dd3cda315f872",
+      "bytes": 1898
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESEARCH_ACCOUNTING.json",
+      "sha256": "4afd4ae3577fdbcee1fb89c3335570a47346b92ba5410944408023bccf34331d",
+      "bytes": 1851
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESEARCH_EVENTS.jsonl",
+      "sha256": "227c25cfcf5b8a5c25708cdb790398993ad09d4fe50a35708754aeaa9b79dfa2",
+      "bytes": 3980
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md",
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97",
+      "bytes": 29225
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/REVIEW_RESPONSE.md",
+      "sha256": "cb179a5b75f41e1af021b3d6ef525868d7a64639df8f490c02ff9c25296e2042",
+      "bytes": 1139
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json",
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "bytes": 2934
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+      "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1",
+      "bytes": 3611
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/controls.py",
+      "sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "bytes": 13819
+    }
+  ],
+  "review_files": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW.md",
+      "sha256": "9fdcd3b120268501b8ea756ddd28a244065db6f1a21e5436b574d5942ef28b45",
+      "bytes": 16011
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/VERIFICATION.json",
+      "sha256": "596561099f8889303a8c77ef375ec60b6dd1ea31daac094acfd108b561e83ec1",
+      "bytes": 1271
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW_INPUT_BINDINGS.json",
+      "sha256": "c2335b25d0031d4713d30b49ec84a50fbfc2146bb1a694d77905f3257ce9cb7d",
+      "bytes": 1744
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/independent_probes.py",
+      "sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+      "bytes": 10560
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_PROBE_RESULTS.json",
+      "sha256": "327b28c4e2847191c37c46d25c1687edd448dcd8a6df6d0170f4aa2d0c786509",
+      "bytes": 1590
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REPLAY_RUN_OUTPUT.json",
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "bytes": 2934
+    }
+  ]
+}

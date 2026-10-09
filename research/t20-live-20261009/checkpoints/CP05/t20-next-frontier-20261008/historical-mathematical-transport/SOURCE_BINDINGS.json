@@ -1,0 +1,90 @@
+{
+  "bound_at_utc": "2026-10-08T14:28:35.084795+00:00",
+  "repository": "theislampill/orthemology",
+  "commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "commit_was_main_when_checked_2026_10_08": true,
+  "pr_url": "https://github.com/theislampill/orthemology/pull/32",
+  "pr_merged_at": "2026-10-08T12:49:33Z",
+  "archived_sources": [
+    {
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf",
+      "git_blob_sha1": "9bebbfb6c0a01737a5bf8a85f4f7e929d38cfb53",
+      "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+      "bytes": 341285,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "git_blob_sha1": "b2a4c6f3c1f6f923eddca1e5225b92c8b41cc388",
+      "sha256": "4e5eb8e7559c4daaf1757386a5a101bfc399bf0ba77c769e025512bd2f6ac5c3",
+      "bytes": 221506,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/README.md",
+      "git_blob_sha1": "79c26dea604541fad96e36588ae7c63259e7f8ea",
+      "sha256": "d316044509290188c81866904e159f49b20248f00c71ebdd7dfbd7c3537f3255",
+      "bytes": 2331,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/README.md"
+    },
+    {
+      "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex"
+    },
+    {
+      "path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "git_blob_sha1": "54a3218b55a09da4f1bf8b0b5fa931d63ccf166a",
+      "sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af",
+      "bytes": 15086,
+      "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex"
+    }
+  ],
+  "local_compared_proofs": [
+    {
+      "path": "interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "bytes": 15546
+    },
+    {
+      "path": "interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "bytes": 8194
+    },
+    {
+      "path": "grouped-calibration-invariants/RESULT.md",
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+      "bytes": 17594
+    },
+    {
+      "path": "grouped-calibration-invariants/GLOBAL_SCALE_COROLLARY.md",
+      "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667",
+      "bytes": 4949
+    },
+    {
+      "path": "global-calibration-ambiguity/RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+      "bytes": 12746
+    },
+    {
+      "path": "global-calibration-ambiguity/POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+      "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+      "bytes": 7854
+    },
+    {
+      "path": "multi-root-adaptive-bound/RESULT.md",
+      "sha256": "60f7f240fc98d2105bddf0d4668f6e1a18e81df62421f333a4b92da3ff5f2a00",
+      "bytes": 12090
+    }
+  ],
+  "reading": {
+    "main_pdf": "Complete 12-page text read; proposition 6 page 5 rendered and inspected.",
+    "companion_pdf": "Complete 4-page text read; theorem 1 page 2 rendered and inspected.",
+    "tex_sources": "Fetched for exact byte/provenance checks; companion title and model passage inspected. No claim to have read either complete TeX instead of the PDFs.",
+    "build_provenance": "Exact TeX-to-PDF build provenance is unverified. Companion TeX has a different title.",
+    "local_proofs": "All seven compared proof documents read completely."
+  },
+  "status": "Scoped historical comparison and conditional mathematical corollaries; no independent review, acceptance, integration or T20 closure claimed."
+}

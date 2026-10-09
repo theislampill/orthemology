@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-10-08T10:12:25.098040+00:00",
+  "status": "Independent review sealed; no scoped mathematical blocker; two separately proved robustness extensions; no closure",
+  "author_manifest_sha256": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1",
+  "grouped_author_manifest_sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6",
+  "grouped_review_receipt_sha256": "9294b54421ca4f9c431dae254bc1126134e0fb5d349018f488a00b4180243673",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "author_control_families": 15,
+  "independent_control_families": 5,
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 8433,
+      "sha256": "462626cb905a8b3d240daaaa61ee84844d7f6bf76f1785e1c54800809d22a0ab"
+    },
+    {
+      "path": "REVIEW_EXTENSIONS.md",
+      "bytes": 5417,
+      "sha256": "36a2f5b52e9a2e39358635810beb0dc56071a43cca32836abfb7649ec15d043b"
+    },
+    {
+      "path": "SOURCE_CHECK.md",
+      "bytes": 1785,
+      "sha256": "5d9b1f2d6d4dfc4b1f5f84661f3b90a017b0bebdf26c1d98d3541c948f188cf9"
+    },
+    {
+      "path": "frozen/ACTIVE_RESEARCH.jsonl",
+      "bytes": 1310,
+      "sha256": "0392c482dea7cf10ff24fc4b1d29dd57269ba91d8720cbd1c1b057e1af8a376a"
+    },
+    {
+      "path": "frozen/MANIFEST.json",
+      "bytes": 1943,
+      "sha256": "4cc3ee6c2eef3ea291e020bd3a62638694c2ed3f492ad32519cb4fb3a3932ea1"
+    },
+    {
+      "path": "frozen/PROCESS_AND_LABEL_BOUNDARIES.md",
+      "bytes": 10212,
+      "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e"
+    },
+    {
+      "path": "frozen/READ_FIRST.md",
+      "bytes": 1619,
+      "sha256": "880749d32f299be7e83db5054eb9768fbaf8a79b02d9b8eed5267c02dd6f8bcd"
+    },
+    {
+      "path": "frozen/RESULT.md",
+      "bytes": 13547,
+      "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46"
+    },
+    {
+      "path": "frozen/SOURCE_AUDIT.md",
+      "bytes": 6314,
+      "sha256": "5d21cf088fa9abbdf16f1830b716be35d809bdd2732cf492e1f378fb1f6a8c11"
+    },
+    {
+      "path": "frozen/exact_controls.py",
+      "bytes": 8504,
+      "sha256": "9e92b5affb6ce926bca92e39a9e222b051cdc47bd8f1efd6d78a98d2c0752d77"
+    },
+    {
+      "path": "frozen/results/exact_controls.json",
+      "bytes": 11956,
+      "sha256": "54cd8bd22eb688c1c05b84cdf2b3819166a029bcf0f291eb7078db3d595c33ed"
+    },
+    {
+      "path": "frozen/results/exact_controls.log",
+      "bytes": 550,
+      "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb"
+    },
+    {
+      "path": "independent_checks.py",
+      "bytes": 5712,
+      "sha256": "0ab98765ef1b9cdb0cc6d14ac9d8998de9888d801b46ec180db2e1f40eba9d7a"
+    },
+    {
+      "path": "results/AUTHOR_REPLAY.log",
+      "bytes": 550,
+      "sha256": "11f00021b69e0b0f384ca8fd25d0c7be9c31f8537a198a6dda45810c7d7616eb"
+    },
+    {
+      "path": "results/INDEPENDENT_REPLAY.log",
+      "bytes": 521,
+      "sha256": "3304f231ab8bb2b9fdc9d6ebacc59bd0027b2410b4eeeb851621ec23df9115e7"
+    },
+    {
+      "path": "verify_receipt.py",
+      "bytes": 649,
+      "sha256": "94ba0f6f07ca7ba7ec9599cff2455bcc2f7fd7794bee2ba0f1834ea3d051bb87"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "Access evidence only; body and substantive question remain open",
+  "files": [
+    {
+      "path": "ACCESS_PROVENANCE.json",
+      "sha256": "2914ccd9fd31815d52cc8b188bea645aac9481486d011b9fb2fcfdce3fdfb39d",
+      "bytes": 5880
+    },
+    {
+      "path": "ACCESS_RESULT.md",
+      "sha256": "f24569fad0b089d74f81fe9102c1414d089aff6f77f05a107b29b0b6769c872a",
+      "bytes": 3354
+    },
+    {
+      "path": "CROSSREF_BOOK_RESPONSE.json",
+      "sha256": "fc4c4da6e599ffb0c31c846a8bada06d8ea2c84f1a95bb36c6eb7953df625ed3",
+      "bytes": 2099
+    },
+    {
+      "path": "CROSSREF_CHAPTER_RESPONSE.json",
+      "sha256": "3c74afe9e039832992dc29fdf702032dc3d6531e89eac3cda909b3d8b0c3745c",
+      "bytes": 1513
+    }
+  ]
+}

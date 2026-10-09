@@ -1,0 +1,12 @@
+{
+  "status": "bounded review completed; broader research remains open",
+  "prospective_intervals": "See RESEARCH_EVENTS.jsonl. No duration is assigned to earlier reading or analysis.",
+  "duration_certificate": false,
+  "credit_exclusions": [
+    "earlier unrecorded work",
+    "waiting",
+    "packaging",
+    "overlapping aggregate parallel time"
+  ],
+  "no_retrospective_reconstruction": true
+}

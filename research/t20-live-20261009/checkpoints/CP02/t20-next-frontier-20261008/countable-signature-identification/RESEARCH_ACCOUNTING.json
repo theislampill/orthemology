@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "timestamp_utc": "2026-10-08T08:21:18.914773+00:00",
+      "event": "prospective_active_start",
+      "scope": "Primary-condition verification for Zsigmondy(4,1,n), countable-index finite-support rational identification and guarded finite-profile obstruction.",
+      "excluded": "Earlier candidate appraisal before this marker, prior results, administration, recovery and waits."
+    },
+    {
+      "timestamp_utc": "2026-10-08T09:27:51.120705+00:00",
+      "event": "active_research_pause_for_final_review_and_evidence",
+      "result": "Primary Zsigmondy base4 verification; unknown finite-signature inverse; polynomial gcd decoder; guarded obstruction; infinite mimic/finitude witness; approximation and coefficient/mixture boundaries; 15+6+8 controls.",
+      "correction_retained": "The proposed greedy digit inequality was corrected to f_e^5<f_(e-1) before proof use.",
+      "exclusions": "Subsequent export, hashing, repeated replay, packaging, waiting and source-delivery bookkeeping are administrative verification."
+    }
+  ],
+  "net_active_seconds": null,
+  "scope": "Prospective activity boundaries; elapsed envelopes are not certified uninterrupted scientific time.",
+  "excluded": "Before-ledger candidate appraisal, prior stages, waits, exports, source-delivery bookkeeping, hashing, routine repeat replay and delivery."
+}

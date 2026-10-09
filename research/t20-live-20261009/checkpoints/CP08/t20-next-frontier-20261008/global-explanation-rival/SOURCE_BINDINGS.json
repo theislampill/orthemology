@@ -1,0 +1,120 @@
+{
+  "utc": "2026-10-08T17:30:54.153732+00:00",
+  "note": "Extract digests bind returned partial primary text, not original PDFs. No complete Billon original file was acquired.",
+  "files": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/REPORT.md",
+      "bytes": 26281,
+      "sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "role": "inherited_input"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/SOURCE_BINDINGS.json",
+      "bytes": 2347,
+      "sha256": "0a5323396e0f609ddff592e23585af03389fcf2335fd82c4e73005642208e757",
+      "role": "inherited_input"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/original-capacity-warrant/REPORT.md",
+      "bytes": 30871,
+      "sha256": "2d38494f6c116906a50ee8f4f9abd20f9eadc6e9aef1a49cf35d4664e2b7d9c5",
+      "role": "inherited_input"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/BeginninglessProvision.lean",
+      "bytes": 5309,
+      "sha256": "508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd",
+      "role": "inherited_input"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/ACTUAL_COMPLETION_REENTRY_AUDIT.md",
+      "bytes": 3782,
+      "sha256": "facf5820ebe50997522f7921231c5785c731cdf7a533642c4815e3beb21ba460",
+      "role": "inherited_input"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/FORMAL_OBJECTIVE_REENTRY_BOUNDARY.md",
+      "bytes": 8072,
+      "sha256": "d3ab4e1bfe5ae0a80ba0d9580446b3b40fedc9e8c56d60b39546fa3103d81124",
+      "role": "inherited_input"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-493-contiguous-indexed-extract.txt",
+      "bytes": 33465,
+      "sha256": "4049d194ccf6c29b410b24d6154a32a531c9731cc3d5754913ef95906945a982",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-absence-indexed-extract.txt",
+      "bytes": 32561,
+      "sha256": "cf84d59d8d3073084c786a03cba16d6a3c9b33a7943bb21b3f74103369a75813",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-focused-indexed-extract.txt",
+      "bytes": 34326,
+      "sha256": "54d91647bb031986af2c29d30872db84b5e0285edbb98c7463f44acd2aece34e",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-functional-indexed-extract.txt",
+      "bytes": 30406,
+      "sha256": "1a49a084b84da5632b21d245037774165c52a0bbb1f6ebb107ef891b3921c0a8",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-law-domain-indexed-extract.txt",
+      "bytes": 30570,
+      "sha256": "206854f35ad0ca86baa71bdf1236e172ff319586d125c3ad1b3977fd63d3fb2e",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p493-indexed-extract.txt",
+      "bytes": 18635,
+      "sha256": "6763f63cba82d7c924f1bdc63353fd395663cca73d69cd902a61358cb2581df1",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p495-indexed-extract.txt",
+      "bytes": 19498,
+      "sha256": "9738c7326214b699d67e5dff43f4298cd764fb32dcd94fdfa7b5a7b5c7793577",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-p496-indexed-extract.txt",
+      "bytes": 20430,
+      "sha256": "46497b317848cfe2986c5c82b9b01f673e7b556f1fe6c99ca71040702e3d34b9",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-search-indexed-extract.txt",
+      "bytes": 34043,
+      "sha256": "a8c76a9a400367efd58da5ede62f9dc5b3aec76ddfc0f87db21533dad4334207",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec5-ed2-indexed-extract.txt",
+      "bytes": 32063,
+      "sha256": "20907e321ffc159fc6b59da460cf4d29ec1f6202d710b857132d15fc40beb7a2",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec7-8-indexed-extract.txt",
+      "bytes": 34938,
+      "sha256": "51aad90fd18efc3d73ac92b3e56f573be2905412f3ee60119935232a9d27bf53",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-sec9-indexed-extract.txt",
+      "bytes": 33825,
+      "sha256": "188971541f48b954fe3212834a36792f26e55e0ec5a6372457abadaa5ed927e7",
+      "role": "partial_primary_indexed_extract"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/sources/billon-supercomplete-indexed-extract.txt",
+      "bytes": 35182,
+      "sha256": "a257ca8146410cc250f661901105b2286f14c22871190a2d034b942ac222824f",
+      "role": "partial_primary_indexed_extract"
+    }
+  ]
+}

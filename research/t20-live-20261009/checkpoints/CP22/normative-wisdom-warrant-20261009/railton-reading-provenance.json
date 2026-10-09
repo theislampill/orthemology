@@ -1,0 +1,53 @@
+{
+  "source": "Peter Railton, Moral Realism (1986), The Philosophical Review 95(2), 163-207",
+  "url": "https://r.jordan.im/download/philosophy/railton1986.pdf",
+  "doi": "10.2307/2185589",
+  "read_status": "complete continuous full-paper reading including notes",
+  "printed_pages": [
+    163,
+    207
+  ],
+  "pdf_pages_read": [
+    1,
+    46
+  ],
+  "notes_read": [
+    1,
+    43
+  ],
+  "ordered_read_windows": [
+    "cover; 163-169",
+    "170-177",
+    "178-185",
+    "186-193",
+    "194-201",
+    "202-207"
+  ],
+  "visual_repairs": [
+    {
+      "page": 166,
+      "note": 2
+    },
+    {
+      "page": 171,
+      "note": 11
+    }
+  ],
+  "files": {
+    "research-intermediates/railton/railton-1986-moral-realism.pdf": {
+      "sha256": "abdb8826d6d23f67c013ac88ca98f1f38bb18c1d9ff3aeb39e93ecd7ed77d4cc",
+      "bytes": 1004823,
+      "distribution": "research intermediate only"
+    },
+    "research-intermediates/railton/railton-1986-moral-realism.txt": {
+      "sha256": "2cf172475537baad125ba027f1a2e2135897234dbbdca17623f8c68585973839",
+      "bytes": 129610,
+      "distribution": "research intermediate only"
+    }
+  },
+  "deliverable": {
+    "path": "railton-independent-rival-analysis.md",
+    "sha256": "e88dca291910f6755674dad8c4c6809f473fb48260d5c878b19cf10d12fb2ec0",
+    "capsule_word_count": 135
+  }
+}

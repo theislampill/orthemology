@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-08T07:13:35.067631+00:00",
+  "operation": "bounded inherited-evidence/frontier triage",
+  "new_substantive_research_credit": false,
+  "inputs": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/RESULT.md",
+      "sha256": "ca690248a37b789613f7627caae96709089523795732ee0cc22c944b92194885"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/efficacy-warrant-appraisal/APPRAISAL.md",
+      "sha256": "0f6360a9ddb56138602fbd02569298d4e58a220fd05f2157d7966706630486c3"
+    },
+    {
+      "path": "recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+      "sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc"
+    }
+  ]
+}

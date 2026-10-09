@@ -1,0 +1,18 @@
+{
+  "recording": "Prospective interval endpoints; no inferred pre-start time and no additive overlapping worker time",
+  "author_intervals": [
+    {
+      "start_utc": "2026-10-08T19:29:47.966399+00:00",
+      "end_utc": "2026-10-08T19:36:40.446489+00:00",
+      "elapsed_seconds": 412.48009,
+      "scope": "Bounded proof verification, source checking, finite-resolution derivation, numerical controls and research exposition"
+    }
+  ],
+  "not_credited": [
+    "Initial unlogged skill/source intake",
+    "Review waiting",
+    "Artifact packaging",
+    "Independent reviewer intervals in aggregate; recorded separately by reviewer"
+  ],
+  "authority": "Scratch only; no empirical validation or T20 closure"
+}

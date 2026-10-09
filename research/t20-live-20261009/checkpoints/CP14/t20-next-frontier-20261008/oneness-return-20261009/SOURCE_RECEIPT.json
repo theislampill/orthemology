@@ -1,0 +1,82 @@
+{
+  "date_utc": "2026-10-09",
+  "source": {
+    "title": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+    "drive_id": "1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u",
+    "verified_drive_url": "https://drive.google.com/file/d/1pVAZPLkOnjl9miIfVwNacv7H6k6oru8u/view?usp=drivesdk",
+    "local_copy": {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/sources/Oneness_exact_supplied.pdf",
+      "bytes": 783093,
+      "sha256": "7e77171c480488e1278000f08440534c5b7a67027e6e41e8bd09fd505fa37aaf"
+    },
+    "pdf_pages": 55,
+    "matches_original_supplied_sha256": true,
+    "acquisition": "Connected Drive raw-file fetch, then Sediment download. Library search separately returned the original and two reuploaded exact-size candidates. No public substitute used.",
+    "library_candidates": [
+      {
+        "library_file_id": "private-library-alias-012",
+        "filename": "Ibn Taymiyyah on the Oneness of Allah.pdf",
+        "bytes": 783093
+      },
+      {
+        "library_file_id": "private-library-alias-013",
+        "filename": "Ibn Taymiyyah on the Oneness of Allah(1).pdf",
+        "bytes": 783093
+      },
+      {
+        "library_file_id": "private-library-alias-032",
+        "filename": "Ibn Taymiyyah on the Oneness of Allah(2).pdf",
+        "bytes": 783093
+      }
+    ],
+    "library_limits": "Metadata/identity candidates only. Their bytes were not separately downloaded or hashed. Exact hash claim belongs to the recovered Drive bytes."
+  },
+  "reading_scopes": [
+    {
+      "object": "Supplied Oneness PDF",
+      "scope": "Printed 17–40 / PDF 24–47, continuous page-labelled text. Printed 25–31 were redisplayed separately after initial output truncation. Preface and contents inspected for voice and pagination.",
+      "classification": "Return to previously read same exact object; no first-reading or new independent-witness credit."
+    },
+    {
+      "object": "Supplied Oneness PDF rendered pages",
+      "scope": "PDF30,31,37,38 = printed23,24,30,31, all four images directly inspected.",
+      "limits": "No whole-PDF visual traversal or appendix-diagram inspection."
+    },
+    {
+      "object": "Historical cooperation-reassessment packet",
+      "scope": "SOURCE_ARGUMENT.md, MODEL_AUDIT.md and ROOT_REASSESSMENT.md read together, with direct-reading receipt.",
+      "limits": "Historical Arabic scan scope Asbahani134–152/PDF234–252 and Minhaj controls inherited; no new scan collation."
+    },
+    {
+      "object": "Akmaliyya canonical retained primary Arabic",
+      "scope": "L032–046, L065–090, L216–240 and L256–274, with L082–090 separately returned after output truncation.",
+      "classification": "Targeted return to one retained electronic witness; no full-epistle or first-reading credit.",
+      "source_url": "https://islamweb.net/ar/library/content/22/591/"
+    },
+    {
+      "object": "Majmu parallel concentration passage retained primary Arabic",
+      "scope": "The context from item133 was displayed, with direct bounded rereading of L023–035, printed2:32–35. Argument use confined to L025–034.",
+      "classification": "Targeted return, not manuscript or print collation.",
+      "source_url": "https://islamweb.net/ar/library/content/22/133/"
+    },
+    {
+      "object": "Later research reports",
+      "scope": "Bearer eligibility and domain addendum, eligibility review, complete efficacy, nonabsorption, wise determination continuation, accepted de-se source/formal reports and reviews.",
+      "limits": "No independent contemporary-paper reading, new kernel execution, or replay of reported model checks."
+    }
+  ],
+  "access_limits": [
+    "Public web opens of Islamweb591 and2032 returned inaccessible/internal errors. The primary comparison used already retained local Arabic, not a successful fresh public retrieval.",
+    "An attempted public Asbahani URL did not resolve. It supplied no evidence or new source credit. The exact supplied English PDF itself was successfully recovered and directly read."
+  ],
+  "claims_not_made": [
+    "New independent textual witness",
+    "First source reading",
+    "Full corpus or whole book survey",
+    "Fresh Arabic scan collation",
+    "New model or Lean proof",
+    "Metaphysical possibility certification",
+    "Integration or owner acceptance",
+    "Closure or research-duration certification"
+  ]
+}

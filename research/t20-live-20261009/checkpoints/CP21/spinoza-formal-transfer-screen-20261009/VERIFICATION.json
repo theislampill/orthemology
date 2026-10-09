@@ -1,0 +1,96 @@
+{
+  "all_retained_git_blobs_match": true,
+  "source_files_checked": 11,
+  "source_synopsis_words": 100,
+  "independent_kernel_replay": false,
+  "checks": [
+    {
+      "path": "Ethica/Pars1/Definitions.lean",
+      "expected_git_blob_sha": "2517ddd3fdd159e2ce0e4dc4d5deabba1eddae72",
+      "actual_git_blob_sha": "2517ddd3fdd159e2ce0e4dc4d5deabba1eddae72",
+      "matches": true,
+      "sha256": "6543ee63b7863f55e986202830f61f861d89050c7bdc425199b91484808962d3",
+      "bytes": 11331
+    },
+    {
+      "path": "Ethica/Pars1/Axioms.lean",
+      "expected_git_blob_sha": "75d21ecdbdb2c17e265ca000283ef2266366762f",
+      "actual_git_blob_sha": "75d21ecdbdb2c17e265ca000283ef2266366762f",
+      "matches": true,
+      "sha256": "a3f13903d01d37c4d3aea9819489c373595a4e7d0f9697ed56ffaaadb8b86416",
+      "bytes": 15212
+    },
+    {
+      "path": "Ethica/Pars1/ModalForm.lean",
+      "expected_git_blob_sha": "c60e09c1bba1317dd3ef4baeea52d9a156f8d433",
+      "actual_git_blob_sha": "c60e09c1bba1317dd3ef4baeea52d9a156f8d433",
+      "matches": true,
+      "sha256": "5005d4d2f840d8731b98c54ac9bbf8486dafa0c6a446b2225a007f9e4e7e0296",
+      "bytes": 32908
+    },
+    {
+      "path": "Ethica/Pars1/Causation.lean",
+      "expected_git_blob_sha": "a4c72a94548447617ae599a71b6757553b592d4e",
+      "actual_git_blob_sha": "a4c72a94548447617ae599a71b6757553b592d4e",
+      "matches": true,
+      "sha256": "42d554bedb12665cc8f48037c943f1fd7fc7fcae184a80f430cabf19f9d0e487",
+      "bytes": 10169
+    },
+    {
+      "path": "Ethica/Pars1/Propositions.lean",
+      "expected_git_blob_sha": "9e3b5833235f588686ffacfb98094f797e5280c3",
+      "actual_git_blob_sha": "9e3b5833235f588686ffacfb98094f797e5280c3",
+      "matches": true,
+      "sha256": "987c666a7156d7866ceebb5ecd617e4fa1377f9e038d51d4e4a2bcee8b1dc4e8",
+      "bytes": 15837
+    },
+    {
+      "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md",
+      "expected_git_blob_sha": "37429eb5d9688e71b0c6bb974d78fc4f5c053809",
+      "actual_git_blob_sha": "37429eb5d9688e71b0c6bb974d78fc4f5c053809",
+      "matches": true,
+      "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b",
+      "bytes": 38185
+    },
+    {
+      "path": "papers/cluster_a_irreducibility/08_scope.md",
+      "expected_git_blob_sha": "2d7129525d3fa995ea5721b028c1a54ef6ae4c17",
+      "actual_git_blob_sha": "2d7129525d3fa995ea5721b028c1a54ef6ae4c17",
+      "matches": true,
+      "sha256": "e630c2fcb4ad194e3925972ab4c288887a5884e76dcc4b2f3e62bcdcd214d4e9",
+      "bytes": 11913
+    },
+    {
+      "path": "lean-toolchain",
+      "expected_git_blob_sha": "4f86f953fbe80954f58fdd04358ee3bbb2037f0b",
+      "actual_git_blob_sha": "4f86f953fbe80954f58fdd04358ee3bbb2037f0b",
+      "matches": true,
+      "sha256": "6d0d484eeae522e854238a3ea3012246c0104d0544e58df340daad3676cc0f78",
+      "bytes": 25
+    },
+    {
+      "path": "README.md",
+      "expected_git_blob_sha": "937c24bc6d7c051c22398bc84f370ca65580b6a1",
+      "actual_git_blob_sha": "937c24bc6d7c051c22398bc84f370ca65580b6a1",
+      "matches": true,
+      "sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337",
+      "bytes": 6796
+    },
+    {
+      "path": "Ethica/Pars1/Models/Counterexamples.lean",
+      "expected_git_blob_sha": "87822603c1161add600e23a0ac4919c024fabc2d",
+      "actual_git_blob_sha": "87822603c1161add600e23a0ac4919c024fabc2d",
+      "matches": true,
+      "sha256": "02e668544642068bddd0e6ffdf6a9c2d2614ba295ee1ef4a4f437602287344a0",
+      "bytes": 18713
+    },
+    {
+      "path": "LICENSE",
+      "expected_git_blob_sha": "9ab7646d2f3262fdb9be15ba6082a8df662a801e",
+      "actual_git_blob_sha": "9ab7646d2f3262fdb9be15ba6082a8df662a801e",
+      "matches": true,
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "bytes": 1188
+    }
+  ]
+}

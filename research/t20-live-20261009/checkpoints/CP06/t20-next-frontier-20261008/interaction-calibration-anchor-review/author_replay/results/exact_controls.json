@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "arithmetic": "Python Fraction exact rational arithmetic; no sampled data or floating-point logs",
+  "assertions": 36604,
+  "families": {
+    "mask_mobius_exact": 17229,
+    "support_presence": 17229,
+    "unary_gauge": 121,
+    "interaction_defect": 121,
+    "crosstalk_equality": 121,
+    "crosstalk_own_range": 121,
+    "crosstalk_shift": 121,
+    "support_specific_map": 121,
+    "interaction_defect_strict": 81,
+    "independent_absorption_visible": 81,
+    "shared_gate_absorption": 324,
+    "fresh_mixture_false_interaction": 81,
+    "crosstalk_endpoints": 18,
+    "crosstalk_strict_own_monotonicity": 234,
+    "crosstalk_continuity_bound": 14,
+    "mixed_component_equivalence": 256,
+    "unused_root_invariance": 256,
+    "duplicate_shared_gate": 3,
+    "guard_attenuation_not_issuance": 3,
+    "step_map_count_collapse": 4,
+    "route_assignment_enumeration": 1,
+    "adaptive_unary_transcript": 64
+  },
+  "scope": "Finite diagnostics for the written fixed-inventory theorem and excluded-model countercontrols; not a substitute for proof."
+}

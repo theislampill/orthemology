@@ -1,0 +1,12 @@
+{
+  "active_intervals_utc": [
+    {
+      "start": "2026-10-08T19:34:00.767558+00:00",
+      "end": "2026-10-08T19:38:20.455603+00:00",
+      "seconds": 259.688045
+    }
+  ],
+  "total_active_seconds": 259.688045,
+  "excluded": "Setup and first reading before prospective start; all work after prospective active-end including document packaging and verification. No waiting interval occurred during recorded active interval.",
+  "measurement": "Observed clock timestamps recorded at phase transitions; no retrospective duration estimate."
+}

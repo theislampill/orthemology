@@ -1,0 +1,430 @@
+{
+  "date_utc": "2026-10-08",
+  "verdict": "No blocking source error remains in final reviewed report.",
+  "report_sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+  "author_manifest_sha256": "382ffddd395bec8359948acf30c65ac80eb15f152d2933a506579ba584bc64f6",
+  "author_manifest_entries_checked": 22,
+  "inherited_bindings_checked": 14,
+  "primary_and_derived_bindings_checked": 10,
+  "binding_checks": [
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/INPUT_BINDINGS.json",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/READ_FIRST.md",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/RESEARCH_EVENTS.jsonl",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REVIEW_RESPONSE.md",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.html",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-08.png",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-09.png",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979-decoded.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-08.png",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-09.png",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_manifest",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/EXISTING_FORMAL_MAP.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/07_ROUND_6_PERSONAL_IMPERSONAL_NOETIC_DISCRIMINATION.md",
+      "matches": true
+    },
+    {
+      "kind": "author_inherited_binding",
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "matches": true
+    },
+    {
+      "kind": "author_source_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_source_derived_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979-decoded.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_source_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_source_derived_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_source_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_source_derived_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_source_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.pdf",
+      "matches": true
+    },
+    {
+      "kind": "author_source_derived_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.txt",
+      "matches": true
+    },
+    {
+      "kind": "author_source_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.html",
+      "matches": true
+    },
+    {
+      "kind": "author_source_derived_binding",
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.txt",
+      "matches": true
+    }
+  ],
+  "ganya_stored_html_checks": [
+    {
+      "source": "stored publisher HTML",
+      "phrase": "If an agent is robustly responsible for bringing about",
+      "present": true
+    },
+    {
+      "source": "stored publisher HTML",
+      "phrase": "The conclusion is conditional rather than absolute",
+      "present": true
+    },
+    {
+      "source": "stored publisher HTML",
+      "phrase": "Since there is exactly one divine agent",
+      "present": true
+    },
+    {
+      "source": "stored publisher HTML",
+      "phrase": "Only one world is genuinely possible",
+      "present": true
+    },
+    {
+      "source": "stored publisher HTML",
+      "phrase": "The argument is therefore conditional",
+      "present": true
+    },
+    {
+      "source": "stored publisher HTML",
+      "phrase": "14 August 2026",
+      "present": true
+    }
+  ],
+  "final_input_count": 38,
+  "all_bound_inputs_unchanged": true,
+  "final_input_checks": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "unchanged": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/EXISTING_FORMAL_MAP.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/INPUT_BINDINGS.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/MANIFEST.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/READ_FIRST.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/RESEARCH_EVENTS.jsonl",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REVIEW_RESPONSE.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.html",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/ganya2026.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/grim2000.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-08.png",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis-verify-09.png",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979-decoded.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/lewis1979.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/perry1979.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-08.png",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre-verify-09.png",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/torre2006-published.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L1012-L1054-return.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+      "unchanged": true
+    },
+    {
+      "path": "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/07_ROUND_6_PERSONAL_IMPERSONAL_NOETIC_DISCRIMINATION.md",
+      "unchanged": true
+    }
+  ],
+  "scope": "Source/currentness review only. No mathematical proof replay, actual divine cognition certification, metaphysical possibility certificate, integration, closure or research-duration assessment."
+}

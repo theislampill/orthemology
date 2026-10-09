@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "author_payloads": 10,
+  "review_payloads": 17,
+  "source_inputs": 6,
+  "predecessor_payloads": 27,
+  "author_replay_assertions": 16598,
+  "author_replay_families": 29,
+  "independent_controls_status": "PASS",
+  "review_manifest_sha256": "68a23ddfdb42ce093ad4ff8a6a929800caf88984b70b0db0c7c4f7029ceec1a9",
+  "review_receipt_sha256": "dd10f56ae9a8f9aa91fe4e2fe2af53fa1458969c350d9da4ce2015341969a0cf",
+  "all_frozen_inputs_unchanged": true,
+  "verification_mode": "read-only; no reviewer evidence files rewritten"
+}

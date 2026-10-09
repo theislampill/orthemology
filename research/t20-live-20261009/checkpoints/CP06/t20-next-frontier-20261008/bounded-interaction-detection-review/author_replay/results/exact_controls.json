@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "arithmetic": "Exact Fraction probability intervals, rational products and quotients; no sampled data or floating-point decisions",
+  "assertions": 18101,
+  "families": {
+    "minimal_antichain": 520,
+    "empty_inventory_branch": 10,
+    "positive_case_M_nonzero": 510,
+    "every_route_meets_A": 1456,
+    "minimal_factor_exact": 866,
+    "ceiling_product_lower_bound": 866,
+    "rootwise_lower_bounds": 998,
+    "mixed_grid_strictly_positive": 3632,
+    "all_support_decisions": 3122,
+    "double_mobius_exact": 2630,
+    "certified_gap_alternatives": 2630,
+    "count_fibre_nonempty": 60,
+    "count_fibre_collapse": 60,
+    "joint_total_ceiling": 325,
+    "isolated_unary_full_power_identity": 325,
+    "each_isolated_count_ambiguous": 90,
+    "false_ceiling_invalidates_gap": 1
+  },
+  "statistics": {
+    "world_name_runs": 520,
+    "oracle_calls": 21556,
+    "largest_precision_bits": 256,
+    "support_decisions": 3122
+  },
+  "scope": "Finite support-detector and fibre diagnostics only; imported sign lemmas are credited to their own stages and proofs establish all-name termination."
+}

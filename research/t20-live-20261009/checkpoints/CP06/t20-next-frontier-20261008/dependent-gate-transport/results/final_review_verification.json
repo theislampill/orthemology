@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "author_payload_counts": {
+    "MANIFEST.json": 10,
+    "ADDENDUM_MANIFEST.json": 1
+  },
+  "review_payloads": 16,
+  "independent_assertions": 6543,
+  "supplementary_replay_assertions": 3618,
+  "review_manifest_sha256": "178f5d67673ff245873a4b8d525de13194c9f6ce79e43d787f56c9b6499c2bc4",
+  "review_receipt_sha256": "7623f04fc8a325603e1af0a4c3a329aeef5fc6904773e3a42bd094ff459ea604",
+  "source_bindings_sha256": "53920f1a54dd5f4c8d252b32e8ace8f2c9bcb607170b97da525d18728677ff79",
+  "author_and_predecessor_bindings_unchanged": true
+}

@@ -1,0 +1,237 @@
+{
+  "recorded_utc": "2026-10-09T09:31:25.492138+00:00",
+  "scope": "Bounded currentness and remaining-operation audit",
+  "inputs": [
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "bytes": 15569,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "actual-original-production-residual-20261009/READING_AND_OPERATION_RECORD.json",
+      "sha256": "e32ee834cd5c953b5f0fddcdf56c4ce9557e748b7cb2e0097369ec3022b50631",
+      "bytes": 1248,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10",
+      "bytes": 4923,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1",
+      "bytes": 8405,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6",
+      "bytes": 1820,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/REVIEW_STATUS.json",
+      "sha256": "3b5016e20204c0418a9eccea369ec53816a467c4f79dc61669fe6403b497b986",
+      "bytes": 758,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/CORRECTION_RECORD.json",
+      "sha256": "46d5eb48901cf27ab28a01ff2d282cc12930ac7ebc8d1f3f9661ec6db5cbc158",
+      "bytes": 1718,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f",
+      "bytes": 8692,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e",
+      "bytes": 12763,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+      "bytes": 20537,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "bytes": 22307,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "bytes": 30941,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454",
+      "bytes": 24972,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/src/joint_end.py",
+      "sha256": "d7a5871adb8dc48db7bc85e7e672947a48c317cbe79e503eaebb04cf86239e6d",
+      "bytes": 7324,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "sha256": "3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556",
+      "bytes": 16528,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "bytes": 19131,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/src/determination_contract.py",
+      "sha256": "b5c0fcf4d77ed6b15c79c65f1d442ac96425ff52053c86a34a9bd87bf2a4a156",
+      "bytes": 2998,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924",
+      "bytes": 20021,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/INDEPENDENT_REVIEW.md",
+      "sha256": "279abf48abe6a2ac7a323ed04d546768c6c8addfeb6a050edb745a1e9a6785c0",
+      "bytes": 5225,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/RELATED_OPERATION_CHECK.md",
+      "sha256": "e0b26a5108ab80100f5a78129756ba609e403430d5dd1be2710cfd81a75e1dd2",
+      "bytes": 1039,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-rival-20261009/simplicity-comparison/REPORT.md",
+      "sha256": "0d76159b1672fbee34a0d89effc605a53e208e742c37ae3326731c255d8fad14",
+      "bytes": 17288,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08",
+      "bytes": 20893,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "entire-production-rival-review/REVIEW.md",
+      "sha256": "857c19cfca028bb633622af08045d428271f024d15d4174e6e0729b5514f896e",
+      "bytes": 14197,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "simultaneous-production-argument/REPORT.md",
+      "sha256": "0eea12c3e2e4c761f165406a3b17391917f8b49a9eae8ca521023f658ef2dc99",
+      "bytes": 23052,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "recognition-operative-content-20261009/REPORT.md",
+      "sha256": "d11bf155683656203e69fb44ed8886d16dd05a4deda6be5ce84cb6bea772fee1",
+      "bytes": 13044,
+      "reading_scope": "Whole artifact read; where combined output truncated, missing portions were returned to in separate displayed calls.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088,
+      "reading_scope": "Direct continuous electronic paragraphs 216\u2013240 and 258\u2013274. No fresh acquisition, scan, or complete-work reading.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-bridge-20261009/read-selections/bayan002-L0071-L0080.txt",
+      "sha256": "06ee950112d75900f366fd499ac67b04ca7021c8ed7d2c5f80a225b7baffe2a5",
+      "bytes": 10320,
+      "reading_scope": "Whole retained selection, local lines 71\u201380; source and reported speaker distinction preserved.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/REVIEW.md",
+      "sha256": "d5536f4ae4a426359e2c05dba3df41e85e0534a0212540e12b6793cf100a63e8",
+      "bytes": 17354,
+      "reading_scope": "Result and sections 1\u20137 inspected through separate calls; some overlapping combined output was truncated, so no second complete-review claim.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "bytes": 25536,
+      "reading_scope": "Partial displayed report, with output truncation. Used only as context; no full reading claim and not needed for the principal result.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "sha256": "f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87",
+      "bytes": 13443,
+      "reading_scope": "Search hit concerning original-scope limits only. No substantive source-reading credit.",
+      "credit": "Inherited artifact inspection, not new primary acquisition or philosophical proof."
+    }
+  ]
+}

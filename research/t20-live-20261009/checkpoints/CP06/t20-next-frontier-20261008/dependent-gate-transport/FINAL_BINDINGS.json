@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-08T15:46:49.991820+00:00",
+  "status": "PASS_SCOPED independent review verified",
+  "author_files_preserved": true,
+  "predecessor_bindings_preserved": true,
+  "boundaries": "No integration, protected repository write, physical validation, psychological manipulability, metaphysical counterexample, or T20 closure",
+  "files": [
+    {
+      "path": "MANIFEST.json",
+      "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+      "bytes": 1809
+    },
+    {
+      "path": "ADDENDUM_MANIFEST.json",
+      "sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+      "bytes": 467
+    },
+    {
+      "path": "results/final_review_verification.json",
+      "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+      "bytes": 556
+    },
+    {
+      "path": "../dependent-gate-transport-review/MANIFEST.json",
+      "sha256": "178f5d67673ff245873a4b8d525de13194c9f6ce79e43d787f56c9b6499c2bc4",
+      "bytes": 2921
+    },
+    {
+      "path": "../dependent-gate-transport-review/REVIEW_RECEIPT.json",
+      "sha256": "7623f04fc8a325603e1af0a4c3a329aeef5fc6904773e3a42bd094ff459ea604",
+      "bytes": 4346
+    }
+  ]
+}

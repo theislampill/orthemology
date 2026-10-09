@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-08T16:46:51.898558+00:00",
+  "status": "PASS independent review and read-only final verification",
+  "scope": "Fixed atomic paired-face instrument; alpha<1/2; expected cost under Joe; unconditional terminal correctness; fixed-alpha and small-alpha order match only",
+  "files": [
+    {
+      "path": "MANIFEST.json",
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23",
+      "bytes": 1664
+    },
+    {
+      "path": "results/final_review_verification.json",
+      "sha256": "69a7bae07a7de7751ab9ac7199e379acf66a3023b96ba08147d2d8de83eac0c3",
+      "bytes": 4556
+    },
+    {
+      "path": "../finite-replay-sampling-lower-bound-review/MANIFEST.json",
+      "sha256": "86d5d4931788994a7fb7a0031f6e59c516c348e3c506d4edc17aff3eaf7e3715",
+      "bytes": 3824
+    },
+    {
+      "path": "../finite-replay-sampling-lower-bound-review/REVIEW_RECEIPT.json",
+      "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8",
+      "bytes": 15736
+    },
+    {
+      "path": "../finite-replay-sampling-lower-bound-review/verify_review.py",
+      "sha256": "91dccd065453c507e9c79ec707598abf20d2948d51733ae0cd6a1f62ba9f0ed3",
+      "bytes": 1571
+    },
+    {
+      "path": "../finite-panel-replay-robustness/MANIFEST.sha256",
+      "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d",
+      "bytes": 1225
+    }
+  ],
+  "all_earlier_and_frozen_review_files_unchanged": true,
+  "read_only_verification_entrypoint": "../finite-replay-sampling-lower-bound-review/verify_review.py",
+  "excluded_from_sixth_cutoff": true,
+  "no_global_optimality_physical_validation_integration_or_T20_closure": true
+}

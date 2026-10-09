@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-08T12:28:05.922965+00:00",
+  "model": "Four label route law; swapped profiles(a,b),(b,a); persistent latent inventory; conditionally independent pair of Bernoulli endpoints; known calibrated channel",
+  "rows": [
+    "A",
+    "B",
+    "OR",
+    "AND"
+  ],
+  "columns": [
+    "00",
+    "01",
+    "10",
+    "11"
+  ],
+  "determinant": "(a - b)*(2*a*b*(1 - a)*(1 - b) + (a - b)**2)*(-2*a*b + a + b)",
+  "algebra_check": "Sympy exact expansion difference equals0",
+  "positive_factors": "For a,b in[0,1], a!=b implies a+b-2ab=a(1-b)+b(1-a)>0 and bracket >=(a-b)^2>0. Thus determinant nonzero.",
+  "boundary": "This displayed product-channel determinant assumes conditional independence and known calibrated rates. More generally a known full-rank dependent joint channel also permits inversion; independence is not universally necessary. The coupling-robust near-corner support certificate needs neither this product formula nor a known joint channel. Nonzero determinant alone is not a stability or physical-validation guarantee."
+}

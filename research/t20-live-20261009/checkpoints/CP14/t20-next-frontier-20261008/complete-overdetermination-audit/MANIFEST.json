@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "path": "INPUT_BINDINGS.json",
+      "sha256": "96e5ca08801a65f824e45fc95efc24b3c6b79e14d89b2ca7fb30651fc61b995f",
+      "bytes": 4275
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08",
+      "bytes": 20893
+    },
+    {
+      "path": "REVISION_RECORD.json",
+      "sha256": "86c9d396c0963eabda4ebf347cee2d0fb16f2ac36f3b63890715fa0ea2cc5441",
+      "bytes": 439
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "sha256": "902d2d86f16d5cf9a3e9a56e07d0a0011f50910474e1ea32fd5c43d0b8436ded",
+      "bytes": 3374
+    },
+    {
+      "path": "history/PRIOR_FINAL.sha256",
+      "sha256": "60cc92df150f58bb6cac5ec7237d3a0316ff5a82e542ba4c0acab815baafa658",
+      "bytes": 126
+    },
+    {
+      "path": "history/REPORT.before-explicit-effect-relative-precision.md",
+      "sha256": "957c96c91951b19ce4a43c4a91352352bdde37c6912e1c37aebb4c984f2899f9",
+      "bytes": 20589
+    },
+    {
+      "path": "sources/Oneness-return-printed23-25.txt",
+      "sha256": "19285623d63091bec12a28ed71113593f4f331ecdd0a3e625556f7db18971672",
+      "bytes": 5433
+    },
+    {
+      "path": "sources/hall-p265.png",
+      "sha256": "66ff3806f1567fbd16861c4a7905f1e12228322a33380d10a2df927bb9b4d82f",
+      "bytes": 287983
+    },
+    {
+      "path": "sources/hall-p273.png",
+      "sha256": "10be879dba268341dcb4a8ea83ea88fe97086136159e030b0e1ea19eef8a0a30",
+      "bytes": 178325
+    },
+    {
+      "path": "sources/hall-two-concepts-published.pdf",
+      "sha256": "32c1c6e2f4617577614aad6c066fb798a7ee60db482ffeb2a5ef21d8dbdc2f1e",
+      "bytes": 386663
+    },
+    {
+      "path": "sources/hall-two-concepts-published.txt",
+      "sha256": "b3bb00a2dad35ea15d254071feb020e1acc195c6f6ddf50aab67f04e756d569f",
+      "bytes": 148044
+    },
+    {
+      "path": "sources/hall-two-concepts.pdf",
+      "sha256": "cf4a407b2586e314f4e4c0e42111858a1e9a2825dcf1d267104cc480aa6eda6e",
+      "bytes": 192165
+    },
+    {
+      "path": "sources/hall-two-concepts.txt",
+      "sha256": "2f123626d90e97a4ab757667d572ef68e8c7267fd2c4791195ac920a342e28bd",
+      "bytes": 168521
+    },
+    {
+      "path": "sources/schaffer-overdetermination-2003.pdf",
+      "sha256": "adeb063caae429849076f33cc2e35961f7134db3e39e180cec985a15a5651b0b",
+      "bytes": 128690
+    },
+    {
+      "path": "sources/schaffer-overdetermination-2003.txt",
+      "sha256": "f00745aa15b7909764279a837b21128519400f6944aecf0480e0c103d9bf0e03",
+      "bytes": 58388
+    },
+    {
+      "path": "sources/schaffer-p38.png",
+      "sha256": "a42e8f19b8760aad0230625f80a706baee0ce5ffdd9afbb683bf641cfdd65c6d",
+      "bytes": 276618
+    }
+  ]
+}

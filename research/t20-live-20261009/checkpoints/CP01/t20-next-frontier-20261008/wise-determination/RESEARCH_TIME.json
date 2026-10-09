@@ -1,0 +1,20 @@
+{
+  "scope": "This worker only; prospective current successor intervals, no historical six-hour credit.",
+  "intervals": [
+    {
+      "start": "2026-10-08T06:50:39.859676+00:00",
+      "end": "2026-10-08T07:05:00.572880+00:00",
+      "activity": "Continuous primary source read, mathematical contract design, implementation, verification, research synthesis and review response.",
+      "seconds": 860.713
+    },
+    {
+      "start": "2026-10-08T07:05:00.572880+00:00",
+      "end": "2026-10-08T07:06:06+00:00",
+      "activity": "Positive instrumental-credit appraisal requested by root; report clarification.",
+      "seconds": 65.427
+    }
+  ],
+  "accounted_seconds": 926.14,
+  "exclusions": "Before start, after end, manifest/source-binding/packaging, passive review waiting, and all parallel worker time. Source retrieval overlapped independent substantive reading; no blocked waiting interval counted separately.",
+  "status": "Prospective episode accounting; does not certify any inherited multi-hour requirement."
+}

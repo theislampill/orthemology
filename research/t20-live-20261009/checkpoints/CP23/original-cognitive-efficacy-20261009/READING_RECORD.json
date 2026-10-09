@@ -1,0 +1,71 @@
+{
+  "scope": "Bounded original cognitive efficacy source reply and premise audit; no new model or closure.",
+  "new_primary_entry": {
+    "url": "https://www.islamweb.net/ar/library/index.php?ID=1204&bk_no=22&idfrom=1869&idto=1869&page=bookcontents",
+    "original_labels": "18:310–312",
+    "extent": "Whole unique unvocalized entry read, from authorial opening through concluding heart/light explanation; vocalized duplicated layer not a second witness. Exact extraction retained in reading/majmu18-310-312.txt."
+  },
+  "new_print_control": {
+    "url": "https://archive.org/download/FP70716/18_70724-2.pdf",
+    "local": "sources/majmu18-fp70716.pdf",
+    "sha256": "3920834e0f915856408396ae18b1e27f22dca1c91acf900c6ba07ed2d18ae71f",
+    "title": "Majmuat al-Fatawa, Ibn Taymiyya, prepared/documented by Amir al-Jazzar and Anwar al-Baz, volume18",
+    "pages_read": {
+      "1": "title identified",
+      "176–177": "Entire short authorial entry and visible apparatus inspected; marginal original18:310–312",
+      "2": "publisher device inspected, no dated imprint established",
+      "160,175": "navigation/page mapping inspected; no independent substantive new-argument claim"
+    },
+    "pages_rendered_not_credited_as_read": [
+      174,
+      178
+    ],
+    "wording_control": "Printed176 reads لأن العلم يتبع الكلام الخبري without final pronoun after يتبع. No emendation or inference from the odd clause. Core life/will and nonidentity statements clear.",
+    "edition_limit": "Linking page mislabels collection as King Fahd; this file title explicitly gives al-Jazzar/al-Baz. No manuscript or independent recension verification."
+  },
+  "inherited_primary_rereads": [
+    {
+      "input": "t20-next-frontier-20261008/existential-law-source-bridge/sources/safadiyya-003.txt",
+      "range": "S003 L357–390",
+      "credit": "Full untruncated bounded reread; whole-source prior notes and later report already cover main L374–390. No discovery or whole-volume credit."
+    },
+    {
+      "input": "positive-agency-source-return/sources/dar017.txt",
+      "range": "L625–645; L770–811",
+      "credit": "Bounded reread. At L808 print-controlled missing negation remains binding; no electronic correction silently made."
+    },
+    {
+      "input": "particular-agency-bridge-20261009/sources/bayan002.txt",
+      "range": "L76–80 fully visible; surrounding L69–75 search/navigation display partly truncated",
+      "credit": "Only completed visible range credited. Retained selection71–80 is an extraction, not additional read credit."
+    },
+    {
+      "input": "qayyim-complete-causation-return/sources/shifa-003.txt and -004.txt",
+      "range": "Entire received e306, with cross-subsection continuation to e307 marker",
+      "credit": "Prior final-book and later targeted return already read it; no new first-reading credit."
+    },
+    {
+      "input": "wise-particular-determination-return-20261009/read-selections/shifa-e206-e216.txt",
+      "range": "Chapter22 opening quoted objection and replies, e207–208 through e209 boundary, plus previously displayed e213–216 continuation",
+      "credit": "Targeted rereading after companion receipt; whole large combined output truncated, no claim full e206–216 continuous reading in this task."
+    }
+  ],
+  "prior_record_review": [
+    "knowing-production-semantics REPORT, READING_RECORD and INPUT_BINDINGS read first",
+    "positive-agency and particular-agency REPORTS read",
+    "bearer-eligibility CURRENT_FINDING result and sections1–7 read; eligibility-review displayed material through section5 partly truncated, not whole-report credit",
+    "existential-law-source REPORT main displayed text through source limits; large output partly truncated; main §5 and exact source independently read",
+    "Safadiyya historical CONTINUOUS_NOTES range05 Window001 and adjacent displayed windows checked for prior credit",
+    "Shifa final historical notes e300–307 search-located entries checked; Jami-sixth first-section E009–020 notes read",
+    "intellectual-production-rival REPORT read as worker finding; no fresh direct Avicenna primary reading claimed here",
+    "companion report05 read completely; exact A11 source-ledger entry read; no other companion front investigated"
+  ],
+  "limits": [
+    "No whole-volume or manuscript claim",
+    "No historical duration certification",
+    "No new toy model, proof count, probability or metaphysical possibility claim",
+    "No protected edits; all writing confined to own task directory",
+    "No contacts, external publication or account actions",
+    "Further comparison stopped at requested boundary; no promised continuing campaign"
+  ]
+}

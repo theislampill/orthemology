@@ -1,0 +1,15 @@
+# Source and attribution audit
+
+The parent supplied the candidate hard pair, constants, and stopping-proof route. This reviewer independently derived the mathematical inequalities before opening the author's RESULT.md. INDEPENDENT_DERIVATION.md and PREFREEZE_DERIVATION_RECEIPT.json preserve that derivation and its digest. This is an independence-of-checking claim, not a claim of independent invention or priority.
+
+The inherited dependent-gate-transport/RESULT.md was inspected for the actual all-command CDF F_c(a,b)=1-(1-ab)^c, shared calibrations, independent-route realization, Joe parameter orientation theta=1/c, and exact endpoint equality. Its CDF proof already establishes the hard alternative globally; the lower-bound paper does not create a new copula family.
+
+The finite-panel-replay/RESULT.md and finite-panel-replay-robustness/RESULT.md were inspected for the fixed t, observation contracts, shared model, reference-targeted test and its 2N independent latent-vector replicates (N paired, N diagonal). The robustness review's PASS and author digest were checked as context. No global experiment-optimality inference is made from those artifacts.
+
+External targeted check: Kaufmann, Cappé and Garivier, “On the Complexity of Best-Arm Identification in Multi-Armed Bandit Models,” JMLR 17(1), 2016, [official PDF](https://jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf). The reviewer inspected Lemma 1 on printed page 7 and Appendix A.1 on printed page 25 through the public PDF extraction. Lemma 1 assumes almost-surely finite stopping; Appendix A.1 uses an expected likelihood-ratio argument. These passages support attribution of the standard change-of-measure method. They do not alone supply the packet's potentially infinite stopping formulation, which is derived here through finite prefixes. This was a targeted passage read, not a whole-paper review.
+
+An initial attempted JMLR URL with an incorrect article path was inaccessible. The official current article path above was then located and inspected. There was no paywall, authentication bypass, or assumed access to an unread text.
+
+Taylor's integral remainder, Bernoulli's inequality, log z<=z-1, KL chain rules, binary data processing, and monotone convergence/lower semicontinuity are standard mathematics. The application-specific hard-pair separation, constants, experiment restriction, and terminal contract are explicitly separated from those inherited tools. No empirical result, elapsed research-duration claim, source-level completion claim, protected integration, or T20 closure is asserted.
+
+Final author-control inspection: the frozen implementation uses 96-bit outward dyadic rounding before certified log evaluation. Floor/ceil preserves inclusion, positive lower endpoints are checked before logarithms, and interval multiplication safely over-encloses the probability/log dependence. The author reports an earlier denominator-growth interruption with no failed mathematical assertion; the revised retained run passes 2,043 assertions in 27 families. Review execution is isolated under author_snapshot and never writes to the original packet.

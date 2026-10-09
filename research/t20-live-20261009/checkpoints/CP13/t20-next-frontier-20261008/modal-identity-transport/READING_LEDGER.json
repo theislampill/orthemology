@@ -1,0 +1,44 @@
+{
+  "recorded_at_utc": "2026-10-08T22:38:58.932588+00:00",
+  "primary_new_checks": [
+    {
+      "source": "Dasgupta, The Bare Necessities, 2011",
+      "url": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+      "scope": "Section 4 and transition to Section 5, printed 126\u2013130; web parsed lines 462\u2013652, plus title/header. Not whole paper.",
+      "use": "Qualitative individuating roles/counterparts are modal options; modal necessitation and grounding differ."
+    },
+    {
+      "source": "Gao, Brodzki, Mukherjee, The Geometry of Synchronization Problems and Learning Group Actions, 2019 arXiv v3",
+      "url": "https://arxiv.org/pdf/1610.09051",
+      "scope": "Section 1.1 defining constraints, and selected Section 2.1 material, especially Corollary 2.1 with proof and elementary-propagation remark, parsed lines 901\u2013938. Not all Section 2.1 or whole paper continuously read.",
+      "use": "Existing synchronization/trivial-holonomy ancestry. No Hodge theory imported."
+    },
+    {
+      "source": "Coecke, Pavlovic, Vicary, A new description of orthogonal bases, 2008 preprint",
+      "url": "https://arxiv.org/pdf/0810.0812",
+      "scope": "Introduction equations 1\u20132, Definition 2.4, opening Section 3; preprint pages 1 and 4, parsed lines 19\u201329 and 114\u2013154. Not whole paper.",
+      "use": "Basis copy/delete maps and standard copyable point ancestry; no quantum ontology or Frobenius classification imported."
+    }
+  ],
+  "inherited_primary_rereads": [
+    {
+      "source": "Dasgupta 2009 saved extraction",
+      "pages": [
+        36,
+        37,
+        62,
+        63,
+        64
+      ],
+      "use": "Bracketing modal disputes, syntax, deferred modal expansions note 40, extensional nonempty domain; prior whole-reading credit not repeated."
+    }
+  ],
+  "prior_interface_reading": "Exact files and declarations listed in RESULT.md section 1; semantic keyword screens elsewhere were location searches, not whole-corpus readings. Graded-interface reading restricted to declared representation, typed words, record/fibre theorems, basis changes, and beginning contraction scope.",
+  "excluded_leads": [
+    "Search use of modal generalism by Cowling names a different doctrine and is not evidence about Dasgupta G.",
+    "Against Generalism 2026 search result not relied on or claimed body-read.",
+    "Search leads about counterpart theory not adopted as a completed modal generalist semantics."
+  ],
+  "new_full_paper_credit": 0,
+  "source_files_modified": false
+}

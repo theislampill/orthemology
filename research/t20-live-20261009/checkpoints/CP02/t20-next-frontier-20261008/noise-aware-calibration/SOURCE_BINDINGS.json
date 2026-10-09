@@ -1,0 +1,64 @@
+{
+  "recorded_utc": "2026-10-08T08:16:36.353666+00:00",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+      "bytes": 12476
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/THEOREMS.md",
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc",
+      "bytes": 12573
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/MANIFEST.json",
+      "sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "bytes": 4086
+    },
+    {
+      "path": "t20-next-frontier-20261008/single-calibration-design/RESULT.md",
+      "sha256": "8369681f7be7db1306f8ffb96f210e2c31245ee3bd40f94b11d6a19ab5eb1df7",
+      "bytes": 11527
+    },
+    {
+      "path": "t20-next-frontier-20261008/single-calibration-design/MANIFEST.json",
+      "sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831",
+      "bytes": 2360
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/RESTRICTED_MASK_LOWER_BOUND.md",
+      "sha256": "6f1c95bca5083e3cdfc2421308700a5b78a8c62f5433a4eb0ae089ef7b5819c3",
+      "bytes": 4875
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/LOWER_BOUND_CONTROL.json",
+      "sha256": "473ea989b1c13ea50ec86ae02b4be2010426e947b72ecd4ede48e07689367f7a",
+      "bytes": 341
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/REVIEW.md",
+      "sha256": "0d08fcb2c99565044f0bbff4219d941048986bdfd0337dee368c9416fac11bcd",
+      "bytes": 7888
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-review/REVIEW_RECEIPT.json",
+      "sha256": "91ab1d2e208dd8c6ed09c56a88b77c0e323ef87159b1e82799c625455e18736d",
+      "bytes": 2483
+    }
+  ],
+  "prior_frozen_components": [
+    {
+      "component": "productive-identifiability",
+      "manifest_sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "files_unchanged": 24
+    },
+    {
+      "component": "single-calibration-design",
+      "manifest_sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831",
+      "files_unchanged": 14
+    }
+  ],
+  "runtime_dependencies": "Standalone Python standard library; no prior code imported.",
+  "scope": "Read-only mathematical ancestry and independent review; no new primary Arabic reading claimed."
+}

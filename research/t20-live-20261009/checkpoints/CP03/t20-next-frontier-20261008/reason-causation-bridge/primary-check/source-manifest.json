@@ -1,0 +1,61 @@
+{
+  "checked_utc": "2026-10-08",
+  "scope": "Original analytical receipt; no source bodies in deliverable folder",
+  "downloaded_sources": [
+    {
+      "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf.pdf",
+      "temporary_file": "balfour1906.pdf",
+      "bytes": 20814296,
+      "sha256": "f61bb6dc942e7aa1ee86ac1c70b61386fc8114055be95b6ae35aae60a9449f75",
+      "note": "Balfour 1906 printing, 8th revised edition; 446 PDF pages; printed 278–286 inspected, PDF 322–330."
+    },
+    {
+      "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf_djvu.txt",
+      "temporary_file": "balfour1906.txt",
+      "bytes": 718600,
+      "sha256": "8e930f7b66d352329aa5120e623d8c26f134714fe21787e46fe56899bea157df",
+      "note": "OCR used for continuous targeted reading; verified scans at printed 279,282,285."
+    },
+    {
+      "source_url": "https://archive.org/download/foundationsofbeln00balf/foundationsofbeln00balf_scandata.xml",
+      "temporary_file": "balfour1906-scandata.xml",
+      "bytes": 232415,
+      "sha256": "922e9982710f874ce534736ed774d6ce9e56ad32175995bee5d7bf1c93620846",
+      "note": "IA leaves 322–330 map to printed 278–286; PDF one-based pages happen to have same numerals as these IA zero-based leaf identifiers."
+    },
+    {
+      "source_url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf",
+      "temporary_file": "ReppertAFR.pdf",
+      "bytes": 186104,
+      "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1",
+      "note": "14 PDF pages; PDF creator author metadata Tim; generated 2011-01-15; primary author credited in body Victor Reppert. Displayed pages 7–27 inspected plus page 2."
+    },
+    {
+      "source_url": "https://dangerousidea.blogspot.com/2011/01/cleaning-up-old-paper-of-mine.html",
+      "temporary_file": "reppert-provenance.html",
+      "bytes": 148495,
+      "sha256": "dc6d2c592086808712868b59d4da2bf3b36f90d95114deae38dc966337884de9",
+      "note": "Author post body only inspected, not comments."
+    },
+    {
+      "source_url": "https://static1.1.sqspcdn.com/static/f/38692/383655/1263300179793/Naturalism%2BDefeated.pdf",
+      "temporary_file": "plantinga-naturalism-defeated.pdf",
+      "bytes": 446036,
+      "sha256": "80e0a0cb37c015ae1bae6e8d0ad1cec5500dc82080ecdd4973c1237e31599a80",
+      "note": "54 PDF pages; displayed copyright 1994 Alvin Plantinga. Opening through section I, PDF pp1–10, and pp19–21 inspected; later material not read systematically."
+    }
+  ],
+  "web_only_source": {
+    "url": "https://www.christianitytoday.com/2008/07/evolution-vs-naturalism/",
+    "author": "Alvin Plantinga",
+    "publication": "Books & Culture July/August 2008",
+    "scope": "Continuous argument body and notes, excluding navigation, advertisements and unrelated content",
+    "hash": null
+  },
+  "unverified_cited_targets": [
+    "Balfour 1918 printing",
+    "Reppert 2003 p73 and p85",
+    "Lewis Miracles pp17–36",
+    "Plantinga Where the Conflict Really Lies (2011) p329"
+  ]
+}

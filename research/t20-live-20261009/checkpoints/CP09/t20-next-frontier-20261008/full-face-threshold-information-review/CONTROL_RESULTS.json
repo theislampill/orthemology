@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "scope": "Exact symbolic and finite combinatorial controls; no empirical validation, no numerical integration, no sampling, no author-code import or replay. Analytic inequalities and limiting arguments are reviewed in REVIEW.md.",
+  "sympy_version": "1.14.0",
+  "checks": [
+    {
+      "name": "Direct S_x derivative",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Direct S_y derivative",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Direct mixed S derivative",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "S grounded at x=0",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "S grounded at y=0",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "S right margin",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "S top margin",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "c=1 equality control",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Density constant",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "n=1 density constant",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Power-CDF density chain rule",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "One-dimensional max-density derivative",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Logarithmic L2 divergence integrand",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Shell cancellation",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Limiting shell contribution",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Monotone L shell decomposition",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "Beta log moment",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "n=1 limiting shell constant",
+      "status": "PASS",
+      "method": "exact symbolic identity"
+    },
+    {
+      "name": "2K face bits decode all dyadic open grid atoms for K=1..8",
+      "status": "PASS",
+      "method": "exhaustive exact-rational combinatorial check",
+      "cases": 284
+    }
+  ],
+  "check_count": 19
+}

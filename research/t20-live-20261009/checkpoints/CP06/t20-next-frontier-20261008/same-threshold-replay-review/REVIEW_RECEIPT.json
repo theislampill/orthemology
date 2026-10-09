@@ -1,0 +1,175 @@
+{
+  "issued_utc": "2026-10-08T16:14:08.140518+00:00",
+  "verdict": "PASS_WITHIN_DECLARED_PROBABILITY_AND_OBSERVATION_MODEL",
+  "reviewed_author_manifest": {
+    "path": "../same-threshold-replay/MANIFEST.json",
+    "sha256": "f58c75e855e51be1bf4818b2b4ea6a91b1b5e685cbd45cfe304e9c3627fcbf53",
+    "bytes": 1857,
+    "reading_scope": "Full manifest and all ten listed author payloads read."
+  },
+  "reviewed_author_payload_count": 10,
+  "reviewed_author_payloads": [
+    {
+      "path": "same-threshold-replay/EXACT_CONTROLS.md",
+      "sha256": "f0f438a4f99c5a2fef5b7f40384747c46f1454cfb1b719b4cb96dd6fa1d9b16b",
+      "bytes": 1767,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/PROSPECTIVE_EVENTS.jsonl",
+      "sha256": "e6f1356fafe89886601cf0951278be91409db3fd030ddd21c7ccc356e04def06",
+      "bytes": 631,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/READ_FIRST.md",
+      "sha256": "ecae3eedf6b01f76bd31b039826c932f5418e9d3cf3a5679826c18f4dcf6a641",
+      "bytes": 1522,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/RESULT.md",
+      "sha256": "f3c9b2690613e5c0abd7f5e188f01abcff9aa37380a14c8eac4fe428e7df7098",
+      "bytes": 15218,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/SOURCE_AUDIT.md",
+      "sha256": "81e922088053db364802826927a9ba042dd5910f96974b9d21bebe5e691b3416",
+      "bytes": 6780,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/SOURCE_BINDINGS.json",
+      "sha256": "adfbc884c980593876b941e3b8c7327ac5294623a0e5d4463001aa556d5e7a7c",
+      "bytes": 7996,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/exact_controls.py",
+      "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+      "bytes": 7158,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/results/exact_controls.json",
+      "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+      "bytes": 3717,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/results/exact_controls.log",
+      "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+      "bytes": 1257,
+      "verified": true
+    },
+    {
+      "path": "same-threshold-replay/results/predecessor_verification.json",
+      "sha256": "bebb17eace4e5bed8431fa6d8daed38d92c53ec568c7557cf22b2eac60e1c817",
+      "bytes": 556,
+      "verified": true
+    }
+  ],
+  "scoped_claims": [
+    "All-command fresh Q and same-threshold two-face J identify fixed finite count, shared coordinate calibrations, and every within-route copula.",
+    "No differentiability or absolute continuity of the unknown copulas is required.",
+    "Boundary handling is valid and avoids logs or cancellation of zero factors.",
+    "Fixed finite grids cannot certify arbitrary global within-route copula factorization in the unrestricted class.",
+    "The exact t=3/4 count-alias control preserves the full stated held three-bit transcript.",
+    "Fresh thresholds, held inventory, held thresholds at distinct commands, and identical-command replay have the correctly distinguished observational consequences.",
+    "Attribution, source-reading limits, and original-source/physical/psychological boundaries are explicitly preserved."
+  ],
+  "findings": {
+    "mathematical_blockers": [],
+    "boundary_blockers": [],
+    "source_scope_blockers": [],
+    "required_changes": []
+  },
+  "evidence": [
+    {
+      "path": "independent_derivation.md",
+      "sha256": "509e3cf6a45f05c80f3393e1145339ceb5dd61d3a079869c656670dba6b5f3f3",
+      "bytes": 9048
+    },
+    {
+      "path": "verify_controls.py",
+      "sha256": "747f64b59faeadc33ce8212a36fe10ceafe1e250bea751cce9682ea276d9cd05",
+      "bytes": 3334
+    },
+    {
+      "path": "exact_controls.json",
+      "sha256": "986aa71514822f3333dc207449ab9679102ef1414b2a289347282756094a3039",
+      "bytes": 1668
+    },
+    {
+      "path": "preinspection_manifest.json",
+      "sha256": "d9123436e2190fdba26d5e6edd0e8259ae8c5cc56d923b6531de9888bb8b3ed2",
+      "bytes": 632
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "52730f217361cbbfb25d07cc9634f049b4727c1c4e4e776a1ad37b564b1f840f",
+      "bytes": 12073
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "851353baab25b3c3f26295759086ba262d0a6aad0c47b3ea25943d86497f136a",
+      "bytes": 11601
+    },
+    {
+      "path": "verify_evidence.py",
+      "sha256": "155c31a0a66b5cb41e0235238caad0b74d02642b4d39f24034ccd1dc8d3b1437",
+      "bytes": 4316
+    },
+    {
+      "path": "evidence_verification.json",
+      "sha256": "28deb0e6943de669d399c588c081cbc4370d917fb1b3e5b8a9e8f6a14d36454d",
+      "bytes": 11788
+    },
+    {
+      "path": "replay/exact_controls.py",
+      "sha256": "0e43b8b3d5dc15929e79dae69e90ea8f06091477a181f5e1a64d503a24e947b6",
+      "bytes": 7158
+    },
+    {
+      "path": "replay/results/exact_controls.json",
+      "sha256": "060ed3aae850901e96d00a59b2b42f10e7c3e933628cd97e7503b8368b656596",
+      "bytes": 3717
+    },
+    {
+      "path": "replay/results/stdout.log",
+      "sha256": "808a51e1fae31562dece66d76ff7c41aef73f571319cf207093862a336dd156d",
+      "bytes": 1257
+    }
+  ],
+  "author_replay": {
+    "exit_code": 0,
+    "assertions": 16598,
+    "families": 29,
+    "script_byte_identical": true,
+    "output_json_byte_identical": true,
+    "stdout_byte_identical": true,
+    "executed_only_in_review": true
+  },
+  "provenance": {
+    "source_inputs_verified": 6,
+    "predecessor_manifests_verified": 3,
+    "predecessor_payload_entries_verified": 27,
+    "author_and_predecessor_recheck": "PASS"
+  },
+  "exclusions": [
+    "Physical replay availability or control",
+    "Psychological manipulability",
+    "Metaphysical original-source independence",
+    "Finite-sample certification",
+    "Universal finite-count impossibility",
+    "Review of the separate finite-panel-replay certificate",
+    "New copula discovery or field-wide priority",
+    "Integration",
+    "Owner acceptance",
+    "T20 closure"
+  ],
+  "author_and_predecessor_files_modified": false,
+  "integration_authority": false,
+  "closure_authority": false
+}

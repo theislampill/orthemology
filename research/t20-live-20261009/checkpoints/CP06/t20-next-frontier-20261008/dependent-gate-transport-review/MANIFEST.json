@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-08T15:45:28.233987+00:00",
+  "status": "Frozen independent review; PASS_SCOPED",
+  "author_manifest_sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+  "author_addendum_manifest_sha256": "66a631d04cfe92964aaf8829f3668e362b589004d1c1c66dba287c4155513716",
+  "files": [
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "8fac8e82b1502c62338cb24970cbc9b82a2a1a7369df43c4783d18d26fbb6aae",
+      "bytes": 950
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "4a123eaaa894f8e88485221ab1769b22cde2147116076610cbc41158e6280ab3",
+      "bytes": 14290
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "7623f04fc8a325603e1af0a4c3a329aeef5fc6904773e3a42bd094ff459ea604",
+      "bytes": 4346
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "53920f1a54dd5f4c8d252b32e8ace8f2c9bcb607170b97da525d18728677ff79",
+      "bytes": 11600
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "3435a295fe60cb49bd48ac26adaf1e4878468683ba6f7903121fcb3bd093e723",
+      "bytes": 6497
+    },
+    {
+      "path": "replay/exact_controls.py",
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "bytes": 6916
+    },
+    {
+      "path": "replay/results/exact_controls.json",
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "bytes": 18639
+    },
+    {
+      "path": "replay/results/stdout.log",
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "bytes": 1381
+    },
+    {
+      "path": "results/independent_controls.json",
+      "sha256": "034832c33c382170e93badac4f3f7bb742ff7582eb18b2ae867f295ccf5ca928",
+      "bytes": 514102
+    },
+    {
+      "path": "results/independent_controls.log",
+      "sha256": "347421d759412169daf6329f05d203dbb456921e0daef5c58c87eacbad16f084",
+      "bytes": 1467
+    },
+    {
+      "path": "sources/acopula_generator_web.json",
+      "sha256": "3b31a45c39072b7fd0dbfafd8dcc18ed23bbc009390200dbea58fe856d21d18d",
+      "bytes": 3274
+    },
+    {
+      "path": "sources/additional_sources_web.json",
+      "sha256": "cd898c4eb30aac34675c0a2e190c32f4d7bf6134704ce1234eca609204d522b0",
+      "bytes": 3539
+    },
+    {
+      "path": "sources/bibliographic_search_web.json",
+      "sha256": "d50e43a2c695322b991af89516a53b4d0cb91321648238fb35cb85975602ac2a",
+      "bytes": 16153
+    },
+    {
+      "path": "sources/copula_constructor_web.json",
+      "sha256": "dd79f7164213f10a48d01954d0b3f8bb4d112ec91c7d5c24e2fc0cecc10ddbd4",
+      "bytes": 5050
+    },
+    {
+      "path": "sources/vinecopulas_formula_web.json",
+      "sha256": "e244e5f30d220637540526d8c4d32472c5c6f63a197aaac9bd8bfab0f7477ef1",
+      "bytes": 11602
+    },
+    {
+      "path": "verify_evidence.py",
+      "sha256": "362e901d6a529d6922ae51a67679e925b499fabf7d4937915f24340cef5bfc8d",
+      "bytes": 3142
+    }
+  ]
+}

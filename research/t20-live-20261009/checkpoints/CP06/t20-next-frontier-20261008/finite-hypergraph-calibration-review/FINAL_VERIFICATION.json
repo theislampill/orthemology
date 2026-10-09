@@ -1,0 +1,9 @@
+{
+  "author_artifacts": 3,
+  "binding_and_replay_checks": 22,
+  "independent_assertions": 305,
+  "prerequisite_sources": 4,
+  "replay_byte_identical": true,
+  "scope": "Digest integrity and fresh independent replay; proof verdict is REVIEW.md.",
+  "status": "PASS"
+}

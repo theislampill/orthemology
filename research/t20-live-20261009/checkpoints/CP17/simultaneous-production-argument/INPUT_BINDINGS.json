@@ -1,0 +1,102 @@
+{
+  "date_utc": "2026-10-09",
+  "status": "final; companion source report final versions bound",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "size_bytes": 28965,
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "reading_scope": "full direct reading across displayed calls"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/MODEL_AUDIT.md",
+      "size_bytes": 29085,
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67",
+      "reading_scope": "full direct reading"
+    },
+    {
+      "path": "reassessment-semantic-warrant/FOCUSED_ARGUMENT.md",
+      "size_bytes": 11976,
+      "sha256": "d31ae29f086bcbe117c6f5a0d844ca1049415695bb5d920c07b4ae13ce1f40a4",
+      "reading_scope": "full direct reading"
+    },
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "size_bytes": 4923,
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10",
+      "reading_scope": "full direct reading"
+    },
+    {
+      "path": "qayyim-complete-causation-return/RESULT.md",
+      "size_bytes": 19606,
+      "sha256": "bb55c9a2dc96b0b2afe937cb14732b62e47e4eab74643366c3f950bad196ec2c",
+      "reading_scope": "full direct reading; production-mode control"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+      "size_bytes": 20893,
+      "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08",
+      "reading_scope": "full direct reading across displayed calls"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "size_bytes": 19070,
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "reading_scope": "full direct reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+      "size_bytes": 375665,
+      "sha256": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352",
+      "reading_scope": "targeted direct reading L0720–L0779; larger displayed context L0700–L0790 not claimed complete"
+    },
+    {
+      "path": "t20-next-frontier-20261008/complete-overdetermination-audit/sources/schaffer-overdetermination-2003.txt",
+      "size_bytes": 58388,
+      "sha256": "f00745aa15b7909764279a837b21128519400f6944aecf0480e0c103d9bf0e03",
+      "reading_scope": "targeted direct reading printed23–27 and33–37; selected38 passage through retained line650; no new full-paper reading"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/RESULT.md",
+      "size_bytes": 18141,
+      "sha256": "cfd70cdca601878e4b62c91757f5622e094d4e060446e21ceea0e21a6d717634",
+      "reading_scope": "full direct reading; final changed tail reread; source-worker page/voice findings, not independent scan verification"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/commentary/RESULT.md",
+      "size_bytes": 7752,
+      "sha256": "f6c59db2399cc4fb62bdd3383b6b079c4331125f0473e68a38f9f253590f1722",
+      "reading_scope": "full direct reading; companion later-commentary identification and bounded non-hits"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/PAGE_AND_VOICE_MAP.md",
+      "size_bytes": 9343,
+      "sha256": "857c6940093ed2771655ab07503ab5338d3204fae56953a7cd2644d819fcb1c0",
+      "reading_scope": "full direct reading; printed/electronic/source-voice controls"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/read-selections/minhaj1-item96-L0001-L0009.txt",
+      "size_bytes": 4822,
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+      "reading_scope": "full direct selected-primary reading"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1775.txt",
+      "size_bytes": 3596,
+      "sha256": "da2701d238564924a4a95f706ec17f110b710439acd02110eae30f0cb69564d5",
+      "reading_scope": "direct primary reading L001–L005"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1776.txt",
+      "size_bytes": 4472,
+      "sha256": "e15e6280b1c22012888dcd41546e18297c4facc963be67e74f87986d429118ab",
+      "reading_scope": "direct primary reading L001–L008 only"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/read-selections/majmu20-item2032-L0001-L0020.txt",
+      "size_bytes": 17326,
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+      "reading_scope": "full direct selected-primary reading"
+    }
+  ]
+}

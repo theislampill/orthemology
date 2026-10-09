@@ -1,0 +1,62 @@
+{
+  "classification": "FIFTH_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "research_cutoff_utc": "2026-10-08T14:49:16.553449+00:00",
+  "research_cutoff_basis": "Final interaction-absence-obstruction/MANIFEST.json including separately bound review transcription erratum.",
+  "previous_research_cutoff_utc": "2026-10-08T13:15:48Z",
+  "included_stage_directories": [
+    "grouped-calibration-invariants",
+    "grouped-calibration-invariants-review",
+    "stable-grouped-invariants",
+    "stable-grouped-invariants-review",
+    "interaction-calibration-anchor",
+    "interaction-calibration-anchor-review",
+    "interaction-absence-obstruction",
+    "interaction-absence-obstruction-review",
+    "historical-mathematical-transport",
+    "historical-mathematical-transport-review",
+    "dretske-continuation-access"
+  ],
+  "grouped_review_scope": "Population count-ratio/weight invariants and scale corollary only; process and oracle assumptions remain explicit.",
+  "stable_review_scope": "Conditional support/zero-flag sampling theorem, separately budgeted weights and synthetic integer-histogram witness. No data collection, exhaustive large grid search or tractability certification.",
+  "interaction_main_and_appendix_scope": "Separate fixed-inventory full-curve classification and positive-support-promised finite Cauchy-panel receipts; do not transfer absence or uniform-cost claims.",
+  "absence_scope": "Unbounded-count support-absence approximation-oracle obstruction and stated randomized/semidecision consequences, not a known-ceiling result or physical absence conclusion.",
+  "absence_review_erratum": {
+    "governing_file": "t20-next-frontier-20261008/interaction-absence-obstruction-review/ERRATUM.md",
+    "receipt": "t20-next-frontier-20261008/interaction-absence-obstruction-review/ERRATUM_RECEIPT.json",
+    "outside_original_review_manifest": true,
+    "original_review_payloads_unchanged": 18,
+    "effect": "Corrects one missing factor u in review explanatory formula; author result and executable controls already correct."
+  },
+  "historical_transport_scope": {
+    "governing_qualification": "t20-next-frontier-20261008/historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+    "unchanged_author_paraphrase_qualified": true,
+    "qualification": "General difference space requires mass-zero and feasible-support intersections. Archived Proposition 6 assumes mass retention, which makes the mass-zero restriction redundant. Full support is sufficient, not necessary, for dropping the feasible-support restriction. The actual three-state application meets both sufficient conditions.",
+    "other_limits": "Fixed-price completed sign probes only; no source-to-PDF build verified; no review of all seven current proofs; inherited countermodel gets no duplicate credit."
+  },
+  "dretske_scope": "Metadata/access evidence only. Exact DOI/route and obstruction identified; chapter body remains unread and question open.",
+  "original_files": "Byte-identical; generated reports outside component manifests are preserved as such, not silently added to original review coverage.",
+  "candidate_attribution": "Final successor/review map in COMPONENT_AND_PRIOR_IDENTITIES.json governs the two historical candidates.",
+  "active_not_included": [
+    "finite-hypergraph-calibration",
+    "bounded-interaction-detection",
+    "root-later-operations/BOUNDED_PRESENCE_CANDIDATE.md"
+  ],
+  "owner_repository_status": {
+    "provenance": "OWNER_REPORTED",
+    "reported_at_utc": "2026-10-08T13:17:43Z",
+    "adopted_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "merged_prs": [
+      30,
+      31,
+      32
+    ],
+    "final_CI": "PASS",
+    "later_research_integration": "Separately unintegrated",
+    "fresh_packaging_lookup": false
+  },
+  "new_verification": "Delivery assurance only; standalone controls plus digest and archive checks. No fresh Lean run, source reacquisition or protected repository operation.",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false
+}

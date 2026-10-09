@@ -1,0 +1,55 @@
+{
+  "bound_files": [
+    {
+      "path": "ERRATUM.md",
+      "sha256": "8ed2d479c07d30487072ba0b5dde52228259cb88589ec295de73453f5b3bc9f1"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "85284366281cc77a4957ddf8b291d5a91c641fa9e80ce0889eb94a2062460dbf"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945"
+    },
+    {
+      "path": "REVIEW_MANIFEST.json",
+      "sha256": "6bc8b43fbf0f91812c8344475857d0db7430fa553fb2d365cf4ee8af2d2889ec"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba"
+    },
+    {
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353"
+    },
+    {
+      "path": "author_replay/exact_controls.py",
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70"
+    },
+    {
+      "path": "author_replay/results/exact_controls.json",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6"
+    },
+    {
+      "path": "../interaction-absence-obstruction/RESULT.md",
+      "sha256": "f8424612e92e5f4f3d45f89317070bf5ed4fd63b5cc53a43ee88b4713bc29f4b"
+    },
+    {
+      "path": "../interaction-absence-obstruction/exact_controls.py",
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70"
+    }
+  ],
+  "correct_formula": "Q_N=u(1-b)+bu^(1+1/N)=u(1-b+b u^(1/N))",
+  "created_utc": "2026-10-08T14:48:12.602611+00:00",
+  "effect": "One explanatory formula omitted a factor u. The author theorem, review model derivation and executable controls already use the correct formula. No mathematical claim or control result changes.",
+  "incorrect_formula": "Q_N=u(1-b)+bu^(1/N)",
+  "location": "REVIEW.md section 3, Computability of the hard names paragraph",
+  "original_artifacts_modified": false,
+  "original_frozen_manifest_unchanged": true,
+  "original_frozen_payloads_verified": 18,
+  "original_frozen_receipt_unchanged": true,
+  "scope": "Separate correction only; no physical validation, integration, release or T20 closure.",
+  "verdict": "Transcription corrected; original scoped PASS unchanged."
+}

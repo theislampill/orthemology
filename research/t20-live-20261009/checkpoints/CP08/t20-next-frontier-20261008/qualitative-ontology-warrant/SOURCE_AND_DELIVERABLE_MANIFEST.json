@@ -1,0 +1,41 @@
+{
+  "operation": "Qualitative ontology warrant",
+  "scope": "Separate successor operation, T20 remains active; no integration/closure/formal-model work",
+  "recorded_at_utc": "2026-10-08T18:01:10.170240+00:00",
+  "inputs": [
+    {
+      "role": "Dasgupta 2009 full journal paper",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2009-individuals-candidate.pdf",
+      "sha256": "b336f711d358c894c9a5480bbae0f9f2d32c897d67b8cfa01e0476af74722108"
+    },
+    {
+      "role": "Dasgupta 2016 targeted note 44 source",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989"
+    },
+    {
+      "role": "Exact T20 interface",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "role": "Preceding source addendum",
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    }
+  ],
+  "primary_source_url": "https://www.shamik.net/papers/dasgupta%20individuals.pdf",
+  "primary_source_doi": "https://doi.org/10.1007/s11098-009-9390-x",
+  "deliverables": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce",
+      "bytes": 30791
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/READING_LEDGER.json",
+      "sha256": "fc00e2e638693978e8e48462164a63c4370fa9a19c2db24d4b4ff6b43a78f057",
+      "bytes": 10331
+    }
+  ]
+}

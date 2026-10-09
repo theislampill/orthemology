@@ -1,0 +1,54 @@
+{
+  "packet": "finite-geometric-score-review",
+  "result": "PASS",
+  "author_result_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+  "historical_floor": "UNVERIFIED",
+  "explicit_cutoff_certified": false,
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "1dc64801da9ee70b289bcc66610832e3eb7a5c353a393e55305730b3cd48052f",
+      "bytes": 14273
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "754641957cb72c931ea075f10835f04932eeb584aea676e6145a32a42e425b74",
+      "bytes": 3520
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "e8eb60342bf1fdf0f5c9ffaf156a7e0ece72f4495b193c02aff2fa1ff064321c",
+      "bytes": 9388
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "7a888d81d6eeb16481bba823159eca1adde101fc66f268371c0d534621859ff2",
+      "bytes": 10060
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "7a888d81d6eeb16481bba823159eca1adde101fc66f268371c0d534621859ff2",
+      "bytes": 10060
+    },
+    {
+      "path": "AUTHOR_REPLAY.log",
+      "sha256": "58cd4d5f5f4ef770eb7ff30420b8badfc66c0c2162e2e0d7aa3d259e1e444341",
+      "bytes": 482
+    },
+    {
+      "path": "author_replay/CONTROL_RESULTS.json",
+      "sha256": "c799b4ef7dafaa5daba4f7c81c22372a68ce33f2dc49d3453f383087c029faf6",
+      "bytes": 6659
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "79fd7a81590ad084905509b338202a7c84f7707b276b3ece7955a6263372d119",
+      "bytes": 3081
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "8b0a58c0b7e69af7ba946f9d6eb14fbe7b9417b2668216dffe5e9029403eba6b",
+      "bytes": 1982
+    }
+  ]
+}

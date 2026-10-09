@@ -1,0 +1,246 @@
+{
+  "recorded_utc": "2026-10-08T11:30:54.411319+00:00",
+  "scope": "Inherited files and exact audit spans; source receipt inspection is not fresh primary-source reading or proof replay.",
+  "inputs": [
+    {
+      "id": "model_header",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/OriginationTypeControl.lean",
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "bytes": 7014,
+      "lines": 152,
+      "inspected_or_bound_span": [
+        3,
+        8
+      ],
+      "span_sha256": "4185187b4f9fb582fe2cf92d0bda8075c8481896ee2c92cf1c06593d65414736"
+    },
+    {
+      "id": "model_definitions",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/OriginationTypeControl.lean",
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "bytes": 7014,
+      "lines": 152,
+      "inspected_or_bound_span": [
+        11,
+        56
+      ],
+      "span_sha256": "a1c705cc0a83ec3974df4c40a2b963b58120cdf4cf24e098d88cab59789e233f"
+    },
+    {
+      "id": "modal_controls",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/OriginationTypeControl.lean",
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "bytes": 7014,
+      "lines": 152,
+      "inspected_or_bound_span": [
+        58,
+        75
+      ],
+      "span_sha256": "3c15ff469643e63f1a8e546a6c2325a1b54de46dcb3fbd0f400bbd4e6ec0c503"
+    },
+    {
+      "id": "act_product_and_cessation",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/OriginationTypeControl.lean",
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "bytes": 7014,
+      "lines": 152,
+      "inspected_or_bound_span": [
+        100,
+        141
+      ],
+      "span_sha256": "b097007e0f0ecec1ea271c1fd3890110d793e56e9002a4a75cb5d7c89a41061c"
+    },
+    {
+      "id": "ontology_audit",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/AUDIT.md",
+      "sha256": "e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05",
+      "bytes": 13140,
+      "lines": 61,
+      "inspected_or_bound_span": [
+        1,
+        61
+      ],
+      "span_sha256": "e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05"
+    },
+    {
+      "id": "independent_review",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/ontology-type-control/review/REVIEW.md",
+      "sha256": "3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86",
+      "bytes": 11713,
+      "lines": 62,
+      "inspected_or_bound_span": [
+        19,
+        58
+      ],
+      "span_sha256": "1ed8e0c81a3fb299e0fd8fed3d9ff19d9e88274b2924ea1e92ffe1e9463ba82c"
+    },
+    {
+      "id": "report",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reports/REPORT_v2.md",
+      "sha256": "067a2a085e8c4a5ec837c8d17869ade90618b8b5a4d20b562a3e3c32f6e5605e",
+      "bytes": 53358,
+      "lines": 279,
+      "inspected_or_bound_span": [
+        81,
+        93
+      ],
+      "span_sha256": "be60de94c750f196970659eca9178d7e80f9e5082b47e515a1cef0cb4b2fc656"
+    },
+    {
+      "id": "guide",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/GUIDE_v2.md",
+      "sha256": "c966158d0c2f2e2dc8007c1de9abbce0587a04cfd918fe1c9284508dbeeff6ee",
+      "bytes": 68244,
+      "lines": 499,
+      "inspected_or_bound_span": [
+        23,
+        29
+      ],
+      "span_sha256": "0daa69d4be86902f7f945109b302058734a389be857ef8e2588c6338a3d21b4a"
+    },
+    {
+      "id": "source_locus",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+      "sha256": "3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b",
+      "bytes": 18101,
+      "lines": 109,
+      "inspected_or_bound_span": [
+        67,
+        109
+      ],
+      "span_sha256": "af9f4b6e5b8e2a832f43cb41f13caa63921c9be9d44c040c2d8d51382123d6cf"
+    },
+    {
+      "id": "source_mapping",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+      "sha256": "054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101",
+      "bytes": 5023,
+      "lines": 142,
+      "inspected_or_bound_span": [
+        1,
+        142
+      ],
+      "span_sha256": "054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101"
+    },
+    {
+      "id": "historical_text_receipts",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+      "sha256": "f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73",
+      "bytes": 6188,
+      "lines": 144,
+      "inspected_or_bound_span": [
+        1,
+        144
+      ],
+      "span_sha256": "f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73"
+    },
+    {
+      "id": "uthaymin_locus",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+      "sha256": "3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50",
+      "bytes": 10937,
+      "lines": 109,
+      "inspected_or_bound_span": [
+        11,
+        108
+      ],
+      "span_sha256": "fbfa5c1db2a731e35281ec66518d3cb5e623b3d26ef25a5d161a5c0d5ed5a708"
+    },
+    {
+      "id": "uthaymin_receipts",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/READING_RECEIPTS.json",
+      "sha256": "763a7bbaf28a7bc2f06af67738aa6c9f3abeeaa68ba65c36db1181a4f9acc2c7",
+      "bytes": 4704,
+      "lines": 164,
+      "inspected_or_bound_span": [
+        1,
+        164
+      ],
+      "span_sha256": "763a7bbaf28a7bc2f06af67738aa6c9f3abeeaa68ba65c36db1181a4f9acc2c7"
+    },
+    {
+      "id": "final_context",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/final-context-audit/CONTEXT_SCOPE.md",
+      "sha256": "a813631452c93dc9fa9696ac92f194edb86e2c2eb13ce749321710002018ff16",
+      "bytes": 7974,
+      "lines": 49,
+      "inspected_or_bound_span": [
+        25,
+        45
+      ],
+      "span_sha256": "678f4e785df99fca6cf6ffe907b6e5a1171d277df43e84132c790c069e53904a"
+    },
+    {
+      "id": "checkpoint_cooperation",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-resumption/cooperation/RESULT.md",
+      "sha256": "8a6fe40e5e36066148d89621ba083778077783ec7145a64904e145d5afd317c6",
+      "bytes": 20162,
+      "lines": 115,
+      "inspected_or_bound_span": [
+        23,
+        29
+      ],
+      "span_sha256": "dc1565fd530ac7857744e0b8bb5e9495ae99397546f7de89173a1878cd88528c"
+    },
+    {
+      "id": "checkpoint_design",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-resumption/cooperation/DESIGN.md",
+      "sha256": "83dbb731e06c91554949e7b5920bb06b8c91ce92d77b6a0ee9e069c48db7c919",
+      "bytes": 5501,
+      "lines": 36,
+      "inspected_or_bound_span": [
+        1,
+        13
+      ],
+      "span_sha256": "93c272c0f6a01587f492281b1455888c307107ff5eaf6bdfa95c7b51afbf2765"
+    },
+    {
+      "id": "checkpoint_provision",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/RESULT.md",
+      "sha256": "ca690248a37b789613f7627caae96709089523795732ee0cc22c944b92194885",
+      "bytes": 38962,
+      "lines": 254,
+      "inspected_or_bound_span": [
+        52,
+        61
+      ],
+      "span_sha256": "cd3bdd01aada5175dca0c6f718a3487b2543c3436389ae9a5316b7d6696eb5b1"
+    },
+    {
+      "id": "checkpoint_background",
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/origin-identity-bridge/RESULT.md",
+      "sha256": "53a18c9944984f7bbdd35641e4fb457a500e59abfd33c71e5120400ee1cc5e25",
+      "bytes": 24328,
+      "lines": 170,
+      "inspected_or_bound_span": [
+        72,
+        80
+      ],
+      "span_sha256": "509732c7b68ade7f370546ae79d68cca2ff37428aa7d2e7a5432d998b778f2d9"
+    },
+    {
+      "id": "continuation_warrant",
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246,
+      "lines": 112,
+      "inspected_or_bound_span": [
+        96,
+        102
+      ],
+      "span_sha256": "8b7db2e3193b5bfbc85aad00ebbe436759ca271c5c27961938048cb01524f7e6"
+    },
+    {
+      "id": "continuation_owner_summary",
+      "path": "t20-continuation-20261008/owner-review/Orthemology_T20_Updated_Owner_Review_Source_20261008.md",
+      "sha256": "fd574cdca409ea826caa87f4f450220b4d8882008168b53fbd665ad431295902",
+      "bytes": 33409,
+      "lines": 382,
+      "inspected_or_bound_span": [
+        34,
+        38
+      ],
+      "span_sha256": "bf2d6c2a0c62319740700c1f19ab956702f0b64a04c9ea46e8b7b91f909eb142"
+    }
+  ]
+}

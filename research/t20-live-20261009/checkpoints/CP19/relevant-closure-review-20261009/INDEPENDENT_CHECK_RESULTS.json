@@ -1,0 +1,133 @@
+{
+  "author_script_sha256": "f1f954730610c75df29f36f04d9e6a6c4c69b5b9b360f0fccf71e44fee54e814",
+  "syntactic_lines_independently_verified": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "axioms_match_primary_transcription": true,
+  "matrix_axiom_checks": [
+    {
+      "axiom": 1,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 2,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 3,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 4,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 5,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 6,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 7,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 8,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 9,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 10,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 11,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 12,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 13,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 14,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 15,
+      "valuations": 256,
+      "failures": 0
+    },
+    {
+      "axiom": 16,
+      "valuations": 256,
+      "failures": 0
+    }
+  ],
+  "both_rules_preserve_designation": true,
+  "relevant_conjunctive_bridge_all_16_pass": true,
+  "material_p_only_bridge_countervaluation": {
+    "p": 2,
+    "q": 1,
+    "material": 1,
+    "p_to_q": -2,
+    "not_q_to_not_p": -2
+  },
+  "material_compound_general_schema_failures": [
+    {
+      "p": -1,
+      "q": -2,
+      "basis": -1,
+      "arrow": -2
+    },
+    {
+      "p": 1,
+      "q": -2,
+      "basis": -1,
+      "arrow": -2
+    }
+  ],
+  "material_compound_all_positive_targets_pass": true,
+  "material_compound_necessary_identity_all_16_pass": true,
+  "ceiling": "No belief, knowledge, competence, basing, necessity modality or full counterfactual semantics has been interpreted. Object-formula invalidity is not automatically epistemic closure failure."
+}

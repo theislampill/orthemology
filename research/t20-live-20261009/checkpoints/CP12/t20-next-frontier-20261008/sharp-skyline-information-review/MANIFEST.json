@@ -1,0 +1,78 @@
+{
+  "packet": "sharp-skyline-information-review",
+  "status": "PASS_SCOPED_WRITTEN_REVIEW",
+  "created_utc": "2026-10-08T21:59:53.373250+00:00",
+  "historical_floor": "UNVERIFIED",
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "e7cb26d984bae11a8e4605bc7858982c27cb6c2571991ca683374d662940c667",
+      "bytes": 8946
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "f25c0a05ace21738950849ab9541762e6c36675476bf84c9f85dea349b266e01",
+      "bytes": 212
+    },
+    {
+      "path": "OPERATION_LOG.md",
+      "sha256": "93b6ce57695847910ab54045b472bf0b6b76ec82daeacf16198d18fec9f5f5ff",
+      "bytes": 1652
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "3527ce6bd1c625dfb10c9b425997a015549c911cd24d9afe62fffb6b0ba5db90",
+      "bytes": 14676
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "efab264009ea9ed84260a7f23a957c61c7cd3a4eccbfcb667c107a593e35ba41",
+      "bytes": 1705
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "7166335b40cc9b1afe3acd2e9de99e676d6b7b940f5411ed187cff156d843e1a",
+      "bytes": 3013
+    },
+    {
+      "path": "author_replay/CONTROL_RESULTS.json",
+      "sha256": "bbcce6cec92d9009bf9fcfa79f66bc3c7135e3fb231a3202c4eff2cde4197d04",
+      "bytes": 9891
+    },
+    {
+      "path": "author_replay/CONTROL_RUN.log",
+      "sha256": "858227fb5849ec2924701058ae94ebbab9c31c4e9a13106694acc005db9c71f9",
+      "bytes": 352
+    },
+    {
+      "path": "author_replay/controls.py",
+      "sha256": "04e771ffc1d30e736776bc30b8d6922f36fe25867ddda05c7bc5e3289db86eb4",
+      "bytes": 9867
+    },
+    {
+      "path": "author_replay_pre_freeze/CONTROL_RESULTS.json",
+      "sha256": "bbcce6cec92d9009bf9fcfa79f66bc3c7135e3fb231a3202c4eff2cde4197d04",
+      "bytes": 9891
+    },
+    {
+      "path": "author_replay_pre_freeze/CONTROL_RUN.log",
+      "sha256": "858227fb5849ec2924701058ae94ebbab9c31c4e9a13106694acc005db9c71f9",
+      "bytes": 352
+    },
+    {
+      "path": "author_replay_pre_freeze/controls.py",
+      "sha256": "1d997cc592511f4659b0261451575f07c58e85a48602277d9e461517c094c430",
+      "bytes": 9708
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "23b487c73533ce11c4e027650b8b7970da80ae631cdc7154901140fa4a3a2679",
+      "bytes": 7076
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "e54d8bdcac9461bdeeb763b907de6decd6ed62550314ec1aefd37e2519f67923",
+      "bytes": 2717
+    }
+  ]
+}

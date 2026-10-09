@@ -1,0 +1,39 @@
+{
+  "classification": "INTERMEDIATE_PRESERVATION_ONLY",
+  "checkpoint_ordinal": 11,
+  "T20_status": "ACTIVE",
+  "not_a_numbered_research_tranche": true,
+  "owner_handles_integration": true,
+  "protected_integration": false,
+  "GitHub_maintenance": false,
+  "historical_six_hour_active_compliance": "UNVERIFIED",
+  "research_duration_credit_seconds": 0,
+  "timing": "Do not sum overlapping windows, convert wall time to active time, or credit packaging/replay/waiting.",
+  "kernel": "Five written stages with internal reviews; no new Lean proof or replay. Finite and high-precision controls do not prove all-n or all-policy claims.",
+  "assumptions": [
+    "The declared known hard pair: P0/Q0 has n iid product-uniform threshold pairs; P1/Q1 has m=n+1 iid Joe-law pairs, c=n/m, F_c(x,y)=1-(1-xy)^c.",
+    "The observable is the exact retained endpoint skyline; coordinate-separable threshold-AND routes combine by OR. Within-vector states are unchanged and nonlatched; noiseless endpoint answers are functions of that skyline.",
+    "Fresh vectors are independent of each other and common world-independent policy randomization. A vector is charged from its first observation, including incomplete, infinite or selectively retained query words.",
+    "A common measurable adaptive policy, fixed per-world error alpha in (0,1/2), and unconditional finite-stop-and-correct probability at least 1-alpha are required. Expected lower cost is under P0; a uniform worst-case cap is at least that expectation.",
+    "Poisson processes are proof auxiliaries only. The actual experiments stay fixed-count. Restricted density domination and a separately controlled bad-area event replace naive transfer of centered Poisson moment equalities.",
+    "No finite exact real-skyline reconstruction, noisy instrumentation, unknown calibration, physical architecture, ontology or empirical warrant is supplied."
+  ],
+  "failed_controls_and_mapping_history": [
+    "The local likelihood polynomial has a genuine nonglobal boundary counterexample; original author/reviewer values and wrong-coefficient controls are preserved.",
+    "Baseline exact controls reject incorrect comparable-orientation factors/subtractions and zero polynomial centering; second moments alone do not imply score L2.",
+    "Probability-source mapping retains failed DOI open (no journal-body read), unread supplementary CLT proofs and recursive spatial-Markov/indirect Zuyev limits; Fill–Naiman/Baldin overbroad mappings are explicitly rejected.",
+    "Log-four exact controls reject missing/minus singular correction and E1 rather than E0 stopped-cost orientation.",
+    "Log-squared initial reviewer run failed at an incorrect hard-coded n=1 fourth-moment expectation 92/225. Direct integration gives 23/75; the diagnostic oracle was corrected, and the retained failure log plus later passing review explain this. No accepted theorem was changed by that diagnostic correction.",
+    "Log-squared reviewer also rejected wrong mixed-moment sign, omitted empty atom, zero fixed-count compensation mean, global constant-three density comparison and incorrect singular/stopping orientation.",
+    "Two author wording inaccuracies were corrected before final digest binding: the floor(v) chain and the reason the empty-stratum density vanishes. Their history is preserved in author/review audits.",
+    "Reviewer runtime was moved from scientific CONTROL_RESULTS.json to CONTROL_RUN.log before final freeze; the final scientific replay compares every byte with no ignored timing or scientific fields."
+  ],
+  "excluded_claims": [
+    "Sharp/Theta information or optimal logarithmic rate",
+    "Empirical, physical or ontology validation",
+    "External field-wide novelty or independent rediscovery",
+    "Whole-paper reading beyond recorded boundaries",
+    "Historical active-floor certification",
+    "Protected integration, owner acceptance or T20 closure"
+  ]
+}

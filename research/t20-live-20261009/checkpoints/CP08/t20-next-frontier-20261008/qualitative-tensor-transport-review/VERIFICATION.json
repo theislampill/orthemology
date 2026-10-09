@@ -1,0 +1,18 @@
+{
+  "status": "VERIFIED",
+  "reviewed_author_assertions": 553359,
+  "independent_assertions": 393050,
+  "checks": {
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md": true,
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-tensor-transport/controls.py": true,
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-tensor-transport/CONTROL_RESULTS.json": true,
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json": true,
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md": true,
+    "unchanged:[OMITTED_PRIVATE_MACHINE_PATH]/t20-next-frontier-20261008/qualitative-ontology-warrant/sources/dasgupta2009-layout.txt": true,
+    "replay_equals_original_report": true,
+    "independent_stdout_equals_report": true
+  },
+  "review_sha256": "9fdcd3b120268501b8ea756ddd28a244065db6f1a21e5436b574d5942ef28b45",
+  "independent_script_sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+  "scope": "Separate scratch review, no repository mutation, integration, or closure."
+}

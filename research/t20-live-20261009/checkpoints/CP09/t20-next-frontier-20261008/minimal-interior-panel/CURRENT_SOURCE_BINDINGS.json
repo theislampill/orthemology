@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-08T20:43:00.081952+00:00",
+  "scope": "Files actually read or newly produced in this resumed continuation; no historical duration certification",
+  "sha256": {
+    "retained-interior-certificate/RESULT.md": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+    "full-face-threshold-kl-rate/RESULT.md": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+    "minimal-interior-panel/RESULT.md": "c35abf8d96720c8ee9c611fc554db647990c0f0233e630dee0792939a75b0dc7",
+    "minimal-interior-panel/controls.py": "e25155d67aa6dc0ea43ddb83d2126facd7f1a0c4652a33dd4f4d181643137cae",
+    "minimal-interior-panel/CONTROL_RESULTS.json": "3aef9473b384ec7970c2504faa7e35fd0f8a63a875db76339c98949f0139b14c",
+    "minimal-interior-panel/CONTROL_RUN.log": "3aef9473b384ec7970c2504faa7e35fd0f8a63a875db76339c98949f0139b14c",
+    "minimal-interior-panel/README.md": "13c7979ef398c231f70b47b8128cc2d4778a81fa7823e835a9c0de99ea7a8d4c"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "findings": [
+    "Conditional indeterminism rebuttal supported; actual required background cannot be eliminated by lack of necessitation alone",
+    "Completion requires actuality, relevance and nonreceipt, not deterministic sufficient production",
+    "Realisation and SupportTransport require independent typing and same-respect warrant",
+    "Positive anti-eliminativist arguments do not independently refute selective brute original obtaining",
+    "Standing-source/act reconciliation is supported by page 151 but does not supply page 41 local external-concurrency exclusion",
+    "The simultaneous-priority supplement explicitly supplies the bounded local qualification recommended by this review"
+  ],
+  "input_rebindings": [
+    {
+      "at_utc": "2026-10-09T08:36Z",
+      "current_bytes": 22321,
+      "current_read_scope": "Complete report, lines 1–130",
+      "current_sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436",
+      "exact_diff_available": false,
+      "judgment_change": false,
+      "path": "ameri-causal-foundations-20261009/REPORT.md",
+      "previous_bytes_preserved": false,
+      "previous_snapshot_metadata": {
+        "bytes": 22116,
+        "path": "ameri-causal-foundations-20261009/REPORT.md",
+        "read_scope": "Complete report, lines 1–130",
+        "sha256": "4910ba1e67c235531637fea81fd2a988cfce5138760537c82e9fcb4355bf49d6"
+      },
+      "reason": "Complete current report reread; focused judgment unchanged. Earlier report bytes were not preserved, so no exact diff or exhaustive change classification is claimed. Prior hash/size metadata retained; no new primary reading credited."
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 2418081,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Primary source PDF; 14 selected pages read through extraction, four page images inspected",
+      "sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372"
+    },
+    {
+      "bytes": 988498,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Form-feed-separated extraction; pages 39–43, 61–65, 150–153 read including notes",
+      "sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4"
+    },
+    {
+      "bytes": 273119,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Direct visual inspection of printed/PDF page 41",
+      "sha256": "a5755c2dbf0534988ba06b5422b94bd74f051c9a7bb473c80e0eeaf4c113425d"
+    },
+    {
+      "bytes": 262621,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Direct visual inspection of printed/PDF page 62",
+      "sha256": "82e0e07961c67ecad3567eede56312d6e7de1a5102e5694f4092403334796489"
+    },
+    {
+      "bytes": 239934,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Direct visual inspection of printed/PDF page 151",
+      "sha256": "434f87eae0135d37a6b4f8582c3fad3d006f436fc5592f7576eed2b169843bab"
+    },
+    {
+      "bytes": 382193,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "read_scope": "Direct visual inspection of printed/PDF page 152",
+      "sha256": "d33476bae5d4b0b22855e5dc04d736e3db455d2602299ec090b23c57b5265165"
+    },
+    {
+      "bytes": 22321,
+      "path": "ameri-causal-foundations-20261009/REPORT.md",
+      "read_scope": "Complete current report, lines 1–130, reread at 2026-10-09T08:36Z after formatting and supplemental-reference updates",
+      "sha256": "e63116973f12d3ed2ee51a390c8f357658b98433e39071588adb24638412c436"
+    },
+    {
+      "bytes": 20774,
+      "path": "direct-anti-brute-return/REPORT.md",
+      "read_scope": "Complete report, lines 1–112; its primary-source claims remain inherited",
+      "sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5"
+    },
+    {
+      "bytes": 6940,
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "read_scope": "Complete source file, lines 1–141; no imports inspected or kernel run",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "bytes": 14485,
+      "path": "intrinsic-necessity-source-return/REPORT.md",
+      "read_scope": "Lines 1–60 only, for coverage/novelty and contextual controls",
+      "sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8"
+    },
+    {
+      "bytes": 4517,
+      "path": "intrinsic-necessity-source-return/READING_LEDGER.json",
+      "read_scope": "Complete ledger, for already-credited reading history",
+      "sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c"
+    },
+    {
+      "bytes": 7316,
+      "path": "ameri-causal-foundations-20261009/SIMULTANEOUS_PRIORITY_CONTROL.md",
+      "read_scope": "Complete supplement; tested against already inspected pages 39–43 and 150–153",
+      "sha256": "c8efbde7f1b94ee198201872ee6e0768bb8ec74748ababf987a689f96a258c27"
+    }
+  ],
+  "limits": [
+    "No whole-book or full causal-chapter reading claim",
+    "No new independent verification of physics, cited philosophers, Darʾ, Iṣfahāniyya, or historical claims",
+    "No formal model, code changes, kernel run, repository integration, outreach, or closure",
+    "No metaphysical possibility certification of the brute rival",
+    "No raw copyrighted source redistribution"
+  ],
+  "novelty_control": {
+    "earlier_recorded_substantive_intervals": [
+      [
+        83,
+        86
+      ],
+      [
+        133,
+        190
+      ]
+    ],
+    "later_material_status": "Reflective return to credited coverage",
+    "lead_report_fresh_focal_interval": [
+      31,
+      82
+    ],
+    "reviewer_independently_read_entire_fresh_focal_interval": false
+  },
+  "output": {
+    "path": "ameri-causal-foundations-20261009/review/INDEPENDENT_FOCUSED_REVIEW.md",
+    "sha256": "869423a84e8bad52290bbd5df18007870a3b04e2c92cdd6087d070137d85d53b"
+  },
+  "primary_source": {
+    "author": "Sami Ameri",
+    "direct_visual_pages": [
+      41,
+      62,
+      151,
+      152
+    ],
+    "edition": "Rawasikh first edition, 1445 AH / 2023 CE; metadata inherited from assigned report",
+    "extracted_pages_read_including_notes": [
+      [
+        39,
+        43
+      ],
+      [
+        61,
+        65
+      ],
+      [
+        150,
+        153
+      ]
+    ],
+    "language": "Arabic",
+    "official_url": "https://almobadarah.com/uploads/books/93cf86d674df49e95cef37e3.pdf",
+    "printed_equals_pdf_ordinal_on_visually_checked_pages": true,
+    "substantive_page_count": 14,
+    "title": "Waqafat ma shubhat fa-man khalaqa Allah",
+    "translation_used": false
+  },
+  "review_date_utc": "2026-10-09",
+  "review_kind": "Independent focused source and inference review"
+}

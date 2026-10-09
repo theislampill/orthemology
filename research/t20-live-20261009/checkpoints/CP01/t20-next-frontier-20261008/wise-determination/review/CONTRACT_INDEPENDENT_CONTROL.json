@@ -1,0 +1,34 @@
+{
+  "status": "all independent controls passed",
+  "q_only_diagonal_factors_over_all_nine_contexts": true,
+  "q_only_diagonal_achieves_all_product_goals": true,
+  "q_only_diagonal_violates_six_nonzero_role_constraints": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "given_role_sensitive_family_factors_through_q": false,
+  "each_fixed_q_role_to_goal_achieving_plan_map_is_bijective": true,
+  "q_only_goal_achieving_policy_families": 27
+}

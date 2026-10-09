@@ -1,0 +1,19 @@
+{
+  "recording": "Prospective start/stop endpoints; no pre-start credit; no waits or packaging credited",
+  "author_intervals": [
+    {
+      "start_utc": "2026-10-08T19:56:34.222301+00:00",
+      "end_utc": "2026-10-08T20:06:42.743340+00:00",
+      "elapsed_seconds": 608.521039,
+      "scope": "Mathematical derivation, source-specific kernel verification, deterministic controls, source/dependency audit and scope review"
+    }
+  ],
+  "total_nonoverlapping_author_active_seconds": 608.521039,
+  "not_credited": [
+    "Pre-start reading and initial observation",
+    "Subsequent review waiting",
+    "Subsequent packaging",
+    "Independent reviewer time, accounted separately"
+  ],
+  "authority": "Scratch-only, no integration, physical validation or T20 closure"
+}

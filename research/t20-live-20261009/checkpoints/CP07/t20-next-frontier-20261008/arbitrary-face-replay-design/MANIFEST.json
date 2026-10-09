@@ -1,0 +1,78 @@
+{
+  "frozen_utc": "2026-10-08T17:10:40.977609+00:00",
+  "status": "Frozen after independent scoped PASS",
+  "scope": "All-rate atomic two-face replay hard pair; global chi-squared and Joe-oriented KL asymptotics; no physical certification or integration",
+  "review_receipt_sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910",
+  "files": [
+    {
+      "path": "ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "bytes": 5833
+    },
+    {
+      "path": "CONTROLS_OUTPUT.json",
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209",
+      "bytes": 3417
+    },
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "8255889acd5fe46eb63b1259e8cf6ae342157c10a3669d15e36189ffa8b86717",
+      "bytes": 2673
+    },
+    {
+      "path": "FINAL_CHECK.json",
+      "sha256": "f4f242098e1c2c6d40416056556de0ebb86ce91849a3fc0e2751a691592268da",
+      "bytes": 816
+    },
+    {
+      "path": "NEGATIVE_CONTROLS.md",
+      "sha256": "ceea5caacbafbc11b6acee5865964092db779b16f67a71501ef5036d52603f87",
+      "bytes": 5020
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "6abc98959222dd3d389fabf64bdd8f0f34c5cd1e1d886dedc661b633881a8467",
+      "bytes": 2159
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "48932408a000e96edc187ff86eb088ba9afa25f2b4b59d84826e441e9012c2b9",
+      "bytes": 947
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "bytes": 13174
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "3cb5747d814a77d4e0bbb0985ed7a01909ce9869953816e464285731ed148de2",
+      "bytes": 2276
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "03ca00dd14213af6c8cfd86a59ab36f052441ece947274bed6787df2cad10eb4",
+      "bytes": 5295
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "81b8388c7db66fbcdd0da6db3bd54088cc2dec8fb1d6af8ba75423755ba4d2ef",
+      "bytes": 2606
+    },
+    {
+      "path": "SOURCE_CHECK_OUTPUT.json",
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf",
+      "bytes": 6393
+    },
+    {
+      "path": "controls.py",
+      "sha256": "e448f57ba034c782deed64e4013f8afc50ce4ae1ede1f8e1f1be4bf4ea6504b4",
+      "bytes": 7663
+    },
+    {
+      "path": "source_binding_check.py",
+      "sha256": "a11f4b18edefba84ccea562cea37d4572bdc92379374f1634505ee7ae11f58c3",
+      "bytes": 1153
+    }
+  ]
+}

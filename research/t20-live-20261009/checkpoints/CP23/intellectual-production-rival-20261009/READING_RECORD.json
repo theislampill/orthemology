@@ -1,0 +1,89 @@
+{
+  "primary_work": "Ibn Sina, al-Shifa, al-Ilahiyyat, Anawati/Zayed critical-text pagination",
+  "continuous_main_text_read": [
+    {
+      "chapter": "VIII.6",
+      "printed_pages": [
+        355,
+        362
+      ],
+      "endpoint": "before VIII.7 heading"
+    },
+    {
+      "chapter": "VIII.7",
+      "printed_pages": [
+        362,
+        370
+      ],
+      "endpoint": "chapter end"
+    },
+    {
+      "chapter": "IX.1",
+      "printed_pages": [
+        373,
+        381
+      ],
+      "endpoint": "before IX.2 heading"
+    },
+    {
+      "chapter": "IX.3",
+      "printed_pages": [
+        393,
+        401
+      ],
+      "endpoint": "chapter end; IX.4 heading verified on 402"
+    },
+    {
+      "chapter": "IX.6",
+      "printed_pages": [
+        414,
+        422
+      ],
+      "endpoint": "chapter end; IX.7 heading verified on 423"
+    }
+  ],
+  "bounded_additional_argument": {
+    "chapter": "IX.4 opening",
+    "printed_pages": [
+      402,
+      403
+    ],
+    "endpoint": "before detailed argument excluding a plurality of first products"
+  },
+  "print_pages_visually_read": [
+    362,
+    363,
+    366,
+    367,
+    395,
+    396,
+    397,
+    398,
+    402,
+    403,
+    415,
+    420,
+    421
+  ],
+  "pagination_rule": "one-based PDF page = printed page + 1",
+  "najat_electronic_read": [
+    {
+      "section": "two knowledge sections",
+      "displayed_pages": [
+        202,
+        204
+      ]
+    },
+    {
+      "section": "unity of knowledge, will, power, life",
+      "displayed_pages": [
+        205,
+        206
+      ]
+    }
+  ],
+  "whole_work_claim": false,
+  "complete_apparatus_collation": false,
+  "historical_duration_claim": false,
+  "source_text_overrides": "Primary scan controls key claims; Najat electronic transcription not used to override print."
+}

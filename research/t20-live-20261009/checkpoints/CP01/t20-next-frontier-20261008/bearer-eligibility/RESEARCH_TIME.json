@@ -1,0 +1,54 @@
+{
+  "research_session_start_utc": "2026-10-08T06:49:42Z",
+  "recorded_before_new_source_research": true,
+  "active_intervals": [
+    {
+      "start_utc": "2026-10-08T06:51:10Z",
+      "end_utc": "2026-10-08T06:51:55Z",
+      "seconds": 45,
+      "activity": "Direct primary passage comparison and reconstruction of receptivity objection",
+      "qualification": "Tool and coordination time outside this interval excluded"
+    },
+    {
+      "start_utc": "2026-10-08T06:53:08Z",
+      "end_utc": "2026-10-08T06:53:40Z",
+      "seconds": 32,
+      "activity": "Continuous Akmaliyya reading and reconstruction of necessary-being hierarchy, attribution, and relative-good controls"
+    },
+    {
+      "start_utc": "2026-10-08T06:55:34Z",
+      "end_utc": "2026-10-08T06:56:17Z",
+      "seconds": 43,
+      "activity": "Primary purity criterion, role restrictions, and independent ability versus chosen actual-mode analysis"
+    },
+    {
+      "start_utc": "2026-10-08T06:58:25Z",
+      "end_utc": "2026-10-08T06:59:04Z",
+      "seconds": 39,
+      "activity": "Dar individual-essence control and proof-dependency analysis of pure-perfection eligibility"
+    },
+    {
+      "start_utc": "2026-10-08T07:00:56Z",
+      "end_utc": "2026-10-08T07:01:29Z",
+      "seconds": 33,
+      "activity": "Complete Akmaliyya unique-layer scope check and kind-relative versus bearer-relative possibility analysis"
+    },
+    {
+      "start_utc": "2026-10-08T07:11:53Z",
+      "end_utc": "2026-10-08T07:12:13Z",
+      "seconds": 20,
+      "activity": "Cross-lane nonabsorption argument review; no proof replay"
+    }
+  ],
+  "excluded_intervals": [
+    {
+      "start_utc": "2026-10-08T06:49:42Z",
+      "end_utc": "2026-10-08T06:50:00Z",
+      "activity": "coordination and initial bookkeeping"
+    }
+  ],
+  "rule": "Only separately delimited active reasoning/reading intervals receive credit; retrieval waiting, coordination, bookkeeping, prior elapsed time and history excluded.",
+  "credited_active_seconds": 212,
+  "current_substantive_checkpoint_utc": "2026-10-08T07:12:13Z",
+  "uncredited_activity_note": "Source retrieval, tool execution, coordination, uncertain intra-turn duration, and unsegmented drafting are conservatively uncredited. Subtotal is a lower accounting bound, not total effort. No historical six-hour certificate."
+}

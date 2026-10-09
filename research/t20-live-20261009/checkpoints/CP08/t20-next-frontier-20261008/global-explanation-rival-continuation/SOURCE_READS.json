@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-08T17:50:08.757529+00:00",
+  "status": "SOURCE_COMPLETION_AND_APPRAISAL; NEXT_QUALITATIVE_ONTOLOGY_OPERATION_ACTIVE",
+  "old_checkpoint": "../global-explanation-rival/CHECKPOINT_RECEIPT.json",
+  "source_records": [
+    {
+      "id": "D2016",
+      "primary": "sources/dasgupta2016.pdf",
+      "url": "https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf",
+      "bibliography": "Shamik Dasgupta, Metaphysical Rationalism, Noûs50(2)(2016)379–418; DOI10.1111/nous.12082",
+      "reading": "Full continuous PDF1–40, journal379–418 including all68notes and bibliography. Four10page text chunks read in sequence. PDF36 truncation repaired by full single-page read; nothing omitted.",
+      "previous_targeted_scope": "Earlier §§2–5,7–9,13 selected passages formed a preliminary pass; not additional full-paper credit.",
+      "targeted_return": "Journal397/PDF19 and journal415/416 notes44/55; visual checks PDF19,24,37,38.",
+      "visual_limit": "No visual check claimed for remaining36pages. Extracted prose complete; full typesetting not inspected.",
+      "principal_discrimination": "Nonobjectual qualitative-base alternative concerns existence-grounding premise; does not defend endless grounding or establish a wholly received productive universe."
+    },
+    {
+      "id": "M2015",
+      "primary": "sources/morganti2015-journal-mirror.pdf",
+      "url": "https://www.pul.it/wp-content/uploads/2019/03/MORGANTI-ERKE-10.1007.pdf",
+      "bibliography": "Matteo Morganti, Dependence, Justification and Explanation: Must Reality Be Well-Founded?, Erkenntnis80(2015)555–572",
+      "reading": "Full journal555–572/PDF3–20 body, notes and bibliography now complete; PDF1–2 cover/legal preface also inspected.",
+      "new_coverage": "Introduction and §§5–6/remaining notes/refs completed beyond already read §§2–4. Previously partial later passages were reread without new independent credit.",
+      "changed_interpretation": "Do not make finite generating-law simplicity or bounded contraction a necessary criterion for all infinitist accounts. No independently actual productive-capacity bridge newly found."
+    },
+    {
+      "id": "Bprior",
+      "title": "Are Infinite Explanations Self-Explanatory?",
+      "bibliography": "Alexandre Billon, Erkenntnis88(2023)1935–1954; first online31July2021; DOI10.1007/s10670-021-00436-3",
+      "publisher": "https://link.springer.com/article/10.1007/s10670-021-00436-3",
+      "read": "Accessible publisher notes1–24 and bibliography read directly. Indexed manuscript PDF12 criterion section, PDF14 beginning§6, and complete available§7.2 on manuscriptPDF17 read as bounded primary passages.",
+      "not_read": "Full journal body, continuous whole manuscript, remainder of§6/§7.3 not recovered; manuscript pagination not equated to journal pagination.",
+      "acquisition": "Main publisher body subscription-only. Distinct verified author-institution HAL record/document/API routes did not provide a full copy. No subscription, institutional login, outreach or bypass undertaken."
+    },
+    {
+      "id": "Bauthor",
+      "url": "https://newworkinphilosophy.substack.com/p/alexandre-billon-universite-charles",
+      "author": "Alexandre Billon; post hosted by Marcus Arvan",
+      "date": "29September2023",
+      "read": "Complete author-written prose lines18–104, with references. Equation images missing from text extraction; not visually inspected. Reader comments not used as philosophical evidence.",
+      "role": "Author primary exposition, not full journal-paper substitute."
+    },
+    {
+      "id": "D2009screen",
+      "primary": "sources/dasgupta2009-individuals-candidate.pdf",
+      "url": "https://www.shamik.net/papers/dasgupta%20individuals.pdf",
+      "bibliography": "Shamik Dasgupta, Individuals: an essay in revisionary metaphysics, Philosophical Studies145(2009)35–67; DOI10.1007/s11098-009-9390-x",
+      "read": "Initial relevance screening only: PDF1–3/journal35–37. Full reading delegated to new specific source worker and remains outside this report’s completed credit.",
+      "reason_to_continue": "Explicit physical symmetry/empirical-redundancy ontology argument and qualitative-fact construction; not just syntactic variable elimination. Scope expressly material world."
+    }
+  ],
+  "inherited_reads": {
+    "T17": "Derived reading projection sections Actual supply and original existential completion / The actual witness and the Necessary Being conclusion, continuous lines81–111. Earlier source hash retained; no new DOCX extraction claimed.",
+    "T18": "Derived reading projection foundational opening and The foundational result and the closed extension. No controller mathematics appraisal.",
+    "warrant_standard": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md full philosophical report including final§§7–9.",
+    "ground_extension": "Inherited existential-ground/review/INDEPENDENT_REVIEW_PUBLIC.md full retained review; raw PHILOSOPHICAL_APPRAISAL_v2 not locally present and not claimed directly read.",
+    "exact_interface": "OriginalBearerBridge.lean lines1–141 directly read; no compilation."
+  },
+  "appraisal": {
+    "conditional_theorem": "unchanged",
+    "exhaustive_realisation_application": "confidence reduced for an unqualified exhaustive application to all adequate existential explanations",
+    "actual_Necessary_Being_common_source": "downward pressure on unconditional inference at upstream ontology step; provisional judgement under adopted ontology not reversed; no automatic parity or numerical confidence",
+    "reason": "Positively motivated category rather than mere coherent graph; T17/T18 already disclosed extension boundary, so no new logical-gap claim."
+  },
+  "delivery_note": "Raw journal PDFs, extraction chunks and indexed primary bodies are local research references. Prefer public source links in user-facing outputs; do not automatically redistribute whole copyrighted papers with the analysis.",
+  "next_operation": "Full2009source reading in new sibling qualitative-ontology-warrant; no broad literature survey or model ceremony."
+}

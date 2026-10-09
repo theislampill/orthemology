@@ -1,0 +1,62 @@
+{
+  "freeze_observed_utc": "2026-10-08T09:38:36Z",
+  "status": "Author-frozen; parent review pending; active T20",
+  "files": [
+    {
+      "path": "SCOPED_AUTHORITY_APPRAISAL.md",
+      "bytes": 15087,
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a"
+    },
+    {
+      "path": "PRIMARY_QUOTATION_CHECK.md",
+      "bytes": 5935,
+      "sha256": "0f125411379ba5ef5ef7289ef2f755bb516d0dc98d7fd17585a5f58311b1bb40"
+    },
+    {
+      "path": "HISTORICAL_PARAGRAPH_BINDINGS.json",
+      "bytes": 16649,
+      "sha256": "1523bb3b87ff9b88979717587738705d32387b5d69930a541de9dc1addb91aa4"
+    },
+    {
+      "path": "READING_AND_STATUS.json",
+      "bytes": 1472,
+      "sha256": "c6d34bbd1d48d130408a3e84710688b20df722766595e0b9f69e43be034f0957"
+    },
+    {
+      "path": "RESEARCH_TIME.json",
+      "bytes": 1093,
+      "sha256": "168a806f754c704a8b14aabc080244ddbd29cecb6942e068bf935fb1073058f7"
+    },
+    {
+      "path": "ameri-reading/authority-assessment.md",
+      "bytes": 10666,
+      "sha256": "a8b5375aa9a33aeafaf1c6f379333e672423a415743b24d34fa76a59ebf2ccaa"
+    },
+    {
+      "path": "ameri-reading/scoped-ownership-addendum.md",
+      "bytes": 5283,
+      "sha256": "9e8dd7029625998f2c43649bafaa2596ab31cc802d75161998d3ad63a6790034"
+    },
+    {
+      "path": "ameri-reading/freeze-manifest.json",
+      "bytes": 1394,
+      "sha256": "f5e825481dc588a5554f5442d213a83b19581716c8a74887cfd1e04c38c9731b"
+    },
+    {
+      "path": "ameri-reading/reading-intervals.jsonl",
+      "bytes": 1929,
+      "sha256": "2395e874564cad2fca520eb0a03e4250df21fce90f3b0f90ea6885bc61bf4679"
+    },
+    {
+      "path": "sources/miftah-acquisition.json",
+      "bytes": 244,
+      "sha256": "dc7e5017c061ce595865ac7d8b1b4642a0e20bcba2b59b212ea39e509b5bf4a5"
+    },
+    {
+      "path": "sources/miftah-target-extraction.json",
+      "bytes": 708,
+      "sha256": "31e9a02dddaabd3b792698c4854be5d8f6a10bf608b0d4726d49fd34336d9153"
+    }
+  ],
+  "excluded": "All source PDFs, DOC binaries, extracted source bodies and rendered page images. Main appraisal is the recommended concise report; reader reports preserve review provenance and their own correction hierarchy."
+}

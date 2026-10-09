@@ -1,0 +1,128 @@
+{
+  "created_utc": "2026-10-08T07:28:26.307244+00:00",
+  "scope": "Successor research evidence only. The optional delegated kernel task is separate and pending.",
+  "files": [
+    {
+      "path": "DELIVERY_DEPENDENCIES.json",
+      "sha256": "06716714b4088a9a5f4674e673a7e4135226293ac5b0bf31840a008262d6f09b",
+      "bytes": 1249
+    },
+    {
+      "path": "KERNEL_TARGET.md",
+      "sha256": "2b3fe6f61db05a19cce751934c962f1e72cd42d4ba4bfe64f719c5fafebf6cba",
+      "bytes": 6301
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "ddd1fc0e2aed6f6a85da17e718160df12051558a253afb53ef1f1b35040dfc6e",
+      "bytes": 2332
+    },
+    {
+      "path": "RESEARCH_ACCOUNTING.json",
+      "sha256": "89569643ed0a92aee5b90ac2b1ca9a91074962feb105360c9bf07c3bcae2ce1b",
+      "bytes": 2292
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "b05d23400616e8296c4c46ceea85686334ca89df5b0f5b772fbb061cbdac7681",
+      "bytes": 1126
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+      "bytes": 12476
+    },
+    {
+      "path": "REVIEW_RESPONSE.md",
+      "sha256": "9672d8f34e89edd9fd8052a65b0af4812fc554c1fee9b506b246f9805018851b",
+      "bytes": 2083
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "b305de306984cb494bb408b809d386a1fcd7b4e4faf21d339395a38215fd5190",
+      "bytes": 3784
+    },
+    {
+      "path": "THEOREMS.md",
+      "sha256": "aec96500f0b273b5f4d1cf40c075e2d1bc906062e2c314ad420c7d36652a35dc",
+      "bytes": 12573
+    },
+    {
+      "path": "general-roots/RESULT.md",
+      "sha256": "2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26",
+      "bytes": 7741
+    },
+    {
+      "path": "general-roots/results/DEVELOPMENT_RUN.log",
+      "sha256": "32e3579cb5831f7c411ddb8952e08e3b7c93e9439382d7749f7e05bf72586d8e",
+      "bytes": 1280
+    },
+    {
+      "path": "general-roots/results/FIRST_RUN.log",
+      "sha256": "4f047a18352d5926254581c47af4570373c2b7fd4b94bb31a6f6b1a1ad7c8b32",
+      "bytes": 970
+    },
+    {
+      "path": "general-roots/src/design_rank.py",
+      "sha256": "37cf8f723bf3813ea2fecbe04185297eae30b4d2de8618f83715329bc8c9284a",
+      "bytes": 5995
+    },
+    {
+      "path": "general-roots/src/test_design_rank.py",
+      "sha256": "5ec96690318ecbbe3f56a7bf1f0bda07468113d7c50329f6c2ef7b9c66929df2",
+      "bytes": 3761
+    },
+    {
+      "path": "results/DEVELOPMENT_RUN.log",
+      "sha256": "986346aacfe702eb0c467ab6fee2ae1f268946bbc013901fbde737f139be5ed6",
+      "bytes": 3117
+    },
+    {
+      "path": "results/FINAL_TESTS_1.log",
+      "sha256": "aaec2d44b0c81a5ecd97d4aa17b2eef57c4d62aeb0a9e7c125f84cd7dd6033d1",
+      "bytes": 3117
+    },
+    {
+      "path": "results/FINAL_TESTS_2.log",
+      "sha256": "ec37093955b94cd20fb2e1eb89cff8b9311ebf265ca923b231fa8a2175380ee4",
+      "bytes": 1280
+    },
+    {
+      "path": "results/FIRST_RUN.log",
+      "sha256": "1d0ca0a3f58605bbc5372024479acc4cab9dd81251bf60e6803fd3d2a5835782",
+      "bytes": 2157
+    },
+    {
+      "path": "results/RESULTS.json",
+      "sha256": "2da14a62087f4f2f4592abce17d1ea764a007e432791dbd6af625c338092c0ab",
+      "bytes": 34376
+    },
+    {
+      "path": "results/VERIFICATION.json",
+      "sha256": "7415c04ff7057a0121f3ab91a54d677b926958dc3953e89cb545f5f600fd2e65",
+      "bytes": 10881
+    },
+    {
+      "path": "src/export_results.py",
+      "sha256": "dae44e7082da6e826ade4ecf47ab65d8c86922efca0016ab1964bb8dc25b9430",
+      "bytes": 3346
+    },
+    {
+      "path": "src/identifiability.py",
+      "sha256": "c35e212dbc24066ec3f1baf6e4fe753d5eb16e71b1318f5d307de6c805d33c3d",
+      "bytes": 7578
+    },
+    {
+      "path": "src/test_identifiability.py",
+      "sha256": "d55a1d852bda9a90e0980329b60f60206447c132bbb94b4f5a1891b71ed744ff",
+      "bytes": 11889
+    },
+    {
+      "path": "src/verify_evidence.py",
+      "sha256": "98f30e8598edd60a40669f36b414c30993791d4575830f4a9dbc2dce6c333c75",
+      "bytes": 2854
+    }
+  ],
+  "input_bindings": "SOURCE_BINDINGS.json",
+  "runtime_dependencies": "DELIVERY_DEPENDENCIES.json"
+}

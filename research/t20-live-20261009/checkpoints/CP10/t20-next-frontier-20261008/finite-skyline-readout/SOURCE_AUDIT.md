@@ -1,0 +1,8 @@
+# Inspected local sources
+
+8 October 2026 UTC. Local mathematical source inspection. No external novelty claim or empirical evidence.
+
+- ../skyline-count-information/RESULT.md, SHA-256 b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d. Initial proof read in full; final strengthened comparator paragraphs inspected together with SOURCE_AUDIT.md. Supplies the stipulated hard pair, exact skyline mean gap, Joe variance bound, ideal sample test, and O(n^4/log n) vector upper bound. These results are consumed, not counted as new derivations by this finite-transport packet.
+- ../full-face-threshold-kl-rate/RESULT.md, SHA-256 1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544. Read in full. Sections 1 and 6 supply the strongest face-only comparison: the same n versus n+1 Joe hard pair; exact coordinate minima and arbitrary adaptive face-only words; independent resets; common policy; unconditional terminal correctness with fixed error below one half; every vector charged from first observation, including unfinished words. The finite interior protocol matches the statistical/cost/error conditions but deliberately expands the oracle interface to interior probes. The cited lower-bound theorem is inherited, not re-established here.
+
+The parent supplied the finite-grid collision and extraction candidate. This packet proves its deterministic correctness and finite-cost transport, with exact arithmetic and exhaustive finite controls. Other workers' likelihood/support work is separate and is not credited here. No frozen archives were changed. Historical floor remains UNVERIFIED; no protected integration or closure claim.

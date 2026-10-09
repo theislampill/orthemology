@@ -1,0 +1,16 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "content": "\n*Proof.* Both sums have finitely many finite tensors. Projection to the distinguished record summand recovers $\\eta_A(\\xi_A(e))$. Independence of the record basis recovers every retained atom. Injective atomisation reconstructs the record view. If that view separates episodes, so does the representation. $\\square$\n\nThis is a preservation construction, not a compression result. The basis can be large or infinite across episodes; equality of referenced identifiers does not authenticate their referents. Encoding records injectively supplies no independent test of source truth, efficient computation, predictive gain, or faithful modelling of a worldly process.\n\n## Example: one finite episode view\n\nConsider a synthetic record with one claim $q$, two evidence items $h_1,h_2$, an actor $a$, a case-bound configuration $\\bar\\mu$, a route $r$, and an unresolved obligation $b$. Suppose the declaration extracts supports, assessments, and route-authorisation interactions:\n\n$$\n\\begin{aligned}\n\\rho_A(e)=\\eta_A(\\xi_A(e))\n&+[h_1]\\otimes[q]+[h_2]\\otimes[q]\\\\\n&+[a]\\otimes[h_1]\\otimes[q]\\\\\n&+[\\bar\\mu]\\otimes[h_1]\\otimes[q]\\otimes[r].\n\\end{aligned}\n$$\n\nThe role tags and occurrence IDs are suppressed only for readability. The degree profile is $\\{1,2,3,4\\}$. The two support edges share one typed-word component. The unresolved status of $b$ remains in the record channel; the displayed tensor does not claim $q$ true or $b$ resolved.\n\nThis is an explicit instance of finite-support actualisation, not an encoding of the entire present chat and not a submitted repository episode.\n\n## When a compressed representation is adequate\n\n**Theorem 4.2 — Fibre criterion for preserving a target.** Let $D$ be any set, $r:D\\to Y$ a representation, and $q:D\\to Z$ a declared observable. There exists a decoder $\\bar q:r(D)\\to Z$ with\n\n$$q=\\bar q\\circ r$$\n\nif and only if\n\n$$r(d)=r(d')\\quad\\Longrightarrow\\quad q(d)=q(d')$$\n\nfor all $d,d'\\in D$.\n\n*Proof.* Factorisation makes $q$ equal on every fibre of $r$. Conversely define $\\bar q(y)$ to be the unique value of $q$ on $r^{-1}(\\{y\\})$. Each such fibre is nonempty for $y\\in r(D)$, and fibre constancy makes the definition unambiguous. $\\square$\n\nFor a family of required observables, apply the theorem to their product. This is an elementary set-theoretic factorisation criterion, not a new general theorem. In Orthemology it gives an exact meaning to “this representation retains the distinctions needed for this assessment”. It does not prove that the declared observable is the correct one for the world.\n\n**Corollary 4.3 — Representation transport.** A compression $c:r(D)\\to Y'$ preserves $q$ exactly when $q$ is constant on fibres of $c\\circ r$. Calling $c$ a contraction, projection, summary, or neural embedding does not settle this condition.",
+    "encoding": "utf-8",
+    "sha": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+    "display_url": "https://github.com/theislampill/orthemology/blob/fd0903d99d657c35e32fddcc8864d2a77930cf40/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+    "display_title": "orthing_formalisation_v1.md"
+  },
+  "isError": false
+}

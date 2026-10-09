@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "path": "graph-constrained-continuation-20261009/CONTROL_RESULTS.json",
+      "bytes": 970,
+      "sha256": "0eadf45309b593ddb003f02f99ebd8a305a515e3d8648af00e85afea1401aaa6"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/GraphContinuation.lean",
+      "bytes": 10145,
+      "sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/PLAN.md",
+      "bytes": 742,
+      "sha256": "db0efdcf4bdc57c9042df8102436ae25916488d4f961f9bb32e2896152d6d9ec"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/READ_FIRST.md",
+      "bytes": 1458,
+      "sha256": "60646e0f19315ced5f0fbbd9ae61f5800df52fe3d12025af076701d1eb9c97eb"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/RESULT.md",
+      "bytes": 15161,
+      "sha256": "66cb5493dfa6f71f67b21255cc46f510cba6c1b7c761b1232e8fc4535e215fda"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/SOURCE_BINDINGS.json",
+      "bytes": 3245,
+      "sha256": "ed10f7694e0c692b60a384abd5c6f532c633ea410d4173b24ffe3fbf63a35408"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/VERIFICATION.json",
+      "bytes": 3647,
+      "sha256": "5ce496bf7721d6cd23fbd291aef762259a8dc6b86b1ca20714393331a355634e"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/controls.py",
+      "bytes": 5450,
+      "sha256": "b40f00584d51df6d1d2a43a2e8df65f99d990b648eacf753be7e3fae2fc7f56e"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/initial-kernel.log",
+      "bytes": 207,
+      "sha256": "2f44a96efd19f3f48d2eca0fe4efb3d2698ed843b9b0cad16c9c82d210f91023"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/kernel-development.log",
+      "bytes": 492,
+      "sha256": "33731218c1d29e3aad29ecdc31e2fad70bf5eb8a1edbc2ee8a99056e3b0be7eb"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/CONTROLS.log",
+      "bytes": 970,
+      "sha256": "0eadf45309b593ddb003f02f99ebd8a305a515e3d8648af00e85afea1401aaa6"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/FalsePreservation.lean",
+      "bytes": 10111,
+      "sha256": "f78c67eaaeec59270308d22fc420c9a1068c6aefcd59e594abfbaf94e6ba0b5c"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/FalsePreservation.log",
+      "bytes": 1369,
+      "sha256": "3b011a1396d2edc6e31d9eb3097ea74c2e2aeb901b500d4a0283d3ffa78a2c7d"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/FalseSteinerCost.lean",
+      "bytes": 10141,
+      "sha256": "00200b06ab88080b3f829e3ea34ce4dc0f52dd41cc7d58b00dc1cb3147e96dac"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/FalseSteinerCost.log",
+      "bytes": 877,
+      "sha256": "affa1f2efbdb8cc9fb87d84aa0ab19aaf987f524ac00397b5e59d1f0b7635306"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/GraphContinuation.lean",
+      "bytes": 10145,
+      "sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/GraphContinuation.olean",
+      "bytes": 583880,
+      "sha256": "9673311c76b3095a726e44d8ee762f6ce9335e74895682ad39cd6195861fb8c5"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/KERNEL.log",
+      "bytes": 492,
+      "sha256": "33731218c1d29e3aad29ecdc31e2fad70bf5eb8a1edbc2ee8a99056e3b0be7eb"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verified/LEAN_VERSION.txt",
+      "bytes": 78,
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    {
+      "path": "graph-constrained-continuation-20261009/verify.sh",
+      "bytes": 1543,
+      "sha256": "a06a5d99d932fba061968d11625bb12ff2a95c4dac93500fd7a8cc6f1a9dc32c"
+    }
+  ],
+  "scope": "Fresh bounded supplement only; old inputs remain separate and unchanged."
+}

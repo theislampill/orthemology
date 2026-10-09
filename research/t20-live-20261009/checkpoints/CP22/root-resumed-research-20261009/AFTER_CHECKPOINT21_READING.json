@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-09T10:01:17.069039+00:00",
+  "status": "INTERMEDIATE_RESEARCH_READING",
+  "t20": "ACTIVE",
+  "root_reading": [
+    {
+      "source": "positive-agency-source-return/sources/dar017.txt",
+      "boundary": "retained electronic lines611–813 continuously; output truncation repaired with755–780",
+      "kind": "targeted reflective reread, no fresh whole-book or print-collation credit",
+      "observations": [
+        "Source explicitly distinguishes operative creation-knowledge from conforming cognition; no inference from self-knowledge to self-production.",
+        "Complete knowing-self and knowing-effects treated as concomitant, not separately efficient causes.",
+        "Strong intellect-mediated nonvoluntary production rival is reported within Ghazali discussion, not merely bodily awareness.",
+        "Local text moves from nonentailment of knowledge by nonvoluntary action to entailment of its absence; print/source-context test pending. No settled error verdict."
+      ]
+    },
+    {
+      "source": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "boundary": "layoutlines630–935, and330–409; §§6–9 partial398 and §3 pertinent context",
+      "kind": "targeted reflective reread of inherited whole-read source",
+      "observations": [
+        "Autonomy-to-necessity treated as substantive if modal notion independent; essence-relative reformulation can trivialise inference.",
+        "Essential content distinct from essentialist fact; original contingent existence not automatically autonomy-exempt.",
+        "Full-profile individuality not supplied merely by essential nature vocabulary."
+      ]
+    }
+  ],
+  "reports_fully_read": [
+    "positive-agency-source-return/REPORT.md",
+    "actual-original-production-residual-20261009/REPORT.md",
+    "attestation-context-source-return-20261009/RESULT.md",
+    "attestation-context-source-return-20261009/EXACT_READING.md"
+  ],
+  "input_hashes": {
+    "positive-agency-source-return/sources/dar017.txt": "eb400bda94ad55232bde502c6b0bdb13175f75b97b87cdb4ed0efb8bc13b9ab9",
+    "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+    "positive-agency-source-return/REPORT.md": "aedaefed730998a24d253b44636dacbd13ea9ae2681ea81e03671b5a5da59b17",
+    "actual-original-production-residual-20261009/REPORT.md": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+    "attestation-context-source-return-20261009/RESULT.md": "f7ddcbd238f7fad8406a8475b0f61dea6859515182431c4c3742ec6bc9e93d55",
+    "attestation-context-source-return-20261009/EXACT_READING.md": "ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68"
+  },
+  "new_proof_claim": false,
+  "new_external_validation": false,
+  "historical_duration_certified": false,
+  "checkpoint21_included": false
+}

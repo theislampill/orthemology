@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-09",
+  "inputs": [
+    {
+      "path": "warranted-discrimination-research-20261009/RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "inspection": "Full report read in bounded ranges; finite-catalogue and acyclic-compilation assumptions inspected."
+    },
+    {
+      "path": "warranted-discrimination-kernel-20261009/RESULT.md",
+      "bytes": 9859,
+      "sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+      "inspection": "Full report; derivation-object and rule-checker exclusions inspected."
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "inspection": "Lines 1\u2013150 and 300\u2013510; identity/scope, finite-record warning and record/semantic validity distinctions."
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "bytes": 1939,
+      "sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
+      "inspection": "Full nineteen-line proof and its epistemic qualification."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/literal-HasE-written-negative-route/NEW_PASS_RESULT.md",
+      "bytes": 10943,
+      "sha256": "f52f7257475c5187a8cba284d596fa6a1d3e4d589721524354997d9f5bfc2f7f",
+      "inspection": "Full report; literal target, inversion failure and unbounded derivation obligation."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/exact-scalar-fusion/src/ScalarFusionCore.lean",
+      "bytes": 6739,
+      "sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "inspection": "Full source; generic scoped typing and forward_fixed with HasE.j then conversion."
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/exact-scalar-fusion/src/LiteralScalarFusion.lean",
+      "bytes": 2228,
+      "sha256": "b3d6f9e9b235171c0b885ee40d1fb985c6efa82e1647c76a5ca98e493795af5b",
+      "inspection": "Full source; exact literal reduction and conditional target status."
+    }
+  ],
+  "primary_references": [
+    {
+      "title": "Provenance Semirings",
+      "authors": "Todd J. Green, Grigoris Karvounarakis, Val Tannen",
+      "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "consulted": "Sections 3\u20134 and beginning of section 5; positive annotations and recursive Datalog derivation-tree/fixed-point ancestry. No full-paper read claimed."
+    },
+    {
+      "title": "Semiring Parsing",
+      "author": "Joshua Goodman",
+      "url": "https://aclanthology.org/J99-4004.pdf",
+      "consulted": "Sections 2\u20133 excerpts, especially pp. 590 (PDF page 18) discussion of non-improving Viterbi loops. No full-paper read claimed."
+    }
+  ],
+  "scope": "Source bindings only; no source certification or whole-programme currentness claim."
+}

@@ -1,0 +1,163 @@
+{
+  "operation": "bounded positive adequacy investigation",
+  "created_utc": "2026-10-08T23:21:06.945464+00:00",
+  "source_url": "https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf",
+  "source_sha256": "e680c92240e6dcd321854725be3b5f084d5d8f0c46bbff7e8934e95892afe508",
+  "source_bytes": 610106,
+  "pdf_pages": 28,
+  "read_events": [
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "printed_pages": "1-4",
+      "notes_included": true,
+      "receipt_chunk": "5ebb26",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "printed_pages": "5-8",
+      "notes_included": true,
+      "receipt_chunk": "040aa7",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "printed_pages": "9-12",
+      "notes_included": true,
+      "receipt_chunk": "eb4ff1",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "printed_pages": "13-16",
+      "notes_included": true,
+      "receipt_chunk": "2ffe01",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "printed_pages": "17-20",
+      "notes_included": true,
+      "receipt_chunk": "d8ffcd",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "printed_pages": "21-24",
+      "notes_included": true,
+      "receipt_chunk": "3e23fc",
+      "method": "untruncated full text, left then right column"
+    },
+    {
+      "kind": "continuous first pass",
+      "pdf_pages": [
+        25,
+        26,
+        27,
+        28
+      ],
+      "printed_pages": "25-28",
+      "notes_included": true,
+      "receipt_chunk": "8f85d5",
+      "method": "untruncated full text, left then right column"
+    }
+  ],
+  "boundary": "No claim of corpus exhaustion or historical time credit.",
+  "first_pass_completed_utc": "2026-10-08T23:21:34Z",
+  "all_pages_and_all_notes_received": true,
+  "total_notes": 49,
+  "limitations": [
+    "Page text extraction clipped parts of split running headers at column boundary; article body and notes intact. Key formulas will be visually checked.",
+    "No read credit for references merely listed by the paper.",
+    "Completion timestamp is observed session boundary, not a duration or research-time claim."
+  ],
+  "reflective_returns": [
+    {
+      "pdf_pages": [
+        5,
+        11,
+        19,
+        20,
+        22,
+        24
+      ],
+      "mode": "page images visually inspected in full",
+      "purpose": "Exact two substitution rules; accounting versus explanation; inferential-role argument and representation/uniqueness note 38; transfer to individuals; modal-necessitation qualification note 45."
+    },
+    {
+      "pdf_pages": [
+        18,
+        13
+      ],
+      "mode": "complete page text reread",
+      "purpose": "Strongest scale-selection objection and limits of relevance intuitions; distinguish positive adequacy from removing difficulties."
+    }
+  ],
+  "journal_metadata_visual_check": {
+    "pdf_page": 1,
+    "journal": "Philosophers\u2019 Imprint",
+    "volume": 14,
+    "number": 20,
+    "date": "June 2014",
+    "extent": "1\u201328",
+    "authority": "Typeset journal title page and running headers in author-hosted published PDF. Official old article URL redirected to current journal homepage; no issue-specific landing record recovered."
+  },
+  "input_reads": [
+    {
+      "path": "../modal-grounding-source/REPORT.md",
+      "scope": "complete; initial combined display supplemented by lines 100\u2013163 and subsequent lines 1\u201399",
+      "credit": "inherited report appraisal only"
+    },
+    {
+      "path": "../modal-grounding-source/MAPPING_TEST.md",
+      "scope": "complete; truncated whole-field paragraph repaired by separate lines 100\u2013119",
+      "credit": "inherited report appraisal only"
+    },
+    {
+      "path": "../instantiation-obtaining-adjudication/REPORT.md",
+      "scope": "complete",
+      "receipt_chunk": "3d2b12"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "scope": "entire unchanged file",
+      "receipt_chunk": "3d2b12"
+    }
+  ]
+}

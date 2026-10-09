@@ -1,0 +1,552 @@
+{
+  "schema": "t20-checkpoint-file-manifest-v1",
+  "classification": "THIRTEENTH_INTERMEDIATE_PRESERVATION_ONLY",
+  "file_count": 109,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 7549,
+      "sha256": "b77517345058fd58c0fd9b1204801bab5127b110e0ccbeed0dc3e8f180fc1b8e"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 1664,
+      "sha256": "101582d69622371db13626156f90a733fdcec39949f4581be87a1f350575e1e1"
+    },
+    {
+      "path": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+      "bytes": 29111,
+      "sha256": "b48ff478aba659fb11e09d0d8f039b250c19ac5d7c8e8abb455c5943972d50b7"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 61621,
+      "sha256": "3176da1563de3f9eaa0ef6597fae2f9ae208eb8d4a49632d36da97dc34ef40f7"
+    },
+    {
+      "path": "PACKING/CONTROL_PLAN.json",
+      "bytes": 2008,
+      "sha256": "b6181fedcf6ec9a4850009eb900f7aaaa899a0b3c76f9e8a77724cd7c1c0a097"
+    },
+    {
+      "path": "PACKING/FINAL_REVIEW_AUTHORIZATION.json",
+      "bytes": 1520,
+      "sha256": "d2fc3676968ae4dd5f44d609d34252713b09fb1faf82b67559846fe7e7771b85"
+    },
+    {
+      "path": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+      "bytes": 371476,
+      "sha256": "78ead2d17943b340dbaecdaa1cd9579a398a797677c5d9d6a05abe86269e9097"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 38200,
+      "sha256": "c80f3dea52315be364005f65fcbd4c015273c2786960b6178e769133a5f7d47a"
+    },
+    {
+      "path": "PACKING/binding_controls.py",
+      "bytes": 2216,
+      "sha256": "9f48470a96d4f8b4486a62d6945d59e67efdf01a57c981edb4ec60900496f8ea"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 7847,
+      "sha256": "2df6daf6ecccc29a7d45fad149216ea48912a2d1c568b1212b8e13901d42d83e"
+    },
+    {
+      "path": "PACKING/integrity_controls.py",
+      "bytes": 2867,
+      "sha256": "95d1e1240a4c90f36af6441c75ed2e604f29189daf560107050fe9973e9a5817"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 1596,
+      "sha256": "2c3baffa2d5bbb178bd6104ba45e2c8c5182388ad5c6383afdb6644bf2aaee78"
+    },
+    {
+      "path": "PACKING/safe_extract.py",
+      "bytes": 2604,
+      "sha256": "86e3ed018c1d74e06661fd0f19a693339c86b735c054ac8206e8cb4b172b72f1"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 5804,
+      "sha256": "71106f5250eebcf9a46e7b3ee7817d38dae73404c1a3117e02be0c0afe2d4b72"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 2164,
+      "sha256": "74b22f0e82da3c7edf83a05306909243bb9cdc614ed0d3f1a9f2a2211f3474fb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/INPUT_BINDINGS.json",
+      "bytes": 635,
+      "sha256": "ceaa3440eb100a7b05a272f2f507fb5e90d5561dbfc1e1096f0d62e152bf79f5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/MANIFEST.json",
+      "bytes": 4067,
+      "sha256": "1523998841ffa5bfcab102a7aa8c86107a33fd7857b29c49451a7a982499cddb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json",
+      "bytes": 4839,
+      "sha256": "7bc1322c87e3e707567a4817ce34856dd68b4a5d48b5f98a265c407d6ce823aa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+      "bytes": 24176,
+      "sha256": "6b0cbc001634b3b3fccb183c759bf0d813a359c6ac2df5cd59b911ae661f47ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md",
+      "bytes": 8648,
+      "sha256": "5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/VERIFICATION.json",
+      "bytes": 963,
+      "sha256": "50c9e005dbebf572ea89e6640621a65b135891c953dc09359cb7ee8d96022298"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/metadata-fetches.json",
+      "bytes": 540,
+      "sha256": "e03086d4dc21294141b8f41dac170cb01889a02a973bc1db1395a16d126a1fb4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/INPUT_HASHES.json",
+      "bytes": 9548,
+      "sha256": "1ae36a072995c8d874c94a48c38ba2d5e037fae8c5a3a31113df065f7d02b834"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/READING_RECEIPT.json",
+      "bytes": 6345,
+      "sha256": "1142ede1073d45e41b769fee08ea6f9a7ae818a8d16107d04bb83463dc021031"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/REVIEW.md",
+      "bytes": 13586,
+      "sha256": "9fdd15e135e76531d346b305c4bc4b9f68a630fb2ea42de3a0b98d04d1158ad2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy-review/VERIFICATION.json",
+      "bytes": 1038,
+      "sha256": "e8c1caa56788118da9035c896f6be337ce66a879bbc783f585f02fee1988e2f9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/INPUT_BINDINGS.json",
+      "bytes": 4914,
+      "sha256": "f4b38a100363e2dcd816a4692755fffddfb677f0033cd20596ca59d4ae44c883"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/MANIFEST.json",
+      "bytes": 3521,
+      "sha256": "382ffddd395bec8359948acf30c65ac80eb15f152d2933a506579ba584bc64f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/READ_FIRST.md",
+      "bytes": 634,
+      "sha256": "6f410587bba2fffa381379d359144771f2b84b33026170b5db73d67566ab3bb1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REPORT.md",
+      "bytes": 20537,
+      "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/RESEARCH_EVENTS.jsonl",
+      "bytes": 969,
+      "sha256": "949761dfbe3fe9047737819f579fe376c68e384838c7207d38a37ef33e863f5f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/REVIEW_RESPONSE.md",
+      "bytes": 1333,
+      "sha256": "3c3bddbb7e2fdc5275f3ade9bb520e858f673744726cdf81ca003acf56efd7b4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/SOURCE_READS.json",
+      "bytes": 6789,
+      "sha256": "e902d0b09c518362302f702fcc78ddecc9bf191ddc1dc1da71ec399dd88e4776"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources/sources/urls.json",
+      "bytes": 443,
+      "sha256": "5f0432518ae053d15dc9a2655adef3f33f30f66ca0bf73c3408f0d633d04bbc4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/INPUT_HASHES.json",
+      "bytes": 13201,
+      "sha256": "1b941bbf485e428f22163389b3c0f0061a5e76a62ce71a13c6e9bc5aeed53e6e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/READING_RECEIPT.json",
+      "bytes": 8031,
+      "sha256": "41f29179c0300c5bd2cad2a31aacda1d1b9e51e073ee588212f2f17cb4e6d8e3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/REVIEW.md",
+      "bytes": 17354,
+      "sha256": "d5536f4ae4a426359e2c05dba3df41e85e0534a0212540e12b6793cf100a63e8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-perfection-sources-review/VERIFICATION.json",
+      "bytes": 14478,
+      "sha256": "8354f45a1023b357400da47fac77bc5cb57dbf269c19153f773f947f6811c261"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/CORRECTION_RECORD.json",
+      "bytes": 1718,
+      "sha256": "46d5eb48901cf27ab28a01ff2d282cc12930ac7ebc8d1f3f9661ec6db5cbc158"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "bytes": 8692,
+      "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/MANIFEST.json",
+      "bytes": 2015,
+      "sha256": "681aff1296de6a7e880a2223cef1e0716e61d266b5daa41d939e0975c8b75b2f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/READING_LEDGER.json",
+      "bytes": 1240,
+      "sha256": "9e547f0ad94eda92afd86a5f4c1c201bb3005dba80f0c05f9e3ec434898d454b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESEARCH_ACCOUNTING.json",
+      "bytes": 511,
+      "sha256": "baf4efc014253d1eb1e913ecc13aef87133f9832852e8d234f82b8f4f3a7ebed"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESEARCH_EVENTS.jsonl",
+      "bytes": 2397,
+      "sha256": "a40ed97ea94f215df484a8ea892c0e8d646ebd49d80932128db6f2da8c8e5ed1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "bytes": 29525,
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/REVIEW_STATUS.json",
+      "bytes": 758,
+      "sha256": "3b5016e20204c0418a9eccea369ec53816a467c4f79dc61669fe6403b497b986"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/VERIFICATION.json",
+      "bytes": 4925,
+      "sha256": "ecbd6c6b8723f64bdd150cf2aea1983633b3034b3cb6e84322780c76e0794f04"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/history/MANIFEST-before-basing-clarification.json",
+      "bytes": 1268,
+      "sha256": "7e070c5ff6ca5f3a539d5ae3a4379886214c4d86a1fe7af7c2618ac998144973"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/history/RESULT-before-basing-clarification.md",
+      "bytes": 27739,
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/INPUT_HASHES.json",
+      "bytes": 6949,
+      "sha256": "854a9c56101a08203d19466c230d1cba8490abf25a4294f7caf3fdb1d4b5008d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/MANIFEST.json",
+      "bytes": 1146,
+      "sha256": "f496973f74b13d566fbc9b1b6e5bf2030d4455434b76fefd8f3cdf980cf2e468"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/READING_RECEIPT.json",
+      "bytes": 946,
+      "sha256": "16581ba5d00ef04752a3ddc7fb7a1afa55e0c2e3b2154fb41297b6033e28b1e7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.before-correction-verification.md",
+      "bytes": 11852,
+      "sha256": "6086874421af47be3d2e61165f35f80aa2021eaa1f6762c7566b13fa0b53abcd"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "bytes": 12763,
+      "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/VERIFICATION.json",
+      "bytes": 3889,
+      "sha256": "3f797a5f512187c8fd01c9c61538986a60db6ca67ffde3e1645d01af40366a9c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.final.md",
+      "bytes": 29525,
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/reviewed_RESULT.initial.md",
+      "bytes": 27739,
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/MANIFEST.json",
+      "bytes": 3874,
+      "sha256": "94756f946b2e9c0aca406de2bed11471fb62f40fbbd939a9faeea590ea11c6a0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md",
+      "bytes": 12491,
+      "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/READING_LEDGER.json",
+      "bytes": 7167,
+      "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/REPORT.md",
+      "bytes": 26915,
+      "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source/SOURCE_EXTRACTION_CHECK.json",
+      "bytes": 11785,
+      "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/INPUT_BINDINGS.json",
+      "bytes": 9070,
+      "sha256": "4cd50eba0358c18fdac81484da7e85595b4a01f7e52f341e474482ce5f5e3076"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/READING_LEDGER.json",
+      "bytes": 3684,
+      "sha256": "7a2eb0118cda10741ff52a29927ad61d80b9db84141626e7aaf6cb16394ab9a2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW.md",
+      "bytes": 10897,
+      "sha256": "3b5c9fbe74f8258ad3a105971a2155447cd1038c524e8f1df82e5b02ff7c1d7c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/REVIEW_RECEIPT.json",
+      "bytes": 2045,
+      "sha256": "ed6e0a5f950b27558fe50a98226b85cec8dc226814d29467aa93318231c2de43"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/VERIFICATION.json",
+      "bytes": 12690,
+      "sha256": "66c0a0f948c0942771052d5eb01eae29644f1df9ba8c0fb4dc1b6ab44ce61346"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MANIFEST.json",
+      "bytes": 3874,
+      "sha256": "94756f946b2e9c0aca406de2bed11471fb62f40fbbd939a9faeea590ea11c6a0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/MAPPING_TEST.md",
+      "bytes": 12491,
+      "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/READING_LEDGER.json",
+      "bytes": 7167,
+      "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/REPORT.md",
+      "bytes": 26915,
+      "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-grounding-source-review/input-snapshot/SOURCE_EXTRACTION_CHECK.json",
+      "bytes": 11785,
+      "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/CONTROL_RESULTS.json",
+      "bytes": 2531,
+      "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/INPUT_BINDINGS.json",
+      "bytes": 4937,
+      "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/MANIFEST.json",
+      "bytes": 1719,
+      "sha256": "21efd69ffd890097053c198193bc20ce44b3d620af60ad328e29eb9058e51379"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+      "bytes": 2542,
+      "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/READ_FIRST.md",
+      "bytes": 3124,
+      "sha256": "1b879363e0bb956e7fcd553012fae26d6d08a58fbd36837cbf576b8b05b0f95b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESEARCH_EVENTS.jsonl",
+      "bytes": 848,
+      "sha256": "6517538eb0663cf334e49d1434b46e78031f75590b8460142e80b79332e1a1cb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "bytes": 33327,
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/REVIEW_RECEIPT.json",
+      "bytes": 986,
+      "sha256": "1a1ac7c36bd1b5db5d6346a652b394d46af3fd381db5bbe620db0fd16af598cc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/VERIFICATION.json",
+      "bytes": 251,
+      "sha256": "7e734a455f9db19014f6497d630edec5c135944827d891c97ffae8874636ad3c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/VERIFY.py",
+      "bytes": 1822,
+      "sha256": "8c1a50d4ffc1bdb9197e93f4b79105bebe9b6fde9ee8696473a6b47c5f1fc59e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/controls.py",
+      "bytes": 14363,
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/AUTHOR_REPLAY.json",
+      "bytes": 2531,
+      "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RESULTS.json",
+      "bytes": 2541,
+      "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RUN.stdout.json",
+      "bytes": 2541,
+      "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md",
+      "bytes": 16295,
+      "sha256": "9c7f8ba6fd7f82c1c9be613ad020fcf130df7cd2a03aff787ede51e3e9ee6533"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW_BINDINGS.json",
+      "bytes": 3337,
+      "sha256": "22684c9f0675d485e6e0e4a732cb43095e3c19b563e334c77baedf5865c07aa2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py",
+      "bytes": 14363,
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/independent_controls.py",
+      "bytes": 14539,
+      "sha256": "3dbea80144c730655a8e8b61833a4bba606c3eaab56007ae1c9cd2d5cbd4c31b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/research-allocation/20261008_SUCCESSOR_PRIORITY.md",
+      "bytes": 4504,
+      "sha256": "b45fc11608d88df1ac667c544b4081a2b0863964e3978b9223cfd6cdd4b0b6cf"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_2011_TARGETED_RETURN.json",
+      "bytes": 1623,
+      "sha256": "cc1750991d34d4eeaa7daa41b0acafcff67c2c61de944bcb64aefb2ae1782b16"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "bytes": 1894,
+      "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_TARGET_SCOPE_CHECK.md",
+      "bytes": 2022,
+      "sha256": "bd6575bc801108dbc42dfbd6d56fe2513f1c4d098b3e024fccebeae67d713883"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/SOURCE_COMPARISONS_2324.json",
+      "bytes": 1871,
+      "sha256": "41dec2707ccf73a164ac0bbca44465d6c6204cf037380c8d3fe160d7e28e8ad2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/AKMALIYYA_SCOPE_RETURN.json",
+      "bytes": 1105,
+      "sha256": "6f59482cf6770b254af3e57a77a47ae36fbd1958be33a3f7e44800f03673eb78"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-next-operations/MAJMU_DETERMINATION_RETURN.json",
+      "bytes": 1019,
+      "sha256": "69d02a0c84c36344e6dc693372dd3a8ecb53745f9c01cca41ecf03e2c6b93e48"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/INPUT_BINDINGS.json",
+      "bytes": 5947,
+      "sha256": "1a60cf05895da5410311df4ae21745d0cc2a85b9557fe60576d643e7c8622b9f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/MANIFEST.json",
+      "bytes": 1253,
+      "sha256": "9f1e11a227bd51066b41c43ead8d7846ba9696c96489ef93f3302778f5bf2650"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/MANIFEST.sha256",
+      "bytes": 80,
+      "sha256": "8007d95a08d8d3de682d8e523c47c4e832214c7cae058457831e7808bc546e1d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/READ_FIRST.md",
+      "bytes": 983,
+      "sha256": "a39e64a065773c982c1a584b0e2cc7b42e7b4952fed83b220a32da59ae11d745"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "bytes": 17870,
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/RESEARCH_ACCOUNTING.json",
+      "bytes": 486,
+      "sha256": "afb37651edf4498c09b63a762ce0ac19e950b595c0923736923e050a52f54c5c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/SOURCE_READS.json",
+      "bytes": 3463,
+      "sha256": "7c3cefc13d1241a4fc0afe954c60608d71205dcccf0b5bd2d9564ed4cfa81902"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/VERIFICATION.json",
+      "bytes": 4075,
+      "sha256": "67eb3cf2303482885aab4a19876d1669a958c400d84485be3088dfe95ce29551"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/review/RELATIONAL_PERFECTION_TRANSPORT.md",
+      "bytes": 11452,
+      "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L0465-L0545-return.txt",
+      "bytes": 27031,
+      "sha256": "6585db506db8ff02508b62fea2f5aaba5a3f346f8c647dbe0eb0d96c1fe95890"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L0705-L0758-return.txt",
+      "bytes": 19616,
+      "sha256": "e92a7fa6bda08bbc4ef09c1050e73ee1eece5de9f732e4059ecb502267b0eaa6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-L1012-L1054-return.txt",
+      "bytes": 13804,
+      "sha256": "dab34028bba34d4f712f6191e8e9d76004c28ecac51b3fc9ef38d0291d388bb6"
+    }
+  ]
+}

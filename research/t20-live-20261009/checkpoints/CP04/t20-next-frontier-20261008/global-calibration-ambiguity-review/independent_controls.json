@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "arithmetic": "Exact fractions, plus 110-digit Decimal command inversion; no observation simulation.",
+  "seed": 20261008,
+  "scope": "Finite independent diagnostics only; the universal claims rely on the separately reviewed mathematical proofs.",
+  "reviewed_author_hashes": {
+    "RESULT.md": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+    "exact_controls.py": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2",
+    "results/exact_controls.json": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+  },
+  "families": {
+    "author_digest_match": 3,
+    "author_digest_unchanged_after_controls": 3,
+    "author_replay_byte_identity": 1,
+    "critical_formula": 42,
+    "early_stopping_exercised": 12,
+    "independent_boundary_touch": 42,
+    "independent_catalogue_separation": 168,
+    "independent_decoder_lower_margin": 4212,
+    "independent_decoder_upper_margin": 4212,
+    "independent_gap_order": 168,
+    "independent_interpolation_bound": 4990,
+    "independent_no_clipping": 168,
+    "independent_postboundary_overlap": 42,
+    "independent_rational_band": 998,
+    "independent_rational_curve_identity": 998,
+    "independent_rational_domain": 998,
+    "independent_threshold_order": 168,
+    "nominal_command_calibration_band": 50,
+    "nominal_command_curve_equality": 50,
+    "nominal_command_inverse_residual": 50,
+    "nominal_command_strict_monotonicity": 45,
+    "randomized_stopped_normalization": 12,
+    "randomized_stopped_transcript_identity": 12,
+    "randomized_stopped_tv_bound": 36
+  },
+  "total_assertions": 17480,
+  "script_sha256": "497cd4e05634c3849aadc2113a07c2e5ce7e3c8b940a5cb8b9731f87a665faf4"
+}

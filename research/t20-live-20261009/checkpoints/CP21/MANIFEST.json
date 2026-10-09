@@ -1,0 +1,387 @@
+{
+  "schema": "t20-additive-preservation-manifest-v1",
+  "checkpoint_number": 21,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "created_utc": "2026-10-09T09:55:35.904810+00:00",
+  "root": "T20_Resumed_Research_Intermediate_Checkpoint21_20261009",
+  "file_count": 62,
+  "selected_original_count": 53,
+  "excludes_self": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "files": [
+    {
+      "path": "DEPENDENCIES.json",
+      "bytes": 1079,
+      "sha256": "43c0b4bad5e4ea699fa27df6ca199090351d9e02a50f5d24a68e9ea1812a10ed",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "OMISSIONS_AND_DEPENDENCIES.json",
+      "bytes": 1385,
+      "sha256": "8383f05cda30635e80dc742bd83c86385eadb9465db78d7a79272180a7c4139b",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "PRESERVATION_RECEIPT.json",
+      "bytes": 12798,
+      "sha256": "308526ac8407c22cfd61253fd2fc5f4bcd73d8703ad85ed82fccc1f387ce2e3f",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "PRESERVED_INPUTS.json",
+      "bytes": 18667,
+      "sha256": "d4ee0b44c96d2a39e5c1e34e03618c73248d697831378c25c635e0461dec46ac",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "PRIOR_CHECKPOINT.json",
+      "bytes": 2338,
+      "sha256": "9ba709c807761c63d848e2f46736e4ec872de465f5808b94eb4bd5db59f9bff5",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 10012,
+      "sha256": "6380226a5cba52e06425d358cc3f5f53c5b743531345db9cb343ba1ee6391f0a",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "REFERENCE_ONLY_CODE.json",
+      "bytes": 3911,
+      "sha256": "40ce489474a636d885f8ccfa8ca18d19db9f916c98a22176e35dfb7e12ae7095",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "SCOPE_AND_HISTORY.json",
+      "bytes": 6979,
+      "sha256": "6703bb1694531135262ebdab6f8eadf60f7b71e87afc48a2b68d371563e3a34a",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/EXACT_READING.md",
+      "bytes": 6401,
+      "sha256": "ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/INPUTS.json",
+      "bytes": 12723,
+      "sha256": "2aa3c6027c26ba20ceeac0b333a2e53fde8f22e2f57b9745f037770dfc677e79",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/MANIFEST.json",
+      "bytes": 759,
+      "sha256": "ce78afb2226cc243f40e0087c0a8ce27c9478ed9e84cb5df76b5af8afd47b599",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "attestation-context-source-return-20261009/RESULT.md",
+      "bytes": 10834,
+      "sha256": "f7ddcbd238f7fad8406a8475b0f61dea6859515182431c4c3742ec6bc9e93d55",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/independent-modal-assessment.md",
+      "bytes": 13097,
+      "sha256": "07e8fffcdfdcc049c6230bfaccb94393b9965dc7226e0c6c8961fd79778db402",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/modal-premise-independence-results.json",
+      "bytes": 849,
+      "sha256": "697669e0e00ee9a859a638db97e35527724a9dda7f4b6394ed8f70438dddebb3",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/modal-premise-independence.py",
+      "bytes": 2866,
+      "sha256": "798ef318afb661b350738ebc9eb22d3059f9062b1e58f73020020d1475d8c120",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/symmetry-addendum.md",
+      "bytes": 3568,
+      "sha256": "89eaf5f8d9f84fb033710f8a6035acb6afdbcdfba5a62e829a58f58edb236fbd",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/symmetry-premise-control-results.json",
+      "bytes": 1095,
+      "sha256": "bb326b67c525bcad20bf893efe03e8ccdb8c2363dcc999dc489a89e8507521ef",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-modal-review-20261009/symmetry-premise-control.py",
+      "bytes": 2757,
+      "sha256": "189ec31c318e0dc25f19b324d2d8b7bb1fe126699af77fbad35dc8c31cb035bc",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-source-20261009/REPORT.md",
+      "bytes": 24443,
+      "sha256": "d4ee327370d09a8f994457a3adbc7e97449268d8706776aa8d86da8a6dbb4757",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-source-20261009/SOURCE_LEDGER.json",
+      "bytes": 9443,
+      "sha256": "25fea7e3b8ca5840ceae7565192e1eb90466ac641becdb917db47e6d4a63a335",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "complete-explanation-source-20261009/VERIFICATION.json",
+      "bytes": 554,
+      "sha256": "86767b5ad92ac0db7b8e9610a0ed53b36958e56073a8e0e37f3338b1e7f7ef14",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/INPUT_BINDINGS.json",
+      "bytes": 6267,
+      "sha256": "a378c5b14a7b108b1a4011315bf14395cc4d343d26d8464d39867e90b34917fe",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/MANIFEST.sha256",
+      "bytes": 332,
+      "sha256": "f572888437d694233a4494ba4eeadff1aa34ab07b8e4f1cf7e4991ed94950672",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/READING_RECORD.json",
+      "bytes": 5710,
+      "sha256": "701448abfd0aa771b4badcb2c6f340cd1e99f6e0a5888fa4a9233e0241285f24",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/REPORT.md",
+      "bytes": 16071,
+      "sha256": "aab7d5783771c15775e6de2fad644ea7867de9a2678eb48cc1ca9249fafddfe1",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explanation-stopping-asymmetry-20261009/VERIFICATION.json",
+      "bytes": 2708,
+      "sha256": "50139e05cd4a2dd7a69c191c966ee0830f0d02860f326b2a4f582d53e673c8b1",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/ACQUISITION.json",
+      "bytes": 1445,
+      "sha256": "b2f58e9241335e7bcc59d294b0ec5af5e0a724877a99f88d291fe6df675b38b4",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/INPUT_BINDINGS.json",
+      "bytes": 3445,
+      "sha256": "7aa7b7f38fcfef3b00f0caf31cc9a1b1d72199e744917f6238877999362ea64e",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/PRIOR_COVERAGE.json",
+      "bytes": 16678,
+      "sha256": "35981f6cfd363e0409d94ed248475918e7b124c780c1e08a5f3a105daf79d5ed",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/READING_RECORD.json",
+      "bytes": 5361,
+      "sha256": "b54be99991f4d190d1d8eab85711ec848772399b5e750f4c7c4913c0270809b5",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/REPORT.md",
+      "bytes": 21442,
+      "sha256": "ec040740608abc6a8e8f14b2e0a09867a239e97ed41a279eaf3092c49267b72d",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/SHA256SUMS",
+      "bytes": 501,
+      "sha256": "abae67820ef3c3c5dda0266d2f978f2033f85291af4e6a3db7c5d169eb916b26",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "explicability-parity-20261009/VERIFICATION.json",
+      "bytes": 1221,
+      "sha256": "f826bbaeca862aa8328e7b4c4cb2e95c07b4f2c1dc715aa92dd561b3ac26a4a5",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+      "bytes": 2019,
+      "sha256": "34893ef11b2ab79c9ce2baf777a3797a5dbed2393ac26797a1f9057756be2249",
+      "classification": "prior_delivery_identity_only_not_prior_payload"
+    },
+    {
+      "path": "replay/verify_portable.py",
+      "bytes": 8103,
+      "sha256": "4cf4ee2de265a15ff7839fa94c9ef30c7e8dc089b384deabf39b7bcf66be7b41",
+      "classification": "checkpoint21_packaging_control_not_research"
+    },
+    {
+      "path": "root-resumed-research-20261009/COMPLETE_EXPLANATION_READING.json",
+      "bytes": 1683,
+      "sha256": "899d22e0f8a261d4d7c60e3a4928509f60f8e79648562d6da6fc673640527199",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "root-resumed-research-20261009/COMPLETE_EXPLANATION_REVIEW.json",
+      "bytes": 2018,
+      "sha256": "c69f9ce8e3e21cfd49b69f9f849296825326a499a7b034ea242ac54aab8ac72a",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "root-resumed-research-20261009/EXPLICABILITY_SOURCE_SELECTION.json",
+      "bytes": 1867,
+      "sha256": "3df6e69f985d8c546f8b739635f6f0eef83394992e59e8d5764c241b2fcde120",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "root-resumed-research-20261009/SUCCESSOR_COMPARATIVE_REVIEW.json",
+      "bytes": 2391,
+      "sha256": "38390b9b7153d9f2fc64d3a25836254884f7829e013f976b003db7c935d97c20",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/FILES.sha256",
+      "bytes": 421,
+      "sha256": "eb6b5705b7291d68389fdaf5d95431c76d83d9d6b59c960f4cc4327d083f444f",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/INPUT_BINDINGS.json",
+      "bytes": 14984,
+      "sha256": "3b4e6de52cb10ec0bcda328c32ea6312ed3e25fee4502eadfadfb3dd8f630ede",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/OPERATION_REGISTER.json",
+      "bytes": 2267,
+      "sha256": "99d40258b5a13cb765fae8fce3314597e3d08657c65e8729802494eaa350607d",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/REPORT.md",
+      "bytes": 11572,
+      "sha256": "dedcbd009844403c482e2f8fb09a83779987d7b2fb3bfbc219ec1fed3345768e",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "sovereignty-discriminator-currentness-20261009/VERIFICATION.json",
+      "bytes": 1498,
+      "sha256": "7315a01f4609eeab2791dbfba9a2eda533a49572e67645a29e4172fc131abd55",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/MANIFEST.json",
+      "bytes": 2473,
+      "sha256": "5b4ae649777c1be852914400897714f76b31966a3cc2e55c0c31f34d7045bf39",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/READING_LEDGER.json",
+      "bytes": 4640,
+      "sha256": "6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/REPORT.md",
+      "bytes": 15005,
+      "sha256": "c1dae1a738fc90e7977f4257a960eef29b76d17ac6121d878361d2aaf18f139e",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/ROOT_ARABIC_FEEDBACK.md",
+      "bytes": 3996,
+      "sha256": "f84622f47a3547acaef3cd5435105ab89ed50d4f60974e27e8ae81fd8c16711a",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/ROOT_ARABIC_FEEDBACK_READING.json",
+      "bytes": 1343,
+      "sha256": "a55baac0e33d75c5183f9c373518c4716c143c9e7b968e5ca1de7dc2b8945b78",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/VERIFICATION.json",
+      "bytes": 3807,
+      "sha256": "dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/commit-metadata.json",
+      "bytes": 1090,
+      "sha256": "ca89b0b2783b355af87705ce9feb99f7fc25074831b2bba46710a5e861a45b3a",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/source-bindings.json",
+      "bytes": 3819,
+      "sha256": "9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce",
+      "classification": "completed_successor_analyst_output"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Axioms.lean",
+      "bytes": 15212,
+      "sha256": "a3f13903d01d37c4d3aea9819489c373595a4e7d0f9697ed56ffaaadb8b86416",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Causation.lean",
+      "bytes": 10169,
+      "sha256": "42d554bedb12665cc8f48037c943f1fd7fc7fcae184a80f430cabf19f9d0e487",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Definitions.lean",
+      "bytes": 11331,
+      "sha256": "6543ee63b7863f55e986202830f61f861d89050c7bdc425199b91484808962d3",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__ModalForm.lean",
+      "bytes": 32908,
+      "sha256": "5005d4d2f840d8731b98c54ac9bbf8486dafa0c6a446b2225a007f9e4e7e0296",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Models__Counterexamples.lean",
+      "bytes": 18713,
+      "sha256": "02e668544642068bddd0e6ffdf6a9c2d2614ba295ee1ef4a4f437602287344a0",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/Ethica__Pars1__Propositions.lean",
+      "bytes": 15837,
+      "sha256": "987c666a7156d7866ceebb5ecd617e4fa1377f9e038d51d4e4a2bcee8b1dc4e8",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/LICENSE",
+      "bytes": 1188,
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/README.md",
+      "bytes": 6796,
+      "sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/docs__auxiliary_axioms.md",
+      "bytes": 38185,
+      "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b",
+      "classification": "pinned_mit_reference_only_never_executed"
+    },
+    {
+      "path": "spinoza-formal-transfer-screen-20261009/sources/papers__cluster_a_irreducibility__08_scope.md",
+      "bytes": 11913,
+      "sha256": "e630c2fcb4ad194e3925972ab4c288887a5884e76dcc4b2f3e62bcdcd214d4e9",
+      "classification": "pinned_mit_reference_only_never_executed"
+    }
+  ]
+}

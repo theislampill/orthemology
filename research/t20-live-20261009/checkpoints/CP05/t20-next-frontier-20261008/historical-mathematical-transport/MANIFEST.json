@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-08T14:35:21.460715+00:00",
+  "files": [
+    {
+      "path": "ANALYSIS.md",
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c",
+      "bytes": 18684
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "f2e25199b98a4b44bfbda6ef41a0d98886253578304c673beb067ae9737e5284",
+      "bytes": 532
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "565550bbfdf55c7055a171123bc5e7ffddcb90c152959bfdfac9a05f96e50561",
+      "bytes": 1750
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "13835238258ecb6626a1688a9bf8f710dad2e04c4ac905c57a3f19ecc3f4477c",
+      "bytes": 4548
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "d6f4375e9a57a0a51e79b97c349d2e1aabe46c7e410dd4b48fe85e1d90db4de3",
+      "bytes": 5255
+    }
+  ],
+  "verification": "Controls freshly rerun with byte-identical JSON output; seven current proof identities verified by replay.",
+  "status": "Author analysis only; no independent review, integration or completion authority."
+}

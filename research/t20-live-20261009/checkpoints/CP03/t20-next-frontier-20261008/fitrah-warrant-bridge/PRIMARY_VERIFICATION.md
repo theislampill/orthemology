@@ -1,0 +1,31 @@
+# Primary text verification and inherited lineage
+
+These checks concern classical Arabic primary texts in electronic witnesses. They do not provide manuscript collation or verification against the exact modern print editions cited by Ameri.
+
+## Ibn Taymiyyah on developing fitrah
+
+Ameri pp. 160–161 cites Darʾ 4:328. The relevant wording was found directly in [Islamweb item 413/1569](https://www.islamweb.net/ar/library/content/413/1569/الأدلة-العقلية-تدل-على-أن-كل-مولود-يولد-على-الفطرة), within the argument labelled volume 8, transition from 460 to 461. The unit at displayed lines 2144–2147 was read in full. It says development need not be present articulated knowledge at birth, permits a supporting external cause such as teaching, and expressly allows a missing condition or an impediment. Ameri’s selected quotation ends before the final missing-condition clause; its own surrounding discussion nonetheless includes developmental and environmental conditions. No claim of materially deceptive quotation follows.
+
+The broader connected rational argument was read at [Darʾ, electronic division 42](https://ar.wikisource.org/wiki/درء_تعارض_العقل_والنقل/42), displayed lines 308–458, with particular attention to 370–458. This is a primary-text witness carrying an unknown-source editorial label. It is useful for contextual verification but is not an independent manuscript witness to Islamweb. The seven-route argument distinguishes recognition, love, truth, benefit, auxiliary instruction and self-sufficient disposition. The first route explicitly adds the truth of Creator-recognition and benefit of love to general psychological premises. The teacher-regress route establishes that not every recogniser needs a preceding human teacher; it does not itself establish non-discursive generation. The text explicitly allows internally ordered reflection/inference in its teacher-independent class.
+
+The inherited T20 Dar8 coverage already records this unit: volume08/notes.md, V08-P1578–1611, within its larger completed electronic traversal and a reflective return to P1591–1611. This is a fresh source check of an already-read lineage, not a new independent theological witness. Ameri’s 4:328 versus the checked 8:460–461 remains an unresolved edition/pagination correspondence; it is not asserted to be an authorial error.
+
+## The separate argument for antecedent basic recognition
+
+[Darʾ electronic014](https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html), displayed lines 908–930, was read directly. Lines 908–912 remain reported Abu Muhammad material. The authorial response begins at 913. The decisive connected unit is 913–928; 929–930 gives its devotional-language continuation. It is already represented by inherited V08-P1856–1873.
+
+The response argues from the conditions of individualizing indication: prior grasp of a determinate referent, the sign and their relation. It compares recognition of a familiar person and locating a known direction. It then distinguishes first-order knowing, knowing that one knows, and knowing how one acquired knowledge. A later argument may clarify, restore or confirm something already known; a defective argument cannot genuinely produce the knowledge merely because the believer retrospectively credits it.
+
+This is the relevant primary argument for a genuinely basic route, separate from independence of human instruction. Its target must remain particular recognition and cognitive reconstruction, not an invented rule that every proof presupposes its own conclusion. Its public application still needs the prior grasp to be genuine acquaintance if it is to yield that result. Partial conceptual grasp is not automatically actuality-knowledge, while a merely fictional conception is not a counterexample to an explicitly granted genuine-acquaintance case. The passage grants that general inference can establish a necessary existent, even with uniqueness, while reserving recognition of its particular identity as a further matter. A new reference fixed by a uniquely satisfied description or an actual trace to an unknown cause is a sharper rival than fiction: whether this constitutes knowing the particular depends on a substantive acquaintance/reference theory. De dicto existence, singular recognition and metaphysical de re existence must remain distinct. The autobiographical claim that a proof can confirm earlier knowledge stands separately from the stronger semantic premise. These are this assessment’s distinctions, not a new source variant.
+
+## Ibn al Qayyim on love of the Maker
+
+Ameri p. 164 reports Shifaʾ al-ʿalil, Dar al-Fikr1978, pp.288–289. The central passage and its complete immediate subsection were read directly in [chapter30](https://ar.wikisource.org/wiki/شفاء_العليل/الباب_الثلاثون), revision22847, beginning with the subsection on what being born on fitrah does and does not mean. The preceding legal-status conclusion and following response distinguishing bare receptivity from directed capacity were also read.
+
+The surrounding primary text supports gradual development, a positive disposition beyond neutral receptivity, conditions/obstruction and the nourishment analogy. It does not require consciously articulated theology at birth. The electronic text contains apparent transcription irregularities, including the phrase printed in Ameri and this e-text as “وادعائه” where other secondary versions have “وإذعانه”. No silent emendation or exact-edition lexical certification is offered. This does not affect the developmental distinction relied on here.
+
+No matching chapter30 read credit was located in the exact T17/T19 records inspected. T17’s six supplied works excluded Shifa; T19’s bounded Shifa passages concerned other topics. This is a bounded negative coverage finding, not a claim that nobody in the programme ever read chapter30.
+
+## Other classical citations
+
+Ameri p.165’s Madarij quotation, p.187’s ʿUddat al-sabirin quotation, hadith numbering, the attribution to Jaʿfar at p.175, and the chapter’s other classical attributions remain reported citations here. They do not carry fresh independent-authentication credit. The inference to warrant does not rely on independently authenticating those quotations. No reading of the whole Shifa, Dar volume or classical corpus is claimed by this task.

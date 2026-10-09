@@ -1,0 +1,335 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v2",
+  "checkpoint_ordinal": 15,
+  "results": [
+    {
+      "id": "epistemic-psr-warrant",
+      "author": {
+        "path": "epistemic-psr-warrant/RESULT.md",
+        "bytes": 24165,
+        "sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59"
+      },
+      "classification": "SOURCE_CRITICAL_EPISTEMIC_PREMISE_ASSESSMENT",
+      "internal_review_scope": "AUTHOR_ASSESSMENT_AND_COMPLETION_ADDENDUM; no separate full final-report review",
+      "claim_summary": "Global epistemic defeat needs substantive symmetry, nearness and access bridges beyond local causal warrant. Both selected article witnesses are now fully textually read by the research worker, with distinct 1997 manuscript versus2020/2021 paper identity and visual/version limits.",
+      "evidence_records": [
+        {
+          "path": "epistemic-psr-warrant/PREMISE_INDEPENDENCE.md",
+          "bytes": 7190,
+          "sha256": "859c237eb415a4c65195adcadddf01b2537aa015f92a872c012bd3e65d138a94"
+        },
+        {
+          "path": "epistemic-psr-warrant/READING_LEDGER.json",
+          "bytes": 5762,
+          "sha256": "f1d6b069549808b3811b73ab8c2af27f77311a23828dee71d687a2537fdb1787"
+        },
+        {
+          "path": "epistemic-psr-warrant/READING_COMPLETION_LEDGER.json",
+          "bytes": 3247,
+          "sha256": "161be893897be92f6a84f93aa31f1359d11cf5a4f6912c656524528958a3181a"
+        },
+        {
+          "path": "epistemic-psr-warrant/READING_COMPLETION_ADDENDUM.md",
+          "bytes": 2566,
+          "sha256": "d2e0988d6b8436f0e4fefedece132bd7630109ab8eb27100846abbc41db6051a"
+        },
+        {
+          "path": "epistemic-psr-warrant/SOURCES_AND_RIGHTS.md",
+          "bytes": 2885,
+          "sha256": "71c4c194a212ad5d535fefef1c51af33590d1360c8a6370981157615e88b0490"
+        },
+        {
+          "path": "epistemic-psr-warrant/VERIFICATION.json",
+          "bytes": 3105,
+          "sha256": "59bd1cbc140ece9e547d25fb6f54cd926c97711ad42295bc21f8c05e0b33e403"
+        }
+      ],
+      "new_research_credit_from_preservation": false
+    },
+    {
+      "id": "plural-explanation-theorem-audit",
+      "author": {
+        "path": "plural-explanation-theorem-audit/RESULT.md",
+        "bytes": 18627,
+        "sha256": "e1a2311dd76a5d18e121a02974de3a28cdccee957d8b120c567e481e129f7e79"
+      },
+      "classification": "CONDITIONAL_SOURCE_RELATIVE_THEOREM_AND_RELATIONAL_CONTROLS",
+      "internal_review_scope": "BOUNDED_INTERNAL_EXPLANATION_BRIDGE_REVIEW",
+      "claim_summary": "The total-explainer self-explanation derivation removes unused assumptions from a conditional argument, not actual-world premise warrant. Countable and atomless controls drop both transitivity clauses and distributivity. Regular-open realization is written-only.",
+      "evidence_records": [
+        {
+          "path": "plural-explanation-theorem-audit/INPUT_BINDINGS.json",
+          "bytes": 1359,
+          "sha256": "d94b608eddb44456a210f2d4d1cadb91a56c427c7b3e28f6d88ef596d850231f"
+        },
+        {
+          "path": "plural-explanation-theorem-audit/VERIFICATION.json",
+          "bytes": 1379,
+          "sha256": "bb3d4981def637724f597bc6d57be5214a47343bfcd5a9c747615984ac838bd9"
+        },
+        {
+          "path": "plural-explanation-theorem-audit/DependencyAudit.lean",
+          "bytes": 6554,
+          "sha256": "9ce772a752d068c374004901bef1d8ae23b145c9f85d6bd71aa266eeb6722392"
+        },
+        {
+          "path": "plural-explanation-theorem-audit/SupplementedControl.lean",
+          "bytes": 5202,
+          "sha256": "9462f1f41c5d3162a27fe85438b905124602b005c58178a5f710cd4e1db335c9"
+        }
+      ],
+      "new_research_credit_from_preservation": false
+    },
+    {
+      "id": "particular-explanans-bridge-audit",
+      "author": {
+        "path": "particular-explanans-bridge-audit/RESULT.md",
+        "bytes": 14810,
+        "sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c"
+      },
+      "classification": "FINITE_RELATIONAL_CONTROL_AND_SUFFICIENT_REPAIRS",
+      "internal_review_scope": "ORIGINAL_INTERNAL_REVIEW_PLUS_FINAL_EXACT_DELTA_ACCEPTANCE",
+      "claim_summary": "Three-fact control preserves the displayed restricted relational package with assigned Full(c,{b}); no adequate metaphysical explanation established. Repairs suffice under stated wholly-particular hypotheses, without necessity/uniqueness/weakestness claims.",
+      "evidence_records": [
+        {
+          "path": "particular-explanans-bridge-audit/INPUT_BINDINGS.json",
+          "bytes": 1096,
+          "sha256": "cd0cee3a94a1d90154de59fdc7a1f33812194f663b7cde9666588b7b82ea7439"
+        },
+        {
+          "path": "particular-explanans-bridge-audit/VERIFICATION.json",
+          "bytes": 1807,
+          "sha256": "8e40ea406e2b282c409d436885b6e804b286070a003488935231e3fbbf7bdbbe"
+        },
+        {
+          "path": "particular-explanans-bridge-audit/RESULT.pre-review.md",
+          "bytes": 14598,
+          "sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6"
+        },
+        {
+          "path": "particular-explanans-bridge-audit/REVIEW_RESPONSE.json",
+          "bytes": 636,
+          "sha256": "394de2f8a6a7eab00e2567f7bce7c6cf9b9d374c61eedaf0f2bc107bba113b8f"
+        },
+        {
+          "path": "particular-explanans-bridge-audit/RestrictedBridgeControl.lean",
+          "bytes": 5477,
+          "sha256": "56afa15a4bc3f3ec04db4a8c0f98a4acc43fa67128fe8497619e988b7382b61d"
+        },
+        {
+          "path": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+          "bytes": 4515,
+          "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0"
+        }
+      ],
+      "new_research_credit_from_preservation": false
+    },
+    {
+      "id": "explanation-bridge-review",
+      "author": {
+        "path": "explanation-bridge-review/REVIEW.md",
+        "bytes": 18226,
+        "sha256": "76f6b4f4328bea5750217072ad0ca5e6b35e928d8cd6a9682b2b43b629d52fd1"
+      },
+      "classification": "BOUNDED_INTERNAL_MATHEMATICAL_AND_SOURCE_SEMANTIC_REVIEW",
+      "internal_review_scope": "INTERNAL_REVIEW_NOT_EXTERNAL_VALIDATION",
+      "claim_summary": "Original review binds exact older particular report; final acceptance binds the single-sentence amendment to its final hash. No Lean run was claimed by reviewer; original review and inputs remain unchanged.",
+      "evidence_records": [
+        {
+          "path": "explanation-bridge-review/INPUTS.json",
+          "bytes": 2219,
+          "sha256": "f396096a034ae93e694cef9bc9e54a0a4a146e3db4577d8311c3b7838e8ebb3a"
+        },
+        {
+          "path": "explanation-bridge-review/FINAL_HASH_ACCEPTANCE.json",
+          "bytes": 1260,
+          "sha256": "8067b47fadb7bab0c25e7fd9bc655c68f6011787ab77855a3a0deb69afba952d"
+        },
+        {
+          "path": "explanation-bridge-review/FINAL_HASH_ACCEPTANCE.md",
+          "bytes": 1358,
+          "sha256": "b956abd6b3456c8262e6e86cadd71b8e371c064d473c6a830ab7a2c08bb6e614"
+        }
+      ],
+      "new_research_credit_from_preservation": false
+    },
+    {
+      "id": "source-noncirculation-feedback",
+      "author": {
+        "path": "source-noncirculation-feedback/RESULT.md",
+        "bytes": 20129,
+        "sha256": "5c27711184ba09865011d77573cc8cca8c2195755f443117bf66044fbb209b13"
+      },
+      "classification": "INHERITED_ARABIC_SOURCE_TO_FORMAL_FEEDBACK",
+      "internal_review_scope": "AUTHOR_REPORT_AND_ROOT_TARGETED_RETURN; no separate final-report review",
+      "claim_summary": "Positive same-occurrence productive anti-bootstrap rationale preserves uncreated successive acts, necessary concomitance and indexed maintenance. General explanation, fact-parthood and BNF transports remain open; independently sufficient redundant originals remain separate.",
+      "evidence_records": [
+        {
+          "path": "source-noncirculation-feedback/SOURCE_READS.json",
+          "bytes": 17583,
+          "sha256": "9aa3d46b41b80d5e8f2864b091e27e323eb288ab0845a5aab18df7a6412e100c"
+        },
+        {
+          "path": "source-noncirculation-feedback/INHERITED_RECORD_BINDINGS.json",
+          "bytes": 2307,
+          "sha256": "4cfb0d106fce18e2e51495b2a4dcc61c7443b7ce3f89fa1c42f0270d78579599"
+        },
+        {
+          "path": "source-noncirculation-feedback/INTEGRITY_CHECK.json",
+          "bytes": 6594,
+          "sha256": "a527de500e7ad6d7cf82c4c83e1ced006ebf8d152cf6c1efe2196730155e45ee"
+        },
+        {
+          "path": "source-noncirculation-feedback/RESULT.before-redundant-route-scope.md",
+          "bytes": 19677,
+          "sha256": "cac089f7d9091317e0ad02d071f9092696741134358561451ebc9dc48ad1a743"
+        }
+      ],
+      "new_research_credit_from_preservation": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "koons1997",
+      "scope_records": [
+        {
+          "path": "epistemic-psr-warrant/READING_LEDGER.json",
+          "bytes": 5762,
+          "sha256": "f1d6b069549808b3811b73ab8c2af27f77311a23828dee71d687a2537fdb1787"
+        },
+        {
+          "path": "epistemic-psr-warrant/READING_COMPLETION_LEDGER.json",
+          "bytes": 3247,
+          "sha256": "161be893897be92f6a84f93aa31f1359d11cf5a4f6912c656524528958a3181a"
+        }
+      ],
+      "body_status": "INTENTIONALLY_OMITTED_COPYRIGHTED_MANUSCRIPT",
+      "reading": "Same retained author manuscript now textually complete; initial targeted ledger unchanged. No journal collation or diagram visual authentication."
+    },
+    {
+      "id": "koons-pruss2020-2021",
+      "witness": {
+        "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+        "bytes": 72314,
+        "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b"
+      },
+      "authors": [
+        "Robert C. Koons",
+        "Alexander R. Pruss"
+      ],
+      "title": "Skepticism and the principle of sufficient reason",
+      "doi": "10.1007/s11098-020-01482-3",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution_record": "SOURCES_LICENSES.md",
+      "reading": "Exact complete plain-text reading witness; extraction/OCR artifacts and service labels retained. Online2020/journal2021. No new source read during packaging."
+    },
+    {
+      "id": "classical-arabic",
+      "scope_records": [
+        {
+          "path": "source-noncirculation-feedback/SOURCE_READS.json",
+          "bytes": 17583,
+          "sha256": "9aa3d46b41b80d5e8f2864b091e27e323eb288ab0845a5aab18df7a6412e100c"
+        },
+        {
+          "path": "source-noncirculation-feedback/sources/ACQUISITION.json",
+          "bytes": 1042,
+          "sha256": "72ac37aea14811df2f83d0de35ede0fbb09345750d054eb3b3fe370c8098a0bb"
+        }
+      ],
+      "body_status": "RELEVANT_PUBLIC_DOMAIN_TEXT_EXTRACTIONS_INCLUDED; whole website HTML/boilerplate omitted",
+      "reading": "Recorded selected rereads only; no whole-volume or new manuscript-witness claim."
+    }
+  ],
+  "root_receipts": [
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/EPISTEMIC_PSR_TARGETED_RETURN_20261009.json",
+      "bytes": 1848,
+      "sha256": "c95dd65fa318ba548bcd1e59cda89abcee2279d91ea96d589bcaba0eb5a82e8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_EXPLANATION_ROOT_REPLAY_20261009.json",
+      "bytes": 3955,
+      "sha256": "997f90dc1ae9ff49c2d34b2abfb724b962c981a2d97f5c3ea2d6c63e01128f54"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/SOURCE_NONCIRCULATION_ROOT_RETURN_20261009.json",
+      "bytes": 1284,
+      "sha256": "6cb3084fc25a443512959ad8f67584597eabe68c970482cfc128daf996a124bc"
+    }
+  ],
+  "root_state": {
+    "latest": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+    "historical_positive_judgement": {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "bytes": 5862,
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    "historical_frontier_record": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "bytes": 1820,
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    "exact_checkpoint14_members": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json#inherited_member_bindings",
+    "anti_bootstrap_does_not_settle_redundant_originals": true
+  },
+  "boundaries": {
+    "classification": "FIFTEENTH_INTERMEDIATE_ADDITIVE_PRESERVATION_ONLY",
+    "checkpoint_ordinal": 15,
+    "assembly_cutoff_utc": "2026-10-09T02:52:16.133916+00:00",
+    "membership_cutoff": [
+      "epistemic-psr-warrant",
+      "plural-explanation-theorem-audit",
+      "particular-explanans-bridge-audit",
+      "explanation-bridge-review",
+      "source-noncirculation-feedback"
+    ],
+    "T20_status": "ACTIVE",
+    "historical_six_hour_active_compliance": "UNVERIFIED",
+    "owner_acceptance": false,
+    "final_integration": false,
+    "closure": false,
+    "new_research_duration_credit_seconds": 0,
+    "new_source_reading_credit": false,
+    "new_proof_development": false,
+    "historical_proofs_rerun": false,
+    "package_qualification_fresh_lean_replays": 4,
+    "toolchain_bundled_or_rebuilt": false,
+    "prior_archives_mutated": false,
+    "current_root_judgement": {
+      "latest": {
+        "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+        "bytes": 8405,
+        "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+      },
+      "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+      "historical_positive_judgement": {
+        "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+        "bytes": 5862,
+        "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+      },
+      "historical_frontier_record": {
+        "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+        "bytes": 1820,
+        "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+      },
+      "exact_checkpoint14_members": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json#inherited_member_bindings",
+      "anti_bootstrap_does_not_settle_redundant_originals": true
+    },
+    "internal_review_not_external_validation": true,
+    "regular_open_realization": "WRITTEN_ONLY",
+    "actual_necessary_being_or_uniqueness_proved": false,
+    "repairs": "SUFFICIENT_NOT_PROVED_NECESSARY_UNIQUE_OR_WEAKEST; wholly particular constituents required",
+    "finite_control": "DISPLAYED_RESTRICTED_RELATIONAL_PACKAGE; Full(c,{b}) ASSIGNED; no genuine explanation or naturalistic metaphysical countermodel claimed",
+    "weakened_controls": "BOTH_TRANSITIVITY_CLAUSES_AND_OUTPUT_DISTRIBUTIVITY_DROPPED",
+    "general_E_parthood_BNF_productive_transports": "OPEN"
+  },
+  "source_and_dependency_registry": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+  "prior_identity_registry": "COMPONENT_AND_PRIOR_IDENTITIES.json"
+}

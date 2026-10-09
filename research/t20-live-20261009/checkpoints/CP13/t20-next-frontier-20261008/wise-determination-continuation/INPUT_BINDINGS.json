@@ -1,0 +1,110 @@
+{
+  "recorded_at_utc": "2026-10-08T23:17:47.025303+00:00",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "sha256": "36f3309243f5525e32deb7589c29ed5501b360e65a3f9cd6db761456a5fa8c6a",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/review/CONTRACT_REVIEW.md",
+      "sha256": "47c1773b679c57b76cdbb869ad631054f3da65da5e6c778f5565b151d9c3af71",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/review/DETERMINATION_TRANSPORT.md",
+      "sha256": "32cb77a51e8ed0a1be7ff198bfcc1c8b0f5b3bc5a9b5a5a6a4243067762bcb34",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "sha256": "3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/activity-source-boundary/RESULT.md",
+      "sha256": "09a8abc2182bb1bbb4b13e7a776fd11f69a1d7d1fb0622622d207bbd695495eb",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/activity-source-boundary/CONDITIONAL_SCOPE.md",
+      "sha256": "3f761b354e0c287ba501a5610b7650fadf72b1cb170ba99e1ba66961d0918e31",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "sha256": "06e3cf7c178f801033d678dac3b6eb84297d74504ffd0d9811644abb7b536705",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "sha256": "109e2f13bb11819bed9e94c54beaae674cbfb3cef84144b1f788b464cdf18d21",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/source-fidelity-review/REVIEW.md",
+      "sha256": "9f4a1d6535f8bf962e37fbb832d4193d7dfeb47fbec875bb930cdf5d6e5adf66",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/volume09/READING_LOG.md",
+      "sha256": "8fdf15959ce2303845aee7a4fb65ac8856859bed8b2d7495c8c82b097de950fa",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "sha256": "913c71815ed0b4e59a4d8c789d9db85a4beb0bcd2c9fb3d040d4a89422511a08",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item591.txt",
+      "sha256": "b1473cbaa302259cc9a20c999f4d1880a5029b00a2cdc9c6ad498d82563fa988",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "use": "read-only inherited input; exact reading scope recorded separately"
+    }
+  ]
+}

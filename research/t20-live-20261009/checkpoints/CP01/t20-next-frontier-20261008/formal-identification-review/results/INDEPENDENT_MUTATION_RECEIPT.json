@@ -1,0 +1,36 @@
+{
+  "Calibration": {
+    "baseline": {
+      "exit_code": 0,
+      "sha256": "e5b126e3b9e9cdb8805f3417d90d3431611ec86a83614a925d5671b2dc10aeba",
+      "log": "results/Calibration-baseline.log"
+    },
+    "mutation": {
+      "exit_code": 1,
+      "sha256": "a1bd2f522d822a589fc3fe03982db90cd305b0de975e05f9522616da1f97be1e",
+      "log": "results/Calibration-mutation.log"
+    },
+    "restored": {
+      "exit_code": 0,
+      "sha256": "e5b126e3b9e9cdb8805f3417d90d3431611ec86a83614a925d5671b2dc10aeba",
+      "log": "results/Calibration-restored.log"
+    }
+  },
+  "HitTransform": {
+    "baseline": {
+      "exit_code": 0,
+      "sha256": "046c5be8de2e0878ce3820860b26cd43b9199de52c82dd22f647ee471f56b3d7",
+      "log": "results/HitTransform-baseline.log"
+    },
+    "mutation": {
+      "exit_code": 1,
+      "sha256": "b2bdc674ec7cca19bd62097485e1fa29a444c81d1dc8b794550f3c8de7ab52ae",
+      "log": "results/HitTransform-mutation.log"
+    },
+    "restored": {
+      "exit_code": 0,
+      "sha256": "046c5be8de2e0878ce3820860b26cd43b9199de52c82dd22f647ee471f56b3d7",
+      "log": "results/HitTransform-restored.log"
+    }
+  }
+}

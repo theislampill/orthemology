@@ -1,0 +1,10 @@
+{
+  "author_assertions": 65208,
+  "bound_file_count": 123,
+  "independent_assertions": 151948,
+  "receipt_sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945",
+  "replays_byte_identical": true,
+  "scope": "Scoped mathematical review verification only; no integration, release, physical validation or T20 closure.",
+  "sources_unchanged_before_and_after_replay": true,
+  "status": "PASS"
+}

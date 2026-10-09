@@ -1,0 +1,73 @@
+{
+  "selected_primary_essays_read": 1,
+  "author": "Anna Marmodoro",
+  "title": "Aristotelian powers at work: reciprocity without symmetry in causation",
+  "witness": "Oxford-hosted accepted manuscript; first-page acceptance September 2013",
+  "source_url": "https://media.philosophy.ox.ac.uk/assets/pdf_file/0003/40188/Powers_at_work_18_09_13.pdf",
+  "publisher_record_doi": "10.1093/oso/9780198796572.003.0005",
+  "published_metadata": {
+    "year": 2017,
+    "book": "Causal Powers",
+    "pages": "57–76"
+  },
+  "metadata_locator": "https://ora.ox.ac.uk/objects/uuid%3A6b943a51-e410-4ed6-920d-713dd8b485f6",
+  "metadata_access": "Search-indexed Oxford repository record inspected; direct repository open returned HTTP 403. No claim of direct repository-PDF acquisition.",
+  "acquisition": {
+    "method": "curl of public Oxford faculty-hosted PDF after web retrieval",
+    "bytes": 616462,
+    "sha256": "1f377b6c671d35839278f8b08722b7b550998489c9bda2a5fc83020a936a0d36",
+    "pages": 21
+  },
+  "reading": {
+    "continuous_pages": "1–21 inclusive; page 21 bibliography",
+    "displays": [
+      [
+        1,
+        5
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        16,
+        21
+      ]
+    ],
+    "reflective_returns": [
+      3,
+      7,
+      8,
+      12,
+      16,
+      18
+    ],
+    "visually_inspected_pages": [
+      3,
+      16
+    ]
+  },
+  "selection_basis": "Numerical episode unity with distinct manifestations and role-specific efficacy; explicit comparison with single-manifestation accounts.",
+  "screened_not_read": [
+    "Heil, Dispositions (2005)",
+    "Heil, Causal Relations (2016)",
+    "Heil, Causing (2012)",
+    "Martin/Heil positions through abstracts and navigation only"
+  ],
+  "screening_limit": "No broad campaign; one new primary essay read. Source bibliographies and third-party snippets are not independent evidence for uninspected works.",
+  "prior_work_control": "Rea 2011 comparison already completed and not reread as a new primary source. Bounded report-record searches did not locate earlier selected-essay reading.",
+  "limitations": [
+    "Accepted-manuscript/final-version identity not established",
+    "No independent verification of scientific examples",
+    "No independent whole-work reading of Martin, Heil or Aristotle",
+    "No new Ibn Taymiyyah primary-source reading",
+    "No code or mathematical replay",
+    "No research-duration certification"
+  ],
+  "render_note": "pdftoppm emitted font-cache warnings but produced readable page images that were inspected.",
+  "access_attempt_note": "Initial requests-based acquisition failed because requests was absent; curl succeeded. No package installation."
+}

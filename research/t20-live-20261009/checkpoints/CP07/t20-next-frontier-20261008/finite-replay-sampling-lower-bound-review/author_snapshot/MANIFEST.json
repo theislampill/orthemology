@@ -1,0 +1,52 @@
+{
+  "created_utc": "2026-10-08T16:42:34.404854+00:00",
+  "status": "Frozen author packet for independent review",
+  "scope": "Fixed paired-face replay sampling lower bound; alpha<1/2; Joe-oriented adaptive expected cost; no global optimality or physical claim",
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449",
+      "bytes": 2055
+    },
+    {
+      "path": "PROSPECTIVE_EVENTS.jsonl",
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731",
+      "bytes": 563
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1",
+      "bytes": 1304
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+      "bytes": 14735
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681",
+      "bytes": 7131
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a",
+      "bytes": 9703
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901",
+      "bytes": 6905
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2",
+      "bytes": 25985
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8",
+      "bytes": 1176
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "recorded_utc": "2026-10-09T09:01:19.544954+00:00",
+  "scope": "Reading-currentness reconciliation, contextual source reread and one bounded original citation check",
+  "ameri": {
+    "source_url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf",
+    "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+    "edition": "Inherited verified first 1445/2024",
+    "current_catalogue_checked": true,
+    "previous_full_chapter": [
+      157,
+      204
+    ],
+    "this_operation_text_reread": [
+      [
+        65,
+        69
+      ],
+      [
+        159,
+        165
+      ],
+      [
+        173,
+        184
+      ]
+    ],
+    "this_operation_visual_reread": [
+      159,
+      178,
+      179,
+      182,
+      183
+    ],
+    "new_chapter_read_credit": false,
+    "web_pdf_fetch": "Too large for web reader; retained matching official PDF used"
+  },
+  "new_primary_citation": {
+    "author": "Elizabeth King",
+    "publication": "The Washington Post, PostEverything",
+    "date": "2016-02-04",
+    "title": "I’m an atheist. So why can’t I shake God?",
+    "url": "https://www.washingtonpost.com/posteverything/wp/2016/02/04/im-an-atheist-so-why-cant-i-shake-god/",
+    "read_boundary": "Complete article body, original publisher HTML lines17–41, plus title/byline/date",
+    "ameri_locator": [
+      164,
+      165
+    ],
+    "prior_coverage_check": "Exact name, title fragments and URL search over retained workspace Markdown and JSON returned no match. Bounded negative, not all-history certification.",
+    "external_studies_verified": false,
+    "source_summary_word_limit": 25,
+    "article_body_redistributed": false
+  },
+  "important_inherited_checks": [
+    "fitrah-warrant-bridge/PRIMARY_VERIFICATION.md",
+    "fitrah-warrant-bridge/warranting-basis-addendum/CLARIFICATION.md",
+    "recognition-operative-content-20261009/REPORT.md",
+    "recognition-story-provenance-20261009/REPORT.md",
+    "necessary-truth-operative-basing-20261009/REPORT.md",
+    "reason-causation-bridge/INDEPENDENT_ASSESSMENT.md"
+  ],
+  "result": [
+    "PRIOR_FULL_CHAPTER_COVERAGE_RECONCILED",
+    "ONE_NEW_ORIGINAL_CITATION_CHECK",
+    "NO_NEW_INDEPENDENT_FACTIVE_RECOGNITION_VERIFICATION",
+    "NO_NEW_DEFEATER_OF_RETAINED_T17_APPRAISAL"
+  ],
+  "report_sha256": "c79ecc3ca9eec5cd53beef458bdeb004dae012e896ebd94f66d5d58d09ab007c"
+}

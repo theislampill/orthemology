@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-08",
+  "status": "Completed bounded source appraisal; T20 active; no integration or closure.",
+  "time_credit": "No historical time-floor or duration certification. Reading actions are reported prospectively; no inference from file timestamps to work time.",
+  "primary_source": {
+    "author": "Shamik Dasgupta",
+    "title": "The Bare Necessities",
+    "publication": "Philosophical Perspectives 25 (2011), 115–160",
+    "url": "https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf",
+    "local_pdf": "sources/dasgupta2011.pdf",
+    "acquisition": "Reused existing complete cached bytes; public author URL reopened to verify identity and extent, not an independent new byte download.",
+    "sha256": "1c60972c6ccdeda410ee77537495d6ff7bcd456b778aaf3f06110510d9d07e07"
+  },
+  "continuous_read": {
+    "pdf_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "printed_pages": [
+      115,
+      160
+    ],
+    "includes": "Entire body, all 74 numbered notes, acknowledgements and references.",
+    "method": "Complete page-separated layout text, displayed in six batches: 1–8, 9–16, 17–24, 25–32, 33–40, 41–46.",
+    "text_integrity": "Fresh Poppler layout extraction matches cached layout bytes; each of 46 page extracts matches fresh PDF extraction after outer whitespace normalization. See SOURCE_EXTRACTION_CHECK.json.",
+    "prior_overlap": "Modal-identity-transport previously read printed126–130 only; overlapping pages are not counted as independent witness or additional source."
+  },
+  "reflective_return": {
+    "printed_pages": [
+      119,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      149,
+      150,
+      151,
+      152,
+      154,
+      158,
+      159
+    ],
+    "notes": [
+      11,
+      63,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "visual_checks_pdf_pages": [
+      36,
+      37,
+      38,
+      40,
+      44
+    ],
+    "display_repair": "A combined reflective display was truncated; PDF16–18 and35 were redisplayed separately. Full-paper first pass was already untruncated in six batches.",
+    "assessment_changes": [
+      "Moved from modal caution alone to explicit irreducibly plural grounded-side proposal.",
+      "Distinguished AG obtaining from ordinary PL existential facts using author clarification note74.",
+      "Kept source conditional individualistic-fact necessitation stronger than mere structural isomorphism but weaker than unconditional de re existence or originality.",
+      "Whole-field target countercheck shows grounding distributivity is not required by the inherited bearer theorem."
+    ]
+  },
+  "inherited_2009": {
+    "credit": "Prior complete reading inherited; no new whole read or targeted primary reread in this operation.",
+    "source": "../qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md"
+  },
+  "targeted_2016_reread": {
+    "credit": "Prior full40-page read inherited, not repeated for new credit.",
+    "new_question": "Does the later singular PSR formulation exclude or contradict2011 irreducibly plural grounding?",
+    "source": "../global-explanation-rival-continuation/sources/dasgupta2016.txt",
+    "received_passages": [
+      {
+        "printed_pages": [
+          381,
+          382
+        ],
+        "scope": "Grounding logical form and transitivity paragraphs; extraction lines131–160."
+      },
+      {
+        "printed_pages": [
+          382,
+          383,
+          384
+        ],
+        "scope": "Section2 discussion and definitions of substantive/autonomous; extraction162–255."
+      },
+      {
+        "printed_page": 390,
+        "scope": "Section5 PSR formulation and immediately following explanatory remarks; extraction526–544."
+      },
+      {
+        "printed_pages": [
+          396,
+          397,
+          398,
+          399
+        ],
+        "scope": "Section9 Essential Existence, including opening at396, main397–398 and final paragraph399; extraction839–946, with concluding attribution repaired by920–948."
+      },
+      {
+        "printed_page": 413,
+        "scope": "Notes8–11 in surrounding full notes1–15 text; decisive note9 admits non-distributive plurality and brackets it; extraction1600–1655."
+      },
+      {
+        "printed_page": 415,
+        "scope": "Note44 qualitative-essential proposal, received with surrounding tail ofnote43 and notes45–48; extraction1780–1800."
+      }
+    ],
+    "result": "No inferred inconsistency. Full plural PSR/autonomy calculus is not supplied at these passages."
+  },
+  "inherited_reports_read_in_full": [
+    "../qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+    "../instantiation-obtaining-adjudication/REPORT.md",
+    "../global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+    "../modal-identity-transport/RESULT.md"
+  ],
+  "formal_interface_read": {
+    "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+    "scope": "Entire141-line unchanged file; no compilation or new theorem claimed."
+  },
+  "one_test": {
+    "file": "MAPPING_TEST.md",
+    "kind": "Source-bound failed interpretation/derivation audit, not arbitrary-relational countermodel.",
+    "source_input": "Complete pluralityY jointly qualitatively grounded, with separate qualitative ground of individual-existence facts denied.",
+    "candidate_mapping": "Right-distribute joint grounding to each singleton; then infer productive Completion.",
+    "result": "First projection is contrary to actual source proposal; modal entailment is retained. Whole-field target route still works conditionally on independently warranted productive premises.",
+    "calculus_boundary": "Source states original single-output transitivity and later changes grounding arity without a complete revised calculus. No claim to formal verification of an unstated full plural logic."
+  },
+  "unread_leads": [
+    {
+      "citation": "Dasgupta2014, On the Plurality of Grounds, Philosophers’ Imprint14(14),1–28",
+      "status": "Verified as a reference in held2016 bibliography; no body acquisition/read.",
+      "use_if_pursued": "Bounded question about plural substitution/transitivity and why collective explanation is adequate; not presently evidence of actual autonomous obtaining."
+    }
+  ],
+  "excluded_claims": [
+    "Actual autonomous qualitative essence",
+    "Actual failure of Completion",
+    "Counterexample to restrictedRealisation",
+    "New mathematical modal adapter",
+    "Independent multiplication of2009/2011/2016 qualitative argument",
+    "Historical time certification",
+    "Protected-file integration or closure"
+  ]
+}

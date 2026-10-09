@@ -1,0 +1,25 @@
+{
+  "source_path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+  "source_sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+  "read_span": "Section 2, L49\u2013175, including footnotes and context; targeted cross-check of all self-explanation terminology in supplied continuous witness.",
+  "source_url": "https://doi.org/10.1007/s11098-020-01482-3",
+  "source_authors": [
+    "Robert C. Koons",
+    "Alexander R. Pruss"
+  ],
+  "scope": "Bounded dependency audit of unrestricted plural self-explanation theorem and targeted controls dropping both displayed transitivity clauses and output distributivity.",
+  "toolchain_path": "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean",
+  "toolchain_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "protected_repository_changes": false,
+  "new_dependencies_installed": false,
+  "positive_conclusion": "Conditional full self-explanation of a total explainer.",
+  "not_established": [
+    "Actual-world truth or warrant of explanatory premises",
+    "Metaphysically legitimate all-facts universe",
+    "Necessary Being",
+    "Source relevance-logic semantics for facts",
+    "Full BNF-to-supernatural transport",
+    "New prior-art theorem",
+    "Integration or programme closure"
+  ]
+}

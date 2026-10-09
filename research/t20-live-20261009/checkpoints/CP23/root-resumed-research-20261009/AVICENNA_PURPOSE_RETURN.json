@@ -1,0 +1,39 @@
+{
+  "recorded_at_utc": "2026-10-09T10:49:29.636424+00:00",
+  "root_scope": "Complete IX.3 main-text chapter, printed393 heading through401 end, using electronic extraction. Also adjacent ending of IX.2 on393 and opening IX.4 on402 only. Printed396–398 visually checked including apparatus visible there; not entire chapter apparatus collation. Full analyst report read. Other source chapters are delegated reading, not root personal reading.",
+  "source_identity": "Avicenna, al-Shifa, al-Ilahiyyat, Anawati/Zayed critical text; printn=PDFn+1. Exact reprint imprint unverified.",
+  "bindings": [
+    {
+      "path": "intellectual-production-rival-20261009/reading/ilahiyyat-381-400-main.txt",
+      "sha256": "770eef7b8582cea996edfc84db9bb6347a90736d1d9f1c03e7da01d368b14919"
+    },
+    {
+      "path": "intellectual-production-rival-20261009/reading/ilahiyyat-pg401-pg420-main.txt",
+      "sha256": "75b9a5845bbe268ef3480cfee370192309f56d318d21e7f4084ddd69ae52109c"
+    },
+    {
+      "path": "intellectual-production-rival-20261009/reading/scan-print396.png",
+      "sha256": "a31c951c317bb437d32a5395274a5b321fde52b1c4c7b8c7db1e78b2b016c9ee"
+    },
+    {
+      "path": "intellectual-production-rival-20261009/reading/scan-print397.png",
+      "sha256": "877a9ffa6b23d4e2287b1a76d65fb55484ce8ac5532abfe51f763742ea51b568"
+    },
+    {
+      "path": "intellectual-production-rival-20261009/reading/scan-print398.png",
+      "sha256": "cfdce7c2c945860ad3c1f3becf3360348435d98cbe18b06a5fdb849178be78c7"
+    },
+    {
+      "path": "intellectual-production-rival-20261009/REPORT.md",
+      "sha256": "c82b1df81c75e086dabcf0eb08699d973f3823172226fc88e2e6ea4fb6646654"
+    }
+  ],
+  "consequential_controls": [
+    "Avicenna explicitly offers two-way-route benefaction rival before rejecting lower effects as primary purposes. Do not substitute unknowing-natural-outflow strawman.",
+    "Purpose→better-for-agent→perfection-otherwise-lacking is a substantive inferential chain, not given by generic concept of an intelligible end.",
+    "p398 already distinguishes motion itself as perfection and preservation of type through successive tokens. This applies to celestial derivative context; cannot refute First-specific exclusion by assuming author overlooked the distinction.",
+    "p398–399 retains concomitant analogies while expressly qualifying higher causes by knowledge. p363 rejecting unaware light/heat causation does not eliminate all structural causal analogy elsewhere.",
+    "VIII.7 direct intellectual-will report changes counterexample target: broad non-needy willing vs concept-identification/temporal restriction must remain separate. Root has not yet personally read VIII.7 complete."
+  ],
+  "evidence_status": "Source-critical interpretation/control. No metaphysical possibility certificate, kernel claim, historical duration certification or T20 closure."
+}

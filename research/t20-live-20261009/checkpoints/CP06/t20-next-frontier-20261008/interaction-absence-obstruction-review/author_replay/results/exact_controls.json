@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "arithmetic": "Exact integers, Fraction values, and rational root intervals; no floating-point signs or sampled data",
+  "assertions": 65208,
+  "families": {
+    "exact_maximizer": 64,
+    "uniform_upper_bound": 64,
+    "stationary_at_maximum": 64,
+    "uniform_gap_grid": 1152,
+    "calibration_inverse_parameter": 1152,
+    "maximizer_derivative_sign": 1152,
+    "independent_route_law": 10368,
+    "response_gap_identity": 10368,
+    "uniform_square_bound": 10368,
+    "probability_range": 10368,
+    "common_response_coordinate_bounds": 10368,
+    "positive_interaction_still_exactly_visible": 8192,
+    "a_zero_face": 192,
+    "a_one_face": 192,
+    "b_zero_face": 192,
+    "no_common_hidden_modulus": 64,
+    "fixed_total_name_validity": 144,
+    "name_branch_contract": 144,
+    "finite_transcript_slack": 64,
+    "adaptive_transcript_identity": 64,
+    "all_queried_locations_covered": 415,
+    "fixed_oracle_independent_of_seed": 56,
+    "bounded_error_event_transfer": 1
+  },
+  "scope": "Finite deterministic diagnostics for the general written proof; transcript and seed controls do not enumerate arbitrary protocols."
+}

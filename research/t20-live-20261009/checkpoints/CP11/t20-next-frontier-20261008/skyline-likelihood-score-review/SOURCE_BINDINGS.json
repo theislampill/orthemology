@@ -1,0 +1,40 @@
+{
+  "kind": "Inputs actually read or replayed; bound at independent review completion",
+  "files": [
+    {
+      "path": "retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "bytes": 17673
+    },
+    {
+      "path": "skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+      "bytes": 10942
+    },
+    {
+      "path": "skyline-likelihood-score/CONTROL_RESULTS.json",
+      "sha256": "fc4e65e6f42844a9c886881a60b95fcccefa8a10defe48a26d733f31ad8cdab9",
+      "bytes": 10323
+    },
+    {
+      "path": "skyline-likelihood-score/OPERATION_LOG.md",
+      "sha256": "2a0c2871c0abd47951b632026362c08609fe9ccedd643c12df5410098eacf69a",
+      "bytes": 1151
+    },
+    {
+      "path": "skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "bytes": 9091
+    },
+    {
+      "path": "skyline-likelihood-score/SHA256SUMS",
+      "sha256": "cba9f48727d3e3ae03dfb68704343c7c22da6c2fe563e5fadee4c248f42f9177",
+      "bytes": 424
+    },
+    {
+      "path": "skyline-likelihood-score/controls.py",
+      "sha256": "b1399fda7487fa985f66e5cfa6650d7a63c10b91f3d9da665c6285dcd1bd8cc5",
+      "bytes": 2333
+    }
+  ]
+}

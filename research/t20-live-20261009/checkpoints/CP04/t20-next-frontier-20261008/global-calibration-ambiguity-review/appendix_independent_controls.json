@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "scope": "Finite independent controls, not substitutes for the general proof; no simulated observations.",
+  "arithmetic": "Exact fractions and 110-digit Decimal exponential/logarithm diagnostics.",
+  "reviewed_hashes": {
+    "RESULT.md": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+    "POLYNOMIAL_EFFICIENCY_APPENDIX.md": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+  },
+  "families": {
+    "bernoulli_inequality_step": 294,
+    "boundary_error_geometry": 3100,
+    "bracket_constants": 294,
+    "catalogue_final_gap_minimum": 294,
+    "catalogue_strict_gap_order": 294,
+    "clipped_adaptive_exponential_tv_bound": 48,
+    "clipped_adaptive_law_normalization": 48,
+    "clipped_boundary_adaptive_identity": 12,
+    "clipped_endpoint_one": 135,
+    "clipped_endpoint_zero": 135,
+    "clipped_error_band": 3100,
+    "clipped_rate_domain": 3100,
+    "clipped_strict_monotonicity": 2965,
+    "exact_sufficient_gap": 294,
+    "input_digest": 2,
+    "input_digest_unchanged": 2,
+    "looser_budget_log_comparison": 294,
+    "modified_region_command_bound": 920,
+    "modified_region_no_clipping": 920,
+    "modified_region_probability_order": 920,
+    "modified_region_tv_envelope": 920,
+    "numerical_exponential_gap": 294,
+    "numerical_exponential_kernel_bound": 920,
+    "sufficient_command_domain": 294,
+    "sufficient_survival_domain": 294,
+    "unmodified_region_identity": 2180
+  },
+  "total_assertions": 22073,
+  "script_sha256": "efa792bf29547d5c470fa99992eed4a31c91bd18a48287f89d546fb39e6b4cb6"
+}

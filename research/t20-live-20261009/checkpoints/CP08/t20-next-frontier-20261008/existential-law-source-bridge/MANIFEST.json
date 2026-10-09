@@ -1,0 +1,55 @@
+{
+  "status": "BOUNDED_SOURCE_SUCCESSOR",
+  "files": [
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1806,
+      "sha256": "acb025268873f699e13c4a63e3d6299b31097ecbd6e410b1cca461debaf9f8af"
+    },
+    {
+      "path": "PASSAGE_NOTES.md",
+      "bytes": 115348,
+      "sha256": "3dcedc2b69bf58d0c3c867f3b58b60cc7d7bac3984606b7e67838d7cbcbaa26d"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 20834,
+      "sha256": "5ddee32d26314b34ec446e742359dc9571905e12f55c096c9a92b199596c7dfe"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 5454,
+      "sha256": "0481af3b2a80d20af130785974abd38c15da662ef711c0202ee61905ce3f7161"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 899,
+      "sha256": "b9126486648e05d9ba26d64ea0bb6c6c76b1b91ac86162797332acb48a8113ed"
+    },
+    {
+      "path": "sources/extract_received.py",
+      "bytes": 634,
+      "sha256": "58bad068ee88973d2cd7c728ca4860c88e49670eec75bb8e1c5e0b3140f067ae"
+    },
+    {
+      "path": "sources/safadiyya-001.html",
+      "bytes": 372056,
+      "sha256": "8e78e6cc9565303b04eb1730f04232f6f2c154f6e69a43a3ea95ae5a47fa44a4"
+    },
+    {
+      "path": "sources/safadiyya-001.txt",
+      "bytes": 373527,
+      "sha256": "327da51acaef60300a86208e805d98a756d437b3416c99e0668cad502c9273ac"
+    },
+    {
+      "path": "sources/safadiyya-003.html",
+      "bytes": 371067,
+      "sha256": "f7843d4429233f11313d77d129cf8c3ee556546d98b0b9873cf5a9463e80ce97"
+    },
+    {
+      "path": "sources/safadiyya-003.txt",
+      "bytes": 374854,
+      "sha256": "45e493f652a4a017a826016814bddc11b638e669ad7f25f713b25f178a579e40"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "author_artifact": {
+    "bytes": 3925,
+    "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+    "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c",
+    "snapshot": "ANCHORED_UNARY_COUNT.md"
+  },
+  "authority": "Independent proof/scope review only; no integration, owner acceptance or closure.",
+  "blocking_findings": [],
+  "prior_receipt": {
+    "path": "../REVIEW_RECEIPT.json",
+    "sha256": "b13d2a444054db8d8a05447a5ffe7c566e4af418b749064258c06bfd73c5300a"
+  },
+  "review_artifact": {
+    "path": "REVIEW.md",
+    "sha256": "57ea68a610c501316a077900e74d8e90e86e4eb88a81d13f79fe12e31ebbcaf6"
+  },
+  "review_date_utc": "2026-10-08",
+  "scope": "Superseding binding for the sole zero-stall scope clarification in ANCHORED_UNARY_COUNT.md; mathematical content unchanged.",
+  "status": "PASS",
+  "superseded_author_sha256": "c40758b305662cd0b02c0b0f0b6173949f313f228d798f6a7f07c1edd6cdf497",
+  "verification": "Exact text replacement check confirms the single paragraph is the complete diff; current author bytes and unchanged prior receipt hashes verified."
+}

@@ -1,0 +1,25 @@
+{
+  "recording": "Prospective start/stop endpoints; no inferred pre-start credit and no overlapping worker-time sum",
+  "author_intervals": [
+    {
+      "start_utc": "2026-10-08T19:42:51+00:00",
+      "end_utc": "2026-10-08T19:49:54+00:00",
+      "elapsed_seconds": 423.0,
+      "scope": "Bounded analytic proof, deterministic controls, source and scope audit, nontermination-safe stopping argument"
+    },
+    {
+      "start_utc": "2026-10-08T19:50:22+00:00",
+      "end_utc": "2026-10-08T19:50:43+00:00",
+      "elapsed_seconds": 21.0,
+      "scope": "Resolve independent reviewer scope clarification and rerun deterministic controls"
+    }
+  ],
+  "not_credited": [
+    "Pre-start intake and initial derivation",
+    "Review waiting",
+    "Packaging",
+    "Independent review time, recorded separately by reviewer"
+  ],
+  "authority": "Scratch-only mathematical work; no empirical validation, protected integration, or T20 closure",
+  "total_nonoverlapping_author_active_seconds": 444.0
+}

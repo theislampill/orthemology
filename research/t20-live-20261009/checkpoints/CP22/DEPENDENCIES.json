@@ -1,0 +1,10 @@
+{
+  "runtime": "Python 3.8+ standard library only",
+  "network_needed": false,
+  "research_scripts_executed": [],
+  "kernel_replay": false,
+  "only_program": "replay/verify_portable.py; integrity-only package verifier",
+  "primary_sources_required_for_integrity_verifier": false,
+  "source_ledger_paths": "Historical provenance only, not portable runtime dependencies.",
+  "component_manifests": "Preserved unchanged. Only selected included bindings are checked; omitted witnesses are explicitly recorded."
+}

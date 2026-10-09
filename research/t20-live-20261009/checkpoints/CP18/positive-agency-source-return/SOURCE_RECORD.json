@@ -1,0 +1,90 @@
+{
+  "scope": "Small secondary positive-agency source test; no campaign, integration, closure, or duration certification",
+  "inputs": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Seventeenth_Foundational_Source_Guide_Final_v1_20261005.docx",
+      "sha256": "6a923bf2d079f8bbf81f5736259a2299696185f0cd7bb5b2779ebd3ccb5ed3a9"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+      "sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/volume08/notes.md",
+      "sha256": "87938a4fe9528b7849c490c39ec08f1f9e7f76f369644a44f196c0ed947b9f59"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/jami-sixth/MIDDLE_CONTINUOUS_NOTES.md",
+      "sha256": "a7f5a9c0df1c3f8546db0362189a6d3f1e368f8b3f11c46668a82690ace5e532"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040"
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/dar013.txt",
+      "sha256": "6d2f2ac5763816ebe70e2cc83de807a31c9c0c54b5fa6bc3fcc4491e7f6c1b79"
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/jami6-csiislam.pdf",
+      "sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+    }
+  ],
+  "primary_reads": [
+    {
+      "work": "Dar 7",
+      "locator": "7:219",
+      "url": "https://shamela.ws/book/21506/2504",
+      "extent": "one electronic edition-linked page",
+      "result": "Observed origination; no positive cognitive ascent on this page"
+    },
+    {
+      "work": "Dar 8",
+      "locator": "8:116",
+      "url": "https://shamela.ws/book/21506/2863",
+      "extent": "exact page plus already-retained electronic section013 L129–149",
+      "result": "Locator recovery within already-read material; printed116 matches L135–136"
+    },
+    {
+      "work": "Dar 10",
+      "locator": "10:140–146",
+      "urls": [
+        "https://shamela.ws/book/21506/3852",
+        "https://shamela.ws/book/21506/3853",
+        "https://shamela.ws/book/21506/3854",
+        "https://shamela.ws/book/21506/3855",
+        "https://shamela.ws/book/21506/3856",
+        "https://shamela.ws/book/21506/3857",
+        "https://shamela.ws/book/21506/3858"
+      ],
+      "extent": "Edition-linked bodies checked; continuous context in Islamicbook017 local extraction L701–868",
+      "selected_argument": "10:141–146",
+      "result": "Positive conditional knowing/willing bridge; self-knowledge premise explicitly prior"
+    },
+    {
+      "work": "Jami VI",
+      "locator": "printed197–199; printed/PDF200 blank",
+      "source": "simultaneous-nonduplication-source-return/jami/jami6-csiislam.pdf",
+      "extent": "all four image pages viewed, three content pages read",
+      "result": "Printed199 conclusion corresponds to inherited electronicE203; preceding argument already represented"
+    }
+  ],
+  "limits": [
+    "No fresh Dar print scan or manuscript collation",
+    "Shamela edition metadata freshly verified: Rashad Salim, Imam Muhammad ibn Saud Islamic University, second1411/1991",
+    "Islamicbook017 full download is not a full-section reading claim",
+    "Islamicbook018 acquired while recovering location; not used as evidence and not assigned reading credit",
+    "Adjacent failed web opens are retained; not counted as reads",
+    "Jami1429 first-edition designation remains inherited metadata, not a fresh imprint inspection",
+    "Dar017 L808 sun/complete-cause transcription is quarantined, not silently repaired"
+  ],
+  "formal_scope": "Manual propositional scope analysis only; no executed formalization, metaphysical countermodel, or new mathematical theorem"
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "Reference-acquisition source/interface check, 8 October 2026. Sibling-only research record; no integration/closure authority.",
+  "files": [
+    {
+      "path": "ASSESSMENT.md",
+      "bytes": 15022,
+      "sha256": "c1fe1a2d66feb8588c747549c12ee1f916a2f0a8b5680d9fcc8f030449fcd5c1"
+    },
+    {
+      "path": "DIAGNOSTIC_MODEL.md",
+      "bytes": 8024,
+      "sha256": "15eec5c825f13ed6866119e0037ed5152e4351e42b3afa09fe5839bbbd817c59"
+    },
+    {
+      "path": "INDEPENDENT_CHALLENGE.md",
+      "bytes": 4144,
+      "sha256": "d096f12b1a5238a628412e57f38af19b24fbdd6ed034a49f7aa185923f727b7a"
+    },
+    {
+      "path": "ORIGINAL_BINDING_CHECK.json",
+      "bytes": 17108,
+      "sha256": "d946c76c647287a7b8598696d96579c3ce97745f1a7886191dcdf4b8c39f4662"
+    },
+    {
+      "path": "ORIGINAL_PARAGRAPH_READBACK.json",
+      "bytes": 61037,
+      "sha256": "5169393d6a41b01cc1a18df1a406954141dec86662d1669b3419495578aa366a"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1641,
+      "sha256": "e4be60efe705bd5b782c46e541fd434161ba6af14d48938a0aa49b6003aa9bb9"
+    },
+    {
+      "path": "RESEARCH_BOUNDARY.md",
+      "bytes": 2812,
+      "sha256": "74aa888ef3b2c11186e94577e78dccd3c18b37f990e6355fd1ec2769a7a2d371"
+    },
+    {
+      "path": "SOURCE_PROVENANCE.json",
+      "bytes": 13638,
+      "sha256": "68717fcb2478d30975bf7371c0a512b3b599239381f9814597b1bbd9aadd0e07"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 11798,
+      "sha256": "39ba53857704b16fd8418b11d683b2c74b2bd7f1d4162155d0c38a97343fab62"
+    }
+  ]
+}

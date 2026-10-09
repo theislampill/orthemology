@@ -1,0 +1,432 @@
+{
+  "task": "Bounded intrinsic-normative-reasons comparison",
+  "status": "research operation completed; submitted for parent review; T20 closure not claimed",
+  "protected_edits": false,
+  "created_utc": "2026-10-09T10:50:39Z",
+  "inherited_records": [
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "bytes": 15087,
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/PRIMARY_QUOTATION_CHECK.md",
+      "bytes": 5935,
+      "sha256": "0f125411379ba5ef5ef7289ef2f755bb516d0dc98d7fd17585a5f58311b1bb40"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/REPORT.md",
+      "bytes": 19116,
+      "sha256": "d54dc0d3014e236cf20293e04e2fea3d8043bb41f94af54ab27dbeafe93caf8d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/james-primary/REPORT.md",
+      "bytes": 14256,
+      "sha256": "7a482d25e1158d224e6b847cecdb12f3455629ee0aef091b83ff5d8a7493628e"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/railton-independent-rival-analysis.md",
+      "bytes": 11773,
+      "sha256": "e88dca291910f6755674dad8c4c6809f473fb48260d5c878b19cf10d12fb2ec0"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/REPORT.md",
+      "bytes": 26008,
+      "sha256": "7f2e3e5a85864fab035d1ec2d2fcf25d92ef3e63ea8e786fabbf1b052962c92b"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/jami-sixth/MIDDLE_CONTINUOUS_NOTES.md",
+      "bytes": 42411,
+      "sha256": "a7f5a9c0df1c3f8546db0362189a6d3f1e368f8b3f11c46668a82690ace5e532"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/jami-sixth/MIDDLE_APPRAISAL.md",
+      "bytes": 17594,
+      "sha256": "c8e7f6fec29e580b02bf2680a317837ef4ea717f5e26d5755e76a264d2e84592"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/jami-sixth/SOURCE_IDENTITIES.json",
+      "bytes": 23729,
+      "sha256": "f8ff8b9a9580834f14a658e6b7d8ac2a05dfbbd5d7406330b31de34a4370df0e"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/volume08/notes.md",
+      "bytes": 64762,
+      "sha256": "87938a4fe9528b7849c490c39ec08f1f9e7f76f369644a44f196c0ed947b9f59"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/minhaj-2-3/volume03/READING_LOG.md",
+      "bytes": 63548,
+      "sha256": "153be686021de4e06f331c423c5ed27ff9aea1a476e4a633311c2c1f3b2ed996"
+    }
+  ],
+  "source_reading": [
+    {
+      "work": "Majmu al-fatawa",
+      "url": "https://www.islamweb.net/ar/library/content/22/865/",
+      "representation": "primary electronic chapter; unvocalized layer used once",
+      "reading": "8:428–436 complete chapter body; duplicate vocalized layer not another source",
+      "files": [
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/majmu8-item865.html",
+          "bytes": 295124,
+          "sha256": "af07dbc0d8a7defbb18e96464875b8e9c2e07e3257627ea6697f4dffbe5f9b01"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/majmu8-item865-body.txt",
+          "bytes": 17365,
+          "sha256": "db410f69b1274162e2fc653404c9ce220179c9eca3618c4ef643c23ba3bc1e4b"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/majmu-metadata.txt",
+          "bytes": 313,
+          "sha256": "ec858a63da0c12606e569075d41104c0758286fbf7a9d2bdd51f0f2f3be5db6c"
+        }
+      ],
+      "edition": "Host: Majma al-Malik Fahd1416/1995; no edition number; no print collation"
+    },
+    {
+      "work": "Dar taarud al-aql wa-l-naql8",
+      "url": "https://archive.org/download/WAQ44998/dtan08.pdf",
+      "representation": "print scan",
+      "reading": "Title/PDF1; printed/PDF490–494 continuously, including apparatus.494 authorial conclusion ends before new quoted speaker",
+      "files": [
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/dtan08.pdf",
+          "bytes": 8295845,
+          "sha256": "55c1976038610915e03a55c44962897ac8423536a58344523ea8c0426d0fdae0"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar014.html",
+          "bytes": 370249,
+          "sha256": "e4985d33d2585ecb1869e332d1986a7bd43175a5844fd72ed19c90c9c2b3fad4"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar014.txt",
+          "bytes": 361596,
+          "sha256": "72468e31d41d4614494343e22947649250a2b3e05c98421c1a0b5f30a98ec392"
+        }
+      ],
+      "edition": "Muhammad Rashad Salim; Imam Muhammad ibn Saud Islamic University;2nd1411/1991, visually verified title",
+      "corrections": [
+        "Electronic extra la before yujawwazun at492 absent in print",
+        "Electronic missing illa in494 conclusion present in print"
+      ]
+    },
+    {
+      "work": "Jami al-masail collection6",
+      "url": "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+      "representation": "retained print scan",
+      "reading": "Printed/PDF186–193 and234–252 continuously including notes;193 continues beyond the operation;252 ends received incomplete treatise",
+      "files": [
+        {
+          "path": "simultaneous-nonduplication-source-return/jami/jami6-csiislam.pdf",
+          "bytes": 6584222,
+          "sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730"
+        }
+      ],
+      "edition": "Muhammad Uzayr Shams; Dar Alam al-Fawaid.1st1429 inherited catalogue metadata, not newly verified imprint"
+    },
+    {
+      "work": "Minhaj al-sunna3",
+      "url": "https://islamweb.net/ar/library/content/108/301/",
+      "parallel_url": "https://www.islamicbook.ws/tarekh/mnhaj-005.html",
+      "representation": "primary electronic bodies",
+      "reading": "Complete local objection/replies unit from Islamicbook; exact second reply104–106 crosschecked page-marked Islamweb; key sentence106. No fresh scan or apparatus-body reading claim",
+      "files": [
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/mnhaj005.html",
+          "bytes": 372061,
+          "sha256": "66415f46f1ccc188017c9ae83f6564292673ea5d0ed8e965e5e523d27ee15c5d"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/minhaj-will-obligation-unit.txt",
+          "bytes": 7098,
+          "sha256": "1a129b1775becefd3bdae41e4a919e72695c8926be1dbdeeb786a3d29593819b"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/minhaj301.html",
+          "bytes": 238824,
+          "sha256": "5cac464b086bfa4e619df3212c93d59bb81b890e893eee1c1d58c637e81f44de"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/minhaj301.txt",
+          "bytes": 18153,
+          "sha256": "e55b32a4e0069ee866220191724fa1069d1efa52ea8aa8b4ae5a2ec0c39f72e2"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/research-intermediates/minhaj-metadata.txt",
+          "bytes": 350,
+          "sha256": "eb47b1e458192d50b30376ad6ef773c51c9534f411aae676ec6304f6b00fa33d"
+        }
+      ],
+      "edition": "Rashad Salim textual family. Islamweb metadata: Maktabat Ibn Taymiyya1st1406/1986; inherited Islamicbook host association differs, so no assertion of identical imprint"
+    },
+    {
+      "work": "Sharh al-Asbahaniyya",
+      "url": "https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf",
+      "representation": "retained print scan",
+      "reading": "Printed444–450/PDF544–550 all text and notes; frontPDF1–4 including imprint2. No full-book reading",
+      "files": [
+        {
+          "path": "knowing-production-semantics-20261009/sources/asbahani-minhaj.pdf",
+          "bytes": 18364577,
+          "sha256": "f3855f50414e18100e28d6d64e4367f9fe9fc6f1915a077b91c204be43a96333"
+        }
+      ],
+      "edition": "Muhammad ibn Awda al-Sawi; Maktabat Dar al-Minhaj; first1430AH imprint, separate1428 catalogue/copyright block"
+    }
+  ],
+  "read_image_bindings": [
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/front-001.png",
+      "bytes": 130424,
+      "sha256": "1f653fa63e97af9b19bac7ace08e0463b213f4894032c08c312cb6532b432f30"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/front-002.png",
+      "bytes": 129896,
+      "sha256": "ffb5885ea1b286f15b0c474f58023eaafae22b81d9aea970f4a88b31a2de8dc2"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/front-003.png",
+      "bytes": 168478,
+      "sha256": "9a2054178f20e652a5bc511a94bffc4377f978652878d57386e1b68b348baedd"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/front-004.png",
+      "bytes": 119808,
+      "sha256": "cd1526892f9fd906c04def11957d4f0ddf2d367d5742721921688215edec1422"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/imprint-002.png",
+      "bytes": 129896,
+      "sha256": "ffb5885ea1b286f15b0c474f58023eaafae22b81d9aea970f4a88b31a2de8dc2"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-544.png",
+      "bytes": 99412,
+      "sha256": "4d78d8f8330f5595149f3213e9b91b03a5aff9d947f4fd823d75a57356c42ff2"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-545.png",
+      "bytes": 100393,
+      "sha256": "76b58e5ccc97d4a5187f967d88f93ae80c10997e711b6f57eb2123383041937f"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-546.png",
+      "bytes": 103386,
+      "sha256": "c6247c0f2a193facc552600ac176d0849baf55389044422c7689877aa8362fc9"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-547.png",
+      "bytes": 99704,
+      "sha256": "7313e47e946aa12b14a811e489c7000800d7406c15207e22cacde4b17b95e0f0"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-548.png",
+      "bytes": 99205,
+      "sha256": "51414d29448a793c7985f9f7b42b1afe7d6083ea20f0addd4575966ec8362725"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-549.png",
+      "bytes": 98966,
+      "sha256": "1495690ad6c7096d98c5519e26f1d663e69f8367ccae3085c7a1444920fff9ff"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/asbahani-pages/p-550.png",
+      "bytes": 104791,
+      "sha256": "9a4054716d360178ad7d86d9b360c2b1ac8158d9a2bf7cc9736f582b66371723"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/front-001.png",
+      "bytes": 63999,
+      "sha256": "7e097202e7ac82c1c0e8fdfcf023daa6e3f52b70bd146427934310da3889bce7"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/p-490.png",
+      "bytes": 78573,
+      "sha256": "e1af1220c86f302b5596874902d77f7b1bf1e1a65f9c7d6c97fca80821de443f"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/p-491.png",
+      "bytes": 77669,
+      "sha256": "401fdd6e554cddd64e70e7d7e5b6f5431c6cc8aa9b79234765f80fc541f123f4"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/p-492.png",
+      "bytes": 67308,
+      "sha256": "3f81fd2085e2c9a30fea2d45a2bf1c48e8925d15bafffc8a153a3520e1a84467"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/p-493.png",
+      "bytes": 75821,
+      "sha256": "1f4932f3c22f1969ff972cdf88f59162cfaffd6f0ef2c92c41accb2818677e4a"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/dar-pages/p-494.png",
+      "bytes": 73798,
+      "sha256": "2657d3ca74b074413a9d0e6c09876dd2fe5d916ff2a62cdda50b33b3d13dd7e9"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-186.png",
+      "bytes": 69214,
+      "sha256": "56b0abadb84ac7d05eeeffb975e38d0ae536588595224cded53567bc705d674b"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-187.png",
+      "bytes": 83987,
+      "sha256": "73eccf5487eaa7bbbae229996afb6eae0688a34a123961488db95d0552f6838b"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-188.png",
+      "bytes": 73453,
+      "sha256": "7e52ece75cf6e96baa06fe96865ffd48f37a938ee342d2345df563f3b5765f4b"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-189.png",
+      "bytes": 78815,
+      "sha256": "e80592038763677c264d4535dcff504c7fbc4abcc059e29c26d6a240aed1bd05"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-190.png",
+      "bytes": 75113,
+      "sha256": "0064b5e000ff6367e0f2763bd646d0eb6c9fe584a6570f4ddfd790d9d772546b"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-191.png",
+      "bytes": 75985,
+      "sha256": "f2e07cb75ab66423a122d0225a3dfa6fd6a87f2d9a3258ec842a54a9a38262ee"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-192.png",
+      "bytes": 77999,
+      "sha256": "2c69f964397ea0d6079dae92aa9e5f45b500a877f223303b47c4697a421d4303"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-193.png",
+      "bytes": 81216,
+      "sha256": "98f5716e6041f24e521820c6f864ad0d69742fa453980e13ca0df7af6eb496cf"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-234.png",
+      "bytes": 71522,
+      "sha256": "9d21f969f4e919c5e9173101f25bfbd9c34ac6ec10069222b1d591c515be6704"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-235.png",
+      "bytes": 80901,
+      "sha256": "55bfa0cf0538b2d51894866258cd40d8497020e11aa9a6b41442f816652bbd4d"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-236.png",
+      "bytes": 78099,
+      "sha256": "a486246cc346a4fad0c14adfb057744f8f5a29812090ea4a6eb5945f18bb1ec9"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-237.png",
+      "bytes": 75743,
+      "sha256": "d64d150b13fc2bdc091b8216999618067c3ebb8d5dc6f0c43d5e3872340c7016"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-238.png",
+      "bytes": 79530,
+      "sha256": "4adda2dc3bf197c7e2e83fed78d959abab6788d4b36c50cc73f1c44984aa8036"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-239.png",
+      "bytes": 76929,
+      "sha256": "9f6dfdf7e23eb205e6797bba79aa9817a9b47297c1cc4fd67d72085624f8db0a"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-240.png",
+      "bytes": 82932,
+      "sha256": "3e7f8ba675fbd2648d6f91db91bc24ba595c71b551b7cadd2ad6208ebadfb1b8"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-241.png",
+      "bytes": 81926,
+      "sha256": "deccec7eb0561b3fc8d37643e6360e456ef6699dac27c6bab1913fe2d43f77de"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-242.png",
+      "bytes": 83634,
+      "sha256": "f3f00653707564e8a2df7c104511e57bb309c14534b23dc6e7b167c368f3f456"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-243.png",
+      "bytes": 66328,
+      "sha256": "40e8a60fca8d3d8d8299ed59411beefa137d31298d7febcfec3c1d5890d24ec8"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-244.png",
+      "bytes": 76047,
+      "sha256": "8378c69df19d372d223ae70f01bf74b4a81e07bd0fba3df725ae716d3d3b918a"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-245.png",
+      "bytes": 85824,
+      "sha256": "305ae7e2d204f195611a9f4a0ac3fed81c5ca329227d7dffa4528b602c0e7c55"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-246.png",
+      "bytes": 83951,
+      "sha256": "f2bccbdb40a5139cb8fd71d118fa0d7e56602588e091c9f536d5bbce2557e63c"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-247.png",
+      "bytes": 79838,
+      "sha256": "83288fd4fb527f21e24a3f5efe65d98d48e6e77c1d9394b853767bae58469450"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-248.png",
+      "bytes": 83572,
+      "sha256": "617db27649fc5a0ff708079437549d1b90eb58377b974c0a355b56545331bcd8"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-249.png",
+      "bytes": 82530,
+      "sha256": "1ec69be1b9998083abe177fa5059be8f50cd1cd76674ecb71a5f9ba989d35a65"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-250.png",
+      "bytes": 75128,
+      "sha256": "d7a67fa044ee2b9d13a9bc8e65ce200b725e1441a807b6056bcbd55ef02ae2d6"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-251.png",
+      "bytes": 79316,
+      "sha256": "f6d5f4cebb5739ea73418337258678e7ce5d93b4c5b97e369139d200bf002c89"
+    },
+    {
+      "path": "intrinsic-normative-reasons-20261009/research-intermediates/jami-pages/p-252.png",
+      "bytes": 16529,
+      "sha256": "244e2c749dcf0de2cc32ead4ad40df2a358398b2de7d0609a6299f872e28a79d"
+    }
+  ],
+  "failed_or_noncredit_routes": [
+    {
+      "url": "https://islamdoc.com/Ibn-Taymiya/Minhaj-al-Sunnah-Ibn-Taymiyah/msn3_text.pdf",
+      "status": "directHTTP403; no retry; web extractor reported size limit; no source reading credit"
+    },
+    {
+      "description": "Majmu web-open failed; direct publicHTTPS retrieval succeeded; no denial bypass"
+    },
+    {
+      "description": "Asbahani PDF extraction yielded separators only; no text extraction reading credit; images read instead"
+    },
+    {
+      "description": "Minhaj349/350 acquired for locating but not target; not source evidence for the result"
+    }
+  ],
+  "delegated_read_only_check": "check_inherited_normative_bridge: no inherited full assessment of exact comparator found within bounded records; identified prior positive resources; no files changed",
+  "source_capability_limits": [
+    "No new whole-book reading",
+    "No manuscript collation",
+    "No independent authentication of historical reports or medical claims",
+    "Smith/Railton/James conclusions inherited from cited complete-reading reports, not another personal full-source reading"
+  ],
+  "manifest_scope": "Report, printed controls and this provenance only; research intermediates/source PDFs/images excluded",
+  "created_utc_basis": "clock.curr_time; executor wall-clock timestamp not used",
+  "duplicate_image_control": "Asbahani physicalPDF2 appears as front-002.png and imprint-002.png; the latter was viewed. Same page, no second-reading credit."
+}

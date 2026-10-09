@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "path": "INPUT_HASHES.json",
+      "bytes": 6949,
+      "sha256": "854a9c56101a08203d19466c230d1cba8490abf25a4294f7caf3fdb1d4b5008d"
+    },
+    {
+      "path": "READING_RECEIPT.json",
+      "bytes": 946,
+      "sha256": "16581ba5d00ef04752a3ddc7fb7a1afa55e0c2e3b2154fb41297b6033e28b1e7"
+    },
+    {
+      "path": "REVIEW.before-correction-verification.md",
+      "bytes": 11852,
+      "sha256": "6086874421af47be3d2e61165f35f80aa2021eaa1f6762c7566b13fa0b53abcd"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 12763,
+      "sha256": "9593a1acdbd2704205c82c7d4c5bf55421c64fd8334380ec2ddb5528bd5c527e"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 3889,
+      "sha256": "3f797a5f512187c8fd01c9c61538986a60db6ca67ffde3e1645d01af40366a9c"
+    },
+    {
+      "path": "reviewed_RESULT.final.md",
+      "bytes": 29525,
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d"
+    },
+    {
+      "path": "reviewed_RESULT.initial.md",
+      "bytes": 27739,
+      "sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91"
+    }
+  ],
+  "self_excluded": true
+}

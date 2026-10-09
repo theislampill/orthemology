@@ -1,0 +1,472 @@
+{
+  "scope": "Bounded source attribution only. No protected edits, integration, closure, or code-models.",
+  "primary": {
+    "author": "William James",
+    "title": "The Will to Believe and Other Essays in Popular Philosophy",
+    "imprint": "Longmans, Green, and Co., New York, London, and Bombay, 1897",
+    "copy": "First edition, May 1897 reprint (copyright page: first edition February 1897)",
+    "chapter": "The Moral Philosopher and the Moral Life",
+    "printed_pages": [
+      184,
+      215
+    ],
+    "pdf_pages_one_based": [
+      206,
+      237
+    ],
+    "pdf_total_pages": 360,
+    "pdf_bytes": 12434013,
+    "pdf_sha256": "0cc838c97588231bcdd7483fcdd69120494753a5d670cdbb83ae30e0e296badf",
+    "catalogue_url": "https://archive.org/details/willtobelieveoth00jameiala",
+    "download_url": "https://archive.org/download/willtobelieveoth00jameiala/willtobelieveoth00jameiala.pdf",
+    "rights": "Public domain 1897 publication; raw sources nevertheless retained only as research intermediates as instructed."
+  },
+  "secondary_target": {
+    "author": "Sami Ameri",
+    "title": "مشكلة الشر ووجود الله",
+    "edition_description_inherited": "Rawasikh 2023",
+    "scope_newly_inspected": "printed/PDF p. 79 only, text and rendered image",
+    "pdf_sha256": "c33be9d676c40f9f7f2ec63d5ea0198ce12903f02fd24fa8cd2e567891c730fc",
+    "edition_not_independently_recatalogued": true
+  },
+  "supporting_transcription": {
+    "url": "https://en.wikisource.org/wiki/The_Will_to_Believe_and_Other_Essays_in_Popular_Philosophy/The_Moral_Philosopher_and_the_Moral_Life",
+    "revision_in_html": "13270046",
+    "html_sha256": "cb8f575ab745065af515e8f5cd5d96d7b938d457304a99ac01a5ad01ee3d61a8",
+    "role": "Locating aid and initial comparison; continuous final reading is bound to PDF text and selected page images."
+  },
+  "raw_files": [
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/ameri-p079.png",
+      "bytes": 208624,
+      "sha256": "7a67418235b810d0f097e93b61a8a5c486bc20a475f86e489da5f33e83e309f8"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/essay-184-215.txt",
+      "bytes": 62312,
+      "sha256": "8d83118d7b5b40f1b578b8905d7283e6b24db2900e7240706fc04d9c666b6e04"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/front-005.png",
+      "bytes": 153330,
+      "sha256": "08e7126ae486a6a4ee3d71581243f54329ac9a98b6556a5713cd14fe124bb3d8"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/front-006.png",
+      "bytes": 220013,
+      "sha256": "403ea0d77b921aed2199b88ba65ed7e1310f2d61eb9437d12f45ebde6c3d06c7"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/front-007.png",
+      "bytes": 260803,
+      "sha256": "8e4b65a5d154bb4e22a37f638e65d28de0f50ea18f450181fdfb7138cd561dd6"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/front-008.png",
+      "bytes": 173279,
+      "sha256": "441e9b007b256a085cb03c5f8cb1ba4fdb9e80ba2a14400a124a62ba393b00b7"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/james-will-to-believe-1897.pdf",
+      "bytes": 12434013,
+      "sha256": "0cc838c97588231bcdd7483fcdd69120494753a5d670cdbb83ae30e0e296badf"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/james-will-to-believe-1897.txt",
+      "bytes": 682981,
+      "sha256": "244d3c7e42494d9482bb2a21eb79aebb2224df548c906012e796941fce34b35f"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-184.txt",
+      "bytes": 1574,
+      "sha256": "bcb4f7ea850ace46f45754e17ea1804ae1dc0f1b4923363527786b1062ca53b9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-185.txt",
+      "bytes": 1886,
+      "sha256": "6ca61bf74b45cd4ae7a15c440a1aafd5ad23e47ca365193d32a1ddbbfb2260c3"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-186.txt",
+      "bytes": 2146,
+      "sha256": "f02740838e62c7d5e391f68317694ff59147d9547eb49ae9f3346bed16e0a264"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-187.txt",
+      "bytes": 1927,
+      "sha256": "5e1f436e4f9b61ef3acda75b62d5d2cf740eb9be0604d065bd0641eeaad558c9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-188.txt",
+      "bytes": 2098,
+      "sha256": "045a289b15acd515d1a0f40d90f1b4944aef08b0198fa9e867c0f6d1bfb24d61"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-189.txt",
+      "bytes": 1858,
+      "sha256": "ff0547d8549342de8fd0f651c10f0a806778b42544b6f9ffcceaea974999e875"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-190.txt",
+      "bytes": 2068,
+      "sha256": "b51de2932917277bbce22166648d566de7571b2c3303a8fa6c8989a02830e066"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-191.txt",
+      "bytes": 2014,
+      "sha256": "c42ac5ae809e54b4a1098f5880b6d9cbc7b19e2cdebfd0a262f102ce43cdaa61"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-192.txt",
+      "bytes": 2041,
+      "sha256": "67871cd99ee8febbb71f9e77f3c3abaff96f0cdf04ebe8b88a62257306e3f4e3"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-193.txt",
+      "bytes": 1946,
+      "sha256": "b67efe4a0c88aa04385f99e90532e2183fca72195abd33d71b34a9272faf1e20"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-194.txt",
+      "bytes": 1956,
+      "sha256": "02714e72d88c755fbe78d466a7f20684c5e91154e5b1c620aaf744fe88fcb83d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-195.txt",
+      "bytes": 2023,
+      "sha256": "f2d9ff3003df516084dd9bbfa9edb3c8bfeddb4c126a502b35aabbe44ed52f32"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-196.txt",
+      "bytes": 2123,
+      "sha256": "8d153cb2084eff315971ae4d9d6117263a38227dcc63928e3028cbeba7cf9fe8"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-197.txt",
+      "bytes": 2035,
+      "sha256": "fd13955004b107abad9cd8a6758c9fb087fff7dbb25a90961735e6d15b7c5ad9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-198.txt",
+      "bytes": 1845,
+      "sha256": "4e5957e30eca0eed8817b3dba935bb1be5828785a1cdb1ed1f4e66570707d64d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-199.txt",
+      "bytes": 1850,
+      "sha256": "5d301b66bdbefc20b5d1d3601bb55f277c47316f1233b1e66e973e837fe8bde3"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-200.txt",
+      "bytes": 2052,
+      "sha256": "7259119cefeb9bf4a260038f1385480e9a0c967bc697bd36adf8d22cfb8833b6"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-201.txt",
+      "bytes": 1932,
+      "sha256": "2e603085aa983ba1581540a6377786fc0c3371e98b7f366843ff7a091eaf926c"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-202.txt",
+      "bytes": 1940,
+      "sha256": "bc9934c3f9eba6a3998d7b6d6379775398d5684dbf762d2d1b025e8194b1565e"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-203.txt",
+      "bytes": 2137,
+      "sha256": "9ba5bc82f8f6a1cdae9864e365a7356c9ed4b87d0903331f552809aa9468793e"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-204.txt",
+      "bytes": 1834,
+      "sha256": "85f13137a9db23738054a1546aded748849caf1dea50b1d4fe0cddad27139462"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-205.txt",
+      "bytes": 1901,
+      "sha256": "f83a9f38c272f1937c88db8fc4a0af2a86dc8af4df563efe17e08cdf564fd7da"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-206.txt",
+      "bytes": 1840,
+      "sha256": "f3ffbacefd59fb9235dbf075b8bb0a56ac37e3ead6401a24f88cc14b8df28588"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-207.txt",
+      "bytes": 2090,
+      "sha256": "100da40570b054f3455e55ed66a9227f56aacee34abff3da2fa271f17abe63ee"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-208.txt",
+      "bytes": 1816,
+      "sha256": "a279e1466ab156137360ca2ae0ed511d123759e00bfa6edab908256ecf655c3b"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-209.txt",
+      "bytes": 2033,
+      "sha256": "9edf439b3537fcbff7213cf769549cc445afdf293adafdf73ff84310470fcd23"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-210.txt",
+      "bytes": 1905,
+      "sha256": "bcc26065ff2a28abb6bf636ac5e6b0ce4ae0e42a232808b8d37684ff7bea5413"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-211.txt",
+      "bytes": 1991,
+      "sha256": "ae22945ed5edcb93feab7d3e61d7a2f098e8dcf9cdb1a8d989985b33a7332535"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-212.txt",
+      "bytes": 2014,
+      "sha256": "68fd50da9e8a61971ac04637ee44e0a1f7018ab40c275dbd344db45e056e0538"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-213.txt",
+      "bytes": 1892,
+      "sha256": "8a06bbe65e9719cb50cf70f5f89c2dc1436044af05036313fca67be1c4eeb5d0"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-214.txt",
+      "bytes": 2141,
+      "sha256": "01eff8e54ab42df5b92773fafaa48276e5c2b599c8d38a37e8d4f4b9459ee1cf"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/printed-215.txt",
+      "bytes": 414,
+      "sha256": "d26fb3c944ea2e7279d7365179245c246a7b119fdf31e100398583d15d19aa7d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-206.png",
+      "bytes": 618227,
+      "sha256": "cb261cab522cf458064103cc52a69816445bceff9de4c7e626800b8d6c5c694a"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-207.png",
+      "bytes": 694586,
+      "sha256": "591b4a416e4800b163459ff60e10d774d3d7894af265dc89332442cb829db784"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-208.png",
+      "bytes": 801456,
+      "sha256": "e3671acd6665657df61e8f820404e4ced841f120ffac95b6411694f540f47c1c"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-209.png",
+      "bytes": 752655,
+      "sha256": "ec0625e4d708d3c28e48e523449d4b921330a9d4a98308af9dac0269c3288066"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-210.png",
+      "bytes": 759790,
+      "sha256": "2f5d5f697c7f7cc72cb4ba2be779454b2a65eba4c68177d1b9de37ca4a08ae65"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-211.png",
+      "bytes": 674694,
+      "sha256": "c0cd4df692bca0b22f667a444717ac305a447fc3caa8307802068ac09aab6d75"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-212.png",
+      "bytes": 754302,
+      "sha256": "827338ee5391e13b90cc6afcc2eedf627fd2b44c8f92f23701acda6ab1761acd"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-213.png",
+      "bytes": 727198,
+      "sha256": "31f9caf0b43e1f82db704d49e692c9a309a5afabb2ba370d6683f5cfc49366d5"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-214.png",
+      "bytes": 707665,
+      "sha256": "6ca411febef4837d91e2f55e96311586dfc2acc4d746f8a9928a1453e8997f88"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-215.png",
+      "bytes": 737417,
+      "sha256": "cd39cfad53acf9dc778dbad3db83566d1f81b3c5e960a7ae3f3dc857136747a7"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-216.png",
+      "bytes": 754118,
+      "sha256": "b51bf4d9d568851f275359f8abf3e684facd45d9657c21d20be3e29b7e69a3b2"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-217.png",
+      "bytes": 743921,
+      "sha256": "caa48fe70ab41702509033c739e5680398ddf63a430c2e9997cfd6e66f41fd2c"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-218.png",
+      "bytes": 790663,
+      "sha256": "d68fab35c94bd19f666f4a3563665866d8434eb3114f44ade7596eda79b578f9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-219.png",
+      "bytes": 731804,
+      "sha256": "a5d5264814d6bd5c4416d7d2a174b0f1eb136f1f12fa4691b5d56662112d0151"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-220.png",
+      "bytes": 698264,
+      "sha256": "58f5be534c08cc3f2962bffeb4d5d582dd98aa909210f8a5ca6592f41eeb1ef4"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-221.png",
+      "bytes": 704214,
+      "sha256": "665992490094501b827481692ab6cd42735e32728962811ea63f2e4444964250"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-222.png",
+      "bytes": 785014,
+      "sha256": "8f8fe7c0c9b61befdc61cba9ffb6a3fe4e31c8500b96e36a4283286ab40b05c4"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-223.png",
+      "bytes": 767192,
+      "sha256": "0bf3849be2f5d05dc9c1892b12c2bdf35e0c7d38415b6691da82d5f6e023f08a"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-224.png",
+      "bytes": 761865,
+      "sha256": "2e466c76a2cb9b8b7080bdaf1014f02851603ac3cc0fcda3dbc3e03cc9478a3d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-225.png",
+      "bytes": 778567,
+      "sha256": "079ec2f8bf0eaf859bd26bf54e6c267b927cf5bd8b4da2f5cddeab00ceb6fc5b"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-226.png",
+      "bytes": 752565,
+      "sha256": "cb58e0b1aaec69577703822ff9e787b34cd107d857a9f66dc9ec70d7a628fc70"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-227.png",
+      "bytes": 758809,
+      "sha256": "d7f294ad840ab9fd6339ad46de805786782355c6dbba30cf4b7e1fb41df95587"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-228.png",
+      "bytes": 775270,
+      "sha256": "4d1da37656c0a2b3dd51c4203c019d9e1cf0163282278e873d5f8d681becb91a"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-229.png",
+      "bytes": 790562,
+      "sha256": "e350b886bc7f23e851418343a077112b799cee895efaddb622e4efc9e89dc7d9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-230.png",
+      "bytes": 726935,
+      "sha256": "e99e51d008361167c0ed912ede6c5a479c4f2ebc3039551bbb3daa9be9581085"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-231.png",
+      "bytes": 735657,
+      "sha256": "6b91f204776e40309378fbefb7620781479990ccc712fb363e8c1eb1e6809813"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-232.png",
+      "bytes": 731239,
+      "sha256": "d49b95bf95d63afa469f84cf8828da0786ff2ad6b5e6b9f7bef744ebbfc7c496"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-233.png",
+      "bytes": 732447,
+      "sha256": "70a9a58b35e5c44a1766ab37661ea87673ba35eb126c3d985b5889ab8eb221b9"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-234.png",
+      "bytes": 770037,
+      "sha256": "496e28bae9a955f7aa6df1a99eff8fca09ecb32313f3031e4560077cd48cd765"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-235.png",
+      "bytes": 741408,
+      "sha256": "e22a0a83a18bdbeb60fcd973b002f177c5ea4d8287abf91022fd928afd226724"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-236.png",
+      "bytes": 735393,
+      "sha256": "1c88586b28723e2e5cb395bc3f90cd0ee16a25e6a95567d2357b44210b669ada"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/scan-237.png",
+      "bytes": 259164,
+      "sha256": "576f1995eca0c1fa02a8a4566072d873104f17ee00be774a073c270e6f240e57"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-184-215.png",
+      "bytes": 957597,
+      "sha256": "3eca8a0b2bc8478244c33204e1a3433199a5105d36b95580f20495ebcd608747"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-189-190.png",
+      "bytes": 1496299,
+      "sha256": "0ab946dea99f9beb206bc10879f09cdbbdd3feaf03af050b4917d3e2a63e54cd"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-193-194.png",
+      "bytes": 1578398,
+      "sha256": "b9577670e0e48ed19afd8b1dcad960875ec26c0adee0fd447a170db83c26d32c"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-195-196.png",
+      "bytes": 1597596,
+      "sha256": "e7f62f26f82056c3b1b4c04de549e96dd113209512a886a3d9980bcd5e6f1005"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-197-198.png",
+      "bytes": 1506821,
+      "sha256": "b44bf63640094f3673352fb4dd8666c4386842e1d83ddac67c6c89d4ec003b6b"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-205-210.png",
+      "bytes": 1576196,
+      "sha256": "faea79341add1b0f0ccd8f9334e96712d9d966ed223bc35df9a6ae37e51c9fd8"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-211-212.png",
+      "bytes": 1572529,
+      "sha256": "086e431db9ccc9384b9533b578c732d12da3baf8a1a404c3d3033959a77b023d"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/view-printed-213-214.png",
+      "bytes": 1553418,
+      "sha256": "2b7b357b591cbabb07a61a7136de45008512d33a779a5f803c3e44f9a174ce90"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/wikisource-essay.html",
+      "bytes": 157661,
+      "sha256": "cb8f575ab745065af515e8f5cd5d96d7b938d457304a99ac01a5ad01ee3d61a8"
+    },
+    {
+      "path": "normative-wisdom-warrant-20261009/research-intermediates/james-primary/wikisource-essay.txt",
+      "bytes": 67542,
+      "sha256": "ab5a6daf87c4a1279a73c47c5f9be27a1fc806f34626a6e1b5be036823030ba2"
+    }
+  ],
+  "prior_control_files": [
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/authority-assessment.md",
+      "sha256": "a8b5375aa9a33aeafaf1c6f379333e672423a415743b24d34fa76a59ebf2ccaa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/ameri-reading/scoped-ownership-addendum.md",
+      "sha256": "9e8dd7029625998f2c43649bafaa2596ab31cc802d75161998d3ad63a6790034"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/PRIMARY_QUOTATION_CHECK.md",
+      "sha256": "0f125411379ba5ef5ef7289ef2f755bb516d0dc98d7fd17585a5f58311b1bb40"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c"
+    }
+  ],
+  "report": {
+    "path": "normative-wisdom-warrant-20261009/james-primary/REPORT.md",
+    "sha256": "7a482d25e1158d224e6b847cecdb12f3455629ee0aef091b83ff5d8a7493628e"
+  }
+}

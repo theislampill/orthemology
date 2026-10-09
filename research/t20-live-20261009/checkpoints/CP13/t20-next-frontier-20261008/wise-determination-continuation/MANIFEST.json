@@ -1,0 +1,17 @@
+{
+  "schema": "wise-determination-continuation-manifest-v1",
+  "recorded_at_utc": "2026-10-08T23:21:03.097440+00:00",
+  "files": {
+    "INPUT_BINDINGS.json": "1a60cf05895da5410311df4ae21745d0cc2a85b9557fe60576d643e7c8622b9f",
+    "READ_FIRST.md": "a39e64a065773c982c1a584b0e2cc7b42e7b4952fed83b220a32da59ae11d745",
+    "REPORT.md": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+    "RESEARCH_ACCOUNTING.json": "afb37651edf4498c09b63a762ce0ac19e950b595c0923736923e050a52f54c5c",
+    "SOURCE_READS.json": "7c3cefc13d1241a4fc0afe954c60608d71205dcccf0b5bd2d9564ed4cfa81902",
+    "review/RELATIONAL_PERFECTION_TRANSPORT.md": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414",
+    "sources/dar016-L0465-L0545-return.txt": "6585db506db8ff02508b62fea2f5aaba5a3f346f8c647dbe0eb0d96c1fe95890",
+    "sources/dar016-L0705-L0758-return.txt": "e92a7fa6bda08bbc4ef09c1050e73ee1eece5de9f732e4059ecb502267b0eaa6",
+    "sources/dar016-L1012-L1054-return.txt": "dab34028bba34d4f712f6191e8e9d76004c28ecac51b3fc9ef38d0291d388bb6",
+    "sources/dar016-extracted.txt": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352",
+    "sources/dar016.html": "dc6660430584470b6eadfd37771a3f2910de7dd469e77043a855d355f68dd155"
+  }
+}

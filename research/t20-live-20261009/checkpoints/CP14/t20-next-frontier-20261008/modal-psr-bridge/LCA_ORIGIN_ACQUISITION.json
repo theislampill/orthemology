@@ -1,0 +1,32 @@
+{
+  "retrieved_date_utc": "2026-10-09",
+  "url": "http://alexanderpruss.com/papers/LCA.html",
+  "http_status": 200,
+  "bytes": 486450,
+  "declared_charset": "windows-1252",
+  "source": {
+    "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.html",
+    "bytes": 486450,
+    "sha256": "39b925091ada11257ced21a7feee22d831a068e736a48ff8376e09949c033e91"
+  },
+  "plain_text": {
+    "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+    "bytes": 279352,
+    "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b"
+  },
+  "status": "Fresh origin body downloaded successfully; supersedes only earlier LCA origin-access limitation, not 2002 reply limitation.",
+  "historical_preserved": [
+    "sources/pruss-lca-indexed-bounded-passages.txt",
+    "sources/pruss-lca-taxicab-section-indexed.txt",
+    "sources/retrieval-status-gale-pruss-reply-oppy-lca.txt"
+  ],
+  "read_scope": [
+    "2.3.2.1 (basic anti-PSR argument and discussion of explanatory dissectivity)",
+    "2.3.2.2 (nonnecessitating explanation)",
+    "2.3.2.3 (libertarian choices)",
+    "2.3.5 (contrastive explanation)",
+    "4.1.1.6 (Taxicab)",
+    "Notes 10-12"
+  ],
+  "limits": "No whole chapter read. No 2002-body substitution. No cited external work read merely from citation. Source apparent God-is-explained-by-R wording retained."
+}

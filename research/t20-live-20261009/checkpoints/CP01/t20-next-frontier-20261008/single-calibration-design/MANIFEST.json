@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-08T07:44:23.337323+00:00",
+  "scope": "Additive universal-calibration stage; no closure or full stochastic/source validation.",
+  "files": [
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "b91baaecaf56f88ea87cdbfffec6a8cd7e5cde4e0b369ec22c30c64f842731c3",
+      "bytes": 1216
+    },
+    {
+      "path": "RESEARCH_ACCOUNTING.json",
+      "sha256": "48db4c391f052a1608b70cb28c669db660b6fc7f7fdcabdbfcacb0d03a6a9220",
+      "bytes": 1120
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "c22cc2fb5e4660c64fee9180ad526ad4db536d3953943915a50fbe320b1fe6c8",
+      "bytes": 768
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "8369681f7be7db1306f8ffb96f210e2c31245ee3bd40f94b11d6a19ab5eb1df7",
+      "bytes": 11527
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "3050fe44a966ad53e386ca493c81737c56cff27f4d8d37485e7577d708a973c4",
+      "bytes": 1546
+    },
+    {
+      "path": "results/DEVELOPMENT_RUN.log",
+      "sha256": "ec8dfa6f0de999f1f01b5e0d8492ef110fdb64e121d95d150463c885ebf5a874",
+      "bytes": 1790
+    },
+    {
+      "path": "results/FINAL_TESTS.log",
+      "sha256": "6e06ee38981afa98b1046d8314e3a50bf92f39bb430d226731c91a11abc078a8",
+      "bytes": 1790
+    },
+    {
+      "path": "results/FIRST_RUN.log",
+      "sha256": "0418dfd10abcf3129c27761f9bb1ea8d635727339cc24573baec2f975bcacde9",
+      "bytes": 1655
+    },
+    {
+      "path": "results/RESULTS.json",
+      "sha256": "b050e5cf2aba445efb42e61c2b8f20713b7ba992f9be4c1cbb29c693162a21ef",
+      "bytes": 15427
+    },
+    {
+      "path": "results/VERIFICATION.json",
+      "sha256": "287d79db7e7bf3a2ffb85470afb25e4733a230cfce2c6bbf99231ceace813748",
+      "bytes": 4859
+    },
+    {
+      "path": "src/crt_calibration.py",
+      "sha256": "8aa9f0b05291efdd876e9e9c2e4f04eeb09959b7b3d96adb1d6a4ee149faecec",
+      "bytes": 5074
+    },
+    {
+      "path": "src/export_results.py",
+      "sha256": "6917a924a2ef5dbb0ff6693ad429d402b81e43f8b50ada49049485be2de55e06",
+      "bytes": 1896
+    },
+    {
+      "path": "src/test_crt_calibration.py",
+      "sha256": "76cf268e728af85faea8ab56ae36525dba04ace25e24de08f596f5a78a61924c",
+      "bytes": 5692
+    },
+    {
+      "path": "src/verify_evidence.py",
+      "sha256": "7190da4e2fbb26cbdc4e08bb52c7d2feedfca1c0dc04af9c0447fbdea3366abf",
+      "bytes": 1912
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-09T02:36:22.024194+00:00",
+  "scope": "Bounded exact-diff readback only; no repeated source investigation or Lean replay.",
+  "accepted": true,
+  "acceptance": "The single added scope sentence accurately implements the review qualifications. Original verdict retained for the revised result at the stated final hash; no broader semantic, metaphysical, or closure acceptance.",
+  "previous_result_path": "particular-explanans-bridge-audit/RESULT.pre-review.md",
+  "previous_result_sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6",
+  "final_result_path": "particular-explanans-bridge-audit/RESULT.md",
+  "final_result_sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c",
+  "only_change": "These are sufficient repairs, not proved necessary, unique, or weakest; the positive repair theorems assume a wholly particular constituent, whereas the source\u2019s phrase \u201cparticular fact\u201d is less explicit.",
+  "all_other_original_input_hashes_unchanged": true,
+  "original_review_preserved_sha256": "76f6b4f4328bea5750217072ad0ca5e6b35e928d8cd6a9682b2b43b629d52fd1",
+  "original_input_record_preserved_sha256": "f396096a034ae93e694cef9bc9e54a0a4a146e3db4577d8311c3b7838e8ebb3a"
+}

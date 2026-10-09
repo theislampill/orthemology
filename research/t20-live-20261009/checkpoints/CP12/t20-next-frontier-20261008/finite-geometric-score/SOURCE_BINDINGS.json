@@ -1,0 +1,65 @@
+{
+  "sources": [
+    {
+      "path": "../sharp-skyline-information/RESULT.md",
+      "sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+      "bytes": 21706,
+      "role": "Sharp compensated moment, weighted L2 bound, uniform likelihood window, both-law tail, and endpoint started-vector lower bound."
+    },
+    {
+      "path": "../sharp-skyline-information/MANIFEST.json",
+      "sha256": "2275f71c24bed4789a36dcb5c6e143fdc82d95554706c6c452fa39a09567c39f",
+      "bytes": 1569,
+      "role": "Frozen sharp author manifest and bound payload currentness."
+    },
+    {
+      "path": "../sharp-skyline-information/SOURCE_BINDINGS.json",
+      "sha256": "b989f0941edbbea22750b6d3b8aece35e709000da99031190749175967fa82b4",
+      "bytes": 2575,
+      "role": "Sharp predecessor dependencies and their byte bindings."
+    },
+    {
+      "path": "../sharp-skyline-information-review/REVIEW.md",
+      "sha256": "3527ce6bd1c625dfb10c9b425997a015549c911cd24d9afe62fffb6b0ba5db90",
+      "bytes": 14676,
+      "role": "Independent written sharp-proof review."
+    },
+    {
+      "path": "../sharp-skyline-information-review/REVIEW_RECEIPT.json",
+      "sha256": "efab264009ea9ed84260a7f23a957c61c7cd3a4eccbfcb667c107a593e35ba41",
+      "bytes": 1705,
+      "role": "Later digest-bound sharp PASS receipt; no automatic review of the present packet."
+    },
+    {
+      "path": "../sharp-skyline-information-review/SOURCE_BINDINGS.json",
+      "sha256": "7166335b40cc9b1afe3acd2e9de99e676d6b7b940f5411ed187cff156d843e1a",
+      "bytes": 3013,
+      "role": "Independent sharp review source binding currentness."
+    },
+    {
+      "path": "../baseline-skyline-moments/RESULT.md",
+      "sha256": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+      "bytes": 13251,
+      "role": "Exact rational baseline centering."
+    },
+    {
+      "path": "../finite-skyline-readout/RESULT.md",
+      "sha256": "6687a8f2f56290427297bba1cfef6c8c14a58878ffa0010805550f0cd632b0d5",
+      "bytes": 12282,
+      "role": "Grid extraction, query count, collision resolution and count expectation bounds."
+    },
+    {
+      "path": "../finite-skyline-readout-review/REVIEW.md",
+      "sha256": "0111a2e0a649842cd5def5ddc8ce2f8350a20844a7c5ee51667fb03182df82d0",
+      "bytes": 7305,
+      "role": "Independent written finite-extraction review context."
+    },
+    {
+      "path": "../skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "bytes": 9091,
+      "role": "Deterministic localized likelihood polynomial and geometric definitions."
+    }
+  ],
+  "status_note": "Sharp author manifest retains its earlier pending label. The later review receipt binds the same result digest with PASS; currentness is checked, and no new-packet acceptance is inferred."
+}

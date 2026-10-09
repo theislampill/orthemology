@@ -1,0 +1,261 @@
+{
+  "checked_utc": "2026-10-08T12:11:17.678924+00:00",
+  "author_root": "t20-next-frontier-20261008/activity-source-boundary",
+  "author_manifest": {
+    "bytes": 1499,
+    "sha256": "f55f676f9904bb53e513177cd23ae0114ea9c33a3bad947cae098ec252bce79c"
+  },
+  "author_manifest_checks": [
+    {
+      "path": "CONDITIONAL_SCOPE.md",
+      "expected": {
+        "bytes": 8169,
+        "sha256": "3f761b354e0c287ba501a5610b7650fadf72b1cb170ba99e1ba66961d0918e31"
+      },
+      "actual": {
+        "bytes": 8169,
+        "sha256": "3f761b354e0c287ba501a5610b7650fadf72b1cb170ba99e1ba66961d0918e31"
+      },
+      "match": true
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "expected": {
+        "bytes": 4945,
+        "sha256": "bf3681eb9bc66d5f84cd0f8a54b53bafad2a1533ed9b2ba236e597702122b9da"
+      },
+      "actual": {
+        "bytes": 4945,
+        "sha256": "bf3681eb9bc66d5f84cd0f8a54b53bafad2a1533ed9b2ba236e597702122b9da"
+      },
+      "match": true
+    },
+    {
+      "path": "OPERATIONS.jsonl",
+      "expected": {
+        "bytes": 1032,
+        "sha256": "f709dd40de8a172d6d35163329df128e677032727839b7a626ba6120f5929280"
+      },
+      "actual": {
+        "bytes": 1032,
+        "sha256": "f709dd40de8a172d6d35163329df128e677032727839b7a626ba6120f5929280"
+      },
+      "match": true
+    },
+    {
+      "path": "RESULT.md",
+      "expected": {
+        "bytes": 17368,
+        "sha256": "09a8abc2182bb1bbb4b13e7a776fd11f69a1d7d1fb0622622d207bbd695495eb"
+      },
+      "actual": {
+        "bytes": 17368,
+        "sha256": "09a8abc2182bb1bbb4b13e7a776fd11f69a1d7d1fb0622622d207bbd695495eb"
+      },
+      "match": true
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "expected": {
+        "bytes": 2824,
+        "sha256": "a337c2b6f0eecc10c4213a6accef96378aaf4c88ecdcff365d77fa1499acc9e0"
+      },
+      "actual": {
+        "bytes": 2824,
+        "sha256": "a337c2b6f0eecc10c4213a6accef96378aaf4c88ecdcff365d77fa1499acc9e0"
+      },
+      "match": true
+    },
+    {
+      "path": "results/VERIFICATION.json",
+      "expected": {
+        "bytes": 1469,
+        "sha256": "8c843e88a8ad07f20c9ea65bee6e4642b1838964ab71ea83d8be1dd35aaeaee6"
+      },
+      "actual": {
+        "bytes": 1469,
+        "sha256": "8c843e88a8ad07f20c9ea65bee6e4642b1838964ab71ea83d8be1dd35aaeaee6"
+      },
+      "match": true
+    },
+    {
+      "path": "sources/salim-2-139-150-return.txt",
+      "expected": {
+        "bytes": 23777,
+        "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f"
+      },
+      "actual": {
+        "bytes": 23777,
+        "sha256": "9225c107b5e3b64969058b884e98e5be10b85ead147c8baa40a9cbbc2e2c6d0f"
+      },
+      "match": true
+    },
+    {
+      "path": "sources/salim-2-20-25-return.txt",
+      "expected": {
+        "bytes": 10346,
+        "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c"
+      },
+      "actual": {
+        "bytes": 10346,
+        "sha256": "28805be96258b94c7472453381db47c6860e2659d2c56ec4c79bc2e20da0547c"
+      },
+      "match": true
+    },
+    {
+      "path": "sources/shura6-L228-247-return.txt",
+      "expected": {
+        "bytes": 13370,
+        "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1"
+      },
+      "actual": {
+        "bytes": 13370,
+        "sha256": "6b67fbe5613d49616e931161df821eb8b43d9ff6ea4ff68fea971387d360a5e1"
+      },
+      "match": true
+    }
+  ],
+  "inherited_input_checks": [
+    {
+      "id": "starting_audit",
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "sha256": "06e3cf7c178f801033d678dac3b6eb84297d74504ffd0d9811644abb7b536705",
+      "bytes": 10426,
+      "match": true
+    },
+    {
+      "id": "starting_bindings",
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/INPUT_BINDINGS.json",
+      "sha256": "e5f51852a89c891a1f5e5b0564839f9f48ae681af0880b30093ab3dc98674e5f",
+      "bytes": 9589,
+      "match": true
+    },
+    {
+      "id": "warrant_appraisal",
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "match": true
+    },
+    {
+      "id": "activity_source_audit",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+      "sha256": "3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b",
+      "bytes": 18101,
+      "match": true
+    },
+    {
+      "id": "activity_source_mapping",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+      "sha256": "054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101",
+      "bytes": 5023,
+      "match": true
+    },
+    {
+      "id": "historical_source_receipts",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+      "sha256": "f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73",
+      "bytes": 6188,
+      "match": true
+    },
+    {
+      "id": "later_explanatory_audit",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+      "sha256": "3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50",
+      "bytes": 10937,
+      "match": true
+    },
+    {
+      "id": "safadiyya_range3",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/range-03/RANGE_APPRAISAL.md",
+      "sha256": "fd0ce0a8905092d10e5c9e1377b4a28d05af8176fda2e923b3952cef34b7632b",
+      "bytes": 14830,
+      "match": true
+    },
+    {
+      "id": "safadiyya_range4",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/range-04/RANGE_APPRAISAL.md",
+      "sha256": "3f20b71f25971a63ae26da28f3f912248c12ec20756a72afeea0e0221ab02d47",
+      "bytes": 15086,
+      "match": true
+    },
+    {
+      "id": "eligibility_finding",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+      "bytes": 19590,
+      "match": true
+    },
+    {
+      "id": "eligibility_review",
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "sha256": "f63cb6c0b19c88ab77c1cd9d62cd470ab5d6bc0c3cbfeb46ea2c0080b44471d6",
+      "bytes": 21866,
+      "match": true
+    },
+    {
+      "id": "domain_addendum",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0",
+      "bytes": 6167,
+      "match": true
+    },
+    {
+      "id": "akmaliyya_retained_primary",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088,
+      "match": true
+    },
+    {
+      "id": "root_scope",
+      "path": "t20-next-frontier-20261008/ROOT_RESEARCH_CONTROL.md",
+      "sha256": "4ee2604b09aceb6f9d9de4b6b595255d95f542fb671b93a7ff016c1c6cce2a28",
+      "bytes": 2117,
+      "match": true
+    }
+  ],
+  "live_source_line_checks": [
+    {
+      "id": "SF23",
+      "range": [
+        1520,
+        1546
+      ],
+      "returned_line_count": 27,
+      "expected_line_count": 27,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    },
+    {
+      "id": "SF142",
+      "range": [
+        2237,
+        2301
+      ],
+      "returned_line_count": 65,
+      "expected_line_count": 65,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    },
+    {
+      "id": "UShura",
+      "range": [
+        228,
+        247
+      ],
+      "returned_line_count": 20,
+      "expected_line_count": 20,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    }
+  ],
+  "all_author_entries_match": true,
+  "all_inherited_bindings_match": true,
+  "all_live_source_lines_match": true,
+  "author_files_unchanged_from_declared_frozen_manifest": true,
+  "formal_check": "Direct inspection of all-integer definitions and hand proofs; no executable model, proof kernel or full metaphysical-consistency verification claimed.",
+  "review_verdict": "PASS at the declared bounded scope; no substantive correction required.",
+  "novelty_ceiling": "Source-checked refinement of the inherited coverage/application burden; not a new independent metaphysical obstacle.",
+  "scope": "Only sibling review files written; no protected integration or research closure."
+}

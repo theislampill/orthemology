@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-10-08T10:49:03.014557+00:00",
+  "fresh_model_assertions": "PASS",
+  "saved_results_semantically_equal": "PASS after JSON normalization of tuple/list and integer/string key encoding",
+  "deterministic_stdout_byte_equal": "PASS",
+  "conditional_truth_preservation_checks": 2048,
+  "nonvacuous_accepted_true_input_cases": 32,
+  "predecessor_input_bindings": "PASS",
+  "public_source_summary_words": 188,
+  "source_bodies_absent": "PASS",
+  "fresh_inherited_source_manifests": "PASS",
+  "fresh_inherited_imported_trust_zero": "PASS",
+  "full_dependency_rebuild": false,
+  "novelty": "conditional implementation discriminator and exclusion-transport boundary; not a new general modus-ponens theorem",
+  "initial_check_corrections": [
+    "First stdout comparison found an extra newline from print; changed print to avoid double newline and fresh byte comparison passed.",
+    "Initial direct Python-result-to-JSON comparison failed on tuple/list and numeric/string key serialization; JSON-normalized equality passes. Neither was a semantic counterexample."
+  ],
+  "research_duration_seconds": null
+}

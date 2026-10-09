@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "files": {
+    "CONDITIONAL_COVER_CONTROLS.json": "97043acc64e6e6818a818094f48d84146ec9da2aa1add6a17e0db195138598ec",
+    "CONDITIONAL_COVER_REPLAY.log": "97043acc64e6e6818a818094f48d84146ec9da2aa1add6a17e0db195138598ec",
+    "COVER_DISCOVERY_CONTROLS.json": "28c16d17acf55d77a9f970380d7c6a696af799c579b98ae9c9aa0776f10715d6",
+    "COVER_DISCOVERY_REPLAY.log": "28c16d17acf55d77a9f970380d7c6a696af799c579b98ae9c9aa0776f10715d6",
+    "INDEPENDENT_CONTROLS.json": "be142952daee5b12ad81bcc8f9929447d2ea758cc607104150f857b87943116d",
+    "INDEPENDENT_REPLAY.log": "be142952daee5b12ad81bcc8f9929447d2ea758cc607104150f857b87943116d",
+    "PRIOR_SHA256.json": "bbbc5029e2d2e3599ab2fed703be6e68250744d8cd266dd99910c42ac5b19f85",
+    "REVIEW.md": "21eed2890dfbc26587da6c3ce62f392b29b655782f33e1454c19b1871ed150b2",
+    "SOURCE_AUDIT.md": "690ccbac8fbdc7614164bff73263ad16173f0ee8e9e9bd7c9262d3113f337885",
+    "SOURCE_BINDINGS.json": "7125c3a9f675b6b8fec99d8a4e18dde8e4b294fbc811935b8de7c7b1869f5bab",
+    "author_replay/exact_controls.py": "6c4859846a169b94ba75e4a8087cfc432dc511d76a993a9f2e8f5e597e5e5a45",
+    "author_replay/replay.log": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+    "author_replay/results/exact_controls.json": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+    "conditional_cover_controls.py": "9512abccb4908977756ee2013e0c9fafd5334c50824c96820e73adefa1078d35",
+    "cover_discovery_controls.py": "0f772510c4a21737b22db80e1fb28ca486c3e678c2e97fe49e1e23593cd7e40a",
+    "independent_controls.py": "127d3389bf32c6709dabfb956b1dc22ef850c041f45ceed2855cac67e6449000",
+    "verify_review.py": "5453b94f7de0170c25464943b6b95412ead4b8d2e7eb087fd02a8d0fe569f828"
+  },
+  "scope": "Sealed proof audit, independent controls, copied author replay, source bindings, and verifier. Receipt and generated verification output are outside this nonrecursive manifest."
+}

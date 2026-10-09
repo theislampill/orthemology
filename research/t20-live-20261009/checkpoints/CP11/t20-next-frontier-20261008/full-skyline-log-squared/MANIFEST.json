@@ -1,0 +1,41 @@
+{
+  "scope": "Separate scratch-only log-squared author packet",
+  "status": "Frozen for independent review",
+  "files": [
+    {
+      "path": "RESULT.md",
+      "sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7",
+      "bytes": 21418
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "60e33982b5775b38aa6a257654c7bb98d3cb26fe3e2c1d49fb8e918f88c735de",
+      "bytes": 7118
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "5f78bbfdc8ad6a9fcb9415ec06efa3edd85e7acb50585a2fae71d06ba283fafb",
+      "bytes": 2254
+    },
+    {
+      "path": "controls.py",
+      "sha256": "43b2eb32343777d5094c2564f4641d99fcd6354bfab3a130b9dd8d92e3c6ca8c",
+      "bytes": 8352
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "6de20900a23a8578bfe57dfab63f2147c517c5a8cd606a74ff02b4646c3a5211",
+      "bytes": 52456
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "a2b159568211b665dc8e829f3babfc7bd0415cd47eb897961b0f9b9392c31fb4",
+      "bytes": 220
+    },
+    {
+      "path": "ACTIVITY_LOG.json",
+      "sha256": "864d8e84ae9ed159c8bc09ff25a1405e0626323d0b2d4cc098f81a9f0e59fc6c",
+      "bytes": 895
+    }
+  ]
+}

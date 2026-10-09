@@ -1,0 +1,215 @@
+{
+  "created_utc": "2026-10-08T11:14:55.861209+00:00",
+  "status": "Bounded supplemental primary comparison; exact 1993 target blocked; no final integration",
+  "requested_source": {
+    "author": "Fred Dretske",
+    "title": "Mental Events as Structuring Causes of Behaviour",
+    "year": 1993,
+    "pages": [
+      121,
+      136
+    ],
+    "url": "https://academic.oup.com/book/50168/chapter-abstract/422029519",
+    "doi": "10.1093/oso/9780198239291.003.0008",
+    "scope_inspected": "Publisher-indexed metadata and complete public abstract only",
+    "full_text_read": false,
+    "obstruction": "Indexed OUP page explicitly says current access is absent; direct abstract, chapter and DOI opens returned internal/access failures in web tool.",
+    "lawful_searches": "Exact title, Behavior/Behaviour variants, PDF, author and university domains; PhilPapers no archived text. Independent locator search confirmed no verified lawful full chapter and only unverified Google Books preview availability.",
+    "not_attempted": [
+      "access-control circumvention",
+      "purchase",
+      "third-party outreach",
+      "dubious book-copy downloads"
+    ],
+    "consequence": "No full 1993 primary-argument test credit."
+  },
+  "later_primary": {
+    "author": "Fred Dretske",
+    "title": "Psychological vs. Biological Explanations of Behavior",
+    "year": 2004,
+    "journal": "Behavior and Philosophy 32",
+    "pages": [
+      167,
+      177
+    ],
+    "url": "https://store.behavior.org/httpdocs/resources/157.pdf",
+    "source_host": "Cambridge Center for Behavioral Studies publisher",
+    "pdf_pages": 12,
+    "printed_content_pdf_pages": [
+      1,
+      11
+    ],
+    "last_pdf_page": "blank",
+    "full_article_continuous_read": true,
+    "batches_printed": [
+      [
+        167,
+        172
+      ],
+      [
+        173,
+        177
+      ]
+    ],
+    "notes_read": true,
+    "visual_reread_printed": [
+      170,
+      171,
+      175,
+      176
+    ],
+    "method": "pdftotext -layout continuous text; local renders at decisive argument and qualification pages",
+    "source_body_in_deliverables": false,
+    "bytes": 136725,
+    "sha256": "fdcc6f12da029c361e8f42ddd0128e2b344afc999946fabb4dc2c01adaeda6f8"
+  },
+  "comparison_primary": {
+    "author": "Victor Reppert",
+    "title": "The Argument from Reason (1998)",
+    "url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf",
+    "fresh_continuous_displayed": [
+      19,
+      25
+    ],
+    "adjacent_visible": [
+      26
+    ],
+    "pdf_pages_inspected": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "visual_reread_displayed": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "predecessor_full_paper_credit": "Predecessor receipt, not newly claimed here",
+    "method": "Existing layout extraction read both columns continuously; an attempted geometric half-page extraction clipped columns because of PDF page geometry, so it was rejected and replaced by full-page layout text and visual verification.",
+    "2003_book_not_checked": true,
+    "bytes": 186104,
+    "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1"
+  },
+  "objection_primary": {
+    "author": "Lynne Rudder Baker",
+    "title": "Dretske on the Explanatory Role of Belief",
+    "year": 1991,
+    "journal": "Philosophical Studies 63",
+    "pages": [
+      99,
+      111
+    ],
+    "url": "https://uh.edu/~garson/BakeronDretske.pdf",
+    "source_host": "University of Houston teaching copy; copyright retained; not an author-hosted manuscript",
+    "pdf_pages": 14,
+    "pdf_cover": 1,
+    "continuous_pdf_pages": [
+      2,
+      14
+    ],
+    "continuous_printed": [
+      99,
+      111
+    ],
+    "notes_read": true,
+    "method": "Scan-only PDF; tesseract OCR pages individually, continuous reading; decisive scanned pages visually verified",
+    "batches_printed": [
+      [
+        99,
+        104
+      ],
+      [
+        105,
+        111
+      ]
+    ],
+    "visual_reread_printed": [
+      108,
+      109
+    ],
+    "is_objection_not_settled_verdict": true,
+    "bytes": 945440,
+    "sha256": "c912f4d38d74a3542ac347e20ae7068cb1eeef4d30f0a3b4c84c1deaee90f968"
+  },
+  "not_used_as_primary": [
+    "SEP overview",
+    "JeeLoo Liu handout",
+    "PhilPapers summaries",
+    "search-engine summaries of other critics"
+  ],
+  "predecessors_read": [
+    "../reason-causation-bridge/INDEPENDENT_ASSESSMENT.md",
+    "../reason-causation-bridge/EXCLUSION_TRANSPORT.md",
+    "../reason-causation-bridge/READING_PROVENANCE.json",
+    "../reason-causation-bridge/primary-check/primary-source-receipt.md",
+    "../reason-causation-bridge/primary-check/source-manifest.json",
+    "../productive-identifiability/RESULT.md"
+  ],
+  "limits": [
+    "Historical-function constitutive proposal inspected in actual reply; complete content theory and rational-basing application not validated",
+    "No representation-as-propositional-content inference from indicator tracking",
+    "No present rational basing, conscious grasp or warrant model",
+    "No empirical trials",
+    "No complete present physical duplicate claim",
+    "Past acquisition intervention is not a future continuation from a fixed complete present state",
+    "No original-peer interpretation of dependent mechanisms",
+    "No protected edits, final integration or T20 closure",
+    "No whole-book or whole-corpus reading",
+    "No copyrighted source bodies in delivery"
+  ],
+  "reply_primary": {
+    "author": "Fred Dretske",
+    "title": "How Beliefs Explain: Reply to Baker",
+    "year": 1991,
+    "journal": "Philosophical Studies 63",
+    "pages": [
+      113,
+      117
+    ],
+    "doi": "10.1007/BF00376000",
+    "url": "https://www.uh.edu/~garson/Dretske%27s%20Reply%20to%20Baker.pdf",
+    "discovery_page": "https://www.uh.edu/~garson/SyllabusMeaning2011.htm",
+    "discovery_method": "Fetched public university syllabus after indexed search found it; parsed actual href for Reply to Baker; followed it without login or access circumvention.",
+    "source_host": "University of Houston teaching copy, copyright retained",
+    "pdf_pages": 6,
+    "cover_pdf_page": 1,
+    "continuous_printed_read": [
+      113,
+      117
+    ],
+    "continuous_pdf_pages_read": [
+      2,
+      6
+    ],
+    "method": "Scan-only source; tesseract OCR of every page, continuous full response read; rendered decisive pages visually reread",
+    "visual_reread_printed": [
+      115,
+      116,
+      117
+    ],
+    "notes": "No separate notes section; entire argumentative response and closing affiliation read",
+    "bytes": 404536,
+    "sha256": "b77ae12b8f0499af2073469000d17cd03ba4d19d3d3346aa12287fcee768ac4e",
+    "first_pass_unavailability": {
+      "author": "Fred Dretske",
+      "title": "How Beliefs Explain: Reply to Baker",
+      "year": 1991,
+      "pages": [
+        113,
+        117
+      ],
+      "doi": "10.1007/BF00376000",
+      "url": "https://link.springer.com/article/10.1007/BF00376000",
+      "metadata_verified": "Indexed PhilPapers record https://philpapers.org/rec/DREHBE",
+      "obstruction": "Publisher open inaccessible and PhilPapers direct open403; targeted searches did not locate an eligible open primary copy.",
+      "body_read": false,
+      "no_claim_reply_refuted": true,
+      "record_status": "Historical first-pass record, superseded by university-copy acquisition before package freeze"
+    },
+    "subsequent_publisher_check": "Ordinary curl retrieved Springer landing page, HTTP200 with no-access metadata and subscription preview/purchase notice; no full-text access or purchase. Web tool had failed. A Python requests attempt failed locally because that library was absent; curl then succeeded for public landing metadata.",
+    "source_body_in_deliverables": false,
+    "appraisal_change": "No final Baker-wins claim. Actual reply rejects the same-role premise via acquisition/current-exercise and token/type distinctions. Positive historical-function proposal assessed with its remaining content/rational-basing burden."
+  }
+}

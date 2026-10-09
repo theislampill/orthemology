@@ -1,0 +1,115 @@
+{
+  "date_utc": "2026-10-08",
+  "files": [
+    {
+      "path": "INPUT_BINDINGS.json",
+      "sha256": "f4b38a100363e2dcd816a4692755fffddfb677f0033cd20596ca59d4ae44c883",
+      "bytes": 4914
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "6f410587bba2fffa381379d359144771f2b84b33026170b5db73d67566ab3bb1",
+      "bytes": 634
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "38b5e3966106994a033b07005787ea135cef5195df75fbec366c8e24b73e435b",
+      "bytes": 20537
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "949761dfbe3fe9047737819f579fe376c68e384838c7207d38a37ef33e863f5f",
+      "bytes": 969
+    },
+    {
+      "path": "REVIEW_RESPONSE.md",
+      "sha256": "3c3bddbb7e2fdc5275f3ade9bb520e858f673744726cdf81ca003acf56efd7b4",
+      "bytes": 1333
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "sha256": "e902d0b09c518362302f702fcc78ddecc9bf191ddc1dc1da71ec399dd88e4776",
+      "bytes": 6789
+    },
+    {
+      "path": "sources/ganya2026.html",
+      "sha256": "73dd973bbc09ffb649bb0e0e5564a10defc200be59231ffabf285c190f7b86da",
+      "bytes": 315907
+    },
+    {
+      "path": "sources/ganya2026.txt",
+      "sha256": "efb71ed841b52de74c23efda598ddfaa75000e4e739f229ade7c8c73fcbbe615",
+      "bytes": 52409
+    },
+    {
+      "path": "sources/grim2000.pdf",
+      "sha256": "7694b5b40ace67d0205906ffd5ddbe62944479062d82b70c335fe9ce5aacbb14",
+      "bytes": 59057
+    },
+    {
+      "path": "sources/grim2000.txt",
+      "sha256": "36344bb01f670271ba6117be969767f3726235a86811108125e1fa837ef86469",
+      "bytes": 39051
+    },
+    {
+      "path": "sources/lewis-verify-08.png",
+      "sha256": "62eff20a508334441327a5aaa432b715b53e50ab013011c6aa53a6095746e263",
+      "bytes": 169934
+    },
+    {
+      "path": "sources/lewis-verify-09.png",
+      "sha256": "cbcc28f2d99954a01b1c7220b619447b84c2f050ad69aabcb7889b1543b8562d",
+      "bytes": 168072
+    },
+    {
+      "path": "sources/lewis1979-decoded.txt",
+      "sha256": "78da95d6ea9b4d10bff4811581ffa34e44e2a248409d53919b5518e8c6d30a5f",
+      "bytes": 85968
+    },
+    {
+      "path": "sources/lewis1979.pdf",
+      "sha256": "846039c2e2c9b3b1401a4cb9387279a3071c4e69d5dd85f28dc2878575c69b2b",
+      "bytes": 7291313
+    },
+    {
+      "path": "sources/lewis1979.txt",
+      "sha256": "a80487f153238d44cbf6de2d9e2c475ded6e1adc34cf2c846e7947645568df53",
+      "bytes": 85968
+    },
+    {
+      "path": "sources/perry1979.pdf",
+      "sha256": "844910ec84480761100cb26c9d88036afb10df7d69f02f6c5d08c7b47885facb",
+      "bytes": 5007766
+    },
+    {
+      "path": "sources/perry1979.txt",
+      "sha256": "4b378ab11f46d002f4ec2fd8d62cda5a3c4e8ba18b0277d99b84770a87d7562c",
+      "bytes": 49805
+    },
+    {
+      "path": "sources/torre-verify-08.png",
+      "sha256": "f68ddcbfa803032f384be10ce055956ea5c7f646fc2f7f96da06e51501dd22f1",
+      "bytes": 252289
+    },
+    {
+      "path": "sources/torre-verify-09.png",
+      "sha256": "be63d461365a1bf7cf2d56eb197c63ca541bba97556e927c517f0c66ac02e09d",
+      "bytes": 259804
+    },
+    {
+      "path": "sources/torre2006-published.pdf",
+      "sha256": "4c300df8b71353f2e0df0458156738cfbc0bdd7f889cbe80a912f585c4403134",
+      "bytes": 226118
+    },
+    {
+      "path": "sources/torre2006-published.txt",
+      "sha256": "16a3cc88a440c523d2113ea869e87a6ba19f1de8aebf138628c7a54caa471967",
+      "bytes": 33492
+    },
+    {
+      "path": "sources/urls.json",
+      "sha256": "5f0432518ae053d15dc9a2655adef3f33f30f66ca0bf73c3408f0d633d04bbc4",
+      "bytes": 443
+    }
+  ]
+}

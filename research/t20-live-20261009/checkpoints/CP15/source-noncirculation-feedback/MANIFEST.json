@@ -1,0 +1,175 @@
+{
+  "scope": "Bounded new report and evidence capture; no protected/inherited file writes performed by this task. Pre-edit report preserved before explicit redundant-route scope addition.",
+  "files": [
+    {
+      "path": "source-noncirculation-feedback/INHERITED_RECORD_BINDINGS.json",
+      "sha256": "4cfb0d106fce18e2e51495b2a4dcc61c7443b7ce3f89fa1c42f0270d78579599",
+      "bytes": 2307
+    },
+    {
+      "path": "source-noncirculation-feedback/INTEGRITY_CHECK.json",
+      "sha256": "a527de500e7ad6d7cf82c4c83e1ced006ebf8d152cf6c1efe2196730155e45ee",
+      "bytes": 6594
+    },
+    {
+      "path": "source-noncirculation-feedback/RESULT.before-redundant-route-scope.md",
+      "sha256": "cac089f7d9091317e0ad02d071f9092696741134358561451ebc9dc48ad1a743",
+      "bytes": 19677
+    },
+    {
+      "path": "source-noncirculation-feedback/RESULT.md",
+      "sha256": "5c27711184ba09865011d77573cc8cca8c2195755f443117bf66044fbb209b13",
+      "bytes": 20129
+    },
+    {
+      "path": "source-noncirculation-feedback/SOURCE_READS.json",
+      "sha256": "9aa3d46b41b80d5e8f2864b091e27e323eb288ab0845a5aab18df7a6412e100c",
+      "bytes": 17583
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/F1-physical-1-125.txt",
+      "sha256": "491868bbe980aeda7dae527c9b342c9258d9f7c6ef0bb7df0850deb6905bda35",
+      "bytes": 14629
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/F2-physical-1-104.txt",
+      "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0",
+      "bytes": 4515
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I1-physical-1-112.txt",
+      "sha256": "b6c3cc73d9607bd26acd1656773c91efe0aa19c9f22afe235d0add15be9b807d",
+      "bytes": 19436
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I1-physical-140-189.txt",
+      "sha256": "e1e6396f00c260f4eb28cddac9e4131cff72ec5aac67b9c502a2e140cb4a4ce4",
+      "bytes": 7393
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I2-physical-1-146.txt",
+      "sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "bytes": 26281
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I3-physical-1-62.txt",
+      "sha256": "4889214d7b7bbbc777fa3091611d16555a38b6221714be520e4578e5adeb01d7",
+      "bytes": 10432
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I3-physical-224-241.txt",
+      "sha256": "d7d6a3e2f9972cf4b6b47eeecdea44bee6e7d4a989f027f0ec1fbb0a6fb6fbb9",
+      "bytes": 4198
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I4-physical-1-120.txt",
+      "sha256": "0a13207c7f28cc22b2a2815380705e39a798981cd2f822999c65103c011a2d01",
+      "bytes": 13127
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I5-physical-1-77.txt",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "bytes": 8178
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I6-physical-1-141.txt",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "bytes": 6940
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/I7-physical-1-5.txt",
+      "sha256": "d5a8cca55a693f843544e8e52b9dc1e2b50b125eacbceb57568f552a9711710a",
+      "bytes": 1056
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P1-physical-1-9.txt",
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+      "bytes": 4822
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P2-physical-1-41.txt",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "bytes": 22494
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P3-physical-305-359.txt",
+      "sha256": "92c7e8a0cd109ad67428dc5ac27f0b6b2c6cde4414ad80bd1ac1ec629bafbb0d",
+      "bytes": 46715
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P4-physical-720-747.txt",
+      "sha256": "6bfb0e2f208d4ed222f2cadca74ab1d9a1d35ea65d056599373c364fe0c419a0",
+      "bytes": 16443
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P5-physical-209-241.txt",
+      "sha256": "18b3143f321962d489cb7172535f5434cad766ff1aa0575f6de6b1dc5e96a3d5",
+      "bytes": 14653
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P5-physical-590-613.txt",
+      "sha256": "04a8d532bb5a867779eab8b5a1b1a95f89f497be385a3c060c2a4548bd04b639",
+      "bytes": 11932
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P6-physical-138-176.txt",
+      "sha256": "584ad05ca54babc15553fe63f09a93dfef1056345a9196d50431595c83c42c17",
+      "bytes": 3468
+    },
+    {
+      "path": "source-noncirculation-feedback/read-selections/P6-physical-50-103.txt",
+      "sha256": "9e98181b0fe15a354af75438a069f5174212da350170ae2c8b19f3b7f4ec9ea2",
+      "bytes": 4670
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/ACQUISITION.json",
+      "sha256": "72ac37aea14811df2f83d0de35ede0fbb09345750d054eb3b3fe370c8098a0bb",
+      "bytes": 1042
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/dar013.html",
+      "sha256": "56b55f4c6ef0658cb0778cd76256609793476c54d64d98f4afac5eda29628b6e",
+      "bytes": 384066
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/dar013.txt",
+      "sha256": "6d2f2ac5763816ebe70e2cc83de807a31c9c0c54b5fa6bc3fcc4491e7f6c1b79",
+      "bytes": 381035
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/extract_reacquired.py",
+      "sha256": "3fffbd79f5aefb1de1d931d9ea81f2fe8b7437054fba0dbf47c58917d010123e",
+      "bytes": 1381
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj1-item96.html",
+      "sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+      "bytes": 235494
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj1-item96.txt",
+      "sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+      "bytes": 4822
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj2-item156.html",
+      "sha256": "9f2307b09b175d1b18313ed82175a01e311f3bb52de9775812bd8e1ec96227c5",
+      "bytes": 336830
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj2-item156.txt",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "bytes": 22494
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/safadiyya002.html",
+      "sha256": "713e0b8fadff520d96d3bee97339f40ffe82401293d8caeffc8fbd50a79edb12",
+      "bytes": 371990
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/safadiyya002.txt",
+      "sha256": "e3d23531360bb87eddf8d5365a936f40202f62fab624128bd2c3d16962ba9783",
+      "bytes": 370578
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "layout": "Retain paths relative to common evidence root; tests locate the root relative to their own file.",
+  "runtime_dependencies": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py",
+      "kind": "runtime",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "bytes": 14477,
+      "scope": "Actual recovered direct-rule fixtures and their typed support schema."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "kind": "runtime",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "scope": "Current ordinary diagonal contexts, fixed exercises, targets and supports; no stochastic law imported."
+    }
+  ],
+  "packages": "Python standard library only; Python3.12 used.",
+  "optional_kernel_work": "Separate delegated work; not needed to run these Python controls and not certified by this manifest."
+}

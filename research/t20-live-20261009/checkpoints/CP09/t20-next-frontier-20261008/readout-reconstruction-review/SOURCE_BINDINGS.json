@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "files": [
+    {
+      "path": "readout-reconstruction-boundary/RESULT.md",
+      "sha256": "e6a82d4061b3e91af3c2b2a34bb4c836cdd5240caa1a95ff5d1b642b6971de50",
+      "bytes": 7177,
+      "role": "author artifact"
+    },
+    {
+      "path": "readout-reconstruction-boundary/SOURCE_BINDINGS.json",
+      "sha256": "d5cdb7f886103440808d04051bcd66354a02ce28f6adbc70a7857e2856afdd54",
+      "bytes": 2252,
+      "role": "author artifact"
+    },
+    {
+      "path": "full-face-threshold-information/RESULT.md",
+      "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+      "bytes": 12215,
+      "role": "inherited source"
+    },
+    {
+      "path": "retained-interior-certificate/RESULT.md",
+      "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+      "bytes": 16475,
+      "role": "inherited source"
+    },
+    {
+      "path": "qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523,
+      "role": "inherited source"
+    }
+  ]
+}

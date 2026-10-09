@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-09T09:43:52.270952+00:00",
+  "official_metadata_access": "Read via search-indexed Michigan Publishing record; direct record HTTP 403",
+  "primary_witness_access": "Public Academia author profile -> public author-upload article page -> full published layout text exposed by page. No login or paid route used.",
+  "successful_public_urls": [
+    "https://yale.academia.edu/MichaelDellaRocca",
+    "https://www.academia.edu/3607091/PSR"
+  ],
+  "failed_or_unavailable_routes": [
+    {
+      "url": "https://quod.lib.umich.edu/cgi/t/text/idx/p/phimp/3521354.0010.007/--psr?view=toc",
+      "status": "Direct web open HTTP 403; indexed metadata readable"
+    },
+    {
+      "url": "https://quod.lib.umich.edu/cgi/p/pod/dod-idx/psr.pdf?c=phimp;idno=3521354.0010.007;format=pdf",
+      "status": "Web unavailable; curl HTTP 403"
+    },
+    {
+      "url": "https://quod.lib.umich.edu/p/phimp/images/3521354.0010.007.pdf",
+      "status": "curl HTTP 403"
+    },
+    {
+      "url": "https://www.philosophersimprint.org/010007/",
+      "status": "web unavailable"
+    },
+    {
+      "url": "https://www.academia.edu/attachments/31301501/download_file?s=profile",
+      "status": "web cache miss; curl HTTP 403"
+    }
+  ],
+  "local_retention": "Primary text and public HTML remain temporary research intermediates outside the report directory.",
+  "no_authentication_or_payment": true,
+  "no_access_control_circumvention": true
+}

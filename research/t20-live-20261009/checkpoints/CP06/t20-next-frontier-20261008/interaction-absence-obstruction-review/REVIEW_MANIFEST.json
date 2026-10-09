@@ -1,0 +1,78 @@
+{
+  "files": [
+    {
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353"
+    },
+    {
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "85284366281cc77a4957ddf8b291d5a91c641fa9e80ce0889eb94a2062460dbf"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945"
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "53ecce4670674ef4a8368dc6fb444f737b3d874fb90d81f0fac1c71206cf80d0"
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "50b9873dbcc23cb9c9049b69bae22d107bed6873a1a6af8fa33639fa00ad3661"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "sha256": "9d7fff67839a3f665517cfb813359e64e4d91498d55df453e38f5bda315f254f"
+    },
+    {
+      "path": "author_replay/exact_controls.py",
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70"
+    },
+    {
+      "path": "author_replay/replay.log",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6"
+    },
+    {
+      "path": "author_replay/results/exact_controls.json",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba"
+    },
+    {
+      "path": "verification_replay/author/exact_controls.py",
+      "sha256": "92cd73364482270d5acb49190a4f5eb893c4f646aa052281fb2fdbe21c1c2b70"
+    },
+    {
+      "path": "verification_replay/author/replay.log",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6"
+    },
+    {
+      "path": "verification_replay/author/results/exact_controls.json",
+      "sha256": "86b3c4bc0bba32cf1845d6768df85565404c6f197c556d79fe4935fb55d441d6"
+    },
+    {
+      "path": "verification_replay/independent/INDEPENDENT_CONTROLS.json",
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353"
+    },
+    {
+      "path": "verification_replay/independent/independent_controls.py",
+      "sha256": "ed2d1faf38772231440c05dc440068abe4849f5a5474a21d890bf6d0502aa1ba"
+    },
+    {
+      "path": "verification_replay/independent/replay.log",
+      "sha256": "c4f01971fcc1b5c31a4a36bd47642554221ba4217f38355e07bd45a2667aa353"
+    },
+    {
+      "path": "verify_review.py",
+      "sha256": "3f60c392d2e416c7549e4c76befdc8f48fd137a74509857dcc6495c8c8396e1c"
+    }
+  ],
+  "receipt_sha256": "7731d7ada9d6a4d1ceb456a6af3b90e934f47941ccfd532a73b879af9356a945",
+  "scope": "Scoped independent review; no release, integration, protected writes, physical validation or T20 closure."
+}

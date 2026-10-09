@@ -1,0 +1,185 @@
+{
+  "author_replay": {
+    "cwd": "replayed_author_controls",
+    "families_passed": 14,
+    "output_byte_identical_to_author": true,
+    "script": "replayed_author_controls/exact_controls.py"
+  },
+  "exclusions": [
+    "Independent external-literature priority or full source-provenance audit.",
+    "Physical architecture, actual calibration, or empirical stochastic premises.",
+    "Uniform finite-sample mixture recovery, bit-complexity, or stability.",
+    "Protected integration, owner acceptance, or T20 closure."
+  ],
+  "guards": {
+    "author_or_predecessor_files_modified_by_reviewer": false,
+    "frozen_global_manifest_sha256_verified": "819b9c5eda8de1fd35b34714d24964ce02d4a41b5c6419413bcd8d82a6febe6c",
+    "reviewer_writes_confined_to_review_directory": true
+  },
+  "independent_controls": {
+    "arithmetic": "Exact fractions throughout; finite diagnostic checks do not replace the general proofs.",
+    "assertions_passed": 33266,
+    "families": {
+      "F_boundary_touch": 15,
+      "F_scale_separation": 480,
+      "adaptive_early_stop_exercised": 8,
+      "adaptive_held_latent_transcript_identity": 12,
+      "adaptive_stopped_normalization": 12,
+      "adjacent_sharp_radius": 15,
+      "alternating_interpolation_sign": 77,
+      "decreasing_thresholds": 1,
+      "fresh_band_attained": 1,
+      "fresh_calibration_deviation": 33,
+      "fresh_full_law_means": 198,
+      "fresh_uniform_band": 33,
+      "gcd_normalization": 100,
+      "general_pair_command_strict_monotone": 2340,
+      "general_pair_derivative_sign": 2304,
+      "general_pair_exact_critical_radius": 14,
+      "general_pair_midpoint_deviation": 2340,
+      "general_pair_power_identity": 2340,
+      "grouped_normalization": 750,
+      "held_second_gap_formula": 33,
+      "held_second_gap_strictness": 33,
+      "interpolation_moment_identity": 77,
+      "label_dependent_counterfeit_atoms": 3,
+      "label_dependent_counterfeit_words": 90,
+      "lagrange_vandermonde_basis": 649,
+      "piecewise_feasibility_range": 260,
+      "piecewise_feasibility_supremum": 260,
+      "predecessor_after": 4,
+      "predecessor_before": 4,
+      "primitive_signatures": 5,
+      "pure_scale_separation": 480,
+      "rational_node_decoder": 42,
+      "rational_node_membership_rejection": 3,
+      "rational_not_integer_rescaling": 50,
+      "restricted_band_removes_scale": 1,
+      "scaled_moment_identity": 1350,
+      "scaled_word_identity": 9300,
+      "shifted_collision_third_gap": 1,
+      "shifted_collision_through_two": 3,
+      "shifted_different_primitives": 1,
+      "shifted_pair_law_collision": 4,
+      "subcritical_interior": 60,
+      "survival_one_collapse": 90,
+      "survival_zero_collapse": 90,
+      "word_moment_equivalence": 9300
+    }
+  },
+  "predecessor_bindings": [
+    {
+      "bytes": 3611,
+      "path": "../global-calibration-ambiguity/MANIFEST.json",
+      "sha256": "819b9c5eda8de1fd35b34714d24964ce02d4a41b5c6419413bcd8d82a6febe6c"
+    },
+    {
+      "bytes": 12746,
+      "path": "../global-calibration-ambiguity/RESULT.md",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "bytes": 17002,
+      "path": "../grouped-mixture-identification/PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793"
+    },
+    {
+      "bytes": 15005,
+      "path": "../grouped-mixture-identification/RESULT.md",
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239"
+    },
+    {
+      "bytes": 1575,
+      "path": "../grouped-mixture-identification/MANIFEST.json",
+      "sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6"
+    }
+  ],
+  "resolved_clarifications": [
+    "Ordered Bernoulli-product mixture versus binomial count law.",
+    "Positive-count scalar nodes explicitly exclude the zero-count atom one and have domain (0,1).",
+    "Explicit actual-survival endpoint collapse formulas.",
+    "Calibration shared across components; countermodel if this is dropped.",
+    "No-interior step-calibration boundary.",
+    "New two-component gcd-one fixed-command approximation countermodel."
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 10089,
+      "path": "REVIEW.md",
+      "sha256": "64025953510bb3cd7847389e980b209e580ce006394fc359cae9db92e93e917e"
+    },
+    {
+      "bytes": 11932,
+      "path": "INDEPENDENT_DERIVATIONS.md",
+      "sha256": "eeb1d3af5aadebb8232735ff9ec6f66f9b3cb47f54e273bbf6318ade0ef7c202"
+    },
+    {
+      "bytes": 12428,
+      "path": "independent_controls.py",
+      "sha256": "4d79776ca9b1ea780be4e34e28d5180626574b55c3ded1e21cbcd1e65d7353ba"
+    },
+    {
+      "bytes": 2678,
+      "path": "results/independent_controls.json",
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4"
+    },
+    {
+      "bytes": 2678,
+      "path": "results/independent_controls.log",
+      "sha256": "849d6d93656c738627efc7e05061a97e8ca3b6a777b47bc0888c825fc346d9c4"
+    },
+    {
+      "bytes": 1590,
+      "path": "verify_receipt.py",
+      "sha256": "ebccf653f1a0eb372a84cd0ac2019bbe97132042d503fe58c8f22c56469f3286"
+    },
+    {
+      "bytes": 7255,
+      "path": "replayed_author_controls/exact_controls.py",
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1"
+    },
+    {
+      "bytes": 2809,
+      "path": "replayed_author_controls/results/exact_controls.json",
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22"
+    },
+    {
+      "bytes": 764,
+      "path": "results/author_replay.log",
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac"
+    }
+  ],
+  "reviewed_artifacts": [
+    {
+      "bytes": 17594,
+      "path": "../grouped-calibration-invariants/RESULT.md",
+      "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113"
+    },
+    {
+      "bytes": 4949,
+      "path": "../grouped-calibration-invariants/GLOBAL_SCALE_COROLLARY.md",
+      "sha256": "0cef524519a83260c1a13afa9af28d5fba517fcf04b21a7c2ae697bfbb4f8667"
+    },
+    {
+      "bytes": 7255,
+      "path": "../grouped-calibration-invariants/exact_controls.py",
+      "sha256": "aa8c7c45fc8f2f803aaf4535a6eec6f49b67048e59d0ab8ca402b4fb77ca1af1"
+    },
+    {
+      "bytes": 2809,
+      "path": "../grouped-calibration-invariants/results/exact_controls.json",
+      "sha256": "6d6a436a6f318ff39e9bc457a5bb7ebba384d559af68a855fe3a9d8b439d7c22"
+    },
+    {
+      "bytes": 764,
+      "path": "../grouped-calibration-invariants/results/exact_controls.log",
+      "sha256": "e41c0fc78a94a7699c21a638a8a2a0f958a6ce09a522954004ebe4273a1724ac"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-08T13:38:43.539958+00:00",
+  "reviewer_task": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "schema_version": 1,
+  "unresolved_corrections": [],
+  "verdict": "PASS",
+  "verdict_scope": "Conditional mathematical claims in final RESULT.md and GLOBAL_SCALE_COROLLARY.md, including exact rational-node decoder and membership; no release, integration, empirical certification or T20 closure authority."
+}

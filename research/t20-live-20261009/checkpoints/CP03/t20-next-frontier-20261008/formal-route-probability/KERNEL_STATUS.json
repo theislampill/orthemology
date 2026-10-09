@@ -1,0 +1,54 @@
+{
+  "verified_at_utc": "2026-10-08T07:57:49.364783+00:00",
+  "status": "full_forward_probability_and_inverse_kernel_checked",
+  "principal_theorem": "RouteProbability.endpoint_law_identification",
+  "statement": "Any two finite route inventories with equal full generated endpoint laws at the three profiles have equal anonymous five-class/output histograms; occurrence types may differ.",
+  "generation": "Sum product Bernoulli masses of Boolean route-success assignments generating each endpoint.",
+  "assurance": [
+    "assignment nonnegativity and normalization",
+    "selected-route failure probability from actual assignment sum",
+    "endpoint no-hit equivalence",
+    "occurrence-to-histogram grouping",
+    "all three calibrated rational panel derivations",
+    "endpoint law nonnegativity and normalization",
+    "absence marginals of the endpoint law",
+    "composition with frozen actual-rational inverse"
+  ],
+  "lean": "4.19.0",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "standard_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "admitted_proofs": false,
+  "new_axioms": false,
+  "native_decide": false,
+  "full_warnings_as_errors_build_exit": 0,
+  "trust_zero_final_check_exit": 0,
+  "semantic_mutations": {
+    "reversed_endpoint_success_gate": [
+      0,
+      1,
+      0
+    ],
+    "altered_c_class_failure_calibration": [
+      0,
+      1,
+      0
+    ]
+  },
+  "frozen_inverse_manifest_unchanged": true,
+  "new_source_manifest": "SOURCE_MANIFEST.sha256",
+  "new_source_manifest_sha256": "23eeafa2ed7f10a03beece20edd570af66e01cc9dc932ac4a4a1255eebd5b38e",
+  "remaining_external": [
+    "actual productive occurrence interpretation and alias discipline",
+    "independence and calibration as claims about an external situation",
+    "admissible physical interventions and fixed guard interpretation",
+    "complete effect catalogue and exact population observation",
+    "finite-sample inference",
+    "incidence-gate architecture equivalence theorem",
+    "source and metaphysical application"
+  ],
+  "protected_repository_changed": false
+}

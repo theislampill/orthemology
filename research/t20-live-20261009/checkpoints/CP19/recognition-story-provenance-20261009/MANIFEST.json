@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-09T08:14:51.972303+00:00",
+  "artifacts": [
+    {
+      "path": "recognition-story-provenance-20261009/OPERATIONS.jsonl",
+      "bytes": 484,
+      "sha256": "8434b96efe7daf9c1d7759132a1267804f37b5eb8adbd61b43a9af1b2000f1e1"
+    },
+    {
+      "path": "recognition-story-provenance-20261009/REPORT.md",
+      "bytes": 14497,
+      "sha256": "329b1b1fe1deddab33922bb7479dcd98330ad036a7365664876bdbf1f160e7a0"
+    },
+    {
+      "path": "recognition-story-provenance-20261009/SOURCE_READS.json",
+      "bytes": 11437,
+      "sha256": "cfa8aac479f26a2393e3377d99deb345520e8babcef12ef4824bf0c97417035a"
+    }
+  ],
+  "source_body_delivery": false
+}

@@ -1,0 +1,86 @@
+{
+  "recorded_utc": "2026-10-09T07:58:34.317948+00:00",
+  "inherited_local_inputs": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-audit-addenda/H_CONTINUATION_108_292.md",
+      "bytes": 13323,
+      "sha256": "bb226ec3e294b31153808cca11e5facd2182af0372974b267c6f68f18b491396"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md",
+      "bytes": 29225,
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97"
+    },
+    {
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/ANALYSIS.md",
+      "bytes": 18684,
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c"
+    }
+  ],
+  "pinned_continuation_source": {
+    "repository": "theislampill/orthemology",
+    "commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "path": "theory/lineages/h-continuation/continuation_complete_orthing.md",
+    "git_blob": "99d0434aad8b8a841f59eb078e2b70c0b961d226",
+    "fresh_connector_read_lines": [
+      293,
+      700
+    ],
+    "local_prior_range_read": [
+      108,
+      292
+    ],
+    "url": "https://github.com/theislampill/orthemology/blob/3a0bdeaa1394c656245cae9599adcb143e885059/theory/lineages/h-continuation/continuation_complete_orthing.md",
+    "full_document_read_claimed": false
+  },
+  "primary_external_source": {
+    "authors": "Vandaele, Martiel, Goubault de Brugi\u00e8re",
+    "title": "Phase polynomials synthesis algorithms for NISQ architectures and beyond",
+    "url": "https://arxiv.org/pdf/2104.00934",
+    "version_observed": "v1, 2 April 2021",
+    "sections_read": [
+      "2 (gate and parity-network correspondence)",
+      "4.1 (Steiner synthesis and cost)"
+    ],
+    "page_image_inspected": 10,
+    "full_paper_read_claimed": false,
+    "novelty": "Identical cost formula already present; no invention claim."
+  },
+  "review_bindings": [
+    {
+      "path": "graph-continuation-review-20261009/review.md",
+      "bytes": 11315,
+      "sha256": "f7a47c7efd86243b23ad804543e1eada8d425cf2052ab16250c1043c6e7d42df"
+    },
+    {
+      "path": "graph-continuation-review-20261009/test_results.json",
+      "bytes": 992,
+      "sha256": "7bddfa639b5e1d0c340d3a8f5887d099bbff810aad78ce0f5034e8430a4ddb42"
+    },
+    {
+      "path": "graph-continuation-review-20261009/sharp_examples.json",
+      "bytes": 1521,
+      "sha256": "0c0c0b048c38daba3a5ae110309f873e8475dd675a3eeefb4ca3a429129cdd99"
+    },
+    {
+      "path": "graph-continuation-review-20261009/verify_formula.py",
+      "bytes": 3452,
+      "sha256": "ae1c217ae9c7554e86d8aba1c9871cc3b30c34068412175dac8b0d0afd89b023"
+    },
+    {
+      "path": "graph-continuation-review-20261009/lean-source-review.md",
+      "bytes": 4723,
+      "sha256": "30bf0bac4a82d56001d2c8ed431a37e9d6eaeabeabfb8a3d6e6025a2287919d8"
+    },
+    {
+      "path": "graph-continuation-review-20261009/lean-replay/binding.json",
+      "bytes": 1596,
+      "sha256": "2f0be8872e33910f1da83005778045e4c877660938a63f89c7e2fe936b762251"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "created_utc": "2026-10-08T15:28:38.052474+00:00",
+  "status": "Frozen author checkpoint with independently reviewed bounded-count and finite-root cover contracts",
+  "scope": "Constructive discrete support/count recovery under explicit sufficient promises; no uniform sample/precision/runtime claim, physical validation, protected integration, owner acceptance or T20 closure.",
+  "files": [
+    {
+      "path": "CORROBORATING_UNARY_CHECK.md",
+      "sha256": "997253493dbe742cc5643db49a1104bddb1db938439c46ab7e07328dad5a0e28",
+      "bytes": 2051
+    },
+    {
+      "path": "COVER_DISCOVERY.md",
+      "sha256": "81520f7b56911f06b9f047670f48a3e72910bc49d256546970b8b7b84d13cf15",
+      "bytes": 7323
+    },
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "9e42c814e73bd5bbdaa879462769145c7534aa786c93a289ac98c5ddc12513f6",
+      "bytes": 1978
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "479a698efb8b3a0346fccb75b778506a29f7574c1ca305ef1d81e193bfcfb0ad",
+      "bytes": 1432
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "2b0a3257e4764534ee0ad8a323e867bb2a3e0a49119f4857ac8604751ef4b005",
+      "bytes": 1327
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "5c296d4aae493b0f8bb7bbfb6330ae95e155c7efd3d724c0624ddca1b42ed8e6",
+      "bytes": 17779
+    },
+    {
+      "path": "REVIEW_STATUS.md",
+      "sha256": "3376f5072fc9c4fd108f3857f54934251a07d5ad98929fbec0531440bb1445e6",
+      "bytes": 3298
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "d9ece1651da081de323c927f8fd8bec5bf7dd76c8a57e854e4451879896c68d1",
+      "bytes": 8119
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "667e4f3aa1b66750bca7623a607962f5c19ed9351932e1d8338026575d25012d",
+      "bytes": 28852
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "6c4859846a169b94ba75e4a8087cfc432dc511d76a993a9f2e8f5e597e5e5a45",
+      "bytes": 7535
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+      "bytes": 1120
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "74df7532deff48971dcf342ecaa5a21b0bfb4626a6b6853fceb2dd627f20bba2",
+      "bytes": 1120
+    },
+    {
+      "path": "results/review_verification.json",
+      "sha256": "1f5f1448377d8ede1137eedfbdaaa09d26d66cd234b7f4ef29bfe094864ab202",
+      "bytes": 249
+    },
+    {
+      "path": "verify_evidence.py",
+      "sha256": "4d9b89e0a5222e49b5000000b041c6458197edc69a9845e007c454d5eb4cb25b",
+      "bytes": 2100
+    }
+  ],
+  "review_references": [
+    {
+      "path": "../bounded-interaction-detection-review/REVIEW.md",
+      "sha256": "21eed2890dfbc26587da6c3ce62f392b29b655782f33e1454c19b1871ed150b2"
+    },
+    {
+      "path": "../bounded-interaction-detection-review/REVIEW_RECEIPT.json",
+      "sha256": "3fff50ce76083cf12b802965198038d8880fc93e0c09c3f82bb5abc7204f5dbf"
+    },
+    {
+      "path": "../bounded-interaction-detection-review/REVIEW_MANIFEST.json",
+      "sha256": "800fcc235c3118adf0f40bf564ad994c4e483988eabc0782075ad069aef84300"
+    }
+  ],
+  "excluded_generated_reports": [
+    "results/verification.json"
+  ],
+  "exclusion_reason": "The generated verification report includes whether this manifest exists; exclusion avoids a self-referential digest cycle."
+}

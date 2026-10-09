@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-08T12:14:09.778456+00:00",
+  "premise": "Independent route successes, route support success is product of root rates. No physical interpretation certified.",
+  "finding": "All deterministic root corners identify only Boolean response classes; route multiplicity and Boolean-redundant added routes can remain hidden. Interior distinguishes these exact examples.",
+  "derivation": "AA minus A = a(1-a); A_AB minus A = ab(1-a).",
+  "rows": [
+    {
+      "a": "0",
+      "b": "0",
+      "A": "0",
+      "AA": "0",
+      "A_AB": "0"
+    },
+    {
+      "a": "0",
+      "b": "1",
+      "A": "0",
+      "AA": "0",
+      "A_AB": "0"
+    },
+    {
+      "a": "0",
+      "b": "1/2",
+      "A": "0",
+      "AA": "0",
+      "A_AB": "0"
+    },
+    {
+      "a": "1",
+      "b": "0",
+      "A": "1",
+      "AA": "1",
+      "A_AB": "1"
+    },
+    {
+      "a": "1",
+      "b": "1",
+      "A": "1",
+      "AA": "1",
+      "A_AB": "1"
+    },
+    {
+      "a": "1",
+      "b": "1/2",
+      "A": "1",
+      "AA": "1",
+      "A_AB": "1"
+    },
+    {
+      "a": "1/2",
+      "b": "0",
+      "A": "1/2",
+      "AA": "3/4",
+      "A_AB": "1/2"
+    },
+    {
+      "a": "1/2",
+      "b": "1",
+      "A": "1/2",
+      "AA": "3/4",
+      "A_AB": "3/4"
+    },
+    {
+      "a": "1/2",
+      "b": "1/2",
+      "A": "1/2",
+      "AA": "3/4",
+      "A_AB": "5/8"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-08",
+  "review_scope": "Independent bounded source/logic review, not independent whole-paper completion or metaphysical validation.",
+  "reviewed_deliverables": [
+    "modal-grounding-source/REPORT.md, complete, with truncated initial section 5 repaired by separate display",
+    "modal-grounding-source/MAPPING_TEST.md, complete",
+    "modal-grounding-source/READING_LEDGER.json, complete",
+    "modal-grounding-source/MANIFEST.json and SOURCE_EXTRACTION_CHECK.json, read and independently mechanically checked"
+  ],
+  "primary_2011": {
+    "source": "modal-grounding-source/sources/dasgupta2011.pdf and page-separated extracts",
+    "printed_pages_received_in_full": [118, 119, 120, 126, 127, 128, 129, 130, 131, 132, 147, 148, 149, 150, 151, 152, 153, 154, 155, 158, 159],
+    "partial_extra": "Printed 156, beginning through note 44 opening, especially notes 35 and 38.",
+    "central_notes": [4, 10, 11, 25, 35, 38, 63, 68, 69, 70, 71, 72, 73, 74],
+    "visual_checks": "Existing full-page images of PDF pages 36, 37, 38, 40 and 44, printed 150, 151, 152, 154 and 158. Note 74 continuation on printed 159 checked in text.",
+    "credit": "Targeted reading only. All 46 extract hashes were checked mechanically, but that is not a whole read. No new PDF acquisition."
+  },
+  "primary_2016": {
+    "source": "global-explanation-rival-continuation/sources/dasgupta2016.pdf and dasgupta2016.txt",
+    "printed_pages_received": "379–383 in full; 384 opening through start of section 3; 390; 396–398; 413; 415. The latter pages also independently extracted directly from the PDF.",
+    "decisive_passages": "Grounding logical form, autonomy/substantivity, singular PSR, essential-existence argument and caveats, note 9 plural-grounding qualification, note 44 qualitative-essential proposal.",
+    "credit": "Targeted control only; no new whole-paper reading or acquisition."
+  },
+  "predecessor_review": {
+    "qualitative_ontology": "Substantive appraisal and interface comparison, including repaired tail, to compare AG/PL distinctions, obtaining, retained bearers and novelty claims.",
+    "instantiation_obtaining": "Complete report received; checked classification/direction, Completion, Realisation and actual-case residual.",
+    "global_explanation_continuation": "Report received with truncated modal/interface portion repaired by separate lines 65–100; checked autonomous-ground alternative and earlier confidence qualification.",
+    "modal_identity_transport": "RESULT.md lines 1–110 and 142–242, targeted sections on source screening, interpretation, quantified witness preservation and limits. Intermediate construction lines 111–141 not counted as read here.",
+    "not_primary_credit": "No independent 2009 primary read and no independent verification of all bibliography or external references. Merely hashed auxiliary inherited ledgers are not counted as substantively read."
+  },
+  "formal_interface": {
+    "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+    "scope": "Entire file source inspected; no modification or fresh compilation."
+  },
+  "deferred": "Later plural-grounding paper body and canonical bibliography remain outside this review. A discrepancy reported by the parent for that later citation is not a defect in the canonical 2011 source citation or the present mapping argument.",
+  "excluded": ["Whole-paper reviewer credit", "Historical duration certification", "Actual-world countermodel", "Metaphysical validation", "Full plural-calculus consistency proof", "New Lean theorem", "Integration", "T20 closure"]
+}

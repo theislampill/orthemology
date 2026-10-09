@@ -1,0 +1,52 @@
+{
+  "packet": "finite-geometric-score",
+  "status": "FROZEN_AUTHOR_CANDIDATE_AWAITING_INDEPENDENT_REVIEW",
+  "frozen_utc": "2026-10-08T22:13:38.182419+00:00",
+  "result_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+  "historical_floor": "UNVERIFIED",
+  "claim": "Eventual finite-rational-endpoint score test matches the sharp independent-vector order.",
+  "explicit_cutoff_certified": false,
+  "control_status": "PASS",
+  "files": [
+    {
+      "path": "RESULT.md",
+      "sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+      "bytes": 17797
+    },
+    {
+      "path": "controls.py",
+      "sha256": "9ff96d6e90d31d9edcaf77ba2eb407c1b34075ef225c45b508770e33c86122d5",
+      "bytes": 13366
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "c799b4ef7dafaa5daba4f7c81c22372a68ce33f2dc49d3453f383087c029faf6",
+      "bytes": 6659
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "58cd4d5f5f4ef770eb7ff30420b8badfc66c0c2162e2e0d7aa3d259e1e444341",
+      "bytes": 482
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "5d19ec7570adf682d45286e02de8962e3ace012d3477c388a843816ed41ce172",
+      "bytes": 2852
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "4cf9f834ddb8d8d608a90426a9fb531ab680cdf278b7090e1932f2eab3c42d1c",
+      "bytes": 4037
+    },
+    {
+      "path": "verify_packet.py",
+      "sha256": "8497ff84b2eab148412e38ab0676eedac74cde511e91ec50a17e0dd1036d30e5",
+      "bytes": 1388
+    },
+    {
+      "path": "ACTIVITY_LOG.json",
+      "sha256": "915a8a2f075ae2d55317a7cf320965881c6e7a17a5c3a4db1b336920af2e8d9c",
+      "bytes": 961
+    }
+  ]
+}

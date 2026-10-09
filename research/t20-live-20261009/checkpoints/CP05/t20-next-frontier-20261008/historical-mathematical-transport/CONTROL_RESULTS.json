@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "unit_price_boolean_catalogues": 2046,
+  "heterogeneous_price_optimum": 11,
+  "heterogeneous_first_cut_costs": [
+    111,
+    20,
+    11,
+    20,
+    111
+  ],
+  "rational_linear_channel_cases": 136,
+  "channel_gap_at_half": "1/64",
+  "augmented_record_determinant_at_half": "1/256",
+  "pointwise_common_support_checks": 4760,
+  "adaptive_stopped_transcript_support_comparisons": 672,
+  "bound_current_proofs_verified": 7,
+  "scope": "Finite exact diagnostics only; general results rely on written proofs."
+}

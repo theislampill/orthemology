@@ -1,0 +1,45 @@
+{
+  "purpose": "Historical identity, locator, and scope records. Digest/custody use is not new primary reading.",
+  "records": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/DIRECT_READING_RECEIPT.json",
+      "sha256": "6044a7b5b78e5cbb1891e9fe9a348b9348142a6ef0ad6e03b700c5d8d64e169c",
+      "bytes": 8190
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "bytes": 28965
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/SOURCE_READS.json",
+      "sha256": "109e2f13bb11819bed9e94c54beaae674cbfb3cef84144b1f788b464cdf18d21",
+      "bytes": 9944
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/efficacy-warrant-appraisal/SOURCE_READS.json",
+      "sha256": "dc3cbf63d22070937605cbfa29808199889cf761c5080c91f46d499d3631c5a3",
+      "bytes": 11979
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-warrant/SOURCE_BINDINGS.json",
+      "sha256": "0a5323396e0f609ddff592e23585af03389fcf2335fd82c4e73005642208e757",
+      "bytes": 2347
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/SOURCE_GUIDE_AND_LIMITS.md",
+      "sha256": "bfcafe77e934580ff58380697a06f5d1bc6f7ce573e4cdc0652b07bccd7ca7f5",
+      "bytes": 10877
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/dar-8-9/acquisition/source_manifest.json",
+      "sha256": "609e60cfe4fd6a96991103b5eb2cdeb0dec3c66fee6c7b47f0107ac6211e6278",
+      "bytes": 3399
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/SOURCE_READS.json",
+      "sha256": "36f3309243f5525e32deb7589c29ed5501b360e65a3f9cd6db761456a5fa8c6a",
+      "bytes": 5010
+    }
+  ]
+}

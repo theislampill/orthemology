@@ -1,0 +1,246 @@
+{
+  "date_utc": "2026-10-09",
+  "scope": "Bounded T20 source-guided appraisal of brute contingent original existence; no integration or closure.",
+  "credit": "Targeted rereadings and new scan controls. Parent reports Dar8 electronic corpus was previously traversed; no first-reading or research-duration claim.",
+  "editions": [
+    {
+      "work": "Dar ta arud al aql wa l naql",
+      "author": "Ibn Taymiyyah",
+      "editor": "Muhammad Rashad Salim",
+      "publisher": "Imam Muhammad ibn Saud Islamic University",
+      "edition": "Second,1411 AH/1991 CE",
+      "direct_title_checks": [
+        "sources/dar3-title-001.png",
+        "sources/dar8-pdf-1.png"
+      ],
+      "scans": [
+        {
+          "path": "brute-contingent-source-return/sources/dtan03.pdf",
+          "sha256": "0557e7a2c84a3222a4b4664bdf645d126551e859ac7f4fd492ade9bc66d9a41e",
+          "bytes": 6859029
+        },
+        {
+          "path": "brute-contingent-source-return/sources/dtan08.pdf",
+          "sha256": "55c1976038610915e03a55c44962897ac8423536a58344523ea8c0426d0fdae0",
+          "bytes": 8295845
+        }
+      ]
+    },
+    {
+      "work": "Sharh al aqida al Isfahaniyya",
+      "publisher": "Maktabat al Rushd",
+      "edition": "First,1415 AH/1995 CE",
+      "edition_credit": "Inherited direct title verification from PRIMARY_DEPENDENCE_RESPONSE; this worker checked retained printed34–35 images."
+    }
+  ],
+  "electronic_contiguous_readings": [
+    {
+      "items": [
+        510,
+        511
+      ],
+      "pages": "Dar3 approximately143–147",
+      "files": [
+        "sources/dar3-item510.txt",
+        "sources/dar3-p147.txt"
+      ],
+      "note": "Whole saved bodies; unit distinguishes productive circle and concomitance before aggregate challenge."
+    },
+    {
+      "items": [
+        517,
+        518,
+        519,
+        520
+      ],
+      "pages": "Dar3 approximately158–173",
+      "files": [
+        "sources/dar3-item517.txt",
+        "sources/dar3-p166.txt",
+        "sources/dar3-item519.txt",
+        "sources/dar3-item520.txt"
+      ],
+      "note": "Whole bodies; voice transition at166 to Avicenna and own reply at169."
+    },
+    {
+      "items": [
+        679,
+        680,
+        681
+      ],
+      "pages": "Dar3 approximately419–424",
+      "files": [
+        "sources/dar3-item679.txt",
+        "sources/dar3-p421.txt",
+        "sources/dar3-item681.txt"
+      ],
+      "note": "Whole bodies; own reply then quotation of Ibn Rushd in final item."
+    },
+    {
+      "items": [
+        487,
+        488,
+        489
+      ],
+      "pages": "Dar3 99–101",
+      "files": [
+        "sources/dar3-item487.txt",
+        "sources/dar3-item488.txt",
+        "sources/dar3-item489.txt"
+      ],
+      "note": "Whole bodies. Electronic endpage101 follows second face that print places at100."
+    },
+    {
+      "items": [
+        1412,
+        1413,
+        1414,
+        1415,
+        1416,
+        1417
+      ],
+      "pages": "Dar8 approximately125–136",
+      "files": [
+        "sources/dar8-item1412.txt",
+        "sources/dar8-item1413.txt",
+        "sources/dar8-item1414.txt",
+        "sources/dar8-item1415.txt",
+        "sources/dar8-item1416.txt",
+        "sources/dar8-item1417.txt"
+      ],
+      "note": "Whole saved bodies; continuous scan126–136 also inspected. Clearly retains need at135 while rejecting symmetric nonbeing rationale."
+    },
+    {
+      "inherited": "Isfahaniyya embeddedL181–187",
+      "files": [
+        "read-selections/isfahaniyya-L181-L187.txt"
+      ],
+      "note": "Direct rereading; printed34–35 visually rechecked."
+    }
+  ],
+  "new_scan_pages_actually_inspected": {
+    "Dar3": [
+      1,
+      3,
+      99,
+      100,
+      101,
+      102,
+      145,
+      146,
+      147,
+      165,
+      166,
+      167,
+      168,
+      420,
+      421,
+      422,
+      423
+    ],
+    "Dar8": [
+      1,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+    ]
+  },
+  "inherited_scan_pages_reinspected": {
+    "Isfahaniyya": [
+      34,
+      35
+    ]
+  },
+  "incidental_web_readings": [
+    {
+      "url": "https://www.islamweb.net/ar/library/content/413/521/",
+      "scope": "full unvocalized body as returned at webL1614–1627,173–175"
+    },
+    {
+      "url": "https://www.islamweb.net/ar/library/content/413/522/",
+      "scope": "full unvocalized body as returned at webL2143–2152,175–178"
+    },
+    {
+      "url": "https://www.islamweb.net/ar/library/content/413/523/",
+      "scope": "one-paragraph unvocalized body as returned,178"
+    },
+    {
+      "url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-005.html",
+      "scope": "Search/display portions includingL8–55 andL63–91. Initial output truncated; no continuous whole-segment claim or independent-witness credit."
+    }
+  ],
+  "text_controls": [
+    {
+      "locator": "Dar3:420",
+      "electronic": "أمر معلوم",
+      "print": "أمر معلول",
+      "treatment": "Print controls."
+    },
+    {
+      "locator": "Dar8:126",
+      "issue": "Electronic item1412 omits a clause and negation distinguishing conjunction from productive dependence.",
+      "treatment": "Use scanned continuous paragraph."
+    },
+    {
+      "locator": "Dar8:127",
+      "issue": "Apparently missing لا in فإن الممكن هو الذي يكون وجوده بنفسه also occurs in print.",
+      "treatment": "No silent repair; do not rely on defective sentence."
+    },
+    {
+      "locator": "Dar8:131",
+      "electronic": "بل الصواب يقتضيه",
+      "print": "بل الصواب ينقضه",
+      "treatment": "Print controls."
+    }
+  ],
+  "acquisition_failures": [
+    {
+      "route": "Python urllib default sandbox Islamweb page redirects",
+      "result": "Tunnel403; initially wait call reported cancelledreview.",
+      "resolution": "Parent supplied exact authorization evidence; single approved escalation retry succeeded."
+    },
+    {
+      "route": "Islamhouse PDF public link",
+      "result": "HTTP403; web screenshot returned references without actual image data.",
+      "resolution": "No visual credit; legitimate public Archive edition obtained through catalogue."
+    },
+    {
+      "route": "Waqfeya catalogue via urllib",
+      "result": "HTTP403",
+      "resolution": "Public web catalogue and linked Archive item used."
+    }
+  ],
+  "inherited_bindings": [
+    {
+      "path": "intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md",
+      "sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef",
+      "bytes": 13589
+    },
+    {
+      "path": "productive-totality-source-return/REPORT.md",
+      "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "bytes": 35568
+    }
+  ],
+  "output": {
+    "path": "brute-contingent-source-return/REPORT.md",
+    "sha256": "46e532e16b8d3fa9fefd0614157b9324fcef44dbaf115d4778e3800e258e6d4c",
+    "bytes": 22495
+  },
+  "limits": [
+    "No manuscript collation",
+    "No whole-volume reading",
+    "No source credited to unidentified Afifi lead",
+    "No actual-world metaphysical-possibility certificate",
+    "No theorem changes or new proof claims",
+    "No protected files changed"
+  ]
+}

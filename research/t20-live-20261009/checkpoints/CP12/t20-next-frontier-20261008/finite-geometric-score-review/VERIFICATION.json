@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "accepted_author_result_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+  "author_manifest_sha256": "f7d1033b6f4d269155f1e6dc5950c267414e6d498ab94166aeb55e0cf341b4a3",
+  "review_sha256": "1dc64801da9ee70b289bcc66610832e3eb7a5c353a393e55305730b3cd48052f",
+  "review_receipt_sha256": "8b0a58c0b7e69af7ba946f9d6eb14fbe7b9417b2668216dffe5e9029403eba6b",
+  "review_manifest_sha256": "5b51a43752eec8dbc1063f4a860cc689374e29c5b97833e2b572198b994ea6ea",
+  "source_bindings_checked": 19,
+  "sharp_transitive_bound_files_checked": 39,
+  "review_payload_files_checked": 9,
+  "author_replay_json_and_stdout_byte_identical": true,
+  "independent_controls": "PASS",
+  "explicit_cutoff_certified": false,
+  "historical_floor": "UNVERIFIED"
+}

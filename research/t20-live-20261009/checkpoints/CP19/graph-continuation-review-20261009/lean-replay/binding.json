@@ -1,0 +1,39 @@
+{
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "excluded_kernel_claims": [
+    "probability and topology",
+    "continuous encoder dimension",
+    "tree saturation corollary",
+    "Grown equivalence to separately formalized graph connectivity",
+    "whole-run physical semantic correspondence"
+  ],
+  "exit_code": 0,
+  "flags": [
+    "-t0",
+    "-DwarningAsError=true"
+  ],
+  "frozen_source_sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73",
+  "kernel_log_sha256": "33731218c1d29e3aad29ecdc31e2fad70bf5eb8a1edbc2ee8a99056e3b0be7eb",
+  "lean_executable_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "lean_version": "Lean 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "mathlib_lake_manifest_sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+  "olean_sha256": "9673311c76b3095a726e44d8ee762f6ce9335e74895682ad39cd6195861fb8c5",
+  "other_printed_endpoints": [
+    "GraphContinuation.visited_card_bound",
+    "GraphContinuation.synthesize",
+    "GraphContinuation.reachable_iff_connected_superset"
+  ],
+  "principal_endpoints": [
+    "GraphContinuation.exact_steiner_cost",
+    "GraphContinuation.character_gate"
+  ],
+  "result": "pass",
+  "reviewed_at_utc": "2026-10-09T07:57:34.134172+00:00",
+  "source_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "source_sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73"
+}

@@ -1,0 +1,30 @@
+{
+  "isolated": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "test_all_binary_support_models_through_three_roots_decode (__main__.CalibrationTests.test_all_binary_support_models_through_three_roots_decode) ... ok\ntest_crt_representatives_give_strictly_interior_rates (__main__.CalibrationTests.test_crt_representatives_give_strictly_interior_rates) ... ok\ntest_decoder_divides_by_nonunit_private_valuation (__main__.CalibrationTests.test_decoder_divides_by_nonunit_private_valuation) ... ok\ntest_every_issued_profile_still_has_an_invisible_omission_route (__main__.CalibrationTests.test_every_issued_profile_still_has_an_invisible_omission_route) ... ok\ntest_general_guarded_counts_decode_from_one_calibration_all_profiles (__main__.CalibrationTests.test_general_guarded_counts_decode_from_one_calibration_all_profiles) ... ok\ntest_invalid_readouts_are_not_certified_by_private_primes_alone (__main__.CalibrationTests.test_invalid_readouts_are_not_certified_by_private_primes_alone) ... ok\ntest_known_count_bound_gives_common_rational_grid (__main__.CalibrationTests.test_known_count_bound_gives_common_rational_grid) ... ok\ntest_linear_integer_selectors_have_exactly_one_nonempty_zero_subset (__main__.CalibrationTests.test_linear_integer_selectors_have_exactly_one_nonempty_zero_subset) ... ok\ntest_private_residues_select_only_their_own_support (__main__.CalibrationTests.test_private_residues_select_only_their_own_support) ... ok\ntest_private_valuation_matrix_is_positive_diagonal (__main__.CalibrationTests.test_private_valuation_matrix_is_positive_diagonal) ... ok\ntest_unknown_multiplicity_and_large_counts_decode_without_full_factoring (__main__.CalibrationTests.test_unknown_multiplicity_and_large_counts_decode_without_full_factoring) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.122s\n\nOK\n",
+    "stdout": ""
+  },
+  "isolated_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"root_counts\": [1, 2, 3, 4], \"six_root_nonunit_diagonals\": [{\"support\": 1, \"prime\": 41, \"valuation\": 2}, {\"support\": 16, \"prime\": 107, \"valuation\": 2}], \"test_groups\": 11}\n"
+  },
+  "isolated_results_equal": true,
+  "local": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "test_all_binary_support_models_through_three_roots_decode (__main__.CalibrationTests.test_all_binary_support_models_through_three_roots_decode) ... ok\ntest_crt_representatives_give_strictly_interior_rates (__main__.CalibrationTests.test_crt_representatives_give_strictly_interior_rates) ... ok\ntest_decoder_divides_by_nonunit_private_valuation (__main__.CalibrationTests.test_decoder_divides_by_nonunit_private_valuation) ... ok\ntest_every_issued_profile_still_has_an_invisible_omission_route (__main__.CalibrationTests.test_every_issued_profile_still_has_an_invisible_omission_route) ... ok\ntest_general_guarded_counts_decode_from_one_calibration_all_profiles (__main__.CalibrationTests.test_general_guarded_counts_decode_from_one_calibration_all_profiles) ... ok\ntest_invalid_readouts_are_not_certified_by_private_primes_alone (__main__.CalibrationTests.test_invalid_readouts_are_not_certified_by_private_primes_alone) ... ok\ntest_known_count_bound_gives_common_rational_grid (__main__.CalibrationTests.test_known_count_bound_gives_common_rational_grid) ... ok\ntest_linear_integer_selectors_have_exactly_one_nonempty_zero_subset (__main__.CalibrationTests.test_linear_integer_selectors_have_exactly_one_nonempty_zero_subset) ... ok\ntest_private_residues_select_only_their_own_support (__main__.CalibrationTests.test_private_residues_select_only_their_own_support) ... ok\ntest_private_valuation_matrix_is_positive_diagonal (__main__.CalibrationTests.test_private_valuation_matrix_is_positive_diagonal) ... ok\ntest_unknown_multiplicity_and_large_counts_decode_without_full_factoring (__main__.CalibrationTests.test_unknown_multiplicity_and_large_counts_decode_without_full_factoring) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.104s\n\nOK\n",
+    "stdout": ""
+  },
+  "local_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"root_counts\": [1, 2, 3, 4], \"six_root_nonunit_diagonals\": [{\"support\": 1, \"prime\": 41, \"valuation\": 2}, {\"support\": 16, \"prime\": 107, \"valuation\": 2}], \"test_groups\": 11}\n"
+  },
+  "prior_inputs_unchanged": true,
+  "scope": "Replay only; no new research credit.",
+  "timestamp_utc": "2026-10-08T07:44:23.302240+00:00"
+}

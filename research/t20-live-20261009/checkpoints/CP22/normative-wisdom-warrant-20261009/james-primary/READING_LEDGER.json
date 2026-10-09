@@ -1,0 +1,102 @@
+{
+  "task_received_utc": "2026-10-09T10:03:30Z",
+  "recorded_utc": "2026-10-09T10:09:46Z",
+  "timing_claim": "Short targeted research pass; no multi-hour budget or timing-derived proof claimed.",
+  "continuous_read": {
+    "method": "pdftotext -layout full PDF, split at form-feed; whole chapter read in consecutive untruncated tool displays",
+    "batches": [
+      {
+        "printed": [
+          184,
+          195
+        ],
+        "pdf_one_based": [
+          206,
+          217
+        ],
+        "tool_output_chunk": "fc0eb1"
+      },
+      {
+        "printed": [
+          196,
+          205
+        ],
+        "pdf_one_based": [
+          218,
+          227
+        ],
+        "tool_output_chunk": "1cb056"
+      },
+      {
+        "printed": [
+          206,
+          215
+        ],
+        "pdf_one_based": [
+          228,
+          237
+        ],
+        "tool_output_chunk": "8d2d4d"
+      }
+    ],
+    "all_chapter_footnotes_read": [
+      184,
+      189,
+      214
+    ]
+  },
+  "visual_inspection": {
+    "printed_pages": [
+      184,
+      189,
+      190,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      205,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215
+    ],
+    "front_matter_pdf_one_based": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "ameri_printed_page": 79,
+    "rendered_but_not_claimed_visual_read": "Other chapter pages, pp. 185–188, 191–192, 199–204, 206–209.",
+    "scope_limit": "Whole collection not read; separate James 1891 journal version and cited Royce/Psychology not independently read."
+  },
+  "prior_search": {
+    "root": "t20-next-frontier-20261008",
+    "terms": [
+      "William James",
+      "Moral Philosopher",
+      "conscious spectator",
+      "interested spectator",
+      "james.*will.to.believe",
+      "ويليام"
+    ],
+    "result": "No direct essay treatment found in the searched text records; incidental Grice William James Lectures bibliography hit only. No historical novelty claim."
+  },
+  "correction_log": [
+    {
+      "item": "Preliminary parent update named p.197 for ethical republic passage.",
+      "correction": "Verified scan puts ethical republic and explicit human/theistic equal footing at p.198; p.197 is the two-souls example.",
+      "parent_notified": true,
+      "report_corrected": true
+    }
+  ],
+  "handoff_limits": [
+    "Only this new report directory and its own source intermediates written.",
+    "Raw files not intended for deliverable packaging.",
+    "No source theory assumed true, no metaphysical closure, no outreach."
+  ]
+}

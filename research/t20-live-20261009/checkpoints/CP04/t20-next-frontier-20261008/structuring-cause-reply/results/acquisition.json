@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "model": "fixed-cue physical recruitment and provenance",
+  "checks": {
+    "closed_form_histories": 341,
+    "single_trial_cases": 4,
+    "sensitization_mutant_caught_at": {
+      "history": [
+        [
+          0,
+          1
+        ]
+      ],
+      "acquired": 0,
+      "mutant": 1
+    },
+    "matched_marginal_pair": {
+      "paired": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "unpaired": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "cue_count_each": 1,
+      "discomfort_count_each": 1,
+      "acquired_weights": [
+        1,
+        0
+      ],
+      "sensitized_weights": [
+        1,
+        1
+      ],
+      "disconnected_weights": [
+        0,
+        0
+      ]
+    },
+    "history_test_cases": 1364,
+    "mediator_clamp_cases": 2728,
+    "same_current_map_different_acquisition": {
+      "all_four_test_inputs_agree_after_paired_history": true,
+      "target_response_after_unpaired_history_acquired": 0,
+      "target_response_after_unpaired_history_seeded": 1
+    },
+    "harmless_lookalike": {
+      "x": 1,
+      "n": 0,
+      "c": 1,
+      "w": 1,
+      "e": 1,
+      "claim": "Target indication and acquired response do not entail noxiousness. No belief or warrant variable exists."
+    },
+    "order_invariance_histories": 341
+  },
+  "general_claim": "Proof is in MODEL_AND_TRANSPORT.md; finite enumeration is a consistency check.",
+  "not_claimed": [
+    "intrinsic intentionality",
+    "content qua content causation",
+    "rational basing",
+    "conscious grasp",
+    "warrant",
+    "metaphysical naturalism or original-source multiplicity"
+  ]
+}

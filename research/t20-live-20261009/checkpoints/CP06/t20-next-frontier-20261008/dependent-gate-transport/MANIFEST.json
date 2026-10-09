@@ -1,0 +1,57 @@
+{
+  "created_utc": "2026-10-08T15:35:19.238677+00:00",
+  "status": "Frozen author packet for independent review",
+  "scope": "Dependent within-route gates; preserved coordinate marginal calibration and route independence; no integration or closure",
+  "files": [
+    {
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "463b14ece2b32e3004c9c9bc373664803a6daa81ee6e20210406a849808261fc",
+      "bytes": 2062
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "48ae64facbc6556c6f4346858f74a3a0f0049077c9d11e9adfbb0fc8c0d05be4",
+      "bytes": 1231
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "3a53862de5488ae43923c32d7ff55d942a55d617444790e9473c0ffb57cc10e8",
+      "bytes": 650
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "bytes": 15467
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+      "bytes": 7007
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "d0168bae91d619e795e50326caaf91e6a19df0e5cb84f8b1e1562a53646c5c0a",
+      "bytes": 6234
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "c67207bacb7b38bb939ae6bd5d60bda44f63d489aa495c588f973c6b9cf9ffd1",
+      "bytes": 6916
+    },
+    {
+      "path": "results/exact_controls.json",
+      "sha256": "cb68c4936ac039a7046a411d717078e1212006fbabb0fd8620ef98bf679779db",
+      "bytes": 18639
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "a9d0a69aa7cf1cdc25bc24bea0e7c46d8b2b27a777aad0b6ba75808cbdf134f7",
+      "bytes": 1381
+    },
+    {
+      "path": "sources/SOURCE_READS.json",
+      "sha256": "dae0993624569e077dd96def3e52d243b222f0dd5a6a94475a05cc5115d195b5",
+      "bytes": 2114
+    }
+  ]
+}

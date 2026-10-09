@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "name": "CHECKS.json",
+      "bytes": 646,
+      "sha256": "0cd6bb59868c8e0186a2af1b23311c6e45d790d165f725cff6498a3b4ab7616d"
+    },
+    {
+      "name": "FINAL_READBACK.json",
+      "bytes": 993,
+      "sha256": "806130a8bc485af2ffc80d11a909e0a06fac421e12a13bf9fab1eefd11d4af9f"
+    },
+    {
+      "name": "FINAL_READBACK.md",
+      "bytes": 2014,
+      "sha256": "544178053f70e06142bb576b903e91c90246bb2789d6021fcd73f8787a90d07e"
+    },
+    {
+      "name": "INPUT_BINDINGS.json",
+      "bytes": 6197,
+      "sha256": "c0adf704f8439c70821867d6fb3f38711f350d4b77a7b425148da336eac4311f"
+    },
+    {
+      "name": "METADATA_CHECK.json",
+      "bytes": 695,
+      "sha256": "c675f9341e2bb1c6698b50a53182997ba7456a067888b5fedb8ac818eb4c2f64"
+    },
+    {
+      "name": "READING_RECORD.json",
+      "bytes": 3634,
+      "sha256": "120d7f98337582236718d3d7b7de7ca4f394b4df779f3cd9cbb346ce5f31e43b"
+    },
+    {
+      "name": "REVIEW.md",
+      "bytes": 11374,
+      "sha256": "3a2c0c130261202f1dc4e6feb610b71c7c1ae9eaa9d7802df911a3c4fe456ddc"
+    }
+  ]
+}

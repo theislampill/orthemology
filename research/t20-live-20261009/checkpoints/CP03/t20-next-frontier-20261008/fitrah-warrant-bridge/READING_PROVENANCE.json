@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-10-08T09:59:36.902534+00:00",
+  "task_status": "Scoped source assessment prepared for parent review; T20 closure and integration not claimed",
+  "source": {
+    "author": "Sami Ameri / سامي عامري",
+    "title": "براهين وجود الله في النفس والعقل والعلم",
+    "publisher": "Rawasikh / رواسخ",
+    "edition": "First1445/2024, copyright page6 visually checked",
+    "isbn": "978-9921-797-04-6",
+    "catalogue_url": "https://almobadarah.com/publications/book-5",
+    "pdf_url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf",
+    "bytes": 11351820,
+    "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+    "physical_pdf_pages": 732,
+    "last_numbered_contents_page": 727,
+    "source_material_delivery": "Excluded: full PDF, extracts and rendered images retained only in temporary source cache"
+  },
+  "reading": {
+    "method": "Continuous sequential printed-page text extraction, with decisive visual rereading to control Arabic ordering/ligature defects; relevant notes read with pages",
+    "chapter": {
+      "printed_pages": [
+        157,
+        204
+      ],
+      "pdf_pages_one_based": [
+        157,
+        204
+      ],
+      "complete_at_this_scope": true,
+      "initial_display_batches": [
+        [
+          157,
+          162
+        ],
+        [
+          163,
+          168
+        ],
+        [
+          169,
+          174
+        ],
+        [
+          175,
+          180
+        ],
+        [
+          181,
+          186
+        ],
+        [
+          187,
+          192
+        ],
+        [
+          193,
+          198
+        ],
+        [
+          199,
+          204
+        ]
+      ]
+    },
+    "opening_context": {
+      "printed_pdf": [
+        151,
+        156
+      ],
+      "blank_pages": [
+        152,
+        156
+      ]
+    },
+    "closing_context": {
+      "printed_pdf": [
+        205,
+        206
+      ],
+      "status": "Next moral chapter opening only, not full chapter"
+    },
+    "inherited_epistemic_unit_reread": {
+      "printed_pdf": [
+        65,
+        69
+      ],
+      "status": "Repeated context, not new first reading"
+    },
+    "reflective_visual_reread_pages": [
+      159,
+      160,
+      161,
+      164,
+      178,
+      179,
+      182,
+      183,
+      193,
+      194,
+      196,
+      203,
+      204
+    ],
+    "reflective_text_reread_pages": [
+      174
+    ],
+    "metadata_or_frontmatter_text_read": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732
+    ],
+    "metadata_images_viewed": [
+      3,
+      4,
+      6
+    ],
+    "generated_but_not_viewed_images_excluded_from_visual_credit": [
+      205,
+      727,
+      732
+    ]
+  },
+  "prior_coverage": {
+    "inheritance_screen": "recovery-t20/addendum/AMERI_SCREEN.md",
+    "status": "Fitrah157–204 explicitly UNREAD at inherited screen; this task supplies bounded chapter reading",
+    "source_screen_directory": "recovery-t20/addendum/tranche20/research-frontier-continuation/ameri-source-screen",
+    "available_records": "Only plurality-bridge source code retained there; no earlier full source hash recovered"
+  },
+  "primary_checks": [
+    {
+      "source": "Dar Islamweb413/1569",
+      "read": "Complete second-face unit, hosted lines2144–2147",
+      "locator": "8:460–461 in electronic witness; Ameri4:328 edition correspondence unresolved",
+      "status": "Direct e-text verification, not scan"
+    },
+    {
+      "source": "Dar Wikisource42",
+      "read": "Connected lines308–458, with seven-route argument370–458",
+      "status": "Bounded direct e-text check; unknown-source editorial label; no independent manuscript claim"
+    },
+    {
+      "source": "Dar Islamicbook014",
+      "read": "Connected908–930; authorial913–928 distinguished from reported908–912",
+      "status": "Direct e-text return within inherited V08-P1856–1873; not new independent lineage"
+    },
+    {
+      "source": "Shifa Wikisource chapter30 revision22847",
+      "read": "Subsection beginning ومما ينبغي أن يعلم through nourishment analogy; preceding legal-status conclusion and following capacity response",
+      "status": "Direct e-text check; precise1978 print wording and pagination not collated"
+    }
+  ],
+  "comparison": {
+    "daee_commit": "c86b3c6673147b8802fe222373a165a37d4d24a8",
+    "daee_file_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+    "read_scope": "sound-reason §§1–5, lines66–438; shared lineage, not independent empirical evidence",
+    "originals": "See empirical-check/inheritance_manifest.json; selected original T17 SourceGuideP0023,120–125,136–141; T17ReportP122–135; T19ReportP100–104,155–158 directly reread by assessing agent. Paragraph convention one-based OOXML."
+  },
+  "limits": [
+    "No whole727- or732-page book reading claim",
+    "No historical six-hour certification or measured active-research-duration claim",
+    "No new participant research or data replication",
+    "No complete empirical bibliography verification",
+    "No scan collation for cited classical editions",
+    "No direct evidence that assessor instantiated a human recognitional experience",
+    "No final integration, repository mutation or programme closure"
+  ],
+  "public_summary_word_count": 196,
+  "verbatim_modern_source_quote_words_in_main_summary_and_assessment": 0,
+  "appraisal_scope": "Affirmative prima facie basic-belief standing. NO_NEW_INDEPENDENT_VERIFICATION of factive CAN in this incremental layer; T17 retained positive recognition appraisal not withdrawn, and no new defeater of it identified."
+}

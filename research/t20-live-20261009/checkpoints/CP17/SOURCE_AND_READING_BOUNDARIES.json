@@ -1,0 +1,56 @@
+{
+  "status": "SEVENTEENTH INTERMEDIATE CHECKPOINT; T20 ACTIVE",
+  "scope": "Data preservation only: completed Qayyim source return, simultaneous primary-source/commentary return, production argument, and Uthaymeen public source note plus reading/provenance receipts. No new research, integration, or closure.",
+  "current_root_disposition": {
+    "statement": "The root continues provisionally to favour one actual complete common original source. This increment does not revise the judgement, certify a plural-original countermodel, or force restoration or downward revision of confidence.",
+    "latest_judgement_in_checkpoint_16": {
+      "path": "t20-next-frontier-20261008/checkpoints/source-semantics/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009/reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "bytes": 4923,
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10"
+    },
+    "duplicated_here": false,
+    "prior_report_histories": "Unchanged; retained and referenced through checkpoint 16 and its exact predecessor registries."
+  },
+  "Dar_same_state_locator": {
+    "printed_location": "Dar 9:365, opening of item1776 before the 366 page marker; retained segment016 L0753",
+    "finding": "The primary argument expressly addresses same-state production; temporal succession is not its governing premise.",
+    "certification_limit": "Preserved source-worker finding, not a new packaging-time source or scan verification."
+  },
+  "tahsil_and_commentary": {
+    "exact_phrase": "Exact tahsil al-hasil phrase was not found in the bounded Dar/Minhaj/Jami primary loci checked. This is not a whole-corpus absence claim.",
+    "intended_Tadmuriyya_commentator": "Unidentified. Pending owner reconstruction following the question at 2026-10-09 03:46:49 UTC; no owner identification is inferred.",
+    "al_Sawi": "Separately labelled later comparator on Q21:22, not the user-identified work and not a Tadmuriyya commentary.",
+    "argument_limit": "The simultaneous-source rationale, actual exclusive attribution, nonabsorption, and perfection arguments remain distinct. No new independently warranted unrestricted nonduplication proof or plural-original possibility certificate is claimed."
+  },
+  "Qayyim": {
+    "reading_status": "Received chapter 19 reread, with the precise additional windows and argument units in READING_SCOPE.json. No new first-coverage or independent-witness increment.",
+    "locator": "Electronic label 146 belongs to website subsection002, not subsection001. This corrects a locator, not earlier substantive reading.",
+    "substantive_control": "Original creation and created causal/direct performance are different hierarchical production modes. Genuine created efficacy and the source positive rejection of independent coequals are preserved.",
+    "limits": "Received electronic body, not certified completeness of a printed work; known textual defects remain unamended."
+  },
+  "Uthaymeen": {
+    "included": [
+      "PUBLIC_SOURCE_NOTE.md",
+      "READING_RECEIPTS.json"
+    ],
+    "public_bounded_synopsis_word_count": 150,
+    "word_count_method": "Whitespace-delimited words in Bounded finding; provenance, coverage and source links are additional metadata.",
+    "reading_status": "Entire available third-party electronic presentation, rendered lines38–375, including main body38–345 and appended article346–375, plus bounded rereading. Visible gaps/defects at46,153,357–358 remain.",
+    "not_claimed": [
+      "Official complete printed work acquired or read",
+      "Official complete-copy acquisition request fulfilled",
+      "Verified host publishing authorization",
+      "Identity between the Usul third-edition label and Foundation fourth edition",
+      "Print-scan collation"
+    ],
+    "omitted": "Full REPORT.md and every source body, with exact hashes in OMISSIONS_AND_SOURCE_LINKS.json.",
+    "inherited_coverage": "Earlier Wasitiyya and targeted tafsir histories remain unchanged; see exact receipts."
+  },
+  "reading_and_validation_limits": [
+    "Packaging adds no reading time or first-reading credit.",
+    "No kernel, compiler, scientific, empirical, philosophical-truth, or external-validation test was performed.",
+    "Existing component verification records are preserved as historical records, not re-executed.",
+    "The top-level MANIFEST.json is the delivery inventory; component manifests and receipts also refer to omitted source files.",
+    "No original source, report, receipt, or previous checkpoint was edited."
+  ]
+}

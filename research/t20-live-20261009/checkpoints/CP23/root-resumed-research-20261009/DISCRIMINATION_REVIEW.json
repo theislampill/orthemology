@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-09T11:31:40.042172+00:00",
+  "root_reading": [
+    "RESULT.md full initial version plus final changes and scope examples",
+    "review/REVIEW.md full initial and final review",
+    "verify.py full",
+    "SOURCES.json full",
+    "sources/continuation_complete_orthing_full.md full through split 1-760 and 761-804 retrievals"
+  ],
+  "replay": "Root copied verifier outside author directory; exact finite assertions passed, output matches author results. No Lean credit.",
+  "hashes": {
+    "RESULT.md": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+    "verify.py": "bdd29fd57418db2327983bf2cb7e4c40632c9140637ae6df5d0d990ff28481b2",
+    "CHECK_RESULTS.json": "429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602",
+    "review/REVIEW.md": "35c595f3626c7c86bddd4d0941708a938085ce96a1e67da5adf2bde7804b1149"
+  },
+  "replay_matches": true,
+  "assessment": "Canonical frontier proof and finite persistent-menu completion theorem are sound at declared finite valid-catalogue scope. Least cost is execution cost, excluding catalogue compilation, planner search and external premise warrant. Same frontier need not preserve same concrete proof. Monotone snapshot diagnosis and current-state diagnosis are distinct. No wider mathematical priority or metaphysical conclusion asserted."
+}

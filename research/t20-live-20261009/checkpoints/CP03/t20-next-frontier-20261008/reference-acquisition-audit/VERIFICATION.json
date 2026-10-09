@@ -1,0 +1,201 @@
+{
+  "verified_at_utc": "2026-10-08T10:31:04.417109+00:00",
+  "status": "SCOPED_SOURCE_HASH_AND_BINDING_CHECKS_PASS",
+  "local_source_count": 30,
+  "all_source_hashes_match": true,
+  "original_binding_check": {
+    "matched": 73,
+    "compared": 73,
+    "all_match": true
+  },
+  "json_parse": "all package JSON files parsed successfully",
+  "logical_review": "Separately tasked source-level reviewer; presentation corrections incorporated. See INDEPENDENT_CHALLENGE.md.",
+  "new_model_status": "Written diagnostic only; no compilation or executed finite-model verification",
+  "lean_replay": false,
+  "prior_tests_replayed": false,
+  "old_files_modified": false,
+  "governance_claims": [],
+  "development_note": "A provenance-writing command initially used a wrong locator path, failed before producing its provenance/binding files, and was corrected. No old file was modified; this is not a research counterexample.",
+  "source_rechecks": [
+    {
+      "path": "t20-next-frontier-20261008/root-following-checkpoint/DAR_RECOGNITION_READ.md",
+      "expected": "99790ee1aa2d4176b93ce6e612d362472a055899cf6074695d240b0ca0bcbe60",
+      "observed": "99790ee1aa2d4176b93ce6e612d362472a055899cf6074695d240b0ca0bcbe60",
+      "match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "expected": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0",
+      "observed": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0",
+      "match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/PRIMARY_VERIFICATION.md",
+      "expected": "b74d13abf1e51da3442341740f5152b856905f07a80a1f0c71c19429bc4b114a",
+      "observed": "b74d13abf1e51da3442341740f5152b856905f07a80a1f0c71c19429bc4b114a",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "expected": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "observed": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/inherited/SourceIdentity.original.lean",
+      "expected": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "observed": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/README.md",
+      "expected": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "observed": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/PROJECTION_NOTES.md",
+      "expected": "fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46",
+      "observed": "fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-final-synthesis/SYNTHESIS.md",
+      "expected": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "observed": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/RECONSTRUCTION.md",
+      "expected": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+      "observed": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/PREMISE_REGISTRY.md",
+      "expected": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "observed": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/PRE_FORMAL_ISSUES.md",
+      "expected": "74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b",
+      "observed": "74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/SOURCE_LOCATORS.json",
+      "expected": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+      "observed": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "expected": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "observed": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/Controls.lean",
+      "expected": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "observed": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/veracity-boundary/src/VeracityBoundary.lean",
+      "expected": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "observed": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/EXACT_PROBLEM_AND_WRITTEN_PROOF.md",
+      "expected": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "observed": "b7dd5174207871abbff81e4c499bf74eabc7305402c7d88971e8b12bf96b4037",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/GroundedSupport.lean",
+      "expected": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "observed": "73a16000e935ec267a3bb837197ab938e90d6d033c63e54847a4d7479d755aed",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/OccurrenceControls.lean",
+      "expected": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "observed": "b1423809f4f2b3b5ef6b5490702007637109952df98fdefe04d389d7a9dc792a",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/grounded-attestation/lean/GroundedQuotient.lean",
+      "expected": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "observed": "7a6094de7a0abc93af603605c8f25227711ff4e4aac74b791066cdbe8b210c0b",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/RESULT.md",
+      "expected": "e5973984625313731008b8ce63376de1f9cbb2e6ab6ecb0ca5680d74489fa908",
+      "observed": "e5973984625313731008b8ce63376de1f9cbb2e6ab6ecb0ca5680d74489fa908",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/SOURCE_MAP.md",
+      "expected": "8fa4f3bc446847d13132c1cdbf2ae01ce9352af7f74d8989e6474edc709f1faa",
+      "observed": "8fa4f3bc446847d13132c1cdbf2ae01ce9352af7f74d8989e6474edc709f1faa",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/PROBE_PLAN.md",
+      "expected": "9d16a40d974487f1effc1b68f76717b987110d09f8e8da830fcc9a8a25d8b8c4",
+      "observed": "9d16a40d974487f1effc1b68f76717b987110d09f8e8da830fcc9a8a25d8b8c4",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_PLAN.md",
+      "expected": "60af0c9e239380bd90c072685b2bb7113a232b55b1bcef030f5e998ed1835325",
+      "observed": "60af0c9e239380bd90c072685b2bb7113a232b55b1bcef030f5e998ed1835325",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_RESULT.md",
+      "expected": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+      "observed": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/rivals.py",
+      "expected": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+      "observed": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rivals/extended_histories.py",
+      "expected": "5efd8893228454abfc859802583862148167625a0799f576fb613c672c076012",
+      "observed": "5efd8893228454abfc859802583862148167625a0799f576fb613c672c076012",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/supplement/Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007/tranche20/research-resumption/testimony-continuation/RESULT.md",
+      "expected": "0e59321018f5dda5cadcf26dba19fdba0faad853ad90cb97286ecec4a81a3a73",
+      "observed": "0e59321018f5dda5cadcf26dba19fdba0faad853ad90cb97286ecec4a81a3a73",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/supplement/Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007/tranche20/research-resumption/testimony-continuation/occurrence_model.py",
+      "expected": "84150174b12db73b14a4f336f6265336de4b4ba17a9d42360c38350d32964964",
+      "observed": "84150174b12db73b14a4f336f6265336de4b4ba17a9d42360c38350d32964964",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+      "expected": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "observed": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "match": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+      "expected": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "observed": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "match": true
+    }
+  ]
+}

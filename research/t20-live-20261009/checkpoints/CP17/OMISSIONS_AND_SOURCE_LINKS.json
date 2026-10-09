@@ -1,0 +1,388 @@
+{
+  "recorded_utc": "2026-10-09T03:57:03.577829+00:00",
+  "omitted_files": [
+    {
+      "path": "qayyim-complete-causation-return/sources/pages.json",
+      "bytes": 1715627,
+      "sha256": "462b4cb5eb4d6f8ac488157b693dae6daef1f234392f5dcfa06667f9e898bf77",
+      "reason": "Full classical electronic body or full-body page map omitted; bounded quotations and precise reading/locator receipts are preserved in the analytical return."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-001.html",
+      "bytes": 551697,
+      "sha256": "d23a40a5a47859bee8a6e1723c90ca957fc289118130a98111b3b74a40332850",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-001.txt",
+      "bytes": 548560,
+      "sha256": "c66e852b33e2b79a3c86a2bb42964347afd18bb619ba3b6324b8eedd9a0cd559",
+      "reason": "Full classical electronic body or full-body page map omitted; bounded quotations and precise reading/locator receipts are preserved in the analytical return."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-002.html",
+      "bytes": 555633,
+      "sha256": "eecaa056eb3faa69c0a431c5154c8ca45da50cbeb7a0406d48cce99f5990b95b",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-002.txt",
+      "bytes": 553017,
+      "sha256": "b75356cafb4406e6dee42afd246278479fa8af59419a3e085b434460c5bba90e",
+      "reason": "Full classical electronic body or full-body page map omitted; bounded quotations and precise reading/locator receipts are preserved in the analytical return."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-003.html",
+      "bytes": 557116,
+      "sha256": "24906a12923812d1b0e171e989cc3c941a9da501317c0a36572f20239174a674",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-003.txt",
+      "bytes": 554631,
+      "sha256": "7cd0280e0f2858a807289677a9d9a5c1d5183f07a8cc0089e61c6c5344dbc5d3",
+      "reason": "Full classical electronic body or full-body page map omitted; bounded quotations and precise reading/locator receipts are preserved in the analytical return."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-004.html",
+      "bytes": 7084,
+      "sha256": "fa60e369c7c7287d4951875091432ec80ccb6e1b45488efbc192809e93fccd9e",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "qayyim-complete-causation-return/sources/shifa-004.txt",
+      "bytes": 5663,
+      "sha256": "8bbdb1f71514e1ffba9d08e0c7a4ba3f328f5414dde37b1813dd19807db0118b",
+      "reason": "Full classical electronic body or full-body page map omitted; bounded quotations and precise reading/locator receipts are preserved in the analytical return."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/islamarchive28157-metadata.html",
+      "bytes": 284055,
+      "sha256": "b22c12c70ef29eda68682f9df44e05a39a24fd071e55061ca2cde25986338859",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/islamarchive28157-metadata.txt",
+      "bytes": 67322,
+      "sha256": "bf901b3c09b7b38907654e4b45ca60571bf569373f0114eb9283ed01d43e0c6e",
+      "reason": "Raw website text capture omitted; bibliographic provenance remains in the Jami report, fetch record, and verification manifest."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/jami6-csiislam.pdf",
+      "bytes": 6584222,
+      "sha256": "c5434abfa5585d899f443576ff31509b79904662aa8db490fe53c5b3bb133730",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-093.png",
+      "bytes": 93844,
+      "sha256": "29a2b63fd73e3ed47ba61192e00e3af184400195d4aa06a9f74c864dacc8cab7",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-094.png",
+      "bytes": 89607,
+      "sha256": "c25962d32488f7b703817fe694b8ab39d840c32bac695ffe9c7c807f670cdda6",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-095.png",
+      "bytes": 94006,
+      "sha256": "734d55fbe8e368e242e1f13cd1f896a1c5e77bf4749f28e0596b711f4bb4f65e",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-096.png",
+      "bytes": 97451,
+      "sha256": "98db91fffdb679c2950df62ca1a4b8b9d6c37ddfc91e187c0ece7ede584b73ab",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-097.png",
+      "bytes": 94386,
+      "sha256": "23ba58423fae9b62cd721cb7a9cfe17f0a542b3c42cb590de0d072a2f832a1e6",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-098.png",
+      "bytes": 85150,
+      "sha256": "ac2dd03d665fc0e654064caababeb29e2364f53c64129af7ba4eb648c76de2aa",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-099.png",
+      "bytes": 86961,
+      "sha256": "9a148b0264e27f0941a4ec5e70c85b473c2e8df1a839ac2f3e9c35f1ac17fe1c",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-context-085.png",
+      "bytes": 20283,
+      "sha256": "b6d2d8f67e72fe3dc94c0792d679ba543959843edd77f3c80078ccccec98201e",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-context-086.png",
+      "bytes": 7698,
+      "sha256": "39116b4ff190093038fbf729e60ebf5795466af95809c14eda502bbd3a8ca268",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-context-087.png",
+      "bytes": 80756,
+      "sha256": "fde1123cf4a5d2034c3545321077e2b63abf9f90c1876c4a5c9b03f50e66d46f",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-front-001.png",
+      "bytes": 1788239,
+      "sha256": "228faaa3c6b259939ec3201c5aa2071c711954ccbe89502472eb857a7b9b4b10",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-front-002.png",
+      "bytes": 14851,
+      "sha256": "ce4a2a931bfb8a7097a09cd925a7e19b5bee3818077738d5f8a108206b72ac59",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-front-003.png",
+      "bytes": 21301,
+      "sha256": "e552586b149ab72078ee5041165b12fe6a1c30fa527d2367d036ff17455468ad",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/jami/pages/csiislam-front-004.png",
+      "bytes": 7455,
+      "sha256": "ac74f278aa75f42cacd3fd41ba2811390954c5dea22bdd5d0c15ee85de48acc0",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1766.html",
+      "bytes": 595429,
+      "sha256": "1b52b42d861e34155ad693ef7128345126d3d8f7e9a26c0429bc0a547c164023",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1766.txt",
+      "bytes": 3601,
+      "sha256": "12b8344d3c2eedca56682a9666654aac83bdd2ddc3da03c1f9c4fb93b6efd000",
+      "reason": "Acquired contextual body not credited as read; omitted to keep this checkpoint limited to the completed reading increment."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1767.html",
+      "bytes": 595781,
+      "sha256": "745cdd6d9430f6ee1ce2e752f01553206f10832c43145e453e4dc144adf1d226",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1768.html",
+      "bytes": 609714,
+      "sha256": "e68f52113afea0178e90373c45b0e1a350f68c4237330f749b48cfa3b7efd210",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1769.html",
+      "bytes": 613584,
+      "sha256": "dd4735e64bdcd86227f65af71fd14bb2c553e19e0674594daefe22ce86d6a963",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1770.html",
+      "bytes": 596145,
+      "sha256": "3b4c8ff66a83dbb8fe914d159b810e91572b416f4c5789e17f8a76a4e297694f",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1771.html",
+      "bytes": 622179,
+      "sha256": "737fef565de4ba93cc0fd10d8a942da72323de68f15b4c0cb2f7269e4aedf0e7",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1772.html",
+      "bytes": 595429,
+      "sha256": "2c0eecb24e5204a7308c01b6098193a950be4dd2efa77d1269a23a1326757013",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1773.html",
+      "bytes": 617037,
+      "sha256": "6e2f0732c53fd7b2e16cbfcd551fef096ffb7c2bd851c47c3894be0affa5252c",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1774.html",
+      "bytes": 600267,
+      "sha256": "eb1b5c9748e5acf04edfeeccf07a2c29ec2a268b5cf0a3a3c1e3869cbdf892d5",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1775.html",
+      "bytes": 594472,
+      "sha256": "5509f5efb52eb222ffce76fb367d44bbd47e284f3cfe0081f954e92cbbb7dc26",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/dar9-item1776.html",
+      "bytes": 597916,
+      "sha256": "72e16113dd2f5cbc790ffae23045b8657f079b3a895b0893584723bcf08f3286",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/extract_dar.py",
+      "bytes": 1685,
+      "sha256": "8a73546d78520528316a4b1454fb5728a5b081b26ec39147deeaf6ec7e3f5cd2",
+      "reason": "Extraction or executable code omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/extract_minhaj.py",
+      "bytes": 1692,
+      "sha256": "bf33b335618bbceaa39391ccdc6f9d2685d41fc14f235fc98a32cc6945adf066",
+      "reason": "Extraction or executable code omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/minhaj3-item364.html",
+      "bytes": 328401,
+      "sha256": "b43b494ada42c622f7664c5509f5ad0871fd16faf452f3a17294f498d0313b3b",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/minhaj3-item365.html",
+      "bytes": 268064,
+      "sha256": "081c5255fc92bf7b80b9ca8ae6f0c8a9dd2201f97e25797ec9f9027041f2cec1",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "simultaneous-nonduplication-source-return/sources/minhaj3-item366.html",
+      "bytes": 407961,
+      "sha256": "47bc59df85887b762735f90139f5a62f03a9324341ae4d7aba9d8a0fbb501fec",
+      "reason": "Raw HTML, full scan, or image omitted from the data-only distribution."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/REPORT.md",
+      "bytes": 9497,
+      "sha256": "557fa827990c26e445eecb5b6842dd7b7fc8bfa7a2e0539b4b19140a962b65cc",
+      "reason": "Full analytical report omitted: internal analysis and extended modern-source synopsis; the separately prepared public note and reading/provenance receipts are included."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/arabic-keyboard-initial.txt",
+      "bytes": 36698,
+      "sha256": "402de43bd21543622db295ec3d38025dc0a5be79144453adfa4664ae5f7ee2f2",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/qawaid-available-electronic-witness.txt",
+      "bytes": 207038,
+      "sha256": "e02205ec0dc401891eddf6d117658a4097d2bf8d43ff203bcc26eba1dd0c5995",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read136.txt",
+      "bytes": 37176,
+      "sha256": "0f1feb0dc87f1654b309e1679107f82392cf1613710a42d92e1c4efb9bbe57cf",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read182.txt",
+      "bytes": 39607,
+      "sha256": "492468bfe456ac73b14c585f00112eecdb00ee7d4e9d58e2d40fd6fa5fc5874c",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read223.txt",
+      "bytes": 36996,
+      "sha256": "2038a4bfd718d74e9415fba3d31a1c27b3385c9bc384271df56f4aa4f8f582ef",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read260.txt",
+      "bytes": 38502,
+      "sha256": "9b4c88bdd6a0dddcec919221357733f06e0f97271e01449d6a29a9780a116649",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read301.txt",
+      "bytes": 39583,
+      "sha256": "2784aac87034b32c972ca78f4ac65378292df1daf3a103a2ecd1a17550585a59",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read342.txt",
+      "bytes": 36849,
+      "sha256": "be9e11bde7a4ece23cde28419fd36f18b2aedd363495c82ab597351e479b5bac",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/read94.txt",
+      "bytes": 35397,
+      "sha256": "29aae2ee94682f97c707ac75f4e55ea5558b401b4e5162418222b386736ca516",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    },
+    {
+      "path": "uthaymeen-attribute-rules-return/sources/usul-perfection.txt",
+      "bytes": 32124,
+      "sha256": "1aad2e8d993683dc5183f55a3dcb50147bc007bc839f539819261eb187b3a1a2",
+      "reason": "Modern source body or retrieval excerpt omitted; exact identity and source/reading provenance retained."
+    }
+  ],
+  "source_links": [
+    "https://arabic-keyboard.info/books/ar/read-book/التحفة-المهدية-شرح-العقيدة-التدمرية",
+    "https://arabic-keyboard.info/books/ar/read-book/شرح-التدمرية-ناصر-العقل",
+    "https://arabic-keyboard.info/books/ar/read-book/شرح-الرسالة-التدمرية",
+    "https://binothaimeen.net/books",
+    "https://csiislam.org/img/library_dine/c1473365dbab.pdf",
+    "https://csiislam.org/single_library_dine.php?id=171",
+    "https://d1.islamhouse.com/data/ar/ih_books/single3/ar_tadmorih_Barrak.pdf",
+    "https://d1.islamhouse.com/data/ar/ih_books/single_010/ar-alaqida-altadmorya.pdf",
+    "https://download.ilmussalaf.com/Books/Qawaidul-Muthla.pdf",
+    "https://foundation.binothaimeen.net/ar/books/show/e53e28b8-25a6-498e-8204-67b3dd161a51",
+    "https://iifa-aifi.org/wp-content/uploads/2025/11/13.%D8%AC%D8%A7%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D8%B3%D8%A7%D8%AF%D8%B3%D8%A9.pdf",
+    "https://islamhouse.com/ar/books/2831099/",
+    "https://islamhouse.com/ar/books/322216",
+    "https://islamport.com/l/aqd/572/258.htm",
+    "https://islamweb.net/ar/library/content/22/2032/",
+    "https://old.binothaimeen.net/content/16818",
+    "https://shamela.org/gen/68d792eeec1755164c6dc94f08727b53_gen.pdf",
+    "https://shamela.ws/book/21506",
+    "https://shamela.ws/book/927",
+    "https://usul.ai/ar/t/the-fundamental-principles-on-the-names-and-attributes-of-allah",
+    "https://usul.ai/ar/t/the-fundamental-principles-on-the-names-and-attributes-of-allah/27",
+    "https://www.altafsir.com/Tafasir.asp?LanguageId=1&UserProfile=0&tAyahNo=22&tDisplay=yes&tMadhNo=2&tSoraNo=21&tTafsirNo=96",
+    "https://www.arabic-keyboard.info/books/ar/read-book/القواعد-المثلى-في-صفات-الله-وأسمائه-الحسنى",
+    "https://www.islamarchive.cc/ketab_content/28157",
+    "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-016.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-001.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-002.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-003.html",
+    "https://www.islamicbook.ws/amma/shfa-alalil-004.html",
+    "https://www.islamweb.net/ar/library/content/108/156/",
+    "https://www.islamweb.net/ar/library/content/108/156/|read-selections/minhaj2-item156-L0021-L0041.txt|Retained",
+    "https://www.islamweb.net/ar/library/content/108/157/",
+    "https://www.islamweb.net/ar/library/content/108/157/|read-selections/minhaj2-item157-L0001-L0004.txt|Retained",
+    "https://www.islamweb.net/ar/library/content/108/364/",
+    "https://www.islamweb.net/ar/library/content/108/364/|sources/minhaj3-item364.txt",
+    "https://www.islamweb.net/ar/library/content/108/365/",
+    "https://www.islamweb.net/ar/library/content/108/365/|sources/minhaj3-item365.txt",
+    "https://www.islamweb.net/ar/library/content/108/366/",
+    "https://www.islamweb.net/ar/library/content/108/366/|sources/minhaj3-item366.txt",
+    "https://www.islamweb.net/ar/library/content/108/96/",
+    "https://www.islamweb.net/ar/library/content/108/96/|read-selections/minhaj1-item96-L0001-L0009.txt|Retained",
+    "https://www.islamweb.net/ar/library/content/22/2032/",
+    "https://www.islamweb.net/ar/library/content/413/1766/",
+    "https://www.islamweb.net/ar/library/content/413/1767/",
+    "https://www.islamweb.net/ar/library/content/413/1768/",
+    "https://www.islamweb.net/ar/library/content/413/1769/",
+    "https://www.islamweb.net/ar/library/content/413/1770/",
+    "https://www.islamweb.net/ar/library/content/413/1771/",
+    "https://www.islamweb.net/ar/library/content/413/1772/",
+    "https://www.islamweb.net/ar/library/content/413/1773/",
+    "https://www.islamweb.net/ar/library/content/413/1774/",
+    "https://www.islamweb.net/ar/library/content/413/1775/",
+    "https://www.islamweb.net/ar/library/content/413/1776/",
+    "https://www.jonathanschaffer.org/overdetermination.pdf"
+  ],
+  "source_link_limit": "Links are preserved provenance, not newly visited or availability-tested by this packaging task.",
+  "distribution_limit": "No modern source bodies, raw HTML, full scans, or images. Uthaymeen full analytical report is also omitted. Bounded classical extracts and short locators within analytical reports are retained.",
+  "not_duplicated": "Previously captured user TXT, prior report histories, and all earlier ZIPs remain in their existing checkpoints."
+}

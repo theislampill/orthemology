@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "count": 23,
+  "scope": "Exact bindings only; the receipt does not hash itself or future author packaging.",
+  "verified": [
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/CONTROLS_OUTPUT.json",
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/EXACT_CONTROLS.md",
+      "sha256": "8255889acd5fe46eb63b1259e8cf6ae342157c10a3669d15e36189ffa8b86717"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/NEGATIVE_CONTROLS.md",
+      "sha256": "ceea5caacbafbc11b6acee5865964092db779b16f67a71501ef5036d52603f87"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/READ_FIRST.md",
+      "sha256": "6abc98959222dd3d389fabf64bdd8f0f34c5cd1e1d886dedc661b633881a8467"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/RESEARCH_EVENTS.jsonl",
+      "sha256": "48932408a000e96edc187ff86eb088ba9afa25f2b4b59d84826e441e9012c2b9"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/SOURCE_AUDIT.md",
+      "sha256": "03ca00dd14213af6c8cfd86a59ab36f052441ece947274bed6787df2cad10eb4"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/SOURCE_BINDINGS.json",
+      "sha256": "81b8388c7db66fbcdd0da6db3bd54088cc2dec8fb1d6af8ba75423755ba4d2ef"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/SOURCE_CHECK_OUTPUT.json",
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/controls.py",
+      "sha256": "e448f57ba034c782deed64e4013f8afc50ce4ae1ede1f8e1f1be4bf4ea6504b4"
+    },
+    {
+      "group": "author_payloads",
+      "path": "../arbitrary-face-replay-design/source_binding_check.py",
+      "sha256": "a11f4b18edefba84ccea562cea37d4572bdc92379374f1634505ee7ae11f58c3"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "AUTHOR_CONTROLS_RERUN.json",
+      "sha256": "e72a2adbc43f13038cd42fe130c65fd6f079642361200578e326fe2f1f674698"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "AUTHOR_CONTROLS_STRENGTHENED_RERUN.json",
+      "sha256": "9af0caefa09b181bb9d3141836a8b21d3a40ac4e4f41734b3d5184bfe180e209"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "d1fce48063577ec64673e24927b1f4e9f61d0987341e5d793bd2f4644fb3497b"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "CONTROL_RUN.log",
+      "sha256": "052c3f9547871669d5ed4cdaf1cf773c5c24a6ff4c327fab3223253df2fcd408"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "INITIAL_BINDINGS.json",
+      "sha256": "15dee11f7e4fc2aec74aae8643ff26f2f066b974521edfba1279d7d05abc7efd"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "REVIEW.md",
+      "sha256": "82607136c173948ec90de23ff853664f30ab869425014f359ce64b70f1e4de03"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "SOURCE_BINDING_RERUN.json",
+      "sha256": "11ba8909fdfbac2214f9a0252341431d6165ca9be4a4c504952f8f2c8d023cbf"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "independent_controls.py",
+      "sha256": "1b290a8bba3ca20b27a6c363018e24dc1f86b19bef24510e2cfef1f15021d83d"
+    },
+    {
+      "group": "review_artifacts",
+      "path": "verify_review.py",
+      "sha256": "2b80e45c54e77991fafe638b956dcdfc2e5a1e956d5b8d8eba07e457569312da"
+    },
+    {
+      "group": "directly_read_ancestry",
+      "path": "../finite-replay-sampling-lower-bound/RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+    },
+    {
+      "group": "directly_read_ancestry",
+      "path": "../finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe"
+    }
+  ]
+}

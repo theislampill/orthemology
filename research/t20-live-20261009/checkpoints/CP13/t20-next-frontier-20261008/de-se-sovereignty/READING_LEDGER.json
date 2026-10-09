@@ -1,0 +1,18 @@
+{
+  "directly_read_inputs": "See INPUT_BINDINGS.json; scope applies individually",
+  "primary_source_note": "One targeted retained Arabic rereading and one whole inherited project article retrieved read-only. Contemporary primary de se literature belongs to separate source specialist unless subsequently directly read here.",
+  "archive_navigation": [
+    {
+      "archive": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Sixteenth_Research_Final_Evidence_v1_20261005.zip",
+      "operation": "Listed 43 outer members; searched relevant nested core417/proof376 entries for subject-indexing/article identifiers; no matching body found. Extracted reader map only for term search. This is navigation, not full archive reading."
+    }
+  ],
+  "github_source": {
+    "repository": "theislampill/orthemology",
+    "commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "path": "experiments/orthemology-v5-successors/source-store/bef95a0a2b0774ad36c8e42d9070968a95b14811434bc0c6affa3ec3eeff7532/ARTICLE.md",
+    "git_blob_sha": "6d71541d6deec99b40f0c3f270358b53a78e27bd",
+    "result": "Read-only fetch succeeded; full article inspected",
+    "live_main_verification": false
+  }
+}

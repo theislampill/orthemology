@@ -1,0 +1,121 @@
+[
+  {
+    "id": "S4_THEORY_SAGAN_INTERACTION",
+    "label": "Study 4 theory-only MS by author within Sagan",
+    "distribution": "F",
+    "statistic": 2.69,
+    "df_numerator": 1,
+    "df_denominator": 131,
+    "publisher_pdf_page": 8,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "inconsistent claim",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S4_THEORY_THREE_WAY",
+    "label": "Study 4 theory-only three-way interaction",
+    "distribution": "F",
+    "statistic": 6.07,
+    "df_numerator": 1,
+    "df_denominator": 257,
+    "publisher_pdf_page": 8,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "preserved control",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S4_THEORY_IDT_SIMPLE",
+    "label": "Study 4 theory-only IDT mortality simple effect within Sagan",
+    "distribution": "t",
+    "statistic": 2.86,
+    "df_numerator": null,
+    "df_denominator": 64,
+    "publisher_pdf_page": 8,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "preserved control",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S5_THEORY_ET_SIMPLE",
+    "label": "Study 5 theory-only ET mortality simple effect",
+    "distribution": "t",
+    "statistic": 1.47,
+    "df_numerator": null,
+    "df_denominator": 94,
+    "publisher_pdf_page": 10,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "inconsistent claim",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S5_THEORY_INTERACTION",
+    "label": "Study 5 theory-only MS by author interaction",
+    "distribution": "F",
+    "statistic": 5.17,
+    "df_numerator": 1,
+    "df_denominator": 94,
+    "publisher_pdf_page": 10,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "preserved control",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S5_THEORY_IDT_SIMPLE",
+    "label": "Study 5 theory-only IDT mortality simple effect",
+    "distribution": "t",
+    "statistic": 3.23,
+    "df_numerator": null,
+    "df_denominator": 94,
+    "publisher_pdf_page": 10,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "preserved control",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  },
+  {
+    "id": "S5_SIX_ET_SIMPLE",
+    "label": "Study 5 six-item ET mortality simple effect",
+    "distribution": "t",
+    "statistic": 1.8,
+    "df_numerator": null,
+    "df_denominator": 94,
+    "publisher_pdf_page": 10,
+    "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0017349&type=printable",
+    "role": "preserved explicitly one-tailed control",
+    "printed_claim": "p < .05; explicit one-tailed only for six-item Study 5 control",
+    "verified_in": [
+      "publisher HTML",
+      "publisher XML",
+      "rendered publisher PDF"
+    ]
+  }
+]

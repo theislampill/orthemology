@@ -1,0 +1,35 @@
+[
+  {
+    "source": "Majmu20 section2031",
+    "url": "https://islamweb.net/ar/library/content/22/2031/",
+    "retained": "sources/majmu20-item2031.txt",
+    "direct_scope": "L001–018, full extracted body",
+    "status": "new local retrieval, inherited argument, corroborative reading only"
+  },
+  {
+    "source": "Majmu20 section2032",
+    "retained": "../../t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+    "direct_scope": "L001–020 in initial source read; decisive L002,L006–008",
+    "status": "inherited rereading"
+  },
+  {
+    "source": "Jami6",
+    "url": "https://iifa-aifi.org/wp-content/uploads/2025/11/13.%D8%AC%D8%A7%D9%85%D8%B9-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9-%D8%A7%D9%84%D8%B3%D8%A7%D8%AF%D8%B3%D8%A9.pdf",
+    "retained": "sources/jami6-web-retrieval.json",
+    "direct_scope": "web PDF text lines1751–1897, with relevant continuous argument1800–1885; electronic full-volume web lines404–448 also read",
+    "status": "inherited source return; no fresh scan image collation"
+  },
+  {
+    "source": "Akmaliyya",
+    "url": "https://islamweb.net/ar/library/content/22/591/",
+    "retained": "../bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+    "direct_scope": "L216–240 andL258–274",
+    "status": "peer-lane source control; personally read only these windows; no complete-epistle claim"
+  },
+  {
+    "source": "Mustasfa and Sharh al-Maqasid search leads",
+    "retained": "sources/mustasfa004.html only for Mustasfa",
+    "direct_scope": "selected web excerpts about multiple causes; not used in final inference",
+    "status": "navigation/control leads, no whole-source reading or new finding credit"
+  }
+]

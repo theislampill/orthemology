@@ -1,0 +1,100 @@
+{
+  "task": "Independent focused assessment of the agency-robustness to necessary universal intrinsic concern inference",
+  "date": "2026-10-09",
+  "scope": "Full supplied 2025 manuscript and full extracted 2024 article; no repository mutation, integration, closure, or external outreach",
+  "independence": "No parent report, other worker report, or forthcoming author-worker verdict was read.",
+  "inputs": [
+    {
+      "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2025-ethics-agency.pdf",
+      "bytes": 314231,
+      "sha256": "74a8b3898567214fe7f85de22d228b77e567bb597efac679fa95be0a4a1f1e30"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2025-ethics-agency.txt",
+      "bytes": 80241,
+      "sha256": "da34695413b11e3f25de10e212f6a09ec233516d07da5ff8b2d54268d5f9f08e"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2024-issue.pdf",
+      "bytes": 1150392,
+      "sha256": "91dde78fe9325c0ffd268c867cd1cf94944200a5315909c777adb312062775e6"
+    },
+    {
+      "path": "categorical-reasons-bridge-20261009/research-intermediates/smith-2024-article.txt",
+      "bytes": 84079,
+      "sha256": "ab2879cfa73e02c26c76b7830f845bd10cf8fd060f5e25e0bbb916d28716df86"
+    }
+  ],
+  "source_labels": {
+    "2025": "Author manuscript labels publication in 2025, The Future of Normativity, pp. 341\u2013366. All 2025 discussion references use the manuscript page numbers 1\u201320. PDF metadata reports creation in April 2026; no claim about historical source availability is inferred.",
+    "2024": "Rethinking the Moral Problem, printed pp. 7\u201332, adjacent extracted article."
+  },
+  "source_summary_words": 154,
+  "fresh_pdf_extraction": {
+    "path": "agency-robustness-independent-20261009/smith-2025-fresh-extraction.txt",
+    "command": "pdftotext -layout",
+    "byte_identical_to_supplied_text": true,
+    "nonempty_pages": 20
+  },
+  "completed_reads": [
+    {
+      "source": "smith-2025-ethics-agency.txt",
+      "line_ranges": [
+        [
+          1,
+          230
+        ],
+        [
+          231,
+          460
+        ],
+        [
+          461,
+          700
+        ],
+        [
+          701,
+          950
+        ]
+      ],
+      "coverage": "All 903 lines, including references and entire balancing/sanctions/brutal-apocalypse discussion"
+    },
+    {
+      "source": "smith-2024-article.txt",
+      "line_ranges": [
+        [
+          1,
+          160
+        ],
+        [
+          160,
+          429
+        ],
+        [
+          430,
+          800
+        ],
+        [
+          800,
+          1165
+        ]
+      ],
+      "coverage": "All 1159 lines, including p.22 nonmotivational-reflex discussion and p.27 withheld best-conception argument"
+    }
+  ],
+  "visual_checks": {
+    "fresh_pdf_renders_viewed": [
+      10,
+      11,
+      12
+    ],
+    "files": [
+      "agency-robustness-independent-20261009/verified-page-10.png",
+      "agency-robustness-independent-20261009/verified-page-11.png",
+      "agency-robustness-independent-20261009/verified-page-12.png"
+    ],
+    "purpose": "Verify the exact direct-capacity, environmental-or-internal protection, most-straightforward-to-necessity, and universal/finite-agent passages against the PDF"
+  },
+  "mathematical_test": "No toy theorem or arbitrary metric supplied; the absent controlled comparison was identified qualitatively.",
+  "bounded_outcome": "Genuine defeasible comparative support; direct capacity metric repairs narrow 2024 criticism; necessity and a full preservation-respecting countermodel both unestablished in this investigation."
+}

@@ -1,0 +1,82 @@
+{
+  "graded_source": {
+    "blob": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+    "current_pin": "3a0bdeaa1394c656245cae9599adcb143e885059",
+    "historical_pin": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+    "identity_verified": true,
+    "path": "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+    "repository": "theislampill/orthemology",
+    "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+  },
+  "inputs": [
+    {
+      "bytes": 110364,
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/sources/dasgupta2009-layout.txt",
+      "sha256": "b203658f64ad51ad396fc80100076109b64e26431f1f5de3304a3f109cb81134"
+    },
+    {
+      "bytes": 30791,
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+    },
+    {
+      "bytes": 361836,
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-29.png",
+      "sha256": "579be2b642e860b0706efda8054f10022a890268f0d80c1ebb3a53c57a49c6f4"
+    },
+    {
+      "bytes": 375348,
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-30.png",
+      "sha256": "27fc2bcc0fad84fcdcd2a807dcedce423a7d16311f08692889b2c94a7fa8d2da"
+    },
+    {
+      "bytes": 12476,
+      "path": "t20-next-frontier-20261008/productive-identifiability/RESULT.md",
+      "sha256": "fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d"
+    },
+    {
+      "bytes": 18684,
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/ANALYSIS.md",
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c"
+    },
+    {
+      "bytes": 93523,
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "bytes": 45804,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "9055290fcd13916f5914904b3f21ce1a7c5aceef57346ea8e41422de98f76132"
+    },
+    {
+      "bytes": 326822,
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/source-images/page-22.png",
+      "sha256": "2c7d92cca28ed004d1c5a651fa98b45ff1156c3dab1c6fe35d3f632333c28a05"
+    }
+  ],
+  "new_readonly_web_sources": [
+    {
+      "url": "https://www.cs.ucdavis.edu/~green/papers/pods07.pdf",
+      "use": "Positive semiring relation operations and homomorphism ancestry."
+    },
+    {
+      "url": "https://steven-t-kuhn.weebly.com/papers-in-logic-and-philosophy-of-logic.html",
+      "use": "Bibliographic source link only."
+    }
+  ],
+  "nonclaims": [
+    "No repository write",
+    "No metaphysical representation identity",
+    "No all-model consequence theorem from finite testing",
+    "No integration or closure"
+  ],
+  "read_boundaries": {
+    "Dasgupta2009": "Section 3 and complete Appendix; printed 56,63,64 images inspected",
+    "GradedRepresentations": "Sections 2–6 and section 11 exact quotient interface read directly; remainder not claimed read",
+    "GreenKT2007": "Primary PDF section 3 definitions and Proposition 3.5 read; paper-wide reading not claimed",
+    "Kuhn1983": "Bibliographic primary author/publisher pages found; attempted full-text opens failed. No claim of verifying its low-arity convention.",
+    "LaterH_v5": "Sections 1–3 consulted, not reread full paper in this operation"
+  },
+  "recorded_at_utc": "2026-10-08T19:12:22.380241+00:00"
+}

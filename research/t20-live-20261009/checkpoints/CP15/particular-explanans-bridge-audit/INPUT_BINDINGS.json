@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only inherited inputs, hashed after reading; no historical before-and-after claim. All writes confined to particular-explanans-bridge-audit/.",
+  "files": [
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+      "bytes": 72314
+    },
+    {
+      "path": "epistemic-psr-warrant/RESULT.md",
+      "sha256": "7e01f5d931af6942d2cd859fe24e952585d130d6b28e78a26e6d18dfcfe40c7f",
+      "bytes": 23883
+    },
+    {
+      "path": "epistemic-psr-warrant/SOURCES_AND_RIGHTS.md",
+      "sha256": "74bf597fb233ab7511dfcd22ff0a96c551437d56e1fae0d8e62aa7d4413505f0",
+      "bytes": 2682
+    },
+    {
+      "path": "plural-explanation-theorem-audit/RESULT.md",
+      "sha256": "e1a2311dd76a5d18e121a02974de3a28cdccee957d8b120c567e481e129f7e79",
+      "bytes": 18627
+    },
+    {
+      "path": "plural-explanation-theorem-audit/SupplementedControl.lean",
+      "sha256": "9462f1f41c5d3162a27fe85438b905124602b005c58178a5f710cd4e1db335c9",
+      "bytes": 5202
+    }
+  ]
+}

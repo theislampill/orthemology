@@ -1,0 +1,45 @@
+{
+  "recorded_utc": "2026-10-09T08:17:29.683714+00:00",
+  "scope": "New additive research files only",
+  "deliverable_payloads": [
+    {
+      "path": "REPORT.md",
+      "bytes": 15381,
+      "sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 5362,
+      "sha256": "0a35e896704434bf837e1d80a338590819906556124754f73a241b29db35ee37"
+    },
+    {
+      "path": "RELEVANT_PROOF.md",
+      "bytes": 1939,
+      "sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b"
+    },
+    {
+      "path": "CHECK_RESULTS.json",
+      "bytes": 6761,
+      "sha256": "595955da761087c1b0033f2387f22aa6e31c7758da0299a918e84361b34bafcd"
+    },
+    {
+      "path": "check_relevant_bridge.py",
+      "bytes": 6595,
+      "sha256": "f1f954730610c75df29f36f04d9e6a6c4c69b5b9b360f0fccf71e44fee54e814"
+    }
+  ],
+  "excluded_from_user_facing_package": [
+    "research-intermediates (retained primary bodies and access-failure HTML)"
+  ],
+  "independent_review": "relevant-closure-review-20261009/INDEPENDENT_REVIEW.md",
+  "inherited_unchanged": [
+    {
+      "path": "recognition-operative-content-20261009/REPORT.md",
+      "sha256": "d11bf155683656203e69fb44ed8886d16dd05a4deda6be5ce84cb6bea772fee1"
+    },
+    {
+      "path": "recognition-operative-content-20261009/SOURCE_READS.json",
+      "sha256": "48e52e37f51f38bd764e9f34302bf39bcec86a47568ef51c348f790016aa0156"
+    }
+  ]
+}

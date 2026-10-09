@@ -1,0 +1,29 @@
+{
+  "kind": "Read-only proof dependencies and actual-action comparator",
+  "sources": [
+    {
+      "path": "../retained-skyline-likelihood/RESULT.md",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345"
+    },
+    {
+      "path": "../skyline-count-information/RESULT.md",
+      "sha256": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d"
+    },
+    {
+      "path": "../skyline-likelihood-score/RESULT.md",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f"
+    },
+    {
+      "path": "../skyline-likelihood-score-review/REVIEW.md",
+      "sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596"
+    },
+    {
+      "path": "../skyline-likelihood-score-review/REVIEW_RECEIPT.json",
+      "sha256": "effd28cce9cb9d3e892d3c1e19df59e66a06c16c7595e7b3d9fb3aa1ab1149c4"
+    },
+    {
+      "path": "../full-face-threshold-kl-rate/RESULT.md",
+      "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date_utc": "2026-10-09",
+  "operation": "Source-scope clarification in RESULT section6 from already-read Pruss note11 and section4.1.1.6",
+  "previous_result": {
+    "path": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md",
+    "sha256": "ea7956ded7d0962ef901471317f6b617b9827af2a89089f2f5fed97603eca499",
+    "bytes": 17095
+  },
+  "current_result": {
+    "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+    "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6",
+    "bytes": 17505
+  },
+  "changes": [
+    "Internal determinism is not universally excluded for an agent with uncaused existence.",
+    "The author gives a reasons-basing answer for action-guiding relevance; the remaining comparison concerns adequacy, not absence."
+  ],
+  "new_source_read_credit": false,
+  "other_boundaries": "2002 full-body limitation, typed distinctions, conditional scope, and no integration/closure claims preserved."
+}

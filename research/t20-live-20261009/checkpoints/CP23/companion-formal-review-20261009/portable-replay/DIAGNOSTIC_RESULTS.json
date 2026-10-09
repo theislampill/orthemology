@@ -1,0 +1,832 @@
+{
+  "D1_common_requisite": {
+    "three_world_tables_exhausted": 512,
+    "violations": 0
+  },
+  "D2_rotating_witness": {
+    "n0_implies_r": true,
+    "negative_witnesses_entail_not_p": true,
+    "ns_prime": true,
+    "p_implies_r": true,
+    "r_contingent": true,
+    "removed_r_world_has_another_negative_witness": true,
+    "same_negative_witness_everywhere": false,
+    "worlds": [
+      {
+        "n0": 0,
+        "n1": 0,
+        "p": 1,
+        "r": 1
+      },
+      {
+        "n0": 1,
+        "n1": 0,
+        "p": 0,
+        "r": 1
+      },
+      {
+        "n0": 0,
+        "n1": 1,
+        "p": 0,
+        "r": 0
+      }
+    ]
+  },
+  "D3_D4_boolean_explanation": {
+    "axioms": {
+      "all_nonempty_fusions": true,
+      "complete_transitivity": true,
+      "distribution_to_members_and_parts": true,
+      "fusion_least_upper_bound": true,
+      "fusion_overlap": true,
+      "no_empty_explanation": true,
+      "no_extended_circles": true,
+      "parthood_antisymmetric": true,
+      "parthood_reflexive": true,
+      "parthood_transitive": true,
+      "partial_source_closure": true,
+      "partial_transitivity": true,
+      "strong_supplementation": true,
+      "total_explainer_unique": true,
+      "unrestricted_plural_psr": true
+    },
+    "facts": 15,
+    "first_nec_failure": null,
+    "full_explanation_member_checks": 245762,
+    "local_explainers": [
+      1,
+      2,
+      4
+    ],
+    "mereological_union_is_not_logical_conjunction": true,
+    "metaphysical_realisation_authenticated": false,
+    "nonempty_pluralities": 32767,
+    "padded_negative_control": false,
+    "total_explainers": [
+      1
+    ]
+  },
+  "D4_restricted_reverse_part_gap": {
+    "complete_transitivity": true,
+    "distribution": true,
+    "explainer": 3,
+    "facts": [
+      1,
+      2,
+      3
+    ],
+    "metaphysical_explanation_authenticated": false,
+    "no_extended_circles": true,
+    "outside_target": true,
+    "partial_transitivity": true,
+    "restricted_package": true,
+    "reverse_externality": false,
+    "target": 2,
+    "target_part_of_explainer": true
+  },
+  "D4_source_padding_negative_control": {
+    "axioms": {
+      "all_nonempty_fusions": true,
+      "complete_transitivity": true,
+      "distribution_to_members_and_parts": true,
+      "fusion_least_upper_bound": true,
+      "fusion_overlap": true,
+      "no_empty_explanation": true,
+      "no_extended_circles": false,
+      "parthood_antisymmetric": true,
+      "parthood_reflexive": true,
+      "parthood_transitive": true,
+      "partial_source_closure": true,
+      "partial_transitivity": true,
+      "strong_supplementation": true,
+      "total_explainer_unique": false,
+      "unrestricted_plural_psr": true
+    },
+    "facts": 15,
+    "first_nec_failure": {
+      "S": 1,
+      "x": 2,
+      "y": 1
+    },
+    "full_explanation_member_checks": 491522,
+    "local_explainers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "mereological_union_is_not_logical_conjunction": true,
+    "metaphysical_realisation_authenticated": false,
+    "nonempty_pluralities": 32767,
+    "padded_negative_control": true,
+    "total_explainers": [
+      1,
+      3
+    ]
+  },
+  "D5_bayes": {
+    "alpha_1": "10/11",
+    "alpha_1_over_1000": "1/101",
+    "d": "1/100",
+    "e": "1/1000",
+    "interval_example": [
+      "99/101",
+      "1"
+    ]
+  },
+  "D6_exchangeability": {
+    "coherent_law_is_exchangeable": false,
+    "finite_anticorrelated_covariance": "-1/4",
+    "finite_anticorrelated_exchangeable": true,
+    "one_word_beta_probability_n2k1": "1/6",
+    "positive_mixture_covariance": "1/16"
+  },
+  "D7_compatibility_graphs": [
+    {
+      "binary_assignments": 16,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ]
+        ],
+        [
+          [
+            "B",
+            0
+          ]
+        ],
+        [
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 0,
+      "edges": []
+    },
+    {
+      "binary_assignments": 8,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ]
+        ],
+        [
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 1,
+      "edges": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 8,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ]
+        ],
+        [
+          [
+            "B",
+            0
+          ]
+        ]
+      ],
+      "edge_mask": 2,
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 3,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 8,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        [
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 4,
+      "edges": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        [
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 5,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ]
+        ]
+      ],
+      "edge_mask": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 2,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 7,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 8,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        [
+          [
+            "B",
+            0
+          ]
+        ]
+      ],
+      "edge_mask": 8,
+      "edges": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "B",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 9,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            1
+          ]
+        ],
+        [
+          [
+            "B",
+            0
+          ]
+        ]
+      ],
+      "edge_mask": 10,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 2,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 11,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 4,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ]
+        ],
+        [
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 12,
+      "edges": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 2,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 13,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 2,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 14,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "binary_assignments": 2,
+      "components": [
+        [
+          [
+            "A",
+            0
+          ],
+          [
+            "A",
+            1
+          ],
+          [
+            "B",
+            0
+          ],
+          [
+            "B",
+            1
+          ]
+        ]
+      ],
+      "edge_mask": 15,
+      "edges": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "D8_knowledge_hierarchy": {
+    "accessibility": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "first_order_known": true,
+    "kkp": [],
+    "knows_that_knows": false,
+    "kp": [
+      0
+    ],
+    "p": [
+      0,
+      1
+    ],
+    "reflexive": true,
+    "semantic_model_not_real_cognitive_episode": true,
+    "transitive": false,
+    "worlds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "D9_fact_attribute_transfer": {
+    "antecedent": true,
+    "bearers": [
+      "g"
+    ],
+    "bridge_supplied": false,
+    "conclusion": false,
+    "explanatory_facts": [
+      "q"
+    ],
+    "fact_part_relation": [
+      [
+        "q",
+        "q"
+      ]
+    ],
+    "qualification": [
+      [
+        "g",
+        "knowledge-g"
+      ],
+      [
+        "g",
+        "power-g"
+      ]
+    ],
+    "real_attribute_tokens": [
+      "knowledge-g",
+      "power-g"
+    ],
+    "scope": "No cross-sort mapping supplied; not a metaphysical realisation."
+  },
+  "causal_supports": {
+    "and": [
+      [
+        0,
+        1
+      ]
+    ],
+    "or": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "or_with_background_L": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "projection_A": [
+      [
+        0
+      ]
+    ]
+  },
+  "independent_external_review": false,
+  "new_lean_run": false,
+  "schema": "t20-exact-diagnostic-results-v1",
+  "scope": "Finite rational/model checks only. No metaphysical interpretation or actual cognitive warrant certified."
+}

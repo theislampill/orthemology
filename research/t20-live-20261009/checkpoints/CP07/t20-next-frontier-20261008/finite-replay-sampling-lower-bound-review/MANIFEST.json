@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-10-08T16:45:32.894287+00:00",
+  "status": "Frozen bounded independent PASS review",
+  "files": [
+    {
+      "path": "AUTHOR_REPLAY.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8"
+    },
+    {
+      "path": "BOUNDARY_ATTACKS.md",
+      "bytes": 4333,
+      "sha256": "ab78c2806840578eb516da86a2994dce1c9d4d91531d36f89d9daafa32f161e7"
+    },
+    {
+      "path": "INDEPENDENT_CONTROLS.json",
+      "bytes": 36045,
+      "sha256": "54e1a262026d0834adc0a92f7266b91a2428bf7fe0aae88be1c850048cde7b3d"
+    },
+    {
+      "path": "INDEPENDENT_CONTROLS.log",
+      "bytes": 382,
+      "sha256": "3db0ded5aa6d73c9c5b0a388eeb7878f8038239d4ee551a86253fe95c0152c6d"
+    },
+    {
+      "path": "INDEPENDENT_DERIVATION.md",
+      "bytes": 4692,
+      "sha256": "9d03205d6f0436d83c9edfb543a7520dbadc2d58be9240a21bd56dd0f8da4510"
+    },
+    {
+      "path": "PREFREEZE_DERIVATION_RECEIPT.json",
+      "bytes": 258,
+      "sha256": "bc898b58ac9438daa35e11254eaced47ceaf017c64042ecc4f1d937633528973"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 1180,
+      "sha256": "cb537f8f1f71dd24e03b9080e12830950340f6228b23e4aee5a54632b5bf8718"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 7919,
+      "sha256": "e3e8677f03775f984622495997b2dc0a6a55e50102fb1de03b3995a58f0a3de6"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "bytes": 15736,
+      "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8"
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "bytes": 3146,
+      "sha256": "4c26a0846202eb0ca30adf0265a4a390af54232b16cacf22d8f4f5faf7974982"
+    },
+    {
+      "path": "author_snapshot/EXACT_CONTROLS.md",
+      "bytes": 2055,
+      "sha256": "ee33ab16aa16e935f8d028913b8d2c563e0a5359912ebc5f71127a2598977449"
+    },
+    {
+      "path": "author_snapshot/MANIFEST.json",
+      "bytes": 1664,
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23"
+    },
+    {
+      "path": "author_snapshot/PROSPECTIVE_EVENTS.jsonl",
+      "bytes": 563,
+      "sha256": "921557295ca543c6a124e9675152b1f3148490b4733c6c03a538ddf197f37731"
+    },
+    {
+      "path": "author_snapshot/READ_FIRST.md",
+      "bytes": 1304,
+      "sha256": "cbe81fac3e555730bbb27ed53e62e33b09aa6773fa023ef453d4942eaef986c1"
+    },
+    {
+      "path": "author_snapshot/RESULT.md",
+      "bytes": 14735,
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26"
+    },
+    {
+      "path": "author_snapshot/SOURCE_AUDIT.md",
+      "bytes": 7131,
+      "sha256": "75ef486b0458f2e95dc70ff9cafd9dd0cc6285bfc1e2f76f74df53460724a681"
+    },
+    {
+      "path": "author_snapshot/SOURCE_BINDINGS.json",
+      "bytes": 9703,
+      "sha256": "f642a4a2214d76d50edfbaad21d8356a02e0f723ac8db304d92dd205abd6375a"
+    },
+    {
+      "path": "author_snapshot/exact_controls.py",
+      "bytes": 6905,
+      "sha256": "2acf221085fc8f0263041e7adbf129e828e4c93a877a5ee0668729bcf6b84901"
+    },
+    {
+      "path": "author_snapshot/results/exact_controls.json",
+      "bytes": 25985,
+      "sha256": "3eadf7e16d2c499d9b405f3186a4ccee9072ab34e4b6f0b3776bcc4bb0037ac2"
+    },
+    {
+      "path": "author_snapshot/results/exact_controls.log",
+      "bytes": 1176,
+      "sha256": "a36c177f62c40516e759c4d71085a21ee7439caf3d35c286e20c377f6742b5a8"
+    },
+    {
+      "path": "independent_controls.py",
+      "bytes": 5754,
+      "sha256": "c83beb69f4da41177df474b528662088b32bb8db0bbc9c30b6939c01263438d6"
+    },
+    {
+      "path": "verify_review.py",
+      "bytes": 1571,
+      "sha256": "91dccd065453c507e9c79ec707598abf20d2948d51733ae0cd6a1f62ba9f0ed3"
+    }
+  ],
+  "excluded_generated_output": "FINAL_VERIFICATION.json is read-only verifier stdout retained after the manifest freeze; not a manifest payload."
+}

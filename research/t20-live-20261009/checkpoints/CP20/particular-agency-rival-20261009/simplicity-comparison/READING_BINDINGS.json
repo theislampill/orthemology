@@ -1,0 +1,80 @@
+{
+  "schema": "simplicity-comparison-reading-v1",
+  "recorded_utc": "2026-10-09T09:09:15.188199+00:00",
+  "author_source": {
+    "author": "Timothy O’Connor",
+    "title": "Simplicity and Creation",
+    "year": 1999,
+    "journal": "Faith and Philosophy",
+    "volume": 16,
+    "issue": 3,
+    "pages": "405–412",
+    "doi": "10.5840/faithphil199916339",
+    "author_pdf_url": "https://toconnor.org/wp-content/uploads/2021/04/OConnor_SimplicityCreation99.pdf",
+    "publisher_record_url": "https://place.asburyseminary.edu/faithandphilosophy/vol16/iss3/8/",
+    "metadata_origin": "Parent supplied bibliographic verification; local paper title, journal, volume, issue, date, and pages inspected. No fresh publisher acquisition by this reviewer."
+  },
+  "inputs": [
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/simplicity-creation.pdf",
+      "sha256": "12c2edd534e186205de356f3ff9a21f2ec7f106e64ee1606311f5783d71453a0",
+      "read_scope": "8 pages confirmed using pdfinfo; text source identity; no new PDF visual inspection claimed"
+    },
+    {
+      "path": "particular-agency-rival-20261009/research-intermediates/simplicity-creation.txt",
+      "sha256": "0e2645df750cecc39f6b6fd13296d9387fa8e04e54b91d97002e1bea59f315bf",
+      "read_scope": "Complete text, lines 1–375, printed pages 405–412, including all seven notes; exact match to fresh pdftotext -layout extraction"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/REPORT.md",
+      "sha256": "1e03346592bfefb32d6d8c3f51502b2d5b08f3f04e87448b617bf1ad7a4fb155",
+      "read_scope": "Whole report, 94 lines"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "sha256": "b7b95d985776319e36f073aca7546fabfed090f414d855ec713342c1432d7182",
+      "read_scope": "Whole report, 150 lines"
+    },
+    {
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924",
+      "read_scope": "Whole report; practical-basing and practical-perfection comparison"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/READING_RECORD.json",
+      "sha256": "476a4a94d7bb388d2405848051e0ee2cededb0002efc8bfd01ac2f44acc206ca",
+      "read_scope": "Whole reading record; inherited textual cautions"
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/INPUT_BINDINGS.json",
+      "sha256": "6d8faedc47147e72971e23c70b6f6aea4248fb6b0fe745012e3b18a71728ebc9",
+      "read_scope": "Whole bindings list; locator discovery only, no reading credit for listed works"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/dar016-L0106-L0159.txt",
+      "sha256": "d3ec23edd852de822328c3d66541f8a770d7edf2a6d468985b990a482a19b354",
+      "read_scope": "Complete retained selection L0106–0159"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/read-selections/shifa-e173-e178.txt",
+      "sha256": "90b62a40179e2968ccc29923dc6ede9d0d6a04d286a8b26f39e562de5cb9bf11",
+      "read_scope": "Bounded direct checks: e175 from قال السني to e176 boundary; e176–177 from فصل: وأما قول الجاحظ to فصل: وأما قول الآخر; e178 from قال السني: لا تفتقر through chapter end. Initial combined tool output also contained other passages but was truncated; no complete selection claim."
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "read_scope": "Direct retained Arabic L310–313 and L338–360; decisive L310–313 separately reread without truncation"
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "read_scope": "Direct retained Arabic canonical L232–240"
+    }
+  ],
+  "limits": [
+    "Same textual witness as root; independent philosophical comparison, not an additional witness",
+    "No fresh full-work Arabic reading, manuscript collation, or print-page certification",
+    "No new model, formal proof, integration, closure, contact, or upload",
+    "No raw PDF redistribution"
+  ]
+}

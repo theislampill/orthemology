@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-09T07:59:29.226618+00:00",
+  "scope": "New additive research package only; no predecessor mutation",
+  "payloads": [
+    {
+      "path": "MODEL_RESULTS.json",
+      "bytes": 31462,
+      "sha256": "ecf51ed26f0f100aad7cff30e3c03015fb2c7dac8b35a244701e65d3e3e2db13"
+    },
+    {
+      "path": "OPERATIONS.jsonl",
+      "bytes": 895,
+      "sha256": "98d6c11a46f125f79d5e26134cd8bb9ec1929e38df1c3474668829e707ba6972"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 13044,
+      "sha256": "d11bf155683656203e69fb44ed8886d16dd05a4deda6be5ce84cb6bea772fee1"
+    },
+    {
+      "path": "SCOPE.md",
+      "bytes": 833,
+      "sha256": "b442c7ec68e07dd547dec09c1796ea1bd224ad8e6057449b1c37fd58be534fbb"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 5846,
+      "sha256": "48e52e37f51f38bd764e9f34302bf39bcec86a47568ef51c348f790016aa0156"
+    },
+    {
+      "path": "SOURCE_SUMMARIES.md",
+      "bytes": 2962,
+      "sha256": "639d7c188cf94ccf2354f42cb5b6ffe87165ffbf36c8c02439043906c59a590d"
+    },
+    {
+      "path": "check_selective_channel.py",
+      "bytes": 3700,
+      "sha256": "b6da75a38a92912a8fe5ec50c2fe235963c1cb653688402798abfbdc633a99a2"
+    }
+  ]
+}

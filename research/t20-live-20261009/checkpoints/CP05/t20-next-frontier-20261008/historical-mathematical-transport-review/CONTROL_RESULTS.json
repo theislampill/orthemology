@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "frozen_author_files_verified": 6,
+  "compared_modern_proofs_verified": 7,
+  "author_controls_replay": "byte-identical",
+  "unit_price_full_tree_enumeration_cases": 510,
+  "weighted_full_tree_vs_bellman_cases": 3110,
+  "full_label_identification_cases": 8,
+  "heterogeneous_first_cut_costs": [
+    111,
+    20,
+    11,
+    20,
+    111
+  ],
+  "exact_vanishing_margin_cases": 16,
+  "smallest_checked_determinant_magnitude": "1/633825300114114700748351602688",
+  "exact_linear_channel_cases": 171,
+  "proposition_6_scope_negative_controls": 3,
+  "adaptive_randomized_stopped_law_comparisons": 160,
+  "exact_terminal_likelihood_ratio_checks": 12440,
+  "balanced_multiroot_common_support_cases": 1008,
+  "positive_error_separation": {
+    "samples": 32,
+    "no_hit_threshold": 12,
+    "count_1_error": "236618693/4294967296",
+    "count_2_error": "1483679257808833339/18446744073709551616",
+    "both_errors_below": "1/10"
+  },
+  "scope": "Finite exact controls supplement the review proofs; no infinite-policy enumeration."
+}

@@ -1,0 +1,110 @@
+{
+  "author_artifacts": [
+    {
+      "bytes": 12063,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/RESULT.md",
+      "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96",
+      "snapshot": "author_snapshot/RESULT.md"
+    },
+    {
+      "bytes": 3763,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+      "sha256": "c40758b305662cd0b02c0b0f0b6173949f313f228d798f6a7f07c1edd6cdf497",
+      "snapshot": "author_snapshot/ANCHORED_UNARY_COUNT.md"
+    },
+    {
+      "bytes": 6098,
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/BOUNDARY_POINT_RECONSTRUCTION.md",
+      "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb",
+      "snapshot": "author_snapshot/BOUNDARY_POINT_RECONSTRUCTION.md"
+    }
+  ],
+  "author_follow_on_files": "Only the three listed proof artifacts are accepted by this receipt. Additional author scope, control or packaging files require their own binding; RESULT.md references a planned LINEAR_RECORD_SCOPE.md, and this review directly checks the inherited probability-mass qualification.",
+  "authority": "No edits to frozen author/predecessor files, protected integration, physical certification, owner acceptance or T20 closure.",
+  "blocking_findings": [],
+  "independent_controls": {
+    "anchored_unary_presence_decisions": 26,
+    "assertions": 305,
+    "boundary_reduction_grid_equalities": 27,
+    "caveat": "Finite controls support the proof audit; observed costs are not uniform bounds.",
+    "covered_support_presence_decisions": 14,
+    "max_precision_bits": 32,
+    "raw_grid_equalities": 81,
+    "raw_oracle_calls": 4936,
+    "status": "PASS",
+    "unary_recoveries": 24,
+    "unary_sign_decisions": 204,
+    "zero_unary_interval_checks": 12
+  },
+  "independently_found_extension": "REVIEW.md section 7: known positive incident products supply per-root rate lower bounds, giving a nonzero midpoint-gap test for unary and general support presence on covered roots. This is separate from the three author proofs and was reported to the parent before binding.",
+  "prerequisite_sources": [
+    {
+      "bytes": 15546,
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3"
+    },
+    {
+      "bytes": 8194,
+      "path": "t20-next-frontier-20261008/interaction-calibration-anchor/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4"
+    },
+    {
+      "bytes": 18684,
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport/ANALYSIS.md",
+      "sha256": "c70ade3f34431728761e0f1e0c3493823b43703120a45c85c096fea1064f235c"
+    },
+    {
+      "bytes": 2298,
+      "path": "t20-next-frontier-20261008/historical-mathematical-transport-review/SCOPE_ADDENDUM.md",
+      "sha256": "7f9d219cb2e9eeba85a372fb81c1aa5e17a7cc20b3b0309859f371ccab86ad24"
+    }
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 16583,
+      "path": "REVIEW.md",
+      "sha256": "1e9cdf39b7b4def67a01bc4f11d60293e763698dfe70af8c38837b213f62f5d7"
+    },
+    {
+      "bytes": 1807,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "a476b968351b95436b38091e1288eeb8c408188fad3bb77c2e203ea073e801f6"
+    },
+    {
+      "bytes": 11317,
+      "path": "independent_controls.py",
+      "sha256": "4f1301bc76809c69efaac172c096318504c740b2665b3b32c584367e503b04b5"
+    },
+    {
+      "bytes": 448,
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "e0d1bb2588a50a9f75309a7cb3b001c8f76461167502ddc0e8374c9b50ed5001"
+    },
+    {
+      "bytes": 448,
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "e0d1bb2588a50a9f75309a7cb3b001c8f76461167502ddc0e8374c9b50ed5001"
+    },
+    {
+      "bytes": 1741,
+      "path": "verify_review.py",
+      "sha256": "3b6fdc8a059cc5523b9eb9da58366785562ee9f85f8d6778a48b78f261d38e75"
+    }
+  ],
+  "review_date_utc": "2026-10-08",
+  "review_kind": "Independent mathematical proof audit, counterexample search, exact rational controls and raw certified-Cauchy recovery controls",
+  "scope": [
+    "Exact interior/zero sampled-calibration fibre and full raw-grid converse",
+    "Ordinary-incidence rank, row-space partial identification and pair-graph specialization",
+    "Positive participating unary integer recovery without equality tests",
+    "Stronger finite unit-boundary pointwise calibration procedure"
+  ],
+  "scope_qualifications": [
+    "Kernel dimension counts sampled calibration arrays, not complete homeomorphisms.",
+    "Interior gauge invariance covers only selected interior commands and zero masks, not added unit commands.",
+    "The log-calibration fibre has no total-mass normalization.",
+    "Population Cauchy refinement is not finite Bernoulli-sample recovery or a uniform complexity bound.",
+    "The positive-unary sign procedure stalls at zero; that is not an absence impossibility result under other available anchored data."
+  ],
+  "status": "PASS"
+}

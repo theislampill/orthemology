@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "kind": "Independent written mathematical review with deterministic exact and high-precision controls",
+  "accepted_author_result_sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7",
+  "author_manifest_sha256": "1e0b0927a4bb4a3734c682acfd0cf4c67624291909800ceef2a503a7d42eba71",
+  "review_sha256": "550ef660e2071b6669d94ed43c3105069cf9d7db7ed0953c4cacb00fb6b7bbf6",
+  "source_bindings_sha256": "8283588de12323fcd986a62b05201a51620f4c6a33eb26925363748a753fe21d",
+  "claims": [
+    "Unconditioned reverse KL O(log^2(n)/n^4), finite and strictly positive for every n>=1",
+    "Forward KL infinite from the retained alternative-only skyline stratum",
+    "Common adaptive unchanged-retained-endpoint lower bound E0[N] = Omega_alpha(n^4/log^2(n)) under unconditional terminal correctness and started-vector charging"
+  ],
+  "blocking_findings": [],
+  "resolved_nonblocking_findings": [
+    "Poisson mode floor(v)>=1 and >=v/2 stated separately",
+    "Empty skyline derivative uses Poi(0)(n)=0 for n>=1"
+  ],
+  "independent_controls_status": "PASS",
+  "author_replay_byte_identical": true,
+  "scope_exclusions": [
+    "No Theta information rate, leading constant or optimal logarithmic order",
+    "No empirical or formal-kernel assurance",
+    "No physical, precision, noisy-readout or finite-probe guarantee",
+    "No protected integration, archive rewrite, historical-floor certification or closure"
+  ],
+  "historical_floor": "UNVERIFIED",
+  "prepared_at_utc": "2026-10-08T21:50:44.133139+00:00"
+}

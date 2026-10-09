@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-08T19:42:51+00:00",
+  "inputs": [
+    {
+      "path": "full-face-threshold-information/RESULT.md",
+      "sha256": "ced60a6b7b98f2b0d181e92f194ca64d201fec2278d61c502e2d13887e803f17",
+      "bytes": 12215
+    },
+    {
+      "path": "arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "bytes": 13174
+    },
+    {
+      "path": "arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "bytes": 5833
+    }
+  ]
+}

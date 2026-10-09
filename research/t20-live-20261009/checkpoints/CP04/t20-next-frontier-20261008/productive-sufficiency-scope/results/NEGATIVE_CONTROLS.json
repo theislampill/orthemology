@@ -1,0 +1,20 @@
+[
+  {
+    "claim": "necessary_target",
+    "exit_code": 1,
+    "intended_false_proposition_rejected": true,
+    "source_sha256": "a4ffbd3832735b5fafd1b50ebba14c280abd5ba7039adcf1d6cc4edc12488852"
+  },
+  {
+    "claim": "fixed_act_token",
+    "exit_code": 1,
+    "intended_false_proposition_rejected": true,
+    "source_sha256": "1802cfb96c76e1202e0812e088313676441d946dfce4a6670e93e0aa88dfd64b"
+  },
+  {
+    "claim": "normalization_forces_nonempty_endpoint",
+    "exit_code": 1,
+    "intended_false_proposition_rejected": true,
+    "source_sha256": "b56be9cad3c7c7caba544a31647ee224af15a190c4bc7bc87c3a6e80253575de"
+  }
+]

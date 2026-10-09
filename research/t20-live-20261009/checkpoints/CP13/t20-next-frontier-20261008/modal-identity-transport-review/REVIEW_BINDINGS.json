@@ -1,0 +1,78 @@
+{
+  "author_files_modified_by_reviewer": false,
+  "author_inputs": [
+    {
+      "bytes": 33327,
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+    },
+    {
+      "bytes": 14363,
+      "path": "t20-next-frontier-20261008/modal-identity-transport/controls.py",
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "bytes": 2531,
+      "path": "t20-next-frontier-20261008/modal-identity-transport/CONTROL_RESULTS.json",
+      "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+    },
+    {
+      "bytes": 2542,
+      "path": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+      "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660"
+    },
+    {
+      "bytes": 4937,
+      "path": "t20-next-frontier-20261008/modal-identity-transport/INPUT_BINDINGS.json",
+      "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73"
+    }
+  ],
+  "author_predecessor_hash_bindings_verified": 20,
+  "author_replay_assertions": 626901,
+  "author_replay_output_matches_saved": true,
+  "closure_or_metaphysical_authority": false,
+  "current_author_script_matches_replayed_snapshot": true,
+  "historical_floor": "UNVERIFIED",
+  "independent_assertions": 175130,
+  "recorded_at_utc": "2026-10-08T22:42:19.516816+00:00",
+  "repository_integration_or_archive_mutation": false,
+  "resolved_findings": [
+    "Explicit chart-induced modal assignment semantics",
+    "Explicit n>0 convention and separate empty-domain extension",
+    "Unguarded outer-domain Barcan validities separated from arbitrary E-guarded actualist quantification"
+  ],
+  "review_artifacts": [
+    {
+      "bytes": 16295,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md",
+      "sha256": "9c7f8ba6fd7f82c1c9be613ad020fcf130df7cd2a03aff787ede51e3e9ee6533"
+    },
+    {
+      "bytes": 14539,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/independent_controls.py",
+      "sha256": "3dbea80144c730655a8e8b61833a4bba606c3eaab56007ae1c9cd2d5cbd4c31b"
+    },
+    {
+      "bytes": 2541,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RESULTS.json",
+      "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+    },
+    {
+      "bytes": 2541,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RUN.stdout.json",
+      "sha256": "124bdd9bd4923a9e6f6cc72e73849a77a1d24a7c47f391bb824011d6d784181a"
+    },
+    {
+      "bytes": 14363,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py",
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "bytes": 2531,
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/AUTHOR_REPLAY.json",
+      "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+    }
+  ],
+  "review_status": "PASS: bounded mathematics and specified semantic adapter; no unresolved findings",
+  "source_reading_scope": "Selected cited primary passages and named predecessor interfaces; no new whole-paper or whole-corpus claim."
+}

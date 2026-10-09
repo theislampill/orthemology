@@ -1,0 +1,19 @@
+{
+  "combined_source_capsule_words": 146,
+  "capsule_limit": 180,
+  "three_complete_bounded_readings": true,
+  "2020_not_credited_read": true,
+  "no_new_generic_preference_model": true,
+  "no_admissible_counterexample_claim_without_domain_test": true,
+  "2025_repairs_applied_to_earlier_objection": true,
+  "protected_records_written": false,
+  "integration_or_closure_claimed": false,
+  "deliverable_files": [
+    "REPORT.md",
+    "READING_LEDGER.json",
+    "INPUT_BINDINGS.json",
+    "ACCESS_LEDGER.json",
+    "PRIOR_RECORD_CHECK.json",
+    "CHECKS.json"
+  ]
+}

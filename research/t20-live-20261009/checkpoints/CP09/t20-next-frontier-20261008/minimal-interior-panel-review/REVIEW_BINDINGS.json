@@ -1,0 +1,10 @@
+{
+  "status": "accepted-and-frozen",
+  "assurance": "Independent written mathematical review and deterministic finite controls; no new Lean verification",
+  "sha256": {
+    "t20-next-frontier-20261008/minimal-interior-panel/RESULT.md": "c35abf8d96720c8ee9c611fc554db647990c0f0233e630dee0792939a75b0dc7",
+    "t20-next-frontier-20261008/minimal-interior-panel-review/REVIEW.md": "09402b887d60796286ef392ea463f5c131b5ec58c043fff1156978f38b01f0d8",
+    "t20-next-frontier-20261008/minimal-interior-panel-review/independent_checks.py": "c01a0dc9c6dc183e2128109b8442937f8cb4b9cd194e669809a2e653ec3289c5",
+    "t20-next-frontier-20261008/minimal-interior-panel-review/CHECKS.log": "33fa3b2dac6d96b9c726f36f0c1d14821a4139524825e71571298a91dd382952"
+  }
+}

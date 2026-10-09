@@ -1,0 +1,48 @@
+{
+  "omitted": [
+    "All ten predecessor ZIP payloads and historical mathematics; exact references and hashes retained",
+    "Active sharp-skyline-information and every unreviewed later stage",
+    "Toolchain/mathlib/runtime/dependency trees, compiled Lean and Python caches",
+    "Modern/source PDFs, full text extracts, OCR, images, HTML and raw copyrighted source bodies",
+    "Unrelated science, private personal data and credentials"
+  ],
+  "omitted_cache_entries": [
+    "baseline-skyline-moments/__pycache__/controls.cpython-312.pyc"
+  ],
+  "primary_sources": [
+    {
+      "title": "Poisson hulls",
+      "authors": "Günter Last and Ilya Molchanov",
+      "url": "https://arxiv.org/abs/2212.02150",
+      "read_version": "2212.02150v4, 1 February 2024",
+      "published_identity": "Bernoulli 31(1), 359–387 (2025); DOI 10.3150/24-BEJ1731",
+      "scope": "Author preprint selected sections/proofs; publication cross-check, not journal-body reading"
+    },
+    {
+      "title": "Efron type identities for stopping sets and Poisson hulls",
+      "authors": "Günter Last and Ilya Molchanov",
+      "url": "https://arxiv.org/abs/2608.06038",
+      "read_version": "2608.06038v1, submitted 6 August 2026; title page 7 August",
+      "status": "2026 preprint, not represented as peer reviewed",
+      "scope": "Named sections/proofs/examples; mediated older attribution remains mediated"
+    },
+    {
+      "title": "The Pareto Record Frontier",
+      "url": "https://arxiv.org/abs/1901.05620",
+      "scope": "Narrowly read mapping check; width/product extrema do not directly supply area moments"
+    },
+    {
+      "title": "The wrapping hull and a unified framework for volume estimation",
+      "url": "https://arxiv.org/abs/1703.01658",
+      "scope": "Narrowly read estimator-risk transfer; arbitrary centered mixed-moment transfer rejected"
+    }
+  ],
+  "source_scope_records": [
+    "t20-next-frontier-20261008/skyline-probability-prior-art/SOURCE_AUDIT.md",
+    "t20-next-frontier-20261008/skyline-probability-prior-art-review/VERIFICATION_MANIFEST.json",
+    "t20-next-frontier-20261008/full-skyline-log-squared/SOURCE_AUDIT.md",
+    "t20-next-frontier-20261008/full-skyline-log-squared-review/SOURCE_BINDINGS.json"
+  ],
+  "source_body_rechecks": "Not performed for packaging; recorded original source-reading evidence is preserved.",
+  "replay_dependency_handling": "Only three exact predecessor RESULT members are hydrated into a temporary replay copy after archive/member digest checks. They are not executed, changed or included in this ZIP."
+}

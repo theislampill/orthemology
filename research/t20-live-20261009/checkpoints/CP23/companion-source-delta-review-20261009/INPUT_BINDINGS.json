@@ -1,0 +1,170 @@
+{
+  "recorded_utc": "2026-10-09T11:07:52.901186+00:00",
+  "archive_sha256": "c16bb8a75b84e4f79119d49635190e51ba1e862ffe207f137f0201cae542ae19",
+  "inputs": [
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/README_FIRST.md",
+      "bytes": 3097,
+      "sha256": "76c092b0741f08873f4a5fd4e15d5f23e0f86a3a527392d7d93ad0d8aab37cc7",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/SYNTHESIS.md",
+      "bytes": 12165,
+      "sha256": "165cdac41cc0e5f2d400ee7d21943ffb02637443de8b26511b02950a6f8e2131",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/sources/QUOTATION_AND_ATTRIBUTION_AUDIT.md",
+      "bytes": 5960,
+      "sha256": "f9b6ef62a071c82534675d9b653696a064828b0a08303221f6fc7288b0b3ffd7",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/sources/SOURCE_LEDGER.md",
+      "bytes": 20932,
+      "sha256": "c14e87f49001390fbc40aad564a340ec5529441bd23e29b9fba19071de5521a6",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/sources/ACCESS_GAPS_AND_LIMITS.md",
+      "bytes": 3712,
+      "sha256": "7cbd1bc8ba84a6be4ad11a0bb5d6032837c3028db7a57a0739c17e4f2909a532",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/handoff/RESULT_MAP.json",
+      "bytes": 9869,
+      "sha256": "4f0ba7092b33d6c9150a1b5d5da47cd2726c536cf698ded1119a54784de6bd48",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/RECEIVED.json",
+      "bytes": 605,
+      "sha256": "23ff77a57083183bc99a9dc3aaee4d98f1fdd76b5f7102ee204cb9d46340f6d4",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/01_NECESSITY_AND_EXPLANATION.md",
+      "bytes": 11144,
+      "sha256": "5e24f31c7606c5d3c27e848123d4571e311962a64c5804a859514f6a4e91860f",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/02_UNITY_SOVEREIGNTY_AND_CAUSATION.md",
+      "bytes": 11805,
+      "sha256": "56bc970de5f62ef58f144fa155f8e0dfa52a46874863df44a3457e7395f1795a",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/03_ESSENCE_GROUNDING_AND_FACTS.md",
+      "bytes": 12067,
+      "sha256": "038c4222db7cb15f3963f998c3478df21727244ca81c4d8069f7b0564f3d0e5f",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/04_FITRAH_WARRANT_AND_PROBABILITY.md",
+      "bytes": 12479,
+      "sha256": "bedda9e558088e7f9c096653a33ee89f6632093141fe1e612f2b80b70eff7302",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "independent-research-companion-20261009/extracted/Orthemology_T20_Deep_Dive_20261009/reports/05_KNOWLEDGE_WILL_WISDOM_AND_TIME.md",
+      "bytes": 10466,
+      "sha256": "f80ffc12ff072d96b6895ccf93f51b14c042aafe7edbcf734ac2eb0e6b19cde5",
+      "reading_scope": "Complete companion report/ledger read; repaired output truncations with narrower ranges"
+    },
+    {
+      "path": "brute-contingent-source-return/REPORT.md",
+      "bytes": 22495,
+      "sha256": "46e532e16b8d3fa9fefd0614157b9324fcef44dbaf115d4778e3800e258e6d4c",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "direct-anti-brute-return/REPORT.md",
+      "bytes": 20774,
+      "sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/historical-reading-projections/documents/Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.md",
+      "bytes": 30695,
+      "sha256": "30e21fd86d61e4a8696d0190fb303c93119deb232c9035fd1dddafa6dd22ca8f",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "essence-attribute-source-return/REPORT.md",
+      "bytes": 22095,
+      "sha256": "b3285f626648219e3a5d4fe991908f59caf5d368f2218d36dfab929248d47700",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/fitrah-warrant-bridge/INDEPENDENT_ASSESSMENT.md",
+      "bytes": 20215,
+      "sha256": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/PUBLIC_SOURCE_SUMMARIES.md",
+      "bytes": 2315,
+      "sha256": "b403d5c798869f9124b40736410d87852022f8c8c94cc71bea9c69ef58404a2a",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "epistemic-psr-warrant/RESULT.md",
+      "bytes": 24165,
+      "sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "bytes": 22307,
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "total-explainer-uniqueness/RESULT.md",
+      "bytes": 9267,
+      "sha256": "aff705c85a1ee5fee59577bfb5049b4800ae01769a11cccd4a5d2bbb74c5bcc3",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "reassessment-semantic-warrant/ROOT_ADJUDICATION.md",
+      "bytes": 4923,
+      "sha256": "b8f652952ff626479d8b4e8fd9928283a6ed5de3046a50105b6138cec2b7ba10",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "bytes": 15569,
+      "sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "fitrah-warrant-currentness-20261009/REPORT.md",
+      "bytes": 8255,
+      "sha256": "c79ecc3ca9eec5cd53beef458bdeb004dae012e896ebd94f66d5d58d09ab007c",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "t20-next-frontier-20261008/rational-basing-continuation/READING_PROVENANCE.json",
+      "bytes": 7656,
+      "sha256": "6a479204612f2fac7ea817628fcf290026fee84e79148a2544b9eaaac95aedb5",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "bytes": 72314,
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b",
+      "reading_scope": "Targeted report or ledger comparison; not fresh whole-source reading"
+    },
+    {
+      "path": "wise-particular-determination-return-20261009/REPORT.md",
+      "bytes": 16964,
+      "sha256": "1e03346592bfefb32d6d8c3f51502b2d5b08f3f04e87448b617bf1ad7a4fb155",
+      "reading_scope": "Report read in full to confirm S5 inheritance; no fresh primary reread"
+    }
+  ],
+  "primary_reread": "Only retained Koons–Pruss source labels L517–570; report-based comparison elsewhere",
+  "no_source_bodies_copied": true
+}

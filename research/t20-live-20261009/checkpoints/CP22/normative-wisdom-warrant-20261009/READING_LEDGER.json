@@ -1,0 +1,390 @@
+{
+  "recorded_at_utc": "2026-10-09T10:20:16.701650+00:00",
+  "reader_role": "Parent-appointed full-book reader for normative-wisdom warrant; James and Railton have separate delegated readers.",
+  "work": "Sami Ameri, مشكلة الشر ووجود الله, Rawasikh first edition 1444AH/2023",
+  "complete_received_book_pages": 244,
+  "page_mapping": "One-based PDF position equals printed numbering where printed numbering appears. Front/back matter have PDF coordinates only.",
+  "personal_reading": {
+    "status": "Whole received work completed with extraction repairs, all running notes and bibliography; not whole-page visual reading of all244 pages.",
+    "text_coverage": "All nonempty extracted pages1–244 read in successive book-order windows. Apparent extraction blanks were subsequently visually checked.",
+    "initial_windows": [
+      "1–23",
+      "24–33",
+      "34–43",
+      "44–48",
+      "49–59",
+      "60–70",
+      "71–81",
+      "82–92",
+      "93–104",
+      "105–115",
+      "116–126",
+      "127–137",
+      "138–149",
+      "150–160",
+      "161–171",
+      "172–182",
+      "183–193",
+      "194–204",
+      "205–216",
+      "217–231",
+      "232–244"
+    ],
+    "display_repairs": [
+      "18: fully reopened after first display truncation",
+      "27–29: fully reopened after24–33 display truncation",
+      "36–38: fully reopened after34–43 display truncation"
+    ],
+    "normalization": "Original pdftotext -layout preserved. Working .clean views remove only Unicode format and combining marks, plus excess whitespace; no semantic summary substituted for source text.",
+    "font_repair": "Quran quotation font maps to nonlexical presentation-form sequences. All55 affected text blocks read from rendered crops, grouped into six indexed sheets after the continuous prose pass.",
+    "all_notes": "All running footnotes read, including long notes. Bibliography233–241: Arabic1–29; foreign1–80 including Ryle folded into65; articles1–21. Referenced works are not credited as read merely because their references were read.",
+    "full_page_visual_controls": [
+      5,
+      6,
+      13,
+      46,
+      68,
+      69,
+      70,
+      71,
+      78,
+      79,
+      80,
+      83,
+      84,
+      89,
+      90,
+      92,
+      135,
+      243
+    ],
+    "front_back_visual_controls": [
+      1,
+      2,
+      3,
+      4,
+      8,
+      10,
+      12,
+      16,
+      232,
+      242,
+      244
+    ],
+    "actual_blank_pages": [
+      2,
+      4,
+      8,
+      10,
+      12,
+      16,
+      232,
+      242,
+      244
+    ],
+    "nonblank_extraction_failures": {
+      "1": "red book title",
+      "3": "bismillah calligraphy"
+    },
+    "verse_block_visual_index": [
+      {
+        "sheet": 1,
+        "blocks": [
+          [
+            9,
+            1
+          ],
+          [
+            17,
+            1
+          ],
+          [
+            22,
+            1
+          ],
+          [
+            33,
+            1
+          ],
+          [
+            40,
+            1
+          ],
+          [
+            50,
+            1
+          ],
+          [
+            60,
+            1
+          ],
+          [
+            71,
+            1
+          ],
+          [
+            81,
+            1
+          ],
+          [
+            81,
+            2
+          ],
+          [
+            82,
+            1
+          ],
+          [
+            84,
+            1
+          ],
+          [
+            99,
+            1
+          ]
+        ]
+      },
+      {
+        "sheet": 2,
+        "blocks": [
+          [
+            109,
+            1
+          ],
+          [
+            110,
+            1
+          ],
+          [
+            111,
+            1
+          ],
+          [
+            111,
+            2
+          ],
+          [
+            111,
+            3
+          ],
+          [
+            112,
+            1
+          ],
+          [
+            112,
+            2
+          ],
+          [
+            113,
+            1
+          ],
+          [
+            123,
+            1
+          ]
+        ]
+      },
+      {
+        "sheet": 3,
+        "blocks": [
+          [
+            126,
+            1
+          ],
+          [
+            126,
+            2
+          ],
+          [
+            129,
+            1
+          ],
+          [
+            134,
+            1
+          ],
+          [
+            139,
+            1
+          ],
+          [
+            139,
+            2
+          ],
+          [
+            140,
+            1
+          ],
+          [
+            141,
+            1
+          ],
+          [
+            141,
+            2
+          ],
+          [
+            143,
+            1
+          ],
+          [
+            143,
+            2
+          ],
+          [
+            144,
+            1
+          ]
+        ]
+      },
+      {
+        "sheet": 4,
+        "blocks": [
+          [
+            144,
+            2
+          ],
+          [
+            144,
+            3
+          ],
+          [
+            145,
+            1
+          ],
+          [
+            145,
+            2
+          ],
+          [
+            146,
+            1
+          ],
+          [
+            171,
+            1
+          ],
+          [
+            174,
+            1
+          ]
+        ]
+      },
+      {
+        "sheet": 5,
+        "blocks": [
+          [
+            175,
+            1
+          ],
+          [
+            176,
+            1
+          ],
+          [
+            177,
+            1
+          ],
+          [
+            182,
+            1
+          ],
+          [
+            183,
+            1
+          ],
+          [
+            188,
+            1
+          ],
+          [
+            193,
+            1
+          ],
+          [
+            196,
+            1
+          ]
+        ]
+      },
+      {
+        "sheet": 6,
+        "blocks": [
+          [
+            197,
+            1
+          ],
+          [
+            197,
+            2
+          ],
+          [
+            213,
+            1
+          ],
+          [
+            218,
+            1
+          ],
+          [
+            227,
+            1
+          ],
+          [
+            231,
+            1
+          ]
+        ]
+      }
+    ],
+    "reflective_returns": [
+      "68–71 full rendered pages",
+      "78–80 full rendered pages",
+      "83–92 continuous clean text; images83,84,89,90,92",
+      "106–107 continuous clean text",
+      "134–136 continuous clean text; image135"
+    ],
+    "coverage_vs_duration": "No duration target or multi-hour claim. Actual first prose pass approximately10:01:58–10:06:52UTC; image repairs completed by10:08:27UTC; subsequent reflective returns and analysis continued. Speed and rereading do not count as independent evidence."
+  },
+  "inherited_coverage": {
+    "source": "recovery-t20/addendum/AMERI_SCREEN.md plus valued-cooperation source readback",
+    "prior_received_edition_spans": [
+      "contents11",
+      "author introduction17–21",
+      "method38–59",
+      "continuous153–217",
+      "later direct reread205–206"
+    ],
+    "union_inherited_pages": 93,
+    "fresh_expanded_substantive_body": [
+      "13–15 prefacer",
+      "22–37",
+      "60–152",
+      "218–231"
+    ],
+    "other_expanded_coverage": "Front/backmatter and bibliography not previously credited by the inspected records.",
+    "same_source_warning": "New full reading contains inherited rereads. No new witness, theorem, independent corroboration, or novelty credit merely from completing book."
+  },
+  "speaker_controls": {
+    "13–15": "Mustafa Abu Sway prefacer, dated2013; not Ameri author prose",
+    "17 onward": "Ameri, with separately introduced quotations",
+    "69–70": "reported Russell/Copleston exchange and cited commentators",
+    "79": "James quotation preserves exclusions; surrounding argument is Ameri",
+    "89–90": "IbnRajab/IbnT quotes; primary loci not freshly verified here",
+    "106–111,134–136": "IbnQ quotations indicated by author; modern edition citation not primary verification",
+    "205–206": "reported experience-machine objection and reply; not Ameri original-peer theory",
+    "214–216,219–220": "Aqqad quotations",
+    "222–225": "Imad al-Din Khalil narrated passage; not Ameri autobiography"
+  },
+  "delegated_reads": {
+    "James": "james-primary/READING_LEDGER.json; entire essay184–215, notes, visual controls; reviewed report, no claim second own reading",
+    "Railton": "railton-reading-provenance.json; entire paper163–207 notes1–43; reviewed report, no claim second own reading"
+  },
+  "primary_attribution_boundary": "James fresh primary verification drives the new attribution inference. Other IbnT/IbnQ quotations have inherited conceptual controls; no new exact-primary authenticity claim or modal theorem from the modern quotations.",
+  "not_verified": "Contemporary empirical, historical-sociological, medical, animal-consciousness and comparative-religion assertions encountered for comprehension; no separate certification.",
+  "personal_bounded_primary_return": {
+    "James": "After reviewing the complete delegated report, personally reread source text printed 189–190, 197–198, 213–215. This is a bounded source return, not a second full-essay reading.",
+    "Railton": "The complete delegated report was reviewed. A subsequent oversized source-text display was truncated and is not credited as additional personal primary coverage."
+  }
+}

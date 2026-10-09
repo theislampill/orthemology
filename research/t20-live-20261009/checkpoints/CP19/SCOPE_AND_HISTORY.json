@@ -1,0 +1,40 @@
+{
+  "checkpoint_number": 19,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "T20": "ACTIVE",
+  "preservation_only": true,
+  "integration": false,
+  "owner_acceptance": false,
+  "research_closure": false,
+  "new_philosophical_judgement": false,
+  "new_research_duration_credit": false,
+  "root_review": {
+    "path": "root-resumed-research-20261009/REVIEW_CHECKPOINT.json",
+    "sha256": "8fb305de81a7c7f583f72f6db62f2593bd5b469eddd5f2897a61b3191ce5a4c5",
+    "scope": "Explicitly frozen root review. Later Ameri continuous reading excluded."
+  },
+  "history": {
+    "supplement": "Its report pending-language is historical. The completed direct return and later disposition remain separate records.",
+    "root_records": "Both completed root records are preserved unchanged, each at its own timestamp and scope.",
+    "formal_receipts": "Author successful kernel receipt and independent successful kernel receipt are separate. Historical initial/development and deliberately false mutation logs are not additional successful proofs.",
+    "recognition": "Original verification says parent review pending; later frozen root review records its actions separately without rewriting that history.",
+    "origin_ranking": "Same electronic witness freshly retrieved and reread; not new independent textual corroboration.",
+    "original_production": "New exact Dar3:440 locator/voice control; prior operation audit produces no new model/theorem/closure credit."
+  },
+  "formal_scope": {
+    "kernel": "General finite-support graph combinatorics and pointwise character gate bridge only; see exact endpoints in graph VERIFICATION.json.",
+    "written_not_kernel": "Ordinary connectivity equivalence, Walsh basis/continuation-span, continuous encoder dimension, minimax claims, tree saturation and disconnected component characterization remain at their declared written/finite-check evidence levels.",
+    "novelty": "Existing CNOT Steiner formula is prior art. Transfer into continuation information frontier is the bounded application.",
+    "finite_controls": "Historical independent n<=6 evidence retained. New portable n<=4 and unchanged author/recognition scripts are transport qualification only.",
+    "negative_controls": "False cost coefficient and false character preservation rejected historically and required to fail under full portable replay. Necessary-target tracking vacuity is an explicit negative result, not a knowledge model.",
+    "System_R": "Nineteen-line positive relevant factive-ground proof, checked syntactically in Python and independently reviewed. No Lean/kernel claim. Finite R-sound matrix is a conditional-typing control, not a closure refutation or cognitive model. Material compound-ground success is retained."
+  },
+  "source_scope": {
+    "direct_anti_brute": "Foundational warrant does not require a deduction from weaker premises; direct attribution does not by itself settle every philosophical objection.",
+    "necessity": "Necessary attributes, necessary bearers and original producers are distinct domains; generic fact identity is not producer identity.",
+    "agency": "Truth-matching self-knowledge versus productive practical basing; source-supported practical perfection is affirmative but does not prove uniqueness.",
+    "recognition": "Full modern readings are attributed through SOURCE_READS, not redistributed. Selective truth tracking, recipient knowledge, cognitive architecture and actual episode authentication remain separate.",
+    "residual": "Complete actual productive adequacy and exclusively original attribution remain distinct. Strong rivals are not replaced by weaker joint-support or backup cases.",
+    "story": "Textual attestation is not event authentication. Inward rescue-directed state, later spoken identification, prior cognition and first acquisition remain distinct; chronology underdetermined."
+  }
+}

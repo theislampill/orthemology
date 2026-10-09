@@ -1,0 +1,17 @@
+{
+  "omitted_local_entries": [],
+  "excluded_categories": [
+    "Private correspondence",
+    "Modern copyrighted full-text bodies, page renders and OCR",
+    "Credentials and raw tool retrieval responses",
+    "Compiled caches",
+    "All six earlier ZIP archives",
+    "Historical merged integration corpus"
+  ],
+  "new_source_reading_credit_from_packaging": false,
+  "source_reading_boundary": "Preserve author/reviewer targeted source-audit records. No new external retrieval or whole-paper reading is implied.",
+  "explicit_not_bundled_primary": {
+    "url": "https://www.jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf",
+    "scope": "Recorded targeted Lemma 1 and Appendix A.1 only; full paper not read or bundled."
+  }
+}

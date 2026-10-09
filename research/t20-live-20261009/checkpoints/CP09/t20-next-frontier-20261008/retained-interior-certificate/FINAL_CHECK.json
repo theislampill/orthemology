@@ -1,0 +1,10 @@
+{
+  "predecessor_bindings_verified": 4,
+  "imported_module_source_and_olean_pairs_verified": 1798,
+  "compiler_runtime_and_direct_source_files_verified": 11,
+  "accepted_source_matches_isolated_replay": true,
+  "accepted_axiom_log_clean": true,
+  "deterministic_assertions": 3675,
+  "all_passed": true,
+  "assurance": "Kernel only for the source-specific deterministic theorem; written probability/KL proof plus controls and separate review"
+}

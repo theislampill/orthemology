@@ -1,0 +1,732 @@
+{
+  "schema": "t20-intermediate-checkpoint-manifest-v1",
+  "classification": "EIGHTH_ADDITIVE_INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "T20_status": "ACTIVE",
+  "sealed_utc": "2026-10-08T19:41:54.131629+00:00",
+  "research_cutoff_utc": "2026-10-08T19:22:46.258191+00:00",
+  "previous_research_cutoff_utc": "2026-10-08T17:10:40.977609+00:00",
+  "cutoff_basis": "Final included frozen manifest receipt; not independent historical timestamp certification",
+  "fresh_definition": "Frozen post-seventh stages copied unchanged; packing and replay earn no active-research-time, source-reading or owner-acceptance credit.",
+  "entrypoint": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+  "evidence_boundaries": "EVIDENCE_BOUNDARIES.json",
+  "exclusions": "OMISSIONS_AND_SOURCE_LINKS.json",
+  "portable_program_runs": 6,
+  "distinct_program_contents": 5,
+  "duplicate_snapshot_is_not_independent_evidence": true,
+  "active_excluded_successors": [
+    {
+      "path": "full-face-threshold-information",
+      "status": "ACTIVE_EXCLUDED_NOT_EVALUATED_OR_CREDITED"
+    },
+    {
+      "path": "root-later-operations/FULL_THRESHOLD_INFORMATION_CANDIDATE.md",
+      "status": "EXCLUDED_WITH_ACTIVE_INVESTIGATION"
+    }
+  ],
+  "new_Lean_or_kernel_verification": false,
+  "empirical_validation": false,
+  "philosophical_truth_certification": false,
+  "metaphysical_possibility_certification": false,
+  "file_count": 106,
+  "files": [
+    {
+      "path": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 6861,
+      "sha256": "71f67ad13cf448fc74df8718ce27b6a239ce71154781f5f95cb50e2488587c28",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "EVIDENCE_BOUNDARIES.json",
+      "bytes": 4781,
+      "sha256": "c667b95066784c08d9aef4ec58f8273af47d41038ff836b5f8efd615ab00eb31",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "INCREMENTAL_RESULT_SOURCE_EVIDENCE_DEPENDENCY_MANIFEST.json",
+      "bytes": 33621,
+      "sha256": "2016d7b99b14348cbdd78c5d87d44339bbbf0b7803077dfeb91d66a6dc421c92",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "OMISSIONS_AND_SOURCE_LINKS.json",
+      "bytes": 24339,
+      "sha256": "4816144eaaf5d60cb0c638ac0e10bf5fc391f483db8b5f3679877ab556afeea1",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/CONTROL_PLAN.json",
+      "bytes": 4099,
+      "sha256": "f13e844ddb9698f40aae92af9258c390e11a8f530b5264bd9c8cf0c2398bd730",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/FREEZE_IDENTITIES.json",
+      "bytes": 2766,
+      "sha256": "2a3c3ac3dcb1ea11331f3e3df2f282b25de49ce6905a4197a3a7d6f6f758a391",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/MINIMAL_REPLAY_DEPENDENCIES.json",
+      "bytes": 5613,
+      "sha256": "a470f579d195ae74e438bdf50122ca79bc505564e90f0a55a260a69f09f331b3",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/ORIGINAL_AND_REVIEW_BINDING_CHECKS.json",
+      "bytes": 121419,
+      "sha256": "2bbf31a42773c40b11189e44b61fce6dcee6a57be10e98fbac61e331d41dc6e3",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/SOURCE_COPY_BINDINGS.json",
+      "bytes": 29345,
+      "sha256": "5f6cf9bdfcdcbea96e3a4d76f326574b227cbcd6b703a435626b99581ff7634f",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/check_manifest.py",
+      "bytes": 3664,
+      "sha256": "1a9f3fff269024b91de796e267eb54d291868e896b0009ed56286bf03d4b4ff9",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/REPLAY_RECEIPT.json",
+      "bytes": 6143,
+      "sha256": "16f0afec42d5aecb66abbb37414bbd6b2c7e6c0f9c354e7aec644e9c98c1474a",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-author.stdout.log",
+      "bytes": 1466,
+      "sha256": "f8d4044b165117ecdacc79cbb5b2bea8326f17e30fcf8dac16ce5731508612aa",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-independent.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-independent.stdout.log",
+      "bytes": 4385,
+      "sha256": "e8898561702aa719e32e6f04099fd7d14203abca38d6ffa39b44052a2c1acbdb",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-review-bindings.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/adaptive-review-bindings.stdout.log",
+      "bytes": 3583,
+      "sha256": "a810a752eb9c2d42df60e1ad9ccee14343ffb5c7941d2e3474057aca8ce834e7",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-author.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-author.stdout.log",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-independent.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-independent.stdout.log",
+      "bytes": 1590,
+      "sha256": "327b28c4e2847191c37c46d25c1687edd448dcd8a6df6d0170f4aa2d0c786509",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-reviewed-snapshot.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/first-replay/tensor-reviewed-snapshot.stdout.log",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "PACKING/prior-identities/SEVENTH_COMPONENT_AND_PRIOR_IDENTITIES.json",
+      "bytes": 4987,
+      "sha256": "bdeafe251f94b3b7a640bba5f1ebcdedee5e393a1cacf3b8122ae3453d50d7c8",
+      "boundary": "INHERITED_IDENTITY_MAP"
+    },
+    {
+      "path": "PACKING/prior-identities/T20_Robust_Replay_and_Information_Bounds_Intermediate_Checkpoint_20261008.EXTRACTION_RECEIPT.json",
+      "bytes": 9889,
+      "sha256": "31c5d7871ac22321a7a0bbd1db3e014f072d9f3702f328b2528a11d88c970985",
+      "boundary": "INHERITED_DELIVERY_ASSURANCE_ONLY"
+    },
+    {
+      "path": "PACKING/replay_python.py",
+      "bytes": 3630,
+      "sha256": "6531a32c2519bf4d189cbedbfd469bb602aa5121a1b1b15a77b6603950bde8bc",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 5217,
+      "sha256": "192332309c929dd4daa0102efafd25b5e02fcf17ee5249fe7c02413c329e138d",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "REPLAY.md",
+      "bytes": 1732,
+      "sha256": "a2a416275a656d9f0e2459e2f138cf05aa86c8f2c03ca6e09eb524d68aa8fdc5",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/BeginninglessProvision.lean",
+      "bytes": 5309,
+      "sha256": "508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd",
+      "boundary": "MINIMAL_INHERITED_SEMANTIC_INTERFACE_NO_KERNEL_REPLAY"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "boundary": "MINIMAL_INHERITED_SEMANTIC_INTERFACE_NO_KERNEL_REPLAY"
+    },
+    {
+      "path": "requirements-controls.txt",
+      "bytes": 14,
+      "sha256": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+      "boundary": "FRESH_PACKING_ASSURANCE_OR_NAVIGATION_NO_RESEARCH_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/CONTROLS_OUTPUT.json",
+      "bytes": 1466,
+      "sha256": "f8d4044b165117ecdacc79cbb5b2bea8326f17e30fcf8dac16ce5731508612aa",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/FINAL_CHECK.json",
+      "bytes": 625,
+      "sha256": "d4580720bbe733cc01bf9644637456a2de6dcb851807ffcd21475fee3a1b2f77",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/MANIFEST.json",
+      "bytes": 1619,
+      "sha256": "f1d94d43fb7067e1a7626d26e8d010c1d634f86236b730d4cf519171e829e5a0",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/READ_FIRST.md",
+      "bytes": 1513,
+      "sha256": "05cb7134eba08a311b797c31160231f6b1c8a4e276f7c4d81d0224a9ba068fe6",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/RESULT.md",
+      "bytes": 9589,
+      "sha256": "3997cb39f8306545ac622feeb19e55f0fe18c570e0059e84dea39940c6b22e0f",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/REVIEW_STATUS.md",
+      "bytes": 2103,
+      "sha256": "664b06c10f605ee49a56b3c99340a77bbbbd1b115076db1bccced35239ff4d80",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/SOURCE_AND_CONTROLS.md",
+      "bytes": 3735,
+      "sha256": "2004a741c0cee5b2bcf12fd8ce0eb36ae58290b8986d5f7e83f509e89210cdea",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/SOURCE_BINDINGS.json",
+      "bytes": 1201,
+      "sha256": "9c66c47798c3f327f637113ce5e63c3ed94b314d7f96df04ad94d962a9a43a78",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary/controls.py",
+      "bytes": 3308,
+      "sha256": "e7bdd3186d70b1ac3f44d95a1d3f3501230045c7f477476444b7aa540336c289",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/AUTHOR_CONTROLS_RERUN.json",
+      "bytes": 1466,
+      "sha256": "f8d4044b165117ecdacc79cbb5b2bea8326f17e30fcf8dac16ce5731508612aa",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/CONTROL_RESULTS.json",
+      "bytes": 4385,
+      "sha256": "e8898561702aa719e32e6f04099fd7d14203abca38d6ffa39b44052a2c1acbdb",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/REVIEW.md",
+      "bytes": 12475,
+      "sha256": "34cad583c0556f53aef7c235f7dacd88c684eac2347e85c097a7713ebca6c6a3",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/REVIEW_RECEIPT.json",
+      "bytes": 7377,
+      "sha256": "b2ca44f3477b8b0fd52569f9acad9931c4865dfd2b9cdd7d230c0e23356aa22a",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/SOURCE_BINDING_CHECK.json",
+      "bytes": 4339,
+      "sha256": "b2012e81582c1e52e76beaaed25abc5c27f9ed6c52098d37dd73c02b62577c22",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/independent_controls.py",
+      "bytes": 10261,
+      "sha256": "45ac42f56b4ccacec48acaba57c289a456176b98b481faa0085802649247c648",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/verify_review.py",
+      "bytes": 895,
+      "sha256": "2b27f603be0ff6d9468c8d28b081a3584cf15eac3a50806a445eac1fadb74a3d",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "bytes": 5833,
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/MANIFEST.json",
+      "bytes": 2503,
+      "sha256": "e454504588064ed84b4565fbc4656075c456a34b3f812973f1c96c5d4d83af3f",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/RESULT.md",
+      "bytes": 13174,
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design/REVIEW_STATUS.md",
+      "bytes": 2276,
+      "sha256": "3cb5747d814a77d4e0bbb0985ed7a01909ce9869953816e464285731ed148de2",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/REVIEW_RECEIPT.json",
+      "bytes": 6991,
+      "sha256": "b90ddb878ef98b4f5b45fd2b0efe5e889c6f79c717711efaa6e7c670f3808910",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "bytes": 12931,
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9",
+      "boundary": "MINIMAL_INHERITED_REVIEW_INPUT_NO_NEW_RESULT_CREDIT"
+    },
+    {
+      "path": "t20-next-frontier-20261008/autonomous-quality-bridge-review/REVIEW.md",
+      "bytes": 19407,
+      "sha256": "01cc512ab6f4c9367f0bfaea223bdb8375863b82fc187cc5da4d99e14382ab66",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/INPUT_BINDINGS.json",
+      "bytes": 1806,
+      "sha256": "acb025268873f699e13c4a63e3d6299b31097ecbd6e410b1cca461debaf9f8af",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/MANIFEST.json",
+      "bytes": 1626,
+      "sha256": "1450a503da6f8f9ea23d2019ef4a5e590c86ce596e5c98c891d654e90e35b894",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/PASSAGE_NOTES.md",
+      "bytes": 115348,
+      "sha256": "3dcedc2b69bf58d0c3c867f3b58b60cc7d7bac3984606b7e67838d7cbcbaa26d",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/REPORT.md",
+      "bytes": 20834,
+      "sha256": "5ddee32d26314b34ec446e742359dc9571905e12f55c096c9a92b199596c7dfe",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/SOURCE_READS.json",
+      "bytes": 5454,
+      "sha256": "0481af3b2a80d20af130785974abd38c15da662ef711c0202ee61905ce3f7161",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/VERIFICATION.json",
+      "bytes": 899,
+      "sha256": "b9126486648e05d9ba26d64ea0bb6c6c76b1b91ac86162797332acb48a8113ed",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/existential-law-source-bridge/sources/extract_received.py",
+      "bytes": 634,
+      "sha256": "58bad068ee88973d2cd7c728ca4860c88e49670eec75bb8e1c5e0b3140f067ae",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/CHECKPOINT_RECEIPT.json",
+      "bytes": 1693,
+      "sha256": "06aa2e64def5dbee54dfeca08657aad48fe4d90e720a499e8309513d275737a6",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/REPORT.md",
+      "bytes": 16495,
+      "sha256": "ec045d05b5d7da64332d166be5b00e9fcd455453e668e0b5b07ffd3c3c3dbb97",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/RESEARCH_EVENTS.jsonl",
+      "bytes": 2183,
+      "sha256": "49c355fa85fc1e79804aca53008ffd003fd581141c4db3d63051976d855bfae0",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_BINDINGS.json",
+      "bytes": 5663,
+      "sha256": "7de3a2a2a90b4c95378d7a2f2e62f3d1a9fe5de7e2abed39559660fdd9addb52",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival/SOURCE_READS.json",
+      "bytes": 6604,
+      "sha256": "3c390abf8889dc84366ff4b7f641ff822b76332926987e645a91e48871d80241",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/BILLON_ACCESS_BOUNDARY.md",
+      "bytes": 4824,
+      "sha256": "36c4ab8df18df08c0b23eee6508877b398621cd96525c8a0cc20e4bb72c34bef",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/CONTINUATION_RECEIPT.json",
+      "bytes": 3045,
+      "sha256": "3c50d986290580d6b2e1a64baa2917f36449cd6abde63800a85937c58d4e1488",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/RESEARCH_EVENTS.jsonl",
+      "bytes": 1795,
+      "sha256": "35584f334084ef50fdaa123af169fe18448e1ae40f284096815f54ceebe81856",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_BINDINGS.json",
+      "bytes": 5151,
+      "sha256": "30ffeb911d999339ee4fe6a187f6210c230bb26a6bd398c6232ae33317c54296",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_READS.json",
+      "bytes": 6176,
+      "sha256": "06a83739da8a3b9de8d7c0c0da570f515e2d4e2022810fb57cfb8275b760c4dc",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-review/INDEPENDENT_LAW_ONLY_TRANSPORT_REVIEW.md",
+      "bytes": 14738,
+      "sha256": "6da1ffcbd2f780e3f3007b66024b2b4a65641812567f12cb8e06fad930812abc",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/MANIFEST.json",
+      "bytes": 2614,
+      "sha256": "85c5c25bd9be097d1cd2232e5b8c1b4908ebc96f0d9b77a21c4952202e510bfc",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/READING_SCOPE.json",
+      "bytes": 1959,
+      "sha256": "9cc7db7a49704aec070a1199047d7de5ef2c3537863610e73c7f9d1232080057",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/RECEIPT.json",
+      "bytes": 1946,
+      "sha256": "7dc97cbda1e9a130d00a1420b2d17130af61a371b6a7e2be5cf6495613bb018d",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "bytes": 18923,
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/RESEARCH_EVENTS.jsonl",
+      "bytes": 567,
+      "sha256": "d252411a3df094b3edfbbb762c3253cce084dc8d3dfa6d29b15574c33363262e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REVIEW.md",
+      "bytes": 1499,
+      "sha256": "44fb21edfaca0df3d3e565776dad5709e63e8254686671fdab4b4146c4b85040",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "bytes": 30791,
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/READING_LEDGER.json",
+      "bytes": 10331,
+      "sha256": "fc00e2e638693978e8e48462164a63c4370fa9a19c2db24d4b4ff6b43a78f057",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/RESEARCH_EVENTS.jsonl",
+      "bytes": 3340,
+      "sha256": "792ed99e69a9ddd65de270bef56bc7d6edfbe0d0d2cd7656f26834597c453c42",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/SOURCE_AND_DELIVERABLE_MANIFEST.json",
+      "bytes": 1928,
+      "sha256": "e5c24c14a27a635770b82fe67eb7fa3b1ba2534ad8deead9db1b4186a452ebe3",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/CONTROL_RESULTS.json",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/INHERITED_GRADED_INTERFACE.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/MANIFEST.json",
+      "bytes": 3563,
+      "sha256": "a2591eed5465a387dcb63fd82ba547803f6ba2a51640d92dfe2f565ce396ddbe",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/READ_FIRST.md",
+      "bytes": 1898,
+      "sha256": "550d7f632d54c46f3cc51471434588cb49b2dd2882b13410cd8dd3cda315f872",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESEARCH_ACCOUNTING.json",
+      "bytes": 1851,
+      "sha256": "4afd4ae3577fdbcee1fb89c3335570a47346b92ba5410944408023bccf34331d",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESEARCH_EVENTS.jsonl",
+      "bytes": 3980,
+      "sha256": "227c25cfcf5b8a5c25708cdb790398993ad09d4fe50a35708754aeaa9b79dfa2",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md",
+      "bytes": 29225,
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/REVIEW_RESPONSE.md",
+      "bytes": 1139,
+      "sha256": "cb179a5b75f41e1af021b3d6ef525868d7a64639df8f490c02ff9c25296e2042",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/SOURCE_BINDINGS.json",
+      "bytes": 3611,
+      "sha256": "dce39eff0a54a96c6df920794dfd2e67ba4164108945518a580bfc8ae22e5ef1",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport/controls.py",
+      "bytes": 13819,
+      "sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_PROBE_RESULTS.json",
+      "bytes": 1590,
+      "sha256": "327b28c4e2847191c37c46d25c1687edd448dcd8a6df6d0170f4aa2d0c786509",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_RUN_OUTPUT.json",
+      "bytes": 1590,
+      "sha256": "327b28c4e2847191c37c46d25c1687edd448dcd8a6df6d0170f4aa2d0c786509",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REPLAY_RUN_OUTPUT.json",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW.md",
+      "bytes": 16011,
+      "sha256": "9fdcd3b120268501b8ea756ddd28a244065db6f1a21e5436b574d5942ef28b45",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/REVIEW_INPUT_BINDINGS.json",
+      "bytes": 1744,
+      "sha256": "c2335b25d0031d4713d30b49ec84a50fbfc2146bb1a694d77905f3257ce9cb7d",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/VERIFICATION.json",
+      "bytes": 1271,
+      "sha256": "596561099f8889303a8c77ef375ec60b6dd1ea31daac094acfd108b561e83ec1",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/independent_probes.py",
+      "bytes": 10560,
+      "sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/CONTROL_RESULTS.json",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/RESULT.md",
+      "bytes": 29225,
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/RUN_OUTPUT.json",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/controls.py",
+      "bytes": 13819,
+      "sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "boundary": "FROZEN_POST_SEVENTH_ARTIFACT_UNCHANGED"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "bytes": 1894,
+      "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3",
+      "boundary": "READING_SCOPE_RECORD_ONLY_NO_NEW_SOURCE_OR_DISCOVERY_CREDIT"
+    }
+  ],
+  "manifest_self_hash_exclusion": [
+    "MANIFEST.json",
+    "MANIFEST.sha256"
+  ],
+  "previous_checkpoints": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "bytes": 544325,
+      "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/additional/T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "bytes": 389515,
+      "sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/warrant/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "bytes": 318928,
+      "sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/scope-calibration/T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 549190,
+      "sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/interaction-invariants/T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 465413,
+      "sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/replay-calibration/T20_Calibration_and_Replay_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 730140,
+      "sha256": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/robust-replay/T20_Robust_Replay_and_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "bytes": 319689,
+      "sha256": "21de2a8b2e14ab9a26035514054a8fb3555bd284938751acbd8282b4c4e6965a",
+      "included": false,
+      "boundary": "earlier_checkpoint_unchanged"
+    }
+  ],
+  "owner_adopted_main": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "source_current_H_blob": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+  "source_current_pin_provenance": "Tensor author read-only current-pin acquisition; packer checked local SHA256 and Git blob. No GitHub query or mutation by packer.",
+  "historical_merged_snapshot": "Frozen 7 October corpus distinct from later 8 October scratch",
+  "owner_acceptance": false,
+  "final_integration": false,
+  "closure": false,
+  "uploaded": false
+}

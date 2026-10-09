@@ -1,0 +1,15 @@
+{
+  "change": "Added one scope sentence: repairs sufficient, not proved necessary/unique/weakest; positive proofs require wholly particular constituent. No code, proof, or verification-log changes.",
+  "pre_review_report": {
+    "path": "RESULT.pre-review.md",
+    "sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6"
+  },
+  "post_review_report": {
+    "path": "RESULT.md",
+    "sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c"
+  },
+  "review": {
+    "path": "explanation-bridge-review/REVIEW.md",
+    "sha256": "76f6b4f4328bea5750217072ad0ca5e6b35e928d8cd6a9682b2b43b629d52fd1"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "artifacts": [
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+      "sha256": "94dd3179a4705d6f05a140cb7a58f97bb61a0ca8235502d67bc97b9dd2d232a3",
+      "bytes": 1594
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+      "sha256": "d2db5bce9158422dd8e59ff407a1869597cdca52a793765705c75d9c0f33897a",
+      "bytes": 3404
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+      "sha256": "c3b5c68d00b4b4d0f6c296fe72642ecc53287d17b2d37fe268aaf996bcc7d85d",
+      "bytes": 7675
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "bytes": 22307
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+      "sha256": "11c26aa51d83d08c8c974ea001661da05c150fa98212109bf946aec645eeba24",
+      "bytes": 2094
+    }
+  ],
+  "scope": "Bounded source analysis; no integration, closure, formal execution or time certification"
+}

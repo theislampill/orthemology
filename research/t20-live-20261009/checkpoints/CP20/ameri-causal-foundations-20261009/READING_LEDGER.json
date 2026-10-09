@@ -1,0 +1,154 @@
+{
+  "date_utc": "2026-10-09",
+  "source_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+  "language": "original Arabic",
+  "pagination": "printed equals one-based PDF in checked pages",
+  "lead_reader": {
+    "direct_continuous_ranges": [
+      [
+        19,
+        86
+      ],
+      [
+        133,
+        190
+      ]
+    ],
+    "fresh_focal_range_relative_to_later_inherited_ledger": [
+      31,
+      82
+    ],
+    "reread_ranges": [
+      [
+        19,
+        30
+      ],
+      [
+        83,
+        86
+      ],
+      [
+        133,
+        190
+      ]
+    ],
+    "glossary_read_via_web": [
+      13,
+      18
+    ],
+    "contents_read_via_web": [
+      9,
+      12
+    ],
+    "metadata_text_pages": [
+      5,
+      6
+    ],
+    "visual_pages": [
+      6,
+      39,
+      40,
+      41,
+      62,
+      78,
+      80,
+      85,
+      139,
+      151,
+      152,
+      165,
+      186,
+      187
+    ],
+    "reflective_returns": [
+      [
+        39,
+        43
+      ],
+      [
+        61,
+        65
+      ],
+      [
+        150,
+        153
+      ],
+      [
+        163,
+        166
+      ],
+      [
+        185,
+        190
+      ],
+      [
+        41,
+        41
+      ]
+    ],
+    "truncation_repairs": [
+      "Initial19–42 display clipped25–36 and start37;25–36 redisplayed,37 separately redisplayed.",
+      "37 plus43–52 clipped47–48;both redisplayed.",
+      "133–146 clipped beginning140;140 redisplayed.",
+      "140 plus147–162 clipped152–156;152–156 redisplayed.",
+      "176–182 clipped179;179 redisplayed."
+    ],
+    "no_duration_certification": true,
+    "contextual_report_reading": "Both complete contextual notes read without truncation after receipt; reconciled in CONTEXT_RECONCILIATION.md, followed by timing/background/attribute reflective return."
+  },
+  "delegated_context": [
+    {
+      "reader": "read_ameri_cosmology_context",
+      "continuous_range": [
+        87,
+        132
+      ],
+      "ledger": "cosmology-context/READING-LEDGER.json"
+    },
+    {
+      "reader": "read_ameri_scriptural_context",
+      "continuous_range": [
+        191,
+        260
+      ],
+      "apparatus_inspection": [
+        261,
+        276
+      ],
+      "ledger": "scriptural-context/reading-ledger.json"
+    }
+  ],
+  "coverage_claim": "Substantive body19–260 covered in complete contiguous assigned units across three readers, plus glossary13–18 and contents9–12. Not a single-reader whole-book traversal; no full page-image traversal. Front matter1–4 and7–8 not comprehensively inspected. Bibliography is apparatus inspection, not consultation of its listed sources.",
+  "prior_coverage_correction": "Later intrinsic-necessity-source-return already read83–86 and133–190. The older AMERI_SCREEN cannot determine current novelty. Those arguments and primary checks are not re-credited.",
+  "additional_primary_checks": [
+    {
+      "work": "Minhaj al-sunna",
+      "url": "https://www.islamweb.net/ar/library/content/108/40/الزمان-المطلق-مقدار-الحركة-المطلقة",
+      "scope": "Complete electronic unit40, displayed1:172–176, web754–764; unvowelled body plus visible apparatus markers",
+      "source_hash": "303cefdc9576236c495e6105c3b68202948554feb65f914affc5980ae15eeebc",
+      "scope_limit": "No new scan or manuscript collation; not a newly discovered doctrine; corrupted marker fragment at175 not used to extend claim."
+    },
+    {
+      "work": "Naqd maratib al-ijma",
+      "url": "https://usul.ai/ar/t/naqd-maratib-ijmac",
+      "scope": "Electronic302–303 with surrounding methodological paragraph; opened response ends mid-continuation at303",
+      "local_hash": null,
+      "scope_limit": "Targeted partial check only; not complete response; direct urllib403 and /20 web cache miss were not bypassed."
+    }
+  ],
+  "external_validation": "No independently checked primary physics, biblical philology/history, evolution, or hadith criticism. Classical Ameri citations previously authenticated retain inherited scope; no exact edition correspondence newly claimed.",
+  "output_restrictions": "No raw copyrighted PDF, text, or page images in this output directory; no edits to protected state, prior reports, or code; no outreach, integration, closure, or confidence percentage change.",
+  "review_status": "Independent focused review accepted the main transfer findings and bounded simultaneous-priority qualification; see review/INDEPENDENT_FOCUSED_REVIEW.md and review/REVIEW_LEDGER.json. No substantive correction required.",
+  "parent_source_control": {
+    "reader": "root",
+    "reported_direct_extracted_range": [
+      32,
+      43
+    ],
+    "reported_visual_pages": [
+      41,
+      151
+    ],
+    "scope_limit": "Parent-reported independent checks; no root whole-book reading claim."
+  }
+}

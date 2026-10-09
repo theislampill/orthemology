@@ -1,0 +1,19 @@
+{
+  "status": "ARTIFACT_CHECKS_PASSED_NOT_METAPHYSICAL_VERIFICATION",
+  "timestamp_utc": "2026-10-08T17:46:18.926025+00:00",
+  "checks": {
+    "Arabic_block_quote_1_literal_source_match": true,
+    "Arabic_block_quote_2_literal_source_match": true,
+    "Arabic_block_quote_3_literal_source_match": true,
+    "Arabic_block_quote_4_literal_source_match": true,
+    "Arabic_block_quote_5_literal_source_match": true,
+    "Arabic_block_quote_6_literal_source_match": true,
+    "Arabic_block_quote_7_literal_source_match": true,
+    "all_source_record_local_digests_current": true,
+    "S001_extraction_count": true,
+    "S003_extraction_count": true,
+    "no_new_model_or_theorem_claim": true,
+    "source_variants_carried_forward": true
+  },
+  "limits": "Checks verify quoted text, record integrity and declared boundaries. They do not verify the philosophical premises or metaphysical possibility."
+}

@@ -1,0 +1,313 @@
+{
+  "logic_source": "Bimbo, Dunn and Ferenz2018 printed176-177, A1-A16 and R1-R2",
+  "proof_lines": 19,
+  "syntactic_proof_verified": true,
+  "wrong_final_consequent_rejected": true,
+  "proved_formula": "(¬N →R ¬(P ∧ (P →R N)))",
+  "arrow": "Relevant implication throughout, never material implication",
+  "matrix": {
+    "values": [
+      -2,
+      -1,
+      1,
+      2
+    ],
+    "designated": [
+      1,
+      2
+    ],
+    "negation": "-x",
+    "conjunction": "min",
+    "disjunction": "max",
+    "conditional": "max(-x,y) if x<=y; min(-x,y) otherwise",
+    "axioms": [
+      {
+        "axiom": 1,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 2,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 3,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 4,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 5,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 6,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 7,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 8,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 9,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 10,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 11,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 12,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 13,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 14,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 15,
+        "assignments": 256,
+        "failures": 0
+      },
+      {
+        "axiom": 16,
+        "assignments": 256,
+        "failures": 0
+      }
+    ],
+    "modus_ponens_failures": [],
+    "adjunction_failures": [],
+    "soundness_claim": "R-sound by finite axiom/rule check and induction on proofs; no completeness claim",
+    "contradictory_designated_values": []
+  },
+  "necessary_identity_control": [
+    {
+      "Q": -2,
+      "N": 2,
+      "not_N": -2
+    },
+    {
+      "Q": -1,
+      "N": 1,
+      "not_N": -1
+    },
+    {
+      "Q": 1,
+      "N": 1,
+      "not_N": -1
+    },
+    {
+      "Q": 2,
+      "N": 2,
+      "not_N": -2
+    }
+  ],
+  "material_to_relevant_upgrade_control": {
+    "Q": 1,
+    "N_equals_Q_implies_Q": 1,
+    "P": 2,
+    "material_not_P_or_N": 1,
+    "relevant_P_implies_N": -2,
+    "sensitivity_to_P": -2
+  },
+  "compound_material_basis_control": {
+    "rows": [
+      {
+        "P": -2,
+        "Q": -2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": -2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": -2,
+        "Q": -1,
+        "N": 1,
+        "material_conditional": 2,
+        "compound_basis": -2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": -2,
+        "Q": 1,
+        "N": 1,
+        "material_conditional": 2,
+        "compound_basis": -2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": -2,
+        "Q": 2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": -2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": -1,
+        "Q": -2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": -1,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": -1,
+        "Q": -1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": -1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": -1,
+        "Q": 1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": -1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": -1,
+        "Q": 2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": -1,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": 1,
+        "Q": -2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": 1,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": 1,
+        "Q": -1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": 1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": 1,
+        "Q": 1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": 1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": 1,
+        "Q": 2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": 1,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": 2,
+        "Q": -2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": 2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      },
+      {
+        "P": 2,
+        "Q": -1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": 1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": 2,
+        "Q": 1,
+        "N": 1,
+        "material_conditional": 1,
+        "compound_basis": 1,
+        "basis_implies_N": 1,
+        "not_N_implies_not_basis": 1
+      },
+      {
+        "P": 2,
+        "Q": 2,
+        "N": 2,
+        "material_conditional": 2,
+        "compound_basis": 2,
+        "basis_implies_N": 2,
+        "not_N_implies_not_basis": 2
+      }
+    ],
+    "all_pass": true,
+    "ceiling": "Success in one R-sound matrix is not proof of R theoremhood or of general epistemic closure."
+  },
+  "experience_swap_controls": [
+    {
+      "N": 1,
+      "E_competent": 1,
+      "E_guess": 2,
+      "Basing_C_fact": 1,
+      "Basing_G_fact": 1,
+      "not_N_implies_not_E_C": 1,
+      "not_N_implies_not_E_G": -2,
+      "ceiling": "Formal reduct only; no competence-to-intension bridge is included."
+    },
+    {
+      "N": 1,
+      "E_competent": 2,
+      "E_guess": 1,
+      "Basing_C_fact": 1,
+      "Basing_G_fact": 1,
+      "not_N_implies_not_E_C": -2,
+      "not_N_implies_not_E_G": 1,
+      "ceiling": "Formal reduct only; no competence-to-intension bridge is included."
+    }
+  ],
+  "epistemic_ceiling": "No cognition, proper function, subject knowledge or metaphysical possibility is inferred from this computation."
+}

@@ -1,0 +1,51 @@
+{
+  "recorded_utc": "2026-10-08T09:30:00.036595+00:00",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/MANIFEST.json",
+      "sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "bytes": 4086
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-identifiability/general-roots/RESULT.md",
+      "sha256": "2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26",
+      "bytes": 7741
+    },
+    {
+      "path": "t20-next-frontier-20261008/single-calibration-design/MANIFEST.json",
+      "sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831",
+      "bytes": 2360
+    },
+    {
+      "path": "t20-next-frontier-20261008/noise-aware-calibration/MANIFEST.json",
+      "sha256": "764ba9089be07d87f20ba1591886d901ceb3cf4d9fac60bc358c0d3cbd07716f",
+      "bytes": 3004
+    }
+  ],
+  "prior_frozen_components": [
+    {
+      "component": "productive-identifiability",
+      "manifest_sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "files_unchanged": 24
+    },
+    {
+      "component": "single-calibration-design",
+      "manifest_sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831",
+      "files_unchanged": 14
+    },
+    {
+      "component": "noise-aware-calibration",
+      "manifest_sha256": "764ba9089be07d87f20ba1591886d901ceb3cf4d9fac60bc358c0d3cbd07716f",
+      "files_unchanged": 18
+    }
+  ],
+  "primary_sources": "sources/SOURCE_READS.json",
+  "runtime_dependencies": "All Python code is standalone standard library within this sibling.",
+  "delivery_exclusions": [
+    "sources/gyory-smyth-2010.pdf",
+    "sources/gyory-smyth-2010.txt",
+    "sources/gyory-smyth-page7.png",
+    "sources/zsigmondy-page18.png"
+  ],
+  "scope": "Primary full modern article retained for local inspection; user-facing source delivery uses its link/hash, not the full article."
+}

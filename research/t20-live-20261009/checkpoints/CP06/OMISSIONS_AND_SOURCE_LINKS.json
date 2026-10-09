@@ -1,0 +1,74 @@
+{
+  "omitted_local_entries": [
+    {
+      "source_path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/__pycache__/independent_controls.cpython-312.pyc",
+      "reason": "GENERATED_CACHE",
+      "bytes": 18715,
+      "sha256": "c63e7964f8c1c22254d74e9a9ab0de94606e2d8385b00d3cac8d9f709829cbd2"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/PRIMARY_PAGE_5.png",
+      "reason": "PRIMARY_BODY_RENDER_OR_OCR_EXCLUDED",
+      "bytes": 347810,
+      "sha256": "c55f89dead8d34403423c3f9039af7c1a5804630c8a75399f9f7b216678c86a8"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/finite-hypergraph-calibration-review/packaging_addendum/PRIMARY_PAGE_5.txt",
+      "reason": "PRIMARY_BODY_RENDER_OR_OCR_EXCLUDED",
+      "bytes": 4236,
+      "sha256": "807752a57fb4a1f9c67248690ac05c7bc4df15a6896bb60c32a7b58b08e7f30f"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/dependent-gate-transport-review/sources/acopula_generator_web.json",
+      "reason": "RAW_TOOL_RETRIEVAL_AND_SOURCE_BODY_EXCLUDED",
+      "bytes": 3274,
+      "sha256": "3b31a45c39072b7fd0dbfafd8dcc18ed23bbc009390200dbea58fe856d21d18d"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/dependent-gate-transport-review/sources/additional_sources_web.json",
+      "reason": "RAW_TOOL_RETRIEVAL_AND_SOURCE_BODY_EXCLUDED",
+      "bytes": 3539,
+      "sha256": "cd898c4eb30aac34675c0a2e190c32f4d7bf6134704ce1234eca609204d522b0"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/dependent-gate-transport-review/sources/bibliographic_search_web.json",
+      "reason": "RAW_TOOL_RETRIEVAL_AND_SOURCE_BODY_EXCLUDED",
+      "bytes": 16153,
+      "sha256": "d50e43a2c695322b991af89516a53b4d0cb91321648238fb35cb85975602ac2a"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/dependent-gate-transport-review/sources/copula_constructor_web.json",
+      "reason": "RAW_TOOL_RETRIEVAL_AND_SOURCE_BODY_EXCLUDED",
+      "bytes": 5050,
+      "sha256": "dd79f7164213f10a48d01954d0b3f8bb4d112ec91c7d5c24e2fc0cecc10ddbd4"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/dependent-gate-transport-review/sources/vinecopulas_formula_web.json",
+      "reason": "RAW_TOOL_RETRIEVAL_AND_SOURCE_BODY_EXCLUDED",
+      "bytes": 11602,
+      "sha256": "e244e5f30d220637540526d8c4d32472c5c6f63a197aaac9bd8bfab0f7477ef1"
+    },
+    {
+      "source_path": "t20-next-frontier-20261008/same-threshold-replay-review/__pycache__/verify_controls.cpython-312.pyc",
+      "reason": "GENERATED_CACHE",
+      "bytes": 7097,
+      "sha256": "36c38f2e876391949fd67b6f7548b44a8234559d9b07fc0bc17140edf60b7d11"
+    }
+  ],
+  "excluded_categories": [
+    "private correspondence",
+    "modern copyrighted full-text bodies, page renders and OCR",
+    "credentials",
+    "raw tool retrieval responses",
+    "compiled caches",
+    "five earlier ZIP archives",
+    "historical merged integration corpus",
+    "active four-coordinate noise-robustness successor beyond cutoff"
+  ],
+  "source_locator_records": [
+    "t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_BINDINGS.json",
+    "t20-next-frontier-20261008/dependent-gate-transport/sources/SOURCE_READS.json",
+    "t20-next-frontier-20261008/dependent-gate-transport-review/SOURCE_BINDINGS.json"
+  ],
+  "source_reading_credit": "Preserved recorded targeted reading only; byte checks are not new source inspection. Joe original-paper full text remains unread. No fresh external retrieval was performed in packaging."
+}

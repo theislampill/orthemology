@@ -1,0 +1,68 @@
+[
+  {
+    "source_path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+    "source_sha256": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/dar016-L0622-L0651.txt",
+    "range": [
+      622,
+      651
+    ],
+    "selection_sha256": "69e4a9477de909b137261e9e70bb978206ccbf276e77c8d52e86ef4f35dfc9d8",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  },
+  {
+    "source_path": "t20-next-frontier-20261008/wise-determination-continuation/sources/dar016-extracted.txt",
+    "source_sha256": "48b6ae76609b692d391a32be5a9aea30df22484e86c028ccdcaff4790137a352",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/dar016-L0690-L0757.txt",
+    "range": [
+      690,
+      757
+    ],
+    "selection_sha256": "1110e59e8a16f54437297fa61c84d1081ae2ad185fc1603b2fb942e451f26b75",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  },
+  {
+    "source_path": "source-noncirculation-feedback/sources/minhaj1-item96.txt",
+    "source_sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/minhaj1-item96-L0001-L0009.txt",
+    "range": [
+      1,
+      9
+    ],
+    "selection_sha256": "4076e7bfeb8b3c4e17b47d2be1d5d9c94f4f69140f17405766655e7f5d3e969d",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  },
+  {
+    "source_path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+    "source_sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/minhaj2-item156-L0021-L0041.txt",
+    "range": [
+      21,
+      41
+    ],
+    "selection_sha256": "a63ee0704acda67330177966e989f3e13961edb3cd640c0ef5fb250b355f4b8a",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  },
+  {
+    "source_path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item157.txt",
+    "source_sha256": "a4564e944544d14733b06aad01f3285db3c4e0d1243d84d4aa22184ead4bb60e",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/minhaj2-item157-L0001-L0004.txt",
+    "range": [
+      1,
+      4
+    ],
+    "selection_sha256": "a4564e944544d14733b06aad01f3285db3c4e0d1243d84d4aa22184ead4bb60e",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  },
+  {
+    "source_path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+    "source_sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+    "selection_path": "simultaneous-nonduplication-source-return/read-selections/majmu20-item2032-L0001-L0020.txt",
+    "range": [
+      1,
+      20
+    ],
+    "selection_sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+    "reading_credit": "targeted return; inherited witness; no new independent corroboration"
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "reviewed_inputs": [
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+      "bytes": 20557,
+      "sha256": "d6bd565310de6270d5d60fdc386d2c086c328184615f0d17eb4c4fcbf2f4261b",
+      "review_scope": "Read in full; primary review target"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/READING_NOTES.md",
+      "bytes": 3740,
+      "sha256": "dd77ee7a794b212c82c6edf0ff3d821de5ce56adcdde6892d871402926adc085",
+      "review_scope": "Read in full; author provenance account, not independently witnessed"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/INPUT_BINDINGS.json",
+      "bytes": 2010,
+      "sha256": "25342148209cc7ac3eef2cfd28a8376c8fc31e42463ea3d2fde4fbeb59f2feca",
+      "review_scope": "Read in full and all seven input hashes verified"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json",
+      "bytes": 2723,
+      "sha256": "74e234accafe8768a9a0ae2132ac7505d1593446284946841792f4daf5a480b3",
+      "review_scope": "Read in full"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/VERIFICATION.json",
+      "bytes": 472,
+      "sha256": "501311d5f2a86d32724f3c451084b01c01791442bd8442f1900658b375484fa2",
+      "review_scope": "Read in full and selected assertions independently checked"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/marmodoro-2013-accepted.pdf",
+      "bytes": 616462,
+      "sha256": "1f377b6c671d35839278f8b08722b7b550998489c9bda2a5fc83020a936a0d36",
+      "review_scope": "21-page primary witness; metadata and independent extraction checked"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/marmodoro-2013-accepted.txt",
+      "bytes": 67259,
+      "sha256": "3e95ca109f83e7305a1ed5121edf079553760883cafa16bd1405b4ef5dea1547",
+      "review_scope": "Read all 21 pages in order"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/page03.png",
+      "bytes": 209871,
+      "sha256": "7e8797f96a1b6bc949a79a9be586af82b5001658146fe06032bbd77b77329ae3",
+      "review_scope": "Visually inspected"
+    },
+    {
+      "path": "t20-next-frontier-20261008/joint-manifestation-ontology/sources/page16.png",
+      "bytes": 199466,
+      "sha256": "8692975bc173e35156a0964baf3a525dde7f59e4b58cdfa677487f3d1a38137b",
+      "review_scope": "Visually inspected"
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "bytes": 13802,
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "review_scope": "Read in full; prior Rea/cooperation control"
+    },
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "bytes": 23804,
+      "sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68",
+      "review_scope": "Inspected relevant original-cooperation, norm, and comparative-warrant passages; long display partially truncated; no full fresh primary-source rereading"
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "bytes": 30941,
+      "sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "review_scope": "Targeted keyword inspection and \u00a7\u00a73.2\u20133.2a read in full; primary texts not reread"
+    }
+  ],
+  "author_inherited_bindings_verification": [
+    {
+      "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+      "declared_sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68",
+      "current_sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+      "declared_sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454",
+      "current_sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "declared_sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "current_sha256": "b86a3a1623241b7602959f786818995f9a9582bcc61eb7de52d557c0bb843927",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/law-ground/FRONTIER_DISPOSITION.md",
+      "declared_sha256": "0e5f933251592e955ffa689b8699292e7a40c08d2c7eee47ff77eb13c57951a6",
+      "current_sha256": "0e5f933251592e955ffa689b8699292e7a40c08d2c7eee47ff77eb13c57951a6",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "declared_sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "current_sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "declared_sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "current_sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "declared_sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "current_sha256": "96686c4c4221140ab948608e5087826ba4097eeea67169a9dc3b5a3c621729a2",
+      "matches": true,
+      "not_a_claim_of_reading": true
+    }
+  ]
+}

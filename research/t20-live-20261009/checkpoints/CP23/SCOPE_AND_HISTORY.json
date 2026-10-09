@@ -1,0 +1,43 @@
+{
+  "checkpoint": 23,
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "freeze_utc": "2026-10-09T12:13:29.781300+00:00",
+  "parent_final_freeze_confirmed": true,
+  "groups": [
+    "intrinsic-normative-reasons-20261009",
+    "intellectual-production-rival-20261009",
+    "original-cognitive-efficacy-20261009",
+    "affirmative-intrinsic-necessity-20261009",
+    "affirmative-original-exclusivity-20261009",
+    "companion-formal-review-20261009",
+    "companion-source-delta-review-20261009",
+    "warranted-discrimination-research-20261009",
+    "warranted-discrimination-kernel-20261009",
+    "certificate-compilation-boundary-20261009",
+    "affirmative-wise-determination-20261009"
+  ],
+  "root_receipts": [
+    "POST22_PRIMARY_RETURN.json",
+    "AVICENNA_PURPOSE_RETURN.json",
+    "COMPANION_READING_AND_MAPPING.json",
+    "AFFIRMATIVE_AND_COMPANION_APPRAISAL.json",
+    "DISCRIMINATION_REVIEW.json",
+    "COMPILATION_AND_WISE_EXECUTION_REVIEW.json"
+  ],
+  "research_closed": false,
+  "integrated": false,
+  "owner_accepted": false,
+  "historical_duration_certified": false,
+  "packaging_credited_as_research": false,
+  "new_theorem_or_kernel_result_claimed": false,
+  "research_code_executed": false,
+  "packaging_scope": "This operation only preserves completed results. New research results recorded by the source artifacts have their own precise statuses in DELTA_MANIFEST.json.",
+  "avicenna_comparison_status": "STOPPED_AT_OWNER_BOUNDARY; completed report preserved; no reopening authorized",
+  "programme_status": "T20 remains active; no new stopping judgment.",
+  "relationship_to_prior": "Additive and noncumulative; prior archives are separate and unchanged. Exact supplied companion is included separately, not relabelled as an original checkpoint.",
+  "excluded_source_paths": "Historical bindings may refer outside this package; not a self-contained philosophical source archive.",
+  "outside_freeze": [
+    "source-sensitive-proof-compilation-20261009"
+  ],
+  "review_attribution": "Internal AI reviews only; no external specialist/human certification."
+}

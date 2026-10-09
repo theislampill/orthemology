@@ -1,0 +1,57 @@
+{
+  "frozen_at_utc": "2026-10-08T22:43:03.351437+00:00",
+  "status": "Bounded reviewed research adapter",
+  "historical_floor": "UNVERIFIED",
+  "scope": "Prospective sibling only; no protected changes, old artifact overwrite, integration, or global closure.",
+  "payload": [
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 3124,
+      "sha256": "1b879363e0bb956e7fcd553012fae26d6d08a58fbd36837cbf576b8b05b0f95b"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 33327,
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+    },
+    {
+      "path": "controls.py",
+      "bytes": 14363,
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "bytes": 2531,
+      "sha256": "f740b49863794c4319a508f152a30c17270a96b4ec58925ff57a0ea5da40a676"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 4937,
+      "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73"
+    },
+    {
+      "path": "READING_LEDGER.json",
+      "bytes": 2542,
+      "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660"
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "bytes": 848,
+      "sha256": "6517538eb0663cf334e49d1434b46e78031f75590b8460142e80b79332e1a1cb"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "bytes": 986,
+      "sha256": "1a1ac7c36bd1b5db5d6346a652b394d46af3fd381db5bbe620db0fd16af598cc"
+    },
+    {
+      "path": "VERIFY.py",
+      "bytes": 1822,
+      "sha256": "8c1a50d4ffc1bdb9197e93f4b79105bebe9b6fde9ee8696473a6b47c5f1fc59e"
+    }
+  ],
+  "excluded_generated_receipt": [
+    "MANIFEST.json",
+    "VERIFICATION.json"
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "source_digests": {
+    "baseline-skyline-moments/RESULT.md": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+    "baseline-skyline-moments/controls.py": "3f65d6f86cda2dccb9c64705a12b238d95ae04205e2508e6266ed47c8edc4fbb",
+    "baseline-skyline-moments/CONTROL_RESULTS.json": "83094e37c1749ed43c2363eba0d8914f18b946558e15cba0ddfbe211859abc41",
+    "baseline-skyline-moments/CONTROL_RUN.log": "55550692c7ede266d518acb1b20e326eb80d50555bf27acb87c822df6feceb19",
+    "baseline-skyline-moments/SOURCE_AUDIT.md": "0d9fff67c3d4f59f4f6b034269e11688ed952d6c68c8d4ef8468819d903962ed",
+    "baseline-skyline-moments/OPERATION_LOG.md": "e99f59574baa8ee4aa9068d3bf6820244fb46e27571a2fef9f5c5364cf97a951",
+    "baseline-skyline-moments/SHA256SUMS": "1f712341faa82e63b931a17a998518d2d61ad5ccd109cfe56d94229854083807",
+    "retained-skyline-likelihood/RESULT.md": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+    "skyline-count-information/RESULT.md": "b96715873d240787ea6343538b4df54d94dc4bd7a52b79615fcaa9b2d34c2e4d",
+    "skyline-likelihood-score/RESULT.md": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f"
+  },
+  "multinomial_geometric_checks": [
+    {
+      "n": 0,
+      "EU2": "1",
+      "EKU": "0",
+      "ECm2": "1",
+      "EQ": "0"
+    },
+    {
+      "n": 1,
+      "EU2": "11/18",
+      "EKU": "3/4",
+      "ECm2": "4/9",
+      "EQ": "-7/72"
+    },
+    {
+      "n": 2,
+      "EU2": "61/144",
+      "EKU": "17/18",
+      "ECm2": "31/48",
+      "EQ": "-37/864"
+    },
+    {
+      "n": 3,
+      "EU2": "379/1200",
+      "EKU": "1",
+      "ECm2": "133/150",
+      "EQ": "-9/400"
+    },
+    {
+      "n": 4,
+      "EU2": "667/2700",
+      "EKU": "151/150",
+      "ECm2": "599/540",
+      "EQ": "-91/6750"
+    },
+    {
+      "n": 5,
+      "EU2": "529/2646",
+      "EKU": "1073/1080",
+      "ECm2": "577/441",
+      "EQ": "-5611/635040"
+    },
+    {
+      "n": 6,
+      "EU2": "46847/282240",
+      "EKU": "8573/8820",
+      "ECm2": "59929/40320",
+      "EQ": "-24383/3951360"
+    },
+    {
+      "n": 7,
+      "EU2": "51011/362880",
+      "EKU": "38189/40320",
+      "ECm2": "37337/22680",
+      "EQ": "-1457/322560"
+    },
+    {
+      "n": 8,
+      "EU2": "91451/756000",
+      "EKU": "13931/15120",
+      "ECm2": "451327/252000",
+      "EQ": "-139933/40824000"
+    },
+    {
+      "n": 9,
+      "EU2": "3215903/30492000",
+      "EKU": "32249/36000",
+      "ECm2": "5863189/3049200",
+      "EQ": "-1632061/609840000"
+    },
+    {
+      "n": 10,
+      "EU2": "159451/1715175",
+      "EKU": "885331/1016400",
+      "ECm2": "5098859/2494800",
+      "EQ": "-1290901/603741600"
+    },
+    {
+      "n": 11,
+      "EU2": "34871923/421621200",
+      "EKU": "4227917/4989600",
+      "ECm2": "302909263/140540400",
+      "EQ": "-70472747/40475635200"
+    },
+    {
+      "n": 12,
+      "EU2": "510802217/6886479600",
+      "EKU": "57959351/70270200",
+      "ECm2": "108771953/48157200",
+      "EQ": "-257944367/179048469600"
+    },
+    {
+      "n": 13,
+      "EU2": "177417173/2648646000",
+      "EKU": "106402013/132432300",
+      "ECm2": "148508729/63063000",
+      "EQ": "-44807479/37081044000"
+    },
+    {
+      "n": 14,
+      "EU2": "1473801479/24216192000",
+      "EKU": "74089139/94594500",
+      "ECm2": "11841218107/4843238400",
+      "EQ": "-2235073493/2179457280000"
+    },
+    {
+      "n": 15,
+      "EU2": "25938663263/466565299200",
+      "EKU": "137064891/179379200",
+      "ECm2": "36877779581/14580165600",
+      "EQ": "-198908503/226213478400"
+    },
+    {
+      "n": 16,
+      "EU2": "241063194187/4723973654400",
+      "EKU": "21754065643/29160331200",
+      "ECm2": "724928224373/277880803200",
+      "EQ": "-122186611747/160615104249600"
+    }
+  ],
+  "symbolic_checks": {
+    "compensation_identity": "PASS",
+    "means": "PASS",
+    "EQ_identity": "PASS",
+    "direct_n1_sample_integration": "PASS",
+    "EQ_factored": "(g*m**3 + g*m**2 - h**2*m**3 - h**2*m**2 + 2*h*m**3 - 2*h*m**2 - 2*h*m - 4*m**3 + 4*m + 2)/(2*m**4*(m + 1)**2)"
+  },
+  "source_control_json_byte_match": true,
+  "scope": "Finite deterministic controls plus algebra; no external witness, world validation, or closure authority."
+}

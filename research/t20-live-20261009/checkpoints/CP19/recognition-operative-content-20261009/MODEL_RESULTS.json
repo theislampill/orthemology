@@ -1,0 +1,1894 @@
+{
+  "scope": "Coherence of specified source policy and recipient response; no epistemic status assigned",
+  "worlds": 64,
+  "fixed_propositions": 6,
+  "true_components_per_report": 1,
+  "false_components_per_report": 5,
+  "whole_conjunction_true_count": 0,
+  "false_target_worlds": 32,
+  "E_present_in_false_target_worlds": 0,
+  "true_target_worlds": 32,
+  "E_present_in_true_target_worlds": 32,
+  "local_channel_globally_sensitive": "E iff P0 throughout stipulated 64-world domain",
+  "whole_source_fully_truthful": false,
+  "actual_world": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "actual_message": [
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "complete_actual_message_matches_in_false_target_worlds": 0,
+  "recipient_knows_reliability": "Not modelled or assumed",
+  "recipient_knows_P0": "Not modelled or concluded",
+  "counterfactual_qualification": "Within this stipulated domain any selection of false-P0 worlds lacks E; actual modal domain not established",
+  "necessary_target_false_world_count": 0,
+  "necessary_target_transport": "FAIL: no false-target contrast. Constant assent passes the vacuous screen as readily as a competent route.",
+  "rows": [
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": false,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    },
+    {
+      "valuation": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "asserted_polarities": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "recipient_polarities": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "correct_components": 1,
+      "asserts_P0": true,
+      "whole_report_true": false
+    }
+  ]
+}

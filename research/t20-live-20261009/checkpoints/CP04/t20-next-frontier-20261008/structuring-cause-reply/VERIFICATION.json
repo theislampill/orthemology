@@ -1,0 +1,26 @@
+{
+  "checked_utc": "2026-10-08T11:15:29.162176+00:00",
+  "model_status": "PASS",
+  "source_summary_word_counts": {
+    "Dretske 1993: available scope only": 36,
+    "Dretske 2004: later primary argument": 134,
+    "Reppert 1998: targeted comparison": 94,
+    "Baker 1991: a specific objection": 100,
+    "Dretske 1991: the actual response": 89
+  },
+  "predecessor_manifest_files_checked": 19,
+  "predecessor_mismatches": [],
+  "predecessor_manifest_hash_pass": true,
+  "source_bodies_delivered": false,
+  "protected_repo_changes": false,
+  "final_integration": false,
+  "active_research_seconds_prospectively_bounded": 622.171,
+  "earlier_research_time_not_credited": true,
+  "waiting_and_packaging_excluded": true,
+  "duration_interpretation": "Prospectively bounded active wall-clock interval, including analysis/synthesis and model work, not CPU time or human-equivalent effort. No overlap with source locator/reviewer is added.",
+  "fresh_model_output_matches_retained": true,
+  "1991_reply_access_recovered": true,
+  "1993_target_full_text_unavailable": true,
+  "final_independent_review": "No remaining substantive objection within declared scope; post-1991-reply versions bound in REVIEW_RECEIPT.md",
+  "six_hour_or_human_effort_certification": false
+}

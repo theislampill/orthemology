@@ -1,0 +1,96 @@
+{
+  "reviewed_utc": "2026-10-08T10:55:47.317923+00:00",
+  "verdict": "No unresolved material defect at the declared bounded ceiling; no owner closure or worldview result.",
+  "reviewed_manifest": "../reason-causation-bridge/MANIFEST.json",
+  "reviewed_manifest_sha256": "504ef228406a1e9d9e38979df9dfa58f0f3fab4a7551ed944177a2a3e5d29794",
+  "payload_files_verified_before_and_after": 19,
+  "predecessor_input_bindings_verified": 13,
+  "resolved_before_freeze": {
+    "finding": "Token identity/dependent realization does not by itself settle property-level causal exclusion.",
+    "final_anchor": "EXCLUSION_TRANSPORT.md:25"
+  },
+  "review_outputs": [
+    {
+      "path": "REVIEW.md",
+      "bytes": 9320,
+      "sha256": "c514c520af290abb063e10b9bf284175ec0d06de3645c5e237aa3d1de9212078"
+    },
+    {
+      "path": "independent_checks.py",
+      "bytes": 5419,
+      "sha256": "9b95f386ba26051b6f9071b0cc6493c97d8cd782b0428d3855122246b1e5c3d4"
+    },
+    {
+      "path": "INDEPENDENT_CHECKS.json",
+      "bytes": 1157,
+      "sha256": "dfb076819b2fa770db6d35193fc4640238c259cfd20f0afe0b58242621663dab"
+    }
+  ],
+  "primary_source_returns": [
+    {
+      "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf",
+      "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+      "scope": "Targeted visual return to pages249,251,252,255,256,257,262,268,269,270,271,272,273,274,275; retained renders, plus PDF extraction. No independent continuous-chapter reread.",
+      "source_body_delivered": false
+    },
+    {
+      "url": "https://www.theistic.net/papers/V.Reppert/ReppertAFR.pdf",
+      "sha256": "cdb4f5b6aa18bbe2ed146f98d6de7c206f2c4a294a5c99f44f06b40bdbd6a8d1",
+      "scope": "Displayed7\u201327 via extracted text; displayed23\u201324 visually checked; online primary PDF opened. Not the 2003 book.",
+      "source_body_delivered": false
+    },
+    {
+      "url": "https://archive.org/details/foundationsofbeln00balf/page/279/mode/1up",
+      "sha256": "f61bb6dc942e7aa1ee86ac1c70b61386fc8114055be95b6ae35aae60a9449f75",
+      "scope": "Printed278\u2013286 via fresh extraction; retained renders279,282,285 visually checked. 1906 printing, not cited1918 printing.",
+      "source_body_delivered": false
+    },
+    {
+      "url": "https://static1.1.sqspcdn.com/static/f/38692/383655/1263300179793/Naturalism%2BDefeated.pdf",
+      "sha256": "80e0a0cb37c015ae1bae6e8d0ad1cec5500dc82080ecdd4973c1237e31599a80",
+      "scope": "Selected causal alternatives and reliability/inscrutability argument; PDF19\u201321 continuous extracted text. Mirror provenance limitation retained; not complete1994 manuscript or 2011 book.",
+      "source_body_delivered": false
+    }
+  ],
+  "electronic_primary_passages": [
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/sources/majmu20-item2031.txt",
+      "sha256": "3e1e9d7cf90050e9bea91b2653a91dd656e1fa446cc0c0428430b15ded38932b",
+      "scope": "L001\u2013018"
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+      "scope": "L001\u2013010"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "sha256": "b05ec2cd32b0b7333e310685fb7de2647f2464a562ae7457ca6d586d86ef48a1",
+      "scope": "L295\u2013301 and L305\u2013318; electronic layer, no new scan collation"
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "sha256": "dd1d29c872934e935d57e49079a7053449dcfd8337abe88452f6c94ca3a9b9d1",
+      "scope": "L001\u2013011; no reliance on quarantined L002 or suspect L009 opening"
+    }
+  ],
+  "verification": {
+    "independent_checker_exit": 0,
+    "conditional_cases": 2048,
+    "conditional_failures": 0,
+    "accepted_true_input_cases": 32,
+    "drop_match_counterexamples": 64,
+    "drop_first_counterexamples": 32,
+    "author_run_reproduces_json": true,
+    "fresh_lean_kernel_replay": false,
+    "full_dependency_rebuild": false
+  },
+  "limits": [
+    "No physical hardware closure or human-cognition experiment.",
+    "No full-book or independent full-chapter reading credit.",
+    "No cited1918/2003/2011 edition-page substitution.",
+    "No complete contemporary mental-causation or empirical neuroscience audit.",
+    "No author/predecessor mutation, final integration, or owner acceptance.",
+    "No measured research-duration certification."
+  ]
+}

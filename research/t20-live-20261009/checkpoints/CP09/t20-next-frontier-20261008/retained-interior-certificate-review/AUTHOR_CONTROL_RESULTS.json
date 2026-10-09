@@ -1,0 +1,96 @@
+{
+  "classification": "Deterministic exact and numerical controls; no empirical sampling",
+  "assertions": 3675,
+  "grid_results": [
+    {
+      "m": 1,
+      "one_route_signatures": 2,
+      "threshold_points_checked": 25,
+      "certificate_probability_m_uniform_routes": "1/4"
+    },
+    {
+      "m": 2,
+      "one_route_signatures": 4,
+      "threshold_points_checked": 49,
+      "certificate_probability_m_uniform_routes": "2/81"
+    },
+    {
+      "m": 3,
+      "one_route_signatures": 7,
+      "threshold_points_checked": 81,
+      "certificate_probability_m_uniform_routes": "3/2048"
+    },
+    {
+      "m": 4,
+      "one_route_signatures": 11,
+      "threshold_points_checked": 121,
+      "certificate_probability_m_uniform_routes": "24/390625"
+    },
+    {
+      "m": 5,
+      "one_route_signatures": 16,
+      "threshold_points_checked": 169,
+      "certificate_probability_m_uniform_routes": "5/2519424"
+    },
+    {
+      "m": 6,
+      "one_route_signatures": 22,
+      "threshold_points_checked": 225,
+      "certificate_probability_m_uniform_routes": "720/13841287201"
+    }
+  ],
+  "heterogeneous_permanent": "6561/117597568",
+  "n1_probability_exact": "10/3 - 8*sqrt(14)/9",
+  "n1_probability_decimal": "0.007415656200940990592223349051956176216871",
+  "joe_regular_staircase": [
+    {
+      "n": 1,
+      "m": 2,
+      "log_probability": -4.9041618108896134,
+      "log_universal_upper_bound": -0.6931471805599453
+    },
+    {
+      "n": 2,
+      "m": 3,
+      "log_probability": -7.523832346671584,
+      "log_universal_upper_bound": -1.5040773967762742
+    },
+    {
+      "n": 3,
+      "m": 4,
+      "log_probability": -10.603473282738198,
+      "log_universal_upper_bound": -2.367123614131617
+    },
+    {
+      "n": 5,
+      "m": 6,
+      "log_probability": -17.585890627214706,
+      "log_universal_upper_bound": -4.171305603358229
+    },
+    {
+      "n": 10,
+      "m": 11,
+      "log_probability": -37.891433341487726,
+      "log_universal_upper_bound": -8.87454015490819
+    },
+    {
+      "n": 20,
+      "m": 21,
+      "log_probability": -85.11451457444062,
+      "log_universal_upper_bound": -18.554832293714973
+    },
+    {
+      "n": 50,
+      "m": 51,
+      "log_probability": -251.2500431324772,
+      "log_universal_upper_bound": -48.11351468444326
+    },
+    {
+      "n": 100,
+      "m": 101,
+      "log_probability": -566.5090108038977,
+      "log_universal_upper_bound": -97.77267612856245
+    }
+  ],
+  "all_passed": true
+}

@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-09T08:29:41.681889+00:00",
+  "inherited_inputs": [
+    {
+      "bytes": 6211,
+      "path": "recovery-t20/addendum/AMERI_SCREEN.md",
+      "sha256": "25bf973f45b71ad1d4f5e4234faa4997d420078acabfba2e15d2d842657c2841"
+    },
+    {
+      "bytes": 14485,
+      "path": "intrinsic-necessity-source-return/REPORT.md",
+      "sha256": "02d722446917dbd56450043e135f9dcbf489d8bbc9d2874443c425435a97f7a8"
+    },
+    {
+      "bytes": 13589,
+      "path": "intrinsic-necessity-source-return/PRIMARY_DEPENDENCE_RESPONSE.md",
+      "sha256": "0be18bf6e1f4c4ea5372c3063083f31d91efa14646cb3e88782abcc6387cc7ef"
+    },
+    {
+      "bytes": 2859,
+      "path": "intrinsic-necessity-source-return/PRIMARY_CITATION_CHECK.md",
+      "sha256": "b2a32604c623324db39e97f153ea9ff8c557cfa29fae289056110deb8298f305"
+    },
+    {
+      "bytes": 4517,
+      "path": "intrinsic-necessity-source-return/READING_LEDGER.json",
+      "sha256": "9d17ed92dbbaf3c575b9d6bf2f501fbcafc96b278d08b7767b1e8841be5df55c"
+    },
+    {
+      "bytes": 20774,
+      "path": "direct-anti-brute-return/REPORT.md",
+      "sha256": "3ae4ab80a77bb81d68275e5c58abf4bef729c4727b45f7da2796f71b61b627b5"
+    },
+    {
+      "bytes": 15569,
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "sha256": "0fb2904650f9063c5e8de6762c4fbfc968d7f7a41de3904602a061e07346d10e"
+    },
+    {
+      "bytes": 20021,
+      "path": "particular-agency-bridge-20261009/REPORT.md",
+      "sha256": "01cf59219b9d36ef5a734a934e07246d0d39dad4f8c78fc26a1f16168b03b924"
+    },
+    {
+      "bytes": 30668,
+      "path": "metaphysical-semantics-return/SOURCE_FAITHFUL_SEMANTIC_AUDIT.md",
+      "sha256": "66354aa2e9d4edc8b054f403df1b4bbc1e2870c2554372b0c6264bc280d98330"
+    },
+    {
+      "bytes": 24165,
+      "path": "epistemic-psr-warrant/RESULT.md",
+      "sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59"
+    },
+    {
+      "bytes": 35568,
+      "path": "productive-totality-source-return/REPORT.md",
+      "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393"
+    },
+    {
+      "bytes": 6940,
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    }
+  ],
+  "local_source_checks": [
+    {
+      "bytes": 988498,
+      "private_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "73aa990afec39c35c2d4c511f8924e9dfacf1724ac1f937117c68be0c8176ae4"
+    },
+    {
+      "bytes": 245899,
+      "private_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "303cefdc9576236c495e6105c3b68202948554feb65f914affc5980ae15eeebc"
+    }
+  ],
+  "primary_source": {
+    "author": "Sami Ameri",
+    "bytes": 2418081,
+    "catalogue": "https://almobadarah.com/publications/book-34",
+    "edition": "Rawasikh first1445/2023",
+    "pdf_pages": 276,
+    "pdf_url": "https://almobadarah.com/uploads/books/93cf86d674df49e95cef37e3.pdf",
+    "private_raw_source_excluded": true,
+    "sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+    "title": "وقفات مع شبهة... فمن خلق الله؟"
+  }
+}

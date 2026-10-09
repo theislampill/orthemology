@@ -1,0 +1,234 @@
+{
+  "verified_utc": "2026-10-09T00:03:02.984756+00:00",
+  "verdict": "Accepted at stated bounded scope; no blocking correction required",
+  "accepted_result_sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544",
+  "author_result_matches": true,
+  "frozen_reviewed_result_matches": true,
+  "all_input_declaration_checks_pass": true,
+  "checks": [
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/MANIFEST.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-09.png",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/bh-page-10.png",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/REVIEW_STATUS.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty-review/REVIEW.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "INPUT_BINDINGS.json",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "MANIFEST.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "MANIFEST.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "MANIFEST.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "MANIFEST.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "MANIFEST.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/baillie-hagen-2008.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/amini-2009.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.pdf",
+      "sha256_matches": true,
+      "bytes_match": true
+    },
+    {
+      "declaration": "PROVENANCE.json",
+      "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+      "sha256_matches": true,
+      "bytes_match": true
+    }
+  ],
+  "formal_execution": false,
+  "philosophical_model_tests": false,
+  "metaphysical_certification": false,
+  "historical_duration_certification": false,
+  "repository_integration": false,
+  "programme_closure": false
+}

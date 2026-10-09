@@ -1,0 +1,385 @@
+{
+  "schema": "t20-result-evidence-delta-v1",
+  "checkpoint": 23,
+  "predecessor": 22,
+  "freeze_utc": "2026-10-09T12:13:29.781300+00:00",
+  "status": "INTERMEDIATE_T20_ACTIVE",
+  "operation": "Preservation only; no new research-time credit, integration, adoption or closure.",
+  "result_status_attribution": "Result/evidence statuses are those of the completed source records. Packaging adds byte/inventory verification only, not a new philosophical or mathematical adjudication.",
+  "supplied_companion_identity_record": "SUPPLIED_COMPANION.json",
+  "avicenna_status": "STOPPED_AT_OWNER_BOUNDARY; retain finished results, do not reopen comparison.",
+  "components": [
+    {
+      "directory": "intrinsic-normative-reasons-20261009",
+      "result": "Intrinsic moral features, due right and fitting response are substantive rather than punishment-only; obligation does not require actual desire to comply. No automatic God-exclusivity conclusion for every categorical reason.",
+      "result_status": "COMPLETED_BOUNDED_PRIMARY_SOURCE_APPRAISAL",
+      "fresh_since_checkpoint22": "Targeted indifferent-agent comparison; Darʾ 8:490–494 and Aṣbahāniyya speaker/print controls repair textual issues.",
+      "inherited_not_recredited": "Rational moral appraisal, intrinsic/command-dependent value, due-right rationale and motivation/obligation distinction already retained.",
+      "source_or_code_basis": "Majmūʿ 8:428–436 electronic unit; direct Darʾ pages; Jāmiʿ VI 186–193 and 234–252; Minhāj 3:104–106; Aṣbahāniyya 444–450 at exact recorded reading boundaries.",
+      "recorded_verification_scope": "SOURCE_AND_READING_PROVENANCE.json and PRINT_CONTROLS.md; no full-corpus, metaphysical or theorem certification.",
+      "unresolved_residuals": [
+        "Warrant and ultimate ground of the disputed due relation and ideal correction remain substantive.",
+        "No independent exclusion of Smith’s strongest naturalist categorical-reasons account; Railton addresses the weaker appraisal target."
+      ],
+      "entrypoints": [
+        {
+          "path": "intrinsic-normative-reasons-20261009/REPORT.md",
+          "sha256": "2e934a0cc560fa19fc924727f2c982b74e72112b7c54b758fd3cc6c6c9a69946"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/PRINT_CONTROLS.md",
+          "sha256": "2c235902e93d35d9228a8073d714ec9df2bd3b6d602ee6ff0dbfb53ba92e46ef"
+        },
+        {
+          "path": "intrinsic-normative-reasons-20261009/SOURCE_AND_READING_PROVENANCE.json",
+          "sha256": "773d274c336207eed2490adeb99fce6b33174f94cfceefbc7ab068c151972151"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "intellectual-production-rival-20261009",
+      "result": "Avicenna ascribes intellectual will, knowing acceptance and providence; the rival is not a simply will-less original. Identity, final-causal and intrinsic-succession restrictions remain substantive.",
+      "result_status": "COMPLETED_REPORT_COMPARISON_STOPPED_AT_OWNER_BOUNDARY",
+      "fresh_since_checkpoint22": "Bounded primary-source identity correction and purpose-premise audit; completed result preserved only.",
+      "inherited_not_recredited": "Affirmative practical-perfection appraisal retained; historical articulation does not create evidential parity.",
+      "source_or_code_basis": "Avicenna Shifāʾ Ilāhiyyāt critical text and Najāt; exact chapter/print limits in READING_RECORD.json and SOURCE_CONTROLS.md. Scan reprint imprint remains unverified.",
+      "recorded_verification_scope": "ACQUISITION.json, source controls and VERIFICATION.json record source/evidence checks; no possibility witness or formal countermodel.",
+      "unresolved_residuals": [
+        "No rival metaphysical possibility, truth, equal credibility or defeat of the affirmative appraisal established.",
+        "No reopening of Avicenna comparison is authorized or recommended by this checkpoint."
+      ],
+      "entrypoints": [
+        {
+          "path": "intellectual-production-rival-20261009/REPORT.md",
+          "sha256": "cf5883ae09292e40883fffe982cb2be277ae4c5bde889a5179c93ee935855c3c"
+        },
+        {
+          "path": "intellectual-production-rival-20261009/SOURCE_CONTROLS.md",
+          "sha256": "8b82006326c92c2d4de1747aff442ddd15a80a2b4e9c132937f073eddcd5c88f"
+        },
+        {
+          "path": "intellectual-production-rival-20261009/READING_RECORD.json",
+          "sha256": "c22b77a0b80ddfbd8372a29697dece40cc71c9fe319e91d577960cc2e6443ce3"
+        },
+        {
+          "path": "intellectual-production-rival-20261009/VERIFICATION.json",
+          "sha256": "4ebb55a8925f887bc67bf85d3be8a2e4716dab4f4a0e5292e58b53fa9869336b"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "original-cognitive-efficacy-20261009",
+      "result": "Direct divine-attribute print control supports life/cognition-to-willing without identity. Bearer-level willing remains distinct from particular act-level practical determination; earned affirmative practical-perfection and temporal-wisdom replies retained.",
+      "result_status": "COMPLETED_BOUNDED_PREMISE_AUDIT_WITH_STOP_BOUNDARY_UPDATE",
+      "fresh_since_checkpoint22": "Fresh Majmūʿ divine-attribute print locus and target-specific Ṣafadiyya audit; final boundary update incorporates completed rival and companion findings.",
+      "inherited_not_recredited": "General life–will connection, operative cognition, pure-perfection appraisal and temporal-perfection reply already present.",
+      "source_or_code_basis": "Majmūʿ 18:310–312, newly acquired Jazzār/Bāz scan PDF176–177; retained Ṣafadiyya S003 L357–390, Darʾ, Bayān and Shifāʾ exact selections.",
+      "recorded_verification_scope": "21 input bindings recorded unchanged; print/evidence checks only.",
+      "unresolved_residuals": [
+        "Bearer willingness alone does not certify every particular productive act as practically determined.",
+        "Conceptual distinction neither proves separability nor licenses identity.",
+        "Earlier proposed comparative next step is superseded by the recorded stop."
+      ],
+      "entrypoints": [
+        {
+          "path": "original-cognitive-efficacy-20261009/REPORT.md",
+          "sha256": "72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc"
+        },
+        {
+          "path": "original-cognitive-efficacy-20261009/READING_RECORD.json",
+          "sha256": "26baef91e9ba37003c87c4aea5d4513098eb0deb2b31e3cb2594af7bcf5d4bd5"
+        },
+        {
+          "path": "original-cognitive-efficacy-20261009/INPUT_BINDINGS.json",
+          "sha256": "9c7e0448c2c8de8e9fc9cd43d832de4a2f5f0dd3a46c20341ebe40aceeb1cbd0"
+        },
+        {
+          "path": "original-cognitive-efficacy-20261009/VERIFICATION.json",
+          "sha256": "89fae2b6deef6523301d8081ebe42f6d99c2f0767469b07ef2cfabcae16be571"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "affirmative-intrinsic-necessity-20261009",
+      "result": "Affirms the rational warrant of the same actual original’s intrinsic necessity through complete existential self-adequacy. Bearer-presupposing exercise and conditional instantiation fail to cover the target; the modal bridge is openly foundational.",
+      "result_status": "COMPLETED_AFFIRMATIVE_APPRAISAL_INDEPENDENT_REVIEW_ACCEPTED_AT_SCOPE",
+      "fresh_since_checkpoint22": "Explicit coverage/bearer-presupposition argument and developed affirmative appraisal with final review.",
+      "inherited_not_recredited": "Target distinctions and positive intrinsic route already retained; only printed Iṣfahāniyya35 freshly visually reinspected alongside retained electronic lines181–187.",
+      "source_or_code_basis": "14 bound source files; current report, original reviewed draft, independent review and input integrity record.",
+      "recorded_verification_scope": "Final report/review hash binding and unchanged inputs; no new formal theorem or execution.",
+      "unresolved_residuals": [
+        "Exercise discriminator strengthens but does not independently deduce the modal bridge.",
+        "No exhaustive exclusion of every nonproductive explanation; complete intrinsic content need not be exhaustively describable.",
+        "No necessity of every effect or replacement of the fixed bearer by another original."
+      ],
+      "entrypoints": [
+        {
+          "path": "affirmative-intrinsic-necessity-20261009/RESULT.md",
+          "sha256": "5ae0186b9a2aa6554bf80b2ba8637f6ad4a74910d0d9d4577020eac006e67818"
+        },
+        {
+          "path": "affirmative-intrinsic-necessity-20261009/REPORT.md",
+          "sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a"
+        },
+        {
+          "path": "affirmative-intrinsic-necessity-20261009/REVIEW.md",
+          "sha256": "52726c26bd9fd4fb160a4c416b9c129a939ff427c9577d15de7e724c763e982e"
+        },
+        {
+          "path": "affirmative-intrinsic-necessity-20261009/VERIFICATION.json",
+          "sha256": "effcc633755c407a56fb7a70275b10454b4a9e5960c5ada8a73def0068e0a065"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "affirmative-original-exclusivity-20261009",
+      "result": "Affirms defeasible warrant for target-local noncoincidence of two coequal whole-original productive manifestations. Actual-state differentiated productive work is the substantive premise; mere intrinsic act nonidentity is insufficient.",
+      "result_status": "COMPLETED_AFFIRMATIVE_LOCAL_CAUSAL_APPRAISAL",
+      "fresh_since_checkpoint22": "Minimal local actual-state reconstruction and explicit affirmative warrant appraisal; full disjoint-token/quantitative/recombination machinery is unnecessary for the narrower inference.",
+      "inherited_not_recredited": "Positive common-original appraisal and the Shifāʾ different-relations response already retained.",
+      "source_or_code_basis": "Jāmiʿ VI95, Majmūʿ20:175–181, Minhāj2:180–183, retained Shifāʾ e143–147/e150; all source artifacts inherited or extracted from inherited objects.",
+      "recorded_verification_scope": "Exact contiguous-substring controls and output hashes in VERIFY.json; failed short web opens retained; no mathematical replay.",
+      "unresolved_residuals": [
+        "No unrestricted deduction from thin nonreceipt or occurrence-entailment.",
+        "No independent warrant for every universal application of local noncoincidence.",
+        "An original-level defeater needs supported whole productive adequacy in the same numerical effect and respect."
+      ],
+      "entrypoints": [
+        {
+          "path": "affirmative-original-exclusivity-20261009/REPORT.md",
+          "sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565"
+        },
+        {
+          "path": "affirmative-original-exclusivity-20261009/SOURCE_RECORD.md",
+          "sha256": "395f8a4ed285d55568be4c273562a0b77aa7890c36c49aa977c858c0dcecb5c3"
+        },
+        {
+          "path": "affirmative-original-exclusivity-20261009/VERIFY.json",
+          "sha256": "659aae2e191849d2f4fc45a65da4a347df6597b110dc8f1a9de5845eb361291b"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "companion-formal-review-20261009",
+      "result": "Companion D1–D10 arguments survive review at their predicate/finite-model scopes. All56 Python tests pass with canonical-result byte equality. Same-state compatibility control separates informational determination from productive adequacy.",
+      "result_status": "COMPLETED_INDEPENDENT_MATHEMATICAL_REPLAY_REVIEW",
+      "fresh_since_checkpoint22": "56-test portable replay; independent D2/D4/D6/D9, XOR refinement and conditional-padding controls.",
+      "inherited_not_recredited": "Companion’s seven inherited Lean identities remain historical only; completed source research is not restarted.",
+      "source_or_code_basis": "Exact supplied ZIP c16bb8a75b84e4f79119d49635190e51ba1e862ffe207f137f0201cae542ae19; all seven companion Python source files inspected before recorded execution; independent_controls.py.",
+      "recorded_verification_scope": "Recorded Python3.12.14 replay, all39 extracted files and input ZIP unchanged; no Lean compiler invoked.",
+      "unresolved_residuals": [
+        "BridgeDiagnostics.lean remains source-only, including D7’s full-Cartesian special case.",
+        "No source authenticity, philosophical premise adequacy, original realization or general PSR refutation certified."
+      ],
+      "entrypoints": [
+        {
+          "path": "companion-formal-review-20261009/FORMAL_REVIEW.md",
+          "sha256": "ff5617b1af8e0e42ae21896e3fea226ef2c0344fa73bf1146696f22314895979"
+        },
+        {
+          "path": "companion-formal-review-20261009/INDEPENDENT_CONTROLS.json",
+          "sha256": "06ce1cd0671f6313b4c8a9d12dbe1fb9a413148d40bcf9a78d33c5a482eb1dcc"
+        },
+        {
+          "path": "companion-formal-review-20261009/FINAL_INPUT_INTEGRITY.json",
+          "sha256": "9ea3a6a90608116417d74820c0bc58458c0d87f37fdae44c1f422700dda402f2"
+        },
+        {
+          "path": "companion-formal-review-20261009/portable-replay/REPLAY_RECEIPT.json",
+          "sha256": "858f3bc3ef86de3d698d129490674379cede620ace3513f0878d45250aedae13"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "companion-source-delta-review-20261009",
+      "result": "Positive foundational appraisal retained; companion adds exact Darʾ8:116–117 quotation binding, Plantinga D-to-D* locus and probability-bridge precision rather than newly establishing or defeating intrinsic necessity or original exclusivity.",
+      "result_status": "COMPLETED_BOUNDED_SOURCE_CURRENTNESS_CROSSWALK",
+      "fresh_since_checkpoint22": "Exact retained-premise mapping and currentness corrections; only retained Koons–Pruss §6 vicinity directly reread in this assessment.",
+      "inherited_not_recredited": "Positive anti-brute, efficacy, bearer and temporal-perfection arguments already secured; Dretske reply fully read in later-edition witness.",
+      "source_or_code_basis": "CROSSWALK.json plus reports/input hashes; primary reading boundaries preserved rather than promoted to fresh scan authentication.",
+      "recorded_verification_scope": "Bounded file/evidence verification only; no new execution or broad primary campaign.",
+      "unresolved_residuals": [
+        "Q02–Q04/Q11 exact quotation/page gaps remain.",
+        "M04 final-version and Dretske original-2005-edition collation remain distinct access gaps.",
+        "Probability assumptions require separate ontic interpretation; no necessary confidence change."
+      ],
+      "entrypoints": [
+        {
+          "path": "companion-source-delta-review-20261009/REPORT.md",
+          "sha256": "3f6a4868d5c906bc69b11a67651c59d10c1a16b4ed8d9abbfafcb99d518f52a9"
+        },
+        {
+          "path": "companion-source-delta-review-20261009/CROSSWALK.json",
+          "sha256": "29d83f6a02f36f1559e43351d1b63902e54e60d1fb9cf348c549bb1cd115ae1b"
+        },
+        {
+          "path": "companion-source-delta-review-20261009/VERIFICATION.json",
+          "sha256": "805664e97142923a601bf8adcfe191b67eed832eb1542cd6061f8fb9c6249e66"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "warranted-discrimination-research-20261009",
+      "result": "Two restricted constructive results: canonical updateable residual support/check-cost frontier; finite permitted-test completion iff every feasible full transcript enables scoped proof, with exact deterministic worst-case Bellman cost.",
+      "result_status": "COMPLETED_WRITTEN_PROOFS_FINITE_CONTROLS_AND_INDEPENDENT_REVIEW",
+      "fresh_since_checkpoint22": "Proof-sensitive continuation/cost construction relative to retained packet; exact controls and independent review completed.",
+      "inherited_not_recredited": "Typed representations, record/substantive validity, continuation sufficiency and operative basing distinctions; established provenance/residual/decision-tree ancestry.",
+      "source_or_code_basis": "RESULT.md, verify.py, SOURCES.json; separately held owner attachments and inherited manuscript paths remain input bindings, not distributed source bodies.",
+      "recorded_verification_scope": "256 frontier catalogues,4096 cost evaluations,4096 residual updates,1024 full-transcript cases and other recorded finite controls; parent separate replay also recorded. The later kernel component covers only Theorem1.",
+      "unresolved_residuals": [
+        "Fixed finite admitted derivation catalogue, persistent evidence, immutable scope/commitments and finite order-independent tests.",
+        "No automatic inference from unsupported to false; authentication, rule adequacy and human basing remain inputs.",
+        "Bellman/general inquiry theorem not kernel-certified."
+      ],
+      "entrypoints": [
+        {
+          "path": "warranted-discrimination-research-20261009/READ_FIRST.md",
+          "sha256": "f4f6eb63369249865aaaedea4ca4251edd593e1526bb5dd6efccefcb6e9c41b3"
+        },
+        {
+          "path": "warranted-discrimination-research-20261009/RESULT.md",
+          "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+        },
+        {
+          "path": "warranted-discrimination-research-20261009/CHECK_RESULTS.json",
+          "sha256": "429fc2e93da069d5ac61b7527860f74ecb83e73e9d780e6caf85a51b9e60a602"
+        },
+        {
+          "path": "warranted-discrimination-research-20261009/review/REVIEW.md",
+          "sha256": "35c595f3626c7c86bddd4d0941708a938085ce96a1e67da5adf2bde7804b1149"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "warranted-discrimination-kernel-20261009",
+      "result": "Theorem1’s canonical inverse, cost recovery, necessity, residual update and inventory/per-verdict wrappers are kernel checked at the finite support/cost-pair level.",
+      "result_status": "COMPLETED_FRESH_RESEARCH_KERNEL_RESULT_AND_INDEPENDENT_REPLAY",
+      "fresh_since_checkpoint22": "Lean4.19.0 proof of all four Theorem1 clauses; positive controls and semantically rejected false strengthenings; independent scope checks.",
+      "inherited_not_recredited": "Existing Lean/mathlib compiled dependency installation reused read-only; manuscript theorem and model assumptions inherited.",
+      "source_or_code_basis": "CertificateFrontier.lean and Controls.lean accepted surface; three mutation sources; separate frozen-source review, logs and BINDING.json.",
+      "recorded_verification_scope": "13 main and4 control axiom sets printed: propext, Classical.choice, Quot.sound; no sorryAx. Three false claims rejected by decide proving false. Independent Nat/empty catalogue/empty support/nested-top checks. Root separate replay logs retained.",
+      "unresolved_residuals": [
+        "No Bellman planner, derivation reconstruction, evidence authentication, semantic warrant or philosophical conclusion.",
+        "Lean/mathlib stack not rebuilt or independently audited; separate real-instance import probe unavailable.",
+        "Toolchain and .olean outputs omitted; unchanged replay scripts reference historical absolute environment."
+      ],
+      "entrypoints": [
+        {
+          "path": "warranted-discrimination-kernel-20261009/RESULT.md",
+          "sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026"
+        },
+        {
+          "path": "warranted-discrimination-kernel-20261009/CHECK_RESULTS.json",
+          "sha256": "8b9f27b9a7274f3c5cba2b95458694e48989a72aa2b899048148762ea52ca0d5"
+        },
+        {
+          "path": "warranted-discrimination-kernel-20261009/BINDING.json",
+          "sha256": "4641da2105a959860230f681a1813d935b36f05886197479f4b520de63175053"
+        },
+        {
+          "path": "warranted-discrimination-kernel-20261009/independent-review/REVIEW.md",
+          "sha256": "74a04182ae6bf9f64d7d8a41cdc09350df69baa96cebd3f42ccb7175eb6dc4a0"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "certificate-compilation-boundary-20261009",
+      "result": "Finite grounded substitutable rule systems with nonnegative costs compile complete terminal frontiers even with cycles: trees in at most n rounds; shared-node DAGs by finite whole-graph enumeration. Standalone intermediate DAG pair pruning is unsound.",
+      "result_status": "COMPLETED_WRITTEN_GENERAL_PROOFS_IMPLEMENTATION_AND_INDEPENDENT_REVIEW",
+      "fresh_since_checkpoint22": "Finite-catalogue interface, cycle-removal bounds, actual witnesses and tree/DAG cost distinction; 9-versus5 example and independent sharing controls.",
+      "inherited_not_recredited": "Prior finite frontier theorem/kernel result and established provenance/semiring-deduction ancestry retained.",
+      "source_or_code_basis": "compiler.py, verify.py, RESULT.md, review/replay.py and independent sanity.py; source/input bindings retained.",
+      "recorded_verification_scope": "12 tests pass;2517 finite grammars,10520 witnesses,250 seeded larger DAGs/unfoldings; separate41488-case reviewer DAG check including10240 redirections; root separate replay. General claims remain mathematical prose, not finite enumeration proofs.",
+      "unresolved_residuals": [
+        "Fully scoped judgement grounding must actually be finite and substitutable; nonnegative additive contract required.",
+        "Structural witness traversals do not authenticate evidence or establish external rule admission/soundness.",
+        "No HasE decision procedure, unrestricted completeness or new compiler Lean certificate."
+      ],
+      "entrypoints": [
+        {
+          "path": "certificate-compilation-boundary-20261009/READ_FIRST.md",
+          "sha256": "769e6052c53dadef27260445f546eb7a9a1be26677fb819302718ee55229e19d"
+        },
+        {
+          "path": "certificate-compilation-boundary-20261009/RESULT.md",
+          "sha256": "3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459"
+        },
+        {
+          "path": "certificate-compilation-boundary-20261009/CHECK_RESULTS.json",
+          "sha256": "b61b2037c1c51e740d62bfff9f1fbf163beeaf8cedf4a2a50d273c108e632193"
+        },
+        {
+          "path": "certificate-compilation-boundary-20261009/review/REVIEW.md",
+          "sha256": "8f349369091b60eabace15530fa9e6fd563942f608c2f4d9363b0a5d82570997"
+        },
+        {
+          "path": "certificate-compilation-boundary-20261009/review/SANITY_RESULTS.json",
+          "sha256": "99c3b0d71e34d8e0c14293d82af499cdacd77fffd2089070603167079aa45c8d"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    },
+    {
+      "directory": "affirmative-wise-determination-20261009",
+      "result": "Worked Majmūʿ test case connects foreknowledge, real means and an actual approving response: achieving the stated end removes the need for literal transfer to obtain that same response, explaining a particular later directive.",
+      "result_status": "COMPLETED_AFFIRMATIVE_APPLICATION_FINAL_REVISION_BOUND_REVIEW",
+      "fresh_since_checkpoint22": "Worked original-wise-execution application with end, actual response and later directive independently identified; final wording refinements and provenance binding resolved.",
+      "inherited_not_recredited": "Test taxonomy, foreknowledge, real causes, fitting times and temporal/perfection safeguards already retained; no new external source acquisition.",
+      "source_or_code_basis": "Retained Majmūʿ8:428–436 complete electronic unit and specified Shifāʾ/Darʾ/Miftāḥ selections; report/source ledger distinguishes source attribution from hadith authentication.",
+      "recorded_verification_scope": "Final report6ccf33e9..., resultcf67141f..., review020efda0... confirmed by parent before freeze; final review notes no blocking defect at originally directed created-sequence scope; original input hashes unchanged.",
+      "unresolved_residuals": [
+        "Literal transfer was never the intended endpoint; absence of one instrumental need does not forbid all later collection or yield a unique possible ending.",
+        "No separately individuated divine micro-volition, complete historical determination or independently authenticated historical event.",
+        "Earlier review draft hashes are historical; final report/review are distributed, earlier unavailable revisions are not silently substituted."
+      ],
+      "entrypoints": [
+        {
+          "path": "affirmative-wise-determination-20261009/RESULT.md",
+          "sha256": "cf67141f01bb8ff366b6937d0d5f7317a7d57e6941bc3f93f18db3ebdc717e6b"
+        },
+        {
+          "path": "affirmative-wise-determination-20261009/REPORT.md",
+          "sha256": "6ccf33e9cf9c5a53a4d2c6bfb6f2a71ff4e6b6b70aa3c6598a6e950c1c77ad1a"
+        },
+        {
+          "path": "affirmative-wise-determination-20261009/REVIEW.md",
+          "sha256": "020efda00f3f568d027c8f0b286ae7763b0168b247aafe58e0e64348046a44fd"
+        },
+        {
+          "path": "affirmative-wise-determination-20261009/CURRENTNESS.md",
+          "sha256": "2e7426dae54f81f3ce71435d6c161aa91d82fac189a368ff923220e6dbd97531"
+        },
+        {
+          "path": "affirmative-wise-determination-20261009/VERIFICATION.json",
+          "sha256": "fb1bf81a6146523bd8e51e3add4965d299eb3f6fe2e9eaea4968ca94f45b4153"
+        }
+      ],
+      "packaging_research_replay": false,
+      "review_attribution": "Internal AI review where recorded; no external specialist/human review claimed."
+    }
+  ],
+  "authorship": "AI-assisted research by dot within the owner’s programme; exact supplied companion retained as separately supplied.",
+  "review_attribution": "All sibling/reviewer reports are internal AI reviews. Independent means separate internal review, not external specialist or human review. No human-authored proof certification implied.",
+  "outside_freeze": [
+    "source-sensitive-proof-compilation-20261009 (active; neither inspected nor included by packaging)"
+  ]
+}

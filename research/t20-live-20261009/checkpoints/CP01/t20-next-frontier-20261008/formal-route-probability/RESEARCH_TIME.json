@@ -1,0 +1,14 @@
+{
+  "scope": "generative finite-route probability bridge and inverse composition",
+  "prospective_event_file": "RESEARCH_EVENTS.jsonl",
+  "active_research_seconds_certified": null,
+  "no_aggregate_duration_claim": true,
+  "excluded_from_credit": [
+    "dependency installation",
+    "waits",
+    "administration",
+    "recovery",
+    "packaging"
+  ],
+  "parallel_worker_intervals_not_summed": true
+}

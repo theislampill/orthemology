@@ -1,0 +1,21 @@
+{
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "module_count": 1798,
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "files": {
+    "formal-identification/toolchain/lean-4.19.0-linux/bin/lean": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "formal-identification/toolchain/lean-4.19.0-linux/bin/lake": "5111aee5c9434ab05d4265606475ef22e8bda69aaf3a0657b61a7eec6e550bed",
+    "formal-identification/mathlib/lake-manifest.json": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752",
+    "formal-identification/mathlib/lean-toolchain": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+    "retained-interior-certificate/RetainedInterior.lean": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+    "retained-interior-certificate/verify_kernel.sh": "fa3eb5e78bcbd956962ab55889868d74906bfd11305c99b201aa3a91a24585b7",
+    "retained-interior-certificate/ImportInventory.lean": "240941371ef58576258cd8b879ab2d6119157d95e3b0f11156d027585fea0620",
+    "formal-identification/toolchain/lean-4.19.0-linux/lib/lean/libleanshared.so": "2ab605c74c78f9ba4431a7b5305a4b28a9071d8a826f223eb14fe5530f78e14d",
+    "formal-identification/toolchain/lean-4.19.0-linux/lib/lean/libleanshared_1.so": "44bc5837306f8e24a5db0db56d56ca3114415bd65e3b107426d3c93e21d20098",
+    "formal-identification/toolchain/lean-4.19.0-linux/lib/lean/libInit_shared.so": "44bc5837306f8e24a5db0db56d56ca3114415bd65e3b107426d3c93e21d20098",
+    "formal-identification/toolchain/lean-4.19.0-linux/lib/lean/libLake_shared.so": "41d978bb36ca6e187a24688c92a047b9293c43b0562049e1d6407cc0b3d39208"
+  },
+  "imported_module_manifest_sha256": "73e04cfdb187330947b6c2cd27e0472471d1bc37d9be5461c42eb22d678144c4",
+  "scope": "Exact imported Lean module/source closure plus compiler/runtime and package manifest; no upstream rebuild, installation or bundle-wide formalization"
+}

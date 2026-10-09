@@ -1,0 +1,44 @@
+{
+  "recorded_utc": "2026-10-09T08:47:57.293081+00:00",
+  "scope": "Independent additive review; no source bodies copied or redistributed",
+  "sources": [
+    {
+      "id": "Standefer2020",
+      "path": "compound-ground-necessity-20261009/research-intermediates/standefer2020.pdf",
+      "url": "https://shawn-standefer.github.io/pdfs/actual.pdf",
+      "sha256": "5d2e941826285295341280153134e899763d5de4f5df3c8b303c359ff79879ce",
+      "read_scope": "Printed pp.270–271 theorem/matrix passage read via local extracted text; complete p.271 page image visually inspected, all table cells and lattice covers. Public author PDF opened online to verify provenance. No whole-paper credit.",
+      "body_for_delivery": false
+    },
+    {
+      "id": "BDF2018",
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.pdf",
+      "url": "https://ojs.wgtn.ac.nz/ajl/article/view/4066",
+      "sha256": "e94bbd19d899cb754d1d66e71a863bcac3dea5052d1b05992e699fd8ae78533c",
+      "read_scope": "Printed pp.176–177 complete text and page-image inspection. A1–A16, R1–R2 and Definition1.1 checked. Temporary page images outside deliverable. No whole-paper credit.",
+      "body_for_delivery": false
+    },
+    {
+      "id": "BA2010",
+      "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.pdf",
+      "url": "https://logos-and-episteme.acadiasi.ro/wp-content/uploads/2015/02/EPISTEMIC-CLOSURE-AND-SKEPTICISM.pdf",
+      "sha256": "253789f4e96fa040459a12bae173a2c28053ff64c9ae85e9355226377c538c08",
+      "read_scope": "Reviewer reread retained text lines61–76,217–232,350–368; pp.222 n.1,225 n.12,228 n.21. Source-scope worker independently read wider relevant closure/basing context; no new whole-article claim.",
+      "body_for_delivery": false
+    },
+    {
+      "id": "ABC2017",
+      "path": "necessary-truth-operative-basing-20261009/research-intermediates/abc2017-scielo.html",
+      "url": "https://www.scielo.br/j/man/a/JS5dxNB79fZvM9pJxRk3HzF/",
+      "sha256": "cb363ed4ae1526e5644f4c5291591b3120cbe3d6e2d7bd3f7a43fd4dfbe035c4",
+      "read_scope": "Reviewer reread derived local lines143–149,209–225,296–300. Source-scope worker independently read relevant operative-ground and closure context. No fresh whole-article claim.",
+      "body_for_delivery": false
+    }
+  ],
+  "delegated_check": {
+    "worker": "check_closure_source_scope",
+    "scope": "Read-only primary epistemic scope assessment; no file edits",
+    "outcome": "Bridge explicit; material interpretation not explicitly identified by authors; epistemic constraints not supplied by designation"
+  },
+  "input_changes_during_review": "Author claim wording corrected in checker/results to preserve the distinction between B ⊢R N and B →R N; report supplied. Final input hashes bind verdict; initial hashes retained."
+}

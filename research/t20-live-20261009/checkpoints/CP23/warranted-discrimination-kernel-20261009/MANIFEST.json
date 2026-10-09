@@ -1,0 +1,209 @@
+{
+  "artifacts": [
+    {
+      "path": "BINDING.json",
+      "bytes": 4685,
+      "sha256": "4641da2105a959860230f681a1813d935b36f05886197479f4b520de63175053"
+    },
+    {
+      "path": "CHECK_RESULTS.json",
+      "bytes": 714,
+      "sha256": "8b9f27b9a7274f3c5cba2b95458694e48989a72aa2b899048148762ea52ca0d5"
+    },
+    {
+      "path": "CertificateFrontier.lean",
+      "bytes": 12278,
+      "sha256": "5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0"
+    },
+    {
+      "path": "CertificateFrontier.olean",
+      "bytes": 403376,
+      "sha256": "26dbfb2ae8325d91fb8d3d18b64615e3fb1e5adb4d15428291ed0d2cb8281b52"
+    },
+    {
+      "path": "Controls.lean",
+      "bytes": 2410,
+      "sha256": "7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132"
+    },
+    {
+      "path": "Controls.olean",
+      "bytes": 102904,
+      "sha256": "1c664abe36d700eaa714af600853bc68bae6f031cb0a94d7f6c03f85dd33a260"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 977,
+      "sha256": "dfdb510786624b612c53aff9e9989583e7c1853acfe22b1ac4812fc2da1698cc"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 9859,
+      "sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026"
+    },
+    {
+      "path": "development/Probe.lean",
+      "bytes": 561,
+      "sha256": "ab00e4d5ca9f78c678abc7162c2cc03f9a5d6399494ff1946f5bdd8d8a488b63"
+    },
+    {
+      "path": "development/first-pass.log",
+      "bytes": 1749,
+      "sha256": "f9778940fce40e60765ea1ee3cd018530c4cd6c07c2aae554a2e7f599a07a7eb"
+    },
+    {
+      "path": "independent-review/CertificateFrontier.lean",
+      "bytes": 12278,
+      "sha256": "5e799995b95e37105dff8dfe10e5ba78dfe44034334353bcf66107069e8a67e0"
+    },
+    {
+      "path": "independent-review/CertificateFrontier.olean",
+      "bytes": 403376,
+      "sha256": "26dbfb2ae8325d91fb8d3d18b64615e3fb1e5adb4d15428291ed0d2cb8281b52"
+    },
+    {
+      "path": "independent-review/Controls.lean",
+      "bytes": 2410,
+      "sha256": "7d49f0df7d1b5eb633e6edebf17bc0a967eeff1718b9e1cc3fcab1513afb5132"
+    },
+    {
+      "path": "independent-review/Controls.olean",
+      "bytes": 102904,
+      "sha256": "1c664abe36d700eaa714af600853bc68bae6f031cb0a94d7f6c03f85dd33a260"
+    },
+    {
+      "path": "independent-review/INPUT_HASHES.txt",
+      "bytes": 609,
+      "sha256": "af1d4e4b0174f2e874ddba1fc867735636440239d135c79edb6d2b39ca368d36"
+    },
+    {
+      "path": "independent-review/REVIEW.md",
+      "bytes": 5915,
+      "sha256": "74a04182ae6bf9f64d7d8a41cdc09350df69baa96cebd3f42ccb7175eb6dc4a0"
+    },
+    {
+      "path": "independent-review/ScopeChecks.lean",
+      "bytes": 1345,
+      "sha256": "6218ff6fa7b6e5b304859c2f4ad3d512118f1a3c9b68ec7e446d6cc1cd2d78a6"
+    },
+    {
+      "path": "independent-review/ScopeChecks.olean",
+      "bytes": 29224,
+      "sha256": "396ea9ab111c903ae56366ba406cc74465d347a086ac75b790af5094375ef9bd"
+    },
+    {
+      "path": "independent-review/final-replay.log",
+      "bytes": 2065,
+      "sha256": "600bf2a82ac8727aee02c9101abffc44af5c4d44a743663163441f6fa5a21e35"
+    },
+    {
+      "path": "independent-review/kernel.log",
+      "bytes": 699,
+      "sha256": "1682235b8f15d5ed4b271addb089df93ce5f340271e62daa242c4bad8820fb1f"
+    },
+    {
+      "path": "independent-review/mutations/CostBlind.lean",
+      "bytes": 227,
+      "sha256": "c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776"
+    },
+    {
+      "path": "independent-review/mutations/CostBlind.log",
+      "bytes": 241,
+      "sha256": "f8add86a425c7dc06c211488490e42403ea359dd63248416f2c8d5f92042bc2d"
+    },
+    {
+      "path": "independent-review/mutations/CurrentCost.lean",
+      "bytes": 249,
+      "sha256": "876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d"
+    },
+    {
+      "path": "independent-review/mutations/CurrentCost.log",
+      "bytes": 261,
+      "sha256": "8ec8ed3d3a9cb31674b4f81284e3567ffc91f489578c826c1393371242ba1ead"
+    },
+    {
+      "path": "independent-review/mutations/InfinitePrice.lean",
+      "bytes": 293,
+      "sha256": "0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe"
+    },
+    {
+      "path": "independent-review/mutations/InfinitePrice.log",
+      "bytes": 225,
+      "sha256": "72621169db7c526ba503db19ad7b5466dbb4174934637a09ee2c689074966781"
+    },
+    {
+      "path": "independent-review/replay-review.sh",
+      "bytes": 680,
+      "sha256": "c0166e2b9b11219e26ccf257d0acefad73a45b973e729f2bc1b6b933fd0c1721"
+    },
+    {
+      "path": "independent-review/replay.sh",
+      "bytes": 973,
+      "sha256": "925769666b67cdccae6da51365e58bc4beaf81c7512f3d5673c7f157d3038593"
+    },
+    {
+      "path": "independent-review/scope-checks.log",
+      "bytes": 197,
+      "sha256": "0c9a17dabe56fc4b383ae7ae0095485f6a738a13f993b8626a80dcd5617b5cbd"
+    },
+    {
+      "path": "independent-review/scope-replay.log",
+      "bytes": 2052,
+      "sha256": "98763b3662e41addb4f29a40102de1ab173c29edf4824f95d3297db9c8796f5d"
+    },
+    {
+      "path": "inherited-environment.txt",
+      "bytes": 579,
+      "sha256": "3540c0e2bf48fbaf37efcd9489b757716cf5c950183c3d96faac6e4d0422e858"
+    },
+    {
+      "path": "kernel.log",
+      "bytes": 2065,
+      "sha256": "600bf2a82ac8727aee02c9101abffc44af5c4d44a743663163441f6fa5a21e35"
+    },
+    {
+      "path": "mutations/CostBlind.lean",
+      "bytes": 227,
+      "sha256": "c05bf6d3207aeeaa7dddc222092c73d44f73ecc5eab5c8d465485a9a540d5776"
+    },
+    {
+      "path": "mutations/CostBlind.log",
+      "bytes": 222,
+      "sha256": "6dde236d2fee6ecb3b2c691c3bc81c714d8b4ef40670a7112baffd80b45ece13"
+    },
+    {
+      "path": "mutations/CurrentCost.lean",
+      "bytes": 249,
+      "sha256": "876039d480a1415531f1f099679c5094327caf35c7933a36550e09692de1e83d"
+    },
+    {
+      "path": "mutations/CurrentCost.log",
+      "bytes": 242,
+      "sha256": "37dba51f7b3ba05f452170657db4a3b0606c4ea664304a2eddd2dccd84897fae"
+    },
+    {
+      "path": "mutations/InfinitePrice.lean",
+      "bytes": 293,
+      "sha256": "0b2d8b2584f48d343d753a373161e28f93c397982ce9ab4c098b8daf16db31fe"
+    },
+    {
+      "path": "mutations/InfinitePrice.log",
+      "bytes": 206,
+      "sha256": "924255140660244b53780b63cbc1347c5f0c7b7cfa6e80a7754f2b6dbb4940a3"
+    },
+    {
+      "path": "replay.sh",
+      "bytes": 973,
+      "sha256": "925769666b67cdccae6da51365e58bc4beaf81c7512f3d5673c7f157d3038593"
+    }
+  ],
+  "accepted_proof_surface": [
+    "CertificateFrontier.lean",
+    "Controls.lean"
+  ],
+  "intentionally_rejected_mutations": [
+    "mutations/CostBlind.lean",
+    "mutations/CurrentCost.lean",
+    "mutations/InfinitePrice.lean"
+  ],
+  "note": "Exploratory and independent-review probes are separate from the accepted proof surface."
+}

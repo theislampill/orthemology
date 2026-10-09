@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-10-08T07:43:25.799629+00:00",
+  "scope": "Independent scoped review; no integration, metaphysical validation, global novelty or active-duration certificate.",
+  "author_test_groups_passed": 11,
+  "independent_control_groups_passed": 4,
+  "cross_implementation_readouts": 60,
+  "mathematical_blockers": [],
+  "files": {
+    "INDEPENDENT_CRT_METRICS.json": "7797f43672ffbc64921c844ff711d3d99ffb8320b9508d560a47757be8c929cd",
+    "INDEPENDENT_CRT_REPLAY.log": "40144f61bed0d458348cd5d4b82fc95d9f50a9d1c4304eb690e90ac25013a726",
+    "REVIEW.md": "1e8851c4ee842e2e165a5e1ca57f479804ff58c72e7be5885c60df6cf35ece2c",
+    "crosscheck_frozen_constructor.py": "575194fbdf6a516beff9f66aad5001d360764c2bb7a6740156f2298b08a7941e",
+    "frozen/RESULT.md": "8369681f7be7db1306f8ffb96f210e2c31245ee3bd40f94b11d6a19ab5eb1df7",
+    "frozen/crt_calibration.py": "8aa9f0b05291efdd876e9e9c2e4f04eeb09959b7b3d96adb1d6a4ee149faecec",
+    "frozen/test_crt_calibration.py": "76cf268e728af85faea8ab56ae36525dba04ace25e24de08f596f5a78a61924c",
+    "independent_crt_controls.py": "85fca2b94b3c67e635a8176287287fbca053862661a24bcb255b411bb4ddffc3",
+    "results/AUTHOR_FROZEN_REPLAY.log": "7b65b293ac0e9489a7004ac29205c2f97650cf369ac821e79f352aa6a9f9e00f",
+    "results/AUTHOR_SOURCE_HASHES.txt": "d6afe4dfd3a0d3bc911954313be6056711e073bcef2f47eec814af5328334679",
+    "results/AUTHOR_SOURCE_VERIFICATION.log": "e1a9eb982c1aebe609c0f92920adf1c7d2cd0e132186cc66d13bc269c8aed15c",
+    "results/CROSSCHECK_METRICS.json": "065efc0deda5578fbe8efddfa70b96919b784fb61c39bb394d82a07fc33f5250",
+    "results/CROSSCHECK_REPLAY.log": "065efc0deda5578fbe8efddfa70b96919b784fb61c39bb394d82a07fc33f5250"
+  }
+}

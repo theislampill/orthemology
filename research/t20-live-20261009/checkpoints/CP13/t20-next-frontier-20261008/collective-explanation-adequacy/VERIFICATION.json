@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-08T23:31:27.937431+00:00",
+  "checks": {
+    "all_frozen_inputs_unchanged": true,
+    "each_pdf_page_received_once_in_first_pass": true,
+    "downloaded_pdf_hash_matches_ledger": true,
+    "pdf_extent_matches_ledger": true,
+    "reports_present": true
+  },
+  "input_preservation": {
+    "t20-next-frontier-20261008/modal-grounding-source/REPORT.md": true,
+    "t20-next-frontier-20261008/modal-grounding-source/MAPPING_TEST.md": true,
+    "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md": true,
+    "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean": true
+  },
+  "limits": [
+    "Structural file and provenance checks only; not a proof of metaphysical premise truth.",
+    "No executable mathematical test, new theorem, or corpus-exhaustion check performed.",
+    "No historical research-time credit claimed."
+  ]
+}

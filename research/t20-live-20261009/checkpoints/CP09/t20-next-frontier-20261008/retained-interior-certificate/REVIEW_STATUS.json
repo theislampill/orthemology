@@ -1,0 +1,12 @@
+{
+  "status": "PASS: separate written-mathematics and source-specific kernel review bound to final core identities",
+  "verified_utc": "2026-10-08T20:08:23.604066+00:00",
+  "review_path": "../retained-interior-certificate-review/REVIEW.md",
+  "review_sha256": "276ceb3b9c261ba2c416998dc528d5d611e3cb2d57c9b04329b4a1a6cd329df2",
+  "independent_binding_path": "../retained-interior-certificate-review/FINAL_ARTIFACT_BINDINGS.json",
+  "independent_binding_sha256": "553783f4cb9359a5bb2f274e1e1699a4086f85b7d8ba349eb2e109f14009e451",
+  "result_sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+  "kernel_source_sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+  "verified_final_core_artifacts": 12,
+  "authority": "Mathematical review only; no integration, physical validation, owner acceptance or T20 closure"
+}

@@ -1,0 +1,118 @@
+{
+  "recorded_utc": "2026-10-08T11:46:07.958770+00:00",
+  "scope": "Bindings for inherited sources. Reading their reports is not fresh primary reading or recertification of historical receipts.",
+  "inputs": [
+    {
+      "id": "starting_audit",
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/RESULT.md",
+      "sha256": "06e3cf7c178f801033d678dac3b6eb84297d74504ffd0d9811644abb7b536705",
+      "bytes": 10426,
+      "lines": 65,
+      "inspection": "Full report"
+    },
+    {
+      "id": "starting_bindings",
+      "path": "t20-next-frontier-20261008/action-genus-scope-audit/INPUT_BINDINGS.json",
+      "sha256": "e5f51852a89c891a1f5e5b0564839f9f48ae681af0880b30093ab3dc98674e5f",
+      "bytes": 9589,
+      "lines": 246,
+      "inspection": "Full JSON"
+    },
+    {
+      "id": "warrant_appraisal",
+      "path": "t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "lines": 144,
+      "inspection": "Full report"
+    },
+    {
+      "id": "activity_source_audit",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+      "sha256": "3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b",
+      "bytes": 18101,
+      "lines": 109,
+      "inspection": "Full report"
+    },
+    {
+      "id": "activity_source_mapping",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/PAGE_CORRESPONDENCE.json",
+      "sha256": "054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101",
+      "bytes": 5023,
+      "lines": 142,
+      "inspection": "Full JSON"
+    },
+    {
+      "id": "historical_source_receipts",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/causal-action/TEXT_READ_RECEIPTS.json",
+      "sha256": "f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73",
+      "bytes": 6188,
+      "lines": 144,
+      "inspection": "Full JSON as retrieved, not fresh reading of historical sources"
+    },
+    {
+      "id": "later_explanatory_audit",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md",
+      "sha256": "3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50",
+      "bytes": 10937,
+      "lines": 109,
+      "inspection": "Full report"
+    },
+    {
+      "id": "safadiyya_range3",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/range-03/RANGE_APPRAISAL.md",
+      "sha256": "fd0ce0a8905092d10e5c9e1377b4a28d05af8176fda2e923b3952cef34b7632b",
+      "bytes": 14830,
+      "lines": 80,
+      "inspection": "Full report"
+    },
+    {
+      "id": "safadiyya_range4",
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/safadiyya/range-04/RANGE_APPRAISAL.md",
+      "sha256": "3f20b71f25971a63ae26da28f3f912248c12ec20756a72afeea0e0221ab02d47",
+      "bytes": 15086,
+      "lines": 72,
+      "inspection": "Full report"
+    },
+    {
+      "id": "eligibility_finding",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+      "bytes": 19590,
+      "lines": 123,
+      "inspection": "Full report"
+    },
+    {
+      "id": "eligibility_review",
+      "path": "t20-next-frontier-20261008/eligibility-review/REPORT.md",
+      "sha256": "f63cb6c0b19c88ab77c1cd9d62cd470ab5d6bc0c3cbfeb46ea2c0080b44471d6",
+      "bytes": 21866,
+      "lines": 148,
+      "inspection": "Sections 1–4 and 5–6 as displayed; one long returned block had tool truncation; no complete-read certification"
+    },
+    {
+      "id": "domain_addendum",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/domain-addendum/ADDENDUM.md",
+      "sha256": "e290e95b31c54b824ff452f627f7ede399ce39cf000fd2fada6bf8d89125ded0",
+      "bytes": 6167,
+      "lines": 50,
+      "inspection": "Full addendum"
+    },
+    {
+      "id": "akmaliyya_retained_primary",
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088,
+      "lines": 274,
+      "inspection": "L070–091, L100–111, L145–164, L212–242; L140–175 retrieval also encountered but only listed spans relied on"
+    },
+    {
+      "id": "root_scope",
+      "path": "t20-next-frontier-20261008/ROOT_RESEARCH_CONTROL.md",
+      "sha256": "4ee2604b09aceb6f9d9de4b6b595255d95f542fb671b93a7ff016c1c6cce2a28",
+      "bytes": 2117,
+      "lines": 13,
+      "inspection": "Full scope control"
+    }
+  ]
+}

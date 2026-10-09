@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-10-08T09:27:51.127324+00:00",
+  "sources": [
+    {
+      "file": "zsigmondy-1892.pdf",
+      "url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+      "sha256": "45b2aea11e6e92711ab9b744b368dcb8ae0e84e69e5267c8515f61072faa9132",
+      "md5": "bd7d6ca6c444a3d3aada8f1a6dac480e",
+      "bytes": 966828,
+      "reading_scope": "Original primary source; printed282 read in extraction, printed283 visually inspected and read; no whole-paper reading credit.",
+      "delivery": "public-domain-original"
+    },
+    {
+      "file": "gyory-smyth-2010.pdf",
+      "url": "https://math.colgate.edu/~integers/k27/k27.pdf",
+      "sha256": "ce2a7f3fb64f21d45781b864d8ba9e3b186012bca5afeed9c5e5966276414d1f",
+      "md5": "81cf86e35d695da506859cc0e98f3e59",
+      "bytes": 530692,
+      "reading_scope": "Modern primary research cross-check: Lemma6 printed323; primitive-divisor definition324; Theorem13 printed325, visually inspected.",
+      "delivery": "inspection-only; deliver link and hash"
+    }
+  ],
+  "application": "Base4 has a prime of exact multiplicative order e for every e>=1; e1 also checked directly with prime3. Standard theorem, not newly proved here."
+}

@@ -1,0 +1,161 @@
+{
+  "created_utc": "2026-10-08T14:19:00.719205+00:00",
+  "files": [
+    {
+      "bytes": 2960,
+      "path": "APPENDIX_REVIEW_RECEIPT.json",
+      "sha256": "f8ee9578c1712159f9a380e003d69e83fe55185c462e8fbff44ba19ba1e9159e"
+    },
+    {
+      "bytes": 3004,
+      "path": "AUTHOR_BINDING.json",
+      "sha256": "9a811327a71fac45577450534b1c89606ee6d355ba9e82fbf48ea51859e6a37b"
+    },
+    {
+      "bytes": 6415,
+      "path": "FINITE_PANEL_REVIEW.md",
+      "sha256": "d16ed278ce739bf88fad955282d76596a636760f634e2d182c95ff28a173dc6f"
+    },
+    {
+      "bytes": 1029,
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c"
+    },
+    {
+      "bytes": 453,
+      "path": "INDEPENDENT_PANEL_CONTROLS.json",
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0"
+    },
+    {
+      "bytes": 453,
+      "path": "INDEPENDENT_PANEL_REPLAY.log",
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0"
+    },
+    {
+      "bytes": 1029,
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c"
+    },
+    {
+      "bytes": 2588,
+      "path": "MAIN_REVIEW_RECEIPT.json",
+      "sha256": "d85b5f1b18651d29c1db0f5f4ffeb18bf9f76e7c851f942d2ff13cef9700ce45"
+    },
+    {
+      "bytes": 12365,
+      "path": "REVIEW.md",
+      "sha256": "f3e84991aaa17f1438df141f7227ab6a763d67d4a5c28fb1b67575da14dcaf71"
+    },
+    {
+      "bytes": 4780,
+      "path": "author_replay/exact_controls.py",
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c"
+    },
+    {
+      "bytes": 2826,
+      "path": "author_replay/panel_controls.py",
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b"
+    },
+    {
+      "bytes": 535,
+      "path": "author_replay/panel_replay.log",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7"
+    },
+    {
+      "bytes": 1076,
+      "path": "author_replay/replay.log",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1"
+    },
+    {
+      "bytes": 1076,
+      "path": "author_replay/results/exact_controls.json",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1"
+    },
+    {
+      "bytes": 535,
+      "path": "author_replay/results/panel_controls.json",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7"
+    },
+    {
+      "bytes": 2210,
+      "path": "author_snapshot/EXACT_CONTROLS.md",
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c"
+    },
+    {
+      "bytes": 8194,
+      "path": "author_snapshot/FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4"
+    },
+    {
+      "bytes": 1553,
+      "path": "author_snapshot/READ_FIRST.md",
+      "sha256": "56468e1e3a00f85dbbf2f1e7dd0ca26940e5747603c431c18659f014c176f688"
+    },
+    {
+      "bytes": 15546,
+      "path": "author_snapshot/RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3"
+    },
+    {
+      "bytes": 6901,
+      "path": "author_snapshot/SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6"
+    },
+    {
+      "bytes": 11953,
+      "path": "author_snapshot/SOURCE_BINDINGS.json",
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17"
+    },
+    {
+      "bytes": 4780,
+      "path": "author_snapshot/exact_controls.py",
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c"
+    },
+    {
+      "bytes": 2826,
+      "path": "author_snapshot/panel_controls.py",
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b"
+    },
+    {
+      "bytes": 1076,
+      "path": "author_snapshot/results/exact_controls.json",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1"
+    },
+    {
+      "bytes": 1076,
+      "path": "author_snapshot/results/exact_controls.log",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1"
+    },
+    {
+      "bytes": 535,
+      "path": "author_snapshot/results/panel_controls.json",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7"
+    },
+    {
+      "bytes": 535,
+      "path": "author_snapshot/results/panel_controls.log",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7"
+    },
+    {
+      "bytes": 2252,
+      "path": "author_snapshot/verify_evidence.py",
+      "sha256": "8f41b467eb27f7dea863074e5886f477d0cc02f613a82dbea6e45a4a3d007093"
+    },
+    {
+      "bytes": 8975,
+      "path": "independent_controls.py",
+      "sha256": "cb032a4ca085796e45fc7517d08a02da476a3c78ff46fead87700f9b1c35ea8e"
+    },
+    {
+      "bytes": 5498,
+      "path": "independent_panel_controls.py",
+      "sha256": "748bab6b1445f3740d80e630516a78caf9c4924424bd646a793e0918d31b6c5f"
+    },
+    {
+      "bytes": 3634,
+      "path": "verify_review.py",
+      "sha256": "2de38a98bb5ddd27073affa3e2341b9ab3cbb81634efb21f964a93619d454900"
+    }
+  ],
+  "scope": "Explicit finite review package; excludes this self-referential manifest, FINAL_VERIFICATION.json, and generated verification_replay files."
+}

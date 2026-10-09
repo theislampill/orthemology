@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-10-08T09:41:19.312456+00:00",
+  "status": "author checkpoint frozen; independent review pending",
+  "scope": "Prospective grouped-mixture identification research only; no protected repository integration or T20 closure.",
+  "source_dependency_manifest_sha256": "43681d0c2d070e30200afb7b3dc557396150bff9c8012e75bd0a72328a27a974",
+  "evidence_layers": [
+    "Imported finite-histogram scalar injection using prior scoped Zsigmondy theorem",
+    "Written arbitrary-k moment and process/oracle proofs with primary ancestry",
+    "Ten exact rational control families; finite controls are not general proofs"
+  ],
+  "files": [
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00",
+      "bytes": 2317
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239",
+      "bytes": 15005
+    },
+    {
+      "path": "PROCESS_AND_ORACLE_BOUNDARIES.md",
+      "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793",
+      "bytes": 17002
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934",
+      "bytes": 7498
+    },
+    {
+      "path": "exact_controls.py",
+      "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82",
+      "bytes": 9072
+    },
+    {
+      "path": "results/exact_controls.log",
+      "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b",
+      "bytes": 1090
+    }
+  ]
+}

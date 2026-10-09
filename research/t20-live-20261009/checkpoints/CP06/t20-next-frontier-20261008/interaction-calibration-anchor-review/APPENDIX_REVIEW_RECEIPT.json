@@ -1,0 +1,79 @@
+{
+  "author_artifacts": [
+    {
+      "bytes": 8194,
+      "path": "FINITE_PANEL_APPENDIX.md",
+      "sha256": "f3a18659ad08546714ad2db3aeb30e344d149eac944b3bd0bb8d62508375d2e4",
+      "snapshot": "author_snapshot/FINITE_PANEL_APPENDIX.md"
+    },
+    {
+      "bytes": 2210,
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "snapshot": "author_snapshot/EXACT_CONTROLS.md"
+    },
+    {
+      "bytes": 6901,
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "snapshot": "author_snapshot/SOURCE_AUDIT.md"
+    },
+    {
+      "bytes": 11953,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+      "snapshot": "author_snapshot/SOURCE_BINDINGS.json"
+    },
+    {
+      "bytes": 2826,
+      "path": "panel_controls.py",
+      "sha256": "0503ae9f04d0b484df886c9123d004ec18953d09c2487b47c91fdf16b2e7435b",
+      "snapshot": "author_snapshot/panel_controls.py"
+    },
+    {
+      "bytes": 535,
+      "path": "results/panel_controls.json",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "snapshot": "author_snapshot/results/panel_controls.json"
+    },
+    {
+      "bytes": 535,
+      "path": "results/panel_controls.log",
+      "sha256": "4467534cca35cd63de8f3d0bfd45cbef5cfcdd8948f779c8af41cc402c7500a7",
+      "snapshot": "author_snapshot/results/panel_controls.log"
+    }
+  ],
+  "author_replay_assertions": 548,
+  "authority": "No protected edits, integration, physical certification, owner acceptance or T20 closure.",
+  "blocking_findings": [],
+  "excluded_claims": [
+    "No support-absence decision from arbitrary Cauchy data",
+    "No finite-sample exact-recovery procedure",
+    "No uniform precision or runtime bound",
+    "No finite-panel whole-calibration recovery"
+  ],
+  "independent_certified_sign_decisions": 320,
+  "independent_raw_probability_interval_cases": 40,
+  "review_artifacts": [
+    {
+      "path": "FINITE_PANEL_REVIEW.md",
+      "sha256": "d16ed278ce739bf88fad955282d76596a636760f634e2d182c95ff28a173dc6f"
+    },
+    {
+      "path": "independent_panel_controls.py",
+      "sha256": "748bab6b1445f3740d80e630516a78caf9c4924424bd646a793e0918d31b6c5f"
+    },
+    {
+      "path": "INDEPENDENT_PANEL_CONTROLS.json",
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0"
+    },
+    {
+      "path": "INDEPENDENT_PANEL_REPLAY.log",
+      "sha256": "d6e5e864eda7261803ae606c0685267669d72b2e9081a8b8c39f7c4b67c25cb0"
+    }
+  ],
+  "review_kind": "Independent adversarial mathematical proof audit and exact controls",
+  "scope": "Promised positive integer interaction multiplicity from four isolated interior panel values, with terminating certified-population-Cauchy-oracle half-integer sign search.",
+  "status": "PASS",
+  "zero_support_interval_checks": 36
+}

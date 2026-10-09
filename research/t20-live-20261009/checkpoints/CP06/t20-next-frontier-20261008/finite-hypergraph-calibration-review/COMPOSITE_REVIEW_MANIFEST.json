@@ -1,0 +1,331 @@
+{
+  "authority": "Independent mathematical and artifact review only; no protected integration, physical certification, owner acceptance or T20 closure.",
+  "current_author_artifacts": [
+    {
+      "bytes": 12063,
+      "governing_receipt": "REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/RESULT.md",
+      "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96"
+    },
+    {
+      "bytes": 3925,
+      "governing_receipt": "unary_v2_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/ANCHORED_UNARY_COUNT.md",
+      "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c"
+    },
+    {
+      "bytes": 6098,
+      "governing_receipt": "REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/BOUNDARY_POINT_RECONSTRUCTION.md",
+      "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb"
+    },
+    {
+      "bytes": 3621,
+      "governing_receipt": "representation_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/LINEAR_RECORD_SCOPE.md",
+      "sha256": "ce6f0e1c26f780edc76ff66f7b1004670dd9300ad90198e46fadea5783afc835"
+    },
+    {
+      "bytes": 4098,
+      "governing_receipt": "representation_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/UNIFORM_CALIBRATION_REPRESENTATION.md",
+      "sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6"
+    },
+    {
+      "bytes": 5618,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_AUDIT.md",
+      "sha256": "baf0b33572d389e922527769c55ad5c1e877f1b095e7f140461a71fed94df4fe"
+    },
+    {
+      "bytes": 5010,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/SOURCE_BINDINGS.json",
+      "sha256": "2c1facf6e9e5cd35a4cdc3bc3e522f5a9a510b85b8e4f7a8f4a379fdcbaa750e"
+    },
+    {
+      "bytes": 1476,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/READ_FIRST.md",
+      "sha256": "b3137fb3bdd473b1b253c4cca8f498f1cbbf00e4241d2685b1149814ada601e1"
+    },
+    {
+      "bytes": 2416,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/EXACT_CONTROLS.md",
+      "sha256": "ff7900a36e6f87907ffe8de1289fbcbcb68654b5253a9c2e59e031dd1af5df53"
+    },
+    {
+      "bytes": 9581,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/exact_controls.py",
+      "sha256": "30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee"
+    },
+    {
+      "bytes": 2125,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/results/exact_controls.json",
+      "sha256": "e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4"
+    },
+    {
+      "bytes": 681,
+      "governing_receipt": "packaging_addendum/REVIEW_RECEIPT.json",
+      "path": "t20-next-frontier-20261008/finite-hypergraph-calibration/results/exact_controls.log",
+      "sha256": "f6e80ce531b02bab25b9a910ad5a8259b4e38fd2a5e3a07932f5b28c641a4ec1"
+    }
+  ],
+  "current_verifier": "verify_composite_review.py",
+  "expected_replay_evidence": {
+    "author_control_families": 12,
+    "declared_local_source_bindings": 25,
+    "independent_core_assertions": 305,
+    "independent_representation_assertions": 251
+  },
+  "payloads": [
+    {
+      "bytes": 2172,
+      "path": "COMPOSITE_READ_FIRST.md",
+      "sha256": "18b0f25afd2d3c9b0ecb6d82561511dc1ab5dd8d64ba630753d102533351d022"
+    },
+    {
+      "bytes": 267,
+      "path": "FINAL_VERIFICATION.json",
+      "sha256": "24dbbf01dece1908d76888cf341612a6fc8104697b0b1d6930b101950ca027f1"
+    },
+    {
+      "bytes": 448,
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "e0d1bb2588a50a9f75309a7cb3b001c8f76461167502ddc0e8374c9b50ed5001"
+    },
+    {
+      "bytes": 448,
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "e0d1bb2588a50a9f75309a7cb3b001c8f76461167502ddc0e8374c9b50ed5001"
+    },
+    {
+      "bytes": 557,
+      "path": "READ_FIRST.md",
+      "sha256": "db7b25de7ec3be3a7363b8a34d0ab54be566556fde5963d8950535b6f1599749"
+    },
+    {
+      "bytes": 16583,
+      "path": "REVIEW.md",
+      "sha256": "1e9cdf39b7b4def67a01bc4f11d60293e763698dfe70af8c38837b213f62f5d7"
+    },
+    {
+      "bytes": 5061,
+      "path": "REVIEW_RECEIPT.json",
+      "sha256": "b13d2a444054db8d8a05447a5ffe7c566e4af418b749064258c06bfd73c5300a"
+    },
+    {
+      "bytes": 1807,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "a476b968351b95436b38091e1288eeb8c408188fad3bb77c2e203ea073e801f6"
+    },
+    {
+      "bytes": 3763,
+      "path": "author_snapshot/ANCHORED_UNARY_COUNT.md",
+      "sha256": "c40758b305662cd0b02c0b0f0b6173949f313f228d798f6a7f07c1edd6cdf497"
+    },
+    {
+      "bytes": 6098,
+      "path": "author_snapshot/BOUNDARY_POINT_RECONSTRUCTION.md",
+      "sha256": "4f3834eff224224d3e6db2a50efe8f88be2e7d58f6b4ba97c45e87f50a3a3dfb"
+    },
+    {
+      "bytes": 12063,
+      "path": "author_snapshot/RESULT.md",
+      "sha256": "6511a092052a73dade0086268858960ead240a7ad85eb3e4fe6bcc84022dad96"
+    },
+    {
+      "bytes": 11317,
+      "path": "independent_controls.py",
+      "sha256": "4f1301bc76809c69efaac172c096318504c740b2665b3b32c584367e503b04b5"
+    },
+    {
+      "bytes": 681,
+      "path": "packaging_addendum/AUTHOR_REPLAY.log",
+      "sha256": "f6e80ce531b02bab25b9a910ad5a8259b4e38fd2a5e3a07932f5b28c641a4ec1"
+    },
+    {
+      "bytes": 710,
+      "path": "packaging_addendum/FINAL_VERIFICATION.json",
+      "sha256": "cbbf5e5126aac4d40271c4540afc4ec06aa80a280268c84099d41a083294222f"
+    },
+    {
+      "bytes": 347810,
+      "path": "packaging_addendum/PRIMARY_PAGE_5.png",
+      "sha256": "c55f89dead8d34403423c3f9039af7c1a5804630c8a75399f9f7b216678c86a8"
+    },
+    {
+      "bytes": 4236,
+      "path": "packaging_addendum/PRIMARY_PAGE_5.txt",
+      "sha256": "807752a57fb4a1f9c67248690ac05c7bc4df15a6896bb60c32a7b58b08e7f30f"
+    },
+    {
+      "bytes": 3842,
+      "path": "packaging_addendum/REVIEW.md",
+      "sha256": "c4a027eefdcb3b8cf7c1c864d5fac28113a851305e147244a1e918ae0fe07b71"
+    },
+    {
+      "bytes": 10119,
+      "path": "packaging_addendum/REVIEW_RECEIPT.json",
+      "sha256": "17dde570ae095d8b5b2f62561ea83ef4c2348ad2295f2d59df9b781ce28e6bf9"
+    },
+    {
+      "bytes": 8232,
+      "path": "packaging_addendum/VERIFICATION_RESULTS.json",
+      "sha256": "3856ba0c5800fff7062f25b5b34ebdb5fc77a944911c6a1e50b64f656b76ae8a"
+    },
+    {
+      "bytes": 9581,
+      "path": "packaging_addendum/author_replay/exact_controls.py",
+      "sha256": "30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee"
+    },
+    {
+      "bytes": 2125,
+      "path": "packaging_addendum/author_replay/results/exact_controls.json",
+      "sha256": "e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4"
+    },
+    {
+      "bytes": 2416,
+      "path": "packaging_addendum/author_snapshot/EXACT_CONTROLS.md",
+      "sha256": "ff7900a36e6f87907ffe8de1289fbcbcb68654b5253a9c2e59e031dd1af5df53"
+    },
+    {
+      "bytes": 1476,
+      "path": "packaging_addendum/author_snapshot/READ_FIRST.md",
+      "sha256": "b3137fb3bdd473b1b253c4cca8f498f1cbbf00e4241d2685b1149814ada601e1"
+    },
+    {
+      "bytes": 5618,
+      "path": "packaging_addendum/author_snapshot/SOURCE_AUDIT.md",
+      "sha256": "baf0b33572d389e922527769c55ad5c1e877f1b095e7f140461a71fed94df4fe"
+    },
+    {
+      "bytes": 5010,
+      "path": "packaging_addendum/author_snapshot/SOURCE_BINDINGS.json",
+      "sha256": "2c1facf6e9e5cd35a4cdc3bc3e522f5a9a510b85b8e4f7a8f4a379fdcbaa750e"
+    },
+    {
+      "bytes": 9581,
+      "path": "packaging_addendum/author_snapshot/exact_controls.py",
+      "sha256": "30d362bfc64e01e53b3e9a8be9ffe4a3432b6d074beed27872894c550d3f6bee"
+    },
+    {
+      "bytes": 2125,
+      "path": "packaging_addendum/author_snapshot/results/exact_controls.json",
+      "sha256": "e5b43da0d25414ed320013046f4186f7e7b14c1e511f65b9a94ea3564557e8b4"
+    },
+    {
+      "bytes": 681,
+      "path": "packaging_addendum/author_snapshot/results/exact_controls.log",
+      "sha256": "f6e80ce531b02bab25b9a910ad5a8259b4e38fd2a5e3a07932f5b28c641a4ec1"
+    },
+    {
+      "bytes": 2199,
+      "path": "packaging_addendum/verify_package.py",
+      "sha256": "0f304b81c23ff0b6052102d5f51357abbaa81a932f612e37be7d1f0cf166bcb1"
+    },
+    {
+      "bytes": 347,
+      "path": "representation_addendum/FINAL_VERIFICATION.json",
+      "sha256": "5641ec5e6c88118e9b608418eca469b112edae4f003c21e89a46fbbb4188b35a"
+    },
+    {
+      "bytes": 7495,
+      "path": "representation_addendum/INDEPENDENT_CONTROLS.json",
+      "sha256": "0becaca4a2e79c57c9da1d98a34fc5bcf10e85d05b8f29d1166f80b4b4e041b9"
+    },
+    {
+      "bytes": 7495,
+      "path": "representation_addendum/INDEPENDENT_REPLAY.log",
+      "sha256": "0becaca4a2e79c57c9da1d98a34fc5bcf10e85d05b8f29d1166f80b4b4e041b9"
+    },
+    {
+      "bytes": 7668,
+      "path": "representation_addendum/REVIEW.md",
+      "sha256": "bc9ce3d2721435b82b82e933109cd2d539a3e9b900cfd00cf007f2baaad9a271"
+    },
+    {
+      "bytes": 3280,
+      "path": "representation_addendum/REVIEW_RECEIPT.json",
+      "sha256": "df5efcb842e3a10515eb34e28eaad1cd90c9ec9be24a982797b730f2d12cd31d"
+    },
+    {
+      "bytes": 3621,
+      "path": "representation_addendum/author_snapshot/LINEAR_RECORD_SCOPE.md",
+      "sha256": "ce6f0e1c26f780edc76ff66f7b1004670dd9300ad90198e46fadea5783afc835"
+    },
+    {
+      "bytes": 4098,
+      "path": "representation_addendum/author_snapshot/UNIFORM_CALIBRATION_REPRESENTATION.md",
+      "sha256": "03623fae668a5b89870ddadaccd6649b5e025d4d6b2df36f462fae4b10fc26a6"
+    },
+    {
+      "bytes": 4931,
+      "path": "representation_addendum/independent_uniform_controls.py",
+      "sha256": "31155187489393cb826691d3c5f1ea95ab167f071e86942c7868b97585d55ee4"
+    },
+    {
+      "bytes": 3017,
+      "path": "representation_addendum/verify_current_review.py",
+      "sha256": "149dbef946c800e846432e9497f113962abc0735a3eff78ea2e1229af05cc697"
+    },
+    {
+      "bytes": 3925,
+      "path": "unary_v2_addendum/ANCHORED_UNARY_COUNT.md",
+      "sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c"
+    },
+    {
+      "bytes": 1497,
+      "path": "unary_v2_addendum/REVIEW.md",
+      "sha256": "57ea68a610c501316a077900e74d8e90e86e4eb88a81d13f79fe12e31ebbcaf6"
+    },
+    {
+      "bytes": 1135,
+      "path": "unary_v2_addendum/REVIEW_RECEIPT.json",
+      "sha256": "a865338a2bf493349450d4b9670c6ff65c8f367ae5ca72bcdfa7fac9f2217335"
+    },
+    {
+      "bytes": 1249,
+      "path": "verify_composite_review.py",
+      "sha256": "07a402d6e031f6c784c2190bda8c431e520cd815194a31c48ad8af5a3bd79875"
+    },
+    {
+      "bytes": 1741,
+      "path": "verify_review.py",
+      "sha256": "3b6fdc8a059cc5523b9eb9da58366785562ee9f85f8d6778a48b78f261d38e75"
+    }
+  ],
+  "purpose": "Complete independent-review preservation and current-author binding index. No prior sealed receipt or payload is modified.",
+  "receipt_chain": [
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "scope": "Original sampled-calibration, unary and boundary mathematical review; unary live binding superseded below.",
+      "sha256": "b13d2a444054db8d8a05447a5ffe7c566e4af418b749064258c06bfd73c5300a"
+    },
+    {
+      "path": "unary_v2_addendum/REVIEW_RECEIPT.json",
+      "scope": "Superseding current unary scope-clarification binding.",
+      "sha256": "a865338a2bf493349450d4b9670c6ff65c8f367ae5ca72bcdfa7fac9f2217335"
+    },
+    {
+      "path": "representation_addendum/REVIEW_RECEIPT.json",
+      "scope": "Linear-record scope and corrected all-command representation extension.",
+      "sha256": "df5efcb842e3a10515eb34e28eaad1cd90c9ec9be24a982797b730f2d12cd31d"
+    },
+    {
+      "path": "packaging_addendum/REVIEW_RECEIPT.json",
+      "scope": "Author replay and source/packaging verification supplement.",
+      "sha256": "17dde570ae095d8b5b2f62561ea83ef4c2348ad2295f2d59df9b781ce28e6bf9"
+    }
+  ],
+  "review_date_utc": "2026-10-08",
+  "status": "PASS",
+  "unary_supersession": {
+    "current_sha256": "1f2312b0387c06753879150c88da61ad506fbe9b132e4ccd0c8e5f4e4f29ef3c",
+    "governing_receipt": "unary_v2_addendum/REVIEW_RECEIPT.json",
+    "historical_sha256": "c40758b305662cd0b02c0b0f0b6173949f313f228d798f6a7f07c1edd6cdf497"
+  }
+}

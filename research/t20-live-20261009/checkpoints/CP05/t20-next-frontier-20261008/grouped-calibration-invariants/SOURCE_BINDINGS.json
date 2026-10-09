@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-10-08T13:37:38.109147+00:00",
+  "frozen_manifests": [
+    {
+      "directory": "grouped-mixture-identification",
+      "manifest_sha256": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6",
+      "payloads": [
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "26fc9e137798cbc537a9f9b7e8df66b4c4953d7058eefec0af3bf2d5f814fb00",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "c5f5a0aa82292fdea78e8939012abd5070ed3a855d270330db27d645e34c5239",
+          "verified": true
+        },
+        {
+          "path": "PROCESS_AND_ORACLE_BOUNDARIES.md",
+          "sha256": "5e67e1c1db5d2a46dde90a84b93fdfab941fb096de1ae6683b6c5ade139dc793",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "a4f731ceaafc720e3abc878bb4222172a92ebf7a9f925160b90d23c8919ad934",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "7b9dbb1f7fa25a7165c421f61b3b2fd257a8c4f2a9d4446efde822900107cf82",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "fb93459c4402299417facb0215ac37090e377793ecb46df440315ac628ab035b",
+          "verified": true
+        }
+      ]
+    },
+    {
+      "directory": "global-calibration-ambiguity",
+      "manifest_sha256": "819b9c5eda8de1fd35b34714d24964ce02d4a41b5c6419413bcd8d82a6febe6c",
+      "payloads": [
+        {
+          "path": "EXACT_CONTROLS.md",
+          "sha256": "cdfcf7d8a6c7f9095b4bda706a41e925ca19a2e7479e6163c54f702b04fd042b",
+          "verified": true
+        },
+        {
+          "path": "INPUT_BINDINGS.json",
+          "sha256": "5e7db3255707edae1796658569b4406fe7d197f4a03a4fac735dab2b72487a86",
+          "verified": true
+        },
+        {
+          "path": "POLYNOMIAL_EFFICIENCY_APPENDIX.md",
+          "sha256": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4",
+          "verified": true
+        },
+        {
+          "path": "READ_FIRST.md",
+          "sha256": "fd9307cf279310887a40281c759a11e99e4d567ff21d47eb53d6ca8e74ecac8b",
+          "verified": true
+        },
+        {
+          "path": "RESEARCH_EVENTS.jsonl",
+          "sha256": "b2a59d322936e5f4f95c01c34a8c7d364cc144b2bd7be6d2f9316817dba554b7",
+          "verified": true
+        },
+        {
+          "path": "RESULT.md",
+          "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+          "verified": true
+        },
+        {
+          "path": "REVIEW_STATUS.md",
+          "sha256": "34aae3ede3958a9cce519e07c611128922ee9089647bbb9be9dbbbb5466d28a8",
+          "verified": true
+        },
+        {
+          "path": "SOURCE_AUDIT.md",
+          "sha256": "48057b6a9f7ed820703564f954aaeeb84ca0883a19b1a68c8658d7a42b487274",
+          "verified": true
+        },
+        {
+          "path": "VERIFICATION.json",
+          "sha256": "7d45b6c19a52b0fec285802f758709e39891a2f3fa0af2e7b732cea2532efd1d",
+          "verified": true
+        },
+        {
+          "path": "efficiency_controls.py",
+          "sha256": "968268172209211e9c7dff218cc3a9acc97f6f765aac53d8569992dd1a239a6f",
+          "verified": true
+        },
+        {
+          "path": "exact_controls.py",
+          "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2",
+          "verified": true
+        },
+        {
+          "path": "results/efficiency_controls.json",
+          "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+          "verified": true
+        },
+        {
+          "path": "results/efficiency_controls.log",
+          "sha256": "1f410340c77564bf6d9aad1a3e6af66afb04275694fadb4d379e0f32b8b0ffc2",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.json",
+          "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+          "verified": true
+        },
+        {
+          "path": "results/exact_controls.log",
+          "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596",
+          "verified": true
+        }
+      ]
+    }
+  ],
+  "individual_inputs": [
+    {
+      "path": "catalogue-mixture-sampling/RESULT.md",
+      "sha256": "add5ac0c7b5db4ff229607e294c5d238bc59dc24826705c3469205633b807d46"
+    },
+    {
+      "path": "catalogue-mixture-sampling/PROCESS_AND_LABEL_BOUNDARIES.md",
+      "sha256": "4c9f0159f73faf76f0cc3998dacc9ec83dd3bfa112b45a793b0a14db80945c2e"
+    },
+    {
+      "path": "calibration-design-frontier/RESULT.md",
+      "sha256": "89b17388c4f243f555dbcb2232a3f106683cc3cc23edf0e3f7371bec3e018db7"
+    },
+    {
+      "path": "global-calibration-ambiguity-review/REVIEW_RECEIPT.json",
+      "sha256": "405182b0516be264847c7fa8a25605e3db948c8823ec649d47f7c82eb6bc8cb7"
+    }
+  ]
+}

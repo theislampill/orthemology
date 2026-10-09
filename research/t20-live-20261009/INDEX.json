@@ -1,0 +1,356 @@
+{
+  "baseline_merged_commit": "3a0bdeaa1394c656245cae9599adcb143e885059",
+  "baseline_prs": [
+    30,
+    31,
+    32
+  ],
+  "generated_navigation_files": 4,
+  "nonclaims": [
+    "No scientific closure, owner adoption, public source identity for raw private ZIPs, new Lean verification of prior items, retrospective human review, or transfer to universal metaphysics",
+    "No raw ZIP/log/private source bodies are committed",
+    "No claim original ZIP members equal mechanically redacted or amended public copies; original source and replay hashes retain their original scope"
+  ],
+  "numbered_checkpoints": 23,
+  "programme": "Orthemology v5",
+  "publication_repairs": {
+    "historical_commit_boundary": "Withholding or aliasing in this revision does not erase previously published commits. Original source/replay hashes still bind original private bytes, not the amended public projections.",
+    "private_linkage_inventory": {
+      "alias_policy": "Distinct typed aliases preserve equality across records and JSON keys. Original-to-public map remains private; aliases are not live Library/file/message locators.",
+      "aliased_by_type": {
+        "conversation_file_id": 4,
+        "library_file_id": 187,
+        "message_id": 16
+      },
+      "delivery_records_withheld": 2,
+      "files_aliased": 37,
+      "files_before": 39,
+      "occurrences_aliased": 207,
+      "occurrences_before": 217,
+      "occurrences_withheld": 10,
+      "remaining_original_identifiers": 0
+    },
+    "restored_license": {
+      "bytes": 1188,
+      "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/LICENSE",
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/LICENSE"
+    },
+    "reviewed_head": "aba0bce3d651ab7f09cb9aa6a31c395e31e900fc",
+    "scope": "Mechanical publication repair only; T20 ACTIVE; scientific and original verification scopes unchanged.",
+    "upstream_reference_qualifications": [
+      {
+        "new_field": "upstream_url",
+        "old_field": "repository_path",
+        "path": "checkpoints/CP21/REFERENCE_ONLY_CODE.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "new_field": "upstream_url",
+        "old_field": "path",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/READING_LEDGER.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "link_label": "upstream coverage register",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/README.md",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/coverage.md"
+      },
+      {
+        "link_label": "upstream gap register",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/README.md",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/gaps.md"
+      },
+      {
+        "new_field": "upstream_url",
+        "old_field": "path",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/VERIFICATION.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/source-bindings.json",
+        "removed_redundant_field": "path",
+        "retained_url_field": "url",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      }
+    ],
+    "withheld_delivery_records": [
+      "checkpoints/CP21/prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+      "checkpoints/CP22/prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json"
+    ]
+  },
+  "published_files": 2063,
+  "records": [
+    {
+      "id": "CP01",
+      "original_name": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+      "private_locator_substitutions": 15,
+      "private_only_files": 142,
+      "public_files": 172,
+      "public_path": "checkpoints/CP01",
+      "source_members": 314,
+      "source_sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad"
+    },
+    {
+      "id": "CP02",
+      "original_name": "T20_Additional_Mathematics_and_Source_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 14,
+      "private_only_files": 62,
+      "public_files": 114,
+      "public_path": "checkpoints/CP02",
+      "source_members": 176,
+      "source_sha256": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc"
+    },
+    {
+      "id": "CP03",
+      "original_name": "T20_Warrant_and_Empirical_Audit_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 0,
+      "private_only_files": 34,
+      "public_files": 89,
+      "public_path": "checkpoints/CP03",
+      "source_members": 123,
+      "source_sha256": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468"
+    },
+    {
+      "id": "CP04",
+      "original_name": "T20_Scope_and_Calibration_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 205,
+      "private_only_files": 74,
+      "public_files": 184,
+      "public_path": "checkpoints/CP04",
+      "source_members": 258,
+      "source_sha256": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af"
+    },
+    {
+      "id": "CP05",
+      "original_name": "T20_Grouped_Invariants_and_Interaction_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 2,
+      "private_only_files": 65,
+      "public_files": 154,
+      "public_path": "checkpoints/CP05",
+      "source_members": 219,
+      "source_sha256": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3"
+    },
+    {
+      "id": "CP06",
+      "original_name": "T20_Calibration_and_Replay_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 4,
+      "private_only_files": 74,
+      "public_files": 227,
+      "public_path": "checkpoints/CP06",
+      "source_members": 301,
+      "source_sha256": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66"
+    },
+    {
+      "id": "CP07",
+      "original_name": "T20_Robust_Replay_and_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 2,
+      "private_only_files": 44,
+      "public_files": 97,
+      "public_path": "checkpoints/CP07",
+      "source_members": 141,
+      "source_sha256": "21de2a8b2e14ab9a26035514054a8fb3555bd284938751acbd8282b4c4e6965a"
+    },
+    {
+      "id": "CP08",
+      "original_name": "T20_Ontology_and_Qualitative_Tensor_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 16,
+      "private_only_files": 29,
+      "public_files": 79,
+      "public_path": "checkpoints/CP08",
+      "source_members": 108,
+      "source_sha256": "19e9cf299df2c51d018ab5186dc591a98c8e05e2b0ea39b1c1e15c3236ff0dcf"
+    },
+    {
+      "id": "CP09",
+      "original_name": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.zip",
+      "private_locator_substitutions": 13,
+      "private_only_files": 67,
+      "public_files": 98,
+      "public_path": "checkpoints/CP09",
+      "source_members": 165,
+      "source_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef"
+    },
+    {
+      "id": "CP10",
+      "original_name": "T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 2,
+      "private_only_files": 11,
+      "public_files": 31,
+      "public_path": "checkpoints/CP10",
+      "source_members": 42,
+      "source_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a"
+    },
+    {
+      "id": "CP11",
+      "original_name": "T20_Full_Skyline_Information_Bounds_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 3,
+      "private_only_files": 29,
+      "public_files": 73,
+      "public_path": "checkpoints/CP11",
+      "source_members": 102,
+      "source_sha256": "76bec736f7345358f43b82409592a52167d627103b53a97d7939f9ae56b3534d"
+    },
+    {
+      "id": "CP12",
+      "original_name": "T20_Sharp_Skyline_and_Rational_Basing_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 5,
+      "private_only_files": 26,
+      "public_files": 56,
+      "public_path": "checkpoints/CP12",
+      "source_members": 82,
+      "source_sha256": "8f2d12eaf5219a8b84df921ab2e917580ebf10f7a724079bde60587fa78c1801"
+    },
+    {
+      "id": "CP13",
+      "original_name": "T20_Foundational_Transport_and_Selfknowledge_Intermediate_Checkpoint_20261008.zip",
+      "private_locator_substitutions": 2,
+      "private_only_files": 17,
+      "public_files": 94,
+      "public_path": "checkpoints/CP13",
+      "source_members": 111,
+      "source_sha256": "18a66948e5ae98915c82f7920a869ef93d4e650432925ad1f35279a222cc6db9"
+    },
+    {
+      "id": "CP14",
+      "original_name": "T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.zip",
+      "private_locator_substitutions": 1,
+      "private_only_files": 21,
+      "public_files": 76,
+      "public_path": "checkpoints/CP14",
+      "source_members": 97,
+      "source_sha256": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c"
+    },
+    {
+      "id": "CP15",
+      "original_name": "T20_Epistemic_PSR_and_Explanatory_Bridge_Intermediate_Checkpoint_20261009.zip",
+      "private_locator_substitutions": 0,
+      "private_only_files": 38,
+      "public_files": 56,
+      "public_path": "checkpoints/CP15",
+      "source_members": 94,
+      "source_sha256": "4971554b11964489cc331fea0441b5622fa39561f394d1acbd39663c952632cc"
+    },
+    {
+      "id": "CP16",
+      "original_name": "T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009.zip",
+      "private_locator_substitutions": 0,
+      "private_only_files": 19,
+      "public_files": 35,
+      "public_path": "checkpoints/CP16",
+      "source_members": 54,
+      "source_sha256": "0ce85dd4d3b25c20dc84a55cbd78c14cdc39f8861396c0401250f3cc0c98f015"
+    },
+    {
+      "id": "CP17",
+      "original_name": "T20_Simultaneous_Production_and_Source_Return_Intermediate_Checkpoint_20261009.zip",
+      "private_locator_substitutions": 0,
+      "private_only_files": 23,
+      "public_files": 33,
+      "public_path": "checkpoints/CP17",
+      "source_members": 56,
+      "source_sha256": "5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3"
+    },
+    {
+      "id": "CP18",
+      "original_name": "T20_Foundational_Discriminators_Intermediate_Checkpoint_20261009.zip",
+      "private_locator_substitutions": 0,
+      "private_only_files": 41,
+      "public_files": 25,
+      "public_path": "checkpoints/CP18",
+      "source_members": 66,
+      "source_sha256": "fc2093c7a97c66c50f0bd12a7612279b991089510a147595f1f6eceb5e435bd1"
+    },
+    {
+      "id": "CP19",
+      "original_name": "T20_Resumed_Research_Intermediate_Checkpoint19_20261009.zip",
+      "private_locator_substitutions": 17,
+      "private_only_files": 21,
+      "public_files": 89,
+      "public_path": "checkpoints/CP19",
+      "source_members": 110,
+      "source_sha256": "d02ca0ce8fc0412385a3cfee7b922d29625218edf9d59f7b29ee51ff6f2daa82"
+    },
+    {
+      "id": "CP20",
+      "original_name": "T20_Resumed_Research_Intermediate_Checkpoint20_20261009.zip",
+      "private_locator_substitutions": 17,
+      "private_only_files": 6,
+      "public_files": 50,
+      "public_path": "checkpoints/CP20",
+      "source_members": 56,
+      "source_sha256": "0d8189f862920640ca4995aca4fdda20353bb6a5dc9ae2f8add2503df926c431"
+    },
+    {
+      "id": "CP21",
+      "original_name": "T20_Resumed_Research_Intermediate_Checkpoint21_20261009.zip",
+      "private_locator_substitutions": 72,
+      "private_only_files": 5,
+      "public_files": 59,
+      "public_path": "checkpoints/CP21",
+      "source_members": 64,
+      "source_sha256": "997962d2dbeb4a56068a4a757f6de09d32be28645aec71c29f558d0a4281784e"
+    },
+    {
+      "id": "CP22",
+      "original_name": "T20_Resumed_Research_Intermediate_Checkpoint22_20261009.zip",
+      "private_locator_substitutions": 3,
+      "private_only_files": 7,
+      "public_files": 45,
+      "public_path": "checkpoints/CP22",
+      "source_members": 52,
+      "source_sha256": "5a84d9bb321db3a7d4c23a374ac05e6f790ce5b83e2de530fdfd704bb2b6310a"
+    },
+    {
+      "id": "CP23",
+      "navigation_files": 2,
+      "original_name": "T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip",
+      "private_locator_substitutions": 6,
+      "private_only_files": 52,
+      "public_files": 105,
+      "public_path": "checkpoints/CP23",
+      "source_members": 157,
+      "source_sha256": "1be566be13c1317cafd63e35e6d58c79af826b5c9df13ac994f6b672f3156633"
+    },
+    {
+      "id": "S01",
+      "original_name": "T20_Warranted_Discrimination_Research_and_Lean_20261009.zip",
+      "private_locator_substitutions": 1,
+      "private_only_files": 8,
+      "public_files": 22,
+      "public_path": "supplement/S01",
+      "source_members": 30,
+      "source_sha256": "2ca475be25d845c52d51477ae57833ece1c871c075307e8b986c8420eb3d89cd"
+    }
+  ],
+  "schema": "t20-live-reentry-v1",
+  "source_archive_shas": {
+    "CP01": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+    "CP02": "f7e42181c7b908ee2c1a9278a2dcda2418c28a734f49bc64cea211f90772fcfc",
+    "CP03": "2ce717c1cb826eef88e01000278dee22375e86c121fe9bb3ce91ad16bca94468",
+    "CP04": "5dedcfd68b866e5d9a038e1fbd5d143bcd08bee303eae3e0e870453b144e23af",
+    "CP05": "80849c0ece0517a96070fcbc40308440cd655c8d6ecd13f62f0c8d4a3caf0bc3",
+    "CP06": "9371dbf519e86886a2d99c0fd8c3014bd4a510d6d97c6c19416d02060c042c66",
+    "CP07": "21de2a8b2e14ab9a26035514054a8fb3555bd284938751acbd8282b4c4e6965a",
+    "CP08": "19e9cf299df2c51d018ab5186dc591a98c8e05e2b0ea39b1c1e15c3236ff0dcf",
+    "CP09": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
+    "CP10": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
+    "CP11": "76bec736f7345358f43b82409592a52167d627103b53a97d7939f9ae56b3534d",
+    "CP12": "8f2d12eaf5219a8b84df921ab2e917580ebf10f7a724079bde60587fa78c1801",
+    "CP13": "18a66948e5ae98915c82f7920a869ef93d4e650432925ad1f35279a222cc6db9",
+    "CP14": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c",
+    "CP15": "4971554b11964489cc331fea0441b5622fa39561f394d1acbd39663c952632cc",
+    "CP16": "0ce85dd4d3b25c20dc84a55cbd78c14cdc39f8861396c0401250f3cc0c98f015",
+    "CP17": "5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3",
+    "CP18": "fc2093c7a97c66c50f0bd12a7612279b991089510a147595f1f6eceb5e435bd1",
+    "CP19": "d02ca0ce8fc0412385a3cfee7b922d29625218edf9d59f7b29ee51ff6f2daa82",
+    "CP20": "0d8189f862920640ca4995aca4fdda20353bb6a5dc9ae2f8add2503df926c431",
+    "CP21": "997962d2dbeb4a56068a4a757f6de09d32be28645aec71c29f558d0a4281784e",
+    "CP22": "5a84d9bb321db3a7d4c23a374ac05e6f790ce5b83e2de530fdfd704bb2b6310a",
+    "CP23": "1be566be13c1317cafd63e35e6d58c79af826b5c9df13ac994f6b672f3156633",
+    "S01": "2ca475be25d845c52d51477ae57833ece1c871c075307e8b986c8420eb3d89cd"
+  },
+  "supplements": 1,
+  "t20_status": "ACTIVE",
+  "total_public_files": 2067
+}

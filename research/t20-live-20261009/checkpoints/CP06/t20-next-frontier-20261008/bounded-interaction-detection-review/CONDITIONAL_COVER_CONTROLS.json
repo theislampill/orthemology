@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "stats": {
+    "runs": 104,
+    "raw_queries": 3949,
+    "max_bits": 42,
+    "uncovered_rejections": 4
+  },
+  "scope": "conditional positive-support cover only; no supplied or inferred target count bound"
+}

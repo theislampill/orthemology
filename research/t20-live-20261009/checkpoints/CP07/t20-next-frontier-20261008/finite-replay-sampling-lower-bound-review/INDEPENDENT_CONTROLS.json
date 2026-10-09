@@ -1,0 +1,1086 @@
+{
+  "status": "PASS",
+  "control_version": 1,
+  "independence": "No author controls imported. Source-result not required by these controls.",
+  "check_count": 4922,
+  "universal_symbolic_controls": [
+    "exact chi-square simplification",
+    "m c (1-c) equals c",
+    "advertised Delta constant",
+    "advertised KL constant",
+    "reciprocal lower-bound constant"
+  ],
+  "certified_Joe_examples": [
+    {
+      "n": 1,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "4739896857804559143656403529718751",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "148121776806392473239262610303711",
+          "denominator": "162259276829213363391578010288128"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5119673745438256799903518947632415",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "159989804544945524996984967113513",
+          "denominator": "162259276829213363391578010288128"
+        }
+      ],
+      "delta_lower_approx": "0.0106996119956332",
+      "delta_upper_approx": "0.0106996119956332",
+      "delta_bound_approx": "0.04",
+      "chi_upper_over_claimed_bound_approx": "0.0189245253988264"
+    },
+    {
+      "n": 2,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "4800183422187340445786304278547375",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "300011463886708777861644017409211",
+          "denominator": "324518553658426726783156020576256"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2574736743489889546257270451238727",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5149473486979779092514540902477455",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.00559247136828613",
+      "delta_upper_approx": "0.00559247136828613",
+      "delta_bound_approx": "0.0177777777777778",
+      "chi_upper_over_claimed_bound_approx": "0.0183602590987843"
+    },
+    {
+      "n": 3,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "1216068677368513704992576136356009",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "4864274709474054819970304545424037",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5165230102526926890927538680731083",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1291307525631731722731884670182771",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "0.00331073318551666",
+      "delta_upper_approx": "0.00331073318551666",
+      "delta_bound_approx": "0.01",
+      "chi_upper_over_claimed_bound_approx": "0.0178578890678212"
+    },
+    {
+      "n": 4,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "4913477092827314999563559553278521",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2456738546413657499781779776639261",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "1293456784714915675232902953855501",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5173827138859662700931611815422005",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.00216895676960784",
+      "delta_upper_approx": "0.00216895676960784",
+      "delta_bound_approx": "0.0064",
+      "chi_upper_over_claimed_bound_approx": "0.0174969134946376"
+    },
+    {
+      "n": 5,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "4950775061365031032570826155197341",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2475387530682515516285413077598671",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5178938746571231908551735378199875",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1294734686642807977137933844549969",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "0.0015257920144493",
+      "delta_upper_approx": "0.0015257920144493",
+      "delta_bound_approx": "0.00444444444444444",
+      "chi_upper_over_claimed_bound_approx": "0.0172345150080221"
+    },
+    {
+      "n": 6,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "4979632101932529762931163163407941",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2489816050966264881465581581703971",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5182203294725527269398574711688173",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2591101647362763634699287355844087",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "0.0011300139955607",
+      "delta_upper_approx": "0.0011300139955607",
+      "delta_bound_approx": "0.00326530612244898",
+      "chi_upper_over_claimed_bound_approx": "0.0170374586788755"
+    },
+    {
+      "n": 7,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5002493515854593849125788729496921",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2501246757927296924562894364748461",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5184408398382579107461808811215587",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1296102099595644776865452202803897",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "0.000869842989683991",
+      "delta_upper_approx": "0.000869842989683991",
+      "delta_bound_approx": "0.0025",
+      "chi_upper_over_claimed_bound_approx": "0.0168848010951508"
+    },
+    {
+      "n": 8,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5021000394905800323298922136301029",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2510500197452900161649461068150515",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "1296491317894268284419434133106057",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5185965271577073137677736532424229",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000689926001892794",
+      "delta_upper_approx": "0.000689926001892794",
+      "delta_bound_approx": "0.00197530864197531",
+      "chi_upper_over_claimed_bound_approx": "0.0167633615593055"
+    },
+    {
+      "n": 9,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5036265108162438541871339567959717",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2518132554081219270935669783979859",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2593552136548883246035632707422925",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5187104273097766492071265414845851",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000560436964397138",
+      "delta_upper_approx": "0.000560436964397138",
+      "delta_bound_approx": "0.0016",
+      "chi_upper_over_claimed_bound_approx": "0.0166645916642265"
+    },
+    {
+      "n": 10,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5049059148785648427718782673210309",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2524529574392824213859391336605155",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5187962178130863170190709452625063",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "648495272266357896273838681578133",
+          "denominator": "649037107316853453566312041152512"
+        }
+      ],
+      "delta_lower_approx": "0.00046418873096941",
+      "delta_upper_approx": "0.00046418873096941",
+      "delta_bound_approx": "0.00132231404958678",
+      "chi_upper_over_claimed_bound_approx": "0.0165827554706557"
+    },
+    {
+      "n": 11,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "39530711063265653573113771430417",
+          "denominator": "40564819207303340847894502572032"
+        },
+        {
+          "numerator": "5059931016098003657358562743093377",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "648578025669611349865682548158967",
+          "denominator": "649037107316853453566312041152512"
+        },
+        {
+          "numerator": "5188624205356890798925460385271737",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000390724690396321",
+      "delta_upper_approx": "0.000390724690396321",
+      "delta_bound_approx": "0.00111111111111111",
+      "chi_upper_over_claimed_bound_approx": "0.0165138797708024"
+    },
+    {
+      "n": 12,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5069279929849690935607599889578743",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "633659991231211366950949986197343",
+          "denominator": "649037107316853453566312041152512"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5189145635238099952005140394830463",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "40540200275297655875040159334613",
+          "denominator": "40564819207303340847894502572032"
+        }
+      ],
+      "delta_lower_approx": "0.00033339226549382",
+      "delta_upper_approx": "0.00033339226549382",
+      "delta_bound_approx": "0.000946745562130178",
+      "chi_upper_over_claimed_bound_approx": "0.0164551332794765"
+    },
+    {
+      "n": 13,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "634675340483379714459959310349267",
+          "denominator": "649037107316853453566312041152512"
+        },
+        {
+          "numerator": "5077402723867037715679674482794137",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2594781786368706616189290501541555",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5189563572737413232378581003083111",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000287797795920236",
+      "delta_upper_approx": "0.000287797795920236",
+      "delta_bound_approx": "0.000816326530612245",
+      "chi_upper_over_claimed_bound_approx": "0.0164044475986842"
+    },
+    {
+      "n": 14,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "158891386437380782790234274458733",
+          "denominator": "162259276829213363391578010288128"
+        },
+        {
+          "numerator": "5084524365996185049287496782679457",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "648737957716819132643883738866575",
+          "denominator": "649037107316853453566312041152512"
+        },
+        {
+          "numerator": "5189903661734553061151069910932601",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000250946009609643",
+      "delta_upper_approx": "0.000250946009609643",
+      "delta_bound_approx": "0.000711111111111111",
+      "chi_upper_over_claimed_bound_approx": "0.0163602783284804"
+    },
+    {
+      "n": 15,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5090818294594662779660456844928165",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2545409147297331389830228422464083",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2595092039437010940659300821569419",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5190184078874021881318601643138839",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.00022073858745981",
+      "delta_upper_approx": "0.00022073858745981",
+      "delta_bound_approx": "0.000625",
+      "chi_upper_over_claimed_bound_approx": "0.0163214499889863"
+    },
+    {
+      "n": 16,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5096420278199493740016802509205487",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "318526267387468358751050156825343",
+          "denominator": "324518553658426726783156020576256"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5190417995444048567377768370553371",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1297604498861012141844442092638343",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "0.000195670420928971",
+      "delta_upper_approx": "0.000195670420928971",
+      "delta_bound_approx": "0.00055363321799308",
+      "chi_upper_over_claimed_bound_approx": "0.0162870526097222"
+    },
+    {
+      "n": 17,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2550719030509406697554859132318177",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5101438061018813395109718264636355",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "162206723217229225441950754606995",
+          "denominator": "162259276829213363391578010288128"
+        },
+        {
+          "numerator": "5190615142951335214142424147423841",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000174639335194028",
+      "delta_upper_approx": "0.000174639335194028",
+      "delta_bound_approx": "0.000493827160493827",
+      "chi_upper_over_claimed_bound_approx": "0.0162563710839189"
+    },
+    {
+      "n": 18,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2552979102966414303216900625631665",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5105958205932828606433801251263331",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5190782836397808476705551505696023",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "648847854549726059588193938212003",
+          "denominator": "649037107316853453566312041152512"
+        }
+      ],
+      "delta_lower_approx": "0.000156823338048001",
+      "delta_upper_approx": "0.000156823338048001",
+      "delta_bound_approx": "0.000443213296398892",
+      "chi_upper_over_claimed_bound_approx": "0.016228835845171"
+    },
+    {
+      "n": 19,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "319378189708010769640005116103099",
+          "denominator": "324518553658426726783156020576256"
+        },
+        {
+          "numerator": "5110051035328172314240081857649585",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5190926659569917878110154961037337",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2595463329784958939055077480518669",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "0.000141599352642287",
+      "delta_upper_approx": "0.000141599352642287",
+      "delta_bound_approx": "0.0004",
+      "chi_upper_over_claimed_bound_approx": "0.016203987749868"
+    },
+    {
+      "n": 20,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "159805445506400549234687730000233",
+          "denominator": "162259276829213363391578010288128"
+        },
+        {
+          "numerator": "5113774256204817575510007360007457",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "1297762733511605800664545213853819",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5191050934046423202658180855415277",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000128488162064774",
+      "delta_upper_approx": "0.000128488162064774",
+      "delta_bound_approx": "0.00036281179138322",
+      "chi_upper_over_claimed_bound_approx": "0.0161814526280184"
+    },
+    {
+      "n": 21,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2558587829599729306933001388959655",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5117175659199458613866002777919311",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191159046499413582706425030681555",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1297789761624853395676606257670389",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "0.000117116335960815",
+      "delta_upper_approx": "0.000117116335960815",
+      "delta_bound_approx": "0.000330578512396694",
+      "chi_upper_over_claimed_bound_approx": "0.0161609225429748"
+    },
+    {
+      "n": 22,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5120295155245911579747753450414685",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2560147577622955789873876725207343",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2595626840578007206041617494344863",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5191253681156014412083234988689727",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "0.000107189409136684",
+      "delta_upper_approx": "0.000107189409136684",
+      "delta_bound_approx": "0.000302457466918715",
+      "chi_upper_over_claimed_bound_approx": "0.016142141789215"
+    },
+    {
+      "n": 23,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5123166331452829681340483397786399",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "160098947857900927541890106180825",
+          "denominator": "162259276829213363391578010288128"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191336987555918078819769406161761",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2595668493777959039409884703080881",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "9.84726678742008e-05",
+      "delta_upper_approx": "9.84726678742008e-05",
+      "delta_bound_approx": "0.000277777777777778",
+      "chi_upper_over_claimed_bound_approx": "0.0161248962905226"
+    },
+    {
+      "n": 24,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5125817653224197331328628044376885",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2562908826612098665664314022188443",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191410703386680829996702245204449",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2595705351693340414998351122602225",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "9.07771751382023e-05",
+      "delta_upper_approx": "9.07771751382023e-05",
+      "delta_bound_approx": "0.000256",
+      "chi_upper_over_claimed_bound_approx": "0.0161090054747237"
+    },
+    {
+      "n": 25,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5128273402800381974218232802617555",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1282068350700095493554558200654389",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191476245629654710524816195084603",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1297869061407413677631204048771151",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "8.39494641393293e-05",
+      "delta_upper_approx": "8.39494641393293e-05",
+      "delta_bound_approx": "0.000236686390532544",
+      "chi_upper_over_claimed_bound_approx": "0.0160943159766474"
+    },
+    {
+      "n": 26,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "1282638604779283025750793309946199",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5130554419117132103003173239784797",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2595767389511220755709544456800555",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5191534779022441511419088913601111",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "7.78638400168989e-05",
+      "delta_upper_approx": "7.78638400168989e-05",
+      "delta_bound_approx": "0.000219478737997257",
+      "chi_upper_over_claimed_bound_approx": "0.016080696707582"
+    },
+    {
+      "n": 27,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "1283169671570271290909209990592711",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5132678686281085163636839962370845",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191587268064750803474962487446935",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "648948408508093850434370310930867",
+          "denominator": "649037107316853453566312041152512"
+        }
+      ],
+      "delta_lower_approx": "7.24165619766419e-05",
+      "delta_upper_approx": "7.24165619766419e-05",
+      "delta_bound_approx": "0.000204081632653061",
+      "chi_upper_over_claimed_bound_approx": "0.0160680349578913"
+    },
+    {
+      "n": 28,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2567330902770830898784954440518641",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5134661805541661797569908881037283",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2595817258468137026313181481516947",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5191634516936274052626362963033895",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "6.75213988281724e-05",
+      "delta_upper_approx": "6.75213988281724e-05",
+      "delta_bound_approx": "0.000190249702734839",
+      "chi_upper_over_claimed_bound_approx": "0.0160562332891106"
+    },
+    {
+      "n": 29,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "1284129344191091582035851787384317",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5136517376764366328143407149537269",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191677200433020635350920864435015",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "648959650054127579418865108054377",
+          "denominator": "649037107316853453566312041152512"
+        }
+      ],
+      "delta_lower_approx": "6.3106199611526e-05",
+      "delta_upper_approx": "6.3106199611526e-05",
+      "delta_bound_approx": "0.000177777777777778",
+      "chi_upper_over_claimed_bound_approx": "0.0160452070352872"
+    },
+    {
+      "n": 30,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5138257308992862799674273781812153",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2569128654496431399837136890906077",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2595857944079396090340325196721949",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5191715888158792180680650393443899",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "5.9110222811313e-05",
+      "delta_upper_approx": "5.9110222811313e-05",
+      "delta_bound_approx": "0.000166493236212279",
+      "chi_upper_over_claimed_bound_approx": "0.0160348822788097"
+    },
+    {
+      "n": 31,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2569946037497442359205242811767223",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5139892074994884718410485623534447",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "1297937765900252721400872970865969",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5191751063601010885603491883463877",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "5.54820383183541e-05",
+      "delta_upper_approx": "5.54820383183541e-05",
+      "delta_bound_approx": "0.00015625",
+      "chi_upper_over_claimed_bound_approx": "0.0160251941989481"
+    },
+    {
+      "n": 32,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5141430921220551904412961526819401",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2570715460610275952206480763409701",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5191783139290528683951917835001065",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2595891569645264341975958917500533",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "5.21778659801354e-05",
+      "delta_upper_approx": "5.21778659801354e-05",
+      "delta_bound_approx": "0.00014692378328742",
+      "chi_upper_over_claimed_bound_approx": "0.0160160857155086"
+    },
+    {
+      "n": 64,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5166078307803827352869037615319501",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2583039153901913676434518807659751",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5192162409714245532122668335737363",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "1298040602428561383030667083934341",
+          "denominator": "1298074214633706907132624082305024"
+        }
+      ],
+      "delta_lower_approx": "1.34770429625363e-05",
+      "delta_upper_approx": "1.34770429625363e-05",
+      "delta_bound_approx": "3.78698224852071e-05",
+      "chi_upper_over_claimed_bound_approx": "0.0158716536297493"
+    },
+    {
+      "n": 100,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "1293832488507121116527543864951885",
+          "denominator": "1298074214633706907132624082305024"
+        },
+        {
+          "numerator": "5175329954028484466110175459807541",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "5192240863063185919539829137983117",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2596120431531592959769914568991559",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "delta_lower_approx": "5.58574180956536e-06",
+      "delta_upper_approx": "5.58574180956536e-06",
+      "delta_bound_approx": "1.56847367905107e-05",
+      "chi_upper_over_claimed_bound_approx": "0.0158181372367107"
+    },
+    {
+      "n": 256,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "5185588549292760947418632741869101",
+          "denominator": "5192296858534827628530496329220096"
+        },
+        {
+          "numerator": "2592794274646380473709316370934551",
+          "denominator": "2596148429267413814265248164610048"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "649036019720820848884684115441051",
+          "denominator": "649037107316853453566312041152512"
+        },
+        {
+          "numerator": "5192288157766566791077472923528409",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "8.63315935063368e-07",
+      "delta_upper_approx": "8.63315935063368e-07",
+      "delta_bound_approx": "2.42244394313313e-06",
+      "chi_upper_over_claimed_bound_approx": "0.0157592335037531"
+    },
+    {
+      "n": 1000,
+      "root_precision_bits": 112,
+      "p_power_interval": [
+        {
+          "numerator": "2595284774486915351360291855351207",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5190569548973830702720583710702415",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "one_minus_t_squared_power_interval": [
+        {
+          "numerator": "2596148141670132137492050817879933",
+          "denominator": "2596148429267413814265248164610048"
+        },
+        {
+          "numerator": "5192296283340264274984101635759867",
+          "denominator": "5192296858534827628530496329220096"
+        }
+      ],
+      "delta_lower_approx": "5.69260705290492e-08",
+      "delta_upper_approx": "5.69260705290492e-08",
+      "delta_bound_approx": "1.59680479360799e-07",
+      "chi_upper_over_claimed_bound_approx": "0.0157307974287379"
+    }
+  ],
+  "adaptive_rational_proxy_prefixes": [
+    {
+      "T": 1,
+      "leaf_count": 6,
+      "expected_replays_law1": {
+        "numerator": "1",
+        "denominator": "4"
+      },
+      "terminated_probability_law1": {
+        "numerator": "0",
+        "denominator": "1"
+      }
+    },
+    {
+      "T": 2,
+      "leaf_count": 31,
+      "expected_replays_law1": {
+        "numerator": "66607",
+        "denominator": "108000"
+      },
+      "terminated_probability_law1": {
+        "numerator": "259",
+        "denominator": "36000"
+      }
+    },
+    {
+      "T": 3,
+      "leaf_count": 156,
+      "expected_replays_law1": {
+        "numerator": "224303759",
+        "denominator": "216000000"
+      },
+      "terminated_probability_law1": {
+        "numerator": "17251213",
+        "denominator": "972000000"
+      }
+    },
+    {
+      "T": 4,
+      "leaf_count": 781,
+      "expected_replays_law1": {
+        "numerator": "38953809953771",
+        "denominator": "26244000000000"
+      },
+      "terminated_probability_law1": {
+        "numerator": "58094673581",
+        "denominator": "1944000000000"
+      }
+    },
+    {
+      "T": 5,
+      "leaf_count": 3906,
+      "expected_replays_law1": {
+        "numerator": "1831844416797024311",
+        "denominator": "944784000000000000"
+      },
+      "terminated_probability_law1": {
+        "numerator": "10089036778026689",
+        "denominator": "236196000000000000"
+      }
+    }
+  ],
+  "limits": "Finite algebraic examples and finite adaptive trees are supplementary controls, not a proof by exhaustion for all n or all stopping rules. Approximate display columns are not used in any assertion."
+}

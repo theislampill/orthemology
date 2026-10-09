@@ -1,0 +1,45 @@
+{
+  "recorded_at_utc": "2026-10-09T10:42:56.192164+00:00",
+  "status": "ONGOING_POST_CHECKPOINT22_RESEARCH",
+  "root_reading": [
+    {
+      "path": "original-cognitive-efficacy-20261009/reading/majmu18-310-312.txt",
+      "sha256": "1fe67739c224744b12a1958beab5920d6a6cd9541b3925bf0d4b44a1c41dc761",
+      "scope": "entire displayed text read"
+    },
+    {
+      "path": "original-cognitive-efficacy-20261009/reading/majmu18-176.png",
+      "sha256": "0f8380e86fc9633b3f341a406bbf0fab5b62e03842ec9d23dd51d18727f4937f",
+      "scope": "entire file read; images visually inspected"
+    },
+    {
+      "path": "original-cognitive-efficacy-20261009/reading/majmu18-177.png",
+      "sha256": "c3234dd20e73085028aed91b36c6be8bf2a2785c6b43073a261a4b7e064fc248",
+      "scope": "entire file read; images visually inspected"
+    },
+    {
+      "path": "t20-next-frontier-20261008/practical-authority-frontier/SCOPED_AUTHORITY_APPRAISAL.md",
+      "sha256": "e64b4946c0bf437502c145fce5a7425b82692d036da6360883d023384488393a",
+      "scope": "entire displayed text read"
+    },
+    {
+      "path": "agency-robustness-independent-20261009/ANALYSIS.md",
+      "sha256": "11c43396546b3327f24a36c446d2051003181f6029e41122ecb6d5061a16204c",
+      "scope": "entire displayed text read"
+    }
+  ],
+  "observations": [
+    "Majmu18:310–312 electronic full unit and al-Jazzar/al-Baz scan176–177 agree on life-awareness-will entailment versus nonidentity. This is an overlapping verification, not independent witness or new general life-will discovery.",
+    "Unvocalised clause العلم يتبع الكلام الخبري retained without emendation or technical direction-of-dependence inference.",
+    "Final human-guidance/capacity-for-taklif distinction is explicitly human-directed; not automatic premise about an original source.",
+    "Prior scoped authority positively credits owed acknowledgement and in-scope retained normative control, without deriving title over each action from causal production alone.",
+    "Smith independent report gives positive comparative warrant but no certified rival; no numerical metric requirement imposed."
+  ],
+  "not_claimed": [
+    "whole Majmu volume reading",
+    "new kernel theorem",
+    "historical time certification",
+    "T20 closure",
+    "owner acceptance"
+  ]
+}

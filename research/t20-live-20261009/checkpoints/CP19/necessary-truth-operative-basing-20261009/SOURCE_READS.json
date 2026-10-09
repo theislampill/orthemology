@@ -1,0 +1,90 @@
+{
+  "recorded_utc": "2026-10-09T08:16:41.594882+00:00",
+  "scope": "Additive source-bound research only; no protected edits, integration, closure or duration certification",
+  "sources": [
+    {
+      "id": "ABC2017",
+      "title": "Knowledge as Fact-Tracking True Belief",
+      "url": "https://www.scielo.br/j/man/a/JS5dxNB79fZvM9pJxRk3HzF/?format=html&lang=en&ilang=en",
+      "witness": {
+        "path": "necessary-truth-operative-basing-20261009/research-intermediates/abc2017-scielo.html",
+        "bytes": 181342,
+        "sha256": "cb363ed4ae1526e5644f4c5291591b3120cbe3d6e2d7bd3f7a43fd4dfbe035c4"
+      },
+      "fresh_read_boundaries": "Derived local line file body108-226, references227-260, notes262-327. Body read in overlapping outputs108-181,145-194,195-226 with truncated midsection recovered in145-194; later121-144,208-224 and notes306-325 reread. Entire relevant basing, closure, species, falsehood, method and necessary-truth sections read, and all33 argumentative notes. No PDF-page reading claimed.",
+      "local_line_file": {
+        "path": "necessary-truth-operative-basing-20261009/research-intermediates/abc2017-lines.txt",
+        "bytes": 73103,
+        "sha256": "bb75c1b5783d60242a13405ce08dca0cb7f2530a30b947b00d0760cd9be733f4"
+      },
+      "notes26_28": "Read fully. Note26 Ramsey1931/Goodman1955/Barker1969; note27 Barker1972 p322 matrices; note28 semifactual/counterconditional references. No referenced primary-book body credit.",
+      "source_body_for_delivery": false
+    },
+    {
+      "id": "BA2010",
+      "authors": [
+        "John A. Barker",
+        "Fred Adams"
+      ],
+      "title": "Epistemic Closure and Skepticism",
+      "url": "https://logos-and-episteme.acadiasi.ro/wp-content/uploads/2015/02/EPISTEMIC-CLOSURE-AND-SKEPTICISM.pdf",
+      "witness": {
+        "path": "relevant-closure-review-20261009/research-intermediates/barker-adams2010.pdf",
+        "bytes": 149376,
+        "sha256": "253789f4e96fa040459a12bae173a2c28053ff64c9ae85e9355226377c538c08"
+      },
+      "acquisition": "Retrieved by independent reviewer and read from shared local witness; no duplicate retrieval",
+      "fresh_read_boundaries": "Printed221-230 continuous pdftotext-layout reading, including notes1-27; printed225-228 rendered and visually checked. Brief spillover onto231 receives no page-completion credit.",
+      "key_locations": "222 note1 competent immediate same-time inference;225 notes12-13 combined grounds, non-presupposition restriction and primitives;226 necessary/sufficient conditions and nonreductive analysis disclaimer;228 note21 explicit closure bridge.",
+      "whole_article_read": false,
+      "source_body_for_delivery": false
+    },
+    {
+      "id": "BDF2018",
+      "authors": [
+        "Katalin Bimbo",
+        "J. Michael Dunn",
+        "Nicholas Ferenz"
+      ],
+      "title": "Two manuscripts, one by Routley, one by Meyer: The origins of the Routley-Meyer semantics for relevance logics",
+      "url": "https://ojs.wgtn.ac.nz/ajl/article/view/4066",
+      "pdf": "https://ojs.wgtn.ac.nz/ajl/article/download/4066/4314",
+      "doi": "10.26686/ajl.v15i2.4066",
+      "witness": {
+        "path": "necessary-truth-operative-basing-20261009/research-intermediates/bimbo-dunn-ferenz2018.pdf",
+        "bytes": 456119,
+        "sha256": "e94bbd19d899cb754d1d66e71a863bcac3dea5052d1b05992e699fd8ae78533c"
+      },
+      "fresh_read_boundaries": "Printed176-177 (PDF6-7) complete text and visual check; axiomsA1-A16/rulesR1-R2. Contextual introductory extracts from171-175 also inspected without full-page credit.",
+      "whole_article_read": false,
+      "matrix_attribution": "Matrix constructed/checked in this operation; no claim this source gives it",
+      "source_body_for_delivery": false
+    }
+  ],
+  "inheritance_consulted": [
+    "recognition-operative-content-20261009/REPORT.md",
+    "recognition-operative-content-20261009/SOURCE_READS.json",
+    "recognition-operative-content-20261009/SOURCE_SUMMARIES.md",
+    "t20-next-frontier-20261008/rational-basing-continuation/RESULT.md",
+    "t20-next-frontier-20261008/rational-basing-continuation/INFERENTIAL_TRANSMISSION_TEST.md",
+    "t20-next-frontier-20261008/rational-basing-continuation/PUBLIC_SOURCE_SUMMARIES.md",
+    "t20-next-frontier-20261008/rational-basing-continuation-review/ASSESSMENT.md (substantial sections; one output truncated)",
+    "t20-next-frontier-20261008/reason-causation-bridge/INDEPENDENT_ASSESSMENT.md"
+  ],
+  "access_records": [
+    {
+      "url": "https://philarchive.org/archive/ROUTSO-7",
+      "result": "web403; not retried; no body credit"
+    },
+    {
+      "url": "https://core.ac.uk/download/pdf/144579369.pdf",
+      "result": "web404; ordinary shell attempt returned5952-byte HTML challenge rather than PDF; no challenge solved, no further attempt; retained as .blocked.html, no body credit"
+    },
+    {
+      "target": "Barker1972 Knowledge and Causation",
+      "result": "Bibliographic search only; no primary body obtained; ABC bibliography says1971 while citation within text/DOI record says1972. No date conflict resolution or matrix-page reading claimed."
+    }
+  ],
+  "verification": "check_relevant_bridge.py produces CHECK_RESULTS.json and RELEVANT_PROOF.md; counts verify formal properties only",
+  "duration": "No retrospective active-time or uninterrupted-duration claim"
+}

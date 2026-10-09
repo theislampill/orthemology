@@ -1,0 +1,62 @@
+{
+  "research_cutoff_utc": "2026-10-08T17:10:40.977609+00:00",
+  "new_Lean_or_kernel_verification": false,
+  "empirical_validation": false,
+  "metaphysical_warrant_credit": false,
+  "owner_acceptance": false,
+  "integration": false,
+  "closure": false,
+  "active_research_time_credit": false,
+  "new_source_reading_from_packaging": false,
+  "program_evidence_kinds": [
+    {
+      "id": "robustness-symbolic",
+      "script": "t20-next-frontier-20261008/finite-panel-replay-robustness/exact_controls.py",
+      "evidence_kind": "Exact symbolic identities and frozen-artifact hash checks; not entire-proof verification"
+    },
+    {
+      "id": "fixed-rate-author",
+      "script": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound/exact_controls.py",
+      "evidence_kind": "Exact rational/certified algebraic and logarithm interval controls"
+    },
+    {
+      "id": "fixed-rate-review",
+      "script": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/independent_controls.py",
+      "evidence_kind": "Independent exact/certified finite and symbolic controls; adaptive finite-prefix examples"
+    },
+    {
+      "id": "fixed-rate-bindings",
+      "script": "t20-next-frontier-20261008/finite-replay-sampling-lower-bound-review/verify_review.py",
+      "evidence_kind": "Read-only original author/review/prerequisite identity verifier; no substantive proof replay"
+    },
+    {
+      "id": "all-rate-author",
+      "script": "t20-next-frontier-20261008/arbitrary-face-replay-design/controls.py",
+      "evidence_kind": "Exact rational/algebraic identities and certified enclosures; separate high-precision comparisons and exploratory grid diagnostics, not proof of global claims"
+    },
+    {
+      "id": "all-rate-source-bindings",
+      "script": "t20-next-frontier-20261008/arbitrary-face-replay-design/source_binding_check.py",
+      "evidence_kind": "Read-only explicit local ancestry and source-hash verification, not source reading or proof verification"
+    },
+    {
+      "id": "all-rate-final-review-controls",
+      "script": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/independent_controls.py",
+      "evidence_kind": "Independent finite symbolic/numerical diagnostics; retained failed binary64 and boundary-continuity methods are negative controls, not theorem failures"
+    },
+    {
+      "id": "all-rate-final-review-bindings",
+      "script": "t20-next-frontier-20261008/arbitrary-face-replay-design-final-review/verify_review.py",
+      "evidence_kind": "Read-only independent final receipt verification of 23 exact author/review/ancestry bindings"
+    }
+  ],
+  "unreplayed_verifiers": [
+    {
+      "path": "Inherited research programs and broader historical verifiers not listed in CONTROL_PLAN.json",
+      "status": "UNREPLAYED_HERE",
+      "reason": "Included only as exact prerequisite inputs. No predecessor research corpus is rebuilt or prior full-source verification claimed."
+    }
+  ],
+  "final_review_vs_contribution": "arbitrary-face-replay-design-final-review supplies the separate final review. arbitrary-face-replay-design-review is a proof contribution; its unreviewed future note is excluded from final claim credit.",
+  "sampling_boundary": "Sampling theorems are mathematical guarantees under iid stable-model assumptions, not collected empirical validation. Numerical calculations are not simulations of experimental evidence."
+}

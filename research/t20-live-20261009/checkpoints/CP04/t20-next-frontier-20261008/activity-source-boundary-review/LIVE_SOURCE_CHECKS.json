@@ -1,0 +1,39 @@
+{
+  "checked_utc": "2026-10-08T12:10:32.050Z",
+  "method": "Exact comparison of each saved L-number line with newly returned web-rendered source lines from the same electronic witness; no fresh independent textual witness or print/scan collation claimed.",
+  "checks": [
+    {
+      "id": "SF23",
+      "range": [
+        1520,
+        1546
+      ],
+      "returned_line_count": 27,
+      "expected_line_count": 27,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    },
+    {
+      "id": "SF142",
+      "range": [
+        2237,
+        2301
+      ],
+      "returned_line_count": 65,
+      "expected_line_count": 65,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    },
+    {
+      "id": "UShura",
+      "range": [
+        228,
+        247
+      ],
+      "returned_line_count": 20,
+      "expected_line_count": 20,
+      "exact_line_equality": true,
+      "complete_current_web_window": true
+    }
+  ]
+}

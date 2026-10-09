@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-08T19:32:41.199608+00:00",
+  "inputs": [
+    {
+      "path": "arbitrary-face-replay-design/RESULT.md",
+      "sha256": "0626c8dfa019b9517df2f970e3aab5424a1ca98110db8b7d733ede6b54fa83d7",
+      "bytes": 13174
+    },
+    {
+      "path": "arbitrary-face-replay-design/ASYMPTOTIC_DESIGN.md",
+      "sha256": "c2f454fa409f16befc6603954a070286bf7640e56c7fddddbcc6a51ef6e3651c",
+      "bytes": 5833
+    },
+    {
+      "path": "adaptive-two-face-corollary/RESULT.md",
+      "sha256": "3997cb39f8306545ac622feeb19e55f0fe18c570e0059e84dea39940c6b22e0f",
+      "bytes": 9589
+    },
+    {
+      "path": "dependent-gate-transport/RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "bytes": 15467
+    },
+    {
+      "path": "ROOT_RESEARCH_CONTROL.md",
+      "sha256": "4ee2604b09aceb6f9d9de4b6b595255d95f542fb671b93a7ff016c1c6cce2a28",
+      "bytes": 2117
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "bounded": true,
+  "broader_check": {
+    "finding": "Incidental Della Rocca references, primarily Dasgupta source text and its coverage records; not substantive 2010 PSR reading.",
+    "match_count": 28,
+    "method": "Initial rg across current workspace ordinary nonhidden Markdown JSON TXT CSV files; no zip/PDF content expansion.",
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "sha256": "3e3073f6623fa2e4f3ab342c87e7d3579686790e13f8cb54a4d5f8313b7ec436"
+  },
+  "exclusions": [
+    "Binary PDFs and archives were not unpacked for novelty claims.",
+    "No corpus-exhaustion claim.",
+    "Current stopping-asymmetry result is inherited and not claimed as a new finding."
+  ],
+  "files_searched": [
+    {
+      "path": "epistemic-psr-warrant/INPUT_BINDINGS.json",
+      "sha256": "38b87c74de347b19820befb5f5ca702030307c7e4273b983280b33a913a55d24"
+    },
+    {
+      "path": "epistemic-psr-warrant/MANIFEST.json",
+      "sha256": "b652eb74c061e006f87c8989835c3a445de39a8d5ebf0266f0789474335a79cd"
+    },
+    {
+      "path": "epistemic-psr-warrant/PREMISE_INDEPENDENCE.md",
+      "sha256": "859c237eb415a4c65195adcadddf01b2537aa015f92a872c012bd3e65d138a94"
+    },
+    {
+      "path": "epistemic-psr-warrant/PRIOR_COVERAGE_SEARCH.json",
+      "sha256": "8ed0d86d3e3a3c450fb9caf29a6aa036aadb4bf032bd4f24a0e0c52737a50251"
+    },
+    {
+      "path": "epistemic-psr-warrant/READING_COMPLETION_ADDENDUM.md",
+      "sha256": "d2e0988d6b8436f0e4fefedece132bd7630109ab8eb27100846abbc41db6051a"
+    },
+    {
+      "path": "epistemic-psr-warrant/READING_COMPLETION_LEDGER.json",
+      "sha256": "161be893897be92f6a84f93aa31f1359d11cf5a4f6912c656524528958a3181a"
+    },
+    {
+      "path": "epistemic-psr-warrant/READING_LEDGER.json",
+      "sha256": "f1d6b069549808b3811b73ab8c2af27f77311a23828dee71d687a2537fdb1787"
+    },
+    {
+      "path": "epistemic-psr-warrant/READ_FIRST.md",
+      "sha256": "845457f2ed1ef9f6ac9c5d5fa8ddcecf0b8c9667a5dc245eb29c5122fee006d4"
+    },
+    {
+      "path": "epistemic-psr-warrant/RESULT.md",
+      "sha256": "d2a195ebb48d41af23938e1b963180383930371fb6cd90c31900e7e40db14c59"
+    },
+    {
+      "path": "epistemic-psr-warrant/SOURCES_AND_RIGHTS.md",
+      "sha256": "71c4c194a212ad5d535fefef1c51af33590d1360c8a6370981157615e88b0490"
+    },
+    {
+      "path": "epistemic-psr-warrant/VERIFICATION.json",
+      "sha256": "59bd1cbc140ece9e547d25fb6f54cd926c97711ad42295bc21f8c05e0b33e403"
+    },
+    {
+      "path": "epistemic-psr-warrant/history/initial_MANIFEST.json",
+      "sha256": "e430703561f54353c04be73120fe93db1e1f611684aee33258c20fbecf6ae1e8"
+    },
+    {
+      "path": "epistemic-psr-warrant/history/initial_READ_FIRST.md",
+      "sha256": "f4229030b7744e6e88bc494c2f096cc7384866a247be5e028c6dd1b3bdd4aa42"
+    },
+    {
+      "path": "epistemic-psr-warrant/history/initial_RESULT.md",
+      "sha256": "7e01f5d931af6942d2cd859fe24e952585d130d6b28e78a26e6d18dfcfe40c7f"
+    },
+    {
+      "path": "epistemic-psr-warrant/history/initial_SOURCES_AND_RIGHTS.md",
+      "sha256": "74bf597fb233ab7511dfcd22ff0a96c551437d56e1fae0d8e62aa7d4413505f0"
+    },
+    {
+      "path": "epistemic-psr-warrant/history/initial_VERIFICATION.json",
+      "sha256": "3906cb8adaa981a86c245bab37e17b57c9b4ea531dde2c1ff90e7b460d5bf138"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+      "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completed-web-continuous.txt",
+      "sha256": "2e98333c6f1c5bb91e940fd90150eb43490ed9477a08208f04a6915728306ca2"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completion-middle.json",
+      "sha256": "77081caec3e36580de99e7b0c522a9fa703a0f978af21d84f9217262234669bd"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completion-tail.json",
+      "sha256": "0b12a54fbeac9ebe877bc682cf199f61c61d23af2b669a2dbd14c4fe426ee2e6"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web-replies.json",
+      "sha256": "fc0517a83c7a103a6eb6fb04107bca10a420e4c0953ea08de09115e79db41003"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web-replies.txt",
+      "sha256": "5c7b4805fe7d484dafa975b80233641ca3bb477ccc9d9f4b24441f23649b979d"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web.json",
+      "sha256": "151547de4d1ae29760a5978619afb0a9690cf12b0f3fc5149390665a9901ae67"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web.txt",
+      "sha256": "63a3715661732833c53194b4710955433f8b5a228ac93061b1095b6219c44ef2"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-head.json",
+      "sha256": "a5b208b556d30425c7d18b0c52ebcd8e9dfdb8921755f0d06699b75a950b41dc"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-middle.json",
+      "sha256": "b386233de6310098f9096b19f9785ac224aa04cd388d3d4dc8f0ff673892cff5"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-tail.json",
+      "sha256": "d60df4e867ee9bb8e5a29915449ea3e470a0cac32a119a20e7d09959913d170a"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web.json",
+      "sha256": "3db65a99e40ca573ae2e11f926ad9de81628e3cc15f999636b491039ad8dc212"
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web.txt",
+      "sha256": "5f45aa237cb36167587dbe516f01b4c8467c988bba76590d7ab577f2a0fa19ac"
+    },
+    {
+      "path": "explanation-bridge-review/FINAL_HASH_ACCEPTANCE.json",
+      "sha256": "8067b47fadb7bab0c25e7fd9bc655c68f6011787ab77855a3a0deb69afba952d"
+    },
+    {
+      "path": "explanation-bridge-review/FINAL_HASH_ACCEPTANCE.md",
+      "sha256": "b956abd6b3456c8262e6e86cadd71b8e371c064d473c6a830ab7a2c08bb6e614"
+    },
+    {
+      "path": "explanation-bridge-review/INPUTS.json",
+      "sha256": "f396096a034ae93e694cef9bc9e54a0a4a146e3db4577d8311c3b7838e8ebb3a"
+    },
+    {
+      "path": "explanation-bridge-review/REVIEW.md",
+      "sha256": "76f6b4f4328bea5750217072ad0ca5e6b35e928d8cd6a9682b2b43b629d52fd1"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/INPUT_BINDINGS.json",
+      "sha256": "cd0cee3a94a1d90154de59fdc7a1f33812194f663b7cde9666588b7b82ea7439"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/MANIFEST.json",
+      "sha256": "d89691a8638687c7bde372d971a914fce667b34dbb5a6860d305ede6f24be484"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/RESULT.md",
+      "sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/RESULT.pre-review.md",
+      "sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/REVIEW_RESPONSE.json",
+      "sha256": "394de2f8a6a7eab00e2567f7bce7c6cf9b9d374c61eedaf0f2bc107bba113b8f"
+    },
+    {
+      "path": "particular-explanans-bridge-audit/VERIFICATION.json",
+      "sha256": "8e40ea406e2b282c409d436885b6e804b286070a003488935231e3fbbf7bdbbe"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/ACTUALISATION_AUDIT.md",
+      "sha256": "31f39e303ad20544caa01395069bf25561b1cb1f361e3862b8ec4ac41510e27d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/INPUT_BINDINGS.json",
+      "sha256": "2512c4f5dae8a28a924217f890b02edbe3c20cfc993a409e0ac86cfc45d81851"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json",
+      "sha256": "87a4384d2638a57113cbc8627e3f756e9df1ecfd0c5f1f3c1d73727c9c503a76"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/MANIFEST.json",
+      "sha256": "0b17f310ce36637bb98f63ce3fde3ea3d6d9b7b9d6791e2185bc2b86ae3fb000"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/PRIOR_COVERAGE_SEARCH.json",
+      "sha256": "b3471385b8b0f5a15cad23e90fc8f3425dde6730a86930da9518b7dce2723090"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+      "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/VERIFICATION.json",
+      "sha256": "60879e2104789a96b3610801de562d9b76c9e6360e01257d0ed57a722615f18c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/NOTE11_REFINEMENT.json",
+      "sha256": "51fda8af3659a54fa498e072f4e271f6c8afc2a065df9d4df98004cabf817de3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/history/RESULT_before_note11_refinement.md",
+      "sha256": "ea7956ded7d0962ef901471317f6b617b9827af2a89089f2f5fed97603eca499"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.txt",
+      "sha256": "502ade5170fa33a07b8c7044b38ed1b7d9f41c6cab6ece0ab58a2e5f81ba46c2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-author-manuscript.txt",
+      "sha256": "1d6583eb418c75c86cb5dcd3f361ced372cc5174f17fb106c146dafeef2f8eb1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-extraction.txt",
+      "sha256": "533a39fc5fb31173effc971c80cfb974814a48983dbd9983ba2b90c6a26ba1c9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/oppy2000-researchgate-web-tail.txt",
+      "sha256": "d48be1699ebaba50d6aeb6dc42fd4b39d1108615777cd9d7e5701660bb6d933e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt",
+      "sha256": "ba2330bff89b5604b42d31151171a430257d893297e2168d68de70b83175d1d4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-indexed-bounded-passages.txt",
+      "sha256": "9ce399f086cd48a538f8b68c0e774ab6b83b4c6ab5f827ad42361a98c77ed1be"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt",
+      "sha256": "2180c8f53ed4f25fbf3ba1350b53be1215a2503e70fc6f8cc45068fdd2fb5cae"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt",
+      "sha256": "921665c78f77f579221962de74209af8d8873f1c480e16fdb0d75f64823e637b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt",
+      "sha256": "28fbb71d0c2d8b4f32d16fe6d55b585610f174f8ea308f9d88a2f2f4602b38ba"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-section-indexed.txt",
+      "sha256": "cc99537c7fad95c0fc07e2a43a62452e236c025427e3de77b50144c6dfe386d2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/retrieval-status-gale-pruss-reply-oppy-lca.txt",
+      "sha256": "0171441adaa5fd014961d98d3ef924f4672acfc6de146bccdc87db34886fc954"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/BOUNDED_PRESENCE_CANDIDATE.md",
+      "sha256": "8e3f3f9ec2074dbaf97f6f5a396f855156e8db78c0c111a3a61c7dd6b74a3f9f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_2011_TARGETED_RETURN.json",
+      "sha256": "cc1750991d34d4eeaa7daa41b0acafcff67c2c61de944bcb64aefb2ae1782b16"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/DASGUPTA_TARGETED_RETURN.json",
+      "sha256": "27995aecb8a3d59dbce88098f95ba64f33564f2e3314c7fedc60b14d61138ee3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/EPISTEMIC_PSR_TARGETED_RETURN_20261009.json",
+      "sha256": "c95dd65fa318ba548bcd1e59cda89abcee2279d91ea96d589bcaba0eb5a82e8d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/FINITE_INTERACTION_PANEL_CANDIDATE.md",
+      "sha256": "69912e7dfdab6f53a15529cce0167f78f8bacdb0d97d446a13d89953313d6439"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/FULL_THRESHOLD_INFORMATION_CANDIDATE.md",
+      "sha256": "4f9a443a7389fe121a1a8ad921741228e9d335934ac7e326eca0f6bc6f9d7a8b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/GALE_PRUSS_TARGETED_RETURN_20261009.json",
+      "sha256": "3d80126a0422e627b8ac220febaa637db54f381b4a1b5aaa31f2a1eb6a6deb51"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/INTERACTION_ANCHOR_CANDIDATE.md",
+      "sha256": "baa465b421050ccc8585c2b533911cba5d848998de854a1d33bc160245a5d429"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/MODAL_PSR_ROOT_READBACK_20261009.json",
+      "sha256": "0410a6b80f345a3f9ce8a605c3b4d7bc9cbcac3d7277ee1113f0f854d1f37df0"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_TARGETED_RETURN_20261009.json",
+      "sha256": "01831f07aa7fd9ad6f445d4f2f9dce6a83b081777a01a1b0d1e8648afa906feb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/OVERDETERMINATION_TARGETED_RETURN_20261009.json",
+      "sha256": "370fedfe2264adbd433742b72ffc166ae3dc860ab9a84aada247893ef0d91e9e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PARTICULAR_REASONS_ARABIC_RETURN_20261009.json",
+      "sha256": "7334978b3faa406452b4082af05ff939742fb5eb17ba4b218b589f322766c0dc"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_EXPLANATION_ROOT_REPLAY_20261009.json",
+      "sha256": "997f90dc1ae9ff49c2d34b2abfb724b962c981a2d97f5c3ea2d6c63e01128f54"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PLURAL_TARGET_SCOPE_CHECK.md",
+      "sha256": "bd6575bc801108dbc42dfbd6d56fe2513f1c4d098b3e024fccebeae67d713883"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/PRUSS_LCA_TARGETED_RETURN_20261009.json",
+      "sha256": "ffca0a16cd573b5cc02c9b034f5ded183a73e8a42e9c0fd36ea097a927065005"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/REPLAY_DISCRIMINATOR_CANDIDATE.md",
+      "sha256": "4240ce96585f361a355508887882cac852cee9033be936e2c76cc0451934303e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/REPLAY_SAMPLE_LOWER_BOUND_CANDIDATE.md",
+      "sha256": "8b799d9e73b04a4aa43324b68b97d1aecaa932ced461cc5b8cf5bc8ef2d1d844"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/ROBUST_REPLAY_CANDIDATE.md",
+      "sha256": "203cf1f7304c192f7b0ddc76339ac87d9521b2de76d1ba9f71ef64cf3a1ff673"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/SOURCE_COMPARISONS_2324.json",
+      "sha256": "41dec2707ccf73a164ac0bbca44465d6c6204cf037380c8d3fe160d7e28e8ad2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/root-later-operations/SOURCE_NONCIRCULATION_ROOT_RETURN_20261009.json",
+      "sha256": "6cb3084fc25a443512959ad8f67584597eabe68c970482cfc128daf996a124bc"
+    }
+  ],
+  "finding": "Four incidental extracted references concern 2003a and 2003b in another work; no substantive full reading of the 2010 PSR article found in these checked records.",
+  "local_search_output": {
+    "bytes": 1086,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "role": "Search evidence",
+    "scope": "Four returned lines preserved locally",
+    "sha256": "fb3c7bc372aeb079c6ae50cb806836d409c8bc5071220a15d98b8b4df56f4a58"
+  },
+  "match_count": 4,
+  "matched_file": "t20-next-frontier-20261008/modal-psr-bridge/PRIOR_COVERAGE_SEARCH.json",
+  "scope": [
+    "epistemic-psr-warrant",
+    "explanation-bridge-review",
+    "particular-explanans-bridge-audit",
+    "t20-next-frontier-20261008/modal-psr-bridge",
+    "t20-next-frontier-20261008/root-later-operations"
+  ],
+  "searched_extensions": [
+    ".csv",
+    ".json",
+    ".md",
+    ".txt"
+  ],
+  "terms": [
+    "Della[[:space:]_-]*Rocca",
+    "explicabil",
+    "3521354.0010.007",
+    "010007"
+  ]
+}

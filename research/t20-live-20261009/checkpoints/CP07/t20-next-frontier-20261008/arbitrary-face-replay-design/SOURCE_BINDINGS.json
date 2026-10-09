@@ -1,0 +1,71 @@
+{
+  "created_utc": "2026-10-08T17:05:22.862998+00:00",
+  "scope": "Exact local sources and contribution; final independent review is bound separately",
+  "inputs": [
+    {
+      "path": "finite-replay-sampling-lower-bound/RESULT.md",
+      "sha256": "56ad31e7d6495412585b13e10a400bc697746cbefa28f5080ae7864b0f21cd26",
+      "bytes": 14735
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound/MANIFEST.json",
+      "sha256": "3f7db7a3045f45135af93f82130791635cb56c808caf9aae89d137966095fa23",
+      "bytes": 1664
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound-review/REVIEW.md",
+      "sha256": "e3e8677f03775f984622495997b2dc0a6a55e50102fb1de03b3995a58f0a3de6",
+      "bytes": 7919
+    },
+    {
+      "path": "finite-replay-sampling-lower-bound-review/REVIEW_RECEIPT.json",
+      "sha256": "f0c732d3c7067c5dea993e0d0d6a3aef04ae880aff6adc895a8f8b008aba5fd8",
+      "bytes": 15736
+    },
+    {
+      "path": "finite-panel-replay-robustness/RESULT.md",
+      "sha256": "3f12f86b3c1699448c350de05add930e67a3ccacc0c54d6dd3e134edb3c92ebe",
+      "bytes": 12263
+    },
+    {
+      "path": "finite-panel-replay-robustness/MANIFEST.sha256",
+      "sha256": "4c7934a6eac9c3412dfb3a5f982c6fe0dcdc94e80f43e0ed75b36eb3b4db386d",
+      "bytes": 1225
+    },
+    {
+      "path": "finite-panel-replay-robustness/SOURCE_REVIEW_BINDINGS.md",
+      "sha256": "eb78ea6e5dbf12f2a6ff964d49c918f60ae43d354e4c0b13b5a2774187e0930c",
+      "bytes": 3776
+    },
+    {
+      "path": "finite-panel-replay-robustness-review/REVIEW.md",
+      "sha256": "946c743737420ff5485cfddfa504680a88400c07a2827bedb064a64ca1df7fcf",
+      "bytes": 13318
+    },
+    {
+      "path": "dependent-gate-transport/RESULT.md",
+      "sha256": "b32125f6d4fc8a715e18b5f0761e3be88b8194d1f4db58f088cfc2df122ce997",
+      "bytes": 15467
+    },
+    {
+      "path": "dependent-gate-transport/SOURCE_AUDIT.md",
+      "sha256": "187867e9e99c74e1897b570d6101106a2b6a65818cbf1126ed38441af53da90d",
+      "bytes": 7007
+    },
+    {
+      "path": "arbitrary-face-replay-design-review/UNIFORM_BOUND_AND_SHARP_ASYMPTOTICS.md",
+      "sha256": "1543ed1b1406bd59948bd66f962001f451dbff2523e3f0e8b67a96a82ad319e9",
+      "bytes": 12931
+    }
+  ],
+  "external_sources": [
+    {
+      "url": "https://search.r-project.org/CRAN/refmans/copula/html/Sibuya.html",
+      "scope": "Mass formula, transform, Joe pointer inspected through web retrieval"
+    },
+    {
+      "url": "https://www.jstatsoft.org/article/view/v039i09",
+      "scope": "Article metadata/abstract inspected; linked full PDF retrieval failed; no full-paper reading claimed"
+    }
+  ]
+}

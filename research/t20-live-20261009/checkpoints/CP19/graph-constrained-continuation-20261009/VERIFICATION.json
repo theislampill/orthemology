@@ -1,0 +1,115 @@
+{
+  "status": "PASS_BOUNDED_SUPPLEMENT",
+  "source": {
+    "path": "graph-constrained-continuation-20261009/GraphContinuation.lean",
+    "bytes": 10145,
+    "sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73"
+  },
+  "result": {
+    "path": "graph-constrained-continuation-20261009/RESULT.md",
+    "bytes": 15161,
+    "sha256": "66cb5493dfa6f71f67b21255cc46f510cba6c1b7c761b1232e8fc4535e215fda"
+  },
+  "lean_version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "lean_binary": {
+    "path": "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean",
+    "bytes": 8880,
+    "sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023"
+  },
+  "mathlib_lake_manifest": {
+    "path": "t20-next-frontier-20261008/formal-identification/mathlib/lake-manifest.json",
+    "bytes": 2786,
+    "sha256": "5c6421b650bc87a2427a892a39e5522dc44543ca4ac1bd6e9f08d536c044a752"
+  },
+  "formalized_endpoints": [
+    "GraphContinuation.active_subset",
+    "GraphContinuation.visited_grown",
+    "GraphContinuation.visited_card_bound",
+    "GraphContinuation.synthesize",
+    "GraphContinuation.exact_steiner_cost",
+    "GraphContinuation.reachable_iff_connected_superset",
+    "GraphContinuation.character_toggle",
+    "GraphContinuation.character_gate"
+  ],
+  "axiom_union": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "no_admitted_proofs": true,
+  "new_source_trust_level": 0,
+  "warnings_as_errors": true,
+  "dependency_caches_rebuilt": false,
+  "transitive_dependency_hash_audit_claimed": false,
+  "false_claim_controls_rejected": [
+    "exact minimum with coefficient 1 replacing coefficient 2",
+    "character always unchanged by gate"
+  ],
+  "author_controls": {
+    "status": "PASS",
+    "truth_table_graphs": 75,
+    "nonempty_graph_mask_comparisons": 1023,
+    "pointwise_gate_character_identities": 248,
+    "path4_augmented_ranks": [
+      5,
+      8,
+      10,
+      13,
+      15,
+      16
+    ],
+    "path4_first_full_parity_horizon": 3,
+    "path4_first_endpoint_pair_horizon": 5,
+    "path4_horizon3_retained_masks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      14,
+      15
+    ],
+    "separating_pair": {
+      "normalised_nonnegative": true,
+      "all_horizon3_moments_equal": true,
+      "later_endpoint_event_probabilities": [
+        0,
+        1
+      ],
+      "minimax_error": "1/2"
+    },
+    "two_disconnected_edges_augmented_saturated_rank": 7,
+    "negative_controls": [
+      "complete-graph formula rejected on path endpoints",
+      "downward-closed moment family rejected",
+      "connected-graph saturation rejected on disconnected graph"
+    ],
+    "scope": "Exact finite checks; general theorem separately proved in Lean and prose."
+  },
+  "independent_review": {
+    "source_sha256": "2f8b4df91a832fb3d656ee9d854b7a5d625236ecc127588bc574d051c4b2cf73",
+    "written_review_pass": true,
+    "fresh_kernel_replay_pass": true,
+    "review_directory": "graph-continuation-review-20261009"
+  },
+  "written_not_kernel_formalized": [
+    "Grown equivalence to ordinary induced-subgraph connectedness",
+    "Walsh basis linear independence and exact continuation-span identification",
+    "continuous-encoder dimension and minimax law claims",
+    "tree saturation horizon",
+    "disconnected component marginal characterization"
+  ],
+  "not_claimed": [
+    "new general CNOT cost formula",
+    "whole external synthesis algorithm replay",
+    "empirical model validity",
+    "repository integration",
+    "final T20 closure",
+    "duration credit"
+  ]
+}

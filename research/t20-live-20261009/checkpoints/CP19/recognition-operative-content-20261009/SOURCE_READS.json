@@ -1,0 +1,157 @@
+{
+  "recorded_utc": "2026-10-09T07:58:10.768898+00:00",
+  "sources": [
+    {
+      "id": "DRETSKE_EXPERIENCE",
+      "author": "Fred Dretske",
+      "title": "From Experience to Belief: Modes of Mental Representation",
+      "url": "https://www.uh.edu/~garson/DretskeExperience.PDF",
+      "host_context": "https://www.uh.edu/~garson/SyllabusMeaning2011.htm",
+      "source_sha256": "26ece2babf03cd8a58581e8131764ad0bbb5db27da2568d9a9159652466d5455",
+      "source_bytes": 1233698,
+      "witness": "Annotated typescript named author Fred Dretske, Stanford University on final page",
+      "publication_date_and_venue": "UNVERIFIED",
+      "read_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "all_eight_endnotes_read": true,
+      "method": "Complete pagewise OCR followed by visual inspection of every page at 140 dpi. OCR gaps controlled from page images. Handwritten annotations not author-attributed.",
+      "visual_batches": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          16,
+          18
+        ],
+        [
+          19,
+          21
+        ]
+      ],
+      "credit": "New completion of previously first-page-only candidate; not Explaining Behavior chapter 6; philosophical theoretical text, not empirical verification",
+      "source_body_delivered": false
+    },
+    {
+      "id": "ABC2017",
+      "authors": [
+        "Fred Adams",
+        "John A. Barker",
+        "Murray Clarke"
+      ],
+      "title": "Knowledge as Fact-Tracking True Belief",
+      "publication": "Manuscrito 40(4), 2017, 1–30",
+      "doi": "10.1590/0100-6045.2017.V40N4.FA",
+      "url": "https://www.scielo.br/j/man/a/JS5dxNB79fZvM9pJxRk3HzF/?format=html&lang=en&ilang=en",
+      "publisher_record": "https://periodicos.sbu.unicamp.br/ojs/index.php/manuscrito/article/view/8651126/0",
+      "source_sha256": "cb363ed4ae1526e5644f4c5291591b3120cbe3d6e2d7bd3f7a43fd4dfbe035c4",
+      "source_bytes": 181342,
+      "http_status": 200,
+      "method": "Complete official HTML text in overlapping web windows; body 75–287, references 288–322, argumentative notes 323–444. Note 34article metadata 448. No PDF-page reading claimed.",
+      "full_argument_read": true,
+      "all_33_argumentative_notes_read": true,
+      "key_locators": {
+        "basing": "96–116",
+        "closure": "136–146",
+        "defeat": "147–181",
+        "falsehood_and_actual_basis": "182–201 and note19",
+        "coherence_target": "202–218, especially217",
+        "counterpossible_response": "259–284"
+      },
+      "attribution": "Theory and coherence reply are Adams/Barker/Clarke; Dretske and Haze quotations remain reported original passages except already read prior Dretske reply. No new original 1971 Dretske body credit.",
+      "source_body_delivered": false
+    },
+    {
+      "id": "AMERI_CONTROL",
+      "author": "Sami Ameri",
+      "title": "براهين وجود الله في النفس والعقل والعلم",
+      "url": "https://almobadarah.com/uploads/books/5f6ae0298582cce21002cbe4.pdf",
+      "edition": "Inherited verified first 1445/2024",
+      "sha256": "1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+      "printed_and_pdf_read": [
+        174,
+        175
+      ],
+      "method": "Targeted visual reread of both pages after six-page OCR navigation (172–177); no new complete chapter credit",
+      "attribution_limits": "Jaʿfar anecdote remains reported and unauthenticated. No external participant, primary empirical study or current recognitional instance verified.",
+      "source_body_delivered": false
+    }
+  ],
+  "access_and_negative_findings": [
+    {
+      "target": "Explaining Behavior chapter 6",
+      "action": "Distinct title/author/university search only",
+      "result": "No new lawful body found. Prior 403 publisher route and institutional-proxy restriction retained; neither retried. No new body or pagination credit."
+    },
+    {
+      "target": "Entitlement: Epistemic Rights Without Epistemic Duties?",
+      "action": "Targeted title/author searches",
+      "result": "Bibliographic and secondary leads only. No primary body acquired; no substantive source-use credit."
+    },
+    {
+      "target": "https://philpapers.org/archive/ADAKAF.pdf",
+      "action": "Ordinary retrieval",
+      "result": "HTTP 403 HTML, 5992 bytes, not PDF. No challenge solved; no retry. Official open-access SciELO text had independently been available and was read."
+    },
+    {
+      "target": "https://philarchive.org/archive/HAZTNC",
+      "result": "Web403; no retry."
+    },
+    {
+      "target": "https://philarchive.org/archive/HAZRTA",
+      "result": "Web cache miss; no body."
+    },
+    {
+      "target": "https://philarchive.org/archive/ADATNT",
+      "result": "Web403; no retry."
+    },
+    {
+      "target": "Journal-linked2015and 2016articlePDFs on logos.zynap.ro",
+      "action": "Followed exact publisher links; ordinary shell retrieval after web cache miss",
+      "result": "HTTP502 for all 3. No body; no renewed retry."
+    },
+    {
+      "target": "Haze 2016 journal landing",
+      "result": "Verification-loader page; no challenge completed."
+    },
+    {
+      "target": "Romanian digital-library 2015/2016 full issues",
+      "action": "Search-found public journal archive links, web then ordinary retrieval",
+      "result": "Web tool inaccessible; ordinary retrieval403. No further attempt."
+    }
+  ],
+  "duration": "No retrospective active-time or uninterrupted-duration claim"
+}

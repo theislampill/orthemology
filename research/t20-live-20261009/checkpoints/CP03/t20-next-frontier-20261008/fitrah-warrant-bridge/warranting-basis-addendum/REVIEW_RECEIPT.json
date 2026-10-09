@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-10-08T10:11:58.770136+00:00",
+  "scope": "Targeted post-freeze wording review using only already inspected Dar014924\u2013928",
+  "result": "Clarification required: distinguish warranting basis, causal occasion and retrospective attribution",
+  "old_content_files_verified_against_manifest": 11,
+  "all_preexisting_files_unchanged": true,
+  "preexisting_file_count": 13,
+  "preexisting_file_sha256": {
+    "VERIFICATION.json": "6c3e48cb623d1a1bb36542e770248834cc88dcd1a8f034f0f5b144b728b5b707",
+    "LOCATOR_ADDENDUM.md": "c025704d1cf5272b550f963a6d06796e3ba7d736c4d3372c0847e321933a876f",
+    "MANIFEST.json": "8cf52ac73fc8e4c9ea6ca389461073b8cd19ee5546888f64acbc37bbcee958fc",
+    "READ_FIRST.md": "0502d24894567f34847f5e606323ee5e90b5f270224ba0853be8364403313a96",
+    "PRIMARY_VERIFICATION.md": "b74d13abf1e51da3442341740f5152b856905f07a80a1f0c71c19429bc4b114a",
+    "READING_PROVENANCE.json": "29901ab937e94587e530015f73e20e923de63b80024be151c02f1e526d14ef6c",
+    "INDEPENDENT_ASSESSMENT.md": "cf077aca538b9618756cb3d014d2039176ba8a5566627aec903dfd94f22c9de0",
+    "PUBLIC_SOURCE_SUMMARY.md": "04acd948d022ea3a11cbbdde509c692dbe7d837d464fb3f23e7a2692e43e1558",
+    "RESEARCH_EVENTS.jsonl": "9f644e5ca9b7881333e77da5d916a5a0803529958679aafad771f1b0012d23eb",
+    "empirical-check/SHA256SUMS": "3f9961d8dafb69e42d4e3cd7d6c88f3d1b14ecbf597df85015458ebeeced8b70",
+    "empirical-check/inheritance_manifest.json": "fbed19d45742000dbe1099beedf9af44328f34ec402d15accb78f68edb5cfaee",
+    "empirical-check/primary_source_receipts.json": "0b281a75eee37f7bccca0513b87322c4ec15c45e4a6ce5473ba0c966efee5c72",
+    "empirical-check/empirical_findings.md": "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7"
+  },
+  "new_clarification_sha256": "bbf9090cae6f829caf70a8dc1208055235cceb49fd37e578a91da864ccb2b270",
+  "no_new_reading_campaign": true,
+  "no_programme_judgement_change": true
+}

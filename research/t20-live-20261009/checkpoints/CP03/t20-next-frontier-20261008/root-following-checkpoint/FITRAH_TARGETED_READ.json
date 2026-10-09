@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-10-08T09:51:43.518220+00:00",
+  "source": "Ameri, Proofs of God, received publisher PDF SHA1ed74efd7d1648f71fd0853f7974d7284e141240db3347379f6e8f88198403b6",
+  "operation": "Root targeted overlapping contextual read",
+  "boundary": "Rendered178,179,182,183; normalized extracted180,181,184 (ordering defects disclosed)",
+  "not_claimed": [
+    "whole book read",
+    "independent source witness",
+    "fresh empirical verification",
+    "continuous active-duration certificate"
+  ],
+  "questions": [
+    "Defeasible faculty-level entitlement versus truth of each inclination",
+    "Local domain-sensitive objection versus global scepticism",
+    "Clinical affiliation association versus metaphysical atheism and normative spiritual defect"
+  ],
+  "received_files": [
+    {
+      "filename": "p178.png",
+      "sha256": "abb5e3bc34e611c7ccb373efc18355e4a73d85c00a377ebabbcf0adbdd8c5e8b"
+    },
+    {
+      "filename": "p179.png",
+      "sha256": "baf30f83a11d1d965038cecc18c025dc5b934ad5eebe7be132838d5f2d902c6a"
+    },
+    {
+      "filename": "p182.png",
+      "sha256": "1a4a2ace7de8ced63353ea501b4e6220d622a4f5bfb504877e402377831689ab"
+    },
+    {
+      "filename": "p183.png",
+      "sha256": "ae5739aec7aebdc3e71b8e838dc87fa4d1e9bb151df586299b3a442e1d328b53"
+    },
+    {
+      "filename": "p180.txt",
+      "sha256": "8d0fc29a6b01fca23150502639309328dcb3b034af9ffddff20b1c2777a57c69"
+    },
+    {
+      "filename": "p181.txt",
+      "sha256": "765e3f50d39beb7b7a206d418159bc2cde8334b683b504850ca746223af82e22"
+    },
+    {
+      "filename": "p184.txt",
+      "sha256": "e9f96cd8fe84ecacc8fbf622dbb346f8da3203cfe5ce5a9c75482214a71dae3e"
+    }
+  ]
+}

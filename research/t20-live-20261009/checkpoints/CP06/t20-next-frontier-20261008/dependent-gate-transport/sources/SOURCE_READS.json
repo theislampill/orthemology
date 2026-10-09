@@ -1,0 +1,50 @@
+{
+  "access_date": "2026-10-08",
+  "mode": "targeted web formula/parameter reads and metadata checks",
+  "sources": [
+    {
+      "id": "vinecopulas_joe",
+      "url": "https://vinecopulas.readthedocs.io/en/stable/vinecopulas.html#fitting-a-vine-copula",
+      "scope": "Targeted Table 1 Joe row ID 11: formula and theta>=1",
+      "supports": "Named Joe family, full CDF including outer power, parameter range"
+    },
+    {
+      "id": "copula_joe_source",
+      "url": "https://raw.githubusercontent.com/cran/copula/master/R/joeCopula.R",
+      "scope": "Targeted constructor: expression builder lines 27-31, parameter bounds 41-43, independence branch 19-24 in retrieved text",
+      "supports": "Equivalent product form and theta>=1",
+      "version_limit": "Mutable master; not executed or pinned"
+    },
+    {
+      "id": "acopula_generator",
+      "url": "https://search.r-project.org/CRAN/refmans/acopula/html/generator.html",
+      "scope": "Targeted Joe row, retrieved line 36; package 0.9.4",
+      "supports": "Generator -log(1-(1-u)^theta), theta>=1"
+    },
+    {
+      "id": "vinecopulib_enum",
+      "url": "https://vinecopulib.github.io/vinecopulib/namespacevinecopulib.html",
+      "scope": "Targeted Joe enum description",
+      "supports": "Corroborating theta>=1"
+    },
+    {
+      "id": "joe1993_metadata",
+      "url": "https://doi.org/10.1006/jmva.1993.1061",
+      "scope": "Publisher abstract and bibliographic metadata only; full paper not read",
+      "supports": "Bibliographic context only"
+    },
+    {
+      "id": "joe_author_publications",
+      "url": "https://www.stat.ubc.ca/~harry/pubs.html",
+      "scope": "Targeted publication entry in search retrieval",
+      "supports": "Bibliographic context only"
+    },
+    {
+      "id": "copBasic_retrieval_issue",
+      "url": "https://search.r-project.org/CRAN/refmans/copBasic/html/JOcopB5.html",
+      "scope": "Targeted formula/example retrieval; outer exponent omitted in retrieved displayed formula",
+      "supports": "Source quality issue, not used as sole formula evidence"
+    }
+  ],
+  "whole_original_paper_read": false
+}

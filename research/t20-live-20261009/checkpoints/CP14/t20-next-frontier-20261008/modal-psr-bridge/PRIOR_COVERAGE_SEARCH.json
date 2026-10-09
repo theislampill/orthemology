@@ -1,0 +1,90 @@
+{
+  "zip": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Seventeenth_Research_Final_Evidence_v1_20261005.zip",
+  "hits": [],
+  "scanned_text_files": 14,
+  "additional_local_search": {
+    "scanned_text_files": 2385,
+    "excluded": "duplicate checkpoints and this operation/review; archive bodies except separately named T17 zip not searched",
+    "hits": [
+      {
+        "path": "t20-next-frontier-20261008/root-later-operations/PRUSS_LCA_TARGETED_RETURN_20261009.json",
+        "count": 4,
+        "contexts": [
+          "reader\": \"root\",\n  \"operation\": \"Continuous reading of three bounded later Pruss sections after origin recovery\",\n  \"sections\": [\n    \"2.3.2.3\",\n    \"2.3.5\",\n    \"4.1.1.6\"\n  ],\n  \"",
+          "[\n    {\n      \"path\": \"t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt\",\n      \"sha256\": \"2180c8f53ed4f25fbf3ba1350b53be1215a2503e70fc6f8cc",
+          ",\n    {\n      \"path\": \"t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt\",\n      \"sha256\": \"ba2330bff89b5604b42d31151171a430257d893297e2168d6",
+          ",\n    {\n      \"path\": \"t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt\",\n      \"sha256\": \"28fbb71d0c2d8b4f32d16fe6d55b585610f174f8ea308f9d88a2f"
+        ],
+        "coverage_class": "contemporaneous_return_not_prior"
+      },
+      {
+        "path": "t20-next-frontier-20261008/root-later-operations/GALE_PRUSS_TARGETED_RETURN_20261009.json",
+        "count": 3,
+        "contexts": [
+          "1:02:27.584311+00:00\",\n  \"operation\": \"Root targeted contextual reading of Gale and Pruss 1999 original argument and taxicab reply\",\n  \"source\": \"t20-next-frontier-20261008/modal-",
+          "84311+00:00\",\n  \"operation\": \"Root targeted contextual reading of Gale and Pruss 1999 original argument and taxicab reply\",\n  \"source\": \"t20-next-frontier-20261008/modal-psr-bridge",
+          "b reply\",\n  \"source\": \"t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.txt\",\n  \"sha256\": \"502ade5170fa33a07b8c7044b38ed1b7d9f41c6cab6ece0ab58a2e5f81ba46c2\",\n  \""
+        ],
+        "coverage_class": "contemporaneous_return_not_prior"
+      },
+      {
+        "path": "t20-next-frontier-20261008/necessary-concordance-power/sources/gordon-2024.txt",
+        "count": 8,
+        "contexts": [
+          "ind of ability would be\n                    something like what Pearce and Pruss (2012, 407) call ‘perfect efficacy of will’:\n\n                       X has perfect efficacy of will",
+          " the highest degree of reliability, namely what Pearce\n                and Pruss (2012, 407) labelled ‘perfect efficacy of will’. But there is an argument for the\n                c",
+          "ls all the\n                    relevant inabilities as follows. Pearce and Pruss (2012, 409–411) argue that omnipotence\n                    entails perfect freedom of will, and tha",
+          "edom of will entails per-\n                    fect rationality. Pearce and Pruss (2012, 411) do not really argue for this claim, so much as\n                    assert it. Many or p",
+          "  25, Article 3). More recently, see e.g. Wielenberg (2000) and Pearce and Pruss (2012).\n                4. To be clear, I am not suggesting that if many ordinary humans are able t"
+        ],
+        "coverage_class": "inherited_mention_not_this_argument_read"
+      },
+      {
+        "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-publisher-notes.txt",
+        "count": 12,
+        "contexts": [
+          "planations”. They raise interesting, sui-generis problems [see for example Pruss (cite24†2018b , III)] that cannot be tackled within the scope of this paper.\nL85:   2. The ring ",
+          "†2015 ) for arguments for irreflexivity and Hudson (cite28†1997 ), and Pruss (cite29†2006 , VI) for arguments against it].\nL90: I could not rehearse these rich debates witho",
+          "\nL97: \nL98:   9. See Rowe (cite34†1970 ) Rowe (cite35†2001 , 24–25), Pruss (cite36†1998 , cite37†2018a , cite24†2018b ), Pruss (cite29†2006 , III) and Swinburne (",
+          "01 , 24–25), Pruss (cite36†1998 , cite37†2018a , cite24†2018b ), Pruss (cite29†2006 , III) and Swinburne (cite38†2004 , 139–143) Cameron (cite39†2008 , 12) for o",
+          "ly to the Wheel-Turners case below.\nL105:   13. This example is similar to Pruss (cite36†1998 , 154)’s chickens and eggs example. My argument for the non-self-explanatory charac"
+        ],
+        "coverage_class": "inherited_mention_not_this_argument_read"
+      },
+      {
+        "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/billon-prior-sec6-indexed-extract.txt",
+        "count": 1,
+        "contexts": [
+          "re self-explanatory, we have defused\nan important objection from Alexander Pruss against this claim by showing that some\ncircular explanations are self-explanatory as well. Finally"
+        ],
+        "coverage_class": "inherited_mention_not_this_argument_read"
+      },
+      {
+        "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016-pages31-40.txt",
+        "count": 5,
+        "contexts": [
+          "\n    1 Two notable exceptions include Della Rocca (2003a) and (2003b), and Pruss (2006), who have\n\neach argued for rationalism recently. Lin (2012) and (forthcoming) discusses rati",
+          "s that have (at one time or\nanother) been associated with the PSR.\n      3 Pruss (2006, chapter 13), and Weaver (2012) and (2013), have recently argued for a principle\n\nroughly alo",
+          "that everything has an explanation of some\nkind or other. My sense is that Pruss (2006) is interested in a principle along these lines, though as I\nsaid in footnote 3 he has also a",
+          "m.\n     67 For some arguments for rationalism, see Della Rocca (2003a) and Pruss (2006). I am not wholly\n\nmoved by those arguments but this is not the place to say why.\n     68 Ver",
+          "ards Ontological Nihilism.” Philosophical\n         Studies 79(2): 143–165.\nPruss, Alexander (2006). The Principle of Sufficient Reason: A Defense. Cambridge, UK: Cambridge\n        "
+        ],
+        "coverage_class": "inherited_mention_not_this_argument_read"
+      },
+      {
+        "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+        "count": 5,
+        "contexts": [
+          "\n    1 Two notable exceptions include Della Rocca (2003a) and (2003b), and Pruss (2006), who have\n\neach argued for rationalism recently. Lin (2012) and (forthcoming) discusses rati",
+          "s that have (at one time or\nanother) been associated with the PSR.\n      3 Pruss (2006, chapter 13), and Weaver (2012) and (2013), have recently argued for a principle\n\nroughly alo",
+          "that everything has an explanation of some\nkind or other. My sense is that Pruss (2006) is interested in a principle along these lines, though as I\nsaid in footnote 3 he has also a",
+          "m.\n     67 For some arguments for rationalism, see Della Rocca (2003a) and Pruss (2006). I am not wholly\n\nmoved by those arguments but this is not the place to say why.\n     68 Ver",
+          "ards Ontological Nihilism.” Philosophical\n         Studies 79(2): 143–165.\nPruss, Alexander (2006). The Principle of Sufficient Reason: A Defense. Cambridge, UK: Cambridge\n        "
+        ],
+        "coverage_class": "inherited_mention_not_this_argument_read"
+      }
+    ],
+    "scope_judgement": "No prior sustained argument read found in inspected hits; bibliographic/source mentions do not count as completed reading.",
+    "classification_note": "The two root-later-operations return records were created during this operation and are contemporaneous rereads, not pre-existing coverage."
+  }
+}

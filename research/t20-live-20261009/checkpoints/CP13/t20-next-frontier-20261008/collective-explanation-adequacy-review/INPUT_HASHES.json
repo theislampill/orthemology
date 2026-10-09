@@ -1,0 +1,223 @@
+{
+  "recorded_utc": "2026-10-08T23:34:35.710079+00:00",
+  "algorithm": "SHA-256",
+  "scope": "Frozen review inputs; snapshot recorded after initial read, checked again before completion. No input edits authorized or performed.",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/REPORT.md",
+      "bytes": 24176,
+      "sha256": "6b0cbc001634b3b3fccb183c759bf0d813a359c6ac2df5cd59b911ae661f47ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/RULE_AND_TRANSPORT_AUDIT.md",
+      "bytes": 8648,
+      "sha256": "5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/READING_LEDGER.json",
+      "bytes": 4839,
+      "sha256": "7bc1322c87e3e707567a4817ce34856dd68b4a5d48b5f98a265c407d6ce823aa"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/INPUT_BINDINGS.json",
+      "bytes": 635,
+      "sha256": "ceaa3440eb100a7b05a272f2f507fb5e90d5561dbfc1e1096f0d62e152bf79f5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/dasgupta2014.pdf",
+      "bytes": 610106,
+      "sha256": "e680c92240e6dcd321854725be3b5f084d5d8f0c46bbff7e8934e95892afe508"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/sources/dasgupta2014-layout.txt",
+      "bytes": 167791,
+      "sha256": "b41d1dbf1a87b5ebe60085e545ca89a144e157d820f47d181986401f5db0e076"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-01.txt",
+      "bytes": 2759,
+      "sha256": "ef1e6237f6e92d49f3141f86e94c632ddb11161402656ce161beb73595329eb4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-02.txt",
+      "bytes": 4034,
+      "sha256": "4b680bc9258c21326801f88f17261a4d04734be089df3b410450318508c17ef8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-03.txt",
+      "bytes": 4397,
+      "sha256": "f1958fe7cc7639bb3962d4695cbf9b35580066b8bbafe914b189deeeba357f34"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-04.txt",
+      "bytes": 4479,
+      "sha256": "d7283dd3ec0befba25474b8496d45c12778ebe76e657bc83c8bc78f61395e46d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-05.txt",
+      "bytes": 4022,
+      "sha256": "9b252f49088bdde782bc4848a8c0b521512d31b2db9afb5eb65c53d0b769d757"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-06.txt",
+      "bytes": 4845,
+      "sha256": "1205948e495df50c0bfc91488b657f9404a6e4089e75f551fe84eaa03269f891"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-07.txt",
+      "bytes": 5191,
+      "sha256": "0ea17a6bc5c80e41a55ec812ea79009aad79346e556e19623a788e931de6e89a"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-08.txt",
+      "bytes": 4879,
+      "sha256": "998600901bc34313ce4d8f053d12ab983221be271a939444a7ecffc92b268126"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-09.txt",
+      "bytes": 5117,
+      "sha256": "c973da76c730e370c0dd4fa4452cb1c6186fb0011a580ec7d492715247c31181"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-10.txt",
+      "bytes": 4848,
+      "sha256": "2c324642ae0b245279ced6c0a844c26a5b88349ead69e6266598f1ba38272d81"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-11.txt",
+      "bytes": 4803,
+      "sha256": "9459a0e5bd1f297dcad63969adb17493aaa2e81f38cffc3ae14cf27ff1d451e8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-12.txt",
+      "bytes": 4970,
+      "sha256": "b9e13f303cf5841058dc60f63561aea3d99e078b66a5d0ca21fa9d4c9d2ef06e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-13.txt",
+      "bytes": 4685,
+      "sha256": "dcd4beb1e57e27525255385aa3f948229e9a188171d0ef2a06a81e40b5e4e887"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-14.txt",
+      "bytes": 4821,
+      "sha256": "10cc8a83658871d57b237cdb0f71753fc5619cec30bf0d8e07e9f95cc445568b"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-15.txt",
+      "bytes": 4650,
+      "sha256": "f5e1899398999a1f58442c0ce885a50a225286f2b50beb96760b9d3b62968af4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-16.txt",
+      "bytes": 4714,
+      "sha256": "eccc62f56dc8c19cac9bd3c03616ff8c924773d3d6be98533c0b990fdbe04a68"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-17.txt",
+      "bytes": 5086,
+      "sha256": "ad9bf83a9e4800688e6569cf2cdb7a900723e463ba22da52682d9a875e42b606"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-18.txt",
+      "bytes": 4847,
+      "sha256": "fb2ed2a61199e0ed23db047686de5f44e660da6749002f3a16c056193ff20ae3"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-19.txt",
+      "bytes": 5094,
+      "sha256": "4decfdc2cc020873a66a6489f5e4e6b6051a0b0b6cd4c230dbb7cae280be3bd1"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-20.txt",
+      "bytes": 4972,
+      "sha256": "7a94609ba9e506be2ccc3c0c27d6330dcf0eea646a60fce20c1d2b374977c629"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-21.txt",
+      "bytes": 4685,
+      "sha256": "0f11f4ad7d6e4584fe778af507ce35dee893bc1eeb8cbf5feaca863bfb55842c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-22.txt",
+      "bytes": 4702,
+      "sha256": "1d67670d6449b46a9c189dee61cc4497784d9e8ae88073ea2fa51bb6df5d7bb9"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-23.txt",
+      "bytes": 4825,
+      "sha256": "674b14d2b99a69d2d2605a83e63669b2b8a64481735cd990bb99daf49011b9a8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-24.txt",
+      "bytes": 5357,
+      "sha256": "ea1daa660e487e90064fc8b75d2698bebee95016aa6ed364d6166df78790eabe"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-25.txt",
+      "bytes": 4472,
+      "sha256": "a2dfba8156b602f09181422965fa22167bd59b27123eaeb127cb444f5f508ea8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-26.txt",
+      "bytes": 4795,
+      "sha256": "9f5fd99ef86d0b36eaf4ce88c64bb7815535261e9216c79cd68244a67992223c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-27.txt",
+      "bytes": 4124,
+      "sha256": "958558240bc7819a74f25d8437dc7184547720dfeec9e31ab0a9c20e8851f5ab"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/pages/page-28.txt",
+      "bytes": 2008,
+      "sha256": "608b17e9a77a9edfc507451b65a2b3db00008082c5acb49d0a3d9b6dc8fd11b4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-01.png",
+      "bytes": 245200,
+      "sha256": "94cd1085b5cfa4342b3228e4c2733b023e1fe557d539524fa2e22e4de9d99fe2"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-05.png",
+      "bytes": 289587,
+      "sha256": "a07fbc877332a37964a362c0cefa2678f4b656e7631250ab68a63447a733ab21"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-11.png",
+      "bytes": 319107,
+      "sha256": "3e6af10aaabd88f3356404edfe68421c5ccc2a83aac69847e79dcf091aa2849c"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-19.png",
+      "bytes": 339895,
+      "sha256": "bc81fd92894033303b3e386b8a66a55766409f659770b262a562fa0477a83e57"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-20.png",
+      "bytes": 321277,
+      "sha256": "bb426204e173e5eec636ae3cd954e1f8cd34f3837c305192a6f4d8ae9dc760b8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-22.png",
+      "bytes": 313060,
+      "sha256": "8bcd326cf72232bc005b38e10c83ab4f7cbe75633e56198507bc9b088e01ebf7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/collective-explanation-adequacy/visual/page-24.png",
+      "bytes": 348685,
+      "sha256": "d5e6610703e9efa4fc724ccc699691916028df89854548f00ad792ace5edd7f4"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "bytes": 146041,
+      "sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7",
+      "read_scope": "lines 1907–1920 only; hash of full input is not a whole-file-read claim"
+    }
+  ]
+}

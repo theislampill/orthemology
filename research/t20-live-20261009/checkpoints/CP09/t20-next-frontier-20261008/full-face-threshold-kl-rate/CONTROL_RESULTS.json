@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "kind": "Bounded symbolic identities and deterministic numerical diagnostics; no empirical sampling",
+  "assertions": 511,
+  "result_sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+  "max_mp_relative_density_reconstruction_error": "2.60514177069591192513060452656599149068169905907474339809535888384899707902e-72",
+  "max_mp_marginal_survival_error": "3.56501037954298674135948604896400494295668495043929695573778479248559469635e-74",
+  "c2_sampled_checks": [
+    {
+      "n": 4,
+      "L": 8.317766166719343,
+      "max_sampled_n3_error_over_(1+L)^4": 0.011084321414935592
+    },
+    {
+      "n": 16,
+      "L": 16.635532333438686,
+      "max_sampled_n3_error_over_(1+L)^4": 0.0011047650440763172
+    },
+    {
+      "n": 64,
+      "L": 24.95329850015803,
+      "max_sampled_n3_error_over_(1+L)^4": 0.000738277310680089
+    },
+    {
+      "n": 256,
+      "L": 33.27106466687737,
+      "max_sampled_n3_error_over_(1+L)^4": 0.00019898826359891322
+    },
+    {
+      "n": 1024,
+      "L": 41.58883083359672,
+      "max_sampled_n3_error_over_(1+L)^4": 0.0003307326640831799
+    }
+  ],
+  "bulk_quadrature": [
+    {
+      "n": 8,
+      "n4_centered_bulk_140_nodes": 0.39666430632257466,
+      "n4_centered_bulk_220_nodes": 0.3966643063222894,
+      "absolute_order_difference": 2.8527180617743397e-13,
+      "rigorous_n4_outside_box_upper_bound": 1.6338393096675477e-16
+    },
+    {
+      "n": 16,
+      "n4_centered_bulk_140_nodes": 0.4436492000729974,
+      "n4_centered_bulk_220_nodes": 0.4436492000726896,
+      "absolute_order_difference": 3.0780933357732465e-13,
+      "rigorous_n4_outside_box_upper_bound": 2.6141428954680763e-15
+    },
+    {
+      "n": 32,
+      "n4_centered_bulk_140_nodes": 0.47040228914793064,
+      "n4_centered_bulk_220_nodes": 0.47040228914764276,
+      "absolute_order_difference": 2.878808302853031e-13,
+      "rigorous_n4_outside_box_upper_bound": 4.182628632748922e-14
+    },
+    {
+      "n": 64,
+      "n4_centered_bulk_140_nodes": 0.48480448086849587,
+      "n4_centered_bulk_220_nodes": 0.4848044808676393,
+      "absolute_order_difference": 8.565925746495395e-13,
+      "rigorous_n4_outside_box_upper_bound": 6.692205812398275e-13
+    },
+    {
+      "n": 128,
+      "n4_centered_bulk_140_nodes": 0.49229707575461956,
+      "n4_centered_bulk_220_nodes": 0.4922970757539338,
+      "absolute_order_difference": 6.857847623109592e-13,
+      "rigorous_n4_outside_box_upper_bound": 1.070752929983724e-11
+    },
+    {
+      "n": 256,
+      "n4_centered_bulk_140_nodes": 0.49612143032972533,
+      "n4_centered_bulk_220_nodes": 0.49612143041362916,
+      "absolute_order_difference": 8.390382832956789e-11,
+      "rigorous_n4_outside_box_upper_bound": 1.7132046879739585e-10
+    },
+    {
+      "n": 512,
+      "n4_centered_bulk_140_nodes": 0.4980538317869629,
+      "n4_centered_bulk_220_nodes": 0.4980538316625076,
+      "absolute_order_difference": 1.2445527941551404e-10,
+      "rigorous_n4_outside_box_upper_bound": 2.7411275007583336e-09
+    }
+  ],
+  "limitations": [
+    "No grid certifies the asymptotic theorem or a global derivative bound.",
+    "Quadrature errors are diagnosed by order comparison, not rigorous interval-enclosed.",
+    "The analytic tail bound is rigorous; the bulk quadrature values remain numerical diagnostics.",
+    "The sampled C2 diagnostic includes some small-n boxes outside the proof condition L<=n; those are checks only."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "checkpoint": 20,
+  "relationship": "Unchanged predecessor; identity only, no predecessor payload included",
+  "files": [
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.zip",
+      "bytes": 166339,
+      "sha256": "0d8189f862920640ca4995aca4fdda20353bb6a5dc9ae2f8add2503df926c431"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.READ_FIRST.md",
+      "bytes": 6616,
+      "sha256": "77a13d81824f781e7bd529335226b7148c260e941a3e79b5f1ae953333ed97bb"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.MANIFEST.json",
+      "bytes": 13836,
+      "sha256": "91d67d5eecd93261981de57a3b04743e61264a143994a0b3918d02c698a5f02d"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.VALIDATION_RECEIPT.json",
+      "bytes": 70814,
+      "sha256": "5efe0dbfcba7f7b5a7c38d46a3d4fcb8f094991d13fd2cf69749f14b8a73490f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.SHA256SUMS",
+      "bytes": 544,
+      "sha256": "6474949114e72c7c7e7c594f7fe96501562f89b43c6fd68ce50dafe7f8191bb5"
+    },
+    {
+      "path": "t20-next-frontier-20261008/checkpoints/resumed-research/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+      "bytes": 2019,
+      "sha256": "34893ef11b2ab79c9ce2baf777a3797a5dbed2393ac26797a1f9057756be2249"
+    }
+  ],
+  "exact_delivery_record_copy": "prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+  "library_file_ids": [
+    "private-library-alias-009",
+    "private-library-alias-003"
+  ],
+  "accepted_message_id": "private-message-alias-004",
+  "accepted_at_utc": "2026-10-09T09:26:47.813704+00:00",
+  "receipt_limit": "Accepted send is not evidence of client opening or owner acceptance of research.",
+  "checkpoint21_delivery": "No upload or user message performed by this assembly; any later delivery identity belongs outside the sealed ZIP."
+}

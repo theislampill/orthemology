@@ -1,0 +1,51 @@
+{
+  "packet": "sharp-skyline-information",
+  "status": "FROZEN_AUTHOR_CANDIDATE_AWAITING_INDEPENDENT_REVIEW",
+  "frozen_utc": "2026-10-08T21:58:16.643476+00:00",
+  "result_sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+  "historical_floor": "UNVERIFIED",
+  "files": [
+    {
+      "path": "RESULT.md",
+      "sha256": "52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+      "bytes": 21706
+    },
+    {
+      "path": "controls.py",
+      "sha256": "04e771ffc1d30e736776bc30b8d6922f36fe25867ddda05c7bc5e3289db86eb4",
+      "bytes": 9867
+    },
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "bbcce6cec92d9009bf9fcfa79f66bc3c7135e3fb231a3202c4eff2cde4197d04",
+      "bytes": 9891
+    },
+    {
+      "path": "CONTROL_RUN.log",
+      "sha256": "858227fb5849ec2924701058ae94ebbab9c31c4e9a13106694acc005db9c71f9",
+      "bytes": 352
+    },
+    {
+      "path": "CONTROL_ATTEMPT1.log",
+      "sha256": "e93f4e4f0176fb4daf7cc59e370cd77ebb92ecd7e2d740e93fe7cb4ae668a6b9",
+      "bytes": 55
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "5e22d129caa0f59d5928bd9362b4c8df58056c2ddc798f3b10d6dc9afd8812ee",
+      "bytes": 4281
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "b989f0941edbbea22750b6d3b8aece35e709000da99031190749175967fa82b4",
+      "bytes": 2575
+    },
+    {
+      "path": "ACTIVITY_LOG.json",
+      "sha256": "338c9431fbb4266067f52fd788af24f4fa655e78e1482a5787d5af27ac25de5c",
+      "bytes": 2011
+    }
+  ],
+  "control_status": "PASS",
+  "source_digests_rechecked": 5
+}

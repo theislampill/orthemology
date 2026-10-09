@@ -1,0 +1,25 @@
+{
+  "original": {
+    "author": "K. Zsigmondy",
+    "title": "Zur Theorie der Potenzreste",
+    "journal": "Monatshefte für Mathematik und Physik 3 (1892), 265–284",
+    "doi": "10.1007/BF01692444",
+    "verified_record_url": "https://zenodo.org/records/2131326",
+    "verified_pdf_url": "https://zenodo.org/records/2131326/files/article.pdf?download=1",
+    "pdf_sha256": "45b2aea11e6e92711ab9b744b368dcb8ae0e84e69e5267c8515f61072faa9132",
+    "pdf_md5_matches_verified_zenodo_record": "bd7d6ca6c444a3d3aada8f1a6dac480e",
+    "visually_inspected_printed_page": 283,
+    "image_filename": "zsigmondy-page19.png",
+    "image_sha256": "a701c2cbe9b4aed3bdc90bacff02879ae0815bfba743ec172ff42d8098c73849",
+    "scope": "Targeted visual inspection of the specialized order theorem, its exceptions and the explicit following use of base 4. The whole original proof was not reread in this review."
+  },
+  "modern_research_corroboration": {
+    "authors": "S. P. Glasby, F. Lübeck, A. C. Niemeyer and C. E. Praeger",
+    "title": "Primitive prime divisors and the nth cyclotomic polynomial",
+    "journal": "Journal of the Australian Mathematical Society 102 (2017), 122–135",
+    "doi": "10.1017/S1446788715000269",
+    "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/770F320F7419E0E8494A7D109AC2D9C9/S1446788715000269a.pdf/primitive_prime_divisors_and_the_mathbfnth_cyclotomic_polynomial.pdf",
+    "scope": "Printed page 123, Zsigmondy statement for n>2; printed pages 124–125, order interpretation of a primitive prime. Cases n=1 and n=2 for base 4 are also checked directly with primes 3 and 5."
+  },
+  "retrieval_caution": "The web parser could not decode the original PDF. The retained original was independently opened locally as the author's downloaded scan, and the relevant page was inspected visually. No original-proof reconstruction or literature-priority search is claimed."
+}

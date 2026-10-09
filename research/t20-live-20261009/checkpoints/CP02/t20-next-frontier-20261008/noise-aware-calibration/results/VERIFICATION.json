@@ -1,0 +1,32 @@
+{
+  "bound_input_count": 9,
+  "bound_inputs_unchanged": true,
+  "exports_byte_equal": true,
+  "isolated_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"result\": \"[OMITTED_PRIVATE_MACHINE_PATH]\", \"recovered\": true, \"budget_cases\": 12, \"author_test_groups\": 11}\n"
+  },
+  "isolated_tests": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "test_calibration_bias_and_sampling_error_fit_one_budget (__main__.RobustMaskTests.test_calibration_bias_and_sampling_error_fit_one_budget) ... ok\ntest_certified_arithmetic_rejects_inexact_float_inputs (__main__.RobustMaskTests.test_certified_arithmetic_rejects_inexact_float_inputs) ... ok\ntest_current_joint_redundant_and_priority_fixtures_recover (__main__.RobustMaskTests.test_current_joint_redundant_and_priority_fixtures_recover) ... ok\ntest_marginal_calibration_does_not_bound_unknown_gate_correlation (__main__.RobustMaskTests.test_marginal_calibration_does_not_bound_unknown_gate_correlation) ... ok\ntest_noisy_guarded_effect_recovery_rounds_before_exact_inversions (__main__.RobustMaskTests.test_noisy_guarded_effect_recovery_rounds_before_exact_inversions) ... ok\ntest_nonsaturation_floor_for_guarded_multi_effect_models (__main__.RobustMaskTests.test_nonsaturation_floor_for_guarded_multi_effect_models) ... ok\ntest_outside_good_region_or_insufficient_arithmetic_budget_abstains (__main__.RobustMaskTests.test_outside_good_region_or_insufficient_arithmetic_budget_abstains) ... ok\ntest_positive_support_recovery_under_all_two_root_error_corners (__main__.RobustMaskTests.test_positive_support_recovery_under_all_two_root_error_corners) ... ok\ntest_proved_precision_target_is_finite_and_avoids_zero_denominators (__main__.RobustMaskTests.test_proved_precision_target_is_finite_and_avoids_zero_denominators) ... ok\ntest_rational_log_intervals_contain_independent_high_precision_logs (__main__.RobustMaskTests.test_rational_log_intervals_contain_independent_high_precision_logs) ... ok\ntest_sampling_budget_is_ceil_certified_and_has_polynomial_K_coefficient (__main__.RobustMaskTests.test_sampling_budget_is_ceil_certified_and_has_polynomial_K_coefficient) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.367s\n\nOK\n",
+    "stdout": ""
+  },
+  "local_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"result\": \"[OMITTED_PRIVATE_MACHINE_PATH]\", \"recovered\": true, \"budget_cases\": 12, \"author_test_groups\": 11}\n"
+  },
+  "local_tests": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "test_calibration_bias_and_sampling_error_fit_one_budget (__main__.RobustMaskTests.test_calibration_bias_and_sampling_error_fit_one_budget) ... ok\ntest_certified_arithmetic_rejects_inexact_float_inputs (__main__.RobustMaskTests.test_certified_arithmetic_rejects_inexact_float_inputs) ... ok\ntest_current_joint_redundant_and_priority_fixtures_recover (__main__.RobustMaskTests.test_current_joint_redundant_and_priority_fixtures_recover) ... ok\ntest_marginal_calibration_does_not_bound_unknown_gate_correlation (__main__.RobustMaskTests.test_marginal_calibration_does_not_bound_unknown_gate_correlation) ... ok\ntest_noisy_guarded_effect_recovery_rounds_before_exact_inversions (__main__.RobustMaskTests.test_noisy_guarded_effect_recovery_rounds_before_exact_inversions) ... ok\ntest_nonsaturation_floor_for_guarded_multi_effect_models (__main__.RobustMaskTests.test_nonsaturation_floor_for_guarded_multi_effect_models) ... ok\ntest_outside_good_region_or_insufficient_arithmetic_budget_abstains (__main__.RobustMaskTests.test_outside_good_region_or_insufficient_arithmetic_budget_abstains) ... ok\ntest_positive_support_recovery_under_all_two_root_error_corners (__main__.RobustMaskTests.test_positive_support_recovery_under_all_two_root_error_corners) ... ok\ntest_proved_precision_target_is_finite_and_avoids_zero_denominators (__main__.RobustMaskTests.test_proved_precision_target_is_finite_and_avoids_zero_denominators) ... ok\ntest_rational_log_intervals_contain_independent_high_precision_logs (__main__.RobustMaskTests.test_rational_log_intervals_contain_independent_high_precision_logs) ... ok\ntest_sampling_budget_is_ceil_certified_and_has_polynomial_K_coefficient (__main__.RobustMaskTests.test_sampling_budget_is_ceil_certified_and_has_polynomial_K_coefficient) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.361s\n\nOK\n",
+    "stdout": ""
+  },
+  "scope": "Administrative replay only, not empirical trials, new discoveries or kernel verification.",
+  "test_groups": 11,
+  "timestamp_utc": "2026-10-08T08:16:37.368985+00:00"
+}

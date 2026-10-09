@@ -1,0 +1,10 @@
+{
+  "finite_histograms_checked": 2714,
+  "guarded_profile_panels": 8,
+  "partition_decodes": 26,
+  "greedy_prefix_max_exponent": 40,
+  "greedy_prefix_occurrences": 60,
+  "greedy_prefix_largest_multiplicity": 4,
+  "greedy_error_upper": "(3/4)/(4^40-1)",
+  "primitive_order_exponents": 24
+}

@@ -1,0 +1,596 @@
+{
+  "schema": "t20-incremental-result-source-evidence-dependency-v2",
+  "checkpoint_ordinal": 14,
+  "results": [
+    {
+      "id": "necessary-concordance-power",
+      "author": {
+        "path": "t20-next-frontier-20261008/necessary-concordance-power/RESULT.md",
+        "bytes": 22307,
+        "sha256": "a2023aa4eff3920745e3a2e3c098c9bf13222db6e30c53bf4a674b4cc1266544"
+      },
+      "classification": "WRITTEN_CONDITIONAL_MODAL_ARGUMENT_AND_SOURCE_AUDIT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "FULL_REPORT_INTERNAL_REVIEW",
+      "review_records": [
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power-review/REVIEW.md",
+          "bytes": 10615,
+          "sha256": "a7b589769897f5b3d0d14c2675ee6bef3eb4b47e32562575d3c326df58e1c42c"
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power-review/READING_RECEIPT.json",
+          "bytes": 5912,
+          "sha256": "fff594a451add1b0a09e7a8baf1be2f4ee257f25d5696b0377fd9d4b37b89d73"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/INPUT_BINDINGS.json",
+          "bytes": 1594,
+          "sha256": "94dd3179a4705d6f05a140cb7a58f97bb61a0ca8235502d67bc97b9dd2d232a3",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/VERIFICATION.json",
+          "bytes": 2094,
+          "sha256": "11c26aa51d83d08c8c974ea001661da05c150fa98212109bf946aec645eeba24",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/necessary-concordance-power/READING_NOTES.md",
+          "bytes": 7675,
+          "sha256": "c3b5c68d00b4b4d0f6c296fe72642ecc53287d17b2d37fe268aaf996bcc7d85d",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Necessary nonconflict does not alone establish the stronger nested productive premise. A valid S5 deduction from that premise is separate; productive-origin argument retains independent force.",
+      "limitations": [
+        "No universal plurality exclusion; no new code or Lean execution.",
+        "Amini is parallel criticism; Gordon supplies directly cited local criticism."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "oneness-return-20261009",
+      "author": {
+        "path": "t20-next-frontier-20261008/oneness-return-20261009/REPORT.md",
+        "bytes": 23804,
+        "sha256": "21362330512dff0ef5ca9f48a3b8311ab8b0dd952e97d3ae338af0bc2e118b68"
+      },
+      "classification": "SOURCE_RETURN_AND_PHILOSOPHICAL_APPRAISAL",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "ROOT_READING_AND_SEPARATE_RIVAL_AUDIT_NOT_BLANKET_FINAL_REVIEW",
+      "review_records": [
+        {
+          "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_TARGETED_RETURN_20261009.json",
+          "bytes": 1548,
+          "sha256": "01831f07aa7fd9ad6f445d4f2f9dce6a83b081777a01a1b0d1e8648afa906feb"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/oneness-return-20261009/INPUT_BINDINGS.json",
+          "bytes": 3764,
+          "sha256": "bc7daf060062907c514d36211847c397b12856a36535ca0794735d0c358b7698",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json",
+          "bytes": 4393,
+          "sha256": "1eceeb045675e4968919e2e22e45e7999e12feee2741ac66aa4f92100062c763",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Exact supplied source addresses concordance, cooperation, coalescence, intact powers and complete efficacy; later comparative eligibility defeats treating identity-preserving merger as the only route.",
+      "limitations": [
+        "Modern translation is provenance-only; no first reading or new independent textual witness.",
+        "The earlier strong root judgement is historical; latest reassessment governs."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "original-rival-warrant-audit-20261009",
+      "author": {
+        "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/AUDIT.md",
+        "bytes": 24972,
+        "sha256": "46c6db37bf86fbe531f877520c0416afc8a5b709ce09d729482c3ff0cd038454"
+      },
+      "classification": "INDEPENDENT_WARRANT_AND_READ_ONLY_CODE_AUDIT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "BOUNDED_AUDIT_NO_SEPARATE_FINAL_REPORT_REVIEW",
+      "review_records": [],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/INPUT_BINDINGS.json",
+          "bytes": 9594,
+          "sha256": "595f58daa694e0a6c045f9873a94269e6abd5c18c1e05ddca565a5f1a226cea3",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/original-rival-warrant-audit-20261009/VERIFICATION.json",
+          "bytes": 438,
+          "sha256": "20a83680bf978c6520a83b97e85795f986eca4eed4026dcf4968708484cbdc1c",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Separates implemented coactive candidate, actual original completion, intrinsic powers/acts and unwarranted metaphysical promotion.",
+      "limitations": [
+        "Read-only inspection, no executable replay.",
+        "Earlier Oneness input revision is declared but exact old bytes unavailable; current final Oneness report separately preserved."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "joint-manifestation-ontology",
+      "author": {
+        "path": "t20-next-frontier-20261008/joint-manifestation-ontology/RESULT.md",
+        "bytes": 21513,
+        "sha256": "080d4c2a1c46835d76fcf86345c6536b84eb7b8278855a0a7b4b99cd7b3258c9"
+      },
+      "classification": "PRIMARY_SOURCE_AND_ONTOLOGICAL_MAPPING_ASSESSMENT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "INITIAL_REPORT_INTERNAL_REVIEW_PLUS_FINAL_DELTA_READBACK",
+      "review_records": [
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/REVIEW.md",
+          "bytes": 11374,
+          "sha256": "3a2c0c130261202f1dc4e6feb610b71c7c1ae9eaa9d7802df911a3c4fe456ddc"
+        },
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/FINAL_READBACK.json",
+          "bytes": 993,
+          "sha256": "806130a8bc485af2ffc80d11a909e0a06fac421e12a13bf9fab1eefd11d4af9f"
+        },
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology-review/FINAL_READBACK.md",
+          "bytes": 2014,
+          "sha256": "544178053f70e06142bb576b903e91c90246bb2789d6021fcd73f8787a90d07e"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology/INPUT_BINDINGS.json",
+          "bytes": 2010,
+          "sha256": "25342148209cc7ac3eef2cfd28a8376c8fc31e42463ea3d2fde4fbeb59f2feca",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology/REVIEW_CORRECTIONS.json",
+          "bytes": 792,
+          "sha256": "639e2ddeb4e27060c6b7cfd0bcd6e898fa84dd0d7d9cdd1a07fc10421c732904",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology/VERIFICATION.json",
+          "bytes": 697,
+          "sha256": "7770ce02b25e225d42a4fd8c9ecf3c1afcf99798d1ade2b6cb3ce860bcffb6e8",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/joint-manifestation-ontology/READING_NOTES.md",
+          "bytes": 3740,
+          "sha256": "dd77ee7a794b212c82c6edf0ff3d821de5ce56adcdde6892d871402926adc085",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Co-manifestation receives a developed dispositional ontology; multiple partners and passive-power qualifications matter. Extension to perfected original agents remains an additional burden.",
+      "limitations": [
+        "No createdness inferred from emergent acts or first temporal events.",
+        "Prior report preserved; prior VERIFICATION.json is hash-only historical declaration."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "modal-psr-bridge",
+      "author": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/RESULT.md",
+        "bytes": 17505,
+        "sha256": "01dce257466aaa678520fe87d43e2cf08a2bb0f15e36c6020d4c6fd86e7759d6"
+      },
+      "classification": "WRITTEN_CONDITIONAL_H_P_LEMMA_AND_SOURCE_TRANSPORT_ASSESSMENT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "H_P_LEMMA_ONLY_INTERNAL_REVIEW",
+      "review_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-actualisation-review/REVIEW.md",
+          "bytes": 7492,
+          "sha256": "387fe80cea2031da974ffd426ad6d2b40db8d39b2bc07939ffbed7faa21add9d"
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-actualisation-review/INPUT_HASHES.json",
+          "bytes": 1120,
+          "sha256": "4a2c24485edd20d4143318dc355ec7654ad25a3a4b1b5f815a1ec0af1739e399"
+        },
+        {
+          "path": "t20-next-frontier-20261008/root-later-operations/MODAL_PSR_ROOT_READBACK_20261009.json",
+          "bytes": 756,
+          "sha256": "0410a6b80f345a3f9ce8a605c3b4d7bc9cbcac3d7277ee1113f0f854d1f37df0"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/modal-psr-bridge/INPUT_BINDINGS.json",
+          "bytes": 2222,
+          "sha256": "2512c4f5dae8a28a924217f890b02edbe3c20cfc993a409e0ac86cfc45d81851",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-psr-bridge/VERIFICATION.json",
+          "bytes": 3364,
+          "sha256": "60879e2104789a96b3610801de562d9b76c9e6360e01257d0ed57a722615f18c",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+          "bytes": 4823,
+          "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Explanation-inclusive totality conditionally actualises a possible explanation of that fixed totality; no S5 or fixed-explanans crossworld transport is required.",
+      "limitations": [
+        "Separate review covers ACTUALISATION_AUDIT.md/H_P and restricted-target diagnostic ONLY, not whole RESULT or all source interpretation.",
+        "Created-field restriction can lose closure; productive Completion, bearer Realisation and ContingencyNeed remain additional.",
+        "Gale–Pruss2002 full reply unavailable; do not adjudicate its inaccessible replies as absent."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "particular-reasons-comparison",
+      "author": {
+        "path": "t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md",
+        "bytes": 20685,
+        "sha256": "fc29f0403f42aec87c48455d7b078b4653dd13736fa7895c65d1060bd77e2080"
+      },
+      "classification": "SOURCE_COMPARISON_AND_WRITTEN_TRANSLATION_LIMIT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "AUTHOR_REPORT_AND_ROOT_TARGETED_RETURN_NO_SEPARATE_FINAL_REVIEW",
+      "review_records": [
+        {
+          "path": "t20-next-frontier-20261008/root-later-operations/PARTICULAR_REASONS_ARABIC_RETURN_20261009.json",
+          "bytes": 1663,
+          "sha256": "7334978b3faa406452b4082af05ff939742fb5eb17ba4b218b589f322766c0dc"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/particular-reasons-comparison/INPUT_SHA256.txt",
+          "bytes": 2783,
+          "sha256": "293df4cec491006034801a920a99b65d1efb09bdfbf4af32a4f297ffdf2b3829",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/particular-reasons-comparison/VERIFICATION.txt",
+          "bytes": 2099,
+          "sha256": "37382999719c4f7b62ee27798fe48d20d1b40e870f2653af1c92113492213b11",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md",
+          "bytes": 8553,
+          "sha256": "10f49803cd5cc3f5a9cbce542e75f2603cae9053d73a229438c8669be9b61c8e",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Appreciating reasons, operative basing, particular willing and completed production remain distinct. Pruss gives a basing answer; adequacy under a stronger complete-determiner standard remains disputed.",
+      "limitations": [
+        "Neither universal incompatibility nor original-peer concordance established.",
+        "No claim that uncreated intrinsic acts are creatures or foreign donations."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "complete-overdetermination-audit",
+      "author": {
+        "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REPORT.md",
+        "bytes": 20893,
+        "sha256": "0dc3642ac0c17b614fa87c8b513f6f9008272861693139b26b9c92893c276f08"
+      },
+      "classification": "DEFEASIBLE_PRIMARY_SOURCE_CAUSAL_EVIDENCE",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "SEPARATE_BOUNDED_ISSUE_REVIEW_NOT_DIGEST_ACCEPTANCE_OF_FINAL_REPORT",
+      "review_records": [
+        {
+          "path": "entire-production-rival-review/REVIEW.md",
+          "bytes": 14197,
+          "sha256": "857c19cfca028bb633622af08045d428271f024d15d4174e6e0729b5514f896e"
+        },
+        {
+          "path": "entire-production-rival-review/INPUT_HASHES.sha256",
+          "bytes": 580,
+          "sha256": "86712af71fd2f9c767e29c30cab411d3b45ca883918bdcef5c0f532f440df88f"
+        }
+      ],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/complete-overdetermination-audit/INPUT_BINDINGS.json",
+          "bytes": 4275,
+          "sha256": "96e5ca08801a65f824e45fc95efc24b3c6b79e14d89b2ca7fb30651fc61b995f",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json",
+          "bytes": 3374,
+          "sha256": "902d2d86f16d5cf9a3e9a56e07d0a0011f50910474e1ea32fd5c43d0b8436ded",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/complete-overdetermination-audit/VERIFICATION.json",
+          "bytes": 391,
+          "sha256": "30c5fc1df3d5b99376dbc5fac7e1e36feda62b012a07550ce064976326070097",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/complete-overdetermination-audit/REVISION_RECORD.json",
+          "bytes": 439,
+          "sha256": "86c9d396c0963eabda4ebf347cee2d0fb16f2ac36f3b63890715fa0ea2cc5441",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Schaffer supports two actual individually sufficient processes producing one whole designated effect in a nonexclusive effect-relative sense; spells/noncompositional cases cannot be reduced to partial components.",
+      "limitations": [
+        "No perfected plural unreceived originals or sole exhaustive dual provenance established.",
+        "Issue review binds its own source/input scope, not final REPORT digest. Final precision revision and prior report preserved."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    },
+    {
+      "id": "creator-uniqueness-bridge",
+      "author": {
+        "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/RESULT.md",
+        "bytes": 29381,
+        "sha256": "c81a634310e6f7696645f02e9ee885215e57f87919c0d965cf4c746e2a5f2408"
+      },
+      "classification": "WRITTEN_CONDITIONAL_ARGUMENT_AND_SOURCE_AUDIT",
+      "increment_status": "NEWLY_PRESERVED_AFTER_THIRTEENTH_CUTOFF",
+      "internal_review_scope": "AUTHOR_REPORT_NO_SEPARATE_FINAL_REVIEW",
+      "review_records": [],
+      "evidence_records": [
+        {
+          "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/OUTPUT_HASHES.sha256",
+          "bytes": 425,
+          "sha256": "5ec9eece077ae32a4320fb919cbcf8d50f5d37d3fc2a80b34c858fa10be6d9a9",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md",
+          "bytes": 4008,
+          "sha256": "d8344b771acb80d48a9a3689335e52e458049423ae4cb4bbcd4ce4d426574472",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        },
+        {
+          "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/INPUT_HASHES.sha256",
+          "bytes": 1267,
+          "sha256": "9d1e1b2cc29c1ad88e6ef11ca68ec9ccec1f0b4498048113fa1c6392bd4870c1",
+          "classification": "PRESERVED_AUTHORED_RESEARCH_OR_REVIEW",
+          "copied_unchanged": true
+        }
+      ],
+      "claim_summary": "Contingent nonexercise construction has positive force; explanation-to-robust-control and reciprocal-prevention-to-contradiction/regress bridges need independent warrant. Gellman leaves within-world uniqueness unproved.",
+      "limitations": [
+        "Reduced alternating-preemption control is not a full metaphysical countermodel.",
+        "Essential powers concession does not close disputed bridges.",
+        "No new executable, empirical or Lean proof credit."
+      ],
+      "inherited_evidence": "Source and dependency receipts govern; prior mathematical/research results not re-earned.",
+      "new_kernel_or_empirical_credit": false,
+      "metaphysical_promotion": "UNVERIFIED; no full original-plural countermodel and no universal nonduplication theorem."
+    }
+  ],
+  "sources": [
+    {
+      "id": "power-papers",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/necessary-concordance-power/PROVENANCE.json",
+        "bytes": 3404,
+        "sha256": "d2db5bce9158422dd8e59ff407a1869597cdca52a793765705c75d9c0f33897a"
+      },
+      "reading_classification": "Fresh selected Baillie–Hagen/Amini and bounded Gordon investigation in this increment; author and separate internal reviewer scopes remain distinct.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "supplied-oneness",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/oneness-return-20261009/SOURCE_RECEIPT.json",
+        "bytes": 4393,
+        "sha256": "1eceeb045675e4968919e2e22e45e7999e12feee2741ac66aa4f92100062c763"
+      },
+      "reading_classification": "Targeted rereading of exact supplied modern translation, not a new witness. PDF SHA 7e77171c…37aaf; printed17–40/PDF24–47 plus recorded visual pages.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "joint-powers",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/joint-manifestation-ontology/PROVENANCE.json",
+        "bytes": 2723,
+        "sha256": "74e234accafe8768a9a0ae2132ac7505d1593446284946841792f4daf5a480b3"
+      },
+      "reading_classification": "Fresh bounded Marmodoro accepted-manuscript reading; manuscript and final publication are not byte-authenticated as identical.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "psr-discussion",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+        "bytes": 4823,
+        "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+      },
+      "reading_classification": "Gale–Pruss1999 whole reported reading, Oppy2000 recovered manuscript, later Pruss selected sections. Not full LCA chapter. 2002 reply abstract/metadata ONLY.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "pruss-origin",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json",
+        "bytes": 1379,
+        "sha256": "87a4384d2638a57113cbc8627e3f756e9df1ecfd0c5f1f3c1d73727c9c503a76"
+      },
+      "reading_classification": "Successful HTTP origin acquisition supersedes earlier origin-access limitation, not 2002 reply limitation.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "particular-reasons",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md",
+        "bytes": 8553,
+        "sha256": "10f49803cd5cc3f5a9cbce542e75f2603cae9053d73a229438c8669be9b61c8e"
+      },
+      "reading_classification": "Further bounded Pruss and inherited classical Arabic contextual returns; suspect electronic text not used as premise.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "causal-overdetermination",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/complete-overdetermination-audit/SOURCE_READS.json",
+        "bytes": 3374,
+        "sha256": "902d2d86f16d5cf9a3e9a56e07d0a0011f50910474e1ea32fd5c43d0b8436ded"
+      },
+      "reading_classification": "Fresh Schaffer full text and Hall targeted published chapter; earlier Hall draft only screened.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    },
+    {
+      "id": "creator-uniqueness",
+      "receipt": {
+        "path": "t20-next-frontier-20261008/creator-uniqueness-bridge/SOURCE_BINDINGS.md",
+        "bytes": 4008,
+        "sha256": "d8344b771acb80d48a9a3689335e52e458049423ae4cb4bbcd4ce4d426574472"
+      },
+      "reading_classification": "Pruss §5.5 targeted return and Gellman2000 complete seven-page web extraction; no publisher PDF-byte identity or verified visual formula reading.",
+      "bodies": "INTENTIONALLY_OMITTED_PROVENANCE_ONLY",
+      "fresh_credit_from_archive_assembly": false
+    }
+  ],
+  "root_state": {
+    "latest": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+      "bytes": 8405,
+      "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+    },
+    "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+    "historical_positive_judgement": {
+      "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+      "bytes": 5862,
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+    },
+    "earlier_not_silently_renewed": true,
+    "historical_frontier_record": {
+      "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+      "bytes": 1820,
+      "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+    },
+    "frontier_status_note": "The 01:39 in-progress record and its next-operation text are historical; latest root reassessment follows the completed uniqueness audit.",
+    "no_full_metaphysical_plural_original_countermodel": true,
+    "no_universal_nonduplication_theorem": true
+  },
+  "source_and_dependency_registry": "PACKING/REVIEW_AND_DEPENDENCY_BINDINGS.json",
+  "prior_identity_registry": "COMPONENT_AND_PRIOR_IDENTITIES.json",
+  "unavailable_source_work": {
+    "citation": "Gale and Pruss, A response to Oppy, and to Davey and Clifton, Religious Studies38(1)(2002),89–99, DOI10.1017/S0034412501005923",
+    "status": "ABSTRACT_AND_METADATA_ONLY; FULL_BODY_UNAVAILABLE",
+    "no_unanswered_objection_inference": true,
+    "receipt": {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json",
+      "bytes": 4823,
+      "sha256": "94887ef5d27b5ca50115ccc9841e5f0f16833f0b80781b63ce553d3e75802f26"
+    }
+  },
+  "boundaries": {
+    "classification": "FOURTEENTH_INTERMEDIATE_ADDITIVE_PRESERVATION_ONLY",
+    "checkpoint_ordinal": 14,
+    "assembly_cutoff_utc": "2026-10-09T01:54:50.859419+00:00",
+    "membership_cutoff": [
+      "necessary-concordance-power",
+      "oneness-return-20261009",
+      "original-rival-warrant-audit-20261009",
+      "joint-manifestation-ontology",
+      "modal-psr-bridge",
+      "particular-reasons-comparison",
+      "complete-overdetermination-audit",
+      "creator-uniqueness-bridge"
+    ],
+    "root_assessment_boundary": "Root reassessment written through 2026-10-09 01:46 UTC; user delivery 01:47, per parent handoff. Assembly time is not a research-duration measure.",
+    "excluded_active_or_later": [
+      "epistemic-psr-warrant",
+      "Every unlisted ongoing or later investigation, regardless of timestamp"
+    ],
+    "T20_status": "ACTIVE",
+    "historical_six_hour_active_compliance": "UNVERIFIED",
+    "owner_acceptance": false,
+    "final_integration": false,
+    "closure": false,
+    "new_research_duration_credit_seconds": 0,
+    "new_source_reading_credit": false,
+    "new_lean_execution": false,
+    "new_empirical_verification": false,
+    "prior_science_rerun": false,
+    "prior_archives_mutated": false,
+    "current_root_judgement": {
+      "latest": {
+        "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_AFTER_REDUNDANCY_20261009.md",
+        "bytes": 8405,
+        "sha256": "4f982bebd1c4add817a93a1445407a31374dc9f42d056e987bb14f816f17d9d1"
+      },
+      "latest_status": "PROVISIONAL_PREFERENCE_ONE_ACTUAL_COMMON_CREATOR_WITH_JUDGEMENT_WITHHELD_ON_UNIVERSAL_EXCLUSION",
+      "historical_positive_judgement": {
+        "path": "t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+        "bytes": 5862,
+        "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+      },
+      "earlier_not_silently_renewed": true,
+      "historical_frontier_record": {
+        "path": "t20-next-frontier-20261008/root-later-operations/COMMON_SOURCE_REASSESSMENT_FRONTIER_20261009.json",
+        "bytes": 1820,
+        "sha256": "d73ccdaae8e7d976611fadfd65c660bda58285a458412fb85fb08c944f0b81f6"
+      },
+      "frontier_status_note": "The 01:39 in-progress record and its next-operation text are historical; latest root reassessment follows the completed uniqueness audit.",
+      "no_full_metaphysical_plural_original_countermodel": true,
+      "no_universal_nonduplication_theorem": true
+    },
+    "provenance_limits": "Intentional omitted external source bodies are not verification failures. Two unavailable historical revisions are separate retained negative provenance evidence."
+  }
+}

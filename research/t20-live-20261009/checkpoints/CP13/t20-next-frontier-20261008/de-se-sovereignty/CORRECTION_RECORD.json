@@ -1,0 +1,27 @@
+{
+  "corrections": [
+    "Result summary now explicitly marks semantic scope and unverified basing",
+    "Theorem/corollary does not claim practical-basing preservation or construction",
+    "Section4 distinguishes code-backed owned agency/reason-to-choice from the additional action-guiding de se interpretation",
+    "Conclusion first-person role statement made conditional",
+    "Metaphysical relation explicitly lifted keeping same bearer; @ shifts restricted to designated persistent G"
+  ],
+  "new_toy_or_code": false,
+  "preserved": [
+    "Inherited own reason-to-choice credit",
+    "Conditional symmetric means rationale",
+    "Same retained productive model and its cognition interpretation",
+    "Positive source original-perfection appraisal",
+    "Separate recognition/conformance theorem with independent norm premises"
+  ],
+  "previous_manifest": "history/MANIFEST-before-basing-clarification.json",
+  "previous_report": "history/RESULT-before-basing-clarification.md",
+  "previous_report_sha256": "b67a08c6750baa1b2bfb81e9b79bbd5ceb81e7a36e711c30decb86b93293aa91",
+  "review_feedback": "Exact code earns self-indexed ends, owned acts, independent q-policy and factive forecasts, but does not establish that recognized de se knowledge is action-guiding. Distinguish semantic conservativity from an additional practical-basing interpretation.",
+  "reviewer": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "status": "Scope correction after independent review; previous author draft preserved, not governing",
+  "verified_evidence": [
+    "own_policy(original,q) returns original.issue(goal=q,setting=q) without knowledge/forecast input",
+    "ordinary_choices attaches End to independently selected exercise"
+  ]
+}

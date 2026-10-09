@@ -1,0 +1,41 @@
+{
+  "checked_at_utc": "2026-10-09T02:23:23Z",
+  "toolchain": "Lean 4.19.0 (installed toolchain; import Std; no Mathlib or installation)",
+  "status": "passed",
+  "checks": [
+    {
+      "source": "particular-explanans-bridge-audit/RestrictedBridgeControl.lean",
+      "command": "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean particular-explanans-bridge-audit/RestrictedBridgeControl.lean",
+      "exit_code": 0,
+      "log": "particular-explanans-bridge-audit/lean-check.log",
+      "sorryAx_present": false
+    },
+    {
+      "source": "particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "command": "t20-next-frontier-20261008/formal-identification/toolchain/lean-4.19.0-linux/bin/lean particular-explanans-bridge-audit/BridgeRepairs.lean",
+      "exit_code": 0,
+      "log": "particular-explanans-bridge-audit/repair-check.log",
+      "sorryAx_present": false
+    }
+  ],
+  "finite_scope": "One three-fact control and optional universal self-edge; every subset, fact tuple, and applicable axiom instance. No arbitrary model census.",
+  "claim_boundary": "Relational/classificatory independence only; no semantic validation of Full as genuine explanation and no metaphysical counterexample.",
+  "additional_proofs": [
+    "Restricted bridge with reverse externality",
+    "Restricted bridge with no basic proper-part self-explanation",
+    "Atomicity of a total-all-facts explainer under No Extended Circles",
+    "Stronger unrestricted supernatural route conditional on a particular constituent"
+  ],
+  "dependencies": {
+    "finite_checks": [
+      "propext"
+    ],
+    "repair_proofs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "wrote_only": "particular-explanans-bridge-audit/",
+  "no_integration_or_closure": true
+}

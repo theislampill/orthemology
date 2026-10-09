@@ -1,0 +1,72 @@
+{
+  "author_artifacts": [
+    {
+      "bytes": 15546,
+      "path": "RESULT.md",
+      "sha256": "827b5e66f8bf689ed4c0c4de525163b2d14fde3a2c23f25ecc297b53daee8bc3",
+      "snapshot": "author_snapshot/RESULT.md"
+    },
+    {
+      "bytes": 2210,
+      "path": "EXACT_CONTROLS.md",
+      "sha256": "b30ea170c53b94cc6a8bf9f41cae0fd4840965d4519542c006c94506017b888c",
+      "snapshot": "author_snapshot/EXACT_CONTROLS.md"
+    },
+    {
+      "bytes": 6901,
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "439a9c0e893dbee30a2e24ea555788251e76fee7e5dd060cfa88049156edf8b6",
+      "snapshot": "author_snapshot/SOURCE_AUDIT.md"
+    },
+    {
+      "bytes": 11953,
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "d295a32a9051db9540980bda48781dcd10e66a3bf9a6ec453f2f976edbe8eb17",
+      "snapshot": "author_snapshot/SOURCE_BINDINGS.json"
+    },
+    {
+      "bytes": 4780,
+      "path": "exact_controls.py",
+      "sha256": "9ac147575d35266debd88dfd23d91cb2f96cded9823ac85c0e5a109275eea11c",
+      "snapshot": "author_snapshot/exact_controls.py"
+    },
+    {
+      "bytes": 1076,
+      "path": "results/exact_controls.json",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "snapshot": "author_snapshot/results/exact_controls.json"
+    },
+    {
+      "bytes": 1076,
+      "path": "results/exact_controls.log",
+      "sha256": "5720a0aab8d45828c14245d89381348af73842e6a44ff7cadd9e7dc6771ebff1",
+      "snapshot": "author_snapshot/results/exact_controls.log"
+    }
+  ],
+  "author_replay_assertions": 36604,
+  "authority": "No protected edits, integration, physical certification, owner acceptance or T20 closure.",
+  "blocking_findings": [],
+  "independent_inventory_checks": 2281,
+  "independent_support_checks": 16865,
+  "review_artifacts": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "f3e84991aaa17f1438df141f7227ab6a763d67d4a5c28fb1b67575da14dcaf71"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "cb032a4ca085796e45fc7517d08a02da476a3c78ff46fead87700f9b1c35ea8e"
+    },
+    {
+      "path": "INDEPENDENT_CONTROLS.json",
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c"
+    },
+    {
+      "path": "INDEPENDENT_REPLAY.log",
+      "sha256": "59c86afedadd911205bb5268d65103c372c6deee908df716ef9df8e4e9de0d3c"
+    }
+  ],
+  "review_kind": "Independent adversarial mathematical proof audit and exact controls",
+  "scope": "Complete exact-population observational-equivalence classification in the fixed finite unguarded one-effect coordinate-calibration product model.",
+  "status": "PASS"
+}

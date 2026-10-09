@@ -1,0 +1,52 @@
+{
+  "baseline-BernoulliAssignments": {
+    "exit_code": 0,
+    "source_sha256": "e6dd1e4814bb0bb6c977cd3b6e4ee600e8d4cdfeb5c4564148d3bb5a38eb8eba",
+    "log": "results/baseline-BernoulliAssignments.log"
+  },
+  "baseline-HistogramGrouping": {
+    "exit_code": 0,
+    "source_sha256": "07de3ab146e22f88555edf16cafd96cb1fd7547935f640f64c790861ceed42dc",
+    "log": "results/baseline-HistogramGrouping.log"
+  },
+  "baseline-Model": {
+    "exit_code": 0,
+    "source_sha256": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+    "log": "results/baseline-Model.log"
+  },
+  "baseline-GenerativePanels": {
+    "exit_code": 0,
+    "source_sha256": "086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9",
+    "log": "results/baseline-GenerativePanels.log"
+  },
+  "reversed-success-gate": {
+    "exit_code": 1,
+    "source_sha256": "10c2e3918cfc8595df1a9dcd276ab8c33ad47edc375d28bf1956cc38b92e2244",
+    "log": "results/reversed-success-gate.log"
+  },
+  "restored-success-gate": {
+    "exit_code": 0,
+    "source_sha256": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+    "log": "results/restored-success-gate.log"
+  },
+  "altered-calibration-model": {
+    "exit_code": 0,
+    "source_sha256": "d3acbb4a9bacdf1655f0796874cbf9216fb8697207c58ad196ff41a25a0eaf31",
+    "log": "results/altered-calibration-model.log"
+  },
+  "altered-calibration-panel": {
+    "exit_code": 1,
+    "source_sha256": "086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9",
+    "log": "results/altered-calibration-panel.log"
+  },
+  "restored-calibration-model": {
+    "exit_code": 0,
+    "source_sha256": "878e4e82b13cb572f8d5ce838c10efd930acb35cfdd2b44915c22bb19980769e",
+    "log": "results/restored-calibration-model.log"
+  },
+  "restored-calibration-panel": {
+    "exit_code": 0,
+    "source_sha256": "086ec54ea878df015b5a533c77d8b93fc440cad9b68c68e349388bbd376581e9",
+    "log": "results/restored-calibration-panel.log"
+  }
+}

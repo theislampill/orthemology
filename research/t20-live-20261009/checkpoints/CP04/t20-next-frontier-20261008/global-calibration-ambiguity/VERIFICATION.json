@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-08T13:15:48.915045+00:00",
+  "status": "passed",
+  "proof_hashes": {
+    "RESULT.md": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+    "POLYNOMIAL_EFFICIENCY_APPENDIX.md": "4242d8cbcc9fd576266e2ee01f902b45c93e6701b5c01d07a5a0c3909f97f0f4"
+  },
+  "review_manifest_sha256": "fa053545ba06d46656455e45824741915679e36b3afe16e8bb76aaf278911e05",
+  "nested_receipt_and_review_manifest_bindings_verified": 37,
+  "unique_nested_paths_verified": 20,
+  "immediate_input_bindings_verified_unchanged": 4,
+  "main_author_assertions": 14125,
+  "appendix_author_assertions": 33840,
+  "main_independent_assertions": 17480,
+  "appendix_independent_assertions": 22073,
+  "scope": "Artifact identities, diagnostic status and input preservation only; general mathematics rests on proofs and scoped independent reviews. No integration or T20 closure."
+}

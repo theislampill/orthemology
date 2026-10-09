@@ -1,0 +1,90 @@
+{
+  "checks": {
+    "all_18_inputs_unchanged": true,
+    "decisive_primary_pages_34_39_visually_checked": true,
+    "json_parses": true,
+    "report_reread_complete": true
+  },
+  "inputs": [
+    {
+      "path": "complete-explanation-source-20261009/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "complete-explanation-source-20261009/SOURCE_LEDGER.json",
+      "unchanged": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "unchanged": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "unchanged": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "unchanged": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "unchanged": true
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "direct-anti-brute-return/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "particular-agency-rival-20261009/oconnor-power/REPORT.md",
+      "unchanged": true
+    },
+    {
+      "path": "direct-anti-brute-return/sources/dar3-item593-body.txt",
+      "unchanged": true
+    },
+    {
+      "path": "brute-contingent-source-return/read-selections/isfahaniyya-L181-L187.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/productive-sufficiency-scope/inherited/OriginalBearerBridge.lean",
+      "unchanged": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "unchanged": true
+    },
+    {
+      "path": "actual-original-production-residual-20261009/REPORT.md",
+      "unchanged": true
+    }
+  ],
+  "limits": [
+    "Self-verification only; no independent review claimed",
+    "No Lean compilation or new model",
+    "Source-critical and philosophical argument, not a proof of premise truth or modal possibility"
+  ],
+  "recorded_at_utc": "2026-10-09T09:33:47.784850+00:00",
+  "report_sha256": "aab7d5783771c15775e6de2fad644ea7867de9a2678eb48cc1ca9249fafddfe1",
+  "status": "BOUNDED_COMPARISON_COMPLETE"
+}

@@ -1,0 +1,199 @@
+{
+  "status": "all finite controls passed",
+  "retained_source": "recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+  "retained_sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+  "independent_setting_output_permutation_triples_checked": 216,
+  "coactive_preserving_triples": 18,
+  "full_idle_including_preserving_triples": 6,
+  "fixed_output_coactive_preserving_triples": 3,
+  "fixed_output_full_preserving_triples": 1,
+  "contexts": [
+    {
+      "q": 0,
+      "active_operational_profiles": 9,
+      "goal_achieving_profiles": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "exchange_fixed": [
+        [
+          0,
+          0
+        ]
+      ],
+      "full_algebraic_stabilizer_size": 4,
+      "common_fixed": [
+        [
+          0,
+          0
+        ]
+      ],
+      "local_policy_settings": [
+        0,
+        0
+      ],
+      "individual_entire_providers": 0
+    },
+    {
+      "q": 1,
+      "active_operational_profiles": 9,
+      "goal_achieving_profiles": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "exchange_fixed": [
+        [
+          1,
+          1
+        ]
+      ],
+      "full_algebraic_stabilizer_size": 4,
+      "common_fixed": [
+        [
+          1,
+          1
+        ]
+      ],
+      "local_policy_settings": [
+        1,
+        1
+      ],
+      "individual_entire_providers": 0
+    },
+    {
+      "q": 2,
+      "active_operational_profiles": 9,
+      "goal_achieving_profiles": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "exchange_fixed": [
+        [
+          2,
+          2
+        ]
+      ],
+      "full_algebraic_stabilizer_size": 4,
+      "common_fixed": [
+        [
+          2,
+          2
+        ]
+      ],
+      "local_policy_settings": [
+        2,
+        2
+      ],
+      "individual_entire_providers": 0
+    }
+  ],
+  "rejected_anti_diagonal_shifts": [
+    {
+      "shift": 1,
+      "coactive_law_preserved": true,
+      "full_law_preserved": false,
+      "failed_solo_cases": [
+        [
+          null,
+          0
+        ],
+        [
+          null,
+          1
+        ],
+        [
+          null,
+          2
+        ],
+        [
+          0,
+          null
+        ],
+        [
+          1,
+          null
+        ],
+        [
+          2,
+          null
+        ]
+      ]
+    },
+    {
+      "shift": 2,
+      "coactive_law_preserved": true,
+      "full_law_preserved": false,
+      "failed_solo_cases": [
+        [
+          null,
+          0
+        ],
+        [
+          null,
+          1
+        ],
+        [
+          null,
+          2
+        ],
+        [
+          0,
+          null
+        ],
+        [
+          1,
+          null
+        ],
+        [
+          2,
+          null
+        ]
+      ]
+    }
+  ],
+  "abstract_C3_fibre_common_fixed_choices": [],
+  "selected_token_stabilizer_sizes": [
+    1,
+    1,
+    1
+  ],
+  "odd_cyclic_sizes_checked": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+  ],
+  "scope": "Conditional structural selection and local execution only; no normative sufficiency, knowledge, original-agent eligibility, or individual whole actual efficacy is established."
+}

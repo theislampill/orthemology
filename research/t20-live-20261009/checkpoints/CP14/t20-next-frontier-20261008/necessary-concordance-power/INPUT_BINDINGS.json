@@ -1,0 +1,40 @@
+{
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/RESULT.md",
+      "sha256": "e1e958cafbc550ee457ba21ceb98512dee56deda34bf6a2e506bd887950c5a8d",
+      "bytes": 29525
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/INPUT_BINDINGS.json",
+      "sha256": "856121ebb6874d312bcbfba205a117034d444117c94cc64724a815c02c77132f",
+      "bytes": 8692
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "sha256": "b0447ae60a4a6e36660b727f40e33a3e22d274643d6e01406a38a18a29e943db",
+      "bytes": 13802
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+      "bytes": 19131
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256": "188c41199678d1e512d3ec4570ff71d455b43ebebe9159a6d85f66e524900040",
+      "bytes": 17870
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256": "0f955a47c0e36ce23c686f07f7014107e497efe54b54f21903205ff8ca42cfc3",
+      "bytes": 19590
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256": "352032388d0420655ac2a2b015a47b510e04b26d813f0dab94002bd262fb74c8",
+      "bytes": 123088
+    }
+  ],
+  "scope": "See READING_NOTES.md. No inherited tests were replayed; no repository currentness or source adoption reverified."
+}

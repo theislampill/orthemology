@@ -1,0 +1,142 @@
+{
+  "classification": "INTERMEDIATE_RESEARCH_CHECKPOINT",
+  "date_utc": "2026-10-08",
+  "T20_status": "ACTIVE",
+  "owner_approval": false,
+  "final_integration": false,
+  "new_pull_request": false,
+  "historical_credit_policy": "Original reports and credit limits preserved; later addenda reconcile history without rewriting frozen first reports. No first discovery credit for known universal-dependence route.",
+  "components": [
+    {
+      "component": "nonabsorption",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "db226068f59ed1fcc9760427125aaf2b1693c98ea1383c90a92cbec82659bde5",
+      "addenda": [
+        {
+          "path": "law-ground/EVIDENCE.json",
+          "sha256": "df18abcb23ad4f25d7a6c876ba6472effd6d7d240367871aef78ac38cd098c2c"
+        },
+        {
+          "path": "law-ground/FRONTIER_DISPOSITION.md",
+          "sha256": "0e5f933251592e955ffa689b8699292e7a40c08d2c7eee47ff77eb13c57951a6"
+        }
+      ]
+    },
+    {
+      "component": "wise-determination",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "cfc476bbf72ef786a3da549091186d59ddc0c413c1e3806d3ef254c1afbb2195"
+    },
+    {
+      "component": "bearer-eligibility",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "428c772dec2742d0104273adb8220d8de4e73a5e1798e99108eedcb22af6dd7a",
+      "addenda": [
+        {
+          "path": "domain-addendum/MANIFEST.json",
+          "sha256": "254dcdf815301548c3f8fbe23de4a6d5561b255af28f9b0f79b27eb60f27d712"
+        }
+      ]
+    },
+    {
+      "component": "eligibility-review",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "06eb4d5dc48f92097604eaa4564752fd653fb13e06323803bb13af4929ff9700"
+    },
+    {
+      "component": "veracity-crosscheck",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "2cf7508c54f0ebad4e2fc64717950cfdf2938e01c61e0d8593e9051d7d7eed71",
+      "addenda": [
+        {
+          "path": "t19-status-addendum/MANIFEST.json",
+          "sha256": "195b81d19e6936bfb66f4e729786c957c96ccaba0d86f5999a0f2aad86ceae24"
+        }
+      ]
+    },
+    {
+      "component": "productive-identifiability",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a"
+    },
+    {
+      "component": "single-calibration-design",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "MANIFEST.json",
+      "binding_sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831"
+    },
+    {
+      "component": "identification-review",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "REVIEW_RECEIPT.json",
+      "binding_sha256": "eb2da21c76656856175025171ece671516e181f464fd100a693a4038c0ec0e11"
+    },
+    {
+      "component": "single-calibration-review",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "REVIEW_RECEIPT.json",
+      "binding_sha256": "997074312b51ce49c32a7d711f382cf64ec38e93580287a0153e707d88ec9a9e"
+    },
+    {
+      "component": "formal-identification",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "SOURCE_MANIFEST.sha256",
+      "binding_sha256": "df46b57947983bd89dac42fc17c235f6696089e0319923162c309aff451eaa1d"
+    },
+    {
+      "component": "formal-identification-review",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "REVIEW_RECEIPT.json",
+      "binding_sha256": "4468f69f8fae54d4564fc7cd4377b891e2485eac059acda8230883d36555c4bf"
+    },
+    {
+      "component": "formal-route-probability",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "SOURCE_MANIFEST.sha256",
+      "binding_sha256": "23eeafa2ed7f10a03beece20edd570af66e01cc9dc932ac4a4a1255eebd5b38e"
+    },
+    {
+      "component": "formal-route-probability-review",
+      "status": "FROZEN_INCLUDED",
+      "binding_file": "REVIEW_RECEIPT.json",
+      "binding_sha256": "aab630dda972ab9b944dd52c33cc80707f5a4dd4fa8a527b7c09546a2c54f451"
+    }
+  ],
+  "excluded_work": [
+    {
+      "component": "noise-aware-calibration",
+      "status": "EXCLUDED_UNFINISHED_AT_CHECKPOINT_SCOPE_FREEZE",
+      "later_updates_incorporated": false
+    },
+    {
+      "component": "noise-aware-review",
+      "status": "EXCLUDED_UNFINISHED_AT_CHECKPOINT_SCOPE_FREEZE",
+      "later_updates_incorporated": false
+    },
+    {
+      "component": "warrant-standard-review",
+      "status": "EXCLUDED_UNFINISHED_AT_CHECKPOINT_SCOPE_FREEZE",
+      "later_updates_incorporated": false
+    }
+  ],
+  "delivered_lean_archives": [
+    {
+      "path": "t20-next-frontier-20261008/formal-identification/deliverable/calibrated-identification-lean4.19.tar.gz",
+      "bytes": 11599,
+      "sha256": "093bb56dfe422e47a8e83308795119accf65fe9a8be83efa20606ecb8514a7e4",
+      "source_only": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/formal-route-probability/deliverable/finite-route-generative-identification-lean4.19.tar.gz",
+      "bytes": 21991,
+      "sha256": "d39d686258e3b51a9a925df6f3b37f84d7cf42440f5bb3a54076f7d06777e209",
+      "source_only": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-08T15:36:18.217720+00:00",
+  "scope": "Explicit source-to-formal semantic guard requested after author freeze",
+  "author_manifest": {
+    "path": "MANIFEST.json",
+    "sha256": "3ef066a690d014d22bfafb4cadb40e3506ead0c2f576b98345ab42da46af0661",
+    "bytes": 1809
+  },
+  "files": [
+    {
+      "path": "SEMANTIC_GUARD.md",
+      "sha256": "0fbd40f05cb115621d367a220eb1bdc754a218e6fd6b84f8d5e4c63af8dbd924",
+      "bytes": 1792
+    }
+  ]
+}

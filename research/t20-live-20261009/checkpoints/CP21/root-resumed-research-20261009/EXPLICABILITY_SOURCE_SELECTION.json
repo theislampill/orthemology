@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-10-09T09:34:13.837773+00:00",
+  "purpose": "Follow OConnor2013 n16 strongest actual critics rather than criticism already answered.",
+  "Newlands2010": {
+    "title": "Theism and Ultimate Explanation \u2013 Timothy OConnor",
+    "doi": "10.1111/j.1467-9213.2010.659_10.x",
+    "official_publisher_url": "https://academic.oup.com/pq/article-abstract/60/239/439/1499800",
+    "extent": "Publisher metadata and opening extract only; full review not read.",
+    "metadata_discrepancy": "OUP439\u2013442, Wiley438\u2013442; exactfirstpage not resolved by unavailable fulltext.",
+    "author_site_checked": "https://samnewlands.com/publications.html",
+    "result": "Publication catalogue has no review fulltext link; CV lists review. No contact or paid acquisition.",
+    "credit": "Quoted objection only inherited through OConnor2013, no independent full review verification."
+  },
+  "DellaRocca2010": {
+    "selection": "PSR is expressly challenged in same note. A bounded full-primary-reading comparison assigned after localrecordscreen found only incidental citations.",
+    "status": "IN_PROGRESS; no result credit yet"
+  },
+  "Nakamura2026": {
+    "url": "https://arxiv.org/abs/2605.02331",
+    "version": "v2",
+    "root_reading": "Abstract, README, manuscript sections1.1\u20131.3 only; not full paper or formal code.",
+    "repository": "https://github.com/Nakammura/spinoza-ethica-lean",
+    "selection": "Directly bears on PSR, numericalidentity, all/any sharedattribute scope and proof-semantic distinction. Fullpaper and targetedreadonly code check assigned; no replay or transfer claimed.",
+    "date_issue": "arXiv versionMay19 while HTMLheaderAugust24; verify rather than guess.",
+    "no_execution": true
+  },
+  "scope": "Additive research selection/access ledger; T20 ACTIVE, no integrations or source-body redistribution"
+}

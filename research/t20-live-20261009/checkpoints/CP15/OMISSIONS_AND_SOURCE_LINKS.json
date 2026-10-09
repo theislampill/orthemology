@@ -1,0 +1,233 @@
+{
+  "intentional_source_body_omissions": [
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completed-web-continuous.txt",
+      "bytes": 77099,
+      "sha256": "2e98333c6f1c5bb91e940fd90150eb43490ed9477a08208f04a6915728306ca2",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completion-middle.json",
+      "bytes": 30929,
+      "sha256": "77081caec3e36580de99e7b0c522a9fa703a0f978af21d84f9217262234669bd",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-completion-tail.json",
+      "bytes": 30511,
+      "sha256": "0b12a54fbeac9ebe877bc682cf199f61c61d23af2b669a2dbd14c4fe426ee2e6",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web-replies.json",
+      "bytes": 31798,
+      "sha256": "fc0517a83c7a103a6eb6fb04107bca10a420e4c0953ea08de09115e79db41003",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web-replies.txt",
+      "bytes": 31269,
+      "sha256": "5c7b4805fe7d484dafa975b80233641ca3bb477ccc9d9f4b24441f23649b979d",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web.json",
+      "bytes": 29847,
+      "sha256": "151547de4d1ae29760a5978619afb0a9690cf12b0f3fc5149390665a9901ae67",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons1997-web.txt",
+      "bytes": 29355,
+      "sha256": "63a3715661732833c53194b4710955433f8b5a228ac93061b1095b6219c44ef2",
+      "included": false,
+      "category": "COPYRIGHTED_1997_SOURCE_BODY",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-head.json",
+      "bytes": 30395,
+      "sha256": "a5b208b556d30425c7d18b0c52ebcd8e9dfdb8921755f0d06699b75a950b41dc",
+      "included": false,
+      "category": "REDUNDANT_RAW_WEB_CAPTURE_OR_API_WRAPPER",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-middle.json",
+      "bytes": 30411,
+      "sha256": "b386233de6310098f9096b19f9785ac224aa04cd388d3d4dc8f0ff673892cff5",
+      "included": false,
+      "category": "REDUNDANT_RAW_WEB_CAPTURE_OR_API_WRAPPER",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web-tail.json",
+      "bytes": 30626,
+      "sha256": "d60df4e867ee9bb8e5a29915449ea3e470a0cac32a119a20e7d09959913d170a",
+      "included": false,
+      "category": "REDUNDANT_RAW_WEB_CAPTURE_OR_API_WRAPPER",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web.json",
+      "bytes": 30315,
+      "sha256": "3db65a99e40ca573ae2e11f926ad9de81628e3cc15f999636b491039ad8dc212",
+      "included": false,
+      "category": "REDUNDANT_RAW_WEB_CAPTURE_OR_API_WRAPPER",
+      "verification_failure": false
+    },
+    {
+      "path": "epistemic-psr-warrant/sources/koons2020-web.txt",
+      "bytes": 29929,
+      "sha256": "5f45aa237cb36167587dbe516f01b4c8467c988bba76590d7ab577f2a0fa19ac",
+      "included": false,
+      "category": "REDUNDANT_RAW_WEB_CAPTURE_OR_API_WRAPPER",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/dar013.html",
+      "bytes": 384066,
+      "sha256": "56b55f4c6ef0658cb0778cd76256609793476c54d64d98f4afac5eda29628b6e",
+      "included": false,
+      "category": "WEBSITE_HTML_AND_BOILERPLATE",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/dar013.txt",
+      "bytes": 381035,
+      "sha256": "6d2f2ac5763816ebe70e2cc83de807a31c9c0c54b5fa6bc3fcc4491e7f6c1b79",
+      "included": false,
+      "category": "UNSELECTED_LONG_PUBLIC_DOMAIN_EXTRACTION; relevant exact read selections included",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj1-item96.html",
+      "bytes": 235494,
+      "sha256": "7305c57a1b94d1fe8e5f48c77065693fdfb91d82adb555e125653242df5b8086",
+      "included": false,
+      "category": "WEBSITE_HTML_AND_BOILERPLATE",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/minhaj2-item156.html",
+      "bytes": 336830,
+      "sha256": "9f2307b09b175d1b18313ed82175a01e311f3bb52de9775812bd8e1ec96227c5",
+      "included": false,
+      "category": "WEBSITE_HTML_AND_BOILERPLATE",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/safadiyya002.html",
+      "bytes": 371990,
+      "sha256": "713e0b8fadff520d96d3bee97339f40ffe82401293d8caeffc8fbd50a79edb12",
+      "included": false,
+      "category": "WEBSITE_HTML_AND_BOILERPLATE",
+      "verification_failure": false
+    },
+    {
+      "path": "source-noncirculation-feedback/sources/safadiyya002.txt",
+      "bytes": 370578,
+      "sha256": "e3d23531360bb87eddf8d5365a936f40202f62fab624128bd2c3d16962ba9783",
+      "included": false,
+      "category": "UNSELECTED_LONG_PUBLIC_DOMAIN_EXTRACTION; relevant exact read selections included",
+      "verification_failure": false
+    }
+  ],
+  "omission_is_verification_failure": false,
+  "source_scope_records": [
+    {
+      "id": "koons1997",
+      "scope_records": [
+        {
+          "path": "epistemic-psr-warrant/READING_LEDGER.json",
+          "bytes": 5762,
+          "sha256": "f1d6b069549808b3811b73ab8c2af27f77311a23828dee71d687a2537fdb1787"
+        },
+        {
+          "path": "epistemic-psr-warrant/READING_COMPLETION_LEDGER.json",
+          "bytes": 3247,
+          "sha256": "161be893897be92f6a84f93aa31f1359d11cf5a4f6912c656524528958a3181a"
+        }
+      ],
+      "body_status": "INTENTIONALLY_OMITTED_COPYRIGHTED_MANUSCRIPT",
+      "reading": "Same retained author manuscript now textually complete; initial targeted ledger unchanged. No journal collation or diagram visual authentication."
+    },
+    {
+      "id": "koons-pruss2020-2021",
+      "witness": {
+        "path": "epistemic-psr-warrant/sources/koons-pruss2020-web-continuous.txt",
+        "bytes": 72314,
+        "sha256": "c8af12ab5a41bd6258b5deeeada881adfb2bb93791956f9aeccb0446f75b212b"
+      },
+      "authors": [
+        "Robert C. Koons",
+        "Alexander R. Pruss"
+      ],
+      "title": "Skepticism and the principle of sufficient reason",
+      "doi": "10.1007/s11098-020-01482-3",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution_record": "SOURCES_LICENSES.md",
+      "reading": "Exact complete plain-text reading witness; extraction/OCR artifacts and service labels retained. Online2020/journal2021. No new source read during packaging."
+    },
+    {
+      "id": "classical-arabic",
+      "scope_records": [
+        {
+          "path": "source-noncirculation-feedback/SOURCE_READS.json",
+          "bytes": 17583,
+          "sha256": "9aa3d46b41b80d5e8f2864b091e27e323eb288ab0845a5aab18df7a6412e100c"
+        },
+        {
+          "path": "source-noncirculation-feedback/sources/ACQUISITION.json",
+          "bytes": 1042,
+          "sha256": "72ac37aea14811df2f83d0de35ede0fbb09345750d054eb3b3fe370c8098a0bb"
+        }
+      ],
+      "body_status": "RELEVANT_PUBLIC_DOMAIN_TEXT_EXTRACTIONS_INCLUDED; whole website HTML/boilerplate omitted",
+      "reading": "Recorded selected rereads only; no whole-volume or new manuscript-witness claim."
+    }
+  ],
+  "unavailable_source_bodies": [
+    {
+      "source": "Dretske, Explaining Behavior, chapter6",
+      "status": "INHERITED_UNREAD_AND_UNAVAILABLE; no new acquisition",
+      "record": "epistemic-psr-warrant/SOURCES_AND_RIGHTS.md"
+    },
+    {
+      "source": "Gale–Pruss2002 reply",
+      "status": "INHERITED_ABSTRACT_METADATA_ONLY_FULL_BODY_UNAVAILABLE",
+      "exact_predecessor": {
+        "path": "t20-next-frontier-20261008/checkpoints/sourcehood-explanation/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009.zip",
+        "bytes": 296862,
+        "sha256": "ca9c0b7b471593dbde65a642c694f2c40b3cd5ea9f81052d7bc0901699a6b31c",
+        "checkpoint_number": 14,
+        "included": false,
+        "library_file_id": "private-library-alias-018",
+        "guide_library_file_id": "private-library-alias-005",
+        "boundary": "Delivered fourteenth remains unchanged. Its exclusion of the then-ongoing epistemic successor was a historical membership cutoff."
+      },
+      "predecessor_member": "T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009/t20-next-frontier-20261008/modal-psr-bridge/READING_LEDGER.json"
+    },
+    {
+      "source": "Prior Minhaj2 item156 historical body",
+      "sha256": "96434788b6020ef06bc705d3fbada829d4bc34446fef61c4fb516b361ee26435",
+      "status": "HISTORICAL_SOURCE_BODY_OMITTED_FROM_RECOVERY; present reacquisition not byte-equated",
+      "record": "source-noncirculation-feedback/SOURCE_READS.json#/records/1"
+    }
+  ],
+  "historical_revision_limits": "Two inherited checkpoint14 report/verification revisions unavailable; preserved separately in bindings. No new unresolved report/review hash binding in this increment.",
+  "policy": "No new sources fetched/read. Copyrighted1997 bodies, raw API wrappers and whole website HTML omitted; metadata/hashes retained. CC BY4 article exact plain-text witness and selected classical Arabic extractions included."
+}

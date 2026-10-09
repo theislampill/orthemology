@@ -1,0 +1,143 @@
+{
+  "source_title": "وقفات مع شبهة... فمن خلق الله؟",
+  "author": "سامي عامري",
+  "edition": "Rawasikh first edition, 1445 AH / 2023 CE",
+  "language": "Arabic",
+  "translator": null,
+  "source_pages": 276,
+  "source_sha256": "a181cf37237147672f0784605d3aa8082f5efe378f7ea4d0aa64b5eaabdf0372",
+  "fresh_continuous_substantive_intervals": [
+    [
+      83,
+      86
+    ],
+    [
+      133,
+      190
+    ]
+  ],
+  "substantive_page_count": 62,
+  "direct_rendered_visual_checks": [
+    6,
+    85,
+    86,
+    137,
+    139,
+    140,
+    159,
+    165,
+    186,
+    187
+  ],
+  "metadata_text_checks": [
+    5,
+    6
+  ],
+  "contents_via_web": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "observed_source_reading_window_utc": [
+    "2026-10-09T02:57:20Z",
+    "2026-10-09T02:59:16Z"
+  ],
+  "window_note": "Observed conversation/tool boundaries, not a prospective timed-work certification; acquisition, inherited-record review, and later analysis are outside this source-reading window. No duration floor is claimed.",
+  "truncation_repairs": [
+    "Initial PDF extraction warnings plus large display: pp133–136 redisplayed in bounded133–138 read; pp163–166 redisplayed in bounded162–168 read.",
+    "Combined183–189/83–86 display clipped part of188;188 redisplayed individually, and190 read to finish final chapter."
+  ],
+  "scope_limits": [
+    "Not a whole-book read",
+    "No independent consultation of cited Reichenbach, Lipton, Dawes, or Craig; Ibn Taymiyya later targeted citation check separately recorded.",
+    "No verification of surrounding scientific or historical claims",
+    "No theological reconciliation across authors",
+    "No independent modal-world authenticity claim"
+  ],
+  "raw_source_redistribution": "Excluded from deliverables. research-intermediates is private working evidence only.",
+  "later_targeted_metadata_read": {
+    "printed_pdf_page": 261,
+    "purpose": "Identify edition behind Ameri’s Majmu5:321 citation; adds no whole-bibliography credit"
+  },
+  "later_primary_citation_check": {
+    "source_url": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa74.html",
+    "read_scope": "Electronic Majmu5:418–430, complete bounded composition/terminology argument ending before compulsion example",
+    "exact_excerpt_locus": "5:428; web line427",
+    "received_web_line_span": [
+      388,
+      433
+    ],
+    "sha256": "70c9d9dac3a005600befd13676bb8856d28b78d94a35126a41ee422846309af5",
+    "edition_correspondence": "Dar al-Wafa2005 5:321 not independently page-collated"
+  },
+  "central_primary_return": {
+    "work": "Sharh al-aqida al-Isfahaniyya",
+    "edition": "Maktabat al-Rushd, first edition1415/1995, verified title/date scan1–2",
+    "scan_acquisition": {
+      "url": "https://archive.org/download/waq13116/13116.pdf",
+      "status": 200,
+      "bytes": 3905728,
+      "sha256": "76467cd7ed09c989cca92697a24ab079864a90352f8cf1a35b96ce2a4389b925",
+      "utc": "2026-10-09T03:08:41.151815+00:00"
+    },
+    "quoted_matn_read": [
+      17,
+      18
+    ],
+    "continuous_response_text_web_lines": [
+      171,
+      210
+    ],
+    "visual_response_pages": [
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "main_dependence_response": [
+      31,
+      36
+    ],
+    "separate_composition_unity_critique": [
+      37,
+      43
+    ],
+    "pdf_equals_printed_in_checked_ranges": true,
+    "additional_scouted_pages": [
+      3,
+      4,
+      19,
+      30
+    ],
+    "not_whole_book": true,
+    "truncation_repair": "Full171–187 redisplayed from stored tool return;188–210 separately displayed intact.",
+    "failures": [
+      "Direct Wikisource shell download403; no retry",
+      "Usul adjacent45–48 inaccessible/cache miss; not counted",
+      "Archive web redirect failed; normal urllib request to catalogue-linked PDF returned200"
+    ],
+    "prior_project_status": "Previously part of user-supplied translation ecology, per parent; current operation is direct Arabic/context/edition verification, not first discovery.",
+    "textual_controls": [
+      {
+        "web": "L199: لا يوجب المركب",
+        "scan": "printed39: لا يوجد المركب",
+        "status": "Use scanned exists wording"
+      },
+      {
+        "web": "L186: وجعل معلولا بعلة تامة",
+        "scan": "printed36 retains wording",
+        "status": "Awkward wording retained; no silent emendation"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "method": "Direct UTF-16LE decode of Word binary, bounded visible main-body text; remove Arabic combining vowel marks and normalize control line breaks. Not a general Word parser. Used only the contiguous target span, checked against public electronic primary witness. Previous heading-based boundary selection matched a distant repeated heading and was rejected before using it as target evidence.",
+  "source_sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+  "normalized_character_start": 1375169,
+  "normalized_character_end": 1388761,
+  "printed_electronic_pages": "1076\u20131087",
+  "target_sha256": "8e31e7c59053ced396bd685ad9648da7856bc06f6c72bd4bb94315cec2db9660"
+}

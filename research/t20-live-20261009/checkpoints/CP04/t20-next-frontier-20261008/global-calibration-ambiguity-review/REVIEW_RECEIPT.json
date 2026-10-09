@@ -1,0 +1,103 @@
+{
+  "cautions": [
+    "k^-2 is a chosen-command calibration scale, not the universal polynomial-efficiency threshold.",
+    "Finite controls supplement, rather than replace, the reviewed general proofs."
+  ],
+  "controls_independently_run": [
+    {
+      "assertions_passed": 14125,
+      "kind": "author-script replay in review-only copy",
+      "output": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+      },
+      "output_byte_identical_to_author": true,
+      "program": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+      }
+    },
+    {
+      "assertions_passed": 17480,
+      "families": {
+        "author_digest_match": 3,
+        "author_digest_unchanged_after_controls": 3,
+        "author_replay_byte_identity": 1,
+        "critical_formula": 42,
+        "early_stopping_exercised": 12,
+        "independent_boundary_touch": 42,
+        "independent_catalogue_separation": 168,
+        "independent_decoder_lower_margin": 4212,
+        "independent_decoder_upper_margin": 4212,
+        "independent_gap_order": 168,
+        "independent_interpolation_bound": 4990,
+        "independent_no_clipping": 168,
+        "independent_postboundary_overlap": 42,
+        "independent_rational_band": 998,
+        "independent_rational_curve_identity": 998,
+        "independent_rational_domain": 998,
+        "independent_threshold_order": 168,
+        "nominal_command_calibration_band": 50,
+        "nominal_command_curve_equality": 50,
+        "nominal_command_inverse_residual": 50,
+        "nominal_command_strict_monotonicity": 45,
+        "randomized_stopped_normalization": 12,
+        "randomized_stopped_transcript_identity": 12,
+        "randomized_stopped_tv_bound": 36
+      },
+      "kind": "separately implemented exact and Decimal controls",
+      "output": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "44eb87b15f0777e986e47bbe2f6bf1fe7a0da8b73af3154ce9a426c164453e88"
+      },
+      "program": {
+        "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+        "sha256": "497cd4e05634c3849aadc2113a07c2e5ce7e3c8b940a5cb8b9731f87a665faf4"
+      }
+    }
+  ],
+  "exclusions": [
+    "Separate clipped-map efficiency appendix",
+    "Physical/empirical/source certification",
+    "Mixture or enriched joint observation recovery",
+    "Sharp efficiency or expected-stopping-time guarantees",
+    "Predecessor provenance audit",
+    "Protected integration or T20 closure"
+  ],
+  "guards": {
+    "final_author_digests_verified_before_binding": true,
+    "initial_stale_digest_guard_failed_before_mathematical_checks": true,
+    "reviewer_modified_author_or_predecessor_files": false
+  },
+  "resolved_corrections": [
+    {
+      "initial_result_sha256": "90c2aef5fec3e615efaf0c965aa459c664074da0bfc73541e562604dc7662049",
+      "kind": "stopped-procedure loss definition",
+      "resolution": "Final Section 1 counts abstention and nontermination as failure, or restricts to almost-surely returning procedures."
+    }
+  ],
+  "review_document": {
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "sha256": "ab8acd5b0cc5c70fc43bcd1ca419d5faf8ec9bb59aa02804bbfb846a3f068ecc"
+  },
+  "reviewed_artifacts": [
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "867de73098d4eb210ef4fbbf5758c728efeb4dbe46982bd80941630fed00a2d2"
+    },
+    {
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "sha256": "1115ba405c6e115f15cc0b7c748a307e2335f2cb4d106cd6a03bf502aab8e596"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-08T13:07:25.322674+00:00",
+  "reviewer_task": "[OMITTED_PRIVATE_MACHINE_PATH]",
+  "schema_version": 1,
+  "unresolved_corrections": [],
+  "verdict": "PASS",
+  "verdict_scope": "Independent mathematical review of final RESULT.md only; no release, integration, or closure authority."
+}

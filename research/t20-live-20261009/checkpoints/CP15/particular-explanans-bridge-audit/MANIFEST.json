@@ -1,0 +1,50 @@
+{
+  "scope": "Bounded particular-explanans bridge audit; review wording clarification with pre-review report preserved",
+  "files": [
+    {
+      "path": "BridgeRepairs.lean",
+      "bytes": 4515,
+      "sha256": "27f18369adcd7722ddcd3508f85343f09c4bb56ee3b0d4d1cd57374d5f669af0"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1096,
+      "sha256": "cd0cee3a94a1d90154de59fdc7a1f33812194f663b7cde9666588b7b82ea7439"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 14810,
+      "sha256": "7f347b80c097ecb4c71a361b0128ad39fa0fb41ceb6c84374c1e8924b100761c"
+    },
+    {
+      "path": "RESULT.pre-review.md",
+      "bytes": 14598,
+      "sha256": "3dedbeef25eed122342ae46f82a09e17a36719a52126d3169f3c13125b7d37d6"
+    },
+    {
+      "path": "REVIEW_RESPONSE.json",
+      "bytes": 636,
+      "sha256": "394de2f8a6a7eab00e2567f7bce7c6cf9b9d374c61eedaf0f2bc107bba113b8f"
+    },
+    {
+      "path": "RestrictedBridgeControl.lean",
+      "bytes": 5477,
+      "sha256": "56afa15a4bc3f3ec04db4a8c0f98a4acc43fa67128fe8497619e988b7382b61d"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 1807,
+      "sha256": "8e40ea406e2b282c409d436885b6e804b286070a003488935231e3fbbf7bdbbe"
+    },
+    {
+      "path": "lean-check.log",
+      "bytes": 753,
+      "sha256": "7eb13afbe3741ee35006ae0a38e216efb5c81a60e5d1d0b4ccf403c66c502a69"
+    },
+    {
+      "path": "repair-check.log",
+      "bytes": 483,
+      "sha256": "bd008313e2607c57def25df212dd40c349f43405df7d3b0be13beeb3af407cc7"
+    }
+  ]
+}

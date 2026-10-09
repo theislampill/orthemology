@@ -1,0 +1,391 @@
+{
+  "model_reconstructions": 55,
+  "algorithm": "LCM history, repeated gcd stripping, descending composite-power extraction; no factorization or primality testing.",
+  "traces": [
+    {
+      "stopping_exponent": 0,
+      "weighted_count": 0,
+      "successful_gcd_or_power_divisions": 0,
+      "maximum_history_bits": 1,
+      "explicit_readout_bits": 2
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 32,
+      "successful_gcd_or_power_divisions": 43,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 129
+    },
+    {
+      "stopping_exponent": 1,
+      "weighted_count": 1000,
+      "successful_gcd_or_power_divisions": 2000,
+      "maximum_history_bits": 2,
+      "explicit_readout_bits": 3586
+    },
+    {
+      "stopping_exponent": 24,
+      "weighted_count": 111,
+      "successful_gcd_or_power_divisions": 107,
+      "maximum_history_bits": 362,
+      "explicit_readout_bits": 445
+    },
+    {
+      "stopping_exponent": 16,
+      "weighted_count": 35,
+      "successful_gcd_or_power_divisions": 36,
+      "maximum_history_bits": 161,
+      "explicit_readout_bits": 140
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 416,
+      "successful_gcd_or_power_divisions": 160,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1665
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 423,
+      "successful_gcd_or_power_divisions": 186,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 1693
+    },
+    {
+      "stopping_exponent": 28,
+      "weighted_count": 493,
+      "successful_gcd_or_power_divisions": 233,
+      "maximum_history_bits": 485,
+      "explicit_readout_bits": 1973
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 635,
+      "successful_gcd_or_power_divisions": 247,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2541
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 566,
+      "successful_gcd_or_power_divisions": 221,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2265
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 662,
+      "successful_gcd_or_power_divisions": 255,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2649
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 440,
+      "successful_gcd_or_power_divisions": 178,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 1760
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 693,
+      "successful_gcd_or_power_divisions": 240,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2773
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 513,
+      "successful_gcd_or_power_divisions": 204,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2052
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 501,
+      "successful_gcd_or_power_divisions": 205,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2005
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 538,
+      "successful_gcd_or_power_divisions": 218,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2153
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 522,
+      "successful_gcd_or_power_divisions": 206,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 2089
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 487,
+      "successful_gcd_or_power_divisions": 184,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1949
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 488,
+      "successful_gcd_or_power_divisions": 200,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 1953
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 555,
+      "successful_gcd_or_power_divisions": 208,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2221
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 535,
+      "successful_gcd_or_power_divisions": 208,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2141
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 450,
+      "successful_gcd_or_power_divisions": 181,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1801
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 581,
+      "successful_gcd_or_power_divisions": 228,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2325
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 322,
+      "successful_gcd_or_power_divisions": 158,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1288
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 455,
+      "successful_gcd_or_power_divisions": 206,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 1821
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 513,
+      "successful_gcd_or_power_divisions": 196,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 2053
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 527,
+      "successful_gcd_or_power_divisions": 191,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2109
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 582,
+      "successful_gcd_or_power_divisions": 217,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2329
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 595,
+      "successful_gcd_or_power_divisions": 220,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2381
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 574,
+      "successful_gcd_or_power_divisions": 237,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 2297
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 506,
+      "successful_gcd_or_power_divisions": 192,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 2025
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 467,
+      "successful_gcd_or_power_divisions": 200,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 1869
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 386,
+      "successful_gcd_or_power_divisions": 148,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1545
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 575,
+      "successful_gcd_or_power_divisions": 216,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2301
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 755,
+      "successful_gcd_or_power_divisions": 278,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 3021
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 637,
+      "successful_gcd_or_power_divisions": 230,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 2549
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 424,
+      "successful_gcd_or_power_divisions": 190,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 1697
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 413,
+      "successful_gcd_or_power_divisions": 167,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1653
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 521,
+      "successful_gcd_or_power_divisions": 226,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2084
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 474,
+      "successful_gcd_or_power_divisions": 182,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1897
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 377,
+      "successful_gcd_or_power_divisions": 173,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 1509
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 523,
+      "successful_gcd_or_power_divisions": 206,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2093
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 719,
+      "successful_gcd_or_power_divisions": 242,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2877
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 581,
+      "successful_gcd_or_power_divisions": 228,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2325
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 543,
+      "successful_gcd_or_power_divisions": 205,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2173
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 623,
+      "successful_gcd_or_power_divisions": 243,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2493
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 372,
+      "successful_gcd_or_power_divisions": 154,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 1489
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 537,
+      "successful_gcd_or_power_divisions": 204,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2149
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 465,
+      "successful_gcd_or_power_divisions": 190,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1860
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 591,
+      "successful_gcd_or_power_divisions": 217,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2365
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 654,
+      "successful_gcd_or_power_divisions": 227,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2617
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 460,
+      "successful_gcd_or_power_divisions": 185,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 1840
+    },
+    {
+      "stopping_exponent": 30,
+      "weighted_count": 371,
+      "successful_gcd_or_power_divisions": 183,
+      "maximum_history_bits": 558,
+      "explicit_readout_bits": 1485
+    },
+    {
+      "stopping_exponent": 31,
+      "weighted_count": 660,
+      "successful_gcd_or_power_divisions": 257,
+      "maximum_history_bits": 618,
+      "explicit_readout_bits": 2640
+    },
+    {
+      "stopping_exponent": 32,
+      "weighted_count": 657,
+      "successful_gcd_or_power_divisions": 240,
+      "maximum_history_bits": 650,
+      "explicit_readout_bits": 2628
+    }
+  ]
+}

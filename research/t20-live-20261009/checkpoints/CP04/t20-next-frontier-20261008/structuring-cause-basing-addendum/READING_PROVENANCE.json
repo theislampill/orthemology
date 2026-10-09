@@ -1,0 +1,215 @@
+{
+  "chapter6_access": {
+    "bibliographic_leads": [
+      "https://catalog.library.camdencc.edu/bib/101740",
+      "https://www.ecampus.com/explaining-behavior-reasons-world-causes/bk/9780262540612",
+      "https://books.google.co.uk/books/about/Explaining_Behavior.html?id=7YHHHJViCogC&redir_esc=y"
+    ],
+    "judgement_limit": "No refutation of full account inferred from absent access.",
+    "metadata_only": "Catalog/TOC title lead The Interactive Nature of Reasons; Google Books contents lead ch6 starts137, bibliography157. No primary chapter body or complete end boundary verified.",
+    "obstruction": "No eligible publicly readable primary chapter located in bounded search. Google Books text route presented a bot challenge; no bypass attempted. Not a claim that every possible lawful route or library access is unavailable.",
+    "source_basis_for_relevance": "Dretske ch4 printed106–107 explicitly defers complex representational interaction and inference to ch6.",
+    "text_acquired": false
+  },
+  "in_progress_checkpoint": "READING_PROVENANCE_IN_PROGRESS.json is an earlier historical checkpoint, not the final scope record.",
+  "inherited_primary": "Dretske1991 reply and2004 article retain prior scope; complete1993chapter still not accessed.",
+  "model_status": "No new executable or new theorem; inherited information-loss conditional not recounted as new. Normative basing is not stipulated as a machine label.",
+  "other_attempts": {
+    "Boghossian_2019_revision": "Publisher metadata encountered, not body read; no claim2014article exhausts later work.",
+    "Dretske_1993_structuring_chapter": "Frozen predecessor access boundary retained: public abstract only; no complete chapter read.",
+    "Dretske_Epistemology_of_Belief1983": "Publisher summary only, no verified full-body reading.",
+    "Dretske_Naturalizing_Mind_Houston_selection": "20-page course selection, selected passages inspected by source worker only; not relied upon for the current substantive conclusion or complete-chapter credit.",
+    "Dretske_Reasons_and_Causes1989": "Bibliographic identity found; JSTOR download was browser-challenge HTML, not an article; no reading credit."
+  },
+  "positive_frontier": "Premise-relative content-sensitive attention control fails to establish inference from P/R; independent Q-warrant is explicitly permitted. Sophisticated association remains eligible for rationality; no full Dretske refutation.",
+  "predecessors_read": [
+    "../structuring-cause-reply/INDEPENDENT_ASSESSMENT.md",
+    "../structuring-cause-reply/MODEL_AND_TRANSPORT.md",
+    "../fitrah-warrant-bridge/warranting-basis-addendum/CLARIFICATION.md",
+    "../productive-identifiability/RESULT.md (inherited direct reading from prior stage)"
+  ],
+  "saved_utc": "2026-10-08T12:43:33.318167+00:00",
+  "scope": "Strongest surviving current-basing/content/warrant question while granting historical semantic function; frozen predecessor unchanged",
+  "sources": [
+    {
+      "author": "Fred Dretske",
+      "bytes": 1929705,
+      "lead_direct_read_printed": [
+        104,
+        105,
+        106,
+        107
+      ],
+      "lead_visual_checked_printed": [
+        104,
+        105,
+        106,
+        107
+      ],
+      "original_work_year": 1988,
+      "pdf_pages": 15,
+      "printed_pages": [
+        79,
+        107
+      ],
+      "publisher": "MIT Press / Bradford Books",
+      "publisher_edition_dates": {
+        "hardcover": "1988-04-28, ISBN9780262040945",
+        "paperback": "1991-02-05, ISBN9780262540612"
+      },
+      "publisher_metadata_url": "https://mitpress.mit.edu/9780262040945/explaining-behavior/",
+      "reading_credit": "Worker read OCR covering every page; annotated/underlined passages elsewhere missing from OCR, so whole-chapter coverage with textual gaps, not unqualified full-text reading.",
+      "scan_printing": "Unverified; university chapter-only scan lacks title/copyright pages. Do not claim one particular printing from publisher metadata.",
+      "sha256": "fa6643124c53ddf215750d63aee9121058d0b4223697617496e5e9ce423eff27",
+      "source_body_in_deliverables": false,
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Explaining Behavior: Reasons in a World of Causes, chapter4 The Explanatory Role of Belief",
+      "url": "https://www.uh.edu/~garson/DretskeExplanCh.4.PDF",
+      "worker_visual_checked_printed": [
+        84,
+        85,
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "argument_pages": [
+        1,
+        23
+      ],
+      "author": "Cameron Buckner",
+      "bytes": 425447,
+      "complete_text_read": true,
+      "display_batches": "Initial1–7 combined output truncated; pages3–7 available, pages1–2 recovered explicitly; then8–11,12–18,19–28. Whole text covered; not claiming an uninterrupted second traversal.",
+      "displayed_pages": [
+        1,
+        28
+      ],
+      "doi": "10.1111/phpr.12455",
+      "edition": "2017 online-first 28-page PDF, later published2019 Philosophy and Phenomenological Research98(3):697–724",
+      "notes_read": true,
+      "publisher_metadata": "https://onlinelibrary.wiley.com/doi/10.1111/phpr.12455",
+      "references_pages": [
+        23,
+        28
+      ],
+      "scope_caveat": "Primary philosophical argument inspected; cited animal studies not independently checked; practical inference focus explicitly excludes a completed theoretical/deductive inference account.",
+      "sha256": "0abb1a351c111d7586071113d96dde6460fa538f26124d11ad8aa6dd738dcb36",
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Rational Inference: The Lowest Bounds",
+      "url": "https://web.mit.edu/6.034/www/6.s077/Buckner-2017-Philosophy_and_Phenomenological_Research.pdf",
+      "visual_reread_pages": [
+        16
+      ]
+    },
+    {
+      "author": "Paul Boghossian",
+      "bytes": 172091,
+      "complete_text_read": true,
+      "continuous_printed_pages": [
+        1,
+        18
+      ],
+      "display_batches": [
+        [
+          1,
+          6
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          13,
+          18
+        ]
+      ],
+      "doi": "10.1007/s11098-012-9903-x",
+      "edition": "Philosophical Studies169:1–18(2014); online publication19April2012",
+      "notes_and_references_read": true,
+      "scope_caveat": "He explicitly restricts inquiry to person-level System1.5-and-up theoretical reasoning; not a demonstration that every basic recognition requires reflection.",
+      "sha256": "199e1c8c8b90dbd27048a1aba5ecdb37ab530a06e62f0e218af4dd9e679c2133",
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "What is inference?",
+      "url": "https://paulboghossian.com/pb/files/WhatIsInference.pdf",
+      "visual_reread_pages": [
+        16
+      ]
+    },
+    {
+      "author": "Ilia Patronnikov",
+      "complete_argument_and_notes_read": true,
+      "doi": "10.1007/s12136-025-00632-8",
+      "edition": "Acta Analytica40:731–752(2025), published15March2025",
+      "method": "Publisher open-access HTML; argument lines59–221 and all21notes lines224–276 inspected; tiny truncated gap194–195 recovered by separate open. References and metadata also displayed.",
+      "scope_caveat": "Primary critic argument, not a replacement for Siegel’s own definitions; empirical weather-prediction findings reported by source, not independently reanalysed. Counterfactual justificatory criterion has explicit good-inference and externalist qualifications.",
+      "source_body_delivered": false,
+      "title": "Associative Inferential Transitions, or One Problem with Siegel’s Response Hypothesis",
+      "url": "https://link.springer.com/article/10.1007/s12136-025-00632-8"
+    },
+    {
+      "access_history": "Repository public download link returned405; author-linked PhilPapers route403. Standard public DSpace bitstream content endpoint served the openly deposited same file without login or access-control circumvention.",
+      "argument_manuscript_pages": [
+        1,
+        17
+      ],
+      "author": "Susanna Siegel",
+      "bibliography_manuscript_pages": [
+        18,
+        19
+      ],
+      "body_read": true,
+      "bytes": 207595,
+      "complete_manuscript_read": true,
+      "display_batches_pdf": [
+        [
+          1,
+          7
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          15,
+          20
+        ]
+      ],
+      "edition": "Harvard-hosted manuscript for2019 Reasoning: New Essays on Theoretical and Practical Thinking; manuscript1–19. Published chapter15–31 verified separately.",
+      "manuscript_pages_read": [
+        1,
+        19
+      ],
+      "metadata_warning": "Harvard repository cover incorrectly combines2017 book-chapter DOI/date/pagination with2019 Reasoning citation. Actual manuscript header identifies the Reasoning volume; Oxford chapter2 metadata independently confirms2019,15–31 and correct DOI. Manuscript body used for all substantive citations; no final publisher-body or2017book-chapter reading credit.",
+      "notes_read": true,
+      "pdf_pages": 20,
+      "pdf_pages_read": [
+        1,
+        20
+      ],
+      "publisher_metadata": {
+        "doi": "10.1093/oso/9780198791478.003.0002",
+        "pages": [
+          15,
+          31
+        ],
+        "published": "2019-04-18",
+        "url": "https://academic.oup.com/book/35161/chapter/299396776"
+      },
+      "repository_record": "https://dash.harvard.edu/entities/publication/73120379-3754-6bd4-e053-0100007fdf3b",
+      "scope_current": "Entire Harvard manuscript read continuously in three batches, including footnotes and bibliography. Cite manuscript pagination; not2017 book-chapter reading credit.",
+      "sha256": "0d14be3ae7209f72e0b53ff7ec9ac1d9fab64dcaef4cdfbeb8b793929bc84fe9",
+      "temporary_file": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "title": "Inference without reckoning",
+      "url": "https://dash.harvard.edu/server/api/core/bitstreams/7312037e-6d0f-6bd4-e053-0100007fdf3b/content",
+      "visual_reread_manuscript_pages": [
+        15,
+        17
+      ]
+    }
+  ],
+  "status": "Bounded comparison finalized subject to attached independent review; no full Dretske-account adjudication",
+  "worker_primary_pending": "Completed; actual source scope and ch6 limits are above."
+}

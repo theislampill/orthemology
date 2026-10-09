@@ -1,0 +1,82 @@
+[
+  {
+    "path": "READING_LEDGER.json",
+    "bytes": 4640,
+    "sha256": "6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47"
+  },
+  {
+    "path": "REPORT.md",
+    "bytes": 15005,
+    "sha256": "c1dae1a738fc90e7977f4257a960eef29b76d17ac6121d878361d2aaf18f139e"
+  },
+  {
+    "path": "VERIFICATION.json",
+    "bytes": 3807,
+    "sha256": "dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a"
+  },
+  {
+    "path": "commit-metadata.json",
+    "bytes": 1090,
+    "sha256": "ca89b0b2783b355af87705ce9feb99f7fc25074831b2bba46710a5e861a45b3a"
+  },
+  {
+    "path": "source-bindings.json",
+    "bytes": 3819,
+    "sha256": "9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce"
+  },
+  {
+    "path": "sources/Ethica__Pars1__Axioms.lean",
+    "bytes": 15212,
+    "sha256": "a3f13903d01d37c4d3aea9819489c373595a4e7d0f9697ed56ffaaadb8b86416"
+  },
+  {
+    "path": "sources/Ethica__Pars1__Causation.lean",
+    "bytes": 10169,
+    "sha256": "42d554bedb12665cc8f48037c943f1fd7fc7fcae184a80f430cabf19f9d0e487"
+  },
+  {
+    "path": "sources/Ethica__Pars1__Definitions.lean",
+    "bytes": 11331,
+    "sha256": "6543ee63b7863f55e986202830f61f861d89050c7bdc425199b91484808962d3"
+  },
+  {
+    "path": "sources/Ethica__Pars1__ModalForm.lean",
+    "bytes": 32908,
+    "sha256": "5005d4d2f840d8731b98c54ac9bbf8486dafa0c6a446b2225a007f9e4e7e0296"
+  },
+  {
+    "path": "sources/Ethica__Pars1__Models__Counterexamples.lean",
+    "bytes": 18713,
+    "sha256": "02e668544642068bddd0e6ffdf6a9c2d2614ba295ee1ef4a4f437602287344a0"
+  },
+  {
+    "path": "sources/Ethica__Pars1__Propositions.lean",
+    "bytes": 15837,
+    "sha256": "987c666a7156d7866ceebb5ecd617e4fa1377f9e038d51d4e4a2bcee8b1dc4e8"
+  },
+  {
+    "path": "sources/LICENSE",
+    "bytes": 1188,
+    "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837"
+  },
+  {
+    "path": "sources/README.md",
+    "bytes": 6796,
+    "sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337"
+  },
+  {
+    "path": "sources/docs__auxiliary_axioms.md",
+    "bytes": 38185,
+    "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b"
+  },
+  {
+    "path": "sources/lean-toolchain",
+    "bytes": 25,
+    "sha256": "6d0d484eeae522e854238a3ea3012246c0104d0544e58df340daad3676cc0f78"
+  },
+  {
+    "path": "sources/papers__cluster_a_irreducibility__08_scope.md",
+    "bytes": 11913,
+    "sha256": "e630c2fcb4ad194e3925972ab4c288887a5884e76dcc4b2f3e62bcdcd214d4e9"
+  }
+]

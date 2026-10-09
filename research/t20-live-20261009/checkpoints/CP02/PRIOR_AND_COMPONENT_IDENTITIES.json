@@ -1,0 +1,31 @@
+{
+  "prior_archive": {
+    "filename": "T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip",
+    "bytes": 544325,
+    "sha256": "2a5b8a421266035e0c4609c933a090847d50ff78a3a45cc6438980ea784e14ad",
+    "included": false,
+    "disposition": "Preserved unchanged; not duplicated in this additional checkpoint."
+  },
+  "prior_components": [
+    {
+      "component": "productive-identifiability",
+      "manifest_sha256": "d5cdb418cf8169f463b731b4a6b5cdddef2717480cbf108786ea6cdc7f4d044a",
+      "manifest_included": false
+    },
+    {
+      "component": "single-calibration-design",
+      "manifest_sha256": "805884c3e413a19e47c81d0b745b9c86b7c001347182b2571c5f14a440edf831",
+      "manifest_included": false
+    }
+  ],
+  "current_frozen_bindings": {
+    "noise-aware-calibration/MANIFEST.json": "764ba9089be07d87f20ba1591886d901ceb3cf4d9fac60bc358c0d3cbd07716f",
+    "noise-aware-review/REVIEW_RECEIPT.json": "91ab1d2e208dd8c6ed09c56a88b77c0e323ef87159b1e82799c625455e18736d",
+    "countable-signature-identification/MANIFEST.json": "43681d0c2d070e30200afb7b3dc557396150bff9c8012e75bd0a72328a27a974",
+    "countable-signature-review/REVIEW_RECEIPT.json": "40be03d0d6b9b983ed7b3c09edbbecc59a17ea56bc92695fff78c49e98cd5556",
+    "grouped-mixture-identification/MANIFEST.json": "baf29c6df8ba1047782a03f794409bf03a0bfe8394f04845bb2b876b6bcc75f6",
+    "practical-authority-frontier/MANIFEST.json": "10cec3a4e13b4251cf287a0dc0698b278da55e706099ebf38fa1be3e20011c9f",
+    "grouped-mixture-review/REVIEW_RECEIPT.json": "9294b54421ca4f9c431dae254bc1126134e0fb5d349018f488a00b4180243673"
+  },
+  "limitations": "This archive is an additive checkpoint, not a replacement for predecessor evidence. Ancestry identities do not claim all predecessor files are physically included."
+}

@@ -1,0 +1,71 @@
+{
+  "created_utc": "2026-10-08T19:54:49+00:00",
+  "status": "SCRATCH_ACCEPTED_AFTER_FRESH_INDEPENDENT_REVIEW",
+  "result_sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+  "review_path": "../full-face-threshold-kl-review/RESULT.md",
+  "review_sha256": "301f91005fbc53a7603fd6ac475d75a2406fb16f653a90885cac9cdddf7f116b",
+  "artifacts": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "sha256": "c2da2e4c0a368cad59170419660e75b966d4a40829e60a15fa53b86044839b5d",
+      "bytes": 3445
+    },
+    {
+      "path": "FINAL_CHECK.json",
+      "sha256": "c0512327c0a0b26750df5ff49857048076cfd51aca35be85f70170eb5bb5e850",
+      "bytes": 1057
+    },
+    {
+      "path": "NEGATIVE_CONTROLS.md",
+      "sha256": "8eb1bb8b120b6da32b14a8527aa5e1397718d4534274b53abe0b57d3973c8c4d",
+      "bytes": 4584
+    },
+    {
+      "path": "READ_FIRST.md",
+      "sha256": "524d3cc84f8d11845273087be5aa3f8a0a8509d55f671031d6dbbb569949aad3",
+      "bytes": 1856
+    },
+    {
+      "path": "RESEARCH_ACCOUNTING.json",
+      "sha256": "7985f9f6375af383c5916be324c9b4905a908b567ccf21d06c646c9e1efc2ac9",
+      "bytes": 992
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "sha256": "863906463cb708f30fb00da0bf1b7dd01ac5aac2b19ac042f76b271a3844fa50",
+      "bytes": 1769
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "1c2fd5cf4e8006205cbd61562d88eb5da72d4952f335b17952540ec9f1a1d544",
+      "bytes": 14568
+    },
+    {
+      "path": "REVIEW_STATUS.json",
+      "sha256": "5fbfd0b3b8c3b762a1163320f3d30d83dd91b42498ecabeb3f9f93b45c420f15",
+      "bytes": 1022
+    },
+    {
+      "path": "SOURCE_AUDIT.md",
+      "sha256": "5028101157e52889aa845949e4dae7e2e71655bc5768312455056b0e5317cd3f",
+      "bytes": 3906
+    },
+    {
+      "path": "SOURCE_BINDINGS.json",
+      "sha256": "b79509ac3e826ac95b574d63b0badd0b82b752cb889ddf7c427c0f95c33a9e00",
+      "bytes": 602
+    },
+    {
+      "path": "controls.py",
+      "sha256": "a3ea9d2fe5dd375e25dddb345725e8e3b0bd4e0346d83bd3d5f2a8da323bdfc4",
+      "bytes": 5497
+    }
+  ],
+  "exclusions": [
+    "No physical feasibility or empirical validation",
+    "No protected integration",
+    "No T20 closure",
+    "No general count identification from face minima alone",
+    "No interior retained AB or gate-label extension"
+  ]
+}

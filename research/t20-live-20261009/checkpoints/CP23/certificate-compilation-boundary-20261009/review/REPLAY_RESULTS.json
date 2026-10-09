@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "metrics": {
+    "exhaustive_grammars": 2517,
+    "exhaustive_compiled_witnesses_checked": 10520,
+    "unpruned_oracle_height": 4,
+    "compiled_tree_height": 2,
+    "seeded_root_reachable_dags_and_unfoldings": 250,
+    "seed": 20261009
+  },
+  "source_sha256": {
+    "RESULT.md": "3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459",
+    "compiler.py": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+    "verify.py": "ba6b947c758b0541ce4dc489c116c87cc6000ebc221ff23f8b5f3efd5de94f70",
+    "SOURCES.json": "750a30b2cc811c5fd37f5532ba8902bc69712792a0c32501eef4818969c0ac50"
+  },
+  "scope": "Independent replay of all submitted tests, without modifying the submitted run record."
+}

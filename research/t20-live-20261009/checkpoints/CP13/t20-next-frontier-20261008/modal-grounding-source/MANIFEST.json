@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-08",
+  "scope": "Bounded prospective source appraisal. No integration/closure/time-floor certification. Hashes bind files inspected at this receipt, not continuous historical monitoring.",
+  "primary": {
+    "path": "sources/dasgupta2011.pdf",
+    "bytes": 653379,
+    "sha256": "1c60972c6ccdeda410ee77537495d6ff7bcd456b778aaf3f06110510d9d07e07"
+  },
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/qualitative-ontology-warrant/QUALITATIVE_ONTOLOGY_WARRANT.md",
+      "bytes": 30791,
+      "sha256": "5fd1c580fd7121db0d155819af2142d5a5f14c8f78693277f2b12e0d9b2995ce"
+    },
+    {
+      "path": "t20-next-frontier-20261008/instantiation-obtaining-adjudication/REPORT.md",
+      "bytes": 18923,
+      "sha256": "8053355d61c3868482c9068c253ac9a7f7e3968d39a67162006953236fe25361"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/SOURCE_COMPLETION_AND_AUTONOMY_ADDENDUM.md",
+      "bytes": 20262,
+      "sha256": "9ebb0ed32d63918206acf92a77b2801a6bbb27361acb9278caf55d87f38c9f6f"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.pdf",
+      "bytes": 268941,
+      "sha256": "47b9ad8c841db60d840f7bbbfbbbb1c538d0c0e6c5db8d0105ad600dc1045989"
+    },
+    {
+      "path": "t20-next-frontier-20261008/global-explanation-rival-continuation/sources/dasgupta2016.txt",
+      "bytes": 146041,
+      "sha256": "bd165592d56bfa08166861125343914e8dea5d10af82eb6aa5a0e82dbb69b3f7"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "bytes": 33327,
+      "sha256": "ea7ba261b047222f305ab729481294edd620383af8aacdbbb3ab65eb201439a8"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/READING_LEDGER.json",
+      "bytes": 2542,
+      "sha256": "cb5e24198649d87118a215cf8c26762cb018e3ed2fff655935a39021d30ea660"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/INPUT_BINDINGS.json",
+      "bytes": 4937,
+      "sha256": "8086c38e20886219db8f3daa1f409eb8572cc009b602b20a4f594f2b89906c73"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "bytes": 6940,
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99"
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "REPORT.md",
+      "bytes": 26915,
+      "sha256": "97f4cd1b948aa6396d29780e0ba9ea92f51d45c7ea91128d0671e1296d3c57db"
+    },
+    {
+      "path": "MAPPING_TEST.md",
+      "bytes": 12491,
+      "sha256": "c65d19e90e6571c5e363147d39e5d817e92d5b1499e5536961544d187a8ad7b7"
+    },
+    {
+      "path": "READING_LEDGER.json",
+      "bytes": 7167,
+      "sha256": "02520251152c138d53157583461112a0613f9ba8893917a2b1ee52cbdf8f0e9e"
+    },
+    {
+      "path": "SOURCE_EXTRACTION_CHECK.json",
+      "bytes": 11785,
+      "sha256": "749121d3e535ade49a942db72b54b8797d6856dcac85bf9982f676b0a18e7295"
+    }
+  ],
+  "visual_checks": [
+    {
+      "path": "source-images/page-36.png",
+      "bytes": 336941,
+      "sha256": "10206a2eb29dd2ca2f764e6b13cc83583d6d1e2003e60c391be9390b3957cad1"
+    },
+    {
+      "path": "source-images/page-37.png",
+      "bytes": 410702,
+      "sha256": "11108bb6f93c39c045c9d7665c03b530131bb19ee4157c716ca13152ed709fd7"
+    },
+    {
+      "path": "source-images/page-38.png",
+      "bytes": 335909,
+      "sha256": "cd73e726c2bb0406307ccea9f5f5f22f7abc3380e3786f47cf1063f91952aae2"
+    },
+    {
+      "path": "source-images/page-40.png",
+      "bytes": 392739,
+      "sha256": "4a4ed6b9164e15393c220c811abc7d86c8d52b400c71b0110e19164a058e7059"
+    },
+    {
+      "path": "source-images/page-44.png",
+      "bytes": 387003,
+      "sha256": "d581b14684e324b355a85a56e1f933d2fa76fe207610b96b243e9ba530a12428"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "status": "Author self-check supplemented by separately bound independent accepted review",
+  "input_preservation_checks": [
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/foundational-dependency-dag/EXISTING_FORMAL_MAP.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/de-se-sovereignty/inherited/ORIGINAL_PROVISION_AND_CONSTITUTIVE_POSSESSION.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/original-bearer-bridge/OriginalBearerBridge.lean",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/AnchoredSourceBridge.lean",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/anchored-source-bridge/src/Controls.lean",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/RESULT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/RESULT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/intrinsic-willing/COGNITION_REFINEMENT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/source-fidelity-review/continuation-v2/REVIEW.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/complete-efficacy-premise/RESULT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/RESULT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/RESULT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/REPORT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-continuation-20261008/valued-cooperation/src/joint_end.py",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination/REPORT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/wise-determination-continuation/REPORT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/nonabsorption/REPORT.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/CURRENT_FINDING.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "t20-next-frontier-20261008/bearer-eligibility/sources/akmaliyya-canonical-working.txt",
+      "sha256_matches": true
+    },
+    {
+      "path": "recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "sha256_matches": true
+    }
+  ],
+  "all_input_hashes_match": true,
+  "written_proof_status": "Directly checked centered identity-K clauses, persistent modal centers, ordinary reduct preservation, shift-aware factivity, and premise scopes; no mechanized proof claim.",
+  "inherited_theorems_not_new": [
+    "identity knowledge/factivity lemma",
+    "uniqueness_of_history_complete",
+    "incompatible uniform guarantees with joint choice compossibility",
+    "Classification/Conformance separation"
+  ],
+  "new_scope": "Centered semantic conservative application plus explicitly conditional practical de se interpretation and source-scope recognition/conformance audit",
+  "new_perfection_predicate_used_to_certify_metaphysical_possibility": false,
+  "new_action_choice_toy": false,
+  "lean_execution": false,
+  "review_correction": "Corrected basing scope independently rechecked and accepted; see REVIEW_STATUS.json",
+  "previous_summary_scope": "Earlier phrase action-guiding conservative enrichment superseded; see CORRECTION_RECORD.json."
+}

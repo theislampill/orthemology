@@ -1,0 +1,86 @@
+{
+  "assertions_by_group": {
+    "all_loops_have_individual_fix": 1,
+    "alternate_tree_test_nontrivial": 1,
+    "back_iff_nonreceipt_equivalence": 6210,
+    "back_iff_received_equivalence": 6210,
+    "back_weaker_than_all_suppliers": 1,
+    "boolean_copyable_iff_onehot": 31,
+    "coherent_and_before_or": 18697,
+    "coherent_triangle_counts": 1,
+    "contingent_suppliers_exist_locally": 1,
+    "covariant_local_rename_repair": 1,
+    "different_tree_same_fixed_points": 1296,
+    "different_tree_same_sections": 2592,
+    "disconnected_graph_rejected": 1,
+    "empty_carrier_no_bearer": 1,
+    "fixed_section_erases_realisation": 1,
+    "fixed_section_erases_receipt": 1,
+    "full_coherence_iff_all_sections": 226,
+    "gauge_fixed_set": 46722,
+    "gauge_holonomy_conjugacy": 46722,
+    "gauge_section_bijection": 46722,
+    "known_de_re_quantifier_loss": 1,
+    "no_common_loop_fixed_point": 1,
+    "nonempty_carrier_empty_existence": 1,
+    "real_copyable_iff_onehot": 781,
+    "retained_witness_maps_forward": 6210,
+    "single_actual_world": 1,
+    "swap_average_not_copyable": 1,
+    "swap_boolean_parallel_not_copyable": 1,
+    "swap_no_point": 1,
+    "swap_normalized_parallel_average": 1,
+    "tree_choice_independence": 6,
+    "triangle_boolean_tensor": 111113,
+    "triangle_count_bound": 111113,
+    "triangle_count_tensor": 111113,
+    "triangle_root_vs_tuples": 111113,
+    "trivial_holonomy_necessary_filter_erases_receipt": 1,
+    "two_cycle_no_section": 1,
+    "vacuous_box_actual_only": 1,
+    "vacuous_box_no_actual_witness": 1,
+    "variable_supplier_generic_reception": 1,
+    "z6_exception": 1
+  },
+  "copyability": {
+    "boolean_vectors": 31,
+    "real_grid_vectors": 781,
+    "ring_counterexample": {
+      "modulus": 6,
+      "vector": [
+        3,
+        4
+      ]
+    }
+  },
+  "holonomy": {
+    "square_cases_with_different_tree_charts": 1080,
+    "swap_fixed_labels": 0,
+    "v4_common_fixed_labels": 0,
+    "v4_fixed_labels_per_element": [
+      2,
+      2,
+      2,
+      6
+    ],
+    "v4_group_size": 4
+  },
+  "scope": "Exact finite mathematical controls only",
+  "source_sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c",
+  "status": "PASS",
+  "total_assertions": 626901,
+  "triangles": {
+    "coherent_edge_tables_by_n": {
+      "0": 1,
+      "1": 1,
+      "2": 4,
+      "3": 36
+    },
+    "gauge_cases": 46722,
+    "tuple_filter_cases": 111113
+  },
+  "witness_lifting": {
+    "back_condition_cases": 6210,
+    "back_holds_with_omitted_supplier_cases": 1736
+  }
+}

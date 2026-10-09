@@ -1,0 +1,130 @@
+{
+  "families_passed": 14,
+  "controls": {
+    "rational_atom_primitive_decoder": {
+      "count_supports": 385
+    },
+    "decoder_rejects_noncommon_power_or_boundary_inputs": 4,
+    "integer_dilations_full_finite_horizon_equivalence": {
+      "world_pairs": 252
+    },
+    "noninteger_direct_scale_three_halves": true,
+    "known_maximum_leaves_integer_scale_set": 132,
+    "eta_feasible_scales_and_piecewise_linear_extensions": {
+      "0": [
+        2
+      ],
+      "1/10": [
+        2
+      ],
+      "7/64": [
+        1,
+        2
+      ],
+      "1/8": [
+        1,
+        2,
+        3
+      ]
+    },
+    "insufficient_two_repeat_primitive_counterexample": {
+      "moments_left": [
+        "1",
+        "189/400",
+        "243/1024",
+        "210681/1638400"
+      ],
+      "moments_right": [
+        "1",
+        "189/400",
+        "243/1024",
+        "815751/6553600"
+      ],
+      "third_gap": "26973/6553600"
+    },
+    "fresh_resampling_band_and_held_second_moment_separation": true,
+    "general_fresh_positive_mixture_collapse": true,
+    "label_specific_calibration_invalidates_ratios": true,
+    "step_calibration_without_any_interior_value": true,
+    "general_pair_global_power_maps_and_exact_radius_power_bounds": {
+      "rational_parameter_cases": 891
+    },
+    "remaining_scale_catalogue_population_separation": {
+      "adjacent_F_interval_checks": 1386
+    },
+    "equal_weight_gcd_one_cauchy_countermodel_certificates": [
+      {
+        "n": 2,
+        "primitive_support": [
+          2,
+          5
+        ],
+        "algebraic_node_interval": [
+          "1/8",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      },
+      {
+        "n": 3,
+        "primitive_support": [
+          3,
+          7
+        ],
+        "algebraic_node_interval": [
+          "1/6",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      },
+      {
+        "n": 5,
+        "primitive_support": [
+          5,
+          11
+        ],
+        "algebraic_node_interval": [
+          "1/5",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      },
+      {
+        "n": 10,
+        "primitive_support": [
+          10,
+          21
+        ],
+        "algebraic_node_interval": [
+          "9/40",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      },
+      {
+        "n": 100,
+        "primitive_support": [
+          100,
+          201
+        ],
+        "algebraic_node_interval": [
+          "99/400",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      },
+      {
+        "n": 1000,
+        "primitive_support": [
+          1000,
+          2001
+        ],
+        "algebraic_node_interval": [
+          "999/4000",
+          "1/4"
+        ],
+        "moment_error_bound": "r/(8n)"
+      }
+    ]
+  }
+}

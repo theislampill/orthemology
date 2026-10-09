@@ -1,0 +1,23 @@
+{
+  "scope": "Independent bounded review. Hashes bind entire input files; reading extents do not imply full-source review. No original files modified.",
+  "inputs": [
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/sources/gale-pruss1999.txt",
+      "bytes": 69371,
+      "sha256": "502ade5170fa33a07b8c7044b38ed1b7d9f41c6cab6ece0ab58a2e5f81ba46c2",
+      "reading_extent": "Primary source; text lines 83\u2013295 read, corresponding to complete printed pp. 462\u2013465; front matter and opening definitions also inspected."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/ACTUALISATION_AUDIT.md",
+      "bytes": 6116,
+      "sha256": "31f39e303ad20544caa01395069bf25561b1cb1f361e3862b8ec4ac41510e27d",
+      "reading_extent": "Entire 48-line draft read and reviewed."
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-psr-bridge/INPUT_BINDINGS.json",
+      "bytes": 2222,
+      "sha256": "2512c4f5dae8a28a924217f890b02edbe3c20cfc993a409e0ac86cfc45d81851",
+      "reading_extent": "Read as reference context only; listed files were not thereby reviewed."
+    }
+  ]
+}

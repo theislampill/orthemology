@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "scope": "Exact response-algebra diagnostic only; no actual causal support or complete ontology certified.",
+  "polynomial": "F(x,y)=x+y-3xy+x^2*y+x*y^2",
+  "equivalent_nonnegative_basis": "x*(1-y)^2+y*(1-x)^2+x*y",
+  "corner_values": {
+    "(0, 0)": "0",
+    "(1, 0)": "1",
+    "(0, 1)": "1",
+    "(1, 1)": "1"
+  },
+  "local_partials_at_joint": [
+    "1",
+    "1"
+  ],
+  "neighbourhood": "[9/10,1]^2",
+  "proved_lower_bound_for_both_partials": "73/100",
+  "addition_path": "F(1,y)=1-y+y^2",
+  "path_derivative": "-1+2y",
+  "path_minimum": {
+    "y": "1/2",
+    "value": "3/4"
+  },
+  "integrated_changes": {
+    "[0,1/2]": "-1/4",
+    "[1/2,1]": "1/4",
+    "[0,1]": "0"
+  },
+  "profile_lift": {
+    "solo_a": [
+      "1",
+      "2",
+      "3/2"
+    ],
+    "solo_b": [
+      "1",
+      "2",
+      "3/2"
+    ],
+    "joint": [
+      "1",
+      "2",
+      "3/2"
+    ]
+  },
+  "unproved": [
+    "genuine actual causation",
+    "wise admissibility of interventions",
+    "numerical transworld identity",
+    "complete created-effect inventory",
+    "multiple perfected original bearers"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "recorded_at_utc": "2026-10-09T09:45:34.352520+00:00",
+  "checks": [
+    {
+      "directory": "explanation-stopping-asymmetry-20261009",
+      "bound_inputs_verified": 18,
+      "report_sha256": "aab7d5783771c15775e6de2fad644ea7867de9a2678eb48cc1ca9249fafddfe1",
+      "root_report_read": "Complete; delegated primary scopes not relabelled as personal reading"
+    },
+    {
+      "directory": "sovereignty-discriminator-currentness-20261009",
+      "bound_inputs_verified": 33,
+      "report_sha256": "dedcbd009844403c482e2f8fb09a83779987d7b2fb3bfbc219ec1fed3345768e",
+      "root_report_read": "Complete; delegated primary scopes not relabelled as personal reading"
+    }
+  ],
+  "spinoza": {
+    "commit": "6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+    "git_blobs_verified": 11,
+    "root_read": "Complete final report; source HTML1.1\u20131.3, 2\u20134 and6\u20139; whole Counterexamples434lines; StatedAxioms280\u2013317; definitions145\u2013179; A22/theorem367\u2013396; A25/A26proof679\u2013710; CausalAxioms44\u201394 and A13section470\u2013555. Targeted source inspection, not whole manuscript or whole repo.",
+    "status": "Rejected substantive transfer; no downloadedcode execution/kernel replay.",
+    "additional_logical_caution": "Formal object-logic derivability and soundness can be represented inside Lean; blanket inability to state non-derivability inside type assistants is too broad. This differs from self-certifying Lean consistency. Not a new implementation or formal theorem."
+  },
+  "DellaRocca2010": {
+    "root_read": "Entire received author-viewer text, printed1\u201313 with notes1\u201315, in three untruncated batches. No locally acquiredPDF/fullresolutionvisualcollation.",
+    "text_sha256": "7d6763ae3aa7f0c24fdf9574bc81d6b87b5bc6549504abe032e00031c17d19ef",
+    "final_report_read": true,
+    "report_sha256": "ec040740608abc6a8e8f14b2e0a09867a239e97ed41a279eaf3092c49267b72d"
+  },
+  "symmetry_addendum": {
+    "root_read": "Complete addendum and code; fresh independent control byte-identical",
+    "result_sha256": "bb326b67c525bcad20bf893efe03e8ccdb8c2363dcc999dc489a89e8507521ef",
+    "status": "Standard dualB local consequence, not newmathematicalnovelty or metaphysicalwarrant"
+  },
+  "archive_boundary": "All successor evidence outside sealedcheckpoint20",
+  "t20": "ACTIVE; no integration, owneracceptance or historicaldurationcertificate"
+}

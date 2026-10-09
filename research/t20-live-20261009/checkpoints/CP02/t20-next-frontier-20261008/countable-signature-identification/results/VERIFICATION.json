@@ -1,0 +1,73 @@
+{
+  "bound_inputs_unchanged": true,
+  "exports_byte_equal": true,
+  "isolated_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"test_groups\": [15, 6, 8], \"weighted_cross_decoder_cases\": 272, \"gcd_largest_generators\": [11, 256, 1]}\n"
+  },
+  "isolated_tests": [
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_adaptive_finite_query_transcript_is_preserved (__main__.CountableSupportTests.test_adaptive_finite_query_transcript_is_preserved) ... ok\ntest_base_two_exception_gives_a_real_multiplicative_collision (__main__.CountableSupportTests.test_base_two_exception_gives_a_real_multiplicative_collision) ... ok\ntest_binary_histograms_decode_without_signature_bound (__main__.CountableSupportTests.test_binary_histograms_decode_without_signature_bound) ... ok\ntest_binary_support_coding_and_fixed_calibration (__main__.CountableSupportTests.test_binary_support_coding_and_fixed_calibration) ... ok\ntest_denominator_weight_is_not_the_complete_histogram (__main__.CountableSupportTests.test_denominator_weight_is_not_the_complete_histogram) ... ok\ntest_finite_arbitrary_infinite_profiles_have_an_invisible_guard (__main__.CountableSupportTests.test_finite_arbitrary_infinite_profiles_have_an_invisible_guard) ... ok\ntest_generated_multiplicities_and_high_index_decode (__main__.CountableSupportTests.test_generated_multiplicities_and_high_index_decode) ... ok\ntest_greedy_infinite_prefix_has_bounded_digits_and_certified_error (__main__.CountableSupportTests.test_greedy_infinite_prefix_has_bounded_digits_and_certified_error) ... ok\ntest_nonempty_single_route_indices_already_lose_uniform_sample_margin (__main__.CountableSupportTests.test_nonempty_single_route_indices_already_lose_uniform_sample_margin) ... ok\ntest_nonmodel_rationals_are_rejected (__main__.CountableSupportTests.test_nonmodel_rationals_are_rejected) ... ok\ntest_real_convergence_does_not_preserve_prime_valuations (__main__.CountableSupportTests.test_real_convergence_does_not_preserve_prime_valuations) ... ok\ntest_second_exact_scope_query_separates_the_infinite_mimic (__main__.CountableSupportTests.test_second_exact_scope_query_separates_the_infinite_mimic) ... ok\ntest_shared_prime_orders_require_descending_elimination (__main__.CountableSupportTests.test_shared_prime_orders_require_descending_elimination) ... ok\ntest_unbounded_index_fixed_calibration_has_no_uniform_sampling_margin (__main__.CountableSupportTests.test_unbounded_index_fixed_calibration_has_no_uniform_sampling_margin) ... ok\ntest_verified_base_four_has_order_witnesses_in_executed_range (__main__.CountableSupportTests.test_verified_base_four_has_order_witnesses_in_executed_range) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.060s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_all_weighted_histograms_through_twelve (__main__.GcdDecoderTests.test_all_weighted_histograms_through_twelve) ... ok\ntest_early_stop_avoids_the_large_multiplicity_weight (__main__.GcdDecoderTests.test_early_stop_avoids_the_large_multiplicity_weight) ... ok\ntest_full_weight_and_early_stop_versions_agree (__main__.GcdDecoderTests.test_full_weight_and_early_stop_versions_agree) ... ok\ntest_high_unknown_indices_need_no_factorisation (__main__.GcdDecoderTests.test_high_unknown_indices_need_no_factorisation) ... ok\ntest_invalid_readouts_and_resource_limits_have_different_status (__main__.GcdDecoderTests.test_invalid_readouts_and_resource_limits_have_different_status) ... ok\ntest_selector_has_complete_new_prime_valuations (__main__.GcdDecoderTests.test_selector_has_complete_new_prime_valuations) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.066s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_effective_positive_enumerator_learning_prefix_stabilizes_in_controls (__main__.OracleBoundaryTests.test_effective_positive_enumerator_learning_prefix_stabilizes_in_controls) ... ok\ntest_exact_full_readout_gives_candidate_dependent_second_query_gap (__main__.OracleBoundaryTests.test_exact_full_readout_gives_candidate_dependent_second_query_gap) ... ok\ntest_finite_histogram_sum_maps_to_probability_multiplication (__main__.OracleBoundaryTests.test_finite_histogram_sum_maps_to_probability_multiplication) ... ok\ntest_fixed_calibration_mixture_has_exact_count_collision (__main__.OracleBoundaryTests.test_fixed_calibration_mixture_has_exact_count_collision) ... ok\ntest_grouped_repeats_separate_the_specific_mixture_pair (__main__.OracleBoundaryTests.test_grouped_repeats_separate_the_specific_mixture_pair) ... ok\ntest_guarded_dovetail_learning_has_correct_provisional_limit_controls (__main__.OracleBoundaryTests.test_guarded_dovetail_learning_has_correct_provisional_limit_controls) ... ok\ntest_one_finite_cauchy_prefix_fits_distinct_nonempty_models (__main__.OracleBoundaryTests.test_one_finite_cauchy_prefix_fits_distinct_nonempty_models) ... ok\ntest_stochastic_mixture_collision_survives_all_profile_rate_controls (__main__.OracleBoundaryTests.test_stochastic_mixture_collision_survives_all_profile_rate_controls) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.108s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "local_export": {
+    "exit_code": 0,
+    "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+    "stderr": "",
+    "stdout": "{\"test_groups\": [15, 6, 8], \"weighted_cross_decoder_cases\": 272, \"gcd_largest_generators\": [11, 256, 1]}\n"
+  },
+  "local_tests": [
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_adaptive_finite_query_transcript_is_preserved (__main__.CountableSupportTests.test_adaptive_finite_query_transcript_is_preserved) ... ok\ntest_base_two_exception_gives_a_real_multiplicative_collision (__main__.CountableSupportTests.test_base_two_exception_gives_a_real_multiplicative_collision) ... ok\ntest_binary_histograms_decode_without_signature_bound (__main__.CountableSupportTests.test_binary_histograms_decode_without_signature_bound) ... ok\ntest_binary_support_coding_and_fixed_calibration (__main__.CountableSupportTests.test_binary_support_coding_and_fixed_calibration) ... ok\ntest_denominator_weight_is_not_the_complete_histogram (__main__.CountableSupportTests.test_denominator_weight_is_not_the_complete_histogram) ... ok\ntest_finite_arbitrary_infinite_profiles_have_an_invisible_guard (__main__.CountableSupportTests.test_finite_arbitrary_infinite_profiles_have_an_invisible_guard) ... ok\ntest_generated_multiplicities_and_high_index_decode (__main__.CountableSupportTests.test_generated_multiplicities_and_high_index_decode) ... ok\ntest_greedy_infinite_prefix_has_bounded_digits_and_certified_error (__main__.CountableSupportTests.test_greedy_infinite_prefix_has_bounded_digits_and_certified_error) ... ok\ntest_nonempty_single_route_indices_already_lose_uniform_sample_margin (__main__.CountableSupportTests.test_nonempty_single_route_indices_already_lose_uniform_sample_margin) ... ok\ntest_nonmodel_rationals_are_rejected (__main__.CountableSupportTests.test_nonmodel_rationals_are_rejected) ... ok\ntest_real_convergence_does_not_preserve_prime_valuations (__main__.CountableSupportTests.test_real_convergence_does_not_preserve_prime_valuations) ... ok\ntest_second_exact_scope_query_separates_the_infinite_mimic (__main__.CountableSupportTests.test_second_exact_scope_query_separates_the_infinite_mimic) ... ok\ntest_shared_prime_orders_require_descending_elimination (__main__.CountableSupportTests.test_shared_prime_orders_require_descending_elimination) ... ok\ntest_unbounded_index_fixed_calibration_has_no_uniform_sampling_margin (__main__.CountableSupportTests.test_unbounded_index_fixed_calibration_has_no_uniform_sampling_margin) ... ok\ntest_verified_base_four_has_order_witnesses_in_executed_range (__main__.CountableSupportTests.test_verified_base_four_has_order_witnesses_in_executed_range) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.060s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_all_weighted_histograms_through_twelve (__main__.GcdDecoderTests.test_all_weighted_histograms_through_twelve) ... ok\ntest_early_stop_avoids_the_large_multiplicity_weight (__main__.GcdDecoderTests.test_early_stop_avoids_the_large_multiplicity_weight) ... ok\ntest_full_weight_and_early_stop_versions_agree (__main__.GcdDecoderTests.test_full_weight_and_early_stop_versions_agree) ... ok\ntest_high_unknown_indices_need_no_factorisation (__main__.GcdDecoderTests.test_high_unknown_indices_need_no_factorisation) ... ok\ntest_invalid_readouts_and_resource_limits_have_different_status (__main__.GcdDecoderTests.test_invalid_readouts_and_resource_limits_have_different_status) ... ok\ntest_selector_has_complete_new_prime_valuations (__main__.GcdDecoderTests.test_selector_has_complete_new_prime_valuations) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.058s\n\nOK\n",
+      "stdout": ""
+    },
+    {
+      "exit_code": 0,
+      "path": "[OMITTED_PRIVATE_MACHINE_PATH]",
+      "stderr": "test_effective_positive_enumerator_learning_prefix_stabilizes_in_controls (__main__.OracleBoundaryTests.test_effective_positive_enumerator_learning_prefix_stabilizes_in_controls) ... ok\ntest_exact_full_readout_gives_candidate_dependent_second_query_gap (__main__.OracleBoundaryTests.test_exact_full_readout_gives_candidate_dependent_second_query_gap) ... ok\ntest_finite_histogram_sum_maps_to_probability_multiplication (__main__.OracleBoundaryTests.test_finite_histogram_sum_maps_to_probability_multiplication) ... ok\ntest_fixed_calibration_mixture_has_exact_count_collision (__main__.OracleBoundaryTests.test_fixed_calibration_mixture_has_exact_count_collision) ... ok\ntest_grouped_repeats_separate_the_specific_mixture_pair (__main__.OracleBoundaryTests.test_grouped_repeats_separate_the_specific_mixture_pair) ... ok\ntest_guarded_dovetail_learning_has_correct_provisional_limit_controls (__main__.OracleBoundaryTests.test_guarded_dovetail_learning_has_correct_provisional_limit_controls) ... ok\ntest_one_finite_cauchy_prefix_fits_distinct_nonempty_models (__main__.OracleBoundaryTests.test_one_finite_cauchy_prefix_fits_distinct_nonempty_models) ... ok\ntest_stochastic_mixture_collision_survives_all_profile_rate_controls (__main__.OracleBoundaryTests.test_stochastic_mixture_collision_survives_all_profile_rate_controls) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.101s\n\nOK\n",
+      "stdout": ""
+    }
+  ],
+  "primary_source_checks": [
+    {
+      "file": "zsigmondy-1892.pdf",
+      "status": "hash verified"
+    },
+    {
+      "file": "gyory-smyth-2010.pdf",
+      "status": "hash verified"
+    }
+  ],
+  "scope": "Evidence replay only, not new research credit, a new primitive-divisor proof, or source-world authentication.",
+  "test_counts": [
+    15,
+    6,
+    8
+  ],
+  "timestamp_utc": "2026-10-08T09:35:49.511560+00:00"
+}

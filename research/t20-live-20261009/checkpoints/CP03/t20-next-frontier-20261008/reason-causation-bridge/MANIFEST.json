@@ -1,0 +1,106 @@
+{
+  "frozen_utc": "2026-10-08T10:49:44.709948+00:00",
+  "status": "bounded successor stage frozen for parent review, no final T20 integration",
+  "root": "t20-next-frontier-20261008/reason-causation-bridge",
+  "source_summary_words": 188,
+  "file_count": 19,
+  "files": [
+    {
+      "path": "EXCLUSION_TRANSPORT.md",
+      "bytes": 5251,
+      "sha256": "724825586f3ec4c049a4bd95731cb4162d6fe9877f2df3b40e4b88e751f146b6"
+    },
+    {
+      "path": "INDEPENDENT_ASSESSMENT.md",
+      "bytes": 15360,
+      "sha256": "d6a39127f52e8644cbf4d1c6340fca5138b3f02dac449f7db300e8c35b13bd24"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 2588,
+      "sha256": "5931cc7cc82f4e8d1821fa93e381ea523affb7217f11cbdf93d3df53e6695fa9"
+    },
+    {
+      "path": "LOCATOR_ADDENDUM.md",
+      "bytes": 1256,
+      "sha256": "bad7e61e8010cb24d1dad90524706feab62553d64b89973132f51258e7b4e14f"
+    },
+    {
+      "path": "MODEL_AND_TRANSPORT.md",
+      "bytes": 7235,
+      "sha256": "28fc3f52c6dc60551d14c04fcd061f8dc4b358882a999b1d8307f64ad763a0ea"
+    },
+    {
+      "path": "PROSPECTIVE_TEST.md",
+      "bytes": 2508,
+      "sha256": "996db7128ae0851cf254f848a8051a36b2e2f0459424d49a8558bd912f5dc87f"
+    },
+    {
+      "path": "PUBLIC_SOURCE_SUMMARY.md",
+      "bytes": 1482,
+      "sha256": "23c17bd6be5cd1307871f58fbe6db013b2e0757d35629f41148c9d05a7d59f57"
+    },
+    {
+      "path": "READING_PROVENANCE.json",
+      "bytes": 4406,
+      "sha256": "3315f4ed00df7b07448229e008d64f34a90eedfa850ce8a54e8aa011aacd1b1a"
+    },
+    {
+      "path": "READ_FIRST.md",
+      "bytes": 2892,
+      "sha256": "058ce0ab25f5c9ac74e91912991c5ecf1ec4e21acaec7cdc2dd0c2f6caece2f5"
+    },
+    {
+      "path": "RESEARCH_EVENTS.jsonl",
+      "bytes": 2312,
+      "sha256": "489d0d377480f6f8c5437f4ad364d4088b67a5c9498ae71d3aa3a4bcb9825ea2"
+    },
+    {
+      "path": "REVIEW_RECEIPT.md",
+      "bytes": 1719,
+      "sha256": "dd372eb8dde4d5137ba846dae756dfd25e0459d764ab1c94021296d71de14042"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 1120,
+      "sha256": "bd23f40b35ccd45dc42892b232ce85fb4c10e637f0ee4a55c84982d518d5a3d8"
+    },
+    {
+      "path": "model/RESULTS.json",
+      "bytes": 3983,
+      "sha256": "f702fa52adf5e5ddbad991ccb8e98d38318e0b2a4b76ab29186e43ad8050eb13"
+    },
+    {
+      "path": "model/check_bridge.py",
+      "bytes": 6791,
+      "sha256": "5a55c421a3c0bd0d6507dcecb6acb7d041d2025cfac67994e97f984a4a040e1a"
+    },
+    {
+      "path": "primary-check/primary-source-receipt.md",
+      "bytes": 8404,
+      "sha256": "cb61f610b3319da7317eeb2871af743db9c09996812a61318f5a3dcfcedfc335"
+    },
+    {
+      "path": "primary-check/source-manifest.json",
+      "bytes": 3084,
+      "sha256": "c0d68157675008be8c971a6ee000b477507ce56c8f4d797214624d7207767b05"
+    },
+    {
+      "path": "results/inherited_imported_kernel_check.log",
+      "bytes": 3950,
+      "sha256": "cbad87c48e3a132e904547e94664a25a4e6ab6fc91e13bc634bff4594b384f82"
+    },
+    {
+      "path": "results/inherited_source_check.log",
+      "bytes": 466,
+      "sha256": "4a40d3dd048a76476f896f17cdd97d318f83291455d062b0f0e01f3cbe011852"
+    },
+    {
+      "path": "results/model_check.log",
+      "bytes": 3983,
+      "sha256": "f702fa52adf5e5ddbad991ccb8e98d38318e0b2a4b76ab29186e43ad8050eb13"
+    }
+  ],
+  "claim_ceiling": "Conditional form-sensitive semantic implementation; exact external-input/warrant boundary; failed direct original-peer exclusion transport. No metaphysical naturalism/theism conclusion.",
+  "source_credit": "Full continuous Ameri chapter249\u2013274 with notes; context247\u2013248,275\u2013277; fifteen decisive visual rereads; targeted primary scopes only."
+}
