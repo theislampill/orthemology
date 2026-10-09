@@ -51,9 +51,9 @@ The log-squared review preserves an initial failed diagnostic run: its hard-code
 
 ## Predecessors, timing and replay
 
-All ten predecessor archive identities are retained and freshly checked unchanged, without rebundling historical proofs or toolchains. The authoritative ninth remains the Scope_Clarified archive, SHA-256 81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef, Library ID libfile_c712796c70708191b4a662b56bdc7060. Its earlier initial seal is preserved but is not the authoritative delivery.
+All ten predecessor archive identities are retained and freshly checked unchanged, without rebundling historical proofs or toolchains. The authoritative ninth remains the Scope_Clarified archive, SHA-256 81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef, Library ID private-library-alias-027. Its earlier initial seal is preserved but is not the authoritative delivery.
 
-The tenth archive is T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip, SHA-256 a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a, 91,193 bytes, Library ID libfile_a63eb240332481918f8e055bb0f75e08. Its guide is libfile_410ea1421dc08191898ef2c7097d724b.
+The tenth archive is T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008.zip, SHA-256 a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a, 91,193 bytes, Library ID private-library-alias-023. Its guide is private-library-alias-008.
 
 Historical six-hour active compliance remains UNVERIFIED. Packaging, replays, waiting and overlapping prospective windows earn no research-time credit. The owner-reported adopted baseline is 3a0bdeaa1394c656245cae9599adcb143e885059 after the 8 October PR 30/31/32 merges; no GitHub maintenance or remote verification is performed by this task.
 

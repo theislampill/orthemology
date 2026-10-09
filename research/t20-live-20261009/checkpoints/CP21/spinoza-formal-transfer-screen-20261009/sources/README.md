@@ -11,7 +11,7 @@
 > identity-from-shared-attribute clause) and A15 (Proposition
 > XIV's universality clause) cannot be derived from stated
 > axioms plus a Della-Rocca-flavoured PSR augmentation. Per-
-> proposition status is tracked in `docs/coverage.md`.
+> proposition status is tracked in [upstream coverage register](https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/coverage.md).
 >
 > Project lead: Yuki Nakamura.
 
@@ -135,7 +135,7 @@ companion paper.
 ### Gap policy
 
 Each `sorry` carries a `-- GAP-N` comment and an entry in
-[`docs/gaps.md`]\(docs/gaps.md) recording the philosophical reason
+[upstream gap register](https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/gaps.md) recording the philosophical reason
 and resolution path. Discharge happens in a dedicated commit that
 updates `gaps.md` in the same change. Silent `sorry` is forbidden.
 

@@ -250,7 +250,7 @@
     "NINTH_HARD_PAIR_AND_RETAINED_INTERFACE": {
       "included": false,
       "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "library_file_id": "private-library-alias-027",
       "records": [
         {
           "path": "t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
@@ -262,7 +262,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         },
         {
@@ -274,7 +274,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/SOURCE_AUDIT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         },
         {
@@ -286,7 +286,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-information/RESULT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         }
       ]
@@ -294,7 +294,7 @@
     "NINTH_FULL_FACE_KL_RATE": {
       "included": false,
       "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "library_file_id": "private-library-alias-027",
       "records": [
         {
           "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
@@ -306,7 +306,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         },
         {
@@ -318,7 +318,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/SOURCE_AUDIT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         }
       ],
@@ -327,7 +327,7 @@
     "NINTH_RECONSTRUCTION_BOUNDARY": {
       "included": false,
       "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "library_file_id": "private-library-alias-027",
       "records": [
         {
           "path": "t20-next-frontier-20261008/readout-reconstruction-boundary/RESULT.md",
@@ -338,7 +338,7 @@
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/readout-reconstruction-boundary/RESULT.md",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "included": false
         }
       ],

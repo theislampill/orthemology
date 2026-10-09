@@ -7,7 +7,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 1,
-      "library_file_id": "libfile_ea979c6aff9c8191a628db3d70c2d39d",
+      "library_file_id": "private-library-alias-035",
       "library_version": 0
     },
     {
@@ -17,7 +17,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 2,
-      "library_file_id": "libfile_f4760dc368b08191bf4ede9576836ffa",
+      "library_file_id": "private-library-alias-038",
       "library_version": 0
     },
     {
@@ -27,7 +27,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 3,
-      "library_file_id": "libfile_3863165449d08191a27d385b6a7ad3df",
+      "library_file_id": "private-library-alias-007",
       "library_version": 0
     },
     {
@@ -37,7 +37,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 4,
-      "library_file_id": "libfile_bc799d1a07f081919df98cbccc13bfc9",
+      "library_file_id": "private-library-alias-025",
       "library_version": 0
     },
     {
@@ -47,7 +47,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 5,
-      "library_file_id": "libfile_a0e5361238c88191964de0a1f1cf56ef",
+      "library_file_id": "private-library-alias-022",
       "library_version": 0
     },
     {
@@ -57,7 +57,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 6,
-      "library_file_id": "libfile_c454aa98f32c8191a894cf7d52c9229b",
+      "library_file_id": "private-library-alias-026",
       "library_version": 0
     },
     {
@@ -67,7 +67,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 7,
-      "library_file_id": "libfile_f65626da53f481919f90247d46fcc9df",
+      "library_file_id": "private-library-alias-040",
       "library_version": 0
     },
     {
@@ -77,7 +77,7 @@
       "included": false,
       "boundary": "earlier_checkpoint_unchanged",
       "checkpoint_number": 8,
-      "library_file_id": "libfile_e499c9ce10b88191b20bbedaec5416cf",
+      "library_file_id": "private-library-alias-033",
       "library_version": 0
     },
     {
@@ -86,7 +86,7 @@
       "sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
       "included": false,
       "boundary": "authoritative ninth Scope_Clarified delivered archive; earlier initial ninth seal remains preserved",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "library_file_id": "private-library-alias-027",
       "checkpoint_number": 9,
       "library_version": 0
     },
@@ -96,8 +96,8 @@
       "sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
       "included": false,
       "boundary": "Authoritative delivered tenth intermediate archive",
-      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
-      "guide_library_file_id": "libfile_410ea1421dc08191898ef2c7097d724b",
+      "library_file_id": "private-library-alias-023",
+      "guide_library_file_id": "private-library-alias-008",
       "checkpoint_number": 10,
       "library_version": 0
     },
@@ -108,8 +108,8 @@
       "included": false,
       "checkpoint_number": 11,
       "boundary": "Authoritative delivered eleventh archive; historical pending-sharp and one-log-gap language preserved unchanged",
-      "library_file_id": "libfile_d997bac5e5f48191a011cbc021ad4d84",
-      "guide_library_file_id": "libfile_48a39c0fcb6c8191a06abfd78608fd06"
+      "library_file_id": "private-library-alias-030",
+      "guide_library_file_id": "private-library-alias-011"
     }
   ],
   "authority": "All 11 previous authoritative ZIPs are dependencies by exact identity only, never rebundled or rewritten. Ninth Scope_Clarified remains authoritative.",

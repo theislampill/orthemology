@@ -2,8 +2,8 @@
 
 9 October 2026 UTC. dot's research-level philosophical appraisal, not a new proof, independent source witness, repository adoption or T20 closure.
 
-Owner request: Sentinel_6153b999f4ac8191b125456357641d96.
-Delivered response: Sentinel_e0a8cd8036588191a4cf81a987806bb8, 2026-10-09T00:14:27.996460+00:00.
+Owner request: private-message-alias-005.
+Delivered response: private-message-alias-011, 2026-10-09T00:14:27.996460+00:00.
 
 ## Present assent and exact reservation
 

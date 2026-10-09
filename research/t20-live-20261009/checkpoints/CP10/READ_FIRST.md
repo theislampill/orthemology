@@ -22,7 +22,7 @@ Numerical and failed controls are retained: direct Joe corner quadrature has a v
 
 ## Preservation and timing
 
-The authoritative ninth dependency is T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.zip, SHA-256 81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef, Library ID libfile_c712796c70708191b4a662b56bdc7060. The earlier initial ninth seal is also preserved but is not the authoritative delivered identity. All nine predecessor archive identities are recorded, with no historical mathematics or toolchains rebundled.
+The authoritative ninth dependency is T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified.zip, SHA-256 81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef, Library ID private-library-alias-027. The earlier initial ninth seal is also preserved but is not the authoritative delivered identity. All nine predecessor archive identities are recorded, with no historical mathematics or toolchains rebundled.
 
 Prospective activity windows and packaging timestamps are not certified historical duration. Historical six-hour active compliance remains UNVERIFIED. Packaging, replays, waiting and overlapping worker windows receive no research-time credit. The owner-reported baseline is 3a0bdeaa1394c656245cae9599adcb143e885059 after the 8 October PR 30/31/32 merges; this packaging task performs no GitHub maintenance or remote verification.
 

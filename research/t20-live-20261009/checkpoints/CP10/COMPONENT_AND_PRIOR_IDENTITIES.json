@@ -62,13 +62,13 @@
       "sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
       "included": false,
       "boundary": "authoritative ninth Scope_Clarified delivered archive; earlier initial ninth seal remains preserved",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060"
+      "library_file_id": "private-library-alias-027"
     }
   ],
   "ninth_authoritative_delivery": {
     "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-    "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
-    "guide_library_file_id": "libfile_6a8c984842c48191a15282c2172b34fe",
+    "library_file_id": "private-library-alias-027",
+    "guide_library_file_id": "private-library-alias-017",
     "initial_ninth_seal": "Preserved unchanged locally; not the authoritative delivered ninth identity."
   },
   "owner_reported_adopted_baseline": "3a0bdeaa1394c656245cae9599adcb143e885059",

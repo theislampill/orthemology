@@ -17,7 +17,7 @@ The eleven earlier authoritative ZIPs remain unchanged and are not included agai
 - T20_Full_Skyline_Information_Bounds_Intermediate_Checkpoint_20261008.zip
 - SHA-256: 76bec736f7345358f43b82409592a52167d627103b53a97d7939f9ae56b3534d
 - 344808 bytes
-- Library: libfile_d997bac5e5f48191a011cbc021ad4d84; guide: libfile_48a39c0fcb6c8191a06abfd78608fd06
+- Library: private-library-alias-030; guide: private-library-alias-011
 
 Its historical one-log gap and pending-sharp wording is preserved. This checkpoint supersedes only those live frontier statuses, not its proof identities, prior claims or historical record. Earlier author pending-review labels also remain untouched; the later exact review receipts establish the newly recorded scoped acceptance.
 

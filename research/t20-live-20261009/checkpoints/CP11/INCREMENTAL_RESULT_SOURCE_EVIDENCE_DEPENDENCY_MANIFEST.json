@@ -487,7 +487,7 @@
     "TENTH_EXACT_SKYLINE_LIKELIHOOD": {
       "included": false,
       "archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
-      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "library_file_id": "private-library-alias-023",
       "records": [
         {
           "path": "t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
@@ -505,7 +505,7 @@
           ],
           "archive_member": "T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/retained-skyline-likelihood/RESULT.md",
           "predecessor_archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
-          "archive_library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+          "archive_library_file_id": "private-library-alias-023",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "included": false
         }
@@ -515,7 +515,7 @@
     "TENTH_COUNT_INFORMATION": {
       "included": false,
       "archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
-      "library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+      "library_file_id": "private-library-alias-023",
       "records": [
         {
           "path": "t20-next-frontier-20261008/skyline-count-information/RESULT.md",
@@ -533,7 +533,7 @@
           ],
           "archive_member": "T20_Skyline_Information_and_Finite_Readout_Intermediate_Checkpoint_20261008/t20-next-frontier-20261008/skyline-count-information/RESULT.md",
           "predecessor_archive_sha256": "a9f2a64c0ac30324c40993ca2a7e3d995858af3242226d7091e50d251acd622a",
-          "archive_library_file_id": "libfile_a63eb240332481918f8e055bb0f75e08",
+          "archive_library_file_id": "private-library-alias-023",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "included": false
         }
@@ -543,7 +543,7 @@
     "NINTH_ACTUAL_ACTION_CONTRACT": {
       "included": false,
       "archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-      "library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+      "library_file_id": "private-library-alias-027",
       "records": [
         {
           "path": "t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
@@ -556,7 +556,7 @@
           ],
           "archive_member": "T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/full-face-threshold-kl-rate/RESULT.md",
           "predecessor_archive_sha256": "81089a1bd1497982bf80310d191a6b1019462bcb922b1f2fffbefc696853f1ef",
-          "archive_library_file_id": "libfile_c712796c70708191b4a662b56bdc7060",
+          "archive_library_file_id": "private-library-alias-027",
           "verified_against": "EXACT_ARCHIVE_MEMBER",
           "included": false
         }

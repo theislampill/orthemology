@@ -9,11 +9,77 @@
   "nonclaims": [
     "No scientific closure, owner adoption, public source identity for raw private ZIPs, new Lean verification of prior items, retrospective human review, or transfer to universal metaphysics",
     "No raw ZIP/log/private source bodies are committed",
-    "No claim original ZIP members equal machine-path-redacted derived public copies"
+    "No claim original ZIP members equal mechanically redacted or amended public copies; original source and replay hashes retain their original scope"
   ],
   "numbered_checkpoints": 23,
   "programme": "Orthemology v5",
-  "published_files": 2064,
+  "publication_repairs": {
+    "historical_commit_boundary": "Withholding or aliasing in this revision does not erase previously published commits. Original source/replay hashes still bind original private bytes, not the amended public projections.",
+    "private_linkage_inventory": {
+      "alias_policy": "Distinct typed aliases preserve equality across records and JSON keys. Original-to-public map remains private; aliases are not live Library/file/message locators.",
+      "aliased_by_type": {
+        "conversation_file_id": 4,
+        "library_file_id": 187,
+        "message_id": 16
+      },
+      "delivery_records_withheld": 2,
+      "files_aliased": 37,
+      "files_before": 39,
+      "occurrences_aliased": 207,
+      "occurrences_before": 217,
+      "occurrences_withheld": 10,
+      "remaining_original_identifiers": 0
+    },
+    "restored_license": {
+      "bytes": 1188,
+      "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/LICENSE",
+      "sha256": "47b99d4833f7c801c29bdf0e0c8488a6e9f5f5fd26d0a54a816982b783b7e837",
+      "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/LICENSE"
+    },
+    "reviewed_head": "aba0bce3d651ab7f09cb9aa6a31c395e31e900fc",
+    "scope": "Mechanical publication repair only; T20 ACTIVE; scientific and original verification scopes unchanged.",
+    "upstream_reference_qualifications": [
+      {
+        "new_field": "upstream_url",
+        "old_field": "repository_path",
+        "path": "checkpoints/CP21/REFERENCE_ONLY_CODE.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "new_field": "upstream_url",
+        "old_field": "path",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/READING_LEDGER.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "link_label": "upstream coverage register",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/README.md",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/coverage.md"
+      },
+      {
+        "link_label": "upstream gap register",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/sources/README.md",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/gaps.md"
+      },
+      {
+        "new_field": "upstream_url",
+        "old_field": "path",
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/VERIFICATION.json",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      },
+      {
+        "path": "checkpoints/CP21/spinoza-formal-transfer-screen-20261009/source-bindings.json",
+        "removed_redundant_field": "path",
+        "retained_url_field": "url",
+        "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md"
+      }
+    ],
+    "withheld_delivery_records": [
+      "checkpoints/CP21/prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint20_20261009.LIBRARY_DELIVERY.json",
+      "checkpoints/CP22/prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json"
+    ]
+  },
+  "published_files": 2063,
   "records": [
     {
       "id": "CP01",
@@ -218,7 +284,7 @@
     {
       "id": "CP21",
       "original_name": "T20_Resumed_Research_Intermediate_Checkpoint21_20261009.zip",
-      "private_locator_substitutions": 74,
+      "private_locator_substitutions": 72,
       "private_only_files": 5,
       "public_files": 59,
       "public_path": "checkpoints/CP21",
@@ -228,9 +294,9 @@
     {
       "id": "CP22",
       "original_name": "T20_Resumed_Research_Intermediate_Checkpoint22_20261009.zip",
-      "private_locator_substitutions": 5,
-      "private_only_files": 6,
-      "public_files": 46,
+      "private_locator_substitutions": 3,
+      "private_only_files": 7,
+      "public_files": 45,
       "public_path": "checkpoints/CP22",
       "source_members": 52,
       "source_sha256": "5a84d9bb321db3a7d4c23a374ac05e6f790ce5b83e2de530fdfd704bb2b6310a"
@@ -286,5 +352,5 @@
   },
   "supplements": 1,
   "t20_status": "ACTIVE",
-  "total_public_files": 2068
+  "total_public_files": 2067
 }

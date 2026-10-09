@@ -1,6 +1,6 @@
 # T20 research allocation after the owner's 23:08 UTC correction
 
-T20 ACTIVE. Source instruction: Sentinel_1b7d163dbb28819181d203b53dca8a87. This changes allocation, not the validity, evidence classifications or archival status of completed results. Main remains the owner-reported adopted baseline 3a0bdeaa1394c656245cae9599adcb143e885059. No integration operation is authorised here.
+T20 ACTIVE. Source instruction: private-message-alias-002. This changes allocation, not the validity, evidence classifications or archival status of completed results. Main remains the owner-reported adopted baseline 3a0bdeaa1394c656245cae9599adcb143e885059. No integration operation is authorised here.
 
 ## Independent assessment
 
@@ -23,4 +23,4 @@ These priorities are provisional scientific judgements, not a new mandatory repo
 
 ## Owner clarification, 23:10 UTC
 
-Sentinel_1d77974c58e881918343b36c4868b419 confirms that mathematics is not subordinate to the common-Creator argument. Independently consequential mathematics can justify its own priority. Opportunity, evidence and potential significance govern allocation across mutually informative mathematical, metaphysical and epistemological programmes. Proximity to an original question is not a necessary condition for value. The current pause is a judgement about the marginal priority of further specialised sampling optimisation, not a prohibition on independent mathematical discovery or a requirement to fabricate theological applications.
+private-message-alias-003 confirms that mathematics is not subordinate to the common-Creator argument. Independently consequential mathematics can justify its own priority. Opportunity, evidence and potential significance govern allocation across mutually informative mathematical, metaphysical and epistemological programmes. Proximity to an original question is not a necessary condition for value. The current pause is a judgement about the marginal priority of further specialised sampling optimisation, not a prohibition on independent mathematical discovery or a requirement to fabricate theological applications.

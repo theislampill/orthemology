@@ -36,10 +36,10 @@
   "exact_delivery_record_copy": "prior-checkpoint-identities/T20_Resumed_Research_Intermediate_Checkpoint21_20261009.LIBRARY_DELIVERY.json",
   "delivery_record_sha256": "f122ecfd5a48dd5d37e130caa76e71fe8f1128a9a9c6408057101e793dfa1be1",
   "library_file_ids": [
-    "libfile_5f55d9b3b62c819189242bba8cd731a6",
-    "libfile_8369119635a081918a10d8b5a1d938c2"
+    "private-library-alias-016",
+    "private-library-alias-020"
   ],
-  "accepted_message_id": "Sentinel_94ca31520160819187de4713aa5b3470",
+  "accepted_message_id": "private-message-alias-007",
   "accepted_at_utc": "2026-10-09T09:57:27.806896+00:00",
   "receipt_limit": "Accepted send does not verify client opening or owner acceptance of research.",
   "checkpoint22_delivery": "No upload or user message performed; any later delivery record belongs outside this sealed ZIP."

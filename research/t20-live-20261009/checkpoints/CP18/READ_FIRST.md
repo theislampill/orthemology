@@ -25,6 +25,6 @@ The original verify.sh and verify-boolean.sh are retained as historical artifact
 
 MANIFEST.json inventories the distributed bytes; component manifests may additionally name omitted inputs. Modern source bodies, raw captures/HTML, scans, images, toolchains and prior ZIPs are omitted. Bounded classical Arabic selections remain. The user's new TXT has Library provenance, but its source claims are not automatically authenticated. Later attachments, the independent supplement and direct anti-brute work are outside this increment.
 
-PRIOR_CHECKPOINT.json references delivered checkpoint17: ZIP SHA-256 5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3; 156181 bytes; Library libfile_328e934f526c8191a49866a1a9cd9c04 v0. Its guide is Library libfile_7f2c048fb59481918a8bedef62291189 v0. Its unchanged prior registry is retained by exact archive-member reference, without nested archives or a global historical validation campaign.
+PRIOR_CHECKPOINT.json references delivered checkpoint17: ZIP SHA-256 5a7bf4abfc9fa5e0a8f8178c351cad101a090bb382da275f34e5fcc1aa77dee3; 156181 bytes; Library private-library-alias-006 v0. Its guide is Library private-library-alias-019 v0. Its unchanged prior registry is retained by exact archive-member reference, without nested archives or a global historical validation campaign.
 
 The separate receipt records selected hashes, CRC, fresh safe extraction and the portable three-file replay. No upload or user message was performed by the packaging operation.

@@ -4,9 +4,9 @@
   "transfers": [
     {
       "current_version_number": 0,
-      "file_id": "file_000000003aac81f5bbae130a3bb90248",
+      "file_id": "private-file-alias-003",
       "file_name": "DOT_COMPANION_MESSAGE(1).md",
-      "library_file_id": "libfile_f3f9361c2f8c819192d2e62cf36e51af",
+      "library_file_id": "private-library-alias-037",
       "sha256": "a2cec0ae9ec67ea34103f566b8409d6d29adf55edb7bdac987a84f3e4fd7df22",
       "size_bytes": 4360,
       "workspace_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
@@ -17,15 +17,15 @@
         }
       ],
       "xattrs_verified": {
-        "user.library-file-id": "libfile_f3f9361c2f8c819192d2e62cf36e51af",
+        "user.library-file-id": "private-library-alias-037",
         "user.library-file-version": "0"
       }
     },
     {
       "current_version_number": 0,
-      "file_id": "file_000000008fa081f5a2dbdae5a7dd3c1a",
+      "file_id": "private-file-alias-005",
       "file_name": "Orthemology_T20_Independent_Five_Front_Source_Supplement_20261009(1).md",
-      "library_file_id": "libfile_db7354a2523c8191a34b103291ddfd55",
+      "library_file_id": "private-library-alias-031",
       "sha256": "54df8e28e3fcbe8470c6f8ad9d4160da35b23f182b01dbfaa587138b0ea04712",
       "size_bytes": 51345,
       "workspace_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
@@ -36,15 +36,15 @@
         }
       ],
       "xattrs_verified": {
-        "user.library-file-id": "libfile_db7354a2523c8191a34b103291ddfd55",
+        "user.library-file-id": "private-library-alias-031",
         "user.library-file-version": "0"
       }
     },
     {
       "current_version_number": 0,
-      "file_id": "file_00000000b8cc81f59f0cd8722e6be316",
+      "file_id": "private-file-alias-006",
       "file_name": "Orthemology_T20_Independent_Five_Front_Source_Supplement_20261009(1).zip",
-      "library_file_id": "libfile_5a5d996fa2b88191a5ac1155ad70cf07",
+      "library_file_id": "private-library-alias-014",
       "sha256": "df0c846459392e50f71bd7c010858ef0ed77ce7edf01c0249964ef2c81ae6a86",
       "size_bytes": 27310,
       "workspace_path": "[OMITTED_PRIVATE_MACHINE_PATH]",
@@ -55,7 +55,7 @@
         }
       ],
       "xattrs_verified": {
-        "user.library-file-id": "libfile_5a5d996fa2b88191a5ac1155ad70cf07",
+        "user.library-file-id": "private-library-alias-014",
         "user.library-file-version": "0"
       }
     }

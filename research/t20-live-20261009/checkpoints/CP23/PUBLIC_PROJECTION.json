@@ -2,6 +2,11 @@
   "checkpoint": "CP23",
   "machine_prefix_replacements": 6,
   "original_hash_scope": "Original hashes bind private source bytes. Public hashes bind the selected, possibly redacted copies. Historical manifests and evidence bindings retain their original scope.",
+  "private_linkage_aliases": {
+    "affected_files": 1,
+    "identity_map": "Owner-private; distinct aliases preserve equality with S01.",
+    "occurrences": 2
+  },
   "private_only_files": 52,
   "records": [
     {
@@ -824,9 +829,12 @@
       "machine_prefix_replacements": 0,
       "original_sha256": "54ccf146a95d22b88263c54664dd1b94033785d55901f6b9e7fbea0dff6b07b4",
       "path": "warranted-discrimination-research-20261009/SOURCES.json",
-      "projection": "exact",
-      "public_bytes": 4380,
-      "public_sha256": "54ccf146a95d22b88263c54664dd1b94033785d55901f6b9e7fbea0dff6b07b4"
+      "private_linkage_alias_counts": {
+        "library_file_id": 2
+      },
+      "projection": "private_linkage_aliased",
+      "public_bytes": 4350,
+      "public_sha256": "188bbf65c49669cae64022a810f5a35b4b846cd0a91497865e62811edda82b25"
     },
     {
       "machine_prefix_replacements": 0,

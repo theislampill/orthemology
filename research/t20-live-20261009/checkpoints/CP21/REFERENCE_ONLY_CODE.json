@@ -40,7 +40,7 @@
     },
     {
       "archive_path": "spinoza-formal-transfer-screen-20261009/sources/docs__auxiliary_axioms.md",
-      "repository_path": "docs/auxiliary_axioms.md",
+      "upstream_url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md",
       "git_blob_sha1": "37429eb5d9688e71b0c6bb974d78fc4f5c053809",
       "sha256": "9814ca15ec60c5dc4f322499dcbfad4637626182e9cf5aaa9543131830840d9b",
       "executed": false
