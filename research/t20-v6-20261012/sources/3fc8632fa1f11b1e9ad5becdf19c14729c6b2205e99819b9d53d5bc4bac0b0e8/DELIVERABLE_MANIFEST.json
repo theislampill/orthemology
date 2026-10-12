@@ -1,0 +1,58 @@
+{
+  "cutoff_utc": "2026-10-11T11:32:55Z",
+  "status": "proposed baseline, owner review pending",
+  "claims": 35,
+  "manifest_scope": "This new synthesis directory only; original research source manifests unchanged. Manifest excludes itself.",
+  "files": [
+    {
+      "path": "CLAIM_INDEX.md",
+      "bytes": 4393,
+      "sha256": "7deee3108133e587f069479e49e648a92591172c64e111193db6235fe2747a25"
+    },
+    {
+      "path": "GEOMETRY_MOMENTS_CLAIMS.json",
+      "bytes": 181679,
+      "sha256": "693b46b4c9ae0a2565690fdbfaaa0c2543f9dcbf570ccc75a574107cdf73f62c"
+    },
+    {
+      "path": "GEOMETRY_MOMENTS_SYNTHESIS.md",
+      "bytes": 46787,
+      "sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31"
+    },
+    {
+      "path": "LINEAGE_MAP.md",
+      "bytes": 5760,
+      "sha256": "a83e654be79a349b08437ef0dfff6731636ab2ef1edde548a4502577201b11ff"
+    },
+    {
+      "path": "REPLAY_SCOPE.md",
+      "bytes": 5566,
+      "sha256": "c834caf1ee9470c560c5fadf8279ffd38cbc7fc642bce70abb619b4eb8b0c88b"
+    },
+    {
+      "path": "SOURCE_REGISTER.json",
+      "bytes": 20806,
+      "sha256": "dbbb50fcbf56051d567b3a129ceea845fee92b4291d239994f0234f487f6735d"
+    },
+    {
+      "path": "reading_ledger.json",
+      "bytes": 58226,
+      "sha256": "cd1edce7beb3e547c62ac04f83940f9d28ad9afac864e9f37dff22f84d7ee6ad"
+    },
+    {
+      "path": "replay/RECONCILIATION_RECEIPT.json",
+      "bytes": 1916,
+      "sha256": "4a148507b5e66502387f49995bcdc76f9b8b3f13e5680987539ad2d2f241ec0c"
+    },
+    {
+      "path": "replay/grouped-independent-normal.log",
+      "bytes": 352,
+      "sha256": "35dd12eaf23ccb305855585dcbece704ee726d03c330f810e5beb8073039d90a"
+    },
+    {
+      "path": "replay/grouped-independent-normal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

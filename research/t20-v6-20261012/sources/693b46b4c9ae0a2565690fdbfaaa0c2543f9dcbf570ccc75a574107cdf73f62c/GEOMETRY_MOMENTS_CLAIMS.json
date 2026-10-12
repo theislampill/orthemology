@@ -1,0 +1,1836 @@
+{
+  "schema": "T20-material-claims-v1",
+  "cutoff_utc": "2026-10-11T11:32:55Z",
+  "status": "proposed baseline, pending owner acceptance",
+  "claim_count": 35,
+  "claims": [
+    {
+      "id": "GEO-01",
+      "title": "Typed graded representation and future-safe fibres",
+      "exact_statement": "For a declared finite-view representation into the algebraic typed tensor direct sum, each represented element has unique finite word support. A target, represented deterministic update and inquiry landscape descend exactly when each is constant on representation fibres; the commuting identities then persist at every finite iterate.",
+      "hypotheses": [
+        "Declared role spaces and representation; algebraic direct sum; finite-view atomization for record faithfulness; deterministic operation and explicitly required observables/landscape."
+      ],
+      "semantic_owner": "inherited-graded",
+      "canonical_source": "inherited-graded",
+      "source_sections": "Sections 3–4, 6, 11; actual headings recorded in reading ledger",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Written source inspected; review scope is inherited from containing accepted preservation packet, not a fresh independent review by this synthesis.",
+        "path": null
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "H-ICS-v5",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "H-Continuation",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No empirical adequacy, computational advantage or globally unbounded required degree follows from the encoding."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "canonical_source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-02",
+      "title": "Higher-order parity and declared contractions",
+      "exact_statement": "For every n≥2 the even/odd parity laws on n bits agree on every proper marginal and have parity expectations ±1; their difference is 2^(1−n)(v0−v1) tensor-power n and is killed by every proper augmentation contraction. A covector invariant under all invertible basis changes is zero.",
+      "hypotheses": [
+        "Fixed marginal representation family, specified parity target, specified basis augmentation."
+      ],
+      "semantic_owner": "inherited-graded",
+      "canonical_source": "inherited-graded",
+      "source_sections": "Section 5; Section 6.1–6.3",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Written source inspected; review scope is inherited from containing accepted preservation packet, not a fresh independent review by this synthesis.",
+        "path": null
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal entailment: fibre criterion",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "This is neither a lower bound for arbitrary encoders nor equality of tensor order and tensor rank."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "canonical_source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-01",
+      "title": "Finite known-support moment closure",
+      "exact_statement": "For N distinct known finite channel columns and positive aggregate weights, symmetric moments through degree N−1 recover aggregate weights and exactly close every controlled Fisher linear-objective trajectory. Aggregate equality is equivalent to equality of all common piecewise-constant-control output histories; one separating constant control with exact interval response suffices. First-moment-only all-objective descent holds iff the distinct columns are affinely independent.",
+      "hypotheses": [
+        "Fixed known column-stochastic channel; positive weights; finite real controls with finitely many switches per bounded interval; exact moments/responses."
+      ],
+      "semantic_owner": "tensor-moment-continuation-20261009",
+      "canonical_source": "tensor-moment-continuation-20261009",
+      "source_sections": "Sections 2–7",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "tensor-moment-independent-review-20261009",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Channel_Tensor_Research_Evidence_20261010.zip--e3994120f5be/T20_Channel_Tensor_Research_Evidence_20261010/workspace/tensor-moment-independent-review-20261009/REVIEW.md",
+        "sha256": "2a8a3fbcbd12072e3785f3c5424f1390c0953db4a0b4f344b46cc88bf40bd67c",
+        "verdict_excerpt": "# Independent review of the finite moment/continuation bridge\n\n9 October 2026 UTC. Ordinary mathematical research review. No audit disposition, formal-kernel certification, readiness decision, release authorization, or T20 closure is made.\n\n## Result\n\nNo mathematical correction is needed in the reviewed frozen tensor result within its explicitly stated scope. The additive Fisher countermodel is also correct. The finite known-support interpolation, exact continuation equivalence, and affine-independence criterion are supported by independent derivations and exact controls.\n\nThe proof was derived independently from the parent-supplied model and claims before the tensor author's full text was read. The separate `INDEPENDENT_DERIVATION.md` records that argument and the negative controls. The tensor author received no proof details from this reviewer until after the frozen result had been supplied. The later suggestion to extend the interval beyond time zero was optional and was not incorporated into the frozen result.\n\n## Frozen objects actually reviewed\n\n- `tensor-moment-continuation-20261009/RESULT.md`: SHA256 `03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11`.\n- Its `MANIFEST.json`: SHA256 `0dd84c31bdefffd339dffc94075de75abbb4028a0163ee3fc72392ec714c72c9`.\n- `state-dependent-gradient-obstruction-20261009/RESULT.md`: SHA256 `dc9adfc33c622c989de9204ef1349e6a5c36255152bc286c5c0e11da731b60f2`.\n- Its `MANIFEST.json`: SHA256 `0d71011be67d49914a6225b093c4719449b673d499fecfdc34b8696f97bf5161`.\n\nBoth results were read in full. Both verification scripts were inspected and executed. Every listed artifact byte length and SHA256 in both manifests was recomputed and matc"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal entailment: preservation interface",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "H-Continuation",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Duplicate-column internal labels not recovered; no unknown-support, conditioning or statistical sample bound."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/tensor-moment-continuation-20261009/RESULT.md",
+      "canonical_source_sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-02",
+      "title": "Proper interaction summaries cannot universally update passive likelihoods",
+      "exact_statement": "On every finite product with ≥2 values per slot and complete proper interaction space V_k, 1≤k<m, probability-plus-retained-posterior update for every prior is possible iff the likelihood is constant. For nonzero posterior-only likelihoods it is possible iff the likelihood is constant or supported on a singleton.",
+      "hypotheses": [
+        "Full law simplex; passive diagonal likelihood; complete proper interaction space; arbitrary decoders permitted; nonzero likelihood for posterior statement."
+      ],
+      "semantic_owner": "tensor-likelihood-closure-20261010",
+      "canonical_source": "tensor-likelihood-closure-20261010",
+      "source_sections": "Sections 3–5; categorical extension in Section 4",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "tensor-likelihood-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Channel_Tensor_Research_Evidence_20261010.zip--e3994120f5be/T20_Channel_Tensor_Research_Evidence_20261010/workspace/tensor-likelihood-review-20261010/REVIEW.md",
+        "sha256": "36304dd41202cdf603f565d11b23a6ab1fc58c2017ba83d6b853e1a69ff66512",
+        "verdict_excerpt": "# Independent review of proper interaction moment likelihood closure\n\n10 October 2026 UTC. Ordinary independent mathematical AI review of the specified frozen research packet. This is not a formal audit service, a formal-kernel certificate, an integration decision, a release authorization, or T20/programme closure.\n\n## Result\n\nNo blocking mathematical defect was found in the categorical multiplier theorem, arbitrary-decoder normalized support-rank dichotomy, full-simplex versus full-support feasibility distinction, or the moment-image cone conclusion. The proofs work under their stated hypotheses. The channel-adapted repair works with the precise channel specified below. An explicit, source-faithful finite tensor realization is provided in this review; it does not identify interaction order with an undeclared semantic tensor degree.\n\nTwo small wording/scope clarifications should accompany reuse of the frozen text:\n\n1. Corollary 3.2's “first-slot observables” means **first-order, or one-slot, observables across all slots**. Only observables of slot 1 would not separate product atoms.\n2. The six-dimensional example in §7 means **nonconstant** L depending only on the first binary slot, with the multiplication operator D_L alone or the complete channel {L,1−L}. If L is constant the least enlargement has dimension four. Merely having one first-slot outcome in a larger, otherwise unspecified channel does not establish the six-dimensional answer.\n\nNeither point changes a stated main theorem. They prevent incorrect readings of its explanation and its illustrative repair. The parent and author were notified; no frozen source was silently changed.\n\nThere is also a real reproducibil"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal entailment: fibres",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "GEO-02",
+          "relationship": "methodological ancestry: parity witness",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "H-Continuation",
+          "relationship": "formal ancestry: invariant observable space",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Singleton revelation does not preserve branch probability or full-domain feasibility.",
+        "Frozen author cone-input version must be honored; historical/current cone discrepancy is provenance, not theorem reversal."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/pairwise-corroboration-preservation-20261011.zip--1eaa4aec882d/tensor-likelihood-closure-20261010/RESULT.md",
+      "canonical_source_sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-03",
+      "title": "Compact full-moment sufficiency and noncompact continuation failure",
+      "exact_statement": "All polynomial/tensor moments determine a probability on a fixed compact finite-dimensional support and every admissible exponential tilt. On [0,∞), the lognormal densities f(1±½sin(2πlog x)) share every moment and every finite initial derivative of normalized damping, yet their mean histories differ somewhere in every nonempty positive-time interval.",
+      "hypotheses": [
+        "Fixed compact support for positive theorem; all moments for half-line laws; nonnegative tilt time for lognormal pair."
+      ],
+      "semantic_owner": "measure-moment-continuation-boundary-20261009",
+      "canonical_source": "measure-moment-continuation-boundary-20261009",
+      "source_sections": "Sections 2–4",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "measure-moment-independent-review-20261009",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Source_Measure_Continuation_Intermediate_20261009.zip--0e14bcb64964/T20_Source_Measure_Continuation_Intermediate_20261009/measure-moment-independent-review-20261009/REVIEW.md",
+        "sha256": "65557246da9f4d49ba50c9fb5f19931c22e19bfecf596a5f6b089be29e607f63",
+        "verdict_excerpt": "# Independent review: measure / moment continuation boundary\n\n2026-10-09 UTC. Ordinary independent mathematical review of `measure-moment-continuation-boundary-20261009`. This report has no integration, release, owner-decision, or T20-closure authority. Exact frozen input identities and replay results are recorded in `RECEIPT.json` and `INPUT_BINDINGS.json`; the report applies only to those bytes.\n\n## Verdict\n\n**PASS within the expressly declared ordinary-mathematical scope. No blocking mathematical defect found.** The construction correctly separates generator-level closure from preservation by actual finite-time updates. It leaves the finite-support theorem, compact-simplex extension, full-law tilt evolution, and inherited future-congruence criterion intact.\n\nAn independent derivation was written before the author's result was available (`INDEPENDENT_DERIVATION.md`). `ARCHITECTURE_CHECK.md` records the independent finite-time versus infinitesimal analysis. The final author result, separate addendum, verifier, verification output, source ledger, and manifest were then inspected and hash-bound. No author or protected source files were edited by this reviewer.\n\n## Technical checks\n\n1. **State and tensor typing.** The counterexample explicitly changes from stochastic channel columns to the unbounded trait x in [0,infinity); its mean is not a simplex output. Scalar moments identify the one-dimensional symmetric tensor grades, and the full sequence is placed in a graded product. It is not silently placed in the inherited algebraic direct sum, mistaken for a finite record, or interpreted as a tensor of interchangeable semantic roles. The hierarchy is nonlinear, and its contrac"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-01",
+          "relationship": "genuine extension",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal entailment: failure of update congruence",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No finite cutoff; no effective inverse asserted by compact determinacy alone; no negative-tilt domain for the lognormal pair."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/T20_Moving_Objective_Reviewed_Evidence_20261010.zip--f56d550867d3/T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/measure-moment-continuation-boundary-20261009/RESULT.md",
+      "canonical_source_sha256": "a0fa9117ff47df9f07133c1ed49c682c7c2e73d20881e83f3c242dfb3faeb9e3",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-04",
+      "title": "Exactly realized half-line hierarchy paths",
+      "exact_statement": "For m0=1, coordinatewise C1 normalized hierarchy m_r′=−m_(r+1)+m1 m_r, coordinate nonnegativity throughout and a positive all-moment representative at one positive time imply one uniquely recovered initial law whose normalized damped tilts give the entire path. Paths from fixed initial moments are in bijection with the representing-law fibre.",
+      "hypotheses": [
+        "Half-line carrier; full infinite hierarchy; coordinatewise C1 including right derivatives at zero; stated positivity and one-positive-time realizability."
+      ],
+      "semantic_owner": "realizable-moment-dynamics-20261010",
+      "canonical_source": "realizable-moment-dynamics-20261010",
+      "source_sections": "Theorem R; Sections 1–6",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "realizable-moment-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Realizable_Moment_Dynamics_Evidence_20261010.zip--56b8ee888e6f/Realizable_Moment_Dynamics_Evidence_20261010/realizable-moment-independent-review-20261010/REVIEW.md",
+        "sha256": "ffd028f511ea68ea693dbd1b1f55c0f293368a29ed9bc5c239ed043f898bfb28",
+        "verdict_excerpt": "# Independent review: realizable moment dynamics\n\nDate: 2026-10-10 UTC. Reviewer: review_realizable_moment_dynamics.\n\n## Verdict and evidence boundary\n\nPASS for the ordinary mathematical classification and its expressly stated stronger hypothesis, on the final byte bindings in REVIEW_RECEIPT.json. No formal-kernel certification, protected-source modification, integration, closure, empirical identification, or field-priority claim is made. The author and parent supplied a participating candidate proof. This reviewer independently derived its key bounds and identification argument before reading the authored RESULT.md, then read the authored proof end-to-end. Root appraisal was not treated as independent review evidence.\n\nThe inheritance review covered the measure-moment ancestor's sections 2, 5–6 and scope/ownership discussion, plus the determinate-moment-effectivity statement, corollaries, and limitations. The classification is stronger than the inspected ancestors' exhibited solutions: it exhausts the declared admissible moment-image solution class. This is only a bounded project-relative comparison.\n\n## Independent mathematical checks\n\n1. Normalization is legitimate. Coordinate continuity makes the integral of m1 finite on every compact subinterval. The exponential integrating factor is strictly positive with value one at zero. Because m0=1, the factor is consistently a0. Product differentiation gives a_r'=-a_(r+1), including at zero.\n2. Regularity does bootstrap. Induct simultaneously over all coordinates: if every a_r is C^k, each derivative -a_(r+1) is C^k. Thus every coordinate is C^(k+1). At zero this is the continuous right-derivative version. No uniform norm or i"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-03",
+          "relationship": "formal/methodological dependency: Laplace uniqueness",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Initial determinacy alone cannot substitute for positive-time realizability."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Realizable_Moment_Dynamics_Evidence_20261010.zip--56b8ee888e6f/Realizable_Moment_Dynamics_Evidence_20261010/realizable-moment-dynamics-20261010/RESULT.md",
+      "canonical_source_sha256": "c5aeeeed56b5bf5edfa9b87570249f142e3d1be9c06218d8007013c66f5eb688",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-05",
+      "title": "Determinate and computable coordinates can still be nonrealizable",
+      "exact_statement": "There are Hamburger-determinate initial Stieltjes moments with a strictly coordinate-positive C∞ normalized hierarchy that is nonrealizable at every positive safe time, on any prescribed finite horizon. In contrast, Stieltjes Carleman growth Σ c_n^(−1/(2n))=∞ plus valid initial moments, hierarchy and coordinate nonnegativity force the actual unique tilt. The exhibited invalid path is uniformly computable, and negative Hankel-certificate search terminates at each positive safe rational time.",
+      "hypotheses": [
+        "Classical Krein N-extremal measure and full-atom deletion for negative example; full all-grade conditions; moment names and strict rational time for effective search."
+      ],
+      "semantic_owner": "determinate-initial-positivity-20261010",
+      "canonical_source": "determinate-initial-positivity-20261010",
+      "source_sections": "Sections 1–8; computable successor Sections 1–4",
+      "additional_sources": [
+        "computable-positive-hierarchy-20261010"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "determinate-initial-positivity-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Initial_Positivity_Evidence_20261010.zip--38c951260105/Determinate_Initial_Positivity_Evidence_20261010/determinate-initial-positivity-review-20261010/REVIEW.md",
+        "sha256": "2fb46323217635e092f0b791540f21e34cff420c8d2e4910940f52e2f3e4b930",
+        "verdict_excerpt": "# Independent review: determinate initial data and the positivity boundary\n\n10 October 2026 UTC. Reviewer: `private-locator:8d3789be9075d330f594`.\n\n**Disposition: PASS for the frozen RESULT and DIAGNOSTIC identified below, after one citation-only correction. No mathematical correction is required.**\n\nThis is an independent ordinary mathematical and source review, with independently written exact finite controls. Participating root notes were not used as review evidence. The author retains ownership of the construction and identifies the participating origin of the explicit atom computation and diagnostic. This review makes no formal-kernel, field-priority, canonical-integration, algorithmic-complexity, or numerical-measure-reconstruction claim.\n\n## 1. Exact accepted inputs\n\n- `determinate-initial-positivity-20261010/RESULT.md`\n  - SHA-256: `cafc520026c66f94442346ff308ed4e202d70e10be8963b8a24ad17bda4e1e0a`\n- `determinate-initial-positivity-20261010/DIAGNOSTIC.md`\n  - SHA-256: `5d0e97c5f4e50ac7981765292b6aa161076a4d0b6af7fbc46aa18e40bd89c2b2`\n\nByte-identical copies are in `author_snapshot/`; `INPUT_BINDINGS.json` records sizes, hashes, and the predecessor classification binding. The initially reviewed RESULT hash was `83c6dda6b1709c707f0854a4b6c7ee20facb7af3409b2ebf8cb29b3a453554ed`. The author changed only the sentence describing the Jablonski–Jung–Stochel support statement: its cited pages say no finite accumulation, rather than describing entire-function zero sets. The mathematical arguments and DIAGNOSTIC were unchanged. The corrected sentence was verified in the accepted bytes.\n\nThe classification `realizable-moment-dynamics-20261010/RESULT.md` remains at SHA-25"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-04",
+          "relationship": "negative transfer test",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "Krein/Berg–Christensen theory",
+          "relationship": "classical proof premise",
+          "dependency_type": "source_support"
+        }
+      ],
+      "supersessions": [
+        "Settles the previously open strengthening from valid determinate initial data alone."
+      ],
+      "remaining_obligations": [
+        "Generic certificate search is proved, not implemented; one degree-one interval witness at t=1/10 was executed."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Initial_Positivity_Evidence_20261010.zip--38c951260105/Determinate_Initial_Positivity_Evidence_20261010/determinate-initial-positivity-20261010/RESULT.md",
+      "canonical_source_sha256": "cafc520026c66f94442346ff308ed4e202d70e10be8963b8a24ad17bda4e1e0a",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-06",
+      "title": "Full square-positive algebraic functional without a positive measure",
+      "exact_statement": "There exists an actual real-linear L on MvPolynomial(Fin 2,R) with L(1)=1 and L(p²)>0 for every nonzero polynomial p, but L(F)=−1 for F=1+x⁴y²+x²y⁴−x²y², while F≥3/4 everywhere. The all-degree algebraic theorem is recorded Lean checked; positivity of integration gives the separately written no-positive-measure corollary.",
+      "hypotheses": [
+        "Ordinary real polynomial algebra; explicit compatible infinite Schur construction; no positivity, degree cutoff or functional-existence premise remains in the final Lean theorem."
+      ],
+      "semantic_owner": "full-functional-lean-20261010",
+      "canonical_source": "full-functional-lean-20261010",
+      "source_sections": "Checked result; proof chain; independent review Sections 1–4",
+      "additional_sources": [
+        "full-polynomial-moment-countermodel-20261010"
+      ],
+      "evidence_level": "Ordinary universal proof + inherited recorded Lean 4.19.0 trust-zero compilation of seven local sources and separate formal review; not freshly rebuilt.",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "full-functional-lean-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-functional-lean-independent-review-20261010/REVIEW.md",
+        "sha256": "e9f8ac99e4df6f23171028bcd3ef99eb562f69e2229e056ec3a13fbf3954ccec",
+        "verdict_excerpt": "# Independent review: full-functional Lean countermodel\n\nDate: 2026-10-10 UTC.\n\n## Verdict\n\n**PASS. The frozen sources define an actual real-linear functional on the whole algebra `MvPolynomial (Fin 2) ℝ`, prove its normalization and strict positivity on every nonzero polynomial square, and prove that its value on the actual polynomial `1+x⁴y²+x²y⁴−x²y²` is −1 although that polynomial is everywhere at least 3/4. No mathematical or formal repair is required.**\n\nThis is an all-degree kernel-checked algebraic countermodel. It is stronger than scalar-only Lean support or finite-prefix testing. The final theorem has no assumed functional, positivity hypothesis, degree bound, or conclusion-shaped premise. The independent review includes an explicitly typed closed-theorem check, a symbolic unbounded-degree check, and a formal demonstration that every finite total-degree tail cutoff loses strict square positivity.\n\nThis is an evidence review, not permission to integrate, mutate protected sources, or declare any broader audit closed.\n\n## 1. Exact target and independent replay\n\nAuthor packet: `full-functional-lean-20261010/`.\n\nAuthor frozen manifest SHA-256:\n"
+      },
+      "fresh_replay_status": "No fresh Lean compilation. Full all-degree formal evidence is the explicitly recorded author/reviewer 4.19.0 trust-zero execution.",
+      "dependencies": [
+        {
+          "claim_or_owner": "Friedrich/Schmüdgen",
+          "relationship": "classical ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "full-polynomial-moment-countermodel-20261010",
+          "relationship": "same construction: ordinary proof and implementation",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [
+        "Additive complete algebraic Lean evidence supersedes scalar-only formal status, without editing the ordinary historical packet."
+      ],
+      "remaining_obligations": [
+        "Lean measure-integration corollary, dyadic Python correspondence and determinant invariant are not formalized.",
+        "Different bivariate construction does not repair the earlier ternary truncated zero tail."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-functional-lean-20261010/RESULT.md",
+      "canonical_source_sha256": "d15611cd809d5aeeda80a124d1ef524b4ddf13f1b3fb1d55e2a51db49b6ecc97",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": true,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "No fresh Lean compilation. Full all-degree formal evidence is the explicitly recorded author/reviewer 4.19.0 trust-zero execution.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-07",
+      "title": "Capped indexed-law effective recovery",
+      "exact_statement": "Known pairwise-distinct computable countable channel columns, an effective summable coordinate cap, and a uniform full moment name compute the indexed law in l1; every requested error has a finite degree-and-precision certificate uniform over the capped domain. Generally there is no fixed finite exact cutoff; without effective cap tails the indexed inverse can be noncomputable.",
+      "hypotheses": [
+        "Uniform computable column and moment names; cap coordinates with computable tail modulus; valid normalized cap-admissible law; distinct columns or separately proved injectivity."
+      ],
+      "semantic_owner": "capped-tensor-recovery-20261010",
+      "canonical_source": "capped-tensor-recovery-20261010",
+      "source_sections": "Sections 1–8",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "capped-tensor-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Capped_Tensor_Recovery_Evidence_20261010.zip--c3eabde12331/Capped_Tensor_Recovery_Evidence_20261010/capped-tensor-independent-review-20261010/REVIEW.md",
+        "sha256": "720951294d8c1151c47c2847a719cf9f30236dd178dd86be6ab03c2522437cc6",
+        "verdict_excerpt": "# Independent mathematical review: capped tensor recovery\n\nStatus: PASS for independently checked positive C1–C7, finite-data recovery, cap-free moment continuation, and frozen replay. The reviewer participated in constructing §7.2; its separate independent check is explicitly attributed. No formal-kernel or empirical claim.\n\n## Inherited ownership\n\nRead the finite-support tensor-moment continuation result, including its duplicate-column aggregation, interpolation, graded-product qualification, and declared-control semantic boundary. Read the compact-support moment theorem in measure-moment-continuation-boundary-20261009/RESULT.md §3: compact full-moment determinacy is already proved there and is not a new result here. Read effective-stationary-selection-20261010/RESULT.md E2/E3 and its ℓ1 input contract: effective cap compactness and singleton computation are already proved there. The proposed new bridge is their effective inverse/finite-precision use for indexed law recovery.\n\n## Representation and identification\n\nThe support is a known uniformly computable indexed family κ_j in a finite probability simplex. Distinctness is a promise; no real equality decision or effective uniform lower separation is presumed. A complete moment name must give tensor coordinates uniformly in degree, coordinate and requested precision. Merely saying that each individual real coordinate is computable would be insufficient.\n\nEach coordinate coefficient κ_j,a1⋯κ_j,ar lies in [0,1]. Thus each moment coordinate is a computable bounded linear functional on ℓ1 and is 1-Lipschitz. There are finitely many coordinates in each degree; their max norm is computable. A geometrically weighted product me"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-03",
+          "relationship": "formal dependency: compact moment injectivity",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "effective-stationary-selection-20261010",
+          "relationship": "methodological dependency: compact inversion",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No practical complexity or hidden duplicate-label inverse; weak-law output and indexed-l1 output remain distinct."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Capped_Tensor_Recovery_Evidence_20261010.zip--c3eabde12331/Capped_Tensor_Recovery_Evidence_20261010/capped-tensor-recovery-20261010/RESULT.md",
+      "canonical_source_sha256": "262503e92380ec868f28670b18939d701cd51808aedc65f7fe6f2fa57e0dbf6d",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-08",
+      "title": "Exponential-tail interior effectivity and endpoint obstruction",
+      "exact_statement": "A uniform moment name plus named a>0,M with E exp(ax)≤M computes all raw moments, normalizer and weak law of normalized e^(−ux) tilts for every named u>−a. At u=−a these data need not compute the normalizer/law; a separate uniformly presented family has computable endpoint normalizer and finite-support endpoint laws but no uniform endpoint-mean algorithm.",
+      "hypotheses": [
+        "Valid half-line probability; uniform all-moment oracle; supplied exponential bound; strict interior promise for positive theorem."
+      ],
+      "semantic_owner": "exponential-tail-effectivity-20261010",
+      "canonical_source": "exponential-tail-effectivity-20261010",
+      "source_sections": "Sections 1–2; endpoint controls",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "exponential-tail-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Exponential_Tail_Effectivity_Evidence_20261010.zip--dba9c7b6d852/Exponential_Tail_Effectivity_Evidence_20261010/exponential-tail-independent-review-20261010/REVIEW.md",
+        "sha256": "257f2412bfbf17ed2ac6aed49e6d616c1adb7e9cd085f191c87155eaf7863a06",
+        "verdict_excerpt": "# Independent review: exponential-tail continuation and endpoint\n\n10 October 2026 UTC. Ordinary independent mathematical review. The exact reviewed file identities and executed controls are bound in `RECEIPT.json`. This report has no release, integration, formal-kernel, empirical, novelty, or T20-closure authority.\n\n## Verdict\n\nPASS within the explicitly represented-input and output scope. No blocking mathematical defect was found. The author distinguishes four different facts correctly: effective strict-interior moment continuation; one noncomputable endpoint normalizer and law; uniform endpoint-moment failure even for finite-support endpoint laws with exact normalization; and the additional effective data that repair endpoint computation.\n\nThe one representation clarification raised in review was corrected: compactly supported integration uses a supplied or effectively known support bound and effective local data. Every cutoff in the actual algorithm has such explicit support. The revised proof also explicitly derives original-law computability from the moment input and original exponential-tail bound, rather than silently supplying that law as another input.\n\n## Mathematical checks\n\n1. **Input contract.** Uniform moment names mean one oracle for grade and precision, rather than separate nonuniform computability of each grade. The supplied finite M bounds the positive exponential integral; it is not a name of that integral. The positive gap a+u is a promise, not a decidable predicate. The proof finds rational strict bounds by name refinement and never needs a sign or zero-equality decision for u.\n\n2. **Interior existence and local absolute summation.** The inequality x^"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-03",
+          "relationship": "genuine effective extension",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "An endpoint tail modulus or other stronger input would change the contract; do not identify two distinct endpoint counterexamples."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Exponential_Tail_Effectivity_Evidence_20261010.zip--dba9c7b6d852/Exponential_Tail_Effectivity_Evidence_20261010/exponential-tail-effectivity-20261010/RESULT.md",
+      "canonical_source_sha256": "3d84bca98867d77a3c2478883e07a42e456b48404edb1ba4b90fa5e788a1788a",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-09",
+      "title": "Determinate full moments effectively recover genuine continuation",
+      "exact_statement": "A uniform valid Stieltjes-determinate moment name computes the weak half-line law and every normalized nonnegative tilt and raw moment at named t≥0, without an exponential bound or quantitative determinacy modulus. A full calibrated variance jet plus mean recovers the moment name.",
+      "hypotheses": [
+        "One uniform moment oracle; validity and determinacy promises; half-line carrier; nonnegative finite named parameter; fixed scale/basepoint for Fisher-jet corollary."
+      ],
+      "semantic_owner": "determinate-moment-effectivity-20261010",
+      "canonical_source": "determinate-moment-effectivity-20261010",
+      "source_sections": "Theorem D; Sections 1–9",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "determinate-moment-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Moment_Effectivity_Evidence_20261010.zip--70231ce91513/Determinate_Moment_Effectivity_Evidence_20261010/determinate-moment-independent-review-20261010/REVIEW.md",
+        "sha256": "15d3ee3fad047ed1fe267a6509893d8e16bb411db5bc147d6deeba8c71730e80",
+        "verdict_excerpt": "# Independent review: determinate-moment effectivity\n\n10 October 2026. **PASS within the declared represented-input scope.** No blocking mathematical defect found. This is ordinary independent mathematical review, not a release, integration, kernel, empirical, field-priority, or T20-closure certificate. Exact reviewed identities are in RECEIPT.json.\n\n## Findings\n\n- The full moment input must be one uniform name, with all finite moments, validity, and Stieltjes determinacy promised. These are not verified by the algorithm. The author states this correctly.\n- The ambient inequalities define the exact compactified full moment fibre. The upper r=1 inequalities remove mass at infinity without computing that atom mass; monotone convergence and the lower next-moment inequalities recover each exact moment. Both sides are essential. The independent derivation spells out an open-ball enumeration for each strict violation, closing the potential gap between semidecidable pointwise violations and actual usable negative information.\n- Probability measures on [0,1] in W1 have explicit computable finite nets and ideal-point distances. Net-based strict finite-cover testing therefore semidecides the containment used in singleton extraction. The existence/uniqueness promise suffices for uniform termination. No determinacy modulus, exact equality decision, or arbitrary closed-set choice is hidden here.\n- Removing compactification uses an explicit moment-controlled transport bound. The singular inverse at y=1 is never applied directly to a weak approximation. This genuinely computes the usual weak trait law. The optional ordinary-W1 strengthening using m_2 also checks out, but does not comput"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-04",
+          "relationship": "semantic scope: genuine realized path",
+          "dependency_type": "semantic_mapping"
+        },
+        {
+          "claim_or_owner": "MOM-08",
+          "relationship": "strict extension for nonnegative controls",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "effective upper-compact singleton extraction",
+          "relationship": "classical methodological dependency",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Promises not decided; no uniform finite exact prefix; no arbitrary unbounded integration or negative tilt; no generic efficient implementation."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Moment_Effectivity_Evidence_20261010.zip--70231ce91513/Determinate_Moment_Effectivity_Evidence_20261010/determinate-moment-effectivity-20261010/RESULT.md",
+      "canonical_source_sha256": "9661eef2d88370d2d996e68f666777c6ac0ffb93155d102ec50873f155e91383",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-10",
+      "title": "No universal finite polynomial state closure",
+      "exact_statement": "For any fixed nonconstant real polynomial F on R^d and any finite polynomial-expectation record containing a nonconstant coordinate, no arbitrary vector field of that record reproduces normalized gradient/killing derivatives for every finitely supported law. Two actual positive finite laws can agree on the record and expected F while having different retained derivatives and short-time outputs.",
+      "hypotheses": [
+        "d≥1; nonconstant polynomial F; finite polynomial descriptors with nonconstant member; all finitely supported input probabilities; local actual weighted characteristics."
+      ],
+      "semantic_owner": "finite-polynomial-state-no-go-20261011",
+      "canonical_source": "finite-polynomial-state-no-go-20261011",
+      "source_sections": "Sections 2–7",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "finite-polynomial-state-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/finite-polynomial-state-preservation-20261011.zip--68bde73718e0/finite-polynomial-state-independent-review-20261011/REVIEW.md",
+        "sha256": "f5870ac89d06d7214125aaffdaaa3d4e0a74a6ed97ee12a2803707080532246e",
+        "verdict_excerpt": "# Independent review: finite polynomial state closure boundary\n\n11 October 2026 UTC. Review disposition: **PASS for the stated ordinary mathematical claims on the exact bound packet.** No mathematical revision is required. This is evidence and a scoped review recommendation, not an integration, release, audit-lifecycle or programme-closure decision.\n\n## Exact object and independence\n\nThe author object is `finite-polynomial-state-no-go-20261011/FROZEN_MANIFEST.json`, SHA-256:\n\n`ec678fb09461e8ea32a2826ee736919e3b7e780084fff9d491049f5715343dff`\n\nIts 18 listed payload files were individually length/hash checked and copied into `candidate_snapshot/` before replay. The theorem file is `RESULT.md`, SHA-256 `1e84ad0f475e9051dba08b1c447c73c63657929ebff75d0a6e79546eb96aac74`. The author verifier is SHA-256 `336e93760d27548474b49753404d71d41dbaf14afd87e90d081bd3195f2e596b`. `AUTHOR_BINDING.json` gives the full inventory. Early orientation hashes in `BASELINE.json` are explicitly not acceptance pins; final prose added the relevant leafwise antecedent before freezing.\n\nThis reviewer did not author the candidate or companion note, edited neither, and used no reviewer children. The independent controls were written without importing author code. The root-proposed candidate and companion degree note are participating same-session context, not prior independent proof. The subsequent author-verifier replay is distinguished from the separate independent suite.\n\n## Proof review\n\n### Degree and finite-evaluation separation\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal dependency: fibre obstruction",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "MOM-01",
+          "relationship": "preserved restricted-family contrast",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-07",
+          "relationship": "preserved promised-rank contrast",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Known support, promised rank, invariant Gaussian families, nonpolynomial encodings and approximation are not excluded."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/finite-polynomial-state-preservation-20261011.zip--68bde73718e0/finite-polynomial-state-no-go-20261011/RESULT.md",
+      "canonical_source_sha256": "1e84ad0f475e9051dba08b1c447c73c63657929ebff75d0a6e79546eb96aac74",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-11",
+      "title": "Fixed-calibration finite-horizon moment repair",
+      "exact_statement": "Mixtures of one Bernoulli calibration p reused for two conditionally independent trials have exact ordered law (1−2μ+ν,μ−ν,μ−ν,ν), with feasible body 0≤μ≤1 and μ²≤ν≤μ. Two coordinates are sufficient for this horizon despite infinitely many exposed path-law vertices. They are insufficient for a third fresh trial: equal (μ,ν) can give third-success predictions 5/6 versus 2/3 after two successes.",
+      "hypotheses": [
+        "Calibration chosen once; conditional-iid fresh trials; specified hyperprior/convex-law meaning; declared two-trial loss contract."
+      ],
+      "semantic_owner": "fixed-calibration-moment-repair-20261011",
+      "canonical_source": "fixed-calibration-moment-repair-20261011",
+      "source_sections": "Whole report",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "fixed-calibration-moment-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/moment-predictive-application-checkpoint-20261011.zip--3e5e8089cf92/moment-predictive-application-checkpoint-20261011/payload/fixed-calibration-moment-independent-review-20261011/REVIEW.md",
+        "sha256": "c2a54db5aee5c3f190cc38fc657dc66568ca1d8444bc40ba94da8a288ed8413f",
+        "verdict_excerpt": "# Independent review: fixed-calibration two-trial moment repair\n\n11 October 2026 UTC. Separate additive review. The sealed credal-inquiry checkpoint and its reviewed files remain untouched.\n\n## Verdict\n\n**Pass within the stated two-trial contract. No correction required.** The feasible moment body, constructive realization, linear loss readout and third-trial counterexample are correct. This is elementary moment algebra applied to the already reviewed fixed-kernel/path-law distinction, with inherited continuation ownership and no cognitive-warrant consequence.\n\nFor a calibration distribution on [0,1], variance nonnegativity gives nu >= mu², and p² <= p gives nu <= mu. When mu=0 these force nu=0. Otherwise nu>0, the proposed support point nu/mu lies in (0,1], and the proposed weight mu²/nu lies in (0,1]. Their first and second moments are exactly mu and nu. Thus the conditions are sufficient as well as necessary, including the boundaries mu=0 and mu=1.\n\nThe reconstructed ordered law is (1-2mu+nu, mu-nu, mu-nu, nu). Its first cell is nonnegative because it is at least (1-mu)²; the other cells are nonnegative by the moment bounds, and all cells sum to one. For an arbitrary loss row (c00,c01,c10,c11), its expectation is\n\n    c00 + (-2c00+c01+c10) mu + (c00-c01-c10+c11) nu.\n\nThis establishes the entire declared linear-loss contract, including signed losses, rather than only mismatch. At fixed mu, nu ranges from mu² to mu, so mismatch 2(mu-nu) has exactly the claimed range. The moving two-atom realization does not supply a single finite vertex catalogue for the curved body.\n\n## Source-model meaning and continuation boundary\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-01",
+          "relationship": "methodological ancestry: horizon-relative sufficient moments",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "H-Continuation",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "credal fixed-calibration path-law obstruction",
+          "relationship": "negative-to-positive repair",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Not a representation of all finite exchangeable testimony; not a fixed finite vertex hull; no actual calibration warrant."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/extracted/moment-predictive-application-checkpoint-20261011/moment-predictive-application-checkpoint-20261011/payload/fixed-calibration-moment-repair-20261011/RESULT.md",
+      "canonical_source_sha256": "93bb189e12d85582871ce7eb30f11b28c50f957a5ea8657fc9acc834db5e0ebe",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-03",
+      "title": "Perspective classification of Bayes-compatible Bregman normalization",
+      "exact_statement": "For C1 strictly convex F on the positive cone, first-argument Bregman simplex projection equals normalization for every input iff F(sp)=s f(p)+a(s), a(1)=0. D_F(sp,tq)=s D_f(p,q)+D_a(s,t). For C2 data, positive tangent Hessian and a″>0 give positive full Hessian and globally convergent radial correction p′=0,s′=−(s−1)/a″(s).",
+      "hypotheses": [
+        "n≥2; full positive cone or separately proved open-box contract; first-argument orientation; strict convexity; stronger Hessian premises for gradient flow; finite boundary extension for vertex scores."
+      ],
+      "semantic_owner": "nonseparable-bayes-repair-20261009",
+      "canonical_source": "nonseparable-bayes-repair-20261009",
+      "source_sections": "Theorem 1; Propositions 2–3; Sections 5–11",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "nonseparable-bayes-repair-review-20261009",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Nonseparable_Bayes_Repair_Reviewed_20261009.zip--d3a18d1526dc/T20_Nonseparable_Bayes_Repair_Reviewed_20261009/nonseparable-bayes-repair-review-20261009/FINAL_REVIEW.md",
+        "sha256": "f2cf501c421458c341967ebe72806f55f4e8fef0afad4fea6c57f5021fcb9ad6",
+        "verdict_excerpt": "# Digest-bound independent mathematical review\n\nDate: 2026-10-09 UTC.\n\nVerdict: **PASS within the explicit mathematical scope below. No unresolved material defect found in the reviewed final report.** This is ordinary mathematical review plus exact executable controls. It is not proof-assistant certification, field-priority certification, repository authorization, release readiness, or T20 closure.\n\n## Immutable review target\n\nAuthor report: `nonseparable-bayes-repair-20261009/RESULT.md`\n\nSHA-256: `a9b3f91f320ee752ee732dc85af793f8a4736a98c01035fb5b197dfe2bf7eecb`\n\nAuthor control source: `nonseparable-bayes-repair-20261009/verify.py`\n\nSHA-256: `3609259ad8ca9a594ba2efb7f045db19e4d5e9bea52c96c8790c0639b987de93`\n\nAuthor execution log and independent rerun log both have SHA-256:\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "separable Bayes-compatible classification",
+          "relationship": "generalization preserving narrower theorem",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "scaled Bregman perspective identity",
+          "relationship": "classical ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [
+        "Universal entropy-only reading rejected; entropy uniqueness remains valid within the separable class."
+      ],
+      "remaining_obligations": [
+        "Zero likelihood boundary, reverse projection, and attenuation-only tests do not automatically meet full theorem."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/channel-natural-repair-intermediate-20261009.zip--5e856fd7b5ea/channel-natural-repair-intermediate-20261009/nonseparable-bayes-repair-20261009/RESULT.md",
+      "canonical_source_sha256": "a9b3f91f320ee752ee732dc85af793f8a4736a98c01035fb5b197dfe2bf7eecb",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-04",
+      "title": "Reference-Bregman contraction iff concave reciprocal curvature",
+      "exact_statement": "For φ∈C3(0,∞),φ″>0, D_μ(p,q)=Σ μ_i b_φ(p_i/μ_i,q_i/μ_i) contracts under all finite column-stochastic K with transported reference Kμ iff 1/φ″ is concave. Strictly concave reciprocal curvature gives pairwise recovery at equality, not necessarily common recovery of μ; quadratic equality need not give pairwise recovery.",
+      "hypotheses": [
+        "Positive finite reference and positive probability states; no zero output rows; common scalar separable generator; reference transported without re-estimation."
+      ],
+      "semantic_owner": "reference-bregman-classification-20261011",
+      "canonical_source": "reference-bregman-classification-20261011",
+      "source_sections": "Sections 2–5",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "reference-bregman-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/reference-geometry-gradient-combined-delivery-20261011.zip--b53237e3e6f4/reference-geometry-gradient-combined-delivery-20261011/payload/reference-bregman-independent-review-20261011/REVIEW.md",
+        "sha256": "cddc194983f483ae8430d3e4b20850150a1fa6d21e7feaf7603bb91abbc3df12",
+        "verdict_excerpt": "# Independent review of reference transported Bregman classification\n\n## Finding\n\nThe claimed equivalence is mathematically sound under the stated assumptions: a common scalar generator on the positive half-line, C³ regularity, strictly positive second derivative, arbitrary finite positive input probability laws, a positive transported reference, and nonnegative column-stochastic channels with zero output rows omitted. The normalized-probability necessity proof is valid. The interior-power equality classification and the distinction between pair recovery and simultaneous reference recovery are correct.\n\nThis review supplies independent mathematical reasoning and 22 exact symbolic/rational controls. It does not claim formal proof-assistant certification, literature novelty, or programme closure. The scalar characterization and Jensen ancestry remain credited to Bauschke–Borwein and Chafaï. Primary-source acquisition/visual validation is the author's responsibility; this review additionally inspected the locally extracted scalar-characterization statement.\n\n## Normalized necessity\n\nGiven two arbitrary positive density pairs and a convex weight, their mean densities X and Y are finite and positive. Put a total reference mass ε on the two tested coordinates, split in the desired proportions, and choose ε smaller than min(1,1/X,1/Y). The remaining reference mass may be 1−ε, so even the reference can be normalized. Complete p and q using masses 1−εX and 1−εY. These are strictly positive probability laws. A deterministic merge leaves the buffer coordinate unchanged, and its divergence term cancels exactly. Dividing the assumed contraction inequality by ε produces the arbitrary s"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-03",
+          "relationship": "compatible coherent potential construction",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "Bauschke–Borwein/Chafaï",
+          "relationship": "classical theorem ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Not classification of all nonseparable or unadorned simplex geometries; boundary/infinite-space and approximate recovery not supplied."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/reference-bregman-classification-20261011/RESULT.md",
+      "canonical_source_sha256": "8f06b1ff3f0239b1f9e3d868aae3b880aab7a55f3974106d249938bfb4cc1e01",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-05",
+      "title": "Canonical versus quotient natural-gradient descent",
+      "exact_statement": "In the transported-reference separable Hessian family, all-objective same-time deterministic-partition descent on every positive simplex and reference holds iff r=1/φ″ is affine at+b with a,b≥0,a+b>0. For fixed-reference quadratic geometry, all-objective stochastic canonical commutation holds iff columns are deterministic; every channel has an exact minimum-energy quotient cometric on its reachable tangent image.",
+      "hypotheses": [
+        "Finite positive domain; C3 generator, positive curvature; C2 pulled-back coarse objectives; all references/partitions for affine iff; common interior solution interval; quotient restricted to reachable image."
+      ],
+      "semantic_owner": "reference-gradient-descent-classification-20261011",
+      "canonical_source": "reference-gradient-descent-classification-20261011",
+      "source_sections": "Sections 1–6; predecessor quotient Sections 2–5",
+      "additional_sources": [
+        "noetic-gradient-transport-20261009"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "reference-gradient-descent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/reference-geometry-gradient-combined-delivery-20261011.zip--b53237e3e6f4/reference-geometry-gradient-combined-delivery-20261011/payload/reference-gradient-descent-review-20261011/REVIEW.md",
+        "sha256": "5a6006d65dccffcc5e0c0ac5f76f1aa819701c4e64ba62df25b022d642fc59d1",
+        "verdict_excerpt": "# Independent reference-gradient review\n\n2026-10-11. Verdict: PASS, no blocking mathematical finding for the bounded claims reviewed.\n\nReviewed artifact: reference-gradient-descent-classification-20261011/RESULT.md\nSHA-256: 097e12106db027914a1a05795c8d4dde647e9c73e52882562eef5f546f6d7c18\n\n## Mathematical checks\n\n- Independently derived the constrained diagonal-Hessian cometric and gauge invariance. Positive weights give the required tangent duality, and linear objectives exhaust covectors modulo constants.\n- The universal deterministic equivalence is valid. The aligned representative proves that all-objective fibre constancy forces canonical agreement. The anchored binary mobility is injective, and the normalized three-input buffer reaches arbitrary positive density ratios and all convex weights. Quantification over varying references is essential; a single fixed reference cannot test the whole positive half-line. The theorem correctly includes that quantification.\n- Positivity of an affine reciprocal curvature on the entire positive half-line forces both coefficients nonnegative and excludes the zero pair. Generator integrations, endpoint cases and affine-gauge freedom are correct.\n- Both reported same-fibre fixtures give the stated signed velocities. The distinction between same-time failure and unparametrized trajectory failure is correctly retained.\n- The reference-aligned section is invariant for each pulled-back objective. C3 generator and C2 objective supply a C1 local vector field, hence local uniqueness; only common positive existence intervals are claimed.\n- The full stochastic decomposition is correct for nonnegative column-stochastic K with no zero row and con"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-04",
+          "relationship": "strict refinement: contraction is weaker",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "noetic-gradient-transport-20261009",
+          "relationship": "formal ancestry: intrinsic inverse and quotient",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "State-dependent fine metrics may not be fibreconstant; no global positivity/completeness from tangent quotient."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/reference-gradient-descent-classification-20261011/RESULT.md",
+      "canonical_source_sha256": "097e12106db027914a1a05795c8d4dde647e9c73e52882562eef5f546f6d7c18",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-06",
+      "title": "Exact conditional exponential-leaf Fisher geometry",
+      "exact_statement": "At a retained moment z, a specified objective’s projected fine Fisher field is fibreconstant iff its lifted fitness lies in the observable stabilizing algebra. For complete proper interaction moments this forces dJ_z=0. Fixing a full-support exponential leaf instead gives a global interior mean chart, exact invariant Fisher gradient and Hessian mean metric. A positive likelihood preserves that leaf iff log L belongs to the observable space.",
+      "hypotheses": [
+        "Finite full-support law; observable space containing constants; independent basis; fixed supplied reference class; C2 objective; common interior existence interval."
+      ],
+      "semantic_owner": "leafwise-noetic-geometry-20261010",
+      "canonical_source": "leafwise-noetic-geometry-20261010",
+      "source_sections": "Sections 3–8; face successor Section 1",
+      "additional_sources": [
+        "face-stratified-noetic-geometry-20261010"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "leafwise-noetic-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Leafwise_Geometry_and_Wise_Means_20261010.zip--fdbc9b26f82e/T20_Leafwise_Geometry_and_Wise_Means_20261010/workspace/leafwise-noetic-review-20261010/REVIEW.md",
+        "sha256": "47b97d502705270d11d955af5b82fcec8fcacf5196bc8dab767e896f52eed80b",
+        "verdict_excerpt": "# Independent review of leafwise Fisher geometry\n\n10 October 2026 UTC. Review of the frozen mathematical packet in `leafwise-noetic-geometry-20261010`. The root and derivation worker are joint authors. This reviewer did not edit their result or control script and reconstructed the proofs and finite controls independently. This is an ordinary mathematical review, not formal-kernel certification, empirical validation, field-wide novelty certification, protected-source integration, or programme closure.\n\n## Verdict and binding\n\nNo blocking mathematical error was found in the frozen result. The one-objective whole-positive-fibre criterion, global block-mass objective classification, complete proper interaction corollary, global exponential-leaf mean coordinates, exact induced Fisher dynamics, invariant-class reconstruction, and positive-likelihood preservation criterion are correct under their stated hypotheses.\n\nThe reviewed result has SHA256 `6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724`. The reviewed author script has SHA256 `65f195f5573411844423cc67bbafe471cec8edaadd5781563ccbf9d199ca3249`. The author's manifest has SHA256 `1ed0d611e6f9e85a594573328e4ec4234cb65ec400404295f8a17857e1a7d115`. Every listed author-manifest entry and every local inherited-input binding was checked against current bytes.\n\nThe separate `independent_controls.py` passed 37 exact control groups in Python 3.12.14 and SymPy 1.14.0. A copy of the frozen author script, run in `author-replay` without modifying its original directory, passed all 43 author control groups. These executions support the calculations below; the finite tests are not substitutes for the general proofs.\n\n## On"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-02",
+          "relationship": "formal dependency: stabilizing algebra",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "methodological ancestry: conditional model adequacy",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Face extension requires saturated facial support plus restricted log likelihood; cannot infer actual law from chosen entropy completion."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/T20_Continuous_Signed_Control_Intermediate_Evidence_20261010.zip--f25d3134ed31/continuous-signed-control-preservation-20261010/evidence/leafwise-noetic-geometry-20261010/RESULT.md",
+      "canonical_source_sha256": "6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-07",
+      "title": "Genuine moving atomic gradient and finite moment realization",
+      "exact_statement": "A normalized full-square-positive polynomial gradient/killing hierarchy for coercive polynomial F, with locally uniform full Hankel-rank bound along the path, is exactly a distinct positive atomic gradient trajectory for G=Σdw²/w+Σw|dx|². Its cometric is E[∇p·∇q]+Cov(p,q); moments through 2r−1 embed the promised rank-r stratum.",
+      "hypotheses": [
+        "Coordinatewise C1 full hierarchy; all square tests; locally uniform FULL Hankel-rank bound; fixed coercive polynomial; distinct positive atoms for law-level metric."
+      ],
+      "semantic_owner": "joint-atomic-gradient-lift-20261010",
+      "canonical_source": "joint-atomic-gradient-lift-20261010",
+      "source_sections": "Sections 1–7",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "joint-atomic-geometry-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-geometry-independent-review-20261010/REVIEW.md",
+        "sha256": "a32a0b04ebfb9403db0344ce0c6ede78dcc4eea28ffd27e4ec54391bd32f3500",
+        "verdict_excerpt": "# Independent review: joint moving-atomic gradient geometry\n\nStatus: ACCEPTED as ordinary mathematical evidence, restricted to the final frozen files in `ACCEPTED_BINDINGS.json`. The two-atom supplement and source-interface companion have been read independently. This report supplies ordinary mathematical assessment only, with no integration, kernel-proof, historical-novelty, actual-noetic-validation, or audit-closure authority.\n\n## 1. Scope and independence\n\nThe assessed object consists of three participating contributions:\n\n1. `joint-atomic-gradient-lift-20261010`: the joint metric, forced finite-rank lift, finite-moment embedding, and qualified long-time conclusions.\n2. `two-atom-moving-moment-chart-20261010`: a root-authored explicit unknown-support two-atom chart and rational quadratic moment dynamics. Root participation is not counted as an additional independent review.\n3. `spherical-atomic-source-interface-20261010`: the literature convention check, exact fixed-path action, direct local ambient-speed proof, and global-distance limitation.\n\nI did not edit any author or predecessor file. I independently derived the formulas, challenged the analytic and geometric implications, read the complete author texts, and wrote separate exact controls. Acceptance is restricted to the exact SHA-256 bindings in `ACCEPTED_BINDINGS.json`. Every bound file was reread as needed after final freeze and its digest verified.\n\n## 2. Joint metric, signs, and cometric\n\nFor distinct positions and strictly positive weights, the diagonal quadratic form\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "complete-flow-finite-rank-20261010",
+          "relationship": "formal dependency: reverse lift",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "MOM-01",
+          "relationship": "known-support ancestry, different bound",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Initial rank alone not the path bound; no nonconvex global minimization, global surjectivity or ambient endpoint-distance equality."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md",
+      "canonical_source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-08",
+      "title": "Full-law coisometric gradient transport and objective obstruction",
+      "exact_statement": "For the unit transport/centred-reaction quotient norm, 1-Lipschitz smooth T contracts action. An admissible pulled-back objective commutes with its canonical coarse gradient iff (I−E[DT DTᵀ|T])∇φ=0; every objective commutes iff DT DTᵀ=I almost everywhere. Full KL to a product target instead has extra marginal reaction −ν(h−νh), h=conditional KL.",
+      "hypotheses": [
+        "Borel probability; L2 fields and minimum distributional tangent quotient; admissible cutoff/test potential; 1-Lipschitz map; additional smooth-density/integrability/flux conditions for KL calculation."
+      ],
+      "semantic_owner": "full-law-coarse-graining-20261011",
+      "canonical_source": "full-law-coarse-graining-20261011",
+      "source_sections": "Sections 2–7",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "full-law-coarse-graining-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/full-law-coarse-graining-preservation-20261011.zip--ff751ba31a58/full-law-coarse-graining-independent-review-20261011/REVIEW.md",
+        "sha256": "78b6598451a98162e1bbd0870f47bbd13a02475719d16a89eebb8b9b056da8be",
+        "verdict_excerpt": "# Independent mathematical review: full-law coarse-graining\n\n11 October 2026 UTC. Ordinary independent proof review and separate exact controls. This is not an audit-assess/governor action, protected integration, formal certification, historical-priority determination, or T20 closure. Author files were read and later copied for binding, never edited by this reviewer. Reviewed artifact hashes and replay receipts are recorded separately in REVIEW_BINDINGS.json.\n\n## 1. Findings first\n\n**No blocking mathematical error found in the bound report.** The affirmative commutation theorem, attained full-tangent quotient formula, product-target KL marginal identity, and correlated-Gaussian separator are valid under their stated hypotheses.\n\nTwo especially important qualifications were checked rather than inferred:\n\n1. Nonproper observation maps do not ordinarily push arbitrary distributions forward. The report restricts to represented finite-action tangents, proves the bounded-test extension by cutoffs, and makes that extension independent of the representative. This suffices for orthogonal projections.\n2. The cost of a displayed pushed field need not equal the minimum norm of its coarse tangent. Equation (6) includes exactly the additional orthogonal residual needed to make its minimum-norm claim correct. The quotient minimum in (15) has a separate attainment proof.\n\nThe reviewer flagged the nonproper-testing issue before the first full report inspection; the author already used the range-of-D definition and then expanded its cutoff argument. The reviewer supplied an independent strict residual example during review. These communications are disclosed; this is an iterative independe"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-05",
+          "relationship": "continuous full-law counterpart",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "spherical HK action",
+          "relationship": "classical ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Flow identity additionally requires well-posedness in declared class; field action and minimum tangent norm differ by residual."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/full-law-coarse-graining-preservation-20261011.zip--ff751ba31a58/full-law-coarse-graining-20261011/RESULT.md",
+      "canonical_source_sha256": "3c2e5a6204ba56fe72d6832304bd6527028c37c5f5d6719f2fee88abae7ce30d",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-09",
+      "title": "Gaussian full-density induced geometry and polynomial tangency boundary",
+      "exact_statement": "The full-density minimum transport/reaction tangent metric on N(m,v) is dm²/(1+v)+dv²/[2v(v+2)], with multivariate covariance operator LΣ(A)=2(AΣ+ΣA+ΣAΣ). Expected-polynomial correction is exactly Gaussian-tangent iff the polynomial degree is ≤2. Quartic correction matches initial mean/variance velocity but differs at second variance derivative by 3v³(v+4)(7v+4).",
+      "hypotheses": [
+        "Nondegenerate Gaussian family; Euclidean spatial metric and unit centred reaction; minimization over all L2 full-tangent representations; polynomial objective for iff."
+      ],
+      "semantic_owner": "gaussian-correction-geometry-20261011",
+      "canonical_source": "gaussian-correction-geometry-20261011",
+      "source_sections": "Sections 2–7; quartic successor",
+      "additional_sources": [
+        "gaussian-quartic-variance-root-20261011"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "gaussian-induced-geometry-independent-review-20261011-0045",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/gaussian-correction-geometry-preservation-20261011.zip--b250b88d41fe/gaussian-induced-geometry-independent-review-20261011-0045/REVIEW.md",
+        "sha256": "a44d54b3487ecb1a3e7c61f9edbbc7cacf188332d015649fd94c46953b40e02c",
+        "verdict_excerpt": "# Independent review: Gaussian induced correction geometry\n\n## Status and scope\n\nACCEPTED within the mathematical scope below. Independent derivation and final frozen-author replay completed. Exact author-file and review-file binding is recorded in `review_receipt.json`. The reviewed author RESULT.md has SHA256 67577bc185c3190cbf131993fdfdd36aa67c605435fd225eb6f29b2cc6c21efa. This report concerns a mathematical probability-density model with unit-cost Euclidean transport and centered reaction. It does not identify this metric empirically with noetic phenomena, assert a global finite sufficient statistic for all laws, or grant project/audit closure.\n\nThe full-density induced Riemannian metric and its Gaussian quadratic-flow corollaries pass the mathematical review below. The accompanying independent script has 25 passing algebra checks. Fresh execution of the frozen author verifier also passed 166 exact/integrity assertions, including the nine original-input comparisons. Those checks supplement, and do not replace, the functional-domain proof.\n\n## 1. Full-density tangent minimization\n\nFix the Gaussian probability density rho = N(m,v), v > 0, on the real line and write y = x-m. Work in the real Hilbert control space\n\nH = L²(rho) × L²₀(rho),\n\nwith squared norm E_rho[u²+alpha²]. Here L²₀ means zero mean. Define the control operator distributionally by\n\nA_rho(u,alpha) = -∂x(rho u) + rho alpha,\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-07",
+          "relationship": "observable-cometric ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-08",
+          "relationship": "minimum tangent interpretation",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "classical Gaussian SHK",
+          "relationship": "classical ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Restricted-family metric not unrestricted endpoint distance; covariance boundary and nonquadratic approximation need separate arguments."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/gaussian-correction-geometry-preservation-20261011.zip--b250b88d41fe/gaussian-correction-geometry-20261011/RESULT.md",
+      "canonical_source_sha256": "67577bc185c3190cbf131993fdfdd36aa67c605435fd225eb6f29b2cc6c21efa",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-10",
+      "title": "Minimum-action full fixed-marginal KL correction",
+      "exact_statement": "The full-tangent constrained gradient is −Kμ(q−φ∘T), where Kνφ=T_*Kμq. For product conditional target its centred weak multiplier solves (−ν^−1 div ν∇+I)φ=h−νh. For nonproduct target the right side additionally contains −div(νm), m=−E[∇y log π_y|Y]. Exact Gaussian constrained flows exist globally and converge to the supplied same-marginal Gaussian target, including dependent targets.",
+      "hypotheses": [
+        "Fixed whole marginal; positive admissible densities and cutoff/chain-rule conditions for general tangent formula; weak L2 score conditions for multiplier; Gaussian parameter domain b∈R,s>0,τ>0 for global construction."
+      ],
+      "semantic_owner": "fixed-marginal-correction-20261011",
+      "canonical_source": "fixed-marginal-correction-20261011",
+      "source_sections": "Sections 3–7; correlated successor Sections 3–7",
+      "additional_sources": [
+        "correlated-target-marginal-correction-20261011"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "fixed-marginal-correction-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/fixed-marginal-correction-preservation-20261011.zip--8efd1295051d/fixed-marginal-correction-independent-review-20261011/REVIEW.md",
+        "sha256": "85be1633c7fcc6c7607cc259f2e3c901703bc838e110966f48f6fe0f5053ac45",
+        "verdict_excerpt": "# Independent review of fixed marginal KL correction\n\n11 October 2026 UTC. Ordinary mathematical review for active T20. No audit-governor role, protected edit, integration, external peer-review claim, or closure authority.\n\n## Finding and reviewed object\n\nNo blocking mathematical finding in the frozen author result, within its explicitly stated weak-solution, chain-rule, and positivity hypotheses. The author establishes the full tangent projection, a coercive weak multiplier problem, and a globally defined Gaussian solution. The stronger Gaussian entropy inequality supplied during this review is a participating extension, not independently certified by its originator.\n\nReviewed author RESULT.md SHA256:\n\n    34f54d2c1ac994fc9212eb900e92d8bcb3898c7b4a00a6002c361b8752eee8e1\n\nReviewed author MANIFEST.json SHA256:\n\n    493640bbeee1b5b929cf81b8d0a8772e7f451c2d090f0b1c37444b26b364ac87\n\nREVIEW_BINDINGS.json records complete before-and-after author hashes, snapshot equality, author-manifest verification, and replay commands. The author packet is copied without modification. The separate independent checker imports no author/root checker code. Its 50 exact controls supplement the following ordinary proofs; neither their count nor their success proves general PDE well-posedness.\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-08",
+          "relationship": "formal dependency: coisometric quotient",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "GEO-09",
+          "relationship": "formal/methodological dependency: full density tangency",
+          "dependency_type": "formal_entailment"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "General non-Gaussian PDE existence/uniqueness not inferred; preservation is of specified marginal, not every already-correct covariance."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/fixed-marginal-correction-preservation-20261011/fixed-marginal-correction-20261011/RESULT.md",
+      "canonical_source_sha256": "34f54d2c1ac994fc9212eb900e92d8bcb3898c7b4a00a6002c361b8752eee8e1",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-11",
+      "title": "Conditional entropy coercivity survives marginal compensation",
+      "exact_statement": "The full constrained dissipation decomposes into latent Fisher information, conditional score variance, horizontal gradient residual and coarse variance residual. Uniform conditional LSI KL(r||π_y)≤C I_z/2 yields D≥2E/C and E(t)≤exp(−2(t−s)/C)E(s) for admissible solutions with entropy chain rule.",
+      "hypotheses": [
+        "Same fixed marginal; conditional target; admissible L2 score and multiplier; common finite conditional LSI constant; actual solution with absolutely continuous energy/chain rule."
+      ],
+      "semantic_owner": "conditional-entropy-control-20261011",
+      "canonical_source": "conditional-entropy-control-20261011",
+      "source_sections": "Sections 1,3–6",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "conditional-entropy-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/broad-correction-research-preservation-20261011.zip--6678be1af41b/broad-correction-research-preservation-20261011/conditional-entropy-independent-review-20261011/REVIEW.md",
+        "sha256": "f164df94f22627f4946763dc0a2b17187c92e542d74d0cdcb03734a4f1227c3c",
+        "verdict_excerpt": "# Independent review: conditional entropy through fixed-marginal correction\n\n11 October 2026 UTC. Disposition: **PASS within the stated mathematical scope**.\n\nThe reviewed author result is `conditional-entropy-control-20261011/RESULT.md`, SHA-256 `fd04c9de5028dc997c1714d09a8fa853b87861137f1a4e77ef6553f69f084151`. Its author manifest SHA-256 is `f3851ad2debc5a4fd5d089304c1843f51f7d1417e55588b73683d5144d32e746`. The author declared the packet frozen before the final digest check. This review changes no author or protected bytes and grants no integration, release, or programme-closure authority.\n\n## 1. Main result checked\n\nFor the inherited unit transport/centred-reaction tangent geometry, subtracting a potential that depends only on the observed coordinate cannot change the latent gradient. Splitting the spatial gradient and applying conditional total variance gives exactly\n\n    D = Eν[I_z] + Eν[Var(q | Y)]\n        + Eμ[|∇_y q − ∇φ|²] + Varν(h − φ).\n\nAll four terms have the correct signs and constants. The decomposition itself does not assume a product target. Identifying this squared norm with entropy dissipation additionally uses the weak multiplier equation and the explicitly inherited minimum-field/duality domain. Testing that equation by φ supplies the required projection orthogonality.\n\nA uniform conditional inequality KL ≤ C I/2 therefore gives D ≥ 2E/C. The reported exponential decay follows from the separately assumed entropy chain rule or differential energy inequality and local absolute continuity. A distributional PDE alone does not suffice; the author explicitly says so. Global convergence is conditional on a globally admissible solution. No non-Gaussian existe"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-10",
+          "relationship": "formal dependency",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "classical log-Sobolev theory",
+          "relationship": "classical premise",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No coarse LSI needed; no general PDE existence; no per-fibre decay of the full projected flow; centred Gaussian constant 6 cannot be universalized."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/conditional-entropy-control-20261011/RESULT.md",
+      "canonical_source_sha256": "fd04c9de5028dc997c1714d09a8fa853b87861137f1a4e77ef6553f69f084151",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-12",
+      "title": "Fibrewise law-valued OU–reaction split",
+      "exact_statement": "For target ν(dy)N(g(y),T)(dz), T positive definite, any initial conditional kernel with finite integrated relative second moment admits every fixed h>0 OU-first/normalized-power-reaction step. Each substep preserves ν; finite entropy holds after first smoothing; fibrewise and integrated KL contract thereafter at least by exp(−2h/λmax(T)), hence converge to target in KL/TV.",
+      "hypotheses": [
+        "Measurable g and probability ν; Gaussian target covariance fixed; finite integrated relative second moment; exact conditional OU then exact normalized reaction."
+      ],
+      "semantic_owner": "fibrewise-split-correction-20261011",
+      "canonical_source": "fibrewise-split-correction-20261011",
+      "source_sections": "Sections 1–3",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "fibrewise-split-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/fibrewise-split-preservation-20261011.zip--ff5fb9506fa3/fibrewise-split-preservation-20261011/fibrewise-split-independent-review-20261011/REVIEW.md",
+        "sha256": "3692388434dba49049e57a044fd79f394283a296ed1bc5f72bfd5a04dbde3091",
+        "verdict_excerpt": "# Independent review of fibrewise exact-law W–FR correction\n\n11 October 2026 UTC. **PASS within the stated mathematical and implementation scope.** The author packet was frozen before final reread, replay, and digest verification. The reviewed RESULT.md is SHA-256 470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d; AUTHOR_FREEZE.json is 8dd58daac1f3386c93f1540b346995cf12a338a26d18b2287667a9ec2b779445. BINDINGS.json records the remaining reviewed identities. No author or protected files were edited. This review grants no integration, release, or programme-closure authority.\n\n## 1. Mathematical scope accepted\n\nThe construction is a discrete map on conditional probability laws with a fixed entire observed marginal. Its hypotheses are a Borel marginal ν, a Borel target mean g(y), a single fixed positive-definite target covariance T, and a finite integrated target-relative quadratic moment. These hypotheses permit arbitrary singular conditional starting laws and do not require ν or g to have ordinary second moments or joint smooth densities.\n\nFor each positive step, the OU transition covariance T(I−A²), A=exp(−hT⁻¹), is positive definite. Its Gaussian kernel yields a bounded, positive, jointly Borel latent density. Integrating a jointly Borel function against a probability kernel justifies the conditional measurability claim. Normalizing each reaction separately retains a probability kernel, so both substeps preserve exactly ν. Entropy can be expressed using the nonnegative integrand f log f−f+1, avoiding any measurability ambiguity from its signed form. Versions on a ν-null set do not change the joint law.\n\nThe Gaussian-transition KL is exactly\n\n    ½ (x−g)ᵀ A T"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-10",
+          "relationship": "stricter field-control ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-11",
+          "relationship": "conditional decay interface",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "Crucinio–Pathiraja W–FR splitting",
+          "relationship": "classical/current published method ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Not a new splitting method; no full projected-flow or PDE-limit claim; pure reaction cannot smooth singular input."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/fibrewise-split-preservation-20261011/fibrewise-split-preservation-20261011/fibrewise-split-correction-20261011/RESULT.md",
+      "canonical_source_sha256": "470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-13",
+      "title": "Singular fixed-marginal endpoints and Gaussian entrance",
+      "exact_statement": "On a compact product of flat tori with fixed whole marginal, every compatible pair of probability endpoints has attained minimum unit transport/centred-reaction action, defining a finite geodesic metric. A measurable conditional sphere competitor has action 4∫θ(y)²dν≤π². Nested finite marginal-test constraints with uniformly dense span converge variationally to the exact whole-marginal minimum, with subsequential minimizing-path convergence.",
+      "hypotheses": [
+        "Compact product for attainment; exact mass-one and marginal constraints; L2 actual-rate action; separate Gaussian same-marginal target and parameter trace for entrance."
+      ],
+      "semantic_owner": "fixed-marginal-endpoint-action-20261011",
+      "canonical_source": "fixed-marginal-endpoint-action-20261011",
+      "source_sections": "Sections 1,3–8; singular entrance Sections 1–3",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "fixed-marginal-paths-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/continuation-disclosure-evidence-20261011.zip--5158e500fedd/continuation-disclosure-evidence-20261011/fixed-marginal-paths-independent-review-20261011/REVIEW.md",
+        "sha256": "e2800ae5e44f4970dae7304eccde984e0a3241fead3d1939c1bc80a73d72184b",
+        "verdict_excerpt": "# Review of the fixed-entire-marginal endpoint action theorem\n\nDate: 11 October 2026 UTC.\n\n## Verdict and scope\n\n**No blocking mathematical defect found in the frozen author result.** The stated compact product-torus theorem is supported: arbitrary compatible probability endpoints, including singular laws, admit finite action; the infimum is attained; its square root is a genuine finite metric with constant-speed minimizing geodesics; and nested dense continuous marginal-test minima converge to the whole-marginal minimum while retaining exact mass one.\n\nThis is a bounded ordinary mathematical review, not formal-kernel verification, exhaustive literature-priority review, authorization to integrate protected work, or a programme closure decision. The explicit sphere and mixture paths remain feasibility competitors; the review does not identify either one with the full transport-reaction minimizer.\n\nReviewed author folder: `fixed-marginal-endpoint-action-20261011/`.\n\n- `RESULT.md`: `99f4d6e749b0f2856e1f23b7cd9d4e6cc53eed940ef5f6ec1a2ed0e325766304`\n- `MANIFEST.json`: `d4b39b9888880b4a839a23e811bf8b15986c2f1961d8eece09fab19940f66387`\n- `AUTHOR_FREEZE.json`: `73c74a071bf3b56e720806c4a28a3c5a3163a159cc8dac9c1d6d2dc7400da275`\n\nThe review was performed against those frozen files. No author file or inherited protected input was edited.\n"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-10",
+          "relationship": "Gaussian evolution dependency only for entrance",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "classical direct method/disintegration",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No noncompact attainment, general PDE entrance or uniqueness, numerical convergence rate or shortest-path identification for KL orbit."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/fixed-marginal-endpoint-action-20261011/RESULT.md",
+      "canonical_source_sha256": "99f4d6e749b0f2856e1f23b7cd9d4e6cc53eed940ef5f6ec1a2ed0e325766304",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-14",
+      "title": "Chronological operator tensors and projective finite jets",
+      "exact_statement": "For specified polynomial objectives B_i=−∇F_i·∇−F_i, chronological tensors have an exact finite-jet representation ei↦εB_i. The normalized degree-N readout is faithful exactly modulo scalar operator jets on all finitely supported laws. Moving objective order can differ at degree two by (Hess G∇F−Hess F∇G)·∇; pure fixed-state multiplication remains commutative.",
+      "hypotheses": [
+        "Compact initial support; fixed finite piecewise-constant protocol; sufficiently small common perturbation interval; finite formal truncation; represented operators, not raw words."
+      ],
+      "semantic_owner": "ordered-control-projective-transport-20261011",
+      "canonical_source": "ordered-control-projective-transport-20261011",
+      "source_sections": "Sections 2–7; moving-objective order report",
+      "additional_sources": [
+        "moving-objective-order-interface-20261010"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "ordered-control-projective-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/ordered-control-projective-independent-review-20261011/REVIEW.md",
+        "sha256": "75101804aa69288946f5989705574eed1518cf61b6ec9ee7307699bfa01342c2",
+        "verdict_excerpt": "# Independent review: ordered control tensors and projective continuation\n\n11 October 2026 UTC. Internal independent mathematical review of the completed author packet. This is ordinary proof review plus exact symbolic checking, not external peer review, a proof-assistant certificate, source authentication, protected integration, or T20 closure.\n\n## Disposition and immutable target\n\n**ACCEPT within the explicit finite-jet, full-law and local-flow scope of the frozen report. No blocking mathematical correction is required.**\n\nThe accepted target is `ordered-control-projective-transport-20261011/RESULT.md`, SHA-256 `8feef686238981aae90112805a6478b3693476f5b08ae90b28cd0a0b08b22a30`, bound by author `MANIFEST.json`, SHA-256 `33f5ee1809d2f5674b009798d12e413fd597c70d68281d5d78746ec3470d7663`. Acceptance does not extend automatically to later edits. The final machine-readable acceptance records the reviewer artifacts and these same pins.\n\nThe result correctly supplies four things: a declared ordered-control representation into polynomial operators; exact scalar-projective faithfulness of finite operator jets when every finite-support law and polynomial readout is tested; the Lie-versus-associative normalization boundary; and a positive-stage, coercive example whose degree-two control data agree but whose degree-three normalized outputs differ.\n\n## Review independence and executed evidence\n\nThe parent supplied the candidate statements and signs. Before inspecting the author's derivation, this reviewer independently derived the scalar-kernel induction, the Lie commutator, the free-word cubic discrepancy, and the translated-quadratic mean coefficient. This is independent checking o"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-01",
+          "relationship": "formal ancestry: typed algebra and explicit homomorphism",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "MOM-01",
+          "relationship": "complementary symmetric state moment input",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No infinite-series convergence, raw-word injectivity or finite universal state closure; scalar Lie quotient differs from invalid unit-killing associative quotient."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/ordered-control-projective-transport-20261011/RESULT.md",
+      "canonical_source_sha256": "8feef686238981aae90112805a6478b3693476f5b08ae90b28cd0a0b08b22a30",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-15",
+      "title": "Uniform common-energy continuation and pointwise coercive escape",
+      "exact_statement": "On a prescribed finite horizon, one fixed coercive SOS H≥1 with SOS certificates CH−b_t·∇H and V_t+D−κH makes every normalized coordinatewise C1 full-square-positive polynomial hierarchy an exact unique weighted characteristic law. Positive-time records are determinate; fixed initial moment fibres parameterize the possible law paths, and finite initial rank is preserved without a future-rank promise.",
+      "hypotheses": [
+        "Continuous time coefficients in common finite polynomial basis; fixed C,D≥0,κ>0 and all-time certificates for positive theorem; full polynomial hierarchy and square tests."
+      ],
+      "semantic_owner": "nonautonomous-energy-drift-reverse-lift-20261010",
+      "canonical_source": "nonautonomous-energy-drift-reverse-lift-20261010",
+      "source_sections": "Sections 1–5; nonnegative escape whole report",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "nonautonomous-energy-drift-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/nonautonomous-energy-drift-preservation-20261010.zip--c807ba024c4f/nonautonomous-energy-drift-preservation-20261010/evidence/nonautonomous-energy-drift-independent-review-20261010/REVIEW.md",
+        "sha256": "04a4223bc4666a986b8c3a3c085913715a4a02ea7adb47b92dfbe5fd764f5930",
+        "verdict_excerpt": "# Independent review: nonautonomous common-energy reverse lift\n\n10 October 2026 UTC. Independent ordinary mathematical review and finite exact controls. This is a separately bound successor review. Previously accepted autonomous and squared-energy packets remain unchanged.\n\n## Verdict and exact scope\n\nPASS, with no blocking findings, for the frozen `nonautonomous-energy-drift-reverse-lift-20261010/RESULT.md`, SHA256 `5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56`. The author manifest SHA256 is `7d5818a87e798dae073455ff499b03e5c0d0796e98e2a655b07376db19d888e4`.\n\nThe theorem is on a prescribed finite horizon [0,T]. Its coefficients belong to common finite polynomial bases and are continuous in time. It assumes a fixed coercive SOS H≥1 and constants C,D≥0, κ>0 with the actual SOS certificates CH−b_t·∇H and V_t+D−κH at every time. The supplied path is normalized, positive on every polynomial square, C¹ in every polynomial coordinate through the endpoints, and satisfies every polynomial hierarchy equation. No initial law, rank, radial domination or tail assumption is added.\n\nThe whole frozen proof, summary and checker were inspected. The independent replay records 84 author checks and 56 independently written checks, including a continuous-but-nondifferentiable coefficient schedule producing a C¹ moment path that is not C². All frozen author files and the 15 declared original inherited files match their bindings and packaged copies. The exact replay and preservation results are in REPLAY_RESULTS.json and REVIEW_RECEIPT.json. These are finite evidence, not a formal proof of the universal analysis.\n\n## 1. Moving polynomial tests and the clock\n\nThe common finit"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "coercive-energy-moment-bridge-20261010",
+          "relationship": "formal dependency",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "general-coercive-energy-drift-20261010",
+          "relationship": "formal dependency",
+          "dependency_type": "formal_entailment"
+        },
+        {
+          "claim_or_owner": "GEO-07",
+          "relationship": "different sufficient realization route",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No unspecified future schedule/adaptive policy; no claim that common certificate is necessary for every successful flow."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/nonautonomous-energy-drift-preservation-20261010.zip--c807ba024c4f/nonautonomous-energy-drift-preservation-20261010/evidence/nonautonomous-energy-drift-reverse-lift-20261010/RESULT.md",
+      "canonical_source_sha256": "5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-16",
+      "title": "Universal singleton audit covariance and posterior-signature distinction",
+      "exact_statement": "For a C1 field on the full positive labelled simplex times fixed context, commutation with every positive singleton audit is equivalent to x′=v(x), w_i′=w_i(c_i(x)−Σw_jc_j(x)). For the fixed joint weighted transport/Fisher metric on connected product position domains, C2 energies are exactly Σw_i V_i(x_i)+C.",
+      "hypotheses": [
+        "All positive singleton multipliers; labels/objective/metric/context fixed; full product domain; local uniqueness; connected factors for global separable energy."
+      ],
+      "semantic_owner": "authorial-cross-front",
+      "canonical_source": "authorial-cross-front",
+      "source_sections": "Theorems I/J/K; finite-audit source Sections 1–7",
+      "additional_sources": [
+        "finite-audit-gradient-classification-20261010"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "authorial-audit-flow-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/boundary-mathematical-successors-preservation-20261011.zip--1e3f5ad065f4/finite-generator-inputs/authorial-audit-flow-review-20261011/REVIEW.md",
+        "sha256": "1388d9702c418f0b2f436c6a5ae359ec376395a9507afe2a04b8eb9ad42408ec",
+        "verdict_excerpt": "# Focused independent review: audit/flow covariance and discrete transfer\n\n11 October 2026 UTC. Additive review of received `Cross_Front_Theorems.md` §§12–14 and `Dot_Handoff.md`. No edits to received or inherited artifacts, integration, closure, or target-warrant claim. The conclusions are ordinary mathematical review plus exact controls, not formal-kernel verification or a literature-priority survey.\n\n## Result first\n\n- **Accept I and J on their declared domains.** J is a genuine additional universal-audit symmetry classification, not the existing posterior-signature descent classification. Its metric corollary is correct, including n=1, with its connected Cartesian-product position-domain hypothesis retained.\n- **Accept the Euler countercontrol:** its two positive, descending paths differ by TV 1/117. It tests audit fidelity, a different invariant from the inherited full-moment Euler square-positivity obstruction.\n- **Deduplicate K's constructive numerical formula and joint split repair.** The identical minimum-shift reciprocal step, joint particle transport, covariance descent, shift invariance, and first-order consistency are already in `gradient-discretization-fidelity-20261010/RESULT.md` §§4–6. The useful addition is the audit-commutation theorem and acceptance test.\n- **Actual inherited implementation passes the new test.** An exact two-atom control using its `quartic_rational_step`, not a reimplementation, commutes with an origin-labelled positive audit. No existing implementation defect is established.\n- No contradiction with fixed-marginal or correlated-target correction: those use constrained full-law geometry, state-dependent entropy scores, and a different p"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "joint-atomic-gradient-lift-20261010",
+          "relationship": "metric ancestry",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "historical-source-revision-20261010",
+          "relationship": "semantic mapping: actual origin audit",
+          "dependency_type": "semantic_mapping"
+        },
+        {
+          "claim_or_owner": "finite-audit-gradient-classification-20261010",
+          "relationship": "distinct contract comparison",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "No transfer to erased labels, nonproduct collision strata, different objectives or unjustified audit closure."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/received/source/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "canonical_source_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-17",
+      "title": "Grouped audit covariance and finite generator boundary",
+      "exact_statement": "For a fixed partition of positive labelled atoms with metric α^−1Σdw_i²/w_i+Σw_i|dx_i|² on connected product domains, the C2 negative-gradient flow commutes with every positive groupwise audit iff E=C+Σm_g V_g(r_g,x_g), with each V_g arbitrary C2 internal function. Exact full-domain factor-2/factor-3 coordinate audit identities separately imply universal singleton covariance.",
+      "hypotheses": [
+        "Fixed nonempty partition; all positive group multipliers; fixed objective, metric rule and groups; full positive simplex; connected Cartesian product factors; same clock."
+      ],
+      "semantic_owner": "grouped-source-audit-gradient-20261011",
+      "canonical_source": "grouped-source-audit-gradient-20261011",
+      "source_sections": "Sections 2–7; finite-generator report",
+      "additional_sources": [
+        "finite-generator-audit-rigidity-20261011"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "grouped-audit-independent-review",
+        "path": "grouped-audit-independent-review/independent-review.md",
+        "sha256": "e75c41bba37f8d596988d84fd309274f49aa927da7e83e871914111423bc9efe",
+        "verdict_excerpt": "# Independent review of the grouped-audit classification\n\nDecision: PASS for the frozen mathematical report and exact controls identified below, within the stated domain and audit contract. No substantive mathematical defect found. This review supplies neither repository closure authority nor an application-specific justification for the audit family.\n\n## Frozen artifact review\n\nThe author declared a freeze before inspection. The report and checker were hashed, copied byte-for-byte into a separate sibling replay directory, and read in full. The reviewed bindings are:\n\n- RESULT.md: ff42e395bcb649c267374eb5d6e218bc0fd6e21079104be9a5cd97b77e0d233e\n- check_exact.py: e8a1ada4474cd5af57e12a77a6ce38702871b2fa5e007f4368a8432d4c12251a\n- INPUT_BINDINGS.json: 9eada5df5e0227de9afa72210dd77e1a09e695d064a58d2f77a9a7fd0b02964b\n\nAuthor source directory: grouped-source-audit-gradient-20261011. Independent replay directory: grouped-audit-independent-replay. The independent proof and independently written symbolic control below preceded reading the author's frozen proof.\n\nThe frozen report's necessity and sufficiency proofs are correct. It explicitly retains the alpha factor, distinguishes ambient differential representatives from intrinsic simplex derivatives, retains C2 regularity via fixed interior evaluations, permits variable within-group metrics, and uses connected product factors correctly. Its statement about coincident maximal intervals is correct and does not claim forward completeness. The exact moving-position path in section 5 differentiates to the displayed equations. The row/column example is correctly limited to action generation and does not claim a multi-partition gradient"
+      },
+      "fresh_replay_status": "Fresh four-source review-byte reconciliation and normal-Python independent grouped fixture replay passed; output matches retained bytes. See replay/RECONCILIATION_RECEIPT.json. Universal proof remains ordinary written mathematics.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-16",
+          "relationship": "genuine fixed-action extension",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-07",
+          "relationship": "inherited metric",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [
+        "Extends singleton theorem; does not refute it."
+      ],
+      "remaining_obligations": [
+        "Changing partitions or overlapping families need new analysis; common provenance does not establish group-constant likelihood.",
+        "Approximate probes do not certify exact finite-generator theorem."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "grouped-source-audit-gradient-20261011/RESULT.md",
+      "canonical_source_sha256": "ff42e395bcb649c267374eb5d6e218bc0fd6e21079104be9a5cd97b77e0d233e",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Fresh four-source review-byte reconciliation and normal-Python independent grouped fixture replay passed; output matches retained bytes. See replay/RECONCILIATION_RECEIPT.json. Universal proof remains ordinary written mathematics.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-18",
+      "title": "Arbitrary-order positive full-law correction",
+      "exact_statement": "For measurable fixed 0≤V<∞ μ-a.s., m≥1 and finite h≥0, T_h μ∝μ/P_m(hV) is a probability equivalent to μ and commutes with any fixed integrable audit using unchanged parameters. Finite (m+1)st loss moment gives one-step local error O(h^(m+1)), method/global order m, with the global estimate uniform on bounded mesh-time intervals including the initial layer. At fixed t>0, n steps t/n give TV error ≤(m+1)^(m+1)/((m+1)! B_t n^m) for every initial law, with generic sharp order m. If μ has all absolute polynomial moments and is moment-determinate, every probability ν≤Cμ is moment-determinate; thus this bounded-density correction preserves that supplied premise.",
+      "hypotheses": [
+        "Supplied law; fixed nonnegative finite loss; same degree/step/baseline after audit; positive finite audit normalizer; n>m+1 for displayed endpoint bound; moments only for local/initial-layer theorem."
+      ],
+      "semantic_owner": "positive-high-order-correction-20261011",
+      "canonical_source": "positive-high-order-correction-20261011",
+      "source_sections": "Sections 1–4",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "high-order-law-independent-review-20261011",
+        "path": "high-order-law-independent-review-20261011/REVIEW.md",
+        "sha256": "ca36af8cbfae03f05e6df3dbb3f43486bee425b4d04772b4a1d261ba3f6016fe",
+        "verdict_excerpt": "# Independent challenge: arbitrary-order positive law correction\n\n11 October 2026 UTC. Ordinary mathematical scrutiny, without protected edits, integration, formal-kernel verification, priority certification, or closure authority. Exact source bindings and execution receipts are recorded in REVIEW_RECEIPT.json. Author and root source files were not edited by this reviewer.\n\n## Disposition and independence boundary\n\nThe fixed-loss positive reciprocal-Taylor law construction and its local, terminal-time, audit, and determinacy claims withstand independent challenge at the hypotheses stated below. No repair to the discrete-law theorems is required. One added geometry sentence was flagged: finite first moment gives an initial L1/TV derivative, whereas finite Fisher–Rao tangent norm requires finite variance; the final source now explicitly makes that distinction and records positive-time damping. Two minor executable presentation points were raised: distinguish numerical controls from exact/symbolic controls, and initialize high-precision rational weights directly rather than through float. The author corrected these before final binding.\n\nThis reviewer proposed the sharp fixed-terminal-time asymptotic during review. That strengthening is collaborative authored mathematics, not independently certified by its own proposer. The parent separately checked its proof and communicated that check. The independent disposition for the pre-existing endpoint upper bound does not depend on the strengthening. Likewise the root derivation and author's work are collaborative sources, not independent reviews of one another.\n\n## Universal proof checks\n\n1. **Law existence and descent.** For fixe"
+      },
+      "fresh_replay_status": "Current source SHA-256 freshly matched to accepting review; analytic/finite-suite evidence otherwise inherited. See replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "gradient-discretization-fidelity-20261010",
+          "relationship": "inherited first-order method",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "GEO-16",
+          "relationship": "audit acceptance interface",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "reciprocal Taylor/Padé",
+          "relationship": "classical method ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [
+        "Strengthens retained first-order finite-particle scope; does not certify unavailable external R3 source."
+      ],
+      "remaining_obligations": [
+        "Endpoint sharpness was reviewer-proposed collaborative mathematics; no independent self-certification.",
+        "No arbitrary joint/moving-objective integrator order, A-stability or reconstruction from finite summaries."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "positive-high-order-correction-20261011/RESULT.md",
+      "canonical_source_sha256": "72dccf1dd0f129899234b6fcaf43db50e2b289c73fbfd8a3e71e88b8d334dcdb",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Current source SHA-256 freshly matched to accepting review; analytic/finite-suite evidence otherwise inherited. See replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-19",
+      "title": "Tail budgets and positive-time recovery after withdrawal",
+      "exact_statement": "If E exp(βΨ)≤M, audit R≤C exp(γΨ), and Ω(q_t(a))≤A_tΨ+B_t, then the normalized audited pushforward has E exp(ηΩ)≤C exp(ηB_t)M/Z_R whenever ηA_t+γ≤β. The explicit withdrawn heavy-tail law subsequently corrected by F=x²/2 has computable positive-time quadratic-exponential certificate and uniform full moment name.",
+      "hypotheses": [
+        "Declared legitimate audit and origin map; positive finite normalizer; explicit envelopes; correction objective independently retained after withdrawal; named t>0 for effective positive-time recovery."
+      ],
+      "semantic_owner": "audit-tail-positive-repair-20261011",
+      "canonical_source": "audit-tail-positive-repair-20261011",
+      "source_sections": "Whole report; authorial Theorem L",
+      "additional_sources": [
+        "authorial-cross-front",
+        "full-law-gradient-action-tail-20261010"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "source-audit-tail-repair-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/high-order-fisher-law-checkpoint-20261011.zip--9a35b764c6b3/high-order-fisher-law-checkpoint-20261011/payload/source-audit-tail-repair-independent-review-20261011/REVIEW.md",
+        "sha256": "cf8b4265b70aa75605a911c56b8be62c7237a4e699f138b3f28e1f607b88b52b",
+        "verdict_excerpt": "# Independent narrow review: audit loss and quadratic tail repair\n\n11 October 2026 UTC. Independent mathematical reading of the proposed application, not author/source edits, repository integration, formal verification, field-priority research, or programme closure.\n\n## Verdict and essential qualification\n\nThe proposed coefficients and certificate are correct. The important effectivity qualification is that the restored prior has infinite first moment and therefore cannot itself furnish the full finite-moment input required by the effective-continuation predecessor. Construct a new full moment name at computable positive time before invoking that theorem. A mere existence assertion about moments would not suffice.\n\n## Exact derivation\n\nFor n in N_0 let C0=sum_(n>=0)(n+1)^(-2), so 1<=C0<=2 (integral comparison), and μ(n)=1/[C0(n+1)^2]. The calibrated report factor L(n)=(n+1)^2/4^n lies in (0,1]. Its predictive normalizer is 4/(3C0) and its posterior is ν(n)=(3/4)4^(-n). The latter has an exponential moment exactly for exponents b<log 4; its moment at log 4 diverges. The positive audit factor 1/L restores μ, which has no positive ordinary exponential moment and no finite first moment.\n\nApply the independently retained objective F(x)=x²/2 to this restored supplied law, with the inherited unit transport/reaction convention. Then\n\n- X_t(n)=e^(-t)n;\n- K_t(n)=integral_0^t F(X_s(n)) ds=c_t n²;\n- c_t=(1-e^(-2t))/4;\n- Z_t=sum_n μ(n)e^(-c_t n²), with 1/C0<=Z_t<=1;"
+      },
+      "fresh_replay_status": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-16",
+          "relationship": "source/correction distinction",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "MOM-08",
+          "relationship": "effective continuation input",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "full-law-gradient-action-tail-20261010",
+          "relationship": "inherited characteristic law",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Law changes; no warrant restoration or retroactive history rewrite; no uniform positive-time bound down to zero."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "audit-tail-positive-repair-20261011/RESULT.md",
+      "canonical_source_sha256": "76dd37a76bd441d836c201ea4f7dab95b139132ee5c28766a927cac6727674d0",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Not rerun in consolidation; retained evidence is inherited unless listed in geometry/replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-20",
+      "title": "Audit commutation versus Fisher rectifiability",
+      "exact_statement": "The countable exponential-tilt orbit with p0=1/2,pn=1/[2n(n+1)],Vn=e^(n²) has infinite Fisher length in every initial neighborhood despite TV continuity and positive-time smoothness. The bounded everywhere-positive audit L0=1,Ln=(n+1)/n³ commutes exactly but makes the orbit finite length. Uniform 0<ell≤L≤u instead gives global bi-Lipschitz distance and continuous-path length bounds sqrt(ell/u),sqrt(u/ell).",
+      "hypotheses": [
+        "Fixed nonnegative finite loss; countable law and Fisher convention Σ(dp)²/p; common audit domain; two-sided uniform bounds only for positive metric comparison."
+      ],
+      "semantic_owner": "audit-fisher-length-transport-20261011",
+      "canonical_source": "audit-fisher-length-transport-20261011",
+      "source_sections": "Whole report; initial-length report and both reviews",
+      "additional_sources": [
+        "infinite-initial-fisher-length-20261011"
+      ],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within exact stated scope, as recorded in this separate review; not a fresh independent certification by consolidation.",
+        "owner": "audit-fisher-length-independent-review-20261011",
+        "path": "audit-fisher-length-independent-review-20261011/REVIEW.md",
+        "sha256": "a21dca0be3cf16cc7551160aea971c024126b218cb5ca4a218bd4a8b78414c52",
+        "verdict_excerpt": "# Independent review: fixed audit transport of Fisher–Rao path length\n\n11 October 2026 UTC. Verdict: **the explicit counterexample and uniform two-sided metric repair are valid**. The final root report incorporates the regularity clarification and direct metric proof supplied during review. Its amended section was read and checked before binding this review; the rectifiability conclusion needs no differentiability.\n\n## Reviewed bindings\n\n- `audit-fisher-length-transport-20261011/RESULT.md`: SHA-256 `00c38a528d3d8030627eb4dd8e11aa44bb6abfa122efd2da26ece4e8e93a8a58`.\n- Earlier reviewed infinite-length root report: `infinite-initial-fisher-length-20261011/RESULT.md`, SHA-256 `e8743a543021cd86d205c7b757c038f2acaeb80e0ecc117f1ebf1cef6d6493ec`.\n- Earlier independent proof review: `initial-fisher-length-independent-review-20261011/REVIEW.md`, SHA-256 `35efa98e6673b44566fb1c6a26dffc4c6a699ec7a59356f60bac70414cb3a6fb`.\n\nThis review concerns countable-state probability laws, the fixed exponential tilt, fixed Bayes reweighting, and Fisher–Rao metric convention g_q(h,h)=sum h_n²/q_n. No corpus survey, full re-review of endpoint discretization, source-warrant assertion, or protected-source edit was performed.\n\n## 1. Exact normalized audit and unchanged support\n\nThe original p has p_0=1/2 and p_n=1/[2n(n+1)], n≥1. Its fixed loss is V_0=0 and V_n=exp(n²). Let L_0=1 and L_n=(n+1)/n³. Then 0<L_n≤2: for n≥1, L_n=n⁻²+n⁻³≤2, with equality at n=1. Its infimum is zero, despite every individual value being positive.\n\nFor n≥1, p_nL_n=1/(2n⁴); hence\n"
+      },
+      "fresh_replay_status": "Current source SHA-256 freshly matched to accepting review; analytic/finite-suite evidence otherwise inherited. See replay/RECONCILIATION_RECEIPT.json.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-18",
+          "relationship": "counterboundary to endpoint/regularization inference",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "initial-fisher-length-independent-review-20261011",
+          "relationship": "reviewer-proposed square-root comparison",
+          "dependency_type": "methodological_dependency"
+        },
+        {
+          "claim_or_owner": "classical square-root sphere representation",
+          "relationship": "methodological ancestry",
+          "dependency_type": "methodological_dependency"
+        }
+      ],
+      "supersessions": [
+        "Accepting separate exact-byte reviews supersede stale review-pending headings."
+      ],
+      "remaining_obligations": [
+        "Finite mean sufficient, not necessary; prescribed orbit length not endpoint distance; inverse unbounded audit only defined on its checked image."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "audit-fisher-length-transport-20261011/RESULT.md",
+      "canonical_source_sha256": "00c38a528d3d8030627eb4dd8e11aa44bb6abfa122efd2da26ece4e8e93a8a58",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "Current source SHA-256 freshly matched to accepting review; analytic/finite-suite evidence otherwise inherited. See replay/RECONCILIATION_RECEIPT.json.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "MOM-12",
+      "title": "Full Fisher/Hessian endpoint jet does not determine actual germ",
+      "exact_statement": "The inherited lognormal endpoint pair has finite strictly positive one-sided Fisher speed, finite incoming Fisher length, and identical uniformly computable full jets of mean, log-partition, variance, mean-coordinate Hessian potentials and Bregman divergences, while the actual metric/potential/divergence germs differ.",
+      "hypotheses": [
+        "Declared reverse-damped half-line pair; calibrated one-sided statistical parameter; full derivative record rather than whole germ."
+      ],
+      "semantic_owner": "fisher-endpoint-geometry-20261010",
+      "canonical_source": "fisher-endpoint-geometry-20261010",
+      "source_sections": "Section 1; endpoint counterexample",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within stated source scope, as recorded in this separate review. Not a fresh independent review by consolidation.",
+        "owner": "fisher-endpoint-independent-review-20261010",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/Fisher_Endpoint_Geometry_Evidence_20261010.zip--67ad05762847/Fisher_Endpoint_Geometry_Evidence_20261010/fisher-endpoint-independent-review-20261010/REVIEW.md",
+        "sha256": "99ff23cce6f683de41b7d59c6abee8bd701feffc574a1c7618550ec7fce79832",
+        "verdict_excerpt": "# Independent review: Fisher/Hessian endpoint transport\n\n10 October 2026 UTC. Final-byte scoped ordinary mathematical review.\n\n## Verdict\n\n**PASS within the stated scope.** The proposed Fisher/Hessian/Bregman transport is valid for the inherited lognormal endpoint pair. No mathematical correction remains necessary in the reviewed bytes. The result adds a verified geometric boundary discriminator, not a new equal-moment counterexample, general moment theorem, information-geometry theorem, intrinsic nonisometry result, or claim that metric completion collapses distinct probability laws.\n\nAccepted author result:\n\n- Path: `fisher-endpoint-geometry-20261010/RESULT.md`\n- SHA-256: `1b051b438726e2a41bda222f08dfd6e3d9a70499454c9ccef0a62ee9ddac74f6`\n- Size: 20,430 bytes\n\nAccepted author control program:\n\n- Path: `fisher-endpoint-geometry-20261010/verify.py`\n- SHA-256: `968e36228f46cbc5d34a73278d5b5302f51798493d283a26bdc203e40ebd23eb`"
+      },
+      "fresh_replay_status": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+      "dependencies": [
+        {
+          "claim_or_owner": "MOM-03",
+          "dependency_type": "formal_entailment",
+          "relationship": "Moment-indeterminate pair and Laplace separation"
+        },
+        {
+          "claim_or_owner": "MOM-08",
+          "dependency_type": "formal_entailment",
+          "relationship": "Reverse-damped endpoint construction"
+        },
+        {
+          "claim_or_owner": "GEO-06",
+          "dependency_type": "methodological_dependency",
+          "relationship": "Hessian/Fisher leaf formula ancestry"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Does not refute full-law identity or whole-germ distinction; positive calibrated determinate recovery requires its separate premise."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/Fisher_Endpoint_Geometry_Evidence_20261010.zip--67ad05762847/Fisher_Endpoint_Geometry_Evidence_20261010/fisher-endpoint-geometry-20261010/RESULT.md",
+      "canonical_source_sha256": "1b051b438726e2a41bda222f08dfd6e3d9a70499454c9ccef0a62ee9ddac74f6",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-21",
+      "title": "Posterior-signature gradient descent has a sharp outcome threshold",
+      "exact_statement": "For positive k-by-r joint laws with retained conditional target columns p_j and target q=Qw, projected full-source Fisher velocity is independent of the weight representative iff C(p_j)J_j=0 for every j varying in ker Q. At every signature this is equivalent to actual maximal-flow descent for C2 J. If k>r, descent everywhere iff J restricted to the signature image is φ(q); for 2≤k≤r the polynomial det(QᵀQ) gives non-target-only global descent.",
+      "hypotheses": [
+        "r,k≥2; full positive joint simplex; fixed already-realized audit; ambient C2 objective; conditional laws and q retained, audit weights quotiented only along Qw=q."
+      ],
+      "semantic_owner": "finite-audit-gradient-classification-20261010",
+      "canonical_source": "finite-audit-gradient-classification-20261010",
+      "source_sections": "Sections 1–7",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "The displayed review checks the distinction from universal audit covariance, not a new independent proof of every finite-audit theorem. Direct report gives complete written derivation; preserved direct-review provenance remains inherited.",
+        "owner": "authorial-audit-flow-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/boundary-mathematical-successors-preservation-20261011.zip--1e3f5ad065f4/finite-generator-inputs/authorial-audit-flow-review-20261011/REVIEW.md",
+        "sha256": "1388d9702c418f0b2f436c6a5ae359ec376395a9507afe2a04b8eb9ad42408ec",
+        "verdict_excerpt": "# Focused independent review: audit/flow covariance and discrete transfer\n\n11 October 2026 UTC. Additive review of received `Cross_Front_Theorems.md` §§12–14 and `Dot_Handoff.md`. No edits to received or inherited artifacts, integration, closure, or target-warrant claim. The conclusions are ordinary mathematical review plus exact controls, not formal-kernel verification or a literature-priority survey.\n\n## Result first\n\n- **Accept I and J on their declared domains.** J is a genuine additional universal-audit symmetry classification, not the existing posterior-signature descent classification. Its metric corollary is correct, including n=1, with its connected Cartesian-product position-domain hypothesis retained.\n- **Accept the Euler countercontrol:** its two positive, descending paths differ by TV 1/117. It tests audit fidelity, a different invariant from the inherited full-moment Euler square-positivity obstruction.\n- **Deduplicate K's constructive numerical formula and joint split repair.** The identical minimum-shift reciprocal step, joint particle transport, covariance descent, shift invariance, and first-order consistency are already in `gradient-discretization-fidelity-20261010/RESULT.md` §§4–6. The useful addition is the audit-commutation theorem and acceptance test.\n- **Actual inherited implementation passes the new test.** An exact two-atom control using its `quartic_rational_step`, not a reimplementation, commutes with an origin-labelled positive audit. No existing implementation defect is established.\n- No contradiction with fixed-marginal or correlated-target correction: those use constrained full-law geometry, state-dependent entropy scores, and a different p"
+      },
+      "fresh_replay_status": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+      "dependencies": [
+        {
+          "claim_or_owner": "posterior-inquiry-value-20261010",
+          "dependency_type": "methodological_dependency",
+          "relationship": "Weight-fibre and missing audit-frequency ancestry"
+        },
+        {
+          "claim_or_owner": "GEO-16",
+          "dependency_type": "methodological_dependency",
+          "relationship": "Contrasting action contract, not proof ancestry"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "This is a different quotient from unrestricted normalized group rescaling; boundary support and restricted families need separate analysis."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "grouped-source-audit-gradient-20261011/inputs/finite-audit-gradient-classification.md",
+      "canonical_source_sha256": "178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-22",
+      "title": "Singular fixed-marginal Gaussian KL entrance",
+      "exact_statement": "For fixed same-y-marginal Gaussian target Γ with τ>0, the constrained polynomial ODE from initial (b0,s0=0) has a unique global Gaussian solution with s(t)>0 for every t>0, trace μ(b0,0), and convergence to target. As t↓0, s=2(1+b0²)t+O(t²), KL=−(1/2)log t+O(1), D=1/(2t)+O(1); initial length is finite, original-time action infinite, and t=u² has finite action.",
+      "hypotheses": [
+        "Fixed N(0,1) y-marginal; target parameters β∈R,τ>0; Gaussian parameter solution and trace; positive-time full-density gradient identification."
+      ],
+      "semantic_owner": "singular-gaussian-entrance-20261011",
+      "canonical_source": "singular-gaussian-entrance-20261011",
+      "source_sections": "Sections 1–3",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within stated source scope, as recorded in this separate review. Not a fresh independent review by consolidation.",
+        "owner": "singular-gaussian-entrance-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/boundary-mathematical-successors-preservation-20261011.zip--1e3f5ad065f4/originals/singular-gaussian-entrance-independent-review-20261011/REVIEW.md",
+        "sha256": "59d9c86326a8011b45cad03171606d542a31cc7a180fa42d9188783a6eb4f2a5",
+        "verdict_excerpt": "# Independent review: singular Gaussian entrance\n\n11 October 2026 UTC. Ordinary mathematical review only. No protected edits, integration, formal-kernel certification, field priority, general-law PDE uniqueness, metric-completion theorem or T20 closure.\n\nStatus: ACCEPT for the stated ordinary-mathematics scope. The frozen author RESULT.md hash is 4bfdbfda33420acc2efc53f7ad3f353b9d7cd763d00b21b8b2860f4805aee47b. No blocking finding. All 15 author manifest entries match the frozen snapshot; normal and optimized author replays each pass 34 controls, including unchanged live predecessor bindings. The independent checker passes 16 controls in normal and optimized Python.\n\n## Independent derivation\n\nFor fixed target parameters β∈R and τ>0, the inherited coordinate vector field\n\n    b′ = [b(s−τ)−(b−β)(1+2s+b²/3)]/τ,\n    s′ = [2bs(b−β)−(s+2+2b²)(s−τ)]/τ\n\nis polynomial in b,s. Its ordinary locally unique smooth solution from (b0,0) has s′(0)=a=2(1+b0²)>0 and therefore s(t)=at+O(t²)>0 immediately. It is important that existence here comes from the polynomial coordinate field, not a finite value of initial KL. Starting at any sufficiently small positive time, the inherited positive-time theorem applies. Its finite KL sublevel is compact inside s>0 and prevents a later boundary contact or finite-time blowup; it supplies global Gaussian continuation and convergence to the stipulated target.\n\nFor t>0 the exact full-density tangent is verified using C=Γ⁻¹−Σ⁻¹−[(b−β)(b−3β)/(3τ)]E11, v=−Cx, α=−(xᵀCx−tr(CΣ))/2. The identity\n\n    Σ′ = −CΣ−ΣC−ΣCΣ"
+      },
+      "fresh_replay_status": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-10",
+          "dependency_type": "formal_entailment",
+          "relationship": "Inherited correlated-target ODE and projected tangent"
+        },
+        {
+          "claim_or_owner": "GEO-13",
+          "dependency_type": "methodological_dependency",
+          "relationship": "Distinct endpoint feasibility baseline"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Uniqueness only in specified Gaussian/ODE class; no general PDE entrance, finite initial KL, shortest-path theorem or unchanged gradient clock after reparametrization."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "recovery-20261011/extracted/boundary-mathematical-successors-preservation-20261011/originals/singular-gaussian-entrance-20261011/RESULT.md",
+      "canonical_source_sha256": "4bfdbfda33420acc2efc53f7ad3f353b9d7cd763d00b21b8b2860f4805aee47b",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    },
+    {
+      "id": "GEO-23",
+      "title": "Nonnegative decreasing-loss moving-gradient escape",
+      "exact_statement": "A predetermined smooth finite-basis polynomial-square schedule V_t(x)=1/2[x⁴−a(t)x⁵]² is nonnegative and coercive at every time on a closed finite coefficient interval, yet its actual trajectory X=1/s with s′=−(1−5s⁵) escapes to infinity at finite T while V_t(X)=s²/2 decreases to zero and unnormalized mass has positive limit. No fixed nonnegative coercive C1 H with b_t H′≤CH and finite uniform C can hold along it.",
+      "hypotheses": [
+        "s(0)=1/2 and T=∫_0^(1/2)(1−5u⁵)^−1 du; a=s−s⁶; actual path on [0,T); pointwise frozen-time coercivity only."
+      ],
+      "semantic_owner": "nonnegative-moving-gradient-escape-20261011",
+      "canonical_source": "nonnegative-moving-gradient-escape-20261011",
+      "source_sections": "Whole accepted RESULT with final C qualification",
+      "additional_sources": [],
+      "evidence_level": "ordinary universal written proof; finite controls where retained; no fresh kernel claim",
+      "review": {
+        "status": "Accepted/no blocking defect within stated source scope, as recorded in this separate review. Not a fresh independent review by consolidation.",
+        "owner": "nonnegative-moving-gradient-escape-independent-review-20261011",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/nonnegative-moving-gradient-escape-preservation-20261011.zip--aee6908bc598/nonnegative-moving-gradient-escape-independent-review-20261011/REVIEW.md",
+        "sha256": "b7aae6fa3ecc22d9d9d71fe086bdb138f0f4f3aeb7d0264e2e866c1133f66f35",
+        "verdict_excerpt": "# Independent review: nonnegative-SOS moving-gradient escape\n\n11 October 2026 UTC. Separate independent mathematical review of the root-authored stronger counterexample. The earlier signed-energy counterexample and accepted common-energy theorem remain unchanged.\n\n## Verdict and frozen identity\n\nPASS, with no unresolved mathematical findings, for `nonnegative-moving-gradient-escape-20261011/RESULT.md`, SHA256 `5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d`. The accepted manifest SHA256 is `6c38f26ec9573b8cb66951ca0aa3ffad447133515c6a51cc9aa4242e8fa293c4`.\n\nOne minor precision was corrected before this acceptance: the common-control argument now replaces a finite C by max(C,0) before bounding e^(Ct) by e^(CT). The previous proof bytes and manifest are retained in the author's immutable snapshot folder. The contradiction itself was otherwise valid; this review binds only the revised proof above.\n\nThe result genuinely strengthens the earlier example. Each frozen potential is nonnegative, SOS and coercive, with common minimum value zero; actual loss decreases to zero; the surviving unnormalized mass has a positive endpoint limit. Nonetheless the prescribed smooth changing-gradient trajectory escapes in finite time. It still does not refute a theorem retaining a uniform common coercive control.\n\nFresh isolated replay passes all 12 author controls and 42 independently written controls. All seven frozen author files and the three bound predecessor originals/copied review inputs remain unchanged. The portable replay and frozen receipt specify the exact evidence. Universal inverse-function, coercivity, ODE-uniqueness and Gronwall arguments are reviewed in writin"
+      },
+      "fresh_replay_status": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+      "dependencies": [
+        {
+          "claim_or_owner": "GEO-15",
+          "dependency_type": "methodological_dependency",
+          "relationship": "Tests exact uniform-continuation boundary"
+        },
+        {
+          "claim_or_owner": "pointwise-coercive-gradient-escape-20261011",
+          "dependency_type": "genuine_extension",
+          "relationship": "Strengthens signed-energy predecessor to nonnegative decreasing loss"
+        }
+      ],
+      "supersessions": [],
+      "remaining_obligations": [
+        "Does not refute common-H positive theorem or show that its sufficient SOS certificate is necessary for every successful flow."
+      ],
+      "interpretation_boundary": "A theorem about the declared numerical/representation contract supplies no independent empirical, psychological, source-warrant or metaphysical identification.",
+      "repository_adoption": "Not authorized or performed; proposed baseline only.",
+      "canonical_source_path": "t20-consolidation-20261011/catalogue/archive-views/nonnegative-moving-gradient-escape-preservation-20261011.zip--aee6908bc598/nonnegative-moving-gradient-escape-20261011/RESULT.md",
+      "canonical_source_sha256": "5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d",
+      "evidence_categories": {
+        "written_proof": true,
+        "recorded_Lean_checking": false,
+        "finite_tests": "see exact source/review receipts; never substituted for universal proof",
+        "fresh_execution": "No fresh mathematical suite replay; source and separate review evidence inherited.",
+        "semantic_interpretation": "Declared numerical contract only; no automatic worldly identification",
+        "source_warrant": "Not supplied by these mathematical claims",
+        "repository_adoption": false
+      }
+    }
+  ]
+}

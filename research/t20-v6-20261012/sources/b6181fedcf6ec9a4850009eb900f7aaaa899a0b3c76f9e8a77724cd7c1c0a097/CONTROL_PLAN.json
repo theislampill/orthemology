@@ -1,0 +1,37 @@
+{
+  "commands": [
+    {
+      "id": "author-modal",
+      "script": "t20-next-frontier-20261008/modal-identity-transport/controls.py",
+      "expected_stdout": "t20-next-frontier-20261008/modal-identity-transport/CONTROL_RESULTS.json",
+      "assertions": 626901,
+      "script_sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    },
+    {
+      "id": "review-modal",
+      "script": "t20-next-frontier-20261008/modal-identity-transport-review/independent_controls.py",
+      "expected_stdout": "t20-next-frontier-20261008/modal-identity-transport-review/INDEPENDENT_RESULTS.json",
+      "generated_output": "INDEPENDENT_RESULTS.json",
+      "assertions": 175130,
+      "script_sha256": "3dbea80144c730655a8e8b61833a4bba606c3eaab56007ae1c9cd2d5cbd4c31b"
+    }
+  ],
+  "preserved_not_replayed": [
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport/VERIFY.py",
+      "reason": "Reads twenty predecessor/source-page files outside this incremental payload. Kept unchanged; native verifier is not claimed portable or freshly replayed.",
+      "sha256": "8c1a50d4ffc1bdb9197e93f4b79105bebe9b6fde9ee8696473a6b47c5f1fc59e"
+    },
+    {
+      "path": "t20-next-frontier-20261008/modal-identity-transport-review/author_controls_snapshot.py",
+      "reason": "Exact duplicate of author controls. Historical reviewer replay retained; not executed twice.",
+      "sha256": "12ee27b036ed5b4d5fc51b6d10bb6f937da53ec4e5186e1e98f74889af8b3d9c"
+    }
+  ],
+  "portability_inspection": "Both selected scripts inspected before execution: standard library only; author reads only its own script for hashing, reviewer writes only an output beside its script. No old-code imports or source-body reads. Fresh runs use temporary isolated copies.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "dependencies": "Python standard library only; no installation or network",
+  "proof_replay": false,
+  "source_reading_replay": false,
+  "old_science_replay": false
+}

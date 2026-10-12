@@ -1,0 +1,27 @@
+# Global observed-state hidden-parity necessity: exact contract
+
+## Achieved endpoint
+`winning_policy_mem_winningRegion` proves that every common lawful almost-sure parity policy belongs to the explicit support-recursive, state-descending finite region `winningRegion`. `computed_losing_excludes_common_policy` is its impossibility-certificate corollary. These are necessity, not the full iff or policy-synthesis direction.
+
+Inputs are finite observed state/action types, a finite live support in an arbitrary decidable model type, actual nonnegative normalized rational transition rows on state/action pairs, arbitrary natural-number priorities per hidden model and observed pair, and a hard action menu depending on exact live support and current observed state. All models start at the same supplied observed state. The policy takes the complete observed action/state history and one private seed; its seed probability law and measurable policy are chosen before quantifying the true model. The theorem is uniform in the arbitrary measurable seed space. It is not a stationary or finite-memory restriction. Hidden priorities and the model label are not policy arguments.
+
+`WinningPolicy` contains the real seed measure, measurable action policy, direct lawfulness and actual all-live-model almost-sure minimum-recurrent-priority parity. It contains no safe-action, graph, target, continuation, region-membership or fixed-point premise. The law is the actual independent canonical-feedback law, with state consistency enforced by `pairPolicy` and `currentState`.
+
+Lawfulness means that at every full finite history with nonempty exact live support, almost every compatible seed selects a hard-menu action. `lawful_iff_illegal_prefix_probability_zero` and `lawful_iff_positive_prefix_legal` prove its equivalence to zero actual illegal-next-selection probability at every finite history, or just at every positive finite history, respectively. Null/off-policy seed traces impose no extra restrictions. This packet does not silently identify that almost-sure notion with a stronger pointwise policy requirement.
+
+## Derived proof chain
+1. Exact positive-prefix restart uses the common normalized compatible-seed posterior, actual current observed state and right-appended policy. Lawfulness restarts by seed restriction; almost-sure parity restarts by the separately proved actual conditional continuation law and finite-prefix invariance.
+2. Every positive chosen action has every nonempty successor live support in the semantic child winning region. The proof constructs positive extended histories under each relevant child model, rather than assuming safety.
+3. Hence actual choices until the first support change lie in the semantic all-branch safe action set almost surely. Countably many finite histories allow the seed-null sets to be handled simultaneously.
+4. For each candidate, either a same-support path reaches a positive proper-support exit, or no reachable exit exists and the actual policy is support-preserving. The proved arbitrary-policy recurrent-set and killed-law parity transfer then produce a reachable qualifying computed target. No stability or recurrence premise remains in the final theorem.
+5. The semantic winning set is therefore postfixed by the concrete target-or-exit region operator. Strong support cardinal decrease handles every proper child; monotone finite descending state iteration preserves the semantic region.
+
+## Algorithm and scope
+`regionAllowed` checks all nonempty branches: same-support successors remain in the current candidate region and proper-support successors lie in the previously computed child region. `regionStep` retains states from which every candidate can reach either its proper-support exit or one of its computed parity targets. `computedRegion` recurses by support fuel and performs at most the number of observed states of contraction. `computedRegion_fuel_irrelevant` proves that excess support fuel changes nothing; `winningRegion_fixed` identifies the result as an actual stage fixed point with canonical child regions.
+
+The target selector is the already proved exhaustive powerset reference, and reachability is the already proved finite closure. These definitions execute, but this packet makes no polynomial runtime claim. Substitution of the independently developed SCC selector is separate until an actual refinement theorem is supplied.
+
+The reverse implication and actual global phase/controller synthesis are open here. Local uniform recurrent-component operation is separately proved, but it is not substituted for the missing global navigation/testing/restart construction. Higher odd priorities may recur forever in a winning component; there is no finite odd-visit-cost claim. The coBuchi convention remains good 2 / bad 1.
+
+## Validation
+The source-only frozen closure includes all custom imports, exact source origin hashes, the retained replay driver and direct official import hashes. Replay uses official Lean 4.19.0 and Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b. All declared definitions, structures, instances and theorems receive type/axiom readback. Only propext, Classical.choice and Quot.sound are permitted; these may occur through proof-backed decidability and the measure library. No claim of axiom-free extraction is made. Official installed dependency objects are trusted. Benign unused-section-variable warnings are retained rather than hidden.

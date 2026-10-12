@@ -1,0 +1,58 @@
+[
+  {
+    "source": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/synthesis__WHOLE_CORPUS_SYNTHESIS.md",
+    "sha256": "d05e1da0410c8993ba5263c102aa4dee06048bf05e983da5225d4d407fef8a01",
+    "bytes": 40841,
+    "lines": 227
+  },
+  {
+    "source": "t20-v6-20261011/synthesis/CROSS_CONTRIBUTIONS_WORKING.json",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/synthesis__CROSS_CONTRIBUTIONS_WORKING.json",
+    "sha256": "f6e4e1b73a4af948ef294181a7ba2969744ada9f9a0162622e22f374bfd9f0b7",
+    "bytes": 10527,
+    "lines": 161
+  },
+  {
+    "source": "t20-v6-20261011/root_math/calibrated_prose/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__calibrated_prose__REPORT.md",
+    "sha256": "12917ff5d1f79156d15e38338fabfbd45831d1b0152871bee9e8473839ff0f29",
+    "bytes": 9007,
+    "lines": 43
+  },
+  {
+    "source": "t20-v6-20261011/root_math/controller_sampling_prose/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__controller_sampling_prose__REPORT.md",
+    "sha256": "233f893e1623684a7337e8db9c4bbfc63c9cc1aeeec56b23b3eb443e3a8d9ae7",
+    "bytes": 8075,
+    "lines": 41
+  },
+  {
+    "source": "t20-v6-20261011/root_math/hessian_gaussian_prose/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__hessian_gaussian_prose__REPORT.md",
+    "sha256": "feb91916c442bf4070d81c56138768b37bf3bec88949043377cb5b56b719407b",
+    "bytes": 7744,
+    "lines": 29
+  },
+  {
+    "source": "t20-v6-20261011/root_math/hessian_code_annex/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__hessian_code_annex__REPORT.md",
+    "sha256": "067c9ada7917c34dda3ceb247216bde8f3d0605d0ba653c8d51bed8d6277c8e7",
+    "bytes": 3506,
+    "lines": 21
+  },
+  {
+    "source": "t20-v6-20261011/root_math/calibrated_code_annex/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__calibrated_code_annex__REPORT.md",
+    "sha256": "5c4763e026865740830fd7834a7d27d52884e915ee4987724ca3eaf6f511c0ec",
+    "bytes": 10535,
+    "lines": 63
+  },
+  {
+    "source": "t20-v6-20261011/root_math/calibrated_route/REPORT.md",
+    "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/root_math__calibrated_route__REPORT.md",
+    "sha256": "c2d5f1d6ceecf39074723dd79720a43760d380a49624747e714c538e7a8a39ec",
+    "bytes": 3433,
+    "lines": 17
+  }
+]

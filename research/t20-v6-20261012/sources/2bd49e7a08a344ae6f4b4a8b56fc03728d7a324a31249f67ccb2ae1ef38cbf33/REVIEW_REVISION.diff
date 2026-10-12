@@ -1,0 +1,127 @@
+--- reviewed-v1/RESULT.md
++++ RESULT.md
+@@ -158,7 +158,7 @@
+     fixed-model audit total = 3/10 + 9/50 = 12/25 < 1/2,
+     rectangular audit total = 1/3 + 9/50 = 77/150 > 1/2.
+ 
+-The ex ante optimizer audits; rectangular planning skips. Mixing skip and audit cannot improve their smaller endpoint under either specification: the fixed-model audit risks are all equal to 3/10, and the pasted model supplies the rectangular lower bound. This is a stronger unrestricted inquiry discriminator. It supplements, rather than obscures, the exact existing-L value calculation and its menu limit.
++The ex ante optimizer audits; rectangular planning skips using a private fair guess. The **full rectangular hull** has target priors ranging from 5/12 to 7/12; it does not preserve M's balanced target prior for every pasted law. A fair guess nevertheless has loss exactly 1/2 under every law, while the balanced pasted law w* lower-bounds every skip policy at 1/2 and every paid query policy at 77/150. These same lower bounds rule out an improving private mixture of skipping and querying. The fixed-model audit risks are all equal to 3/10, so a private query/skip mixture cannot improve the fixed-model minimum either. If private report randomization is disallowed, deterministic skipping under the full hull instead costs 7/12; the claimed rectangular skip value and inquiry-choice reversal in this unrestricted example explicitly use the permitted randomized policy class. This is a stronger unrestricted inquiry discriminator. It supplements, rather than obscures, the exact existing-L value calculation and its menu limit.
+ 
+ ## 4. The exact one-split obstruction
+ 
+@@ -205,7 +205,7 @@
+ 
+       ( c_(h,a) r_i(h) + Σ_o (z_o)_i )_(i=1,…,m).
+ 
+-At the horizon only terminal vectors remain. A zero vector r_i(h) makes that component's subtree contribution zero, so an impossible branch is never normalized. If a terminal decision is required and no such decision is available, infeasibility must be represented explicitly; an empty set is not a free zero-cost stop. Actions and terminal decisions may not vary by hidden model index.
++At the horizon only terminal vectors remain. If r_i(h)=0 for **every** model i, the history is globally impossible: define S(h) to be the singleton zero vector (equivalently omit that child from its parent's sum). Such an unreachable history need not supply a lawful terminal decision. If only some model components vanish, those components contribute zero while the live components still require a lawful continuation. No zero-mass branch is normalized. At a feasible history, if a terminal decision is required and no such decision is available, infeasibility must be represented explicitly; an empty set is not a free zero-cost stop. Actions and terminal decisions may not vary by hidden model index.
+ 
+ **Theorem.** S(h) is exactly the set of unnormalized future-loss vectors of deterministic lawful continuation policies from h. Consequently
+ 
+@@ -248,7 +248,7 @@
+     python3 -O coupled-credal-inquiry-transport-20261011/verify.py
+     python3 coupled-credal-inquiry-transport-20261011/run_checks.py
+ 
+-The first two runs each execute 13,629 explicit checks that raise exceptions on failure. No correctness check uses Python assert. They verify the inherited fixture, all four deterministic policies, the exact rational LP and its dual lower bound, an inadmissible pasted law, the inquiry-choice reversal, a genuine 8-to-4-state predictive quotient, escort decoding and branch masses on every binary word through length 6, and set-valued recursion against separately enumerated loss-row evaluations of 669 finite policy trees. Twelve inherited inputs are rehashed unchanged. The additional unrestricted control checks its constant Bayes risk, branchwise extrema, a pasted law preserving the current target prior, all randomized two-label classifiers on an exact grid, and the priced inquiry reversal. Written proofs cover continuous mixture/randomization claims; finite grids corroborate them.
++The first two runs each execute 13,676 explicit checks that raise exceptions on failure. No correctness check uses Python assert. They verify the inherited fixture, all four deterministic policies, the exact rational LP and its dual lower bound, an inadmissible pasted law, the inquiry-choice reversal, a genuine 8-to-4-state predictive quotient, escort decoding and branch masses on every binary word through length 6, and set-valued recursion against separately enumerated loss-row evaluations of 669 fixed-depth policy trees whose stopping is permitted only at the horizon. That generic fixture has no globally zero-probability outcomes; zero branches are covered separately by the repeated-audit/escort controls. Small additional controls test the globally impossible-child singleton-zero rule, infeasible live histories with no terminal decision, and optional early stopping against direct policy enumeration. Twelve inherited inputs are rehashed unchanged. The additional unrestricted control checks its constant Bayes risk, branchwise extrema, a pasted law preserving the current target prior, all randomized two-label classifiers on an exact grid, and the priced inquiry reversal. Written proofs cover continuous mixture/randomization claims; finite grids corroborate them.
+ 
+ The runner also requires four deliberately false controls to fail: an active guard and the false fixed-equals-rectangular identity, each under ordinary and optimized Python. Successful controls and negative tests are author evidence, not independent review. A separate reviewer must bind the final bytes it actually checks.
+ 
+--- reviewed-v1/verify.py
++++ verify.py
+@@ -81,21 +81,25 @@
+     pivot=next(x for x in q if x)
+     return normalized(tuple(exact_sqrt_ratio(x/pivot) for x in q))
+ 
+-def dynamic_sets(rs,depth,operators,costs,terminal):
+-    """Unnormalized policy vectors; same action/child choice for every model."""
++def dynamic_sets(rs,depth,operators,costs,terminal,early_stop=False):
++    """Unnormalized vectors; common actions. Globally impossible nodes need no menu."""
++    if all(not any(r) for r in rs):
++        return {tuple(F(0) for r in rs)}
+     if depth==0:
+         return {tuple(dot(l,r) for r in rs) for l in terminal}
+-    out=set()
++    out={tuple(dot(l,r) for r in rs) for l in terminal} if early_stop else set()
+     for a,Ms in enumerate(operators):
+-        kids=[dynamic_sets(tuple(mat(M,r) for r in rs),depth-1,operators,costs,terminal) for M in Ms]
++        kids=[dynamic_sets(tuple(mat(M,r) for r in rs),depth-1,operators,costs,terminal,early_stop) for M in Ms]
+         for child_vectors in product(*kids):
+             out.add(tuple(dot(costs[a],rs[i])+sum(v[i] for v in child_vectors) for i in range(len(rs))))
+     return out
+ 
+-def all_trees(depth,operators,terminal):
+-    if depth==0:return [('stop',j) for j in range(len(terminal))]
+-    return [(a,children) for a,Ms in enumerate(operators)
+-            for children in product(all_trees(depth-1,operators,terminal),repeat=len(Ms))]
++def all_trees(depth,operators,terminal,early_stop=False):
++    stops=[('stop',j) for j in range(len(terminal))]
++    if depth==0:return stops
++    continued=[(a,children) for a,Ms in enumerate(operators)
++               for children in product(all_trees(depth-1,operators,terminal,early_stop),repeat=len(Ms))]
++    return stops+continued if early_stop else continued
+ 
+ def loss_row(tree,operators,costs,terminal):
+     # Independent backward observable-row evaluation, against set recursion.
+@@ -211,7 +215,8 @@
+                         q=escort(next_raw) if z else None
+                 check(mass==sum(raw),'original path mass preserved','escort')
+                 check(decode(q)==normalized(raw),'decoded finite-history law','escort')
+-    # Generic 2-state, 2-action, 2-outcome common instruments. Includes zero branches.
++    # Generic 2-state, 2-action, 2-outcome common instruments, fixed-depth stops.
++    # Every outcome has positive total mass from every nonzero nonnegative state.
+     operators=(
+       (((F(1,2),0),(0,F(1,3))),((F(1,2),0),(0,F(2,3)))),
+       (((F(1,4),F(1,2)),(0,0)),((F(3,4),0),(0,F(1,2)))))
+@@ -228,6 +233,40 @@
+         # Componentwise pruning is safe. Equal components use one representative.
+         front={v for v in recursive if not any(w!=v and all(x<=y for x,y in zip(w,v)) for w in recursive)}
+         check(min(map(max,front))==min(map(max,recursive)),'componentwise dominance safe','set_recursion')
++    # Full rectangular hull does not retain the original balanced target prior.
++    hull_priors=[m*q1+(1-m)*q0 for m,q1,q0 in product(
++        (F(2,5),F(3,5)),(F(2,3),F(3,4)),(F(1,4),F(1,3)))]
++    check((min(hull_priors),max(hull_priors))==(F(5,12),F(7,12)),
++          'full rectangular hull prior range','final_scope')
++    check(min(max(hull_priors),1-min(hull_priors))==F(7,12),
++          'deterministic full hull skip differs','final_scope')
++    for p in hull_priors:
++        check(F(1,2)*p+F(1,2)*(1-p)==F(1,2),'private fair skip exact under every hull corner','final_scope')
++    for x,y in product((F(0),F(1,3),F(2,3),F(1)),repeat=2):
++        a,b,c,d=wstar
++        query_loss=x*b+(1-x)*a+y*d+(1-y)*c
++        check(query_loss+price>=F(77,150),'balanced paste lower bounds every tested query','final_scope')
++        check(x*F(1,2)+(1-x)*F(1,2)==F(1,2),'balanced paste lower bounds every tested skip','final_scope')
++    # Globally impossible histories contribute zero even when their menu is empty.
++    zero_rs=((F(0),),(F(0),));live_rs=((F(1),),(F(1),))
++    unary_ops=((((F(1),),),),);unary_costs=((F(1,4),),);unary_terminal=((F(1,2),),)
++    check(dynamic_sets(zero_rs,0,unary_ops,unary_costs,())=={(F(0),F(0))},
++          'globally impossible empty-menu leaf contributes singleton zero','final_scope')
++    check(dynamic_sets(live_rs,0,unary_ops,unary_costs,())==set(),
++          'live empty-menu leaf is infeasible','final_scope')
++    child_zero=dynamic_sets(zero_rs,0,unary_ops,unary_costs,())
++    child_live=dynamic_sets(live_rs,0,unary_ops,unary_costs,unary_terminal)
++    parent_vectors={add(a,b) for a,b in product(child_zero,child_live)}
++    check(parent_vectors=={(F(1,2),F(1,2))},'unreachable child does not delete feasible parent','final_scope')
++    early=dynamic_sets(live_rs,1,unary_ops,unary_costs,unary_terminal,early_stop=True)
++    early_trees=all_trees(1,unary_ops,unary_terminal,early_stop=True)
++    early_direct={tuple(dot(loss_row(t,unary_ops,unary_costs,unary_terminal),r) for r in live_rs)
++                  for t in early_trees}
++    check(early==early_direct=={(F(1,2),F(1,2)),(F(3,4),F(3,4))},
++          'optional early stop matches independent enumeration','final_scope')
++    fixed=dynamic_sets(live_rs,1,unary_ops,unary_costs,unary_terminal)
++    check(fixed=={(F(3,4),F(3,4))} and min(map(max,early))<min(map(max,fixed)),
++          'early stop can strictly improve fixed-depth cost','final_scope')
+     for item in json.loads((HERE/'INPUT_BINDINGS.json').read_text())['inputs']:
+         p=WORK/item['path'];data=p.read_bytes()
+         check(len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],
+--- reviewed-v1/run_checks.py
++++ run_checks.py
+@@ -10,7 +10,7 @@
+     p=subprocess.run(base+['--output',str(output)],text=True,capture_output=True)
+     if p.returncode!=0:raise RuntimeError(p.stdout+p.stderr)
+     parsed=json.loads(p.stdout)
+-    if parsed['status']!='PASS' or parsed['checks']!=13629:raise RuntimeError('Unexpected positive result')
++    if parsed['status']!='PASS' or parsed['checks']!=13676:raise RuntimeError('Unexpected positive result')
+     rows.append({'optimized':optimized,'test':'positive','returncode':p.returncode,'checks':parsed['checks']})
+     for control in ('guard','scalar'):
+         p=subprocess.run(base+['--negative-control',control],text=True,capture_output=True)

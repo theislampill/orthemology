@@ -1,0 +1,29 @@
+PASS tangent mass
+PASS tangent duality
+PASS binary injectivity numerator
+PASS normalized buffer
+PASS partition symbolic mobility
+PASS root same fibre
+PASS root actual collision 4/9
+PASS root actual collision 1/2
+PASS root canonical equals aligned
+PASS normalized same fibre
+PASS normalized actual collision 14/195
+PASS normalized actual collision 7/80
+PASS normalized canonical equals aligned
+PASS shifted entropy second derivative
+PASS quadratic second derivative
+PASS affine deterministic (0, 0, 1)
+PASS affine deterministic (0, 1, 0)
+PASS affine deterministic (0, 1, 1)
+PASS affine deterministic (1, 0, 0)
+PASS affine deterministic (1, 0, 1)
+PASS affine deterministic (1, 1, 0)
+PASS affine noisy exact difference
+PASS aligned-section invariance first
+PASS aligned-section invariance second
+PASS general weight-gap identity
+PASS channel variance identity
+PASS affine-blend divergence identity
+PASS affine-blend Fisher pullback
+ALL 28 EXACT CONTROLS PASSED

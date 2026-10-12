@@ -1,0 +1,20 @@
+{
+  "cycle": 1,
+  "kind": "adversarial source and candidate review",
+  "reviewer": "same assistant; not independent review",
+  "candidate_sha256": "8e60476746bf8acf1c6facc0efc49ef1284dd78b795c913b6203f02a9fe75f99",
+  "overall_original_request_gate": "NOT_APPROVED",
+  "source_coverage_complete": false,
+  "finding_ids": [
+    "C1-B01",
+    "C1-B02",
+    "C1-B03",
+    "C1-B04",
+    "C1-B05",
+    "C1-B06",
+    "C1-B07",
+    "C1-B08"
+  ],
+  "new_finite_check_status": "PASS",
+  "scope": "Authored arguments, retained findings and machine custody records; not exhaustive re-reading of unreturned source content."
+}

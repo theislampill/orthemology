@@ -1,0 +1,43 @@
+{
+  "schema": "p14-completed-research-receipt-v1",
+  "status": "COMPLETED_SCOPED_RESEARCH_RETURN",
+  "main_commit": "03e2604dfcef278b01c60d19b05370fcec4194b6",
+  "main_tree": "3d06e80277ce39286c94307e0f14b215bc94ed83",
+  "input_status": "SEALED_HANDOFF_ONLY",
+  "input_research_executed": false,
+  "research_executed": true,
+  "repository_modified": false,
+  "canonical_adoption": false,
+  "kernel_checked_general_p14": false,
+  "empirical_validation": false,
+  "global_novelty_claim": false,
+  "obligation_ids": [
+    "P14-ET01",
+    "P14-ET02",
+    "P14-ET03",
+    "P14-ET04",
+    "P14-ET05",
+    "P14-ET06",
+    "P14-ET07",
+    "P14-ET08"
+  ],
+  "disposition": "mixed substantive application; accepted conditional results and repaired/rejected automatic bridges",
+  "manifest": "MANIFEST.json",
+  "manifest_sha256": "97696394f4d2351b45e2f8fe139d1079603f8684f244689920f24a3eb84637da",
+  "interface": "p15_interface.json",
+  "interface_sha256": "7de1603ee00b29dec69335d444cd306d47f7860078a8d56e2f585df3a83fef51",
+  "proofs": "research.md",
+  "proofs_sha256": "c67c2fa0a538875a2bbbc0df51ad7877a6a701d11cb1567af4f250ff7c2724ad",
+  "source_pdf_sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
+  "validation": [
+    "seven unit tests pass",
+    "exact rational probe results attached",
+    "team-concavity companion replay attached"
+  ],
+  "limits": [
+    "not a canonical theorem receipt",
+    "not a formal kernel receipt",
+    "not an empirical cognitive or historical result",
+    "P15 must preserve all negative and conditional outcomes"
+  ]
+}

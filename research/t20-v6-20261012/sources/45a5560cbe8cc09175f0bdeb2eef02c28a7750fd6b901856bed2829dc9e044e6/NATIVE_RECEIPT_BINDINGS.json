@@ -1,0 +1,559 @@
+{
+  "checks": [
+    {
+      "fact": "patch_sha256",
+      "id": "patch.digest",
+      "pointer": "/patch/sha256",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "patch_bytes",
+      "id": "patch.bytes",
+      "pointer": "/patch/bytes",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "base_commit",
+      "id": "patch.base",
+      "pointer": "/base_commit",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "base_tree",
+      "id": "patch.base_tree",
+      "pointer": "/base_tree",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "patch.tree",
+      "pointer": "/candidate_tree",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "inherited_review_tree",
+      "id": "patch.prior_tree",
+      "pointer": "/prior_reviewed_tree",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "inherited_review_sha256",
+      "id": "patch.full_review",
+      "pointer": "/prior_whole_diff_review/sha256",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "delta_review_sha256",
+      "id": "patch.delta_review",
+      "pointer": "/independent_review/sha256",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "patch_sha256",
+      "id": "clean.digest",
+      "pointer": "/patch_sha256",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "patch_bytes",
+      "id": "clean.bytes",
+      "pointer": "/patch_bytes",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "patch_manifest_sha256",
+      "id": "clean.manifest",
+      "pointer": "/patch_manifest_sha256",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "base_commit",
+      "id": "clean.base",
+      "pointer": "/base_commit",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "base_tree",
+      "id": "clean.base_tree",
+      "pointer": "/base_tree",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "clean.tree",
+      "pointer": "/expected_candidate_tree",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "clean.actual_tree",
+      "pointer": "/actual_final_index_tree",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "clean.post_apply",
+      "pointer": "/actual_post_apply_index_tree",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "clean.reviewed",
+      "pointer": "/reviewed_tree",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "delta_review_sha256",
+      "id": "clean.delta_review",
+      "pointer": "/review_sha256",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "helper_sha256",
+      "id": "clean.helper",
+      "pointer": "/apply_helper_sha256",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "tracked_files",
+      "id": "clean.blobs",
+      "pointer": "/all_tracked_worktree_blobs_verified",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "changed_files",
+      "id": "clean.preimages",
+      "pointer": "/changed_file_preimages_verified",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "changed_files",
+      "id": "clean.postimages",
+      "pointer": "/changed_file_postimages_verified",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS_AT_CLEAN_APPLICATION_AND_INTEGRITY_SCOPE",
+      "id": "clean.disposition",
+      "pointer": "/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": [],
+      "id": "clean.unstaged",
+      "pointer": "/unstaged_changes_after",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.1",
+      "pointer": "/checks/0/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.2",
+      "pointer": "/checks/1/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.3",
+      "pointer": "/checks/2/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.4",
+      "pointer": "/checks/3/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.5",
+      "pointer": "/checks/4/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.6",
+      "pointer": "/checks/5/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.7",
+      "pointer": "/checks/6/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.8",
+      "pointer": "/checks/7/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.9",
+      "pointer": "/checks/8/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.10",
+      "pointer": "/checks/9/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.11",
+      "pointer": "/checks/10/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.12",
+      "pointer": "/checks/11/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.13",
+      "pointer": "/checks/12/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.14",
+      "pointer": "/checks/13/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.15",
+      "pointer": "/checks/14/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.16",
+      "pointer": "/checks/15/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.17",
+      "pointer": "/checks/16/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.18",
+      "pointer": "/checks/17/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "expected": "PASS",
+      "id": "clean.check.19",
+      "pointer": "/checks/18/status",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "base_commit",
+      "id": "review.inherited.base",
+      "pointer": "/base_commit",
+      "record": "integration/final-patch/prior-review/REVIEW.json"
+    },
+    {
+      "fact": "inherited_review_tree",
+      "id": "review.inherited.tree",
+      "pointer": "/reviewed_tree",
+      "record": "integration/final-patch/prior-review/REVIEW.json"
+    },
+    {
+      "expected": "PASS_AT_BOUNDED_INTEGRATION_REVIEW_SCOPE_WITH_MANDATORY_PDF_GATE_BLOCKED",
+      "id": "review.inherited.disposition",
+      "pointer": "/disposition",
+      "record": "integration/final-patch/prior-review/REVIEW.json"
+    },
+    {
+      "fact": "base_commit",
+      "id": "review.delta.base",
+      "pointer": "/base_commit",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "inherited_review_tree",
+      "id": "review.delta.predecessor",
+      "pointer": "/prior_reviewed_tree",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "review.delta.tree",
+      "pointer": "/reviewed_tree",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "expected": "PASS_AT_BOUNDED_SUCCESSOR_INTEGRATION_SCOPE_WITH_MANDATORY_PDF_GATE_BLOCKED",
+      "id": "review.delta.disposition",
+      "pointer": "/disposition",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "inherited_review_sha256",
+      "id": "review.delta.inherited_digest",
+      "pointer": "/inherited_whole_diff_review/sha256",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "context_selection_sha256",
+      "id": "review.delta.selection",
+      "pointer": "/current_selection_sha256",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "context_seal_sha256",
+      "id": "review.delta.seal",
+      "pointer": "/current_seal_sha256",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "expected": [],
+      "id": "review.delta.findings",
+      "pointer": "/blocking_integration_findings",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "expected": false,
+      "id": "review.delta.repair",
+      "pointer": "/candidate_repair_required",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "results",
+      "id": "counts.results",
+      "pointer": "/final_counts/results",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "results",
+      "id": "clean.counts.results",
+      "pointer": "/final_counts/results",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "results",
+      "id": "delta.counts.results",
+      "pointer": "/actual_counts/results",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "sources",
+      "id": "counts.sources",
+      "pointer": "/final_counts/sources",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "sources",
+      "id": "clean.counts.sources",
+      "pointer": "/final_counts/sources",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "sources",
+      "id": "delta.counts.sources",
+      "pointer": "/actual_counts/sources",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "suites",
+      "id": "counts.suites",
+      "pointer": "/final_counts/suites",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "suites",
+      "id": "clean.counts.suites",
+      "pointer": "/final_counts/suites",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "suites",
+      "id": "delta.counts.suites",
+      "pointer": "/actual_counts/suites",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "receipts",
+      "id": "counts.receipts",
+      "pointer": "/final_counts/native_receipts",
+      "record": "integration/final-patch/PATCH_MANIFEST.json"
+    },
+    {
+      "fact": "receipts",
+      "id": "clean.counts.receipts",
+      "pointer": "/final_counts/native_receipts",
+      "record": "integration/final-patch/CLEAN_APPLY_VERIFICATION.json"
+    },
+    {
+      "fact": "receipts",
+      "id": "delta.counts.receipts",
+      "pointer": "/actual_counts/native_receipts",
+      "record": "integration/final-patch/review/REVIEW.json"
+    },
+    {
+      "fact": "base_commit",
+      "id": "remote.head",
+      "pointer": "/pull_request/head_sha",
+      "record": "integration/final-patch/evidence/REMOTE_BOUNDARY_20261007_182539.json"
+    },
+    {
+      "expected": "2026-10-07T18:25:39Z",
+      "id": "remote.timestamp",
+      "pointer": "/checked_at_utc",
+      "record": "integration/final-patch/evidence/REMOTE_BOUNDARY_20261007_182539.json"
+    },
+    {
+      "expected": false,
+      "id": "remote.unmerged",
+      "pointer": "/pull_request/merged",
+      "record": "integration/final-patch/evidence/REMOTE_BOUNDARY_20261007_182539.json"
+    },
+    {
+      "expected": false,
+      "id": "gate.no_fresh_full",
+      "pointer": "/gate_evidence/fresh_full_workflow_claimed",
+      "record": "integration/final-patch/VERIFICATION.json"
+    },
+    {
+      "expected": 31,
+      "id": "gate.corrected_passes",
+      "pointer": "/gate_evidence/corrected_context/counts/PASS",
+      "record": "integration/final-patch/VERIFICATION.json"
+    },
+    {
+      "fact": "candidate_tree",
+      "id": "gate.corrected_tree",
+      "pointer": "/gate_evidence/corrected_context/tree",
+      "record": "integration/final-patch/VERIFICATION.json"
+    },
+    {
+      "fact": "inherited_review_tree",
+      "id": "gate.inherited_tree",
+      "pointer": "/gate_evidence/inherited_prior_affected/tree",
+      "record": "integration/final-patch/VERIFICATION.json"
+    },
+    {
+      "expected": "BLOCKED_DOCKER_ABSENT_AND_POPPLER_VERSION_MISMATCH",
+      "id": "pdf.limit",
+      "pointer": "/pdf/mandatory_exact_rebuild",
+      "record": "integration/final-patch/VERIFICATION.json"
+    }
+  ],
+  "facts": {
+    "base_commit": "fd0903d99d657c35e32fddcc8864d2a77930cf40",
+    "base_tree": "e7b47c7e3dc18685c33904181d9d31d7cd75495f",
+    "candidate_tree": "32e607c34ed32e9f90fed13bdde294fbc47ca7c2",
+    "changed_files": 1016,
+    "context_seal_sha256": "a7ae4e586fddfeba904bb1e53dc933d7d24d87f74afd81819db904d8f713ee6f",
+    "context_selection_sha256": "00bf802818563d942f047401fe6d9eed8b2c2cf1ea9f91a03c576783aa45adc4",
+    "delta_review_sha256": "b761504bedd0b12f4b2e4d6a1c77ba600aab35c119ec489b2c76a3a2b26e3990",
+    "helper_sha256": "dbeb9a219351064ed8582338f3015f1a6e3c905f8040a21e1dd5d51bfe995b18",
+    "inherited_review_sha256": "74150f2dd217408f7f707ec9e3b8ee47f1122bbd333ea882669fac4f35399d6d",
+    "inherited_review_tree": "fadbecadf440641d117d9eabb44faf2fae2ceab4",
+    "patch_bytes": 27396058,
+    "patch_manifest_sha256": "7efd97d89854e6a32b541aab3c75f8ae6620598b68c040bb71102ce740bf5f8c",
+    "patch_sha256": "4391ce7fb14180497eeafbf1c82a3540acbf3eb2fd16018c809421a2a00a52ea",
+    "receipts": 44,
+    "results": 262,
+    "sources": 3828,
+    "suites": 37,
+    "tracked_files": 7637
+  },
+  "patch_path": "integration/final-patch/through-twentieth.patch",
+  "required_check_ids": [
+    "patch.digest",
+    "patch.bytes",
+    "patch.base",
+    "patch.base_tree",
+    "patch.tree",
+    "patch.prior_tree",
+    "patch.full_review",
+    "patch.delta_review",
+    "clean.digest",
+    "clean.bytes",
+    "clean.manifest",
+    "clean.base",
+    "clean.base_tree",
+    "clean.tree",
+    "clean.actual_tree",
+    "clean.post_apply",
+    "clean.reviewed",
+    "clean.delta_review",
+    "clean.helper",
+    "clean.blobs",
+    "clean.preimages",
+    "clean.postimages",
+    "clean.disposition",
+    "clean.unstaged",
+    "clean.check.1",
+    "clean.check.2",
+    "clean.check.3",
+    "clean.check.4",
+    "clean.check.5",
+    "clean.check.6",
+    "clean.check.7",
+    "clean.check.8",
+    "clean.check.9",
+    "clean.check.10",
+    "clean.check.11",
+    "clean.check.12",
+    "clean.check.13",
+    "clean.check.14",
+    "clean.check.15",
+    "clean.check.16",
+    "clean.check.17",
+    "clean.check.18",
+    "clean.check.19",
+    "review.inherited.base",
+    "review.inherited.tree",
+    "review.inherited.disposition",
+    "review.delta.base",
+    "review.delta.predecessor",
+    "review.delta.tree",
+    "review.delta.disposition",
+    "review.delta.inherited_digest",
+    "review.delta.selection",
+    "review.delta.seal",
+    "review.delta.findings",
+    "review.delta.repair",
+    "counts.results",
+    "clean.counts.results",
+    "delta.counts.results",
+    "counts.sources",
+    "clean.counts.sources",
+    "delta.counts.sources",
+    "counts.suites",
+    "clean.counts.suites",
+    "delta.counts.suites",
+    "counts.receipts",
+    "clean.counts.receipts",
+    "delta.counts.receipts",
+    "remote.head",
+    "remote.timestamp",
+    "remote.unmerged",
+    "gate.no_fresh_full",
+    "gate.corrected_passes",
+    "gate.corrected_tree",
+    "gate.inherited_tree",
+    "pdf.limit"
+  ],
+  "review_chain": {
+    "delta_record": "integration/final-patch/review/REVIEW.json",
+    "inherited_record": "integration/final-patch/prior-review/REVIEW.json",
+    "mode": "INHERITED_FULL_PLUS_FINAL_DELTA"
+  },
+  "schema": "owner-native-receipt-bindings-v1",
+  "scope": "Actual native byte/field bindings. The original whole review remains at fadbecad; final-tree review is bounded delta/preservation, never relabelled fresh whole review."
+}

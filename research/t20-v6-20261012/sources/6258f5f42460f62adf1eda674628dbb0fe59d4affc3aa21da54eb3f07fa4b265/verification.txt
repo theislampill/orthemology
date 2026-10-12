@@ -1,0 +1,35 @@
+PASS: symbolic tangent cometric annihilates constants
+PASS: symbolic duality identity H G = I - 1 mu^T/M
+PASS: symbolic deterministic lumping commutes
+PASS: binary stochastic canonical discrepancy
+PASS: binary covariance variance sum
+PASS: binary fine and projected velocities
+PASS: binary canonical coarse velocity
+PASS: binary exact trajectories differ at t=1
+PASS: binary divergence strictly contracts 1/2 to 1/8
+PASS: binary gauge shift leaves both fields unchanged
+PASS: ternary exact direction-changing noisy control
+PASS: ternary fields are not collinear
+PASS: noisy channel preserves a selected block-constant objective
+PASS: all 27 binary-output rational channels satisfy PSD and deterministic iff
+PASS: full-rank quotient lift feasible and tangent
+PASS: full-rank quotient energy identity
+PASS: full-rank quotient lift orthogonality and Pythagorean identity
+PASS: full-rank rank is rank(K)-1
+PASS: full-rank quotient metric identifies A g as gradient
+PASS: rank-deficient quotient lift feasible and tangent
+PASS: rank-deficient quotient energy identity
+PASS: rank-deficient quotient lift orthogonality and Pythagorean identity
+PASS: rank-deficient rank is rank(K)-1
+PASS: rank-deficient quotient metric identifies A g as gradient
+PASS: rank-one reset has zero induced cometric
+PASS: canonical reset-output cometric remains nonzero
+PASS: deterministic fine boundary at t=1/4 with coarse state interior
+PASS: deterministic projected velocity equals coarse before boundary
+PASS: canonical target-divergence flow points directly to its target
+PASS: noisy projected target-divergence flow has another direction
+PASS: augmented full-Hessian velocity has stated mass/simplex split
+PASS: normalization-only radial field still commutes for noisy K
+PASS: tangent objective increases one truth loss while decreasing another
+
+33 exact control groups passed. No floating-point sampling or optimizer used.

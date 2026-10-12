@@ -1,0 +1,1915 @@
+{
+  "schema": "t20-v6-exact-origin-references-v1",
+  "scope": "Occurrence-local original source coordinates, not local repository promises; body digests and all occurrence counts must match",
+  "records": [
+    {
+      "source_sha256": "1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+      "public_sha256": "1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+      "repository_path": "research/t20-v6-20261012/sources/1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981/REVIEW.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "ir-fixtures",
+            "valid",
+            "field-witness-closure-graph.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7",
+      "public_sha256": "2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7",
+      "repository_path": "research/t20-v6-20261012/sources/2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7/recursive-state-transitions.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "spec-authoring-pack.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "framework-pipeline.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "procedures",
+            "P7-restoration-stops.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "TTP-MRP-mid-reread-pressure.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+      "public_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+      "repository_path": "research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "kalamic-interlocutor.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "M9-predication-mode.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "husn-al-nazar-arguments.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "techniques",
+            "V8-bila-kayf-anchor.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "terminology.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5",
+      "public_sha256": "71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5",
+      "repository_path": "research/t20-v6-20261012/sources/71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5/DEPENDENCIES_AND_DISCRIMINATION.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "check_scope_controls.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "bb4f9c5f2720d2d805d4b4c0d93ca5d2572125d44d7a212fb11b9b296b92193d",
+      "public_sha256": "1de43c3bdc9c0eb19e4320734cbe65747a665fbe99e0bf2fcb15facd9dc7d148",
+      "repository_path": "research/t20-v6-20261012/research-v6/empirical_occurrence/DEPENDENCY_CLOSURE.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "certification-authority.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "certification-policy.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "decision-ledger.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "golden-commands.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "parser",
+            "TRANSCLUSION.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "parser",
+            "meta-transclusive-lattice-projection.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "qamus",
+            "particle-projection-contract.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "qamus",
+            "website-handoff",
+            "WEBSITE-AGENT-HANDOFF-CONTRACT-2026-07-29.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "public_sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "repository_path": "research/t20-v6-20261012/sources/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6/M2-prior-probability.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "case-library",
+            "do-core.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c7395184eec16ff191470bea4c272a0b04a97595094ca604dae4d01abda6d273",
+      "public_sha256": "dbeb9faf19168cab48269aa55ec318db39395d8ce8cded82d90e381c17b236e5",
+      "repository_path": "research/t20-v6-20261012/research-v6/type_collective/final_source_tests/EXACT_IMPORT_REUSE.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "experiments",
+            "convergence.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0",
+      "public_sha256": "d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0",
+      "repository_path": "research/t20-v6-20261012/sources/d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0/test_portable.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "scripts",
+            "replay.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_lean.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_p03_runtime.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+      "public_sha256": "e1ea1e6bd1ee8d641da0548de0c6d417fa9d7ad0c79fae24bbf3ee825a3c93b0",
+      "repository_path": "research/t20-v6-20261012/sources/d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940/algebraic-notation-and-noetic-formalism.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-algebraic-symbol-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-nla-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "delta-result-vocabulary.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405",
+      "public_sha256": "fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405",
+      "repository_path": "research/t20-v6-20261012/sources/fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405/operative-contracts.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "diagnostic-ir.schema.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "framework-pipeline.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "module-catalogue.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "operative-contract.schema.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "module-codes.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "00886c74d7ac5ff0f278e737bb58141bd6097be134dbba2f728cd2aae5565882",
+      "public_sha256": "00886c74d7ac5ff0f278e737bb58141bd6097be134dbba2f728cd2aae5565882",
+      "repository_path": "research/t20-v6-20261012/sources/00886c74d7ac5ff0f278e737bb58141bd6097be134dbba2f728cd2aae5565882/runtime-evidence-report.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.4.x-tracked-generated-skill-md-policy.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "behavioral-evaluation-framework.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "compiled-runtime-tools.md"
+          ],
+          "occurrences": 4,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "package-smoke-readiness.md"
+          ],
+          "occurrences": 6,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "release-artifacts.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "v0.4.5.0-release-notes.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "ir-fixtures",
+            "valid",
+            "criterion-import-positive.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "mrp-route-invariants",
+            "invalid",
+            "secularism-round-robin-act-terminal-mrp-false-pass.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "retained-proof-corpus",
+            "v0.4.3.0-schema-light",
+            "valid",
+            "sidecar-backed",
+            "cases",
+            "a9-science-source",
+            "collapse-certificate.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "retained-proof-corpus",
+            "v0.4.3.0-schema-light",
+            "valid",
+            "sidecar-backed",
+            "cases",
+            "a9-science-source",
+            "output.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "retained-proof-corpus",
+            "v0.4.3.0-schema-light",
+            "valid",
+            "sidecar-backed",
+            "manifest.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "routing-fixtures",
+            "12-grief-primary-hiddenness-vocabulary-minimal-pair.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "07dc0970abc9da005b0619de4c5ef83456b4947a1f82307a0a4f977da5a06ec7",
+      "public_sha256": "07dc0970abc9da005b0619de4c5ef83456b4947a1f82307a0a4f977da5a06ec7",
+      "repository_path": "research/t20-v6-20261012/sources/07dc0970abc9da005b0619de4c5ef83456b4947a1f82307a0a4f977da5a06ec7/CODEX_REPAIR_PROMPT.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "coverage.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "gaps.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "0853bc55e71b9415528f20cd23654a1acdca58831550f2fa3a4cca78c8f82d94",
+      "public_sha256": "0853bc55e71b9415528f20cd23654a1acdca58831550f2fa3a4cca78c8f82d94",
+      "repository_path": "research/t20-v6-20261012/sources/0853bc55e71b9415528f20cd23654a1acdca58831550f2fa3a4cca78c8f82d94/F2-volitional-dimensions.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "seven-deformations.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "087e7a9d0907348d097fe77f0594a30311c392a22820a85b1edb3c7fd05c3509",
+      "public_sha256": "087e7a9d0907348d097fe77f0594a30311c392a22820a85b1edb3c7fd05c3509",
+      "repository_path": "research/t20-v6-20261012/sources/087e7a9d0907348d097fe77f0594a30311c392a22820a85b1edb3c7fd05c3509/prophecy-wahy-supremacy.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "arabic-backbone-predicates.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "kernel-thesis.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "1123c25bc62c23dc229931ca50c85669b810aca0e17a02fee993a2527c51d7ec",
+      "public_sha256": "1123c25bc62c23dc229931ca50c85669b810aca0e17a02fee993a2527c51d7ec",
+      "repository_path": "research/t20-v6-20261012/sources/1123c25bc62c23dc229931ca50c85669b810aca0e17a02fee993a2527c51d7ec/verify.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "test_probe.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "24916e5b74bc7b6cc5c1294fdd29a002f41c4eb8b80b656433d60021208bd175",
+      "public_sha256": "24916e5b74bc7b6cc5c1294fdd29a002f41c4eb8b80b656433d60021208bd175",
+      "repository_path": "research/t20-v6-20261012/sources/24916e5b74bc7b6cc5c1294fdd29a002f41c4eb8b80b656433d60021208bd175/build_compiled_runtime.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "delta-result-vocabulary.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-do-families.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-procedures.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-profiles.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-specialty-diagnostics.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-tactics.md"
+          ],
+          "occurrences": 3,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-techniques.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-diagnostic-core.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-dispatch-gate.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-foundation.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-output-governance.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-phase2-passes.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "M9-predication-mode.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "26fb23c49fdc838007260f057a612d2f7eb61d21403ad2aae48a8d42bcfce171",
+      "public_sha256": "26fb23c49fdc838007260f057a612d2f7eb61d21403ad2aae48a8d42bcfce171",
+      "repository_path": "research/t20-v6-20261012/sources/26fb23c49fdc838007260f057a612d2f7eb61d21403ad2aae48a8d42bcfce171/run_new_evidence.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "test_new_research.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "282a03550d6ae79ea257b99591d1f1095331aaf94a6a902eb53b9460c1da3984",
+      "public_sha256": "282a03550d6ae79ea257b99591d1f1095331aaf94a6a902eb53b9460c1da3984",
+      "repository_path": "research/t20-v6-20261012/sources/282a03550d6ae79ea257b99591d1f1095331aaf94a6a902eb53b9460c1da3984/P1-fitrah-restoration.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "seven-deformations.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "techniques",
+            "V2-reconstituting-reason.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "techniques",
+            "V4-contamination-identification.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "techniques",
+            "V5-directing-attention-signs.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "2d38494f6c116906a50ee8f4f9abd20f9eadc6e9aef1a49cf35d4664e2b7d9c5",
+      "public_sha256": "2d38494f6c116906a50ee8f4f9abd20f9eadc6e9aef1a49cf35d4664e2b7d9c5",
+      "repository_path": "research/t20-v6-20261012/sources/2d38494f6c116906a50ee8f4f9abd20f9eadc6e9aef1a49cf35d4664e2b7d9c5/REPORT.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "sound-reason-epistemology.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "R1-internalist-criterion.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "2fd1bb4ceef2992429d5eaac50792bf0024541bb32ccb2a390140ba21185bece",
+      "public_sha256": "2fd1bb4ceef2992429d5eaac50792bf0024541bb32ccb2a390140ba21185bece",
+      "repository_path": "research/t20-v6-20261012/sources/2fd1bb4ceef2992429d5eaac50792bf0024541bb32ccb2a390140ba21185bece/V10-transmission-content-vetting.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "case-library",
+            "revelation-transmission.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "hadith-authentication-epistemology.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070",
+      "public_sha256": "42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070",
+      "repository_path": "research/t20-v6-20261012/sources/42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070/V11-taqlid-transition.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "tactics",
+            "symmetric-taqlid-check.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "4656b1c925e8e50c0ef8a57906b4037b2c1c2c31a38df3be6915ebd6070d25f3",
+      "public_sha256": "8690cea60347cc8b53924d259c60929406ccaaf9a64da3dda0354b91494e7c21",
+      "repository_path": "research/t20-v6-20261012/sources/4656b1c925e8e50c0ef8a57906b4037b2c1c2c31a38df3be6915ebd6070d25f3/replay.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "EXPECTED_PASS_LINES.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [
+            "ff8e77410ba3e08c86b9ceae4f5669f37f18d2cddc768c5db5e5015bf5561d44"
+          ],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337",
+      "public_sha256": "bb17a0bba6dfd64ca80de322c4c35ff0ecd30809084741a8a2142dd373e7de10",
+      "repository_path": "research/t20-v6-20261012/sources/49825d88ac3ed4cf7a379039f98d16e1d7504558282b458978ca7120098fb337/README.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "coverage.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "gaps.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc",
+      "public_sha256": "572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc",
+      "repository_path": "research/t20-v6-20261012/sources/572d535332d3ba47a391bcf700dfca712addc3268e2d55f8fe33a9202ef7c3fc/VERIFICATION.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "SEMANTIC_CONTROLS.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [
+            "313d959fd8e8fea7c226421556d90fce6e35fde523dc9a76eee4ef89f3c1bb99"
+          ],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224",
+      "public_sha256": "5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224",
+      "repository_path": "research/t20-v6-20261012/sources/5da8660613e600fd7b43683af1c5ac916c2747a02a56e3b50259d496f22ca224/REPOSITORIES_AND_PUBLICATION.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "algebraic-notation-and-noetic-formalism.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47",
+      "public_sha256": "6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47",
+      "repository_path": "research/t20-v6-20261012/sources/6271e0a8a14e8567c5cf18beaf741c643881fea908cf3be9ab0f6a2b3bc35e47/READING_LEDGER.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "7cd3c4781789c89f3cd27e37d11c429e8f668c2d5ed0ba70c58b0b8496a6933d",
+      "public_sha256": "7cd3c4781789c89f3cd27e37d11c429e8f668c2d5ed0ba70c58b0b8496a6933d",
+      "repository_path": "research/t20-v6-20261012/sources/7cd3c4781789c89f3cd27e37d11c429e8f668c2d5ed0ba70c58b0b8496a6933d/replay_peer.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "ir-fixtures",
+            "valid",
+            "field-witness-closure-graph.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "8d70995ad05408259177691925dfc5be0d46552b906754dc04e056e0afdb3e59",
+      "public_sha256": "8d70995ad05408259177691925dfc5be0d46552b906754dc04e056e0afdb3e59",
+      "repository_path": "research/t20-v6-20261012/sources/8d70995ad05408259177691925dfc5be0d46552b906754dc04e056e0afdb3e59/qualify.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "test_iterator_regression.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "941d9d9b0d7e1a40b4f1bcd1109217474033b09afc8847701f9d6b735cf105a9",
+      "public_sha256": "8371d20332d54972a79f97cf790f4497321b1aa71c5165932477844cd134bd88",
+      "repository_path": "research/t20-v6-20261012/sources/941d9d9b0d7e1a40b4f1bcd1109217474033b09afc8847701f9d6b735cf105a9/reconstruct_publication.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 3,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "coverage.md"
+          ],
+          "occurrences": 3,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "gaps.md"
+          ],
+          "occurrences": 7,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "95432add5078695275ed1e35ab7c8b0c484a6c1dc09088ec62c949af2d2e70cc",
+      "public_sha256": "95432add5078695275ed1e35ab7c8b0c484a6c1dc09088ec62c949af2d2e70cc",
+      "repository_path": "research/t20-v6-20261012/sources/95432add5078695275ed1e35ab7c8b0c484a6c1dc09088ec62c949af2d2e70cc/compiled_runtime_lib.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-do-families.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-procedures.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-profiles.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-rt-transmission.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-specialty-diagnostics.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-tactics.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "omnibus",
+            "OMNIBUS-techniques.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-diagnostic-core.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-dispatch-gate.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-foundation.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-output-governance.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-phase2-passes.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "959d1f12463ad2773a9a28b6bc9cce6cdf7bdab3fec930cc78cef16a77e4f085",
+      "public_sha256": "959d1f12463ad2773a9a28b6bc9cce6cdf7bdab3fec930cc78cef16a77e4f085",
+      "repository_path": "research/t20-v6-20261012/sources/959d1f12463ad2773a9a28b6bc9cce6cdf7bdab3fec930cc78cef16a77e4f085/field-witness-closure-graph.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "ir-fixtures",
+            "valid",
+            "field-witness-closure-graph.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce",
+      "public_sha256": "9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce",
+      "repository_path": "research/t20-v6-20261012/sources/9efe81bae31aa1ee4e99e94a7535580c32b7ebfe01de7116a6d37c076dca67ce/source-bindings.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "9f345c21b451f9c8cc4284b6a372b38b7d40198b891575f51036e5c992bf2722",
+      "public_sha256": "154358073a5035095aff8b18dce37c7fa3274d6cff53309a685c1e3ee8d9b20b",
+      "repository_path": "research/t20-v6-20261012/sources/9f345c21b451f9c8cc4284b6a372b38b7d40198b891575f51036e5c992bf2722/finish_navigation.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 4,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "coverage.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "gaps.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "bdaf297d41c59a24781ebc3a4986cb6037ca4028a40502da318bb8ec7a4e5ca4",
+      "public_sha256": "bdaf297d41c59a24781ebc3a4986cb6037ca4028a40502da318bb8ec7a4e5ca4",
+      "repository_path": "research/t20-v6-20261012/sources/bdaf297d41c59a24781ebc3a4986cb6037ca4028a40502da318bb8ec7a4e5ca4/V8-bila-kayf-anchor.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "case-library",
+            "do-christian-extensions.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "case-library",
+            "do-core.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "perfection-criterion-usurpation.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "sound-reason-epistemology.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c668da0986d1a21914e4be1c78a29ade24bed1fb59636cc9671a7f80fbb40a2f",
+      "public_sha256": "c668da0986d1a21914e4be1c78a29ade24bed1fb59636cc9671a7f80fbb40a2f",
+      "repository_path": "research/t20-v6-20261012/sources/c668da0986d1a21914e4be1c78a29ade24bed1fb59636cc9671a7f80fbb40a2f/R3-warranted-basic-belief.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "sound-reason-epistemology.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c6be9203f1cef220624f34ee02441dcd5befff0eb0937f63a77ecd7c9acec519",
+      "public_sha256": "c6be9203f1cef220624f34ee02441dcd5befff0eb0937f63a77ecd7c9acec519",
+      "repository_path": "research/t20-v6-20261012/sources/c6be9203f1cef220624f34ee02441dcd5befff0eb0937f63a77ecd7c9acec519/QUALIFICATION_FINDINGS.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "README.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c895815fdb0ac293525552ae4554674d8a0b8911f7a755eed87e3f483be857c7",
+      "public_sha256": "c895815fdb0ac293525552ae4554674d8a0b8911f7a755eed87e3f483be857c7",
+      "repository_path": "research/t20-v6-20261012/sources/c895815fdb0ac293525552ae4554674d8a0b8911f7a755eed87e3f483be857c7/START_HERE.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "scripts",
+            "replay.py"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_p03_runtime.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_python.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "scripts",
+            "verify.py"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "scripts",
+            "verify_replay_evidence.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d0cef9d50b7cb8085394efd578d1d97690cc27544c86cf926be4d235784c5c17",
+      "public_sha256": "d0cef9d50b7cb8085394efd578d1d97690cc27544c86cf926be4d235784c5c17",
+      "repository_path": "research/t20-v6-20261012/sources/d0cef9d50b7cb8085394efd578d1d97690cc27544c86cf926be4d235784c5c17/P4-maieutic.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "tactics",
+            "R2-the-reminder.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d190b661b063c58a3e29a24fb2cc47cb812931479a9598fcb5f2c57c5711328c",
+      "public_sha256": "d190b661b063c58a3e29a24fb2cc47cb812931479a9598fcb5f2c57c5711328c",
+      "repository_path": "research/t20-v6-20261012/sources/d190b661b063c58a3e29a24fb2cc47cb812931479a9598fcb5f2c57c5711328c/noetic-reading-checklist.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "discourse-orientation.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "sound-reason-epistemology.md"
+          ],
+          "occurrences": 5,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "M1P-performative-self-refutation.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "M8-reductio.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d4fe5127dbc7aec5c495dc89e629bd77274fd3d18d69b4212b7f048814004b23",
+      "public_sha256": "d4fe5127dbc7aec5c495dc89e629bd77274fd3d18d69b4212b7f048814004b23",
+      "repository_path": "research/t20-v6-20261012/sources/d4fe5127dbc7aec5c495dc89e629bd77274fd3d18d69b4212b7f048814004b23/IMPLEMENTATION_HANDOFF.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "schemas",
+            "gap-envelope.schema.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "tests",
+            "test_gap_disclosure.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a",
+      "public_sha256": "dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a",
+      "repository_path": "research/t20-v6-20261012/sources/dc4891fda9cd48c9508f6bfb10810240de9f747f8505cbac71c5c0d006063d0a/VERIFICATION.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "ddf70534b3e52192d42e34f7c372f6fee318818a416f8eb8b2948558913cf91a",
+      "public_sha256": "ddf70534b3e52192d42e34f7c372f6fee318818a416f8eb8b2948558913cf91a",
+      "repository_path": "research/t20-v6-20261012/sources/ddf70534b3e52192d42e34f7c372f6fee318818a416f8eb8b2948558913cf91a/check_recursion_collapse_noetic_frame.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "runtime-dispatch-gate.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-output-governance.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "e4c4a52d9739c118328f2614d763f5dc0b5b9d476529c695e2e6f0c2404c2449",
+      "public_sha256": "e4c4a52d9739c118328f2614d763f5dc0b5b9d476529c695e2e6f0c2404c2449",
+      "repository_path": "research/t20-v6-20261012/sources/e4c4a52d9739c118328f2614d763f5dc0b5b9d476529c695e2e6f0c2404c2449/ALL_SOURCE_DISPOSITIONS.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "examples",
+            "RequiredAudit.preview.lean.txt"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "e7c355823e1fe98d0583b23933242219ee11808fa34163e8e1ea2a5fe1181600",
+      "public_sha256": "e7c355823e1fe98d0583b23933242219ee11808fa34163e8e1ea2a5fe1181600",
+      "repository_path": "research/t20-v6-20261012/sources/e7c355823e1fe98d0583b23933242219ee11808fa34163e8e1ea2a5fe1181600/04_DAEE_AND_GEOMETRY_CROSSWALK.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "algebraic-notation-and-noetic-formalism.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "e9e76dc61e99b298c47d4a3a139916111ef5b04be42fb729d0ebc60be770e970",
+      "public_sha256": "5c05320073c3fc63a67e384b3d8376a3256ad5489086fc4dd34c11a82a2d4d47",
+      "repository_path": "research/t20-v6-20261012/sources/e9e76dc61e99b298c47d4a3a139916111ef5b04be42fb729d0ebc60be770e970/replay_public.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "SEMANTIC_RESULTS.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "efd17bf1128fb86a1a8dcc9587783a274d59834044125332cbf0fbd3bf7f1d41",
+      "public_sha256": "efd17bf1128fb86a1a8dcc9587783a274d59834044125332cbf0fbd3bf7f1d41",
+      "repository_path": "research/t20-v6-20261012/sources/efd17bf1128fb86a1a8dcc9587783a274d59834044125332cbf0fbd3bf7f1d41/V9-necessary-knowledge-priority.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "sound-reason-epistemology.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "f3eeda0f4d08457bdf46a2eff8eb89ef2560631a3beb7c1cff4b5fc4a8acfa80",
+      "public_sha256": "f3eeda0f4d08457bdf46a2eff8eb89ef2560631a3beb7c1cff4b5fc4a8acfa80",
+      "repository_path": "research/t20-v6-20261012/sources/f3eeda0f4d08457bdf46a2eff8eb89ef2560631a3beb7c1cff4b5fc4a8acfa80/REVIEW.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "auxiliary_axioms.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "coverage.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "gaps.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "f6aa6343c348d5439e6b6366560c18ac61cfc80ae64f77046aff20a98eb803b0",
+      "public_sha256": "f6aa6343c348d5439e6b6366560c18ac61cfc80ae64f77046aff20a98eb803b0",
+      "repository_path": "research/t20-v6-20261012/sources/f6aa6343c348d5439e6b6366560c18ac61cfc80ae64f77046aff20a98eb803b0/check_register_formalism_bridge.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "algebraic-notation-and-noetic-formalism.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-algebraic-symbol-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-ci-release-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-formalism-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-nla-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-skill-compliance-audit.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "docs",
+            "register-formalism-implementation-ledger.md"
+          ],
+          "occurrences": 4,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-dispatch-gate.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "references",
+            "runtime-output-governance.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "f77e456b0b99b7b932013e84bacf105ebc07508e30384b5ca96bbeb4e23f17a4",
+      "public_sha256": "f77e456b0b99b7b932013e84bacf105ebc07508e30384b5ca96bbeb4e23f17a4",
+      "repository_path": "research/t20-v6-20261012/sources/f77e456b0b99b7b932013e84bacf105ebc07508e30384b5ca96bbeb4e23f17a4/predecessor_e8ee62c6615c33a2264c8ad91ed64461e4f58784.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "scripts",
+            "verify-inputs.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        },
+        {
+          "components": [
+            "scripts",
+            "verify-sources.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    },
+    {
+      "source_sha256": "f89650a92c62e254e2e24ec14bd8d3957611eb00941a605bcda00f5150d87e00",
+      "public_sha256": "f89650a92c62e254e2e24ec14bd8d3957611eb00941a605bcda00f5150d87e00",
+      "repository_path": "research/t20-v6-20261012/sources/f89650a92c62e254e2e24ec14bd8d3957611eb00941a605bcda00f5150d87e00/REPRODUCIBILITY_DEPENDENCIES_v1.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "test_contract.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "preserved historical source coordinates; not an unresolved current proof dependency"
+        }
+      ]
+    }
+  ]
+}

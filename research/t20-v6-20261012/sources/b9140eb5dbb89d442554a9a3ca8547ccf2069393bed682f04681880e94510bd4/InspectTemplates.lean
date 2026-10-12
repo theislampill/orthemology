@@ -1,0 +1,14 @@
+import FamilyComputability
+#print P01D.pairPoly
+#print P01D.fstPoly
+#print P01D.sndPoly
+#print P01D.jPoly
+#print SigmaCompletion.pairSub
+#print SigmaCompletion.branchAt
+#print SigmaCompletion.branchType
+#print RigidityInitiality.successorFamily
+#print RigidityInitiality.sectionBody
+#print RigidityInitiality.dependentStepType
+#print RigidityInitiality.sectionPoly
+#print P01AC.motiveAt
+#print P01AC.theta

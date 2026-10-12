@@ -1,0 +1,2290 @@
+--- v2/CLAIM_REGISTER.json
++++ v3/CLAIM_REGISTER.json
+@@ -5,2 +5,7 @@
+-  "meaning": "Navigation over reconciled inherited research, not a new universal theorem catalogue or an adopted repository registry.",
+-  "claim_count": 126,
++  "meaning": "Navigation over inherited research and separately dated consolidation-depth reassessment; contribution class remains in each source-owned record.",
++  "post_cutoff_addendum": {
++    "date_utc": "2026-10-11",
++    "phase": "consolidation-depth reassessment",
++    "T21_started": false
++  },
++  "claim_count": 137,
+@@ -8,0 +14,265 @@
++    {
++      "id": "DR-01",
++      "track": "consolidation_depth_reassessment",
++      "title": "Several-partition gradient refinement",
++      "statement": "Simultaneous all-positive audit covariance for several partitions is equivalent to common-refinement covariance and energy decomposition.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-01"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "GEO-17",
++          "relationship": "theorem_dependency",
++          "scope": "Exact inherited fixed-partition classification"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-02",
++      "track": "consolidation_depth_reassessment",
++      "title": "Generated symmetry and gradient rigidity differ",
++      "statement": "Row/column-equivariant C1 fields may retain odds-ratio dependence; explicit nongradient and invariant-energy countercontrols show why the gradient hypothesis matters.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-02"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "DR-01",
++          "relationship": "boundary_comparison",
++          "scope": "No action-generation inference"
++        },
++        {
++          "claim": "GEO-17",
++          "relationship": "inherited_obstruction",
++          "scope": "Original row/column action group remains proper"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-03",
++      "track": "consolidation_depth_reassessment",
++      "title": "Several-instrument cone corollary",
++      "statement": "Common-refinement conditioning characterizes nonempty closed convex families stable under each of finitely many complete positive identity-summing instruments.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-03"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "ET-23",
++          "relationship": "direct_corollary",
++          "scope": "Apply inherited Theorem 5 to one tagged mixture instrument"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-04",
++      "track": "consolidation_depth_reassessment",
++      "title": "Cone-to-gradient metric transport",
++      "statement": "The refinement gradient theorem applies to normalized cone interiors after canonical-summand coordinates and the specified transported Fisher–transport metric are supplied.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-04"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "DR-01",
++          "relationship": "theorem_dependency",
++          "scope": "Refinement classification"
++        },
++        {
++          "claim": "ET-23",
++          "relationship": "structure_dependency",
++          "scope": "Canonical indecomposable summands and permitted branch form"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-05",
++      "track": "consolidation_depth_reassessment",
++      "title": "Restricted-control exact barycentre quotient",
++      "statement": "Positive laws have identical full-output histories for all permitted Fisher controls exactly when their unnormalized full-output barycentres agree within fitness-signature groups.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-05"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "MOM-01",
++          "relationship": "dynamics_and_proof_dependency",
++          "scope": "Inherited exponential solution and generic separating control"
++        },
++        {
++          "claim": "H-Continuation",
++          "relationship": "observable_closure_dependency",
++          "scope": "Inherited action-observation closure, located by source hash"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-06",
++      "track": "consolidation_depth_reassessment",
++      "title": "Restricted-control continuous augmentation",
++      "statement": "The exact minimum additional continuous real coordinates beyond q is rank(B)-rank(A); the six-point example needs one rather than full-control three.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-06"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "DR-05",
++          "relationship": "theorem_dependency",
++          "scope": "Continuation equivalence"
++        },
++        {
++          "claim": "H-Continuation",
++          "relationship": "lower_bound_dependency",
++          "scope": "Proposition 9 continuity/invariance-of-domain method"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-07",
++      "track": "consolidation_depth_reassessment",
++      "title": "Isolated profiles fail composed correction",
++      "statement": "A nine-point law pair has identical complete x-only and y-only output profiles but distinct outputs after x then y; their stacked record has rank eight while composed signatures require nine.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-07"
++      },
++      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
++      "dependencies_as_declared": [
++        {
++          "claim": "DR-05",
++          "relationship": "theorem_dependency",
++          "scope": "Sum-control signature refinement"
++        },
++        {
++          "claim": "ET-05",
++          "relationship": "inherited_mechanism_comparison",
++          "scope": "Separate historical revision profiles already fail composition"
++        },
++        {
++          "claim": "H-Continuation",
++          "relationship": "closure_dependency",
++          "scope": "Combined-operation observable closure"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-08",
++      "track": "consolidation_depth_reassessment",
++      "title": "Foundational joint already present",
++      "statement": "FND-033 already joins original-ground arguments, selective revalidation, retained-report revision and non-inferential recognition; reassessment preserves that inherited accomplishment and its empirical mapping boundary.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-08"
++      },
++      "evidence": "Direct source-report comparison and inherited static controls",
++      "dependencies_as_declared": [
++        {
++          "claim": "FND-033",
++          "relationship": "source_ownership",
++          "scope": "Direct achieved foundational application"
++        },
++        {
++          "claim": "ET-18",
++          "relationship": "source_ownership",
++          "scope": "Selective source/dependency scope"
++        },
++        {
++          "claim": "ET-03",
++          "relationship": "role_revision_interface",
++          "scope": "Retained report may change evidence role"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-09",
++      "track": "consolidation_depth_reassessment",
++      "title": "Reconstructed finite-contract input repair",
++      "statement": "Separately received repaired implementation snapshots four one-shot boundaries; constructor repair enforces accepted validated-storage invariant, while three other changes harden unspecified input shapes.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-09"
++      },
++      "evidence": "Red/green regressions, 30-test suite, unchanged finite oracle and separately disclosed downstream compatibility probe",
++      "dependencies_as_declared": [
++        {
++          "claim": "ET-09",
++          "relationship": "implementation_refinement",
++          "scope": "Finite reference implementation, not theorem repair"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-10",
++      "track": "consolidation_depth_reassessment",
++      "title": "Full archive custody restored",
++      "statement": "Newly supplied full archive verifies 11392 payload manifest entries and 9814 advertised copied paths, with 11391 of 11393 member hashes already held.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-10"
++      },
++      "evidence": "Exact SHA/size/CRC and manifest comparison",
++      "dependencies_as_declared": [],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
++    {
++      "id": "DR-11",
++      "track": "consolidation_depth_reassessment",
++      "title": "Additional Pro exact finite controls",
++      "statement": "Supplied independent-formula controls establish displayed Euler discrepancy, sharp TV fixture and finite audit covariance grid.",
++      "record_file": "reassessment/CLAIMS.json",
++      "record_file_sha256": "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
++      "record_selector": {
++        "array": "claims",
++        "id": "DR-11"
++      },
++      "evidence": "Normal Python exact-rational finite controls",
++      "dependencies_as_declared": [
++        {
++          "claim": "GEO-18",
++          "relationship": "bounded_validation",
++          "scope": "No actual later integrator import"
++        }
++      ],
++      "interpretation": "The complete source-owned record controls scope, hypotheses, verification and residuals. This index adds no verification or discovery credit."
++    },
+--- v2/CODEX_START_HERE.md
++++ v3/CODEX_START_HERE.md
+@@ -1,0 +2,2 @@
++
++**INTERMEDIATE_REASSESSMENT_CHECKPOINT · T20 ACTIVE · owner acceptance pending.** Broader cross-front investigation continues under the owner’s standing mandate. This frozen candidate is a bounded working checkpoint, not final scientific closure or completion of that broader request. The prepared Codex handoff does not authorize application or a PR.
+@@ -5 +7 @@
+-The bounded [version 2 scope](EDITION_V2.md) adds ET-23 and supersedes the undelivered first local candidate.
++The current [version 3 scope](EDITION_V3.md) includes v2 in full plus separately dated consolidation-depth reassessment. Use this single candidate; do not integrate v2 and v3 separately. No new research task, corpus rereading, universal proof re-certification or T21 initiation is requested.
+@@ -11 +13 @@
+-The science chapters and README_FIRST are available to the owner/reviewer and for resolving a specific semantic ambiguity. The four claim records control hypotheses, evidence and remaining obligations. CLAIM_REGISTER is a compiled navigation index; DEPENDENCY_INDEX distinguishes premise, source support, interpretation, comparison and currentness. These are preserved inputs, not an instruction to re-prove unchanged work.
++The science chapters and README_FIRST are available to the owner/reviewer and for resolving a specific semantic ambiguity. The four inherited track records and reassessment/CLAIMS.json control hypotheses, contribution classes, evidence and remaining obligations. CLAIM_REGISTER is a compiled navigation index; DEPENDENCY_INDEX distinguishes premise, source support, interpretation, comparison and currentness. These are preserved inputs, not an instruction to re-prove unchanged work.
+@@ -22,0 +25,7 @@
++    python -B replay_selected.py --suite finite-contracts-reconstructed
++    python -B replay_selected.py --suite audit-refinement
++    python -B replay_selected.py --suite restricted-controls
++    python -B replay_selected.py --suite depth-independent
++    python -B replay_selected.py --suite foundational-scope
++    python -B replay_selected.py --suite pro-exact-controls
++    python -B replay_selected.py --suite contract-downstream
+@@ -52 +61 @@
+-REPLAY_SCOPE separates five package-local finite controls from source-preserved historical suites. Kernel source closure, original receipts, fresh kernel execution, ordinary proof, finite controls, external human review and repository adoption are different evidence axes. Official pinned Lean/Mathlib dependencies are external, never replaced by cached compiled binaries in this package. Historical scripts containing omitted machine locators require a new environment-bound driver before execution. Rebuild only the affected cluster when the integration actually changes a proof or its prerequisites; a new reader is not reason to repeat all unchanged historical research.
++REPLAY_SCOPE separates five inherited package-local controls and seven selected reassessment controls from source-preserved historical suites. For the unchanged v2 suites, reuse their exact source-bound receipts; only the old26 baseline and the seven delta targets above need selected replay for this edition. Do not rerun every preserved proof family merely to integrate the reader. The reconstructed successor is not substituted into rational-hase-j; its compatibility probe is separate, explicitly qualified evidence. Review mapping iteration order and accepted input shapes in reassessment/contract_repair/REVIEW.md before choosing it in any new caller. Kernel source closure, original receipts, fresh kernel execution, ordinary proof, finite controls, external human review and repository adoption are different evidence axes. Official pinned Lean/Mathlib dependencies are external, never replaced by cached compiled binaries in this package. Historical scripts containing omitted machine locators require a new environment-bound driver before execution. Rebuild only the affected cluster when the integration actually changes a proof or its prerequisites; a new reader is not reason to repeat all unchanged historical research.
+--- v2/CORRECTION_INDEX.json
++++ v3/CORRECTION_INDEX.json
+@@ -4,0 +5,11 @@
++    {
++      "current_claim": "DR-09",
++      "record_file": "reassessment/CLAIMS.json",
++      "correction": {
++        "predecessor_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
++        "successor_sha256": "852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0",
++        "status": "Reconstructed successor candidate, adoption pending; old historical replay stays exact",
++        "patch": "reassessment/contract_repair/EXACT_DIFF.patch",
++        "separate_from": "52→55 authorial DAG-helper repair and unavailable R3/88"
++      }
++    },
+--- v2/CROSS_FRONT_INTERFACES.json
++++ v3/CROSS_FRONT_INTERFACES.json
+@@ -184,0 +185,44 @@
++    },
++    {
++      "id": "CF-15",
++      "source_claims": [
++        "GEO-17",
++        "ET-23"
++      ],
++      "target_claims": [
++        "DR-01",
++        "DR-03",
++        "DR-04"
++      ],
++      "relationship": "distinct_structure_preserving_applications",
++      "statement": "Common refinement has gradient-integrability and tagged-instrument mechanisms; their hypotheses cannot be interchanged.",
++      "required_scope": "Exact metric/product domain versus complete positive instruments/closed convex stable families."
++    },
++    {
++      "id": "CF-16",
++      "source_claims": [
++        "MOM-01",
++        "ET-05"
++      ],
++      "target_claims": [
++        "DR-05",
++        "DR-06",
++        "DR-07"
++      ],
++      "relationship": "restricted_control_specialization",
++      "statement": "Restricted output-preserving records can be smaller; separate complete profiles may fail their composed operation family.",
++      "required_scope": "Full output, declared control repertoire, observable closure and continuous coordinate sidecar."
++    },
++    {
++      "id": "CF-17",
++      "source_claims": [
++        "FND-033",
++        "ET-18",
++        "ET-03"
++      ],
++      "target_claims": [
++        "DR-08"
++      ],
++      "relationship": "inherited_source_application_confirmed",
++      "statement": "The foundational correction joint was already achieved at its declared semantic/static-control level.",
++      "required_scope": "No invented empirical basing or numerical warrant premises."
+--- v2/DEPENDENCY_INDEX.json
++++ v3/DEPENDENCY_INDEX.json
+@@ -5 +5 @@
+-  "edge_count": 254,
++  "edge_count": 272,
+@@ -2037,0 +2038,144 @@
++    },
++    {
++      "claim": "DR-01",
++      "references": "GEO-17",
++      "relationship": "theorem_dependency",
++      "justification": "Exact inherited fixed-partition classification",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-02",
++      "references": "DR-01",
++      "relationship": "boundary_comparison",
++      "justification": "No action-generation inference",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-02",
++      "references": "GEO-17",
++      "relationship": "inherited_obstruction",
++      "justification": "Original row/column action group remains proper",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-03",
++      "references": "ET-23",
++      "relationship": "direct_corollary",
++      "justification": "Apply inherited Theorem 5 to one tagged mixture instrument",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-04",
++      "references": "DR-01",
++      "relationship": "theorem_dependency",
++      "justification": "Refinement classification",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-04",
++      "references": "ET-23",
++      "relationship": "structure_dependency",
++      "justification": "Canonical indecomposable summands and permitted branch form",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-05",
++      "references": "MOM-01",
++      "relationship": "dynamics_and_proof_dependency",
++      "justification": "Inherited exponential solution and generic separating control",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-05",
++      "references": "H-Continuation",
++      "relationship": "observable_closure_dependency",
++      "justification": "Inherited action-observation closure, located by source hash",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "source_owner_in_reassessment_SOURCE_OWNERS"
++    },
++    {
++      "claim": "DR-06",
++      "references": "DR-05",
++      "relationship": "theorem_dependency",
++      "justification": "Continuation equivalence",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-06",
++      "references": "H-Continuation",
++      "relationship": "lower_bound_dependency",
++      "justification": "Proposition 9 continuity/invariance-of-domain method",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "source_owner_in_reassessment_SOURCE_OWNERS"
++    },
++    {
++      "claim": "DR-07",
++      "references": "DR-05",
++      "relationship": "theorem_dependency",
++      "justification": "Sum-control signature refinement",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-07",
++      "references": "ET-05",
++      "relationship": "inherited_mechanism_comparison",
++      "justification": "Separate historical revision profiles already fail composition",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-07",
++      "references": "H-Continuation",
++      "relationship": "closure_dependency",
++      "justification": "Combined-operation observable closure",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "source_owner_in_reassessment_SOURCE_OWNERS"
++    },
++    {
++      "claim": "DR-08",
++      "references": "FND-033",
++      "relationship": "source_ownership",
++      "justification": "Direct achieved foundational application",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-08",
++      "references": "ET-18",
++      "relationship": "source_ownership",
++      "justification": "Selective source/dependency scope",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-08",
++      "references": "ET-03",
++      "relationship": "role_revision_interface",
++      "justification": "Retained report may change evidence role",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-09",
++      "references": "ET-09",
++      "relationship": "implementation_refinement",
++      "justification": "Finite reference implementation, not theorem repair",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
++    },
++    {
++      "claim": "DR-11",
++      "references": "GEO-18",
++      "relationship": "bounded_validation",
++      "justification": "No actual later integrator import",
++      "owner_file": "reassessment/CLAIMS.json",
++      "reference_status": "local_claim"
+--- v2/EXACT_SOURCE_WHITESPACE.json
++++ v3/EXACT_SOURCE_WHITESPACE.json
+@@ -23 +23 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -42 +42 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -61 +61 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -80 +80 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -99 +99 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -118 +118 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -137 +137 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -156 +156 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -185 +185 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -199 +199 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -213 +213,208 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
++    },
++    {
++      "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++      "original_sha256": "b2abc8aa561302f514305db6859b5ed18839dd2f61e5239f44b1b08845eec3b3",
++      "public_sha256": "b2abc8aa561302f514305db6859b5ed18839dd2f61e5239f44b1b08845eec3b3",
++      "bytes": 2891,
++      "diagnostics": [
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 33,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 34,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 37,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 38,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 46,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 54,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/contract_repair/EXACT_DIFF.patch",
++          "line": 55,
++          "diagnostic": "trailing whitespace."
++        }
++      ],
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
++    },
++    {
++      "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++      "original_sha256": "c80729e84ac0fe0467df2729359fa83eb3b8a6caa8a49807d046f6cf286882bf",
++      "public_sha256": "c80729e84ac0fe0467df2729359fa83eb3b8a6caa8a49807d046f6cf286882bf",
++      "bytes": 16021,
++      "diagnostics": [
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 4,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 6,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 9,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 11,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 13,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 15,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 18,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 21,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 28,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 37,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 39,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 41,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 43,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 46,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 49,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 52,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 55,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 58,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 61,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 64,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 67,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 70,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 74,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++          "line": 79,
++          "diagnostic": "trailing whitespace."
++        }
++      ],
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
++    },
++    {
++      "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++      "original_sha256": "57878fd65d63270ed4fcbd0d8b8521f6cb732b7c7dbc5a5df2016c47e59bc796",
++      "public_sha256": "57878fd65d63270ed4fcbd0d8b8521f6cb732b7c7dbc5a5df2016c47e59bc796",
++      "bytes": 2090,
++      "diagnostics": [
++        {
++          "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++          "line": 4,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++          "line": 6,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++          "line": 9,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++          "line": 11,
++          "diagnostic": "trailing whitespace."
++        },
++        {
++          "path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++          "line": 11,
++          "diagnostic": "new blank line at EOF."
++        }
++      ],
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -257 +464 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -271 +478 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -285 +492 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -299 +506 @@
+-      "disposition": "Inherited exact-source formatting retained; not a new authored/amended whitespace defect."
++      "disposition": "Exact-source formatting preserved; not an authored/derived whitespace defect."
+@@ -302 +509 @@
+-  "policy": "No whitespace normalization of original Lean or unapplied patch bytes. This is not a whole-delta whitespace PASS. Exact per-file attribute proposals are supplied for later integration review only."
++  "policy": "No whitespace normalization of old scientific originals or received exact new sources. Whole-delta strict PASS is not asserted. Exact per-file proposals remain review-only."
+--- v2/FIELD_GUIDE.md
++++ v3/FIELD_GUIDE.md
+@@ -1,0 +2,4 @@
++
++## Consolidation-depth update
++
++This is the complete v3 candidate. Read [EDITION_V3](EDITION_V3.md), [owner assessment](reassessment/OWNER_ASSESSMENT.md), and [combined research synthesis](reassessment/COMBINED_RESEARCH_SYNTHESIS.md) first. Original cutoff 2026-10-11T11:32:55Z is retained; new science is separately dated 11 October 2026 consolidation-depth reassessment. T20 remains active under the standing mandate while owner review is pending; T21 has not begun. Earlier open-boundary and custody statements below describe the inherited edition and are qualified by this current update.
+--- v2/FOUNDATIONAL_CROSSWALK.md
++++ v3/FOUNDATIONAL_CROSSWALK.md
+@@ -1,0 +2,4 @@
++
++## Source-bound depth reassessment
++
++This is the complete v3 candidate. Read [EDITION_V3](EDITION_V3.md), [owner assessment](reassessment/OWNER_ASSESSMENT.md), and [combined research synthesis](reassessment/COMBINED_RESEARCH_SYNTHESIS.md) first. Original cutoff 2026-10-11T11:32:55Z is retained; new science is separately dated 11 October 2026 consolidation-depth reassessment. T20 remains active under the standing mandate while owner review is pending; T21 has not begun. Earlier open-boundary and custody statements below describe the inherited edition and are qualified by this current update.
+--- v2/MATHEMATICAL_SYNTHESIS.md
++++ v3/MATHEMATICAL_SYNTHESIS.md
+@@ -1,0 +2,4 @@
++
++## Separately dated new cross-front deductions
++
++This is the complete v3 candidate. Read [EDITION_V3](EDITION_V3.md), [owner assessment](reassessment/OWNER_ASSESSMENT.md), and [combined research synthesis](reassessment/COMBINED_RESEARCH_SYNTHESIS.md) first. Original cutoff 2026-10-11T11:32:55Z is retained; new science is separately dated 11 October 2026 consolidation-depth reassessment. T20 remains active under the standing mandate while owner review is pending; T21 has not begun. Earlier open-boundary and custody statements below describe the inherited edition and are qualified by this current update.
+--- v2/OWNER_REVIEW_CASE.md
++++ v3/OWNER_REVIEW_CASE.md
+@@ -1,0 +2,6 @@
++
++**INTERMEDIATE_REASSESSMENT_CHECKPOINT · T20 ACTIVE · owner acceptance pending.** Broader cross-front investigation continues under the owner’s standing mandate. This frozen candidate is a bounded working checkpoint, not final scientific closure or completion of that broader request. The prepared Codex handoff does not authorize application or a PR.
++
++## Current owner-review status
++
++This is the complete v3 candidate. Read [EDITION_V3](EDITION_V3.md), [owner assessment](reassessment/OWNER_ASSESSMENT.md), and [combined research synthesis](reassessment/COMBINED_RESEARCH_SYNTHESIS.md) first. Original cutoff 2026-10-11T11:32:55Z is retained; new science is separately dated 11 October 2026 consolidation-depth reassessment. T20 remains active under the standing mandate while owner review is pending; T21 has not begun. Earlier open-boundary and custody statements below describe the inherited edition and are qualified by this current update.
+@@ -10 +16 @@
+-- A unified current index contains 126 scoped material claim entries, with source-owned hypotheses, evidence, corrections and residuals. These are navigation entries, not a count of independent discoveries or theorem declarations.
++- A unified current index contains 137 scoped material claim entries, with source-owned hypotheses, evidence, corrections and residuals. These are navigation entries, not a count of independent discoveries or theorem declarations.
+--- v2/PROPOSED_EXACT_SOURCE_ATTRIBUTES.txt
++++ v3/PROPOSED_EXACT_SOURCE_ATTRIBUTES.txt
+@@ -1,2 +1,2 @@
+-# Proposed only; not applied. Each exact path and hash is inventoried in EXACT_SOURCE_WHITESPACE.json.
+-# Existing baseline uses scoped exact-source -text/whitespace attributes; these entries require integration review.
++# Proposed only; not applied. Exact paths/hashes are inventoried in EXACT_SOURCE_WHITESPACE.json.
++# Requires integration review; installer never changes protected root attributes.
+@@ -13,0 +14,3 @@
++research/t20-consolidated-20261011/reassessment/contract_repair/EXACT_DIFF.patch -text whitespace=-trailing-space
++research/t20-consolidated-20261011/reassessment/foundational_interface/TIBYAN_CORRECTION.diff -text whitespace=-trailing-space
++research/t20-consolidated-20261011/reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff -text whitespace=-trailing-space
+--- v2/PUBLIC_PROJECTION.json
++++ v3/PUBLIC_PROJECTION.json
+@@ -3 +3 @@
+-  "status": "PROPOSED_OWNER_REVIEW_LOCAL_ONLY",
++  "status": "INTERMEDIATE_REASSESSMENT_CHECKPOINT_T20_ACTIVE_OWNER_ACCEPTANCE_PENDING",
+@@ -17151,0 +17152,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "rational-caller-disclosed-substitution"
+@@ -17177,0 +17182,12 @@
++        },
++        {
++          "path": "replay/contract-downstream/old/hase-rational-kernel-transport-20261011/rational_kernel.py",
++          "sha256": "560d1b02ffd9cd8404edf372054c19f6a1293ff3756ed9c96cd17df09a2493c4",
++          "bytes": 4269,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        },
++        {
++          "path": "replay/contract-downstream/repaired/hase-rational-kernel-transport-20261011/rational_kernel.py",
++          "sha256": "560d1b02ffd9cd8404edf372054c19f6a1293ff3756ed9c96cd17df09a2493c4",
++          "bytes": 4269,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
+@@ -17187,0 +17204,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "rational-caller-disclosed-substitution"
+@@ -17213,0 +17234,12 @@
++        },
++        {
++          "path": "replay/contract-downstream/old/hase-rational-kernel-transport-20261011/test_transport.py",
++          "sha256": "6ba86f4469f8a5555df2edb0d66e12a4912603aac0b87029970e84d6f63b817c",
++          "bytes": 6172,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        },
++        {
++          "path": "replay/contract-downstream/repaired/hase-rational-kernel-transport-20261011/test_transport.py",
++          "sha256": "6ba86f4469f8a5555df2edb0d66e12a4912603aac0b87029970e84d6f63b817c",
++          "bytes": 6172,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
+@@ -20580,0 +20613,836 @@
++      "original_sha256": "bf96d40a401af4870fbb090663f30f5f4eca9bfa84e5eb5f93b16011afad63b3",
++      "original_bytes": 5926,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "depth-COMBINED_RESEARCH_SYNTHESIS.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "COMBINED_RESEARCH_SYNTHESIS.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
++      "public_sha256": "bf96d40a401af4870fbb090663f30f5f4eca9bfa84e5eb5f93b16011afad63b3",
++      "public_bytes": 5926
++    },
++    {
++      "original_sha256": "367edbbb8d07b8dfe00592e8a74aae7608ebbbab32acd621b1f7e412c8b1ed54",
++      "original_bytes": 8979,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "depth-OWNER_ASSESSMENT.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "OWNER_ASSESSMENT.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/OWNER_ASSESSMENT.md",
++      "public_sha256": "367edbbb8d07b8dfe00592e8a74aae7608ebbbab32acd621b1f7e412c8b1ed54",
++      "public_bytes": 8979
++    },
++    {
++      "original_sha256": "5f7d67bda97b3c9dbc4c2af0c5f8e58aa68b2056ecf95003c0e002f9e3157c40",
++      "original_bytes": 3463,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit_symmetries-CLAIMS.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "CLAIMS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/audit_symmetries/CLAIMS.json",
++      "public_sha256": "5f7d67bda97b3c9dbc4c2af0c5f8e58aa68b2056ecf95003c0e002f9e3157c40",
++      "public_bytes": 3463
++    },
++    {
++      "original_sha256": "2f855a2a92de0169fcdffaae693cd94a68738f6b3d236f8d7e19126bc711a493",
++      "original_bytes": 2820,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit_symmetries-EXACT_CHECKS.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "EXACT_CHECKS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/audit_symmetries/EXACT_CHECKS.json",
++      "public_sha256": "2f855a2a92de0169fcdffaae693cd94a68738f6b3d236f8d7e19126bc711a493",
++      "public_bytes": 2820
++    },
++    {
++      "original_sha256": "eb250534787e9cb9323a091e087176c38c0665e15f490126cbe1b9865131fe85",
++      "original_bytes": 2820,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit_symmetries-EXACT_CHECKS_OPTIMIZED.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "EXACT_CHECKS_OPTIMIZED.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/audit_symmetries/EXACT_CHECKS_OPTIMIZED.json",
++      "public_sha256": "eb250534787e9cb9323a091e087176c38c0665e15f490126cbe1b9865131fe85",
++      "public_bytes": 2820
++    },
++    {
++      "original_sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8",
++      "original_bytes": 23747,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit_symmetries-RESULT.md"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit-refinement-report"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "RESULT.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/audit_symmetries/RESULT.md",
++      "public_sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8",
++      "public_bytes": 23747,
++      "required_replay_copies": [
++        {
++          "path": "replay/audit-refinement/RESULT.md",
++          "sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8",
++          "bytes": 23747,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a",
++      "original_bytes": 4503,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit_symmetries-source-bindings"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "SOURCE_BINDINGS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/audit_symmetries/SOURCE_BINDINGS.json",
++      "public_sha256": "993ffabb03d2493e60da3ceb3b17e41787c606c97e899e1ad2681e4bf4c3903a",
++      "public_bytes": 6606,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "b2abc8aa561302f514305db6859b5ed18839dd2f61e5239f44b1b08845eec3b3",
++      "original_bytes": 2891,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-reconstructed-four-input-boundary-repairs"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "actual-code-diff.patch",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/contract_repair/EXACT_DIFF.patch",
++      "public_sha256": "b2abc8aa561302f514305db6859b5ed18839dd2f61e5239f44b1b08845eec3b3",
++      "public_bytes": 2891
++    },
++    {
++      "original_sha256": "a632439d83142e606c2bdd1532cece996b25aef7181d19f8c45dcf78b5860f7c",
++      "original_bytes": 1758,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-old26-original-contract-documentation"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "REPRODUCE.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/contract_repair/ORIGINAL_REPRODUCE.md",
++      "public_sha256": "a632439d83142e606c2bdd1532cece996b25aef7181d19f8c45dcf78b5860f7c",
++      "public_bytes": 1758
++    },
++    {
++      "original_sha256": "43d6686be2fa3a933806820ffc727cfb2eddd078c87e365a58614ac93af1ec2d",
++      "original_bytes": 11957,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent-reconstructed-code-results"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "RESULTS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/contract_repair/RESULTS.json",
++      "public_sha256": "d78176cd1e3373bf03f2ad791d46b05359c850c037ef10d925430b72d6a65a29",
++      "public_bytes": 11365,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "4852d9be1400cf54fe5911268bef810ef48a8898a350135b44a4b4f498b255cb",
++      "original_bytes": 9919,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent-reconstructed-code-qualification"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "REVIEW.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/contract_repair/REVIEW.md",
++      "public_sha256": "4852d9be1400cf54fe5911268bef810ef48a8898a350135b44a4b4f498b255cb",
++      "public_bytes": 9919
++    },
++    {
++      "original_sha256": "85fe7ad6ae92ea2a937a6aeb18d602707c5ef6cc8149e560f86b9d95e52101a3",
++      "original_bytes": 17119,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "foundational_interface-RESULT.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "RESULT.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/foundational_interface/RESULT.md",
++      "public_sha256": "85fe7ad6ae92ea2a937a6aeb18d602707c5ef6cc8149e560f86b9d95e52101a3",
++      "public_bytes": 17119
++    },
++    {
++      "original_sha256": "904b74902002eeb2704b9a8f90b4c2ed4f6992c0276fc4bfaad1b7ec94346b8d",
++      "original_bytes": 3805,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "foundational_interface-SCOPE_REPLAY_NORMAL.json"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "foundational_interface-SCOPE_REPLAY_OPTIMIZED.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "SCOPE_REPLAY_NORMAL.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/foundational_interface/SCOPE_REPLAY_NORMAL.json",
++      "public_sha256": "904b74902002eeb2704b9a8f90b4c2ed4f6992c0276fc4bfaad1b7ec94346b8d",
++      "public_bytes": 3805,
++      "required_replay_copies": [
++        {
++          "path": "reassessment/foundational_interface/SCOPE_REPLAY_OPTIMIZED.json",
++          "sha256": "904b74902002eeb2704b9a8f90b4c2ed4f6992c0276fc4bfaad1b7ec94346b8d",
++          "bytes": 3805,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "fe1ad686f70e8038071e3c609eed8ab14dd411ffdcfe2632c5ab6198f222af0e",
++      "original_bytes": 21749,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "foundational_interface-source-bindings"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "SOURCE_BINDINGS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/foundational_interface/SOURCE_BINDINGS.json",
++      "public_sha256": "3f0311646f084e25851d4e57aee54d3bb26f7be6b787188828254dee2f86a05c",
++      "public_bytes": 13901,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "c80729e84ac0fe0467df2729359fa83eb3b8a6caa8a49807d046f6cf286882bf",
++      "original_bytes": 16021,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "foundational_interface-TIBYAN_CORRECTION.diff"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "TIBYAN_CORRECTION.diff",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/foundational_interface/TIBYAN_CORRECTION.diff",
++      "public_sha256": "c80729e84ac0fe0467df2729359fa83eb3b8a6caa8a49807d046f6cf286882bf",
++      "public_bytes": 16021
++    },
++    {
++      "original_sha256": "0ef29728c45b588edb648e16c04c49ab4fe9f5f8eebc1b989ada8abfaf6a4a8d",
++      "original_bytes": 6874,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-CONTROL_NORMAL.json"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-CONTROL_OPTIMIZED.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "CONTROL_NORMAL.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/independent_review/CONTROL_NORMAL.json",
++      "public_sha256": "0ef29728c45b588edb648e16c04c49ab4fe9f5f8eebc1b989ada8abfaf6a4a8d",
++      "public_bytes": 6874,
++      "required_replay_copies": [
++        {
++          "path": "reassessment/independent_review/CONTROL_OPTIMIZED.json",
++          "sha256": "0ef29728c45b588edb648e16c04c49ab4fe9f5f8eebc1b989ada8abfaf6a4a8d",
++          "bytes": 6874,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "57878fd65d63270ed4fcbd0d8b8521f6cb732b7c7dbc5a5df2016c47e59bc796",
++      "original_bytes": 2090,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-RESTRICTED_PRECISION_CORRECTION.diff"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "RESTRICTED_PRECISION_CORRECTION.diff",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff",
++      "public_sha256": "57878fd65d63270ed4fcbd0d8b8521f6cb732b7c7dbc5a5df2016c47e59bc796",
++      "public_bytes": 2090
++    },
++    {
++      "original_sha256": "92ff7a1705829e202fb879d02b0db7f3c1d30c3c71ab5a33e1bb92a9053969dc",
++      "original_bytes": 17548,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-REVIEW.md"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-proof"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "REVIEW.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/independent_review/REVIEW.md",
++      "public_sha256": "92ff7a1705829e202fb879d02b0db7f3c1d30c3c71ab5a33e1bb92a9053969dc",
++      "public_bytes": 17548,
++      "required_replay_copies": [
++        {
++          "path": "replay/depth-independent/REVIEW.md",
++          "sha256": "92ff7a1705829e202fb879d02b0db7f3c1d30c3c71ab5a33e1bb92a9053969dc",
++          "bytes": 17548,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "d08460d94935948f75259d1fe53fb6e21edc03c957a81219f452925cf2c447f5",
++      "original_bytes": 5804,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-source-bindings"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "SOURCE_BINDINGS.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/independent_review/SOURCE_BINDINGS.json",
++      "public_sha256": "77e06bc947ad5493d76f6b7a5e70a867b638c50127f1e07866e0e72f05ce6cb5",
++      "public_bytes": 8459,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "f5933930217cf7b53994ff0f85f5bd219c7844106fa77c3647c51260aa177c1d",
++      "original_bytes": 12291,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-restricted_precorrection_f593393.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "restricted_precorrection_f593393.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/independent_review/restricted_precorrection_f593393.md",
++      "public_sha256": "f5933930217cf7b53994ff0f85f5bd219c7844106fa77c3647c51260aa177c1d",
++      "public_bytes": 12291
++    },
++    {
++      "original_sha256": "8baf4b25eaa5ebd5ab7eaae7a8ed430f190a9fe62093907d989845fff8434561",
++      "original_bytes": 35931,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "historical-v2-reader-snapshot"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "EVIDENCE_TRANSPORT_SYNTHESIS.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/inherited-reader-v2/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md",
++      "public_sha256": "8baf4b25eaa5ebd5ab7eaae7a8ed430f190a9fe62093907d989845fff8434561",
++      "public_bytes": 35931
++    },
++    {
++      "original_sha256": "0f8d9e619bc6b8edd23cf0fd872e8e77aece671e69dd83420e7b7784b6a6386c",
++      "original_bytes": 42966,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "historical-v2-reader-snapshot"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "FOUNDATIONAL_SYNTHESIS.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/inherited-reader-v2/foundations/FOUNDATIONAL_SYNTHESIS.md",
++      "public_sha256": "0f8d9e619bc6b8edd23cf0fd872e8e77aece671e69dd83420e7b7784b6a6386c",
++      "public_bytes": 42966
++    },
++    {
++      "original_sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31",
++      "original_bytes": 46787,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "historical-v2-reader-snapshot"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "GEOMETRY_MOMENTS_SYNTHESIS.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/inherited-reader-v2/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md",
++      "public_sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31",
++      "public_bytes": 46787
++    },
++    {
++      "original_sha256": "a086d6601e3c80243316077d646fcd9f68839359619285f4af24beb93c5593b4",
++      "original_bytes": 10667,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-intake-DISCREPANCY_REPORT.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "DISCREPANCY_REPORT.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/intake/DISCREPANCY_REPORT.md",
++      "public_sha256": "bc125358e4b2f8e4cd3163396b09928a2309f97737f46c2218a53218c0552bcc",
++      "public_bytes": 11141,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "96fa948c0a7d46dcab73a095a869186132c5eee502ff244013771e7ece0502b3",
++      "original_bytes": 8343,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-intake-INTEGRATION_SCOPE_NOTE.md"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "INTEGRATION_SCOPE_NOTE.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "AMENDED",
++      "public_path": "reassessment/intake/INTEGRATION_SCOPE_NOTE.md",
++      "public_sha256": "01b1232252abaaa24a2f90914962d0ad1120528822fcb62cf15e8d0432efb2d7",
++      "public_bytes": 8817,
++      "transformations": [
++        "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++      ]
++    },
++    {
++      "original_sha256": "a8a64e8cbdb0c2c88687f914c4190baf314d5a104aff823023dd2c0ae5d2e80a",
++      "original_bytes": 869,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-AUTHOR_VERIFICATION.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "AUTHOR_VERIFICATION.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/restricted_controls/AUTHOR_VERIFICATION.json",
++      "public_sha256": "a8a64e8cbdb0c2c88687f914c4190baf314d5a104aff823023dd2c0ae5d2e80a",
++      "public_bytes": 869
++    },
++    {
++      "original_sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49",
++      "original_bytes": 12318,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-RESULT.md"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-proof"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "RESULT.md",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/restricted_controls/RESULT.md",
++      "public_sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49",
++      "public_bytes": 12318,
++      "required_replay_copies": [
++        {
++          "path": "replay/restricted-controls/RESULT.md",
++          "sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49",
++          "bytes": 12318,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "434e58bc0f425a37ebba7757c260b520579cd53dc591672fa36412ba73be3c89",
++      "original_bytes": 1636,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-verification_normal.json"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-verification_optimised.json"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "verification_normal.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "reassessment/restricted_controls/verification_normal.json",
++      "public_sha256": "434e58bc0f425a37ebba7757c260b520579cd53dc591672fa36412ba73be3c89",
++      "public_bytes": 1636,
++      "required_replay_copies": [
++        {
++          "path": "reassessment/restricted_controls/verification_optimised.json",
++          "sha256": "434e58bc0f425a37ebba7757c260b520579cd53dc591672fa36412ba73be3c89",
++          "bytes": 1636,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "779a4d9ab9b50cf17d9ec49536023ef3db7e64b5d4c48fe9e3bef7af846edffd",
++      "original_bytes": 11128,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "audit-refinement-author-code"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "check_exact.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/audit-refinement/check_exact.py",
++      "public_sha256": "779a4d9ab9b50cf17d9ec49536023ef3db7e64b5d4c48fe9e3bef7af846edffd",
++      "public_bytes": 11128
++    },
++    {
++      "original_sha256": "508dda860631ecf1ef1826d5083d1d315ff4c2df8c132514369f8b223c9c5c7d",
++      "original_bytes": 1681,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "rational-caller-disclosed-substitution"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "FIXTURE.json",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/contract-downstream/old/hase-rational-kernel-transport-20261011/FIXTURE.json",
++      "public_sha256": "508dda860631ecf1ef1826d5083d1d315ff4c2df8c132514369f8b223c9c5c7d",
++      "public_bytes": 1681,
++      "required_replay_copies": [
++        {
++          "path": "replay/contract-downstream/repaired/hase-rational-kernel-transport-20261011/FIXTURE.json",
++          "sha256": "508dda860631ecf1ef1826d5083d1d315ff4c2df8c132514369f8b223c9c5c7d",
++          "bytes": 1681,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "ee6af6664b91f2f353a2cb982f4badcbb801704c7b37e5ba53ec2d346c18ab1d",
++      "original_bytes": 11059,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "independent_review-checker"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "check_independent.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/depth-independent/check_independent.py",
++      "public_sha256": "ee6af6664b91f2f353a2cb982f4badcbb801704c7b37e5ba53ec2d346c18ab1d",
++      "public_bytes": 11059
++    },
++    {
++      "original_sha256": "852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0",
++      "original_bytes": 14535,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-reconstructed-80-contracts.py"
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "rational-caller-disclosed-substitution"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "contracts.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/finite-contracts-reconstructed/contracts.py",
++      "public_sha256": "852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0",
++      "public_bytes": 14535,
++      "required_replay_copies": [
++        {
++          "path": "replay/contract-downstream/repaired/received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/research/contracts.py",
++          "sha256": "852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0",
++          "bytes": 14535,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "0c5a351600c5466ce8ad5ff992701dd658fb287e288ae6ca48123e00c2d1f3f1",
++      "original_bytes": 1650,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-reconstructed-80-test_one_shot_recovery.py"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "test_one_shot_recovery.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/finite-contracts-reconstructed/test_one_shot_recovery.py",
++      "public_sha256": "0c5a351600c5466ce8ad5ff992701dd658fb287e288ae6ca48123e00c2d1f3f1",
++      "public_bytes": 1650
++    },
++    {
+@@ -20594,0 +21463,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "rational-caller-disclosed-substitution"
+@@ -20614,0 +21487,6 @@
++        },
++        {
++          "path": "replay/contract-downstream/old/received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/research/contracts.py",
++          "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
++          "bytes": 13980,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
+@@ -20624,0 +21503,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "inherited-exhaustive-oracle"
+@@ -20638 +21520,9 @@
+-      "public_bytes": 4421
++      "public_bytes": 4421,
++      "required_replay_copies": [
++        {
++          "path": "replay/finite-contracts-reconstructed/exhaustive_oracle.py",
++          "sha256": "423cee2356215f9e7e8372fb1adc183d9099243f256011bcacc78af694e139f2",
++          "bytes": 4421,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
+@@ -20646,0 +21537,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-reconstructed-80-test_contracts.py"
+@@ -20660 +21554,31 @@
+-      "public_bytes": 11853
++      "public_bytes": 11853,
++      "required_replay_copies": [
++        {
++          "path": "replay/finite-contracts-reconstructed/test_contracts.py",
++          "sha256": "3b4d9843672753dbbca6f353bfe3a26a884c5938e6e19e936cd20077349e3ee3",
++          "bytes": 11853,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
++    },
++    {
++      "original_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
++      "original_bytes": 6940,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "FND-033-scoped-replay"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "OriginalBearerBridge.lean",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/foundational-scope/intrinsic-necessity-bridge-20261009/sources/OriginalBearerBridge.lean",
++      "public_sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
++      "public_bytes": 6940
+@@ -20896,0 +21821,44 @@
++    },
++    {
++      "original_sha256": "31cce82c4cb5394a0b5807d63c34fc1b5b9c1b63db918aa3b1890aaa2a0d7011",
++      "original_bytes": 2616,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "Pro-new-finite-exact-controls"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "independent_exact_controls.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/pro-exact-controls/independent_exact_controls.py",
++      "public_sha256": "31cce82c4cb5394a0b5807d63c34fc1b5b9c1b63db918aa3b1890aaa2a0d7011",
++      "public_bytes": 2616
++    },
++    {
++      "original_sha256": "d9430c2638404329fbc1709d872043804b3b6f6a36fc9e8a1eb9d8e86ca85574",
++      "original_bytes": 4699,
++      "owners": [
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "restricted_controls-checker"
++        }
++      ],
++      "original_member_bindings": [
++        {
++          "member": "verify.py",
++          "context": "Separately received or authored consolidation-depth reassessment, 2026-10-11"
++        }
++      ],
++      "original_identity_scope": "Scientific owner bytes or explicitly derived public locator projection; no inherited execution scope enlargement.",
++      "disposition": "included",
++      "projection": "EXACT",
++      "public_path": "replay/restricted-controls/verify.py",
++      "public_sha256": "d9430c2638404329fbc1709d872043804b3b6f6a36fc9e8a1eb9d8e86ca85574",
++      "public_bytes": 4699
+@@ -23940,0 +24909,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "FND-033-scoped-replay"
+@@ -23954 +24926,9 @@
+-      "public_bytes": 6501
++      "public_bytes": 6501,
++      "required_replay_copies": [
++        {
++          "path": "replay/foundational-scope/synthesis-warrant-scope-20261011/support_scope_check.py",
++          "sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
++          "bytes": 6501,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
+@@ -25387,0 +26368,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "FND-033-scoped-replay"
+@@ -25401 +26385,9 @@
+-      "public_bytes": 14791
++      "public_bytes": 14791,
++      "required_replay_copies": [
++        {
++          "path": "replay/foundational-scope/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
++          "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
++          "bytes": 14791,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
+@@ -27676,0 +28669,4 @@
++        },
++        {
++          "track": "consolidation-depth-reassessment",
++          "source_id": "FND-033-scoped-replay"
+@@ -27691 +28687,9 @@
+-      "public_bytes": 29061
++      "public_bytes": 29061,
++      "required_replay_copies": [
++        {
++          "path": "replay/foundational-scope/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
++          "sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
++          "bytes": 29061,
++          "reason": "Separately dated reassessment portable replay or exact source evidence."
++        }
++      ]
+@@ -27874 +28878,8 @@
+-  "execution_scope": "Original source inclusion is not a fresh execution receipt. REPLAY_SCOPE.json distinguishes runnable finite controls and supplied Lean closure."
++  "execution_scope": "Original source inclusion is not a fresh execution receipt. REPLAY_SCOPE.json distinguishes runnable finite controls and supplied Lean closure.",
++  "post_cutoff_addendum": {
++    "date_utc": "2026-10-11",
++    "phase": "consolidation-depth reassessment",
++    "owner_acceptance": "pending",
++    "T21_started": false,
++    "historical_cutoff_unchanged": true
++  }
+--- v2/PUBLIC_TRANSFORMATIONS.json
++++ v3/PUBLIC_TRANSFORMATIONS.json
+@@ -295 +295 @@
+-              "label": "r R^(r\u22121)+U R^r",
++              "label": "r R^(r−1)+U R^r",
+@@ -383,0 +384,38 @@
++  ],
++  "reassessment_records": [
++    {
++      "path": "reassessment/audit_symmetries/SOURCE_BINDINGS.json",
++      "original_sha256": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a",
++      "public_sha256": "993ffabb03d2493e60da3ceb3b17e41787c606c97e899e1ad2681e4bf4c3903a",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    },
++    {
++      "path": "reassessment/foundational_interface/SOURCE_BINDINGS.json",
++      "original_sha256": "fe1ad686f70e8038071e3c609eed8ab14dd411ffdcfe2632c5ab6198f222af0e",
++      "public_sha256": "3f0311646f084e25851d4e57aee54d3bb26f7be6b787188828254dee2f86a05c",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    },
++    {
++      "path": "reassessment/independent_review/SOURCE_BINDINGS.json",
++      "original_sha256": "d08460d94935948f75259d1fe53fb6e21edc03c957a81219f452925cf2c447f5",
++      "public_sha256": "77e06bc947ad5493d76f6b7a5e70a867b638c50127f1e07866e0e72f05ce6cb5",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    },
++    {
++      "path": "reassessment/intake/DISCREPANCY_REPORT.md",
++      "original_sha256": "a086d6601e3c80243316077d646fcd9f68839359619285f4af24beb93c5593b4",
++      "public_sha256": "bc125358e4b2f8e4cd3163396b09928a2309f97737f46c2218a53218c0552bcc",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    },
++    {
++      "path": "reassessment/intake/INTEGRATION_SCOPE_NOTE.md",
++      "original_sha256": "96fa948c0a7d46dcab73a095a869186132c5eee502ff244013771e7ece0502b3",
++      "public_sha256": "01b1232252abaaa24a2f90914962d0ad1120528822fcb62cf15e8d0432efb2d7",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    },
++    {
++      "path": "reassessment/contract_repair/RESULTS.json",
++      "original_sha256": "43d6686be2fa3a933806820ffc727cfb2eddd078c87e365a58614ac93af1ec2d",
++      "public_sha256": "d78176cd1e3373bf03f2ad791d46b05359c850c037ef10d925430b72d6a65a29",
++      "transformation": "Private custody locators mapped to selected package sources; original and public hashes distinguished."
++    }
+--- v2/READER_PROJECTION.json
++++ v3/READER_PROJECTION.json
+@@ -203,0 +204,69 @@
++  ],
++  "v3_scope": "Intermediate checkpoint; current reader amendments and new source-bound reassessment. Original v2 scientific source copies are unchanged.",
++  "v3_reader_files": [
++    {
++      "path": "README_FIRST.md",
++      "v2_sha256": "d12d0ae7bd41383eb5d1934c79a2e4f73d91fef6083b3a39c6b4094ec4f7b718",
++      "v3_sha256": "acce281227e32789f3aa4df67677c2b128277500b89ec99b408cfabdf139843d",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "FIELD_GUIDE.md",
++      "v2_sha256": "1e3100857e645e35f2cf77e7502ca4d591c70dfc54355b585108496d5bba81c2",
++      "v3_sha256": "9fbd4e99d1add895383091b3b150549152358cb6649a46732d7b5b7f60dacb03",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "MATHEMATICAL_SYNTHESIS.md",
++      "v2_sha256": "b1874d94acd87f9a5b6d1faa5f9693a8ef74c00bb879999bf899850bc0234f8c",
++      "v3_sha256": "b37e884b9b6ea0005608ee6dcfd1f955bd718ac9c92f7cac2ac9cb9b1401cf48",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "OWNER_REVIEW_CASE.md",
++      "v2_sha256": "93c5c3cf8c2b3f2c3e0fda9bd13103cd30ff88fe7704ddf58ff0458770538ca2",
++      "v3_sha256": "4d9708d4921f10ec7c3b3ef420d7e2fe9decd61d52ed4c272ee37ca1ee25a22b",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "FOUNDATIONAL_CROSSWALK.md",
++      "v2_sha256": "1b0f3872cb6cc1f7884074f3e9b019b09ba1a2a7cad1ea26fd65b29815607dbe",
++      "v3_sha256": "7393551939a336c62f5bd32069c759825673031921df18cece9f09f4d38dfcc6",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "T21_CHARTER.md",
++      "v2_sha256": "17bdbebae4c7212bd43e3cb17cad1eca60cf3a0cb27229319203d4b9019d7ef5",
++      "v3_sha256": "6c7e4f72b083ba886a89bae21b4fb3f1e514852c25e1c35e87c48d02cc5fc0cd",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "CODEX_START_HERE.md",
++      "v2_sha256": "b8fc5d1a58240532a0cd9efa90125969db9656932e7c707ee980971074810be4",
++      "v3_sha256": "88fc170f8cdbf043bc3993047f0adda4fa89f5d5de43e7c68824b43998c26794",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "geometry/GEOMETRY_MOMENTS_SYNTHESIS.md",
++      "v2_sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31",
++      "v3_sha256": "51bf704ebe5a572ce4eff81a478690644e759fb836df7a3637e9ca195d7a0871",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md",
++      "v2_sha256": "8baf4b25eaa5ebd5ab7eaae7a8ed430f190a9fe62093907d989845fff8434561",
++      "v3_sha256": "b8cccce5b337cd3804829400ab18e98a3e5c1c6ec1202541b22361b602ba9c95",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "foundations/FOUNDATIONAL_SYNTHESIS.md",
++      "v2_sha256": "0f8d9e619bc6b8edd23cf0fd872e8e77aece671e69dd83420e7b7784b6a6386c",
++      "v3_sha256": "65c1a31b4739eca133b91db9c78f5f96d7f0abbb917ab530cb5f70df74766d47",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    },
++    {
++      "path": "tools/build_consolidated_register.py",
++      "v2_sha256": "c0f46826d8ee78e1fd4d92dc1da52f681424138bc25fb2c81535bf600d9f7e6b",
++      "v3_sha256": "a0fed2d8ce09f8b0a12cb27ba8a206fdfbac7daa9c2081c16ab30569ad49211d",
++      "scope": "Current authored reader/navigation amendment, not alteration of an original scientific source."
++    }
+--- v2/README_FIRST.md
++++ v3/README_FIRST.md
+@@ -1,0 +2,6 @@
++
++**INTERMEDIATE_REASSESSMENT_CHECKPOINT · T20 ACTIVE · owner acceptance pending.** Broader cross-front investigation continues under the owner’s standing mandate. This frozen candidate is a bounded working checkpoint, not final scientific closure or completion of that broader request. The prepared Codex handoff does not authorize application or a PR.
++
++## Current edition
++
++This is the complete v3 candidate. Read [EDITION_V3](EDITION_V3.md), [owner assessment](reassessment/OWNER_ASSESSMENT.md), and [combined research synthesis](reassessment/COMBINED_RESEARCH_SYNTHESIS.md) first. Original cutoff 2026-10-11T11:32:55Z is retained; new science is separately dated 11 October 2026 consolidation-depth reassessment. T20 remains active under the standing mandate while owner review is pending; T21 has not begun. Earlier open-boundary and custody statements below describe the inherited edition and are qualified by this current update.
+@@ -18 +24 @@
+-Research cutoff: **2026-10-11T11:32:55Z**. Later received historical inputs restore earlier custody without advancing that scientific cutoff. Consolidation reading, qualification, repairs and packaging have their own evidence.
++Research cutoff: **2026-10-11T11:32:55Z**. Later received historical inputs restore earlier custody without advancing that scientific cutoff. The v3 mathematical deductions are separately dated post-cutoff consolidation-depth reassessment; they are not silently assigned to the old cutoff.
+@@ -36 +42 @@
+-- The earlier 26-test synthesis, original 52-test authorial contribution, corrected 55-test implementation and unavailable reported R3/88 successor are kept separate.
++- The historical 26-test synthesis, new reconstructed 30-test successor candidate, original 52-test authorial contribution, corrected 55-test implementation and unavailable reported R3/88 successor are kept separate.
+--- v2/REPLAY_SCOPE.json
++++ v3/REPLAY_SCOPE.json
+@@ -96,0 +97,131 @@
++    },
++    "finite-contracts-reconstructed": {
++      "directory": "finite-contracts-reconstructed",
++      "commands": [
++        [
++          "-B",
++          "-m",
++          "unittest",
++          "discover",
++          "-s",
++          ".",
++          "-p",
++          "test_*.py",
++          "-v"
++        ],
++        [
++          "-O",
++          "-B",
++          "-m",
++          "unittest",
++          "discover",
++          "-s",
++          ".",
++          "-p",
++          "test_*.py",
++          "-v"
++        ],
++        [
++          "-B",
++          "exhaustive_oracle.py"
++        ],
++        [
++          "-O",
++          "-B",
++          "exhaustive_oracle.py"
++        ]
++      ],
++      "dependencies": [],
++      "scope": "30 tests: 26 inherited plus four reconstructed input-boundary regressions, normal/optimized; unchanged finite exhaustive oracle both modes. Separate successor candidate, not R3, not the 52-to-55 line or general Iterable support."
++    },
++    "audit-refinement": {
++      "directory": "audit-refinement",
++      "commands": [
++        [
++          "-B",
++          "run_portable.py"
++        ],
++        [
++          "-O",
++          "-B",
++          "run_portable.py"
++        ]
++      ],
++      "dependencies": [
++        "sympy"
++      ],
++      "scope": "Exact mathematical author checker, 14 groups/3054 counted controls and public fixture checks, normal/optimized. Derived public-fixture binding replaces private assembly-location verification; universal theorem rests on written proof."
++    },
++    "restricted-controls": {
++      "directory": "restricted-controls",
++      "commands": [
++        [
++          "-B",
++          "verify.py"
++        ],
++        [
++          "-O",
++          "-B",
++          "verify.py"
++        ]
++      ],
++      "dependencies": [
++        "sympy"
++      ],
++      "scope": "31 exact restricted-control fixtures, normal/optimized. Ordinary universal proof and domain guards separate."
++    },
++    "depth-independent": {
++      "directory": "depth-independent",
++      "commands": [
++        [
++          "-B",
++          "check_independent.py"
++        ],
++        [
++          "-O",
++          "-B",
++          "check_independent.py"
++        ]
++      ],
++      "dependencies": [
++        "sympy"
++      ],
++      "scope": "62 independent exact checks, normal/optimized; not a formal kernel proof. Reviewer contributed tagged-instrument corollary proof; review is not independent corroboration of that contribution."
++    },
++    "foundational-scope": {
++      "directory": "foundational-scope",
++      "commands": [
++        [
++          "-B",
++          "synthesis-warrant-scope-20261011/support_scope_check.py"
++        ],
++        [
++          "-O",
++          "-B",
++          "synthesis-warrant-scope-20261011/support_scope_check.py"
++        ]
++      ],
++      "dependencies": [],
++      "scope": "33 inherited source/dependency checks with exact owner inputs, normal/optimized; not new theorem, human-warrant classification or Lean build."
++    },
++    "pro-exact-controls": {
++      "directory": "pro-exact-controls",
++      "commands": [
++        [
++          "-B",
++          "independent_exact_controls.py"
++        ]
++      ],
++      "dependencies": [],
++      "scope": "New supplied exact-rational finite validation, normal Python only because bare assertions would be removed by optimization; independent formulas do not replay actual later integrator."
++    },
++    "contract-downstream": {
++      "directory": "contract-downstream",
++      "commands": [
++        [
++          "-B",
++          "run_probe.py"
++        ]
++      ],
++      "dependencies": [],
++      "scope": "New explicit old/repaired Python dependency comparison; 162 checks/125 rows in both modes with byte-identical caller outputs, original single dependency pin rejects new bytes. No historical rebind, whole 3097-pin verifier, Lean build or all Python-observable equivalence."
+@@ -110 +241,3 @@
+-  }
++  },
++  "reassessment_utc_date": "2026-10-11",
++  "historical_replay_evidence": "SELECTED_REPLAY_VERIFICATION.json retains its exact v2 scope; REASSESSMENT_REPLAY_VERIFICATION.json records fresh selected delta controls."
+--- v2/SOURCE_INDEX.md
++++ v3/SOURCE_INDEX.md
+@@ -1111,0 +1112,47 @@
++
++## Separately dated consolidation-depth reassessment
++
++Selected inherited source bodies remain in place. See [portable source owners](reassessment/SOURCE_OWNERS.json) for new report-specific inspection scopes.
++
++- inherited-exhaustive-oracle: [423cee235621](replay/finite-contracts/exhaustive_oracle.py)
++- Pro-reconstructed-80-test_contracts.py: [3b4d98436727](replay/finite-contracts/test_contracts.py)
++- FND-033-scoped-replay: [6c1e414a8a0d](source-suites/synthesis-warrant-scope-20261011/support_scope_check.py)
++- FND-033-scoped-replay: [735eaf9802be](sources/735eaf9802be4e21/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md)
++- FND-033-scoped-replay: [ef593783c6ea](https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP23/affirmative-intrinsic-necessity-20261009/REPORT.md)
++- historical-v2-reader-snapshot: [5e1fbc561c7b](reassessment/inherited-reader-v2/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md)
++- historical-v2-reader-snapshot: [0f8d9e619bc6](reassessment/inherited-reader-v2/foundations/FOUNDATIONAL_SYNTHESIS.md)
++- historical-v2-reader-snapshot: [8baf4b25eaa5](reassessment/inherited-reader-v2/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md)
++- depth-OWNER_ASSESSMENT.md: [367edbbb8d07](reassessment/OWNER_ASSESSMENT.md)
++- depth-COMBINED_RESEARCH_SYNTHESIS.md: [bf96d40a401a](reassessment/COMBINED_RESEARCH_SYNTHESIS.md)
++- audit_symmetries-RESULT.md, audit-refinement-report: [123edeea7271](reassessment/audit_symmetries/RESULT.md)
++- audit_symmetries-CLAIMS.json: [5f7d67bda97b](reassessment/audit_symmetries/CLAIMS.json)
++- audit_symmetries-EXACT_CHECKS.json: [2f855a2a92de](reassessment/audit_symmetries/EXACT_CHECKS.json)
++- audit_symmetries-EXACT_CHECKS_OPTIMIZED.json: [eb250534787e](reassessment/audit_symmetries/EXACT_CHECKS_OPTIMIZED.json)
++- restricted_controls-RESULT.md, restricted_controls-proof: [cd25322628a1](reassessment/restricted_controls/RESULT.md)
++- restricted_controls-AUTHOR_VERIFICATION.json: [a8a64e8cbdb0](reassessment/restricted_controls/AUTHOR_VERIFICATION.json)
++- restricted_controls-verification_normal.json, restricted_controls-verification_optimised.json: [434e58bc0f42](reassessment/restricted_controls/verification_normal.json)
++- foundational_interface-RESULT.md: [85fe7ad6ae92](reassessment/foundational_interface/RESULT.md)
++- foundational_interface-TIBYAN_CORRECTION.diff: [c80729e84ac0](reassessment/foundational_interface/TIBYAN_CORRECTION.diff)
++- foundational_interface-SCOPE_REPLAY_NORMAL.json, foundational_interface-SCOPE_REPLAY_OPTIMIZED.json: [904b74902002](reassessment/foundational_interface/SCOPE_REPLAY_NORMAL.json)
++- independent_review-REVIEW.md, independent_review-proof: [92ff7a170582](reassessment/independent_review/REVIEW.md)
++- independent_review-RESTRICTED_PRECISION_CORRECTION.diff: [57878fd65d63](reassessment/independent_review/RESTRICTED_PRECISION_CORRECTION.diff)
++- independent_review-restricted_precorrection_f593393.md: [f5933930217c](reassessment/independent_review/restricted_precorrection_f593393.md)
++- independent_review-CONTROL_NORMAL.json, independent_review-CONTROL_OPTIMIZED.json: [0ef29728c45b](reassessment/independent_review/CONTROL_NORMAL.json)
++- audit_symmetries-source-bindings: [dfc082cd0806](reassessment/audit_symmetries/SOURCE_BINDINGS.json)
++- foundational_interface-source-bindings: [fe1ad686f70e](reassessment/foundational_interface/SOURCE_BINDINGS.json)
++- independent_review-source-bindings: [d08460d94935](reassessment/independent_review/SOURCE_BINDINGS.json)
++- audit-refinement-author-code: [779a4d9ab9b5](replay/audit-refinement/check_exact.py)
++- restricted_controls-checker: [d9430c263840](replay/restricted-controls/verify.py)
++- independent_review-checker: [ee6af6664b91](replay/depth-independent/check_independent.py)
++- FND-033-scoped-replay: [086fb3bb7d7c](replay/foundational-scope/intrinsic-necessity-bridge-20261009/sources/OriginalBearerBridge.lean)
++- Pro-reconstructed-80-contracts.py: [852609c32763](replay/finite-contracts-reconstructed/contracts.py)
++- Pro-reconstructed-80-test_one_shot_recovery.py: [0c5a351600c5](replay/finite-contracts-reconstructed/test_one_shot_recovery.py)
++- Pro-reconstructed-four-input-boundary-repairs: [b2abc8aa5613](reassessment/contract_repair/EXACT_DIFF.patch)
++- Pro-new-finite-exact-controls: [31cce82c4cb5](replay/pro-exact-controls/independent_exact_controls.py)
++- Pro-intake-DISCREPANCY_REPORT.md: [a086d6601e3c](reassessment/intake/DISCREPANCY_REPORT.md)
++- Pro-intake-INTEGRATION_SCOPE_NOTE.md: [96fa948c0a7d](reassessment/intake/INTEGRATION_SCOPE_NOTE.md)
++
++## Reconstructed-code independent qualification
++
++- [Code review](reassessment/contract_repair/REVIEW.md) and [bounded input/ordering status](reassessment/intake/CONTRACT_REPAIR_STATUS.json)
++- [Source identities](reassessment/contract_repair/SOURCE_BINDINGS.json); exact downstream copies are separate from the retained historical family.
+--- v2/T21_CHARTER.md
++++ v3/T21_CHARTER.md
+@@ -57 +57 @@
+-The owner decides acceptance of this proposed baseline and the transition to T21. Codex integration is a separately authorised PR workflow. No merge, protected-state mutation, external specialist contact or DAEE patch is authorised by this charter. Routine research continues under the owner's applicable research mandate once the accepted continuation begins.
++The owner decides acceptance of this proposed baseline and the transition to T21. Codex integration is a separately authorised PR workflow. No merge, protected-state mutation, external specialist contact or DAEE patch is authorised by this charter. T20 remains active under the owner's standing research mandate while the owner reviews this proposed baseline. T21 is proposed and has not started. Unresolved current frontiers are not automatically assigned out of T20; baseline acceptance and a named next tranche are separate decisions.
+--- v2/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md
++++ v3/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md
+@@ -1,0 +2,4 @@
++
++## Current v3 qualification
++
++DR-03 is a direct tagged-instrument application of ET-23, not a new general cone theorem. DR-09 carries the separate reconstructed finite-contract code successor; the historical old26 and authorial 52→55 lines remain distinct. See [separately dated reassessment](../EDITION_V3.md).
+--- v2/foundations/FOUNDATIONAL_SYNTHESIS.md
++++ v3/foundations/FOUNDATIONAL_SYNTHESIS.md
+@@ -1,0 +2,4 @@
++
++## Current v3 qualification
++
++DR-08 establishes that the requested foundational correction interface was already substantially present in FND-033. Its 33 source-bound controls are freshly replayable; no new psychological warrant model or metaphysical proof is claimed. See [separately dated reassessment](../EDITION_V3.md).
+--- v2/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md
++++ v3/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md
+@@ -1,0 +2,4 @@
++
++## Current v3 qualification
++
++The inherited statement that overlapping partition families remain unclassified is now resolved within the precise retained metric/product-domain contract by DR-01. Restricted groups/metrics outside it remain open. DR-05–07 compute a restricted-control quotient and its composed-control boundary. See [separately dated reassessment](../EDITION_V3.md).
+--- v2/replay_selected.py
++++ v3/replay_selected.py
+@@ -33,0 +34,74 @@
++# Separately dated consolidation-depth reassessment targets.
++SUITES.update({'finite-contracts-reconstructed': {'directory': 'finite-contracts-reconstructed',
++                                    'commands': [['-B',
++                                                  '-m',
++                                                  'unittest',
++                                                  'discover',
++                                                  '-s',
++                                                  '.',
++                                                  '-p',
++                                                  'test_*.py',
++                                                  '-v'],
++                                                 ['-O',
++                                                  '-B',
++                                                  '-m',
++                                                  'unittest',
++                                                  'discover',
++                                                  '-s',
++                                                  '.',
++                                                  '-p',
++                                                  'test_*.py',
++                                                  '-v'],
++                                                 ['-B', 'exhaustive_oracle.py'],
++                                                 ['-O', '-B', 'exhaustive_oracle.py']],
++                                    'dependencies': [],
++                                    'scope': '30 tests: 26 inherited plus four reconstructed '
++                                             'input-boundary regressions, normal/optimized; '
++                                             'unchanged finite exhaustive oracle both modes. '
++                                             'Separate successor candidate, not R3, not the '
++                                             '52-to-55 line or general Iterable support.'},
++ 'audit-refinement': {'directory': 'audit-refinement',
++                      'commands': [['-B', 'run_portable.py'], ['-O', '-B', 'run_portable.py']],
++                      'dependencies': ['sympy'],
++                      'scope': 'Exact mathematical author checker, 14 groups/3054 counted controls '
++                               'and public fixture checks, normal/optimized. Derived '
++                               'public-fixture binding replaces private assembly-location '
++                               'verification; universal theorem rests on written proof.'},
++ 'restricted-controls': {'directory': 'restricted-controls',
++                         'commands': [['-B', 'verify.py'], ['-O', '-B', 'verify.py']],
++                         'dependencies': ['sympy'],
++                         'scope': '31 exact restricted-control fixtures, normal/optimized. '
++                                  'Ordinary universal proof and domain guards separate.'},
++ 'depth-independent': {'directory': 'depth-independent',
++                       'commands': [['-B', 'check_independent.py'],
++                                    ['-O', '-B', 'check_independent.py']],
++                       'dependencies': ['sympy'],
++                       'scope': '62 independent exact checks, normal/optimized; not a formal '
++                                'kernel proof. Reviewer contributed tagged-instrument corollary '
++                                'proof; review is not independent corroboration of that '
++                                'contribution.'},
++ 'foundational-scope': {'directory': 'foundational-scope',
++                        'commands': [['-B',
++                                      'synthesis-warrant-scope-20261011/support_scope_check.py'],
++                                     ['-O',
++                                      '-B',
++                                      'synthesis-warrant-scope-20261011/support_scope_check.py']],
++                        'dependencies': [],
++                        'scope': '33 inherited source/dependency checks with exact owner inputs, '
++                                 'normal/optimized; not new theorem, human-warrant classification '
++                                 'or Lean build.'},
++ 'pro-exact-controls': {'directory': 'pro-exact-controls',
++                        'commands': [['-B', 'independent_exact_controls.py']],
++                        'dependencies': [],
++                        'scope': 'New supplied exact-rational finite validation, normal Python '
++                                 'only because bare assertions would be removed by optimization; '
++                                 'independent formulas do not replay actual later integrator.'},
++ 'contract-downstream': {'directory': 'contract-downstream',
++                         'commands': [['-B', 'run_probe.py']],
++                         'dependencies': [],
++                         'scope': 'New explicit old/repaired Python dependency comparison; 162 '
++                                  'checks/125 rows in both modes with byte-identical caller '
++                                  'outputs, original single dependency pin rejects new bytes. No '
++                                  'historical rebind, whole 3097-pin verifier, Lean build or all '
++                                  'Python-observable equivalence.'}})
++
+--- v2/tools/build_consolidated_register.py
++++ v3/tools/build_consolidated_register.py
+@@ -11,0 +12 @@
++    'consolidation_depth_reassessment': 'reassessment/CLAIMS.json',
+@@ -50 +51,2 @@
+-        'meaning': 'Navigation over reconciled inherited research, not a new universal theorem catalogue or an adopted repository registry.',
++        'meaning': 'Navigation over inherited research and separately dated consolidation-depth reassessment; contribution class remains in each source-owned record.',
++        'post_cutoff_addendum': {'date_utc': '2026-10-11', 'phase': 'consolidation-depth reassessment', 'T21_started': False},

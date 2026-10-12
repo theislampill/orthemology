@@ -1,0 +1,147 @@
+{
+  "executed_utc": "2026-10-11T19:21:06.406148+00:00",
+  "method": "Fresh exact-byte copied retained validators in isolated temporary directories. No original source altered. Cross-record public collect_issues API executed on four independently authored schema-valid bundles. Exact validate_schemas CLI executed on one counterbundle; its expected nine-bundle population failure remains explicit.",
+  "source_bindings": [
+    {
+      "name": "docs/claim-reason-requirements.yaml",
+      "sha256": "aa95d6e44f81041e7755f3ac22d9b3100529d452151f8e54a97495ac435a6a29",
+      "original_path": "private-locator:11754852b215f5d0ce0f"
+    },
+    {
+      "name": "docs/governance-requirements.yaml",
+      "sha256": "359f77e61848ac6e3654421b6e1480032e625508d6389d31ebe6b796f5b7c4e0",
+      "original_path": "private-locator:83c6ef2228e3af215554"
+    },
+    {
+      "name": "docs/verdict-registry.yaml",
+      "sha256": "e24f3aab23d94daf48a953f52bce915aa58e515571877d9db559a3f0d1e38bbe",
+      "original_path": "private-locator:f4a8b6422bafd363d2e1"
+    },
+    {
+      "name": "schemas/analysis.schema.json",
+      "sha256": "3769787c063b9ec9ecfc6994b0ef58b674f721d0f2fb9abcecb41b89c5679ed2",
+      "original_path": "private-locator:5a1b9443bd5e462ca6b5"
+    },
+    {
+      "name": "schemas/claim-ledger.schema.json",
+      "sha256": "42462d52dc7ca5859924f344db922dd2a8b7b7fa351db5db7b5c137113299d06",
+      "original_path": "private-locator:5d0273a4b91ad6535d3f"
+    },
+    {
+      "name": "schemas/handoff.schema.json",
+      "sha256": "1627b53270fc4ac1520584b8eb56a9e77022ea256ef33f6d13f552a4f31f81c7",
+      "original_path": "private-locator:03fb4307243c4a70fba1"
+    },
+    {
+      "name": "schemas/metaortheme.schema.json",
+      "sha256": "c0e613b8f6ab8121609fdb5d12fd8b4ff9c3a7be6bdc381d73b99833204701ad",
+      "original_path": "private-locator:10a3a060be5fc7f8308f"
+    },
+    {
+      "name": "schemas/metaorthemma.schema.json",
+      "sha256": "608abc5d01bb9a9126e6b4ffabf39350814fe6729bc5bcacfcdb7b594e9a79bb",
+      "original_path": "private-locator:d2d23be5ecc7dcc2dd5c"
+    },
+    {
+      "name": "schemas/orthing-episode.schema.json",
+      "sha256": "fe20b4a6c31afafcde98535caba6a099c89380dd3fa63d755afbdffe9e6650e1",
+      "original_path": "private-locator:a6b30995e6f9cf73a9ab"
+    },
+    {
+      "name": "schemas/verdict-record.schema.json",
+      "sha256": "f3fa5bc5a15874929fadc44fb0b158726cfaece42527d481ef7620c09a847d58",
+      "original_path": "private-locator:5914f9ab2cfceeda7813"
+    },
+    {
+      "name": "scripts/derive_reqpath.py",
+      "sha256": "9b08c33f516f3f3d98a7923a4a9d9df96938dfec6ce825576abcf69388f85dc3",
+      "original_path": "private-locator:4300971a956af6d71f93"
+    },
+    {
+      "name": "scripts/validate_claim_reasoning_paths.py",
+      "sha256": "377c1ea44f022ede3d38a8ca33a60317d44e62107251d12363a8b9a857508848",
+      "original_path": "private-locator:e26f2ca869a6fb99577d"
+    },
+    {
+      "name": "scripts/validate_cross_record_semantics.py",
+      "sha256": "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+      "original_path": "private-locator:c9f54abf95c28bba659b"
+    },
+    {
+      "name": "scripts/validate_negative_fixtures.py",
+      "sha256": "6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b",
+      "original_path": "private-locator:2d945bb1473631678897"
+    },
+    {
+      "name": "scripts/validate_verdict_semantics.py",
+      "sha256": "9408412d40710136b366fe907a0b665b9d9e36983245e45da261a9d2affbf64b",
+      "original_path": "private-locator:d57015f3135dcae419dd"
+    },
+    {
+      "name": "scripts/validate_schemas.py",
+      "sha256": "43d4caa093df07751ffa8ca0a0fb20fd4a3e72b3d301465ace34b59e2775c035",
+      "original_path": "private-locator:7df383adcfd622761f91"
+    },
+    {
+      "name": "schemas/orthemma.schema.json",
+      "sha256": "53d09c9ee365f5cc890b1cacec000bf4f382a14143ef838435d01fc85f6a12a2",
+      "original_path": "private-locator:bbc8dead4f6944a4bd5e"
+    },
+    {
+      "name": "schemas/reliability-spec.schema.json",
+      "sha256": "3b2b4f4534ab90c0ec8d596daeaa95f66349963098a2d5af7471499c221e34fc",
+      "original_path": "private-locator:7af298f559c6bf1af1c0"
+    },
+    {
+      "name": "schemas/perturbation-spec.schema.json",
+      "sha256": "977db2ef3eab7207a68007a8f56bc96b65e692c93dd9db826218fb66e6d82966",
+      "original_path": "private-locator:c2d53d58fa697184e2e6"
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "referencing": "0.37.0"
+  },
+  "cross_record": {
+    "returncode": 0,
+    "results": {
+      "results": {
+        "claim_omission_with_full_episode_path": [
+          "e: claim q req_reason does not match the governance derivation from the claim's declared shape (omitted ['EVIDENCE_CURRENT', 'EXECUTION_FAITHFUL', 'EX_ANTE_JUSTIFIED', 'GOV_CONFIG_ADEQUATE', 'GOV_POLICY_ADEQUATE', 'PROCEDURE_RELIABLE'], padded []) \u2014 ReqReason_q is derived, never chosen after the outcome"
+        ],
+        "full_governed_path_correctly_defective": [],
+        "full_governed_path_false_adequacy": [
+          "e: pathway_state 'adequate' does not recompute (computed 'defective')",
+          "e: claim q reasoning_path_adequate 'adequate' does not recompute over its own req_reason (computed 'defective')"
+        ],
+        "reduced_episode_path": []
+      },
+      "rules_loaded": true
+    },
+    "stdout_sha256": "0c262854bcaa65a649fc58ac21e583be264ea7d454bdb8f88be3ea486f3e7d0b",
+    "stderr": ""
+  },
+  "schema_validator": {
+    "returncode": 1,
+    "stdout": "[PASS] all 8 core schemas present\n[PASS] the complete schema inventory declared by current state compiles (10 schemas)\n[PASS] schema compiles: analysis.schema.json\n[PASS] schema compiles: claim-ledger.schema.json\n[PASS] schema compiles: handoff.schema.json\n[PASS] schema compiles: metaortheme.schema.json\n[PASS] schema compiles: metaorthemma.schema.json\n[PASS] schema compiles: orthemma.schema.json\n[PASS] schema compiles: orthing-episode.schema.json\n[PASS] schema compiles: perturbation-spec.schema.json\n[PASS] schema compiles: reliability-spec.schema.json\n[PASS] schema compiles: verdict-record.schema.json\n[PASS] verdict-record enum equals registry semantic IDs\n[PASS] example counterbundle.json part 0 validates against orthing-episode.schema.json\n[PASS] example counterbundle.json part 1 validates against claim-ledger.schema.json\n[PASS] example counterbundle.json part 2 validates against verdict-record.schema.json\n[PASS] example counterbundle.json: every not-applicable verdict has a reason\n[PASS] example counterbundle.json: required_path inside registry core\n[PASS] example counterbundle.json: TOKEN_TRUTH_LINKED implies RESULT_CORRECT claim-wise\n[PASS] example counterbundle.json: pathway_state matches recomputation\n[FAIL] expected schema-example bundles present (9) \u2014 ['counterbundle.json']\nTOTAL: 1 failures\n",
+    "stderr": "",
+    "all_record_level_checks_pass": true,
+    "sole_expected_harness_failure": "[FAIL] expected schema-example bundles present (9) \u2014 ['counterbundle.json']",
+    "inventory_input": "Synthetic replay-local derived.schemas enumerates the ten exact held schemas; no original release-state identity is claimed.",
+    "synthetic_inventory_sha256": "1284a50ae4ba85efed9648b5c73a9c91f263ce15dc690c80d7c9a274dc2c6659"
+  },
+  "missing_rule_fault_injection": {
+    "returncode": 0,
+    "rules_loaded": false,
+    "normal_claim_omission_issue_count": 1,
+    "missing_rule_claim_omission_issue_count": 0,
+    "scope": "Actual import-time missing-file exception swallowed by exact code; current original held configuration was not changed."
+  },
+  "fresh_supplied_python_sources_executed": [
+    "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+    "43d4caa093df07751ffa8ca0a0fb20fd4a3e72b3d301465ace34b59e2775c035"
+  ],
+  "scope_limit": "Not the historical examples/CI suite, not actual-world premise warrant, not a code repair. The schema CLI as a whole returns 1 solely because this replay intentionally supplies one bundle instead of nine. Counterexample validation behavior is reported separately from that harness denominator."
+}

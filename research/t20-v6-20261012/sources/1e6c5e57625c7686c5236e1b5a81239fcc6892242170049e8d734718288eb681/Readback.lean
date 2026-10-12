@@ -1,0 +1,54 @@
+import ExistenceAwareHistory
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.ExistenceAwareHistory.HalfHistory
+#print Orthemology.Tranche3.ExistenceAwareHistory.HalfHistory
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.HalfHistory
+#check Orthemology.Tranche3.ExistenceAwareHistory.backwards_deviation
+#print Orthemology.Tranche3.ExistenceAwareHistory.backwards_deviation
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.backwards_deviation
+#check Orthemology.Tranche3.ExistenceAwareHistory.bounded_history_constant
+#print Orthemology.Tranche3.ExistenceAwareHistory.bounded_history_constant
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.bounded_history_constant
+#check Orthemology.Tranche3.ExistenceAwareHistory.unbounded_family
+#print Orthemology.Tranche3.ExistenceAwareHistory.unbounded_family
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.unbounded_family
+#check Orthemology.Tranche3.ExistenceAwareHistory.nonconstant_unbounded_control
+#print Orthemology.Tranche3.ExistenceAwareHistory.nonconstant_unbounded_control
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.nonconstant_unbounded_control
+#check Orthemology.Tranche3.ExistenceAwareHistory.liftHalf
+#print Orthemology.Tranche3.ExistenceAwareHistory.liftHalf
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.liftHalf
+#check Orthemology.Tranche3.ExistenceAwareHistory.LiftedHistory
+#print Orthemology.Tranche3.ExistenceAwareHistory.LiftedHistory
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.LiftedHistory
+#check Orthemology.Tranche3.ExistenceAwareHistory.ConditionallyBounded
+#print Orthemology.Tranche3.ExistenceAwareHistory.ConditionallyBounded
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.ConditionallyBounded
+#check Orthemology.Tranche3.ExistenceAwareHistory.absent_history
+#print Orthemology.Tranche3.ExistenceAwareHistory.absent_history
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.absent_history
+#check Orthemology.Tranche3.ExistenceAwareHistory.present_history
+#print Orthemology.Tranche3.ExistenceAwareHistory.present_history
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.present_history
+#check Orthemology.Tranche3.ExistenceAwareHistory.absence_iff_next
+#print Orthemology.Tranche3.ExistenceAwareHistory.absence_iff_next
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.absence_iff_next
+#check Orthemology.Tranche3.ExistenceAwareHistory.same_absence_profile
+#print Orthemology.Tranche3.ExistenceAwareHistory.same_absence_profile
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.same_absence_profile
+#check Orthemology.Tranche3.ExistenceAwareHistory.bounded_lifted_classification
+#print Orthemology.Tranche3.ExistenceAwareHistory.bounded_lifted_classification
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.bounded_lifted_classification
+#check Orthemology.Tranche3.ExistenceAwareHistory.two_existence_profiles
+#print Orthemology.Tranche3.ExistenceAwareHistory.two_existence_profiles
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.two_existence_profiles
+#check Orthemology.Tranche3.ExistenceAwareHistory.absence_preserving_not_unique_active
+#print Orthemology.Tranche3.ExistenceAwareHistory.absence_preserving_not_unique_active
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.absence_preserving_not_unique_active
+#check Orthemology.Tranche3.ExistenceAwareHistory.no_global_contraction_with_preserved_absence
+#print Orthemology.Tranche3.ExistenceAwareHistory.no_global_contraction_with_preserved_absence
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.no_global_contraction_with_preserved_absence
+#check Orthemology.Tranche3.ExistenceAwareHistory.active_profile_satisfies_existence
+#print Orthemology.Tranche3.ExistenceAwareHistory.active_profile_satisfies_existence
+#print axioms Orthemology.Tranche3.ExistenceAwareHistory.active_profile_satisfies_existence

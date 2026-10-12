@@ -1,0 +1,22 @@
+import ModelControls
+#print axioms SharedAlias.label_budget
+#print axioms SharedAlias.label_budget_lt
+#print axioms SharedAlias.good_iff
+#print axioms SharedAlias.good_same_root
+#print axioms SharedAlias.exact_one_class
+#print axioms SharedAlias.acknowledge_receipts
+#print axioms SharedAlias.cancelAck_receipts
+#print axioms SharedAlias.shared_prepare
+#print axioms SharedAlias.shared_cancel
+#print axioms SharedAlias.selected_memory_initial
+#print axioms SharedAlias.selected_memory_step
+#print axioms SharedAlias.selected_memory_trace
+#print axioms SharedAlias.selected_memory_reachable
+#print axioms SharedAlias.no_reachable_literal_prepare
+#print axioms SharedAlias.no_reachable_literal_cancel
+#print axioms SharedAlias.ModelControls.prepare_is_lawful
+#print axioms SharedAlias.ModelControls.cancel_is_lawful
+#print axioms SharedAlias.ModelControls.unselected_alias_obstruction
+#print axioms SharedAlias.ModelControls.closure_adds_only_real_reply
+#print axioms SharedAlias.ModelControls.cancellation_adds_only_real_reply
+#print axioms SharedAlias.ModelControls.actual_one_can_taint_two

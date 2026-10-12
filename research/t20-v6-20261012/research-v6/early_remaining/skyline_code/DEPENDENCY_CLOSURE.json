@@ -1,0 +1,500 @@
+{
+  "source_imports": [
+    {
+      "sha256": "068e216b5be5235ae7ca0d738c213d44dc2a85e7b25ac3727485e5458448aaf2",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "0b96c2cdb35baa178e90009d741c0a14f98cb7773e032097a86dfca61d6e3aef",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "10b6cf8278c254e67a1e8f61c96f6d8a1df5db4b22f16023d4933fec46d520c4",
+      "modules": [
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "22c201a18e5400176823d332061b82cc3d426973d02258a473724ece4e156913",
+      "modules": [
+        "argparse",
+        "json",
+        "pathlib",
+        "safe_extract",
+        "stat",
+        "sys",
+        "tempfile",
+        "warnings",
+        "zipfile"
+      ],
+      "custom_import_resolution": [
+        "86e3ed018c1d74e06661fd0f19a693339c86b735c054ac8206e8cb4b172b72f1"
+      ],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "2738a6fffd9ac95428e6d5f6bc213610563092da3169b19cfd97ab385d439dec",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "342c6570a06f4a061e8264be799dc92cada9dfd266a733d679e7c116293b8e5b",
+      "modules": [
+        "argparse",
+        "datetime",
+        "hashlib",
+        "importlib.metadata",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "zipfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "3f65d6f86cda2dccb9c64705a12b238d95ae04205e2508e6266ed47c8edc4fbb",
+      "modules": [
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "43b2eb32343777d5094c2564f4641d99fcd6354bfab3a130b9dd8d92e3c6ca8c",
+      "modules": [
+        "fractions",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib",
+        "sympy"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "53f66838e8d189fcbf115ede813f13a654bb7ed7351248bcb0d39e2069cee779",
+      "modules": [
+        "fractions",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib",
+        "sympy",
+        "sympy.functions.combinatorial.numbers",
+        "time"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "5a5ffd7d3b885636aec55e99260486724a8d2e1e8848bfcd8afecd0e7d2f8cee",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "66313d5de18868680418d8160e3a593a3a547938f0cdf96c117d015bbf0886c4",
+      "modules": [
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "mpmath"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "7342a0c9a8293856c18750104c43875c872ee699601f52662a78a57eb0595f5c",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "79fd7a81590ad084905509b338202a7c84f7707b276b3ece7955a6263372d119",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "7b804921c63e4dc88c7d0a59469b1b6a81473cad89386cc629b51799364e947c",
+      "modules": [
+        "argparse",
+        "json",
+        "pathlib",
+        "safe_extract",
+        "stat",
+        "sys",
+        "tempfile",
+        "warnings",
+        "zipfile"
+      ],
+      "custom_import_resolution": [
+        "efdf833b72bd9e34325edef7d25ac7dbc6c0042503a5fcbb5b77a789ad192e71"
+      ],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "813c7b90c7a55f081ce0cfabf187468f5ec3ca179cb94e815a1fcf21a50fe943",
+      "modules": [
+        "argparse",
+        "datetime",
+        "hashlib",
+        "importlib.metadata",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "8497ff84b2eab148412e38ab0676eedac74cde511e91ec50a17e0dd1036d30e5",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "86e3ed018c1d74e06661fd0f19a693339c86b735c054ac8206e8cb4b172b72f1",
+      "modules": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "stat",
+        "zipfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "8b63d410e203244ebdc5180ed8ba37df1022aac29ece192cfea35fb47c84cd3a",
+      "modules": [
+        "itertools",
+        "json",
+        "math",
+        "mpmath"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "8d1c1c1f2128a57caf4163d0716219321b2e7d03d5065663236ddbf2c7ad7e5d",
+      "modules": [
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "9ff96d6e90d31d9edcaf77ba2eb407c1b34075ef225c45b508770e33c86122d5",
+      "modules": [
+        "argparse",
+        "fractions",
+        "hashlib",
+        "itertools",
+        "json",
+        "math",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "a03f3bfc24912ca8f9c10508f5f3078373dc9046c8dad4085024177ccfb646cb",
+      "modules": [
+        "argparse",
+        "json",
+        "pathlib",
+        "safe_extract",
+        "stat",
+        "sys",
+        "tempfile",
+        "warnings",
+        "zipfile"
+      ],
+      "custom_import_resolution": [
+        "86e3ed018c1d74e06661fd0f19a693339c86b735c054ac8206e8cb4b172b72f1"
+      ],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "a56ff98a0dfa7e8dbedda9b257ccfef48297eca553d2588092f86e659c4102d9",
+      "modules": [
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib",
+        "platform"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "ace0a67be5a0608edf36517cea202e1e2b871a51514edb5cc36a4e45728e6b4d",
+      "modules": [
+        "hashlib",
+        "json",
+        "math",
+        "mpmath",
+        "numpy",
+        "numpy.polynomial.legendre",
+        "pathlib",
+        "platform"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "af7b03edab7043cd5afa6abc95eff1f01bff2c59c6690722f13efc213a27749d",
+      "modules": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "zipfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "b1399fda7487fa985f66e5cfa6650d7a63c10b91f3d9da665c6285dcd1bd8cc5",
+      "modules": [
+        "json",
+        "mpmath"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "b55f7ace5994773f389bbef5d44090337dd34e2334895913f1e34129de13d57e",
+      "modules": [
+        "ast",
+        "fractions",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_import_resolution": [
+        "10b6cf8278c254e67a1e8f61c96f6d8a1df5db4b22f16023d4933fec46d520c4"
+      ],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "b7575495eb4005d7b407fe99a75549a9b2ad5735f62b766f82336fefda062829",
+      "modules": [
+        "fractions",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "sympy"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "c6aff7795edf2566e7e5eb1827e86cdcb57409c28a36f9a3ddaebfecb06b293e",
+      "modules": [
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "d0c171fb3816d5b71ad5f3a8e4f6042be015d095248f933d7aacebc80b53f36e",
+      "modules": [
+        "fractions",
+        "hashlib",
+        "json",
+        "mpmath",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "ddff83faa16705f0a70e7e896a6445a1482f4b98e0f9f4f41cd8f680d77b9ecc",
+      "modules": [
+        "argparse",
+        "datetime",
+        "hashlib",
+        "importlib.metadata",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "e8eb60342bf1fdf0f5c9ffaf156a7e0ece72f4495b193c02aff2fa1ff064321c",
+      "modules": [
+        "collections",
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "efdf833b72bd9e34325edef7d25ac7dbc6c0042503a5fcbb5b77a789ad192e71",
+      "modules": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib",
+        "stat",
+        "zipfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "f650e8decef7dc05bdbb7d04ecdc640f447a87cdc613ba9700c80bfc4b6d4e72",
+      "modules": [
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "f9ba7a6854d2c73e89160592a645b6d6d54558ada6baedb4196fa05fd483645c",
+      "modules": [
+        "fractions",
+        "hashlib",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "8b88ebefafedf4afdee817f73420870648b5b162ffb0ad8e6699b4a2aab9dced",
+      "modules": [
+        "collections",
+        "fractions",
+        "itertools",
+        "json",
+        "math",
+        "mpmath",
+        "pathlib",
+        "sympy"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    },
+    {
+      "sha256": "ea38c0af21875d60e59c379e07236fa45389ea0a00bfa30eb3b15d119a9a15db",
+      "modules": [
+        "fractions",
+        "hashlib",
+        "json",
+        "mpmath",
+        "pathlib"
+      ],
+      "custom_import_resolution": [],
+      "qualification": "AST loading counted for25 despite no Python import. Other imports are standard library, numpy, mpmath or sympy."
+    }
+  ],
+  "new_controlling_prose": 12,
+  "incidental_context_bodies": 2,
+  "prior_reports": 11,
+  "prior_lean_body": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+  "custom_source_imports_unresolved": [],
+  "bound_script_calls": [
+    {
+      "caller": "c6aff7795edf2566e7e5eb1827e86cdcb57409c28a36f9a3ddaebfecb06b293e",
+      "callee": "8d1c1c1f2128a57caf4163d0716219321b2e7d03d5065663236ddbf2c7ad7e5d"
+    },
+    {
+      "caller": "f650e8decef7dc05bdbb7d04ecdc640f447a87cdc613ba9700c80bfc4b6d4e72",
+      "callee": "0b96c2cdb35baa178e90009d741c0a14f98cb7773e032097a86dfca61d6e3aef"
+    }
+  ],
+  "mechanical_input_disposition": "191 staged objects are custody hydration only. Manifests/source bindings reviewed structurally and exact hashes verified; generated receipts are not additional research bodies. Replay wrappers consume their declared immutable control plans, not arbitrary researched imports.",
+  "philosophical_context_dependency_owner": "foundations notified; no whole-philosophy-closure credit",
+  "external_primary_sources": "No fresh external PDF/publication examination; current corollary checked by complete self-contained density-ratio and conditioning proof. Cited broader Poisson hull source theorems and normal-approximation ancestors remain only historical source interpretation."
+}

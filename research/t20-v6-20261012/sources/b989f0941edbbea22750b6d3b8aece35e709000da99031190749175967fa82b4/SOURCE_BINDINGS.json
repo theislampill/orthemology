@@ -1,0 +1,41 @@
+{
+  "captured_utc": "2026-10-08T21:55:15.102629+00:00",
+  "sources": [
+    {
+      "path": "private-locator:ab9a42fbaf38e89cf211",
+      "sha256": "e5dce85e41eaf41e69c373c26793478fa057de293502c22eb0a133f85221b345",
+      "bytes": 17673,
+      "role": "Exact skyline density and likelihood, full singular stratum, factorial mass, and coordinate-strip formula.",
+      "acceptance_scope": "Consumed as a written source. This packet does not promote or certify predecessor acceptance."
+    },
+    {
+      "path": "private-locator:7f6cbf5abec1c3060956",
+      "sha256": "ba6345d03e5fe9d2735f221ee45f5ee6b6f05508ce4d96f8ba9a86ceb3da5b5f",
+      "bytes": 9091,
+      "role": "Localized deterministic second-order expansion and explicit remainder.",
+      "acceptance_scope": "Consumed as a written source. This packet does not promote or certify predecessor acceptance."
+    },
+    {
+      "path": "private-locator:b096ce9726c1a09bc3dd",
+      "sha256": "b7bdcfa8b7288d69d569b6ed904c314fe58e4795c92549a6d525c433ad7c139f",
+      "bytes": 13251,
+      "role": "Exact fixed-count second compensated moment and baseline record moments.",
+      "acceptance_scope": "Consumed as a written source. This packet does not promote or certify predecessor acceptance."
+    },
+    {
+      "path": "private-locator:722ae2998bd531650f42",
+      "sha256": "4aa4bee754cf89284a327d4322f4d35a93314525da8aaa22e5d028754908e28a",
+      "bytes": 16686,
+      "role": "Both-law exceptional-window control, global logarithm bound, singular correction, and actual-action lower bound.",
+      "acceptance_scope": "Consumed as a written source. This packet does not promote or certify predecessor acceptance."
+    },
+    {
+      "path": "private-locator:74ecc49d3e7175559a68",
+      "sha256": "7251887ac088bfc13a93b94e400879e851ebd1ceb1a6337449f9def20cb0c2f7",
+      "bytes": 21418,
+      "role": "Poisson tilt and fourth-moment upper bound, bounded restricted density transfer, raw area bounds, and weighted compensation variance.",
+      "acceptance_scope": "Consumed as a written source. This packet does not promote or certify predecessor acceptance."
+    }
+  ],
+  "pending_source_note": "The full-skyline-log-squared sibling was described as review-pending at task assignment. No review acceptance is assumed here."
+}

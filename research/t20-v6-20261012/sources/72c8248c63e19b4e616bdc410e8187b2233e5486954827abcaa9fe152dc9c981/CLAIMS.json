@@ -1,0 +1,316 @@
+{
+  "schema": "t20-depth-reassessment-claims-v1",
+  "status": "Proposed current additive reader; owner acceptance pending",
+  "original_research_cutoff_utc": "2026-10-11T11:32:55Z",
+  "reassessment_date_utc": "2026-10-11",
+  "scope": "Separately dated T20 consolidation-depth work; T20 remains active under standing mandate; no T21 initiation or exhaustive connection certification.",
+  "claims": [
+    {
+      "id": "DR-01",
+      "title": "Several-partition gradient refinement",
+      "exact_statement": "Simultaneous all-positive audit covariance for several partitions is equivalent to common-refinement covariance and energy decomposition.",
+      "contribution_class": "New bounded deduction",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/audit_symmetries/RESULT.md",
+        "section": "Theorem A",
+        "sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8"
+      },
+      "dependencies": [
+        {
+          "claim": "GEO-17",
+          "relationship": "theorem_dependency",
+          "scope": "Exact inherited fixed-partition classification"
+        }
+      ],
+      "hypotheses_and_limits": "C2 energy, retained Fisher–transport metric, complete positive simplex and connected full position product; local maximal flows, no completeness or arbitrary restricted group claim.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-02",
+      "title": "Generated symmetry and gradient rigidity differ",
+      "exact_statement": "Row/column-equivariant C1 fields may retain odds-ratio dependence; explicit nongradient and invariant-energy countercontrols show why the gradient hypothesis matters.",
+      "contribution_class": "New bounded classification and countercontrols",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/audit_symmetries/RESULT.md",
+        "section": "Proposition B and B1–B3",
+        "sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8"
+      },
+      "dependencies": [
+        {
+          "claim": "DR-01",
+          "relationship": "boundary_comparison",
+          "scope": "No action-generation inference"
+        },
+        {
+          "claim": "GEO-17",
+          "relationship": "inherited_obstruction",
+          "scope": "Original row/column action group remains proper"
+        }
+      ],
+      "hypotheses_and_limits": "Specified 2x2 positive labelled domain and metric. Scalar energy invariance is not gradient covariance.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-03",
+      "title": "Several-instrument cone corollary",
+      "exact_statement": "Common-refinement conditioning characterizes nonempty closed convex families stable under each of finitely many complete positive identity-summing instruments.",
+      "contribution_class": "Inherited theorem corollary via tagged-instrument application",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/audit_symmetries/RESULT.md",
+        "section": "Corollary C",
+        "sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8"
+      },
+      "dependencies": [
+        {
+          "claim": "ET-23",
+          "relationship": "direct_corollary",
+          "scope": "Apply inherited Theorem 5 to one tagged mixture instrument"
+        }
+      ],
+      "hypotheses_and_limits": "Proper finite-dimensional cone, strictly positive normalizer, complete instruments and full-column equality; zero-mass guard. Stable convex hull is not finite-history reachability. Reviewer supplied tagged proof, so independence does not apply to that proof.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-04",
+      "title": "Cone-to-gradient metric transport",
+      "exact_statement": "The refinement gradient theorem applies to normalized cone interiors after canonical-summand coordinates and the specified transported Fisher–transport metric are supplied.",
+      "contribution_class": "Conditional structure-preserving application",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/audit_symmetries/RESULT.md",
+        "section": "Section 6",
+        "sha256": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8"
+      },
+      "dependencies": [
+        {
+          "claim": "DR-01",
+          "relationship": "theorem_dependency",
+          "scope": "Refinement classification"
+        },
+        {
+          "claim": "ET-23",
+          "relationship": "structure_dependency",
+          "scope": "Canonical indecomposable summands and permitted branch form"
+        }
+      ],
+      "hypotheses_and_limits": "Cone order alone supplies no metric. All positive grouped multipliers require branches from an entire admissible binary-instrument family, not one finite instrument.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-05",
+      "title": "Restricted-control exact barycentre quotient",
+      "exact_statement": "Positive laws have identical full-output histories for all permitted Fisher controls exactly when their unnormalized full-output barycentres agree within fitness-signature groups.",
+      "contribution_class": "New bounded deduction from inherited continuation machinery",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/restricted_controls/RESULT.md",
+        "section": "Sections 2–3",
+        "sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49"
+      },
+      "dependencies": [
+        {
+          "claim": "MOM-01",
+          "relationship": "dynamics_and_proof_dependency",
+          "scope": "Inherited exponential solution and generic separating control"
+        },
+        {
+          "claim": "H-Continuation",
+          "relationship": "observable_closure_dependency",
+          "scope": "Inherited action-observation closure, located by source hash"
+        }
+      ],
+      "hypotheses_and_limits": "Fixed simplex-valued support; controls in declared linear U; finite piecewise-constant histories; all full output coordinates. Exact histories, not finite sample recovery or calibrated psychological model.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-06",
+      "title": "Restricted-control continuous augmentation",
+      "exact_statement": "The exact minimum additional continuous real coordinates beyond q is rank(B)-rank(A); the six-point example needs one rather than full-control three.",
+      "contribution_class": "New specialization and exact example of inherited dimension principle",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/restricted_controls/RESULT.md",
+        "section": "Sections 4–5",
+        "sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49"
+      },
+      "dependencies": [
+        {
+          "claim": "DR-05",
+          "relationship": "theorem_dependency",
+          "scope": "Continuation equivalence"
+        },
+        {
+          "claim": "H-Continuation",
+          "relationship": "lower_bound_dependency",
+          "scope": "Proposition 9 continuity/invariance-of-domain method"
+        }
+      ],
+      "hypotheses_and_limits": "Actual admissible image BΔ°; continuous sidecar, arbitrary exact decoder. Not finite bits, sample complexity or approximate storage.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-07",
+      "title": "Isolated profiles fail composed correction",
+      "exact_statement": "A nine-point law pair has identical complete x-only and y-only output profiles but distinct outputs after x then y; their stacked record has rank eight while composed signatures require nine.",
+      "contribution_class": "New exact realization of inherited composition obstruction",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Ordinary proof with exact finite controls; scoped independent review PASS",
+      "source_owner": {
+        "path": "reassessment/restricted_controls/RESULT.md",
+        "section": "Section 6",
+        "sha256": "cd25322628a1ec4997248286e8f05987ee1ed646ad97a59651e35f9960b1fd49"
+      },
+      "dependencies": [
+        {
+          "claim": "DR-05",
+          "relationship": "theorem_dependency",
+          "scope": "Sum-control signature refinement"
+        },
+        {
+          "claim": "ET-05",
+          "relationship": "inherited_mechanism_comparison",
+          "scope": "Separate historical revision profiles already fail composition"
+        },
+        {
+          "claim": "H-Continuation",
+          "relationship": "closure_dependency",
+          "scope": "Combined-operation observable closure"
+        }
+      ],
+      "hypotheses_and_limits": "Arbitrary real amplitudes, finite concatenations and declared control subspaces. Restricted timing/order/menu constraints need reachable-set argument; common partition operation has different warrants across fronts.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-08",
+      "title": "Foundational joint already present",
+      "exact_statement": "FND-033 already joins original-ground arguments, selective revalidation, retained-report revision and non-inferential recognition; reassessment preserves that inherited accomplishment and its empirical mapping boundary.",
+      "contribution_class": "Inherited overlap established by source-bound reassessment",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Direct source-report comparison and inherited static controls",
+      "source_owner": {
+        "path": "reassessment/foundational_interface/RESULT.md",
+        "section": null,
+        "sha256": "85fe7ad6ae92ea2a937a6aeb18d602707c5ef6cc8149e560f86b9d95e52101a3"
+      },
+      "dependencies": [
+        {
+          "claim": "FND-033",
+          "relationship": "source_ownership",
+          "scope": "Direct achieved foundational application"
+        },
+        {
+          "claim": "ET-18",
+          "relationship": "source_ownership",
+          "scope": "Selective source/dependency scope"
+        },
+        {
+          "claim": "ET-03",
+          "relationship": "role_revision_interface",
+          "scope": "Retained report may change evidence role"
+        }
+      ],
+      "hypotheses_and_limits": "33 inherited checks freshly replayed; no new metaphysical proof, primary authentication, numerical human-warrant model or Lean build. No grounds supplied for forcing a new Boolean demonstration.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-09",
+      "title": "Reconstructed finite-contract input repair",
+      "exact_statement": "Separately received repaired implementation snapshots four one-shot boundaries; constructor repair enforces accepted validated-storage invariant, while three other changes harden unspecified input shapes.",
+      "contribution_class": "Separately attributed reconstructed code successor candidate",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Red/green regressions, 30-test suite, unchanged finite oracle and separately disclosed downstream compatibility probe",
+      "source_owner": {
+        "path": "reassessment/intake/INTEGRATION_SCOPE_NOTE.md",
+        "section": null,
+        "sha256": "01b1232252abaaa24a2f90914962d0ad1120528822fcb62cf15e8d0432efb2d7"
+      },
+      "dependencies": [
+        {
+          "claim": "ET-09",
+          "relationship": "implementation_refinement",
+          "scope": "Finite reference implementation, not theorem repair"
+        }
+      ],
+      "hypotheses_and_limits": "30=26+4 distinct from 52→55 and unavailable R3/88. Quotient/sidecar need reusable indexable partition containers and blocks; closure output rows require sequences; enabled menus require reusable sized containers. Kernel mapping-key iteration order changes; per-key laws are not complete Python-observable equivalence. Old source-bound dependencies and receipts remain unchanged.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false,
+      "supersessions": [
+        {
+          "predecessor_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "successor_sha256": "852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0",
+          "status": "Reconstructed successor candidate, adoption pending; old historical replay stays exact",
+          "patch": "reassessment/contract_repair/EXACT_DIFF.patch",
+          "separate_from": "52→55 authorial DAG-helper repair and unavailable R3/88"
+        }
+      ]
+    },
+    {
+      "id": "DR-10",
+      "title": "Full archive custody restored",
+      "exact_statement": "Newly supplied full archive verifies 11392 payload manifest entries and 9814 advertised copied paths, with 11391 of 11393 member hashes already held.",
+      "contribution_class": "Custody improvement, no scientific discovery",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Exact SHA/size/CRC and manifest comparison",
+      "source_owner": {
+        "path": "reassessment/intake/DISCREPANCY_REPORT.md",
+        "section": null,
+        "sha256": "bc125358e4b2f8e4cd3163396b09928a2309f97737f46c2218a53218c0552bcc"
+      },
+      "dependencies": [],
+      "hypotheses_and_limits": "Earlier trimmed failure remains historical; only root manifest and members index are new member bytes; reported R3 remains unavailable. No new semantic reading credit.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    },
+    {
+      "id": "DR-11",
+      "title": "Additional Pro exact finite controls",
+      "exact_statement": "Supplied independent-formula controls establish displayed Euler discrepancy, sharp TV fixture and finite audit covariance grid.",
+      "contribution_class": "New finite validation artifact, inherited theorem scope",
+      "date_utc": "2026-10-11",
+      "phase": "consolidation-depth reassessment after original cutoff",
+      "evidence": "Normal Python exact-rational finite controls",
+      "source_owner": {
+        "path": "reassessment/intake/DISCREPANCY_REPORT.md",
+        "section": null,
+        "sha256": "bc125358e4b2f8e4cd3163396b09928a2309f97737f46c2218a53218c0552bcc"
+      },
+      "dependencies": [
+        {
+          "claim": "GEO-18",
+          "relationship": "bounded_validation",
+          "scope": "No actual later integrator import"
+        }
+      ],
+      "hypotheses_and_limits": "6561 combinations over 2187 configurations; normal mode only due bare assert; no universal proof or actual-integrator replay.",
+      "owner_acceptance": "pending",
+      "repository_adoption": false
+    }
+  ]
+}

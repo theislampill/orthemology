@@ -1,0 +1,27 @@
+import IntegrationControls
+#check @IntegrationAudit.history_count_le_length
+#print axioms IntegrationAudit.history_count_le_length
+#check @IntegrationAudit.history_length
+#print axioms IntegrationAudit.history_length
+#check @IntegrationAudit.full_history_prefix_local
+#print axioms IntegrationAudit.full_history_prefix_local
+#check @IntegrationAudit.selected_prefix_local
+#print axioms IntegrationAudit.selected_prefix_local
+#check @IntegrationAudit.selectedRepair_measurable
+#print axioms IntegrationAudit.selectedRepair_measurable
+#check @IntegrationAudit.final_event_measurable
+#print axioms IntegrationAudit.final_event_measurable
+#check @IntegrationAudit.zero_epsilon_all_labels_good
+#print axioms IntegrationAudit.zero_epsilon_all_labels_good
+#check @IntegrationAudit.wrong_label_bad
+#print axioms IntegrationAudit.wrong_label_bad
+#check @IntegrationAudit.repair_coherent
+#print axioms IntegrationAudit.repair_coherent
+#check @IntegrationAudit.no_common_repair_label
+#print axioms IntegrationAudit.no_common_repair_label
+#check @IntegrationAudit.target_preserving_actions_are_informative
+#print axioms IntegrationAudit.target_preserving_actions_are_informative
+#check @IntegrationAudit.flipped_sensor_eventually_fails
+#print axioms IntegrationAudit.flipped_sensor_eventually_fails
+#check @IntegrationAudit.uninformative_support_not_self_verifying
+#print axioms IntegrationAudit.uninformative_support_not_self_verifying

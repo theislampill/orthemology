@@ -1,0 +1,77 @@
+import InfiniteRootlessBranch
+set_option pp.universes true
+set_option pp.explicit true
+#print Orthemology.Tranche6.ConnectedUnity.LocalCover
+#print Orthemology.Tranche6.ConnectedUnity.Below
+#check @Orthemology.Tranche6.ConnectedUnity.below_transitive
+#print axioms Orthemology.Tranche6.ConnectedUnity.below_transitive
+#check @Orthemology.Tranche6.ConnectedUnity.below_root_eq
+#print axioms Orthemology.Tranche6.ConnectedUnity.below_root_eq
+#check @Orthemology.Tranche6.ConnectedUnity.root_of_local_cover
+#print axioms Orthemology.Tranche6.ConnectedUnity.root_of_local_cover
+#check @Orthemology.Tranche6.ConnectedUnity.local_cover_unique
+#print axioms Orthemology.Tranche6.ConnectedUnity.local_cover_unique
+#check @Orthemology.Tranche6.ConnectedUnity.root_covers_itself
+#print axioms Orthemology.Tranche6.ConnectedUnity.root_covers_itself
+#check @Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge
+#print axioms Orthemology.Tranche6.ConnectedUnity.roots_agree_on_edge
+#check @Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path
+#print axioms Orthemology.Tranche6.ConnectedUnity.roots_agree_on_path
+#check @Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local
+#print axioms Orthemology.Tranche6.ConnectedUnity.common_cover_of_connected_local
+#check @Orthemology.Tranche6.ConnectedUnity.least_of_connected_local
+#print axioms Orthemology.Tranche6.ConnectedUnity.least_of_connected_local
+#check @Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected
+#print axioms Orthemology.Tranche6.ConnectedUnity.least_implies_local_and_connected
+#check @Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least
+#print axioms Orthemology.Tranche6.ConnectedUnity.local_connected_iff_least
+#check @Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local
+#print axioms Orthemology.Tranche6.ConnectedUnity.unique_root_of_connected_local
+#check @Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support
+#print axioms Orthemology.Tranche6.ConnectedUnity.local_cover_iff_unique_root_and_ancestral_support
+#check @Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors
+#print axioms Orthemology.Tranche6.ConnectedUnity.local_iff_unique_root_ancestors
+#check @Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field
+#print axioms Orthemology.Tranche6.ConnectedUnity.strict_descendant_of_nontrivial_field
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.merge_strict
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.merge_strict
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.merge_connected
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.merge_connected
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.merge_two_roots_no_local_completion
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.merge_two_roots_no_local_completion
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.split_strict
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.split_strict
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.split_local_no_global
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.split_local_no_global
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.split_disconnected
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.split_disconnected
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.merge_all_necessary
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.merge_all_necessary
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.singleton_reflexive_no_productivity
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.singleton_reflexive_no_productivity
+#check @Orthemology.Tranche6.ConnectedUnity.Controls.empty_vacuous_local_connected_no_least
+#print axioms Orthemology.Tranche6.ConnectedUnity.Controls.empty_vacuous_local_connected_no_least
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_irreflexive
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_irreflexive
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_transitive
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_transitive
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.ground_is_root
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.ground_is_root
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_predecessor
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_predecessor
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.only_ground_is_root
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.only_ground_is_root
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_no_root_ancestor
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.branch_has_no_root_ancestor
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_unique_root_ancestor
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_unique_root_ancestor
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_no_local_cover
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.target_no_local_cover
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_connected
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.fork_connected
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.unique_root_connected_without_least
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.unique_root_connected_without_least
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.pointwise_uniqueness_without_local_completion
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.pointwise_uniqueness_without_local_completion
+#check @Orthemology.Tranche6.ConnectedUnity.InfiniteControls.all_fork_nodes_necessary
+#print axioms Orthemology.Tranche6.ConnectedUnity.InfiniteControls.all_fork_nodes_necessary

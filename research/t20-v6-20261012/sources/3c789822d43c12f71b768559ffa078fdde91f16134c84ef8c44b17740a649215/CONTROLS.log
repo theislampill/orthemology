@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Finite exact-rational corroboration only",
+  "cap_instances": 125,
+  "checks": {
+    "nonempty_cap_vertices": 125,
+    "diameter_formula_against_vertices": 125,
+    "coarse_cap_bound": 125,
+    "capacity_partition_iff_diameter_one": 125,
+    "sharp_cap_domination": 17,
+    "sharp_contraction_ratio": 17,
+    "sharp_stationary_delta": 17,
+    "cesaro_telescope": 1024,
+    "cesaro_residual_bound": 1024,
+    "two_state_stationary_formula": 15,
+    "tiny_residual_fixed_solution_error": 32,
+    "opposite_forced_stationaries": 32,
+    "product_lift_cap_tail": 19,
+    "product_lift_stationary_coordinate": 1140,
+    "product_lift_row_cap": 1140,
+    "birth_death_row_stochastic": 25,
+    "birth_death_diagonal_bound": 25,
+    "birth_death_detailed_balance": 25,
+    "birth_death_cap_invariance_identity": 25,
+    "invariance_without_row_domination": 1,
+    "pair_overlap_without_common_minorant": 1,
+    "cap_mass_two_can_still_contract": 1,
+    "correspondence_fixed_interval_control": 1
+  },
+  "total_checks": 5081,
+  "excluded_claims": [
+    "Universal computability proof",
+    "Noncomputability proof",
+    "Infinite-dimensional universal refinement",
+    "Lean/kernel verification"
+  ]
+}

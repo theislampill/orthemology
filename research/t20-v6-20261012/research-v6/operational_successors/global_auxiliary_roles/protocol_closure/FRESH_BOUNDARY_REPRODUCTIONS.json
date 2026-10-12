@@ -1,0 +1,152 @@
+{
+  "scope": "Fresh finite controls of retained exact historical source. No source edits, no model/provider calls, no empirical run.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "sources": {
+    "episode-reification-v2/analysis/analyze_er2.py": {
+      "sha256": "448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
+      "path": "t20-consolidation-20261011/catalogue/objects/44/448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/analysis/analyze_er2.py",
+      "bytes": 10418
+    },
+    "episode-reification-v2/harness/run_er.py": {
+      "sha256": "bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20",
+      "path": "t20-consolidation-20261011/catalogue/objects/bd/bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/harness/run_er.py",
+      "bytes": 7347
+    },
+    "episode-reification-v2/scripts/generate_cases.py": {
+      "sha256": "d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3",
+      "path": "t20-consolidation-20261011/catalogue/objects/d4/d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/scripts/generate_cases.py",
+      "bytes": 8526
+    },
+    "episode-reification-v2/tests/test_smoke.py": {
+      "sha256": "41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f",
+      "path": "t20-consolidation-20261011/catalogue/objects/41/41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/tests/test_smoke.py",
+      "bytes": 8543
+    },
+    "episode-reification/analysis/analyze_er.py": {
+      "sha256": "ae1f58c4c6456a57651bc56e6d4c8affdbc745a5ced08234b710d76b1e1151d5",
+      "path": "t20-consolidation-20261011/catalogue/objects/ae/ae1f58c4c6456a57651bc56e6d4c8affdbc745a5ced08234b710d76b1e1151d5",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/analysis/analyze_er.py",
+      "bytes": 3466
+    },
+    "episode-reification/scripts/generate_fixtures.py": {
+      "sha256": "7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564",
+      "path": "t20-consolidation-20261011/catalogue/objects/7c/7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/scripts/generate_fixtures.py",
+      "bytes": 8187
+    },
+    "episode-reification/tests/test_smoke.py": {
+      "sha256": "3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c",
+      "path": "t20-consolidation-20261011/catalogue/objects/36/3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/tests/test_smoke.py",
+      "bytes": 5936
+    },
+    "false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py": {
+      "sha256": "0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+      "path": "t20-consolidation-20261011/catalogue/objects/00/0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py",
+      "bytes": 15447
+    },
+    "false-closure-selective-prediction-v2/harness/run_fcsp.py": {
+      "sha256": "a58a9cf0d458f36d2a69de1ab03339bc4a044d1f532197f8d3eab739c2c3783b",
+      "path": "t20-consolidation-20261011/catalogue/objects/a5/a58a9cf0d458f36d2a69de1ab03339bc4a044d1f532197f8d3eab739c2c3783b",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/harness/run_fcsp.py",
+      "bytes": 8531
+    },
+    "false-closure-selective-prediction-v2/scripts/generate_items.py": {
+      "sha256": "f3036ecc7da7ca35419b0aa58dffd50ea3af168ddbefccfb5f7c3a774b102b8e",
+      "path": "t20-consolidation-20261011/catalogue/objects/f3/f3036ecc7da7ca35419b0aa58dffd50ea3af168ddbefccfb5f7c3a774b102b8e",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/scripts/generate_items.py",
+      "bytes": 8179
+    },
+    "false-closure-selective-prediction-v2/simulation/design_sensitivity.py": {
+      "sha256": "469ac7f8da17c954e7d723e761ce1259f03fb8a2f137779f3da36887c6f98f46",
+      "path": "t20-consolidation-20261011/catalogue/objects/46/469ac7f8da17c954e7d723e761ce1259f03fb8a2f137779f3da36887c6f98f46",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/simulation/design_sensitivity.py",
+      "bytes": 1457
+    },
+    "false-closure-selective-prediction-v2/tests/test_smoke.py": {
+      "sha256": "459e74878da5340d3e25ac945954e10a38866d2fa4b5e1fae883619e3df273c6",
+      "path": "t20-consolidation-20261011/catalogue/objects/45/459e74878da5340d3e25ac945954e10a38866d2fa4b5e1fae883619e3df273c6",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/tests/test_smoke.py",
+      "bytes": 6958
+    },
+    "false-closure-selective-prediction/analysis/analyze_fcsp.py": {
+      "sha256": "d1fb9174764dad998ec582a5680d4d61de166cf040a1460a690b7f9c70b85046",
+      "path": "t20-consolidation-20261011/catalogue/objects/d1/d1fb9174764dad998ec582a5680d4d61de166cf040a1460a690b7f9c70b85046",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/analysis/analyze_fcsp.py",
+      "bytes": 5739
+    },
+    "false-closure-selective-prediction/scripts/generate_items.py": {
+      "sha256": "24e89a62fe945dbcaee906e195ff13b8c905e66c8af74e52ee466df7fcb65937",
+      "path": "t20-consolidation-20261011/catalogue/objects/24/24e89a62fe945dbcaee906e195ff13b8c905e66c8af74e52ee466df7fcb65937",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/scripts/generate_items.py",
+      "bytes": 5464
+    },
+    "false-closure-selective-prediction/simulation/power_sim.py": {
+      "sha256": "fcc7b023dd39c7fd677d282d5bdfe8ad982223b5e0fbb89d1eeb498e1e89e2f5",
+      "path": "t20-consolidation-20261011/catalogue/objects/fc/fcc7b023dd39c7fd677d282d5bdfe8ad982223b5e0fbb89d1eeb498e1e89e2f5",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/simulation/power_sim.py",
+      "bytes": 1513
+    },
+    "false-closure-selective-prediction/tests/test_smoke.py": {
+      "sha256": "fa48b776bc3f3facbcc2bc456f6c08f3023542e86e7d82794d97741c37b358a7",
+      "path": "t20-consolidation-20261011/catalogue/objects/fa/fa48b776bc3f3facbcc2bc456f6c08f3023542e86e7d82794d97741c37b358a7",
+      "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/tests/test_smoke.py",
+      "bytes": 5494
+    }
+  },
+  "findings": [
+    {
+      "id": "ER2-E5-remedy",
+      "actual_score": {
+        "defect_discovered": 1.0,
+        "remedy_correct": 0.0,
+        "completion_correct": 1.0,
+        "false_positive_on_legit": 0.0,
+        "traceability": 1.0,
+        "e5_robustness": 1.0,
+        "answer_tokens": 0
+      },
+      "expected_contract": "E5 requires correct remedy; supplied remedy none is wrong."
+    },
+    {
+      "id": "ER2-control-harm-dilution",
+      "archetype_rates": {
+        "A1": 0.25,
+        "A2": 0.0,
+        "A3": 0.0,
+        "A4": 0.0,
+        "A5": 0.0
+      },
+      "actual_pooled_harm_rate": 0.05,
+      "A1_control_rate": 0.25,
+      "threshold": 0.1
+    },
+    {
+      "id": "ZERO-P-VALUE",
+      "actual_seeded_40_positive_contrast_perm_p": 0.0,
+      "zero_p_support_decision": "does not yet support incremental value (pre-run fixed-sensitivity design; no observed-power rescue exists)",
+      "positive_small_p_support_decision": "supports incremental value",
+      "zero_p_harm_decision": "does not yet support incremental value (pre-run fixed-sensitivity design; no observed-power rescue exists)",
+      "positive_small_p_harm_decision": "evidence of harm or failure: false-closure increase"
+    },
+    {
+      "id": "PARSER-SHAPE-ONLY",
+      "er2_wrong_boolean_string_accepted": {
+        "defect_category": "none",
+        "grounding_fact_ids": [],
+        "remedy_category": "none",
+        "endorse_completion": "false"
+      },
+      "fcsp2_out_of_range_confidence_and_boolean_string_accepted": {
+        "placement": "no-defect",
+        "confidence": 2,
+        "closure_claimed": "false"
+      }
+    }
+  ]
+}

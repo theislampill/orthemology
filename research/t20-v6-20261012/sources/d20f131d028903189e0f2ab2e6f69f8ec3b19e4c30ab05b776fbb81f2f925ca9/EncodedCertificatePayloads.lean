@@ -1,0 +1,8 @@
+import PolyCertificateEncoding
+set_option maxRecDepth 32768
+set_option maxHeartbeats 32000000
+namespace JointCertificates
+deriving instance Encodable for AuxiliaryCertificates.LookupCert
+deriving instance Encodable for Claim
+deriving instance Encodable for Rule
+end JointCertificates

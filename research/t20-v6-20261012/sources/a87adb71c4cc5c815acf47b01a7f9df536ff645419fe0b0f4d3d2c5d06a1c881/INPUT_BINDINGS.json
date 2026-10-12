@@ -1,0 +1,44 @@
+{
+  "date_utc": "2026-10-10",
+  "scope": "Targeted local inheritance; no whole-project or historical priority certification.",
+  "local_inputs": [
+    {
+      "path": "tensor-likelihood-closure-20261010/RESULT.md",
+      "sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "bytes": 25391,
+      "inspected_scope": "Full RESULT: passive multiplier criterion; categorical contrasts; normalized support-rank dichotomy; inherited six-dimensional star example."
+    },
+    {
+      "path": "leafwise-noetic-geometry-20261010/RESULT.md",
+      "sha256": "6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724",
+      "bytes": 26495,
+      "inspected_scope": "Sections 1\u20135: fixed-objective stabilizer criterion and global block-mass theorem; sections 6\u201310 checked for domain and leaf limitations."
+    },
+    {
+      "path": "tensor-likelihood-review-20261010/REVIEW.md",
+      "sha256": "36304dd41202cdf603f565d11b23a6ab1fc58c2017ba83d6b853e1a69ff66512",
+      "bytes": 23796,
+      "inspected_scope": "Sections Result, source-faithful tensor realization, and theorem review; inherited star channel qualification and source drift caveat."
+    },
+    {
+      "path": "leafwise-noetic-review-20261010/REVIEW.md",
+      "sha256": "47b97d502705270d11d955af5b82fcec8fcacf5196bc8dab767e896f52eed80b",
+      "bytes": 16892,
+      "inspected_scope": "Bounded theorem review, inheritance and scope; not adopted as review of this packet."
+    },
+    {
+      "path": "constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523,
+      "inspected_scope": "Lines 110\u2013160: actual semantic tensor algebra and word grading, not identified with ANOVA interaction order."
+    }
+  ],
+  "external_primary_sources": [
+    {
+      "author": "Hugues Randriambololona",
+      "title": "On products and powers of linear codes under componentwise multiplication",
+      "url": "https://arxiv.org/pdf/1312.0022",
+      "inspected_scope": "Opening arbitrary-field convention; Definition 2.6, Proposition 2.11 and adjacent decomposition definitions, PDF pages 2,16\u201317. Read with web tool. No external byte-hash claim."
+    }
+  ]
+}

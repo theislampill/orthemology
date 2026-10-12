@@ -1,0 +1,20 @@
+--- initial-candidate-468dac5c
++++ final-candidate-a530a534
+@@ -104,7 +104,7 @@
+ 
+ The right side implies every marginal Carleman condition. Indeed, apart from the harmless convention that a zero moment contributes infinity, the inverse 2n-th roots are bounded below by a(t)^(1/(2n)) sqrt(c)/sqrt(n), using n!≤n^n. Their sum diverges.
+ 
+-The classical multivariate Nussbaum–Carleman theorem now supplies a representing probability ρ_t and identifies it uniquely. Its input is a full square-positive functional with all marginal Carleman conditions, not a pre-existing vector measure. A primary statement is Putinar–Schmüdgen, *Multivariate Determinateness*, Theorem 25 and the following attribution, printed p. 24, https://arxiv.org/pdf/0810.0840 . Define ν_t=a(t)ρ_t, the unique finite positive measure representing A_t.
++The classical multivariate Nussbaum–Carleman theorem now supplies a representing probability ρ_t and identifies it uniquely. Its input is a full square-positive functional with all marginal Carleman conditions, not a pre-existing vector measure. A primary statement is Putinar–Schmüdgen, *Multivariate Determinateness*, Theorem 25 and the following attribution, printed p. 24, https://arxiv.org/pdf/0810.0840v1 . Define ν_t=a(t)ρ_t, the unique finite positive measure representing A_t.
+ 
+ Monotone convergence in (8) now gives, for every real polynomial q,
+ 
+@@ -175,7 +175,7 @@
+ 
+ ## 6. Compact integrating factors, inverse weighting, and time zero
+ 
+-If ψ_u is a family of compact smooth spatial tests with common compact support, C¹ in time in the uniform norm, then (16) gives
++If ψ_u is a family of compact smooth spatial tests with common compact support, C¹ in time in the uniform norm, with each ∂_uψ_u also a compact smooth spatial test, then (16) gives
+ 
+     d/du ∫ψ_u dν_u=∫(∂_uψ_u−g_uψ_u)dν_u.              (17)
+ 

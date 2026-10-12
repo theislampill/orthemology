@@ -1,0 +1,5 @@
+# Additive intermediate source evidence
+
+These are bounded no-new-result notes, not reviewed source discoveries. Publicity feasibility found no further specifically responsive argument within supplied records; finite omission comparison is substantially duplicate and does not authenticate an abridgement event. Canonical lower-link positive and unresolved stronger expected-publicity challenge both remain. The two raw sources bound by SOURCE_BINDING.json/INPUT_BINDINGS.json are external prerequisites, excluded from offline source-byte checking.
+
+Replay: python replay.py --output-dir /fresh/output. This verifies included file identities and exact accepted report pins only. It does not freshly read external sources, authenticate history, rerun scholarly judgment, prove mathematics, or compile a kernel. Excluded raw bodies retain exact hashes; full-source-byte verification is outside portable coverage. Original report/review source ledgers retain URLs and reading loci. No relocation or original evidence edits. No integration, upload, owner acceptance, or T20 closure.

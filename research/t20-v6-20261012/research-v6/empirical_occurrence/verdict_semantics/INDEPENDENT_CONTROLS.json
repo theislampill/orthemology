@@ -1,0 +1,533 @@
+{
+  "created_utc": "2026-10-11T19:15:51.998241+00:00",
+  "method": "Fresh installed jsonschema library evaluation of exact retained declarative schemas and independently authored records. No supplied Python validator imported or executed. Semantic-validator behavior below is an explicit static branch analysis, not a replay.",
+  "schema_count": 10,
+  "retained_fixture_schema_checks": [
+    {
+      "sha256": "3425fb830ca537aea181d99642d5ae0d8f79498a4ee7612f724e2476d1680203",
+      "fixture_id": "I01-empty-task-analysis",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 11
+    },
+    {
+      "sha256": "36fdd60dc88dea7e653f81c0602c748d1ebead74964aac2d39323d68dd32f0f6",
+      "fixture_id": "I02-empty-id-metaortheme",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "aec597b161883889f9ce799d683befb5bb7597550aa61ab0c1758b39c5b6e664",
+      "fixture_id": "I03-duplicate-state-metaortheme",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "6468ed1fdfb990a2c4fb90c5bd16b13f4e5538af104cb3cb7e86e7261a76a1a3",
+      "fixture_id": "I04-bare-string-selector-metaortheme",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "cae8db50be0f731a5087a15652b4dd3d45ae4e2f3a88277332ee9bde24fc0236",
+      "fixture_id": "I05-empty-anchor-metaorthemma",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "30e749ab79c07eb3eeecdc16efa1c67aa05931a7bd2279df5ac4db64e88016d7",
+      "fixture_id": "I06-plural-metaorthemma-type",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "d66aada7fb72201b2bffd583fa8c5d8b7f6d1c15193323588d2d9881e3026bc3",
+      "fixture_id": "I07-empty-metaorthemma-binding",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "ed7a869c51c815ef67f8524ad32855c052669358bc4ca665c3091d43e21d23b8",
+      "fixture_id": "I08-unresolved-residual-without-queue",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 2
+    },
+    {
+      "sha256": "3e5314b39a7f83313e596c86cff285c9ce99ff9e12928a6a5e77bea0430c20f2",
+      "fixture_id": "I09-deferred-residual-without-trigger",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "96f17d65aad46b626b633b79ff5225f02b6315fa8dcc05d12a87d25f19752298",
+      "fixture_id": "I10-transferred-residual-without-receiver",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 2
+    },
+    {
+      "sha256": "44a03a63eba994c82639866d463c70e1ba22a1b6c39f0df6cdaf06bfdcc844b0",
+      "fixture_id": "I11-owner-assigned-residual-without-owner",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 2
+    },
+    {
+      "sha256": "4b37cb50877b8a9f8020d5c7aa05b034a446a28a0a72949139e1b1ee6f9c793a",
+      "fixture_id": "I12-risk-accepted-residual-without-risk-record",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 4
+    },
+    {
+      "sha256": "8fd5bfbd4bb4965cae1130e8aabadc25e06f81f5daeea4dbf3b70ea181062da9",
+      "fixture_id": "I13-validated-resolved-without-evidence",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "57462a5252862fd0d5a50cb10a6d6a1cad568cb35e474e5a6ed5001f89d30965",
+      "fixture_id": "I14-payload-free-handoff",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "36aa9502d65e6502ed44a904b80658befd3436e246944c25aa85f1a378dc19ac",
+      "fixture_id": "I15-handoff-state-claim-without-valid-for-version",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "1e74cba1d1600088e3757f96c741486822fb1bb021897269b4d3246ee68c687c",
+      "fixture_id": "I16-skeletal-audit-ready-episode",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 14
+    },
+    {
+      "sha256": "e76d259d3aa5e5c75a0808e01d9dc80a4f40ab9b3ef9c9bc946b9c7e76e511fb",
+      "fixture_id": "I17-verdict-without-objectivity-index",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "52dd49929b80f89b1db28ace86be556abc24d630369c7eaf3d9816463f1df9e9",
+      "fixture_id": "I18-free-form-relspec",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "8fd53194dc305a0cdf0585fc66e6ec142707144e352e5a730597d0b2b3a1bd13",
+      "fixture_id": "I19-free-form-perturbspec",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 2
+    },
+    {
+      "sha256": "c4c9f918badfeaf8640183a7894f2dd44fedeb4348192ed79165f211a881885b",
+      "fixture_id": "I20-perturbspec-without-enumeration-or-measure",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 1
+    },
+    {
+      "sha256": "b6d8f27877d4d4a335eec642319f3cdad466ef2be99a457f9418b4d7d3a7134f",
+      "fixture_id": "I21-verdict-missing-required-statuses",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "130a2d6baf4a496ba6a19a32e0d1eb4cee19af28b4a0a77baecfb50d7d5ed558",
+      "fixture_id": "I22-na-without-reason-outside-required-path",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "5c21c8c8a3e1d83b9d6f32dd04c0a6e4b85f5aecb5859fb552ebe2eb876782fa",
+      "fixture_id": "I23-contradicted-pathway-summary",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "0a0df06eb89e7dc67074896d9b3009a322ace046664ad33243234c2051228919",
+      "fixture_id": "I24-claim-path-collapsed-into-episode-path",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "d07d09d4b33e38765c1f6e9849e68d971f1ddd1b8b24adf30ecc0dd46b930efb",
+      "fixture_id": "I25-relspec-declared-after-the-result",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "fc0bcc12d517d288f2c19f94905cdfb81649f6b8073abdc815573faca113522d",
+      "fixture_id": "I26-perturbspec-invariant-also-varied",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "adc33e346d50af7ebc27606579100371afb1eee4982da41dc53756c7b58d2188",
+      "fixture_id": "I27-claim-dependency-cycle",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "4bd1803b2724144eadb3238573339886ad7c06dfdfd44f9133f8db7b3586f185",
+      "fixture_id": "I28-token-anchored-to-another-occurrence",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "d45c9e4bd2fc525659c1be501f18f6051df57370e1a8fdeab4f17db5224dc4df",
+      "fixture_id": "I29-analysis-self-inheritance",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "f4b4392ced709c1f2faa1b6f2020af9f9b010acc2942ba09efe6464955be7811",
+      "fixture_id": "I33-standalone-token-unowned",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "d0f9f89d4aa3843d5fa4020e9d3a64626ef57fbdac73c6b12a8c73927c615835",
+      "fixture_id": "I36-precedence-self-edge",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "9af9e9b3546e9a844a46eff77912aeaf1664a4cb2cab6f3d475f8f554266cff8",
+      "fixture_id": "I37-precedence-cycle",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "eba81d64dc57bfde1b50751bf8fc48a3ee3a7acc1d98d799dc973d6ec9281281",
+      "fixture_id": "I38-token-outside-governing-config",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "sha256": "8d3f24a685a53d7ea9daf33377c4c073a862bc70ee5d6ab9a1f68db33abef8a5",
+      "fixture_id": "I43-inverted-token-validity",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N1-empty-binding",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 5
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N2-skeletal-episode",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 8
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N3-fail-but-adequate",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N4-factivity-violation",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 4
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N5-cross-anchor-mismatch",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N6-duplicate-evidence-ids",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N7-undeclared-fields",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 4
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N8-na-without-reason",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N9-token-verdict-without-token",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N10-nonregistry-verdict",
+      "schema_valid": false,
+      "expected_layer": "schema",
+      "semantic_python_run": false,
+      "schema_error_count": 3
+    },
+    {
+      "source_sha256": "b342240297511473b5c5568d4662de413d1f69fef20a7a55dc59c24657e7580b",
+      "fixture_id": "N11-false-closure-over-unresolved",
+      "schema_valid": true,
+      "expected_layer": "semantic",
+      "semantic_python_run": false,
+      "schema_error_count": 0
+    }
+  ],
+  "fixture_check_count": 45,
+  "all_declared_layer_shape_expectations_match": true,
+  "reduced_episode_path_counterexample": {
+    "parts": [
+      {
+        "schema": "orthing-episode.schema.json",
+        "instance": {
+          "episode_id": "e",
+          "record_mode": "audit-ready",
+          "occurrence": {
+            "identity_key": "k",
+            "version": "1",
+            "kind": "case"
+          },
+          "actor": "reviewer",
+          "analysis": {
+            "analysis_id": "AN",
+            "version": "1"
+          },
+          "time": "2026-07-01T12:00:00Z",
+          "placement": {
+            "axis": "value"
+          },
+          "observation": "synthetic declared observation",
+          "evidence": [],
+          "evidence_absent_reason": "synthetic consistency countercontrol",
+          "warrant": null,
+          "policy": "declared synthetic policy",
+          "claim_ledger_ref": "ledger-e",
+          "verdict_record_ref": "verdict-e",
+          "external_refs": [
+            {
+              "kind": "analysis",
+              "ref": "AN@1",
+              "registry": "synthetic-analysis-registry",
+              "resolution_status": "resolved-external"
+            },
+            {
+              "kind": "occurrence",
+              "ref": "k@1",
+              "registry": "synthetic-occurrence-registry",
+              "resolution_status": "resolved-external"
+            }
+          ]
+        }
+      },
+      {
+        "schema": "claim-ledger.schema.json",
+        "instance": {
+          "episode_id": "e",
+          "claims": [
+            {
+              "claim_id": "q",
+              "proposition": "synthetic proposition",
+              "target": {
+                "identity_key": "k",
+                "version": "1"
+              },
+              "analysis": {
+                "analysis_id": "AN",
+                "version": "1"
+              },
+              "property_class": "structural",
+              "success_surface": "synthetic declared surface",
+              "evidence_inapplicable_reason": "synthetic countercontrol",
+              "verification_status": "provisional",
+              "claim_type": "placement"
+            }
+          ],
+          "residuals": []
+        }
+      },
+      {
+        "schema": "verdict-record.schema.json",
+        "instance": {
+          "episode_id": "e",
+          "index": {
+            "analysis_id": "AN",
+            "analysis_version": "1",
+            "actor": "reviewer",
+            "decision_time": "2026-07-01T12:00:00Z",
+            "information_state": "declared countercontrol inputs"
+          },
+          "required_path": [
+            "EVIDENCE_SUPPORT"
+          ],
+          "statuses": {
+            "EVIDENCE_SUPPORT": "pass",
+            "PROCEDURE_RELIABLE": "fail",
+            "EVIDENCE_CURRENT": "pass",
+            "GOV_CONFIG_ADEQUATE": "pass",
+            "GOV_POLICY_ADEQUATE": "pass",
+            "EXECUTION_FAITHFUL": "pass",
+            "EX_ANTE_JUSTIFIED": "pass"
+          },
+          "pathway_state": "adequate",
+          "claim_reasoning_paths": [
+            {
+              "claim_id": "q",
+              "req_reason": [
+                "EVIDENCE_SUPPORT"
+              ],
+              "reasoning_path_adequate": "adequate"
+            }
+          ]
+        }
+      }
+    ],
+    "schema_valid": true,
+    "declared_required_path": [
+      "EVIDENCE_SUPPORT"
+    ],
+    "governance_required_path": [
+      "EVIDENCE_SUPPORT",
+      "PROCEDURE_RELIABLE",
+      "EVIDENCE_CURRENT",
+      "GOV_CONFIG_ADEQUATE",
+      "GOV_POLICY_ADEQUATE",
+      "EXECUTION_FAITHFUL",
+      "EX_ANTE_JUSTIFIED"
+    ],
+    "computed_supplied_path_state": "adequate",
+    "computed_governance_path_state": "defective",
+    "cross_record_static_assessment": "Every existing cross-record branch accepts these declared values: no tokens, route, handoff, inheritance or residual; analysis/occurrence references declared externally; explicit placement claim; matching indices; supplied req_reason equals the rules intersected with the supplied one-element path. No branch compares the supplied episode path with the seven unconditional governance rules.",
+    "source_ranges": {
+      "cross_record": [
+        "614\u2013660",
+        "691\u2013751"
+      ],
+      "schema_validator": [
+        "94\u2013118"
+      ],
+      "derive_reqpath": [
+        "43\u201358"
+      ]
+    },
+    "fresh_semantic_runtime_claim": false
+  },
+  "paired_policy_counterexample": {
+    "instance": {
+      "mu_id": "mu-valid",
+      "version": "1",
+      "governed_component": "E",
+      "states": {
+        "members": [
+          "s1",
+          "s2"
+        ]
+      },
+      "exclusivity": "exclusive",
+      "selector": {
+        "kind": "instrument-reading",
+        "description": "read the instrument"
+      },
+      "meta_policy": "act on the obtaining state",
+      "provenance": {
+        "authority": "auth",
+        "warrant": "w",
+        "scope": "sc"
+      },
+      "policy_ref": "different-policy-ref"
+    },
+    "schema_valid": true,
+    "finding": "Both meta_policy and policy_ref present satisfy anyOf; description says exactly one. This is a descriptive/executable cardinality mismatch at this exact schema."
+  },
+  "boundary": "Counterexamples concern internal declaration/validator consistency. Supplied pass/fail scores, externally resolved references and evidence warrants are not authenticated by this check."
+}

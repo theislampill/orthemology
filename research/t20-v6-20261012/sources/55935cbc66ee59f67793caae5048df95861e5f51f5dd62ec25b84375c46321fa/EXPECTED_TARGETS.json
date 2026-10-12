@@ -1,0 +1,57 @@
+{
+  "required_lean": "4.19.0 / 6caaee842e94",
+  "targets": [
+    "P03Q1f.Chain.mapEdge",
+    "P03Q1f.walkRank",
+    "P03Q1f.Hom.mapWalk",
+    "P03Q1f.noClosedWalk",
+    "P03Q1f.Hom.noCollapseOfWalk",
+    "P03A2.EvidenceHop.sound",
+    "P03A2.EvidenceHop.closed",
+    "P03A2.SemanticHop.composite_square",
+    "P03A2.Path.mapEdge",
+    "P03A2.guarded_reason_version_composition",
+    "P03A2.Path.semantic_truth_transport",
+    "P03A2.Via.eq_endpoints",
+    "P03A2.Path.no_collapse",
+    "P03A2.Path.preimage"
+  ],
+  "new_VCT_targets": [
+    "P03A2.EvidenceHop.sound",
+    "P03A2.EvidenceHop.closed",
+    "P03A2.SemanticHop.composite_square",
+    "P03A2.Path.mapEdge",
+    "P03A2.guarded_reason_version_composition",
+    "P03A2.Path.semantic_truth_transport",
+    "P03A2.Via.eq_endpoints",
+    "P03A2.Path.no_collapse",
+    "P03A2.Path.preimage"
+  ],
+  "inherited_graph_targets": [
+    "P03Q1f.Chain.mapEdge",
+    "P03Q1f.walkRank",
+    "P03Q1f.Hom.mapWalk",
+    "P03Q1f.noClosedWalk",
+    "P03Q1f.Hom.noCollapseOfWalk"
+  ],
+  "expected_axioms": "Empty set predicted, not observed",
+  "source_sha256": {
+    "P03GuardedGraph.lean": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+    "P03GuardedVCT.lean": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+    "P03Audit.lean": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0"
+  },
+  "status": "SHADOW_REPAIR_PENDING_RUNTIME",
+  "parsed_declarations": 0,
+  "observed_types": 0,
+  "observed_axioms": 0,
+  "nonempty_olean_artifacts": 0,
+  "exact_type_contract_source": "P03Audit.lean contains a restated main proposition; all #check/#print outputs still require review.",
+  "nonclaims": [
+    "not historical VersionCustodyTransport declaration recovery",
+    "not a JSON VCT checker refinement",
+    "not target-world authority",
+    "not optional TRC"
+  ],
+  "target_count": 14,
+  "new_result_status": "UNVERIFIED_HOST_EXECUTION_BLOCKED"
+}

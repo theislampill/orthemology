@@ -1,0 +1,48 @@
+import Controls
+
+#check IndependentPhysicalCostControls.boundary_01
+#print axioms IndependentPhysicalCostControls.boundary_01
+#check IndependentPhysicalCostControls.boundary_02
+#print axioms IndependentPhysicalCostControls.boundary_02
+#check IndependentPhysicalCostControls.boundary_03
+#print axioms IndependentPhysicalCostControls.boundary_03
+#check IndependentPhysicalCostControls.boundary_04
+#print axioms IndependentPhysicalCostControls.boundary_04
+#check IndependentPhysicalCostControls.boundary_05
+#print axioms IndependentPhysicalCostControls.boundary_05
+#check IndependentPhysicalCostControls.boundary_06
+#print axioms IndependentPhysicalCostControls.boundary_06
+#check IndependentPhysicalCostControls.boundary_07
+#print axioms IndependentPhysicalCostControls.boundary_07
+#check IndependentPhysicalCostControls.boundary_08
+#print axioms IndependentPhysicalCostControls.boundary_08
+#check IndependentPhysicalCostControls.boundary_09
+#print axioms IndependentPhysicalCostControls.boundary_09
+#check IndependentPhysicalCostControls.boundary_10
+#print axioms IndependentPhysicalCostControls.boundary_10
+#check IndependentPhysicalCostControls.boundary_11
+#print axioms IndependentPhysicalCostControls.boundary_11
+#check IndependentPhysicalCostControls.boundary_12
+#print axioms IndependentPhysicalCostControls.boundary_12
+#check IndependentPhysicalCostControls.boundary_13
+#print axioms IndependentPhysicalCostControls.boundary_13
+#check IndependentPhysicalCostControls.boundary_14
+#print axioms IndependentPhysicalCostControls.boundary_14
+#check IndependentPhysicalCostControls.boundary_15
+#print axioms IndependentPhysicalCostControls.boundary_15
+#check IndependentPhysicalCostControls.boundary_16
+#print axioms IndependentPhysicalCostControls.boundary_16
+#check IndependentPhysicalCostControls.boundary_17
+#print axioms IndependentPhysicalCostControls.boundary_17
+#check IndependentPhysicalCostControls.boundary_18
+#print axioms IndependentPhysicalCostControls.boundary_18
+#check IndependentPhysicalCostControls.boundary_19
+#print axioms IndependentPhysicalCostControls.boundary_19
+#check IndependentPhysicalCostControls.boundary_20
+#print axioms IndependentPhysicalCostControls.boundary_20
+#check IndependentPhysicalCostControls.boundary_21
+#print axioms IndependentPhysicalCostControls.boundary_21
+#check IndependentPhysicalCostControls.boundary_22
+#print axioms IndependentPhysicalCostControls.boundary_22
+#check IndependentPhysicalCostControls.boundary_23
+#print axioms IndependentPhysicalCostControls.boundary_23

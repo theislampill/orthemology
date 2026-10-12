@@ -1,0 +1,49 @@
+{
+  "schema": "polytope-successor-research-receipt-v1",
+  "status": "COMPLETED_SCOPED_RESEARCH_SUCCESSOR",
+  "sealed_at_utc": "2026-09-30T14:37:42Z",
+  "research_executed": true,
+  "main_commit": "03e2604dfcef278b01c60d19b05370fcec4194b6",
+  "main_tree": "3d06e80277ce39286c94307e0f14b215bc94ed83",
+  "predecessor_archive_sha256": "48eb8179e41e66addccc094d6b48033bc786e83d42fcd47a6ed9780c1764dd61",
+  "repository_modified": false,
+  "predecessor_modified": false,
+  "canonical_adoption": false,
+  "normative_authority_certified": false,
+  "empirical_validation": false,
+  "kernel_checked": false,
+  "external_peer_review": false,
+  "global_novelty_claim": false,
+  "manifest_artifacts": 13,
+  "manifest_sha256": "89578df724fb341944f5c754300b65541e100efbe39dcf63668a65aec7e475cf",
+  "theorems": {
+    "S1": "ordinary proof of strict cell/slack equivalence over compact rational polytopes",
+    "S2": "ordinary proof of rational witness/dual/Farkas certificate completeness using standard finite linear alternatives"
+  },
+  "prototype_scope": {
+    "criteria": 3,
+    "maximum_atoms": 3,
+    "method": "exact vertex/conic enumeration; solver-independent linear certificate verifier"
+  },
+  "verification": {
+    "status": "EXACT_RESEARCH_CHECKS_NOT_KERNEL_PROOF",
+    "totals": {
+      "input_instances": 423,
+      "sign_cells_compared": 2349,
+      "INVARIANT_FALSE": 128,
+      "NO_ADMISSIBLE_EXTENSION": 81,
+      "INVARIANT_TRUE": 122,
+      "DISAGREEMENT": 92
+    },
+    "certificate_types": {
+      "POSITIVE_WITNESS": 978,
+      "FARKAS_CONTRADICTION": 1083,
+      "DUAL_ZERO_BOUND": 288
+    },
+    "mismatches": 0,
+    "certificate_mutations_rejected": 42,
+    "verification_without_search": true
+  },
+  "unit_tests": 16,
+  "independent_mathematical_readback": true
+}

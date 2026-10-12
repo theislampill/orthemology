@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "kernel_credit": false,
+  "checks": [
+    {
+      "id": "P03-A2-COMPAT-ITERABLE",
+      "canonical_export_sha256": "4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3",
+      "legacy_generator_row_accepted": true,
+      "new_named_strict_entry_refusal": "export: name/bytes pair required",
+      "immutable_row_output_exactly_equal": true,
+      "meaning": "No owner decision to remove legacy behavior was assumed. This is a separately named strict entry."
+    },
+    {
+      "id": "P03-A2-CE-TRACE-LAW",
+      "same_trace_support": [
+        0,
+        1
+      ],
+      "concrete_masses": {
+        "0": [
+          1,
+          2
+        ],
+        "1": [
+          1,
+          2
+        ]
+      },
+      "abstract_masses": {
+        "0": [
+          3,
+          4
+        ],
+        "1": [
+          1,
+          4
+        ]
+      },
+      "probability_laws_equal": false,
+      "meaning": "Trace support or trace inclusion does not identify a probability law."
+    }
+  ]
+}

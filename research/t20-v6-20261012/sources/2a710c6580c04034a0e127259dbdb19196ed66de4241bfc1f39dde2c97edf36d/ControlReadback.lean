@@ -1,0 +1,37 @@
+import BoundaryControls
+#check @CausalQueryAudit.exact_center_good
+#print axioms CausalQueryAudit.exact_center_good
+#check @CausalQueryAudit.zero_disturbance_all_norms
+#print axioms CausalQueryAudit.zero_disturbance_all_norms
+#check @CausalQueryAudit.fixed_disturbance_interval
+#print axioms CausalQueryAudit.fixed_disturbance_interval
+#check @CausalQueryAudit.decoder_necessary_not_sufficient
+#print axioms CausalQueryAudit.decoder_necessary_not_sufficient
+#check @CausalQueryAudit.endpoint_zero_no_strict
+#print axioms CausalQueryAudit.endpoint_zero_no_strict
+#check @CausalQueryAudit.endpoint_one_no_strict
+#print axioms CausalQueryAudit.endpoint_one_no_strict
+#check @CausalQueryAudit.outside_probability_domain_strict_endpoint
+#print axioms CausalQueryAudit.outside_probability_domain_strict_endpoint
+#check @CausalQueryAudit.never_ask_run
+#print axioms CausalQueryAudit.never_ask_run
+#check @CausalQueryAudit.never_ask_oracle_independence
+#print axioms CausalQueryAudit.never_ask_oracle_independence
+#check @CausalQueryAudit.zero_prefix_locality
+#print axioms CausalQueryAudit.zero_prefix_locality
+#check @CausalQueryAudit.raw_oracles_differ_but_observed_traces_equal
+#print axioms CausalQueryAudit.raw_oracles_differ_but_observed_traces_equal
+#check @CausalQueryAudit.one_query_run
+#print axioms CausalQueryAudit.one_query_run
+#check @CausalQueryAudit.one_query_bounded
+#print axioms CausalQueryAudit.one_query_bounded
+#check @CausalQueryAudit.first_queried_bit_matters
+#print axioms CausalQueryAudit.first_queried_bit_matters
+#check @CausalQueryAudit.always_ask_count
+#print axioms CausalQueryAudit.always_ask_count
+#check @CausalQueryAudit.always_ask_not_bounded
+#print axioms CausalQueryAudit.always_ask_not_bounded
+#check @CausalQueryAudit.parameter_coded_seed_succeeds
+#print axioms CausalQueryAudit.parameter_coded_seed_succeeds
+#check @CausalQueryAudit.fixed_norm_no_query_success
+#print axioms CausalQueryAudit.fixed_norm_no_query_success

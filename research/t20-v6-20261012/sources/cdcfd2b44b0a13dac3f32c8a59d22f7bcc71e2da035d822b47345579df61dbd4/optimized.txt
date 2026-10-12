@@ -1,0 +1,2 @@
+LR derivative: 3*(32*p**2 - 32*p + 13)/(p**2*(16*p - 13)**2)
+{'checks': 3213, 'status': 'PASS', 'universal_claim': 'ordinary algebra/convex proof; grid is finite control'}

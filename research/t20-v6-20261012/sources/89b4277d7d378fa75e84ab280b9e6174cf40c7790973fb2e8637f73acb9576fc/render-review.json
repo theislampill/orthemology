@@ -1,0 +1,29 @@
+{
+  "baseline_source_reproduces_supplied_pdf_text": true,
+  "baseline_source_reproduces_supplied_pdf_pixels": true,
+  "pagewise_v4_v5_pixel_equality": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "renderer": "PyMuPDF 1.26.7",
+  "visual_review": {
+    "status": "COMPLETED",
+    "method": "Direct visual inspection of all baseline pages; final pages 1-7 are pixel-identical to that inspected baseline. Final main spreads 4-6 (pages 7-12) and final assessment pages 1-3 directly inspected.",
+    "main_pages": 12,
+    "assessment_pages": 3,
+    "main_pdf_sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+    "assessment_pdf_sha256": "c5df520d9ed0c3db4ee3faabf5c782018b7590948f110890330e008777faf7a0",
+    "findings": "No unresolved clipping, overlap, missing glyph or illegible layout detected. Proof and reference flow inspected.",
+    "limits": "Author visual inspection, not an independent reader study or mathematical proof."
+  }
+}

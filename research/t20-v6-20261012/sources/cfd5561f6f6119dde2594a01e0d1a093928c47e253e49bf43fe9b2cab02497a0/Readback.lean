@@ -1,0 +1,151 @@
+import AuditedBitControlLaw
+import FiniteAuditRepair
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.AuditControlBridge.actionBlindKernel
+#print Orthemology.Tranche3.AuditControlBridge.actionBlindKernel
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel
+#check Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg
+#print Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg
+#check Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized
+#print Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized
+#check Orthemology.Tranche3.AuditControlBridge.wordPMF
+#print Orthemology.Tranche3.AuditControlBridge.wordPMF
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF
+#check Orthemology.Tranche3.AuditControlBridge.wordPMF_zero
+#print Orthemology.Tranche3.AuditControlBridge.wordPMF_zero
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_zero
+#check Orthemology.Tranche3.AuditControlBridge.wordPMF_succ
+#print Orthemology.Tranche3.AuditControlBridge.wordPMF_succ
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_succ
+#check Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix
+#print Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix
+#check Orthemology.Tranche3.AuditControlBridge.encodeHistory
+#print Orthemology.Tranche3.AuditControlBridge.encodeHistory
+#print axioms Orthemology.Tranche3.AuditControlBridge.encodeHistory
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory
+#check Orthemology.Tranche3.AuditControlBridge.auditActions
+#print Orthemology.Tranche3.AuditControlBridge.auditActions
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_succ
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_succ
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_succ
+#check Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF
+#print Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF
+#print axioms Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_drop
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_drop
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_drop
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last
+#check Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees
+#print Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees
+#print axioms Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees
+#check Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past
+#print Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical
+#check Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical
+#print Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical
+#check Orthemology.Tranche3.AuditControlBridge.auditActions_measurable
+#print Orthemology.Tranche3.AuditControlBridge.auditActions_measurable
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_measurable
+#check Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical
+#print Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical
+#check Orthemology.Tranche3.FiniteAuditRepair.weight
+#print Orthemology.Tranche3.FiniteAuditRepair.weight
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight
+#check Orthemology.Tranche3.FiniteAuditRepair.report
+#print Orthemology.Tranche3.FiniteAuditRepair.report
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.report
+#check Orthemology.Tranche3.FiniteAuditRepair.kernels
+#print Orthemology.Tranche3.FiniteAuditRepair.kernels
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels
+#check Orthemology.Tranche3.FiniteAuditRepair.literalGood
+#print Orthemology.Tranche3.FiniteAuditRepair.literalGood
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literalGood
+#check Orthemology.Tranche3.FiniteAuditRepair.publicMenu
+#print Orthemology.Tranche3.FiniteAuditRepair.publicMenu
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.publicMenu
+#check Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg
+#print Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg
+#check Orthemology.Tranche3.FiniteAuditRepair.weight_le_one
+#print Orthemology.Tranche3.FiniteAuditRepair.weight_le_one
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight_le_one
+#check Orthemology.Tranche3.FiniteAuditRepair.kernels_pos
+#print Orthemology.Tranche3.FiniteAuditRepair.kernels_pos
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_pos
+#check Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg
+#print Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg
+#check Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized
+#print Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized
+#check Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact
+#print Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact
+#check Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses
+#print Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses
+#check Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses
+#print Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses
+#check Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair
+#print Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair
+#check Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent
+#print Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent
+#check Orthemology.Tranche3.FiniteAuditRepair.kernels_identify
+#print Orthemology.Tranche3.FiniteAuditRepair.kernels_identify
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_identify
+#check Orthemology.Tranche3.FiniteAuditRepair.support_stays
+#print Orthemology.Tranche3.FiniteAuditRepair.support_stays
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.support_stays
+#check Orthemology.Tranche3.FiniteAuditRepair.full_family_winning
+#print Orthemology.Tranche3.FiniteAuditRepair.full_family_winning
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.full_family_winning
+#check Orthemology.Tranche3.FiniteAuditRepair.initialPhase
+#print Orthemology.Tranche3.FiniteAuditRepair.initialPhase
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.initialPhase
+#check Orthemology.Tranche3.FiniteAuditRepair.policy
+#print Orthemology.Tranche3.FiniteAuditRepair.policy
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.policy
+#check Orthemology.Tranche3.FiniteAuditRepair.reports
+#print Orthemology.Tranche3.FiniteAuditRepair.reports
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports
+#check Orthemology.Tranche3.FiniteAuditRepair.budget
+#print Orthemology.Tranche3.FiniteAuditRepair.budget
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.budget
+#check Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law
+#print Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law
+#check Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent
+#print Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent
+#check Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict
+#print Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict
+#check Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost
+#print Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost
+#check Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures
+#print Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures
+#check Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite
+#print Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite

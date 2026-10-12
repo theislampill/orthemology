@@ -1,0 +1,15 @@
+\usepackage{lmodern,microtype}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Review Adjudication and Preservation}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{2em}
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{center}
+  {\Large\bfseries\@title\par}\vspace{5pt}
+  {\normalsize\@date\par}
+  \end{center}\vspace{4pt}\thispagestyle{plain}}
+\makeatother

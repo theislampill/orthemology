@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "semantic_mutants": 16,
+  "killed": 16,
+  "results": [
+    {
+      "id": "M01_CURRENT_TOP_ONLY",
+      "status": "KILLED",
+      "correct": "(('t', Origin(snapshot='model', locus='a')),)",
+      "mutant": "(('t', Origin(snapshot='model', locus='b')),)",
+      "mechanism": "ignore scope restoration"
+    },
+    {
+      "id": "M02_NET_HEIGHT_ONLY",
+      "status": "KILLED",
+      "correct": "'rejected'",
+      "mutant": "((Origin(snapshot='model', locus='b'), Origin(snapshot='model', locus='a')), ())",
+      "mechanism": "erase consumed incoming frame and prefix underflow"
+    },
+    {
+      "id": "M03_DROP_KEYED_EXIT",
+      "status": "KILLED",
+      "correct": "'rejected'",
+      "mutant": "((Origin(snapshot='model', locus='c'),), ())",
+      "mechanism": "omit source-origin equality"
+    },
+    {
+      "id": "M04_COPY_AS_NEW_ROOT",
+      "status": "KILLED",
+      "correct": "1",
+      "mutant": "2",
+      "mechanism": "count carrier occurrences as independent original dependencies"
+    },
+    {
+      "id": "M05_SAME_TEXT_COLLAPSE",
+      "status": "KILLED",
+      "correct": "None",
+      "mutant": "True",
+      "mechanism": "drop unresolved different-origin occurrence because text matches"
+    },
+    {
+      "id": "M06_WEIGHTED_FURTHEST_RIGHT",
+      "status": "KILLED",
+      "correct": "Fraction(2, 1)",
+      "mutant": "Fraction(100, 1)",
+      "mechanism": "apply unit-cost greedy rule to unequal weights"
+    },
+    {
+      "id": "M07_FILL_RAW_INTERVAL_HOLE",
+      "status": "KILLED",
+      "correct": "Fraction(2, 1)",
+      "mutant": "Fraction(1, 1)",
+      "mechanism": "pretend nonconvex adequate-role coverage contains middle key"
+    },
+    {
+      "id": "M08_ADDRESS_IMPLIES_QUERY_RIGHT",
+      "status": "KILLED",
+      "correct": "inf",
+      "mutant": "Fraction(1, 1)",
+      "mechanism": "ignore successor eligibility"
+    },
+    {
+      "id": "M09_SOUND_ABSTENTION_IS_COMPLETION",
+      "status": "KILLED",
+      "correct": "False",
+      "mutant": "True",
+      "mechanism": "incorrect completion guard accepts an always-unresolved policy"
+    },
+    {
+      "id": "M10_MARGINALS_IMPLY_LOCALITY",
+      "status": "KILLED",
+      "correct": "False",
+      "mutant": "True",
+      "mechanism": "ignore richer response field disclosing b"
+    },
+    {
+      "id": "M11_LOCALITY_IMPLIES_ADEQUACY",
+      "status": "KILLED",
+      "correct": "False",
+      "mutant": "True",
+      "mechanism": "all-key locality is vacuous; response may be uninformative"
+    },
+    {
+      "id": "M12_LOCAL_SPEAKER_IS_GLOBAL_ROLE",
+      "status": "KILLED",
+      "correct": "False",
+      "mutant": "True",
+      "mechanism": "author name inside an enclosing source quotation"
+    },
+    {
+      "id": "M13_RETAINED_COUNT_ONLY",
+      "status": "KILLED",
+      "correct": "Fraction(2, 1)",
+      "mutant": "Fraction(1, 1)",
+      "mechanism": "treat carrying middle b as equivalent to carrying edge a"
+    },
+    {
+      "id": "M14_HIDE_SELECTOR_CHANNEL",
+      "status": "KILLED",
+      "correct": "Fraction(0, 1)",
+      "mutant": "Fraction(2, 1)",
+      "mechanism": "ignore an agreed label-dependent retained-origin code"
+    },
+    {
+      "id": "M15_DISCARD_WHOLE_SOURCE_ALTERNATIVE",
+      "status": "KILLED",
+      "correct": "Fraction(1, 1)",
+      "mutant": "Fraction(2, 1)",
+      "mechanism": "artificially omit a genuinely available read"
+    },
+    {
+      "id": "M16_PROMOTE_SOURCE_FORCE_TO_CARRIER",
+      "status": "KILLED",
+      "correct": "'report'",
+      "mutant": "'assertion'",
+      "mechanism": "copy original-author role into current quotation force"
+    }
+  ],
+  "scope": "Explicit faulty semantic/algorithm alternatives; not production/compiler mutation coverage."
+}
+
+exit_code=0

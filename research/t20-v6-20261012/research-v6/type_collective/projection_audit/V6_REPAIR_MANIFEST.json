@@ -1,0 +1,65 @@
+{
+  "scope": "Additive v6 copies only. Restore exactly five mathematical occurrences in three files; frozen original/public/v4/v5 trees are read-only. Output bytes must equal the exact original source hash. Legitimate navigation header is untouched.",
+  "repairs": [
+    {
+      "relative_path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "input_path": "deliverables/Orthemology_T20_Consolidated_20261011/public_candidate/source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "input_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+      "original_source_path": "t20-consolidation-20261011/catalogue/objects/c2/c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "output_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "output_path": "t20-v6-20261011/type_collective/projection_audit/repaired_public_copy/source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "replacements": [
+        {
+          "public_preimage": "q_\\#(L\\mu) (original packet locator: y, not a link in this projection)",
+          "original_postimage": "[q_\\#(L\\mu)](y)",
+          "public_line": 76,
+          "original_line": 76
+        },
+        {
+          "public_preimage": "(q_t)_\\#B_R\\mu (original packet locator: y, not a link in this projection)",
+          "original_postimage": "[(q_t)_\\#B_R\\mu](y)",
+          "public_line": 731,
+          "original_line": 731
+        }
+      ]
+    },
+    {
+      "relative_path": "source-suites/determinate-moment-effectivity-20261010/RESULT.md",
+      "input_path": "deliverables/Orthemology_T20_Consolidated_20261011/public_candidate/source-suites/determinate-moment-effectivity-20261010/RESULT.md",
+      "input_sha256": "6a2185177a5f6359462f0dcfc5f3c29eec46c6d6a3162bf89b75679592646ea5",
+      "original_source_path": "t20-consolidation-20261011/catalogue/objects/96/9661eef2d88370d2d996e68f666777c6ac0ffb93155d102ec50873f155e91383",
+      "output_sha256": "9661eef2d88370d2d996e68f666777c6ac0ffb93155d102ec50873f155e91383",
+      "output_path": "t20-v6-20261011/type_collective/projection_audit/repaired_public_copy/source-suites/determinate-moment-effectivity-20261010/RESULT.md",
+      "replacements": [
+        {
+          "public_preimage": "r R^(r−1)+U R^r (original packet locator: 1+R, not a link in this projection)",
+          "original_postimage": "[r R^(r−1)+U R^r](1+R)",
+          "public_line": 85,
+          "original_line": 85
+        }
+      ]
+    },
+    {
+      "relative_path": "sources/4f5d51008ec62391/RESULT.md",
+      "input_path": "deliverables/Orthemology_T20_Consolidated_20261011/public_candidate/sources/4f5d51008ec62391/RESULT.md",
+      "input_sha256": "b0d1e25cdcaa1cce9e2abff62ce0ee775f34fac217efa0b5bdc0379f0756b7b5",
+      "original_source_path": "t20-consolidation-20261011/catalogue/objects/4f/4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "output_sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "output_path": "t20-v6-20261011/type_collective/projection_audit/repaired_public_copy/sources/4f5d51008ec62391/RESULT.md",
+      "replacements": [
+        {
+          "public_preimage": "m (original packet locator: x0, not a link in this projection)",
+          "original_postimage": "[m](x0)",
+          "public_line": 155,
+          "original_line": 155
+        },
+        {
+          "public_preimage": "m (original packet locator: x, not a link in this projection)",
+          "original_postimage": "[m](x)",
+          "public_line": 157,
+          "original_line": 157
+        }
+      ]
+    }
+  ]
+}

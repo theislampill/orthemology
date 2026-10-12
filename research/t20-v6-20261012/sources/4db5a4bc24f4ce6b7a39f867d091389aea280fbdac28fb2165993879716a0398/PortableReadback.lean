@@ -1,0 +1,114 @@
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import SelfVerifyingSupport
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.resetCost_continuation_bound
+#print axioms Orthemology.Tranche3.resetCost_continuation_bound
+#check @Orthemology.Tranche3.phaseChainBudget
+#print axioms Orthemology.Tranche3.phaseChainBudget
+#check @Orthemology.Tranche3.phaseContinuationBudget
+#print axioms Orthemology.Tranche3.phaseContinuationBudget
+#check @Orthemology.Tranche3.phaseChainBudget_eq
+#print axioms Orthemology.Tranche3.phaseChainBudget_eq
+#check @Orthemology.Tranche3.phaseContinuationBudget_nonneg
+#print axioms Orthemology.Tranche3.phaseContinuationBudget_nonneg
+#check @Orthemology.Tranche3.phaseChainBudget_nonneg
+#print axioms Orthemology.Tranche3.phaseChainBudget_nonneg
+#check @Orthemology.Tranche3.phaseChainBudget_le_continuation
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_continuation
+#check @Orthemology.Tranche3.phaseChainBudget_le_rank_bound
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_rank_bound
+#check @Orthemology.Tranche3.phaseChainBudget_le_supersolution
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_supersolution
+#check @Orthemology.Tranche3.chain_reset_hellinger_budget
+#print axioms Orthemology.Tranche3.chain_reset_hellinger_budget
+#check @Orthemology.Tranche3.recursiveExitEdge
+#print axioms Orthemology.Tranche3.recursiveExitEdge
+#check @Orthemology.Tranche3.recursiveExitEdge_rank
+#print axioms Orthemology.Tranche3.recursiveExitEdge_rank
+#check @Orthemology.Tranche3.recursiveHellingerWeight
+#print axioms Orthemology.Tranche3.recursiveHellingerWeight
+#check @Orthemology.Tranche3.recursiveBadCharge_positive
+#print axioms Orthemology.Tranche3.recursiveBadCharge_positive
+#check @Orthemology.Tranche3.recursiveHellingerWeight_nonneg
+#print axioms Orthemology.Tranche3.recursiveHellingerWeight_nonneg
+#check @Orthemology.Tranche3.recursiveChainBudget
+#print axioms Orthemology.Tranche3.recursiveChainBudget
+#check @Orthemology.Tranche3.recursiveChainBudget_le_global
+#print axioms Orthemology.Tranche3.recursiveChainBudget_le_global
+#check @Orthemology.Tranche3.recursive_resetCost_le_chainBudget
+#print axioms Orthemology.Tranche3.recursive_resetCost_le_chainBudget
+#check @Orthemology.Tranche3.recursive_physical_budget_transfer
+#print axioms Orthemology.Tranche3.recursive_physical_budget_transfer
+#check @Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget
+#check @Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget
+#check @Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail
+#check @Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae
+#check @IndependentChainControls.no_self_edge
+#print axioms IndependentChainControls.no_self_edge
+#check @IndependentChainControls.leaf_budget
+#print axioms IndependentChainControls.leaf_budget
+#check @IndependentChainControls.root_budget
+#print axioms IndependentChainControls.root_budget
+#check @IndependentChainControls.coarse_rank_budget
+#print axioms IndependentChainControls.coarse_rank_budget
+#check @IndependentChainControls.strict_improvement
+#print axioms IndependentChainControls.strict_improvement
+#check @IndependentChainControls.local_supersolution_least
+#print axioms IndependentChainControls.local_supersolution_least
+#check @IndependentChainControls.no_rank_for_self_reset
+#print axioms IndependentChainControls.no_rank_for_self_reset
+#check @IndependentChainControls.no_rank_for_cycle
+#print axioms IndependentChainControls.no_rank_for_cycle

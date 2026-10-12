@@ -1,0 +1,2 @@
+source "${REFERENCE_TOOLCHAIN_ENV:?}"
+export PATH="${PATH_DECOY_DIR:?}:$PATH"

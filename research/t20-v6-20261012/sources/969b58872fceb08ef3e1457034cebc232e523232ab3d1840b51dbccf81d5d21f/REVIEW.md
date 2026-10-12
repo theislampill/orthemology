@@ -1,0 +1,49 @@
+# Independent bounded review: collective diagnosis and committed continuation
+
+11 October 2026. Verdict: **PASS at the stated conditional mathematical and finite-control scope; no blocking defect found.** This is an independent review of the frozen local candidate, not adoption, historical-priority certification, empirical replication, formal kernel verification, or a general continuation theorem.
+
+## Evidence and execution
+
+Read RESULT.md, SCOPED_CLAIMS.json, CONTROL_CHECKS.py, VERIFICATION.json and the source bindings. Directly inspected the actual bound T15 compendium's Gaussian construction, passive binary readout, recording channel, exact angular example, finite/sequential restrictions and Bayesian qualification; the bound T16 reader's tree construction, semantic migration, effective pruning, convergent-plan Proposition 5 and finite-lookahead theorem. Also checked the selected T15 report narrative, T13 missing-outcome companion, and relevant ET-01/03/05/07/14/17/20 synthesis interfaces. Other empirical bodies and underlying datasets were not reread or executed. The T12 source was hash-checked only in this review.
+
+All five source-file hashes and five context-file hashes match INPUT_BINDINGS.json. All six deliverable hashes recorded in VERIFICATION.json match. The author controls produce 537 passing checks under ordinary Python and Python -O, byte-identically matching both supplied outputs. INDEPENDENT_CHECKS.py supplies 2,108 additional exact checks in both modes, again with identical outputs. These counts are executable assertions about finite examples, not numbers of mathematical theorems or empirical observations.
+
+The independent program derives the noisy table by convolving the inherited uncorrupted table with the bit-flip channel, then calculates squared loss directly under both possible mechanism truths. It checks 61 recording rates across the whole [0,1] interval and four unequal/equal priors, the cost boundary, calibration replacement, disjoint-trial pairing, a 47-terminal-transcript adaptive/stop-kernel example, a bounded late-discovery tree illustration, and all four-state/two-parity length-four service traces. The Gaussian angle calculation and the general computability arguments are checked as written mathematics, not inferred from those tests.
+
+## CC-01: answer-only adaptive acquisition
+
+The proposed extension is valid. Its essential extra assumption is conditional freshness after the design choice, not simply fresh-looking identifiers or equality of individual answer marginals. If the common observed history is h, the policy's design/stop kernel is the same in each model. Conditional on h and the chosen (x,a), independence of the newly drawn Gaussian triple gives the same Bernoulli probability Phi(x/sqrt(v+r_a)). Integrating the common transition kernel against the equal past laws proves the finite-prefix induction. Absorbing padding after stopping makes eventual stopping and reported results measurable in the infinite transcript; equality on cylinder sets determines the same law on the countable product's sigma-algebra. Real-valued designs and binary answers are standard measurable spaces at this scope.
+
+Including observed policy randomness causes no extra evidence when its seed has the same model-independent law and is independent of all fresh model noises. A persistent private random seed can be included as a latent state in the induction; its observable projections then preserve equality. The Gaussian pair is not asserted to agree pathwise on a shared noise realization. Nor does finite or infinite equality justify a model-specific calibration audit or direct intervention. These exclusions are stated explicitly in the candidate and faithfully respect the older source's express exclusion of adaptive designs from its original fixed-design proof.
+
+The posterior claim is appropriately pairwise. Matching parameter points does not imply equality under arbitrarily different composite-model priors. Common postprocessing cannot create evidence, whereas new informative observations may. No answer-only failure is incorrectly attributed to root bookkeeping itself.
+
+## CC-02: linked observation, decision value and recalibration
+
+The source angular event has width 5 pi/6 out of 2 pi, giving 5/12. Fair marginals determine the remaining uncorrupted cells as 1/12, 1/12 and 5/12. Independent flipping produces delta=(1-2 epsilon)/6 and the stated two tables. Their difference has zero row/column sums and rank one for nonzero delta, rank zero at epsilon=1/2. Disjoint independent trial acquisitions instead yield the product of fair marginals. The report properly declines to extend this claim to every shuffled finite array.
+
+For equal priors, let s indicate concordance. Its predictive probabilities are 1/2+delta and 1/2-delta, and posterior departures from 1/2 are respectively delta/(1+2 delta) and -delta/(1-2 delta). Their weighted squared sum is delta^2/(1-4 delta^2). Direct truth-state loss enumeration confirms risk 7/32 and gain 1/32 at epsilon=0, and gain 1/140 at epsilon=1/4. A price of 1/64 therefore genuinely reverses the decision. The exact preference boundary is 68 delta^2>1; no numerical approximation is needed. Reversed sensors beyond epsilon=1/2 remain informative, consistent with the original T15 source, and the value is symmetric around 1/2.
+
+For a concordant observed pair, the old factor is 5/3 and revised factor 4/3. Replacing the former by the latter gives 4/7; multiplying both gives 20/29. The latter is warranted for two conditionally independent concordant trials with their respective declared calibrations, not for two readings of one trial. An externally learned calibration is not automatically independent of the report. The candidate explicitly requires a legitimately supplied exact value and routes report-dependent audits through the joint law, so no unearned conditional-independence premise is hidden in this example.
+
+The ET-07/17 join is a bounded example of calibrated inquiry value and retained model coupling, not a new counterexample to branch-weight identification or robust Bellman recursion. The report's nonidentification/cost example does not prove sensor feasibility, member contribution in the empirical dyads, action authority, or a measured economic value. The loss convention is explicitly squared probability error; comparisons to differently scaled scores must retain that convention.
+
+## CC-03: retrospective recomputation versus commitment
+
+The source genuinely settles full two-bit semantics and model-level ancestry at each admitted handoff. This is not merely equal readouts: (0,0) and (0,1) expose the consequence of losing the pending state, and decode/transition/re-encode commutes on every state and input. Authority and shared support remain separately stipulated.
+
+The diagonal tree is decidable and prefix closed because later finite simulation stages retain earlier discovered requirements. H(n) meets every visible requirement. Its coordinatewise limit chi_A is a path, but any computable path f has an index k and eventually encounters the opposite-bit requirement generated by phi_k(k)=f(k). This contradiction excludes every total computable committed controller, without any fixed-memory assumption. A computable stabilization modulus would compute chi_A. A computable unbounded prefix-coherent sequence of the H(n) would compute its infinite union. Both reductions are sound and are inherited directly from Proposition 5.
+
+An earlier admitted history remains admitted at its original length. A later discovery may block its extension; it does not rewrite or retroactively invalidate that completed past. Recomputing a deeper candidate plan can therefore remain exact while failing to furnish an executable extension of the committed plan. This is a legitimate failed transport from horizon-indexed finite reconstruction to one indefinite irrevocable lineage, not a counterexample to ET-14's finite replay induction.
+
+The lookahead claim is also scoped correctly: every prefix receives a finite existential extension in T, not a recursively strengthened L_h viability certificate. Every T path satisfies these finite demands, so T and L_h have the same paths. Effective finite level search supplies plans, without selecting a computable infinite path.
+
+The positive repair is exact as an existence equivalence and as a uniform extractor *from an already warranted enumerator*. A path gives its decidable prefix tree; a rooted c.e. pruned subtree gives a next child after finite enumeration. The report does not promise an algorithm to discover or validate an arbitrary pruning witness.
+
+One implementation precision worth retaining if this becomes executable: restart the enumerator at each choice, as the T16 proof says, or cache earlier emissions. Merely continuing a one-pass stream while waiting for a newly needed child can miss a child emitted before its parent was chosen. This is a nonblocking elaboration of the existing theorem, not a flaw in the mathematical bridge or a request to change the originals.
+
+## Disposition and limits
+
+Accept CC-01 as a new conditional extension of inherited equality, CC-02 as a new bounded decision calculation on inherited laws, and CC-03 as a faithful application of inherited computability results. Retain the three claims' distinct provenance. No primary-source fetch or repository mutation was performed. No raw empirical dataset, statistical classifier, Lean kernel, randomized continuation theorem or closed-generation population theorem was replayed. The broad T20 synthesis remains outside this review's closure authority.
+
+Hash bindings and exact read-scope declarations are in REVIEW_BINDINGS.json; replay and independent outputs remain beside this file. Original files are unchanged.

@@ -1,0 +1,30 @@
+{
+  "timestamp_utc": "2026-10-10T20:40:49.906727+00:00",
+  "status": "PASS_SCOPED_ORDINARY_PROOF_REVIEW",
+  "source": "heat-truncated-certificate-diagnostic-20261010/FILTERED_OPERATOR_NOTE.md",
+  "source_sha256": "b75bc63ffa43907f816e535603e5a724134e54f1ef7dab69f394bd269e252484",
+  "prior_source_sha256": "5d3b74f7e30e3a5535a54a0e6eed527de62afcd0bbdd814bb646dee6a212ddd4",
+  "only_source_revision": "Linearity premise made explicit; exact one-phrase delta checked.",
+  "review": "FILTERED_OPERATOR_REVIEW.md",
+  "review_sha256": "1c1c89a83d884a563c6e3f7b0b80a975255d9e4017120ae479bc540d2b14fb66",
+  "assumptions": [
+    "T and N are real linear endomorphisms of polynomials of degree at most 2d.",
+    "m is strictly positive and N strictly lowers homogeneous degree.",
+    "The nonnegative and SOS cones differ in that fixed degree space."
+  ],
+  "verified": [
+    "Dilation conjugation and finite-dimensional limit",
+    "Gaussian Gram-trace proof of closedness",
+    "Nonzero positive convolution specialization",
+    "Finite nilpotent inverse",
+    "Separation and Gaussian strictification",
+    "Truncated nonmoment dual countercertificate",
+    "Gaussian averaging projection is a legitimate outside-hypothesis positive control"
+  ],
+  "prior_review_receipt_sha256": "372ff468b6543079da132f40b9bf02b640f48c322efdb52e989902e0883a748c",
+  "new_numeric_tests": false,
+  "full_functional_extension_claimed": false,
+  "protected_changes": false,
+  "field_novelty_claimed": false,
+  "T20_closure": false
+}

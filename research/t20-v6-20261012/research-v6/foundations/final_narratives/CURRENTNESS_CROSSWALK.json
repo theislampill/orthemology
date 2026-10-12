@@ -1,0 +1,372 @@
+{
+  "groups": [
+    {
+      "family": "Historical common-source and veracity scope",
+      "claim_ids": [
+        "FND-007",
+        "FND-022",
+        "FND-030"
+      ],
+      "sources": [
+        {
+          "queue_index": 6,
+          "sha256": "2a16d76acbe3682cb5ca5acf63a194d06fe08d968dcb174184d7393b59ce9a5e",
+          "path": "t20-consolidation-20261011/catalogue/objects/2a/2a16d76acbe3682cb5ca5acf63a194d06fe08d968dcb174184d7393b59ce9a5e",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 38,
+          "sha256": "7c6417cfffb384080b6645179d0d7c107fdb6700d5d21cc9e37cddca05c36e53",
+          "path": "t20-consolidation-20261011/catalogue/objects/7c/7c6417cfffb384080b6645179d0d7c107fdb6700d5d21cc9e37cddca05c36e53",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 46,
+          "sha256": "92faeaef73c26888ed87405167c498bf35b6c0e5dcf82c0d4701865778333833",
+          "path": "t20-consolidation-20261011/catalogue/objects/92/92faeaef73c26888ed87405167c498bf35b6c0e5dcf82c0d4701865778333833",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 50,
+          "sha256": "b238906841a9aeee8ed711a7fa3269158bf3678621c973ff858855eb49962017",
+          "path": "t20-consolidation-20261011/catalogue/objects/b2/b238906841a9aeee8ed711a7fa3269158bf3678621c973ff858855eb49962017",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 59,
+          "sha256": "c165c117a8af0422126c83b84e9a516d22e4871e3008cce7b06176d8a129c96d",
+          "path": "t20-consolidation-20261011/catalogue/objects/c1/c165c117a8af0422126c83b84e9a516d22e4871e3008cce7b06176d8a129c96d",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 72,
+          "sha256": "efe193b34bacf18acb9a6951cbdadeba5f7eb895f9a3fa7c549ce0b7fa623e28",
+          "path": "t20-consolidation-20261011/catalogue/objects/ef/efe193b34bacf18acb9a6951cbdadeba5f7eb895f9a3fa7c549ce0b7fa623e28",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "T19 positive field appraisal and T17 source-owned veracity remain operative; weak-signature controls do not preserve the full source profile. Stronger semantics has projection dependencies, not new attribute gaps."
+    },
+    {
+      "family": "Practical agency and particular determination",
+      "claim_ids": [
+        "FND-013",
+        "FND-014",
+        "FND-015",
+        "FND-018"
+      ],
+      "sources": [
+        {
+          "queue_index": 1,
+          "sha256": "020efda00f3f568d027c8f0b286ae7763b0168b247aafe58e0e64348046a44fd",
+          "path": "t20-consolidation-20261011/catalogue/objects/02/020efda00f3f568d027c8f0b286ae7763b0168b247aafe58e0e64348046a44fd",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 4,
+          "sha256": "279abf48abe6a2ac7a323ed04d546768c6c8addfeb6a050edb745a1e9a6785c0",
+          "path": "t20-consolidation-20261011/catalogue/objects/27/279abf48abe6a2ac7a323ed04d546768c6c8addfeb6a050edb745a1e9a6785c0",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 8,
+          "sha256": "2e7426dae54f81f3ce71435d6c161aa91d82fac189a368ff923220e6dbd97531",
+          "path": "t20-consolidation-20261011/catalogue/objects/2e/2e7426dae54f81f3ce71435d6c161aa91d82fac189a368ff923220e6dbd97531",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 19,
+          "sha256": "47c1773b679c57b76cdbb869ad631054f3da65da5e6c778f5565b151d9c3af71",
+          "path": "t20-consolidation-20261011/catalogue/objects/47/47c1773b679c57b76cdbb869ad631054f3da65da5e6c778f5565b151d9c3af71",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 20,
+          "sha256": "4c66f44461ebc91cc4d8ea10feea78be8867681898efb9af9d579ad0a213d7b5",
+          "path": "t20-consolidation-20261011/catalogue/objects/4c/4c66f44461ebc91cc4d8ea10feea78be8867681898efb9af9d579ad0a213d7b5",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 37,
+          "sha256": "7c0c411c751783975377eb068cc56f00af1298f166cd7e9447275d7d7081e1c0",
+          "path": "t20-consolidation-20261011/catalogue/objects/7c/7c0c411c751783975377eb068cc56f00af1298f166cd7e9447275d7d7081e1c0",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 40,
+          "sha256": "8094e70ac1d7f6a9f4152a0c5d391034fa56f4c7febbd62005668a01137bce5a",
+          "path": "t20-consolidation-20261011/catalogue/objects/80/8094e70ac1d7f6a9f4152a0c5d391034fa56f4c7febbd62005668a01137bce5a",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 53,
+          "sha256": "b71a4d5c1bdd1148a7786e295edb0f2f84cbbb4dbe4fd1eaf9d28b92a1f57803",
+          "path": "t20-consolidation-20261011/catalogue/objects/b7/b71a4d5c1bdd1148a7786e295edb0f2f84cbbb4dbe4fd1eaf9d28b92a1f57803",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 64,
+          "sha256": "e0b26a5108ab80100f5a78129756ba609e403430d5dd1be2710cfd81a75e1dd2",
+          "path": "t20-consolidation-20261011/catalogue/objects/e0/e0b26a5108ab80100f5a78129756ba609e403430d5dd1be2710cfd81a75e1dd2",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 74,
+          "sha256": "f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87",
+          "path": "t20-consolidation-20261011/catalogue/objects/f7/f7451e1e34e4f14c0baade2cd9e9fc5893295a5a4a3d5506253da1691bd3da87",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "Preserve positive intrinsic cognition/willing, achieved-end explanation and source-supported purpose. Rival explanation challenges a sufficiency standard without showing an actual perfected original counterexample; exact-q disclosure is not a second general-warrant test."
+    },
+    {
+      "family": "Relational perfection, collective explanation and law-only rivals",
+      "claim_ids": [
+        "FND-004",
+        "FND-005",
+        "FND-006",
+        "FND-009",
+        "FND-010",
+        "FND-011",
+        "FND-018"
+      ],
+      "sources": [
+        {
+          "queue_index": 2,
+          "sha256": "130563d3d1f1dfbed453520a35a8a10de03d5ba40fb866e8263fb2f8cc8d9680",
+          "path": "t20-consolidation-20261011/catalogue/objects/13/130563d3d1f1dfbed453520a35a8a10de03d5ba40fb866e8263fb2f8cc8d9680",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 10,
+          "sha256": "316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414",
+          "path": "t20-consolidation-20261011/catalogue/objects/31/316e7bd24f600c5f89e95cbf75b725284bb3d25ad3b52baa24d483b9babc7414",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 24,
+          "sha256": "5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5",
+          "path": "t20-consolidation-20261011/catalogue/objects/5e/5e1371ebf6411da8b5bdc0dc052fe8b33379e5fc4c855616b0e4575a5f48deb5",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 31,
+          "sha256": "6da1ffcbd2f780e3f3007b66024b2b4a65641812567f12cb8e06fad930812abc",
+          "path": "t20-consolidation-20261011/catalogue/objects/6d/6da1ffcbd2f780e3f3007b66024b2b4a65641812567f12cb8e06fad930812abc",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 42,
+          "sha256": "83dbb731e06c91554949e7b5920bb06b8c91ce92d77b6a0ee9e069c48db7c919",
+          "path": "t20-consolidation-20261011/catalogue/objects/83/83dbb731e06c91554949e7b5920bb06b8c91ce92d77b6a0ee9e069c48db7c919",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 76,
+          "sha256": "fc1aa6cd8bd0e659dc7bc5c91e1ddae332a80b701015fc1c648d99f594fd7b79",
+          "path": "t20-consolidation-20261011/catalogue/objects/fc/fc1aa6cd8bd0e659dc7bc5c91e1ddae332a80b701015fc1c648d99f594fd7b79",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "Retain strongest rivals and genuine conditional gains. Object conditioning differs from received productive adequacy; absence-preserving laws differ from existence-forcing candidates; original contribution differs from least-generated history."
+    },
+    {
+      "family": "Attestation and operative recognition",
+      "claim_ids": [
+        "FND-023",
+        "FND-025",
+        "FND-026",
+        "FND-027",
+        "FND-028",
+        "FND-029",
+        "FND-030",
+        "FND-031"
+      ],
+      "sources": [
+        {
+          "queue_index": 5,
+          "sha256": "288169383e0df0d2733b22d7440ea569036d1293ba12729bb1b36ae6b380a4a4",
+          "path": "t20-consolidation-20261011/catalogue/objects/28/288169383e0df0d2733b22d7440ea569036d1293ba12729bb1b36ae6b380a4a4",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 11,
+          "sha256": "33172a965d8bddfbbd580cdc44a769f27d8ab4986619769750cbc95db5af25d7",
+          "path": "t20-consolidation-20261011/catalogue/objects/33/33172a965d8bddfbbd580cdc44a769f27d8ab4986619769750cbc95db5af25d7",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 15,
+          "sha256": "3f5d226a9df8c179a044ccf862819345651c0be3414f08d7a1e3ff38d7ec3f15",
+          "path": "t20-consolidation-20261011/catalogue/objects/3f/3f5d226a9df8c179a044ccf862819345651c0be3414f08d7a1e3ff38d7ec3f15",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 27,
+          "sha256": "6183419cbf4640c3712ebda56b729b7ff7ee603e47f553bc759033582f8039a0",
+          "path": "t20-consolidation-20261011/catalogue/objects/61/6183419cbf4640c3712ebda56b729b7ff7ee603e47f553bc759033582f8039a0",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 28,
+          "sha256": "639d7c188cf94ccf2354f42cb5b6ffe87165ffbf36c8c02439043906c59a590d",
+          "path": "t20-consolidation-20261011/catalogue/objects/63/639d7c188cf94ccf2354f42cb5b6ffe87165ffbf36c8c02439043906c59a590d",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 52,
+          "sha256": "b442c7ec68e07dd547dec09c1796ea1bd224ad8e6057449b1c37fd58be534fbb",
+          "path": "t20-consolidation-20261011/catalogue/objects/b4/b442c7ec68e07dd547dec09c1796ea1bd224ad8e6057449b1c37fd58be534fbb",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 57,
+          "sha256": "bb5adfda558061c1c779218473748eb9ee1496a21e2fc575f04f0fa04b744178",
+          "path": "t20-consolidation-20261011/catalogue/objects/bb/bb5adfda558061c1c779218473748eb9ee1496a21e2fc575f04f0fa04b744178",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 58,
+          "sha256": "c116df9c1499771e6b9c872c80428feba32eeb9a8c20e734b28da11988671d23",
+          "path": "t20-consolidation-20261011/catalogue/objects/c1/c116df9c1499771e6b9c872c80428feba32eeb9a8c20e734b28da11988671d23",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 68,
+          "sha256": "ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68",
+          "path": "t20-consolidation-20261011/catalogue/objects/ea/ead100350bbe76f1dea83c783cd7c99671724fbae9db4d6b7d9b65eb21343a68",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 69,
+          "sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+          "path": "t20-consolidation-20261011/catalogue/objects/eb/eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "Positive contextual indication and current recognition appraisals survive exact intention, transmission and translation corrections. Receipt/source interpretation is not new historical authentication or runtime evidence."
+    },
+    {
+      "family": "Wise means and normative restrictions",
+      "claim_ids": [
+        "FND-015",
+        "FND-016",
+        "FND-019",
+        "FND-020",
+        "FND-021"
+      ],
+      "sources": [
+        {
+          "queue_index": 0,
+          "sha256": "011de9c2d7b7b09b77d04d881ac4a719ca6e5fc9a44d8f6cd34119c8d51b6a7e",
+          "path": "t20-consolidation-20261011/catalogue/objects/01/011de9c2d7b7b09b77d04d881ac4a719ca6e5fc9a44d8f6cd34119c8d51b6a7e",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 9,
+          "sha256": "31541494dc7d4ff7fdf8c093c36fa39a487efba69669f0aa0bd3ca55ca096bc7",
+          "path": "t20-consolidation-20261011/catalogue/objects/31/31541494dc7d4ff7fdf8c093c36fa39a487efba69669f0aa0bd3ca55ca096bc7",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 12,
+          "sha256": "395f8a4ed285d55568be4c273562a0b77aa7890c36c49aa977c858c0dcecb5c3",
+          "path": "t20-consolidation-20261011/catalogue/objects/39/395f8a4ed285d55568be4c273562a0b77aa7890c36c49aa977c858c0dcecb5c3",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 30,
+          "sha256": "68eff5d6a2cf00b6584a453e41c270f5b8b578df5b853ca7f6c08b64ec03335b",
+          "path": "t20-consolidation-20261011/catalogue/objects/68/68eff5d6a2cf00b6584a453e41c270f5b8b578df5b853ca7f6c08b64ec03335b",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 35,
+          "sha256": "7aa022cd61e1dfdd2e882028c8902a796b9f8d9c1445811ad1a470026447abc4",
+          "path": "t20-consolidation-20261011/catalogue/objects/7a/7aa022cd61e1dfdd2e882028c8902a796b9f8d9c1445811ad1a470026447abc4",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 43,
+          "sha256": "847e5219f318391ddbaaf2767e2d86adefa199549bd461663d268238adc7f7ea",
+          "path": "t20-consolidation-20261011/catalogue/objects/84/847e5219f318391ddbaaf2767e2d86adefa199549bd461663d268238adc7f7ea",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 47,
+          "sha256": "a00e33f85b3b7dc0642a621622e6a13005d24c8b6131fd31eba987f985509565",
+          "path": "t20-consolidation-20261011/catalogue/objects/a0/a00e33f85b3b7dc0642a621622e6a13005d24c8b6131fd31eba987f985509565",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 71,
+          "sha256": "ede5f9c78ded5cd223eb99009909315516250a5c55be5a0cd004eeb6c5f228f9",
+          "path": "t20-consolidation-20261011/catalogue/objects/ed/ede5f9c78ded5cd223eb99009909315516250a5c55be5a0cd004eeb6c5f228f9",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 73,
+          "sha256": "f3bec79c5d6930a10ef8b3caea31cd31b33b33cc21476f1b726e11f105322adb",
+          "path": "t20-consolidation-20261011/catalogue/objects/f3/f3bec79c5d6930a10ef8b3caea31cd31b33b33cc21476f1b726e11f105322adb",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "Additional-benefit mediation, achieved ends, culpability restriction and own-act aversion retain real practical content; stronger total-history/external-donor interpretations are not supplied."
+    },
+    {
+      "family": "Scoring, mixed geometry and hosting",
+      "claim_ids": [
+        "FND-001",
+        "FND-013",
+        "FND-014",
+        "FND-034"
+      ],
+      "sources": [
+        {
+          "queue_index": 13,
+          "sha256": "3aca5b11f140ada99cfa009bc1481d7ae0836fb0fc20279c7ce0c0ba6235bc29",
+          "path": "t20-consolidation-20261011/catalogue/objects/3a/3aca5b11f140ada99cfa009bc1481d7ae0836fb0fc20279c7ce0c0ba6235bc29",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 21,
+          "sha256": "5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b",
+          "path": "t20-consolidation-20261011/catalogue/objects/53/5391aeba43fe7a822a34ba653ac3900a6a122793acfa8ea8b0d9b1e693b3cd8b",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 22,
+          "sha256": "54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a",
+          "path": "t20-consolidation-20261011/catalogue/objects/54/54c3019709241dd68789c1c40f0587250977f9112b69e5e5f12aac44d62e721a",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 25,
+          "sha256": "5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7",
+          "path": "t20-consolidation-20261011/catalogue/objects/5e/5e87ef0e1521a70c68eea8d791ccad4b4e878b8e8df726031d739d6327c48fe7",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 48,
+          "sha256": "a4e65af8bcf1eafd86ca55c2a4d631c3979581356218747613eb88e48700f119",
+          "path": "t20-consolidation-20261011/catalogue/objects/a4/a4e65af8bcf1eafd86ca55c2a4d631c3979581356218747613eb88e48700f119",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 63,
+          "sha256": "e088d9b4b1e044cd1e1cfe8510de3837057e1e94c8c4ab0bdcce6c0ae5df644a",
+          "path": "t20-consolidation-20261011/catalogue/objects/e0/e088d9b4b1e044cd1e1cfe8510de3837057e1e94c8c4ab0bdcce6c0ae5df644a",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        },
+        {
+          "queue_index": 79,
+          "sha256": "fef562308ef5c3b29527ff4df965557a202f445e52cca177dad826036d940b66",
+          "path": "t20-consolidation-20261011/catalogue/objects/fe/fef562308ef5c3b29527ff4df965557a202f445e52cca177dad826036d940b66",
+          "sections": "Whole received body; individual source and review headings control precise scope"
+        }
+      ],
+      "current_disposition": "Finite concavity/separability and accuracy/score conditions remain positive within exact domains. Actualist local-property semantics, modal satisfaction, representations and original mental hosting are different bridges; later independently warranted original Knowledge remains affirmative."
+    }
+  ],
+  "not_new": "No new primary acquisition, historical authentication, philosophical first discovery or retained runtime replay."
+}

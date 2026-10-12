@@ -1,0 +1,58 @@
+[
+  {
+    "id": "P14-ET01",
+    "title": "Scalarisation loss, order reflection and observational collapse",
+    "completion_criteria": "A theorem/countermodel suite cleanly separates (a) noninjective information collapse, (b) monotone-but-not-order-reflecting scoring, (c) impossibility of an order-reflecting embedding into a linear order for genuinely non-total source orders, and (d) any conditions under which a justified scalar utility is legitimate. The connection to T03/V4-Q1/CV-R is explicitly typed rather than asserted by analogy.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET02",
+    "title": "Congeniality and admissible common comparison without commensurability",
+    "completion_criteria": "Supply a nonvacuous definition with examples/counterexamples proving that common admission does not entail equality, total comparability, scalar utility, common policy, or canonical operational licence. Identify any lawful bridge to analysis-relative contexts.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET03",
+    "title": "Endogenous faculty-mediated observation architecture",
+    "completion_criteria": "A well-typed architecture and at least one theorem/countermodel establishes a substantive difference between endogenous multi-locus mediation and a flat external-observer encoding, while making no empirical claim about human cognitive anatomy.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET04",
+    "title": "Mixed-policy semantics and the fixed-point/equilibrium bridge",
+    "completion_criteria": "Produce a dependency-complete equilibrium theorem statement, with every compactness/convexity/nonempty-value/continuity-or-closed-graph/payoff assumption explicit as applicable, plus a separation between existence, computability, convergence, truth and authority.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET05",
+    "title": "Solution-concept separation: scalar Nash, vector/Pareto, team, constrained and pipeline models",
+    "completion_criteria": "A precise decision/assumption matrix and proof/countermodel family shows which additional structures license each solution concept and blocks silent scalarisation. If vector-equilibrium existence needs external theorems, cite exact hypotheses rather than asserting it.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET06",
+    "title": "L0-L7 assumption/admissibility hierarchy with no-credit-leak countermodels",
+    "completion_criteria": "Deliver a machine-readable dependency map plus theorem/countermodel explanations that prevent higher-level equilibrium or normative conclusions from receiving lower-level evidence credit.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET07",
+    "title": "Robustness and invariance under re-encoding",
+    "completion_criteria": "At least one positive invariance theorem and one sharp counterexample delimit when the application is representation-sensitive. State which conclusions are coordinate-free and which are encoding-dependent.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  },
+  {
+    "id": "P14-ET08",
+    "title": "Applied Orthemology specification and proof/countermodel suite for later Codex implementation",
+    "completion_criteria": "A Codex-ready handoff names exact proposed definitions/theorems/tests, source dependencies, required literature citations, formal pins, negative controls, status labels and rollback/non-goals. It must state whether the PDF contributes a genuine applied theorem/test domain, remains merely analogical, or is partly rejected.",
+    "status": "RESEARCH_COMPLETED_SCOPED_RETURN_NOT_CANONICAL_ADOPTION",
+    "result_file": "research.md"
+  }
+]

@@ -1,0 +1,10 @@
+import pathlib,json,re,subprocess,os,hashlib
+R=pathlib.Path('private-locator:4bb2f72cdc070f304a86');B=R/'recursive-fresh';E=R/'evidence';S=pathlib.Path('private-locator:fd72e5f19885633f1f4a');paths=json.loads((E/'EXTENSION_REPLAY.json').read_text())['external_lean_path'];base='private-locator:053d4a5d3baa0e7b417c';T=pathlib.Path('private-locator:d97af50b47918e94879b');env={**os.environ,'LEAN_PATH':':'.join([str(B),base]+paths)};env.pop('LEAN_SYSROOT',None);rows=[];sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();names=[]
+for m in ['P01CurryParametricity','P01ModelWitnesses']:
+ p=S/(m+'.lean');(B/p.name).write_bytes(p.read_bytes());names += ['P01R.'+n for n in re.findall(r'^theorem\s+(\w+)',p.read_text(),re.M)]
+audit='import P01CurryParametricity\nimport P01ModelWitnesses\nset_option pp.universes true\n'+''.join('#check @'+n+'\n#print axioms '+n+'\n' for n in names);(B/'ExtendedRecursiveAudit.lean').write_text(audit)
+for m in ['P01CurryParametricity','P01ModelWitnesses','ExtendedRecursiveAudit']:
+ p=subprocess.run([str(T/'lean'),'-j1','-o',m+'.olean',m+'.lean'],cwd=B,env=env,capture_output=True,timeout=180);(E/('recursive-'+m+'.stdout')).write_bytes(p.stdout);(E/('recursive-'+m+'.stderr')).write_bytes(p.stderr)
+ rows.append({'module':m,'source_sha256':sha(B/(m+'.lean')),'exit_code':p.returncode,'stdout_sha256':hashlib.sha256(p.stdout).hexdigest(),'stderr_sha256':hashlib.sha256(p.stderr).hexdigest()});print(m,p.returncode,flush=True)
+ if p.returncode:print(p.stdout.decode());raise SystemExit(1)
+txt=p.stdout.decode();seen={n:[x.strip() for x in a.split(',') if x.strip()] for n,a in re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]",txt)};seen.update({n:[] for n in re.findall(r"'([^']+)' does not depend on any axioms",txt)});assert set(seen)==set(names);assert all(set(v)<={'propext','Classical.choice','Quot.sound'} for v in seen.values());(E/'RECURSIVE_ADDITIONS_REPLAY.json').write_text(json.dumps({'status':'PASS','modules':rows,'theorem_count':len(names),'axioms':seen},indent=2)+'\n')

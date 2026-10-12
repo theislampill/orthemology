@@ -1,0 +1,11 @@
+--- reviewed_target/RESULT.md
++++ final_target/RESULT.md
+@@ -195,7 +195,7 @@
+     argmin_(r∈C) D_F(r,b)
+       = argmin_(r∈C) D_f(r,N(b)).
+ 
+-These are equal argmin sets; existence and uniqueness require their own hypotheses. Compact C with a finite continuous objective gives existence; strict convexity of the objective on C gives uniqueness. We do not infer strict convexity on every boundary face merely from strict convexity in the open simplex.
++These are equal argmin sets; existence and uniqueness require their own hypotheses. Compact C with a finite continuous objective gives existence; convex C together with strict convexity of the objective on C gives uniqueness. We do not infer strict convexity on every boundary face merely from strict convexity in the open simplex.
+ 
+ For b=L⊙p, the normalized point N(b) is the ordinary Bayesian posterior. Replacing the full-simplex codomain by C therefore inserts an additional **coherent-state constraint projection**. Bayes compatibility of the ambient extension eliminates normalization error, but cannot make an infeasible ordinary posterior belong to C. If a unique constraint projection is used, it equals that posterior iff the posterior is already in C. This is the precise connection to the inherited nonseparable repair, not a second normalization characterization.
+ 

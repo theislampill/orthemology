@@ -1,0 +1,206 @@
+{
+  "updated_utc": "2026-10-12T14:06:27.696502+00:00",
+  "equivalence_file": "t20-v6-20261011/corpus/admission/ORIGINAL_PUBLIC_EQUIVALENCE_DISPOSITIONS.json",
+  "equivalence_file_sha256": "76758b33016ddfa4a7e17037c8af5d65cc1c97bcba8700b6116cd1c8b910b883",
+  "records": [
+    {
+      "sha256": "d09705b4089dba95d5bd713c5ea7122a456d796e7c10b7347b7eeda018418cbd",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/d0/d09705b4089dba95d5bd713c5ea7122a456d796e7c10b7347b7eeda018418cbd",
+      "status": "complete_exact_original_content_reused_via_verified_public_notice_only_projection",
+      "whole_original_lines": 149,
+      "transformation": "EXACT_SOURCE_PLUS_TWO_LINE_HISTORICAL_NOTICE",
+      "byte_equation": "public == added_notice + LF + LF + complete_original",
+      "verified": true,
+      "public_sha256": "196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502",
+      "public_path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502.txt",
+      "baseline_ledger": "t20-v6-20261011/early_remaining/terminal_partial_prose8/READ_LEDGER.json",
+      "baseline_ledger_sha256": "6418b737c5234b871f67dd5822583bfe5d1fa675c0104bf278102a23ee173ea7",
+      "baseline_pointer": "$/records/4",
+      "baseline_record": {
+        "queue_index": 4,
+        "sha256": "196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502",
+        "path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502.txt",
+        "line_count": 151,
+        "method": "EXACT_PRIOR_READING_PLUS_ALL_MISSING_RANGES",
+        "new_read_ranges": [
+          [
+            66,
+            151
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            151
+          ]
+        ],
+        "prior_scopes": [
+          {
+            "source_sha256": "196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502",
+            "ledger": "private-locator:397f33c01a842e0614c0",
+            "pointer": "$/public_sources/27",
+            "recorded_scope": {
+              "read_scope": "selected body, 1\u201365 (statement, construction, elementary endpoints); certificates not rerun",
+              "reading_credit": "DIRECT_BODY_SELECTED"
+            },
+            "ranges": [],
+            "recorded_paths": [
+              "t20-closure-audit-20261011/early_operations/src-549ba6a7f0941c36-fc414b8412e86cd5.txt",
+              "docs/provenance/v5-research-continuations/notes/196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502.md"
+            ],
+            "exact_held_hash": true,
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          }
+        ],
+        "scope": "Full source semantics cumulatively examined; historical source commands and reported execution remain inert evidence, not fresh execution."
+      },
+      "old_embedded_partial_pointers_superseded": true,
+      "fresh_manual_author_reading": false,
+      "execution": false
+    },
+    {
+      "sha256": "f2951259721f246eb94832554464cae2dc35560fd7a7e735b49cb5467f66fb97",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/f2/f2951259721f246eb94832554464cae2dc35560fd7a7e735b49cb5467f66fb97",
+      "status": "complete_exact_original_content_reused_via_verified_public_notice_only_projection",
+      "whole_original_lines": 236,
+      "transformation": "EXACT_SOURCE_PLUS_TWO_LINE_HISTORICAL_NOTICE",
+      "byte_equation": "public == added_notice + LF + LF + complete_original",
+      "verified": true,
+      "public_sha256": "dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde",
+      "public_path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde.txt",
+      "baseline_ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+      "baseline_ledger_sha256": "97ad59689f93b9c7f5f768007e8453d884b6059c839e1134e1cd2ba0b0b2bd17",
+      "baseline_pointer": "$/sources/175",
+      "baseline_record": {
+        "index": 175,
+        "sha256": "dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde",
+        "members": [
+          "pending/projections/full-private-frontier-pending/GENERAL_FIXED_FRONTIER.md"
+        ],
+        "source_ids": [
+          "src-549ba6a7f0941c36-4a6fa83023ecd435"
+        ],
+        "families": [
+          "S6F-25"
+        ],
+        "path": "t20-v6-20261011/early_remaining/sources/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde",
+        "classification": "research_ordinary_or_review_text",
+        "total_lines": 238,
+        "read_lines": 238,
+        "read_ranges": [
+          [
+            1,
+            238
+          ]
+        ],
+        "status": "full_source_read",
+        "read_byte_bindings": [
+          "exact_current_bytes"
+        ],
+        "proof_replay": "not_run; inherited receipts only",
+        "unread_ranges": [],
+        "adequacy": "Every line of this exact content hash was examined, including definitions, controlling theorem statements, proof bodies, hypotheses, comments and terminal scope/axiom declarations where present. No import-closure or runtime-replay credit is inferred.",
+        "remaining_substantive_sections": [],
+        "analysis_reference": "RESULT \u00a78",
+        "controlling_content_and_proof_mechanism": "Fixed private codebook arbitrary-real frontier and complete independent review resolve a formerly pending result using partition-Kneser and residue transfer; topological and sharing scope remain external premises."
+      },
+      "old_embedded_partial_pointers_superseded": false,
+      "fresh_manual_author_reading": false,
+      "execution": false
+    },
+    {
+      "sha256": "b1ee588b93bb8bf69a3371d22ebf6430c4bce508a2e2c27c3e4132c493ff83ff",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/b1/b1ee588b93bb8bf69a3371d22ebf6430c4bce508a2e2c27c3e4132c493ff83ff",
+      "status": "complete_exact_original_content_reused_via_verified_public_notice_only_projection",
+      "whole_original_lines": 312,
+      "transformation": "EXACT_SOURCE_PLUS_TWO_LINE_HISTORICAL_NOTICE",
+      "byte_equation": "public == added_notice + LF + LF + complete_original",
+      "verified": true,
+      "public_sha256": "052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54",
+      "public_path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.txt",
+      "baseline_ledger": "t20-v6-20261011/early_remaining/terminal_partial_prose8/READ_LEDGER.json",
+      "baseline_ledger_sha256": "6418b737c5234b871f67dd5822583bfe5d1fa675c0104bf278102a23ee173ea7",
+      "baseline_pointer": "$/records/3",
+      "baseline_record": {
+        "queue_index": 3,
+        "sha256": "052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54",
+        "path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.txt",
+        "line_count": 314,
+        "method": "EXACT_PRIOR_READING_PLUS_ALL_MISSING_RANGES",
+        "new_read_ranges": [
+          [
+            116,
+            134
+          ],
+          [
+            241,
+            314
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            314
+          ]
+        ],
+        "prior_scopes": [
+          {
+            "source_sha256": "052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54",
+            "ledger": "private-locator:397f33c01a842e0614c0",
+            "pointer": "$/public_sources/24",
+            "recorded_scope": {
+              "read_scope": "selected body, 1\u2013115 and 135\u2013240 (contracts, fixed slices, shared proof); historical open labels superseded by S6F-16",
+              "reading_credit": "DIRECT_BODY_SELECTED"
+            },
+            "ranges": [],
+            "recorded_paths": [
+              "t20-closure-audit-20261011/early_operations/src-549ba6a7f0941c36-4c374368b3a374bf.txt",
+              "docs/provenance/v5-research-continuations/notes/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.md"
+            ],
+            "exact_held_hash": true,
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          }
+        ],
+        "scope": "Full source semantics cumulatively examined; historical source commands and reported execution remain inert evidence, not fresh execution."
+      },
+      "old_embedded_partial_pointers_superseded": true,
+      "fresh_manual_author_reading": false,
+      "execution": false
+    },
+    {
+      "sha256": "df1c09fce3e24264a87d79050fcfc96c7cdc22baef3d83e791b69538a780284e",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/df/df1c09fce3e24264a87d79050fcfc96c7cdc22baef3d83e791b69538a780284e",
+      "status": "complete_exact_original_content_reused_via_verified_public_notice_only_projection",
+      "whole_original_lines": 74,
+      "transformation": "EXACT_SOURCE_PLUS_TWO_LINE_HISTORICAL_NOTICE",
+      "byte_equation": "public == added_notice + LF + LF + complete_original",
+      "verified": true,
+      "public_sha256": "9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222",
+      "public_path": "deliverables/t20-v5-candidate/historical_coverage/supplement/source_objects/9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222.txt",
+      "baseline_ledger": "t20-closure-audit-20261011/early_operations/READ_BINDINGS.json",
+      "baseline_ledger_sha256": "2b9327a5d5ed6af1f7089816502353dffd6503988c2345bd5e3964418556df3e",
+      "baseline_pointer": "$/public_sources/23",
+      "baseline_record": {
+        "id": "src-549ba6a7f0941c36-61e32b3392b5688f",
+        "row": "S6F-14",
+        "member": "projections/zero-error-formal/ACTION_SUFFICIENT_DISCLOSURE.md",
+        "original_sha256": "df1c09fce3e24264a87d79050fcfc96c7cdc22baef3d83e791b69538a780284e",
+        "sha256": "9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222",
+        "projection": "DERIVED",
+        "path": "docs/provenance/v5-research-continuations/notes/9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222.md",
+        "local_path": "t20-closure-audit-20261011/early_operations/src-549ba6a7f0941c36-61e32b3392b5688f.txt",
+        "actual_sha256": "9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222",
+        "matches_public_source_map": true,
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/provenance/v5-research-continuations/notes/9040abfeb65df6bf2cfc6ae6cf27384cfd2d21b8220e27f88400eedb1f26f222.md",
+        "git_blob": "abb01d21138e1ad22af77d04ea204d49eed043d1",
+        "read_scope": "full body, 1\u201377",
+        "reading_credit": "DIRECT_BODY_FULL"
+      },
+      "old_embedded_partial_pointers_superseded": false,
+      "fresh_manual_author_reading": false,
+      "execution": false
+    }
+  ],
+  "pending": [],
+  "source_execution": false
+}

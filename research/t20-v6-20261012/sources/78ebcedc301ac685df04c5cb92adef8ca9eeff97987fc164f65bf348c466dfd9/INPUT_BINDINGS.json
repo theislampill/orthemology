@@ -1,0 +1,25 @@
+{
+  "scope": "Direct inspected result inputs only; no transitive dependency replay or transferred independent-review status.",
+  "local_inputs": [
+    {
+      "path": "hierarchical-marginal-core-20261010/RESULT.md",
+      "bytes": 18646,
+      "sha256": "a9b6bb1a955d0c90aea9b5b43a0f02889cc668ae0d23c35ba004bf906b33414d"
+    },
+    {
+      "path": "tensor-likelihood-closure-20261010/RESULT.md",
+      "bytes": 25391,
+      "sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9"
+    },
+    {
+      "path": "leafwise-noetic-geometry-20261010/RESULT.md",
+      "bytes": 26495,
+      "sha256": "6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724"
+    }
+  ],
+  "inheritance_check": {
+    "hierarchical": "Section 6 explicitly leaves the general feasibility classification open. Probability-plus-posterior and normalized-only classifications are inherited.",
+    "tensor": "Sections 3 and 5 supply unnormalized and normalized-only descent; the feasibility discussion concerns the singleton exception in proper product hierarchies, not the general support-face classifier.",
+    "leafwise": "Sections 3 and 6 already require the actual moment-polytope relative interior. The local-marginal-positivity countercontrol is a crosswalk, not a correction."
+  }
+}

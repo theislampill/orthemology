@@ -1,0 +1,3 @@
+# Portable audit control
+
+The exact author checker is unchanged. run_portable.py rebinds its read-only ROOT to this disposable suite. SOURCE_BINDINGS.json maps the eleven inspected-source entries to selected public fixtures. Original scientific owner bytes are reused exactly; four authored assembly/index counterparts and the grouped ancestry locator registry use their already-public projections where original custody-only bytes are intentionally absent. Every original digest and public fixture digest is recorded. The finite/symbolic mathematics is unchanged. This is a new portable-fixture replay, not a replay of private assembly currentness. The original 3054-count receipt remains a separately attributed historical observation.

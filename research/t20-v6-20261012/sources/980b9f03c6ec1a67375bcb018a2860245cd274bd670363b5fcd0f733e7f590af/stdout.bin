@@ -1,0 +1,137 @@
+{
+  "status": "PASS_SCOPED_COUNTERMODELS",
+  "models": [
+    {
+      "id": "P03-Q1f-CE01",
+      "source_nodes": [
+        "a",
+        "b"
+      ],
+      "source_edges": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "map": {
+        "a": "x",
+        "b": "x"
+      },
+      "target_nodes": [
+        "x"
+      ],
+      "target_edges": [
+        [
+          "x",
+          "x"
+        ]
+      ],
+      "expected_target_dag": false,
+      "meaning": "map collapses endpoints of one source edge",
+      "source_is_dag": true,
+      "map_domain_exact": true,
+      "all_source_edges_preserved": true,
+      "all_output_endpoints_in_image": true,
+      "target_nodes_exact_image": true,
+      "map_injective": false,
+      "target_is_dag": false
+    },
+    {
+      "id": "P03-Q1f-CE02",
+      "source_nodes": [
+        "a",
+        "b"
+      ],
+      "source_edges": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "map": {
+        "a": "a",
+        "b": "b"
+      },
+      "target_nodes": [
+        "a",
+        "b"
+      ],
+      "target_edges": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "a"
+        ]
+      ],
+      "expected_target_dag": false,
+      "meaning": "injective map plus additional reverse edge",
+      "source_is_dag": true,
+      "map_domain_exact": true,
+      "all_source_edges_preserved": true,
+      "all_output_endpoints_in_image": true,
+      "target_nodes_exact_image": true,
+      "map_injective": true,
+      "target_is_dag": false
+    },
+    {
+      "id": "P03-Q1f-POS01",
+      "source_nodes": [
+        "a",
+        "b"
+      ],
+      "source_edges": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "map": {
+        "a": "c",
+        "b": "d"
+      },
+      "target_nodes": [
+        "c",
+        "d"
+      ],
+      "target_edges": [
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "expected_target_dag": true,
+      "meaning": "nontrivial valid edge transport",
+      "source_is_dag": true,
+      "map_domain_exact": true,
+      "all_source_edges_preserved": true,
+      "all_output_endpoints_in_image": true,
+      "target_nodes_exact_image": true,
+      "map_injective": true,
+      "target_is_dag": true
+    }
+  ],
+  "other_guard_extension": {
+    "version": "exact prior input; declared next output",
+    "claim": "same frozen claim",
+    "root": "same ROOT",
+    "discharged": [
+      "d"
+    ],
+    "preserved": [
+      "d"
+    ],
+    "revalidated": [],
+    "required": [
+      "d"
+    ],
+    "semantics": "identity on a singleton interpretation",
+    "authority": "chosen valid in the example structure",
+    "invalidators": []
+  },
+  "not_a_vct_checker_execution": true,
+  "not_a_counterexample_to_dag_typed_vct": true,
+  "conclusion": "The graph guards alone do not imply target acyclicity; injectivity alone does not repair that omission."
+}

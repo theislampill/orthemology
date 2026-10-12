@@ -1,0 +1,192 @@
+{
+  "schema": "orthemology-p01-research-receipt/v1",
+  "status": "SEALED_RESEARCH_CHECKPOINT_OBLIGATIONS_PARTIAL",
+  "packet": "P01",
+  "created_utc": "2026-09-22T10:11:46.687991+00:00",
+  "research_scope": "Finite-source normalisation, parametricity and dependent calculus only",
+  "main_commit": "03e2604dfcef278b01c60d19b05370fcec4194b6",
+  "main_tree": "3d06e80277ce39286c94307e0f14b215bc94ed83",
+  "PR": 28,
+  "PR_state_preserved": "MERGED",
+  "remaining_integration_cells_preserved": [],
+  "canonical_state_basis": "Supplied accepted evidence; no new live remote readback or complete-tree recomputation",
+  "input_attachment": {
+    "path": "inputs/Orthemology_Pro_P01_Foundational_Formal.zip",
+    "bytes": 850545,
+    "sha256": "e4e89e99bd35326e342761d080a9506c8d2b90780fb0a50c6736343ff172ed4c",
+    "identity_kind": "OBSERVED_EXACT_ATTACHMENT"
+  },
+  "input_verification": {
+    "status": "PASS",
+    "counts": {
+      "manifest": {
+        "expected": 204,
+        "verified": 204
+      },
+      "receipt": {
+        "expected": 202,
+        "verified": 202
+      },
+      "source": {
+        "expected": 124,
+        "verified": 124
+      },
+      "evidence_projection": {
+        "expected": 54,
+        "verified": 54
+      }
+    },
+    "all_205_extracted_preimages_unchanged": true,
+    "input_receipt_original_status": "SEALED_HANDOFF_ONLY",
+    "input_source_files": 124,
+    "evidence_projection_files": 54
+  },
+  "obligations": {
+    "U09": "PARTIAL",
+    "U10": "PARTIAL",
+    "U11": "PARTIAL"
+  },
+  "exact_obligations": "obligations/EXACT_INPUT_OBLIGATIONS.json",
+  "confirmed_statements_hypotheses_predecessors_hashes": "obligations/CONFIRMATIONS.json",
+  "criteria_dispositions": "research/CRITERIA_MATRIX.json",
+  "scoped_claim_record_count": 19,
+  "claim_records": "research/CLAIMS.json",
+  "new_research_executed": true,
+  "new_ordinary_proofs_and_countermodels": true,
+  "new_Lean_kernel_credit": false,
+  "candidate_Lean_status": "UNVERIFIED_AT_4_19_0",
+  "candidate_Lean_modules": 4,
+  "candidate_theorem_targets": [
+    "P01SNReflection.positive_simulation_reflects_SN",
+    "P01OpenSubstitution.eval_subst",
+    "P01OpenSubstitution.subst_id",
+    "P01OpenSubstitution.subst_comp",
+    "P01FiniteEffects.outcome_finite",
+    "P01FiniteEffects.effect_fundamental_support",
+    "P01FiniteEffects.diagonal_support_relational",
+    "P01CoherentJ.based_J",
+    "P01CoherentJ.j_reduces",
+    "P01CoherentJ.tracked_based_J",
+    "P01CoherentJ.j_beta",
+    "P01CoherentJ.app_congr",
+    "P01CoherentJ.pair_congr",
+    "P01CoherentJ.sigma_eta"
+  ],
+  "actual_formal_environment": {
+    "lean": "NOT_FOUND",
+    "lake": "NOT_FOUND",
+    "elan": "NOT_FOUND",
+    "lean_version_command_exit": 127,
+    "compiler_acquisition_curl_exit": 6,
+    "new_nonempty_olean_artifacts": 0,
+    "new_declaration_type_axiom_readbacks": 0,
+    "qualification_driver_executed": false
+  },
+  "required_later_pin": {
+    "Lean": "4.19.0",
+    "Lean_commit": "6caaee842e94",
+    "Lake": "5.0.0-6caaee8",
+    "Mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "4_32_2_substitution_permitted": false
+  },
+  "new_finite_probe_evidence": {
+    "test_cases": 16,
+    "normal_exit": 0,
+    "optimised_exit": 0,
+    "census_status": "PASS_BOUNDED_ONLY",
+    "populations": {
+      "binary_relations": 16,
+      "bracket_naturality_squares": 1428,
+      "bracket_paths": 5712,
+      "bracket_steps": 23920,
+      "coupling_intersection_failures": 18,
+      "finite_effect_syntax_expressions_depth2": 4058,
+      "omega_depth12_distinct_states": 21,
+      "omega_depth_counts": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        9,
+        10,
+        12,
+        14,
+        16,
+        17,
+        19,
+        21
+      ],
+      "parallel_pairs": 33388,
+      "relation_pairs": 256,
+      "simulated_beta_steps": 21908,
+      "ski_terms": 15764,
+      "ski_terms_by_nodes": {
+        "1": 4,
+        "3": 16,
+        "5": 128,
+        "7": 1280,
+        "9": 14336
+      },
+      "source_step_witnesses": 15108,
+      "term_substitution_squares": 22848,
+      "type_substitution_squares": 62208,
+      "type_terms": 243
+    },
+    "universal_or_kernel_proof_credit": false,
+    "canonical_engine_test_credit": false,
+    "logs": "evidence/probes/preseal_*"
+  },
+  "packaging_verifier_evidence": {
+    "synthetic_tests_per_mode": 10,
+    "normal_exit": 0,
+    "optimised_exit": 0,
+    "scope": "Integrity tooling only; final closed ZIP readback is a separate external report"
+  },
+  "retained_negative_exits": {
+    "new_probe_preimplementation_test": 1,
+    "new_seal_verifier_preimplementation_test": 1,
+    "curl_compiler_acquisition": 6,
+    "lean_executable_not_found": 127
+  },
+  "preserved_original_strict_wrapper": {
+    "status": "FAIL",
+    "historical_exit": 1,
+    "rerun_here": false,
+    "reclassified": false
+  },
+  "unresolved_dependencies": "research/DEPENDENCIES.json",
+  "negative_findings": "research/NEGATIVE_FINDINGS.json",
+  "pure_research_vs_later_implementation": "handoff/CODEX_HANDOFF.md",
+  "proposed_statement_patch_map": "proposals/STATEMENT_PATCH_MAP.json",
+  "manifest_binding": {
+    "path": "MANIFEST.json",
+    "bytes": 21809,
+    "sha256": "48757f8d733be8d462be0c37eb344c89a4e7a2ab8541516e0ec7cf40e1d0a1f4"
+  },
+  "seal": {
+    "receipt_hash_file": "RECEIPT.json.sha256",
+    "outer_archive_hash": "External .zip.sha256 sidecar",
+    "independent_archive_reopen": "Required after closing the ZIP; its result is external, not inserted after sealing",
+    "verifier": "handoff/verify_checkpoint.py",
+    "payload_file_count": 126,
+    "total_archive_member_count": 129
+  },
+  "credit_exclusions": {
+    "repository_modified": false,
+    "integration_restarted": false,
+    "v6_started": false,
+    "canonical_adoption": false,
+    "source_status_changed": false,
+    "new_other_packet_PASS_assumed": false,
+    "external_human_review": false,
+    "historical_recovery": false,
+    "novelty_established": false,
+    "owner_policy_resolved": false,
+    "licence_chosen": false,
+    "empirical_authority": false,
+    "published_or_merged": false,
+    "contacts_or_purchases": false
+  },
+  "stop_boundary": "Stop after checkpoint; no additional research family authorised"
+}

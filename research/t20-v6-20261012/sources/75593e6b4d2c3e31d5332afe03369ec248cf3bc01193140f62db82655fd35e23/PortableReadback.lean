@@ -1,0 +1,133 @@
+import StatisticalRepair
+import FiniteTailCoverage
+import BernoulliTailMonotonicity
+import BernoulliIntervalCoverage
+import BernoulliPrefixLaw
+import RobustBinaryRepair
+import CertifiedRepairCoverage
+import AnytimeRepairCoverage
+import RationalTailReference
+import RationalRepairCertificate
+import ExecutableAuditRepair
+import AuditContractBinding
+import RandomisedRepairRegret
+import GroupedBinomialTails
+import EfficientAuditRepair
+import EventualAuditSafety
+import SequentialBinomialTails
+import SequentialAuditRepair
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.countMass
+#print axioms Orthemology.Tranche3.countMass
+#check @Orthemology.Tranche3.countMass_zero_base
+#print axioms Orthemology.Tranche3.countMass_zero_base
+#check @Orthemology.Tranche3.countMass_above
+#print axioms Orthemology.Tranche3.countMass_above
+#check @Orthemology.Tranche3.countMass_succ_zero
+#print axioms Orthemology.Tranche3.countMass_succ_zero
+#check @Orthemology.Tranche3.countMass_succ_succ
+#print axioms Orthemology.Tranche3.countMass_succ_succ
+#check @Orthemology.Tranche3.countMass_binomial
+#print axioms Orthemology.Tranche3.countMass_binomial
+#check @Orthemology.Tranche3.efficientUpper
+#print axioms Orthemology.Tranche3.efficientUpper
+#check @Orthemology.Tranche3.efficientLower
+#print axioms Orthemology.Tranche3.efficientLower
+#check @Orthemology.Tranche3.sum_grouped_count
+#print axioms Orthemology.Tranche3.sum_grouped_count
+#check @Orthemology.Tranche3.efficientUpper_eq
+#print axioms Orthemology.Tranche3.efficientUpper_eq
+#check @Orthemology.Tranche3.efficientLower_eq
+#print axioms Orthemology.Tranche3.efficientLower_eq
+#check @Orthemology.Tranche3.efficientReferenceLower
+#print axioms Orthemology.Tranche3.efficientReferenceLower
+#check @Orthemology.Tranche3.efficientReferenceUpper
+#print axioms Orthemology.Tranche3.efficientReferenceUpper
+#check @Orthemology.Tranche3.efficientReferenceLower_eq
+#print axioms Orthemology.Tranche3.efficientReferenceLower_eq
+#check @Orthemology.Tranche3.efficientReferenceUpper_eq
+#print axioms Orthemology.Tranche3.efficientReferenceUpper_eq
+#check @Orthemology.Tranche3.efficientAuditRepair
+#print axioms Orthemology.Tranche3.efficientAuditRepair
+#check @Orthemology.Tranche3.efficientAuditRepair_eq
+#print axioms Orthemology.Tranche3.efficientAuditRepair_eq
+#check @Orthemology.Tranche3.efficient_auditRepair_anytime_sound
+#print axioms Orthemology.Tranche3.efficient_auditRepair_anytime_sound
+#check @Orthemology.Tranche3.AuditStepFailure
+#print axioms Orthemology.Tranche3.AuditStepFailure
+#check @Orthemology.Tranche3.auditStepFailure_measurable
+#print axioms Orthemology.Tranche3.auditStepFailure_measurable
+#check @Orthemology.Tranche3.auditStepFailure_bound
+#print axioms Orthemology.Tranche3.auditStepFailure_bound
+#check @Orthemology.Tranche3.expected_incorrect_reports_le
+#print axioms Orthemology.Tranche3.expected_incorrect_reports_le
+#check @Orthemology.Tranche3.eventually_no_incorrect_emissions
+#print axioms Orthemology.Tranche3.eventually_no_incorrect_emissions
+#check @Orthemology.Tranche3.binomialTerm
+#print axioms Orthemology.Tranche3.binomialTerm
+#check @Orthemology.Tranche3.nextBinomialTerm
+#print axioms Orthemology.Tranche3.nextBinomialTerm
+#check @Orthemology.Tranche3.binomialTerm_next
+#print axioms Orthemology.Tranche3.binomialTerm_next
+#check @Orthemology.Tranche3.tailSweep
+#print axioms Orthemology.Tranche3.tailSweep
+#check @Orthemology.Tranche3.tailSweep_correct
+#print axioms Orthemology.Tranche3.tailSweep_correct
+#check @Orthemology.Tranche3.sequentialTail
+#print axioms Orthemology.Tranche3.sequentialTail
+#check @Orthemology.Tranche3.binomialTerm_at_one
+#print axioms Orthemology.Tranche3.binomialTerm_at_one
+#check @Orthemology.Tranche3.sequentialTail_eq
+#print axioms Orthemology.Tranche3.sequentialTail_eq
+#check @Orthemology.Tranche3.sequentialUpper
+#print axioms Orthemology.Tranche3.sequentialUpper
+#check @Orthemology.Tranche3.sequentialLower
+#print axioms Orthemology.Tranche3.sequentialLower
+#check @Orthemology.Tranche3.sequentialUpper_eq
+#print axioms Orthemology.Tranche3.sequentialUpper_eq
+#check @Orthemology.Tranche3.sequentialLower_eq
+#print axioms Orthemology.Tranche3.sequentialLower_eq
+#check @Orthemology.Tranche3.sequentialReferenceLower
+#print axioms Orthemology.Tranche3.sequentialReferenceLower
+#check @Orthemology.Tranche3.sequentialReferenceUpper
+#print axioms Orthemology.Tranche3.sequentialReferenceUpper
+#check @Orthemology.Tranche3.sequentialReferenceLower_eq
+#print axioms Orthemology.Tranche3.sequentialReferenceLower_eq
+#check @Orthemology.Tranche3.sequentialReferenceUpper_eq
+#print axioms Orthemology.Tranche3.sequentialReferenceUpper_eq
+#check @Orthemology.Tranche3.sequentialAuditRepair
+#print axioms Orthemology.Tranche3.sequentialAuditRepair
+#check @Orthemology.Tranche3.sequentialAuditRepair_eq
+#print axioms Orthemology.Tranche3.sequentialAuditRepair_eq
+#check @Orthemology.Tranche3.sequential_auditRepair_anytime_sound
+#print axioms Orthemology.Tranche3.sequential_auditRepair_anytime_sound
+#check @IndependentEfficientControls.zero_sample_upper_at_zero
+#print axioms IndependentEfficientControls.zero_sample_upper_at_zero
+#check @IndependentEfficientControls.zero_sample_upper_beyond
+#print axioms IndependentEfficientControls.zero_sample_upper_beyond
+#check @IndependentEfficientControls.point_one_upper
+#print axioms IndependentEfficientControls.point_one_upper
+#check @IndependentEfficientControls.point_one_lower_below
+#print axioms IndependentEfficientControls.point_one_lower_below
+#check @IndependentEfficientControls.point_zero_positive_count
+#print axioms IndependentEfficientControls.point_zero_positive_count
+#check @IndependentEfficientControls.division_by_one_boundary_is_real
+#print axioms IndependentEfficientControls.division_by_one_boundary_is_real
+#check @IndependentEfficientControls.exhausted_sweep_preserves_accumulator
+#print axioms IndependentEfficientControls.exhausted_sweep_preserves_accumulator
+#check @IndependentEfficientControls.sequential_grouped_upper_agree
+#print axioms IndependentEfficientControls.sequential_grouped_upper_agree
+#check @IndependentEfficientControls.sequential_grouped_lower_agree
+#print axioms IndependentEfficientControls.sequential_grouped_lower_agree
+#check @IndependentEfficientControls.every_finite_precision_agrees
+#print axioms IndependentEfficientControls.every_finite_precision_agrees
+#check @IndependentEfficientControls.invalid_report_input_always_abstains
+#print axioms IndependentEfficientControls.invalid_report_input_always_abstains
+#check @IndependentEfficientControls.abstention_has_empty_failure
+#print axioms IndependentEfficientControls.abstention_has_empty_failure
+#check @IndependentEfficientControls.literal_sequential_failure_eq
+#print axioms IndependentEfficientControls.literal_sequential_failure_eq
+#check @IndependentEfficientControls.literal_sequential_expected_budget
+#print axioms IndependentEfficientControls.literal_sequential_expected_budget

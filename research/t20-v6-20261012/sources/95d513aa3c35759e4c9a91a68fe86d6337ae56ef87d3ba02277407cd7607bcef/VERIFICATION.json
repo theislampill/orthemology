@@ -1,0 +1,19 @@
+{
+  "schema": "t20.cross-front-synthesis.verification.v1",
+  "utc": "2026-10-11T14:15:57.685911+00:00",
+  "status": "PASS",
+  "bound_sources": 28,
+  "upstream_identity_matches": 80,
+  "current_reviewed_result_bindings": 8,
+  "nodes": 34,
+  "edges": 37,
+  "scope": "Document hashes, references, typed graph and explicit reviewer-required guards only; no mathematical checker replay or fresh theorem certification",
+  "files": {
+    "EDGES.json": "8374aeca4d7aaa7ede3f0c7e445942780644810f8b4e5d89fba90a183115821b",
+    "RESULT.md": "9bc3e83d35d9a8f1c218ee48598230827f1e37ddff4fb6ab5133ee7aa7801028",
+    "SOURCE_BINDINGS.json": "0bd88055e87fbe2e393c0d9e844b273d09f9d937107da38b4a342925e2d467d8",
+    "build_bindings.py": "354a349775ec2c2cc924745a575a90e48b408b333d9d484be947acb4a67c00e8",
+    "build_edges.py": "c152b09a76ed2e4f14fb264f507ffa6dd9d62787b571f945ba90ecfcea44adff",
+    "verify.py": "47cf045cbd5a2962d6cd5c6d69538443f3b668796fd1a6323810d24136f89577"
+  }
+}

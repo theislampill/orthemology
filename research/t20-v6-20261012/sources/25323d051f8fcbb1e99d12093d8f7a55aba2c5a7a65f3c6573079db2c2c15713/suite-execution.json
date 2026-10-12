@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "python": "3.13.5",
+  "suites": [
+    {
+      "script": "legacy_relational_checks.py",
+      "sha256": "f555e4fc20f2f263ae9222523c28434202317c963c202d65789fdda570bf0c0f",
+      "exit_code": 0,
+      "seconds": 8.188
+    },
+    {
+      "script": "legacy_reflexive_checks.py",
+      "sha256": "a7f017e94af544e8c9ecec2f3c475fd18f708b4d686942fff87b0e1e2d27e13f",
+      "exit_code": 0,
+      "seconds": 0.769
+    },
+    {
+      "script": "verify_integrated.py",
+      "sha256": "a6c36b7386a7642274ed8607bbfc09225eec0b42026796af84c99e00510a140e",
+      "exit_code": 0,
+      "seconds": 3.983
+    },
+    {
+      "script": "verify_v2.py",
+      "sha256": "6d5b2b43023ad5abc54f5fefc4e218ff16716d70003c53ed0f2e624476159142",
+      "exit_code": 0,
+      "seconds": 1.121
+    },
+    {
+      "script": "verify_revision.py",
+      "sha256": "e3dd85e04b878542595a958336bbce41ce677911bea241a6f18b812b32f6cb72",
+      "exit_code": 0,
+      "seconds": 0.618
+    },
+    {
+      "script": "verify_v4.py",
+      "sha256": "839e21ae7e9bfb3c6accf14335c1a9cb2af65b18c2fc6c9434538e4034c40144",
+      "exit_code": 0,
+      "seconds": 0.568
+    },
+    {
+      "script": "verify_v5.py",
+      "sha256": "580fd24e3731e24fcadb1b0b15943918d265940e64052f90716bdcaf0786ccea",
+      "exit_code": 0,
+      "seconds": 0.568
+    }
+  ],
+  "limit": "Same-author computational checks, not independent review or proof-assistant certification."
+}

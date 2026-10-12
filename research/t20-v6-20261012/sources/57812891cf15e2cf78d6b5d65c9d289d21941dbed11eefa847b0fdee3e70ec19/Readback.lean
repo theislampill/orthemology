@@ -1,0 +1,177 @@
+import CommonSeedDerandomization
+import IIDHeadTail
+import DeterministicContinuation
+import RelativeTailTransfer
+import SafeSetTailTransfer
+import StableSupportNecessity
+import WinningContinuation
+import CanonicalInvariantSafety
+import RecursiveNecessity
+import RecursiveCanonicalEquivalence
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.rawActionPath
+#print Orthemology.Tranche3.rawActionPath
+#print axioms Orthemology.Tranche3.rawActionPath
+#check Orthemology.Tranche3.rawActionPath_measurable
+#print Orthemology.Tranche3.rawActionPath_measurable
+#print axioms Orthemology.Tranche3.rawActionPath_measurable
+#check Orthemology.Tranche3.actionLaw_raw_map
+#print Orthemology.Tranche3.actionLaw_raw_map
+#print axioms Orthemology.Tranche3.actionLaw_raw_map
+#check Orthemology.Tranche3.actionLaw_dirac_seed
+#print Orthemology.Tranche3.actionLaw_dirac_seed
+#print axioms Orthemology.Tranche3.actionLaw_dirac_seed
+#check Orthemology.Tranche3.common_seed_derandomization
+#print Orthemology.Tranche3.common_seed_derandomization
+#print axioms Orthemology.Tranche3.common_seed_derandomization
+#check Orthemology.Tranche3.consOracle
+#print Orthemology.Tranche3.consOracle
+#print axioms Orthemology.Tranche3.consOracle
+#check Orthemology.Tranche3.consOracle_measurable
+#print Orthemology.Tranche3.consOracle_measurable
+#print axioms Orthemology.Tranche3.consOracle_measurable
+#check Orthemology.Tranche3.headTailIndex
+#print Orthemology.Tranche3.headTailIndex
+#print axioms Orthemology.Tranche3.headTailIndex
+#check Orthemology.Tranche3.headTailIndex_injective
+#print Orthemology.Tranche3.headTailIndex_injective
+#print axioms Orthemology.Tranche3.headTailIndex_injective
+#check Orthemology.Tranche3.iid_cons_law
+#print Orthemology.Tranche3.iid_cons_law
+#print axioms Orthemology.Tranche3.iid_cons_law
+#check Orthemology.Tranche3.rowHistory
+#print Orthemology.Tranche3.rowHistory
+#print axioms Orthemology.Tranche3.rowHistory
+#check Orthemology.Tranche3.rowActions
+#print Orthemology.Tranche3.rowActions
+#print axioms Orthemology.Tranche3.rowActions
+#check Orthemology.Tranche3.observedHistory_empty_eq_rowHistory
+#print Orthemology.Tranche3.observedHistory_empty_eq_rowHistory
+#print axioms Orthemology.Tranche3.observedHistory_empty_eq_rowHistory
+#check Orthemology.Tranche3.rawActionPath_eq_rowActions
+#print Orthemology.Tranche3.rawActionPath_eq_rowActions
+#print axioms Orthemology.Tranche3.rawActionPath_eq_rowActions
+#check Orthemology.Tranche3.rowActions_measurable
+#print Orthemology.Tranche3.rowActions_measurable
+#print axioms Orthemology.Tranche3.rowActions_measurable
+#check Orthemology.Tranche3.actionLaw_dirac_eq_rowLaw
+#print Orthemology.Tranche3.actionLaw_dirac_eq_rowLaw
+#print axioms Orthemology.Tranche3.actionLaw_dirac_eq_rowLaw
+#check Orthemology.Tranche3.continuePolicy
+#print Orthemology.Tranche3.continuePolicy
+#print axioms Orthemology.Tranche3.continuePolicy
+#check Orthemology.Tranche3.continuePolicy_measurable
+#print Orthemology.Tranche3.continuePolicy_measurable
+#print axioms Orthemology.Tranche3.continuePolicy_measurable
+#check Orthemology.Tranche3.rowHistory_cons_continuation
+#print Orthemology.Tranche3.rowHistory_cons_continuation
+#print axioms Orthemology.Tranche3.rowHistory_cons_continuation
+#check Orthemology.Tranche3.rowActions_cons_continuation
+#print Orthemology.Tranche3.rowActions_cons_continuation
+#print axioms Orthemology.Tranche3.rowActions_cons_continuation
+#check Orthemology.Tranche3.deterministic_one_step_continuation
+#print Orthemology.Tranche3.deterministic_one_step_continuation
+#print axioms Orthemology.Tranche3.deterministic_one_step_continuation
+#check Orthemology.Tranche3.RelativeTransfer.absolutelyContinuous_of_atom_support
+#print Orthemology.Tranche3.RelativeTransfer.absolutelyContinuous_of_atom_support
+#print axioms Orthemology.Tranche3.RelativeTransfer.absolutelyContinuous_of_atom_support
+#check Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_atom
+#print Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_atom
+#print axioms Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_atom
+#check Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_domination
+#print Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_domination
+#check Orthemology.Tranche3.RelativeTransfer.relative_bounded_trace_domination
+#print Orthemology.Tranche3.RelativeTransfer.relative_bounded_trace_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.relative_bounded_trace_domination
+#check Orthemology.Tranche3.RelativeTransfer.relative_finite_query_domination
+#print Orthemology.Tranche3.RelativeTransfer.relative_finite_query_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.relative_finite_query_domination
+#check Orthemology.Tranche3.RelativeTransfer.positive_finite_query_event_relative
+#print Orthemology.Tranche3.RelativeTransfer.positive_finite_query_event_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.positive_finite_query_event_relative
+#check Orthemology.Tranche3.RelativeTransfer.rowMeasure_relative_support
+#print Orthemology.Tranche3.RelativeTransfer.rowMeasure_relative_support
+#print axioms Orthemology.Tranche3.RelativeTransfer.rowMeasure_relative_support
+#check Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_relative
+#print Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_relative
+#check Orthemology.Tranche3.RelativeTransfer.canonical_positive_event_relative
+#print Orthemology.Tranche3.RelativeTransfer.canonical_positive_event_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_event_relative
+#check Orthemology.Tranche3.RelativeTransfer.alwaysIn
+#print Orthemology.Tranche3.RelativeTransfer.alwaysIn
+#print axioms Orthemology.Tranche3.RelativeTransfer.alwaysIn
+#check Orthemology.Tranche3.RelativeTransfer.measurable_alwaysIn
+#print Orthemology.Tranche3.RelativeTransfer.measurable_alwaysIn
+#print axioms Orthemology.Tranche3.RelativeTransfer.measurable_alwaysIn
+#check Orthemology.Tranche3.RelativeTransfer.zero_prefix_map
+#print Orthemology.Tranche3.RelativeTransfer.zero_prefix_map
+#print axioms Orthemology.Tranche3.RelativeTransfer.zero_prefix_map
+#check Orthemology.Tranche3.RelativeTransfer.zero_query_restricted_law_eq
+#print Orthemology.Tranche3.RelativeTransfer.zero_query_restricted_law_eq
+#print axioms Orthemology.Tranche3.RelativeTransfer.zero_query_restricted_law_eq
+#check Orthemology.Tranche3.RelativeTransfer.all_inside_zero_queries
+#print Orthemology.Tranche3.RelativeTransfer.all_inside_zero_queries
+#print axioms Orthemology.Tranche3.RelativeTransfer.all_inside_zero_queries
+#check Orthemology.Tranche3.RelativeTransfer.canonical_event_eq_on_visited
+#print Orthemology.Tranche3.RelativeTransfer.canonical_event_eq_on_visited
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_event_eq_on_visited
+#check Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_on_safe_actions
+#print Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_on_safe_actions
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_on_safe_actions
+#check Orthemology.Tranche3.stable_model_self_verifying_necessity
+#print Orthemology.Tranche3.stable_model_self_verifying_necessity
+#print axioms Orthemology.Tranche3.stable_model_self_verifying_necessity
+#check Orthemology.Tranche3.rowHistory_congr_fixed_seed
+#print Orthemology.Tranche3.rowHistory_congr_fixed_seed
+#print axioms Orthemology.Tranche3.rowHistory_congr_fixed_seed
+#check Orthemology.Tranche3.actionLaw_congr_fixed_seed
+#print Orthemology.Tranche3.actionLaw_congr_fixed_seed
+#print axioms Orthemology.Tranche3.actionLaw_congr_fixed_seed
+#check Orthemology.Tranche3.historySupport_append
+#print Orthemology.Tranche3.historySupport_append
+#print axioms Orthemology.Tranche3.historySupport_append
+#check Orthemology.Tranche3.actionCompatible_append
+#print Orthemology.Tranche3.actionCompatible_append
+#print axioms Orthemology.Tranche3.actionCompatible_append
+#check Orthemology.Tranche3.FixedSeedWinning
+#print Orthemology.Tranche3.FixedSeedWinning
+#print axioms Orthemology.Tranche3.FixedSeedWinning
+#check Orthemology.Tranche3.fixedSeedWinning_one_step
+#print Orthemology.Tranche3.fixedSeedWinning_one_step
+#print axioms Orthemology.Tranche3.fixedSeedWinning_one_step
+#check Orthemology.Tranche3.continuePolicy_continue
+#print Orthemology.Tranche3.continuePolicy_continue
+#print axioms Orthemology.Tranche3.continuePolicy_continue
+#check Orthemology.Tranche3.fixedSeedWinning_at_history
+#print Orthemology.Tranche3.fixedSeedWinning_at_history
+#print axioms Orthemology.Tranche3.fixedSeedWinning_at_history
+#check Orthemology.Tranche3.canonical_always_of_invariant
+#print Orthemology.Tranche3.canonical_always_of_invariant
+#print axioms Orthemology.Tranche3.canonical_always_of_invariant
+#check Orthemology.Tranche3.fixedSeed_always_of_invariant
+#print Orthemology.Tranche3.fixedSeed_always_of_invariant
+#print axioms Orthemology.Tranche3.fixedSeed_always_of_invariant
+#check Orthemology.Tranche3.no_recursive_progress_preserves_support
+#print Orthemology.Tranche3.no_recursive_progress_preserves_support
+#print axioms Orthemology.Tranche3.no_recursive_progress_preserves_support
+#check Orthemology.Tranche3.fixedSeedWinning_recursive_necessity
+#print Orthemology.Tranche3.fixedSeedWinning_recursive_necessity
+#print axioms Orthemology.Tranche3.fixedSeedWinning_recursive_necessity
+#check Orthemology.Tranche3.seeded_recursive_necessity
+#print Orthemology.Tranche3.seeded_recursive_necessity
+#print axioms Orthemology.Tranche3.seeded_recursive_necessity
+#check Orthemology.Tranche3.seeded_policy_exists_iff_recursiveWinning
+#print Orthemology.Tranche3.seeded_policy_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.seeded_policy_exists_iff_recursiveWinning
+#check Orthemology.Tranche3.eventually_good_of_total_bad_budget
+#print Orthemology.Tranche3.eventually_good_of_total_bad_budget
+#print axioms Orthemology.Tranche3.eventually_good_of_total_bad_budget
+#check Orthemology.Tranche3.finite_budget_policy_exists_iff_recursiveWinning
+#print Orthemology.Tranche3.finite_budget_policy_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.finite_budget_policy_exists_iff_recursiveWinning
+#check Orthemology.Tranche3.seeded_policy_exists_iff_recursive_stage
+#print Orthemology.Tranche3.seeded_policy_exists_iff_recursive_stage
+#print axioms Orthemology.Tranche3.seeded_policy_exists_iff_recursive_stage

@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "check_groups": 7,
+  "arithmetic": "fractions.Fraction",
+  "limitation": "Finite exact controls, not universal proof, formal-kernel certification, or empirical validation.",
+  "results": [
+    {
+      "name": "six-projector rigidity",
+      "passed": true,
+      "detail": "Independent 24 by 22 system has rank 21; scalar identity spans its nullspace."
+    },
+    {
+      "name": "signed graph with two components",
+      "passed": true,
+      "detail": "Square-cone-plus-ray constraints have nullity two, exactly the independent component scalars."
+    },
+    {
+      "name": "local realization and no uniform passive lift",
+      "passed": true,
+      "detail": "Endpoints have correctly undefined zero branches; local likelihoods vary with t, while the uniform lift equations are inconsistent."
+    },
+    {
+      "name": "fixed-channel grouped stability and inverse",
+      "passed": true,
+      "detail": "35 rational mixtures retain arbitrary within-group constraints, reciprocal updating restores each state, and a cross-group extreme singleton fails stability."
+    },
+    {
+      "name": "intertwining is a necessary extra premise",
+      "passed": true,
+      "detail": "A positive mass-preserving quotient identifies e1 and e2 but fails to descend an unequal likelihood; equal fine likelihoods descend and preserve probabilities and conditional images."
+    },
+    {
+      "name": "strict mass and generatingness guards",
+      "passed": true,
+      "detail": "A merely nonnegative mass functional can vanish on a nonzero positive state; order on a nongenerating ray does not constrain ambient complementary directions."
+    },
+    {
+      "name": "dephasing non-domination",
+      "passed": true,
+      "detail": "The direct Hermitian residual matrix has determinant -1/4."
+    }
+  ]
+}

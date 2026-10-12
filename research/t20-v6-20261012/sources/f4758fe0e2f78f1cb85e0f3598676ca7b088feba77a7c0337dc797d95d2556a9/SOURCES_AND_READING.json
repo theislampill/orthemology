@@ -1,0 +1,1007 @@
+{
+  "schema": "t20-foundational-sources-v1",
+  "cutoff_utc": "2026-10-11T11:32:55Z",
+  "reading_claim": "Actual research reports/sections only. No primary Arabic, full-volume, manuscript, historical-episode or execution credit is newly claimed.",
+  "not_read_for_authority": [
+    "instruction packet topic01/topic09 orientation excerpts",
+    "whole Revision Ledger",
+    "whole source corpus",
+    "catalogue inventory alone"
+  ],
+  "source_count": 49,
+  "sources": [
+    {
+      "source_id": "intrinsic-necessity-bridge-20261009",
+      "semantic_owner": "intrinsic-necessity-bridge-20261009",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/intrinsic-necessity-bridge-20261009/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+      "sha256": "82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+      "bytes": 12114,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/intrinsic-necessity-bridge-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/intrinsic-necessity-bridge-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/intrinsic-necessity-bridge-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Particular_Explanation_Research_Evidence_20261010.zip!/T20_Particular_Explanation_Research_Evidence_20261010/intrinsic-necessity-bridge-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a.md",
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-20261011/inputs/I01__intrinsic-necessity-bridge-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I01__intrinsic-necessity-bridge-20261009__REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "original-adequacy-currentness-20261011",
+      "semantic_owner": "original-adequacy-currentness-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/original-adequacy-currentness-20261011/RESULT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/83/8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+      "sha256": "8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+      "bytes": 5659,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/original-adequacy-currentness-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/original-adequacy-currentness-20261011/RESULT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "authorial-common-source-review-20261011",
+      "semantic_owner": "authorial-common-source-review-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+      "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+      "bytes": 15685,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/authorial-synthesis-response-preservation-20261011.zip!/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "synthesis-warrant-scope-20261011",
+      "semantic_owner": "synthesis-warrant-scope-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "bytes": 16325,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/synthesis-additive-response-20261011.zip!/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+        "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/synthesis-warrant-scope-20261011/RESULT.md",
+        "recovery-20261011/archives/fixed-inquiry-guide-source-checkpoint-20261011.zip!/fixed-inquiry-guide-source-checkpoint-20261011/payload/synthesis-warrant-scope-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L01__synthesis-warrant-scope-20261011__RESULT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L01__synthesis-warrant-scope-20261011__RESULT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "original-normative-authority-20261009",
+      "semantic_owner": "original-normative-authority-20261009",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/original-normative-authority-20261009/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8c/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+      "sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+      "bytes": 16755,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Wise_Reason_Application_Evidence_20261010.zip!/T20_Wise_Reason_Application_Evidence_20261010/original-normative-authority-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/T20_Continuing_Title_Source_Checkpoint_20261010.zip!/T20_Continuing_Title_Source_Checkpoint_20261010/original-normative-authority-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/original-normative-authority-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/original-normative-authority-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/original-normative-authority-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010/original-normative-authority-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "scoped-original-authority-20261010",
+      "semantic_owner": "scoped-original-authority-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ea/ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+      "sha256": "ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+      "bytes": 16203,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/T20_Continuing_Title_Source_Checkpoint_20261010.zip!/T20_Continuing_Title_Source_Checkpoint_20261010/scoped-original-authority-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/scoped-original-authority-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/scoped-original-authority-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/Attestation_Response_Source_Bound_Intermediate_20261010.zip!/Attestation_Response_Source_Bound_Intermediate_20261010/scoped-original-authority-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010/scoped-original-authority-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "wise-reason-asymmetry-20261010",
+      "semantic_owner": "wise-reason-asymmetry-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/wise-reason-asymmetry-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/5e/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+      "sha256": "5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+      "bytes": 20905,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/wise-reason-asymmetry-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/wise-reason-asymmetry-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Wise_Reason_Application_Evidence_20261010.zip!/T20_Wise_Reason_Application_Evidence_20261010/wise-reason-asymmetry-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/wise-reason-asymmetry-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Leafwise_Geometry_and_Wise_Means_20261010.zip!/T20_Leafwise_Geometry_and_Wise_Means_20261010/workspace/wise-reason-asymmetry-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/wise-reason-asymmetry-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010/wise-reason-asymmetry-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010.zip!/T20_Conditional_Recipient_Right_Source_Evidence_20261010/wise-reason-asymmetry-20261010/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "particular-determination-semantics-20261010",
+      "semantic_owner": "particular-determination-semantics-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/particular-determination-semantics-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f1/f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+      "sha256": "f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+      "bytes": 17806,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Wise_Reason_Application_Evidence_20261010.zip!/T20_Wise_Reason_Application_Evidence_20261010/particular-determination-semantics-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/particular-determination-semantics-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Particular_Determination_Source_Packet_20261010.zip!/T20_Particular_Determination_Source_Packet_20261010/particular-determination-semantics-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Leafwise_Geometry_and_Wise_Means_20261010.zip!/T20_Leafwise_Geometry_and_Wise_Means_20261010/workspace/particular-determination-semantics-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/particular-determination-semantics-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Particular_Explanation_Research_Evidence_20261010.zip!/T20_Particular_Explanation_Research_Evidence_20261010/particular-determination-semantics-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010/particular-determination-semantics-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "source-selection-fitness-20261011",
+      "semantic_owner": "source-selection-fitness-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/source-selection-fitness-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+      "sha256": "2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+      "bytes": 7327,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/recognition-selection-source-checkpoint-20261011.zip!/recognition-selection-source-checkpoint-20261011/payload/source-selection-fitness-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/source-selection-fitness-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "basic-recognition-correction-20261009",
+      "semantic_owner": "basic-recognition-correction-20261009",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/basic-recognition-correction-20261009/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/38/3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+      "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+      "bytes": 14453,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/uthaymin-question-purpose-preservation-20261011.zip!/basic-recognition-correction-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/basic-recognition-correction-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L04__basic-recognition-correction-20261009__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L04__basic-recognition-correction-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/basic-recognition-correction-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/uthaymin-question-purpose-preservation-20261011-ae86453cf1c7/basic-recognition-correction-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/Multi_Front_Successor_Evidence_20261010.zip!/Multi_Front_Successor_Evidence_20261010/prior-evidence-correction-20261010/inputs/basic-recognition-correction-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Structured_Context_And_Local_Correction_Evidence_20261010.zip!/T20_Structured_Context_And_Local_Correction_Evidence_20261010/basic-recognition-correction-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "fitrah-positive-warrant-inspection-20261010",
+      "semantic_owner": "fitrah-positive-warrant-inspection-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/fitrah-positive-warrant-inspection-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ab/abba899f264a90326c40a808fa156bc24e0380f59c18001609f2bc2611568446",
+      "sha256": "abba899f264a90326c40a808fa156bc24e0380f59c18001609f2bc2611568446",
+      "bytes": 9662,
+      "source_locations": [
+        "recovery-20261011/extracted/literal-shift-bounded-audit-supplement-20261011/literal-shift-bounded-audit-supplement-20261011/payload/basic-recognition-live-input-check-20261011/inputs/I08__REPORT.md",
+        "recovery-20261011/archives/literal-shift-bounded-audit-supplement-20261011.zip!/literal-shift-bounded-audit-supplement-20261011/payload/basic-recognition-live-input-check-20261011/inputs/I08__REPORT.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L05__fitrah-positive-warrant-inspection-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/fitrah-positive-warrant-inspection-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/fitrah-positive-warrant-inspection-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L05__fitrah-positive-warrant-inspection-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-20261011/inputs/L01__fitrah-positive-warrant-inspection-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/inputs/L01__fitrah-positive-warrant-inspection-20261010__REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "particular-recognition-source-reconciliation-20261011",
+      "semantic_owner": "particular-recognition-source-reconciliation-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/27/2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+      "sha256": "2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+      "bytes": 11595,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/broad-correction-research-preservation-20261011.zip!/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/inputs/particular-recognition-report.md",
+        "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/inputs/particular-recognition-report.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L07__particular-recognition-source-reconciliation-20261011__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L07__particular-recognition-source-reconciliation-20261011__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-independent-review-20261011/author_snapshot/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-independent-review-20261011/author_snapshot/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "recognition-practical-impediment-20261011",
+      "semantic_owner": "recognition-practical-impediment-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/recognition-practical-impediment-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/26/267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+      "sha256": "267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+      "bytes": 14721,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/recognition-selection-source-checkpoint-20261011.zip!/recognition-selection-source-checkpoint-20261011/payload/recognition-practical-impediment-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/recognition-practical-impediment-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "attestation-capacity-warrant-20261010",
+      "semantic_owner": "attestation-capacity-warrant-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/attestation-capacity-warrant-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+      "sha256": "d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+      "bytes": 11261,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L09__attestation-capacity-warrant-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L09__attestation-capacity-warrant-20261010__REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/Attestation_Response_Source_Bound_Intermediate_20261010.zip!/Attestation_Response_Source_Bound_Intermediate_20261010/attestation-capacity-warrant-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/attestation-capacity-warrant-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-20261011/inputs/L04__attestation-capacity-warrant-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/inputs/L04__attestation-capacity-warrant-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-independent-review-20261011/author_snapshot/inputs/L04__attestation-capacity-warrant-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/correction-interfaces-intermediate-collection-20261011/correction-interfaces-intermediate-collection-20261011/components/request-context-provenance-preservation-20261010.zip!/request-context-provenance-preservation-20261010/evidence/attestation-capacity-warrant-20261010/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "attestation-response-case-20261010",
+      "semantic_owner": "attestation-response-case-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/attestation-response-case-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+      "sha256": "d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+      "bytes": 20343,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L08__attestation-response-case-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/request-boundary-notes-preservation-20261011.zip!/attestation-response-case-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/attestation-response-case-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L08__attestation-response-case-20261010__REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/Attestation_Response_Source_Bound_Intermediate_20261010.zip!/Attestation_Response_Source_Bound_Intermediate_20261010/attestation-response-case-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/attestation-response-case-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/correction-interfaces-intermediate-collection-20261011/correction-interfaces-intermediate-collection-20261011/components/request-context-provenance-preservation-20261010.zip!/request-context-provenance-preservation-20261010/evidence/attestation-response-case-20261010/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "joint-disclosure-warrant-20261011",
+      "semantic_owner": "joint-disclosure-warrant-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+      "sha256": "673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+      "bytes": 13875,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/broad-correction-research-preservation-20261011.zip!/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/inputs/joint-disclosure-report.md",
+        "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/inputs/joint-disclosure-report.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "communication-availability-20261009",
+      "semantic_owner": "communication-availability-20261009",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/communication-availability-20261009/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/59/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+      "sha256": "5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+      "bytes": 13550,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-source-successor-checkpoint-20261009.zip!/active-t20-source-successor-checkpoint-20261009/communication-availability-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/components/pairwise-corroboration-preservation-20261011.zip!/communication-availability-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/communication-availability-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "commissioned-content-access-test-20261009",
+      "semantic_owner": "commissioned-content-access-test-20261009",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+      "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+      "bytes": 16780,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-source-successor-checkpoint-20261009.zip!/active-t20-source-successor-checkpoint-20261009/commissioned-content-access-test-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/components/pairwise-corroboration-preservation-20261011.zip!/commissioned-content-access-test-20261009/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/commissioned-content-access-test-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "cumulative-source-transmission-20261011",
+      "semantic_owner": "cumulative-source-transmission-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/cumulative-source-transmission-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/94/944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+      "sha256": "944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+      "bytes": 13621,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/reference-geometry-gradient-combined-delivery-20261011.zip!/reference-geometry-gradient-combined-delivery-20261011/payload/cumulative-source-transmission-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/cumulative-source-transmission-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "cumulative-warrant-primary-check-20261011",
+      "semantic_owner": "cumulative-warrant-primary-check-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/b3/b34bf62869c8da81812bb148ffe368511fa7f90e9492bafd44a80270ffd91aea",
+      "sha256": "b34bf62869c8da81812bb148ffe368511fa7f90e9492bafd44a80270ffd91aea",
+      "bytes": 10127,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/broad-correction-research-preservation-20261011.zip!/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "CP16_PRODUCTIVE_TOTALITY",
+      "semantic_owner": "CP16_PRODUCTIVE_TOTALITY",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3c/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "bytes": 35568,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/intrinsic-necessity-bridge-20261009/sources/CP16_PRODUCTIVE_TOTALITY.md",
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP16/productive-totality-source-return/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP16/productive-totality-source-return/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP16.zip!/T20_Source_Semantics_and_Warrant_Intermediate_Checkpoint_20261009/productive-totality-source-return/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "CND_ESSENTIAL_INDEPENDENCE_PUBLIC",
+      "semantic_owner": "CND_ESSENTIAL_INDEPENDENCE_PUBLIC",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/73/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+      "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+      "bytes": 14791,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/synthesis-additive-response-20261011.zip!/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-20261011/inputs/I05__sources__735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I05__sources__735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/Orthemology_Codex_FastPath_Launch_v2_20261008.zip!/Orthemology_Codex_FastPath_Launch_v2_20261008/inputs/Orthemology_T16_T20_Consolidated_v1_20261007.zip!/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/CND-essential-independence-scope/CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "productive-origination-target",
+      "semantic_owner": "productive-origination-target",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d2/d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "bytes": 16055,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-independent-review-20261011/REVIEWED_REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-independent-review-20261011/REVIEWED_REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "responsive-demonstration-20261011",
+      "semantic_owner": "responsive-demonstration-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/responsive-demonstration-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/cd/cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+      "sha256": "cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+      "bytes": 18094,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/uthaymin-question-purpose-preservation-20261011.zip!/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/responsive-demonstration-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/uthaymin-question-purpose-preservation-20261011-ae86453cf1c7/responsive-demonstration-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "continuing-title-source-test-20261010",
+      "semantic_owner": "continuing-title-source-test-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/continuing-title-source-test-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0a/0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+      "sha256": "0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+      "bytes": 16688,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/continuing-title-source-test-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/continuing-title-source-test-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/T20_Continuing_Title_Source_Checkpoint_20261010.zip!/T20_Continuing_Title_Source_Checkpoint_20261010/continuing-title-source-test-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/responsive-demonstration-preservation-20261011.zip!/continuing-title-source-test-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/continuing-title-source-test-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/Attestation_Response_Source_Bound_Intermediate_20261010.zip!/Attestation_Response_Source_Bound_Intermediate_20261010/continuing-title-source-test-20261010/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "CP23__affirmative-intrinsic-necessity",
+      "semantic_owner": "CP23__affirmative-intrinsic-necessity",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ef/ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+      "sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+      "bytes": 29061,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/synthesis-additive-response-20261011.zip!/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Source_Measure_Continuation_Intermediate_20261009.zip!/T20_Source_Measure_Continuation_Intermediate_20261009/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a.md",
+        "recovery-20261011/remaining-archives/safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/components/productive-origination-target-preservation-20261011.zip!/productive-origination-target-20261011/inputs/I03__sources__CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I03__sources__CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/affirmative-intrinsic-necessity-20261009/REPORT.md"
+      ],
+      "read_scope": "Affirmative result and substantive §§1–8; source record only through S2; no full source-record reading claim. The brief instantiated-nature quotation was partly clipped in a combined output, so substantive §3 is read as its surrounding explanation rather than quotation-level inspection.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "orthability-senses-decision0010",
+      "semantic_owner": "orthability-senses-decision0010",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/4d/4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/4d/4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+      "sha256": "4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+      "bytes": 3457,
+      "source_locations": [
+        "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/decisions/0010-orthability-sense-and-argument-boundary.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "actual-correction-entry-20261009",
+      "semantic_owner": "actual-correction-entry-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+      "sha256": "2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+      "bytes": 15166,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009.zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009/orthability-actuality-entry-currentness-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/extracted_later/T20_Shared_Proof_Cost_and_Information_Update_20261009/orthability-actuality-entry-currentness-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "same-standard-common-source-20261008",
+      "semantic_owner": "same-standard-common-source-20261008",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev03(2).zip!/Orthemology_T20_Common_Source_Warrant_Reassessment_20261008.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/Orthemology_Codex_FastPath_Launch_v2_20261008.zip!/Orthemology_Codex_FastPath_Launch_v2_20261008/inputs/Orthemology_T20_Common_Source_Warrant_Reassessment_20261008.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/warrant-standard-review/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP03.zip!/T20_Warrant_and_Empirical_Audit_Checkpoint_20261008/t20-next-frontier-20261008/warrant-standard-review/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "affirmative-original-exclusivity-20261009",
+      "semantic_owner": "affirmative-original-exclusivity-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/96/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/96/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+      "sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+      "bytes": 29099,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/affirmative-original-exclusivity-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint23_20261009/affirmative-original-exclusivity-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "knowing-production-20261009",
+      "semantic_owner": "knowing-production-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "bytes": 17456,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP22/knowing-production-semantics-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP22/knowing-production-semantics-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP22.zip!/T20_Resumed_Research_Intermediate_Checkpoint22_20261009/knowing-production-semantics-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "original-cognitive-efficacy-20261009",
+      "semantic_owner": "original-cognitive-efficacy-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/72/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/72/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+      "sha256": "72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+      "bytes": 19541,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/original-cognitive-efficacy-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint23_20261009/original-cognitive-efficacy-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "affirmative-knowledge-ascent-20261009",
+      "semantic_owner": "affirmative-knowledge-ascent-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+      "sha256": "c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+      "bytes": 22409,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Constructive_Proof_Compiler_and_Knowledge_Update_20261009.zip!/T20_Constructive_Proof_Compiler_and_Knowledge_Update_20261009/affirmative-knowledge-ascent-20261009/REPORT.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/extracted_later/T20_Constructive_Proof_Compiler_and_Knowledge_Update_20261009/affirmative-knowledge-ascent-20261009/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "oneness-root-20261009",
+      "semantic_owner": "oneness-root-20261009",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+      "bytes": 5862,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP14/t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP15/t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP15.zip!/T20_Epistemic_PSR_and_Explanatory_Bridge_Intermediate_Checkpoint_20261009/t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP14.zip!/T20_Sourcehood_Explanation_and_Redundancy_Intermediate_Checkpoint_20261009/t20-next-frontier-20261008/root-later-operations/ONENESS_WARRANT_JUDGEMENT_20261009.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "veracity-crosscheck-20261008",
+      "semantic_owner": "veracity-crosscheck-20261008",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "bytes": 5250,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev03(2).zip!/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008.zip!/T20_INTERMEDIATE_RESEARCH_CHECKPOINT_20261008/t20-next-frontier-20261008/veracity-crosscheck/SCOPE_FINDING.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/veracity-crosscheck/SCOPE_FINDING.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/veracity-crosscheck/SCOPE_FINDING.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "representation-completion-succession-20261010",
+      "semantic_owner": "representation-completion-succession-20261010",
+      "original_read_path": "t20-consolidation-20261011/catalogue/objects/10/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/10/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+      "sha256": "100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+      "bytes": 20090,
+      "source_locations": [
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010/intrinsic-succession-origin-20261010/pre-clarification/REPORT.md",
+        "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010.zip!/T20_Intrinsic_Succession_Application_Evidence_20261010/intrinsic-succession-review-20261010/inputs/intrinsic-succession-origin-20261010/REPORT.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "tibyan-current",
+      "semantic_owner": "tibyan-current",
+      "original_read_path": "wisdom-attestation-own-act-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/74/744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+      "sha256": "744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+      "bytes": 13480,
+      "source_locations": [
+        "wisdom-attestation-own-act-20261011/REPORT.md",
+        "wisdom-attestation-source-note-20261011.zip!/wisdom-attestation-source-note-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "tibyan-addendum",
+      "semantic_owner": "tibyan-addendum",
+      "original_read_path": "wisdom-attestation-own-act-20261011/ADDENDUM.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/87/8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+      "sha256": "8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+      "bytes": 1782,
+      "source_locations": [
+        "wisdom-attestation-own-act-20261011/ADDENDUM.md",
+        "wisdom-content-source-supplement-20261011.zip!/TIBYAN_CONTINUATION.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "cumulative-content-note",
+      "semantic_owner": "cumulative-content-note",
+      "original_read_path": "cumulative-content-bridge-source-check-20261011/SOURCE_NOTE.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+      "sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+      "bytes": 6966,
+      "source_locations": [
+        "cumulative-content-bridge-source-check-20261011/SOURCE_NOTE.md",
+        "wisdom-content-source-supplement-20261011.zip!/content-bridge/SOURCE_NOTE.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "cognitive-mode-owner-note",
+      "semantic_owner": "cognitive-mode-owner-note",
+      "original_read_path": "cumulative-content-bridge-source-check-20261011/MODE_OWNER_NOTE.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3b/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+      "sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+      "bytes": 4850,
+      "source_locations": [
+        "cumulative-content-bridge-source-check-20261011/MODE_OWNER_NOTE.md",
+        "wisdom-content-source-supplement-20261011.zip!/content-bridge/MODE_OWNER_NOTE.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "efficacy-concentration-addendum",
+      "semantic_owner": "efficacy-concentration-addendum",
+      "original_read_path": "t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/aa/aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+      "sha256": "aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+      "bytes": 6262,
+      "source_locations": [
+        "t20-continuation-20261008/independent-review/reviewed-snapshots/ADDENDUM.md",
+        "t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+        "t20-continuation-20261008/delivery/stage/t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+        "t20-continuation-20261008/delivery/fresh-final/t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+        "t20-continuation-20261008/delivery/stage-final/t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+        "t20-continuation-20261008/delivery/Orthemology_T20_Renewed_Research_Review_20261008.zip!/t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "targeted-source-model-addendum",
+      "semantic_owner": "targeted-source-model-addendum",
+      "original_read_path": "recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c7/c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+      "sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+      "bytes": 11803,
+      "source_locations": [
+        "recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+        "t20-continuation-20261008/delivery/stage/recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+        "recovery-t20/Orthemology_T20_Targeted_Source_Addendum_20261008.zip!/SOURCE_AND_MODEL_FINDINGS.md",
+        "t20-continuation-20261008/delivery/fresh-final/recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+        "t20-continuation-20261008/delivery/stage-final/recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev03(2).zip!/Orthemology_T20_Targeted_Source_Findings_20261008.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "root-source-control-20261008",
+      "semantic_owner": "root-source-control-20261008",
+      "original_read_path": "t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2b1a0d442ba853ba222867a3a96c350a7727fcc5fed3ff50d8ee9c45ff257700",
+      "sha256": "2b1a0d442ba853ba222867a3a96c350a7727fcc5fed3ff50d8ee9c45ff257700",
+      "bytes": 2380,
+      "source_locations": [
+        "t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+        "t20-continuation-20261008/delivery/stage/t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+        "t20-continuation-20261008/delivery/fresh-final/t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+        "t20-continuation-20261008/delivery/stage-final/t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+        "t20-continuation-20261008/delivery/Orthemology_T20_Renewed_Research_Review_20261008.zip!/t20-continuation-20261008/ROOT_SOURCE_REVIEW.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2b1a0d442ba853ba222867a3a96c350a7727fcc5fed3ff50d8ee9c45ff257700.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2b1a0d442ba853ba222867a3a96c350a7727fcc5fed3ff50d8ee9c45ff257700.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "efficacy-warrant-20261008",
+      "semantic_owner": "efficacy-warrant-20261008",
+      "original_read_path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246,
+      "source_locations": [
+        "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+        "t20-continuation-20261008/delivery/stage/t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+        "t20-continuation-20261008/delivery/fresh-final/t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+        "t20-continuation-20261008/delivery/stage-final/t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+        "t20-continuation-20261008/delivery/Orthemology_T20_Renewed_Research_Review_20261008.zip!/t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+        "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6.md",
+        "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6.md"
+      ],
+      "read_scope": "Result and §§1–3.3, followed by §7 disposition; combined output clipped intervening remainder. The concentration addendum and root source controls were fully read. No full-report reading credit.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "request-context-provenance-20261010",
+      "semantic_owner": "request-context-provenance-20261010",
+      "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/request-context-provenance-20261010/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8b/8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+      "sha256": "8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+      "bytes": 15684,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L10__request-context-provenance-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/request-boundary-notes-preservation-20261011.zip!/request-context-provenance-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/request-context-provenance-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/inputs/L10__request-context-provenance-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/request-context-provenance-20261010/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/particular-recognition-source-preservation-20261011.zip!/particular-recognition-source-reconciliation-20261011/inputs/L05__request-context-provenance-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/inputs/L05__request-context-provenance-20261010__REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/request-context-provenance-independent-review-20261010/accepted_snapshot/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "request-publicity-feasibility-20261011",
+      "semantic_owner": "request-publicity-feasibility-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/request-publicity-feasibility-20261011/RESULT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bb89f0e87595029b9061ff45a17426ede9c64080bcd85ad5f02b47f411fb1d8b",
+      "sha256": "bb89f0e87595029b9061ff45a17426ede9c64080bcd85ad5f02b47f411fb1d8b",
+      "bytes": 5628,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/uthaymin-question-purpose-preservation-20261011.zip!/request-publicity-feasibility-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/request-publicity-feasibility-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/components/request-boundary-notes-preservation-20261011.zip!/request-publicity-feasibility-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/request-publicity-feasibility-20261011/RESULT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/uthaymin-question-purpose-preservation-20261011-ae86453cf1c7/request-publicity-feasibility-20261011/RESULT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "uthaymin-question-purpose-20261011",
+      "semantic_owner": "uthaymin-question-purpose-20261011",
+      "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/uthaymin-question-purpose-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/fa/fac7655deeb88f6381ae3f75fa20801a143f0666267db45bde89d4475f99a473",
+      "sha256": "fac7655deeb88f6381ae3f75fa20801a143f0666267db45bde89d4475f99a473",
+      "bytes": 7356,
+      "source_locations": [
+        "recovery-20261011/remaining-archives/uthaymin-question-purpose-preservation-20261011.zip!/uthaymin-question-purpose-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/uthaymin-question-purpose-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/portable-source-inputs/uthaymin-question-purpose-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/uthaymin-question-purpose-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/uthaymin-question-purpose-preservation-20261011-ae86453cf1c7/uthaymin-question-purpose-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Author report; existing review status inherited only where separately specified."
+    },
+    {
+      "source_id": "corroborative-source-argument-20261011",
+      "semantic_owner": "corroborative-source-argument-20261011",
+      "original_read_path": "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-argument-20261011/REPORT.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f4/f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+      "sha256": "f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+      "bytes": 11048,
+      "source_locations": [
+        "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-argument-20261011/REPORT.md",
+        "recovery-20261011/archives/corroborative-source-preservation-20261011.zip!/corroborative-source-preservation-20261011/originals/corroborative-source-argument-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/credal-coupling-geometric-final-delivery-20261011.zip!/credal-coupling-geometric-final-delivery-20261011/inherited/corroborative-source-argument-20261011/REPORT.md",
+        "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/corroborative-source-argument-20261011/REPORT.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Final draft passes separately read source-transfer review."
+    },
+    {
+      "source_id": "corroborative-source-transfer-review-20261011",
+      "semantic_owner": "corroborative-source-transfer-review-20261011",
+      "original_read_path": "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-transfer-review-20261011/REVIEW.md",
+      "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/77/775b7fb989398e4a49b45d25ea01989d8ed6034d5694fd5c066702ae59c7d5a0",
+      "sha256": "775b7fb989398e4a49b45d25ea01989d8ed6034d5694fd5c066702ae59c7d5a0",
+      "bytes": 11074,
+      "source_locations": [
+        "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-transfer-review-20261011/REVIEW.md",
+        "recovery-20261011/archives/corroborative-source-preservation-20261011.zip!/corroborative-source-preservation-20261011/originals/corroborative-source-transfer-review-20261011/REVIEW.md",
+        "recovery-20261011/remaining-archives/recognition-selection-source-checkpoint-20261011.zip!/recognition-selection-source-checkpoint-20261011/payload/corroborative-source-transfer-review-20261011/REVIEW.md",
+        "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/corroborative-source-transfer-review-20261011/REVIEW.md"
+      ],
+      "read_scope": "Full substantive report, including result, argument, scope and disposition.",
+      "reading_evidence": "Fresh report reading during consolidation; underlying primary/source/code verification remains inherited.",
+      "fresh_primary_reading": false,
+      "fresh_execution": false,
+      "review_control": "Independent review, including final draft-specific follow-up; no blocking source-faithfulness defect."
+    }
+  ]
+}

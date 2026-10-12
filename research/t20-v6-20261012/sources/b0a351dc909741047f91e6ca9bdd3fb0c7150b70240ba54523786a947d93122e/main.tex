@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=16pt,footskip=12mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{newtxtext,newtxmath}
+\usepackage{microtype}
+\usepackage{mathtools,booktabs,longtable,array,tabularx}
+\usepackage{enumitem,fancyhdr,xcolor,needspace}
+\usepackage{xurl}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\definecolor{ink}{HTML}{19374A}
+\hypersetup{pdftitle={Apoautosis and Apoautotic Transductive Faculties},pdfauthor={Research manuscript developed from the conceptual programme of theIslampill; AI-assisted preparation},pdfsubject={A standalone companion to The Last Moat, Edition 3}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Apoautosis and transductive faculties}}
+\fancyhead[R]{\small Research manuscript / 1}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{1.1em}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\setlist{nosep,leftmargin=1.6em}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{scope}{Scope}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Pow}{\mathcal P}
+\newcommand{\F}{\mathcal F}
+\newcommand{\U}{\mathcal U}
+\newcommand{\B}{\mathcal B}
+\newcommand{\Good}{\operatorname{Good}}
+\newcommand{\Obs}{\operatorname{Obs}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Capability}{\operatorname{Cap}}
+\newcommand{\Win}{\operatorname{Win}}
+\newcommand{\Leg}{\operatorname{Legal}}
+\newcommand{\Pref}{\operatorname{Pref}}
+\newcommand{\src}[1]{\par\noindent{\small\textit{Lineage and scope.} #1}\par}
+\newcommand{\status}[1]{\textsf{\small #1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\begin{center}
+{\small\textsc{Orthemology / standalone companion study}}\\[12pt]
+{\LARGE\bfseries Apoautosis and Apoautotic\\[3pt] Transductive Faculties}\\[10pt]
+{\large Continuity, Re-realisation, and the Preservation of Future Capability}\\[12pt]
+{\normalsize A companion to \textit{The Last Moat}, Third Edition}\\[10pt]
+{\small Conceptual programme: \texttt{@theIslampill}\\
+AI-assisted research manuscript \enspace / \enspace 21 September 2026 \enspace / \enspace Version 1}
+\end{center}
+\vspace{8pt}
+\begin{abstract}
+A system's operation can survive a change of implementation while its capacity to establish a further implementation is lost. This distinction is central to \emph{apoautosis}: the process by which an organisation becomes capable of continuing across changing realisations, with the faculties enabling that continuation included in what must remain operatively available. Building on \textit{The Last Moat}, Edition 3, this standalone paper separates a witnessed continuation event from an apoautotic transductive faculty and from its recursively repeatable exercise. Transduction concerns the relation between heterogeneous physical processes and specified operational roles; continuation concerns consequential state and behaviour; generation concerns establishing a successor; admissibility concerns the independent conditions under which a transition may occur. None supplies the others by naming them.
+
+The mathematical treatment is task-relative. We restate finite continuation under commuting realisation and migration maps, develop the inherited distinction between retained information and lawful reacquisition, and explain why preserving present behaviour need not preserve later transductive discrimination. A covering criterion gives the minimum record alphabet for one finite relation-valued decision; its record-plus-probe bound does not transfer unchanged to a per-request future query family. Labelled beliefs retain original targets while inquiry changes the current state, yielding an exact finite criterion for warranted, executable continuation under declared observations. A finite-request composition result makes the preservation of future capability an explicit successor obligation rather than an inference from one successful move. Counterexamples separate pointwise from sequential capability, available from usable interfaces, and organisational continuity from numerical identity.
+
+The contribution is a source-grounded conceptual and mathematical synthesis. General mathematical priority, physical re-realisation, autonomous interface discovery, independent validation and a meniscus break are not claimed. The research target is a sharper account of which future continuations remain both decidable and executable after specified support changes, and at what evidential and resource cost.
+\end{abstract}
+\vspace{3pt}
+\noindent\textbf{Status.} New paper; not Edition 4 and not a replacement for Edition 3. Ordinary conditional proofs and newly executed finite-model checks are distinguished from source claims, proposed terminology and untested physical hypotheses.
+\newpage
+\tableofcontents
+\newpage
+\input{01_concept.tex}
+\input{02_formal.tex}
+\input{03_future.tex}
+\input{04_synthesis.tex}
+\input{05_appendices.tex}
+\input{references.tex}
+\end{document}

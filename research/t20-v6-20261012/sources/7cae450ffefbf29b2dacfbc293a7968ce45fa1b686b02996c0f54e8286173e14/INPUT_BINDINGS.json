@@ -1,0 +1,91 @@
+{
+  "date_utc": "2026-10-10",
+  "scope": "Scratch-only conditional mathematical interface; no protected mutation, independent-review claim, or closure.",
+  "local_inputs": [
+    {
+      "path": "warranted-learning-20261009/RESULT.md",
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+      "bytes": 21763
+    },
+    {
+      "path": "nonseparable-bayes-repair-20261009/RESULT.md",
+      "sha256": "a9b3f91f320ee752ee732dc85af793f8a4736a98c01035fb5b197dfe2bf7eecb",
+      "bytes": 25964
+    },
+    {
+      "path": "noetic-gradient-transport-20261009/RESULT.md",
+      "sha256": "27f85cd312cb2083d26257e6c74fea8e547c879dce07d94c04d8c87446c0f4a9",
+      "bytes": 24082
+    },
+    {
+      "path": "audit-continuation-transport-20261010/RESULT.md",
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "bytes": 24610
+    },
+    {
+      "path": "warranted-learning-20261009/sources/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+      "sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+      "bytes": 7557,
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+      "git_blob_sha": "0929ef49e847b3bcfd5847600a6a80c46283f2f7",
+      "git_blob_verified": true
+    },
+    {
+      "path": "warranted-learning-20261009/sources/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+      "bytes": 8348,
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "git_blob_sha": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+      "git_blob_verified": true
+    },
+    {
+      "path": "warranted-learning-20261009/sources/SOURCE_BINDINGS.json",
+      "sha256": "257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40",
+      "bytes": 5107
+    }
+  ],
+  "bounded_nonduplication": {
+    "direct_read": "Three requested RESULT packets; G1 feasibility-first source; Deep AX V2 source sections 1-5; audit-continuation inherited-invariant-space boundary.",
+    "phrase_scan": "Invariant likelihood/Bayes, homogenized cone, Bayes reproject, simplex faces, positive diagonal, Jeffrey, block mass, fixed marginal, feasibility Bayes, face likelihood.",
+    "adjacent_scan_directories": [
+      "warranted-learning-20261009",
+      "nonseparable-bayes-repair-20261009",
+      "noetic-gradient-transport-20261009",
+      "information-geometry-transport-20261009",
+      "noetic-correction-semantics-20261009",
+      "audit-continuation-transport-20261010",
+      "channel-natural-repair-20261009"
+    ],
+    "qualification": "Bounded local comparison only; absence of matching text is not an exhaustive priority or novelty finding."
+  },
+  "external_ancestry": [
+    {
+      "title": "The role of perturbation in compositional data analysis",
+      "authors": "J. Aitchison and K. W. Ng",
+      "year": 2005,
+      "url": "https://journals.sagepub.com/doi/10.1191/1471082X05st091oa",
+      "reading_scope": "Publisher abstract, keywords, references only; no paywalled full-text claim."
+    },
+    {
+      "title": "The dependence graph for bases in matroids",
+      "author": "Stein Krogdahl",
+      "year": 1977,
+      "url": "https://www.sciencedirect.com/science/article/pii/0012365X77901182",
+      "reading_scope": "Publisher-indexed abstract and bibliographic data; direct page open failed. Graph and connected-components ancestry only. Exact diagonal proof supplied in report."
+    },
+    {
+      "title": "Updating Probabilities",
+      "authors": "Peter D. Grunwald and Joseph Y. Halpern",
+      "year": 2003,
+      "url": "https://arxiv.org/pdf/cs/0306124",
+      "reading_scope": "Abstract, introduction, section 5.1 Jeffrey formula and section 5.2 minimum-relative-entropy interpretation. No full-paper theorem audit."
+    },
+    {
+      "title": "I-Divergence Geometry of Probability Distributions and Minimization Problems",
+      "author": "I. Csiszar",
+      "year": 1975,
+      "doi": "10.1214/aop/1176996454",
+      "reading_scope": "Bibliographic ancestry from Grunwald-Halpern; original full article not inspected or imported as proof."
+    }
+  ]
+}

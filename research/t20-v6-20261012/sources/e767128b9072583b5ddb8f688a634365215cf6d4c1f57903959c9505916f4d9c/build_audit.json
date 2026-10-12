@@ -1,0 +1,325 @@
+{
+  "edition": 3,
+  "created_utc": "2026-09-10T12:45:45.625577+00:00",
+  "delivered_pdf": {
+    "filename": "The_Last_Moat_Edition_3.pdf",
+    "sha256": "09dc4c019e57912e18bb386f77497ddacbfc781f06f87aa2a4e880f28d8e39b8",
+    "bytes": 607313,
+    "pages": 58
+  },
+  "builds": {
+    "reviewed": {
+      "exit_code": 0,
+      "log_sha256": "72192f590210f5cbfb289110e2571ae4172941d72541701d6ec9160e5172e7ac",
+      "warnings": [],
+      "pdf_pages": 58,
+      "pdf_sha256": "09dc4c019e57912e18bb386f77497ddacbfc781f06f87aa2a4e880f28d8e39b8"
+    },
+    "clean_modular": {
+      "exit_code": 0,
+      "log_sha256": "3b8bdbe9d80412e43fde6e66dd6dda062b6df23b9ab9523c6e4923e84c2faa97",
+      "warnings": [],
+      "pdf_pages": 58,
+      "pdf_sha256": "477d94127fef9bf7fd7f463706b4f0e8efcb3519925af8d7cd32f06571959443"
+    },
+    "clean_flattened": {
+      "exit_code": 0,
+      "log_sha256": "0601f06a8a5cfb0c6728f3be865b26733c76f072f4e1cf86b35c982d7b3a6990",
+      "warnings": [],
+      "pdf_pages": 58,
+      "pdf_sha256": "1a7daedb3a0946815e7696ca1613e9480e7d290346cb44050b9e65a847a17630"
+    }
+  },
+  "clean_build_page_text_equal": true,
+  "page_text_sha256": "9b17122a77be7936ca588cda1a6ee1615369391abe1244a3e184ca1e040d293a",
+  "structure": {
+    "named_results": 29,
+    "retained_results": 21,
+    "added_results": 8,
+    "references": 39,
+    "missing_label_references": [],
+    "duplicate_labels": [],
+    "missing_bibliography_keys": []
+  },
+  "checks": {
+    "ordinary_passed": 42,
+    "ordinary_total": 42,
+    "optimised_passed": 42,
+    "optimised_total": 42,
+    "detail_arrays_equal": true,
+    "python_version": "3.13.5",
+    "normal_report_sha256": "dbfee14649a6205c8c30d9c558d021bdb56c120898d3aec4e9b9a9c6b66c3a66",
+    "optimised_report_sha256": "af45c31ce0a11b833a25f975a0c08f9c37499439d93aeaacdaa9a281ac0c4a33"
+  },
+  "render_review": {
+    "renderer": "PDF skill render_pdf.py",
+    "dpi": 150,
+    "rendered_pages": 58,
+    "contact_sheets_inspected": 5,
+    "full_size_central_proof_pages_inspected": [
+      35,
+      36
+    ],
+    "text_outside_page": [],
+    "replacement_characters_detected": false,
+    "page_word_counts": [
+      {
+        "page": 1,
+        "word_count": 300
+      },
+      {
+        "page": 2,
+        "word_count": 202
+      },
+      {
+        "page": 3,
+        "word_count": 480
+      },
+      {
+        "page": 4,
+        "word_count": 442
+      },
+      {
+        "page": 5,
+        "word_count": 363
+      },
+      {
+        "page": 6,
+        "word_count": 485
+      },
+      {
+        "page": 7,
+        "word_count": 468
+      },
+      {
+        "page": 8,
+        "word_count": 459
+      },
+      {
+        "page": 9,
+        "word_count": 495
+      },
+      {
+        "page": 10,
+        "word_count": 475
+      },
+      {
+        "page": 11,
+        "word_count": 525
+      },
+      {
+        "page": 12,
+        "word_count": 514
+      },
+      {
+        "page": 13,
+        "word_count": 516
+      },
+      {
+        "page": 14,
+        "word_count": 411
+      },
+      {
+        "page": 15,
+        "word_count": 447
+      },
+      {
+        "page": 16,
+        "word_count": 491
+      },
+      {
+        "page": 17,
+        "word_count": 429
+      },
+      {
+        "page": 18,
+        "word_count": 489
+      },
+      {
+        "page": 19,
+        "word_count": 510
+      },
+      {
+        "page": 20,
+        "word_count": 432
+      },
+      {
+        "page": 21,
+        "word_count": 533
+      },
+      {
+        "page": 22,
+        "word_count": 523
+      },
+      {
+        "page": 23,
+        "word_count": 516
+      },
+      {
+        "page": 24,
+        "word_count": 495
+      },
+      {
+        "page": 25,
+        "word_count": 492
+      },
+      {
+        "page": 26,
+        "word_count": 535
+      },
+      {
+        "page": 27,
+        "word_count": 500
+      },
+      {
+        "page": 28,
+        "word_count": 472
+      },
+      {
+        "page": 29,
+        "word_count": 417
+      },
+      {
+        "page": 30,
+        "word_count": 483
+      },
+      {
+        "page": 31,
+        "word_count": 504
+      },
+      {
+        "page": 32,
+        "word_count": 470
+      },
+      {
+        "page": 33,
+        "word_count": 485
+      },
+      {
+        "page": 34,
+        "word_count": 436
+      },
+      {
+        "page": 35,
+        "word_count": 499
+      },
+      {
+        "page": 36,
+        "word_count": 503
+      },
+      {
+        "page": 37,
+        "word_count": 518
+      },
+      {
+        "page": 38,
+        "word_count": 518
+      },
+      {
+        "page": 39,
+        "word_count": 523
+      },
+      {
+        "page": 40,
+        "word_count": 507
+      },
+      {
+        "page": 41,
+        "word_count": 520
+      },
+      {
+        "page": 42,
+        "word_count": 503
+      },
+      {
+        "page": 43,
+        "word_count": 482
+      },
+      {
+        "page": 44,
+        "word_count": 453
+      },
+      {
+        "page": 45,
+        "word_count": 505
+      },
+      {
+        "page": 46,
+        "word_count": 522
+      },
+      {
+        "page": 47,
+        "word_count": 476
+      },
+      {
+        "page": 48,
+        "word_count": 460
+      },
+      {
+        "page": 49,
+        "word_count": 335
+      },
+      {
+        "page": 50,
+        "word_count": 482
+      },
+      {
+        "page": 51,
+        "word_count": 477
+      },
+      {
+        "page": 52,
+        "word_count": 314
+      },
+      {
+        "page": 53,
+        "word_count": 476
+      },
+      {
+        "page": 54,
+        "word_count": 451
+      },
+      {
+        "page": 55,
+        "word_count": 382
+      },
+      {
+        "page": 56,
+        "word_count": 352
+      },
+      {
+        "page": 57,
+        "word_count": 368
+      },
+      {
+        "page": 58,
+        "word_count": 235
+      }
+    ]
+  },
+  "tool_versions": {
+    "pdflatex": [
+      "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+      "kpathsea version 6.4.0/dev",
+      "Copyright 2024 Han The Thanh (pdfTeX) et al.",
+      "There is NO warranty.  Redistribution of this software is"
+    ],
+    "latexmk": [
+      "Latexmk, John Collins, 11 Dec. 2024. Version 4.86"
+    ]
+  },
+  "baseline_unchanged": {
+    "pdf_filename": "The_Last_Moat_Edition_2.pdf",
+    "pdf_sha256": "aae5d876c7b71c4df64c8bf94f58dce82e00d102d2c8698296dfb70f7f4a1ebc",
+    "source_zip_sha256": "43c638b0a1ac9620b5193ade25635e3b34a95d0e4f386591bc06481c477bcfe7",
+    "scope": "All 2258 parsed lines of Edition 2 read in this turn; editable source inspected and revised; original files unchanged."
+  },
+  "not_claimed": [
+    "physical experiment",
+    "independent specialist peer review",
+    "proof-assistant verification",
+    "full external NS proof validation",
+    "historical novelty of standard lemmas",
+    "empirical superiority of the proposed framework"
+  ]
+}

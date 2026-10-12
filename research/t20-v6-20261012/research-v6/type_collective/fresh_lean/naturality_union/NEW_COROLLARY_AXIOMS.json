@@ -1,0 +1,19 @@
+{
+  "source_naturality_fails": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "graph_projection_bridges_not_jointly_inhabited": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "literal_identity_has_no_internal_negation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "log_sha256": "486ca486e99994d31379cb2e8407d62f41cddea7e078c420ad44fc0bdcd0f31e",
+  "receipt": "ADDITIONAL_COROLLARY_COMPILATION.json"
+}

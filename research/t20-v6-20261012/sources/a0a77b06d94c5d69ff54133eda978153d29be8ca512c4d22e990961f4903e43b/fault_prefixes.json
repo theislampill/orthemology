@@ -1,0 +1,4808 @@
+[
+  {
+    "operation": "revise",
+    "prefix_index": 0,
+    "function": "revise_rule",
+    "line": 73,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revise",
+    "prefix_index": 1,
+    "function": "revise_rule",
+    "line": 74,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revise",
+    "prefix_index": 2,
+    "function": "revise_rule",
+    "line": 75,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revise",
+    "prefix_index": 3,
+    "function": "revise_rule",
+    "line": 76,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revise",
+    "prefix_index": 4,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revise",
+    "prefix_index": 5,
+    "function": "revise_rule",
+    "line": 75,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 0,
+    "function": "set_observation",
+    "line": 78,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 1,
+    "function": "set_observation",
+    "line": 82,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 2,
+    "function": "set_observation",
+    "line": 83,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 3,
+    "function": "set_observation",
+    "line": 84,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 4,
+    "function": "<genexpr>",
+    "line": 84,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 5,
+    "function": "<genexpr>",
+    "line": 84,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 6,
+    "function": "<genexpr>",
+    "line": 84,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 7,
+    "function": "set_observation",
+    "line": 85,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 8,
+    "function": "set_observation",
+    "line": 86,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 9,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 10,
+    "function": "set_observation",
+    "line": 87,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 11,
+    "function": "set_observation",
+    "line": 88,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 12,
+    "function": "set_observation",
+    "line": 89,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 13,
+    "function": "set_observation",
+    "line": 89,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 14,
+    "function": "set_observation",
+    "line": 89,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 15,
+    "function": "set_observation",
+    "line": 90,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_observation",
+    "prefix_index": 16,
+    "function": "set_observation",
+    "line": 85,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 0,
+    "function": "remove_observation",
+    "line": 92,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 1,
+    "function": "remove_observation",
+    "line": 93,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 2,
+    "function": "remove_observation",
+    "line": 94,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 3,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 4,
+    "function": "remove_observation",
+    "line": 95,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 5,
+    "function": "remove_observation",
+    "line": 96,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 6,
+    "function": "remove_observation",
+    "line": 97,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 7,
+    "function": "remove_observation",
+    "line": 97,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 8,
+    "function": "remove_observation",
+    "line": 97,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 9,
+    "function": "remove_observation",
+    "line": 98,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_observation",
+    "prefix_index": 10,
+    "function": "remove_observation",
+    "line": 93,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 0,
+    "function": "set_probability_observation",
+    "line": 100,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 1,
+    "function": "set_probability_observation",
+    "line": 101,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 2,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 3,
+    "function": "set_probability_observation",
+    "line": 103,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 4,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 5,
+    "function": "set_probability_observation",
+    "line": 104,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 6,
+    "function": "set_probability_observation",
+    "line": 105,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 7,
+    "function": "set_probability_observation",
+    "line": 106,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "set_probability",
+    "prefix_index": 8,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 0,
+    "function": "refine_probability_observation",
+    "line": 108,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 1,
+    "function": "refine_probability_observation",
+    "line": 109,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 2,
+    "function": "refine_probability_observation",
+    "line": 110,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 3,
+    "function": "refine_probability_observation",
+    "line": 111,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 4,
+    "function": "refine_probability_observation",
+    "line": 112,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 5,
+    "function": "refine_probability_observation",
+    "line": 113,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 6,
+    "function": "set_probability_observation",
+    "line": 100,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 7,
+    "function": "set_probability_observation",
+    "line": 101,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 8,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 9,
+    "function": "set_probability_observation",
+    "line": 103,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 10,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 11,
+    "function": "set_probability_observation",
+    "line": 104,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 12,
+    "function": "set_probability_observation",
+    "line": 105,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 13,
+    "function": "set_probability_observation",
+    "line": 106,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 14,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 15,
+    "function": "refine_probability_observation",
+    "line": 114,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "refine",
+    "prefix_index": 16,
+    "function": "refine_probability_observation",
+    "line": 110,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 0,
+    "function": "coarsen_probability_observation",
+    "line": 116,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 1,
+    "function": "coarsen_probability_observation",
+    "line": 117,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 2,
+    "function": "coarsen_probability_observation",
+    "line": 118,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 3,
+    "function": "coarsen_probability_observation",
+    "line": 119,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 4,
+    "function": "coarsen_probability_observation",
+    "line": 120,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 5,
+    "function": "coarsen_probability_observation",
+    "line": 121,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 6,
+    "function": "set_probability_observation",
+    "line": 100,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 7,
+    "function": "set_probability_observation",
+    "line": 101,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 8,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 9,
+    "function": "set_probability_observation",
+    "line": 103,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 10,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 11,
+    "function": "set_probability_observation",
+    "line": 104,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 12,
+    "function": "set_probability_observation",
+    "line": 105,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 13,
+    "function": "set_probability_observation",
+    "line": 106,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 14,
+    "function": "set_probability_observation",
+    "line": 102,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 15,
+    "function": "coarsen_probability_observation",
+    "line": 122,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 16,
+    "function": "coarsen_probability_observation",
+    "line": 123,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "coarsen",
+    "prefix_index": 17,
+    "function": "coarsen_probability_observation",
+    "line": 118,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 0,
+    "function": "require_probability",
+    "line": 125,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 1,
+    "function": "require_probability",
+    "line": 126,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 2,
+    "function": "require_probability",
+    "line": 127,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 3,
+    "function": "require_probability",
+    "line": 128,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 4,
+    "function": "require_probability",
+    "line": 129,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 5,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 6,
+    "function": "require_probability",
+    "line": 130,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 7,
+    "function": "require_probability",
+    "line": 131,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 8,
+    "function": "require_probability",
+    "line": 132,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "require",
+    "prefix_index": 9,
+    "function": "require_probability",
+    "line": 128,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 0,
+    "function": "remove_probability_requirement",
+    "line": 134,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 1,
+    "function": "remove_probability_requirement",
+    "line": 135,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 2,
+    "function": "remove_probability_requirement",
+    "line": 136,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 3,
+    "function": "_revision_budget",
+    "line": 71,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 4,
+    "function": "remove_probability_requirement",
+    "line": 137,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 5,
+    "function": "remove_probability_requirement",
+    "line": 138,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 6,
+    "function": "remove_probability_requirement",
+    "line": 139,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "remove_requirement",
+    "prefix_index": 7,
+    "function": "remove_probability_requirement",
+    "line": 135,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 0,
+    "function": "admit_json",
+    "line": 217,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 1,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 2,
+    "function": "admit_json",
+    "line": 219,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 3,
+    "function": "admit_json",
+    "line": 220,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 4,
+    "function": "_compile",
+    "line": 162,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 5,
+    "function": "_compile",
+    "line": 163,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 6,
+    "function": "_compile",
+    "line": 165,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 7,
+    "function": "_compile",
+    "line": 169,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 8,
+    "function": "_compile",
+    "line": 214,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 9,
+    "function": "go",
+    "line": 170,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 10,
+    "function": "go",
+    "line": 171,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 11,
+    "function": "go",
+    "line": 172,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 12,
+    "function": "go",
+    "line": 173,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 13,
+    "function": "go",
+    "line": 174,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 14,
+    "function": "go",
+    "line": 175,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 15,
+    "function": "fields",
+    "line": 164,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 16,
+    "function": "go",
+    "line": 176,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 17,
+    "function": "go",
+    "line": 177,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 18,
+    "function": "node",
+    "line": 166,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 19,
+    "function": "node",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 20,
+    "function": "<genexpr>",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 21,
+    "function": "node",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 22,
+    "function": "<genexpr>",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 23,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 24,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 25,
+    "function": "admit_json",
+    "line": 225,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 26,
+    "function": "admit_json",
+    "line": 226,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 27,
+    "function": "admit_json",
+    "line": 227,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 28,
+    "function": "admit_json",
+    "line": 228,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 29,
+    "function": "admit_json",
+    "line": 229,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 30,
+    "function": "admit_json",
+    "line": 230,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 31,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 32,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 33,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 34,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 35,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 36,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 37,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 38,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 39,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 40,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 41,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 42,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 43,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 44,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 45,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 46,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 47,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 48,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 49,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 50,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 51,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 52,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 53,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 54,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 55,
+    "function": "admit_json",
+    "line": 238,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 56,
+    "function": "admit_json",
+    "line": 239,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 57,
+    "function": "admit_json",
+    "line": 240,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 58,
+    "function": "admit_json",
+    "line": 241,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 59,
+    "function": "admit_json",
+    "line": 242,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit",
+    "prefix_index": 60,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 0,
+    "function": "admit_json",
+    "line": 217,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 1,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 2,
+    "function": "admit_json",
+    "line": 219,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 3,
+    "function": "admit_json",
+    "line": 220,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 4,
+    "function": "_compile",
+    "line": 162,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 5,
+    "function": "_compile",
+    "line": 163,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 6,
+    "function": "_compile",
+    "line": 165,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 7,
+    "function": "_compile",
+    "line": 169,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 8,
+    "function": "_compile",
+    "line": 214,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 9,
+    "function": "go",
+    "line": 170,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 10,
+    "function": "go",
+    "line": 171,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 11,
+    "function": "go",
+    "line": 172,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 12,
+    "function": "go",
+    "line": 173,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 13,
+    "function": "go",
+    "line": 174,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 14,
+    "function": "go",
+    "line": 175,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 15,
+    "function": "fields",
+    "line": 164,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 16,
+    "function": "go",
+    "line": 176,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 17,
+    "function": "go",
+    "line": 177,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 18,
+    "function": "node",
+    "line": 166,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 19,
+    "function": "node",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 20,
+    "function": "<genexpr>",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 21,
+    "function": "node",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 22,
+    "function": "<genexpr>",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 23,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 24,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 25,
+    "function": "admit_json",
+    "line": 225,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 26,
+    "function": "admit_json",
+    "line": 226,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 27,
+    "function": "admit_json",
+    "line": 227,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 28,
+    "function": "admit_json",
+    "line": 228,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 29,
+    "function": "admit_json",
+    "line": 229,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 30,
+    "function": "admit_json",
+    "line": 230,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 31,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 32,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 33,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 34,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 35,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 36,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 37,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 38,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 39,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 40,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 41,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 42,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 43,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 44,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 45,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 46,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 47,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 48,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 49,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 50,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 51,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 52,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 53,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 54,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 55,
+    "function": "admit_json",
+    "line": 238,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 56,
+    "function": "admit_json",
+    "line": 239,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 57,
+    "function": "admit_json",
+    "line": 240,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 58,
+    "function": "admit_json",
+    "line": 241,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 59,
+    "function": "admit_json",
+    "line": 242,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "admit_json",
+    "prefix_index": 60,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 0,
+    "function": "revalidate",
+    "line": 150,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 1,
+    "function": "revalidate",
+    "line": 151,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 2,
+    "function": "_item",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 3,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 4,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 5,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 6,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 7,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 8,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 9,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 10,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 11,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 12,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 13,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 14,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 15,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 16,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 17,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 18,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 19,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 20,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 21,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 22,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 23,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 24,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 25,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 26,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 27,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 28,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 29,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 30,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 31,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 32,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 33,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 34,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 35,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 36,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 37,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 38,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 39,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 40,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 41,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 42,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 43,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 44,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 45,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 46,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 47,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 48,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 49,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 50,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 51,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 52,
+    "function": "_item",
+    "line": 146,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 53,
+    "function": "_item",
+    "line": 147,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 54,
+    "function": "_item",
+    "line": 148,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 55,
+    "function": "revalidate",
+    "line": 154,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 56,
+    "function": "admit_json",
+    "line": 217,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 57,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 58,
+    "function": "admit_json",
+    "line": 219,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 59,
+    "function": "admit_json",
+    "line": 220,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 60,
+    "function": "_compile",
+    "line": 162,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 61,
+    "function": "_compile",
+    "line": 163,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 62,
+    "function": "_compile",
+    "line": 165,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 63,
+    "function": "_compile",
+    "line": 169,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 64,
+    "function": "_compile",
+    "line": 214,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 65,
+    "function": "go",
+    "line": 170,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 66,
+    "function": "go",
+    "line": 171,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 67,
+    "function": "go",
+    "line": 172,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 68,
+    "function": "go",
+    "line": 173,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 69,
+    "function": "go",
+    "line": 174,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 70,
+    "function": "go",
+    "line": 175,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 71,
+    "function": "fields",
+    "line": 164,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 72,
+    "function": "go",
+    "line": 176,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 73,
+    "function": "go",
+    "line": 177,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 74,
+    "function": "node",
+    "line": 166,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 75,
+    "function": "node",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 76,
+    "function": "<genexpr>",
+    "line": 167,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 77,
+    "function": "node",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 78,
+    "function": "<genexpr>",
+    "line": 168,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 79,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 80,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 81,
+    "function": "admit_json",
+    "line": 225,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 82,
+    "function": "admit_json",
+    "line": 226,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 83,
+    "function": "admit_json",
+    "line": 227,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 84,
+    "function": "admit_json",
+    "line": 228,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 85,
+    "function": "admit_json",
+    "line": 229,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 86,
+    "function": "admit_json",
+    "line": 230,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 87,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 88,
+    "function": "admit_json",
+    "line": 222,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 89,
+    "function": "admit_json",
+    "line": 221,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 90,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 91,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 92,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 93,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 94,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 95,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 96,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 97,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 98,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 99,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 100,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 101,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 102,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 103,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 104,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 105,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 106,
+    "function": "admit_json",
+    "line": 232,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 107,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 108,
+    "function": "admit_json",
+    "line": 233,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 109,
+    "function": "admit_json",
+    "line": 234,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 110,
+    "function": "admit_json",
+    "line": 231,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 111,
+    "function": "admit_json",
+    "line": 238,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 112,
+    "function": "admit_json",
+    "line": 239,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 113,
+    "function": "admit_json",
+    "line": 240,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 114,
+    "function": "admit_json",
+    "line": 241,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 115,
+    "function": "admit_json",
+    "line": 242,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 116,
+    "function": "admit_json",
+    "line": 218,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "revalidate",
+    "prefix_index": 117,
+    "function": "revalidate",
+    "line": 150,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 0,
+    "function": "describe",
+    "line": 156,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 1,
+    "function": "describe",
+    "line": 157,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 2,
+    "function": "_item",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 3,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 4,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 5,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 6,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 7,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 8,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 9,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 10,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 11,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 12,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 13,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 14,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 15,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 16,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 17,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 18,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 19,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 20,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 21,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 22,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 23,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 24,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 25,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 26,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 27,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 28,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 29,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 30,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 31,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 32,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 33,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 34,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 35,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 36,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 37,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 38,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 39,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 40,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 41,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 42,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 43,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 44,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 45,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 46,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 47,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 48,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 49,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 50,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 51,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 52,
+    "function": "_item",
+    "line": 146,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 53,
+    "function": "_item",
+    "line": 147,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 54,
+    "function": "_item",
+    "line": 148,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 55,
+    "function": "describe",
+    "line": 158,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 56,
+    "function": "_current",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 57,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 58,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 59,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 60,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 61,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 62,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 63,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 64,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 65,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 66,
+    "function": "describe",
+    "line": 159,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 67,
+    "function": "describe",
+    "line": 159,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 68,
+    "function": "describe",
+    "line": 159,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 69,
+    "function": "describe",
+    "line": 159,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 70,
+    "function": "describe",
+    "line": 159,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 71,
+    "function": "describe",
+    "line": 160,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 72,
+    "function": "describe",
+    "line": 160,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 73,
+    "function": "describe",
+    "line": 158,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "describe",
+    "prefix_index": 74,
+    "function": "describe",
+    "line": 156,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 0,
+    "function": "dispatch",
+    "line": 271,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 1,
+    "function": "dispatch",
+    "line": 272,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 2,
+    "function": "dispatch",
+    "line": 273,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 3,
+    "function": "_item",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 4,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 5,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 6,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 7,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 8,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 9,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 10,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 11,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 12,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 13,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 14,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 15,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 16,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 17,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 18,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 19,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 20,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 21,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 22,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 23,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 24,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 25,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 26,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 27,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 28,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 29,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 30,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 31,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 32,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 33,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 34,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 35,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 36,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 37,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 38,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 39,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 40,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 41,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 42,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 43,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 44,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 45,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 46,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 47,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 48,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 49,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 50,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 51,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 52,
+    "function": "<genexpr>",
+    "line": 145,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 53,
+    "function": "_item",
+    "line": 146,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 54,
+    "function": "_item",
+    "line": 147,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 55,
+    "function": "_item",
+    "line": 148,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 56,
+    "function": "dispatch",
+    "line": 274,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 57,
+    "function": "_current",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 58,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 59,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 60,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 61,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 62,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 63,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 64,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 65,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 66,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 67,
+    "function": "dispatch",
+    "line": 275,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 68,
+    "function": "dispatch",
+    "line": 276,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 69,
+    "function": "accepts",
+    "line": 47,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 70,
+    "function": "accepts",
+    "line": 48,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 71,
+    "function": "dispatch",
+    "line": 277,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 72,
+    "function": "_execute",
+    "line": 246,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 73,
+    "function": "_execute",
+    "line": 247,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 74,
+    "function": "_execute",
+    "line": 269,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 75,
+    "function": "go",
+    "line": 248,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 76,
+    "function": "go",
+    "line": 249,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 77,
+    "function": "accepts",
+    "line": 47,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 78,
+    "function": "accepts",
+    "line": 48,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 79,
+    "function": "go",
+    "line": 250,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 80,
+    "function": "go",
+    "line": 251,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 81,
+    "function": "go",
+    "line": 252,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 82,
+    "function": "go",
+    "line": 253,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 83,
+    "function": "go",
+    "line": 254,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 84,
+    "function": "go",
+    "line": 255,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 85,
+    "function": "go",
+    "line": 266,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 86,
+    "function": "go",
+    "line": 267,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 87,
+    "function": "accepts",
+    "line": 47,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 88,
+    "function": "accepts",
+    "line": 48,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 89,
+    "function": "go",
+    "line": 268,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 90,
+    "function": "dispatch",
+    "line": 278,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 91,
+    "function": "accepts",
+    "line": 47,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 92,
+    "function": "accepts",
+    "line": 48,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 93,
+    "function": "dispatch",
+    "line": 279,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "dispatch",
+    "prefix_index": 94,
+    "function": "dispatch",
+    "line": 272,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 0,
+    "function": "project",
+    "line": 281,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 1,
+    "function": "project",
+    "line": 282,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 2,
+    "function": "project",
+    "line": 283,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 3,
+    "function": "_current",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 4,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 5,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 6,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 7,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 8,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 9,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 10,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 11,
+    "function": "_stamp",
+    "line": 141,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 12,
+    "function": "<genexpr>",
+    "line": 244,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 13,
+    "function": "project",
+    "line": 283,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 14,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 15,
+    "function": "project",
+    "line": 284,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 16,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 17,
+    "function": "project",
+    "line": 284,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 18,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 19,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 20,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 21,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 22,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 23,
+    "function": "project",
+    "line": 284,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 24,
+    "function": "project",
+    "line": 285,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 25,
+    "function": "project",
+    "line": 284,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 26,
+    "function": "project",
+    "line": 286,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  },
+  {
+    "operation": "project",
+    "prefix_index": 27,
+    "function": "project",
+    "line": 282,
+    "outcome": "MemoryError",
+    "state_unchanged": true,
+    "active_cleared": true
+  }
+]

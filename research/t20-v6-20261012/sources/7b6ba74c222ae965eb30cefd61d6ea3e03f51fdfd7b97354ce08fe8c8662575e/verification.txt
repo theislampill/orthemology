@@ -1,0 +1,46 @@
+PASS integer Fourier cancellation, symbolic all n
+PASS Gaussian real square-completion exponent
+PASS general lognormal perturbation phase is 2 pi n
+PASS general lognormal cancellation, symbolic all n
+PASS normalization moment n=0
+PASS concrete density factors have positive lower bound
+PASS normalized hierarchy grade 0
+PASS normalized hierarchy grade 1
+PASS normalized hierarchy grade 2
+PASS normalized hierarchy grade 3
+PASS normalized hierarchy grade 4
+PASS normalized hierarchy grade 5
+PASS normalized hierarchy grade 6
+PASS mean jet recurrence equals hierarchy derivative 0
+PASS mean jet recurrence equals hierarchy derivative 1
+PASS mean jet recurrence equals hierarchy derivative 2
+PASS mean jet recurrence equals hierarchy derivative 3
+PASS mean jet recurrence equals hierarchy derivative 4
+PASS mean jet recurrence equals hierarchy derivative 5
+PASS mean jet recurrence equals hierarchy derivative 6
+PASS first mean derivative equals minus variance
+PASS second mean derivative
+PASS displayed first lognormal derivative
+PASS displayed second lognormal derivative
+PASS Laplace-profile semigroup composition
+PASS Laplace-profile normalization
+PASS positive-time positive-exponential-moment formula
+PASS point-law tilt positive control
+PASS binary-simplex tensor coordinate is polynomial degree at most 1, slot count 0
+PASS binary-simplex tensor coordinate is polynomial degree at most 1, slot count 1
+PASS binary-simplex tensor coordinate is polynomial degree at most 2, slot count 0
+PASS binary-simplex tensor coordinate is polynomial degree at most 2, slot count 1
+PASS binary-simplex tensor coordinate is polynomial degree at most 2, slot count 2
+PASS binary-simplex tensor coordinate is polynomial degree at most 3, slot count 0
+PASS binary-simplex tensor coordinate is polynomial degree at most 3, slot count 1
+PASS binary-simplex tensor coordinate is polynomial degree at most 3, slot count 2
+PASS binary-simplex tensor coordinate is polynomial degree at most 3, slot count 3
+PASS binary-simplex tensor coordinate is polynomial degree at most 4, slot count 0
+PASS binary-simplex tensor coordinate is polynomial degree at most 4, slot count 1
+PASS binary-simplex tensor coordinate is polynomial degree at most 4, slot count 2
+PASS binary-simplex tensor coordinate is polynomial degree at most 4, slot count 3
+PASS binary-simplex tensor coordinate is polynomial degree at most 4, slot count 4
+PASS formal Taylor term ratio
+PASS 43 exact symbolic controls
+No numerical trace or existence-by-quadrature claim; no formal-kernel certificate.
+Executed UTC: 2026-10-09T21:55:44.374254+00:00

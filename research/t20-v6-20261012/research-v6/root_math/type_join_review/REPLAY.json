@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-11T17:35:43.717016+00:00",
+  "scope": "Independent root replay of three new join sources against worker freshly rebuilt dependency union and exact pinned library environment; not full independently rebuilt union.",
+  "lean_path": "private-locator:210b04cda8f81149f9a8",
+  "environment_script_sha256": "a303896d974f302a7d0eba607ae22d05d74922a0e106eee1332a187b11d046a3",
+  "results": [
+    {
+      "source": "SourceNaturalityNegative.lean",
+      "sha256": "61fcc34410c9ebf4c68360ee6dfd9974c031cb782e1fa402f32877a700c4c7b2",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "source": "GraphBridgeNegative.lean",
+      "sha256": "e77646dbd733a6fec1bb66c1fd49acbf84f27831490e831a2fece59ee69b158f",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "source": "LiteralIdentityNoNegation.lean",
+      "sha256": "d7a3182be4b9c25d45c0c0fc20de06821321cb15dae2d550b1946dafb6715a8a",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

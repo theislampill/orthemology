@@ -1,0 +1,7 @@
+{
+  "status": "EXPECTED_CORPUS_GENERATED",
+  "cases": 4096,
+  "all_graph_support_tuples": 256,
+  "method": "all subsets; direct Warshall; all matching model minima; maximal valid subsets",
+  "expected_sha256": "130ea3e5d95eba7ba5d025e811e9af7f5e8de857100cc4a372766a5676b9ea5c"
+}

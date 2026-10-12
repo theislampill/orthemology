@@ -1,0 +1,195 @@
+{
+  "disposition": "ACCEPTED_AT_ORDINARY_SOURCE_DERIVED_SCOPE",
+  "reviewed_report": {
+    "path": "t20-v6-20261011/root_math/geometry_audit_annex/JOINT_HULL_OBSTRUCTION.md",
+    "sha256": "d28d8929d34262e05ef684517bf2f4835942257ba15d1fb5b6f6c2cb70f51878",
+    "bytes": 3538,
+    "lines": 15
+  },
+  "reviewed_report_scope": "complete body including ambient-score clarification",
+  "source_reads": [
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/MixedHull.lean",
+      "sha256": "0ffac3a36170239eff7abe256d1d6cad3efdced877c284f0e09fe94cc7e27e56",
+      "bytes": 4526,
+      "lines": 122,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          122
+        ]
+      ],
+      "imports": [
+        "ANDScore",
+        "FiniteHullWeights"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/MixedGeometry.lean",
+      "sha256": "6aed37421110678ab4ce732ee00ba61dc97397ffadc5f16941169309d1ccc44e",
+      "bytes": 5326,
+      "lines": 126,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          126
+        ]
+      ],
+      "imports": [
+        "MixedRepair"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/MixedScore.lean",
+      "sha256": "a7bf5cbb8651eed6571b1f3cd7aff586a0640c9eeff4b99594e2fadace16690a",
+      "bytes": 5900,
+      "lines": 136,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          136
+        ]
+      ],
+      "imports": [
+        "MixedHull"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/MixedRepair.lean",
+      "sha256": "2a6e62d40b426e0760d2307494c7c4abb028c680c8e888a314314c79d9f10bac",
+      "bytes": 6743,
+      "lines": 147,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          147
+        ]
+      ],
+      "imports": [
+        "MixedScore"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/ProductObstruction.lean",
+      "sha256": "eb26c550b7ab1aaa3f74a29ffe945d8d00c84913b0cb8b588b3f88420b89bc13",
+      "bytes": 2534,
+      "lines": 51,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          51
+        ]
+      ],
+      "imports": [
+        "MixedScore",
+        "IsolatedObstruction"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/IsolatedObstruction.lean",
+      "sha256": "46a16f9a1886a206ec371e328c8fd2e1f0a76aa060b03889aaae00efc4c1463e",
+      "bytes": 3976,
+      "lines": 102,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          102
+        ]
+      ],
+      "imports": [
+        "PolynomialAND"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/FiniteHullWeights.lean",
+      "sha256": "ac0ed23555915fcd324b9aa575cc5acde4d57cbcbe4edacd0ef6b64665f33ef5",
+      "bytes": 4489,
+      "lines": 102,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          102
+        ]
+      ],
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/ANDCorrection.lean",
+      "sha256": "9b040710b99321214095e434c1096b3caa1e9135e1a2bde4bf7e09eee473be94",
+      "bytes": 4846,
+      "lines": 140,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          140
+        ]
+      ],
+      "imports": [
+        "PolynomialAND"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/ANDScore.lean",
+      "sha256": "684841d865cfddb7e9f8db226a7405c39c01ed53888f8e9535906f97465ff125",
+      "bytes": 3716,
+      "lines": 97,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          97
+        ]
+      ],
+      "imports": [
+        "ANDCorrection"
+      ]
+    },
+    {
+      "path": "t20-v6-20261011/root_math/geometry_audit_annex/fresh_lean/PolynomialAND.lean",
+      "sha256": "3c1721046ecb48ff4b4d1d9bde2e483cfa6ed532b69009bbd02c27ed8d9a36a5",
+      "bytes": 7772,
+      "lines": 164,
+      "read_scope": "complete source body",
+      "ranges": [
+        [
+          1,
+          164
+        ]
+      ],
+      "imports": [
+        "Mathlib"
+      ]
+    }
+  ],
+  "full_source_lines": 1187,
+  "fresh_check": {
+    "path": "t20-v6-20261011/type_collective/joint_hull_review/EXACT_GEOMETRY.json",
+    "sha256": "ca61c3ed8628366c42ba7ef6f2036f29f9981c44431a84ffd8b7a0c94c2eae28",
+    "bytes": 2148,
+    "lines": 202
+  },
+  "check_code": {
+    "path": "t20-v6-20261011/type_collective/joint_hull_review/exact_geometry.py",
+    "sha256": "089c29da3c9a2c998fd9c6b9d81c4a57e91e3a08ebb3de96c31fc529d76f2107",
+    "bytes": 1958,
+    "lines": 22
+  },
+  "review": {
+    "path": "t20-v6-20261011/type_collective/joint_hull_review/REVIEW.md",
+    "sha256": "212f1f79f71e4cfd36036c79bc5c48bf6b3ef94527cfb5d1ea7898fea0b2f9d4",
+    "bytes": 4384,
+    "lines": 25
+  },
+  "fresh_lean_replay_by_reviewer": false,
+  "qualification": "Ambient score maps agree; admissible truth-indexed domains do not. No priority, minimal representation, cognitive realization or LP-replay claim."
+}

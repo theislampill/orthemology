@@ -1,0 +1,11 @@
+Use this archive to open the intended draft through-Twentieth PR against main. Do not merge, write main, modify PR30 or start a new tranche.
+
+Read START_HERE.md, the current source-context guide/reassessment and the unchanged dated v2 documents. From the archive root, verify all bytes, owner-relative targets and native review/application bindings:
+python3 -B verification/verify_native_integration.py --root .
+
+Recheck real remote currentness. Use a fresh clone at exact fd0903d99d657c35e32fddcc8864d2a77930cf40 and an isolated named feature branch. Check the one current full patch, then apply it:
+python3 -B integration/final-patch/apply_checked_patch.py --repository /path/to/fresh-clone
+python3 -B integration/final-patch/apply_checked_patch.py --repository /path/to/fresh-clone --apply
+Expected index tree: 32e607c34ed32e9f90fed13bdde294fbc47ca7c2. Follow integration/final-patch/VERIFY.md and PATCH_MANIFEST.json; refuse incompatible drift.
+
+Reuse the inherited full review at fadbecad and separate final-tree delta review at their actual scopes. Check large registries mechanically; do not reconstruct research or replay unaffected science. Open the draft PR and use its existing native CI. Exact Docker/Poppler PDF rebuilding remains mandatory; carry checks and old-head CI do not replace it. Do not install substitute renderers. Report the PR URL, exact head and actual CI status, with unmerged PR30 history and adoption limits explicit.

@@ -1,0 +1,30 @@
+{
+  "status": "ACCEPT_SCOPED_INHERITED_RELATIONAL_FEASIBILITY_JOIN",
+  "utc": "2026-10-12T14:27:08.442890+00:00",
+  "synthesis_sha256": "7e9bce57b1fcb2fef600d6da438c73707f6aa6e2fb41d4a0176636931e5ee070",
+  "section": "5.2",
+  "section_snapshot_sha256": "aaaead073b785fa24cabd22a9ad86a6beccda263b2de92f486bc1dbb7a7df250",
+  "independent_returns": [
+    {
+      "sha256": "67f405c245093546dd26c142db7fd09eea1513b9fb853521d496bca7a70e8a62",
+      "scope": "Whole seven-record JSON semantic values, role and partial-record contracts inspected"
+    },
+    {
+      "sha256": "3a34860f74ea5bf75b4ed1cf8322a21abbd65985dabc9a85aa14fc25e44d24b7",
+      "scope": "Whole checker body inspected; complete-row filtering and Cartesian difference match prose. No execution."
+    },
+    {
+      "sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+      "scope": "Selected actual source lines8\u201338,64\u201370 returned; complete original report reading remains empirical/root attributed."
+    }
+  ],
+  "findings": [
+    "Exactly six complete claim occurrences produce two distinct tuples MMG/GGG; marginal product adds MGG/GMG.",
+    "Partial MMnull does not independently attest any complete row; attribution/voice constraints retained.",
+    "Two-row binary completion control has fixed total1 despite independently variable marginals, so Cartesian sharpness needs joint feasibility.",
+    "No empirical coupling, primary Arabic validation or stronger sense/governor certification inferred. Earlier61:5:4 status remains separate."
+  ],
+  "new_execution": false,
+  "new_primary_source_reading": false,
+  "new_theorem_priority": false
+}

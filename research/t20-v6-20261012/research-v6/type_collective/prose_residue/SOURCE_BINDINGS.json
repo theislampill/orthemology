@@ -1,0 +1,413 @@
+[
+  {
+    "sha256": "9ca2ab8513ab000fa161065921f98ef0de1ac37c8be7c6035a1493487e0e29a9",
+    "path": "t20-consolidation-20261011/catalogue/objects/9c/9ca2ab8513ab000fa161065921f98ef0de1ac37c8be7c6035a1493487e0e29a9",
+    "bytes": 91559,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-9ca2ab8513ab000fa161",
+    "names": [
+      "main.tex"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/publication",
+    "historical_document_names": [],
+    "semantic_read_credit": false,
+    "lines": 915,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [],
+    "unit_id": "SU-9ca2ab8513ab000fa161",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "original_member_routes": [
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/artifacts/orthemic-core-reference-draft.source.tar.gz!/publication/latex/orthemic-core-reference-draft/main.tex",
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/publication/latex/orthemic-core-reference-draft/main.tex"
+    ],
+    "queue_index": 22
+  },
+  {
+    "sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+    "path": "t20-consolidation-20261011/catalogue/objects/1b/1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+    "bytes": 64022,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-1be1009438c3abd7c736",
+    "names": [
+      "orthemic-core-formalization.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/theory",
+    "historical_document_names": [],
+    "semantic_read_credit": false,
+    "lines": 921,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Orthemic Core Formalization \u2014 Orthing, Episodes, Metaorthemes, Pathway Adequacy"
+      },
+      {
+        "line": 45,
+        "heading": "## 1. Type/token resolution (2A)"
+      },
+      {
+        "line": 113,
+        "heading": "## 2. Episode signature (2B)"
+      },
+      {
+        "line": 115,
+        "heading": "### 2.1 Candidate formulations compared"
+      },
+      {
+        "line": 137,
+        "heading": "### 2.2 Recommended signature (formal)"
+      },
+      {
+        "line": 201,
+        "heading": "### 2.2a Endpoint plus bounded trace"
+      },
+      {
+        "line": 235,
+        "heading": "### 2.3 Three separations, stated once"
+      },
+      {
+        "line": 256,
+        "heading": "## 3. Metaortheme semantics (2C)"
+      },
+      {
+        "line": 270,
+        "heading": "### 3.1 Three models"
+      },
+      {
+        "line": 302,
+        "heading": "### 3.2 Minimum-specificity test against the five worked examples"
+      },
+      {
+        "line": 320,
+        "heading": "### 3.3 Recommendation"
+      },
+      {
+        "line": 336,
+        "heading": "### 3.4 Plurality, conflict, precedence, provenance, revision, safeguards"
+      },
+      {
+        "line": 394,
+        "heading": "## 4. Pathway adequacy (2D)"
+      },
+      {
+        "line": 396,
+        "heading": "### 4.1 Separate verdicts"
+      },
+      {
+        "line": 655,
+        "heading": "### 4.2 Result \u00d7 pathway matrix"
+      }
+    ],
+    "unit_id": "SU-1be1009438c3abd7c736",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "original_member_routes": [
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/theory/orthemic-core-formalization.md"
+    ],
+    "queue_index": 35
+  },
+  {
+    "sha256": "9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055",
+    "path": "t20-consolidation-20261011/catalogue/objects/94/9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055",
+    "bytes": 62545,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-9426c1e1e2a0455b8be8",
+    "names": [
+      "CRITICISM_LEDGER.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/python-bases",
+    "historical_document_names": [],
+    "semantic_read_credit": false,
+    "lines": 431,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Current v4 criticism dispositions"
+      },
+      {
+        "line": 7,
+        "heading": "## Original C01\u2013C30"
+      },
+      {
+        "line": 9,
+        "heading": "### C01 \u2014 The base model is standard rather than novel."
+      },
+      {
+        "line": 14,
+        "heading": "### C02 \u2014 Lean was not compiled; review lacked the implementation."
+      },
+      {
+        "line": 19,
+        "heading": "### C03 \u2014 Finite syntax and de Bruijn checking were disconnected from semantic soundness."
+      },
+      {
+        "line": 24,
+        "heading": "### C04 \u2014 Semantic universal introduction is infinitary and soundness nearly follows the definitions."
+      },
+      {
+        "line": 29,
+        "heading": "### C05 \u2014 Uniform-section equivalence unfolds the intersection definition."
+      },
+      {
+        "line": 34,
+        "heading": "### C06 \u2014 The historical citations were supplied from memory and need verification."
+      },
+      {
+        "line": 39,
+        "heading": "### C07 \u2014 The construction does not prove strong normalisation."
+      },
+      {
+        "line": 44,
+        "heading": "### C08 \u2014 No concrete practical application or comparative advantage is established."
+      },
+      {
+        "line": 49,
+        "heading": "### C09 \u2014 K(K false) is a trivial inhabitant; diagonal-shaped types are not the hard part."
+      },
+      {
+        "line": 54,
+        "heading": "### C10 \u2014 Kakutani is tangential and typed-support reasoning is tautological."
+      },
+      {
+        "line": 59,
+        "heading": "### C11 \u2014 The title suggests circumvention of an interface System F never had."
+      },
+      {
+        "line": 64,
+        "heading": "### C12 \u2014 A novelty claim must survive a textbook derivation test, literature and compilation."
+      },
+      {
+        "line": 69,
+        "heading": "### C13 \u2014 Prove the three-way tradeoff: internal universal code, real data, full ambient abstraction."
+      }
+    ],
+    "unit_id": "SU-9426c1e1e2a0455b8be8",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "original_member_routes": [
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P03_Qualified_Native_Refinement_20260930.zip!/python-bases/canonical/CRITICISM_LEDGER.md",
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P03_Qualified_Native_Refinement_20260930.zip!/python-bases/source/CRITICISM_LEDGER.md",
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_P01_Research_Checkpoint_attempt-0003.zip!/inputs/original/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/extracted/P01/inputs/original/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/extracted/P01/predecessors/Orthemology_Pro_P01_Foundational_Formal.zip!/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/extracted/P14/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+      "user-checkpoints/extracted/P15/source-main/experiments/orthemology-v5/source/CRITICISM_LEDGER.md"
+    ],
+    "queue_index": 37
+  },
+  {
+    "sha256": "48ccf45d90a9d92bbe42dcf7cecfc3871c4c119367edbaa1654d84f1edd1b728",
+    "path": "t20-consolidation-20261011/catalogue/objects/48/48ccf45d90a9d92bbe42dcf7cecfc3871c4c119367edbaa1654d84f1edd1b728",
+    "bytes": 54464,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-48ccf45d90a9d92bbe42",
+    "names": [
+      "08_Type_Completion_and_Formal_Compiler.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/08_Type_Completion_and_Formal_Compiler.md",
+    "historical_document_names": [],
+    "semantic_read_credit": false,
+    "lines": 491,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# 08 Type Completion and Formal Compiler"
+      },
+      {
+        "line": 7,
+        "heading": "## Source 0efc34b36c"
+      },
+      {
+        "line": 13,
+        "heading": "### Original document"
+      },
+      {
+        "line": 15,
+        "heading": "# Concrete Henkin model and exact source independence"
+      },
+      {
+        "line": 19,
+        "heading": "## Exact outcome and boundaries"
+      },
+      {
+        "line": 31,
+        "heading": "## Reviews and ownership"
+      },
+      {
+        "line": 39,
+        "heading": "## Compact contents and custody"
+      },
+      {
+        "line": 51,
+        "heading": "## Portable fresh replay with retained baseline"
+      },
+      {
+        "line": 75,
+        "heading": "## Source 5c37a33c8d"
+      },
+      {
+        "line": 81,
+        "heading": "### Original document"
+      },
+      {
+        "line": 83,
+        "heading": "# Literal completion-principle separation"
+      },
+      {
+        "line": 91,
+        "heading": "## Exact evidence and dependency boundary"
+      },
+      {
+        "line": 104,
+        "heading": "## Source f16114bbe9"
+      },
+      {
+        "line": 110,
+        "heading": "### Original document"
+      },
+      {
+        "line": 112,
+        "heading": "# Weak induction and literal rigidity: bounded checkpoint"
+      }
+    ],
+    "unit_id": "SU-48ccf45d90a9d92bbe42",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "original_member_routes": [
+      "t20-synthesis-owner-input-20261011/archives/T20_Consolidation_and_T21_Continuation.zip!/08_Type_Completion_and_Formal_Compiler.md",
+      "t20-synthesis-owner-input-20261011/instruction-packet/08_Type_Completion_and_Formal_Compiler.md"
+    ],
+    "queue_index": 45
+  },
+  {
+    "sha256": "a74c5e7b95d5aa1aa57356a2af042a7c65d8d881a9e33ca056e61c1ad2511472",
+    "path": "t20-consolidation-20261011/catalogue/objects/a7/a74c5e7b95d5aa1aa57356a2af042a7c65d8d881a9e33ca056e61c1ad2511472",
+    "bytes": 32696,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-a74c5e7b95d5aa1aa573",
+    "names": [
+      "MATHEMATICAL_PROOF.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/python-bases",
+    "historical_document_names": [],
+    "semantic_read_credit": false,
+    "lines": 356,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Internal polymorphism, observational boundaries, and reflective probability"
+      },
+      {
+        "line": 2,
+        "heading": "## Criticism-driven reconstruction, version 3 \u2014 19 September 2026"
+      },
+      {
+        "line": 10,
+        "heading": "## 1. Common definitions and the retained construction"
+      },
+      {
+        "line": 31,
+        "heading": "## 2. The sharp probabilistic boundary: almost-sure universal typing"
+      },
+      {
+        "line": 33,
+        "heading": "### Theorem T01 \u2014 atomicity is exactly the arbitrary-intersection condition"
+      },
+      {
+        "line": 55,
+        "heading": "### Counterexample T02 \u2014 exchanging the quantifiers is unsound"
+      },
+      {
+        "line": 64,
+        "heading": "### Corollary T03 \u2014 the correct level is the observational quotient"
+      },
+      {
+        "line": 70,
+        "heading": "### Theorem T04 \u2014 a precise compactness/typing trilemma"
+      },
+      {
+        "line": 96,
+        "heading": "## 3. Exact representation boundaries"
+      },
+      {
+        "line": 98,
+        "heading": "### Theorem T05 \u2014 relation extension preserves exactly the old components"
+      },
+      {
+        "line": 108,
+        "heading": "### Corollary T06 \u2014 na\u00efve nondeterministic conversion collapses the model"
+      },
+      {
+        "line": 116,
+        "heading": "### Theorem T07 \u2014 the review's bare trilemma is false"
+      },
+      {
+        "line": 122,
+        "heading": "### Theorem T08 \u2014 observation factorisation and the corrected erasure bound"
+      },
+      {
+        "line": 136,
+        "heading": "## 4. Finite syntax, substitution and semantic soundness"
+      },
+      {
+        "line": 138,
+        "heading": "### Theorem T09 \u2014 renaming and substitution commute with interpretation"
+      }
+    ],
+    "unit_id": "SU-a74c5e7b95d5aa1aa573",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "original_member_routes": [
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P03_Qualified_Native_Refinement_20260930.zip!/python-bases/canonical/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P03_Qualified_Native_Refinement_20260930.zip!/python-bases/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_P01_Research_Checkpoint_attempt-0003.zip!/inputs/original/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/extracted/P01/inputs/original/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/extracted/P01/predecessors/Orthemology_Pro_P01_Foundational_Formal.zip!/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/extracted/P14/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+      "user-checkpoints/extracted/P15/source-main/experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md"
+    ],
+    "queue_index": 82
+  },
+  {
+    "queue_index": 90,
+    "sha256": "4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+    "path": "t20-consolidation-20261011/catalogue/objects/4f/4f00ce4cb26c7a6c884df598c8832fd72b11bc3a35dc287b62ea64d181fa8ff6",
+    "bytes": 11626,
+    "lines": 167,
+    "names": [
+      "orthemic-multi-actor-conflict-note.md"
+    ],
+    "scope": "Exact stated constituent of main.tex, not inferred equivalence"
+  }
+]

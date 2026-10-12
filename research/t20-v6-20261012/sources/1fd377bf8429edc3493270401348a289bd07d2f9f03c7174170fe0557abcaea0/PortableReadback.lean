@@ -1,0 +1,111 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import FeedbackRequests
+import ProductObservationLaw
+import IndependentProductFamilies
+import GenericQueryReference
+import PolicyRowLaw
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import StackActionLaw
+import CommonSeedDerandomization
+import IIDHeadTail
+import DeterministicContinuation
+import RecurrentSupport
+import PolicyTailTransfer
+import RelativeTailTransfer
+import SafeSetTailTransfer
+import SelfVerifyingSupport
+import SeededPolicyNecessity
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+import CausalActionTree
+import CanonicalHistoryPMF
+import CanonicalHistoryBudget
+import CausalTreeLaw
+import NormalizedResetPotential
+import RecursiveMacroPotential
+import RecursiveCausalPolicy
+import RecursiveHistorySafety
+import RecursiveCanonicalSufficiency
+import StableSupportNecessity
+import WinningContinuation
+import CanonicalInvariantSafety
+import RecursiveKernelEquivalence
+import RecursiveNecessity
+import RecursiveCanonicalEquivalence
+import ObservedHistoryLicensing
+import AELicensedEquivalence
+import ErrorClockCounterexample
+import ClockAudit
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.ErrorClockControl.total_bad_exactly_one
+#print axioms Orthemology.Tranche3.ErrorClockControl.total_bad_exactly_one
+#check @Orthemology.Tranche3.ErrorClockControl.time_weighted_bad_exactly_errorTime
+#print axioms Orthemology.Tranche3.ErrorClockControl.time_weighted_bad_exactly_errorTime
+#check @Orthemology.Tranche3.ErrorClockControl.expected_total_bad_eq_one
+#print axioms Orthemology.Tranche3.ErrorClockControl.expected_total_bad_eq_one
+#check @Orthemology.Tranche3.ErrorClockControl.geometric_time_weight
+#print axioms Orthemology.Tranche3.ErrorClockControl.geometric_time_weight
+#check @Orthemology.Tranche3.ErrorClockControl.expected_unique_error_time_eq_top
+#print axioms Orthemology.Tranche3.ErrorClockControl.expected_unique_error_time_eq_top
+#check @Orthemology.Tranche3.ClockAudit.restoration_iff
+#print axioms Orthemology.Tranche3.ClockAudit.restoration_iff
+#check @Orthemology.Tranche3.ClockAudit.every_path_eventually_correct
+#print axioms Orthemology.Tranche3.ClockAudit.every_path_eventually_correct
+#check @Orthemology.Tranche3.ClockAudit.expected_first_restoration_eq_top
+#print axioms Orthemology.Tranche3.ClockAudit.expected_first_restoration_eq_top
+#check @Orthemology.Tranche3.ClockAudit.no_uniform_deterministic_restoration
+#print axioms Orthemology.Tranche3.ClockAudit.no_uniform_deterministic_restoration

@@ -1,0 +1,848 @@
+{
+  "episode-reification-v2/BASELINE-TREATMENT-CONTRACT.md": {
+    "sha256": "ca72d12951e5c9a6ac6e34190796cd79c864dce831dd8d622055a2827d9d7bb8",
+    "path": "t20-consolidation-20261011/catalogue/objects/ca/ca72d12951e5c9a6ac6e34190796cd79c864dce831dd8d622055a2827d9d7bb8",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/BASELINE-TREATMENT-CONTRACT.md",
+    "bytes": 1323
+  },
+  "episode-reification-v2/DECISION-RULES.yaml": {
+    "sha256": "ddf1549a219b8dd1eb3ef02704421ede92d22acd9cb595659054908a96c85c0d",
+    "path": "t20-consolidation-20261011/catalogue/objects/dd/ddf1549a219b8dd1eb3ef02704421ede92d22acd9cb595659054908a96c85c0d",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/DECISION-RULES.yaml",
+    "bytes": 1170
+  },
+  "episode-reification-v2/DEVIATION-LEDGER.md": {
+    "sha256": "0a4417feab4a99cc2ca1f839bcaa33d8e5f3ada5980850c30b5bb2b185a19950",
+    "path": "t20-consolidation-20261011/catalogue/objects/0a/0a4417feab4a99cc2ca1f839bcaa33d8e5f3ada5980850c30b5bb2b185a19950",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/DEVIATION-LEDGER.md",
+    "bytes": 203
+  },
+  "episode-reification-v2/E1-E5-SPEC.yaml": {
+    "sha256": "7c162693bd92172386d4ca9b51e2e62fb51ba361382a0a539611b2b2ad326077",
+    "path": "t20-consolidation-20261011/catalogue/objects/7c/7c162693bd92172386d4ca9b51e2e62fb51ba361382a0a539611b2b2ad326077",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/E1-E5-SPEC.yaml",
+    "bytes": 2890
+  },
+  "episode-reification-v2/FREEZE-HASH.txt": {
+    "sha256": "c1ddf875b19107669733314497838d0a55936ec23a7721196d7e491a4f442912",
+    "path": "t20-consolidation-20261011/catalogue/objects/c1/c1ddf875b19107669733314497838d0a55936ec23a7721196d7e491a4f442912",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/FREEZE-HASH.txt",
+    "bytes": 177
+  },
+  "episode-reification-v2/OUTPUT.schema.json": {
+    "sha256": "b17acb016601ed0e6baaa051b9ad06a08773053b4452ef515e2c5fc8e6bae7f9",
+    "path": "t20-consolidation-20261011/catalogue/objects/b1/b17acb016601ed0e6baaa051b9ad06a08773053b4452ef515e2c5fc8e6bae7f9",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/OUTPUT.schema.json",
+    "bytes": 1591
+  },
+  "episode-reification-v2/PROTOCOL.md": {
+    "sha256": "4d3398d9a7926eb64dcab57aea493bd04771d94f2e327d9aa36de10d45c92049",
+    "path": "t20-consolidation-20261011/catalogue/objects/4d/4d3398d9a7926eb64dcab57aea493bd04771d94f2e327d9aa36de10d45c92049",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/PROTOCOL.md",
+    "bytes": 2370
+  },
+  "episode-reification-v2/README.md": {
+    "sha256": "cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4",
+    "path": "t20-consolidation-20261011/catalogue/objects/cf/cf660c095bf11d03bec1f13d36eaf994226b63329dbd53f31a714d7899767da4",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/README.md",
+    "bytes": 1561
+  },
+  "episode-reification-v2/RUN-MANIFEST.schema.json": {
+    "sha256": "2e40f7b16974dad11426ac1045e725cc023b6659c0a8e90f4af25b72fda121da",
+    "path": "t20-consolidation-20261011/catalogue/objects/2e/2e40f7b16974dad11426ac1045e725cc023b6659c0a8e90f4af25b72fda121da",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/RUN-MANIFEST.schema.json",
+    "bytes": 2588
+  },
+  "episode-reification-v2/SCORING-RUBRIC.md": {
+    "sha256": "9f6ed4f6cf98fe96a883b22442538fadd89c1a4d0801502ef4d64587c1cc0a07",
+    "path": "t20-consolidation-20261011/catalogue/objects/9f/9f6ed4f6cf98fe96a883b22442538fadd89c1a4d0801502ef4d64587c1cc0a07",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/SCORING-RUBRIC.md",
+    "bytes": 1746
+  },
+  "episode-reification-v2/STATUS.yaml": {
+    "sha256": "bbd0fad7f425590fa1776f4d9e1acd4ab9f29ff811bcf8c07e8d3d9d653789e5",
+    "path": "t20-consolidation-20261011/catalogue/objects/bb/bbd0fad7f425590fa1776f4d9e1acd4ab9f29ff811bcf8c07e8d3d9d653789e5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/STATUS.yaml",
+    "bytes": 725
+  },
+  "episode-reification-v2/analysis/analyze_er2.py": {
+    "sha256": "448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
+    "path": "t20-consolidation-20261011/catalogue/objects/44/448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/analysis/analyze_er2.py",
+    "bytes": 10418
+  },
+  "episode-reification-v2/fixtures/C01/baseline-record.md": {
+    "sha256": "ec72f648e8e222323e8c9125638f096b906ca87f529defcef7ce044e9e7f1c9d",
+    "path": "t20-consolidation-20261011/catalogue/objects/ec/ec72f648e8e222323e8c9125638f096b906ca87f529defcef7ce044e9e7f1c9d",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C01/baseline-record.md",
+    "bytes": 576
+  },
+  "episode-reification-v2/fixtures/C01/facts.json": {
+    "sha256": "3f1a2c25c71d71748b946bb864466f2af430fb4caca646964b95a0c7d62b8edc",
+    "path": "t20-consolidation-20261011/catalogue/objects/3f/3f1a2c25c71d71748b946bb864466f2af430fb4caca646964b95a0c7d62b8edc",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C01/facts.json",
+    "bytes": 853
+  },
+  "episode-reification-v2/fixtures/C01/treatment-record.json": {
+    "sha256": "ccf370d9ada1135adde028aedc87eac34af0cc40bf6ca3a7c41bd0661b6affc8",
+    "path": "t20-consolidation-20261011/catalogue/objects/cc/ccf370d9ada1135adde028aedc87eac34af0cc40bf6ca3a7c41bd0661b6affc8",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C01/treatment-record.json",
+    "bytes": 1766
+  },
+  "episode-reification-v2/fixtures/C02/baseline-record.md": {
+    "sha256": "60d4ed734c8ce70e9beab5442ec321aa8eec4f7cc110e6dddc840dbd47cd7fda",
+    "path": "t20-consolidation-20261011/catalogue/objects/60/60d4ed734c8ce70e9beab5442ec321aa8eec4f7cc110e6dddc840dbd47cd7fda",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C02/baseline-record.md",
+    "bytes": 571
+  },
+  "episode-reification-v2/fixtures/C02/facts.json": {
+    "sha256": "2c3c0a7c93c6b7e064395508807b69a1e8c629f73ae0b378c7bc8ac3496c7fc2",
+    "path": "t20-consolidation-20261011/catalogue/objects/2c/2c3c0a7c93c6b7e064395508807b69a1e8c629f73ae0b378c7bc8ac3496c7fc2",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C02/facts.json",
+    "bytes": 848
+  },
+  "episode-reification-v2/fixtures/C02/treatment-record.json": {
+    "sha256": "07546824fa42bf3c6a9d3e89678cd63d95eb97ac503f8eec9c06f07f9a757a4c",
+    "path": "t20-consolidation-20261011/catalogue/objects/07/07546824fa42bf3c6a9d3e89678cd63d95eb97ac503f8eec9c06f07f9a757a4c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C02/treatment-record.json",
+    "bytes": 1761
+  },
+  "episode-reification-v2/fixtures/C03/baseline-record.md": {
+    "sha256": "3c743626b74f7b306b82c09d030319d03d005be2a30114fe09c8de04a108035b",
+    "path": "t20-consolidation-20261011/catalogue/objects/3c/3c743626b74f7b306b82c09d030319d03d005be2a30114fe09c8de04a108035b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C03/baseline-record.md",
+    "bytes": 573
+  },
+  "episode-reification-v2/fixtures/C03/facts.json": {
+    "sha256": "1e1d4433883e12d29a53641db99e382e23a68198d013e2b9ba5c910a44f5c502",
+    "path": "t20-consolidation-20261011/catalogue/objects/1e/1e1d4433883e12d29a53641db99e382e23a68198d013e2b9ba5c910a44f5c502",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C03/facts.json",
+    "bytes": 850
+  },
+  "episode-reification-v2/fixtures/C03/treatment-record.json": {
+    "sha256": "ae0bc4b5aee184660f1baa290f87b659635e15a8ae0faf15e84cbd57594bdb5a",
+    "path": "t20-consolidation-20261011/catalogue/objects/ae/ae0bc4b5aee184660f1baa290f87b659635e15a8ae0faf15e84cbd57594bdb5a",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C03/treatment-record.json",
+    "bytes": 1763
+  },
+  "episode-reification-v2/fixtures/C04/baseline-record.md": {
+    "sha256": "853acc0c328ac9cdee2043bcb34ebfa8b074a38ad6d3ac0c12c57674f45893b6",
+    "path": "t20-consolidation-20261011/catalogue/objects/85/853acc0c328ac9cdee2043bcb34ebfa8b074a38ad6d3ac0c12c57674f45893b6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C04/baseline-record.md",
+    "bytes": 572
+  },
+  "episode-reification-v2/fixtures/C04/facts.json": {
+    "sha256": "b8684dacef73e6389a52951f59b165913dcb4f8e73cbd87219ba26d3aab79a7e",
+    "path": "t20-consolidation-20261011/catalogue/objects/b8/b8684dacef73e6389a52951f59b165913dcb4f8e73cbd87219ba26d3aab79a7e",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C04/facts.json",
+    "bytes": 849
+  },
+  "episode-reification-v2/fixtures/C04/treatment-record.json": {
+    "sha256": "b9e0a0d61db7f942cb3f9c63f8e25976acdb7f53b32913b6b4b397ad79d517e5",
+    "path": "t20-consolidation-20261011/catalogue/objects/b9/b9e0a0d61db7f942cb3f9c63f8e25976acdb7f53b32913b6b4b397ad79d517e5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C04/treatment-record.json",
+    "bytes": 1762
+  },
+  "episode-reification-v2/fixtures/C05/baseline-record.md": {
+    "sha256": "9928218f5b0389d870d841f8c1e7616f1c97228174165c8c8d8dd50ede86043c",
+    "path": "t20-consolidation-20261011/catalogue/objects/99/9928218f5b0389d870d841f8c1e7616f1c97228174165c8c8d8dd50ede86043c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C05/baseline-record.md",
+    "bytes": 583
+  },
+  "episode-reification-v2/fixtures/C05/facts.json": {
+    "sha256": "8825f7dac660e42ddaa121463501800f13a2d1c74d7eee7b0c64707529e4f6d4",
+    "path": "t20-consolidation-20261011/catalogue/objects/88/8825f7dac660e42ddaa121463501800f13a2d1c74d7eee7b0c64707529e4f6d4",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C05/facts.json",
+    "bytes": 860
+  },
+  "episode-reification-v2/fixtures/C05/treatment-record.json": {
+    "sha256": "6d8928de34398f370f797cd29c9eb962524bb13c97731a31a294cedd7e223da2",
+    "path": "t20-consolidation-20261011/catalogue/objects/6d/6d8928de34398f370f797cd29c9eb962524bb13c97731a31a294cedd7e223da2",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C05/treatment-record.json",
+    "bytes": 1748
+  },
+  "episode-reification-v2/fixtures/C06/baseline-record.md": {
+    "sha256": "19356c177501aad9fea4c9e064a89fd33eee1e3c50ba9e3217bbcf70d6750619",
+    "path": "t20-consolidation-20261011/catalogue/objects/19/19356c177501aad9fea4c9e064a89fd33eee1e3c50ba9e3217bbcf70d6750619",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C06/baseline-record.md",
+    "bytes": 578
+  },
+  "episode-reification-v2/fixtures/C06/facts.json": {
+    "sha256": "360a5805b08d2341f2291476eb430a7809f1ebdc001a683eb834862d8d5fb11b",
+    "path": "t20-consolidation-20261011/catalogue/objects/36/360a5805b08d2341f2291476eb430a7809f1ebdc001a683eb834862d8d5fb11b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C06/facts.json",
+    "bytes": 855
+  },
+  "episode-reification-v2/fixtures/C06/treatment-record.json": {
+    "sha256": "7939721fb260bc0292e51227431fe23742a3cf372b94e4dbf6e642507e94b81c",
+    "path": "t20-consolidation-20261011/catalogue/objects/79/7939721fb260bc0292e51227431fe23742a3cf372b94e4dbf6e642507e94b81c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C06/treatment-record.json",
+    "bytes": 1743
+  },
+  "episode-reification-v2/fixtures/C07/baseline-record.md": {
+    "sha256": "768f7c425a102d8e8e20ee3394bf625fa879926278ffef1cfebb2da0e29ceae6",
+    "path": "t20-consolidation-20261011/catalogue/objects/76/768f7c425a102d8e8e20ee3394bf625fa879926278ffef1cfebb2da0e29ceae6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C07/baseline-record.md",
+    "bytes": 580
+  },
+  "episode-reification-v2/fixtures/C07/facts.json": {
+    "sha256": "323dcedcaf1e5b1330d8a85ea0a7d11b5b3e58c58e114747ba8967d4e83d4485",
+    "path": "t20-consolidation-20261011/catalogue/objects/32/323dcedcaf1e5b1330d8a85ea0a7d11b5b3e58c58e114747ba8967d4e83d4485",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C07/facts.json",
+    "bytes": 857
+  },
+  "episode-reification-v2/fixtures/C07/treatment-record.json": {
+    "sha256": "34f1606fec1e1d16c1e6e76f68d36ff5ab6f6c8723263b15e5100e3093fbc750",
+    "path": "t20-consolidation-20261011/catalogue/objects/34/34f1606fec1e1d16c1e6e76f68d36ff5ab6f6c8723263b15e5100e3093fbc750",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C07/treatment-record.json",
+    "bytes": 1745
+  },
+  "episode-reification-v2/fixtures/C08/baseline-record.md": {
+    "sha256": "baa59341e94f7f267b7e6eedf68027c8c9999552b78defd7bf9f7d8c4c1623ee",
+    "path": "t20-consolidation-20261011/catalogue/objects/ba/baa59341e94f7f267b7e6eedf68027c8c9999552b78defd7bf9f7d8c4c1623ee",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C08/baseline-record.md",
+    "bytes": 579
+  },
+  "episode-reification-v2/fixtures/C08/facts.json": {
+    "sha256": "ba3eb841149573c5c6a247e49fa12f61e3f4981b78b511bcd021a3ad994f9a1b",
+    "path": "t20-consolidation-20261011/catalogue/objects/ba/ba3eb841149573c5c6a247e49fa12f61e3f4981b78b511bcd021a3ad994f9a1b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C08/facts.json",
+    "bytes": 856
+  },
+  "episode-reification-v2/fixtures/C08/treatment-record.json": {
+    "sha256": "ae95b22dd67746c1b1a30b5ccbfd5dcc5a4bbf7f2ac7f3d106fbd2c869890d41",
+    "path": "t20-consolidation-20261011/catalogue/objects/ae/ae95b22dd67746c1b1a30b5ccbfd5dcc5a4bbf7f2ac7f3d106fbd2c869890d41",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C08/treatment-record.json",
+    "bytes": 1744
+  },
+  "episode-reification-v2/fixtures/C09/baseline-record.md": {
+    "sha256": "8768cce7a4cf2d0c3150df8e0887c382b5a2b517c3370e44771d84ee76fa37f0",
+    "path": "t20-consolidation-20261011/catalogue/objects/87/8768cce7a4cf2d0c3150df8e0887c382b5a2b517c3370e44771d84ee76fa37f0",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C09/baseline-record.md",
+    "bytes": 593
+  },
+  "episode-reification-v2/fixtures/C09/facts.json": {
+    "sha256": "c150d82c17d2cc86f2b99b544f6a766010aded21989fef87f0428f6f1bfd51a3",
+    "path": "t20-consolidation-20261011/catalogue/objects/c1/c150d82c17d2cc86f2b99b544f6a766010aded21989fef87f0428f6f1bfd51a3",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C09/facts.json",
+    "bytes": 870
+  },
+  "episode-reification-v2/fixtures/C09/treatment-record.json": {
+    "sha256": "0b48fff84a604d013291f0bb171df8258945160a13bf908010fb064c992e2358",
+    "path": "t20-consolidation-20261011/catalogue/objects/0b/0b48fff84a604d013291f0bb171df8258945160a13bf908010fb064c992e2358",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C09/treatment-record.json",
+    "bytes": 1779
+  },
+  "episode-reification-v2/fixtures/C10/baseline-record.md": {
+    "sha256": "61295715cf09100c9fe53b41231a8d66a4aee8df9d511f9bb0320ded71fb91c4",
+    "path": "t20-consolidation-20261011/catalogue/objects/61/61295715cf09100c9fe53b41231a8d66a4aee8df9d511f9bb0320ded71fb91c4",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C10/baseline-record.md",
+    "bytes": 588
+  },
+  "episode-reification-v2/fixtures/C10/facts.json": {
+    "sha256": "e3be11da903a040f0573975d33bfaeb33f8fd2225f80e06daed02744cc1ff7ef",
+    "path": "t20-consolidation-20261011/catalogue/objects/e3/e3be11da903a040f0573975d33bfaeb33f8fd2225f80e06daed02744cc1ff7ef",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C10/facts.json",
+    "bytes": 865
+  },
+  "episode-reification-v2/fixtures/C10/treatment-record.json": {
+    "sha256": "8373e608fdf968a0eb86dc7fa4cc2729ba6b39288519f806bbaf4177f3f72df4",
+    "path": "t20-consolidation-20261011/catalogue/objects/83/8373e608fdf968a0eb86dc7fa4cc2729ba6b39288519f806bbaf4177f3f72df4",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C10/treatment-record.json",
+    "bytes": 1774
+  },
+  "episode-reification-v2/fixtures/C11/baseline-record.md": {
+    "sha256": "6f8e1889242db4ad3dd77e24bc0eaed1d5bc68ddc670be8379c71ea43f2006c3",
+    "path": "t20-consolidation-20261011/catalogue/objects/6f/6f8e1889242db4ad3dd77e24bc0eaed1d5bc68ddc670be8379c71ea43f2006c3",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C11/baseline-record.md",
+    "bytes": 590
+  },
+  "episode-reification-v2/fixtures/C11/facts.json": {
+    "sha256": "d3fbb2badc1f574794976dfaff633152ca129814cb743034b7e0345dd5846bd9",
+    "path": "t20-consolidation-20261011/catalogue/objects/d3/d3fbb2badc1f574794976dfaff633152ca129814cb743034b7e0345dd5846bd9",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C11/facts.json",
+    "bytes": 867
+  },
+  "episode-reification-v2/fixtures/C11/treatment-record.json": {
+    "sha256": "87789d23d576155ebe7c3d56f7ebb7b95076e032d9ebb5350dbc8ed80f2e4735",
+    "path": "t20-consolidation-20261011/catalogue/objects/87/87789d23d576155ebe7c3d56f7ebb7b95076e032d9ebb5350dbc8ed80f2e4735",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C11/treatment-record.json",
+    "bytes": 1776
+  },
+  "episode-reification-v2/fixtures/C12/baseline-record.md": {
+    "sha256": "1c81ddde20f775d728dfb71288782555c06cbb0dedd5905cff22e651c6d69199",
+    "path": "t20-consolidation-20261011/catalogue/objects/1c/1c81ddde20f775d728dfb71288782555c06cbb0dedd5905cff22e651c6d69199",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C12/baseline-record.md",
+    "bytes": 589
+  },
+  "episode-reification-v2/fixtures/C12/facts.json": {
+    "sha256": "bc6131d71402194c804241c400034385ed53c2dbec8de8229a6a72b693db38f5",
+    "path": "t20-consolidation-20261011/catalogue/objects/bc/bc6131d71402194c804241c400034385ed53c2dbec8de8229a6a72b693db38f5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C12/facts.json",
+    "bytes": 866
+  },
+  "episode-reification-v2/fixtures/C12/treatment-record.json": {
+    "sha256": "13fbbb7b07b7f09869dde2716a92a1c033776e49db69d194f4f60627a3a4c673",
+    "path": "t20-consolidation-20261011/catalogue/objects/13/13fbbb7b07b7f09869dde2716a92a1c033776e49db69d194f4f60627a3a4c673",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C12/treatment-record.json",
+    "bytes": 1775
+  },
+  "episode-reification-v2/fixtures/C13/baseline-record.md": {
+    "sha256": "fc0f4bd95059cc23470290708d0a7f115d15aae96d70ace7869546adc1505d4f",
+    "path": "t20-consolidation-20261011/catalogue/objects/fc/fc0f4bd95059cc23470290708d0a7f115d15aae96d70ace7869546adc1505d4f",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C13/baseline-record.md",
+    "bytes": 655
+  },
+  "episode-reification-v2/fixtures/C13/facts.json": {
+    "sha256": "1eaaeeb8171939693b360191b42df7d129a14dd2c1e4aa7e701564fb50402a35",
+    "path": "t20-consolidation-20261011/catalogue/objects/1e/1eaaeeb8171939693b360191b42df7d129a14dd2c1e4aa7e701564fb50402a35",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C13/facts.json",
+    "bytes": 932
+  },
+  "episode-reification-v2/fixtures/C13/treatment-record.json": {
+    "sha256": "729b9eee7757b1145e9c147ad10e0b0e71768be4e4fb54355a1414d022dfffef",
+    "path": "t20-consolidation-20261011/catalogue/objects/72/729b9eee7757b1145e9c147ad10e0b0e71768be4e4fb54355a1414d022dfffef",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C13/treatment-record.json",
+    "bytes": 1799
+  },
+  "episode-reification-v2/fixtures/C14/baseline-record.md": {
+    "sha256": "16523178e49dd6358d6cc9d8ce0b0ad085a90798d173682ad5c978698c5d11bd",
+    "path": "t20-consolidation-20261011/catalogue/objects/16/16523178e49dd6358d6cc9d8ce0b0ad085a90798d173682ad5c978698c5d11bd",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C14/baseline-record.md",
+    "bytes": 650
+  },
+  "episode-reification-v2/fixtures/C14/facts.json": {
+    "sha256": "7ac2c6b07b2f07c26aee46059d4ffb826ba29c3b67e648a3704f09d3bfa593bf",
+    "path": "t20-consolidation-20261011/catalogue/objects/7a/7ac2c6b07b2f07c26aee46059d4ffb826ba29c3b67e648a3704f09d3bfa593bf",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C14/facts.json",
+    "bytes": 927
+  },
+  "episode-reification-v2/fixtures/C14/treatment-record.json": {
+    "sha256": "6184fced8fb411d4bf193b4146aafe0b870cc23c239150b5dcb402d57128560c",
+    "path": "t20-consolidation-20261011/catalogue/objects/61/6184fced8fb411d4bf193b4146aafe0b870cc23c239150b5dcb402d57128560c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C14/treatment-record.json",
+    "bytes": 1794
+  },
+  "episode-reification-v2/fixtures/C15/baseline-record.md": {
+    "sha256": "6cd3b87bbaf86ddea5a4b905f6e16ac334e337a9c4b67cc297b5a5530c551f42",
+    "path": "t20-consolidation-20261011/catalogue/objects/6c/6cd3b87bbaf86ddea5a4b905f6e16ac334e337a9c4b67cc297b5a5530c551f42",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C15/baseline-record.md",
+    "bytes": 652
+  },
+  "episode-reification-v2/fixtures/C15/facts.json": {
+    "sha256": "2ab6c0419725a140d539e035fd37c7ff3530b6ace41b9005a738b551053cb2b5",
+    "path": "t20-consolidation-20261011/catalogue/objects/2a/2ab6c0419725a140d539e035fd37c7ff3530b6ace41b9005a738b551053cb2b5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C15/facts.json",
+    "bytes": 929
+  },
+  "episode-reification-v2/fixtures/C15/treatment-record.json": {
+    "sha256": "d33704950e8695e8397145b0daf028fd8abb5bd2fd153f11c91f5b174c46b474",
+    "path": "t20-consolidation-20261011/catalogue/objects/d3/d33704950e8695e8397145b0daf028fd8abb5bd2fd153f11c91f5b174c46b474",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C15/treatment-record.json",
+    "bytes": 1796
+  },
+  "episode-reification-v2/fixtures/C16/baseline-record.md": {
+    "sha256": "f2313e8ece8995eb309f6fbe647dc9364f9ce55737b70bce588f72f89fe5b42a",
+    "path": "t20-consolidation-20261011/catalogue/objects/f2/f2313e8ece8995eb309f6fbe647dc9364f9ce55737b70bce588f72f89fe5b42a",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C16/baseline-record.md",
+    "bytes": 651
+  },
+  "episode-reification-v2/fixtures/C16/facts.json": {
+    "sha256": "1d9d4df01f9452712ae845e3d616d51e8267a840208307462375bc0caa5cc7b2",
+    "path": "t20-consolidation-20261011/catalogue/objects/1d/1d9d4df01f9452712ae845e3d616d51e8267a840208307462375bc0caa5cc7b2",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C16/facts.json",
+    "bytes": 928
+  },
+  "episode-reification-v2/fixtures/C16/treatment-record.json": {
+    "sha256": "256cb35f10879a2fb4309daa3cc41ed64bc2d585b24bf61880c461d3ca943d26",
+    "path": "t20-consolidation-20261011/catalogue/objects/25/256cb35f10879a2fb4309daa3cc41ed64bc2d585b24bf61880c461d3ca943d26",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C16/treatment-record.json",
+    "bytes": 1795
+  },
+  "episode-reification-v2/fixtures/C17/baseline-record.md": {
+    "sha256": "1925c94c08ee32f9ed3e9ead43376d7b43702f68516c91a7408c099ae0691ba5",
+    "path": "t20-consolidation-20261011/catalogue/objects/19/1925c94c08ee32f9ed3e9ead43376d7b43702f68516c91a7408c099ae0691ba5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C17/baseline-record.md",
+    "bytes": 817
+  },
+  "episode-reification-v2/fixtures/C17/facts.json": {
+    "sha256": "091eafcb58d23c5aeaabce00efe71344b09bd1b3186405ee51281ef01d71e7bb",
+    "path": "t20-consolidation-20261011/catalogue/objects/09/091eafcb58d23c5aeaabce00efe71344b09bd1b3186405ee51281ef01d71e7bb",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C17/facts.json",
+    "bytes": 1132
+  },
+  "episode-reification-v2/fixtures/C17/treatment-record.json": {
+    "sha256": "ee795084eafc83197236a9832f596b3e78927ba89a9f02ea15700d41d9b24e79",
+    "path": "t20-consolidation-20261011/catalogue/objects/ee/ee795084eafc83197236a9832f596b3e78927ba89a9f02ea15700d41d9b24e79",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C17/treatment-record.json",
+    "bytes": 2116
+  },
+  "episode-reification-v2/fixtures/C18/baseline-record.md": {
+    "sha256": "c45dd7f642fabed182a0db14ec30e11df79dd55c8514d7877429254fb385d7ce",
+    "path": "t20-consolidation-20261011/catalogue/objects/c4/c45dd7f642fabed182a0db14ec30e11df79dd55c8514d7877429254fb385d7ce",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C18/baseline-record.md",
+    "bytes": 812
+  },
+  "episode-reification-v2/fixtures/C18/facts.json": {
+    "sha256": "6deeb2dbdb3845620e8559f3d7710c4c9de6aae69e7f90ff153060484dcee57e",
+    "path": "t20-consolidation-20261011/catalogue/objects/6d/6deeb2dbdb3845620e8559f3d7710c4c9de6aae69e7f90ff153060484dcee57e",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C18/facts.json",
+    "bytes": 1127
+  },
+  "episode-reification-v2/fixtures/C18/treatment-record.json": {
+    "sha256": "53a7db7ebc375c5c3f1b443dec8182b762ade55a89d4109982abfbca3f09a401",
+    "path": "t20-consolidation-20261011/catalogue/objects/53/53a7db7ebc375c5c3f1b443dec8182b762ade55a89d4109982abfbca3f09a401",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C18/treatment-record.json",
+    "bytes": 2111
+  },
+  "episode-reification-v2/fixtures/C19/baseline-record.md": {
+    "sha256": "7794f18b2837c5b5de73a19856ffb99bcfa47e21211e948addfb7b5778cc7a0e",
+    "path": "t20-consolidation-20261011/catalogue/objects/77/7794f18b2837c5b5de73a19856ffb99bcfa47e21211e948addfb7b5778cc7a0e",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C19/baseline-record.md",
+    "bytes": 814
+  },
+  "episode-reification-v2/fixtures/C19/facts.json": {
+    "sha256": "1209928471c9559356e1f4b2d0cc859fb5cb4f0cb72962efd7e413d52e078e9f",
+    "path": "t20-consolidation-20261011/catalogue/objects/12/1209928471c9559356e1f4b2d0cc859fb5cb4f0cb72962efd7e413d52e078e9f",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C19/facts.json",
+    "bytes": 1129
+  },
+  "episode-reification-v2/fixtures/C19/treatment-record.json": {
+    "sha256": "bf846b5be7f80c567bb61e2c56bdb35c5401f666e68cc8012040f32be430beff",
+    "path": "t20-consolidation-20261011/catalogue/objects/bf/bf846b5be7f80c567bb61e2c56bdb35c5401f666e68cc8012040f32be430beff",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C19/treatment-record.json",
+    "bytes": 2113
+  },
+  "episode-reification-v2/fixtures/C20/baseline-record.md": {
+    "sha256": "308ce73f45c56ce2ecbacd36725127c7c75eeb08582de5ce99aa2f2324904f99",
+    "path": "t20-consolidation-20261011/catalogue/objects/30/308ce73f45c56ce2ecbacd36725127c7c75eeb08582de5ce99aa2f2324904f99",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C20/baseline-record.md",
+    "bytes": 813
+  },
+  "episode-reification-v2/fixtures/C20/facts.json": {
+    "sha256": "d0474ca3a1847f6007d70f1e1cfc89edd7f7299b6f108de03d20c66c3e86f2a0",
+    "path": "t20-consolidation-20261011/catalogue/objects/d0/d0474ca3a1847f6007d70f1e1cfc89edd7f7299b6f108de03d20c66c3e86f2a0",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C20/facts.json",
+    "bytes": 1128
+  },
+  "episode-reification-v2/fixtures/C20/treatment-record.json": {
+    "sha256": "56823bc17aafdc89b91315e56c4cd607590cf88097c93e2376ed1737f1879df6",
+    "path": "t20-consolidation-20261011/catalogue/objects/56/56823bc17aafdc89b91315e56c4cd607590cf88097c93e2376ed1737f1879df6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/C20/treatment-record.json",
+    "bytes": 2112
+  },
+  "episode-reification-v2/fixtures/KEYS.json": {
+    "sha256": "4124f55099aafaae7cfaabfe27627ed65abf969c875017c8fcfbbbab4a8b5394",
+    "path": "t20-consolidation-20261011/catalogue/objects/41/4124f55099aafaae7cfaabfe27627ed65abf969c875017c8fcfbbbab4a8b5394",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/fixtures/KEYS.json",
+    "bytes": 5781
+  },
+  "episode-reification-v2/harness/run_er.py": {
+    "sha256": "bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20",
+    "path": "t20-consolidation-20261011/catalogue/objects/bd/bd84fdfa3d8973b39f04a9dc0014f3dc1b5574caf61ed7643ca78ae782455d20",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/harness/run_er.py",
+    "bytes": 7347
+  },
+  "episode-reification-v2/scripts/generate_cases.py": {
+    "sha256": "d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3",
+    "path": "t20-consolidation-20261011/catalogue/objects/d4/d4ae498ed5b992ec366a752300a949ba64a3d90ce01c63c28392dacbe9827aa3",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/scripts/generate_cases.py",
+    "bytes": 8526
+  },
+  "episode-reification-v2/tests/test_smoke.py": {
+    "sha256": "41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f",
+    "path": "t20-consolidation-20261011/catalogue/objects/41/41517fa67f0998e92ccbaff09843bac86b20a7144a9c7016927fb4bc4d6f412f",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/tests/test_smoke.py",
+    "bytes": 8543
+  },
+  "episode-reification/BASELINE-TREATMENT-CONTRACT.md": {
+    "sha256": "d33bc78d646f0bbb9cd17c1e1c404f0115ad713f3c6dab5b954e1edff09366e9",
+    "path": "t20-consolidation-20261011/catalogue/objects/d3/d33bc78d646f0bbb9cd17c1e1c404f0115ad713f3c6dab5b954e1edff09366e9",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/BASELINE-TREATMENT-CONTRACT.md",
+    "bytes": 827
+  },
+  "episode-reification/DECISION-RULES.yaml": {
+    "sha256": "936457dc0247456ea37eb144bb1ed26b2a76a618e1c2a704729a1f38a8a44fbe",
+    "path": "t20-consolidation-20261011/catalogue/objects/93/936457dc0247456ea37eb144bb1ed26b2a76a618e1c2a704729a1f38a8a44fbe",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/DECISION-RULES.yaml",
+    "bytes": 1774
+  },
+  "episode-reification/DEVIATION-LEDGER.md": {
+    "sha256": "0a4417feab4a99cc2ca1f839bcaa33d8e5f3ada5980850c30b5bb2b185a19950",
+    "path": "t20-consolidation-20261011/catalogue/objects/0a/0a4417feab4a99cc2ca1f839bcaa33d8e5f3ada5980850c30b5bb2b185a19950",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/DEVIATION-LEDGER.md",
+    "bytes": 203
+  },
+  "episode-reification/E1-E5-SPEC.yaml": {
+    "sha256": "ceccaeb433470068863d9356eec20b9a6ee7f4a59c898827ba901a2b5c04b9ac",
+    "path": "t20-consolidation-20261011/catalogue/objects/ce/ceccaeb433470068863d9356eec20b9a6ee7f4a59c898827ba901a2b5c04b9ac",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/E1-E5-SPEC.yaml",
+    "bytes": 2833
+  },
+  "episode-reification/FREEZE-HASH.txt": {
+    "sha256": "6a0093f328216e9c8edc7ac195d3d6eefc2e1d1857b096afb0068d3e24f7b19d",
+    "path": "t20-consolidation-20261011/catalogue/objects/6a/6a0093f328216e9c8edc7ac195d3d6eefc2e1d1857b096afb0068d3e24f7b19d",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/FREEZE-HASH.txt",
+    "bytes": 149
+  },
+  "episode-reification/OUTPUT.schema.json": {
+    "sha256": "89d4371a3361d8a2375a6eb9e5ff4f22e65775e4c356c45ed1799f48858b5cd6",
+    "path": "t20-consolidation-20261011/catalogue/objects/89/89d4371a3361d8a2375a6eb9e5ff4f22e65775e4c356c45ed1799f48858b5cd6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/OUTPUT.schema.json",
+    "bytes": 1162
+  },
+  "episode-reification/PROTOCOL.md": {
+    "sha256": "3a3e390d31ac20f3c6e8edba0f52558c181df5b1a984c8362b7dc5c006e900a1",
+    "path": "t20-consolidation-20261011/catalogue/objects/3a/3a3e390d31ac20f3c6e8edba0f52558c181df5b1a984c8362b7dc5c006e900a1",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/PROTOCOL.md",
+    "bytes": 4038
+  },
+  "episode-reification/README.md": {
+    "sha256": "ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6",
+    "path": "t20-consolidation-20261011/catalogue/objects/ca/ca21e76e775fe1637098aa90b6e6544fa732ef4a82c874de5aab6cbf6f4451b6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/README.md",
+    "bytes": 1197
+  },
+  "episode-reification/RUN-MANIFEST.schema.json": {
+    "sha256": "409f04fbb21dace9d7989da827cc99958ef0b3cd8d4bb99d934e49891b8e9383",
+    "path": "t20-consolidation-20261011/catalogue/objects/40/409f04fbb21dace9d7989da827cc99958ef0b3cd8d4bb99d934e49891b8e9383",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/RUN-MANIFEST.schema.json",
+    "bytes": 2474
+  },
+  "episode-reification/SCORING-RUBRIC.md": {
+    "sha256": "c8962daf61d67456f59d419852ae8c59dedbde96b88494909ae26faff56d7c4f",
+    "path": "t20-consolidation-20261011/catalogue/objects/c8/c8962daf61d67456f59d419852ae8c59dedbde96b88494909ae26faff56d7c4f",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/SCORING-RUBRIC.md",
+    "bytes": 1593
+  },
+  "episode-reification/STATUS.yaml": {
+    "sha256": "7d653aedd3a3c1a07a6dcf0b4ca2e6e1bfd3b1cf699fa51027bde15fa0f409e1",
+    "path": "t20-consolidation-20261011/catalogue/objects/7d/7d653aedd3a3c1a07a6dcf0b4ca2e6e1bfd3b1cf699fa51027bde15fa0f409e1",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/STATUS.yaml",
+    "bytes": 785
+  },
+  "episode-reification/analysis/analyze_er.py": {
+    "sha256": "ae1f58c4c6456a57651bc56e6d4c8affdbc745a5ced08234b710d76b1e1151d5",
+    "path": "t20-consolidation-20261011/catalogue/objects/ae/ae1f58c4c6456a57651bc56e6d4c8affdbc745a5ced08234b710d76b1e1151d5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/analysis/analyze_er.py",
+    "bytes": 3466
+  },
+  "episode-reification/fixtures/E1/baseline-log.md": {
+    "sha256": "59805bb37dc94f56a87eb7bede02160722452591942825d202685761b4fa426c",
+    "path": "t20-consolidation-20261011/catalogue/objects/59/59805bb37dc94f56a87eb7bede02160722452591942825d202685761b4fa426c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E1/baseline-log.md",
+    "bytes": 468
+  },
+  "episode-reification/fixtures/E1/facts.yaml": {
+    "sha256": "897f6c0414e6c5eb2fdb97618e0159e73a06ad7c117fdb0229c6c4028efe02ba",
+    "path": "t20-consolidation-20261011/catalogue/objects/89/897f6c0414e6c5eb2fdb97618e0159e73a06ad7c117fdb0229c6c4028efe02ba",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E1/facts.yaml",
+    "bytes": 140
+  },
+  "episode-reification/fixtures/E1/treatment-episode.json": {
+    "sha256": "87dcb117144c533ad272279815725238d6014ea4c4286dfff1e6f6089580ef93",
+    "path": "t20-consolidation-20261011/catalogue/objects/87/87dcb117144c533ad272279815725238d6014ea4c4286dfff1e6f6089580ef93",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E1/treatment-episode.json",
+    "bytes": 597
+  },
+  "episode-reification/fixtures/E2/baseline-log.md": {
+    "sha256": "41f32bbe61ab8a6fa2090d804478718cff7018cdca14e3a03b24de56a54cef45",
+    "path": "t20-consolidation-20261011/catalogue/objects/41/41f32bbe61ab8a6fa2090d804478718cff7018cdca14e3a03b24de56a54cef45",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E2/baseline-log.md",
+    "bytes": 474
+  },
+  "episode-reification/fixtures/E2/facts.yaml": {
+    "sha256": "961e4aa07d176b9bd9d098297b56c1223c98da30e307052af98b9c382d097aca",
+    "path": "t20-consolidation-20261011/catalogue/objects/96/961e4aa07d176b9bd9d098297b56c1223c98da30e307052af98b9c382d097aca",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E2/facts.yaml",
+    "bytes": 138
+  },
+  "episode-reification/fixtures/E2/treatment-episode.json": {
+    "sha256": "e3f6906094c21dcf7453ff70a6fc36c2b89fad6da59884240d3de5b27e1e922a",
+    "path": "t20-consolidation-20261011/catalogue/objects/e3/e3f6906094c21dcf7453ff70a6fc36c2b89fad6da59884240d3de5b27e1e922a",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E2/treatment-episode.json",
+    "bytes": 773
+  },
+  "episode-reification/fixtures/E3/baseline-log.md": {
+    "sha256": "3bc9a6198e2ffba70191d2c581de88a00b32e1d4aae85f7b463e6472b7e92136",
+    "path": "t20-consolidation-20261011/catalogue/objects/3b/3bc9a6198e2ffba70191d2c581de88a00b32e1d4aae85f7b463e6472b7e92136",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E3/baseline-log.md",
+    "bytes": 593
+  },
+  "episode-reification/fixtures/E3/facts.yaml": {
+    "sha256": "1dc9969b4405950c592e02b9dfc086ff1c234d41d0a35e803bc30266f0d26735",
+    "path": "t20-consolidation-20261011/catalogue/objects/1d/1dc9969b4405950c592e02b9dfc086ff1c234d41d0a35e803bc30266f0d26735",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E3/facts.yaml",
+    "bytes": 144
+  },
+  "episode-reification/fixtures/E3/treatment-episode.json": {
+    "sha256": "85dd32cb71e38faaf296b314a9f9209d45b913c381fe0787335e8fbc8bffde32",
+    "path": "t20-consolidation-20261011/catalogue/objects/85/85dd32cb71e38faaf296b314a9f9209d45b913c381fe0787335e8fbc8bffde32",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E3/treatment-episode.json",
+    "bytes": 663
+  },
+  "episode-reification/fixtures/E4/baseline-log.md": {
+    "sha256": "ff854a21cf34d6f0e75a2e271b0408ce1c28d23745a4d9d8158a21472e21f709",
+    "path": "t20-consolidation-20261011/catalogue/objects/ff/ff854a21cf34d6f0e75a2e271b0408ce1c28d23745a4d9d8158a21472e21f709",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E4/baseline-log.md",
+    "bytes": 566
+  },
+  "episode-reification/fixtures/E4/facts.yaml": {
+    "sha256": "54711a3ce4e26a8db16784860406e00b2a68b378c540dd67e562a7401fc38d3b",
+    "path": "t20-consolidation-20261011/catalogue/objects/54/54711a3ce4e26a8db16784860406e00b2a68b378c540dd67e562a7401fc38d3b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E4/facts.yaml",
+    "bytes": 160
+  },
+  "episode-reification/fixtures/E4/treatment-episode.json": {
+    "sha256": "9363e1fd8da2df84abd3680fafab22e6fbfa2f25a2779f846a860bad2c9b0002",
+    "path": "t20-consolidation-20261011/catalogue/objects/93/9363e1fd8da2df84abd3680fafab22e6fbfa2f25a2779f846a860bad2c9b0002",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E4/treatment-episode.json",
+    "bytes": 743
+  },
+  "episode-reification/fixtures/E5/baseline-log.md": {
+    "sha256": "97090146f12be8baf8f795047064e280946d27da0cbe3b37391b7df595a315df",
+    "path": "t20-consolidation-20261011/catalogue/objects/97/97090146f12be8baf8f795047064e280946d27da0cbe3b37391b7df595a315df",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E5/baseline-log.md",
+    "bytes": 648
+  },
+  "episode-reification/fixtures/E5/facts.yaml": {
+    "sha256": "891731272788bbe56f6ff388834258670a3a0f2333aa21ca8408ac9e021c2112",
+    "path": "t20-consolidation-20261011/catalogue/objects/89/891731272788bbe56f6ff388834258670a3a0f2333aa21ca8408ac9e021c2112",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E5/facts.yaml",
+    "bytes": 161
+  },
+  "episode-reification/fixtures/E5/treatment-episode.json": {
+    "sha256": "2a7517831f5dd1c0764b1806880f7ffa3ee740f72ce0017cd2d5c3ff0bded160",
+    "path": "t20-consolidation-20261011/catalogue/objects/2a/2a7517831f5dd1c0764b1806880f7ffa3ee740f72ce0017cd2d5c3ff0bded160",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/fixtures/E5/treatment-episode.json",
+    "bytes": 963
+  },
+  "episode-reification/scripts/generate_fixtures.py": {
+    "sha256": "7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564",
+    "path": "t20-consolidation-20261011/catalogue/objects/7c/7ce757842bf2e9fa87a23004675d147687009b1a84a4cf3fc08908f227d45564",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/scripts/generate_fixtures.py",
+    "bytes": 8187
+  },
+  "episode-reification/tests/test_smoke.py": {
+    "sha256": "3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c",
+    "path": "t20-consolidation-20261011/catalogue/objects/36/3606f98b6f2072c5a39fbb24e3d4728b4e9b047b82c65f7d4b8187ef3d010c1c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification/tests/test_smoke.py",
+    "bytes": 5936
+  },
+  "false-closure-selective-prediction-v2/DECISION-RULES.yaml": {
+    "sha256": "d260231bc8db808d3d105da8c501613528e12615fd43ce632329e635710d707a",
+    "path": "t20-consolidation-20261011/catalogue/objects/d2/d260231bc8db808d3d105da8c501613528e12615fd43ce632329e635710d707a",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/DECISION-RULES.yaml",
+    "bytes": 1347
+  },
+  "false-closure-selective-prediction-v2/DESIGN.yaml": {
+    "sha256": "f53db92192f91b2aa641150626150dc99e4d7dfb29754cea974775d50f8d282d",
+    "path": "t20-consolidation-20261011/catalogue/objects/f5/f53db92192f91b2aa641150626150dc99e4d7dfb29754cea974775d50f8d282d",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/DESIGN.yaml",
+    "bytes": 1825
+  },
+  "false-closure-selective-prediction-v2/DEVIATION-LEDGER.md": {
+    "sha256": "571f97e005ae71547ce9aa0e04fbd9d7331a9bead7ca58188de55aeb3d1cd131",
+    "path": "t20-consolidation-20261011/catalogue/objects/57/571f97e005ae71547ce9aa0e04fbd9d7331a9bead7ca58188de55aeb3d1cd131",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/DEVIATION-LEDGER.md",
+    "bytes": 207
+  },
+  "false-closure-selective-prediction-v2/ENDPOINTS.yaml": {
+    "sha256": "ca5800840f14bf41116f22632d7cc469fd2b57f5624d5618dd7ce39368c7bd1c",
+    "path": "t20-consolidation-20261011/catalogue/objects/ca/ca5800840f14bf41116f22632d7cc469fd2b57f5624d5618dd7ce39368c7bd1c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/ENDPOINTS.yaml",
+    "bytes": 2022
+  },
+  "false-closure-selective-prediction-v2/FREEZE-HASH.txt": {
+    "sha256": "c18b4c78f794bed808a958812595a93562d47d1d8fbb6eb96e541b0f4df846b7",
+    "path": "t20-consolidation-20261011/catalogue/objects/c1/c18b4c78f794bed808a958812595a93562d47d1d8fbb6eb96e541b0f4df846b7",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/FREEZE-HASH.txt",
+    "bytes": 177
+  },
+  "false-closure-selective-prediction-v2/OUTPUT.schema.json": {
+    "sha256": "c112eca44e934b6816fc933868b0cfb07c52c197f6a65d5afa92a092bf7380b7",
+    "path": "t20-consolidation-20261011/catalogue/objects/c1/c112eca44e934b6816fc933868b0cfb07c52c197f6a65d5afa92a092bf7380b7",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/OUTPUT.schema.json",
+    "bytes": 2803
+  },
+  "false-closure-selective-prediction-v2/PROTOCOL.md": {
+    "sha256": "5f20ad6edf5ad6246b527025119af090d90102ee981cbf1140940f8e9bdeb4a6",
+    "path": "t20-consolidation-20261011/catalogue/objects/5f/5f20ad6edf5ad6246b527025119af090d90102ee981cbf1140940f8e9bdeb4a6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/PROTOCOL.md",
+    "bytes": 3137
+  },
+  "false-closure-selective-prediction-v2/README.md": {
+    "sha256": "dbe1e4117c7f513a5d6042d4c11c84a50df6c5b85c10895e4273ce092b7e6037",
+    "path": "t20-consolidation-20261011/catalogue/objects/db/dbe1e4117c7f513a5d6042d4c11c84a50df6c5b85c10895e4273ce092b7e6037",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/README.md",
+    "bytes": 1604
+  },
+  "false-closure-selective-prediction-v2/RUN-MANIFEST.schema.json": {
+    "sha256": "802c1b37e68cd2dd2ebbec928f1472f1dfff5c9eeaf7b8448020f417686e7c1c",
+    "path": "t20-consolidation-20261011/catalogue/objects/80/802c1b37e68cd2dd2ebbec928f1472f1dfff5c9eeaf7b8448020f417686e7c1c",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/RUN-MANIFEST.schema.json",
+    "bytes": 2594
+  },
+  "false-closure-selective-prediction-v2/STATUS.yaml": {
+    "sha256": "36aa655bc03c44f22cb789149c39ab0e5e369ba594824d88682a0c2d3da269ed",
+    "path": "t20-consolidation-20261011/catalogue/objects/36/36aa655bc03c44f22cb789149c39ab0e5e369ba594824d88682a0c2d3da269ed",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/STATUS.yaml",
+    "bytes": 833
+  },
+  "false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py": {
+    "sha256": "0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+    "path": "t20-consolidation-20261011/catalogue/objects/00/0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py",
+    "bytes": 15447
+  },
+  "false-closure-selective-prediction-v2/baselines/BASELINE-ARM.md": {
+    "sha256": "f7a25b194b1267f40af14df870f5646eee08e96b2fe2f251fddfc33e87bcf4be",
+    "path": "t20-consolidation-20261011/catalogue/objects/f7/f7a25b194b1267f40af14df870f5646eee08e96b2fe2f251fddfc33e87bcf4be",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/baselines/BASELINE-ARM.md",
+    "bytes": 1579
+  },
+  "false-closure-selective-prediction-v2/harness/run_fcsp.py": {
+    "sha256": "a58a9cf0d458f36d2a69de1ab03339bc4a044d1f532197f8d3eab739c2c3783b",
+    "path": "t20-consolidation-20261011/catalogue/objects/a5/a58a9cf0d458f36d2a69de1ab03339bc4a044d1f532197f8d3eab739c2c3783b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/harness/run_fcsp.py",
+    "bytes": 8531
+  },
+  "false-closure-selective-prediction-v2/items/KEYS.json": {
+    "sha256": "ddcc7c77213aaa4978208aa082b5e381aac6a6cb14b251a9005964f7016afd90",
+    "path": "t20-consolidation-20261011/catalogue/objects/dd/ddcc7c77213aaa4978208aa082b5e381aac6a6cb14b251a9005964f7016afd90",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/items/KEYS.json",
+    "bytes": 23330
+  },
+  "false-closure-selective-prediction-v2/items/PUBLIC-ITEMS.json": {
+    "sha256": "a163f3d1d165b391c52a7e48a4c12bb58980fc202a7f77e2eb65bb580be58d23",
+    "path": "t20-consolidation-20261011/catalogue/objects/a1/a163f3d1d165b391c52a7e48a4c12bb58980fc202a7f77e2eb65bb580be58d23",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/items/PUBLIC-ITEMS.json",
+    "bytes": 22694
+  },
+  "false-closure-selective-prediction-v2/scripts/generate_items.py": {
+    "sha256": "f3036ecc7da7ca35419b0aa58dffd50ea3af168ddbefccfb5f7c3a774b102b8e",
+    "path": "t20-consolidation-20261011/catalogue/objects/f3/f3036ecc7da7ca35419b0aa58dffd50ea3af168ddbefccfb5f7c3a774b102b8e",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/scripts/generate_items.py",
+    "bytes": 8179
+  },
+  "false-closure-selective-prediction-v2/simulation/design_sensitivity.py": {
+    "sha256": "469ac7f8da17c954e7d723e761ce1259f03fb8a2f137779f3da36887c6f98f46",
+    "path": "t20-consolidation-20261011/catalogue/objects/46/469ac7f8da17c954e7d723e761ce1259f03fb8a2f137779f3da36887c6f98f46",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/simulation/design_sensitivity.py",
+    "bytes": 1457
+  },
+  "false-closure-selective-prediction-v2/tests/test_smoke.py": {
+    "sha256": "459e74878da5340d3e25ac945954e10a38866d2fa4b5e1fae883619e3df273c6",
+    "path": "t20-consolidation-20261011/catalogue/objects/45/459e74878da5340d3e25ac945954e10a38866d2fa4b5e1fae883619e3df273c6",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/tests/test_smoke.py",
+    "bytes": 6958
+  },
+  "false-closure-selective-prediction-v2/treatments/TREATMENT-ARM.md": {
+    "sha256": "6d0f71264d0fd7cc4ac241c04ee201978c5d34c77f650c4e0e11cc5c5ca0e1dc",
+    "path": "t20-consolidation-20261011/catalogue/objects/6d/6d0f71264d0fd7cc4ac241c04ee201978c5d34c77f650c4e0e11cc5c5ca0e1dc",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/treatments/TREATMENT-ARM.md",
+    "bytes": 1519
+  },
+  "false-closure-selective-prediction/DECISION-RULES.yaml": {
+    "sha256": "468089b7d8c419c13088096f0f1100a5a5d56f1050646d03f8117a4a9f69db75",
+    "path": "t20-consolidation-20261011/catalogue/objects/46/468089b7d8c419c13088096f0f1100a5a5d56f1050646d03f8117a4a9f69db75",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/DECISION-RULES.yaml",
+    "bytes": 2130
+  },
+  "false-closure-selective-prediction/DESIGN.yaml": {
+    "sha256": "90dad77c708e3629e078d0a91ab628f3d6b6c5e90b049c5f1bffc4933393c565",
+    "path": "t20-consolidation-20261011/catalogue/objects/90/90dad77c708e3629e078d0a91ab628f3d6b6c5e90b049c5f1bffc4933393c565",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/DESIGN.yaml",
+    "bytes": 1512
+  },
+  "false-closure-selective-prediction/DEVIATION-LEDGER.md": {
+    "sha256": "571f97e005ae71547ce9aa0e04fbd9d7331a9bead7ca58188de55aeb3d1cd131",
+    "path": "t20-consolidation-20261011/catalogue/objects/57/571f97e005ae71547ce9aa0e04fbd9d7331a9bead7ca58188de55aeb3d1cd131",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/DEVIATION-LEDGER.md",
+    "bytes": 207
+  },
+  "false-closure-selective-prediction/ENDPOINTS.yaml": {
+    "sha256": "301723a08f76dbf1e1e18fbb2a5a7712a8e582e5a90d2ba0d2162b21e27d8644",
+    "path": "t20-consolidation-20261011/catalogue/objects/30/301723a08f76dbf1e1e18fbb2a5a7712a8e582e5a90d2ba0d2162b21e27d8644",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/ENDPOINTS.yaml",
+    "bytes": 2921
+  },
+  "false-closure-selective-prediction/FREEZE-HASH.txt": {
+    "sha256": "45059f68cd7e977dc578ee1cd02d291a2276eac7a6ceea6bcb46abd3ad0673f7",
+    "path": "t20-consolidation-20261011/catalogue/objects/45/45059f68cd7e977dc578ee1cd02d291a2276eac7a6ceea6bcb46abd3ad0673f7",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/FREEZE-HASH.txt",
+    "bytes": 149
+  },
+  "false-closure-selective-prediction/OUTPUT.schema.json": {
+    "sha256": "7be81ae71d66e2204c3d0ab0108f7005fb8d2e7a93147634b195adb2d8071a87",
+    "path": "t20-consolidation-20261011/catalogue/objects/7b/7be81ae71d66e2204c3d0ab0108f7005fb8d2e7a93147634b195adb2d8071a87",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/OUTPUT.schema.json",
+    "bytes": 1954
+  },
+  "false-closure-selective-prediction/PROTOCOL.md": {
+    "sha256": "9f0e7a3b47adb05e52542c14b4bee58039951c51f751b486f13be079d9728c76",
+    "path": "t20-consolidation-20261011/catalogue/objects/9f/9f0e7a3b47adb05e52542c14b4bee58039951c51f751b486f13be079d9728c76",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/PROTOCOL.md",
+    "bytes": 4675
+  },
+  "false-closure-selective-prediction/README.md": {
+    "sha256": "78b0e6428a8ec70415aefc37e003f1e0e960e0a6cd5a2e348283ef087dcb093b",
+    "path": "t20-consolidation-20261011/catalogue/objects/78/78b0e6428a8ec70415aefc37e003f1e0e960e0a6cd5a2e348283ef087dcb093b",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/README.md",
+    "bytes": 1550
+  },
+  "false-closure-selective-prediction/RUN-MANIFEST.schema.json": {
+    "sha256": "592eb8bced0c06da541411f1fac71cd659ec70ab8004ca9103f0d34376026f0d",
+    "path": "t20-consolidation-20261011/catalogue/objects/59/592eb8bced0c06da541411f1fac71cd659ec70ab8004ca9103f0d34376026f0d",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/RUN-MANIFEST.schema.json",
+    "bytes": 2005
+  },
+  "false-closure-selective-prediction/STATUS.yaml": {
+    "sha256": "a82b025d2b07af7da41b16ea8f248f98e5d942951f977788dc81af1bafae1a91",
+    "path": "t20-consolidation-20261011/catalogue/objects/a8/a82b025d2b07af7da41b16ea8f248f98e5d942951f977788dc81af1bafae1a91",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/STATUS.yaml",
+    "bytes": 737
+  },
+  "false-closure-selective-prediction/analysis/analyze_fcsp.py": {
+    "sha256": "d1fb9174764dad998ec582a5680d4d61de166cf040a1460a690b7f9c70b85046",
+    "path": "t20-consolidation-20261011/catalogue/objects/d1/d1fb9174764dad998ec582a5680d4d61de166cf040a1460a690b7f9c70b85046",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/analysis/analyze_fcsp.py",
+    "bytes": 5739
+  },
+  "false-closure-selective-prediction/baselines/BASELINE-ARM.md": {
+    "sha256": "f7a25b194b1267f40af14df870f5646eee08e96b2fe2f251fddfc33e87bcf4be",
+    "path": "t20-consolidation-20261011/catalogue/objects/f7/f7a25b194b1267f40af14df870f5646eee08e96b2fe2f251fddfc33e87bcf4be",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/baselines/BASELINE-ARM.md",
+    "bytes": 1579
+  },
+  "false-closure-selective-prediction/items/ITEMS.json": {
+    "sha256": "daccf62d1cf46c002d2de696e66950c19fd2e8244780cbb9286a5a58b6597412",
+    "path": "t20-consolidation-20261011/catalogue/objects/da/daccf62d1cf46c002d2de696e66950c19fd2e8244780cbb9286a5a58b6597412",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/items/ITEMS.json",
+    "bytes": 36981
+  },
+  "false-closure-selective-prediction/scripts/generate_items.py": {
+    "sha256": "24e89a62fe945dbcaee906e195ff13b8c905e66c8af74e52ee466df7fcb65937",
+    "path": "t20-consolidation-20261011/catalogue/objects/24/24e89a62fe945dbcaee906e195ff13b8c905e66c8af74e52ee466df7fcb65937",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/scripts/generate_items.py",
+    "bytes": 5464
+  },
+  "false-closure-selective-prediction/simulation/power_sim.py": {
+    "sha256": "fcc7b023dd39c7fd677d282d5bdfe8ad982223b5e0fbb89d1eeb498e1e89e2f5",
+    "path": "t20-consolidation-20261011/catalogue/objects/fc/fcc7b023dd39c7fd677d282d5bdfe8ad982223b5e0fbb89d1eeb498e1e89e2f5",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/simulation/power_sim.py",
+    "bytes": 1513
+  },
+  "false-closure-selective-prediction/tests/test_smoke.py": {
+    "sha256": "fa48b776bc3f3facbcc2bc456f6c08f3023542e86e7d82794d97741c37b358a7",
+    "path": "t20-consolidation-20261011/catalogue/objects/fa/fa48b776bc3f3facbcc2bc456f6c08f3023542e86e7d82794d97741c37b358a7",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/tests/test_smoke.py",
+    "bytes": 5494
+  },
+  "false-closure-selective-prediction/treatments/TREATMENT-ARM.md": {
+    "sha256": "6d0f71264d0fd7cc4ac241c04ee201978c5d34c77f650c4e0e11cc5c5ca0e1dc",
+    "path": "t20-consolidation-20261011/catalogue/objects/6d/6d0f71264d0fd7cc4ac241c04ee201978c5d34c77f650c4e0e11cc5c5ca0e1dc",
+    "staged_path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction/treatments/TREATMENT-ARM.md",
+    "bytes": 1519
+  }
+}

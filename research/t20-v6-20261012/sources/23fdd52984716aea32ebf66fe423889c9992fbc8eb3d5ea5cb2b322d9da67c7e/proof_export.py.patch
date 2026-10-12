@@ -1,0 +1,13 @@
+--- a/experiments/orthemology-v5/source/proof_export.py
++++ b/experiments/orthemology-v5/source/proof_export.py
+@@ -60,7 +60,9 @@
+ def module(examples):
+  if type(examples) not in (list,tuple) or not 1<=len(examples)<=16:raise Rejection('export: example count')
+  names=set();blocks=[]
+- for name,raw in examples:
++ for row in examples:
++  if type(row) not in (list,tuple) or len(row)!=2:raise Rejection('export: name/bytes pair required')
++  name,raw=row
+   block=export(name,raw)
+   if name in names:raise Rejection('export: duplicate identifier')
+   names.add(name);blocks.append(block)

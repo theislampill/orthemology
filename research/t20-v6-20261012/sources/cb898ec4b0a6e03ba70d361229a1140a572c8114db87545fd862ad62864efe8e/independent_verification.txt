@@ -1,0 +1,30 @@
+PASS 01: nonvertex edge and interior columns: saturated bottom-face certificate
+PASS 02: same-support likelihood need not itself be retained
+PASS 03: nonvertex control: positive equal-record priors have different masses
+PASS 04: nonvertex control: feasibility certificate does not retain posterior
+PASS 05: mass need only belong to the row space, not be a displayed row
+PASS 06: redundant retained rows do not alter support certification
+PASS 07: empty and full support endpoints survive transformed coordinates
+PASS 08: supplied edge midpoint must inherit zero status of its face
+PASS 09: a singleton nonvertex zero set is not automatically a face
+PASS 10: duplicate columns cannot have opposite support status
+PASS 11: duplicate endpoint support allows feasibility and posterior without probability
+PASS 12: duplicate interior support keeps constant posterior but loses feasibility
+PASS 13: omitting mass destroys row-space iff although p is affinely recoverable
+PASS 14: mass-only proper event gives explicit opposite-status point masses
+PASS 15: nonnegativity of likelihood is essential to zero-support equivalence
+PASS 16: any nonzero nonnegative likelihood is feasible at every positive prior
+PASS 17: pairwise q indicator is a nonnegative row-space witness
+PASS 18: scaled event has exact distinct masses at one shared positive record
+PASS 19: scaled event has exact different retained posterior unary means
+PASS 20: event probability itself is unretained despite retained feasibility
+PASS 21: retained event q has known probability but unknown posterior
+PASS 22: singleton posterior-only support has boundary feasibility collision
+PASS 23: twenty bounded parity-support controls have explicit dual alternatives
+PASS 24: six-zero global face is a facet with a unique representing law
+PASS 25: zeros cover all local assignments, forcing each nonnegative local summand to vanish
+PASS 26: strictly positive pair cells coexist with a global boundary point
+PASS 27: finite exponential tilt stays off the facet and tends to it only at infinity
+PASS 28: unrealizable proposed covariance is nonetheless positive definite
+PASS 29: positive compatible local tables fail the global nonnegative-q inequality
+PASS: 29 independent control groups.

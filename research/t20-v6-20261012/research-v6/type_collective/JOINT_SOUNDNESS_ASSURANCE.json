@@ -1,0 +1,949 @@
+{
+  "scope": "Inherited historical exact-source trust=0 replay, not fresh v6 execution. JointSoundness body separately fully read; helper/log/receipt/semantic review reread for this qualification. Other 172 source hashes checked only, not credited new reading.",
+  "target_module": "JointSoundness",
+  "target_sha256": "31b121c690e0ab2da1896753b8f1ab35c679a62478328ad3a7f9a9499eaa9a8a",
+  "source_read_ledger": "t20-v6-20261011/type_collective/READING_LEDGER.json",
+  "source_import_ledger": "t20-v6-20261011/type_collective/WHOLE_TYPE_IMPORT_CLOSURE.json",
+  "historical_receipt_utc": "2026-10-11T00:01:58.587482+00:00",
+  "historical_status": "PASS",
+  "historical_trust": 0,
+  "historical_compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "target_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "raw_exact_axioms": [],
+  "files": [
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/JointSoundness.log",
+      "sha256": "7fd31ee3296faa8900a574c97d1c7995431bdeb205ccf112497adc015974cb4e"
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/SOURCE_INPUTS.json",
+      "sha256": "cddcbf9389d935e14c285187404e52b06e1d64c3758f55901724c202d2e21725"
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/REVIEW_RECEIPT.json",
+      "sha256": "40c37f38fd22aecc8fdaa2d7974b1d4b4ec25afea3fb9647ebacc6fde44ecc72"
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/REBUILD_PASS.json",
+      "sha256": "b236d8f8a91118cea9c58796433e6b22aa8996cff325d3d67f94c8b50cbf2b94"
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/rebuild.py",
+      "sha256": "f811cc8c28f2570e4af2f2ef92ba2e2c38d27c60ca85ba93be395234450828d2"
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/SEMANTIC_REVIEW.md",
+      "sha256": "3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca"
+    }
+  ],
+  "all_173_snapshot_hash_checks": [
+    {
+      "module": "InternalPolymorphism",
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "matches": true
+    },
+    {
+      "module": "FiniteBridge",
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "matches": true
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "matches": true
+    },
+    {
+      "module": "P01SNReflection",
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "matches": true
+    },
+    {
+      "module": "BoundaryResults",
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "matches": true
+    },
+    {
+      "module": "P01Candidates",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "matches": true
+    },
+    {
+      "module": "P01Confluence",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "matches": true
+    },
+    {
+      "module": "EffectsAndDependence",
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "matches": true
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "matches": true
+    },
+    {
+      "module": "P01Omega",
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "matches": true
+    },
+    {
+      "module": "P01Polynomials",
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "matches": true
+    },
+    {
+      "module": "P01PER",
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "matches": true
+    },
+    {
+      "module": "P01DependentCore",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "matches": true
+    },
+    {
+      "module": "P01ContextualJ",
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "matches": true
+    },
+    {
+      "module": "P01Certificates",
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "matches": true
+    },
+    {
+      "module": "P01Examples",
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "matches": true
+    },
+    {
+      "module": "P01RecursiveModel",
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "matches": true
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "matches": true
+    },
+    {
+      "module": "P01SystemF",
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "matches": true
+    },
+    {
+      "module": "P01CurryParametricity",
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "matches": true
+    },
+    {
+      "module": "P01Translation",
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "matches": true
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "matches": true
+    },
+    {
+      "module": "P01DependentModel",
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "matches": true
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "matches": true
+    },
+    {
+      "module": "P01DependentFundamental",
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "matches": true
+    },
+    {
+      "module": "SubstitutionSyntax",
+      "sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "matches": true
+    },
+    {
+      "module": "AllSyntax",
+      "sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "matches": true
+    },
+    {
+      "module": "AllPredicates",
+      "sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentityBridge",
+      "sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "matches": true
+    },
+    {
+      "module": "ExtensionalRepairSyntax",
+      "sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "matches": true
+    },
+    {
+      "module": "AllTermAlgebra",
+      "sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "matches": true
+    },
+    {
+      "module": "AllMixedAlgebra",
+      "sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "matches": true
+    },
+    {
+      "module": "AllStructuralBase",
+      "sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "matches": true
+    },
+    {
+      "module": "AllStructuralRename",
+      "sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "matches": true
+    },
+    {
+      "module": "AllStructural",
+      "sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "matches": true
+    },
+    {
+      "module": "AllRawSubstitution",
+      "sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "matches": true
+    },
+    {
+      "module": "AllRawRenaming",
+      "sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "matches": true
+    },
+    {
+      "module": "AllBaseLaws",
+      "sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "matches": true
+    },
+    {
+      "module": "AllPiLaws",
+      "sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "matches": true
+    },
+    {
+      "module": "AllSigmaLaws",
+      "sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "matches": true
+    },
+    {
+      "module": "AllTermLemmas",
+      "sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "matches": true
+    },
+    {
+      "module": "AllBinderLaws",
+      "sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "matches": true
+    },
+    {
+      "module": "AllConstants",
+      "sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "matches": true
+    },
+    {
+      "module": "AllFiniteComparison",
+      "sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "matches": true
+    },
+    {
+      "module": "AllSemanticSubstitution",
+      "sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "matches": true
+    },
+    {
+      "module": "AllInstantiation",
+      "sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "matches": true
+    },
+    {
+      "module": "AllSoundness",
+      "sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "matches": true
+    },
+    {
+      "module": "P01DependentControls",
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "matches": true
+    },
+    {
+      "module": "AllInheritedPositiveControls",
+      "sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "matches": true
+    },
+    {
+      "module": "EffectiveStandardness",
+      "sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "matches": true
+    },
+    {
+      "module": "TypedSyntax",
+      "sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "matches": true
+    },
+    {
+      "module": "TypedAlgebra",
+      "sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "matches": true
+    },
+    {
+      "module": "TypedStructural",
+      "sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "matches": true
+    },
+    {
+      "module": "AllNucleusSyntax",
+      "sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "matches": true
+    },
+    {
+      "module": "EffectiveObserver",
+      "sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "matches": true
+    },
+    {
+      "module": "EffectiveReduction",
+      "sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d",
+      "matches": true
+    },
+    {
+      "module": "ExtensionalRepairLemmas",
+      "sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "matches": true
+    },
+    {
+      "module": "ExtensionalRepairSoundness",
+      "sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentityWitness",
+      "sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "matches": true
+    },
+    {
+      "module": "ExtensionalRepairWitness",
+      "sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentityModel",
+      "sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentitySoundness",
+      "sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentityRelations",
+      "sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "matches": true
+    },
+    {
+      "module": "IntensionalIdentityTheorems",
+      "sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "matches": true
+    },
+    {
+      "module": "ExtensionalRepairTheorems",
+      "sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "matches": true
+    },
+    {
+      "module": "EffectiveRuleBoundary",
+      "sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c",
+      "matches": true
+    },
+    {
+      "module": "EffectiveCanonicalTests",
+      "sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9",
+      "matches": true
+    },
+    {
+      "module": "EffectiveBooleanStandardness",
+      "sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd",
+      "matches": true
+    },
+    {
+      "module": "EffectiveBooleanCertificates",
+      "sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354",
+      "matches": true
+    },
+    {
+      "module": "EffectivePrimitiveRecursion",
+      "sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "matches": true
+    },
+    {
+      "module": "RestrictedCompiler",
+      "sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "matches": true
+    },
+    {
+      "module": "PolynomialTestBoundary",
+      "sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "matches": true
+    },
+    {
+      "module": "UnaryPolynomial",
+      "sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6",
+      "matches": true
+    },
+    {
+      "module": "UnaryFiniteDescription",
+      "sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5",
+      "matches": true
+    },
+    {
+      "module": "UnaryExpressions",
+      "sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56",
+      "matches": true
+    },
+    {
+      "module": "UnaryNormalForm",
+      "sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c",
+      "matches": true
+    },
+    {
+      "module": "ComputablePrelude",
+      "sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292",
+      "matches": true
+    },
+    {
+      "module": "SparsePolynomial",
+      "sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a",
+      "matches": true
+    },
+    {
+      "module": "PositiveSeparation",
+      "sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8",
+      "matches": true
+    },
+    {
+      "module": "MaskNormalisation",
+      "sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4",
+      "matches": true
+    },
+    {
+      "module": "IdentityChecker",
+      "sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02",
+      "matches": true
+    },
+    {
+      "module": "UnaryCurrentIdentityBoundary",
+      "sha256": "8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac",
+      "matches": true
+    },
+    {
+      "module": "UArrowAndCompilerControls",
+      "sha256": "7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9",
+      "matches": true
+    },
+    {
+      "module": "OpenTermStandardness",
+      "sha256": "d3972a5dff963d07cb1808427686dfdae3bf54bdc811bef025809ec8846a527d",
+      "matches": true
+    },
+    {
+      "module": "FrozenCompilerMirror",
+      "sha256": "f77cd702ec5f1dd242a8e30959aab203b5215b838a3305d64c5c733ec00d01c0",
+      "matches": true
+    },
+    {
+      "module": "PERInterface",
+      "sha256": "312b60aafb9752d02e67c9cec6843c12b0419d96d86202f219b2b10a4b3032f3",
+      "matches": true
+    },
+    {
+      "module": "ImportedCompilerTransport",
+      "sha256": "448e9f950a1c51a9267ca04671fe6ade3377a485692621bd8252925ae02fbdbc",
+      "matches": true
+    },
+    {
+      "module": "FullPER",
+      "sha256": "2a0d01d92923a22c4b41f512e4c4b3524ea1c630d13478176c5c20d63afa7638",
+      "matches": true
+    },
+    {
+      "module": "GenericFoldTransport",
+      "sha256": "2d1c5df800d77933c6d8b1564209e27606fb209da0720f96f68e8e43b420cc0e",
+      "matches": true
+    },
+    {
+      "module": "ScalarFusionCore",
+      "sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "matches": true
+    },
+    {
+      "module": "InternalGraph",
+      "sha256": "74ef636570ba73c227daf40d913bdba5a9c40bb83b87579f1b902f1f6a2db25e",
+      "matches": true
+    },
+    {
+      "module": "ProjectionBoundary",
+      "sha256": "99209853e5882ee3ce54d86c32cd0f33efcc43e66ef7dca934788ca5ecfd8469",
+      "matches": true
+    },
+    {
+      "module": "Application",
+      "sha256": "6d57b65eb3c4ffc8b7c34ba66beea17b7705265dcc4fdd11e66b14d0c5702bb9",
+      "matches": true
+    },
+    {
+      "module": "GraphBridgeAssembly",
+      "sha256": "0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "matches": true
+    },
+    {
+      "module": "SourceFoldContract",
+      "sha256": "3cf4645641d47b036c8b7172dba3c2ead2e927c775713a186a90b6f641f5ce2a",
+      "matches": true
+    },
+    {
+      "module": "SourceFoldApplication",
+      "sha256": "6544c631ce50b3637962dca29f0d652c3e2eb26139f4e853778166a81d8e3c1a",
+      "matches": true
+    },
+    {
+      "module": "RecursorUniqueness",
+      "sha256": "af620d83295749a696674576c33c5b521b1f721ad9db5130125152fd8022e1f4",
+      "matches": true
+    },
+    {
+      "module": "SourceRigidity",
+      "sha256": "66b8a9282fc051a63d6ad3ec3161779f775557d5f0a3d499740f9a82240f0bfb",
+      "matches": true
+    },
+    {
+      "module": "Initiality",
+      "sha256": "42ce79353d5c0b60da9535aa9e558a60f6b17267a7bf1d2046e76751297df80e",
+      "matches": true
+    },
+    {
+      "module": "SectionCorollaries",
+      "sha256": "e9d9f4e3af570c994a11a684d6e0667d7b46349dd098216398aa968a4f6d334c",
+      "matches": true
+    },
+    {
+      "module": "UniformSection",
+      "sha256": "33962bbe3eb8ec3a4a557914a06dece1d7573fdb4235796f8a50cd4b0a4948a8",
+      "matches": true
+    },
+    {
+      "module": "ComputationLaws",
+      "sha256": "1462a229392c9804484cdb3239af1cf417b842b0012d1e41a680dd41b4522b9f",
+      "matches": true
+    },
+    {
+      "module": "SectionApplication",
+      "sha256": "47153681df6d0e6487871d1c63883163550f59f7e001c608892de235897efed6",
+      "matches": true
+    },
+    {
+      "module": "ClosedProofCanonicalisation",
+      "sha256": "c773b21488efd769d57b3f92ea81b5d3c1cf50de15c7cf4fb1dfd30fa8dc45d8",
+      "matches": true
+    },
+    {
+      "module": "HasEStructuralBase",
+      "sha256": "32de515bd73534a79fc475afde1ca6d14d89fc19c5c5d262aba1d601a1757863",
+      "matches": true
+    },
+    {
+      "module": "HasEStructuralRename",
+      "sha256": "7f6b97124cdfc453df0eb9ad10b34caa025a5a59b3bef75654b9584b543b3ce5",
+      "matches": true
+    },
+    {
+      "module": "HasEClosedWeakening",
+      "sha256": "5414eed802dafb25634a61136feeafeca8f1bce23074f57934c46c24b85d3edb",
+      "matches": true
+    },
+    {
+      "module": "HasEDependentSubstitution",
+      "sha256": "9830e8dd5ffa26c1a28dfc85fd2f7660e6c56088ce4acae67035e3884cdbdfc3",
+      "matches": true
+    },
+    {
+      "module": "DependentBranchApplication",
+      "sha256": "408d8039de050dde3147ff8c7c4a390bbb8a4bae01edc57a8f6f53b943cada71",
+      "matches": true
+    },
+    {
+      "module": "HasEMixedSubstitution",
+      "sha256": "ef218f67761ff75d7a5a68cb97f03f6699c1a3eb2a9a91625719939272df652e",
+      "matches": true
+    },
+    {
+      "module": "TypeSubstitutionApplications",
+      "sha256": "701a3e5d84e9dcf3e5607ce2be886a6e2c7ecd17dc38c672a3418594691c3bd8",
+      "matches": true
+    },
+    {
+      "module": "FullESupport",
+      "sha256": "dd3022c7d58f423564125b3fe4fd690fdbeb492200a0d14ee3b1331943167f97",
+      "matches": true
+    },
+    {
+      "module": "FullEInitiality",
+      "sha256": "b67601579ca0d9442f20c7b081a78c33dc229325619fa665d3a9d4caa0728c97",
+      "matches": true
+    },
+    {
+      "module": "FullESectionCorollaries",
+      "sha256": "f7d0f3e22a9ec26d3bc8ba2ff143458990b6b985df62e296cfd8f30a30093225",
+      "matches": true
+    },
+    {
+      "module": "FullEUniformSection",
+      "sha256": "4aa321371591d7f6506de3ac91e8e787c296b4582b352236cc6d7a18183d2f2c",
+      "matches": true
+    },
+    {
+      "module": "Constructive",
+      "sha256": "254b95f0b02765d1b3018f256299af432083ac7f2bcdd0d4d99f538e50c861c7",
+      "matches": true
+    },
+    {
+      "module": "CaseOperational",
+      "sha256": "5575a1d8e69c8f857b0b15dc6f1358a4c3f44bd54a47bf528cf3295ae59c3708",
+      "matches": true
+    },
+    {
+      "module": "SourceTransport",
+      "sha256": "3e3e4bcbea2c19c58df20cb7f83c7e5e9a41e7a4c9dcfab6085e09fc2025987a",
+      "matches": true
+    },
+    {
+      "module": "HomogeneousPER",
+      "sha256": "f06b84a8dd088a9cf82ab99dff2d476023ab50427fee0245ef5d210a8ec57f0f",
+      "matches": true
+    },
+    {
+      "module": "ConcreteUniverse",
+      "sha256": "8fb9848611f88b2f2555a15469eb59c3ff98e9a831f92f701cdb0091dc2d6904",
+      "matches": true
+    },
+    {
+      "module": "HenkinSoundness",
+      "sha256": "d0c9bc80e4014f2dc7ba685af95690b96ea02e166209101966e9a9e797fbcf5f",
+      "matches": true
+    },
+    {
+      "module": "LiteralCounterexample",
+      "sha256": "af219bfec917e3f083b093ffc9d1e07f54fec5d72e8f8a274915eaa030397c0c",
+      "matches": true
+    },
+    {
+      "module": "OriginalWNoninhabitation",
+      "sha256": "b4c46829c268c37860114d5d99c08a2bc099373133a591664503ef07d8b75628",
+      "matches": true
+    },
+    {
+      "module": "OriginalIdentityNoninhabitation",
+      "sha256": "5ee0cbdab27fa18866d5e7b1b6b13131bbdb649b5bacab839a67c46e11619d08",
+      "matches": true
+    },
+    {
+      "module": "RigidityDiscriminator",
+      "sha256": "031cd0c8825f45a0dbedb015e79c1de16a21b80fe90695be9ed0cb5a55eae70b",
+      "matches": true
+    },
+    {
+      "module": "JointSemantics",
+      "sha256": "165264b92ee2aec1227b646570a3349a9fc96e2f985401924d29d5fcf9ec002a",
+      "matches": true
+    },
+    {
+      "module": "JointSubstitution",
+      "sha256": "fbe89439147400d7e3319077dc52d9e52988f9307ec7d707f4427c879fe52e9c",
+      "matches": true
+    },
+    {
+      "module": "JointSyntax",
+      "sha256": "3adb4dc48b40befdfaef1db6b2e586a2a171ca5e05172eb752893ad92aeeab56",
+      "matches": true
+    },
+    {
+      "module": "JointStructuralBasics",
+      "sha256": "6e205d2888bfe5cbc20340d91b376d258a1dec6c97d56a6103e3753cc0ba4736",
+      "matches": true
+    },
+    {
+      "module": "JointCompletionAlgebra",
+      "sha256": "883150d231c939b6ec5b18bc4cd40f52e528c6b41842098e225b15812c563153",
+      "matches": true
+    },
+    {
+      "module": "JointTypeRenaming",
+      "sha256": "82050f3fdfdb9f9a4044bbe0c088adef9dcebc00ab71a56015deec8de4657a3d",
+      "matches": true
+    },
+    {
+      "module": "JointTermRename",
+      "sha256": "5a97f8ba17311492379ffd6d2497719d553ee9081de3cf6394fea73ba11bc212",
+      "matches": true
+    },
+    {
+      "module": "JointScope",
+      "sha256": "d63dd6c22765b6e246b91f77c32e215451c2431ec98c73c6b10aefabd7d41618",
+      "matches": true
+    },
+    {
+      "module": "JointTypedSubstitution",
+      "sha256": "b64ec1cc4b228cb5f14073dd6d6c869c8fc0fd8a2570ccdcd17e74e589488bac",
+      "matches": true
+    },
+    {
+      "module": "JointRegularity",
+      "sha256": "1eee1923d77df4ecff12aaba27a61477ee249e01997174243d06e13d36f4873a",
+      "matches": true
+    },
+    {
+      "module": "JointSoundness",
+      "sha256": "31b121c690e0ab2da1896753b8f1ab35c679a62478328ad3a7f9a9499eaa9a8a",
+      "matches": true
+    },
+    {
+      "module": "ClosedScalarInstances",
+      "sha256": "57fd4fdc378db98dc7dda8ac443871a398765761b694c7135b9a20eb67349535",
+      "matches": true
+    },
+    {
+      "module": "OpenDevelopments",
+      "sha256": "d7604981e4dd1746fe7cfc7bebea5040c6993a44840f80103bbae2a9a5e0e44e",
+      "matches": true
+    },
+    {
+      "module": "ClosedChurchIdentity",
+      "sha256": "0599dd8f6516179c7463897840c3078241ea0a956554b912e6110022760c5cec",
+      "matches": true
+    },
+    {
+      "module": "JointNumeralExtraction",
+      "sha256": "054cb2f484e6078430854781ceebf69917601bb374a6bb1a952cd044ec984f7d",
+      "matches": true
+    },
+    {
+      "module": "JointTypedCanonicity",
+      "sha256": "9beab51f3fe8ffde00a3838989a46bc45fcedc441986987cb6cc20bfaf49d6f1",
+      "matches": true
+    },
+    {
+      "module": "JointSigmaExtraction",
+      "sha256": "a49bbaca2aba6ae131d6f1e5f1ba1ebd2926ff22f099b5d8c11f0fba67443f5b",
+      "matches": true
+    },
+    {
+      "module": "JointSigmaFidelity",
+      "sha256": "2da1e6adf781d20e9d56cc9275f6532c53955d98da1706b16c92233ead8b0e03",
+      "matches": true
+    },
+    {
+      "module": "JointProofUniqueness",
+      "sha256": "8e877b97c15aba2d3530c48b5a4ead75ff410a111fdb9ef5f1299aaed684ab27",
+      "matches": true
+    },
+    {
+      "module": "OriginalProofUniqueness",
+      "sha256": "86fb13ba8e541daf18c98d184f1e871e99ecf43aad9abb39eb366a6e54c2c9a7",
+      "matches": true
+    },
+    {
+      "module": "JointMixedAlgebra",
+      "sha256": "4aefb592968abd48d87aa45d1191d0ae7f47d191758f467123f21f2e076f0c99",
+      "matches": true
+    },
+    {
+      "module": "JointMixedSubstitution",
+      "sha256": "3b6bbb780b092407089122ae93e51f381fe40e4f350778bdab15253b990f2fad",
+      "matches": true
+    },
+    {
+      "module": "JointTypeInstantiation",
+      "sha256": "6617c64a77785b81b55db3d3c4e6605e429f233f77fb8bf3306ffcd2ea34dff8",
+      "matches": true
+    },
+    {
+      "module": "JointInductionSupport",
+      "sha256": "edd5a02b692476aa79588d7b3c86f355efbb0aadbfd23a9c952096b9e8396e57",
+      "matches": true
+    },
+    {
+      "module": "JointInductionInitiality",
+      "sha256": "20fdd383d0a8212cef60f4c66f77c6e7c678a94a6db2719d15cd1d78c90b6032",
+      "matches": true
+    },
+    {
+      "module": "JointInductionSectionCorollaries",
+      "sha256": "06c346ba09a6079cf4deedd6ab1a187d40b8d914331f91a48526b83721707a24",
+      "matches": true
+    },
+    {
+      "module": "JointInductionUniformSection",
+      "sha256": "a8365ff8cb9d65d00051c9dc363bbe573867ddf058a8c4e78a4935736430f2e0",
+      "matches": true
+    },
+    {
+      "module": "JointInductionComputationLaws",
+      "sha256": "d4616845851cadd914250cd14620590a3bd368c204622152ee44b8a5486b2b4d",
+      "matches": true
+    },
+    {
+      "module": "JointInductionSectionApplication",
+      "sha256": "004c3b79b86d1cd32eef6a89947a8bcf0df467935d56b19a89d72474bcaaa21b",
+      "matches": true
+    },
+    {
+      "module": "SelectiveSyntax",
+      "sha256": "a81f32e343169f596dd4a00dac141b55e59034009c64efc272e054b596334a2b",
+      "matches": true
+    },
+    {
+      "module": "HenkinSigma",
+      "sha256": "f5cc19424e01b32f0409a29b307dab83d1518f9bc9f976677d0aa736baac81c1",
+      "matches": true
+    },
+    {
+      "module": "HenkinSelectiveSoundness",
+      "sha256": "90817a13157273e3fc81a3b64d67a5e5a1ebed3ac92d1a6c977e3c8acd03d6ad",
+      "matches": true
+    },
+    {
+      "module": "TaggedPER",
+      "sha256": "adfe1306346b6d5f4267c1acaddcef3c20de13db4753d467542deeac613aae8a",
+      "matches": true
+    },
+    {
+      "module": "TaggedInduction",
+      "sha256": "4d38059e808101073cbbb407dc4acff7c3da785fd5592ef3d302928ee7397c37",
+      "matches": true
+    },
+    {
+      "module": "TaggedSubstitution",
+      "sha256": "3222035caf15c0d1fd0383a391f590c2fd9df7f7bcb445cabda1f7d879069b9f",
+      "matches": true
+    },
+    {
+      "module": "TaggedSelectiveSoundness",
+      "sha256": "c45b616b56c0ac754a0e360acc43e1bebecf2cea8f056eac5623ee5c68522e5a",
+      "matches": true
+    },
+    {
+      "module": "Boundary",
+      "sha256": "08710f5ab91d89ec916330bd68cb7bc3663e0b6902e0db6f26337e6f9e92404f",
+      "matches": true
+    },
+    {
+      "module": "JointControls",
+      "sha256": "9d893e52fcad6b79274fd7b98ea221b6d894913a75332d4173f095ea61915188",
+      "matches": true
+    },
+    {
+      "module": "CompletionSeparation",
+      "sha256": "fcda14a453a363f3d51a62549ea3e67f3690d29b9889179fc4f55fe3f0be7a07",
+      "matches": true
+    },
+    {
+      "module": "FullEComputationLaws",
+      "sha256": "7ee81cb46bfb8a86253844efbb68ffe170cd43e1c0862fef74d0831170b110db",
+      "matches": true
+    },
+    {
+      "module": "InductionRigidityConverse",
+      "sha256": "6817015986cf36c0a36bb4affd6f608c432f22215a532e848304be88ac519684",
+      "matches": true
+    },
+    {
+      "module": "SchemaSeparation",
+      "sha256": "ce09cebcb67e70619a8516cda4d902fd215d91265a9717c948ecc9602a37ee64",
+      "matches": true
+    },
+    {
+      "module": "PositiveRigidity",
+      "sha256": "a6e5dad22d09c7ff70a45e478949b6d3988d0ac932fe94671db844aaea28ca6e",
+      "matches": true
+    },
+    {
+      "module": "PositiveTransfer",
+      "sha256": "ed24f22b0c4940f9883e7f04933db7c4f0fd644393602d405b934404be3c1596",
+      "matches": true
+    },
+    {
+      "module": "JointInductionLaws",
+      "sha256": "88fd210d38fdcd5d1b761988b5749fe6a244ecbe4457c013878c9f275827f2db",
+      "matches": true
+    },
+    {
+      "module": "JointRecursorCongruence",
+      "sha256": "f4e9f83137f667015167eb747fea6afb0a00227213a672c098a5b08a2e3d1106",
+      "matches": true
+    },
+    {
+      "module": "ProofUniquenessControls",
+      "sha256": "5c82146fa3fe931bd0be9ddc52d10482095ae5202c38ea12b860a0b5b1e8de46",
+      "matches": true
+    },
+    {
+      "module": "ProofUniquenessAudit",
+      "sha256": "65cd1a0baeb08f6777bddd581b8b740193aace2c5eb5dc700cb7f605f110e688",
+      "matches": true
+    }
+  ],
+  "receipt_file_hash_checks": [
+    {
+      "path": "SOURCE_INPUTS.json",
+      "matches": true
+    },
+    {
+      "path": "STANDARD_OBJECT_PREREQUISITES.json",
+      "matches": true
+    },
+    {
+      "path": "REBUILD_PASS.json",
+      "matches": true
+    },
+    {
+      "path": "IndependentControls.lean",
+      "matches": true
+    },
+    {
+      "path": "IndependentControls.log",
+      "matches": true
+    },
+    {
+      "path": "SEMANTIC_REVIEW.md",
+      "matches": true
+    },
+    {
+      "path": "ProofUniquenessAudit.log",
+      "matches": true
+    },
+    {
+      "path": "rebuild.py",
+      "matches": true
+    },
+    {
+      "path": "run-controls.sh",
+      "matches": true
+    }
+  ],
+  "fresh_run": false
+}

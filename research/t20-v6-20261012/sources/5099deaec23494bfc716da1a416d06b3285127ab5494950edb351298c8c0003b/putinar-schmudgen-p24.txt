@@ -1,0 +1,47 @@
+24                             PUTINAR AND SCHMÜDGEN
+
+In terms of the moments sn := hT n ϕ, ϕi, (6.1) is obviously equivalent to the
+so-called Carleman condition
+                             ∞
+                                 −1/2n
+                            X
+(6.2)                          s2n      = +∞.
+                                    n=1
+   The importance of this condition for the moment problem stems form the
+following classical result due to T. Carleman [9] in dimension one. See also
+[21].
+Theorem 24. If {sn ; n ∈ N0 } is a moment sequence satisfying Carleman’ s
+condition (6.2), then the corresponding moment problem is determinate.
+  Carleman’s result is the main technical ingredient of the following theo-
+rem.
+Theorem 25. Suppose that s = {sn ; n ∈ Nd0 } is a positive semi-definite
+d-sequence such that the first d−1 marginal 1-sequences
+(6.3)    {s(n,0,...,0)) ; n ∈ N0 }, {s(0,n,...,0) ; n ∈ N0 }, . . . , {s(0,...,0,n,0); n ∈ N0 }
+satisfies the Carleman condition (6.2). Then s is a moment sequence.
+If in addition the last marginal 1-sequence {s(0,...,0,n) ; n ∈ N0 } satisfies (6.2),
+then the moment sequence s is also determinate.
+   Proof. That the sequences in (6.3) satisfy condition (6.2) means that
+the vector 1 of the corresponding Hilbert space HL is quasi-analytic for the
+symmetric operators X1 , . . . , Xd−1 . Assume first that d = 2. Since the
+operator (X2 + i)X2k commutes with X1 , the vector (X2 + i)X2k 1 is also
+quasi-analytic for X1 according to Theorem 4 in [26]. Using (3.1) we see
+that the moment 1-sequence for X1 corresponding to this vector is just the
+sequence in (5.1), so it fulfills (6.2) as well and is determinate by Carleman’s
+Theorem 24. Therefore, s is a moment sequence by Corollary 20.
+   In the case d ≥ 3 the proof is similar. Using again the fact that commut-
+ing operators preserve quasi-analytic vectors it follows that all sequences in
+equations (5.2), (5.3) and (5.4) satisfy Carleman’s condition, so they are
+determinate by Theorem 24. Hence s is a moment sequence by Theorem 23.
+   If in addition (6.2) holds for the sequence {s(0,...,0,n) }, then s is determi-
+nate by Petersen’s Theorem 14.                                                  
+The preceding theorem contains the following fundamental result due to
+A.E. Nussbaum [26]: A positive semi-definite d-sequence is a determinate
+moment sequence if all d marginal 1-sequences satisfy Carleman’s condition.
+   Other classical papers on quasi-analytic or analytic vectors are [10], [11],
+[23], [25] and [27].
+
+              7. Towards a parametrization of solutions
+   The parametrization of all solutions of an indeterminate one variable mo-
+ment problem on the line or on the semi-axis is well understood from at
+least two perspectives: via a canonical linear-fractionar representation of
+

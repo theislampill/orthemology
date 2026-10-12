@@ -1,0 +1,40 @@
+PASS: separating Vandermonde is exactly invertible
+PASS: scalar moments through N-1 recover all normalized weights
+PASS: Lagrange indicators recover weights
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 0
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 1
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 2
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 3
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 4
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 5
+PASS: full tensor reconstructed from scalar degrees 0..3 at order 6
+PASS: componentwise hierarchy under arbitrary symbolic control at order 0
+PASS: componentwise hierarchy under arbitrary symbolic control at order 1
+PASS: componentwise hierarchy under arbitrary symbolic control at order 2
+PASS: componentwise hierarchy under arbitrary symbolic control at order 3
+PASS: componentwise hierarchy under arbitrary symbolic control at order 4
+PASS: zeroth moment derivative is exactly zero
+PASS: sharpness witnesses have strictly positive normalized weights
+PASS: full tensors through degree two coincide
+PASS: third directional moment separates by 1/108
+PASS: constant-control q and qdot agree, qddot differs by 1/108
+PASS: finite-difference universal-bound sharpness at N=2
+PASS: finite-difference universal-bound sharpness at N=3
+PASS: finite-difference universal-bound sharpness at N=4
+PASS: finite-difference universal-bound sharpness at N=5
+PASS: finite-difference universal-bound sharpness at N=6
+PASS: finite-difference universal-bound sharpness at N=7
+PASS: derivatives 0..N-1 at positive interior time identify exponential coefficients
+PASS: normalization removes response proportionality scale
+PASS: N=1 control is stationary and needs only M0
+PASS: distinct positive fine states can have identical duplicate-group weights
+PASS: duplicate-group equivalence preserves every tested full moment
+PASS: all-ones control has identical projection on every column
+PASS: all-ones control leaves every weight stationary
+PASS: affinely independent noisy support has polynomial q-only mobility
+PASS: q-only descent does not imply canonical coarse Fisher mobility
+PASS: different supports have identical distinct projected support values
+PASS: unknown-support scalar responses agree but vector responses differ
+PASS: normalized exponential tilts compose exactly
+
+38 independent exact control groups passed.

@@ -1,0 +1,2015 @@
+{
+  "actor_requires_received_certificate": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "SAFE_THEN_REPAIRED_AFTER_DELIVERY",
+    "note": "The actor's batch uses its custody, not the global descriptor oracle.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 1,
+        "to_actor": false
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 3,
+        "path": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 3,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": []
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 4,
+        "path": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 4,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 1,
+        "to_actor": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 5,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 6,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 7,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 8,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      }
+    ]
+  },
+  "too_small_cancellation_certificate": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "LATE_WRITE_AFTER_FALSE_CANCELLATION",
+    "note": "One bad root can falsely acknowledge; B+1 root acknowledgements are required.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 1,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          0
+        ],
+        "complete": true
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "APPLIED"
+      }
+    ]
+  },
+  "authenticated_cancellation_race_and_nonce": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "REPAIR_PRESERVED_AND_FRESH_ROUTE_OPEN",
+    "note": "Foreign actor cannot cancel or execute; old nonce stays closed; new nonce remains available.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-B",
+        "acknowledgers": [
+          0
+        ],
+        "complete": false
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          0,
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "APPLIED"
+      }
+    ]
+  },
+  "new_recipient_does_not_rename_actor": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "SAFE_WITHOUT_UNAUTHORIZED_REPAIR",
+    "note": "A copied current descriptor cannot turn actor A into recipient B.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 1,
+        "to_actor": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0
+        ]
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 3,
+        "path": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 3,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": []
+      },
+      {
+        "event": "skip_unprepared_execution",
+        "nonce": 4,
+        "path": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 4,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      }
+    ]
+  },
+  "live_commitment_control": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "NO_EFFECT",
+    "note": "Revocation closes actual shared good gates; cached votes ignore closure.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      }
+    ]
+  },
+  "cached_votes": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "UNSAFE",
+    "note": "Revocation closes actual shared good gates; cached votes ignore closure.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "exact_payload_control": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "NO_EFFECT",
+    "note": "Correct target proof does not bind a substituted physical write.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      }
+    ]
+  },
+  "mutable_payload": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "UNSAFE",
+    "note": "Correct target proof does not bind a substituted physical write.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "current_authorization_control": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "NO_EFFECT",
+    "note": "Byte-correct repair can be an unauthorized act.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      }
+    ]
+  },
+  "current_authorization_deleted": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "UNSAFE",
+    "note": "Byte-correct repair can be an unauthorized act.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "common_downstream_writer": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "UNSAFE",
+    "note": "Shared writer root 0 is charged, not declared trusted after failure.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "common_bypass",
+        "root": 0,
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "common_selector_omitted": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "SAFE_BUT_NEVER_RESTORED",
+    "note": "Every actual liveness support contains root 0, including advertised path {1,2,3}.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "common_selector_drop",
+        "root": 0,
+        "advertised_path": [
+          0,
+          1,
+          2
+        ],
+        "actual_required_support": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "common_selector_drop",
+        "root": 0,
+        "advertised_path": [
+          0,
+          1,
+          3
+        ],
+        "actual_required_support": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "common_selector_drop",
+        "root": 0,
+        "advertised_path": [
+          0,
+          2,
+          3
+        ],
+        "actual_required_support": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "common_selector_drop",
+        "root": 0,
+        "advertised_path": [
+          1,
+          2,
+          3
+        ],
+        "actual_required_support": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      }
+    ]
+  },
+  "two_B_plus_one_failed_candidate": {
+    "parameters": {
+      "n": 3,
+      "B": 1,
+      "q": 2,
+      "r": 2,
+      "tainted": [
+        1
+      ]
+    },
+    "expected": "UNSAFE",
+    "note": "Repair and revocation share only the one tainted root.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1
+        ],
+        "grants": [
+          0,
+          1
+        ]
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1
+        ],
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "immediate_external_revocation": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": []
+    },
+    "expected": "UNSAFE",
+    "note": "Deletes the reservation institution; not a valid base-model transition.",
+    "unsafe": true,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "immediate_external_consent_end_without_gate_notice"
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "UNSAFE"
+      }
+    ]
+  },
+  "instantaneous_budget_failed_candidate": {
+    "history": [
+      {
+        "currently_faulty": [
+          1
+        ],
+        "false_ack": 1,
+        "old_gate_retained": true
+      },
+      {
+        "currently_faulty": [],
+        "restored_appearance": 1,
+        "revocation_state_not_recovered": true
+      },
+      {
+        "currently_faulty": [
+          2
+        ],
+        "false_ack": 2,
+        "old_gate_retained": true
+      },
+      {
+        "currently_faulty": [],
+        "restored_appearance": 2,
+        "revocation_state_not_recovered": true
+      },
+      {
+        "currently_faulty": [
+          3
+        ],
+        "false_ack": 3,
+        "old_gate_retained": true
+      },
+      {
+        "currently_faulty": [],
+        "restored_appearance": 3,
+        "revocation_state_not_recovered": true
+      }
+    ],
+    "instantaneous_bound": 1,
+    "lifetime_tainted": [
+      1,
+      2,
+      3
+    ],
+    "expected": "FAILS_LIFETIME_PREMISE",
+    "note": "Apparent recovery does not erase false historical acknowledgements or tainted state."
+  },
+  "perpetual_version_change_prefix": {
+    "parameters": {
+      "n": 4,
+      "B": 1,
+      "q": 3,
+      "r": 3,
+      "tainted": [
+        0
+      ]
+    },
+    "expected": "SAFE_NONPERSISTENT_PREFIX",
+    "note": "Four-step regression prefix of the ordinary infinite alternating-target counterexample.",
+    "unsafe": false,
+    "history": [
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 2,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 3,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 0,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 4,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 0,
+        "new_epoch": 1,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 1,
+        "to_actor": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 5,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 6,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 7,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 1,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 1,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 8,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 1,
+        "new_epoch": 2,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 2,
+        "to_actor": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 2,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 2,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 9,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 2,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 2,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 10,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 2,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 2,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 11,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 2,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 2,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 12,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 2,
+        "new_epoch": 3,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "deliver_certificate",
+        "epoch": 3,
+        "to_actor": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 3,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "grants": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 3,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 13,
+        "path": [
+          0,
+          1,
+          2
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 3,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "grants": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 3,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 14,
+        "path": [
+          0,
+          1,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 3,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "grants": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 3,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "receipt": "NO_EFFECT"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 15,
+        "path": [
+          0,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "prepare",
+        "epoch": 3,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "grants": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "event": "attempt",
+        "epoch": 3,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "receipt": "APPLIED"
+      },
+      {
+        "event": "cancel_certificate",
+        "nonce": 16,
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "threshold": 2,
+        "authenticated_requester": "actor-A",
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ],
+        "complete": true
+      },
+      {
+        "event": "effective_revoke",
+        "old_epoch": 3,
+        "new_epoch": 4,
+        "acknowledgers": [
+          1,
+          2,
+          3
+        ]
+      }
+    ]
+  }
+}

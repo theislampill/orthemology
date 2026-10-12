@@ -1,0 +1,61 @@
+{
+  "sources": [
+    {
+      "kind": "supplied_input",
+      "path": "RECEIPT.json",
+      "sha256": "aaeb7b244071bfa8300cc9215c7d9294d44a798986fae4e6b33c772275bf32cb"
+    },
+    {
+      "kind": "supplied_input",
+      "path": "RESEARCH_BRIEF.md",
+      "sha256": "658c34f3f45681c322caf5a9c0c81925e309e2ddf1b9b7969dfdd6db8d3ece57"
+    },
+    {
+      "kind": "supplied_input",
+      "path": "BRIDGE_GUARDS.md",
+      "sha256": "a452def6ce7945991632fa09073e70552f8209921bcff19a5af7eec99c0e759d"
+    },
+    {
+      "kind": "supplied_input",
+      "path": "OBLIGATIONS.json",
+      "sha256": "afb81b39481ba6b58ff2e2db7f92829fed407a2f2852856ef3ff3d9e5662c459"
+    },
+    {
+      "kind": "supplied_input",
+      "path": "external-source/Epistemic_Tuples_and_Intra_Agential_Equilibrium.pdf",
+      "sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5"
+    },
+    {
+      "kind": "pinned_repository",
+      "path": "experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md",
+      "sha256": "d8d8e96a89ca6baf01da0c8e01ef95f19197ad6f660e20621e8980b60c278cc8",
+      "commit": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    },
+    {
+      "kind": "pinned_repository",
+      "path": "experiments/orthemology-v5/source/observations.py",
+      "sha256": "e7ad363d03f01127f2a2090956ce26378b9c5b994361d344177c288f94670eef",
+      "commit": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    },
+    {
+      "kind": "pinned_repository",
+      "path": "experiments/orthemology-v5/source/PROOFS_V4.md",
+      "sha256": "bc410cac8d3c00b2d59eebeee8c482537978c03ebb6c8dfd599c317d91bef2d9",
+      "commit": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    },
+    {
+      "kind": "pinned_repository",
+      "path": "experiments/orthemology-v5/source/THEOREM_CATALOGUE.json",
+      "sha256": "13d6f0a12fc8925db81b992f07bd0a6851c2cd48d07733b2607975e4d0084cc5",
+      "commit": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    },
+    {
+      "kind": "pinned_repository",
+      "path": "experiments/orthemology-v5/source/OPERATIONAL_CONTRACT.md",
+      "sha256": "c8321c3f7a544215bb183b62a71da4adc4b57df0968be38a4513c7a52726cb98",
+      "commit": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    }
+  ],
+  "input_receipt_status": "SEALED_HANDOFF_ONLY",
+  "input_research_executed": false
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Only disputed attribution and the new concurrency citation were freshly checked. Earlier checks are separately preserved as historical evidence.",
+  "date": "2026-09-06",
+  "sources": [
+    {
+      "key": "dijkstra",
+      "reference_number": 19,
+      "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD04xx/EWD472.html",
+      "doi": "10.1145/360933.360975",
+      "source_kind": "author-manuscript transcription in institutional archive",
+      "read_scope": "Sections 1\u20132; publication statement and guarded-command eligibility semantics",
+      "disposition": "RETAINED_AT_ORIGINAL_GUARDED_EXECUTION_SENTENCE",
+      "claim_limit": "No claim that guard syntax establishes protection against concurrent interference."
+    },
+    {
+      "key": "herlihywing",
+      "reference_number": 20,
+      "url": "https://www.cs.cmu.edu/~wing/publications/HerlihyWing90.pdf",
+      "doi": "10.1145/78969.78972",
+      "source_kind": "author-hosted published article",
+      "read_scope": "Abstract; Sections 1.1 and 2.2, printed pp. 463\u2013464 and 468\u2013469. PDF pages 1 and 7 also visually checked using web screenshots. Not a full 30-page reading.",
+      "bibliography": "M. P. Herlihy and J. M. Wing. Linearizability: a correctness condition for concurrent objects. ACM TOPLAS 12(3), 463\u2013492 (1990).",
+      "disposition": "ADDED_FOR_SPECIFICATION_OF_COMBINED_CONCURRENT_EFFECT",
+      "claim_limit": "No proof of this workflow implementation, general noninterference, persistence to response time, or compound atomicity from individual field reads."
+    }
+  ],
+  "access_limits": [
+    {
+      "url": "https://dl.acm.org/doi/10.1145/78969.78972",
+      "result": "403 on publisher-page read; author-hosted published PDF used."
+    },
+    {
+      "url": "https://db.cs.cmu.edu/papers/1981/kung-tods1981.pdf",
+      "result": "Fetch unavailable; not cited or used as source authority. Herlihy\u2013Wing supplies the needed primary source."
+    }
+  ]
+}

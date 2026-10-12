@@ -1,0 +1,530 @@
+{
+  "scope": "Retained rational-threshold/shift formal checkpoint, every Lean file; original FORMAL_COVERAGE CV-C and prior ordinary proofs also read.",
+  "lean_files": 129,
+  "files": [
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/InspectAxioms.lean",
+      "sha256": "909ebb1e846033be2fd6cbc30b5ff555308897ca956412dbb6cf51190b497a4d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/PositiveControls.lean",
+      "sha256": "c8fc7ac78c9bed71c7ebf4e45e93a4c056bcfee69d39be418759fa68648379c5"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongAboveOneSigma2Threshold.lean",
+      "sha256": "190b2c6aa5fa5f00c705e51a84fb2c38bb5b3ff3970643bcf0ec840de2041350"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongEndpointOne.lean",
+      "sha256": "c8dd26fd427fcb6010c26528466b17b00d1719ab537b87a1fffa53f320cfcd31"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongHalfFirstDigit.lean",
+      "sha256": "cfffd31eb0b899395ced9a38ae0aa62ed6207fd9fb39661373e2e0a3e2289a78"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongOneHardness.lean",
+      "sha256": "7becb0f4e72980db0ff8b6858edd78b6053f6409bdad0ad5552d4e36523809ba"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongStopBit.lean",
+      "sha256": "c60a337b6749ecdf459cd3dcd919d8498cbbc8f6ac4ce1014771d77d836266fd"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongSuffixSentinel.lean",
+      "sha256": "acf87c4343b23b66395257bc17c8ca34b00cabdda4c481c8ba2c1d5398e85122"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-independent-review-20261011/WrongZeroSigma2Threshold.lean",
+      "sha256": "c8b99920b829951cc7a931cd9d34737c96ed20e14ab2eb01ba9077ea097975a4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/RationalShiftRealisation.lean",
+      "sha256": "7a0461c82c02bbf577c6c016e1970c0d3d7e33613e1ded7856dbf5c1d5b3b442"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/Sigma2ThresholdRealisation.lean",
+      "sha256": "448f65c6cdc05eccaba97fe1cca07318d30fce2eb5b0b4414c7e327270ea2633"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/UnaryShiftLaw.lean",
+      "sha256": "d7fe8096ea65b8f0b52924ee3d652f706e8fd46427e937da2dba369f8265389c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/compiler/UnaryPrefixRealisation.lean",
+      "sha256": "6b81f972deed6d3657e1b42ab36943b3a4534fbc6e3375def60e246aa4528d74"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/exploratory-not-accepted/Check.lean",
+      "sha256": "aad22f560e5a4242bf8bd9ae88db2f41bbb146dd5fadd9b45febc7479dd645c4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/missing_zero_terminator_drop.lean",
+      "sha256": "d0c3999cfaa5da779e5a67c79ba057a56c65974fef0de7c6e0a86d89fddeb719"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/reversed_law_rows.lean",
+      "sha256": "1e90a1b479a1f3f44b35441ae1abf118a2e87c19d050f34d250480be3147c506"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/sigma_threshold_above_one.lean",
+      "sha256": "88589b0e4f7d13a1831b7e345ac40c310c3b6135d38777457617bcb98a0ceeb9"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/sigma_zero_threshold.lean",
+      "sha256": "188b4731e642bb4b6e38b15449edddc4d219e617c084e793273017c91a217f1a"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/unreset_base_word.lean",
+      "sha256": "ca604cd1bc8347a7d1df76e63f0b6275e97f646edd7ebb053c7b3bcffbf8dd8d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-gzmrln09/wrong_endpoint.lean",
+      "sha256": "b307ee15dcfd6c5b8d36e338e611df27cd843f53279324231f95ebc95ca7b8c4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-iwijitk7/missing_zero_terminator_drop.lean",
+      "sha256": "d0c3999cfaa5da779e5a67c79ba057a56c65974fef0de7c6e0a86d89fddeb719"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-iwijitk7/reversed_law_rows.lean",
+      "sha256": "1e90a1b479a1f3f44b35441ae1abf118a2e87c19d050f34d250480be3147c506"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-iwijitk7/unreset_base_word.lean",
+      "sha256": "ca604cd1bc8347a7d1df76e63f0b6275e97f646edd7ebb053c7b3bcffbf8dd8d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/replay-iwijitk7/wrong_endpoint.lean",
+      "sha256": "b307ee15dcfd6c5b8d36e338e611df27cd843f53279324231f95ebc95ca7b8c4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/weights/BinaryWeights.lean",
+      "sha256": "1227dd0aea0218e00ddd08115fe71a116a1ab72d312bd0bd4d89ef29107ca8f4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdAudit.lean",
+      "sha256": "a7c1d7f639f57bbb63f38cab8e58663f947682fdb67c868b30efe4a29bd647cf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdComputable.lean",
+      "sha256": "30d00bbcf2e54f38d11ab6f163a58953b72ec029da97a6cba4b52b9dd9c26838"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdControls.lean",
+      "sha256": "d231c64f2ed5b548a410d159653727625cb709128c6cae1b9e5ff72a419a8583"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdCuts.lean",
+      "sha256": "b8e57f1e5e4bd851c3e0b2faaa755c2bab6c48c4c3c5be0ebef7dcd849069bbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdDefect.lean",
+      "sha256": "cb654b071db716f97d40a7ee3e4949915a04f29627326dcca33bc3e1e2771da0"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/RationalThresholdUniform.lean",
+      "sha256": "6f270a77065244b86f2db671936db03a3587cf2157dcf653e629dc8361f886dc"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/ArbitraryPattern.lean",
+      "sha256": "60048582c444e3ef035563b21104a2257c69a2b92072731ea48a82b52d53969a"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/AtomicPattern.lean",
+      "sha256": "8bc979a7a2ba177eb7a6f95e62aca21204311978df87916974c85b7420910db0"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecExpr.lean",
+      "sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecIndexPrimrec.lean",
+      "sha256": "951bc854399c838a50d9e084d8c55531703f2dd28ea3bdcfbab7705052036e5c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecNumeric.lean",
+      "sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecParameter.lean",
+      "sha256": "5b3f9fcc6883edf302abcc4c2d7e0af1a123090ff6f56958bafbc839a1f3f4a7"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecPrimrec.lean",
+      "sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecProgram.lean",
+      "sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecStmt.lean",
+      "sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/CodecVarint.lean",
+      "sha256": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/FiniteOutputTable.lean",
+      "sha256": "e7af2207cd345595708c8f4410f89173a6fd27108ab68ce77a8f9e9ba54c39a4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/FinitePrefixBoundary.lean",
+      "sha256": "24d08b389775c8378864236edf70f1aaf056c972a0a6298a3f110e7dddb44434"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/FiniteSelector.lean",
+      "sha256": "2a0dcc6c75ad84f747d8a6f3a590c9777de903cf724031d421756db322807921"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/HeavyCylinders.lean",
+      "sha256": "894e4f5b5d9e32ac9b40a0058dd420b6089156a83b4d79ada2c47c3771637d4f"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/InnovationMeasure.lean",
+      "sha256": "77effa27df0ef2d7c97ed670cbae5525698708149ab148308d6f6d34573af7bc"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/LoopPrimrec.lean",
+      "sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/LoopRenaming.lean",
+      "sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MatrixArithmetic.lean",
+      "sha256": "31fc8116bff2b69959c4c198619cd80dc05e1ed3f5529a2fe5ea5e9c33b1d994"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipComputable.lean",
+      "sha256": "d47db2ad6832936895de21f1cdefb64d8e21e03c2341dcee31995f25d248708d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipComputableCore.lean",
+      "sha256": "405bf84847eabd728b6506aa884d4fa5290fbd39651854a22e3cc4ba5e36f021"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipHeavyBridge.lean",
+      "sha256": "a012fe68f1c989acac74665d6557201a50397cae932b89710cc3c504301f7dfd"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipMatrixComputable.lean",
+      "sha256": "b83cd870a15a35ada7cd4d2224cb5cd22b82b3cfd3b1b01b2d9ada6f93a66942"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipWitnesses.lean",
+      "sha256": "1d2a8581c3b895cf152989c114e471a2c20ea133a3212d8d3d12177e8d8b288c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/MembershipWords.lean",
+      "sha256": "a1b5eef0fe15e06dc5ce2b01b1cc253393abf838a41852748ae508236214f6e0"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/NumericMembership.lean",
+      "sha256": "97cdf3f0f99a5161023bcf51a8ab862d705fa99942dd805315c4b4212a3b1c83"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/Fibres.lean",
+      "sha256": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/MeasureCore.lean",
+      "sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/Mixture.lean",
+      "sha256": "ca0993e8c106672be0732f289c3040eb4929d3913b701a974a1371eccac62f66"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/Observation.lean",
+      "sha256": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/ObserverCore.lean",
+      "sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/P02A2/Refinement.lean",
+      "sha256": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRComposition.lean",
+      "sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRCoverage.lean",
+      "sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRDerivation.lean",
+      "sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRHeadRecursion.lean",
+      "sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRProgram.lean",
+      "sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRRecursion.lean",
+      "sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PRSpecialize.lean",
+      "sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PatternBoundary.lean",
+      "sha256": "d00ca1e87e3d38291e85df0e888f6660a7267a80d2a26405a3522c5f3b3a30f2"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Pi3IndexReduction.lean",
+      "sha256": "cac1bb36dba58d87882598af5813e72f31ea0d586806f2b7af7b20b7755b68d6"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Pi3Law.lean",
+      "sha256": "5760c1a34b0d16f1e188f0d357eae628c74fd648f095146f018523dbdd2013a6"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Pi3Program.lean",
+      "sha256": "f2f5dd2eda2fbc44b1985d878150c36637be8e39bc7d0af3b75aae9c539414c2"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PrefixBits.lean",
+      "sha256": "b523b6a513f29cc5a0e9f34be7d7a97f59322b4f06900d9afe2d90f2d9a2a46e"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PrefixObserver.lean",
+      "sha256": "b491a5517f899d1dd6bad189510776591f8b79c9539fa08fe72ba9b43568592d"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PrefixPrimrec.lean",
+      "sha256": "22899d9238c3245754fe7427644cc51cc25e944764845d39a3b80ecfd7018645"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/PrefixTail.lean",
+      "sha256": "6d95e9c6ca80b77e99c9a305486c91979eb3277875fcf6e749abcdc7b99f6ac1"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Q8Compiler.lean",
+      "sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Q8Machine.lean",
+      "sha256": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Q8Measure.lean",
+      "sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/RationalNormalForm.lean",
+      "sha256": "111c753848f9ccc219d62ce6953f85ff49aca350a7df6f953a50b73ef21398b9"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/ResidualStability.lean",
+      "sha256": "41bfe7bba72a6f1e03195209bd6015b0f04756383f870a453ae60631b5678f6c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/SelectorPrimrec.lean",
+      "sha256": "7ec8370295cce9b4f11313311d03064b859e5cfe3b4dc3ded8685d298f546eb6"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/Sigma2RowLaw.lean",
+      "sha256": "285808eb9aa6b1878d97aeeaaf806f58b5a461152ead50a623012b5ac49329e1"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/SurvivorCandidates.lean",
+      "sha256": "a69f3bb7726f6b8afbe12c2fc41ab56ad3ef1d36d78858ff8d8497fbb883f89e"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/SurvivorPrimrec.lean",
+      "sha256": "905491ae8dc081bb2374caf8fdb91c9b5d6b3028428b1851c8882af9b0eee8a4"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/TaggedMass.lean",
+      "sha256": "b79b74215e4a3e68baa316dcd976f635a6a2cf3ebdfb0a87990f3d29a491e639"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/TaggedRows.lean",
+      "sha256": "db6cc52f1568b7118bee898e637caa2d7e12e96bdd35c119ac0f5a99bf15084f"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/TotalVariation.lean",
+      "sha256": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityExprConstructors.lean",
+      "sha256": "033137a20fb42ef102cdd733b821777d662baf1827fa2c56f54c33a3db69d54a"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityMachine.lean",
+      "sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityNumeric.lean",
+      "sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityParserBounds.lean",
+      "sha256": "8aaf35e24f11aba46887c9084fb139910077465b4d7e1d71f4dd022b85bdbfd6"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityReadMany.lean",
+      "sha256": "58d3441f4832f42dd2224ba51aea7f39403cc1fe52bda7da7726c9254555b6c5"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilityStmtParser.lean",
+      "sha256": "e4039eb1aa7110db405695d48806e6528f2e64ef5e82cd730fb0b3e3ed1427cc"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformComputabilitySyntax.lean",
+      "sha256": "ba64a8c6745afaa3ec7579b9412db90f66c241f0036ecdc259b296ec48c17540"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformDecoderPrimrec.lean",
+      "sha256": "373593d1d9b371b29d72414f2e2142e528441b33b723138be1352d3883b93808"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformExprLayerPrimrec.lean",
+      "sha256": "a6c3adcaeafd1ec04f98207fe70fb1c6ca45f26b0766b3d8c93df4c3ab613b73"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformExprParser.lean",
+      "sha256": "ea9073dc5830304417d9c6e993f5ff6639c4ebeb807a8f2780c06f9665b3b23e"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformExprParserPrimrec.lean",
+      "sha256": "b99e84db7064e5134b5f174bbbe5155625782092e25f39606cb435103e259f92"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformParserCombinators.lean",
+      "sha256": "db663be2558fe4429ad340627e6d41f934e3d8f8fa83678c024a00fd24b8c830"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtCoding.lean",
+      "sha256": "f9b92e7e1aed4e139e0f2aa5744fa12e1a03d5961345aad59bdc07e051cd6535"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtCodingEvaluation.lean",
+      "sha256": "578f35cfd7857f9f1df2e004f1eef08d6bf9c20fcc00de03abc40baec425fd3b"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtCodingProgram.lean",
+      "sha256": "b35aee95ada4bc6c97fab8942b9de4fc3d9dbf69a702ee3d74c0296e2975d68b"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtCodingStep.lean",
+      "sha256": "35c9adbb36f904f3e207ba538ed61a90924a9901ac3b01d202575e0e6842237c"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtLayerPrimrec.lean",
+      "sha256": "b87e772a81836153a55e61f77b7c0d383059b15dad86d9212fc275403e596b62"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformStmtParserPrimrec.lean",
+      "sha256": "f28d1911bdbc216241b713c2752954d36235cd040c519fa2725ff74ed4e49de1"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/baseline/UniformVarintPrimrec.lean",
+      "sha256": "0a753dd580e113d766759f99f40bc116dea59ced1d2ea6d1a3edd63d487cc415"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-0g6rqpmg/sources/RationalThresholdComputable.lean",
+      "sha256": "30d00bbcf2e54f38d11ab6f163a58953b72ec029da97a6cba4b52b9dd9c26838"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-0g6rqpmg/sources/RationalThresholdControls.lean",
+      "sha256": "d231c64f2ed5b548a410d159653727625cb709128c6cae1b9e5ff72a419a8583"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-0g6rqpmg/sources/RationalThresholdCuts.lean",
+      "sha256": "b8e57f1e5e4bd851c3e0b2faaa755c2bab6c48c4c3c5be0ebef7dcd849069bbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-0g6rqpmg/sources/RationalThresholdDefect.lean",
+      "sha256": "cb654b071db716f97d40a7ee3e4949915a04f29627326dcca33bc3e1e2771da0"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-0g6rqpmg/sources/RationalThresholdUniform.lean",
+      "sha256": "6f270a77065244b86f2db671936db03a3587cf2157dcf653e629dc8361f886dc"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-1qb3gtv2/sources/RationalThresholdCuts.lean",
+      "sha256": "64c99b06d35782ec6a0db609e62993a27dd6021b6928c04daf4f783d95ecfab9"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-5uqhxta2/sources/RationalThresholdComputable.lean",
+      "sha256": "cf41f58a449b8d0090309adf290b575f774e760466c50172ca61ebf196586d1b"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-5uqhxta2/sources/RationalThresholdCuts.lean",
+      "sha256": "b8e57f1e5e4bd851c3e0b2faaa755c2bab6c48c4c3c5be0ebef7dcd849069bbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-qlcnazqz/sources/RationalThresholdComputable.lean",
+      "sha256": "30d00bbcf2e54f38d11ab6f163a58953b72ec029da97a6cba4b52b9dd9c26838"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-qlcnazqz/sources/RationalThresholdCuts.lean",
+      "sha256": "b8e57f1e5e4bd851c3e0b2faaa755c2bab6c48c4c3c5be0ebef7dcd849069bbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-qlcnazqz/sources/RationalThresholdUniform.lean",
+      "sha256": "39c5d6d62869d8dc8ec78424892aa2d2c54c66ff026f932e4015d381fdf9d33e"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-z4m5zenj/sources/RationalThresholdComputable.lean",
+      "sha256": "30d00bbcf2e54f38d11ab6f163a58953b72ec029da97a6cba4b52b9dd9c26838"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-z4m5zenj/sources/RationalThresholdControls.lean",
+      "sha256": "cd177cc71405330535a9a7f9bebe0bf2be1e90f464b2d684f33f3cab872f006b"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-z4m5zenj/sources/RationalThresholdCuts.lean",
+      "sha256": "b8e57f1e5e4bd851c3e0b2faaa755c2bab6c48c4c3c5be0ebef7dcd849069bbf"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-z4m5zenj/sources/RationalThresholdDefect.lean",
+      "sha256": "cb654b071db716f97d40a7ee3e4949915a04f29627326dcca33bc3e1e2771da0"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/candidate-z4m5zenj/sources/RationalThresholdUniform.lean",
+      "sha256": "6f270a77065244b86f2db671936db03a3587cf2157dcf653e629dc8361f886dc"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/negative-controls/WrongComplementZeroDenominator.lean",
+      "sha256": "baafdd9f8c13f3de90d310de90d180e081caf4a00312c870497db5fff4094cce"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/negative-controls/WrongResidualTerm.lean",
+      "sha256": "918d3b143a527daaa55b61f79d7449908349c5deff9c0b1a452e47715960f1a8"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/negative-controls/WrongStrictSlack.lean",
+      "sha256": "65502d1ce5afbba53ceb1f246f5f88f96d66afd79d8b90475d96c8ce2cdf410a"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-formal-extension-20261011/negative-controls/WrongVacuousOneWitness.lean",
+      "sha256": "5dadefa7125447b1e664920949693270e644a0d32b93fce2d7b0778bbf104549"
+    },
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-threshold-independent-review-20261011/InspectAxioms.lean",
+      "sha256": "d0367e3cc0f25479662eede56759c5aa9cfc966374ec73a86d388e03d3453b16"
+    }
+  ],
+  "name_text_hits": [
+    {
+      "path": "recovery-20261011/extracted/rational-threshold-shift-formal-checkpoint-20261011/rational-threshold-shift-formal-checkpoint-20261011/payload/rational-shift-realisation-20261011/RationalShiftRealisation.lean",
+      "line": 8,
+      "text": "numeric evaluator. This does not identify the Python compile_shift syntax."
+    }
+  ],
+  "conclusion": "No retained module defines/proves the literal rational-cell compile_shift selector/replay AST. Existing LoopRenaming hygiene and unary-tag alternate shift are inherited, not repeated."
+}

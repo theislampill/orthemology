@@ -1,0 +1,18 @@
+{
+  "status": "INDEPENDENT_ORDINARY_PROOF_REVIEW_ACCEPTED",
+  "source": "corpus/recovery-annex/early_objects/16/16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+  "source_read": "FULL_BODY",
+  "artifact": "type_collective/formal_annex_residue/LINEAR_SLACK_EXTENSION.md",
+  "sha256": "c04bde2c9f96703026c2ac7341afdd980b3213968c70fc58add65057ddd61976",
+  "checks": [
+    "Expanding BinaryApproxGood at q=1/2 yields exactly a*e+a*e^2+eta and -a*e+a*e^2+eta.",
+    "eta=c*e, 0<=a<=min(c,1), e>=0 makes both margins nonnegative.",
+    "min(c,1)>0 for c>0; same singleton state and constant output give an uncountable parameter interval without hidden seed coding.",
+    "If eta_n/e_n tends to c>0, each a<min(c,1) is eventually strictly below that ratio; threshold may depend on a."
+  ],
+  "limits": [
+    "No universal iff about oscillating tolerances.",
+    "No kernel replay of this extension.",
+    "Inherited c=1 theorem remains valid; extension is an ordinary direct consequence with no external novelty claim."
+  ]
+}

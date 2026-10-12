@@ -1,0 +1,16 @@
+{
+  "model_sha256": "991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05",
+  "model_read_ranges": [
+    [
+      1,
+      33
+    ]
+  ],
+  "primary_AV_V2_sha256": "fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+  "prior_full_read_ledger": "empirical_occurrence/early_pmr/READING_LEDGER.json cluster_index51,lines1\u2013243",
+  "current_return": "Whole243line primary body returned to alongside model33lines; independent corroboration of foundations finding, no duplicate first reading.",
+  "finding": "Finite explicit truth tables make S_A computable by existential elimination. If S_A entails T_C, I=S_A is a computable interpolant, with finite DNF if desired. Model line33 denial of necessary computability is overbroad at its stated scope.",
+  "corrected_scope": "Not necessarily natural or explanatory; computable in the stated finite table setting. Projection is efficient in explicit table size, although that input size can be exponential in variable count and compact formula size is not assured.",
+  "surviving_result": "Constructive finite interpolation interval,2^slack count and uniqueness iff S_A=T_C remain intact. Vocabulary neutrality, premise/world truth and explanatory adequacy remain separate.",
+  "fresh_execution": false
+}

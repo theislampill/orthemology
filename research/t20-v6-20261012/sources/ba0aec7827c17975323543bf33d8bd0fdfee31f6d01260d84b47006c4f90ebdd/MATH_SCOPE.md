@@ -1,0 +1,11 @@
+# Mathematical scope and verification distinctions
+
+The frozen author theorem concerns probability measures with an entire fixed marginal on compact product tori. Its ordinary proof includes arbitrary compatible singular endpoints, finite-action feasibility, attainment, a finite geodesic metric, and convergence of nested dense finite-test optimal energies with exact mass one. Explicit conditional-sphere and sine-squared mixture paths are feasible competitors, not asserted full transport–reaction minimizers. There is no rate, solver validation, nonlinear KL-flow theorem, arbitrary noncompact extension, or formal-kernel certification.
+
+The independent review found no blocking mathematical defect within that scope. The author controls are **37 exact mathematical/algebraic controls plus 16 input/freeze bindings**, total 53 when all seven original-input copies are supplied. Without original-input copies, the unchanged script runs 37 + 9 = 46; the portable replay supplies the copies and records the full distinction. Repeating these checks is preservation verification, not a new mathematical review.
+
+The reviewer-authored **104 finite-fibre numerical cases**, with seven interior times per case, are supplementary numerical normalization/boundary checks. They are not 104 theorems or proof of infinite-dimensional existence. The analytic Fourier leakage example distinguishes finitely tested moments from the full marginal.
+
+The mathematical authors explicitly credit Nishino, Bauer, Needham and Charon, “A Benamou–Brenier proximal splitting method for constrained unbalanced optimal transport,” arXiv:2512.09250v1, and Bauer, Charon, Needham and Nishino, “Path constrained unbalanced optimal transport,” arXiv:2402.15860v3. Finite-constraint attainment, constant-energy/metric structure, weighted-Sobolev projection and manifold antecedents are primary prior work. The source at delta = 1 uses half the present unit/unit action. No full third-party source is redistributed.
+
+Parent participation, author development and independent checking retain their original distinctions. This packet is additive evidence preservation only; it changes no repository, governing state, accepted result, integration decision or programme closure.

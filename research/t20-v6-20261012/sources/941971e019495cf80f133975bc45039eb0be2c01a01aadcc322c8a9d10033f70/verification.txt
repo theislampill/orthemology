@@ -1,0 +1,14 @@
+PASS input integrity: 5 bound predecessor reports
+PASS 01: symbolic three-block softmax identity, KKT, and commutation
+PASS 02: curved conditional projection and exact cost log(5/4)
+PASS 03: informative curved-block join: both off-model orders and value identity
+PASS 04: variable curved and segment conditionals at feasible and off-model inputs
+PASS 05: inactive block omission with positive input and boundary output
+PASS 06: coordinate face, uninformative one-block channel, and one-state limits
+PASS 07: boundary approximation and elementary Pinsker curvature identity
+PASS 08: single forward-preserving likelihood versus complete normalized channel
+PASS 09: inherited fixed-marginal information-erasure regression
+PASS 10: zero-entry scope guard: possible before repair, undefined afterward
+PASS 11: Euclidean projection countercontrol: 81/130 differs from 81/119
+PASS 12: entropy-completion orientation guard with positive unary evidence
+PASS all 12 exact mathematical control groups

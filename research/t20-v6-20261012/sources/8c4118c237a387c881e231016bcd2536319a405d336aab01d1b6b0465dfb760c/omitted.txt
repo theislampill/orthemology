@@ -1,0 +1,2 @@
+diagnostic IR instance integrity: FAIL
+- replay-fixtures/candidate-omitted.json[0]: schema: missing required field: recognition_strength

@@ -1,0 +1,157 @@
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import SelfVerifyingSupport
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.PhysicalCost.blockIndex_at_offset
+#print axioms Orthemology.Tranche3.PhysicalCost.blockIndex_at_offset
+#check @Orthemology.Tranche3.PhysicalCost.physicalPosition_bijective
+#print axioms Orthemology.Tranche3.PhysicalCost.physicalPosition_bijective
+#check @Orthemology.Tranche3.PhysicalCost.positionEquiv
+#print axioms Orthemology.Tranche3.PhysicalCost.positionEquiv
+#check @Orthemology.Tranche3.PhysicalCost.flatten_at_offset
+#print axioms Orthemology.Tranche3.PhysicalCost.flatten_at_offset
+#check @Orthemology.Tranche3.PhysicalCost.listCost
+#print axioms Orthemology.Tranche3.PhysicalCost.listCost
+#check @Orthemology.Tranche3.PhysicalCost.listCost_eq_sum_get
+#print axioms Orthemology.Tranche3.PhysicalCost.listCost_eq_sum_get
+#check @Orthemology.Tranche3.PhysicalCost.flatten_total_cost
+#print axioms Orthemology.Tranche3.PhysicalCost.flatten_total_cost
+#check @Orthemology.Tranche3.PhysicalCost.decode_total_cost
+#print axioms Orthemology.Tranche3.PhysicalCost.decode_total_cost
+#check @Orthemology.Tranche3.recursivePhysicalBudget
+#print axioms Orthemology.Tranche3.recursivePhysicalBudget
+#check @Orthemology.Tranche3.recursive_resetCost_le_physicalBudget
+#print axioms Orthemology.Tranche3.recursive_resetCost_le_physicalBudget
+#check @Orthemology.Tranche3.recursivePhysicalBudget_nonneg
+#print axioms Orthemology.Tranche3.recursivePhysicalBudget_nonneg
+#check @Orthemology.Tranche3.recursive_recorded_total_bad_budget
+#print axioms Orthemology.Tranche3.recursive_recorded_total_bad_budget
+#check @Orthemology.Tranche3.badActionCost
+#print axioms Orthemology.Tranche3.badActionCost
+#check @Orthemology.Tranche3.listCost_badActionCost
+#print axioms Orthemology.Tranche3.listCost_badActionCost
+#check @Orthemology.Tranche3.recursive_physical_total_bad_eq_post_records
+#print axioms Orthemology.Tranche3.recursive_physical_total_bad_eq_post_records
+#check @Orthemology.Tranche3.recursive_physical_total_bad_budget
+#print axioms Orthemology.Tranche3.recursive_physical_total_bad_budget
+#check @Orthemology.Tranche3.recursivePhysicalLaw
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw
+#check @Orthemology.Tranche3.recursivePhysicalAction_path_measurable
+#print axioms Orthemology.Tranche3.recursivePhysicalAction_path_measurable
+#check @Orthemology.Tranche3.total_bad_measurable
+#print axioms Orthemology.Tranche3.total_bad_measurable
+#check @Orthemology.Tranche3.recursivePhysicalLaw_probability
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_probability
+#check @Orthemology.Tranche3.recursivePhysicalLaw_total_bad_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_budget
+#check @Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_budget
+#check @Orthemology.Tranche3.recursivePhysicalLaw_bad_count_tail
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_bad_count_tail
+#check @Orthemology.Tranche2.guarded_live_stopped_controller_budget
+#print axioms Orthemology.Tranche2.guarded_live_stopped_controller_budget
+#check @Orthemology.Tranche2.recorded_nat_charge_transfer
+#print axioms Orthemology.Tranche2.recorded_nat_charge_transfer
+#check @Orthemology.Tranche2.recorded_expected_charge_bound
+#print axioms Orthemology.Tranche2.recorded_expected_charge_bound
+#check @Orthemology.Tranche2.recursive_recorded_all_post_nonempty
+#print axioms Orthemology.Tranche2.recursive_recorded_all_post_nonempty
+#check @Orthemology.Tranche2.recursivePhysicalAction_measurable
+#print axioms Orthemology.Tranche2.recursivePhysicalAction_measurable
+#check @Orthemology.Tranche2.stopped_bad_count_le_planned
+#print axioms Orthemology.Tranche2.stopped_bad_count_le_planned
+#check @Orthemology.Tranche2.phaseNext_actual_support
+#print axioms Orthemology.Tranche2.phaseNext_actual_support
+#check @Orthemology.Tranche2.phaseNext_rank_decreases
+#print axioms Orthemology.Tranche2.phaseNext_rank_decreases
+#check @IndependentPhysicalCostControls.boundary_01
+#print axioms IndependentPhysicalCostControls.boundary_01
+#check @IndependentPhysicalCostControls.boundary_02
+#print axioms IndependentPhysicalCostControls.boundary_02
+#check @IndependentPhysicalCostControls.boundary_03
+#print axioms IndependentPhysicalCostControls.boundary_03
+#check @IndependentPhysicalCostControls.boundary_04
+#print axioms IndependentPhysicalCostControls.boundary_04
+#check @IndependentPhysicalCostControls.boundary_05
+#print axioms IndependentPhysicalCostControls.boundary_05
+#check @IndependentPhysicalCostControls.boundary_06
+#print axioms IndependentPhysicalCostControls.boundary_06
+#check @IndependentPhysicalCostControls.boundary_07
+#print axioms IndependentPhysicalCostControls.boundary_07
+#check @IndependentPhysicalCostControls.boundary_08
+#print axioms IndependentPhysicalCostControls.boundary_08
+#check @IndependentPhysicalCostControls.boundary_09
+#print axioms IndependentPhysicalCostControls.boundary_09
+#check @IndependentPhysicalCostControls.boundary_10
+#print axioms IndependentPhysicalCostControls.boundary_10
+#check @IndependentPhysicalCostControls.boundary_11
+#print axioms IndependentPhysicalCostControls.boundary_11
+#check @IndependentPhysicalCostControls.boundary_12
+#print axioms IndependentPhysicalCostControls.boundary_12
+#check @IndependentPhysicalCostControls.boundary_13
+#print axioms IndependentPhysicalCostControls.boundary_13
+#check @IndependentPhysicalCostControls.boundary_14
+#print axioms IndependentPhysicalCostControls.boundary_14
+#check @IndependentPhysicalCostControls.boundary_15
+#print axioms IndependentPhysicalCostControls.boundary_15
+#check @IndependentPhysicalCostControls.boundary_16
+#print axioms IndependentPhysicalCostControls.boundary_16
+#check @IndependentPhysicalCostControls.boundary_17
+#print axioms IndependentPhysicalCostControls.boundary_17
+#check @IndependentPhysicalCostControls.boundary_18
+#print axioms IndependentPhysicalCostControls.boundary_18
+#check @IndependentPhysicalCostControls.boundary_19
+#print axioms IndependentPhysicalCostControls.boundary_19
+#check @IndependentPhysicalCostControls.boundary_20
+#print axioms IndependentPhysicalCostControls.boundary_20
+#check @IndependentPhysicalCostControls.boundary_21
+#print axioms IndependentPhysicalCostControls.boundary_21
+#check @IndependentPhysicalCostControls.boundary_22
+#print axioms IndependentPhysicalCostControls.boundary_22
+#check @IndependentPhysicalCostControls.boundary_23
+#print axioms IndependentPhysicalCostControls.boundary_23

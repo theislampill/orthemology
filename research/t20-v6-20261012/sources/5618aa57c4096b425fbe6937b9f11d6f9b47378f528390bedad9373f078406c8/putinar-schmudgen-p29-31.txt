@@ -1,0 +1,159 @@
+                             MULTIVARIATE DETERMINATENESS                       29
+
+                             8. Disintegration techniques
+   The present section focuses on disintegration of measures techniques as
+another efficient tool for studying the determinacy problem.
+   The starting point is the following disintegration theorem for measures.
+Recall that p(ν) = p∗ (ν) denotes the push-forward of a measure ν by a map
+p.
+Proposition 28. Suppose that X and T are a closed subsets of Euclidean
+spaces and ν is a finite positive Borel measure on X. Let p : X → T be a
+ν-measurable mapping and let µ := p(ν). Then there exist a mapping t → λt
+of T into the set of positive Borel measures on X satisfying the following
+conditions:
+        (i) supp λt ⊆ p−1 (t),
+
+       (ii) λt (p−1 (t)) = 1 µ − a.e.,
+               R                       R               R
+       (iii)       X   f (x) dν(x) =       T   dµ(t)       X   f (x) dλt (x).
+   This is a special case of Proposition 2.7.13 from [7], Chapter IX. Note that
+the measure ν is moderate, since X and T are closed subsets of Euclidean
+spaces and hence locally compact, and the map p is ν-proper, since ν is
+finite. Let us retain the assumptions and notations of Proposition 28.
+   Let A be a countably generated unital ∗-algebra of ν-integrable functions
+on X. Let f ∈ A and t ∈ T . We define linear functionals Lt and L on A by
+                     Z                                   Z
+          Lt (f ) :=   f (x) dλt (x), L(f ) ≡ Lν (f ) :=   f (x) dν(x).
+                         X                                               X
+
+Lemma 29. For f ∈ A, the function t → Lt (f ) is in L2 (T, µ).
+   Proof. We use freely the properties (i)–(iii) from the preceding propo-
+sition. In particular, (iii) implies that Lt (1) = 1. In view of the above
+definitions and the Cauchy-Schwarz inequality we obtain
+            Z                      Z            Z
+                                2
+                dµ(t) |Lt (f )| =       dµ(t) |     f dλt (x)|2 ≤
+              T                       T           X
+            Z         Z                    Z
+                dµ(t)(     |f |2 dλt (x)) (   1 dλt (x)) =
+              T
+            Z                            Z
+                             ¯ t (1) =
+                dµ(t) Lt (f f)L              dµ(t) Lt (f f¯) = L(f f).
+                                                                   ¯ 
+               T                                  T
+   Suppose now that B is a countably generated unital ∗-algebra of func-
+tions on T such that p∗ B is a ∗-subalgebra of A. That is all functions
+(p∗ f )(x) := f (p(x)), where f ∈ B, belong to A and the involution commutes
+with the pull-back operation. Here and in what follows we put t=p(x) and
+write f˜(t) = f (p(x)). (Note that p∗ B might be equal to A). We assume
+that the following three conditions are satisfied:
+30                          PUTINAR AND SCHMÜDGEN
+
+   (1) The measure     µ is B-determinate (that is, if µ′ is another measure on
+                  dµ(t)f (t) = dµ (t)f (t) for all f ∈ B, then µ = µ′ ).
+                                   ′
+              R               R
+T such that
+   (2) B is dense in L2 (T, µ).
+   (3) For µ-almost all t ∈ T , the measure λt is A-determinateR on p−1 (t)
+(that is, if λ′t is another measure on the fibre p−1 (t) such that     f dλt =
+   f dλ′t for all f ∈ A, then λt = λ′t .)
+R
+
+
+     Our main result in this section is the following theorem.
+Theorem 30. Under the assumptions (1)– (3) the measure ν is A-determinate
+on X.
+            Suppose that ν ′ is another measure on X such that
+                                                                       R
+R Proof:                                                                 f dν =
+   f dν ′ for all f ∈ A.
+  Let µ=p(ν), λt and µ′=p(ν ′ ), λ′t , respectively, be the corresponding mea-
+sures from the disintegration theorem and let Lt and L′t ,respectively, be the
+corresponding linear functionals for ν and ν ′ , respectively. For f˜ ∈ B we
+compute
+ Z                   Z               Z           Z         Z
+         ′    ˜
+     dµ (t) f (t) =        ′   ˜
+                         dµ (t)f (t)     ′
+                                       dλt (x) =     dµ (t) f (p(x)) dλ′t (x) =
+                                                       ′
+
+ Z                                                     Z
+                ′
+    f (p(x))dν (x) = Lν ′ (f (p(x))) = Lν (f (p(x))) =     dµ(t)f˜(t).
+
+Since µ is B-determinate by assumption (1), it follows that µ = µ′ .
+   Since B is countably generated and dense in L2 (T, µ) by assumption (2),
+there are functions ϕn = p∗ (ϕ˜n ) ∈ A, n∈N , such that {ϕ̃n ; n∈N } is an or-
+thonormal basis of L2 (T, µ). Fix f ∈ A. We compute the Fourier coefficents
+of the function Lt (f ) of L2 (T, µ) with respect to this orthonormal basis by
+           Z                         Z               Z
+               dµ(t)ϕ̃n (t)Lt (f ) =    dµ(t) ϕ̃n (t) f (x) dλt (x) =
+           ZT          Z              T
+
+               dµ(t)     ϕ(p(x))f (x) dλt (x) = L(ϕn (p(x))f (x)).
+
+Since µ = µ′ , the same reasoning with λt replaced by λ′t shows that
+                   Z
+                      dµ(t)ϕ̃n (t)L′t (f ) = L(ϕn (p(x))f (x)).
+                      T
+Therefore, both functions Lt (f ) and L′t (f ) from L2 (T, µ) (by Lemma 29)
+have the same developments
+                  X                                 X
+        Lt (f ) =    L(ϕn (p)f )ϕ̃n (t), L′t (f ) =   L(ϕ(p)f )ϕ̃n (t)
+                     n                               n
+
+in L2 (T, µ).   Consequently, we have Lt (fR) = L′t (f ) µ-a-e. R on T .
+                                                                    That is,
+there is a µ-null subset Mf of T such that f (x) dλt (x) = f (x) dλ′t (x) for
+t ∈ T \Mf . Since A is countably generated, there is a µ-null subset M of T
+such that the latter holds for all f ∈ A and for t ∈ T \M . From assumption
+(3) it follows therefore that λt = λ′t µ-a.e. on T . From the disintegration
+                         MULTIVARIATE DETERMINATENESS                                    31
+
+                                                      dµ′ λ′t = ν ′ .
+                                 R                R
+formula (iii) we obtain ν =          dµ(t) λt =                                          
+
+We now specialize the preceding general theorem to the moment problem
+and derive a ”reduction procedure” for proving determinacy.
+   Let X be a closed subset of Rd , A := C[x1 , . . . , xd ] and B := C[t1 , . . . , , tm ].
+Let p1 , . . . , pm ∈ R[x1 , . . . , xd ] be polynomials and define a mapping p : X →
+T by p(x) = (p1 (x), . . . , pm (x)), where T is a closed subset of Rm such that
+p(X) ⊆ T . Note that in the case X = Rm the fibres are just the real
+algebraic varieties
+             p−1 (t) = {x ∈ Rn : p1 (x) = t1 , . . . , pk (x) = tk }, t ∈ T.
+Suppose that ν ∈ M(X). Let µ and λt denote       R the corresponding measures
+from Proposition 28. Since Lν (f (p(x)) =           dµ(t)f˜(t) < ∞ for all f˜ ∈
+R[t1 , . . . , tm ], we also have that µ ∈ M(X). From Lemma 29 it follows that
+λt ∈ M(X) µ-a. e. on T . Note that each measure λt is supported on the
+fibre p−1 (t). Recall that a measure µ ∈ M(T ) is strictly determinate if it is
+determinate on T and if the polynomials C[t1 , . . . , tm ] are dense in L2 (µ).
+   In the preceding setup Theorem 30 can be restated as follows.
+Theorem 31. If µ is strictly determinate on T and λt is determinate on
+the fibre p−1 (t) for µ-almost all t ∈ T , then ν is determinate on X.
+  Theorem 31 combined with the fact that measures with compact support
+are always (strictly) determinate gives the following two corollaries.
+Corollary 32. If µ is strictly determinate on T and the fibre p−1 (t) is
+bounded for µ-almost all t ∈ T , then ν is determinate on X.
+Corollary 33. If T is compact and the measure λt is determinate on the
+fibre p−1 (t) for µ-almost all t ∈ T , then ν is determinate on X.
+   There is a large number of applications of Theorem 31 and Corollaries
+32 and 33 by specifying the set X and the polynomials p1 , . . . , pm occuring
+therein. We mention three such results and retain the notations and the
+setup introduced before Theorem 31.
+
+   1. Let p1 (x) = x1 , . . . , pm (x) = xm , m < d, and let X and T be closed
+subsets of Rd and Rm , respectively, such that p(X) ⊆ T . Then Theorem 31
+yields:
+
+   The measure ν is determinate on X if µ = p(ν) is strictly determinate on
+T for C[t1 , · · · , tk ] and the fibre measure λ(t1 ,··· ,tm ) is determinate on p−1 (t)
+for C[x1 , · · · , xd ] and µ-almost all t ∈ T .
+
+2. Set p(x) = x21 + · · · + x2n . Let X = Rn and T := p(X) = [0, ∞). Since
+strict determinacy is the same as determinacy in dimension one, Corollary
+32 gives:
+

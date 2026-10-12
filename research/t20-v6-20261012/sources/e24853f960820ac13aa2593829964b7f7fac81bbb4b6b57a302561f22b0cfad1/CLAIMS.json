@@ -1,0 +1,124 @@
+{
+  "schema": "t20.proof-inquiry.claims.v1",
+  "claims": [
+    {
+      "id": "PI-01",
+      "title": "Static normalization does not preserve remaining checking cost",
+      "kind": "new exact source-executed counterexample",
+      "statement": "The unchanged guarded DAG normalizer lowers static charge 14 to 12 while immutable-cache remaining charge rises 2 to 12; the cache-relative optimum is 1.",
+      "dependencies": [
+        "PT-07",
+        "PT-06"
+      ],
+      "evidence": [
+        "RESULT.md \u00a73",
+        "test_cache_transport.py::test_actual_inherited_normalizer_loses_cached_identity"
+      ],
+      "scope": "Additional cache cost contract, not a refutation of PT-07."
+    },
+    {
+      "id": "PI-02",
+      "title": "Cache-cut minimum attainment and bounded new work",
+      "kind": "new scoped constructive transport",
+      "statement": "For a finite currently valid dependency-closed checked cache, adding zero-price exact-state macros reduces minimum remaining checking charge to inherited finite guarded whole-DAG compilation. An optimum expands with at most |J|2^|E| newly checked nodes plus cached nodes.",
+      "dependencies": [
+        "PT-07",
+        "PT-06",
+        "PT-03"
+      ],
+      "evidence": [
+        "RESULT.md \u00a74",
+        "cache_transport.py",
+        "test_cache_transport.py::test_full_small_acyclic_oracle"
+      ],
+      "scope": "Fixed snapshot, support-only guards, compatible immutable identities, nonnegative fixed weights; effective comparison separately required."
+    },
+    {
+      "id": "PI-03",
+      "title": "Pathwise postponement of passive successful checks",
+      "kind": "new scoped scheduling bridge",
+      "statement": "Under non-interference, non-informative successful checking and terminal reproducibility, every interleaved one-terminal-proof policy has an acquisition-then-check policy with identical acquisition history and pathwise no-greater charge.",
+      "dependencies": [
+        "PI-02",
+        "PT-01",
+        "PT-02",
+        "ET-14",
+        "ET-19"
+      ],
+      "evidence": [
+        "RESULT.md \u00a76",
+        "test_policy_contracts.py::test_postponement_against_interleaved_known_kernel_oracle",
+        "test_policy_contracts.py::test_postponement_with_exogenous_source_revocation"
+      ],
+      "scope": "Structural sufficient conditions, not a universal iff; physical timings and multiple valued intermediate deliverables excluded unless separately modeled."
+    },
+    {
+      "id": "PI-04",
+      "title": "Revalidation-aware exact-state cache profile",
+      "kind": "inherited frontier specialization and new cache application",
+      "statement": "Under complete conjunctive dependency validity d(v) subset L, minimum dependency antichains per exact state exactly preserve all-L zero-price macro availability. Snapshot availability can agree while a rule withdrawal produces remaining prices 13 versus 1.",
+      "dependencies": [
+        "PT-01",
+        "ET-14",
+        "PI-02"
+      ],
+      "evidence": [
+        "RESULT.md \u00a75",
+        "test_cache_transport.py::test_revalidation_profile_retains_alternative_rules",
+        "test_cache_transport.py::test_dependency_antichain_against_all_live_sets"
+      ],
+      "scope": "Coarsest macro-availability profile, not necessarily terminal-value quotient. Helper implements rule-local factors plus child unions, not arbitrary occurrence-specific dependencies."
+    },
+    {
+      "id": "PI-05",
+      "title": "Finite-memory CIRS versus finite source sidecars",
+      "kind": "standard finite-chain corollary applied to source crosswalk",
+      "statement": "Under strictly positive CIRS laws, a time-homogeneous finite-memory common behavioral controller restores all hidden standards iff their good-action sets have nonempty intersection. CIRS can succeed with unbounded memory when that intersection is empty.",
+      "dependencies": [
+        "HIST-RESTORATION",
+        "PT-19",
+        "PT-20"
+      ],
+      "evidence": [
+        "RESULT.md \u00a78",
+        "test_policy_contracts.py::test_all_deterministic_memory_controllers_through_three_states"
+      ],
+      "scope": "Counts every clock, archive, growing integer and persistent random state as memory; no hidden-model seed access; not a new general POMDP theorem."
+    },
+    {
+      "id": "PI-06",
+      "title": "Rational likelihood arithmetic and actual Has representability",
+      "kind": "ordinary source-interface deduction",
+      "statement": "A common denominator makes CIRS likelihood comparison exact integer-weight comparison; fixed finite lookup, multiplication, comparison folds and bounded pointer updates are primitive recursive and inherit numeric original-Has realizability from inspected PR compiler interfaces.",
+      "dependencies": [
+        "HIST-RESTORATION",
+        "PT-19"
+      ],
+      "evidence": [
+        "RESULT.md \u00a78",
+        "SOURCE_BINDINGS.json",
+        "test_policy_contracts.py::test_cirs_positive_supports_and_integer_likelihood_histories"
+      ],
+      "scope": "No new literal Has controller module, Lean replay, host correspondence, probability-law theorem or calibrated physical observation stream."
+    },
+    {
+      "id": "PI-07",
+      "title": "Model coupling and timed cost contract remain separate",
+      "kind": "scope-preserving inherited crosswalk",
+      "statement": "Cache accounting does not permit independent worst-model selection at chance branches or dropping timing/outcome/state correlation. ET17 policy vectors and ET19 joint timing law retain their owners. PT28/29 literal probability results concern a distinct source-lowered observer contract.",
+      "dependencies": [
+        "ET-17",
+        "ET-19",
+        "PT-20",
+        "PT-28",
+        "PT-29"
+      ],
+      "evidence": [
+        "RESULT.md \u00a77",
+        "test_policy_contracts.py::test_fixed_model_costs_cannot_be_pasted"
+      ],
+      "scope": "No new robust Bellman theorem or claim that atomic defect prices proof checking."
+    }
+  ],
+  "ownership": "New bridge claims separated from inherited mechanisms and ordinary corollaries; no field-wide priority or programme closure."
+}

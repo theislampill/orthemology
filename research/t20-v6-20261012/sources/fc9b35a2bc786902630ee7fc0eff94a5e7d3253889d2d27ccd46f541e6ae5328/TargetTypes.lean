@@ -1,0 +1,26 @@
+import StatisticalRepair
+import CountableIdentification
+import RepairTestingBridge
+import RepairObstruction
+set_option pp.universes true
+set_option pp.proofs false
+#check @Orthemology.Tranche2.affinity_sq_le_twice_error_sum
+#check @Orthemology.Tranche2.affinity_error_lower_bound
+#check @Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound
+#check @Orthemology.Tranche2.binary_symmetric_success_disjoint
+#check @Orthemology.Tranche2.bernoulli_repair_lower_bound
+#check @Orthemology.Tranche2.bernoulli_randomized_repair_lower_bound
+#check @Orthemology.Tranche2.countable_positive_exact_identification
+#check @Orthemology.Tranche2.countable_positive_identification_on_event
+#check @Orthemology.Tranche2.common_components_dominated
+#check @Orthemology.Tranche2.countable_positive_identification_from_components
+#check @RepairObstruction.binary_cell_bound
+#check @RepairObstruction.binary_repair_readout
+#check @RepairObstruction.binary_parameter_decoder
+#check @RepairObstruction.no_common_polynomial_repair
+#check @RepairObstruction.no_common_logarithmic_repair
+#print Orthemology.Tranche2.BinaryGood
+#print Orthemology.Tranche2.randomizedRepairFailure
+#print Orthemology.Tranche2.bernoulliMass
+#print Orthemology.Tranche2.errorP
+#print Orthemology.Tranche2.errorQ

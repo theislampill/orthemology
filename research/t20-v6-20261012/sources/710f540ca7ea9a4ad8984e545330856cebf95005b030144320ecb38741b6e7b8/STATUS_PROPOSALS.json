@@ -1,0 +1,32 @@
+{
+  "scope": "RESEARCH_STATUS_ONLY_NOT_CANONICAL_MUTATION",
+  "obligations": [
+    {
+      "id": "U09",
+      "incoming_current_status": "OPEN_RESEARCH",
+      "research_disposition": "PARTIAL",
+      "disposition_reason": "Ordinary bridge and countermodel specified; exact System F mechanisation and full confluence kernel proof still absent.",
+      "formal_candidate_status": "UNVERIFIED_LEAN_4_19_0_NOT_AVAILABLE",
+      "kernel_credit_this_run": false,
+      "owner_or_canonical_status_change": false
+    },
+    {
+      "id": "U10",
+      "incoming_current_status": "OPEN_RESEARCH",
+      "research_disposition": "PARTIAL",
+      "disposition_reason": "Raw identity extension and unrestricted coupling intersection falsified; finite-outcome and finite-rational diagonal results proved at ordinary scope; full semantic/dependent model absent.",
+      "formal_candidate_status": "UNVERIFIED_LEAN_4_19_0_NOT_AVAILABLE",
+      "kernel_credit_this_run": false,
+      "owner_or_canonical_status_change": false
+    },
+    {
+      "id": "U11",
+      "incoming_current_status": "OPEN_RESEARCH",
+      "research_disposition": "PARTIAL",
+      "disposition_reason": "Tracked context/substitution and coherent J/Sigma results supplied; two standard bracket bridges fail abstraction congruence; no full dependent calculus or checker.",
+      "formal_candidate_status": "UNVERIFIED_LEAN_4_19_0_NOT_AVAILABLE",
+      "kernel_credit_this_run": false,
+      "owner_or_canonical_status_change": false
+    }
+  ]
+}

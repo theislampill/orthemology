@@ -1,0 +1,36 @@
+{
+  "inputs": [
+    {
+      "path": "private-locator:6a77b9fc4c9bd8ea86ba",
+      "bytes": 29225,
+      "sha256": "23f930729f24a2e014f0d678992cd3c390ae13745e7054431c236333fd085b97"
+    },
+    {
+      "path": "private-locator:79beca3db56931f2d5df",
+      "bytes": 13819,
+      "sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2"
+    },
+    {
+      "path": "private-locator:8668dbfe18f9871e3131",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e"
+    },
+    {
+      "path": "private-locator:67a19a5e74526ab497e1",
+      "bytes": 2934,
+      "sha256": "8b2328daae9ff60292316e651f07f34382b399ac002673e59e165d6eee226a7e"
+    },
+    {
+      "path": "private-locator:7107d7e6791a377868f7",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "path": "private-locator:f7fe6e4f6ce71dd4bcb8",
+      "bytes": 110364,
+      "sha256": "b203658f64ad51ad396fc80100076109b64e26431f1f5de3304a3f109cb81134"
+    }
+  ],
+  "inherited_git_blob_computed_without_repository_access": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+  "source_read": "Dasgupta section 3 and complete Appendix; images printed pp.56,63,64 inspected. Inherited exact local interface relevant sections2\u20136,11."
+}

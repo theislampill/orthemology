@@ -1,0 +1,23 @@
+{
+  "audit": "adversarial source/candidate review",
+  "candidate": "candidate1",
+  "report_sha256": "05ebe7d87e3a2f760dfc401259109a234555138b92d52bd8f008cf1df7ebab6e",
+  "time_utc": "2026-09-13T02:34:10.219504+00:00",
+  "reviewer": "same assistant",
+  "independent_review": false,
+  "overall_gate": "FAIL_OPEN",
+  "source_scope": "Context-visible passages and authored mathematics only; full source corpus not cleared.",
+  "findings": [
+    "S3-A01",
+    "S3-A02",
+    "S3-A03",
+    "S3-A04",
+    "S3-A05",
+    "S3-A06",
+    "S3-A07",
+    "S3-A08",
+    "S3-A09",
+    "S3-A10",
+    "S3-A11"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-11T20:11:36.987793+00:00",
+  "scope": "Independent exact-source finite function controls, not an empirical run or full CLI validation",
+  "sources": {
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py": "0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/analysis/analyze_er2.py": "448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b"
+  },
+  "permutation_value": 0.0,
+  "decisions": {
+    "(0, -0.2)": "does not yet support incremental value (pre-run fixed-sensitivity design; no observed-power rescue exists)",
+    "(0, 0.2)": "does not yet support incremental value (pre-run fixed-sensitivity design; no observed-power rescue exists)",
+    "(0.0001, -0.2)": "supports incremental value",
+    "(0.0001, 0.2)": "evidence of harm or failure: false-closure increase"
+  },
+  "archetype_rates": {
+    "A1": 0.25,
+    "A2": 0.0,
+    "A3": 0.0,
+    "A4": 0.0,
+    "A5": 0.0
+  },
+  "pooled_rate": 0.05,
+  "checked_conditions": 7,
+  "assert_statements": 6,
+  "status": "PASS"
+}

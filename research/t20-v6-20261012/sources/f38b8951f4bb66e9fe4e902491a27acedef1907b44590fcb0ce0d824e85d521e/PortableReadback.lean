@@ -1,0 +1,864 @@
+import LocalRigidity
+import SmoothScalar
+import SmoothRigidity
+import GeneratorRigidity
+import BregmanProjection
+import SmoothRobustness
+import NudgeRigidity
+import CoherentNudgeRigidity
+import FiniteHullSmoothRigidity
+import FiniteHullApproximateIff
+import IntrinsicBarycentric
+import RepairObstruction
+import FiniteQueryLocality
+import StatisticalRepair
+import RepairTestingBridge
+import CountableIdentification
+import RestorationCountability
+import FiniteQueryMeasure
+import CorrelatedOracleMeasure
+import EventualCausalRestoration
+import ApproximateRepairIdentification
+import BinaryConstructiveRepair
+import BlindGuessSharpness
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import SelfVerifyingSupport
+import BlockController
+import CanonicalBlockPolicy
+import IntegratedBinaryRestoration
+import ProductObservationLaw
+import GeneratedBinaryExperiment
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import GenericQueryReference
+import PhysicalFlattening
+import MeasurablePhysicalFlattening
+import SupportStageCertificate
+import SupportFixtures
+set_option pp.universes true
+#check @BregmanProjection.score_strictConvex
+#print axioms BregmanProjection.score_strictConvex
+#check @BregmanProjection.boundary_divergence_pos
+#print axioms BregmanProjection.boundary_divergence_pos
+#check @BregmanProjection.boundary_divergence_nonneg
+#print axioms BregmanProjection.boundary_divergence_nonneg
+#check @BregmanProjection.potential_hasFDerivAt
+#print axioms BregmanProjection.potential_hasFDerivAt
+#check @BregmanProjection.potential_continuousOn
+#print axioms BregmanProjection.potential_continuousOn
+#check @BregmanProjection.gradient_continuousAt
+#print axioms BregmanProjection.gradient_continuousAt
+#check @BregmanProjection.totalDiv_continuousOn_first
+#print axioms BregmanProjection.totalDiv_continuousOn_first
+#check @BregmanProjection.totalDiv_first_positive
+#print axioms BregmanProjection.totalDiv_first_positive
+#check @BregmanProjection.exists_projection
+#print axioms BregmanProjection.exists_projection
+#check @BregmanProjection.totalDiv_joint_tendsto
+#print axioms BregmanProjection.totalDiv_joint_tendsto
+#check @BregmanProjection.projections_tendsto
+#print axioms BregmanProjection.projections_tendsto
+#check @BregmanProjection.tangent_path_in_simplex
+#print axioms BregmanProjection.tangent_path_in_simplex
+#check @BregmanProjection.projection_normal
+#print axioms BregmanProjection.projection_normal
+#check @BregmanProjection.projection_weakly_repairs
+#print axioms BregmanProjection.projection_weakly_repairs
+#check @BregmanProjection.single_score_local_repairs
+#print axioms BregmanProjection.single_score_local_repairs
+#check @BregmanProjection.affine_gradient_coordinate
+#print axioms BregmanProjection.affine_gradient_coordinate
+#check @BregmanProjection.affine_totalDiv
+#print axioms BregmanProjection.affine_totalDiv
+#check @BregmanProjection.CommonLocalRepairs
+#print axioms BregmanProjection.CommonLocalRepairs
+#check @BregmanProjection.PositiveAffineEquivalent
+#print axioms BregmanProjection.PositiveAffineEquivalent
+#check @BregmanProjection.universal_common_repair_iff_affine
+#print axioms BregmanProjection.universal_common_repair_iff_affine
+#check @CoherentNudgeRigidity.CommonCoherentLocalNudges
+#print axioms CoherentNudgeRigidity.CommonCoherentLocalNudges
+#check @CoherentNudgeRigidity.coherent_nudges_are_ambient
+#print axioms CoherentNudgeRigidity.coherent_nudges_are_ambient
+#check @CoherentNudgeRigidity.single_score_coherent_nudges
+#print axioms CoherentNudgeRigidity.single_score_coherent_nudges
+#check @CoherentNudgeRigidity.universal_coherent_nudge_iff_affine
+#print axioms CoherentNudgeRigidity.universal_coherent_nudge_iff_affine
+#check @CoherentNudgeRigidity.universal_coherent_nudge_iff_common_repair
+#print axioms CoherentNudgeRigidity.universal_coherent_nudge_iff_common_repair
+#check @FiniteHullApproximateIff.interior_tangent_sequence
+#print axioms FiniteHullApproximateIff.interior_tangent_sequence
+#check @FiniteHullApproximateIff.common_normal_sublinear_gains
+#print axioms FiniteHullApproximateIff.common_normal_sublinear_gains
+#check @FiniteHullApproximateIff.finite_hull_local_approximate_iff
+#print axioms FiniteHullApproximateIff.finite_hull_local_approximate_iff
+#check @FiniteHullSmoothRigidity.weighted_approximate_regret_bound
+#print axioms FiniteHullSmoothRigidity.weighted_approximate_regret_bound
+#check @FiniteHullSmoothRigidity.weighted_approximate_repairs_tendsto
+#print axioms FiniteHullSmoothRigidity.weighted_approximate_repairs_tendsto
+#check @FiniteHullSmoothRigidity.finite_hull_normalized_approximate_repairs_bounded
+#print axioms FiniteHullSmoothRigidity.finite_hull_normalized_approximate_repairs_bounded
+#check @FiniteHullSmoothRigidity.finite_hull_approximate_hessian_necessary
+#print axioms FiniteHullSmoothRigidity.finite_hull_approximate_hessian_necessary
+#check @FiniteHullSmoothRigidity.finite_hull_common_hessian_necessary
+#print axioms FiniteHullSmoothRigidity.finite_hull_common_hessian_necessary
+#check @GeneratorRigidity.vertex_sum
+#print axioms GeneratorRigidity.vertex_sum
+#check @GeneratorRigidity.tangent_sum_zero
+#print axioms GeneratorRigidity.tangent_sum_zero
+#check @GeneratorRigidity.vertex_transverse
+#print axioms GeneratorRigidity.vertex_transverse
+#check @GeneratorRigidity.vertex_difference_tangent
+#print axioms GeneratorRigidity.vertex_difference_tangent
+#check @GeneratorRigidity.hessian_vertex
+#print axioms GeneratorRigidity.hessian_vertex
+#check @GeneratorRigidity.positive_normal_proportional
+#print axioms GeneratorRigidity.positive_normal_proportional
+#check @GeneratorRigidity.common_repairs_hessians_proportional
+#print axioms GeneratorRigidity.common_repairs_hessians_proportional
+#check @GeneratorRigidity.fill_two_coordinates
+#print axioms GeneratorRigidity.fill_two_coordinates
+#check @GeneratorRigidity.simplex_ratio_connectivity
+#print axioms GeneratorRigidity.simplex_ratio_connectivity
+#check @GeneratorRigidity.generators_affine_of_hessian_eq
+#print axioms GeneratorRigidity.generators_affine_of_hessian_eq
+#check @GeneratorRigidity.universal_common_repairs_force_affine
+#print axioms GeneratorRigidity.universal_common_repairs_force_affine
+#check @IntrinsicBarycentric.finite_convex_weights
+#print axioms IntrinsicBarycentric.finite_convex_weights
+#check @IntrinsicBarycentric.intrinsicInterior_positive_barycentric
+#print axioms IntrinsicBarycentric.intrinsicInterior_positive_barycentric
+#check @IntrinsicBarycentric.quadratic_local_common_repair_iff_intrinsicInterior
+#print axioms IntrinsicBarycentric.quadratic_local_common_repair_iff_intrinsicInterior
+#check @IntrinsicBarycentric.smooth_finite_hull_approximate_necessary_intrinsicInterior
+#print axioms IntrinsicBarycentric.smooth_finite_hull_approximate_necessary_intrinsicInterior
+#check @IntrinsicBarycentric.smooth_finite_hull_approximate_iff_intrinsicInterior
+#print axioms IntrinsicBarycentric.smooth_finite_hull_approximate_iff_intrinsicInterior
+#check @LocalRigidity.Form
+#print axioms LocalRigidity.Form
+#check @LocalRigidity.loss
+#print axioms LocalRigidity.loss
+#check @LocalRigidity.gain_expansion
+#print axioms LocalRigidity.gain_expansion
+#check @LocalRigidity.continuous_diag
+#print axioms LocalRigidity.continuous_diag
+#check @LocalRigidity.first_order_nonnegative
+#print axioms LocalRigidity.first_order_nonnegative
+#check @LocalRigidity.barycenter_sub_sum
+#print axioms LocalRigidity.barycenter_sub_sum
+#check @LocalRigidity.barycenter_form_sum
+#print axioms LocalRigidity.barycenter_form_sum
+#check @LocalRigidity.barycenter_nonnegative_vanish
+#print axioms LocalRigidity.barycenter_nonnegative_vanish
+#check @LocalRigidity.orthogonal_span
+#print axioms LocalRigidity.orthogonal_span
+#check @LocalRigidity.common_limit_orthogonal
+#print axioms LocalRigidity.common_limit_orthogonal
+#check @LocalRigidity.weighted_first_order_sum
+#print axioms LocalRigidity.weighted_first_order_sum
+#check @LocalRigidity.repair_energy_bound
+#print axioms LocalRigidity.repair_energy_bound
+#check @LocalRigidity.common_repair_necessary
+#print axioms LocalRigidity.common_repair_necessary
+#check @LocalRigidity.positive_definite_coercive
+#print axioms LocalRigidity.positive_definite_coercive
+#check @LocalRigidity.tangent_ray_in_convexHull
+#print axioms LocalRigidity.tangent_ray_in_convexHull
+#check @LocalRigidity.convexHull_sub_mem
+#print axioms LocalRigidity.convexHull_sub_mem
+#check @LocalRigidity.normal_gain_identity
+#print axioms LocalRigidity.normal_gain_identity
+#check @LocalRigidity.common_repair_sufficient
+#print axioms LocalRigidity.common_repair_sufficient
+#check @LocalRigidity.convex_common_repair_necessary
+#print axioms LocalRigidity.convex_common_repair_necessary
+#check @LocalRigidity.local_common_repair_iff
+#print axioms LocalRigidity.local_common_repair_iff
+#check @LocalRigidity.simultaneous_normal_unique
+#print axioms LocalRigidity.simultaneous_normal_unique
+#check @NudgeRigidity.hessian_loss_direction_tendsto
+#print axioms NudgeRigidity.hessian_loss_direction_tendsto
+#check @NudgeRigidity.local_nudges_hessians_proportional
+#print axioms NudgeRigidity.local_nudges_hessians_proportional
+#check @NudgeRigidity.CommonLocalNudges
+#print axioms NudgeRigidity.CommonLocalNudges
+#check @NudgeRigidity.nudge_derivative_is_actual
+#print axioms NudgeRigidity.nudge_derivative_is_actual
+#check @NudgeRigidity.universal_local_nudges_force_affine
+#print axioms NudgeRigidity.universal_local_nudges_force_affine
+#check @NudgeRigidity.affine_second_derivative
+#print axioms NudgeRigidity.affine_second_derivative
+#check @NudgeRigidity.canonical_nudge_gain
+#print axioms NudgeRigidity.canonical_nudge_gain
+#check @NudgeRigidity.affine_hessian_direction
+#print axioms NudgeRigidity.affine_hessian_direction
+#check @NudgeRigidity.universal_local_nudge_iff_affine
+#print axioms NudgeRigidity.universal_local_nudge_iff_affine
+#check @NudgeRigidity.universal_local_nudge_iff_common_repair
+#print axioms NudgeRigidity.universal_local_nudge_iff_common_repair
+#check @RepairObstruction.binary_product_identities
+#print axioms RepairObstruction.binary_product_identities
+#check @RepairObstruction.binary_quadratic_identities
+#print axioms RepairObstruction.binary_quadratic_identities
+#check @RepairObstruction.binary_cell_bound
+#print axioms RepairObstruction.binary_cell_bound
+#check @RepairObstruction.binary_repair_readout
+#print axioms RepairObstruction.binary_repair_readout
+#check @RepairObstruction.quadratic_box
+#print axioms RepairObstruction.quadratic_box
+#check @RepairObstruction.no_common_polynomial_repair
+#print axioms RepairObstruction.no_common_polynomial_repair
+#check @RepairObstruction.no_common_logarithmic_repair
+#print axioms RepairObstruction.no_common_logarithmic_repair
+#check @RepairObstruction.binary_parameter_decoder
+#print axioms RepairObstruction.binary_parameter_decoder
+#check @SmoothRigidity.varying_direction_limit
+#print axioms SmoothRigidity.varying_direction_limit
+#check @SmoothRigidity.smooth_first_order_nonnegative
+#print axioms SmoothRigidity.smooth_first_order_nonnegative
+#check @SmoothRigidity.bregman
+#print axioms SmoothRigidity.bregman
+#check @SmoothRigidity.bregman_gain
+#print axioms SmoothRigidity.bregman_gain
+#check @SmoothRigidity.weighted_bregman_gain
+#print axioms SmoothRigidity.weighted_bregman_gain
+#check @SmoothRigidity.bregman_regret_bound
+#print axioms SmoothRigidity.bregman_regret_bound
+#check @SmoothRigidity.Vec
+#print axioms SmoothRigidity.Vec
+#check @SmoothRigidity.potential
+#print axioms SmoothRigidity.potential
+#check @SmoothRigidity.gradient
+#print axioms SmoothRigidity.gradient
+#check @SmoothRigidity.hessian
+#print axioms SmoothRigidity.hessian
+#check @SmoothRigidity.totalDiv
+#print axioms SmoothRigidity.totalDiv
+#check @SmoothRigidity.vertex
+#print axioms SmoothRigidity.vertex
+#check @SmoothRigidity.hessian_apply
+#print axioms SmoothRigidity.hessian_apply
+#check @SmoothRigidity.totalDiv_eq_sum
+#print axioms SmoothRigidity.totalDiv_eq_sum
+#check @SmoothRigidity.score_hasFDerivAt
+#print axioms SmoothRigidity.score_hasFDerivAt
+#check @SmoothRigidity.vertex_barycenter
+#print axioms SmoothRigidity.vertex_barycenter
+#check @SmoothRigidity.totalDiv_nonneg
+#print axioms SmoothRigidity.totalDiv_nonneg
+#check @SmoothRigidity.vertex_regret_bound
+#print axioms SmoothRigidity.vertex_regret_bound
+#check @SmoothRigidity.scalar_divergence_le_total
+#print axioms SmoothRigidity.scalar_divergence_le_total
+#check @SmoothRigidity.repairs_tendsto
+#print axioms SmoothRigidity.repairs_tendsto
+#check @SmoothRigidity.normalized_repairs_bounded
+#print axioms SmoothRigidity.normalized_repairs_bounded
+#check @SmoothRigidity.hessian_symmetric
+#print axioms SmoothRigidity.hessian_symmetric
+#check @SmoothRigidity.hessian_positive
+#print axioms SmoothRigidity.hessian_positive
+#check @SmoothRigidity.smooth_common_repair_hessian_necessary
+#print axioms SmoothRigidity.smooth_common_repair_hessian_necessary
+#check @SmoothRobustness.positive_derivative_coercive
+#print axioms SmoothRobustness.positive_derivative_coercive
+#check @SmoothRobustness.approximate_first_order_nonnegative
+#print axioms SmoothRobustness.approximate_first_order_nonnegative
+#check @SmoothRobustness.approximate_vertex_regret_bound
+#print axioms SmoothRobustness.approximate_vertex_regret_bound
+#check @SmoothRobustness.approximate_repairs_tendsto
+#print axioms SmoothRobustness.approximate_repairs_tendsto
+#check @SmoothRobustness.sublinear_tolerance_tendsto_zero
+#print axioms SmoothRobustness.sublinear_tolerance_tendsto_zero
+#check @SmoothRobustness.normalized_approximate_repairs_bounded
+#print axioms SmoothRobustness.normalized_approximate_repairs_bounded
+#check @SmoothRobustness.approximate_common_repair_hessian_necessary
+#print axioms SmoothRobustness.approximate_common_repair_hessian_necessary
+#check @SmoothRobustness.approximate_repairs_hessians_proportional
+#print axioms SmoothRobustness.approximate_repairs_hessians_proportional
+#check @SmoothRobustness.universal_approximate_repairs_force_affine
+#print axioms SmoothRobustness.universal_approximate_repairs_force_affine
+#check @SmoothRobustness.ApproximateCommonLocalRepairs
+#print axioms SmoothRobustness.ApproximateCommonLocalRepairs
+#check @SmoothRobustness.universal_approximate_common_repair_iff_affine
+#print axioms SmoothRobustness.universal_approximate_common_repair_iff_affine
+#check @SmoothScalar.Score
+#print axioms SmoothScalar.Score
+#check @SmoothScalar.divergence
+#print axioms SmoothScalar.divergence
+#check @SmoothScalar.divergence_self
+#print axioms SmoothScalar.divergence_self
+#check @SmoothScalar.divergence_deriv
+#print axioms SmoothScalar.divergence_deriv
+#check @SmoothScalar.divergence_strictMono_right
+#print axioms SmoothScalar.divergence_strictMono_right
+#check @SmoothScalar.divergence_strictAnti_left
+#print axioms SmoothScalar.divergence_strictAnti_left
+#check @SmoothScalar.divergence_pos
+#print axioms SmoothScalar.divergence_pos
+#check @SmoothScalar.divergence_nonneg
+#print axioms SmoothScalar.divergence_nonneg
+#check @SmoothScalar.tendsto_of_divergence_tendsto_zero
+#print axioms SmoothScalar.tendsto_of_divergence_tendsto_zero
+#check @SmoothScalar.radial_local_min
+#print axioms SmoothScalar.radial_local_min
+#check @SmoothScalar.adjusted_divergence_deriv
+#print axioms SmoothScalar.adjusted_divergence_deriv
+#check @SmoothScalar.local_curvature_sandwich
+#print axioms SmoothScalar.local_curvature_sandwich
+#check @Orthemology.Tranche2.BinaryApproxGood
+#print axioms Orthemology.Tranche2.BinaryApproxGood
+#check @Orthemology.Tranche2.eventual_approximate_binary_good_decodes
+#print axioms Orthemology.Tranche2.eventual_approximate_binary_good_decodes
+#check @Orthemology.Tranche2.no_information_linear_tolerance
+#print axioms Orthemology.Tranche2.no_information_linear_tolerance
+#check @Orthemology.Tranche2.countable_positive_eventual_approximate_repairs
+#print axioms Orthemology.Tranche2.countable_positive_eventual_approximate_repairs
+#check @Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score
+#check @Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration
+#print axioms Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration
+#check @Orthemology.Tranche2.binary_good_is_coherent
+#print axioms Orthemology.Tranche2.binary_good_is_coherent
+#check @Orthemology.Tranche2.sufficient_binary_cell
+#print axioms Orthemology.Tranche2.sufficient_binary_cell
+#check @Orthemology.Tranche2.approximate_parameter_strict_repair
+#print axioms Orthemology.Tranche2.approximate_parameter_strict_repair
+#check @Orthemology.Tranche2.exact_parameter_repair
+#print axioms Orthemology.Tranche2.exact_parameter_repair
+#check @Orthemology.Tranche2.guessed_parameter_eventual_success_iff
+#print axioms Orthemology.Tranche2.guessed_parameter_eventual_success_iff
+#check @Orthemology.Tranche2.FiniteQuery.blindAsk
+#print axioms Orthemology.Tranche2.FiniteQuery.blindAsk
+#check @Orthemology.Tranche2.FiniteQuery.blindNext
+#print axioms Orthemology.Tranche2.FiniteQuery.blindNext
+#check @Orthemology.Tranche2.FiniteQuery.blind_run
+#print axioms Orthemology.Tranche2.FiniteQuery.blind_run
+#check @Orthemology.Tranche2.FiniteQuery.blind_causal_success_mass
+#print axioms Orthemology.Tranche2.FiniteQuery.blind_causal_success_mass
+#check @Orthemology.Tranche2.FiniteQuery.joint_dominated_by_countable_reference
+#print axioms Orthemology.Tranche2.FiniteQuery.joint_dominated_by_countable_reference
+#check @Orthemology.Tranche2.FiniteQuery.jointTraceLaw
+#print axioms Orthemology.Tranche2.FiniteQuery.jointTraceLaw
+#check @Orthemology.Tranche2.FiniteQuery.bounded_joint_trace_factorisation
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_joint_trace_factorisation
+#check @Orthemology.Tranche2.FiniteQuery.correlated_finite_query_trace_domination
+#print axioms Orthemology.Tranche2.FiniteQuery.correlated_finite_query_trace_domination
+#check @Orthemology.Tranche2.FiniteQuery.countable_positive_shared_seed_query_repairs
+#print axioms Orthemology.Tranche2.FiniteQuery.countable_positive_shared_seed_query_repairs
+#check @Orthemology.Tranche2.countable_positive_exact_identification
+#print axioms Orthemology.Tranche2.countable_positive_exact_identification
+#check @Orthemology.Tranche2.countable_positive_identification_on_event
+#print axioms Orthemology.Tranche2.countable_positive_identification_on_event
+#check @Orthemology.Tranche2.common_components_dominated
+#print axioms Orthemology.Tranche2.common_components_dominated
+#check @Orthemology.Tranche2.countable_positive_identification_from_components
+#print axioms Orthemology.Tranche2.countable_positive_identification_from_components
+#check @Orthemology.Tranche2.FiniteQuery.actual_eventual_target
+#print axioms Orthemology.Tranche2.FiniteQuery.actual_eventual_target
+#check @Orthemology.Tranche2.FiniteQuery.measurable_eventual_score
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_eventual_score
+#check @Orthemology.Tranche2.FiniteQuery.countable_positive_eventual_causal_restoration
+#print axioms Orthemology.Tranche2.FiniteQuery.countable_positive_eventual_causal_restoration
+#check @Orthemology.Tranche2.FiniteQuery.advance
+#print axioms Orthemology.Tranche2.FiniteQuery.advance
+#check @Orthemology.Tranche2.FiniteQuery.run
+#print axioms Orthemology.Tranche2.FiniteQuery.run
+#check @Orthemology.Tranche2.FiniteQuery.Bounded
+#print axioms Orthemology.Tranche2.FiniteQuery.Bounded
+#check @Orthemology.Tranche2.FiniteQuery.bounded_prefix_locality
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_prefix_locality
+#check @Orthemology.Tranche2.FiniteQuery.bounded_prefix_equivalence
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_prefix_equivalence
+#check @Orthemology.Tranche2.FiniteQuery.prefixOracle
+#print axioms Orthemology.Tranche2.FiniteQuery.prefixOracle
+#check @Orthemology.Tranche2.FiniteQuery.prefixOracle_agrees
+#print axioms Orthemology.Tranche2.FiniteQuery.prefixOracle_agrees
+#check @Orthemology.Tranche2.FiniteQuery.bounded_trace_factorisation
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_trace_factorisation
+#check @Orthemology.Tranche2.FiniteQuery.counter_monotone
+#print axioms Orthemology.Tranche2.FiniteQuery.counter_monotone
+#check @Orthemology.Tranche2.FiniteQuery.bounded_iff_eventually_no_query
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_iff_eventually_no_query
+#check @Orthemology.Tranche2.FiniteQuery.Oracle
+#print axioms Orthemology.Tranche2.FiniteQuery.Oracle
+#check @Orthemology.Tranche2.FiniteQuery.Trace
+#print axioms Orthemology.Tranche2.FiniteQuery.Trace
+#check @Orthemology.Tranche2.FiniteQuery.measurable_advance_joint
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_advance_joint
+#check @Orthemology.Tranche2.FiniteQuery.measurable_run
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_run
+#check @Orthemology.Tranche2.FiniteQuery.measurable_trajectory
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_trajectory
+#check @Orthemology.Tranche2.FiniteQuery.boundedTrace
+#print axioms Orthemology.Tranche2.FiniteQuery.boundedTrace
+#check @Orthemology.Tranche2.FiniteQuery.measurable_boundedTrace
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_boundedTrace
+#check @Orthemology.Tranche2.FiniteQuery.measurable_prefixOracle
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_prefixOracle
+#check @Orthemology.Tranche2.FiniteQuery.prefixInput
+#print axioms Orthemology.Tranche2.FiniteQuery.prefixInput
+#check @Orthemology.Tranche2.FiniteQuery.measurable_prefixInput
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_prefixInput
+#check @Orthemology.Tranche2.FiniteQuery.finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteQuery.finiteTrajectory
+#check @Orthemology.Tranche2.FiniteQuery.measurable_finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_finiteTrajectory
+#check @Orthemology.Tranche2.FiniteQuery.bounded_event_prefix
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_event_prefix
+#check @Orthemology.Tranche2.FiniteQuery.trajectory_prefix_on_bounded
+#print axioms Orthemology.Tranche2.FiniteQuery.trajectory_prefix_on_bounded
+#check @Orthemology.Tranche2.FiniteQuery.restricted_observable_factorisation
+#print axioms Orthemology.Tranche2.FiniteQuery.restricted_observable_factorisation
+#check @Orthemology.Tranche2.FiniteQuery.absolutelyContinuous_of_singletons
+#print axioms Orthemology.Tranche2.FiniteQuery.absolutelyContinuous_of_singletons
+#check @Orthemology.Tranche2.FiniteQuery.prefixBits
+#print axioms Orthemology.Tranche2.FiniteQuery.prefixBits
+#check @Orthemology.Tranche2.FiniteQuery.measurable_prefixBits
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_prefixBits
+#check @Orthemology.Tranche2.FiniteQuery.traceLaw
+#print axioms Orthemology.Tranche2.FiniteQuery.traceLaw
+#check @Orthemology.Tranche2.FiniteQuery.input_prefix_map
+#print axioms Orthemology.Tranche2.FiniteQuery.input_prefix_map
+#check @Orthemology.Tranche2.FiniteQuery.bounded_trace_law_factorisation
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_trace_law_factorisation
+#check @Orthemology.Tranche2.FiniteQuery.bounded_trace_domination
+#print axioms Orthemology.Tranche2.FiniteQuery.bounded_trace_domination
+#check @Orthemology.Tranche2.FiniteQuery.restrict_iUnion_domination
+#print axioms Orthemology.Tranche2.FiniteQuery.restrict_iUnion_domination
+#check @Orthemology.Tranche2.FiniteQuery.finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteQuery.finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteQuery.measurable_finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteQuery.finite_query_trace_domination
+#print axioms Orthemology.Tranche2.FiniteQuery.finite_query_trace_domination
+#check @Orthemology.Tranche2.FiniteQuery.fairBit
+#print axioms Orthemology.Tranche2.FiniteQuery.fairBit
+#check @Orthemology.Tranche2.FiniteQuery.fairBit_singleton
+#print axioms Orthemology.Tranche2.FiniteQuery.fairBit_singleton
+#check @Orthemology.Tranche2.FiniteQuery.fairOracle
+#print axioms Orthemology.Tranche2.FiniteQuery.fairOracle
+#check @Orthemology.Tranche2.FiniteQuery.prefixBits_singleton_preimage
+#print axioms Orthemology.Tranche2.FiniteQuery.prefixBits_singleton_preimage
+#check @Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_mass
+#print axioms Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_mass
+#check @Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_nonzero
+#print axioms Orthemology.Tranche2.FiniteQuery.fairOracle_prefix_nonzero
+#check @Orthemology.Tranche2.FiniteQuery.finite_query_trace_fair_domination
+#print axioms Orthemology.Tranche2.FiniteQuery.finite_query_trace_fair_domination
+#check @Orthemology.Tranche2.FiniteQuery.countable_positive_causal_finite_query_repairs
+#print axioms Orthemology.Tranche2.FiniteQuery.countable_positive_causal_finite_query_repairs
+#check @Orthemology.Tranche2.IntegratedBinary.coin
+#print axioms Orthemology.Tranche2.IntegratedBinary.coin
+#check @Orthemology.Tranche2.IntegratedBinary.coinMeasure
+#print axioms Orthemology.Tranche2.IntegratedBinary.coinMeasure
+#check @Orthemology.Tranche2.IntegratedBinary.coinMeasure_real
+#print axioms Orthemology.Tranche2.IntegratedBinary.coinMeasure_real
+#check @Orthemology.Tranche2.IntegratedBinary.Experiment
+#print axioms Orthemology.Tranche2.IntegratedBinary.Experiment
+#check @Orthemology.Tranche2.IntegratedBinary.experimentLaw
+#print axioms Orthemology.Tranche2.IntegratedBinary.experimentLaw
+#check @Orthemology.Tranche2.IntegratedBinary.observation
+#print axioms Orthemology.Tranche2.IntegratedBinary.observation
+#check @Orthemology.Tranche2.IntegratedBinary.selectedRepair
+#print axioms Orthemology.Tranche2.IntegratedBinary.selectedRepair
+#check @Orthemology.Tranche2.IntegratedBinary.generated_experiment_eventually_repairs
+#print axioms Orthemology.Tranche2.IntegratedBinary.generated_experiment_eventually_repairs
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.advance
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.advance
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.run
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.run
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Bounded
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Bounded
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Oracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Oracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Trace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Trace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers
+#check @Orthemology.Tranche2.IntegratedBinary.alpha
+#print axioms Orthemology.Tranche2.IntegratedBinary.alpha
+#check @Orthemology.Tranche2.IntegratedBinary.repair
+#print axioms Orthemology.Tranche2.IntegratedBinary.repair
+#check @Orthemology.Tranche2.IntegratedBinary.law
+#print axioms Orthemology.Tranche2.IntegratedBinary.law
+#check @Orthemology.Tranche2.IntegratedBinary.support
+#print axioms Orthemology.Tranche2.IntegratedBinary.support
+#check @Orthemology.Tranche2.IntegratedBinary.good
+#print axioms Orthemology.Tranche2.IntegratedBinary.good
+#check @Orthemology.Tranche2.IntegratedBinary.alpha_bounds
+#print axioms Orthemology.Tranche2.IntegratedBinary.alpha_bounds
+#check @Orthemology.Tranche2.IntegratedBinary.exact_action_good
+#print axioms Orthemology.Tranche2.IntegratedBinary.exact_action_good
+#check @Orthemology.Tranche2.IntegratedBinary.good_iff_same
+#print axioms Orthemology.Tranche2.IntegratedBinary.good_iff_same
+#check @Orthemology.Tranche2.IntegratedBinary.good_eq_support
+#print axioms Orthemology.Tranche2.IntegratedBinary.good_eq_support
+#check @Orthemology.Tranche2.IntegratedBinary.law_positive
+#print axioms Orthemology.Tranche2.IntegratedBinary.law_positive
+#check @Orthemology.Tranche2.IntegratedBinary.law_normalised
+#print axioms Orthemology.Tranche2.IntegratedBinary.law_normalised
+#check @Orthemology.Tranche2.IntegratedBinary.law_identifies
+#print axioms Orthemology.Tranche2.IntegratedBinary.law_identifies
+#check @Orthemology.Tranche2.IntegratedBinary.supports_self_verifying
+#print axioms Orthemology.Tranche2.IntegratedBinary.supports_self_verifying
+#check @Orthemology.Tranche2.IntegratedBinary.canonical_repairs_eventually_good
+#print axioms Orthemology.Tranche2.IntegratedBinary.canonical_repairs_eventually_good
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixActions
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixActions
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixActions_zero
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixActions_zero
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixActions_succ
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixActions_succ
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixActions_length
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixActions_length
+#check @Orthemology.Tranche2.PhysicalFlattening.prefix_getD_eq_flatten
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefix_getD_eq_flatten
+#check @Orthemology.Tranche2.PhysicalFlattening.decode
+#print axioms Orthemology.Tranche2.PhysicalFlattening.decode
+#check @Orthemology.Tranche2.PhysicalFlattening.decode_eq_flatten
+#print axioms Orthemology.Tranche2.PhysicalFlattening.decode_eq_flatten
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixActions_congr
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixActions_congr
+#check @Orthemology.Tranche2.PhysicalFlattening.decode_prefix_local
+#print axioms Orthemology.Tranche2.PhysicalFlattening.decode_prefix_local
+#check @Orthemology.Tranche2.PhysicalFlattening.decode_measurable
+#print axioms Orthemology.Tranche2.PhysicalFlattening.decode_measurable
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixLength
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixLength
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixLength_zero
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixLength_zero
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixLength_succ
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixLength_succ
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixLength_mono
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixLength_mono
+#check @Orthemology.Tranche2.PhysicalFlattening.Unbounded
+#print axioms Orthemology.Tranche2.PhysicalFlattening.Unbounded
+#check @Orthemology.Tranche2.PhysicalFlattening.blockIndex
+#print axioms Orthemology.Tranche2.PhysicalFlattening.blockIndex
+#check @Orthemology.Tranche2.PhysicalFlattening.blockIndex_upper
+#print axioms Orthemology.Tranche2.PhysicalFlattening.blockIndex_upper
+#check @Orthemology.Tranche2.PhysicalFlattening.blockIndex_lower
+#print axioms Orthemology.Tranche2.PhysicalFlattening.blockIndex_lower
+#check @Orthemology.Tranche2.PhysicalFlattening.offset_lt_length
+#print axioms Orthemology.Tranche2.PhysicalFlattening.offset_lt_length
+#check @Orthemology.Tranche2.PhysicalFlattening.flatten
+#print axioms Orthemology.Tranche2.PhysicalFlattening.flatten
+#check @Orthemology.Tranche2.PhysicalFlattening.flatten_mem_block
+#print axioms Orthemology.Tranche2.PhysicalFlattening.flatten_mem_block
+#check @Orthemology.Tranche2.PhysicalFlattening.late_index
+#print axioms Orthemology.Tranche2.PhysicalFlattening.late_index
+#check @Orthemology.Tranche2.PhysicalFlattening.eventually_flatten_good
+#print axioms Orthemology.Tranche2.PhysicalFlattening.eventually_flatten_good
+#check @Orthemology.Tranche2.PhysicalFlattening.index_le_prefixLength
+#print axioms Orthemology.Tranche2.PhysicalFlattening.index_le_prefixLength
+#check @Orthemology.Tranche2.PhysicalFlattening.unbounded_of_nonempty
+#print axioms Orthemology.Tranche2.PhysicalFlattening.unbounded_of_nonempty
+#check @Orthemology.Tranche2.PhysicalFlattening.blockIndex_le_time
+#print axioms Orthemology.Tranche2.PhysicalFlattening.blockIndex_le_time
+#check @Orthemology.Tranche2.PhysicalFlattening.tail_prefix_lower
+#print axioms Orthemology.Tranche2.PhysicalFlattening.tail_prefix_lower
+#check @Orthemology.Tranche2.PhysicalFlattening.unbounded_of_eventually_nonempty
+#print axioms Orthemology.Tranche2.PhysicalFlattening.unbounded_of_eventually_nonempty
+#check @Orthemology.Tranche2.PhysicalFlattening.prefixLength_congr
+#print axioms Orthemology.Tranche2.PhysicalFlattening.prefixLength_congr
+#check @Orthemology.Tranche2.PhysicalFlattening.blockIndex_prefix_local
+#print axioms Orthemology.Tranche2.PhysicalFlattening.blockIndex_prefix_local
+#check @Orthemology.Tranche2.infinite_product_coordinate_law
+#print axioms Orthemology.Tranche2.infinite_product_coordinate_law
+#check @Orthemology.Tranche2.infinite_product_coordinates_independent
+#print axioms Orthemology.Tranche2.infinite_product_coordinates_independent
+#check @Orthemology.Tranche2.BinaryGood
+#print axioms Orthemology.Tranche2.BinaryGood
+#check @Orthemology.Tranche2.binary_symmetric_success_disjoint
+#print axioms Orthemology.Tranche2.binary_symmetric_success_disjoint
+#check @Orthemology.Tranche2.repairFailure
+#print axioms Orthemology.Tranche2.repairFailure
+#check @Orthemology.Tranche2.bernoulli_repair_lower_bound
+#print axioms Orthemology.Tranche2.bernoulli_repair_lower_bound
+#check @Orthemology.Tranche2.measurable_binaryGood
+#print axioms Orthemology.Tranche2.measurable_binaryGood
+#check @Orthemology.Tranche2.randomizedRepairFailure
+#print axioms Orthemology.Tranche2.randomizedRepairFailure
+#check @Orthemology.Tranche2.randomized_acceptance_disjoint
+#print axioms Orthemology.Tranche2.randomized_acceptance_disjoint
+#check @Orthemology.Tranche2.bernoulli_randomized_repair_lower_bound
+#print axioms Orthemology.Tranche2.bernoulli_randomized_repair_lower_bound
+#check @Orthemology.Tranche2.eventual_binary_good_decodes
+#print axioms Orthemology.Tranche2.eventual_binary_good_decodes
+#check @Orthemology.Tranche2.countable_positive_limit_values
+#print axioms Orthemology.Tranche2.countable_positive_limit_values
+#check @Orthemology.Tranche2.countable_positive_eventual_binary_repairs
+#print axioms Orthemology.Tranche2.countable_positive_eventual_binary_repairs
+#check @Orthemology.Tranche2.affinity
+#print axioms Orthemology.Tranche2.affinity
+#check @Orthemology.Tranche2.errorP
+#print axioms Orthemology.Tranche2.errorP
+#check @Orthemology.Tranche2.errorQ
+#print axioms Orthemology.Tranche2.errorQ
+#check @Orthemology.Tranche2.minimum_le_test_error
+#print axioms Orthemology.Tranche2.minimum_le_test_error
+#check @Orthemology.Tranche2.sqrt_product_min_max
+#print axioms Orthemology.Tranche2.sqrt_product_min_max
+#check @Orthemology.Tranche2.affinity_sq_le_twice_error_sum
+#print axioms Orthemology.Tranche2.affinity_sq_le_twice_error_sum
+#check @Orthemology.Tranche2.affinity_error_lower_bound
+#print axioms Orthemology.Tranche2.affinity_error_lower_bound
+#check @Orthemology.Tranche2.affinity_nonneg
+#print axioms Orthemology.Tranche2.affinity_nonneg
+#check @Orthemology.Tranche2.affinity_tensor
+#print axioms Orthemology.Tranche2.affinity_tensor
+#check @Orthemology.Tranche2.Bits
+#print axioms Orthemology.Tranche2.Bits
+#check @Orthemology.Tranche2.coinMass
+#print axioms Orthemology.Tranche2.coinMass
+#check @Orthemology.Tranche2.bernoulliMass
+#print axioms Orthemology.Tranche2.bernoulliMass
+#check @Orthemology.Tranche2.coinMass_nonneg
+#print axioms Orthemology.Tranche2.coinMass_nonneg
+#check @Orthemology.Tranche2.bernoulliMass_nonneg
+#print axioms Orthemology.Tranche2.bernoulliMass_nonneg
+#check @Orthemology.Tranche2.bernoulliMass_sum
+#print axioms Orthemology.Tranche2.bernoulliMass_sum
+#check @Orthemology.Tranche2.coin_affinity
+#print axioms Orthemology.Tranche2.coin_affinity
+#check @Orthemology.Tranche2.bernoulli_affinity
+#print axioms Orthemology.Tranche2.bernoulli_affinity
+#check @Orthemology.Tranche2.symmetric_coin_affinity_sq
+#print axioms Orthemology.Tranche2.symmetric_coin_affinity_sq
+#check @Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound
+#print axioms Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound
+#check @Orthemology.Tranche2.finite_sum_tendsto_atTop_of_one
+#print axioms Orthemology.Tranche2.finite_sum_tendsto_atTop_of_one
+#check @Orthemology.Tranche2.sampled_logScore_tendsto_atTop
+#print axioms Orthemology.Tranche2.sampled_logScore_tendsto_atTop
+#check @Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent
+#print axioms Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent
+#check @Orthemology.Tranche2.blockCount
+#print axioms Orthemology.Tranche2.blockCount
+#check @Orthemology.Tranche2.count_tendsto_of_infinite
+#print axioms Orthemology.Tranche2.count_tendsto_of_infinite
+#check @Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite
+#print axioms Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite
+#check @Orthemology.Tranche2.likelihood_block_controller_eventually_good
+#print axioms Orthemology.Tranche2.likelihood_block_controller_eventually_good
+#check @Orthemology.Tranche2.greedyMax
+#print axioms Orthemology.Tranche2.greedyMax
+#check @Orthemology.Tranche2.greedyMax_ge
+#print axioms Orthemology.Tranche2.greedyMax_ge
+#check @Orthemology.Tranche2.historyCount
+#print axioms Orthemology.Tranche2.historyCount
+#check @Orthemology.Tranche2.candidateFor
+#print axioms Orthemology.Tranche2.candidateFor
+#check @Orthemology.Tranche2.canonicalHistory
+#print axioms Orthemology.Tranche2.canonicalHistory
+#check @Orthemology.Tranche2.canonicalSelected
+#print axioms Orthemology.Tranche2.canonicalSelected
+#check @Orthemology.Tranche2.canonicalHistory_eq_range_map
+#print axioms Orthemology.Tranche2.canonicalHistory_eq_range_map
+#check @Orthemology.Tranche2.historyCount_eq_blockCount
+#print axioms Orthemology.Tranche2.historyCount_eq_blockCount
+#check @Orthemology.Tranche2.canonicalSelected_maximizes
+#print axioms Orthemology.Tranche2.canonicalSelected_maximizes
+#check @Orthemology.Tranche2.candidateFor_prefix_local
+#print axioms Orthemology.Tranche2.candidateFor_prefix_local
+#check @Orthemology.Tranche2.greedyMax_measurable
+#print axioms Orthemology.Tranche2.greedyMax_measurable
+#check @Orthemology.Tranche2.candidateFor_measurable
+#print axioms Orthemology.Tranche2.candidateFor_measurable
+#check @Orthemology.Tranche2.measurable_countable_diagonal
+#print axioms Orthemology.Tranche2.measurable_countable_diagonal
+#check @Orthemology.Tranche2.canonicalSelected_measurable
+#print axioms Orthemology.Tranche2.canonicalSelected_measurable
+#check @Orthemology.Tranche2.canonical_block_policy_eventually_good
+#print axioms Orthemology.Tranche2.canonical_block_policy_eventually_good
+#check @Orthemology.Tranche2.logScore
+#print axioms Orthemology.Tranche2.logScore
+#check @Orthemology.Tranche2.finiteKL
+#print axioms Orthemology.Tranche2.finiteKL
+#check @Orthemology.Tranche2.finiteKL_eq_sum_klFun
+#print axioms Orthemology.Tranche2.finiteKL_eq_sum_klFun
+#check @Orthemology.Tranche2.finiteKL_nonneg
+#print axioms Orthemology.Tranche2.finiteKL_nonneg
+#check @Orthemology.Tranche2.finiteKL_pos
+#print axioms Orthemology.Tranche2.finiteKL_pos
+#check @Orthemology.Tranche2.logScore_self
+#print axioms Orthemology.Tranche2.logScore_self
+#check @Orthemology.Tranche2.logScore_integrable_comp
+#print axioms Orthemology.Tranche2.logScore_integrable_comp
+#check @Orthemology.Tranche2.logScore_expectation
+#print axioms Orthemology.Tranche2.logScore_expectation
+#check @Orthemology.Tranche2.logScore_strong_law
+#print axioms Orthemology.Tranche2.logScore_strong_law
+#check @Orthemology.Tranche2.sums_tendsto_atTop_of_average
+#print axioms Orthemology.Tranche2.sums_tendsto_atTop_of_average
+#check @Orthemology.Tranche2.logScore_sum_tendsto_atTop
+#print axioms Orthemology.Tranche2.logScore_sum_tendsto_atTop
+#check @Orthemology.Tranche2.prefixLikelihood
+#print axioms Orthemology.Tranche2.prefixLikelihood
+#check @Orthemology.Tranche2.prefixLikelihood_pos
+#print axioms Orthemology.Tranche2.prefixLikelihood_pos
+#check @Orthemology.Tranche2.log_prefixLikelihood
+#print axioms Orthemology.Tranche2.log_prefixLikelihood
+#check @Orthemology.Tranche2.log_prefixLikelihood_ratio
+#print axioms Orthemology.Tranche2.log_prefixLikelihood_ratio
+#check @Orthemology.Tranche2.inverse_prefixLikelihood_ratio
+#print axioms Orthemology.Tranche2.inverse_prefixLikelihood_ratio
+#check @Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero
+#print axioms Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero
+#check @Orthemology.Tranche2.AgreeOn
+#print axioms Orthemology.Tranche2.AgreeOn
+#check @Orthemology.Tranche2.SelfVerifying
+#print axioms Orthemology.Tranche2.SelfVerifying
+#check @Orthemology.Tranche2.prune
+#print axioms Orthemology.Tranche2.prune
+#check @Orthemology.Tranche2.mem_prune
+#print axioms Orthemology.Tranche2.mem_prune
+#check @Orthemology.Tranche2.prune_subset
+#print axioms Orthemology.Tranche2.prune_subset
+#check @Orthemology.Tranche2.agreeOn_mono
+#print axioms Orthemology.Tranche2.agreeOn_mono
+#check @Orthemology.Tranche2.prune_mono
+#print axioms Orthemology.Tranche2.prune_mono
+#check @Orthemology.Tranche2.selfVerifying_empty
+#print axioms Orthemology.Tranche2.selfVerifying_empty
+#check @Orthemology.Tranche2.selfVerifying_union
+#print axioms Orthemology.Tranche2.selfVerifying_union
+#check @Orthemology.Tranche2.selfVerifying_iff_fixed
+#print axioms Orthemology.Tranche2.selfVerifying_iff_fixed
+#check @Orthemology.Tranche2.pruneIter
+#print axioms Orthemology.Tranche2.pruneIter
+#check @Orthemology.Tranche2.pruneIter_step_subset
+#print axioms Orthemology.Tranche2.pruneIter_step_subset
+#check @Orthemology.Tranche2.pruneIter_subset_target
+#print axioms Orthemology.Tranche2.pruneIter_subset_target
+#check @Orthemology.Tranche2.selfVerifying_survives
+#print axioms Orthemology.Tranche2.selfVerifying_survives
+#check @Orthemology.Tranche2.pruneIter_fixed_propagates
+#print axioms Orthemology.Tranche2.pruneIter_fixed_propagates
+#check @Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#check @Orthemology.Tranche2.pruneIter_exists_fixed
+#print axioms Orthemology.Tranche2.pruneIter_exists_fixed
+#check @Orthemology.Tranche2.pruneIter_card_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_fixed
+#check @Orthemology.Tranche2.supportKernel
+#print axioms Orthemology.Tranche2.supportKernel
+#check @Orthemology.Tranche2.supportKernel_selfVerifying
+#print axioms Orthemology.Tranche2.supportKernel_selfVerifying
+#check @Orthemology.Tranche2.supportKernel_greatest
+#print axioms Orthemology.Tranche2.supportKernel_greatest
+#check @Orthemology.Tranche2.supportKernel_nonempty_iff
+#print axioms Orthemology.Tranche2.supportKernel_nonempty_iff
+#check @Orthemology.Tranche2.Fixtures.cascadeSame
+#print axioms Orthemology.Tranche2.Fixtures.cascadeSame
+#check @Orthemology.Tranche2.Fixtures.cascadeGood
+#print axioms Orthemology.Tranche2.Fixtures.cascadeGood
+#check @Orthemology.Tranche2.Fixtures.cascade_no_nonempty_support
+#print axioms Orthemology.Tranche2.Fixtures.cascade_no_nonempty_support
+#check @Orthemology.Tranche2.Fixtures.cascade_kernel_empty
+#print axioms Orthemology.Tranche2.Fixtures.cascade_kernel_empty
+#check @Orthemology.Tranche2.Fixtures.cascade_first_round
+#print axioms Orthemology.Tranche2.Fixtures.cascade_first_round
+#check @Orthemology.Tranche2.Fixtures.cascade_second_round
+#print axioms Orthemology.Tranche2.Fixtures.cascade_second_round
+#check @Orthemology.Tranche2.Fixtures.informativeGood
+#print axioms Orthemology.Tranche2.Fixtures.informativeGood
+#check @Orthemology.Tranche2.Fixtures.informativeSame
+#print axioms Orthemology.Tranche2.Fixtures.informativeSame
+#check @Orthemology.Tranche2.Fixtures.informative_singleton_valid
+#print axioms Orthemology.Tranche2.Fixtures.informative_singleton_valid
+#check @Orthemology.Tranche2.Fixtures.informative_kernel
+#print axioms Orthemology.Tranche2.Fixtures.informative_kernel
+#check @Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty
+#print axioms Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty
+#check @Orthemology.Tranche2.Fixtures.informative_no_common_target
+#print axioms Orthemology.Tranche2.Fixtures.informative_no_common_target
+#check @Orthemology.Tranche2.StageWitness
+#print axioms Orthemology.Tranche2.StageWitness
+#check @Orthemology.Tranche2.RestrictedTargets
+#print axioms Orthemology.Tranche2.RestrictedTargets
+#check @Orthemology.Tranche2.selfVerifying_restrict_iff
+#print axioms Orthemology.Tranche2.selfVerifying_restrict_iff
+#check @Orthemology.Tranche2.StageCertificate
+#print axioms Orthemology.Tranche2.StageCertificate
+#check @Orthemology.Tranche2.stageCertificate_iff_witness
+#print axioms Orthemology.Tranche2.stageCertificate_iff_witness
+#check @Orthemology.Tranche2.selfVerifying_signal_refinement
+#print axioms Orthemology.Tranche2.selfVerifying_signal_refinement
+#check @Orthemology.Tranche2.supportKernel_signal_refinement
+#print axioms Orthemology.Tranche2.supportKernel_signal_refinement
+#check @Orthemology.Tranche2.supportKernel_target_enlargement
+#print axioms Orthemology.Tranche2.supportKernel_target_enlargement

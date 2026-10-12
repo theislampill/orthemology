@@ -1,0 +1,758 @@
+{
+  "frozen_language": {
+    "commit": "c8b5db593d88311e5a020607dba70ff838ab61c5",
+    "files": [
+      {
+        "path": "qamus/examples/p007-li-pilot/vn-unlock.json",
+        "sha256": "0b03c22d13ab88b291a14cfdcb6b6c84bbd79252bf58f790fa9870488b160a57",
+        "bytes": 1772,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/migration-provenance.json",
+        "sha256": "317c3d238f708119ff2074c968cec33606de559d374d8df630f5618f5db54295",
+        "bytes": 2726,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/schemas/typed-claim-contract.schema.json",
+        "sha256": "7508771ced0eea503b6e02c99a03f8aa8a9f82f34fa541bb3b2d0f0f5568ea60",
+        "bytes": 13758,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/typed_claim_contract.py",
+        "sha256": "87a65432b1fd3014574f5cadda30bf9ae610b289ae193c45d8d7a1a1c23b8619",
+        "bytes": 19643,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_p007_pilot.py",
+        "sha256": "0b09882f12f0ce72736039b6dfa509f3d2b7ba61318c29ae7801d65c6a90219e",
+        "bytes": 37984,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_particle_projection_parity.py",
+        "sha256": "e83924f512b2bda1ac12b3f9428c774c3be2e1863b80e732c1c80aa25c1b0bc1",
+        "bytes": 33036,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_website_payload.py",
+        "sha256": "5432487aee8293861d23db23252d419937d1d4599ab2fd1e17a3ea75c4734612",
+        "bytes": 45873,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/build_p007_li_pilot.py",
+        "sha256": "d4133d20e270c2a6a66115218b25b159921c20e1b5ade904f3c8f3a357fc2e41",
+        "bytes": 26886,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/certify_typed_fact.py",
+        "sha256": "0716d9a80a21c3bc6f2348012e60db62628d419448fec7edda287805ac409ef1",
+        "bytes": 94382,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/fact_ledger.py",
+        "sha256": "bb9f94c8746257cd4f3f832e206d48aec59a1d0d85ab87604e659f71e15ab258",
+        "bytes": 24941,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/skills/reason-key-registry.jsonl",
+        "sha256": "6da40a7c83ffe6a167255ce1ee9bbd82fedfae095a41841aa91ca4f2b2c749e0",
+        "bytes": 6560,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/schemas/two-vote-artifact.schema.json",
+        "sha256": "51c10869771e90acc20a40e04fff1d608511dd626b29568b130508ecc4430bbf",
+        "bytes": 12881,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/lattice/registered-projectors.json",
+        "sha256": "0239a26a09d6f721bdda88badff411f56e7305b055b6550dd40bb218cff320eb",
+        "bytes": 21298,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/build_p007_website_payloads.py",
+        "sha256": "63af022801ccf56fe7e01d6f0547a554c3bd71a012a338b58222c652bb37ef77",
+        "bytes": 9382,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/website-payloads/p007_li_adam_clean.payload.json",
+        "sha256": "cf471fc2cd2e0994c3c0b10a168a191021434dbd9bae5b19f69748a4b9447f61",
+        "bytes": 7133,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/website-payloads/p007_lillahi_fused.payload.json",
+        "sha256": "2ab0b486e70260d812c69fb3e632be12842afe9a7d4956448399c6ad1575f52a",
+        "bytes": 7790,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/qamus/website-handoff/WEBSITE-AGENT-HANDOFF-CONTRACT-2026-07-29.md",
+        "sha256": "c6fc1943057bc2a9f00b794950fc5c2dafce46d92b5f98ba3c4979ebb7371a0a",
+        "bytes": 19050,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/indexes/largelexicon/qamus-qword-crosswalk.manifest.json",
+        "sha256": "9efe385fb3f8c3b6c0c8be9407a81322261bfc07996a55a83d8a8d4b2b84bc43",
+        "bytes": 108399,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/certification/events.jsonl",
+        "sha256": "ae58eb6502c451ee1969fd51b144b32b7db25600532a6dd3e85e7e40c4f023f7",
+        "bytes": 424154,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "All selected fact/segmentation certification and revocation transitions; not the full ledger"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/certification/claim-binding-migration.json",
+        "sha256": "c1cbb115875a10f554d81d7ba583818fe25d8488fabc44936fdf0cdf1bb50153",
+        "bytes": 21874,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/locations.json",
+        "sha256": "07a85ae342ab9a63a87ef44d1b07c14a899773adcb7555dcc9c07bfe72d51fbc",
+        "bytes": 27537,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/parity-report.json",
+        "sha256": "5ac1f10e807aba6ffbada7c25c9cf519ce5fa34cb167eae914b0a428c3bb4670",
+        "bytes": 13736,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/entry-reverse-index.json",
+        "sha256": "1a7b4b3fbda650e01c84918402e70f6e97e47fa62ff47b61b946fd5968de477d",
+        "bytes": 5755,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/production-difference.json",
+        "sha256": "1374a96d221776e517b675434635e41883d5c05c25911dcbffaf7f4f809b08ed",
+        "bytes": 19098,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/website-payloads/multi_entry_liqawmihi_61_5_4.payload.json",
+        "sha256": "5f27ced1dd998e1874a2c2b4b468ca899f9147a2a20c1179af7a4bd81d479518",
+        "bytes": 8524,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "Full separate canary body, distinguished from pilot projection"
+      },
+      {
+        "path": "qamus/schemas/particle-edge-ontology.schema.json",
+        "sha256": "d315768b06675b29fcccf07cefd41e623b0a80295d83c0f9d6db4fa0541ae7ce",
+        "bytes": 20515,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/votes-b-mcp-calls.jsonl",
+        "sha256": "0b578bb218993fc54088025a86b6a9c83ac5d25acdc4974b1dc7f40fe687e225",
+        "bytes": 18203,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/reviewer-b-worklist.json",
+        "sha256": "e286460ab65ffe67a2c3b3cac93014f70d7bb161a09e7618cd07e3a30b615fdc",
+        "bytes": 6082,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/build_largelexicon_qword_crosswalk.py",
+        "sha256": "520ef1c4af553532248523a652178aee77b4bdf8fc5e937ceb527e6019368878",
+        "bytes": 6691,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/largelexicon_common.py",
+        "sha256": "9d788e98f2a387e4d917cee6f1be24434680a73ffb7ddbbeb33198444be61133",
+        "bytes": 56764,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/largelexicon_table_reader.py",
+        "sha256": "d394dc22002fc1f7f59985ce234c3fe56da910edf2cd2bf32c178cd48fd70cf0",
+        "bytes": 8973,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/fact_projectors.py",
+        "sha256": "617856b3dee467bd0a67197d503c9dcd3935312571b73bbf8a8cd5f4356242b7",
+        "bytes": 63401,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/reverse-trace.json",
+        "sha256": "e8be592b2f030358ca0aa96ec1e9f57dc644d42381fd7bf0884cba8d13aa164c",
+        "bytes": 10554,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/two-vote-artifacts.v1_1.jsonl",
+        "sha256": "b1f74ed09a7781af678aa730b142b492da4128879ba90fc80fbcde39f13564a8",
+        "bytes": 48685,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/two-vote-artifacts.v1.jsonl",
+        "sha256": "9d0bb73255f2feb3dd2b9f6ddddef89183c5fb113a3ceecf8f7a442e45477348",
+        "bytes": 48120,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/votes-a.jsonl",
+        "sha256": "e41b09b18f0c4a161d59036d8fe2038865aaba294d8c3e0fe180f24dd936c6bb",
+        "bytes": 18569,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "One selected occurrence vote"
+      },
+      {
+        "path": "tools/normalize_ar.py",
+        "sha256": "62ede9ad1da617c3dee9a83d546019529dd738df68522e31f77ddf7c641e7c03",
+        "bytes": 6447,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/schemas/projector-record.schema.json",
+        "sha256": "846324c1cca2ea2d54cb25b004dc08fbc8887ba7e7a95cf68c402f593ee14657",
+        "bytes": 5857,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/schemas/fact-ledger-row.schema.json",
+        "sha256": "2ae591a8fd747a1095b3f6f91d3f18c7f1acefd8e420bd399116699fed814074",
+        "bytes": 12242,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "nahw/evals/grammar-decision-gates.json",
+        "sha256": "ccc18bed9af049013cc7aa69b9eb1b27b4639f06c5afd90070a6bc406dd20c5f",
+        "bytes": 2566,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "START-HERE-FOR-CONTINUATION.md",
+        "sha256": "b4890af12522e3e961c6177186446ac518b8c5803a36621599737a2252bba5f4",
+        "bytes": 13108,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "provenance/source-boundaries.md",
+        "sha256": "00387365d06727fbaa86933216e54ab6768335994937a4bcb5dc36e830942938",
+        "bytes": 8845,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "source-sha256:bed14d167b0ac7371b17eccba9bc699fc66c8c827cfff8ff998978833c37580b",
+        "sha256": "bed14d167b0ac7371b17eccba9bc699fc66c8c827cfff8ff998978833c37580b",
+        "bytes": 21331,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "source-sha256:07e7b506843a611064434973919889c7daa04b762a59cefbe64104011b8819e6",
+        "sha256": "07e7b506843a611064434973919889c7daa04b762a59cefbe64104011b8819e6",
+        "bytes": 13867,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/parser/meta-transclusive-lattice-projection.md",
+        "sha256": "2d0129b14ba69ea1b9977a4837d3bc8a794fb71826b9a01715e69a0ed5d20ab4",
+        "bytes": 3738,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "provenance/public-runnability.md",
+        "sha256": "bfa4e6b98e17fcaff6facacbb54b6dec9ac581c3a0e8da8ccdd701f34ea85a3b",
+        "bytes": 5185,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_meta_transclusion_projection.py",
+        "sha256": "f092c529023a9e101dc4fea3146456452b1f7df54d83c67d003f7d72a2423694",
+        "bytes": 14216,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/current-state.yaml",
+        "sha256": "58c8254e77d28bd2b1de5eb472e29fac00263336ecea1733812915ebbf99ab72",
+        "bytes": 2117,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/golden-commands.md",
+        "sha256": "4ba62dab852dd7ae9108b37c6bc541148521a1b5ed14016bc0b0c4e01b9ece71",
+        "bytes": 13618,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "b6d6a664b61204bc9cf4d792e34e2086403817ddece590816c4c1f595b238105",
+        "bytes": 8457,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "source-sha256:0ed9fd37c51ae70e54fb0a455c1c3857e48754c80c56864f9eebd498791fba08",
+        "sha256": "0ed9fd37c51ae70e54fb0a455c1c3857e48754c80c56864f9eebd498791fba08",
+        "bytes": 12200,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "source-sha256:750628cadc5b03b2c51c3de5c155a098970ddf48a0c813f85c795ce0bb4f91e6",
+        "sha256": "750628cadc5b03b2c51c3de5c155a098970ddf48a0c813f85c795ce0bb4f91e6",
+        "bytes": 6326,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/certification-authority.md",
+        "sha256": "ee0fa7b69b957717d9ab71232741d564fa1a007dffa0d04492ddec89438376ed",
+        "bytes": 14749,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/parser/TRANSCLUSION.md",
+        "sha256": "3023c2c910be4018914e722047ca9c3a3b3e56ce6635112f6b3b53508164166f",
+        "bytes": 4380,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/qamus/particle-projection-contract.md",
+        "sha256": "472d9b955cf3763c2f500fb82d6b57e54107e28b8abf2f960d28c1c185628c7a",
+        "bytes": 12494,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/decision-ledger.md",
+        "sha256": "cfd00180537daa14f577f357a649787e95c0c264ca515f2ebb0e8901cd81bf73",
+        "bytes": 9984,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/README.md",
+        "sha256": "7672992aa7ae693e555cf8a6982b3bf4aa868d33f4c90d34589b0a5a177b141c",
+        "bytes": 6584,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/candidate-lattice.jsonl",
+        "sha256": "b7570b4a83abae08e28fbcbd64302e6dde88cead35a1b22e5f5970e7eec4cd7b",
+        "bytes": 13647,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "One selected 61:5:4 lattice record of fifteen"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/morpheme-occurrences.jsonl",
+        "sha256": "b83fc472928ecde4f8b208574894377d81fc25238efd31f6dff929204112f385",
+        "bytes": 3106,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/typed-facts.jsonl",
+        "sha256": "57dfa089efbcf15b7d903ab3947a9ed394989bc298c015e5f949b86153084163",
+        "bytes": 117627,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "Four selected occurrence fact rows of forty-nine"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/transclusion-edges.jsonl",
+        "sha256": "2988a66bb8263c4cb22bf91586843a24aebc1187c95158eeb379e7bc19b6ba3c",
+        "bytes": 53814,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "Six selected occurrence edges of seventy-two"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/projections.jsonl",
+        "sha256": "cdc9d956cf711512f92c4919a27f68fd2578d05d6e6d42ca428740c0788843e6",
+        "bytes": 35007,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "One 61:5:4 projection of twelve"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/votes-b.jsonl",
+        "sha256": "f94b1eac1a26007c107c142f02cb8a5350cce80c04d2a0f772028674a494ed63",
+        "bytes": 21911,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "One selected occurrence vote"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/mcp-evidence.jsonl",
+        "sha256": "ec9ccd497c1e547aa39c3fdbbbea45bd0dd7cc0f6d196e23964a11f5c0f946d7",
+        "bytes": 22455,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "Selected provenance and surah61/ayah5/analyze-word4 evidence; no full-file semantic claim"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/live-rows.jsonl",
+        "sha256": "f4d1c5125bf9ae3d0109e81442a71ff00cf6172e037d7e4afafbc5f433925765",
+        "bytes": 20360,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/examples/p007-li-pilot/family-selection.json",
+        "sha256": "319ecead2d216b7436db155588be2e000e273b066191b7e553b4bcf42ce587f2",
+        "bytes": 10736,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_two_vote_artifacts.py",
+        "sha256": "f0bb0b10c76538730ff27c073f27ba03d1a19ac25fad069e5514d9f7f7006fc1",
+        "bytes": 46449,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/migrate_p007_claim_binding.py",
+        "sha256": "afabbb001bfb635ccc54d87699e018cabddb51c37153be496df82522e2cf0d36",
+        "bytes": 21034,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "tools/validate_largelexicon_qword_crosswalk.py",
+        "sha256": "f8363718b30391aee2e9edbbb9ec251c34099e3515102cd16bf345ce84546c85",
+        "bytes": 13233,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/schemas/largelexicon-qword-crosswalk.schema.json",
+        "sha256": "0bb7a010ce118b2d3a827ec09ae4d6b7e0636d1fd3199967d01eb5f70461305d",
+        "bytes": 4037,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "docs/certification-policy.md",
+        "sha256": "431b6410794b4984015550f6245cdbb465519585a31d1063cd6cb51e8aeaa653",
+        "bytes": 6158,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "nahw/SKILL.md",
+        "sha256": "6bc6eb1b0520ccea6cec8053525b2eb309323bb2bf0c524aa09fbbcf71ca86a5",
+        "bytes": 42383,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "nahw/procedures/particle-function-decision.md",
+        "sha256": "6dcc6c6552d4eba816383c4149001c7e26b419648e2ada2e8c3ea73a3bdca9a4",
+        "bytes": 5855,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/data/current/NOTICE.md",
+        "sha256": "053d61d5fa03b6cdabe6e78e6f62c81188227b15837d01cfbafdf9599f1370f2",
+        "bytes": 2230,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/data/current/README.md",
+        "sha256": "5d101c4ca9907d12686057408cc450d178bb35e15d308b6aa4cff38f8cf3c348",
+        "bytes": 4848,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/data/current/entries.jsonl",
+        "sha256": "b742fde5a8c1a6f04cdf104e0e12fb374ed0d5349eb6a3ace7e34ba2f9e1c15d",
+        "bytes": 4830755,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "One selected entry b10…; other dictionary entries not semantically read"
+      },
+      {
+        "path": "qamus/schemas/qamus-entry-public.schema.json",
+        "sha256": "0048115aa7b56b46898da0e48c04f0b6c3d1dafd03487d83e18a71a892b5ac94",
+        "bytes": 3449,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      },
+      {
+        "path": "qamus/skills/particle-function-registry.jsonl",
+        "sha256": "fe46a6f57d16dfe5b5116bd55190533eb3d055b73711bd985c163754cfdd56fe",
+        "bytes": 8455,
+        "verified": true,
+        "semantic_read": true,
+        "fresh_semantic_scope": "Selected li-/61:5:4 registry record"
+      },
+      {
+        "path": "sarf/SKILL.md",
+        "sha256": "23827fd83b27a4f5ede165eb845ad61ee942f4c345c1a7225a62c93d4eec01b7",
+        "bytes": 57884,
+        "verified": true,
+        "semantic_read": false,
+        "fresh_semantic_scope": "Identity/hash only; no new semantic read claimed"
+      }
+    ],
+    "all_79_exact_hashes_verified": true,
+    "scope": "70 occurrence files plus 9 extra sense files; metadata/hash closure is not full semantic corpus coverage"
+  },
+  "review_receipts": [
+    {
+      "sha256": "09def33d00b3e78fe884d61eab905f019272e2efd739520010439fc64bf04cc9",
+      "bytes": 4363,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "T16-SRC-1cda3e4399e92ac8dd3a"
+      ]
+    },
+    {
+      "sha256": "24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a",
+      "bytes": 1689,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "D17-T13-INHERITED-RECEIPT",
+        "T13-RECEIPT-SOURCE"
+      ]
+    },
+    {
+      "sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+      "bytes": 2526,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "T12-SOURCE-FINAL-RECEIPT"
+      ]
+    },
+    {
+      "sha256": "996107254670edb11d47dddc03ce0b6dd4fe045ae41b6d73b2079f3c827862f1",
+      "bytes": 1761,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "T14-CP-RECEIPT-SOURCE"
+      ]
+    },
+    {
+      "sha256": "9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27",
+      "bytes": 5385,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "D17-T15-INHERITED-RECEIPT",
+        "T15-RECEIPT-SOURCE"
+      ]
+    },
+    {
+      "sha256": "e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb",
+      "bytes": 3137,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "D17-T14-INHERITED-RECEIPT",
+        "T14-RECEIPT-SOURCE"
+      ]
+    },
+    {
+      "sha256": "fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1",
+      "bytes": 3080,
+      "verified": true,
+      "fresh_read_status": "COMPLETE_RECEIPT_BODY",
+      "status": "Inherited automated/model-assisted verification or delivery receipt; not fresh independent specialist review",
+      "aliases": [
+        "T12-SOURCE-VERIFICATION-SCOPE"
+      ]
+    }
+  ],
+  "recovered_custody": {
+    "zip_sha256": "34d9fdc77641cc607591fe6455dd10cbecdbb5de469bddbf43d1298e1bb66560",
+    "zip_bytes": 93390,
+    "pdf_sha256": "32c402281880ea6d8e5d8bde79fe76591fd69f713eef13e66fc7dcbf9f8bb4e9",
+    "pdf_bytes": 60757,
+    "pdf_pages_read": 5,
+    "superseded_gap": "PDF unavailable in initial transfer; exact original recovered. Invalid inherited S01 binding is retained as a correction, not erased."
+  },
+  "empirical_inputs": {
+    "T15": [
+      {
+        "sha256": "f29d479d75a49670a2be061631dd43efb2927e907b2e93c356d2d4bf861b598c",
+        "bytes": 141808,
+        "role": "official data ZIP"
+      },
+      {
+        "sha256": "c6cf4aef16b7cabf1822bdad21dd3ef45cb46c1a565253701ff7064e03989505",
+        "bytes": 10168,
+        "role": "official supplementary workbook"
+      }
+    ],
+    "T16": [
+      {
+        "sha256": "dc49a4248a193b47df08f419f108f4070e0c0c07422fdbda31537c1d33aa6f5c",
+        "bytes": 225982424,
+        "url": "https://osf.io/download/ct2vw/",
+        "role": "raw source"
+      },
+      {
+        "sha256": "c43ba9293db5c1657f7829de1033e0985bb4dc46508ea253a669449207dbd317",
+        "bytes": 1814085,
+        "url": "https://osf.io/download/qcey3/",
+        "role": "response source"
+      }
+    ]
+  },
+  "remaining_evidence_limits": [
+    "Most empirical primary articles and source-history records are assessed through the freshly read controlling reports rather than newly downloaded primary bodies.",
+    "No human-specialist review or new experiment was obtained.",
+    "T12 original facsimile and T13 Arabic primary witnesses are not freshly inspected in this pass.",
+    "Fusha occurrence sense applicability remains unresolved despite exact identities."
+  ]
+}

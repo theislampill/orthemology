@@ -1,0 +1,56 @@
+PASS snapshot hash: measure-moment-continuation-boundary-20261009/RESULT.md
+PASS snapshot byte count: measure-moment-continuation-boundary-20261009/RESULT.md
+PASS snapshot hash: exponential-tail-effectivity-20261010/RESULT.md
+PASS snapshot byte count: exponential-tail-effectivity-20261010/RESULT.md
+PASS snapshot hash: exponential-tail-independent-review-20261010/REVIEW.md
+PASS snapshot byte count: exponential-tail-independent-review-20261010/REVIEW.md
+PASS snapshot hash: leafwise-noetic-geometry-20261010/RESULT.md
+PASS snapshot byte count: leafwise-noetic-geometry-20261010/RESULT.md
+PASS snapshot hash: state-dependent-gradient-obstruction-20261009/RESULT.md
+PASS snapshot byte count: state-dependent-gradient-obstruction-20261009/RESULT.md
+PASS snapshot hash: information-geometry-transport-20261009/RESULT.md
+PASS snapshot byte count: information-geometry-transport-20261009/RESULT.md
+PASS snapshot hash: noetic-gradient-transport-20261009/INHERITED_HESSIAN_SOURCE.md
+PASS snapshot byte count: noetic-gradient-transport-20261009/INHERITED_HESSIAN_SOURCE.md
+PASS snapshot hash: fisher-boundary-root-20261010/GEOMETRIC_TRANSPORT.md
+PASS snapshot byte count: fisher-boundary-root-20261010/GEOMETRIC_TRANSPORT.md
+PASS mean derivative is minus variance
+PASS variance derivative is minus third cumulant
+PASS F derivative/mean sign order 0
+PASS F derivative/mean sign order 1
+PASS F derivative/mean sign order 2
+PASS F derivative/mean sign order 3
+PASS F derivative/mean sign order 4
+PASS F derivative/mean sign order 5
+PASS F derivative/mean sign order 6
+PASS second log-partition derivative
+PASS third log-partition derivative
+PASS inverse mean metric derivative
+PASS lognormal endpoint variance
+PASS KL equals mean-coordinate Bregman with same argument order
+PASS KL reverses the natural-coordinate Bregman arguments
+PASS boundary-to-interior KL orientation
+PASS interior-to-boundary KL orientation
+PASS calibrated mean boundary Bregman is dual potential
+PASS metric coordinate transformation
+PASS linear-objective mean natural gradient
+PASS normalizer translation preserves Bregman after shift
+PASS normalizer additive constant drops from metric
+PASS uncentered endpoint constant retained
+PASS Bernoulli variance identity
+PASS Bernoulli mean descent
+PASS Bernoulli dual metric
+PASS Bernoulli calibrated boundary value
+PASS Bernoulli calibrated boundary slope
+PASS Bernoulli inverse chart
+PASS Vandermonde lognormal moment determinant degree 1
+PASS covariance Schur-complement determinant degree 1
+PASS Vandermonde lognormal moment determinant degree 2
+PASS covariance Schur-complement determinant degree 2
+PASS Vandermonde lognormal moment determinant degree 3
+PASS covariance Schur-complement determinant degree 3
+PASS Vandermonde lognormal moment determinant degree 4
+PASS covariance Schur-complement determinant degree 4
+PASS zero-radius Taylor term ratio
+PASS 54 exact controls
+Exact finite algebraic/source-hash controls only. General analytic claims are ordinary proofs in RESULT.md; no kernel certification.

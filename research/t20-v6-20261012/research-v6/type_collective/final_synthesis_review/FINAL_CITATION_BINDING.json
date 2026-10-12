@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-11T21:59:29.790503+00:00",
+  "previous_reviewed_sha256": "4f30cd83df99708297cb9b13adcc785c4cd7a35131a4cebdc077800cac2cef6a",
+  "final_reviewed_sha256": "87bb3fa4bdd90a623de2ba93ea79c32b0f0f50c8ec637e710c03fc0b2be95a29",
+  "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/synthesis__WHOLE_CORPUS_SYNTHESIS.md.final_citation_accepted",
+  "delta": "t20-v6-20261011/type_collective/final_synthesis_review/FINAL_CITATION_DELTA.diff",
+  "method": "Complete citation-only delta read against accepted mathematical snapshot; source f376 \u00a74 already independently full read.",
+  "scope": "Mathematical additions and their exact source attribution; Dar primary-edition attribution unchanged and not independently recollated; whole-corpus denominator not reviewed."
+}

@@ -1,0 +1,178 @@
+--- pre-correction/REPORT.md
++++ REPORT.md
+@@ -45,7 +45,7 @@
+ 
+ Both give `P(Theta=1)=P(D=1)=1/2`. The proposed compact statistic is `(1, P(Theta=1), P(D=1))`, hence is identical under the two laws.
+ 
+-Now make the demonstration protocol exact: each benchmark query samples a fresh independent episode and reveals only one selected coordinate, either `Theta` or `D`. It never pairs the two coordinates from the same episode. Under either law, every selected coordinate is a fair Bernoulli variable. Consequently every finite outcome string, conditional on its query choices, has probability `2^(-n)` under both laws. Even adaptive query selection cannot help because each fresh coordinate has the same conditional distribution. This is a protocol-specific identifiability statement, not an allegation about the authors' actual tests.
++Now make the demonstration protocol exact: each benchmark query samples a fresh independent episode and reveals only one selected coordinate, either `Theta` or `D`. It never pairs the two coordinates from the same episode. Under either law, every selected coordinate is a fair Bernoulli variable. Sequentially, each fresh selected outcome is fair conditional on the prior history and current query. For a deterministic adaptive policy, each consistent full query–outcome transcript of length `n` therefore has probability `2^(-n)` under both laws; inconsistent transcripts have probability zero. Randomized query-selection factors are common to both models, so their full protocol laws still agree. This is not a claim about outcome probabilities conditional on the entire adaptive choice sequence: later choices can reveal earlier outcomes. This is a protocol-specific identifiability statement, not an allegation about the authors' actual tests.
+ 
+ The calibrated forecast `1/2` achieves the optimal expected Bernoulli log loss, one bit per isolated query, under both laws. That means optimal probabilistic prediction on this protocol, not correct guesses on every realized trial. More data of exactly this type do not reveal the missing dependence. The two joint laws themselves also have equally short descriptions under a declared sign-symmetric parameterization,
+ 
+@@ -92,7 +92,7 @@
+ 
+ ## 5. Verification, coverage, and stopping boundary
+ 
+-`python3 verify.py` completed successfully with exact rational controls for the laws, marginals, conditional answers, closure, commuting updates, and impossible branches. Finite likelihood enumeration through length five corroborates the stated protocol calculation; the all-length claim follows from the product argument. Optional conditional code-length numbers are floating-point illustrations only: retaining the dependence reduces expected conditional log loss from 1 bit to approximately 0.721928 bits. They play no role in a source-warrant judgment.
++Normal and optimized (`python3 -O`) runs of `verify.py` completed successfully using explicit checked raises for the laws, marginals, conditional answers, closure, commuting updates, and impossible branches. Deliberately false checks failed in both modes. Fixed-query likelihood enumeration through length five corroborates that restricted product calculation. A separate two-step adaptive control chooses `D` second exactly when the first bit is one: conditioning on choices `(Theta,D)` makes the first bit certain and gives probability `1/2`, not `1/4`, to outcome pair `(1,1)`. The 16 full-transcript checks confirm the corrected policy law; the all-length statement follows from sequential fairness and common policy factors. The earlier normal-only receipt and pre-correction report/script are preserved unchanged, with exact diffs and a correction receipt. Optional conditional code-length numbers are floating-point illustrations only: retaining the dependence reduces expected conditional log loss from 1 bit to approximately 0.721928 bits. They play no role in a source-warrant judgment.
+ 
+ Primary reading was continuous through the complete main argument, PDF pp.1–23, including §§1–5 and their notes. The 29-page PDF's bibliography was not independently researched. PDF pp.8, 9, 14, 18, 19, 20, and 23 were additionally rendered and visually inspected. The source was obtained from version-specific arXiv PDF and HTML endpoints; metadata and source hashes are retained. No claim of full visual page coverage, verification of cited external works, or independent support for the Proxy Hypothesis is made.
+ 
+--- pre-correction/verify.py
++++ verify.py
+@@ -5,9 +5,24 @@
+ from fractions import Fraction as Q
+ from itertools import product
+ from pathlib import Path
+-import hashlib, json, math
++import argparse, ast, hashlib, json, math, sys
+ 
+ ROOT=Path(__file__).resolve().parent
++parser=argparse.ArgumentParser()
++parser.add_argument('--output', default='CONTROL_RESULTS.json')
++parser.add_argument('--false-check-control', action='store_true')
++args=parser.parse_args()
++checks_executed=0
++def require(condition, label):
++    global checks_executed
++    checks_executed += 1
++    if not condition:
++        raise RuntimeError('Verification failed: '+label)
++
++if args.false_check_control:
++    require(False, 'deliberate active false-check control')
++require(not any(isinstance(n, ast.Assert) for n in ast.walk(ast.parse(Path(__file__).read_text()))),
++        'current verifier must contain no optimization-disabled assert statements')
+ S=list(product((0,1),repeat=2))  # target theta, fixed future audit D
+ u=(Q(1),)*4
+ theta=tuple(Q(t) for t,d in S)
+@@ -53,35 +68,35 @@
+ 
+ M=[diag([d==b for t,d in S]) for b in (0,1)]
+ V=(u,theta,audit)
+-assert mv(V,pi0)==mv(V,pi1)==(Q(1),Q(1,2),Q(1,2))
+-assert all(x>=0 for pi in (pi0,pi1) for x in pi)
+-assert all(sum(pi)==1 for pi in (pi0,pi1))
++require(mv(V,pi0)==mv(V,pi1)==(Q(1),Q(1,2),Q(1,2)), 'exact condition 71')
++require(all(x>=0 for pi in (pi0,pi1) for x in pi), 'exact condition 72')
++require(all(sum(pi)==1 for pi in (pi0,pi1)), 'exact condition 73')
+ # This is the inherited audit pair, not a new counterexample.
+-assert dot(interaction,pi0)==Q(3,5)
+-assert dot(interaction,pi1)==Q(-3,5)
++require(dot(interaction,pi0)==Q(3,5), 'exact condition 75')
++require(dot(interaction,pi1)==Q(-3,5), 'exact condition 76')
+ posteriors=[[posterior(mv(N,pi)) for N in M] for pi in (pi0,pi1)]
+-assert posteriors==[[Q(1,5),Q(4,5)],[Q(4,5),Q(1,5)]]
+-assert all(dot(u,mv(N,pi))==Q(1,2) for pi in (pi0,pi1) for N in M)
++require(posteriors==[[Q(1,5),Q(4,5)],[Q(4,5),Q(1,5)]], 'exact condition 78')
++require(all(dot(u,mv(N,pi))==Q(1,2) for pi in (pi0,pi1) for N in M), 'exact condition 79')
+ B,dims=closure(V,M)
+-assert dims==[3,4] and len(B)==4
++require(dims==[3,4] and len(B)==4, 'exact condition 81')
+ # A known finite candidate comparison: one correct conditional probe separates.
+-assert posteriors[0][1] != posteriors[1][1]
++require(posteriors[0][1] != posteriors[1][1], 'exact condition 83')
+ # Same fixed observation is idempotent; contradictory observation impossible.
+-assert all(mm(N,N)==N for N in M)
+-assert all(not any(row) for row in mm(M[0],M[1]))
++require(all(mm(N,N)==N for N in M), 'exact condition 85')
++require(all(not any(row) for row in mm(M[0],M[1])), 'exact condition 86')
+ for pi in (pi0,pi1):
+-    assert posterior(mv(M[0],mv(M[1],pi))) is None
++    require(posterior(mv(M[0],mv(M[1],pi))) is None, 'exact condition 88')
+ # Reuse the inherited closed Walsh moment update, verifying basis identity.
+ W=(u,tau,delta,interaction)
+ Ts=[]
+ for b,N in enumerate(M):
+     s=Q((-1)**b)
+     T=((Q(1,2),0,s/2,0),(0,Q(1,2),0,s/2),(s/2,0,Q(1,2),0),(0,s/2,0,Q(1,2)))
+-    assert mm(W,N)==mm(T,W)
++    require(mm(W,N)==mm(T,W), 'exact condition 95')
+     Ts.append(T)
+ # Each isolated-coordinate Bernoulli benchmark has true p=1/2 in both laws.
+-# Every observed bit is assigned likelihood 1/2, even for adaptive coordinate
+-# choices, provided EACH query draws a fresh independent episode and reads one bit.
++# Fixed query schedules: each query draws a fresh independent episode and reads
++# one bit. Adaptive policy transcript probabilities are checked separately below.
+ for n in range(1,6):
+     for qs in product((theta,audit),repeat=n):
+         for ys in product((0,1),repeat=n):
+@@ -91,7 +106,37 @@
+                 for q,y in zip(qs,ys):
+                     p=dot(q,pi);l*= p if y else 1-p
+                 ls.append(l)
+-            assert ls==[Q(1,2)**n,Q(1,2)**n]
++            require(ls==[Q(1,2)**n,Q(1,2)**n], 'exact condition 109')
++# Tiny adaptive policy: query1=Theta; query2=D iff the first outcome is 1.
++# Later choices can reveal the first outcome. Do not condition on the whole
++# choice sequence and then claim all outcome strings have probability 2**(-n).
++query_vectors={'Theta':theta, 'D':audit}
++def adaptive_likelihood(pi, queries, outcomes):
++    q1,q2=queries; y1,y2=outcomes
++    if q1!='Theta' or q2!=('D' if y1==1 else 'Theta'):
++        return Q(0)
++    p1=dot(query_vectors[q1],pi)
++    p2=dot(query_vectors[q2],pi)  # A fresh independent episode at step two.
++    return (p1 if y1 else 1-p1)*(p2 if y2 else 1-p2)
++
++adaptive_transcripts=[]
++for qs in product(('Theta','D'),repeat=2):
++    for ys in product((0,1),repeat=2):
++        probabilities=[adaptive_likelihood(pi,qs,ys) for pi in (pi0,pi1)]
++        consistent=qs[0]=='Theta' and qs[1]==('D' if ys[0]==1 else 'Theta')
++        expected=Q(1,4) if consistent else Q(0)
++        require(probabilities==[expected,expected], 'adaptive transcript equivalence and consistency')
++        adaptive_transcripts.append({'queries':qs,'outcomes':ys,'probability':probabilities[0]})
++require(sum(x['probability'] for x in adaptive_transcripts)==1, 'adaptive law normalized')
++conditioned=[x for x in adaptive_transcripts if x['queries']==('Theta','D')]
++choice_mass=sum(x['probability'] for x in conditioned)
++first_one_given_choices=sum(x['probability'] for x in conditioned if x['outcomes'][0]==1)/choice_mass
++both_one_given_choices=sum(x['probability'] for x in conditioned if x['outcomes']==(1,1))/choice_mass
++require(choice_mass==Q(1,2), 'probability of Theta then D choices')
++require(first_one_given_choices==1, 'later adaptive query reveals first outcome')
++require(both_one_given_choices==Q(1,2) and both_one_given_choices!=Q(1,4),
++        'entire-choice conditioning is not independent fair-bit conditioning')
++
+ # Equal one-bit expected scores are an exact statement, no log numeric needed.
+ # Illustrative floating-point conditional code lengths do not certify semantics.
+ h=-(.2*math.log2(.2)+.8*math.log2(.8))
+@@ -106,7 +151,15 @@
+  'probe_D1_posterior_gap':abs(posteriors[0][1]-posteriors[1][1]),
+  'two_candidate_minimax_absolute_conditional_error':Q(3,10),
+  'isolated_query_expected_logloss_bits_each':1,
+- 'isolated_query_iid_likelihood_controls_up_to_length':5,
++ 'fixed_query_iid_likelihood_controls_up_to_length':5,
++ 'adaptive_transcript_cases_checked':len(adaptive_transcripts),
++ 'adaptive_consistent_transcripts':sum(x['probability']>0 for x in adaptive_transcripts),
++ 'adaptive_choice_leakage':{
++    'policy':'query1=Theta; query2=D iff first outcome=1; fresh episode each query',
++    'P_choices_Theta_then_D':choice_mass,
++    'P_first_one_given_entire_choice_sequence_Theta_then_D':first_one_given_choices,
++    'P_both_one_given_entire_choice_sequence_Theta_then_D':both_one_given_choices,
++    'consistent_transcript_probability':Q(1,4)},
+  'conditional_entropy_bits_approx':h,
+  'omission_excess_conditional_logloss_bits_approx':1-h,
+  'joint_model_parameters_plus_minus':[[Q(3,5)],[Q(-3,5)]],
+@@ -114,15 +167,17 @@
+                'No claim of perfect realized guesses, causal identification, actual mental states, or testimonial warrant.',
+                'One conditional probe separates two declared candidates, not all possible models.',
+                'Numbers quantify this finite predictive task only; they are not theological warrant scores.']}
+-# Bound primary and inherited files, and assert inherited originals unchanged.
++# Bound primary and inherited files; check inherited originals unchanged.
+ bindings=json.loads((ROOT/'INPUT_BINDINGS.json').read_text())
+ for x in bindings['inherited_inputs']:
+     snap=ROOT/x['snapshot']
+-    assert hashlib.sha256(snap.read_bytes()).hexdigest()==x['sha256']
++    require(hashlib.sha256(snap.read_bytes()).hexdigest()==x['sha256'], 'exact condition 136')
+     original=ROOT.parent/x['original']
+-    assert hashlib.sha256(original.read_bytes()).hexdigest()==x['sha256']
++    require(hashlib.sha256(original.read_bytes()).hexdigest()==x['sha256'], 'exact condition 138')
+ for x in bindings['primary_sources']:
+-    assert hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256']
++    require(hashlib.sha256((ROOT/x['path']).read_bytes()).hexdigest()==x['sha256'], 'exact condition 140')
+ results['input_bindings_reverified']=True
+-(ROOT/'CONTROL_RESULTS.json').write_text(json.dumps(serial(results),indent=2)+'\n')
++results['explicit_checks_executed']=checks_executed
++results['optimization_level']=sys.flags.optimize
++(ROOT/args.output).write_text(json.dumps(serial(results),indent=2)+'\n')
+ print(json.dumps(serial(results),indent=2))

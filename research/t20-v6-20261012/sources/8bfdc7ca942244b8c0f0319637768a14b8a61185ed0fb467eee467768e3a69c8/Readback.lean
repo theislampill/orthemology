@@ -1,0 +1,97 @@
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.PhysicalCost.blockIndex_at_offset
+#print Orthemology.Tranche3.PhysicalCost.blockIndex_at_offset
+#print axioms Orthemology.Tranche3.PhysicalCost.blockIndex_at_offset
+#check Orthemology.Tranche3.PhysicalCost.physicalPosition_bijective
+#print Orthemology.Tranche3.PhysicalCost.physicalPosition_bijective
+#print axioms Orthemology.Tranche3.PhysicalCost.physicalPosition_bijective
+#check Orthemology.Tranche3.PhysicalCost.positionEquiv
+#print Orthemology.Tranche3.PhysicalCost.positionEquiv
+#print axioms Orthemology.Tranche3.PhysicalCost.positionEquiv
+#check Orthemology.Tranche3.PhysicalCost.flatten_at_offset
+#print Orthemology.Tranche3.PhysicalCost.flatten_at_offset
+#print axioms Orthemology.Tranche3.PhysicalCost.flatten_at_offset
+#check Orthemology.Tranche3.PhysicalCost.listCost
+#print Orthemology.Tranche3.PhysicalCost.listCost
+#print axioms Orthemology.Tranche3.PhysicalCost.listCost
+#check Orthemology.Tranche3.PhysicalCost.listCost_eq_sum_get
+#print Orthemology.Tranche3.PhysicalCost.listCost_eq_sum_get
+#print axioms Orthemology.Tranche3.PhysicalCost.listCost_eq_sum_get
+#check Orthemology.Tranche3.PhysicalCost.flatten_total_cost
+#print Orthemology.Tranche3.PhysicalCost.flatten_total_cost
+#print axioms Orthemology.Tranche3.PhysicalCost.flatten_total_cost
+#check Orthemology.Tranche3.PhysicalCost.decode_total_cost
+#print Orthemology.Tranche3.PhysicalCost.decode_total_cost
+#print axioms Orthemology.Tranche3.PhysicalCost.decode_total_cost
+#check Orthemology.Tranche3.recursivePhysicalBudget
+#print Orthemology.Tranche3.recursivePhysicalBudget
+#print axioms Orthemology.Tranche3.recursivePhysicalBudget
+#check Orthemology.Tranche3.recursive_resetCost_le_physicalBudget
+#print Orthemology.Tranche3.recursive_resetCost_le_physicalBudget
+#print axioms Orthemology.Tranche3.recursive_resetCost_le_physicalBudget
+#check Orthemology.Tranche3.recursivePhysicalBudget_nonneg
+#print Orthemology.Tranche3.recursivePhysicalBudget_nonneg
+#print axioms Orthemology.Tranche3.recursivePhysicalBudget_nonneg
+#check Orthemology.Tranche3.recursive_recorded_total_bad_budget
+#print Orthemology.Tranche3.recursive_recorded_total_bad_budget
+#print axioms Orthemology.Tranche3.recursive_recorded_total_bad_budget
+#check Orthemology.Tranche3.badActionCost
+#print Orthemology.Tranche3.badActionCost
+#print axioms Orthemology.Tranche3.badActionCost
+#check Orthemology.Tranche3.listCost_badActionCost
+#print Orthemology.Tranche3.listCost_badActionCost
+#print axioms Orthemology.Tranche3.listCost_badActionCost
+#check Orthemology.Tranche3.recursive_physical_total_bad_eq_post_records
+#print Orthemology.Tranche3.recursive_physical_total_bad_eq_post_records
+#print axioms Orthemology.Tranche3.recursive_physical_total_bad_eq_post_records
+#check Orthemology.Tranche3.recursive_physical_total_bad_budget
+#print Orthemology.Tranche3.recursive_physical_total_bad_budget
+#print axioms Orthemology.Tranche3.recursive_physical_total_bad_budget
+#check Orthemology.Tranche3.recursivePhysicalLaw
+#print Orthemology.Tranche3.recursivePhysicalLaw
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw
+#check Orthemology.Tranche3.recursivePhysicalAction_path_measurable
+#print Orthemology.Tranche3.recursivePhysicalAction_path_measurable
+#print axioms Orthemology.Tranche3.recursivePhysicalAction_path_measurable
+#check Orthemology.Tranche3.total_bad_measurable
+#print Orthemology.Tranche3.total_bad_measurable
+#print axioms Orthemology.Tranche3.total_bad_measurable
+#check Orthemology.Tranche3.recursivePhysicalLaw_probability
+#print Orthemology.Tranche3.recursivePhysicalLaw_probability
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_probability
+#check Orthemology.Tranche3.recursivePhysicalLaw_total_bad_budget
+#print Orthemology.Tranche3.recursivePhysicalLaw_total_bad_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_budget
+#check Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_budget
+#print Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_budget
+#check Orthemology.Tranche3.recursivePhysicalLaw_bad_count_tail
+#print Orthemology.Tranche3.recursivePhysicalLaw_bad_count_tail
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_bad_count_tail
+#check Orthemology.Tranche2.guarded_live_stopped_controller_budget
+#print Orthemology.Tranche2.guarded_live_stopped_controller_budget
+#print axioms Orthemology.Tranche2.guarded_live_stopped_controller_budget
+#check Orthemology.Tranche2.recorded_nat_charge_transfer
+#print Orthemology.Tranche2.recorded_nat_charge_transfer
+#print axioms Orthemology.Tranche2.recorded_nat_charge_transfer
+#check Orthemology.Tranche2.recorded_expected_charge_bound
+#print Orthemology.Tranche2.recorded_expected_charge_bound
+#print axioms Orthemology.Tranche2.recorded_expected_charge_bound
+#check Orthemology.Tranche2.recursive_recorded_all_post_nonempty
+#print Orthemology.Tranche2.recursive_recorded_all_post_nonempty
+#print axioms Orthemology.Tranche2.recursive_recorded_all_post_nonempty
+#check Orthemology.Tranche2.recursivePhysicalAction_measurable
+#print Orthemology.Tranche2.recursivePhysicalAction_measurable
+#print axioms Orthemology.Tranche2.recursivePhysicalAction_measurable
+#check Orthemology.Tranche2.stopped_bad_count_le_planned
+#print Orthemology.Tranche2.stopped_bad_count_le_planned
+#print axioms Orthemology.Tranche2.stopped_bad_count_le_planned
+#check Orthemology.Tranche2.phaseNext_actual_support
+#print Orthemology.Tranche2.phaseNext_actual_support
+#print axioms Orthemology.Tranche2.phaseNext_actual_support
+#check Orthemology.Tranche2.phaseNext_rank_decreases
+#print Orthemology.Tranche2.phaseNext_rank_decreases
+#print axioms Orthemology.Tranche2.phaseNext_rank_decreases

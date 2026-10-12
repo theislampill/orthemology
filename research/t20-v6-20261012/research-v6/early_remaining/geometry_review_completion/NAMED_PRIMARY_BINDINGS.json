@@ -1,0 +1,379 @@
+[
+  {
+    "directory": "geometry-bridge",
+    "name": "geometry.py",
+    "sha256": "ff200cc11d056cee17c14d9b615aa75ffcf297d44df461ef85d0fab6fa99c075",
+    "locations": [
+      "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/geometry-bridge/geometry.py",
+      "t20-continuation-20261008/delivery/fresh-final/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/geometry-bridge/geometry.py",
+      "t20-continuation-20261008/delivery/stage/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/geometry-bridge/geometry.py",
+      "t20-continuation-20261008/delivery/stage-final/recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/geometry-bridge/geometry.py",
+      "recovery-t20/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008.zip!/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/geometry-bridge/geometry.py"
+    ],
+    "associations": [
+      {
+        "source_sha256": "ff200cc11d056cee17c14d9b615aa75ffcf297d44df461ef85d0fab6fa99c075",
+        "ledger": "private-locator:3d947f04e7da745ef7ba",
+        "pointer": "$/rows/27",
+        "recorded_scope": {
+          "status": "DIRECT_FULL_BODY_READ"
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/ff/ff200cc11d056cee17c14d9b615aa75ffcf297d44df461ef85d0fab6fa99c075"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "gradient-discretization-fidelity-20261010",
+    "name": "RESULT.md",
+    "sha256": "bbc3ed3a72fa3d9623f8e8fdbdc76de7132e016af000ce56cebb5e2927ffa164",
+    "locations": [
+      "gradient-discretization-fidelity-20261010/RESULT.md",
+      "recovery-20261011/recent-law/extracted/high-order-fisher-law-checkpoint-20261011/high-order-fisher-law-checkpoint-20261011/payload/gradient-discretization-fidelity-20261010/RESULT.md",
+      "recovery-20261011/recent-law/high-order-fisher-law-checkpoint-20261011.zip!/high-order-fisher-law-checkpoint-20261011/payload/gradient-discretization-fidelity-20261010/RESULT.md",
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-discretization-preservation-20261010.zip!/gradient-discretization-preservation-20261010/evidence/gradient-discretization-fidelity-20261010/RESULT.md",
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-research-intermediate-collection-20261010.zip!/gradient-research-intermediate-collection-20261010/components/nonconvex-limit-classification-preservation-20261010.zip!/nonconvex-limit-classification-preservation-20261010/evidence/nonconvex-atomic-limit-classification-20261010/inputs/gradient-discretization-fidelity-20261010/RESULT.md",
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-research-intermediate-collection-20261010.zip!/gradient-research-intermediate-collection-20261010/components/nonconvex-limit-classification-preservation-20261010.zip!/nonconvex-limit-classification-preservation-20261010/evidence/nonconvex-limit-classification-independent-review-20261010/author_snapshot/inputs/gradient-discretization-fidelity-20261010/RESULT.md"
+    ],
+    "associations": [
+      {
+        "source_sha256": "bbc3ed3a72fa3d9623f8e8fdbdc76de7132e016af000ce56cebb5e2927ffa164",
+        "ledger": "private-locator:19f2b377498a61b77e46",
+        "pointer": "$/readings/6",
+        "recorded_scope": {
+          "read_scope": "Complete report, sections 1\u20137, including exact guarded quartic scheme."
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "gradient-discretization-fidelity-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "gradient-discretization-fidelity-20261010",
+    "name": "RESULT.md",
+    "sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+    "locations": [
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-discretization-preservation-20261010.zip!/gradient-discretization-preservation-20261010/evidence/gradient-discretization-fidelity-20261010/inputs/joint-atomic-gradient-lift-20261010/RESULT.md"
+    ],
+    "associations": [
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:fbc50319228b2c538ef9",
+        "pointer": "$/62",
+        "recorded_scope": {
+          "scope": "complete ordinary proof body; truncated joint section8+ and split sections1\u20138 reread separately",
+          "status": "DIRECT_COMPLETE_BODY_EXAMINED"
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:16f5f192e5f641c7b361",
+        "pointer": "$/entries/20",
+        "recorded_scope": {
+          "read_scope": "Sections 1,2,3,4,5,6,7"
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:19f2b377498a61b77e46",
+        "pointer": "$/readings/0",
+        "recorded_scope": {
+          "read_scope": "Lines 40\u2013169: sections 2\u20137 plus section 8 heading. Other lines not substantively inspected."
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:de62de33dc47bfdaa92e",
+        "pointer": "$/entries/20",
+        "recorded_scope": {
+          "read_scope": "Sections 1,2,3,4,5,6,7"
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:37171b668168a69c3f9f",
+        "pointer": "$/entries/20",
+        "recorded_scope": {
+          "current_scope": "Complete report body through prior adequate readings and documented v6 completions",
+          "prior_read_scope": "Sections 1,2,3,4,5,6,7",
+          "supporting_ledgers": [
+            "GEOMETRY_PRIOR_READING_SCOPES.json",
+            "READ_LOG.jsonl",
+            "../pro_synthesis/READ_LOG.jsonl"
+          ],
+          "limit": "Scope applies to this report; not all imports, cited external texts or original primary sources. Code and replay credits are separate."
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:c730d185d3bbade83a1e",
+        "pointer": "$/sources/1",
+        "recorded_scope": {
+          "scope": "Actual mathematical definitions and proofs read; no fresh execution or wholesale imported-ancestry credit.",
+          "method": "direct_complete_body_read_for_independent_synthesis_review"
+        },
+        "ranges": [
+          [
+            1,
+            212
+          ]
+        ],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/a0/a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:c8a57bee019e703b5e8f",
+        "pointer": "$/rows/25/resolved_sources/0/reading_routes/0",
+        "recorded_scope": {
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        "ranges": [],
+        "recorded_paths": [],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:c8a57bee019e703b5e8f",
+        "pointer": "$/rows/25/resolved_sources/0/reading_routes/1",
+        "recorded_scope": {
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        "ranges": [],
+        "recorded_paths": [],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:c8a57bee019e703b5e8f",
+        "pointer": "$/rows/25/resolved_sources/0/reading_routes/2",
+        "recorded_scope": {
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        "ranges": [],
+        "recorded_paths": [],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+        "ledger": "private-locator:c8a57bee019e703b5e8f",
+        "pointer": "$/rows/25/resolved_sources/0/reading_routes/3",
+        "recorded_scope": {
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        "ranges": [],
+        "recorded_paths": [],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "gradient-discretization-fidelity-20261010",
+    "name": "RESULT.md",
+    "sha256": "35ecab255d407a8b8405471b60f52c8f37d35fae6cd5f2b9a4c16573926c4e26",
+    "locations": [
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-discretization-preservation-20261010.zip!/gradient-discretization-preservation-20261010/evidence/gradient-discretization-fidelity-20261010/inputs/radial-quartic-gradient-reverse-lift-20261010/RESULT.md"
+    ],
+    "associations": [
+      {
+        "source_sha256": "35ecab255d407a8b8405471b60f52c8f37d35fae6cd5f2b9a4c16573926c4e26",
+        "ledger": "private-locator:83f18767b7bc4caa2b86",
+        "pointer": "$/records/0",
+        "recorded_scope": {
+          "scope": "Complete theorem, every hypothesis and proof step, examples and inherited-source/verification limits. See report for semantic qualification.",
+          "read_status": "DIRECT_FULL_BODY",
+          "remaining_substantive_ranges": [],
+          "role": "controlling_original_proof_or_review"
+        },
+        "ranges": [
+          [
+            1,
+            248
+          ]
+        ],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/35/35ecab255d407a8b8405471b60f52c8f37d35fae6cd5f2b9a4c16573926c4e26"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "gradient-discretization-fidelity-20261010",
+    "name": "RESULT.md",
+    "sha256": "fc5a9be2198e66ff499b7d62d5ea51f3cff31e97cef3bf8440454d8dfcaf05e1",
+    "locations": [
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-discretization-preservation-20261010.zip!/gradient-discretization-preservation-20261010/evidence/gradient-discretization-fidelity-20261010/inputs/two-atom-moving-moment-chart-20261010/RESULT.md"
+    ],
+    "associations": [
+      {
+        "source_sha256": "fc5a9be2198e66ff499b7d62d5ea51f3cff31e97cef3bf8440454d8dfcaf05e1",
+        "ledger": "private-locator:83f18767b7bc4caa2b86",
+        "pointer": "$/records/8",
+        "recorded_scope": {
+          "scope": "Complete actual body, including independent reasoning and exact external source-reading limits; not a new whole-paper reading.",
+          "read_status": "DIRECT_FULL_BODY",
+          "remaining_substantive_ranges": [],
+          "role": "consequential_original_review_or_source_derivation"
+        },
+        "ranges": [
+          [
+            1,
+            81
+          ]
+        ],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/fc/fc5a9be2198e66ff499b7d62d5ea51f3cff31e97cef3bf8440454d8dfcaf05e1"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "gradient-discretization-fidelity-20261010",
+    "name": "check_exact.py",
+    "sha256": "c4a8dea9ca3b786f7973682b30d9eccce77210587d1c942048b669679923c179",
+    "locations": [
+      "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/gradient-discretization-fidelity-20261010/check_exact.py",
+      "recovery-20261011/remaining-archives/authorial-synthesis-response-preservation-20261011.zip!/authorial-synthesis-response-preservation-20261011/payload/gradient-discretization-fidelity-20261010/check_exact.py",
+      "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/gradient-discretization-preservation-20261010.zip!/gradient-discretization-preservation-20261010/evidence/gradient-discretization-fidelity-20261010/check_exact.py"
+    ],
+    "associations": []
+  },
+  {
+    "directory": "retained-interior-certificate",
+    "name": "RetainedInterior.lean",
+    "sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+    "locations": [
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/RetainedInterior.lean",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/RetainedInterior.lean",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP09.zip!/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/RetainedInterior.lean",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP09.zip!/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/kernel-replay/RetainedInterior.lean"
+    ],
+    "associations": [
+      {
+        "source_sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+        "ledger": "private-locator:9b0a63e4e1180db3531f",
+        "pointer": "$/11",
+        "recorded_scope": {
+          "scope": "Complete exact body read; inherited mathematical results, distinct fresh replay as recorded.",
+          "status": "FULL_RECEIVED_BODY_READ",
+          "reading_credit": true,
+          "method": "DIRECT_FULL_BODY_READ_SUBSEQUENT_TO_ADMISSION"
+        },
+        "ranges": [],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/85/85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      },
+      {
+        "source_sha256": "85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a",
+        "ledger": "private-locator:e89ce962f2b809407c55",
+        "pointer": "$/records/61",
+        "recorded_scope": {
+          "disposition": "EXACT_PRIOR_CONTROLLING_BODY",
+          "remaining_substantive_ranges": [],
+          "role": "RetainedInterior Lean connector witness injection and cardinality",
+          "qualification": "Prior row retains superseded scan-only admission metadata; actual later status FULL_RECEIVED_BODY_READ and semantic_read_credit true consulted; root notified.",
+          "method": "exact full-body prior reuse"
+        },
+        "ranges": [
+          [
+            1,
+            79
+          ]
+        ],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/85/85a487cd9041cc46d319a7f239ba77f911293eb922ca8dc9f97e60e98cbc170a"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "directory": "retained-interior-certificate",
+    "name": "RESULT.md",
+    "sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+    "locations": [
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/checkpoints/CP09/t20-next-frontier-20261008/retained-interior-certificate/RESULT.md",
+      "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/SOURCE_ARCHIVES/CP09.zip!/T20_Retained_Readout_and_Interior_Boundaries_Intermediate_Checkpoint_20261008_Scope_Clarified/t20-next-frontier-20261008/retained-interior-certificate/RESULT.md"
+    ],
+    "associations": [
+      {
+        "source_sha256": "9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226",
+        "ledger": "private-locator:e89ce962f2b809407c55",
+        "pointer": "$/records/46",
+        "recorded_scope": {
+          "disposition": "FRESH_FULL_CONTROLLING_PROOF_OR_REVIEW",
+          "remaining_substantive_ranges": [],
+          "role": "retained-interior-certificate/RESULT.md",
+          "method": "full direct body read; interrupted tool truncations reread explicitly"
+        },
+        "ranges": [
+          [
+            1,
+            136
+          ]
+        ],
+        "recorded_paths": [
+          "t20-consolidation-20261011/catalogue/objects/93/9314e6ec0c15024aeefa10e2ff222e77f66b2358b5fbf9883e4c07a267632226"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  }
+]

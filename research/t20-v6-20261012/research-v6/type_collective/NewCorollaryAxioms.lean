@@ -1,0 +1,6 @@
+import SourceNaturalityNegative
+import GraphBridgeNegative
+import LiteralIdentityNoNegation
+#print axioms source_naturality_fails
+#print axioms graph_projection_bridges_not_jointly_inhabited
+#print axioms literal_identity_has_no_internal_negation

@@ -1,0 +1,404 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orthemology integration cell execution receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "CELL_ID",
+    "ATTEMPT",
+    "PLAN_SHA256",
+    "STATUS",
+    "INPUT_HASHES",
+    "GITHUB_BASE",
+    "WORK_PERFORMED",
+    "OUTPUT_FILES",
+    "OUTPUT_HASHES",
+    "VERIFICATION",
+    "UNRESOLVED",
+    "NEXT_UNLOCKED",
+    "READBACK",
+    "CLAIM_CREDIT",
+    "CURRENTNESS"
+  ],
+  "properties": {
+    "CELL_ID": {
+      "enum": [
+        "A0",
+        "A1",
+        "A2R",
+        "A2G",
+        "A2P",
+        "A2M",
+        "A2E",
+        "A2H",
+        "A3L",
+        "A3E",
+        "A3C",
+        "A3F",
+        "A3G",
+        "A4C",
+        "A4T",
+        "A5P",
+        "A5",
+        "A6",
+        "A7",
+        "A8R",
+        "A8G",
+        "A8F",
+        "A8P",
+        "A8",
+        "A9"
+      ]
+    },
+    "ATTEMPT": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "PLAN_SHA256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "STATUS": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "BLOCKED"
+      ]
+    },
+    "INPUT_HASHES": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/input"
+      }
+    },
+    "GITHUB_BASE": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "WORK_PERFORMED": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "OUTPUT_FILES": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "OUTPUT_HASHES": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/file"
+      }
+    },
+    "VERIFICATION": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "check",
+          "result",
+          "evidence_files"
+        ],
+        "properties": {
+          "check": {
+            "type": "string"
+          },
+          "result": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "PARTIAL",
+              "NOT_RUN"
+            ]
+          },
+          "evidence_files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "argv": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cwd": {
+            "type": "string"
+          },
+          "exit_code": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "termination": {
+            "enum": [
+              "EXIT",
+              "TIMEOUT",
+              "OUTPUT_LIMIT",
+              "NOT_STARTED",
+              "TOOL_VISIBILITY_FAILURE"
+            ]
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "UNRESOLVED": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "blocks_scope"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "blocks_scope": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "NEXT_UNLOCKED": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "A0",
+          "A1",
+          "A2R",
+          "A2G",
+          "A2P",
+          "A2M",
+          "A2E",
+          "A2H",
+          "A3L",
+          "A3E",
+          "A3C",
+          "A3F",
+          "A3G",
+          "A4C",
+          "A4T",
+          "A5P",
+          "A5",
+          "A6",
+          "A7",
+          "A8R",
+          "A8G",
+          "A8F",
+          "A8P",
+          "A8",
+          "A9"
+        ]
+      }
+    },
+    "READBACK": {
+      "type": "object",
+      "required": [
+        "outputs_inspected",
+        "receipt_inspected",
+        "inspection_evidence_files"
+      ],
+      "properties": {
+        "outputs_inspected": {
+          "type": "boolean"
+        },
+        "receipt_inspected": {
+          "type": "boolean"
+        },
+        "inspection_evidence_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "CLAIM_CREDIT": {
+      "type": "object",
+      "required": [
+        "custody",
+        "semantic_reading",
+        "reference_execution",
+        "kernel",
+        "novelty",
+        "github_mutation"
+      ],
+      "properties": {
+        "custody": {
+          "type": "boolean"
+        },
+        "semantic_reading": {
+          "type": "boolean"
+        },
+        "reference_execution": {
+          "type": "boolean"
+        },
+        "kernel": {
+          "type": "boolean"
+        },
+        "novelty": {
+          "type": "boolean"
+        },
+        "github_mutation": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "CURRENTNESS": {
+      "enum": [
+        "NOT_APPLICABLE",
+        "VALID_FOR_RECORDED_BASE",
+        "STALE_FOR_LIVE_BASE",
+        "UNCONFIRMED"
+      ]
+    },
+    "SCOPE_ACCEPTANCE": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "PARENT_RECEIPTS": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file"
+      }
+    },
+    "PRE_POST_INPUT_IDENTITY": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": [
+        "id",
+        "path",
+        "bytes",
+        "sha256",
+        "origin"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "origin": {
+          "type": "string"
+        },
+        "producer_receipt_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "STATUS": {
+            "const": "PASS"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "READBACK": {
+            "properties": {
+              "outputs_inspected": {
+                "const": true
+              },
+              "receipt_inspected": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "CLAIM_CREDIT": {
+          "properties": {
+            "github_mutation": {
+              "const": false
+            },
+            "novelty": {
+              "const": false
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Schema structure alone cannot prove source reading or command execution. A separate receipt validator must compare OUTPUT_FILES with OUTPUT_HASHES, verify actual bytes and parent receipt closure, enforce scoped edges/claim ceilings, validate Git object identities separately, and inspect real readback. No execution receipts are supplied in this plan."
+}

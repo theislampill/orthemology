@@ -1,0 +1,29 @@
+# Implementation and structured-data residue qualification
+
+## Outcome
+
+All136 assigned Python implementations are substantively qualified:121 complete bodies and15 complete semantic deltas against exact fully read baselines, representing7,575 lines. All213 assigned JSON fixtures have explicit data-level dispositions. No retained script was executed during this pass; independently written reconciliation utilities were executed and are separately bound in FRESH_DATA_QUALIFICATION_RECEIPT.json.
+
+The implementation findings, historical assurance corrections and complete-delta distinctions are in FINDINGS_IN_PROGRESS.md, now a sealed companion rather than an open task list. READING_LEDGER.json binds every source hash and scope. The evidence remains separate from new mathematics: a build wrapper, cached PASS field or generated proof template is not an additional general theorem.
+
+## Consequential assurance distinctions
+
+- The scalar diagnostic checks finite addressed SKI conversions against exact input and literalQ. Closed successful conversions can emit exact HasE scalar-instance proofs. They do not typecheck n:N; exhaustion is inconclusive. Optional expected_input supplies external caller binding. This JSON parser does not have the native constructor parser's raw duplicate-key rejection.
+- Original generator snapshots contain genuine method-tokenization and elaboration repairs. All ordered finite-image premises, including unused and duplicate entries, survive in the final exact rule-map obligations. Canonical-input side-code exactness is not source-domain validation: the retained malformed-code witness is accepted by the side map but has no decoded Rule.
+- Telescope verify_final at SHA8018308d… reaches a missing ListNatCodeTransport dictionary key in its audit branch. Later verify_release at SHAec548185… removes that branch and uses the separate audit module. This is an exact historical wrapper defect/repair, not a mathematical refutation.
+- Early imported-source replay97/134 uses the compiler default for83 original modules; later89-module prerequisite rebuild42 uses trust0 explicitly. Archive45's optional83-object reuse merely records supplied hashes; later14/17/111/55 require prior receipt matches. These are different assurance levels.
+- Initial OPEN labels in RawMotive, fullPER and closed-instance receipts remain dated. Their later source-level resolutions and the HasE/HasJ distinction are controlled by the already examined formal chronology, not by rewriting old receipts.
+- Several wrappers inspect printed axiom outputs only if present; some enforce exact counts. Some negatives require only any compiler error; later controls require particular type-mismatch/false-decide diagnostics. Joint induction32's standalone script checks pins after compilation although its emitted field says before-and-after. None of these literal fields receives stronger credit than the actual body.
+
+## The213 structured objects
+
+1. **107 exact parsed-value reuses.** A duplicate-preserving JSON normalizer compares every entire value with an exact previously executed case from the188-case native receipt. Assigned raw inputs have no duplicate keys. The raw byte and structural bounds were independently checked: across202 native objects, at most1,714 bytes,428 counted nodes and depth12. Reuse retains the original caller type depth and original result; no new execution of reference.py is claimed. Object-key order and whitespace are the only ignored representation features; array order, key names, primitive types, values and any duplicate-key order are preserved.
+2. **95 additional finite constructor trees.** Every field is consumed by a strict six-rule parser for i/k/s/app/all_i/all_e; every actual type is checked for de Bruijn scope, every application domain is matched exactly, and all_e performs capture-avoiding type substitution. All95 typecheck in this independent mathematical model at depth0. Their full values were losslessly reconstructed from a166-type/142-proof-node DAG, which was read in full. This is data/template qualification, not a claim that every expanded raw JSON token was individually read or that the original Python implementation was rerun. The family includes polymorphic identity instantiations, repeated identity applications, K/S instances, nested All introductions, Boolean selectors and their self-choice/diagonal test inputs.
+3. **Ten exact scalar certificates.** All inputs and all addressed paths match the previously qualified ConcreteScalarCertificates Lean ground data exactly. Every left/right finite trace was independently replayed to its stated generic iteration and checked against the literalQ export digest. Counts0–6, packed3, wrapped4 and a K-erasing-Ω2 witness are retained. The certificate supplies no n:N premise by itself.
+4. **One deliberate fake-Q certificate.** Both finite traces really reach the claimed endpoint, but its Q digest and right starting term bind I instead of the source literalQ. It is therefore a valid conversion trace for the wrong source question, correctly excluded by the source-binding condition. This is affirmative evidence that endpoint correctness alone does not establish source fidelity.
+
+FIXTURE_READING_LEDGER.json assigns all213 exact hashes; NATIVE_FIXTURE_QUALIFICATION.json and SCALAR_FIXTURE_QUALIFICATION.json give full finite evidence. The independent utilities' successful execution is a bounded data qualification, not a fresh Lean result, whole checker refinement proof, new theorem count, or replacement for the source-reading ledger.
+
+## Remaining limits
+
+This packet does not close the separately missing PRSearchComputability import, the14 unavailable original T16 written-input hashes, or the truncated diagnostic-IR source fragment. Those previously recorded limitations remain. The separate five-object prose transfer is the next active task.

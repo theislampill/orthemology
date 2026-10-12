@@ -1,0 +1,8 @@
+import Mathlib.Data.Fintype.Powerset
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+example {E : Type} [Fintype E] [DecidableEq E]
+    (n m : Finset E → ℕ) (hn : n ∅ = 0) (hm : m ∅ = 0) :
+    (∀ U : Finset E, U.Nonempty →
+      (∑ T : Finset E, if (T ∩ U).Nonempty then n T else 0) =
+      (∑ T : Finset E, if (T ∩ U).Nonempty then m T else 0)) → n = m := by
+  intro h

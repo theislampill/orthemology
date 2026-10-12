@@ -1,0 +1,180 @@
+[
+  {
+    "sha256": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+    "bytes": 12837,
+    "paths": [
+      "t20-v6-20261011/operational_successors/original_objects/7f/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+      "t20-v6-20261011/corpus/recovery-annex/early_objects/7f/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7"
+    ],
+    "member_routes": [
+      "Orthemology_Eighth_Research_Checkpoint_2_20261002(1).zip!/components/Eighth_Semantic_Controls_Core_20261002.zip!/cost/src/TailMoments.lean",
+      "Orthemology_Eighth_Research_Checkpoint_2_20261002(1).zip!/components/Semantic_Control_Independent_Review_20261002.zip!/snapshot/cost/src/TailMoments.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/composition/source/TailMoments.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/review/Independent_Actual_Positive_Exponential_Moments_Review_20261002.zip!/candidate.zip!/src/TailMoments.lean",
+      "Orthemology_v5_Sixth_Completion_Supplement_20261002.zip!/finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Author_Verification_20261002.zip!/candidate.zip!/src/TailMoments.lean"
+    ],
+    "annexes": [
+      "t20-v6-20261011/operational_successors/ORIGINAL_ARCHIVE_MEMBER_CENSUS.json",
+      "t20-v6-20261011/corpus/recovery-annex/EARLY_ORIGINAL_MEMBER_CENSUS.json"
+    ],
+    "in_frozen_inventory": false,
+    "exact_reading_routes": [
+      {
+        "source_sha256": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+        "ledger": "private-locator:65a244026bbd8e41a7b6",
+        "pointer": "$/sources/150",
+        "recorded_scope": {
+          "status": "full_source_read",
+          "adequacy": "Every line of this exact content hash was examined, including definitions, controlling theorem statements, proof bodies, hypotheses, comments and terminal scope/axiom declarations where present. No import-closure or runtime-replay credit is inferred.",
+          "unread_ranges": []
+        },
+        "ranges": [
+          [
+            1,
+            260
+          ]
+        ],
+        "recorded_paths": [
+          "t20-v6-20261011/early_remaining/sources/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7"
+        ],
+        "exact_held_hash": false,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ],
+    "local_path": "t20-v6-20261011/operational_successors/original_objects/7f/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+    "content_class": "declaration_bearing_Lean_or_embedded_formal_candidate",
+    "semantic_reading_credit_from_this_scan": false,
+    "current_exact_routes": [
+      {
+        "source_sha256": "7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7",
+        "ledger": "private-locator:65a244026bbd8e41a7b6",
+        "pointer": "$/sources/150",
+        "recorded_scope": {
+          "status": "full_source_read",
+          "adequacy": "Every line of this exact content hash was examined, including definitions, controlling theorem statements, proof bodies, hypotheses, comments and terminal scope/axiom declarations where present. No import-closure or runtime-replay credit is inferred.",
+          "unread_ranges": []
+        },
+        "ranges": [
+          [
+            1,
+            260
+          ]
+        ],
+        "recorded_paths": [
+          "t20-v6-20261011/early_remaining/sources/7f58b3c0270925b452c97ebeaaaa9383f7958f2c0c0b4fc6b578a7cde01ef4f7"
+        ],
+        "exact_held_hash": false,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  },
+  {
+    "sha256": "10dce4a84ade747827b8bfd5c0dfed38aa24ca1e0985608fda957c0b31417b62",
+    "bytes": 6504,
+    "paths": [
+      "t20-v6-20261011/corpus/recovery-annex/early_objects/10/10dce4a84ade747827b8bfd5c0dfed38aa24ca1e0985608fda957c0b31417b62"
+    ],
+    "member_routes": [
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/cold149/actual_generated_exponential_cutoff/source/FiniteCostCharacterization.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/composition/source/FiniteCostCharacterization.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/review/Independent_Actual_Exponential_Cutoff_Review_20261002.zip!/candidate.zip!/provenance/accepted-cost-142.zip!/src/FiniteCostCharacterization.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/review/Independent_Actual_Exponential_Cutoff_Review_20261002.zip!/candidate.zip!/src/FiniteCostCharacterization.lean",
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/review/Independent_Actual_Positive_Exponential_Moments_Review_20261002.zip!/candidate.zip!/src/FiniteCostCharacterization.lean",
+      "Orthemology_v5_Sixth_Completion_Supplement_20261002.zip!/finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Author_Verification_20261002.zip!/candidate.zip!/src/FiniteCostCharacterization.lean"
+    ],
+    "annexes": [
+      "t20-v6-20261011/corpus/recovery-annex/EARLY_ORIGINAL_MEMBER_CENSUS.json"
+    ],
+    "in_frozen_inventory": false,
+    "exact_reading_routes": [],
+    "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/10/10dce4a84ade747827b8bfd5c0dfed38aa24ca1e0985608fda957c0b31417b62",
+    "content_class": "declaration_bearing_Lean_or_embedded_formal_candidate",
+    "semantic_reading_credit_from_this_scan": false,
+    "current_exact_routes": []
+  },
+  {
+    "sha256": "e9208cd90fe8f8619c2e7126ab81d866e03e43a581d3754c8d0d63cbc61d5333",
+    "bytes": 12839,
+    "paths": [
+      "t20-v6-20261011/corpus/recovery-annex/early_objects/e9/e9208cd90fe8f8619c2e7126ab81d866e03e43a581d3754c8d0d63cbc61d5333"
+    ],
+    "member_routes": [
+      "Orthemology_v5_Sixth_Foundations_Evidence_20261002.zip!/archives/tranche6/controller-cost/mgf-continuation/Actual_Positive_Exponential_Verified_Return_20261002.zip!/review/Independent_Actual_Positive_Exponential_Moments_Review_20261002.zip!/mutations/close_strict_rate_boundary/TailMoments.lean"
+    ],
+    "annexes": [
+      "t20-v6-20261011/corpus/recovery-annex/EARLY_ORIGINAL_MEMBER_CENSUS.json"
+    ],
+    "in_frozen_inventory": false,
+    "exact_reading_routes": [],
+    "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/e9/e9208cd90fe8f8619c2e7126ab81d866e03e43a581d3754c8d0d63cbc61d5333",
+    "content_class": "declaration_bearing_Lean_or_embedded_formal_candidate",
+    "semantic_reading_credit_from_this_scan": false,
+    "current_exact_routes": []
+  },
+  {
+    "sha256": "d0b174d6c0dd1e96df91497883e297ef41fe1ddb3e08d14c050dab15a3d180cc",
+    "bytes": 7341,
+    "paths": [],
+    "member_routes": [
+      "Orthemology_v5_Sixth_Completion_Supplement_20261002.zip!/finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Author_Verification_20261002.zip!/candidate.zip!/evidence/finite-model-uniformity/attempts/FiniteModelExponentialUniformity.draft02.lean",
+      "Orthemology_v5_Sixth_Completion_Supplement_20261002.zip!/finite-model-exponential/Actual_Finite_Model_Common_Exponential_Range_Author_Verification_20261002.zip!/candidate.zip!/src/FiniteModelExponentialUniformity.lean"
+    ],
+    "annexes": [
+      "t20-v6-20261011/corpus/recovery-annex/EARLY_ORIGINAL_MEMBER_CENSUS.json"
+    ],
+    "in_frozen_inventory": true,
+    "exact_reading_routes": [
+      {
+        "source_sha256": "d0b174d6c0dd1e96df91497883e297ef41fe1ddb3e08d14c050dab15a3d180cc",
+        "ledger": "private-locator:db5ea1e0815bc4690c62",
+        "pointer": "$/bindings/16",
+        "recorded_scope": {
+          "read_scope": [
+            [
+              1,
+              123
+            ]
+          ]
+        },
+        "ranges": [
+          [
+            1,
+            123
+          ]
+        ],
+        "recorded_paths": [
+          "t20-closure-audit-20261011/early_mathematics/sources/FiniteModelExponentialUniformity.lean"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ],
+    "content_class": "archive_container_record_without_separate_object",
+    "current_exact_routes": [
+      {
+        "source_sha256": "d0b174d6c0dd1e96df91497883e297ef41fe1ddb3e08d14c050dab15a3d180cc",
+        "ledger": "private-locator:db5ea1e0815bc4690c62",
+        "pointer": "$/bindings/16",
+        "recorded_scope": {
+          "read_scope": [
+            [
+              1,
+              123
+            ]
+          ]
+        },
+        "ranges": [
+          [
+            1,
+            123
+          ]
+        ],
+        "recorded_paths": [
+          "t20-closure-audit-20261011/early_mathematics/sources/FiniteModelExponentialUniformity.lean"
+        ],
+        "exact_held_hash": true,
+        "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+      }
+    ]
+  }
+]

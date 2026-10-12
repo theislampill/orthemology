@@ -1,0 +1,65 @@
+{
+  "status": "ACCEPTED_BOUNDED_FINAL_SCOPE_CURRENTNESS_AND_ELIGIBILITY_CONSISTENCY_REVIEW",
+  "artifacts": [
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/REPORT.md",
+      "sha256": "4f6caf9307077e098bb4511cd9442c175db35908e741da893d6de3c63633cd80",
+      "bytes": 8019
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/FINAL_REVIEW.json",
+      "sha256": "960217c6f5cb3e44844c1bc28fcb5a3a7d7d4da2488db209b9490f071e7dadb9",
+      "bytes": 5646
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/FINAL_CHECK.json",
+      "sha256": "e0471d99030da042873380c3fc5ebbd170f4d7f41e74ee5a314a3d63d7e2f5cd",
+      "bytes": 4475
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/DENOMINATOR_EXTERNAL_CHECK.json",
+      "sha256": "751c58dadd282550ad63e363e0f7816fbe10b6cc8de25311c0d2219b45b8035a",
+      "bytes": 24917
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/FAMILY_SOURCE_JOIN_CHECK.json",
+      "sha256": "fb3d3fdb689af9643ab880c752ce1cf9611f06fa59cacb159d3cd7fef07dbc4d",
+      "bytes": 58106
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/ROOT37_REPAIR_REVIEW.json",
+      "sha256": "47919762ed95d958b71248d58ed0940fe96a6d77d0963cdb7ddcf9ad50f00935",
+      "bytes": 24555
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/TYPE54_REPAIR_REVIEW.json",
+      "sha256": "01e9b0810ce411a8c1cf5a0dd0f21d16b8ae88fab1b20aa3ed3035c28eb33046",
+      "bytes": 651
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/FINAL_ELIGIBILITY_REVIEW.json",
+      "sha256": "adde47b4e0d63c415eba1b8ad1f12ffaed54e206bdea128dcc8abb2dd95204ff",
+      "bytes": 11804
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/verify_final.py",
+      "sha256": "8a61e426e3903ef6d73c05838de509f4cf2a6104de721d67e2929c529fbb3d55",
+      "bytes": 8004
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/INITIAL_SNAPSHOT_BINDINGS.json",
+      "sha256": "db573a30cb5a912e0c3c35e55adad554bf8e63f3e0e802b547c97a7e80d5538a",
+      "bytes": 2572
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/STRICT_SCOPE_EXCEPTION_CANDIDATES.json",
+      "sha256": "3ec928ea3e29a53c8ab94cab9cf1cc073fdb3b7e5e3ddf2977292c75e990ad07",
+      "bytes": 94640
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/final_coverage_review/RANGE_UNION_CASES.json",
+      "sha256": "b3a2856bd80d968893bab99107186308ae8cdb81fcb38151a2c740ce3d351824",
+      "bytes": 121798
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "status": "author_snapshot_for_review",
+  "files": [
+    {
+      "path": "CHECK_RESULTS.json",
+      "size": 2130,
+      "sha256": "df6cea33d213a54a904fa785d2e10a7216b8ff447f593e5ae7774792750cf370"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "size": 5351,
+      "sha256": "d8671b0dba6ec0d81403d59d2a9896a184558662de3fb84fcdf3c3ced188cf5e"
+    },
+    {
+      "path": "RESULT.md",
+      "size": 16023,
+      "sha256": "7c9a4bc45b9d443661e6bd9b879d87c06dada61b0313d1fd273873b11f8332c8"
+    },
+    {
+      "path": "SOURCES.json",
+      "size": 1304,
+      "sha256": "727ba23e0c7daac7c935bedba60e8493cffc4ba0b53d10ef16a12a92d29074dd"
+    },
+    {
+      "path": "inputs/basic-recognition-correction-20261009__REPORT.md",
+      "size": 14453,
+      "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9"
+    },
+    {
+      "path": "inputs/constrained-learning-possibility-20261010__RESULT.md",
+      "size": 18333,
+      "sha256": "a625a2c137d291f514c71eee13e6cc7e4399a1bff491d1b59548a5985f6649f9"
+    },
+    {
+      "path": "inputs/evidence-withdrawal-warrant-20261009__REPORT.md",
+      "size": 22625,
+      "sha256": "740e3f11837591892649bf6d070b49854a95d0e45f57e2277b2e8d970b25086a"
+    },
+    {
+      "path": "inputs/local-correction-capacity-20261010__REPORT.md",
+      "size": 13669,
+      "sha256": "2384eda00cc27f056af7a4e484195a5da4b3ac97348fa36c8b2673467fcb8478"
+    },
+    {
+      "path": "inputs/provenance-learning-transport-20261009__RESULT.md",
+      "size": 14332,
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2"
+    },
+    {
+      "path": "inputs/source-audit-revision-20261010__RESULT.md",
+      "size": 29885,
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e"
+    },
+    {
+      "path": "inputs/source-audit-revision-semantics-20261010__REPORT.md",
+      "size": 13461,
+      "sha256": "1bdaaf26b6d13627d8002b3b8f292d840bf8308479c03acca38d1bd6fdb7f6ce"
+    },
+    {
+      "path": "inputs/sources__SOURCE_BINDINGS.json",
+      "size": 5107,
+      "sha256": "257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40"
+    },
+    {
+      "path": "inputs/warranted-learning-20261009__RELATED_WORK.md",
+      "size": 2103,
+      "sha256": "43411d3ab8a37573b9648179699e3c1e11b01761e9d286cae99a09fabeae61c6"
+    },
+    {
+      "path": "inputs/warranted-learning-20261009__RESULT.md",
+      "size": 21763,
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+    },
+    {
+      "path": "sources/DEEP-AX-V2.md",
+      "size": 8348,
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+    },
+    {
+      "path": "sources/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+      "size": 4435,
+      "sha256": "ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154"
+    },
+    {
+      "path": "sources/M2-prior-probability.md",
+      "size": 9464,
+      "sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6"
+    },
+    {
+      "path": "sources/SEMANTIC-OPERATOR-CONTRACT.yaml",
+      "size": 10844,
+      "sha256": "a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2"
+    },
+    {
+      "path": "sources/sound-reason-epistemology.md",
+      "size": 49338,
+      "sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810"
+    },
+    {
+      "path": "verification.txt",
+      "size": 2130,
+      "sha256": "df6cea33d213a54a904fa785d2e10a7216b8ff447f593e5ae7774792750cf370"
+    },
+    {
+      "path": "verify.py",
+      "size": 5454,
+      "sha256": "5020d9c358bde81f02cbf21346727beb0d0800b72abc34599978cc19c6590329"
+    }
+  ]
+}

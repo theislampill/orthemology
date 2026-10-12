@@ -1,0 +1,19 @@
+{
+  "status": "ACCEPT_ORDINARY_MATHEMATICS",
+  "target_sha256": "6d8c1b108c74df4638da79a147e6480b6edb9c2b562028c0d17758ab08d45406",
+  "source_sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7",
+  "source_read_scope": "Lines80\u2013168, including complete capacity proof/extremizer110\u2013154; not full document in this review",
+  "checks": [
+    "Noise submeasure union bound preserves conditional-independence hypothesis.",
+    "Gaussian rearrangement needs countably additive reference Q; only event transport under P may be finitely additive.",
+    "Extremizer assigns exterior points to label1 without extra capture.",
+    "Mass delta moved outside capture while preserving S marginal; coupling TV upper and event TV lower match.",
+    "Inverse integer bound valid at 0<p-eta<1 and L>0; equality1 impossible finite alphabet.",
+    "Singleton L=0 sharpness valid; empty target cannot have positive capture."
+  ],
+  "limits": [
+    "Fixed-horizon ordinary corollary, no kernel verification.",
+    "No prescribed Y marginal or coherent all-horizon history preserved.",
+    "No actual physical mediator or original agency inferred."
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "schema": "orthemology-fourth-recovery-custody-v1",
+  "status": "FINAL_CURRENT_BYTES_AND_FRESH_SCOPED_REVIEWS",
+  "verified_session_utc": "2026-10-01T13:43:05Z",
+  "interruption": "A workspace rollback was reported on resumption at 12:26 UTC. No precise uninterrupted execution interval is inferred from restored filesystem clocks.",
+  "current_objects": [
+    {
+      "path": "retained/Orthemology_v5_Third_Research_Tranche.docx",
+      "bytes": 64618,
+      "sha256": "2474161bdefb8fa482e80e10c7931cdcc2d507023ae47d5f4245ecb01a867e01",
+      "evidence_class": "exact_retained_predecessor",
+      "delivery_class": "Separately retained predecessor; not embedded in the new source-only return"
+    },
+    {
+      "path": "retained/Orthemology_v5_Third_Research_Return_20261001.zip",
+      "bytes": 17157058,
+      "sha256": "db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e",
+      "evidence_class": "exact_retained_predecessor",
+      "delivery_class": "Separately retained predecessor; not embedded in the new source-only return"
+    },
+    {
+      "path": "research/semantic-recovery/RepairTestingReduction.lean",
+      "bytes": 5135,
+      "sha256": "c86a552e28c596255b14bfaca8ef99c155ec5000a52301c127fbc12bc3e77de5",
+      "evidence_class": "exact_recovered_fourth_source_not_currently_replayed",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/semantic-recovery/NATIVE_ENDPOINT.json",
+      "bytes": 1488,
+      "sha256": "a77d05474ebd510b30cf52b34828a407dadce962359c678701eba6a9ebda7c7b",
+      "evidence_class": "exact_recovered_historical_finite_evidence",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/semantic-recovery/prcodec.py",
+      "bytes": 15928,
+      "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+      "evidence_class": "exact_retained_original_source",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/semantic-recovery/ENDPOINT_RECHECK.md",
+      "bytes": 7204,
+      "sha256": "e86a03d6d2c1c7c27aead5829d9d2b85d38fed93f332b3af339976e897fcc778",
+      "evidence_class": "fresh_ordinary_source_proof_independently_reviewed",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/semantic-recovery/FRESH_ENDPOINT_CHECK.json",
+      "bytes": 1125,
+      "sha256": "e64f6b48d3169366cceed46d32de5dbe50b4f6fbb77558385ffbdff25b0da7ca",
+      "evidence_class": "fresh_bounded_execution_receipt",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/markov-implementation-review/REPORT.md",
+      "bytes": 12045,
+      "sha256": "c4dc149219c5bd39f78a8de5008f7b20d0937eadb832079d76268a20a9f8b429",
+      "evidence_class": "fresh_independent_implementation_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/markov-author/recovered-exact/SUPPORT_CHANGING_MARKOV_THEOREM.md",
+      "bytes": 28712,
+      "sha256": "d8ddea057138db11621c98c79be1cbb94db64c6a80a362c4261903dde6c16f4d",
+      "evidence_class": "exact_recovered_fourth_ordinary_proof_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/recovered-solvers/markov_solver.py",
+      "bytes": 7402,
+      "sha256": "59bb643e6ed1ec2c6c909f66f2081897a6b1d4e4f0007d41af7ac45bf173c95a",
+      "evidence_class": "exact_recovered_corrected_python_source_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/recovered-solvers/support_solver.py",
+      "bytes": 3344,
+      "sha256": "818cfd1854e3e3cf6cfb448bcbaa0a5e1c6153a741c5199dcae121457e6a201d",
+      "evidence_class": "exact_recovered_corrected_python_source_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/rational-winning-control/lean/RationalWinningCore.lean",
+      "bytes": 4554,
+      "sha256": "f95f86dc8de4998b6172e93e1563f5bdd719d701128625acd713352afc288a63",
+      "evidence_class": "exact_recovered_lean_source_incomplete_closure_no_fresh_compile",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/rational-winning-control/lean/RationalWinningWitness.lean",
+      "bytes": 5225,
+      "sha256": "2571a21e9c7dfbad6919d4b17b910bea786efcc2cf0755f74c84555156211f23",
+      "evidence_class": "exact_recovered_lean_source_incomplete_closure_no_fresh_compile",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/rational-winning-control/lean/RationalWinningPolicyEquivalence.lean",
+      "bytes": 4416,
+      "sha256": "c74fa0d302653220cbee3c17fc996db99ff4a4d71978f72b679ddec7cd7ffe00",
+      "evidence_class": "exact_recovered_lean_source_incomplete_closure_no_fresh_compile",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/knowledge-source/INTRINSIC_KNOWLEDGE_FROM_PERFECTION.md",
+      "bytes": 13944,
+      "sha256": "6be97d9b66f6ae23944c60c577d5f0ce7854a14c3a1a2459b26963636cdf73a2",
+      "evidence_class": "fresh_source_bound_reconstruction_independently_reviewed",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/reduction-recovery-review/source/SYNTHETIC_REWARD_REDUCTION.md",
+      "bytes": 11028,
+      "sha256": "cf5c163cdc2d79443740c6bf892c2132d6b3746817700dab65f27b88d77974e7",
+      "evidence_class": "exact_recovered_fourth_ordinary_note_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/reduction-recovery-review/source/REGENERATIVE_REDUCTION.md",
+      "bytes": 14405,
+      "sha256": "623904df068e2695284b2e54b65f8cdce4dc0b0627f656fd70e2318c62081da0",
+      "evidence_class": "exact_recovered_fourth_ordinary_note_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    },
+    {
+      "path": "research/reduction-recovery-review/source/STOPPED_TRANSCRIPT_REDUCTION.md",
+      "bytes": 15863,
+      "sha256": "57acfff3020ad894e6d6975f3dd81a4d61d57a8f1f55ea886539692617737607",
+      "evidence_class": "exact_recovered_fourth_ordinary_note_with_fresh_review",
+      "delivery_class": "Included under this portable relative path"
+    }
+  ],
+  "reported_but_unavailable": [
+    {
+      "historical_locator": "tranche4/independent-audit/majority-runtime",
+      "reported_archive_sha256": "e97958ca80d684ffe882c935a99ffe5262cee119bbd4f01327f8823547cdd831",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/balanced-runtime",
+      "reported_archive_sha256": "df5591bec94cd4ed70890ddc30caa29e2fa1e20a8144d499c896ab17e69173d9",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/rational-runtime",
+      "reported_archive_sha256": "551e56ee29b112dd3f30d9a39fc4f5de5dd1615a17322773c057ac12ad7b1668",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/repair-selector",
+      "reported_archive_sha256": "f8aacf3a2945d6bb57bb6c8f29f1b482397c1832309cebd78fbe3aaf6fb077cf",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/incremental-runtime",
+      "reported_archive_sha256": "d3e74e53ec3707e5dddeabfb7a3dd2453a6d509193b8aa27373aec4b0b7e8559",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/incremental-quarter-work",
+      "reported_archive_sha256": "d044e4c1e3066a9564a24f755b773437cbc8d038b1df1ee8a8b2487d9db8eac9",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    },
+    {
+      "historical_locator": "tranche4/independent-audit/endpoint-observer",
+      "reported_archive_sha256": "e4676218892d81927ea3fdb414d7e5e9093e826dbcd6b2566c9d6d2ce4b18165",
+      "current_status": "UNAVAILABLE_NOT_REVERIFIED",
+      "credit": "No current kernel or archive-integrity credit"
+    }
+  ],
+  "earlier_fourth_draft": {
+    "reported_docx_sha256": "2eac57077519888bbec16ac39912bba4f0e8652ad75cf6af6ea7146d3526b705",
+    "reported_content_json_sha256": "30973154c54f953c342cfee20c6478b4d1c1a136b195f9c03a96e8146f2342cc",
+    "current_status": "NOT_RECOVERED_AS_EXACT_BYTES",
+    "scope": "The delivered recovery report is newly authored. It is not an exact recovery of the earlier DOCX."
+  },
+  "clock_caution": "Use verified session UTC observations for recovery chronology, not the four-hours-behind restored executor clock.",
+  "source_inventory": "REPORT_REFERENCES.json binds every local source used in the report. This register highlights custody and review classes; its packet count is the referenced checked set, not a claim to enumerate all research.",
+  "missing_closure_guard": "RationalWinningCorrectness failed exact-digest recovery and is excluded. Enumeration and Cast are unavailable. None of these partial sources has a fresh Lean compile or a restored historical fourth audit.",
+  "checked_referenced_packets": [
+    {
+      "seal_path": "research/markov-implementation-review/DELIVERY_SEAL.json",
+      "seal_sha256": "eede64fae69bae68239beba22f6912cc5970b1d1ac129b6ddc6d8a697d73db7b",
+      "status": "PASS_SCOPED_FRESH_IMPLEMENTATION_REVIEW",
+      "scope": "Exact recovered solver/oracle source bytes with a fresh driver, finite controls, source review and new receipt; no recreated old seal or infinite-process proof.",
+      "archive_path": "research/markov-implementation-review/Markov_Implementation_Recovery_Review_20261001.zip",
+      "archive_bytes": 61996,
+      "archive_sha256": "c513d1867296608e344c92ba7ded728b0a94b2c4bd3f49db5458a201c76171b3"
+    },
+    {
+      "seal_path": "research/endpoint-source-audit/DELIVERY_SEAL.json",
+      "seal_sha256": "be99b231d9decba8a22997991fa89922bce83a08b90a819bd978c37839557cb9",
+      "status": "PASS_SCOPED_FRESH_SOURCE_AND_ORDINARY_REVIEW",
+      "scope": "Fresh independent decoding/execution and ordinary source-bound proof; no recreated fourth Lean seal.",
+      "archive_path": "research/endpoint-source-audit/Endpoint_Source_Independent_Recovery_Review_20261001.zip",
+      "archive_bytes": 31135,
+      "archive_sha256": "9a5c7be06248950c2e28f3a8f04a9981a432cc0d91d9f2e51584266c33b46eef"
+    },
+    {
+      "seal_path": "research/independent-review/markov-support/DELIVERY_SEAL.json",
+      "seal_sha256": "f3fdd04d0caad638f42ab7cf18b0f14ef5424ccfc8cafafbf86cb1f709abc964",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_PROOF",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/markov-support/Fresh_Markov_Support_Independent_Review_20261001.zip",
+      "archive_bytes": 32319,
+      "archive_sha256": "abbf736bf1b86983bf5eed7292b9a38218865afb3e2bff4579c4a23df3334cea"
+    },
+    {
+      "seal_path": "research/independent-review/round-robin/DELIVERY_SEAL.json",
+      "seal_sha256": "69d420163aa1e985e6e67be45dba7f4521b03da61b1051a63cf6efc0e0ee7c65",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_PROOF",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/round-robin/Fresh_Round_Robin_Independent_Review_20261001.zip",
+      "archive_bytes": 25428,
+      "archive_sha256": "269042d07a7f336b4cc8ad40776e9d493e0e14938086afb22b1dc090cfb24154"
+    },
+    {
+      "seal_path": "research/independent-review/pd-embedding/DELIVERY_SEAL.json",
+      "seal_sha256": "29bde7efb74579284ce12717653469500358842484269b3feaf2bd0909c10dcb",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_EMBEDDING_AND_EXPTIME_UPPER",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/pd-embedding/Fresh_PD_Embedding_Independent_Review_20261001.zip",
+      "archive_bytes": 75540,
+      "archive_sha256": "04e77c7ec17902a28260ccc9a4a90bb6afd7c5873bb5e9159102dffbcff3882a"
+    },
+    {
+      "seal_path": "research/independent-review/primary-comparison/DELIVERY_SEAL.json",
+      "seal_sha256": "c1778ec6bff8d6d59ae6cdcaca8eb2b20c5f02db012efdff0c2c26a3b765fe3c",
+      "status": "FRESH_SCOPED_SOURCE_COMPARISON",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/primary-comparison/Fresh_Primary_Comparison_20261001.zip",
+      "archive_bytes": 4815,
+      "archive_sha256": "0fa6dcb15b02e3c6e6af992236fbd16471ebac145b8142c83a29a6a91dd94860"
+    },
+    {
+      "seal_path": "research/knowledge-source-review/DELIVERY_SEAL.json",
+      "seal_sha256": "89d2bd4ab5ca6c8ac45b43cc2ba7db24d7456e5c5da1582faabfd323bd02716d",
+      "status": "PASS_SCOPED_FRESH_SOURCE_PREMISE_REVIEW",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/knowledge-source-review/Intrinsic_Knowledge_Recovery_Review_20261001.zip",
+      "archive_bytes": 17131,
+      "archive_sha256": "ba8de16f135101fbfc08fb8086e695cfa57c12dc860b354844612685156b04d1"
+    },
+    {
+      "seal_path": "research/reduction-recovery-review/DELIVERY_SEAL.json",
+      "seal_sha256": "cedfc4a3d499e642e447a8d0ed7d9990406bfd76038d7ce92b70ac7fbe7dbd4c",
+      "status": "PASS",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/reduction-recovery-review/Recovered_Learning_Reductions_Fresh_Review_20261001.zip",
+      "archive_bytes": 38389,
+      "archive_sha256": "d985c387b94be258f956ea8c4fe14aaa007be234018a7a6c1b0f5f9b2363b917"
+    },
+    {
+      "seal_path": "research/independent-review/continuum/DELIVERY_SEAL.json",
+      "seal_sha256": "a727b3804d84c6ba06791c717228ba61bf9758a06b21b46e703edcdd64a114ee",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_CONTINUUM_PROOF",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/continuum/Fresh_Continuum_Independent_Review_20261001.zip",
+      "archive_bytes": 53290,
+      "archive_sha256": "b5526cd623bc2f31b3d27b9e2369fa3fec87173ce8628bdeecfef288ca53b920"
+    },
+    {
+      "seal_path": "research/independent-review/beta-budget/DELIVERY_SEAL.json",
+      "seal_sha256": "87eb857361d8122bc314a4488d09e780f1e63a3cebcec910a86c92e8ee5da7d3",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_BETA_IFF",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/beta-budget/Fresh_Beta_Budget_Independent_Review_20261001.zip",
+      "archive_bytes": 18269,
+      "archive_sha256": "dea794feec555e9bfb6d7fbbb7db37932c7756db2dd638bacc30be767df566e8"
+    },
+    {
+      "seal_path": "research/beta-rate-audit/DELIVERY_SEAL.json",
+      "seal_sha256": "04bb70b865a693de1bd44c903a38dce025e97273dfa032e80b7cf163b934ca79",
+      "status": "PASS_SCOPED_FRESH_ORDINARY_BETA_RATES_AND_CLOCK",
+      "scope": "Fresh ordinary rate, compact-argmax and deterministic reporting-clock review with independent exact finite controls; no kernel or novelty claim.",
+      "archive_path": "research/beta-rate-audit/Fresh_Beta_Rate_Clock_Independent_Review_20261001.zip",
+      "archive_bytes": 24310,
+      "archive_sha256": "6081d040173a6857d90a2757ec42ed65506b543a7f32ac2d3567f4c98a9a789f"
+    },
+    {
+      "seal_path": "research/pd-prior-art/DELIVERY_SEAL.json",
+      "seal_sha256": "f986a6ebe32119cf77614279eacc82e25b9bb6df0593cb46621e5fa9cab9ad52",
+      "status": "FRESH_SOURCE_COMPARISON_ONLY",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/pd-prior-art/Hidden_Objective_Prior_Art_Comparison_20261001.zip",
+      "archive_bytes": 10615,
+      "archive_sha256": "db4c61ad87f7a59cbcd69da9327bf59d66c295cee883266c467729fe3dab62aa"
+    },
+    {
+      "seal_path": "research/rational-winning-control/DELIVERY_SEAL.json",
+      "seal_sha256": "406f7301141ac4d36dc3f0efbe7a77982c3ae7f1db20d2df301707679148e65b",
+      "status": "PARTIAL_EXACT_SOURCE_CUSTODY_ONLY",
+      "scope": "Three exact Lean source files only; incomplete imports, no fresh compilation, no recreated old seal.",
+      "archive_path": "research/rational-winning-control/Rational_Winning_Partial_Source_Recovery_20261001.zip",
+      "archive_bytes": 7367,
+      "archive_sha256": "ce6e2b2888d9fe478140e99923d28ac6de9414d20d5f2e84a2fe6aa1175cf836"
+    },
+    {
+      "seal_path": "research/independent-review/parity/DELIVERY_SEAL.json",
+      "seal_sha256": "005c25b8bc761b015d61f249ce1d3910ed4920c7115e40137b93811419cf6aa3",
+      "status": "FRESH_PASS_SCOPED_ORDINARY_HIDDEN_PARITY_AND_PD_UPPER",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/independent-review/parity/Fresh_Hidden_Parity_Independent_Review_20261001.zip",
+      "archive_bytes": 97213,
+      "archive_sha256": "bc587046be95cc4c21f42b0ce07583d730cc13e73b658c97fa85ec2ed5d34fa0"
+    },
+    {
+      "seal_path": "research/hidden-automaton-audit/DELIVERY_SEAL.json",
+      "seal_sha256": "947f6b3228586ec2a7463d0615b8f5bf2b047973fd463a911aa2068b2f6ffdcc",
+      "status": "PASS_SCOPED_ORDINARY_HIDDEN_MONITOR_PRODUCT_AND_DECISION_UPPER",
+      "scope": "Fresh ordinary product/policy/objective-law proof and conditional decision-upper composition with verified parity dependency; no kernel, determinisation, LTL or finite-bad-count claim.",
+      "archive_path": "research/hidden-automaton-audit/Hidden_Automaton_Product_Independent_Review_20261001.zip",
+      "archive_bytes": 33410,
+      "archive_sha256": "dac7d957ec4ba395a7386f72e887786278939794c191e82eb9df9d6b6540609f"
+    },
+    {
+      "seal_path": "research/density-robustness-audit/DELIVERY_SEAL.json",
+      "seal_sha256": "76c811bd1bc798f02fcc2c8c231363f4f6e963e3f4497b5e1f3ae075759cc80c",
+      "status": "PASS_SCOPED_FRESH_ORDINARY_ENDPOINT_DENSITY_ROBUSTNESS",
+      "scope": "Exact accepted scope is in the accompanying review; no missing old fourth Lean credit",
+      "archive_path": "research/density-robustness-audit/Fresh_Endpoint_Density_Independent_Review_20261001.zip",
+      "archive_bytes": 39393,
+      "archive_sha256": "e6ee3398ef7f4e376065bd006362775b0cc055c16fd914554bdc0a0142835c00"
+    }
+  ]
+}

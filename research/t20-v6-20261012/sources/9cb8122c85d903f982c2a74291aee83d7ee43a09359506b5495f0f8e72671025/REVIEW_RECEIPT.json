@@ -1,0 +1,48 @@
+{
+  "status": "PASS_INDEPENDENT_ORDINARY_MATHEMATICAL_REVIEW",
+  "timestamp_utc": "2026-10-10T21:40:25.881556+00:00",
+  "target_result_sha256": "c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada",
+  "target_manifest_sha256": "264f821d1d49047f8d2baed466e35edf8d6d877a5105e03319aea94703824ea8",
+  "frozen_files_verified": 19,
+  "bound_source_pairs_verified": 12,
+  "mathematical_blockers": [],
+  "author_isolated_replay_assertions": 7888,
+  "independently_authored_exact_assertions": 16597,
+  "distinct_mutation_variants_rejected": 8,
+  "all_degree_claim_basis": "The reviewed ordinary proof, not finite controls.",
+  "initial_record": "Genuine jointly representable, moment-indeterminate",
+  "preserved_properties": "Full strict square positivity and normalized coordinatewise C1 hierarchy; C-infinity autonomous example",
+  "conclusion": "No joint positive representing measure at any positive time under each supplied schedule in the stated class",
+  "scope_exclusions": [
+    "No analytic kernel proof",
+    "No determinate-initial-joint claim",
+    "No final integration or closure",
+    "No field-priority claim"
+  ],
+  "review_files": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "d3dfcfa41a4764da4f07c5fbb33c8d212a0570703dcfed220c7a74633979c91b"
+    },
+    {
+      "path": "independent_controls.py",
+      "sha256": "cf807b0b1094975c1dd41f50e9c6a5b388396f231732d9da5d71ecd7621ea8ea"
+    },
+    {
+      "path": "INDEPENDENT_RESULTS.json",
+      "sha256": "5b809717b09c6cdfe07e8e41619243a9d10315eaddf39b1921a856a716161c87"
+    },
+    {
+      "path": "independent_controls.log",
+      "sha256": "5b809717b09c6cdfe07e8e41619243a9d10315eaddf39b1921a856a716161c87"
+    },
+    {
+      "path": "TARGET_BINDING.json",
+      "sha256": "14d486a38e4e5d802b01ee898fd4f87a1931a9a42e91e8b411c05c838375d522"
+    },
+    {
+      "path": "author_replay.log",
+      "sha256": "14f6d1906e59e062b3638508f3df1e79b5592d35f9000388a667758aa01b6fa0"
+    }
+  ]
+}

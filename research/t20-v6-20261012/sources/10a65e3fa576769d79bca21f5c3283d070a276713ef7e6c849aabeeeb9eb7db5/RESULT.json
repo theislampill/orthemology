@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "systems": 128,
+  "prefix_and_illegal_factorizations": 12320,
+  "common_posterior_checks": 4498,
+  "positive_extended_branches": 7859,
+  "pre_receipt_illegality_control": true,
+  "posterior_reset_control": true,
+  "scope": "Exact finite controls; arbitrary measurable seeds and infinite AS restart are justified by the source proofs and separately sealed conditional-AS dependency"
+}

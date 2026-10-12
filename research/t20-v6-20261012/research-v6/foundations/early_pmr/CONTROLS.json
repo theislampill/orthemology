@@ -1,0 +1,163 @@
+{
+  "method": "Fresh finite exact controls; no historical checker replay, primary source acquisition, or metaphysical possibility assertion.",
+  "checks": [
+    {
+      "name": "AZ_degenerate_1_1_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          false
+        ],
+        "interpretation": "Missing-cell impossibility needs at least two contents and response values, plus nonempty form set."
+      }
+    },
+    {
+      "name": "AZ_degenerate_2_1_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          false,
+          false
+        ],
+        "interpretation": "Missing-cell impossibility needs at least two contents and response values, plus nonempty form set."
+      }
+    },
+    {
+      "name": "AZ_degenerate_2_2_1",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "interpretation": "Missing-cell impossibility needs at least two contents and response values, plus nonempty form set."
+      }
+    },
+    {
+      "name": "AZ_nondegenerate_1_2_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "AZ_nondegenerate_2_2_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "AZ_nondegenerate_3_2_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "AZ_nondegenerate_2_3_2",
+      "passed": true,
+      "detail": {
+        "witness_per_omitted_cell": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "BA_refinement_not_congruence",
+      "passed": true,
+      "detail": {
+        "representation": [
+          0,
+          0,
+          1
+        ],
+        "transition": [
+          0,
+          2,
+          2
+        ],
+        "labels": "all equal",
+        "scope": "Every state has identical observed traces, while proposed refinement is not deterministic-transition congruent."
+      }
+    },
+    {
+      "name": "BC_mutual_equivalence_unaligned_processing",
+      "passed": true,
+      "detail": {
+        "E1K": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "E2K": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "interpretation": "E1 and E2 each perfectly identify binary state before processing; same unaligned K erases only E1."
+      }
+    },
+    {
+      "name": "BD_unanimous_antireliability",
+      "passed": true,
+      "detail": {
+        "posterior": "1/28",
+        "copied_single_root_likelihood_ratio": "3"
+      }
+    },
+    {
+      "name": "BE_expectation_not_distribution",
+      "passed": true,
+      "detail": {
+        "mean_sum": "3/2",
+        "even_sum_law": {
+          "0": "1/4",
+          "1": "0",
+          "2": "3/4",
+          "3": "0"
+        },
+        "odd_sum_law": {
+          "0": "0",
+          "1": "3/4",
+          "2": "0",
+          "3": "1/4"
+        },
+        "scope": "Proper-subset additive scores have equal expectation; their joint nonlinear use can reveal full parity. Do not claim equality of their whole distributions."
+      }
+    }
+  ],
+  "all_passed": true
+}

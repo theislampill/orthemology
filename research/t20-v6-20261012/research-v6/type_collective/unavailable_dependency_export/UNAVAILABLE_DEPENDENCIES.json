@@ -1,0 +1,446 @@
+{
+  "utc": "2026-10-12T15:23:02.880101+00:00",
+  "scope": "Compact export of already established type-owned unavailable-body/identity prerequisites and exact resolved contrasts. Not a fresh whole-corpus absence search or acquisition.",
+  "records": [
+    {
+      "id": "TYPE-PRSEARCHCOMPUTABILITY",
+      "status": "ACTUAL_ORIGINAL_FORMAL_IMPORT_UNAVAILABLE",
+      "missing_module": "PRSearchComputability",
+      "missing_declaration": "nonzeroSearch_nat_partrec",
+      "missing_source_sha256": null,
+      "consumer": [
+        {
+          "source_sha256": "7a82b91805c79e60920aeac71d4900f60ca1b9aa38920e31094778995c5a5ab6",
+          "module": "PRSearchComputability",
+          "issue": "MISSING_OR_AMBIGUOUS_ORIGINAL_IMPORT",
+          "candidates": []
+        }
+      ],
+      "evidence": [
+        {
+          "path": "type_collective/WHOLE_TYPE_IMPORT_CLOSURE.json",
+          "sha256": "0ef588d9a43f15a391ea9ccf918a99cb6f00b1622c6bd3cf1f031be86f41e00b",
+          "pointer": "$/unresolved"
+        },
+        {
+          "path": "type_collective/RESULT.md",
+          "sha256": "347de9175cedf6b0e42531a5db154735132dc71af61520ddcbe5ca9ccef6dd0b"
+        }
+      ],
+      "blocked_claim": "Exact historical NegativeSearch Nat.Partrec certification cannot be completed from its missing original import.",
+      "surviving_scope": "Bounded finite scan/certificate proofs and the separate actual HasJ enumerability/FullPER incompleteness join keep their own closed dependencies.",
+      "recovery_status": "Previously searched frozen/recovered source corpus and pinned patch constituents; no exact source route found. No new acquisition in this export."
+    },
+    {
+      "id": "TYPE-T16-WRITTEN-ORIGINAL14",
+      "status": "EXACT_ORIGINAL_CUSTODY_GAPS_READER_COVERAGE_COMPLETE",
+      "originals": [
+        {
+          "sha256": "d0fde7b2fb8d38c55946c3ddc8a329a656a127085642861f2ca996713c153bb3",
+          "id": "continuation",
+          "source_filename": "EFFECTIVE_RENEWAL_ARGUMENT_v3.md",
+          "reader_sha256": "7bc519a4bc629478b1acf7fdbcf4b46114d17811a1618828a680a70013091287",
+          "reader_filename": "continuation.md",
+          "bytes": 35959,
+          "lines": 264
+        },
+        {
+          "sha256": "6d27e0701753c18ecc92a34c6cf33d3829cd396e95019e94d1b4074ccab882e0",
+          "id": "randomised",
+          "source_filename": "RANDOMISED_DIAGONAL_BOUNDARY_v1.md",
+          "reader_sha256": "4d4d87887915be00a1565e809b475db9b0c827719ec40955a4e30fcd84846cc2",
+          "reader_filename": "randomised.md",
+          "bytes": 8133,
+          "lines": 61
+        },
+        {
+          "sha256": "a1d3f136ed6bc4dd1a7601c49b157784b4998220420b1e1fb1244a0a2827a1a7",
+          "id": "population",
+          "source_filename": "BOUNDED_POPULATION_BOUNDARY_v2.md",
+          "reader_sha256": "117d65d0db4f657458dfba0fd23c1c06cc3309c2f09fc0695dc7661ce0e1aef8",
+          "reader_filename": "population.md",
+          "bytes": 7549,
+          "lines": 45
+        },
+        {
+          "sha256": "877fb94fa2f359dc93468c31f5f72349ec1616b0437611f9c7dbf9d18e6e0ad0",
+          "id": "competence",
+          "source_filename": "CONTINUATION_COMPETENCE_SCOPE_v1.md",
+          "reader_sha256": "177931c617c2f38c68bc38f840228de6b9dc2b7df13fc299ca98c237d9495ae2",
+          "reader_filename": "competence.md",
+          "bytes": 3227,
+          "lines": 21
+        },
+        {
+          "sha256": "7d5b168d3f66f99dad78deef124360c41ff3e00e89bef1f9aaa234ae3df2231e",
+          "id": "lookahead",
+          "source_filename": "FINITE_LOOKAHEAD_INVARIANCE_v2.md",
+          "reader_sha256": "5c22e88ea80804786b3efc40a783b68d4e118c529cad9aa44de33a747329045f",
+          "reader_filename": "lookahead.md",
+          "bytes": 5688,
+          "lines": 45
+        },
+        {
+          "sha256": "b10c7250d64618e0434cb73e409c5113304db10a214c5313ddf7fe876ac8d5d8",
+          "id": "synthesis",
+          "source_filename": "POLICY_SYNTHESIS_CLASSIFICATION_v1.md",
+          "reader_sha256": "30764d6b2e492d8345732436f8c8f0be50ec9e83783b1ec476755dffb67b894b",
+          "reader_filename": "synthesis.md",
+          "bytes": 26443,
+          "lines": 253
+        },
+        {
+          "sha256": "15473829fb5050415ae55b8265403984618463e9c38bdf2c57fce2662d997f13",
+          "id": "unary",
+          "source_filename": "UNARY_EQUALITY_CHARACTERISATION_v2.md",
+          "reader_sha256": "26d6ac16b25c6d25151413d3a58a7c2ce4e9a86843a567f67c319616a49c3e23",
+          "reader_filename": "unary.md",
+          "bytes": 35901,
+          "lines": 408
+        },
+        {
+          "sha256": "c9449092ba0502a02e02c81998ce7ea791c6bb1575e0bb1a1b051a5115da9ad9",
+          "id": "current",
+          "source_filename": "CURRENT_IDENTITY_BOUNDARY_v2.md",
+          "reader_sha256": "613b3c35b76405510e95a37f3f3efff0ce8bd623edf2d7f940421130179c27c9",
+          "reader_filename": "current.md",
+          "bytes": 9559,
+          "lines": 90
+        },
+        {
+          "sha256": "3880fc1cb21994be58af13df309f8bd517f9aab501953fa798f98951d3062e87",
+          "id": "certificate",
+          "source_filename": "FINITE_CERTIFICATE_EXTENSION_v1.md",
+          "reader_sha256": "dc241e0174aea9ae22191093eeda69bdf542eda42f0da6882a9dd96e0dcb0583",
+          "reader_filename": "certificate.md",
+          "bytes": 17073,
+          "lines": 162
+        },
+        {
+          "sha256": "51c266348544482dc85ce586c0024b976d07216ef552535c219ee11ed857c90b",
+          "id": "temporal",
+          "source_filename": "TEMPORAL_WITNESS_ARGUMENT_v1.md",
+          "reader_sha256": "86e82560e429e4e8f97bbc8b9280e2af2b52706b156201b71b40b5763302a2f0",
+          "reader_filename": "temporal.md",
+          "bytes": 9260,
+          "lines": 87
+        },
+        {
+          "sha256": "901866be21a06e82e607592ecfe5ae3f9a9b6b74c647f8e833391410a664e4af",
+          "id": "almost_sure",
+          "source_filename": "ALMOST_SURE_RENEWAL_CRITERION_v3.md",
+          "reader_sha256": "e44bd3f84b2afc5369a1a10b2fb4cee76956a60dc98db0805fa646ad08310506",
+          "reader_filename": "almost_sure.md",
+          "bytes": 13696,
+          "lines": null
+        },
+        {
+          "sha256": "ee262e98f5b3ea31c2b927b070d73a09a73ed9083b224ecd52dd1b23b6e1ea80",
+          "id": "signed",
+          "source_filename": "MATHEMATICAL_ACCOUNT_v1.md",
+          "reader_sha256": "0c9dae92a9d88c2dc6169990ccc4c83166d941c40b5ae96375d19051d78771d0",
+          "reader_filename": "signed.md",
+          "bytes": 23825,
+          "lines": null
+        },
+        {
+          "sha256": "8b66cf9ea24e959c7cf699d062d691250c2f4bc640c6427e3b3ac88df7a4da28",
+          "id": "controller",
+          "source_filename": "MATHEMATICAL_ACCOUNT_v1.md",
+          "reader_sha256": "bac5d7d3d405a72549575aa96b404c78665acc5113942966ed263b9f94c7d01b",
+          "reader_filename": "controller.md",
+          "bytes": 25335,
+          "lines": null
+        },
+        {
+          "sha256": "209237dd3a695154386d783908922374b7660110e45655c2f5cacd378bc36ac1",
+          "id": "certificate_map",
+          "source_filename": "CERTIFICATE_THEOREM_MAP_v1.md",
+          "reader_sha256": "3d76104724cef1dabe00ff3cfb5515b7ec597450beeea238fa862aec8568bade",
+          "reader_filename": "certificate_map.md",
+          "bytes": 2949,
+          "lines": 36
+        }
+      ],
+      "evidence": [
+        {
+          "path": "corpus/recovery-annex/T16_ORIGINAL_VERIFICATION.json",
+          "sha256": "c7c16f326c8d03bddc860c4bcd1cfc2b2f315e5ce3e5389d4858898ccea88531"
+        },
+        {
+          "path": "corpus/admission/T16_ORIGINAL_READER_RECONCILIATION.json",
+          "sha256": "04bc75fa91c4fc026b7a69926d7ea24d39c3026198e27cfc93a82d7448235d82"
+        },
+        {
+          "path": "type_collective/native_math4/READING_LEDGER.json",
+          "sha256": "8481a9e80da78b4d479879dff529b3616d045a8905e03232cf1b6f58a0f3f22c"
+        },
+        {
+          "path": "root_math/t16_companion_scope_union/SCOPE_UNION.json",
+          "sha256": "75d013430242820d25127060efa10d3b2ec1e01b36ffce87336c81308ef73023"
+        }
+      ],
+      "blocked_claim": "No newly verified original-byte recovery or original-to-reader equivalence for these14 standalone written inputs.",
+      "surviving_scope": "Delivered T16 mathematical reader10903b326052\u2026 is completely examined by complementary type/controller ranges; its actual native DOCX99f6eb\u2026 content/rendition comparison is qualified. The formal production/renewal/signed-service/controller sources have their own exact closure.",
+      "recovery_status": "Exact final T16 evidence plus recovery checkpoint recursively censused; no target hash matched. This remains distinct from the later recovered fourteen registered public bodies."
+    },
+    {
+      "id": "TYPE-HASE-EXTRACTION-ENV",
+      "status": "HISTORICAL_ASSURANCE_IMPORT_UNAVAILABLE",
+      "missing_path": "hase-joint-extraction-fidelity-20261010/env.sh",
+      "missing_source_sha256": null,
+      "actual_referencing_source_sha256": "e700ec193ede9a8658289bbf4bbd863a95426be1224601e3a37410a3a86f1c5a",
+      "evidence": [
+        {
+          "path": "type_collective/replay_scope_residue/RECURSIVE_ENV_IMPORTS.json",
+          "sha256": "d426dddbd6c311049f1a621e35beec254de76877ce98442cfadc7dd01807358d"
+        },
+        {
+          "path": "type_collective/replay_scope_residue/REPORT.md",
+          "sha256": "11f95886685086b95a19f9e84d0886e2502d99961f8cb5b3bb1daec6a1f613ea"
+        }
+      ],
+      "blocked_claim": "Self-contained re-execution of this exact historical sourced-shell chain.",
+      "surviving_scope": "Separate reconstructed formal dependency union and its exact pinned compilations remain valid evidence; this is not missing mathematical module credit.",
+      "recovery_status": "Held workspace/catalogue lookup and independent controller search found no exact env source."
+    },
+    {
+      "id": "TYPE-MATH122-REVIEW-CUSTODY6",
+      "status": "REPORTED_ORIGINAL_DIGESTS_UNMATCHED_BY_AVAILABLE_ALIASES",
+      "owner_of_controlling_current_review": "root",
+      "artifacts": [
+        {
+          "path": "REVIEW.md",
+          "sha256": "9d2d5517cea6e202f8585980f0cb04bde576be2f94e530ae28177b192740c78a",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/REVIEW.md",
+          "actual_sha256": "73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        },
+        {
+          "path": "replay/INDEPENDENT_REPLAY.json",
+          "sha256": "b3879ade78c66c4fd13df745c1201c43023177d759036751c7a31771c4ba194d",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/replay/INDEPENDENT_REPLAY.json",
+          "actual_sha256": "c0bbc32c3107968e84690948d08f14d23d83df4fa4d0578e30925c8abd694dc7",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        },
+        {
+          "path": "replay/IMPORT_BINDINGS.json",
+          "sha256": "03408fceca7d3803edbea960585655760c22b18b91f26029342098e116dd79a6",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/replay/IMPORT_BINDINGS.json",
+          "actual_sha256": "777603573b0e42e753902f21b1964238d02593096a402ea8eccc93143b43e82c",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        },
+        {
+          "path": "EXTRA_KERNEL_RECEIPT.json",
+          "sha256": "c0aadb9594a9d7339b4e4ab677fe7642380fb386e2356cbd653b903653e36522",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/EXTRA_KERNEL_RECEIPT.json",
+          "actual_sha256": "dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        },
+        {
+          "path": "COUNTERCHECKS.json",
+          "sha256": "8b19638e73025b34e5da262f41d3d54d10685e8a652ab2e8d0306bba01838735",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/COUNTERCHECKS.json",
+          "actual_sha256": "c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        },
+        {
+          "path": "SOURCE_SCOPE.json",
+          "sha256": "577691314042d4464d23f76335461b873dbf47a7d7345120bccb0b71645bba32",
+          "resolved_path": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T16_T20_Consolidated_v1_20261007.zip--64d964a76316/Orthemology_T16_T20_Consolidated_v1_20261007/t20/sources/math122-observation-controls/review/SOURCE_SCOPE.json",
+          "actual_sha256": "fdf4f753a98c682dacdfc10ea31731616f27a14477fddd473ce713ce0084f07b",
+          "exact_hash_match": false,
+          "expected_catalogue_object_exists": false
+        }
+      ],
+      "evidence": [
+        {
+          "path": "root_math/final_math_utilisation/QUALIFICATION_LEDGER.json",
+          "sha256": "80ea83bfd72a5d800c492cc7eb9d63d3b5d541d399fcda90db897876cb107999",
+          "pointer": "$/review_artifact_joins"
+        },
+        {
+          "path": "root_math/final_math_utilisation/REPORT.md",
+          "sha256": "e9150c892bb34e54722e2d4ad460d1b1cb94acdaa93ed080da1e3814cbd82d14"
+        }
+      ],
+      "blocked_claim": "Newly verified exact-byte provenance for the six historical review/replay artifacts.",
+      "surviving_scope": "The held aliases and actual trace/probability proof bodies remain independently qualified at their exact hashes. Two retained readback artifacts match. No mathematical falsity or new replay failure is inferred.",
+      "recovery_status": "Expected original objects absent at checked catalogue identities; cause of alias differences not established."
+    },
+    {
+      "id": "TYPE-DIAGNOSTIC-IR-TRUNCATED",
+      "status": "HELD_FRAGMENT_FULLY_READ_INTENDED_DOCUMENT_END_UNAVAILABLE",
+      "retained_sha256": "853ab3a2612c46274ea89f6bd8773a9e2804ae0934f169c20896363a34403c10",
+      "retained_lines": [
+        1,
+        1208
+      ],
+      "complete_original_sha256": null,
+      "evidence": [
+        {
+          "path": "type_collective/noetic_runtime_contracts/READING_LEDGER.json",
+          "sha256": "cf86ffb51692233d66237b93cbaf61d591babba956db0056993597f8c042b10d",
+          "pointer": "$/sources/2"
+        }
+      ],
+      "blocked_claim": "Completeness of the intended diagnostic-IR document beyond its retained mid-sentence ending.",
+      "surviving_scope": "Every retained line is read and qualified as historical source data; no runtime instruction authority or missing continuation fabricated.",
+      "recovery_status": "All known original aliases bind the same retained truncated identity; no longer exact variant found."
+    }
+  ],
+  "resolved_or_separately_owned_contrasts": [
+    {
+      "category": "framework generator and actual inputs",
+      "evidence": [
+        {
+          "path": "type_collective/noetic_runtime_variants/READING_LEDGER.json",
+          "sha256": "224177c895bf09e5790200e9621bef4612034867478cd1d4557dbd93413d365a"
+        },
+        {
+          "path": "type_collective/noetic_runtime_variants/FRAMEWORK_INPUT_QUALIFICATION.json",
+          "sha256": "aaf3579ce25a5d66beb89838b2ffd3bf30a5af6191de80692cad112c45d696be"
+        }
+      ],
+      "scope": "Recovered exact pinned builder plus framework YAML/Markdown inputs are examined; do not carry old missing-input notes forward."
+    },
+    {
+      "category": "newly recovered registered public14",
+      "evidence": [
+        {
+          "path": "root_math/terminal_unheld_recovery/READ_LEDGER.json",
+          "sha256": "5e4e840e6948abbaf84ff0bcea165ed184b41397439544c39aed59074f0237c2"
+        }
+      ],
+      "closed_received_bodies": [
+        {
+          "source_id": "src-74b86eeeda4675fb-876cad5388c87eeb",
+          "sha256": "d61b54d252070ae3b678bfb9479c3628ee9a6202b13a8e1c36c196118b9851cb",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-794dcf1c82780593",
+          "sha256": "77fb1f8a68ec28b39b3d848e2c616c43b21bb028c302aad25ca50d6a2067f581",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-3b1e9266f4bfd884",
+          "sha256": "b205b26af82779d0459eaa0aa1ea2dec8c0a3cc6b26d5881add93d5ac8e849bd",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-8bc8d059833e64e8",
+          "sha256": "50cc8ad7ed7275d7233d9dc8bbcb7750291559901d6ff610f542c504a5ba58ca",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-e57c0fd1383e753c",
+          "sha256": "6ec50d2b2547a7da830c46a9d33deb51141fc29cd281aad2aed79192268b1540",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-9e5ce75b17cc8b16",
+          "sha256": "671a12f05147b13e94312a106c339f4a87b76c4647f094ba2f932b490aaa1491",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-5aa168f6dea6d4f0",
+          "sha256": "29c490d269495d18484e2ce00146f28dddcad094df749390cea5e110cad41c34",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-b335630551682c19",
+          "sha256": "c9f56385a16e11034bd4de486c43ab81dd9f486e5a22549042dc857196a032d0",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-10ee469939430429",
+          "sha256": "441cb8081b18a9312cddb3fb8568b43bc1f3c56a3f4703b571ff1edf31cb637d",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-eb89fa9b6f02ac3c",
+          "sha256": "5e916f662d121138997394ec60c3722f0be56afb04bb4bb1fa997797aa31f14c",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-3d5b240940fec360-ef8015527839e465",
+          "sha256": "db9a2fff3d920e05b7d65afad780241979b588ffa391d1fca47201cf6d0fbf87",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-3d5b240940fec360-1fc6b1200bd7c5dc",
+          "sha256": "69d5f496653087c349abae02d2060d1352ee751eb89a6db476800d7735cfd95d",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "src-b5be7775f6d0b1d5-0f033084efbe72e7",
+          "sha256": "3d2cc5ff5a0157b0aef3587e8544d1ebe8ea4824b15f3658058973b21ae35f7f",
+          "scope": "full received body"
+        },
+        {
+          "source_id": "T12-SOURCE-FINAL-RECEIPT",
+          "sha256": "4f670d67f4279615e4d2ebf792c42d783c998dcf92e765eba52369b63be3b40c",
+          "scope": "full received body"
+        }
+      ],
+      "unheld_declared_originals_separately_owned_by_root": [
+        {
+          "source_id": "src-dc0478c583608e3f-9e5ce75b17cc8b16",
+          "received_sha256": "671a12f05147b13e94312a106c339f4a87b76c4647f094ba2f932b490aaa1491",
+          "original_sha256": "b2cc12e6dc4fe33b81d730807b9cff61f6c501d8e25cc6f9c2366d63c3cb4cac",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-5aa168f6dea6d4f0",
+          "received_sha256": "29c490d269495d18484e2ce00146f28dddcad094df749390cea5e110cad41c34",
+          "original_sha256": "110a477975a64439bd85fdeabcb5440b902394f67a853b211139fee3c2a12527",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-b335630551682c19",
+          "received_sha256": "c9f56385a16e11034bd4de486c43ab81dd9f486e5a22549042dc857196a032d0",
+          "original_sha256": "4b48814d753b5625b55a42ac6114bc40e70329bedd3ec5c3ed1ae0db64ef7d24",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-dc0478c583608e3f-10ee469939430429",
+          "received_sha256": "441cb8081b18a9312cddb3fb8568b43bc1f3c56a3f4703b571ff1edf31cb637d",
+          "original_sha256": "c6dd6c9177ad5e8d62e75b24c83815e38217dfdff2e17a5c56ec8347dc44ec5b",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-74b86eeeda4675fb-eb89fa9b6f02ac3c",
+          "received_sha256": "5e916f662d121138997394ec60c3722f0be56afb04bb4bb1fa997797aa31f14c",
+          "original_sha256": "0d5d42af2d021817378f61a0ec711e440e559e2246817a9f1de887b2bcd2214a",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-3d5b240940fec360-ef8015527839e465",
+          "received_sha256": "db9a2fff3d920e05b7d65afad780241979b588ffa391d1fca47201cf6d0fbf87",
+          "original_sha256": "587821259c6649823c6233bc978c2c6f75c0ef6eb9bec56d86f4c0bc2ea65fa2",
+          "projection": "DERIVED"
+        },
+        {
+          "source_id": "src-3d5b240940fec360-1fc6b1200bd7c5dc",
+          "received_sha256": "69d5f496653087c349abae02d2060d1352ee751eb89a6db476800d7735cfd95d",
+          "original_sha256": "e76edb540831405b2befc5ab2187dd69bd5249420485ef0b248c58aefe794ac5",
+          "projection": "DERIVED"
+        }
+      ],
+      "scope": "All14 received public bodies are closed at their exact root reading scopes. Derived originals are not recovered merely by acquisition of their public versions. No new missing-body promotion in this export."
+    }
+  ],
+  "counts": {
+    "unresolved_categories": 5,
+    "known_unheld_T16_original_hashes": 14,
+    "unmatched_Math122_original_artifact_hashes": 6,
+    "missing_named_imports_with_unknown_hash": 2,
+    "fully_read_retained_truncated_objects": 1
+  }
+}

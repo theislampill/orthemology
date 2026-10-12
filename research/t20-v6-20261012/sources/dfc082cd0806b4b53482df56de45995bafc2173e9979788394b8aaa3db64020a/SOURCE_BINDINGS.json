@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-10-11T13:17:52.422967+00:00",
+  "status": "input-only; immutable v2 not modified",
+  "sources": [
+    {
+      "path": "t20-consolidation-20261011/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md",
+      "sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31",
+      "bytes": 46787,
+      "inspection_scope": "Sections 7.1 and 9 read closely; opening context inspected",
+      "role": "Published boundary and synthesis summary, not primary theorem owner"
+    },
+    {
+      "path": "t20-consolidation-20261011/geometry/SOURCE_REGISTER.json",
+      "sha256": "dbbb50fcbf56051d567b3a129ceea845fee92b4291d239994f0234f487f6735d",
+      "bytes": 20806,
+      "inspection_scope": "Audit-related source entries extracted and compared",
+      "role": "Actual geometry owner locator and hash register"
+    },
+    {
+      "path": "grouped-source-audit-gradient-20261011/RESULT.md",
+      "sha256": "ff42e395bcb649c267374eb5d6e218bc0fd6e21079104be9a5cd97b77e0d233e",
+      "bytes": 20418,
+      "inspection_scope": "Read in full",
+      "role": "Inherited fixed-partition classification and explicit multi-partition action-only limit"
+    },
+    {
+      "path": "grouped-source-audit-gradient-20261011/inputs/received-cross-front.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "inspection_scope": "Section 13 read fully; section headings/context searched",
+      "role": "Inherited Theorem J and exact metric corollary"
+    },
+    {
+      "path": "grouped-source-audit-gradient-20261011/INPUT_BINDINGS.json",
+      "sha256": "9eada5df5e0227de9afa72210dd77e1a09e695d064a58d2f77a9a7fd0b02964b",
+      "bytes": 2026,
+      "inspection_scope": "Read fully",
+      "role": "Owner original-source ancestry bindings"
+    },
+    {
+      "path": "grouped-audit-independent-review/independent-review.md",
+      "sha256": "e75c41bba37f8d596988d84fd309274f49aa927da7e83e871914111423bc9efe",
+      "bytes": 11669,
+      "inspection_scope": "Read fully",
+      "role": "Independent review of the exact grouped owner, including multi-partition limit"
+    },
+    {
+      "path": "t20-consolidation-20261011/evidence/MATERIAL_CLAIMS.json",
+      "sha256": "924a6933d43d7c63388411cf8c887cad1957cfb918ef92645b5e081d257d5070",
+      "bytes": 168891,
+      "inspection_scope": "ET-23 claim object read fully",
+      "role": "v2 cone claim, hypotheses, ancestry and residual obligations"
+    },
+    {
+      "path": "t20-consolidation-20261011/evidence/SOURCE_MAP.json",
+      "sha256": "c74401d2828df67ae3d4bc618b23e9a2e7395584faecadaba856e7498c0e0878",
+      "bytes": 44199,
+      "inspection_scope": "All cone entries extracted; report and review mapping read",
+      "role": "Actual cone owner and review locators"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/5c/5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0",
+      "sha256": "5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0",
+      "bytes": 28972,
+      "inspection_scope": "Read fully",
+      "role": "Inherited finite-cone Theorems 3\u20135 and structure-preserving transport limits"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/31/318bb3e78e92da093f214017f104764c2846ebf336e62591096913b71718d0ce",
+      "sha256": "318bb3e78e92da093f214017f104764c2846ebf336e62591096913b71718d0ce",
+      "bytes": 18527,
+      "inspection_scope": "Read fully",
+      "role": "Independent review of final ET-23 owner"
+    },
+    {
+      "path": "recovery-20261011/received/source/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "inspection_scope": "Current primary bytes verified identical to register and inspected copy; section 13 read in that copy",
+      "role": "Primary owner of inherited Theorem J and metric corollary"
+    }
+  ],
+  "new_work": [
+    "RESULT.md Theorem A",
+    "RESULT.md Proposition B and countercontrols",
+    "RESULT.md Corollary C (direct tagged-instrument application of ET-23 Theorem 5)",
+    "RESULT.md section 6 augmented cone-gradient application"
+  ],
+  "novelty_scope": "Deductions not found in these inspected passages; no exhaustive corpus or field-priority claim.",
+  "review_contribution": "Independent cross-front reviewer supplied the shorter tagged-instrument reduction for Corollary C before author freeze."
+}

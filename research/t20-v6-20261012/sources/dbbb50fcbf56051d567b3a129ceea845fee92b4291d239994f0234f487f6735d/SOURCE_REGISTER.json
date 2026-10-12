@@ -1,0 +1,314 @@
+{
+  "cutoff_utc": "2026-10-11T11:32:55Z",
+  "sources": [
+    {
+      "semantic_owner": "inherited-graded",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "bytes": 93523,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "tensor-moment-continuation-20261009",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/tensor-moment-continuation-20261009/RESULT.md",
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11",
+      "bytes": 21695,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "tensor-likelihood-closure-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/pairwise-corroboration-preservation-20261011.zip--1eaa4aec882d/tensor-likelihood-closure-20261010/RESULT.md",
+      "sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "bytes": 25391,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "measure-moment-continuation-boundary-20261009",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Moving_Objective_Reviewed_Evidence_20261010.zip--f56d550867d3/T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/measure-moment-continuation-boundary-20261009/RESULT.md",
+      "sha256": "a0fa9117ff47df9f07133c1ed49c682c7c2e73d20881e83f3c242dfb3faeb9e3",
+      "bytes": 26246,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "realizable-moment-dynamics-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Realizable_Moment_Dynamics_Evidence_20261010.zip--56b8ee888e6f/Realizable_Moment_Dynamics_Evidence_20261010/realizable-moment-dynamics-20261010/RESULT.md",
+      "sha256": "c5aeeeed56b5bf5edfa9b87570249f142e3d1be9c06218d8007013c66f5eb688",
+      "bytes": 15753,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "determinate-initial-positivity-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Initial_Positivity_Evidence_20261010.zip--38c951260105/Determinate_Initial_Positivity_Evidence_20261010/determinate-initial-positivity-20261010/RESULT.md",
+      "sha256": "cafc520026c66f94442346ff308ed4e202d70e10be8963b8a24ad17bda4e1e0a",
+      "bytes": 14433,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "computable-positive-hierarchy-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Computable_Positive_Hierarchy_Evidence_20261010.zip--a98b3583207f/Computable_Positive_Hierarchy_Evidence_20261010/computable-positive-hierarchy-20261010/RESULT.md",
+      "sha256": "862a4b005351c1f980e1daf2820d8d871fa16835d53029ce27941244d248915f",
+      "bytes": 6178,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "full-functional-lean-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-functional-lean-20261010/RESULT.md",
+      "sha256": "d15611cd809d5aeeda80a124d1ef524b4ddf13f1b3fb1d55e2a51db49b6ecc97",
+      "bytes": 5806,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "full-polynomial-moment-countermodel-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/RESULT.md",
+      "sha256": "37544af9d0647cdf9b114f7757fa55f9b83b7c27c256f584273fa501bd2c74a0",
+      "bytes": 3936,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "capped-tensor-recovery-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Capped_Tensor_Recovery_Evidence_20261010.zip--c3eabde12331/Capped_Tensor_Recovery_Evidence_20261010/capped-tensor-recovery-20261010/RESULT.md",
+      "sha256": "262503e92380ec868f28670b18939d701cd51808aedc65f7fe6f2fa57e0dbf6d",
+      "bytes": 27705,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "exponential-tail-effectivity-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Exponential_Tail_Effectivity_Evidence_20261010.zip--dba9c7b6d852/Exponential_Tail_Effectivity_Evidence_20261010/exponential-tail-effectivity-20261010/RESULT.md",
+      "sha256": "3d84bca98867d77a3c2478883e07a42e456b48404edb1ba4b90fa5e788a1788a",
+      "bytes": 27687,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "determinate-moment-effectivity-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Determinate_Moment_Effectivity_Evidence_20261010.zip--70231ce91513/Determinate_Moment_Effectivity_Evidence_20261010/determinate-moment-effectivity-20261010/RESULT.md",
+      "sha256": "9661eef2d88370d2d996e68f666777c6ac0ffb93155d102ec50873f155e91383",
+      "bytes": 22566,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "finite-polynomial-state-no-go-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/finite-polynomial-state-preservation-20261011.zip--68bde73718e0/finite-polynomial-state-no-go-20261011/RESULT.md",
+      "sha256": "1e84ad0f475e9051dba08b1c447c73c63657929ebff75d0a6e79546eb96aac74",
+      "bytes": 15021,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "fixed-calibration-moment-repair-20261011",
+      "path": "recovery-20261011/extracted/moment-predictive-application-checkpoint-20261011/moment-predictive-application-checkpoint-20261011/payload/fixed-calibration-moment-repair-20261011/RESULT.md",
+      "sha256": "93bb189e12d85582871ce7eb30f11b28c50f957a5ea8657fc9acc834db5e0ebe",
+      "bytes": 4478,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "nonseparable-bayes-repair-20261009",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/channel-natural-repair-intermediate-20261009.zip--5e856fd7b5ea/channel-natural-repair-intermediate-20261009/nonseparable-bayes-repair-20261009/RESULT.md",
+      "sha256": "a9b3f91f320ee752ee732dc85af793f8a4736a98c01035fb5b197dfe2bf7eecb",
+      "bytes": 25964,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "reference-bregman-classification-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/reference-bregman-classification-20261011/RESULT.md",
+      "sha256": "8f06b1ff3f0239b1f9e3d868aae3b880aab7a55f3974106d249938bfb4cc1e01",
+      "bytes": 13721,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "reference-gradient-descent-classification-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/reference-gradient-descent-classification-20261011/RESULT.md",
+      "sha256": "097e12106db027914a1a05795c8d4dde647e9c73e52882562eef5f546f6d7c18",
+      "bytes": 14805,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "noetic-gradient-transport-20261009",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Information_Noetic_Tensor_Transport_Reviewed_20261009.zip--d735203bd829/T20_Information_Noetic_Tensor_Transport_Reviewed_20261009/noetic-gradient-transport-20261009/RESULT.md",
+      "sha256": "27f85cd312cb2083d26257e6c74fea8e547c879dce07d94c04d8c87446c0f4a9",
+      "bytes": 24082,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "leafwise-noetic-geometry-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Continuous_Signed_Control_Intermediate_Evidence_20261010.zip--f25d3134ed31/continuous-signed-control-preservation-20261010/evidence/leafwise-noetic-geometry-20261010/RESULT.md",
+      "sha256": "6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724",
+      "bytes": 26495,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "face-stratified-noetic-geometry-20261010",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-original-inputs/face-stratified-noetic-geometry-20261010/RESULT.md",
+      "sha256": "41d1343f00006d5e97d6a0b09264cc1d99ee2dd23a13ba5caaf2169afce63fa4",
+      "bytes": 32177,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "joint-atomic-gradient-lift-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md",
+      "sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+      "bytes": 24233,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "full-law-coarse-graining-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/full-law-coarse-graining-preservation-20261011.zip--ff751ba31a58/full-law-coarse-graining-20261011/RESULT.md",
+      "sha256": "3c2e5a6204ba56fe72d6832304bd6527028c37c5f5d6719f2fee88abae7ce30d",
+      "bytes": 23933,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "gaussian-correction-geometry-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/gaussian-correction-geometry-preservation-20261011.zip--b250b88d41fe/gaussian-correction-geometry-20261011/RESULT.md",
+      "sha256": "67577bc185c3190cbf131993fdfdd36aa67c605435fd225eb6f29b2cc6c21efa",
+      "bytes": 21591,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "gaussian-quartic-variance-root-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/gaussian-quartic-variance-preservation-20261011.zip--61507d9500ba/gaussian-quartic-variance-root-20261011/RESULT.md",
+      "sha256": "0733507b41f874411d01590d337cbb2911351e3c708443029b85b23c5446d251",
+      "bytes": 2778,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "fixed-marginal-correction-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/fixed-marginal-correction-preservation-20261011/fixed-marginal-correction-20261011/RESULT.md",
+      "sha256": "34f54d2c1ac994fc9212eb900e92d8bcb3898c7b4a00a6002c361b8752eee8e1",
+      "bytes": 22397,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "correlated-target-marginal-correction-20261011",
+      "path": "recovery-20261011/extracted/correlated-target-evidence-20261011/correlated-target-evidence-20261011/correlated-target-marginal-correction-20261011/RESULT.md",
+      "sha256": "a062a810cf1cc254186949cbce079ac3499cce230d6b5c9e2c21d9ef023afa56",
+      "bytes": 14626,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "conditional-entropy-control-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/conditional-entropy-control-20261011/RESULT.md",
+      "sha256": "fd04c9de5028dc997c1714d09a8fa853b87861137f1a4e77ef6553f69f084151",
+      "bytes": 17323,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "fibrewise-split-correction-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/fibrewise-split-preservation-20261011/fibrewise-split-preservation-20261011/fibrewise-split-correction-20261011/RESULT.md",
+      "sha256": "470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d",
+      "bytes": 18095,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "fixed-marginal-endpoint-action-20261011",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/fixed-marginal-endpoint-action-20261011/RESULT.md",
+      "sha256": "99f4d6e749b0f2856e1f23b7cd9d4e6cc53eed940ef5f6ec1a2ed0e325766304",
+      "bytes": 22938,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "singular-gaussian-entrance-20261011",
+      "path": "recovery-20261011/extracted/boundary-mathematical-successors-preservation-20261011/originals/singular-gaussian-entrance-20261011/RESULT.md",
+      "sha256": "4bfdbfda33420acc2efc53f7ad3f353b9d7cd763d00b21b8b2860f4805aee47b",
+      "bytes": 14521,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "ordered-control-projective-transport-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/ordered-control-projective-transport-20261011/RESULT.md",
+      "sha256": "8feef686238981aae90112805a6478b3693476f5b08ae90b28cd0a0b08b22a30",
+      "bytes": 22275,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "moving-objective-order-interface-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/moving-objective-order-interface-20261010/RESULT.md",
+      "sha256": "876e433d5340f1c25eec7a3a6e911b0d36e44a4875feb90b0bebbb329918346d",
+      "bytes": 6183,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "nonautonomous-energy-drift-reverse-lift-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/nonautonomous-energy-drift-preservation-20261010.zip--c807ba024c4f/nonautonomous-energy-drift-preservation-20261010/evidence/nonautonomous-energy-drift-reverse-lift-20261010/RESULT.md",
+      "sha256": "5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56",
+      "bytes": 18508,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "nonnegative-moving-gradient-escape-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/nonnegative-moving-gradient-escape-preservation-20261011.zip--aee6908bc598/nonnegative-moving-gradient-escape-20261011/RESULT.md",
+      "sha256": "5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d",
+      "bytes": 5936,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "authorial-cross-front",
+      "path": "recovery-20261011/received/source/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "finite-audit-gradient-classification-20261010",
+      "path": "grouped-source-audit-gradient-20261011/inputs/finite-audit-gradient-classification.md",
+      "sha256": "178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b",
+      "bytes": 29666,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "grouped-source-audit-gradient-20261011",
+      "path": "grouped-source-audit-gradient-20261011/RESULT.md",
+      "sha256": "ff42e395bcb649c267374eb5d6e218bc0fd6e21079104be9a5cd97b77e0d233e",
+      "bytes": 20418,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "finite-generator-audit-rigidity-20261011",
+      "path": "recovery-20261011/extracted/boundary-mathematical-successors-preservation-20261011/originals/finite-generator-audit-rigidity-20261011/RESULT.md",
+      "sha256": "53048652eb15b7e9b38a1e97627b407c192138b769d62e0fa7e5e34e797587b1",
+      "bytes": 8624,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "positive-high-order-correction-20261011",
+      "path": "positive-high-order-correction-20261011/RESULT.md",
+      "sha256": "72dccf1dd0f129899234b6fcaf43db50e2b289c73fbfd8a3e71e88b8d334dcdb",
+      "bytes": 17631,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "audit-tail-positive-repair-20261011",
+      "path": "audit-tail-positive-repair-20261011/RESULT.md",
+      "sha256": "76dd37a76bd441d836c201ea4f7dab95b139132ee5c28766a927cac6727674d0",
+      "bytes": 8171,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "full-law-gradient-action-tail-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/full-law-gradient-action-tail-preservation-20261010.zip--f74df12a76dd/full-law-gradient-action-tail-preservation-20261010/evidence/full-law-gradient-action-tail-20261010/RESULT.md",
+      "sha256": "07f993085f5e0066db587c0ef4fd9efd06c302179845007b886d3dcd8cafc352",
+      "bytes": 11362,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "audit-fisher-length-transport-20261011",
+      "path": "audit-fisher-length-transport-20261011/RESULT.md",
+      "sha256": "00c38a528d3d8030627eb4dd8e11aa44bb6abfa122efd2da26ece4e8e93a8a58",
+      "bytes": 4067,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "infinite-initial-fisher-length-20261011",
+      "path": "infinite-initial-fisher-length-20261011/RESULT.md",
+      "sha256": "e8743a543021cd86d205c7b757c038f2acaeb80e0ecc117f1ebf1cef6d6493ec",
+      "bytes": 3437,
+      "version": "exact retained bytes at consolidation cutoff; original content unedited"
+    },
+    {
+      "semantic_owner": "fisher-endpoint-geometry-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/Fisher_Endpoint_Geometry_Evidence_20261010.zip--67ad05762847/Fisher_Endpoint_Geometry_Evidence_20261010/fisher-endpoint-geometry-20261010/RESULT.md",
+      "sha256": "1b051b438726e2a41bda222f08dfd6e3d9a70499454c9ccef0a62ee9ddac74f6",
+      "bytes": 20430,
+      "version": "exact retained bytes at cutoff"
+    }
+  ],
+  "note": "Source paths are exact held paths; content-addressed catalogue owns original archive provenance and duplicate-byte storage. No external primary paper was freshly browsed by this synthesis; classical locators are inherited from read source ledgers."
+}

@@ -1,0 +1,90 @@
+{
+  "status": "Independent review completed on exact current bindings; no protected changes, integration or closure.",
+  "files": [
+    {
+      "path": "REPLAY_RECEIPT.json",
+      "bytes": 4620,
+      "sha256": "4a9c8748a84564cfbfaaaae5a05d528547490d7abfed3a1307810083d5a1d2be"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 14670,
+      "sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340"
+    },
+    {
+      "path": "REVIEW_BINDINGS.json",
+      "bytes": 5922,
+      "sha256": "f78d84bfbaa767bc83820d4397d3ac73aa29909c776b6a70360a3e7cc4ce9461"
+    },
+    {
+      "path": "author_normal.log",
+      "bytes": 1113,
+      "sha256": "95b6d7ddf9a2adbc3f9df21cc4341ebc982c8cc01ac5c5855299af352b8f107e"
+    },
+    {
+      "path": "author_optimized.log",
+      "bytes": 1113,
+      "sha256": "95b6d7ddf9a2adbc3f9df21cc4341ebc982c8cc01ac5c5855299af352b8f107e"
+    },
+    {
+      "path": "check_independent.py",
+      "bytes": 10490,
+      "sha256": "cc4cb00e548637fb6d3e5f72298fa9492597b1b03671a0f1b61dd9cba56d44f7"
+    },
+    {
+      "path": "independent_normal.log",
+      "bytes": 472,
+      "sha256": "988412aba41d8005c22d1acf958b2ad656dee7562a09135aea33f3dc055a1e1e"
+    },
+    {
+      "path": "independent_optimized.log",
+      "bytes": 472,
+      "sha256": "988412aba41d8005c22d1acf958b2ad656dee7562a09135aea33f3dc055a1e1e"
+    },
+    {
+      "path": "root_kernel_normal.log",
+      "bytes": 118,
+      "sha256": "b26962aef98d9b53b1409fdf43061af15846229d702d18fa471bbd4fce99fb75"
+    },
+    {
+      "path": "root_kernel_optimized.log",
+      "bytes": 118,
+      "sha256": "b26962aef98d9b53b1409fdf43061af15846229d702d18fa471bbd4fce99fb75"
+    },
+    {
+      "path": "root_l_normal.log",
+      "bytes": 146,
+      "sha256": "06f7ff1dc80b856e4d150a94a26704051c16511909e38aad81c2acc89e66319b"
+    },
+    {
+      "path": "root_l_optimized.log",
+      "bytes": 146,
+      "sha256": "06f7ff1dc80b856e4d150a94a26704051c16511909e38aad81c2acc89e66319b"
+    },
+    {
+      "path": "root_unrestricted_normal.log",
+      "bytes": 138,
+      "sha256": "157cd28a257b3a5b84a78fe28161bf688354e7980999c679a1b286a7cf02d2a0"
+    },
+    {
+      "path": "root_unrestricted_optimized.log",
+      "bytes": 138,
+      "sha256": "157cd28a257b3a5b84a78fe28161bf688354e7980999c679a1b286a7cf02d2a0"
+    },
+    {
+      "path": "root_zero_branch_normal.log",
+      "bytes": 121,
+      "sha256": "ad5f46b1b5962676995c9eeb3004a1d9273d59673155c81f93e4d5f7c64bbdd2"
+    },
+    {
+      "path": "root_zero_branch_optimized.log",
+      "bytes": 121,
+      "sha256": "ad5f46b1b5962676995c9eeb3004a1d9273d59673155c81f93e4d5f7c64bbdd2"
+    },
+    {
+      "path": "run_review.py",
+      "bytes": 3417,
+      "sha256": "4a219c2851247438da8eeb1a70079ddaea724dc8fef762e029b53497f1491188"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "cases": 1024,
+  "oracle": "independent forward graph traversal",
+  "mismatches": {
+    "original": 516,
+    "corrected": 0
+  }
+}

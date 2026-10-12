@@ -1,0 +1,28 @@
+import LiteralRuntimeCounterexample
+open Orthemology.Eighth.SemanticControls.LiteralAssessment
+open Orthemology.RuntimeBridge.PhaseUpdate.FullController
+open Orthemology.RuntimeBridge.HistoryRuntime
+open P02.Codec
+
+def emitPolicy (label : String) (c : Config) : IO Unit :=
+  IO.println (label ++ "=" ++ "[" ++ String.intercalate "," ((encodeBytes (pack (policyProgram c))).map toString) ++ "]")
+
+#eval IO.println ("SELECTORS_FALSE=" ++ reprStr (literalConfig false).selectors)
+#eval IO.println ("SELECTORS_TRUE=" ++ reprStr (literalConfig true).selectors)
+#eval IO.println ("COMPUTED_TOLERANCE=" ++ reprStr
+  ((withComputedTolerance (literalConfig false)).toleranceNumerator,
+    (withComputedTolerance (literalConfig false)).toleranceDenominator))
+#eval IO.println ("ACTIONS_FALSE=" ++ reprStr
+  [sourcePolicy (literalConfig false) (encodeHistory []),
+   sourcePolicy (withComputedTolerance (literalConfig false)) (encodeHistory []),
+   sourcePolicy (literalConfig false) (encodeHistory [(false,false)]),
+   sourcePolicy (withComputedTolerance (literalConfig false)) (encodeHistory [(false,false)])])
+#eval IO.println ("ACTIONS_TRUE=" ++ reprStr
+  [sourcePolicy (literalConfig true) (encodeHistory []),
+   sourcePolicy (withComputedTolerance (literalConfig true)) (encodeHistory []),
+   sourcePolicy (literalConfig true) (encodeHistory [(true,false)]),
+   sourcePolicy (withComputedTolerance (literalConfig true)) (encodeHistory [(true,false)])])
+#eval emitPolicy "OLD_FALSE_BYTES" (literalConfig false)
+#eval emitPolicy "OLD_TRUE_BYTES" (literalConfig true)
+#eval emitPolicy "COMPUTED_FALSE_BYTES" (withComputedTolerance (literalConfig false))
+#eval emitPolicy "COMPUTED_TRUE_BYTES" (withComputedTolerance (literalConfig true))

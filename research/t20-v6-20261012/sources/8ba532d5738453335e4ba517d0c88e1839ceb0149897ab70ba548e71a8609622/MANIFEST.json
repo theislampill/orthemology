@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "Ordinary independent mathematical/effective-representation review, exact cap diameter and universal kernel criterion, explicit diagonal selector obstruction, infinite lift and no-tail boundary; finite corroboration only, no kernel claim.",
+  "author_result_sha256": "ec03a2d42894f7e16c109631d884fec6023ab85e4c149bc6639d01e399f91f9c",
+  "author_manifest_sha256": "dbc337f0600e67326889be3341020b60100bb58cd21b4cded6326fec4c67b15a",
+  "author_snapshot": "effective-stationary-review-replay-20261010",
+  "protected_mutations": false,
+  "baseline_rebuilt": false,
+  "files": [
+    {
+      "path": "AUTHOR_REPLAY.log",
+      "bytes": 1227,
+      "sha256": "3c789822d43c12f71b768559ffa078fdde91f16134c84ef8c44b17740a649215"
+    },
+    {
+      "path": "DIAMETER_CHECKS.json",
+      "bytes": 341,
+      "sha256": "de3acfddf5b52a4eb152184ef5662197cde40335bca684b11a9a388e52189614"
+    },
+    {
+      "path": "INDEPENDENT_CHECKS.json",
+      "bytes": 704,
+      "sha256": "74bcab7b7262496ce8dbdb04e37cc996eccfbb0da32e82df1019f4c4679d373e"
+    },
+    {
+      "path": "PRIMARY_SOURCE_CHECKS.json",
+      "bytes": 677,
+      "sha256": "98ec0891e84aee20668fa90fb0e15b8ee10b4427cad2f05b3dce57b90ee0fa4c"
+    },
+    {
+      "path": "REPLAY_RECEIPT.json",
+      "bytes": 2177,
+      "sha256": "f81d7fa5e6e17a8fad466b997b557d9a58a11a30226c5f49ff6a36d333200286"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 14083,
+      "sha256": "96e6e01450f5ecbfae77e16fcf3b9aa210a00755e37dac9ce105ae5b8005fdba"
+    },
+    {
+      "path": "controls/diameter_checks.py",
+      "bytes": 2237,
+      "sha256": "19eb1ee268f5d194f7223828ba9603b5d75208a5ed6239a2080d5670f3366cc6"
+    },
+    {
+      "path": "controls/independent_checks.py",
+      "bytes": 2354,
+      "sha256": "d73069ced41b5f2df8b5ba45324f9ffc5d95380aace423ec7b5d60614bdcd9f5"
+    },
+    {
+      "path": "seal.py",
+      "bytes": 1474,
+      "sha256": "4911868d53d9038b2a6746b8ff4b67ead9f78c546080e39deebaeca878151cd9"
+    },
+    {
+      "path": "sources/SOURCE_NOTE.md",
+      "bytes": 1001,
+      "sha256": "6f729742e2dd6834a23973acce52e79b97c4048574ad81db70097f1bc18bb479"
+    },
+    {
+      "path": "sources/STATE_DEPENDENT_SCOPE.md",
+      "bytes": 1123,
+      "sha256": "b18d8c44fa800c29e66586bd06cb9d672862e26ea3357e6a80c512a48bff69cd"
+    }
+  ]
+}

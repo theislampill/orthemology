@@ -1,0 +1,116 @@
+{
+  "posterior_collision": {
+    "compressed_state": [
+      "same_state",
+      "same_live_support"
+    ],
+    "conditional_next_action_distributions": [
+      {
+        "0": "1",
+        "1": "0"
+      },
+      {
+        "0": "0",
+        "1": "1"
+      }
+    ],
+    "total_variation": "1",
+    "meaning": "No state+support-only restart can preserve both given-policy conditional laws."
+  },
+  "universal_rotor_residue": {
+    "checks": 31209,
+    "max_menu": 8,
+    "lcm": {
+      "1": 1,
+      "2": 2,
+      "3": 6,
+      "4": 12,
+      "5": 60,
+      "6": 60,
+      "7": 420,
+      "8": 840
+    },
+    "old_menu_collision": {
+      "counts": [
+        0,
+        2
+      ],
+      "old_size": 2,
+      "new_size": 3
+    },
+    "general_proof": "Every k<=a divides L=lcm(1,...,a); equality mod L implies equality mod k. Store a residue per source and increment only at its departures.",
+    "limit": "Preserves scheduler decisions under fixed ordering, not phase index or empirical statistics."
+  },
+  "empirical_gate_collision": {
+    "counts": [
+      1,
+      3
+    ],
+    "successes": [
+      0,
+      0
+    ],
+    "phase": 1,
+    "same_rotor_modulus": 2,
+    "test": [
+      false,
+      true
+    ],
+    "qualification": "An interface-level row-test collision; does not claim two entire generated controller states coincide."
+  },
+  "copy_versus_product_affinity": {
+    "one_squared_affinity": "3/4",
+    "duplicated_observation_squared_affinity": "3/4",
+    "independent_two_sample_squared_affinity": "9/16",
+    "qualification": "Duplicate joint law has support {(0,0),(1,1)} and same masses as one observation; genuine tensor law has four cells."
+  },
+  "reset_invalidates_global_charging": {
+    "actual_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "reset_cells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "meaning": "The linear whole-run low-count budget uses actual globally unique consumed cells, not reset epoch labels."
+  },
+  "status": "PASS: exact finite controls only; no new universal controller proof or Lean replay",
+  "script_sha256": "a0b2bad1bdfac103568ab36d08d2df76f05f62221c9d810bd54ebf06a4718524"
+}

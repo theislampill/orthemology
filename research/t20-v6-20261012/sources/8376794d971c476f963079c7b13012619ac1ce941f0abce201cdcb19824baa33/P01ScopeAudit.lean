@@ -1,0 +1,69 @@
+import P01ScopeChecks
+import AuditSupport
+set_option pp.universes true
+set_option format.width 120
+#eval IO.println "AUDIT_BEGIN P01Qualification.skk"
+#check P01Qualification.skk
+#ortho_audit P01Qualification.skk
+#print axioms P01Qualification.skk
+#eval IO.println "AUDIT_END P01Qualification.skk"
+#eval IO.println "AUDIT_BEGIN P01Qualification.skk_application"
+#check P01Qualification.skk_application
+#ortho_audit P01Qualification.skk_application
+#print axioms P01Qualification.skk_application
+#eval IO.println "AUDIT_END P01Qualification.skk_application"
+#eval IO.println "AUDIT_BEGIN P01Qualification.identity_skk_function_relation"
+#check P01Qualification.identity_skk_function_relation
+#ortho_audit P01Qualification.identity_skk_function_relation
+#print axioms P01Qualification.identity_skk_function_relation
+#eval IO.println "AUDIT_END P01Qualification.identity_skk_function_relation"
+#eval IO.println "AUDIT_BEGIN P01Qualification.typed_equality_strictly_coarser"
+#check P01Qualification.typed_equality_strictly_coarser
+#ortho_audit P01Qualification.typed_equality_strictly_coarser
+#print axioms P01Qualification.typed_equality_strictly_coarser
+#eval IO.println "AUDIT_END P01Qualification.typed_equality_strictly_coarser"
+#eval IO.println "AUDIT_BEGIN P01Qualification.omega_empty_arrow_membership"
+#check P01Qualification.omega_empty_arrow_membership
+#ortho_audit P01Qualification.omega_empty_arrow_membership
+#print axioms P01Qualification.omega_empty_arrow_membership
+#eval IO.println "AUDIT_END P01Qualification.omega_empty_arrow_membership"
+#eval IO.println "AUDIT_BEGIN P01Qualification.omega_not_source_SN"
+#check P01Qualification.omega_not_source_SN
+#ortho_audit P01Qualification.omega_not_source_SN
+#print axioms P01Qualification.omega_not_source_SN
+#eval IO.println "AUDIT_END P01Qualification.omega_not_source_SN"
+#eval IO.println "AUDIT_BEGIN P01Qualification.new_PER_membership_does_not_imply_SN"
+#check P01Qualification.new_PER_membership_does_not_imply_SN
+#ortho_audit P01Qualification.new_PER_membership_does_not_imply_SN
+#print axioms P01Qualification.new_PER_membership_does_not_imply_SN
+#eval IO.println "AUDIT_END P01Qualification.new_PER_membership_does_not_imply_SN"
+#eval IO.println "AUDIT_BEGIN P01Qualification.omegaIntrinsic"
+#check P01Qualification.omegaIntrinsic
+#ortho_audit P01Qualification.omegaIntrinsic
+#print axioms P01Qualification.omegaIntrinsic
+#eval IO.println "AUDIT_END P01Qualification.omegaIntrinsic"
+#eval IO.println "AUDIT_BEGIN P01Qualification.tracked_dependent_core_does_not_imply_SN"
+#check P01Qualification.tracked_dependent_core_does_not_imply_SN
+#ortho_audit P01Qualification.tracked_dependent_core_does_not_imply_SN
+#print axioms P01Qualification.tracked_dependent_core_does_not_imply_SN
+#eval IO.println "AUDIT_END P01Qualification.tracked_dependent_core_does_not_imply_SN"
+#eval IO.println "AUDIT_BEGIN P01Qualification.all_identity_nonempty"
+#check P01Qualification.all_identity_nonempty
+#ortho_audit P01Qualification.all_identity_nonempty
+#print axioms P01Qualification.all_identity_nonempty
+#eval IO.println "AUDIT_END P01Qualification.all_identity_nonempty"
+#eval IO.println "AUDIT_BEGIN P01Qualification.all_identity_legal_self_instance"
+#check P01Qualification.all_identity_legal_self_instance
+#ortho_audit P01Qualification.all_identity_legal_self_instance
+#print axioms P01Qualification.all_identity_legal_self_instance
+#eval IO.println "AUDIT_END P01Qualification.all_identity_legal_self_instance"
+#eval IO.println "AUDIT_BEGIN P01Qualification.join_rejects_distinct_normal_forms"
+#check P01Qualification.join_rejects_distinct_normal_forms
+#ortho_audit P01Qualification.join_rejects_distinct_normal_forms
+#print axioms P01Qualification.join_rejects_distinct_normal_forms
+#eval IO.println "AUDIT_END P01Qualification.join_rejects_distinct_normal_forms"
+#eval IO.println "AUDIT_BEGIN P01Qualification.join_returns_actual_conversion"
+#check P01Qualification.join_returns_actual_conversion
+#ortho_audit P01Qualification.join_returns_actual_conversion
+#print axioms P01Qualification.join_returns_actual_conversion
+#eval IO.println "AUDIT_END P01Qualification.join_returns_actual_conversion"

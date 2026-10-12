@@ -1,0 +1,54 @@
+{
+  "records": [
+    {
+      "sha256": "54a4a6cef96a2c678f7766720094d463b3b93f407e787d1ed4b52e911c853fa1",
+      "path": "t20-consolidation-20261011/catalogue/objects/54/54a4a6cef96a2c678f7766720094d463b3b93f407e787d1ed4b52e911c853fa1",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "pointer": "sources/24",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    },
+    {
+      "sha256": "51d1a5daf3ac76952b35b3fcaffb0e3b1838b1d518105a0ac3e78b48e821c3c1",
+      "path": "t20-consolidation-20261011/catalogue/objects/51/51d1a5daf3ac76952b35b3fcaffb0e3b1838b1d518105a0ac3e78b48e821c3c1",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "pointer": "sources/25",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    },
+    {
+      "sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+      "path": "t20-consolidation-20261011/catalogue/objects/5d/5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "pointer": "sources/26",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    },
+    {
+      "sha256": "560d1b02ffd9cd8404edf372054c19f6a1293ff3756ed9c96cd17df09a2493c4",
+      "path": "t20-consolidation-20261011/catalogue/objects/56/560d1b02ffd9cd8404edf372054c19f6a1293ff3756ed9c96cd17df09a2493c4",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "pointer": "sources/16",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    },
+    {
+      "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "path": "t20-consolidation-20261011/catalogue/objects/3c/3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-consolidation-20261011/evidence/READING_LEDGER.json",
+      "pointer": "entries/14",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    },
+    {
+      "sha256": "2aab47f0bc601411b3e1262a343b55be7be0cb80db63924df0bc15444c875320",
+      "path": "t20-consolidation-20261011/catalogue/objects/2a/2aab47f0bc601411b3e1262a343b55be7be0cb80db63924df0bc15444c875320",
+      "method": "EXACT_PRIOR_FULL_SOURCE_REUSE",
+      "ledger": "t20-v6-20261011/type_collective/implementation_residue/READING_LEDGER.json",
+      "pointer": "exact hash row",
+      "scope": "Prior explicit full executable-source reading only, not fresh execution or newly inferred semantic closure."
+    }
+  ],
+  "local_imports": "All other authored Python imports in these54 are exact assigned/read bodies; generator partial-exec prefix maps to index12.",
+  "remaining_historical_shell_prerequisite": "hase-joint-extraction-fidelity-20261010/env.sh absent in current held paths; controller queried. Historical replay package not certified self-contained by this return."
+}

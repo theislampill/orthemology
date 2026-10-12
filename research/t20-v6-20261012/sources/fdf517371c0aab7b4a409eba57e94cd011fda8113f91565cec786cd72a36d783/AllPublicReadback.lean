@@ -1,0 +1,41 @@
+import AffineTailOptimization
+import TailMoments
+import ActualExponentialMoments
+set_option pp.explicit true
+set_option pp.universes true
+#check @Orthemology.AffineTail.offset
+#print axioms Orthemology.AffineTail.offset
+#check @Orthemology.AffineTail.slope
+#print axioms Orthemology.AffineTail.slope
+#check @Orthemology.AffineTail.optimized_affine_tail
+#print axioms Orthemology.AffineTail.optimized_affine_tail
+#check @Orthemology.TailMoments.le_tail_indicator_sum
+#print axioms Orthemology.TailMoments.le_tail_indicator_sum
+#check @Orthemology.TailMoments.lintegral_le_tail_sum
+#print axioms Orthemology.TailMoments.lintegral_le_tail_sum
+#check @Orthemology.TailMoments.lintegral_le_geometric_tail
+#print axioms Orthemology.TailMoments.lintegral_le_geometric_tail
+#check @Orthemology.TailMoments.geometric_tail_finite_expectation
+#print axioms Orthemology.TailMoments.geometric_tail_finite_expectation
+#check @Orthemology.TailMoments.exponential_le_weighted_tail
+#print axioms Orthemology.TailMoments.exponential_le_weighted_tail
+#check @Orthemology.TailMoments.exponential_moment_le_geometric_tail
+#print axioms Orthemology.TailMoments.exponential_moment_le_geometric_tail
+#check @Orthemology.TailMoments.geometric_tail_finite_exponential_moment
+#print axioms Orthemology.TailMoments.geometric_tail_finite_exponential_moment
+#check @Orthemology.TailMoments.affine_tail_geometric_envelope
+#print axioms Orthemology.TailMoments.affine_tail_geometric_envelope
+#check @Orthemology.TailMoments.affine_tail_finite_moments
+#print axioms Orthemology.TailMoments.affine_tail_finite_moments
+#check @Orthemology.TailMoments.power_le_scaled_exponential
+#print axioms Orthemology.TailMoments.power_le_scaled_exponential
+#check @Orthemology.TailMoments.finite_power_moment_of_positive_exponential_moment
+#print axioms Orthemology.TailMoments.finite_power_moment_of_positive_exponential_moment
+#check @HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#print axioms HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#check @HiddenParity.Cost.generated_stack_badCount_positive_exponential_moments
+#print axioms HiddenParity.Cost.generated_stack_badCount_positive_exponential_moments
+#check @HiddenParity.Cost.generated_badCount_exponential_eq_stack
+#print axioms HiddenParity.Cost.generated_badCount_exponential_eq_stack
+#check @HiddenParity.Cost.generated_actual_badCount_positive_exponential_moments
+#print axioms HiddenParity.Cost.generated_actual_badCount_positive_exponential_moments

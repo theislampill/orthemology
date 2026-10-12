@@ -1,0 +1,16 @@
+test_added_shadow_modules_do_not_run (test_review_handoff.IndependentControls.test_added_shadow_modules_do_not_run) ... ok
+test_builder_cli_excludes_adjacent_modules_and_preserves_inputs (test_review_handoff.IndependentControls.test_builder_cli_excludes_adjacent_modules_and_preserves_inputs) ... ok
+test_fresh_stage_disjoint_and_byte_preserving (test_review_handoff.IndependentControls.test_fresh_stage_disjoint_and_byte_preserving) ... ok
+test_hardlinked_source_is_copied_not_retained_as_link (test_review_handoff.IndependentControls.test_hardlinked_source_is_copied_not_retained_as_link) ... ok
+test_interpreter_prefix_package_shadow_modules_do_not_run (test_review_handoff.IndependentControls.test_interpreter_prefix_package_shadow_modules_do_not_run) ... ok
+test_interpreter_prefix_pythonpath_shadow_modules_do_not_run (test_review_handoff.IndependentControls.test_interpreter_prefix_pythonpath_shadow_modules_do_not_run) ... ok
+test_manual_fixture_cli_read_only_normal_and_optimized (test_review_handoff.IndependentControls.test_manual_fixture_cli_read_only_normal_and_optimized) ... ok
+test_rebound_boolean_source_size_rejected (test_review_handoff.IndependentControls.test_rebound_boolean_source_size_rejected) ... ok
+test_rebound_changed_curated_source_identity_rejected (test_review_handoff.IndependentControls.test_rebound_changed_curated_source_identity_rejected) ... ok
+test_rebound_dropped_blocker_rejected (test_review_handoff.IndependentControls.test_rebound_dropped_blocker_rejected) ... ok
+test_rebound_missing_dependency_disposition_rejected (test_review_handoff.IndependentControls.test_rebound_missing_dependency_disposition_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.438s
+
+OK

@@ -1,0 +1,1 @@
+These are byte-for-byte metadata from the withheld predecessor. Their claims of a historical scalar receipt/object mismatch are false and superseded by PROVENANCE_CORRECTION.json. They are preserved only as correction evidence, not active acceptance claims. Original proof/review evidence was valid and unchanged.

@@ -1,0 +1,19 @@
+{
+  "id": "V6-ASSURANCE-BH",
+  "title": "Truth-calibration checker does not execute its named proper-function countermodels",
+  "affected_source_hashes": [
+    "36d0d276cd4f6b82749a31697e1aa1a1417cbd0fede575f828337d42019a0bc8"
+  ],
+  "source_locations": [
+    "root_math/other_geometry_code_annex/READ_LEDGER.json#queue_index9"
+  ],
+  "earlier_claim": "Reported1024properfunctionexpansions andsevenpassingnamedcountermodels",
+  "precise_defect": "The bit-loop onlytestslen(bits)==10; sevenregressionfields assignedliteralTrue. Thosefieldsdonotexecutecontent-sensitivepredicates.",
+  "counterexample_or_test": "Fullsourceinspection; exactunchangedsourcefreshnormalreplay passes its actual predicates, FRESH_REPLAY.json index9.",
+  "evidence_status": "SOURCE_LEVEL_ASSURANCE_DEFECT; NO_REFUTATION_OF_WRITTEN_THEOREM",
+  "independent_review": "root_math/bh_checker_review/REVIEW.json",
+  "corrected_scope": "30000constructed and50000randomgraph/tree/cyclecalibrationtests are genuine finite controls; properfunctionexpansioncases lackimplementedsemantics.",
+  "surviving_positive_result": "Separately justified graph-calibration theorem and source arguments unaffected absentotherdefect.",
+  "current_integration_status": "ADDITIVE_V6_CORRECTION; ORIGINAL_UNCHANGED",
+  "limitations": "No retrospective historicalruntimeclaim; finitecontrolsnotuniversalproof."
+}

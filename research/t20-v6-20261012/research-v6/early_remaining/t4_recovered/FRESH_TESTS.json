@@ -1,0 +1,28 @@
+[
+  {
+    "script": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/semantic-recovery/check_endpoint_recovery.py",
+    "script_sha256": "5a5fa3183356f1b421ee96f43913570f81b456c070035b03cef23d1c6c8f819d",
+    "command": [
+      "python",
+      "check_endpoint_recovery.py"
+    ],
+    "cwd": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/semantic-recovery",
+    "started_utc": "2026-10-11T18:15:05.494780+00:00",
+    "exit_code": 0,
+    "log": "t20-v6-20261011/early_remaining/t4_recovered/semantic-recovery_FRESH.log",
+    "log_sha256": "e64f6b48d3169366cceed46d32de5dbe50b4f6fbb77558385ffbdff25b0da7ca"
+  },
+  {
+    "script": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/endpoint-source-audit/checks/independent_endpoint.py",
+    "script_sha256": "6272270021a66562d36ec78a55cc4a70698b9854f4049f9307fa4917be73d4f8",
+    "command": [
+      "python",
+      "checks/independent_endpoint.py"
+    ],
+    "cwd": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/endpoint-source-audit",
+    "started_utc": "2026-10-11T18:15:17.692024+00:00",
+    "exit_code": 0,
+    "log": "t20-v6-20261011/early_remaining/t4_recovered/endpoint-source-audit_FRESH.log",
+    "log_sha256": "2372eb6f3c5c1614298441afd2517023ac5954172a3a24f377bd39e0c4051c94"
+  }
+]

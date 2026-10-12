@@ -1,0 +1,420 @@
+{
+  "edition": 3,
+  "result_count": 29,
+  "retained_results": 21,
+  "new_to_edition": 8,
+  "historical_novelty_claim": false,
+  "results": [
+    {
+      "label": "prop:coordinates",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "coordinate_realisation_invariance"
+      ],
+      "check_limit": "Elementary conjugacy/substitution proof; physical feasibility of a coordinate map is not established.",
+      "number": "6.1",
+      "page": 12,
+      "kind": "proposition",
+      "title": "Change of physical coordinates preserves an exact realisation",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "prop:memorynecessity",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "parity_statefulness_and_memoryless_rejection"
+      ],
+      "check_limit": "Deterministic induction on common future inputs; all operative memory must be counted.",
+      "number": "6.2",
+      "page": 13,
+      "kind": "proposition",
+      "title": "Distinguishable continuations require distinguishable realisation states",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "prop:nsresidual",
+      "kind": "proposition",
+      "title": "Residual-to-state estimate",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "residual_comparison_ode_envelope"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "check_limit": "Only a scalar comparison envelope and output-ball arithmetic were checked; no fluid model was numerically or physically validated.",
+      "previous_edition_number": "6.1",
+      "previous_edition_page": 12,
+      "number": "8.1",
+      "page": 17
+    },
+    {
+      "label": "cor:nsobservation",
+      "kind": "corollary",
+      "title": "Separation of two specified fluid observations",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "bounded_observation_ball_separation"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "check_limit": "Only a scalar comparison envelope and output-ball arithmetic were checked; no fluid model was numerically or physically validated.",
+      "previous_edition_number": "6.2",
+      "previous_edition_page": 12,
+      "number": "8.2",
+      "page": 18
+    },
+    {
+      "label": "prop:noninterference",
+      "kind": "proposition",
+      "title": "No channel without message-dependent observations",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "message_independent_observation"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "7.1",
+      "previous_edition_page": 14,
+      "number": "9.1",
+      "page": 19
+    },
+    {
+      "label": "thm:bit",
+      "kind": "theorem",
+      "title": "Robust binary distinguishability",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "scalar_robust_bit_table",
+        "gramian_numerical_integral",
+        "optimal_scalar_control",
+        "closed_noise_balls_at_equality"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "7.2",
+      "previous_edition_page": 15,
+      "number": "9.2",
+      "page": 20
+    },
+    {
+      "label": "prop:nonlinearbit",
+      "kind": "proposition",
+      "title": "Sufficient nonlinear signalling margin",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "nonlinear_margin"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "7.3",
+      "previous_edition_page": 15,
+      "number": "9.3",
+      "page": 20
+    },
+    {
+      "label": "prop:uniform",
+      "kind": "proposition",
+      "title": "A uniform reference-decoder margin",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "uniform_model_uncertainty_margin",
+        "uncalibrated_polarity_counterexample"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "7.4",
+      "previous_edition_page": 16,
+      "number": "9.4",
+      "page": 21
+    },
+    {
+      "label": "prop:fibre",
+      "kind": "proposition",
+      "title": "Task-sufficient abstraction on the attained image",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "attained_image_factorisation_and_empty_guard"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "8.1",
+      "previous_edition_page": 18,
+      "number": "10.1",
+      "page": 23
+    },
+    {
+      "label": "prop:join",
+      "kind": "proposition",
+      "title": "Conditional soundness and idempotence of evidential JOIN",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "evidential_join_soundness_and_idempotence"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "8.2",
+      "previous_edition_page": 19,
+      "number": "10.2",
+      "page": 24
+    },
+    {
+      "label": "prop:relabel",
+      "kind": "proposition",
+      "title": "Relabelling does not identify an intrinsic latent language",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "latent_relabelling_equivalence"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "9.1",
+      "previous_edition_page": 20,
+      "number": "11.1",
+      "page": 25
+    },
+    {
+      "label": "prop:finitecorpus",
+      "kind": "proposition",
+      "title": "An unobserved response is not fixed by unrestricted finite data",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "finite_corpus_nonidentification"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "9.2",
+      "previous_edition_page": 20,
+      "number": "11.2",
+      "page": 25
+    },
+    {
+      "label": "prop:serial",
+      "kind": "proposition",
+      "title": "Serial reliability requires compatibility",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "serial_reliability_without_independence",
+        "joint_resource_and_role_countermodels"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "10.1",
+      "previous_edition_page": 21,
+      "number": "12.1",
+      "page": 26
+    },
+    {
+      "label": "prop:export",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "stateful_export_collision_and_initialiser_impossibility"
+      ],
+      "check_limit": "Deterministic export obstruction; proof applies to complete exported information and specified continuations.",
+      "number": "12.2",
+      "page": 28,
+      "kind": "proposition",
+      "title": "Migration requires an export that distinguishes relevant continuations",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "prop:cut",
+      "kind": "proposition",
+      "title": "Cut bound for finite-message recovery",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "fresh_state_transfer_lower_bound"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "11.1",
+      "previous_edition_page": 23,
+      "number": "13.1",
+      "page": 29
+    },
+    {
+      "label": "thm:continuation",
+      "kind": "theorem",
+      "title": "Behavioural continuation under certified migration",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "exact_encoding_and_migration",
+        "mixed_execution_and_migration_error"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "12.1",
+      "previous_edition_page": 24,
+      "number": "14.1",
+      "page": 30
+    },
+    {
+      "label": "prop:packing",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "robust_packing_and_touching_ball_guard"
+      ],
+      "check_limit": "Disjoint uncertainty balls and Euclidean volume; specific bounded encoding, not universal matter capacity.",
+      "number": "14.2",
+      "page": 32,
+      "kind": "proposition",
+      "title": "A scoped robust-state packing bound",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "prop:tvtrace",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "finite_trace_total_variation_bound"
+      ],
+      "check_limit": "Finite-alphabet coupling argument under uniform common-history conditional bounds.",
+      "number": "14.3",
+      "page": 32,
+      "kind": "proposition",
+      "title": "Uniform next-step distribution bounds compose over a finite trace",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "prop:hitting",
+      "kind": "proposition",
+      "title": "Failure tolerance is a hitting-set property",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "failure_support_hitting_set"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "13.1",
+      "previous_edition_page": 26,
+      "number": "15.1",
+      "page": 34
+    },
+    {
+      "label": "thm:parity",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "bistable_exact_rational_certificate"
+      ],
+      "check_limit": "Scalar invariant-region and bounded-entry proof for a stipulated hybrid reset/ODE model. No physical calibration or implementation certified.",
+      "number": "16.1",
+      "page": 35,
+      "kind": "theorem",
+      "title": "Robust decoded parity in the stipulated bistable model",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "cor:paritymigration",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "parity_traces_and_model_handovers"
+      ],
+      "check_limit": "Finite-trace induction using the stated digital/ODE steps, state writers, readers and input-order assumptions.",
+      "number": "16.2",
+      "page": 36,
+      "kind": "corollary",
+      "title": "Model-level mixed-realisation continuation",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    },
+    {
+      "label": "lem:commute",
+      "kind": "lemma",
+      "title": "Order independence of certified commuting updates",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "commuting_workflow_updates"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "14.1",
+      "previous_edition_page": 27,
+      "number": "17.1",
+      "page": 38
+    },
+    {
+      "label": "thm:undecidable",
+      "kind": "theorem",
+      "title": "Undecidability of eventual distinguishability at an unspecified horizon",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "bounded_paired_state_decidability"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "check_limit": "Finite checks cover the contrasting decidable finite-state case, not a computational verification of undecidability.",
+      "previous_edition_number": "14.2",
+      "previous_edition_page": 28,
+      "number": "17.2",
+      "page": 39
+    },
+    {
+      "label": "thm:viability",
+      "kind": "theorem",
+      "title": "Finite-state viability kernel",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "finite_viability_kernel"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "15.1",
+      "previous_edition_page": 29,
+      "number": "18.1",
+      "page": 40
+    },
+    {
+      "label": "prop:progress",
+      "kind": "proposition",
+      "title": "Finite-rank progress certificate",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "finite_rank_progress_and_idle_countermodel"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "15.2",
+      "previous_edition_page": 30,
+      "number": "18.2",
+      "page": 41
+    },
+    {
+      "label": "thm:autonomy",
+      "kind": "theorem",
+      "title": "Sufficient conditions for host-relative operational autonomy",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "exact_encoding_and_migration",
+        "failure_support_hitting_set",
+        "finite_viability_kernel",
+        "finite_rank_progress_and_idle_countermodel"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "check_limit": "Component toy obligations were checked; no complete real-world replacement architecture is exhibited.",
+      "previous_edition_number": "15.3",
+      "previous_edition_page": 31,
+      "number": "18.3",
+      "page": 41
+    },
+    {
+      "label": "prop:attribution",
+      "kind": "proposition",
+      "title": "Observational equivalence blocks attribution",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "attribution_total_variation"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "16.1",
+      "previous_edition_page": 33,
+      "number": "19.1",
+      "page": 42
+    },
+    {
+      "label": "prop:heldout",
+      "kind": "proposition",
+      "title": "Simultaneous held-out loss bound",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "heldout_bound_exact_binomial_tails"
+      ],
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review.",
+      "previous_edition_number": "17.1",
+      "previous_edition_page": 35,
+      "number": "20.1",
+      "page": 45
+    },
+    {
+      "label": "prop:zerofailure",
+      "introduced_in_edition": 3,
+      "related_finite_checks": [
+        "zero_failure_cell_bound"
+      ],
+      "check_limit": "Fixed-cell iid Bernoulli zero-failure rejection bound plus union bound. No actual hardware trials.",
+      "number": "20.2",
+      "page": 46,
+      "kind": "proposition",
+      "title": "Simultaneous zero-failure rejection bound for fixed cells",
+      "proof_status": "Written conditional proof and preparation-side algebraic review; no proof-assistant verification or independent expert peer review."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+PASS: positive normalized fine states share the same coarse state
+PASS: channel is column-stochastic and full row rank
+PASS: exact two distinct induced mobilities
+PASS: exact fine and projected objective velocities
+PASS: canonical Fisher coarse velocity is a third value
+PASS: each pointwise quotient metric is nondegenerate on the coarse tangent
+PASS: same tangent displacement has different pointwise quotient energies
+PASS: symbolic fibre preserves coarse q=(x,1-x)
+PASS: symbolic mobility varies with hidden fibre coordinate
+PASS: p explicit solution satisfies fine Fisher-gradient ODE
+PASS: r explicit solution satisfies fine Fisher-gradient ODE
+PASS: deterministic lumping exactly preserves Fisher cometric
+PASS: full perspective-Hessian flow agrees at coherent starting state
+PASS: symmetric moment identity at order 0
+PASS: symmetric moment identity at order 1
+PASS: symmetric moment identity at order 2
+PASS: symmetric moment identity at order 3
+PASS: symmetric moment identity at order 4
+PASS: first-moment dynamics are covariance action
+
+19 exact control groups passed; no statistical sampling or numerical integration.

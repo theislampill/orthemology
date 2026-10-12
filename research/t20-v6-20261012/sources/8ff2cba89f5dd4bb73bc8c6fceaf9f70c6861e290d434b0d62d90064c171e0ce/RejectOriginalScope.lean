@@ -1,0 +1,4 @@
+import FullESigmaScopeControls
+open SigmaCompletion SigmaCompletion.FullE.ScopeControls
+example := SigmaCompletion.elim_of_eta combined_context combined_A combined_B
+  combined_motive combined_branch combined_input combined_eta

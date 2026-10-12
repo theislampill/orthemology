@@ -1,0 +1,20 @@
+{
+  "schema": "t20-exact-literal-private-id-projection-v1",
+  "original_sha256": "c49f2834226391d11e4f1ed6f7935d725e8b6bfd8d5517d523088c9c994d4032",
+  "projection_sha256": "2b00c4051a32018d253ebd2babb741b0f3b96dbbed6dcddad168447a5ae6528e",
+  "original_bytes": 7124862,
+  "projection_bytes": 7124861,
+  "method": "One exact listed byte span; all other bytes independently verified identical. Only one parsed full_delta_read scalar changes by private identifier replacement.",
+  "json_pointer": "/records/45/exact_current_owner_result_routes/0/owner_result_record/source_and_review_bindings/2/original_public_equivalence/full_delta_read",
+  "spans": [
+    {
+      "start_byte": 2421937,
+      "end_byte": 2421978,
+      "old_sha256": "01c2e5622a74c146f4f294b28e0100cc4f47b232a627ddc53d94b23a03431414",
+      "new_utf8": "[private instruction identifier omitted]",
+      "new_sha256": "8a93df9daab9fac7a05fa2745f5a74ac737f4afda04626bc4e42231c9f52469e"
+    }
+  ],
+  "private_identifier_values_distributed": false,
+  "status": "CANDIDATE_PENDING_ROOT_ACTUAL_REVIEW"
+}

@@ -1,0 +1,531 @@
+{
+  "utc": "2026-10-12T15:25:46.316873+00:00",
+  "input_sha256": "e15e4c1c472bb01dc696acbc91d030feebb675b46da03472b71bdac658b26e63",
+  "principal_edges_reviewed": 8,
+  "principal_edge_verdict": "Accepted exact qualified guards and explicit source/target orientation. Nontransfer C02 remains absence of established transport; C04 distinct constructions, not probabilistic independence.",
+  "checks": [
+    {
+      "pointer": "$/registered_families",
+      "path": "t20-v6-20261011/corpus/admission/FINAL_REGISTERED_RESULT_DISPOSITIONS.json",
+      "expected": "9410474d579338e654d7adda859b229cc2d3e96f3c71fd438e0ca12ec0cabc5e",
+      "actual": "9410474d579338e654d7adda859b229cc2d3e96f3c71fd438e0ca12ec0cabc5e"
+    },
+    {
+      "pointer": "$/registered_source_scopes",
+      "path": "t20-v6-20261011/corpus/admission/FINAL_REGISTERED_SOURCE_SCOPE_DISPOSITIONS.json",
+      "expected": "11628b35c4d9501b2fb81fc4434419fa110db0ef54a113e0c50879ac5b2dc64d",
+      "actual": "11628b35c4d9501b2fb81fc4434419fa110db0ef54a113e0c50879ac5b2dc64d"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/0/evidence/0",
+      "path": "t20-v6-20261011/controller_chain/RESULT.md",
+      "expected": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+      "actual": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/1/evidence/0",
+      "path": "t20-v6-20261011/controller_chain/RESULT.md",
+      "expected": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+      "actual": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/2/evidence/0",
+      "path": "t20-v6-20261011/controller_chain/RESULT.md",
+      "expected": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+      "actual": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/2/evidence/1",
+      "path": "t20-v6-20261011/root_math/terminal_t6_family_routes/REGISTERED_RESULT_DISPOSITIONS.json",
+      "expected": "2e08f6b8aae2a026d5b84575d210c7560a01bd74d6a2b9437153c99b7f86d014",
+      "actual": "2e08f6b8aae2a026d5b84575d210c7560a01bd74d6a2b9437153c99b7f86d014"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/3/evidence/0",
+      "path": "t20-v6-20261011/controller_chain/RESULT.md",
+      "expected": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+      "actual": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/4/evidence/0",
+      "path": "t20-v6-20261011/controller_chain/RESULT.md",
+      "expected": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+      "actual": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/5/evidence/0",
+      "path": "t20-v6-20261011/foundations/CURRENT_FOUNDATIONAL_CLAIMS.json",
+      "expected": "d967c6418179ccc64a6c1d69c8b8bba6756f1c31438abbb501f8d9743a2c2d16",
+      "actual": "d967c6418179ccc64a6c1d69c8b8bba6756f1c31438abbb501f8d9743a2c2d16"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/5/evidence/1",
+      "path": "t20-v6-20261011/foundations/REGISTERED_SEMANTIC_FINDINGS.json",
+      "expected": "7e6dcd89086e1c864e4f2cdf7e5fdecd14de10cf94b5198ce36df71b975d6d3a",
+      "actual": "7e6dcd89086e1c864e4f2cdf7e5fdecd14de10cf94b5198ce36df71b975d6d3a"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/6/evidence/0",
+      "path": "t20-v6-20261011/type_collective/registered_t20_eight/REGISTERED_RESULT_DISPOSITIONS.json",
+      "expected": "83c66b21f5701c03632f3a33688e6a939128e1a049ff8d7d536308de87396c78",
+      "actual": "83c66b21f5701c03632f3a33688e6a939128e1a049ff8d7d536308de87396c78"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/7/evidence/0",
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/DECISION_CONTRACT_CORROBORATION.json",
+      "expected": "7e122e9b986e455043d27d587296f72286151e6cfbffafe15599eeae3fb432fe",
+      "actual": "7e122e9b986e455043d27d587296f72286151e6cfbffafe15599eeae3fb432fe"
+    },
+    {
+      "pointer": "$/principal_explicit_relationships/7/evidence/1",
+      "path": "t20-v6-20261011/empirical_occurrence/REGISTERED_COVERAGE.json",
+      "expected": "f39b1501435c471de0fbe4826b8e1d0000fce29f4994be16896a42e1d71a3631",
+      "actual": "f39b1501435c471de0fbe4826b8e1d0000fce29f4994be16896a42e1d71a3631"
+    },
+    {
+      "pointer": "$/reviewed_cross_contributions/source",
+      "path": "t20-v6-20261011/synthesis/CROSS_CONTRIBUTIONS_WORKING.json",
+      "expected": "a44d0274e2bd66da40547cee2182bab31b1369f28e485b090d5c530b234fa87f",
+      "actual": "a44d0274e2bd66da40547cee2182bab31b1369f28e485b090d5c530b234fa87f"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/0",
+      "path": "t20-v6-20261011/../t20-closure-audit-20261011/early_foundations/SOURCE_BINDINGS.json",
+      "expected": "22f54b462e0c20ad50b1a23c529d99ba0fa1ed61435d6063ff49ececd754a8b6",
+      "actual": "22f54b462e0c20ad50b1a23c529d99ba0fa1ed61435d6063ff49ececd754a8b6"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/1",
+      "path": "t20-v6-20261011/../t20-closure-audit-20261011/early_mathematics/SOURCE_BINDINGS.json",
+      "expected": "be3f4375fb5c47a78d7fbcd5940b1b928df5eea3ed7e8a399f3d1e98a78ad4b8",
+      "actual": "be3f4375fb5c47a78d7fbcd5940b1b928df5eea3ed7e8a399f3d1e98a78ad4b8"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/2",
+      "path": "t20-v6-20261011/../t20-closure-audit-20261011/early_operations/SOURCE_BINDINGS.json",
+      "expected": "9e11edbe5e19a837abc5c166583b05cd659de92b2acb40b9ffb3d736ff3c9702",
+      "actual": "9e11edbe5e19a837abc5c166583b05cd659de92b2acb40b9ffb3d736ff3c9702"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/3",
+      "path": "t20-v6-20261011/../t20-closure-audit-20261011/root_types/SOURCE_BINDINGS.json",
+      "expected": "5d7561c8901c07a4da01c8396e1672d0b378cf94be7d05731cc6d0a6df6f5a4d",
+      "actual": "5d7561c8901c07a4da01c8396e1672d0b378cf94be7d05731cc6d0a6df6f5a4d"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/4",
+      "path": "t20-v6-20261011/../t20-consolidation-20261011/pro-synthesis/SOURCE_BINDINGS.json",
+      "expected": "d569b681833468b6cc29116084faf9fcb4374380582457dd6eadeed46c005b4c",
+      "actual": "d569b681833468b6cc29116084faf9fcb4374380582457dd6eadeed46c005b4c"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/5",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/audit_symmetries/SOURCE_BINDINGS.json",
+      "expected": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a",
+      "actual": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/6",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/coverage_review/SOURCE_BINDINGS.json",
+      "expected": "295c755b70b64c4a0305f21eacb44bb717eafab54f48cef176fa4b78e924c419",
+      "actual": "295c755b70b64c4a0305f21eacb44bb717eafab54f48cef176fa4b78e924c419"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/7",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/cross_front_synthesis/SOURCE_BINDINGS.json",
+      "expected": "0892bc16b1d8b3fabd97bd4df8ce1d37b1d5168240a5946b6d27e26454be3c4d",
+      "actual": "0892bc16b1d8b3fabd97bd4df8ce1d37b1d5168240a5946b6d27e26454be3c4d"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/8",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/cross_front_synthesis/checkpoint_qualified_1416/SOURCE_BINDINGS.json",
+      "expected": "0bd88055e87fbe2e393c0d9e844b273d09f9d937107da38b4a342925e2d467d8",
+      "actual": "0bd88055e87fbe2e393c0d9e844b273d09f9d937107da38b4a342925e2d467d8"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/9",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/foundational_interface/SOURCE_BINDINGS.json",
+      "expected": "fe1ad686f70e8038071e3c609eed8ab14dd411ffdcfe2632c5ab6198f222af0e",
+      "actual": "fe1ad686f70e8038071e3c609eed8ab14dd411ffdcfe2632c5ab6198f222af0e"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/10",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/independent_review/SOURCE_BINDINGS.json",
+      "expected": "d08460d94935948f75259d1fe53fb6e21edc03c957a81219f452925cf2c447f5",
+      "actual": "d08460d94935948f75259d1fe53fb6e21edc03c957a81219f452925cf2c447f5"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/11",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/joint_correction/SOURCE_BINDINGS.json",
+      "expected": "bea9c0270986e3b2656deb1162543cfab19ff155c9f64b0b47727ee9cbd66f25",
+      "actual": "bea9c0270986e3b2656deb1162543cfab19ff155c9f64b0b47727ee9cbd66f25"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/12",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "expected": "b195f8698f42ba1357b66b5c60936c26aa36bbd3c09a005f44b4ae23b7cb56aa",
+      "actual": "b195f8698f42ba1357b66b5c60936c26aa36bbd3c09a005f44b4ae23b7cb56aa"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/13",
+      "path": "t20-v6-20261011/../t20-depth-reassessment-20261011/semantic_geometry/SOURCE_BINDINGS.json",
+      "expected": "29375aa6a680c1e5aed93400e27708f8b92f908a75c16e14e0f1ab4a4227e8ea",
+      "actual": "29375aa6a680c1e5aed93400e27708f8b92f908a75c16e14e0f1ab4a4227e8ea"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/14",
+      "path": "t20-v6-20261011/early_remaining/DEPENDENCY_CLOSURE.json",
+      "expected": "34c9e228d0eccac5ada3af855354c64a665a193babf8a3d306d318cd418ae5e4",
+      "actual": "34c9e228d0eccac5ada3af855354c64a665a193babf8a3d306d318cd418ae5e4"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/15",
+      "path": "t20-v6-20261011/early_remaining/countable_computability_controls/DEPENDENCY_REUSE.json",
+      "expected": "19ef89819d80d272cf960d3dd5a55300614706a4686f8e4070945c878d14931c",
+      "actual": "19ef89819d80d272cf960d3dd5a55300614706a4686f8e4070945c878d14931c"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/16",
+      "path": "t20-v6-20261011/early_remaining/finite_panel_controls/DEPENDENCY_REUSE.json",
+      "expected": "3ea808cbf6b17d3e79ffcaa26ba9c8ef6912772a4fb58759599500408b9a7a23",
+      "actual": "3ea808cbf6b17d3e79ffcaa26ba9c8ef6912772a4fb58759599500408b9a7a23"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/17",
+      "path": "t20-v6-20261011/early_remaining/preservation_geometry_children/DEPENDENCY_REUSE.json",
+      "expected": "2d722061c340c386c17a57184b99a930a794899da93b8ac9f8cfa6aab66d8aa4",
+      "actual": "2d722061c340c386c17a57184b99a930a794899da93b8ac9f8cfa6aab66d8aa4"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/18",
+      "path": "t20-v6-20261011/early_remaining/skyline_code/DEPENDENCY_CLOSURE.json",
+      "expected": "6bb382bb6a20ba3a994042439b0324f620f7086dbc7e395c7e19053cc20f1462",
+      "actual": "6bb382bb6a20ba3a994042439b0324f620f7086dbc7e395c7e19053cc20f1462"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/19",
+      "path": "t20-v6-20261011/early_remaining/terminal_annex_code100/DIRECT_HELPER_BINDINGS.json",
+      "expected": "0e96d3cca573e9e63858c64c9a51d04733645d8237a6631baa214ac2e21433af",
+      "actual": "0e96d3cca573e9e63858c64c9a51d04733645d8237a6631baa214ac2e21433af"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/20",
+      "path": "t20-v6-20261011/early_remaining/terminal_annex_prose42/DEPENDENCY_BINDINGS.json",
+      "expected": "a8ce13e69483940ab693823478145b2c3d3706122449ca8ffc5dc249ea98381a",
+      "actual": "a8ce13e69483940ab693823478145b2c3d3706122449ca8ffc5dc249ea98381a"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/21",
+      "path": "t20-v6-20261011/early_remaining/terminal_csv11/DEPENDENCY_BINDINGS.json",
+      "expected": "a84f69252899466128adbbafd2d70c5cb221c7d698376ae13ee8f7f3189b0f01",
+      "actual": "a84f69252899466128adbbafd2d70c5cb221c7d698376ae13ee8f7f3189b0f01"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/22",
+      "path": "t20-v6-20261011/empirical_occurrence/DEPENDENCY_CLOSURE.json",
+      "expected": "bb4f9c5f2720d2d805d4b4c0d93ca5d2572125d44d7a212fb11b9b296b92193d",
+      "actual": "bb4f9c5f2720d2d805d4b4c0d93ca5d2572125d44d7a212fb11b9b296b92193d"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/23",
+      "path": "t20-v6-20261011/empirical_occurrence/aq_bk_implementation/DEPENDENCY_CLOSURE.json",
+      "expected": "676af8b481a57ad4bd177375c8deb6d9f6e796afc87ddfee74a3836a47c357bd",
+      "actual": "676af8b481a57ad4bd177375c8deb6d9f6e796afc87ddfee74a3836a47c357bd"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/24",
+      "path": "t20-v6-20261011/empirical_occurrence/attestation_interface/DEPENDENCY_CLOSURE.json",
+      "expected": "bbd1c087bd1da36eb741c2c353bf1a29ec8066be799d3988f53928ed2f5b11f5",
+      "actual": "bbd1c087bd1da36eb741c2c353bf1a29ec8066be799d3988f53928ed2f5b11f5"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/25",
+      "path": "t20-v6-20261011/empirical_occurrence/authority_passages/DEPENDENCY_CLOSURE.json",
+      "expected": "655176830eb5c4bbf684cf7eec279ac236c4c936da457189276036c10b752d2a",
+      "actual": "655176830eb5c4bbf684cf7eec279ac236c4c936da457189276036c10b752d2a"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/26",
+      "path": "t20-v6-20261011/empirical_occurrence/causal_provision_controls/DEPENDENCY_CLOSURE.json",
+      "expected": "5c30350f946ff3d73f36cc4b690cf14f2e65ce5300b867f08b005057df7eaacf",
+      "actual": "5c30350f946ff3d73f36cc4b690cf14f2e65ce5300b867f08b005057df7eaacf"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/27",
+      "path": "t20-v6-20261011/empirical_occurrence/causal_test_completion/DEPENDENCY_CLOSURE.json",
+      "expected": "04eeaeb0fbae2c36b1d83f781f6f2a7d20c54fa77cb254d9e1adc0f3f875d5cf",
+      "actual": "04eeaeb0fbae2c36b1d83f781f6f2a7d20c54fa77cb254d9e1adc0f3f875d5cf"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/28",
+      "path": "t20-v6-20261011/empirical_occurrence/cooperation_callers/IMPORT_LAYOUT_CLOSURE.json",
+      "expected": "ca24ba496731e7b761e332756e84b8b7e2479d862991b5d55510724df6d4ad9d",
+      "actual": "ca24ba496731e7b761e332756e84b8b7e2479d862991b5d55510724df6d4ad9d"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/29",
+      "path": "t20-v6-20261011/empirical_occurrence/directive_qualification/DEPENDENCY_CLOSURE.json",
+      "expected": "0cd0d485d2375b6149ac78a10c9c3c2897cff977881d593e71b644e8b98ffb31",
+      "actual": "0cd0d485d2375b6149ac78a10c9c3c2897cff977881d593e71b644e8b98ffb31"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/30",
+      "path": "t20-v6-20261011/empirical_occurrence/explanation_continuation/DEPENDENCY_CLOSURE.json",
+      "expected": "7fd7dd5c943a383a23b0a4ddb52c572417b6162fddd6c86d00d64245d72993f2",
+      "actual": "7fd7dd5c943a383a23b0a4ddb52c572417b6162fddd6c86d00d64245d72993f2"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/31",
+      "path": "t20-v6-20261011/empirical_occurrence/final_inquiry_protocol/DEPENDENCY_CLOSURE.json",
+      "expected": "f075df53f2341cf01a4e12fa9f4e5d7f7e9bf328d5acfc1467bd7f1666e979f2",
+      "actual": "f075df53f2341cf01a4e12fa9f4e5d7f7e9bf328d5acfc1467bd7f1666e979f2"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/32",
+      "path": "t20-v6-20261011/empirical_occurrence/final_short_scope_notes/DEPENDENCY_CLOSURE.json",
+      "expected": "d88b738349db8bf80155f3b1acbb5279d91c1d5d9b4e1495bbcf5c26817c2829",
+      "actual": "d88b738349db8bf80155f3b1acbb5279d91c1d5d9b4e1495bbcf5c26817c2829"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/33",
+      "path": "t20-v6-20261011/empirical_occurrence/inquiry_revision/DEPENDENCY_CLOSURE.json",
+      "expected": "c699675f64bd09902da257f1f0b72685d9c9dc9ba0c4462f4e88806e9b277540",
+      "actual": "c699675f64bd09902da257f1f0b72685d9c9dc9ba0c4462f4e88806e9b277540"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/34",
+      "path": "t20-v6-20261011/empirical_occurrence/large_authored_reports/DEPENDENCY_CLOSURE.json",
+      "expected": "a47b6e96f2912e1a9829b50bd17eca646646627d3ab28836e198d55c22536b11",
+      "actual": "a47b6e96f2912e1a9829b50bd17eca646646627d3ab28836e198d55c22536b11"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/35",
+      "path": "t20-v6-20261011/empirical_occurrence/last_source_protocol_code/DEPENDENCY_CLOSURE.json",
+      "expected": "3d0b71e58fc1e270254d4fff2bd503ad8203e5252dd647b3e631b653cace4705",
+      "actual": "3d0b71e58fc1e270254d4fff2bd503ad8203e5252dd647b3e631b653cace4705"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/36",
+      "path": "t20-v6-20261011/empirical_occurrence/original_v5_implementation/DEPENDENCY_CLOSURE.json",
+      "expected": "095ca6cb9f5330e497e9d0528de9615e487246395793c7695bee6ba94e9475f3",
+      "actual": "095ca6cb9f5330e497e9d0528de9615e487246395793c7695bee6ba94e9475f3"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/37",
+      "path": "t20-v6-20261011/empirical_occurrence/pmr_interface_validators/DEPENDENCY_CLOSURE.json",
+      "expected": "0e69c48d120c120a441f86c7a7c0d2bf654d68dbb826392a154e8bc0923f6a1b",
+      "actual": "0e69c48d120c120a441f86c7a7c0d2bf654d68dbb826392a154e8bc0923f6a1b"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/38",
+      "path": "t20-v6-20261011/empirical_occurrence/preservation_inquiry_children/DEPENDENCY_CLOSURE.json",
+      "expected": "a8e8021952d589ac00d7e1f8e654824c33b0079c5caa636fbdf65864dec95de4",
+      "actual": "a8e8021952d589ac00d7e1f8e654824c33b0079c5caa636fbdf65864dec95de4"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/39",
+      "path": "t20-v6-20261011/empirical_occurrence/recognition_residue/DEPENDENCY_CLOSURE.json",
+      "expected": "2d60d695efb91b0241b640331346e01750350a84bde97187ae7be04a85a39449",
+      "actual": "2d60d695efb91b0241b640331346e01750350a84bde97187ae7be04a85a39449"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/40",
+      "path": "t20-v6-20261011/empirical_occurrence/source_warrant_prose/DEPENDENCY_CLOSURE.json",
+      "expected": "0b3c1c6040b89dae330112fa3f5a26e2cceb5f10b236d39f0f2a2ddad8aa82c0",
+      "actual": "0b3c1c6040b89dae330112fa3f5a26e2cceb5f10b236d39f0f2a2ddad8aa82c0"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/41",
+      "path": "t20-v6-20261011/empirical_occurrence/structured_verdict_fixtures/DEPENDENCY_CLOSURE.json",
+      "expected": "0f531d7f5dcd0f7cb7dce7fd980095d651fb9221f7ed31c90dbc52b30c31e823",
+      "actual": "0f531d7f5dcd0f7cb7dce7fd980095d651fb9221f7ed31c90dbc52b30c31e823"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/42",
+      "path": "t20-v6-20261011/empirical_occurrence/t17_implementation/DEPENDENCY_CLOSURE.json",
+      "expected": "7ff0c185484e9cced3da1baac92161f3655c3d7102eba1990fa3d0315e30aa51",
+      "actual": "7ff0c185484e9cced3da1baac92161f3655c3d7102eba1990fa3d0315e30aa51"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/43",
+      "path": "t20-v6-20261011/empirical_occurrence/tensor_implementation/DEPENDENCY_CLOSURE.json",
+      "expected": "5e8b3ebb00291508971f05bb56b873ffdb81d46defd0d2c13c58848c628b6b6e",
+      "actual": "5e8b3ebb00291508971f05bb56b873ffdb81d46defd0d2c13c58848c628b6b6e"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/44",
+      "path": "t20-v6-20261011/empirical_occurrence/terminal_annex_code90/DEPENDENCY_CLOSURE.json",
+      "expected": "83cdae19c3f9f36e475aae8bccfe149f0cf10334783369a4bb4781b9c5677fef",
+      "actual": "83cdae19c3f9f36e475aae8bccfe149f0cf10334783369a4bb4781b9c5677fef"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/45",
+      "path": "t20-v6-20261011/empirical_occurrence/terminal_annex_controller26/DEPENDENCY_CLOSURE.json",
+      "expected": "a47c8aed7093e2da15d2c800d9ea02e536432941ed131d2b6e254cd3b6295815",
+      "actual": "a47c8aed7093e2da15d2c800d9ea02e536432941ed131d2b6e254cd3b6295815"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/46",
+      "path": "t20-v6-20261011/empirical_occurrence/terminal_annex_frontier40/DEPENDENCY_CLOSURE.json",
+      "expected": "2287efe2a692b40d629f1150904d13280b80f160c10293b06eed7e2b1311834f",
+      "actual": "2287efe2a692b40d629f1150904d13280b80f160c10293b06eed7e2b1311834f"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/47",
+      "path": "t20-v6-20261011/operational_successors/annex_formal27/DEPENDENCY_REUSE.json",
+      "expected": "e4e7c3801951dbcfd39579bdfec3d72102d97c6c4ec4589524295af82b0dac1e",
+      "actual": "e4e7c3801951dbcfd39579bdfec3d72102d97c6c4ec4589524295af82b0dac1e"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/48",
+      "path": "t20-v6-20261011/operational_successors/intrinsic_testimony_implementation/DEPENDENCY_CLOSURE.json",
+      "expected": "394c8544e99661a840e316a2b75b8e93877ea57d7dc0ce351c1e1336e59df9c1",
+      "actual": "394c8544e99661a840e316a2b75b8e93877ea57d7dc0ce351c1e1336e59df9c1"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/49",
+      "path": "t20-v6-20261011/operational_successors/pr30_adapter/HELPER_CLOSURE.json",
+      "expected": "4c033f66e0b61c567c22de188625d73c9214af51baadda64865aba944bdb42b8",
+      "actual": "4c033f66e0b61c567c22de188625d73c9214af51baadda64865aba944bdb42b8"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/50",
+      "path": "t20-v6-20261011/operational_successors/pr30_adapter/MAIN_SOURCE_UNION.json",
+      "expected": "2508da24136e4adafd96eabbaa46cf1710264a9d10a169a2439828de6ea9b227",
+      "actual": "2508da24136e4adafd96eabbaa46cf1710264a9d10a169a2439828de6ea9b227"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/51",
+      "path": "t20-v6-20261011/operational_successors/preservation_children/IMPORTED_SOURCE_AND_MODEL_REUSE.json",
+      "expected": "b3f09b509e8aa8504b281a22ebeaf9b7f4b1b7bcd4032d6a3eb6e240d1ecb183",
+      "actual": "b3f09b509e8aa8504b281a22ebeaf9b7f4b1b7bcd4032d6a3eb6e240d1ecb183"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/52",
+      "path": "t20-v6-20261011/root_math/later_residual_annex/DEPENDENCY_CLOSURE.json",
+      "expected": "e075e4029988b0e3d8678df2303f0c2e57873b1df5b2576f30a2f6d8c44d4570",
+      "actual": "e075e4029988b0e3d8678df2303f0c2e57873b1df5b2576f30a2f6d8c44d4570"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/53",
+      "path": "t20-v6-20261011/type_collective/cumulative_damping_prose/DEPENDENCY_REUSE.json",
+      "expected": "9765208cdb6bbd9b7c62a680f17e32b05e1e3a6b11b5ca1a3323d94abdacd372",
+      "actual": "9765208cdb6bbd9b7c62a680f17e32b05e1e3a6b11b5ca1a3323d94abdacd372"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/54",
+      "path": "t20-v6-20261011/type_collective/cumulative_damping_prose/SOURCE_BINDINGS.json",
+      "expected": "56a309baf1cad394fe862659c0761620b7dbd236d250bab2791f18fcd148f139",
+      "actual": "56a309baf1cad394fe862659c0761620b7dbd236d250bab2791f18fcd148f139"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/55",
+      "path": "t20-v6-20261011/type_collective/current_stack_mutation_tests/EXACT_IMPORT_REUSE.json",
+      "expected": "a63e49231434d0bd9627ea01de4ac6b3ee87e0b2ca9a5bc687a193ad65b64b7a",
+      "actual": "a63e49231434d0bd9627ea01de4ac6b3ee87e0b2ca9a5bc687a193ad65b64b7a"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/56",
+      "path": "t20-v6-20261011/type_collective/deep_aa_ap_checkers/SOURCE_BINDINGS.json",
+      "expected": "8a3a315a055527416df2d77172e4dec27e0a85569a0a429e50da886c3e6dd661",
+      "actual": "8a3a315a055527416df2d77172e4dec27e0a85569a0a429e50da886c3e6dd661"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/57",
+      "path": "t20-v6-20261011/type_collective/final_source_tests/EXACT_IMPORT_REUSE.json",
+      "expected": "c7395184eec16ff191470bea4c272a0b04a97595094ca604dae4d01abda6d273",
+      "actual": "c7395184eec16ff191470bea4c272a0b04a97595094ca604dae4d01abda6d273"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/58",
+      "path": "t20-v6-20261011/type_collective/final_synthesis_review/SOURCE_BINDINGS.json",
+      "expected": "e9681827ec94cca72c2ccf8b57fb985601f69b6424f7add09320053fe5f21860",
+      "actual": "e9681827ec94cca72c2ccf8b57fb985601f69b6424f7add09320053fe5f21860"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/59",
+      "path": "t20-v6-20261011/type_collective/formal_annex_residue/IMPORT_REUSE.json",
+      "expected": "8c862324a27482691e0b38d5313c708ffc744bb4434144f7a15fa761f1083b9e",
+      "actual": "8c862324a27482691e0b38d5313c708ffc744bb4434144f7a15fa761f1083b9e"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/60",
+      "path": "t20-v6-20261011/type_collective/frontend_certificate_controls/IMPORT_REUSE.json",
+      "expected": "bb1b01ccbd67c3db86d8ddb3646c2fd413ae02eebf3eade17aef4fcdf3931761",
+      "actual": "bb1b01ccbd67c3db86d8ddb3646c2fd413ae02eebf3eade17aef4fcdf3931761"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/61",
+      "path": "t20-v6-20261011/type_collective/implementation_residue/SOURCE_BINDINGS.json",
+      "expected": "1f0c3f4c869e6c78701bed91358fde7a1b715e8b582b68426088bfa630fbf41e",
+      "actual": "1f0c3f4c869e6c78701bed91358fde7a1b715e8b582b68426088bfa630fbf41e"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/62",
+      "path": "t20-v6-20261011/type_collective/kernel_replay_assurance/IMPORT_REUSE.json",
+      "expected": "c2191ff338a3f48025d892538adc13e5e754358f92c2f1c4cd401457de11845d",
+      "actual": "c2191ff338a3f48025d892538adc13e5e754358f92c2f1c4cd401457de11845d"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/63",
+      "path": "t20-v6-20261011/type_collective/last_formal_code36/IMPORT_REUSE.json",
+      "expected": "f7109d058799310abcbf98af8fe8431c599305de062c57d0f928a25aabb47729",
+      "actual": "f7109d058799310abcbf98af8fe8431c599305de062c57d0f928a25aabb47729"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/64",
+      "path": "t20-v6-20261011/type_collective/native_export_data_residue/IMPORT_REUSE.json",
+      "expected": "a4e67261279538706f5cfb96790fd35522ff5cb5950bd0d7d54db3b449afadfa",
+      "actual": "a4e67261279538706f5cfb96790fd35522ff5cb5950bd0d7d54db3b449afadfa"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/65",
+      "path": "t20-v6-20261011/type_collective/noetic_runtime_contracts/SOURCE_BINDINGS.json",
+      "expected": "adb51afa7a8cdcc6576be0bd4e3362b07f51000abbd63e7fd20527f012ac2e7f",
+      "actual": "adb51afa7a8cdcc6576be0bd4e3362b07f51000abbd63e7fd20527f012ac2e7f"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/66",
+      "path": "t20-v6-20261011/type_collective/probe_dependencies/EXTERNAL_INPUT_BINDINGS.json",
+      "expected": "ba9a3579b8de52703141e3beab72b2367fe84fb160f8ab777dabedc2b934d187",
+      "actual": "ba9a3579b8de52703141e3beab72b2367fe84fb160f8ab777dabedc2b934d187"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/67",
+      "path": "t20-v6-20261011/type_collective/probe_dependencies/IMPORT_REUSE.json",
+      "expected": "016cf29c930c7725339328d94773b72fa62c9b3c4ce1cb880164af5a90c26726",
+      "actual": "016cf29c930c7725339328d94773b72fa62c9b3c4ce1cb880164af5a90c26726"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/68",
+      "path": "t20-v6-20261011/type_collective/probe_dependencies/SOURCE_BINDINGS.json",
+      "expected": "534c64e1aa7cebce463a3c2777185d760e7e6a4bee28a4782f8a58bafaccc89a",
+      "actual": "534c64e1aa7cebce463a3c2777185d760e7e6a4bee28a4782f8a58bafaccc89a"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/69",
+      "path": "t20-v6-20261011/type_collective/probe_inputs/SOURCE_BINDINGS.json",
+      "expected": "26947589e9d1203ee7b66f983bd9b11120a36d8162af3fab43206a8ee99b59ce",
+      "actual": "26947589e9d1203ee7b66f983bd9b11120a36d8162af3fab43206a8ee99b59ce"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/70",
+      "path": "t20-v6-20261011/type_collective/prose_residue/SOURCE_BINDINGS.json",
+      "expected": "ce342dc97202d1a41c9620500c9c7261f910f90a25637aea704961df0d237d0f",
+      "actual": "ce342dc97202d1a41c9620500c9c7261f910f90a25637aea704961df0d237d0f"
+    },
+    {
+      "pointer": "$/owner_dependency_companions/71",
+      "path": "t20-v6-20261011/type_collective/replay_scope_residue/IMPORT_REUSE.json",
+      "expected": "2652a8aad9031e9e96d566d5065c24d764a6daad937317ab72178a9611390184",
+      "actual": "2652a8aad9031e9e96d566d5065c24d764a6daad937317ab72178a9611390184"
+    },
+    {
+      "pointer": "$/dependency_direction_guard/source",
+      "path": "t20-v6-20261011/root_math/dependency_index4/REPORT.md",
+      "expected": "12b053e91b408b308703ac21da077d4325fc3f65d827762e29bcb583a9dd358e",
+      "actual": "12b053e91b408b308703ac21da077d4325fc3f65d827762e29bcb583a9dd358e"
+    }
+  ],
+  "bad": []
+}

@@ -1,0 +1,312 @@
+{
+  "python_sources": [
+    {
+      "source_sha256": "660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76",
+      "imports": [
+        "__future__",
+        "argparse",
+        "collections",
+        "itertools",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "typing",
+        "yaml"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": [
+        "three registry/coverage inputs plus twelve generated result records"
+      ]
+    },
+    {
+      "source_sha256": "449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": [
+        "all 12 checks and fresh result files"
+      ]
+    },
+    {
+      "source_sha256": "b3a4f4b852d47f848360e7f430e6396bcb1d65c841f8f97fa867821453a345df",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "e3ca7be59d8b1c3c4975c435d41084ff818389cf02167fbbb0441cc20f733e8e",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "db2c69b59fe9feca45b34f494e1ef0e5417519004a08edb23cbbb6d6d920ee24",
+      "imports": [
+        "__future__",
+        "copy",
+        "hashlib",
+        "inspect",
+        "itertools",
+        "json",
+        "jsonschema",
+        "pathlib",
+        "typing",
+        "yaml"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": [
+        "five exact registry/schema inputs in DATA_DEPENDENCIES.json"
+      ]
+    },
+    {
+      "source_sha256": "818b3c9ddb882d4657025968416cdf8066c3fee145b355f8158ecf91d68e0964",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib",
+        "typing"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "4123db0cd85656e81ce103c0adeb81cb0bd27f36cde879d94c47421efc2e7848",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "76d9f3719302a852b56e5c5ba41530463916f0caa79c5a200dbbcdb9f68f6146",
+      "imports": [
+        "__future__",
+        "collections",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "c698e1709e6d4f5e6f4ab77f09ee799e6f5027f1f312ed431b1ae1c9b3831cd1",
+      "imports": [
+        "__future__",
+        "collections",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "8cd225036d8ceb28f3a9fcc57b75ebc417f4b894200852d4a541fb1b7676edf5",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "e3654dbd584feba6bf02c8cefc352063c7765d9932f8086effcff1c99cc9b4f5",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "e615e4ed7ca52cf5b7a439b64a9ff4c863a0d3235c44de25975243427b30e098",
+      "imports": [
+        "__future__",
+        "collections",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "ccee3228ebb7f07120945ec62599b2f1872186af27d338b6907caa0a7ad780d4",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "1d28d69f7128bfcd7cd52054d0aa47f319106815b5e402da1f3f2fefd70b49c1",
+      "imports": [
+        "__future__",
+        "hashlib",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e",
+      "imports": [
+        "__future__",
+        "collections",
+        "itertools",
+        "json",
+        "pathlib",
+        "random"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252",
+      "imports": [
+        "__future__",
+        "itertools",
+        "json",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": [
+        "post_bv_consolidated_recheck_v2.py exact sha 0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e"
+      ]
+    },
+    {
+      "source_sha256": "4ae3992846ee9d2c1fffc941c6f3249ed1d0f9b3a816ddb5ada966a728b27c87",
+      "imports": [
+        "__future__",
+        "collections",
+        "itertools",
+        "json",
+        "pathlib",
+        "random"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "31b4039b9ab6a1d8f2d4d2e9db7b948a514138dca73fb53271bdd2b47664fe81",
+      "imports": [
+        "__future__",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "8cf150cac6a049189efbac9ba5eff25dcc851a18c865f7616d1aece56dce97e1",
+      "imports": [
+        "__future__",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "db84d5f4e62ff17981f1932a18f7671e77764e5278c9f969a9e22c92f311e860",
+      "imports": [
+        "__future__",
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "8520948efcb5cffcd98d22a8214d4222faaf6100fcf721bd5e9d4dd173026da8",
+      "imports": [
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "251103b060883a51976b0908917a45ae159f18b291430d6024da822653d27ca6",
+      "imports": [
+        "itertools",
+        "json",
+        "pathlib",
+        "random"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    },
+    {
+      "source_sha256": "e66d63970837a8c1e79cdf10f787563a7dd206dd69c448d37fa465fe9425ba8e",
+      "imports": [
+        "itertools",
+        "json",
+        "pathlib"
+      ],
+      "custom_imports": [],
+      "runtime_research_dependencies": []
+    }
+  ],
+  "standard_dependencies": [
+    "Python standard library",
+    "PyYAML",
+    "jsonschema"
+  ],
+  "original_research_custom_imports_unresolved": 0,
+  "separate_historical_body_limits": [
+    "CQ claimed primary/rereview checker not located in this held custody; ordinary proofs and CR independent graph implementation examined.",
+    "Specialist B sanitized packet deliberately omits checker/auditor/model inventory; exact six Lean bodies reused but no omitted-model execution credit.",
+    "BL-BU and parts of BW-CJ are semantic reissues; original ephemeral bytes and CG original model owner remain unavailable."
+  ]
+}

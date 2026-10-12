@@ -1,0 +1,19 @@
+{
+  "audit": "read-only coverage and substantive advancement",
+  "candidate": "candidate1",
+  "report_sha256": "05ebe7d87e3a2f760dfc401259109a234555138b92d52bd8f008cf1df7ebab6e",
+  "time_utc": "2026-09-13T02:34:10.219504+00:00",
+  "reviewer": "same assistant",
+  "independent_review": false,
+  "overall_gate": "FAIL_OPEN",
+  "coverage": "Not established for the full original request.",
+  "substantive_advancement": "New authored conditional reconciliation and executable toy specifications; not a novelty or empirical finding.",
+  "findings": [
+    "S3-A01",
+    "S3-A02",
+    "S3-A03",
+    "S3-A04",
+    "S3-A05",
+    "S3-A10"
+  ]
+}

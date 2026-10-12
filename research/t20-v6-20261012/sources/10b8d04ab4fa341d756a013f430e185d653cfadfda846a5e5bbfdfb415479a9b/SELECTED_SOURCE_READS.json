@@ -1,0 +1,682 @@
+[
+  {
+    "id": "S01",
+    "label": "H-formalisation: typed tensor, obligation retention, inquiry and future-safe fibres",
+    "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "INHERITED_GRADED_INTERFACE.md",
+      "orthing_formalisation_v1.md"
+    ],
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          107,
+          205
+        ],
+        [
+          301,
+          504
+        ],
+        [
+          899,
+          959
+        ],
+        [
+          1065,
+          1090
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+    "public_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+    "public_bytes": 93523
+  },
+  {
+    "id": "S02",
+    "label": "H-Continuation: exact defect, predictive span, dimension and augmentation",
+    "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "04-tensor-moment-continuation-20261009-H_CONTINUATION_SOURCE.md",
+      "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9.md",
+      "H_CONTINUATION_SOURCE.md",
+      "continuation_complete_orthing.md",
+      "continuation_complete_orthing_full.md"
+    ],
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          108,
+          294
+        ],
+        [
+          611,
+          735
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/626504b64c2d7817/continuation_complete_orthing.md",
+    "public_sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "public_bytes": 66411
+  },
+  {
+    "id": "S03",
+    "label": "Controlled information and eventual restoration: CIRS",
+    "sha256": "bd83f4c2bb1a41151405872a6aa57fe9bdc352f0b63db4cfb302e0068c8b0d4a",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "CONTROLLED_RESTORATION.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          153
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "bd83f4c2bb1a41151405872a6aa57fe9bdc352f0b63db4cfb302e0068c8b0d4a",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/bd83f4c2bb1a4115/CONTROLLED_RESTORATION.md",
+    "public_sha256": "da0f73812a9f7f55bdb3d2daa8c92a66751c5b8511a7aa586d392aa8be14af81",
+    "public_bytes": 16416
+  },
+  {
+    "id": "S04",
+    "label": "Correlated restoration: Hall deficit, conditional Borel–Cantelli and incentive limits",
+    "sha256": "7163cb536782ccb8a91a10be4b91cdcc1113bbab3c467d6ac66dee0d59cb0caf",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "correlated_restoration.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          165
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "7163cb536782ccb8a91a10be4b91cdcc1113bbab3c467d6ac66dee0d59cb0caf",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/7163cb536782ccb8/correlated_restoration.md",
+    "public_sha256": "7163cb536782ccb8a91a10be4b91cdcc1113bbab3c467d6ac66dee0d59cb0caf",
+    "public_bytes": 15348
+  },
+  {
+    "id": "S05",
+    "label": "Language, translation, occurrence meaning and version custody",
+    "sha256": "5b8322a86c817987855e5faa0c374c96994bb9c445547c81482f05adfea3d66f",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "language-translation-and-version-custody.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          59
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "5b8322a86c817987855e5faa0c374c96994bb9c445547c81482f05adfea3d66f",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/5b8322a86c817987/language-translation-and-version-custody.md",
+    "public_sha256": "5b8322a86c817987855e5faa0c374c96994bb9c445547c81482f05adfea3d66f",
+    "public_bytes": 3214
+  },
+  {
+    "id": "S06",
+    "label": "Occurrence-sensitive audit inference",
+    "sha256": "c9a55ea147ade7391fbb23d89685a8afdd64e947d08f54492c3de21cdb6a5889",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "OCCURRENCE_INFERENCE.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          83
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "c9a55ea147ade7391fbb23d89685a8afdd64e947d08f54492c3de21cdb6a5889",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/c9a55ea147ade739/OCCURRENCE_INFERENCE.md",
+    "public_sha256": "c9a55ea147ade7391fbb23d89685a8afdd64e947d08f54492c3de21cdb6a5889",
+    "public_bytes": 11550
+  },
+  {
+    "id": "S07",
+    "label": "Fitrah empirical citation and inheritance check",
+    "sha256": "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7.md",
+      "empirical_findings.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          75
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/fitrah-warrant-bridge/empirical-check/empirical_findings.md",
+    "public_sha256": "1d6d042bb6aba2de98e4a9fc50bae8243ed6d8bd367f6c5955d6975ec08edbd7",
+    "public_bytes": 11477
+  },
+  {
+    "id": "S08",
+    "label": "Reported-statistic observations, not new study data",
+    "sha256": "df04b1c998ee3a446a4d3126b3373657678740e30a6bddf037be777a487b7b46",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "reported_statistics.json"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          121
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "df04b1c998ee3a446a4d3126b3373657678740e30a6bddf037be777a487b7b46",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP03/t20-next-frontier-20261008/fitrah-warrant-bridge/public-study-reanalysis/reported_statistics.json",
+    "public_sha256": "df04b1c998ee3a446a4d3126b3373657678740e30a6bddf037be777a487b7b46",
+    "public_bytes": 4054
+  },
+  {
+    "id": "S09",
+    "label": "Ten Advances / Connes-rigidity unresolved specialist dispute",
+    "sha256": "0cbf4f5717e60c2f21da72eb221627b5dd5d691d4ecd1e86c49e31886c5a1df7",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "ten-advances-connes-rigidity-dispute.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          16
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "0cbf4f5717e60c2f21da72eb221627b5dd5d691d4ecd1e86c49e31886c5a1df7",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/0cbf4f5717e60c2f/ten-advances-connes-rigidity-dispute.md",
+    "public_sha256": "0cbf4f5717e60c2f21da72eb221627b5dd5d691d4ecd1e86c49e31886c5a1df7",
+    "public_bytes": 2047
+  },
+  {
+    "id": "S10",
+    "label": "Historical experiment packet state and negative synthetic pilot",
+    "sha256": "88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "experiment-status.yaml"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          117
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/88e59fdfc9e1e4a3/SOURCE.md",
+    "public_sha256": "88e59fdfc9e1e4a3ab751fef6e2f6bc1c5a644fc5863bf679b35c2ceb56cf2b2",
+    "public_bytes": 6886
+  },
+  {
+    "id": "S11",
+    "label": "Noise-aware bounded productive-route histogram summary",
+    "sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "RESULT.md",
+      "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          55
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/noise-aware-calibration/RESULT.md",
+    "public_sha256": "b4a9e1ebcf2c97476322fffae551fb579f59054239a8a125f17eb9f338f3439d",
+    "public_bytes": 7424
+  },
+  {
+    "id": "S12",
+    "label": "Quantitative grouped-calibration extension and ancestry",
+    "sha256": "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326.md",
+      "SOURCE_AUDIT.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          33
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP05/t20-next-frontier-20261008/stable-grouped-invariants/SOURCE_AUDIT.md",
+    "public_sha256": "43cf55214128fc28224da9093fe185290360a5f3fb80fe6d727e5f30859e3326",
+    "public_bytes": 4991
+  },
+  {
+    "id": "S13",
+    "label": "Posterior-equivalent continuation exact-stopping boundary",
+    "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "06-stochastic-inquiry-quotient-transport-20261010-ADDENDUM.md",
+      "ADDENDUM.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          152
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/ba10cde70c12e659/ADDENDUM.md",
+    "public_sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee",
+    "public_bytes": 15671
+  },
+  {
+    "id": "S14",
+    "label": "T12-REPORT-DERIVED-MARKDOWN",
+    "sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264/Orthemology_Twelfth_Research_Report_v1_20261004.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264/Orthemology_Twelfth_Research_Report_v1_20261004.md",
+    "git_blob_sha": "9878150ae93a22bfdb28ced9be00d07d0194be26",
+    "original_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          31,
+          176
+        ],
+        [
+          219,
+          284
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S15",
+    "label": "T13-REPORT-DERIVED-MARKDOWN",
+    "sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540/Orthemology_Thirteenth_Research_Final_v1_20261004.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540/Orthemology_Thirteenth_Research_Final_v1_20261004.md",
+    "git_blob_sha": "ca0992c143e6b7c1ae836b96e7b111ff011a6637",
+    "original_sha256": "259d83d3aaae4309f29553d53f678edbcf5b7b0a87da86fc1bc8b5809f71c470",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          33,
+          88
+        ],
+        [
+          171,
+          222
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S16",
+    "label": "T14-CHECKPOINT-DERIVED-MARKDOWN",
+    "sha256": "23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a/Orthemology_Fourteenth_Research_Checkpoint_v1_20261005.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/23553286dac38fd7706c120e35de02137dfdc19fadcc6e79b29e47c40d1b147a/Orthemology_Fourteenth_Research_Checkpoint_v1_20261005.md",
+    "git_blob_sha": "e3ff515db7bbc239f10b44b77aee8e1a8a41cb93",
+    "original_sha256": "3dac926a686e9d5b0fd47bcfa912d6138bd7393263e8d6a5a5f95d5b3566f2ac",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          31,
+          80
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S17",
+    "label": "T14-SUPPLEMENT-DERIVED-MARKDOWN",
+    "sha256": "c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53/Orthemology_Fourteenth_Research_Completion_Supplement_v1_20261005.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/c26f888a414c1070872a7d63ab5649944ff00f4bcd00f14df97e3fd0eaf96d53/Orthemology_Fourteenth_Research_Completion_Supplement_v1_20261005.md",
+    "git_blob_sha": "cba1ae24e41c3cad852da76202b19017e1197ded",
+    "original_sha256": "28e435f03e0accc2106cfa7b5d0c80bad8d9b0c75f939a2bdd88a70b91c9a065",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          123,
+          164
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S18",
+    "label": "T15-REPORT-DERIVED-MARKDOWN",
+    "sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+    "git_blob_sha": "0c5888fbe1b178af686e6f3229bdb529cc1bf6a5",
+    "original_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          205,
+          252
+        ],
+        [
+          275,
+          284
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S19",
+    "label": "T13-MISSING-OUTCOME-SOURCE",
+    "sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md",
+    "git_blob_sha": "0b2582ae67d48d241ee6bcd492a55be8d2915719",
+    "original_sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+    "projection": "EXACT",
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          70
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S20",
+    "label": "T13-SPECIALIST-BRIEF",
+    "sha256": "804583a332db2f52e53c6d112efeda6ee456c94b73ca5131fc7694f09a1e65f6",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/804583a332db2f52e53c6d112efeda6ee456c94b73ca5131fc7694f09a1e65f6/SPECIALIST_REVIEW_QUESTIONS.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/804583a332db2f52e53c6d112efeda6ee456c94b73ca5131fc7694f09a1e65f6/SPECIALIST_REVIEW_QUESTIONS.md",
+    "git_blob_sha": "42255859f1d3b7b250dc7b3ed4a903ffa5488aed",
+    "original_sha256": "804583a332db2f52e53c6d112efeda6ee456c94b73ca5131fc7694f09a1e65f6",
+    "projection": "EXACT",
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          75
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S21",
+    "label": "T15-COMPENDIUM-DERIVED-MARKDOWN",
+    "sha256": "34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2",
+    "origin": "pinned_adopted_repository_public_projection",
+    "repository_path": "experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+    "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+    "git_blob_sha": "2c079d0444f00fa9e8240b840c7690d0e6a9a512",
+    "original_sha256": "06622a9ab290a76993e0864b96b39a78bec725b5a3e59d226d5a8902e552eaca",
+    "projection": "DERIVED",
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          4603,
+          4672
+        ],
+        [
+          4937,
+          5198
+        ]
+      ]
+    },
+    "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct."
+  },
+  {
+    "id": "S22",
+    "label": "Companion source-currentness crosswalk",
+    "sha256": "3f6a4868d5c906bc69b11a67651c59d10c1a16b4ed8d9abbfafcb99d518f52a9",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "3f6a4868d5c906bc69b11a67651c59d10c1a16b4ed8d9abbfafcb99d518f52a9.md",
+      "REPORT.md",
+      "companion-source-delta-review-20261009__REPORT.md"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          69
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "3f6a4868d5c906bc69b11a67651c59d10c1a16b4ed8d9abbfafcb99d518f52a9",
+    "sha256_scope": "original source bytes",
+    "public_source": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP23/companion-source-delta-review-20261009/REPORT.md",
+    "public_sha256": "3f6a4868d5c906bc69b11a67651c59d10c1a16b4ed8d9abbfafcb99d518f52a9",
+    "public_bytes": 15049
+  },
+  {
+    "id": "S23",
+    "label": "Companion mathematical diagnostics D1–D7",
+    "sha256": "d3c75cb673b035acafa301aaff440f4083478149ea0287fc8d404fdb8de7e2d3",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "MATHEMATICAL_DIAGNOSTICS.md"
+    ],
+    "read_scope": {
+      "mode": "selected_line_ranges",
+      "line_ranges": [
+        [
+          1,
+          250
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "d3c75cb673b035acafa301aaff440f4083478149ea0287fc8d404fdb8de7e2d3",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/d3c75cb673b035ac/MATHEMATICAL_DIAGNOSTICS.md",
+    "public_sha256": "d3c75cb673b035acafa301aaff440f4083478149ea0287fc8d404fdb8de7e2d3",
+    "public_bytes": 18646
+  },
+  {
+    "id": "S24",
+    "label": "BridgeDiagnostics optional Lean source, explicitly uncompiled",
+    "sha256": "f96458067937490a5768f45baf9c7cefd188ce7e8e55f84f254f28ecd44197e0",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "BridgeDiagnostics.lean"
+    ],
+    "read_scope": {
+      "mode": "full_text",
+      "line_ranges": [
+        [
+          1,
+          158
+        ]
+      ]
+    },
+    "evidence_claim": "Read for coverage and scope. No fresh proof, primary-source authentication or execution.",
+    "original_sha256": "f96458067937490a5768f45baf9c7cefd188ce7e8e55f84f254f28ecd44197e0",
+    "sha256_scope": "original source bytes",
+    "public_source": "sources/f96458067937490a/BridgeDiagnostics.lean",
+    "public_sha256": "f96458067937490a5768f45baf9c7cefd188ce7e8e55f84f254f28ecd44197e0",
+    "public_bytes": 5304
+  },
+  {
+    "id": "S25",
+    "label": "Inherited OpenAI math utilisation ledger",
+    "sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "MATH_UTILISATION.json"
+    ],
+    "read_scope": {
+      "mode": "selected_json_fields",
+      "json_fields": [
+        "/scope",
+        "/repository",
+        "/status_vocabulary",
+        "/status_rule",
+        "/coverage",
+        "/integration_boundary",
+        "/public_projection_note",
+        "/components[id=MATH-122-DECODER]",
+        "/components[id=MATH-245-PTS]",
+        "/components[id=MATH-373-MONGE]",
+        "/components[id=MATH-122-APPLICATION]/statuses",
+        "/components[id=MATH-122-APPLICATION]/replay_status",
+        "/components[id=MATH-122-APPLICATION]/verification_level"
+      ],
+      "body_read_claimed": true
+    },
+    "evidence_claim": "Inherited ledger/identity inspection only. No new primary reading, all-corpus screening, upstream replay or historical-duration certification."
+  },
+  {
+    "id": "S26",
+    "label": "Inherited Arabic reading methodology ledger",
+    "sha256": "f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "ARABIC_READING_METHOD.json"
+    ],
+    "read_scope": {
+      "mode": "selected_json_fields",
+      "json_fields": [
+        "/reading_index",
+        "/stage_definitions",
+        "/selected_body_phase_controls",
+        "/repetition_controls",
+        "/assessment_control",
+        "/credit"
+      ],
+      "body_read_claimed": true
+    },
+    "evidence_claim": "Inherited ledger/identity inspection only. No new primary reading, all-corpus screening, upstream replay or historical-duration certification."
+  },
+  {
+    "id": "S27",
+    "label": "Inherited six supplied Drive source coverage",
+    "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "T17_SIX_SOURCE_COVERAGE.json",
+      "six_source_coverage.json"
+    ],
+    "read_scope": {
+      "mode": "selected_json_fields",
+      "json_fields": [
+        "/status",
+        "/limits"
+      ],
+      "body_read_claimed": true
+    },
+    "evidence_claim": "Inherited ledger/identity inspection only. No new primary reading, all-corpus screening, upstream replay or historical-duration certification."
+  },
+  {
+    "id": "S28",
+    "label": "Bound reading-index owner projection, identity-only",
+    "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+    "origin": "held_custody_catalogue",
+    "aliases": [
+      "READING_INDEX.json"
+    ],
+    "read_scope": {
+      "mode": "identity_only",
+      "json_fields": [],
+      "body_read_claimed": false
+    },
+    "evidence_claim": "Inherited ledger/identity inspection only. No new primary reading, all-corpus screening, upstream replay or historical-duration certification."
+  }
+]

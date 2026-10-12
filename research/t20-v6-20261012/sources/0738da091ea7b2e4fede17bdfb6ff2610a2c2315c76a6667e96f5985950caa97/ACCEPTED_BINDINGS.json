@@ -1,0 +1,111 @@
+{
+  "authority": "Mathematical/source-interface assessment only; no integration, formal-kernel, actual-noetic, or closure approval.",
+  "file_count": 24,
+  "files": {
+    "joint-atomic-gradient-lift-20261010/FROZEN_MANIFEST.json": {
+      "bytes": 2114,
+      "sha256": "b7c69b63ac723ea987061933ed7ec3e92186bc9e5ecf0d3491b3aeaa57774dc7"
+    },
+    "joint-atomic-gradient-lift-20261010/INPUT_BINDINGS.json": {
+      "bytes": 2048,
+      "sha256": "5ecabb353d419d0740c568763bc5169d2c8884b3c7bb8cd08e6fc7256497136a"
+    },
+    "joint-atomic-gradient-lift-20261010/REPLAY.md": {
+      "bytes": 1519,
+      "sha256": "9d822410817d2e20b30df8b5c2c23437cb7e8b606dc63dede2ab134df3b60609"
+    },
+    "joint-atomic-gradient-lift-20261010/RESULT.md": {
+      "bytes": 24233,
+      "sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f"
+    },
+    "joint-atomic-gradient-lift-20261010/VERIFICATION_NOTES.md": {
+      "bytes": 1215,
+      "sha256": "7791059681a3949e8e4f67f3ba5224db37e4095a21578a03ad66437dd5b3500c"
+    },
+    "joint-atomic-gradient-lift-20261010/author-run/EXACT_CHECKS.json": {
+      "bytes": 28107,
+      "sha256": "2ba12e375331f7fb8e9c6ef21bea93782bcc556b1806b45d9662f3a0a648576a"
+    },
+    "joint-atomic-gradient-lift-20261010/check_exact.py": {
+      "bytes": 12497,
+      "sha256": "c6b0d93461e6e825ddc7d3fe1069b519d6ff8f729a8e71f8ed569bf3fc93294f"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/complete-flow-finite-rank-20261010/RESULT.md": {
+      "bytes": 22581,
+      "sha256": "e0600eeef1403bd680fe860bb0e0bfe7a31a72905ff8aaa3e389b1d60521d7e0"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/continuous-signed-finite-rank-20261010/RESULT.md": {
+      "bytes": 15451,
+      "sha256": "686623cacd761e754cf49b0fb2cbdf0588f83e44f09d282281a4fa4ed877d0ee"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/face-stratified-noetic-geometry-20261010/RESULT.md": {
+      "bytes": 32177,
+      "sha256": "41d1343f00006d5e97d6a0b09264cc1d99ee2dd23a13ba5caaf2169afce63fa4"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/leafwise-noetic-geometry-20261010/RESULT.md": {
+      "bytes": 26495,
+      "sha256": "6d5c3c38f6e89c8f74f3b5d58cabcace7b9cae0eb2d6f8bf3a2f6ef4f4aef724"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/moment-evolution-source-comparison-20261010/RESULT.md": {
+      "bytes": 15767,
+      "sha256": "c9170636819e8c10b3a94362bc446e5b4424b2a149079f4fc4b1eaeb339b30ac"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/noetic-gradient-transport-20261009/RESULT.md": {
+      "bytes": 24082,
+      "sha256": "27f85cd312cb2083d26257e6c74fea8e547c879dce07d94c04d8c87446c0f4a9"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/state-dependent-gradient-obstruction-20261009/RESULT.md": {
+      "bytes": 10507,
+      "sha256": "dc9adfc33c622c989de9204ef1349e6a5c36255152bc286c5c0e11da731b60f2"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/tensor-moment-continuation-20261009/RESULT.md": {
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    },
+    "joint-atomic-gradient-lift-20261010/inputs/transport-rank-boundary-20261010/RESULT.md": {
+      "bytes": 12510,
+      "sha256": "af3b82f3773723ef2f2ac9154983f06da385e06f29efc54b952f808cbf1e61a5"
+    },
+    "joint-atomic-gradient-lift-20261010/portable-author-run/EXACT_CHECKS.json": {
+      "bytes": 27432,
+      "sha256": "335b89175d5401f1a575aef18daf582b0e8d8a0975f569105ea500cb76082708"
+    },
+    "spherical-atomic-source-interface-20261010/FROZEN_MANIFEST.json": {
+      "bytes": 534,
+      "sha256": "193a344ec1a57fcb6324c4654bb9cff06662d9d86059388730c76fde25e7480b"
+    },
+    "spherical-atomic-source-interface-20261010/READING_LEDGER.md": {
+      "bytes": 2913,
+      "sha256": "1ef5fadc0e775fbcf0867fd6b7c58558043eab272b0ffed05913a39cab954cf9"
+    },
+    "spherical-atomic-source-interface-20261010/SOURCE_INTERFACE.md": {
+      "bytes": 10259,
+      "sha256": "966a589b08cb759f569d8803d7713eaad9791a26e85db1129b2c31bc7b14c09a"
+    },
+    "two-atom-moving-moment-chart-20261010/EXACT_CHECKS.json": {
+      "bytes": 794,
+      "sha256": "6c08d65c56e760674f2eb01f40a1b3dc702748dc4332144b46da4dc9f76853e3"
+    },
+    "two-atom-moving-moment-chart-20261010/INPUT_BINDINGS.json": {
+      "bytes": 607,
+      "sha256": "a20d8e858b407a80a4f73e5bdcd10c44afa811f1f8ab5791263c14a4e8bda081"
+    },
+    "two-atom-moving-moment-chart-20261010/RESULT.md": {
+      "bytes": 5714,
+      "sha256": "fc5a9be2198e66ff499b7d62d5ea51f3cff31e97cef3bf8440454d8dfcaf05e1"
+    },
+    "two-atom-moving-moment-chart-20261010/check_exact.py": {
+      "bytes": 1585,
+      "sha256": "5eb8e384d14be96545cfe01fd81f9a4150475d032bcb6e86690f3c6b178bf0b8"
+    }
+  },
+  "independent_check_count": 151,
+  "main_author_portable_check_count": 699,
+  "original_main_predecessors_verified": true,
+  "portable_author_replay_byte_equal": true,
+  "review": "joint-atomic-geometry-independent-review-20261010/REVIEW.md",
+  "source_interface": "Direct ordinary proof review and primary-source convention inspection; no separate executable source check claimed.",
+  "status": "ACCEPTED_AS_ORDINARY_MATHEMATICAL_EVIDENCE",
+  "supplement_replay_byte_equal": true,
+  "two_atom_supplement_check_count": 30
+}

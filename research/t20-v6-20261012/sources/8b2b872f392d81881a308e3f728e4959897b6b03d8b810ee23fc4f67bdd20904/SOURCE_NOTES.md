@@ -1,0 +1,9 @@
+# Source and ancestry boundaries
+
+The changing-objective proof-route obstruction was read first in tensor-objective-switching-20261010/RESULT.md. The already established time-varying-square-positivity-20261010/RESULT.md covers moving quadratic pure killing, including first-derivative inequalities and its exact shifted negative-second-derivative control. These are inherited results, not new discoveries here.
+
+The new extension combines common-energy moving polynomial tests, nonautonomous transport and a prescribed continuous coefficient schedule. Its clock, moving quadratic characteristics and killing integrals are derived directly. The finite-basis coefficient assumption is explicit; no derivative of those coefficients or SOS factorization is used. The start-time backward derivative follows from the two-time flow/weight cocycles and local inverse maps.
+
+The accepted general-coercive-energy-drift-20261010 proof and review supply the autonomous scalar-energy localization method, weak-PDE/characteristic separation, cutoff uniqueness and initial-law-fibre argument. Their exact time-dependent requalification is stated in RESULT.md. Static positive-time representation/determinacy and the semialgebraic sublevel envelope remain inherited from the separately bound moment bridge and nonconvex-limit proof. Their primary-source dependencies are retained in those packets; no new static representation theorem or coercivity bound is claimed here.
+
+No broad literature/priority claim is made. Continuous moving quadratic pure killing was already solved; the exact transported solution in this packet is a concrete check of the additional transport conclusion. The separate order-sensitivity interface is not duplicated. Full square positivity and all polynomial equations remain essential; no cognitive or hidden-memory inference is included.

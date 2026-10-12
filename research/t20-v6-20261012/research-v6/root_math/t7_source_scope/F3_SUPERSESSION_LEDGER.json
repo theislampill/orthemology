@@ -1,0 +1,35 @@
+[
+  {
+    "sha256": "eab4653f5e3a4f8fd87f1df17ff130dfe70b6442cfb33e83218f9848d722be82",
+    "path": "t20-consolidation-20261011/catalogue/objects/ea/eab4653f5e3a4f8fd87f1df17ff130dfe70b6442cfb33e83218f9848d722be82",
+    "bytes": 53446,
+    "status": "TARGETED_PASSAGE_READ",
+    "lines_read": [
+      145,
+      149
+    ],
+    "scope": "Inherited source-verification record examined; not fresh original Arabic scan inspection or full report reading."
+  },
+  {
+    "sha256": "4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e",
+    "path": "t20-consolidation-20261011/catalogue/objects/43/4336a5098e25dc97288284d941ac5eefe9a7c651406960e519e87c40658ef45e",
+    "bytes": 80153,
+    "status": "TARGETED_PASSAGE_READ",
+    "lines_read": [
+      139,
+      139
+    ],
+    "scope": "Inherited source-verification record examined; not fresh original Arabic scan inspection or full report reading."
+  },
+  {
+    "sha256": "0bb33197cb6034bb838c00ef84267ac0de866207a130532891222d5f67f5cfd1",
+    "path": "t20-consolidation-20261011/catalogue/objects/0b/0bb33197cb6034bb838c00ef84267ac0de866207a130532891222d5f67f5cfd1",
+    "bytes": 14232,
+    "status": "TARGETED_PASSAGE_READ",
+    "lines_read": [
+      41,
+      41
+    ],
+    "scope": "Inherited source-verification record examined; not fresh original Arabic scan inspection or full report reading."
+  }
+]

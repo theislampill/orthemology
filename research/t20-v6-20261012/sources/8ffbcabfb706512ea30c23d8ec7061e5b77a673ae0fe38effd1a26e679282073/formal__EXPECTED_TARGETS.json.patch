@@ -1,0 +1,15 @@
+--- immutable/formal/EXPECTED_TARGETS.json
++++ shadow/formal/EXPECTED_TARGETS.json
+@@ -37,10 +37,10 @@
+   "expected_axioms": "Empty set predicted, not observed",
+   "source_sha256": {
+     "P03GuardedGraph.lean": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+-    "P03GuardedVCT.lean": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
++    "P03GuardedVCT.lean": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+     "P03Audit.lean": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0"
+   },
+-  "status": "UNVERIFIED_NO_RUNTIME",
++  "status": "SHADOW_REPAIR_PENDING_RUNTIME",
+   "parsed_declarations": 0,
+   "observed_types": 0,
+   "observed_axioms": 0,

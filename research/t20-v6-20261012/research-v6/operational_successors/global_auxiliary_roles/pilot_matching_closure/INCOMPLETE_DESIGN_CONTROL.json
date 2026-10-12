@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "run_id": "INDEPENDENT-INCOMPLETE-DESIGN-CONTROL",
+    "synthetic": false
+  },
+  "responses": [
+    {
+      "item": "P0v2-ID-1",
+      "arm": "C",
+      "rater_scores": {
+        "r1": {
+          "probe": 0
+        }
+      },
+      "response_tokens": 10,
+      "comprehension_accuracy": 0.9
+    },
+    {
+      "item": "P0v2-ID-1",
+      "arm": "Cprime",
+      "rater_scores": {
+        "r1": {
+          "probe": 1
+        }
+      },
+      "response_tokens": 10,
+      "comprehension_accuracy": 0.9
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "author_result_sha256": "ec03a2d42894f7e16c109631d884fec6023ab85e4c149bc6639d01e399f91f9c",
+  "author_manifest_sha256": "dbc337f0600e67326889be3341020b60100bb58cd21b4cded6326fec4c67b15a",
+  "snapshot_path": "effective-stationary-review-replay-20261010",
+  "command": "python effective-stationary-review-replay-20261010/check_controls.py",
+  "exit_code": 0,
+  "controls": {
+    "status": "PASS",
+    "scope": "Finite exact-rational corroboration only",
+    "cap_instances": 125,
+    "checks": {
+      "nonempty_cap_vertices": 125,
+      "diameter_formula_against_vertices": 125,
+      "coarse_cap_bound": 125,
+      "capacity_partition_iff_diameter_one": 125,
+      "sharp_cap_domination": 17,
+      "sharp_contraction_ratio": 17,
+      "sharp_stationary_delta": 17,
+      "cesaro_telescope": 1024,
+      "cesaro_residual_bound": 1024,
+      "two_state_stationary_formula": 15,
+      "tiny_residual_fixed_solution_error": 32,
+      "opposite_forced_stationaries": 32,
+      "product_lift_cap_tail": 19,
+      "product_lift_stationary_coordinate": 1140,
+      "product_lift_row_cap": 1140,
+      "birth_death_row_stochastic": 25,
+      "birth_death_diagonal_bound": 25,
+      "birth_death_detailed_balance": 25,
+      "birth_death_cap_invariance_identity": 25,
+      "invariance_without_row_domination": 1,
+      "pair_overlap_without_common_minorant": 1,
+      "cap_mass_two_can_still_contract": 1,
+      "correspondence_fixed_interval_control": 1
+    },
+    "total_checks": 5081,
+    "excluded_claims": [
+      "Universal computability proof",
+      "Noncomputability proof",
+      "Infinite-dimensional universal refinement",
+      "Lean/kernel verification"
+    ]
+  },
+  "all_13_author_manifest_bindings_match": true,
+  "protected_mutations": false,
+  "proof_level": "Ordinary full mathematical argument plus exact finite corroboration. No kernel or universal-program execution claim.",
+  "final_scope_guard_checked": true,
+  "participating_root_notes": {
+    "SOURCE_NOTE.md": "6f729742e2dd6834a23973acce52e79b97c4048574ad81db70097f1bc18bb479",
+    "STATE_DEPENDENT_SCOPE.md": "b18d8c44fa800c29e66586bd06cb9d672862e26ea3357e6a80c512a48bff69cd"
+  }
+}

@@ -1,0 +1,3717 @@
+{
+  "reconciled_rows": [
+    {
+      "source_record": {
+        "id": "V4::RV01::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Compile all twelve modules, fix elaboration and run the mandatory transitive-assumption audit.",
+        "parent_criticism": "V4::RV01",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-55e97be96000b5e9e290",
+          "EV-e73cd2012023946337f2",
+          "EV-8ba3462941bf22e2edff",
+          "EV-daf2cedf88d3d5d1e497",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV02::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Actual identity and compilation remain unobserved; this is a repaired policy, not a build receipt.",
+        "parent_criticism": "V4::RV02",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-318c67e2f874a9e1e951",
+          "EV-2aff04596e82255e5e25",
+          "EV-39bcfbc51e2e3171793b",
+          "EV-56267a9a1ecdb1a74111"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV03::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Compile the meta command, all targets and audit; inspect actual types and assumptions. No axiom footprint inferred from static source.",
+        "parent_criticism": "V4::RV03",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-751c4bac319035dff1fd",
+          "EV-f3e08557b57a745bae54",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-176faed0078fcc749646",
+          "EV-038c71b1d34b7aba4e6d",
+          "EV-35f7dbcdc14ea81005c7",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV04::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite census is not a general substitution proof.",
+        "parent_criticism": "V4::RV04",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ee19c32dec81aed97ff9",
+          "EV-7e784a3e80587f3d74cb",
+          "EV-7b74cdac7e84c85d076d",
+          "EV-90242dcfd2f9169c283b"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV05::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Custody is hash/coverage evidence, not semantic correctness.",
+        "parent_criticism": "V4::RV05",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-318c67e2f874a9e1e951",
+          "EV-a47cc9c4aee4976df928",
+          "EV-59969b02c43ffa48cdcc",
+          "EV-e8ca557a8a659956401f",
+          "EV-d997604e0be6bfff3be1"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV06::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Local trusted compiler/process/OS boundary remains; no hostile-code sandbox claim.",
+        "parent_criticism": "V4::RV06",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-318c67e2f874a9e1e951",
+          "EV-6566924496965164ad81",
+          "EV-39bcfbc51e2e3171793b",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV07::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No formal proof of the Python parser has been supplied.",
+        "parent_criticism": "V4::RV07",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-a4382218253e193d7caa",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-7e784a3e80587f3d74cb",
+          "EV-83bcbf6e7afbfbf1d67c"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV08::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "This establishes tested bounded behaviour, not OS-level memory isolation.",
+        "parent_criticism": "V4::RV08",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-a4382218253e193d7caa",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-ef20ad5442f1fcaef45e",
+          "EV-2940658e081d09ffd623",
+          "EV-84f56f9a7631e4bdfbd9",
+          "EV-e8ca557a8a659956401f"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV09::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Native caller objects are not authority; actual checked bytes remain the interface.",
+        "parent_criticism": "V4::RV09",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-77a808b83deb74603c68",
+          "EV-7e784a3e80587f3d74cb",
+          "EV-1eda21e465d8c1600502"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV10::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No complete CPU/allocator/OS resource proof or security sandbox. Quantitative bit-cost is separately conditional.",
+        "parent_criticism": "V4::RV10",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-a4382218253e193d7caa",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-2940658e081d09ffd623",
+          "EV-59969b02c43ffa48cdcc",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U07"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV11::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Neither the exporter nor Python parser is universally verified; exported targets are uncompiled. Extract or prove the real parser/checker refinement.",
+        "parent_criticism": "V4::RV11",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-f75306d1a29cd7638505",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-0b4387b1a019fc871d97",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV12::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No finite enumeration or decision of all semantic codes is asserted. Kernel implementation remains under RV01.",
+        "parent_criticism": "V4::RV12",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-7cf85525305944e343b5",
+          "EV-f75306d1a29cd7638505",
+          "EV-327ae08442ae00608826",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV13::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel-check the model and prove the complete deployed Python refinement, including registry/resource semantics.",
+        "parent_criticism": "V4::RV13",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-367d864972716513ead2",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV14::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite execution and ordinary specification proof do not certify the whole implementation.",
+        "parent_criticism": "V4::RV14",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-367d864972716513ead2"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV15::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No full semantic-realiser parametricity or JSON representation of arbitrary ambient types.",
+        "parent_criticism": "V4::RV15",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-12dfbed26b887067f2bb",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U10"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV16::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Mathematical construction is ordinary; original formalisation still awaits kernel checking.",
+        "parent_criticism": "V4::RV16",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-7cf85525305944e343b5",
+          "EV-327ae08442ae00608826",
+          "EV-59fc81f1cd820bfea79e",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-367d864972716513ead2"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV17::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Compile the extraction and audit universe levels and transitive assumptions. No current Mathlib installation is claimed.",
+        "parent_criticism": "V4::RV17",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-4c1d8a9d8a9a6ebec9f5",
+          "EV-d72ea2871daf63836f72",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e73cd2012023946337f2",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV18::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "The authored correspondence is uncompiled and not an all-operations embedding.",
+        "parent_criticism": "V4::RV18",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-d72ea2871daf63836f72",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV19::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel-level refinement and distributed revocation are not proved. The host process is trusted.",
+        "parent_criticism": "V4::RV19",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-6d4942620a8d6b9e5dcf",
+          "EV-a881ade3622dc84944cf",
+          "EV-0e8e95cc3b45a8c15a31",
+          "EV-79c738caedbb25a262f4",
+          "EV-8ecd21aa30e4fc54c065",
+          "EV-9e0bbee543f9242b962a",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-91659433c1a75f9846ba"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04",
+        "U14"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV20::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No empirical law identification, physical safety, moral warrant or remote authentication claim.",
+        "parent_criticism": "V4::RV20",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-c8321c3f7a544215bb18",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-45e67b7d9b5ad2b55f00"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV21::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Ordinary probability proof only; actual measure-theoretic Lean targets remain open.",
+        "parent_criticism": "V4::RV21",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-74333fb0f8232c6d91c0"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U05"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV22::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Do not infer rich-event necessity from merely finite source predicates.",
+        "parent_criticism": "V4::RV22",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-a71fe3459c09a4695412",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-74333fb0f8232c6d91c0"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U05"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV23::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No generic estimator or executable decision for arbitrary laws; full deployed refinement remains open.",
+        "parent_criticism": "V4::RV23",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-a881ade3622dc84944cf",
+          "EV-0e8e95cc3b45a8c15a31",
+          "EV-8a505237264fb8faedf7",
+          "EV-c27748f32850e2db690e",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-91659433c1a75f9846ba"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03",
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV24::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Use pinned Mathlib measures to prove point countability, pushforward/restriction sums, event measurability, Q1/Q2/Q4/Q7 and the continuum examples.",
+        "parent_criticism": "V4::RV24",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-d56d5418e659faa679eb",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-74333fb0f8232c6d91c0"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U05"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV25::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No formal quantitative law for the implementation or a general effectful fundamental theorem.",
+        "parent_criticism": "V4::RV25",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-77a808b83deb74603c68",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-f5b547fa9b986e7f0e4a",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U06",
+        "U07",
+        "U10"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV26::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Construct and kernel-check the unbounded productive source semantics and its measure. The Python API deliberately caps at 128 bits.",
+        "parent_criticism": "V4::RV26",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-f5b547fa9b986e7f0e4a",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-aa4c5c383590bdf475ca"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U06"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV27::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No instruction-level CPU or allocator benchmark/proof.",
+        "parent_criticism": "V4::RV27",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-6ab37c88408b121038d5",
+          "EV-5e9e46ed5796cf750219"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U07"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV28::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "General Kakutani formalisation/selection and full native measure semantics remain open; no arbitrary real-law realisability.",
+        "parent_criticism": "V4::RV28",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-efec28dcf92c12e4d08c"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U08",
+        "U05"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV29::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Ordinary proof; no general equilibrium convergence claim.",
+        "parent_criticism": "V4::RV29",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-a74c5e7b95d5aa1aa573"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U08"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV30::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Mechanise the actual translation, substitution and nonempty reduction simulation against an existing checked System F development.",
+        "parent_criticism": "V4::RV30",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-13c3b0ba7aa7e57fd13b",
+          "EV-a74c5e7b95d5aa1aa573",
+          "EV-2795cb401c807b28b3fc"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U09"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV31::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Full formal conversion-completeness bridge remains RV30; weak-head behaviour is not inferred from this counterexample.",
+        "parent_criticism": "V4::RV31",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-a947caca5150c2f21cd2",
+          "EV-a74c5e7b95d5aa1aa573",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U09"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV32::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Compile this fragment. It does not imply all unary semantic realisers are Reynolds-parametric or cover effects/dependent contexts.",
+        "parent_criticism": "V4::RV32",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-12dfbed26b887067f2bb",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-10689b75b9ac4633cc1d"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U10"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV33::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Introduce and prove a length-indexed simulation for the actual parser/replayer; the old unindexed Red theorem alone does not certify length.",
+        "parent_criticism": "V4::RV33",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-77a808b83deb74603c68",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV34::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Specify contextual substitution, identity eliminator computation, judgemental equality and admissible universe rules; compare complete primary models.",
+        "parent_criticism": "V4::RV34",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-f2df78fcd764749b7d42",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-2795cb401c807b28b3fc",
+          "EV-10689b75b9ac4633cc1d"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U11"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV35::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Define observable contexts/effect strategy, verify backend lowering and run comparative workloads after metatheory.",
+        "parent_criticism": "V4::RV35",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-c8321c3f7a544215bb18",
+          "EV-2795cb401c807b28b3fc"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV36::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Complete priority searches, theorem comparisons and independent specialist review; compilation does not settle novelty.",
+        "parent_criticism": "V4::RV36",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-13d6f0a12fc8925db81b",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV37::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "The historical bibliography and all nearest full dependent/probabilistic semantics require a broader source review. Failed PDF screenshots are disclosed.",
+        "parent_criticism": "V4::RV37",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-529fd2affdf40702ad87",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13",
+        "RR-1",
+        "RR-2",
+        "RR-3"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV38::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Native parser/refinement and empirical evidence acquisition remain separate.",
+        "parent_criticism": "V4::RV38",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-318c67e2f874a9e1e951",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-a052b556ebf3947f09c5",
+          "EV-f063a2372778d7f4ae3a"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03",
+        "U14"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV39::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Prove actual frontend/backend contextual refinement; no zero-cost runtime claim.",
+        "parent_criticism": "V4::RV39",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-c8321c3f7a544215bb18",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV40::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No claim every issue is closed; open obligations have explicit methods.",
+        "parent_criticism": "V4::RV40",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-9426c1e1e2a0455b8be8",
+          "EV-2795cb401c807b28b3fc"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV41::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Actual kernel type/axiom readback and independent statement review remain mandatory.",
+        "parent_criticism": "V4::RV41",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-751c4bac319035dff1fd",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-fd9add665feb3bbd428f",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_OR_AUDIT_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::RV42::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel-check the general relation-closure criterion and actual Python refinement; finite active signatures are not all semantic predicates.",
+        "parent_criticism": "V4::RV42",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-a71fe3459c09a4695412",
+          "EV-7d4deafd2030f5933ab3",
+          "EV-a881ade3622dc84944cf",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-91659433c1a75f9846ba"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C01::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Novelty of the integration and exact boundaries is not established.",
+        "parent_criticism": "V4::C01",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-13d6f0a12fc8925db81b",
+          "EV-529fd2affdf40702ad87",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C02::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No Lean compilation has occurred.",
+        "parent_criticism": "V4::C02",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-55e97be96000b5e9e290",
+          "EV-e73cd2012023946337f2",
+          "EV-8ba3462941bf22e2edff",
+          "EV-daf2cedf88d3d5d1e497",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-318c67e2f874a9e1e951",
+          "EV-2aff04596e82255e5e25",
+          "EV-39bcfbc51e2e3171793b",
+          "EV-56267a9a1ecdb1a74111",
+          "EV-751c4bac319035dff1fd",
+          "EV-f3e08557b57a745bae54",
+          "EV-176faed0078fcc749646",
+          "EV-038c71b1d34b7aba4e6d",
+          "EV-35f7dbcdc14ea81005c7",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C03::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Unbounded deployed JSON/Python refinement and kernel acceptance remain open.",
+        "parent_criticism": "V4::C03",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-a4382218253e193d7caa",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-7e784a3e80587f3d74cb",
+          "EV-83bcbf6e7afbfbf1d67c",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-ef20ad5442f1fcaef45e",
+          "EV-2940658e081d09ffd623",
+          "EV-84f56f9a7631e4bdfbd9",
+          "EV-e8ca557a8a659956401f",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-f75306d1a29cd7638505",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-0b4387b1a019fc871d97",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-7cf85525305944e343b5",
+          "EV-327ae08442ae00608826",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C04::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Compile the finite translation and verify the actual parser/checker.",
+        "parent_criticism": "V4::C04",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-f75306d1a29cd7638505",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-0b4387b1a019fc871d97",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-7cf85525305944e343b5",
+          "EV-327ae08442ae00608826"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C05::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No nondefinitional novelty is attributed to that equivalence.",
+        "parent_criticism": "V4::C05",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-367d864972716513ead2",
+          "EV-d72ea2871daf63836f72",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C06::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Complete full-source verification of the inherited bibliography.",
+        "parent_criticism": "V4::C06",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-529fd2affdf40702ad87",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13",
+        "RR-1",
+        "RR-2",
+        "RR-3"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C07::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Mechanise the finite-source normalisation bridge.",
+        "parent_criticism": "V4::C07",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-13c3b0ba7aa7e57fd13b",
+          "EV-a74c5e7b95d5aa1aa573",
+          "EV-2795cb401c807b28b3fc",
+          "EV-a947caca5150c2f21cd2",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U09"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C08::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No comparative deployment/performance advantage is proved.",
+        "parent_criticism": "V4::C08",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-c8321c3f7a544215bb18",
+          "EV-2795cb401c807b28b3fc",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U07",
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C09::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "The negative adapter and positive conjunction remain uncompiled.",
+        "parent_criticism": "V4::C09",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-4c1d8a9d8a9a6ebec9f5",
+          "EV-d72ea2871daf63836f72",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e73cd2012023946337f2",
+          "EV-f2cf621ac63f6a11ad1c"
+        ]
+      },
+      "classification": "HISTORICAL_BUILD_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C10::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "General formal probability and general fixed-point selection remain open.",
+        "parent_criticism": "V4::C10",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-a71fe3459c09a4695412",
+          "EV-d56d5418e659faa679eb",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-efec28dcf92c12e4d08c",
+          "EV-a74c5e7b95d5aa1aa573"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U05",
+        "U08"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C11::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No changed logical interpretation is presented as retaining the inconsistent full package.",
+        "parent_criticism": "V4::C11",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-7cf85525305944e343b5",
+          "EV-327ae08442ae00608826",
+          "EV-59fc81f1cd820bfea79e",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-367d864972716513ead2",
+          "EV-4c1d8a9d8a9a6ebec9f5",
+          "EV-d72ea2871daf63836f72",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e73cd2012023946337f2"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C12::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finish kernel verification and theorem-level literature/independent review.",
+        "parent_criticism": "V4::C12",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-55e97be96000b5e9e290",
+          "EV-e73cd2012023946337f2",
+          "EV-8ba3462941bf22e2edff",
+          "EV-daf2cedf88d3d5d1e497",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-13d6f0a12fc8925db81b",
+          "EV-529fd2affdf40702ad87",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C13::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Richer classifications require their own exact expressiveness hypotheses.",
+        "parent_criticism": "V4::C13",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-4c1d8a9d8a9a6ebec9f5",
+          "EV-d72ea2871daf63836f72",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e73cd2012023946337f2",
+          "EV-f2cf621ac63f6a11ad1c"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C14::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Full formal simulation and any positive completeness fragment remain open.",
+        "parent_criticism": "V4::C14",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-13c3b0ba7aa7e57fd13b",
+          "EV-a74c5e7b95d5aa1aa573",
+          "EV-2795cb401c807b28b3fc",
+          "EV-a947caca5150c2f21cd2",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U09"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C15::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Formal quantitative effect semantics remain open.",
+        "parent_criticism": "V4::C15",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-77a808b83deb74603c68",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-f5b547fa9b986e7f0e4a",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-aa4c5c383590bdf475ca"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U06"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C16::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel acceptance and end-to-end extracted/verified checker are still absent.",
+        "parent_criticism": "V4::C16",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-55e97be96000b5e9e290",
+          "EV-e73cd2012023946337f2",
+          "EV-8ba3462941bf22e2edff",
+          "EV-daf2cedf88d3d5d1e497",
+          "EV-751c4bac319035dff1fd",
+          "EV-f3e08557b57a745bae54",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-176faed0078fcc749646",
+          "EV-038c71b1d34b7aba4e6d",
+          "EV-35f7dbcdc14ea81005c7",
+          "EV-a4382218253e193d7caa",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-7e784a3e80587f3d74cb",
+          "EV-83bcbf6e7afbfbf1d67c",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-f75306d1a29cd7638505",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-0b4387b1a019fc871d97",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-367d864972716513ead2",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-afa80b786d910150627b",
+          "EV-86cdd16f50950324e12e",
+          "EV-29f73ea4ff58ec66ec32"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U03"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C17::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Head-strategy cost needs its separately stated indexed semantics.",
+        "parent_criticism": "V4::C17",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-a947caca5150c2f21cd2",
+          "EV-a74c5e7b95d5aa1aa573",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-77a808b83deb74603c68",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-0f8e551de28b6bdf549e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C18::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Historical lineage comparison remains bounded by inspected sources.",
+        "parent_criticism": "V4::C18",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-529fd2affdf40702ad87"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C19::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Supply contextual rules, J, judgemental equality, universe discipline and checker soundness.",
+        "parent_criticism": "V4::C19",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-f2df78fcd764749b7d42",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-2795cb401c807b28b3fc",
+          "EV-10689b75b9ac4633cc1d"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U11"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C20::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "This is not an autonomous universal foundation; full intended operational refinement remains open.",
+        "parent_criticism": "V4::C20",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-367d864972716513ead2",
+          "EV-7cf85525305944e343b5",
+          "EV-327ae08442ae00608826",
+          "EV-59fc81f1cd820bfea79e",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-4c1d8a9d8a9a6ebec9f5",
+          "EV-d72ea2871daf63836f72",
+          "EV-e73cd2012023946337f2",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C21::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No proposed full DTT theorem is closed by correcting that example.",
+        "parent_criticism": "V4::C21",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-f2df78fcd764749b7d42",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-2795cb401c807b28b3fc",
+          "EV-10689b75b9ac4633cc1d"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U11"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C22::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Specify and verify backend lowering, then measure cost against existing implementations.",
+        "parent_criticism": "V4::C22",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-c8321c3f7a544215bb18",
+          "EV-2795cb401c807b28b3fc",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-bc410cac8d3c00b2d59e"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U12"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C23::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel-check it; establish any stronger semantic or effectful relational theorem separately.",
+        "parent_criticism": "V4::C23",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-f2cf621ac63f6a11ad1c",
+          "EV-12dfbed26b887067f2bb",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-10689b75b9ac4633cc1d"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U10"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C24::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "General semantic parametricity still requires stronger hypotheses and comparison.",
+        "parent_criticism": "V4::C24",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-12dfbed26b887067f2bb",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-a71fe3459c09a4695412",
+          "EV-7d4deafd2030f5933ab3",
+          "EV-a881ade3622dc84944cf"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U10"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C25::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Complete implementation refinement and external assurance obligations rather than labelling production-grade.",
+        "parent_criticism": "V4::C25",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-a4382218253e193d7caa",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-2940658e081d09ffd623",
+          "EV-59969b02c43ffa48cdcc",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-f75306d1a29cd7638505",
+          "EV-0f8e551de28b6bdf549e",
+          "EV-0b4387b1a019fc871d97",
+          "EV-e55bc17380a07e2f53b5",
+          "EV-c8321c3f7a544215bb18",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-3327e55bccbf4ddc2c67"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U04",
+        "U14"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C26::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Kernel-check actual measures; no arbitrary-law decision procedure exists as shown by Q8.",
+        "parent_criticism": "V4::C26",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-e7ad363d03f01127f2a2",
+          "EV-a71fe3459c09a4695412",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-a881ade3622dc84944cf",
+          "EV-0e8e95cc3b45a8c15a31",
+          "EV-8a505237264fb8faedf7",
+          "EV-c27748f32850e2db690e",
+          "EV-d56d5418e659faa679eb",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-d8d8e96a89ca6baf01da",
+          "EV-194799b28fdf3b63d6f7",
+          "EV-91659433c1a75f9846ba"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U05"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C27::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Formalise the unbounded source and measure, not just finite prefixes.",
+        "parent_criticism": "V4::C27",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-f5b547fa9b986e7f0e4a",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-aa4c5c383590bdf475ca",
+          "EV-6ab37c88408b121038d5",
+          "EV-5e9e46ed5796cf750219",
+          "EV-efec28dcf92c12e4d08c"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U06"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C28::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "No general convergence or self-certification follows from an equilibrium.",
+        "parent_criticism": "V4::C28",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-a74c5e7b95d5aa1aa573"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U08"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C29::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Independent comparison and representative deployment benchmarks remain required.",
+        "parent_criticism": "V4::C29",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-9c1e4fa6cbd09ce0ef13",
+          "EV-4971f828be8d21d7d5a2",
+          "EV-c8321c3f7a544215bb18",
+          "EV-2795cb401c807b28b3fc",
+          "EV-10689b75b9ac4633cc1d",
+          "EV-13d6f0a12fc8925db81b",
+          "EV-fb5abca9a6f523a7b6ec",
+          "EV-feb6d36b9cbc4b47c90c",
+          "EV-e48f71bbe1cc8c0bb928"
+        ]
+      },
+      "classification": "RESEARCH_RESIDUAL_ALIAS_WITH_HISTORICAL_CLAUSES_PRESERVED",
+      "primary_obligations": [
+        "U13",
+        "U07"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::C30::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Continue each remaining obligation from actual bytes and evidence.",
+        "parent_criticism": "V4::C30",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-b84a5aea0930393553b5",
+          "EV-9426c1e1e2a0455b8be8",
+          "EV-2795cb401c807b28b3fc",
+          "EV-751c4bac319035dff1fd",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-fd9add665feb3bbd428f"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N01::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N01",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ad3f7890057f7e8df3fb",
+          "EV-a77ae5fac0d2f3811394",
+          "EV-d997604e0be6bfff3be1"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N02::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N02",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-ef20ad5442f1fcaef45e",
+          "EV-2940658e081d09ffd623",
+          "EV-84f56f9a7631e4bdfbd9"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N03::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N03",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-398fdecf3c125f29fbbf",
+          "EV-ef20ad5442f1fcaef45e",
+          "EV-2940658e081d09ffd623",
+          "EV-84f56f9a7631e4bdfbd9"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N04::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N04",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-ef20ad5442f1fcaef45e",
+          "EV-84f56f9a7631e4bdfbd9"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N05::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N05",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-0e8e95cc3b45a8c15a31",
+          "EV-432f425e18772d4b30ae",
+          "EV-c27748f32850e2db690e"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N06::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N06",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-a4382218253e193d7caa",
+          "EV-a47cc9c4aee4976df928",
+          "EV-59969b02c43ffa48cdcc",
+          "EV-e8ca557a8a659956401f"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N07::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N07",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-318c67e2f874a9e1e951",
+          "EV-a47cc9c4aee4976df928",
+          "EV-59969b02c43ffa48cdcc",
+          "EV-e8ca557a8a659956401f"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N08::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N08",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-45e67b7d9b5ad2b55f00",
+          "EV-bc410cac8d3c00b2d59e",
+          "EV-6ab37c88408b121038d5",
+          "EV-5e9e46ed5796cf750219"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N09::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N09",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-ea97b32ca79a4cfa3ade",
+          "EV-f879afbe00a5c58149df",
+          "EV-a4e1948d54645194cf05"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N10::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N10",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-6d4942620a8d6b9e5dcf",
+          "EV-79c738caedbb25a262f4",
+          "EV-a364890806ef757f82fb",
+          "EV-9e0bbee543f9242b962a"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N11::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N11",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-3e325d5b4b0ffa71cb36",
+          "EV-6d4942620a8d6b9e5dcf",
+          "EV-8ecd21aa30e4fc54c065",
+          "EV-32292cfb5ca60e52af22",
+          "EV-41d1b4fd5107ca058db7"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "V4::V4-N12::remaining",
+        "status": "OPEN_OR_SCOPE_LIMIT_AS_RECORDED",
+        "text": "Finite implementation evidence only; not a kernel or hostile-host security proof.",
+        "parent_criticism": "V4::V4-N12",
+        "evidence_ids": [
+          "EV-b7e736a859d93a1df116",
+          "EV-2463507ec0b114574379",
+          "EV-83d52f53c16b2a173002",
+          "EV-face065505bc935c74ad",
+          "EV-edf6b970f545cd26e004",
+          "EV-172e6f3aa48fb599e7ed",
+          "EV-6874a597a304fc9462b7",
+          "EV-d9a728f19de7b58426f5"
+        ]
+      },
+      "classification": "PRESERVED_SCOPE_LIMIT_NOT_A_NEW_RESEARCH_TASK",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "A3F-U-KERNEL",
+        "original_record": {
+          "blocks_scope": [
+            "kernel qualification"
+          ],
+          "description": "Lean and Lake are absent. Unchanged driver returned 2/KERNEL_UNAVAILABLE before staging or compilation. No installed Mathlib/transitive-head, .olean, declaration-type or actual axiom evidence exists.",
+          "evidence_files": [
+            "cells/A3F/FORMAL_ATTEMPT.json"
+          ],
+          "id": "A3F-U-KERNEL"
+        },
+        "status": "OPEN",
+        "evidence_ids": [
+          "EV-d78661b8c8ee6263ab88"
+        ]
+      },
+      "classification": "HISTORICAL_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "A3F-U-HISTORICAL-CORRESPONDENCE",
+        "original_record": {
+          "blocks_scope": [
+            "historical kernel recovery",
+            "CV formal certification"
+          ],
+          "description": "Inherited standalone/project receipts retain bounded repaired interpretations only. Nine intended historical declarations remain absent; Connes rigidity/source correspondence and CV formalisation are not discharged.",
+          "evidence_files": [
+            "cells/A3F/FORMAL_LINEAGE_MAP.json",
+            "cells/A3F/FORMAL_STATUS_BOUNDARIES.json"
+          ],
+          "id": "A3F-U-HISTORICAL-CORRESPONDENCE"
+        },
+        "status": "OPEN",
+        "evidence_ids": [
+          "EV-d78661b8c8ee6263ab88"
+        ]
+      },
+      "classification": "SPLIT_RESEARCH_ALIAS_AND_EXTERNAL_HISTORICAL_IDENTITY",
+      "primary_obligations": [
+        "CV-R",
+        "CV-C"
+      ],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    },
+    {
+      "source_record": {
+        "id": "A3F-U-MIGRATION",
+        "original_record": {
+          "blocks_scope": [
+            "integrated formal build"
+          ],
+          "description": "4.32.2 live environment and 4.19.0 v5 locks remain separate; no migration or CI policy amendment was attempted.",
+          "evidence_files": [
+            "cells/A3F/TOOLCHAIN_PROFILES.json"
+          ],
+          "id": "A3F-U-MIGRATION"
+        },
+        "status": "OPEN",
+        "evidence_ids": [
+          "EV-d78661b8c8ee6263ab88"
+        ]
+      },
+      "classification": "SEPARATE_PINS_PRESERVED_NO_MIGRATION_REQUIRED",
+      "primary_obligations": [],
+      "not_additional_count": true,
+      "note": "Original criticism/receipt status is unchanged. Mapping identifies a remaining component, not reopening or closing the whole historical criticism. Mapped compiled examples do not discharge universal refinement."
+    }
+  ],
+  "historical_burden_rows": [
+    {
+      "source_record": {
+        "burden_id": "B001",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply verified pre-Codex historical checkpoint",
+        "prerequisites": [],
+        "blockers": [
+          "missing archive bytes"
+        ],
+        "independent_lanes": [
+          "B002",
+          "B003",
+          "B004",
+          "B005",
+          "B012"
+        ],
+        "must_not_combine": [
+          "T354 repository repair"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "ar8r-pre-codex-owner-review-checkpoint-20260801.zip at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B002",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply apprehensional-reachability archive",
+        "prerequisites": [],
+        "blockers": [
+          "missing archive bytes"
+        ],
+        "independent_lanes": [
+          "B001",
+          "B003"
+        ],
+        "must_not_combine": [
+          "substantive theorem adoption"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "orthemology-apprehensional-reachability.zip at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B003",
+        "category": "IMPLEMENTATION AUDIT",
+        "name": "Supply exact daee-epistemics implementation snapshot",
+        "prerequisites": [],
+        "blockers": [
+          "missing archive bytes"
+        ],
+        "independent_lanes": [
+          "B002",
+          "B004"
+        ],
+        "must_not_combine": [
+          "school-neutral theorem promotion"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "daee-epistemics-codex-v0.4.6.0-orthemology-check.zip at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B004",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply noetic-structure draft archive",
+        "prerequisites": [],
+        "blockers": [
+          "missing archive bytes"
+        ],
+        "independent_lanes": [
+          "B003",
+          "B005"
+        ],
+        "must_not_combine": [
+          "empirical validation claims"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "noetic_structure_draft_v1.zip at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B005",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply transcendental-ascent owner packet",
+        "prerequisites": [],
+        "blockers": [
+          "missing archive bytes"
+        ],
+        "independent_lanes": [
+          "B006",
+          "B007",
+          "B008",
+          "B009"
+        ],
+        "must_not_combine": [
+          "world-directed adoption"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "orthemology-transcendental-ascent-owner-packet.zip at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B006",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply transcendental visual packet",
+        "prerequisites": [],
+        "blockers": [
+          "missing PDF bytes"
+        ],
+        "independent_lanes": [
+          "B005"
+        ],
+        "must_not_combine": [
+          "proof authority"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "orthemology-transcendental-ascent-visual-packet.pdf at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B007",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply transcendental-ascent steer",
+        "prerequisites": [],
+        "blockers": [
+          "missing Markdown bytes"
+        ],
+        "independent_lanes": [
+          "B005"
+        ],
+        "must_not_combine": [
+          "source authority"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "AR8R-orthemological-transcendental-ascent-steer.md at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B008",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply verbatim owner argument",
+        "prerequisites": [],
+        "blockers": [
+          "missing Markdown bytes"
+        ],
+        "independent_lanes": [
+          "B005"
+        ],
+        "must_not_combine": [
+          "formal theorem identity"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "orthemology-owner-argument-verbatim.md at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B009",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply historical message(94)",
+        "prerequisites": [],
+        "blockers": [
+          "missing text bytes"
+        ],
+        "independent_lanes": [
+          "B005"
+        ],
+        "must_not_combine": [
+          "proof authority"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "message(94).txt at expected SHA-256",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B010",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply AR2-AR8 historical archives",
+        "prerequisites": [],
+        "blockers": [
+          "exact filenames/hashes not supplied"
+        ],
+        "independent_lanes": [
+          "B001"
+        ],
+        "must_not_combine": [
+          "new theorem adoption"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "exact historical archives and custody receipts",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B011",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply AR7 owner overlay and AR8 provisional archive",
+        "prerequisites": [],
+        "blockers": [
+          "exact bytes unavailable"
+        ],
+        "independent_lanes": [
+          "B010"
+        ],
+        "must_not_combine": [
+          "current-main authority"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "owner overlay/provisional archive with hashes",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B012",
+        "category": "IMPLEMENTATION AUDIT",
+        "name": "Supply Fusha/Qamus repository snapshot",
+        "prerequisites": [],
+        "blockers": [
+          "no Fusha bytes in current repository or attachments"
+        ],
+        "independent_lanes": [
+          "B003"
+        ],
+        "must_not_combine": [
+          "claim that transclusion is implemented"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "pinned /fusha/ tree, qamus dataset, validators, and commit/hash receipt",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B013",
+        "category": "OWNER DECISION REQUIRED",
+        "name": "Authorize a fresh execution environment for the bounded T354 repair operation",
+        "prerequisites": [
+          "verify live main remains required SHA"
+        ],
+        "blockers": [
+          "no write-capable GitHub mutation channel in completed attempt"
+        ],
+        "independent_lanes": [
+          "continuity mapping"
+        ],
+        "must_not_combine": [
+          "open-ended AR8R research",
+          "merge"
+        ],
+        "status": "BLOCKED_FOR_OWNER",
+        "evidence_needed": "explicit rerun authorization plus authenticated write-capable GitHub channel",
+        "owner_action": true
+      },
+      "classification": "HISTORICAL_OR_SEPARATE_ENGINEERING_OPERATION_NOT_RESEARCH_AUTHORITY",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B014",
+        "category": "REPOSITORY ENGINEERING",
+        "name": "Record owner adoption of T150 replacement and T366 reconstruction",
+        "prerequisites": [
+          "B013"
+        ],
+        "blockers": [
+          "Decisions 0037/0038 and adoption record absent"
+        ],
+        "independent_lanes": [],
+        "must_not_combine": [
+          "proposal byte edits",
+          "historical identity promotion"
+        ],
+        "status": "AUTHORIZED_BUT_NOT_EXECUTED",
+        "evidence_needed": "bounded branch/PR exact-head CI",
+        "owner_action": false
+      },
+      "classification": "HISTORICAL_OR_SEPARATE_ENGINEERING_OPERATION_NOT_RESEARCH_AUTHORITY",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B015",
+        "category": "FUTURE RESEARCH RESIDUAL",
+        "name": "Reopen any of the 22 unresolved identities only on new Tier A/B evidence",
+        "prerequisites": [
+          "new exact source bytes or theorem-specific constraints"
+        ],
+        "blockers": [
+          "current evidence insufficient"
+        ],
+        "independent_lanes": [
+          "all implementation work"
+        ],
+        "must_not_combine": [
+          "title/neighbor/family-based reconstruction"
+        ],
+        "status": "STOPPED_BY_OWNER_PENDING_NEW_EVIDENCE",
+        "evidence_needed": "theorem-specific typed setting, assumptions, conclusion, scope, provenance",
+        "owner_action": false
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B016",
+        "category": "EXTERNAL REVIEW",
+        "name": "Obtain independent mathematical review of Track M Candidate 1",
+        "prerequisites": [
+          "exact Candidate 1 packet supplied"
+        ],
+        "blockers": [
+          "packet unavailable here",
+          "no external review receipt"
+        ],
+        "independent_lanes": [
+          "Candidate N source review"
+        ],
+        "must_not_combine": [
+          "owner self-review"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "named external reviewer report with objections and proof audit",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B017",
+        "category": "SOURCE VERIFICATION",
+        "name": "Complete Candidate 1 prior-art search",
+        "prerequisites": [
+          "exact statement and proof packet"
+        ],
+        "blockers": [
+          "statement bytes unavailable"
+        ],
+        "independent_lanes": [
+          "B016"
+        ],
+        "must_not_combine": [
+          "novelty credit before search"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "search protocol, sources, overlap map, novelty conclusion",
+        "owner_action": false
+      },
+      "classification": "OVERLAPPING_RESEARCH_SCOPE_NOT_ADDITIONAL_COUNT",
+      "related_obligations": [
+        "U13"
+      ],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B018",
+        "category": "EXTERNAL REVIEW",
+        "name": "Obtain specialist source review of Candidate N",
+        "prerequisites": [
+          "exact Candidate N packet and loci"
+        ],
+        "blockers": [
+          "source packet unavailable"
+        ],
+        "independent_lanes": [
+          "B016"
+        ],
+        "must_not_combine": [
+          "mathematical novelty review"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "specialist review of Arabic/source attribution and six-role reconstruction",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B019",
+        "category": "FUTURE RESEARCH RESIDUAL",
+        "name": "Demonstrate Candidate N interpretive payoff beyond taxonomy",
+        "prerequisites": [
+          "B018"
+        ],
+        "blockers": [
+          "no source-backed case analysis in supplied packet"
+        ],
+        "independent_lanes": [
+          "Track M"
+        ],
+        "must_not_combine": [
+          "source authenticity as payoff proof"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "comparative cases where six-role architecture changes warranted interpretation",
+        "owner_action": false
+      },
+      "classification": "OVERLAPPING_RESEARCH_SCOPE_NOT_ADDITIONAL_COUNT",
+      "related_obligations": [
+        "A4C-O005"
+      ],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B020",
+        "category": "FORMAL PROOF OR COUNTERMODEL",
+        "name": "Track T realist-bridge and Necessary-Being burdens",
+        "prerequisites": [
+          "exact Track T source packet",
+          "same-token/same-respect interpretation guards"
+        ],
+        "blockers": [
+          "world bridge premises not established"
+        ],
+        "independent_lanes": [
+          "Track M",
+          "Track N"
+        ],
+        "must_not_combine": [
+          "school-internal source premise with school-neutral theorem"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "RB/resource/semantic/provenance bridges and rival countermodels",
+        "owner_action": false
+      },
+      "classification": "OVERLAPPING_RESEARCH_SCOPE_NOT_ADDITIONAL_COUNT",
+      "related_obligations": [
+        "A4C-O005"
+      ],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B021",
+        "category": "SOURCE VERIFICATION",
+        "name": "Verify Arabic loci, editions, translations, and attribution for source ascent",
+        "prerequisites": [
+          "source packets and editions"
+        ],
+        "blockers": [
+          "attachments are translations/secondary scholarship, not complete Arabic edition audit"
+        ],
+        "independent_lanes": [
+          "formal proof"
+        ],
+        "must_not_combine": [
+          "translation adequacy with inference validity"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "Arabic locus, edition, translator check, attribution receipt per claim",
+        "owner_action": false
+      },
+      "classification": "OVERLAPPING_RESEARCH_SCOPE_NOT_ADDITIONAL_COUNT",
+      "related_obligations": [
+        "RR-1",
+        "RR-3"
+      ],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B022",
+        "category": "EMPIRICAL EXECUTION",
+        "name": "Test PRH-inspired prior-order/proper-function hypotheses causally",
+        "prerequisites": [
+          "preregistered operational definitions",
+          "held-out data"
+        ],
+        "blockers": [
+          "current PRH paper is correlational/alignment-focused"
+        ],
+        "independent_lanes": [
+          "formal theorem work"
+        ],
+        "must_not_combine": [
+          "representation alignment with causal proper function"
+        ],
+        "status": "OPEN_RESEARCH",
+        "evidence_needed": "interventions, counterfactuals, held-out predictions, negative controls",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B023",
+        "category": "IMPLEMENTATION AUDIT",
+        "name": "Audit current daee runtime against typed crosswalk",
+        "prerequisites": [
+          "B003"
+        ],
+        "blockers": [
+          "current-main pin c86b... differs from unavailable expected snapshot"
+        ],
+        "independent_lanes": [
+          "source review"
+        ],
+        "must_not_combine": [
+          "runtime correspondence with philosophical truth"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "file-by-file pinned audit, fixtures, validator results, version custody",
+        "owner_action": false
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B024",
+        "category": "EMPIRICAL EXECUTION",
+        "name": "Certify daee proxies, intervention contrast, and causal efficacy",
+        "prerequisites": [
+          "B023",
+          "target soundness specification"
+        ],
+        "blockers": [
+          "proxy validity and causal contrast not executed"
+        ],
+        "independent_lanes": [
+          "repository engineering"
+        ],
+        "must_not_combine": [
+          "output correctness with restoration"
+        ],
+        "status": "OPEN_RESEARCH",
+        "evidence_needed": "proxy validation, intervention/control contrast, burden landing receipts, reread outcomes",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B025",
+        "category": "IMPLEMENTATION AUDIT",
+        "name": "Map Fusha occurrence/transclusion implementation",
+        "prerequisites": [
+          "B012"
+        ],
+        "blockers": [
+          "no repository bytes"
+        ],
+        "independent_lanes": [
+          "T354 repair"
+        ],
+        "must_not_combine": [
+          "lexical type with occurrence token"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "path-by-path implementation crosswalk and dogfood results",
+        "owner_action": false
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B026",
+        "category": "EXTERNAL REVIEW",
+        "name": "Kernel-build and Comparator-check Ten Advances Lean project",
+        "prerequisites": [
+          "Lean 4.32.0",
+          "mathlib cache",
+          "Comparator tools"
+        ],
+        "blockers": [
+          "lake/lean unavailable in this runtime",
+          "archive packaging defects"
+        ],
+        "independent_lanes": [
+          "AR8R theorem review"
+        ],
+        "must_not_combine": [
+          "static scan with kernel verification"
+        ],
+        "status": "OPEN_EXTERNAL_EXECUTION",
+        "evidence_needed": "clean build logs, #print axioms or Comparator receipts, exact commit/archive pin",
+        "owner_action": false
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B027",
+        "category": "REPOSITORY ENGINEERING",
+        "name": "Resolve Ten Advances archive metadata/package inconsistencies",
+        "prerequisites": [
+          "external project owner authorization"
+        ],
+        "blockers": [
+          "missing lake root; stale formalization path"
+        ],
+        "independent_lanes": [
+          "B026"
+        ],
+        "must_not_combine": [
+          "orthemology repository mutation"
+        ],
+        "status": "OPEN_EXTERNAL_PROJECT",
+        "evidence_needed": "corrected archive or authoritative explanation",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B028",
+        "category": "FUTURE RESEARCH RESIDUAL",
+        "name": "Run further bounded AR8R saturation/no-change wave only if owner opens research",
+        "prerequisites": [
+          "owner authorization",
+          "full reentry map read"
+        ],
+        "blockers": [
+          "natural campaign closure NOT_REACHED but current task is read-only"
+        ],
+        "independent_lanes": [
+          "T354 repo repair"
+        ],
+        "must_not_combine": [
+          "historical duration extension without clock ledger"
+        ],
+        "status": "NOT_AUTHORIZED",
+        "evidence_needed": "bounded research charter and stop rule",
+        "owner_action": true
+      },
+      "classification": "UNOPENED_RESEARCH_CAMPAIGN_NOT_ACTIVATED",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B029",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Recover exact Candidate A-N map",
+        "prerequisites": [
+          "B010",
+          "B011"
+        ],
+        "blockers": [
+          "historical archives unavailable"
+        ],
+        "independent_lanes": [
+          "current-main audit"
+        ],
+        "must_not_combine": [
+          "infer candidates from summaries"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "candidate ledgers, source matrices, theorem-origin records",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B030",
+        "category": "OWNER DECISION REQUIRED",
+        "name": "Authorize external transmission of Candidate 1 or Candidate N packets",
+        "prerequisites": [
+          "packet completeness",
+          "privacy review"
+        ],
+        "blockers": [
+          "no owner transmission authorization in this continuity operation"
+        ],
+        "independent_lanes": [
+          "B031",
+          "B032"
+        ],
+        "must_not_combine": [
+          "publication"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "recipient/scope/bytes authorization",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B031",
+        "category": "EMPIRICAL EXECUTION",
+        "name": "Execute prepared FCSP/ER experiments with human raters",
+        "prerequisites": [
+          "READY_TO_RUN gate",
+          "model budget",
+          "at least three raters"
+        ],
+        "blockers": [
+          "owner-only spend and recruitment"
+        ],
+        "independent_lanes": [
+          "source verification"
+        ],
+        "must_not_combine": [
+          "packet readiness with completed evidence"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "registered run, blinded ratings, frozen outputs, analysis receipt",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B032",
+        "category": "PUBLICATION/LEGAL OWNER ACT",
+        "name": "Choose repository license",
+        "prerequisites": [],
+        "blockers": [
+          "owner legal choice"
+        ],
+        "independent_lanes": [
+          "B033",
+          "B037"
+        ],
+        "must_not_combine": [
+          "technical validation"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "owner-selected license text",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B033",
+        "category": "PUBLICATION/LEGAL OWNER ACT",
+        "name": "Choose citation identity and metadata",
+        "prerequisites": [],
+        "blockers": [
+          "owner identity choice"
+        ],
+        "independent_lanes": [
+          "B032"
+        ],
+        "must_not_combine": [
+          "model attribution guess"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "author name/affiliation/ORCID/preferred citation",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B034",
+        "category": "PUBLICATION/LEGAL OWNER ACT",
+        "name": "Decide whether any private design/recovery material may be published",
+        "prerequisites": [
+          "privacy review"
+        ],
+        "blockers": [
+          "owner-only consent"
+        ],
+        "independent_lanes": [
+          "public repository validation"
+        ],
+        "must_not_combine": [
+          "private evidence with public proof authority"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "explicit itemized permission",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B035",
+        "category": "REPOSITORY ENGINEERING",
+        "name": "Repair stale AR8R historical-status classification",
+        "prerequisites": [
+          "B013"
+        ],
+        "blockers": [
+          "authorized branch not created"
+        ],
+        "independent_lanes": [
+          "continuity map"
+        ],
+        "must_not_combine": [
+          "historical payload edits"
+        ],
+        "status": "AUTHORIZED_BUT_NOT_EXECUTED",
+        "evidence_needed": "minimal diff + validator + exact-head CI",
+        "owner_action": false
+      },
+      "classification": "HISTORICAL_OR_SEPARATE_ENGINEERING_OPERATION_NOT_RESEARCH_AUTHORITY",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B036",
+        "category": "REPOSITORY ENGINEERING",
+        "name": "Reconcile frozen candidate-overlay public wording only through a separately bounded task",
+        "prerequisites": [
+          "fresh live topology observation",
+          "owner authorization"
+        ],
+        "blockers": [
+          "overlay is intentionally frozen historical observation"
+        ],
+        "independent_lanes": [
+          "B035"
+        ],
+        "must_not_combine": [
+          "rewrite provenance history"
+        ],
+        "status": "FUTURE_OPTIONAL",
+        "evidence_needed": "decision whether a new live overlay is desired",
+        "owner_action": true
+      },
+      "classification": "HISTORICAL_OR_SEPARATE_ENGINEERING_OPERATION_NOT_RESEARCH_AUTHORITY",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B037",
+        "category": "PUBLICATION/LEGAL OWNER ACT",
+        "name": "Authorize external publication/DOI/submission",
+        "prerequisites": [
+          "B032",
+          "B033",
+          "external review as applicable"
+        ],
+        "blockers": [
+          "owner submission decision"
+        ],
+        "independent_lanes": [
+          "internal validation"
+        ],
+        "must_not_combine": [
+          "draft artifact with peer-reviewed status"
+        ],
+        "status": "OPEN_OWNER_ACTION",
+        "evidence_needed": "venue, final bytes, owner approval",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B038",
+        "category": "EXTERNAL REVIEW",
+        "name": "Validate any meniscus/frontier claim independently",
+        "prerequisites": [
+          "exact result packet",
+          "prior-art search",
+          "specialist review"
+        ],
+        "blockers": [
+          "no result presently meets all dimensions"
+        ],
+        "independent_lanes": [
+          "internal campaign integration"
+        ],
+        "must_not_combine": [
+          "campaign novelty with human-knowledge novelty"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "independent prior-art and correctness review",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B039",
+        "category": "FORMAL PROOF OR COUNTERMODEL",
+        "name": "Recover or recreate source-absent intended Lean modules without identity laundering",
+        "prerequisites": [
+          "B010",
+          "B002"
+        ],
+        "blockers": [
+          "intended module sources absent"
+        ],
+        "independent_lanes": [
+          "Ten Advances external build"
+        ],
+        "must_not_combine": [
+          "recreated module with historical exact source"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "source bytes or fresh canonical identity and provenance",
+        "owner_action": false
+      },
+      "classification": "EXTERNAL_EXACT_SOURCE_OR_SPECIALIST_GATE_REQUIRED",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B040",
+        "category": "SOURCE VERIFICATION",
+        "name": "Discharge current repository research residuals RR-1 to RR-3",
+        "prerequisites": [
+          "edition/full-text access"
+        ],
+        "blockers": [
+          "edition and publisher access"
+        ],
+        "independent_lanes": [
+          "license/citation"
+        ],
+        "must_not_combine": [
+          "bibliographic existence with wording verification"
+        ],
+        "status": "OPEN_TRIGGERED_RESIDUAL",
+        "evidence_needed": "edition pagination, Evans locus, primary Taymiyyan loci",
+        "owner_action": false
+      },
+      "classification": "OVERLAPPING_RESEARCH_SCOPE_NOT_ADDITIONAL_COUNT",
+      "related_obligations": [
+        "RR-1",
+        "RR-2",
+        "RR-3"
+      ],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B041",
+        "category": "OWNER DECISION REQUIRED",
+        "name": "Decide whether continuity package should ever enter the public repository",
+        "prerequisites": [
+          "review package",
+          "private-data audit"
+        ],
+        "blockers": [
+          "current instruction says local handoff only"
+        ],
+        "independent_lanes": [
+          "all research"
+        ],
+        "must_not_combine": [
+          "automatic repository integration"
+        ],
+        "status": "NOT_AUTHORIZED",
+        "evidence_needed": "separate bounded integration authorization",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B042",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Build exact Orthemology-Fusha crosswalk after snapshot supply",
+        "prerequisites": [
+          "B012",
+          "B025"
+        ],
+        "blockers": [
+          "no Fusha bytes"
+        ],
+        "independent_lanes": [
+          "daee crosswalk"
+        ],
+        "must_not_combine": [
+          "analogy with implementation correspondence"
+        ],
+        "status": "OPEN",
+        "evidence_needed": "occurrence IDs, qamus pages, sarf/nahw lattices, canonical projection schemas",
+        "owner_action": false
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B043",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Recover exact TAC/Tachikoma/SAC theorem/source packet",
+        "prerequisites": [
+          "B010 or separate packet"
+        ],
+        "blockers": [
+          "zero Tachikoma/SAC byte hits in current repository"
+        ],
+        "independent_lanes": [
+          "somnic runtime"
+        ],
+        "must_not_combine": [
+          "anime analogy with formal identity theorem"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "exact analysis, theorem/countermodel IDs, source citations, implementation owner",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B044",
+        "category": "READ-ONLY RECONSTRUCTION",
+        "name": "Supply theorem-origin V5 registry and false-multiplicity audit bytes",
+        "prerequisites": [
+          "B001 or B010"
+        ],
+        "blockers": [
+          "only authority label preserved in V9"
+        ],
+        "independent_lanes": [
+          "current exact-recovery index"
+        ],
+        "must_not_combine": [
+          "current reconstructed family map with historical registry"
+        ],
+        "status": "OPEN_NEW_BYTES_REQUIRED",
+        "evidence_needed": "V5 registry, ancestry map, audit receipts",
+        "owner_action": true
+      },
+      "classification": "OWNER_ONLY_OR_EXTERNAL_INPUT_OR_EFFECT",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    },
+    {
+      "source_record": {
+        "burden_id": "B045",
+        "category": "FUTURE RESEARCH RESIDUAL",
+        "name": "Evaluate Ten Advances relevance without importing theorem credit",
+        "prerequisites": [
+          "B026",
+          "AR8R exact statement per application"
+        ],
+        "blockers": [
+          "current links are analogical/comparative only"
+        ],
+        "independent_lanes": [
+          "external project build"
+        ],
+        "must_not_combine": [
+          "external theorem novelty with AR8R novelty"
+        ],
+        "status": "OPEN_BOUNDED_COMPARISON",
+        "evidence_needed": "typed application bridge and non-identity receipt",
+        "owner_action": false
+      },
+      "classification": "EXTERNAL_EXACT_SOURCE_OR_SPECIALIST_GATE_REQUIRED",
+      "related_obligations": [],
+      "currentness_note": "Immutable historical full-program source; its old branch/tool/custody observations are not current live facts. Current public compatibility overlays and final completion evidence govern."
+    }
+  ],
+  "additional_dispositions": [
+    {
+      "id": "U01",
+      "original_record": {
+        "id": "U01",
+        "obligation": "Real Lean/kernel acceptance",
+        "blocker": "No installed compiler; official asset/network and artifact-size routes failed with retained diagnostics.",
+        "method": "Obtain exact 4.19.0 or document a deliberate migration; run verify.py, repair all actual elaboration errors without weakening statements and inspect all required declarations.",
+        "sources": [
+          "formal_targets.json",
+          "TOOLCHAIN_LOCK.json",
+          "evidence/current/TOOLCHAIN_ACTUAL.txt",
+          "evidence/current/TOOLCHAIN_CONNECTOR_DIAGNOSTICS.json"
+        ]
+      },
+      "classification": "HISTORICAL_KERNEL_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "research_task": false
+    },
+    {
+      "id": "U02",
+      "original_record": {
+        "id": "U02",
+        "obligation": "Actual transitive assumption and statement fidelity audit",
+        "blocker": "The emitted in-Lean audit command is uncompiled; no actual footprint is known.",
+        "method": "Build all twelve modules, require every declared name/type, compile RequiredAudit with #ortho_audit, inspect the actual smaller footprint and review theorem statements against AC01–AC16.",
+        "sources": [
+          "lean/AuditSupport.lean",
+          "build_gate.py",
+          "examples/RequiredAudit.preview.lean.txt"
+        ]
+      },
+      "classification": "HISTORICAL_KERNEL_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "research_task": false
+    },
+    {
+      "id": "R-KERNEL",
+      "classification": "HISTORICAL_KERNEL_GAP_CURRENT_MAPPED_SCOPE_SEPARATELY_DISCHARGED",
+      "research_task": false
+    },
+    {
+      "id": "A4C-O001",
+      "classification": "COMPLETED_COMPOSITION_CORRECTION",
+      "research_task": false
+    },
+    {
+      "id": "A4C-O002",
+      "classification": "COMPLETED_COMPOSITION_CORRECTION",
+      "research_task": false
+    },
+    {
+      "id": "A4C-O006",
+      "classification": "SPLIT_MAPPED_KERNEL_DISCHARGED_AND_U03_U04_REFINEMENT_OPEN",
+      "aliases": [
+        "U03",
+        "U04"
+      ],
+      "research_task": false
+    },
+    {
+      "id": "CV-O",
+      "classification": "PRIMARY_OWNERSHIP_WITH_U04",
+      "aliases": [
+        "U04"
+      ],
+      "exact_source_record": {
+        "id": "CV-O",
+        "title": "Typed operational wrapper and exact relevant-revision licence transport",
+        "continues": [
+          "V4-O1",
+          "V4-O2",
+          "V4-O3",
+          "V4-O4",
+          "V4-Q3",
+          "V4-R2"
+        ],
+        "proof": "mathematics/ABSTRACT_OWOU.md",
+        "ordinary_status": "SUPPLIED_PROVISIONAL",
+        "kernel_verified": false,
+        "main_statement": "For a persistent issued record under strict monotone versions and complete captured reads, a licence survives a revision sequence iff no captured dependency is touched; independent semantic defect transport and Girard boundary.",
+        "novelty": "Generic-wrapper construction makes the bare conjunction an integration, not a foundational novelty result."
+      },
+      "research_task": false
+    },
+    {
+      "id": "SCUU",
+      "classification": "ACCEPTED_NEGATIVE_BOUNDARY_NOT_A_DEFECT_TO_SOLVE",
+      "related": [
+        "U11"
+      ],
+      "research_task": false
+    }
+  ],
+  "historical_dispositions": {
+    "files": [
+      {
+        "lineage": "H-FORMALISATION",
+        "original_selector": "H14 recursively preserved archive d2ca54c2eef34a3ab4983c67cb8413ffefccce79a9387c139e1ec99d8279d52b!/orthing_formalisation_v1/orthing_formalisation_v1.md",
+        "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+        "repository_path": "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical snapshot/future quotient, representation and strategy foundations; supplied conditional ordinary arguments, not semantic closure or world truth.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-CONTINUATION",
+        "original_selector": "H14 recursively preserved archive 9dffb220edadc05eaba6b7e00092ed8c75e2bb334a49009ec77aab3c2b20c772!/orthing_continuation_frontier_v1/continuation_complete_orthing.md",
+        "source_sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+        "repository_path": "theory/lineages/h-continuation/continuation_complete_orthing.md",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical finite instrument closure, observational defect, horizon/memory and incentive bounds under the document assumptions; ordinary arguments plus separately inherited finite corroboration.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MODAL",
+        "original_selector": "H14 recursively preserved archive e7a4c05426b0688046b8b082b26b8d1e7129eb770854308d9b640fc93b9d318d!/orthing_modal_metaphysical_frontier_v2/orthability_modal_grounding.md",
+        "source_sha256": "313e1ed5bdc225e380b77952c8be111b402b6359d30c53233968664372d0e1c7",
+        "repository_path": "theory/lineages/h-modal/orthability_modal_grounding.md",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical modal support/grounding conditional on independent world, dependence and recombination assumptions; preserve B0–B16, no unconditional Necessary-Being/world bridge.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/the_last_moat_e3.tex",
+        "source_sha256": "06256dd01149f7351d4c5fdcd876cc8d8ae0f264c0636b23e699b242165bc8da",
+        "repository_path": "theory/lineages/h-moat-e3/the_last_moat_e3.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/references.tex",
+        "source_sha256": "264bc57d0f98d6402e20dd61616d8e1d473b8abe68032d7cd5e174654bc2a964",
+        "repository_path": "theory/lineages/h-moat-e3/references.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/claim_table.tex",
+        "source_sha256": "18164557a055f8d62a84951bb75d33b6b62ea088b35c86d29e93942b474a429a",
+        "repository_path": "theory/lineages/h-moat-e3/claim_table.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/edition3_changes.tex",
+        "source_sha256": "a609556afc696df7a99f119033f191a6fb303f7edeacce04491ec2fd6430288f",
+        "repository_path": "theory/lineages/h-moat-e3/edition3_changes.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/edition3_examples.tex",
+        "source_sha256": "175c9f7f8d6a724c602b8fc43ea7254ceaaee38e58b33432be47a1e7d89bc1b7",
+        "repository_path": "theory/lineages/h-moat-e3/edition3_examples.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/new_examples.tex",
+        "source_sha256": "1979d1a8e9014064ba3525487f1dbef95ca35092097db97a362429cd568287f7",
+        "repository_path": "theory/lineages/h-moat-e3/new_examples.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/governance.tex",
+        "source_sha256": "14601586dae3cbf2743f39047f410966a19ce890a274cd225417b5d43e2b6854",
+        "repository_path": "theory/lineages/h-moat-e3/governance.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/edition3_evaluation.tex",
+        "source_sha256": "c364a3bba8e56fbfb86b72bfd57ac5a4c890b735001b9d0cbf73fc111aca4306",
+        "repository_path": "theory/lineages/h-moat-e3/edition3_evaluation.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/evaluation.tex",
+        "source_sha256": "7d49d4188dc83b5e161d23993248629938b4daa9fe398145d4ca6e70e86986c2",
+        "repository_path": "theory/lineages/h-moat-e3/evaluation.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/progress.tex",
+        "source_sha256": "bd845406ea2f9f189199dc100b4442186d0bd7b171b2fe12565f6947ee531d21",
+        "repository_path": "theory/lineages/h-moat-e3/progress.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/stateful_witness.tex",
+        "source_sha256": "36b3e02e242dab824a45a2e218c2b894b4b00cd9d6fb498ccb13d11e66dbb118",
+        "repository_path": "theory/lineages/h-moat-e3/stateful_witness.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/large_model_audit.tex",
+        "source_sha256": "c0422493cd8f7a1b9fe81b3c57eae19f4d21509730fbb53509db6bc2ef1666f6",
+        "repository_path": "theory/lineages/h-moat-e3/large_model_audit.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/precision_contracts.tex",
+        "source_sha256": "eda7d48d4b0180a2e03a9a382ecdb9a2cfa8b009cd71d19e997611c8be368cdf",
+        "repository_path": "theory/lineages/h-moat-e3/precision_contracts.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/joint_case.tex",
+        "source_sha256": "cb77d67ca5d1bcc96bb5009fcc0ff0292842e060841a23afad679cb70f6aad4e",
+        "repository_path": "theory/lineages/h-moat-e3/joint_case.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/composition.tex",
+        "source_sha256": "a986ff4fa9ec9b0fe2557e9a247e2e131c49189cec5172a604b2ef420cc06850",
+        "repository_path": "theory/lineages/h-moat-e3/composition.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/representations.tex",
+        "source_sha256": "c01c98813cdbd8b28ee714cc38854e7642b64005afcd43b31306b98b1cb603f8",
+        "repository_path": "theory/lineages/h-moat-e3/representations.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/orthemic.tex",
+        "source_sha256": "78ccb094cef67d5d830f7073af9617eb0669abad9590ef38f126618157e3a6c9",
+        "repository_path": "theory/lineages/h-moat-e3/orthemic.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/uncertain_channels.tex",
+        "source_sha256": "c04031c3a64799b71a615c39f0d3f8bbd51c87d7bf77f056f5f732a32c1edc8e",
+        "repository_path": "theory/lineages/h-moat-e3/uncertain_channels.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/ns_residual.tex",
+        "source_sha256": "a052eda8ee9ff225bc1636c0d20ba0f0e8959fdee6e38879f9aa6e05ffeea669",
+        "repository_path": "theory/lineages/h-moat-e3/ns_residual.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/substitution_profile.tex",
+        "source_sha256": "542aca8627a18b3c96ff7c875634eadcd4895845bae0f16a76f5d774c410299c",
+        "repository_path": "theory/lineages/h-moat-e3/substitution_profile.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/contract_refinement.tex",
+        "source_sha256": "8a5f8ce2d0e0b365ecee5d7478647e21d22f2b824ad447f2dee26a67d05bafb4",
+        "repository_path": "theory/lineages/h-moat-e3/contract_refinement.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/processor_census.tex",
+        "source_sha256": "30d3a18206c841302fba1fea681f42ef5549b652074fb25c2e78108da40c1148",
+        "repository_path": "theory/lineages/h-moat-e3/processor_census.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-MOAT-E3",
+        "original_selector": "H14 archive cf38a556d5b7922287eccb8db06c299bfb4f36bad3f2d6405ada8fe89fd6a25d!/The_Last_Moat_Edition_3_Source/related_work.tex",
+        "source_sha256": "be0114c8b510c5d3d8854112e27f256b582e33750cbfe4be34d353528e807fba",
+        "repository_path": "theory/lineages/h-moat-e3/related_work.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical edition-three conditional mathematical arguments with state AND output correspondence and stipulated hybrid witness; not physical realisation, fluid validation or new novelty.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-ICS-V5",
+        "original_selector": "H14 archive 8035925fbf7e7edcbd3ebc2d2899c18965784b554f0071725440992d6350bd14!/information-composition-and-self-revision-v5.tex",
+        "source_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+        "repository_path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "ICS V5 historical information-composition arguments: eight preserved conditional statements/proofs, 33 display blocks and separate obligations; NOT modern Orthemology v5.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      },
+      {
+        "lineage": "H-REFLEXIVE-V3",
+        "original_selector": "H14 archive 6df569307efd422c9dd4bf4b5130574252683a8ebcc33d20b3aee90914df4684!/reflexive-revision-v3/reflexive_revision_evidence_budget_v3.tex",
+        "source_sha256": "bf8490a82b45fbf8a5be11ecd7a7ee90a0e49cbb383b86f60a5993a54782d1af",
+        "repository_path": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+        "operation": "ADD",
+        "classification": "HISTORICAL_EVIDENCE",
+        "ordinary_scope": "Historical deterministic finite positive-cost inquiry, addressing costs and stated future-predicate/no-probe restrictions; not global self-certification.",
+        "proof_status": "SUPPLIED_CONDITIONAL_ORDINARY_ARGUMENTS_NOT_INDEPENDENTLY_ACCEPTED_OR_KERNEL_CHECKED",
+        "kernel_credit": false,
+        "novelty_credit": false,
+        "current_authority": "Accepted A4C/A4T and current repository bridge owners qualify interpretation; source text is preserved."
+      }
+    ],
+    "unique_files": 28,
+    "original_code_candidates_landed": 0
+  },
+  "count_policy": "36 primary handoff work units = 18 consolidation frontier units (12 U + 2 CV + 4 A4C), 6 authored core parameters, 3 RR source residuals, 9 conditional Q1 targets. CV-O aliases U04; A4C-O006 remaining refinement aliases U03/U04. Theorem/criticism IDs, bridge premises, roadmap milestones and historical burdens are supporting/alias/gated records, not added again."
+}

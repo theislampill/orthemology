@@ -1,0 +1,810 @@
+{
+  "schema": "t20.proof-inquiry.source-bindings.v1",
+  "sources": [
+    {
+      "id": "PT01_PT02",
+      "path": "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "bytes": 33268,
+      "lines": 260,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "original_provenance": [
+        {
+          "location": "recovery-20261011/archives/fixed-inquiry-guide-source-checkpoint-20261011.zip!/fixed-inquiry-guide-source-checkpoint-20261011/payload/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "2dcf359024fc9bc91cb09a6e02fbb8805ba9e2216659f4580da5ee994b9180ea"
+        },
+        {
+          "location": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Warranted_Discrimination_Research_and_Lean_20261009(2).zip!/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "2ca475be25d845c52d51477ae57833ece1c871c075307e8b986c8420eb3d89cd"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-evidence-revision-checkpoint-20261009.zip!/active-t20-evidence-revision-checkpoint-20261009/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "8204f616f7013a7224bd634d74756af19d38a840dc66bd6ce073064ae44def85"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-evidence-revision-checkpoint-20261009.zip!/active-t20-evidence-revision-checkpoint-20261009/warranted-learning-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "8204f616f7013a7224bd634d74756af19d38a840dc66bd6ce073064ae44def85"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Constraint_Research_20261010.zip!/T20_Constraint_Research_20261010/workspace/constrained-learning-review-20261010/replay/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "577c282227fcbbf534f54177d0dca99606f909b08da71564f05defae535f4895"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Constraint_Research_20261010.zip!/T20_Constraint_Research_20261010/workspace/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "577c282227fcbbf534f54177d0dca99606f909b08da71564f05defae535f4895"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Live_Integration_Handoff_20261009.zip!/T20_Live_Integration_Handoff_20261009/PUBLIC_OVERLAY/research/t20-live-20261009/supplement/S01/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "79b3572bbbae25f8561ba2de48cca3a2a5855431d6524013f4a07faf6ae384b2"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint23_20261009/warranted-discrimination-research-20261009/RESULT.md",
+          "archive_sha256": "1be566be13c1317cafd63e35e6d58c79af826b5c9df13ac994f6b672f3156633"
+        }
+      ]
+    },
+    {
+      "id": "PT03",
+      "path": "t20-consolidation-20261011/catalogue/objects/3d/3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459",
+      "sha256": "3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459",
+      "bytes": 22505,
+      "lines": 156,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-evidence-revision-checkpoint-20261009.zip!/active-t20-evidence-revision-checkpoint-20261009/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/RESULT.md",
+          "archive_sha256": "8204f616f7013a7224bd634d74756af19d38a840dc66bd6ce073064ae44def85"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/repo_projection/orthemology/research/t20-live-20261009/checkpoints/CP23/root-resumed-research-20261009/compilation-replay/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint23_20261009/certificate-compilation-boundary-20261009/RESULT.md",
+          "archive_sha256": "1be566be13c1317cafd63e35e6d58c79af826b5c9df13ac994f6b672f3156633"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/T20_Resumed_Research_Intermediate_Checkpoint23_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint23_20261009/root-resumed-research-20261009/compilation-replay/RESULT.md",
+          "archive_sha256": "1be566be13c1317cafd63e35e6d58c79af826b5c9df13ac994f6b672f3156633"
+        }
+      ]
+    },
+    {
+      "id": "PT04",
+      "path": "t20-consolidation-20261011/catalogue/objects/67/67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec",
+      "sha256": "67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec",
+      "bytes": 19013,
+      "lines": 141,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/extracted_later/T20_Resumed_Research_Intermediate_Checkpoint24_20261009/source-sensitive-proof-compilation-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Resumed_Research_Intermediate_Checkpoint24_20261009.zip!/T20_Resumed_Research_Intermediate_Checkpoint24_20261009/source-sensitive-proof-compilation-20261009/RESULT.md",
+          "archive_sha256": "800f82c5dc24c1e58ee3d586a2c53e3b04ecc7a8c61d2284da6db8c5a3205672"
+        }
+      ]
+    },
+    {
+      "id": "PT06_cost",
+      "path": "t20-consolidation-20261011/catalogue/objects/d3/d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98",
+      "sha256": "d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98",
+      "bytes": 23195,
+      "lines": 136,
+      "read_scope": "selected mathematical/contract sections",
+      "read_ranges": [
+        [
+          1,
+          125
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/extracted_later/T20_Shared_Proof_Cost_and_Information_Update_20261009/shared-proof-cost-boundary-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009.zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009/shared-proof-cost-boundary-20261009/RESULT.md",
+          "archive_sha256": "56b68c1324f2e0eb40ef07af20a9d4492f9103a78b488da7643b1eedb567df5e"
+        }
+      ]
+    },
+    {
+      "id": "PT06_overlap",
+      "path": "t20-consolidation-20261011/catalogue/objects/be/be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db",
+      "sha256": "be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db",
+      "bytes": 16618,
+      "lines": 140,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/extracted_later/T20_Shared_Proof_Cost_and_Information_Update_20261009/shared-proof-overlap-information-20261009/RESULT.md",
+          "archive_sha256": "3680e120ae61eab6f44bede5269f30d1b6af146420eb48683f35e58cb7bd88aa"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009.zip!/T20_Shared_Proof_Cost_and_Information_Update_20261009/shared-proof-overlap-information-20261009/RESULT.md",
+          "archive_sha256": "56b68c1324f2e0eb40ef07af20a9d4492f9103a78b488da7643b1eedb567df5e"
+        }
+      ]
+    },
+    {
+      "id": "PT07",
+      "path": "t20-consolidation-20261011/catalogue/objects/2a/2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa",
+      "sha256": "2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa",
+      "bytes": 16737,
+      "lines": 130,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip!/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/guarded-shared-dag-attainment-20261009/RESULT.md",
+          "archive_sha256": "1c5155b94388c189b2c50b7cbc8f31bf6d2e2a3f0ea13c8297a3d34039ab525e"
+        }
+      ]
+    },
+    {
+      "id": "PT07_review",
+      "path": "t20-consolidation-20261011/catalogue/objects/94/949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0",
+      "sha256": "949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0",
+      "bytes": 11423,
+      "lines": 73,
+      "read_scope": "selected review sections",
+      "read_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0",
+      "original_provenance": [
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip!/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/guarded-shared-dag-attainment-review-20261009/REVIEW.md",
+          "archive_sha256": "1c5155b94388c189b2c50b7cbc8f31bf6d2e2a3f0ea13c8297a3d34039ab525e"
+        }
+      ]
+    },
+    {
+      "id": "ET09",
+      "path": "t20-consolidation-20261011/catalogue/objects/8a/8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "bytes": 28801,
+      "lines": 464,
+      "read_scope": "contract/refinement and minimum-sidecar passages",
+      "read_ranges": [
+        [
+          1,
+          90
+        ],
+        [
+          103,
+          133
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "ET14",
+      "path": "t20-consolidation-20261011/catalogue/objects/c2/c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "lines": 815,
+      "read_scope": "complete dependency replay and warrant-survival sections; nearby bridge read for scope only",
+      "read_ranges": [
+        [
+          389,
+          450
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "ET17",
+      "path": "t20-consolidation-20261011/catalogue/objects/7f/7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "bytes": 28059,
+      "lines": 257,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "ET19",
+      "path": "t20-consolidation-20261011/catalogue/objects/fe/fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "bytes": 20372,
+      "lines": 147,
+      "read_scope": "timing diagnosis, actual contract and joint-correlation control",
+      "read_ranges": [
+        [
+          1,
+          80
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "CIRS",
+      "path": "t20-consolidation-20261011/catalogue/objects/bd/bd83f4c2bb1a41151405872a6aa57fe9bdc352f0b63db4cfb302e0068c8b0d4a",
+      "sha256": "bd83f4c2bb1a41151405872a6aa57fe9bdc352f0b63db4cfb302e0068c8b0d4a",
+      "bytes": 16302,
+      "lines": 153,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "T16_Direct_reader",
+      "path": "t20-consolidation-20261011/catalogue/objects/10/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "bytes": 241546,
+      "lines": 2208,
+      "read_scope": "selected actual source-reader sections, not whole T16",
+      "read_ranges": [
+        [
+          1952,
+          1995
+        ],
+        [
+          2028,
+          2048
+        ],
+        [
+          2153,
+          2168
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PT19",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-finite-sidecar-realisation-20261011/RESULT.md",
+      "sha256": "8ccbe359bbd4c7a482dbfb20e9a62098ec9001072a96e6511b6f7c5c3445bcb4",
+      "bytes": 13443,
+      "lines": 109,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:8ccbe359bbd4c7a482dbfb20e9a62098ec9001072a96e6511b6f7c5c3445bcb4",
+      "original_provenance": [
+        {
+          "location": "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/hase-finite-sidecar-independent-review-20261011/candidate/RESULT.md",
+          "archive_sha256": "5158e500fedd9dd042ec9a7644a08acf37a53c06355cd5643568e44e0b00e141"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/continuation-disclosure-evidence-20261011.zip!/continuation-disclosure-evidence-20261011/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": "5158e500fedd9dd042ec9a7644a08acf37a53c06355cd5643568e44e0b00e141"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/credal-coupling-geometric-final-delivery-20261011.zip!/credal-coupling-geometric-final-delivery-20261011/inherited/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": "f9fd8e5a02b617572c51ee1e36ddb725736d59bfe9607b733753f2389adcb6a7"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/rational-kernel-additive-preservation-20261011.zip!/rational-kernel-additive-preservation-20261011/payload/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": "fd5ff4c230192cc2885c6471946fe16a59b182809145b36b0769f8e776c529f5"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/hase-finite-sidecar-independent-review-20261011/candidate/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-finite-sidecar-realisation-20261011/RESULT.md",
+          "archive_sha256": null
+        }
+      ]
+    },
+    {
+      "id": "PT20",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-rational-kernel-transport-20261011/RESULT.md",
+      "sha256": "ba82b3a7daa64cefbcf3b154b801d5f1f0d836012424427b16cb987f51df7087",
+      "bytes": 16477,
+      "lines": 137,
+      "read_scope": "full owner text",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:ba82b3a7daa64cefbcf3b154b801d5f1f0d836012424427b16cb987f51df7087",
+      "original_provenance": [
+        {
+          "location": "recovery-20261011/remaining-archives/rational-kernel-additive-preservation-20261011.zip!/rational-kernel-additive-preservation-20261011/payload/hase-rational-kernel-transport-20261011/RESULT.md",
+          "archive_sha256": "fd5ff4c230192cc2885c6471946fe16a59b182809145b36b0769f8e776c529f5"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/rational-kernel-additive-preservation-20261011.zip!/rational-kernel-additive-preservation-20261011/payload/rational-kernel-independent-review-20261011/candidate/RESULT.md",
+          "archive_sha256": "fd5ff4c230192cc2885c6471946fe16a59b182809145b36b0769f8e776c529f5"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-rational-kernel-transport-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/rational-kernel-independent-review-20261011/candidate/RESULT.md",
+          "archive_sha256": null
+        }
+      ]
+    },
+    {
+      "id": "PT21",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/stochastic-exact-inquiry-20261010/RESULT.md",
+      "sha256": "5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a",
+      "bytes": 25542,
+      "lines": 197,
+      "read_scope": "contract, proof and applications",
+      "read_ranges": [
+        [
+          1,
+          190
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a",
+      "original_provenance": [
+        {
+          "location": "recovery-20261011/remaining-archives/credal-coupling-geometric-final-delivery-20261011.zip!/credal-coupling-geometric-final-delivery-20261011/inherited/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "f9fd8e5a02b617572c51ee1e36ddb725736d59bfe9607b733753f2389adcb6a7"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/rational-kernel-additive-preservation-20261011.zip!/rational-kernel-additive-preservation-20261011/payload/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "fd5ff4c230192cc2885c6471946fe16a59b182809145b36b0769f8e776c529f5"
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext03(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010(1).zip!/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a.md",
+          "archive_sha256": "38ed92bbec0877b5dc55ea049689cf25945d9d9d5fd253cb4bbfc9e9f88cf753"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/r3/Orthemology_T20_Reconciled_Research_20261010(1).zip!/Orthemology_T20_Reconciled_Research_20261010/prior_work/previous_synthesis/Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a.md",
+          "archive_sha256": "685678574a921a63fe3906a8d8886f216e79038fa2b2025f43379322c4f49979"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Channel_Tensor_Research_Evidence_20261010.zip!/T20_Channel_Tensor_Research_Evidence_20261010/workspace/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "e3994120f5be550764b3bde1599a1dd6d9800b23548586bf0d9ffdc4a96e9ee3"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Constraint_Research_20261010.zip!/T20_Constraint_Research_20261010/workspace/constrained-learning-review-20261010/replay/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "577c282227fcbbf534f54177d0dca99606f909b08da71564f05defae535f4895"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Constraint_Research_20261010.zip!/T20_Constraint_Research_20261010/workspace/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "577c282227fcbbf534f54177d0dca99606f909b08da71564f05defae535f4895"
+        },
+        {
+          "location": "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/stochastic-inquiry-cumulative-evidence-20261010.zip!/stochastic-inquiry-cumulative-evidence-20261010/stochastic-exact-inquiry-20261010/RESULT.md",
+          "archive_sha256": "4e1387617228d19805fb497cf9fe36592b373543b96639124f31e890ae3061d7"
+        }
+      ]
+    },
+    {
+      "id": "PT20_python",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-rational-kernel-transport-20261011/rational_kernel.py",
+      "sha256": "560d1b02ffd9cd8404edf372054c19f6a1293ff3756ed9c96cd17df09a2493c4",
+      "bytes": 4269,
+      "lines": 104,
+      "read_scope": "full executable source; not modified or used as a policy optimizer",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PT28_bridge",
+      "path": "literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+      "sha256": "5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6",
+      "bytes": 4150,
+      "lines": 27,
+      "read_scope": "full source-to-kernel boundary",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6",
+      "original_provenance": [
+        {
+          "location": "literal-shift-kernel-checkpoint-20261011.zip!/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": "7f4fc218565854d4f23e0da530bdc3061c3e026f7dd0c3cea2b5e255809cb46d"
+        },
+        {
+          "location": "literal-shift-kernel-checkpoint-20261011.zip!/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": "7f4fc218565854d4f23e0da530bdc3061c3e026f7dd0c3cea2b5e255809cb46d"
+        },
+        {
+          "location": "literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/PRE_README_SPACING.zip!/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": "7389baab9564231dae065ca7d395e1364428e7cc9c4145ce19b9ea3dfc42f9cc"
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/PRE_README_SPACING.zip!/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": "7389baab9564231dae065ca7d395e1364428e7cc9c4145ce19b9ea3dfc42f9cc"
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/safe-extraction-final/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/safe-extraction-final/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/safe-extraction/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/safe-extraction/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/staged/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-preservation-20261011/staged/literal-shift-kernel-checkpoint-20261011/literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-kernel-refinement-20261011/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-20261011/inherited/literal/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-checkpoint-20261011.zip!/literal-shift-probability-checkpoint-20261011/inherited/literal/SOURCE_BRIDGE.md",
+          "archive_sha256": "3754c5d37dd77ceefc0ad90419e419d385bb0e976bb4cba1d8d0fd5a68b01557"
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/portable-replay-work/inherited/literal/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/safe-extraction/literal-shift-probability-checkpoint-20261011/inherited/literal/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/staged/literal-shift-probability-checkpoint-20261011/inherited/literal/SOURCE_BRIDGE.md",
+          "archive_sha256": null
+        }
+      ]
+    },
+    {
+      "id": "PT29",
+      "path": "literal-shift-probability-20261011/RESULT.md",
+      "sha256": "167806996726118000a849e4b1e364a8240b3dd9c9e9aa5667ab08953b0da968",
+      "bytes": 8909,
+      "lines": 107,
+      "read_scope": "full owner result; no fresh Lean replay",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": "sha256:167806996726118000a849e4b1e364a8240b3dd9c9e9aa5667ab08953b0da968",
+      "original_provenance": [
+        {
+          "location": "literal-shift-probability-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-checkpoint-20261011.zip!/literal-shift-probability-checkpoint-20261011/RESULT.md",
+          "archive_sha256": "3754c5d37dd77ceefc0ad90419e419d385bb0e976bb4cba1d8d0fd5a68b01557"
+        },
+        {
+          "location": "literal-shift-probability-checkpoint-20261011.zip!/literal-shift-probability-checkpoint-20261011/evidence/independent-review/inputs/AUTHOR_RESULT.md",
+          "archive_sha256": "3754c5d37dd77ceefc0ad90419e419d385bb0e976bb4cba1d8d0fd5a68b01557"
+        },
+        {
+          "location": "literal-shift-probability-independent-review-20261011/inputs/AUTHOR_RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/portable-replay-work/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/portable-replay-work/evidence/independent-review/inputs/AUTHOR_RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/safe-extraction/literal-shift-probability-checkpoint-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/safe-extraction/literal-shift-probability-checkpoint-20261011/evidence/independent-review/inputs/AUTHOR_RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/staged/literal-shift-probability-checkpoint-20261011/RESULT.md",
+          "archive_sha256": null
+        },
+        {
+          "location": "literal-shift-probability-preservation-20261011/staged/literal-shift-probability-checkpoint-20261011/evidence/independent-review/inputs/AUTHOR_RESULT.md",
+          "archive_sha256": null
+        }
+      ]
+    },
+    {
+      "id": "PR_compiler",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-open-term-standardness-20261010/sources/EffectivePrimitiveRecursion.lean",
+      "sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "bytes": 21266,
+      "lines": 446,
+      "read_scope": "actual PR constructors, semantics, compiler typing and computational adequacy",
+      "read_ranges": [
+        [
+          1,
+          240
+        ],
+        [
+          288,
+          307
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PR_arithmetic",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-imported-compiler-transport-20261010/sources/RestrictedCompiler.lean",
+      "sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "bytes": 15997,
+      "lines": 368,
+      "read_scope": "actual arithmetic/zero-choice descriptions and denotation proofs",
+      "read_ranges": [
+        [
+          15,
+          92
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PR_comparison",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-imported-compiler-transport-20261010/sources/PolynomialTestBoundary.lean",
+      "sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "bytes": 7563,
+      "lines": 168,
+      "read_scope": "comparison descriptions and denotation proofs; later boundary text read for context",
+      "read_ranges": [
+        [
+          1,
+          180
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PR_lookup",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-finite-sidecar-realisation-20261011/FiniteCorrectionTable.lean",
+      "sha256": "5d69a8b51d71d116a2797db36e420abbad0f132a90144f203ad36eece2f8fd77",
+      "bytes": 3472,
+      "lines": 76,
+      "read_scope": "full actual finite-table source",
+      "read_ranges": null,
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "PR_record",
+      "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-finite-sidecar-realisation-20261011/SourceSidecarController.lean",
+      "sha256": "4412b2ceac5e8810a111279357046ad58d79cfa1e732599d9c17cd92a3ed193c",
+      "bytes": 8458,
+      "lines": 170,
+      "read_scope": "record carrier, numeric projections and source observer construction",
+      "read_ranges": [
+        [
+          1,
+          90
+        ]
+      ],
+      "role": "direct controlling source",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "guarded_dag",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip--1c5155b94388/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/guarded-shared-dag-attainment-20261009/guarded_dag.py",
+      "sha256": "54a4a6cef96a2c678f7766720094d463b3b93f407e787d1ed4b52e911c853fa1",
+      "bytes": 4273,
+      "lines": 99,
+      "read_scope": "full executable source; direct import via exact local copy",
+      "read_ranges": null,
+      "role": "unchanged executable dependency",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "guarded_compiler",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip--1c5155b94388/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/source-sensitive-proof-compilation-20261009/guarded_compiler.py",
+      "sha256": "51d1a5daf3ac76952b35b3fcaffb0e3b1838b1d518105a0ac3e78b48e821c3c1",
+      "bytes": 4994,
+      "lines": 118,
+      "read_scope": "full executable source; direct import via exact local copy",
+      "read_ranges": null,
+      "role": "unchanged executable dependency",
+      "registry_source_id": null,
+      "original_provenance": []
+    },
+    {
+      "id": "whole_dag_compiler",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip--1c5155b94388/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/certificate-compilation-boundary-20261009/compiler.py",
+      "sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+      "bytes": 6557,
+      "lines": 173,
+      "read_scope": "full executable source; direct import via exact local copy",
+      "read_ranges": null,
+      "role": "unchanged executable dependency",
+      "registry_source_id": null,
+      "original_provenance": []
+    }
+  ],
+  "unchanged_import_copies": [
+    {
+      "source_id": "guarded_dag",
+      "copy_path": "inherited/guarded-shared-dag-attainment-20261009/guarded_dag.py",
+      "sha256": "54a4a6cef96a2c678f7766720094d463b3b93f407e787d1ed4b52e911c853fa1"
+    },
+    {
+      "source_id": "guarded_compiler",
+      "copy_path": "inherited/source-sensitive-proof-compilation-20261009/guarded_compiler.py",
+      "sha256": "51d1a5daf3ac76952b35b3fcaffb0e3b1838b1d518105a0ac3e78b48e821c3c1"
+    },
+    {
+      "source_id": "whole_dag_compiler",
+      "copy_path": "inherited/certificate-compilation-boundary-20261009/compiler.py",
+      "sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714"
+    }
+  ],
+  "navigation_metadata": [
+    {
+      "path": "t20-consolidation-20261011/proofs/SOURCE_REGISTRY.json",
+      "sha256": "6b49954311002cdeba54c40fa645bca31f1b7ac81e69210a4a3832253ffe64a1",
+      "use": "source navigation and scope; no body-read credit inferred"
+    },
+    {
+      "path": "t20-consolidation-20261011/proofs/PROOF_TYPE_INQUIRY_CLAIMS.json",
+      "sha256": "e7869e8a2578c6fd04e64e5edc3e2293ff2a6ef98ab6c32dfa4a7156d68a2a95",
+      "use": "source navigation and scope; no body-read credit inferred"
+    },
+    {
+      "path": "t20-consolidation-20261011/evidence/SOURCE_MAP.json",
+      "sha256": "c74401d2828df67ae3d4bc618b23e9a2e7395584faecadaba856e7498c0e0878",
+      "use": "source navigation and scope; no body-read credit inferred"
+    },
+    {
+      "path": "t20-consolidation-20261011/evidence/MATERIAL_CLAIMS.json",
+      "sha256": "924a6933d43d7c63388411cf8c887cad1957cfb918ef92645b5e081d257d5070",
+      "use": "source navigation and scope; no body-read credit inferred"
+    },
+    {
+      "path": "t20-consolidation-20261011/coverage/pinned-baseline/SOURCE_MAP.json",
+      "sha256": "db90ad110ccc9c6a63454cf91ecec4605eed7fe243d18883d3cf501c58cb4883",
+      "use": "source navigation and scope; no body-read credit inferred"
+    }
+  ],
+  "explicit_read_limits": [
+    "No whole-corpus read or complete originality search.",
+    "PT05 kernel correctness and PT23\u201327 scopes were inspected in the claim register, not freshly source-audited here.",
+    "No inherited or new Lean replay. Actual Has representability is an ordinary deduction from selected source interfaces.",
+    "Source-preservation checking does not establish real-world source authentication or substantive rule admission."
+  ]
+}

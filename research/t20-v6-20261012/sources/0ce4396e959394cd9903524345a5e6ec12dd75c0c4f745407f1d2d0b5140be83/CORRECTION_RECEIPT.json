@@ -1,0 +1,64 @@
+{
+  "date_utc": "2026-10-11",
+  "reason": "Root identified an incorrect conditional-on-entire-adaptive-choice-sequence probability statement; later choices may reveal earlier outcomes.",
+  "correction": "Sequential conditional fairness and equal consistent transcript laws replace the erroneous whole-choice conditioning claim.",
+  "historical_status": "Earlier receipt was normal-mode only. Its preserved checks used Python assert; no optimized-mode coverage is retrospectively claimed.",
+  "preserved_files": [
+    {
+      "path": "pre-correction/CONTROL_RESULTS.json",
+      "bytes": 1631,
+      "sha256": "c4647ae2e940e17e2dfbd61978ea874c0474a3fe24258ea9257b743de73486df"
+    },
+    {
+      "path": "pre-correction/MANIFEST.json",
+      "bytes": 3411,
+      "sha256": "3854912f59304acab9f2fa158de0760eabbe53750f949803eb66a7a42b7999bf"
+    },
+    {
+      "path": "pre-correction/REPORT.md",
+      "bytes": 13512,
+      "sha256": "6db62237484ab7e2c19272aeb615cea47e6f01ac382486f8cebdfeb92a7a7906"
+    },
+    {
+      "path": "pre-correction/verification.txt",
+      "bytes": 1631,
+      "sha256": "c4647ae2e940e17e2dfbd61978ea874c0474a3fe24258ea9257b743de73486df"
+    },
+    {
+      "path": "pre-correction/verify.py",
+      "bytes": 5797,
+      "sha256": "6b34d82f0fa079916765a99b30df6c7a64bb173c6036eff9b6f54729abd83ade"
+    }
+  ],
+  "normal_and_optimized_agree_except_mode": true,
+  "explicit_checks_each_mode": 1408,
+  "fixed_query_length_max": 5,
+  "adaptive_full_transcript_cases": 16,
+  "false_check_controls": [
+    {
+      "mode": "normal",
+      "command": [
+        "private-locator:72e52b184518b733e8c3",
+        "predictive-understanding-transfer-20261011/verify.py",
+        "--false-check-control"
+      ],
+      "exit_code": 1,
+      "expected_failure_confirmed": true
+    },
+    {
+      "mode": "optimized",
+      "command": [
+        "private-locator:72e52b184518b733e8c3",
+        "-O",
+        "predictive-understanding-transfer-20261011/verify.py",
+        "--false-check-control"
+      ],
+      "exit_code": 1,
+      "expected_failure_confirmed": true
+    }
+  ],
+  "input_binding_status": "Unchanged primary and three inherited input hashes rechecked in both modes.",
+  "diff_sha256": "032c644176c166eafd9eeecc47ba1c67c1566b1817da7883a629f7986806bdd9",
+  "pre_correction_files_match_historical_manifest": true,
+  "exact_diff_replay_matches_current_bytes": true
+}

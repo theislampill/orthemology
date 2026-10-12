@@ -1,0 +1,18 @@
+{
+  "status": "VERIFIED",
+  "reviewed_author_assertions": 553359,
+  "independent_assertions": 393050,
+  "checks": {
+    "unchanged:private-locator:6a77b9fc4c9bd8ea86ba": true,
+    "unchanged:private-locator:79beca3db56931f2d5df": true,
+    "unchanged:private-locator:8668dbfe18f9871e3131": true,
+    "unchanged:private-locator:67a19a5e74526ab497e1": true,
+    "unchanged:private-locator:7107d7e6791a377868f7": true,
+    "unchanged:private-locator:f7fe6e4f6ce71dd4bcb8": true,
+    "replay_equals_original_report": true,
+    "independent_stdout_equals_report": true
+  },
+  "review_sha256": "9fdcd3b120268501b8ea756ddd28a244065db6f1a21e5436b574d5942ef28b45",
+  "independent_script_sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+  "scope": "Separate scratch review, no repository mutation, integration, or closure."
+}

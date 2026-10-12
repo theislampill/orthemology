@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Fresh affected-source compile controls. Mutants never touch the candidate."""
+import argparse,hashlib,json,os,shutil,subprocess
+from pathlib import Path
+
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--env',type=Path,required=True);p.add_argument('--baseline',type=Path);a=p.parse_args()
+ base=Path(__file__).resolve().parents[1];candidate=base/'candidate-v1'
+ if a.out.exists():raise SystemExit('Output must be absent')
+ a.out.mkdir(parents=True)
+ envroot=a.env.resolve();lean=envroot/'toolchain/lean-4.19.0-linux/bin/lean';math=envroot/'mathlib4'
+ libs=[math/'.lake/build/lib/lean']+sorted(math.glob('.lake/packages/*/.lake/build/lib/lean'))
+ source_map={r['module']:r['source'] for r in json.loads((candidate/'replay/SUITES.json').read_text())['suites'][0]['modules']}
+ order=[r['module'] for r in json.loads(((a.baseline.resolve() if a.baseline else base/'cold-v1')/'REPLAY_RESULT.json').read_text())['suites'][0]['modules']]
+ baseline_root=a.baseline.resolve() if a.baseline else base/'cold-v1'
+ baseline=baseline_root/'global_parity_controller/build'
+ receipt=json.loads((baseline_root/'REPLAY_RESULT.json').read_text())
+ manifest_hash=hashlib.sha256((candidate/'MASTER_MANIFEST.json').read_bytes()).hexdigest()
+ assert receipt['status']=='PASS' and receipt['input_manifest_sha256']==manifest_hash
+ for row in receipt['suites'][0]['modules']:
+  obj=baseline/(row['module'].replace('.','/')+'.olean')
+  assert row['status']=='FRESH_COMPILE' and hashlib.sha256(obj.read_bytes()).hexdigest()==row['olean_sha256']
+ assert hashlib.sha256(lean.read_bytes()).hexdigest()==receipt['lean_sha256']
+ mutations=[
+  ('phase_skips_true_barriers','ObservedPhaseController','else if reject then ⟨m.index+1,none⟩','else if reject then ⟨m.index+2,none⟩'),
+  ('support_change_keeps_stale_component','ObservedPhaseController','if C ≠ B then ⟨0,none⟩','if C ≠ B then m'),
+  ('component_exit_not_rejected','ObservedPhaseController','if y ∈ usedStates Prod.fst E then m else ⟨m.index+1,none⟩','if y ∈ usedStates Prod.fst E then m else m'),
+  ('test_uses_pre_receipt_history','ObservedPhaseController','(reject (phaseCandidate B fallback m) m.index (augmentHistory s₀ ((a,y)::h)))','(reject (phaseCandidate B fallback m) m.index (augmentHistory s₀ h))'),
+  ('physical_clock_instead_of_source_visits','ObservedPhaseController','fallbackAction (historyVisits s₀ s h)','fallbackAction h.length'),
+  ('gate_deleted_from_observed_test','ObservedRowTest','k < actionCount e h ∧ ε ≤','True ∧ ε ≤'),
+ ]
+ results=[]
+ for name,start,old,new in mutations:
+  d=a.out/name;src=d/'src';build=d/'build';src.mkdir(parents=True);build.mkdir()
+  for m in order:
+   path=src/(m.replace('.','/')+'.lean');path.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(candidate/source_map[m],path)
+  target=src/f'{start}.lean';raw=target.read_text();assert raw.count(old)>=1,(name,raw.count(old))
+  target.write_text(raw.replace(old,new,1))
+  changed={start};failed=None;steps=[]
+  for m in order:
+   (build/(m.replace('.','/')+'.olean')).parent.mkdir(parents=True,exist_ok=True)
+   imports=[s.split()[1] for s in (src/(m.replace('.','/')+'.lean')).read_text().splitlines() if s.startswith('import ')]
+   affected=m in changed or any(i in changed for i in imports)
+   if not affected:
+    shutil.copy2(baseline/(m.replace('.','/')+'.olean'),build/(m.replace('.','/')+'.olean'));continue
+   changed.add(m)
+   env=dict(os.environ);env.pop('LEAN_SRC_PATH',None);env['LEAN_PATH']=':'.join(map(str,[build]+libs))
+   cmd=[str(lean),'-j1','--root='+str(src.resolve()),'-o',str((build/(m.replace('.','/')+'.olean')).resolve()),str((src/(m.replace('.','/')+'.lean')).resolve())]
+   run=subprocess.run(cmd,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
+   (d/f'{m}.log').write_text(run.stdout);steps.append({'module':m,'exit':run.returncode})
+   if run.returncode:failed=m;break
+  assert failed is not None,f'Mutation not rejected: {name}'
+  results.append({'mutation':name,'mutated_module':start,'source_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'first_rejected_module':failed,'steps':steps,'status':'REJECTED'})
+  print(name,failed,flush=True)
+ result={'status':'PASS_ALL_SIX_CORE_MUTATIONS_REJECTED','mutations':results,'policy':'Only unaffected reviewer-fresh predecessor objects reused; affected source and downstream never reused'}
+ (a.out/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n')
+if __name__=='__main__':main()

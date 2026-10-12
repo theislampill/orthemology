@@ -1,0 +1,37 @@
+{
+  "status": "PARTIAL_EXACT_SOURCE_RECOVERY_ONLY",
+  "old_seals_recreated": false,
+  "new_compile_claim": false,
+  "modules": [
+    {
+      "module": "RationalWinningCore",
+      "recorded_sha256": "f95f86dc8de4998b6172e93e1563f5bdd719d701128625acd713352afc288a63",
+      "status": "EXACT_SOURCE_BYTES_RECOVERED"
+    },
+    {
+      "module": "RationalWinningEnumeration",
+      "recorded_sha256": "61996588dcfa16d14af399f9e74efa665887f723b5a1bb98935de995fb9a071c",
+      "status": "FULL_RECORD_UNAVAILABLE_NOT_RECONSTRUCTED"
+    },
+    {
+      "module": "RationalWinningCast",
+      "recorded_sha256": "aa23557a7410543058f8bf17ec832df939c97191af8558797b11cc2023c46d74",
+      "status": "FULL_RECORD_UNAVAILABLE_NOT_RECONSTRUCTED"
+    },
+    {
+      "module": "RationalWinningCorrectness",
+      "recorded_sha256": "12bcb56f821bf6d8f1076eda6405f7618982053cfb48551ecf5ca944aefca1bd",
+      "status": "TRANSCRIPTION_HASH_MISMATCH_NOT_ACCEPTED"
+    },
+    {
+      "module": "RationalWinningWitness",
+      "recorded_sha256": "2571a21e9c7dfbad6919d4b17b910bea786efcc2cf0755f74c84555156211f23",
+      "status": "EXACT_SOURCE_BYTES_RECOVERED"
+    },
+    {
+      "module": "RationalWinningPolicyEquivalence",
+      "recorded_sha256": "c74fa0d302653220cbee3c17fc996db99ff4a4d71978f72b679ddec7cd7ffe00",
+      "status": "EXACT_SOURCE_BYTES_RECOVERED"
+    }
+  ]
+}

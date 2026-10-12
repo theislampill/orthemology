@@ -1,0 +1,2786 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import FeedbackRequests
+import ProductObservationLaw
+import IndependentProductFamilies
+import GenericQueryReference
+import PolicyRowLaw
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import StackActionLaw
+import RecurrentSupport
+import RawTapeRecurrence
+import SequentialTapeConsumption
+import PruningKernel
+import EndComponents
+import RecurrentGraph
+import KilledQueryLaw
+import KilledAdaptiveHistory
+import KilledRecurrentTransfer
+import FiniteReachability
+import ExecutablePruning
+import MarkovSupportAdapter
+import MarkovKilledBridge
+import AdaptiveMarkovRecurrentGraph
+import RoundRobinSchedule
+import PolicyTailTransfer
+import RelativeTailTransfer
+import SafeSetTailTransfer
+import SelfVerifyingSupport
+import SeededPolicyNecessity
+import FiniteChainAvoidance
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import ResetLaw
+import ResetTrajectory
+import MarkovCharge
+import FiniteChainTrajectory
+import InfiniteRecurrence
+import StationaryPairChain
+import FairComponentParity
+import CheckedTargetOperation
+import StableSupportParityNecessity
+import StageTargetOrExit
+import ResidualSeedPosterior
+import ConditionalPrefix
+import ConditionalContinuationLaw
+import PosteriorFeedbackProduct
+import MarkovSeedPosterior
+import ConditionalKilledContinuation
+import LawfulRestart
+import LawfulProbability
+import ParityTailInvariance
+import ConditionalAlmostSure
+import SemanticWinning
+import SemanticSafeActions
+import HistoryStageSafety
+import RoundRobinPolicy
+import RoundRobinRecurrence
+import RegionAlgorithm
+import GlobalParityNecessity
+import ActualTargetPolicy
+import StageAvailability
+import FairStageNavigation
+import EventualCycling
+import ObservedPhaseController
+import GeneratedPolicySafety
+import StackPathRegularity
+import GeneratedRun
+import MemoryTransitions
+import GeneratedPhaseDynamics
+import RawEmpiricalRows
+import EmpiricalTailBounds
+import ObservedEmpiricalRows
+import ObservedRowTest
+import EmpiricalTestLaw
+import PhaseStabilization
+import GeneratedPhaseStability
+import GeneratedParitySuccess
+import GlobalParitySufficiency
+import RegionControls
+import GlobalControllerControls
+import CoBuchiTargetCost
+import ActualBadCount
+import GeneratedCostLaw
+import QuantitativeEmpiricalGate
+import GlobalCountBudget
+import ShellCostTransfer
+import FiniteChainHitting
+import FiniteChainLaw
+import FinitePathBound
+import FiniteClosedClass
+import FinitePushforwardRows
+import FiniteRotorCoverage
+import RotorClosedClass
+import RotorProjection
+import FrozenRotorKernel
+import FrozenRotorProgress
+import FrontierControls
+import FiniteHistoryPMF
+import FiniteMemoryLaw
+import MonitoredHistoryDomination
+import FrozenRotorHistory
+import ConditionalRotorHistory
+import RotorHistorySnapshot
+import GeneratedSliceAlignment
+import SupportedConditionalHistories
+import ActualGeneratedSliceTail
+import EndpointMoment
+import AnnularLiteral
+import BernoulliWord
+import GrowthMoment
+import BayesBridge
+import CentredBernoulli
+import FiniteWordDeviation
+import RawWordLaw
+import EmpiricalGeometry
+import RawPrefixDeviation
+import RawExponentialTail
+import RawUnrestrictedDeviation
+import PolynomialTailMoments
+import CountableHistoryTower
+import StoppingHistoryUnion
+import SegmentEnumeration
+import GeneratedChargeBudget
+import ChronologicalIntervals
+import GeneratedIntervalHistory
+import GeneratedIntervalSlices
+import PositiveHistorySlices
+import ActualIntervalCoverage
+import ActualSliceUnionBound
+import ActualTotalCostTail
+import ActualCostMoments
+import FiniteCostCharacterization
+import StoppedCostControls
+import GeometricIntervalMoment
+import ChronologicalDurations
+import GeneratedSlotLengths
+import GeneratedSlotMoment
+import PrefixWeightedProduct
+import GeneratedPrefixProduct
+import GeneratedExponentialTail
+import AffineTailOptimization
+import TailMoments
+import ActualExponentialMoments
+set_option pp.explicit true
+set_option pp.universes true
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.advance
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.advance
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.run
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.run
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Bounded
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Bounded
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_locality
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_prefix_equivalence
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixOracle_agrees
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.counter_monotone
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_iff_eventually_no_query
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Oracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Oracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.Trace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.Trace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_advance_joint
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_run
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_trajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.boundedTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_boundedTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixInput
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixInput
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finiteTrajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteTrajectory
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_event_prefix
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.trajectory_prefix_on_bounded
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.restricted_observable_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.absolutelyContinuous_of_singletons
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_prefixSymbols
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.traceLaw
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.input_prefix_map
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_law_factorisation
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.bounded_trace_domination
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.restrict_iUnion_domination
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.measurable_finiteQueryTrace
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_trace_domination
+#check @Orthemology.Tranche2.PolicyEmbedding.History
+#print axioms Orthemology.Tranche2.PolicyEmbedding.History
+#check @Orthemology.Tranche2.PolicyEmbedding.Stack
+#print axioms Orthemology.Tranche2.PolicyEmbedding.Stack
+#check @Orthemology.Tranche2.PolicyEmbedding.EvalState
+#print axioms Orthemology.Tranche2.PolicyEmbedding.EvalState
+#check @Orthemology.Tranche2.PolicyEmbedding.selected
+#print axioms Orthemology.Tranche2.PolicyEmbedding.selected
+#check @Orthemology.Tranche2.PolicyEmbedding.query
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query
+#check @Orthemology.Tranche2.PolicyEmbedding.actionCount
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionCount
+#check @Orthemology.Tranche2.PolicyEmbedding.step
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step
+#check @Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#check @Orthemology.Tranche2.PolicyEmbedding.step_history_length
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_history_length
+#check @Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#check @Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#check @Orthemology.Tranche2.PolicyEmbedding.policyRun
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun
+#check @Orthemology.Tranche2.PolicyEmbedding.actionAt
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionAt
+#check @Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#check @Orthemology.Tranche2.PolicyEmbedding.historyMeasurableSpace
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyMeasurableSpace
+#check @Orthemology.Tranche2.PolicyEmbedding.selected_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.selected_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.outsideCount
+#print axioms Orthemology.Tranche2.PolicyEmbedding.outsideCount
+#check @Orthemology.Tranche2.PolicyEmbedding.feedback
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedback
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#check @Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#check @Orthemology.Tranche2.PolicyEmbedding.ActionCompatible
+#print axioms Orthemology.Tranche2.PolicyEmbedding.ActionCompatible
+#check @Orthemology.Tranche2.PolicyEmbedding.FeedbackCompatible
+#print axioms Orthemology.Tranche2.PolicyEmbedding.FeedbackCompatible
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#check @Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber
+#check @Orthemology.Tranche2.PolicyEmbedding.FeedbackKey
+#print axioms Orthemology.Tranche2.PolicyEmbedding.FeedbackKey
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackKey
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackKey
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackKeys
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackKeys
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_length
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_length
+#check @Orthemology.Tranche2.PolicyEmbedding.actionCount_cons
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionCount_cons
+#check @Orthemology.Tranche2.PolicyEmbedding.outsideCount_cons
+#print axioms Orthemology.Tranche2.PolicyEmbedding.outsideCount_cons
+#check @Orthemology.Tranche2.PolicyEmbedding.inside_key_bound
+#print axioms Orthemology.Tranche2.PolicyEmbedding.inside_key_bound
+#check @Orthemology.Tranche2.PolicyEmbedding.outside_key_bound
+#print axioms Orthemology.Tranche2.PolicyEmbedding.outside_key_bound
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_nodup
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_nodup
+#check @Orthemology.Tranche2.PolicyEmbedding.requestKey
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey
+#check @Orthemology.Tranche2.PolicyEmbedding.requestKey_zero
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey_zero
+#check @Orthemology.Tranche2.PolicyEmbedding.requestKey_succ
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey_succ
+#check @Orthemology.Tranche2.PolicyEmbedding.requestKey_injective
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey_injective
+#check @Orthemology.Tranche2.PolicyEmbedding.readFeedback
+#print axioms Orthemology.Tranche2.PolicyEmbedding.readFeedback
+#check @Orthemology.Tranche2.PolicyEmbedding.readFeedback_key
+#print axioms Orthemology.Tranche2.PolicyEmbedding.readFeedback_key
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_iff_requests
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_iff_requests
+#check @Orthemology.Tranche2.PolicyEmbedding.requestKey_branch
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey_branch
+#check @Orthemology.Tranche2.infinite_product_coordinate_law
+#print axioms Orthemology.Tranche2.infinite_product_coordinate_law
+#check @Orthemology.Tranche2.infinite_product_coordinates_independent
+#print axioms Orthemology.Tranche2.infinite_product_coordinates_independent
+#check @Orthemology.Tranche2.PolicyEmbedding.FamilyValue
+#print axioms Orthemology.Tranche2.PolicyEmbedding.FamilyValue
+#check @Orthemology.Tranche2.PolicyEmbedding.familyValueMeasurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.familyValueMeasurable
+#check @Orthemology.Tranche2.PolicyEmbedding.productFamily
+#print axioms Orthemology.Tranche2.PolicyEmbedding.productFamily
+#check @Orthemology.Tranche2.PolicyEmbedding.independent_product_families
+#print axioms Orthemology.Tranche2.PolicyEmbedding.independent_product_families
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_probability
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_probability
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.prefixSymbols_singleton_preimage
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.iidOracle_prefix_nonzero
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.finite_query_domination_by_iid_rival
+#check @Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers
+#print axioms Orthemology.Tranche2.FiniteAlphabetQuery.positive_finite_query_event_transfers
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMass
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMass_nonneg
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_nonneg
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMass_pos
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_pos
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#check @Orthemology.Tranche2.PolicyEmbedding.rowPMF
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowPMF
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMeasure
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMeasure_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#check @Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#check @Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#check @Orthemology.Tranche2.PolicyEmbedding.FlatStack
+#print axioms Orthemology.Tranche2.PolicyEmbedding.FlatStack
+#check @Orthemology.Tranche2.PolicyEmbedding.RowOracle
+#print axioms Orthemology.Tranche2.PolicyEmbedding.RowOracle
+#check @Orthemology.Tranche2.PolicyEmbedding.actionMeasure
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionMeasure
+#check @Orthemology.Tranche2.PolicyEmbedding.actionMeasure_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionMeasure_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.actionMeasure_singleton
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionMeasure_singleton
+#check @Orthemology.Tranche2.PolicyEmbedding.stackMeasure
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackMeasure
+#check @Orthemology.Tranche2.PolicyEmbedding.stackMeasure_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackMeasure_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackLaw
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackLaw
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.sourceFamily
+#print axioms Orthemology.Tranche2.PolicyEmbedding.sourceFamily
+#check @Orthemology.Tranche2.PolicyEmbedding.sourceRead
+#print axioms Orthemology.Tranche2.PolicyEmbedding.sourceRead
+#check @Orthemology.Tranche2.PolicyEmbedding.sourceRead_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.sourceRead_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.transcriptSample
+#print axioms Orthemology.Tranche2.PolicyEmbedding.transcriptSample
+#check @Orthemology.Tranche2.PolicyEmbedding.transcriptSample_eq_source
+#print axioms Orthemology.Tranche2.PolicyEmbedding.transcriptSample_eq_source
+#check @Orthemology.Tranche2.PolicyEmbedding.transcriptSamples_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.transcriptSamples_independent
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_left_marginal
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_left_marginal
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_right_marginal
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackLaw_right_marginal
+#check @Orthemology.Tranche2.PolicyEmbedding.transcriptSample_marginal
+#print axioms Orthemology.Tranche2.PolicyEmbedding.transcriptSample_marginal
+#check @Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.Input
+#print axioms Orthemology.Tranche2.PolicyEmbedding.Input
+#check @Orthemology.Tranche2.PolicyEmbedding.historyTrajectory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyTrajectory
+#check @Orthemology.Tranche2.PolicyEmbedding.private_transcript_cylinder_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.private_transcript_cylinder_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_coordinate_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_coordinate_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory_drop
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_drop
+#check @Orthemology.Tranche2.PolicyEmbedding.reconstructPrefix
+#print axioms Orthemology.Tranche2.PolicyEmbedding.reconstructPrefix
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory_prefix_from_last
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_prefix_from_last
+#check @Orthemology.Tranche2.PolicyEmbedding.measure_eq_of_prefix_maps
+#print axioms Orthemology.Tranche2.PolicyEmbedding.measure_eq_of_prefix_maps
+#check @Orthemology.Tranche2.PolicyEmbedding.history_marginal_formula
+#print axioms Orthemology.Tranche2.PolicyEmbedding.history_marginal_formula
+#check @Orthemology.Tranche2.PolicyEmbedding.history_marginal_eq_all_query
+#print axioms Orthemology.Tranche2.PolicyEmbedding.history_marginal_eq_all_query
+#check @Orthemology.Tranche2.PolicyEmbedding.observed_prefix_map_from_last
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observed_prefix_map_from_last
+#check @Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_eq_all_query
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_eq_all_query
+#check @Orthemology.Tranche2.PolicyEmbedding.initialState
+#print axioms Orthemology.Tranche2.PolicyEmbedding.initialState
+#check @Orthemology.Tranche2.PolicyEmbedding.initialState_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.initialState_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.seedLaw
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seedLaw
+#check @Orthemology.Tranche2.PolicyEmbedding.seedLaw_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seedLaw_probability
+#check @Orthemology.Tranche2.PolicyEmbedding.historyReadout
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyReadout
+#check @Orthemology.Tranche2.PolicyEmbedding.historyReadout_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyReadout_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.traceLaw_historyReadout
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceLaw_historyReadout
+#check @Orthemology.Tranche2.PolicyEmbedding.traceAction
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceAction
+#check @Orthemology.Tranche2.PolicyEmbedding.historyAction
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyAction
+#check @Orthemology.Tranche2.PolicyEmbedding.traceAction_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceAction_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.historyAction_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyAction_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.action_readout_on_run
+#print axioms Orthemology.Tranche2.PolicyEmbedding.action_readout_on_run
+#check @Orthemology.Tranche2.PolicyEmbedding.traceLaw_actionReadout
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceLaw_actionReadout
+#check @Orthemology.Tranche2.PolicyEmbedding.actionLaw
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionLaw
+#check @Orthemology.Tranche2.PolicyEmbedding.traceLaw_action_eq_canonical
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceLaw_action_eq_canonical
+#check @Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory
+#check @Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory
+#check @Orthemology.Tranche2.PolicyEmbedding.observedHistory_univ_oracle_irrelevant
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_univ_oracle_irrelevant
+#check @Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackHistoryTrajectory_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_eq_historyAction
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_eq_historyAction
+#check @Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_univ_eq_stack
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_univ_eq_stack
+#check @Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_law
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stackActionTrajectory_law
+#check @Orthemology.Tranche2.PolicyEmbedding.actionLaw_ae_of_stack
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionLaw_ae_of_stack
+#check @Orthemology.Tranche2.PolicyEmbedding.measurableSet_eventually_mem
+#print axioms Orthemology.Tranche2.PolicyEmbedding.measurableSet_eventually_mem
+#check @Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack
+#check @Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack_fibers
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionLaw_eventually_good_of_stack_fibers
+#check @Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_law
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_law
+#check @Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_independent
+#check @Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_identDistrib
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stack_coordinates_identDistrib
+#check @Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_real_singleton
+#print axioms Orthemology.Tranche2.PolicyEmbedding.stack_coordinate_real_singleton
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_measurable
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_law
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_law
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_independent
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_identDistrib
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinates_identDistrib
+#check @Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_real_singleton
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seededStackCoordinate_real_singleton
+#check @Orthemology.Tranche2.RecurrentSupport.Recurs
+#print axioms Orthemology.Tranche2.RecurrentSupport.Recurs
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.exists_recurrent
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_recurrent
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty
+#check @Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem
+#check @Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent
+#check @Orthemology.Tranche2.RecurrentSupport.tailEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.tailEvent
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_recurrence
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_recurrence
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent
+#check @Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support
+#check @Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index
+#check @Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support
+#check @Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event
+#print axioms Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event
+#check @Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support
+#check @HiddenParity.Adaptive.seeded_tape_positive_symbol_recurs
+#print axioms HiddenParity.Adaptive.seeded_tape_positive_symbol_recurs
+#check @HiddenParity.Adaptive.seeded_all_tapes_recurrent
+#print axioms HiddenParity.Adaptive.seeded_all_tapes_recurrent
+#check @HiddenParity.Adaptive.seeded_all_tapes_supported
+#print axioms HiddenParity.Adaptive.seeded_all_tapes_supported
+#check @HiddenParity.Adaptive.countBefore
+#print axioms HiddenParity.Adaptive.countBefore
+#check @HiddenParity.Adaptive.countBefore_zero
+#print axioms HiddenParity.Adaptive.countBefore_zero
+#check @HiddenParity.Adaptive.countBefore_succ
+#print axioms HiddenParity.Adaptive.countBefore_succ
+#check @HiddenParity.Adaptive.countBefore_mono
+#print axioms HiddenParity.Adaptive.countBefore_mono
+#check @HiddenParity.Adaptive.countBefore_le_time
+#print axioms HiddenParity.Adaptive.countBefore_le_time
+#check @HiddenParity.Adaptive.recurrent_action_unbounded_count
+#print axioms HiddenParity.Adaptive.recurrent_action_unbounded_count
+#check @HiddenParity.Adaptive.recurrent_action_consumes_every_index
+#print axioms HiddenParity.Adaptive.recurrent_action_consumes_every_index
+#check @HiddenParity.Adaptive.stackReceipt
+#print axioms HiddenParity.Adaptive.stackReceipt
+#check @HiddenParity.Adaptive.recurrent_action_observes_recurrent_symbol
+#print axioms HiddenParity.Adaptive.recurrent_action_observes_recurrent_symbol
+#check @HiddenParity.Adaptive.historyReceipt
+#print axioms HiddenParity.Adaptive.historyReceipt
+#check @HiddenParity.Adaptive.stackReceipt_eq_historyReceipt
+#print axioms HiddenParity.Adaptive.stackReceipt_eq_historyReceipt
+#check @HiddenParity.ComponentFamily
+#print axioms HiddenParity.ComponentFamily
+#check @HiddenParity.Match
+#print axioms HiddenParity.Match
+#check @HiddenParity.IsMinimum
+#print axioms HiddenParity.IsMinimum
+#check @HiddenParity.Valid
+#print axioms HiddenParity.Valid
+#check @HiddenParity.match_mono
+#print axioms HiddenParity.match_mono
+#check @HiddenParity.minimum_unique
+#print axioms HiddenParity.minimum_unique
+#check @HiddenParity.exists_minimum
+#print axioms HiddenParity.exists_minimum
+#check @HiddenParity.valid_avoids_odd_minimum
+#print axioms HiddenParity.valid_avoids_odd_minimum
+#check @HiddenParity.MaximalComponent
+#print axioms HiddenParity.MaximalComponent
+#check @HiddenParity.maximalComponents
+#print axioms HiddenParity.maximalComponents
+#check @HiddenParity.mem_maximalComponents
+#print axioms HiddenParity.mem_maximalComponents
+#check @HiddenParity.component_has_maximal
+#print axioms HiddenParity.component_has_maximal
+#check @HiddenParity.component_subset_of_intersects_maximal
+#print axioms HiddenParity.component_subset_of_intersects_maximal
+#check @HiddenParity.BadPair
+#print axioms HiddenParity.BadPair
+#check @HiddenParity.step
+#print axioms HiddenParity.step
+#check @HiddenParity.mem_step
+#print axioms HiddenParity.mem_step
+#check @HiddenParity.step_subset
+#print axioms HiddenParity.step_subset
+#check @HiddenParity.step_preserves
+#print axioms HiddenParity.step_preserves
+#check @HiddenParity.stable_maximal_valid
+#print axioms HiddenParity.stable_maximal_valid
+#check @HiddenParity.iterate
+#print axioms HiddenParity.iterate
+#check @HiddenParity.iterate_subset
+#print axioms HiddenParity.iterate_subset
+#check @HiddenParity.iterate_preserves
+#print axioms HiddenParity.iterate_preserves
+#check @HiddenParity.iterate_eq_of_stable
+#print axioms HiddenParity.iterate_eq_of_stable
+#check @HiddenParity.iterate_stable
+#print axioms HiddenParity.iterate_stable
+#check @HiddenParity.output
+#print axioms HiddenParity.output
+#check @HiddenParity.MaximalValid
+#print axioms HiddenParity.MaximalValid
+#check @HiddenParity.output_iff_maximal_valid
+#print axioms HiddenParity.output_iff_maximal_valid
+#check @HiddenParity.valid_covered_by_output
+#print axioms HiddenParity.valid_covered_by_output
+#check @HiddenParity.usedStates
+#print axioms HiddenParity.usedStates
+#check @HiddenParity.Edge
+#print axioms HiddenParity.Edge
+#check @HiddenParity.Reach
+#print axioms HiddenParity.Reach
+#check @HiddenParity.IsEndComponent
+#print axioms HiddenParity.IsEndComponent
+#check @HiddenParity.usedStates_mono
+#print axioms HiddenParity.usedStates_mono
+#check @HiddenParity.edge_mono
+#print axioms HiddenParity.edge_mono
+#check @HiddenParity.reach_mono
+#print axioms HiddenParity.reach_mono
+#check @HiddenParity.endComponent_union_of_common_state
+#print axioms HiddenParity.endComponent_union_of_common_state
+#check @HiddenParity.endComponentFamily
+#print axioms HiddenParity.endComponentFamily
+#check @HiddenParity.endComponent_output_iff
+#print axioms HiddenParity.endComponent_output_iff
+#check @HiddenParity.IsTargetState
+#print axioms HiddenParity.IsTargetState
+#check @HiddenParity.targetStates
+#print axioms HiddenParity.targetStates
+#check @HiddenParity.targetStates_exact
+#print axioms HiddenParity.targetStates_exact
+#check @HiddenParity.output_components_state_disjoint
+#print axioms HiddenParity.output_components_state_disjoint
+#check @HiddenParity.Adaptive.retained_segment_reachable
+#print axioms HiddenParity.Adaptive.retained_segment_reachable
+#check @HiddenParity.Adaptive.recurrent_pairs_form_end_component
+#print axioms HiddenParity.Adaptive.recurrent_pairs_form_end_component
+#check @HiddenParity.Adaptive.measurable_recurrent_predicate
+#print axioms HiddenParity.Adaptive.measurable_recurrent_predicate
+#check @HiddenParity.Stochastic.zero_query_run_agreement
+#print axioms HiddenParity.Stochastic.zero_query_run_agreement
+#check @HiddenParity.Stochastic.run_counter_zero_iff
+#print axioms HiddenParity.Stochastic.run_counter_zero_iff
+#check @HiddenParity.Stochastic.killedReadout
+#print axioms HiddenParity.Stochastic.killedReadout
+#check @HiddenParity.Stochastic.killedReadout_oracle_independent
+#print axioms HiddenParity.Stochastic.killedReadout_oracle_independent
+#check @HiddenParity.Stochastic.killedReadout_measurable
+#print axioms HiddenParity.Stochastic.killedReadout_measurable
+#check @HiddenParity.Stochastic.killed_traceLaw_factorization
+#print axioms HiddenParity.Stochastic.killed_traceLaw_factorization
+#check @HiddenParity.Stochastic.killed_traceLaw_eq
+#print axioms HiddenParity.Stochastic.killed_traceLaw_eq
+#check @HiddenParity.Stochastic.AlivePrefix
+#print axioms HiddenParity.Stochastic.AlivePrefix
+#check @HiddenParity.Stochastic.alivePrefixDecidable
+#print axioms HiddenParity.Stochastic.alivePrefixDecidable
+#check @HiddenParity.Stochastic.killedHistory
+#print axioms HiddenParity.Stochastic.killedHistory
+#check @HiddenParity.Stochastic.measurable_alivePrefix
+#print axioms HiddenParity.Stochastic.measurable_alivePrefix
+#check @HiddenParity.Stochastic.killedHistory_measurable
+#print axioms HiddenParity.Stochastic.killedHistory_measurable
+#check @HiddenParity.Stochastic.killedReadout_history_agreement
+#print axioms HiddenParity.Stochastic.killedReadout_history_agreement
+#check @HiddenParity.Stochastic.traceLaw_killed_history_readout
+#print axioms HiddenParity.Stochastic.traceLaw_killed_history_readout
+#check @HiddenParity.Stochastic.canonical_killed_historyLaw_eq
+#print axioms HiddenParity.Stochastic.canonical_killed_historyLaw_eq
+#check @HiddenParity.Stochastic.HistoryStays
+#print axioms HiddenParity.Stochastic.HistoryStays
+#check @HiddenParity.Stochastic.historyStays_measurable
+#print axioms HiddenParity.Stochastic.historyStays_measurable
+#check @HiddenParity.Stochastic.killedHistory_alive_iff
+#print axioms HiddenParity.Stochastic.killedHistory_alive_iff
+#check @HiddenParity.Stochastic.killedHistory_all_alive_iff
+#print axioms HiddenParity.Stochastic.killedHistory_all_alive_iff
+#check @HiddenParity.Stochastic.killedHistory_records_of_stays
+#print axioms HiddenParity.Stochastic.killedHistory_records_of_stays
+#check @HiddenParity.Stochastic.aliveHistoryEvent
+#print axioms HiddenParity.Stochastic.aliveHistoryEvent
+#check @HiddenParity.Stochastic.aliveHistoryEvent_measurable
+#print axioms HiddenParity.Stochastic.aliveHistoryEvent_measurable
+#check @HiddenParity.Stochastic.aliveHistoryEvent_preimage
+#print axioms HiddenParity.Stochastic.aliveHistoryEvent_preimage
+#check @HiddenParity.Stochastic.canonical_history_event_eq_on_component
+#print axioms HiddenParity.Stochastic.canonical_history_event_eq_on_component
+#check @HiddenParity.Stochastic.canonical_history_restrict_eq
+#print axioms HiddenParity.Stochastic.canonical_history_restrict_eq
+#check @HiddenParity.Stochastic.SurvivingRecurrent
+#print axioms HiddenParity.Stochastic.SurvivingRecurrent
+#check @HiddenParity.Stochastic.survivingRecurrent_measurable
+#print axioms HiddenParity.Stochastic.survivingRecurrent_measurable
+#check @HiddenParity.Stochastic.canonical_surviving_recurrent_eq
+#print axioms HiddenParity.Stochastic.canonical_surviving_recurrent_eq
+#check @HiddenParity.Stochastic.ParitySuccess
+#print axioms HiddenParity.Stochastic.ParitySuccess
+#check @HiddenParity.Stochastic.paritySuccess_measurable
+#print axioms HiddenParity.Stochastic.paritySuccess_measurable
+#check @HiddenParity.Stochastic.matching_model_even_on_positive_surviving_recurrence
+#print axioms HiddenParity.Stochastic.matching_model_even_on_positive_surviving_recurrence
+#check @HiddenParity.FiniteReachability.grow
+#print axioms HiddenParity.FiniteReachability.grow
+#check @HiddenParity.FiniteReachability.mem_grow
+#print axioms HiddenParity.FiniteReachability.mem_grow
+#check @HiddenParity.FiniteReachability.subset_grow
+#print axioms HiddenParity.FiniteReachability.subset_grow
+#check @HiddenParity.FiniteReachability.saturate
+#print axioms HiddenParity.FiniteReachability.saturate
+#check @HiddenParity.FiniteReachability.subset_saturate
+#print axioms HiddenParity.FiniteReachability.subset_saturate
+#check @HiddenParity.FiniteReachability.saturate_eq_of_stable
+#print axioms HiddenParity.FiniteReachability.saturate_eq_of_stable
+#check @HiddenParity.FiniteReachability.saturate_stable
+#print axioms HiddenParity.FiniteReachability.saturate_stable
+#check @HiddenParity.FiniteReachability.saturate_sound
+#print axioms HiddenParity.FiniteReachability.saturate_sound
+#check @HiddenParity.FiniteReachability.reachable
+#print axioms HiddenParity.FiniteReachability.reachable
+#check @HiddenParity.FiniteReachability.reachable_iff
+#print axioms HiddenParity.FiniteReachability.reachable_iff
+#check @HiddenParity.edgeDecidable
+#print axioms HiddenParity.edgeDecidable
+#check @HiddenParity.CheckedEndComponent
+#print axioms HiddenParity.CheckedEndComponent
+#check @HiddenParity.checkedEndComponentDecidable
+#print axioms HiddenParity.checkedEndComponentDecidable
+#check @HiddenParity.checkedEndComponent_iff
+#print axioms HiddenParity.checkedEndComponent_iff
+#check @HiddenParity.endComponentDecidable
+#print axioms HiddenParity.endComponentDecidable
+#check @HiddenParity.executableMECs
+#print axioms HiddenParity.executableMECs
+#check @HiddenParity.executableMECs_eq
+#print axioms HiddenParity.executableMECs_eq
+#check @HiddenParity.matchDecidable
+#print axioms HiddenParity.matchDecidable
+#check @HiddenParity.minimumDecidable
+#print axioms HiddenParity.minimumDecidable
+#check @HiddenParity.ExecutableBadPair
+#print axioms HiddenParity.ExecutableBadPair
+#check @HiddenParity.executableBadPairDecidable
+#print axioms HiddenParity.executableBadPairDecidable
+#check @HiddenParity.executableStep
+#print axioms HiddenParity.executableStep
+#check @HiddenParity.executableStep_eq
+#print axioms HiddenParity.executableStep_eq
+#check @HiddenParity.executableIterate
+#print axioms HiddenParity.executableIterate
+#check @HiddenParity.executableIterate_eq
+#print axioms HiddenParity.executableIterate_eq
+#check @HiddenParity.executableOutput
+#print axioms HiddenParity.executableOutput
+#check @HiddenParity.executable_output_eq
+#print axioms HiddenParity.executable_output_eq
+#check @HiddenParity.executable_output_iff_maximal_valid
+#print axioms HiddenParity.executable_output_iff_maximal_valid
+#check @HiddenParity.executableTargetStates
+#print axioms HiddenParity.executableTargetStates
+#check @HiddenParity.executable_targetStates_exact
+#print axioms HiddenParity.executable_targetStates_exact
+#check @HiddenParity.RationalKernel
+#print axioms HiddenParity.RationalKernel
+#check @HiddenParity.internalSuccessors
+#print axioms HiddenParity.internalSuccessors
+#check @HiddenParity.mem_internalSuccessors
+#print axioms HiddenParity.mem_internalSuccessors
+#check @HiddenParity.NoExit
+#print axioms HiddenParity.NoExit
+#check @HiddenParity.noExitDecidable
+#print axioms HiddenParity.noExitDecidable
+#check @HiddenParity.zeroExitPairs
+#print axioms HiddenParity.zeroExitPairs
+#check @HiddenParity.mem_zeroExitPairs
+#print axioms HiddenParity.mem_zeroExitPairs
+#check @HiddenParity.noExit_iff_internal_mass_one
+#print axioms HiddenParity.noExit_iff_internal_mass_one
+#check @HiddenParity.noExit_internal_nonempty
+#print axioms HiddenParity.noExit_internal_nonempty
+#check @HiddenParity.matching_noExit
+#print axioms HiddenParity.matching_noExit
+#check @HiddenParity.noExit_internal_eq_candidate_support
+#print axioms HiddenParity.noExit_internal_eq_candidate_support
+#check @HiddenParity.MarkovQualifying
+#print axioms HiddenParity.MarkovQualifying
+#check @HiddenParity.markovQualifying_iff
+#print axioms HiddenParity.markovQualifying_iff
+#check @HiddenParity.markovTargetStates
+#print axioms HiddenParity.markovTargetStates
+#check @HiddenParity.markovTargetStates_exact
+#print axioms HiddenParity.markovTargetStates_exact
+#check @HiddenParity.Stochastic.currentState
+#print axioms HiddenParity.Stochastic.currentState
+#check @HiddenParity.Stochastic.erasePairSources
+#print axioms HiddenParity.Stochastic.erasePairSources
+#check @HiddenParity.Stochastic.pairPolicy
+#print axioms HiddenParity.Stochastic.pairPolicy
+#check @HiddenParity.Stochastic.pairPolicy_source
+#print axioms HiddenParity.Stochastic.pairPolicy_source
+#check @HiddenParity.Stochastic.pairPolicy_measurable
+#print axioms HiddenParity.Stochastic.pairPolicy_measurable
+#check @HiddenParity.Stochastic.canonical_markov_history_step
+#print axioms HiddenParity.Stochastic.canonical_markov_history_step
+#check @HiddenParity.Stochastic.realRows
+#print axioms HiddenParity.Stochastic.realRows
+#check @HiddenParity.Stochastic.realRows_nonnegative
+#print axioms HiddenParity.Stochastic.realRows_nonnegative
+#check @HiddenParity.Stochastic.realRows_normalized
+#print axioms HiddenParity.Stochastic.realRows_normalized
+#check @HiddenParity.Stochastic.realRows_match
+#print axioms HiddenParity.Stochastic.realRows_match
+#check @HiddenParity.Stochastic.markovHistoryLaw
+#print axioms HiddenParity.Stochastic.markovHistoryLaw
+#check @HiddenParity.Stochastic.markov_killed_historyLaw_eq
+#print axioms HiddenParity.Stochastic.markov_killed_historyLaw_eq
+#check @HiddenParity.Stochastic.markov_history_restrict_eq
+#print axioms HiddenParity.Stochastic.markov_history_restrict_eq
+#check @HiddenParity.Stochastic.markov_matching_parity_valid
+#print axioms HiddenParity.Stochastic.markov_matching_parity_valid
+#check @HiddenParity.Adaptive.stack_pair_source_next
+#print axioms HiddenParity.Adaptive.stack_pair_source_next
+#check @HiddenParity.Adaptive.supportSuccessors
+#print axioms HiddenParity.Adaptive.supportSuccessors
+#check @HiddenParity.Adaptive.canonical_markov_recurrent_end_component
+#print axioms HiddenParity.Adaptive.canonical_markov_recurrent_end_component
+#check @HiddenParity.Adaptive.canonical_markov_supported_path
+#print axioms HiddenParity.Adaptive.canonical_markov_supported_path
+#check @HiddenParity.Adaptive.markov_recurrent_end_component
+#print axioms HiddenParity.Adaptive.markov_recurrent_end_component
+#check @HiddenParity.Sufficiency.visitsBefore
+#print axioms HiddenParity.Sufficiency.visitsBefore
+#check @HiddenParity.Sufficiency.visitsBefore_mono
+#print axioms HiddenParity.Sufficiency.visitsBefore_mono
+#check @HiddenParity.Sufficiency.visitsBefore_le_time
+#print axioms HiddenParity.Sufficiency.visitsBefore_le_time
+#check @HiddenParity.Sufficiency.recurrent_state_unbounded_visits
+#print axioms HiddenParity.Sufficiency.recurrent_state_unbounded_visits
+#check @HiddenParity.Sufficiency.recurrent_state_consumes_visit
+#print axioms HiddenParity.Sufficiency.recurrent_state_consumes_visit
+#check @HiddenParity.Sufficiency.cycleAction
+#print axioms HiddenParity.Sufficiency.cycleAction
+#check @HiddenParity.Sufficiency.cycleAction_mem
+#print axioms HiddenParity.Sufficiency.cycleAction_mem
+#check @HiddenParity.Sufficiency.cycleAction_at_index
+#print axioms HiddenParity.Sufficiency.cycleAction_at_index
+#check @HiddenParity.Sufficiency.cycle_every_action_recurrent
+#print axioms HiddenParity.Sufficiency.cycle_every_action_recurrent
+#check @Orthemology.Tranche2.PolicyEmbedding.run_tail_finitely_queries
+#print axioms Orthemology.Tranche2.PolicyEmbedding.run_tail_finitely_queries
+#check @Orthemology.Tranche2.PolicyEmbedding.evaluator_positive_tail_transfers
+#print axioms Orthemology.Tranche2.PolicyEmbedding.evaluator_positive_tail_transfers
+#check @Orthemology.Tranche2.PolicyEmbedding.canonical_positive_tail_transfers
+#print axioms Orthemology.Tranche2.PolicyEmbedding.canonical_positive_tail_transfers
+#check @Orthemology.Tranche3.RelativeTransfer.absolutelyContinuous_of_atom_support
+#print axioms Orthemology.Tranche3.RelativeTransfer.absolutelyContinuous_of_atom_support
+#check @Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_atom
+#print axioms Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_atom
+#check @Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.iidOracle_prefix_domination
+#check @Orthemology.Tranche3.RelativeTransfer.relative_bounded_trace_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.relative_bounded_trace_domination
+#check @Orthemology.Tranche3.RelativeTransfer.relative_finite_query_domination
+#print axioms Orthemology.Tranche3.RelativeTransfer.relative_finite_query_domination
+#check @Orthemology.Tranche3.RelativeTransfer.positive_finite_query_event_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.positive_finite_query_event_relative
+#check @Orthemology.Tranche3.RelativeTransfer.rowMeasure_relative_support
+#print axioms Orthemology.Tranche3.RelativeTransfer.rowMeasure_relative_support
+#check @Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_relative
+#check @Orthemology.Tranche3.RelativeTransfer.canonical_positive_event_relative
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_event_relative
+#check @Orthemology.Tranche3.RelativeTransfer.alwaysIn
+#print axioms Orthemology.Tranche3.RelativeTransfer.alwaysIn
+#check @Orthemology.Tranche3.RelativeTransfer.measurable_alwaysIn
+#print axioms Orthemology.Tranche3.RelativeTransfer.measurable_alwaysIn
+#check @Orthemology.Tranche3.RelativeTransfer.zero_prefix_map
+#print axioms Orthemology.Tranche3.RelativeTransfer.zero_prefix_map
+#check @Orthemology.Tranche3.RelativeTransfer.zero_query_restricted_law_eq
+#print axioms Orthemology.Tranche3.RelativeTransfer.zero_query_restricted_law_eq
+#check @Orthemology.Tranche3.RelativeTransfer.all_inside_zero_queries
+#print axioms Orthemology.Tranche3.RelativeTransfer.all_inside_zero_queries
+#check @Orthemology.Tranche3.RelativeTransfer.canonical_event_eq_on_visited
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_event_eq_on_visited
+#check @Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_on_safe_actions
+#print axioms Orthemology.Tranche3.RelativeTransfer.canonical_positive_tail_on_safe_actions
+#check @Orthemology.Tranche2.AgreeOn
+#print axioms Orthemology.Tranche2.AgreeOn
+#check @Orthemology.Tranche2.SelfVerifying
+#print axioms Orthemology.Tranche2.SelfVerifying
+#check @Orthemology.Tranche2.prune
+#print axioms Orthemology.Tranche2.prune
+#check @Orthemology.Tranche2.mem_prune
+#print axioms Orthemology.Tranche2.mem_prune
+#check @Orthemology.Tranche2.prune_subset
+#print axioms Orthemology.Tranche2.prune_subset
+#check @Orthemology.Tranche2.agreeOn_mono
+#print axioms Orthemology.Tranche2.agreeOn_mono
+#check @Orthemology.Tranche2.prune_mono
+#print axioms Orthemology.Tranche2.prune_mono
+#check @Orthemology.Tranche2.selfVerifying_empty
+#print axioms Orthemology.Tranche2.selfVerifying_empty
+#check @Orthemology.Tranche2.selfVerifying_union
+#print axioms Orthemology.Tranche2.selfVerifying_union
+#check @Orthemology.Tranche2.selfVerifying_iff_fixed
+#print axioms Orthemology.Tranche2.selfVerifying_iff_fixed
+#check @Orthemology.Tranche2.pruneIter
+#print axioms Orthemology.Tranche2.pruneIter
+#check @Orthemology.Tranche2.pruneIter_step_subset
+#print axioms Orthemology.Tranche2.pruneIter_step_subset
+#check @Orthemology.Tranche2.pruneIter_subset_target
+#print axioms Orthemology.Tranche2.pruneIter_subset_target
+#check @Orthemology.Tranche2.selfVerifying_survives
+#print axioms Orthemology.Tranche2.selfVerifying_survives
+#check @Orthemology.Tranche2.pruneIter_fixed_propagates
+#print axioms Orthemology.Tranche2.pruneIter_fixed_propagates
+#check @Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#check @Orthemology.Tranche2.pruneIter_exists_fixed
+#print axioms Orthemology.Tranche2.pruneIter_exists_fixed
+#check @Orthemology.Tranche2.pruneIter_card_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_fixed
+#check @Orthemology.Tranche2.supportKernel
+#print axioms Orthemology.Tranche2.supportKernel
+#check @Orthemology.Tranche2.supportKernel_selfVerifying
+#print axioms Orthemology.Tranche2.supportKernel_selfVerifying
+#check @Orthemology.Tranche2.supportKernel_greatest
+#print axioms Orthemology.Tranche2.supportKernel_greatest
+#check @Orthemology.Tranche2.supportKernel_nonempty_iff
+#print axioms Orthemology.Tranche2.supportKernel_nonempty_iff
+#check @Orthemology.Tranche2.PolicyEmbedding.actionLaw_isProbability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.actionLaw_isProbability
+#check @Orthemology.Tranche2.PolicyEmbedding.seeded_policy_self_verifying_necessity
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seeded_policy_self_verifying_necessity
+#check @Orthemology.Tranche2.PolicyEmbedding.seeded_policy_kernel_nonempty
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seeded_policy_kernel_nonempty
+#check @HiddenParity.Recurrence.FiniteChain
+#print axioms HiddenParity.Recurrence.FiniteChain
+#check @HiddenParity.Recurrence.avoid
+#print axioms HiddenParity.Recurrence.avoid
+#check @HiddenParity.Recurrence.avoid_nonnegative
+#print axioms HiddenParity.Recurrence.avoid_nonnegative
+#check @HiddenParity.Recurrence.avoid_le_one
+#print axioms HiddenParity.Recurrence.avoid_le_one
+#check @HiddenParity.Recurrence.avoid_succ_le
+#print axioms HiddenParity.Recurrence.avoid_succ_le
+#check @HiddenParity.Recurrence.avoid_antitone
+#print axioms HiddenParity.Recurrence.avoid_antitone
+#check @HiddenParity.Recurrence.avoid_lt_one_predecessor
+#print axioms HiddenParity.Recurrence.avoid_lt_one_predecessor
+#check @HiddenParity.Recurrence.reachable_avoids_lt_one
+#print axioms HiddenParity.Recurrence.reachable_avoids_lt_one
+#check @HiddenParity.Recurrence.exists_uniform_avoidance_bound
+#print axioms HiddenParity.Recurrence.exists_uniform_avoidance_bound
+#check @HiddenParity.Recurrence.avoid_add_bound
+#print axioms HiddenParity.Recurrence.avoid_add_bound
+#check @HiddenParity.Recurrence.avoid_blocks_bound
+#print axioms HiddenParity.Recurrence.avoid_blocks_bound
+#check @Orthemology.Tranche2.affinity
+#print axioms Orthemology.Tranche2.affinity
+#check @Orthemology.Tranche2.errorP
+#print axioms Orthemology.Tranche2.errorP
+#check @Orthemology.Tranche2.errorQ
+#print axioms Orthemology.Tranche2.errorQ
+#check @Orthemology.Tranche2.minimum_le_test_error
+#print axioms Orthemology.Tranche2.minimum_le_test_error
+#check @Orthemology.Tranche2.sqrt_product_min_max
+#print axioms Orthemology.Tranche2.sqrt_product_min_max
+#check @Orthemology.Tranche2.affinity_sq_le_twice_error_sum
+#print axioms Orthemology.Tranche2.affinity_sq_le_twice_error_sum
+#check @Orthemology.Tranche2.affinity_error_lower_bound
+#print axioms Orthemology.Tranche2.affinity_error_lower_bound
+#check @Orthemology.Tranche2.affinity_nonneg
+#print axioms Orthemology.Tranche2.affinity_nonneg
+#check @Orthemology.Tranche2.affinity_tensor
+#print axioms Orthemology.Tranche2.affinity_tensor
+#check @Orthemology.Tranche2.Bits
+#print axioms Orthemology.Tranche2.Bits
+#check @Orthemology.Tranche2.bitsFintype
+#print axioms Orthemology.Tranche2.bitsFintype
+#check @Orthemology.Tranche2.coinMass
+#print axioms Orthemology.Tranche2.coinMass
+#check @Orthemology.Tranche2.bernoulliMass
+#print axioms Orthemology.Tranche2.bernoulliMass
+#check @Orthemology.Tranche2.coinMass_nonneg
+#print axioms Orthemology.Tranche2.coinMass_nonneg
+#check @Orthemology.Tranche2.bernoulliMass_nonneg
+#print axioms Orthemology.Tranche2.bernoulliMass_nonneg
+#check @Orthemology.Tranche2.bernoulliMass_sum
+#print axioms Orthemology.Tranche2.bernoulliMass_sum
+#check @Orthemology.Tranche2.coin_affinity
+#print axioms Orthemology.Tranche2.coin_affinity
+#check @Orthemology.Tranche2.bernoulli_affinity
+#print axioms Orthemology.Tranche2.bernoulli_affinity
+#check @Orthemology.Tranche2.symmetric_coin_affinity_sq
+#print axioms Orthemology.Tranche2.symmetric_coin_affinity_sq
+#check @Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound
+#print axioms Orthemology.Tranche2.symmetric_bernoulli_test_lower_bound
+#check @Orthemology.Tranche2.affinity_sq_distance
+#print axioms Orthemology.Tranche2.affinity_sq_distance
+#check @Orthemology.Tranche2.affinity_le_one
+#print axioms Orthemology.Tranche2.affinity_le_one
+#check @Orthemology.Tranche2.affinity_lt_one
+#print axioms Orthemology.Tranche2.affinity_lt_one
+#check @Orthemology.Tranche2.historyMass
+#print axioms Orthemology.Tranche2.historyMass
+#check @Orthemology.Tranche2.historyAffinity
+#print axioms Orthemology.Tranche2.historyAffinity
+#check @Orthemology.Tranche2.historyMass_nonneg
+#print axioms Orthemology.Tranche2.historyMass_nonneg
+#check @Orthemology.Tranche2.historyAffinity_nonneg
+#print axioms Orthemology.Tranche2.historyAffinity_nonneg
+#check @Orthemology.Tranche2.historyAffinity_branch_sum
+#print axioms Orthemology.Tranche2.historyAffinity_branch_sum
+#check @Orthemology.Tranche2.levelMass
+#print axioms Orthemology.Tranche2.levelMass
+#check @Orthemology.Tranche2.levelMass_normalized
+#print axioms Orthemology.Tranche2.levelMass_normalized
+#check @Orthemology.Tranche2.selectedCost
+#print axioms Orthemology.Tranche2.selectedCost
+#check @Orthemology.Tranche2.leafAffinity
+#print axioms Orthemology.Tranche2.leafAffinity
+#check @Orthemology.Tranche2.leafAffinity_nonneg
+#print axioms Orthemology.Tranche2.leafAffinity_nonneg
+#check @Orthemology.Tranche2.mass_le_affinity_of_le
+#print axioms Orthemology.Tranche2.mass_le_affinity_of_le
+#check @Orthemology.Tranche2.hellinger_tree_budget
+#print axioms Orthemology.Tranche2.hellinger_tree_budget
+#check @Orthemology.Tranche2.selectedCost_uniform_bound
+#print axioms Orthemology.Tranche2.selectedCost_uniform_bound
+#check @Orthemology.Tranche2.selectedCost_iSup_bound
+#print axioms Orthemology.Tranche2.selectedCost_iSup_bound
+#check @Orthemology.Tranche2.affinity_sq_le_mass_product
+#print axioms Orthemology.Tranche2.affinity_sq_le_mass_product
+#check @Orthemology.Tranche2.affinity_le_one_subprob
+#print axioms Orthemology.Tranche2.affinity_le_one_subprob
+#check @Orthemology.Tranche2.affinity_lt_one_of_mass_lt_right
+#print axioms Orthemology.Tranche2.affinity_lt_one_of_mass_lt_right
+#check @Orthemology.Tranche2.killedLaw
+#print axioms Orthemology.Tranche2.killedLaw
+#check @Orthemology.Tranche2.killedLaw_nonneg
+#print axioms Orthemology.Tranche2.killedLaw_nonneg
+#check @Orthemology.Tranche2.killedLaw_le
+#print axioms Orthemology.Tranche2.killedLaw_le
+#check @Orthemology.Tranche2.killedLaw_sum_le
+#print axioms Orthemology.Tranche2.killedLaw_sum_le
+#check @Orthemology.Tranche2.killedLaw_affinity_le
+#print axioms Orthemology.Tranche2.killedLaw_affinity_le
+#check @Orthemology.Tranche2.killedLaw_affinity_formula
+#print axioms Orthemology.Tranche2.killedLaw_affinity_formula
+#check @Orthemology.Tranche2.hellinger_subprob_tree_budget
+#print axioms Orthemology.Tranche2.hellinger_subprob_tree_budget
+#check @Orthemology.Tranche2.selectedCost_subprob_uniform_bound
+#print axioms Orthemology.Tranche2.selectedCost_subprob_uniform_bound
+#check @Orthemology.Tranche2.dHistoryMass
+#print axioms Orthemology.Tranche2.dHistoryMass
+#check @Orthemology.Tranche2.dHistoryAffinity
+#print axioms Orthemology.Tranche2.dHistoryAffinity
+#check @Orthemology.Tranche2.dHistoryMass_nonneg
+#print axioms Orthemology.Tranche2.dHistoryMass_nonneg
+#check @Orthemology.Tranche2.dHistoryAffinity_nonneg
+#print axioms Orthemology.Tranche2.dHistoryAffinity_nonneg
+#check @Orthemology.Tranche2.dHistoryAffinity_branch_sum
+#print axioms Orthemology.Tranche2.dHistoryAffinity_branch_sum
+#check @Orthemology.Tranche2.dLevelMass
+#print axioms Orthemology.Tranche2.dLevelMass
+#check @Orthemology.Tranche2.dLevelMass_normalized
+#print axioms Orthemology.Tranche2.dLevelMass_normalized
+#check @Orthemology.Tranche2.dSelectedCost
+#print axioms Orthemology.Tranche2.dSelectedCost
+#check @Orthemology.Tranche2.dLeafAffinity
+#print axioms Orthemology.Tranche2.dLeafAffinity
+#check @Orthemology.Tranche2.dLeafAffinity_nonneg
+#print axioms Orthemology.Tranche2.dLeafAffinity_nonneg
+#check @Orthemology.Tranche2.dMass_le_affinity_of_le
+#print axioms Orthemology.Tranche2.dMass_le_affinity_of_le
+#check @Orthemology.Tranche2.dependent_hellinger_tree_budget
+#print axioms Orthemology.Tranche2.dependent_hellinger_tree_budget
+#check @Orthemology.Tranche2.dSelectedCost_subprob_uniform_bound
+#print axioms Orthemology.Tranche2.dSelectedCost_subprob_uniform_bound
+#check @Orthemology.Tranche2.PhaseHistory
+#print axioms Orthemology.Tranche2.PhaseHistory
+#check @Orthemology.Tranche2.continuingKernel
+#print axioms Orthemology.Tranche2.continuingKernel
+#check @Orthemology.Tranche2.resetCost
+#print axioms Orthemology.Tranche2.resetCost
+#check @Orthemology.Tranche2.resetCost_bound
+#print axioms Orthemology.Tranche2.resetCost_bound
+#check @Orthemology.Tranche2.resetCost_root_bound
+#print axioms Orthemology.Tranche2.resetCost_root_bound
+#check @Orthemology.Tranche2.resetLeafMass
+#print axioms Orthemology.Tranche2.resetLeafMass
+#check @Orthemology.Tranche2.resetLeafMass_normalized
+#print axioms Orthemology.Tranche2.resetLeafMass_normalized
+#check @Orthemology.Tranche2.resetLeafCost
+#print axioms Orthemology.Tranche2.resetLeafCost
+#check @Orthemology.Tranche2.resetLeafCost_eq_budget
+#print axioms Orthemology.Tranche2.resetLeafCost_eq_budget
+#check @Orthemology.Tranche2.ResetState
+#print axioms Orthemology.Tranche2.ResetState
+#check @Orthemology.Tranche2.resetStateMeasurableSpace
+#print axioms Orthemology.Tranche2.resetStateMeasurableSpace
+#check @Orthemology.Tranche2.resetUpdate
+#print axioms Orthemology.Tranche2.resetUpdate
+#check @Orthemology.Tranche2.observationPMF
+#print axioms Orthemology.Tranche2.observationPMF
+#check @Orthemology.Tranche2.resetTransitionPMF
+#print axioms Orthemology.Tranche2.resetTransitionPMF
+#check @Orthemology.Tranche2.resetTransitionKernel
+#print axioms Orthemology.Tranche2.resetTransitionKernel
+#check @Orthemology.Tranche2.resetTransitionKernel_markov
+#print axioms Orthemology.Tranche2.resetTransitionKernel_markov
+#check @Orthemology.Tranche2.markovKernelSequence
+#print axioms Orthemology.Tranche2.markovKernelSequence
+#check @Orthemology.Tranche2.markovKernelSequence_markov
+#print axioms Orthemology.Tranche2.markovKernelSequence_markov
+#check @Orthemology.Tranche2.markovTrajectory
+#print axioms Orthemology.Tranche2.markovTrajectory
+#check @Orthemology.Tranche2.markovTrajectory_probability
+#print axioms Orthemology.Tranche2.markovTrajectory_probability
+#check @Orthemology.Tranche2.markovTrajectory_finite_law
+#print axioms Orthemology.Tranche2.markovTrajectory_finite_law
+#check @Orthemology.Tranche2.markovExpectedCharge
+#print axioms Orthemology.Tranche2.markovExpectedCharge
+#check @Orthemology.Tranche2.pathCharge
+#print axioms Orthemology.Tranche2.pathCharge
+#check @Orthemology.Tranche2.pathCharge_measurable
+#print axioms Orthemology.Tranche2.pathCharge_measurable
+#check @Orthemology.Tranche2.pathCharge_succ
+#print axioms Orthemology.Tranche2.pathCharge_succ
+#check @Orthemology.Tranche2.lmarginal_next_coordinate
+#print axioms Orthemology.Tranche2.lmarginal_next_coordinate
+#check @Orthemology.Tranche2.lmarginal_current_plus
+#print axioms Orthemology.Tranche2.lmarginal_current_plus
+#check @Orthemology.Tranche2.lmarginal_pathCharge
+#print axioms Orthemology.Tranche2.lmarginal_pathCharge
+#check @Orthemology.Tranche2.markovTrajectory_expected_charge
+#print axioms Orthemology.Tranche2.markovTrajectory_expected_charge
+#check @HiddenParity.Recurrence.transitionPMF
+#print axioms HiddenParity.Recurrence.transitionPMF
+#check @HiddenParity.Recurrence.transitionKernel
+#print axioms HiddenParity.Recurrence.transitionKernel
+#check @HiddenParity.Recurrence.transitionKernel_markov
+#print axioms HiddenParity.Recurrence.transitionKernel_markov
+#check @HiddenParity.Recurrence.transitionKernel_singleton
+#print axioms HiddenParity.Recurrence.transitionKernel_singleton
+#check @HiddenParity.Recurrence.lintegral_transition_ofReal
+#print axioms HiddenParity.Recurrence.lintegral_transition_ofReal
+#check @HiddenParity.Recurrence.pathAvoid
+#print axioms HiddenParity.Recurrence.pathAvoid
+#check @HiddenParity.Recurrence.pathAvoid_measurable
+#print axioms HiddenParity.Recurrence.pathAvoid_measurable
+#check @HiddenParity.Recurrence.pathAvoid_depends
+#print axioms HiddenParity.Recurrence.pathAvoid_depends
+#check @HiddenParity.Recurrence.lmarginal_current_if
+#print axioms HiddenParity.Recurrence.lmarginal_current_if
+#check @HiddenParity.Recurrence.lmarginal_pathAvoid
+#print axioms HiddenParity.Recurrence.lmarginal_pathAvoid
+#check @HiddenParity.Recurrence.trajectory_integral_prefix
+#print axioms HiddenParity.Recurrence.trajectory_integral_prefix
+#check @HiddenParity.Recurrence.trajectory_interval_avoidance_bound
+#print axioms HiddenParity.Recurrence.trajectory_interval_avoidance_bound
+#check @HiddenParity.Recurrence.AvoidInterval
+#print axioms HiddenParity.Recurrence.AvoidInterval
+#check @HiddenParity.Recurrence.avoidIntervalDecidable
+#print axioms HiddenParity.Recurrence.avoidIntervalDecidable
+#check @HiddenParity.Recurrence.pathAvoid_eq_ite
+#print axioms HiddenParity.Recurrence.pathAvoid_eq_ite
+#check @HiddenParity.Recurrence.avoidInterval_measurable
+#print axioms HiddenParity.Recurrence.avoidInterval_measurable
+#check @HiddenParity.Recurrence.pathAvoid_eq_indicator
+#print axioms HiddenParity.Recurrence.pathAvoid_eq_indicator
+#check @HiddenParity.Recurrence.interval_avoidance_probability_le
+#print axioms HiddenParity.Recurrence.interval_avoidance_probability_le
+#check @HiddenParity.Recurrence.ForeverAvoid
+#print axioms HiddenParity.Recurrence.ForeverAvoid
+#check @HiddenParity.Recurrence.forever_avoid_null
+#print axioms HiddenParity.Recurrence.forever_avoid_null
+#check @HiddenParity.Recurrence.target_recurs_almost_surely
+#print axioms HiddenParity.Recurrence.target_recurs_almost_surely
+#check @HiddenParity.Recurrence.all_states_recur_almost_surely
+#print axioms HiddenParity.Recurrence.all_states_recur_almost_surely
+#check @HiddenParity.Recurrence.StationaryChoices
+#print axioms HiddenParity.Recurrence.StationaryChoices
+#check @HiddenParity.Recurrence.pairChain
+#print axioms HiddenParity.Recurrence.pairChain
+#check @HiddenParity.Recurrence.pairChain_edge
+#print axioms HiddenParity.Recurrence.pairChain_edge
+#check @HiddenParity.Recurrence.positiveSuccessors
+#print axioms HiddenParity.Recurrence.positiveSuccessors
+#check @HiddenParity.Recurrence.pairChain_strongly_connected
+#print axioms HiddenParity.Recurrence.pairChain_strongly_connected
+#check @HiddenParity.Recurrence.actionFiber
+#print axioms HiddenParity.Recurrence.actionFiber
+#check @HiddenParity.Recurrence.actionFiber_nonempty
+#print axioms HiddenParity.Recurrence.actionFiber_nonempty
+#check @HiddenParity.Recurrence.uniformWeight
+#print axioms HiddenParity.Recurrence.uniformWeight
+#check @HiddenParity.Recurrence.uniformWeight_positive
+#print axioms HiddenParity.Recurrence.uniformWeight_positive
+#check @HiddenParity.Recurrence.uniformChoices
+#print axioms HiddenParity.Recurrence.uniformChoices
+#check @HiddenParity.Recurrence.pairReadout
+#print axioms HiddenParity.Recurrence.pairReadout
+#check @HiddenParity.Recurrence.pairReadout_measurable
+#print axioms HiddenParity.Recurrence.pairReadout_measurable
+#check @HiddenParity.Recurrence.operatingPairLaw
+#print axioms HiddenParity.Recurrence.operatingPairLaw
+#check @HiddenParity.Recurrence.operatingPairLaw_probability
+#print axioms HiddenParity.Recurrence.operatingPairLaw_probability
+#check @HiddenParity.Recurrence.stationary_component_all_pairs_recur
+#print axioms HiddenParity.Recurrence.stationary_component_all_pairs_recur
+#check @HiddenParity.Recurrence.PairParitySuccess
+#print axioms HiddenParity.Recurrence.PairParitySuccess
+#check @HiddenParity.Recurrence.stationary_component_parity
+#print axioms HiddenParity.Recurrence.stationary_component_parity
+#check @HiddenParity.Recurrence.uniform_component_parity
+#print axioms HiddenParity.Recurrence.uniform_component_parity
+#check @HiddenParity.Recurrence.endComponent_successor_congr
+#print axioms HiddenParity.Recurrence.endComponent_successor_congr
+#check @HiddenParity.Recurrence.realProbability
+#print axioms HiddenParity.Recurrence.realProbability
+#check @HiddenParity.Recurrence.realProbability_nonnegative
+#print axioms HiddenParity.Recurrence.realProbability_nonnegative
+#check @HiddenParity.Recurrence.realProbability_normalized
+#print axioms HiddenParity.Recurrence.realProbability_normalized
+#check @HiddenParity.Recurrence.positiveSuccessors_eq_internal
+#print axioms HiddenParity.Recurrence.positiveSuccessors_eq_internal
+#check @HiddenParity.Recurrence.uniformMarkovOperation
+#print axioms HiddenParity.Recurrence.uniformMarkovOperation
+#check @HiddenParity.Recurrence.matching_component_closed
+#print axioms HiddenParity.Recurrence.matching_component_closed
+#check @HiddenParity.Recurrence.qualifying_uniform_wins_matching
+#print axioms HiddenParity.Recurrence.qualifying_uniform_wins_matching
+#check @HiddenParity.Recurrence.qualifying_uniform_all_pairs_recur
+#print axioms HiddenParity.Recurrence.qualifying_uniform_all_pairs_recur
+#check @HiddenParity.Recurrence.computed_target_uniform_certificate
+#print axioms HiddenParity.Recurrence.computed_target_uniform_certificate
+#check @HiddenParity.Adaptive.markovPairLaw
+#print axioms HiddenParity.Adaptive.markovPairLaw
+#check @HiddenParity.Adaptive.stable_support_parity_qualifying_component
+#print axioms HiddenParity.Adaptive.stable_support_parity_qualifying_component
+#check @HiddenParity.Adaptive.stable_support_computed_targets_nonempty
+#print axioms HiddenParity.Adaptive.stable_support_computed_targets_nonempty
+#check @HiddenParity.Adaptive.stable_support_path_to_computed_target
+#print axioms HiddenParity.Adaptive.stable_support_path_to_computed_target
+#check @HiddenParity.Adaptive.support_preserving_policy_path_to_target
+#print axioms HiddenParity.Adaptive.support_preserving_policy_path_to_target
+#check @HiddenParity.Stage.liveUpdate
+#print axioms HiddenParity.Stage.liveUpdate
+#check @HiddenParity.Stage.mem_liveUpdate
+#print axioms HiddenParity.Stage.mem_liveUpdate
+#check @HiddenParity.Stage.liveUpdate_eq_iff_internal
+#print axioms HiddenParity.Stage.liveUpdate_eq_iff_internal
+#check @HiddenParity.Stage.liveUpdate_nonempty_of_true_positive
+#print axioms HiddenParity.Stage.liveUpdate_nonempty_of_true_positive
+#check @HiddenParity.Stage.liveUpdate_strict_of_noninternal
+#print axioms HiddenParity.Stage.liveUpdate_strict_of_noninternal
+#check @HiddenParity.Stage.ReachableExit
+#print axioms HiddenParity.Stage.ReachableExit
+#check @HiddenParity.Stage.SameSupportPrefix
+#print axioms HiddenParity.Stage.SameSupportPrefix
+#check @HiddenParity.Stage.winning_policy_target_or_exit
+#print axioms HiddenParity.Stage.winning_policy_target_or_exit
+#check @HiddenParity.ResidualSeed.CompatibleSeeds
+#print axioms HiddenParity.ResidualSeed.CompatibleSeeds
+#check @HiddenParity.ResidualSeed.compatibleSeedsDecidable
+#print axioms HiddenParity.ResidualSeed.compatibleSeedsDecidable
+#check @HiddenParity.ResidualSeed.PrefixEvent
+#print axioms HiddenParity.ResidualSeed.PrefixEvent
+#check @HiddenParity.ResidualSeed.CanonicalInput
+#print axioms HiddenParity.ResidualSeed.CanonicalInput
+#check @HiddenParity.ResidualSeed.RowLikelihood
+#print axioms HiddenParity.ResidualSeed.RowLikelihood
+#check @HiddenParity.ResidualSeed.normalizedRestriction
+#print axioms HiddenParity.ResidualSeed.normalizedRestriction
+#check @HiddenParity.ResidualSeed.seedPosterior
+#print axioms HiddenParity.ResidualSeed.seedPosterior
+#check @HiddenParity.ResidualSeed.commonSeedPosterior
+#print axioms HiddenParity.ResidualSeed.commonSeedPosterior
+#check @HiddenParity.ResidualSeed.compatibleSeeds_measurable
+#print axioms HiddenParity.ResidualSeed.compatibleSeeds_measurable
+#check @HiddenParity.ResidualSeed.prefixEvent_measurable
+#print axioms HiddenParity.ResidualSeed.prefixEvent_measurable
+#check @HiddenParity.ResidualSeed.prefixEvent_fiber
+#print axioms HiddenParity.ResidualSeed.prefixEvent_fiber
+#check @HiddenParity.ResidualSeed.fixed_seed_likelihood
+#print axioms HiddenParity.ResidualSeed.fixed_seed_likelihood
+#check @HiddenParity.ResidualSeed.seed_history_joint_probability
+#print axioms HiddenParity.ResidualSeed.seed_history_joint_probability
+#check @HiddenParity.ResidualSeed.prefix_probability
+#print axioms HiddenParity.ResidualSeed.prefix_probability
+#check @HiddenParity.ResidualSeed.restricted_seed_law
+#print axioms HiddenParity.ResidualSeed.restricted_seed_law
+#check @HiddenParity.ResidualSeed.rowLikelihood_ne_top
+#print axioms HiddenParity.ResidualSeed.rowLikelihood_ne_top
+#check @HiddenParity.ResidualSeed.seedPosterior_eq_common
+#print axioms HiddenParity.ResidualSeed.seedPosterior_eq_common
+#check @HiddenParity.ResidualSeed.canonicalInput_probability
+#print axioms HiddenParity.ResidualSeed.canonicalInput_probability
+#check @HiddenParity.ResidualSeed.positive_prefix_compatible_seeds
+#print axioms HiddenParity.ResidualSeed.positive_prefix_compatible_seeds
+#check @HiddenParity.ResidualSeed.rowLikelihood_pos
+#print axioms HiddenParity.ResidualSeed.rowLikelihood_pos
+#check @HiddenParity.ResidualSeed.surviving_model_prefix_positive
+#print axioms HiddenParity.ResidualSeed.surviving_model_prefix_positive
+#check @HiddenParity.ResidualSeed.commonSeedPosterior_probability
+#print axioms HiddenParity.ResidualSeed.commonSeedPosterior_probability
+#check @HiddenParity.ResidualSeed.posterior_equality_of_positive_prefixes
+#print axioms HiddenParity.ResidualSeed.posterior_equality_of_positive_prefixes
+#check @HiddenParity.ResidualSeed.restartPolicy
+#print axioms HiddenParity.ResidualSeed.restartPolicy
+#check @HiddenParity.ResidualSeed.restartPolicy_measurable
+#print axioms HiddenParity.ResidualSeed.restartPolicy_measurable
+#check @HiddenParity.ResidualSeed.compatible_append
+#print axioms HiddenParity.ResidualSeed.compatible_append
+#check @HiddenParity.ResidualSeed.observed_prefix_mass_eq_input
+#print axioms HiddenParity.ResidualSeed.observed_prefix_mass_eq_input
+#check @HiddenParity.ResidualSeed.empty_prefix_seedPosterior
+#print axioms HiddenParity.ResidualSeed.empty_prefix_seedPosterior
+#check @HiddenParity.ResidualSeed.impossible_prefix_seedPosterior
+#print axioms HiddenParity.ResidualSeed.impossible_prefix_seedPosterior
+#check @HiddenParity.ResidualSeed.Continuation.rowLikelihood_cons
+#print axioms HiddenParity.ResidualSeed.Continuation.rowLikelihood_cons
+#check @HiddenParity.ResidualSeed.Continuation.rowLikelihood_append
+#print axioms HiddenParity.ResidualSeed.Continuation.rowLikelihood_append
+#check @HiddenParity.ResidualSeed.Continuation.prefixEvent_append_subset
+#print axioms HiddenParity.ResidualSeed.Continuation.prefixEvent_append_subset
+#check @HiddenParity.ResidualSeed.Continuation.compatibleSeeds_append
+#print axioms HiddenParity.ResidualSeed.Continuation.compatibleSeeds_append
+#check @HiddenParity.ResidualSeed.Continuation.conditional_extension_probability
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_extension_probability
+#check @HiddenParity.ResidualSeed.Continuation.conditional_extension_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_extension_eq
+#check @HiddenParity.ResidualSeed.Continuation.continuationHistory
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationHistory
+#check @HiddenParity.ResidualSeed.Continuation.continuationHistory_measurable
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationHistory_measurable
+#check @HiddenParity.ResidualSeed.Continuation.continuationHistory_length
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationHistory_length
+#check @HiddenParity.ResidualSeed.Continuation.continuationHistory_drop
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationHistory_drop
+#check @HiddenParity.ResidualSeed.Continuation.actual_history_eq_continuation_append
+#print axioms HiddenParity.ResidualSeed.Continuation.actual_history_eq_continuation_append
+#check @HiddenParity.ResidualSeed.Continuation.continuation_event_inter_prefix
+#print axioms HiddenParity.ResidualSeed.Continuation.continuation_event_inter_prefix
+#check @HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw
+#print axioms HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw
+#check @HiddenParity.ResidualSeed.Continuation.conditional_continuation_marginal
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_continuation_marginal
+#check @HiddenParity.ResidualSeed.Continuation.conditional_continuation_marginal_eq_restart
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_continuation_marginal_eq_restart
+#check @HiddenParity.ResidualSeed.Continuation.conditional_prefix_map_from_last
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_prefix_map_from_last
+#check @HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw_eq_restart
+#print axioms HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw_eq_restart
+#check @HiddenParity.ResidualSeed.Continuation.continuationReadout
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationReadout
+#check @HiddenParity.ResidualSeed.Continuation.continuationReadout_measurable
+#print axioms HiddenParity.ResidualSeed.Continuation.continuationReadout_measurable
+#check @HiddenParity.ResidualSeed.Continuation.normalizedRestriction_map_preimage
+#print axioms HiddenParity.ResidualSeed.Continuation.normalizedRestriction_map_preimage
+#check @HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw_eq_conditioned_observation
+#print axioms HiddenParity.ResidualSeed.Continuation.conditionalContinuationLaw_eq_conditioned_observation
+#check @HiddenParity.ResidualSeed.normalized_product_rectangle
+#print axioms HiddenParity.ResidualSeed.normalized_product_rectangle
+#check @HiddenParity.ResidualSeed.FeedbackEvent
+#print axioms HiddenParity.ResidualSeed.FeedbackEvent
+#check @HiddenParity.ResidualSeed.feedbackEvent_measurable
+#print axioms HiddenParity.ResidualSeed.feedbackEvent_measurable
+#check @HiddenParity.ResidualSeed.posterior_input_product
+#print axioms HiddenParity.ResidualSeed.posterior_input_product
+#check @HiddenParity.ResidualSeed.posterior_seed_feedback_pushforward
+#print axioms HiddenParity.ResidualSeed.posterior_seed_feedback_pushforward
+#check @HiddenParity.ResidualSeed.unusedOracleTail
+#print axioms HiddenParity.ResidualSeed.unusedOracleTail
+#check @HiddenParity.ResidualSeed.unusedOracleTail_measurable
+#print axioms HiddenParity.ResidualSeed.unusedOracleTail_measurable
+#check @HiddenParity.ResidualSeed.posterior_seed_unused_tail_product
+#print axioms HiddenParity.ResidualSeed.posterior_seed_unused_tail_product
+#check @HiddenParity.ResidualSeed.SurvivesHistory
+#print axioms HiddenParity.ResidualSeed.SurvivesHistory
+#check @HiddenParity.ResidualSeed.markovSeedPosterior
+#print axioms HiddenParity.ResidualSeed.markovSeedPosterior
+#check @HiddenParity.ResidualSeed.markov_observed_prefix_mass
+#print axioms HiddenParity.ResidualSeed.markov_observed_prefix_mass
+#check @HiddenParity.ResidualSeed.markov_common_residual_seed
+#print axioms HiddenParity.ResidualSeed.markov_common_residual_seed
+#check @HiddenParity.ResidualSeed.restart_pairPolicy_agrees
+#print axioms HiddenParity.ResidualSeed.restart_pairPolicy_agrees
+#check @HiddenParity.ResidualSeed.markov_restartPolicy_measurable
+#print axioms HiddenParity.ResidualSeed.markov_restartPolicy_measurable
+#check @HiddenParity.ResidualSeed.Continuation.conditional_killed_continuation_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_killed_continuation_eq
+#check @HiddenParity.ResidualSeed.Continuation.conditional_continuation_restrict_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_continuation_restrict_eq
+#check @HiddenParity.ResidualSeed.Continuation.conditional_surviving_recurrent_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_surviving_recurrent_eq
+#check @HiddenParity.ResidualSeed.Continuation.conditionalMarkovContinuationLaw
+#print axioms HiddenParity.ResidualSeed.Continuation.conditionalMarkovContinuationLaw
+#check @HiddenParity.ResidualSeed.Continuation.conditionalMarkovContinuationLaw_eq_restart
+#print axioms HiddenParity.ResidualSeed.Continuation.conditionalMarkovContinuationLaw_eq_restart
+#check @HiddenParity.ResidualSeed.Continuation.conditional_markov_killed_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_markov_killed_eq
+#check @HiddenParity.ResidualSeed.Continuation.conditional_markov_surviving_recurrent_eq
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_markov_surviving_recurrent_eq
+#check @HiddenParity.Necessity.liveHistory
+#print axioms HiddenParity.Necessity.liveHistory
+#check @HiddenParity.Necessity.mem_liveHistory
+#print axioms HiddenParity.Necessity.mem_liveHistory
+#check @HiddenParity.Necessity.liveHistory_nil
+#print axioms HiddenParity.Necessity.liveHistory_nil
+#check @HiddenParity.Necessity.liveHistory_subset
+#print axioms HiddenParity.Necessity.liveHistory_subset
+#check @HiddenParity.Necessity.liveHistory_cons
+#print axioms HiddenParity.Necessity.liveHistory_cons
+#check @HiddenParity.Necessity.liveHistory_append
+#print axioms HiddenParity.Necessity.liveHistory_append
+#check @HiddenParity.Necessity.liveHistory_survives
+#print axioms HiddenParity.Necessity.liveHistory_survives
+#check @HiddenParity.Necessity.currentState_append
+#print axioms HiddenParity.Necessity.currentState_append
+#check @HiddenParity.Necessity.Lawful
+#print axioms HiddenParity.Necessity.Lawful
+#check @HiddenParity.Necessity.commonPosterior_ae_of_original
+#print axioms HiddenParity.Necessity.commonPosterior_ae_of_original
+#check @HiddenParity.Necessity.commonPosterior_compatible
+#print axioms HiddenParity.Necessity.commonPosterior_compatible
+#check @HiddenParity.Necessity.lawful_restart
+#print axioms HiddenParity.Necessity.lawful_restart
+#check @HiddenParity.Necessity.IllegalPrefixEvent
+#print axioms HiddenParity.Necessity.IllegalPrefixEvent
+#check @HiddenParity.Necessity.illegal_prefix_factorization
+#print axioms HiddenParity.Necessity.illegal_prefix_factorization
+#check @HiddenParity.Necessity.live_model_rowLikelihood_positive
+#print axioms HiddenParity.Necessity.live_model_rowLikelihood_positive
+#check @HiddenParity.Necessity.positive_prefix_mem_live
+#print axioms HiddenParity.Necessity.positive_prefix_mem_live
+#check @HiddenParity.Necessity.lawful_iff_illegal_prefix_probability_zero
+#print axioms HiddenParity.Necessity.lawful_iff_illegal_prefix_probability_zero
+#check @HiddenParity.Necessity.lawful_iff_positive_prefix_legal
+#print axioms HiddenParity.Necessity.lawful_iff_positive_prefix_legal
+#check @HiddenParity.Adaptive.recurs_shift_iff
+#print axioms HiddenParity.Adaptive.recurs_shift_iff
+#check @HiddenParity.Adaptive.recurrentSet_shift
+#print axioms HiddenParity.Adaptive.recurrentSet_shift
+#check @HiddenParity.Adaptive.paritySuccess_shift_iff
+#print axioms HiddenParity.Adaptive.paritySuccess_shift_iff
+#check @HiddenParity.ResidualSeed.Continuation.action_continuationReadout_shift
+#print axioms HiddenParity.ResidualSeed.Continuation.action_continuationReadout_shift
+#check @HiddenParity.ResidualSeed.Continuation.conditional_ae_of_prefix_imp
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_ae_of_prefix_imp
+#check @HiddenParity.ResidualSeed.Continuation.conditional_ae_tail_property
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_ae_tail_property
+#check @HiddenParity.ResidualSeed.Continuation.conditional_ae_parity
+#print axioms HiddenParity.ResidualSeed.Continuation.conditional_ae_parity
+#check @HiddenParity.ResidualSeed.Continuation.markov_restart_ae_of_prefix_imp
+#print axioms HiddenParity.ResidualSeed.Continuation.markov_restart_ae_of_prefix_imp
+#check @HiddenParity.ResidualSeed.Continuation.markov_restart_ae_tail_property
+#print axioms HiddenParity.ResidualSeed.Continuation.markov_restart_ae_tail_property
+#check @HiddenParity.ResidualSeed.Continuation.markov_restart_ae_parity
+#print axioms HiddenParity.ResidualSeed.Continuation.markov_restart_ae_parity
+#check @HiddenParity.ResidualSeed.Continuation.matching_rival_even_after_positive_prefix
+#print axioms HiddenParity.ResidualSeed.Continuation.matching_rival_even_after_positive_prefix
+#check @HiddenParity.Necessity.WinningPolicy
+#print axioms HiddenParity.Necessity.WinningPolicy
+#check @HiddenParity.Necessity.SemanticWinning
+#print axioms HiddenParity.Necessity.SemanticWinning
+#check @HiddenParity.Necessity.semanticRegion
+#print axioms HiddenParity.Necessity.semanticRegion
+#check @HiddenParity.Necessity.mem_semanticRegion
+#print axioms HiddenParity.Necessity.mem_semanticRegion
+#check @HiddenParity.Necessity.restartWinningPolicy
+#print axioms HiddenParity.Necessity.restartWinningPolicy
+#check @HiddenParity.Necessity.semanticWinning_at_positive_history
+#print axioms HiddenParity.Necessity.semanticWinning_at_positive_history
+#check @HiddenParity.Necessity.winningPolicy_pair_parity
+#print axioms HiddenParity.Necessity.winningPolicy_pair_parity
+#check @HiddenParity.Necessity.SemanticSafe
+#print axioms HiddenParity.Necessity.SemanticSafe
+#check @HiddenParity.Necessity.semanticAllowed
+#print axioms HiddenParity.Necessity.semanticAllowed
+#check @HiddenParity.Necessity.mem_semanticAllowed
+#print axioms HiddenParity.Necessity.mem_semanticAllowed
+#check @HiddenParity.Necessity.positive_action_branch_safe
+#print axioms HiddenParity.Necessity.positive_action_branch_safe
+#check @HiddenParity.Necessity.winning_policy_safe_at_same_support_history
+#print axioms HiddenParity.Necessity.winning_policy_safe_at_same_support_history
+#check @HiddenParity.Necessity.stack_history_succ
+#print axioms HiddenParity.Necessity.stack_history_succ
+#check @HiddenParity.Necessity.stack_history_compatible
+#print axioms HiddenParity.Necessity.stack_history_compatible
+#check @HiddenParity.Necessity.stack_liveHistory_of_same_prefix
+#print axioms HiddenParity.Necessity.stack_liveHistory_of_same_prefix
+#check @HiddenParity.Necessity.sameSupportPrefix_measurable
+#print axioms HiddenParity.Necessity.sameSupportPrefix_measurable
+#check @HiddenParity.Necessity.allowed_until_exit_measurable
+#print axioms HiddenParity.Necessity.allowed_until_exit_measurable
+#check @HiddenParity.Necessity.winningPolicy_safe_until_exit
+#print axioms HiddenParity.Necessity.winningPolicy_safe_until_exit
+#check @HiddenParity.Necessity.semantic_winning_target_or_exit
+#print axioms HiddenParity.Necessity.semantic_winning_target_or_exit
+#check @HiddenParity.Sufficiency.observedState
+#print axioms HiddenParity.Sufficiency.observedState
+#check @HiddenParity.Sufficiency.historyVisits
+#print axioms HiddenParity.Sufficiency.historyVisits
+#check @HiddenParity.Sufficiency.retainedActions
+#print axioms HiddenParity.Sufficiency.retainedActions
+#check @HiddenParity.Sufficiency.mem_retainedActions
+#print axioms HiddenParity.Sufficiency.mem_retainedActions
+#check @HiddenParity.Sufficiency.retainedActions_nonempty
+#print axioms HiddenParity.Sufficiency.retainedActions_nonempty
+#check @HiddenParity.Sufficiency.roundRobinPolicy
+#print axioms HiddenParity.Sufficiency.roundRobinPolicy
+#check @HiddenParity.Sufficiency.roundRobinPolicy_measurable
+#print axioms HiddenParity.Sufficiency.roundRobinPolicy_measurable
+#check @HiddenParity.Sufficiency.observedState_erase
+#print axioms HiddenParity.Sufficiency.observedState_erase
+#check @HiddenParity.Sufficiency.roundRobin_pair_mem
+#print axioms HiddenParity.Sufficiency.roundRobin_pair_mem
+#check @HiddenParity.Sufficiency.stack_historyVisits
+#print axioms HiddenParity.Sufficiency.stack_historyVisits
+#check @HiddenParity.Sufficiency.stack_roundRobin_action
+#print axioms HiddenParity.Sufficiency.stack_roundRobin_action
+#check @HiddenParity.Sufficiency.stack_roundRobin_fair
+#print axioms HiddenParity.Sufficiency.stack_roundRobin_fair
+#check @HiddenParity.Sufficiency.fair_closed_subset_eq
+#print axioms HiddenParity.Sufficiency.fair_closed_subset_eq
+#check @HiddenParity.Sufficiency.stack_roundRobin_retained
+#print axioms HiddenParity.Sufficiency.stack_roundRobin_retained
+#check @HiddenParity.Sufficiency.roundRobin_actionLaw_recurrent
+#print axioms HiddenParity.Sufficiency.roundRobin_actionLaw_recurrent
+#check @HiddenParity.Sufficiency.roundRobin_markov_recurrent
+#print axioms HiddenParity.Sufficiency.roundRobin_markov_recurrent
+#check @HiddenParity.Necessity.reachDecidable
+#print axioms HiddenParity.Necessity.reachDecidable
+#check @HiddenParity.Necessity.reachableExitDecidable
+#print axioms HiddenParity.Necessity.reachableExitDecidable
+#check @HiddenParity.Necessity.regionAllowed
+#print axioms HiddenParity.Necessity.regionAllowed
+#check @HiddenParity.Necessity.mem_regionAllowed
+#print axioms HiddenParity.Necessity.mem_regionAllowed
+#check @HiddenParity.Necessity.regionStep
+#print axioms HiddenParity.Necessity.regionStep
+#check @HiddenParity.Necessity.mem_regionStep
+#print axioms HiddenParity.Necessity.mem_regionStep
+#check @HiddenParity.Necessity.descend
+#print axioms HiddenParity.Necessity.descend
+#check @HiddenParity.Necessity.computedRegion
+#print axioms HiddenParity.Necessity.computedRegion
+#check @HiddenParity.Necessity.winningRegion
+#print axioms HiddenParity.Necessity.winningRegion
+#check @HiddenParity.Necessity.regionAllowed_mono
+#print axioms HiddenParity.Necessity.regionAllowed_mono
+#check @HiddenParity.Necessity.targetStates_mono
+#print axioms HiddenParity.Necessity.targetStates_mono
+#check @HiddenParity.Necessity.reachableExit_mono
+#print axioms HiddenParity.Necessity.reachableExit_mono
+#check @HiddenParity.Necessity.regionStep_subset
+#print axioms HiddenParity.Necessity.regionStep_subset
+#check @HiddenParity.Necessity.regionStep_mono
+#print axioms HiddenParity.Necessity.regionStep_mono
+#check @HiddenParity.Necessity.postfixed_subset_descend
+#print axioms HiddenParity.Necessity.postfixed_subset_descend
+#check @HiddenParity.Necessity.descend_eq_of_stable
+#print axioms HiddenParity.Necessity.descend_eq_of_stable
+#check @HiddenParity.Necessity.descend_stable
+#print axioms HiddenParity.Necessity.descend_stable
+#check @HiddenParity.Necessity.computedRegion_fixed_stage
+#print axioms HiddenParity.Necessity.computedRegion_fixed_stage
+#check @HiddenParity.Necessity.regionAllowed_congr_lower
+#print axioms HiddenParity.Necessity.regionAllowed_congr_lower
+#check @HiddenParity.Necessity.regionStep_congr_lower
+#print axioms HiddenParity.Necessity.regionStep_congr_lower
+#check @HiddenParity.Necessity.computedRegion_fuel_irrelevant
+#print axioms HiddenParity.Necessity.computedRegion_fuel_irrelevant
+#check @HiddenParity.Necessity.winningRegion_fixed
+#print axioms HiddenParity.Necessity.winningRegion_fixed
+#check @HiddenParity.Necessity.semanticAllowed_subset_regionAllowed
+#print axioms HiddenParity.Necessity.semanticAllowed_subset_regionAllowed
+#check @HiddenParity.Necessity.semanticRegion_postfixed
+#print axioms HiddenParity.Necessity.semanticRegion_postfixed
+#check @HiddenParity.Necessity.semanticRegion_subset_computedRegion
+#print axioms HiddenParity.Necessity.semanticRegion_subset_computedRegion
+#check @HiddenParity.Necessity.winning_policy_mem_winningRegion
+#print axioms HiddenParity.Necessity.winning_policy_mem_winningRegion
+#check @HiddenParity.Necessity.computed_losing_excludes_common_policy
+#print axioms HiddenParity.Necessity.computed_losing_excludes_common_policy
+#check @HiddenParity.Sufficiency.qualifying_matching_actual_component
+#print axioms HiddenParity.Sufficiency.qualifying_matching_actual_component
+#check @HiddenParity.Sufficiency.qualifying_roundRobin_wins_matching
+#print axioms HiddenParity.Sufficiency.qualifying_roundRobin_wins_matching
+#check @HiddenParity.Sufficiency.compatible_roundRobin_live
+#print axioms HiddenParity.Sufficiency.compatible_roundRobin_live
+#check @HiddenParity.Sufficiency.roundRobin_lawful
+#print axioms HiddenParity.Sufficiency.roundRobin_lawful
+#check @HiddenParity.Sufficiency.matchingTargetWinningPolicy
+#print axioms HiddenParity.Sufficiency.matchingTargetWinningPolicy
+#check @HiddenParity.Sufficiency.computed_target_actual_policy
+#print axioms HiddenParity.Sufficiency.computed_target_actual_policy
+#check @HiddenParity.Sufficiency.computed_singleton_target_semanticWinning
+#print axioms HiddenParity.Sufficiency.computed_singleton_target_semanticWinning
+#check @HiddenParity.Sufficiency.reach_start_used
+#print axioms HiddenParity.Sufficiency.reach_start_used
+#check @HiddenParity.Sufficiency.winningRegion_safe_action_available
+#print axioms HiddenParity.Sufficiency.winningRegion_safe_action_available
+#check @HiddenParity.Sufficiency.stageActions
+#print axioms HiddenParity.Sufficiency.stageActions
+#check @HiddenParity.Sufficiency.stageTargets
+#print axioms HiddenParity.Sufficiency.stageTargets
+#check @HiddenParity.Sufficiency.chooseTarget
+#print axioms HiddenParity.Sufficiency.chooseTarget
+#check @HiddenParity.Sufficiency.chooseTarget_spec
+#print axioms HiddenParity.Sufficiency.chooseTarget_spec
+#check @HiddenParity.Sufficiency.stageActions_successor
+#print axioms HiddenParity.Sufficiency.stageActions_successor
+#check @HiddenParity.Sufficiency.NavigationGoal
+#print axioms HiddenParity.Sufficiency.NavigationGoal
+#check @HiddenParity.Sufficiency.navigationGoal_measurable
+#print axioms HiddenParity.Sufficiency.navigationGoal_measurable
+#check @HiddenParity.Sufficiency.fair_recurrent_reachable_closed
+#print axioms HiddenParity.Sufficiency.fair_recurrent_reachable_closed
+#check @HiddenParity.Sufficiency.fair_recurrent_hits_target
+#print axioms HiddenParity.Sufficiency.fair_recurrent_hits_target
+#check @HiddenParity.Sufficiency.eventual_cycle_fair
+#print axioms HiddenParity.Sufficiency.eventual_cycle_fair
+#check @HiddenParity.Sufficiency.eventual_support_noExit
+#print axioms HiddenParity.Sufficiency.eventual_support_noExit
+#check @HiddenParity.Sufficiency.recurrent_closed_transfer
+#print axioms HiddenParity.Sufficiency.recurrent_closed_transfer
+#check @HiddenParity.Sufficiency.eventual_operation_parity_or_mismatch
+#print axioms HiddenParity.Sufficiency.eventual_operation_parity_or_mismatch
+#check @HiddenParity.Sufficiency.eventual_navigation_has_recurrent_mismatch
+#print axioms HiddenParity.Sufficiency.eventual_navigation_has_recurrent_mismatch
+#check @HiddenParity.Sufficiency.augmentHistory
+#print axioms HiddenParity.Sufficiency.augmentHistory
+#check @HiddenParity.Sufficiency.augmentHistory_current
+#print axioms HiddenParity.Sufficiency.augmentHistory_current
+#check @HiddenParity.Sufficiency.augmentHistory_erase
+#print axioms HiddenParity.Sufficiency.augmentHistory_erase
+#check @HiddenParity.Sufficiency.augmentHistory_compatible
+#print axioms HiddenParity.Sufficiency.augmentHistory_compatible
+#check @HiddenParity.Sufficiency.PhaseMemory
+#print axioms HiddenParity.Sufficiency.PhaseMemory
+#check @HiddenParity.Sufficiency.phaseCandidate
+#print axioms HiddenParity.Sufficiency.phaseCandidate
+#check @HiddenParity.Sufficiency.normalizeMemory
+#print axioms HiddenParity.Sufficiency.normalizeMemory
+#check @HiddenParity.Sufficiency.activePairs
+#print axioms HiddenParity.Sufficiency.activePairs
+#check @HiddenParity.Sufficiency.advanceMemory
+#print axioms HiddenParity.Sufficiency.advanceMemory
+#check @HiddenParity.Sufficiency.phaseMemory
+#print axioms HiddenParity.Sufficiency.phaseMemory
+#check @HiddenParity.Sufficiency.currentMemory
+#print axioms HiddenParity.Sufficiency.currentMemory
+#check @HiddenParity.Sufficiency.generatedPhasePolicy
+#print axioms HiddenParity.Sufficiency.generatedPhasePolicy
+#check @HiddenParity.Sufficiency.generatedPhasePolicy_measurable
+#print axioms HiddenParity.Sufficiency.generatedPhasePolicy_measurable
+#check @HiddenParity.Sufficiency.MemoryValid
+#print axioms HiddenParity.Sufficiency.MemoryValid
+#check @HiddenParity.Sufficiency.normalizeMemory_index
+#print axioms HiddenParity.Sufficiency.normalizeMemory_index
+#check @HiddenParity.Sufficiency.normalizeMemory_valid
+#print axioms HiddenParity.Sufficiency.normalizeMemory_valid
+#check @HiddenParity.Sufficiency.valid_activePairs
+#print axioms HiddenParity.Sufficiency.valid_activePairs
+#check @HiddenParity.Sufficiency.advanceMemory_valid
+#print axioms HiddenParity.Sufficiency.advanceMemory_valid
+#check @HiddenParity.Sufficiency.generated_action_safe
+#print axioms HiddenParity.Sufficiency.generated_action_safe
+#check @HiddenParity.Sufficiency.generated_history_invariant
+#print axioms HiddenParity.Sufficiency.generated_history_invariant
+#check @HiddenParity.Sufficiency.generatedPhasePolicy_lawful
+#print axioms HiddenParity.Sufficiency.generatedPhasePolicy_lawful
+#check @HiddenParity.Sufficiency.stack_positive_successors_recur
+#print axioms HiddenParity.Sufficiency.stack_positive_successors_recur
+#check @HiddenParity.Sufficiency.stack_actual_recurrent_component
+#print axioms HiddenParity.Sufficiency.stack_actual_recurrent_component
+#check @HiddenParity.Sufficiency.stack_true_model_survives
+#print axioms HiddenParity.Sufficiency.stack_true_model_survives
+#check @HiddenParity.Sufficiency.finite_support_stabilizes
+#print axioms HiddenParity.Sufficiency.finite_support_stabilizes
+#check @HiddenParity.Sufficiency.stack_liveSupport_stabilizes
+#print axioms HiddenParity.Sufficiency.stack_liveSupport_stabilizes
+#check @HiddenParity.Sufficiency.runHistory
+#print axioms HiddenParity.Sufficiency.runHistory
+#check @HiddenParity.Sufficiency.runAction
+#print axioms HiddenParity.Sufficiency.runAction
+#check @HiddenParity.Sufficiency.runSupport
+#print axioms HiddenParity.Sufficiency.runSupport
+#check @HiddenParity.Sufficiency.runMemory
+#print axioms HiddenParity.Sufficiency.runMemory
+#check @HiddenParity.Sufficiency.runHistory_augment
+#print axioms HiddenParity.Sufficiency.runHistory_augment
+#check @HiddenParity.Sufficiency.runAction_source
+#print axioms HiddenParity.Sufficiency.runAction_source
+#check @HiddenParity.Sufficiency.runSupport_succ
+#print axioms HiddenParity.Sufficiency.runSupport_succ
+#check @HiddenParity.Sufficiency.runAction_cycle
+#print axioms HiddenParity.Sufficiency.runAction_cycle
+#check @HiddenParity.Sufficiency.runMemory_succ
+#print axioms HiddenParity.Sufficiency.runMemory_succ
+#check @HiddenParity.Sufficiency.run_invariant
+#print axioms HiddenParity.Sufficiency.run_invariant
+#check @HiddenParity.Sufficiency.advanceMemory_index_cases
+#print axioms HiddenParity.Sufficiency.advanceMemory_index_cases
+#check @HiddenParity.Sufficiency.advanceMemory_no_reject
+#print axioms HiddenParity.Sufficiency.advanceMemory_no_reject
+#check @HiddenParity.Sufficiency.advanceMemory_reject_index
+#print axioms HiddenParity.Sufficiency.advanceMemory_reject_index
+#check @HiddenParity.Sufficiency.advanceMemory_equal_index_retained
+#print axioms HiddenParity.Sufficiency.advanceMemory_equal_index_retained
+#check @HiddenParity.Sufficiency.normalizeMemory_some
+#print axioms HiddenParity.Sufficiency.normalizeMemory_some
+#check @HiddenParity.Sufficiency.normalizeMemory_none_avoids
+#print axioms HiddenParity.Sufficiency.normalizeMemory_none_avoids
+#check @HiddenParity.Sufficiency.runAction_mem_active
+#print axioms HiddenParity.Sufficiency.runAction_mem_active
+#check @HiddenParity.Sufficiency.run_phase_increment_cases
+#print axioms HiddenParity.Sufficiency.run_phase_increment_cases
+#check @HiddenParity.Sufficiency.run_constant_phase_test_false
+#print axioms HiddenParity.Sufficiency.run_constant_phase_test_false
+#check @HiddenParity.Sufficiency.run_constant_phase_mode_persists
+#print axioms HiddenParity.Sufficiency.run_constant_phase_mode_persists
+#check @HiddenParity.Sufficiency.run_true_candidate_no_increment
+#print axioms HiddenParity.Sufficiency.run_true_candidate_no_increment
+#check @HiddenParity.Empirical.symbolIndicator
+#print axioms HiddenParity.Empirical.symbolIndicator
+#check @HiddenParity.Empirical.rawFrequency
+#print axioms HiddenParity.Empirical.rawFrequency
+#check @HiddenParity.Empirical.rawFrequency_measurable
+#print axioms HiddenParity.Empirical.rawFrequency_measurable
+#check @HiddenParity.Empirical.seeded_symbol_integrable
+#print axioms HiddenParity.Empirical.seeded_symbol_integrable
+#check @HiddenParity.Empirical.seeded_symbol_integral
+#print axioms HiddenParity.Empirical.seeded_symbol_integral
+#check @HiddenParity.Empirical.seeded_rawFrequency_tendsto
+#print axioms HiddenParity.Empirical.seeded_rawFrequency_tendsto
+#check @HiddenParity.Empirical.seeded_all_rawFrequencies_tendsto
+#print axioms HiddenParity.Empirical.seeded_all_rawFrequencies_tendsto
+#check @HiddenParity.Empirical.RawTailDeviation
+#print axioms HiddenParity.Empirical.RawTailDeviation
+#check @HiddenParity.Empirical.rawTailDeviation_measurable
+#print axioms HiddenParity.Empirical.rawTailDeviation_measurable
+#check @HiddenParity.Empirical.rawTailDeviation_antitone
+#print axioms HiddenParity.Empirical.rawTailDeviation_antitone
+#check @HiddenParity.Empirical.raw_eventually_all_close
+#print axioms HiddenParity.Empirical.raw_eventually_all_close
+#check @HiddenParity.Empirical.rawTailDeviation_inter_null
+#print axioms HiddenParity.Empirical.rawTailDeviation_inter_null
+#check @HiddenParity.Empirical.rawTailDeviation_measure_tendsto_zero
+#print axioms HiddenParity.Empirical.rawTailDeviation_measure_tendsto_zero
+#check @HiddenParity.Empirical.exists_raw_burnin
+#print axioms HiddenParity.Empirical.exists_raw_burnin
+#check @HiddenParity.Empirical.exists_summable_raw_burnin
+#print axioms HiddenParity.Empirical.exists_summable_raw_burnin
+#check @HiddenParity.Empirical.exists_uniform_model_burnin
+#print axioms HiddenParity.Empirical.exists_uniform_model_burnin
+#check @HiddenParity.Empirical.exists_uniform_summable_burnin
+#print axioms HiddenParity.Empirical.exists_uniform_summable_burnin
+#check @HiddenParity.Empirical.historySymbolMass
+#print axioms HiddenParity.Empirical.historySymbolMass
+#check @HiddenParity.Empirical.historyFrequency
+#print axioms HiddenParity.Empirical.historyFrequency
+#check @HiddenParity.Empirical.historySymbolMass_nil
+#print axioms HiddenParity.Empirical.historySymbolMass_nil
+#check @HiddenParity.Empirical.historySymbolMass_cons
+#print axioms HiddenParity.Empirical.historySymbolMass_cons
+#check @HiddenParity.Empirical.stackHistoryTrajectory_succ_receipt
+#print axioms HiddenParity.Empirical.stackHistoryTrajectory_succ_receipt
+#check @HiddenParity.Empirical.historySymbolMass_eq_raw_sum
+#print axioms HiddenParity.Empirical.historySymbolMass_eq_raw_sum
+#check @HiddenParity.Empirical.historyFrequency_eq_rawFrequency
+#print axioms HiddenParity.Empirical.historyFrequency_eq_rawFrequency
+#check @HiddenParity.Empirical.recurrent_count_tendsto
+#print axioms HiddenParity.Empirical.recurrent_count_tendsto
+#check @HiddenParity.Empirical.historyFrequency_tendsto_of_recurrent
+#print axioms HiddenParity.Empirical.historyFrequency_tendsto_of_recurrent
+#check @HiddenParity.Empirical.observed_deviation_subset_raw
+#print axioms HiddenParity.Empirical.observed_deviation_subset_raw
+#check @HiddenParity.Empirical.seeded_observedFrequencies_tendsto
+#print axioms HiddenParity.Empirical.seeded_observedFrequencies_tendsto
+#check @HiddenParity.Empirical.observed_deviation_measure_le_raw
+#print axioms HiddenParity.Empirical.observed_deviation_measure_le_raw
+#check @HiddenParity.Empirical.historyFrequency_measurable
+#print axioms HiddenParity.Empirical.historyFrequency_measurable
+#check @HiddenParity.Empirical.countBefore_measurable
+#print axioms HiddenParity.Empirical.countBefore_measurable
+#check @HiddenParity.Empirical.observedFrequency_measurable
+#print axioms HiddenParity.Empirical.observedFrequency_measurable
+#check @HiddenParity.Empirical.observed_deviation_measurable
+#print axioms HiddenParity.Empirical.observed_deviation_measurable
+#check @HiddenParity.Empirical.seeded_uniform_observed_tail_good
+#print axioms HiddenParity.Empirical.seeded_uniform_observed_tail_good
+#check @HiddenParity.Empirical.seeded_true_phase_rejections_bounded
+#print axioms HiddenParity.Empirical.seeded_true_phase_rejections_bounded
+#check @HiddenParity.Empirical.recurrent_false_row_eventually_rejected
+#print axioms HiddenParity.Empirical.recurrent_false_row_eventually_rejected
+#check @HiddenParity.Empirical.seeded_false_rows_eventually_rejected
+#print axioms HiddenParity.Empirical.seeded_false_rows_eventually_rejected
+#check @HiddenParity.Sufficiency.finite_row_separation
+#print axioms HiddenParity.Sufficiency.finite_row_separation
+#check @HiddenParity.Sufficiency.empiricalReject
+#print axioms HiddenParity.Sufficiency.empiricalReject
+#check @HiddenParity.Sufficiency.empiricalReject_iff
+#print axioms HiddenParity.Sufficiency.empiricalReject_iff
+#check @HiddenParity.Sufficiency.empiricalReject_true_eventually_never
+#print axioms HiddenParity.Sufficiency.empiricalReject_true_eventually_never
+#check @HiddenParity.Sufficiency.empiricalReject_recurrent_mismatch
+#print axioms HiddenParity.Sufficiency.empiricalReject_recurrent_mismatch
+#check @HiddenParity.PhaseArithmetic.bounded_tail_eventually_constant
+#print axioms HiddenParity.PhaseArithmetic.bounded_tail_eventually_constant
+#check @HiddenParity.PhaseArithmetic.exists_cycle_barrier
+#print axioms HiddenParity.PhaseArithmetic.exists_cycle_barrier
+#check @HiddenParity.PhaseArithmetic.cycling_phase_eventually_constant
+#print axioms HiddenParity.PhaseArithmetic.cycling_phase_eventually_constant
+#check @HiddenParity.PhaseArithmetic.persistent_option_eventually_stable
+#print axioms HiddenParity.PhaseArithmetic.persistent_option_eventually_stable
+#check @HiddenParity.PhaseArithmetic.eventual_phase_and_mode_stable
+#print axioms HiddenParity.PhaseArithmetic.eventual_phase_and_mode_stable
+#check @HiddenParity.Sufficiency.generated_phase_and_mode_stable
+#print axioms HiddenParity.Sufficiency.generated_phase_and_mode_stable
+#check @HiddenParity.Sufficiency.run_navigation_avoids_target
+#print axioms HiddenParity.Sufficiency.run_navigation_avoids_target
+#check @HiddenParity.Sufficiency.generated_stack_parity
+#print axioms HiddenParity.Sufficiency.generated_stack_parity
+#check @HiddenParity.Sufficiency.generatedPhasePolicy_parity
+#print axioms HiddenParity.Sufficiency.generatedPhasePolicy_parity
+#check @HiddenParity.Sufficiency.computedRegionWinningPolicy
+#print axioms HiddenParity.Sufficiency.computedRegionWinningPolicy
+#check @HiddenParity.Sufficiency.winningRegion_mem_support_nonempty
+#print axioms HiddenParity.Sufficiency.winningRegion_mem_support_nonempty
+#check @HiddenParity.Sufficiency.computed_region_iff_common_parity_policy
+#print axioms HiddenParity.Sufficiency.computed_region_iff_common_parity_policy
+#check @HiddenParity.Sufficiency.arbitrary_seed_winning_has_deterministic_witness
+#print axioms HiddenParity.Sufficiency.arbitrary_seed_winning_has_deterministic_witness
+#check @HiddenParity.Necessity.Controls.S
+#print axioms HiddenParity.Necessity.Controls.S
+#check @HiddenParity.Necessity.Controls.A
+#print axioms HiddenParity.Necessity.Controls.A
+#check @HiddenParity.Necessity.Controls.M
+#print axioms HiddenParity.Necessity.Controls.M
+#check @HiddenParity.Necessity.Controls.branchKernel
+#print axioms HiddenParity.Necessity.Controls.branchKernel
+#check @HiddenParity.Necessity.Controls.allMenu
+#print axioms HiddenParity.Necessity.Controls.allMenu
+#check @HiddenParity.Necessity.Controls.branchPriority
+#print axioms HiddenParity.Necessity.Controls.branchPriority
+#check @HiddenParity.Necessity.Controls.losing_child_rejects_parent
+#print axioms HiddenParity.Necessity.Controls.losing_child_rejects_parent
+#check @HiddenParity.Necessity.Controls.revealed_even_child_wins
+#print axioms HiddenParity.Necessity.Controls.revealed_even_child_wins
+#check @HiddenParity.Necessity.Controls.revealed_odd_child_loses
+#print axioms HiddenParity.Necessity.Controls.revealed_odd_child_loses
+#check @HiddenParity.Necessity.Controls.deadMenu
+#print axioms HiddenParity.Necessity.Controls.deadMenu
+#check @HiddenParity.Necessity.Controls.dead_successor_rejected
+#print axioms HiddenParity.Necessity.Controls.dead_successor_rejected
+#check @HiddenParity.Necessity.Controls.empty_support_rejected
+#print axioms HiddenParity.Necessity.Controls.empty_support_rejected
+#check @HiddenParity.Necessity.Controls.cycleKernel
+#print axioms HiddenParity.Necessity.Controls.cycleKernel
+#check @HiddenParity.Necessity.Controls.cycleMenu
+#print axioms HiddenParity.Necessity.Controls.cycleMenu
+#check @HiddenParity.Necessity.Controls.cyclePriority
+#print axioms HiddenParity.Necessity.Controls.cyclePriority
+#check @HiddenParity.Necessity.Controls.higher_odd_recurs_and_wins
+#print axioms HiddenParity.Necessity.Controls.higher_odd_recurs_and_wins
+#check @HiddenParity.Necessity.Controls.lower_odd_recurs_and_loses
+#print axioms HiddenParity.Necessity.Controls.lower_odd_recurs_and_loses
+#check @HiddenParity.Necessity.Controls.excess_fuel_same_output
+#print axioms HiddenParity.Necessity.Controls.excess_fuel_same_output
+#check @HiddenParity.Necessity.Controls.no_common_policy_at_bad_branch
+#print axioms HiddenParity.Necessity.Controls.no_common_policy_at_bad_branch
+#check @HiddenParity.Sufficiency.ControllerControls.S
+#print axioms HiddenParity.Sufficiency.ControllerControls.S
+#check @HiddenParity.Sufficiency.ControllerControls.A
+#print axioms HiddenParity.Sufficiency.ControllerControls.A
+#check @HiddenParity.Sufficiency.ControllerControls.M
+#print axioms HiddenParity.Sufficiency.ControllerControls.M
+#check @HiddenParity.Sufficiency.ControllerControls.quarter
+#print axioms HiddenParity.Sufficiency.ControllerControls.quarter
+#check @HiddenParity.Sufficiency.ControllerControls.threeQuarters
+#print axioms HiddenParity.Sufficiency.ControllerControls.threeQuarters
+#check @HiddenParity.Sufficiency.ControllerControls.quarter_value
+#print axioms HiddenParity.Sufficiency.ControllerControls.quarter_value
+#check @HiddenParity.Sufficiency.ControllerControls.threeQuarters_value
+#print axioms HiddenParity.Sufficiency.ControllerControls.threeQuarters_value
+#check @HiddenParity.Sufficiency.ControllerControls.coinKernel
+#print axioms HiddenParity.Sufficiency.ControllerControls.coinKernel
+#check @HiddenParity.Sufficiency.ControllerControls.menu
+#print axioms HiddenParity.Sufficiency.ControllerControls.menu
+#check @HiddenParity.Sufficiency.ControllerControls.oppositePriority
+#print axioms HiddenParity.Sufficiency.ControllerControls.oppositePriority
+#check @HiddenParity.Sufficiency.ControllerControls.coin_full_region
+#print axioms HiddenParity.Sufficiency.ControllerControls.coin_full_region
+#check @HiddenParity.Sufficiency.ControllerControls.coinCommonWinningPolicy
+#print axioms HiddenParity.Sufficiency.ControllerControls.coinCommonWinningPolicy
+#check @HiddenParity.Sufficiency.ControllerControls.indistinguishableKernel
+#print axioms HiddenParity.Sufficiency.ControllerControls.indistinguishableKernel
+#check @HiddenParity.Sufficiency.ControllerControls.indistinguishable_region_empty
+#print axioms HiddenParity.Sufficiency.ControllerControls.indistinguishable_region_empty
+#check @HiddenParity.Sufficiency.ControllerControls.indistinguishable_no_common_policy
+#print axioms HiddenParity.Sufficiency.ControllerControls.indistinguishable_no_common_policy
+#check @HiddenParity.Sufficiency.ControllerControls.revealing_all_even_region
+#print axioms HiddenParity.Sufficiency.ControllerControls.revealing_all_even_region
+#check @HiddenParity.Sufficiency.ControllerControls.revealingCommonWinningPolicy
+#print axioms HiddenParity.Sufficiency.ControllerControls.revealingCommonWinningPolicy
+#check @HiddenParity.Sufficiency.ControllerControls.losing_child_still_impossible
+#print axioms HiddenParity.Sufficiency.ControllerControls.losing_child_still_impossible
+#check @HiddenParity.Cost.coBuchiPriority
+#print axioms HiddenParity.Cost.coBuchiPriority
+#check @HiddenParity.Cost.cobuchi_minimum_even_iff
+#print axioms HiddenParity.Cost.cobuchi_minimum_even_iff
+#check @HiddenParity.Cost.qualifying_matching_all_good
+#print axioms HiddenParity.Cost.qualifying_matching_all_good
+#check @HiddenParity.Cost.unrestricted_parity_even_min_allows_odd
+#print axioms HiddenParity.Cost.unrestricted_parity_even_min_allows_odd
+#check @HiddenParity.Cost.badCount
+#print axioms HiddenParity.Cost.badCount
+#check @HiddenParity.Cost.badCount_eq_encard
+#print axioms HiddenParity.Cost.badCount_eq_encard
+#check @HiddenParity.Cost.badCount_lt_top_iff_eventually
+#print axioms HiddenParity.Cost.badCount_lt_top_iff_eventually
+#check @HiddenParity.Cost.cobuchi_parity_iff_badCount_finite
+#print axioms HiddenParity.Cost.cobuchi_parity_iff_badCount_finite
+#check @HiddenParity.Cost.badCount_measurable
+#print axioms HiddenParity.Cost.badCount_measurable
+#check @HiddenParity.Cost.finite_expected_badCount_implies_ae_parity
+#print axioms HiddenParity.Cost.finite_expected_badCount_implies_ae_parity
+#check @HiddenParity.Cost.generated_badCount_moment_eq_stack
+#print axioms HiddenParity.Cost.generated_badCount_moment_eq_stack
+#check @HiddenParity.Cost.generated_badCount_finite_of_stack_bound
+#print axioms HiddenParity.Cost.generated_badCount_finite_of_stack_bound
+#check @HiddenParity.Cost.finite_test_margin
+#print axioms HiddenParity.Cost.finite_test_margin
+#check @HiddenParity.Cost.HistoryAccurate
+#print axioms HiddenParity.Cost.HistoryAccurate
+#check @HiddenParity.Cost.true_test_false_of_accurate
+#print axioms HiddenParity.Cost.true_test_false_of_accurate
+#check @HiddenParity.Cost.mismatch_test_true_of_accurate
+#print axioms HiddenParity.Cost.mismatch_test_true_of_accurate
+#check @HiddenParity.Cost.exists_near_cycle_barrier
+#print axioms HiddenParity.Cost.exists_near_cycle_barrier
+#check @HiddenParity.Cost.nearBarrier
+#print axioms HiddenParity.Cost.nearBarrier
+#check @HiddenParity.Cost.nearBarrier_spec
+#print axioms HiddenParity.Cost.nearBarrier_spec
+#check @HiddenParity.Cost.generated_index_bounded_of_accurate
+#print axioms HiddenParity.Cost.generated_index_bounded_of_accurate
+#check @HiddenParity.Cost.consumed_pair_index_injective
+#print axioms HiddenParity.Cost.consumed_pair_index_injective
+#check @HiddenParity.Cost.global_low_count_budget
+#print axioms HiddenParity.Cost.global_low_count_budget
+#check @HiddenParity.Cost.global_postcount_budget
+#print axioms HiddenParity.Cost.global_postcount_budget
+#check @HiddenParity.Cost.nonrejecting_mismatch_count_lt
+#print axioms HiddenParity.Cost.nonrejecting_mismatch_count_lt
+#check @HiddenParity.Cost.set_lintegral_le_sqrt_second_moment
+#print axioms HiddenParity.Cost.set_lintegral_le_sqrt_second_moment
+#check @HiddenParity.Cost.shell_cost_transfer
+#print axioms HiddenParity.Cost.shell_cost_transfer
+#check @HiddenParity.Cost.shell_cost_finite
+#print axioms HiddenParity.Cost.shell_cost_finite
+#check @HiddenParity.Cost.FiniteChainHitting.Rows
+#print axioms HiddenParity.Cost.FiniteChainHitting.Rows
+#check @HiddenParity.Cost.FiniteChainHitting.Path
+#print axioms HiddenParity.Cost.FiniteChainHitting.Path
+#check @HiddenParity.Cost.FiniteChainHitting.hit
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit
+#check @HiddenParity.Cost.FiniteChainHitting.survive
+#print axioms HiddenParity.Cost.FiniteChainHitting.survive
+#check @HiddenParity.Cost.FiniteChainHitting.hit_of_goal
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit_of_goal
+#check @HiddenParity.Cost.FiniteChainHitting.survive_of_goal
+#print axioms HiddenParity.Cost.FiniteChainHitting.survive_of_goal
+#check @HiddenParity.Cost.FiniteChainHitting.hit_nonneg
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit_nonneg
+#check @HiddenParity.Cost.FiniteChainHitting.survive_nonneg
+#print axioms HiddenParity.Cost.FiniteChainHitting.survive_nonneg
+#check @HiddenParity.Cost.FiniteChainHitting.hit_add_survive
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit_add_survive
+#check @HiddenParity.Cost.FiniteChainHitting.hit_le_one
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit_le_one
+#check @HiddenParity.Cost.FiniteChainHitting.survive_le_one
+#print axioms HiddenParity.Cost.FiniteChainHitting.survive_le_one
+#check @HiddenParity.Cost.FiniteChainHitting.hit_mono
+#print axioms HiddenParity.Cost.FiniteChainHitting.hit_mono
+#check @HiddenParity.Cost.FiniteChainHitting.path_probability_lower
+#print axioms HiddenParity.Cost.FiniteChainHitting.path_probability_lower
+#check @HiddenParity.Cost.FiniteChainHitting.positive_path_hitting_bound
+#print axioms HiddenParity.Cost.FiniteChainHitting.positive_path_hitting_bound
+#check @HiddenParity.Cost.FiniteChainHitting.survive_add_le
+#print axioms HiddenParity.Cost.FiniteChainHitting.survive_add_le
+#check @HiddenParity.Cost.FiniteChainHitting.geometric_survival_bound
+#print axioms HiddenParity.Cost.FiniteChainHitting.geometric_survival_bound
+#check @HiddenParity.Cost.FiniteChainHitting.rowPMF
+#print axioms HiddenParity.Cost.FiniteChainHitting.rowPMF
+#check @HiddenParity.Cost.FiniteChainHitting.rowPMF_apply
+#print axioms HiddenParity.Cost.FiniteChainHitting.rowPMF_apply
+#check @HiddenParity.Cost.FiniteChainHitting.absorbedLaw
+#print axioms HiddenParity.Cost.FiniteChainHitting.absorbedLaw
+#check @HiddenParity.Cost.FiniteChainHitting.absorbedLaw_survival
+#print axioms HiddenParity.Cost.FiniteChainHitting.absorbedLaw_survival
+#check @HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_survival
+#print axioms HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_survival
+#check @HiddenParity.Cost.FiniteChainHitting.Path.tail
+#print axioms HiddenParity.Cost.FiniteChainHitting.Path.tail
+#check @HiddenParity.Cost.FiniteChainHitting.Path.exists_walk
+#print axioms HiddenParity.Cost.FiniteChainHitting.Path.exists_walk
+#check @HiddenParity.Cost.FiniteChainHitting.saturate_has_bounded_path
+#print axioms HiddenParity.Cost.FiniteChainHitting.saturate_has_bounded_path
+#check @HiddenParity.Cost.FiniteChainHitting.reachable_short_path
+#print axioms HiddenParity.Cost.FiniteChainHitting.reachable_short_path
+#check @HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_of_reachable
+#print axioms HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_of_reachable
+#check @HiddenParity.Cost.FiniteChainHitting.ClosedClass
+#print axioms HiddenParity.Cost.FiniteChainHitting.ClosedClass
+#check @HiddenParity.Cost.FiniteChainHitting.exists_reachable_closed_class
+#print axioms HiddenParity.Cost.FiniteChainHitting.exists_reachable_closed_class
+#check @HiddenParity.Cost.FiniteChainHitting.reaches_goal_of_no_avoiding_class
+#print axioms HiddenParity.Cost.FiniteChainHitting.reaches_goal_of_no_avoiding_class
+#check @HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_of_closed_classes
+#print axioms HiddenParity.Cost.FiniteChainHitting.absorbedLaw_geometric_of_closed_classes
+#check @HiddenParity.Cost.FiniteChainHitting.pushRows
+#print axioms HiddenParity.Cost.FiniteChainHitting.pushRows
+#check @HiddenParity.Cost.FiniteChainHitting.pushRows_positive_iff
+#print axioms HiddenParity.Cost.FiniteChainHitting.pushRows_positive_iff
+#check @HiddenParity.Cost.FiniteChainHitting.pushRows_min_positive
+#print axioms HiddenParity.Cost.FiniteChainHitting.pushRows_min_positive
+#check @HiddenParity.Cost.FiniteChainHitting.pushRows_constant
+#print axioms HiddenParity.Cost.FiniteChainHitting.pushRows_constant
+#check @HiddenParity.Cost.visit_index_before_horizon
+#print axioms HiddenParity.Cost.visit_index_before_horizon
+#check @HiddenParity.Cost.finite_cycle_covers_menu
+#print axioms HiddenParity.Cost.finite_cycle_covers_menu
+#check @HiddenParity.Cost.returning_residue_has_full_round
+#print axioms HiddenParity.Cost.returning_residue_has_full_round
+#check @HiddenParity.Cost.returning_rotor_covers_menu
+#print axioms HiddenParity.Cost.returning_rotor_covers_menu
+#check @HiddenParity.Cost.rotor_residue_eq_visits
+#print axioms HiddenParity.Cost.rotor_residue_eq_visits
+#check @HiddenParity.Cost.rotor_residue_eq_visits_upto
+#print axioms HiddenParity.Cost.rotor_residue_eq_visits_upto
+#check @HiddenParity.Cost.cycleAction_mod
+#print axioms HiddenParity.Cost.cycleAction_mod
+#check @HiddenParity.Cost.rotor_closed_class_covers_menu
+#print axioms HiddenParity.Cost.rotor_closed_class_covers_menu
+#check @HiddenParity.Cost.FiniteChainHitting.rows_positive_successor
+#print axioms HiddenParity.Cost.FiniteChainHitting.rows_positive_successor
+#check @HiddenParity.Cost.RotorClassWitness
+#print axioms HiddenParity.Cost.RotorClassWitness
+#check @HiddenParity.Cost.RotorClassWitness.project
+#print axioms HiddenParity.Cost.RotorClassWitness.project
+#check @HiddenParity.Cost.RotorClassWitness.project_nonempty
+#print axioms HiddenParity.Cost.RotorClassWitness.project_nonempty
+#check @HiddenParity.Cost.RotorClassWitness.selected_mem
+#print axioms HiddenParity.Cost.RotorClassWitness.selected_mem
+#check @HiddenParity.Cost.RotorClassWitness.project_subset
+#print axioms HiddenParity.Cost.RotorClassWitness.project_subset
+#check @HiddenParity.Cost.RotorClassWitness.next_exists
+#print axioms HiddenParity.Cost.RotorClassWitness.next_exists
+#check @HiddenParity.Cost.RotorClassWitness.project_fair
+#print axioms HiddenParity.Cost.RotorClassWitness.project_fair
+#check @HiddenParity.Cost.RotorClassWitness.project_closed
+#print axioms HiddenParity.Cost.RotorClassWitness.project_closed
+#check @HiddenParity.Cost.RotorClassWitness.operation_project_eq
+#print axioms HiddenParity.Cost.RotorClassWitness.operation_project_eq
+#check @HiddenParity.Cost.RotorClassWitness.operation_has_mismatch
+#print axioms HiddenParity.Cost.RotorClassWitness.operation_has_mismatch
+#check @HiddenParity.Cost.RotorClassWitness.navigation_hits_target
+#print axioms HiddenParity.Cost.RotorClassWitness.navigation_hits_target
+#check @HiddenParity.Cost.FrozenRotor.Residues
+#print axioms HiddenParity.Cost.FrozenRotor.Residues
+#check @HiddenParity.Cost.FrozenRotor.Aug
+#print axioms HiddenParity.Cost.FrozenRotor.Aug
+#check @HiddenParity.Cost.FrozenRotor.augMeasurableSpace
+#print axioms HiddenParity.Cost.FrozenRotor.augMeasurableSpace
+#check @HiddenParity.Cost.FrozenRotor.augMeasurableSingletonClass
+#print axioms HiddenParity.Cost.FrozenRotor.augMeasurableSingletonClass
+#check @HiddenParity.Cost.FrozenRotor.chosen
+#print axioms HiddenParity.Cost.FrozenRotor.chosen
+#check @HiddenParity.Cost.FrozenRotor.bump
+#print axioms HiddenParity.Cost.FrozenRotor.bump
+#check @HiddenParity.Cost.FrozenRotor.source
+#print axioms HiddenParity.Cost.FrozenRotor.source
+#check @HiddenParity.Cost.FrozenRotor.action
+#print axioms HiddenParity.Cost.FrozenRotor.action
+#check @HiddenParity.Cost.FrozenRotor.residue
+#print axioms HiddenParity.Cost.FrozenRotor.residue
+#check @HiddenParity.Cost.FrozenRotor.next
+#print axioms HiddenParity.Cost.FrozenRotor.next
+#check @HiddenParity.Cost.FrozenRotor.weight
+#print axioms HiddenParity.Cost.FrozenRotor.weight
+#check @HiddenParity.Cost.FrozenRotor.kernel
+#print axioms HiddenParity.Cost.FrozenRotor.kernel
+#check @HiddenParity.Cost.FrozenRotor.kernel_positive_iff
+#print axioms HiddenParity.Cost.FrozenRotor.kernel_positive_iff
+#check @HiddenParity.Cost.FrozenRotor.kernel_min_positive
+#print axioms HiddenParity.Cost.FrozenRotor.kernel_min_positive
+#check @HiddenParity.Cost.FrozenRotor.bump_val
+#print axioms HiddenParity.Cost.FrozenRotor.bump_val
+#check @HiddenParity.Cost.FrozenRotor.next_nonterminal_iff
+#print axioms HiddenParity.Cost.FrozenRotor.next_nonterminal_iff
+#check @HiddenParity.Cost.FrozenRotor.next_of_nonterminal
+#print axioms HiddenParity.Cost.FrozenRotor.next_of_nonterminal
+#check @HiddenParity.Cost.FrozenRotor.pre_stop_kills
+#print axioms HiddenParity.Cost.FrozenRotor.pre_stop_kills
+#check @HiddenParity.Cost.FrozenRotor.class_valid
+#print axioms HiddenParity.Cost.FrozenRotor.class_valid
+#check @HiddenParity.Cost.FrozenRotor.class_next_nonterminal
+#print axioms HiddenParity.Cost.FrozenRotor.class_next_nonterminal
+#check @HiddenParity.Cost.FrozenRotor.witness_of_closed_class
+#print axioms HiddenParity.Cost.FrozenRotor.witness_of_closed_class
+#check @HiddenParity.Cost.FrozenRotor.aug_card_bound
+#print axioms HiddenParity.Cost.FrozenRotor.aug_card_bound
+#check @HiddenParity.Cost.FrozenRotor.mismatching
+#print axioms HiddenParity.Cost.FrozenRotor.mismatching
+#check @HiddenParity.Cost.FrozenRotor.operatingAfter
+#print axioms HiddenParity.Cost.FrozenRotor.operatingAfter
+#check @HiddenParity.Cost.FrozenRotor.operation_classes_hit_kill
+#print axioms HiddenParity.Cost.FrozenRotor.operation_classes_hit_kill
+#check @HiddenParity.Cost.FrozenRotor.navigationBefore
+#print axioms HiddenParity.Cost.FrozenRotor.navigationBefore
+#check @HiddenParity.Cost.FrozenRotor.navigationAfter
+#print axioms HiddenParity.Cost.FrozenRotor.navigationAfter
+#check @HiddenParity.Cost.FrozenRotor.navigation_classes_hit_kill
+#print axioms HiddenParity.Cost.FrozenRotor.navigation_classes_hit_kill
+#check @HiddenParity.Cost.FrozenRotor.dimension
+#print axioms HiddenParity.Cost.FrozenRotor.dimension
+#check @HiddenParity.Cost.FrozenRotor.kernel_geometric_tail
+#print axioms HiddenParity.Cost.FrozenRotor.kernel_geometric_tail
+#check @HiddenParity.Cost.FrozenRotor.operation_geometric_tail
+#print axioms HiddenParity.Cost.FrozenRotor.operation_geometric_tail
+#check @HiddenParity.Cost.FrozenRotor.navigation_geometric_tail
+#print axioms HiddenParity.Cost.FrozenRotor.navigation_geometric_tail
+#check @HiddenParity.Cost.FrontierControls.geometricRows
+#print axioms HiddenParity.Cost.FrontierControls.geometricRows
+#check @HiddenParity.Cost.FrontierControls.geometric_survival_exact
+#print axioms HiddenParity.Cost.FrontierControls.geometric_survival_exact
+#check @HiddenParity.Cost.FrontierControls.zero_exit_keeps_survival_one
+#print axioms HiddenParity.Cost.FrontierControls.zero_exit_keeps_survival_one
+#check @HiddenParity.Cost.FrontierControls.positive_exit_survival_is_actual_probability
+#print axioms HiddenParity.Cost.FrontierControls.positive_exit_survival_is_actual_probability
+#check @HiddenParity.Cost.FrontierControls.every_true_prestop_kills
+#print axioms HiddenParity.Cost.FrontierControls.every_true_prestop_kills
+#check @HiddenParity.Cost.HistoryPMF.symbolPMF
+#print axioms HiddenParity.Cost.HistoryPMF.symbolPMF
+#check @HiddenParity.Cost.HistoryPMF.symbolPMF_apply
+#print axioms HiddenParity.Cost.HistoryPMF.symbolPMF_apply
+#check @HiddenParity.Cost.HistoryPMF.step
+#print axioms HiddenParity.Cost.HistoryPMF.step
+#check @HiddenParity.Cost.HistoryPMF.historyPMF
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF
+#check @HiddenParity.Cost.HistoryPMF.step_nil
+#print axioms HiddenParity.Cost.HistoryPMF.step_nil
+#check @HiddenParity.Cost.HistoryPMF.step_cons
+#print axioms HiddenParity.Cost.HistoryPMF.step_cons
+#check @HiddenParity.Cost.HistoryPMF.historyPMF_succ_nil
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF_succ_nil
+#check @HiddenParity.Cost.HistoryPMF.historyPMF_succ_cons
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF_succ_cons
+#check @HiddenParity.Cost.HistoryPMF.historyPMF_mass
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF_mass
+#check @HiddenParity.Cost.HistoryPMF.actual_history_marginal_eq_pmf
+#print axioms HiddenParity.Cost.HistoryPMF.actual_history_marginal_eq_pmf
+#check @HiddenParity.Cost.HistoryPMF.memory
+#print axioms HiddenParity.Cost.HistoryPMF.memory
+#check @HiddenParity.Cost.HistoryPMF.iteratePMF
+#print axioms HiddenParity.Cost.HistoryPMF.iteratePMF
+#check @HiddenParity.Cost.HistoryPMF.iteratePMF_succ_left
+#print axioms HiddenParity.Cost.HistoryPMF.iteratePMF_succ_left
+#check @HiddenParity.Cost.HistoryPMF.transition
+#print axioms HiddenParity.Cost.HistoryPMF.transition
+#check @HiddenParity.Cost.HistoryPMF.historyPMF_map_memory
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF_map_memory
+#check @HiddenParity.Cost.HistoryPMF.actual_memory_marginal
+#print axioms HiddenParity.Cost.HistoryPMF.actual_memory_marginal
+#check @HiddenParity.Cost.HistoryPMF.transition_eq_push_rowPMF
+#print axioms HiddenParity.Cost.HistoryPMF.transition_eq_push_rowPMF
+#check @HiddenParity.Cost.HistoryPMF.iteratePMF_eq_absorbed
+#print axioms HiddenParity.Cost.HistoryPMF.iteratePMF_eq_absorbed
+#check @HiddenParity.Cost.HistoryPMF.monitor
+#print axioms HiddenParity.Cost.HistoryPMF.monitor
+#check @HiddenParity.Cost.HistoryPMF.monitored_step_le
+#print axioms HiddenParity.Cost.HistoryPMF.monitored_step_le
+#check @HiddenParity.Cost.HistoryPMF.monitored_marginal_le
+#print axioms HiddenParity.Cost.HistoryPMF.monitored_marginal_le
+#check @HiddenParity.Cost.HistoryPMF.actual_monitored_survival_le
+#print axioms HiddenParity.Cost.HistoryPMF.actual_monitored_survival_le
+#check @HiddenParity.Cost.FrozenRotor.pairChoice
+#print axioms HiddenParity.Cost.FrozenRotor.pairChoice
+#check @HiddenParity.Cost.FrozenRotor.transition_eq_kernel
+#print axioms HiddenParity.Cost.FrozenRotor.transition_eq_kernel
+#check @HiddenParity.Cost.FrozenRotor.kernel_absorbs_kill
+#print axioms HiddenParity.Cost.FrozenRotor.kernel_absorbs_kill
+#check @HiddenParity.Cost.FrozenRotor.actual_monitored_kernel_tail
+#print axioms HiddenParity.Cost.FrozenRotor.actual_monitored_kernel_tail
+#check @HiddenParity.Cost.FrozenRotor.actual_monitored_navigation_tail
+#print axioms HiddenParity.Cost.FrozenRotor.actual_monitored_navigation_tail
+#check @HiddenParity.Cost.FrozenRotor.actual_monitored_operation_tail
+#print axioms HiddenParity.Cost.FrozenRotor.actual_monitored_operation_tail
+#check @HiddenParity.Cost.HistoryPMF.unit_seedPosterior
+#print axioms HiddenParity.Cost.HistoryPMF.unit_seedPosterior
+#check @HiddenParity.Cost.HistoryPMF.unit_conditionalContinuationLaw
+#print axioms HiddenParity.Cost.HistoryPMF.unit_conditionalContinuationLaw
+#check @HiddenParity.Cost.FrozenRotor.conditional_monitored_kernel_tail
+#print axioms HiddenParity.Cost.FrozenRotor.conditional_monitored_kernel_tail
+#check @HiddenParity.Cost.FrozenRotor.residuesOfHistory
+#print axioms HiddenParity.Cost.FrozenRotor.residuesOfHistory
+#check @HiddenParity.Cost.FrozenRotor.snapshot
+#print axioms HiddenParity.Cost.FrozenRotor.snapshot
+#check @HiddenParity.Cost.FrozenRotor.snapshot_ne_none
+#print axioms HiddenParity.Cost.FrozenRotor.snapshot_ne_none
+#check @HiddenParity.Cost.FrozenRotor.residuesOfHistory_cons
+#print axioms HiddenParity.Cost.FrozenRotor.residuesOfHistory_cons
+#check @HiddenParity.Cost.FrozenRotor.snapshot_cons
+#print axioms HiddenParity.Cost.FrozenRotor.snapshot_cons
+#check @HiddenParity.Cost.FrozenRotor.cycleAction_max_mod
+#print axioms HiddenParity.Cost.FrozenRotor.cycleAction_max_mod
+#check @HiddenParity.Cost.FrozenRotor.pairChoice_snapshot
+#print axioms HiddenParity.Cost.FrozenRotor.pairChoice_snapshot
+#check @HiddenParity.Cost.FrozenRotor.next_snapshot_of_clear
+#print axioms HiddenParity.Cost.FrozenRotor.next_snapshot_of_clear
+#check @HiddenParity.Cost.GeneratedSlice.policy
+#print axioms HiddenParity.Cost.GeneratedSlice.policy
+#check @HiddenParity.Cost.GeneratedSlice.pair
+#print axioms HiddenParity.Cost.GeneratedSlice.pair
+#check @HiddenParity.Cost.GeneratedSlice.active
+#print axioms HiddenParity.Cost.GeneratedSlice.active
+#check @HiddenParity.Cost.GeneratedSlice.pair_formula
+#print axioms HiddenParity.Cost.GeneratedSlice.pair_formula
+#check @HiddenParity.Cost.GeneratedSlice.agrees_with_snapshot
+#print axioms HiddenParity.Cost.GeneratedSlice.agrees_with_snapshot
+#check @HiddenParity.Cost.GeneratedSlice.active_source_used
+#print axioms HiddenParity.Cost.GeneratedSlice.active_source_used
+#check @HiddenParity.Cost.GeneratedSlice.Continues
+#print axioms HiddenParity.Cost.GeneratedSlice.Continues
+#check @HiddenParity.Cost.GeneratedSlice.monitor_eq_snapshot
+#print axioms HiddenParity.Cost.GeneratedSlice.monitor_eq_snapshot
+#check @HiddenParity.Cost.HistoryPMF.historyPMF_support
+#print axioms HiddenParity.Cost.HistoryPMF.historyPMF_support
+#check @HiddenParity.Cost.HistoryPMF.rowLikelihood_nonzero_rows
+#print axioms HiddenParity.Cost.HistoryPMF.rowLikelihood_nonzero_rows
+#check @HiddenParity.Cost.HistoryPMF.unit_prefix_compatible
+#print axioms HiddenParity.Cost.HistoryPMF.unit_prefix_compatible
+#check @HiddenParity.Cost.HistoryPMF.conditional_history_compatible_live
+#print axioms HiddenParity.Cost.HistoryPMF.conditional_history_compatible_live
+#check @HiddenParity.Cost.GeneratedSlice.conditional_generated_slice_tail
+#print axioms HiddenParity.Cost.GeneratedSlice.conditional_generated_slice_tail
+#check @HiddenParity.Cost.GeneratedSlice.conditional_generated_navigation_tail
+#print axioms HiddenParity.Cost.GeneratedSlice.conditional_generated_navigation_tail
+#check @HiddenParity.Cost.GeneratedSlice.conditional_generated_operation_tail
+#print axioms HiddenParity.Cost.GeneratedSlice.conditional_generated_operation_tail
+#check @EndpointMoment.reciprocal_threshold_iff
+#print axioms EndpointMoment.reciprocal_threshold_iff
+#check @EndpointMoment.count_reciprocal_thresholds
+#print axioms EndpointMoment.count_reciprocal_thresholds
+#check @EndpointMoment.count_reciprocal_thresholds_tail
+#print axioms EndpointMoment.count_reciprocal_thresholds_tail
+#check @EndpointMoment.floor_reciprocal_le
+#print axioms EndpointMoment.floor_reciprocal_le
+#check @EndpointMoment.reciprocal_le_twice_floor
+#print axioms EndpointMoment.reciprocal_le_twice_floor
+#check @EndpointMoment.profile
+#print axioms EndpointMoment.profile
+#check @EndpointMoment.tsum_profile_eq_lintegral_floor
+#print axioms EndpointMoment.tsum_profile_eq_lintegral_floor
+#check @EndpointMoment.tsum_profile_tail_eq_lintegral_floor
+#print axioms EndpointMoment.tsum_profile_tail_eq_lintegral_floor
+#check @EndpointMoment.reciprocal_moment_le_twice_profile
+#print axioms EndpointMoment.reciprocal_moment_le_twice_profile
+#check @EndpointMoment.tsum_profile_lt_top_iff
+#print axioms EndpointMoment.tsum_profile_lt_top_iff
+#check @EndpointMoment.tsum_profile_tail_lt_top_iff
+#print axioms EndpointMoment.tsum_profile_tail_lt_top_iff
+#check @EndpointMoment.interior
+#print axioms EndpointMoment.interior
+#check @EndpointMoment.interior_isFiniteMeasure
+#print axioms EndpointMoment.interior_isFiniteMeasure
+#check @EndpointMoment.leftMass
+#print axioms EndpointMoment.leftMass
+#check @EndpointMoment.rightMass
+#print axioms EndpointMoment.rightMass
+#check @EndpointMoment.leftMass_eq_Ioc
+#print axioms EndpointMoment.leftMass_eq_Ioc
+#check @EndpointMoment.rightMass_eq_Ico
+#print axioms EndpointMoment.rightMass_eq_Ico
+#check @EndpointMoment.leftMoment
+#print axioms EndpointMoment.leftMoment
+#check @EndpointMoment.rightMoment
+#print axioms EndpointMoment.rightMoment
+#check @EndpointMoment.inverseVarianceMoment
+#print axioms EndpointMoment.inverseVarianceMoment
+#check @EndpointMoment.ae_interior
+#print axioms EndpointMoment.ae_interior
+#check @EndpointMoment.ae_left_distance
+#print axioms EndpointMoment.ae_left_distance
+#check @EndpointMoment.ae_right_distance
+#print axioms EndpointMoment.ae_right_distance
+#check @EndpointMoment.left_count_integral
+#print axioms EndpointMoment.left_count_integral
+#check @EndpointMoment.right_count_integral
+#print axioms EndpointMoment.right_count_integral
+#check @EndpointMoment.inverseVarianceMoment_eq
+#print axioms EndpointMoment.inverseVarianceMoment_eq
+#check @EndpointMoment.endpoint_series_lt_top_iff
+#print axioms EndpointMoment.endpoint_series_lt_top_iff
+#check @EndpointMoment.endpoint_tail_series_lt_top_iff
+#print axioms EndpointMoment.endpoint_tail_series_lt_top_iff
+#check @EndpointMoment.interior_add_endpoint_atoms
+#print axioms EndpointMoment.interior_add_endpoint_atoms
+#check @AnnularLiteral.D0
+#print axioms AnnularLiteral.D0
+#check @AnnularLiteral.D1
+#print axioms AnnularLiteral.D1
+#check @AnnularLiteral.Accepted
+#print axioms AnnularLiteral.Accepted
+#check @AnnularLiteral.lower
+#print axioms AnnularLiteral.lower
+#check @AnnularLiteral.upper
+#print axioms AnnularLiteral.upper
+#check @AnnularLiteral.accepted_range
+#print axioms AnnularLiteral.accepted_range
+#check @AnnularLiteral.accepted_iff_bounds
+#print axioms AnnularLiteral.accepted_iff_bounds
+#check @AnnularLiteral.left_width
+#print axioms AnnularLiteral.left_width
+#check @AnnularLiteral.right_width
+#print axioms AnnularLiteral.right_width
+#check @AnnularLiteral.not_accepted_both_left
+#print axioms AnnularLiteral.not_accepted_both_left
+#check @AnnularLiteral.not_accepted_both_right
+#print axioms AnnularLiteral.not_accepted_both_right
+#check @AnnularLiteral.measurableSet_accepted
+#print axioms AnnularLiteral.measurableSet_accepted
+#check @AnnularLiteral.failureIndicator
+#print axioms AnnularLiteral.failureIndicator
+#check @AnnularLiteral.weightedFailure
+#print axioms AnnularLiteral.weightedFailure
+#check @AnnularLiteral.misses_one_of_pairwise_separation
+#print axioms AnnularLiteral.misses_one_of_pairwise_separation
+#check @AnnularLiteral.weightedFailure_lower_of_missed_set
+#print axioms AnnularLiteral.weightedFailure_lower_of_missed_set
+#check @AnnularLiteral.weightedFailure_lower_two_sets
+#print axioms AnnularLiteral.weightedFailure_lower_two_sets
+#check @AnnularLiteral.left_annular_lower
+#print axioms AnnularLiteral.left_annular_lower
+#check @AnnularLiteral.right_annular_lower
+#print axioms AnnularLiteral.right_annular_lower
+#check @AnnularLiteral.seed_averaged_left_annular_lower
+#print axioms AnnularLiteral.seed_averaged_left_annular_lower
+#check @AnnularLiteral.growth_left_annulus
+#print axioms AnnularLiteral.growth_left_annulus
+#check @AnnularLiteral.growth_right_annulus
+#print axioms AnnularLiteral.growth_right_annulus
+#check @AnnularLiteral.left_growth_weighted_lower
+#print axioms AnnularLiteral.left_growth_weighted_lower
+#check @AnnularLiteral.right_growth_weighted_lower
+#print axioms AnnularLiteral.right_growth_weighted_lower
+#check @AnnularLiteral.log_one_sub_lower
+#print axioms AnnularLiteral.log_one_sub_lower
+#check @AnnularLiteral.zero_prefix_lower
+#print axioms AnnularLiteral.zero_prefix_lower
+#check @AnnularLiteral.zero_prefix_growth_lower
+#print axioms AnnularLiteral.zero_prefix_growth_lower
+#check @AnnularLiteral.one_prefix_growth_lower
+#print axioms AnnularLiteral.one_prefix_growth_lower
+#check @AnnularLiteral.seed_averaged_two_prefix_growth_lower
+#print axioms AnnularLiteral.seed_averaged_two_prefix_growth_lower
+#check @BernoulliWord.weight
+#print axioms BernoulliWord.weight
+#check @BernoulliWord.weight_zero
+#print axioms BernoulliWord.weight_zero
+#check @BernoulliWord.weight_one
+#print axioms BernoulliWord.weight_one
+#check @BernoulliWord.weight_prod
+#print axioms BernoulliWord.weight_prod
+#check @BernoulliWord.sum_weight
+#print axioms BernoulliWord.sum_weight
+#check @BernoulliWord.distribution
+#print axioms BernoulliWord.distribution
+#check @BernoulliWord.distribution_apply
+#print axioms BernoulliWord.distribution_apply
+#check @BernoulliWord.failure_probability
+#print axioms BernoulliWord.failure_probability
+#check @BernoulliWord.risk
+#print axioms BernoulliWord.risk
+#check @BernoulliWord.two_prefix_le_risk
+#print axioms BernoulliWord.two_prefix_le_risk
+#check @BernoulliWord.all_reports_growth_lower
+#print axioms BernoulliWord.all_reports_growth_lower
+#check @GrowthMoment.LowerGrowth
+#print axioms GrowthMoment.LowerGrowth
+#check @GrowthMoment.lowerGrowth_of_separate
+#print axioms GrowthMoment.lowerGrowth_of_separate
+#check @GrowthMoment.min_growth_ne_zero
+#print axioms GrowthMoment.min_growth_ne_zero
+#check @GrowthMoment.finite_tail_risk_implies_inverse_moment
+#print axioms GrowthMoment.finite_tail_risk_implies_inverse_moment
+#check @GrowthMoment.exists_cutoff
+#print axioms GrowthMoment.exists_cutoff
+#check @GrowthMoment.finite_risk_implies_inverse_moment
+#print axioms GrowthMoment.finite_risk_implies_inverse_moment
+#check @BayesBridge.measurable_weight
+#print axioms BayesBridge.measurable_weight
+#check @BayesBridge.measurable_failure
+#print axioms BayesBridge.measurable_failure
+#check @BayesBridge.measurable_weighted_failure
+#print axioms BayesBridge.measurable_weighted_failure
+#check @BayesBridge.bayesRisk
+#print axioms BayesBridge.bayesRisk
+#check @BayesBridge.productRisk
+#print axioms BayesBridge.productRisk
+#check @BayesBridge.productRisk_eq_bayesRisk
+#print axioms BayesBridge.productRisk_eq_bayesRisk
+#check @BayesBridge.bayesRisk_eq_risk
+#print axioms BayesBridge.bayesRisk_eq_risk
+#check @BayesBridge.finite_product_risk_implies_inverse_moment
+#print axioms BayesBridge.finite_product_risk_implies_inverse_moment
+#check @CentredBernoulli.exp_quadratic_upper
+#print axioms CentredBernoulli.exp_quadratic_upper
+#check @CentredBernoulli.one_mgf_upper
+#print axioms CentredBernoulli.one_mgf_upper
+#check @CentredBernoulli.realWeight
+#print axioms CentredBernoulli.realWeight
+#check @CentredBernoulli.centredSum
+#print axioms CentredBernoulli.centredSum
+#check @CentredBernoulli.realWeight_nonneg
+#print axioms CentredBernoulli.realWeight_nonneg
+#check @CentredBernoulli.weight_eq_ofReal
+#print axioms CentredBernoulli.weight_eq_ofReal
+#check @CentredBernoulli.word_mgf_product
+#print axioms CentredBernoulli.word_mgf_product
+#check @CentredBernoulli.word_mgf_exact
+#print axioms CentredBernoulli.word_mgf_exact
+#check @CentredBernoulli.word_mgf_upper
+#print axioms CentredBernoulli.word_mgf_upper
+#check @HiddenParity.Exponential.exp_pair_dominates_one_le
+#print axioms HiddenParity.Exponential.exp_pair_dominates_one_le
+#check @HiddenParity.Exponential.realDeviation
+#print axioms HiddenParity.Exponential.realDeviation
+#check @HiddenParity.Exponential.realDeviation_le
+#print axioms HiddenParity.Exponential.realDeviation_le
+#check @HiddenParity.Exponential.symbolWord
+#print axioms HiddenParity.Exponential.symbolWord
+#check @HiddenParity.Exponential.symbolWord_measurable
+#print axioms HiddenParity.Exponential.symbolWord_measurable
+#check @HiddenParity.Exponential.row_probability_le_one
+#print axioms HiddenParity.Exponential.row_probability_le_one
+#check @HiddenParity.Exponential.symbolWord_probability
+#print axioms HiddenParity.Exponential.symbolWord_probability
+#check @HiddenParity.Exponential.symbolWord_law
+#print axioms HiddenParity.Exponential.symbolWord_law
+#check @EmpiricalGeometry.accepted_of_relative_error
+#print axioms EmpiricalGeometry.accepted_of_relative_error
+#check @EmpiricalGeometry.empiricalMean
+#print axioms EmpiricalGeometry.empiricalMean
+#check @EmpiricalGeometry.empiricalReport
+#print axioms EmpiricalGeometry.empiricalReport
+#check @EmpiricalGeometry.centredSum_eq
+#print axioms EmpiricalGeometry.centredSum_eq
+#check @EmpiricalGeometry.not_accepted_deviation
+#print axioms EmpiricalGeometry.not_accepted_deviation
+#check @HiddenParity.Exponential.empiricalMean_symbolWord
+#print axioms HiddenParity.Exponential.empiricalMean_symbolWord
+#check @HiddenParity.Exponential.word_deviation_probability
+#print axioms HiddenParity.Exponential.word_deviation_probability
+#check @HiddenParity.Exponential.seeded_rawFrequency_exponential
+#print axioms HiddenParity.Exponential.seeded_rawFrequency_exponential
+#check @HiddenParity.Exponential.exponential_tail_sum
+#print axioms HiddenParity.Exponential.exponential_tail_sum
+#check @HiddenParity.Exponential.seeded_rawTailDeviation_exponential
+#print axioms HiddenParity.Exponential.seeded_rawTailDeviation_exponential
+#check @HiddenParity.Exponential.rawTailDeviation_mono_tolerance
+#print axioms HiddenParity.Exponential.rawTailDeviation_mono_tolerance
+#check @HiddenParity.Exponential.seeded_rawTailDeviation_exponential_all_positive
+#print axioms HiddenParity.Exponential.seeded_rawTailDeviation_exponential_all_positive
+#check @Orthemology.PolynomialTail.quadratic_cover
+#print axioms Orthemology.PolynomialTail.quadratic_cover
+#check @Orthemology.PolynomialTail.power_le_quadratic_tail_sum
+#print axioms Orthemology.PolynomialTail.power_le_quadratic_tail_sum
+#check @Orthemology.PolynomialTail.integral_power_le_quadratic_tails
+#print axioms Orthemology.PolynomialTail.integral_power_le_quadratic_tails
+#check @Orthemology.PolynomialTail.summable_shifted_power_geometric
+#print axioms Orthemology.PolynomialTail.summable_shifted_power_geometric
+#check @Orthemology.PolynomialTail.summable_quadratic_envelope
+#print axioms Orthemology.PolynomialTail.summable_quadratic_envelope
+#check @Orthemology.PolynomialTail.quadratic_geometric_tail_all_moments
+#print axioms Orthemology.PolynomialTail.quadratic_geometric_tail_all_moments
+#check @Orthemology.PolynomialTail.cutoff_union_tail_all_moments
+#print axioms Orthemology.PolynomialTail.cutoff_union_tail_all_moments
+#check @HiddenParity.Cost.countable_history_weighted_bound
+#print axioms HiddenParity.Cost.countable_history_weighted_bound
+#check @HiddenParity.Cost.countable_history_product_bound
+#print axioms HiddenParity.Cost.countable_history_product_bound
+#check @HiddenParity.Cost.measure_inter_le_of_normalizedRestriction
+#print axioms HiddenParity.Cost.measure_inter_le_of_normalizedRestriction
+#check @HiddenParity.Cost.disjoint_history_union_bound
+#print axioms HiddenParity.Cost.disjoint_history_union_bound
+#check @HiddenParity.Cost.stack_history_law_eq_canonical
+#print axioms HiddenParity.Cost.stack_history_law_eq_canonical
+#check @HiddenParity.Cost.stack_conditional_continuation_eq
+#print axioms HiddenParity.Cost.stack_conditional_continuation_eq
+#check @HiddenParity.Cost.stack_prefix_probability_eq
+#print axioms HiddenParity.Cost.stack_prefix_probability_eq
+#check @HiddenParity.Cost.modeBit
+#print axioms HiddenParity.Cost.modeBit
+#check @HiddenParity.Cost.modeBit_le_one
+#print axioms HiddenParity.Cost.modeBit_le_one
+#check @HiddenParity.Cost.segmentStarts
+#print axioms HiddenParity.Cost.segmentStarts
+#check @HiddenParity.Cost.segmentStarts_card_le
+#print axioms HiddenParity.Cost.segmentStarts_card_le
+#check @HiddenParity.Cost.segmentEnds
+#print axioms HiddenParity.Cost.segmentEnds
+#check @HiddenParity.Cost.segmentEnds_card_le
+#print axioms HiddenParity.Cost.segmentEnds_card_le
+#check @HiddenParity.Cost.generatedSegmentLabel
+#print axioms HiddenParity.Cost.generatedSegmentLabel
+#check @HiddenParity.Cost.generatedSegmentRank
+#print axioms HiddenParity.Cost.generatedSegmentRank
+#check @HiddenParity.Cost.runSupport_step_subset
+#print axioms HiddenParity.Cost.runSupport_step_subset
+#check @HiddenParity.Cost.generated_mode_step
+#print axioms HiddenParity.Cost.generated_mode_step
+#check @HiddenParity.Cost.generated_rank_step
+#print axioms HiddenParity.Cost.generated_rank_step
+#check @HiddenParity.Cost.generated_rank_lt
+#print axioms HiddenParity.Cost.generated_rank_lt
+#check @HiddenParity.Cost.generated_segment_budget
+#print axioms HiddenParity.Cost.generated_segment_budget
+#check @HiddenParity.Cost.generated_segment_end_budget
+#print axioms HiddenParity.Cost.generated_segment_end_budget
+#check @HiddenParity.Cost.accurate_generated_segment_budget
+#print axioms HiddenParity.Cost.accurate_generated_segment_budget
+#check @HiddenParity.Cost.generatedMismatch
+#print axioms HiddenParity.Cost.generatedMismatch
+#check @HiddenParity.Cost.interiorMismatchTimes
+#print axioms HiddenParity.Cost.interiorMismatchTimes
+#check @HiddenParity.Cost.generatedChargeTimes
+#print axioms HiddenParity.Cost.generatedChargeTimes
+#check @HiddenParity.Cost.interior_mismatch_postcount_lt
+#print axioms HiddenParity.Cost.interior_mismatch_postcount_lt
+#check @HiddenParity.Cost.generated_interior_mismatch_budget
+#print axioms HiddenParity.Cost.generated_interior_mismatch_budget
+#check @HiddenParity.Cost.generated_global_charge_budget
+#print axioms HiddenParity.Cost.generated_global_charge_budget
+#check @HiddenParity.Cost.accurate_generated_charge_budget
+#print axioms HiddenParity.Cost.accurate_generated_charge_budget
+#check @HiddenParity.Cost.progressCount
+#print axioms HiddenParity.Cost.progressCount
+#check @HiddenParity.Cost.lastIntervalStart
+#print axioms HiddenParity.Cost.lastIntervalStart
+#check @HiddenParity.Cost.progressCount_succ
+#print axioms HiddenParity.Cost.progressCount_succ
+#check @HiddenParity.Cost.progressCount_mono
+#print axioms HiddenParity.Cost.progressCount_mono
+#check @HiddenParity.Cost.lastIntervalStart_le
+#print axioms HiddenParity.Cost.lastIntervalStart_le
+#check @HiddenParity.Cost.lastIntervalStart_is_start
+#print axioms HiddenParity.Cost.lastIntervalStart_is_start
+#check @HiddenParity.Cost.no_progress_since_start
+#print axioms HiddenParity.Cost.no_progress_since_start
+#check @HiddenParity.Cost.progressCount_eq_implies_same_start
+#print axioms HiddenParity.Cost.progressCount_eq_implies_same_start
+#check @HiddenParity.Cost.chronological_coordinates_injective
+#print axioms HiddenParity.Cost.chronological_coordinates_injective
+#check @HiddenParity.Cost.lastIntervalStart_eq_self_of_start
+#print axioms HiddenParity.Cost.lastIntervalStart_eq_self_of_start
+#check @HiddenParity.Cost.start_eq_of_progressCount_eq
+#print axioms HiddenParity.Cost.start_eq_of_progressCount_eq
+#check @HiddenParity.Cost.truncatedProgressEnds
+#print axioms HiddenParity.Cost.truncatedProgressEnds
+#check @HiddenParity.Cost.progressCount_lt_endpoint_card
+#print axioms HiddenParity.Cost.progressCount_lt_endpoint_card
+#check @HiddenParity.Cost.chronological_count_bound
+#print axioms HiddenParity.Cost.chronological_count_bound
+#check @HiddenParity.Cost.long_interval_of_excess_count
+#print axioms HiddenParity.Cost.long_interval_of_excess_count
+#check @HiddenParity.Cost.historySegmentLabel
+#print axioms HiddenParity.Cost.historySegmentLabel
+#check @HiddenParity.Cost.historySegmentLabel_run
+#print axioms HiddenParity.Cost.historySegmentLabel_run
+#check @HiddenParity.Cost.historyProgress
+#print axioms HiddenParity.Cost.historyProgress
+#check @HiddenParity.Cost.historyDanger
+#print axioms HiddenParity.Cost.historyDanger
+#check @HiddenParity.Cost.runProgress
+#print axioms HiddenParity.Cost.runProgress
+#check @HiddenParity.Cost.runProgress_iff
+#print axioms HiddenParity.Cost.runProgress_iff
+#check @HiddenParity.Cost.run_label_eq_of_no_progress
+#print axioms HiddenParity.Cost.run_label_eq_of_no_progress
+#check @HiddenParity.Cost.run_navigation_avoids_target
+#print axioms HiddenParity.Cost.run_navigation_avoids_target
+#check @HiddenParity.Cost.runTail
+#print axioms HiddenParity.Cost.runTail
+#check @HiddenParity.Cost.runTail_append
+#print axioms HiddenParity.Cost.runTail_append
+#check @HiddenParity.Cost.runTail_succ
+#print axioms HiddenParity.Cost.runTail_succ
+#check @HiddenParity.Cost.historyProgressCount
+#print axioms HiddenParity.Cost.historyProgressCount
+#check @HiddenParity.Cost.historyProgressCount_run
+#print axioms HiddenParity.Cost.historyProgressCount_run
+#check @HiddenParity.Cost.historyIsStart
+#print axioms HiddenParity.Cost.historyIsStart
+#check @HiddenParity.Cost.historyIsStart_run
+#print axioms HiddenParity.Cost.historyIsStart_run
+#check @HiddenParity.Cost.same_index_start_prefixes_disjoint
+#print axioms HiddenParity.Cost.same_index_start_prefixes_disjoint
+#check @HiddenParity.Cost.generated_active_run
+#print axioms HiddenParity.Cost.generated_active_run
+#check @HiddenParity.Cost.run_continues_of_guards
+#print axioms HiddenParity.Cost.run_continues_of_guards
+#check @HiddenParity.Cost.run_navigation_continues
+#print axioms HiddenParity.Cost.run_navigation_continues
+#check @HiddenParity.Cost.run_operation_continues
+#print axioms HiddenParity.Cost.run_operation_continues
+#check @HiddenParity.Cost.historySlice
+#print axioms HiddenParity.Cost.historySlice
+#check @HiddenParity.Cost.positive_history_source_invariant
+#print axioms HiddenParity.Cost.positive_history_source_invariant
+#check @HiddenParity.Cost.conditional_historySlice_tail
+#print axioms HiddenParity.Cost.conditional_historySlice_tail
+#check @HiddenParity.Cost.stack_historySlice_inter_bound
+#print axioms HiddenParity.Cost.stack_historySlice_inter_bound
+#check @HiddenParity.Cost.truncatedProgressEnds_eq_generatedCharges
+#print axioms HiddenParity.Cost.truncatedProgressEnds_eq_generatedCharges
+#check @HiddenParity.Cost.historyDanger_eq_of_label_eq
+#print axioms HiddenParity.Cost.historyDanger_eq_of_label_eq
+#check @HiddenParity.Cost.bad_action_implies_danger
+#print axioms HiddenParity.Cost.bad_action_implies_danger
+#check @HiddenParity.Cost.actual_long_history_slice_of_excess
+#print axioms HiddenParity.Cost.actual_long_history_slice_of_excess
+#check @HiddenParity.Cost.DangerousStart
+#print axioms HiddenParity.Cost.DangerousStart
+#check @HiddenParity.Cost.longStartEvent
+#print axioms HiddenParity.Cost.longStartEvent
+#check @HiddenParity.Cost.longStartEvent_bound
+#print axioms HiddenParity.Cost.longStartEvent_bound
+#check @HiddenParity.Cost.finite_longStart_union_bound
+#print axioms HiddenParity.Cost.finite_longStart_union_bound
+#check @HiddenParity.Cost.badCount_eq_iSup_prefix
+#print axioms HiddenParity.Cost.badCount_eq_iSup_prefix
+#check @HiddenParity.Cost.exists_prefix_of_badCount_excess
+#print axioms HiddenParity.Cost.exists_prefix_of_badCount_excess
+#check @HiddenParity.Cost.all_histories_accurate_of_raw_good
+#print axioms HiddenParity.Cost.all_histories_accurate_of_raw_good
+#check @HiddenParity.Cost.actual_generated_badCount_cutoff_tail
+#print axioms HiddenParity.Cost.actual_generated_badCount_cutoff_tail
+#check @HiddenParity.Cost.finite_positive_entry_bound
+#print axioms HiddenParity.Cost.finite_positive_entry_bound
+#check @HiddenParity.Cost.generated_stack_badCount_all_moments_of_margin
+#print axioms HiddenParity.Cost.generated_stack_badCount_all_moments_of_margin
+#check @HiddenParity.Cost.generated_stack_badCount_all_moments
+#print axioms HiddenParity.Cost.generated_stack_badCount_all_moments
+#check @HiddenParity.Cost.generated_actual_badCount_all_moments
+#print axioms HiddenParity.Cost.generated_actual_badCount_all_moments
+#check @HiddenParity.Cost.FiniteCostPolicy
+#print axioms HiddenParity.Cost.FiniteCostPolicy
+#check @HiddenParity.Cost.FiniteCostPolicy.toWinning
+#print axioms HiddenParity.Cost.FiniteCostPolicy.toWinning
+#check @HiddenParity.Cost.computed_region_has_all_moment_policy
+#print axioms HiddenParity.Cost.computed_region_has_all_moment_policy
+#check @HiddenParity.Cost.computed_region_iff_finiteMean_policy
+#print axioms HiddenParity.Cost.computed_region_iff_finiteMean_policy
+#check @HiddenParity.Cost.arbitrary_seed_finiteMean_has_all_moment_witness
+#print axioms HiddenParity.Cost.arbitrary_seed_finiteMean_has_all_moment_witness
+#check @HiddenParity.Cost.Controls.final_transition_is_counted
+#print axioms HiddenParity.Cost.Controls.final_transition_is_counted
+#check @HiddenParity.Cost.Controls.long_gap_keeps_offset
+#print axioms HiddenParity.Cost.Controls.long_gap_keeps_offset
+#check @HiddenParity.Cost.Controls.progress_advances_interval
+#print axioms HiddenParity.Cost.Controls.progress_advances_interval
+#check @HiddenParity.Cost.Controls.finite_interval_cover_control
+#print axioms HiddenParity.Cost.Controls.finite_interval_cover_control
+#check @HiddenParity.Cost.shifted_pow_eq_geometric_sum
+#print axioms HiddenParity.Cost.shifted_pow_eq_geometric_sum
+#check @HiddenParity.Cost.shifted_pow_eq_tail_sum
+#print axioms HiddenParity.Cost.shifted_pow_eq_tail_sum
+#check @HiddenParity.Cost.geometric_tail_nat_pow_bound
+#print axioms HiddenParity.Cost.geometric_tail_nat_pow_bound
+#check @HiddenParity.Cost.geometric_tail_nat_factor_two
+#print axioms HiddenParity.Cost.geometric_tail_nat_factor_two
+#check @HiddenParity.Cost.geometric_block_tail_factor_two
+#print axioms HiddenParity.Cost.geometric_block_tail_factor_two
+#check @HiddenParity.Cost.slotLength
+#print axioms HiddenParity.Cost.slotLength
+#check @HiddenParity.Cost.progressCount_at_lastStart
+#print axioms HiddenParity.Cost.progressCount_at_lastStart
+#check @HiddenParity.Cost.progressCount_lt_at_start
+#print axioms HiddenParity.Cost.progressCount_lt_at_start
+#check @HiddenParity.Cost.slot_member_after_start
+#print axioms HiddenParity.Cost.slot_member_after_start
+#check @HiddenParity.Cost.far_time_of_slotLength_gt
+#print axioms HiddenParity.Cost.far_time_of_slotLength_gt
+#check @HiddenParity.Cost.preceding_slotLength_eq_prefix
+#print axioms HiddenParity.Cost.preceding_slotLength_eq_prefix
+#check @HiddenParity.Cost.no_progress_of_long_slot
+#print axioms HiddenParity.Cost.no_progress_of_long_slot
+#check @HiddenParity.Cost.runSlotLength
+#print axioms HiddenParity.Cost.runSlotLength
+#check @HiddenParity.Cost.historySlotLength
+#print axioms HiddenParity.Cost.historySlotLength
+#check @HiddenParity.Cost.runSlotLength_eq_history
+#print axioms HiddenParity.Cost.runSlotLength_eq_history
+#check @HiddenParity.Cost.runSlotLength_measurable
+#print axioms HiddenParity.Cost.runSlotLength_measurable
+#check @HiddenParity.Cost.runSlotLength_prior_known
+#print axioms HiddenParity.Cost.runSlotLength_prior_known
+#check @HiddenParity.Cost.runSlotLength_long_implies_slice
+#print axioms HiddenParity.Cost.runSlotLength_long_implies_slice
+#check @HiddenParity.Cost.generated_slot_prefix_moment
+#print axioms HiddenParity.Cost.generated_slot_prefix_moment
+#check @HiddenParity.Cost.prefix_family_weighted_bound
+#print axioms HiddenParity.Cost.prefix_family_weighted_bound
+#check @HiddenParity.Cost.BoundedDangerousStart
+#print axioms HiddenParity.Cost.BoundedDangerousStart
+#check @HiddenParity.Cost.positive_runSlotLength_has_start
+#print axioms HiddenParity.Cost.positive_runSlotLength_has_start
+#check @HiddenParity.Cost.actual_generated_slot_product_bound
+#print axioms HiddenParity.Cost.actual_generated_slot_product_bound
+#check @HiddenParity.Cost.exponential_count_le_block_product
+#print axioms HiddenParity.Cost.exponential_count_le_block_product
+#check @HiddenParity.Cost.accurate_bad_prefix_le_slot_sum
+#print axioms HiddenParity.Cost.accurate_bad_prefix_le_slot_sum
+#check @HiddenParity.Cost.actual_generated_badCount_exponential_cutoff_tail
+#print axioms HiddenParity.Cost.actual_generated_badCount_exponential_cutoff_tail
+#check @Orthemology.AffineTail.offset
+#print axioms Orthemology.AffineTail.offset
+#check @Orthemology.AffineTail.slope
+#print axioms Orthemology.AffineTail.slope
+#check @Orthemology.AffineTail.optimized_affine_tail
+#print axioms Orthemology.AffineTail.optimized_affine_tail
+#check @Orthemology.TailMoments.le_tail_indicator_sum
+#print axioms Orthemology.TailMoments.le_tail_indicator_sum
+#check @Orthemology.TailMoments.lintegral_le_tail_sum
+#print axioms Orthemology.TailMoments.lintegral_le_tail_sum
+#check @Orthemology.TailMoments.lintegral_le_geometric_tail
+#print axioms Orthemology.TailMoments.lintegral_le_geometric_tail
+#check @Orthemology.TailMoments.geometric_tail_finite_expectation
+#print axioms Orthemology.TailMoments.geometric_tail_finite_expectation
+#check @Orthemology.TailMoments.exponential_le_weighted_tail
+#print axioms Orthemology.TailMoments.exponential_le_weighted_tail
+#check @Orthemology.TailMoments.exponential_moment_le_geometric_tail
+#print axioms Orthemology.TailMoments.exponential_moment_le_geometric_tail
+#check @Orthemology.TailMoments.geometric_tail_finite_exponential_moment
+#print axioms Orthemology.TailMoments.geometric_tail_finite_exponential_moment
+#check @Orthemology.TailMoments.affine_tail_geometric_envelope
+#print axioms Orthemology.TailMoments.affine_tail_geometric_envelope
+#check @Orthemology.TailMoments.affine_tail_finite_moments
+#print axioms Orthemology.TailMoments.affine_tail_finite_moments
+#check @Orthemology.TailMoments.power_le_scaled_exponential
+#print axioms Orthemology.TailMoments.power_le_scaled_exponential
+#check @Orthemology.TailMoments.finite_power_moment_of_positive_exponential_moment
+#print axioms Orthemology.TailMoments.finite_power_moment_of_positive_exponential_moment
+#check @HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#print axioms HiddenParity.Cost.generated_stack_badCount_affine_tail_of_margin
+#check @HiddenParity.Cost.generated_stack_badCount_positive_exponential_moments
+#print axioms HiddenParity.Cost.generated_stack_badCount_positive_exponential_moments
+#check @HiddenParity.Cost.generated_badCount_exponential_eq_stack
+#print axioms HiddenParity.Cost.generated_badCount_exponential_eq_stack
+#check @HiddenParity.Cost.generated_actual_badCount_positive_exponential_moments
+#print axioms HiddenParity.Cost.generated_actual_badCount_positive_exponential_moments

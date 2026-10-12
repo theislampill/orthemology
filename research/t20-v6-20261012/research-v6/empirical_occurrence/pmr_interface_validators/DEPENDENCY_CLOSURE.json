@@ -1,0 +1,465 @@
+{
+  "actual_authored_call_graph": [
+    {
+      "caller": "0d75bcefc899d15b2d35377fa15b54c6d12d180a74a506bc9cd84212206c3311",
+      "callees": [
+        "818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680",
+        "28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252"
+      ],
+      "mode": "import BV validate; copy and subprocess V3"
+    },
+    {
+      "caller": "28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252",
+      "callees": [
+        "0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e"
+      ],
+      "mode": "subprocess V2 for BW-CH; intended exact hash not enforced by outer standalone validator"
+    },
+    {
+      "caller": "818230667805e3db999dc52bd22376a4425e58a85f75e561da4ca39acd75e680",
+      "callees": [
+        "ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd"
+      ],
+      "mode": "import BK validate"
+    },
+    {
+      "caller": "621c70320e6695ea77d85c7bec7147193d3c3f013bada94ea6bae328a8616c7e",
+      "callees": [
+        "a9455f387e2d14e6a98d2dc95dbd955d0b5015d24c431c75113ea5d90ceb0150"
+      ],
+      "mode": "subprocess bounded challenger B"
+    },
+    {
+      "caller": "33de0e6b174499960cc2c521ab5ab5f2f13cb66467247636aa460419073745a3",
+      "callees": [
+        "660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76",
+        "449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+      ],
+      "mode": "default-mode subprocess in temporary specialist-A copy; disabled by intake_override"
+    },
+    {
+      "caller": "c2153d22937864584ca0310a129cb41badbcbea96e3a2175b53bd1a9a666a626",
+      "callees": [],
+      "verification_only": [
+        "e359606c9f16754ae5864fc5e07003f492ab50437541b5db842b622be4d8cffc",
+        "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+      ],
+      "mode": "source/hash/result/receipt verification only, no subprocess"
+    }
+  ],
+  "exact_prior_routes": [
+    {
+      "sha256": "0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e",
+      "reading_routes": [
+        {
+          "source_sha256": "0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e",
+          "ledger": "private-locator:8c163e37427ed016261e",
+          "pointer": "$/records/106",
+          "recorded_scope": {
+            "scope": "actual implementation/proof semantics; mathematical claim ceiling retained",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              339
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/0d/0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "post_bv_consolidated_recheck_v2.py",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/intake-review/checks/post_bv_consolidated_recheck_v2.py",
+          "t20-consolidation-20261011/catalogue/objects/0d/0d83924960c9710e16834e4d382979ba655f93e9a7f475d378eb0c6ba948a68e"
+        ]
+      ],
+      "selected_static_scope": "Whole-source text/AST inspection for self-hash or source-file reads; only __file__ output-path cue at337. Exact prior complete1-339 remains reading basis."
+    },
+    {
+      "sha256": "28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252",
+      "reading_routes": [
+        {
+          "source_sha256": "28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252",
+          "ledger": "private-locator:8c163e37427ed016261e",
+          "pointer": "$/records/107",
+          "recorded_scope": {
+            "scope": "actual implementation/proof semantics; mathematical claim ceiling retained",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              258
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/28/28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "post_bv_consolidated_recheck_v3.py",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/intake-review/checks/post_bv_consolidated_recheck_v3.py",
+          "t20-consolidation-20261011/catalogue/objects/28/28def256cce9031cab7b86d2208eacd911a4625278db3db7638066c1ab8c5252"
+        ]
+      ],
+      "selected_return_scope": {
+        "ranges": [
+          [
+            1,
+            70
+          ]
+        ],
+        "reason": "confirm V3 executes copied V2 without checking its digest; prior complete1-258 scope reused"
+      }
+    },
+    {
+      "sha256": "62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4",
+      "reading_routes": [
+        {
+          "source_sha256": "62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4",
+          "ledger": "private-locator:eb9b155b8777d2eeb420",
+          "pointer": "$/records/12",
+          "recorded_scope": {
+            "disposition": "COMPLETE_BODY_COMPARISON_WITH_FULL_BASELINE",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              169
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/extracted/P14/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.lean",
+          "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/DeepBVCommonInterventionCriterion.lean",
+          "t20-consolidation-20261011/catalogue/objects/62/62663384281c23ff599d0e4bef14c81b9e6f29a4732ed609760b71520adedfe4"
+        ]
+      ]
+    },
+    {
+      "sha256": "7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3",
+      "reading_routes": [
+        {
+          "source_sha256": "7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3",
+          "ledger": "private-locator:eb9b155b8777d2eeb420",
+          "pointer": "$/records/16",
+          "recorded_scope": {
+            "disposition": "FULL_BODY_DIRECT_READING",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              172
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/extracted/P14/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ],
+        [
+          "DeepBVCommonInterventionCriterion.repaired.lean",
+          "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/intake-review/DeepBVCommonInterventionCriterion.repaired.lean",
+          "t20-consolidation-20261011/catalogue/objects/7b/7b666912629790cb01cbfe8bfcde829238ade5f31bf776728e2f1d911b9fedd3"
+        ]
+      ]
+    },
+    {
+      "sha256": "449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723",
+      "reading_routes": [
+        {
+          "source_sha256": "449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723",
+          "ledger": "private-locator:8c163e37427ed016261e",
+          "pointer": "$/records/89",
+          "recorded_scope": {
+            "scope": "actual implementation/proof semantics; mathematical claim ceiling retained",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              104
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "run_all_checks.py",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/extracted/P14/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ],
+        [
+          "run_all_checks.py",
+          "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/checks/run_all_checks.py",
+          "t20-consolidation-20261011/catalogue/objects/44/449f5639e1415df3114a52cb37f6ced0d0d1a0ea788437b7b682199a12b6c723"
+        ]
+      ]
+    },
+    {
+      "sha256": "660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76",
+      "reading_routes": [
+        {
+          "source_sha256": "660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76",
+          "ledger": "private-locator:8c163e37427ed016261e",
+          "pointer": "$/records/88",
+          "recorded_scope": {
+            "scope": "actual implementation/proof semantics; mathematical claim ceiling retained",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              580
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "fresh_rereview.py",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/extracted/P14/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ],
+        [
+          "fresh_rereview.py",
+          "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-a/source-files/audit/fresh_rereview.py",
+          "t20-consolidation-20261011/catalogue/objects/66/660be2b7db1a47a5e415477d1fa1ecd5b271b546c71264344d5e1a6711401d76"
+        ]
+      ]
+    },
+    {
+      "sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+      "reading_routes": [
+        {
+          "source_sha256": "73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc",
+          "ledger": "private-locator:eb9b155b8777d2eeb420",
+          "pointer": "$/records/14",
+          "recorded_scope": {
+            "disposition": "FULL_BODY_DIRECT_READING",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              162
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "locations": [
+        [
+          "CodexFibreSynthesis.lean",
+          "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/canonical/Orthemology_Canonical_Source_03e2604d.zip!/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/Orthemology_Pro_P02_Measure_CV_R_C.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip!/inputs/packet/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001.zip!/inputs/Orthemology_Pro_P03_Engine_Refinement.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/Orthemology_Pro_P15_Normative_Gap_Disclosure.zip!/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/extracted/P14/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ],
+        [
+          "CodexFibreSynthesis.lean",
+          "user-checkpoints/extracted/P15/source-main/docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean",
+          "t20-consolidation-20261011/catalogue/objects/73/73aef790f787ce11c65f4bb080d33b147d210d718862985299b14ce27c4e9efc"
+        ]
+      ]
+    }
+  ],
+  "data_scope": "Manifest, source/reference, historical audit and authority fields are read/validated by the original code. This task reads the full code and exact operative scientific checker dependencies; it does not claim fresh reading of every source member merely named by an inventory, every historical audit receipt or every external evidence file. Historical broad ceilings constrain those specific intakes and do not reset subsequent positive appraisals.",
+  "library_scope": "Standard library and PyYAML; no installs or executions attempted.",
+  "unchanged_sources": true,
+  "retained_source_execution_count": 0
+}

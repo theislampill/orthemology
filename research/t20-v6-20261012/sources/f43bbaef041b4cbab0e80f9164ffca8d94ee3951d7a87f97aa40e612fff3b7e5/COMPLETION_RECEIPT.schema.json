@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "kind",
+    "attempt",
+    "status",
+    "candidate_head",
+    "candidate_tree",
+    "accepted_base",
+    "main_commit",
+    "main_tree",
+    "PR",
+    "PR_URL",
+    "PR_state",
+    "MAIN_ADVANCED",
+    "hosted_CI",
+    "remaining_integration_cells",
+    "checkpoint_identities",
+    "research_credit",
+    "new_release_or_v6",
+    "visibility",
+    "output_hashes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "type": "string"
+    },
+    "attempt": {
+      "type": "integer"
+    },
+    "status": {
+      "const": "PASS"
+    },
+    "candidate_head": {
+      "type": "string"
+    },
+    "candidate_tree": {
+      "type": "string"
+    },
+    "accepted_base": {
+      "type": "string"
+    },
+    "main_commit": {
+      "type": "string"
+    },
+    "main_tree": {
+      "type": "string"
+    },
+    "PR": {
+      "type": "integer"
+    },
+    "PR_URL": {
+      "type": "string"
+    },
+    "PR_state": {
+      "const": "MERGED"
+    },
+    "MAIN_ADVANCED": {
+      "type": "boolean"
+    },
+    "hosted_CI": {
+      "type": "string"
+    },
+    "remaining_integration_cells": {
+      "type": "array"
+    },
+    "checkpoint_identities": {
+      "type": "object"
+    },
+    "research_credit": {
+      "type": "boolean"
+    },
+    "new_release_or_v6": {
+      "type": "boolean"
+    },
+    "visibility": {
+      "const": "OWNER_PRIVATE_EVIDENCE_ONLY"
+    },
+    "output_hashes": {
+      "type": "array"
+    }
+  }
+}

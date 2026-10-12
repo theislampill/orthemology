@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-11",
+  "qualification": "QUALIFICATION.md",
+  "claims": "CLAIMS.json",
+  "input_member_bindings": "ACTUAL_MEMBERS.json",
+  "input_comparison": "ARCHIVE_COMPARISON.json",
+  "advertised_source_custody": "SOURCE_BINDINGS.json",
+  "missing_manifest_payload": "MISSING_MANIFEST_MEMBERS.json",
+  "anthology_mechanical_coverage": "ANTHOLOGY_STRUCTURAL_COVERAGE.json",
+  "actual_reading": "READ_LEDGER.json",
+  "fresh_execution": "TEST_RUNS.json",
+  "iterator_reproduction": "HELPER_REPRODUCTION.json",
+  "isolated_execution_copy_bindings": "REPLAY_COPY_BINDINGS.json",
+  "reported_unverified_successor": "REPORTED_SUCCESSOR_MESSAGES.json",
+  "readiness": {
+    "original_shared_52": "observed_pass_normal_and_direct_optimized",
+    "separate_inherited_correction_55": "observed_pass_normal_and_direct_optimized",
+    "trimmed_root_integrity": "fails_original_verifier_root_manifest_absent",
+    "embedded_prior_file_hashes": "1517_entries_match",
+    "anthology": "2095_report_ids_mechanically_present_only",
+    "reported_R3_88": "artifact_unavailable_not_verified",
+    "full_held_corpus_source_bytes": "10104_of_10104_advertised_document_hashes_freshly_matched; package-local integrity and R3 status unchanged"
+  },
+  "credit": "Repeated input copies and interpreter modes are duplicate observations of the same suite; do not add as independent support.",
+  "full_held_corpus_recovery_addendum": "RECOVERY_ADDENDUM.json"
+}

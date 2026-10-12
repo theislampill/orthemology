@@ -1,0 +1,106 @@
+[
+  {
+    "id": "OP-PILOT0V2-INCOMPLETE-DESIGN",
+    "status": "fresh exact-source counterexample; no protected source patch",
+    "target_source_sha256": "bb1ade62418f7670f73c5fc532aff20b4736b955222cc126bfffa7c528c9067f",
+    "target_source": "terminology/pilot0-v2/analysis/analyze_pilot0_v2.py",
+    "expected_contract_source_sha256": "8654d41774fc208f468818d598bd1818d69a9e978e57b5fd2c4f3f53f2c8cb83",
+    "expected_contract": "Four arms A/B/C/Cprime, nine items including seven substantive and two negative controls, five repetitions and at least three blinded raters. Pairwise agreement at least0.70 in every item-arm cell; at leastfive ofseven substantive items in band; overhead within30tokens for every arm.",
+    "accepted_minimal_input": {
+      "manifest": {
+        "run_id": "INDEPENDENT-INCOMPLETE-DESIGN-CONTROL",
+        "synthetic": false
+      },
+      "responses": [
+        {
+          "item": "P0v2-ID-1",
+          "arm": "C",
+          "rater_scores": {
+            "r1": {
+              "probe": 0
+            }
+          },
+          "response_tokens": 10,
+          "comprehension_accuracy": 0.9
+        },
+        {
+          "item": "P0v2-ID-1",
+          "arm": "Cprime",
+          "rater_scores": {
+            "r1": {
+              "probe": 1
+            }
+          },
+          "response_tokens": 10,
+          "comprehension_accuracy": 0.9
+        }
+      ]
+    },
+    "accepted_input_sha256": "efbfacee626818c84f60b952be0e8b9de5c29d915f6ba442bac7fb4b1e5835e9",
+    "absent_design_cells": [
+      "All A and B item-arm cells",
+      "Eight ofnine items including both negative controls",
+      "All second/third rater records and every rater pair",
+      "Required repetition coverage"
+    ],
+    "actual_command": [
+      "private-locator:915d29ee128338d1c948",
+      "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/analyze_pilot0_v2.py",
+      "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/INCOMPLETE_DESIGN_CONTROL.json",
+      "--items",
+      "t20-consolidation-20261011/catalogue/objects/d3/d303f3f4cb48f560b828dd75d62acbffbe97f7417b3824efa03657c1de68bdaf",
+      "--out",
+      "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/OUTPUT.json"
+    ],
+    "actual_exit_code": 0,
+    "actual_outcome": "ADVANCE_TO_PILOT1",
+    "mechanism": [
+      "Absent rater-pair cells omitted from agreement map; empty map creates no low-agreement failure",
+      "Absent overhead values ignored",
+      "Minimum in-band item threshold reduced to min(5, number of observed substantive items)"
+    ],
+    "receipt": "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/FRESH_BOUNDARY_CONTROL.json",
+    "output": "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/OUTPUT.json",
+    "scope": "Invalid/incomplete-design acceptance. Deliberately synthetic adversarial input sets manifest synthetic=false solely to reach production branch. No participants/models/API calls, utility result or term adoption. External complete-design validation can exclude the counterexample, but is not enforced by this CLI.",
+    "correction": "Do not describe CLI analysis alone as enforcing the full frozen design. A future patch must validate complete arm/item/rater/repetition coverage and missing metrics before feasibility advancement; no patch applied here.",
+    "independent_review": "t20-v6-20261011/root_math/pilot_readiness_review/ROOT_REVIEW.json",
+    "independent_output": "t20-v6-20261011/root_math/pilot_readiness_review/ROOT_OUTPUT.json",
+    "independent_assertions_passed": 5
+  },
+  {
+    "id": "OP-FCSP-ER-ZERO-P",
+    "status": "exact retained-source readiness qualification",
+    "finding": "Exact retained FCSP2 and ER2 use p or1, replacing legitimate zero p-values by1. Source-bound decision controls and independent root review confirm the inferential readiness limit.",
+    "source_bindings": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/EXACT_SOURCE_BINDINGS.json",
+    "fresh_receipt": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/FRESH_BOUNDARY_REPRODUCTIONS.json",
+    "independent_review": "t20-v6-20261011/root_math/protocol_boundary_review/RESULT.json",
+    "scope": "No actual empirical result reversal; no original/protected source mutation."
+  },
+  {
+    "id": "OP-ER2-POOLED-A1-HARM",
+    "status": "exact retained-source readiness qualification",
+    "finding": "A1harm is pooled over all archetypes; one erroneous A1 endorsement among4 gives0.25 withinA1 but0.05 overall, hiding a0.10 family guard.",
+    "source_bindings": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/EXACT_SOURCE_BINDINGS.json",
+    "fresh_receipt": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/FRESH_BOUNDARY_REPRODUCTIONS.json",
+    "independent_review": "t20-v6-20261011/root_math/protocol_boundary_review/RESULT.json",
+    "scope": "No actual empirical result reversal; no original/protected source mutation."
+  },
+  {
+    "id": "OP-ER2-E5-CONTRACT-CONFLICT",
+    "status": "exact retained-source readiness qualification",
+    "finding": "ER2 E5 protocol/specification text and analysis docstring ask correct remedy, while scoring rubric and actual code gate correct defect; preserve the conflicting requirements rather than call one unambiguously controlling.",
+    "source_bindings": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/EXACT_SOURCE_BINDINGS.json",
+    "fresh_receipt": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/FRESH_BOUNDARY_REPRODUCTIONS.json",
+    "independent_review": null,
+    "scope": "No actual empirical result reversal; no original/protected source mutation."
+  },
+  {
+    "id": "OP-FCSP-ER-PARSER-PRESENCE",
+    "status": "exact retained-source readiness qualification",
+    "finding": "Strict parser checks required keys but not schema value types/ranges; accepts string false flags and out-of-range confidence in source-bound controls. Declared JSON schema requires separate invocation.",
+    "source_bindings": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/EXACT_SOURCE_BINDINGS.json",
+    "fresh_receipt": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/FRESH_BOUNDARY_REPRODUCTIONS.json",
+    "independent_review": null,
+    "scope": "No actual empirical result reversal; no original/protected source mutation."
+  }
+]

@@ -1,0 +1,9 @@
+import FiniteModelExponentialUniformity
+set_option pp.explicit true
+set_option pp.universes true
+#check @HiddenParity.Cost.generated_actual_badCount_common_positive_exponential_moments
+#print axioms HiddenParity.Cost.generated_actual_badCount_common_positive_exponential_moments
+#check @HiddenParity.Cost.generated_actual_badCount_common_finite_exponential_bound
+#print axioms HiddenParity.Cost.generated_actual_badCount_common_finite_exponential_bound
+#check @HiddenParity.Cost.generated_actual_badCount_exists_common_exponential_range
+#print axioms HiddenParity.Cost.generated_actual_badCount_exists_common_exponential_range

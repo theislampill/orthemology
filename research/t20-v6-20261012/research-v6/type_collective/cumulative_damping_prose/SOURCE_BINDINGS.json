@@ -1,0 +1,1602 @@
+[
+  {
+    "sha256": "047ec278a738cdc018b7118113afa93a8fa6d0aa1a315d33440f2aa0586a53ea",
+    "path": "t20-consolidation-20261011/catalogue/objects/04/047ec278a738cdc018b7118113afa93a8fa6d0aa1a315d33440f2aa0586a53ea",
+    "bytes": 19847,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-047ec278a738cdc018b7",
+    "names": [
+      "D-047ec278a738cdc018b7.md",
+      "RESULT.md",
+      "partial-cumulative-one-hidden-lift-20261010--RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/partial-cumulative-one-hidden-lift-20261010--RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 262,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# One hidden coordinate: a whole-law lift under cumulative quadratic damping"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. The statement"
+      },
+      {
+        "line": 50,
+        "heading": "## 2. Inherited bounds and positive-time existence"
+      },
+      {
+        "line": 87,
+        "heading": "## 3. The nonautonomous local bridge, including both time orderings"
+      },
+      {
+        "line": 121,
+        "heading": "### Backward weighting of an arbitrary endpoint representative"
+      },
+      {
+        "line": 133,
+        "heading": "### Forward weighting of an arbitrary starting representative"
+      },
+      {
+        "line": 144,
+        "heading": "## 4. Patching and the boundary at zero"
+      },
+      {
+        "line": 166,
+        "heading": "## 5. Exact law equivalence: the controlled-variable signed moment measures"
+      },
+      {
+        "line": 198,
+        "heading": "## 6. Continuation and a useful sufficient uniqueness criterion"
+      },
+      {
+        "line": 210,
+        "heading": "### A unique joint law with a moment-indeterminate hidden marginal"
+      },
+      {
+        "line": 225,
+        "heading": "### Ambiguous lifts really occur"
+      },
+      {
+        "line": 234,
+        "heading": "## 7. A genuinely partial, nonautonomous control"
+      },
+      {
+        "line": 252,
+        "heading": "## 8. Scope, inheritance, and separate generalization"
+      }
+    ],
+    "unit_id": "SU-047ec278a738cdc018b7",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 0
+  },
+  {
+    "sha256": "0a1e91c1b13d0f4e84da51a26a57aedcd657dea64187cb4016006755e2d6496b",
+    "path": "t20-consolidation-20261011/catalogue/objects/0a/0a1e91c1b13d0f4e84da51a26a57aedcd657dea64187cb4016006755e2d6496b",
+    "bytes": 2568,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-0a1e91c1b13d0f4e84da",
+    "names": [
+      "D-0a1e91c1b13d0f4e84da.md",
+      "SOURCE_CHECKS.md",
+      "time-varying-square-positivity-20261010__SOURCE_CHECKS.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/inputs/time-varying-square-positivity-20261010__SOURCE_CHECKS.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/inputs/time-varying-square-positivity-20261010__SOURCE_CHECKS.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/time-varying-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/time-varying-square-positivity-independent-review-20261010/author-snapshot/SOURCE_CHECKS.md",
+      "T20_Diffusive_Quadratic_Killing_Existence_Evidence_20261010/evidence/time-varying-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Polynomial_Proof_Extensions_Intermediate_20261010/inherited/time-varying-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Heat_Affine_Graded_Operator_Evidence_20261010/evidence/time-varying-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/time-varying-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/time-varying-square-positivity-independent-review-20261010/author-snapshot/SOURCE_CHECKS.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 19,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Source and inheritance checks"
+      },
+      {
+        "line": 5,
+        "heading": "## Classical input"
+      },
+      {
+        "line": 11,
+        "heading": "## Inheritance preserved"
+      }
+    ],
+    "unit_id": "SU-0a1e91c1b13d0f4e84da",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 1
+  },
+  {
+    "sha256": "12d3e23f4f01f934cce554503368ccc2755ad8cef9055c432380f7b6271abd3f",
+    "path": "t20-consolidation-20261011/catalogue/objects/12/12d3e23f4f01f934cce554503368ccc2755ad8cef9055c432380f7b6271abd3f",
+    "bytes": 5781,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-12d3e23f4f01f934cce5",
+    "names": [
+      "D-12d3e23f4f01f934cce5.md",
+      "SHARP_HIDDEN_BOUNDARY.md",
+      "partial-cumulative-one-hidden-lift-20261010--SHARP_HIDDEN_BOUNDARY.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/SHARP_HIDDEN_BOUNDARY.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/partial-cumulative-one-hidden-lift-20261010--SHARP_HIDDEN_BOUNDARY.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 77,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Separate sharpness corollary: tensoring the full nonmoment functional"
+      },
+      {
+        "line": 5,
+        "heading": "## S1. Statement"
+      },
+      {
+        "line": 15,
+        "heading": "## S2. Exact inherited full-functional input"
+      },
+      {
+        "line": 36,
+        "heading": "## S3. Full square positivity, including strictness"
+      },
+      {
+        "line": 50,
+        "heading": "## S4. The hierarchy and the all-time obstruction"
+      },
+      {
+        "line": 73,
+        "heading": "## S5. Boundaries"
+      }
+    ],
+    "unit_id": "SU-12d3e23f4f01f934cce5",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 2
+  },
+  {
+    "sha256": "27995b05847aef760ead182240413575136f483f0e10c54cfa9693bfe5c778f6",
+    "path": "t20-consolidation-20261011/catalogue/objects/27/27995b05847aef760ead182240413575136f483f0e10c54cfa9693bfe5c778f6",
+    "bytes": 1766,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-27995b05847aef760ead",
+    "names": [
+      "D-27995b05847aef760ead.md",
+      "SOURCE_CHECKS.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/SOURCE_CHECKS.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 11,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Independent source check"
+      }
+    ],
+    "unit_id": "SU-27995b05847aef760ead",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 3
+  },
+  {
+    "sha256": "2b7c768f490fac7405c3592988baa49a22e8e7a9d36a76f8a04107aa0bfa8e46",
+    "path": "t20-consolidation-20261011/catalogue/objects/2b/2b7c768f490fac7405c3592988baa49a22e8e7a9d36a76f8a04107aa0bfa8e46",
+    "bytes": 1062,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-2b7c768f490fac7405c3",
+    "names": [
+      "D-2b7c768f490fac7405c3.md",
+      "REPLAY.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/REPLAY.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 11,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Replay and scope"
+      }
+    ],
+    "unit_id": "SU-2b7c768f490fac7405c3",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 4
+  },
+  {
+    "sha256": "3059f48410db3190d4e953132b28ccfb279e38539cc707b95917ee27b8b59dcb",
+    "path": "t20-consolidation-20261011/catalogue/objects/30/3059f48410db3190d4e953132b28ccfb279e38539cc707b95917ee27b8b59dcb",
+    "bytes": 3240,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-3059f48410db3190d4e9",
+    "names": [
+      "D-3059f48410db3190d4e9.md",
+      "SOURCE_CHECKS.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/SOURCE_CHECKS.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 12,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Bounded source check and attribution"
+      }
+    ],
+    "unit_id": "SU-3059f48410db3190d4e9",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 5
+  },
+  {
+    "sha256": "468dac5cdd3c4368c12cb7db2bb6cc7f5267b7dee8035d65911962e40042950d",
+    "path": "t20-consolidation-20261011/catalogue/objects/46/468dac5cdd3c4368c12cb7db2bb6cc7f5267b7dee8035d65911962e40042950d",
+    "bytes": 22487,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-468dac5cdd3c4368c12c",
+    "names": [
+      "D-468dac5cdd3c4368c12c.md",
+      "candidate-RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/inputs/candidate-RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 306,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Accumulated SOS damping forces probability-law realizability"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Result and exact hypotheses"
+      },
+      {
+        "line": 38,
+        "heading": "## 2. Unnormalization uses only first derivatives"
+      },
+      {
+        "line": 54,
+        "heading": "## 3. Exact finite Volterra expansion and its sign"
+      },
+      {
+        "line": 86,
+        "heading": "## 4. Gaussian moments and representation at every positive time"
+      },
+      {
+        "line": 115,
+        "heading": "### Uniform interior bounds without extra certificate regularity"
+      },
+      {
+        "line": 132,
+        "heading": "## 5. Fourier identification of the law-level equation"
+      },
+      {
+        "line": 176,
+        "heading": "## 6. Compact integrating factors, inverse weighting, and time zero"
+      },
+      {
+        "line": 214,
+        "heading": "## 7. Converse and continuation"
+      },
+      {
+        "line": 224,
+        "heading": "## 8. A polynomial rank-one example outside instantaneous Theorem V"
+      },
+      {
+        "line": 257,
+        "heading": "### Rotating rank-one example"
+      },
+      {
+        "line": 266,
+        "heading": "## 9. Inherited polynomial-coordinate transport with the weaker certificate"
+      },
+      {
+        "line": 297,
+        "heading": "## 10. Boundaries, source inheritance, and evidence status"
+      }
+    ],
+    "unit_id": "SU-468dac5cdd3c4368c12c",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 6
+  },
+  {
+    "sha256": "49f701fd59cd65e07c51ab3ed647bd128884a88adea7afbb3a32ec59ac37b02e",
+    "path": "t20-consolidation-20261011/catalogue/objects/49/49f701fd59cd65e07c51ab3ed647bd128884a88adea7afbb3a32ec59ac37b02e",
+    "bytes": 10153,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-49f701fd59cd65e07c51",
+    "names": [
+      "D-49f701fd59cd65e07c51.md",
+      "REVIEW.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-review-20261010/REVIEW.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 55,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Independent review of the partial nonautonomous whole-law bridge"
+      },
+      {
+        "line": 5,
+        "heading": "## Verdict"
+      },
+      {
+        "line": 9,
+        "heading": "## Positive theorem: independent checks"
+      },
+      {
+        "line": 17,
+        "heading": "## General SOS bridge: independent checks"
+      },
+      {
+        "line": 25,
+        "heading": "## Identification, continuation, and examples"
+      },
+      {
+        "line": 33,
+        "heading": "## Sharpness addition"
+      },
+      {
+        "line": 39,
+        "heading": "## Limits"
+      },
+      {
+        "line": 43,
+        "heading": "## Frozen binding and executed controls"
+      }
+    ],
+    "unit_id": "SU-49f701fd59cd65e07c51",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 7
+  },
+  {
+    "sha256": "4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9",
+    "path": "t20-consolidation-20261011/catalogue/objects/4f/4f41143b4e4a529952468de8c599c81aa3c6a1737159794cf80080f700e280a9",
+    "bytes": 6169,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-4f41143b4e4a52995246",
+    "names": [
+      "D-4f41143b4e4a52995246.md",
+      "RESULT.md",
+      "accepted-polynomial-transport-RESULT.md",
+      "polynomial-transport-continuation-20261010__RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "dissipative-polynomial-gradient-preservation-20261010/evidence/polynomial-transport-continuation-20261010/RESULT.md",
+      "energy-controlled-gradient-preservation-20261010/evidence/polynomial-transport-continuation-20261010/RESULT.md",
+      "radial-quartic-gradient-preservation-20261010/evidence/polynomial-transport-continuation-20261010/RESULT.md",
+      "radial-quartic-gradient-preservation-20261010/evidence/radial-quartic-gradient-independent-review-20261010/isolated-replay/polynomial-transport-continuation-20261010/RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/inputs/polynomial-transport-continuation-20261010__RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/inputs/polynomial-transport-continuation-20261010__RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/inputs/accepted-polynomial-transport-RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/polynomial-transport-continuation-20261010/RESULT.md",
+      "T20_Polynomial_Proof_Extensions_Intermediate_20261010/sources/polynomial-transport-continuation-20261010/RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 62,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Polynomial-coordinate transport of represented moment continuation"
+      },
+      {
+        "line": 5,
+        "heading": "## Question and increment"
+      },
+      {
+        "line": 9,
+        "heading": "## Hypotheses"
+      },
+      {
+        "line": 19,
+        "heading": "## Derivation"
+      },
+      {
+        "line": 36,
+        "heading": "## Explicit nonlinear time-dependent instance"
+      },
+      {
+        "line": 45,
+        "heading": "## Determinacy despite failure of a coordinate Carleman test"
+      },
+      {
+        "line": 60,
+        "heading": "## Evidence and limits"
+      }
+    ],
+    "unit_id": "SU-4f41143b4e4a52995246",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 8
+  },
+  {
+    "sha256": "5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8",
+    "path": "t20-consolidation-20261011/catalogue/objects/56/5618aa57c4096b425fbe6937b9f11d6f9b47378f528390bedad9373f078406c8",
+    "bytes": 9106,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-5618aa57c4096b425fbe",
+    "names": [
+      "D-5618aa57c4096b425fbe.txt",
+      "putinar-schmudgen-p29-31.txt"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/inputs/putinar-schmudgen-p29-31.txt"
+    ],
+    "semantic_read_credit": false,
+    "lines": 161,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [],
+    "unit_id": "SU-5618aa57c4096b425fbe",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 9
+  },
+  {
+    "sha256": "6405258b6c2523f2e28d06d5cb9cb054fa876aa3744690856e79cc078dbd62ea",
+    "path": "t20-consolidation-20261011/catalogue/objects/64/6405258b6c2523f2e28d06d5cb9cb054fa876aa3744690856e79cc078dbd62ea",
+    "bytes": 13915,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-6405258b6c2523f2e28d",
+    "names": [
+      "D-6405258b6c2523f2e28d.md",
+      "REVIEW.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/REVIEW.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 95,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Independent review: cumulative SOS coercivity"
+      },
+      {
+        "line": 5,
+        "heading": "## Disposition and exact scope"
+      },
+      {
+        "line": 15,
+        "heading": "## 1. Finite backward expansion, time order, and sign"
+      },
+      {
+        "line": 30,
+        "heading": "## 2. Cumulative radial control and existence without circularity"
+      },
+      {
+        "line": 40,
+        "heading": "## 3. Interior uniformity requires no regularity of c(t)"
+      },
+      {
+        "line": 53,
+        "heading": "## 4. Fourier and compact-test identification"
+      },
+      {
+        "line": 61,
+        "heading": "### Minor clarification requested and resolved"
+      },
+      {
+        "line": 65,
+        "heading": "## 5. Boundary recovery, uniqueness, converse, and continuation"
+      },
+      {
+        "line": 75,
+        "heading": "## 6. Strict extension and the inclusion of V"
+      },
+      {
+        "line": 83,
+        "heading": "## 7. Inherited polynomial-coordinate transport"
+      },
+      {
+        "line": 91,
+        "heading": "## 8. Executed controls and limits"
+      }
+    ],
+    "unit_id": "SU-6405258b6c2523f2e28d",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 10
+  },
+  {
+    "sha256": "6b700b94c7578b143d29e06c447f86c0ba24bdce8818ae5ec157559cc4d452bb",
+    "path": "t20-consolidation-20261011/catalogue/objects/6b/6b700b94c7578b143d29e06c447f86c0ba24bdce8818ae5ec157559cc4d452bb",
+    "bytes": 966,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-6b700b94c7578b143d29",
+    "names": [
+      "D-6b700b94c7578b143d29.md",
+      "REPLAY.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/REPLAY.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/REPLAY.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 15,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Replay the author controls"
+      }
+    ],
+    "unit_id": "SU-6b700b94c7578b143d29",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 11
+  },
+  {
+    "sha256": "7ffed76cdfb23ee725bd4030c22dd03bb1f66934d885a6800caf260fdb0741bd",
+    "path": "t20-consolidation-20261011/catalogue/objects/7f/7ffed76cdfb23ee725bd4030c22dd03bb1f66934d885a6800caf260fdb0741bd",
+    "bytes": 14995,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-7ffed76cdfb23ee725bd",
+    "names": [
+      "D-7ffed76cdfb23ee725bd.md",
+      "RESULT.md",
+      "accepted-V-RESULT.md",
+      "time-varying-square-positivity-20261010__RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "dissipative-polynomial-gradient-preservation-20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "radial-quartic-gradient-preservation-20261010/evidence/radial-quartic-gradient-independent-review-20261010/isolated-replay/time-varying-square-positivity-20261010/RESULT.md",
+      "radial-quartic-gradient-preservation-20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/inputs/time-varying-square-positivity-20261010__RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/inputs/time-varying-square-positivity-20261010__RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/inputs/accepted-V-RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/time-varying-square-positivity-independent-review-20261010/author-snapshot/RESULT.md",
+      "T20_Diffusive_Quadratic_Killing_Existence_Evidence_20261010/evidence/diffusive-coercive-realizability-20261010/inputs/time-varying-square-positivity-20261010__RESULT.md",
+      "T20_Diffusive_Quadratic_Killing_Existence_Evidence_20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Polynomial_Proof_Extensions_Intermediate_20261010/inherited/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Heat_Affine_Graded_Operator_Evidence_20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/time-varying-square-positivity-20261010/RESULT.md",
+      "T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/time-varying-square-positivity-independent-review-20261010/author-snapshot/RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 203,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Exact moment dynamics for changing polynomial objectives"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Result and exact time-dependent hypotheses"
+      },
+      {
+        "line": 29,
+        "heading": "## 2. First-derivative inequalities replace even-time derivatives"
+      },
+      {
+        "line": 60,
+        "heading": "## 3. Positive-time vector measures and uniform Gaussian bounds"
+      },
+      {
+        "line": 82,
+        "heading": "## 4. Polynomial evolution extends to Fourier tests"
+      },
+      {
+        "line": 117,
+        "heading": "## 5. Compact tests identify the actual reaction equation"
+      },
+      {
+        "line": 151,
+        "heading": "## 6. Recovering the initial law without initial representability"
+      },
+      {
+        "line": 171,
+        "heading": "## 7. Changing quadratics and the retained failed proof step"
+      },
+      {
+        "line": 193,
+        "heading": "## 8. Scope and inheritance"
+      }
+    ],
+    "unit_id": "SU-7ffed76cdfb23ee725bd",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 12
+  },
+  {
+    "sha256": "97362c728875e9bbb808a3272ca1372b1488e9759651cc585af004bdd539a89b",
+    "path": "t20-consolidation-20261011/catalogue/objects/97/97362c728875e9bbb808a3272ca1372b1488e9759651cc585af004bdd539a89b",
+    "bytes": 7859,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-97362c728875e9bbb808",
+    "names": [
+      "97362c728875e9bbb808a3272ca1372b1488e9759651cc585af004bdd539a89b.md",
+      "D-97362c728875e9bbb808.md",
+      "INDETERMINATE_RESULT.md",
+      "RESULT.md",
+      "initial-validity-counterexample-20261010--RESULT.md",
+      "initial-validity-counterexample-20261010__RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/initial-validity-counterexample-20261010--RESULT.md",
+      "Computable_Positive_Hierarchy_Evidence_20261010/computable-positive-hierarchy-20261010/inputs/initial-validity-counterexample-20261010__RESULT.md",
+      "Determinate_Initial_Positivity_Evidence_20261010/determinate-initial-positivity-20261010/inputs/INDETERMINATE_RESULT.md",
+      "Initial_Validity_Counterexample_Evidence_20261010/initial-validity-counterexample-20261010/RESULT.md",
+      "Orthemology_T20_Whole_Corpus_Synthesis_20261010/sources/97362c728875e9bbb808a3272ca1372b1488e9759651cc585af004bdd539a89b.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 138,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Valid initial moments do not force positive-time realizability"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Answer"
+      },
+      {
+        "line": 16,
+        "heading": "## 2. Two explicit measures with identical moments"
+      },
+      {
+        "line": 36,
+        "heading": "## 3. Parameter choice and initial validity"
+      },
+      {
+        "line": 58,
+        "heading": "## 4. The strictly positive hierarchy solution"
+      },
+      {
+        "line": 94,
+        "heading": "## 5. No positive-time sequence is realizable"
+      },
+      {
+        "line": 120,
+        "heading": "## 6. Why no positive initial law can produce this scalar path"
+      },
+      {
+        "line": 130,
+        "heading": "## 7. Attribution, scope, and verification"
+      }
+    ],
+    "unit_id": "SU-97362c728875e9bbb808",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 13
+  },
+  {
+    "sha256": "9f20a6b0125b98a659d87b0a3758630b4e3ded99ba376e1bf4fbcc31d49765db",
+    "path": "t20-consolidation-20261011/catalogue/objects/9f/9f20a6b0125b98a659d87b0a3758630b4e3ded99ba376e1bf4fbcc31d49765db",
+    "bytes": 10148,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-9f20a6b0125b98a659d8",
+    "names": [
+      "D-9f20a6b0125b98a659d8.md",
+      "GENERAL_SOS_BRIDGE.md",
+      "partial-cumulative-one-hidden-lift-20261010--GENERAL_SOS_BRIDGE.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/GENERAL_SOS_BRIDGE.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/partial-cumulative-one-hidden-lift-20261010--GENERAL_SOS_BRIDGE.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 162,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Separate extension: SOS energies in the same controlled subspace"
+      },
+      {
+        "line": 5,
+        "heading": "## G1. Exact statement"
+      },
+      {
+        "line": 18,
+        "heading": "## G2. Algebraic bounds and existence before any law-level dynamics"
+      },
+      {
+        "line": 39,
+        "heading": "## G3. Canonical signed projections despite noncanonical joint laws"
+      },
+      {
+        "line": 60,
+        "heading": "## G4. Fourier identification is used only on the controlled space"
+      },
+      {
+        "line": 98,
+        "heading": "## G5. Signed integrating factors"
+      },
+      {
+        "line": 122,
+        "heading": "## G6. Reconstructing the joint lift from one representative"
+      },
+      {
+        "line": 154,
+        "heading": "## G7. A higher-degree discriminator and the limit of the quadratic proof"
+      }
+    ],
+    "unit_id": "SU-9f20a6b0125b98a659d8",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 14
+  },
+  {
+    "sha256": "a530a5341497e3416345a7ec325e986a7e54f2c254954f80fd32f1f596e6244f",
+    "path": "t20-consolidation-20261011/catalogue/objects/a5/a530a5341497e3416345a7ec325e986a7e54f2c254954f80fd32f1f596e6244f",
+    "bytes": 22545,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-a530a5341497e3416345",
+    "names": [
+      "D-a530a5341497e3416345.md",
+      "RESULT.md",
+      "cumulative-RESULT.md",
+      "cumulative-square-positivity-20261010--RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/inputs/cumulative-RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/cumulative-square-positivity-20261010--RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 306,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Accumulated SOS damping forces probability-law realizability"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Result and exact hypotheses"
+      },
+      {
+        "line": 38,
+        "heading": "## 2. Unnormalization uses only first derivatives"
+      },
+      {
+        "line": 54,
+        "heading": "## 3. Exact finite Volterra expansion and its sign"
+      },
+      {
+        "line": 86,
+        "heading": "## 4. Gaussian moments and representation at every positive time"
+      },
+      {
+        "line": 115,
+        "heading": "### Uniform interior bounds without extra certificate regularity"
+      },
+      {
+        "line": 132,
+        "heading": "## 5. Fourier identification of the law-level equation"
+      },
+      {
+        "line": 176,
+        "heading": "## 6. Compact integrating factors, inverse weighting, and time zero"
+      },
+      {
+        "line": 214,
+        "heading": "## 7. Converse and continuation"
+      },
+      {
+        "line": 224,
+        "heading": "## 8. A polynomial rank-one example outside instantaneous Theorem V"
+      },
+      {
+        "line": 257,
+        "heading": "### Rotating rank-one example"
+      },
+      {
+        "line": 266,
+        "heading": "## 9. Inherited polynomial-coordinate transport with the weaker certificate"
+      },
+      {
+        "line": 297,
+        "heading": "## 10. Boundaries, source inheritance, and evidence status"
+      }
+    ],
+    "unit_id": "SU-a530a5341497e3416345",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 15
+  },
+  {
+    "sha256": "a666ce083f0944923a33c267ebed1811df4f4f36cf0e5b7dbd7344fff1e2bde1",
+    "path": "t20-consolidation-20261011/catalogue/objects/a6/a666ce083f0944923a33c267ebed1811df4f4f36cf0e5b7dbd7344fff1e2bde1",
+    "bytes": 3578,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-a666ce083f0944923a33",
+    "names": [
+      "D-a666ce083f0944923a33.md",
+      "SOURCE_CHECKS.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-20261010/SOURCE_CHECKS.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/author-snapshot/SOURCE_CHECKS.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 31,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Source, inheritance, and scope checks"
+      },
+      {
+        "line": 5,
+        "heading": "## Classical source, version pinned"
+      },
+      {
+        "line": 12,
+        "heading": "## Immediate inherited source bindings"
+      },
+      {
+        "line": 21,
+        "heading": "## What is inherited and what is proved here"
+      }
+    ],
+    "unit_id": "SU-a666ce083f0944923a33",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 16
+  },
+  {
+    "sha256": "c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada",
+    "path": "t20-consolidation-20261011/catalogue/objects/c6/c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada",
+    "bytes": 20101,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-c6dc162591a6827b8ae0",
+    "names": [
+      "D-c6dc162591a6827b8ae0.md",
+      "RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-partial-escape-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 266,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# A genuine initial moment record can escape full realizability"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Exact answer and scope"
+      },
+      {
+        "line": 27,
+        "heading": "## 2. Elementary signed representation of an arbitrary moment array"
+      },
+      {
+        "line": 89,
+        "heading": "## 3. A nonmoment functional inside a genuine moment functional"
+      },
+      {
+        "line": 117,
+        "heading": "## 4. The inherited moment-equivalent active pair"
+      },
+      {
+        "line": 144,
+        "heading": "## 5. The path and its genuinely valid initial record"
+      },
+      {
+        "line": 180,
+        "heading": "## 6. No positive-time joint representative exists"
+      },
+      {
+        "line": 223,
+        "heading": "## 7. Explicit nonnegative-polynomial separation at each positive time"
+      },
+      {
+        "line": 247,
+        "heading": "## 8. Consequences and exact boundaries"
+      },
+      {
+        "line": 256,
+        "heading": "## 9. Inheritance, verification and attribution"
+      }
+    ],
+    "unit_id": "SU-c6dc162591a6827b8ae0",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 17
+  },
+  {
+    "sha256": "cf9b6626b24329f8dd27d2ff2d78027ea4e222f45a6b7621209aa4d39b840fe3",
+    "path": "t20-consolidation-20261011/catalogue/objects/cf/cf9b6626b24329f8dd27d2ff2d78027ea4e222f45a6b7621209aa4d39b840fe3",
+    "bytes": 7806,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-cf9b6626b24329f8dd27",
+    "names": [
+      "D-cf9b6626b24329f8dd27.md",
+      "RESULT.md",
+      "partial-cumulative-law-persistence-20261010--RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-law-persistence-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-20261010/inputs/partial-cumulative-law-persistence-20261010--RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 93,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# One positive-time law controls the entire partially damped path"
+      },
+      {
+        "line": 5,
+        "heading": "## Statement"
+      },
+      {
+        "line": 17,
+        "heading": "## 1. Inherited algebraic estimate"
+      },
+      {
+        "line": 25,
+        "heading": "## 2. Canonical positive and signed measures on controlled space"
+      },
+      {
+        "line": 47,
+        "heading": "## 3. Canonical projected evolution without joint laws"
+      },
+      {
+        "line": 63,
+        "heading": "## 4. One joint law propagates"
+      },
+      {
+        "line": 87,
+        "heading": "## 5. Exact boundaries and information content"
+      }
+    ],
+    "unit_id": "SU-cf9b6626b24329f8dd27",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 18
+  },
+  {
+    "sha256": "d3dfcfa41a4764da4f07c5fbb33c8d212a0570703dcfed220c7a74633979c91b",
+    "path": "t20-consolidation-20261011/catalogue/objects/d3/d3dfcfa41a4764da4f07c5fbb33c8d212a0570703dcfed220c7a74633979c91b",
+    "bytes": 13344,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-d3dfcfa41a4764da4f07",
+    "names": [
+      "D-d3dfcfa41a4764da4f07.md",
+      "REVIEW.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-partial-escape-independent-review-20261010/REVIEW.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 99,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Independent review: genuine initial law, immediate loss of joint representability"
+      },
+      {
+        "line": 5,
+        "heading": "## Verdict"
+      },
+      {
+        "line": 21,
+        "heading": "## 1. Signed representation: all degrees, not a finite prefix"
+      },
+      {
+        "line": 31,
+        "heading": "## 2. Inherited functional and product positivity"
+      },
+      {
+        "line": 41,
+        "heading": "## 3. Active moment-equivalent measures and genuine initial law"
+      },
+      {
+        "line": 51,
+        "heading": "## 4. Full strict positivity, time regularity, and normalized equation"
+      },
+      {
+        "line": 59,
+        "heading": "## 5. No joint representative at any positive time"
+      },
+      {
+        "line": 71,
+        "heading": "## 6. Separator and consequences"
+      },
+      {
+        "line": 81,
+        "heading": "## 7. Fresh exact controls and mutations"
+      },
+      {
+        "line": 97,
+        "heading": "## Scope retained"
+      }
+    ],
+    "unit_id": "SU-d3dfcfa41a4764da4f07",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 19
+  },
+  {
+    "sha256": "d940d080eea86c0486e81219898c343c4e4c025f86e00cda209df3a3266a3288",
+    "path": "t20-consolidation-20261011/catalogue/objects/d9/d940d080eea86c0486e81219898c343c4e4c025f86e00cda209df3a3266a3288",
+    "bytes": 18852,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-d940d080eea86c0486e8",
+    "names": [
+      "D-d940d080eea86c0486e8.md",
+      "RESULT.md",
+      "partial-rank-RESULT.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/inputs/partial-rank-RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/partial-quadratic-rank-classification-20261010/RESULT.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/partial-quadratic-rank-independent-review-20261010/replay-work/partial-quadratic-rank-classification-20261010/RESULT.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 216,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# The sharp rank boundary for square-positive quadratic damping"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Exact statement and distinct quantifiers"
+      },
+      {
+        "line": 30,
+        "heading": "## 2. Dynamical bounds in precisely the controlled directions"
+      },
+      {
+        "line": 64,
+        "heading": "## 3. One positive-time representative recovers the entire path"
+      },
+      {
+        "line": 93,
+        "heading": "## 4. The exact identification and continuation distinctions"
+      },
+      {
+        "line": 115,
+        "heading": "## 5. Distinct full-support laws with the same entire record whenever k\u22651"
+      },
+      {
+        "line": 137,
+        "heading": "## 6. At least two hidden directions admit forever nonmoment paths"
+      },
+      {
+        "line": 139,
+        "heading": "### 6.1 The direct stationary obstruction"
+      },
+      {
+        "line": 149,
+        "heading": "### 6.2 A strictly square-positive obstruction for all finite times"
+      },
+      {
+        "line": 192,
+        "heading": "## 7. Invertible coordinates and general lower-bounded quadratics"
+      },
+      {
+        "line": 208,
+        "heading": "## 8. Dependency scope, limitations, and executed evidence"
+      }
+    ],
+    "unit_id": "SU-d940d080eea86c0486e8",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 20
+  },
+  {
+    "sha256": "df593fc0a261960f59510937cd1642417797f654fb1461beed3b11c6416ad998",
+    "path": "t20-consolidation-20261011/catalogue/objects/df/df593fc0a261960f59510937cd1642417797f654fb1461beed3b11c6416ad998",
+    "bytes": 11146,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-df593fc0a261960f5951",
+    "names": [
+      "D-df593fc0a261960f5951.md",
+      "REVIEW.md",
+      "accepted-V-REVIEW.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/cumulative-square-positivity-independent-review-20261010/inputs/accepted-V-REVIEW.md",
+      "T20_Cumulative_and_Sharp_Partial_Damping_Intermediate_20261010/evidence/time-varying-square-positivity-independent-review-20261010/REVIEW.md",
+      "T20_Diffusive_Quadratic_Killing_Existence_Evidence_20261010/evidence/time-varying-square-positivity-independent-review-20261010/REVIEW.md",
+      "T20_Polynomial_Proof_Extensions_Intermediate_20261010/inherited/time-varying-square-positivity-independent-review-20261010/REVIEW.md",
+      "T20_Heat_Affine_Graded_Operator_Evidence_20261010/evidence/time-varying-square-positivity-independent-review-20261010/REVIEW.md",
+      "T20_Moving_Objective_Reviewed_Evidence_20261010/evidence/time-varying-square-positivity-independent-review-20261010/REVIEW.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 112,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Independent review: changing polynomial objectives under uniform SOS domination"
+      },
+      {
+        "line": 5,
+        "heading": "## 1. Verdict and binding"
+      },
+      {
+        "line": 15,
+        "heading": "## 2. Exact hypotheses and the first-derivative repair"
+      },
+      {
+        "line": 36,
+        "heading": "## 3. Gaussian growth and measure existence"
+      },
+      {
+        "line": 48,
+        "heading": "## 4. Fourier continuation: order of limits and complex tests"
+      },
+      {
+        "line": 63,
+        "heading": "## 5. Weak reaction equation and compact integrating factor"
+      },
+      {
+        "line": 77,
+        "heading": "## 6. Initial recovery, uniqueness, and future schedule"
+      },
+      {
+        "line": 89,
+        "heading": "## 7. Countercontrol and scope limits"
+      },
+      {
+        "line": 101,
+        "heading": "## 8. Classical input and executed evidence"
+      }
+    ],
+    "unit_id": "SU-df593fc0a261960f5951",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 21
+  },
+  {
+    "sha256": "f8101923f2a3bb37acb9a8620b6fc9d8604ee9aace1c16505793cecf2ce45e00",
+    "path": "t20-consolidation-20261011/catalogue/objects/f8/f8101923f2a3bb37acb9a8620b6fc9d8604ee9aace1c16505793cecf2ce45e00",
+    "bytes": 1921,
+    "original_kind": "research_document_candidate",
+    "existing_unit_id": "SU-f8101923f2a3bb37acb9",
+    "names": [
+      "D-f8101923f2a3bb37acb9.md",
+      "REPLAY.md"
+    ],
+    "registered_result_ids": [],
+    "route_group": "archive-source/Orthemology_T20_Reconciled_Research_20261010",
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/partial-cumulative-one-hidden-lift-20261010/REPLAY.md"
+    ],
+    "semantic_read_credit": false,
+    "lines": 18,
+    "admission": "authored_prose_or_external_source_requires_owner",
+    "method": "text retained for domain semantic reading; no filename exclusion",
+    "content_evidence": [
+      {
+        "line": 1,
+        "heading": "# Replay"
+      }
+    ],
+    "unit_id": "SU-f8101923f2a3bb37acb9",
+    "prior_reading_indices": [],
+    "routing_status": "READING_ROUTE_NOT_FOUND_IN_CURRENT_V6_JOIN; MAY_HAVE_PRIOR_OR_ACTIVE_OWNER",
+    "reading_credit": false,
+    "queue_index": 22
+  },
+  {
+    "queue_index": 23,
+    "sha256": "5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b",
+    "path": "t20-consolidation-20261011/catalogue/objects/50/5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b",
+    "lines": 47,
+    "bytes": 2860,
+    "names": [
+      "putinar-schmudgen-p24.txt"
+    ],
+    "scope": "Exact retained primary theorem-page dependency, not whole-paper reading"
+  },
+  {
+    "queue_index": 24,
+    "sha256": "dbfb6e5190a12d943c4f2530350ad66760f1f093fe631b3c6884de5ab38d00d5",
+    "path": "t20-consolidation-20261011/catalogue/objects/db/dbfb6e5190a12d943c4f2530350ad66760f1f093fe631b3c6884de5ab38d00d5",
+    "lines": 144,
+    "bytes": 9800,
+    "names": [
+      "D-dbfb6e5190a12d943c4f.md",
+      "RESULT.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/effectivity-corrected-frozen-copy/RESULT.md"
+    ],
+    "scope": "Consequential original successor; explicit join found no adequate prior prose credit"
+  },
+  {
+    "queue_index": 25,
+    "sha256": "aff8999b9d070355d6ea4712f99ecb7d635480cacc4821794534c71e4272a18e",
+    "path": "t20-consolidation-20261011/catalogue/objects/af/aff8999b9d070355d6ea4712f99ecb7d635480cacc4821794534c71e4272a18e",
+    "lines": 134,
+    "bytes": 9248,
+    "names": [
+      "D-aff8999b9d070355d6ea.md",
+      "RESULT.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/effectivity-original-preimage/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-effectivity-20261010/RESULT.md"
+    ],
+    "scope": "Consequential original successor; explicit join found no adequate prior prose credit"
+  },
+  {
+    "queue_index": 26,
+    "sha256": "b04978552464b25a93fe39c4a61ccf80dcf64bc04e17c23ff6fd6242667f1a20",
+    "path": "t20-consolidation-20261011/catalogue/objects/b0/b04978552464b25a93fe39c4a61ccf80dcf64bc04e17c23ff6fd6242667f1a20",
+    "lines": 171,
+    "bytes": 7712,
+    "names": [
+      "D-b04978552464b25a93fe.md",
+      "RESULT.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-computed-separator-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/computed-author-frozen-copy/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-computed-separator-20261010/RESULT.md"
+    ],
+    "scope": "Consequential original successor; explicit join found no adequate prior prose credit"
+  },
+  {
+    "queue_index": 27,
+    "sha256": "c4205f111e660f91a8f28f6987351af64f71dae95246c564055843e895132db4",
+    "path": "t20-consolidation-20261011/catalogue/objects/c4/c4205f111e660f91a8f28f6987351af64f71dae95246c564055843e895132db4",
+    "lines": 205,
+    "bytes": 11394,
+    "names": [
+      "D-c4205f111e660f91a8f2.md",
+      "REVIEW.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/REVIEW.md"
+    ],
+    "scope": "Consequential original successor; explicit join found no adequate prior prose credit"
+  },
+  {
+    "queue_index": 28,
+    "sha256": "8e026e569b52b6495050111ce92a063291d298c6e496a13775c5fa222dc99ff6",
+    "path": "t20-consolidation-20261011/catalogue/objects/8e/8e026e569b52b6495050111ce92a063291d298c6e496a13775c5fa222dc99ff6",
+    "lines": 94,
+    "bytes": 4894,
+    "names": [
+      "COMPUTED_SEPARATOR_REVIEW.md",
+      "D-8e026e569b52b6495050.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/COMPUTED_SEPARATOR_REVIEW.md"
+    ],
+    "scope": "Consequential original successor; explicit join found no adequate prior prose credit"
+  },
+  {
+    "queue_index": 29,
+    "sha256": "f7f06518e210b860502c0971aa9ad47a410198d84c519b149a49b953f67c242f",
+    "path": "t20-consolidation-20261011/catalogue/objects/f7/f7f06518e210b860502c0971aa9ad47a410198d84c519b149a49b953f67c242f",
+    "lines": 44,
+    "bytes": 5649,
+    "names": [
+      "D-f7f06518e210b860502c.md",
+      "RESULT.md",
+      "TARGET_RESULT.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/finite-prefix-realizability-delay-20261010/RESULT.md",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/finite-prefix-realizability-delay-independent-review-20261010/TARGET_RESULT.md"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 30,
+    "sha256": "477b75c8887e768f130b475f9e07516584e5780ce78f93d7a291c9fa0423d492",
+    "path": "t20-consolidation-20261011/catalogue/objects/47/477b75c8887e768f130b475f9e07516584e5780ce78f93d7a291c9fa0423d492",
+    "lines": 118,
+    "bytes": 6577,
+    "names": [
+      "D-477b75c8887e768f130b.md",
+      "REVIEW.md"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/finite-prefix-realizability-delay-independent-review-20261010/REVIEW.md"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 31,
+    "sha256": "0447641358b172a384a6c036f6564a4125c46c5c89c50d127470a8a31cda0b78",
+    "path": "t20-consolidation-20261011/catalogue/objects/04/0447641358b172a384a6c036f6564a4125c46c5c89c50d127470a8a31cda0b78",
+    "lines": 17,
+    "bytes": 461,
+    "names": [
+      "D-0447641358b172a384a6.json",
+      "FROZEN_MANIFEST.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/finite-prefix-realizability-delay-independent-review-20261010/FROZEN_MANIFEST.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 32,
+    "sha256": "e33ad5ae98a838b5920d62cf47da32306a4714b9293b4c6ac71a120bbcd7f61f",
+    "path": "t20-consolidation-20261011/catalogue/objects/e3/e33ad5ae98a838b5920d62cf47da32306a4714b9293b4c6ac71a120bbcd7f61f",
+    "lines": 8,
+    "bytes": 593,
+    "names": [
+      "D-e33ad5ae98a838b5920d.json",
+      "REVIEW_RECEIPT.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/finite-prefix-realizability-delay-independent-review-20261010/REVIEW_RECEIPT.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 33,
+    "sha256": "58b94cdd47a61f09fe8d39d7ceb07a51d8baa7cae9de8a513d65bbb22005a66b",
+    "path": "t20-consolidation-20261011/catalogue/objects/58/58b94cdd47a61f09fe8d39d7ceb07a51d8baa7cae9de8a513d65bbb22005a66b",
+    "lines": 47,
+    "bytes": 2561,
+    "names": [
+      "D-58b94cdd47a61f09fe8d.py",
+      "compute_hidden_bound.py"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-computed-separator-20261010/compute_hidden_bound.py",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/computed-author-frozen-copy/compute_hidden_bound.py",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-computed-separator-20261010/compute_hidden_bound.py"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 34,
+    "sha256": "c0750f7a9ad56d1d8babb8e040d7af04a149780048391d2c8c2ec9f15032d3bc",
+    "path": "t20-consolidation-20261011/catalogue/objects/c0/c0750f7a9ad56d1d8babb8e040d7af04a149780048391d2c8c2ec9f15032d3bc",
+    "lines": 56,
+    "bytes": 3397,
+    "names": [
+      "D-c0750f7a9ad56d1d8bab.py",
+      "check_certificate.py"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-computed-separator-20261010/check_certificate.py",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/computed-author-frozen-copy/check_certificate.py",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-computed-separator-20261010/check_certificate.py"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 35,
+    "sha256": "b5683a0a91b55154ce2b0dbe82e0ff4762ac98d14ec61c427b0ffe2147d8f515",
+    "path": "t20-consolidation-20261011/catalogue/objects/b5/b5683a0a91b55154ce2b0dbe82e0ff4762ac98d14ec61c427b0ffe2147d8f515",
+    "lines": 65,
+    "bytes": 3871,
+    "names": [
+      "D-b5683a0a91b55154ce2b.json",
+      "HIDDEN_BOUND.json",
+      "restored-original-HIDDEN_BOUND.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-computed-separator-20261010/HIDDEN_BOUND.json",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/computed-author-frozen-copy/HIDDEN_BOUND.json",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/root-replay-observation/restored-original-HIDDEN_BOUND.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 36,
+    "sha256": "ad27c2107c44e6ae5d1cd339397995de00e7e144cabec9f7464e5c3265eac7f7",
+    "path": "t20-consolidation-20261011/catalogue/objects/ad/ad27c2107c44e6ae5d1cd339397995de00e7e144cabec9f7464e5c3265eac7f7",
+    "lines": 108,
+    "bytes": 3533,
+    "names": [
+      "CERTIFICATE.json",
+      "D-ad27c2107c44e6ae5d1c.json",
+      "restored-original-CERTIFICATE.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-computed-separator-20261010/CERTIFICATE.json",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/computed-author-frozen-copy/CERTIFICATE.json",
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/root-replay-observation/restored-original-CERTIFICATE.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 37,
+    "sha256": "3f2585f9de2ab0534a30ed2fa17df7c58db2dfe117450f83131a064c5d855e27",
+    "path": "t20-consolidation-20261011/catalogue/objects/3f/3f2585f9de2ab0534a30ed2fa17df7c58db2dfe117450f83131a064c5d855e27",
+    "lines": 65,
+    "bytes": 3871,
+    "names": [
+      "D-3f2585f9de2ab0534a30.json",
+      "HIDDEN_BOUND.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-computed-separator-20261010/HIDDEN_BOUND.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 38,
+    "sha256": "64adf96e613bef79d027627b17e5b4d51a91f31d198db5e8d485c7409461dda2",
+    "path": "t20-consolidation-20261011/catalogue/objects/64/64adf96e613bef79d027627b17e5b4d51a91f31d198db5e8d485c7409461dda2",
+    "lines": 108,
+    "bytes": 3534,
+    "names": [
+      "CERTIFICATE.json",
+      "D-64adf96e613bef79d027.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/pinned-replay-workspace/valid-initial-escape-computed-separator-20261010/CERTIFICATE.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 39,
+    "sha256": "2307a822c93712c4bf371dc1ef38710138cae0223f5d1eb90ee6452cf2ee6fb4",
+    "path": "t20-consolidation-20261011/catalogue/objects/23/2307a822c93712c4bf371dc1ef38710138cae0223f5d1eb90ee6452cf2ee6fb4",
+    "lines": 65,
+    "bytes": 3872,
+    "names": [
+      "D-2307a822c93712c4bf37.json",
+      "HIDDEN_BOUND.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/root-replay-observation/HIDDEN_BOUND.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 40,
+    "sha256": "f9e1fed791597a3cd6289956063901eb88a0ad839d49f89def8f2c6d2fa5a6ac",
+    "path": "t20-consolidation-20261011/catalogue/objects/f9/f9e1fed791597a3cd6289956063901eb88a0ad839d49f89def8f2c6d2fa5a6ac",
+    "lines": 108,
+    "bytes": 3534,
+    "names": [
+      "CERTIFICATE.json",
+      "D-f9e1fed791597a3cd628.json"
+    ],
+    "historical_document_names": [
+      "T20_Partial_Cumulative_Law_Intermediate_20261010/evidence/valid-initial-escape-effectivity-independent-review-20261010/root-replay-observation/CERTIFICATE.json"
+    ],
+    "scope": "Consequential source/certificate/custody qualification"
+  },
+  {
+    "queue_index": 41,
+    "sha256": "ac74ebe4e6e711889bc63aa5f66b83bb0cecf71f4d85c51f02518896801123e3",
+    "path": "t20-consolidation-20261011/catalogue/objects/ac/ac74ebe4e6e711889bc63aa5f66b83bb0cecf71f4d85c51f02518896801123e3",
+    "lines": 6,
+    "bytes": 510,
+    "names": [
+      "INPUT_BINDINGS.json"
+    ],
+    "scope": "Actual code input pins"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "finite_orders": {
+    "labelled_posets_up_to_four_points": 242,
+    "injective_rank_maps_checked": 5377,
+    "embedding_mismatches": 0
+  },
+  "score_targets": {
+    "finite_score_target_pairs": 1530,
+    "decoder_existence_mismatches": 0
+  },
+  "vector_scalarization": {
+    "three_response_two_coordinate_mixed_cases": 10935,
+    "nonzero_cone_equilibria": 2739,
+    "interior_cone_equilibria": 5835,
+    "weight_vs_direct_convex_gain_mismatches": 0
+  },
+  "games_and_invariance": {
+    "seed": 9301349,
+    "two_player_vector_profiles": 1200,
+    "positive_weight_equilibrium_witnesses": 294,
+    "affine_invariance_checks": 1200,
+    "mismatches": 0
+  },
+  "sharp_fixtures": {
+    "nonlinear_mixed_equilibrium_columns": [
+      "2/3",
+      "4/5"
+    ],
+    "suboptimal_common_interest_nash": true,
+    "independent_mixed_nash_restores_almost_surely": false,
+    "same_marginal_correlated_law_restores_surely": true,
+    "schematic_pdf_weighted_differences": [
+      "-229/2000",
+      "57/125"
+    ],
+    "curved_payoff_positive_weight_obstructions": 81,
+    "historical_evidentiary_claims": false
+  },
+  "elapsed_seconds": 3.201,
+  "scope": "Exact rational synthetic checks; ordinary proofs establish general statements; no canonical or empirical adoption."
+}

@@ -1,0 +1,2 @@
+diagnostic IR instance integrity: FAIL
+- replay-fixtures/candidate-medium.json[0]: schema: alignment-advanced requires recognition_strength strong when supplied

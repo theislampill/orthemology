@@ -1,0 +1,226 @@
+[
+  {
+    "name": "CANDIDATE-TOPOLOGY-INPUT.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/CANDIDATE-TOPOLOGY-INPUT.yaml",
+    "sha256": "3745522b4ec672fbafc2f6ec3c18eede3c499ed3f65102d2a39b2d9da556f023",
+    "bytes": 4859,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "current-candidate-state.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/current-candidate-state.yaml",
+    "sha256": "7311b9d973761648f8b02ee47c222e64b8a752df57e86bcc74e47c34edc34fce",
+    "bytes": 6509,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "candidate-topology.schema.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/schemas/candidate-topology.schema.json",
+    "sha256": "16a8f9c994615103b8cc4e8904d9ad6595b3a3d30998a1e094f4863f5af8a1ba",
+    "bytes": 7792,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "candidate-overlay.schema.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/schemas/candidate-overlay.schema.json",
+    "sha256": "9b8c23ccfdeba1d7f6c286e20069793cc81e7a268e43352707d5db05eb0d38fc",
+    "bytes": 8828,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "decision-status.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/decision-status.yaml",
+    "sha256": "53d15c2fba0185fdbb3bccdd5b586fd67e7f78824a2fd1e8860860ce36560dad",
+    "bytes": 5424,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "CORRECTIVE-TRANSITION.v1.example.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/CORRECTIVE-TRANSITION.v1.example.json",
+    "sha256": "9b19572d7e1e43ed513a910811b21cbd49f9ab8c58a4626ea5347f1175216d5e",
+    "bytes": 2326,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "SEMANTIC-OPERATOR-CONTRACT.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+    "sha256": "a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2",
+    "bytes": 10844,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "SEMANTIC-OPERATOR-FIXTURES.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/SEMANTIC-OPERATOR-FIXTURES.yaml",
+    "sha256": "de6b44dd11e53fa9de8070371774be8331f2d07a4c041201a2fb9bb23115d1b5",
+    "bytes": 1173,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "CORRECTIVE-TRANSITION.example.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/CORRECTIVE-TRANSITION.example.json",
+    "sha256": "488af8132f9a19fde2a5ed8fe4faeb523ec9fbd7ef015f5a6eda0076f0d6a551",
+    "bytes": 2698,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "TAWATUR-WARRANT.schema.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/TAWATUR-WARRANT.schema.json",
+    "sha256": "1d376d2cc36ad1b1beaf1621026de5b9d725ea2958f2274769e91c662f848269",
+    "bytes": 6801,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "NOETIC-EVIDENCE-REGISTRY.example.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/daee-epistemics/NOETIC-EVIDENCE-REGISTRY.example.json",
+    "sha256": "4674035c36bc134fd56138c5e428eaa9f60a75c29af55c0a93f72a2e207beb20",
+    "bytes": 2525,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "OSM-DYNAMICS-DEFINITIONS.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml",
+    "sha256": "9ac644cd286497bdcfdd450c51fbd9be89111bd077d9983a2561767ea3a6dd80",
+    "bytes": 11382,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "OSM-CSCG-ORTHEME-CROSSWALK.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml",
+    "sha256": "728949704eec3393b3cb1ff4035e814b716ae672d4b915670cd3797483e88729",
+    "bytes": 9826,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "source-status.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/references/source-status.yaml",
+    "sha256": "ef5a37fa5a465e1e993b3e223b3408b6755db51f089c13089d7b8feea0b915f2",
+    "bytes": 30946,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+    "sha256": "6c2b4fb235a2fed9c9b85d1d789391cd295835148fa467b3643390aec5bfd10b",
+    "bytes": 20143,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "dynamic-orthing-noetic-learning-and-orthability.md",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/companion/dynamic-orthing-noetic-learning-and-orthability.md",
+    "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+    "bytes": 19042,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "llm-mediated-orthing-witness.schema.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/schemas/llm-mediated-orthing-witness.schema.json",
+    "sha256": "27934720c85144c97cb7c44729d8bc513ab5ad38569d620b2007296338f38b2e",
+    "bytes": 7499,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "R7E-LLM-MEDIATED-ORTHING-WITNESS.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/R7E-LLM-MEDIATED-ORTHING-WITNESS.yaml",
+    "sha256": "67c1a2268a13e4d2fc9cbee66faf47996459a0c3bfd1afccf8cd4d167a030e2a",
+    "bytes": 7374,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "R7E-SOMNIC-CASE-CROSSWALK.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/R7E-SOMNIC-CASE-CROSSWALK.yaml",
+    "sha256": "f53cbe59611eb16a67aaf8059360be3a937fda22d8808a2ab85994f1b059fe3a",
+    "bytes": 949,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "R7E-LLM-MEDIATED-ORTHING-WITNESS.md",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/R7E-LLM-MEDIATED-ORTHING-WITNESS.md",
+    "sha256": "0276ef458ab59c2373dd03f14de210e2ad6421fc2e421e8b59304ccef9131a76",
+    "bytes": 2315,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "math-source-inventory.yaml",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/math-source-inventory.yaml",
+    "sha256": "4ad9c402a5f8eeca197a34c009f23de6d6198b8f3df5db9aa557489806d91c36",
+    "bytes": 205681,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "orthing-candidate-ledger.schema.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/schemas/orthing-candidate-ledger.schema.json",
+    "sha256": "a10c9d50fc416dddb5661ae68bf5c7755ef4951757fb545a880246c1c8f3f6a6",
+    "bytes": 3769,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "ORTHING-CANDIDATE-LEDGER.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/ORTHING-CANDIDATE-LEDGER.json",
+    "sha256": "5a081fe6d4c0b1bffc5923f232b5a0d3e876b1d1b74585f463ce50d5ee3bec36",
+    "bytes": 138906,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "R7E-INPUT-PROVENANCE.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/R7E-INPUT-PROVENANCE.json",
+    "sha256": "7b7863cd9b3030727c67a6a668c26723c873b40eba51711a204d0521379a8636",
+    "bytes": 6203,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "R7E-PROVENANCE-AND-BACKLOG-AUDIT.md",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e-sol/R7E-PROVENANCE-AND-BACKLOG-AUDIT.md",
+    "sha256": "2678baa6252756db223b033142f138a9248ff6ef5e0eaa3b631e5d72f8017c39",
+    "bytes": 3742,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "ORTHING-CANDIDATE-BACKLOG.md",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e/ORTHING-CANDIDATE-BACKLOG.md",
+    "sha256": "ea0cfac0e55629441885f782d4b807d61de7890515ed73510e4b07a7524c285a",
+    "bytes": 32477,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "AUTONOMOUS-R7E-STATE.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/docs/project-closure/r7e/AUTONOMOUS-R7E-STATE.json",
+    "sha256": "359c7041a6c4045aa9b8e3af2c40164a282e27caa35cc2bfab715e8c3e66c9d7",
+    "bytes": 5467,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  },
+  {
+    "name": "mutation-spec.json",
+    "snapshot_path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/tests/schema-mutations/mutation-spec.json",
+    "sha256": "70c3139b5b05edb48811d17f30b67c97031dba28bcaee4444989ef0dfeb135c6",
+    "bytes": 113051,
+    "scope": "Actual external input selected by examined test code; lookup/hash is custody only. Substantive owner route is separate.",
+    "routed_owner": "controller_chain/interface_validators"
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "recorded_utc": "2026-10-10T07:12:52.519076+00:00",
+  "method": "Local retained witnesses reread; no fresh network acquisition, manuscript collation, scan collation, independent edition witness, or first-reading credit. Local hashes checked against inherited records.",
+  "files": [
+    {
+      "path": "evidence-withdrawal-warrant-20261009/REPORT.md",
+      "bytes": 22625,
+      "sha256": "740e3f11837591892649bf6d070b49854a95d0e45f57e2277b2e8d970b25086a",
+      "git_blob_sha1": "61052ed8686bcb464340c111617776785f24477c"
+    },
+    {
+      "path": "noetic-correction-semantics-20261009/REPORT.md",
+      "bytes": 14052,
+      "sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+      "git_blob_sha1": "09942dcd18a4488a0b3fb9ddcbb05523f8de8925"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_960.txt",
+      "bytes": 5216,
+      "sha256": "8c2af14b466e9269536c3312c1d11ca286570f770fd2ba04f5bb74c0dce89e84",
+      "git_blob_sha1": "4d0032e20fe1d8cb0924be4d9a2b4e195bcbf561"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_963.txt",
+      "bytes": 2051,
+      "sha256": "6ddb8bea91f7375f53a35a2b3bf8046714df347eb19152a1018ae8c7b1564be1",
+      "git_blob_sha1": "21ef28e6c22978540b0ab42ff94967ee6d39a234"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_964.txt",
+      "bytes": 3964,
+      "sha256": "0ca3620f7f710066811c6124c48c05437449fbdb420129c3d35900ee870ad512",
+      "git_blob_sha1": "134814f85d3e8f76a8b72ac168399a8dfb82ef40"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_967.txt",
+      "bytes": 4578,
+      "sha256": "f4ffcc737f19276f7a19c8da5551c76c0e0cf1710beca40ea39a3124f9fc33a7",
+      "git_blob_sha1": "4dc8d67e8839444d83a795b4b2c8fd2ca5c4f7c2"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_970.txt",
+      "bytes": 2766,
+      "sha256": "883a488d7c21bb9ae0969e48814e3ad92432d1505b5a2113a3b83dec822d51c6",
+      "git_blob_sha1": "1bf283b7e47e71b6941be06276ea2fb384b130c1"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar8_1594.txt",
+      "bytes": 3482,
+      "sha256": "81f3b1c76e47eb356d3af9ccf11b8f75760b26a3ad890832695cc9f9ae1478e4",
+      "git_blob_sha1": "813b310ca1e72f9a4027707e0c53fbf318fe1166"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar7_419_425.txt",
+      "bytes": 18882,
+      "sha256": "a4efe3213b8bf0a9e0d35f4dae3708b2633fbfb7508082e9925c277bfcbfc8d5",
+      "git_blob_sha1": "12e198714c63499b38bc84b4cae1d9f30dddc95d"
+    },
+    {
+      "path": "basic-recognition-correction-20261009/sources/miftah259-278.txt",
+      "bytes": 39701,
+      "sha256": "582932cc86b10429a7c43fe3f02e980a543fedbc1a7bd4c835dc45a3eb158344",
+      "git_blob_sha1": "72beb042e3b3b8bb32235751784cec6dffac1a1f"
+    },
+    {
+      "path": "original-normative-authority-20261009/sources/miftah-925-950.txt",
+      "bytes": 52460,
+      "sha256": "c36d7529e56087d1b3466fc5aad0aeb44699d347243d63fb98ade5ef9c9aed93",
+      "git_blob_sha1": "43367a9933f466a44fade0301c2c86ba569e7d05"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md",
+      "bytes": 3893,
+      "sha256": "4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803",
+      "git_blob_sha1": "ac3686bcf1477b721602dacd185e98f6cc8216a5",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "recorded_connector_blob_sha1": "30d93844fa18bdf487779048b1290036f495772b",
+      "serialization_note": "Raw retained local text has one additional final LF relative to the recorded connector Git blob. Removing exactly that LF reproduces the pinned blob; local witness was not edited.",
+      "normalized_bytes": 3892,
+      "normalized_git_blob_sha1": "30d93844fa18bdf487779048b1290036f495772b"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP19__necessary-truth-operative-basing-20261009__REPORT.md",
+      "bytes": 15382,
+      "sha256": "f113e0a856bb8b77da573977317f7d70eb04c704a1ddb78442579124572a4810",
+      "git_blob_sha1": "ac0af7f84e8f4b8a0e72ccd58574ff1953c79f97"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP21__attestation-context-source-return-20261009__RESULT.md",
+      "bytes": 10835,
+      "sha256": "51c96a0f1a6dac5e273d32a5ec453426a069def68586dc37fe1676d0957281a6",
+      "git_blob_sha1": "d003195923a56c9a88459cb16204ec42d26a08e4"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/RESULT.md",
+      "bytes": 14332,
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "git_blob_sha1": "acf647f70cbaf8c294292be047cdcbe8db3fec4f"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/sources/S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "bytes": 8348,
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+      "git_blob_sha1": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "matches_pinned_blob": true
+    },
+    {
+      "path": "provenance-learning-transport-20261009/sources/S2-PMR-007_DEEP_ROUND_AR_PROVENANCE_ROOT_EVIDENCE_CONSERVATION_V2.md",
+      "bytes": 6935,
+      "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "git_blob_sha1": "07ee6be05e656fa3d98eedd5a31eaf76d82f5f87",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AR_PROVENANCE_ROOT_EVIDENCE_CONSERVATION_V2.md",
+      "matches_pinned_blob": true
+    }
+  ],
+  "inherited_hash_checks": [
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_960.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_963.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_964.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_967.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_970.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar7_419_425.txt",
+      "matches_inherited_sha256": true
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar8_1594.txt",
+      "matches_inherited_sha256": true
+    }
+  ],
+  "primary_scope": {
+    "Dar": "Selected complete retained item bodies 960,963,964,967,970,1594; whole retained authorial 7:419–430 body. Earlier continuous twenty-ninth response and 8:530–535 context inherited from 2026-10-09 report.",
+    "Miftah": "Retained decoded source 1:271–278 read continuously; 2:939–943 contextual selection with central 943 reread. Other report claims inherited. No reacquisition of official Word in this task."
+  },
+  "credit": "Narrow source-to-probabilistic-operation discrimination, not newly found doctrine or independently authenticated real audit episode."
+}

@@ -1,0 +1,66 @@
+import ReviewerControls
+import ReviewerAdapterControls
+#check @HiddenParity.Reviewer.disconnected_is_not_component
+#print axioms HiddenParity.Reviewer.disconnected_is_not_component
+#check @HiddenParity.Reviewer.disconnected_components_separate
+#print axioms HiddenParity.Reviewer.disconnected_components_separate
+#check @HiddenParity.Reviewer.fuel_two_insufficient
+#print axioms HiddenParity.Reviewer.fuel_two_insufficient
+#check @HiddenParity.Reviewer.fuel_three_sufficient
+#print axioms HiddenParity.Reviewer.fuel_three_sufficient
+#check @HiddenParity.Reviewer.penultimate_component_is_invalid
+#print axioms HiddenParity.Reviewer.penultimate_component_is_invalid
+#check @HiddenParity.Reviewer.large_priorities_do_not_require_numeric_loop
+#print axioms HiddenParity.Reviewer.large_priorities_do_not_require_numeric_loop
+#check @HiddenParity.Reviewer.empty_live_set_is_vacuous
+#print axioms HiddenParity.Reviewer.empty_live_set_is_vacuous
+#check @HiddenParity.Reviewer.absent_candidate_priority_unchecked
+#print axioms HiddenParity.Reviewer.absent_candidate_priority_unchecked
+#check @HiddenParity.Reviewer.present_candidate_priority_checked
+#print axioms HiddenParity.Reviewer.present_candidate_priority_checked
+#check @HiddenParity.Reviewer.long_reach
+#print axioms HiddenParity.Reviewer.long_reach
+#check @HiddenParity.Reviewer.direction_matters
+#print axioms HiddenParity.Reviewer.direction_matters
+#check @HiddenParity.Reviewer.zero_length_reach
+#print axioms HiddenParity.Reviewer.zero_length_reach
+#check @HiddenParity.Reviewer.zero_path_not_enough_for_component
+#print axioms HiddenParity.Reviewer.zero_path_not_enough_for_component
+#check @HiddenParity.Reviewer.successor_outside_used_states_rejected
+#print axioms HiddenParity.Reviewer.successor_outside_used_states_rejected
+#check @HiddenParity.Reviewer.no_pairs_no_output
+#print axioms HiddenParity.Reviewer.no_pairs_no_output
+#check @HiddenParity.Reviewer.generic_theorem_does_not_validate_probability_rows
+#print axioms HiddenParity.Reviewer.generic_theorem_does_not_validate_probability_rows
+#check @HiddenParity.Reviewer.mixed_component_retained
+#print axioms HiddenParity.Reviewer.mixed_component_retained
+#check @HiddenParity.Reviewer.its_odd_subcomponent_rejected
+#print axioms HiddenParity.Reviewer.its_odd_subcomponent_rejected
+#check @HiddenParity.Reviewer.subset_not_same_as_target_output
+#print axioms HiddenParity.Reviewer.subset_not_same_as_target_output
+#check @HiddenParity.ReviewerAdapter.absent_candidate_no_exit
+#print axioms HiddenParity.ReviewerAdapter.absent_candidate_no_exit
+#check @HiddenParity.ReviewerAdapter.absent_candidate_internal_has_extra_state
+#print axioms HiddenParity.ReviewerAdapter.absent_candidate_internal_has_extra_state
+#check @HiddenParity.ReviewerAdapter.absent_candidate_support_equality_false
+#print axioms HiddenParity.ReviewerAdapter.absent_candidate_support_equality_false
+#check @HiddenParity.ReviewerAdapter.small_eq
+#print axioms HiddenParity.ReviewerAdapter.small_eq
+#check @HiddenParity.ReviewerAdapter.large_eq
+#print axioms HiddenParity.ReviewerAdapter.large_eq
+#check @HiddenParity.ReviewerAdapter.exact_zero_has_no_exit
+#print axioms HiddenParity.ReviewerAdapter.exact_zero_has_no_exit
+#check @HiddenParity.ReviewerAdapter.small_positive_has_exit
+#print axioms HiddenParity.ReviewerAdapter.small_positive_has_exit
+#check @HiddenParity.ReviewerAdapter.zero_kernel_target_nonempty
+#print axioms HiddenParity.ReviewerAdapter.zero_kernel_target_nonempty
+#check @HiddenParity.ReviewerAdapter.positive_kernel_target_empty
+#print axioms HiddenParity.ReviewerAdapter.positive_kernel_target_empty
+#check @HiddenParity.ReviewerAdapter.allowed_input_is_enforced
+#print axioms HiddenParity.ReviewerAdapter.allowed_input_is_enforced
+#check @HiddenParity.ReviewerAdapter.exact_support_update_iff
+#print axioms HiddenParity.ReviewerAdapter.exact_support_update_iff
+#check @HiddenParity.ReviewerAdapter.noExit_exact_support_update
+#print axioms HiddenParity.ReviewerAdapter.noExit_exact_support_update
+#check @HiddenParity.ReviewerAdapter.normalized_maximal_components_exact
+#print axioms HiddenParity.ReviewerAdapter.normalized_maximal_components_exact

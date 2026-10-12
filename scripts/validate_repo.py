@@ -84,6 +84,15 @@ BANNED = [
 BANNED_FILENAMES = re.compile(r"(\.output$|\.jsonl$|synthesis-checks|owner_messages)", re.I)
 
 
+def preserved_t20_detector_text(relative, text):
+    """Mask one exact historical rule literal, never an actual private path."""
+    identity = 'e56c0aa1a2a0e4045751b6bd0af80f35c02cd4a4075544f44601a49c8b91d988'
+    source = 'research/t20-v6-20261012/sources/' + identity + '/validate_repo.py'
+    if relative == source and hashlib.sha256(text.encode('utf-8')).hexdigest() == identity:
+        return text.replace('    (r"AppData", "AppData path"),', '')
+    return text
+
+
 def exact_source_record(path, sources, root=None):
     """Recognise only an unmodified, uniquely registered COPY_EXACT source."""
     root = ROOT if root is None else root
@@ -768,7 +777,7 @@ def main():
         if rel(p) == "scripts/validate_repo.py":
             continue  # patterns appear here as rules
         try:
-            c = open(p, "r", encoding="utf-8", errors="strict").read()
+            c = open(p, "r", encoding="utf-8", errors="strict", newline="").read()
         except UnicodeDecodeError:
             # a file the repository itself declares binary (.gitattributes -text,
             # e.g. the binary-capable interruption patch) is exempt from the
@@ -781,6 +790,7 @@ def main():
                 declared_binary = False
             check("utf-8 readable (or declared binary): " + rel(p), declared_binary)
             continue
+        c = preserved_t20_detector_text(rel(p), c)
         for pat, why in BANNED:
             if re.search(pat, c):
                 offenders.setdefault(rel(p), []).append(why)

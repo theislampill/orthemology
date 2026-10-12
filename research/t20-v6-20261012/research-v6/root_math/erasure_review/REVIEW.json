@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-11T17:25:37.701526+00:00",
+  "target_sha256": "5ef2842f3094c442cce72d4bac7ab26f6ecff16458ea1840b752731ac56d25f7",
+  "exit_code": 0,
+  "stdout": "'V6ErasureWorkBoundary.same_certificate_different_work' does not depend on any axioms\n",
+  "stderr": "",
+  "scope": "Independent root replay of new theorem using fresh worker-built dependency oleans; not an independently rebuilt entire union. SourceChecker, SourceResources, SourceExportBoundary and SourceControls fully read."
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "additive-mathematical-packet-v1",
+  "date_utc": "2026-10-10",
+  "status": "author_complete_pending_independent_review",
+  "claim": "Reverse existence, represented evolution and initial-law fibre classification for constant Euclidean diffusion plus quadratic killing under full all-time square positivity",
+  "result_sha256": "e8d83152032952fcba757d2d81c4d506a084c9eb75d9112f0e3e0f98c1ca1c75",
+  "exact_controls": 685,
+  "limitations": [
+    "ordinary mathematical proof, not kernel formalization",
+    "narrow generator \u0394\u2212|x|\u00b2; no arbitrary coercive-polynomial diffusion theorem",
+    "no field-priority, stable computable inversion, protected integration or T20 closure"
+  ],
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "bytes": 21675,
+      "sha256": "4f89b43c4ee30ab6cb60755904c9dd9c8e9f972ea412ba96cbc9c23944d630b6"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1159,
+      "sha256": "0917dd2f9e4e5d1542d564b1b392534af969f18fd5be3f67203ff6d017431bd1"
+    },
+    {
+      "path": "RADIAL_CHECK_REPORT.md",
+      "bytes": 2119,
+      "sha256": "84e85480f6e2b72febd5df17974f74d6f3d5095022e0241da9915ec092fb5162"
+    },
+    {
+      "path": "READING_BOUNDARIES.md",
+      "bytes": 4024,
+      "sha256": "f6f814245923a141cd2693e8606042448ac6967ad6fb066d31337294205e27bf"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 19163,
+      "sha256": "e8d83152032952fcba757d2d81c4d506a084c9eb75d9112f0e3e0f98c1ca1c75"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 994,
+      "sha256": "faaf764018559150783c4e1ce43a38cd750a740ccc2c7968cfd7b61e103d8439"
+    },
+    {
+      "path": "check_controls.log",
+      "bytes": 118,
+      "sha256": "19ab49111e1fcb1c79dc0c8df2e4dc60a8217192f38a5f732ac257afcb591a49"
+    },
+    {
+      "path": "check_controls.py",
+      "bytes": 5428,
+      "sha256": "715bc187849945eb704979c482519e0c987a8c6525435383f25ce4555114df3a"
+    },
+    {
+      "path": "inputs/coercive-square-positivity-20261010__RESULT.md",
+      "bytes": 18246,
+      "sha256": "204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10"
+    },
+    {
+      "path": "inputs/diffusive-moment-source-followup-20261010__RESULT.md",
+      "bytes": 5974,
+      "sha256": "ebb96ad3efb849ef747dd24fd7a4f741f9f697f4ed26885e36b6f34bec428dac"
+    },
+    {
+      "path": "inputs/moment-evolution-source-comparison-20261010__RESULT.md",
+      "bytes": 15767,
+      "sha256": "c9170636819e8c10b3a94362bc446e5b4424b2a149079f4fc4b1eaeb339b30ac"
+    },
+    {
+      "path": "inputs/time-varying-square-positivity-20261010__RESULT.md",
+      "bytes": 14995,
+      "sha256": "7ffed76cdfb23ee725bd4030c22dd03bb1f66934d885a6800caf260fdb0741bd"
+    },
+    {
+      "path": "sources/agrachev-etal-0806.0734v2.pdf",
+      "bytes": 494078,
+      "sha256": "d5672ddd41b29d1039c41de8b5fc70d9e550d3f00f7b19d0736b91cc79b0387f"
+    },
+    {
+      "path": "sources/agrachev-etal-pp18-19.txt",
+      "bytes": 10003,
+      "sha256": "e6e7584051a9c303512966073f4d77e268c9ba5f10f3e9c93e5991a80aa95dfe"
+    },
+    {
+      "path": "sources/putinar-schmudgen-0810.0840v1.pdf",
+      "bytes": 384152,
+      "sha256": "9e551b5856cdf1065f1170641bed91a1d0f40c1d19368c9187f0c3d16661ac94"
+    },
+    {
+      "path": "sources/putinar-schmudgen-p24.txt",
+      "bytes": 2860,
+      "sha256": "5099deaec23494bfc716da1a416d06b3285127ab5494950edb351298c8c0003b"
+    }
+  ]
+}

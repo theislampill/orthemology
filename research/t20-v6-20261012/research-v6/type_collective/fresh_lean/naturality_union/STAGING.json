@@ -1,0 +1,979 @@
+{
+  "sources": [
+    {
+      "module": "InternalPolymorphism",
+      "source_path": "private-locator:350189981f4693dd8871",
+      "source_sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FiniteBridge",
+      "source_path": "private-locator:a727f3287a0ea954f40b",
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "imports": [
+        "InternalPolymorphism"
+      ]
+    },
+    {
+      "module": "P01TypeAlgebra",
+      "source_path": "private-locator:9c15568cdb10703abc01",
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01SNReflection",
+      "source_path": "private-locator:17a29c3c5f1a4626f613",
+      "source_sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "BoundaryResults",
+      "source_path": "private-locator:91c6bec8325b0b96bac5",
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "imports": [
+        "FiniteBridge"
+      ]
+    },
+    {
+      "module": "P01Candidates",
+      "source_path": "private-locator:536427a1ba00b7121421",
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01Confluence",
+      "source_path": "private-locator:e3c52bf8f3c999330254",
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "imports": [
+        "P01Candidates"
+      ]
+    },
+    {
+      "module": "EffectsAndDependence",
+      "source_path": "private-locator:8e0c61b2b8fa68627515",
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "imports": [
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "source_path": "private-locator:04307ca8bf1c4ae4d544",
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "imports": [
+        "EffectsAndDependence"
+      ]
+    },
+    {
+      "module": "P01Omega",
+      "source_path": "private-locator:249dcb700d10583fcb3e",
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ]
+    },
+    {
+      "module": "P01Polynomials",
+      "source_path": "private-locator:3c8d12e40fd13e0850d6",
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "imports": [
+        "P01Omega"
+      ]
+    },
+    {
+      "module": "P01PER",
+      "source_path": "private-locator:45a6e57f5a80a25076f6",
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "imports": [
+        "P01Polynomials"
+      ]
+    },
+    {
+      "module": "P01DependentCore",
+      "source_path": "private-locator:49765dcea3ac3ce3d632",
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "imports": [
+        "P01PER"
+      ]
+    },
+    {
+      "module": "P01ContextualJ",
+      "source_path": "private-locator:8baa99d5cfaa23e79556",
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "imports": [
+        "P01DependentCore"
+      ]
+    },
+    {
+      "module": "P01Certificates",
+      "source_path": "private-locator:1a877e98354be898def5",
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "imports": [
+        "P01ContextualJ"
+      ]
+    },
+    {
+      "module": "P01Examples",
+      "source_path": "private-locator:974d76064802eb77f575",
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "imports": [
+        "P01Certificates"
+      ]
+    },
+    {
+      "module": "P01RecursiveModel",
+      "source_path": "private-locator:5f65e3e84220efd7f7ee",
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "imports": [
+        "P01Examples"
+      ]
+    },
+    {
+      "module": "P01LambdaSyntax",
+      "source_path": "private-locator:170fb5e8e8d53882da9c",
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ]
+    },
+    {
+      "module": "P01SystemF",
+      "source_path": "private-locator:5984d889981cb2b18915",
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "imports": [
+        "P01LambdaSyntax"
+      ]
+    },
+    {
+      "module": "P01CurryParametricity",
+      "source_path": "private-locator:2a06cffe4e34ae8cf825",
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ]
+    },
+    {
+      "module": "P01Translation",
+      "source_path": "private-locator:411aaf4b66c01132e390",
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ]
+    },
+    {
+      "module": "P01ModelWitnesses",
+      "source_path": "private-locator:7ad282e2c0602843c19e",
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ]
+    },
+    {
+      "module": "P01DependentModel",
+      "source_path": "private-locator:c23b0ca38f589cc6b69e",
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "imports": [
+        "P01RecursiveModel",
+        "P01ModelWitnesses"
+      ]
+    },
+    {
+      "module": "P01DependentSubstitution",
+      "source_path": "private-locator:bceda58b09912522946a",
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "imports": [
+        "P01DependentModel"
+      ]
+    },
+    {
+      "module": "P01DependentFundamental",
+      "source_path": "private-locator:5ab5a8df9ba075f93e61",
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "imports": [
+        "P01DependentSubstitution"
+      ]
+    },
+    {
+      "module": "SubstitutionSyntax",
+      "source_path": "private-locator:3b90cde7d7881a65031e",
+      "source_sha256": "ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649",
+      "imports": [
+        "P01DependentFundamental"
+      ]
+    },
+    {
+      "module": "AllSyntax",
+      "source_path": "private-locator:074f97f9375bcaec6399",
+      "source_sha256": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "imports": [
+        "SubstitutionSyntax"
+      ]
+    },
+    {
+      "module": "AllPredicates",
+      "source_path": "private-locator:5e636871363748d380b7",
+      "source_sha256": "8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3",
+      "imports": [
+        "AllSyntax"
+      ]
+    },
+    {
+      "module": "IntensionalIdentityBridge",
+      "source_path": "private-locator:7e477730d457bfa03200",
+      "source_sha256": "37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333",
+      "imports": [
+        "AllPredicates"
+      ]
+    },
+    {
+      "module": "ExtensionalRepairSyntax",
+      "source_path": "private-locator:4b092e23feb8d3b34fee",
+      "source_sha256": "dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f",
+      "imports": [
+        "IntensionalIdentityBridge"
+      ]
+    },
+    {
+      "module": "AllTermAlgebra",
+      "source_path": "private-locator:106788f9a3e6f5a23dd4",
+      "source_sha256": "e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906",
+      "imports": [
+        "AllSyntax"
+      ]
+    },
+    {
+      "module": "AllMixedAlgebra",
+      "source_path": "private-locator:bac1411dbbde6df5cf45",
+      "source_sha256": "327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367",
+      "imports": [
+        "AllTermAlgebra"
+      ]
+    },
+    {
+      "module": "AllStructuralBase",
+      "source_path": "private-locator:83521eb282a9f92bcd4f",
+      "source_sha256": "be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d",
+      "imports": [
+        "AllMixedAlgebra"
+      ]
+    },
+    {
+      "module": "AllStructuralRename",
+      "source_path": "private-locator:ed9f97fef7ae74b579b9",
+      "source_sha256": "cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0",
+      "imports": [
+        "AllStructuralBase"
+      ]
+    },
+    {
+      "module": "AllStructural",
+      "source_path": "private-locator:318c751775c03b33323d",
+      "source_sha256": "9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1",
+      "imports": [
+        "AllStructuralRename"
+      ]
+    },
+    {
+      "module": "AllRawSubstitution",
+      "source_path": "private-locator:8216aaffe41e733f3ad0",
+      "source_sha256": "7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66",
+      "imports": [
+        "AllPredicates"
+      ]
+    },
+    {
+      "module": "AllRawRenaming",
+      "source_path": "private-locator:3a01bfaa5d9d76dadc2e",
+      "source_sha256": "5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f",
+      "imports": [
+        "AllRawSubstitution"
+      ]
+    },
+    {
+      "module": "AllBaseLaws",
+      "source_path": "private-locator:48f557167ecebce8ba74",
+      "source_sha256": "df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984",
+      "imports": [
+        "AllRawRenaming"
+      ]
+    },
+    {
+      "module": "AllPiLaws",
+      "source_path": "private-locator:b1285be8362bac898a84",
+      "source_sha256": "8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f",
+      "imports": [
+        "AllBaseLaws"
+      ]
+    },
+    {
+      "module": "AllSigmaLaws",
+      "source_path": "private-locator:42f1356b348e1a1d1998",
+      "source_sha256": "a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d",
+      "imports": [
+        "AllPiLaws"
+      ]
+    },
+    {
+      "module": "AllTermLemmas",
+      "source_path": "private-locator:9bcfaaa580b3ad8eacf9",
+      "source_sha256": "6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e",
+      "imports": [
+        "AllSigmaLaws"
+      ]
+    },
+    {
+      "module": "AllBinderLaws",
+      "source_path": "private-locator:d5278953ff357b18d9df",
+      "source_sha256": "fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9",
+      "imports": [
+        "AllTermLemmas"
+      ]
+    },
+    {
+      "module": "AllConstants",
+      "source_path": "private-locator:a9dd71b04da03461637e",
+      "source_sha256": "9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041",
+      "imports": [
+        "AllBinderLaws"
+      ]
+    },
+    {
+      "module": "AllFiniteComparison",
+      "source_path": "private-locator:13af55949ebd549c5edb",
+      "source_sha256": "bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a",
+      "imports": [
+        "AllConstants"
+      ]
+    },
+    {
+      "module": "AllSemanticSubstitution",
+      "source_path": "private-locator:3021869f609782e90513",
+      "source_sha256": "352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09",
+      "imports": [
+        "AllRawRenaming"
+      ]
+    },
+    {
+      "module": "AllInstantiation",
+      "source_path": "private-locator:34030056e995392859ec",
+      "source_sha256": "f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606",
+      "imports": [
+        "AllFiniteComparison",
+        "AllSemanticSubstitution"
+      ]
+    },
+    {
+      "module": "AllSoundness",
+      "source_path": "private-locator:9ee7a5066bfd89acd8b2",
+      "source_sha256": "e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7",
+      "imports": [
+        "AllInstantiation"
+      ]
+    },
+    {
+      "module": "P01DependentControls",
+      "source_path": "private-locator:66d1480ebdeb75d426ed",
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "imports": [
+        "P01DependentFundamental"
+      ]
+    },
+    {
+      "module": "AllInheritedPositiveControls",
+      "source_path": "private-locator:e3239b981d55f282395c",
+      "source_sha256": "86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37",
+      "imports": [
+        "AllStructural",
+        "AllSoundness",
+        "P01DependentControls"
+      ]
+    },
+    {
+      "module": "EffectiveStandardness",
+      "source_path": "private-locator:f12d2c4537c55e6f7607",
+      "source_sha256": "ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428",
+      "imports": [
+        "AllInheritedPositiveControls"
+      ]
+    },
+    {
+      "module": "TypedSyntax",
+      "source_path": "private-locator:242412e6076ef8488106",
+      "source_sha256": "b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c",
+      "imports": [
+        "SubstitutionSyntax"
+      ]
+    },
+    {
+      "module": "TypedAlgebra",
+      "source_path": "private-locator:e3198c975beb9ffc6a0c",
+      "source_sha256": "f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc",
+      "imports": [
+        "TypedSyntax"
+      ]
+    },
+    {
+      "module": "TypedStructural",
+      "source_path": "private-locator:95a6e44e3e60eced54c4",
+      "source_sha256": "881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf",
+      "imports": [
+        "TypedAlgebra"
+      ]
+    },
+    {
+      "module": "AllNucleusSyntax",
+      "source_path": "private-locator:54a3f4d02fc5a7517022",
+      "source_sha256": "74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e",
+      "imports": [
+        "AllStructuralRename",
+        "TypedStructural"
+      ]
+    },
+    {
+      "module": "EffectiveObserver",
+      "source_path": "private-locator:df215c00abe14185368b",
+      "source_sha256": "4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f",
+      "imports": [
+        "EffectiveStandardness",
+        "AllNucleusSyntax"
+      ]
+    },
+    {
+      "module": "EffectiveReduction",
+      "source_path": "private-locator:518db77946100eef584f",
+      "source_sha256": "fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d",
+      "imports": [
+        "EffectiveObserver"
+      ]
+    },
+    {
+      "module": "ExtensionalRepairLemmas",
+      "source_path": "private-locator:d4b287ffdf9a6587a813",
+      "source_sha256": "00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "AllTermAlgebra"
+      ]
+    },
+    {
+      "module": "ExtensionalRepairSoundness",
+      "source_path": "private-locator:4b24aed49050a00788d5",
+      "source_sha256": "b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "AllSoundness"
+      ]
+    },
+    {
+      "module": "IntensionalIdentityWitness",
+      "source_path": "private-locator:1834d5fd5be599936c72",
+      "source_sha256": "6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74",
+      "imports": [
+        "AllNucleusSyntax",
+        "AllFiniteComparison",
+        "P01ModelWitnesses"
+      ]
+    },
+    {
+      "module": "ExtensionalRepairWitness",
+      "source_path": "private-locator:e354349fd04aa7b54a59",
+      "source_sha256": "0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "IntensionalIdentityWitness"
+      ]
+    },
+    {
+      "module": "IntensionalIdentityModel",
+      "source_path": "private-locator:b2795cd313ff12e77749",
+      "source_sha256": "64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4",
+      "imports": [
+        "AllPredicates"
+      ]
+    },
+    {
+      "module": "IntensionalIdentitySoundness",
+      "source_path": "private-locator:6f66c4de2c1e73c457e5",
+      "source_sha256": "011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984",
+      "imports": [
+        "IntensionalIdentityModel",
+        "IntensionalIdentityBridge"
+      ]
+    },
+    {
+      "module": "IntensionalIdentityRelations",
+      "source_path": "private-locator:348333883a9bb1afcc26",
+      "source_sha256": "009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d",
+      "imports": [
+        "IntensionalIdentitySoundness"
+      ]
+    },
+    {
+      "module": "IntensionalIdentityTheorems",
+      "source_path": "private-locator:62c22e56754206eac446",
+      "source_sha256": "48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c",
+      "imports": [
+        "IntensionalIdentityRelations",
+        "IntensionalIdentityWitness"
+      ]
+    },
+    {
+      "module": "ExtensionalRepairTheorems",
+      "source_path": "private-locator:47c6770ffc6be46c51b6",
+      "source_sha256": "4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51",
+      "imports": [
+        "ExtensionalRepairLemmas",
+        "ExtensionalRepairSoundness",
+        "ExtensionalRepairWitness",
+        "IntensionalIdentityTheorems"
+      ]
+    },
+    {
+      "module": "EffectiveRuleBoundary",
+      "source_path": "private-locator:cac5a99c56827964cb93",
+      "source_sha256": "df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c",
+      "imports": [
+        "EffectiveReduction",
+        "ExtensionalRepairTheorems"
+      ]
+    },
+    {
+      "module": "EffectiveCanonicalTests",
+      "source_path": "private-locator:6512df0ca81a114b552a",
+      "source_sha256": "5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9",
+      "imports": [
+        "EffectiveRuleBoundary"
+      ]
+    },
+    {
+      "module": "EffectiveBooleanStandardness",
+      "source_path": "private-locator:2a600287228965b06cf5",
+      "source_sha256": "5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd",
+      "imports": [
+        "EffectiveCanonicalTests"
+      ]
+    },
+    {
+      "module": "EffectiveBooleanCertificates",
+      "source_path": "private-locator:1164acd6289235e82ebd",
+      "source_sha256": "c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354",
+      "imports": [
+        "EffectiveBooleanStandardness"
+      ]
+    },
+    {
+      "module": "EffectivePrimitiveRecursion",
+      "source_path": "private-locator:f71b0928823c671dbdd8",
+      "source_sha256": "52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba",
+      "imports": [
+        "EffectiveBooleanCertificates"
+      ]
+    },
+    {
+      "module": "RestrictedCompiler",
+      "source_path": "private-locator:2d311a366cbfb7dd0b1d",
+      "source_sha256": "7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30",
+      "imports": [
+        "EffectivePrimitiveRecursion"
+      ]
+    },
+    {
+      "module": "PolynomialTestBoundary",
+      "source_path": "private-locator:8432faf661a7441c310e",
+      "source_sha256": "1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82",
+      "imports": [
+        "RestrictedCompiler"
+      ]
+    },
+    {
+      "module": "UnaryPolynomial",
+      "source_path": "private-locator:abebcc7b307fbaba00f4",
+      "source_sha256": "aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6",
+      "imports": [
+        "PolynomialTestBoundary"
+      ]
+    },
+    {
+      "module": "UnaryFiniteDescription",
+      "source_path": "private-locator:48cad54c82c630328031",
+      "source_sha256": "061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5",
+      "imports": [
+        "UnaryPolynomial"
+      ]
+    },
+    {
+      "module": "UnaryExpressions",
+      "source_path": "private-locator:23d102c57646ab8ccfc7",
+      "source_sha256": "9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56",
+      "imports": [
+        "PolynomialTestBoundary"
+      ]
+    },
+    {
+      "module": "UnaryNormalForm",
+      "source_path": "private-locator:e09891b5cd65154a2148",
+      "source_sha256": "a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c",
+      "imports": [
+        "UnaryFiniteDescription",
+        "UnaryExpressions"
+      ]
+    },
+    {
+      "module": "ComputablePrelude",
+      "source_path": "private-locator:97210f77b2a806efeaa8",
+      "source_sha256": "b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292",
+      "imports": [
+        "RestrictedCompiler"
+      ]
+    },
+    {
+      "module": "SparsePolynomial",
+      "source_path": "private-locator:5ffd3e21dc53f883fe27",
+      "source_sha256": "2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a",
+      "imports": [
+        "ComputablePrelude",
+        "Mathlib.Algebra.MvPolynomial.Funext",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    {
+      "module": "PositiveSeparation",
+      "source_path": "private-locator:3c2d509ae722728fcfc2",
+      "source_sha256": "8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8",
+      "imports": [
+        "Mathlib.Algebra.MvPolynomial.Funext"
+      ]
+    },
+    {
+      "module": "MaskNormalisation",
+      "source_path": "private-locator:b2436a7c42642a699e53",
+      "source_sha256": "d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4",
+      "imports": [
+        "SparsePolynomial",
+        "PositiveSeparation"
+      ]
+    },
+    {
+      "module": "IdentityChecker",
+      "source_path": "private-locator:ab797ab0213f0dc7b393",
+      "source_sha256": "989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02",
+      "imports": [
+        "MaskNormalisation"
+      ]
+    },
+    {
+      "module": "UnaryCurrentIdentityBoundary",
+      "source_path": "private-locator:d63849e17e367b77de77",
+      "source_sha256": "8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac",
+      "imports": [
+        "UnaryNormalForm",
+        "IdentityChecker",
+        "IntensionalIdentitySoundness"
+      ]
+    },
+    {
+      "module": "UArrowAndCompilerControls",
+      "source_path": "private-locator:b5386139b65398c2c99a",
+      "source_sha256": "7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9",
+      "imports": [
+        "ExtensionalRepairSyntax",
+        "UnaryCurrentIdentityBoundary"
+      ]
+    },
+    {
+      "module": "OpenTermStandardness",
+      "source_path": "private-locator:b736447f5b1aeedd0663",
+      "source_sha256": "d3972a5dff963d07cb1808427686dfdae3bf54bdc811bef025809ec8846a527d",
+      "imports": [
+        "Init"
+      ]
+    },
+    {
+      "module": "FrozenCompilerMirror",
+      "source_path": "private-locator:2e284c57a6f1618d063b",
+      "source_sha256": "f77cd702ec5f1dd242a8e30959aab203b5215b838a3305d64c5c733ec00d01c0",
+      "imports": [
+        "OpenTermStandardness"
+      ]
+    },
+    {
+      "module": "PERInterface",
+      "source_path": "private-locator:836cfc476344a23513d0",
+      "source_sha256": "312b60aafb9752d02e67c9cec6843c12b0419d96d86202f219b2b10a4b3032f3",
+      "imports": [
+        "FrozenCompilerMirror"
+      ]
+    },
+    {
+      "module": "ImportedCompilerTransport",
+      "source_path": "private-locator:5f437e8dc0e614048c34",
+      "source_sha256": "448e9f950a1c51a9267ca04671fe6ade3377a485692621bd8252925ae02fbdbc",
+      "imports": [
+        "UArrowAndCompilerControls",
+        "PERInterface"
+      ]
+    },
+    {
+      "module": "FullPER",
+      "source_path": "private-locator:127beb30131538ab6a9b",
+      "source_sha256": "2a0d01d92923a22c4b41f512e4c4b3524ea1c630d13478176c5c20d63afa7638",
+      "imports": [
+        "ImportedCompilerTransport"
+      ]
+    },
+    {
+      "module": "GenericFoldTransport",
+      "source_path": "private-locator:231877a510d8ead755d6",
+      "source_sha256": "2d1c5df800d77933c6d8b1564209e27606fb209da0720f96f68e8e43b420cc0e",
+      "imports": [
+        "FullPER"
+      ]
+    },
+    {
+      "module": "ScalarFusionCore",
+      "source_path": "private-locator:c6930435e7d10ce61867",
+      "source_sha256": "975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618",
+      "imports": [
+        "EffectiveObserver",
+        "ExtensionalRepairSyntax"
+      ]
+    },
+    {
+      "module": "InternalGraph",
+      "source_path": "private-locator:fd820d19699e11142cbb",
+      "source_sha256": "74ef636570ba73c227daf40d913bdba5a9c40bb83b87579f1b902f1f6a2db25e",
+      "imports": [
+        "ScalarFusionCore",
+        "UArrowAndCompilerControls",
+        "ExtensionalRepairSoundness"
+      ]
+    },
+    {
+      "module": "ProjectionBoundary",
+      "source_path": "private-locator:b1388b1526cc18940fa2",
+      "source_sha256": "99209853e5882ee3ce54d86c32cd0f33efcc43e66ef7dca934788ca5ecfd8469",
+      "imports": [
+        "InternalGraph"
+      ]
+    },
+    {
+      "module": "Application",
+      "source_path": "private-locator:e06125f998ec3d32e7f1",
+      "source_sha256": "6d57b65eb3c4ffc8b7c34ba66beea17b7705265dcc4fdd11e66b14d0c5702bb9",
+      "imports": [
+        "FullPER",
+        "ScalarFusionCore"
+      ]
+    },
+    {
+      "module": "GraphBridgeAssembly",
+      "source_path": "private-locator:7bae71a13c552cceb87b",
+      "source_sha256": "0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "imports": [
+        "ProjectionBoundary",
+        "Application"
+      ]
+    },
+    {
+      "module": "SourceFoldContract",
+      "source_path": "private-locator:e2ea316f8e9f1b62cf19",
+      "source_sha256": "3cf4645641d47b036c8b7172dba3c2ead2e927c775713a186a90b6f641f5ce2a",
+      "imports": [
+        "GenericFoldTransport",
+        "GraphBridgeAssembly"
+      ]
+    },
+    {
+      "module": "SourceFoldApplication",
+      "source_path": "private-locator:9520e2e070758158d704",
+      "source_sha256": "6544c631ce50b3637962dca29f0d652c3e2eb26139f4e853778166a81d8e3c1a",
+      "imports": [
+        "SourceFoldContract"
+      ]
+    },
+    {
+      "module": "CaseOperational",
+      "source_path": "private-locator:0ffb69e20d9e76afe1b7",
+      "source_sha256": "5575a1d8e69c8f857b0b15dc6f1358a4c3f44bd54a47bf528cf3295ae59c3708",
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "SourceTransport",
+      "source_path": "private-locator:9cf5ac4519f02522fd73",
+      "source_sha256": "3e3e4bcbea2c19c58df20cb7f83c7e5e9a41e7a4c9dcfab6085e09fc2025987a",
+      "imports": [
+        "ImportedCompilerTransport",
+        "CaseOperational"
+      ]
+    },
+    {
+      "module": "HomogeneousPER",
+      "source_path": "private-locator:6b3b3adbe220834de558",
+      "source_sha256": "f06b84a8dd088a9cf82ab99dff2d476023ab50427fee0245ef5d210a8ec57f0f",
+      "imports": [
+        "Lean"
+      ]
+    },
+    {
+      "module": "ConcreteUniverse",
+      "source_path": "private-locator:76b9bdaecb844208ee4e",
+      "source_sha256": "8fb9848611f88b2f2555a15469eb59c3ff98e9a831f92f701cdb0091dc2d6904",
+      "imports": [
+        "HomogeneousPER",
+        "CaseOperational"
+      ]
+    },
+    {
+      "module": "HenkinSoundness",
+      "source_path": "private-locator:bd42ea8cd7b14080066f",
+      "source_sha256": "d0c9bc80e4014f2dc7ba685af95690b96ea02e166209101966e9a9e797fbcf5f",
+      "imports": [
+        "SourceTransport",
+        "ConcreteUniverse"
+      ]
+    },
+    {
+      "module": "LiteralCounterexample",
+      "source_path": "private-locator:a2f98223eedd15edcf62",
+      "source_sha256": "af219bfec917e3f083b093ffc9d1e07f54fec5d72e8f8a274915eaa030397c0c",
+      "imports": [
+        "SourceTransport"
+      ]
+    },
+    {
+      "module": "OriginalWNoninhabitation",
+      "source_path": "private-locator:a05f0cf4a89a016515b9",
+      "source_sha256": "b4c46829c268c37860114d5d99c08a2bc099373133a591664503ef07d8b75628",
+      "imports": [
+        "HenkinSoundness",
+        "LiteralCounterexample",
+        "ScalarFusionCore"
+      ]
+    }
+  ],
+  "order": [
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "BoundaryResults",
+    "P01Candidates",
+    "P01Confluence",
+    "EffectsAndDependence",
+    "NormalisationAndNumerals",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01RecursiveModel",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01CurryParametricity",
+    "P01Translation",
+    "P01ModelWitnesses",
+    "P01DependentModel",
+    "P01DependentSubstitution",
+    "P01DependentFundamental",
+    "SubstitutionSyntax",
+    "AllSyntax",
+    "AllPredicates",
+    "IntensionalIdentityBridge",
+    "ExtensionalRepairSyntax",
+    "AllTermAlgebra",
+    "AllMixedAlgebra",
+    "AllStructuralBase",
+    "AllStructuralRename",
+    "AllStructural",
+    "AllRawSubstitution",
+    "AllRawRenaming",
+    "AllBaseLaws",
+    "AllPiLaws",
+    "AllSigmaLaws",
+    "AllTermLemmas",
+    "AllBinderLaws",
+    "AllConstants",
+    "AllFiniteComparison",
+    "AllSemanticSubstitution",
+    "AllInstantiation",
+    "AllSoundness",
+    "P01DependentControls",
+    "AllInheritedPositiveControls",
+    "EffectiveStandardness",
+    "TypedSyntax",
+    "TypedAlgebra",
+    "TypedStructural",
+    "AllNucleusSyntax",
+    "EffectiveObserver",
+    "EffectiveReduction",
+    "ExtensionalRepairLemmas",
+    "ExtensionalRepairSoundness",
+    "IntensionalIdentityWitness",
+    "ExtensionalRepairWitness",
+    "IntensionalIdentityModel",
+    "IntensionalIdentitySoundness",
+    "IntensionalIdentityRelations",
+    "IntensionalIdentityTheorems",
+    "ExtensionalRepairTheorems",
+    "EffectiveRuleBoundary",
+    "EffectiveCanonicalTests",
+    "EffectiveBooleanStandardness",
+    "EffectiveBooleanCertificates",
+    "EffectivePrimitiveRecursion",
+    "RestrictedCompiler",
+    "PolynomialTestBoundary",
+    "UnaryPolynomial",
+    "UnaryFiniteDescription",
+    "UnaryExpressions",
+    "UnaryNormalForm",
+    "ComputablePrelude",
+    "SparsePolynomial",
+    "PositiveSeparation",
+    "MaskNormalisation",
+    "IdentityChecker",
+    "UnaryCurrentIdentityBoundary",
+    "UArrowAndCompilerControls",
+    "OpenTermStandardness",
+    "FrozenCompilerMirror",
+    "PERInterface",
+    "ImportedCompilerTransport",
+    "FullPER",
+    "GenericFoldTransport",
+    "ScalarFusionCore",
+    "InternalGraph",
+    "ProjectionBoundary",
+    "Application",
+    "GraphBridgeAssembly",
+    "SourceFoldContract",
+    "SourceFoldApplication",
+    "CaseOperational",
+    "SourceTransport",
+    "HomogeneousPER",
+    "ConcreteUniverse",
+    "HenkinSoundness",
+    "LiteralCounterexample",
+    "OriginalWNoninhabitation"
+  ],
+  "obstructions": []
+}

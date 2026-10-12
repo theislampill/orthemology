@@ -1,0 +1,5 @@
+# Verification history and limits
+
+The first bounded-control run stopped at the Bernoulli inverse-chart assertion because the symbolic variable had only q>0 declared, while the rewritten single logarithm additionally needed q<1 for the real log quotient identity. Diagnostic expansion left `−log(1−q)−log(−1/(q−1))` unevaluated. The assertion was changed to the equivalent two-log form ψ′=log q−log(1−q), retaining the intended domain 0<q<1 and avoiding an unsupported symbolic log combination. The focused diagnostic then returned zero and the complete control suite was rerun. No mathematical claim or density construction changed.
+
+The final verification uses a pipefail-enabled invocation, so a failing Python process cannot be masked by tee. General one-sided smoothness, finite distance, distinct germs, and nonanalyticity are proved in RESULT.md. Exact controls do not replace those proofs or supply a formal-kernel certificate. The author control script includes a finite-support Bernoulli positive control rather than unstable numerical detection of the very small lognormal separation.

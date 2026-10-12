@@ -1,0 +1,17 @@
+import CompactObservationBoundary
+
+open Orthemology.Tranche2.CompactObservationBoundary
+#check common_action_of_compact_confinement
+#print axioms common_action_of_compact_confinement
+#check common_action_of_compact_space
+#print axioms common_action_of_compact_space
+#check common_action_of_one_compact_target
+#print axioms common_action_of_one_compact_target
+#check nonworseningTarget_closed
+#print axioms nonworseningTarget_closed
+#check common_nonworsening_of_continuous_scores
+#print axioms common_nonworsening_of_continuous_scores
+#check quadraticLoss_continuous
+#print axioms quadraticLoss_continuous
+#check common_finite_hull_quadratic_repair
+#print axioms common_finite_hull_quadratic_repair

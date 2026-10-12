@@ -1,0 +1,17 @@
+import Controls
+#check IndependentChainControls.no_self_edge
+#print axioms IndependentChainControls.no_self_edge
+#check IndependentChainControls.leaf_budget
+#print axioms IndependentChainControls.leaf_budget
+#check IndependentChainControls.root_budget
+#print axioms IndependentChainControls.root_budget
+#check IndependentChainControls.coarse_rank_budget
+#print axioms IndependentChainControls.coarse_rank_budget
+#check IndependentChainControls.strict_improvement
+#print axioms IndependentChainControls.strict_improvement
+#check IndependentChainControls.local_supersolution_least
+#print axioms IndependentChainControls.local_supersolution_least
+#check IndependentChainControls.no_rank_for_self_reset
+#print axioms IndependentChainControls.no_rank_for_self_reset
+#check IndependentChainControls.no_rank_for_cycle
+#print axioms IndependentChainControls.no_rank_for_cycle

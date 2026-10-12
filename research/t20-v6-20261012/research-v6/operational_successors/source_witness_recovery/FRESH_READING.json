@@ -1,0 +1,70 @@
+{
+  "scope": "Fresh exact-source localized visual collation, not whole-volume reading or specialist stemma",
+  "english": {
+    "sha256": "4663fc270d3dbbcfc0a80d2dd14025dce8e484bd8f9c3fffbf97fd0adcd95aff",
+    "visual_pdf_pages": [
+      3,
+      66,
+      67,
+      68
+    ],
+    "text_context_pdf_pages": [
+      65,
+      66,
+      67,
+      68
+    ],
+    "finding": "Title confirms second revised English Dominican edition, London1920. Printed p20 Objection3 has the negative concession; printed pp21\u201322 contain the respondeo and reply distinguishing truth in general from Primal Truth."
+  },
+  "latin": {
+    "sha256": "13c5497631563814f3573fe81b63f17470b5e06ff669a48607125951cbaf85ce",
+    "visual_pdf_pages": [
+      7,
+      18,
+      45,
+      46
+    ],
+    "finding": "Title confirms Leonine volumeIV Rome1888. Printed p27 Objection3 main text has the positive concession; apparatusmu records the negative variant. Sigla page identifies P as Editio Piana and letters as cited manuscript/edition owners. Printed p28 reply3 distinguishes common truth from first truth."
+  },
+  "wayback": {
+    "sha256": "1e819ff0f4e6f79f36b0130ff4d624aa53fcafb230db5c00288d678b6e995ee6",
+    "matches_historical_capture": false,
+    "scope": "Fresh replay at recorded20061213123742 timestamp; Article1 Objection3 through Reply3 read as extracted HTML text, plus timestamp metadata. Capture bytes differ; no historical byte equivalence inferred.",
+    "finding": "Negative concession agrees at this occurrence with1920 print; role remains Objection3 with a separate authorial reply."
+  },
+  "conclusion": "The discrepancy predates the website. Actual translators Latin base and production responsibility remain unestablished. Reporting the objection as the author final unqualified assertion would lose the preserved source-role structure.",
+  "images": [
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/english_reply.png",
+      "sha256": "bd02b55117a205c3146fb2a3629bea4e556441aaf4d1f635bfc4bb83651fdbf8"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/english_reply2.png",
+      "sha256": "3658bd3b6b42786eb6705759abb3b82910c98826ad7498eb60efcdebce3df936"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/english_target.png",
+      "sha256": "3843f3da09d7bf6ee8afce3ac6783ab3103f4a848ae3b9f9e4b94afb729105ca"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/english_title.png",
+      "sha256": "ef4e8c49c281baa2b8ed49882e3cc99e77a8f0745419371b8d13a45857d04bfc"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/latin_reply.png",
+      "sha256": "a41f6e8ac7d53f3aab8dae87e0b5df9de50d294a3e4fe15e27e0efc664a6b0fb"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/latin_sigla.png",
+      "sha256": "8f3cd14e8aff3a628119ee4acf28e436b9007cc7b08011816f140acfa6be5664"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/latin_target.png",
+      "sha256": "0178a8f3f0c0b96c8f522c5b77e24644418888d0c706a22c280ab9ac2de81555"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/source_witness_recovery/latin_title.png",
+      "sha256": "2a5b6b404d48c06875525abbd3a42cf38979828b1b9131def31bcedf0fb6889f"
+    }
+  ]
+}

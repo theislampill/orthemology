@@ -1,0 +1,116 @@
+import CoverageBoundary
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.CoverageBoundary.Source
+#print axioms Orthemology.Tranche3.CoverageBoundary.Source
+#check @Orthemology.Tranche3.CoverageBoundary.Token
+#print axioms Orthemology.Tranche3.CoverageBoundary.Token
+#check @Orthemology.Tranche3.CoverageBoundary.World
+#print axioms Orthemology.Tranche3.CoverageBoundary.World
+#check @Orthemology.Tranche3.CoverageBoundary.SourceExists
+#print axioms Orthemology.Tranche3.CoverageBoundary.SourceExists
+#check @Orthemology.Tranche3.CoverageBoundary.actual
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual
+#check @Orthemology.Tranche3.CoverageBoundary.available
+#print axioms Orthemology.Tranche3.CoverageBoundary.available
+#check @Orthemology.Tranche3.CoverageBoundary.Payload
+#print axioms Orthemology.Tranche3.CoverageBoundary.Payload
+#check @Orthemology.Tranche3.CoverageBoundary.evaluationOutput
+#print axioms Orthemology.Tranche3.CoverageBoundary.evaluationOutput
+#check @Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput
+#print axioms Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput
+#check @Orthemology.Tranche3.CoverageBoundary.output
+#print axioms Orthemology.Tranche3.CoverageBoundary.output
+#check @Orthemology.Tranche3.CoverageBoundary.ExistsToken
+#print axioms Orthemology.Tranche3.CoverageBoundary.ExistsToken
+#check @Orthemology.Tranche3.CoverageBoundary.Provides
+#print axioms Orthemology.Tranche3.CoverageBoundary.Provides
+#check @Orthemology.Tranche3.CoverageBoundary.Complete
+#print axioms Orthemology.Tranche3.CoverageBoundary.Complete
+#check @Orthemology.Tranche3.CoverageBoundary.requirements
+#print axioms Orthemology.Tranche3.CoverageBoundary.requirements
+#check @Orthemology.Tranche3.CoverageBoundary.Needs
+#print axioms Orthemology.Tranche3.CoverageBoundary.Needs
+#check @Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements
+#print axioms Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements
+#check @Orthemology.Tranche3.CoverageBoundary.actual_outputs
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_outputs
+#check @Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct
+#check @Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily
+#print axioms Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily
+#check @Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced
+#print axioms Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced
+#check @Orthemology.Tranche3.CoverageBoundary.local_but_not_universal
+#print axioms Orthemology.Tranche3.CoverageBoundary.local_but_not_universal
+#check @Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint
+#print axioms Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint
+#check @Orthemology.Tranche3.CoverageBoundary.no_universal_individual
+#print axioms Orthemology.Tranche3.CoverageBoundary.no_universal_individual
+#check @Orthemology.Tranche3.CoverageBoundary.local_exclusive
+#print axioms Orthemology.Tranche3.CoverageBoundary.local_exclusive
+#check @Orthemology.Tranche3.CoverageBoundary.prerequisite_closed
+#print axioms Orthemology.Tranche3.CoverageBoundary.prerequisite_closed
+#check @Orthemology.Tranche3.CoverageBoundary.connected_hub
+#print axioms Orthemology.Tranche3.CoverageBoundary.connected_hub
+#check @Orthemology.Tranche3.CoverageBoundary.genuine_cooperation
+#print axioms Orthemology.Tranche3.CoverageBoundary.genuine_cooperation
+#check @Orthemology.Tranche3.CoverageBoundary.effects_contingent
+#print axioms Orthemology.Tranche3.CoverageBoundary.effects_contingent
+#check @Orthemology.Tranche3.CoverageBoundary.Node
+#print axioms Orthemology.Tranche3.CoverageBoundary.Node
+#check @Orthemology.Tranche3.CoverageBoundary.NodeExists
+#print axioms Orthemology.Tranche3.CoverageBoundary.NodeExists
+#check @Orthemology.Tranche3.CoverageBoundary.Origin
+#print axioms Orthemology.Tranche3.CoverageBoundary.Origin
+#check @Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable
+#print axioms Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable
+#check @Orthemology.Tranche3.CoverageBoundary.originDecidable
+#print axioms Orthemology.Tranche3.CoverageBoundary.originDecidable
+#check @Orthemology.Tranche3.CoverageBoundary.rank
+#print axioms Orthemology.Tranche3.CoverageBoundary.rank
+#check @Orthemology.Tranche3.CoverageBoundary.source_roots_necessary
+#print axioms Orthemology.Tranche3.CoverageBoundary.source_roots_necessary
+#check @Orthemology.Tranche3.CoverageBoundary.origin_factive
+#print axioms Orthemology.Tranche3.CoverageBoundary.origin_factive
+#check @Orthemology.Tranche3.CoverageBoundary.origin_strict_rank
+#print axioms Orthemology.Tranche3.CoverageBoundary.origin_strict_rank
+#check @Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle
+#check @Orthemology.Tranche3.CoverageBoundary.generic_reception_retained
+#print axioms Orthemology.Tranche3.CoverageBoundary.generic_reception_retained
+#check @Orthemology.Tranche3.CoverageBoundary.InEnvelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.InEnvelope
+#check @Orthemology.Tranche3.CoverageBoundary.ClosedUnder
+#print axioms Orthemology.Tranche3.CoverageBoundary.ClosedUnder
+#check @Orthemology.Tranche3.CoverageBoundary.envelope_closed
+#print axioms Orthemology.Tranche3.CoverageBoundary.envelope_closed
+#check @Orthemology.Tranche3.CoverageBoundary.envelope_least
+#print axioms Orthemology.Tranche3.CoverageBoundary.envelope_least
+#check @Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope
+#check @Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope
+#check @Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only
+#print axioms Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only
+#check @Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope
+#print axioms Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope
+#check @IndependentCoverageControls.computed_joint_requires_both
+#print axioms IndependentCoverageControls.computed_joint_requires_both
+#check @IndependentCoverageControls.actual_evaluation_keeps_objective_correctness
+#print axioms IndependentCoverageControls.actual_evaluation_keeps_objective_correctness
+#check @IndependentCoverageControls.connected_undirected_graph_does_not_expand_forward_closure
+#print axioms IndependentCoverageControls.connected_undirected_graph_does_not_expand_forward_closure
+#check @IndependentCoverageControls.direction_reversal_would_change_coverage
+#print axioms IndependentCoverageControls.direction_reversal_would_change_coverage
+#check @IndependentCoverageControls.empty_seed_cannot_generate_anything
+#print axioms IndependentCoverageControls.empty_seed_cannot_generate_anything
+#check @IndependentCoverageControls.universal_seed_needs_no_edges
+#print axioms IndependentCoverageControls.universal_seed_needs_no_edges
+#check @IndependentCoverageControls.local_role_does_not_cover_all_tokens
+#print axioms IndependentCoverageControls.local_role_does_not_cover_all_tokens
+#check @IndependentCoverageControls.exists_bearer_can_withhold_exercise
+#print axioms IndependentCoverageControls.exists_bearer_can_withhold_exercise
+#check @IndependentCoverageControls.no_claim_of_two_complete_universal_sources
+#print axioms IndependentCoverageControls.no_claim_of_two_complete_universal_sources

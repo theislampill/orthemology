@@ -1,0 +1,11 @@
+--- previous/GUIDE.md
++++ final/GUIDE.md
+@@ -2,7 +2,7 @@
+ 
+ ## Results and scope
+ 
+-The first operation demonstrates that retaining separate target-probability, audit-probability, and likelihood-ratio summaries loses essential joint-model coupling: identical summaries can lead to posterior sets {1/2} and [1/10,9/10]. Classical finite-polytope conditioning gives an exact repair when the complete coupled vertex laws and common nonnegative branch maps are retained. A compact convex full-support boundary has exact posterior image (0,1/2], separating limiting bounds from attained models.
++The first operation demonstrates that retaining separate target-probability, audit-probability, and likelihood-ratio summaries loses essential joint-model coupling: identical summaries can lead to posterior sets {1/2} and [1/10,9/10]. Classical finite-polytope conditioning gives an exact repair when the complete coupled vertex laws and common nonnegative branch maps are retained. A compact convex family whose positive-audit members all have full support has exact posterior image (0,1/2]; it also contains one audit-null member. This separates limiting bounds from attained models.
+ 
+ The second operation tests the limit of that repair: nonlinear geometric correction does not generally preserve a hull by correcting its vertices. A finite three-state reaction example has a nonconvex image and an infinitely exposed convex hull. Positive segment transport has a sharp two-coordinate-ratio exception. Separate Gaussian curvature calculations exclude the corrected endpoint hull for the actual split; the finite-simplex infinitely-exposed result is NOT asserted for the full Gaussian split. Exact nonlinear representations retain model/audit pairing, while linear branch transport applies only under its declared common-map hypotheses.
+ 

@@ -1,0 +1,418 @@
+--- original/formal/P01Audit.lean
++++ shadow/formal/P01Audit.lean
+@@ -19,7 +19,7 @@
+ import P01TypeAssertions
+ import P01UniverseBoundary
+ set_option pp.universes true
+-set_option pp.width 120
++set_option format.width 120
+ #eval IO.println "AUDIT_BEGIN P01Candidates.SN"
+ #check P01Candidates.SN
+ #ortho_audit P01Candidates.SN
+--- original/formal/P01Candidates.lean
++++ shadow/formal/P01Candidates.lean
+@@ -216,6 +216,7 @@
+       have e : ∀ P, (fun n => cons P ρ (liftRen r n)) =
+           cons P (fun n => ρ (r n)) := by intro P; funext n; cases n <;> rfl
+       simp only [ih, e]
++      rfl
+ 
+ theorem substitute_interpret (A : TypeCode) : ∀ σ ρ,
+     interpret (substitute σ A) ρ = interpret A (fun n => interpret (σ n) ρ) := by
+@@ -237,6 +238,7 @@
+             change interpret (rename Nat.succ (σ n)) (cons P ρ) = _
+             rw [rename_interpret]; rfl
+       simp only [ih, e]
++      rfl
+ 
+ theorem instantiate_interpret (B A : TypeCode) (ρ : Nat → Candidate) :
+     interpret (instantiateType B A) ρ = interpret B (cons (interpret A ρ) ρ) := by
+--- original/formal/P01Certificates.lean
++++ shadow/formal/P01Certificates.lean
+@@ -33,12 +33,12 @@
+           | none => none
+           | some v => some ⟨v.val,.tail u.property v.property⟩
+ 
+-def checkJoin (t u : Term) (l r : List Address) : Option (Conv t u) :=
++def checkJoin (t u : Term) (l r : List Address) : Option (PLift (Conv t u)) :=
+   match replay t l, replay u r with
+   | some n, some m =>
+       if h : n.val = m.val then
+-        some (.trans (P01Source.red_conv n.property)
+-          (.symm (P01Source.red_conv (h.symm ▸ m.property))))
++        some ⟨.trans (P01Source.red_conv n.property)
++          (.symm (P01Source.red_conv (h.symm ▸ m.property)))⟩
+       else none
+   | _, _ => none
+ 
+@@ -46,7 +46,7 @@
+     (u : {u : Term // Red t u}) (_h : replay t p = some u) : Red t u.val := u.property
+ 
+ theorem join_sound (t u : Term) (l r : List Address)
+-    (p : Conv t u) (_h : checkJoin t u l r = some p) : Conv t u := p
++    (p : Conv t u) (_h : checkJoin t u l r = some ⟨p⟩) : Conv t u := p
+ 
+ /-- A closed source type/term commitment carried alongside the actual canonical
+     Checked object. These equalities are kernel obligations, not JSON booleans. -/
+--- original/formal/P01ContextualJ.lean
++++ shadow/formal/P01ContextualJ.lean
+@@ -5,7 +5,7 @@
+ open OrthemologyV2 OrthemologyV3
+ 
+ noncomputable def idBody {Γ A} (x : Tm Γ A) : Ty (extend Γ A) :=
+-  identityTy (x.subst (weaken Γ A)) (variable Γ A)
++  identityTy (x.subst (weaken Γ A)) («variable» Γ A)
+ 
+ noncomputable def idContext {Γ A} (x : Tm Γ A) : Context := extend (extend Γ A) (idBody x)
+ 
+@@ -14,7 +14,7 @@
+   valid := by
+     intro γ δ hγ
+     simpa only [instanceTy,Ty.pull,instanceSub,Sub.extend,Sub.id,idBody,identityTy,
+-      Tm.at,Tm.subst,eval_sub,weaken,variable,extend,eval,P01F.cons]
++      Tm.at,Tm.subst,eval_sub,weaken,«variable»,extend,eval,P01F.cons]
+       using id_intro (x.member γ)
+ 
+ noncomputable def baseSub {Γ A} (x : Tm Γ A) : Sub Γ (idContext x) :=
+@@ -29,7 +29,7 @@
+     (A.obj γ).rel (x.at γ) (y.at γ) ∧ Conv (p.at γ) .i := by
+   have h := p.member γ
+   simpa only [instanceTy,Ty.pull,instanceSub,Sub.extend,Sub.id,idBody,identityTy,
+-    IdPER,PER.dom,Tm.at,Tm.subst,eval_sub,weaken,variable,extend,eval,P01F.cons,and_self]
++    IdPER,PER.dom,Tm.at,Tm.subst,eval_sub,weaken,«variable»,extend,eval,P01F.cons,and_self]
+     using h
+ 
+ /-- Equality-proof coordinates are part of the context relation, so a motive
+@@ -40,7 +40,7 @@
+   have h := identity_at x y p γ
+   refine ⟨⟨Γ.refl γ,h.1⟩,?_⟩
+   simpa only [baseSub,pointSub,Sub.extend,instanceSub,Sub.id,idBody,identityTy,
+-    IdPER,baseProof,Tm.at,Tm.subst,eval_sub,weaken,variable,extend,eval,P01F.cons]
++    IdPER,baseProof,Tm.at,Tm.subst,eval_sub,weaken,«variable»,extend,eval,P01F.cons]
+     using (show (A.obj γ).rel (x.at γ) (x.at γ) ∧ Conv Term.i Term.i ∧
+       Conv (p.at γ) Term.i from ⟨x.member γ,.refl _,h.2⟩)
+ 
+@@ -70,6 +70,6 @@
+   have e := h .i (.app .i .i) (.symm (.step (.i .i)))
+   have hi : (inspectProof .i).rel .i .i := by simp only [inspectProof,if_pos rfl]; exact .refl _
+   have hf := congrArg (fun P : PER => P.rel .i .i) e
+-  have bad : (inspectProof (.app .i .i)).rel .i .i := hf ▸ hi
++  have bad : (inspectProof (.app .i .i)).rel .i .i := Eq.mp hf hi
+   simpa [inspectProof,botPER] using bad
+ end P01D
+--- original/formal/P01DependentCore.lean
++++ shadow/formal/P01DependentCore.lean
+@@ -62,8 +62,8 @@
+ /-- Only finitely many entries of the substitution schema occur in a finite
+     Poly. The frontend represents used entries by finite syntax, never functions. -/
+ def Sub.id (Γ : Context) : Sub Γ Γ where
+-  map := id
+-  respects := id
++  map := _root_.id
++  respects := _root_.id
+   code := Poly.var
+   tracks := fun _ _ => rfl
+ 
+@@ -186,7 +186,7 @@
+   code := fun n => .var (n+1)
+   tracks := fun _ _ => rfl
+ 
+-def variable (Γ A) : Tm (extend Γ A) (A.pull (weaken Γ A)) where
++def «variable» (Γ A) : Tm (extend Γ A) (A.pull (weaken Γ A)) where
+   code := .var 0
+   valid := fun h => h.2
+ 
+@@ -203,8 +203,9 @@
+ 
+ def instanceTy {Γ A} (B : Ty (extend Γ A)) (t : Tm Γ A) : Ty Γ := B.pull (instanceSub t)
+ 
+-noncomputable def fibre {Γ A} (B : Ty (extend Γ A)) (γ : Γ.Val) (x : Term) : PER :=
+-  if h : (A.obj γ).dom x then B.obj ⟨(γ,x),h⟩ else botPER
++noncomputable def fibre {Γ A} (B : Ty (extend Γ A)) (γ : Γ.Val) (x : Term) : PER := by
++  classical
++  exact if h : (A.obj γ).dom x then B.obj ⟨(γ,x),h⟩ else botPER
+ 
+ theorem fibre_cross {Γ A} (B : Ty (extend Γ A)) {γ δ x y}
+     (hγ : Γ.eqv γ δ) (hxy : (A.obj γ).rel x y) : fibre B γ x = fibre B δ y := by
+@@ -249,8 +250,9 @@
+     classical
+     intro γ δ hγ
+     have h := f.valid hγ (a.at γ) (a.at δ) (a.valid hγ)
+-    simpa only [piTy, PiPER, fibre, dif_pos (a.member γ), instanceTy, Ty.pull,
+-      instanceSub, Sub.extend, Sub.id, Tm.at, eval] using h
++    change (fibre B γ (a.at γ)).rel _ _ at h
++    rw [fibre, dif_pos (a.member γ)] at h
++    exact h
+ 
+ /-- Congruence is proved at Pi equality by related applications, not raw Conv
+     of the two abstracted SKI polynomials. -/
+@@ -268,9 +270,15 @@
+ 
+ theorem pi_beta {Γ A B} (b : Tm (extend Γ A) B) (a : Tm Γ A) (γ : Γ.Val) :
+     Conv ((app (lam b) a).at γ) ((b.subst (instanceSub a)).at γ) := by
+-  have h := abstraction_beta b.code (Γ.environment γ) (a.at γ)
+-  simpa only [app,lam,Tm.at,Tm.subst,eval_sub,instanceSub,Sub.extend,Sub.id,eval,cons]
+-    using P01Source.red_conv h
++  change Conv (.app (eval (abstract b.code) (Γ.environment γ)) (a.at γ))
++    (eval (psub (instanceSub a).code b.code) (Γ.environment γ))
++  rw [eval_sub]
++  have e : (fun n => eval ((instanceSub a).code n) (Γ.environment γ)) =
++      cons (a.at γ) (Γ.environment γ) := by
++    funext n
++    cases n <;> rfl
++  rw [e]
++  exact P01Source.red_conv (abstraction_beta b.code (Γ.environment γ) (a.at γ))
+ 
+ noncomputable def sigmaTy {Γ A} (B : Ty (extend Γ A)) : Ty Γ where
+   obj := fun γ => SigmaPER (A.obj γ) (fibre B γ) (fibre_cross B (Γ.refl γ))
+@@ -296,23 +304,25 @@
+   valid := by
+     classical
+     intro γ δ hγ
+-    apply sigma_pair (a.valid hγ)
+-    simpa only [fibre,dif_pos (a.member γ),instanceTy,Ty.pull,instanceSub,Sub.extend,Sub.id]
+-      using b.valid hγ
+-
+-noncomputable def fst {Γ A B} (z : Tm Γ (sigmaTy B)) : Tm Γ A where
++    apply sigma_pair (coh := fibre_cross B (Γ.refl γ)) (a.valid hγ)
++    change (fibre B γ (a.at γ)).rel _ _
++    rw [fibre, dif_pos (a.member γ)]
++    exact b.valid hγ
++
++noncomputable def fst {Γ : Context} {A : Ty Γ} {B : Ty (extend Γ A)} (z : Tm Γ (sigmaTy B)) : Tm Γ A where
+   code := fstPoly z.code
+   valid := fun h => (z.valid h).2.2.1
+ 
+-noncomputable def snd {Γ A B} (z : Tm Γ (sigmaTy B)) : Tm Γ (instanceTy B (fst z)) where
++noncomputable def snd {Γ : Context} {A : Ty Γ} {B : Ty (extend Γ A)} (z : Tm Γ (sigmaTy B)) : Tm Γ (instanceTy B (fst z)) where
+   code := sndPoly z.code
+   valid := by
+     classical
+     intro γ δ hγ
+     have h := (z.valid hγ).2.2.2
+     have hz : (A.obj γ).dom (firstTerm (z.at γ)) := PER.left (z.valid hγ).2.2.1
+-    simpa only [fibre,dif_pos hz,instanceTy,Ty.pull,instanceSub,Sub.extend,Sub.id,fst,
+-      Tm.at,eval_fst,eval_snd] using h
++    change (fibre B γ (firstTerm (z.at γ))).rel _ _ at h
++    rw [fibre, dif_pos hz] at h
++    exact h
+ 
+ theorem sigma_beta_first {Γ A B} (a : Tm Γ A) (b : Tm Γ (instanceTy B a)) (γ) :
+     Conv ((fst (pair a b)).at γ) (a.at γ) := pair_first (a.at γ) (b.at γ)
+@@ -320,8 +330,9 @@
+ theorem sigma_beta_second {Γ A B} (a : Tm Γ A) (b : Tm Γ (instanceTy B a)) (γ) :
+     Conv ((snd (pair a b)).at γ) (b.at γ) := pair_second (a.at γ) (b.at γ)
+ 
+-theorem sigma_eta_context {Γ A B} (z : Tm Γ (sigmaTy B)) (γ) :
+-    Conv (z.at γ) ((pair (fst z) (snd z)).at γ) := sigma_eta (z.member γ)
++theorem sigma_eta_context {Γ : Context} {A : Ty Γ} {B : Ty (extend Γ A)} (z : Tm Γ (sigmaTy B)) (γ) :
++    Conv (z.at γ) ((pair (fst z) (snd z)).at γ) :=
++  sigma_eta (coh := fibre_cross B (Γ.refl γ)) (z.member γ)
+ 
+ noncomputable def identityTy {Γ A} (x y : Tm Γ A) : Ty Γ where
+   obj := fun γ => IdPER (A.obj γ) (x.at γ) (y.at γ)
+@@ -397,7 +408,7 @@
+       exact uniform δ
+     · intro P
+       rw [F.body γ P]
+-      exact b.valid ⟨hγ,rfl⟩
++      exact b.valid (γ := (γ,P)) (δ := (δ,P)) ⟨hγ,rfl⟩
+ 
+ noncomputable def allElim {Γ B} (F : @AllFormation Γ B)
+     (t : Tm Γ (allTy F)) (A : Ty Γ) : Tm Γ (B.pull (typeInstance A)) where
+--- original/formal/P01Examples.lean
++++ shadow/formal/P01Examples.lean
+@@ -20,7 +20,7 @@
+ def idParamFamily : ParamFamily where
+   obj := fun P => ArrPER P P
+   link := fun R => arrowLink R R
+-  identity := arrow_identity
++  identity := fun P => arrow_identity P P
+ 
+ def idBodyTy (Γ : Context) : Ty (typeExtend Γ) where
+   obj := fun γ => ArrPER γ.2 γ.2
+@@ -48,13 +48,14 @@
+ /-- A genuine dependent type, Pi x:A. Id_A(x,x), not a canonical TypeCode arrow
+     containing a secretly added identity constructor. -/
+ noncomputable def dependentReflexivity :=
+-  lam (reflTm (variable nilContext (constantTy nilContext rawPER)))
++  lam (reflTm («variable» nilContext (constantTy nilContext rawPER)))
+ 
+ noncomputable def dependentReflexivityEnvelope :
+     P01Certificate.DependentEnvelope nilContext
+-      (piTy (identityTy (variable nilContext (constantTy nilContext rawPER))
+-        (variable nilContext (constantTy nilContext rawPER))))
+-      (.app (.atom .k) (.atom .i)) := ⟨dependentReflexivity,rfl⟩
++      (piTy (identityTy («variable» nilContext (constantTy nilContext rawPER))
++        («variable» nilContext (constantTy nilContext rawPER))))
++      (.app (.atom .k) (.atom .i)) :=
++  ⟨dependentReflexivity, by simp [dependentReflexivity, lam, reflTm, abstract, freeZero, drop, pren, psub]⟩
+ 
+ def pairBody : Ty (extend nilContext (constantTy nilContext rawPER)) :=
+   constantTy _ rawPER
+--- original/formal/P01PER.lean
++++ shadow/formal/P01PER.lean
+@@ -124,8 +124,7 @@
+     have e := coh (P.raw (.refl _) fz (PER.left h.2.2.1))
+     refine ⟨represented_raw hz h.1,represented_raw hw h.2.1,
+       P.raw fz fw h.2.2.1,?_⟩
+-    rw [← e]
+-    exact (B (firstTerm z)).raw sz sw h.2.2.2
++    exact e ▸ (B (firstTerm z)).raw sz sw h.2.2.2
+ 
+ theorem sigma_pair {P B coh x x' y y'} (hx : P.rel x x')
+     (hy : (B x).rel y y') :
+--- original/formal/P01Polynomials.lean
++++ shadow/formal/P01Polynomials.lean
+@@ -113,7 +113,8 @@
+ 
+ theorem abstract_absent (p : Poly) (h : freeZero p = false) :
+     abstract p = .app (.atom .k) (drop p) := by
+-  simp only [abstract,h,Bool.false_eq_true,↓reduceIte]
++  rw [abstract.eq_def]
++  simp only [h,Bool.false_eq_true,↓reduceIte]
+ 
+ theorem abstract_present_app (f x : Poly) (h : freeZero (.app f x) = true) :
+     abstract (.app f x) = .app (.app (.atom .s) (abstract f)) (abstract x) := by
+@@ -127,11 +128,13 @@
+   induction p with
+   | var n =>
+       cases n with
+-      | zero => rfl
++      | zero => simp [psub, pup, abstract, freeZero]
+       | succ n =>
++          simp only [psub, pup]
++          rw [abstract_absent (.var (n+1)) (by rfl)]
+           change abstract (pren Nat.succ (σ n)) = .app (.atom .k) (σ n)
+           rw [abstract_absent _ (freeZero_pren_succ _),drop_pren_succ]
+-  | atom a => rfl
++  | atom a => simp [psub, abstract, freeZero, drop, pren]
+   | app f x hf hx =>
+       by_cases h : freeZero (.app f x) = true
+       · have h' : freeZero (.app (psub (pup σ) f) (psub (pup σ) x)) = true := by
+@@ -167,9 +170,9 @@
+   induction p with
+   | var n =>
+       cases n with
+-      | zero => exact Red.one (.i a)
+-      | succ n => exact Red.one (.k (γ n) a)
+-  | atom t => exact Red.one (.k t a)
++      | zero => simpa [abstract, freeZero, eval, cons] using Red.one (.i a)
++      | succ n => simpa [abstract, freeZero, drop, pren, psub, eval, cons] using Red.one (.k (γ n) a)
++  | atom t => simpa [abstract, freeZero, drop, pren, psub, eval] using Red.one (.k t a)
+   | app f x hf hx =>
+       by_cases h : freeZero (.app f x) = true
+       · simp only [abstract, h, Bool.true_eq, ↓reduceIte, eval]
+--- original/formal/P01SystemF.lean
++++ shadow/formal/P01SystemF.lean
+@@ -48,8 +48,12 @@
+ 
+ theorem type_renaming {Γ t A} (h : Has Γ t A) (r : Nat → Nat) :
+     Has (fun n => rename r (Γ n)) t (rename r A) := by
+-  simpa only [subContext, ty_sub_vars] using
+-    type_substitution h (fun n => TypeCode.var (r n))
++  have hs := type_substitution h (fun n => TypeCode.var (r n))
++  have e : subContext (fun n => TypeCode.var (r n)) Γ = (fun n => rename r (Γ n)) := by
++    funext n
++    exact ty_sub_vars (Γ n) r
++  rw [e, ty_sub_vars] at hs
++  exact hs
+ 
+ theorem term_renaming {Γ t A} (h : Has Γ t A) :
+     ∀ (Δ : Context) (r : Nat → Nat), (∀ n, Γ n = Δ (r n)) →
+--- original/formal/P01Translation.lean
++++ shadow/formal/P01Translation.lean
+@@ -64,15 +64,14 @@
+     BPositive (translate t) (translate u) := by
+   induction h with
+   | i x =>
+-      exact ⟨translate x, by simpa [translate, inst, sub, single] using
+-        Beta.root (.var 0) (translate x), .refl _⟩
++      refine ⟨translate x, ?_, .refl _⟩
++      simpa [translate, inst, sub, single] using (Beta.root (.var 0) (translate x))
+   | k x y =>
+       refine ⟨.app (.lam (translate x)) (translate y), ?_, ?_⟩
+       · apply Beta.left
+         simpa [translate, inst, sub, single, up] using
+           Beta.root (.lam (.var 1)) (translate x)
+-      · exact .tail (by simpa [inst] using
+-          Beta.root (translate x) (translate y)) (.refl _)
++      · exact .tail (by simpa [inst] using (Beta.root (translate x) (translate y))) (.refl _)
+   | s f g x =>
+       let b : LTerm := .app (.app (translate f) (.var 0))
+         (.app (.var 1) (.var 0))
+@@ -90,8 +89,7 @@
+         · apply Beta.left
+           simpa [b, c, inst, sub, single, up] using
+             Beta.root (.lam b) (translate g)
+-        · exact .tail (by simpa [c, inst, sub, single, translate] using
+-            Beta.root c (translate x)) (.refl _)
++        · exact .tail (by simpa [c, inst, sub, single, translate] using (Beta.root c (translate x))) (.refl _)
+   | left h x ih => exact positive_left ih (translate x)
+   | right f h ih => exact positive_right (translate f) ih
+ 
+--- original/formal/P01TypeAlgebra.lean
++++ shadow/formal/P01TypeAlgebra.lean
+@@ -1,6 +1,6 @@
+ /- New attempt-0003 source. Complete proof bodies; UNCOMPILED at Lean 4.19.0.
+    Exact canonical TypeCode/rename/substitute are imported, not redefined. -/
+-import Mathlib
++import Mathlib.Data.Bool.Basic
+ import FiniteBridge
+ namespace P01F
+ open OrthemologyV2 OrthemologyV3
+--- original/handoff/qualify_lean419.py
++++ shadow/handoff/qualify_lean419.py
+@@ -178,7 +178,11 @@
+             dep=dependency.resolve()
+             report['dependency_readback']=verify_dependencies(dep,lock)
+             (project/'.lake').mkdir(exist_ok=True)
+-            shutil.copytree(dep/'.lake'/'packages',project/'.lake'/'packages',symlinks=False)
++            (project/'.lake'/'packages').mkdir()
++            for package in lock['packages']:
++                name = package['name']
++                shutil.copytree((dep/'.lake'/'packages'/name).resolve(),
++                                project/'.lake'/'packages'/name, symlinks=True)
+         elif acquire:
+             # Lake consumes the shipped exact lock. Never use `lake update` to float it.
+             r=run_command(evidence,'dependencies',[lake,'exe','cache','get'],project,timeout=1800)
+@@ -194,14 +198,14 @@
+         for module in inv['build_order']:
+             target=artifacts/(module+'.olean')
+             need(not target.exists(),'stale output before compilation: '+module)
+-            r=run_command(evidence,'build-'+module,[lake,'env','lean','-o',str(target),module+'.lean'],project,env)
++            r=run_command(evidence,'build-'+module,[lake,'env','lean','-j1','-o',str(target),module+'.lean'],project,env)
+             need(r['ok'],'compilation failed: '+module)
+             need(not re.search(r'\bsorry\b|sorryAx|declaration uses',r['stdout']+r['stderr']),
+                  'proof-placeholder diagnostic: '+module)
+             report['compiled_artifacts'].append({'module':module,'path':str(target.relative_to(work)),**check_artifact(target)})
+         audit_target=artifacts/'P01Audit.olean'
+         r=run_command(evidence,'declaration-type-axiom-audit',
+-                      [lake,'env','lean','-o',str(audit_target),'P01Audit.lean'],project,env,timeout=900)
++                      [lake,'env','lean','-j1','-o',str(audit_target),'P01Audit.lean'],project,env,timeout=900)
+         need(r['ok'],'actual declaration audit compilation failed')
+         report['compiled_artifacts'].append({'module':'P01Audit','path':str(audit_target.relative_to(work)),**check_artifact(audit_target)})
+         report['declarations']=parse_audit(r['stdout'],[t['name'] for t in inv['targets']])
+--- original/scripts/inventory_formal.py
++++ shadow/scripts/inventory_formal.py
+@@ -17,9 +17,10 @@
+         if re.fullmatch(r'\s*end(?:\s+[A-Za-z0-9_.]+)?\s*',line):
+             if not scopes:raise GateError('unmatched end '+path.name+':'+str(i+1))
+             scopes.pop();continue
+-        x=re.match(r'\s*(?:@\[[^]]*\]\s*)*(?:(private|protected|noncomputable)\s+)?(def|abbrev|theorem|lemma|structure|inductive)\s+([A-Za-z][A-Za-z0-9_.]*)',line)
++        x=re.match(r'\s*(?:@\[[^]]*\]\s*)*(?:(private|protected|noncomputable)\s+)?(def|abbrev|theorem|lemma|structure|inductive)\s+([A-Za-z][A-Za-z0-9_.]*|«[A-Za-z][A-Za-z0-9_.]*»)',line)
+         if not x:continue
+         qualifier,kind,name=x.groups()
++        name=name.removeprefix("«").removesuffix("»")
+         full='.'.join([n for t,n in scopes if t=='namespace']+[name])
+         row={'name':full,'kind':kind,'module':path.stem,'path':path.relative_to(ROOT).as_posix(),
+              'line':i+1,'qualifier':qualifier,'declaration_start_text':lines[i]}
+@@ -56,7 +57,7 @@
+ for n in sorted(modules):visit(n)
+ audit=['/- Generated exact target readback; compiler output is mandatory. -/']
+ for module in sorted({t['module'] for t in targets}|{'AuditSupport'}):audit.append('import '+module)
+-audit.extend(['set_option pp.universes true','set_option pp.width 120'])
++audit.extend(['set_option pp.universes true','set_option format.width 120'])
+ for t in targets:
+     n=t['name'];audit.extend([f'#eval IO.println "AUDIT_BEGIN {n}"',f'#check {n}',f'#ortho_audit {n}',f'#print axioms {n}',f'#eval IO.println "AUDIT_END {n}"'])
+ (ROOT/'formal'/'P01Audit.lean').write_text('\n'.join(audit)+'\n')

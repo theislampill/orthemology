@@ -1,0 +1,78 @@
+{
+  "schema": "orthemology-stage3-audit-cycle-v1",
+  "cycle": 2,
+  "utc": "2026-09-13T02:51:18.579817+00:00",
+  "candidate_freeze": "snapshots/candidate2_freeze.json",
+  "candidate_freeze_sha256": "cb98861b79978a0df20d4364f13d4979e838272a0bcdb6dff550fbb67620ff9d",
+  "reviewer": "same assistant; scoped mathematical/admissibility self-audit",
+  "independent_review": false,
+  "overall_verdict": "FAIL_OPEN_NOT_APPROVED",
+  "full_source_line_review_established": false,
+  "unobserved_tool_results_do_not_override_prior_connected_reads": true,
+  "new_semantic_source_read_credit": 0,
+  "kind": "adversarial-source-and-candidate",
+  "scope_limit": "Source criticisms are limited to supplied visible excerpts and carried records; the whole original corpus and exact frozen-byte readback were not newly available. This audit cannot certify their clearance.",
+  "challenges": [
+    {
+      "id": "C2-A01",
+      "challenge": "Preserving signs of unilateral pure-context preference differences does not preserve mixed best responses.",
+      "disposition": "WORKED_COUNTEREXAMPLE_IN_CANDIDATE",
+      "detail": "Changing first-player costs from [[0,1],[1,0]] to [[0,1],[2,0]] retains every nonzero pure-context sign but changes the indifference threshold; half/half acquires regret 1/4. Tests are execution-scoped, ancestry still open."
+    },
+    {
+      "id": "C2-A02",
+      "challenge": "Rational rounding may be mistaken for a construction from unknown Nash data or for resolution of hard coupled feasibility.",
+      "disposition": "HYPOTHESES_AND_NONCLAIMS_EXPLICIT",
+      "detail": "Positive epsilon, bounded costs, fixed finite strategic declaration and support/feasibility requirements are retained. An existence argument is not an efficient identification algorithm."
+    },
+    {
+      "id": "C2-A03",
+      "challenge": "Pure finite potential descent, simultaneous play, interior mixed stationarity and fair discovery can be conflated.",
+      "disposition": "SEPARATED_WITH_FINITE_TRAJECTORIES",
+      "detail": "Accepted strict unilateral improvements use a finite pure-profile bound; simultaneous anti-coordination cycles; mixed stationary saddle is not an attracting minimum; unfair stalled updates do not establish equilibrium."
+    },
+    {
+      "id": "C2-A04",
+      "challenge": "Cooperation alone may be treated as calibrated potential/logit alignment or product Nash.",
+      "disposition": "EXPLICIT_ALIGNMENT_AND_COUNTEREXAMPLES",
+      "detail": "Common beta_i*a_i sufficient Gibbs alignment is distinguished from ordinal similarity; heterogeneous-base cycle violates detailed balance; stationary joint law is not the independent product of its marginals."
+    },
+    {
+      "id": "C2-A05",
+      "challenge": "Pairwise compatibility graph, common acceptable-set cover and one fixed decision can be conflated.",
+      "disposition": "COVER_PARTITION_AND_QUERY_COUNTEREXAMPLES_RETAINED",
+      "detail": "The triangle {a,b},{b,c},{a,c} lacks a common candidate. Per-query one-bit access to an arbitrary coordinate does not recover an entire vector in one shared response budget."
+    },
+    {
+      "id": "C2-A06",
+      "challenge": "Successful initial apoautosis may be silently redefined as universal future task preservation.",
+      "disposition": "DEFINITION_PRESERVED",
+      "detail": "Future capability is explicitly stronger and task-relative; calibration loss can preserve the present parity contract while defeating a later discrimination task. No physical experiment is inferred."
+    },
+    {
+      "id": "C2-A07",
+      "challenge": "A copy, hash, syntactic pass or same-assistant audit may be represented as independent source/completion warrant.",
+      "disposition": "WHOLE_GATE_REMAINS_OPEN",
+      "detail": "No fresh full-corpus review or independent specialist certification is claimed. Finite test results and exact source defect receipts retain separate scopes."
+    },
+    {
+      "id": "C2-A08",
+      "challenge": "An isolated helper patch can be declared repaired without source/test/hash-bound evidence.",
+      "disposition": "OPEN_NOT_RECERTIFIED",
+      "detail": "The carried 1,096/65,534/six-representation report remains a historical execution claim; original implementation, patch and oracle receipts must be matched before a new repair certification."
+    },
+    {
+      "id": "C2-A09",
+      "challenge": "Theorem-family overlap, actual physical correspondence or comparative superiority may remain unknown.",
+      "disposition": "OPEN",
+      "detail": "Full frontier comparison, primary prior art, physical support model and strongest rival baselines remain explicit blockers to novelty and meniscus claims."
+    }
+  ],
+  "blocking_obligations": [
+    "S3-A01",
+    "S3-A02",
+    "S3-A03",
+    "S3-A04",
+    "S3-A05"
+  ]
+}

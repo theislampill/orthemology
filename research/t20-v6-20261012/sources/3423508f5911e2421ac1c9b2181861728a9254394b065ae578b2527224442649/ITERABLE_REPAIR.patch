@@ -1,0 +1,14 @@
+--- received/research/contracts.py
++++ corrected/research/contracts.py
+@@ -146,9 +146,10 @@
+ 
+ def affected_nodes(dependencies: Mapping[S,Iterable[S]], changed: Iterable[S]) -> set[S]:
+     """Reachability from changed source/parameter nodes in a declared DAG."""
++    deps={node:set(parents) for node,parents in dependencies.items()}
+     changed_closure=set(changed)
+     while True:
+-        newly={node for node,parents in dependencies.items()
++        newly={node for node,parents in deps.items()
+                if set(parents)&changed_closure}-changed_closure
+         if not newly: break
+         changed_closure.update(newly)

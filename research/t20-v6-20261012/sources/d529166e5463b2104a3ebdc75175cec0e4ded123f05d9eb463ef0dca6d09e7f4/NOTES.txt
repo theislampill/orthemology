@@ -1,0 +1,4 @@
+Initial whole-cache run was intentionally interrupted in favour of targeted dependencies. Cache then downloaded all 919 required files successfully.
+Initial calibration elaboration failed on numeral-cast rewriting and missing primality norm_num extension. Corrected using exact decidable primality proofs and explicit Nat.cast_ofNat lemmas; no mathematical hypothesis weakened.
+Initial combined build failed because Lean -o requires module root to contain source. verify.sh now explicitly declares the package root. Second combined build exited 0.
+RED.lean is intentionally incomplete and is excluded from successful source build. It verifies that Lean rejects the unsolved identification goal; it is not an admitted proof or theorem dependency.

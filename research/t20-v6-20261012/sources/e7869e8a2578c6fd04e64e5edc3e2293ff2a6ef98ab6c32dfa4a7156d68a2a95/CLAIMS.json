@@ -1,0 +1,1426 @@
+{
+  "schema": "t20.claim-records.v1",
+  "track": "proofs_types_inquiry",
+  "cut_date": "2026-10-11",
+  "claims": [
+    {
+      "id": "PT-01",
+      "title": "Canonical residual-certificate frontier",
+      "exact_statement": "For finite admitted support-price catalogue P and inventory K, Pareto normalization of {(S\\K,c):(S,c) in P} is uniquely determined by its finite future-acquisition minimum-price function. Normalization commutes with further residualization; equality of residual frontiers iff equality of all those future price functions.",
+      "hypotheses": [
+        "Finite catalogue; support sets finite; token equality decidable",
+        "Kernel static theorem: arbitrary linearly ordered cost C with WithTop C, no finiteness of ambient E or nonnegativity required",
+        "Coarseness quantifies over all finite additional acquisition sets; fixed proof prices and persistent reusable inventory in operational interpretation"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean static finite-order theorem; recorded author/reviewer checks, not freshly rebuilt",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [],
+      "ancestry": "Finite Pareto/lower-envelope mathematics and original proof-sensitive inquiry catalogue; kernel verifies the already written theorem.",
+      "replay_cluster_ids": [
+        "F-frontier"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-02",
+      "title": "Finite attainable inquiry and Bellman cost",
+      "exact_statement": "A sure finite strategy exists iff every feasible scenario full transcript contains support of some admitted goal proof. The finite Bellman recursion min(terminal check cost, action cost + max feasible continuation cost) attains a worst-path optimum.",
+      "hypotheses": [
+        "Finite scenarios, finite one-use tests, finite admitted goal catalogue",
+        "Order-independent test responses, persistent evidence, tests remain available",
+        "Nonnegative finite action/check prices; all possible responses counted; stopping permitted when certificate available"
+      ],
+      "dependencies": [
+        "PT-01"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "No expectation-optimal randomized policy theorem",
+        "Expiring/destructive evidence invalidates transcript union",
+        "2^n distinguishable residual states are a controller-summary bound, not general physical memory lower bound"
+      ],
+      "ancestry": "Inherited dynamic programming and finite adversarial decision trees; no later kernel formalization of this theorem is claimed.",
+      "replay_cluster_ids": [],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-03",
+      "title": "Finite unguarded rule compilation",
+      "exact_statement": "For finite grounded judgements/rules with nonnegative additive occurrence prices and freely substitutable equal-judgement proofs, every tree is dominated by one of branch height \u2264|J|. Unguarded shared-DAG proofs admit \u2264|J| node normalization with support containment and no cost increase, permitting a finite whole-proof frontier.",
+      "hypotheses": [
+        "Judgements include full context/type/version/restrictions",
+        "Finite rules and judgements; persistent support unions; nonnegative prices",
+        "No hidden provenance/identity/child-support guards"
+      ],
+      "dependencies": [
+        "PT-01"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:3d8d11d73055b62913cf36138cc0b3b273d032f8f927a885ee2af11bd8eaf459",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Tree and DAG minima differ; scalar child minima do not solve shared optimization",
+        "Finite bounds do not prove substantive rule soundness",
+        "Negative cycles or infinite rule catalogues can destroy minima"
+      ],
+      "ancestry": "Finite weighted deduction/AND-OR ancestry, not a novelty claim.",
+      "replay_cluster_ids": [],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-04",
+      "title": "Guarded exact-support attainment and saturation",
+      "exact_statement": "For finite J,R with nonnegative rational costs and guards on ordered exact child supports, every attainable exact state (j,S) has an original-tree minimum attained by height |J|(|B|+1), where B is the finite union of grammar tokens. Actual bounded-height numeric saturation is sound and complete, and full table equality is a fixed point.",
+      "hypotheses": [
+        "Guard sees only declared ordered exact support tuple and fixed metadata",
+        "Finite grammar; arbitrary ambient E permitted; rational nonnegative prices for global theorem",
+        "Bounded-height recurrence works without nonnegativity or finite J; existence kernels allow noncomputable guards"
+      ],
+      "dependencies": [
+        "PT-03"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:67392fef19c436aa59b00a719698d5f2ecd877b4611c1a1c57c7bb445c6eb4ec",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:df6fec70abc5c1fa442ed7bd112ec694b8cf03c0e45cfedad7076c823c216d85",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:a01fb6836c34074dd8ee38c874059246f6963c893f3bd9764ceb4ace39b1fb2e",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean finite-attainment and actual-saturation layers, recorded trust-zero reviews; no fresh consolidation build",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Earlier report lack of formal attainment/saturation is superseded by additive kernels; ordinary proof remains ancestor"
+      ],
+      "residuals": [
+        "Key-set stability alone is insufficient",
+        "No early Pareto pruning before nonmonotone guards",
+        "No decidable-guard or efficient algorithm claim in noncomputable recurrence"
+      ],
+      "ancestry": "Exact-support state refinement then finite weighted deduction; no first-proof credit to formalization.",
+      "replay_cluster_ids": [
+        "F-attainment",
+        "F-saturation"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Earlier report lack of formal attainment/saturation is superseded by additive kernels; ordinary proof remains ancestor"
+      ]
+    },
+    {
+      "id": "PT-05",
+      "title": "Executable numeric compiler and returned optimal tree",
+      "exact_statement": "Under explicit finite rule/judgement enumerations, decidable equality and guards, executable guarded tables equal the semantic recurrence at every round. Bounded exhaustive tree extraction returns an actual valid tree at a finite numeric optimum and is complete for that bounded state; with the global cutoff, it returns a global exact-state minimum iff one exists.",
+      "hypotheses": [
+        "Exact declared grammar, rational computable prices, ordered child positions",
+        "Nonnegative prices for global optimality/cutoff; no such premise for bounded soundness/completeness",
+        "Supplied executable enumerations and guard decisions"
+      ],
+      "dependencies": [
+        "PT-04"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:7cf0eb719eb33326fe35a3d0c2f02ccef6b5702eaf3f239a20bfb4b799326562",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:70cd2cc049c95cec75325b0e3dd04a2615e408c66fa539858f4e749a9565ff81",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:3cf9fff26c516b3a889875ac34bcf8ab002b04cabe4d14a48c6c5cef60e1c6e1",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:27c707071cfe011d9cf9fadefbedfacc96444445498c16083b85afc064a33592",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean executable refinement and witness extraction; recorded runtime/semantic mutation reviews",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Numeric-only absence of returned witness closed by constructive witness package"
+      ],
+      "residuals": [
+        "Not canonical/minimum-node/stable witness",
+        "Potential exhaustive explosion; no scalable optimizer",
+        "Not a DAG extractor or Python-correspondence theorem"
+      ],
+      "ancestry": "Executable refinement of existing finite theorem, not first ordinary proof.",
+      "replay_cluster_ids": [
+        "F-executable",
+        "F-witness"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Numeric-only absence of returned witness closed by constructive witness package"
+      ]
+    },
+    {
+      "id": "PT-06",
+      "title": "Shared-proof complexity and exact overlap information",
+      "exact_statement": "In the explicit acyclic empty-support 0/1 rule-list representation, shared-DAG budget is NP-complete by an optimum-preserving Set Cover construction with polynomial witnesses. Exact-support acyclic unary chains yield a separate Set Cover hardness mechanism. For compatible globally aligned paid-node footprints, weighted union computes shared cost; proper intersection scalar data can fail to determine it.",
+      "hypotheses": [
+        "All rules explicitly admitted and scoped; DAG topological validity and actual rule membership",
+        "Nonnegative once-per-node prices; aligned identical node identity means same rule/references/scope/cost",
+        "Complexity claims use explicit finite compact rule-list input, not arbitrary oracle guards or expanded-state input"
+      ],
+      "dependencies": [
+        "PT-03"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:d3f215e0073d5bbae42f3fa50711ba47484a13199df5ed3b7e98059d3fd15c98",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:be28f2455521d4d09b95dd2e129ae846af6b6e55b6bd2b190985a227b2c1b6db",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:1e7f1a50435f114f232cbc258867a050d099ec090464f31aeb7d506d40b94bdc",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:02fb42e57400b731397830d88d9b0e0a65aa66719e0083fccb3028b2063eeaf7",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Final report replaces pre-repair witness admission and binary grammar validation claims; original reduction retained"
+      ],
+      "residuals": [
+        "No first internal priority claim without missing RP full manuscript",
+        "No arbitrary representation lower bound from scalar moment collision",
+        "Full degree-one incidence vectors or known injective weight coding can carry more information"
+      ],
+      "ancestry": "Set Cover, classical shared AND/OR cost (Sahni), inclusion-exclusion/parity; explicit project transports.",
+      "replay_cluster_ids": [
+        "O-shared"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Final report replaces pre-repair witness admission and binary grammar validation claims; original reduction retained"
+      ]
+    },
+    {
+      "id": "PT-07",
+      "title": "Guarded shared-DAG minimum attainment",
+      "exact_statement": "Earliest-node normalization by (judgement, exact support) preserves exact root state and each ordered support guard, never increases nonnegative once-per-node cost, and gives \u2264|J|2^|E| nodes. Finite enumeration of these whole graphs attains every reachable exact-state optimum.",
+      "hypotheses": [
+        "Finite J,E,R (or finite grammar token union used as E)",
+        "Fixed guards on ordered child supports and fixed metadata only",
+        "Nonnegative finite node prices; exact arithmetic needed for executable comparison"
+      ],
+      "dependencies": [
+        "PT-04",
+        "PT-06"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:949de5dc42bb2ceb44068c90a226f8b7f70aba6ab8faeb0f0ede4920e54deab0",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Ordinary reviewed theorem, not Lean",
+        "Normalization is not optimization and can keep expensive earliest witness",
+        "Node-identity-sensitive guards outside contract"
+      ],
+      "ancestry": "Extends previous unguarded DAG pruning to exact support states; preserves shared-cost obstruction.",
+      "replay_cluster_ids": [
+        "O-guarded-dag"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-08",
+      "title": "Unchanged HasE compiler independence",
+      "exact_statement": "For exact original q=redundantExpr.closed, there is no HasE [] p (W q), and no HasE [] p ((W q)\u2192Bottom), for any p. Likewise for the exact identity of variableExpr.closed and redundantExpr.closed at N\u2192N. The unchanged HasC grammar derives that identity; hence no all-closed-HasC exact-type translation to HasE exists, even allowing arbitrary replacement proofs.",
+      "hypotheses": [
+        "Actual retained HasE/HasC grammars, endpoints and W definition",
+        "Whole-source homogeneous Henkin soundness with Raw=top plus faithful full-PER positive model",
+        "Universe closure/formation/coherence proved within each model"
+      ],
+      "dependencies": [
+        "PT-09"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:b631182b7eb2701d70c009bde387057cfd8fbc0b0479a1ef46dde47644f95963",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:2891cdca4363db9553820d718c7806887cc820b0bdb4fdd549b1f9dce99dd002",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:b4c46829c268c37860114d5d99c08a2bc099373133a591664503ef07d8b75628",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:5ee0cbdab27fa18866d5e7b1b6b13131bbdb649b5bacab839a67c46e11619d08",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean meta-level nonderivability and final independent 17-module scoped review retained",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Earlier OPEN source inhabitation/negation status in old completion and full-PER reports is superseded for these exact targets"
+      ],
+      "residuals": [
+        "No internal negation proof",
+        "No reversal/inclusion ordering of all source calculi",
+        "Does not refute positive validity in different faithful full-PER model"
+      ],
+      "ancestry": "Actual source transport and nonstandard Henkin countermodel; alternative sound model, not source modification.",
+      "replay_cluster_ids": [
+        "T-henkin"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Earlier OPEN source inhabitation/negation status in old completion and full-PER reports is superseded for these exact targets"
+      ]
+    },
+    {
+      "id": "PT-09",
+      "title": "Faithful whole-HasE full-PER model and standardness",
+      "exact_statement": "A coherent faithful-Raw full-PER interpretation is sound for all actual HasE rules and validates the actual compiler endpoints at N\u2192N and actual scalar target c3:W(q), while the endpoints remain raw-nonconvertible. Closed typed-N observational standardness is inherited, not newly originated here.",
+      "hypotheses": [
+        "All conversion-saturated PERs quantified by All",
+        "Sigma interpreted by projections rather than inherited raw Represented predicate",
+        "Actual source formation supplies coherence; no new semantic formation premise"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:bd699d71bf8360d5f5a4af4ce81a2bec08ee90411f261da03bb1646a8a0aaea5",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:1c9db32de3dcdcf3afc39155007a92a2eb5c4c92986cd2af4f40722a55a00015",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean whole-source full-PER soundness; recorded independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Whole-model extension condition of earlier reduct result discharged"
+      ],
+      "residuals": [
+        "Semantic validity does not imply source inhabitation",
+        "Different Sigma interpretation explicitly declared",
+        "No raw endpoint equality"
+      ],
+      "ancestry": "Unary PER semantics and pre-existing EffectiveStandardness; new project whole-model construction.",
+      "replay_cluster_ids": [
+        "T-fullper"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Whole-model extension condition of earlier reduct result discharged"
+      ]
+    },
+    {
+      "id": "PT-10",
+      "title": "Actual-E dependent induction versus rigidity",
+      "exact_statement": "The external weak induction schema over every actual-E formed dependent family with actual-E seed/step is equivalent to a closed rigidity witness R. Over all context extensions, the contextual schema is equivalent to local rigidity. A single fixed-context schema is weaker.",
+      "hypotheses": [
+        "Actual CtxE/FormE/HasE premises, not old Has restriction",
+        "Correct quantified schema over arbitrary families/context extensions",
+        "Weak schema asks a section; computation laws separately stated"
+      ],
+      "dependencies": [
+        "PT-08",
+        "PT-09"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:2c659c1fe865d36389a3ce439ffe4417b82bea004e4376a971d98bb7c672f3ee",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:90a01fd9fd795332c2f35a7e058ebd7ca1d43140784df2799b1306de485e9888",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean actual-E total-space forward construction and converse, retained reviews",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Typed successor computation does not imply raw successor conversion",
+        "Do not replace all-context schema with WeakInductionAt []"
+      ],
+      "ancestry": "Ordinary total-space/rigidity mechanism transported into actual source.",
+      "replay_cluster_ids": [
+        "T-induction"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-11",
+      "title": "Actual-E Sigma elimination versus eta",
+      "exact_statement": "At every admissible actual-E \u0393,A,B,z, typed Sigma eta is equivalent to weak all-motive dependent elimination and to the strong branch-erasure version. Canonical pair elimination has the specified raw beta behavior.",
+      "hypotheses": [
+        "Actual formation/typing at dependent Sigma and each motive",
+        "Well-scoped dependent branch and substitution",
+        "Equivalence parameterized by the given admissible data"
+      ],
+      "dependencies": [
+        "PT-09"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:89191b243543eaebd7489ff3fdfec1b042c681308ecca0b6f2807793b6a19355",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean actual-E schema equivalence, retained review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Unchanged HasE does not admit unrestricted eta/elimination",
+        "Rigidity alone does not repair Sigma eta"
+      ],
+      "ancestry": "Sigma eta/elimination equivalence realized in actual grammar.",
+      "replay_cluster_ids": [
+        "T-sigma"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-12",
+      "title": "Independent literal principles and full selective extensions",
+      "exact_statement": "The literal completion principles E and R do not imply or refute one another as recorded by sound-model controls. Stronger: the recursively extended Sigma-only actual-source grammar admits its full Sigma schema but not weak induction; the induction-only grammar admits its induction schema but not weak Sigma elimination. Both have no closed Bottom.",
+      "hypotheses": [
+        "Selective grammar includes recursive new premises and formation",
+        "Tagged faithful full-PER and homogeneous Raw-top models are distinct declared interpretations"
+      ],
+      "dependencies": [
+        "PT-10",
+        "PT-11"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:9ed64aed3f8ead14e4522891426375f2120373778e8916bd651b48f822ef5be8",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:ce09cebcb67e70619a8516cda4d902fd215d91265a9717c948ecc9602a37ee64",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Literal theorem report plus directly read SchemaSeparation.lean; full selective source retained in later checked chain; original standalone archive not recovered",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Full-rule independence extends the literal E/R theorem; neither is withdrawn"
+      ],
+      "residuals": [
+        "Original full-rule report/review archive name unmatched; no standalone review invented",
+        "No single-model simultaneous incompatible semantic assumptions"
+      ],
+      "ancestry": "Separate rule-system independence, beyond earlier literal type separation.",
+      "replay_cluster_ids": [
+        "T-selective"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Full-rule independence extends the literal E/R theorem; neither is withdrawn"
+      ]
+    },
+    {
+      "id": "PT-13",
+      "title": "Separate recursive HasJ completion",
+      "exact_statement": "The separately defined CtxJ/FormJ/HasJ includes actual HasE and actual Sigma elimination and dependent induction over recursively extended J premises. Whole-J faithful full-PER soundness and no closed Bottom hold; controls demonstrate reentry with genuinely new motives and interaction of both rules.",
+      "hypotheses": [
+        "Exact separate JointSyntax definitions",
+        "Actual syntactic premises; no semantic validity oracle",
+        "Original HasE/HasC remain byte-unchanged"
+      ],
+      "dependencies": [
+        "PT-09",
+        "PT-10",
+        "PT-11"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:3adb4dc48b40befdfaef1db6b2e586a2a171ca5e05172eb752893ad92aeeab56",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:31b121c690e0ab2da1896753b8f1ab35c679a62478328ad3a7f9a9499eaa9a8a",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:9d893e52fcad6b79274fd7b98ea221b6d894913a75332d4173f095ea61915188",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Direct actual syntax and theorem source inspection; retained downstream checked source chain; original standalone report/review not recovered",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Strengthened unadopted source proposal, not new rule of unchanged HasE",
+        "No restored original standalone archive claimed"
+      ],
+      "ancestry": "Explicit synthesis of complementary completion interfaces.",
+      "replay_cluster_ids": [
+        "T-joint"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-14",
+      "title": "Joint computation and recursor uniqueness",
+      "exact_statement": "Canonical actual-J dependent sections have raw/typed zero and typed successor laws. Two actual-J sections satisfying the same ordinary zero and successor algebra laws are typed-identical: the later theorem derives the comparison step and induction/extensionality closes uniqueness.",
+      "hypotheses": [
+        "Actual-J formed family and typed seed/step",
+        "Both compared functions typed at the same dependent function type",
+        "Specified zero/successor algebra laws with correct dependent transports"
+      ],
+      "dependencies": [
+        "PT-13"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:98caa77fb706546d5e13b7e720aa652545f16ee539fbef0260cd06c0621d2b9c",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:f488733aca2fc787319609644de23f257673d3f8f48d797a8a6a6e94eb07d42b",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean computation and later recursor uniqueness packages with recorded independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Earlier need to supply a separate comparison-step witness closed by later construction"
+      ],
+      "residuals": [
+        "No general raw conversion or full categorical initiality",
+        "Raw successor counterexample remains a raw valuation claim, not a sound J valuation"
+      ],
+      "ancestry": "Induction plus typed congruence/extensionality; successive project refinement.",
+      "replay_cluster_ids": [
+        "T-joint-computation",
+        "T-joint-uniqueness"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Earlier need to supply a separate comparison-step witness closed by later construction"
+      ]
+    },
+    {
+      "id": "PT-15",
+      "title": "Typed-N extraction and conditional identity decision",
+      "exact_statement": "For every supplied closed HasJ term at N, the retained observation/extraction algorithm terminates with a unique iteration count; the term is typed-identical to the extracted numeral. For two supplied closed-N typings, identity is inhabited iff their counts coincide.",
+      "hypotheses": [
+        "Closed terms with actual supplied HasJ [] n N derivations",
+        "Exact inherited extraction definition, applied observation/complete-development code",
+        "Equality decision restricted to these already typed inputs"
+      ],
+      "dependencies": [
+        "PT-13",
+        "PT-14"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:054cb2f484e6078430854781ceebf69917601bb374a6bb1a952cd044ec984f7d",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:9beab51f3fe8ffde00a3838989a46bc45fcedc441986987cb6cc20bfaf49d6f1",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Direct Lean theorem/source reading; retained downstream checked source closure, original standalone fidelity archive not recovered",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "No arbitrary typing/inhabitation/raw conversion decider",
+        "No bare-term raw equality to numeral asserted",
+        "No fresh runtime deep extraction pass claimed"
+      ],
+      "ancestry": "Inherited effective Church observations plus J typed canonicity.",
+      "replay_cluster_ids": [
+        "T-extraction"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-16",
+      "title": "Erased-J proof uniqueness",
+      "exact_statement": "For fixed actual typed endpoints x,y:A and identity proofs e,f, both old HasE and arbitrary HasJ derive identity between e and f at Id_A(x,y). Fixed-carrier typed observers preserve that equality; supplied numeral-extraction observations agree accordingly.",
+      "hypotheses": [
+        "Correct dependent proof motive formed in actual source",
+        "Same carrier/endpoints; supplied typings and extraction witnesses when used",
+        "No equality reflection assumption"
+      ],
+      "dependencies": [
+        "PT-13"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:ac0179ece20a78b01cd096dda71154a2fe21b66dc18444daef754bec49a979f4",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean proof-uniqueness module and independent semantic review retained",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Earlier scope stopped short of proof-path uniqueness; additive theorem now answers it"
+      ],
+      "residuals": [
+        "Raw syntax/proof trees and external provenance remain distinguishable",
+        "Non-proof Sigma labels remain observable"
+      ],
+      "ancestry": "Erased J/proof-dependent motive, not broad collapse of source provenance.",
+      "replay_cluster_ids": [
+        "T-proof-uniqueness"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Earlier scope stopped short of proof-path uniqueness; additive theorem now answers it"
+      ]
+    },
+    {
+      "id": "PT-17",
+      "title": "Faithful-Raw semantic gap and non-RE validity",
+      "exact_statement": "A specific old-E-formed type (IdRaw zero one)\u2192Bottom is faithful-full-PER valid but has no HasJ inhabitant. An actual primitive-recursively produced formed-type family is valid iff the encoded machine does not halt, so semantic validity for that family is not RE; no RE sound acceptance relation can be complete for it.",
+      "hypotheses": [
+        "Intended faithful full-PER validity and separate sound Raw-top countermodel distinguished",
+        "Exact formed program-type construction and machine coding",
+        "RE/soundness premises for acceptance impossibility"
+      ],
+      "dependencies": [
+        "PT-09",
+        "PT-13"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:c445a2c1d5f8115c11109e8498472dec5d920a93a61c6778061aa4a6ee8fa6ea",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:8b8951ef7d1f932717226176b17700bf7a8a6beb4f78d0433376ecfc3ae92ba2",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Direct Lean proofs; downstream retained checked chain; original standalone report archive not recovered",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Not undecidability of every finite fragment",
+        "Semantic impossibility independent of later actual checker implementation",
+        "Alternate Raw-top model is diagnostic, not faithful meaning"
+      ],
+      "ancestry": "Nonhalting reduction and semantic incompleteness predate final concrete checker.",
+      "replay_cluster_ids": [
+        "T-semantic-gap"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-18",
+      "title": "Actual-source PR certificate checker and RE search",
+      "exact_statement": "For all six actual E/J context, formation and typing judgements, all 63 literal rule constructors have exact canonical codes with PR conclusion/premise/side-condition maps. A total numerical PR checker is sound on every accepted code and complete for actual derivations. Derivable codes are RE; least-certificate partial search has exactly that domain; a separately paired term/certificate search handles existential closed-J inhabitation.",
+      "hypotheses": [
+        "Canonical certificate gates including certValid11/certValid13 and exact ordered child exhaustion",
+        "Actual source constructors including unused-image formation premises",
+        "No abstract PR checker or source-Primcodable premise left undischarged"
+      ],
+      "dependencies": [
+        "PT-13",
+        "PT-17"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:77657e7900e15eeec1266c35ed0e3154a44d536f4907647e486e4217d5ea6625",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:db89dc50a2863e2008c18defb63124ff874855657548958a13bf7ee5d0866eea",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:e49849c772452fce9fe45047dcc4402fc2b2ecca176b7b81e2eda1e57d1d1d8c",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Independent ACCEPT: selected 88-module kernel replay, 3093 source pins, independent endpoint/negative checks; deep runtime exit130 RESOURCE_INCONCLUSIVE",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Author-frozen pending review label superseded by matching independent ACCEPT",
+        "Abstract effective-presentation premise replaced by literal actual-source coding"
+      ],
+      "residuals": [
+        "No practical terminating general prover or semantic completeness",
+        "Resource-inconclusive batch neither pass nor counterexample",
+        "No arbitrary inhabited-type decision"
+      ],
+      "ancestry": "Effective syntax/RE machinery applied to actual source; semantic barrier already existed.",
+      "replay_cluster_ids": [
+        "T-effective"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Author-frozen pending review label superseded by matching independent ACCEPT",
+        "Abstract effective-presentation premise replaced by literal actual-source coding"
+      ]
+    },
+    {
+      "id": "PT-19",
+      "title": "Deterministic finite sidecar actual-source realization",
+      "exact_statement": "Every stipulated finite deterministic sidecar table can be represented by a primitive-recursively compiled actual original-Has controller on Sigma(coarse, Sigma(tag, IdRaw(I,I))). Numeric reply/state observations and finite histories agree, passing the literal returned state forward. Within a fixed coarse fibre and fixed source-observer contract n distinguishable classes require at least n tags and n suffice.",
+      "hypotheses": [
+        "External finite tables, valid encoded inputs and explicit fallback",
+        "Closure/range/action permissions remain external unless supplied",
+        "Fixed observer/carrier contract; arbitrary typed proof slots constrained by PT-16"
+      ],
+      "dependencies": [
+        "PT-16"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:8ccbe359bbd4c7a482dbfb20e9a62098ec9001072a96e6511b6f7c5c3445bcb4",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:1254072fcf2668a10dd8bc5fce0ec64579f489c8ef03a82858f7ce917b225119",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Six new Lean modules plus two reviewer modules; retained pins; no fresh rebuild",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Trivial proof slot does not authenticate tags/evidence",
+        "Natural-number coding is not automatic finite range proof",
+        "Not global minimal encoding or D1 partition algorithm"
+      ],
+      "ancestry": "Source realization of external finite sidecar contract; cross-reference evidence track D1-D3.",
+      "replay_cluster_ids": [
+        "T-sidecar"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-20",
+      "title": "Rational joint-kernel source transport",
+      "exact_statement": "For finite rational normalized joint(reply,nextstate) rows after duplicate aggregation, D=lcm of reduced denominators is the least uniform seed size realizing all rows. The compiled actual-source deterministic map realizes each seeded step and finite history. Adaptive stochastic transport holds iff the conditional seed law has the correct total mass on each joint-reply fibre; conditional uniformity is sufficient.",
+      "hypotheses": [
+        "Finite enabled normalized nonnegative rational rows",
+        "Full operating-history and chosen-action conditioning",
+        "One joint sample, not separate outcome and next-state marginals",
+        "Source-side state/seed encodings and valid ranges"
+      ],
+      "dependencies": [
+        "PT-19"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:ba82b3a7daa64cefbcf3b154b801d5f1f0d836012424427b16cb987f51df7087",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:547818609c4b56992a4d47b01f89a3315c03b18dae4518afacabbc1c9eaac007",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Four Lean source modules; ordinary probability proof; independent controls; fresh consolidation normal/-O replay 162 controls and125 rows",
+        "fresh_consolidation_replay": [
+          "replay/rational-joint-kernel/REPLAY_RECEIPT.json"
+        ],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "No physical randomness/calibration generator",
+        "Equal marginal seeds do not imply adaptive law",
+        "Arbitrary real rows need not have finite uniform realization",
+        "External policies/menus/costs not automatically internal"
+      ],
+      "ancestry": "Finite rational inverse-CDF/fibre realization transported through actual source; D1 projection corrected before freeze.",
+      "replay_cluster_ids": [
+        "T-rational",
+        "O-rational"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "related_claims": [
+        "PT-21"
+      ],
+      "supersessions": []
+    },
+    {
+      "id": "PT-21",
+      "title": "Finite fixed-kernel sure and almost-sure exact inquiry",
+      "exact_statement": "Sure finite termination on every supported path is equivalent to the least support attractor. Almost-sure zero-error termination from every live initial state under arbitrary history-dependent randomized policies is equivalent to survival in the greatest region whose safe-action actual-state/support graph has a goal path from every constituent pair. Uniform safe-action support memory wins and has finite mean stopping time.",
+      "hypotheses": [
+        "Finite hidden states/actions/observations and immutable answer label",
+        "Fixed time-homogeneous Markov joint kernel; exact zero/positive distinction",
+        "Robust legal menus over live support; always-permitted homogeneous terminal declaration",
+        "Observation-history policy; random seed does not encode hidden state"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:74cfd9e72626de5513eab66ef1acfa910381bc5341411db337a354b7e125c32c",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Reviewed ordinary mathematics and exact finite controls, no Lean claim",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Positive-determinism restriction removed for this narrower exact-stopping objective",
+        "Review clarified reporting permission and nonclone non-PD fixture before accepted snapshot"
+      ],
+      "residuals": [
+        "No general parity controller result or cost optimization",
+        "No uniform numerical bound across arbitrary kernels",
+        "Posterior consistency/value-one supremum does not imply finite exact winner"
+      ],
+      "ancestry": "Qualitative POMDP allowed-action/product-chain mechanism, specifically Chatterjee et al. 1411.3880 \u00a74.2; explicit inquiry transport.",
+      "replay_cluster_ids": [
+        "O-stochastic"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Positive-determinism restriction removed for this narrower exact-stopping objective",
+        "Review clarified reporting permission and nonclone non-PD fixture before accepted snapshot"
+      ]
+    },
+    {
+      "id": "PT-22",
+      "title": "Posterior versus predictive-history transport link",
+      "exact_statement": "A quotient used for inquiry must preserve the joint target/response/update law and allowed action structure required by the stopping objective. Equal posterior ratios alone can hide unequal predictive normalizers, survival or stopping laws; the fixed-kernel theorem cannot be transported on that weaker evidence.",
+      "hypotheses": [
+        "The exact external sidecar/history law and permissions supplied",
+        "Predictive and posterior claims distinguished",
+        "Cross-track detailed contract and proof ownership retained"
+      ],
+      "dependencies": [
+        "PT-19",
+        "PT-20",
+        "PT-21"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:ba82b3a7daa64cefbcf3b154b801d5f1f0d836012424427b16cb987f51df7087",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Evidence/transport agent owns full quotient, credal fixed-model and minimal-sidecar proofs; this is a connection claim, not independent reproof"
+      ],
+      "ancestry": "Connects stochastic source realization with evidence track; no new probability theorem.",
+      "replay_cluster_ids": [],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-23",
+      "title": "Original ordinary universal P02 compiler and hierarchy",
+      "exact_statement": "Original P02-L1 ordinary proofs establish fixed-program PR expressive completeness, all-input codec/compiler correspondence for sigma2/pi3/shift and rational atomic-defect threshold completeness. For fixed rational0<q<1: D<q \u03a32-complete; D\u2265q \u03a02-complete; D\u2264q and D=q \u03a03-complete; D>q \u03a33-complete, with stated endpoint table.",
+      "hypotheses": [
+        "Declared total PR prefix-observer numeric index convention driven by fair Cantor input",
+        "Invalid-code zero semantics; resource exhaustion not invalidity",
+        "Snapshot LOOP semantics and exact sorted fresh-register allocation",
+        "Fixed PR matrices and uniform PR code transformations, not PR universal evaluator"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:f99ceb4ff133716af662319513da5f3c385c9dfad6dab66d632d610603205ceb",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:cb9a698d4e0e9e0162aec3709bfdfdaebaf19a9bc19b9350f386e6d11709926d",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Original ordinary universal proof; not first established by later finite audit or Lean refinement",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "No uniform PR universal evaluator",
+        "No transfer to arbitrary measurable observers/noncomputable inputs/partial program indexing",
+        "Original historical abstract numbering distinct from explicit P02-L1"
+      ],
+      "ancestry": "Original packet ownership preserved, including selector partition/fresh tail/affine mass argument.",
+      "replay_cluster_ids": [
+        "O-p02"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-24",
+      "title": "Rational threshold kernel upper formulas",
+      "exact_statement": "The actual evaluateIndex defect has kernel-checked rational upper-cut normal forms with uniform computable code/threshold matrices, preserving strict positive rational gap and denominator/endpoint qualifications.",
+      "hypotheses": [
+        "Natural numerator/denominator coding and stated valid range",
+        "Actual numerical evaluator and atom-mass normal forms",
+        "Strict gap chosen before universal horizons"
+      ],
+      "dependencies": [
+        "PT-23"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:047b41a807cb309d3bbc5e510c381d1da8b0230f83907ce33a4e72d599e70fb7",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean rational threshold extension; recorded selected module/axiom review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Kernel verification gap narrowed; original ordinary threshold proof unchanged"
+      ],
+      "residuals": [
+        "No claim that generic hierarchy-library instances all exist",
+        "No new ordinary classification discovery"
+      ],
+      "ancestry": "Formal refinement of original ordinary hierarchy.",
+      "replay_cluster_ids": [
+        "C-threshold"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Kernel verification gap narrowed; original ordinary threshold proof unchanged"
+      ]
+    },
+    {
+      "id": "PT-25",
+      "title": "Alternative unary rational-shift realization",
+      "exact_statement": "For a fixed jointly primitive-recursive family, a unary-tag numerical observer realization has the prescribed rational shift law and affine atomic-defect formula; it supports the stated Pi3 and Sigma2 reductions including real-threshold Sigma2 form.",
+      "hypotheses": [
+        "Fixed PR family with specialization",
+        "Valid rational parameters and independent fair input",
+        "Alternative unary selector representation explicitly declared"
+      ],
+      "dependencies": [
+        "PT-23",
+        "PT-24"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:a8984de8b31576e399fc05e4b15583496d9b52291aa132b0ece2ef59b0d11066",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:8f22f468e7438d53917abe8424e4f51bfc6c961048364fb71012514f9f1ad0fb",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Lean five-module realization plus additive Sigma2 review; recorded evidence",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Not literal Python selector or uniform compiler-syntax transformation theorem"
+      ],
+      "ancestry": "Alternative checked construction, later literal refinement adds distinct fidelity.",
+      "replay_cluster_ids": [
+        "C-unary"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-26",
+      "title": "Bounded literal compiler audit",
+      "exact_statement": "Retained finite execution/audit results corroborate literal compiler allocation, execution and threshold fixtures on their stated finite inputs; they do not independently prove universal correspondence or supersede the original ordinary proof.",
+      "hypotheses": [
+        "Exact source pin and finite listed test inputs",
+        "Resource outcomes distinguished from semantic failures"
+      ],
+      "dependencies": [
+        "PT-23"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:d6478fc76961ecf738176c3346dd0563d10bd33d262e9eca1448d84c8d402054",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:ada21a7baf56b7cb8d7802d6e7a147709c4adcbc9860c40038a592a0360b0ec0",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Finite audit ancestry described and scoped by directly read later ordinary review; no expanded fresh audit",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Detailed original finite-audit owner may be consulted separately; this record makes no exact census claim"
+      ],
+      "ancestry": "Finite evidence layer before detailed universal refinement.",
+      "replay_cluster_ids": [
+        "O-literal"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-27",
+      "title": "Detailed literal ordinary refinement",
+      "exact_statement": "For every accepted finite arity-two source program and valid rational parameters, literal execution uses the sorted fresh register support from12, preserves the copied first stopping word, uses the exact sentinel-coded fresh tail after above resolution, and copies every unresolved prefix; the detailed Set-event trace invariant is ordinary universal mathematics.",
+      "hypotheses": [
+        "Finite AST and valid source domain b>0,a\u2264b",
+        "Snapshot LOOP counter semantics; explicit Set events exclude implicit counter updates",
+        "Original Python code pin dd79f63f..."
+      ],
+      "dependencies": [
+        "PT-23"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:d6478fc76961ecf738176c3346dd0563d10bd33d262e9eca1448d84c8d402054",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:ada21a7baf56b7cb8d7802d6e7a147709c4adcbc9860c40038a592a0360b0ec0",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Refines literal Set trace and state accounting; no first universal-proof credit"
+      ],
+      "residuals": [
+        "Host recursion/metering limitations not total mathematical evaluator failures",
+        "Set trace not yet kernel formalized"
+      ],
+      "ancestry": "Original P02 ordinary universal proof with more detailed literal invariant.",
+      "replay_cluster_ids": [
+        "O-literal"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Refines literal Set trace and state accounting; no first universal-proof credit"
+      ]
+    },
+    {
+      "id": "PT-28",
+      "title": "Literal lowered-AST kernel execution",
+      "exact_statement": "For every finite typed observer body, designated output register and natural parameters, the actual lowered literal AST has the proved finite-prefix and pointwise copied-prefix/fresh-tail behavior, including unresolved paths. The valid-rational hypotheses enter the source association/probability consequences as specified.",
+      "hypotheses": [
+        "Typed Stmt AST; actual source allocation idxOf/sorted support from12",
+        "Variadic source Seq lowered through inherited sequenceList",
+        "Finite-horizon statements and valid b>0,a\u2264b source association distinguished"
+      ],
+      "dependencies": [
+        "PT-27"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:f157d6bd83efacf084cf361b1344e2f2a30af80e3a7aa063f030054228473c79",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:869232a81e4d3b529bb73ddaeffb2b482580c70614ea610f6a9e09367c121f92",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:5ede11e0a87ec8ce8583b839f1780ed044988612fa243a3c0f739642ac7ae4d6",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Seven substantive Lean modules66 theorems plus controls; recorded independent trust-zero review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Literal execution previously ordinary/bounded-only now kernel-refined"
+      ],
+      "residuals": [
+        "No original byte/numeric serialization identity",
+        "No host Python semantic theorem",
+        "No kernel Set-event trace or uniform numeric compiler transformer"
+      ],
+      "ancestry": "Formal refinement of existing original ordinary proof.",
+      "replay_cluster_ids": [
+        "C-literal"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Literal execution previously ordinary/bounded-only now kernel-refined"
+      ]
+    },
+    {
+      "id": "PT-29",
+      "title": "Literal probability law and atomic defect",
+      "exact_statement": "For the actual source-lowered compileShift AST, compileShift_probability_law proves the countable actual first-stopping-leaf prefix-retaining pushforward law. Under0<b and a\u2264b, D(compiled)=a/b+(1-a/b)D(base), D=1\u2212real atomic mass. Selector weights and unresolved nullity are internal conclusions, not assumptions.",
+      "hypotheses": [
+        "Finite typed body and arbitrary designated output register",
+        "0<b for probability-law theorem;0<b,a\u2264b for stated affine endpoint formula",
+        "Fair Cantor input; existing atomic defect definition",
+        "No assumption of base atomicity/diffuseness, weights, law or boundary nullity"
+      ],
+      "dependencies": [
+        "PT-28",
+        "PT-23"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:167806996726118000a849e4b1e364a8240b3dd9c9e9aa5667ab08953b0da968",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:d22e57affccc63593ff7818ca75be17a9dbfa634cfeff02370c5b123c8fddc59",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:6c3871122e77c5ea3a305761547ee89b0bbb80d34b77e97bcb53134134858482",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:e2b8b5116329166fd1529183910543a10fbb1915ddd7d7a8d44fbda7fe59cb99",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Five new Lean modules64 theorems; independent fresh review; consolidation90/90 binding currentness check only",
+        "fresh_consolidation_replay": [
+          "replay/LITERAL_CURRENTNESS.json (hash integrity only)"
+        ],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Earlier literal-kernel probability bridge pending is superseded by actual internal measure proof"
+      ],
+      "residuals": [
+        "Atomic defect is not total-variation distance",
+        "Zero shift need not preserve full law because stopping prefix retained",
+        "Remaining Python/serialization/uniform compiler bridges unchanged"
+      ],
+      "ancestry": "Original ordinary selector/mixture proof; prior kernel measure principles; additive literal measure refinement.",
+      "replay_cluster_ids": [
+        "C-literal-measure"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Earlier literal-kernel probability bridge pending is superseded by actual internal measure proof"
+      ]
+    },
+    {
+      "id": "PT-30",
+      "title": "Productive calibrated identification and sampling limits",
+      "exact_statement": "In the stipulated independent two-root productive incidence model with survival1/2 and1/3, valuations of q=(1/2)^a(2/3)^b(5/6)^c identify incidence counts; issued guard profiles and joint absence inversion recover the corresponding histograms. Finite full-support sampling gives no zero-error identification; bounded counts supply explicit finite separation margins.",
+      "hypotheses": [
+        "Independent calibrated incidences, fixed guards and permitted unchanged probes",
+        "Joint absence laws for bundling; exact laws for algebraic identification",
+        "Bounded-count promise for uniform finite confidence guarantee"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:fd3b0e39b008c4cd0843f7c6c6075470279f0636ee0603f253ead10622d3229d",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [],
+      "residuals": [
+        "Unknown calibration/shared gates/absorption outside claim",
+        "No arbitrary finite uniform reliability with unbounded counts",
+        "No physical/causal/metaphysical certification"
+      ],
+      "ancestry": "Project conditional ground-identification transport; not withdrawn by resource reprioritization.",
+      "replay_cluster_ids": [
+        "O-identification"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": []
+    },
+    {
+      "id": "PT-31",
+      "title": "General valuation rank and one-calibration CRT",
+      "exact_statement": "For fixed rational positive root-failure factors, the valuation matrix identifies all unrestricted finite integer root-signature counts iff it has full column rank. A rank defect gives distinct nonnegative integer histograms with identical laws. A later private-prime CRT construction gives one rational calibration identifying every nonempty subset count for each finite root signature.",
+      "hypotheses": [
+        "Exact rational calibration laws and integer multiplicities",
+        "Distinct private primes and unbounded exact arithmetic allowed",
+        "All required issued guard/joint-observation profiles remain part of expanded identification"
+      ],
+      "dependencies": [
+        "PT-30"
+      ],
+      "source_bindings": [
+        {
+          "source_id": "sha256:2916675e350ada87fa6c9ee99d737e1b198fcc49d9fbaef6e25fdc9ffffbdd26",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:747143daebc079eadaa62547ead82e855777b1aaad2ae9e5a3f486984fbd73e1",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:8369681f7be7db1306f8ffb96f210e2c31245ee3bd40f94b11d6a19ab5eb1df7",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "written proof with retained independent review",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Single CRT calibration improves earlier multiple-calibration sufficient construction without refuting it"
+      ],
+      "residuals": [
+        "One calibration is not one information bit",
+        "No numerical stability/physical calibration guarantee",
+        "Symbolic factorization oracle stronger than sampling oracle"
+      ],
+      "ancestry": "Valuation linear algebra, Boolean inversion and elementary CRT; conditional project identifiability.",
+      "replay_cluster_ids": [
+        "O-identification"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Single CRT calibration improves earlier multiple-calibration sufficient construction without refuting it"
+      ]
+    },
+    {
+      "id": "PT-32",
+      "title": "Finite skyline geometric-score test",
+      "exact_statement": "Under the known calibrated n versus n+1 retained-noiseless-endpoint model with independent fresh resets, score J=(K\u2212mU)^2\u2212K has mean gap~H_n\u00b2/m\u00b2 and both variances~2H_n\u00b2. Exact finite-grid testing achieves fixed-confidence independent-vector \u0398\u03b5(n\u2074/log\u00b2n), expected endpoint queriesO\u03b5(n\u2074), worst-case queriesO\u03b5(n\u2075/logn), for sufficiently large n.",
+      "hypotheses": [
+        "n\u22652 known pair, m=n+1; specified independent route laws",
+        "Noiseless rational endpoint oracle on unchanged retained vector",
+        "Independent vector resets; fixed error \u03b5<1/2; exact rational centering and integer-root grid sizing",
+        "Eventual asymptotic guarantee with no effective n0"
+      ],
+      "dependencies": [],
+      "source_bindings": [
+        {
+          "source_id": "sha256:d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:1dc64801da9ee70b289bcc66610832e3eb7a5c353a393e55305730b3cd48052f",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:52a9c53ca5d1765de2956e685701532529efca9a0292165f8f9e738b43b7a870",
+          "role": "controlling proof or report"
+        },
+        {
+          "source_id": "sha256:3527ce6bd1c625dfb10c9b425997a015549c911cd24d9afe62fffb6b0ba5db90",
+          "role": "controlling proof or report"
+        }
+      ],
+      "evidence": {
+        "written_mathematics": true,
+        "formal_status": "Digest-bound PASS written independent review and exact finite controls; no Lean",
+        "fresh_consolidation_replay": [],
+        "repository_adoption": "not inferred; controlled separately by baseline/projection register"
+      },
+      "supersession_relations": [
+        "Author pending label superseded by later PASS on identical result hash; sharp predecessor later PASS likewise"
+      ],
+      "residuals": [
+        "No certified all-n switching threshold to older count method",
+        "No query optimality/noise tolerance/unknown-pair minimax/physical realization",
+        "Expected and worst query bounds distinct from independent-vector order"
+      ],
+      "ancestry": "Sharp skyline likelihood and started-vector lower bound; genuine conditional improvement retained.",
+      "replay_cluster_ids": [
+        "O-skyline"
+      ],
+      "replay_instruction": "Read the bound source statement and matching final review first; verify hashes. Use only the named isolated cluster/entrypoint and affected dependency closure; no whole-corpus rebuild.",
+      "supersessions": [
+        "Author pending label superseded by later PASS on identical result hash; sharp predecessor later PASS likewise"
+      ]
+    }
+  ]
+}

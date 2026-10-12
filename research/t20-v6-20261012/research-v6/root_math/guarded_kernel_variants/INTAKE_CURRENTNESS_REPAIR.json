@@ -1,0 +1,158 @@
+{
+  "utc": "2026-10-12T15:31:20.055035+00:00",
+  "before_sha256": "1f42ee8c23fe2d0d7609e230f9b13f41a55c953927e50f66ded85ad7de36a898",
+  "historical_snapshot": "t20-v6-20261011/root_math/guarded_kernel_variants/historical_ledger_snapshots/1f42ee8c23fe2d0d7609e230f9b13f41a55c953927e50f66ded85ad7de36a898.json",
+  "after_sha256": "987541be3383145c92a7d7c569af7e676901f42ec4f8eb2a13f0ea5b21f0419d",
+  "source_report_sha256": "9c64cf1d99d22c0653c6f6c9ca2e042af295108d3ec34b5db61bbb7ea263612d",
+  "changed_records": [
+    {
+      "index": 0,
+      "sha256": "085afba3f65a33d1ae7ea555dcfefefe93ad148f376e25259c953f58851ade31"
+    },
+    {
+      "index": 1,
+      "sha256": "0a6faff768aa8aaa09dbddb48a155c7135d06b0762e522c7835d19d8c798d8b2"
+    },
+    {
+      "index": 2,
+      "sha256": "0beb06d67a2f88a0e128e70e4f39e9f6a7bbc32d34092be4cf8942684ba6ab6d"
+    },
+    {
+      "index": 3,
+      "sha256": "0c2cae60093a7716a30b28cad85faeca8ae7f989ed2652417dc4970e6fd6b9a2"
+    },
+    {
+      "index": 4,
+      "sha256": "0f4b238e057dbd4c207f694d6fa28be8b0c21a3ffa59868f83c4577e1cde8afe"
+    },
+    {
+      "index": 5,
+      "sha256": "11ad4e7c929b8ecdaa59f3323ac96ba31f37770ee3cea39428d9b3e2b8f44b9e"
+    },
+    {
+      "index": 6,
+      "sha256": "236fbfbb70138b340ffb200a4a173bf5171d435b77318f2b6421161bbacc71da"
+    },
+    {
+      "index": 7,
+      "sha256": "36f56f1081f88af997e80183ff1dfdb83860ca46e9ba29bd2d365e97d42da0c4"
+    },
+    {
+      "index": 8,
+      "sha256": "371a7189be8c5071f79f2ee24bbcfb26c930b46ba11333ee14feca1abf1039a0"
+    },
+    {
+      "index": 9,
+      "sha256": "3cb16a5ba7f9daa392f407ae5496c0d8dfce9f59f4f2020b2c9a986d6413f96e"
+    },
+    {
+      "index": 10,
+      "sha256": "3d40b7a0afb3f604000a584f8c5a52bf77a42e3e71c15a41aa56776bf5f50413"
+    },
+    {
+      "index": 11,
+      "sha256": "4204ba26af1c7ce0a48ad954843ffad0080c01c1be616250150c6055474bc839"
+    },
+    {
+      "index": 12,
+      "sha256": "480520d76d4bef1f080bd4ef925e13840ab81efa4a6ead7cae533eb67166ec11"
+    },
+    {
+      "index": 13,
+      "sha256": "484f329192693d50c6ea433f22ee957c344eff7c090f187a58cccedb6c6e16cb"
+    },
+    {
+      "index": 14,
+      "sha256": "4dd5b72463b91ebac86d1a97bc948d34946d80e7024ec7690d97a86d8d725171"
+    },
+    {
+      "index": 15,
+      "sha256": "50a751c692ba04ca43574cf2c347f493531edb32b7fa2ac7d93aa6173b91b525"
+    },
+    {
+      "index": 16,
+      "sha256": "548ad3c06ceb8015f68cefe1520e091e16970c3dec92ab70f694298424da902c"
+    },
+    {
+      "index": 17,
+      "sha256": "5b1d9368b6f9f3ef1924c863cab489aa87777ceb4574a2cf5f0c544b3caa538c"
+    },
+    {
+      "index": 18,
+      "sha256": "5cd7d3280d2c6f1399984d8cdb766bf8f27ea43113a4b2949d59e7e6887b476a"
+    },
+    {
+      "index": 19,
+      "sha256": "5ed9d08a7fa04bc6fa6c1f66aaea0e2e4d3e6f93b3234fb948cd50bd01c090ec"
+    },
+    {
+      "index": 20,
+      "sha256": "6a01e2ec8aa47e830c681d2ae508b7915a33f91889ce5c0211b93517b31ee78e"
+    },
+    {
+      "index": 21,
+      "sha256": "72e056296a829719fada2820ca3b992ebe6a65a6c61698b16a50b38c2c2af6ef"
+    },
+    {
+      "index": 22,
+      "sha256": "7514451ff7cf9638e7182ff53cb4ac2ca7efe1e06ba24fe6ce5b2bd7938683ee"
+    },
+    {
+      "index": 23,
+      "sha256": "830910ae91e28a8fd821c84335d02e005518cbaa67b691a5f60415d7a7a8e533"
+    },
+    {
+      "index": 24,
+      "sha256": "8a0e0b69ae4873272658ccb2c8bfefd0bd67ab76f570959b97322cd2b39af1c7"
+    },
+    {
+      "index": 25,
+      "sha256": "8dc5cf228bd719d80d7ef0346a19d5391b62bf1a003eef75f568a780d6567f99"
+    },
+    {
+      "index": 26,
+      "sha256": "8f7e1c4cc69a6354edb4d8e55f90aece93a22adf9c7ee733e685390f32c91a8c"
+    },
+    {
+      "index": 27,
+      "sha256": "a1c03176751c4a3fd226c4c65ad69948a7d518d08d4fecacbba21ba4e3fcf5f7"
+    },
+    {
+      "index": 28,
+      "sha256": "a955b3b3e1348c241242ae4b0c61e69f17899d1bb6b7a0994c82a51a1958f1fb"
+    },
+    {
+      "index": 29,
+      "sha256": "c242ce92c218768c8bfaee5ef6a5a10ace2324e9c360bded345cda8b2c359555"
+    },
+    {
+      "index": 30,
+      "sha256": "c4d99543f7f6bfce9522607ff3912371da2cb9ede9907e47c2be6967c2055aa7"
+    },
+    {
+      "index": 31,
+      "sha256": "c5df2d89314f78e45c7d4a2906ce081d38c58524f1d577dcb1fee049bd39313b"
+    },
+    {
+      "index": 32,
+      "sha256": "ceee2197af745de961a049d11922ff1dabd0202844026132ac47cbeedd7661c5"
+    },
+    {
+      "index": 33,
+      "sha256": "d5d7fe1449f82f4cf62504b543cdd1068a9fcde9e70603644c15f2945af43ca0"
+    },
+    {
+      "index": 34,
+      "sha256": "f2b285d7ee5485a0dc07c033bda21a07c944b50571c2618fec3a0c13938e79b9"
+    },
+    {
+      "index": 35,
+      "sha256": "f9dd1ffaf94b2d4b6519a59f892c1700c57a59a7df0d3d8d860307a7dec8c3e5"
+    },
+    {
+      "index": 36,
+      "sha256": "fb58b86bed02924b0a2234afcae9cda6225f0d595db7ddc441b94f76c3e7ef73"
+    }
+  ],
+  "meaning": "Inherited admission-scan fields moved under explicitly historical intake object. Completed direct source reading already recorded by status/scope and substantive report now controls. No new reading or replay credit; source bodies unchanged."
+}

@@ -1,0 +1,47 @@
+import ModalKnowledge
+import CreativeKnowledge
+set_option pp.universes true
+set_option pp.explicit true
+#print Orthemology.Tranche6.ModalKnowledge.Knows
+#print Orthemology.Tranche6.ModalKnowledge.ActualGiverPriority
+#print Orthemology.Tranche6.ModalKnowledge.StandingKnowledge
+#print Orthemology.Tranche6.ModalKnowledge.PossibleCognitiveGiving
+#print Orthemology.Tranche6.ModalKnowledge.StableResponseLaw
+#check @Orthemology.Tranche6.ModalKnowledge.actual_giver_priority
+#print axioms Orthemology.Tranche6.ModalKnowledge.actual_giver_priority
+#check @Orthemology.Tranche6.ModalKnowledge.cognitive_factivity
+#print axioms Orthemology.Tranche6.ModalKnowledge.cognitive_factivity
+#check @Orthemology.Tranche6.ModalKnowledge.recipient_and_source_actually_know
+#print axioms Orthemology.Tranche6.ModalKnowledge.recipient_and_source_actually_know
+#check @Orthemology.Tranche6.ModalKnowledge.source_not_standing
+#print axioms Orthemology.Tranche6.ModalKnowledge.source_not_standing
+#check @Orthemology.Tranche6.ModalKnowledge.possible_giving_at_every_world
+#print axioms Orthemology.Tranche6.ModalKnowledge.possible_giving_at_every_world
+#check @Orthemology.Tranche6.ModalKnowledge.stable_response_law
+#print axioms Orthemology.Tranche6.ModalKnowledge.stable_response_law
+#check @Orthemology.Tranche6.ModalKnowledge.source_still_productive_at_c
+#print axioms Orthemology.Tranche6.ModalKnowledge.source_still_productive_at_c
+#check @Orthemology.Tranche6.ModalKnowledge.knowledge_not_recipient_thought_ownership
+#print axioms Orthemology.Tranche6.ModalKnowledge.knowledge_not_recipient_thought_ownership
+#check @Orthemology.Tranche6.ModalKnowledge.exact_sources_with_giver_priority_without_standing
+#print axioms Orthemology.Tranche6.ModalKnowledge.exact_sources_with_giver_priority_without_standing
+#check @Orthemology.Tranche6.ModalKnowledge.actual_knowledge_of_giver_priority
+#print axioms Orthemology.Tranche6.ModalKnowledge.actual_knowledge_of_giver_priority
+#check @Orthemology.Tranche6.ModalKnowledge.standing_of_everywhere_cognitive_giving
+#print axioms Orthemology.Tranche6.ModalKnowledge.standing_of_everywhere_cognitive_giving
+#check @Orthemology.Tranche6.ModalKnowledge.standing_of_intrinsic_determination
+#print axioms Orthemology.Tranche6.ModalKnowledge.standing_of_intrinsic_determination
+#check @Orthemology.Tranche6.CreativeKnowledge.effect_knowledge_of_known_complete_act
+#print axioms Orthemology.Tranche6.CreativeKnowledge.effect_knowledge_of_known_complete_act
+#check @Orthemology.Tranche6.CreativeKnowledge.effect_determined_by_complete_state
+#print axioms Orthemology.Tranche6.CreativeKnowledge.effect_determined_by_complete_state
+#check @Orthemology.Tranche6.CreativeKnowledge.complete_act_determines_effect
+#print axioms Orthemology.Tranche6.CreativeKnowledge.complete_act_determines_effect
+#check @Orthemology.Tranche6.CreativeKnowledge.generic_nature_does_not_determine_actual_effect
+#print axioms Orthemology.Tranche6.CreativeKnowledge.generic_nature_does_not_determine_actual_effect
+#check @Orthemology.Tranche6.CreativeKnowledge.same_nature_different_acts_and_effects
+#print axioms Orthemology.Tranche6.CreativeKnowledge.same_nature_different_acts_and_effects
+#check @Orthemology.Tranche6.CreativeKnowledge.determined_factive
+#print axioms Orthemology.Tranche6.CreativeKnowledge.determined_factive
+#check @Orthemology.Tranche6.CreativeKnowledge.determined_closed
+#print axioms Orthemology.Tranche6.CreativeKnowledge.determined_closed

@@ -1,0 +1,161 @@
+\section{A contract for the organisation and its continuation}
+\label{sec:contract}
+
+\subsection{The inherited realisation account}
+
+Fix an abstract operational contract
+\begin{equation}
+K=(Q,I,O,\Delta,\Lambda),\qquad
+\Delta:Q\times I\to Q,\quad \Lambda:Q\to O.
+\label{eq:kernel}
+\end{equation}
+Here \(Q\) contains consequential task state, \(I\) the admitted inputs and \(O\) the outputs. The input letter \(I\) replaces LM3's \(A\) only to keep it distinct from the admissibility coordinate. Relevant pending inputs, externally visible effects and timing must be represented in the state or constrained by the surrounding interface contract. An unmodelled obligation is not preserved merely because \(Q\) is called the kernel.
+
+A realisation \(r\) has physical or stipulated model state \(X_r\), a certified operating domain \(D_r\), transition \(\Phi_r\), abstraction \(\rho_r:D_r\to Q\), and actual operative readout \(\lambda_r\). Exact realisation requires
+\begin{align}
+\rho_r(\Phi_r(x,i))&=\Delta(\rho_r(x),i),\label{eq:realise}\\
+\lambda_r(x)&=\Lambda(\rho_r(x)).\label{eq:readout}
+\end{align}
+These equations hold on the admitted domain and input class, not merely on one favourable trace. Domain preservation is required wherever another step follows. A proof's abstraction map need not be a physically available observation; operational claims must separately specify the readout and its cost.
+
+A transition to another realisation \(s\) must preserve the current consequential state:
+\begin{equation}
+\rho_s(\mu_{rs}(x))=\rho_r(x).
+\label{eq:migrate}
+\end{equation}
+The maps in \eqref{eq:realise}--\eqref{eq:migrate} are not a way to create hardware by notation. They are obligations on already specified candidate implementations and interfaces. Their relation to refinement mappings is inherited from LM3, and the distinction between step preservation and safety/liveness requirements has established formal-methods ancestry \cite[\S\S6,14]{LM3}\cite{AL}.
+
+\begin{theorem}[Finite contract-preserving continuation]
+\label{thm:continuation}
+Suppose each execution step satisfies \eqref{eq:realise}, each designated readout satisfies \eqref{eq:readout}, and each migration satisfies \eqref{eq:migrate}. Suppose all intermediate states remain in their certified domains and the admitted input order and externally visible effects agree with the abstract contract. Then every finite interleaving of these executions and migrations has the abstract state and output trace of \(K\), treating migrations as stuttering steps.
+\end{theorem}
+\begin{proof}
+Induct over the physical sequence. Execution gives the required next abstract state by \eqref{eq:realise}; migration leaves it unchanged by \eqref{eq:migrate}. Domain preservation licenses the next equality. Equation~\eqref{eq:readout} identifies the actual readout with the abstract output. The separate order and effect premises exclude lost inputs, replayed effects or reordering not visible in an incomplete state description.
+\end{proof}
+\src{Restatement of LM3, Theorem 14.1. This is a finite behavioural-continuation theorem, not an endogeneity, capability-retention, uninterrupted-availability or personal-identity theorem.}
+
+\subsection{Non-vacuity and the relevant state}
+
+A contract with two named states can still be vacuous if no admitted continuation distinguishes them. A stateful witness should include two admitted histories and a common future input sequence requiring different output traces. LM3 imposes this operational consequence condition rather than using state-count alone \cite[\S6.7]{LM3}.
+
+Consider its four-state delay machine:
+\begin{equation}
+Q=\{0,1\}^2,\qquad
+\Delta((b,c),i)=(c,i),\qquad \Lambda(b,c)=b.
+\label{eq:delay}
+\end{equation}
+The current display is \(b\), but the next display depends on \(c\). A perfect transfer of the current display cannot initialise a correct successor for both \((0,0)\) and \((0,1)\). Those states produce the same export and require different next outputs. The target processor may have enough storage and may implement \(K\) correctly; it still lacks the information required to continue this execution.
+
+\begin{proposition}[Export collision]
+\label{prop:export}
+Let \(e:D_r\to Z\) be the complete source-dependent information available to a deterministic successor initialiser. If \(e(x)=e(x')\) while the required continuation traces differ under some common admitted future input, no initialiser depending only on \(e\) can guarantee both continuations.
+\end{proposition}
+\begin{proof}
+Equal exports give the same initialised operative state. The same subsequent inputs give the same deterministic trace. That trace cannot equal two different required traces.
+\end{proof}
+\src{LM3, Proposition 12.2; the proof is standard deterministic indistinguishability reasoning. Any consulted shared memory or source-dependent advice belongs in the complete export.}
+
+This is the first reason the faculty cannot be assessed from a present output score. The state relevant to \emph{future re-realisation} may include information that today's service never exposes. Declaring it irrelevant requires a target-relative argument, not its omission from the current benchmark.
+
+\subsection{A context that keeps obligations separate}
+
+For the companion's assessment, use a declared context
+\begin{equation}
+\Xi=(K,\mathcal H,H_0,\F,\mathcal R,\mathcal D,\mathcal P,\mathcal E).
+\label{eq:context}
+\end{equation}
+\(\mathcal H\) fixes histories and time horizons; \(H_0\) is the support to exclude; \(\F\) is the future request family; \(\mathcal R\) accounts for resources; \(\mathcal D\) specifies disturbances and uncertainty; \(\mathcal P\) specifies applicable authority and permitted termination; and \(\mathcal E\) states evidence semantics and validity conditions. This is a proposed assessment interface combining LM3 with S2/S3, not a newly adopted repository schema.
+
+An augmented state \(x\) must include whatever affects the truth of the continuation claim: operative configuration, consequential task state, available calibration and records, resource levels, relevant environment and authority conditions. This does not mean an assessor knows the complete state. Later sections represent that uncertainty explicitly by a set of compatible states.
+
+The distinction between an adequate state and knowledge of its adequacy is important. A system can actually satisfy \(\Xi\) without an assessor having enough evidence to certify it. A convincing report can also fail to describe the actual system. The operational contract, the world, the assessor's information and the verdict remain separate objects.
+
+\section{Preserving present operation and preserving future capability}
+\label{sec:futuretarget}
+
+\subsection{What is the future task family?}
+
+Let \(\F\) be a specified collection of requests relevant to later realisation. A request may ask for a discrimination, an assessment of a candidate, a continuation decision, or an executable continuation satisfying a contract. An answer and an action need not be the same object. Each request must state what counts as acceptable and which observations, interventions, costs and permissions are available.
+
+The family can be small. It might contain only the decisions needed for one further transition between declared realisation classes. It can also be indexed by a bounded environment class or finite horizon. What is illegitimate is the silent move from ``the successor can fulfil these requests'' to ``the successor retains all future capabilities.'' S2 explicitly separates these quantifiers \cite[\S\S2,6,8]{S2}.
+
+Write \(\Capability_\F(B)\) for an appropriate capability predicate at an evidence state \(B\). At this stage it is a placeholder, not a theorem. Its precise meaning depends on whether the requirement is to answer one request, serve every request separately from the same initial condition, serve a sequence without resets, or continue indefinitely. Section~\ref{sec:iteration} gives one finite sequential meaning. This explicit indexing prevents the term \emph{faculty} from concealing an unlimited promise.
+
+\subsection{A concrete separation: parity survives, calibration does not}
+
+The current service stores a parity bit \(b\), updates it by XOR on admitted inputs and reports it. Suppose a specified migration preserves \(b\) and its current execution contract. The organisation also had a calibrated sensor for a later environmental distinction \(c\), with readout
+\begin{equation}
+y=c\oplus k,
+\label{eq:calibration}
+\end{equation}
+where \(k\in\{0,1\}\) is the sensor polarity. The migration discards \(k\); its only record remains on the excluded original host.
+
+The parity service can continue correctly. Yet \(y=0\) is compatible with \((c,k)=(0,0)\) and \((1,1)\), and the required answer \(c\) differs. A method restricted to the new uncalibrated readout cannot uniformly answer the later question. The present service's successful continuation and failure of the future faculty are simultaneously true.
+
+\begin{proposition}[Present continuation does not imply future discrimination]
+\label{prop:futureloss}
+There exists a finite task-preserving migration whose successor cannot uniformly decide a specified future Boolean request that was decidable before migration.
+\end{proposition}
+\begin{proof}
+Use the parity service and sensor in \eqref{eq:calibration}. Preserve \(b\) and discard \(k\). Before migration, \(c=y\oplus k\). Afterwards the equal-readout pair just displayed has opposite required answers. Proposition~\ref{prop:export}, applied to the future request's record rather than the parity state, yields the impossibility.
+\end{proof}
+\src{S2, \S3, and S3, \S12.1, combine LM3's unknown-polarity and support-exclusion examples with GF1's present/future sufficiency distinction. The new application is not a physical sensor discovery or a new general information theorem.}
+
+The example does not retrospectively invalidate the narrow parity migration. The lost distinction was not part of that contract. It invalidates the \emph{stronger} claim that the specified future discrimination was preserved. Conversely, a contract that includes that future discrimination must not declare success by showing parity outputs alone.
+
+\subsection{Retention and reacquisition are different ways to preserve a faculty}
+
+Keeping \(k\) in an independently available record repairs the example. Reacquiring it can also repair it, but only under an additional interface premise. In the stipulated model a known reference input \(c=0\) gives readout \(k\). If the organisation still has permission and resources to perform that reference observation, it need not preserve the original calibration bit verbatim. If the reference source or actuator was supplied by the removed host, that argument fails.
+
+A capability claim therefore concerns retained \emph{or lawfully reacquirable} information together with executable access. It is too strong to require every useful historical bit to be carried forward, and too weak to count a hypothetical informative experiment as an available one. S2 identifies both errors \cite[\S\S2--3,5--7]{S2}.
+
+This gives the faculty-centred thesis a concrete content. The successor need not preserve all original machinery, but it must preserve a sufficient route to the distinctions and actions needed for the declared next tasks. Such a route can involve different representations and interfaces. What cannot be omitted is the evidence that those replacements have the meanings and resources attributed to them.
+
+\subsection{A positive finite witness, with a strict evidence ceiling}
+
+A small witness can retain the parity bit and polarity while changing representation. Let the first model encode the abstract pair as \((b,k)\), and the second as \((1-b,k)\), with the corresponding inverse abstraction and correctly translated XOR update. Preserve the pair across the declared map. Then the current parity service and the future decision \(c=y\oplus k\) are both available under the same stipulated readout semantics.
+
+This witnesses logical compatibility between stateful continuation, a changed encoding and preservation of a particular future discrimination. The same construction can include a finite table of admitted next-transition decisions. It does not discover that table, establish a new physical substrate, or show that an organisation has acquired a general transductive faculty. The complete account includes the encoder, reader, control conditions and permission. The mathematical positive case matters because the negative case should not be mistaken for a universal impossibility.
+
+\section{Support, endogeneity and the boundary of the organisation}
+\label{sec:support}
+
+\subsection{Replaceability has a quantifier order}
+
+Let \(\mathcal R_K\) be the class of adequate realisations of \(K\), with \(\supp(r)\) recording required supports at a declared level. The statement
+\begin{equation}
+\forall h\ \exists r\in\mathcal R_K:\ h\notin\supp(r)
+\label{eq:eachhost}
+\end{equation}
+does not imply
+\begin{equation}
+\exists r\in\mathcal R_K\ \forall h:\ h\notin\supp(r).
+\label{eq:nohost}
+\end{equation}
+If the support universe includes all physically required support, \eqref{eq:nohost} is not the substrate-mediated thesis at issue. Even \eqref{eq:eachhost} is an existence claim, not a claim that a suitable \(r\) is reachable from the current configuration within its state and resource margins \cite[\S15]{LM3}.
+
+For a concrete finite example, take minimal adequate support sets
+\begin{equation}
+\{a,b\},\quad\{b,c\},\quad\{a,c\}.
+\end{equation}
+Each individual support can be omitted in one configuration; no configuration is support-free. Any single support loss leaves an alternative, while any two losses meet every adequate set. Calling the supports different substrates does not change this arithmetic or establish the ability to move between them.
+
+\subsection{The support of the faculty must be counted too}
+
+A service may cease depending on \(H_0\) while its migration assessor, calibration oracle or transition controller still depends on \(H_0\). That is enough to defeat a faculty-preservation claim even if the service itself operates correctly. The full support account for recursive apoautosis must therefore cover both \(K\) and the declared \(\F\)-capability.
+
+This does not force every technical dependency into one indivisible system. It forces a claim to say which dependencies are being excluded, which remain and which are replaceable under specified conditions. A replaceable energy source, an irreplaceable technical controller and an external permission authority play different roles. The source dialogue explicitly corrected an absolute ``closure of all external support'' reading, and stage three retained permission to operate and permitted termination as independent conditions \cite[07:08:04--07:18:51]{D}\cite[\S12.2]{S3}.
+
+An exclusion claim should be checked cumulatively when earlier supports are meant to stay excluded. Let \(H_j\) be the accumulated exclusion boundary after the \(j\)-th admitted transition. A later successor must not silently reintroduce a dependence on \(H_i\subseteq H_j\) through a decoder, training service or recovery record. If the contract instead permits later reuse, that is a different claim and should be stated as such.
+
+\subsection{Composition is not the union of local certificates}
+
+The available roles must be jointly realisable. A catalogue can show that one configuration provides memory and another supplies computation while no allowed configuration supplies both. Two separately adequate interfaces can overcommit one shared resource. An individually sound calibration can become invalid under the operating conditions created by another component. These are LM3's joint-witness problems, now applied to the faculty as well as the current service \cite[\S12]{LM3}.
+
+The same issue applies epistemically. A proof of a candidate's transition semantics, a measurement of its readout and an authorisation for an earlier configuration do not combine into an admission certificate unless their versions, domains and conditions match. A common file format can preserve provenance without making inconsistent premises simultaneously true.
+
+\subsection{No bootstrap by future entitlement}
+
+The next realisation cannot supply, solely because it is desirable, the prerequisites needed to reach it. If a proposed construction presupposes an interpreter, calibration, controller or resource that becomes available only after successful construction, the existence of the endpoint does not resolve the missing transition. The remedy may be a valid staged construction or an independently supplied resource; it is not a more confident description of the endpoint \cite[\S12.3]{LM3}.
+
+The faculty is thus not a mysterious final controller. It is a pattern of supported capacities whose roles and boundaries have to be accounted for through change. Whether all relevant technical controllers can themselves be re-realised is a specific recursive capability question. Its answer is not obtained by declaring the organisation operationally closed.

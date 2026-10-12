@@ -1,0 +1,8 @@
+import FullControllerCanonicalLaw
+
+#check @Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_canonical_history_law
+#print axioms Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_runtime_canonical_history_law
+#check @Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_decoded_parity
+#print axioms Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_decoded_parity
+#check @Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_output_parity
+#print axioms Orthemology.RuntimeBridge.PhaseUpdate.FullController.full_phase_computed_tolerance_output_parity

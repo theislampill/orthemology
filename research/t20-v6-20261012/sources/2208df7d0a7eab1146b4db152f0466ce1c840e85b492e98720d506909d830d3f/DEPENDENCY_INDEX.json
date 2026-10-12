@@ -1,0 +1,2041 @@
+{
+  "schema": "t20-consolidated-typed-reference-index-v1",
+  "orientation": "claim references another result or owner. Relationship specifies use; the arrow is not an unconditional logical implication. Proof-track source-to-consumer edges were reversed to this common orientation.",
+  "scope": "The entire research-reference graph need not be acyclic: comparisons and currentness links are not proof dependencies. No new master theorem is asserted.",
+  "edge_count": 254,
+  "edges": [
+    {
+      "claim": "FND-002",
+      "references": "FND-001",
+      "relationship": "methodological_constraint",
+      "justification": "Keep objective norm, actual episode, and representation distinct.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-003",
+      "references": "FND-002",
+      "relationship": "semantic_mapping",
+      "justification": "Provides a concrete received-entry interpretation.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-003",
+      "references": "FND-004",
+      "relationship": "source_support",
+      "justification": "Uses already accepted complete-account rationale.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-004",
+      "references": "FND-002",
+      "relationship": "source_support",
+      "justification": "Requires actual received entry.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-005",
+      "references": "FND-004",
+      "relationship": "semantic_mapping",
+      "justification": "Philosophical productive adequacy supports intended Completion, not every arbitrary predicate.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-005",
+      "references": "FND-003",
+      "relationship": "semantic_mapping",
+      "justification": "Material entry uses F at field scope.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-006",
+      "references": "FND-005",
+      "relationship": "source_support",
+      "justification": "Retains actual original witness under intended meanings.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-007",
+      "references": "FND-004",
+      "relationship": "source_support",
+      "justification": "Original provision contributes to cumulative appraisal.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-007",
+      "references": "FND-006",
+      "relationship": "source_support",
+      "justification": "Same bearer necessity retained.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-007",
+      "references": "FND-008",
+      "relationship": "source_support",
+      "justification": "Essential independence retained.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-007",
+      "references": "FND-010",
+      "relationship": "source_support",
+      "justification": "Local nonduplication contributes at its scope.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-007",
+      "references": "FND-011",
+      "relationship": "source_support",
+      "justification": "Pure-perfection eligibility contributes.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-008",
+      "references": "FND-005",
+      "relationship": "source_support",
+      "justification": "Actual witness supports the inherited application.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-008",
+      "references": "FND-010",
+      "relationship": "formal_entailment",
+      "justification": "CND alternative excludes receipt only with PRI and SUP.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-009",
+      "references": "FND-007",
+      "relationship": "methodological_constraint",
+      "justification": "Preserves actual-field appraisal despite stronger open universal claim.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-010",
+      "references": "FND-009",
+      "relationship": "methodological_constraint",
+      "justification": "Do not substitute standing power or local own-end success for entire efficacy.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-012",
+      "references": "FND-010",
+      "relationship": "semantic_mapping",
+      "justification": "At-most-one is only one part of G’s singleton premise.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-012",
+      "references": "FND-004",
+      "relationship": "semantic_mapping",
+      "justification": "Relevant original resource does not alone give individual complete adequacy.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-012",
+      "references": "FND-007",
+      "relationship": "source_support",
+      "justification": "Existing cumulative judgment may explain an application without adding independent warrant.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-013",
+      "references": "FND-011",
+      "relationship": "source_support",
+      "justification": "Comprehensive rather than merely productive knowledge uses purity/eligibility.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-013",
+      "references": "FND-007",
+      "relationship": "source_support",
+      "justification": "Actual-field product coverage has separately warranted scope.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-014",
+      "references": "FND-011",
+      "relationship": "source_support",
+      "justification": "Practical excellence contributes to ascription.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-014",
+      "references": "FND-013",
+      "relationship": "methodological_constraint",
+      "justification": "Knowing effect is not by itself practical basing.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-015",
+      "references": "FND-014",
+      "relationship": "source_support",
+      "justification": "Preserves actual practical agency.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-016",
+      "references": "FND-015",
+      "relationship": "source_support",
+      "justification": "Uses independently specified practical content.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-017",
+      "references": "FND-015",
+      "relationship": "source_support",
+      "justification": "Concrete content-sensitive means/aim relation.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-018",
+      "references": "FND-015",
+      "relationship": "methodological_constraint",
+      "justification": "Do not inflate particular explanation into first-act or globally joint requirement.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-019",
+      "references": "FND-007",
+      "relationship": "source_support",
+      "justification": "Actual source relation is material.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-019",
+      "references": "FND-014",
+      "relationship": "source_support",
+      "justification": "Practical perfection contributes.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-020",
+      "references": "FND-019",
+      "relationship": "source_support",
+      "justification": "Owed relation retained.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-020",
+      "references": "FND-022",
+      "relationship": "source_support",
+      "justification": "Truthful normative disclosure supplies a sufficient route.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-020",
+      "references": "FND-030",
+      "relationship": "semantic_mapping",
+      "justification": "Particular content/attribution must be established.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-021",
+      "references": "FND-019",
+      "relationship": "source_support",
+      "justification": "Practical fidelity belongs to accepted source account.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-021",
+      "references": "FND-020",
+      "relationship": "methodological_constraint",
+      "justification": "Power to undertake own performance is not automatically title to require another’s.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-022",
+      "references": "FND-011",
+      "relationship": "source_support",
+      "justification": "Pure-perfection application retained.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-024",
+      "references": "FND-023",
+      "relationship": "methodological_constraint",
+      "justification": "No compulsory reflective or acquaintance prerequisite.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-025",
+      "references": "FND-023",
+      "relationship": "methodological_constraint",
+      "justification": "Do not infer acquisition history from conduct alone.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-025",
+      "references": "FND-026",
+      "relationship": "source_support",
+      "justification": "Preserves source’s affirmative cumulative appraisal.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-026",
+      "references": "FND-023",
+      "relationship": "methodological_constraint",
+      "justification": "Articulability is not identical to knowing.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-027",
+      "references": "FND-026",
+      "relationship": "methodological_constraint",
+      "justification": "One joint encounter is not independent evidence twice.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-028",
+      "references": "FND-022",
+      "relationship": "methodological_constraint",
+      "justification": "An event is not already a source-owned assertion.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-028",
+      "references": "FND-026",
+      "relationship": "source_support",
+      "justification": "Cumulative contextual evidence may support interpretation.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-028",
+      "references": "FND-029",
+      "relationship": "source_support",
+      "justification": "Request provenance has narrower but positive support.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-029",
+      "references": "FND-028",
+      "relationship": "methodological_constraint",
+      "justification": "Retain positive context while appraising actual criticism.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-030",
+      "references": "FND-022",
+      "relationship": "source_support",
+      "justification": "Reporter veracity is one real premise.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-031",
+      "references": "FND-030",
+      "relationship": "semantic_mapping",
+      "justification": "Correctness and attribution differ.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-031",
+      "references": "FND-021",
+      "relationship": "source_support",
+      "justification": "Continuing undertaking requires actual operative terms.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-032",
+      "references": "FND-028",
+      "relationship": "source_support",
+      "justification": "Preserves affirmative contextual lunar application.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-032",
+      "references": "FND-030",
+      "relationship": "source_support",
+      "justification": "Corroborates two-premise content/reporting bridge.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-032",
+      "references": "FND-017",
+      "relationship": "source_support",
+      "justification": "Corroborates further encounter after prior knowledge.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-032",
+      "references": "FND-029",
+      "relationship": "methodological_constraint",
+      "justification": "Does not answer historical expected-publicity residual.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-033",
+      "references": "FND-005",
+      "relationship": "formal_entailment",
+      "justification": "Original witness route excludes later premises.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-033",
+      "references": "FND-006",
+      "relationship": "source_support",
+      "justification": "Need/modality grounds kept separate.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-033",
+      "references": "FND-008",
+      "relationship": "formal_entailment",
+      "justification": "Constitution route has distinct premises.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-033",
+      "references": "ET-18",
+      "relationship": "semantic_mapping",
+      "justification": "Evidence/transport register owns the shared selective-revalidation application; cross-reference rather than duplicate credit.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-034",
+      "references": "FND-017",
+      "relationship": "semantic_mapping",
+      "justification": "Source modes distinguish more than the current central proposition.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-034",
+      "references": "FND-031",
+      "relationship": "semantic_mapping",
+      "justification": "Commissioned content selects the right recovery target.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "FND-034",
+      "references": "FND-033",
+      "relationship": "methodological_constraint",
+      "justification": "Future revision demands more than present answer.",
+      "owner_file": "foundations/FOUNDATIONAL_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-01",
+      "references": "H-ICS-v5",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-01",
+      "references": "H-Continuation",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-02",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal entailment: fibre criterion",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-01",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal entailment: preservation interface",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-01",
+      "references": "H-Continuation",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-02",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal entailment: fibres",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-02",
+      "references": "GEO-02",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry: parity witness",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-02",
+      "references": "H-Continuation",
+      "relationship": "formal_entailment",
+      "justification": "formal ancestry: invariant observable space",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-03",
+      "references": "MOM-01",
+      "relationship": "methodological_dependency",
+      "justification": "genuine extension",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-03",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal entailment: failure of update congruence",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-04",
+      "references": "MOM-03",
+      "relationship": "formal_entailment",
+      "justification": "formal/methodological dependency: Laplace uniqueness",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-05",
+      "references": "MOM-04",
+      "relationship": "methodological_dependency",
+      "justification": "negative transfer test",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-05",
+      "references": "Krein/Berg–Christensen theory",
+      "relationship": "source_support",
+      "justification": "classical proof premise",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-06",
+      "references": "Friedrich/Schmüdgen",
+      "relationship": "methodological_dependency",
+      "justification": "classical ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-06",
+      "references": "full-polynomial-moment-countermodel-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "same construction: ordinary proof and implementation",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-07",
+      "references": "MOM-03",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency: compact moment injectivity",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-07",
+      "references": "effective-stationary-selection-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "methodological dependency: compact inversion",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-08",
+      "references": "MOM-03",
+      "relationship": "methodological_dependency",
+      "justification": "genuine effective extension",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-09",
+      "references": "MOM-04",
+      "relationship": "semantic_mapping",
+      "justification": "semantic scope: genuine realized path",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-09",
+      "references": "MOM-08",
+      "relationship": "methodological_dependency",
+      "justification": "strict extension for nonnegative controls",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-09",
+      "references": "effective upper-compact singleton extraction",
+      "relationship": "methodological_dependency",
+      "justification": "classical methodological dependency",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-10",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency: fibre obstruction",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-10",
+      "references": "MOM-01",
+      "relationship": "methodological_dependency",
+      "justification": "preserved restricted-family contrast",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-10",
+      "references": "GEO-07",
+      "relationship": "methodological_dependency",
+      "justification": "preserved promised-rank contrast",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-11",
+      "references": "MOM-01",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry: horizon-relative sufficient moments",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-11",
+      "references": "H-Continuation",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-11",
+      "references": "credal fixed-calibration path-law obstruction",
+      "relationship": "methodological_dependency",
+      "justification": "negative-to-positive repair",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-03",
+      "references": "separable Bayes-compatible classification",
+      "relationship": "methodological_dependency",
+      "justification": "generalization preserving narrower theorem",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-03",
+      "references": "scaled Bregman perspective identity",
+      "relationship": "methodological_dependency",
+      "justification": "classical ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-04",
+      "references": "GEO-03",
+      "relationship": "methodological_dependency",
+      "justification": "compatible coherent potential construction",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-04",
+      "references": "Bauschke–Borwein/Chafaï",
+      "relationship": "methodological_dependency",
+      "justification": "classical theorem ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-05",
+      "references": "GEO-04",
+      "relationship": "methodological_dependency",
+      "justification": "strict refinement: contraction is weaker",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-05",
+      "references": "noetic-gradient-transport-20261009",
+      "relationship": "formal_entailment",
+      "justification": "formal ancestry: intrinsic inverse and quotient",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-06",
+      "references": "MOM-02",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency: stabilizing algebra",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-06",
+      "references": "GEO-01",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry: conditional model adequacy",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-07",
+      "references": "complete-flow-finite-rank-20261010",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency: reverse lift",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-07",
+      "references": "MOM-01",
+      "relationship": "methodological_dependency",
+      "justification": "known-support ancestry, different bound",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-08",
+      "references": "GEO-05",
+      "relationship": "methodological_dependency",
+      "justification": "continuous full-law counterpart",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-08",
+      "references": "spherical HK action",
+      "relationship": "methodological_dependency",
+      "justification": "classical ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-09",
+      "references": "GEO-07",
+      "relationship": "methodological_dependency",
+      "justification": "observable-cometric ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-09",
+      "references": "GEO-08",
+      "relationship": "methodological_dependency",
+      "justification": "minimum tangent interpretation",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-09",
+      "references": "classical Gaussian SHK",
+      "relationship": "methodological_dependency",
+      "justification": "classical ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-10",
+      "references": "GEO-08",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency: coisometric quotient",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-10",
+      "references": "GEO-09",
+      "relationship": "formal_entailment",
+      "justification": "formal/methodological dependency: full density tangency",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-11",
+      "references": "GEO-10",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-11",
+      "references": "classical log-Sobolev theory",
+      "relationship": "methodological_dependency",
+      "justification": "classical premise",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-12",
+      "references": "GEO-10",
+      "relationship": "methodological_dependency",
+      "justification": "stricter field-control ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-12",
+      "references": "GEO-11",
+      "relationship": "methodological_dependency",
+      "justification": "conditional decay interface",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-12",
+      "references": "Crucinio–Pathiraja W–FR splitting",
+      "relationship": "methodological_dependency",
+      "justification": "classical/current published method ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-13",
+      "references": "GEO-10",
+      "relationship": "methodological_dependency",
+      "justification": "Gaussian evolution dependency only for entrance",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-13",
+      "references": "classical direct method/disintegration",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-14",
+      "references": "GEO-01",
+      "relationship": "formal_entailment",
+      "justification": "formal ancestry: typed algebra and explicit homomorphism",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-14",
+      "references": "MOM-01",
+      "relationship": "methodological_dependency",
+      "justification": "complementary symmetric state moment input",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-15",
+      "references": "coercive-energy-moment-bridge-20261010",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-15",
+      "references": "general-coercive-energy-drift-20261010",
+      "relationship": "formal_entailment",
+      "justification": "formal dependency",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-15",
+      "references": "GEO-07",
+      "relationship": "methodological_dependency",
+      "justification": "different sufficient realization route",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-16",
+      "references": "joint-atomic-gradient-lift-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "metric ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-16",
+      "references": "historical-source-revision-20261010",
+      "relationship": "semantic_mapping",
+      "justification": "semantic mapping: actual origin audit",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-16",
+      "references": "finite-audit-gradient-classification-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "distinct contract comparison",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-17",
+      "references": "GEO-16",
+      "relationship": "methodological_dependency",
+      "justification": "genuine fixed-action extension",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-17",
+      "references": "GEO-07",
+      "relationship": "methodological_dependency",
+      "justification": "inherited metric",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-18",
+      "references": "gradient-discretization-fidelity-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "inherited first-order method",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-18",
+      "references": "GEO-16",
+      "relationship": "methodological_dependency",
+      "justification": "audit acceptance interface",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-18",
+      "references": "reciprocal Taylor/Padé",
+      "relationship": "methodological_dependency",
+      "justification": "classical method ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-19",
+      "references": "GEO-16",
+      "relationship": "methodological_dependency",
+      "justification": "source/correction distinction",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-19",
+      "references": "MOM-08",
+      "relationship": "methodological_dependency",
+      "justification": "effective continuation input",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-19",
+      "references": "full-law-gradient-action-tail-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "inherited characteristic law",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-20",
+      "references": "GEO-18",
+      "relationship": "methodological_dependency",
+      "justification": "counterboundary to endpoint/regularization inference",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-20",
+      "references": "initial-fisher-length-independent-review-20261011",
+      "relationship": "methodological_dependency",
+      "justification": "reviewer-proposed square-root comparison",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-20",
+      "references": "classical square-root sphere representation",
+      "relationship": "methodological_dependency",
+      "justification": "methodological ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "MOM-12",
+      "references": "MOM-03",
+      "relationship": "formal_entailment",
+      "justification": "Moment-indeterminate pair and Laplace separation",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-12",
+      "references": "MOM-08",
+      "relationship": "formal_entailment",
+      "justification": "Reverse-damped endpoint construction",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "MOM-12",
+      "references": "GEO-06",
+      "relationship": "methodological_dependency",
+      "justification": "Hessian/Fisher leaf formula ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-21",
+      "references": "posterior-inquiry-value-20261010",
+      "relationship": "methodological_dependency",
+      "justification": "Weight-fibre and missing audit-frequency ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "GEO-21",
+      "references": "GEO-16",
+      "relationship": "methodological_dependency",
+      "justification": "Contrasting action contract, not proof ancestry",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-22",
+      "references": "GEO-10",
+      "relationship": "formal_entailment",
+      "justification": "Inherited correlated-target ODE and projected tangent",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-22",
+      "references": "GEO-13",
+      "relationship": "methodological_dependency",
+      "justification": "Distinct endpoint feasibility baseline",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-23",
+      "references": "GEO-15",
+      "relationship": "methodological_dependency",
+      "justification": "Tests exact uniform-continuation boundary",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "GEO-23",
+      "references": "pointwise-coercive-gradient-escape-20261011",
+      "relationship": "genuine_extension",
+      "justification": "Strengthens signed-energy predecessor to nonnegative decreasing loss",
+      "owner_file": "geometry/GEOMETRY_MOMENTS_CLAIMS.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-01",
+      "references": "ET-02",
+      "relationship": "formal_dependency",
+      "justification": "The reset-containing fixed-root result specializes independent named-reset continuation: informative roots are exactly the essential coordinates under the positive model. The stronger activation-only and withdrawal-only claims have their own direct proofs; they do not follow from assuming the larger reset alphabet. The reviewer’s one-step strengthening is also separately proved.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-03",
+      "references": "ET-01",
+      "relationship": "scope_extension",
+      "justification": "The joint-history audit problem extends the predecessor fixed accepted-factor store, whose text already excludes informative selection. The deletion iff follows directly from Bayes and does not use the root-membership minimum as a proof premise.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-04",
+      "references": "ET-03",
+      "relationship": "formal_dependency",
+      "justification": "The proper-score component applies conditional Jensen/Bregman identities to ET-03’s full-history Q and audit-coarsened R. The null-audit perturbation component has its own direct construction and is not deduced from the deletion criterion.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-05",
+      "references": "ET-05A",
+      "relationship": "formal_dependency",
+      "justification": "The historical lift uses B M_a=T_a B and the target/mass readouts supplied by the inherited predictive quotient. Tensoring with historical slots yields the mixed-operation transport; exactness additionally needs the declared spanning ratio tests and fixed version frame.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-05A",
+      "references": "ET-03",
+      "relationship": "concrete_application",
+      "justification": "The source-audit countermodel is realized as an explicit finite instrument and reduced to target/audit joint masses. The generic invariant-span theorem is inherited from H-Continuation, not derived from the source-audit example.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-06",
+      "references": "ET-05A",
+      "relationship": "shared_interface",
+      "justification": "The posterior-only comparison uses the same finite instrument, target and impossible-branch definitions. Its paired cross-product proof is separate from the probability-plus-posterior linear quotient theorem, so no full predictive minimum is imported.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-07",
+      "references": "ET-06",
+      "relationship": "scope_counterexample",
+      "justification": "The ternary fixture satisfies the all-word posterior/status equivalence defined in ET-06 while changing expected query value. It refutes a stronger transport inference; it does not refute posterior-only equivalence.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-08",
+      "references": "ET-02",
+      "relationship": "methodological_ancestry",
+      "justification": "The finite strong joint-kernel refinement is an extension/integration of operation-relative continuation discipline beyond the full Boolean reset domain. Its partition-refinement proof is independent and does not assume independent resets.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "ET-08",
+      "relationship": "formal_dependency",
+      "justification": "Dynamic sidecar minimum uses the coarsest strong contract partition from ET-08. Pigeonhole separation within each retained fibre supplies the lower bound and per-fibre label reuse attains it.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "ET-12",
+      "relationship": "formal_dependency",
+      "justification": "Only the static audit-profile component uses universal full-evidence likelihood factorization: singleton factors force distinct profiles to be distinguished, and matching profiles preserve products/inverses. This is not a premise of the dynamic D2 theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-10",
+      "references": "ET-08",
+      "relationship": "formal_dependency",
+      "justification": "Representative-independent joint outcome/next-block rows from stable refinement define the quotient; finite-history and Bellman induction then transport the declared policies/readouts. Eventual reachability uses increasing union.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-11",
+      "references": "ET-10",
+      "relationship": "quantitative_extension",
+      "justification": "The finite-horizon bound compares the same lawful finite Bellman contract under explicit cost and joint-kernel errors. Its TV recurrence is proved directly; it does not follow merely by perturbing exact preservation or extend it to an infinite horizon.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-12",
+      "references": "ET-05A",
+      "relationship": "methodological_ancestry",
+      "justification": "Both results instantiate inherited fibre/operation sufficiency. Universal likelihood factorization is proved directly with point masses and is not a consequence of a particular computed predictive B quotient.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-13",
+      "references": "ET-11",
+      "relationship": "complementary_assumptions",
+      "justification": "Uniform relative/log likelihood error gives a positive stability result beside the absolute-error rare-event obstruction. The sharp ratio proof is independent; ET-11 is comparative motivation rather than a premise.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-13",
+      "references": "ET-12",
+      "relationship": "shared_interface",
+      "justification": "The distinction between posterior shape and predictive normalizer uses the full-evidence reweighting contract of ET-12. The sharp TV inequality itself is a direct measure-theoretic argument.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "ET-05",
+      "relationship": "scope_distinction",
+      "justification": "Historical factor reassessment is distinguished from counterfactual recomputation of source-dependent dynamics. The shared origin/version discipline motivates their composition, but the DAG theorem does not logically depend on the historical tensor theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "ET-12",
+      "relationship": "formal_dependency",
+      "justification": "The historical-reweighting component uses likelihood transport through the retained old map/kernel when reconstructing an evolved state. The field-change sensitivity and deterministic DAG induction remain separate proofs with their own hypotheses.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-15",
+      "references": "ET-03",
+      "relationship": "concrete_application",
+      "justification": "The coupled credal construction applies source/audit revision to a family of coherent joint models. Classical finite-vertex conditioning has its own proof and does not require the earlier particular randomizer/verifier fixture.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-15",
+      "references": "ET-05",
+      "relationship": "formal_dependency",
+      "justification": "Only the composed historical-revision section uses E=B⊗I_H and its intertwining to propagate coupled sufficient joint records. The basic vertex theorem holds without that chosen quotient.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-16",
+      "references": "ET-12",
+      "relationship": "formal_dependency",
+      "justification": "Audit conjugacy retains a model-specific conditional factor and separate original normalizer; branchwise likelihood equivalence uses proportional positive factors. This supports the positive belief-coordinate instrument, not a context-free hidden-state likelihood claim.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-16",
+      "references": "ET-15",
+      "relationship": "scope_counterexample",
+      "justification": "The nonlinear image controls mark the failure of extending the common-linear normalized vertex rule to geometric correction. The classical theorem is unchanged; the power-reaction map violates its linear-map hypothesis.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-17",
+      "references": "ET-07",
+      "relationship": "scope_counterexample",
+      "justification": "The earlier missing-frequency obstruction motivates preserving inquiry values; the new fixed-model obstruction persists with equal branch frequencies. Neither theorem is used to infer the other numerical counterexample.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-17",
+      "references": "ET-10",
+      "relationship": "formal_dependency",
+      "justification": "For its quotient-transport component, preserving every model’s branch law, costs and lawful information-policy class preserves every coordinate of each policy-loss vector. Known-kernel Bellman optimality alone is not a robust Bellman theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-17",
+      "references": "ET-15",
+      "relationship": "formal_dependency",
+      "justification": "The exact L fixture is inherited, and initial-joint-law affine/vertex evaluation supplies the finite model coordinates under a common instrument. Same-model branch coupling must be retained; no reused-unknown-kernel vertex theorem is inferred.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-17",
+      "references": "ET-16",
+      "relationship": "concrete_application",
+      "justification": "The reviewed inverse-readout belief-coordinate repair transports each model’s path law and losses, hence the vector optimization. It does not eliminate nonrectangularity or change the private-randomness/commitment contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-18",
+      "references": "ET-02",
+      "relationship": "methodological_ancestry",
+      "justification": "Future-sensitive support/guard distinctions motivate retaining output-specific dependencies. The 33 controls inspect actual declarations and calls; they do not apply a Boolean-state minimum to an actual person’s warrant.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-18",
+      "references": "ET-09",
+      "relationship": "semantic_application_boundary",
+      "justification": "The finite sidecar contract can represent supplied differences in grounds and justified challenge scopes. It neither supplies those grounds nor yields a numerical minimum warrant bit count; no such finite calibrated human-state model is established.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-18",
+      "references": "ET-14",
+      "relationship": "concrete_application",
+      "justification": "Source-bound consumed-premise scopes implement selective revalidation rather than all-or-nothing replay. The application requires complete supported dependencies; it diagnoses what needs checking, not what is false or defeated.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-19",
+      "references": "ET-08",
+      "relationship": "formal_dependency",
+      "justification": "For finite rational holding times, enlarge the outcome alphabet to D×O; the same strong joint-mass refinement proof yields the coarsest timed partition. General measure equality is an additional effectiveness issue.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-19",
+      "references": "ET-09",
+      "relationship": "formal_dependency",
+      "justification": "Once the timed coarsest partition is fixed, the identical per-fibre pigeonhole construction supplies the timed sidecar alphabet/bit minimum. It is an application of D2, not a new coding theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-19",
+      "references": "ET-10",
+      "relationship": "formal_dependency",
+      "justification": "Finite timed prefixes use the same matched conditional-kernel induction. Full bounded-horizon path/cost preservation additionally requires retained deterministic interpolation, no-event semantics, non-explosion and the stated integrability.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-20",
+      "references": "ET-03",
+      "relationship": "methodological_ancestry",
+      "justification": "Both source-specific controls preserve target-sensitive joint interactions rather than deleting or multiplying marginal factors. The sharp calibrated three-witness bounds use their own correctness-table derivation; ET-03’s particular audit model is not a premise.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-20",
+      "references": "ET-15",
+      "relationship": "comparative_crossreference",
+      "justification": "This bare register link is comparative, not chronological or logical dependence: the calibrated corroboration owner precedes the coupled-credal report. Both distinguish exact compatible joint families from insufficient projected summaries.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-20A",
+      "references": "ET-20",
+      "relationship": "formal_dependency",
+      "justification": "The supplement reuses the within-truth inclusion-exclusion cell formula separately for t0 and t1, preserving the sharp bound while removing the cross-truth symmetry premise. Its unlabelled identification statement is deliberately different.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-22",
+      "references": "ET-08",
+      "relationship": "comparative_crossreference",
+      "justification": "D5’s smooth all-objectives quotient criterion is assembled beside D1’s finite stochastic contract in the Pro synthesis. Its local-section/coordinate-objective proof does not depend on finite partition refinement.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-15",
+      "references": "ET-20",
+      "relationship": "methodological_ancestry",
+      "justification": "The coupled-credal owner explicitly inherits missing truth-sensitive interaction and sharp partial-identification ancestry from pairwise corroboration. This is the chronological ancestry direction; the reverse ET-20 link is only comparison.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-05A",
+      "references": "H-Continuation:Theorem-2",
+      "relationship": "formal_dependency",
+      "justification": "The invariant observable span, linear intertwining, probability/numerator readouts and full-simplex continuous-coordinate lower bound are inherited from H-Continuation. The audit packet adds concrete model transport and posterior-only comparison.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-07",
+      "references": "H-ICS:feasible-support-fibre-factorization",
+      "relationship": "methodological_ancestry",
+      "justification": "The positive-fibre row-span iff is inherited linear fibre/difference-space reasoning applied to fixed-audit expected utility. On restricted families the actual feasible difference span replaces the full kernel.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-17",
+      "references": "H-Continuation:Theorem-2c",
+      "relationship": "formal_dependency",
+      "justification": "Pointwise branch-weighted value preservation for each fixed lawful policy supplies the coordinatewise foundation. Root minimax and private policy mixing are additional fixed-model constructions.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-01",
+      "references": "FND-034",
+      "relationship": "semantic_application_boundary",
+      "justification": "Root-aware operational distinguishability does not itself establish actual cognitive basing or a psychological state representation.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-03",
+      "references": "FND-026",
+      "relationship": "semantic_application_boundary",
+      "justification": "The declared probabilistic audit model does not retract the source-owned affirmative appraisal that heterogeneous warranted indications can jointly discriminate. Actual joint grounds must be supported in their own right.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-15",
+      "references": "FND-026",
+      "relationship": "semantic_application_boundary",
+      "justification": "Credal calibration/coupling is a representation premise for numerical uncertainty, not a prerequisite newly imposed on all cumulative human knowledge.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-20",
+      "references": "FND-026",
+      "relationship": "semantic_application_boundary",
+      "justification": "The pairwise-calibrated countermodels test a restricted numerical inference and do not identify or defeat an actual cumulative source argument.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-12",
+      "references": "FND-027",
+      "relationship": "semantic_application_boundary",
+      "justification": "Formal transport of an indicated source is separate from the source-owned grounds for identifying a producer or recognizing confirming context; calibration is not source production.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-03",
+      "references": "FND-030",
+      "relationship": "semantic_application_boundary",
+      "justification": "Changing a report’s numerical likelihood is not by itself an authenticated failure of reporting veracity. Actual attribution, content and reporting-domain inclusion remain source-specific premises.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "FND-031",
+      "relationship": "semantic_application_boundary",
+      "justification": "Exact fibres preserve a declared target; they do not choose the proper commissioned-content target or infer perpetual access from original explanatory success.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-18",
+      "references": "FND-033",
+      "relationship": "same_claim_crossreference",
+      "justification": "FND-033 owns the affirmative/source interpretation and includes Pro H’s complete-live-witness scope; ET-18 records the corresponding exact declaration/call revalidation controls. The duplicate view is not independent proof.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-22",
+      "references": "FND-034",
+      "relationship": "semantic_application_boundary",
+      "justification": "A projectable numerical gradient is not a demonstrated cognitive geometry or warranted-learning mechanism.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-21",
+      "references": "FND-034",
+      "relationship": "semantic_application_boundary",
+      "justification": "DAEE structural conformance and the preserved runtime/interlocutor distinction cannot authenticate an actual knowledge, willingness or recovery episode.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "PT-16",
+      "relationship": "semantic_application_boundary",
+      "justification": "Erased-J proof uniqueness prevents treating equal typed proof slots as distinguishable provenance labels. Ordinary separately represented sidecar data has a different type/observation contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "PT-19",
+      "relationship": "implementation_realisation",
+      "justification": "PT-19 owns an actual original-Has implementation of supplied finite deterministic tables and its literal source observations. The abstract minimum does not itself construct or authenticate that implementation.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-10",
+      "references": "PT-20",
+      "relationship": "implementation_realisation",
+      "justification": "PT-20 realizes finite rational joint reply/next-state rows with explicit seeds and separates deterministic Lean adequacy from external conditional seed-mass requirements. This is a concrete implementation interface for the abstract contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-19",
+      "references": "PT-20",
+      "relationship": "conditional_composition",
+      "justification": "A finite timed alphabet can be included in the joint reply label of the rational-kernel source contract, provided all timing/outcome/next-state masses and seed conditions are preserved. This does not assert an already-proved arbitrary-measure or host/serialization bridge.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-22",
+      "references": "GEO-08",
+      "relationship": "comparative_crossreference",
+      "justification": "Finite-dimensional fibre-constant induced cometric and law-level canonical coisometry concern different state spaces/tangent geometries. Their shared projectability mechanism does not make their hypotheses or prescribed metrics interchangeable.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-16",
+      "references": "GEO-10",
+      "relationship": "scope_distinction",
+      "justification": "Actual full fixed-marginal KL correction changes beliefs with a constrained full-law geometry. The inverse-readout coordinate repair must not be substituted for that semantic operation or claimed to prove its flow theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-09",
+      "references": "GEO-13",
+      "relationship": "scope_distinction",
+      "justification": "A finite sidecar alphabet says nothing about minimum-action paths between singular laws. GEO-13’s variational existence and whole-marginal constraints remain a separate mathematical contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "GEO-16",
+      "relationship": "conditional_composition",
+      "justification": "Universal singleton audit covariance supplies a positive no-replay case when audits leave the declared labelled dynamics and required parameters invariant. It does not identify historical reconstruction with recomputation after an actual field change.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "GEO-17",
+      "relationship": "scope_distinction",
+      "justification": "Fixed-group audits allow internal group dependence forbidden by the singleton classification. The replay/audit interface must specify its actual audit family rather than applying the strongest singleton result indiscriminately.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "GEO-18",
+      "relationship": "conditional_composition",
+      "justification": "The positive high-order correction commutes with a fixed audit under unchanged V, method order and step parameters. Source-dependent changes of those ingredients invoke the separate recomputation contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-14",
+      "references": "GEO-19",
+      "relationship": "conditional_composition",
+      "justification": "Withdrawal may invalidate an effective tail certificate while leaving the probability law valid. GEO-19 supplies the exact budget and the already-established positive-time repair; a new calculation must revalidate that certificate rather than infer impossible continuation.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-13",
+      "references": "GEO-20",
+      "relationship": "scope_distinction",
+      "justification": "Posterior TV stability and Fisher path-length preservation are different guarantees. GEO-20 requires two-sided likelihood bounds for its bi-Lipschitz transport; exact audit commutation or a one-sided bound alone does not supply it.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-17",
+      "references": "MOM-11",
+      "relationship": "completed_positive_successor",
+      "justification": "MOM-11 already repairs the declared two-trial reused-calibration path-law representation with an exact two-moment feasible body, while preserving the third-trial failure. This is not an open requirement to rediscover a finite description.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-16",
+      "references": "MOM-11",
+      "relationship": "comparative_crossreference",
+      "justification": "An infinitely exposed/nonpolytope image does not exclude a finite-dimensional exact nonlinear or moment description. MOM-11 gives a positive example in its separate two-trial family, not a general nonlinear-image theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-12",
+      "references": "pro-synthesis:A-B",
+      "relationship": "same_claim_crossreference",
+      "justification": "The Pro qualification identifies the same recovered A/B written proofs and full-evidence boundary; it is not an additional independent theorem.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-09",
+      "references": "pro-synthesis:C",
+      "relationship": "same_claim_crossreference",
+      "justification": "Recovered C is the static audit-profile specialization, not a replacement of dynamic D2; its source/version qualification is owned in the Pro track.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-13",
+      "references": "pro-synthesis:D-joined",
+      "relationship": "evidence_qualification",
+      "justification": "The Pro track binds recovered D and joined evidence/geometry claims to the supplied stage and excludes unbound reported R3 polynomial-observable claims.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-14",
+      "references": "pro-synthesis:E-F",
+      "relationship": "same_claim_crossreference",
+      "justification": "Both entries cover the same revision-semantics and dependency-directed-replay proof at the received source stage.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-14",
+      "references": "pro-synthesis:helper-defect",
+      "relationship": "implementation_evidence",
+      "justification": "The original direct helper’s one-shot-Iterable failure is separately reproduced; it does not refute the complete-dependency DAG induction or the ordinary replay_dag path that materializes parents.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-14",
+      "references": "pro-synthesis:suite-52",
+      "relationship": "implementation_evidence",
+      "justification": "Direct normal and optimized original 52-test executions belong to the Pro qualification; repeated byte-identical supplied stages are not separate suites.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-14",
+      "references": "pro-synthesis:suite-55",
+      "relationship": "implementation_evidence",
+      "justification": "The separately preserved inherited helper correction passes 55 cases, including three regressions. Its successor seal does not alter the original manifest or qualify reported R3 work.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "inherited_or_external_owner"
+    },
+    {
+      "claim": "ET-23",
+      "references": "ET-05A",
+      "relationship": "shared_interface",
+      "justification": "The general positive-cone/intertwining/normalization interface is inherited; ET-23 adds identity-summing rigidity and stable-family classification, not a replacement or formal consequence of predictive quotient minimality.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-23",
+      "references": "ET-12",
+      "relationship": "scope_distinction",
+      "justification": "Fixed ambient passive diagonal likelihood transport retains its original target and map class. The feasible-cone projection countercontrol shows why replacing it by every intrinsic positive map does not transport that contract.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-23",
+      "references": "ET-16",
+      "relationship": "scope_distinction",
+      "justification": "Both require the declared branch/instrument semantics to travel, but nonlinear transformed-belief transport and identity-summing ordered-cone rigidity have different domains and hypotheses; neither proves the other.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-23",
+      "references": "GEO-08",
+      "relationship": "scope_distinction",
+      "justification": "Cone order-isomorphism/intertwining preserves its declared branch laws; it supplies no full-law Fisher/Bregman or quotient-cometric result without the geometry track’s additional structures.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-23",
+      "references": "FND-031",
+      "relationship": "semantic_application_boundary",
+      "justification": "An abstract cone summand label or numerically possible instrument does not establish the original content/target identification, actual source access or source warrant.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "ET-23",
+      "references": "PT-21",
+      "relationship": "scope_distinction",
+      "justification": "A smallest closed convex stable family and algebraic reciprocal reweighting do not establish an available path, sure or almost-sure stopping, or exact finite disclosure.",
+      "owner_file": "evidence/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-02",
+      "references": "PT-01",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-03",
+      "references": "PT-01",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-04",
+      "references": "PT-03",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-05",
+      "references": "PT-04",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-06",
+      "references": "PT-03",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-07",
+      "references": "PT-04",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-07",
+      "references": "PT-06",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-08",
+      "references": "PT-09",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-10",
+      "references": "PT-08",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-10",
+      "references": "PT-09",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-11",
+      "references": "PT-09",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-12",
+      "references": "PT-10",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-12",
+      "references": "PT-11",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-13",
+      "references": "PT-09",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-13",
+      "references": "PT-10",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-13",
+      "references": "PT-11",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-14",
+      "references": "PT-13",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-15",
+      "references": "PT-13",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-15",
+      "references": "PT-14",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-16",
+      "references": "PT-13",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-17",
+      "references": "PT-09",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-17",
+      "references": "PT-13",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-18",
+      "references": "PT-13",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-18",
+      "references": "PT-17",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-19",
+      "references": "PT-16",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-20",
+      "references": "PT-19",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-22",
+      "references": "PT-19",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-22",
+      "references": "PT-20",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-22",
+      "references": "PT-21",
+      "relationship": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-24",
+      "references": "PT-23",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-25",
+      "references": "PT-23",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-25",
+      "references": "PT-24",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-26",
+      "references": "PT-23",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-27",
+      "references": "PT-23",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-28",
+      "references": "PT-27",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-29",
+      "references": "PT-28",
+      "relationship": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-29",
+      "references": "PT-23",
+      "relationship": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-31",
+      "references": "PT-30",
+      "relationship": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-13",
+      "references": "PT-12",
+      "relationship": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-20",
+      "references": "PT-21",
+      "relationship": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    },
+    {
+      "claim": "PT-32",
+      "references": "PT-30",
+      "relationship": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed.",
+      "owner_file": "proofs/DEPENDENCY_EDGES.json",
+      "reference_status": "local_claim"
+    }
+  ],
+  "cross_front_interfaces": "CROSS_FRONT_INTERFACES.json"
+}

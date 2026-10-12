@@ -1,0 +1,11 @@
+import ResetContinuation
+import Checks
+
+#check ResetContinuation.continuation_iff_agreement
+#check ResetContinuation.closure_iff_stage
+#check ResetContinuation.closure_least
+#check ResetContinuation.project_fill
+#check ResetContinuation.projection_summary
+#check ResetContinuation.every_summary_refines_projection
+#check ResetContinuation.summary_factors_projection
+#check ResetContinuation.fin_continuation_iff_agreement

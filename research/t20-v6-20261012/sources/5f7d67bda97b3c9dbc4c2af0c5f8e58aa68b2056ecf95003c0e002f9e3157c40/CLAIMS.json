@@ -1,0 +1,57 @@
+{
+  "status": "author-frozen; independent review is a separate pending artifact",
+  "scope": "Additive research after delivered T20 v2; no source or repository changes",
+  "claims": [
+    {
+      "id": "AS-01",
+      "classification": "new bounded deduction from inherited fixed-partition theorem",
+      "statement": "Under the exact retained weighted Fisher\u2013transport metric and full connected product domain, simultaneous all-positive partition-audit covariance of a C2 gradient is equivalent to common-refinement covariance and common-refinement energy decomposition.",
+      "owner": "RESULT.md Theorem A",
+      "depends_on": [
+        "grouped-source-audit-gradient-20261011/RESULT.md sections 2\u20134"
+      ],
+      "proof": "Canonical homogeneous extension; additive product-decomposition intersection; Euler constant repair preserving C2."
+    },
+    {
+      "id": "AS-02",
+      "classification": "restricted-field classification and boundary controls",
+      "statement": "For 2x2 row/column audits, general C1 equivariant fields may depend on odds ratio; an explicit such field is not a gradient, and positive audit-invariant odds-ratio energy has a nonzero gradient-equivariance residual.",
+      "owner": "RESULT.md Proposition B and B1\u2013B3",
+      "limitation": "The generated audit group remains proper. Gradient rigidity is not action generation."
+    },
+    {
+      "id": "AS-03",
+      "classification": "direct inherited ET-23 corollary via new cross-front application",
+      "statement": "Closed convex families stable under finitely many fixed complete positive identity-summing cone instruments are exactly common-refinement conditioning-closed families.",
+      "owner": "RESULT.md Corollary C",
+      "depends_on": [
+        "ET-23 actual owner Theorem 5"
+      ],
+      "proof": "Independent reviewer supplied tagged-instrument reduction S_(l,y)=beta_l T_(l,y); alternative extreme-point and zero-mass-safe conditioning proofs retained.",
+      "limitation": "Stable convex hull is not finite-history reachability; reciprocal or perfect-conditioning operations need not be available."
+    },
+    {
+      "id": "AS-04",
+      "classification": "conditional structure-preserving application, with explicitly added metric",
+      "statement": "Theorem A applies to normalized proper-cone interiors after choosing canonical-summand coordinates and transporting the exact Fisher\u2013transport metric; positive grouped factors are normalized branches of some binary identity-summing instrument.",
+      "owner": "RESULT.md section 6",
+      "limitation": "ET-23 alone gives no metric; all partition-constant instrument branches, not merely one fixed finite instrument, provide the required continuous audit family."
+    }
+  ],
+  "verification": {
+    "normal": "EXACT_CHECKS.json",
+    "optimized": "EXACT_CHECKS_OPTIMIZED.json",
+    "control_groups": 14,
+    "counted_controls_and_fixtures": 3054,
+    "enumerated_partition_pair_cases": 2959,
+    "source_files_verified": 11,
+    "universal_claim_basis": "Written proofs, not finite checks",
+    "kernel_certificate": false
+  },
+  "frozen_files": {
+    "RESULT.md": "123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8",
+    "check_exact.py": "779a4d9ab9b50cf17d9ec49536023ef3db7e64b5d4c48fe9e3bef7af846edffd",
+    "SOURCE_BINDINGS.json": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a"
+  },
+  "created_utc": "2026-10-11T13:21:01.060864+00:00"
+}

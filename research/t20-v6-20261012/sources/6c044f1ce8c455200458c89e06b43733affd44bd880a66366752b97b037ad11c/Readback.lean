@@ -1,0 +1,74 @@
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.resetCost_continuation_bound
+#print Orthemology.Tranche3.resetCost_continuation_bound
+#print axioms Orthemology.Tranche3.resetCost_continuation_bound
+#check Orthemology.Tranche3.phaseChainBudget
+#print Orthemology.Tranche3.phaseChainBudget
+#print axioms Orthemology.Tranche3.phaseChainBudget
+#check Orthemology.Tranche3.phaseContinuationBudget
+#print Orthemology.Tranche3.phaseContinuationBudget
+#print axioms Orthemology.Tranche3.phaseContinuationBudget
+#check Orthemology.Tranche3.phaseChainBudget_eq
+#print Orthemology.Tranche3.phaseChainBudget_eq
+#print axioms Orthemology.Tranche3.phaseChainBudget_eq
+#check Orthemology.Tranche3.phaseContinuationBudget_nonneg
+#print Orthemology.Tranche3.phaseContinuationBudget_nonneg
+#print axioms Orthemology.Tranche3.phaseContinuationBudget_nonneg
+#check Orthemology.Tranche3.phaseChainBudget_nonneg
+#print Orthemology.Tranche3.phaseChainBudget_nonneg
+#print axioms Orthemology.Tranche3.phaseChainBudget_nonneg
+#check Orthemology.Tranche3.phaseChainBudget_le_continuation
+#print Orthemology.Tranche3.phaseChainBudget_le_continuation
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_continuation
+#check Orthemology.Tranche3.phaseChainBudget_le_rank_bound
+#print Orthemology.Tranche3.phaseChainBudget_le_rank_bound
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_rank_bound
+#check Orthemology.Tranche3.phaseChainBudget_le_supersolution
+#print Orthemology.Tranche3.phaseChainBudget_le_supersolution
+#print axioms Orthemology.Tranche3.phaseChainBudget_le_supersolution
+#check Orthemology.Tranche3.chain_reset_hellinger_budget
+#print Orthemology.Tranche3.chain_reset_hellinger_budget
+#print axioms Orthemology.Tranche3.chain_reset_hellinger_budget
+#check Orthemology.Tranche3.recursiveExitEdge
+#print Orthemology.Tranche3.recursiveExitEdge
+#print axioms Orthemology.Tranche3.recursiveExitEdge
+#check Orthemology.Tranche3.recursiveExitEdge_rank
+#print Orthemology.Tranche3.recursiveExitEdge_rank
+#print axioms Orthemology.Tranche3.recursiveExitEdge_rank
+#check Orthemology.Tranche3.recursiveHellingerWeight
+#print Orthemology.Tranche3.recursiveHellingerWeight
+#print axioms Orthemology.Tranche3.recursiveHellingerWeight
+#check Orthemology.Tranche3.recursiveBadCharge_positive
+#print Orthemology.Tranche3.recursiveBadCharge_positive
+#print axioms Orthemology.Tranche3.recursiveBadCharge_positive
+#check Orthemology.Tranche3.recursiveHellingerWeight_nonneg
+#print Orthemology.Tranche3.recursiveHellingerWeight_nonneg
+#print axioms Orthemology.Tranche3.recursiveHellingerWeight_nonneg
+#check Orthemology.Tranche3.recursiveChainBudget
+#print Orthemology.Tranche3.recursiveChainBudget
+#print axioms Orthemology.Tranche3.recursiveChainBudget
+#check Orthemology.Tranche3.recursiveChainBudget_le_global
+#print Orthemology.Tranche3.recursiveChainBudget_le_global
+#print axioms Orthemology.Tranche3.recursiveChainBudget_le_global
+#check Orthemology.Tranche3.recursive_resetCost_le_chainBudget
+#print Orthemology.Tranche3.recursive_resetCost_le_chainBudget
+#print axioms Orthemology.Tranche3.recursive_resetCost_le_chainBudget
+#check Orthemology.Tranche3.recursive_physical_budget_transfer
+#print Orthemology.Tranche3.recursive_physical_budget_transfer
+#print axioms Orthemology.Tranche3.recursive_physical_budget_transfer
+#check Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget
+#print Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_chain_budget
+#check Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget
+#print Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_finite_bad_chain_budget
+#check Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail
+#print Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_chain_bad_count_tail
+#check Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae
+#print Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae
+#print axioms Orthemology.Tranche3.recursivePhysicalLaw_total_bad_finite_ae

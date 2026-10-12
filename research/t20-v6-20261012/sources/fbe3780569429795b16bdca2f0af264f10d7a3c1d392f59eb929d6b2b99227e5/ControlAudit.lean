@@ -1,0 +1,40 @@
+import BoundaryControls
+import EndpointControls
+#check @AtomicMembershipAudit.fair_cell
+#print axioms AtomicMembershipAudit.fair_cell
+#check @AtomicMembershipAudit.fair_singleton_zero
+#print axioms AtomicMembershipAudit.fair_singleton_zero
+#check @AtomicMembershipAudit.fair_mass_zero
+#print axioms AtomicMembershipAudit.fair_mass_zero
+#check @AtomicMembershipAudit.fair_diagonal_heavy
+#print axioms AtomicMembershipAudit.fair_diagonal_heavy
+#check @AtomicMembershipAudit.swapped_quantifier_counterexample
+#print axioms AtomicMembershipAudit.swapped_quantifier_counterexample
+#check @AtomicMembershipAudit.infinite_fair_singleton_zero
+#print axioms AtomicMembershipAudit.infinite_fair_singleton_zero
+#check @AtomicMembershipAudit.infinite_fair_mass_zero
+#print axioms AtomicMembershipAudit.infinite_fair_mass_zero
+#check @AtomicMembershipAudit.infinite_fair_cell
+#print axioms AtomicMembershipAudit.infinite_fair_cell
+#check @AtomicMembershipAudit.infinite_fair_heavy
+#print axioms AtomicMembershipAudit.infinite_fair_heavy
+#check @AtomicMembershipAudit.finite_measure_hypothesis_counterexample
+#print axioms AtomicMembershipAudit.finite_measure_hypothesis_counterexample
+#check @AtomicMembershipAudit.separation_hypothesis_counterexample
+#print axioms AtomicMembershipAudit.separation_hypothesis_counterexample
+#check @AtomicMembershipAudit.tied_singleton
+#print axioms AtomicMembershipAudit.tied_singleton
+#check @AtomicMembershipAudit.tied_cell
+#print axioms AtomicMembershipAudit.tied_cell
+#check @AtomicMembershipAudit.tied_cell_strict
+#print axioms AtomicMembershipAudit.tied_cell_strict
+#check @AtomicMembershipAudit.strict_level_inter_counterexample
+#print axioms AtomicMembershipAudit.strict_level_inter_counterexample
+#check @AtomicMembershipAudit.strict_threshold_infimum_counterexample
+#print axioms AtomicMembershipAudit.strict_threshold_infimum_counterexample
+#check @AtomicMembershipAudit.probability_defect_pos_iff_ne_zero
+#print axioms AtomicMembershipAudit.probability_defect_pos_iff_ne_zero
+#check @AtomicMembershipAudit.numeric_positive_defect_iff_not_member
+#print axioms AtomicMembershipAudit.numeric_positive_defect_iff_not_member
+#check @AtomicMembershipAudit.numeric_positive_defect_nat_normal
+#print axioms AtomicMembershipAudit.numeric_positive_defect_nat_normal

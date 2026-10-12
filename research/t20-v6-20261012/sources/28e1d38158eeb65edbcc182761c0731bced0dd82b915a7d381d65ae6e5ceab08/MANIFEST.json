@@ -1,0 +1,65 @@
+{
+  "schema": "literal-shift-ordinary-proof-integrity-v1",
+  "date_utc": "2026-10-11",
+  "claim": "Independently reviewed ordinary generated-AST invariant, all-natural input and exact Set-trace refinement. Earlier ordinary universal correctness and PR construction inherited.",
+  "scope_exclusions": [
+    "No first ordinary universal correctness claim",
+    "No new compiler enumeration",
+    "No kernel verification",
+    "No source repair or repository changes",
+    "No new uniform numeric PR transformer verification",
+    "No T20 closure"
+  ],
+  "files": [
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "bytes": 7618,
+      "sha256": "ada21a7baf56b7cb8d7802d6e7a147709c4adcbc9860c40038a592a0360b0ec0"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_BINDINGS.json",
+      "bytes": 3221,
+      "sha256": "33a709156d93704b83e9553d103089d70d84c78dff2de2cbe1f3b3be2f876070"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1904,
+      "sha256": "5e8ba55ce6c0ea3313f503c3ad3a90015d0f2040f71909f338d5499371986815"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2167,
+      "sha256": "bfd842674413742609c4980ab3784c7d691986d712fd27090784d207ecbc9ff9"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 25906,
+      "sha256": "d6478fc76961ecf738176c3346dd0563d10bd33d262e9eca1448d84c8d402054"
+    },
+    {
+      "path": "inputs/BOUNDED_REVIEW.md",
+      "bytes": 6289,
+      "sha256": "8e4361a20c195ff6c4df7b0b99d2e2a6684078a2c77ad1b569520b47f27f7a7d"
+    },
+    {
+      "path": "inputs/PRIOR_CODEC_CORRESPONDENCE.md",
+      "bytes": 17600,
+      "sha256": "f99ceb4ff133716af662319513da5f3c385c9dfad6dab66d632d610603205ceb"
+    },
+    {
+      "path": "inputs/PRIOR_HIERARCHY_PROOF.md",
+      "bytes": 12643,
+      "sha256": "cb9a698d4e0e9e0162aec3709bfdfdaebaf19a9bc19b9350f386e6d11709926d"
+    },
+    {
+      "path": "inputs/prcodec.py",
+      "bytes": 15928,
+      "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c"
+    },
+    {
+      "path": "verify_integrity.py",
+      "bytes": 2762,
+      "sha256": "94a95f14552a5d686a10957a3070f01bfdaf7c82775f85bdfd02eaef1095c42e"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "finite_horizon_checks": [
+    {
+      "horizon": 0,
+      "source_cells": 2,
+      "lifted_cells": 4,
+      "exact_equal": true
+    },
+    {
+      "horizon": 1,
+      "source_cells": 8,
+      "lifted_cells": 16,
+      "exact_equal": true
+    },
+    {
+      "horizon": 2,
+      "source_cells": 32,
+      "lifted_cells": 64,
+      "exact_equal": true
+    },
+    {
+      "horizon": 3,
+      "source_cells": 128,
+      "lifted_cells": 256,
+      "exact_equal": true
+    },
+    {
+      "horizon": 4,
+      "source_cells": 512,
+      "lifted_cells": 1024,
+      "exact_equal": true
+    }
+  ],
+  "same_marginals_different_joint": true,
+  "scope": "Independent exact finite controls; no general-proof replacement."
+}

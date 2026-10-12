@@ -1,0 +1,109 @@
+{
+  "countermodels": [
+    {
+      "id": "P03-A2-CE-HOST-REVISION",
+      "obligation": "U04",
+      "statement": "Observed deployed instruction-prefix counterhistory: content changed, stamps unchanged, failed revision leaves stale-valid edge",
+      "evidence": {
+        "path": "evidence/new-countermodels-baseline.json",
+        "bytes": 2358,
+        "sha256": "44d8c1202ae91fd00af4b0c8bd5a5d06b8fe655b8b32eec3bbedfee4acdf4637"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-HOST-ISSUANCE",
+      "obligation": "U04",
+      "statement": "Failed Licence construction occurs after registry insertion in base engine",
+      "evidence": {
+        "path": "evidence/new-countermodels-baseline.json",
+        "bytes": 2358,
+        "sha256": "44d8c1202ae91fd00af4b0c8bd5a5d06b8fe655b8b32eec3bbedfee4acdf4637"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-MUTABLE-ENCODE",
+      "obligation": "U03",
+      "statement": "Caller mutation after validation can make unsnapshotted encoder return float bytes rejected by decoder",
+      "evidence": {
+        "path": "evidence/new-countermodels-baseline.json",
+        "bytes": 2358,
+        "sha256": "44d8c1202ae91fd00af4b0c8bd5a5d06b8fe655b8b32eec3bbedfee4acdf4637"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-REENTRY",
+      "obligation": "U04",
+      "statement": "Rejected first COW proposal: nested public success can be overwritten without a reentry guard",
+      "evidence": {
+        "path": "evidence/reentrancy-red/stderr.bin",
+        "bytes": 1101,
+        "sha256": "167e57c9d8b1f7dcef9735d0aadcf7cc690c2e02c00c07fdf783cf702a41197d"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-POSTCOMMIT",
+      "obligation": "U04",
+      "statement": "Postpublication KeyboardInterrupt does not roll back a committed revision",
+      "evidence": {
+        "path": "tools/test_new_frontier.py",
+        "bytes": 9627,
+        "sha256": "b3c5b88aae8f55214faf629b57f8576233cf74b1972091ca0e7be266d714b0bb"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-COUNT-CAPTURE",
+      "obligation": "U03",
+      "statement": "Rejected first strict exporter capture: two length reads allow 17 traversed rows after validating one",
+      "evidence": {
+        "path": "evidence/export-capture-count-red/stderr.bin",
+        "bytes": 1012,
+        "sha256": "d6270661f7eee320d3b16528a6899a8f19f7fc72c57b97e1042cd729d6b89274"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-AE-COMPLETENESS",
+      "obligation": "U04",
+      "statement": "Pointwise grammar may reject an a.s.-valid factorisation on a zero-mass component",
+      "evidence": {
+        "path": "evidence/probability-bridge-normal/RESULT.json",
+        "bytes": 5143,
+        "sha256": "2458711e3d75963198de0a9ff39cc08242150b570ee50307dab52bfb426debf8"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-ARITHMETIC-COMPLETENESS",
+      "obligation": "U04",
+      "statement": "Intermediate exact-arithmetic bounds can reject one order of a valid rational law but accept its reordered equivalent",
+      "evidence": {
+        "path": "evidence/probability-bridge-normal/RESULT.json",
+        "bytes": 5143,
+        "sha256": "2458711e3d75963198de0a9ff39cc08242150b570ee50307dab52bfb426debf8"
+      },
+      "canonical_theorem_refuted": false
+    },
+    {
+      "id": "P03-A2-CE-TRACE-LAW",
+      "obligation": "U04",
+      "statement": "Equal trace supports do not entail equal probability laws",
+      "evidence": {
+        "path": "evidence/SCOPE_BOUNDARY_CONTROLS.json",
+        "bytes": 1017,
+        "sha256": "83cb2fef4b54d5be85d57ef41733c905d03d16be0d82b6234a242852f336d81a"
+      },
+      "canonical_theorem_refuted": false
+    }
+  ],
+  "Q1f_layer_models": {
+    "path": "evidence/vct-layers-normal/LAYER_MODELS.json",
+    "bytes": 85289,
+    "sha256": "0383f2c0e9dab8092944888be9c452ec1aa4feceaa610870e9cfaea8ec993cc9"
+  },
+  "prior_negative_evidence": "Exact attempt1 and P02 ZIPs, preserved without rerun/relabelled credit"
+}

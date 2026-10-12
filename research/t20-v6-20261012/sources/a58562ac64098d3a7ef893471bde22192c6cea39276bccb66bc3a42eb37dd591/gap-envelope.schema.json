@@ -1,0 +1,367 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scoped exact relative-gap envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "base": {
+      "$ref": "#/$defs/base"
+    },
+    "regime": {
+      "$ref": "#/$defs/regime"
+    },
+    "target": {
+      "$ref": "#/$defs/target"
+    },
+    "certificate": {
+      "$ref": "#/$defs/certificate"
+    }
+  },
+  "required": [
+    "base",
+    "regime",
+    "target",
+    "certificate"
+  ],
+  "$defs": {
+    "assumption": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "kind": {
+          "enum": [
+            "DESCRIPTIVE",
+            "NORMATIVE",
+            "MIXED",
+            "LOGICAL"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "text"
+      ]
+    },
+    "base": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "profile-base-v1"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profiles": {
+          "type": "object",
+          "minProperties": 1,
+          "maxProperties": 256,
+          "propertyNames": {
+            "minLength": 1,
+            "maxLength": 128
+          },
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string",
+                  "maxLength": 128,
+                  "pattern": "^[+-]?[0-9]+(/[0-9]+)?$"
+                }
+              ]
+            }
+          }
+        },
+        "coordinate_kinds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "enum": [
+              "DESCRIPTIVE",
+              "NORMATIVE",
+              "MIXED",
+              "LOGICAL"
+            ]
+          }
+        },
+        "extraction_assumptions": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/assumption"
+          }
+        }
+      },
+      "required": [
+        "schema",
+        "version",
+        "profiles",
+        "coordinate_kinds",
+        "extraction_assumptions"
+      ]
+    },
+    "regime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "two-criterion-weight-interval-v1"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "base_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "lower": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string",
+              "maxLength": 128,
+              "pattern": "^[+-]?[0-9]+(/[0-9]+)?$"
+            }
+          ]
+        },
+        "upper": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string",
+              "maxLength": 128,
+              "pattern": "^[+-]?[0-9]+(/[0-9]+)?$"
+            }
+          ]
+        },
+        "orientation": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "enum": [
+              -1,
+              1
+            ]
+          }
+        },
+        "admissibility_assumptions": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/assumption"
+          },
+          "minItems": 1
+        },
+        "authority_status": {
+          "const": "SUPPLIED_NOT_CERTIFIED"
+        }
+      },
+      "required": [
+        "schema",
+        "id",
+        "version",
+        "base_hash",
+        "lower",
+        "upper",
+        "orientation",
+        "admissibility_assumptions",
+        "authority_status"
+      ]
+    },
+    "target": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "gt",
+                "ge"
+              ]
+            },
+            "left": {
+              "type": "string"
+            },
+            "right": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "left",
+            "right"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "const"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "op",
+            "value"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "not"
+            },
+            "arg": {
+              "$ref": "#/$defs/target"
+            }
+          },
+          "required": [
+            "op",
+            "arg"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "and",
+                "or"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 16,
+              "items": {
+                "$ref": "#/$defs/target"
+              }
+            }
+          },
+          "required": [
+            "op",
+            "args"
+          ]
+        }
+      ]
+    },
+    "certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "gap-certificate-v1"
+        },
+        "base_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "regime_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "target_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "status": {
+          "enum": [
+            "NO_ADMISSIBLE_EXTENSION",
+            "DISAGREEMENT",
+            "INVARIANT_TRUE",
+            "INVARIANT_FALSE"
+          ]
+        },
+        "checked_cells": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "witnesses": {
+          "type": "array",
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "alpha": {
+                "type": "string"
+              },
+              "value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "alpha",
+              "value"
+            ]
+          }
+        },
+        "proof_rule": {
+          "const": "AFFINE_ATOM_SIGN_PARTITION_V1"
+        },
+        "scope": {
+          "const": "RELATIVE_MODEL_DISCLOSURE_ONLY"
+        },
+        "authority_status": {
+          "const": "SUPPLIED_NOT_CERTIFIED"
+        },
+        "partition_check": {
+          "const": "DECLARED_KINDS_ONLY_NOT_SEMANTIC_CERTIFICATION"
+        },
+        "base_declared_purely_descriptive": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "schema",
+        "base_hash",
+        "regime_hash",
+        "target_hash",
+        "status",
+        "checked_cells",
+        "witnesses",
+        "proof_rule",
+        "scope",
+        "authority_status",
+        "base_declared_purely_descriptive",
+        "partition_check"
+      ]
+    }
+  }
+}

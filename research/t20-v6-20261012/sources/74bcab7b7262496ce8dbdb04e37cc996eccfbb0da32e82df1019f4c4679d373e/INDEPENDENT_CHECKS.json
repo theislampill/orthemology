@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "three_state_cap_checks": 3375,
+  "strict_cap_cases": 2007,
+  "sharp_cap_totals": [
+    "1",
+    "9/8",
+    "5/4",
+    "11/8",
+    "3/2",
+    "13/8",
+    "7/4",
+    "15/8",
+    "2"
+  ],
+  "periodic_Cesaro_residuals": [
+    "2",
+    "0",
+    "2/3",
+    "0",
+    "2/5",
+    "0",
+    "2/7",
+    "0",
+    "2/9",
+    "0",
+    "2/11",
+    "0",
+    "2/13",
+    "0",
+    "2/15",
+    "0",
+    "2/17",
+    "0",
+    "2/19",
+    "0"
+  ],
+  "selector_axis_and_small_residual_cases": 15,
+  "finite_birth_death_detailed_balance": true,
+  "scope": "Finite rational controls supplement ordinary proofs; they do not establish undecidability or infinite-dimensional effectiveness by enumeration."
+}

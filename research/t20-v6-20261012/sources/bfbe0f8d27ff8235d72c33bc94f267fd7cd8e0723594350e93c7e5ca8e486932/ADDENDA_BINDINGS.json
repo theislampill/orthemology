@@ -1,0 +1,196 @@
+{
+  "status": "ACCEPTED_ORDINARY_ADDENDA",
+  "names": [
+    "compact_initial",
+    "effectivity",
+    "computed_separator",
+    "finite_prefix_delay"
+  ],
+  "analytic_kernel_proof": false,
+  "closure": false,
+  "targets": [
+    {
+      "name": "compact_initial",
+      "path": "evidence/compact-initial-law-preservation-20261010/RESULT.md",
+      "sha256": "6943a1c274b177d107c8935e7d12d6a9e5094aa79df41546fb8e7d4d121914ce"
+    },
+    {
+      "name": "effectivity",
+      "path": "evidence/valid-initial-escape-effectivity-20261010/RESULT.md",
+      "sha256": "dbfb6e5190a12d943c4f2530350ad66760f1f093fe631b3c6884de5ab38d00d5"
+    },
+    {
+      "name": "computed_separator",
+      "path": "evidence/valid-initial-escape-computed-separator-20261010/RESULT.md",
+      "sha256": "b04978552464b25a93fe39c4a61ccf80dcf64bc04e17c23ff6fd6242667f1a20"
+    },
+    {
+      "name": "finite_prefix_delay",
+      "path": "evidence/finite-prefix-realizability-delay-20261010/RESULT.md",
+      "sha256": "f7f06518e210b860502c0971aa9ad47a410198d84c519b149a49b953f67c242f"
+    }
+  ],
+  "manifests": [
+    {
+      "path": "evidence/compact-initial-law-independent-review-20261010/MANIFEST.json",
+      "base": "source-aliases"
+    },
+    {
+      "path": "evidence/valid-initial-escape-effectivity-20261010/FROZEN_MANIFEST.json",
+      "base": "evidence/valid-initial-escape-effectivity-20261010"
+    },
+    {
+      "path": "evidence/valid-initial-escape-computed-separator-20261010/FROZEN_MANIFEST.json",
+      "base": "evidence/valid-initial-escape-computed-separator-20261010"
+    },
+    {
+      "path": "evidence/valid-initial-escape-effectivity-independent-review-20261010/FROZEN_MANIFEST.json",
+      "base": "evidence/valid-initial-escape-effectivity-independent-review-20261010"
+    },
+    {
+      "path": "evidence/finite-prefix-realizability-delay-independent-review-20261010/FROZEN_MANIFEST.json",
+      "base": "evidence/finite-prefix-realizability-delay-independent-review-20261010"
+    }
+  ],
+  "receipt_checks": [
+    {
+      "path": "evidence/compact-initial-law-independent-review-20261010/REVIEW_RECEIPT.json",
+      "equals": {
+        "status": "passed",
+        "reviewed_source_sha256": "6943a1c274b177d107c8935e7d12d6a9e5094aa79df41546fb8e7d4d121914ce",
+        "report_sha256": "d0243e4000ce5e3aa2ce7cd7a2f1f96a3519779f684fbaa1219f9ee03dad4cc1",
+        "exact_controls": "passed",
+        "unresolved_findings": []
+      }
+    },
+    {
+      "path": "evidence/valid-initial-escape-effectivity-independent-review-20261010/REVIEW_RECEIPT.json",
+      "equals": {
+        "verdict": "PASS",
+        "corrected_effectivity_result_sha256": "dbfb6e5190a12d943c4f2530350ad66760f1f093fe631b3c6884de5ab38d00d5",
+        "computed_separator_result_sha256": "b04978552464b25a93fe39c4a61ccf80dcf64bc04e17c23ff6fd6242667f1a20",
+        "main_frozen_result_sha256": "c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada",
+        "checks/exact_effectivity": 7206,
+        "checks/independent_computed_certificate": 53,
+        "checks/frozen_author_certificate_replay": 28
+      }
+    },
+    {
+      "path": "evidence/finite-prefix-realizability-delay-independent-review-20261010/REVIEW_RECEIPT.json",
+      "equals": {
+        "verdict": "PASS",
+        "target_sha256": "f7f06518e210b860502c0971aa9ad47a410198d84c519b149a49b953f67c242f",
+        "review_sha256": "477b75c8887e768f130b475f9e07516584e5780ce78f93d7a291c9fa0423d492"
+      }
+    },
+    {
+      "path": "evidence/valid-initial-escape-effectivity-independent-review-20261010/root-replay-observation/RECOVERY_RECEIPT.json",
+      "equals": {
+        "all_original_manifest_entries_restored_and_verified": true,
+        "files/0/restored_byte_identical": true,
+        "files/1/restored_byte_identical": true
+      }
+    }
+  ],
+  "programs": [
+    {
+      "name": "compact_initial_independent",
+      "trees": [
+        "compact-initial-law-preservation-20261010",
+        "compact-initial-law-independent-review-20261010"
+      ],
+      "script": "compact-initial-law-independent-review-20261010/check_controls.py",
+      "results": [
+        {
+          "relative": "compact-initial-law-independent-review-20261010/CONTROL_RESULTS.json",
+          "historical": "evidence/compact-initial-law-independent-review-20261010/CONTROL_RESULTS.json",
+          "equals": {
+            "status": "passed",
+            "reviewed_result_sha256": "6943a1c274b177d107c8935e7d12d6a9e5094aa79df41546fb8e7d4d121914ce"
+          },
+          "lengths": {
+            "controls": 6
+          }
+        }
+      ]
+    },
+    {
+      "name": "effectivity_and_computed_independent",
+      "trees": [
+        "valid-initial-partial-escape-20261010",
+        "valid-initial-escape-effectivity-20261010",
+        "valid-initial-escape-effectivity-independent-review-20261010"
+      ],
+      "script": "valid-initial-escape-effectivity-independent-review-20261010/check_computed_independently.py",
+      "results": [
+        {
+          "relative": "valid-initial-escape-effectivity-independent-review-20261010/EXACT_RESULTS.json",
+          "historical": "evidence/valid-initial-escape-effectivity-independent-review-20261010/EXACT_RESULTS.json",
+          "equals": {
+            "status": "PASS",
+            "check_count": 7206
+          },
+          "lengths": {
+            "checks": 7206
+          }
+        },
+        {
+          "relative": "valid-initial-escape-effectivity-independent-review-20261010/COMPUTED_INDEPENDENT_RESULTS.json",
+          "historical": "evidence/valid-initial-escape-effectivity-independent-review-20261010/COMPUTED_INDEPENDENT_RESULTS.json",
+          "equals": {
+            "status": "PASS",
+            "check_count": 53,
+            "independent_effectivity_check_count": 7206
+          },
+          "lengths": {
+            "checks": 53
+          }
+        }
+      ]
+    },
+    {
+      "name": "computed_separator_author",
+      "trees": [
+        "valid-initial-escape-computed-separator-20261010"
+      ],
+      "script": "valid-initial-escape-computed-separator-20261010/check_certificate.py",
+      "overrides": [
+        {
+          "relative": "valid-initial-escape-effectivity-20261010/RESULT.md",
+          "packet": "evidence/valid-initial-escape-effectivity-independent-review-20261010/effectivity-original-preimage/RESULT.md",
+          "sha256": "aff8999b9d070355d6ea4712f99ecb7d635480cacc4821794534c71e4272a18e",
+          "scope": "Original author checker explicitly pins historical effectivity text; exact original binding retained, no integrity bypass."
+        }
+      ],
+      "results": [
+        {
+          "relative": "valid-initial-escape-computed-separator-20261010/CERTIFICATE.json",
+          "historical": "evidence/valid-initial-escape-computed-separator-20261010/CERTIFICATE.json",
+          "equals": {
+            "status": "PASS",
+            "normalized_L_strict_upper": "-4/3"
+          },
+          "lengths": {
+            "exact_checks": 28
+          }
+        },
+        {
+          "relative": "valid-initial-escape-computed-separator-20261010/HIDDEN_BOUND.json",
+          "historical": "evidence/valid-initial-escape-computed-separator-20261010/HIDDEN_BOUND.json",
+          "equals": {
+            "status": "PASS",
+            "schur_maximum_index": 10,
+            "N_F_upper_power2_exponent": 171
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Compact initial safeguard requires SOS/shifted-SOS energies; arbitrary signed linear controls are excluded.",
+    "Effectivity is a terminating abstract per-rational-time procedure; no generic search or quadrature implementation was run.",
+    "Concrete t=1 certificate is separately executed exact arithmetic with reviewed all-integer tails.",
+    "Finite-prefix delay is an independently reviewed ordinary proof, without a numerical solver or effective time modulus.",
+    "Computed JSONs are byte-identical to their original freeze at this packaging baseline, after the explicitly preserved earlier timing-only recovery."
+  ]
+}

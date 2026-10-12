@@ -1,0 +1,21 @@
+PASS 01: dimension-zero family has fixed reference proportions
+PASS 02: zero-dimensional hard omission cannot preserve its only saturated stratum
+PASS 03: saturated triangle edge includes duplicate and nonvertex atoms
+PASS 04: explicit normal ray suppresses every off-face supplied atom
+PASS 05: same boundary mean does not determine support or duplicate weights
+PASS 06: formal prime-log entropy identity holds for an alternative boundary law
+PASS 07: reference normalization changes entropy by a constant only
+PASS 08: face tangent metric is positive after removing its normal redundancy
+PASS 09: affine coordinate changes transform covariance and inverse metric correctly
+PASS 10: two positive face branches commute and retain duplicate-vertex proportions
+PASS 11: boundary criterion depends on support intersection rather than global likelihood support
+PASS 12: splitting a duplicate fails even at an unchanged vertex mean
+PASS 13: disjoint-face likelihood has zero branch and no normalized posterior
+PASS 14: nonfacial law can have an interior mean and positive definite full covariance
+PASS 15: local hard evidence preserves a nonproduct reference residual class
+PASS 16: local closed-model update is distinct from all-prior retained sufficiency
+PASS 17: pairwise facet has a positive five-dimensional relative covariance and lost normal
+PASS 18: six supported atoms witness every pair assignment, forcing any preserving hard factor positive everywhere
+PASS 19: distinct bounded pair-local soft paths share an impossible hard limit but different posteriors
+PASS 20: impossible limiting event and direct nonlocal positive event remain different
+PASS: 20 independent exact assertion groups

@@ -1,0 +1,28 @@
+{
+  "all_assigned_bodies": 18,
+  "additional_direct_import_bodies": 1,
+  "prior_exact_full_reuse": [
+    {
+      "module": "provision_semantics",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "path": "t20-consolidation-20261011/catalogue/objects/6b/6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "ledger": "t20-v6-20261011/foundations/sourcehood_lineage/implementation/READ_LEDGER.json",
+      "pointer": "$/0",
+      "scope": "FULL_BODY_DIRECT_READING"
+    }
+  ],
+  "authored_local_imports": {
+    "test_*": "exact matching modules in this19-body union",
+    "intrinsic_knower": "joint_interpretation in this union",
+    "joint_interpretation": [
+      "provision_semantics exact prior full",
+      "preservation_modes exact newly read"
+    ],
+    "preservation_modes": "provision_semantics exact prior full",
+    "implicit_checks/test_implicit": "implicit_attestation in union",
+    "additional_checks/test_rivals/extended_histories": "rivals in union",
+    "test_extended": "extended_histories in union"
+  },
+  "unresolved_authored_imports": [],
+  "scope": "Original module names and aliases preserved; tests read, not executed. Standard-library implementation not assigned new proof credit."
+}

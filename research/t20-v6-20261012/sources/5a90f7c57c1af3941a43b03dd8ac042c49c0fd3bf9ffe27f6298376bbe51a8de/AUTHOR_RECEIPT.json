@@ -1,0 +1,20 @@
+{
+  "status": "AUTHOR_PROOF_AND_EXACT_FINITE_CONTROLS_PASS_REVIEW_PENDING",
+  "timestamp_utc": "2026-10-10T21:37:44.254188+00:00",
+  "result_sha256": "c6dc162591a6827b8ae09a3b0be902ee53573435ae5b4f4ecfb1fc66ed835ada",
+  "control_check_count": 7888,
+  "claims": [
+    "Genuine initial joint all-moments probability record",
+    "Strict full square positivity for every time and every nonzero polynomial",
+    "No joint positive representative at every positive time",
+    "Every supplied fixed-controlled-subspace cumulative SOS schedule, r>=1 and k>=2",
+    "Initial record is indeterminate; no determinate-initial-joint-record claim"
+  ],
+  "not_claimed": [
+    "Independent review acceptance",
+    "Formal verification of this analytic counterpath or signed-measure construction",
+    "Protected integration or closure",
+    "Failure of direct measure-level tilting of a supplied initial law",
+    "Field novelty"
+  ]
+}

@@ -1,0 +1,11 @@
+# Independent finite-history transport review
+
+The full ordinary proof and full Lean candidate were examined. The joint row condition, common history-dependent randomised policy and initial erasure equality suffice. Grouping by erased state is legitimate because the policy coefficient depends on the shared history, and the row equality preserves the receipt-state correlation. No injectivity of erasure is needed. The PMF proof is more general than the finite-set ordinary presentation; it avoids regrouping unsupported infinite real sums by map/bind identities.
+
+The literal checker instantiation was checked against CheckerStateObservation lines 113–155. Its support-validity premise is discharged inside the original joint-row proof; malformed copied pairs do not become assumed valid. Initial erasure and the fixed ordinary label are distinct conditions. The misaligned-initial-receipt control correctly uses a receipt-list policy to demonstrate why feeding one side an additional label changes behaviour. This is an interface control, not a counterexample to the common-empty-history theorem.
+
+An independent exact-rational test uses a state/action-dependent kernel and a randomised policy depending on full recorded history, through horizons zero to four. Every joint history/erased-state distribution agrees. A separate pair of perfectly correlated versus anticorrelated binary rows has identical receipt and state marginals but unequal joint laws. Thus replacing joint row equality with two marginal checks would invalidate the argument.
+
+The posteriors agree only for positive-probability histories. The result does not give posterior point-mass determinism, an alternating-machine reduction, a first-error theorem, runtime extraction, or an independently warranted interpretation of source authority. Infinite path-law equality can require an explicit measurable product construction and uniqueness theorem; it has not been silently added.
+
+Accepted as a genuine project-relative closure of the finite-history bridge by standard probability algebra. Original row and initial-erasure theorems retain inherited credit. Fresh kernel status is assigned only from the separately observed compiler receipt, not from this written review.

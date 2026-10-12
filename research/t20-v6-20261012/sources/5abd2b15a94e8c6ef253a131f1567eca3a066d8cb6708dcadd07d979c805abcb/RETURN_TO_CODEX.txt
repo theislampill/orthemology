@@ -1,0 +1,63 @@
+Independent review returned: HR-20261009-FINAL-DELTA-R2-INDEPENDENT.
+
+The supplied delta has been reviewed. Preserve the original HR-20261009-FINAL
+22-node records and its nine original scoped PASS decisions. Apply this report
+as an addendum, not a rewrite of historical evidence.
+
+SCOPED RESULTS
+
+Resolved/PASS documentation findings:
+- HR-D01 / R000B-DOCS: six-hour cache admission and distinct evidence clocks.
+- HR-D02 / R000C-DOCS: unavailable temperature/amounts versus genuine zero.
+- HR-D03 / R000D-DOCS: bounded waits, retry opportunities and late settlement.
+- HR-I01 / R0013-DOCS: initial versus later EOF and retained effects/bundles.
+- HR-S01 / R001B-DOCS: whole-README privacy contradiction and scoped guard.
+
+Satisfied/PASS missing bindings:
+- R000B-EVIDENCE: generated-source/VM 30 retained PASS; five caught mutations.
+- R000C-EVIDENCE: generated-source/VM 119 retained PASS, four TODO; four mutations.
+- R000D-EVIDENCE: generated-source/VM 24 retained PASS; three mutations.
+- R0024-INFO: retained actual consumer/AX/settings/image proof with the justified,
+  exact offline correction of the hourly oracle. Original native FAIL stays FAIL
+  as a historical record; the corrected interpretation is not new native execution.
+
+Still INSUFFICIENT EVIDENCE:
+R0002-DOC, R0004-DOC, R0006-DOC and R0007-DOC. Their accepted source/prose and
+regional equivalence remain credited; supply the missing mapped native proof
+and exact joined-hunk binding, using existing valid receipts or only the
+necessary admitted cases. Do not rewrite working documentation, bypass guards,
+or restart the full campaign.
+
+Cumulative scoped review position for the same original 22 nodes:
+18 PASS / 0 REQUEST CHANGES / 4 INSUFFICIENT EVIDENCE.
+This is NOT nine additional DAG completions. Root already accounted for the
+resolved work. The retained later 15:31:08 UTC checkpoint stays 31 COMPLETE;
+RESOURCE is BLOCKED on qualified input and NATIVE is executing preparation.
+Do not substitute the earlier 15:21:52 admission's two READY states as current.
+
+KEY SOURCE BINDINGS
+Input ZIP SHA256:
+ea4c094e8372e308302720f8dfd548d20e396fd66eef6ec05591bc0b6cf446d4
+Authored native ec59b3ff64e06713d652af5b30f04a18fcde404b92b4595bc1cee96818a6ec65
+Generated index 14e1d92101dad56f1352a2b4a85a460067361ecdfca62093f9f9d1286b991fad
+Runtime inventory e718fe9e58f37535de4dc496a2da3bf2b05808153287e1fe328398ea59c0df53
+Oracle postimage 614d5de924f9d1ad6b12affa1e29e24263e87d10ad66c4804d65f909a2444d5d
+Oracle patch 2845e5f4c06aac8e46f0ce171d08660d08f2d7aa0a7cf2b9c91055f53c283416
+
+The joined dirty candidate is not automatically delivered main or a new PR43
+head. Reconcile only affected identities before reusing proof on newer source.
+Generated weather evidence is not the NATIVE/resource campaign. INFO's accepted
+consumer proof does not close the whole issue. Thirteen OTHER whole-document
+failures remain separate; there is no whole-README PASS.
+
+Read REVIEW.md, DELTA_DISPOSITIONS.json, CONSOLIDATED_NODE_DISPOSITIONS.json and
+SOURCE_REFERENCES.json for the precise clauses, hashes, boundaries and remaining
+case requirements. Fresh review checks were read-only; no retained producer,
+product tests, browser, builder, Git/public operations or native installers were
+executed by this review. Existing campaigns were not relabelled as fresh runs.
+
+Record these results in the existing review/ledger workflow and continue the
+already-authorised DAG execution. No new queue, duplicate research, re-audit of
+the nine original PASS nodes, or Mac/new-tab request is required. All PR43,
+lighting/visual, platform, delivery, issue-closure and exact-head owner release
+gates remain. This message authorises no merge, deployment or public effect.

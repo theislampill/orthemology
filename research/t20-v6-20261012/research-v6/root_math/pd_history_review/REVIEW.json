@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-11T18:43:23.886804+00:00",
+  "subjects": [
+    {
+      "path": "t20-v6-20261011/type_collective/pd_checker_annex/FINITE_HISTORY_TRANSPORT.md",
+      "sha256": "7e0ed3796b4b4bffb1f2460759a76806f7b10d07f988761f73f56473b096a252",
+      "scope": "full text"
+    },
+    {
+      "path": "t20-v6-20261011/type_collective/pd_checker_annex/fresh_lean/FiniteHistoryTransport.lean",
+      "sha256": "eaa175dc008b893b8fcb7b6cfaabe0e3b858d4cd7667a9c6bad40cf1fa121162",
+      "scope": "full text"
+    }
+  ],
+  "verdict": "ACCEPT_ORDINARY_PROOF_AND_SOURCE_MAPPING",
+  "kernel_status": "Authors fresh compilation tracked separately; no independent kernel replay credited here.",
+  "checks": "Exact horizon0\u20134 randomized history policy duplicated-state lift, joint-marginal countercontrol.",
+  "final_source_update": {
+    "sha256": "eaa175dc008b893b8fcb7b6cfaabe0e3b858d4cd7667a9c6bad40cf1fa121162",
+    "review_scope": "Changed explicit RHS definitional projection in step_erasure examined; statements unchanged. Accepted."
+  }
+}

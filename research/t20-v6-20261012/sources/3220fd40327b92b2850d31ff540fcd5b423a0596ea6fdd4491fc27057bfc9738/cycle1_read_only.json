@@ -1,0 +1,14 @@
+{
+  "cycle": 1,
+  "kind": "read-only coverage and substantive advancement",
+  "reviewer": "same assistant; not independent review",
+  "candidate_sha256": "8e60476746bf8acf1c6facc0efc49ef1284dd78b795c913b6203f02a9fe75f99",
+  "overall_original_request_gate": "NOT_APPROVED",
+  "source_coverage_complete": false,
+  "finding_ids": [
+    "C1-A01",
+    "C1-A02"
+  ],
+  "new_finite_check_status": "PASS",
+  "scope": "Authored arguments, retained findings and machine custody records; not exhaustive re-reading of unreturned source content."
+}

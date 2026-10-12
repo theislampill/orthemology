@@ -1,0 +1,24 @@
+Retrieval status, 2026-10-09 UTC
+
+1. Gale and Pruss (2002), A response to Oppy, and to Davey and Clifton
+DOI: 10.1017/S0034412501005923
+Publisher record: https://www.cambridge.org/core/journals/religious-studies/article/abs/response-to-oppy-and-to-davey-and-clifton/E338A35E8953099A168441781ACAA62A
+The Cambridge abstract/metadata is accessible; no primary full body was obtained. The page's advertised citation_pdf_url returned the same HTML abstract/access page rather than PDF. ResearchGate explicitly says No full-text available and Request full-text; no author request was sent. OpenAlex lookup identified closed access, no OA URL, no repository full text, and only the DOI location. Pruss's author site and paper index returned gateway errors/timeouts in direct fetches. Targeted searches found no legitimate full text. No 2002 primary pages beyond the abstract were exposed in search. Later secondary sources quote pages 91, 93, 94, 95, and 96, but those are not a recovered primary reply and have not been represented as one.
+Saved publisher HTML: gale-pruss2002-cambridge-abstract.html
+
+2. Oppy (2000), On A New Cosmological Argument
+DOI: 10.1017/S0034412500005308
+Author-uploaded source: https://www.researchgate.net/publication/232025345_On_%27A_new_cosmological_argument%27
+The accessible indexed ResearchGate page identifies Graham Oppy as uploader, dated 2016-03-14. Its author-manuscript full text is exposed through final endnotes and acknowledgments. Manuscript pagination runs through 17, unlike journal pages 345-353. Web extracted numbered lines 40-645 were merged from two views and verified to have no gaps. This checks textual continuity only; no PDF/visual verification. OCR/font artifacts occur in formulae. Direct PDF download was unavailable, as were PhilPapers/PhilArchive PDF routes.
+Clean text: oppy2000-author-manuscript.txt
+Raw extraction provenance: oppy2000-researchgate-web-extraction.txt and oppy2000-researchgate-web-tail.txt
+
+3. Later Pruss author-hosted chapter treatment
+URL: https://alexanderpruss.com/papers/LCA.html
+Direct origin fetch failed; targeted web searches returned indexed primary-author text. This is an access limitation, not access to the 2002 reply.
+Exact bounded section 4.1.1.6 with method/limits: pruss-lca-taxicab-section-indexed.txt
+Broader raw targeted-query result containing 2.3.2.3 and 4.1.1.6: pruss-lca-indexed-bounded-passages.txt
+The author text identifies a later BCCF* construction as Gale and Pruss 2002, p. 95, but the 2002 original was not retrieved. No verified independent revised-reply download link was obtained.
+
+4. Fresh author-index check, 2026-10-09 01:07 UTC
+Parent identified an HTTP route. Curl GET of http://alexanderpruss.com/ and http://alexanderpruss.com/papers/index.html succeeded (HTTP 200; 14,180 and 59,353 bytes respectively), though urllib GETs returned 406. No security warning or authentication was bypassed. Both HTML pages were parsed for all linked titles and URLs. No link or text for the 2002 reply, Davey, or Clifton was present. The index links LCA.html, NewCosmo.html (1999 original), ResponseAandJ.html (different reply), and RPSR.html. None is the requested 2002 reply. The sole Oppy mention in the index concerns ontological arguments. No further target-paper download lead was found. Saved: pruss-author-home-http.html and pruss-author-papers-index-http.html. The full-body access boundary for the 2002 reply is unchanged. Parent is independently fetching LCA by the working HTTP route; earlier indexed-text limitation should be superseded if its direct fetch succeeds.

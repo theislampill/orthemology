@@ -1,0 +1,13 @@
+import ApproximateRepairIdentification
+#check @Orthemology.Tranche2.BinaryApproxGood
+#print axioms Orthemology.Tranche2.BinaryApproxGood
+#check @Orthemology.Tranche2.eventual_approximate_binary_good_decodes
+#print axioms Orthemology.Tranche2.eventual_approximate_binary_good_decodes
+#check @Orthemology.Tranche2.no_information_linear_tolerance
+#print axioms Orthemology.Tranche2.no_information_linear_tolerance
+#check @Orthemology.Tranche2.countable_positive_eventual_approximate_repairs
+#print axioms Orthemology.Tranche2.countable_positive_eventual_approximate_repairs
+#check @Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score
+#print axioms Orthemology.Tranche2.FiniteQuery.measurable_eventual_approximate_score
+#check @Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration
+#print axioms Orthemology.Tranche2.FiniteQuery.countable_positive_approximate_causal_restoration

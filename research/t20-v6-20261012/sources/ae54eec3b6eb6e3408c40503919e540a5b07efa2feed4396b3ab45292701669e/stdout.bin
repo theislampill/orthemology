@@ -1,0 +1,101 @@
+{
+  "status": "PASS_FINITE_POPULATION_ONLY",
+  "checks": {
+    "independent_D_comparisons": 46656,
+    "state_probability_and_Bellman_checks": 139968,
+    "machines": 46656,
+    "parity_dimensions": 6,
+    "proper_subset_marginal_equalities": 498,
+    "projected_cell_weight_checks": 9324,
+    "mixture_pair_profiles": 83
+  },
+  "start_state_atomic_mass_histogram": {
+    "0": 37560,
+    "1": 9032,
+    "1/2": 64
+  },
+  "negative_controls": {
+    "D_FROM_IMMEDIATE_OUTPUT_ONLY": true,
+    "ATOMIC_MASS_EQUALS_INDICATOR_D": true,
+    "ZERO_RESIDUAL_IN_INFINITE_BUDGET": true,
+    "BLIND_FULL_PARITY_MARGINAL": true,
+    "PROFILE_MOVEMENT_IMPLIES_RESTORATION": true,
+    "DROP_STRICT_POSITIVE_GAP": true
+  },
+  "negative_control_scope": "Five concrete finite/certificate counterexamples; sixth is a finite illustration of an independently proved limit counterexample, not a kernel mutation test.",
+  "parity": [
+    {
+      "n": 3,
+      "proper_subsets": 7,
+      "support_per_parity": 4,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "n": 4,
+      "proper_subsets": 15,
+      "support_per_parity": 8,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "n": 5,
+      "proper_subsets": 31,
+      "support_per_parity": 16,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "n": 6,
+      "proper_subsets": 63,
+      "support_per_parity": 32,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "n": 7,
+      "proper_subsets": 127,
+      "support_per_parity": 64,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    },
+    {
+      "n": 8,
+      "proper_subsets": 255,
+      "support_per_parity": 128,
+      "pairwise_mixture": [
+        "5/8",
+        "1/8",
+        "1/8",
+        "1/8"
+      ]
+    }
+  ],
+  "raw_rows": {
+    "file": "mealy_3state.jsonl",
+    "bytes": 3418898,
+    "sha256": "5172fae5db5aa677b6b5d89e5e5b9a05e4571250fc32d5293c3ff4229e5b7c76"
+  },
+  "kernel_verified": false,
+  "historical_population_replayed": false
+}

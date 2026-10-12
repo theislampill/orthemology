@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-11T22:15:30.250144+00:00",
+  "scope": "Two complete contract-body returns. Controller owns prior direct full reading; this corroborates intended requirements and does not add another validator run or new test result.",
+  "records": [
+    {
+      "sha256": "25a529b4ed76125f2a10acc824ead56a76ff3d35814457b00b59e07a944fedb4",
+      "path": "t20-consolidation-20261011/catalogue/objects/25/25a529b4ed76125f2a10acc824ead56a76ff3d35814457b00b59e07a944fedb4",
+      "bytes": 2478,
+      "lines": 11,
+      "read_ranges": [
+        [
+          1,
+          11
+        ]
+      ],
+      "reading_mode": "independent_full_return_after_controller_full_source_read",
+      "role": "corroborating_governance_contract_prose",
+      "prior_ledger": "t20-v6-20261011/controller_chain/current_decision_prose/READ_LEDGER.json",
+      "prior_record_index": 2,
+      "assessment": "Decision0003 line7 requires governance-derived, nondiscretionary applicability. Nonfactive procedure reliability and result-free pathway remain distinct from claim-wise factive truth linkage. Historical machine-check claims are attributed, not new execution.",
+      "fresh_source_execution": false
+    },
+    {
+      "sha256": "cc9d4913a8c69406822a084314548f6315a481887668e66ad4a2a90a4372805f",
+      "path": "t20-consolidation-20261011/catalogue/objects/cc/cc9d4913a8c69406822a084314548f6315a481887668e66ad4a2a90a4372805f",
+      "bytes": 8317,
+      "lines": 47,
+      "read_ranges": [
+        [
+          1,
+          47
+        ]
+      ],
+      "reading_mode": "independent_full_return_after_controller_full_source_read",
+      "role": "corroborating_governance_contract_prose",
+      "prior_ledger": "t20-v6-20261011/controller_chain/current_decision_prose/READ_LEDGER.json",
+      "prior_record_index": 21,
+      "assessment": "Decision0012 amendmentD8 line3 promises claim req_reason equality with governance derivation; section6 line35 promises claim-level and episode-level pathway recomputation. It explicitly limits mutation-suite success to enumerated malformed classes, so this finding does not convert that finite historical claim into a completeness claim.",
+      "fresh_source_execution": false
+    }
+  ],
+  "previous_correction_sha256": "305a15d0d9d78b727af430336e6eb38e5841939225906623f9bc98a530ded9dc",
+  "previous_correction_copy": "t20-v6-20261011/empirical_occurrence/verdict_semantics/CORRECTION_BEFORE_DECISION_CORROBORATION.json",
+  "finding": "The missing comparison against the complete episode governance path violates an express intended requirement, not merely an optional stronger interface. Claim-specific projection checks remain a genuine narrower surviving control."
+}

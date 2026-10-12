@@ -1,0 +1,3 @@
+# Guarded saturation proof specification
+
+Verify the already written synchronous guarded exact-support recurrence from the all-unreachable table. Keep finite rule labels, ordered finite arity, fixed Prop guards, union supports and rational occurrence-additive prices. Prove bounded-height minimum semantics by induction through an actual update operation; derive global stabilization at the inherited grammar bound under nonnegative prices. Do not identify the recurrence with bounded-tree minima by definition. Preserve all predecessors byte-identically. No effective compiler, Python correspondence, source authenticity, philosophical warrant, integration or original-discovery claim.

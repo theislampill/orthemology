@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-11T13:41:56.539286+00:00",
+  "source_mutation": "none; all originals read-only",
+  "readings": [
+    {
+      "owner": "joint-atomic-gradient-lift-20261010",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/joint-atomic-geometry-preservation-20261010.zip--2158f674d5b6/joint-atomic-geometry-preservation-20261010/evidence/joint-atomic-gradient-lift-20261010/RESULT.md",
+      "sha256": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+      "bytes": 24233,
+      "read_scope": "Lines 40\u2013169: sections 2\u20137 plus section 8 heading. Other lines not substantively inspected."
+    },
+    {
+      "owner": "nonnegative-moving-gradient-escape-20261011",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/nonnegative-moving-gradient-escape-preservation-20261011.zip--aee6908bc598/nonnegative-moving-gradient-escape-20261011/RESULT.md",
+      "sha256": "5bb21aa5aa388b3dff9a42cb48ad5e62a5b2c4da42971030a197caff583a980d",
+      "bytes": 5936,
+      "read_scope": "Complete report; predetermined schedule, actual escape, common-control obstruction."
+    },
+    {
+      "owner": "grouped-source-audit-gradient-20261011",
+      "path": "grouped-source-audit-gradient-20261011/RESULT.md",
+      "sha256": "ff42e395bcb649c267374eb5d6e218bc0fd6e21079104be9a5cd97b77e0d233e",
+      "bytes": 20418,
+      "read_scope": "Complete report, sections 1\u20138, read as 20418-byte tool output."
+    },
+    {
+      "owner": "positive-high-order-correction-20261011",
+      "path": "positive-high-order-correction-20261011/RESULT.md",
+      "sha256": "72dccf1dd0f129899234b6fcaf43db50e2b289c73fbfd8a3e71e88b8d334dcdb",
+      "bytes": 17631,
+      "read_scope": "Complete report, ownership and sections 1\u20134 plus evidence, read as 17631-byte tool output."
+    },
+    {
+      "owner": "geometry chapter",
+      "path": "t20-consolidation-20261011/geometry/GEOMETRY_MOMENTS_SYNTHESIS.md",
+      "sha256": "5e1fbc561c7bbd330eb59e5f9f183009f3c921211b15c10441095c29495a0f31",
+      "bytes": 46787,
+      "read_scope": "Section 1 and sections 4\u20139 inspected; output attempts spanning the entire file were truncated, not counted as a full fresh reading."
+    },
+    {
+      "owner": "Pro I\u2013L",
+      "path": "t20-depth-reassessment-20261011/pro-intake/pro-authored/authorial_111min/Cross_Front_Theorems.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "read_scope": "Lines 480\u2013795: sections 12\u201315, Theorems I/J/K/L and all surrounding guards."
+    },
+    {
+      "owner": "gradient-discretization-fidelity-20261010",
+      "path": "gradient-discretization-fidelity-20261010/RESULT.md",
+      "sha256": "bbc3ed3a72fa3d9623f8e8fdbdc76de7132e016af000ce56cebb5e2927ffa164",
+      "bytes": 15601,
+      "read_scope": "Complete report, sections 1\u20137, including exact guarded quartic scheme."
+    },
+    {
+      "owner": "geometry register",
+      "path": "t20-consolidation-20261011/geometry/SOURCE_REGISTER.json",
+      "sha256": "dbbb50fcbf56051d567b3a129ceea845fee92b4291d239994f0234f487f6735d",
+      "bytes": 20806,
+      "read_scope": "Parsed all owner/path/hash entries; the initial print was truncated. Owner lookup and overlap scan are recorded separately."
+    }
+  ]
+}

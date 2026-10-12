@@ -156,9 +156,9 @@ authored:
     meniscus: MENISCUS_NOT_REACHED
     natural_closure: NATURAL_CLOSURE_NOT_REACHED
 derived:
-  source_tree_digest: 9c74d9d7cfe4f54933246b75ed90f80a4984e06163f546d09dcaef95d2ebeb41
+  source_tree_digest: 3b64fd047cdec451d8292959a77c5ae6fdee16d40fca6589b650f474c74e1b6c
   source_tree_digest_policy: docs/project-state-inputs.yaml
-  tracked_files: 9707
+  tracked_files: 16073
   decision_ids:
   - '0001'
   - '0002'
@@ -296,11 +296,12 @@ derived:
   - validate_source_status.py
   - validate_sourcing_state.py
   - validate_state_convergence.py
+  - validate_t20_v6_projection.py
   - validate_terminology_etymology.py
   - validate_type_token_semantics.py
   - validate_v5_successors.py
   - validate_verdict_semantics.py
-  validator_count: 64
+  validator_count: 65
   fixture_counts:
     verdict: 7
     reason: 8

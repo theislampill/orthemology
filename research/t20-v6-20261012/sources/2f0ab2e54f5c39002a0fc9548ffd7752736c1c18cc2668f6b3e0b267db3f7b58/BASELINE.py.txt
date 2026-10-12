@@ -1,0 +1,36 @@
+"""Typed red baseline; recovered model imported without modification."""
+from pathlib import Path
+from dataclasses import dataclass,replace
+import importlib.util,sys,hashlib
+ROOT=Path(__file__).resolve().parents[3]
+MODEL_PATH=ROOT/'recovery-t20/addendum/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py'
+assert hashlib.sha256(MODEL_PATH.read_bytes()).hexdigest()=='f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc'
+spec=importlib.util.spec_from_file_location('valued_recovered_model',MODEL_PATH)
+Model=importlib.util.module_from_spec(spec);sys.modules[spec.name]=Model;spec.loader.exec_module(Model)
+@dataclass(frozen=True)
+class End:
+    product_q:int
+    kind:str
+    subject:str
+    peer_identity:str|None
+@dataclass(frozen=True)
+class Choice:
+    end:End
+    exercise:object
+    def with_end(self,end):return Choice(end,self.exercise)
+    def with_product_intention(self,q):
+        return Choice(replace(self.end,product_q=q),Model.Exercise(self.exercise.bearer,q,self.exercise.setting))
+def make_context(q,kind):
+    return {'q':q,'catalogue':Model.Catalogue(('e0','e1')),'originals':{g:Model.Original(g) for g in ('A','B')},
+            'ends':{g:End(q,kind,g,'B_original' if g=='A' else 'A_original') for g in ('A','B')}}
+def ordinary_choices(ctx):return tuple(Choice(ctx['ends'][g],Model.own_policy(ctx['originals'][g],ctx['q'])) for g in ('A','B'))
+def execute(ctx,choices,product_transform=None):
+    by={c.exercise.bearer:c.exercise for c in choices};base=Model.execute(ctx['catalogue'],by.get('A'),by.get('B'))
+    return {'choices':tuple(choices),'base':base,'full_end_satisfied':{g:False for g in by},'policy_conforms':True,'joint_relation':False,'source_roots':frozenset(),'efficient_edges':(),'structural_nonreceipt':False}
+def forecast(ctx):return {}
+def satisfies(end,run):return False
+def active_solutions(ctx):return ()
+def shifted_product(c,events):return events
+def source_comparison(q):
+    empty={'generic_joint_end':False,'original_peer_end':False,'designated_B_end':False,'original_roots':frozenset(),'local_product':frozenset(),'created_inventory':frozenset()}
+    return {'plural':empty,'derived':empty}

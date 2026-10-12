@@ -1,0 +1,132 @@
+{
+  "checked_utc": "2026-10-10T10:36:38.714256+00:00",
+  "status": "pass",
+  "author_files": [
+    {
+      "path": "CHECK_RESULTS.json",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "MANIFEST.json",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "SOURCES.json",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "SOURCE_CURRENTNESS.json",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/01-bayes-feasibility-compatibility-20261010-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/02-constrained-learning-possibility-20261010-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/03-repeatable-channel-constraints-20261010-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/04-tensor-moment-continuation-20261009-H_CONTINUATION_SOURCE.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/05-audit-continuation-transport-20261010-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/06-stochastic-inquiry-quotient-transport-20261010-ADDENDUM.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/07-tensor-moment-continuation-20261009-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/08-information-geometry-transport-20261009-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "inputs/09-channel-natural-repair-20261009-RESULT.md",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "verification.txt",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    },
+    {
+      "path": "verify.py",
+      "author_unchanged": true,
+      "snapshot_unchanged": true
+    }
+  ],
+  "inherited_inputs": [
+    {
+      "path": "bayes-feasibility-compatibility-20261010/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "constrained-learning-possibility-20261010/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "repeatable-channel-constraints-20261010/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "still_matches": true
+    },
+    {
+      "path": "audit-continuation-transport-20261010/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "still_matches": true
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "information-geometry-transport-20261009/RESULT.md",
+      "still_matches": true
+    },
+    {
+      "path": "channel-natural-repair-20261009/RESULT.md",
+      "still_matches": true
+    }
+  ],
+  "author_stdout_exact_match": true,
+  "independent_replay_exit_code": 0,
+  "independent_stdout_exact_match": true
+}

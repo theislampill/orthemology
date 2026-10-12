@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-10T10:02:47.769356+00:00",
+  "external_sources": [
+    {
+      "author": "Stephan Weis",
+      "title": "A note on faces of convex sets",
+      "version": "arXiv:2404.00832v2, 3 August 2024",
+      "url": "https://arxiv.org/html/2404.00832v2",
+      "inspected": [
+        "Section 4 Proposition 4.1 and attribution",
+        "Section 9 Theorem 9.1, Corollaries 9.2 and 9.3",
+        "Section 11 Lemma 11.5"
+      ],
+      "supports": "Generated faces via bounded density domination; absolute-continuity class is a face; bounded two-sided density class; norm-closed countable simplex faces.",
+      "limitation": "Not claimed to state the present exact Bayes classification or Polish weak-face theorem verbatim. No earliest-priority claim."
+    },
+    {
+      "author": "Stephan Weis",
+      "title": "A Note on Faces of Convex Sets",
+      "url": "https://journalofconvexanalysis.com/articles/jca32046/",
+      "inspected": [
+        "Publisher metadata and references"
+      ],
+      "supports": "Published JCA 32 (2025), No.3, 901\u2013919; DOI 10.68381/jca32046.",
+      "limitation": "Journal metadata are distinct from the inspected arXiv text."
+    },
+    {
+      "author": "Onno van Gaans",
+      "title": "Probability measures on metric spaces",
+      "url": "https://pub.math.leidenuniv.nl/~gaansowvan/jancol1.pdf",
+      "inspected": [
+        "Opening provenance and source references",
+        "Sections 2\u20134, including probability regularity, tightness and finite discrete approximation"
+      ],
+      "supports": "Standard metric probability ingredients and their textbook ancestry.",
+      "limitation": "Not an exact-source claim for the present weakly closed face classification. The full proof is supplied independently."
+    }
+  ],
+  "secondary_attribution_only": [
+    {
+      "author": "E. M. Alfsen",
+      "title": "Compact Convex Sets and Boundary Integrals",
+      "year": 1971,
+      "page": 121,
+      "via": "Weis, Section 4",
+      "limitation": "Original book page not inspected."
+    }
+  ],
+  "claims": "Ordinary mathematical transport application, no field novelty, kernel proof, integration or closure."
+}

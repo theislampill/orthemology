@@ -1,0 +1,61 @@
+{
+  "recorded_utc": "2026-10-10T07:24:40.033995+00:00",
+  "scope": "Local inherited-report check and occurrence-sensitive application only. No new primary article reading or actual device/human verification.",
+  "files": [
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP19__necessary-truth-operative-basing-20261009__REPORT.md",
+      "bytes": 15382,
+      "sha256": "f113e0a856bb8b77da573977317f7d70eb04c704a1ddb78442579124572a4810",
+      "git_blob_sha1": "ac0af7f84e8f4b8a0e72ccd58574ff1953c79f97",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "recorded_connector_blob_sha1": "15e864dd9b9a31a5203f31fe9b080261afc7de4e",
+      "serialization_note": "Retained local copy has one extra final LF; removing exactly it reproduces connector blob. Local input left unchanged.",
+      "normalized_bytes": 15381,
+      "normalized_git_blob_sha1": "15e864dd9b9a31a5203f31fe9b080261afc7de4e",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP19__recognition-operative-content-20261009__REPORT.md",
+      "bytes": 13045,
+      "sha256": "709b13fb658fa430851fdb6dcd43197184f251e6ba3765e81539fb046db48a86",
+      "git_blob_sha1": "9a61203ec1e55001c5af4a32bf2b3b46ab2977ac",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "recorded_connector_blob_sha1": "ae9df1e1122fd945ee04594ea3d3b1e7eaab8b3e",
+      "serialization_note": "Retained local copy has one extra final LF; removing exactly it reproduces connector blob. Local input left unchanged.",
+      "normalized_bytes": 13044,
+      "normalized_git_blob_sha1": "ae9df1e1122fd945ee04594ea3d3b1e7eaab8b3e",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP19/recognition-operative-content-20261009/REPORT.md"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/sources/S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "bytes": 8348,
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+      "git_blob_sha1": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "matches_pinned_blob": true
+    },
+    {
+      "path": "warranted-learning-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "git_blob_sha1": "7823c373395b7d50221da8e4493c918bfce848f0",
+      "pinned_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "recorded_connector_blob_sha1": "7823c373395b7d50221da8e4493c918bfce848f0",
+      "matches_pinned_blob": true,
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md"
+    },
+    {
+      "path": "source-audit-revision-20261010/RESULT.md",
+      "bytes": 29885,
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "git_blob_sha1": "49fc444b1562b6ccaa2f9978618d0c6d5a288e64"
+    },
+    {
+      "path": "audit-aware-correction-root-20261010/TRIPLE_INTERACTION.md",
+      "bytes": 2790,
+      "sha256": "84b17193706810cbf7d85b62b7dd9fffc1f5d9712816ae4558a9a342af9dc4fc",
+      "git_blob_sha1": "21207bfee9bd8fd16a04f32d9ec3c942b46a1c59"
+    }
+  ]
+}

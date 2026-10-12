@@ -1,0 +1,39 @@
+import ReviewerAdaptiveControls
+#check @HiddenParity.IndependentAdaptive.selected_count_strict
+#print axioms HiddenParity.IndependentAdaptive.selected_count_strict
+#check @HiddenParity.IndependentAdaptive.consumed_index_unique
+#print axioms HiddenParity.IndependentAdaptive.consumed_index_unique
+#check @HiddenParity.IndependentAdaptive.always_zero_action
+#print axioms HiddenParity.IndependentAdaptive.always_zero_action
+#check @HiddenParity.IndependentAdaptive.always_zero_receipt
+#print axioms HiddenParity.IndependentAdaptive.always_zero_receipt
+#check @HiddenParity.IndependentAdaptive.unused_tape_one_recurs
+#print axioms HiddenParity.IndependentAdaptive.unused_tape_one_recurs
+#check @HiddenParity.IndependentAdaptive.unused_pair_not_recurrent
+#print axioms HiddenParity.IndependentAdaptive.unused_pair_not_recurrent
+#check @HiddenParity.IndependentAdaptive.same_action_new_state_uses_index_zero
+#print axioms HiddenParity.IndependentAdaptive.same_action_new_state_uses_index_zero
+#check @HiddenParity.IndependentAdaptive.correct_second_receipt
+#print axioms HiddenParity.IndependentAdaptive.correct_second_receipt
+#check @HiddenParity.IndependentAdaptive.action_only_counter_cell_differs
+#print axioms HiddenParity.IndependentAdaptive.action_only_counter_cell_differs
+#check @HiddenParity.IndependentAdaptive.source_consistency_at_second_step
+#print axioms HiddenParity.IndependentAdaptive.source_consistency_at_second_step
+#check @HiddenParity.IndependentAdaptive.unrelated_readout_default_not_initial_state
+#print axioms HiddenParity.IndependentAdaptive.unrelated_readout_default_not_initial_state
+#check @HiddenParity.IndependentAdaptive.reveal_internal_empty
+#print axioms HiddenParity.IndependentAdaptive.reveal_internal_empty
+#check @HiddenParity.IndependentAdaptive.reveal_no_zero_exit
+#print axioms HiddenParity.IndependentAdaptive.reveal_no_zero_exit
+#check @HiddenParity.IndependentAdaptive.reveal_computed_target_empty
+#print axioms HiddenParity.IndependentAdaptive.reveal_computed_target_empty
+#check @HiddenParity.IndependentAdaptive.reveal_pair_after_first
+#print axioms HiddenParity.IndependentAdaptive.reveal_pair_after_first
+#check @HiddenParity.IndependentAdaptive.reveal_stack_parity
+#print axioms HiddenParity.IndependentAdaptive.reveal_stack_parity
+#check @HiddenParity.IndependentAdaptive.reveal_policy_measurable
+#print axioms HiddenParity.IndependentAdaptive.reveal_policy_measurable
+#check @HiddenParity.IndependentAdaptive.reveal_policy_almost_sure_parity
+#print axioms HiddenParity.IndependentAdaptive.reveal_policy_almost_sure_parity
+#check @HiddenParity.IndependentAdaptive.canonical_revealing_counterexample
+#print axioms HiddenParity.IndependentAdaptive.canonical_revealing_counterexample

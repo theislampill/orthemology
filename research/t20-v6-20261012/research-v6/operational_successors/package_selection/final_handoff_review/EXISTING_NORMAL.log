@@ -1,0 +1,179 @@
+test_cas_once_two_logical_views_and_deterministic_receipt (test_materialise_selection.MaterialiserControls.test_cas_once_two_logical_views_and_deterministic_receipt) ... ok
+test_casefold_directory_alias_rejected (test_materialise_selection.MaterialiserControls.test_casefold_directory_alias_rejected) ... ok
+test_digest_drift_before_writes (test_materialise_selection.MaterialiserControls.test_digest_drift_before_writes) ... ok
+test_existing_output_untouched (test_materialise_selection.MaterialiserControls.test_existing_output_untouched) ... ok
+test_identity_only_is_not_copied_and_dependency_stays_blocked (test_materialise_selection.MaterialiserControls.test_identity_only_is_not_copied_and_dependency_stays_blocked) ... ok
+test_identity_only_view_rejected (test_materialise_selection.MaterialiserControls.test_identity_only_view_rejected) ... ok
+test_independent_public_eligibility_rejected (test_materialise_selection.MaterialiserControls.test_independent_public_eligibility_rejected) ... ok
+test_malformed_and_stale_plan_digest (test_materialise_selection.MaterialiserControls.test_malformed_and_stale_plan_digest) ... ok
+test_missing_views_or_unknown_view_identity_rejected (test_materialise_selection.MaterialiserControls.test_missing_views_or_unknown_view_identity_rejected) ... ok
+test_omitted_dependency_blocker_rejected (test_materialise_selection.MaterialiserControls.test_omitted_dependency_blocker_rejected) ... ok
+test_plan_state_and_execution_rejected (test_materialise_selection.MaterialiserControls.test_plan_state_and_execution_rejected) ... ok
+test_private_metadata_in_public_plan_rejected (test_materialise_selection.MaterialiserControls.test_private_metadata_in_public_plan_rejected) ... ok
+test_private_resolver_exact_parity (test_materialise_selection.MaterialiserControls.test_private_resolver_exact_parity) ... ok
+test_protected_root_overlap (test_materialise_selection.MaterialiserControls.test_protected_root_overlap) ... ok
+test_source_symlink_rejected (test_materialise_selection.MaterialiserControls.test_source_symlink_rejected) ... ok
+test_symlink_destination_parent (test_materialise_selection.MaterialiserControls.test_symlink_destination_parent) ... ok
+test_unsafe_collision_and_prefix_triplet (test_materialise_selection.MaterialiserControls.test_unsafe_collision_and_prefix_triplet) ... ok
+test_v5_provider_becomes_self_contained_cas (test_materialise_selection.MaterialiserControls.test_v5_provider_becomes_self_contained_cas) ... ok
+test_boolean_integer_receipt_confusion_rejected (test_materialise_selection.ReconstructionControls.test_boolean_integer_receipt_confusion_rejected) ... ok
+test_existing_output_untouched (test_materialise_selection.ReconstructionControls.test_existing_output_untouched) ... ok
+test_map_cannot_add_unselected_views_even_if_rehashed (test_materialise_selection.ReconstructionControls.test_map_cannot_add_unselected_views_even_if_rehashed) ... ok
+test_missing_completion_receipt_rejected (test_materialise_selection.ReconstructionControls.test_missing_completion_receipt_rejected) ... ok
+test_output_inside_input_rejected (test_materialise_selection.ReconstructionControls.test_output_inside_input_rejected) ... ok
+test_output_must_be_fresh_sibling (test_materialise_selection.ReconstructionControls.test_output_must_be_fresh_sibling) ... ok
+test_sibling_intervened_prefix_triplet (test_materialise_selection.ReconstructionControls.test_sibling_intervened_prefix_triplet) ... ok
+test_stale_view_map (test_materialise_selection.ReconstructionControls.test_stale_view_map) ... ok
+test_symlink_metadata_rejected (test_materialise_selection.ReconstructionControls.test_symlink_metadata_rejected) ... ok
+test_symlink_store_body_rejected (test_materialise_selection.ReconstructionControls.test_symlink_store_body_rejected) ... ok
+test_tampered_store_body_before_writes (test_materialise_selection.ReconstructionControls.test_tampered_store_body_before_writes) ... ok
+test_unsafe_traversal_even_with_rebound_hashes (test_materialise_selection.ReconstructionControls.test_unsafe_traversal_even_with_rebound_hashes) ... ok
+test_unselected_store_body_rejected (test_materialise_selection.ReconstructionControls.test_unselected_store_body_rejected) ... ok
+test_valid_two_views_are_independent_copies (test_materialise_selection.ReconstructionControls.test_valid_two_views_are_independent_copies) ... ok
+test_casefold_deep_parent_with_intervening_sibling_rejected (test_plan_selection.PlannerControls.test_casefold_deep_parent_with_intervening_sibling_rejected) ... ok
+test_casefold_parent_collision_rejected (test_plan_selection.PlannerControls.test_casefold_parent_collision_rejected) ... ok
+test_drift_rejected (test_plan_selection.PlannerControls.test_drift_rejected) ... ok
+test_duplicate_json_rejected (test_plan_selection.PlannerControls.test_duplicate_json_rejected) ... ok
+test_exact_positive_determinism (test_plan_selection.PlannerControls.test_exact_positive_determinism) ... ok
+test_explicit_v5_reuse_eligible (test_plan_selection.PlannerControls.test_explicit_v5_reuse_eligible) ... ok
+test_missing_disposition_rejected (test_plan_selection.PlannerControls.test_missing_disposition_rejected) ... ok
+test_no_materializing_omitted_views (test_plan_selection.PlannerControls.test_no_materializing_omitted_views) ... ok
+test_nonfinite_json_rejected (test_plan_selection.PlannerControls.test_nonfinite_json_rejected) ... ok
+test_nonplanner_authority_refused (test_plan_selection.PlannerControls.test_nonplanner_authority_refused) ... ok
+test_parent_collision_with_intervening_sibling_rejected (test_plan_selection.PlannerControls.test_parent_collision_with_intervening_sibling_rejected) ... ok
+test_primary_bulk_rejected (test_plan_selection.PlannerControls.test_primary_bulk_rejected) ... ok
+test_private_v5_reuse_rejected (test_plan_selection.PlannerControls.test_private_v5_reuse_rejected) ... ok
+test_projection_requires_receipt (test_plan_selection.PlannerControls.test_projection_requires_receipt) ... ok
+test_role_filter_needs_exact_resolution (test_plan_selection.PlannerControls.test_role_filter_needs_exact_resolution) ... ok
+test_symlink_source_ancestor (test_plan_selection.PlannerControls.test_symlink_source_ancestor) ... ok
+test_unsafe_views (test_plan_selection.PlannerControls.test_unsafe_views) ... ok
+test_windows_forbidden_path_characters_rejected (test_plan_selection.PlannerControls.test_windows_forbidden_path_characters_rejected) ... ok
+test_similar_nondevice_names_remain_allowed (test_plan_selection.WindowsDeviceAliasControls.test_similar_nondevice_names_remain_allowed) ... ok
+test_superscript_device_names_rejected (test_plan_selection.WindowsDeviceAliasControls.test_superscript_device_names_rejected) ... ok
+test_accidental_selected_value_change_is_detected_after_serialization (test_project_metadata.ProjectionControls.test_accidental_selected_value_change_is_detected_after_serialization) ... ok
+test_accidental_unselected_value_change_is_detected_after_serialization (test_project_metadata.ProjectionControls.test_accidental_unselected_value_change_is_detected_after_serialization) ... ok
+test_all_scientific_strings_and_types_unchanged (test_project_metadata.ProjectionControls.test_all_scientific_strings_and_types_unchanged) ... ok
+test_arbitrary_original_json_value_can_be_explicit_locator (test_project_metadata.ProjectionControls.test_arbitrary_original_json_value_can_be_explicit_locator) ... ok
+test_changes_exactly_one_approved_value_and_deterministic (test_project_metadata.ProjectionControls.test_changes_exactly_one_approved_value_and_deterministic) ... ok
+test_decimal_old_value_is_checked_without_float_rounding (test_project_metadata.ProjectionControls.test_decimal_old_value_is_checked_without_float_rounding) ... ok
+test_duplicate_json_keys_rejected_in_all_inputs (test_project_metadata.ProjectionControls.test_duplicate_json_keys_rejected_in_all_inputs) ... ok
+test_duplicate_pointer_rejected_in_specs_and_approvals (test_project_metadata.ProjectionControls.test_duplicate_pointer_rejected_in_specs_and_approvals) ... ok
+test_empty_object_key_and_numeric_object_keys_are_literal (test_project_metadata.ProjectionControls.test_empty_object_key_and_numeric_object_keys_are_literal) ... ok
+test_empty_replacements_and_empty_approval_rejected (test_project_metadata.ProjectionControls.test_empty_replacements_and_empty_approval_rejected) ... ok
+test_explicit_array_indices_and_pointer_escapes (test_project_metadata.ProjectionControls.test_explicit_array_indices_and_pointer_escapes) ... ok
+test_explicit_excluded_and_unresolved_identity_records (test_project_metadata.ProjectionControls.test_explicit_excluded_and_unresolved_identity_records) ... ok
+test_identity_and_form_mismatches_rejected (test_project_metadata.ProjectionControls.test_identity_and_form_mismatches_rejected) ... ok
+test_identity_records_require_permission_exact_identity_and_replay_block (test_project_metadata.ProjectionControls.test_identity_records_require_permission_exact_identity_and_replay_block) ... ok
+test_integral_decimal_tokens_keep_decimal_type_and_exponent (test_project_metadata.ProjectionControls.test_integral_decimal_tokens_keep_decimal_type_and_exponent) ... ok
+test_invalid_json_encoding_and_bom_rejected (test_project_metadata.ProjectionControls.test_invalid_json_encoding_and_bom_rejected) ... ok
+test_invalid_pointer_and_array_aliases_rejected (test_project_metadata.ProjectionControls.test_invalid_pointer_and_array_aliases_rejected) ... ok
+test_lossless_unselected_numbers_including_huge_exponents (test_project_metadata.ProjectionControls.test_lossless_unselected_numbers_including_huge_exponents) ... ok
+test_missing_manifest_fields_rejected (test_project_metadata.ProjectionControls.test_missing_manifest_fields_rejected) ... ok
+test_missing_pointer_rejected (test_project_metadata.ProjectionControls.test_missing_pointer_rejected) ... ok
+test_nonbytes_inputs_rejected (test_project_metadata.ProjectionControls.test_nonbytes_inputs_rejected) ... ok
+test_nonfinite_constants_rejected_in_all_inputs (test_project_metadata.ProjectionControls.test_nonfinite_constants_rejected_in_all_inputs) ... ok
+test_omitted_approved_pointer_rejected (test_project_metadata.ProjectionControls.test_omitted_approved_pointer_rejected) ... ok
+test_parent_child_overlap_rejected_in_either_order (test_project_metadata.ProjectionControls.test_parent_child_overlap_rejected_in_either_order) ... ok
+test_pointer_prefix_without_token_overlap_is_allowed (test_project_metadata.ProjectionControls.test_pointer_prefix_without_token_overlap_is_allowed) ... ok
+test_private_decision_or_pointer_cannot_leak_into_receipt (test_project_metadata.ProjectionControls.test_private_decision_or_pointer_cannot_leak_into_receipt) ... ok
+test_public_receipt_binds_exact_inputs_and_omits_original_locator (test_project_metadata.ProjectionControls.test_public_receipt_binds_exact_inputs_and_omits_original_locator) ... ok
+test_receipt_and_projected_bytes_do_not_alias_input_objects (test_project_metadata.ProjectionControls.test_receipt_and_projected_bytes_do_not_alias_input_objects) ... ok
+test_relative_view_reference_allowed (test_project_metadata.ProjectionControls.test_relative_view_reference_allowed) ... ok
+test_stale_old_values_and_bool_numeric_equivalence_rejected (test_project_metadata.ProjectionControls.test_stale_old_values_and_bool_numeric_equivalence_rejected) ... ok
+test_top_level_array_supported (test_project_metadata.ProjectionControls.test_top_level_array_supported) ... ok
+test_unapproved_pointer_and_role_mismatch_rejected (test_project_metadata.ProjectionControls.test_unapproved_pointer_and_role_mismatch_rejected) ... ok
+test_unknown_schema_and_fields_rejected (test_project_metadata.ProjectionControls.test_unknown_schema_and_fields_rejected) ... ok
+test_unsafe_relative_references_rejected (test_project_metadata.ProjectionControls.test_unsafe_relative_references_rejected) ... ok
+test_wrong_source_digest_in_spec_or_approval_rejected (test_project_metadata.ProjectionControls.test_wrong_source_digest_in_spec_or_approval_rejected) ... ok
+test_materialiser_rechecks_qualification_body_before_writes (test_received_public.ReceivedPublicControls.test_materialiser_rechecks_qualification_body_before_writes) ... ok
+test_original_must_be_identity_only (test_received_public.ReceivedPublicControls.test_original_must_be_identity_only) ... ok
+test_receipt_cannot_claim_verified_equivalence (test_received_public.ReceivedPublicControls.test_receipt_cannot_claim_verified_equivalence) ... ok
+test_receipt_duplicate_keys_rejected (test_received_public.ReceivedPublicControls.test_receipt_duplicate_keys_rejected) ... ok
+test_receipt_must_be_included_metadata (test_received_public.ReceivedPublicControls.test_receipt_must_be_included_metadata) ... ok
+test_receipt_original_digest_mismatch (test_received_public.ReceivedPublicControls.test_receipt_original_digest_mismatch) ... ok
+test_receipt_public_digest_mismatch (test_received_public.ReceivedPublicControls.test_receipt_public_digest_mismatch) ... ok
+test_receipt_requires_exact_commit_and_safe_path (test_received_public.ReceivedPublicControls.test_receipt_requires_exact_commit_and_safe_path) ... ok
+test_receipt_requires_full_source_reading (test_received_public.ReceivedPublicControls.test_receipt_requires_full_source_reading) ... ok
+test_received_version_preserves_unverified_original_and_cas (test_received_public.ReceivedPublicControls.test_received_version_preserves_unverified_original_and_cas) ... ok
+test_source_cannot_mix_projection_receipt (test_received_public.ReceivedPublicControls.test_source_cannot_mix_projection_receipt) ... ok
+test_exact_axis_role_binding_and_scope_values (test_scope_resolver.ScopeResolverControls.test_exact_axis_role_binding_and_scope_values) ... ok
+test_formal_sentinel_primrec_is_preserved (test_scope_resolver.ScopeResolverControls.test_formal_sentinel_primrec_is_preserved) ... ok
+test_private_qualification_rejected (test_scope_resolver.ScopeResolverControls.test_private_qualification_rejected) ... ok
+test_private_ranges_rejected (test_scope_resolver.ScopeResolverControls.test_private_ranges_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 102 tests in 0.532s
+
+OK
+{
+  "schema": "t20-v6-source-scope-resolver-v1",
+  "status": "SCOPE_METADATA_PREPARATION_NOT_DISTRIBUTION_SELECTION",
+  "inputs": [
+    {
+      "name": "V6_READING_ASSOCIATIONS.jsonl",
+      "sha256": "83a3b6e59a79ac7906e0d6edaa5d100cdd2f8eec37ab52f707d4423968bb677f"
+    },
+    {
+      "name": "READING_LEDGER_SNAPSHOTS.json",
+      "sha256": "5c7ec1c7c0f064f5bc416abec86c9b6a13eccc6d7b4d041d6530b48e48222d29"
+    },
+    {
+      "name": "TERMINAL_PHYSICAL_SCOPE_OVERLAY.jsonl",
+      "sha256": "a8a0cc2211b6985bc0e0b3ff8aab907e21973b65f4abe6efb41ab1d895ab1e8d"
+    }
+  ],
+  "identities": 1,
+  "exact_association_records": 1,
+  "scope_and_range_multiset_equal": true,
+  "complete_recorded_scope_values_preserved": true,
+  "physical_axis_and_role_evidence_multiset_equal": true,
+  "artifact_axes": {
+    "CURRENT_V6_OUTPUT_ARTIFACT": 1
+  },
+  "full_output_private_marker_matches": 0,
+  "ledger_drift_records": [],
+  "resolver_sha256": "bb9f7a1a4a94f5681bca9504981c47e4772037e2bb6f0eab88d6822e4f02bedd",
+  "ledger_count": 1,
+  "limits": [
+    "Outer local source paths omitted; exact source selection and aliases are a separate resolver.",
+    "A recorded full/delta/selected/role scope retains its original meaning.",
+    "Ledger identity/pointer is provenance; no whole-ledger publication is inferred.",
+    "Scientific fixtures and actual source bodies were not changed or executed."
+  ]
+}
+{
+  "schema": "t20-v6-source-scope-resolver-v1",
+  "status": "SCOPE_METADATA_PREPARATION_NOT_DISTRIBUTION_SELECTION",
+  "inputs": [
+    {
+      "name": "V6_READING_ASSOCIATIONS.jsonl",
+      "sha256": "7e30ec672a0004583512a8155b0877c1fa181e2750b0fba7d714cbd8968f73ec"
+    },
+    {
+      "name": "READING_LEDGER_SNAPSHOTS.json",
+      "sha256": "8ddbbc3aa8b6e143dc27dd932ce381684c2b00d3a5c6d3f17643092c1f072c98"
+    },
+    {
+      "name": "TERMINAL_PHYSICAL_SCOPE_OVERLAY.jsonl",
+      "sha256": "338866ab5209920cbe667b8a2a7af0383be591101412f8c8e4ec5cf79a21818e"
+    }
+  ],
+  "identities": 1,
+  "exact_association_records": 1,
+  "scope_and_range_multiset_equal": true,
+  "complete_recorded_scope_values_preserved": true,
+  "physical_axis_and_role_evidence_multiset_equal": true,
+  "artifact_axes": {
+    "CURRENT_V6_OUTPUT_ARTIFACT": 1
+  },
+  "full_output_private_marker_matches": 0,
+  "ledger_drift_records": [],
+  "resolver_sha256": "7431ae74ee4f9eaab6ac910f6b0fb18b9ac0d951006720aff95395c5b8910536",
+  "ledger_count": 1,
+  "limits": [
+    "Outer local source paths omitted; exact source selection and aliases are a separate resolver.",
+    "A recorded full/delta/selected/role scope retains its original meaning.",
+    "Ledger identity/pointer is provenance; no whole-ledger publication is inferred.",
+    "Scientific fixtures and actual source bodies were not changed or executed."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "status",
+    "main_commit",
+    "main_tree",
+    "research_executed",
+    "repository_modified",
+    "kernel_verified",
+    "obligation_ids",
+    "obligation_statuses",
+    "output_hashes"
+  ],
+  "properties": {
+    "schema": {
+      "const": "orthemology-p02-research-checkpoint-v1"
+    },
+    "status": {
+      "const": "PARTIAL_RESEARCH_CHECKPOINT"
+    },
+    "main_commit": {
+      "const": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+    },
+    "main_tree": {
+      "const": "3d06e80277ce39286c94307e0f14b215bc94ed83"
+    },
+    "research_executed": {
+      "const": true
+    },
+    "repository_modified": {
+      "const": false
+    },
+    "kernel_verified": {
+      "const": false
+    },
+    "obligation_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "enum": [
+          "U05",
+          "U08",
+          "CV-R",
+          "CV-C",
+          "Q1c"
+        ]
+      }
+    },
+    "obligation_statuses": {
+      "type": "object"
+    },
+    "output_hashes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": true
+}

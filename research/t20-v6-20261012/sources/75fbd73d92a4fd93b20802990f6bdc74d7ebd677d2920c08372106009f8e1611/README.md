@@ -1,0 +1,1 @@
+This is a new recovery package of six exact surviving attempt-0002 documents. It is NOT the missing attempt-0002 checkpoint and does NOT recover its absent Lean/Python sources, tests, receipt, or seal. New archive identity only.

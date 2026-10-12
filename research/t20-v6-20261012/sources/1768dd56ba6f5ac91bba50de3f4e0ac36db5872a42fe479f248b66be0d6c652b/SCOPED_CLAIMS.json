@@ -1,0 +1,92 @@
+{
+  "schema": "t20.collective-continuation.scoped-claims.v1",
+  "claims": [
+    {
+      "id": "CC-01",
+      "title": "Adaptive answer acquisition cannot identify the T15 mechanism pair",
+      "status": "new conditional transport proof of inherited observation equivalence",
+      "source_ids": [
+        "D18-T15-ANSWER-LAW",
+        "D18-T15-CAUSAL-CONTRIBUTION"
+      ],
+      "current_anchors": [
+        "ET-01",
+        "ET-03",
+        "ET-05",
+        "ET-14",
+        "ET-17"
+      ],
+      "assumptions": [
+        "same measurable nonanticipating design/stop policy",
+        "same fixed matched parameters",
+        "fresh independent Gaussian noise after each design choice",
+        "only previous answers/designs and independent private randomness observed"
+      ],
+      "conclusion": "Every finite and infinite padded transcript has the same law under L and P; common postprocessing and replays cannot create differential evidence.",
+      "limits": [
+        "Not arbitrary adaptive or endogenous designs",
+        "Linked signals, direct interventions and informative calibration audits can break the premises",
+        "No empirical mechanism attribution or authority inference"
+      ]
+    },
+    {
+      "id": "CC-02",
+      "title": "Linked trial calibration supplies an exact inquiry value and same-root replacement",
+      "status": "new bounded source-derived decision calculation, inherited probability law",
+      "source_ids": [
+        "D18-T15-PASSIVE-LINK",
+        "D18-T15-RECORDING-ERROR"
+      ],
+      "current_anchors": [
+        "ET-01",
+        "ET-03",
+        "ET-05",
+        "ET-07",
+        "ET-17",
+        "ET-20"
+      ],
+      "assumptions": [
+        "x=0,v=1,k=3,r=0",
+        "passive linked bit with independent flip probability epsilon",
+        "two mechanisms with equal prior",
+        "squared-probability loss and constant added price"
+      ],
+      "conclusion": "delta=(1-2 epsilon)/6 and V=delta\u00b2/(1-4 delta\u00b2); V at epsilon=0 is 1/32; V at epsilon=1/4 is 1/140. Recalibrating one concordant root replaces 5/8 by 4/7; multiplying revised factor as new gives 20/29.",
+      "limits": [
+        "No fitted prior, measured acquisition cost or sensor feasibility",
+        "Conditional on legitimate calibration; dependent calibration audit requires joint law",
+        "Finite exact arithmetic only; no sequential numerical classifier"
+      ]
+    },
+    {
+      "id": "CC-03",
+      "title": "Exact corrected finite plans do not supply committed indefinite renewal",
+      "status": "faithful failed transport using inherited explicit counterexample and positive repair",
+      "source_ids": [
+        "T16-RENEWAL",
+        "T16-COMPETENCE",
+        "T16-LOOKAHEAD"
+      ],
+      "current_anchors": [
+        "ET-05",
+        "ET-09",
+        "ET-14",
+        "PT-19",
+        "PT-20"
+      ],
+      "assumptions": [
+        "actual source diagonal admission tree",
+        "uniform computable finite support",
+        "one irrevocably selected lineage",
+        "independent always-authorized zero-input environment already suffices"
+      ],
+      "conclusion": "H(n) converges coordinatewise but has no computable stabilization modulus or unbounded coherent computable subsequence. A warranted c.e. rooted pruned region supplies effective continuation.",
+      "limits": [
+        "Not a new computability theorem or new CIRS obstruction",
+        "Finite service migration retains full credit",
+        "No numerical personal identity, support-independent physical continuation or new formal replay"
+      ]
+    }
+  ],
+  "status": "additive research candidate; no adoption or new inherited IDs"
+}

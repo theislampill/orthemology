@@ -1,0 +1,109 @@
+{
+  "schema": "bounded-research-manifest-v1",
+  "files": [
+    {
+      "path": "EVENTS.jsonl",
+      "bytes": 188,
+      "sha256": "7e3e8f31aad87a36ce0247029e41125b4c411c9877d9e2db0416882ade0405a0"
+    },
+    {
+      "path": "LOCAL_INPUT_BINDINGS.json",
+      "bytes": 3956,
+      "sha256": "92e2da71c2f64422a144b544ba9f641b4f77d4b3a94ba280d5ebb4f17815a854"
+    },
+    {
+      "path": "REMOTE_INPUT_BINDINGS.json",
+      "bytes": 2657,
+      "sha256": "8f838ed51a7dbe992c62ceaaf8b509ae417f91d6df873d2d5c4468ff4876ba9f"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 11595,
+      "sha256": "2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 5768,
+      "sha256": "751cb69f0c41395c9f3638f6cc8ba540e3116fbb85276db6f7f6b3dd52c21424"
+    },
+    {
+      "path": "inputs/CP03_DAR_RECOGNITION_READ.md",
+      "bytes": 2547,
+      "sha256": "99790ee1aa2d4176b93ce6e612d362472a055899cf6074695d240b0ca0bcbe60"
+    },
+    {
+      "path": "inputs/CP03_REFERENCE_ACQUISITION_ASSESSMENT.md",
+      "bytes": 15022,
+      "sha256": "c1fe1a2d66feb8588c747549c12ee1f916a2f0a8b5680d9fcc8f030449fcd5c1"
+    },
+    {
+      "path": "inputs/DAR9_READING_LOG.md",
+      "bytes": 54874,
+      "sha256": "8fdf15959ce2303845aee7a4fb65ac8856859bed8b2d7495c8c82b097de950fa"
+    },
+    {
+      "path": "inputs/DAR9_STUDY_SUMMARY.md",
+      "bytes": 5025,
+      "sha256": "168d006efa5b3dd570bfadfda17f509c9b9e13066d753d8cbea084396726ac8e"
+    },
+    {
+      "path": "inputs/L01__fitrah-positive-warrant-inspection-20261010__REPORT.md",
+      "bytes": 9662,
+      "sha256": "abba899f264a90326c40a808fa156bc24e0380f59c18001609f2bc2611568446"
+    },
+    {
+      "path": "inputs/L02__reason-guided-inference-20261010__REPORT.md",
+      "bytes": 9718,
+      "sha256": "5636ab441a57a5b88b065eb1c6bd62a2a8cd32bfb886d7229da4e3c3b6b11300"
+    },
+    {
+      "path": "inputs/L03__reason-guided-inference-20261010__REPORT_REVIEW_ADDENDUM.md",
+      "bytes": 1774,
+      "sha256": "63c1decf9885af5c27eccc59554762949138f079c8b31dfc82ace9fa63b60756"
+    },
+    {
+      "path": "inputs/L04__attestation-capacity-warrant-20261010__REPORT.md",
+      "bytes": 11261,
+      "sha256": "d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7"
+    },
+    {
+      "path": "inputs/L05__request-context-provenance-20261010__REPORT.md",
+      "bytes": 15684,
+      "sha256": "8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389"
+    },
+    {
+      "path": "inputs/L06__request-context-provenance-20261010__LIMITS.md",
+      "bytes": 1401,
+      "sha256": "375de5d36a542f166c55b51ce3cccfad5f2a3b4d71f381ab9b43122bb3f98839"
+    },
+    {
+      "path": "inputs/L07__local-correction-capacity-20261010__REPORT.md",
+      "bytes": 13669,
+      "sha256": "2384eda00cc27f056af7a4e484195a5da4b3ac97348fa36c8b2673467fcb8478"
+    },
+    {
+      "path": "inputs/L08__local-resolution-warrant-20261010__REPORT.md",
+      "bytes": 16708,
+      "sha256": "066205cd9ffd43573ee9c1aa74c10f38c15254cdc740022e3f29fd180cd6b82a"
+    },
+    {
+      "path": "inputs/L09__inputs__CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__PRIMARY_VERIFICATION.md",
+      "bytes": 6473,
+      "sha256": "a0a8ddf3de9de7306cf49b1949365be4462f4a803fd92963e9cbb2d52ebbc65b"
+    },
+    {
+      "path": "inputs/L10__inputs__CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md",
+      "bytes": 3893,
+      "sha256": "4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803"
+    },
+    {
+      "path": "inputs/L11__inputs__CP20_REPORT.md",
+      "bytes": 8255,
+      "sha256": "c79ecc3ca9eec5cd53beef458bdeb004dae012e896ebd94f66d5d58d09ab007c"
+    }
+  ],
+  "excludes": [
+    "private_sources/"
+  ],
+  "scope": "Artifact integrity only, not philosophical validity or programme readiness"
+}

@@ -1,0 +1,70 @@
+{
+  "count": 8,
+  "rows": [
+    {
+      "number": 1,
+      "label": "thm:relational",
+      "bytes": 762,
+      "sha256": "90bd8f7353687a636b9ceeb872d427fc1df3bdbb15c7dfd3c5f787de381f8e1f",
+      "byte_identical": true,
+      "destination_page": 2
+    },
+    {
+      "number": 2,
+      "label": "prop:unique",
+      "bytes": 514,
+      "sha256": "e49207f3b940fa8106f2da657ef6d67a41877a119a53b7896daf60dc87715cb7",
+      "byte_identical": true,
+      "destination_page": 2
+    },
+    {
+      "number": 3,
+      "label": "prop:scope",
+      "bytes": 830,
+      "sha256": "19cde16c46acd6b31d15ac8cb885fa1167eee884660ea02a321c7b07a587dcb0",
+      "byte_identical": true,
+      "destination_page": 3
+    },
+    {
+      "number": 4,
+      "label": "prop:probability",
+      "bytes": 720,
+      "sha256": "f584130ae80a9c7935f8465b8b43711771488d9fef5760a226cdf55c40211026",
+      "byte_identical": true,
+      "destination_page": 4
+    },
+    {
+      "number": 5,
+      "label": "thm:parity",
+      "bytes": 1123,
+      "sha256": "83597539b7d444f0adce531de811dd23ba77826f7fe6f4f8fb79b5955915c717",
+      "byte_identical": true,
+      "destination_page": 4
+    },
+    {
+      "number": 6,
+      "label": "prop:channel",
+      "bytes": 1160,
+      "sha256": "0d9978da97fe8ed0f211f48ab1b2b5ae6da2db8c349d47026773ae1bc73c0e24",
+      "byte_identical": true,
+      "destination_page": 5
+    },
+    {
+      "number": 7,
+      "label": "thm:congruence",
+      "bytes": 1188,
+      "sha256": "78728c8c6e75e060315630f4f9648e40941169a566dd5c2618aea25470bc09a9",
+      "byte_identical": true,
+      "destination_page": 6
+    },
+    {
+      "number": 8,
+      "label": "thm:decision",
+      "bytes": 839,
+      "sha256": "c6eea7dee49786e7e55afd4f397158934e7a05d09fcb249c0e27b28eca595f95",
+      "byte_identical": true,
+      "destination_page": 8
+    }
+  ],
+  "limit": "Exact text equality; mathematical validity rests on the proofs, not hashes."
+}

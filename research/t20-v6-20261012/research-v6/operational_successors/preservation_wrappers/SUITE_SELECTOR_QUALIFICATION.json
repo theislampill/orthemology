@@ -1,0 +1,199 @@
+{
+  "sha256": "ad2d3c38ccbf24f7af122828023942729a3cde6012fec564017e972f754ad117",
+  "path": "t20-consolidation-20261011/catalogue/objects/ad/ad2d3c38ccbf24f7af122828023942729a3cde6012fec564017e972f754ad117",
+  "method": "All non-target fields and semantic scopes directly read. Every target string structurally checked for exact per-claim count, uniqueness and declaration-name grammar; exact archive module identities and historical receipt presence verified. This is selector qualification, not target proof reading or proof acceptance.",
+  "raw_token_full_read": false,
+  "suites": [
+    {
+      "suite": "p01-repaired",
+      "modules": 31,
+      "target_groups": {
+        "qualified-declarations": 382
+      },
+      "scope": "Repaired P01 existing statements; source model and proof limits remain those of the historical qualification",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p01-successor",
+      "modules": 39,
+      "target_groups": {
+        "successor-declarations": 151
+      },
+      "scope": "Recursive finite PER, contextual Curry parametricity, shared-seed coupling and finite mass; not full dependent semantics",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p02-qualified",
+      "modules": 35,
+      "target_groups": {
+        "base130": 130,
+        "candidate": 52,
+        "loop": 41,
+        "q8": 51,
+        "sigma2": 56
+      },
+      "scope": "130 repaired predecessor/attempt2 statements plus separately scoped Q8, LOOP, Sigma2 and actual candidate AST compilation; no full index hierarchy closure",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p03-native",
+      "modules": 24,
+      "target_groups": {
+        "native-refinement": 30
+      },
+      "scope": "Model-level native decoding/checking and constructor export; no raw JSON/CPython kernel theorem",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p03-graph",
+      "modules": 3,
+      "target_groups": {
+        "guarded-graph-repair": 14
+      },
+      "scope": "Repaired exact graph/guarded path statements, not historical authority/currentness recovery",
+      "fixture_modules": []
+    },
+    {
+      "suite": "finite-frontier",
+      "modules": 9,
+      "target_groups": {
+        "finite-frontier": 38
+      },
+      "scope": "Finite rank/PER/Mealy/guarded refinement theorems; preserve exact theorem hypotheses",
+      "fixture_modules": []
+    },
+    {
+      "suite": "mealy-stage2",
+      "modules": 14,
+      "target_groups": {
+        "stage1": 31,
+        "stage2": 11
+      },
+      "scope": "Actual infinite-input law and finite rational defect solver; stage2 includes stage1 imports and overlapping targets",
+      "fixture_modules": [
+        "MealyMeasureFixtures",
+        "MealySolverFixtures"
+      ]
+    },
+    {
+      "suite": "measure-frontier",
+      "modules": 18,
+      "target_groups": {
+        "measure-frontier": 84
+      },
+      "scope": "13 authored modules/84 target readbacks including six overlapping helper targets; not additive to other lanes",
+      "fixture_modules": []
+    },
+    {
+      "suite": "tagged-row",
+      "modules": 23,
+      "target_groups": {
+        "tagged-row": 35
+      },
+      "scope": "Tagged-row/Pi3 actual measure bridge, bounded by explicit matrix and carrier hypotheses",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p01-dependent",
+      "modules": 31,
+      "target_groups": {
+        "p01-dependent": 114
+      },
+      "scope": "114 author declarations, including 69 theorems: raw-Conv-indexed finite Pi/Sigma/Id/All, two-sort substitution, fundamental theorem and exact repaired-core envelope; not unrestricted heterogeneous typed-index U11 or canonical unary-Code equality",
+      "fixture_modules": []
+    },
+    {
+      "suite": "tagged-prefix-primrec",
+      "modules": 29,
+      "target_groups": {
+        "tagged-prefix-primrec": 59
+      },
+      "scope": "59 target readbacks including the predecessor35; productive finite-prefix PR compilation and selector law, not an unrestricted universal classifier",
+      "fixture_modules": []
+    },
+    {
+      "suite": "mealy-stage3",
+      "modules": 24,
+      "target_groups": {
+        "atoms": 39,
+        "solver": 11,
+        "verify": 31
+      },
+      "scope": "81 main target readbacks including 42 predecessor targets; actual atomic restriction, rational residual and terminating atomic cutoff. The cutoff does not approximate diffuse mass.",
+      "fixture_modules": [
+        "AtomicApproximationFixtures",
+        "MealyMeasureFixtures",
+        "MealySolverFixtures",
+        "TargetMassFixtures"
+      ]
+    },
+    {
+      "suite": "p01-canonical-projection",
+      "modules": 30,
+      "target_groups": {
+        "p01-canonical-projection": 19
+      },
+      "scope": "19 declaration readbacks including 16 theorems. Exact unary canonical Code-carrier squares for raw-index Pi/Id and represented Sigma; one-way generic arrow/identity inclusions and strict countermodels. No full recursive canonical equality or adoption.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "p02-pr-compiler",
+      "modules": 43,
+      "target_groups": {
+        "pr-compiler": 44
+      },
+      "scope": "Explicit arity-indexed PR syntax compiles structurally into the unchanged concrete LOOP grammar, with universal semantic preservation; composition, last/head argument recursion, zero-arity cases and constant-parameter specialization are proved. Mathlib Primrec coverage is extensional/existential. The new allocator uses fresh range blocks and is not asserted byte-identical to recovered Python macros.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "codec-pi3",
+      "modules": 49,
+      "target_groups": {
+        "codec-pi3": 82
+      },
+      "scope": "Canonical varint and sentinel envelope exact range/roundtrip; expression/statement/program generated-code roundtrip and byte bounds; actual evaluator code correctness; fixed program literal-specialization numeric map is Primrec; each fixed jointly PR forall-exists-forall matrix reduces to actual zero-defect numeric observer indices, with exact full-observer equality.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "atomic-membership",
+      "modules": 53,
+      "target_groups": {
+        "finite-table": 12,
+        "membership": 32
+      },
+      "scope": "Actual positive-singleton hard-threshold cylinder mass formula, rational and natural forall-exists-forall normal form, and executable exact finite cylinder table. Ordinary total-computability argument is included separately; no uniform Mathlib Computable certificate or fully mechanised hierarchy-library theorem.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "operational-machine",
+      "modules": 19,
+      "target_groups": {
+        "operational-machine": 35
+      },
+      "scope": "Actual finite-register statement/repeat stack is sound and eventually exact against sealed numeric evaluation; successful output is monotone in fuel, and exhaustion remains none. Sentinel decoding is Primrec. Conditional theorem isolates the still-missing bounded-machine Computable certificate.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "uniform-computability",
+      "modules": 35,
+      "target_groups": {
+        "uniform-computability": 119
+      },
+      "scope": "Constructive effective Expr/Stmt/Task/PackedProgram syntax; exact uniform finite-register step/fuel; exact varint, expression and statement parser effectivity on every input/fuel including malformed cases and unread suffixes; exact decodeIndex primitive recursive; actual universal evaluateIndex computable, including an explicit external Nat-to-Nat theorem.",
+      "fixture_modules": []
+    },
+    {
+      "suite": "membership-computability",
+      "modules": 77,
+      "target_groups": {
+        "membership-computability": 35
+      },
+      "scope": "Exact duplicate-free variable-length word enumeration and actual output/fibre counts; integer heavyCount equals the existing rational heavy mass; the unchanged AtomicMembership.membershipMatrix is uniformly Mathlib Computable, with four-input, Nat-coded Bool, and Nat-to-Nat characteristic endpoints. This supplies a computable matrix for the previously proved actual index-set forall-exists-forall normal form.",
+      "fixture_modules": []
+    }
+  ],
+  "total_module_occurrences": 586,
+  "target_occurrences": 1738,
+  "source_hashes": 212,
+  "retained_execution": false
+}

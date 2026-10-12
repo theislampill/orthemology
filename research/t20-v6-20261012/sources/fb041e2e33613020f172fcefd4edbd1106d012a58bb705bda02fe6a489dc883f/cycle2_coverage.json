@@ -1,0 +1,59 @@
+{
+  "schema": "orthemology-stage3-audit-cycle-v1",
+  "cycle": 2,
+  "utc": "2026-09-13T02:51:18.579817+00:00",
+  "candidate_freeze": "snapshots/candidate2_freeze.json",
+  "candidate_freeze_sha256": "cb98861b79978a0df20d4364f13d4979e838272a0bcdb6dff550fbb67620ff9d",
+  "reviewer": "same assistant; scoped mathematical/admissibility self-audit",
+  "independent_review": false,
+  "overall_verdict": "FAIL_OPEN_NOT_APPROVED",
+  "full_source_line_review_established": false,
+  "unobserved_tool_results_do_not_override_prior_connected_reads": true,
+  "new_semantic_source_read_credit": 0,
+  "kind": "read-only-coverage-and-substantive-advancement",
+  "checks": [
+    {
+      "id": "C2-C01",
+      "question": "Every original source line, history and relevant discussion reviewed?",
+      "verdict": "NOT_ESTABLISHED",
+      "evidence": "Preserved semantic queues and receipt locator; no complete reconciled range coverage certificate."
+    },
+    {
+      "id": "C2-C02",
+      "question": "Original recovery verifier read and run against exact incoming root?",
+      "verdict": "OPEN_RECEIPT_RECONCILIATION",
+      "evidence": "Independent manifest/preservation checks cannot substitute for the requested source-read execution."
+    },
+    {
+      "id": "C2-C03",
+      "question": "Interrupted reviews and reported defect investigation retained?",
+      "verdict": "PRESERVATION_RECORDED_NOT_RECREDITED",
+      "evidence": "ledgers/inherited_review_receipt_locator.json; all preserved original receipts retain their own scope."
+    },
+    {
+      "id": "C2-C04",
+      "question": "Substantive candidate advancement?",
+      "verdict": "SCOPED_ARGUMENTS_PRESENT",
+      "evidence": "Report §§5–12: typed profile comparison, exact payoff transport, finite trajectories, logit alignment, fixed-query information and destructive execution. Historical novelty and corpus-wide comparison remain open."
+    },
+    {
+      "id": "C2-C05",
+      "question": "Full frozen candidate rather than report-only?",
+      "verdict": "BYTE_FREEZE_RECORDED",
+      "evidence": "snapshots/candidate2_freeze.json; bytes/hashes are not semantic review."
+    },
+    {
+      "id": "C2-C06",
+      "question": "Meniscus programme and original reading scope preserved?",
+      "verdict": "NO_SCOPE_REDUCTION_AUTHORISED",
+      "evidence": "REPORT.md, EXECUTION_CONTRACT.md and CONTINUE.md retain the original breadth and unresolved specialist gates."
+    }
+  ],
+  "blocking_obligations": [
+    "S3-A01",
+    "S3-A02",
+    "S3-A03",
+    "S3-A04",
+    "S3-A05"
+  ]
+}

@@ -1,0 +1,11 @@
+--- RESULT.previous.md
++++ RESULT.current.md
+@@ -83,7 +83,7 @@
+ 
+ ## 5. Positive finite repairs and exact typed-source boundary
+ 
+-For a **finite selected model set** Q within either domain, distinguish models only up to identical (t,s). Relative to retaining t, the exact loss-profile tag minimum is
++For a **nonempty finite selected model set** Q within either domain, distinguish models only up to identical (t,s). Relative to retaining t, the exact loss-profile tag minimum is
+ 
+     max_t |{s : (t,s) in Q}|.
+ 

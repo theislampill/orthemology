@@ -1,0 +1,85 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import GenericQueryReference
+import PolicyRowLaw
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import ProductObservationLaw
+import SelfVerifyingSupport
+import RecurrentSupport
+import FeedbackRequests
+import IndependentProductFamilies
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import PolicyTailTransfer
+import SeededPolicyNecessity
+
+#check Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#check Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#check Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#check Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#check Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#check Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#check Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#check Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#check Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#check Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#check Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#check Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#check Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#check Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#check Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber
+#check Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_nodup
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackKeys_nodup
+#check Orthemology.Tranche2.PolicyEmbedding.requestKey_injective
+#print axioms Orthemology.Tranche2.PolicyEmbedding.requestKey_injective
+#check Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_iff_requests
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_iff_requests
+#check Orthemology.Tranche2.PolicyEmbedding.independent_product_families
+#print axioms Orthemology.Tranche2.PolicyEmbedding.independent_product_families
+#check Orthemology.Tranche2.PolicyEmbedding.transcriptSamples_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.transcriptSamples_independent
+#check Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.feedbackCompatible_probability
+#check Orthemology.Tranche2.PolicyEmbedding.private_transcript_cylinder_probability
+#print axioms Orthemology.Tranche2.PolicyEmbedding.private_transcript_cylinder_probability
+#check Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.historyTrajectory_measurable
+#check Orthemology.Tranche2.PolicyEmbedding.measure_eq_of_prefix_maps
+#print axioms Orthemology.Tranche2.PolicyEmbedding.measure_eq_of_prefix_maps
+#check Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_eq_all_query
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedTraceLaw_eq_all_query
+#check Orthemology.Tranche2.PolicyEmbedding.traceLaw_historyReadout
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceLaw_historyReadout
+#check Orthemology.Tranche2.PolicyEmbedding.action_readout_on_run
+#print axioms Orthemology.Tranche2.PolicyEmbedding.action_readout_on_run
+#check Orthemology.Tranche2.PolicyEmbedding.traceLaw_action_eq_canonical
+#print axioms Orthemology.Tranche2.PolicyEmbedding.traceLaw_action_eq_canonical
+#check Orthemology.Tranche2.PolicyEmbedding.run_tail_finitely_queries
+#print axioms Orthemology.Tranche2.PolicyEmbedding.run_tail_finitely_queries
+#check Orthemology.Tranche2.PolicyEmbedding.evaluator_positive_tail_transfers
+#print axioms Orthemology.Tranche2.PolicyEmbedding.evaluator_positive_tail_transfers
+#check Orthemology.Tranche2.PolicyEmbedding.canonical_positive_tail_transfers
+#print axioms Orthemology.Tranche2.PolicyEmbedding.canonical_positive_tail_transfers
+#check Orthemology.Tranche2.PolicyEmbedding.seeded_policy_self_verifying_necessity
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seeded_policy_self_verifying_necessity
+#check Orthemology.Tranche2.PolicyEmbedding.seeded_policy_kernel_nonempty
+#print axioms Orthemology.Tranche2.PolicyEmbedding.seeded_policy_kernel_nonempty

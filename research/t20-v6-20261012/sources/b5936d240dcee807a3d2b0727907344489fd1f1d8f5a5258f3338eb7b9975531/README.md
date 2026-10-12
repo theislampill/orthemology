@@ -1,0 +1,14 @@
+# Source reconciliation and escape: intermediate successor collection
+
+Three accepted results and two bounded no-new-result notes. Each separate component ZIP is unchanged. This collection is additive; prior collections remain untouched.
+
+## Claim and evidence map
+1. Responsive demonstration: author REPORT; authoritative root independent REVIEW and FINAL_FREEZE_BINDING. The nested narrow review is distinct process evidence, not additional source corroboration. CUSTODY documents the earlier shared-directory overwrite and separation; the shared directory remains historical process evidence, not merged authorship. Credit is the worked case retaining affirmation and the exact means-substitution test; general responsive reasoning is inherited. No unique optimality or historical authentication.
+2. Particular recognition: accepted partial inherited source reconciliation. Mediated identification positive is reconciled with CP03's narrower question; FIRST-reference and individual recognition residuals remain. No primary rediscovery or source-adoption certainty.
+3. Nonnegative moving-gradient escape: accepted ordinary proof plus 12 author and 42 independent exact controls. Smooth predetermined nonnegative SOS frozen-coercive losses, decreasing actual loss to zero, positive surviving mass, finite-time escape. Common-energy positive theorem remains intact. Universal fixed coercive C1 guard exclusion is the written Gronwall argument, not finite SOS search. Final C qualification and prior snapshots retained.
+4. Notes: request-publicity feasibility and finite omission check are bounded no-new-result/duplicate controls, not reviewed source discoveries. Stronger expected-publicity objection remains incompletely resolved; shorter presentations do not authenticate an abridgement event.
+
+## Replay boundaries and dependency map
+Run python replay_all.py --output-dir /fresh/output. Python and SymPy are required for escape controls. Source components verify included file identities, six exact final-freeze author payloads, and the particular reviewer snapshot/author manifest. This does not repeat source reading, historical authentication or scholarly review. Raw source bodies are excluded with exact hash bindings and source loci retained. The notes additionally bind two external raw source bodies; neither is part of portable source-byte verification. No mathematical or kernel suite exists for these source notes. The mathematical component fully replays both exact reports byte-identically without relocation or source exclusions. No Lean compilation or empirical/DAEE claim is made.
+
+Future integration should inspect each component's accepted report and independent review, use retained antecedent reports only at their declared reading scope, and preserve collision/correction history. No integration, owner acceptance, upload or T20 closure is authorized by this collection. New type investigations are excluded.

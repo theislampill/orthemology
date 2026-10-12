@@ -1,0 +1,23 @@
+{
+  "status": "EXACT_SCOPE_COUNTERCONTROL",
+  "posterior": [
+    "1/2",
+    "1/2"
+  ],
+  "nonconvex_constraint": [
+    [
+      "1/4",
+      "3/4"
+    ],
+    [
+      "3/4",
+      "1/4"
+    ]
+  ],
+  "strictly_convex_generator": "f(q)=||q||^2/2",
+  "divergences": [
+    "1/16",
+    "1/16"
+  ],
+  "conclusion": "Strict convexity of the ambient objective alone does not imply uniqueness over nonconvex C. Convex C is sufficient with strict convexity on C. The general argmin-set identity is unaffected."
+}

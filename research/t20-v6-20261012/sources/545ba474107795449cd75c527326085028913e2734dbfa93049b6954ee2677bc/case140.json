@@ -1,0 +1,1 @@
+{"rule":"reduce","proof":{"rule":"app","function":{"rule":"all_e","polymorphic":{"rule":"all_i","body":{"rule":"i","A":["v",0]}},"type":["all",["arr",["v",0],["v",0]]]},"argument":{"rule":"all_i","body":{"rule":"i","A":["v",0]}}},"trace":[["app",["i"],["i"]],["i"]],"trace":[["app",["i"],["i"]],["i"]]}

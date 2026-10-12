@@ -1,0 +1,38 @@
+[
+  {
+    "source_path": "t20-v6-20261011/type_collective/LiteralIdentityNoNegation.lean",
+    "sha256": "d7a3182be4b9c25d45c0c0fc20de06821321cb15dae2d550b1946dafb6715a8a",
+    "compiler_path": "private-locator:995d2f31daa55d5ebca1",
+    "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "argv": [
+      "lean",
+      "--trust=0",
+      "-o",
+      "LiteralIdentityNoNegation.olean",
+      "LiteralIdentityNoNegation.lean"
+    ],
+    "cwd": "private-locator:f1900d3b9d6b3c2ceb16",
+    "exit_code": 0,
+    "log_path": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/LiteralIdentityNoNegation.log",
+    "dependency_receipt": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/FRESH_COMPILATION.json",
+    "scope": "Fresh corollary uses exact freshly compiled dependencies, no historical research oleans."
+  },
+  {
+    "source_path": "t20-v6-20261011/type_collective/NewCorollaryAxioms.lean",
+    "sha256": "d9af1868a12824b46b51e16ae3745f1394ef9dff90abb2b0165db420baedf23a",
+    "compiler_path": "private-locator:995d2f31daa55d5ebca1",
+    "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+    "argv": [
+      "lean",
+      "--trust=0",
+      "-o",
+      "NewCorollaryAxioms.olean",
+      "NewCorollaryAxioms.lean"
+    ],
+    "cwd": "private-locator:f1900d3b9d6b3c2ceb16",
+    "exit_code": 0,
+    "log_path": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/NewCorollaryAxioms.log",
+    "dependency_receipt": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/FRESH_COMPILATION.json",
+    "scope": "Fresh corollary uses exact freshly compiled dependencies, no historical research oleans."
+  }
+]

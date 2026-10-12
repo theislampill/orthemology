@@ -1,0 +1,12 @@
+import SupportBridge
+import ContextualEncoding
+#check T20Resumed.grounded_retractions_iff_operational_cover
+#print axioms T20Resumed.minimal_operational_support_cover
+#print axioms T20Resumed.all_retractions_iff_support_cover
+#print axioms T20Resumed.grounded_retractions_iff_operational_cover
+#print axioms T20Resumed.Language.compositional_contextual_translation
+#print axioms T20Resumed.Language.relay_preserves_source_act
+#print axioms T20Resumed.Language.same_formula_rebound_different_proposition
+#print axioms T20Resumed.Language.changed_binding_changes_truth_in_a_valuation
+#print axioms T20Resumed.Language.quote_is_not_assertion
+#print axioms T20Resumed.Language.directive_is_not_assertion

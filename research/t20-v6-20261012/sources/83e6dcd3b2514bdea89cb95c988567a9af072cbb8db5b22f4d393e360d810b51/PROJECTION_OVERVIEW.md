@@ -1,0 +1,9 @@
+# Projection and ownership overview
+
+This package contains three bounded public projections with distinct scope. None is presented as an independent human specialist endorsement.
+
+- **Warrant standard:** original ASSESSMENT.md, SHA-256 `e64f94c63e9433671a623a8a4db04fe75c7f89d2269a4c41ff78745ed4d6d99f`; public `warrant-standard/ASSESSMENT.md`, SHA-256 `b272c08cba5e24245f2f1d295b1aeaba1f321e843ffd0a9d0eeea5b6e52d757c`. The warrant-standard reviewer owns this assessment and projection. Its map preserves all scientific text byte-for-byte and replaces only title, scope and source metadata.
+- **CE-1 collective efficacy:** original DISPOSITION.md, SHA-256 `63e04df6b5391907c8dfc7b4e67a062777f9a4b149ea49df651262cd72be4e73`; public `collective-efficacy/COLLECTIVE_EFFICACY_REVIEW.md`, SHA-256 `2666c411eedec78db201b0fb147f24e5b26bd3aee43bbdee2b35ee29b32167cb`. The focused collective-efficacy reviewer owns this separate contribution. Its exact source-key substitutions, wording clarification and section map appear in COLLECTIVE_PROJECTION_MAP.json.
+- **CE-2 electronic inspection:** original SCOPE_CONFIRMATION.md, SHA-256 `386d71c67e238456930418054b181efe2e288519f35f996ccd932d4265a504a1`; public `collective-efficacy/ARABIC_INSPECTION_SCOPE.md`, SHA-256 `f6c11f70727211779c286c19dce0d6a947ccb594c8f4f01f216838fb29c54272`. This contribution records the subsequent new electronic inspection, separately from CE-1's initial source-inspection limits. Its capture identities do not assert recovery or equality with the missing historical captures.
+
+The three original review files are identity-only and are not reproduced. Public projections are not asserted byte-equal to whole originals. The maps identify the preserved scientific regions and all declared presentation changes. Underlying accepted report/F1/F2/F3/F4 bytes and their existing bounded acceptances are unaffected. No new historical exposition or quotation appears in this supplementary package.

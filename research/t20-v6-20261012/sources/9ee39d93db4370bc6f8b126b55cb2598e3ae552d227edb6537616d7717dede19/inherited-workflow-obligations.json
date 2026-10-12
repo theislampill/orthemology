@@ -1,0 +1,127 @@
+{
+  "count": 12,
+  "rows": [
+    {
+      "id": "A01",
+      "label": "sec:workflow",
+      "obligation": "Named dispatch, interrupt and guarded acceptance mechanisms; no field-validation claim.",
+      "number": "5.4",
+      "page": 8,
+      "v4_page": 8,
+      "v4_number": "5.4",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A02",
+      "label": "eq:workflow",
+      "obligation": "Exact singleton boundary-record preservation and a further-invariant witness.",
+      "number": "29",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "29",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A03",
+      "label": "eq:workflowaccess",
+      "obligation": "Readiness is not determined by receipt-presence records; binding-aware observation separates it.",
+      "number": "30",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "30",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A04",
+      "label": "sec:workflow",
+      "obligation": "Inherited connector changes access without changing the initial target; acknowledgement is insufficient.",
+      "number": "5.4",
+      "page": 8,
+      "v4_page": 8,
+      "v4_number": "5.4",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A05",
+      "label": "sec:workflow",
+      "obligation": "Stable snapshot or equivalent atomic check required; later changes open a new boundary.",
+      "number": "5.4",
+      "page": 8,
+      "v4_page": 8,
+      "v4_number": "5.4",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A06",
+      "label": "sec:workflow",
+      "obligation": "Noninterference, receipt accuracy and reliability remain premises; no eventual-completion or speedup theorem.",
+      "number": "5.4",
+      "page": 8,
+      "v4_page": 8,
+      "v4_number": "5.4",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A07",
+      "label": "sec:admission",
+      "obligation": "Fixed proposed revision and explicit actual admission record map with nonempty observed fibre.",
+      "number": "5.5",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "5.5",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A08",
+      "label": "eq:admission",
+      "obligation": "Positive local admission does not demand global decidability on other fibres.",
+      "number": "31",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "31",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A09",
+      "label": "sec:admission",
+      "obligation": "Readiness/permission product and explicit opposite-permission witness.",
+      "number": "5.5",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "5.5",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A10",
+      "label": "sec:admission",
+      "obligation": "Successor decision may have a different record map; changed meanings need justified transfer.",
+      "number": "5.5",
+      "page": 9,
+      "v4_page": 9,
+      "v4_number": "5.5",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A11",
+      "label": "par:factorisation",
+      "obligation": "Infinite method-description situations motivate arbitrary-set criterion without algorithmic claim.",
+      "number": "1",
+      "page": 1,
+      "v4_page": 1,
+      "v4_number": "1",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    },
+    {
+      "id": "A12",
+      "label": "sec:conclusion",
+      "obligation": "Existing fourth summary-table row gains section and admission-equation references.",
+      "number": "7",
+      "page": 11,
+      "v4_page": 11,
+      "v4_number": "7",
+      "disposition": "PRESERVED_OR_EXPLICITLY_CLARIFIED"
+    }
+  ],
+  "limits": "Declared additions, not a claim to newly discovered general theorems.",
+  "scope": "Twelve additions inherited from the fourth delivery, not twelve new additions in this delivery."
+}

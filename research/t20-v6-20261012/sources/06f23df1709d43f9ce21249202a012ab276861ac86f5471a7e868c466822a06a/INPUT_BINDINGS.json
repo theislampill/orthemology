@@ -1,0 +1,44 @@
+[
+  {
+    "source": "realizable-moment-dynamics-20261010/RESULT.md",
+    "copy": "inputs/realizable-moment-dynamics-20261010__RESULT.md",
+    "bytes": 15753,
+    "sha256": "c5aeeeed56b5bf5edfa9b87570249f142e3d1be9c06218d8007013c66f5eb688"
+  },
+  {
+    "source": "tensor-moment-continuation-20261009/RESULT.md",
+    "copy": "inputs/tensor-moment-continuation-20261009__RESULT.md",
+    "bytes": 21695,
+    "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+  },
+  {
+    "source": "measure-moment-continuation-boundary-20261009/RESULT.md",
+    "copy": "inputs/measure-moment-continuation-boundary-20261009__RESULT.md",
+    "bytes": 26246,
+    "sha256": "a0fa9117ff47df9f07133c1ed49c682c7c2e73d20881e83f3c242dfb3faeb9e3"
+  },
+  {
+    "source": "determinate-moment-effectivity-20261010/RESULT.md",
+    "copy": "inputs/determinate-moment-effectivity-20261010__RESULT.md",
+    "bytes": 22566,
+    "sha256": "9661eef2d88370d2d996e68f666777c6ac0ffb93155d102ec50873f155e91383"
+  },
+  {
+    "source": "determinate-initial-positivity-20261010/RESULT.md",
+    "copy": "inputs/determinate-initial-positivity-20261010__RESULT.md",
+    "bytes": 14433,
+    "sha256": "cafc520026c66f94442346ff308ed4e202d70e10be8963b8a24ad17bda4e1e0a"
+  },
+  {
+    "source": "computable-positive-hierarchy-20261010/RESULT.md",
+    "copy": "inputs/computable-positive-hierarchy-20261010__RESULT.md",
+    "bytes": 6178,
+    "sha256": "862a4b005351c1f980e1daf2820d8d871fa16835d53029ce27941244d248915f"
+  },
+  {
+    "source": "realizable-moment-independent-review-20261010/REVIEW.md",
+    "copy": "inputs/realizable-moment-independent-review-20261010__REVIEW.md",
+    "bytes": 7850,
+    "sha256": "ffd028f511ea68ea693dbd1b1f55c0f293368a29ed9bc5c239ed043f898bfb28"
+  }
+]

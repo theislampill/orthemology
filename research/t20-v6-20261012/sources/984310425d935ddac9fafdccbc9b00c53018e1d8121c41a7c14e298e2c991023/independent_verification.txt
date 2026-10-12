@@ -1,0 +1,26 @@
+PASS 01: all 19 nonempty categorical three-coordinate hierarchies
+PASS 02: all 167 nonempty binary four-coordinate hierarchies
+PASS 03: unequal-facet/omitted/empty-product stabilizer ((3, 2, 2, 2), [(0, 1, 2), (0, 3)])
+PASS 04: unequal-facet/omitted/empty-product stabilizer ((2, 3, 2, 2), [(0, 1), (2,)])
+PASS 05: unequal-facet/omitted/empty-product stabilizer ((2, 3, 2), [(0, 1)])
+PASS 06: unequal-facet/omitted/empty-product stabilizer ((), [()])
+PASS 07: nontrivial-alphabet hypothesis is necessary
+PASS 08: maximal offending component survives higher-degree core and non-pure categorical rank
+PASS 09: non-pure positive-prior Bayesian obstruction
+PASS 10: strictly positive likelihood generators give the full all-local module
+PASS 11: one fixed categorical channel can require strictly less than all-local evidence
+PASS 12: product span supplies all-linear-space minimality certificate
+PASS 13: separate all-local evidence on every coordinate forces full law
+PASS 14: posterior polynomial/support-cylinder comparison ((2, 2, 2), [(0,), (1,)])
+PASS 15: posterior polynomial/support-cylinder comparison ((2, 2, 2), [(0, 1)])
+PASS 16: posterior polynomial/support-cylinder comparison ((2, 3), [()])
+PASS 17: posterior polynomial/support-cylinder comparison ((2, 2), [(0, 1)])
+PASS 18: full covered marginal plus whole cylinder retains feasibility without probability
+PASS 19: partial covered cylinder loses feasibility even with full covered marginal
+PASS 20: whole cylinder loses feasibility when covered hierarchy is proper
+PASS 21: full-support feasibility is trivial and does not recover cylinder probability
+PASS 22: nonlinear core Fisher objective closes on correlated full-support laws
+PASS 23: Fisher mass gauge leaves the exact field unchanged
+PASS 24: non-core objective detects omitted conditional interaction
+PASS 25: conditional leaf preservation does not imply all-prior marginal closure
+ALL 25 INDEPENDENT GROUPS PASSED

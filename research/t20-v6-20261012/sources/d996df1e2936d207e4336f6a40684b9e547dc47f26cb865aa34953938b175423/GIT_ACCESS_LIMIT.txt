@@ -1,0 +1,5 @@
+Direct Git clone was attempted once and failed before checkout:
+Cloning into 'private-locator:f4ec999498d9d15bc3b2'...
+fatal: unable to access 'https://github.com/theislampill/orthemology.git/': Could not resolve host: github.com
+
+No full-repository fresh application was performed by this audit. No Git object/history was fabricated. Read-only GitHub connector metadata remained accessible.

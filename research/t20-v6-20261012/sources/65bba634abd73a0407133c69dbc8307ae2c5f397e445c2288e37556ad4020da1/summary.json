@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-10-11T01:21:41.154512+00:00",
+  "input_files": 10,
+  "top_level_archives": 9,
+  "unique_archives": 148,
+  "archive_member_records": 22268,
+  "unique_non_archive_blobs": 10104,
+  "unique_text_blobs": 9790,
+  "unique_report_documents": 2095,
+  "copied_source_files": 9814,
+  "report_characters": 22822683,
+  "archive_crc_read_complete": true,
+  "problems": [],
+  "warnings": [
+    {
+      "input": "private-locator:2f6efbf8a7231cc8fc0e",
+      "warning": "recovered-input directory not present"
+    }
+  ],
+  "coverage_meaning": "Complete machine ingestion and source inclusion where recorded; not a certificate of exhaustive model-visible reading or re-proving.",
+  "inherited_programs_executed": false,
+  "inherited_lean_freshly_compiled": false,
+  "model_visible_readback_certified": false
+}

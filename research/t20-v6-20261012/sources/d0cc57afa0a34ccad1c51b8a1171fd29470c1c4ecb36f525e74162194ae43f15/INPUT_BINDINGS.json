@@ -1,0 +1,134 @@
+{
+  "captured_utc": "2026-10-10T10:34:58.730012+00:00",
+  "scope": "Ordinary independent AI review of author-confirmed frozen packet; no formal audit authority",
+  "source_directory": "private-locator:389acb204bb83fdaf4f3",
+  "snapshot_directory": "author_snapshot",
+  "files": [
+    {
+      "path": "CHECK_RESULTS.json",
+      "bytes": 3044,
+      "sha256": "64e8c7791e05f92f9b7b5f50db4389cdb677dfd532f340938c9f2ec09a4585c3"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 3422,
+      "sha256": "2f3339d23e83edde8512886b48a4d00be1aa44ef590164ea73103400211dd107"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 2923,
+      "sha256": "76724a4e3c578f7b61fe9892cd289d7b61ca87b77b3b26904af97833cb9ae35d"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 28972,
+      "sha256": "5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 2517,
+      "sha256": "3ba19c8e86638c53d3c3d8dbc5397fcb4b4b83d7d2ffcd4fa1a44b5ec8a7557a"
+    },
+    {
+      "path": "SOURCE_CURRENTNESS.json",
+      "bytes": 1199,
+      "sha256": "c0c98c4b72c2db4c1e3a57504170807d864828a5ee2f664e2b5cfdf98d02789b"
+    },
+    {
+      "path": "inputs/01-bayes-feasibility-compatibility-20261010-RESULT.md",
+      "bytes": 25743,
+      "sha256": "c6b3b3e006a25eb33b969f8d490fb9bf0906377eda86bcf27b67d5e1726a5b8f"
+    },
+    {
+      "path": "inputs/02-constrained-learning-possibility-20261010-RESULT.md",
+      "bytes": 18333,
+      "sha256": "a625a2c137d291f514c71eee13e6cc7e4399a1bff491d1b59548a5985f6649f9"
+    },
+    {
+      "path": "inputs/03-repeatable-channel-constraints-20261010-RESULT.md",
+      "bytes": 24815,
+      "sha256": "8542fbf86cc2914790bfd0fdcd22920bae8fee9569927524df4e2af3ec527336"
+    },
+    {
+      "path": "inputs/04-tensor-moment-continuation-20261009-H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "inputs/05-audit-continuation-transport-20261010-RESULT.md",
+      "bytes": 24610,
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc"
+    },
+    {
+      "path": "inputs/06-stochastic-inquiry-quotient-transport-20261010-ADDENDUM.md",
+      "bytes": 15671,
+      "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee"
+    },
+    {
+      "path": "inputs/07-tensor-moment-continuation-20261009-RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    },
+    {
+      "path": "inputs/08-information-geometry-transport-20261009-RESULT.md",
+      "bytes": 17118,
+      "sha256": "077fabaf882988d2de23bda85fd40cc03f6f630c0ca859f12864d53c604fbd94"
+    },
+    {
+      "path": "inputs/09-channel-natural-repair-20261009-RESULT.md",
+      "bytes": 20354,
+      "sha256": "8aea89886533a3357a671432fd90ec044aa070a40d7f0152c0116156f44ff27b"
+    },
+    {
+      "path": "verification.txt",
+      "bytes": 667,
+      "sha256": "899e58dad1d9fc4562d4a724461b9bd060c847209ec7f914c5eaedcc2807237a"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 7722,
+      "sha256": "964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8"
+    }
+  ],
+  "author_manifest_verified": true,
+  "author_replay_exit_code": 0,
+  "author_replay_check_count": 16,
+  "source_inputs_current": [
+    {
+      "source_path": "bayes-feasibility-compatibility-20261010/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "constrained-learning-possibility-20261010/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "repeatable-channel-constraints-20261010/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "audit-continuation-transport-20261010/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "tensor-moment-continuation-20261009/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "information-geometry-transport-20261009/RESULT.md",
+      "matches_bound_snapshot": true
+    },
+    {
+      "source_path": "channel-natural-repair-20261009/RESULT.md",
+      "matches_bound_snapshot": true
+    }
+  ]
+}

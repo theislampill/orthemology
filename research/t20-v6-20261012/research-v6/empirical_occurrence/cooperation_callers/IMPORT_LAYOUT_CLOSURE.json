@@ -1,0 +1,16 @@
+{
+  "caller_sha256": "e9860862423f5934ee1d9a27d41886efe70bba2a65b15f6d690a05b650e8ccdf",
+  "import": "grounded_support",
+  "imported_sha256": "9d70989837f3abc364f315a43067554c1b7bd251254e1c33c1d7b358fd948d05",
+  "exact_prior_ledger": "empirical_occurrence/continuation_implementation/READING_LEDGER.json records[9]",
+  "prior_scope": [
+    [
+      1,
+      42
+    ]
+  ],
+  "same_archive_member": "Orthemology_T20_Closure_Audit_and_Research_Supplement_v1_20261007/tranche20/research-closure-audit/continuation/replay/grounded_support.py",
+  "binding_owner": "controller exact archive/member lookup,2026-10-11T21:46:15Z",
+  "layout": "Inserted replay-inputs directory is empty in held archive; normal Python script-directory search selects the exact sibling in continuation/replay. This is not a staged-copy or replay claim.",
+  "retained_execution": false
+}

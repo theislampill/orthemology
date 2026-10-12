@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-10T10:00:13.895355+00:00",
+  "scope": "Targeted local read-only comparison. Finite author is a concurrent work product; binding records inspected bytes, not a final version. No protected changes.",
+  "files": [
+    {
+      "path": "bayes-feasibility-compatibility-20261010/RESULT.md",
+      "bytes": 25720,
+      "sha256": "571d64fe9d91c72c84d056b593b79784149f685fd3a0837dbf63db89351e4a6c"
+    },
+    {
+      "path": "measure-moment-continuation-boundary-20261009/RESULT.md",
+      "bytes": 26246,
+      "sha256": "a0fa9117ff47df9f07133c1ed49c682c7c2e73d20881e83f3c242dfb3faeb9e3"
+    },
+    {
+      "path": "measure-moment-continuation-boundary-20261009/ADDENDUM.md",
+      "bytes": 2319,
+      "sha256": "f352b961425e828463531e7a006381d0dca6274f211bc5255904ecae0c2914aa"
+    },
+    {
+      "path": "source-measure-preservation-20261009/stage/T20_Source_Measure_Continuation_Intermediate_20261009/READ_FIRST.md",
+      "bytes": 5680,
+      "sha256": "dad06c4b6e44438354c5cf4f68fe71324761a1a470880a5e6b11b537602e4fcc"
+    },
+    {
+      "path": "source-measure-preservation-20261009/stage/T20_Source_Measure_Continuation_Intermediate_20261009/SOURCE_DEPENDENCIES.json",
+      "bytes": 2534,
+      "sha256": "a81b6c3f35cb8cd67bb3cd410be4b85a5a71f23e71df2c77962f81a848a04081"
+    },
+    {
+      "path": "source-measure-preservation-20261009/stage/T20_Source_Measure_Continuation_Intermediate_20261009/user-checkpoints/extracted/P02/proofs/U05_MEASURE_CORE.md",
+      "bytes": 12867,
+      "sha256": "33ba053c3113b297c5dbf72e28333386163ead926713a91a0e578245ae042cfe"
+    },
+    {
+      "path": "source-measure-preservation-20261009/stage/T20_Source_Measure_Continuation_Intermediate_20261009/user-checkpoints/extracted/P03/inputs/p02-analysis/U05_MEASURE_SEMANTICS.md",
+      "bytes": 8418,
+      "sha256": "0a4c2c28aa718e1687b81e34734f4dcff1228d5864af215c4470aea2dd9329e3"
+    }
+  ]
+}

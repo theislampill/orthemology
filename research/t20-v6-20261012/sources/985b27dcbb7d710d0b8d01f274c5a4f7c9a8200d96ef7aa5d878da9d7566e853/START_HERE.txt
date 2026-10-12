@@ -1,0 +1,11 @@
+Orthemology: consolidated T20 research and Codex handoff, v4
+
+The package/ directory is the immutable scientific handoff. Start with package/README_FIRST.md and package/EDITION_V4.md. Its cumulative field guide, mathematical synthesis, foundational crosswalk, source reports, proofs, controls and reviews are all retained there.
+
+qualification/ contains the final bounded independent delivery review and receipts binding the exact package manifest. It is deliberately outside package/ so the strict package validator can reject unexpected files inside the scientific payload.
+
+For verification or Codex integration, change into package/ and follow CODEX_START_HERE.md. The separately attached proposed prompt is for the owner to issue to Codex; this archive alone authorises no repository changes. Do not merge or start T21.
+
+On Windows, use a short extraction directory or WSL: isolated historical proof layouts retain long relative paths. Native Windows execution was not qualified.
+
+The earlier results remain preserved with their own evidence levels. The unrecovered reported R3 continuation and historical active-time compliance remain explicitly unverified.

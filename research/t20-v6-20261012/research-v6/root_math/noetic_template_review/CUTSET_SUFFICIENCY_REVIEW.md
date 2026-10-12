@@ -1,0 +1,13 @@
+# T352 cutset sufficiency: independent root review
+
+Root read the entire exact T351 source3d8c50aed5a53480879d44e5a26ec50be9e892262f55224cbb744c3c4bdd4f82 and T352 sourcedb8254a3f29744bbb1e7bf9420a912039e554d07a8ab7a33c5ad7b8d40cfcb13 on11 October2026.
+
+T351 defines stable restoration as a conjunction including absence of target error, no unchanged effective deformation path, and custody/reread. T352's G1 enumerates every relevant error-effective deformation-to-target route, but does not say every target error has such a route. G3 and G4 exclude newly introduced error/path; they do not remove an existing error with no registered operative route.
+
+Counterinterpretation: a singleton admissible case; vertices d,t; registered deformation set{d}; no edges; epsilon(d)=epsilon(t)=1; fixed visible correctness predicate epsilon(t)=0; identity intervention and empty effective footprint; a completed empty-change reread. G1 enumerates every actual path (none), G2 and the cut property hold vacuously, G3/G4 hold because identity introduces nothing, and G5/G6 hold. The target remains erroneous. This strengthens the reader's D-empty example by retaining a nonempty registered deformation set. It is a countermodel to the literal abstract sufficiency statement, not a model of actual human cognition.
+
+A valid repair needs semantic error-exhaustiveness: every post-intervention target error must be supported by a remaining operative error route covered by the old-route/no-new-route analysis. Alternatively require direct initial-target correction and an appropriate preservation invariant. Merely rewording path enumeration as 'complete' does not supply this implication. With the explicit post-error coverage guard, no surviving old route (cut+local effectiveness) and no new route contradict any residual target error. That ordinary implication is immediate but its cognitive/causal instantiation remains substantive.
+
+T351's necessary no-unchanged-path conclusion survives: it is itself part of the declared stable-restoration contract. Its older proof's assumption that the deformation antecedent is live retains the already documented proof correction. No broad claim that graph cuts are useless follows. The successful pathway theorem needs both representation completeness and an actual relationship between represented paths and the desired target property.
+
+Disposition: confirm a missed sufficiency-scope guard in this exact historical source, even though an inherited audit had accepted it. Do not change the retained source or claim an applied repository repair. Keep the weakened 'no registered deformation can transmit through a surviving covered path' conclusion and the stronger repaired theorem distinct.

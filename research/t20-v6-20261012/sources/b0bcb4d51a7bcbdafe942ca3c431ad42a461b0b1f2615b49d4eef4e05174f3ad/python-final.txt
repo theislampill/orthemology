@@ -1,0 +1,13 @@
+test_another_institution_same_named_holder_cannot_inherit_attestation (test_models.Models.test_another_institution_same_named_holder_cannot_inherit_attestation) ... ok
+test_counterfeit_same_id_operator_is_rejected (test_models.Models.test_counterfeit_same_id_operator_is_rejected) ... ok
+test_counterfeit_same_id_parent_is_rejected (test_models.Models.test_counterfeit_same_id_parent_is_rejected) ... ok
+test_occurrence_matrix (test_models.Models.test_occurrence_matrix) ... ok
+test_owned_false_report_defeats_scoped_veracity_not_ownership (test_models.Models.test_owned_false_report_defeats_scoped_veracity_not_ownership) ... ok
+test_same_occurrence_id_cannot_substitute_new_content (test_models.Models.test_same_occurrence_id_cannot_substitute_new_content) ... ok
+test_same_rule_id_cannot_substitute_new_owner (test_models.Models.test_same_rule_id_cannot_substitute_new_owner) ... ok
+test_service_migration_and_all_retractions (test_models.Models.test_service_migration_and_all_retractions) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.337s
+
+OK

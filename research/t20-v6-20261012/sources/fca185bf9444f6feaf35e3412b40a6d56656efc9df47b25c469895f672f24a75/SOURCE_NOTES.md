@@ -1,0 +1,7 @@
+# Source and reading boundaries
+
+The specialized imported existence theorem is the classical Nussbaum–Carleman theorem, as stated in Putinar and Schmüdgen, *Multivariate Determinateness*, Theorem 25 and the immediately following Nussbaum attribution, printed p.24, primary URL https://arxiv.org/pdf/0810.0840v1 . The inherited pinned PDF and p.24 extraction were read and hash-bound, and the primary-web PDF was opened and its theorem location checked on 10 October 2026. The theorem starts from a positive-semidefinite multisequence, not an existing vector measure. All coordinate Carleman conditions give both existence and determinacy. Dimension one uses Hamburger existence plus Carleman uniqueness.
+
+The nonlinear transport/PDE argument is given directly in RESULT.md. No general unbounded-vector-field PDE uniqueness theorem is imported. The ordinary ingredients additionally used are local smooth ODE theory and continuation on compact sublevels, one-complex-variable holomorphic identity theorem, Fourier inversion/uniqueness, tight weak compactness on Euclidean space, and dominated/monotone convergence. Their exact needed hypotheses are discharged in the proof.
+
+The top-level predecessor reports named in INPUT_BINDINGS.json were inspected for ancestry. DEDUP_SCAN.json records the bounded text scan of 154 existing top-level RESULT.md reports. Those local checks support only the stated within-workspace increment. They are not an exhaustive literature review, independent review, or priority determination.

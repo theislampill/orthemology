@@ -1,0 +1,61 @@
+{
+  "ledger_path": "t20-v6-20261011/early_remaining/codec_fixtures/READ_LEDGER.json",
+  "ledger_sha256": "2c2086ef103bec6fe916881757c9547fe683d44484bcb14743b6a1b88e942a65",
+  "reused_exact_full_records": [
+    {
+      "sha256": "b75a20f398cefbd2121bed7c62f2f6f84c465e4acce615bf4182cda8f04239e1",
+      "path": "t20-consolidation-20261011/catalogue/objects/b7/b75a20f398cefbd2121bed7c62f2f6f84c465e4acce615bf4182cda8f04239e1",
+      "bytes": 764,
+      "lines": 19,
+      "original_locations": [
+        {
+          "name": "SolverProbe.lean",
+          "location": "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/Mealy_Measure_Bridge_Stage2_20260930.zip!/sealed-v2/SolverProbe.lean"
+        },
+        {
+          "name": "SolverProbe.lean",
+          "location": "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/Mealy_Measure_Bridge_Stage3_20260930.zip!/sealed-v3/SolverProbe.lean"
+        }
+      ],
+      "scope": "direct full body",
+      "reading_credit": "DIRECT_FULL_BODY",
+      "ranges": [
+        [
+          1,
+          19
+        ]
+      ],
+      "role": "finite Mealy enumeration",
+      "findings": "Enumerates four one-state and 256 two-state binary machines; prints rational solveDefect results, no intrinsic Python comparison.",
+      "fresh_lean_replay": false
+    },
+    {
+      "sha256": "df33d22651ce93c51081663445af59e9a6277b23b2325f48700ac734c8d765d7",
+      "path": "t20-consolidation-20261011/catalogue/objects/df/df33d22651ce93c51081663445af59e9a6277b23b2325f48700ac734c8d765d7",
+      "bytes": 1343,
+      "lines": 25,
+      "original_locations": [
+        {
+          "name": "compare_small.py",
+          "location": "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/Mealy_Measure_Bridge_Stage2_20260930.zip!/sealed-v2/compare_small.py"
+        },
+        {
+          "name": "compare_small.py",
+          "location": "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/Mealy_Measure_Bridge_Stage3_20260930.zip!/sealed-v3/compare_small.py"
+        }
+      ],
+      "scope": "direct full body",
+      "reading_credit": "DIRECT_FULL_BODY",
+      "ranges": [
+        [
+          1,
+          25
+        ]
+      ],
+      "role": "Mealy comparison driver",
+      "findings": "Compares 260 CSV rows against external cvc_probe.py defect. That original comparator has no bound hash and is absent; historical cross-language result not freshly reverified.",
+      "fresh_lean_replay": false
+    }
+  ],
+  "unbound_historical_dependency": "private-locator:71d899355bd9e81c1732; no digest known; no fresh cross-language execution claimed"
+}

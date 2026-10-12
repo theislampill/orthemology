@@ -1,0 +1,11 @@
+# Realizable moment dynamics: classification checkpoint
+
+Every positive realizable solution of the stated normalized moment hierarchy corresponds uniquely to a single initial nonnegative law via its damped evolution. The solution set is exactly the initial moment fibre. Finite-window solutions extend forward, and positivity together with realizability at one positive time suffices for this classification. The precise regularity, normalization and interval assumptions remain those in the frozen RESULT.
+
+Replacing the realizability premise by valid initial moments alone is a separate OPEN follow-on at this checkpoint, not a consequence being claimed here. Countercontrol B has nonnegative coordinates but invalid initial moments (negative variance), so cannot settle that replacement. The flat perturbation countercontrol has valid initial data but develops a negative second moment; it does not refute a positivity-preserving version. Finite algebraic controls do not replace the universal proof.
+
+Author proof and independent review are ordinary mathematics, without Lean/kernel certification or an implemented universal extractor. The participating root CLASSIFICATION_PROOF is separately attributed. Retained lognormal, geometric and determinate-moment ancestry remains inherited; this packet does not silently update those earlier conclusions or claim new negative models.
+
+Fresh extraction runs the unchanged author and independent scripts with the expected bound sibling ancestor layout. Exact text output is compared for the author (1,519 checks), decoded JSON for the independent script (542 checks). Existing Python and SymPy are reused without installation. The author/reviewer snapshots, exact source bindings and receipt are included; no full publications or prior ZIPs are repackaged.
+
+Run `python verify_replay.py --expected-manifest-sha256 <external-receipt-pin> --output <new-output-directory> --replay` from the extracted packet. REUSE_CONTRACT identifies sources, ancestor overlays and output expectations. The external receipt records originals, three ancestor bindings, twenty-one prior archives and five adversarial custody controls. No additional independent review, upload, protected edit, integration or closure is supplied.

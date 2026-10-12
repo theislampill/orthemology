@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-09T14:31:21.617162+00:00",
+  "status": "PASS_AT_DECLARED_SCOPE",
+  "author_manifest_sha256": "c2cbccbcc8ae0f6540c0092060e006e34950368fab4c1d9174b25d57d024d9e8",
+  "result_sha256": "2a811338df1dc4f00e5376fb07b55dc6bafeda7e753890994f56a3492e8d06fa",
+  "normalizer_sha256": "54a4a6cef96a2c678f7766720094d463b3b93f407e787d1ed4b52e911c853fa1",
+  "suite_sha256": "f10ef2e41ce915583bfee0d9d9ff186672b3bf70ccd75db29be4588a26a10b98",
+  "root_replay_log_sha256": "d675d8441f74a823d01fec22cbda18f03b35f12a6085c1aa75772e5bd6d206c2",
+  "author_manifest_entries_checked": 9,
+  "predecessor_hashes_unchanged": 7,
+  "tests_passed": 13,
+  "root_read_scope": [
+    "Complete current result, normalizer and test suite",
+    "Actual inherited guarded compiler and exact-state refinement/DAG-boundary paragraphs"
+  ],
+  "conclusion": "Earliest original representative per exact(q,S) has strictly descending redirected edges, unchanged ordered guard input and support, retained original nonnegative charges; finite refined grammar then admits an actual least-cost rooted DAG whenever reachable.",
+  "limitations": [
+    "Supplied-witness normalizer, not optimizer",
+    "Written general proof with bounded executable tests, no new Lean result",
+    "Does not preserve original root-rule identity or richer proof-node-identity policies",
+    "Not cheapest-standalone-state dynamic programming",
+    "No source authenticity or substantive philosophical warrant"
+  ],
+  "timing": "Prospective operation receipt only; no reconstructed duration, packaging credit or historical six-hour certification",
+  "closure": false,
+  "integration": false
+}

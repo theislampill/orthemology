@@ -1,0 +1,59 @@
+import SourceRigidity
+import RigidityDiscriminator
+import InternalRecursorPrinciple
+import NaturalityBoundary
+namespace IndependentReview
+open OrthemologyV2 OrthemologyV3 P01D P01R P01AC
+open P01AC.EffectiveCompleteness P01AC.ExtensionalRepair
+open SourceRigidity
+open FullPER.Application (originalQ)
+
+-- Arbitrary source context and proof term, without a semantic or primitive-rule premise.
+example {Γ : Tel} (hc : Ctx Γ) {r : Poly} (hr : Has Γ r Rigidity) :
+    Has Γ (.app (.app (.app r originalQ) ident) (abstract ident))
+      FullPER.Application.originalIdentity := by
+  rw [← result_exact]
+  exact identity_from_rigidity hc hr
+example {Γ : Tel} (hc : Ctx Γ) {r : Poly} (hr : HasE Γ r Rigidity) :
+    HasE Γ (.app (.app (.app r originalQ) ident) (abstract ident))
+      FullPER.Application.originalIdentity := by
+  rw [← result_exact]
+  exact identity_from_rigidityE hc hr
+
+-- Exact literal original compiler endpoints; no endpoint substitute.
+example : ResultAt originalQ = .identity (arr N N)
+    P01AC.UnaryIdentity.IntensionalBoundary.variableExpr.closed
+    P01AC.UnaryIdentity.IntensionalBoundary.redundantExpr.closed := result_exact
+example : Has [] implicationProof (arr Rigidity FullPER.Application.originalIdentity) := by
+  rw [← result_exact]
+  exact rigidity_implies_identity
+
+-- All substitutions, not merely the identity substitution or a closed special case.
+example (σ : Nat → Poly) : subst σ Rigidity = Rigidity := rigidity_subst σ
+example (σ : Nat → Poly) : subst σ (ResultAt originalQ) = ResultAt originalQ := result_q_subst σ
+example (u : Poly) :
+    inst (arr (ZeroAt (.var 0)) (arr (StepAt (.var 0)) (ResultAt (.var 0)))) u =
+    arr (ZeroAt u) (arr (StepAt u) (ResultAt u)) := rigidity_inst u
+
+-- Successor law and uniqueness conclusion bind evidence variables in their stated order.
+example : InternalRecursorPrinciple.StepLaw = .pi N (.identity (.param 0)
+    (.app (.var 2) (.app P01AC.BooleanPrimitive.succPoly (.var 0)))
+    (.app (.var 3) (.app (.var 2) (.var 0)))) := rfl
+example : InternalRecursorPrinciple.UniqueConclusion = .pi N (.identity (.param 0)
+    (.app (.var 3) (.var 0)) (.app (.app (.var 0) (.var 4)) (.var 5))) := rfl
+example : ¬ SourceFoldContract.SourceNaturality :=
+  SourceFoldContract.original_source_naturality_not_admissible
+
+#print axioms rigidity_implies_identity
+#print axioms SourceFoldContract.original_source_naturality_not_admissible
+-- Semantic inhabitation does not become a HasE derivation or source negation.
+example (Γ : Tel) : FullPER.Fundamental Γ
+    P01AC.ExtensionalRepair.ExactScalarFusion.c3 Rigidity :=
+  RigidityDiscriminator.rigidity_fundamental Γ
+example : (¬ ∃ r, HasE [] r Rigidity) ∧
+    (¬ ∃ r, HasE [] r (arr Rigidity .bottom)) := RigidityDiscriminator.source_independence
+example : (¬ ∃ r, Has [] r Rigidity) ∧
+    (¬ ∃ r, Has [] r (arr Rigidity .bottom)) := RigidityDiscriminator.source_independence_Has
+#print axioms RigidityDiscriminator.source_independence
+#print axioms RigidityDiscriminator.rigidity_fundamental
+end IndependentReview

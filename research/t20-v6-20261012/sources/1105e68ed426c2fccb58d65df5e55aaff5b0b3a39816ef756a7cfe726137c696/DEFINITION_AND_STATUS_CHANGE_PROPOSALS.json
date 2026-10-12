@@ -1,0 +1,33 @@
+{
+  "status": "PROPOSED_NOT_ADOPTED",
+  "definitions": [
+    {
+      "id": "P03-DEF-U03-OUTCOME",
+      "proposal": "Separate Success, Reject, FuelExhausted and HostFault rather than equating failure with logical falsity."
+    },
+    {
+      "id": "P03-DEF-U04-STATE",
+      "proposal": "Seven-component logical Gamma plus explicit lock/call-local concurrent machine state; retains original typed Plan as distinct model."
+    },
+    {
+      "id": "P03-DEF-Q1F-RANKED-DAG",
+      "proposal": "Finite ranked DAG representation and graph-only typed chains. Ordinary equivalence with finite acyclicity supplied; not an adopted source definition."
+    }
+  ],
+  "interface_changes": [
+    {
+      "file": "boundaries.py",
+      "change": "Refuse JSON output container depth >100 before success; decoder gate unchanged; scalar-at-depth-100 remains accepted."
+    },
+    {
+      "file": "operational.py",
+      "change": "Capture a bounded flat tuple before validation and lock wait; commit that same validated tuple."
+    },
+    {
+      "file": "proof_export.py",
+      "change": "Require each native module row to be an exact two-element list/tuple before unpacking. This also refuses previously tolerated arbitrary two-item iterable rows; that domain restriction requires later explicit review."
+    }
+  ],
+  "new_accepted_theorem_premises": [],
+  "canonical_files_modified": []
+}

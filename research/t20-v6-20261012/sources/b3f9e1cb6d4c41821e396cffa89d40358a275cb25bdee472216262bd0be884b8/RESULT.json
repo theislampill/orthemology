@@ -1,0 +1,12 @@
+{
+  "status": "PASS_SCOPED_FINITE_ADAPTIVE_CONTROLS",
+  "finite_controller_systems": 20736,
+  "bottom_class_projections": 26608,
+  "proper_subset_recurrent_pair_sets": 26340,
+  "prefix_factorisation_checks": 24192,
+  "prefix_law_normalisations": 1152,
+  "common_seed_marginal_correlation_countercontrol": true,
+  "eventual_no_exit_matching_tail_countercontrol": true,
+  "physical_time_subsequence_countercontrol_scope": "pointwise raw-tape bridge only; a separately proved fresh-time iid construction may have the same canonical law",
+  "scope": "Finite controls and explicit countermodels; arbitrary adaptive recurrence is proved in Lean, not inferred from this enumeration"
+}

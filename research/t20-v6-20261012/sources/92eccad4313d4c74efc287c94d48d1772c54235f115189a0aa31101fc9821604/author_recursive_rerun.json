@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "model": "Exp(1), original m_r=r!, a=5/6, M=6",
+  "steps": [
+    "2/3",
+    "2/3"
+  ],
+  "target_u": "4/3",
+  "origin_actual_Taylor_radius": 1,
+  "intermediate_oracles": "Recursive approximate normalized moment names, with explicit rational series and division error budgets.",
+  "cases": [
+    {
+      "grade": 1,
+      "requested_absolute_error": "1/8",
+      "verified_exact_answer": "3/7",
+      "actual_error_less_than_requested": true,
+      "approximation_decimal_for_display": 0.42857143000695097
+    },
+    {
+      "grade": 2,
+      "requested_absolute_error": "1/8",
+      "verified_exact_answer": "18/49",
+      "actual_error_less_than_requested": true,
+      "approximation_decimal_for_display": 0.36734693832994103
+    }
+  ],
+  "stats": {
+    "oracle_calls": 67573,
+    "series_evaluations": 118,
+    "largest_original_grade": 2636,
+    "largest_R": 2605,
+    "original_queries": 67513
+  },
+  "claim_limit": "One finite corroboration of composition; no universal engine, complexity bound, or kernel claim."
+}

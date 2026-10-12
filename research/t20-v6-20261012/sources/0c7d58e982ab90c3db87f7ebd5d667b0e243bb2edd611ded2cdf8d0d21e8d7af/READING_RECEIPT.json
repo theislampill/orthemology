@@ -1,0 +1,370 @@
+{
+  "schema": "t20-occurrence-warrant-reading-v1",
+  "created_utc": "2026-10-11T14:21:06.292300+00:00",
+  "baseline": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+  "sources": [
+    {
+      "id": "ARTICLE.md",
+      "path": "t20-depth-reassessment-20261011/occurrence_warrant/sources/ARTICLE.md",
+      "sha256": "221a50045570edb56a62012eff862df258f9af0ae51d74d116ff224e5c5498e7",
+      "bytes": 22309,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            166
+          ]
+        ]
+      },
+      "role": "Actual substantive owner read; T16 Markdown is derived, other listed sources exact.",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/221a50045570edb56a62012eff862df258f9af0ae51d74d116ff224e5c5498e7/ARTICLE.md",
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "EXACT_EFFECT_ALGEBRA.md",
+      "path": "t20-depth-reassessment-20261011/occurrence_warrant/sources/EXACT_EFFECT_ALGEBRA.md",
+      "sha256": "b824c43b4f4fad672bb96e930241787b8d07d36a69d49f20ea9d85d2d51b43d2",
+      "bytes": 4428,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            62
+          ]
+        ]
+      },
+      "role": "Actual substantive owner read; T16 Markdown is derived, other listed sources exact.",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/b824c43b4f4fad672bb96e930241787b8d07d36a69d49f20ea9d85d2d51b43d2/EXACT_EFFECT_ALGEBRA.md",
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "ORACLE_AND_FORCE_PRECISIONS.md",
+      "path": "t20-depth-reassessment-20261011/occurrence_warrant/sources/ORACLE_AND_FORCE_PRECISIONS.md",
+      "sha256": "a282ebf891d26ca2e55fc93bdb73fa3159f60a6388545b930076c17fd73c7571",
+      "bytes": 11935,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            85
+          ]
+        ]
+      },
+      "role": "Actual substantive owner read; T16 Markdown is derived, other listed sources exact.",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/a282ebf891d26ca2e55fc93bdb73fa3159f60a6388545b930076c17fd73c7571/ORACLE_AND_FORCE_PRECISIONS.md",
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "SIXTEENTH_REPORT.md",
+      "path": "t20-depth-reassessment-20261011/occurrence_warrant/sources/SIXTEENTH_REPORT.md",
+      "sha256": "a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78",
+      "bytes": 37550,
+      "read_scope": {
+        "line_ranges": [
+          [
+            183,
+            195
+          ]
+        ]
+      },
+      "role": "Actual substantive owner read; T16 Markdown is derived, other listed sources exact.",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78/SIXTEENTH_REPORT.md",
+      "fresh_primary_authentication": false,
+      "original_source_sha256": "3d5263089763f124367a12c306af7fc5f246c0b9a316e1f36981130f0818dcc7"
+    },
+    {
+      "id": "source_rows.json",
+      "path": "t20-depth-reassessment-20261011/occurrence_warrant/sources/source_rows.json",
+      "sha256": "67f405c245093546dd26c142db7fd09eea1513b9fb853521d496bca7a70e8a62",
+      "bytes": 3218,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            104
+          ]
+        ]
+      },
+      "role": "Actual substantive owner read; T16 Markdown is derived, other listed sources exact.",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/67f405c245093546dd26c142db7fd09eea1513b9fb853521d496bca7a70e8a62/source_rows.json",
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "commissioned-content-report",
+      "path": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+      "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+      "bytes": 16780,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            103
+          ]
+        ]
+      },
+      "role": "Full actual report",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "commissioned-content-source-return",
+      "path": "t20-consolidation-20261011/catalogue/objects/52/52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0",
+      "sha256": "52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0",
+      "bytes": 15782,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            82
+          ]
+        ]
+      },
+      "role": "Full separate actual source-return report; primary source/scan reading inherited, not repeated",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "communication-availability",
+      "path": "t20-consolidation-20261011/catalogue/objects/59/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+      "sha256": "5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+      "bytes": 13550,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            80
+          ]
+        ]
+      },
+      "role": "Full actual report",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "veracity-boundary",
+      "path": "t20-consolidation-20261011/catalogue/objects/b1/b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "bytes": 5975,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            124
+          ]
+        ]
+      },
+      "role": "Full actual Lean source inspected; no Lean build",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "veracity-crosscheck",
+      "path": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "bytes": 5250,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            41
+          ]
+        ]
+      },
+      "role": "Full actual report",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "cumulative-content-note",
+      "path": "t20-consolidation-20261011/catalogue/objects/82/82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+      "sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+      "bytes": 6966,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            40
+          ]
+        ]
+      },
+      "role": "Full actual note; source reading is inherited",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "finite-contract-owner",
+      "path": "t20-consolidation-20261011/catalogue/objects/8a/8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "bytes": 28801,
+      "read_scope": {
+        "line_ranges": [
+          [
+            26,
+            198
+          ]
+        ]
+      },
+      "role": "D1/D2/D3 actual statement and proofs",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "support-scope-owner",
+      "path": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "bytes": 16325,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            86
+          ]
+        ]
+      },
+      "role": "Full actual support scope report",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "t16-readme",
+      "path": "t20-consolidation-20261011/catalogue/objects/2e/2ee521ec9c1a5508b4c8f6be80d87265b736a64e3eac6125e77566d7eba8f5c6",
+      "sha256": "2ee521ec9c1a5508b4c8f6be80d87265b736a64e3eac6125e77566d7eba8f5c6",
+      "bytes": 1353,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            13
+          ]
+        ]
+      },
+      "role": "Full fixture semantic contract",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "t16-checker",
+      "path": "t20-consolidation-20261011/catalogue/objects/3a/3a34860f74ea5bf75b4ed1cf8322a21abbd65985dabc9a85aa14fc25e44d24b7",
+      "sha256": "3a34860f74ea5bf75b4ed1cf8322a21abbd65985dabc9a85aa14fc25e44d24b7",
+      "bytes": 4038,
+      "read_scope": {
+        "line_ranges": [
+          [
+            1,
+            84
+          ]
+        ]
+      },
+      "role": "Full checker inspected and normal-mode replay",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "t15-admission",
+      "path": "t20-consolidation-20261011/coverage/pinned-baseline/T15-REPORT-DERIVED-MARKDOWN.md",
+      "sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "bytes": 59204,
+      "read_scope": {
+        "line_ranges": [
+          [
+            275,
+            283
+          ]
+        ]
+      },
+      "role": "Admission-stop owner; incidental collective ranges 205–252 were seen but not used",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "t13-source-reconstruction",
+      "path": "t20-consolidation-20261011/coverage/pinned-baseline/T13-REPORT-DERIVED-MARKDOWN.md",
+      "sha256": "60191e4261eee82b392a9863802ac6e7194441f3040a0814aea5076e91310540",
+      "bytes": 63778,
+      "read_scope": {
+        "line_ranges": [
+          [
+            285,
+            293
+          ]
+        ]
+      },
+      "role": "Earlier reconstruction owner; historical foundational withholding is not current judgment",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "crosswalk-json",
+      "path": "t20-consolidation-20261011/coverage/CUMULATIVE_PROGRAMME_CROSSWALK.json",
+      "sha256": "f59ae99db95231f817d5ea90ccc2e729b41daf44463557b322432b563f56dea6",
+      "bytes": 1840646,
+      "read_scope": {
+        "json_fields": [
+          "avenues[number=11]",
+          "inherited_result_bindings[id in avenue11.result_ids].inherited_statement.{conclusion,limitations}",
+          "selected substantive full records: T10 effects/read-cost/interval; T13 reconstruction; T14 occurrence/sense; T15 admission; T16 occurrence; T17 veracity; T20 veracity",
+          "inherited_source_bindings for T10 article/effect/oracle, T16 fixture/report/checker, T20 veracity source"
+        ]
+      },
+      "role": "Orientation, original result ancestry and exact source bindings; no source-reading credit for other metadata",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "foundational-synthesis",
+      "path": "t20-consolidation-20261011/foundations/FOUNDATIONAL_SYNTHESIS.md",
+      "sha256": "0f8d9e619bc6b8edd23cf0fd872e8e77aece671e69dd83420e7b7784b6a6386c",
+      "bytes": 42966,
+      "read_scope": {
+        "sections": [
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      "role": "Current interpretation and correction controls; no whole primary corpus claim",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "evidence-synthesis",
+      "path": "t20-consolidation-20261011/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md",
+      "sha256": "8baf4b25eaa5ebd5ab7eaae7a8ed430f190a9fe62093907d989845fff8434561",
+      "bytes": 35931,
+      "read_scope": {
+        "sections": [
+          "4.1",
+          "6",
+          "7"
+        ]
+      },
+      "role": "Current finite-contract and support-scope controls",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    },
+    {
+      "id": "foundational-source-register",
+      "path": "t20-consolidation-20261011/foundations/SOURCES_AND_READING.json",
+      "sha256": "f4758fe0e2f78f1cb85e0f3598676ca7b088feba77a7c0337dc797d95d2556a9",
+      "bytes": 114192,
+      "read_scope": {
+        "json_fields": [
+          "sources matching commission/content/veracity/tibyan/representation",
+          "all source identities checked mechanically for 52fbe080 absence"
+        ]
+      },
+      "role": "Bounded coverage test, not full source reading",
+      "source_url": null,
+      "fresh_primary_authentication": false
+    }
+  ],
+  "limitations": [
+    "No fresh Arabic primary, print, manuscript or historical authentication.",
+    "No full corpus reread. Catalogue exact-name/content searches located relevant owners only.",
+    "T16 source rows are supplied manual interpretations, not exhaustive admissible readings.",
+    "No Lean build or human warrant model.",
+    "No protected/source/projection mutation; downloaded unchanged copies are research-local."
+  ]
+}

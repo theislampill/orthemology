@@ -1,0 +1,52 @@
+{
+  "status": "PASS_FRESH_FIVE_MODULE_PORTABLE_REPLAY",
+  "timestamp_utc": "2026-09-30T23:09:45.771444+00:00",
+  "modules": [
+    {
+      "module": "SelfVerifyingSupport",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_exit_code": 0
+    },
+    {
+      "module": "CommonObservationBoundary",
+      "source_sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "log_sha256": "fed9c02410634d06160ebae79879deabfd3f26144172650d81433472ae5d89dc",
+      "compiler_exit_code": 0
+    },
+    {
+      "module": "CommonObservationFiniteActions",
+      "source_sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "log_sha256": "60218dcb962e98ef111894f80528006bb718621cd66073d7600307587d6a45e9",
+      "compiler_exit_code": 0
+    },
+    {
+      "module": "CompactObservationBoundary",
+      "source_sha256": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+      "log_sha256": "2932504f88883993cf02cbcca5af5fa6925189378a24e55b12e9c538c8a52cf9",
+      "compiler_exit_code": 0
+    },
+    {
+      "module": "CompactBoundaryControls",
+      "source_sha256": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58",
+      "log_sha256": "f0ec8eff419a4d14d13a60a77aeb30c6044c773ef086045057e9a83a264cf788",
+      "compiler_exit_code": 0
+    }
+  ],
+  "independent_review_manifest_sha256": "d3b05029f0456863423a4fdb9645c0d11360f5f0f696cc0ed20f5132749b6aa2",
+  "independent_review_file_count": 21,
+  "older_archives_unchanged": [
+    {
+      "path": "source-bridges/Source_Bridges_Research_Return_20260930.zip",
+      "sha256": "6d023abe6ae7bc3a60a376a50998e372a1a7322401576669dcbaab998c7aabde"
+    },
+    {
+      "path": "generic-query-audit/Generic_Query_Independent_Audit_20260930.zip",
+      "sha256": "230a16c48dd1601d3df5a0150aad53977a1cd2345372d28119449e0d4c7e203d"
+    },
+    {
+      "path": "common-observation-audit/Common_Observation_Independent_Audit_20260930.zip",
+      "sha256": "401a41b34e9e5086f6946c9c9f0c26f74dc66a033505f13c887cf113d49fd5c5"
+    }
+  ]
+}

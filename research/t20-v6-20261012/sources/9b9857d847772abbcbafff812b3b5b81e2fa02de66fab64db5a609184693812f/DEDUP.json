@@ -1,0 +1,58 @@
+{
+  "scope": "Top-level packet Markdown and Python files only; not exhaustive history or literature.",
+  "files_scanned": 1082,
+  "query": "forward Euler|momentwise.?Euler|negative variance|discretis|discretiz|splitting scheme|Runge.Kutta|CFL",
+  "matches": [
+    {
+      "path": "radial-quartic-gradient-preservation-20261010/README.md",
+      "line": 3,
+      "text": "This additive packet preserves the frozen author proof, exact controls, independent review and antecedent reports. It is intermediate evidence, not integration, protected change, upload, or T20 closure. Unfinished discretisation work is excluded."
+    },
+    {
+      "path": "fisher-endpoint-independent-review-20261010/REVIEW.md",
+      "line": 42,
+      "text": "The score is \u2212(X\u2212q), and its squared Fisher norm is V=Var(X). Strict positivity follows from the everywhere positive, nondegenerate density, not merely from nonnegative variance. At the endpoint V(0)=e\u00b2\u2212e>0. The inequality V(t)\u2264E_tX\u00b2\u2264e\u00b2/L(b) gives the claimed length bound b\u221a(e\u00b2/L(b)). Continuity additionally gives a positive lower bound on each fixed compact interval."
+    },
+    {
+      "path": "realizable-moment-independent-review-20261010/REVIEW.md",
+      "line": 30,
+      "text": "The linear a0=(T-t)/T example has nonnegative coordinates but negative variance. Its initial sequence is already invalid. RESULT.md explicitly states this and does not use it as an independence proof under a valid-initial-data hypothesis. This qualification is essential and retained."
+    },
+    {
+      "path": "realizable-moment-dynamics-20261010/check_controls.py",
+      "line": 77,
+      "text": "# Countercontrol B: nonnegative sequence but negative variance."
+    },
+    {
+      "path": "finite-audit-gradient-independent-review-20261010/verify.py",
+      "line": 127,
+      "text": "                # Common finite positive tilt, independent of ODE discretization."
+    },
+    {
+      "path": "geometry-transport-independent-review-20261009/REVIEW.md",
+      "line": 24,
+      "text": "It is a sum of nonnegative variances. Equality holds exactly when d_i is constant over the support of every output row separately. This includes supports of size one; no connectivity or strict positivity of every K_ji is required."
+    },
+    {
+      "path": "radial-quartic-gradient-reverse-lift-20261010/check_exact.py",
+      "line": 4,
+      "text": "Does not discretize the infinite hierarchy or establish measure existence."
+    },
+    {
+      "path": "two-atom-moving-moment-chart-20261010/RESULT.md",
+      "line": 70,
+      "text": "because b is the expectation of z\u00b2 and m4\u2212b\u00b2 its nonnegative variance. Every such law converges weakly to delta_0 as t grows, although finite-time transitions remain injective on their image. This is exact asymptotic loss of recoverability at the limiting law, not finite-time erasure or a claim of numerical stability."
+    },
+    {
+      "path": "moment-dynamics-preservation-20261010/CHECKPOINT_REPORT.md",
+      "line": 5,
+      "text": "Replacing the realizability premise by valid initial moments alone is a separate OPEN follow-on at this checkpoint, not a consequence being claimed here. Countercontrol B has nonnegative coordinates but invalid initial moments (negative variance), so cannot settle that replacement. The flat perturbation countercontrol has valid initial data but develops a negative second moment; it does not refute a positivity-preserving version. Finite algebraic controls do not replace the universal proof."
+    },
+    {
+      "path": "measure-moment-independent-review-20261009/verify_independent.py",
+      "line": 34,
+      "text": "check('first mean derivative is negative variance',qjets[1]==m[1]**2-m[2])"
+    }
+  ],
+  "conclusion": "No located prior raw-moment Euler impossibility or gradient particle splitting repair; predecessor continuous-time, fixed-support tilt, and moving-chart claims retain ownership."
+}

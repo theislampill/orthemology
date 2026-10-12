@@ -1,0 +1,16 @@
+{
+  "classification": "DOCUMENT_CHECKER_FALSE_POSITIVE",
+  "old_checker_sha256": "08ae81c022506238153f5564a1bd70fe5caed1c7ccf9919c452edbe8ebcf84ca",
+  "witness": [
+    {
+      "match": "version 5",
+      "context": "11034. [11] IUPAC. Compendium of Chemical Terminology (Gold Book), 5th ed. (2025), online version 5.0.0. Entries \u201cchemical reaction\u201d and \u201cmolecular entity\u201d. 10.1351/goldbook.C01033; 10.1351"
+    }
+  ],
+  "cause": "Expanded version-label regex matched the unchanged IUPAC bibliography edition (online version 5.0.0). The user forbids manuscript version labels, not source editions.",
+  "repair": "Check manuscript body before References and title metadata; the exact source edit contract separately preserves all headers. Retain source edition unchanged.",
+  "controls": "Injected Version 5 and v5 in body remain rejected; existing source-edition citation must remain present.",
+  "manuscript_changed_for_this_repair": false,
+  "inherited_mathematical_checkers_changed": false,
+  "new_checker_sha256": "0be612aa931c6c5d73f14a3ed65c5a3f616167ef8d7ddbad2ed632b80efff81b"
+}

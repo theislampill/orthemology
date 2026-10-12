@@ -1,0 +1,120 @@
+{
+  "status": "ACCEPTED_FOR_EXACT_RECOVERED_SOURCE_ARCHIVE_SCOPE",
+  "archive_sha256": "40c77652d3938e95f832023f32f018e1e394ffbd57adcc7d918d07d578e8a3a2",
+  "archive_bytes": 643341,
+  "archive_regular_files": 376,
+  "source_archive_unchanged_after_replay": true,
+  "fresh_mathematical_modules": 111,
+  "fresh_project_objects_including_audit_prerequisite": 112,
+  "main_control_files": 220,
+  "main_control_roles": {
+    "positive": 63,
+    "support": 12,
+    "negative": 145
+  },
+  "control_restoration_classes": {
+    "exact-hash-restored": 167,
+    "payload-restored-no-historical-digest": 52,
+    "newly-regenerated-review-required": 1
+  },
+  "new_integration_controls": 4,
+  "all_control_records_independently_rechecked": 226,
+  "python_reference_tests": 22,
+  "declarations": 8289,
+  "theorem_roots": 3485,
+  "theorem_root_set_exact": true,
+  "nonproof_auxiliary_exclusions": 2446,
+  "import_only_modules": [
+    "CheckerKernelAudit",
+    "ExtensionalRepairAudit",
+    "PolynomialTestAudit"
+  ],
+  "logical_reachable_declarations": 14492,
+  "logical_reachable_opaque_declarations": 6,
+  "logical_opaque_metadata": [
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Lean.opaqueId",
+      "module": "Init.Core",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.561",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.899",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Eval.Defs._hyg.134",
+      "module": "Mathlib.Algebra.Polynomial.Eval.Defs",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.740",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    },
+    {
+      "scope": "logical proof closure only; no executable-totality claim",
+      "name": "Polynomial.wrapped._@.Mathlib.Algebra.Polynomial.Basic._hyg.10231",
+      "module": "Mathlib.Algebra.Polynomial.Basic",
+      "kernelValueAvailable": true
+    }
+  ],
+  "constructor_retention": {
+    "status": "PASS",
+    "compared_packaged_files": [
+      "lean/AllSyntax.lean",
+      "lean/UnaryCertificateSyntax.lean"
+    ],
+    "retained_constructor_counts": {
+      "Ctx": 2,
+      "Form": 7,
+      "Has": 18
+    },
+    "added_constructor": "HasC.certified",
+    "source_hashes": {
+      "AllSyntax.lean": "633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46",
+      "UnaryCertificateSyntax.lean": "5f80f464475cb12a6ad90fc89c3540912322f31470be86e26072a990222115c4"
+    }
+  },
+  "fresh_output_directory": "private-locator:a35989eab82833457137 independent replay 1",
+  "unrelated_working_directory": "private-locator:eda5e8a4f23384e4489c working directory",
+  "caller_lean_path": "/intentionally-invalid-caller-search-path",
+  "project_object_reuse": false,
+  "dependency_objects_reused": 1369,
+  "dependency_cold_build_performed": false,
+  "replay_elapsed_seconds": 378.663,
+  "source_integrity_sha256": "1a2b6c134d74c5c5b3ee4d4910647291073102b2a320b0cc019c3846ffa34d0f",
+  "source_lock_sha256": "fd4a106042df084782815c27505cb74a4b73a9021c765081f07eaeddcd044239",
+  "replay_receipt_sha256": "5a5e9a8587f03197dcd665a91491e40a42506d43f0ecf37bacb6a7d7c94bd6cf",
+  "control_receipt_sha256": "b768c972e47a1a9685df16f5c18a5b032c0623cb22ffe7bda55e9ae28a20302e",
+  "project_build_receipt_sha256": "5e6a38d2714c3ca7761feabcf88e73897f90577d2f5ef8d2871b455e5e0cd633",
+  "evidence_files": {
+    "EXACT_ARCHIVE_FULL_REPLAY.log": "dfdc21c52b37901d4538a2b1a41238e483c295b1fbcb1248185dca6fa35b2385",
+    "EXACT_ARCHIVE_MEMBER_VERIFICATION.json": "5cb7426f02bc128bafd82387d6305bd3a130c49eaa4647c7cb469534da996b5b",
+    "FINAL_ARCHIVE_INTERFACE_REGRESSIONS.json": "cb286433f795e9b9e89103807aad960d3fb3040bf10a4bc677967b517d11ea7c",
+    "FINAL_REGENERATED_FIXTURE_VERIFICATION.json": "66b8f85f673faa6547b4a01a8a351bd19dad870bcaa73bcbf468863fe8b1071d"
+  },
+  "scope_limits": [
+    "New recovered-v1 integration assurance, not exact restoration of the interrupted wrapper.",
+    "All 220 current fixture contracts executed; only 167 have matched historical hashes, 52 are complete-payload restorations without historical hashes and one is a current regenerated fixture.",
+    "Historical scientific acceptance is separately family scoped; unavailable historical serialized bodies remain unavailable.",
+    "Aggregate audit is logical proof closure; strict computational/HasC opaque rejection remains lane scoped.",
+    "Native compiler, FFI and standard implemented-by replacements remain explicit trust boundaries.",
+    "Dependency preparation helper statically reviewed; existing independently reverified official pinned dependency objects reused, with no second cold build.",
+    "No canonical adoption or publication.",
+    "The 6,713 inherited declaration names and theorem/unsafe/partial flags match the historical inventory; 23 generated-equation theorems have different within-inherited88 module attribution. Historical module/name-row or proof-term-byte equality is not asserted."
+  ],
+  "final_inventory_comparison_sha256": "dd12e280787d416307751d69929db21ea6087c1bb9f0f8cfdda34cc821f4d791",
+  "author_final_inventories_match_independent": true,
+  "historical_generated_equation_attribution_changes": 23
+}

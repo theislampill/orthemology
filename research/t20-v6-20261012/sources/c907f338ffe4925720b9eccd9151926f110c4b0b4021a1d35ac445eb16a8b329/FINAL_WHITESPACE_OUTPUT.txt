@@ -1,0 +1,11 @@
+{
+  "whole_payload_git_exit": 3,
+  "whole_payload_strict_pass": false,
+  "unqualified_diagnostics": [],
+  "authored_amended_file_count": 91,
+  "authored_amended_git_exit": 1,
+  "authored_amended_strict_pass": true,
+  "authored_amended_output": "",
+  "scope": "Exact original-source whitespace is retained as a scoped integration advisory; no attribute exemption introduced. No claim whole final delta passes strict git whitespace."
+}
+diagnostics 25 files 14

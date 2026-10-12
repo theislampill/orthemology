@@ -1,0 +1,60 @@
+{
+  "scope": "Selected authored precursor and source texts named by the final measure author/reviewer bindings. These preserve exact provenance context. The two replay scripts require none of these paths at runtime.",
+  "files": [
+    {
+      "path": "constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "path": "measure-moment-continuation-boundary-20261009/sources/DEFECT_COMPUTABILITY.md",
+      "bytes": 11810,
+      "sha256": "74333fb0f8232c6d91c0b8e6f8f15ad6d68a515d429bd044387c647d92689ee2"
+    },
+    {
+      "path": "state-dependent-gradient-obstruction-20261009/RESULT.md",
+      "bytes": 10507,
+      "sha256": "dc9adfc33c622c989de9204ef1349e6a5c36255152bc286c5c0e11da731b60f2"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    },
+    {
+      "path": "user-checkpoints/extracted/P02/proofs/CV_C_HIERARCHY.md",
+      "bytes": 12643,
+      "sha256": "cb9a698d4e0e9e0162aec3709bfdfdaebaf19a9bc19b9350f386e6d11709926d"
+    },
+    {
+      "path": "user-checkpoints/extracted/P02/proofs/U05_MEASURE_CORE.md",
+      "bytes": 12867,
+      "sha256": "33ba053c3113b297c5dbf72e28333386163ead926713a91a0e578245ae042cfe"
+    },
+    {
+      "path": "user-checkpoints/extracted/P03/inputs/p02-analysis/CV_C_COMPUTABILITY.md",
+      "bytes": 13604,
+      "sha256": "2eb4d6e67a457c74806b112c9d04470ed2380046b30ab5972ea05485cd08db85"
+    },
+    {
+      "path": "user-checkpoints/extracted/P03/inputs/p02-analysis/U05_MEASURE_SEMANTICS.md",
+      "bytes": 8418,
+      "sha256": "0a4c2c28aa718e1687b81e34734f4dcff1228d5864af215c4470aea2dd9329e3"
+    },
+    {
+      "path": "user-checkpoints/extracted/P15/source-main/experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md",
+      "bytes": 11810,
+      "sha256": "74333fb0f8232c6d91c0b8e6f8f15ad6d68a515d429bd044387c647d92689ee2"
+    },
+    {
+      "path": "warranted-learning-20261009/sources/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "bytes": 47537,
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0"
+    }
+  ]
+}

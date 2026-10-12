@@ -1,0 +1,11 @@
+{
+  "lean_source": "SolverProbe.lean",
+  "lean_solver": "MealySolver.solveDefect",
+  "compared_against": "private-locator:71d899355bd9e81c1732 defect",
+  "checked_machines_by_states": {
+    "1": 4,
+    "2": 256
+  },
+  "all_match": true,
+  "interpretation": "Executable regression evidence only; the Lean theorem proves Lean solver correctness independently, and this finite test does not prove Python source correspondence."
+}

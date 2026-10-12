@@ -1,0 +1,791 @@
+{
+  "authored_imports": [
+    {
+      "caller_sha256": "fd6dbafefb2eb6b24119c0d94634251df621d30122c246f690cce146ed5c9ce5",
+      "imported_sha256": "ba437ce44adf1ab03d1f797a3c5a72f8991b99186a733bdfc2f9574b02d3d4fd",
+      "historical_relative_path": "scripts/validate_pmr007_deep_bk_public_snapshot.py",
+      "status": "both complete bodies examined"
+    }
+  ],
+  "libraries": "Python standard library throughout except PyYAML in BG/BH reviewer and public custody/test modules; neither installed nor executed for this task.",
+  "semantic_inputs": [
+    {
+      "sha256": "3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91",
+      "git_blob_sha1": "bd004c3bb8a6fcee76f8d8608c3273d177dbc73c",
+      "bytes": 4634,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/3a/3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91",
+      "names": [
+        "PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md"
+      ],
+      "kinds": [
+        ".md"
+      ],
+      "routes": [
+        {
+          "source_sha256": "3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/680",
+          "recorded_scope": {
+            "scope": "whole exact retained body; primary selection scope explicitly limited in assessment",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/3a/3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/620",
+          "recorded_scope": {
+            "scope": "whole exact retained body; primary selection scope explicitly limited in assessment",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/3a/3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91",
+          "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+          "pointer": "$/records/136",
+          "recorded_scope": {
+            "scope": "whole exact retained body; primary selection scope explicitly limited in assessment",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/3a/3a520c2aea322378b6a98565649570092d9046349eeb2b54f50057a5d8d3ad91"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "lines": 54
+    },
+    {
+      "sha256": "d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947",
+      "git_blob_sha1": "bef886d9822022cdab2cbc5159f8081c5835a642",
+      "bytes": 867,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/d4/d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947",
+      "names": [
+        "PMR007-DEEP-BE-EQUATION-PRESENTATION-CORRECTION.md"
+      ],
+      "kinds": [
+        ".md"
+      ],
+      "routes": [
+        {
+          "source_sha256": "d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/593",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read",
+            "role": "historical_context_or_custody_body"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/d4/d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/533",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read",
+            "role": "historical_context_or_custody_body"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/d4/d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947",
+          "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+          "pointer": "$/records/46",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read",
+            "role": "historical_context_or_custody_body"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/d4/d4609b88e9b02821dd9fd62db19286e63c2a1a98c45431fd299c7b6b261b9947"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "lines": 16
+    },
+    {
+      "sha256": "2feffd9381058278e15624fd64b8431980dd6e1642571e0bbf4506af45c8c4df",
+      "git_blob_sha1": "eded4dcc5dd1be00265813ce5a7bbe789c3acf77",
+      "bytes": 3929,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/2f/2feffd9381058278e15624fd64b8431980dd6e1642571e0bbf4506af45c8c4df",
+      "names": [
+        "PMR007-DEEP-BF-BK-PUBLIC-CUSTODY-CORRECTION.yaml"
+      ],
+      "kinds": [
+        ".yaml"
+      ],
+      "routes": [],
+      "lines": 68
+    },
+    {
+      "sha256": "1c31f18f1d9cfcdcf49604bdeac9305f468b93771a4d94d7b3f2408886bebdc9",
+      "git_blob_sha1": "2b75b8b59d2dc8fcb0642abf5a5e579b1af06ef9",
+      "bytes": 1653,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/1c/1c31f18f1d9cfcdcf49604bdeac9305f468b93771a4d94d7b3f2408886bebdc9",
+      "names": [
+        "PMR007-DEEP-BF-BK-PUBLIC-REPRODUCTION-CROSSWALK.yaml"
+      ],
+      "kinds": [
+        ".yaml"
+      ],
+      "routes": [],
+      "lines": 39
+    },
+    {
+      "sha256": "5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1",
+      "git_blob_sha1": "e500c04aacef65e06e33e80121ab656c64cee781",
+      "bytes": 2570,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/5b/5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1",
+      "names": [
+        "PMR007-DEEP-BF-BK-SOURCING-CORRECTION.md"
+      ],
+      "kinds": [
+        ".md"
+      ],
+      "routes": [
+        {
+          "source_sha256": "5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/617",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/5b/5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/557",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/5b/5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1",
+          "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+          "pointer": "$/records/73",
+          "recorded_scope": {
+            "scope": "whole exact retained body",
+            "reading_mode": "direct_full_body_read"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/5b/5bc4ac49f62f45045bd91b8ea919e44100e9fc7d58d0d68a7e7775597e0189b1"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "lines": 14
+    },
+    {
+      "sha256": "97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
+      "git_blob_sha1": "23ae320500f7788577a3a9e62f37786b93cee2a2",
+      "bytes": 1769,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/97/97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
+      "names": [
+        "PMR007_DEEP_BG_INTEGRATED_R5_COMMON_MODEL_V2.yaml"
+      ],
+      "kinds": [
+        ".yaml"
+      ],
+      "routes": [],
+      "lines": 59
+    },
+    {
+      "sha256": "6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51",
+      "git_blob_sha1": "714cde5e8c2270c4820ce0868f03ea6b185bc0f2",
+      "bytes": 1928,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/6a/6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51",
+      "names": [
+        "PMR-007_DEEP_BH_PROPER_FUNCTION_AND_FITRAH_AUTHORITY_NOTE.md"
+      ],
+      "kinds": [
+        ".md"
+      ],
+      "routes": [
+        {
+          "source_sha256": "6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51",
+          "ledger": "private-locator:381c77b9cbe75bdebcda",
+          "pointer": "$/records/55",
+          "recorded_scope": {
+            "reading_mode": "fresh_complete_retained_text"
+          },
+          "ranges": [
+            [
+              1,
+              49
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/6a/6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51",
+          "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+          "pointer": "$/records/336",
+          "recorded_scope": {
+            "scope": "fresh_complete_retained_text",
+            "reading_mode": "completed_transferred_reading"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/6a/6abc699374b5e998ff1ee73690fd881270c035b02c4a52aebfbec077f9ceae51"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "lines": 49
+    },
+    {
+      "sha256": "bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be",
+      "git_blob_sha1": "9ec625179a0146ea0c2a980c19d1e149c6ead996",
+      "bytes": 3166,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/bc/bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be",
+      "names": [
+        "PMR-007_DEEP_BF_NONNEGATIVE_RANK_ANCESTRY_AND_FIELD_NOTE.md"
+      ],
+      "kinds": [
+        ".md"
+      ],
+      "routes": [
+        {
+          "source_sha256": "bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be",
+          "ledger": "private-locator:381c77b9cbe75bdebcda",
+          "pointer": "$/records/100",
+          "recorded_scope": {
+            "reading_mode": "fresh_complete_retained_text"
+          },
+          "ranges": [
+            [
+              1,
+              110
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/bc/bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be",
+          "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+          "pointer": "$/records/381",
+          "recorded_scope": {
+            "scope": "fresh_complete_retained_text",
+            "reading_mode": "completed_transferred_reading"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/bc/bca3206236fffbfbb1616ca7d6c0c9b29919a36e0795df6bc495a72a9c2465be"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "lines": 110
+    },
+    {
+      "sha256": "31908754622d9d3d6d46f30bd5deedbff8054bf5e60e9f26d13ca5a490736e10",
+      "git_blob_sha1": "5ef13d6596b5e862edcc6ac2013582389492c60c",
+      "bytes": 1975,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/31/31908754622d9d3d6d46f30bd5deedbff8054bf5e60e9f26d13ca5a490736e10",
+      "names": [
+        "AR8R-PMR007-DEEP-A-BK-PROPOSAL-RECEIPT-V1.yaml"
+      ],
+      "kinds": [
+        ".yaml"
+      ],
+      "routes": [],
+      "lines": 54
+    },
+    {
+      "sha256": "167f7e951b728abc328bfc09cd18781a475e34cb6e1000f7e09c18762c6bd2f9",
+      "git_blob_sha1": "73e609ba9f5051f329b077c18e5bfe9f1bf8cd83",
+      "bytes": 2870,
+      "object_path": "t20-consolidation-20261011/catalogue/objects/16/167f7e951b728abc328bfc09cd18781a475e34cb6e1000f7e09c18762c6bd2f9",
+      "names": [
+        "AR8R-PMR007-DEEP-BF-BK-EXECUTION-RECEIPT-V1.yaml"
+      ],
+      "kinds": [
+        ".yaml"
+      ],
+      "routes": [],
+      "lines": 76
+    }
+  ],
+  "frozen_sidecars": {
+    "status": "All fifteen exact identities uniquely recovered and complete literal fields inspected",
+    "ledger": "t20-v6-20261011/empirical_occurrence/aq_bk_implementation/FROZEN_INTEGRITY_INPUTS.json",
+    "sha256": "e76af5daa1cbfe2275b867ab63a885b8a3af81ccd5b073e523adcf14dc974f26",
+    "scope": "integrity inputs only; no body/proof credit for listed members or nested sidecars",
+    "historical_execution": "Not attempted; full historical layout and omitted dependencies remain necessary"
+  },
+  "custody_inventory": "Public validator expects 1186 exact snapshot members and 12 source pairs (9 unique source objects). This count is only the code contract; this task neither enumerates them as fresh readings nor runs the validator.",
+  "historical_unavailable_scope": "Original source sidecars, private BF PDFs/BH renderings and BJ V2 primary generator are excluded/absent in the specific public snapshot according to the actual controlling contracts. Not a universal claim of unavailability in all recovered archives.",
+  "historical_versions": "Every supplied older and current Python identity is read completely, not normalized to its successor. AR V2 intentional failure, AV V1 uniqueness repair, AT V1 length-three test-class mismatch and BK global-to-local controls retain chronology.",
+  "context_reuse": {
+    "AQ": {
+      "sha256": "036bdf3fb799e6f29b2e0eb33e79d99c0f8f614b8fa3e20f2204898e38c16a7c",
+      "path": "t20-consolidation-20261011/catalogue/objects/03/036bdf3fb799e6f29b2e0eb33e79d99c0f8f614b8fa3e20f2204898e38c16a7c",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/0",
+      "prior_record": {
+        "cluster_index": 46,
+        "sha256": "036bdf3fb799e6f29b2e0eb33e79d99c0f8f614b8fa3e20f2204898e38c16a7c",
+        "path": "t20-consolidation-20261011/catalogue/objects/03/036bdf3fb799e6f29b2e0eb33e79d99c0f8f614b8fa3e20f2204898e38c16a7c",
+        "aliases": [
+          "PMR-007_DEEP_ROUND_AQ_SOURCE_COMPATIBLE_ARCHITECTURE_DISCRIMINATION_V2.md"
+        ],
+        "bytes": 8472,
+        "read_ranges": [
+          [
+            1,
+            212
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AQ source-compatible architecture discrimination",
+        "findings": "Bayes odds, common-channel total variation contraction, interpretation-family referent fibre and invariant-score orbit argument are valid at the declared frozen comparison surface. Three parity-breaking gates are an interface classification for that surface, not a universal exhaustion of independently justified philosophical premises. Equal represented likelihood supplies no Bayes update; it does not prove real-world equal probability or metaphysical admissibility of the rival.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AR": {
+      "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "path": "t20-consolidation-20261011/catalogue/objects/cf/cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/1",
+      "prior_record": {
+        "cluster_index": 47,
+        "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+        "path": "t20-consolidation-20261011/catalogue/objects/cf/cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+        "aliases": [
+          "D-cf3a6b9deeef88297bad.md",
+          "PMR-007_DEEP_ROUND_AR_PROVENANCE_ROOT_EVIDENCE_CONSERVATION_V2.md",
+          "S2-PMR-007_DEEP_ROUND_AR_PROVENANCE_ROOT_EVIDENCE_CONSERVATION_V2.md",
+          "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b.txt"
+        ],
+        "bytes": 6935,
+        "read_ranges": [
+          [
+            1,
+            184
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AR provenance-root evidence conservation",
+        "findings": "A common hypothesis-independent retransmission channel cannot create discrimination. Sufficient deterministic copies preserve a root likelihood ratio rather than exponentiating it. Products of root ratios require conditional independence under each hypothesis. Authentication, carrier labels, statistical independence, semantic relevance, truth, tawatur and recipient warrant remain separate. Ordinary finite probability identities; no source authentication or actual independence established.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AS": {
+      "sha256": "5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6",
+      "path": "t20-consolidation-20261011/catalogue/objects/56/5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/2",
+      "prior_record": {
+        "cluster_index": 48,
+        "sha256": "5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6",
+        "path": "t20-consolidation-20261011/catalogue/objects/56/5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6",
+        "aliases": [
+          "PMR-007_DEEP_ROUND_AS_PROPER_FUNCTION_INTERVENTION_BASIS_V2.md"
+        ],
+        "bytes": 9769,
+        "read_ranges": [
+          [
+            1,
+            253
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AS proper-function intervention basis",
+        "findings": "In a frozen finite deterministic response model, nonadaptive exact identification is pair-disagreement hitting set, and the remaining-intervention recurrence gives exact adaptive worst-case depth. The displayed four-account example has nonadaptive3/adaptive2. Complete response semantics and independently justified truth/source coordinates are prerequisites, so nominal norm-source labels or installed-target success cannot bootstrap those predicates.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AT": {
+      "sha256": "2f53ff550b8f00e315bdf70b25c36c5fbfc45415d4431e5078ec47c0280888ca",
+      "path": "t20-consolidation-20261011/catalogue/objects/2f/2f53ff550b8f00e315bdf70b25c36c5fbfc45415d4431e5078ec47c0280888ca",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/3",
+      "prior_record": {
+        "cluster_index": 49,
+        "sha256": "2f53ff550b8f00e315bdf70b25c36c5fbfc45415d4431e5078ec47c0280888ca",
+        "path": "t20-consolidation-20261011/catalogue/objects/2f/2f53ff550b8f00e315bdf70b25c36c5fbfc45415d4431e5078ec47c0280888ca",
+        "aliases": [
+          "PMR-007_DEEP_ROUND_AT_NEUTRAL_INTERVENTIONAL_TRACE_EQUIVALENCE_V2.md"
+        ],
+        "bytes": 8999,
+        "read_ranges": [
+          [
+            1,
+            214
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AT neutral interventional trace equivalence",
+        "findings": "Equality of all finite controlled word probabilities is equivalent to equality of transcript laws under all common finite-horizon deterministic/randomized history policies. Reachable row-space stabilization gives witness length at most r\u22121 (and n_A+n_R\u22121). Initial probability rows ensure the difference row is nonzero. This is distributional and experiment-relative, not hidden-state, causal, personal or normative identity. The source-reported delayed-witness runtime was not replayed here.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AU": {
+      "sha256": "2ad22ea2f5e592701f801d7b93310899f7e2cbe312cee0608f1592c492c2118e",
+      "path": "t20-consolidation-20261011/catalogue/objects/2a/2ad22ea2f5e592701f801d7b93310899f7e2cbe312cee0608f1592c492c2118e",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/4",
+      "prior_record": {
+        "cluster_index": 50,
+        "sha256": "2ad22ea2f5e592701f801d7b93310899f7e2cbe312cee0608f1592c492c2118e",
+        "path": "t20-consolidation-20261011/catalogue/objects/2a/2ad22ea2f5e592701f801d7b93310899f7e2cbe312cee0608f1592c492c2118e",
+        "aliases": [
+          "D-2ad22ea2f5e592701f80.md",
+          "PMR-007_DEEP_ROUND_AU_SYNCHRONIZATION_INNOVATION_AND_EVIDENTIAL_RANK_V2.md",
+          "S3-PMR-007_DEEP_ROUND_AU_SYNCHRONIZATION_INNOVATION_AND_EVIDENTIAL_RANK_V2.md"
+        ],
+        "bytes": 7458,
+        "read_ranges": [
+          [
+            1,
+            260
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AU synchronization and provenance-innovation rank",
+        "findings": "Row-span synchronization loss and the short exact sequence for innovation give rho_after=rho_before\u2212delta_sync+gamma_old+gamma_fresh. Old-root recovery is essential; V1\u2019s fresh-only balance fails on the displayed identity/projection example. Root authentication and claim-relevance quotient are fixed premises; linear rank is not probabilistic independence, Hamming distance, truth or a causal repair-capacity measure.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AV": {
+      "sha256": "fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+      "path": "t20-consolidation-20261011/catalogue/objects/fc/fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/5",
+      "prior_record": {
+        "cluster_index": 51,
+        "sha256": "fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+        "path": "t20-consolidation-20261011/catalogue/objects/fc/fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+        "aliases": [
+          "PMR-007_DEEP_ROUND_AV_NEUTRAL_BRIDGE_INTERPOLATION_FIREWALL_V2.md"
+        ],
+        "bytes": 7435,
+        "read_ranges": [
+          [
+            1,
+            243
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AV neutral-bridge interpolation interval",
+        "findings": "Finite Boolean elimination gives S_A=exists_X A and T_C=forall_Y C; entailment iff S_A\u21d2T_C iff a shared-N interpolant exists. Under entailment, all interpolants lie between these tables and number2^slack. Uniqueness requires S_A=T_C; V1\u2019s uniqueness fails for A=N,C=true. The finite logical bridge neither authenticates source/world links nor justifies the vocabulary partition. No fresh first-order Craig/Beth proof is claimed.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AW": {
+      "sha256": "338a8d409f6c9dfc28acba4fe1ce84133237147ab9291055a5aef65f2a8e829c",
+      "path": "t20-consolidation-20261011/catalogue/objects/33/338a8d409f6c9dfc28acba4fe1ce84133237147ab9291055a5aef65f2a8e829c",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr/READING_LEDGER.json",
+      "prior_pointer": "$/records/6",
+      "prior_record": {
+        "cluster_index": 52,
+        "sha256": "338a8d409f6c9dfc28acba4fe1ce84133237147ab9291055a5aef65f2a8e829c",
+        "path": "t20-consolidation-20261011/catalogue/objects/33/338a8d409f6c9dfc28acba4fe1ce84133237147ab9291055a5aef65f2a8e829c",
+        "aliases": [
+          "PMR-007_DEEP_ROUND_AW_PROVENANCE_ROOT_ROBUST_DIAGNOSIS_V2.md"
+        ],
+        "bytes": 6058,
+        "read_ranges": [
+          [
+            1,
+            199
+          ]
+        ],
+        "read_status": "fresh_complete_body_read",
+        "source_role": "historical_repaired_proposal_theorem_family_with_ordinary_proofs_and_application_limits",
+        "title": "AW provenance-root robust exact diagnosis",
+        "findings": "Static root-level deterministic code diagnosis has substitution threshold2f+1 and marked-erasure thresholdf+1, hence pair multicover. Copy count is not coordinate multiplicity and bounded arbitrary errors already allow coordinated corruptions within f. Cross-lane claim from AT needs qualification: equality of stochastic transcript distributions alone does not imply identical deterministic per-hypothesis codewords or pathwise Hamming distance0; deterministic symbol/coupling/decoder premise is needed.",
+        "prior_reading_reconciliation": "Exact SHA was not found in available v6 *READ*.json/jsonl ledgers before this pass; no prior complete read presumed. Transfer also reported no reading route. This search is not a global absence proof for earlier archives.",
+        "semantic_read_credit": true,
+        "fresh_execution_of_supplied_runtime": false,
+        "general_mathematical_novelty_claim": false,
+        "source_scope_ceiling": "The thinner registered neutral-signature/model premises do not defeat later independently supported positive appraisals under stronger premises. No original source, actual norm, metaphysical rival, or world link is established by the formal model."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AY": {
+      "sha256": "5641c789382d657af97ddbb85052ae9921290a377bebb6f152e39bcc27b5d64c",
+      "path": "t20-consolidation-20261011/catalogue/objects/56/5641c789382d657af97ddbb85052ae9921290a377bebb6f152e39bcc27b5d64c",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/0",
+      "prior_record": {
+        "source_id": "PMR-DEEP-AY",
+        "sha256": "5641c789382d657af97ddbb85052ae9921290a377bebb6f152e39bcc27b5d64c",
+        "path": "t20-consolidation-20261011/catalogue/objects/56/5641c789382d657af97ddbb85052ae9921290a377bebb6f152e39bcc27b5d64c",
+        "bytes": 7364,
+        "lines": 250,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "AY separates structural automorphisms from residual content-algebra automorphisms. Gauge-invariant evidence cannot identify a target varying over its orbit; singleton interpretation orbit removes only declared recoding ambiguity, not constitutive semantics or mentality. Independently warranted anchors are admitted rather than prohibited. The historical neutral impersonal semantic law is an expansion control, not an actual-world counterexample to later premises.",
+        "registered_rows": [],
+        "cluster_index": 53
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AZ": {
+      "sha256": "b81436148dcb0bcd932609d8d54b19e078bcbfa54a62ff3fe17ce762ae87a42e",
+      "path": "t20-consolidation-20261011/catalogue/objects/b8/b81436148dcb0bcd932609d8d54b19e078bcbfa54a62ff3fe17ce762ae87a42e",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/1",
+      "prior_record": {
+        "source_id": "PMR-DEEP-AZ",
+        "sha256": "b81436148dcb0bcd932609d8d54b19e078bcbfa54a62ff3fe17ce762ae87a42e",
+        "path": "t20-consolidation-20261011/catalogue/objects/b8/b81436148dcb0bcd932609d8d54b19e078bcbfa54a62ff3fe17ce762ae87a42e",
+        "bytes": 7028,
+        "lines": 267,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "AZ full crossed response table decides form invariance plus sensitivity to a previously interpreted content coordinate. Actual semantic contract, feasible cells, positivity, consistency, common design and history completeness remain premises. Missing-cell impossibility needs nondegenerate content and response alphabets: fresh exact controls confirm failure when either is singleton. With at least two contents and responses and a nonempty form set, the constructive boundary survives. Passing this operational experiment does not establish intentional uptake.",
+        "registered_rows": [],
+        "cluster_index": 54
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "BF": {
+      "sha256": "203fd0f0a1f23c61377c96f995241533cf57231083ab641d920379aaacf6c4f2",
+      "path": "t20-consolidation-20261011/catalogue/objects/20/203fd0f0a1f23c61377c96f995241533cf57231083ab641d920379aaacf6c4f2",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/7",
+      "prior_record": {
+        "source_id": "PMR-DEEP-BF",
+        "sha256": "203fd0f0a1f23c61377c96f995241533cf57231083ab641d920379aaacf6c4f2",
+        "path": "t20-consolidation-20261011/catalogue/objects/20/203fd0f0a1f23c61377c96f995241533cf57231083ab641d920379aaacf6c4f2",
+        "bytes": 6627,
+        "lines": 228,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "BF real nonnegative matrix rank equals minimum normalized latent-product mixture width; rank and rectangle cover are lower bounds, row conditioning gives the finite bivariate saturation bound. Separate local Markov channels cannot increase width. Rational and real nonnegative rank are explicitly distinguished, and matrix flattenings do not solve multiway compatibility. A justified width restriction yields real exclusion; unrestricted formal latent realization is neither metaphysical actuality nor bearer count.",
+        "registered_rows": [],
+        "cluster_index": 60
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "BG": {
+      "sha256": "de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+      "path": "t20-consolidation-20261011/catalogue/objects/de/de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/8",
+      "prior_record": {
+        "source_id": "PMR-DEEP-BG",
+        "sha256": "de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+        "path": "t20-consolidation-20261011/catalogue/objects/de/de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+        "bytes": 6394,
+        "lines": 209,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "BG grants one structural bearer, frame-relative presence, actual effect map, primitive truth and target labels, fitting-action table and faithful tokens, then freely varies nine omitted target predicates. This is valid signature-relative nonentailment with explicit omission of metaphysical possibility and Bayesian parity. CreatorClass is defined agentively, not identical to mere effect production. The witness does not retain later complete actual-resource adequacy, intentional determination or pure-perfection appraisals.",
+        "registered_rows": [],
+        "cluster_index": 61
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit",
+      "return_reading": "Full 209-line return to exact previously fully read theorem; compare lines 54\u201359 and 107\u2013109 to model requirements. Not new first reading."
+    },
+    "BH": {
+      "sha256": "b06723af6ad3a6f03f41b35c3c5796c609431841c335a8d4b40b7691f2d47af0",
+      "path": "t20-consolidation-20261011/catalogue/objects/b0/b06723af6ad3a6f03f41b35c3c5796c609431841c335a8d4b40b7691f2d47af0",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/9",
+      "prior_record": {
+        "source_id": "PMR-DEEP-BH",
+        "sha256": "b06723af6ad3a6f03f41b35c3c5796c609431841c335a8d4b40b7691f2d47af0",
+        "path": "t20-consolidation-20261011/catalogue/objects/b0/b06723af6ad3a6f03f41b35c3c5796c609431841c335a8d4b40b7691f2d47af0",
+        "bytes": 5478,
+        "lines": 175,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "BH forest-edge calibration to independently supplied truth loss plus vanishing fundamental cycles is equivalent to global componentwise exact increments. Exact correction implies ordinal acyclicity; a topological rank need not preserve specified increments or truth calibration. Proper-function fixing, truth aim, environment and source applicability are separate from a calibrated trajectory. This preserves actual positive noetic recognition rather than demanding a new independent syllogism at every episode.",
+        "registered_rows": [],
+        "cluster_index": 62
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "BJ": {
+      "sha256": "18dbe24be8bb5a1807e1d76201b01fc6ea14b13aec1ddbad6d1f3d9d8058d0c2",
+      "path": "t20-consolidation-20261011/catalogue/objects/18/18dbe24be8bb5a1807e1d76201b01fc6ea14b13aec1ddbad6d1f3d9d8058d0c2",
+      "prior_ledger": "t20-v6-20261011/foundations/early_pmr/READ_LEDGER.json",
+      "prior_pointer": "$/records/11",
+      "prior_record": {
+        "source_id": "PMR-DEEP-BJ",
+        "sha256": "18dbe24be8bb5a1807e1d76201b01fc6ea14b13aec1ddbad6d1f3d9d8058d0c2",
+        "path": "t20-consolidation-20261011/catalogue/objects/18/18dbe24be8bb5a1807e1d76201b01fc6ea14b13aec1ddbad6d1f3d9d8058d0c2",
+        "bytes": 6648,
+        "lines": 238,
+        "scope": "whole exact report; mathematical arguments, controls, chronology and nonclaims",
+        "reading_mode": "direct_full_body_read",
+        "reading_credit": "v6 substantive full-body reading; no fresh historical runtime or general theorem novelty credit",
+        "assessment": "BJ identifies the exact deterministic attained-fibre descent common to several families while preserving their additional invariants. Stochastic Blackwell value, latent orientation, probability interactions, nonnegative factorization, holonomy and algebraic congruence cannot be collapsed into a vertex partition by encoding their answers as labels. This is a useful anti-unification criterion and a direct cross-contribution to later tensor, proof-coordinate, geometry and collective interfaces.",
+        "registered_rows": [],
+        "cluster_index": 64
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "AX": {
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+      "path": "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+      "prior_ledger": "t20-v6-20261011/empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+      "prior_pointer": "$/records/133",
+      "prior_record": {
+        "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+        "path": "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+        "names": [
+          "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca.md",
+          "D-07f36d8d9bebc188f973.md",
+          "DEEP-AX-V2.md",
+          "PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+          "S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md"
+        ],
+        "bytes": 8348,
+        "lines": 263,
+        "line_ranges": [
+          [
+            1,
+            263
+          ]
+        ],
+        "family": "AX",
+        "reading_status": "FULL_BODY_READ",
+        "reading_mode": "fresh_complete_dependency_body",
+        "source_role": "current_repaired_mathematical_prose",
+        "assessment": "Correct update uses the full joint evidence law. A product over source roots needs conditional factorization, which provenance independence alone does not provide. Exact source-gate/world-selection criteria require independently warranted likelihood and interpretation inputs.",
+        "semantic_read_credit": true,
+        "proof_body_credit": false,
+        "fresh_execution": false,
+        "coverage_note": "Initial first 48 lines were reread separately to close output truncation; remaining lines fully read."
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    },
+    "BK": {
+      "sha256": "7a82df83c0a444ae130be83e66cf4317afed5277de189b619d2a198c8c06f5ed",
+      "path": "t20-consolidation-20261011/catalogue/objects/7a/7a82df83c0a444ae130be83e66cf4317afed5277de189b619d2a198c8c06f5ed",
+      "prior_ledger": "t20-v6-20261011/foundations/early_lineage/READ_LEDGER.json",
+      "prior_pointer": "$/records/35",
+      "prior_record": {
+        "index": 35,
+        "sha256": "7a82df83c0a444ae130be83e66cf4317afed5277de189b619d2a198c8c06f5ed",
+        "source_path": "t20-consolidation-20261011/catalogue/objects/7a/7a82df83c0a444ae130be83e66cf4317afed5277de189b619d2a198c8c06f5ed",
+        "text_path": "t20-consolidation-20261011/catalogue/objects/7a/7a82df83c0a444ae130be83e66cf4317afed5277de189b619d2a198c8c06f5ed",
+        "title": "PMR-007 Deep Round BK V2 \u2014 modal-role persistence, global-bearer identity, and concreteness bridge",
+        "names": [
+          "PMR-007_DEEP_ROUND_BK_NECESSITY_CONCRETENESS_AND_BEARER_DESCENT_V2.md"
+        ],
+        "lines": 204,
+        "disposition": "FRESH_FULL_TEXT_READING",
+        "fresh_emitted_ranges": [
+          [
+            1,
+            204
+          ]
+        ],
+        "adequate_coverage_ranges": [
+          [
+            1,
+            204
+          ]
+        ],
+        "prior_binding_ledger": null,
+        "prior_bindings": [],
+        "adequacy": "Full BK V2 bridge proof and countermodels; explicit occurrence-to-bearer map, concreteness, coverage and frame assumptions.",
+        "remaining_substantive_ranges": [],
+        "scope_boundary": "Textual examination only; cited executions, source authentications and review receipts inherited unless separately documented.",
+        "rendition_of_index": null
+      },
+      "reuse_scope": "exact complete controlling body; retain original reading method and qualifications; no new first-reading or execution credit"
+    }
+  }
+}

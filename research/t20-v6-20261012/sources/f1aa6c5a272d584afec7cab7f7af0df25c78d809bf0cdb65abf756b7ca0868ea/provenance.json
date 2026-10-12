@@ -1,0 +1,97 @@
+{
+  "document": "Continuation-Complete Orthings",
+  "version": "1",
+  "date": "2026-09-08",
+  "classification": "RESEARCH_SUPPLEMENT_NOT_ADOPTED",
+  "repository": {
+    "name": "theislampill/orthemology",
+    "verified_main": "f50dc1aee52356cc6adbef342387576b02afc124",
+    "mode": "read-only connector; targeted reads plus supplied context",
+    "mutation": false,
+    "all_files_reread": false
+  },
+  "input_files": [
+    {
+      "name": "orthing_formalisation_v1.zip",
+      "bytes": 331357,
+      "sha256": "d2ca54c2eef34a3ab4983c67cb8413ffefccce79a9387c139e1ec99d8279d52b"
+    },
+    {
+      "name": "orthing_formalisation_v1.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+    },
+    {
+      "name": "orthing_formalisation_v1.tex",
+      "bytes": 108095,
+      "sha256": "ad56a638e3108984e757b13c3ccd6f5a0bf17f299d50b7a390230ca07b941d4e"
+    },
+    {
+      "name": "orthing_formalisation_v1.pdf",
+      "bytes": 249563,
+      "sha256": "0e9694489256c95b654ac959a15789dade060b9acd9c9fd331e0c51b73109793"
+    },
+    {
+      "name": "Euler.pdf",
+      "bytes": 3556634,
+      "sha256": "f0164c40fad09a646412acec95f7908ea6b2fd61d16b809954a4048665fb5f78"
+    },
+    {
+      "name": "navierstokes.pdf",
+      "bytes": 203736,
+      "sha256": "c1b5f27b1a64705cfaf1afceea513db5deedca8a18ca56ab32e7f86445a06d0c"
+    },
+    {
+      "name": "private-identity:140ece9ebfbce267e466.png",
+      "bytes": 473360,
+      "sha256": "26ecb3efd98ea43cf244fb824e43dc1713be52ee9cc5285cec37b07bf54a9a03"
+    }
+  ],
+  "repository_blobs": [
+    {
+      "path": "docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONE-ARCHITECTURE-V1.md",
+      "sha": "bb42d16e597a4dc25963ec506144b6e72ab7a7b5"
+    },
+    {
+      "path": "docs/project-closure/ar8r-v11/programs/AR8R-ORTHEMOLOGY-MENISCUS-MILESTONES-V1.yaml",
+      "sha": "2cea736b0519a4d0b3a3454743e88c5cb3b436f7"
+    },
+    {
+      "path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_BF_IMPERSONAL_LATENT_REALIZATION_COMPLEXITY_V2.md",
+      "sha": "2549c4ab3c6f7cdaa84abeac84b75d162b2577c3"
+    }
+  ],
+  "claimed_authority": {
+    "mathematical_proofs": "ordinary proofs under stated hypotheses",
+    "finite_checks": "9 groups PASS; see verification.json",
+    "Lean_or_kernel_verification": false,
+    "empirical_validation": false,
+    "independent_cold_audit": false,
+    "distinct_fresh_rereview": false,
+    "general_novelty": "NOT_ESTABLISHED",
+    "meniscus_candidate_status": "NOT_GRANTED",
+    "meniscus_reached": false,
+    "source_world_bridge": false,
+    "repository_adoption": false
+  },
+  "sources": {
+    "register": "Appendix C of the manuscript",
+    "full_text_access_limits": [
+      "P3 options PSR: bibliographic/abstract only",
+      "P4 Mori-Zwanzig memory: abstract/bibliographic only"
+    ],
+    "especially_close_prior_art": [
+      "P2 predictive representations of state",
+      "P9 reward-predictive state representations"
+    ],
+    "surviving_comparator": "P8 nonlinear PSRs under different law/reachability assumptions"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0",
+    "pandoc": "pandoc 3.1.11.1",
+    "xelatex": "XeTeX 3.141592653-2.6-0.999996 (TeX Live 2025/dev/Debian)"
+  }
+}

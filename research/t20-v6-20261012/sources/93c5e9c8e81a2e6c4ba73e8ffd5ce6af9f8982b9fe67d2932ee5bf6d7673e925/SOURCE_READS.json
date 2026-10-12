@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-10",
+  "url": "https://quranislam.github.io/fatwa/ibn-taymiyyah/fatwa279.html",
+  "author": "Ibn Taymiyya",
+  "work": "Sharh hadith Abi Dharr, Majmu al-fatawa",
+  "witness": "Modern electronic primary-text reproduction; no scan or edition verification",
+  "continuous_read": "Received page markers 18:136–156, first-clause argument; next chapter opening boundary only",
+  "principal_unit": "18:147–151 with preceding dialectical context and conclusion through156",
+  "full_page_download_is_not_full_read": true,
+  "originals_edited": false,
+  "novelty": "Newly checked dependency; inherited normative premises, no new selection-title premise",
+  "sources": [
+    {
+      "path": "owned-obligation-dependency-20261010/sources/MAJMU18_136_156.txt",
+      "bytes": 43791,
+      "sha256": "b7d5fc3966c783153f471aa56dac908fabb651087e76d09479ecde265ee1ed6d"
+    },
+    {
+      "path": "owned-obligation-dependency-20261010/sources/majmu18-fatwa279.html",
+      "bytes": 271152,
+      "sha256": "6e816894803dc969f4e98322d764058f53694c36a290dd114061552448dd44c2"
+    },
+    {
+      "path": "owned-obligation-dependency-20261010/sources/majmu18-fatwa279.txt",
+      "bytes": 193406,
+      "sha256": "1259da732c927cf827fe8230999e27074850cc04cc2dc61c6e117bc4cdf47708"
+    }
+  ]
+}

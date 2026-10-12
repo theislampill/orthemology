@@ -1,0 +1,7 @@
+# Gaussian entropy transfer: portable accepted intermediate component
+
+Only the designated portable author derivative is included, alongside separate independent review and its historical receipts. All-dimension analytic claims and fixed-contract limits are in RESULT/REVIEW. Classical primary-source attribution remains distinct from the local Gaussian entropy transfer derivation. No broader global endpoint identification or novel-origin claim is inferred from finite controls.
+
+Run python replay.py --output-dir /fresh/output. Requires Python, SymPy, NumPy and SciPy for the recorded 33-control portable branch, which combines algebraic/integrity and numerical ODE corroboration. The independent suite has 32 exact symbolic/rational controls. Reports compare byte-identically in the recorded environment. The historical local 35-control author run additionally checked original Gaussian bytes and raw primary PDF custody; it is preserved but not repeated here. The clean portable source-custody field must be unavailable, and --require-source-custody must fail without creating a success output. Neither condition is a verified source custody claim. No code modifications or relocation substitutions.
+
+No raw third-party PDF, text, HTML or page images are included. SOURCE_READING and SOURCE_INSPECTION retain exact hashes, URLs and inspected loci, not full-source contents or new source reading. Original source access limits and printed-page/visual reading boundaries remain in the review. No protected integration, upload, owner acceptance, kernel proof or T20 closure.

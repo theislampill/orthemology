@@ -1,0 +1,58 @@
+PASS quadratic ambient gradient
+PASS quadratic radial Hessian identity H p = 1
+PASS quadratic Hessian exact quadratic form
+PASS quadratic exact two-argument divergence
+PASS quadratic forward KKT normal gradient difference
+PASS concrete nonseparable Hessian
+PASS mixed ambient Hessian entry is nonzero
+PASS coherent Brier equality for outcome 1
+PASS perspective statewise repair credit for outcome 1
+PASS coherent Brier equality for outcome 2
+PASS perspective statewise repair credit for outcome 2
+PASS null-channel Bayes implementation regret
+PASS coherent prior expected Brier loss
+PASS old Euclidean-repair expected Brier loss
+PASS old Euclidean-repair null regret
+PASS new and old ambient potentials agree on simplex
+PASS new gauge differs affinely from baseline
+PASS new gauge has identical baseline divergence
+PASS old Euclidean projection exact KKT
+PASS nonquadratic forward KKT normal gradient difference
+PASS nonquadratic radial Hessian identity
+PASS nonquadratic exact divergence split
+PASS nonquadratic positive tangent Hessian
+PASS informative channel 1 outcome mass
+PASS informative channel 1 exact posterior
+PASS informative channel 1 projection KKT
+PASS informative channel 2 outcome mass
+PASS informative channel 2 exact posterior
+PASS informative channel 2 projection KKT
+PASS posterior barycenter equals prior
+PASS informative-channel expected posterior Brier loss
+PASS informative-channel learning gain
+PASS informative-channel exact information identity
+PASS counterexample is strictly inside active halfspace
+PASS counterexample perturbation gradient
+PASS bump affine argument on simplex
+PASS forward normalization KKT fails with exact residual
+PASS counterexample actual forward projection exact KKT
+PASS baseline reverse objective exact derivative
+PASS baseline reverse objective positive second derivative
+PASS null-ray affine bump argument
+PASS attenuation counterexample agrees with normalization at c=1/10
+PASS attenuation counterexample agrees with normalization at c=1/2
+PASS attenuation counterexample agrees with normalization at c=1
+PASS pure perspective Hessian has radial null vector
+PASS strictly convex degenerate example radial Hessian
+PASS strictly convex degenerate example singular on simplex
+PASS degenerate radial endpoint divergence
+PASS degenerate flow reaches singular mass at finite time
+PASS quadratic explicit radial flow satisfies vector field
+PASS quadratic flow exact score derivative outcome 1
+PASS quadratic flow exact score derivative outcome 2
+PASS quadratic flow initial mass
+PASS quadratic flow asymptotic normalized endpoint
+PASS quadratic integrated repair credit
+
+ALL 55 EXACT CONTROLS PASSED (SymPy 1.14.0)
+Finite controls and symbolic examples do not certify the general written theorem.

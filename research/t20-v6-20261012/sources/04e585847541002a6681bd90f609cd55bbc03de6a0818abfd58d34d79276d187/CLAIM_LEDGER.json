@@ -1,0 +1,82 @@
+[
+  {
+    "id": "D1",
+    "claim": "Coarsest finite joint-contract refinement",
+    "evidence": "Written proof; standard probabilistic abstraction construction",
+    "controls": "research_normal, oracle_normal",
+    "limits": "Finite declared state/kernel contract; semantic warrant is input",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D2",
+    "claim": "Minimum sidecar alphabet and fixed-length bits",
+    "evidence": "Written counting argument developed for this synthesis",
+    "controls": "research_normal, oracle_normal",
+    "limits": "Minimum only among deterministic finite sidecars for the stated strong contract",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D3",
+    "claim": "Finite histories, values and fixed-policy eventual reachability",
+    "evidence": "Written induction and limiting-event argument",
+    "controls": "research_normal",
+    "limits": "No access to erased/hidden state; policy and information-state assumptions explicit",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D4",
+    "claim": "Finite-horizon value error and conditioning amplification",
+    "evidence": "Written bounds and exact counterexamples",
+    "controls": "oracle_normal, research_normal",
+    "limits": "No infinite-horizon conclusion from arbitrarily small approximation",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D5",
+    "claim": "Cometric fibre criterion for every pulled-back objective",
+    "evidence": "Written necessity/sufficiency proof",
+    "controls": "research_normal",
+    "limits": "Smooth positive-definite metric, full-rank linear coarse map, all-objectives quantifier",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D6",
+    "claim": "Conditional hybrid flow/jump preservation",
+    "evidence": "Written finite-composition proof",
+    "controls": "No general hybrid implementation",
+    "limits": "Requires actual projectability, guards, kernel transport, costs and non-explosion",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D7",
+    "claim": "Arbitrary-depth positive-moment monitor counterexample",
+    "evidence": "Written polynomial-square proof",
+    "controls": "research_normal",
+    "limits": "Static finite witness family, not predecessor ODE or interval proof",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  },
+  {
+    "id": "D8",
+    "claim": "Target/update-relative linear closure",
+    "evidence": "Written observability proof; acknowledged classical ancestry",
+    "controls": "research_normal",
+    "limits": "All linear states, declared linear updates; no empirical network guarantee",
+    "lean": "NOT_FORMALISED_HERE",
+    "prior_art_novelty": "NOT_CERTIFIED",
+    "full_corpus_nonduplication": "NOT_EXHAUSTIVELY_CHECKED"
+  }
+]

@@ -1,0 +1,295 @@
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import SelfVerifyingSupport
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+import CausalActionTree
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import FeedbackRequests
+import ProductObservationLaw
+import IndependentProductFamilies
+import GenericQueryReference
+import PolicyRowLaw
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import CanonicalHistoryPMF
+import CanonicalHistoryBudget
+import CausalTreeLaw
+import NormalizedResetPotential
+import RecursiveMacroPotential
+import RecursiveCausalPolicy
+import RecursiveHistorySafety
+import RecursiveCanonicalSufficiency
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.CausalTree.ActionTree
+#print axioms Orthemology.Tranche3.CausalTree.ActionTree
+#check @Orthemology.Tranche3.CausalTree.NodeState
+#print axioms Orthemology.Tranche3.CausalTree.NodeState
+#check @Orthemology.Tranche3.CausalTree.advance
+#print axioms Orthemology.Tranche3.CausalTree.advance
+#check @Orthemology.Tranche3.CausalTree.replay
+#print axioms Orthemology.Tranche3.CausalTree.replay
+#check @Orthemology.Tranche3.CausalTree.historyPolicy
+#print axioms Orthemology.Tranche3.CausalTree.historyPolicy
+#check @Orthemology.Tranche3.CausalTree.historyPolicy_seed_independent
+#print axioms Orthemology.Tranche3.CausalTree.historyPolicy_seed_independent
+#check @Orthemology.Tranche3.CausalTree.replayObserved
+#print axioms Orthemology.Tranche3.CausalTree.replayObserved
+#check @Orthemology.Tranche3.CausalTree.mapActions
+#print axioms Orthemology.Tranche3.CausalTree.mapActions
+#check @Orthemology.Tranche3.CausalTree.nodeOfTree
+#print axioms Orthemology.Tranche3.CausalTree.nodeOfTree
+#check @Orthemology.Tranche3.CausalTree.nodeOfTree_asTree
+#print axioms Orthemology.Tranche3.CausalTree.nodeOfTree_asTree
+#check @Orthemology.Tranche3.CausalTree.treeValue
+#print axioms Orthemology.Tranche3.CausalTree.treeValue
+#check @Orthemology.Tranche3.CausalTree.nodeValue
+#print axioms Orthemology.Tranche3.CausalTree.nodeValue
+#check @Orthemology.Tranche3.CausalTree.treeValue_mapActions
+#print axioms Orthemology.Tranche3.CausalTree.treeValue_mapActions
+#check @Orthemology.Tranche3.CausalTree.treeValue_nonneg
+#print axioms Orthemology.Tranche3.CausalTree.treeValue_nonneg
+#check @Orthemology.Tranche3.CausalTree.Valid
+#print axioms Orthemology.Tranche3.CausalTree.Valid
+#check @Orthemology.Tranche3.CausalTree.valid_mapActions
+#print axioms Orthemology.Tranche3.CausalTree.valid_mapActions
+#check @Orthemology.Tranche3.CausalTree.advance_valid
+#print axioms Orthemology.Tranche3.CausalTree.advance_valid
+#check @Orthemology.Tranche3.CausalTree.node_step_bound
+#print axioms Orthemology.Tranche3.CausalTree.node_step_bound
+#check @Orthemology.Tranche3.CausalTree.stopTree
+#print axioms Orthemology.Tranche3.CausalTree.stopTree
+#check @Orthemology.Tranche3.CausalTree.stopTree_nonleaf
+#print axioms Orthemology.Tranche3.CausalTree.stopTree_nonleaf
+#check @Orthemology.Tranche3.CausalTree.stopTree_valid
+#print axioms Orthemology.Tranche3.CausalTree.stopTree_valid
+#check @Orthemology.Tranche3.CausalTree.realListCost
+#print axioms Orthemology.Tranche3.CausalTree.realListCost
+#check @Orthemology.Tranche3.CausalTree.stopTree_value_eq_stopped_sum
+#print axioms Orthemology.Tranche3.CausalTree.stopTree_value_eq_stopped_sum
+#check @Orthemology.Tranche3.CausalTree.realListCost_nonneg
+#print axioms Orthemology.Tranche3.CausalTree.realListCost_nonneg
+#check @Orthemology.Tranche3.CausalTree.realListCost_sublist
+#print axioms Orthemology.Tranche3.CausalTree.realListCost_sublist
+#check @Orthemology.Tranche3.CausalTree.stopTree_value_le_planned
+#print axioms Orthemology.Tranche3.CausalTree.stopTree_value_le_planned
+#check @Orthemology.Tranche3.CanonicalMicro.actionObsPMF
+#print axioms Orthemology.Tranche3.CanonicalMicro.actionObsPMF
+#check @Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF
+#print axioms Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF
+#check @Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF_nil
+#print axioms Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF_nil
+#check @Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF_cons
+#print axioms Orthemology.Tranche3.CanonicalMicro.nextHistoryPMF_cons
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_succ_nil
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_succ_nil
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_succ_cons
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_succ_cons
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_apply
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_apply
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_pure
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_pure
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_bind
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_bind
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_map
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_map
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_mono_on_support
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_mono_on_support
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_add
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_add
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_const
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_const
+#check @Orthemology.Tranche3.CanonicalMicro.historyCost
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyCost
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_invariant
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_invariant
+#check @Orthemology.Tranche3.CanonicalMicro.pmfMean_nextHistory
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmfMean_nextHistory
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_cost_potential_bound
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_cost_potential_bound
+#check @Orthemology.Tranche3.CanonicalMicro.ignoreSeed
+#print axioms Orthemology.Tranche3.CanonicalMicro.ignoreSeed
+#check @Orthemology.Tranche3.CanonicalMicro.ignoreSeed_measurable
+#print axioms Orthemology.Tranche3.CanonicalMicro.ignoreSeed_measurable
+#check @Orthemology.Tranche3.CanonicalMicro.actionCompatible_ignoreSeed
+#print axioms Orthemology.Tranche3.CanonicalMicro.actionCompatible_ignoreSeed
+#check @Orthemology.Tranche3.CanonicalMicro.historyPMF_eq_canonical_marginal
+#print axioms Orthemology.Tranche3.CanonicalMicro.historyPMF_eq_canonical_marginal
+#check @Orthemology.Tranche3.CanonicalMicro.pmf_lintegral_eq_mean
+#print axioms Orthemology.Tranche3.CanonicalMicro.pmf_lintegral_eq_mean
+#check @Orthemology.Tranche3.CanonicalMicro.acquired_history_cost
+#print axioms Orthemology.Tranche3.CanonicalMicro.acquired_history_cost
+#check @Orthemology.Tranche3.CanonicalMicro.canonical_prefix_cost_eq_historyPMF
+#print axioms Orthemology.Tranche3.CanonicalMicro.canonical_prefix_cost_eq_historyPMF
+#check @Orthemology.Tranche3.CanonicalMicro.canonical_total_cost_of_drift
+#print axioms Orthemology.Tranche3.CanonicalMicro.canonical_total_cost_of_drift
+#check @Orthemology.Tranche3.CausalTree.erasedHistoryPolicy
+#print axioms Orthemology.Tranche3.CausalTree.erasedHistoryPolicy
+#check @Orthemology.Tranche3.CausalTree.actionTreePolicy_total_cost
+#print axioms Orthemology.Tranche3.CausalTree.actionTreePolicy_total_cost
+#check @Orthemology.Tranche3.normalizedResetPotential
+#print axioms Orthemology.Tranche3.normalizedResetPotential
+#check @Orthemology.Tranche3.normalizedResetPotential_nonneg
+#print axioms Orthemology.Tranche3.normalizedResetPotential_nonneg
+#check @Orthemology.Tranche3.normalizedResetPotential_step
+#print axioms Orthemology.Tranche3.normalizedResetPotential_step
+#check @Orthemology.Tranche3.RecursiveMacroState
+#print axioms Orthemology.Tranche3.RecursiveMacroState
+#check @Orthemology.Tranche3.recursivePhasePotential
+#print axioms Orthemology.Tranche3.recursivePhasePotential
+#check @Orthemology.Tranche3.recursiveContinuationPotential
+#print axioms Orthemology.Tranche3.recursiveContinuationPotential
+#check @Orthemology.Tranche3.recursiveMacroPotential
+#print axioms Orthemology.Tranche3.recursiveMacroPotential
+#check @Orthemology.Tranche3.recursiveMacroValid
+#print axioms Orthemology.Tranche3.recursiveMacroValid
+#check @Orthemology.Tranche3.recursivePhasePotential_nonneg
+#print axioms Orthemology.Tranche3.recursivePhasePotential_nonneg
+#check @Orthemology.Tranche3.recursiveMacroPotential_nonneg
+#print axioms Orthemology.Tranche3.recursiveMacroPotential_nonneg
+#check @Orthemology.Tranche3.recursiveMacroValid_next
+#print axioms Orthemology.Tranche3.recursiveMacroValid_next
+#check @Orthemology.Tranche3.recursivePhasePotential_step
+#print axioms Orthemology.Tranche3.recursivePhasePotential_step
+#check @Orthemology.Tranche3.recursiveMacroPotential_step
+#print axioms Orthemology.Tranche3.recursiveMacroPotential_step
+#check @Orthemology.Tranche3.recursiveMacroPotential_root
+#print axioms Orthemology.Tranche3.recursiveMacroPotential_root
+#check @Orthemology.Tranche3.recursiveSpawnTree
+#print axioms Orthemology.Tranche3.recursiveSpawnTree
+#check @Orthemology.Tranche3.recursiveSpawnTree_nonleaf
+#print axioms Orthemology.Tranche3.recursiveSpawnTree_nonleaf
+#check @Orthemology.Tranche3.recursiveSpawn
+#print axioms Orthemology.Tranche3.recursiveSpawn
+#check @Orthemology.Tranche3.recursiveSpawn_asTree
+#print axioms Orthemology.Tranche3.recursiveSpawn_asTree
+#check @Orthemology.Tranche3.recursiveHistoryPolicy
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy
+#check @Orthemology.Tranche3.realBadActionCost
+#print axioms Orthemology.Tranche3.realBadActionCost
+#check @Orthemology.Tranche3.realBadActionCost_nonneg
+#print axioms Orthemology.Tranche3.realBadActionCost_nonneg
+#check @Orthemology.Tranche3.ofReal_realBadActionCost
+#print axioms Orthemology.Tranche3.ofReal_realBadActionCost
+#check @Orthemology.Tranche3.realListCost_realBadActionCost
+#print axioms Orthemology.Tranche3.realListCost_realBadActionCost
+#check @Orthemology.Tranche3.recursiveSpawn_valid
+#print axioms Orthemology.Tranche3.recursiveSpawn_valid
+#check @Orthemology.Tranche3.recursiveSpawn_potential_bound
+#print axioms Orthemology.Tranche3.recursiveSpawn_potential_bound
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_measurable
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_measurable
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_actionLaw_total_bad_budget
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_actionLaw_total_bad_budget
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_actionLaw_eventually_good
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_actionLaw_eventually_good
+#check @Orthemology.Tranche3.historySupport
+#print axioms Orthemology.Tranche3.historySupport
+#check @Orthemology.Tranche3.LicensedTree
+#print axioms Orthemology.Tranche3.LicensedTree
+#check @Orthemology.Tranche3.stoppedSupport_complete
+#print axioms Orthemology.Tranche3.stoppedSupport_complete
+#check @Orthemology.Tranche3.stopTree_licensed
+#print axioms Orthemology.Tranche3.stopTree_licensed
+#check @Orthemology.Tranche3.recursiveSpawn_licensed
+#print axioms Orthemology.Tranche3.recursiveSpawn_licensed
+#check @Orthemology.Tranche3.recursiveAdvance_licensed
+#print axioms Orthemology.Tranche3.recursiveAdvance_licensed
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_licensed_of_live
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_licensed_of_live
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_licensed
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_licensed
+#check @Orthemology.Tranche3.recursive_certificate_canonical_policy_exists
+#print axioms Orthemology.Tranche3.recursive_certificate_canonical_policy_exists
+#check @Orthemology.Tranche3.recursiveHistoryPolicy_canonical_bad_count_tail
+#print axioms Orthemology.Tranche3.recursiveHistoryPolicy_canonical_bad_count_tail
+#check @IndependentCanonicalControls.first_history_mass
+#print axioms IndependentCanonicalControls.first_history_mass
+#check @IndependentCanonicalControls.second_history_mass
+#print axioms IndependentCanonicalControls.second_history_mass
+#check @IndependentCanonicalControls.wrong_action_history_mass
+#print axioms IndependentCanonicalControls.wrong_action_history_mass
+#check @IndependentCanonicalControls.zero_probability_history_mass
+#print axioms IndependentCanonicalControls.zero_probability_history_mass
+#check @IndependentCanonicalControls.wrong_length_history_mass
+#print axioms IndependentCanonicalControls.wrong_length_history_mass
+#check @IndependentCanonicalControls.seed_blind
+#print axioms IndependentCanonicalControls.seed_blind
+#check @IndependentCanonicalControls.first_exit_skips_suffix
+#print axioms IndependentCanonicalControls.first_exit_skips_suffix
+#check @IndependentCanonicalControls.zero_mass_invalid_child_allowed
+#print axioms IndependentCanonicalControls.zero_mass_invalid_child_allowed
+#check @IndependentCanonicalControls.impossible_child_really_invalid
+#print axioms IndependentCanonicalControls.impossible_child_really_invalid
+#check @IndependentCanonicalControls.actual_canonical_one_bad_budget
+#print axioms IndependentCanonicalControls.actual_canonical_one_bad_budget
+#check @IndependentCanonicalControls.K_nonnegative
+#print axioms IndependentCanonicalControls.K_nonnegative
+#check @IndependentCanonicalControls.K_normalized
+#print axioms IndependentCanonicalControls.K_normalized
+#check @IndependentCanonicalControls.V_nonnegative
+#print axioms IndependentCanonicalControls.V_nonnegative
+#check @IndependentCanonicalControls.unnormalized_drift_all_histories
+#print axioms IndependentCanonicalControls.unnormalized_drift_all_histories
+#check @IndependentCanonicalControls.exit_allowance_valid
+#print axioms IndependentCanonicalControls.exit_allowance_valid
+#check @IndependentCanonicalControls.impossible_killed_mass_zero
+#print axioms IndependentCanonicalControls.impossible_killed_mass_zero
+#check @IndependentCanonicalControls.positive_mass_guard_cannot_be_erased
+#print axioms IndependentCanonicalControls.positive_mass_guard_cannot_be_erased

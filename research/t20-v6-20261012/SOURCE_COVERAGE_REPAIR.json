@@ -1,0 +1,268 @@
+{
+  "schema": "t20-v6-source-coverage-repair-v1",
+  "reviewed_head": "d663da577c3c5b698ada68bf2e22634fdc643ba8",
+  "base_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+  "original_omissions": 4404,
+  "restored": 4363,
+  "restored_dispositions": {
+    "PROJECT": 305,
+    "ADD_EXACT": 4058
+  },
+  "remaining_holds": [
+    {
+      "source_sha256": "069e0e340fdff774dab859089409d11b4f1b2727098668f0fb33d9b638e266c3",
+      "reason": "HOLD_RAW_OWNER_INSTRUCTION_RECORD",
+      "materiality": "CONTRIBUTING excludes raw transcripts. Preserve scientific priorities through qualified authored guides without reproducing raw conversational body."
+    },
+    {
+      "source_sha256": "151f5ebe7acdd4200182ccef4830262ebd269a5d48ffe002d15d69ff1595088a",
+      "reason": "HOLD_EXPLICIT_OWNER_PRIVATE_COORDINATION",
+      "materiality": "Preserve original identity and privately held administrative body. Use public derived scope/status records for needed integration facts."
+    },
+    {
+      "source_sha256": "197c5e17feeeae9ff4b4e2fd9094a1339c8129336b4c0a5d81fea71aed6e795f",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "1b91ecebd2dc55e4018a38a9a3fb7a09f1f245b778cea493a6fb1fb60c61c0ef",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "2cf834b3f5164719e156cdd7e8a528263821f9d2ee5986485339e4dd0aa773ec",
+      "reason": "HOLD_UNRELATED_PLATFORM_INSTRUCTION_RIGHTS_UNRESOLVED",
+      "materiality": "No scientific dependency established; preserve identity privately; require independent permission/provenance before copying body."
+    },
+    {
+      "source_sha256": "349bfecf931454773457983fc1bd36da082b0f3dd7044c9e245bd6fc50bdf4ac",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "3d5263089763f124367a12c306af7fc5f246c0b9a316e1f36981130f0818dcc7",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "409d22c0cec230943e17e6a50ff05015bcb7d9d09c0c1ae0c37f090173923666",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "4391ce7fb14180497eeafbf1c82a3540acbf3eb2fd16018c809421a2a00a52ea",
+      "reason": "HOLD_REDUNDANT_PUBLIC_BASELINE_INTEGRATION_DIFF",
+      "materiality": "Every declared Git postimage already exists in the baseline tree or its public ancestry. No unique scientific postimage needs this packing body. Public source identities and final sources remain available."
+    },
+    {
+      "source_sha256": "44a5c789a941039cb40e4bb81512da432c917d021e36a1980b12100a47dbe005",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "4fba7408f663172f84de847bc07496befa4e083d1d9f4cb2d308bd893e826ef1",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "55f8693d966c4b996369ccfb2aa355960eb55407c73d337199c8ae2a8f350526",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "59348bd48456e25a56d6b22e7681cdbdcdbb31c8af70e667ba1833562f2d419d",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "5ee11c7cfc9e9f9fc35360d32d2fbf6979dd5a25a026e23266711c39112ea085",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "7013fd0db9d083cc77a9560862db3964cd5d61270a9d68437b3f6c80d45cf66b",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "7b10f4433974c08971f892d8ab7781aaae561e9b52b8e5b5c050feff2fc36f2f",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "853ab3a2612c46274ea89f6bd8773a9e2804ae0934f169c20896363a34403c10",
+      "reason": "HOLD_OTHER_PROJECT_GOVERNANCE_IMPLEMENTATION_EXCERPT",
+      "materiality": "Actual DAEE skill/governance instruction or implementation body. Retained Orthemology authored appraisal/crosswalks preserve the bounded research relevance without republishing or adopting the external project runtime contract."
+    },
+    {
+      "source_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "8ede41ebe43aa8f297184b1982e6de8102bd9332c81846d05b4422ce3fb4c31d",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "9444db4d713c5988acebd656ce957b2063a8c0171e246fd425c52d396be7eeec",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "99295d834b3e4f2a41c2f44395007a7465dc7c7f01f627e43f0da9bb8fdaa051",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "99f6eb226504f67526ce0935a89c9e817d9cb30dce898019960bc01aa470e460",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "9d49ff9148962ece39acd3241a21973763d5906cdf42d72c98f8088f9194af75",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "a90467d2bd55a4dbcee2a7b9a9fa7bea70616b7ed886939f5ddd3ab9310b8344",
+      "reason": "HOLD_OTHER_PROJECT_GOVERNANCE_IMPLEMENTATION_EXCERPT",
+      "materiality": "Actual DAEE skill/governance instruction or implementation body. Retained Orthemology authored appraisal/crosswalks preserve the bounded research relevance without republishing or adopting the external project runtime contract."
+    },
+    {
+      "source_sha256": "ac7a11a5662442a84d70e30718ab3de8824254729aaf479068abdca3a09b0634",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "ba46d0a64972d88e0275d68d55474faaf51f27a08b07872b2e4d0e8a6f0539fc",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "cc625359ceeb770c5c0f9780042e803345af9fc79949ce3bcf721e0e97047850",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "d47cbc3e813f3b3322de7776ea16dfa3af8be02954c4d72a647960dcd9e63548",
+      "reason": "HOLD_PRIVATE_CUSTODY_INVENTORY",
+      "materiality": "Administrative 10,104-row copied-path/archive report, not unique proof/argument. Public identity/coverage accounting can retain scientific dispositions without raw custody locators."
+    },
+    {
+      "source_sha256": "e15e7acd8bf50de95f6450eeeed7c85dc97a31129efef25e2b05d5bedb8eb9d8",
+      "reason": "HOLD_REDUNDANT_PUBLIC_BASELINE_INTEGRATION_DIFF",
+      "materiality": "Every declared Git postimage already exists in the baseline tree or its public ancestry. No unique scientific postimage needs this packing body. Public source identities and final sources remain available."
+    },
+    {
+      "source_sha256": "e1cacf4081f897cdd8eacea9fd8cc75274e4f6f3d90845a01082112b00242960",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "e1ee9108a5272a2250ab2a579474e2311ec7cf89a053d7c965918537c76c4ceb",
+      "reason": "HOLD_PRIVATE_TRANSPORT_OR_INTAKE_PROTOCOL",
+      "materiality": "Original private handoff preparation, validation or resolver/plan support. Not a scientific computation dependency; public source-identity map, public projection validator and scoped review records carry the publication-facing accounting. Retain original identity privately."
+    },
+    {
+      "source_sha256": "f0bd14030677fd682b7f5e3d3584b410e03ce7a5244a5449cd32784736ef05ae",
+      "reason": "HOLD_REDUNDANT_PUBLIC_BASELINE_INTEGRATION_DIFF",
+      "materiality": "Every declared Git postimage already exists in the baseline tree or its public ancestry. No unique scientific postimage needs this packing body. Public source identities and final sources remain available."
+    },
+    {
+      "source_sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708",
+      "reason": "HOLD_UNQUALIFIED_BINARY_RENDER_VARIANT",
+      "materiality": "PDF/DOCX decoded publication/privacy/layout equivalence is unqualified. Direct current curated hash/filename mentions found only in 7 administrative or cumulative inventory bodies, not in scientific reader/proof bodies. Retain exact identity and disclose this residual; do not claim every variant redundant or all rendered content publicly available."
+    },
+    {
+      "source_sha256": "f8ed2109783a75393beaabaf90e7db2b56ce2d2fdcad0f7cd84e36ad631d6821",
+      "reason": "HOLD_OTHER_PROJECT_GOVERNANCE_IMPLEMENTATION_EXCERPT",
+      "materiality": "Actual DAEE skill/governance instruction or implementation body. Retained Orthemology authored appraisal/crosswalks preserve the bounded research relevance without republishing or adopting the external project runtime contract."
+    }
+  ],
+  "source_counts": {
+    "IDENTITY_ONLY": 16465,
+    "REUSE": 5625,
+    "PROJECT": 440,
+    "ADD_EXACT": 5907,
+    "NOT_PUBLISHED": 41
+  },
+  "baseline_reuse": {
+    "identities": 5625,
+    "current_checkout": 5622,
+    "pinned_existing_git_blobs": 3,
+    "newly_resolved_at_original_intake": 2793
+  },
+  "unchanged_existing_public_bodies": 1984,
+  "curated_nonadministrative_sources_retained": 358,
+  "formal_source_graph": {
+    "sha256": "ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff",
+    "formal_bodies": 233,
+    "custom_import_edges": 323,
+    "direct_official_import_edges": 20,
+    "rooted_suites": 7,
+    "restored_lean_supports": 75,
+    "ordinary_support_bindings": 38,
+    "restored_ordinary_supports": 13
+  },
+  "native_replay": {
+    "exact_custom_modules": 218,
+    "status": "PASS",
+    "receipt_sha256": "1b22370a7330aee76c1d2922098ac0f82b2271c98c4983e219ed7f4e33db5fe0",
+    "scope": "three recovered roots; existing pinned official imports form trust boundary"
+  },
+  "sanitisation": {
+    "private_transformation_ledger_retained": true,
+    "changes": "locator and private identity replacements, qualified navigation, one formula delimited without changing expression characters, exact filename-only retention of three fixture/stage JSONL bodies",
+    "all_restored_lean_sources_byte_exact": true,
+    "historical_patches_applied": false,
+    "historical_wrappers_executed": false
+  },
+  "scientific_acceptance": false,
+  "t21_started": false,
+  "merge_authority": false,
+  "limitations": [
+    "missing later R3 successor",
+    "unavailable originals and some historical receipts/layout bindings",
+    "bounded primary-source readings",
+    "uncertified historical research duration",
+    "no fresh human-specialist review, empirical evidence, priority or metaphysical warrant",
+    "25 binary render variants remain unqualified; no decoded-equivalence claim"
+  ],
+  "repository_ci": "reported against exact PR head; source qualification is not native CI or owner acceptance"
+}

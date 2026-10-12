@@ -1,0 +1,17 @@
+--- a/experiments/orthemology-v5/source/operational.py
++++ b/experiments/orthemology-v5/source/operational.py
+@@ -75,8 +75,13 @@
+         with self._lock:
+             self._revision_budget();old=self._rules.get(key,(-1,False));self._rules[key]=(old[0]+1,allowed);self._epoch+=1
+     def set_observation(self,name,values):
++        if type(values) not in (list,tuple):raise Rejection('observation: finite natural signature required')
++        # Capture once, before validation and before waiting for the registry
++        # lock. The bounded slice prevents unbounded copying of an oversized
++        # caller list. Only immutable integer elements can pass validation.
++        values=tuple(values[:4097])
+         bound_tree(values)
+-        if type(name) is not str or not name or len(name)>200 or type(values) not in (list,tuple) or not 1<=len(values)<=4096 or any(type(x) is not int or x<0 for x in values):raise Rejection('observation: finite natural signature required')
++        if type(name) is not str or not name or len(name)>200 or not 1<=len(values)<=4096 or any(type(x) is not int or x<0 for x in values):raise Rejection('observation: finite natural signature required')
+         with self._lock:
+             self._revision_budget()
+             if name not in self._observations and len(self._observations)>=128:raise Rejection('resource: observation count')

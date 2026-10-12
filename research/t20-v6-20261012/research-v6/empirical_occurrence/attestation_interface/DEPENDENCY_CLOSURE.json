@@ -1,0 +1,2578 @@
+{
+  "utc": "2026-10-11T21:22:35.870671+00:00",
+  "exact_binding_map": "t20-v6-20261011/corpus/admission/ATTESTATION_CODE_DEPENDENCY_BINDINGS.json",
+  "binding_map_sha256": "c2e2f5c3e4cc6d443a4e21aa6b94af6412e0920cf377366c09c4070caead2679",
+  "preserved_binding_rows": [
+    {
+      "name": "reviewed-rivals.py",
+      "sha256": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+      "path": "t20-consolidation-20261011/catalogue/objects/7e/7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+      "member": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rival-review/reviewed-rivals.py",
+      "routes": [
+        {
+          "source_sha256": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+          "ledger": "private-locator:9da31b1e76b8ca784438",
+          "pointer": "$/1674",
+          "recorded_scope": {
+            "read_scope": "full body"
+          },
+          "ranges": [
+            [
+              1,
+              289
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7e/7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817",
+          "ledger": "private-locator:b191cb8466e48098d63a",
+          "pointer": "$/9",
+          "recorded_scope": {
+            "read_scope": "full body"
+          },
+          "ranges": [
+            [
+              1,
+              289
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7e/7ef1625d8e1fbc0e42cacfc702100f1a684e6e0e300eb8c6fb2740441c526817"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "reviewed-implicit_attestation.py",
+      "sha256": "7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213",
+      "path": "t20-consolidation-20261011/catalogue/objects/7d/7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213",
+      "member": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/reviewed-implicit_attestation.py",
+      "routes": [
+        {
+          "source_sha256": "7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213",
+          "ledger": "private-locator:9da31b1e76b8ca784438",
+          "pointer": "$/1673",
+          "recorded_scope": {
+            "read_scope": "full body"
+          },
+          "ranges": [
+            [
+              1,
+              205
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7d/7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213",
+          "ledger": "private-locator:b191cb8466e48098d63a",
+          "pointer": "$/8",
+          "recorded_scope": {
+            "read_scope": "full body"
+          },
+          "ranges": [
+            [
+              1,
+              205
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7d/7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "provision_semantics.py",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "path": "t20-consolidation-20261011/catalogue/objects/6b/6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "member": "recovery-t20/addendum/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py",
+      "routes": [
+        {
+          "source_sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+          "ledger": "private-locator:f1feb363120688cb2054",
+          "pointer": "$/0",
+          "recorded_scope": {
+            "status": "FULL_BODY_DIRECT_READING",
+            "adequacy": "Entire controlling code/test content examined; ordinary runtime semantics and comments distinguished from metaphysical interpretation. Exact dependency modules provision_semantics/reactive_context are included.",
+            "remaining_substantive_ranges": [],
+            "method": "Full numbered source body read"
+          },
+          "ranges": [
+            [
+              1,
+              302
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/6b/6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "attestation-intention-recovery%INPUT_BINDINGS.json",
+      "sha256": "963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "path": "t20-consolidation-20261011/catalogue/objects/96/963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "member": "recovery-t20/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008.zip!/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/attestation-intention-recovery/INPUT_BINDINGS.json",
+      "routes": []
+    },
+    {
+      "query": "attestation-replay-v2%INPUT_BINDINGS.json",
+      "sha256": "963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "path": "t20-consolidation-20261011/catalogue/objects/96/963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "member": "recovery-t20/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008.zip!/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/daee-deep-dive/root-controls/attestation-replay-v2/INPUT_BINDINGS.json",
+      "routes": []
+    },
+    {
+      "query": "warranted-learning%SOURCE_BINDINGS.json",
+      "sha256": "257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40",
+      "path": "t20-consolidation-20261011/catalogue/objects/25/257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-evidence-revision-checkpoint-20261009.zip!/active-t20-evidence-revision-checkpoint-20261009/warranted-learning-20261009/sources/SOURCE_BINDINGS.json",
+      "routes": [
+        {
+          "source_sha256": "257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40",
+          "ledger": "private-locator:f955a7c36caba44cb77c",
+          "pointer": "$/records/30",
+          "recorded_scope": {
+            "reading_mode": "DIRECT_FULL_BODY_READ",
+            "role": "metadata_binding"
+          },
+          "ranges": [
+            [
+              1,
+              86
+            ],
+            [
+              1,
+              86
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/25/257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "warranted-discrimination%RESULT.md",
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "path": "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "member": "recovery-20261011/archives/fixed-inquiry-guide-source-checkpoint-20261011.zip!/fixed-inquiry-guide-source-checkpoint-20261011/payload/constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:baa2bcfc45e30ad58af3",
+          "pointer": "$/sources/0",
+          "recorded_scope": {
+            "read_scope": "full owner text",
+            "role": "direct controlling source"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/33",
+          "recorded_scope": {
+            "mode": "direct selected lines",
+            "lines_read": [
+              1,
+              145
+            ]
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/34",
+          "recorded_scope": {
+            "mode": "direct selected lines",
+            "lines_read": [
+              145,
+              260
+            ]
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:778ab5de08580f43b4ee",
+          "pointer": "$/0",
+          "recorded_scope": {
+            "scope": "Full exact body",
+            "status": "PREVIOUSLY_EXAMINED_CONTROLLING_BODY"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/4",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/5",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/6",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/7",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/8",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/9",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/10",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/11",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:f955a7c36caba44cb77c",
+          "pointer": "$/records/76",
+          "recorded_scope": {
+            "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+            "role": "prior_controlling_dependency_or_implementation"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "warranted-discrimination%RESULT.md",
+      "sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+      "path": "t20-consolidation-20261011/catalogue/objects/a8/a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Warranted_Discrimination_Research_and_Lean_20261009(2).zip!/warranted-discrimination-kernel-20261009/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+          "ledger": "private-locator:fbc50319228b2c538ef9",
+          "pointer": "$/81",
+          "recorded_scope": {
+            "disposition": "source-bound review/report or navigation; actual proof scope retained separately"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/a8/a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/35",
+          "recorded_scope": {
+            "mode": "direct full text",
+            "lines_read": [
+              1,
+              98
+            ]
+          },
+          "ranges": [
+            [
+              1,
+              98
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/a8/a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026",
+          "ledger": "private-locator:778ab5de08580f43b4ee",
+          "pointer": "$/18",
+          "recorded_scope": {
+            "scope": "Full exact body",
+            "status": "DIRECT_COMPLETE_BODY_EXAMINED"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/a8/a8c3ea0ad398c412a8a15f532ebad7ff6caed0254e6fcb953cb25471aa708026"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "warranted-learning%RESULT.md",
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+      "path": "t20-consolidation-20261011/catalogue/objects/06/06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Nonseparable_Bayes_Repair_Reviewed_20261009.zip!/T20_Nonseparable_Bayes_Repair_Reviewed_20261009/warranted-learning-20261009/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:fbc50319228b2c538ef9",
+          "pointer": "$/96",
+          "recorded_scope": {
+            "scope": "Full9sections: subprobability interior lemma, weighted entropy weak composition iff and common entropy neutrality iff, exact information gain minus implementation regret, null-channel control, correlated evidence lineage inherited.",
+            "status": "DIRECT_FULL_WRITTEN_ARGUMENT_READ"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/06/06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/30",
+          "recorded_scope": {
+            "mode": "direct full text",
+            "lines_read": [
+              1,
+              245
+            ]
+          },
+          "ranges": [
+            [
+              1,
+              245
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/06/06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:778ab5de08580f43b4ee",
+          "pointer": "$/8",
+          "recorded_scope": {
+            "scope": "Full exact body",
+            "status": "DIRECT_COMPLETE_BODY_EXAMINED"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/06/06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/3/prior_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/3/prior_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              245
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/3/prior_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+          "ledger": "private-locator:f955a7c36caba44cb77c",
+          "pointer": "$/records/61",
+          "recorded_scope": {
+            "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+            "role": "prior_controlling_dependency_or_implementation"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/06/06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "warranted-learning%RESULT.md",
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "path": "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/active-t20-evidence-revision-checkpoint-20261009.zip!/active-t20-evidence-revision-checkpoint-20261009/warranted-learning-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:baa2bcfc45e30ad58af3",
+          "pointer": "$/sources/0",
+          "recorded_scope": {
+            "read_scope": "full owner text",
+            "role": "direct controlling source"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/33",
+          "recorded_scope": {
+            "mode": "direct selected lines",
+            "lines_read": [
+              1,
+              145
+            ]
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/34",
+          "recorded_scope": {
+            "mode": "direct selected lines",
+            "lines_read": [
+              145,
+              260
+            ]
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:778ab5de08580f43b4ee",
+          "pointer": "$/0",
+          "recorded_scope": {
+            "scope": "Full exact body",
+            "status": "PREVIOUSLY_EXAMINED_CONTROLLING_BODY"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/40/resolved_sources/0/reading_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:c8a57bee019e703b5e8f",
+          "pointer": "$/rows/48/resolved_sources/0/reading_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/0",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/1",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/2",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/3",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/4",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/5",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/6",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/7",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/8",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/9",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              1,
+              145
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/10",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [
+            [
+              145,
+              260
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:8db512c9e054bf133f03",
+          "pointer": "$/reused_controlling_sources/10/prior_routes/11",
+          "recorded_scope": {
+            "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "ledger": "private-locator:f955a7c36caba44cb77c",
+          "pointer": "$/records/76",
+          "recorded_scope": {
+            "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+            "role": "prior_controlling_dependency_or_implementation"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "warranted-learning%RESULT.md",
+      "sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+      "path": "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/T20_Information_Noetic_Tensor_Transport_Reviewed_20261009.zip!/T20_Information_Noetic_Tensor_Transport_Reviewed_20261009/warranted-learning-20261009/sources/research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+          "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+          "pointer": "$/31",
+          "recorded_scope": {
+            "mode": "direct full text",
+            "lines_read": [
+              1,
+              228
+            ]
+          },
+          "ranges": [
+            [
+              1,
+              228
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+          "ledger": "private-locator:e89ce962f2b809407c55",
+          "pointer": "$/records/59",
+          "recorded_scope": {
+            "disposition": "EXACT_PRIOR_CONTROLLING_BODY",
+            "remaining_substantive_ranges": [],
+            "role": "finite-geometric-score/RESULT.md",
+            "method": "exact full-body prior reuse"
+          },
+          "ranges": [
+            [
+              1,
+              228
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "query": "attestation-intention-recovery%RESULT.md",
+      "sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+      "path": "t20-consolidation-20261011/catalogue/objects/eb/eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+      "member": "recovery-t20/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008.zip!/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/attestation-intention-recovery/RESULT.md",
+      "routes": [
+        {
+          "source_sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/1008",
+          "recorded_scope": {
+            "scope": "Full retained authored body. Historical primary/replay claims remain attributed; no fresh primary acquisition, execution or first-discovery credit.",
+            "reading_mode": "FULL_RETAINED_BODY_READ",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              164
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/eb/eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/948",
+          "recorded_scope": {
+            "scope": "Full retained authored body. Historical primary/replay claims remain attributed; no fresh primary acquisition, execution or first-discovery credit.",
+            "reading_mode": "FULL_RETAINED_BODY_READ",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              164
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/eb/eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c",
+          "ledger": "private-locator:b0c5315b2dc0e1ea078f",
+          "pointer": "$/40",
+          "recorded_scope": {
+            "scope": "Full retained authored body. Historical primary/replay claims remain attributed; no fresh primary acquisition, execution or first-discovery credit.",
+            "reading_mode": "FULL_RETAINED_BODY_READ",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              164
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/eb/eb166ae4d14ea20bcf6f565bbe58d826dcedd22d412b684129fad2c3e1d1e61c"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+        "encoding": "utf-8",
+        "sha": "0929ef49e847b3bcfd5847600a6a80c46283f2f7",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+        "display_title": "SOUND-DESCENT-MODEL-COMPARISON.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+          "path": "t20-consolidation-20261011/catalogue/objects/ab/ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+          "git_blob_sha1": "0929ef49e847b3bcfd5847600a6a80c46283f2f7",
+          "routes": [
+            {
+              "source_sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+              "ledger": "private-locator:718e50a99c35e09f0d49",
+              "pointer": "$/sources/538",
+              "recorded_scope": {
+                "scope": "whole exact body; split displays fully covered",
+                "reading_mode": "direct_full_body_read",
+                "reading_credit": "fresh exact body examination, sourceexcerpt onlywhereexplicit; originalsource/replay claims remainattributed"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/ab/ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+              "ledger": "private-locator:3c7b22e23fec9e57f93b",
+              "pointer": "$/478",
+              "recorded_scope": {
+                "scope": "whole exact body; split displays fully covered",
+                "reading_mode": "direct_full_body_read",
+                "reading_credit": "fresh exact body examination, sourceexcerpt onlywhereexplicit; originalsource/replay claims remainattributed"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/ab/ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+              "ledger": "private-locator:5454c7ac7f41509c6808",
+              "pointer": "$/records/197",
+              "recorded_scope": {
+                "scope": "whole exact body; split displays fully covered",
+                "reading_mode": "direct_full_body_read",
+                "reading_credit": "fresh exact body examination, sourceexcerpt onlywhereexplicit; originalsource/replay claims remainattributed"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/ab/ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4",
+              "ledger": "private-locator:f955a7c36caba44cb77c",
+              "pointer": "$/records/62",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+                "role": "prior_controlling_dependency_or_implementation"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/ab/ab45d615262f8a5ad338438994ad7315e8087d571cabe4c4848ff097264ab7c4"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+        "encoding": "utf-8",
+        "sha": "307c3a0e6c10a91abd5637a8b9921fb5b62e5179",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+        "display_title": "SEMANTIC-OPERATOR-CONTRACT.yaml"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2",
+          "path": "t20-consolidation-20261011/catalogue/objects/a6/a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2",
+          "git_blob_sha1": "307c3a0e6c10a91abd5637a8b9921fb5b62e5179",
+          "routes": [
+            {
+              "source_sha256": "a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2",
+              "ledger": "private-locator:9da31b1e76b8ca784438",
+              "pointer": "$/857",
+              "recorded_scope": {
+                "read_scope": "full body"
+              },
+              "ranges": [
+                [
+                  1,
+                  151
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/a6/a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+        "encoding": "utf-8",
+        "sha": "a13b7b5cc8832606d88c0b6814777b7d62e4b0d0",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+        "display_title": "EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154",
+          "path": "t20-consolidation-20261011/catalogue/objects/ff/ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154",
+          "git_blob_sha1": "a13b7b5cc8832606d88c0b6814777b7d62e4b0d0",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "applications/daee-epistemics/TAWATUR-WARRANT.example.yaml",
+        "encoding": "utf-8",
+        "sha": "1a69f8b3f21ee9492f0cfe809be5d5c41c1262eb",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/TAWATUR-WARRANT.example.yaml",
+        "display_title": "TAWATUR-WARRANT.example.yaml"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "b1a80dd3e4c9a500fe5acef8ae24b45e1a95cd2ef44fd7c99ea468da0a13ee9c",
+          "path": "t20-consolidation-20261011/catalogue/objects/b1/b1a80dd3e4c9a500fe5acef8ae24b45e1a95cd2ef44fd7c99ea468da0a13ee9c",
+          "git_blob_sha1": "1a69f8b3f21ee9492f0cfe809be5d5c41c1262eb",
+          "routes": [
+            {
+              "source_sha256": "b1a80dd3e4c9a500fe5acef8ae24b45e1a95cd2ef44fd7c99ea468da0a13ee9c",
+              "ledger": "private-locator:88fad226b504967c4309",
+              "pointer": "$/records/9",
+              "recorded_scope": {
+                "read_status": "FRESH_COMPLETE_BODY_READING",
+                "role": "semantic_fixture_or_example"
+              },
+              "ranges": [
+                [
+                  1,
+                  71
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/b1/b1a80dd3e4c9a500fe5acef8ae24b45e1a95cd2ef44fd7c99ea468da0a13ee9c"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "docs/algebraic-notation-and-noetic-formalism.md",
+        "encoding": "utf-8",
+        "sha": "d1802611b2c051c17ff20a91e52da60314d5bfd6",
+        "display_url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/docs/algebraic-notation-and-noetic-formalism.md",
+        "display_title": "algebraic-notation-and-noetic-formalism.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+          "path": "t20-consolidation-20261011/catalogue/objects/d8/d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+          "git_blob_sha1": "d1802611b2c051c17ff20a91e52da60314d5bfd6",
+          "routes": [
+            {
+              "source_sha256": "d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+              "ledger": "private-locator:9a0d7ebd470f522855ee",
+              "pointer": "$/records/15",
+              "recorded_scope": {
+                "fresh_read_status": "COMPLETE_BOUND_BODY",
+                "fresh_scope": {
+                  "line_ranges": [
+                    [
+                      1,
+                      908
+                    ]
+                  ],
+                  "mode": "full_text"
+                }
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/d8/d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "atomics/skill/references/tactics/M2-prior-probability.md",
+        "encoding": "utf-8",
+        "sha": "8c9a6dce324db63cb882b9307a8587243f534f19",
+        "display_url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/tactics/M2-prior-probability.md",
+        "display_title": "M2-prior-probability.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+          "path": "t20-consolidation-20261011/catalogue/objects/c5/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+          "git_blob_sha1": "8c9a6dce324db63cb882b9307a8587243f534f19",
+          "routes": []
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+        "encoding": "utf-8",
+        "sha": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+        "display_title": "information-composition-and-self-revision-v5.tex"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+          "path": "t20-consolidation-20261011/catalogue/objects/4a/4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+          "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+          "routes": [
+            {
+              "source_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+              "ledger": "private-locator:9da31b1e76b8ca784438",
+              "pointer": "$/1206",
+              "recorded_scope": {
+                "read_scope": "full body"
+              },
+              "ranges": [
+                [
+                  1,
+                  423
+                ]
+              ],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/implementaudit/information-composition-and-self-revision-v5.tex"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+              "ledger": "private-locator:abc84a002ee9ac3da081",
+              "pointer": "$/exact_prior_controlling_reuse/0",
+              "recorded_scope": {
+                "scope": "Exact prior full controlling prose/contract or complete patch read reused; no duplicate proof/body discovery"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/implementaudit/information-composition-and-self-revision-v5.tex"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+              "ledger": "private-locator:bdde5c0bb02de37a7385",
+              "pointer": "$/170",
+              "recorded_scope": {
+                "disposition": "exact_direct_or_qualified_source_read"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/implementaudit/information-composition-and-self-revision-v5.tex"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+              "ledger": "private-locator:f955a7c36caba44cb77c",
+              "pointer": "$/records/87",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+                "role": "prior_controlling_dependency_or_implementation"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/4a/4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+        "encoding": "utf-8",
+        "sha": "7823c373395b7d50221da8e4493c918bfce848f0",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+        "display_title": "RESULT.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "path": "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+          "git_blob_sha1": "7823c373395b7d50221da8e4493c918bfce848f0",
+          "routes": [
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:baa2bcfc45e30ad58af3",
+              "pointer": "$/sources/0",
+              "recorded_scope": {
+                "read_scope": "full owner text",
+                "role": "direct controlling source"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+              "pointer": "$/33",
+              "recorded_scope": {
+                "mode": "direct selected lines",
+                "lines_read": [
+                  1,
+                  145
+                ]
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+              "pointer": "$/34",
+              "recorded_scope": {
+                "mode": "direct selected lines",
+                "lines_read": [
+                  145,
+                  260
+                ]
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:778ab5de08580f43b4ee",
+              "pointer": "$/0",
+              "recorded_scope": {
+                "scope": "Full exact body",
+                "status": "PREVIOUSLY_EXAMINED_CONTROLLING_BODY"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/40/resolved_sources/0/reading_routes/0",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/40/resolved_sources/0/reading_routes/1",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/40/resolved_sources/0/reading_routes/2",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/40/resolved_sources/0/reading_routes/3",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/48/resolved_sources/0/reading_routes/0",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/48/resolved_sources/0/reading_routes/1",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/48/resolved_sources/0/reading_routes/2",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:c8a57bee019e703b5e8f",
+              "pointer": "$/rows/48/resolved_sources/0/reading_routes/3",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/0",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/1",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/2",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/3",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/4",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/5",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/6",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/7",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/8",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/9",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  1,
+                  145
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/10",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [
+                [
+                  145,
+                  260
+                ]
+              ],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:8db512c9e054bf133f03",
+              "pointer": "$/reused_controlling_sources/10/prior_routes/11",
+              "recorded_scope": {
+                "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+              "ledger": "private-locator:f955a7c36caba44cb77c",
+              "pointer": "$/records/76",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+                "role": "prior_controlling_dependency_or_implementation"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/71/71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/RESULT.md",
+        "encoding": "utf-8",
+        "sha": "b4a993ae5430dd04d6ccf316011e9dac4f0f4164",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/RESULT.md",
+        "display_title": "RESULT.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+          "path": "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+          "git_blob_sha1": "b4a993ae5430dd04d6ccf316011e9dac4f0f4164",
+          "routes": [
+            {
+              "source_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+              "ledger": "private-locator:5b6e4b5fa752c8a17ccf",
+              "pointer": "$/31",
+              "recorded_scope": {
+                "mode": "direct full text",
+                "lines_read": [
+                  1,
+                  228
+                ]
+              },
+              "ranges": [
+                [
+                  1,
+                  228
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f",
+              "ledger": "private-locator:e89ce962f2b809407c55",
+              "pointer": "$/records/59",
+              "recorded_scope": {
+                "disposition": "EXACT_PRIOR_CONTROLLING_BODY",
+                "remaining_substantive_ranges": [],
+                "role": "finite-geometric-score/RESULT.md",
+                "method": "exact full-body prior reuse"
+              },
+              "ranges": [
+                [
+                  1,
+                  228
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/d7/d7cfa67248e06786e1c4acaae6e61138498ef8e6dc1f14287d7d2664302ee96f"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "atomics/skill/references/sound-reason-epistemology.md",
+        "encoding": "utf-8",
+        "sha": "d7fa4425d014225940cbbbe86983f8d9a3dc3da5",
+        "display_url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/sound-reason-epistemology.md",
+        "display_title": "sound-reason-epistemology.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+          "path": "t20-consolidation-20261011/catalogue/objects/55/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+          "git_blob_sha1": "d7fa4425d014225940cbbbe86983f8d9a3dc3da5",
+          "routes": [
+            {
+              "source_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+              "ledger": "private-locator:957b294a6101e0e98174",
+              "pointer": "$/records/3",
+              "recorded_scope": {
+                "reading_mode": "fresh_full_raw_text",
+                "role": "theoretical_source_substrate"
+              },
+              "ranges": [
+                [
+                  1,
+                  716
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/55/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+              "ledger": "private-locator:5454c7ac7f41509c6808",
+              "pointer": "$/records/139",
+              "recorded_scope": {
+                "scope": "wholebody",
+                "reading_mode": "transferred_exact_full_read",
+                "reading_credit": "empirical reader, no duplicate localfirstread"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/55/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "applications/daee-epistemics/MEMETIC-ECOLOGY.example.json",
+        "encoding": "utf-8",
+        "sha": "b41bec3fdb42561daf4bf628668034b560a288ac",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/MEMETIC-ECOLOGY.example.json",
+        "display_title": "MEMETIC-ECOLOGY.example.json"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "2005f7a0b8d832ca32f8be297731c16a901ec6c893451e04daaa4170d55be8a8",
+          "path": "t20-consolidation-20261011/catalogue/objects/20/2005f7a0b8d832ca32f8be297731c16a901ec6c893451e04daaa4170d55be8a8",
+          "git_blob_sha1": "b41bec3fdb42561daf4bf628668034b560a288ac",
+          "routes": [
+            {
+              "source_sha256": "2005f7a0b8d832ca32f8be297731c16a901ec6c893451e04daaa4170d55be8a8",
+              "ledger": "private-locator:88fad226b504967c4309",
+              "pointer": "$/records/3",
+              "recorded_scope": {
+                "read_status": "FRESH_COMPLETE_BODY_READING",
+                "role": "semantic_fixture_or_example"
+              },
+              "ranges": [
+                [
+                  1,
+                  43
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/20/2005f7a0b8d832ca32f8be297731c16a901ec6c893451e04daaa4170d55be8a8"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_binding": {
+        "path": "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+        "encoding": "utf-8",
+        "sha": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+        "display_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_THEOREM_FILES/PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+        "display_title": "PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md"
+      },
+      "exact_git_blob_matches": [
+        {
+          "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+          "path": "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+          "git_blob_sha1": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+          "routes": [
+            {
+              "source_sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+              "ledger": "private-locator:381c77b9cbe75bdebcda",
+              "pointer": "$/records/133",
+              "recorded_scope": {
+                "reading_mode": "fresh_complete_dependency_body"
+              },
+              "ranges": [
+                [
+                  1,
+                  263
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+              "ledger": "private-locator:4bb8f6ed79515bd48a5a",
+              "pointer": "$/records/285",
+              "recorded_scope": {
+                "scope": "fresh_complete_dependency_body",
+                "reading_mode": "completed_transferred_reading"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+              "ledger": "private-locator:3b6f9f7a6077b14acc9b",
+              "pointer": "$/controlling_context_reuse/AX/prior_record",
+              "recorded_scope": {
+                "reading_mode": "fresh_complete_dependency_body"
+              },
+              "ranges": [
+                [
+                  1,
+                  263
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+              "ledger": "private-locator:f955a7c36caba44cb77c",
+              "pointer": "$/records/71",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+                "role": "prior_controlling_dependency_or_implementation"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/07/07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MATH_ASSESSMENT.md",
+      "sha256": "467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a",
+      "path": "t20-consolidation-20261011/catalogue/objects/46/467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a",
+      "member": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/scriptural-fibre-supplement-20261009/MATH_ASSESSMENT.md",
+      "routes": [
+        {
+          "source_sha256": "467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/98",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/46/467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/38",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/46/467e85082d597e4f120c658f735c3826f19b3400edb54e7a9b46af3277f4f37a"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "PHILOSOPHICAL_SCOPE.md",
+      "sha256": "e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1",
+      "path": "t20-consolidation-20261011/catalogue/objects/e9/e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1",
+      "member": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/scriptural-fibre-supplement-20261009/PHILOSOPHICAL_SCOPE.md",
+      "routes": [
+        {
+          "source_sha256": "e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/99",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/e9/e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/39",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/e9/e9d0e5143eb832aeb8619792314730c1e0dd943a7b79e112d5caac27d6c09bb1"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "CONTEXT_ADDITION.txt",
+      "sha256": "7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b",
+      "path": "t20-consolidation-20261011/catalogue/objects/7f/7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b",
+      "member": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/scriptural-fibre-supplement-20261009/inputs/CONTEXT_ADDITION.txt",
+      "routes": [
+        {
+          "source_sha256": "7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/100",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7f/7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/40",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/7f/7f4d1063039325444777f10a5958a5b60f7945ab27f9eb9a9153a6c2d09bda0b"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "FIBRE_ARGUMENT.txt",
+      "sha256": "5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0",
+      "path": "t20-consolidation-20261011/catalogue/objects/5a/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0",
+      "member": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/scriptural-fibre-supplement-20261009/inputs/FIBRE_ARGUMENT.txt",
+      "routes": [
+        {
+          "source_sha256": "5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/101",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/5a/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/41",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/5a/5a424cd3017abc1c7e05e207119e52d4a91d4d252ef00168ddbdabaf296f67d0"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "THEOLOGICAL_DISCUSSION.txt",
+      "sha256": "bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2",
+      "path": "t20-consolidation-20261011/catalogue/objects/bd/bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2",
+      "member": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/scriptural-fibre-supplement-20261009/inputs/THEOLOGICAL_DISCUSSION.txt",
+      "routes": [
+        {
+          "source_sha256": "bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/102",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/bd/bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2",
+          "ledger": "private-locator:3c7b22e23fec9e57f93b",
+          "pointer": "$/42",
+          "recorded_scope": {
+            "scope": "whole substantive document",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 document inspection; primary readings and historical runtime remain attributed to their original owners"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/bd/bddc53b974618cd5dc553478d85710eacf5cab6c77333c5681f1b5c8b2c53de2"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "README.md",
+      "sha256": "59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550",
+      "path": "t20-consolidation-20261011/catalogue/objects/59/59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Scriptural_Recovery_Supplement_20261009(1).zip!/scriptural-fibre-supplement-20261009/README.md",
+      "routes": [
+        {
+          "source_sha256": "59643f825a88914fea7b92bff8154281556fb76eeb8713c5ea1e5e64a6c14550",
+          "ledger": "private-locator:cd3bb56ea4fede19e178",
+          "pointer": "$/3",
+          "recorded_scope": {
+            "scope": "wholetextread",
+            "disposition": "full_read_navigation_receipt_or_historical_proposal",
+            "reading_credit": "no fresh theorem,primarysource,or runtimecredit"
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "name": "continuation_lines_001_320.md",
+      "sha256": "43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46",
+      "path": "t20-consolidation-20261011/catalogue/objects/43/43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Scriptural_Recovery_Supplement_20261009(1).zip!/scriptural-fibre-supplement-20261009/math-sources/continuation_lines_001_320.md",
+      "routes": []
+    },
+    {
+      "name": "continuation_lines_565_675.md",
+      "sha256": "e8fcd427e93f74514b28f4d805b8c639506917ef15877b87256483e2f0573761",
+      "path": "t20-consolidation-20261011/catalogue/objects/e8/e8fcd427e93f74514b28f4d805b8c639506917ef15877b87256483e2f0573761",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Scriptural_Recovery_Supplement_20261009(1).zip!/scriptural-fibre-supplement-20261009/math-sources/continuation_lines_565_675.md",
+      "routes": []
+    },
+    {
+      "name": "fibre_lines_248_299.md",
+      "sha256": "9ebc6c422684328daef43526682e142d5c7da9debe31d38e033df235f33d2988",
+      "path": "t20-consolidation-20261011/catalogue/objects/9e/9ebc6c422684328daef43526682e142d5c7da9debe31d38e033df235f33d2988",
+      "member": "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext04.zip!/T20_Scriptural_Recovery_Supplement_20261009(1).zip!/scriptural-fibre-supplement-20261009/math-sources/fibre_lines_248_299.md",
+      "routes": [
+        {
+          "source_sha256": "9ebc6c422684328daef43526682e142d5c7da9debe31d38e033df235f33d2988",
+          "ledger": "private-locator:9a0d7ebd470f522855ee",
+          "pointer": "$/records/0",
+          "recorded_scope": {
+            "fresh_read_status": "COMPLETE_BOUND_BODY",
+            "fresh_scope": {
+              "line_ranges": [
+                [
+                  1,
+                  52
+                ]
+              ],
+              "mode": "full_text"
+            }
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/9e/9ebc6c422684328daef43526682e142d5c7da9debe31d38e033df235f33d2988"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    }
+  ],
+  "additional_governing_prose_reuse": [
+    {
+      "sha256": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+      "path": "t20-consolidation-20261011/catalogue/objects/65/659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+      "prior_route": "foundations/SUBSTANTIVE_READING.json sources[527]",
+      "scope": "whole exact body, direct_full_body_read; also global_prose records186/187; current code is not a new philosophical theorem."
+    },
+    {
+      "sha256": "65ff08c65868b42d7b284e65f5a06b7b969bde6cfc5fcefa035452244a730f71",
+      "path": "t20-consolidation-20261011/catalogue/objects/65/65ff08c65868b42d7b284e65f5a06b7b969bde6cfc5fcefa035452244a730f71",
+      "prior_route": "foundations/SUBSTANTIVE_READING.json sources[528]",
+      "scope": "whole exact body, direct_full_body_read; also global_prose records186/187; current code is not a new philosophical theorem."
+    }
+  ],
+  "new_unjoined_inputs_closed": [
+    {
+      "sha256": "963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "path": "t20-consolidation-20261011/catalogue/objects/96/963f62961ce2b6b16113ec15cae9cb0afdd1b8d288e31833395245700c60d60c",
+      "bytes": 2790,
+      "line_count": 61,
+      "read_ranges": [
+        [
+          1,
+          61
+        ]
+      ],
+      "reading_mode": "FULL_DIRECT_BODY_READ",
+      "role": "integrity_input",
+      "semantic_findings": "All11 rows read: two governing prose identities, original implicit model, two finite controls, two output records and four historical page-image identities. Checker reads only path/sha256, not prose or pixels. No new primary/source-page credit.",
+      "retained_code_executed": false,
+      "remaining_substantive_ranges": []
+    },
+    {
+      "sha256": "ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154",
+      "path": "t20-consolidation-20261011/catalogue/objects/ff/ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154",
+      "bytes": 4435,
+      "line_count": 85,
+      "read_ranges": [
+        [
+          1,
+          85
+        ]
+      ],
+      "reading_mode": "FULL_DIRECT_BODY_READ",
+      "role": "philosophical_boundary_source",
+      "semantic_findings": "Full85line body: designed noetic application operationalizes supplied Athari/Taymiyyan commitments. Machine dependence analysis is separate from tawatur warrant; normative ontology is an explanandum, not proof of ultimate ground or theological taxonomy. Prior positive appraisals outside this object are not cancelled.",
+      "retained_code_executed": false,
+      "remaining_substantive_ranges": []
+    },
+    {
+      "sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "path": "t20-consolidation-20261011/catalogue/objects/c5/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "bytes": 9464,
+      "line_count": 103,
+      "read_ranges": [
+        [
+          1,
+          103
+        ]
+      ],
+      "reading_mode": "FULL_DIRECT_BODY_READ",
+      "role": "probabilistic_tactic_source",
+      "semantic_findings": "Full103line runtime/argument contract. Legitimate prior-grounding query and deductive/pastoral/anti-loop exclusions survive; line46 near-zero-prior necessity is false by exact Bayesian counterexample. See correction record; no inference to actual religious prior or likelihood.",
+      "retained_code_executed": false,
+      "remaining_substantive_ranges": []
+    },
+    {
+      "sha256": "43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46",
+      "path": "t20-consolidation-20261011/catalogue/objects/43/43bf5cda12ca4d0573ffa5471fd743bdebe8d1ea9cbfaa4912f5e461dcc18c46",
+      "bytes": 22748,
+      "line_count": 319,
+      "reading_mode": "EXACT_CONTIGUOUS_EXCERPT_REUSE",
+      "read_ranges": [],
+      "role": "retained_mathematical_excerpt",
+      "original_sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "original_byte_offset": 0,
+      "original_line_range": [
+        1,
+        319
+      ],
+      "prior_route": "t20-v6-20261011/early_remaining/graph_continuation/READ_LEDGER.json sources[29]",
+      "prior_scope": "Original804lines complete by prior1–330 plus direct300–804 and98–190 return. No duplicate first reading; root atlas alone was partial and is not used for full credit.",
+      "remaining_substantive_ranges": []
+    },
+    {
+      "sha256": "e8fcd427e93f74514b28f4d805b8c639506917ef15877b87256483e2f0573761",
+      "path": "t20-consolidation-20261011/catalogue/objects/e8/e8fcd427e93f74514b28f4d805b8c639506917ef15877b87256483e2f0573761",
+      "bytes": 7499,
+      "line_count": 110,
+      "reading_mode": "EXACT_CONTIGUOUS_EXCERPT_REUSE",
+      "read_ranges": [],
+      "role": "retained_mathematical_excerpt",
+      "original_sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "original_byte_offset": 39126,
+      "original_line_range": [
+        565,
+        674
+      ],
+      "prior_route": "t20-v6-20261011/early_remaining/graph_continuation/READ_LEDGER.json sources[29]",
+      "prior_scope": "Original804lines complete by prior1–330 plus direct300–804 and98–190 return. No duplicate first reading; root atlas alone was partial and is not used for full credit.",
+      "remaining_substantive_ranges": []
+    }
+  ],
+  "all_local_runtime_imports_closed_at_exact_source_scope": true,
+  "integrity_only_inputs": "Recovery images/results only hashed by reviewed caller. Warranted-learning12sourceGitobjects bind bytes; full reading depends on own/prior ledger, not digest. External stdlib/interpreter not source-audited.",
+  "retained_code_executed": false
+}

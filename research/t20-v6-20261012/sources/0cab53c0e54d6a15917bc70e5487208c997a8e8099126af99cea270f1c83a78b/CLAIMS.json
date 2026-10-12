@@ -1,0 +1,287 @@
+[
+  {
+    "id": "P01-U09-01",
+    "statement": "Lambda macro translation commutes with simultaneous open-term substitution; rigid-bottom type translation commutes with lifted type substitution.",
+    "hypotheses": [
+      "Finite SKI syntax with inert free variables",
+      "Capture-avoiding lambda substitution",
+      "Primitive bottom maps to non-substitutable rigid atom"
+    ],
+    "status": "ORDINARY_PROOF",
+    "dependencies": [],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U09-02",
+    "statement": "Every compatible SKI Step maps to a nonempty compatible beta path (1/2/3 contractions for I/K/S roots).",
+    "hypotheses": [
+      "Exact canonical compatible Step",
+      "Unnormalised macro translation"
+    ],
+    "status": "ORDINARY_PROOF",
+    "dependencies": [
+      "P01-U09-01"
+    ],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U09-03",
+    "statement": "FiniteDerives t A implies strong normalisation of t.",
+    "hypotheses": [
+      "F-SR for the exact Curry target",
+      "F-SN for the exact Curry target",
+      "Rigid-atom target extension"
+    ],
+    "status": "RELATIVE_ORDINARY_PROOF_KERNEL_BRIDGE_OPEN",
+    "dependencies": [
+      "P01-U09-01",
+      "P01-U09-02"
+    ],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U09-04",
+    "statement": "Compatible SKI reduction is confluent; convertible terms join; distinct normal forms are not convertible.",
+    "hypotheses": [
+      "Exact I/K/S root rules and both application congruences",
+      "Inert markers/free variables"
+    ],
+    "status": "ORDINARY_PROOF",
+    "dependencies": [],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U09-05",
+    "statement": "Omega belongs to the primitive-bottom arrow but has no finite-source representative at any type modulo Conv.",
+    "hypotheses": [
+      "Exact primitive-bottom semantics",
+      "F-SR/F-SN via the finite-source theorem"
+    ],
+    "status": "RELATIVE_ORDINARY_COUNTERMODEL",
+    "dependencies": [
+      "P01-U09-03",
+      "P01-U09-04"
+    ],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U09-06",
+    "statement": "The macro translation is not conversion-reflecting: I and SKK separate in SKI but their translations beta-convert.",
+    "hypotheses": [
+      "Exact raw Conv"
+    ],
+    "status": "ORDINARY_COUNTERMODEL",
+    "dependencies": [
+      "P01-U09-04"
+    ],
+    "proof_file": "research/U09_NORMALISATION.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-01",
+    "statement": "Identity extension fails at alpha->alpha for the raw-Conv diagonal and alpha=top.",
+    "hypotheses": [
+      "Canonical arrow relational interpretation",
+      "Delta_A(t,u)=A(t) and Conv(t,u)"
+    ],
+    "status": "ORDINARY_COUNTERMODEL",
+    "dependencies": [
+      "P01-U09-04"
+    ],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-02",
+    "statement": "Fixed-environment unary arrow membership does not imply preservation of every endpoint-compatible relation.",
+    "hypotheses": [
+      "alpha=top",
+      "K realiser",
+      "Relation principal(I) x principal(I)"
+    ],
+    "status": "ORDINARY_COUNTERMODEL",
+    "dependencies": [
+      "P01-U09-04"
+    ],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-03",
+    "statement": "A finite open SKI derivation in the explicitly proposed contextual system preserves endpoint-aware relation environments under related closing substitutions.",
+    "hypotheses": [
+      "New endpoint-aware relational definition",
+      "All introduction weakens type variables in the term context",
+      "Stable relations and simultaneous-substitution/inclusion induction"
+    ],
+    "status": "ORDINARY_PROPOSAL_THEOREM_NOT_CANONICAL",
+    "dependencies": [
+      "P01-U09-01"
+    ],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-04",
+    "statement": "EffectDerives e A and Outcome e t imply FiniteDerives t A, and hence t is self-related at every canonical relation environment.",
+    "hypotheses": [
+      "Unchanged finite EffectDerives and positive Outcome",
+      "Accepted finite_fundamental at its exact source scope"
+    ],
+    "status": "ORDINARY_PROOF_LEAN_CANDIDATE_UNVERIFIED",
+    "dependencies": [
+      "V4::V4-R1"
+    ],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-05",
+    "statement": "A single finite rational diagonal self-coupling of a typed effect law has support in every relation interpretation.",
+    "hypotheses": [
+      "Finite rational mass semantics",
+      "Independent once-per-subtree application sampling",
+      "Positive support equals Outcome"
+    ],
+    "status": "ORDINARY_PROOF_FINITE_SCOPE",
+    "dependencies": [
+      "P01-U10-04"
+    ],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U10-06",
+    "statement": "Individual supported couplings for every relation need not yield one coupling supported by their intersection.",
+    "hypotheses": [
+      "Fair two-point marginals",
+      "Equality and flip relations"
+    ],
+    "status": "ORDINARY_COUNTERMODEL",
+    "dependencies": [],
+    "proof_file": "research/U10_PARAMETRICITY.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-01",
+    "statement": "Finite represented contextual substitutions compose and reindex coherent families soundly.",
+    "hypotheses": [
+      "Finite telescopes",
+      "Coherent Code families",
+      "One finite polynomial per represented term",
+      "Pointwise Conv for represented-term equality"
+    ],
+    "status": "ORDINARY_PROPOSED_CONTEXTUAL_CORE",
+    "dependencies": [
+      "P01-U09-01"
+    ],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-02",
+    "statement": "The stated variable-free-K bracket compiler satisfies application beta and fresh-substitution naturality.",
+    "hypotheses": [
+      "Finite open SKI polynomials",
+      "Other-variable substitutions do not contain the abstracted variable"
+    ],
+    "status": "ORDINARY_PROOF",
+    "dependencies": [],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-03",
+    "statement": "Both stated bracket compilers fail body-conversion congruence, so their abstraction does not descend to the represented-term quotient.",
+    "hypotheses": [
+      "Raw canonical Conv",
+      "Base compiler on I x -> x",
+      "Eta-shortcut compiler on K x I -> x"
+    ],
+    "status": "ORDINARY_COUNTERMODELS",
+    "dependencies": [
+      "P01-U09-04"
+    ],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-04",
+    "statement": "An actual encoded dependent-Sigma inhabitant is convertible to the pair of its projections.",
+    "hypotheses": [
+      "Canonical dependentSigma witness",
+      "Coherent family and existing pair projection equations"
+    ],
+    "status": "ORDINARY_PROOF_LEAN_CANDIDATE_UNVERIFIED",
+    "dependencies": [
+      "V4::T23"
+    ],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-05",
+    "statement": "A based J result and its two-K-step tracker are sound for a motive coherent in both endpoint and equality-proof coordinates.",
+    "hypotheses": [
+      "Canonical equalityCode",
+      "Explicit new admissible two-coordinate motive coherence"
+    ],
+    "status": "ORDINARY_PROOF_LEAN_CANDIDATE_UNVERIFIED",
+    "dependencies": [
+      "V4::T23"
+    ],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-06",
+    "statement": "A J rule admitting arbitrary proof-inspecting motives is false.",
+    "hypotheses": [
+      "p=I I is accepted equality evidence",
+      "Motive top only at the literal proof I and bottom otherwise"
+    ],
+    "status": "ORDINARY_COUNTERMODEL",
+    "dependencies": [],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  },
+  {
+    "id": "P01-U11-07",
+    "statement": "The proposed tracked code/program distinction retains internal All/self-instantiation without supplying the exact SCUUAt full-section retraction.",
+    "hypotheses": [
+      "Exact accepted All and SCUUAt definitions",
+      "No new full ambient section encoder or object universe decoding all Code"
+    ],
+    "status": "SOURCE_BOUNDARY_COMPARISON_NOT_NEW_NO_GO_THEOREM",
+    "dependencies": [
+      "ARGUMENT::INTERNAL-ALL",
+      "ARGUMENT::SCUU-AT"
+    ],
+    "proof_file": "research/U11_CONTEXTUAL_CALCULUS.md",
+    "novelty": "NOT_CLAIMED",
+    "kernel_verified_here": false
+  }
+]

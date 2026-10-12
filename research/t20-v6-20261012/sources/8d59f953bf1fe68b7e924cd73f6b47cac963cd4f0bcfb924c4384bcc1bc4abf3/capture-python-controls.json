@@ -1,0 +1,220 @@
+[
+  {
+    "name": "capture_equal_under_one_binder",
+    "body": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          1
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "argument": [
+      "v",
+      0
+    ],
+    "expected": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          1
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "actual": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          1
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "status": "PASS"
+  },
+  {
+    "name": "capture_greater_under_one_binder",
+    "body": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          2
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "argument": [
+      "v",
+      0
+    ],
+    "expected": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          1
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "actual": [
+      "all",
+      [
+        "arr",
+        [
+          "v",
+          1
+        ],
+        [
+          "v",
+          0
+        ]
+      ]
+    ],
+    "status": "PASS"
+  },
+  {
+    "name": "capture_equal_under_two_binders",
+    "body": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            2
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "argument": [
+      "v",
+      1
+    ],
+    "expected": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            3
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "actual": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            3
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "status": "PASS"
+  },
+  {
+    "name": "capture_less_under_two_binders",
+    "body": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            1
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "argument": [
+      "v",
+      9
+    ],
+    "expected": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            1
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "actual": [
+      "all",
+      [
+        "all",
+        [
+          "arr",
+          [
+            "v",
+            1
+          ],
+          [
+            "v",
+            0
+          ]
+        ]
+      ]
+    ],
+    "status": "PASS"
+  }
+]

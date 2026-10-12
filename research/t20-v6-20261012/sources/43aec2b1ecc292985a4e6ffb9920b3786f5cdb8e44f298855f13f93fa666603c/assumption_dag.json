@@ -1,0 +1,262 @@
+{
+  "schema": "p14-assumption-dag-v1",
+  "status": "RESEARCH_MODEL_NOT_AUTHORITY",
+  "nodes": [
+    {
+      "id": "L0",
+      "claim": "Typed evidence profiles",
+      "requires": [],
+      "extra_premises": [
+        "coordinate schema",
+        "units and orientation",
+        "extraction identity",
+        "descriptive/evaluative partition"
+      ],
+      "does_not_supply": [
+        "comparison rule",
+        "truth",
+        "authority"
+      ]
+    },
+    {
+      "id": "L1",
+      "claim": "Profile order and incomparability",
+      "requires": [
+        "L0"
+      ],
+      "extra_premises": [
+        "declared partial order or improvement cone"
+      ],
+      "does_not_supply": [
+        "total ranking",
+        "compensating scalar weights"
+      ]
+    },
+    {
+      "id": "L2",
+      "claim": "Endogenous finite local-view architecture",
+      "requires": [
+        "L0"
+      ],
+      "extra_premises": [
+        "local states",
+        "local observations",
+        "explicit channels",
+        "shared causes"
+      ],
+      "does_not_supply": [
+        "empirical cognitive anatomy",
+        "conditional independence"
+      ]
+    },
+    {
+      "id": "L3",
+      "claim": "Finite response architecture",
+      "requires": [
+        "L2"
+      ],
+      "extra_premises": [
+        "nonempty finite response sets",
+        "local implementability",
+        "joint feasibility contract"
+      ],
+      "does_not_supply": [
+        "product feasibility",
+        "infinite-horizon finite policy space",
+        "payoff comparison"
+      ]
+    },
+    {
+      "id": "L4",
+      "claim": "Product mixed-simplex geometry",
+      "requires": [
+        "L3"
+      ],
+      "extra_premises": [
+        "full product of the selected response simplices"
+      ],
+      "does_not_supply": [
+        "physical sampling law",
+        "profitable deviation",
+        "equilibrium"
+      ]
+    },
+    {
+      "id": "L5",
+      "claim": "Finite scalar expected-payoff game",
+      "requires": [
+        "L4"
+      ],
+      "extra_premises": [
+        "real pure-profile payoff tables",
+        "ordinary independent mixed extension"
+      ],
+      "does_not_supply": [
+        "correct utilities",
+        "unique equilibrium",
+        "convergent dynamics"
+      ]
+    },
+    {
+      "id": "L6",
+      "claim": "Finite vector expected-payoff game",
+      "requires": [
+        "L4",
+        "L1"
+      ],
+      "extra_premises": [
+        "vector payoff tables",
+        "expected coordinate semantics",
+        "explicit nonzero-cone versus interior-cone improvement"
+      ],
+      "does_not_supply": [
+        "unique scalarization",
+        "unrestricted vector existence"
+      ]
+    },
+    {
+      "id": "L7",
+      "claim": "Team or constrained/pipeline branch",
+      "requires": [
+        "L3"
+      ],
+      "extra_premises": [
+        "shared objective or hard constraint or ordered transformation semantics"
+      ],
+      "does_not_supply": [
+        "ordinary unconstrained Nash hypotheses",
+        "global optimum from unilateral stability"
+      ]
+    },
+    {
+      "id": "E5",
+      "claim": "Mixed Nash existence",
+      "requires": [
+        "L5"
+      ],
+      "extra_premises": [
+        "standard finite Nash/Kakutani theorem"
+      ],
+      "does_not_supply": [
+        "effective sampler",
+        "convergence",
+        "truth",
+        "authority"
+      ]
+    },
+    {
+      "id": "E6",
+      "claim": "Nonzero-cone equilibrium existence and weight-witness characterization",
+      "requires": [
+        "L6"
+      ],
+      "extra_premises": [
+        "orthant order",
+        "finite mixed polytope",
+        "strictly positive player-specific supporting witnesses",
+        "finite Nash and separation"
+      ],
+      "does_not_supply": [
+        "canonical weights",
+        "same characterization for arbitrary compact convex games"
+      ]
+    },
+    {
+      "id": "DEPLOY",
+      "claim": "Actual joint and temporal deployment model",
+      "requires": [
+        "L3"
+      ],
+      "extra_premises": [
+        "joint kernel",
+        "temporal dependence",
+        "observation law",
+        "current operational license"
+      ],
+      "does_not_supply": [
+        "normative target correctness",
+        "restoration"
+      ]
+    },
+    {
+      "id": "RESTORE",
+      "claim": "Sure or almost-sure temporal restoration",
+      "requires": [
+        "DEPLOY"
+      ],
+      "extra_premises": [
+        "independently supplied safe/target predicates",
+        "complete transition model",
+        "declared winning mode",
+        "proved rank/acceptance or recurrence contract"
+      ],
+      "does_not_supply": [
+        "source truth",
+        "historical conclusions",
+        "personal identity"
+      ]
+    },
+    {
+      "id": "TRUTH",
+      "claim": "Substantive epistemic/world correctness",
+      "requires": [],
+      "extra_premises": [
+        "independent evidence for source, coordinate, target and world adequacy"
+      ],
+      "does_not_supply": [
+        "automatic operational authorization"
+      ]
+    },
+    {
+      "id": "AUTHORITY",
+      "claim": "Legitimate application and execution",
+      "requires": [],
+      "extra_premises": [
+        "independently authorized recipient/action/context/version contract"
+      ],
+      "does_not_supply": [
+        "source truth",
+        "convergence"
+      ]
+    }
+  ],
+  "sibling_branches": [
+    "L5",
+    "L6",
+    "L7"
+  ],
+  "forbidden_automatic_inferences": [
+    [
+      "L0",
+      "L5"
+    ],
+    [
+      "L4",
+      "E5"
+    ],
+    [
+      "E5",
+      "RESTORE"
+    ],
+    [
+      "E5",
+      "TRUTH"
+    ],
+    [
+      "E6",
+      "AUTHORITY"
+    ],
+    [
+      "L1",
+      "DEPLOY"
+    ],
+    [
+      "L5",
+      "L6"
+    ],
+    [
+      "L6",
+      "L7"
+    ]
+  ]
+}

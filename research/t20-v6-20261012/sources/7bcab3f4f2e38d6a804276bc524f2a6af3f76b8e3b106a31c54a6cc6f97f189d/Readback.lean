@@ -1,0 +1,39 @@
+import ReviewerProbes
+set_option pp.universes true
+set_option pp.explicit true
+#check @ConnectedReview.reviewer_root_of_cover
+#print axioms ConnectedReview.reviewer_root_of_cover
+#check @ConnectedReview.reviewer_edge_cover_eq
+#print axioms ConnectedReview.reviewer_edge_cover_eq
+#check @ConnectedReview.reviewer_path_cover
+#print axioms ConnectedReview.reviewer_path_cover
+#check @ConnectedReview.reviewer_constructive_local_to_least
+#print axioms ConnectedReview.reviewer_constructive_local_to_least
+#check @ConnectedReview.reviewer_least_unique
+#print axioms ConnectedReview.reviewer_least_unique
+#check @ConnectedReview.reviewer_global_unique_supported_to_least
+#print axioms ConnectedReview.reviewer_global_unique_supported_to_least
+#check @ConnectedReview.reviewer_pointwise_forward
+#print axioms ConnectedReview.reviewer_pointwise_forward
+#check @ConnectedReview.reviewer_pointwise_reverse
+#print axioms ConnectedReview.reviewer_pointwise_reverse
+#check @ConnectedReview.reviewer_transitivity_is_material
+#print axioms ConnectedReview.reviewer_transitivity_is_material
+#check @ConnectedReview.reviewer_unclosed_chain_connected
+#print axioms ConnectedReview.reviewer_unclosed_chain_connected
+#check @ConnectedReview.reviewer_irreflexivity_is_material_to_uniqueness
+#print axioms ConnectedReview.reviewer_irreflexivity_is_material_to_uniqueness
+#check @ConnectedReview.reviewer_scope_roothood_control
+#print axioms ConnectedReview.reviewer_scope_roothood_control
+#check @ConnectedReview.reviewer_rooted_strict
+#print axioms ConnectedReview.reviewer_rooted_strict
+#check @ConnectedReview.reviewer_rooted_least
+#print axioms ConnectedReview.reviewer_rooted_least
+#check @ConnectedReview.reviewer_rooted_no_accessible_branch
+#print axioms ConnectedReview.reviewer_rooted_no_accessible_branch
+#check @ConnectedReview.reviewer_rooted_not_well_founded
+#print axioms ConnectedReview.reviewer_rooted_not_well_founded
+#check @ConnectedReview.reviewer_fork_support_failure_inside_cone
+#print axioms ConnectedReview.reviewer_fork_support_failure_inside_cone
+#check @ConnectedReview.reviewer_graph_does_not_supply_act_bridge
+#print axioms ConnectedReview.reviewer_graph_does_not_supply_act_bridge

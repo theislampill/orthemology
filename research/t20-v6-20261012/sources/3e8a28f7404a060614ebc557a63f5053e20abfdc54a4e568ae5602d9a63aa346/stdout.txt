@@ -1,0 +1,150 @@
+{
+  "status": "PASS",
+  "scope": "exact finite algebra controls",
+  "models": {
+    "polynomial": [
+      {
+        "b": [
+          "1/2",
+          "7/20",
+          "7/20"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "5796/2245",
+        "zdot": "-5796/11225",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      },
+      {
+        "b": [
+          "2/5",
+          "2/5",
+          "2/5"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "75/29",
+        "zdot": "-15/29",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      }
+    ],
+    "bernoulli_entropy": [
+      {
+        "b": [
+          "1/2",
+          "7/20",
+          "7/20"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "141/200",
+        "zdot": "-141/1000",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      },
+      {
+        "b": [
+          "2/5",
+          "2/5",
+          "2/5"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "18/25",
+        "zdot": "-18/125",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      }
+    ],
+    "constant_positive": [
+      {
+        "b": [
+          "1/2",
+          "7/20",
+          "7/20"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "6",
+        "zdot": "-6/5",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      },
+      {
+        "b": [
+          "2/5",
+          "2/5",
+          "2/5"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "6",
+        "zdot": "-6/5",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      }
+    ],
+    "affine_positive": [
+      {
+        "b": [
+          "1/2",
+          "7/20",
+          "7/20"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "27/5",
+        "zdot": "-27/25",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      },
+      {
+        "b": [
+          "2/5",
+          "2/5",
+          "2/5"
+        ],
+        "z": "6/5",
+        "objective": "1/50",
+        "mobility": "27/5",
+        "zdot": "-27/25",
+        "normalized_zdot": "-1/5",
+        "truth_state_derivatives": [
+          "-1/25",
+          "-1/25",
+          "-1/25"
+        ]
+      }
+    ]
+  }
+}

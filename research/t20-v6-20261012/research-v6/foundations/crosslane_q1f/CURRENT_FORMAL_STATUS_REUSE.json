@@ -1,0 +1,119 @@
+{
+  "source_dispositions": "t20-v6-20261011/type_collective/P01_P03_VARIANT_DISPOSITIONS.json",
+  "source_disposition_sha256": "b54e1f91989eb12953d95c75c6fb3d0462eae1e1aa59a039c6fa6da215a359e6",
+  "compilation_ledger": "t20-v6-20261011/type_collective/fresh_lean/guarded_vct_variants/FRESH_COMPILATION.json",
+  "compilation_ledger_sha256": "1a8711ea8cffb8a228db7577d3c72fcd13e12deba223375d47ad9a5ff298ca68",
+  "receipt_log_integrity_checks": [
+    {
+      "branch": "repaired_shadow",
+      "module": "P03GuardedGraph",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "repaired_shadow",
+      "module": "P03GuardedVCT",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "repaired_shadow",
+      "module": "P03QualificationControls",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "repaired_shadow",
+      "module": "P03Audit",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "unrepaired_production",
+      "module": "P03GuardedGraph",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "unrepaired_production",
+      "module": "P03GuardedVCT",
+      "exit_code": 1,
+      "log_hash_match": true
+    },
+    {
+      "branch": "before_authority",
+      "module": "P03GuardedGraph",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "before_authority",
+      "module": "P03GuardedVCT",
+      "exit_code": 1,
+      "log_hash_match": true
+    },
+    {
+      "branch": "before_static_names",
+      "module": "P03GuardedGraph",
+      "exit_code": 0,
+      "log_hash_match": true
+    },
+    {
+      "branch": "before_static_names",
+      "module": "P03GuardedVCT",
+      "exit_code": 1,
+      "log_hash_match": true
+    }
+  ],
+  "credit": "Exact replay by type_collective reused; no foundations compiler execution. Scope from P01_P03_VARIANT_SCOPE.md read in full.",
+  "exact_body_scope_routes": [
+    {
+      "sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+      "path": "t20-consolidation-20261011/catalogue/objects/05/0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+      "bytes": 7632,
+      "lines": 189,
+      "disposition": "DIRECT_FULL_BODY_READ",
+      "reading_ledger": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+      "source_index": 1
+    },
+    {
+      "sha256": "33f931b7f03f0237f8f9e3d17b4a0884ceb55454b74a2731c995d01ff80e0c7f",
+      "path": "t20-consolidation-20261011/catalogue/objects/33/33f931b7f03f0237f8f9e3d17b4a0884ceb55454b74a2731c995d01ff80e0c7f",
+      "bytes": 7197,
+      "lines": 181,
+      "disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+      "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+      "baseline_reading_ledger": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+      "comparison_path": "t20-v6-20261011/type_collective/p01_variants/04_FROM_01.diff",
+      "comparison_sha256": "901264ef6afce5d0ac43e7400c24643e0f92b4cd4c4cf59d158f2ae25e501713",
+      "comparison_scope": "Complete diff read; historical failures and repaired final production kept distinct.",
+      "source_index": 4
+    },
+    {
+      "sha256": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+      "path": "t20-consolidation-20261011/catalogue/objects/a1/a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+      "bytes": 7845,
+      "lines": 189,
+      "disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+      "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+      "baseline_reading_ledger": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+      "comparison_path": "t20-v6-20261011/type_collective/p01_variants/16_FROM_01.diff",
+      "comparison_sha256": "ed8d296e1c13c00eb8eed0ed46e9b8b02381f4c25fd84394f6e333ad9fa9ca4a",
+      "comparison_scope": "Complete diff read; historical failures and repaired final production kept distinct.",
+      "source_index": 16
+    },
+    {
+      "sha256": "acd42111458c34eff8f3fd321a1c3122bc6c78d9600610a1db7f39cdf5232469",
+      "path": "t20-consolidation-20261011/catalogue/objects/ac/acd42111458c34eff8f3fd321a1c3122bc6c78d9600610a1db7f39cdf5232469",
+      "bytes": 7199,
+      "lines": 181,
+      "disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+      "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+      "baseline_reading_ledger": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+      "comparison_path": "t20-v6-20261011/type_collective/p01_variants/17_FROM_01.diff",
+      "comparison_sha256": "9344e6d0cf192390cca002748de85d7c9fb15236cd8289eb702794f875cce757",
+      "comparison_scope": "Complete diff read; historical failures and repaired final production kept distinct.",
+      "source_index": 17
+    }
+  ]
+}

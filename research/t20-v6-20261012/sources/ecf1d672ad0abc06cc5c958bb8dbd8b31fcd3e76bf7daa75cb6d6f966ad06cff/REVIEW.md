@@ -1,0 +1,9 @@
+# Independent controls replay-wrapper review
+
+Disposition: accept the scoped additive portability wrapper identified in RECEIPT.json, subject to the separate terminal proof-replay receipt. This is not a change to either inherited scientific control outcome.
+
+The reviewer compared the complete wrapper diff against the preserved original driver and inspected the dependency identity helper. The proof loop, source statements and heartbeat settings are unchanged. The archive route binds the full official archive digest, checks all 6,816 archive members against the inventory, and compares the extracted source tree against that inventory. The eight dependency repositories retain exact revision and clean-source checks. Official compiled third-party caches remain trusted external inputs; their full reproducibility is not established here.
+
+An initial review found that a rejected pre-existing output directory could still have its RESULT.json rewritten by the exception handler. The corrected wrapper updates error receipts only for an output directory created by the current invocation and rejects outputs within immutable packet, wrapper and dependency roots. Independent tests confirmed that a pre-existing sentinel receipt remains byte-identical, optimized Python is refused rather than dropping assertion guards, and the real pinned archive/dependency preflight passes. The attached receipt and logs identify those checks exactly.
+
+No Git metadata is fabricated, accepted scientific bytes are not rewritten, and no custom proof objects are reused. The original controls archive is preserved. A completed bounded replay is distinct from a successful semantic mutant rejection: both inherited full-control outcomes remain INCONCLUSIVE. Downstream consumers must inspect the terminal result status, not process exit code alone.

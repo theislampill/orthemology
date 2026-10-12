@@ -1,0 +1,95 @@
+{
+  "recorded_utc": "2026-10-09T13:03:42.706437+00:00",
+  "predecessor_bindings": [
+    {
+      "path": "fitrah-warrant-currentness-20261009/REPORT.md",
+      "sha256": "c79ecc3ca9eec5cd53beef458bdeb004dae012e896ebd94f66d5d58d09ab007c"
+    },
+    {
+      "path": "recognition-operative-content-20261009/REPORT.md",
+      "sha256": "d11bf155683656203e69fb44ed8886d16dd05a4deda6be5ce84cb6bea772fee1"
+    },
+    {
+      "path": "necessary-truth-operative-basing-20261009/REPORT.md",
+      "sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/START_HERE.md",
+      "sha256": "dd71d9db0e1486069728c6ee681fb358065c16ea035705e4684706c1b91b0428"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/SOURCE_APPRAISAL.md",
+      "sha256": "b7aac7287e3da9748e6cf83502af2be554eab6785bf9d38b0c5b2ecdd3a9136f"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/source_manifest.json",
+      "sha256": "9be9878eaae9fc6a4a40139aa8f1c8bf5f087fbe38008bdc6c0d9dfb5edf4d66"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/FINAL_VERIFICATION.json",
+      "sha256": "795c56f513ea2cbfaa0ccf32aef7ecf02e8ed97e5e28632b8a1a95ecb4715888"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/first-section/SOURCE_APPRAISAL.md",
+      "sha256": "95b35f0198c3e16d59a9b6e72ef15558db167ab089ffb164c2881b80bdf9f111"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/first-section/CONTINUOUS_NOTES.md",
+      "sha256": "dfac67ba67933ce3508eb2742f9f6606ce5cce6fadefe8a72134b5468967c74a"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/middle-section/SOURCE_APPRAISAL.md",
+      "sha256": "05f66acf4dc279a91530383efa66b8dacf16b039feabde953bf88a1de784f2ce"
+    },
+    {
+      "path": "recovery-t20/earlier/consolidated/Orthemology_T16_T20_Consolidated_v1_20261007/t20/reading/miftah/bounded-reread/NOTES.md",
+      "sha256": "dc63e1f97bf26391198b53a7a0dc8d5a075096296ccee6c806c35d13f318678d"
+    }
+  ],
+  "primary_return": {
+    "work": "Miftah Dar al-Saada",
+    "editor": "Abd al-Rahman ibn Hasan ibn Qaid",
+    "edition": "Third 1440/2019, Dar Ataat al-Ilm / Dar Ibn Hazm",
+    "source_url": "https://ibnelqayem.com/ar/media/download/86",
+    "source_local_path": "t20-next-frontier-20261008/practical-authority-frontier/sources/miftah-official.doc",
+    "source_sha256": "a5d0c62a4021602bb009ce5dabf3cadad3ee702610b12def6ba94b55bbd105f5",
+    "derivative_local_path": "particular-agency-bridge-20261009/sources/miftah-normalized-all-derivative.txt",
+    "actual_context_read_main": [
+      217,
+      227
+    ],
+    "display_windows": [
+      [
+        217,
+        221
+      ],
+      [
+        222,
+        227
+      ]
+    ],
+    "target_complete_unit": "Merit 66, beginning main220 and ending main223",
+    "source_text_hash": "bc244b0f3e4be3bd10c7c2709944063bb98dc83c3af5aafd84195cc665fe45f1",
+    "mode": "Retained normalized electronic source; complete selected span compared with direct UTF-16LE decode of matching original DOC, removing combining vowel marks and normalizing whitespace/control characters. Not a general Word parser.",
+    "selected_source_equivalence_verified": true,
+    "new_first_pass_positions": 0,
+    "new_scan_read": false,
+    "new_manuscript_collation": false,
+    "trailing_context_limit": "Main227 reaches beginning of merit73; no complete merit73 reading claimed."
+  },
+  "web_attempt": {
+    "url": "https://ibnelqayem.com/ar/books/34?page=221",
+    "result": "Web tool internal error / not accessible",
+    "reading_credit": 0,
+    "held_wikisource_routes_reopened": false
+  },
+  "conclusion": "Inherited reading already supplies relevant argument families. One bounded candidate confirmed source-side distinction but no new application premise or identified defeater. Stop.",
+  "variant_credit": {
+    "newly_noticed_in_this_return": true,
+    "already_present_in_inherited_electronic_apparatus": true,
+    "new_scan_or_manuscript_inspection": false,
+    "prior_claim_found_dependent_on_this_reading": false,
+    "qualification": "Absence of identified dependency is limited to checked reports/notes; not a claim that every prior record was searched."
+  },
+  "research_intermediates_redistribution": "Research witness only; excluded from user-facing delivery unless separately authorized and appropriate."
+}

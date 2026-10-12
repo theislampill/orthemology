@@ -1,0 +1,65 @@
+{
+  "records": [
+    {
+      "sha256": "a399da9fd36a73d5203c1e76dc742d1743550127faf03bfe4bc83a5b972b8dfb",
+      "public_sha256": "39c5c312e52a550baff655c608ccda3d6c9e81090bc8d066b7c107461a30436d",
+      "disposition": "FULL_REPORT_READ_PLUS_COMPLETE_NATIVE_CONTENT_COMPARISON",
+      "report": "t20-v6-20261011/type_collective/t11_report_native/REPORT.md",
+      "comparison": "t20-v6-20261011/type_collective/t11_report_native/NATIVE_COMPARISON.json",
+      "comparison_sha256": "2d2fd88128362b2daf447decd1461386afb1af168f1b509fde15cba8816c2641",
+      "paragraphs": 173,
+      "native_math_objects": 32,
+      "read_scope": "Whole public report body, all original ordered paragraphs and equations, structural hidden-content census; no page-layout or new primary-literature assurance."
+    },
+    {
+      "sha256": "e375dfdf3bba5825dd26bc076740256c9e5e707835853230c7d84e8226839964",
+      "public_sha256": "795f017eff4ad15d4d05752ccdd1dbfc7c49fbae771262948cfd6da48bed8c60",
+      "disposition": "FULL_REPORT_READ_PLUS_COMPLETE_NATIVE_CONTENT_COMPARISON",
+      "report": "t20-v6-20261011/type_collective/t09_report_native/REPORT.md",
+      "comparison": "t20-v6-20261011/type_collective/t09_report_native/NATIVE_COMPARISON.json",
+      "comparison_sha256": "0655b765ffa0a2a6208068edf72dc34036f46d60ce56fb45b668de818ab9fc39",
+      "paragraphs": 207,
+      "native_math_objects": 0,
+      "read_scope": "Whole public report body, all original ordered paragraphs and equations, structural hidden-content census; no page-layout or new primary-literature assurance."
+    },
+    {
+      "sha256": "72d732325f48c720633f32be9b9fd76ef80a47369a3e1df69b08581acaa969fb",
+      "public_sha256": "37ffe03ea84f6bb6a4113305502cd50e056a9ef3528197720b4d711f320fc8c9",
+      "disposition": "FULL_REPORT_READ_PLUS_COMPLETE_NATIVE_CONTENT_COMPARISON",
+      "report": "t20-v6-20261011/type_collective/t10_report_native/REPORT.md",
+      "comparison": "t20-v6-20261011/type_collective/t10_report_native/NATIVE_COMPARISON.json",
+      "comparison_sha256": "3ead6a1fedf714aa106d18431cef89995a4ab4d15366efb7a300e9306dd201cd",
+      "paragraphs": 230,
+      "native_math_objects": 9,
+      "tables": [
+        {
+          "rows": 13,
+          "columns": 3
+        },
+        {
+          "rows": 7,
+          "columns": 3
+        }
+      ],
+      "read_scope": "Full 365-line report, all native paragraphs/table cells, nine structural equations and 23 ordered hyperlink uses. No page-layout or new primary-literature assurance."
+    },
+    {
+      "sha256": "103548297755d3f74db9e8088cf300e4f742e090318c4707362c544f18139913",
+      "public_sha256": "0513ed23bbbf835aa3d414a3484d0a54cafc3e8c54c8c207c4516cafc7089353",
+      "disposition": "FULL_REPORT_READ_PLUS_COMPLETE_NATIVE_CONTENT_COMPARISON_WITH_EXPLICIT_REDACTION",
+      "report": "t20-v6-20261011/type_collective/t08_report_native/REPORT.md",
+      "comparison": "t20-v6-20261011/type_collective/t08_report_native/NATIVE_COMPARISON.json",
+      "comparison_sha256": "722b2b8513bd7717f6995f0e3cb8d084fa5673f73fe1d6701e1e579a96351a9a",
+      "paragraphs": 433,
+      "native_math_objects": 17,
+      "tables": [
+        {
+          "rows": 22,
+          "columns": 4
+        }
+      ],
+      "textual_delta": "Original historical working directory /tmp rendered as [redacted unix-private-path]; no mathematical premise/count/scope delta.",
+      "read_scope": "Complete 721-line report, all nonempty native paragraphs/cells, 17 equations, seven ordered links, original running footer; blank-paragraph exclusion explicit. No visual layout or fresh primary-literature assurance."
+    }
+  ]
+}

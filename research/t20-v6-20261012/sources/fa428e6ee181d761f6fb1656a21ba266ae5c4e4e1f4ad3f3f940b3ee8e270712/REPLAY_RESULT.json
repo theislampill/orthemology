@@ -1,0 +1,32 @@
+{
+  "status": "PASS_FRESH_FOUR_MODULE_REPLAY",
+  "timestamp_utc": "2026-09-30T22:59:02.877519+00:00",
+  "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "modules": [
+    {
+      "module": "SelfVerifyingSupport",
+      "source_sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "returncode": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "CommonObservationBoundary",
+      "source_sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "returncode": 0,
+      "log_sha256": "fed9c02410634d06160ebae79879deabfd3f26144172650d81433472ae5d89dc"
+    },
+    {
+      "module": "CommonObservationFiniteActions",
+      "source_sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "returncode": 0,
+      "log_sha256": "60218dcb962e98ef111894f80528006bb718621cd66073d7600307587d6a45e9"
+    },
+    {
+      "module": "CompactObservationBoundary",
+      "source_sha256": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+      "returncode": 0,
+      "log_sha256": "2932504f88883993cf02cbcca5af5fa6925189378a24e55b12e9c538c8a52cf9"
+    }
+  ]
+}

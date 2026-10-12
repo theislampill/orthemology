@@ -1,0 +1,241 @@
+[
+  {
+    "family": "Cooperation and superseded objections",
+    "claims": [
+      "FND-007",
+      "FND-009",
+      "FND-010",
+      "FND-011"
+    ],
+    "sources": [
+      {
+        "queue_index": 2,
+        "sha256": "23ae84216ec9390dd2a24c483a0347c2f5493190da1ca8d64c5d496c8e9b2d0f",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 6,
+        "sha256": "3b2feaa079d82f3b8946a45e0a602c5ab06993e13ac0853d70c407e9d13d1a00",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 7,
+        "sha256": "3b7300e64938d8ca64049d8001008f9663a910940a240a706a847496aa110556",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 12,
+        "sha256": "8a6fe40e5e36066148d89621ba083778077783ec7145a64904e145d5afd317c6",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 14,
+        "sha256": "9e48bb99daf732e4fc65ccee93d6999d13013f410067e0b215cfeb979ffbd22e",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 15,
+        "sha256": "9f4a1d6535f8bf962e37fbb832d4193d7dfeb47fbec875bb930cdf5d6e5adf66",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 22,
+        "sha256": "ce0c571795e95f8d27594c596385536a0d0f0d9173ddabc7ecf669753d20390a",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      }
+    ]
+  },
+  {
+    "family": "Actual provision and infinite histories",
+    "claims": [
+      "FND-004",
+      "FND-005",
+      "FND-006",
+      "FND-008",
+      "FND-018",
+      "FND-033"
+    ],
+    "sources": [
+      {
+        "queue_index": 11,
+        "sha256": "76b45d27358fe3cb9f44b26f6acd821e44f2e900558ad01513352a74e93cab1e",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 13,
+        "sha256": "91b98a1b97a8ae4eb46d60158a52d200e48df3cef6158ad6e9a8f949909046f9",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 24,
+        "sha256": "d6b9e5a11f784c8aa4fceffb60be98ff1a11d1effbe18c8580e02dbda0acc04a",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      }
+    ]
+  },
+  {
+    "family": "Qualitative explanation and qualified actuality",
+    "claims": [
+      "FND-004",
+      "FND-005",
+      "FND-006"
+    ],
+    "sources": [
+      {
+        "queue_index": 0,
+        "sha256": "01cc512ab6f4c9367f0bfaea223bdb8375863b82fc187cc5da4d99e14382ab66",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 5,
+        "sha256": "3b1b9359a8ba7a258a85ecb457dfd77c403c207d079b17e114bd55bacc37d4b0",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 16,
+        "sha256": "9fdd15e135e76531d346b305c4bc4b9f68a630fb2ea42de3a0b98d04d1158ad2",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      }
+    ]
+  },
+  {
+    "family": "Own-act and wise-means source recovery",
+    "claims": [
+      "FND-014",
+      "FND-015",
+      "FND-016",
+      "FND-018"
+    ],
+    "sources": [
+      {
+        "queue_index": 1,
+        "sha256": "0ea5ff165dc82ef783f1d6642e1084eb2fccdc92f88c930c14a1df4aa5e9b03b",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      },
+      {
+        "queue_index": 3,
+        "sha256": "24865fd56f4fa450f901874c7b061d4a461d7690889cf7f828bf4edd5ab044c8",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      }
+    ]
+  },
+  {
+    "family": "Joint manifestation repair currentness",
+    "claims": [
+      "FND-007",
+      "FND-009",
+      "FND-010"
+    ],
+    "sources": [
+      {
+        "queue_index": 4,
+        "sha256": "3a2c0c130261202f1dc4e6feb610b71c7c1ae9eaa9d7802df911a3c4fe456ddc",
+        "read_scope": "Full body or exact complete delta, as bound in READ_LEDGER.json"
+      }
+    ]
+  },
+  {
+    "family": "Practical authority and conditional rights",
+    "claims": [
+      "FND-019",
+      "FND-020",
+      "FND-021",
+      "FND-030"
+    ],
+    "sources": [
+      {
+        "queue_index": 8,
+        "sha256": "42135d0a85f2820f057c1045ee1063ddfb2059e39d619bbe699bf010853a60e4",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 9,
+        "sha256": "4af9972613d06517afc55c1c3db7ab6c7e06cc630b45267953bbf79737610f60",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 19,
+        "sha256": "c4384909029956b4da5f7ae45eb259c44ba19ae215a6bafa9b0a6b054f830be8",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 20,
+        "sha256": "c514c520af290abb063e10b9bf284175ec0d06de3645c5e237aa3d1de9212078",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 25,
+        "sha256": "dacb3ba01578485505e9ea29b667f91c58c10fd4377430bf88dc84e40182cf33",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 26,
+        "sha256": "e748be6151772e6a4951ee07d17ea53086e5fe429c30f87550440cb7f1439bd6",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      }
+    ]
+  },
+  {
+    "family": "Truth, reason and accuracy interfaces",
+    "claims": [
+      "FND-022",
+      "FND-033",
+      "FND-034"
+    ],
+    "sources": [
+      {
+        "queue_index": 17,
+        "sha256": "a09d1f0232d86ee4e9b9d7f992013a5291eb64a43b618d9a105eb1e54afb0d80",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 27,
+        "sha256": "f23c356f01dda091aa6195b15ff87b6c906dea579ec6a7283e4dd0dda1879147",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      }
+    ]
+  },
+  {
+    "family": "Wise practical determination and achieved ends",
+    "claims": [
+      "FND-014",
+      "FND-015",
+      "FND-016",
+      "FND-018"
+    ],
+    "sources": [
+      {
+        "queue_index": 10,
+        "sha256": "68ed7b0eaf642ee947b940a5910803faec501d7f357c35742009a73041046ca6",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 18,
+        "sha256": "b9805f6f4375d9ad0662bac22c8a950eb1fba7b7f612fd28900eb0fa0cdd045c",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 21,
+        "sha256": "c7367c3b5d30ca689c10cea074d8587db2dca1a08bd0da0d0f14e5d4dd1d6b62",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      },
+      {
+        "queue_index": 23,
+        "sha256": "cf67141f01bb8ff366b6937d0d5f7317a7d57e6941bc3f93f18db3ebdc717e6b",
+        "reading_ledger": "../empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+        "read_scope": "Full retained assigned body; constituent reuse and actual dependencies remain exactly attributed in the named ledger."
+      }
+    ]
+  }
+]

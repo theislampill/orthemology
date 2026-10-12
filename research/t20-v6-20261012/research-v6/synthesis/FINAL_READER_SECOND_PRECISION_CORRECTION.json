@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-12T15:27:03.140894+00:00",
+  "files": [
+    {
+      "path": "OWNER_REVIEW_CASE_DRAFT.md",
+      "before_sha256": "197c386f8ff645d586d374e3d6816d4da77628d9479dbcd6da0a9db2aa147f22",
+      "after_sha256": "3d7c33f0463afb041e3346ad8b068d8cb720fd2e65ea7f998013ec04c6f0a0e0"
+    },
+    {
+      "path": "T21_CONTINUATION_CHARTER_DRAFT.md",
+      "before_sha256": "b1afb22bbf74394bb24d7d52e16acb625a81dcbfd7cfc09ed88b6867bdc8d3a5",
+      "after_sha256": "5ff3531fb8a11d012b08d5d6d6f28a44feaacc14982cbc614fd07d3f41fb7550"
+    }
+  ],
+  "basis": "Independent final reader; exact norm family and missing-import consequence restored, controlling results unchanged."
+}
