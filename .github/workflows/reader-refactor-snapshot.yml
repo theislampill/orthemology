@@ -1,8 +1,8 @@
-name: reader-refactor-snapshot
+name: reader-refactor-checkpoint-finalise
 
-# Temporary issue-35 transport, not a verification gate. Remove before final
-# qualification unless separately justified. Only public tracked Git objects
-# are exported; credentials, .git/config, runner environment and caches are not.
+# One-shot branch checkpoint maintenance, not scholarly acceptance. This job
+# removes its own temporary workflow and changes only the two existing generated
+# owners. The normal validate workflow is unchanged and must run on the PR.
 on:
   push:
     branches:
@@ -11,54 +11,146 @@ on:
       - .github/workflows/reader-refactor-snapshot.yml
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: issue-35-checkpoint-finalise
+  cancel-in-progress: false
 
 jobs:
-  snapshot:
+  finalise:
+    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012' && github.event_name == 'push'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    env:
+      TARGET_BRANCH: refactor/issue-35-research-reader-20261012
+      BASE: 297267f6e49f80871036a95a6dfd81f5e232058538
+      EVIDENCE_DIR: ${{ runner.temp }}/issue-35-checkpoint
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-          persist-credentials: false
           ref: ${{ github.sha }}
-      - name: Export exact public baseline and checkpoint delta
+          persist-credentials: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - name: Install the existing state-generator dependency
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Guard source, branch, and exact scope
         shell: bash
-        env:
-          SNAPSHOT_DIR: ${{ runner.temp }}/reader-refactor-snapshot
         run: |
           set -euo pipefail
           base=297267f6e49f80871036a95a6dfd81bdad40ea1f
-          expected_tree=fc702fe8456b48ff89b0c28df31f5fe232058538
-          test "$(git rev-parse "$base^{tree}")" = "$expected_tree"
+          test "$(git rev-parse "$base^{tree}")" = fc702fe8456b48ff89b0c28df31f5fe232058538
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
           git merge-base --is-ancestor "$base" HEAD
-          mkdir -p "$SNAPSHOT_DIR/commits"
-          git archive --format=tar.gz "$base" > "$SNAPSHOT_DIR/baseline.tar.gz"
-          git diff --binary "$base" HEAD > "$SNAPSHOT_DIR/checkpoint.patch"
-          git ls-tree -r -l -z "$base" > "$SNAPSHOT_DIR/baseline-tree.z"
-          git rev-parse HEAD > "$SNAPSHOT_DIR/head.txt"
-          git rev-parse 'HEAD^{tree}' > "$SNAPSHOT_DIR/head-tree.txt"
-          printf '%s\n' "$base" > "$SNAPSHOT_DIR/base.txt"
-          printf '%s\n' "$expected_tree" > "$SNAPSHOT_DIR/base-tree.txt"
-          { printf '%s\n' "$base"; git rev-list --reverse "$base..HEAD"; } |
+          test -z "$(git status --porcelain)"
+          mkdir -p "$EVIDENCE_DIR/commits"
+          python - <<'PY'
+          import subprocess
+          base = '297267f6e49f80871036a95a6dfd81bdad40ea1f'
+          allowed = {
+              'docs/project-closure/reader-refactor-issue-35/EXECUTION.md',
+              'docs/project-closure/reader-refactor-issue-35/CENSUS.json',
+              'docs/project-closure/reader-refactor-issue-35/PILOT.md',
+              'scripts/reader_census.py',
+              'tests/test_reader_census.py',
+              '.github/workflows/reader-refactor-snapshot.yml',
+              'docs/current-state.yaml',
+              'docs/provenance/RELEASE-MANIFEST.sha256',
+          }
+          changed = set(subprocess.check_output(['git', 'diff', '--name-only', '-z', base, 'HEAD']).decode().rstrip('\0').split('\0'))
+          if not changed <= allowed:
+              raise SystemExit('Unapproved branch paths: ' + repr(sorted(changed - allowed)))
+          print('PASS: exact feature branch and bounded source-preserving diff')
+          PY
+      - name: Qualify the new census in the pinned interpreter
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census-normal.txt"
+          python -B -O tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census-optimized.txt"
+          python -B - <<'PY' | tee "$EVIDENCE_DIR/census-readback.txt"
+          import json
+          from pathlib import Path
+          from scripts.reader_census import census
+          expected = json.loads(Path('docs/project-closure/reader-refactor-issue-35/CENSUS.json').read_text())
+          actual = census(Path.cwd(), expected['baseline']['commit'], owners=[r['path'] for r in expected['owners']])
+          if actual != expected:
+              raise SystemExit('Census differs from exact baseline execution')
+          print('PASS: exact census readback; object coverage is not semantic reading')
+          print(json.dumps(actual['population'], sort_keys=True))
+          PY
+      - name: Retire transport and regenerate through existing owners
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -- .github/workflows/reader-refactor-snapshot.yml
+          python -B - <<'PY' | tee "$EVIDENCE_DIR/generation.txt"
+          import subprocess
+          from pathlib import Path
+          import yaml
+          state = Path('docs/current-state.yaml')
+          before = yaml.safe_load(state.read_text())['authored']
+          subprocess.run(['python', '-B', 'scripts/generate_current_state.py'], check=True)
+          if yaml.safe_load(state.read_text())['authored'] != before:
+              raise SystemExit('Authored state changed')
+          subprocess.run(['python', '-B', 'scripts/make_manifest.py'], check=True)
+          subprocess.run(['python', '-B', 'scripts/generate_current_state.py', '--check'], check=True)
+          print('PASS: existing generation owners; authored state preserved')
+          PY
+      - name: Check repository integrity and source references
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B scripts/validate_repo.py 2>&1 | tee "$EVIDENCE_DIR/repository-hygiene.txt"
+          python -B scripts/validate_current_state.py 2>&1 | tee "$EVIDENCE_DIR/current-state.txt"
+          python -B scripts/validate_internal_references.py 2>&1 | tee "$EVIDENCE_DIR/internal-references.txt"
+          python -B scripts/validate_state_convergence.py 2>&1 | tee "$EVIDENCE_DIR/state-convergence.txt"
+      - name: Commit only generated owners and transport retirement
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess
+          allowed = {
+              '.github/workflows/reader-refactor-snapshot.yml',
+              'docs/current-state.yaml',
+              'docs/provenance/RELEASE-MANIFEST.sha256',
+          }
+          changed = set(subprocess.check_output(['git', 'diff', 'HEAD', '--name-only', '-z']).decode().rstrip('\0').split('\0'))
+          if changed != allowed:
+              raise SystemExit('Unexpected generator write set: ' + repr(sorted(changed)))
+          if subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard']).strip():
+              raise SystemExit('Unexpected untracked output')
+          PY
+          test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
+          git add -- docs/current-state.yaml docs/provenance/RELEASE-MANIFEST.sha256
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: reconcile issue-35 checkpoint state and remove temporary transport'
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          git rev-parse HEAD | tee "$EVIDENCE_DIR/head.txt"
+          git rev-parse 'HEAD^{tree}' > "$EVIDENCE_DIR/head-tree.txt"
+          base=297267f6e49f80871036a95a6dfd81bdad40ea1f
+          git diff --binary "$base" HEAD > "$EVIDENCE_DIR/checkpoint.patch"
+          git rev-list --reverse "$base..HEAD" |
             while IFS= read -r commit; do
-              git cat-file commit "$commit" > "$SNAPSHOT_DIR/commits/$commit"
+              git cat-file commit "$commit" > "$EVIDENCE_DIR/commits/$commit"
             done
           (
-            cd "$SNAPSHOT_DIR"
+            cd "$EVIDENCE_DIR"
             find . -type f ! -name SHA256SUMS -print0 |
               LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS
           )
-          printf 'Public snapshot only; no research tests or curation credit.\n'
-          printf 'Baseline: %s\n' "$base"
-          printf 'Checkpoint: %s\n' "$(git rev-parse HEAD)"
-          printf 'Tracked baseline entries: %s\n' "$(git ls-tree -r --name-only "$base" | wc -l)"
-      - name: Retain source transport
+          printf 'Checkpoint maintenance only. Full PR CI and independent scholarly review remain separate.\n'
+      - name: Retain observed checkpoint evidence
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: reader-refactor-baseline-${{ github.sha }}
-          path: ${{ runner.temp }}/reader-refactor-snapshot/
+          name: issue-35-checkpoint-${{ github.sha }}
+          path: ${{ runner.temp }}/issue-35-checkpoint/
           if-no-files-found: error
           retention-days: 14
-          compression-level: 0
