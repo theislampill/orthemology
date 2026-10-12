@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "model_counts": {
+    "(3,)": 216,
+    "(2, 2)": 4096,
+    "(2,3)_affine_family": 2304
+  },
+  "total_models": 6616,
+  "ternary_quotient_states_before_action": 2,
+  "after_action": 3,
+  "seconds": 0.4336381449975306,
+  "scope": "All single coupled maps and Boolean observations on3 and4 states; selected exhaustive affine family on6 states; independent finite reference only.",
+  "script_sha256": "3ed5718ba72e8818df40011240eca263b94835e0f2df58ace7e29e7789c7e9db"
+}

@@ -1,0 +1,867 @@
+{
+  "schema": "v6-residual-correction-and-scope-register",
+  "records": [
+    {
+      "id": "RC01",
+      "title": "Sequential signals require complete available-history conditioning",
+      "sources": [
+        {
+          "residual_index": 351,
+          "sha256": "a142d829d7d46a2926c288f5f56e325750558e2376bc9fc680d364b26497f25d",
+          "path": "t20-consolidation-20261011/catalogue/objects/a1/a142d829d7d46a2926c288f5f56e325750558e2376bc9fc680d364b26497f25d",
+          "ranges": [
+            [
+              1,
+              26
+            ]
+          ]
+        }
+      ],
+      "finding": "Each D_t marginally independent of X conditional only on oracle transcript H_t can collectively reveal X: D0=R,D1=R xor X. The history on which state-independent generation is conditioned must include all retained previous signals.",
+      "retained_valid_result": "History-complete state-independent kernels cannot add target information; finite-input uniform almost-sure bounded seed fixing remains valid.",
+      "credit": "New literal-scope diagnosis and fresh four-row analyst control, not replay of old checker.",
+      "independent_review": "residual_admission/SEQUENTIAL_SIGNAL_CONTROL.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC02",
+      "title": "BI duplicated-token witnesses fail Boolean carrier laws",
+      "sources": [
+        {
+          "sha256": "b683b34f4eb982db66909baffd86867fecccc05301d1751901dea56d930013a3",
+          "path": "t20-consolidation-20261011/catalogue/objects/b6/b683b34f4eb982db66909baffd86867fecccc05301d1751901dea56d930013a3",
+          "ranges": [
+            [
+              14,
+              54
+            ]
+          ]
+        },
+        {
+          "sha256": "9eed90abbe05f03b1c37b9bcb1f6996af9fc1530c8efc8ca71390ed9c3384fe9",
+          "path": "t20-consolidation-20261011/catalogue/objects/9e/9eed90abbe05f03b1c37b9bcb1f6996af9fc1530c8efc8ca71390ed9c3384fe9",
+          "ranges": [
+            [
+              1,
+              54
+            ]
+          ]
+        },
+        {
+          "sha256": "7cc8ad40f4fa7e3b49eab4583ce1dceb761046f739918b80f145c5da4b28be21",
+          "path": "t20-consolidation-20261011/catalogue/objects/7c/7cc8ad40f4fa7e3b49eab4583ce1dceb761046f739918b80f145c5da4b28be21",
+          "ranges": [
+            [
+              1,
+              85
+            ]
+          ]
+        }
+      ],
+      "finding": "All repeated-copy operations reset label0, so noncanonical tokens fail meet idempotence and double complement.18of24cases are Boolean-signature algebras, not Boolean algebras. Tests of projected preservation alone omit carrier axioms.",
+      "retained_valid_result": "Abstract theorem survives: T=B or coordinatewise Boolean product B×2 gives genuine algebra and onto homomorphism; semantic quotient of old signature models remains Boolean.",
+      "credit": "Empirical worker first full checker reading and diagnosis, foundations independent exact return; fresh analyst positive-product controls, no retained source execution.",
+      "independent_review": "../empirical_occurrence/early_pmr_variants/RESULT.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC03",
+      "title": "Challenger A finite-interface closure and evidence gaps",
+      "sources": [
+        {
+          "residual_index": 287,
+          "sha256": "8609b95b82dce74312d76600ea07e8fdac955e01e183aa1724f82053342da52d",
+          "path": "t20-consolidation-20261011/catalogue/objects/86/8609b95b82dce74312d76600ea07e8fdac955e01e183aa1724f82053342da52d",
+          "ranges": [
+            [
+              1,
+              29
+            ]
+          ]
+        },
+        {
+          "residual_index": 357,
+          "sha256": "a259a7fa8ae8da71a45248f0bdb593cd7ab628218f658bbb237d037c956fa790",
+          "path": "t20-consolidation-20261011/catalogue/objects/a2/a259a7fa8ae8da71a45248f0bdb593cd7ab628218f658bbb237d037c956fa790",
+          "ranges": [
+            [
+              1,
+              13
+            ]
+          ]
+        }
+      ],
+      "finding": "Historical independent review already found no implemented exhaustive factor registry/crosswalk/decoder/policy-guard validator; unbounded continuous resources need declared bins/bounds or measurable extension. Strong finite history-realizer no-go additionally requires a guard-satisfying realization-closed model class.",
+      "retained_valid_result": "Finite observation collisions and registered representation controls are valid under stated domains; source-bound exclusion can independently restrict admissible rivals.",
+      "credit": "Recovered historical objections plus fresh exact closure-hypothesis qualification; not first discovery of missing factorial.",
+      "independent_review": "global_prose/SEMANTIC_FINDINGS.json#G10",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC04",
+      "title": "M1 physical ontology does not prohibit nonphysical representation",
+      "sources": [
+        {
+          "residual_index": 528,
+          "sha256": "fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "path": "t20-consolidation-20261011/catalogue/objects/fa/fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "ranges": [
+            [
+              119,
+              145
+            ]
+          ]
+        }
+      ],
+      "finding": "An exclusively physical ontology can include physical tokens entertaining false propositions about nonphysical entities. The conceived-content datum does not contradict that ontology; the required impossibility premise is absent.",
+      "retained_valid_result": "A theory that actually entails inability to conceive the relevant content would face a genuine counterinstance; M1 conditional self-application method remains.",
+      "credit": "Fresh source-template inference check, independently confirmed by root and type readers; quotations need not be freshly verified for this logical diagnosis.",
+      "independent_review": "../root_math/noetic_template_review/REVIEW.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC05",
+      "title": "Selective debunking need not be globally self-defeating",
+      "sources": [
+        {
+          "residual_index": 528,
+          "sha256": "fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "path": "t20-consolidation-20261011/catalogue/objects/fa/fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "ranges": [
+            [
+              49,
+              58
+            ],
+            [
+              136,
+              137
+            ]
+          ]
+        },
+        {
+          "residual_index": 12,
+          "sha256": "06dc2a1a7248f8b771bf5e024dcb8f6fb5b807a15f0b79cb43ead182081a0f09",
+          "path": "t20-consolidation-20261011/catalogue/objects/06/06dc2a1a7248f8b771bf5e024dcb8f6fb5b807a15f0b79cb43ead182081a0f09",
+          "ranges": [
+            [
+              122,
+              122
+            ]
+          ]
+        }
+      ],
+      "finding": "Criticism of one domain or mechanism can use other independently assessed capacities. Universal self-defeat requires the rule actually to undermine every relevant warrant or faculty used in the argument.",
+      "retained_valid_result": "A genuinely unrestricted self-undermining rule can be subject to conditional M1/M8 reductio.",
+      "credit": "Fresh semantic scope check; larger runtime gates do not supply the missing universal premise.",
+      "independent_review": "../type_collective/noetic_runtime_contracts/REPORT.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC06",
+      "title": "Lack of movement does not identify a protective motive",
+      "sources": [
+        {
+          "residual_index": 528,
+          "sha256": "fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "path": "t20-consolidation-20261011/catalogue/objects/fa/fa15426824e7e7300896bf3342ce9cc30204e4c5bd7e838417a479612858b3ca",
+          "ranges": [
+            [
+              103,
+              107
+            ]
+          ]
+        }
+      ],
+      "finding": "No change, reformulation, a new objection or topic shift can also arise from misunderstanding or valid disagreement. The observation alone cannot identify a protective barrier or interior motive.",
+      "retained_valid_result": "Uncertainty-bearing differential diagnosis and a bounded reread remain appropriate; independently grounded subject claims retain their own scope.",
+      "credit": "Source-level inconsistency with larger archived uncertainty rules; no observed user interaction or deployed defect asserted.",
+      "independent_review": "../type_collective/noetic_runtime_contracts/REPORT.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC07",
+      "title": "M8 example reductions require stronger exact premises",
+      "sources": [
+        {
+          "residual_index": 12,
+          "sha256": "06dc2a1a7248f8b771bf5e024dcb8f6fb5b807a15f0b79cb43ead182081a0f09",
+          "path": "t20-consolidation-20261011/catalogue/objects/06/06dc2a1a7248f8b771bf5e024dcb8f6fb5b807a15f0b79cb43ead182081a0f09",
+          "ranges": [
+            [
+              95,
+              122
+            ]
+          ]
+        }
+      ],
+      "finding": "No righteous guidance does not automatically deny all inquiry; induction example assumes exclusive nonphysical justification; moral criticism can be practical/conditional; relativist recommendation need not claim universal truth; selective fitrah criticism does not remove every epistemic vantage.",
+      "retained_valid_result": "Classical valid reductio and dialectical locally accepted consequence tracing survive when exact burden, premise and consequence are warranted.",
+      "credit": "Fresh full-source reading with root/type independent reviews; not a withdrawal of separately sourced affirmative foundations.",
+      "independent_review": "../root_math/noetic_template_review/REVIEW.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC08",
+      "title": "T352 cutset sufficiency misses target-error exhaustiveness",
+      "sources": [
+        {
+          "residual_index": 120,
+          "sha256": "3d8c50aed5a53480879d44e5a26ec50be9e892262f55224cbb744c3c4bdd4f82",
+          "path": "t20-consolidation-20261011/catalogue/objects/3d/3d8c50aed5a53480879d44e5a26ec50be9e892262f55224cbb744c3c4bdd4f82",
+          "ranges": [
+            [
+              1,
+              143
+            ]
+          ]
+        },
+        {
+          "residual_index": 471,
+          "sha256": "db8254a3f29744bbb1e7bf9420a912039e554d07a8ab7a33c5ad7b8d40cfcb13",
+          "path": "t20-consolidation-20261011/catalogue/objects/db/db8254a3f29744bbb1e7bf9420a912039e554d07a8ab7a33c5ad7b8d40cfcb13",
+          "ranges": [
+            [
+              1,
+              68
+            ]
+          ]
+        }
+      ],
+      "finding": "G1 covers relevant deformation-to-target routes, not every target error. Nonempty deformation set{d}, target t, no edges, both errors present and identity intervention satisfy the six guards and empty cut while target remains wrong. Add post-intervention error-exhaustiveness or separate direct target correction and preservation.",
+      "retained_valid_result": "T351 necessary no-unchanged-path requirement and covered-route neutralization survive. With explicit error-exhaustiveness, no old surviving route and no new route imply no target error.",
+      "credit": "Fresh literal conditional counterinterpretation, independently strengthened/confirmed by root; original audit acceptance does not close it. No human-cognition realization claimed.",
+      "independent_review": "../root_math/noetic_template_review/CUTSET_SUFFICIENCY_REVIEW.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC09",
+      "title": "Constant profiles certify only constant targets",
+      "sources": [
+        {
+          "residual_index": 52,
+          "sha256": "19f1ee22e51db677f2b79e3a1db10923db35189a1cb7bc86bb710164dbd15f4a",
+          "path": "t20-consolidation-20261011/catalogue/objects/19/19f1ee22e51db677f2b79e3a1db10923db35189a1cb7bc86bb710164dbd15f4a",
+          "ranges": [
+            [
+              25,
+              39
+            ],
+            [
+              70,
+              73
+            ],
+            [
+              154,
+              163
+            ]
+          ]
+        }
+      ],
+      "finding": "The report says constant profile certifies every system, but its own kerP⊆kerL criterion makes this false for any nonconstant L.",
+      "retained_valid_result": "Correct factorization theorem and separation of extensional recoverability from proof/provenance warrant remain; arbitrary coarsening cannot freely manufacture certified truth.",
+      "credit": "New source-level counterexample, fresh two-world analyst control; source already marks candidate properties unverified.",
+      "independent_review": "residual_admission/LITERAL_SCOPE_CONTROLS.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC10",
+      "title": "Weighted robust-separation lower bound needs cost guards",
+      "sources": [
+        {
+          "residual_index": 238,
+          "sha256": "74513814af532919735adbcd638c7e02eb48813a0446d3511502dba5eb786372",
+          "path": "t20-consolidation-20261011/catalogue/objects/74/74513814af532919735adbcd638c7e02eb48813a0446d3511502dba5eb786372",
+          "ranges": [
+            [
+              35,
+              56
+            ]
+          ]
+        }
+      ],
+      "finding": "For two identical informative tests with independent private roots, each cost1/10, sep0=1/10 and sep1=1/5<sep0+1. The asserted sep_f>=sep0+f does not hold for arbitrary weights; constant target also needs exclusion for a cardinality statement.",
+      "retained_valid_result": "Critical-pair hitting sets and root transversals are valid conditional definitions; unit-cost nonconstant-target lower bounds require their own explicit assumptions.",
+      "credit": "New counterexample to an explicitly unverified derived property; fresh exact rational analyst check.",
+      "independent_review": "residual_admission/LITERAL_SCOPE_CONTROLS.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC11",
+      "title": "Recognition guard repair is tested candidate, not adopted release",
+      "sources": [
+        {
+          "residual_index": 58,
+          "sha256": "1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+          "path": "t20-consolidation-20261011/catalogue/objects/1c/1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+          "ranges": [
+            [
+              1,
+              90
+            ]
+          ]
+        },
+        {
+          "sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+          "path": "t20-consolidation-20261011/catalogue/objects/a5/a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+          "ranges": [
+            [
+              1,
+              43
+            ]
+          ]
+        }
+      ],
+      "finding": "Historical API and both CLI paths accepted advanced alignment with none/weak/medium recognition while the full JSON schema rejected it. A seven-line local candidate subsequently aligned APIs/CLIs with strong-only guard and retained54negative controls. It was not applied to the protected repository. Separate reason-category3/open mismatch remains.",
+      "retained_valid_result": "The tested repair preserves strong acceptance and nonadvanced none cases; schema/review evidence does not prove philosophical recognition or uptake.",
+      "credit": "Full exact review and repair report read; underlying program execution remains historical, not a fresh deployed test.",
+      "independent_review": "residual_admission/READ_LEDGER.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC12",
+      "title": "Historical mathematical audit criticism can itself overstate changes",
+      "sources": [
+        {
+          "sha256": "17ae4ca40c55e9f6b43b5608f5dc2402ee74d09eaab8aac43ed6ed502f17885c",
+          "path": "t20-consolidation-20261011/catalogue/objects/17/17ae4ca40c55e9f6b43b5608f5dc2402ee74d09eaab8aac43ed6ed502f17885c",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/12"
+        },
+        {
+          "sha256": "57558811589e4a89b8d1fb2dd722e3d3108f6cd533e9c89f1820790a95831e81",
+          "path": "t20-consolidation-20261011/catalogue/objects/57/57558811589e4a89b8d1fb2dd722e3d3108f6cd533e9c89f1820790a95831e81",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/43"
+        },
+        {
+          "sha256": "7e44fa5cbee4ece524eb40cdf4fd21117c43992c7e5d8bce6ad8beb45de70cab",
+          "path": "t20-consolidation-20261011/catalogue/objects/7e/7e44fa5cbee4ece524eb40cdf4fd21117c43992c7e5d8bce6ad8beb45de70cab",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/64"
+        },
+        {
+          "sha256": "9ebdcd4f1262569ccde7e1d744a5447dd081555fdb62b9df8012436f6aa7173e",
+          "path": "t20-consolidation-20261011/catalogue/objects/9e/9ebdcd4f1262569ccde7e1d744a5447dd081555fdb62b9df8012436f6aa7173e",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/81"
+        },
+        {
+          "sha256": "a5d0ada3ccbe3f7a63c93387d6244a4aaa17852e84f43e6e3b147580513adb7a",
+          "path": "t20-consolidation-20261011/catalogue/objects/a5/a5d0ada3ccbe3f7a63c93387d6244a4aaa17852e84f43e6e3b147580513adb7a",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/86"
+        },
+        {
+          "sha256": "f89997788fb685b6a55fbcda0c87c6aab7991778de6247926611a49b5db63141",
+          "path": "t20-consolidation-20261011/catalogue/objects/f8/f89997788fb685b6a55fbcda0c87c6aab7991778de6247926611a49b5db63141",
+          "scope": "whole body in exact owner ledger",
+          "ledger": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+          "pointer": "$/records/127"
+        }
+      ],
+      "finding": "AS V1 already has descending splitter recurrence; AT V1 already has normalization and r−1 bound. Their audit claims of absence/circularity are too strong. AS wrong first query and BD V1 incorrect mixture expansion were real; BD V2 repairs the expansion.",
+      "retained_valid_result": "Current AS/AT/BD conditional theorems survive; preserve genuine changes and exact prior contributions instead of duplicate discovery.",
+      "credit": "Empirical full historical variant reading and fresh analyst controls; no historical runtime replay.",
+      "independent_review": "../empirical_occurrence/early_pmr_variants/READING_LEDGER.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC13",
+      "title": "Singleton full-eligibility fibres already force coherent transport",
+      "sources": [
+        {
+          "sha256": "a8ba3ba8fa53e901aca4027e6d1f7481470bbc2b07c34dad93400650737bb99f",
+          "path": "t20-consolidation-20261011/catalogue/objects/a8/a8ba3ba8fa53e901aca4027e6d1f7481470bbc2b07c34dad93400650737bb99f",
+          "ranges": [
+            [
+              31,
+              205
+            ]
+          ]
+        }
+      ],
+      "finding": "Under U1 and U2 preserving full WorldCommon (including ExistsAt), the transported unique eligible element must equal the unique eligible target. U3 selected-anchor holonomy fixation follows. The triangular swap uses weaker nonsingleton eligibility and cannot prove independence while retaining those stronger premises.",
+      "retained_valid_result": "Numerical same-bearer B_ID, original source adequacy, source role and actual philosophical warrant remain distinct from this section theorem.",
+      "credit": "Root full-body reading and derivation; foundations independent targeted source return31–205, no new first read.",
+      "independent_review": "../root_math/specialist_b_history/REPORT.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC14",
+      "title": "Prior proof-support guards qualify later compiler novelty",
+      "sources": [
+        {
+          "residual_index": 121,
+          "sha256": "3efcb8935588fddd8c586dce52e79f1d0579a4229f15de43fc57e98b7a77117b",
+          "path": "t20-consolidation-20261011/catalogue/objects/3e/3efcb8935588fddd8c586dce52e79f1d0579a4229f15de43fc57e98b7a77117b",
+          "ranges": [
+            [
+              1,
+              23
+            ],
+            [
+              269,
+              299
+            ]
+          ]
+        },
+        {
+          "residual_index": 52,
+          "sha256": "19f1ee22e51db677f2b79e3a1db10923db35189a1cb7bc86bb710164dbd15f4a",
+          "path": "t20-consolidation-20261011/catalogue/objects/19/19f1ee22e51db677f2b79e3a1db10923db35189a1cb7bc86bb710164dbd15f4a",
+          "ranges": [
+            [
+              75,
+              152
+            ]
+          ]
+        }
+      ],
+      "finding": "Historical CoreB already contemplated ≥2-root corroboration and cut/inlining tension. Current constructive exact-support saturation/cost theorem must not claim first invention of support-sensitive proof semantics. Fully specified anti-padding content/role licence was not found in inspected historical text.",
+      "retained_valid_result": "Later finite support-state compiler is a substantive constructive extension; complementary roles do not inherently require distinct origins, and actual origin identity is an input rather than authenticated by the calculus.",
+      "credit": "New full reading of source-return report and whole historical owners; independent cited code snippets retain scoped reuse.",
+      "independent_review": "residual_admission/READ_LEDGER.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC15",
+      "title": "Challenger B ancestry and custody are different axes",
+      "sources": [
+        {
+          "residual_index": 416,
+          "sha256": "c2a1f0d8c40c7ed2337301770fc58655dda1cef51d6b3bd88d9c3665bbb8cf06",
+          "path": "t20-consolidation-20261011/catalogue/objects/c2/c2a1f0d8c40c7ed2337301770fc58655dda1cef51d6b3bd88d9c3665bbb8cf06",
+          "ranges": [
+            [
+              15,
+              47
+            ],
+            [
+              318,
+              387
+            ],
+            [
+              715,
+              816
+            ]
+          ]
+        },
+        {
+          "residual_index": 497,
+          "sha256": "ec22b3e2aae11cab67a1a0b31df15fbf04e15cba4fc9545aaf85605f10b44bbd",
+          "path": "t20-consolidation-20261011/catalogue/objects/ec/ec22b3e2aae11cab67a1a0b31df15fbf04e15cba4fc9545aaf85605f10b44bbd",
+          "ranges": [
+            [
+              6,
+              12
+            ]
+          ]
+        }
+      ],
+      "finding": "A proposition-equivalence relation to finite T294 does not recover historical bytes or make historical_identity:NONE false. The report generalizes to arbitrary target types, while AR-T1 has Boolean/nonempty scope; later V14 uses shared invariant rather than whole-statement identity.",
+      "retained_valid_result": "Quotient/attained-image factorization, decoder uniqueness and separate typed intervention certificate survive; source-world bridges and model eligibility remain explicit.",
+      "credit": "Full report and later correction log read, current theorem ancestry reused from actual owners; no fresh Lean credit.",
+      "independent_review": "../early_remaining later-PMR transfer reading",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC16",
+      "title": "Retained Arabic supports jointly informative signs and route plurality",
+      "sources": [
+        {
+          "residual_index": 73,
+          "sha256": "230bcf72aea9c0d11ed297982da95c1f2d7b5a1b76c1c0a817c144090fc83bbc",
+          "path": "t20-consolidation-20261011/catalogue/objects/23/230bcf72aea9c0d11ed297982da95c1f2d7b5a1b76c1c0a817c144090fc83bbc",
+          "ranges": [
+            [
+              1,
+              42
+            ]
+          ]
+        }
+      ],
+      "finding": "Reported AbuYala/AbuFaraj arguments are separated from author commentary. Revealed teaching can present rational indications; mere revealed obligation does not entail revelation-only acquisition. Knowledge of messenger includes sender but the sign’s epistemic force still requires explanation.",
+      "retained_valid_result": "Positive fitri prior knowledge and joint sign-based discovery of creator and messenger are source-supported alternatives, compatible with current cumulative attestation appraisal.",
+      "credit": "Entire retained Arabic excerpt read directly; no new edition scan, collation, source authentication, book acquisition or first-reading claim.",
+      "independent_review": "CURRENT_FOUNDATIONAL_CLAIMS.json#FND-024,FND-027",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC17",
+      "title": "A–R checkers have narrower semantic assurance than some output labels",
+      "sources": [
+        {
+          "checker_index": 43,
+          "sha256": "b403ee1b79538d73cb82f7fadd7997133b9b3d40c59538fdf27c56ae21a2ab2e",
+          "path": "t20-consolidation-20261011/catalogue/objects/b4/b403ee1b79538d73cb82f7fadd7997133b9b3d40c59538fdf27c56ae21a2ab2e",
+          "ranges": [
+            [
+              44,
+              64
+            ]
+          ]
+        },
+        {
+          "checker_index": 35,
+          "sha256": "957ea4438e9ceaef2686df76f1bf9d562f9ec3ea984197e9a1d5f8318c61ca3d",
+          "path": "t20-consolidation-20261011/catalogue/objects/95/957ea4438e9ceaef2686df76f1bf9d562f9ec3ea984197e9a1d5f8318c61ca3d",
+          "ranges": [
+            [
+              51,
+              69
+            ]
+          ]
+        },
+        {
+          "checker_index": 60,
+          "sha256": "f7f21995311da9714214d1c6a8a87ef5f3969c8e3096be296f875486a759b304",
+          "path": "t20-consolidation-20261011/catalogue/objects/f7/f7f21995311da9714214d1c6a8a87ef5f3969c8e3096be296f875486a759b304",
+          "ranges": [
+            [
+              42,
+              62
+            ]
+          ]
+        },
+        {
+          "checker_index": 54,
+          "sha256": "e5c16e63570550d7c87b63bbafe028b1b99fc5fa2415a6366dae47f61cb22bc7",
+          "path": "t20-consolidation-20261011/catalogue/objects/e5/e5c16e63570550d7c87b63bbafe028b1b99fc5fa2415a6366dae47f61cb22bc7",
+          "ranges": [
+            [
+              26,
+              69
+            ]
+          ]
+        },
+        {
+          "checker_index": 12,
+          "sha256": "33aedf270e61d6c77070653ebfc22b93aff9961b534dc45230946de043e272cd",
+          "path": "t20-consolidation-20261011/catalogue/objects/33/33aedf270e61d6c77070653ebfc22b93aff9961b534dc45230946de043e272cd",
+          "ranges": [
+            [
+              7,
+              16
+            ],
+            [
+              52,
+              66
+            ]
+          ]
+        }
+      ],
+      "finding": "A parses and discards model YAML; C/D generic mixed-Boolean gates permit reversed antecedent/consequent rows; P increments named account counters without evaluating each account; R compares copied link sets. Actual C/D frozen rows are correctly oriented. Genuine finite enumerations coexist with these validation limits.",
+      "retained_valid_result": "Finite factorization, compression, role-intersection, groupoid, odds and transducer calculations retain their declared mathematical scopes. Source-relative F function/accuracy/warrant repair is preserved. Later richer positive source appraisals are not defeated by thin untyped model labels.",
+      "credit": "Full local27-code and10-input readings; fresh independently written minimal controls. No retained-program execution, fresh Arabic/source authentication or deployed-runtime claim. Type reader independently reviewed all37 and corrected H unequal-likelihood wording and F source-relative terminology.",
+      "independent_review": "a_ap_checkers/ASSURANCE_MICROCONTROLS.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC18",
+      "title": "E-determined restriction may delete ambiguous fibres",
+      "sources": [
+        {
+          "sha256": "9ab931c4408f72331b4c76b68b052d9ec979fd4137c29bf3f25ff1da846615c2",
+          "path": "t20-consolidation-20261011/catalogue/objects/9a/9ab931c4408f72331b4c76b68b052d9ec979fd4137c29bf3f25ff1da846615c2",
+          "ranges": [
+            [
+              1,
+              49
+            ]
+          ]
+        }
+      ],
+      "finding": "E-determined restrictions cannot split retained fibres but can delete all ambiguous fibres; external-authority necessity needs an explicit retained-pair qualification.",
+      "retained_valid_result": "No E-determined observation splits an E-fibre; restrictions preserving the colliding pair cannot repair identification.",
+      "credit": "Assigned early_remaining reader first finding/full body and controls; foundations independent exact full/targeted return. No duplicate first-reading or execution credit.",
+      "independent_review": "residual_admission/LATER_RETURN_RECONCILIATION.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC19",
+      "title": "Common-cover characterization needs nonempty contents",
+      "sources": [
+        {
+          "sha256": "685da9a58246cad3ec1905c7d87e7f4f3b84a70f517e69495818780251ccf031",
+          "path": "t20-consolidation-20261011/catalogue/objects/68/685da9a58246cad3ec1905c7d87e7f4f3b84a70f517e69495818780251ccf031",
+          "ranges": [
+            [
+              1,
+              49
+            ]
+          ]
+        }
+      ],
+      "finding": "COMMON iff minimum witness cover has size1 requires a nonempty content domain; empty C/nonempty G is the exact boundary.",
+      "retained_valid_result": "For nonempty contents COMMON iff gamma=1; finite LOCAL iff finite witness cover. Actual source arguments have substantive nonempty targets.",
+      "credit": "Assigned early_remaining reader first finding/full body and controls; foundations independent exact full/targeted return. No duplicate first-reading or execution credit.",
+      "independent_review": "residual_admission/LATER_RETURN_RECONCILIATION.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC20",
+      "title": "R11 output-only count includes unreachable histories",
+      "sources": [
+        {
+          "sha256": "c698e1709e6d4f5e6f4ab77f09ee799e6f5027f1f312ed431b1ae1c9b3831cd1",
+          "path": "t20-consolidation-20261011/catalogue/objects/c6/c698e1709e6d4f5e6f4ab77f09ee799e6f5027f1f312ed431b1ae1c9b3831cd1",
+          "ranges": [
+            [
+              60,
+              115
+            ],
+            [
+              150,
+              175
+            ]
+          ]
+        }
+      ],
+      "finding": "Output-only gate compares unreachable histories as well as reachable ones. Actual reachable counterexample remains.384/576 numerical decomposition is the assigned reader's fresh result, not locally rerun.",
+      "retained_valid_result": "Full-history realization and the specific reachable output-only obstruction remain valid. Residual-state minimum and admissible-class guards keep their scopes.",
+      "credit": "Assigned early_remaining reader first finding/full body and controls; foundations independent exact full/targeted return. No duplicate first-reading or execution credit.",
+      "independent_review": "residual_admission/LATER_RETURN_RECONCILIATION.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC21",
+      "title": "BG free expansions violate the scoped CreatorClass requirements",
+      "sources": [
+        {
+          "sha256": "de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+          "path": "t20-consolidation-20261011/catalogue/objects/de/de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+          "ranges": [
+            [
+              37,
+              62
+            ],
+            [
+              105,
+              118
+            ]
+          ]
+        },
+        {
+          "sha256": "97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
+          "path": "t20-consolidation-20261011/catalogue/objects/97/97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
+          "ranges": [
+            [
+              33,
+              48
+            ]
+          ]
+        }
+      ],
+      "finding": "CreatorClass explicitly requires Agentic and IntentionalUptake (plus effective_origination), yet text and checkers freely vary allnine bits. The two necessary Boolean implications alone exclude192 of512 assignments; Agentic-only and Uptake-only deletions from alltrue violate the target meaning.",
+      "retained_valid_result": "Allfalse remains admissible under these necessary constraints and proves each omitted target is not neutrally entailed. Positive/nondefinability twins require compatible effective_origination and any other stipulated constraints. No metaphysical or Bayesian parity follows.",
+      "credit": "Empirical actual checker/model diagnosis; foundations independent full report/model return. Earlier foundations free-expansion assessment corrected explicitly.",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false,
+      "downstream_recurrence": {
+        "sha256": "dd8d1b851411e36ed762df5bc9ea8fb69234a7141406a6d5bf353f42ccc4ad27",
+        "line": 37,
+        "owner_ledger": "../empirical_occurrence/large_authored_reports/READING_LEDGER.json",
+        "scope": "Same unrestricted assignment overclaim; independent hosting/necessity arguments retain their separate scope."
+      }
+    },
+    {
+      "id": "RC22",
+      "title": "AS model summary incorrectly removes empty disagreement constraints",
+      "sources": [
+        {
+          "sha256": "c78c741527a2dab6dcc1c10e242e7caf74a3109294fa43901d7b42c956cdc3d3",
+          "ranges": [
+            [
+              1,
+              71
+            ]
+          ],
+          "path": "t20-consolidation-20261011/catalogue/objects/c7/c78c741527a2dab6dcc1c10e242e7caf74a3109294fa43901d7b42c956cdc3d3"
+        },
+        {
+          "sha256": "5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6",
+          "ranges": [
+            [
+              30,
+              65
+            ]
+          ],
+          "path": "t20-consolidation-20261011/catalogue/objects/56/5628d3199a3cbd53d5082437d893f9b33b9e73536a62cd9daa6452ab388321e6"
+        }
+      ],
+      "finding": "Summaryline16 defines hitting only nonempty disagreement sets; its own lines43–46and the repaired exact theorem require no finite identifying set when a distinct pair has identical responses. For two identical rows, deleting the empty constraint gives the false value0.",
+      "retained_valid_result": "The all-pair hitting-set theorem and correct algorithms survive unchanged; this is a stale model-summary scope error, not a theorem failure.",
+      "credit": "Empirical model-summary diagnosis; foundations independently read whole71-line model and exact theorem30–65. No source code mutation or new retained-program execution.",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC23",
+      "title": "Programme chronology reverses the energy-dissipation sign",
+      "sources": [
+        {
+          "sha256": "23c6ee087b07a356e40ae9e314613872981161cbcfdb9141e89c55bcab98e852",
+          "scope": "Whole embedded original, large_scope77lines63–137; offending anthology line114",
+          "path": "t20-v6-20261011/corpus/objects/23/23c6ee087b07a356e40ae9e314613872981161cbcfdb9141e89c55bcab98e852"
+        },
+        {
+          "sha256": "d7e8c499fc36aace289c7f44081623c825018600b7ad7fb789b188ed59efa67f",
+          "scope": "Containing historical source-reader anthology; actual hash corrected below if necessary",
+          "path": "t20-consolidation-20261011/catalogue/objects/d7/d7e8c499fc36aace289c7f44081623c825018600b7ad7fb789b188ed59efa67f"
+        }
+      ],
+      "finding": "The synopsis calls the joint gradient energy derivative a nonnegative sum. For the stated descent flow it is minus the nonnegative position-gradient/variance dissipation sum.",
+      "retained_valid_result": "The controlling Riemannian gradient-flow and dissipation theorem remains intact; this is a sign typo in retrospective narrative.",
+      "credit": "Fresh whole chronology-constituent reading by foundations; standard gradient identity, not new theorem/replay.",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false
+    },
+    {
+      "id": "RC24",
+      "title": "AM fixed-interpretation example needs an explicit admissible-family change",
+      "sources": [
+        {
+          "sha256": "e0378fa12ceee4c1355fcf0a13613d8a071f8998660ebbb4325a14d2c7b3edfc",
+          "path": "t20-consolidation-20261011/catalogue/objects/e0/e0378fa12ceee4c1355fcf0a13613d8a071f8998660ebbb4325a14d2c7b3edfc",
+          "ranges": [
+            [
+              1,
+              70
+            ]
+          ]
+        },
+        {
+          "sha256": "5fcc35b40aef402e8bf4bbc4152b6d66dc4d314a45de1f0b8eb4c68cbfe4b4ba",
+          "path": "t20-consolidation-20261011/catalogue/objects/5f/5fcc35b40aef402e8bf4bbc4152b6d66dc4d314a45de1f0b8eb4c68cbfe4b4ba",
+          "ranges": [
+            [
+              15,
+              76
+            ],
+            [
+              114,
+              118
+            ]
+          ]
+        }
+      ],
+      "finding": "With the same admissible family and carrier/content action, Aut(expansion) is a subgroup of Aut(reduct), hence Fix(reduct) is a subset of Fix(expansion). The displayed expanded1/reduct2 counts cannot result from signature change alone. Explicitly changing the admissible family repairs the example; forgetting structure alone may instead remove fixed interpretations.",
+      "retained_valid_result": "The natural-selector/fixed-point characterization remains valid. Signature, family, intrinsic semanticity and mental realization remain distinct; no current positive foundational appraisal is withdrawn.",
+      "credit": "Foundations full YAML and targeted controlling-prose return; independently checked by type reader. Fresh272-family analyst check is separate from historical programs.",
+      "independent_review": "../type_collective/deep_aa_ap_checkers/am_signature_review/REVIEW.md",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false,
+      "independent_reading_ledger": "../type_collective/deep_aa_ap_checkers/am_signature_review/READING_LEDGER.json"
+    },
+    {
+      "id": "RC25",
+      "title": "M2 wrongly requires a near-zero prior for substantial negative evidential force",
+      "sources": [
+        {
+          "sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+          "path": "t20-consolidation-20261011/catalogue/objects/c5/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+          "ranges": [
+            [
+              1,
+              103
+            ]
+          ]
+        },
+        {
+          "sha256": "7c9a4bc45b9d443661e6bd9b879d87c06dada61b0313d1fd273873b11f8332c8",
+          "path": "t20-consolidation-20261011/catalogue/objects/7c/7c9a4bc45b9d443661e6bd9b879d87c06dada61b0313d1fd273873b11f8332c8",
+          "ranges": [
+            [
+              1,
+              119
+            ]
+          ],
+          "credit": "Prior full-body read sources143; current targeted return1–65."
+        }
+      ],
+      "finding": "Line46 says these evidential arguments only work with a near-zero prior; lines83/89/93 repeat related framing. For any nondegenerate prior, evidence lowers its posterior iff its likelihood ratio is below1. Prior9/10 with likelihood ratio1/100 yields9/109, so even a high prior can be strongly reduced. Whether actual evidence has that ratio and whether any chosen prior is warranted remain substantive application questions.",
+      "retained_valid_result": "Legitimate inquiry into contested prior grounds, deductive/probabilistic distinction, nonlooping and pastoral restraint survive. Later warranted-learning theorem and current positive source/recognition appraisals are unchanged. A likelihood-direction argument need not await a numerical prior; a numerical posterior does.",
+      "credit": "Prior full successor report and exact predecessor delta reused; empirical original103-line body reading followed by foundations independent full return and exact Fraction calculation. No retained program execution, deployed patch or new first-discovery claim.",
+      "independent_review": "../synthesis/CORRECTION_M2_PRIOR_NECESSITY.json",
+      "historical_source_edited": false,
+      "deployed_runtime_effect_claimed": false,
+      "chronology_correction": "Already corrected in the10October research successor7c9a4bc45b9d, previously full-read in SUBSTANTIVE_READING sources143; predecessor9f466f3f was completely delta-qualified at144. The11October9/109 check independently corroborates that existing correction. The earlier statement that no later correction was known was a retrieval error, now withdrawn."
+    },
+    {
+      "id": "RC26",
+      "title": "Finite AV model summary wrongly withholds computability",
+      "sources": [
+        {
+          "sha256": "991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05",
+          "path": "t20-consolidation-20261011/catalogue/objects/99/991763b96ac886e37c4ff01dfb6e4f3961cda00b57ada958f97aa3b18ddd5a05",
+          "ranges": [
+            [
+              1,
+              33
+            ]
+          ],
+          "specific_locus": "line33"
+        },
+        {
+          "sha256": "fcfd47a2c21f542a6c942ae7955791b07b7412c45b32ff3997742013552e720e",
+          "credit": "Prior complete AVV2 theorem in empirical_occurrence/early_pmr/READING_LEDGER.json,243lines; empirical independent whole-body return."
+        }
+      ],
+      "finding": "In the stated explicit finite-table setting, S_A(n)=exists x A(x,n) is computable by finite enumeration. If S_A entails T_C, I=S_A is a computable interpolant. Thus line33 not_necessarily_natural_explanatory_or_computable overstates the boundary.",
+      "retained_valid_result": "The constructive AV interval,2^slack count and uniqueness iff S_A=T_C survive. Correct scope: not necessarily natural or explanatory; computable in the finite-table setting. Table projection is efficient in explicit input-table size, although this size may be exponential in variable count and no compact formula guarantee follows.",
+      "credit": "Current retained model read and independent proof check corroborate the already constructive source theorem; no new theorem, retained program execution or first-discovery claim.",
+      "independent_review": "../empirical_occurrence/early_pmr/AV_COMPUTABILITY_REVIEW.json",
+      "historical_source_edited": false
+    },
+    {
+      "id": "RC27",
+      "title": "Historical canonical registry shorthand must preserve exact guards and owner identities",
+      "sources": [
+        {
+          "sha256": "52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841",
+          "path": "t20-consolidation-20261011/catalogue/objects/52/52b1df2961b080bd0c05519883094fc2cd9a93413ca8c1bb1f7935a3a24b0841",
+          "specific_pointers": [
+            "/theorems/458",
+            "/theorems/459",
+            "/theorems/469",
+            "/theorems/473",
+            "/theorems/489",
+            "/relations/45",
+            "/theorems/412/normalized_statement"
+          ]
+        }
+      ],
+      "finding": "GW-T5A needs a nonempty finite DAG; SCC terminal boundaries concern sink SCCs, not all mutual support; safe reachability needs target A contained in S or initial A intersect S; class identification means no cross-class signature collision, while a descended quotient-to-signature map additionally needs within-class constancy; operational quotient requires complete/residual-closed continuation or explicit kernel congruence. Relation45 calls AR-T11 compactness/finite-certificate, but the same registry assigns compactness to AR-T5 and AR-T11 to simulation. Record412 normalized_statement erases its CC-T5 reference, so is not a semantic replacement for its full statement.",
+      "retained_valid_result": "Bounded conditional graph, safety, quotient, simulation and provenance results remain. These are abbreviated historical registry-field qualifications, not withdrawal of unexamined current theorem owners or later source-warrant appraisals. Nonempty-DAG repair already exists in the later J lineage.",
+      "credit": "Local whole semantic/template/relations qualification plus attributed independent historical65-record reading; no new kernel or retained-code replay.",
+      "independent_review": "../early_remaining/ar4_ar5_registry65/SEMANTIC_QUALIFICATIONS.json",
+      "historical_source_edited": false
+    }
+  ],
+  "boundary": "Exact source corrections and historical supersession controls; no blanket suspension of source-owned positive appraisals and no protected historical edits."
+}

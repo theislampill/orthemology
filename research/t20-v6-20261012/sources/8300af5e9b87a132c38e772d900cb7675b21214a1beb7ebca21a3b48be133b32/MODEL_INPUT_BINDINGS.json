@@ -1,0 +1,160 @@
+{
+  "schema": "t20-semantic-owner-model-input-bindings-v1",
+  "date_utc": "2026-10-09",
+  "scope": "Targeted comparison of source-law claims, represented/adopted criteria, and evidence-relative practical-duty claims; no new mathematical result or repository edit.",
+  "artifact": {
+    "path": "directive-normative-qualification-20261009/MODEL_CROSSWALK.md",
+    "bytes": 11519,
+    "sha256": "efdfa00618ec507a41d7aa34c4ce82bee37670565ab6facb1272c18787adeddf",
+    "git_blob_sha1": "3cbe21ee40fe1dbb699ed111e82cbf7038eff91b",
+    "read_boundary": "Full authored crosswalk, reread after provenance and division wording corrections.",
+    "role": "frozen authored result"
+  },
+  "pinned_sources": [
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "theory/orthemic-core-formalization.md",
+      "returned_git_blob_sha1": "34effd9e917b5372e53d03a71e052fd38050490c",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/orthemic-core-formalization.md",
+      "read_boundary": "Full pinned payload retrieved for byte comparison. Substantive reading: local lines 137–169, 255–400, 394–520, 548–616; broader keyword navigation. Exact cited clauses in §§2.2, 3.1–3.4, 4.1.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "returned_git_blob_sha1": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "read_boundary": "Pinned first-line fetch supplied blob identity; full local byte hash matches. Substantive reading: lines 67–108 and 368–405, especially Definition 6.4 and Theorem 6.5; keyword navigation elsewhere.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+      "returned_git_blob_sha1": "36c37281d3be418a6ea5af270d132cf23615339f",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/companion/dynamic-orthing-noetic-learning-and-orthability.md",
+      "read_boundary": "Pinned first-line fetch supplied blob identity; full local byte hash matches. Substantive reading: lines 1–130, particularly §2, 29–43; keyword navigation elsewhere.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+      "returned_git_blob_sha1": "55124edb6c46fdaeb7d715040bb24dceb35552ff",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+      "read_boundary": "Full 93-line payload read; principal use §§1–3, 15–60; §5 limits.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml",
+      "returned_git_blob_sha1": "ac24b636da84d42c1a34bd8a2fd3143de7cc2469",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml",
+      "read_boundary": "Full payload read; principal use bearers.mu-tilde non_claims, distinctness, carrier_roles, and three_histories.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md",
+      "returned_git_blob_sha1": "3b98291280c7b9416f73e9b6d258a9a13c8f224b",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md",
+      "read_boundary": "Full payload read; principal use Decision §§1–3; R7C amendment consulted. Status headers treated only as historical/source provenance.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+      "returned_git_blob_sha1": "66f1c9c1a2cda1678b835913e1268eec9345e675",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+      "read_boundary": "Full payload read; principal use Decision §§2–4 and non-claims.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "experiments/orthemology-v5-successors/groups/t07-technical/README.md",
+      "returned_git_blob_sha1": "7cd6ff0393556359cecaee0c5b109a6cf8a05345",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/groups/t07-technical/README.md",
+      "read_boundary": "Full payload retrieved; only Boundaries retained and T07-CRITERION-V3 read for this comparison. Other technical families and proof/replay evidence are not independently appraised.",
+      "role": "load-bearing source"
+    },
+    {
+      "repository": "theislampill/orthemology",
+      "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "path": "docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md",
+      "returned_git_blob_sha1": "c032efd2236060906b2d2dfc15b52f336aeeac87",
+      "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md",
+      "read_boundary": "Full payload read during bounded source navigation. Historical hold is not a premise of the crosswalk conclusion.",
+      "role": "consulted background; not used to settle present philosophical status"
+    }
+  ],
+  "local_inputs": [
+    {
+      "path": "constructive-t20-20261009/sources/theory/orthemic-core-formalization.md",
+      "bytes": 64023,
+      "sha256": "e9a2595c694379fc71d722635aa2164c79d0e2b9466cc43a734c5028b99fe6be",
+      "git_blob_sha1": "fcfc037d8378638cc2b78a3fc8a5356033a4c61e",
+      "read_boundary": "Lines 137–169, 255–400, 394–520, 548–616 plus keyword navigation.",
+      "role": "initial core copy; one extra final LF versus pinned source"
+    },
+    {
+      "path": "directive-normative-qualification-20261009/sources/orthemic-core-pinned.md",
+      "bytes": 64022,
+      "sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+      "git_blob_sha1": "34effd9e917b5372e53d03a71e052fd38050490c",
+      "read_boundary": "All bytes compared to initial local core; exact pinned Git blob verified. Cited substantive sections unchanged.",
+      "role": "exact pinned source copy"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "git_blob_sha1": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+      "read_boundary": "Lines 67–108, 368–405 plus keyword navigation.",
+      "role": "local source matching pinned blob"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/companion/dynamic-orthing-noetic-learning-and-orthability.md",
+      "bytes": 19042,
+      "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+      "git_blob_sha1": "36c37281d3be418a6ea5af270d132cf23615339f",
+      "read_boundary": "Lines 1–130 plus keyword navigation.",
+      "role": "local source matching pinned blob"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "bytes": 47537,
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "git_blob_sha1": "7672f79a105b8b2d051eea1cd29ef4e0ffd6a595",
+      "read_boundary": "Keyword scan for replacement/Replacement/normative returned no relevant output; no substantive appraisal.",
+      "role": "navigation only; not load-bearing"
+    },
+    {
+      "path": "directive-normative-qualification-20261009/sources/majmu14_1456.txt",
+      "bytes": 26766,
+      "sha256": "70317af7248f6ca31a87e776ab9590e740fba85c936fa7aa6ae114922ca66f5c",
+      "git_blob_sha1": "27868feeb0956deb0d7982e42b15bae005469671",
+      "read_boundary": "Lines 1–60 and displayed keyword excerpts, especially lines 233, 238, 253–255. No complete-division read, independent primary verification, or primary appraisal claimed.",
+      "role": "context only; primary division owned by parent appraisal"
+    }
+  ],
+  "core_copy_comparison": {
+    "result": "Only difference is one extra terminal LF in the supplied local copy.",
+    "local_bytes": 64023,
+    "pinned_bytes": 64022,
+    "substantive_text_and_cited_line_numbers_equal": true,
+    "comparison_method": "diff -u plus independent SHA-256 and Git blob SHA-1 computations; reconstructed pinned bytes match connector returned Git blob."
+  },
+  "discovery_searches": "Connector search excerpts were used to locate DAEE and retained-standard/Candidate E references. Search non-results are not treated as evidence that a definition is absent. Unrelated search hits were not appraised.",
+  "non_claims": [
+    "No exhaustive repository-wide semantic audit.",
+    "No independent primary-text verification.",
+    "No actual-world duty inferred from declared schemas.",
+    "No protected writes, external uploads, new mathematics, or historical philosophical hold promoted into a current conclusion."
+  ]
+}

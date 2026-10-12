@@ -1,0 +1,667 @@
+{
+  "schema": "t20-evidence-transport-typed-dependencies-v1",
+  "status": "bounded consolidation record clarification; no new research or material-claim change",
+  "created_utc": "2026-10-11T12:08:02.436325+00:00",
+  "material_claims_file": "MATERIAL_CLAIMS.json",
+  "material_claims_sha256": "6eff9757961075545ca3a043c67f211ea2d3778abb67cc5682ecde3de1269fa2",
+  "direction": "source is the claim being explained; target is the claim/owner it references. Type determines whether this is proof use, application, ancestry, currentness, evidence or comparison. A source-to-target arrow is not blanket target-implies-source.",
+  "type_definitions": {
+    "formal_dependency": "A stated component uses a mathematical construction/lemma or proof data of the target; all additional hypotheses in the justification and claims remain required. It is not unconditional entailment of the entire source claim.",
+    "methodological_ancestry": "Inherited mechanism or explicitly credited predecessor; no direct formal entailment claimed.",
+    "concrete_application": "The source applies the target model/interface in a distinct declared setting; interpretation and added hypotheses are substantive.",
+    "semantic_application_boundary": "The application needs source/content/cognitive semantics owned elsewhere; the numerical/formal result does not supply actual warrant.",
+    "scope_extension": "An expanded operation/model contract with its own proof; predecessor remains valid at original scope.",
+    "scope_counterexample": "A counterexample prevents an inference from the target contract to a stronger one; not a refutation of the target at its stated hypotheses.",
+    "quantitative_extension": "A separately proved approximate analogue with explicit error/range/horizon assumptions.",
+    "complementary_assumptions": "A positive theorem under stronger/different premises; not derived from the comparative negative theorem.",
+    "shared_interface": "Shared definitions or state/instrument contract without dependence on the target conclusion.",
+    "scope_distinction": "Different mathematical/semantic operations must remain distinct; no entailment.",
+    "comparative_crossreference": "Navigation/comparison only, including a reverse link to a later successor; not a premise or ancestry assertion.",
+    "implementation_realisation": "Separately owned source implementation/realization of a declared abstract contract; does not infer host adoption or omitted bridges.",
+    "conditional_composition": "Components compose only when the additional shared-state/parameter/operator conditions are met; no unrestricted transport.",
+    "same_claim_crossreference": "Two records account for the same underlying result or different views of it; not independent corroboration.",
+    "completed_positive_successor": "A later constructive result addresses a preceding negative/interface boundary; completion/currentness relation rather than backwards proof dependence.",
+    "evidence_qualification": "Another track binds exact source/version/evidence limits; test/status evidence is not a mathematical premise.",
+    "implementation_evidence": "Bound implementation behavior or finite test evidence; neither a proof of the universal statement nor repository adoption."
+  },
+  "coverage": {
+    "original_bare_internal_edges": 35,
+    "classified_original_edges": 35,
+    "total_edges": 70,
+    "formal_dependency_subset_acyclic": true,
+    "all_original_bare_edges_classified": true,
+    "qualification": "Reverse comparative links and completed-successor references can coexist with forward ancestry. Only the formal_dependency subset is asserted to be a proof-use DAG."
+  },
+  "edges": [
+    {
+      "id": "EDGE-ET-001",
+      "source": "ET-01",
+      "target": "ET-02",
+      "type": "formal_dependency",
+      "justification": "The reset-containing fixed-root result specializes independent named-reset continuation: informative roots are exactly the essential coordinates under the positive model. The stronger activation-only and withdrawal-only claims have their own direct proofs; they do not follow from assuming the larger reset alphabet. The reviewer’s one-step strengthening is also separately proved.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-02"
+    },
+    {
+      "id": "EDGE-ET-002",
+      "source": "ET-03",
+      "target": "ET-01",
+      "type": "scope_extension",
+      "justification": "The joint-history audit problem extends the predecessor fixed accepted-factor store, whose text already excludes informative selection. The deletion iff follows directly from Bayes and does not use the root-membership minimum as a proof premise.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-01"
+    },
+    {
+      "id": "EDGE-ET-003",
+      "source": "ET-04",
+      "target": "ET-03",
+      "type": "formal_dependency",
+      "justification": "The proper-score component applies conditional Jensen/Bregman identities to ET-03’s full-history Q and audit-coarsened R. The null-audit perturbation component has its own direct construction and is not deduced from the deletion criterion.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-03"
+    },
+    {
+      "id": "EDGE-ET-004",
+      "source": "ET-05",
+      "target": "ET-05A",
+      "type": "formal_dependency",
+      "justification": "The historical lift uses B M_a=T_a B and the target/mass readouts supplied by the inherited predictive quotient. Tensoring with historical slots yields the mixed-operation transport; exactness additionally needs the declared spanning ratio tests and fixed version frame.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-05A"
+    },
+    {
+      "id": "EDGE-ET-005",
+      "source": "ET-05A",
+      "target": "ET-03",
+      "type": "concrete_application",
+      "justification": "The source-audit countermodel is realized as an explicit finite instrument and reduced to target/audit joint masses. The generic invariant-span theorem is inherited from H-Continuation, not derived from the source-audit example.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-03"
+    },
+    {
+      "id": "EDGE-ET-006",
+      "source": "ET-06",
+      "target": "ET-05A",
+      "type": "shared_interface",
+      "justification": "The posterior-only comparison uses the same finite instrument, target and impossible-branch definitions. Its paired cross-product proof is separate from the probability-plus-posterior linear quotient theorem, so no full predictive minimum is imported.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-05A"
+    },
+    {
+      "id": "EDGE-ET-007",
+      "source": "ET-07",
+      "target": "ET-06",
+      "type": "scope_counterexample",
+      "justification": "The ternary fixture satisfies the all-word posterior/status equivalence defined in ET-06 while changing expected query value. It refutes a stronger transport inference; it does not refute posterior-only equivalence.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-06"
+    },
+    {
+      "id": "EDGE-ET-008",
+      "source": "ET-08",
+      "target": "ET-02",
+      "type": "methodological_ancestry",
+      "justification": "The finite strong joint-kernel refinement is an extension/integration of operation-relative continuation discipline beyond the full Boolean reset domain. Its partition-refinement proof is independent and does not assume independent resets.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-02"
+    },
+    {
+      "id": "EDGE-ET-009",
+      "source": "ET-09",
+      "target": "ET-08",
+      "type": "formal_dependency",
+      "justification": "Dynamic sidecar minimum uses the coarsest strong contract partition from ET-08. Pigeonhole separation within each retained fibre supplies the lower bound and per-fibre label reuse attains it.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-08"
+    },
+    {
+      "id": "EDGE-ET-010",
+      "source": "ET-09",
+      "target": "ET-12",
+      "type": "formal_dependency",
+      "justification": "Only the static audit-profile component uses universal full-evidence likelihood factorization: singleton factors force distinct profiles to be distinguished, and matching profiles preserve products/inverses. This is not a premise of the dynamic D2 theorem.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-12"
+    },
+    {
+      "id": "EDGE-ET-011",
+      "source": "ET-10",
+      "target": "ET-08",
+      "type": "formal_dependency",
+      "justification": "Representative-independent joint outcome/next-block rows from stable refinement define the quotient; finite-history and Bellman induction then transport the declared policies/readouts. Eventual reachability uses increasing union.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-08"
+    },
+    {
+      "id": "EDGE-ET-012",
+      "source": "ET-11",
+      "target": "ET-10",
+      "type": "quantitative_extension",
+      "justification": "The finite-horizon bound compares the same lawful finite Bellman contract under explicit cost and joint-kernel errors. Its TV recurrence is proved directly; it does not follow merely by perturbing exact preservation or extend it to an infinite horizon.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-10"
+    },
+    {
+      "id": "EDGE-ET-013",
+      "source": "ET-12",
+      "target": "ET-05A",
+      "type": "methodological_ancestry",
+      "justification": "Both results instantiate inherited fibre/operation sufficiency. Universal likelihood factorization is proved directly with point masses and is not a consequence of a particular computed predictive B quotient.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-05A"
+    },
+    {
+      "id": "EDGE-ET-014",
+      "source": "ET-13",
+      "target": "ET-11",
+      "type": "complementary_assumptions",
+      "justification": "Uniform relative/log likelihood error gives a positive stability result beside the absolute-error rare-event obstruction. The sharp ratio proof is independent; ET-11 is comparative motivation rather than a premise.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-11"
+    },
+    {
+      "id": "EDGE-ET-015",
+      "source": "ET-13",
+      "target": "ET-12",
+      "type": "shared_interface",
+      "justification": "The distinction between posterior shape and predictive normalizer uses the full-evidence reweighting contract of ET-12. The sharp TV inequality itself is a direct measure-theoretic argument.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-12"
+    },
+    {
+      "id": "EDGE-ET-016",
+      "source": "ET-14",
+      "target": "ET-05",
+      "type": "scope_distinction",
+      "justification": "Historical factor reassessment is distinguished from counterfactual recomputation of source-dependent dynamics. The shared origin/version discipline motivates their composition, but the DAG theorem does not logically depend on the historical tensor theorem.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-05"
+    },
+    {
+      "id": "EDGE-ET-017",
+      "source": "ET-14",
+      "target": "ET-12",
+      "type": "formal_dependency",
+      "justification": "The historical-reweighting component uses likelihood transport through the retained old map/kernel when reconstructing an evolved state. The field-change sensitivity and deterministic DAG induction remain separate proofs with their own hypotheses.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-12"
+    },
+    {
+      "id": "EDGE-ET-018",
+      "source": "ET-15",
+      "target": "ET-03",
+      "type": "concrete_application",
+      "justification": "The coupled credal construction applies source/audit revision to a family of coherent joint models. Classical finite-vertex conditioning has its own proof and does not require the earlier particular randomizer/verifier fixture.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-03"
+    },
+    {
+      "id": "EDGE-ET-019",
+      "source": "ET-15",
+      "target": "ET-05",
+      "type": "formal_dependency",
+      "justification": "Only the composed historical-revision section uses E=B⊗I_H and its intertwining to propagate coupled sufficient joint records. The basic vertex theorem holds without that chosen quotient.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-05"
+    },
+    {
+      "id": "EDGE-ET-020",
+      "source": "ET-16",
+      "target": "ET-12",
+      "type": "formal_dependency",
+      "justification": "Audit conjugacy retains a model-specific conditional factor and separate original normalizer; branchwise likelihood equivalence uses proportional positive factors. This supports the positive belief-coordinate instrument, not a context-free hidden-state likelihood claim.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-12"
+    },
+    {
+      "id": "EDGE-ET-021",
+      "source": "ET-16",
+      "target": "ET-15",
+      "type": "scope_counterexample",
+      "justification": "The nonlinear image controls mark the failure of extending the common-linear normalized vertex rule to geometric correction. The classical theorem is unchanged; the power-reaction map violates its linear-map hypothesis.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-15"
+    },
+    {
+      "id": "EDGE-ET-022",
+      "source": "ET-17",
+      "target": "ET-07",
+      "type": "scope_counterexample",
+      "justification": "The earlier missing-frequency obstruction motivates preserving inquiry values; the new fixed-model obstruction persists with equal branch frequencies. Neither theorem is used to infer the other numerical counterexample.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-07"
+    },
+    {
+      "id": "EDGE-ET-023",
+      "source": "ET-17",
+      "target": "ET-10",
+      "type": "formal_dependency",
+      "justification": "For its quotient-transport component, preserving every model’s branch law, costs and lawful information-policy class preserves every coordinate of each policy-loss vector. Known-kernel Bellman optimality alone is not a robust Bellman theorem.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-10"
+    },
+    {
+      "id": "EDGE-ET-024",
+      "source": "ET-17",
+      "target": "ET-15",
+      "type": "formal_dependency",
+      "justification": "The exact L fixture is inherited, and initial-joint-law affine/vertex evaluation supplies the finite model coordinates under a common instrument. Same-model branch coupling must be retained; no reused-unknown-kernel vertex theorem is inferred.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-15"
+    },
+    {
+      "id": "EDGE-ET-025",
+      "source": "ET-17",
+      "target": "ET-16",
+      "type": "concrete_application",
+      "justification": "The reviewed inverse-readout belief-coordinate repair transports each model’s path law and losses, hence the vector optimization. It does not eliminate nonrectangularity or change the private-randomness/commitment contract.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-16"
+    },
+    {
+      "id": "EDGE-ET-026",
+      "source": "ET-18",
+      "target": "ET-02",
+      "type": "methodological_ancestry",
+      "justification": "Future-sensitive support/guard distinctions motivate retaining output-specific dependencies. The 33 controls inspect actual declarations and calls; they do not apply a Boolean-state minimum to an actual person’s warrant.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-02"
+    },
+    {
+      "id": "EDGE-ET-027",
+      "source": "ET-18",
+      "target": "ET-09",
+      "type": "semantic_application_boundary",
+      "justification": "The finite sidecar contract can represent supplied differences in grounds and justified challenge scopes. It neither supplies those grounds nor yields a numerical minimum warrant bit count; no such finite calibrated human-state model is established.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-09"
+    },
+    {
+      "id": "EDGE-ET-028",
+      "source": "ET-18",
+      "target": "ET-14",
+      "type": "concrete_application",
+      "justification": "Source-bound consumed-premise scopes implement selective revalidation rather than all-or-nothing replay. The application requires complete supported dependencies; it diagnoses what needs checking, not what is false or defeated.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-14"
+    },
+    {
+      "id": "EDGE-ET-029",
+      "source": "ET-19",
+      "target": "ET-08",
+      "type": "formal_dependency",
+      "justification": "For finite rational holding times, enlarge the outcome alphabet to D×O; the same strong joint-mass refinement proof yields the coarsest timed partition. General measure equality is an additional effectiveness issue.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-08"
+    },
+    {
+      "id": "EDGE-ET-030",
+      "source": "ET-19",
+      "target": "ET-09",
+      "type": "formal_dependency",
+      "justification": "Once the timed coarsest partition is fixed, the identical per-fibre pigeonhole construction supplies the timed sidecar alphabet/bit minimum. It is an application of D2, not a new coding theorem.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-09"
+    },
+    {
+      "id": "EDGE-ET-031",
+      "source": "ET-19",
+      "target": "ET-10",
+      "type": "formal_dependency",
+      "justification": "Finite timed prefixes use the same matched conditional-kernel induction. Full bounded-horizon path/cost preservation additionally requires retained deterministic interpolation, no-event semantics, non-explosion and the stated integrability.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-10"
+    },
+    {
+      "id": "EDGE-ET-032",
+      "source": "ET-20",
+      "target": "ET-03",
+      "type": "methodological_ancestry",
+      "justification": "Both source-specific controls preserve target-sensitive joint interactions rather than deleting or multiplying marginal factors. The sharp calibrated three-witness bounds use their own correctness-table derivation; ET-03’s particular audit model is not a premise.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-03"
+    },
+    {
+      "id": "EDGE-ET-033",
+      "source": "ET-20",
+      "target": "ET-15",
+      "type": "comparative_crossreference",
+      "justification": "This bare register link is comparative, not chronological or logical dependence: the calibrated corroboration owner precedes the coupled-credal report. Both distinguish exact compatible joint families from insufficient projected summaries.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-15"
+    },
+    {
+      "id": "EDGE-ET-034",
+      "source": "ET-20A",
+      "target": "ET-20",
+      "type": "formal_dependency",
+      "justification": "The supplement reuses the within-truth inclusion-exclusion cell formula separately for t0 and t1, preserving the sharp bound while removing the cross-truth symmetry premise. Its unlabelled identification statement is deliberately different.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-20"
+    },
+    {
+      "id": "EDGE-ET-035",
+      "source": "ET-22",
+      "target": "ET-08",
+      "type": "comparative_crossreference",
+      "justification": "D5’s smooth all-objectives quotient criterion is assembled beside D1’s finite stochastic contract in the Pro synthesis. Its local-section/coordinate-objective proof does not depend on finite partition refinement.",
+      "present_in_original_bare_dependency_array": true,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-08"
+    },
+    {
+      "id": "EDGE-ET-036",
+      "source": "ET-15",
+      "target": "ET-20",
+      "type": "methodological_ancestry",
+      "justification": "The coupled-credal owner explicitly inherits missing truth-sensitive interaction and sharp partial-identification ancestry from pairwise corroboration. This is the chronological ancestry direction; the reverse ET-20 link is only comparison.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "evidence/MATERIAL_CLAIMS.json#ET-20"
+    },
+    {
+      "id": "EDGE-ET-037",
+      "source": "ET-05A",
+      "target": "H-Continuation:Theorem-2",
+      "type": "formal_dependency",
+      "justification": "The invariant observable span, linear intertwining, probability/numerator readouts and full-simplex continuous-coordinate lower bound are inherited from H-Continuation. The audit packet adds concrete model transport and posterior-only comparison.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "Inherited owner named in relevant ET canonical source; no new external source reading"
+    },
+    {
+      "id": "EDGE-ET-038",
+      "source": "ET-07",
+      "target": "H-ICS:feasible-support-fibre-factorization",
+      "type": "methodological_ancestry",
+      "justification": "The positive-fibre row-span iff is inherited linear fibre/difference-space reasoning applied to fixed-audit expected utility. On restricted families the actual feasible difference span replaces the full kernel.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "Inherited owner named in relevant ET canonical source; no new external source reading"
+    },
+    {
+      "id": "EDGE-ET-039",
+      "source": "ET-17",
+      "target": "H-Continuation:Theorem-2c",
+      "type": "formal_dependency",
+      "justification": "Pointwise branch-weighted value preservation for each fixed lawful policy supplies the coordinatewise foundation. Root minimax and private policy mixing are additional fixed-model constructions.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "Inherited owner named in relevant ET canonical source; no new external source reading"
+    },
+    {
+      "id": "EDGE-ET-040",
+      "source": "ET-01",
+      "target": "FND-034",
+      "type": "semantic_application_boundary",
+      "justification": "Root-aware operational distinguishability does not itself establish actual cognitive basing or a psychological state representation.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-034"
+    },
+    {
+      "id": "EDGE-ET-041",
+      "source": "ET-03",
+      "target": "FND-026",
+      "type": "semantic_application_boundary",
+      "justification": "The declared probabilistic audit model does not retract the source-owned affirmative appraisal that heterogeneous warranted indications can jointly discriminate. Actual joint grounds must be supported in their own right.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-026"
+    },
+    {
+      "id": "EDGE-ET-042",
+      "source": "ET-15",
+      "target": "FND-026",
+      "type": "semantic_application_boundary",
+      "justification": "Credal calibration/coupling is a representation premise for numerical uncertainty, not a prerequisite newly imposed on all cumulative human knowledge.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-026"
+    },
+    {
+      "id": "EDGE-ET-043",
+      "source": "ET-20",
+      "target": "FND-026",
+      "type": "semantic_application_boundary",
+      "justification": "The pairwise-calibrated countermodels test a restricted numerical inference and do not identify or defeat an actual cumulative source argument.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-026"
+    },
+    {
+      "id": "EDGE-ET-044",
+      "source": "ET-12",
+      "target": "FND-027",
+      "type": "semantic_application_boundary",
+      "justification": "Formal transport of an indicated source is separate from the source-owned grounds for identifying a producer or recognizing confirming context; calibration is not source production.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-027"
+    },
+    {
+      "id": "EDGE-ET-045",
+      "source": "ET-03",
+      "target": "FND-030",
+      "type": "semantic_application_boundary",
+      "justification": "Changing a report’s numerical likelihood is not by itself an authenticated failure of reporting veracity. Actual attribution, content and reporting-domain inclusion remain source-specific premises.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-030"
+    },
+    {
+      "id": "EDGE-ET-046",
+      "source": "ET-09",
+      "target": "FND-031",
+      "type": "semantic_application_boundary",
+      "justification": "Exact fibres preserve a declared target; they do not choose the proper commissioned-content target or infer perpetual access from original explanatory success.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-031"
+    },
+    {
+      "id": "EDGE-ET-047",
+      "source": "ET-18",
+      "target": "FND-033",
+      "type": "same_claim_crossreference",
+      "justification": "FND-033 owns the affirmative/source interpretation and includes Pro H’s complete-live-witness scope; ET-18 records the corresponding exact declaration/call revalidation controls. The duplicate view is not independent proof.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-033"
+    },
+    {
+      "id": "EDGE-ET-048",
+      "source": "ET-22",
+      "target": "FND-034",
+      "type": "semantic_application_boundary",
+      "justification": "A projectable numerical gradient is not a demonstrated cognitive geometry or warranted-learning mechanism.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-034"
+    },
+    {
+      "id": "EDGE-ET-049",
+      "source": "ET-21",
+      "target": "FND-034",
+      "type": "semantic_application_boundary",
+      "justification": "DAEE structural conformance and the preserved runtime/interlocutor distinction cannot authenticate an actual knowledge, willingness or recovery episode.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "foundations/FOUNDATIONAL_CLAIMS.json#FND-034"
+    },
+    {
+      "id": "EDGE-ET-050",
+      "source": "ET-09",
+      "target": "PT-16",
+      "type": "semantic_application_boundary",
+      "justification": "Erased-J proof uniqueness prevents treating equal typed proof slots as distinguishable provenance labels. Ordinary separately represented sidecar data has a different type/observation contract.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "proofs/PROOF_TYPE_INQUIRY_CLAIMS.json#PT-16"
+    },
+    {
+      "id": "EDGE-ET-051",
+      "source": "ET-09",
+      "target": "PT-19",
+      "type": "implementation_realisation",
+      "justification": "PT-19 owns an actual original-Has implementation of supplied finite deterministic tables and its literal source observations. The abstract minimum does not itself construct or authenticate that implementation.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "proofs/PROOF_TYPE_INQUIRY_CLAIMS.json#PT-19"
+    },
+    {
+      "id": "EDGE-ET-052",
+      "source": "ET-10",
+      "target": "PT-20",
+      "type": "implementation_realisation",
+      "justification": "PT-20 realizes finite rational joint reply/next-state rows with explicit seeds and separates deterministic Lean adequacy from external conditional seed-mass requirements. This is a concrete implementation interface for the abstract contract.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "proofs/PROOF_TYPE_INQUIRY_CLAIMS.json#PT-20"
+    },
+    {
+      "id": "EDGE-ET-053",
+      "source": "ET-19",
+      "target": "PT-20",
+      "type": "conditional_composition",
+      "justification": "A finite timed alphabet can be included in the joint reply label of the rational-kernel source contract, provided all timing/outcome/next-state masses and seed conditions are preserved. This does not assert an already-proved arbitrary-measure or host/serialization bridge.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "proofs/PROOF_TYPE_INQUIRY_CLAIMS.json#PT-20"
+    },
+    {
+      "id": "EDGE-ET-054",
+      "source": "ET-22",
+      "target": "GEO-08",
+      "type": "comparative_crossreference",
+      "justification": "Finite-dimensional fibre-constant induced cometric and law-level canonical coisometry concern different state spaces/tangent geometries. Their shared projectability mechanism does not make their hypotheses or prescribed metrics interchangeable.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-08"
+    },
+    {
+      "id": "EDGE-ET-055",
+      "source": "ET-16",
+      "target": "GEO-10",
+      "type": "scope_distinction",
+      "justification": "Actual full fixed-marginal KL correction changes beliefs with a constrained full-law geometry. The inverse-readout coordinate repair must not be substituted for that semantic operation or claimed to prove its flow theorem.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-10"
+    },
+    {
+      "id": "EDGE-ET-056",
+      "source": "ET-09",
+      "target": "GEO-13",
+      "type": "scope_distinction",
+      "justification": "A finite sidecar alphabet says nothing about minimum-action paths between singular laws. GEO-13’s variational existence and whole-marginal constraints remain a separate mathematical contract.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-13"
+    },
+    {
+      "id": "EDGE-ET-057",
+      "source": "ET-14",
+      "target": "GEO-16",
+      "type": "conditional_composition",
+      "justification": "Universal singleton audit covariance supplies a positive no-replay case when audits leave the declared labelled dynamics and required parameters invariant. It does not identify historical reconstruction with recomputation after an actual field change.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-16"
+    },
+    {
+      "id": "EDGE-ET-058",
+      "source": "ET-14",
+      "target": "GEO-17",
+      "type": "scope_distinction",
+      "justification": "Fixed-group audits allow internal group dependence forbidden by the singleton classification. The replay/audit interface must specify its actual audit family rather than applying the strongest singleton result indiscriminately.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-17"
+    },
+    {
+      "id": "EDGE-ET-059",
+      "source": "ET-14",
+      "target": "GEO-18",
+      "type": "conditional_composition",
+      "justification": "The positive high-order correction commutes with a fixed audit under unchanged V, method order and step parameters. Source-dependent changes of those ingredients invoke the separate recomputation contract.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-18"
+    },
+    {
+      "id": "EDGE-ET-060",
+      "source": "ET-14",
+      "target": "GEO-19",
+      "type": "conditional_composition",
+      "justification": "Withdrawal may invalidate an effective tail certificate while leaving the probability law valid. GEO-19 supplies the exact budget and the already-established positive-time repair; a new calculation must revalidate that certificate rather than infer impossible continuation.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-19"
+    },
+    {
+      "id": "EDGE-ET-061",
+      "source": "ET-13",
+      "target": "GEO-20",
+      "type": "scope_distinction",
+      "justification": "Posterior TV stability and Fisher path-length preservation are different guarantees. GEO-20 requires two-sided likelihood bounds for its bi-Lipschitz transport; exact audit commutation or a one-sided bound alone does not supply it.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#GEO-20"
+    },
+    {
+      "id": "EDGE-ET-062",
+      "source": "ET-17",
+      "target": "MOM-11",
+      "type": "completed_positive_successor",
+      "justification": "MOM-11 already repairs the declared two-trial reused-calibration path-law representation with an exact two-moment feasible body, while preserving the third-trial failure. This is not an open requirement to rediscover a finite description.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#MOM-11"
+    },
+    {
+      "id": "EDGE-ET-063",
+      "source": "ET-16",
+      "target": "MOM-11",
+      "type": "comparative_crossreference",
+      "justification": "An infinitely exposed/nonpolytope image does not exclude a finite-dimensional exact nonlinear or moment description. MOM-11 gives a positive example in its separate two-trial family, not a general nonlinear-image theorem.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "geometry/GEOMETRY_MOMENTS_CLAIMS.json#MOM-11"
+    },
+    {
+      "id": "EDGE-ET-064",
+      "source": "ET-12",
+      "target": "pro-synthesis:A-B",
+      "type": "same_claim_crossreference",
+      "justification": "The Pro qualification identifies the same recovered A/B written proofs and full-evidence boundary; it is not an additional independent theorem.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#A-B"
+    },
+    {
+      "id": "EDGE-ET-065",
+      "source": "ET-09",
+      "target": "pro-synthesis:C",
+      "type": "same_claim_crossreference",
+      "justification": "Recovered C is the static audit-profile specialization, not a replacement of dynamic D2; its source/version qualification is owned in the Pro track.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#C"
+    },
+    {
+      "id": "EDGE-ET-066",
+      "source": "ET-13",
+      "target": "pro-synthesis:D-joined",
+      "type": "evidence_qualification",
+      "justification": "The Pro track binds recovered D and joined evidence/geometry claims to the supplied stage and excludes unbound reported R3 polynomial-observable claims.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#D-joined"
+    },
+    {
+      "id": "EDGE-ET-067",
+      "source": "ET-14",
+      "target": "pro-synthesis:E-F",
+      "type": "same_claim_crossreference",
+      "justification": "Both entries cover the same revision-semantics and dependency-directed-replay proof at the received source stage.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#E-F"
+    },
+    {
+      "id": "EDGE-ET-068",
+      "source": "ET-14",
+      "target": "pro-synthesis:helper-defect",
+      "type": "implementation_evidence",
+      "justification": "The original direct helper’s one-shot-Iterable failure is separately reproduced; it does not refute the complete-dependency DAG induction or the ordinary replay_dag path that materializes parents.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#helper-defect"
+    },
+    {
+      "id": "EDGE-ET-069",
+      "source": "ET-14",
+      "target": "pro-synthesis:suite-52",
+      "type": "implementation_evidence",
+      "justification": "Direct normal and optimized original 52-test executions belong to the Pro qualification; repeated byte-identical supplied stages are not separate suites.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#suite-52"
+    },
+    {
+      "id": "EDGE-ET-070",
+      "source": "ET-14",
+      "target": "pro-synthesis:suite-55",
+      "type": "implementation_evidence",
+      "justification": "The separately preserved inherited helper correction passes 55 cases, including three regressions. Its successor seal does not alter the original manifest or qualify reported R3 work.",
+      "present_in_original_bare_dependency_array": false,
+      "target_register": "pro-synthesis/CLAIMS.json#suite-55"
+    }
+  ]
+}

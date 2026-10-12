@@ -1,0 +1,24 @@
+{
+  "result": "RESULT.md",
+  "plain_language": "PLAIN_LANGUAGE_HANDOFF.md",
+  "claims": "CLAIMS.json",
+  "source_bindings": "SOURCE_BINDINGS.json",
+  "reproduction": [
+    "python -B verify.py",
+    "python -B -O verify.py"
+  ],
+  "verification": [
+    "VERIFICATION.json",
+    "VERIFICATION_OPTIMIZED.json"
+  ],
+  "independent_review": "../proof_inquiry_review/REVIEW.md",
+  "status": "Independent review accepted current RESULT.md and exact diagnostics; review currentness rebind completed.",
+  "preservation": "All inherited sources and immutable v2/v3 candidates are read-only; three imported source copies are byte-identical.",
+  "portable_reproduction": [
+    "python -B -m unittest -v",
+    "python -B -O -m unittest -v"
+  ],
+  "source_preservation_verifier_note": "verify.py additionally checks the original workspace-relative source bindings. The unit-test commands run from this folder with only its three exact inherited source copies; source integrity is then checked against MANIFEST.json rather than unbundled original paths.",
+  "accepted_result_sha256": "77ea55a74bc79c9810cac1588693c7681c1403aa0606081c955d314d2222a890",
+  "portability": "PORTABILITY.json"
+}

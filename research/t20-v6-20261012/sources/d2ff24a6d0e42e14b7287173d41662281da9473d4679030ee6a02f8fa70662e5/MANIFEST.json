@@ -1,0 +1,26 @@
+{
+  "status": "author ordinary proof and exact controls; independent review not claimed",
+  "files": [
+    {
+      "path": "CHECKS.json",
+      "bytes": 6227,
+      "sha256": "8da23b152fb6474ecc01178de4211f2c11780ce57459632ee8eec9d24d042299"
+    },
+    {
+      "path": "READ_LEDGER.json",
+      "bytes": 2159,
+      "sha256": "93fde1a269d1c4b0f68ce58602f5fb6e8c3d7e932c3daeabe8777538df75be4b"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 13362,
+      "sha256": "d91e0dfb49154a17ca8173d7a344b3aae51ae0e02aea843b092d29bc26010323"
+    },
+    {
+      "path": "check_exact.py",
+      "bytes": 3051,
+      "sha256": "4e6d2fe892cf28c4cff57613adf352bdd88a85f4209c76ae907ac4a8b57dad12"
+    }
+  ],
+  "prose_revision": "Explicit nonempty Q premise added to finite fibre minimum after independent review; no control replay claimed for this prose-only change."
+}

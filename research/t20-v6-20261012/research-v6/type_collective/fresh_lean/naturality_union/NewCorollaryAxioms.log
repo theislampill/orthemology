@@ -1,0 +1,3 @@
+'source_naturality_fails' depends on axioms: [propext, Classical.choice, Quot.sound]
+'graph_projection_bridges_not_jointly_inhabited' depends on axioms: [propext, Classical.choice, Quot.sound]
+'literal_identity_has_no_internal_negation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-12T15:40:18.254694+00:00",
+  "status": "FINITE_HELD_INPUT_SCOPE_QUALIFIED_WITH_EXPLICIT_UNAVAILABLE_AND_ROLE_LIMITS",
+  "physical_axes": {
+    "RECOVERED_SOURCE_INPUT": 27839,
+    "CURRENT_V6_OUTPUT_ARTIFACT": 17,
+    "EXTERNAL_REPLAY_EVIDENCE_INPUT": 84
+  },
+  "input_scope_categories": {
+    "QUALIFIED_ROLE_ONLY": 15284,
+    "EXACT_COMPLETE_BODY": 10407,
+    "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION": 1217,
+    "COMPOSITE_EXPLICIT_READING_RANGES": 75,
+    "COMPLETE_BASELINE_AND_DELTA": 718,
+    "EXACT_WHOLE_BODY_DERIVATION_REUSE": 127,
+    "COMPLETE_VISUAL_BODY_EXAMINATION": 4,
+    "BOUNDED_PRIMARY_CONTAINER_AND_EXACT_EXCERPT_SCOPE": 7
+  },
+  "registered_result_families": 330,
+  "registered_source_ids": 2589,
+  "former_reference_only_results": {
+    "early": 20,
+    "later": 169,
+    "all_with_current_owner_findings": 189
+  },
+  "initial_deduplicated_candidate_lineages": 11584,
+  "all_candidate_variants_body_or_role_qualified": true,
+  "pending_held_input_scope_exceptions": 0,
+  "current_output_axis_warning": "17 output artifacts encountered in this specific input census, not all v6 outputs. Five selected/reference output scopes remain unpromoted.",
+  "source_id_availability": {
+    "with_held_original_or_public_counterpart": 2581,
+    "with_held_original_identity": 2447
+  },
+  "evidence": [
+    {
+      "path": "corpus/admission/TERMINAL_PHYSICAL_SCOPE_OVERLAY.jsonl",
+      "sha256": "a232a26b63de7235a6504211c012a0cd1112c158a0c3b3827075b97b8bd8b919"
+    },
+    {
+      "path": "corpus/admission/TERMINAL_SOURCE_UNIT_SCOPE_OVERLAY.jsonl",
+      "sha256": "9c3f580a8115ccd36fb3e2b478898648719d3924d587d59d96a75842f4d0bebe"
+    },
+    {
+      "path": "corpus/admission/TERMINAL_SCOPE_SUMMARY.json",
+      "sha256": "a9a6490acdd971baa909a65f6680ff3a82d4b071e49314ee8769f3804e971fed"
+    },
+    {
+      "path": "corpus/admission/FINAL_REGISTERED_RESULT_DISPOSITIONS.json",
+      "sha256": "c49f2834226391d11e4f1ed6f7935d725e8b6bfd8d5517d523088c9c994d4032"
+    },
+    {
+      "path": "corpus/admission/FINAL_REGISTERED_SOURCE_SCOPE_DISPOSITIONS.json",
+      "sha256": "668b1aa03927a0624aa7ddd10807e62da2dc3af25f2222928352b8b026683855"
+    },
+    {
+      "path": "corpus/admission/FINAL_REFERENCE_ONLY_189_RECONCILIATION.json",
+      "sha256": "da49359303b3fbcc9f6b9a92e6c115f040690ba3a55d75f9aa2e9d0df6c4756e"
+    },
+    {
+      "path": "corpus/admission/FINAL_FAMILY_DEPENDENCY_CURRENTNESS.json",
+      "sha256": "cc1e0200cc30513e80b05600461a19926c254fc9fee4f286a3e534f662980494"
+    },
+    {
+      "path": "corpus/admission/FINAL_UNAVAILABLE_AND_SCOPED_LIMITS.json",
+      "sha256": "1708a30a503591b0fb7662d1f890ee26829a006686d5c70ed364b27829ef0f27"
+    },
+    {
+      "path": "corpus/admission/FINAL_CORPUS_ADEQUACY_REPORT.md",
+      "sha256": "64f9f2f5ad5a20e4fe4f118d8f05dce53891e86cacf418268d6bf81b58dddc2c"
+    },
+    {
+      "path": "early_remaining/physical_denominator_roles/ROLE_AUDIT_308.json",
+      "sha256": "b02e44e46d3debb3dfc2e3b3b1767221fe6ab7980067696e8fec2039658cfa10"
+    },
+    {
+      "path": "root_math/guarded_kernel_variants/INTAKE_CURRENTNESS_REPAIR.json",
+      "sha256": "92d9c3b9411f00976012ac228e0521965cec780b2804684edac515e8a820ed79"
+    },
+    {
+      "path": "type_collective/intake_currentness_repair/RECEIPT.json",
+      "sha256": "7288b0ae1859d32aa9858417593125e774b6e4109973fe43153cf67fd06b182c"
+    },
+    {
+      "path": "corpus/admission/terminal_classifier_reconciliation/EXACT_CASES_AFTER.json",
+      "sha256": "d366fac6850bf7c5cb0421845a86539985b4e9d3dfcb8096a0672df884786135"
+    }
+  ],
+  "meaning": "Finite scoped examination conclusion based on explicit owner evidence and content-role reconciliation, not hash association, universal mathematical validity, full primary literature, successful execution, or distribution permission."
+}

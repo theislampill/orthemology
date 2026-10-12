@@ -1,0 +1,71 @@
+{
+  "classification": "EIGHTH_CHECKPOINT_DECLARED_PORTABLE_CONTROLS",
+  "commands": [
+    {
+      "id": "adaptive-author",
+      "script": "t20-next-frontier-20261008/adaptive-two-face-corollary/controls.py",
+      "script_sha256": "e7bdd3186d70b1ac3f44d95a1d3f3501230045c7f477476444b7aa540336c289",
+      "generated_outputs": [],
+      "stdout_target": "t20-next-frontier-20261008/adaptive-two-face-corollary/CONTROLS_OUTPUT.json",
+      "evidence_kind": "Exact rational proxy identities plus high-precision Joe/screening diagnostics. Finite checks do not prove the continuous-kernel or stopping theorem."
+    },
+    {
+      "id": "adaptive-independent",
+      "script": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/independent_controls.py",
+      "script_sha256": "45ac42f56b4ccacec48acaba57c289a456176b98b481faa0085802649247c648",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/adaptive-two-face-corollary-review/CONTROL_RESULTS.json"
+      ],
+      "stdout_target": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/CONTROL_RESULTS.json",
+      "evidence_kind": "Independent rational and finite high-precision controls, hidden-action negative control, adaptive stopping tree and free-screening cost boundary."
+    },
+    {
+      "id": "adaptive-review-bindings",
+      "script": "t20-next-frontier-20261008/adaptive-two-face-corollary-review/verify_review.py",
+      "script_sha256": "2b27f603be0ff6d9468c8d28b081a3584cf15eac3a50806a445eac1fadb74a3d",
+      "generated_outputs": [],
+      "stdout_target": null,
+      "evidence_kind": "Original read-only verifier of 18 included author, review and directly read ancestry bindings; no predecessor full-verifier or source-body replay.",
+      "stdout_json_checks": {
+        "status": "PASS",
+        "count": 18
+      }
+    },
+    {
+      "id": "tensor-author",
+      "script": "t20-next-frontier-20261008/qualitative-tensor-transport/controls.py",
+      "script_sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/qualitative-tensor-transport/CONTROL_RESULTS.json"
+      ],
+      "stdout_target": "t20-next-frontier-20261008/qualitative-tensor-transport/RUN_OUTPUT.json",
+      "evidence_kind": "553359 exact finite assertions. General correctness belongs to written structural induction, not assertion counts."
+    },
+    {
+      "id": "tensor-independent",
+      "script": "t20-next-frontier-20261008/qualitative-tensor-transport-review/independent_probes.py",
+      "script_sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_PROBE_RESULTS.json"
+      ],
+      "stdout_target": "t20-next-frontier-20261008/qualitative-tensor-transport-review/INDEPENDENT_RUN_OUTPUT.json",
+      "evidence_kind": "393050 separate exact adversarial assertions; no import of author evaluator. Completed finite extensional semantics only."
+    },
+    {
+      "id": "tensor-reviewed-snapshot",
+      "script": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/controls.py",
+      "script_sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/CONTROL_RESULTS.json"
+      ],
+      "stdout_target": "t20-next-frontier-20261008/qualitative-tensor-transport-review/reviewed_snapshot/RUN_OUTPUT.json",
+      "evidence_kind": "Exact duplicate reviewed author snapshot rerun for byte assurance; zero additional independent mathematical, source or discovery credit."
+    }
+  ],
+  "unique_program_contents": 5,
+  "duplicate_snapshot_runs": 1,
+  "execution_policy": "Only disposable copies; never write into frozen archive payloads. Assertions enabled. No network or package install.",
+  "source_dependent_programs_not_run": [
+    "t20-next-frontier-20261008/existential-law-source-bridge/sources/extract_received.py"
+  ]
+}

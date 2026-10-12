@@ -1,0 +1,80 @@
+{
+  "target_path": "t20-v6-20261011/root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md",
+  "target_sha256": "aeb9692cdf69625fdb3edb271a6244d64f041f8796d8698784004c207936bdde",
+  "target_read_scope": "complete body",
+  "target_lines": 65,
+  "verdict": "accepted_as_ordinary_necessary_bound_with_exact_zero_error_endpoint",
+  "controlling_sources": [
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/62/626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "read_status": "fresh_selected_body_read",
+      "read_ranges": [
+        [
+          1,
+          235
+        ],
+        [
+          380,
+          440
+        ],
+        [
+          600,
+          649
+        ]
+      ],
+      "prior_scope": "Other workers report broader/full reading; that is not claimed as this reviewer full reading.",
+      "consequential_sections": "Theorem 1 exact moment defect; Proposition 4 approximate Walsh bound; Proposition 9 exact continuous augmentation."
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/graph_continuation/APPROXIMATE_GRAPH_APPLICATION.md",
+      "sha256": "5893c883f6e9fa0e30333c5aa10c4952e63d87c0ee3c4252b77285b4a21de568",
+      "read_status": "fresh_complete_secondary_argument_read",
+      "read_ranges": [
+        [
+          1,
+          62
+        ]
+      ],
+      "limit": "Graph-accessibility premise inherited from owning worker; no new graph Lean proof or enumeration here."
+    }
+  ],
+  "checks": [
+    "minimax event error implies uniform approximation distance for chi at most 2 epsilon because 1 lies in W",
+    "L2 residual sum equals trace(A)-trace(P_U A)",
+    "Ky Fan coefficient argument valid with 0<=a_j<=1 and sum a_j=k",
+    "compression of orthonormal-character projection gives spectrum in [0,1]",
+    "rank(A) equals span of residuals and quotient dimension",
+    "residual basis plus old space attains exact recovery",
+    "oblique r_A=sin(theta)(sin(theta) chi_A-cos(theta) chi_C) is orthogonal to r_B=chi_B",
+    "positive-epsilon spectral tail remains necessary only"
+  ],
+  "exact_rational_oblique_check": {
+    "cos_theta": "3/5",
+    "sin_theta": "4/5",
+    "r_A_coefficients": [
+      "16/25",
+      "0",
+      "-12/25"
+    ],
+    "r_A_norm_squared": "16/25",
+    "nonzero_eigenvalues": [
+      "1",
+      "16/25"
+    ],
+    "unit_residual_direction": [
+      "4/5",
+      "0",
+      "-3/5"
+    ],
+    "old_plus_residual_recovers_chi_A": true
+  },
+  "scope_limits": [
+    "finite full simplex",
+    "fixed linear old and new observable spaces containing constants",
+    "distinct nonempty Walsh masks with normalized uniform inner product",
+    "arbitrary decoders allowed; no approximate nonlinear encoder theorem",
+    "no sampling, bit, physical cost or acquisition-authority claim",
+    "no kernel verification or new external research"
+  ]
+}

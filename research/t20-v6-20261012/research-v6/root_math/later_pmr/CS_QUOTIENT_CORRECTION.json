@@ -1,0 +1,76 @@
+{
+  "original_raw_multi_minimum_count": 210,
+  "actual_incomparable_joint_partition_count_unrestricted": 0,
+  "first_raw_duplicate_witness": {
+    "E": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "Q": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "raw_minima": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "induced_joint_partitions": [
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "restricted_family": {
+    "E": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "Q": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "C": [
+      [
+        0,
+        1,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        1,
+        2
+      ]
+    ],
+    "both_sufficient": [
+      true,
+      true
+    ],
+    "neither_weaker": [
+      true,
+      true
+    ]
+  }
+}

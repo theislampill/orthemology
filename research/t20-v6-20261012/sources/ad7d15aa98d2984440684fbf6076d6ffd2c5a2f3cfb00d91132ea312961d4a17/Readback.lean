@@ -1,0 +1,47 @@
+import FixedTarget
+#check FixedTarget.fixed_solo_excludes_indispensable_peer
+#print axioms FixedTarget.fixed_solo_excludes_indispensable_peer
+#check FixedTarget.joint_and_solo_exact_additive
+#print axioms FixedTarget.joint_and_solo_exact_additive
+#check FixedTarget.two_fixed_solos_exact_additive
+#print axioms FixedTarget.two_fixed_solos_exact_additive
+#check FixedTarget.every_eligible_target_has_command
+#print axioms FixedTarget.every_eligible_target_has_command
+#check FixedTarget.every_nat_vector_constructive
+#print axioms FixedTarget.every_nat_vector_constructive
+#check FixedTarget.concentrate_additive_power_for_same_bearer
+#print axioms FixedTarget.concentrate_additive_power_for_same_bearer
+#check FixedTarget.equal_capacities
+#print axioms FixedTarget.equal_capacities
+#check FixedTarget.actual_additive_joint
+#print axioms FixedTarget.actual_additive_joint
+#check FixedTarget.actual_additive_fixed_solo_failure
+#print axioms FixedTarget.actual_additive_fixed_solo_failure
+#check FixedTarget.actual_additive_positive_commands
+#print axioms FixedTarget.actual_additive_positive_commands
+#check FixedTarget.each_already_has_profile_union
+#print axioms FixedTarget.each_already_has_profile_union
+#check FixedTarget.no_missing_union_capacity
+#print axioms FixedTarget.no_missing_union_capacity
+#check FixedTarget.rectangular_control_incompatible_targets
+#print axioms FixedTarget.rectangular_control_incompatible_targets
+#check FixedTarget.concordant_all_targets
+#print axioms FixedTarget.concordant_all_targets
+#check FixedTarget.saturation_cannot_force_false
+#print axioms FixedTarget.saturation_cannot_force_false
+#check FixedTarget.saturation_fixed_actual_determination
+#print axioms FixedTarget.saturation_fixed_actual_determination
+#check FixedTarget.saturation_no_actual_indispensability
+#print axioms FixedTarget.saturation_no_actual_indispensability
+#check FixedTarget.emitted_token_cnd
+#print axioms FixedTarget.emitted_token_cnd
+#check FixedTarget.neither_owns_entire_emission_process
+#print axioms FixedTarget.neither_owns_entire_emission_process
+#check FixedTarget.duplicate_ownership_rejected
+#print axioms FixedTarget.duplicate_ownership_rejected
+#check FixedTarget.outcome_guarantee_does_not_imply_entire_emission_provenance
+#print axioms FixedTarget.outcome_guarantee_does_not_imply_entire_emission_provenance
+#check FixedTarget.sufficient_as_entire_breaks_whole_target_cnd
+#print axioms FixedTarget.sufficient_as_entire_breaks_whole_target_cnd
+#check FixedTarget.entire_same_respect_excludes_two
+#print axioms FixedTarget.entire_same_respect_excludes_two

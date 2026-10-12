@@ -1,0 +1,17 @@
+# What connects proof checking, inquiry, and source revision
+
+The cheapest proof to check from scratch need not be the cheapest proof to finish now.
+
+A proof can reuse work that was already checked, but only if it is still the same valid application of the same rule to the same premises. A compiler that replaces a premise by an equivalent cheaper proof may preserve the conclusion and every source-support guard while changing a previously checked parent. That parent now needs another check. In the actual inherited normalizer, a small example lowers the from-scratch price from 14 to 12 but raises the remaining bill from 2 to 12. The best remaining bill is 1.
+
+The useful repair is simple to state. Treat each still-valid checked proof as a zero-cost reusable component with its exact source support and a pointer to its real certificate. Optimize the whole new proof around those components. This uses the existing guarded shared-proof theorem and produces a finite optimum. It does not authorize choosing the cheapest standalone child at every step; sharing can still make that strategy wrong.
+
+At one moment, the planner can summarize which exact proof states are already available for free. But source changes require more. Two caches can offer the same conclusions at the same current price yet respond differently when a rule or source is withdrawn. Keep the complete validity dependencies of the alternative proofs. Losing one route does not erase another surviving route.
+
+The next connection concerns when checking should happen. If checking always succeeds, reveals nothing, changes no permission, timing or price, and can still be performed at the end, doing it early cannot improve the declared total bill. Follow the same inquiry, then check only the proof actually needed. A written pathwise argument establishes that reduction, including source revisions when the terminal proof remains reproducible. It fails when an early checked credential unlocks an inquiry, when validation has informative outcomes, or when a deadline changes what can be checked. Those cases need an explicit combined process.
+
+Uncertainty remains a separate part of the contract. For a fixed unknown source model, keep that same model when adding costs across the whole policy. Taking a different worst model on each hypothetical branch changes the uncertainty specification. The older policy-vector result already supplies that repair; cache accounting does not replace it.
+
+There is also a sharp controller boundary. CIRS can eventually settle on correct conduct using an unbounded likelihood record. Under its strictly positive observation assumptions, a fixed finite-memory controller can succeed for every hidden standard only if the standards share a good action. Thus the finite typed-sidecar compiler cannot automatically implement every restorative controller. The source language's unbounded natural numbers and existing arithmetic compiler offer a positive route, but a finite description is not a fixed finite amount of retained state.
+
+The contribution is a precise route for combining existing achievements: cache-aware whole-proof compilation, complete revision dependencies, an explicit test for delaying checks, and the right policy-memory and probability contract. These results preserve the positive foundational source judgments. They do not infer genuine knowing, source truth, rightful authority, or metaphysical warrant from a cached or typed proof record.

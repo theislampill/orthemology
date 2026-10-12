@@ -1,0 +1,117 @@
+{
+  "lean_path": "private-locator:995d2f31daa55d5ebca1",
+  "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "LEAN_PATH": "private-locator:b82e5d1b581351298d17",
+  "rows": [
+    {
+      "module": "CheckerKernel",
+      "source_sha256": "074270a22703df806c0615cb6ed17ad90de60e37a9d7e6dcefdcd2695e5a696c",
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "--trust=0",
+        "-j1",
+        "-o",
+        "CheckerKernel.olean",
+        "CheckerKernel.lean"
+      ],
+      "cwd": "private-locator:15d16eaaf433469c5a05",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 6.279527425765991
+    },
+    {
+      "module": "CheckerSemantics",
+      "source_sha256": "29a4ea62c379d872aa1821740e61605d74f43aec69017b8cc945c5fa712d6e80",
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "--trust=0",
+        "-j1",
+        "-o",
+        "CheckerSemantics.olean",
+        "CheckerSemantics.lean"
+      ],
+      "cwd": "private-locator:15d16eaaf433469c5a05",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 6.847602128982544
+    },
+    {
+      "module": "InitialCheckerBelief",
+      "source_sha256": "9dcb8abe7dae57e48678b3865acf960c608e645acb87f196fa013987657967a9",
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "--trust=0",
+        "-j1",
+        "-o",
+        "InitialCheckerBelief.olean",
+        "InitialCheckerBelief.lean"
+      ],
+      "cwd": "private-locator:15d16eaaf433469c5a05",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 5.369320392608643
+    },
+    {
+      "module": "CheckerStateObservation",
+      "source_sha256": "71bf2c2dc8ab5adabe54a9e0fa2d393408a5f54cc6cd2907f4cefca85d6babb1",
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "--trust=0",
+        "-j1",
+        "-o",
+        "CheckerStateObservation.olean",
+        "CheckerStateObservation.lean"
+      ],
+      "cwd": "private-locator:15d16eaaf433469c5a05",
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 8.155313730239868
+    },
+    {
+      "module": "FiniteHistoryTransport",
+      "source_sha256": "eaa175dc008b893b8fcb7b6cfaabe0e3b858d4cd7667a9c6bad40cf1fa121162",
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "--trust=0",
+        "-j1",
+        "-o",
+        "FiniteHistoryTransport.olean",
+        "FiniteHistoryTransport.lean"
+      ],
+      "cwd": "private-locator:15d16eaaf433469c5a05",
+      "exit_code": 0,
+      "log_sha256": "7b5a56921bccf39649bb620c1dc65ee3581c3174108b9ec03850ecceec3f78ec",
+      "attempt": "Final exact statement unchanged; expanded definitional eraseHistory projections before rewriting. Initial failure bytes/log/receipt preserved under initial_attempt."
+    }
+  ],
+  "original_custom_objects_reused": false,
+  "official_objects_trusted": true,
+  "axiom_footprints": {
+    "PDCheckerFiniteHistory.step_erasure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PDCheckerFiniteHistory.finite_history_erasure": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PDCheckerFiniteHistory.actual_checker_finite_history": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PDCheckerFiniteHistory.actual_checker_observable_history": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "PDCheckerFiniteHistory.misaligned_initial_receipt_changes_action": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "final_status": "PASS_4_ORIGINAL_DEPENDENCIES_PLUS_NEW_COROLLARY_TRUST_ZERO"
+}

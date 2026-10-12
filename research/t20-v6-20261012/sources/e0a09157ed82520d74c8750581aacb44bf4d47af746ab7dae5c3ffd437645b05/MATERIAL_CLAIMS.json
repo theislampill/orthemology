@@ -1,0 +1,1746 @@
+{
+  "schema": "t20-material-claims-evidence-transport-v1",
+  "status": "proposed baseline; owner acceptance pending",
+  "research_cutoff_utc": "2026-10-11T11:32:55Z",
+  "claims": [
+    {
+      "id": "ET-01",
+      "title": "Root-aware accepted-factor continuation",
+      "statement": "For positive finite fixed-root likelihood stores, the exact all-word posterior quotient is informative-root membership E∩I, giving 2^|I| classes. Named activations alone or withdrawals alone suffice; overlap-aware merge uses q(E∪F)=N(qE qF/q(E∩F)).",
+      "hypotheses": [
+        "Finite nonempty target; full-support prior; immutable authenticated root IDs and strictly positive fixed likelihoods; full Boolean store domain; named operations fixed; selection fixed/exogenous or separately ignorable for probabilistic reading"
+      ],
+      "semantic_owner": "Provenance-learning transport, inheriting Deep AR/AX root identity and the reset theorem",
+      "canonical_sources": [
+        {
+          "source_id": "provenance",
+          "path": "sources/7b4d4bd3efe0e258/RESULT.md",
+          "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+          "bytes": 14332,
+          "original_sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/7b4d4bd3efe0e258/RESULT.md",
+          "public_sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+          "public_bytes": 14332
+        },
+        {
+          "source_id": "provenance_review",
+          "path": "source-suites/provenance-learning-review-20261009/REVIEW.md",
+          "sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+          "bytes": 8252,
+          "original_sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/provenance-learning-review-20261009/REVIEW.md",
+          "public_sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+          "public_bytes": 8252
+        }
+      ],
+      "dependencies": [
+        "ET-02"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited 5,460 merge pairs and 21 refinements; reviewer 1,164 paired stores and 833 overlap formulas",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Independent bound review passes; adds empty-or-one-step distinguishing witness",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Equal likelihood vector is not equal acquisition root; low log-likelihood span rank is not this quotient size"
+      ],
+      "residual_obligations": [
+        "Changed calibration, zero likelihoods, informative selection and actual warrant require separate contracts"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#provenance",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-02",
+      "title": "Exact Boolean reset and guard closure",
+      "statement": "On X={0,1}^n with all independent resets and specified total coupled actions, x and y have identical output after every word iff they agree on the backward essential-coordinate closure I*. There are 2^|I*| classes and |I*| fixed-width bits. For positive support/cost catalogues, initial essential coordinates are the union of undominated global supports.",
+      "hypotheses": [
+        "All Boolean product states; total actions and all action words; fixed meanings; semantic essentiality rather than syntactic occurrence; finite catalogue and nonnegative finite costs for specialization"
+      ],
+      "semantic_owner": "Revocation-dependency THEOREM.md; extends acquisition-only support frontier",
+      "canonical_sources": [
+        {
+          "source_id": "reset",
+          "path": "source-suites/revocation-dependency/THEOREM.md",
+          "sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+          "bytes": 10324,
+          "original_sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/revocation-dependency/THEOREM.md",
+          "public_sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+          "public_bytes": 10324
+        }
+      ],
+      "dependencies": [],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Current residual-support pruning is unsafe under withdrawal; global support/cost dominance remains safe",
+        "Without independent resets closure can overestimate; correlated/restricted states require their true transition congruence"
+      ],
+      "residual_obligations": [
+        "No inference from clearing status to forgetting/defeat; actual witness reconstruction and current checks remain necessary"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#reset",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-03",
+      "title": "Audit-aware deletion criterion and positive replacement",
+      "statement": "For positive history (b,y,a), full Q=P(Θ|b,y,a) equals audit-aware deletion R=P(Θ|b,a) iff P(y|θ,b,a) is constant on supp R. General revision uses the full joint factor J(y,a|θ,b), or audit-conditioned report factor. A truly random source plus selected disagreement with a 4/5 verifier gives Q=1/5, R=1/2, and divide-then-old-audit 3/31.",
+      "hypotheses": [
+        "One justified finite joint law with fixed target/time meaning; positive full history; support-aware conditionals; inverse-factor implementation only for positive old factor with unchanged baseline"
+      ],
+      "semantic_owner": "Source-audit revision; classical Bayes and selection, inherited source semantics",
+      "canonical_sources": [
+        {
+          "source_id": "audit",
+          "path": "sources/7b8a82a3ee87d136/RESULT.md",
+          "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "bytes": 29885,
+          "original_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/7b8a82a3ee87d136/RESULT.md",
+          "public_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "public_bytes": 29885
+        }
+      ],
+      "dependencies": [
+        "ET-01"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited 68,688 positive event/prior cases over 4,225 unique normalized channels; 58,320 inverse-permitting cases",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Unreliability does not imply observation deletion; audit neutrality alone does not remove report/audit interaction",
+        "Source-wide shared calibration can alter surviving factors"
+      ],
+      "residual_obligations": [
+        "Justify actual audit selection and calibration; null history calls for evidence/model reconsideration, not automatic regularization"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#audit",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-04",
+      "title": "Proper-score and null-audit boundaries",
+      "statement": "Audit-aware coarsening regret is E[D_F(Q,R)] and entropy-score specialization is I(Θ;Y|B,A); positive net audit gain can coexist with incorrect deletion. For any full-support target p and desired q, ε-small joint perturbations of a null audit preserve p, lie TV ε away, and condition to q.",
+      "hypotheses": [
+        "Strictly convex differentiable score in admissible finite-risk domain; actual probabilities from one joint model; at least two target states for nonunique null-audit responses"
+      ],
+      "semantic_owner": "Source-audit revision, applying inherited proper-score/Jensen identities",
+      "canonical_sources": [
+        {
+          "source_id": "audit",
+          "path": "sources/7b8a82a3ee87d136/RESULT.md",
+          "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "bytes": 29885,
+          "original_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/7b8a82a3ee87d136/RESULT.md",
+          "public_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+          "public_bytes": 29885
+        }
+      ],
+      "dependencies": [
+        "ET-03"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited main-event squared regret 9/100; hybrid audit information 4453/48100, regret 9/200, net 4577/96200; twelve null controls",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [],
+      "residual_obligations": [
+        "No empirical accuracy or proper-function inference; regularization requires substantive model choice"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#audit",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-05",
+      "title": "Historical revision joint lift",
+      "statement": "Given predictive B with BM_a=T_aB and retained historical slots H, E(r)=(Br(·,h))_h transports all admitted current-state operations and historical likelihood ratios, including mass ratios and target posteriors. With independently available positive spanning historical tests, E equality is exactly equality of all mixed continuation mass/posterior responses over all joint laws.",
+      "hypotheses": [
+        "Finite X,H; same retained catalogue/current-version tables; future operators act on X and not hidden H; old likelihoods positive for ratios; positive mass before normalization; independently spanning positive test functions for necessity"
+      ],
+      "semantic_owner": "Historical-source revision, composing H-Continuation with typed historical factors",
+      "canonical_sources": [
+        {
+          "source_id": "history",
+          "path": "sources/06053c55e5b4484b/historical-source-revision.md",
+          "sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+          "bytes": 25884,
+          "original_sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/06053c55e5b4484b/historical-source-revision.md",
+          "public_sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+          "public_bytes": 25884
+        }
+      ],
+      "dependencies": [
+        "ET-05A"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "One-root complete response profiles do not compose: parity gives 9/16 versus 7/16 after two revisions",
+        "Assignment of new likelihood tables also needs current-version frame; E alone is a supplied-ratio state",
+        "Support restoration after old zeros is outside ratio theorem, even full old posterior plus normalizer can lose base masses"
+      ],
+      "residual_obligations": [
+        "Retain base factorization for zero-support restoration; justify model/slot version and any historical dependence"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#history",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-05A",
+      "title": "Predictive linear quotient with admissible cone",
+      "statement": "For finite nonnegative substochastic instruments, W=span{uM_w,cM_w} is the least invariant output row space. Basis B gives BM_a=T_aB, exact probability/target continuation, and valid reduced cone K=B R_+^n. For normalized laws Br=Bs iff all word probabilities and defined target posteriors agree.",
+      "hypotheses": [
+        "Finite fixed latent state, target readout, legal all-word instrument or explicit finite phase model; nonnegative laws; impossible branches remain zero; admissible cone rather than coordinatewise positivity"
+      ],
+      "semantic_owner": "H-Continuation Theorem 2; audit-continuation supplies concrete 16-to-8 and known-Bad four-state source-audit bridge",
+      "canonical_sources": [
+        {
+          "source_id": "continuation",
+          "path": "sources/3add44ffbe7e0bf1/RESULT.md",
+          "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "bytes": 24610,
+          "original_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/3add44ffbe7e0bf1/RESULT.md",
+          "public_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "public_bytes": 24610
+        }
+      ],
+      "dependencies": [
+        "ET-03"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Target marginal plus audit marginal still misses target/audit numerator; same audit reread is not fresh independent evidence"
+      ],
+      "residual_obligations": [
+        "Restricted reachable families may need less than full-law k−1 continuous coordinates; changing channel/permissions requires requalification"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#continuation",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-06",
+      "title": "Posterior-only equivalence",
+      "statement": "Let U be the invariant span generated by c⊗u−u⊗c under synchronized M_a⊗M_a. Two live laws give equal defined conditional target answers on all words iff U annihilates r⊗s and their feasible-word languages agree. For one binary fixed audit, posterior signature is injective off target/audit independence and collapses audit frequencies on independence.",
+      "hypotheses": [
+        "Finite exact matrices; same word in both tensor factors; separately checked feasible-language equality; positivity on branches before division; fixed audit is a rereadable variable"
+      ],
+      "semantic_owner": "Audit-continuation paired tensor application, inheriting weighted-automata/row-span machinery",
+      "canonical_sources": [
+        {
+          "source_id": "continuation",
+          "path": "sources/3add44ffbe7e0bf1/RESULT.md",
+          "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "bytes": 24610,
+          "original_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/3add44ffbe7e0bf1/RESULT.md",
+          "public_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+          "public_bytes": 24610
+        }
+      ],
+      "dependencies": [
+        "ET-05A"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Cross-products alone falsely merge impossible with live histories",
+        "Tensor test dimension is not a one-belief memory lower bound"
+      ],
+      "residual_obligations": [
+        "Convenient posterior-only state parameterizations for other specific instruments remain operation-dependent"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#continuation",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-07",
+      "title": "Posterior equivalence does not preserve expected inquiry value",
+      "statement": "Three outcomes with posterior laws (0,1/2,1), weights (a,1−2a,a), preserve all posterior/status answers but half-Brier improvement is a/2. At a=1/4 versus 1/8 and cost 3/32 the query decision reverses. For a full positive fibre Qt=q, hᵀt is constant iff h is in rowspan Q.",
+      "hypotheses": [
+        "One fixed audit; finite risk; common constant query cost; full positive fibre for global row-span iff; stated lawful access; same posterior matrix Q, not fixed forward likelihood P(D|Θ)"
+      ],
+      "semantic_owner": "Posterior-inquiry-value application of H-ICS feasible fibres and H-Continuation values",
+      "canonical_sources": [
+        {
+          "source_id": "posterior_value",
+          "path": "sources/5f6f84b1af7e5049/RESULT.md",
+          "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+          "bytes": 7623,
+          "original_sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/5f6f84b1af7e5049/RESULT.md",
+          "public_sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+          "public_bytes": 7623
+        },
+        {
+          "source_id": "posterior_value_review",
+          "path": "source-suites/inquiry-value-independent-review-20261010/REVIEW.md",
+          "sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+          "bytes": 7765,
+          "original_sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/inquiry-value-independent-review-20261010/REVIEW.md",
+          "public_sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+          "public_bytes": 7765
+        }
+      ],
+      "dependencies": [
+        "ET-06"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Final note independently reviewed; historical author pending-review sentence superseded",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Two outcomes suffice to preserve this particular fixed-audit finite-risk constant-cost gain, not arbitrary adaptive or outcome-cost problems"
+      ],
+      "residual_obligations": [
+        "Additional expected costs/utilities require retained rows; future operations require invariant closure"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#posterior_value",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-08",
+      "title": "Finite joint-contract refinement",
+      "statement": "Starting from (retained value, required label, enabled action menu, costs), refine by joint outcome/next-block masses. After at most |S|−|P0| strict refinements the stable partition is the coarsest strong branch-labelled contract-preserving refinement.",
+      "hypotheses": [
+        "Finite nonempty represented states and alphabets; exact normalized enabled rows; fixed labels/menu/costs; stated strong one-step joint contract, not mere trace equivalence"
+      ],
+      "semantic_owner": "Earlier whole-corpus Pro synthesis D1, extending full-reset models to correlated/restricted states, partial menus and stochastic branches",
+      "canonical_sources": [
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        },
+        {
+          "source_id": "code26",
+          "path": "replay/finite-contracts/contracts.py",
+          "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "bytes": 13980,
+          "original_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "sha256_scope": "original source bytes",
+          "public_source": "replay/finite-contracts/contracts.py",
+          "public_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "public_bytes": 13980
+        },
+        {
+          "source_id": "support",
+          "path": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "bytes": 16325,
+          "original_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "public_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "public_bytes": 16325
+        }
+      ],
+      "dependencies": [
+        "ET-02"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "1,728 three-state contracts; 8,640 candidate partitions; original 26 suite separately from later33/8",
+        "fresh_replay": "fresh-replay/original-26-archive.json; 26 unittest cases direct normal and -O; finite oracle",
+        "review_status": "Later bounded synthesis response accepts D1–D3 scope",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [],
+      "residual_obligations": [
+        "Justify represented state/labels and actual access; finite rational equality is effective, arbitrary real kernels are not automatically decidable"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#whole",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-09",
+      "title": "Operation-relative minimum sidecar",
+      "statement": "For coarsest contract partition P* refining r, the minimum deterministic common sidecar alphabet is max_z #{P* blocks in r-fibre z}; fixed-width bits are ceil log2 of this count. Static full-evidence audit-profile variant uses distinct likelihood profiles within each fibre.",
+      "hypotheses": [
+        "Original coarse key retained; finite represented state set; exact deterministic sidecar; strongest contract P* must be used for global minimum; static profiles use strictly positive factors and admitted products/inverses"
+      ],
+      "semantic_owner": "Whole-corpus Pro D2; recovered authorial Pro C specializes the inherited construction",
+      "canonical_sources": [
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        },
+        {
+          "source_id": "code26",
+          "path": "replay/finite-contracts/contracts.py",
+          "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "bytes": 13980,
+          "original_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "sha256_scope": "original source bytes",
+          "public_source": "replay/finite-contracts/contracts.py",
+          "public_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "public_bytes": 13980
+        },
+        {
+          "source_id": "authorial",
+          "path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "bytes": 46541,
+          "original_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "public_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+          "public_bytes": 46651
+        },
+        {
+          "source_id": "support",
+          "path": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "bytes": 16325,
+          "original_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "public_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "public_bytes": 16325
+        }
+      ],
+      "dependencies": [
+        "ET-08",
+        "ET-12"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/original-26-archive.json",
+        "review_status": "Later response accepts theorem and clarifies sidecar(c,coarse,blocks) is only globally minimum when supplied coarsest admissible blocks",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Static audit profiles do not replace transition-stable refinement",
+        "Bits count per-state labels, not arbitrary real law weights/model storage or facts needed for human warrant"
+      ],
+      "residual_obligations": [
+        "Weaker query contracts may permit coarser representations; source labels require independently justified interpretations"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#whole",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-10",
+      "title": "Finite quotient policy transport",
+      "statement": "Matched joint outcome/next-block kernels preserve all finite retained-history laws for common retained-history policies; fully observed or justified information-state Bellman optima with block-constant terminal loss agree; fixed retained-policy eventual reachability follows by increasing union.",
+      "hypotheses": [
+        "Matching retained initial state/law; policies use only retained histories, common private randomization; same action menus/costs; block-constant terminal loss; no enabled action pays terminal loss, matching code"
+      ],
+      "semantic_owner": "Whole-corpus Pro D3, inheriting law/value continuation principles",
+      "canonical_sources": [
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        },
+        {
+          "source_id": "code26",
+          "path": "replay/finite-contracts/contracts.py",
+          "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "bytes": 13980,
+          "original_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "sha256_scope": "original source bytes",
+          "public_source": "replay/finite-contracts/contracts.py",
+          "public_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+          "public_bytes": 13980
+        },
+        {
+          "source_id": "support",
+          "path": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "bytes": 16325,
+          "original_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "public_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "public_bytes": 16325
+        }
+      ],
+      "dependencies": [
+        "ET-08"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/original-26-archive.json",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "D3b written empty-menu convention made explicit from code; no hidden-state optimization is licensed",
+        "Known-kernel Bellman and pathwise worst-case inquiry do not imply credal expected minimax"
+      ],
+      "residual_obligations": [
+        "Information-policy correspondence and cost readout must be established for each application"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#whole",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-11",
+      "title": "Finite approximation and conditioning scope",
+      "statement": "With stage cost range [0,C], terminal [0,R], discrepancies δ,η and joint-kernel TV≤ε, h-step value error ≤η+hδ+ε(hR+C h(h−1)/2). With event masses≥α, posterior TV≤min(1,2 TV(p,q)/α). Close one-step kernels need not preserve probability-one eventual reachability.",
+      "hypotheses": [
+        "Same legal menus/map; finite fully observed horizon; bounded costs; common event likelihood in [0,1]; both event masses positive and ≥α"
+      ],
+      "semantic_owner": "Whole-corpus Pro D4, standard coupling/TV induction packaged for this interface",
+      "canonical_sources": [
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        }
+      ],
+      "dependencies": [
+        "ET-10"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/original-26-archive.json; oracle 252 value and 4,752 conditioning instances",
+        "review_status": "No separate review newly established by this track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [],
+      "residual_obligations": [
+        "No uniform infinite-horizon conclusion; rare-event stabilization must be justified"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#whole",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-12",
+      "title": "Universal deterministic and stochastic likelihood transport",
+      "statement": "q#(Lμ)=ell q#μ for all nonnegative μ iff L=ell∘q. For kernel K the criterion is K(y|a)>0 implies L(a)=ell(y), equivalently positive-edge component constancy. A fixed-law repair uses ell_mu(y)=E_mu[L|Y=y]; separate conditional factor means need not preserve products.",
+      "hypotheses": [
+        "Finite origins and outputs; full unnormalized measure contract, including normalizer; context-free ell in universal statement; fixed-law conditional repair defined only on positive output mass; measurable factorization required for general spaces"
+      ],
+      "semantic_owner": "Recovered authorial Pro A/B; inherited fibre-factorization mechanism",
+      "canonical_sources": [
+        {
+          "source_id": "authorial",
+          "path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "bytes": 46541,
+          "original_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "public_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+          "public_bytes": 46651
+        },
+        {
+          "source_id": "authorial_review",
+          "path": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "bytes": 9201,
+          "original_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "public_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "public_bytes": 9201
+        }
+      ],
+      "dependencies": [
+        "ET-05A"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Bounded root assessment accepts with full-evidence scope",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Posterior equality alone has constant-output/scale exceptions; predictive normalizer is extra",
+        "Strictly positive kernel permits only constant universal factor but does not make Bayesian inference impossible"
+      ],
+      "residual_obligations": [
+        "Source factor calibration and joint dependence are external premises; actual-law conditional factor changes after revision"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#authorial",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-13",
+      "title": "Sharp relative-likelihood stability",
+      "statement": "For 0<a≤r≤b, TV(B_rν,ν)≤(sqrt b−sqrt a)/(sqrt b+sqrt a)=tanh(log(b/a)/4), sharply. Uniform source log errors ε_j give word error ≤tanh(Σ|σ_j|ε_j/2); absolute log bound E also gives e^(−E)≤Zhat/Z≤e^E.",
+      "hypotheses": [
+        "Same origin law; positive factors; uniform relative/log bounds on all supported origins; fixed admitted word; fixed Markov transport contracts TV"
+      ],
+      "semantic_owner": "Recovered authorial Pro D, distinct positive complement to absolute-error/rare-event negatives",
+      "canonical_sources": [
+        {
+          "source_id": "authorial",
+          "path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "bytes": 46541,
+          "original_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "public_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+          "public_bytes": 46651
+        },
+        {
+          "source_id": "authorial_review",
+          "path": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "bytes": 9201,
+          "original_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "public_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "public_bytes": 9201
+        }
+      ],
+      "dependencies": [
+        "ET-11",
+        "ET-12"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited 2,457 rational controls; two-point equality ν=(4/5,1/5), r=(1/4,4), TV=3/5",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Bounded root review accepts sharp proof and equality example",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Log oscillation controls posterior shape only; absolute scale needed for normalizers"
+      ],
+      "residual_obligations": [
+        "No inference of reliability calibration from the bound; accumulated error may grow with operation length"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#authorial",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-14",
+      "title": "Historical reconstruction, recomputation and dependency replay",
+      "statement": "Historical reconstruction uses old transport on revised origin law; retrospective recomputation uses revised transport; prospective evolution starts from actual present state. Universal equality of first two requires equality of maps (kernels stochastically). Complete deterministic DAG dependencies permit exact descendant-only recomputation; one-shot iterator implementation bug is separately corrected.",
+      "hypotheses": [
+        "Fixed revised law for sufficient almost-everywhere map condition; all laws for pointwise iff; smooth sensitivity requires C1 flow and common existence domain; DAG finite, cache current, definitions unchanged or explicit inputs, all dependencies/exogenous inputs declared"
+      ],
+      "semantic_owner": "Recovered authorial Pro E/F, with separate root iterable repair",
+      "canonical_sources": [
+        {
+          "source_id": "authorial",
+          "path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "bytes": 46541,
+          "original_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+          "public_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+          "public_bytes": 46651
+        },
+        {
+          "source_id": "authorial_review",
+          "path": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "bytes": 9201,
+          "original_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+          "public_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+          "public_bytes": 9201
+        }
+      ],
+      "dependencies": [
+        "ET-05",
+        "ET-12"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Source52 to corrected55 tests are separately owned by Pro qualification track",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Reweighting cannot move a one-atom state when revised objective moves its flow",
+        "Original affected_nodes Iterable bug corrected in separate successor; source archive/manifest unchanged",
+        "No arbitrary guard/event discontinuity included in smooth sensitivity"
+      ],
+      "residual_obligations": [
+        "Choose actual repair semantics before recomputation; missing dependencies remain an application obligation"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#authorial",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-15",
+      "title": "Coupled credal audit sets and exact vertex rule",
+      "statement": "Positive segments K=conv{(1,1,1,5)/8,(1,1,5,1)/8} and L=conv{(1,9,9,21)/40,(9,1,21,9)/40} share prior interval [1/4,3/4], audit mass1/4, LR interval[1/3,3] but audit posterior sets {1/2} and[1/10,9/10]. A common nonnegative linear branch maps conv vertices to exactly conv positive-mass normalized vertex images.",
+      "hypotheses": [
+        "Finite joint laws for vertex theorem; one common supplied nonnegative linear branch or product; null vertices excluded, all-null branch impossible; keep mass/model response pairing for full evidence contract; compact interior paired (p,r) set for aligned-corner iff"
+      ],
+      "semantic_owner": "Cumulative-credal-audit-coupling; classical credal vertex rule explicitly credited; local paired-segment discriminator",
+      "canonical_sources": [
+        {
+          "source_id": "credal",
+          "path": "source-suites/cumulative-credal-audit-coupling-20261011/REPORT.md",
+          "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+          "bytes": 18927,
+          "original_sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/cumulative-credal-audit-coupling-20261011/REPORT.md",
+          "public_sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+          "public_bytes": 18927
+        },
+        {
+          "source_id": "credal_review",
+          "path": "source-suites/cumulative-revision-coupling-independent-review-20261011/REVIEW.md",
+          "sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+          "bytes": 8314,
+          "original_sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/cumulative-revision-coupling-independent-review-20261011/REVIEW.md",
+          "public_sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+          "public_bytes": 8314
+        }
+      ],
+      "dependencies": [
+        "ET-03",
+        "ET-05"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/credal-geometric.json",
+        "review_status": "Final adopted report independently reviewed PASS",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Cartesian intervals may be conservative outer bounds, not exact attainable sets",
+        "Compact convex nonpolytope can have open conditioned image (0,1/2]; infimum0 is not attained",
+        "Preliminary reviewer (0,1] fixture superseded as primary control by full-support positive-audit (0,1/2] fixture"
+      ],
+      "residual_obligations": [
+        "Coupled model family and convexity need substantive justification; classical vertex theorem does not cover nonlinear correction or reused unknown kernels"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#credal",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-16",
+      "title": "Nonlinear credal image and complete instrument repair",
+      "statement": "Normalized power reaction generally does not map a segment to corrected endpoint hull; a positive three-state square-root example has nonconvex image and infinitely exposed convex hull. Positive segment equality holds iff coordinate ratios take at most two values (0<a<1). Powered branch Bayes maps form one same-outcome hidden-state instrument iff positive row scales satisfy Σ_o c_o L_o(i)^a=1; universal compatibility occurs only at a=1. Full transformed-belief kernel with g_o(q)=L_o·F^-1(q) and T_o=F B_L F^-1 preserves original finite-history probabilities and inverse-readout answers.",
+      "hypotheses": [
+        "Finite simplex with positive reference; reaction0<a<1 for ratio classification and any a>0 for invertible recoding; positive likelihood rows summing to1; repeated passive-channel product assumes fresh conditional independence; exact nonlinear family retains common model parameter"
+      ],
+      "semantic_owner": "Credal-geometric transport plus separately reviewed belief-state repair; inherited correction-audit conjugacy",
+      "canonical_sources": [
+        {
+          "source_id": "geometric",
+          "path": "source-suites/credal-geometric-transport-20261011/REPORT.md",
+          "sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+          "bytes": 16183,
+          "original_sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/credal-geometric-transport-20261011/REPORT.md",
+          "public_sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+          "public_bytes": 16183
+        },
+        {
+          "source_id": "geometric_repair",
+          "path": "sources/6b77cd702ae8ce81/REPAIR.md",
+          "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+          "bytes": 7180,
+          "original_sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/6b77cd702ae8ce81/REPAIR.md",
+          "public_sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+          "public_bytes": 7180
+        },
+        {
+          "source_id": "geometric_repair_review",
+          "path": "source-suites/credal-geometric-independent-review-20261011/REPAIR_REVIEW.md",
+          "sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+          "bytes": 3255,
+          "original_sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/credal-geometric-independent-review-20261011/REPAIR_REVIEW.md",
+          "public_sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+          "public_bytes": 3255
+        }
+      ],
+      "dependencies": [
+        "ET-12",
+        "ET-15"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited repair4,621 groups/511 histories and independent43 exact controls; Gaussian endpoint exclusion separate from finite infinitely-exposed theorem",
+        "fresh_replay": "fresh-replay/credal-geometric.json; adapter evidence distinguished from raw -O",
+        "review_status": "Main report independent review and separate repair review; repair reviewed hash in sources",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Nonaffinity alone does not imply hull failure; binary intervals and disjoint-support fixed-profile simplexes are positive exceptions",
+        "Column-normalization warning limited to stated obstruction; extra outcome changes contract",
+        "Coordinate recoding is not actual epistemic improvement"
+      ],
+      "residual_obligations": [
+        "Exact image formulas do not provide generic efficient optimization or stable Gaussian inversion; full Gaussian infinitely-exposed claim unproved"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#geometric",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-17",
+      "title": "Fixed-model inquiry coupling and constructive policy vectors",
+      "statement": "For the coupled L fixture, risky policy worst expectation11/20 differs from independently maximized branch value3/4; declared report/defer menu gives deterministic11/20, private-randomized21/40, conditional minimax3/5. Unrestricted M fixture gives fixed audit risk3/10 versus rectangular1/3; cost9/50 yields audit12/25 versus fair-skip1/2. Exact finite repair retains model-indexed unnormalized policy-loss vectors, combines same coordinates, and scalarizes only at root; private complete-policy mixing is an LP.",
+      "hypotheses": [
+        "Finite horizon/actions/outcomes/terminal menus; one fixed unknown complete law; common lawful observation policy, no hidden model access; private coins unrevealed until after model choice; execution commitment; initial-law polytope and common instrument for vertex reduction; impossible histories singleton zero, live missing terminal menu infeasible"
+      ],
+      "semantic_owner": "Coupled-credal-inquiry transport, classical nonrectangular robust decision theory application",
+      "canonical_sources": [
+        {
+          "source_id": "inquiry",
+          "path": "source-suites/coupled-credal-inquiry-transport-20261011/RESULT.md",
+          "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+          "bytes": 28059,
+          "original_sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/coupled-credal-inquiry-transport-20261011/RESULT.md",
+          "public_sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+          "public_bytes": 28059
+        },
+        {
+          "source_id": "inquiry_review",
+          "path": "source-suites/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+          "sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+          "bytes": 14670,
+          "original_sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+          "public_sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+          "public_bytes": 14670
+        },
+        {
+          "source_id": "inquiry_code",
+          "path": "source-suites/coupled-credal-inquiry-transport-20261011/verify.py",
+          "sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+          "bytes": 16221,
+          "original_sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/coupled-credal-inquiry-transport-20261011/verify.py",
+          "public_sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+          "public_bytes": 16221
+        }
+      ],
+      "dependencies": [
+        "ET-07",
+        "ET-10",
+        "ET-15",
+        "ET-16"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/fixed-model-inquiry.json; 12 positive and8 required rejection runs; author13,676 and reviewer2,537 per mode",
+        "review_status": "Final revised report independently reviewed; v1 preserved separately",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Restricted L menu does not establish valuable unrestricted guessing; M supplies separate unrestricted witness",
+        "Full rectangular hull M has prior range[5/12,7/12]; deterministic skip7/12, private fair skip1/2",
+        "Known-kernel/pathwise predecessor controllers remain valid",
+        "Fixed uncertain kernel reused twice need not attain extrema at kernel vertices: mismatch2p(1−p) max1/2 interior",
+        "MOM-11 already gives an exact two-coordinate feasible moment-body repair for the declared two-trial fixed-calibration path-law family; third fresh trial is a separate failed continuation. Do not carry the solved two-trial representation forward as pending."
+      ],
+      "residual_obligations": [
+        "No remedy for ex ante/conditional preference conflict merely by adding memory; justify uncertainty and commitment protocol; future-horizon extensions must start from completed MOM-11, preserving its hyperprior/convex-law meaning and third-trial boundary"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#inquiry",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-18",
+      "title": "Source-specific selective revalidation",
+      "statement": "Actual original_bearer_of_completion uses occurrence/completion/realisation/support. Existing necessity adapter additionally uses need+representation. Direct essential_nonreceipt_of_actual_original uses actual originality+constitution and no necessity premise. Thus need-specific and constitution-specific rechecking scopes differ; shared base challenges can reach all outputs.",
+      "hypotheses": [
+        "Exact unchanged OriginalBearerBridge declarations and CP23/CND bound texts; scope is consumed premises of these derivations, not semantically minimum grounds; a challenge must be independently justified before actual defeat"
+      ],
+      "semantic_owner": "Later synthesis-warrant-scope response, application to actual CP16/CP23/T17; source affirmative owners retained",
+      "canonical_sources": [
+        {
+          "source_id": "support",
+          "path": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "bytes": 16325,
+          "original_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+          "public_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "public_bytes": 16325
+        },
+        {
+          "source_id": "support_code",
+          "path": "source-suites/synthesis-warrant-scope-20261011/support_scope_check.py",
+          "sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+          "bytes": 6501,
+          "original_sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-warrant-scope-20261011/support_scope_check.py",
+          "public_sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+          "public_bytes": 6501
+        }
+      ],
+      "dependencies": [
+        "ET-02",
+        "ET-09",
+        "ET-14"
+      ],
+      "evidence": {
+        "written_proof": "Source-bound declaration/call inspection plus inherited existing proofs; not a new philosophical or Lean theorem",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/response-33-8.json; 33 support controls per mode, not Lean rerun",
+        "review_status": "Scoped internal synthesis comparison",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Undifferentiated premise bundle overpropagates; erasing constitution underpropagates",
+        "Receipt adapter is implementation dependency, not claimed philosophically indispensable"
+      ],
+      "residual_obligations": [
+        "No actual challenge established; support archive alone is not actual acquisition/basing/retention; no numerical warrant bit count"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#support",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-19",
+      "title": "Full timed hybrid joint-law preservation",
+      "statement": "Equal retained flows and permission guards alone do not preserve event times. Repaired D6 equates conditional joint law of next holding time,event/outcome,next retained state including no-event, under common retained timed-history control. It preserves all finite timed prefixes and, with non-explosion, retained path/cost laws. Finite rational timing extends D1 by outcome alphabet D×O; time/outcome correlation can add one sidecar bit even if separate marginals match.",
+      "hypotheses": [
+        "Common retained initial law; projected-flow uniqueness/common existence; full event mechanism including clocks, urgency, entry and simultaneous-event conventions; costs/readouts factor through retained path/event; non-explosion; integrability for finite expectations; exact equality effective only on declared representations"
+      ],
+      "semantic_owner": "Later synthesis-hybrid-timing review repairing earlier Pro D6; D1–D3 extension is inherited mechanism",
+      "canonical_sources": [
+        {
+          "source_id": "timing",
+          "path": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+          "sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "bytes": 20372,
+          "original_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+          "public_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "public_bytes": 20372
+        },
+        {
+          "source_id": "timing_code",
+          "path": "source-suites/synthesis-hybrid-timing-review-20261011/checks.py",
+          "sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+          "bytes": 9794,
+          "original_sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-hybrid-timing-review-20261011/checks.py",
+          "public_sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+          "public_bytes": 9794
+        },
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        }
+      ],
+      "dependencies": [
+        "ET-08",
+        "ET-09",
+        "ET-10"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "fresh-replay/response-33-8.json;8 timing groups per mode,52 partitions of five-state fixture",
+        "review_status": "Bounded internal mathematical review with written repair",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Original D6 sound under shared urgent deterministic first-hit conventions; permission-only stochastic interpretation insufficient",
+        "Exponential hidden rates1 and2 survival1/2 vs1/4 at log2; equal timing and untimed branch marginals still miss correlation"
+      ],
+      "residual_obligations": [
+        "General Borel holding-time measure equality is not asserted computable; state-Markov reduction needs stronger current-state factorization than historywise contract"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#timing",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-20",
+      "title": "Sharp pairwise-calibrated corroboration",
+      "statement": "For three binary reports with correctness independent of truth, common individual accuracy p∈(1/2,1) and conditional pairwise independence, t=P(all correct) lies[L,K], L=p(2p−1), K=1−3p+3p². Unanimity BF range[L/(1−p)^2,∞] gives uniform nonnegative evidence iff p≥(sqrt5−1)/2. Equal prior posterior range[L/K,1]. At p3/5 independent27/35 and positive dependent13/28 share every proper truth/report marginal.",
+      "hypotheses": [
+        "Truth-symmetric channel for one-parameter unlabelled identification; priorα∈(0,1); finite fixed triple; endpoints allowed unless full support demanded; fresh iid target instances for repeated-unlabelled nonidentification"
+      ],
+      "semantic_owner": "Pairwise-corroboration bound; inherited parity mechanism specialized to calibrated channel",
+      "canonical_sources": [
+        {
+          "source_id": "pairwise",
+          "path": "source-suites/pairwise-corroboration-bound-20261011/RESULT.md",
+          "sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+          "bytes": 13663,
+          "original_sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/pairwise-corroboration-bound-20261011/RESULT.md",
+          "public_sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+          "public_bytes": 13663
+        },
+        {
+          "source_id": "pairwise_review",
+          "path": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+          "sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "bytes": 12304,
+          "original_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+          "public_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "public_bytes": 12304
+        }
+      ],
+      "dependencies": [
+        "ET-03",
+        "ET-15"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited author39,280 rational checks and reviewer14,163; not fresh replay here",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Independent review passes final symmetric statement",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Pairwise independence is not mutual independence; source identity alone not causal independence",
+        "Missing truth-sensitive four-slot interaction is not ordinary three-report moment"
+      ],
+      "residual_obligations": [
+        "Numerical calibration is stipulated; actual historical/scriptural/warrant premises remain source-owned"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#pairwise",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-20A",
+      "title": "Truth-asymmetric calibrated extension",
+      "statement": "Allow independent t0,t1∈[L,K] with same within-truth individual/pair calibration. Sharp BF/posterior bounds remain unchanged; unlabelled law fixes only β=αt1−(1−α)t0. At p3/5, α2/3, models(1/5,1/5) and(11/50,21/100) share every proper marginal but give5/6 and7/8 on unanimity.",
+      "hypotheses": [
+        "Two truth-conditioned correctness laws with same p and pair independence; no truth symmetry; fixed known p,α in interior"
+      ],
+      "semantic_owner": "Separately marked reviewer-authored pairwise asymmetric supplement",
+      "canonical_sources": [
+        {
+          "source_id": "pairwise_asym",
+          "path": "source-suites/pairwise-corroboration-asymmetric-supplement-20261011/SUPPLEMENT.md",
+          "sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+          "bytes": 5783,
+          "original_sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/pairwise-corroboration-asymmetric-supplement-20261011/SUPPLEMENT.md",
+          "public_sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+          "public_bytes": 5783
+        },
+        {
+          "source_id": "pairwise_review",
+          "path": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+          "sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "bytes": 12304,
+          "original_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+          "public_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+          "public_bytes": 12304
+        }
+      ],
+      "dependencies": [
+        "ET-20"
+      ],
+      "evidence": {
+        "written_proof": "ordinary written proof",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "See bound owner report; inherited unless separately replayed below",
+        "fresh_replay": "Not rerun in this track; source inspected",
+        "review_status": "Author-stage extension with exact controls; not independent review of itself",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Known unequal prior identifies t only in symmetric subclass; no contradiction to original theorem"
+      ],
+      "residual_obligations": [
+        "No acquired real source calibration or historical verdict follows"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#pairwise_asym",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-21",
+      "title": "DAEE runtime distinction and recognition-guard gap",
+      "statement": "At frozen DAEE c86b3c6673147b8802fe222373a165a37d4d24a8, field-witness checks distinguish runtime closure C(PsiN) and coupling-attempt toward interlocutor field. Both custom CLI entrypoints nevertheless accept schema-clean advanced alignment with recognition medium/weak/none while full schema rejects. Seven-line candidate guard corrects those controlled false passes on disposable copies; category3/open-gate positive-sample mismatch remains separate.",
+      "hypotheses": [
+        "Pinned checker/schema/compiler inputs; synthetic schema-clean fixture changes category to1; two-entry compiled module map reconstructed from pinned inputs; inspected acceptance paths only"
+      ],
+      "semantic_owner": "Noetic correction semantics and independently bound unapplied repair addendum",
+      "canonical_sources": [
+        {
+          "source_id": "daee",
+          "path": "source-suites/noetic-correction-semantics-20261009/REPORT.md",
+          "sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+          "bytes": 14052,
+          "original_sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/noetic-correction-semantics-20261009/REPORT.md",
+          "public_sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+          "public_bytes": 14052
+        },
+        {
+          "source_id": "daee_review",
+          "path": "source-suites/noetic-guard-repair-peer-review-20261009/REPAIR_ADDENDUM.md",
+          "sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+          "bytes": 3433,
+          "original_sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/noetic-guard-repair-peer-review-20261009/REPAIR_ADDENDUM.md",
+          "public_sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+          "public_bytes": 3433
+        },
+        {
+          "source_id": "daee_checker",
+          "path": "[original custody locator omitted; use source digest binding]",
+          "sha256": "ea6630a53ce8c77d6cc3102ae6ffd5aba0dc84539f1ffe5350fbc1aa4d9c4d1a",
+          "bytes": 118334
+        },
+        {
+          "source_id": "daee_schema",
+          "path": "[original custody locator omitted; use source digest binding]",
+          "sha256": "c2cac1a403d64f27bb7597c4e7e0d7b3f2663e91303960ba68817608e8ffd566",
+          "bytes": 60634
+        },
+        {
+          "source_id": "daee_patch",
+          "path": "sources/ba1c28f70bc74b70/UNAPPLIED_RECOGNITION_GUARD.patch",
+          "sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+          "bytes": 816,
+          "original_sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/ba1c28f70bc74b70/UNAPPLIED_RECOGNITION_GUARD.patch",
+          "public_sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+          "public_bytes": 816
+        }
+      ],
+      "dependencies": [],
+      "evidence": {
+        "written_proof": "Source/implementation conformance finding, not mathematical or human-state theorem",
+        "recorded_lean_checking": "No fresh Lean checking in this track. Any inherited source-proof dependencies remain separately identified by the proof/foundation owners.",
+        "finite_controls": "Inherited both CLIs and API/full-schema contrasts; six candidate cases and54 embedded negatives; original46-file custody",
+        "fresh_replay": "fresh-replay/daee-integrity-only.json; current consolidation only verified byte manifests, applied no DAEE patch",
+        "review_status": "Independent before/after candidate review; no adoption",
+        "semantic_interpretation": "Declared mathematical contract; not actual source authentication, cognitive basing, or warrant",
+        "historical_source_warrant": "Not established by this formal result",
+        "repository_adoption": "Proposed consolidation only; no new adoption or protected change"
+      },
+      "supersessions": [
+        "Runtime closure is not successful update of inner knowledge; no inspected operative inference from assent to recovered prior warrant",
+        "Strong recognition does not authenticate prior knowledge/willingness; candidate patch does not fix category/open gate or whole schema"
+      ],
+      "residual_obligations": [
+        "Authorized future integration required; reconcile category3/open-gate independently before wholesale full-schema enforcement; no whole runtime/CI/live-model result"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#daee",
+        "ENTRYPOINTS.json"
+      ]
+    },
+    {
+      "id": "ET-22",
+      "title": "State-dependent quotient cometric for all objectives",
+      "statement": "Let U be open, L full row rank and G(x) smooth positive definite. Every pulled-back coarse objective j∘L has projectable negative metric gradient iff A(x)=L G(x)^−1 L^T is constant on each entire L-fibre. Then A descends to a smooth positive-definite coarse cometric and its inverse is the induced coarse metric. An independently prescribed coarse metric requires A(x)=Gcan(Lx)^−1.",
+      "hypotheses": [
+        "Finite-dimensional open U; constant full-row-rank linear L; smooth positive-definite G; all smooth coarse objectives, not a single fixed objective; entire-fibre constancy, including disconnected components",
+        "Projected field equality transfers to flows on their common existence interval with uniqueness; global fine lifts/global existence are not supplied"
+      ],
+      "semantic_owner": "Whole-corpus Pro D5 state-dependent finite-dimensional formulation; inherited noetic-gradient quotient geometry and later full-law coarse-graining have separately retained owners",
+      "canonical_sources": [
+        {
+          "source_id": "whole",
+          "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "bytes": 28801,
+          "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "sha256_scope": "original source bytes",
+          "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+          "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+          "public_bytes": 28801
+        },
+        {
+          "source_id": "timing",
+          "path": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+          "sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "bytes": 20372,
+          "original_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "sha256_scope": "original source bytes",
+          "public_source": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+          "public_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+          "public_bytes": 20372
+        }
+      ],
+      "dependencies": [
+        "ET-08"
+      ],
+      "evidence": {
+        "written_proof": "Ordinary proof in D5 and completed timing review, including local linear right-inverse sections, positive-definiteness and coordinate-objective necessity",
+        "recorded_lean_checking": "No Lean certification claimed",
+        "finite_controls": "D5 hidden-direction and fixed-objective-versus-all-objectives controls in later8 timing groups",
+        "fresh_replay": "fresh-replay/response-33-8.json; both modes",
+        "review_status": "Completed bounded mathematical timing review accepts with exact hypotheses",
+        "semantic_interpretation": "Numerical field/flow quotient; no automatic interpretation as warranted learning",
+        "historical_source_warrant": "Not supplied",
+        "repository_adoption": "Not adopted; proposed baseline"
+      },
+      "supersessions": [
+        "Original D5 retained; no missing connected-fibre condition when constancy is on whole fibres",
+        "A fixed objective can project when A varies in directions it never probes",
+        "Induced coarse metric need not equal an independently prescribed metric"
+      ],
+      "residual_obligations": [
+        "Actual source geometry and target objectives must justify application; global existence and event semantics remain separate"
+      ],
+      "entrypoints": [
+        "EVIDENCE_TRANSPORT_SYNTHESIS.md",
+        "SOURCE_MAP.json#timing",
+        "ENTRYPOINTS.json"
+      ]
+    }
+  ],
+  "sources": {
+    "provenance": {
+      "path": "sources/7b4d4bd3efe0e258/RESULT.md",
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "bytes": 14332,
+      "original_sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/7b4d4bd3efe0e258/RESULT.md",
+      "public_sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "public_bytes": 14332
+    },
+    "provenance_review": {
+      "path": "source-suites/provenance-learning-review-20261009/REVIEW.md",
+      "sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+      "bytes": 8252,
+      "original_sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/provenance-learning-review-20261009/REVIEW.md",
+      "public_sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+      "public_bytes": 8252
+    },
+    "reset": {
+      "path": "source-suites/revocation-dependency/THEOREM.md",
+      "sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+      "bytes": 10324,
+      "original_sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/revocation-dependency/THEOREM.md",
+      "public_sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+      "public_bytes": 10324
+    },
+    "audit": {
+      "path": "sources/7b8a82a3ee87d136/RESULT.md",
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "bytes": 29885,
+      "original_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/7b8a82a3ee87d136/RESULT.md",
+      "public_sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "public_bytes": 29885
+    },
+    "history": {
+      "path": "sources/06053c55e5b4484b/historical-source-revision.md",
+      "sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+      "bytes": 25884,
+      "original_sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/06053c55e5b4484b/historical-source-revision.md",
+      "public_sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+      "public_bytes": 25884
+    },
+    "continuation": {
+      "path": "sources/3add44ffbe7e0bf1/RESULT.md",
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "bytes": 24610,
+      "original_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/3add44ffbe7e0bf1/RESULT.md",
+      "public_sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "public_bytes": 24610
+    },
+    "posterior_value": {
+      "path": "sources/5f6f84b1af7e5049/RESULT.md",
+      "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+      "bytes": 7623,
+      "original_sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/5f6f84b1af7e5049/RESULT.md",
+      "public_sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+      "public_bytes": 7623
+    },
+    "posterior_value_review": {
+      "path": "source-suites/inquiry-value-independent-review-20261010/REVIEW.md",
+      "sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+      "bytes": 7765,
+      "original_sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/inquiry-value-independent-review-20261010/REVIEW.md",
+      "public_sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+      "public_bytes": 7765
+    },
+    "whole": {
+      "path": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "bytes": 28801,
+      "original_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/8aad39f6fb030620/CROSS_FRONT_SYNTHESIS.md",
+      "public_sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "public_bytes": 28801
+    },
+    "code26": {
+      "path": "replay/finite-contracts/contracts.py",
+      "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "bytes": 13980,
+      "original_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "sha256_scope": "original source bytes",
+      "public_source": "replay/finite-contracts/contracts.py",
+      "public_sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "public_bytes": 13980
+    },
+    "authorial": {
+      "path": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "original_sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "public_sha256": "e509f790611a6328a45753a528b788583b9259bddb65272e750f89b61f001b61",
+      "public_bytes": 46651
+    },
+    "authorial_review": {
+      "path": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+      "sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+      "bytes": 9201,
+      "original_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/25b5fca3d7d67f34/ASSESSMENT.md",
+      "public_sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+      "public_bytes": 9201
+    },
+    "support": {
+      "path": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+      "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "bytes": 16325,
+      "original_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/synthesis-warrant-scope-20261011/RESULT.md",
+      "public_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "public_bytes": 16325
+    },
+    "support_code": {
+      "path": "source-suites/synthesis-warrant-scope-20261011/support_scope_check.py",
+      "sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+      "bytes": 6501,
+      "original_sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/synthesis-warrant-scope-20261011/support_scope_check.py",
+      "public_sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+      "public_bytes": 6501
+    },
+    "timing": {
+      "path": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+      "sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "bytes": 20372,
+      "original_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/synthesis-hybrid-timing-review-20261011/RESULT.md",
+      "public_sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "public_bytes": 20372
+    },
+    "timing_code": {
+      "path": "source-suites/synthesis-hybrid-timing-review-20261011/checks.py",
+      "sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+      "bytes": 9794,
+      "original_sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/synthesis-hybrid-timing-review-20261011/checks.py",
+      "public_sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+      "public_bytes": 9794
+    },
+    "credal": {
+      "path": "source-suites/cumulative-credal-audit-coupling-20261011/REPORT.md",
+      "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+      "bytes": 18927,
+      "original_sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/cumulative-credal-audit-coupling-20261011/REPORT.md",
+      "public_sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+      "public_bytes": 18927
+    },
+    "credal_review": {
+      "path": "source-suites/cumulative-revision-coupling-independent-review-20261011/REVIEW.md",
+      "sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+      "bytes": 8314,
+      "original_sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/cumulative-revision-coupling-independent-review-20261011/REVIEW.md",
+      "public_sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+      "public_bytes": 8314
+    },
+    "geometric": {
+      "path": "source-suites/credal-geometric-transport-20261011/REPORT.md",
+      "sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+      "bytes": 16183,
+      "original_sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/credal-geometric-transport-20261011/REPORT.md",
+      "public_sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+      "public_bytes": 16183
+    },
+    "geometric_repair": {
+      "path": "sources/6b77cd702ae8ce81/REPAIR.md",
+      "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+      "bytes": 7180,
+      "original_sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/6b77cd702ae8ce81/REPAIR.md",
+      "public_sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+      "public_bytes": 7180
+    },
+    "geometric_repair_review": {
+      "path": "source-suites/credal-geometric-independent-review-20261011/REPAIR_REVIEW.md",
+      "sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+      "bytes": 3255,
+      "original_sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/credal-geometric-independent-review-20261011/REPAIR_REVIEW.md",
+      "public_sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+      "public_bytes": 3255
+    },
+    "inquiry": {
+      "path": "source-suites/coupled-credal-inquiry-transport-20261011/RESULT.md",
+      "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "bytes": 28059,
+      "original_sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/coupled-credal-inquiry-transport-20261011/RESULT.md",
+      "public_sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "public_bytes": 28059
+    },
+    "inquiry_review": {
+      "path": "source-suites/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+      "sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+      "bytes": 14670,
+      "original_sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+      "public_sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+      "public_bytes": 14670
+    },
+    "inquiry_code": {
+      "path": "source-suites/coupled-credal-inquiry-transport-20261011/verify.py",
+      "sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+      "bytes": 16221,
+      "original_sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/coupled-credal-inquiry-transport-20261011/verify.py",
+      "public_sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+      "public_bytes": 16221
+    },
+    "pairwise": {
+      "path": "source-suites/pairwise-corroboration-bound-20261011/RESULT.md",
+      "sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+      "bytes": 13663,
+      "original_sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/pairwise-corroboration-bound-20261011/RESULT.md",
+      "public_sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+      "public_bytes": 13663
+    },
+    "pairwise_review": {
+      "path": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+      "sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "bytes": 12304,
+      "original_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+      "public_sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "public_bytes": 12304
+    },
+    "pairwise_asym": {
+      "path": "source-suites/pairwise-corroboration-asymmetric-supplement-20261011/SUPPLEMENT.md",
+      "sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+      "bytes": 5783,
+      "original_sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/pairwise-corroboration-asymmetric-supplement-20261011/SUPPLEMENT.md",
+      "public_sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+      "public_bytes": 5783
+    },
+    "daee": {
+      "path": "source-suites/noetic-correction-semantics-20261009/REPORT.md",
+      "sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+      "bytes": 14052,
+      "original_sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/noetic-correction-semantics-20261009/REPORT.md",
+      "public_sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+      "public_bytes": 14052
+    },
+    "daee_review": {
+      "path": "source-suites/noetic-guard-repair-peer-review-20261009/REPAIR_ADDENDUM.md",
+      "sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+      "bytes": 3433,
+      "original_sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+      "sha256_scope": "original source bytes",
+      "public_source": "source-suites/noetic-guard-repair-peer-review-20261009/REPAIR_ADDENDUM.md",
+      "public_sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+      "public_bytes": 3433
+    },
+    "daee_patch": {
+      "path": "sources/ba1c28f70bc74b70/UNAPPLIED_RECOGNITION_GUARD.patch",
+      "sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+      "bytes": 816,
+      "original_sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+      "sha256_scope": "original source bytes",
+      "public_source": "sources/ba1c28f70bc74b70/UNAPPLIED_RECOGNITION_GUARD.patch",
+      "public_sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+      "public_bytes": 816
+    },
+    "daee_checker": {
+      "path": "[original custody locator omitted; use source digest binding]",
+      "sha256": "ea6630a53ce8c77d6cc3102ae6ffd5aba0dc84539f1ffe5350fbc1aa4d9c4d1a",
+      "bytes": 118334
+    },
+    "daee_schema": {
+      "path": "[original custody locator omitted; use source digest binding]",
+      "sha256": "c2cac1a403d64f27bb7597c4e7e0d7b3f2663e91303960ba68817608e8ffd566",
+      "bytes": 60634
+    }
+  },
+  "cross_track_dependencies": {
+    "foundations": "FND-026 positive cumulative discrimination; FND-027 joint disclosure/producer-versus-calibration; FND-030 content attribution+veracity; FND-031 content access/exact fibre target; FND-033 CP16/CP23/T17 revalidation cross-ref ET-18; FND-034 mathematical/cognitive-mode mapping without psychological implementation.",
+    "proofs": "PT-16 erased-J proof uniqueness; PT-19 actual HasE finite-table deterministic sidecars; PT-20 external-seed rational joint kernels. These do not infer host serialization or actual warrant from abstract minimum sidecar.",
+    "geometry": "GEO-08 full-law quotient; GEO-10 fixed-marginal flow; GEO-13 endpoint action; GEO-16 singleton audit covariance; GEO-17 fixed-group extension; GEO-18 high-order laws; GEO-19 source-withdrawal tail budget and positive-time repair; GEO-20 Fisher rectifiability; MOM-11 completed two-trial fixed-calibration moment repair and third-trial failure.",
+    "pro_synthesis": "Source52/corrected55 direct tests and additional authorial A–L qualification owned by Pro synthesis track"
+  },
+  "fresh_evidence_entrypoint": "fresh-replay/REPLAY_RECEIPT.json",
+  "archive_replay_correction": "fresh-replay/original-26-archive.json"
+}

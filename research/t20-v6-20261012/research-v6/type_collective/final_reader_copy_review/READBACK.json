@@ -1,0 +1,125 @@
+{
+  "utc": "2026-10-12T15:52:35.122096+00:00",
+  "status": "ACCEPTED_EXACT_READER_COPY_DELTAS_WITH_RELEASE_CONDITION",
+  "binding_input": {
+    "path": "t20-v6-20261011/synthesis/FINAL_READER_COPY_BINDINGS.json",
+    "sha256": "eae8d7e90a43e972ad524d0172dfd7fee2d791dd65b7057c06237ac47865aa7c"
+  },
+  "method": "Complete exact before/after deltas checked against previously reviewed draft snapshots. Owner coverage addition reuses separately accepted exact controller review. No broad source rereading or new scientific credit.",
+  "records": [
+    {
+      "draft_path": "t20-v6-20261011/synthesis/README_FIRST_DRAFT.md",
+      "draft_sha256": "e7b30f4b2c9f99b0de60e68ea3c5daaf817d93697463ab3b2c3986ac939f96cf",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/START_HERE.md",
+      "final_sha256": "5388ba0fd0381903eeeb30936879f3e47be668a79ac51adce232e5ef0222aa4f",
+      "changes": 7,
+      "append": true,
+      "checks": {},
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/START_HERE.md.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/START_HERE.md"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+      "draft_sha256": "596998cd09b6ec396e5ed07f14c7c5536ce737435fb7d9e913374b240e513bde",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/OWNER_REVIEW_CASE.md",
+      "final_sha256": "3c685fea0e8943ee3d10002a525d6b83d5278bfefe1cbc07fd714e064cad48c2",
+      "changes": 5,
+      "append": false,
+      "checks": {},
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/OWNER_REVIEW_CASE.md.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/OWNER_REVIEW_CASE.md"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/CODEX_HANDOFF_DRAFT.md",
+      "draft_sha256": "b529afa3913ca97ce388891437676cd1a194293c7bc2112808bc21d70de49a96",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/CODEX_HANDOFF.md",
+      "final_sha256": "f558bf97702385f71915e886f9fdbffc27a92d359a574228a226a86973cd7fba",
+      "changes": 2,
+      "append": false,
+      "checks": {},
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/CODEX_HANDOFF.md.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/CODEX_HANDOFF.md"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/T21_CONTINUATION_CHARTER_DRAFT.md",
+      "draft_sha256": "5ff3531fb8a11d012b08d5d6d6f28a44feaacc14982cbc614fd07d3f41fb7550",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/T21_CONTINUATION_CHARTER.md",
+      "final_sha256": "1065c5a31c9bface45e3fa95ea13b8437a70ac1ae9c2dab8469276e6b9e287c4",
+      "changes": 1,
+      "append": false,
+      "checks": {},
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/T21_CONTINUATION_CHARTER.md.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/T21_CONTINUATION_CHARTER.md"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+      "draft_sha256": "b902ebec65538b0189c25f2d8f917184b6248f2648ffcc36c368c0e779ebb95c",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/WHOLE_CORPUS_SYNTHESIS.md",
+      "final_sha256": "e5558f7262be77d51511937f3b85ce36d45db1050aadf484151da8856324aaab",
+      "changes": 1,
+      "append": false,
+      "checks": {
+        "only_status_header_line3_changed": true,
+        "scientific_body_identical": true
+      },
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/WHOLE_CORPUS_SYNTHESIS.md.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/WHOLE_CORPUS_SYNTHESIS.md"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/CROSS_CONTRIBUTIONS_WORKING.json",
+      "draft_sha256": "a44d0274e2bd66da40547cee2182bab31b1369f28e485b090d5c530b234fa87f",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/CROSS_CONTRIBUTIONS.json",
+      "final_sha256": "c8b485a2298809c94b6b1b682278d24e806002c448303326bd6ab46283bb8aaf",
+      "changes": "Status/provenance wrapper only; all record values unchanged",
+      "append": false,
+      "checks": {
+        "all_record_values_exactly_unchanged": true,
+        "record_count": 15,
+        "owner_acceptance_false": true,
+        "original_register_hash_exact": true
+      },
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/CROSS_CONTRIBUTIONS.json.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/CROSS_CONTRIBUTIONS.json"
+    },
+    {
+      "draft_path": "t20-v6-20261011/synthesis/CORRECTION_SUPERSESSION_INDEX_WORKING.json",
+      "draft_sha256": "bda088549a4716cc7d4b691827edc4113eba466d7447dde23e3a40a0d0bcdf30",
+      "final_path": "t20-v6-20261011/synthesis/final_readers/CORRECTION_SUPERSESSION_INDEX.json",
+      "final_sha256": "42884da753b4fe9900355dd8f01e4b6a7eb4aad139ebb72694a3975f30309f83",
+      "changes": "Status/provenance wrapper only; all record values unchanged",
+      "append": false,
+      "checks": {
+        "all_record_values_exactly_unchanged": true,
+        "record_count": 27,
+        "owner_acceptance_false": true,
+        "original_register_hash_exact": true
+      },
+      "reviewed_diff": "t20-v6-20261011/type_collective/final_reader_copy_review/CORRECTION_SUPERSESSION_INDEX.json.diff",
+      "reviewed_snapshot": "t20-v6-20261011/type_collective/final_reader_copy_review/CORRECTION_SUPERSESSION_INDEX.json"
+    }
+  ],
+  "coverage_addition_review": {
+    "path": "t20-v6-20261011/controller_chain/owner_coverage_review/REVIEW.json",
+    "sha256": "6f0c39540b1d450346bc80e1f84388d86ca51bb9a60076f056ae42ab1d207f26",
+    "status": "ACCEPTED_EXACT_COVERAGE_ADDITION_WITH_FINITE_SCOPE_LIMITS"
+  },
+  "findings": [],
+  "release_condition": "The copies are owner-facing release text. Their submitted/sealed navigation wording is not independent evidence that delivery or materialisation has already happened; emit with actual selected records and the external observed delivery receipt. No package PASS, owner acceptance, PR authority or T21 commencement is asserted.",
+  "cli_confirmed_by_builder": "python tools/verify_handoff.py .; optional --expected-manifest-sha256 <64hex>; read-only stdout JSON; exact four root manifest names confirmed.",
+  "no_actual_package_verification_performed": true,
+  "sealed_utc": "2026-10-12T15:54:23.081386+00:00",
+  "alias_source_check": {
+    "path": "t20-v6-20261011/operational_successors/package_selection/prepare_candidate.py",
+    "sha256": "47462468bc666b572fd01a92b01714ee4ba2bedef571da4504aff16553c73278",
+    "examined_lines": [
+      108,
+      139
+    ],
+    "exact_aliases": [
+      "metadata/SOURCE_SCOPE_RESOLVER.jsonl",
+      "metadata/SOURCE_PATH_RESOLVER.jsonl",
+      "metadata/INTEGRATION_PLAN.json"
+    ],
+    "scope": "Actual alias declarations only; no full builder/source-selection/assembled-package verification implied."
+  }
+}

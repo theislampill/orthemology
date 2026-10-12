@@ -1,0 +1,220 @@
+{
+  "new_authored_code_dependency": {
+    "sha256": "db947fd1c6a35b9e2802b83c77553ddc078b2c51c895d486495844bd6b9bb81f",
+    "path": "t20-consolidation-20261011/catalogue/objects/db/db947fd1c6a35b9e2802b83c77553ddc078b2c51c895d486495844bd6b9bb81f",
+    "bytes": 9436,
+    "lines": 182,
+    "line_ranges": [
+      [
+        1,
+        182
+      ]
+    ],
+    "names": [
+      "bridge_models.py"
+    ],
+    "reading_status": "FULL_BODY_READ",
+    "reading_mode": "fresh complete source inspection",
+    "fresh_whole_body_read": true,
+    "semantic_read_credit": true,
+    "proof_body_credit": false,
+    "fresh_execution": false,
+    "role": "finite_modal_hosting_model_checker",
+    "assessment": "Actual finite existence/irreflexive-factive-grounding enumeration with cycle rejection; globally imposed possible-ground premise, actual vs essential roots and two/three/four-world variants. Hosting enumerates nonempty host sets; its essential condition is equality of entire host sets across worlds, stronger than existence of a common host. Type/worldwise-token, grounder/host, retention histories and rotating unique-root fixtures are actual represented objects/assertions, not evidence of metaphysical possibility or actual normative intentionality. Relation meanings and universal accessibility are stipulated. Assertions are load-bearing and require nonoptimized Python for runtime assurance. No source execution performed."
+  },
+  "exact_prior_proof_reuse": [
+    {
+      "ledger": "t20-v6-20261011/empirical_occurrence/formal_variants/READING_LEDGER.json",
+      "pointer": "$/records/15",
+      "record": {
+        "manifest_index": 15,
+        "sha256": "508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd",
+        "path": "t20-consolidation-20261011/catalogue/objects/50/508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd",
+        "bytes": 5309,
+        "lines": 140,
+        "line_ranges": [
+          [
+            1,
+            140
+          ]
+        ],
+        "member": "Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/BeginninglessProvision.lean",
+        "names": [
+          "BeginninglessProvision.lean",
+          "D-508da994aa96b57fc573.lean"
+        ],
+        "reading_status": "FULL_BODY_READ",
+        "reading_mode": "fresh_full_raw_text",
+        "role": "substantive_lean_proof_body",
+        "scope_note": "Countably infinite live hypergraph: each some(n) requires original none AND prior token some(n+1). All resources are actual, every rule is used, each token has direct productive original input, and productive paths are acyclic. Inductive Generated contains only the original. Same-resource/same-bearer realization and receipt transport hold. This separates original productive coverage from finite all-prerequisite generation; no perfected-original metaphysical model is asserted.",
+        "imports": [
+          "ActualProvisionReview"
+        ],
+        "fresh_execution": false,
+        "proof_credit": "Actual proof construction examined; not freshly kernel checked.",
+        "prior_exact_reading": []
+      },
+      "scope": "exact previously complete proof-body reading; no new kernel replay"
+    },
+    {
+      "ledger": "t20-v6-20261011/empirical_occurrence/formal_variants/READING_LEDGER.json",
+      "pointer": "$/records/39",
+      "record": {
+        "manifest_index": 39,
+        "sha256": "c5ade348f4dce161e0ddc9b971159b88adbf3a24cc8fc5c58525ce63e4009a7f",
+        "path": "t20-consolidation-20261011/catalogue/objects/c5/c5ade348f4dce161e0ddc9b971159b88adbf3a24cc8fc5c58525ce63e4009a7f",
+        "bytes": 5085,
+        "lines": 137,
+        "line_ranges": [
+          [
+            1,
+            137
+          ]
+        ],
+        "member": "Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/BeginninglessJointProvision.lean",
+        "names": [
+          "BeginninglessJointProvision.lean",
+          "D-c5ade348f4dce161e0dd.lean",
+          "beginningless.lean"
+        ],
+        "reading_status": "FULL_BODY_READ",
+        "reading_mode": "fresh_full_raw_text",
+        "role": "substantive_lean_proof_body",
+        "scope_note": "Two original sources directly productively support every created token, each requiring the next token. The graph is acyclic yet every joint resource has a prior joint resource. Inductive generation contains originals only; no Nat-valued depth decreases along all predecessor edges. This exposes the finite-depth first-joint-node premise and does not assert a possible plural-perfect-original universe.",
+        "imports": [
+          "ActualProvisionReview"
+        ],
+        "fresh_execution": false,
+        "proof_credit": "Actual proof construction examined; not freshly kernel checked.",
+        "prior_exact_reading": []
+      },
+      "scope": "exact previously complete proof-body reading; no new kernel replay"
+    },
+    {
+      "ledger": "t20-v6-20261011/empirical_occurrence/formal_variants/READING_LEDGER.json",
+      "pointer": "$/records/44",
+      "record": {
+        "manifest_index": null,
+        "sha256": "7c9993e1c3afe66690d8250ca47196d27e8a421b7195a381c383fde1acf2e74a",
+        "path": "t20-consolidation-20261011/catalogue/objects/7c/7c9993e1c3afe66690d8250ca47196d27e8a421b7195a381c383fde1acf2e74a",
+        "bytes": 11207,
+        "lines": 284,
+        "line_ranges": [
+          [
+            1,
+            284
+          ]
+        ],
+        "member": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/explanatory-review/ActualProvisionReview.lean",
+        "names": [
+          "ActualProvisionReview.lean"
+        ],
+        "reading_status": "FULL_BODY_READ",
+        "reading_mode": "fresh_full_raw_text",
+        "role": "substantive_lean_proof_body",
+        "scope_note": "CertifiedRoute requires only selected support edges to carry strict productive-path certificates; concatenation gives a productive path, not global identity of support and production. Realization and received transport then preserve the same original resource and its actual bearer. Finite nonidle model: g genuinely produces side, k produces target, every resource is least-generated and support acyclic, but g's support route to target includes nonproductive grounding. Hence g does not contribute productively to target. k's positive route certificate succeeds. No perfected-original universe or warrant for completion is claimed.",
+        "imports": [
+          "Init"
+        ],
+        "fresh_execution": false,
+        "proof_credit": "Actual proof construction examined; not freshly kernel checked.",
+        "prior_exact_reading": [],
+        "dependency_of_manifest_indices": [
+          15,
+          39
+        ]
+      },
+      "scope": "exact previously complete proof-body reading; no new kernel replay"
+    },
+    {
+      "ledger": "t20-v6-20261011/empirical_occurrence/formal_residue/READING_LEDGER.json",
+      "pointer": "$/records/5",
+      "record": {
+        "manifest_index": 5,
+        "sha256": "343a4efb89e16bee3bf7370a72569b036cea871e48316157b89c40266e896d2b",
+        "path": "t20-consolidation-20261011/catalogue/objects/34/343a4efb89e16bee3bf7370a72569b036cea871e48316157b89c40266e896d2b",
+        "bytes": 2278,
+        "lines": 49,
+        "line_ranges": [
+          [
+            1,
+            49
+          ]
+        ],
+        "member": "Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/TraceReduction.lean",
+        "names": [
+          "D-343a4efb89e16bee3bf7.lean",
+          "TraceReduction.lean",
+          "trace_lean.lean"
+        ],
+        "role": "substantive_lean_proof_body",
+        "reading_status": "FULL_BODY_READ",
+        "reading_mode": "fresh_complete_rereading_of_inherited_exact_body",
+        "scope_note": "Created-trace nonabsorption from genuinely new retained token absent from solo total. With a fixed background, difference from that background must also be shown. CND yields disjointness only after entire source-owned tokens are warranted. A signed projection may remain equal while actual occurrence lists differ. No physical conservation or universal product ontology is assumed.",
+        "prior_exact_reading": [
+          {
+            "ledger_path": "t20-consolidation-20261011/catalogue/objects/dc/dc3cbf63d22070937605cbfa29808199889cf761c5080c91f46d499d3631c5a3",
+            "ledger_sha256": "dc3cbf63d22070937605cbfa29808199889cf761c5080c91f46d499d3631c5a3",
+            "json_pointer": "$/records/30",
+            "recorded_scope": "All theorem source read; no kernel replay in this appraisal.",
+            "qualification": "Adequate exact inherited whole-body reading; this closure rereads whole source, with no first-reading or new theorem credit."
+          }
+        ],
+        "fresh_execution": false
+      },
+      "scope": "exact previously complete proof-body reading; no new kernel replay"
+    }
+  ],
+  "baseline_synthesis_reuse": [
+    {
+      "source_id": "T20-DOC-85c5f9bc02142c86236c",
+      "sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "path": "t20-consolidation-20261011/catalogue/objects/7b/7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "bytes": 63809,
+      "lines": 483,
+      "scope": "whole received body, with all substantive prose and metadata examined",
+      "reading_mode": "direct_full_body_read",
+      "reading_credit": "v6 examination of this exact public body; historical first-reading and execution credit remain attributed; no fresh original-byte credit for DERIVED projection",
+      "assessment": "Entire 483-line source guide read with separate returned gaps. Thirteen works retain source-specific scope, historical losses, modern editorial voice and opposition. Whole received electronic work is distinct from complete historic composition, print apparatus and manuscript collation. Strong positive source arguments remain evaluated rather than reset by earlier bounded withholding.",
+      "registered_rows": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+      ],
+      "public_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4/GUIDE.md",
+      "public_projection": "EXACT",
+      "original_sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "original_body_identity_not_implied": false,
+      "remaining_family": "context",
+      "remaining_index": 20
+    },
+    {
+      "source_id": "T20-DOC-f706ff5d91decee4c435",
+      "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "path": "t20-consolidation-20261011/catalogue/objects/c8/c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "bytes": 41472,
+      "lines": 229,
+      "scope": "whole received body, with all substantive prose and metadata examined",
+      "reading_mode": "direct_full_body_read",
+      "reading_credit": "v6 examination of this exact public body; historical first-reading and execution credit remain attributed; no fresh original-byte credit for DERIVED projection",
+      "assessment": "Entire 229-line final synthesis report examined. Broad ABC realization/nonreceipt, field propagation and ownership-scoped veracity are exact conditional gains. Historical October 7 actual-common acceptance and unrestricted source-mode withholding must not be conflated with later final warrant appraisals. Necessary existence, intrinsic sufficiency, original production, cognition and testimonial ownership retain different premises.",
+      "registered_rows": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+      ],
+      "public_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd/REPORT.md",
+      "public_projection": "EXACT",
+      "original_sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "original_body_identity_not_implied": false,
+      "remaining_family": "context",
+      "remaining_index": 23
+    }
+  ],
+  "BG_propagation": {
+    "source_sha256": "dd8d1b851411e36ed762df5bc9ea8fb69234a7141406a6d5bf353f42ccc4ad27",
+    "line": 37,
+    "affected_original_theorem": "de7a5355f6afd1a916521e33040258c9bff52f074057593059cbb719c5874852",
+    "controlling_model": "97d7482dbf3ed4b50de79699cedc77067323b095dfd6c7eb3afb557acdfcfcc4",
+    "correction_receipt": "t20-v6-20261011/empirical_occurrence/aq_bk_implementation/INDEPENDENT_ASSURANCE_CONTROLS.json",
+    "scope": "Qualify all-independent-assignments sentence; preserve all-false neutral non-entailment and independent hosting/modal deductions."
+  },
+  "primary_source_scope": "This is retained report/argument and code reading. Paper links, Arabic excerpts, scan/Drive counts and historical readback descriptions are not new direct primary reading or acquisition. Existing primary ledgers retain their precise scope.",
+  "chronology": "GUIDE/REPORT successor changes explicitly leave14:34 appraisal unchanged. Reflexive/provision documents are historical reopened-frontier reports, with cognition refinements and representation-invariance corrections preserved. Current later positive34-claim assessments are not reset by earlier conditional withholding. No closure/timing/adoption authority follows."
+}

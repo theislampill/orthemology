@@ -1,0 +1,317 @@
+{
+  "scope": "Exact dependencies only; source reading and original runtime staging separately qualified. P01 qualifier and seal-helper full/delta returns are in HELPER_REUSE_AND_RETURN.json and operational package assurance primary ledger.",
+  "records": [
+    {
+      "sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+      "path": "t20-consolidation-20261011/catalogue/objects/04/04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3",
+          "ledger": "private-locator:b053252b101eb5c12284",
+          "pointer": "$/records/0",
+          "recorded_scope": {
+            "reading_mode": "FRESH_COMPLETE_BODY_READING",
+            "remaining_substantive_ranges": [],
+            "role": "assurance_or_execution_or_mathematical_model_implementation"
+          },
+          "ranges": [
+            [
+              1,
+              299
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/04/04f2bd93ddb595eadbb8b238b9ec279caaff6875f49aac33de3fadbeccff19f3"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Actual P01 handoff/canonical_gate.py exact current held sibling; also intentional red driver import.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+      "path": "t20-consolidation-20261011/catalogue/objects/5d/5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "5da2762fe31720e898165751bf53636f66a5267719e0b3687587628c48ac4714",
+          "ledger": "private-locator:baa2bcfc45e30ad58af3",
+          "pointer": "$/sources/26",
+          "recorded_scope": {
+            "read_scope": "full executable source; direct import via exact local copy",
+            "role": "unchanged executable dependency"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/archive-views/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009.zip--1c5155b94388/T20_Guarded_Shared_Proof_Attainment_Supplement_20261009/certificate-compilation-boundary-20261009/compiler.py"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Certificate-compiler production import of exact same CP23 directory; full prior source examination.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+      "path": "t20-consolidation-20261011/catalogue/objects/dd/dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "ledger": "private-locator:9da31b1e76b8ca784438",
+          "pointer": "$/119",
+          "recorded_scope": {
+            "read_scope": "full body"
+          },
+          "ranges": [
+            [
+              1,
+              332
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/operational_successors/sources/dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c/prcodec.py"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "ledger": "private-locator:bedca2cf82c4759d5767",
+          "pointer": "$/5",
+          "recorded_scope": {
+            "scope": "direct full source/model/proof body"
+          },
+          "ranges": [
+            [
+              1,
+              332
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/early_remaining/t4_recovered/snapshot/research/semantic-recovery/prcodec.py"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "ledger": "private-locator:453cb01a99207f2d0331",
+          "pointer": "$/sources/167",
+          "recorded_scope": {
+            "scope": "exact full-body credit from same-turn T4 recovery reading",
+            "reading_credit": "PRIOR_FULL_BODY"
+          },
+          "ranges": [
+            [
+              1,
+              332
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/early_remaining/t4_recovered/snapshot/research/semantic-recovery/prcodec.py"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "ledger": "private-locator:955c031b762abd3c58f6",
+          "pointer": "$/85",
+          "recorded_scope": {
+            "status": "EXAMINATION_ROUTE_WITH_PRESERVED_SCOPE"
+          },
+          "ranges": [],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+          "ledger": "private-locator:fd2b1d1e37c890a4d297",
+          "pointer": "$/104",
+          "recorded_scope": {
+            "scope": "exact prior full-body reading reused; no new body-read credit",
+            "reading_credit": "REUSED_EXACT_FULL_BODY"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/dd/dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Comparator intended exact recovered codec; source reading closed, original local sibling/pointer staging not established.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+      "path": "t20-consolidation-20261011/catalogue/objects/86/86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+          "ledger": "private-locator:6d86db6fbfb9cd57967e",
+          "pointer": "$/557",
+          "recorded_scope": {},
+          "ranges": [
+            [
+              1,
+              100
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/86/86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+          "ledger": "private-locator:b75083e813ad69ba2e4d",
+          "pointer": "$/records/549",
+          "recorded_scope": {
+            "disposition": "DIRECT_FULL_BODY_READ"
+          },
+          "ranges": [
+            [
+              1,
+              100
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Corrected P03 source boundary variant used by later qualified source lane; caller import-root selection remains explicit.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+      "path": "t20-consolidation-20261011/catalogue/objects/69/6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+          "ledger": "private-locator:6d86db6fbfb9cd57967e",
+          "pointer": "$/558",
+          "recorded_scope": {},
+          "ranges": [
+            [
+              1,
+              76
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/69/6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+          "ledger": "private-locator:b75083e813ad69ba2e4d",
+          "pointer": "$/records/437",
+          "recorded_scope": {
+            "disposition": "DIRECT_FULL_BODY_READ"
+          },
+          "ranges": [
+            [
+              1,
+              76
+            ]
+          ],
+          "recorded_paths": [],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Corrected P03 export variant used by later qualified source lane; caller import-root selection remains explicit.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210",
+      "path": "t20-consolidation-20261011/catalogue/objects/a4/a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210",
+          "ledger": "private-locator:b053252b101eb5c12284",
+          "pointer": "$/records/18",
+          "recorded_scope": {
+            "reading_mode": "FRESH_COMPLETE_BODY_READING",
+            "remaining_substantive_ranges": [],
+            "role": "assurance_or_execution_or_mathematical_model_implementation"
+          },
+          "ranges": [
+            [
+              1,
+              88
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/a4/a4382218253e193d7caafa5f164c9aed1d1b0e79754ba0041164383356dc3210"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Canonical earlier P03 boundary source, separately full read; not silently replaced with corrected variant.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3",
+      "path": "t20-consolidation-20261011/catalogue/objects/49/4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "routes": [
+        {
+          "source_sha256": "4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3",
+          "ledger": "private-locator:b053252b101eb5c12284",
+          "pointer": "$/records/7",
+          "recorded_scope": {
+            "reading_mode": "FRESH_COMPLETE_BODY_READING",
+            "remaining_substantive_ranges": [],
+            "role": "assurance_or_execution_or_mathematical_model_implementation"
+          },
+          "ranges": [
+            [
+              1,
+              74
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/49/4971f828be8d21d7d5a20226e166c21e92d361ac1a53afee094f3a34e2364ad3"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Canonical earlier P03 export source, separately full read; not silently replaced with corrected variant.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "24fd89ca206b23b9b064871979c76a306b9b8845b5ad1f15bb13572d520d7969",
+      "path": "user-checkpoints/extracted/P03/proposal/safe_frontend.py",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE_WITH_COMPLETE_HISTORICAL_DELTA",
+      "ledger": "t20-v6-20261011/type_collective/native_export_data_residue/READING_LEDGER.json",
+      "diff": "t20-v6-20261011/type_collective/frontend_certificate_controls/SAFE_FRONTEND_CURRENT_REPAIR.diff",
+      "scope": "Current count captured once before range validation; earlier rejected preimage is full-read in queue14. No end-to-end attack run or current defect inferred.",
+      "fresh_execution": false
+    }
+  ],
+  "historical_runtime_gap": {
+    "caller_sha256": "0e17d578d5c9476d399e324ce8dd96a6290ba1539d53455652ad7cc7a7cccbbe",
+    "required_relative_paths": [
+      "codec-source/prcodec.py",
+      "LATEST_OPERATIONAL_MACHINE_QUALIFICATION.txt"
+    ],
+    "held_archive_layout": "Comparator at evidence/operational-machine; codec recorded only evidence/codec-pi3/codec-source/prcodec.py.",
+    "disposition": "No original staged sibling/pointer execution receipt established. Early worker confirms its exact codec source credit does not supply comparator staging. The algorithm is read; no standalone wrapper replay asserted."
+  }
+}

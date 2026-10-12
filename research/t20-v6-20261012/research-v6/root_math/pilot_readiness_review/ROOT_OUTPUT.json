@@ -1,0 +1,37 @@
+{
+  "schema": "orthemology-pilot0-v2-report-v1",
+  "run_id": "INDEPENDENT-INCOMPLETE-DESIGN-CONTROL",
+  "synthetic": false,
+  "n_responses": 2,
+  "feasibility": {
+    "pairwise_rater_agreement": {},
+    "sham_comprehension_gap_pp": 0.0,
+    "negative_control_overhead_tokens_vs_A": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "Cprime": null
+    }
+  },
+  "descriptive_estimands_no_verdict": {
+    "E1_C_minus_B": null,
+    "E2_C_minus_Cprime_eligible": -1.0,
+    "E3_B_minus_A": null,
+    "E4_overhead": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "Cprime": null
+    },
+    "NOTE": "descriptive only; efficacy margins are NOT applied in Pilot 0"
+  },
+  "outcome": "ADVANCE_TO_PILOT1",
+  "gates": {
+    "min_pairwise_rater_agreement": 0.7,
+    "sham_comprehension_gap_pp_max": 10.0,
+    "item_pass_rate_floor": 0.1,
+    "item_pass_rate_ceiling": 0.9,
+    "min_items_within_band": 5,
+    "negative_control_overhead_tokens_max": 30.0
+  }
+}

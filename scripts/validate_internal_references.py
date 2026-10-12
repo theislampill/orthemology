@@ -191,6 +191,9 @@ def _resolves(src, cited):
 
 
 def _citation_occurrences(src, text, *, root=None, successor_sources=None):
+    if src.startswith("research/t20-v6-20261012/"):
+        from validate_t20_v6_projection import origin_reference_text
+        text = origin_reference_text(src, text, ROOT if root is None else root)
     original_driver_members = _original_driver_members(src, text)
     # source_path in this typed map is an origin selector, not a checkout path.
     # Destination paths and every other field remain ordinary references.

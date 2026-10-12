@@ -1,0 +1,61 @@
+[
+  {
+    "id": "UI-01",
+    "claim": "Exact four-trial calibration moment slice and constructive atomic realization",
+    "status": "written_proof_and_author_controls",
+    "ancestry": [
+      "MOM-11",
+      "H-Continuation"
+    ],
+    "not_claimed": "General truncated moment theorem or field novelty"
+  },
+  {
+    "id": "UI-02",
+    "claim": "Exact common-target finite-exchangeable triangle and complete-law transport",
+    "status": "written_proof_and_author_controls",
+    "ancestry": [
+      "Companion D6",
+      "H-Continuation",
+      "ET-17"
+    ],
+    "not_claimed": "Existence of a latent calibration in finite-exchangeable models"
+  },
+  {
+    "id": "UI-03",
+    "claim": "Conditional optional-query minimax policy differs between the two families, with exact private-randomization saddle certificates",
+    "status": "written_proof_and_author_controls",
+    "ancestry": [
+      "ET-15",
+      "ET-17",
+      "MOM-11"
+    ],
+    "values": {
+      "iid": "1/3",
+      "finite_exchangeable_c_1_10": "21/50",
+      "positive_exchangeable_c_1_10": "207/500"
+    },
+    "not_claimed": "PSR refutation, actual source calibration, human warrant or branchwise adversary equivalence"
+  },
+  {
+    "id": "UI-04",
+    "claim": "Horizon-uniform one-sample minimax sufficiency for ex ante asymmetric binary prediction under fixed first two moments",
+    "status": "written_proof_and_author_controls",
+    "ancestry": [
+      "ET-17",
+      "H-Continuation",
+      "classical moment extremality"
+    ],
+    "not_claimed": "Sufficiency for proper scoring, calibration estimation, arbitrary conditional histories or every path loss"
+  },
+  {
+    "id": "UI-05",
+    "claim": "Equal four-moment positive calibration measures can differ on fifth-trial continuation",
+    "status": "written_proof_and_author_controls",
+    "ancestry": [
+      "MOM-11 third-trial boundary",
+      "H-Continuation",
+      "classical finite differences"
+    ],
+    "not_claimed": "General new moment impossibility"
+  }
+]

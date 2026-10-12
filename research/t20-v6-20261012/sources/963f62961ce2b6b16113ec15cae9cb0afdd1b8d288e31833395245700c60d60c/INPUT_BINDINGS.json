@@ -1,0 +1,61 @@
+[
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rivals/IMPLICIT_RESULT.md",
+    "sha256": "659cdc835270528214736e1cbca65709b6f1c5e9ecbf6cbddf21ffe937e75dcb",
+    "bytes": 11409
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rivals/implicit_attestation.py",
+    "sha256": "7d9852d5a90f22e12f924d9632bb516462ac0b14a2e76a2ca564e0fb03837213",
+    "bytes": 10469
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/REVIEW.md",
+    "sha256": "65ff08c65868b42d7b284e65f5a06b7b969bde6cfc5fcefa035452244a730f71",
+    "bytes": 14617
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/means_end_controls.py",
+    "sha256": "062e37835322f3530f41634eb162f76a40d0adb0d0202bbb114b9ff553e104e1",
+    "bytes": 6007
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/stable_motive_controls.py",
+    "sha256": "a25847a59809d53c78e4a322288ada8cdaf0334c1fa50e604373c6b08510f5d9",
+    "bytes": 7035
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/MEANS_END_RESULTS.json",
+    "sha256": "465696d053af340af3d748592811023b2514952d8f6da4b32c427af8de510749",
+    "bytes": 4444
+  },
+  {
+    "path": "tranche20/research-frontier-continuation/testimony-rival-review/implicit-review/STABLE_MOTIVE_RESULTS.json",
+    "sha256": "b12a000adf96a47e8ece3f00d2fb48878dfa0e6f0ba7fba18fdc75d856e45ee8",
+    "bytes": 67292
+  },
+  {
+    "path": "tranche20/arabic-volume-study/nubuwwat/second-opening/scan-controls/pdf769.png",
+    "sha256": "e860a615333fa28d0987a5ec08380e9854bdec89f991559bcbfe5c297f942dcd",
+    "bytes": 357747,
+    "inspection": "Image re-viewed at 2026-10-07T22:30:06Z through 22:30:19Z; no new unique-page credit."
+  },
+  {
+    "path": "tranche20/arabic-volume-study/nubuwwat/second-opening/scan-controls/pdf770.png",
+    "sha256": "d97b6dd50d76b3b3f84ad7af4fe4eefb6be2e23467064d3162152d7c05ffa0e2",
+    "bytes": 385249,
+    "inspection": "Image re-viewed at 2026-10-07T22:30:06Z through 22:30:19Z; no new unique-page credit."
+  },
+  {
+    "path": "tranche20/arabic-volume-study/nubuwwat/second-opening/scan-controls/pdf771.png",
+    "sha256": "c890d353660ad99c00540c2b718c5c863248d926f872b56060dbeb4572b997ff",
+    "bytes": 333315,
+    "inspection": "Image re-viewed at 2026-10-07T22:30:06Z through 22:30:19Z; no new unique-page credit."
+  },
+  {
+    "path": "tranche20/arabic-volume-study/nubuwwat/second-opening/scan-controls/pdf772.png",
+    "sha256": "32438ed62178cb919d9fae0a92082ef8fe6a4dae5163fd81e667915e65263083",
+    "bytes": 187812,
+    "inspection": "Image re-viewed at 2026-10-07T22:30:06Z through 22:30:19Z; no new unique-page credit."
+  }
+]

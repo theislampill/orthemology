@@ -1,0 +1,153 @@
+{
+  "schema": "t20-grounding-provenance-bindings-v1",
+  "sources": [
+    {
+      "id": "S01",
+      "owner": "same-standard-common-source-20261008",
+      "public_source": "depth/sources/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec.txt",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "read_scope": "Opening judgement; latter part of §4 and §§5–9; intervening displayed text partially truncated, not full-report reading credit. Source reading underlying the report inherited.",
+      "used_for": "Actual common-source appraisal with real secondary differentiation",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S02",
+      "owner": "productive-origination-target-20261011",
+      "public_source": "source-suites/productive-origination-target-20261011/REPORT.md",
+      "sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "bytes": 16055,
+      "read_scope": "Full substantive report §§1–6",
+      "used_for": "Fruit/tree identity, local versus original explanatory scope; no fresh primary Arabic",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S03",
+      "owner": "explanatory-warrant corrected report",
+      "public_source": "depth/sources/f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08.txt",
+      "sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "bytes": 26281,
+      "read_scope": "§§4b–d, lines 93–125; diff against 76b45d27358fe3cb9f44b26f6acd821e44f2e900558ad01513352a74e93cab1e; earlier version §§1–4c read",
+      "used_for": "Already implemented actual-use and shared-token provision adapter; beginningless repaired consumer",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S04",
+      "owner": "provision-identity/src/provision_semantics.py",
+      "public_source": "depth/sources/6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268.txt",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "bytes": 14477,
+      "read_scope": "Full code read; imported unchanged, run with new two-channel program",
+      "used_for": "Typed actual event and rule engine; root queries not declared universal summaries",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S05",
+      "owner": "provision_join.py",
+      "public_source": "depth/sources/35a0ae2256f545a158a1d2c4fa037521954a5b3c923b0e00238848b8e2b8dbb5.txt",
+      "sha256": "35a0ae2256f545a158a1d2c4fa037521954a5b3c923b0e00238848b8e2b8dbb5",
+      "bytes": 5514,
+      "read_scope": "Full code read; lines 20–82 re-read numbered; not executed",
+      "used_for": "Inherited original-resource/bearer/input-token adapter",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "35a0ae2256f545a158a1d2c4fa037521954a5b3c923b0e00238848b8e2b8dbb5",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S06",
+      "owner": "information-composition-and-self-revision-v5.tex",
+      "public_source": "depth/sources/4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0.txt",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "read_scope": "Lines 55–115 read; keyword location scan elsewhere not full-paper reading",
+      "used_for": "Inherited fibre factorization, relational join, actual coupling distinction",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S07",
+      "owner": "Orthemology_Tensor_Geometry_Context_Reconciliation_20261007.md",
+      "public_source": "depth/sources/0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852.txt",
+      "sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "bytes": 25083,
+      "read_scope": "Original-explanation and cooperation/provision crosswalks; bounded bridge tests; surrounding report excerpts",
+      "used_for": "Prior source-bound transfer obligations and no manufactured gap requirement",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S08",
+      "owner": "source-proof-uniqueness independent SEMANTIC_REVIEW.md",
+      "public_source": "sources/3ad489924809babb/SEMANTIC_REVIEW.md",
+      "sha256": "3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca",
+      "bytes": 3209,
+      "read_scope": "Full 21-line semantic review; no fresh Lean replay",
+      "used_for": "Internal proof identity distinct from external provenance and labelled data",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S09",
+      "owner": "GraphBridgeAssembly.lean",
+      "public_source": "proof-families/rational-hase-j/rational-kernel-additive-preservation-20261011/payload/hase-graph-bridge-assembly-20261010/GraphBridgeAssembly.lean",
+      "sha256": "0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "bytes": 10725,
+      "read_scope": "First 120 lines including identity_i_hasE declaration/proof; no compile",
+      "used_for": "Typed transport and identity normalizer consume endpoint identity evidence",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S10",
+      "owner": "provenance-learning-transport-20261009",
+      "public_source": "sources/7b4d4bd3efe0e258/RESULT.md",
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "bytes": 14332,
+      "read_scope": "Full substantive report §§1–7",
+      "used_for": "Acquisition roots, root-aware named operations, root membership distinct from likelihood-vector identity",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "public_projection": "EXACT"
+    },
+    {
+      "id": "S11",
+      "owner": "PMR-007 Deep AR V2 provenance-root evidence conservation",
+      "public_source": "depth/sources/cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b.txt",
+      "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "bytes": 6935,
+      "read_scope": "§§1–7 read (first 115 lines); remainder not credited",
+      "used_for": "Authenticated acquisition roots distinct from labels; conditional independence is additional",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false,
+      "public_sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "public_projection": "EXACT"
+    }
+  ],
+  "baseline": {
+    "public_source": "CUSTODY_ONLY_NOT_A_PORTABLE_REPLAY_TARGET",
+    "scope": "§§1–4 and 9–11; relevant passages of SOURCES_AND_READING.json used to locate exact reports"
+  },
+  "claims": "All source claims attributed to bound reports; their Arabic and kernel receipts remain inherited."
+}

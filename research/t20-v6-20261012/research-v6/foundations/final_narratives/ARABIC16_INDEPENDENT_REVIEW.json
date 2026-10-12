@@ -1,0 +1,45 @@
+{
+  "reviewed_report": "t20-v6-20261011/root_math/arabic16_narratives/REPORT.md",
+  "reviewed_report_sha256": "c10e29432f89ac15a9e45174c563df8a2ed4df30e5ce2ec773fb24bcdd9de862",
+  "targeted_primary_returns": [
+    {
+      "sha256": "dab34028bba34d4f712f6191e8e9d76004c28ecac51b3fc9ef38d0291d388bb6",
+      "path": "t20-consolidation-20261011/catalogue/objects/da/dab34028bba34d4f712f6191e8e9d76004c28ecac51b3fc9ef38d0291d388bb6",
+      "local_line_ranges": [
+        [
+          1,
+          8
+        ],
+        [
+          28,
+          43
+        ]
+      ],
+      "source_locators": [
+        "L1012–1019",
+        "L1039–1054"
+      ]
+    },
+    {
+      "sha256": "e92a7fa6bda08bbc4ef09c1050e73ee1eece5de9f732e4059ecb502267b0eaa6",
+      "path": "t20-consolidation-20261011/catalogue/objects/e9/e92a7fa6bda08bbc4ef09c1050e73ee1eece5de9f732e4059ecb502267b0eaa6",
+      "local_line_ranges": [
+        [
+          35,
+          45
+        ]
+      ],
+      "source_locators": [
+        "L0739–0749"
+      ]
+    }
+  ],
+  "reuse_verification": {
+    "exact_received_line_to_prior_character_offset_matches": 44,
+    "all_passed": true,
+    "scope": "Mechanical equality of declared retained excerpts only."
+  },
+  "verdict": "Accepted at source-qualified scope. Abu Barakat maxim is quoted and then qualified, actual cognition/fitting-time perfection is positive, and the alternative-power/harmony reply addresses the precise numerical production target. No new substantive correction to current appraisal.",
+  "no_first_reading_credit": true,
+  "no_new_scan_or_manuscript_collation": true
+}

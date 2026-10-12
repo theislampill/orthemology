@@ -1,0 +1,428 @@
+{
+  "schema": "t20-v6-exact-origin-references-v1",
+  "scope": "Occurrence-local original source coordinates, not local repository promises; body digests and all occurrence counts must match",
+  "records": [
+    {
+      "source_sha256": "1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+      "public_sha256": "1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981",
+      "repository_path": "research/t20-v6-20261012/sources/1c0cfe14a7cf031eb8c9898e080f2676275013ef3269fd859c7a87f01e5bf981/REVIEW.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "ir-fixtures",
+            "valid",
+            "field-witness-closure-graph.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7",
+      "public_sha256": "2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7",
+      "repository_path": "research/t20-v6-20261012/sources/2ab74d947232fa14788a85c776a6724e9f690cbaf9ac48d2ef95a2e7b442bbd7/recursive-state-transitions.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "spec-authoring-pack.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "framework-pipeline.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "procedures",
+            "P7-restoration-stops.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "TTP-MRP-mid-reread-pressure.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+      "public_sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+      "repository_path": "research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "kalamic-interlocutor.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "M9-predication-mode.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "tactics",
+            "husn-al-nazar-arguments.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "techniques",
+            "V8-bila-kayf-anchor.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "terminology.md"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5",
+      "public_sha256": "71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5",
+      "repository_path": "research/t20-v6-20261012/sources/71e3f0abc8ea5996d6032e6b0c38e18a6b21f98a51c29e8ab2e974a24dcd5dd5/DEPENDENCIES_AND_DISCRIMINATION.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "tests",
+            "check_scope_controls.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "bb4f9c5f2720d2d805d4b4c0d93ca5d2572125d44d7a212fb11b9b296b92193d",
+      "public_sha256": "1de43c3bdc9c0eb19e4320734cbe65747a665fbe99e0bf2fcb15facd9dc7d148",
+      "repository_path": "research/t20-v6-20261012/research-v6/empirical_occurrence/DEPENDENCY_CLOSURE.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "certification-authority.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "certification-policy.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "decision-ledger.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "golden-commands.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "parser",
+            "TRANSCLUSION.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "parser",
+            "meta-transclusive-lattice-projection.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "qamus",
+            "particle-projection-contract.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "qamus",
+            "website-handoff",
+            "WEBSITE-AGENT-HANDOFF-CONTRACT-2026-07-29.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "public_sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "repository_path": "research/t20-v6-20261012/sources/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6/M2-prior-probability.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "case-library",
+            "do-core.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "c7395184eec16ff191470bea4c272a0b04a97595094ca604dae4d01abda6d273",
+      "public_sha256": "dbeb9faf19168cab48269aa55ec318db39395d8ce8cded82d90e381c17b236e5",
+      "repository_path": "research/t20-v6-20261012/research-v6/type_collective/final_source_tests/EXACT_IMPORT_REUSE.json",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "experiments",
+            "convergence.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0",
+      "public_sha256": "d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0",
+      "repository_path": "research/t20-v6-20261012/sources/d72dea559413e805a4e8ca87c5e9c081f853b5d81d348f568667c30b0f52ace0/test_portable.py",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "scripts",
+            "replay.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_lean.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "scripts",
+            "replay_p03_runtime.py"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+      "public_sha256": "e1ea1e6bd1ee8d641da0548de0c6d417fa9d7ad0c79fae24bbf3ee825a3c93b0",
+      "repository_path": "research/t20-v6-20261012/sources/d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940/algebraic-notation-and-noetic-formalism.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-algebraic-symbol-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "docs",
+            "audits",
+            "v0.4.1.0-nla-operativity-audit.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "delta-result-vocabulary.json"
+          ],
+          "occurrences": 2,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    },
+    {
+      "source_sha256": "fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405",
+      "public_sha256": "fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405",
+      "repository_path": "research/t20-v6-20261012/sources/fdde02517f4e87ec4ee308c50ce698ea9be2e552767c7a116940974423924405/operative-contracts.md",
+      "origin_context": "preserved_source_document",
+      "references": [
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "diagnostic-ir.schema.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "framework-pipeline.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "module-catalogue.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "diagnostics",
+            "operative-contract.schema.json"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        },
+        {
+          "components": [
+            "references",
+            "module-codes.md"
+          ],
+          "occurrences": 1,
+          "candidate_identities": [],
+          "status": "ORIGINAL_SOURCE_CONTEXT; not a current repository path",
+          "materiality": "historical source or imported-source inventory; public layout is not a universal replay package"
+        }
+      ]
+    }
+  ]
+}

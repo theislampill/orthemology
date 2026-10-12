@@ -1,0 +1,7 @@
+# Concrete allowance for the deterministic construction
+
+For the effective round-robin construction, take the testing allowance ε=1/2. Each navigation or operating stage therefore receives false-rejection allowance 1/4. This supplies a particular rational choice for the parameter in the recovered theorem.
+
+All threshold searches then compare exact rational expressions from the supplied rational rows and integer state/action counts. No noncomputable real testing parameter is an input to the claimed computable deterministic policy.
+
+This is a clarification alongside the preserved proof freeze. It neither changes the existence theorem for an abstract ε in (0,1) nor modifies the recovered exact source bytes.

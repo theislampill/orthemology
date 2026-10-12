@@ -1,0 +1,393 @@
+{
+  "direct_project_modules": [
+    {
+      "module": "generate_candidate_state",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/generate_candidate_state.py",
+      "sha256": "efb2d0477fe62c7a977880031e3417dfe9eb9e65d7ad02a7887195c290f28010",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/57",
+          "recorded_scope": {
+            "sha256": "efb2d0477fe62c7a977880031e3417dfe9eb9e65d7ad02a7887195c290f28010",
+            "path": "t20-consolidation-20261011/catalogue/objects/ef/efb2d0477fe62c7a977880031e3417dfe9eb9e65d7ad02a7887195c290f28010",
+            "line_ranges": [
+              [
+                1,
+                383
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full383-line frozen candidate-state generator and semantic checker: exact observed five-PR topology and candidate decision allocation, explicit non-timeless nonpromotion output. No live repository observation.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_candidate_state",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_candidate_state.py",
+      "sha256": "bb910c1df6999f2b3defba2adcc060ec9207de5347195e64333da04526a34c9d",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/40",
+          "recorded_scope": {
+            "sha256": "bb910c1df6999f2b3defba2adcc060ec9207de5347195e64333da04526a34c9d",
+            "path": "t20-consolidation-20261011/catalogue/objects/bb/bb910c1df6999f2b3defba2adcc060ec9207de5347195e64333da04526a34c9d",
+            "index": 38,
+            "line_ranges": [
+              [
+                1,
+                146
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Complete frozen candidate topology validator delegates semantic overlay rebuilding to generate_candidate_state; explicitly observation-relative and non-timeless, candidate/merged/signoff separation. No GitHub query or present branch-state observation.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_semantic_operator_contract",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_semantic_operator_contract.py",
+      "sha256": "7635377d2349b63a560121df78fcd6fd20ec84a8ef4b3cf97bec52a278d98055",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": "$/853",
+          "recorded_scope": {
+            "source_id": "validate_semantic_operator_contract.py",
+            "path": "t20-consolidation-20261011/catalogue/objects/76/7635377d2349b63a560121df78fcd6fd20ec84a8ef4b3cf97bec52a278d98055",
+            "sha256": "7635377d2349b63a560121df78fcd6fd20ec84a8ef4b3cf97bec52a278d98055",
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                237
+              ]
+            ],
+            "fresh_compilation": false,
+            "inherited_kernel_status": "source text or historical receipt only",
+            "application_warrant": "separate evidence ceiling"
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_corrective_transition",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_corrective_transition.py",
+      "sha256": "1f533d681ae18000a9adf7ecc30ee1597917c138b7607a01fa26aee2ba8e31e7",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": "$/852",
+          "recorded_scope": {
+            "source_id": "validate_corrective_transition.py",
+            "path": "t20-consolidation-20261011/catalogue/objects/1f/1f533d681ae18000a9adf7ecc30ee1597917c138b7607a01fa26aee2ba8e31e7",
+            "sha256": "1f533d681ae18000a9adf7ecc30ee1597917c138b7607a01fa26aee2ba8e31e7",
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                212
+              ]
+            ],
+            "fresh_compilation": false,
+            "inherited_kernel_status": "source text or historical receipt only",
+            "application_warrant": "separate evidence ceiling"
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_memetic_ecology",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_memetic_ecology.py",
+      "sha256": "14a0cb5f9c72047ac490fddc785fa578bb941b14db95c116a9c0585564a7a56e",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/17",
+          "recorded_scope": {
+            "sha256": "14a0cb5f9c72047ac490fddc785fa578bb941b14db95c116a9c0585564a7a56e",
+            "path": "t20-consolidation-20261011/catalogue/objects/14/14a0cb5f9c72047ac490fddc785fa578bb941b14db95c116a9c0585564a7a56e",
+            "index": 5,
+            "line_ranges": [
+              [
+                1,
+                466
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full R7D graph and current tawatur contract validation. Source independence helper is declared-input consistency only; supported subject warrant separately requires distinct acquired routes, disjoint source/origin/transmission sets, originating units, qualitative trust/competence/coherence and noncollusion. Machine labels never produce tawatur warrant. Does not validate source truth or evaluate actual mental states.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_noetic_claims",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_noetic_claims.py",
+      "sha256": "80fa1da27b51cb49fa06d81228bf88b3e5c978257c3b525030ff755e9f7f3869",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/2",
+          "recorded_scope": {
+            "sha256": "80fa1da27b51cb49fa06d81228bf88b3e5c978257c3b525030ff755e9f7f3869",
+            "path": "t20-consolidation-20261011/catalogue/objects/80/80fa1da27b51cb49fa06d81228bf88b3e5c978257c3b525030ff755e9f7f3869",
+            "index": 25,
+            "line_ranges": [
+              [
+                1,
+                320
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full R7D claim support resolves bearer identity/version and evidence IDs; inferred subject assertions need>=2 IDs plus observation bridge, support-rule string and non-underdetermined status; held profiles retain alternatives. Mental-to-external bridge uses typed current/valid authorized-role records. General claimed evidence support remains registry/contract check, not truth evaluation.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_meta_noetic_memetics",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_meta_noetic_memetics.py",
+      "sha256": "e37f054a339ab24e1499f3470c3f31c40e15e56f8439d63775eb3fabcceea039",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": "$/855",
+          "recorded_scope": {
+            "source_id": "validate_meta_noetic_memetics.py",
+            "path": "t20-consolidation-20261011/catalogue/objects/e3/e37f054a339ab24e1499f3470c3f31c40e15e56f8439d63775eb3fabcceea039",
+            "sha256": "e37f054a339ab24e1499f3470c3f31c40e15e56f8439d63775eb3fabcceea039",
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                223
+              ]
+            ],
+            "fresh_compilation": false,
+            "inherited_kernel_status": "source text or historical receipt only",
+            "application_warrant": "separate evidence ceiling"
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_dynamic_orthing",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_dynamic_orthing.py",
+      "sha256": "9381c38dca315b709c1bfee3c9361a7097e2fc45e52f3e27e422e13c4e9190e4",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/49",
+          "recorded_scope": {
+            "sha256": "9381c38dca315b709c1bfee3c9361a7097e2fc45e52f3e27e422e13c4e9190e4",
+            "path": "t20-consolidation-20261011/catalogue/objects/93/9381c38dca315b709c1bfee3c9361a7097e2fc45e52f3e27e422e13c4e9190e4",
+            "index": 31,
+            "line_ranges": [
+              [
+                1,
+                844
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full844-line dynamic/OSM contract validator. It enforces13 typed objects,9 nonidentity relations,7 distinct learning/decoding method roles, exact article/pinned-code access roles and no metaphysical/human promotion. Endpoint similarity does not establish mechanism; reported trajectory match is among tested models; biological adaptation/model response future-work distinction retained. Four update levels require explicit transport arguments. These are data-contract checks, not a fresh read/replay of external article/code or general semantic validator.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "generate_argument_map",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/generate_argument_map.py",
+      "sha256": "28b83b1f908006ca07c3dc797536c890de6bd8eb9cb3225d2a3ee5564ba91cf1",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/type_collective/probe_dependencies/READING_LEDGER.json",
+          "pointer": "$/records/9",
+          "recorded_scope": {
+            "name": "generate_argument_map.py",
+            "sha256": "28b83b1f908006ca07c3dc797536c890de6bd8eb9cb3225d2a3ee5564ba91cf1",
+            "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/generate_argument_map.py",
+            "lines": 171,
+            "prior_routes": [],
+            "role": "Discovered controlling renderer dependency; pending direct full examination",
+            "queue_index": 10,
+            "names": [
+              "generate_argument_map.py"
+            ],
+            "reading_method": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                171
+              ]
+            ],
+            "execution": "NOT_RUN",
+            "semantic_scope": "Actual complete code, caller constructors and assertions; see REPORT.md. No new theorem or historical test pass inferred."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_argument_map",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_argument_map.py",
+      "sha256": "083be853d5b01cc37da7343bbefc025a897a1658c913100748d326243d2989c9",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/root_math/interface_validator_reading/READ_LEDGER.json",
+          "pointer": "$/rows/0",
+          "recorded_scope": {
+            "queue_index": 2,
+            "sha256": "083be853d5b01cc37da7343bbefc025a897a1658c913100748d326243d2989c9",
+            "path": "t20-consolidation-20261011/catalogue/objects/08/083be853d5b01cc37da7343bbefc025a897a1658c913100748d326243d2989c9",
+            "lines": 1022,
+            "status": "DIRECT_FULL_BODY_READ",
+            "reading_credit": true,
+            "role": "historical structured-argument conformance"
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_r7e_llm_witness",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_r7e_llm_witness.py",
+      "sha256": "2ca6d259f5ee43e9abcb6713758535bbe52e904db2aab1228b58ef1cef4a1c90",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/3",
+          "recorded_scope": {
+            "sha256": "2ca6d259f5ee43e9abcb6713758535bbe52e904db2aab1228b58ef1cef4a1c90",
+            "path": "t20-consolidation-20261011/catalogue/objects/2c/2ca6d259f5ee43e9abcb6713758535bbe52e904db2aab1228b58ef1cef4a1c90",
+            "index": 9,
+            "line_ranges": [
+              [
+                1,
+                519
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Complete witness, crosswalk, source-purpose, original-identity/history, distinct authority and claim-boundary checks. The current registry grants no identity/history authority; retrospective R7E remains record-insufficient, no live runtime/proof-protocol promotion. This is a separate witness contract, not a successor implementation of R7D claim_supported.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_math_source",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_math_source.py",
+      "sha256": "3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/root_math/interface_validator_reading/READ_LEDGER.json",
+          "pointer": "$/rows/1",
+          "recorded_scope": {
+            "queue_index": 14,
+            "sha256": "3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a",
+            "path": "t20-consolidation-20261011/catalogue/objects/3c/3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a",
+            "lines": 1022,
+            "status": "DIRECT_FULL_BODY_READ",
+            "reading_credit": true,
+            "role": "publication typography and occurrence ownership; not theorem correctness"
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "validate_candidate_provenance",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/validate_candidate_provenance.py",
+      "sha256": "476a33bc3f0154fb417fbeff8152e9fb8136a9f5769cff09564aecfa20fd17fd",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/46",
+          "recorded_scope": {
+            "sha256": "476a33bc3f0154fb417fbeff8152e9fb8136a9f5769cff09564aecfa20fd17fd",
+            "path": "t20-consolidation-20261011/catalogue/objects/47/476a33bc3f0154fb417fbeff8152e9fb8136a9f5769cff09564aecfa20fd17fd",
+            "index": 16,
+            "line_ranges": [
+              [
+                1,
+                340
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Complete occurrence-preserving candidate provenance validator. Reconstructs all221 parseable backlog lines, distinct stable line-based IDs, exact field equality, eight available versus16 reported rejections; missing artifact and unresolved attachment statuses remain hardcoded honest boundaries. No full swarm draft or independently verified sourcing is fabricated.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "task14_probe_registry",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/task14_probe_registry.py",
+      "sha256": "8e0f1fd73fc6711a933b3708b4294eb09845abaa03dfe61db2ef5fc915a5a430",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/54",
+          "recorded_scope": {
+            "sha256": "8e0f1fd73fc6711a933b3708b4294eb09845abaa03dfe61db2ef5fc915a5a430",
+            "path": "t20-consolidation-20261011/catalogue/objects/8e/8e0f1fd73fc6711a933b3708b4294eb09845abaa03dfe61db2ef5fc915a5a430",
+            "line_ranges": [
+              [
+                1,
+                69
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full69-line Task14 registry anchor computes canonical projection digest over all77 variant identities/owners/entries/selectors. Anchors inventory identity, not the truth of test outcomes.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    },
+    {
+      "module": "task14_direct_probes",
+      "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/task14_direct_probes.py",
+      "sha256": "7958779809c626867a48d6029faa316d290c1f34ef3d325a1317b2277c16b802",
+      "substantive_reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/interface_validators/READ_PROGRESS.json",
+          "pointer": "$/55",
+          "recorded_scope": {
+            "sha256": "7958779809c626867a48d6029faa316d290c1f34ef3d325a1317b2277c16b802",
+            "path": "t20-consolidation-20261011/catalogue/objects/79/7958779809c626867a48d6029faa316d290c1f34ef3d325a1317b2277c16b802",
+            "line_ranges": [
+              [
+                1,
+                493
+              ]
+            ],
+            "read_status": "DIRECT_FULL_SOURCE",
+            "scope": "Full493-line concrete Task14 dispatcher. All77 fixed variant branches construct explicit control/mutation inputs and call production API/CLI through imported test-fixture helpers; rc0/1 distinguished from error. Actual test constructors remain separately bound obligations. No assignment of outcomes merely from requested role; no retained execution.",
+            "execution": "No retained source run."
+          }
+        }
+      ],
+      "binding": "Exact recovered runtime snapshot bytes match the source-reading route; no current execution claim."
+    }
+  ],
+  "stdlib_and_external": "Python stdlib, PyYAML and jsonschema are separately named ambient runtime dependencies, not original research bodies credited here.",
+  "transitive_closure": "Project validator/dispatcher own dependencies remain in owning reader ledgers; no blanket recursive proof claim."
+}

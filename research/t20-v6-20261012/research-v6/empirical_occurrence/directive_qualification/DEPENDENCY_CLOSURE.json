@@ -1,0 +1,704 @@
+{
+  "nine_pinned_source_join": [
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "theory/orthemic-core-formalization.md",
+        "returned_git_blob_sha1": "34effd9e917b5372e53d03a71e052fd38050490c",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/orthemic-core-formalization.md",
+        "read_boundary": "Full pinned payload retrieved for byte comparison. Substantive reading: local lines 137\u2013169, 255\u2013400, 394\u2013520, 548\u2013616; broader keyword navigation. Exact cited clauses in \u00a7\u00a72.2, 3.1\u20133.4, 4.1.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+          "path": "t20-consolidation-20261011/catalogue/objects/1b/1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+          "verified_git_blob_sha1": "34effd9e917b5372e53d03a71e052fd38050490c",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+              "ledger": "private-locator:a2d8458342867b6f39c9",
+              "pointer": "$/records/1",
+              "recorded_scope": {
+                "scope": "Complete actual proof/argument/qualification prose or generated TeX source; no linked dependency or fresh execution credit by association.",
+                "method": "DIRECT_COMPLETE_BODY_READ"
+              },
+              "ranges": [
+                [
+                  1,
+                  921
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/1b/1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+              "ledger": "private-locator:3b3b95b4e80650faf524",
+              "pointer": "$/records/45",
+              "recorded_scope": {
+                "reading_mode": "exact_delegated_full_or_complete_composite_scope"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/1b/1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+        "returned_git_blob_sha1": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+        "read_boundary": "Pinned first-line fetch supplied blob identity; full local byte hash matches. Substantive reading: lines 67\u2013108 and 368\u2013405, especially Definition 6.4 and Theorem 6.5; keyword navigation elsewhere.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+          "path": "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+          "verified_git_blob_sha1": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:9da31b1e76b8ca784438",
+              "pointer": "$/1208",
+              "recorded_scope": {
+                "read_scope": "full body"
+              },
+              "ranges": [
+                [
+                  1,
+                  1157
+                ]
+              ],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/orthemology/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:fbc50319228b2c538ef9",
+              "pointer": "$/57",
+              "recorded_scope": {
+                "read_scope": "Actual manuscript: Typed words/ambient algebra through Witnessed revision and degree-lowering; Future-safe compression and integrated architecture; headings inspected. Historical \u00a7\u00a73\u20136 and 11.",
+                "scope": "complete1157lines inclallproofs,limitations,sourceandverificationregister; fourcontiguousreadchunks",
+                "status": "DIRECT_COMPLETE_BODY_EXAMINED"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:16f5f192e5f641c7b361",
+              "pointer": "$/entries/0",
+              "recorded_scope": {
+                "read_scope": "Actual manuscript: Typed words/ambient algebra through Witnessed revision and degree-lowering; Future-safe compression and integrated architecture; headings inspected. Historical \u00a7\u00a73\u20136 and 11."
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:db5ea1e0815bc4690c62",
+              "pointer": "$/bindings/0",
+              "recorded_scope": {
+                "read_scope": [
+                  [
+                    107,
+                    199
+                  ],
+                  [
+                    333,
+                    504
+                  ]
+                ]
+              },
+              "ranges": [
+                [
+                  107,
+                  199
+                ],
+                [
+                  333,
+                  504
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:6dcdda391de90e494f15",
+              "pointer": "$/sources/18",
+              "recorded_scope": {
+                "read_scope": "Lines 107\u2013155,301\u2013370: actual typed tensor/parity/contraction source"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:de62de33dc47bfdaa92e",
+              "pointer": "$/entries/0",
+              "recorded_scope": {
+                "read_scope": "Actual manuscript: Typed words/ambient algebra through Witnessed revision and degree-lowering; Future-safe compression and integrated architecture; headings inspected. Historical \u00a7\u00a73\u20136 and 11."
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:ee347bc794ccaf4c92ae",
+              "pointer": "$/0",
+              "recorded_scope": {
+                "read_scope": {
+                  "mode": "selected_line_ranges",
+                  "line_ranges": [
+                    [
+                      107,
+                      205
+                    ],
+                    [
+                      301,
+                      504
+                    ],
+                    [
+                      899,
+                      959
+                    ],
+                    [
+                      1065,
+                      1090
+                    ]
+                  ]
+                }
+              },
+              "ranges": [
+                [
+                  107,
+                  205
+                ],
+                [
+                  301,
+                  504
+                ],
+                [
+                  899,
+                  959
+                ],
+                [
+                  1065,
+                  1090
+                ]
+              ],
+              "recorded_paths": [
+                "catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:37171b668168a69c3f9f",
+              "pointer": "$/entries/0",
+              "recorded_scope": {
+                "current_scope": "Complete report body through prior adequate readings and documented v6 completions",
+                "prior_read_scope": "Actual manuscript: Typed words/ambient algebra through Witnessed revision and degree-lowering; Future-safe compression and integrated architecture; headings inspected. Historical \u00a7\u00a73\u20136 and 11.",
+                "supporting_ledgers": [
+                  "GEOMETRY_PRIOR_READING_SCOPES.json",
+                  "READ_LOG.jsonl",
+                  "../pro_synthesis/READ_LOG.jsonl"
+                ],
+                "limit": "Scope applies to this report; not all imports, cited external texts or original primary sources. Code and replay credits are separate."
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/archive-views/ordered-control-projective-preservation-20261011.zip--42fd9cfc001b/constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:c7cc69666d80d88b75a0",
+              "pointer": "$/records/14",
+              "recorded_scope": {
+                "disposition": "EXACT_FULL_BODY_PRIOR_REUSE",
+                "adequacy": "Exact content hash matches prior completed source-body route. Old partial scopes are not promoted alone.",
+                "remaining_substantive_ranges": []
+              },
+              "ranges": [
+                [
+                  1,
+                  1157
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:abc84a002ee9ac3da081",
+              "pointer": "$/exact_prior_controlling_reuse/1",
+              "recorded_scope": {
+                "scope": "Exact prior full controlling prose/contract or complete patch read reused; no duplicate proof/body discovery"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/orthemology/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:bdde5c0bb02de37a7385",
+              "pointer": "$/167",
+              "recorded_scope": {
+                "disposition": "exact_direct_or_qualified_source_read"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-v6-20261011/operational_successors/apoautosis_ancestry/orthemology/orthing_formalisation_v1.md"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:f955a7c36caba44cb77c",
+              "pointer": "$/records/68",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_BODY_OR_VERIFIED_COMPOSITE_REUSE",
+                "role": "prior_controlling_dependency_or_implementation"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+              "ledger": "private-locator:49717d27ee0438b6f385",
+              "pointer": "$/sources/10",
+              "recorded_scope": {
+                "fresh_read_status": "SELECTED_CONTROLLING_BODY",
+                "role": "CONTROLLING_WRITTEN_ARGUMENT"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/cd/cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+        "returned_git_blob_sha1": "36c37281d3be418a6ea5af270d132cf23615339f",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/companion/dynamic-orthing-noetic-learning-and-orthability.md",
+        "read_boundary": "Pinned first-line fetch supplied blob identity; full local byte hash matches. Substantive reading: lines 1\u2013130, particularly \u00a72, 29\u201343; keyword navigation elsewhere.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+          "path": "t20-consolidation-20261011/catalogue/objects/de/de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+          "verified_git_blob_sha1": "36c37281d3be418a6ea5af270d132cf23615339f",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+              "ledger": "private-locator:4e2aabc05b745f567904",
+              "pointer": "$/records/9",
+              "recorded_scope": {
+                "disposition": "FRESH_FULL_TEXT_READING",
+                "adequacy": "Eight access/possibility/learning modalities; factive soundness versus path adequacy; convergence does not supply a normative or metaphysical ground.",
+                "remaining_substantive_ranges": []
+              },
+              "ranges": [
+                [
+                  1,
+                  273
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/de/de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+        "returned_git_blob_sha1": "55124edb6c46fdaeb7d715040bb24dceb35552ff",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+        "read_boundary": "Full 93-line payload read; principal use \u00a7\u00a71\u20133, 15\u201360; \u00a75 limits.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "3c6ca5966dd231e21d2186cc74d82abbb3a422761d1ae741d285be43abc42410",
+          "path": "t20-consolidation-20261011/catalogue/objects/3c/3c6ca5966dd231e21d2186cc74d82abbb3a422761d1ae741d285be43abc42410",
+          "verified_git_blob_sha1": "55124edb6c46fdaeb7d715040bb24dceb35552ff",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "3c6ca5966dd231e21d2186cc74d82abbb3a422761d1ae741d285be43abc42410",
+              "ledger": "private-locator:4e2aabc05b745f567904",
+              "pointer": "$/records/0",
+              "recorded_scope": {
+                "disposition": "FRESH_FULL_TEXT_READING",
+                "adequacy": "Norm type, represented standard and episode binding; mutation and correction distinctions; source-origin independence boundary.",
+                "remaining_substantive_ranges": []
+              },
+              "ranges": [
+                [
+                  1,
+                  92
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/3c/3c6ca5966dd231e21d2186cc74d82abbb3a422761d1ae741d285be43abc42410"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml",
+        "returned_git_blob_sha1": "ac24b636da84d42c1a34bd8a2fd3143de7cc2469",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml",
+        "read_boundary": "Full payload read; principal use bearers.mu-tilde non_claims, distinctness, carrier_roles, and three_histories.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "3524bd009a13ad5ad45527e2c979942596c17e999edde8d44824122b3543b773",
+          "path": "t20-consolidation-20261011/catalogue/objects/35/3524bd009a13ad5ad45527e2c979942596c17e999edde8d44824122b3543b773",
+          "verified_git_blob_sha1": "ac24b636da84d42c1a34bd8a2fd3143de7cc2469",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "3524bd009a13ad5ad45527e2c979942596c17e999edde8d44824122b3543b773",
+              "ledger": "private-locator:9da31b1e76b8ca784438",
+              "pointer": "$/863",
+              "recorded_scope": {
+                "read_scope": "full body"
+              },
+              "ranges": [
+                [
+                  1,
+                  73
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/35/3524bd009a13ad5ad45527e2c979942596c17e999edde8d44824122b3543b773"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md",
+        "returned_git_blob_sha1": "3b98291280c7b9416f73e9b6d258a9a13c8f224b",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/decisions/0025-meta-noetic-memetics-and-sound-corrective-dynamics.md",
+        "read_boundary": "Full payload read; principal use Decision \u00a7\u00a71\u20133; R7C amendment consulted. Status headers treated only as historical/source provenance.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "755092deae64dffae4944ae35b2c22539e8ca48b274e14c588c94d781e163593",
+          "path": "t20-consolidation-20261011/catalogue/objects/75/755092deae64dffae4944ae35b2c22539e8ca48b274e14c588c94d781e163593",
+          "verified_git_blob_sha1": "3b98291280c7b9416f73e9b6d258a9a13c8f224b",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "755092deae64dffae4944ae35b2c22539e8ca48b274e14c588c94d781e163593",
+              "ledger": "private-locator:4e2aabc05b745f567904",
+              "pointer": "$/records/17",
+              "recorded_scope": {
+                "disposition": "FRESH_FULL_TEXT_READING",
+                "adequacy": "Complete decision including R7C amendment: admissibility first corrects R7B ordering; partial-order and two-timescale limits.",
+                "remaining_substantive_ranges": []
+              },
+              "ranges": [
+                [
+                  1,
+                  136
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/75/755092deae64dffae4944ae35b2c22539e8ca48b274e14c588c94d781e163593"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+        "returned_git_blob_sha1": "66f1c9c1a2cda1678b835913e1268eec9345e675",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+        "read_boundary": "Full payload read; principal use Decision \u00a7\u00a72\u20134 and non-claims.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "727d625649e67e1837ed6e6e73779ab5faa4c417d354f0e15e9f551d6c3b124e",
+          "path": "t20-consolidation-20261011/catalogue/objects/72/727d625649e67e1837ed6e6e73779ab5faa4c417d354f0e15e9f551d6c3b124e",
+          "verified_git_blob_sha1": "66f1c9c1a2cda1678b835913e1268eec9345e675",
+          "exact_examination_routes": []
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "experiments/orthemology-v5-successors/groups/t07-technical/README.md",
+        "returned_git_blob_sha1": "7cd6ff0393556359cecaee0c5b109a6cf8a05345",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/groups/t07-technical/README.md",
+        "read_boundary": "Full payload retrieved; only Boundaries retained and T07-CRITERION-V3 read for this comparison. Other technical families and proof/replay evidence are not independently appraised.",
+        "role": "load-bearing source"
+      },
+      "matches": [
+        {
+          "sha256": "3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
+          "path": "t20-consolidation-20261011/catalogue/objects/3e/3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
+          "verified_git_blob_sha1": "7cd6ff0393556359cecaee0c5b109a6cf8a05345",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
+              "ledger": "private-locator:9da31b1e76b8ca784438",
+              "pointer": "$/1513",
+              "recorded_scope": {
+                "read_scope": "full body",
+                "role": "source-scope synthesis and historical evidence projection"
+              },
+              "ranges": [
+                [
+                  1,
+                  303
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/3e/3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
+              "ledger": "private-locator:3b3b95b4e80650faf524",
+              "pointer": "$/records/35",
+              "recorded_scope": {
+                "scope": "Reuse only the exact full/delta/primary-excerpt scope in the bound owner record; no duplicate local first-reading credit.",
+                "reading_mode": "exact_completed_owner_scope_reuse"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/3e/3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "repository": "theislampill/orthemology",
+        "commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+        "path": "docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md",
+        "returned_git_blob_sha1": "c032efd2236060906b2d2dfc15b52f336aeeac87",
+        "url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md",
+        "read_boundary": "Full payload read during bounded source navigation. Historical hold is not a premise of the crosswalk conclusion.",
+        "role": "consulted background; not used to settle present philosophical status"
+      },
+      "matches": [
+        {
+          "sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+          "path": "t20-consolidation-20261011/catalogue/objects/e4/e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+          "verified_git_blob_sha1": "c032efd2236060906b2d2dfc15b52f336aeeac87",
+          "exact_examination_routes": [
+            {
+              "source_sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+              "ledger": "private-locator:84a6a7a92b072455e0a3",
+              "pointer": "$/sources/35",
+              "recorded_scope": {
+                "read_scope": "Full proper-function owner"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/e4/e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+              "ledger": "private-locator:5f4b720f147609b03f29",
+              "pointer": "$/sources/35",
+              "recorded_scope": {
+                "read_scope": "Full proper-function owner"
+              },
+              "ranges": [],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/e4/e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+              "ledger": "private-locator:955c031b762abd3c58f6",
+              "pointer": "$/758",
+              "recorded_scope": {
+                "status": "EXAMINATION_ROUTE_WITH_PRESERVED_SCOPE"
+              },
+              "ranges": [],
+              "recorded_paths": [],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            },
+            {
+              "source_sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+              "ledger": "private-locator:3f522507e4abfb8f6484",
+              "pointer": "$/records/1",
+              "recorded_scope": {
+                "reading_mode": "EXACT_PRIOR_FULL_PLUS_FRESH_CORROBORATING_RETURN",
+                "role": "historical_proper_function_status_and_preserved_fixture_payload"
+              },
+              "ranges": [
+                [
+                  1,
+                  56
+                ]
+              ],
+              "recorded_paths": [
+                "t20-consolidation-20261011/catalogue/objects/e4/e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359"
+              ],
+              "exact_held_hash": true,
+              "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "independent_byte_identity_checks": [
+    {
+      "sha256": "1be1009438c3abd7c73670218e18d7564e97ff76948bb03f503cfa7bd38fe13d",
+      "git_blob_sha1": "34effd9e917b5372e53d03a71e052fd38050490c",
+      "prior_routes": 2
+    },
+    {
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "git_blob_sha1": "c094a9c44fae26484426df67ac5afd9e2190eb4d",
+      "prior_routes": 13
+    },
+    {
+      "sha256": "de1b55b70816a87f152b9b2a1c15edf7d173b77c29bd084fb825e56e8fcda5dd",
+      "git_blob_sha1": "36c37281d3be418a6ea5af270d132cf23615339f",
+      "prior_routes": 1
+    },
+    {
+      "sha256": "3c6ca5966dd231e21d2186cc74d82abbb3a422761d1ae741d285be43abc42410",
+      "git_blob_sha1": "55124edb6c46fdaeb7d715040bb24dceb35552ff",
+      "prior_routes": 1
+    },
+    {
+      "sha256": "3524bd009a13ad5ad45527e2c979942596c17e999edde8d44824122b3543b773",
+      "git_blob_sha1": "ac24b636da84d42c1a34bd8a2fd3143de7cc2469",
+      "prior_routes": 1
+    },
+    {
+      "sha256": "755092deae64dffae4944ae35b2c22539e8ca48b274e14c588c94d781e163593",
+      "git_blob_sha1": "3b98291280c7b9416f73e9b6d258a9a13c8f224b",
+      "prior_routes": 1
+    },
+    {
+      "sha256": "727d625649e67e1837ed6e6e73779ab5faa4c417d354f0e15e9f551d6c3b124e",
+      "git_blob_sha1": "66f1c9c1a2cda1678b835913e1268eec9345e675",
+      "prior_routes": 0
+    },
+    {
+      "sha256": "3eb797cdf4925b80e21597fed04fbda0bee7a85f7bb5a141137fbba258cf25c2",
+      "git_blob_sha1": "7cd6ff0393556359cecaee0c5b109a6cf8a05345",
+      "prior_routes": 2
+    },
+    {
+      "sha256": "e4ae2e2751535e625f245a1bb2f2e4f2f4c447a55c859e1b1c94dbbf48adf359",
+      "git_blob_sha1": "c032efd2236060906b2d2dfc15b52f336aeeac87",
+      "prior_routes": 4
+    }
+  ],
+  "load_bearing_scope": "Eight exact prior full routes reused; Decision0033 fully read now. Historical crosswalk ranges are preserved as historical; current full routes are separately cited.",
+  "core_extra_final_LF_independently_verified": false,
+  "new_execution": false
+}

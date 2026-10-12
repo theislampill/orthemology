@@ -1,0 +1,145 @@
+{
+  "scope": "Exact current author packet and root controls bound for read-only replay, plus named inherited sources inspected at the passages stated in REVIEW.md. Binding a metadata file does not imply independent proof of every assertion it contains. Author verify.py separately rehashes all twelve of its inherited inputs.",
+  "reviewed_files": [
+    {
+      "path": "audit-continuation-transport-20261010/RESULT.md",
+      "bytes": 24610,
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/AUTHOR_MANIFEST.json",
+      "bytes": 3602,
+      "sha256": "1a9ae650986d512013c29a5fe9ac9138f5e72d00601ce2d31d45ff6b662030d8"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/CHECKS_NORMAL.json",
+      "bytes": 1113,
+      "sha256": "95b6d7ddf9a2adbc3f9df21cc4341ebc982c8cc01ac5c5855299af352b8f107e"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/CHECKS_OPTIMIZED.json",
+      "bytes": 1113,
+      "sha256": "95b6d7ddf9a2adbc3f9df21cc4341ebc982c8cc01ac5c5855299af352b8f107e"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/DEDUP_SCAN.json",
+      "bytes": 50950,
+      "sha256": "aa3542ca467062b93d99f788310d6905c99d41a70d32943efa99b774e4b7df7a"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/INPUT_BINDINGS.json",
+      "bytes": 2622,
+      "sha256": "338fa6907fbfec2007572be55bbfc2fd159d588918c29736d81de8869ae9c96e"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/RESULT.md",
+      "bytes": 28059,
+      "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/REVIEW_REVISION.diff",
+      "bytes": 11882,
+      "sha256": "2bd49e7a08a344ae6f4b4a8b56fc03728d7a324a31249f67ccb2ae1ef38cbf33"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/REVIEW_REVISION.json",
+      "bytes": 1044,
+      "sha256": "8015b12082c4bec0a60b1a5ce755b2c4a85efa03ab89dadb9c4525c8bb1e1142"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/REVIEW_REVISION_BASELINE.json",
+      "bytes": 1620,
+      "sha256": "478e31b00bc32dbc48607029478ba957182240fe64831c5371699de2c387f64b"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/RUN_RECEIPT.json",
+      "bytes": 1013,
+      "sha256": "20e89fe2678a31ec50af3caf97e9efb8138f6fdbe5d06b76d1056ba78d8a7c6d"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/SOURCES.md",
+      "bytes": 1856,
+      "sha256": "40fbcf8f7eb19e4d23563f3ff51fccbe7d74e229f92f3d5dd3977a92ac00b2a7"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/run_checks.py",
+      "bytes": 1588,
+      "sha256": "1c8911a6862caae96b5f20e507bf243710413034371612c50e1a074405e4f726"
+    },
+    {
+      "path": "coupled-credal-inquiry-transport-20261011/verify.py",
+      "bytes": 16221,
+      "sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1"
+    },
+    {
+      "path": "credal-geometric-transport-20261011/REPAIR.md",
+      "bytes": 7180,
+      "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/DERIVATION.md",
+      "bytes": 9176,
+      "sha256": "76dc4b67a043e3c8b65a14a2c4ed2c3ed77e8d412b03387ea3b95d3a12383462"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/SOURCE_SCOPE_ADDENDUM.md",
+      "bytes": 1085,
+      "sha256": "6aec96d4ab2be723755498fe0470899b9b373148141519e4964ba56dae4094a4"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/check.py",
+      "bytes": 2247,
+      "sha256": "be2b49f15dd929339c0f294e7113bd08e27eefc7a6af791ec7f88176aefd6c12"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/kernel_vertex_control.py",
+      "bytes": 699,
+      "sha256": "c9b4ecf832d1e72ee8103013a39a7fef3e15295b667e63b095fee0ea1ddb67a4"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/unrestricted_query_control.py",
+      "bytes": 2029,
+      "sha256": "cdb94fcb44b676e9f618f30dd4bddb63ab388b41ee3bfcdf3b8adfdeec0b26ad"
+    },
+    {
+      "path": "credal-inquiry-root-controls-20261011/zero_branch_control.py",
+      "bytes": 1143,
+      "sha256": "f5642df5fe4b8812ab5d56abfab4119a47173db0291226fd37868453f3989dd9"
+    },
+    {
+      "path": "cumulative-credal-audit-coupling-20261011/REPORT.md",
+      "bytes": 18927,
+      "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3"
+    },
+    {
+      "path": "posterior-inquiry-value-20261010/RESULT.md",
+      "bytes": 7623,
+      "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf"
+    },
+    {
+      "path": "received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/documents/CROSS_FRONT_SYNTHESIS.md",
+      "bytes": 28801,
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4"
+    },
+    {
+      "path": "received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/research/contracts.py",
+      "bytes": 13980,
+      "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06"
+    },
+    {
+      "path": "stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "bytes": 15671,
+      "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    }
+  ]
+}

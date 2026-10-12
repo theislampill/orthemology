@@ -1,0 +1,25 @@
+{
+  "packet": "Effective stationary-law selection in ACTIVE T20",
+  "as_of_utc": "2026-10-10T14:09:00Z",
+  "status": "Ordinary mathematical research; submitted for independent internal review",
+  "protected_changes": false,
+  "integration_authority": false,
+  "fresh_kernel_claim": false,
+  "repository_pin": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+  "files": {
+    "CONTROLS.json": "3c789822d43c12f71b768559ffa078fdde91f16134c84ef8c44b17740a649215",
+    "CONTROLS.log": "3c789822d43c12f71b768559ffa078fdde91f16134c84ef8c44b17740a649215",
+    "README.md": "9d9068400dc6039c1e66310015724ac2697bbf40819e6b86fe13dd93b98aa338",
+    "RESULT.md": "ec03a2d42894f7e16c109631d884fec6023ab85e4c149bc6639d01e399f91f9c",
+    "SOURCE_ACQUISITIONS.json": "87f56d6131e67f25d8d33d451458ba37fef25bafcc25c5a03f5ec61362362adc",
+    "check_controls.py": "f2809f25230fa42c637257902bbf724d28fd98b7f3a2cbf6377e2cf373cb9dda",
+    "inputs/ENVELOPE_DIAMETER.md": "5092a5e8eaa1ee4d856aeb279b1ea6192c3bcc6121a40766a1125756b0928b27",
+    "inputs/INHERITED_REGISTRY_EXCERPT.json": "876d3317914d38f0b3a2ecadfcfd32a4b54e93c9c05d39a35c2f931660cdb77b",
+    "inputs/P02_QUALIFIED_SUITE.json": "a3f3a4883115e911976baa3c1e7f61de732f7d3cc37b28678c36c12f6de234c0",
+    "inputs/ROOT_EXACT_CONTROLS.json": "21aac677e2a36b866dbe7917c232f3e313f9ca438876d4e172a2664847e684df",
+    "inputs/T10_MINIMAL_ADDENDUM.md": "94a47f2ed5926fcef2e178544640eb7f713af3d33b49dd55d0a45445c8769320",
+    "inputs/T18_MATHEMATICAL_COMPANION.md": "578f6f4bc699f0658d77e0eff4dc39b995410b35f7380ddf02f68ed15550e70a",
+    "inputs/U08_FIXED_POINTS.md": "63758a99be47ad2604b6583bee401608f4410362c47a98ecef2bd07c491563a9"
+  },
+  "evidence_scope": "Universal arguments in RESULT.md are written mathematics; 5,081 exact rational checks are finite corroboration only."
+}

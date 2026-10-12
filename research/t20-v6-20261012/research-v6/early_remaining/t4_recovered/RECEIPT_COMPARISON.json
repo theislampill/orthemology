@@ -1,0 +1,14 @@
+[
+  {
+    "fresh_path": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/semantic-recovery/FRESH_ENDPOINT_CHECK.json",
+    "archived_path": "t20-v6-20261011/early_remaining/t4_recovered/snapshot/research/semantic-recovery/FRESH_ENDPOINT_CHECK.json",
+    "sha256": "e64f6b48d3169366cceed46d32de5dbe50b4f6fbb77558385ffbdff25b0da7ca",
+    "byte_identical": true
+  },
+  {
+    "fresh_path": "t20-v6-20261011/early_remaining/t4_recovered/fresh_runtime/endpoint-source-audit/evidence/INDEPENDENT_CHECK.json",
+    "archived_path": "t20-v6-20261011/early_remaining/t4_recovered/snapshot/research/endpoint-source-audit/evidence/INDEPENDENT_CHECK.json",
+    "sha256": "2372eb6f3c5c1614298441afd2517023ac5954172a3a24f377bd39e0c4051c94",
+    "byte_identical": true
+  }
+]

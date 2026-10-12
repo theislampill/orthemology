@@ -1,0 +1,419 @@
+{
+  "schema": "t20-v6-historical-reference-boundaries-v1",
+  "records": [
+    {
+      "id": "reference-001",
+      "source_sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "original_relative_target": "../geometry-bridge/RESULT.md",
+      "candidate_identities": [
+        "110d235c2054a2bf46d0ae1744c663a0a743372dbd5779d16a52f560b246c410"
+      ],
+      "status": "HISTORICAL_TARGET_NOT_SELECTED_OR_AMBIGUOUS"
+    },
+    {
+      "id": "reference-002",
+      "source_sha256": "2309e3df468d0a6059453e2c507d4a302c3a9eb50e85341184831aaacb63fc25",
+      "original_relative_target": "research/independent-review/FINAL_REVIEW_INDEX.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-003",
+      "source_sha256": "2309e3df468d0a6059453e2c507d4a302c3a9eb50e85341184831aaacb63fc25",
+      "original_relative_target": "research/report/Orthemology_v5_Fourth_Research_Tranche_Recovery.docx",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-004",
+      "source_sha256": "31330bcef69eff43bcf2271b62b53cc809fdc08024ba9eeb7f28bed1028fc374",
+      "original_relative_target": "controls/check_solver_roots.py",
+      "candidate_identities": [
+        "3096f671e6dad4697b1bfc5f7897aaf3f7facddca2244d62753f8f148b92aeec"
+      ],
+      "status": "HISTORICAL_TARGET_NOT_SELECTED_OR_AMBIGUOUS"
+    },
+    {
+      "id": "reference-005",
+      "source_sha256": "31330bcef69eff43bcf2271b62b53cc809fdc08024ba9eeb7f28bed1028fc374",
+      "original_relative_target": "evidence/COMPOSITIONAL_REPLAY_RESULT.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-006",
+      "source_sha256": "31330bcef69eff43bcf2271b62b53cc809fdc08024ba9eeb7f28bed1028fc374",
+      "original_relative_target": "probes/IndependentSCCIffProbe.lean",
+      "candidate_identities": [
+        "c578a36ccb5a32436422b769d6ff6ddbf82c86af045bbe3e235d7d0e2b7a9d88"
+      ],
+      "status": "HISTORICAL_TARGET_NOT_SELECTED_OR_AMBIGUOUS"
+    },
+    {
+      "id": "reference-007",
+      "source_sha256": "4d9708d4921f10ec7c3b3ef420d7e2fe9decd61d52ed4c272ee37ca1ee25a22b",
+      "original_relative_target": "reassessment/OWNER_ASSESSMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-008",
+      "source_sha256": "4d9708d4921f10ec7c3b3ef420d7e2fe9decd61d52ed4c272ee37ca1ee25a22b",
+      "original_relative_target": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-009",
+      "source_sha256": "4d9708d4921f10ec7c3b3ef420d7e2fe9decd61d52ed4c272ee37ca1ee25a22b",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-010",
+      "source_sha256": "51bf704ebe5a572ce4eff81a478690644e759fb836df7a3637e9ca195d7a0871",
+      "original_relative_target": "../EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-011",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/attributes-delivery-v1/DEPENDENCIES_AND_DISCRIMINATION.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-012",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/independent-review/GENERAL_PRIVATE_ARITHMETIC_REVIEW_V1.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-013",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/motivation-value-freeze-v2/MOTIVATION_VALUE_AND_MALICIOUS_SOURCE.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-014",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/world-bridge/freeze-v2/EXTERNAL_TERMINUS_AND_ORIGIN_CLOSURE.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-015",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/intrinsic-necessity/freeze-v2/PREMISE_AND_INCREMENT_MAP.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-016",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../../tranche5/canonical-baseline-checkout/docs/project-closure/ar8r-v11/programs/ar8r-r5-minimal-nonintegration-control.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-017",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/norm-fixing/freeze-v2/SEMANTIC_WARRANT_TESTS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-018",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../controller-cost/mgf-continuation/CONTINUATION_STATUS.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-019",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/norm-fixing/freeze-v2/ARGUMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-020",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/independent-review/TIMING_RESOURCE_REVIEW_V1.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-021",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../foundations/independent-review/RESTORATION_REVIEW_V1.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-022",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../controller-cost/mgf-continuation/COMPOSITION_SCOPE.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-023",
+      "source_sha256": "569061cd0567fb7c31790c7def90f797491d3dd029dfbe6cca9344dd9a6b68a8",
+      "original_relative_target": "../../tranche5/canonical-baseline-checkout/docs/project-closure/ar8r-v11/programs/proper-function-and-candidate-e.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-024",
+      "source_sha256": "65c1a31b4739eca133b91db9c78f5f96d7f0abbb917ab530cb5f70df74766d47",
+      "original_relative_target": "../EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-025",
+      "source_sha256": "7393551939a336c62f5bd32069c759825673031921df18cece9f09f4d38dfcc6",
+      "original_relative_target": "reassessment/OWNER_ASSESSMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-026",
+      "source_sha256": "7393551939a336c62f5bd32069c759825673031921df18cece9f09f4d38dfcc6",
+      "original_relative_target": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-027",
+      "source_sha256": "7393551939a336c62f5bd32069c759825673031921df18cece9f09f4d38dfcc6",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-028",
+      "source_sha256": "76f37653e0b0619b641ae1ed7a373ff3abea0c71873aaeb597944499619d74d8",
+      "original_relative_target": "tranche3/report/REPORT_PREDECESSOR_INPUTS.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-029",
+      "source_sha256": "76f37653e0b0619b641ae1ed7a373ff3abea0c71873aaeb597944499619d74d8",
+      "original_relative_target": "tranche3/report/Orthemology_v5_Third_Research_Tranche.docx",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-030",
+      "source_sha256": "76f37653e0b0619b641ae1ed7a373ff3abea0c71873aaeb597944499619d74d8",
+      "original_relative_target": "tranche3/independent-audit/INDEX.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-031",
+      "source_sha256": "76f37653e0b0619b641ae1ed7a373ff3abea0c71873aaeb597944499619d74d8",
+      "original_relative_target": "tranche3/report/REPORT_TEXT.txt",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-032",
+      "source_sha256": "76f37653e0b0619b641ae1ed7a373ff3abea0c71873aaeb597944499619d74d8",
+      "original_relative_target": "tranche3/root-portable-check/ROOT_PORTABLE_QUALIFICATION.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-033",
+      "source_sha256": "88fc170f8cdbf043bc3993047f0adda4fa89f5d5de43e7c68824b43998c26794",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-034",
+      "source_sha256": "9fbd4e99d1add895383091b3b150549152358cb6649a46732d7b5b7f60dacb03",
+      "original_relative_target": "reassessment/OWNER_ASSESSMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-035",
+      "source_sha256": "9fbd4e99d1add895383091b3b150549152358cb6649a46732d7b5b7f60dacb03",
+      "original_relative_target": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-036",
+      "source_sha256": "9fbd4e99d1add895383091b3b150549152358cb6649a46732d7b5b7f60dacb03",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-037",
+      "source_sha256": "acce281227e32789f3aa4df67677c2b128277500b89ec99b408cfabdf139843d",
+      "original_relative_target": "reassessment/OWNER_ASSESSMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-038",
+      "source_sha256": "acce281227e32789f3aa4df67677c2b128277500b89ec99b408cfabdf139843d",
+      "original_relative_target": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-039",
+      "source_sha256": "acce281227e32789f3aa4df67677c2b128277500b89ec99b408cfabdf139843d",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-040",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/SUPERSESSION.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-041",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../decisions/0037-v5-research-continuation-registry.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-042",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../decisions/0038-v5-sixth-final-successor-overlay.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-043",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../../experiments/orthemology-v5-continuations/README.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-044",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/OBLIGATION_CROSSWALK.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-045",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../../experiments/orthemology-v5-continuations/registry.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-046",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-047",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/EVIDENCE_BINDINGS.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-048",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/RESULT_STATUS.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-049",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/README.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-050",
+      "source_sha256": "b04b45a2dfb129f7a016285703bd7f30afcfdabc8594ce446fa164929e6c327f",
+      "original_relative_target": "../provenance/v5-research-continuations/SOURCE_MAP.json",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-051",
+      "source_sha256": "b37e884b9b6ea0005608ee6dcfd1f955bd718ac9c92f7cac2ac9cb9b1401cf48",
+      "original_relative_target": "reassessment/OWNER_ASSESSMENT.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-052",
+      "source_sha256": "b37e884b9b6ea0005608ee6dcfd1f955bd718ac9c92f7cac2ac9cb9b1401cf48",
+      "original_relative_target": "reassessment/COMBINED_RESEARCH_SYNTHESIS.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-053",
+      "source_sha256": "b37e884b9b6ea0005608ee6dcfd1f955bd718ac9c92f7cac2ac9cb9b1401cf48",
+      "original_relative_target": "EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-054",
+      "source_sha256": "b8449b5fc6304bf8830c91a6ce4aaca9c3b67f3bcc5cd645e3360085e2a94888",
+      "original_relative_target": "../EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-055",
+      "source_sha256": "b8cccce5b337cd3804829400ab18e98a3e5c1c6ec1202541b22361b602ba9c95",
+      "original_relative_target": "../EDITION_V3.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-056",
+      "source_sha256": "b8fc5d1a58240532a0cd9efa90125969db9656932e7c707ee980971074810be4",
+      "original_relative_target": "EDITION_V2.md",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    },
+    {
+      "id": "reference-057",
+      "source_sha256": "d8a6ccd6e3c92e6599a8e6f0ff65d3209fbc114d1b7d6bf770ee55cbe1993940",
+      "original_relative_target": "register-formalism-implementation-ledger.md",
+      "candidate_identities": [
+        "f8ed2109783a75393beaabaf90e7db2b56ce2d2fdcad0f7cd84e36ad631d6821"
+      ],
+      "status": "HISTORICAL_TARGET_NOT_SELECTED_OR_AMBIGUOUS"
+    },
+    {
+      "id": "reference-058",
+      "source_sha256": "e69ebd825dab9979dd8502195a9ded1e9689c435727368e7547a84ad04c13b7d",
+      "original_relative_target": "./lean-toolchain",
+      "candidate_identities": [],
+      "status": "HISTORICAL_TARGET_NOT_PUBLICLY_RESOLVED"
+    }
+  ]
+}

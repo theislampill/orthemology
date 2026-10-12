@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-12T15:28:41.381924+00:00",
+  "status": "ACCEPT_QUALIFIED_DRAFTS_AFTER_PRECISION_REPAIRS",
+  "records": [
+    {
+      "path": "t20-v6-20261011/synthesis/README_FIRST_DRAFT.md",
+      "sha256": "e7b30f4b2c9f99b0de60e68ea3c5daaf817d93697463ab3b2c3986ac939f96cf",
+      "lines": 35,
+      "method": "full current body"
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+      "sha256": "b902ebec65538b0189c25f2d8f917184b6248f2648ffcc36c368c0e779ebb95c",
+      "lines": 299,
+      "method": "prior full review plus complete current deltas"
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+      "sha256": "3d7c33f0463afb041e3346ad8b068d8cb720fd2e65ea7f998013ec04c6f0a0e0",
+      "lines": 62,
+      "method": "full current body"
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/CODEX_HANDOFF_DRAFT.md",
+      "sha256": "b529afa3913ca97ce388891437676cd1a194293c7bc2112808bc21d70de49a96",
+      "lines": 49,
+      "method": "full current body"
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/T21_CONTINUATION_CHARTER_DRAFT.md",
+      "sha256": "5ff3531fb8a11d012b08d5d6d6f28a44feaacc14982cbc614fd07d3f41fb7550",
+      "lines": 61,
+      "method": "full current body"
+    }
+  ],
+  "report_sha256": "d9e5bb717838c671fde10f3f13750ac2285641ab15a3bccd5c5293f116cd7ca7",
+  "foundation_currentness_route": {
+    "path": "foundations/REPORT.md",
+    "sha256": "d1878e6f0170fb154496b4d1e7a56bc0f11e7be85efede916b53a0fedaf8dac2",
+    "section": "32 only for latest page-image/currentness attribution; no new primary reading"
+  },
+  "baseline_metadata_route": {
+    "path": "synthesis/BASELINE_READBACK_20261012.json",
+    "sha256": "494ef780dfd7c543de04da5f875c620e3d08271c024afd0e8b83eeb2c0c80f8d"
+  },
+  "no_claims": [
+    "final corpus denominator",
+    "actual package materialisation",
+    "owner acceptance",
+    "repository mutation authorization",
+    "T21 start",
+    "new primary reading or scientific execution"
+  ]
+}

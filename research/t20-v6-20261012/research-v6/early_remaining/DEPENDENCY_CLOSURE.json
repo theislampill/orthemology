@@ -1,0 +1,335 @@
+{
+  "scope": "All35 Lean source modules in owned11 rows; imports recursively closed among original modules. ConcreteSparsePrior contains exact ProcessExpectation byte-prefix, separately recorded.",
+  "modules": 35,
+  "edges": [
+    {
+      "from_module": "ProcessExpectation",
+      "from_sha256": "f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c",
+      "import": "Mathlib",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "ProcessContractProbe",
+      "from_sha256": "027ca9df3825b18c022bf5a6d4cfddcd44677598f78adc16d212a49796fadbf6",
+      "import": "ProcessExpectation",
+      "kind": "original_research_dependency",
+      "to_sha256": "f428c83592fbda3cb3297f4fcebd0e067e4e8bfbfecb646ce3a059947479da4c",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ConcreteSparsePrior",
+      "from_sha256": "aa1d3e9ba3e45922fe88925ac576f94dbb6753082fcdc8f47200df21aef45b46",
+      "import": "Mathlib",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "ConcreteContractProbe",
+      "from_sha256": "5080f84e77cb929bef81d6b0314f9f422d2d0b6036d9e12d67d6f6707fa05cca",
+      "import": "ConcreteSparsePrior",
+      "kind": "original_research_dependency",
+      "to_sha256": "aa1d3e9ba3e45922fe88925ac576f94dbb6753082fcdc8f47200df21aef45b46",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EndpointMoment",
+      "from_sha256": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+      "import": "Mathlib",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "AnnularLiteral",
+      "from_sha256": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+      "import": "EndpointMoment",
+      "kind": "original_research_dependency",
+      "to_sha256": "e2a61649f0ca59b94c3dd8ae0e578f49ab9b40ef111592036b4691479d7842d3",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "BernoulliWord",
+      "from_sha256": "7565efa23652a7156b448c72bd13be25ebcb53e8f4717156324635a9cef4e2d0",
+      "import": "AnnularLiteral",
+      "kind": "original_research_dependency",
+      "to_sha256": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "GrowthMoment",
+      "from_sha256": "c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab",
+      "import": "BernoulliWord",
+      "kind": "original_research_dependency",
+      "to_sha256": "7565efa23652a7156b448c72bd13be25ebcb53e8f4717156324635a9cef4e2d0",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "BayesBridge",
+      "from_sha256": "ea71b954c4f4905f694a7dc76d45b170b4b07895eb7a3d90d85a1ee42504a0b7",
+      "import": "GrowthMoment",
+      "kind": "original_research_dependency",
+      "to_sha256": "c79a4d9c42440f1ccb6b92d48f650c657fe164baf82610520893b48d9b64ebab",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "CentredBernoulli",
+      "from_sha256": "e353d544fdc6814d53f8b79866998c28263baa665aaeaf90bbf509355e7ab7f9",
+      "import": "BayesBridge",
+      "kind": "original_research_dependency",
+      "to_sha256": "ea71b954c4f4905f694a7dc76d45b170b4b07895eb7a3d90d85a1ee42504a0b7",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EmpiricalGeometry",
+      "from_sha256": "21e21eec8d1252c877b6ca384715762697704551f5ffd0ec9a3e9f9ddd5981fb",
+      "import": "CentredBernoulli",
+      "kind": "original_research_dependency",
+      "to_sha256": "e353d544fdc6814d53f8b79866998c28263baa665aaeaf90bbf509355e7ab7f9",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EmpiricalChernoff",
+      "from_sha256": "8170e577062ddd6fb64439afc456badf606ffbeef2c18a2d5a307afb6c33d670",
+      "import": "EmpiricalGeometry",
+      "kind": "original_research_dependency",
+      "to_sha256": "21e21eec8d1252c877b6ca384715762697704551f5ffd0ec9a3e9f9ddd5981fb",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ExponentialSeries",
+      "from_sha256": "1e5501fa4bcf2c6ac27d6e1518de449cdf9499e136198ba427480a3cb1e3a35e",
+      "import": "EmpiricalChernoff",
+      "kind": "original_research_dependency",
+      "to_sha256": "8170e577062ddd6fb64439afc456badf606ffbeef2c18a2d5a307afb6c33d670",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EmpiricalEndpoints",
+      "from_sha256": "f34ce7e7b3394f0a9ba182828c2ac7d12746ae5b9921ab8ddbceb498bbec0722",
+      "import": "ExponentialSeries",
+      "kind": "original_research_dependency",
+      "to_sha256": "1e5501fa4bcf2c6ac27d6e1518de449cdf9499e136198ba427480a3cb1e3a35e",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "PriorSufficiency",
+      "from_sha256": "4d0e81c2f086e03c0fd923c59caf2087abffd986e8b934f53effa44e32855a2c",
+      "import": "EmpiricalEndpoints",
+      "kind": "original_research_dependency",
+      "to_sha256": "f34ce7e7b3394f0a9ba182828c2ac7d12746ae5b9921ab8ddbceb498bbec0722",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EndpointProcess",
+      "from_sha256": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+      "import": "PriorSufficiency",
+      "kind": "original_research_dependency",
+      "to_sha256": "4d0e81c2f086e03c0fd923c59caf2087abffd986e8b934f53effa44e32855a2c",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EndpointProcessControls",
+      "from_sha256": "526e7be92e423216029f548c1c03be43d1721737a40f1d9f57ee9e9cc0752ab3",
+      "import": "EndpointProcess",
+      "kind": "original_research_dependency",
+      "to_sha256": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EndpointAtoms",
+      "from_sha256": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+      "import": "EndpointProcess",
+      "kind": "original_research_dependency",
+      "to_sha256": "b68dd6106e9fc3f311091731e8f9990a0a3829ff9838c164d6870fbec0bfa219",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "EndpointAtomControls",
+      "from_sha256": "23aad2f1524861d58da6a0b34ee1476e8382e5a11c69533b4cc3f9848531130c",
+      "import": "EndpointAtoms",
+      "kind": "original_research_dependency",
+      "to_sha256": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "SparseAtomBridge",
+      "from_sha256": "e3b0c7d17f4486667d9072346c142bde30063e3264caa6281ee882a0331ddc88",
+      "import": "EndpointAtoms",
+      "kind": "original_research_dependency",
+      "to_sha256": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "SparseAtomBridge",
+      "from_sha256": "e3b0c7d17f4486667d9072346c142bde30063e3264caa6281ee882a0331ddc88",
+      "import": "ConcreteContractProbe",
+      "kind": "original_research_dependency",
+      "to_sha256": "5080f84e77cb929bef81d6b0314f9f422d2d0b6036d9e12d67d6f6707fa05cca",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "SparsePolicyTransport",
+      "from_sha256": "d89eb5d50421f05d152325f05969afd0fae73b02249be4550f8089017bc46c88",
+      "import": "SparseAtomBridge",
+      "kind": "original_research_dependency",
+      "to_sha256": "e3b0c7d17f4486667d9072346c142bde30063e3264caa6281ee882a0331ddc88",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ClusterGeometry",
+      "from_sha256": "6ae220b9774675fe04478e8c335bf3d3dc8d7fa15352bef468ea2e82af8fa6ec",
+      "import": "EndpointAtoms",
+      "kind": "original_research_dependency",
+      "to_sha256": "43303f5bfe6413bf317e402abcf02bdee90aca8617d940d962875dc613d6998c",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ClusterConcentration",
+      "from_sha256": "98d3b8b8d8b14e170c7cb17d7f9071ee454ad379591b6c4c3af479b25c31b578",
+      "import": "ClusterGeometry",
+      "kind": "original_research_dependency",
+      "to_sha256": "6ae220b9774675fe04478e8c335bf3d3dc8d7fa15352bef468ea2e82af8fa6ec",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ContaminationAlgebra",
+      "from_sha256": "a288f0bb1297d497ea45aa1d73fdc06256cddf68f3c1c766b3fc58e53bd24e4a",
+      "import": "ClusterConcentration",
+      "kind": "original_research_dependency",
+      "to_sha256": "98d3b8b8d8b14e170c7cb17d7f9071ee454ad379591b6c4c3af479b25c31b578",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ClusterPolicy",
+      "from_sha256": "5556c5d7b42e27157ebedf57390e838781bf9bcd961c1151f38ac6bc8c4348ad",
+      "import": "ContaminationAlgebra",
+      "kind": "original_research_dependency",
+      "to_sha256": "a288f0bb1297d497ea45aa1d73fdc06256cddf68f3c1c766b3fc58e53bd24e4a",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ClusterWidthBoundary",
+      "from_sha256": "1b657466289c637b99eb2a2ac1e9fbc2ced26b848aaa0411bc7aa4aae5acbdc5",
+      "import": "ClusterPolicy",
+      "kind": "original_research_dependency",
+      "to_sha256": "5556c5d7b42e27157ebedf57390e838781bf9bcd961c1151f38ac6bc8c4348ad",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "CriticalPairProcess",
+      "from_sha256": "25e71c6649770c6389c9a16f65eddba6aff664b68975558fefb203f8f8b887bf",
+      "import": "ClusterWidthBoundary",
+      "kind": "original_research_dependency",
+      "to_sha256": "1b657466289c637b99eb2a2ac1e9fbc2ced26b848aaa0411bc7aa4aae5acbdc5",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "CriticalPairProcess",
+      "from_sha256": "25e71c6649770c6389c9a16f65eddba6aff664b68975558fefb203f8f8b887bf",
+      "import": "ConcreteSparsePrior",
+      "kind": "original_research_dependency",
+      "to_sha256": "aa1d3e9ba3e45922fe88925ac576f94dbb6753082fcdc8f47200df21aef45b46",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "CriticalUniform",
+      "from_sha256": "de9084dc24d1395fd09c348b2dbc3c6a3ec64cdb6ef1f2fc2a199839493a912e",
+      "import": "ClusterWidthBoundary",
+      "kind": "original_research_dependency",
+      "to_sha256": "1b657466289c637b99eb2a2ac1e9fbc2ced26b848aaa0411bc7aa4aae5acbdc5",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "RelativeContamination",
+      "from_sha256": "74f592b74d29cd41eca207f054bd9d529b626de9bdbaa7411dcf951aeb1fe7d7",
+      "import": "CriticalPairProcess",
+      "kind": "original_research_dependency",
+      "to_sha256": "25e71c6649770c6389c9a16f65eddba6aff664b68975558fefb203f8f8b887bf",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "RelativeContamination",
+      "from_sha256": "74f592b74d29cd41eca207f054bd9d529b626de9bdbaa7411dcf951aeb1fe7d7",
+      "import": "SparsePolicyTransport",
+      "kind": "original_research_dependency",
+      "to_sha256": "d89eb5d50421f05d152325f05969afd0fae73b02249be4550f8089017bc46c88",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "IntegerBudget",
+      "from_sha256": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61",
+      "import": "Mathlib.Analysis.SpecialFunctions.ExpDeriv",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "IntegerBudget",
+      "from_sha256": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61",
+      "import": "Mathlib.Tactic",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "ExactBudgetEnvelope",
+      "from_sha256": "4134b9222e5f5697ff4f9df05873ee0c985819fc10fbab843426f00422e98d31",
+      "import": "IntegerBudget",
+      "kind": "original_research_dependency",
+      "to_sha256": "55b5ef8c90e95df1d9c1d03539cffbcaeae7502190e3b616bc9725526f7abb61",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ExactBudgetEnvelope",
+      "from_sha256": "4134b9222e5f5697ff4f9df05873ee0c985819fc10fbab843426f00422e98d31",
+      "import": "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "GeneralPointTransport",
+      "from_sha256": "91b5422d5ca1f68077d9d4f140ec4d2f3b5a32866f2c0c9cc6a11f6335b29cb8",
+      "import": "RelativeContamination",
+      "kind": "original_research_dependency",
+      "to_sha256": "74f592b74d29cd41eca207f054bd9d529b626de9bdbaa7411dcf951aeb1fe7d7",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "PriorNonconvexity",
+      "from_sha256": "41de0423cc56dd9a94b5336183e392c4689ee11dd8a257d18deddb93024ad3a1",
+      "import": "GeneralPointTransport",
+      "kind": "original_research_dependency",
+      "to_sha256": "91b5422d5ca1f68077d9d4f140ec4d2f3b5a32866f2c0c9cc6a11f6335b29cb8",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "ObservationLoss",
+      "from_sha256": "7d48e09f756cf8cb71361acb3383fca20e3100f6bcc0fc88f1d0955a0ab80531",
+      "import": "Mathlib.Tactic",
+      "kind": "external_standard_library",
+      "to_sha256": null,
+      "disposition": "LIBRARY_BOUNDARY_NOT_REREAD"
+    },
+    {
+      "from_module": "LiteralObservationObstruction",
+      "from_sha256": "1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0",
+      "import": "ObservationLoss",
+      "kind": "original_research_dependency",
+      "to_sha256": "7d48e09f756cf8cb71361acb3383fca20e3100f6bcc0fc88f1d0955a0ab80531",
+      "disposition": "FULL_BODY_EXAMINED"
+    },
+    {
+      "from_module": "LiteralObservationObstruction",
+      "from_sha256": "1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0",
+      "import": "AnnularLiteral",
+      "kind": "original_research_dependency",
+      "to_sha256": "66dce1aa30b7f75987a9e145e3fc82051c97f08082fedaa5938ac49cf8759ff6",
+      "disposition": "FULL_BODY_EXAMINED"
+    }
+  ],
+  "unresolved_nonlibrary": []
+}

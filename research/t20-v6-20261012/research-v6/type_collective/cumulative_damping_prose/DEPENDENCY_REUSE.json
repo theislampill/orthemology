@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "sha256": "08fdec67591a4a0639fa4ca721293bd8c480ec405dcd1a7c5a08d3244aa84c80",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/PROOF.md",
+      "method": "EXACT_PRIOR_COMPLETE_BODY_REUSE",
+      "prior_ledger": "t20-v6-20261011/root_math/READ_LOG.jsonl",
+      "prior_record": {
+        "sha256": "08fdec67591a4a0639fa4ca721293bd8c480ec405dcd1a7c5a08d3244aa84c80",
+        "source": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/PROOF.md",
+        "scope": "complete body ordinary construction or original seven-module proof closure; Mathlib treated as declared library dependency, not freshly read",
+        "status": "DIRECT_COMPLETE_BODY_EXAMINED",
+        "utc": "2026-10-11T16:38:50.730139+00:00",
+        "fresh_kernel_verification": false
+      },
+      "new_reading": false
+    },
+    {
+      "sha256": "7cc30cf19b820541630eb55b0a9305c4e1b707630f7b1ded1b4bff61f69e403b",
+      "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/countermodel.py",
+      "method": "EXACT_PRIOR_COMPLETE_BODY_REUSE",
+      "prior_ledger": "t20-v6-20261011/root_math/READ_LOG.jsonl",
+      "prior_record": {
+        "sha256": "7cc30cf19b820541630eb55b0a9305c4e1b707630f7b1ded1b4bff61f69e403b",
+        "path": "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/countermodel.py",
+        "scope": "complete code body",
+        "status": "DIRECT_COMPLETE_BODY_EXAMINED",
+        "fresh_replay": "full_functional_replay normal and optimised:37588 exact finite checks each; not universal proof"
+      },
+      "new_reading": false
+    }
+  ],
+  "additional_classical_dependencies": "Theorem25 p24 and disintegration pp29\u201331 retained excerpts fully read; standard Fourier/measure/finite-dimensional convex facts treated as declared classical mathematics, not newly proved library bodies."
+}

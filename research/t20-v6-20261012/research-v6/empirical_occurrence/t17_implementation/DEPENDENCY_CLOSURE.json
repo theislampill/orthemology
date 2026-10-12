@@ -1,0 +1,288 @@
+{
+  "utc": "2026-10-11T21:25:21.301807+00:00",
+  "selected_queue_path": "t20-v6-20261011/operational_successors/pr30_adapter/PATCH_REMAINING_LATEST_QUEUE.json",
+  "selected_queue_sha256": "ad66a79b653e2b9524b8dfe3a9a6a724d5f8ecc7398c243987d7b6c59bbfec0b",
+  "selected_indices": [
+    5,
+    14,
+    18,
+    20,
+    23,
+    33,
+    34,
+    38,
+    39,
+    42,
+    44,
+    45,
+    49,
+    50,
+    59,
+    61,
+    66
+  ],
+  "input_join": "t20-v6-20261011/operational_successors/pr30_adapter/T17_CONSUMED_INPUT_JOIN.json",
+  "input_join_sha256": "9ff58736e9032277dfe0e7cb50f59b87ab5157efc48f3c91f10ee6ed517ee5da",
+  "local_python_imports": "All authored local imports of owned17 are other exact packet bodies. Standard library and hostPython not source-audited.",
+  "consumed_inputs": [
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-353de674164a876a6a5f",
+        "member_chain": [
+          "FINITE_MATH_SCOPE.md"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 8108,
+        "original_sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 8108,
+        "public_path": "experiments/orthemology-v5-successors/source-store/b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71/FINITE_MATH_SCOPE.md",
+        "public_sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/b0/b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71",
+      "reading_routes": [
+        {
+          "source_sha256": "b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/40",
+          "recorded_scope": {
+            "scope": "whole report",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 substantive re-examination; no new primary Arabic or historical first-reading credit"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/b0/b03cdb548ca0d5b3b24a75af9906e968fa29140dd064e1032119b41a3a867f71"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-38d48999a018c83abc10",
+        "member_chain": [
+          "RELATED_ARTIFACTS.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 2697,
+        "original_sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 2697,
+        "public_path": "experiments/orthemology-v5-successors/source-store/7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e/RELATED_ARTIFACTS.json",
+        "public_sha256": "7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/7e/7ecfed9a4ecf9aa2ef1f4f97db266eeb92955484365b34df062262d17ec1525e",
+      "reading_routes": []
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-99a10c5cba122be7f5c8",
+        "member_chain": [
+          "aggregates/frozen_aggregate_certificate.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 13401,
+        "original_sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 13401,
+        "public_path": "experiments/orthemology-v5-successors/source-store/852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9/frozen_aggregate_certificate.json",
+        "public_sha256": "852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/85/852afd3ed0bb5c3fe7d5ebe676b42eef5e01303c5caafe97f84f8d8d4c9c0ec9",
+      "reading_routes": []
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-cf5a267f902f2597272f",
+        "member_chain": [
+          "aggregates/independent_aggregate_certificate.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 11561,
+        "original_sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 11561,
+        "public_path": "experiments/orthemology-v5-successors/source-store/561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe/independent_aggregate_certificate.json",
+        "public_sha256": "561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/56/561b00d845cbc74ca5a8bf040a89bfad31870307a5f3cccad22630a5de34e9fe",
+      "reading_routes": []
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-bb161f46577e2ee700d9",
+        "member_chain": [
+          "aggregates/post_inspection_tail_certificate.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 2502,
+        "original_sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 2502,
+        "public_path": "experiments/orthemology-v5-successors/source-store/1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb/post_inspection_tail_certificate.json",
+        "public_sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/1d/1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb",
+      "reading_routes": [
+        {
+          "source_sha256": "1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb",
+          "ledger": "private-locator:718e50a99c35e09f0d49",
+          "pointer": "$/sources/42",
+          "recorded_scope": {
+            "scope": "whole JSON",
+            "reading_mode": "direct_substantive_read",
+            "reading_credit": "v6 substantive re-examination; no new primary Arabic or historical first-reading credit"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/1d/1d043505a1c98360bf40ba0b0f056d5a7d7718a8cf368474773d8f5386ba17fb"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-56011e064a4ac0c8d511",
+        "member_chain": [
+          "sources/additional_arabic_source_scope.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 6273,
+        "original_sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 6273,
+        "public_path": "experiments/orthemology-v5-successors/source-store/1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944/additional_arabic_source_scope.json",
+        "public_sha256": "1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/1a/1a3e532b41ad8912c412caa938390b7bf6ecd252b116cd7e812e8dff2bb28944",
+      "reading_routes": []
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-2f4a078fc08bd3d1ff8f",
+        "member_chain": [
+          "sources/minhaj_electronic_read_scope.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 8648,
+        "original_sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 8648,
+        "public_path": "experiments/orthemology-v5-successors/source-store/2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e/minhaj_electronic_read_scope.json",
+        "public_sha256": "2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/24/2480ee3c5276a7a747d161d1ab3698e2687df5bf2ea0b11b736b05b557e9297e",
+      "reading_routes": []
+    },
+    {
+      "source": {
+        "derivation": null,
+        "id": "T17-SRC-2f387bf3787e190359bc",
+        "member_chain": [
+          "sources/six_source_coverage.json"
+        ],
+        "origin_archive_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "origin_input_id": "T17-EVIDENCE",
+        "origin_input_sha256": "13b18a8fdd255902432424998bdebdca72e80a3d59e1ab3b22ce7f33b4238acb",
+        "original_bytes": 25752,
+        "original_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+        "projection": "EXACT",
+        "projection_basis": "Exact supplied public text bytes; historical declarations remain inherited at their stated scope.",
+        "public_bytes": 25752,
+        "public_path": "experiments/orthemology-v5-successors/source-store/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b/six_source_coverage.json",
+        "public_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+        "review_scope": "Source identity and declared scope registration only. No new scientific execution, primary-source reading, independent replication, human-specialist endorsement or adoption."
+      },
+      "path": "t20-consolidation-20261011/catalogue/objects/48/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+      "reading_routes": [
+        {
+          "source_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+          "ledger": "private-locator:6dcdda391de90e494f15",
+          "pointer": "$/sources/20",
+          "recorded_scope": {
+            "read_scope": "status and limits only"
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/48/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+          "ledger": "private-locator:ee347bc794ccaf4c92ae",
+          "pointer": "$/26",
+          "recorded_scope": {
+            "read_scope": {
+              "mode": "selected_json_fields",
+              "json_fields": [
+                "/status",
+                "/limits"
+              ],
+              "body_read_claimed": true
+            }
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "catalogue/objects/48/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ]
+    }
+  ],
+  "companion_source": {
+    "sha256": "4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401",
+    "path": "t20-consolidation-20261011/catalogue/objects/4e/4e314f3943df0600fb2166031a696dd1d4a80e9afe407a58d7d9371447091401",
+    "prior_route": "early_remaining/mathematical_context_prose/READ_LEDGER.json records[1]",
+    "full_scope": [
+      1,
+      468
+    ],
+    "consumer_role": "included source byte checksum only; no new mathematical reading credit"
+  },
+  "private_inputs": "No raw dataset or historical private replay directory accessed; only public aggregate input hashes and receipts used.",
+  "all_consumed_authored_imports_and_input_roles_accounted": true,
+  "retained_code_executed": false
+}

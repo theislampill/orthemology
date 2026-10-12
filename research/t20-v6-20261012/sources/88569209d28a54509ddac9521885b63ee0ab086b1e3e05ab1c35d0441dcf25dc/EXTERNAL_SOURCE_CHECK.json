@@ -1,0 +1,21 @@
+{
+  "url": "https://sites.stat.washington.edu/courses/stat527/s13/readings/KassRaftery_jasa1995.pdf",
+  "title": "Bayes Factors",
+  "authors": [
+    "Robert E. Kass",
+    "Adrian E. Raftery"
+  ],
+  "year": 1995,
+  "reviewed_scope": [
+    "Section3.1 printed776 / PDF index4",
+    "Section5.2 printed782 / PDF index10",
+    "bibliographical identity"
+  ],
+  "supports": [
+    "odds multiplier",
+    "hypothesis versus within-model parameter prior distinction",
+    "sensitivity analysis"
+  ],
+  "whole_paper_reviewed": false,
+  "empirical_or_theological_calibration": false
+}

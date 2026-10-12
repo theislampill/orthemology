@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-12T15:27:20.335947+00:00",
+  "records": [
+    {
+      "path": "t20-v6-20261011/synthesis/README_FIRST_DRAFT.md",
+      "sha256": "e7b30f4b2c9f99b0de60e68ea3c5daaf817d93697463ab3b2c3986ac939f96cf",
+      "bytes": 5144,
+      "lines": 35,
+      "method": "COMPLETE_CURRENT_BODY_READ",
+      "prior_review": null
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+      "sha256": "ce0ca586cb680e5ee21ea1a7b5e1e6243ebc0595f6c7bcfe8a7dfc2f62f149d0",
+      "bytes": 65266,
+      "lines": 299,
+      "method": "PRIOR_FULL_REVIEW_PLUS_COMPLETE_CURRENT_DIFF",
+      "prior_review": "type_collective/final_math_crosswalk_review/REVIEW.json"
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+      "sha256": "3d7c33f0463afb041e3346ad8b068d8cb720fd2e65ea7f998013ec04c6f0a0e0",
+      "bytes": 8568,
+      "lines": 62,
+      "method": "COMPLETE_CURRENT_BODY_READ",
+      "prior_review": null
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/CODEX_HANDOFF_DRAFT.md",
+      "sha256": "b529afa3913ca97ce388891437676cd1a194293c7bc2112808bc21d70de49a96",
+      "bytes": 7711,
+      "lines": 49,
+      "method": "COMPLETE_CURRENT_BODY_READ",
+      "prior_review": null
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/T21_CONTINUATION_CHARTER_DRAFT.md",
+      "sha256": "5ff3531fb8a11d012b08d5d6d6f28a44feaacc14982cbc614fd07d3f41fb7550",
+      "bytes": 8898,
+      "lines": 61,
+      "method": "COMPLETE_CURRENT_BODY_READ",
+      "prior_review": null
+    }
+  ],
+  "draft_counts": "No final corpus denominator certified."
+}

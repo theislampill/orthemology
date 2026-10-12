@@ -1,0 +1,83 @@
+{
+  "scope": "Bounded historical-to-later assurance reconciliation for root U09/U11 prose. All three source hashes and existing logs checked here; the actual fresh executions belong to operational worker. KernelReplay/Envelope names are unresolved labels, not assigned fresh status.",
+  "receipt": "t20-v6-20261011/operational_successors/fresh_lean/t11_union/FRESH_COMPILATION.json",
+  "receipt_sha256": "e101771b5ca8fad9f1af73c2bcb91d0489cbe83f87af31f120034cbdedf14ed8",
+  "compiler": "private-locator:995d2f31daa55d5ebca1",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "records": [
+    {
+      "module": "P01Candidates",
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "source_id": "identity-src-be9960953dd4298506c0",
+      "source_path": "t20-v6-20261011/operational_successors/sources/9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e/P01Candidates.lean",
+      "imports": [
+        "Init",
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.4926466941833496,
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "-j1",
+        "-o",
+        "P01Candidates.olean",
+        "P01Candidates.lean"
+      ],
+      "log": "private-locator:2a478878564301fd32cc",
+      "log_sha256": "6c656e6d7e89de6558c7793dc1e5bbab4aae36f337c9a169782fab65b4b231c6",
+      "read_ledger": "operational_successors/READING_LEDGER.json",
+      "assurance": "Exact fresh worker replay reused; no independent rerun here."
+    },
+    {
+      "module": "P01Confluence",
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "source_id": "identity-src-c2606770a70b2478bdcf",
+      "source_path": "t20-v6-20261011/operational_successors/sources/682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e/P01Confluence.lean",
+      "imports": [
+        "Init",
+        "P01Candidates"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 2.5398855209350586,
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "-j1",
+        "-o",
+        "P01Confluence.olean",
+        "P01Confluence.lean"
+      ],
+      "log": "private-locator:447dfdf25d328726c237",
+      "log_sha256": "4d12d45cb38790f18703da6da48497d1176df719ee6b02d5c15c4ae71e393b3c",
+      "read_ledger": "operational_successors/READING_LEDGER.json",
+      "assurance": "Exact fresh worker replay reused; no independent rerun here."
+    },
+    {
+      "module": "P01DependentCore",
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "source_id": "identity-src-892a0fa10a16a829e0a4",
+      "source_path": "t20-v6-20261011/operational_successors/sources/d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498/P01DependentCore.lean",
+      "imports": [
+        "Init",
+        "P01PER"
+      ],
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 2.9729931354522705,
+      "command": [
+        "private-locator:995d2f31daa55d5ebca1",
+        "-j1",
+        "-o",
+        "P01DependentCore.olean",
+        "P01DependentCore.lean"
+      ],
+      "log": "private-locator:6e3014ad71a4851f4d3a",
+      "log_sha256": "c7f88c795a0a853edc45d6419f8cfc7ca1883899a3007f4ba4947500410d9471",
+      "read_ledger": "operational_successors/READING_LEDGER.json",
+      "assurance": "Exact fresh worker replay reused; no independent rerun here."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "boundaries": [
+    "trusted interpreter startup hooks and caller import environment",
+    "tested CPython 3.12 CLI only",
+    "trusted nonconcurrently-changing local filesystem",
+    "selected package/rights/source review separate",
+    "manifest integrity not self-authenticity or scientific proof"
+  ],
+  "code_and_review_sha256": {
+    "final_handoff_review/REPORT.md": "2ae0586687557056818ecd45ebee1bdecfe090596fcad365873215629b71452e",
+    "final_handoff_review/test_review_handoff.py": "3d04de708e36a499bc44c3401273d5947b11dd38798fc7afcefcfdd21889d881",
+    "final_handoff_tools/USAGE.md": "349bfecf931454773457983fc1bd36da082b0f3dd7044c9e245bd6fc50bdf4ac",
+    "final_handoff_tools/prepare_handoff.py": "8ede41ebe43aa8f297184b1982e6de8102bd9332c81846d05b4422ce3fb4c31d",
+    "final_handoff_tools/test_handoff.py": "30853a5d93c0b77aac5b8cfbbc47983873d77ac58046a6b54bde8f89bb7dd137",
+    "final_handoff_tools/verify_handoff.py": "1b91ecebd2dc55e4018a38a9a3fb7a09f1f245b778cea493a6fb1fb60c61c0ef"
+  },
+  "independent_reproduced_findings_fixed": [
+    "prefix-wide import search allowed retained modules",
+    "future import occurred before bytecode and path hardening"
+  ],
+  "normal_and_optimized_tests": {
+    "existing_parent_contracts": 102,
+    "independent_manual_fixture": 11,
+    "supplied_handoff": 36
+  },
+  "review_date": "2026-10-12",
+  "state": "ACCEPTED_BOUNDED_IMPLEMENTATION_AFTER_CORRECTION"
+}

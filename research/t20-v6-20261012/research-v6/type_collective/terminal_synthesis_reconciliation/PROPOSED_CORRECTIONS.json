@@ -1,0 +1,181 @@
+{
+  "status": "FOUR_SOURCE_BOUND_PROPOSALS_NO_SHARED_EDIT",
+  "utc": "2026-10-12T14:25:37.681857+00:00",
+  "reviewed_inputs": [
+    {
+      "path": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+      "sha256": "9988b9d4328cc8386b62ace2a2bcad5b019c59c93012aed0cc58d72ef44b9a6f",
+      "bytes": 57547,
+      "scope": "Bounded targeted currentness examination against completed late199 source scopes; no new complete synthesis proof review."
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/CORRECTION_SUPERSESSION_INDEX_WORKING.json",
+      "sha256": "5d79d59014334ad8a3c9bf64c5e7bba86a0f7602ac95b70ea3ba3b988bfca7e0",
+      "bytes": 7892,
+      "scope": "Bounded targeted currentness examination against completed late199 source scopes; no new complete synthesis proof review."
+    }
+  ],
+  "records": [
+    {
+      "id": "LATE199-EXPLICIT-RADIUS",
+      "kind": "missing_positive_successor",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md section3; correction index",
+      "sources": [
+        {
+          "annex_index": 131,
+          "sha256": "698e33819aa85fb415805ac914e1390facfd6d954a4fe1447582cbee21be1f19",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/69/698e33819aa85fb415805ac914e1390facfd6d954a4fe1447582cbee21be1f19",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "POLYNOMIAL_KERNEL_SCOPE.md"
+          ]
+        },
+        {
+          "annex_index": 133,
+          "sha256": "f8b8ac6cc2f637120cb2de232fb565998456c87539404be8ca9db0965e9f7f94",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/f8/f8b8ac6cc2f637120cb2de232fb565998456c87539404be8ca9db0965e9f7f94",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "RESEARCH_RETURN.md"
+          ]
+        },
+        {
+          "annex_index": 158,
+          "sha256": "0a76d61f5e8c8e3b872ecf1b4a1691801bb217f004c8e1421ba0e6af6426a12b",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/0a/0a76d61f5e8c8e3b872ecf1b4a1691801bb217f004c8e1421ba0e6af6426a12b",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "REPORT.md"
+          ]
+        }
+      ],
+      "proposed_text": "The polynomial AND repair example has a genuine later explicit-scale kernel closure. Its conservative arithmetic radius controls all twenty score, hull and forecast-domain constraints, strengthening the earlier kernel theorem that asserted only an existential radius. This is an effective scale for the specified polynomial example; the mixed-rank radius remains existential and the general smooth variational asymptotics remain ordinary mathematics.",
+      "qualification": "Later eleven-module author/independent historical closure; no fresh replay in this reconciliation and no retroactive change to earlier freeze."
+    },
+    {
+      "id": "LATE199-AS-PARITY",
+      "kind": "missing_closed_interface",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md section4 after actual-policy transport; correction index",
+      "sources": [
+        {
+          "annex_index": 182,
+          "sha256": "35508f6c052ddeea0ea6875e6d75a472a40c9cb78f9c4e03490ffe0086a1722f",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/35/35508f6c052ddeea0ea6875e6d75a472a40c9cb78f9c4e03490ffe0086a1722f",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "RESULT_AND_SCOPE.md"
+          ]
+        },
+        {
+          "annex_index": 179,
+          "sha256": "451c5ffd04a1f1357ea4d67753bdcf1adb566cf42a4992a45b812b135ef33e3e",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/45/451c5ffd04a1f1357ea4d67753bdcf1adb566cf42a4992a45b812b135ef33e3e",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "RESULT_AND_SCOPE.md"
+          ]
+        }
+      ],
+      "proposed_text": "The conditional-continuation successor also closes the earlier almost-sure objective gap. After a positive observed prefix, the derived posterior seed and restarted policy preserve the actual observed continuation law. A separate addendum transports almost-sure properties through restriction, normalization and measurable pushforward when the property is stable under deleting that finite prefix; it proves this stability for the minimum-recurrent-priority parity objective. It does not transfer arbitrary prefix-sensitive properties, choose a suitable history or supply the entire winning-region induction by itself.",
+      "formal_source": {
+        "sha256": "06d403f36ee3cb95094a53b4a53eea72810565fc66ac1fb0607fef9b01922a9b",
+        "name": "ConditionalAlmostSure.lean",
+        "reading_route": "controller_chain/SOURCE_COVERAGE.json sources59, full1–183; exact reuse in empirical_occurrence/terminal_annex_controller26/DEPENDENCY_CLOSURE.json"
+      },
+      "qualification": "The original author note still awaited its separate independent review at that timestamp. The controlling formal body is already fully examined; no fresh compiler credit added."
+    },
+    {
+      "id": "LATE199-CLOCKED-MEMORY",
+      "kind": "missing_resource_qualification",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md section4; correction index",
+      "sources": [
+        {
+          "annex_index": 174,
+          "sha256": "46f64f3bef5beb28d83f350ea492fa6a8e8db292b107fa3d0f32d9db5ea8a707",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/46/46f64f3bef5beb28d83f350ea492fa6a8e8db292b107fa3d0f32d9db5ea8a707",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "CLOCKED_MEMORY_INDEPENDENT_REVIEW.md",
+            "CLOCKED_REPORT.md",
+            "REPORT.md"
+          ]
+        },
+        {
+          "annex_index": 175,
+          "sha256": "06565c4d7f5abee20caecf5d488b28933024a203deda08cd29bcadbf9bdc10cf",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/06/06565c4d7f5abee20caecf5d488b28933024a203deda08cd29bcadbf9bdc10cf",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "CLOCKED_MEMORY.md"
+          ]
+        },
+        {
+          "annex_index": 177,
+          "sha256": "4b560b801f3712be0889c3cd1e9362cbcf0faea09c799ed2be2a52214b8972a9",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/4b/4b560b801f3712be0889c3cd1e9362cbcf0faea09c799ed2be2a52214b8972a9",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "PSPACE_REFINEMENT.md",
+            "PSPACE_REFINEMENT_V2.md"
+          ]
+        }
+      ],
+      "proposed_text": "Memory claims must also specify access to time. The full-support opposing-target example rules out autonomous stationary finite-state controllers, yet a four-state controller with a free unbounded absolute clock achieves the separately proved finite lifetime error bound. The clock changes the controller model and can carry unbounded scheduling information; this result supplies neither an autonomous four-state realization nor a bound on restoration time or clock-computation cost.",
+      "qualification": "Ordinary clocked construction and exact interval certificate, not a newly kernel-proved universal finite-memory theorem. Decision workspace and controller memory remain different."
+    },
+    {
+      "id": "LATE199-COMPLEXITY",
+      "kind": "missing_representation_specific_currentness",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md section4; correction index",
+      "sources": [
+        {
+          "annex_index": 176,
+          "sha256": "366d141e8f4cb62eca1c530f6de2412aa2898aa6375c30cf5beeb58366c1a58a",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/36/366d141e8f4cb62eca1c530f6de2412aa2898aa6375c30cf5beeb58366c1a58a",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "COMPLEXITY_REPORT.md",
+            "REPORT.md"
+          ]
+        },
+        {
+          "annex_index": 177,
+          "sha256": "4b560b801f3712be0889c3cd1e9362cbcf0faea09c799ed2be2a52214b8972a9",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/4b/4b560b801f3712be0889c3cd1e9362cbcf0faea09c799ed2be2a52214b8972a9",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "PSPACE_REFINEMENT.md",
+            "PSPACE_REFINEMENT_V2.md"
+          ]
+        },
+        {
+          "annex_index": 196,
+          "sha256": "cce217bcf8e5bc2567d9075ec7fd81afaa5b7b642fb7f1db7f625ecc85a45cbd",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/cc/cce217bcf8e5bc2567d9075ec7fd81afaa5b7b642fb7f1db7f625ecc85a45cbd",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "PD_LOWER_BOUND_NOTE.md"
+          ]
+        },
+        {
+          "annex_index": 197,
+          "sha256": "8171e486847b0ab09cf02cd1cef7496da661116ce8f09916b118d570a317a746",
+          "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/81/8171e486847b0ab09cf02cd1cef7496da661116ce8f09916b118d570a317a746",
+          "reading_route": "type_collective/terminal_annex199/COMBINED_COVERAGE.json",
+          "names": [
+            "PRIMARY_COMPARISON.md"
+          ]
+        }
+      ],
+      "additional_source": {
+        "sha256": "eae3b720617eed692fc69e27bb242d57e62bafd92c29de1760f2d305f2505a45",
+        "local_path": "t20-v6-20261011/corpus/recovery-annex/early_objects/ea/eae3b720617eed692fc69e27bb242d57e62bafd92c29de1760f2d305f2505a45",
+        "reading_route": "root_math/terminal_annex_prose65/READ_LEDGER.json record8"
+      },
+      "proposed_text": "The decision-complexity results concern different presentations. For the finite hidden-model support-menu criterion, compact support-independent or explicit Boolean-circuit menus give PSPACE-completeness, while a mandatory expanded table of every support menu gives polynomial time in that expanded input. Separately, the explicit posterior-deterministic model with mixed initial belief has a later ordinary EXPTIME-hardness reduction matching its EXPTIME upper bound; the earlier PSPACE-hard/in-EXPTIME gap is historical. These classifications are not controller-memory bounds, kernel-certified complexity proofs or the same input model.",
+      "qualification": "Known initial state and actual initial observation/label assumptions are retained by the governing posterior-deterministic reduction. No collapsing of support-menu PSPACE theorem into PD EXPTIME theorem."
+    }
+  ],
+  "new_execution": false,
+  "denominator_verdict": false
+}

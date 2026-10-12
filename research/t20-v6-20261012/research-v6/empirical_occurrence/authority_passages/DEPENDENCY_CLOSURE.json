@@ -1,0 +1,22 @@
+{
+  "source_report": {
+    "sha256": "ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+    "ledger": "empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+    "scope": "Full110line report; exact v4 prior credit and current return"
+  },
+  "conditional_right_assessment": {
+    "sha256": "4af9972613d06517afc55c1c3db7ab6c7e06cc630b45267953bbf79737610f60",
+    "ledger": "empirical_occurrence/explanation_continuation/READING_LEDGER.json",
+    "scope": "Full81lines"
+  },
+  "developed_self_obligation_continuation": {
+    "sha256": "f150f6b41955b82bb160c9f2ddfb3981441e806ab81d08251acc535014f226d9",
+    "ledger": "root_math/wise_reason/READ_LEDGER.json",
+    "scope": "Earlier full retained2:1135–1143; current direct return only overlaps1135–1136"
+  },
+  "limits": [
+    "Hadith and bibliographical references inside excerpts remain attributed to source/editor; no fresh independent authentication.",
+    "Inherited Majmu source/report context remains at its separate exact scope.",
+    "No inference of a complete chapter from a final page that opens the next dialectical unit."
+  ]
+}

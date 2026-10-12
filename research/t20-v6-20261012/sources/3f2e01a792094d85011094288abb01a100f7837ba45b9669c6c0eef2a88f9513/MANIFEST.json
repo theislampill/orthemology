@@ -1,0 +1,50 @@
+{
+  "scope": "Independent review artifact bytes; no adoption or closure authority. Input hashes are separately bound by INPUT_SNAPSHOT.json.",
+  "files": [
+    {
+      "path": "AUTHOR_REPLAY.json",
+      "bytes": 2421,
+      "sha256": "c33c98db7c98bff30ed0e5682fcbfc576d8a27c1c9168f8c950dfecc03f761c3"
+    },
+    {
+      "path": "INDEPENDENT_RESULTS.json",
+      "bytes": 939,
+      "sha256": "d7b3ea5c8001836bde8e75d5982cb88d5ab26076e644cd30d4ebe67c379994fc"
+    },
+    {
+      "path": "INPUT_SNAPSHOT.json",
+      "bytes": 9382,
+      "sha256": "75b327bdca1c5042b55d4d2c43c56557e3cedce4822826aec347506e53e5a791"
+    },
+    {
+      "path": "REVIEW.md",
+      "bytes": 17979,
+      "sha256": "c513b7c614b084438099448d2abc261df9d19ded141bd921666f50dce560e790"
+    },
+    {
+      "path": "REVIEW_RECEIPT.json",
+      "bytes": 377,
+      "sha256": "ba804f389638f871f503965846d08619cef2b8d1701b1f1735466f0c62baf05a"
+    },
+    {
+      "path": "TRIPLE_INTERACTION_REPLAY.json",
+      "bytes": 372,
+      "sha256": "8f1b5a381637a1fd3f13e55d271df0a2b64e2dbc67e51163ff8445c4c5f80c33"
+    },
+    {
+      "path": "ZERO_AUDIT_REPLAY.json",
+      "bytes": 1032,
+      "sha256": "71b58cfa9011c540e00ed0fe7d9cb40255c98564477849a8daaae65b34653b0d"
+    },
+    {
+      "path": "independent_controls.py",
+      "bytes": 9549,
+      "sha256": "b81118cb69f8ead73d4f56acf07b7e4241df597dff5524b1d5398712038bf5c7"
+    },
+    {
+      "path": "verify_snapshot.py",
+      "bytes": 2322,
+      "sha256": "2f72f3f2f80c8370d080b949816b5e1d9316f140b3d05fb8c7b260c87e5ad05c"
+    }
+  ]
+}

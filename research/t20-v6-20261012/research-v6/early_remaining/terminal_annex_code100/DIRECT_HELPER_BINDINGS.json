@@ -1,0 +1,836 @@
+{
+  "records": [
+    {
+      "caller_index": 23,
+      "caller_sha256": "421bd0e3bba54f7b580595caf577ca0917cedf7cfe58b1ece91c8d6bcc935367",
+      "dependency_sha256": "5b1e58b7abfba5f5a2e7b4fa540fd5938cd6c5015669b138e369cd629044fde7",
+      "dependency_queue_index": 22,
+      "reading_route": "READ_LEDGER.json#/records/22",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 30,
+      "caller_sha256": "b033fd1b6d1119aa606d3492bb5b406f68a178d4562d017b160a54676b01668b",
+      "dependency_sha256": "8d08e1459a4df3ca1b1eaed4555274efb3fe15f0157d6882b4f822c10a900fc1",
+      "dependency_queue_index": 27,
+      "reading_route": "READ_LEDGER.json#/records/27",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 32,
+      "caller_sha256": "1e3b3d687d1dc0145668d4f46f514ced6e9f5516522c0aca2c17f774b35eb17d",
+      "dependency_sha256": "089f3d46654f501e2bedef0a128ea644ae36b826efc0c650b6a4357c575469a6",
+      "dependency_queue_index": 31,
+      "reading_route": "READ_LEDGER.json#/records/31",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 32,
+      "caller_sha256": "1e3b3d687d1dc0145668d4f46f514ced6e9f5516522c0aca2c17f774b35eb17d",
+      "dependency_sha256": "54efc66d5199d57223eb6af178caa2e3b87e8cffdd1fe42e2faedb67920b0783",
+      "dependency_queue_index": 33,
+      "reading_route": "READ_LEDGER.json#/records/33",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 34,
+      "caller_sha256": "892ba697258e6219c5b1995244458720390dd3a84bab533facb776e80d911041",
+      "dependency_sha256": "781e06eab77c646a4e6655792cde45b87596b806af4018d24fcaed507bb4c66d",
+      "dependency_queue_index": 37,
+      "reading_route": "READ_LEDGER.json#/records/37",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 34,
+      "caller_sha256": "892ba697258e6219c5b1995244458720390dd3a84bab533facb776e80d911041",
+      "dependency_sha256": "c289cdde3f3c47cb7babfe1299ea7f625579e03d16726dfeefb0dcb74cb18690",
+      "dependency_queue_index": 39,
+      "reading_route": "READ_LEDGER.json#/records/39",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 35,
+      "caller_sha256": "b1b3098f97dae949863261c8517c6472fc5984e063432aa4d63578d1cdd03513",
+      "dependency_sha256": "781e06eab77c646a4e6655792cde45b87596b806af4018d24fcaed507bb4c66d",
+      "dependency_queue_index": 37,
+      "reading_route": "READ_LEDGER.json#/records/37",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 35,
+      "caller_sha256": "b1b3098f97dae949863261c8517c6472fc5984e063432aa4d63578d1cdd03513",
+      "dependency_sha256": "c289cdde3f3c47cb7babfe1299ea7f625579e03d16726dfeefb0dcb74cb18690",
+      "dependency_queue_index": 39,
+      "reading_route": "READ_LEDGER.json#/records/39",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 38,
+      "caller_sha256": "e239a3aedd0853832ae17339be9cb00533b5d8758d30a243b1a0663c19bc6256",
+      "dependency_sha256": "ccbd9370df606d6abe0e03afdb0a676e024341540863f2b16fc7ed26a4033bfb",
+      "dependency_queue_index": 36,
+      "reading_route": "READ_LEDGER.json#/records/36",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 45,
+      "caller_sha256": "e7d5e25f446850602e73401fb22b435f14873e8e1657fd0f686a8ddfdc6da623",
+      "dependency_sha256": "c7bcc55d4072fb1def1b9f914853dd8c8c251412585408161a75bbe97bca2e4e",
+      "dependency_queue_index": 48,
+      "reading_route": "READ_LEDGER.json#/records/48",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 47,
+      "caller_sha256": "1a060cb0327425b451c05a4380a3e3cf4bb59a0a972fe8ba4c3c5a384e37a301",
+      "dependency_sha256": "bc7aa87ebed459257f4d747032e8a5e96d3f618241fb53ef9e44dcf9172f2f93",
+      "dependency_queue_index": 46,
+      "reading_route": "READ_LEDGER.json#/records/46",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 47,
+      "caller_sha256": "1a060cb0327425b451c05a4380a3e3cf4bb59a0a972fe8ba4c3c5a384e37a301",
+      "dependency_sha256": "c7bcc55d4072fb1def1b9f914853dd8c8c251412585408161a75bbe97bca2e4e",
+      "dependency_queue_index": 48,
+      "reading_route": "READ_LEDGER.json#/records/48",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 49,
+      "caller_sha256": "8af9ebb5a34ab54255959022dafa27c81b7066135258d6518cda523f06924ac7",
+      "dependency_sha256": "c7bcc55d4072fb1def1b9f914853dd8c8c251412585408161a75bbe97bca2e4e",
+      "dependency_queue_index": 48,
+      "reading_route": "READ_LEDGER.json#/records/48",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 51,
+      "caller_sha256": "93b96a9e4fcec42f54950e4af39f1947a9d548b8612d1044b2cf60a3bfd7c176",
+      "dependency_sha256": "2c41b367d80432ebe75b711b05131bd0140f7cfad54ba4669c326cee8c8e8742",
+      "dependency_queue_index": 44,
+      "reading_route": "READ_LEDGER.json#/records/44",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 51,
+      "caller_sha256": "93b96a9e4fcec42f54950e4af39f1947a9d548b8612d1044b2cf60a3bfd7c176",
+      "dependency_sha256": "e7d5e25f446850602e73401fb22b435f14873e8e1657fd0f686a8ddfdc6da623",
+      "dependency_queue_index": 45,
+      "reading_route": "READ_LEDGER.json#/records/45",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 57,
+      "caller_sha256": "fa39a2db3d2b85634ba07f0883ab403fcee74ace00f8bc851be6e4e768c75059",
+      "dependency_sha256": "20b4040606858499e7ede05be07ab6a6e2abe37fbd29e78a79a0299cdf869e8f",
+      "dependency_queue_index": 56,
+      "reading_route": "READ_LEDGER.json#/records/56",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 58,
+      "caller_sha256": "88b03403edcae03360200ebb299159ae64a3f7366928a8d20db32d30f282e4bc",
+      "dependency_sha256": "0869422db1fcd37f9dc787647148cbba757a8763e0256ac7bdbc9039c3884b38",
+      "dependency_queue_index": 55,
+      "reading_route": "READ_LEDGER.json#/records/55",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 60,
+      "caller_sha256": "688b626ae87f89d3230c17b9457677f5c59dd223076f3da1d4c6e368f076ffcb",
+      "dependency_sha256": "88b03403edcae03360200ebb299159ae64a3f7366928a8d20db32d30f282e4bc",
+      "dependency_queue_index": 58,
+      "reading_route": "READ_LEDGER.json#/records/58",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 60,
+      "caller_sha256": "688b626ae87f89d3230c17b9457677f5c59dd223076f3da1d4c6e368f076ffcb",
+      "dependency_sha256": "53cb7e01a09e5d74669b4c584ea7ec34e1f7ba33290c3a8bc7da36c484b78875",
+      "dependency_queue_index": 59,
+      "reading_route": "READ_LEDGER.json#/records/59",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 62,
+      "caller_sha256": "8a299d31f7eb68df9e48f56e5b3d2a7446e6c74ec4587568bb10e203d0ecf121",
+      "dependency_sha256": "fa39a2db3d2b85634ba07f0883ab403fcee74ace00f8bc851be6e4e768c75059",
+      "dependency_queue_index": 57,
+      "reading_route": "READ_LEDGER.json#/records/57",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 62,
+      "caller_sha256": "8a299d31f7eb68df9e48f56e5b3d2a7446e6c74ec4587568bb10e203d0ecf121",
+      "dependency_sha256": "b6721de63fcd0a85b3feda72aed32cf79675a55c04befd242ecafc553bf1b5b6",
+      "dependency_queue_index": 61,
+      "reading_route": "READ_LEDGER.json#/records/61",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 65,
+      "caller_sha256": "002f23088be97d3e2771f0476661a004f136577e03e7f7195bfab506318df4d9",
+      "dependency_sha256": "ed92332e56aa8d260eda11808edf3382a796e6451ef794608a953c2fa5e780f8",
+      "dependency_queue_index": 64,
+      "reading_route": "READ_LEDGER.json#/records/64",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 70,
+      "caller_sha256": "b463f3e8716ccfa0b873d67f6301d2b3202279e5f9a7d8be9d38732d8c75eb36",
+      "dependency_sha256": "79d486c642cc80a0bc0091a1225f098852e5427d025d35e32ccc4b94cc19d80e",
+      "dependency_queue_index": 69,
+      "reading_route": "READ_LEDGER.json#/records/69",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 72,
+      "caller_sha256": "eb97e10cb7b4515455e1f597f0732f30a2d97f3740985ab47f5c1cda4de1e400",
+      "dependency_sha256": "df67a2b5f7ef308d9abfb7b54b514a232a56c38595e100182eba80340d5db4f5",
+      "dependency_queue_index": 71,
+      "reading_route": "READ_LEDGER.json#/records/71",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 77,
+      "caller_sha256": "820c489f135ecdf5092a0b4fd38e12db6aff0e410b4a50b8feaff9af903e6098",
+      "dependency_sha256": "3fa74758c33c21c38f33d5cde124f480c9d4d2a5664a676afab1a84b1ce73832",
+      "dependency_queue_index": 76,
+      "reading_route": "READ_LEDGER.json#/records/76",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 82,
+      "caller_sha256": "d2f20884bd74453e905a77c24fada5fe84b5854f03980b06630ed81d12600be1",
+      "dependency_sha256": "9bd6a4e3ffcc9c44dc58de130ff9f3228a22e491dfd2b42893faa8f176d8583e",
+      "dependency_queue_index": 81,
+      "reading_route": "READ_LEDGER.json#/records/81",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 84,
+      "caller_sha256": "f7052a9b80409a2f6a28b80a109c5f335c303a208dbe7ea55e01b037f929acd2",
+      "dependency_sha256": "9bd6a4e3ffcc9c44dc58de130ff9f3228a22e491dfd2b42893faa8f176d8583e",
+      "dependency_queue_index": 81,
+      "reading_route": "READ_LEDGER.json#/records/81",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 84,
+      "caller_sha256": "f7052a9b80409a2f6a28b80a109c5f335c303a208dbe7ea55e01b037f929acd2",
+      "dependency_sha256": "d2f20884bd74453e905a77c24fada5fe84b5854f03980b06630ed81d12600be1",
+      "dependency_queue_index": 82,
+      "reading_route": "READ_LEDGER.json#/records/82",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 84,
+      "caller_sha256": "f7052a9b80409a2f6a28b80a109c5f335c303a208dbe7ea55e01b037f929acd2",
+      "dependency_sha256": "fad607418c5baba9531de1fb31df432c6c160cddd2ae2eb58942686a7e306812",
+      "dependency_queue_index": 83,
+      "reading_route": "READ_LEDGER.json#/records/83",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 85,
+      "caller_sha256": "f0e5a18760e9707f65c670bc5adfa848c5a428f71416d17ad69c1230c3caa915",
+      "dependency_sha256": "9606638a8da7f374c84ecb0a5aa7bb40b1f1971226a68a58383c6627bc67eec2",
+      "dependency_queue_index": 86,
+      "reading_route": "READ_LEDGER.json#/records/86",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 88,
+      "caller_sha256": "b56125f4448c94f04d2f2d4672f16587ea8f2393deed31f12538b13dd6988c77",
+      "dependency_sha256": "fa9fde6300995843b094511380735d36050f132f2c2cd7f880df936dc7922e65",
+      "dependency_queue_index": 87,
+      "reading_route": "READ_LEDGER.json#/records/87",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 90,
+      "caller_sha256": "038f3510acb68b22ecd8a1e0094b52ea3fe65a74e0630a7f9d720e45314196d4",
+      "dependency_sha256": "1e3488b1275fefce195b1f2b9cb56a1e9b52606b1787d965a811051fda7a64d6",
+      "dependency_queue_index": 89,
+      "reading_route": "READ_LEDGER.json#/records/89",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 93,
+      "caller_sha256": "f1f2acb7d6a6eff3bd376fb5ffd4c6f4a88c8c3eccb60e91cc0732c12f3cefe9",
+      "dependency_sha256": "f8d394cd448eca2a9e3c32bf323ded43cb8f563879f71d2c038c5ad93f3c7452",
+      "dependency_queue_index": 92,
+      "reading_route": "READ_LEDGER.json#/records/92",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 98,
+      "caller_sha256": "ab88d0760d8bf00a528cfe9f128dee85eb36782ff9448ff47daae8f083a8dfc7",
+      "dependency_sha256": "537d749253fc76852c6938a2316316d29147504025f44588f9885b5a645a9357",
+      "dependency_queue_index": 96,
+      "reading_route": "READ_LEDGER.json#/records/96",
+      "scope": "Actually referenced imported/called helper under the declared archive/runtime mode; no fresh execution."
+    },
+    {
+      "caller_index": 26,
+      "caller_sha256": "55742675f8dcfb187ac92d04a9a6322185c1f5b4bbc3aaaea4b2f0651d52d563",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 26,
+      "caller_sha256": "55742675f8dcfb187ac92d04a9a6322185c1f5b4bbc3aaaea4b2f0651d52d563",
+      "dependency_sha256": "14308e955a612fe086ca1453572e7944d96e0082f8a7e3618352d1b78c295df2",
+      "prior_full_routes": [
+        {
+          "source_sha256": "14308e955a612fe086ca1453572e7944d96e0082f8a7e3618352d1b78c295df2",
+          "ledger": "private-locator:18b41ffb172d0c4b8d26",
+          "pointer": "$/97",
+          "recorded_scope": {
+            "scope": "full direct substantive report/control/harness reading"
+          },
+          "ranges": [
+            [
+              1,
+              19
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/14/14308e955a612fe086ca1453572e7944d96e0082f8a7e3618352d1b78c295df2"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 32,
+      "caller_sha256": "1e3b3d687d1dc0145668d4f46f514ced6e9f5516522c0aca2c17f774b35eb17d",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 32,
+      "caller_sha256": "1e3b3d687d1dc0145668d4f46f514ced6e9f5516522c0aca2c17f774b35eb17d",
+      "dependency_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+      "prior_full_routes": [
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/5",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/54",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 53,
+      "caller_sha256": "9aeeec569eaa26212d48dd8739d17c0fc5446e71fd283d4020f1d221368275ca",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 63,
+      "caller_sha256": "c859aa1cf62855db259ca42101951a65e289f5f11a8930025b9c620fb557d2f4",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 74,
+      "caller_sha256": "e28be303471f4cb1300751827374d468c488d0839eca9747cb8dcecadffc2a14",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 78,
+      "caller_sha256": "9a8eeaee1ca0d27379d830c9d6442c5e65752d307722874bf2a82a08f1f42cd2",
+      "dependency_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+      "prior_full_routes": [
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/5",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/54",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 78,
+      "caller_sha256": "9a8eeaee1ca0d27379d830c9d6442c5e65752d307722874bf2a82a08f1f42cd2",
+      "dependency_sha256": "6b7d405eca1f7c7f4c9f218d58e3689d99dff4a7d8a4054643b78955fc755d74",
+      "prior_full_routes": [
+        {
+          "source_sha256": "6b7d405eca1f7c7f4c9f218d58e3689d99dff4a7d8a4054643b78955fc755d74",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/249",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              33
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/6b/6b7d405eca1f7c7f4c9f218d58e3689d99dff4a7d8a4054643b78955fc755d74"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 78,
+      "caller_sha256": "9a8eeaee1ca0d27379d830c9d6442c5e65752d307722874bf2a82a08f1f42cd2",
+      "dependency_sha256": "ad1ec8f510a659d6e62b1d10e8e36396448a7b2c26fa4d8337cd2b58f85ec438",
+      "prior_full_routes": [
+        {
+          "source_sha256": "ad1ec8f510a659d6e62b1d10e8e36396448a7b2c26fa4d8337cd2b58f85ec438",
+          "ledger": "private-locator:5bdd84aac6d552e05a2d",
+          "pointer": "$/records/50",
+          "recorded_scope": {
+            "scope": "Direct exhaustive subset EC predicate, nonempty/closure/bitset Warshall, full numerical row matching and each live rival parity minimum; maximal valid subsets; deterministic8736case generation and Lean template fully read. Finite reference oracle not SCC implementation or general complexity proof.",
+            "read_status": "DIRECT_FULL_BODY",
+            "remaining_substantive_ranges": []
+          },
+          "ranges": [
+            [
+              1,
+              107
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/ad/ad1ec8f510a659d6e62b1d10e8e36396448a7b2c26fa4d8337cd2b58f85ec438"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 87,
+      "caller_sha256": "fa9fde6300995843b094511380735d36050f132f2c2cd7f880df936dc7922e65",
+      "dependency_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+      "prior_full_routes": [
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/4",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/58",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              255
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/9e/9e4a85f52cb9b608adb4ca7702f110785f4f9931c4a3210b6e8a051390df23e4"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    },
+    {
+      "caller_index": 88,
+      "caller_sha256": "b56125f4448c94f04d2f2d4672f16587ea8f2393deed31f12538b13dd6988c77",
+      "dependency_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+      "prior_full_routes": [
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:cc2dc6e1318e79b5d884",
+          "pointer": "$/records/5",
+          "recorded_scope": {
+            "scope": "Complete finite-model/control or replay implementation examined; dependency pin/census/affected-source and diagnostic checks distinguished from mathematical validity. No fresh replay of these orchestration drivers.",
+            "disposition": "FULL_BODY_DIRECT_READING"
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        },
+        {
+          "source_sha256": "4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98",
+          "ledger": "private-locator:972aae65c97530a7be4a",
+          "pointer": "$/records/54",
+          "recorded_scope": {
+            "scope": "Exact helper implementation. Complete differences retained; no family-level tooling inheritance. See report and dependency routes.",
+            "read_status": "PRIOR_EXACT_FULL_BODY_REUSED",
+            "remaining_substantive_ranges": [],
+            "execution": {
+              "status": "NOT_RUN"
+            }
+          },
+          "ranges": [
+            [
+              1,
+              59
+            ]
+          ],
+          "recorded_paths": [
+            "t20-v6-20261011/corpus/recovery-annex/early_objects/49/4933d602f18c749ff170629964914907bf1c5bf05160329bd8aab623dfd65f98"
+          ],
+          "exact_held_hash": false,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "scope": "Exact separately full-read helper or generator reused; no fresh execution."
+    }
+  ],
+  "qualifications": [
+    "47 is held in V1 and V2 archive variants, with unchanged checker bytes and different sibling implementations, both directly read here.",
+    "34 consumes snapshot37/39, not its negative variant directories.35 generates mutations36/40/41/42/43 and counter38, which are not accepted production certificates.",
+    "62 config author archive route is separately bound; extraction invokes16module replay57.",
+    "85 narrative JSON6d7612dd\u2026 is separately owned by operational; this ledger covers publisher/native math logic.",
+    "Official standard-library/sympy/numpy/scipy/docx modules are external libraries, not new original research bodies.",
+    "Historical receipt, manifest, module-order and generated control JSON use is schema/identity/expected-output evidence, not a mathematical proof or fresh execution."
+  ]
+}

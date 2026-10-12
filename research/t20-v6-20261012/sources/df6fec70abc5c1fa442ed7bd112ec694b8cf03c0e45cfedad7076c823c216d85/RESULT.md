@@ -1,0 +1,82 @@
+# Finite guarded-certificate catalogues and minimum attainment
+
+9 October 2026. **Verification of an already written theorem**, not original discovery or new metaphysical warrant. Separate scratch package; no predecessor changes, protected repository changes, integration, adoption or T20 closure.
+
+## Checked result
+
+For a fixed guarded ground-rule grammar with finite judgement labels J, finite rule labels R, finite ordered arity per rule, finite local evidence support, and nonnegative rational occurrence prices:
+
+1. Every height-bounded rule tree belongs to an explicitly constructed finite syntax family. This family is derived from the finite rule grammar, not assumed as an admitted certificate catalogue.
+2. For every valid tree t, an actual valid tree u attains the minimum price among **all finite trees with the same judgement and exact support as t**. Its branch length is at most `|J| (|support(t)| + 1)`.
+3. The ambient evidence type E need not be finite. Let B be the union of the finite local supports of all rules. Every tree uses only B. Thus a single finite valid-tree catalogue of height at most `|J| (|B| + 1)` contains a no-dearer exact-state representative of every valid tree.
+4. That derived catalogue feeds the previously checked terminal support/price frontier. Its least-cost observations agree exactly with unrestricted valid finite-tree witnesses, and every retained terminal or residual frontier pair has an actual original tree witness.
+
+The terminal catalogue is used only **after all support-sensitive acceptance guards relevant to that terminal judgement have been discharged**. The result does not authorize intermediate support-inclusion pruning before another arbitrary guard.
+
+## Assumptions and representation
+
+The unchanged predecessor `Grammar` and `Tree` are reused. A rule has a fixed head, ordered premise judgements, finite local support, rational charge, and an arbitrary fixed predicate of the ordered exact child-support tuple. Validity is the actual recursive tree predicate: children are valid and correctly typed, and the rule's guard holds. Support is formed by unions; cost is additive over occurrences, including repeated occurrences of an identical subtree.
+
+There is no premise asserting a minimum already exists, no supplied admitted finite catalogue, no guard-monotonicity assumption, and no guard-decidability assumption. The existence construction is classical. Effective rule enumeration, executable filtering of guards, extracted witness reconstruction and a running compiler require additional implementation work.
+
+Finite R is sufficient for finite bounded tree families because each rule already has finite arity. The proof does not assume a global maximum arity separately. Finite J and nonnegative prices are used in the inherited exact-state pruning bound. No well-ordering or discreteness of rational prices is assumed: the minimum is selected from a proved nonempty finite family and transferred to all finite proofs.
+
+The uniform support union concerns a **fixed** finite grammar. Adding new rules, changing guards or metadata, or admitting newly minted local evidence identities changes the supplied grammar and is outside that fixed instance. Ambient tokens unused by any rule do not enlarge its derived support union.
+
+## Files and theorem map
+
+### Catalogue.lean
+
+- `Shape G h`: a recursively finite syntax code, with no codes at height zero and one rule label plus an ordered tuple of smaller codes at successor height.
+- `shapeFintype`: derives finiteness recursively from finite R and finite premise positions.
+- `decode_bounded` and `bounded_has_shape`: prove both directions between codes and actual branch-bounded trees, without assuming validity.
+- `boundedCatalogue` and `mem_boundedCatalogue_iff`: explicitly construct all trees at the given height bound and prove exact coverage.
+- `exactCatalogue` and `mem_exactCatalogue_iff`: filter by actual validity, judgement and exact support.
+
+### Attainment.lean
+
+- `exactCatalogue_nonempty`: uses the unchanged checked exact-support bounded representative theorem.
+- `exists_minimum_exact`: selects a minimum on that finite exact-state family, then compares it to the bounded representative of each unrestricted competitor. Returns an actual valid minimum witness and its exact-support height bound.
+- `support_subset_grammarSupport`: derives the finite evidence universe used by this fixed grammar, even when ambient E is infinite.
+- `exists_bounded_representative_grammar`: uniform bound based on that finite union.
+- `validCatalogue` and `validCatalogue_cover`: derived finite valid-tree catalogue and unrestricted exact-state, no-dearer coverage.
+
+### Terminal.lean
+
+- `terminalCatalogue`: per-judgement support/price image of actual valid bounded trees.
+- `terminal_cost_le_iff`: a finite terminal cost is below threshold c exactly when an unrestricted valid tree with the requested judgement has support contained in the inventory and price at most c.
+- `terminal_minimum_when_reachable`: when any eligible terminal tree exists, a catalogue tree attains the least price across **all eligible supports**, not just one selected exact support.
+- `terminal_frontier_witness`: every retained Pareto pair is realized by an actual valid original tree.
+- `inventory_frontier_cost_le_iff`: transfers the inherited residual-frontier recovery theorem to these unrestricted tree witnesses under inventory `K ∪ U`.
+- `inventory_frontier_witness`: recovers an original tree whose missing support is `support(t) \ K`. Its original support is not falsely identified with its residual support.
+
+The generic inherited frontier is instantiated at rational finite costs C = ℚ; its output type is `WithTop ℚ`, with top representing infeasibility. The existing canonical-frontier and inventory-update theorems therefore apply to this derived catalogue as well. No arbitrary-real-price certification is added.
+
+## Controls
+
+`Controls.lean` proves both boundaries with genuine rule-tree syntax:
+
+- **Positive finite nonvacuity:** two Boolean rule labels, infinite ambient E = ℕ, exact nonempty support {0}, and prices two and one. Applying `exists_minimum_exact` to the price-two input gives a minimum of price one. This checks the theorem is inhabited and does not secretly require finite E.
+- **Infinite-rule failure:** rule labels are ℕ, every rule is nullary and valid, all supports are empty, and rule n costs `1/(n+1)`. Prices are strictly positive. Every tree has exactly height one and the same exact state, yet the successor rule gives a strictly cheaper valid tree. Consequently no minimum is attained.
+
+The second control proves that a height bound alone does not establish finite-catalogue/minimum attainment once the finite-rule-label assumption is removed. It does not claim every infinite grammar lacks a minimum.
+
+## Verification and trust
+
+Run from any directory:
+
+    private-locator:2a36364ccba3800ec44b
+
+This recompiles four unchanged frozen predecessor/library sources and the four new modules with Lean 4.19.0 and `warningAsError=true`. The existing installed mathlib checkout is commit `c44e0c8ee63ca166450922a373c7409c5d26b00b`. No install, dependency download or dependency update is needed.
+
+`REPLAY.log` and `CHECK_RESULTS.json` record the fresh successful replay. `BINDING.json` records unchanged source copies and environment hashes. `MANIFEST.json` binds delivered files. `REVIEW.md` records an internal independent AI semantic review of the final revision, beyond compilation alone. Development logs are historical failed/successful attempts, not proof certificates for the final files.
+
+The principal theorem and control axiom reports contain only `propext`, `Classical.choice`, and `Quot.sound`. No admitted theorem, custom axiom, `sorryAx` or native-evaluation proof axiom is used in the accepted sources. The result is kernel checked relative to Lean's kernel, imported library and stated standard logical axioms.
+
+## Remaining boundary
+
+This checks the finite-family and minimum-attainment part of the already written guarded-tree compilation theorem and connects it to the existing terminal frontier mathematics. It does not certify the synchronous saturation recurrence, its fixed-point/stopping test, Python correspondence, an effective checker/compiler, worst-case sharpness, real prices, or shared-DAG optimization.
+
+Correct source admission, metadata authenticity, substantive rule soundness, faithful judgement scoping and relevance to any philosophical/theological argument remain interpretation obligations. Actual structural tree witnesses are now proved to exist; they are not authenticated sources or proofs of the truth of their input claims. No unrestricted provenance-changing cut rule or complete FABLE calculus is certified.
+
+No new literature search or field-wide originality claim was attempted. Recorded operations are prospective only and provide no retroactive work-duration credit.

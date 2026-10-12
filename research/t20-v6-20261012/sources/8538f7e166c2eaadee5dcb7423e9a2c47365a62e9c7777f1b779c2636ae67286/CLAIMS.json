@@ -1,0 +1,514 @@
+{
+  "schema": "t20-depth-claims-v4",
+  "claims": [
+    {
+      "id": "V4-J01",
+      "title": "Whole-state positive descending audit-covariant second-order update",
+      "statement": "Internal second-order descending steps joined to endpoint-average positive mass reweighting give the full moving grouped flow order two, descent and audit covariance.",
+      "contribution_class": "Joined constructive interface; inherited geometry and classical discrete gradients",
+      "source_owner": {
+        "path": "depth/joint_correction/RESULT.md",
+        "sha256": "b2fa75f865fac44cef1ccee03705002cceca0810bd51b77c35f55bcc64ca0cd1",
+        "section": "§§1–4"
+      },
+      "hypotheses_and_limits": "C3 chart potentials, C2 mobility or supplied qualified maps; certified local branch, invariant algorithm choices, compact interior and separate finite-solver accuracy/descent obligations. R3 overlap/priority unknown.",
+      "dependencies": [
+        "DR-01",
+        "GEO-17"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-J02",
+      "title": "Moving-law topology boundary",
+      "statement": "Second-order coordinates and W1 do not imply TV convergence or generic second-order W2 with moving support and variable masses.",
+      "contribution_class": "Exact control and topology qualification",
+      "source_owner": {
+        "path": "depth/joint_correction/RESULT.md",
+        "sha256": "b2fa75f865fac44cef1ccee03705002cceca0810bd51b77c35f55bcc64ca0cd1",
+        "section": "§6"
+      },
+      "hypotheses_and_limits": "Common Euclidean bounded carrier; no collision or rank preservation conclusion.",
+      "dependencies": [
+        "V4-J01"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-S01",
+      "title": "Fixed semantic conjunction along Gaussian correction",
+      "statement": "Every member of a fixed uncountable conull repertoire stays conull while its measurable universal conjunction falls from probability one to zero along the inherited singular flow.",
+      "contribution_class": "Inherited-theorem application and interface qualification",
+      "source_owner": {
+        "path": "depth/semantic_geometry/RESULT.md",
+        "sha256": "996689eaaa53ec0ce2593a064573a1f5c2341784418668a0bdd10bb24b72a26b",
+        "section": "§§3–5"
+      },
+      "hypotheses_and_limits": "Singular infinite-KL start; finite-action competitor uses time change. Not a human-warrant model.",
+      "dependencies": [
+        "MOM-01"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-S02",
+      "title": "Exact event-preservation repair",
+      "statement": "Preserving every initially conull measurable event is equivalent to absolute continuity of the successor; TV quantitatively controls each event.",
+      "contribution_class": "Elementary exact repair condition",
+      "source_owner": {
+        "path": "depth/semantic_geometry/RESULT.md",
+        "sha256": "996689eaaa53ec0ce2593a064573a1f5c2341784418668a0bdd10bb24b72a26b",
+        "section": "§6"
+      },
+      "hypotheses_and_limits": "No automatic future-operation closure or infinite weak-limit preservation.",
+      "dependencies": [
+        "V4-S01"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-G01",
+      "title": "Endpoint lifts versus actual witness composition",
+      "statement": "Summary composition is exact iff every summarized endpoint has a genuine intermediary lift; submitted-witness compatibility needs actual middle identity.",
+      "contribution_class": "Bounded relation theorem and foundational interface",
+      "source_owner": {
+        "path": "depth/grounding_provenance/RESULT.md",
+        "sha256": "902435802a5cac6b128664101b781caa013a3a0ec96d6a7ccda60dbbf22fd4e3",
+        "section": "§§2–5"
+      },
+      "hypotheses_and_limits": "Does not establish productive actuality, common-source truth or arbitrary continuation closure.",
+      "dependencies": [
+        "FND-001"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-G02",
+      "title": "Provider unity and derivative routing rank",
+      "statement": "A common original provider can coexist with diagonal routing rank n; quotienting intermediary identities invents n(n−1) routes.",
+      "contribution_class": "Exact finite countercontrol and source-engine application",
+      "source_owner": {
+        "path": "depth/grounding_provenance/RESULT.md",
+        "sha256": "902435802a5cac6b128664101b781caa013a3a0ec96d6a7ccda60dbbf22fd4e3",
+        "section": "§§6–8"
+      },
+      "hypotheses_and_limits": "Rank counts represented mediation distinctions, not original providers.",
+      "dependencies": [
+        "V4-G01"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-D01",
+      "title": "Profile representation versus fixed robust output",
+      "statement": "The exact six-policy loss profile on C4/E4 requires two continuous coordinates; with posterior retained one further real coordinate suffices and countable tags fail on a nondegenerate fibre.",
+      "contribution_class": "Restricted-family corollary of inherited continuation/sidecar machinery",
+      "source_owner": {
+        "path": "depth/decision_representation/RESULT.md",
+        "sha256": "d91e0dfb49154a17ca8173d7a344b3aae51ae0e02aea843b092d29bc26010323",
+        "section": "§§1–5"
+      },
+      "hypotheses_and_limits": "Per-model profile, uncertainty set and a fixed minimax answer are separate objects; no psychological or physical memory bound.",
+      "dependencies": [
+        "UI-03",
+        "PT-19",
+        "PT-20"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-O01",
+      "title": "Actual source-record sidecar application",
+      "statement": "The seven supplied T16 claim records require alphabet sizes 1, 2 and 3 for row-only, row-plus-voice and row/voice/named-work-exclusion contracts.",
+      "contribution_class": "Bounded application of inherited D1/D2",
+      "source_owner": {
+        "path": "depth/occurrence_warrant/RESULT.md",
+        "sha256": "561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072",
+        "section": "§§1–2"
+      },
+      "hypotheses_and_limits": "One-way record view, not all linguistic readings, source truth, actual uptake or human-warrant memory.",
+      "dependencies": [
+        "D1",
+        "D2"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "V4-O02",
+      "title": "Original permission and circumstance-relative inquiry duty",
+      "statement": "The separate source return preserves original permission alongside mistaken mediation and a real qualified-inquiry duty, without deriving unavailable opportunity from missing knowledge.",
+      "contribution_class": "Inherited source-owned coverage refinement",
+      "source_owner": {
+        "path": "depth/occurrence_warrant/RESULT.md",
+        "sha256": "561b2764ccceeba464460dedb3fe7e07ba29700e9fea865f7b74ec401124f072",
+        "section": "§§3–4"
+      },
+      "hypotheses_and_limits": "No new primary Arabic authentication; no change to original ruling or source veracity; no universal maximal-disclosure demand.",
+      "dependencies": [
+        "FND-031"
+      ],
+      "evidence": "Ordinary source-owned proof/application plus separately scoped finite controls and exact-byte review; current binding is in depth/REVIEW_CURRENTNESS.json.",
+      "repository_adoption": false
+    },
+    {
+      "id": "PI-01",
+      "title": "Static normalization does not preserve remaining checking cost",
+      "kind": "new exact source-executed counterexample",
+      "statement": "The unchanged guarded DAG normalizer lowers static charge 14 to 12 while immutable-cache remaining charge rises 2 to 12; the cache-relative optimum is 1.",
+      "dependencies": [
+        "PT-07",
+        "PT-06"
+      ],
+      "evidence": [
+        "RESULT.md §3",
+        "test_cache_transport.py::test_actual_inherited_normalizer_loses_cached_identity"
+      ],
+      "scope": "Additional cache cost contract, not a refutation of PT-07.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-02",
+      "title": "Cache-cut minimum attainment and bounded new work",
+      "kind": "new scoped constructive transport",
+      "statement": "For a finite currently valid dependency-closed checked cache, adding zero-price exact-state macros reduces minimum remaining checking charge to inherited finite guarded whole-DAG compilation. An optimum expands with at most |J|2^|E| newly checked nodes plus cached nodes.",
+      "dependencies": [
+        "PT-07",
+        "PT-06",
+        "PT-03"
+      ],
+      "evidence": [
+        "RESULT.md §4",
+        "cache_transport.py",
+        "test_cache_transport.py::test_full_small_acyclic_oracle"
+      ],
+      "scope": "Fixed snapshot, support-only guards, compatible immutable identities, nonnegative fixed weights; effective comparison separately required.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-03",
+      "title": "Pathwise postponement of passive successful checks",
+      "kind": "new scoped scheduling bridge",
+      "statement": "Under non-interference, non-informative successful checking and terminal reproducibility, every interleaved one-terminal-proof policy has an acquisition-then-check policy with identical acquisition history and pathwise no-greater charge.",
+      "dependencies": [
+        "PI-02",
+        "PT-01",
+        "PT-02",
+        "ET-14",
+        "ET-19"
+      ],
+      "evidence": [
+        "RESULT.md §6",
+        "test_policy_contracts.py::test_postponement_against_interleaved_known_kernel_oracle",
+        "test_policy_contracts.py::test_postponement_with_exogenous_source_revocation"
+      ],
+      "scope": "Structural sufficient conditions, not a universal iff; physical timings and multiple valued intermediate deliverables excluded unless separately modeled.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-04",
+      "title": "Revalidation-aware exact-state cache profile",
+      "kind": "inherited frontier specialization and new cache application",
+      "statement": "Under complete conjunctive dependency validity d(v) subset L, minimum dependency antichains per exact state exactly preserve all-L zero-price macro availability. Snapshot availability can agree while a rule withdrawal produces remaining prices 13 versus 1.",
+      "dependencies": [
+        "PT-01",
+        "ET-14",
+        "PI-02"
+      ],
+      "evidence": [
+        "RESULT.md §5",
+        "test_cache_transport.py::test_revalidation_profile_retains_alternative_rules",
+        "test_cache_transport.py::test_dependency_antichain_against_all_live_sets"
+      ],
+      "scope": "Coarsest macro-availability profile, not necessarily terminal-value quotient. Helper implements rule-local factors plus child unions, not arbitrary occurrence-specific dependencies.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-05",
+      "title": "Finite-memory CIRS versus finite source sidecars",
+      "kind": "standard finite-chain corollary applied to source crosswalk",
+      "statement": "Under strictly positive CIRS laws, a time-homogeneous finite-memory common behavioral controller restores all hidden standards iff their good-action sets have nonempty intersection. CIRS can succeed with unbounded memory when that intersection is empty.",
+      "dependencies": [
+        "HIST-RESTORATION",
+        "PT-19",
+        "PT-20"
+      ],
+      "evidence": [
+        "RESULT.md §8",
+        "test_policy_contracts.py::test_all_deterministic_memory_controllers_through_three_states"
+      ],
+      "scope": "Counts every clock, archive, growing integer and persistent random state as memory; no hidden-model seed access; not a new general POMDP theorem.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-06",
+      "title": "Rational likelihood arithmetic and actual Has representability",
+      "kind": "ordinary source-interface deduction",
+      "statement": "A common denominator makes CIRS likelihood comparison exact integer-weight comparison; fixed finite lookup, multiplication, comparison folds and bounded pointer updates are primitive recursive and inherit numeric original-Has realizability from inspected PR compiler interfaces.",
+      "dependencies": [
+        "HIST-RESTORATION",
+        "PT-19"
+      ],
+      "evidence": [
+        "RESULT.md §8",
+        "SOURCE_BINDINGS.json",
+        "test_policy_contracts.py::test_cirs_positive_supports_and_integer_likelihood_histories"
+      ],
+      "scope": "No new literal Has controller module, Lean replay, host correspondence, probability-law theorem or calibrated physical observation stream.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "PI-07",
+      "title": "Model coupling and timed cost contract remain separate",
+      "kind": "scope-preserving inherited crosswalk",
+      "statement": "Cache accounting does not permit independent worst-model selection at chance branches or dropping timing/outcome/state correlation. ET17 policy vectors and ET19 joint timing law retain their owners. PT28/29 literal probability results concern a distinct source-lowered observer contract.",
+      "dependencies": [
+        "ET-17",
+        "ET-19",
+        "PT-20",
+        "PT-28",
+        "PT-29"
+      ],
+      "evidence": [
+        "RESULT.md §7",
+        "test_policy_contracts.py::test_fixed_model_costs_cannot_be_pasted"
+      ],
+      "scope": "No new robust Bellman theorem or claim that atomic defect prices proof checking.",
+      "source_owner": {
+        "path": "depth/proof_inquiry/CLAIMS.json",
+        "sha256": "e24853f960820ac13aa2593829964b7f7fac81bbb4b6b57a302561f22b0cfad1"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "UI-01",
+      "claim": "Exact four-trial calibration moment slice and constructive atomic realization",
+      "status": "written_proof_and_author_controls",
+      "ancestry": [
+        "MOM-11",
+        "H-Continuation"
+      ],
+      "not_claimed": "General truncated moment theorem or field novelty",
+      "title": "Exact four-trial calibration moment slice and constructive atomic realization",
+      "statement": "Exact four-trial calibration moment slice and constructive atomic realization",
+      "source_owner": {
+        "path": "depth/uncertainty_inquiry/CLAIMS.json",
+        "sha256": "a5ec48c99d779df8faa6b299961fdd28b3d89cc710d2bfb4c0a2d11c47133d3c"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "UI-02",
+      "claim": "Exact common-target finite-exchangeable triangle and complete-law transport",
+      "status": "written_proof_and_author_controls",
+      "ancestry": [
+        "Companion D6",
+        "H-Continuation",
+        "ET-17"
+      ],
+      "not_claimed": "Existence of a latent calibration in finite-exchangeable models",
+      "title": "Exact common-target finite-exchangeable triangle and complete-law transport",
+      "statement": "Exact common-target finite-exchangeable triangle and complete-law transport",
+      "source_owner": {
+        "path": "depth/uncertainty_inquiry/CLAIMS.json",
+        "sha256": "a5ec48c99d779df8faa6b299961fdd28b3d89cc710d2bfb4c0a2d11c47133d3c"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "UI-03",
+      "claim": "Conditional optional-query minimax policy differs between the two families, with exact private-randomization saddle certificates",
+      "status": "written_proof_and_author_controls",
+      "ancestry": [
+        "ET-15",
+        "ET-17",
+        "MOM-11"
+      ],
+      "values": {
+        "iid": "1/3",
+        "finite_exchangeable_c_1_10": "21/50",
+        "positive_exchangeable_c_1_10": "207/500"
+      },
+      "not_claimed": "PSR refutation, actual source calibration, human warrant or branchwise adversary equivalence",
+      "title": "Conditional optional-query minimax policy differs between the two families, with exact private-randomization saddle certificates",
+      "statement": "Conditional optional-query minimax policy differs between the two families, with exact private-randomization saddle certificates",
+      "source_owner": {
+        "path": "depth/uncertainty_inquiry/CLAIMS.json",
+        "sha256": "a5ec48c99d779df8faa6b299961fdd28b3d89cc710d2bfb4c0a2d11c47133d3c"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "UI-04",
+      "claim": "Horizon-uniform one-sample minimax sufficiency for ex ante asymmetric binary prediction under fixed first two moments",
+      "status": "written_proof_and_author_controls",
+      "ancestry": [
+        "ET-17",
+        "H-Continuation",
+        "classical moment extremality"
+      ],
+      "not_claimed": "Sufficiency for proper scoring, calibration estimation, arbitrary conditional histories or every path loss",
+      "title": "Horizon-uniform one-sample minimax sufficiency for ex ante asymmetric binary prediction under fixed first two moments",
+      "statement": "Horizon-uniform one-sample minimax sufficiency for ex ante asymmetric binary prediction under fixed first two moments",
+      "source_owner": {
+        "path": "depth/uncertainty_inquiry/CLAIMS.json",
+        "sha256": "a5ec48c99d779df8faa6b299961fdd28b3d89cc710d2bfb4c0a2d11c47133d3c"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "UI-05",
+      "claim": "Equal four-moment positive calibration measures can differ on fifth-trial continuation",
+      "status": "written_proof_and_author_controls",
+      "ancestry": [
+        "MOM-11 third-trial boundary",
+        "H-Continuation",
+        "classical finite differences"
+      ],
+      "not_claimed": "General new moment impossibility",
+      "title": "Equal four-moment positive calibration measures can differ on fifth-trial continuation",
+      "statement": "Equal four-moment positive calibration measures can differ on fifth-trial continuation",
+      "source_owner": {
+        "path": "depth/uncertainty_inquiry/CLAIMS.json",
+        "sha256": "a5ec48c99d779df8faa6b299961fdd28b3d89cc710d2bfb4c0a2d11c47133d3c"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "CC-01",
+      "title": "Adaptive answer acquisition cannot identify the T15 mechanism pair",
+      "status": "new conditional transport proof of inherited observation equivalence",
+      "source_ids": [
+        "D18-T15-ANSWER-LAW",
+        "D18-T15-CAUSAL-CONTRIBUTION"
+      ],
+      "current_anchors": [
+        "ET-01",
+        "ET-03",
+        "ET-05",
+        "ET-14",
+        "ET-17"
+      ],
+      "assumptions": [
+        "same measurable nonanticipating design/stop policy",
+        "same fixed matched parameters",
+        "fresh independent Gaussian noise after each design choice",
+        "only previous answers/designs and independent private randomness observed"
+      ],
+      "conclusion": "Every finite and infinite padded transcript has the same law under L and P; common postprocessing and replays cannot create differential evidence.",
+      "limits": [
+        "Not arbitrary adaptive or endogenous designs",
+        "Linked signals, direct interventions and informative calibration audits can break the premises",
+        "No empirical mechanism attribution or authority inference"
+      ],
+      "statement": "Every finite and infinite padded transcript has the same law under L and P; common postprocessing and replays cannot create differential evidence.",
+      "source_owner": {
+        "path": "depth/collective_continuation/SCOPED_CLAIMS.json",
+        "sha256": "1768dd56ba6f5ac91bba50de3f4e0ac36db5872a42fe479f248b66be0d6c652b"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "CC-02",
+      "title": "Linked trial calibration supplies an exact inquiry value and same-root replacement",
+      "status": "new bounded source-derived decision calculation, inherited probability law",
+      "source_ids": [
+        "D18-T15-PASSIVE-LINK",
+        "D18-T15-RECORDING-ERROR"
+      ],
+      "current_anchors": [
+        "ET-01",
+        "ET-03",
+        "ET-05",
+        "ET-07",
+        "ET-17",
+        "ET-20"
+      ],
+      "assumptions": [
+        "x=0,v=1,k=3,r=0",
+        "passive linked bit with independent flip probability epsilon",
+        "two mechanisms with equal prior",
+        "squared-probability loss and constant added price"
+      ],
+      "conclusion": "delta=(1-2 epsilon)/6 and V=delta²/(1-4 delta²); V at epsilon=0 is 1/32; V at epsilon=1/4 is 1/140. Recalibrating one concordant root replaces 5/8 by 4/7; multiplying revised factor as new gives 20/29.",
+      "limits": [
+        "No fitted prior, measured acquisition cost or sensor feasibility",
+        "Conditional on legitimate calibration; dependent calibration audit requires joint law",
+        "Finite exact arithmetic only; no sequential numerical classifier"
+      ],
+      "statement": "delta=(1-2 epsilon)/6 and V=delta²/(1-4 delta²); V at epsilon=0 is 1/32; V at epsilon=1/4 is 1/140. Recalibrating one concordant root replaces 5/8 by 4/7; multiplying revised factor as new gives 20/29.",
+      "source_owner": {
+        "path": "depth/collective_continuation/SCOPED_CLAIMS.json",
+        "sha256": "1768dd56ba6f5ac91bba50de3f4e0ac36db5872a42fe479f248b66be0d6c652b"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    },
+    {
+      "id": "CC-03",
+      "title": "Exact corrected finite plans do not supply committed indefinite renewal",
+      "status": "faithful failed transport using inherited explicit counterexample and positive repair",
+      "source_ids": [
+        "T16-RENEWAL",
+        "T16-COMPETENCE",
+        "T16-LOOKAHEAD"
+      ],
+      "current_anchors": [
+        "ET-05",
+        "ET-09",
+        "ET-14",
+        "PT-19",
+        "PT-20"
+      ],
+      "assumptions": [
+        "actual source diagonal admission tree",
+        "uniform computable finite support",
+        "one irrevocably selected lineage",
+        "independent always-authorized zero-input environment already suffices"
+      ],
+      "conclusion": "H(n) converges coordinatewise but has no computable stabilization modulus or unbounded coherent computable subsequence. A warranted c.e. rooted pruned region supplies effective continuation.",
+      "limits": [
+        "Not a new computability theorem or new CIRS obstruction",
+        "Finite service migration retains full credit",
+        "No numerical personal identity, support-independent physical continuation or new formal replay"
+      ],
+      "statement": "H(n) converges coordinatewise but has no computable stabilization modulus or unbounded coherent computable subsequence. A warranted c.e. rooted pruned region supplies effective continuation.",
+      "source_owner": {
+        "path": "depth/collective_continuation/SCOPED_CLAIMS.json",
+        "sha256": "1768dd56ba6f5ac91bba50de3f4e0ac36db5872a42fe479f248b66be0d6c652b"
+      },
+      "registration_scope": "Exact source-owned claim data; current review status is separately bound, not retroactively written into the author freeze."
+    }
+  ],
+  "scope": "Additive source-bound claims; report sections control all hypotheses. Existing claims remain unchanged."
+}

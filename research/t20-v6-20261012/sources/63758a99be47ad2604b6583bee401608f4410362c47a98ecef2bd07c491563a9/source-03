@@ -1,0 +1,90 @@
+# U08 — abstract hypotheses, all-safe countermodels and constructive envelopes
+
+All proofs here are ordinary mathematics. New domains are research proposals, never replacements silently inserted into canonical source. Original acceptance criterion: map an actual correspondence to every hypothesis of a cited fixed-point theorem and separate effectivity. The predecessor singleton and finite correspondence results remain intact.
+
+## F2-01. Exact finite-dimensional theorem used
+
+Let K be a nonempty finite-dimensional simplex, with its Euclidean subspace topology. Let F assign to p∈K a nonempty compact convex subset F(p)⊂K. Assume upper hemicontinuity: for every p and open V containing F(p), there is a neighborhood U of p such that F(q)⊂V for every q∈U∩K. Then some p∈K satisfies p∈F(p).
+
+This is the simplex version of Kakutani stated as Theorem 2.5 in Y. Shmalo, *Combinatorial Proof of Kakutani's Fixed Point Theorem*, arXiv:1811.08454v1 (2018); Definition 2.4 gives the metric upper-semicontinuity convention. We use that precise primary statement, not a Riesz–Markov–Kakutani representation theorem and not an unproved identification of the two. No novelty is claimed.
+
+For compact K and nonempty compact values, closed graph implies upper hemicontinuity: otherwise take q_n→p and z_n∈F(q_n) outside the open V containing F(p). Compactness gives a subsequence z_n→z; closed graph gives z∈F(p)⊂V, contradicting that the closed complement contains every z_n. Conversely upper hemicontinuity plus closed values gives closed graph by separating a point outside F(p) from the compact set F(p). The compact codomain supplies the subsequence in the first direction; omitting it is not harmless.
+
+## F2-02. Why the general all-safe domain does not satisfy this theorem
+
+The original programme does **not** supply a single arbitrary correspondence with verified general hypotheses. It supplies a solved scalar singleton map and the warning that atomicity-safe laws are not weakly closed. “All admissible laws therefore have a safe fixed point” is not a theorem under those data.
+
+Concrete failure, even with a continuous affine singleton map: let X be the circle, μ range over probabilities with `d(μ)≤ε<1`, and let T be pushforward by rotation through an irrational angle. The carrier is compact metric. T is continuous in the weak topology, affine, and preserves every singleton mass up to relabeling, so it maps the safe domain to itself. Its singleton values are nonempty compact convex and its relative graph is closed. The safe domain is nonempty and convex by M2-04.
+
+It has **no fixed point in that domain**. If μ=Tμ and μ{x}=c>0, every distinct point in the infinite rotation orbit of x also has mass c. Finite additivity gives Nc≤1 for every N, contradiction. Hence any invariant probability has every singleton null and d=1. The missing hypothesis is compactness of the safe domain: finite grid probabilities converge weakly to arc-length measure, so that domain is not closed inside the Hausdorff compact ambient probability space, and therefore is not compact. This explicitly refutes an unconditional all-safe fixed-point extension, without refuting the original solved singleton instance.
+
+An elementary countable version uses X=ℕ and T(k)=k+1. Every probability on ℕ has d=0, but invariance would force mass(0)=0 and then all masses zero. The whole countable-law simplex is not compact. Merely allowing countable rather than finite support does not fix compactness.
+
+## F2-03. Actual finite envelope and complete hypothesis map
+
+Fix m≥1, outcomes t_1,…,t_m in a measurable-singleton space, K=Δ_m and fixed nonempty compact convex row sets R_i⊂Δ_m. Define
+
+`F(p)={Σ_i p_i r_i : r_i∈R_i for all i}`,
+`L(p)=Σ_i p_i δ_(t_i)`.
+
+K is nonempty (a vertex), convex, closed and bounded in finite-dimensional space, hence compact. A witness tuple exists because each R_i is nonempty. Its weighted sum is nonnegative with sum 1, proving nonempty values inside K. Finite products of the row sets are compact; their continuous weighted-sum image gives compact values. Rowwise convex combination gives convex values. For fixed rows,
+
+`||Σ_i p_i r_i-Σ_i q_i r_i||₁≤Σ_i|p_i-q_i|`.
+
+Using the same witnesses in both directions proves a Hausdorff-distance bound ≤||p-q||₁. This establishes upper hemicontinuity and closed graph at exactly the declared topology. F2-01 now yields a fixed point. Every interpreted L(p) has finite support and d=0 by M2-01; distinct labels are unnecessary for that property. Any typing/certificate status of the labels is an **additional input**, not obtained from the simplex theorem.
+
+The two-outcome interval instance and its fixed interval [1/3,2/3] are retained from P02-F02. The exact rational solver now implements the flow route below, rather than merely proposing it.
+
+## F2-04. Direct existence route — no hidden general Kakutani axiom
+
+The special F above does not actually require the full set-valued theorem for existence. Choose one row r_i∈R_i and form a stochastic matrix R. For any p_0∈Δ_m form `s_N=(1/N)Σ_{k<N}p_0 R^k`. All s_N lie in Δ_m. Compactness gives a convergent subsequence with limit p*. Moreover
+
+`s_N R-s_N=(p_0 R^N-p_0)/N`, so `||s_N R-s_N||₁≤2/N→0`.
+
+Matrix multiplication is continuous. Passing along that subsequence gives p*R=p*, and the chosen rows witness p*∈F(p*). This is a fully proved reduction for the **fixed row-set correspondence**, not a reduction of arbitrary Kakutani to Brouwer. Convexity of the R_i is unnecessary for this particular selection-based existence argument, though it remains necessary in the stated hypothesis map to Kakutani. A proof may therefore specialize the original method without claiming a library theorem that was not found.
+
+The exact-pin import-catalogue search located no import names containing Kakutani, Brouwer, Sperner, Nash or hemicontinuity. It did locate ordinary affine simplex infrastructure. That is a **catalogue-name search, not exhaustive proof of declaration absence**. No nonexistent pinned fixed-point declaration is invoked. The direct Cesàro proof exposes the precise formal prerequisites: finite-dimensional compactness, convergent subsequences, continuity of a linear map and the displayed telescoping identity.
+
+## F2-05. A genuinely countably supported extension with proved compactness
+
+Finite support is sufficient, not necessary. Here is a larger concrete envelope that repairs the missing hypothesis rather than asserting it.
+
+Let `(c_j)_{j∈ℕ}` be nonnegative summable real numbers with `C=Σ_j c_j≥1`. Set
+
+`K_c={p∈ℓ¹(ℕ):p_j≥0, Σ_j p_j=1, p_j≤c_j for every j}`.
+
+This domain is nonempty: p_j=c_j/C works. It is convex and closed in ℓ¹ (coordinates and total sum are continuous). It is compact: its tails satisfy `sup_{p∈K_c}Σ_{j>N}p_j≤Σ_{j>N}c_j→0`. Given ε, choose N making this tail <ε/3 and cover the bounded first N+1 coordinates by finitely many sufficiently small boxes. Choosing an actual point of K_c from each nonempty box produces a finite ε-net in ℓ¹. Closedness in the complete space ℓ¹ makes K_c complete, and total boundedness then makes it compact.
+
+Choose nonempty closed row sets R_i⊂K_c (convex as well when a convex-valued formulation is desired). Define F(p) by the countable weighted sum `q_j=Σ_i p_i r_ij`. Nonnegative interchange shows Σ_jq_j=1 and q_j≤c_j, so q∈K_c. Thus the envelope is invariant. For any chosen rows R, the map p↦pR is ℓ¹-continuous with norm bound ≤1. The same Cesàro argument, now using compact K_c rather than finite dimension, supplies a fixed point.
+
+The full F also has nonempty compact convex values when each R_i is convex. For compactness, take any sequence of row tuples. Each coordinate R_i is compact as a closed subset of K_c. A diagonal subsequence makes every row converge in ℓ¹. For fixed p the weighted sums converge because a finite initial row block converges and the remaining norm is bounded by `2Σ_{i>N}p_i`. With varying p_n→p, first use the norm contraction bound to replace p_n by p. This proves the closed graph and compact values without pretending that a finite-dimensional simplex theorem covers ℓ¹ automatically. Existence was separately proved by the single selected matrix.
+
+All laws in K_c are countably supported and d=0. The hypotheses `Σc<∞`, explicit row nonemptiness and invariance are essential supplied structure, not consequences of being “safe”. This extends the finite proposal at the ordinary theorem level. An effective name of c or of the chosen rows is not supplied by this proof, and the theorem promises no computable fixed point.
+
+## F2-06. Rational flow correspondence and complete finite algorithm
+
+For the finite envelope, assume rational inequalities `R_i={r∈Δ_m:A_i r≤b_i}` with finitely many rows. Introduce nonnegative f_ij with
+
+`Σ_j f_ij=p_i`, `Σ_i f_ij=p_j`, `Σ_i p_i=1`, `A_i f_i≤b_i p_i`.
+
+A fixed point with witness rows gives f_ij=p_i r_ij. Conversely, for p_i>0 divide row i of f by p_i. For p_i=0 nonnegativity and its zero row sum force f_i=0; select any row in R_i. This last selection requires R_i nonempty even when p_i=0. The resulting rows satisfy all original constraints and witness p=Σ_i p_i r_i. Hence the finite flow system is exactly equivalent to the fixed-point problem, under the row-nonemptiness contract.
+
+`code/flow_solver.py` now builds and solves this rational system. It first solves each row simplex, rejecting an empty R_i before considering stationary zero-weight rows. It then uses only flow variables: row-column balance, total flow 1, nonnegativity and homogenized row inequalities. Probabilities are recovered as row sums.
+
+### Universal correctness of active-constraint enumeration
+
+For rational Ax=b,Cx≤d in a bounded nonempty polyhedron of dimension at most n, the algorithm row-reduces A and enumerates subsets of inequalities that can complete its rank to n. At every candidate it performs exact rational elimination, then checks every original equality and inequality. Therefore every returned candidate is feasible (soundness).
+
+For completeness, a nonempty compact polyhedron has an extreme point: successively minimize coordinates over the compact feasible set; the final unique vector is extreme. At an extreme point, active equalities and inequalities span all n coordinate directions. Otherwise a nonzero vector v annihilates all active normals; the finitely many inactive inequalities have positive slack, so for sufficiently small t>0 both x±tv remain feasible, contradicting extremality. Therefore some n-rank(A) active inequalities complete the rank, and the enumeration visits a full-rank system with that vertex as solution. Exact rational elimination then finds it. The algorithm terminates because the enumeration is finite. If the feasible set is empty it returns no candidate. The boundedness premise is true for row simplexes and the flow polytope; this is not claimed as a general solver for arbitrary unbounded polyhedra.
+
+After a stationary flow is found, normalization and rational division produce exact rational rows/probabilities. The separately implemented `verify(result, expected_rows)` checks exact types, dimensions, original constraints, all reconstruction equations and equality to the external declared row input. `solve` supplies that input binding. With its optional second argument omitted, `verify(result)` checks only the self-contained constraints recorded in the result; it makes no claim about an unstated external input. Malformed/ragged/inexact results are refused, rather than interpreted as a different system. This is an ordinary universal algorithm proof plus new finite execution evidence, not Lean kernel verification.
+
+## F2-07. Existence, convergence and computability are separate
+
+A deterministic two-state swap has unique stationary probability (1/2,1/2), but iteration from a vertex alternates forever. Thus neither the simplex theorem nor our algorithm yields convergence of arbitrary selections. The original scalar contraction result remains at its original narrower hypotheses.
+
+A constant singleton correspondence at a noncomputable real Bernoulli bias has a semantic fixed point with perfect topological behavior. It has no oracle-free finite-description almost-surely terminating fair-bit sampler: probabilities of the two halting outcomes are lower semicomputable by enumeration of disjoint accepting prefixes. Since they sum to one, their lower approximations give two-sided effective bounds on the bias, contradicting noncomputability. Rational-polytope data avoid this obstruction because our algorithm returns a rational stationary law; sampling it can use the explicit interval selector from CV-C. Almost-sure termination is not termination on every bit stream.
+
+## Terminal research disposition
+
+The **unconditional all-safe extension** is REFUTED by F2-02. The abstract finite theorem, exact finite envelope, direct affine route, countably supported compact envelope and effective rational-flow theorem are proved ordinarily with all extra hypotheses named. The original U08 obligation is a request to construct and check such a map, not a preexisting unconditional theorem to relabel. Kernel/source coverage remains separately explicit; no claim of a newly kernel-checked general Kakutani theorem is made.

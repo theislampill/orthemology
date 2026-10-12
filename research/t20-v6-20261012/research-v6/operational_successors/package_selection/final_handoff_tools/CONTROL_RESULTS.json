@@ -1,0 +1,53 @@
+{
+  "closed_review_findings": [
+    "Do not retain arbitrary sys.path entries merely because they are below interpreter prefix.",
+    "Do not import __future__ before bytecode-off and safe CLI import bootstrap.",
+    "Apply corresponding CLI import hardening to curated preparation helper."
+  ],
+  "existing_tests": {
+    "normal": 102,
+    "normal_log": "FINAL_EXISTING_SUITE.log",
+    "optimized": 102,
+    "optimized_log": "FINAL_EXISTING_SUITE_OPTIMISED.log"
+  },
+  "independent_review_reported": {
+    "directory": "../final_handoff_review",
+    "normal_tests": 11,
+    "optimized_tests": 11,
+    "remaining_code_findings": 0
+  },
+  "limits": [
+    "Trusted interpreter, interpreter startup hooks, standard library, verifier/preparation tools, and caller process/import environment.",
+    "CLI requires interpreter-reported sys._stdlib_dir; tested CPython 3.12; zipped-only standard-library deployment not verified.",
+    "Trusted local filesystem without concurrent hostile changes.",
+    "Integrity/custody only: no scientific proof, cryptographic publisher authentication, distribution approval, or repository integration."
+  ],
+  "schema": "t20-v6-final-handoff-tools-control-record-v1",
+  "scope": "Synthetic tool controls and existing helper regression tests only; final actual-payload verification remains separate.",
+  "source_execution_selected": false,
+  "state": "BOUNDED_TOOL_CONTROLS_PASSED",
+  "supplied_tests": {
+    "normal": 36,
+    "normal_log": "BUILDER_IMPORT_GREEN.log",
+    "optimized": 36,
+    "optimized_log": "BUILDER_IMPORT_OPTIMISED.log"
+  },
+  "tools": {
+    "USAGE.md": {
+      "bytes": 6061,
+      "sha256": "349bfecf931454773457983fc1bd36da082b0f3dd7044c9e245bd6fc50bdf4ac"
+    },
+    "prepare_handoff.py": {
+      "bytes": 3683,
+      "sha256": "8ede41ebe43aa8f297184b1982e6de8102bd9332c81846d05b4422ce3fb4c31d"
+    },
+    "test_handoff.py": {
+      "bytes": 22366,
+      "sha256": "30853a5d93c0b77aac5b8cfbbc47983873d77ac58046a6b54bde8f89bb7dd137"
+    },
+    "verify_handoff.py": {
+      "bytes": 26437,
+      "sha256": "1b91ecebd2dc55e4018a38a9a3fb7a09f1f245b778cea493a6fb1fb60c61c0ef"
+    }
+  }
+}

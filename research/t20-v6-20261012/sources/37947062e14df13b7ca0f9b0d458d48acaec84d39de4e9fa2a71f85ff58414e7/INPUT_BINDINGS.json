@@ -1,0 +1,1146 @@
+{
+  "schema": "t20.collective-continuation.read-bindings.v1",
+  "baseline_commit": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+  "sources": [
+    {
+      "id": "S14",
+      "label": "T12-REPORT-DERIVED-MARKDOWN",
+      "sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "local_path": "coverage/pinned-baseline/T12-REPORT-DERIVED-MARKDOWN.md",
+      "origin": "pinned_adopted_repository_public_projection",
+      "repository_path": "experiments/orthemology-v5-successors/source-store/88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264/Orthemology_Twelfth_Research_Report_v1_20261004.md",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264/Orthemology_Twelfth_Research_Report_v1_20261004.md",
+      "git_blob_sha": "9878150ae93a22bfdb28ced9be00d07d0194be26",
+      "original_sha256": "e9a2954f2abac6401023a95a644b5c818aa633157f5b0502ef98fe3086fcdaeb",
+      "projection": "DERIVED",
+      "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct.",
+      "fresh_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            31,
+            80
+          ]
+        ]
+      },
+      "inherited_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            31,
+            176
+          ],
+          [
+            219,
+            284
+          ]
+        ]
+      },
+      "verified_local_sha256": "88d38c803e48dd3ca5919877e5bddae2fe5af33d293fd9bd1b346be590e25264",
+      "sha256_matches": true
+    },
+    {
+      "id": "S18",
+      "label": "T15-REPORT-DERIVED-MARKDOWN",
+      "sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "local_path": "coverage/pinned-baseline/T15-REPORT-DERIVED-MARKDOWN.md",
+      "origin": "pinned_adopted_repository_public_projection",
+      "repository_path": "experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+      "git_blob_sha": "0c5888fbe1b178af686e6f3229bdb529cc1bf6a5",
+      "original_sha256": "19aa086ae362153c48b34de0ab00bd52996faa9229c508c7068da35f758b0169",
+      "projection": "DERIVED",
+      "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct.",
+      "fresh_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            205,
+            252
+          ]
+        ]
+      },
+      "inherited_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            205,
+            252
+          ],
+          [
+            275,
+            284
+          ]
+        ]
+      },
+      "verified_local_sha256": "69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee",
+      "sha256_matches": true
+    },
+    {
+      "id": "S19",
+      "label": "T13-MISSING-OUTCOME-SOURCE",
+      "sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+      "local_path": "coverage/pinned-baseline/T13-MISSING-OUTCOME-SOURCE.md",
+      "origin": "pinned_adopted_repository_public_projection",
+      "repository_path": "experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md",
+      "git_blob_sha": "0b2582ae67d48d241ee6bcd492a55be8d2915719",
+      "original_sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+      "projection": "EXACT",
+      "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct.",
+      "fresh_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            1,
+            70
+          ]
+        ]
+      },
+      "inherited_read_scope": {
+        "mode": "full_text",
+        "line_ranges": [
+          [
+            1,
+            70
+          ]
+        ]
+      },
+      "verified_local_sha256": "8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115",
+      "sha256_matches": true
+    },
+    {
+      "id": "S21",
+      "label": "T15-COMPENDIUM-DERIVED-MARKDOWN",
+      "sha256": "34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2",
+      "local_path": "coverage/pinned-baseline/T15-COMPENDIUM-DERIVED-MARKDOWN.md",
+      "origin": "pinned_adopted_repository_public_projection",
+      "repository_path": "experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+      "source_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+      "git_blob_sha": "2c079d0444f00fa9e8240b840c7690d0e6a9a512",
+      "original_sha256": "06622a9ab290a76993e0864b96b39a78bec725b5a3e59d226d5a8902e552eaca",
+      "projection": "DERIVED",
+      "evidence_claim": "Bounded reading of the public projection. No renewed primary-study access, empirical replay or human specialist review. Original and derived hashes remain distinct.",
+      "fresh_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            4255,
+            4672
+          ],
+          [
+            4825,
+            4936
+          ],
+          [
+            4937,
+            5198
+          ]
+        ]
+      },
+      "inherited_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            4603,
+            4672
+          ],
+          [
+            4937,
+            5198
+          ]
+        ]
+      },
+      "verified_local_sha256": "34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2",
+      "sha256_matches": true
+    },
+    {
+      "id": "T16-SRC-b7d31f1d878d617e58d5",
+      "projection": "EXACT",
+      "public_path": "experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md",
+      "public_sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "original_sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "public_url": "https://github.com/theislampill/orthemology/blob/7efc6217c090b92d65f2c4cb8b011c18eb96bf7c/experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md",
+      "catalogue_public_hash_held": true,
+      "catalogue_original_hash_held": true,
+      "selected_source_read": null,
+      "coverage_read_status": "SOURCE_BINDING_METADATA_ONLY",
+      "source_map_pointer": "pinned-baseline/SOURCE_MAP.json#sources[id=T16-SRC-b7d31f1d878d617e58d5]",
+      "local_path": "catalogue/objects/10/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "fresh_read_scope": {
+        "mode": "selected_line_ranges",
+        "line_ranges": [
+          [
+            61,
+            166
+          ],
+          [
+            180,
+            218
+          ],
+          [
+            230,
+            327
+          ],
+          [
+            444,
+            518
+          ]
+        ]
+      },
+      "verified_local_sha256": "10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e",
+      "sha256_matches": true
+    }
+  ],
+  "context_reading": [
+    {
+      "path": "t20-consolidation-20261011/coverage/CUMULATIVE_PROGRAMME_CROSSWALK.md",
+      "sha256": "5734b27e31d4ed010ca938db9949e739a6126b4f4919c1b748eb051e6b1330a6",
+      "scope": "avenues 4\u20137, \u00a7\u00a74\u20136, coverage limits and selected source index"
+    },
+    {
+      "path": "t20-consolidation-20261011/coverage/CUMULATIVE_PROGRAMME_CROSSWALK.json",
+      "sha256": "f59ae99db95231f817d5ea90ccc2e729b41daf44463557b322432b563f56dea6",
+      "scope": "selected result and source objects copied below; keys/count schema; not whole-result-body fresh reading"
+    },
+    {
+      "path": "t20-consolidation-20261011/evidence/EVIDENCE_TRANSPORT_SYNTHESIS.md",
+      "sha256": "8baf4b25eaa5ebd5ab7eaae7a8ed430f190a9fe62093907d989845fff8434561",
+      "scope": "\u00a7\u00a71\u20135 especially ET-01, ET-03/05, ET-07, ET-14, ET-17 and ET-20; synthesis owner scope not all primary proofs"
+    },
+    {
+      "path": "t20-depth-reassessment-20261011/proof_inquiry/RESULT.md",
+      "sha256": "77ea55a74bc79c9810cac1588693c7681c1403aa0606081c955d314d2222a890",
+      "scope": "opening inherited-interface discussion and \u00a72 cache contract, partial \u00a73 only; no duplicated theorem"
+    },
+    {
+      "path": "t20-depth-reassessment-20261011/grounding_provenance/RESULT.md",
+      "sha256": "902435802a5cac6b128664101b781caa013a3a0ec96d6a7ccda60dbbf22fd4e3",
+      "scope": "opening and \u00a7\u00a71\u20132; avoid one-provider identity duplication"
+    }
+  ],
+  "inherited_result_bindings": [
+    {
+      "id": "D16-T13-MISSING-OUTCOMES",
+      "title": "All-assigned missing-outcome bounds",
+      "avenues": [
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S19"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "Observed successes/failures are correctly classified.",
+          "All assigned units remain in the denominator.",
+          "Extreme completions are jointly possible for sharpness."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Each rate lies in [S/N,(S+U)/N]; the contrast lies in [Sa/Na-(Sb+Ub)/Nb,(Sa+Ua)/Na-Sb/Nb], with width Ua/Na+Ub/Nb. A known failed necessary component can imply failure despite another unmeasured component.",
+        "domain": "FINITE_MODEL",
+        "evidence_keys": [
+          "T13 missing outcome analysis"
+        ],
+        "family": "d16-t13-missing-outcomes",
+        "id": "D16-T13-MISSING-OUTCOMES",
+        "input_contract": "Assigned N=S+F+U, where success/failure is binary and unknown is an assessment state; arm contrast a minus b.",
+        "limitations": [
+          "These are identification bounds, not confidence intervals.",
+          "No independence or missing-at-random assumption is used.",
+          "The supplied examples are mathematical illustrations, not newly collected observations."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Finite all-assigned binary endpoint with partially classified records",
+        "origin_status": "Independently reviewed ordinary written proofs. Inherited formal results remain inherited; no new Lean kernel certification.",
+        "original_avenues": [
+          12
+        ],
+        "residual_scope": "Sampling uncertainty and actual adjudication require separate evidence.",
+        "review_ids": [
+          "D16-T13-MISSING-OUTCOMES-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T13-MISSING-OUTCOME-SOURCE"
+        ],
+        "suite_ids": [],
+        "target": "Identification interval for binary whole-cell success with unknown assessments",
+        "title": "All-assigned missing-outcome bounds",
+        "tranche": 13
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D16-T13-MISSING-OUTCOMES",
+        "operational_model": "Finite all-assigned binary endpoint with partially classified records"
+      }
+    },
+    {
+      "id": "D18-T15-ANSWER-LAW",
+      "title": "Equality of the full final-answer law",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "v>0, k>1 and finite r_B,r_W>=0.",
+          "Member and output noises are independent standard normals, fresh across trials.",
+          "The complete stimulus/announcer design is fixed or has the same exogenous joint law in both mechanisms."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Alpha+beta=1 and alpha^2+k beta^2=1 give the same N(x,v+r_a) final-score law and hence the same probit answer law. Independent repetitions give equal full score/answer vector laws conditional on the same complete design.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 compendium collective paper"
+        ],
+        "family": "d18-t15-answer-law",
+        "id": "D18-T15-ANSWER-LAW",
+        "input_contract": "XB=x+sqrt(v)ZB, XW=x+sqrt(kv)ZW; alpha=(k-1)/(k+1), beta=2/(k+1); TL=XB+sqrt(r_a)ZA and TP=alpha XB+beta XW+sqrt(r_a)ZA; Y=1{T>0}.",
+        "limitations": [
+          "Equality is in law, not pathwise under a coupling.",
+          "Matching stimulus marginals alone is insufficient.",
+          "At k=1 the claimed two-input interpretation degenerates.",
+          "This exact pair does not represent every possible experiment or fit participant contributions."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "No actual member contribution or whole-model equivalence under other observations is inferred.",
+        "review_ids": [
+          "D18-T15-ANSWER-LAW-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Observation-law equivalence of the exact two parameter-matched Gaussian mechanisms",
+        "title": "Equality of the full final-answer law",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-ANSWER-LAW",
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design"
+      }
+    },
+    {
+      "id": "D18-T15-CAUSAL-CONTRIBUTION",
+      "title": "Equal answers with different model interventions",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "v>0, k>1 and finite r_B,r_W>=0.",
+          "Member and output noises are independent standard normals, fresh across trials.",
+          "The complete stimulus/announcer design is fixed or has the same exogenous joint law in both mechanisms."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Under L the intervention leaves the response law unchanged; under P the success probability Phi((alpha x+beta w)/sqrt(alpha^2 v+r_a)) is strictly increasing in w. Both positive-weight inputs are causally consequential in P.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 compendium interventions"
+        ],
+        "family": "d18-t15-causal-contribution",
+        "id": "D18-T15-CAUSAL-CONTRIBUTION",
+        "input_contract": "Same exact Gaussian pair; replace XW structurally by w and preserve other independent equations.",
+        "limitations": [
+          "The intervention is on the stipulated model, not evidence of a feasible human manipulation.",
+          "The result does not identify the mechanism used by an actual participant group."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "An actual-world causal identification would require separately justified interventions or measurements.",
+        "review_ids": [
+          "D18-T15-CAUSAL-CONTRIBUTION-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Different do(XW=w) response dependence in the equal-answer pair",
+        "title": "Equal answers with different model interventions",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-CAUSAL-CONTRIBUTION",
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design"
+      }
+    },
+    {
+      "id": "D18-T15-EMPIRICAL",
+      "title": "Official-input reanalysis of the 15-dyad comparison",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [],
+      "inherited_statement": {
+        "assumptions": [
+          "Use the exact official decisions ZIP and Experiment 2 workbook.",
+          "Python 3.12 and exact declared numpy/scipy/pandas/openpyxl pins.",
+          "Pairing unit is dyad, contrast is INF minus IND, all response trials are retained despite timing missingness."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "The fresh source-prescribed run passed all 13 original synthetic tests, reconstructed the 15-dyad official-input comparison, reconciled all 120 workbook sensitivity estimates to four decimals with both separately written numerical cores, preserved the one negative slope, and reproduced the original aggregate bytes. The mean INF-minus-IND difference is 0.7126365005104668, t(14)=2.704264596388044, p=0.01711311760610826, 95% interval [0.14743541713250896,1.2778375838884246]. The checked cross-implementation maximum difference is 3.0215846713588235e-08. A separate corrupt-input subprocess completed with intended exit 2.",
+        "domain": "REFERENCE_EXECUTION",
+        "evidence_keys": [
+          "Hertz experiment 2",
+          "T15 empirical package"
+        ],
+        "family": "d18-t15-empirical",
+        "id": "D18-T15-EMPIRICAL",
+        "input_contract": "Two official objects declared by INPUTS.json; archive and workbook SHA-256 checked before parsing, then selected MAT hash, shapes, columns and workbook ranges checked.",
+        "limitations": [
+          "This is reanalysis of the same observations, not a new participant experiment or replication.",
+          "The INF condition lacks private responses, so member contribution is not identified.",
+          "Announcer role does not isolate contribution.",
+          "Graphical panels and original author-code execution are not newly verified.",
+          "Record-level data never enters the public projection."
+        ],
+        "math_form": "IMPLEMENTATION",
+        "obligation_ids": [],
+        "operational_model": "Local-file finite reference reanalysis with BFGS and checked independent numerical cores",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "FINITE_ONLY same-data numerical reproduction. Original observations are not a new sample; actual-member contribution, graphical panels, experimental replication and specialist validation remain outside the evidenced scope.",
+        "review_ids": [
+          "D18-T15-EMPIRICAL-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-EMPIRICAL-AGGREGATE",
+          "T15-EMPIRICAL-BINDING",
+          "T15-EMPIRICAL-INPUTS",
+          "T15-EMPIRICAL-README",
+          "T15-EMPIRICAL-CHECKSUMS",
+          "T15-EMPIRICAL-VALIDATION",
+          "T15-EMPIRICAL-FIT-BFGS",
+          "T15-EMPIRICAL-FIT-CHECKED",
+          "T15-EMPIRICAL-REANALYSE",
+          "T15-EMPIRICAL-REQUIREMENTS",
+          "T15-EMPIRICAL-TESTS",
+          "T15-EMPIRICAL-VALIDATE"
+        ],
+        "suite_ids": [
+          "T15-EMPIRICAL-REANALYSIS"
+        ],
+        "target": "Hash-pinned aggregate reproduction and numerical agreement for the same published 15 dyads",
+        "title": "Official-input reanalysis of the 15-dyad comparison",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-EMPIRICAL",
+        "operational_model": "Local-file finite reference reanalysis with BFGS and checked independent numerical cores"
+      }
+    },
+    {
+      "id": "D18-T15-FIXED-SAMPLE",
+      "title": "Fixed-sample error control and nonuniformity",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "v>0, k>1 and finite r_B,r_W>=0.",
+          "Member and output noises are independent standard normals, fresh across trials.",
+          "The complete stimulus/announcer design is fixed or has the same exogenous joint law in both mechanisms.",
+          "Baseline and separation lower bound are known and applicable.",
+          "Trials are independent repetitions."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Each error is at most exp(-n delta0^2/2). Without a uniform positive gap, TV(P_n,L_n)<=2n delta and the error sum is at least 1-2n delta, so no fixed finite sample uniformly separates the full unseparated class. The exact illustration delta=1/6 gives threshold count 72 at n=216 and each error <=exp(-3).",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 Hoeffding test",
+          "T15 total variation"
+        ],
+        "family": "d18-t15-fixed-sample",
+        "id": "D18-T15-FIXED-SAMPLE",
+        "input_contract": "iid fixed-design recorded pairs; known p prime q and delta>=delta0>0; use mean Q prime Y threshold p prime q+delta0/2.",
+        "limitations": [
+          "The illustration is mathematical, not a collected dataset or executed study.",
+          "Error control is not finite certainty.",
+          "The known-gap guarantee cannot be transferred to unknown arbitrarily small alternatives."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "Unknown marginals and numerical implementation require a different rule and separate qualification.",
+        "review_ids": [
+          "D18-T15-FIXED-SAMPLE-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Finite error bound with a known baseline and positive separation lower bound",
+        "title": "Fixed-sample error control and nonuniformity",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-FIXED-SAMPLE",
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design"
+      }
+    },
+    {
+      "id": "D18-T15-PASSIVE-LINK",
+      "title": "Passive same-trial continuous and binary discrimination",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "v>0, k>1 and finite r_B,r_W>=0.",
+          "Member and output noises are independent standard normals, fresh across trials.",
+          "The complete stimulus/announcer design is fixed or has the same exogenous joint law in both mechanisms.",
+          "The signal and final answer are linked by trial.",
+          "The observation is passive and conditioning is retained."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Under L the private signal/bit and answer are independent. Under P Cov(XW,Y|x,a)=beta k v phi(x/sqrt(v+r_a))/sqrt(v+r_a)>0 and Cov(Q,Y|x,a)>0; all four binary-pair cells remain positive.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 passive observation",
+          "T15 linked bit"
+        ],
+        "family": "d18-t15-passive-link",
+        "id": "D18-T15-PASSIVE-LINK",
+        "input_contract": "Observe XW,Y or Q=1{XW>0},Y on the same trial at fixed x,a, without changing the mechanism.",
+        "limitations": [
+          "Pooled stimuli can induce association under L.",
+          "Unlinked marginals do not supply the discriminating dependence.",
+          "A finite observed cell never logically rules out either model."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "Passivity and trial linkage require independent justification in an empirical design.",
+        "review_ids": [
+          "D18-T15-PASSIVE-LINK-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Conditional dependence of the worse member\u2019s passive signal and final answer",
+        "title": "Passive same-trial continuous and binary discrimination",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-PASSIVE-LINK",
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design"
+      }
+    },
+    {
+      "id": "D18-T15-RECORDING-ERROR",
+      "title": "Independent bit error and the separation boundary",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "v>0, k>1 and finite r_B,r_W>=0.",
+          "Member and output noises are independent standard normals, fresh across trials.",
+          "The complete stimulus/announcer design is fixed or has the same exogenous joint law in both mechanisms.",
+          "Recording errors are independent, with the stated error rate."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "Cov(Q prime,Y)=(1-2 epsilon)Cov(Q,Y). Positive separation survives below one half, vanishes into equal recorded-pair sequence laws at one half, and can be direction-corrected by reversing bits above one half.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 recording error"
+        ],
+        "family": "d18-t15-recording-error",
+        "id": "D18-T15-RECORDING-ERROR",
+        "input_contract": "Q prime=Q xor E with E Bernoulli(epsilon), independent of the scientific pair and freshly independent across trials.",
+        "limitations": [
+          "Dependent recording errors are outside the identity.",
+          "Equality at error one half concerns the stipulated recorded observations, not all potential observations."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "An actual recording channel\u2019s independence and error rate remain empirical premises.",
+        "review_ids": [
+          "D18-T15-RECORDING-ERROR-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Covariance and full recorded-pair law under independent Bernoulli bit flips",
+        "title": "Independent bit error and the separation boundary",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-RECORDING-ERROR",
+        "operational_model": "Matched one-input and two-input Gaussian mechanisms with fixed/exogenous common design"
+      }
+    },
+    {
+      "id": "D18-T15-SEQUENTIAL",
+      "title": "One-sided sequential detection with unknown marginals",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "0<gamma<1.",
+          "The null is independence and each alternative has fixed positive covariance.",
+          "The rule is interpreted in exact real arithmetic."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "The probability of ever falsely selecting the dependent alternative under the null is at most gamma, while every fixed positive alternative is detected in finite time almost surely.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 sequential one-sided rule"
+        ],
+        "family": "d18-t15-sequential",
+        "id": "D18-T15-SEQUENTIAL",
+        "input_contract": "iid binary pairs; empirical c_n=b_n-p_n q_n; epsilon_n=sqrt(log(6n(n+1)/gamma)/(2n)); stop only for c_n>3 epsilon_n.",
+        "limitations": [
+          "The rule returns no null answer and has no uniform finite stopping-time guarantee.",
+          "No verified floating-point classifier is supplied.",
+          "Conservative numerical errors and thresholds must still vanish for the eventual-detection argument."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Exact-real sequential binary covariance rule",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "A total two-answer service is not obtained.",
+        "review_ids": [
+          "D18-T15-SEQUENTIAL-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "False-ever-selection control and pointwise finite detection of positive binary dependence",
+        "title": "One-sided sequential detection with unknown marginals",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-SEQUENTIAL",
+        "operational_model": "Exact-real sequential binary covariance rule"
+      }
+    },
+    {
+      "id": "D18-T15-TWO-ANSWER-LIMIT",
+      "title": "No uniformly reliable terminating null branch without separation",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [
+        "S21"
+      ],
+      "inherited_statement": {
+        "assumptions": [
+          "The procedure is nonanticipating.",
+          "It terminates almost surely under the fixed null.",
+          "Uniform null and alternative error bounds sum to less than one."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "No such two-answer procedure exists over the full near-null alternative class: finite stopping prefixes can be approximated by alternatives closely enough to retain the null decision probability.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "T15 near-null sequence",
+          "T15 stopping-prefix argument"
+        ],
+        "family": "d18-t15-two-answer-limit",
+        "id": "D18-T15-TWO-ANSWER-LIMIT",
+        "input_contract": "Fixed uniform independent-pair null at x=0,v=1,k=3,r_a=0 and alternatives delta=(1-2 epsilon)/6 decreasing to zero.",
+        "limitations": [
+          "The theorem does not require alternative-side almost-sure termination or finite expected stopping time.",
+          "Separated subclasses can admit stronger services.",
+          "It is an exact model result, not a general impossibility of all empirical science."
+        ],
+        "math_form": "ORDINARY",
+        "obligation_ids": [],
+        "operational_model": "Sequential binary-pair laws with a fixed null and arbitrarily close alternatives",
+        "origin_status": "PASS local deliverable seal and independent research verification",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "Null nontermination remains an explicit service boundary, not a hidden completed answer.",
+        "review_ids": [
+          "D18-T15-TWO-ANSWER-LIMIT-INHERITED-REVIEW"
+        ],
+        "source_ids": [
+          "T15-COMPENDIUM-DERIVED-MARKDOWN"
+        ],
+        "suite_ids": [],
+        "target": "Incompatibility of null almost-sure termination with uniform two-answer errors over near-null alternatives",
+        "title": "No uniformly reliable terminating null branch without separation",
+        "tranche": 15
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "D18-T15-TWO-ANSWER-LIMIT",
+        "operational_model": "Sequential binary-pair laws with a fixed null and arbitrarily close alternatives"
+      }
+    },
+    {
+      "id": "T16-RENEWAL",
+      "title": "Effective committed continuation and pruned witnesses",
+      "avenues": [
+        4,
+        7,
+        10
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [],
+      "inherited_statement": {
+        "assumptions": [
+          "Decidable prefix-closed binary admission tree; computable callbacks; always-authorized zero-external-input contract; actual irrevocable unbounded progress."
+        ],
+        "calculus": "OTHER",
+        "claim_scope": "COMPONENT",
+        "conclusion": "The stated effective-renewal boundary and constructive pruned-witness interfaces distinguish uniform finite plans, mathematical infinite paths and computable committed progress.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "continuation",
+          "T16-SRC-62b0736b8d4ec58bc81d"
+        ],
+        "family": "t16-renewal",
+        "id": "T16-RENEWAL",
+        "input_contract": "Decidable prefix-closed binary admission tree; computable callbacks; always-authorized zero-external-input contract; actual irrevocable unbounded progress.",
+        "limitations": [
+          "The width-two nonuniformity and programme interpretation remain written arguments. No actual organisational, identity or causal-permission warrant is established.",
+          "This integration adds source/status custody and uses inherited scientific evidence; no fresh T16 kernel or empirical qualification."
+        ],
+        "math_form": "MIXED",
+        "obligation_ids": [
+          "U06",
+          "U14"
+        ],
+        "operational_model": "Decidable prefix-closed binary admission tree; computable callbacks; always-authorized zero-external-input contract; actual irrevocable unbounded progress.",
+        "origin_status": "Sixteenth final supplied source; current scoped candidate with inherited evidence. Original pending/recovery headers preserved.",
+        "original_avenues": [
+          4,
+          7,
+          10
+        ],
+        "residual_scope": "The width-two nonuniformity and programme interpretation remain written arguments. No actual organisational, identity or causal-permission warrant is established.",
+        "review_ids": [
+          "T16-RENEWAL-SOURCE-REVIEW"
+        ],
+        "source_ids": [
+          "T16-SRC-b7d31f1d878d617e58d5",
+          "T16-SRC-0840745fca45b3b4ef00",
+          "T16-SRC-68ac118799e28163ca24",
+          "T16-SRC-961226cfb9778fb33e49",
+          "T16-SRC-f0a34505a65294e04400",
+          "T16-SRC-12fa2b7c2b627387830d",
+          "T16-SRC-7c20bf02bb6902609086",
+          "T16-SRC-6babefdd0a79c2d9be11",
+          "T16-SRC-3dd606e58a8299046f49",
+          "T16-SRC-dfe33d2ac1f76c336ae9",
+          "T16-SRC-54c9b7cdb23f0619c297",
+          "T16-SRC-703433172e55a0152709"
+        ],
+        "suite_ids": [],
+        "target": "t16-renewal",
+        "title": "Effective committed continuation and pruned witnesses",
+        "tranche": 16
+      },
+      "calculus_identity": {
+        "calculus": "OTHER",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "T16-RENEWAL",
+        "operational_model": "Decidable prefix-closed binary admission tree; computable callbacks; always-authorized zero-external-input contract; actual irrevocable unbounded progress."
+      }
+    },
+    {
+      "id": "T16-COMPETENCE",
+      "title": "Finite continuity and global renewal are different burdens",
+      "avenues": [
+        4,
+        7,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [],
+      "inherited_statement": {
+        "assumptions": [
+          "Use the exact continuation contracts; retain affirmative finite capabilities."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "The continuation papers propose a separation between exhibited finite competence, onward supported continuation and an indefinitely effective committed lineage.",
+        "domain": "SOURCE_TEXT",
+        "evidence_keys": [
+          "competence",
+          "T16-SRC-1cda3e4399e92ac8dd3a"
+        ],
+        "family": "t16-competence",
+        "id": "T16-COMPETENCE",
+        "input_contract": "Use the exact continuation contracts; retain affirmative finite capabilities.",
+        "limitations": [
+          "Interpretive proposal, not a new impossibility theorem or empirical demonstration; numerical identity and autonomous apoautosis are not established.",
+          "This integration adds source/status custody and uses inherited scientific evidence; no fresh T16 kernel or empirical qualification."
+        ],
+        "math_form": "PROPOSAL",
+        "obligation_ids": [],
+        "operational_model": "Use the exact continuation contracts; retain affirmative finite capabilities.",
+        "origin_status": "Sixteenth final supplied source; current scoped candidate with inherited evidence. Original pending/recovery headers preserved.",
+        "original_avenues": [
+          4,
+          7,
+          12
+        ],
+        "residual_scope": "Interpretive proposal, not a new impossibility theorem or empirical demonstration; numerical identity and autonomous apoautosis are not established.",
+        "review_ids": [
+          "T16-COMPETENCE-SOURCE-REVIEW"
+        ],
+        "source_ids": [
+          "T16-SRC-b7d31f1d878d617e58d5",
+          "T16-SRC-0840745fca45b3b4ef00",
+          "T16-SRC-68ac118799e28163ca24"
+        ],
+        "suite_ids": [],
+        "target": "t16-competence",
+        "title": "Finite continuity and global renewal are different burdens",
+        "tranche": 16
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "T16-COMPETENCE",
+        "operational_model": "Use the exact continuation contracts; retain affirmative finite capabilities."
+      }
+    },
+    {
+      "id": "T16-LOOKAHEAD",
+      "title": "Arbitrary effective finite lookahead preserves the selection boundary",
+      "avenues": [
+        4,
+        7,
+        10
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [],
+      "inherited_statement": {
+        "assumptions": [
+          "Demand is total, computable, history-dependent and finite at each history; exact source admission construction."
+        ],
+        "calculus": "OTHER",
+        "claim_scope": "COMPONENT",
+        "conclusion": "For a supplied total computable finite demand, strengthened admission retains the infinite path class and effective finite planners while preserving the no-effective-commitment boundary.",
+        "domain": "UNBOUNDED_MODEL",
+        "evidence_keys": [
+          "lookahead",
+          "T16-SRC-62b0736b8d4ec58bc81d"
+        ],
+        "family": "t16-lookahead",
+        "id": "T16-LOOKAHEAD",
+        "input_contract": "Demand is total, computable, history-dependent and finite at each history; exact source admission construction.",
+        "limitations": [
+          "Implemented enumeration is not the written lexicographic planner. Supplementary witnesses concern the base service, not recursive viability; randomised/population corollaries remain written.",
+          "This integration adds source/status custody and uses inherited scientific evidence; no fresh T16 kernel or empirical qualification."
+        ],
+        "math_form": "MIXED",
+        "obligation_ids": [
+          "U06"
+        ],
+        "operational_model": "Demand is total, computable, history-dependent and finite at each history; exact source admission construction.",
+        "origin_status": "Sixteenth final supplied source; current scoped candidate with inherited evidence. Original pending/recovery headers preserved.",
+        "original_avenues": [
+          4,
+          7,
+          10
+        ],
+        "residual_scope": "Implemented enumeration is not the written lexicographic planner. Supplementary witnesses concern the base service, not recursive viability; randomised/population corollaries remain written.",
+        "review_ids": [
+          "T16-LOOKAHEAD-SOURCE-REVIEW"
+        ],
+        "source_ids": [
+          "T16-SRC-b7d31f1d878d617e58d5",
+          "T16-SRC-0840745fca45b3b4ef00",
+          "T16-SRC-68ac118799e28163ca24",
+          "T16-SRC-3b42640b94812489cda9",
+          "T16-SRC-5c7c04988e2fd929dee1",
+          "T16-SRC-968775b790722f4edf5d",
+          "T16-SRC-961226cfb9778fb33e49",
+          "T16-SRC-f0a34505a65294e04400",
+          "T16-SRC-12fa2b7c2b627387830d",
+          "T16-SRC-7c20bf02bb6902609086",
+          "T16-SRC-6babefdd0a79c2d9be11",
+          "T16-SRC-3dd606e58a8299046f49",
+          "T16-SRC-dfe33d2ac1f76c336ae9",
+          "T16-SRC-54c9b7cdb23f0619c297",
+          "T16-SRC-703433172e55a0152709"
+        ],
+        "suite_ids": [],
+        "target": "t16-lookahead",
+        "title": "Arbitrary effective finite lookahead preserves the selection boundary",
+        "tranche": 16
+      },
+      "calculus_identity": {
+        "calculus": "OTHER",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "T16-LOOKAHEAD",
+        "operational_model": "Demand is total, computable, history-dependent and finite at each history; exact source admission construction."
+      }
+    },
+    {
+      "id": "T16-EMPIRICAL",
+      "title": "Inherited author-linked 2019/2020 game-data reanalysis",
+      "avenues": [
+        6,
+        12
+      ],
+      "current_track_routes": [
+        "evidence",
+        "foundations",
+        "geometry",
+        "proofs"
+      ],
+      "crosswalk_disposition": "INHERITED_RESULT_AND_LIMITS_RETAINED",
+      "semantic_replacement_claimed": false,
+      "selected_source_read_ids": [],
+      "inherited_statement": {
+        "assumptions": [
+          "Exact two input digests and declared source-prescribed environment; original game clustering and denominator conventions."
+        ],
+        "calculus": "NONE",
+        "claim_scope": "WHOLE_RESULT",
+        "conclusion": "The reported reanalysis of 232 people and 75 games separates final score from active-majority correctness, reports 130 negative-score/correct-majority cases and 185 missing-roster ties, and retains the 47-game equal-size contrast with its uncertainty.",
+        "domain": "REFERENCE_EXECUTION",
+        "evidence_keys": [
+          "report",
+          "T16-SRC-1cda3e4399e92ac8dd3a"
+        ],
+        "family": "t16-empirical",
+        "id": "T16-EMPIRICAL",
+        "input_contract": "Exact two input digests and declared source-prescribed environment; original game clustering and denominator conventions.",
+        "limitations": [
+          "Inherited reported replay, not a new local execution or participant experiment. Equal-size estimate +1.62 percentage points, interval -1.66 to 5.00; five 15-person games receive one-third weight. No causal mediation, verified 2025 SI identity or human-specialist validation.",
+          "This integration adds source/status custody and uses inherited scientific evidence; no fresh T16 kernel or empirical qualification."
+        ],
+        "math_form": "SOURCE_ASSESSMENT",
+        "obligation_ids": [],
+        "operational_model": "Exact two input digests and declared source-prescribed environment; original game clustering and denominator conventions.",
+        "origin_status": "Sixteenth final supplied source; current scoped candidate with inherited evidence. Original pending/recovery headers preserved.",
+        "original_avenues": [
+          6,
+          12
+        ],
+        "residual_scope": "Inherited reported replay, not a new local execution or participant experiment. Equal-size estimate +1.62 percentage points, interval -1.66 to 5.00; five 15-person games receive one-third weight. No causal mediation, verified 2025 SI identity or human-specialist validation.",
+        "review_ids": [
+          "T16-EMPIRICAL-SOURCE-REVIEW"
+        ],
+        "source_ids": [
+          "T16-SRC-fb9388a841a875bc6076",
+          "T16-SRC-060ab16a8a1452d53625",
+          "T16-SRC-70d97fb8a4a3331f1af7",
+          "T16-SRC-d363d35f471e332878ad",
+          "T16-SRC-9e6c19e91c9242b86dc6",
+          "T16-SRC-c55a3f595133c67090d7",
+          "T16-SRC-3f7b20873ca9083ac1c3",
+          "T16-SRC-316c1b68795e2d2fa373",
+          "T16-SRC-2d221ac83c8159aae299",
+          "T16-SRC-4611e8f418545757a8f9",
+          "T16-SRC-13268127cec35fce45fd",
+          "T16-SRC-4980fea667e6480a4780",
+          "T16-SRC-94e175aed4455106e855",
+          "T16-SRC-6617f5b0894e69c0cc91",
+          "T16-SRC-1d17315d38fbf2901cf0",
+          "T16-SRC-68c07c5ab8669a4b7286"
+        ],
+        "suite_ids": [],
+        "target": "t16-empirical",
+        "title": "Inherited author-linked 2019/2020 game-data reanalysis",
+        "tranche": 16
+      },
+      "calculus_identity": {
+        "calculus": "NONE",
+        "canonical_adoption": "NOT_ADOPTED",
+        "id": "T16-EMPIRICAL",
+        "operational_model": "Exact two input digests and declared source-prescribed environment; original game clustering and denominator conventions."
+      }
+    }
+  ],
+  "status_limits": [
+    "No new primary-study access or empirical replay",
+    "T16 empirical branch is inherited registry scope only",
+    "S14 was background reading and is not used for a new mathematical claim",
+    "No new formal execution credit",
+    "No public-source fetch needed; selected bodies already held",
+    "Public projections remain separately hashed from original DOCX bodies"
+  ]
+}

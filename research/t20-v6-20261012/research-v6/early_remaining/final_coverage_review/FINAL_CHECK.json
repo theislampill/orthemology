@@ -1,0 +1,116 @@
+{
+  "scope": "Independent bounded exact-table/currentness review; no new source reading, source execution, complete-world or corpus completeness assertion.",
+  "checks_passed": true,
+  "errors": [],
+  "physical_identity_count": 27940,
+  "axes": {
+    "RECOVERED_SOURCE_INPUT": 27839,
+    "CURRENT_V6_OUTPUT_ARTIFACT": 17,
+    "EXTERNAL_REPLAY_EVIDENCE_INPUT": 84
+  },
+  "reference_families": 189,
+  "reference_populations": {
+    "early": 20,
+    "later": 169
+  },
+  "registered_families": 330,
+  "owner_records_compared": 392,
+  "owner_ledgers_verified": 11,
+  "registered_source_ids": 2589,
+  "source_variants": 5157,
+  "unheld_variant_records": 210,
+  "bindings_with_no_held_variant": 8,
+  "eligibility_actions": {
+    "identity_only": 16285,
+    "include": 11653,
+    "omit": 2
+  },
+  "nine_category_corrections_verified": {
+    "9a87a2f5": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION",
+    "b8f9877b": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION",
+    "ea8ca2d2": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION",
+    "b1d35296": "QUALIFIED_ROLE_ONLY",
+    "eb011170": "QUALIFIED_ROLE_ONLY",
+    "445b1883": "QUALIFIED_ROLE_ONLY",
+    "09ba2928": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION",
+    "24d2f066": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION",
+    "9c6d9c70": "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION"
+  },
+  "input_bindings": [
+    {
+      "path": "t20-v6-20261011/corpus/admission/TERMINAL_PHYSICAL_SCOPE_OVERLAY.jsonl",
+      "sha256": "a232a26b63de7235a6504211c012a0cd1112c158a0c3b3827075b97b8bd8b919",
+      "bytes": 31971470
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/TERMINAL_SCOPE_SUMMARY.json",
+      "sha256": "a9a6490acdd971baa909a65f6680ff3a82d4b071e49314ee8769f3804e971fed",
+      "bytes": 1419
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_REGISTERED_RESULT_DISPOSITIONS.json",
+      "sha256": "c49f2834226391d11e4f1ed6f7935d725e8b6bfd8d5517d523088c9c994d4032",
+      "bytes": 7124862
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_REGISTERED_SOURCE_SCOPE_DISPOSITIONS.json",
+      "sha256": "668b1aa03927a0624aa7ddd10807e62da2dc3af25f2222928352b8b026683855",
+      "bytes": 12158903
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_REFERENCE_ONLY_189_RECONCILIATION.json",
+      "sha256": "da49359303b3fbcc9f6b9a92e6c115f040690ba3a55d75f9aa2e9d0df6c4756e",
+      "bytes": 2793249
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_FAMILY_JOIN_SUMMARY.json",
+      "sha256": "8e780deff366d48a8bd28c6974a21f9b0f938fe670d51ea6a9350a8e71735fa2",
+      "bytes": 2600
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/TERMINAL_SOURCE_UNIT_SCOPE_OVERLAY.jsonl",
+      "sha256": "9c3f580a8115ccd36fb3e2b478898648719d3924d587d59d96a75842f4d0bebe",
+      "bytes": 5017403
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_SOURCE_DISTRIBUTION_ELIGIBILITY.json",
+      "sha256": "cf1cfa9c9c54c97f4e1259a66300102a8256df06a1f3e4fd1fe5c33764678eec",
+      "bytes": 39649702
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/FINAL_DISTRIBUTION_ELIGIBILITY_VERIFICATION.json",
+      "sha256": "e2a1b3cd7b6b50e3a976b2df98ffc3b634cd666f7554451cf2f6552825ed0503",
+      "bytes": 772
+    },
+    {
+      "path": "t20-v6-20261011/controller_chain/external_evidence_scope/ROLE_DISPOSITIONS.json",
+      "sha256": "cb9a9706e6ba29898cd39570f62d8fa2315c8446dcdfa4d980e0b18b4aabb273",
+      "bytes": 129411
+    },
+    {
+      "path": "t20-v6-20261011/early_remaining/physical_denominator_roles/ROLE_DECISIONS_308.json",
+      "sha256": "8d5f8f9f9a7278bbf5f9cbf94f1c01d7c4c92a5faa6123f16db35a33e9855631",
+      "bytes": 1135439
+    },
+    {
+      "path": "t20-closure-audit-20261011/FINAL_COVERAGE.json",
+      "sha256": "7720e9013fe9f6e56482dba3c1a557a9b11a6c188e1e467a3484e5f7e42a0f9a",
+      "bytes": 203416
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/build_terminal_scope_overlay.py",
+      "sha256": "242d48571de0e3682e954ada08d0a544d33ad9dbc750981702f267a67590f8fe",
+      "bytes": 21465
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/join_terminal_families.py",
+      "sha256": "e7bae56472e1af3726b27e2647b1374255fb216de186f0fd44353dd4358287f3",
+      "bytes": 6030
+    },
+    {
+      "path": "t20-v6-20261011/corpus/admission/build_distribution_eligibility.py",
+      "sha256": "817995959e746c3db543453532a80cf66c9f2ceea6306f8de22cca7429c25eb2",
+      "bytes": 14609
+    }
+  ]
+}

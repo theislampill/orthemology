@@ -1,0 +1,480 @@
+{
+  "schema": "literal-shift-probability-independent-review-v1",
+  "bound_at_utc": "2026-10-11T08:39:27.549077+00:00",
+  "verdict": "PASS for exact source-lowered literal AST fair-source probability and atomic-defect bridge",
+  "path_base": "original workspace root; hashes retain byte identity after relocation",
+  "new_modules": 5,
+  "new_exported_theorems": 64,
+  "negative_control_files": 2,
+  "trust": 0,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "baseline_dependencies_verified": 34,
+  "prior_independent_literal_modules_reused": 7,
+  "mathlib_commit_independently_read": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "external_reviewed_files": [
+    {
+      "path": "literal-shift-probability-20261011/LiteralShiftPersistence.lean",
+      "sha256": "d18518a251b23029bd9e43a4f1c84a92a70668ef363eaab0e3001cada7b57d20",
+      "bytes": 3081
+    },
+    {
+      "path": "literal-shift-probability-20261011/LiteralShiftWeights.lean",
+      "sha256": "931e941c21ee65e6962571e160dfab1ce4d082bcd164e226b06cca5fbc5942b2",
+      "bytes": 13577
+    },
+    {
+      "path": "literal-shift-probability-20261011/LiteralShiftMixture.lean",
+      "sha256": "e81d1a7a7b717107c83567c5828259c4eda90013340a70e6c19ded25aaf1593a",
+      "bytes": 16294
+    },
+    {
+      "path": "literal-shift-probability-20261011/LiteralShiftDefect.lean",
+      "sha256": "d22e57affccc63593ff7818ca75be17a9dbfa634cfeff02370c5b123c8fddc59",
+      "bytes": 4584
+    },
+    {
+      "path": "literal-shift-probability-20261011/LiteralShiftFirstBit.lean",
+      "sha256": "6c3871122e77c5ea3a305761547ee89b0bbb80d34b77e97bcb53134134858482",
+      "bytes": 2570
+    },
+    {
+      "path": "literal-shift-probability-20261011/RESULT.md",
+      "sha256": "167806996726118000a849e4b1e364a8240b3dd9c9e9aa5667ab08953b0da968",
+      "bytes": 8909
+    },
+    {
+      "path": "literal-shift-probability-20261011/SOURCE_BRIDGE.md",
+      "sha256": "b94d434ac7a246d52633d72db485da5aed6411e9f3d043d4a5be12f713a7cdc5",
+      "bytes": 1491
+    },
+    {
+      "path": "literal-shift-probability-20261011/SOURCE_PINS.json",
+      "sha256": "0e7e561966dfe36ddfe9dd47a52c56bbb32f2f3e293bee166ad2e56597cd439f",
+      "bytes": 472
+    },
+    {
+      "path": "literal-shift-probability-20261011/INPUT_BINDINGS.json",
+      "sha256": "7ce5c159c47be71d1f42a7dbe7562272cc1395bc7a846b765131e00d0e339955",
+      "bytes": 1318
+    },
+    {
+      "path": "literal-shift-probability-20261011/PREREQUISITE_REBUILD.json",
+      "sha256": "55fea8d4ebb3eb3f5a3956761bb8c7f860dfe9c33c21a8fa6d20f1f066ec746f",
+      "bytes": 12531
+    },
+    {
+      "path": "literal-shift-probability-20261011/negative-controls/RejectDroppedStoppingPrefix.lean",
+      "sha256": "3bd9ac9b1c62aefee0c5f493b32dbb6d9f5a809df91f9ba597b7dca36cf6760a",
+      "bytes": 264
+    },
+    {
+      "path": "literal-shift-probability-20261011/negative-controls/RejectUnitShiftZeroDefect.lean",
+      "sha256": "799ff2fe083421ae5eb3177b3c196a79ab6166579cc5daa9dbdb666888150ab4",
+      "bytes": 231
+    }
+  ],
+  "review_artifacts": [
+    {
+      "path": "literal-shift-probability-independent-review-20261011/REPLAY.json",
+      "sha256": "8bff1e720afcfd7c5006b94f2115287acaa301cefc77552865c87710d13964d7",
+      "bytes": 29496
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/REVIEW.md",
+      "sha256": "56e3fa5eeaeef76900924caf382588e1104adb8a663d11452f35a2524df65899",
+      "bytes": 7697
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/SOURCE_PINS.json",
+      "sha256": "0e7e561966dfe36ddfe9dd47a52c56bbb32f2f3e293bee166ad2e56597cd439f",
+      "bytes": 472
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/ArbitraryPattern.olean",
+      "sha256": "46e6bb094fe85de4b985cb41739ac76309b6a287bf33734c33a74417453b7c0f",
+      "bytes": 142928
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/AtomicPattern.olean",
+      "sha256": "61d4ecce8a012d099399ee710ec85c1bbb8e9c7f23435c64cabde7b996e404d2",
+      "bytes": 89024
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/CodecExpr.olean",
+      "sha256": "b3f65a8629802eeef77471c033ac4174506c726197e8e7f244046cde5d8f348e",
+      "bytes": 464328
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/CodecNumeric.olean",
+      "sha256": "03dc35e5a783c2c5ac69b0b938f0681b8045877c8716d019984cb74018754024",
+      "bytes": 276672
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/CodecProgram.olean",
+      "sha256": "7a2d6f14507280d0e5d18813ca6a49992cd097d26d3f869abbc20f5226722a5b",
+      "bytes": 318456
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/CodecStmt.olean",
+      "sha256": "05c16997c4f1a6f77f6db67b5cadbc4d64e8a7a694abd84fc410590c33c63215",
+      "bytes": 549944
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/CodecVarint.olean",
+      "sha256": "11617c6772236ec892e80bdc0b1e83ce071956c81905b9ae1933c11d4dc41af6",
+      "bytes": 587944
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/FiniteOutputTable.olean",
+      "sha256": "65d2475b1cf76f5dc7e584e567589a395a2262542082688304560053292e39d4",
+      "bytes": 228304
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/FinitePrefixBoundary.olean",
+      "sha256": "428edbf04d450fdf5dd58f6959bbdf1c136033cdfc64e345e6f379e87861f444",
+      "bytes": 188104
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/HeavyCylinders.olean",
+      "sha256": "e5eda81d9060156d5c887b3063fd2fa6377cb870a5e47f26244470c8cd9cbe06",
+      "bytes": 184472
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/LoopPrimrec.olean",
+      "sha256": "9afc76fac8381466c35132938de5fd9ce5b94b0076c10bb97c79b604100ee710",
+      "bytes": 440440
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/LoopRenaming.olean",
+      "sha256": "e03847ec603e5538ed2864ec38e828d6059d6849a47a1736ade4fd0e8991e997",
+      "bytes": 600976
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/Fibres.olean",
+      "sha256": "3eb0545926380812d367b2b859706db51f4f034523c14ef69d8dcf81bff3e0b0",
+      "bytes": 306064
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/MeasureCore.olean",
+      "sha256": "e63f18ebe7f312a6427bd0f0add48502abb2cd2c8110a2f3782993933c8ae69d",
+      "bytes": 157384
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/Mixture.olean",
+      "sha256": "e8145b4646f61529e12728ca82d474490cef1160d31af2a094383639ce2d4d11",
+      "bytes": 95912
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/Observation.olean",
+      "sha256": "c4e947ece229087920147af4a30e404d757ddabe22068ac5e6d6f309f0b04b3b",
+      "bytes": 260424
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/ObserverCore.olean",
+      "sha256": "167ff29621e3d1e034713d43e3e48fd5f71830a1931cfcf0cca6e0920c4d3170",
+      "bytes": 1253480
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/P02A2/Refinement.olean",
+      "sha256": "cbbfedaf3fdddf1a7fc57d964ad723b97f2dc6a0b00896e058c7d66af01f1cd8",
+      "bytes": 277576
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRComposition.olean",
+      "sha256": "f69e256581595883b6e7f6ef9dc2129e09363dfa0bb93ff289d2637f30b1427b",
+      "bytes": 225840
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRCoverage.olean",
+      "sha256": "a7978fca16c45528085858de4e51403bd62eb607675f15f4e57e0cb99641801c",
+      "bytes": 110408
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRDerivation.olean",
+      "sha256": "f0aa3a4a95f1d74c5b11d2dfde0c5a24b8bd2aed75161fda75c4e488aa96e949",
+      "bytes": 361176
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRHeadRecursion.olean",
+      "sha256": "8a7273f5a59f79f58b66047ce06fc7384c61545224c8bedb152e0c48326b2cff",
+      "bytes": 123208
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRProgram.olean",
+      "sha256": "5dbb3141ca25758cf56e47752c0d2433bfd4e8099a72e28765b3fb4fd4f4fd7f",
+      "bytes": 243856
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRRecursion.olean",
+      "sha256": "bb9f4f175f7863745ce11a5023640affc72af717e38b31403afbda38def55291",
+      "bytes": 253120
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PRSpecialize.olean",
+      "sha256": "9c449d262d3fe977915f987b34836d8b66062ed836c24ddb55fcb3de45e8f321",
+      "bytes": 98048
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PatternBoundary.olean",
+      "sha256": "db5c425112926c581925335dd6b1964999bd76803f739778b2f1c21c3d9b537b",
+      "bytes": 107224
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/PrefixTail.olean",
+      "sha256": "970c7b50aa5f9ed02153839f11a1ce25e9235a0d1e599bbd97f38d09164162b2",
+      "bytes": 212216
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/Q8Compiler.olean",
+      "sha256": "15c756f339cf33d166870831ebc259c56cda155302101359cb90f28561334b04",
+      "bytes": 690168
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/Q8Machine.olean",
+      "sha256": "f032262d7d5e9c801ddae283663f5c2c47fde5fa5eebcaea48890c7b1fd9c473",
+      "bytes": 356608
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/Q8Measure.olean",
+      "sha256": "57734136855c4cbd2ff40481d819e1834070d81c0eee5614cf272cc08ef77785",
+      "bytes": 162288
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/ResidualStability.olean",
+      "sha256": "7d77b463c0e98912c8c1e612b647faf0a523ea98cdbfdaac82d576c7a0b629c0",
+      "bytes": 120080
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/TaggedMass.olean",
+      "sha256": "223077b0fbbbceefdbc5b1e86989a557a4e5c79933ddccbff057cc008fd1fe1b",
+      "bytes": 165416
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/TaggedRows.olean",
+      "sha256": "a11994ed2bfe1007f650f636c5585754449242d8f7d1170479d6ce57f92f45e4",
+      "bytes": 256392
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/baseline-build/TotalVariation.olean",
+      "sha256": "07d6b380af22ee9d3b138f52f863db6797b83df2c9b3c05a79da2dae9fe42e1b",
+      "bytes": 165776
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/InspectTypesAxioms.olean",
+      "sha256": "96875be011642ec01800d0f9a5bc16126a68fce616631ce9ceba687b78798b9e",
+      "bytes": 35264
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/LiteralShiftDefect.olean",
+      "sha256": "1d7764f1211f7efdb4925a325353e385bdb0b4989cf98183711decf58f1769a2",
+      "bytes": 165824
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/LiteralShiftFirstBit.olean",
+      "sha256": "e1db93e3151691fd7a9fb70001947bb1309307c684a2d43919f95d71cb442475",
+      "bytes": 136776
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/LiteralShiftMixture.olean",
+      "sha256": "7e7ae694ac0b72f8766ba612421d9b4945fcdc808a8527d22a60d5abae2f0275",
+      "bytes": 450696
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/LiteralShiftPersistence.olean",
+      "sha256": "eb8d5fa636cc1d34115ea837d37392e730c1c5fd7d9dbcc0549b581b9af05f5f",
+      "bytes": 319968
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/build/LiteralShiftWeights.olean",
+      "sha256": "a48fce45369cec59deded7b2987c25a1ed74107ae65db4032e56e99436b67fae",
+      "bytes": 618416
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/AUTHOR_INPUT_BINDINGS.json",
+      "sha256": "7ce5c159c47be71d1f42a7dbe7562272cc1395bc7a846b765131e00d0e339955",
+      "bytes": 1318
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/AUTHOR_RESULT.md",
+      "sha256": "167806996726118000a849e4b1e364a8240b3dd9c9e9aa5667ab08953b0da968",
+      "bytes": 8909
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/BASELINE_REBUILD.json",
+      "sha256": "39bf23dda399febb65bb3af4e5a06e2753d44c0029e1eb41862f85fb2240dd76",
+      "bytes": 19549
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PREREQUISITE_REBUILD.json",
+      "sha256": "55fea8d4ebb3eb3f5a3956761bb8c7f860dfe9c33c21a8fa6d20f1f066ec746f",
+      "bytes": 12531
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PRIOR_CODEC_CORRESPONDENCE.md",
+      "sha256": "f99ceb4ff133716af662319513da5f3c385c9dfad6dab66d632d610603205ceb",
+      "bytes": 17600
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PRIOR_HIERARCHY_PROOF.md",
+      "sha256": "cb9a698d4e0e9e0162aec3709bfdfdaebaf19a9bc19b9350f386e6d11709926d",
+      "bytes": 12643
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PRIOR_LITERAL_INDEPENDENT_REPLAY.json",
+      "sha256": "ca6de73c3d55ee37ce4c651883e235515f5c739a0cdae438204526e8e4a355a6",
+      "bytes": 13901
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PRIOR_LITERAL_REVIEW.md",
+      "sha256": "869232a81e4d3b529bb73ddaeffb2b482580c70614ea610f6a9e09367c121f92",
+      "bytes": 7653
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/PRIOR_LITERAL_SOURCE_PINS.json",
+      "sha256": "d5c864360860c228e34e994a5b5ace32ad022e6dd96efa01f87cc7abec1a3873",
+      "bytes": 1008
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/SOURCE_BRIDGE.md",
+      "sha256": "b94d434ac7a246d52633d72db485da5aed6411e9f3d043d4a5be12f713a7cdc5",
+      "bytes": 1491
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/inputs/prcodec.py",
+      "sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+      "bytes": 15928
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftCorrect.olean",
+      "sha256": "46f9ae98714fe0a82ee3171a2a252f5d07dfc0611e430f5fe7bbfa992cacaccf",
+      "bytes": 222912
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftEndpoints.olean",
+      "sha256": "19b5f4a79cd05078ba982d386172cf6b34370a8934ea00ce11803cb6013d327c",
+      "bytes": 283272
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftPrefix.olean",
+      "sha256": "8f15babf95492f313237a790cfd2270fd1e436616bf92918b4cf81bada901d46",
+      "bytes": 296992
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftReplay.olean",
+      "sha256": "c3d669924f59334b86b73f7fd041d8330288f8e382f89d038301290f46752000",
+      "bytes": 292768
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftScan.olean",
+      "sha256": "e4760167493b82d9665a310ba00d30308ef571b4f257cd2b664cb15b13f03883",
+      "bytes": 464032
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftSyntax.olean",
+      "sha256": "a76af865b170ad251e7b10be77fbbabed10f238fd7245f575e4efa489b6ad043",
+      "bytes": 285840
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/literal-build/LiteralShiftWord.olean",
+      "sha256": "454530e0eac1e47c8b74edea42ee8a197b9be9c434da16006ff2625e5dfd553f",
+      "bytes": 223952
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/InspectTypesAxioms.log",
+      "sha256": "ed92c2d257345462242660bd65e6e60974bb54ddc15d557607b2ccb8c5572276",
+      "bytes": 21859
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/LiteralShiftDefect.log",
+      "sha256": "8ab15d534b636014a16216a03c2ff1f81d9474b90a7f76a06636fc918461d975",
+      "bytes": 98
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/LiteralShiftFirstBit.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/LiteralShiftMixture.log",
+      "sha256": "bcdf9607802aa825b8ac7dd15a2cc27893204c9675ee0e2140e6b65f627254a7",
+      "bytes": 480
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/LiteralShiftPersistence.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/LiteralShiftWeights.log",
+      "sha256": "a389a335c2ad746e47cfd840e067f818053e4c6762f4dfefc384017cb9c50eba",
+      "bytes": 487
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/RejectDroppedStoppingPrefix.log",
+      "sha256": "4596dcb23ef4f85f946d68a0aa5c3d33c2cb7aa3aaeac0413cd277536763790e",
+      "bytes": 106
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/logs/RejectUnitShiftZeroDefect.log",
+      "sha256": "d3b1839d071ff500ddab303565fa735959980b94030efcf35bbb37e85ba52d31",
+      "bytes": 104
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/replay.py",
+      "sha256": "31b9a8102227fc7729e04385637e098d3d048cb1b106300528a9b2a58f98393f",
+      "bytes": 8938
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/InspectTypesAxioms.lean",
+      "sha256": "c117c61a55fdfa5612abbfc6d907c0f6429548bef3b820ed093664c1d4f10846",
+      "bytes": 6662
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/LiteralShiftDefect.lean",
+      "sha256": "d22e57affccc63593ff7818ca75be17a9dbfa634cfeff02370c5b123c8fddc59",
+      "bytes": 4584
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/LiteralShiftFirstBit.lean",
+      "sha256": "6c3871122e77c5ea3a305761547ee89b0bbb80d34b77e97bcb53134134858482",
+      "bytes": 2570
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/LiteralShiftMixture.lean",
+      "sha256": "e81d1a7a7b717107c83567c5828259c4eda90013340a70e6c19ded25aaf1593a",
+      "bytes": 16294
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/LiteralShiftPersistence.lean",
+      "sha256": "d18518a251b23029bd9e43a4f1c84a92a70668ef363eaab0e3001cada7b57d20",
+      "bytes": 3081
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/LiteralShiftWeights.lean",
+      "sha256": "931e941c21ee65e6962571e160dfab1ce4d082bcd164e226b06cca5fbc5942b2",
+      "bytes": 13577
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/RejectDroppedStoppingPrefix.lean",
+      "sha256": "3bd9ac9b1c62aefee0c5f493b32dbb6d9f5a809df91f9ba597b7dca36cf6760a",
+      "bytes": 264
+    },
+    {
+      "path": "literal-shift-probability-independent-review-20261011/sources/RejectUnitShiftZeroDefect.lean",
+      "sha256": "799ff2fe083421ae5eb3177b3c196a79ab6166579cc5daa9dbdb666888150ab4",
+      "bytes": 231
+    }
+  ],
+  "scope_exclusions": [
+    "Python-to-AST relation is ordinary transcription review",
+    "No Python-host success completeness",
+    "No original variadic byte/numeric-code identity",
+    "No explicit Set-event kernel trace",
+    "No new uniform numeric PR compiler theorem",
+    "No adoption, integration or T20 closure"
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "command": [
+      "python",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py"
+    ],
+    "returncode": 0,
+    "stdout": "{\"status\": \"PASS\", \"checks\": 278, \"scope\": \"exact finite controls; universal results require written proofs\"}\n",
+    "stderr": "",
+    "expected_rejection": false
+  },
+  {
+    "command": [
+      "python",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "posterior_sufficient"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 64, in <module>\n    if mutation=='posterior_sufficient':check(a==b,'REJECT posterior-only preserves losses')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT posterior-only preserves losses\n",
+    "expected_rejection": true
+  },
+  {
+    "command": [
+      "python",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "minimax_implies_profile"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 65, in <module>\n    if mutation=='minimax_implies_profile':check(a==b,'REJECT common fixed-game answer preserves losses')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT common fixed-game answer preserves losses\n",
+    "expected_rejection": true
+  },
+  {
+    "command": [
+      "python",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "uniform_seed_three"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 66, in <module>\n    if mutation=='uniform_seed_three':check(all((p*3).denominator==1 for p in [F(1,4),F(3,4)]),'REJECT seed-size ignores denominators')\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT seed-size ignores denominators\n",
+    "expected_rejection": true
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py"
+    ],
+    "returncode": 0,
+    "stdout": "{\"status\": \"PASS\", \"checks\": 278, \"scope\": \"exact finite controls; universal results require written proofs\"}\n",
+    "stderr": "",
+    "expected_rejection": false
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "posterior_sufficient"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 64, in <module>\n    if mutation=='posterior_sufficient':check(a==b,'REJECT posterior-only preserves losses')\n                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT posterior-only preserves losses\n",
+    "expected_rejection": true
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "minimax_implies_profile"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 65, in <module>\n    if mutation=='minimax_implies_profile':check(a==b,'REJECT common fixed-game answer preserves losses')\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT common fixed-game answer preserves losses\n",
+    "expected_rejection": true
+  },
+  {
+    "command": [
+      "python",
+      "-O",
+      "t20-depth-reassessment-20261011/decision_representation/check_exact.py",
+      "uniform_seed_three"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 66, in <module>\n    if mutation=='uniform_seed_three':check(all((p*3).denominator==1 for p in [F(1,4),F(3,4)]),'REJECT seed-size ignores denominators')\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"private-locator:38a1d5c92f4bcf8b6343\", line 8, in check\n    if not b: raise RuntimeError(label)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: REJECT seed-size ignores denominators\n",
+    "expected_rejection": true
+  }
+]

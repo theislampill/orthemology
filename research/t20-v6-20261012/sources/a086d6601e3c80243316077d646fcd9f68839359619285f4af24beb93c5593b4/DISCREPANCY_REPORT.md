@@ -1,0 +1,53 @@
+# Additive Pro packet comparison
+
+11 October 2026 UTC. Read-only comparison with the existing T20 consolidation and catalogue. Incoming Library attachments were materialized only into this new intake. Original archives, catalogue, consolidated v2, and protected repositories were not edited. No upload, integration, Lean replay, programme closure, or new broad source survey was performed.
+
+## Result
+
+The useful additions are **a complete original reconciled package seal and original source paths, four reconstructed provisional-code iterator repairs with reproducible red/green controls, and a separately authored exact finite-control script**. The original 111-minute proof corpus is byte-identical to the already consolidated source. The new timing note is a reconstruction whose conclusion is already covered more fully by the existing ET-19 review. **The exact reported R3 proof/code/reading-ledger/88-test successor remains unrecovered.**
+
+## Discrepancy and attribution table
+
+| Contribution | Comparison with existing T20 sources | Disposition |
+|---|---|---|
+| Authorial 111-minute A–L, foundational synthesis, authorial review, reference code and tests | Original ZIP SHA-256 `263d3b5bf32e698b8ce2417417072cbfe882159deaacbb84f86d0e3ba83de5fe`, 1,090,000 bytes. All 38 regular ZIP members already occur byte-identically in the catalogue; its 37-entry payload manifest verifies. The controlling comparison remains `t20-consolidation-20261011/pro-synthesis/QUALIFICATION.md`. | Already present. No newly supplied theorem, changed hypothesis, recovered successor, or fresh independent proof credit. Preserve source ownership and existing qualifications. |
+| A–F and G/H cross-front ownership | New handoff itself maps A–C to ET-12, D to ET-13, E/F to ET-14, G/H to FND-12. Its original proof and foundation files have unchanged hashes. | An attribution/navigation update, not de novo mathematical or philosophical progress. Conditional gluing remains separate from substantive sourcehood/attribute arguments. |
+| I–L and later geometry | New handoff maps I/J to GEO-16, first-order K to GEO-18, L to GEO-19/20, and explicitly defers to v2's grouped covariance GEO-17 and later full-law high-order work. | Do not replace the stronger already-reviewed successor with the identical first-order predecessor. This intake did not independently re-prove those later geometry results. |
+| New exact-rational control script | `fresh_evidence/independent_exact_controls.py`, SHA `31cce82c4cb5394a0b5807d63c34fc1b5b9c1b63db918aa3b1890aaa2a0d7011`, is absent from the old catalogue. It implements its own elementary formulas instead of importing the actual T20 correction implementation. | Genuinely new finite validation artifact. Fresh local run passes Euler discrepancy 1/117, sharp TV equality 1/3, and 6,561 audit-covariance combinations over 2,187 weight/potential/step configurations. It is not a new theorem, actual-integrator replay, or independent peer review. |
+| Four reconstructed iterator fixes | New 15,568-byte repair ZIP SHA `bd99f89dae08aa1fa328aeafd83d957a253d3b17d8b2b043d32afc58eb4ce82f`. Its old 26-test file is already held; seven other members are new bytes. The supplied patch exactly equals a fresh diff from the old provisional `contracts.py` SHA `3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06` to repaired SHA `852609c327636305d8565549bfb7fbb4aba27076012b4e75861fa97d0460a9c0`. | Genuine newly received executable repair to the older finite-contract implementation: transition-row freezing, partition snapshot, target snapshot, and allowed-action snapshot. It is **26 inherited + 4 added tests**, distinct from the existing **52 + 3 DAG-helper regressions = 55** line and distinct from unavailable R3. |
+| Hybrid timing reconstruction | `HYBRID_JUMP_TIMING_CORRECTION.md`, SHA `80a31e1366a0893995673f5d1cc4f0828ce2d2d8e63f0231a80d5be08fc7acd3`, is new text but openly reconstructed from a conversation pointer. Its deterministic clocks 1/2 example and joint waiting-time/mark/next-state repair are already included in the fully read ET-19 source `synthesis-hybrid-timing-review-20261011/RESULT.md`, SHA `fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3`. | Overlapping repair, not a new frontier gain or recovery of lost original proof. Keep ET-19's stronger explicit no-event branch, retained **timed** histories, timing/branch correlation, physical-time cost scope, and finite rational refinement/one-bit controls. |
+| Full original reconciled archive | 68,339,816-byte ZIP SHA `4d8f6c155f7af4333e70e0d7ae03f4822f751fd0179abc64b087dc3617a7b5e5`: 11,393 regular files, 11,391 already-held exact hashes. The only new member bytes are root `MANIFEST.json` and `corpus/members.json`. | Closes the intact-package/root-seal and original copied-path gap for **this newly supplied archive**. All 11,392 manifest payload entries verify, and all 9,814 advertised nonempty copied paths exist and match. The earlier trimmed archive remains trimmed; its historical failure is not rewritten. Full-held-corpus byte recovery had already been established, so this is not 11,392 newly discovered research documents or new semantic reading. |
+| Reported exact R3/88 tests | Neither new wrapper claims to supply the missing R3 state. The smaller handoff explicitly retracts reliance on the reported recovery; the 80-minute packet calls itself a new partial reconstruction. | Still reported/artifact-unavailable. Do not add 52 and 30, mode reruns, or finite-grid cases to produce a substitute R3 count. |
+| Downstream integration | No publication or repository-adoption permission is supplied by packet inclusion. | Owner-authorized integration only. This intake preserves and qualifies; it does not modify v2 or a production implementation. |
+
+## Fresh local validation
+
+After reading the new code and both reconstructed test files in full, execution used isolated copies under `execution/`. No supplied corpus builder or finalizer was run.
+
+- Reconstructed suite: **30/30 pass**, normal Python and direct `python -O`.
+- Four new regressions against the exact old provisional code: **4/4 expected failures**, normal and optimized Python.
+- New finite exact-control script: passes in ordinary Python. Its checks are bare `assert` statements, so an optimized run would not certify those assertions and was not used as evidence.
+- Manifest verification by a local mechanical reader: small Pro handoff **51** payload entries; immutable authorial archive **37**; full handoff **25**; reconstructed repair **7**; full reconciled archive **11,392**. All exact sizes/hashes match and CRC checks pass.
+- Full corpus document index: 10,104 entries mechanically processed; **9,814/9,814 nonempty copied paths** present and matching, zero mismatch.
+- The duplicate authorial 52-test suite was **not rerun in this intake**. Its supplied fresh logs are inherited observations here; existing consolidation already owns separately observed normal/optimized replays.
+
+`TEST_RUNS.json`, `MANIFEST_VERIFICATION.json`, `SOURCE_PATH_RECOVERY.json`, and `fresh-local-evidence/` hold exact commands, statuses, and output. Repeated interpreter modes are not distinct research suites.
+
+## Remaining input-shape restriction
+
+**Targeted integration clarification:** the old four APIs do not expressly promise an `Iterable` contract. The constructor nonetheless accepts a one-shot valid row and violates its documented freeze-the-validated-mapping invariant. The other three are under-specified input-boundary hardening/support extensions. The old SHA remains the actual selected finite-contract replay component in sealed v2. Carry the received changed implementation as a separately attributed predecessor/successor candidate, not merely extra tests; preserve the historical copies and their existing scope. See `INTEGRATION_SCOPE_NOTE.md` for exact signatures, source lines, sealed-v2 member identities and fresh successful oracle compatibility checks.
+
+The four fixes are local, not a promise of generator support throughout the API. A fresh limited probe on the repaired implementation finds that `valid_partition(c, iterator)` accepts a valid one-shot partition, but `quotient(c, iterator)` still raises `TypeError` at `len`, and `sidecar(c, coarse, iterator)` raises `ValueError` after the inner validation consumes it. Reusable tuple partitions work under the existing sequence-oriented path. Treat this as an unhandled input-shape restriction, not a counterexample to the finite refinement theorem or a claim that a general Iterable API was promised. Evidence: `fresh-local-evidence/input-shape-boundary.json`. No extra patch was made.
+
+## Exact outer delivery identities
+
+- Small Pro ZIP: `891417e25b3be258f70e0b16f0963f690fc47cf2645cd8fd35a6aa9b34d69bda`, 2,190,422 bytes.
+- The recovery files are **four parts despite the “2parts” basename**. Ordered concatenation `.001` through `.004` yields `02a28ed81fa0ad06bbdea5b2ea920033068dd68d7fc840db3fafd6862a6e84ad`, 67,508,845 bytes, a valid one-member wrapper ZIP.
+- Its nested full handoff ZIP: `0d254799832f3e6572dcd0e8342bba37364d1b64ebedb7aeab507d2bb3d9190e`, 69,669,074 bytes.
+- Incoming exact Library identities and hashes: `LIBRARY_IDENTITIES.json` and `ATTACHMENT_SHA256.json`. Recursive archive identities/counts: `ARCHIVE_COMPARISON.json`; per-member matches: `MEMBER_COMPARISON.jsonl`.
+
+## Reading boundary
+
+Fresh semantic reading covered both supplied message handoffs; all new controlling handoff/ownership/verification/recovery notes; both handoff verifiers; the new exact-control script; reconstructed recovery audit, timing correction, complete reference implementation, complete inherited 26-test file and four-test addition; the authorial `Research_Review.md`; existing full `pro-synthesis/QUALIFICATION.md`; and the complete 20,372-byte ET-19 review. Existing ET-18–20 register material and relevant evidence-synthesis search excerpts were inspected as scoped cross-references.
+
+Original A–L and foundational manuscript identities, all nested member payloads and the full source index were processed mechanically for exact bytes, manifests and custody. **This intake does not claim a fresh full semantic reading of those unchanged manuscripts, the anthology, all source files, the later geometry proofs, Arabic primary texts, or the complete T20 programme.** It relies on the explicitly identified existing qualification for unchanged material. The small Pro packet has 40 already-held and 12 new direct member hashes; the full handoff has 11 already-held and 15 new direct member hashes. New packaging, logs and indexes are not thereby new mathematical work.

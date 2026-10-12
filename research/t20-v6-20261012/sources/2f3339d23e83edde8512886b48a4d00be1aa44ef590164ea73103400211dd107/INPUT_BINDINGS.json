@@ -1,0 +1,69 @@
+{
+  "captured_utc": "2026-10-10T10:31:02.018060+00:00",
+  "status": "Author source binding; not an independent-review receipt",
+  "inputs": [
+    {
+      "source_path": "bayes-feasibility-compatibility-20261010/RESULT.md",
+      "snapshot_path": "inputs/01-bayes-feasibility-compatibility-20261010-RESULT.md",
+      "bytes": 25743,
+      "sha256": "c6b3b3e006a25eb33b969f8d490fb9bf0906377eda86bcf27b67d5e1726a5b8f",
+      "reading_scope": "Full report"
+    },
+    {
+      "source_path": "constrained-learning-possibility-20261010/RESULT.md",
+      "snapshot_path": "inputs/02-constrained-learning-possibility-20261010-RESULT.md",
+      "bytes": 18333,
+      "sha256": "a625a2c137d291f514c71eee13e6cc7e4399a1bff491d1b59548a5985f6649f9",
+      "reading_scope": "Full report"
+    },
+    {
+      "source_path": "repeatable-channel-constraints-20261010/RESULT.md",
+      "snapshot_path": "inputs/03-repeatable-channel-constraints-20261010-RESULT.md",
+      "bytes": 24815,
+      "sha256": "8542fbf86cc2914790bfd0fdcd22920bae8fee9569927524df4e2af3ec527336",
+      "reading_scope": "Sections 1\u20138 as available on 10 October 2026; full report"
+    },
+    {
+      "source_path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "snapshot_path": "inputs/04-tensor-moment-continuation-20261009-H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "reading_scope": "Action\u2013observation instruments and Theorem 2, source lines 217\u2013292"
+    },
+    {
+      "source_path": "audit-continuation-transport-20261010/RESULT.md",
+      "snapshot_path": "inputs/05-audit-continuation-transport-20261010-RESULT.md",
+      "bytes": 24610,
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "reading_scope": "Opening and sections 1\u20133 on inherited instruments, cone positivity, intertwining and normalization"
+    },
+    {
+      "source_path": "stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "snapshot_path": "inputs/06-stochastic-inquiry-quotient-transport-20261010-ADDENDUM.md",
+      "bytes": 15671,
+      "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee",
+      "reading_scope": "Opening and sections 1\u20134, through prefix domination"
+    },
+    {
+      "source_path": "tensor-moment-continuation-20261009/RESULT.md",
+      "snapshot_path": "inputs/07-tensor-moment-continuation-20261009-RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11",
+      "reading_scope": "Opening and sections 1\u20134, moment construction and finite closure"
+    },
+    {
+      "source_path": "information-geometry-transport-20261009/RESULT.md",
+      "snapshot_path": "inputs/08-information-geometry-transport-20261009-RESULT.md",
+      "bytes": 17118,
+      "sha256": "077fabaf882988d2de23bda85fd40cc03f6f630c0ca859f12864d53c604fbd94",
+      "reading_scope": "Sections 1\u20137, coarse probability/geometry distinctions"
+    },
+    {
+      "source_path": "channel-natural-repair-20261009/RESULT.md",
+      "snapshot_path": "inputs/09-channel-natural-repair-20261009-RESULT.md",
+      "bytes": 20354,
+      "sha256": "8aea89886533a3357a671432fd90ec044aa070a40d7f0152c0116156f44ff27b",
+      "reading_scope": "Sections 1\u20134, through full-cone radial divergence comparison"
+    }
+  ]
+}

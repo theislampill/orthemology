@@ -1,0 +1,66 @@
+[
+  {
+    "id": "uncertainty_inquiry",
+    "path": "t20-depth-reassessment-20261011/uncertainty_inquiry/RESULT.md",
+    "sha256": "ceff2ac7be7caf7a3e942830c9d0c43b0460e8fc7696a7d86b95ab1230522fad",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "uncertainty_review",
+    "path": "t20-depth-reassessment-20261011/uncertainty_inquiry_review/REVIEW.md",
+    "sha256": "4f7cc32b801d2fd3ad5eca353d6f7bb4a5a403295386c7fa1bab4bbef54ac989",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "h_continuation",
+    "path": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/h_continuation.md",
+    "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "read_scope": {
+      "mode": "selected_lines",
+      "lines": [
+        1,
+        330
+      ]
+    }
+  },
+  {
+    "id": "d1_d2",
+    "path": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/whole.md",
+    "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+    "read_scope": {
+      "mode": "selected_lines",
+      "lines": [
+        1,
+        170
+      ]
+    }
+  },
+  {
+    "id": "finite_sidecar",
+    "path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/hase-finite-sidecar-realisation-20261011/RESULT.md",
+    "sha256": "8ccbe359bbd4c7a482dbfb20e9a62098ec9001072a96e6511b6f7c5c3445bcb4",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "rational_kernel",
+    "path": "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-rational-kernel-transport-20261011/RESULT.md",
+    "sha256": "ba82b3a7daa64cefbcf3b154b801d5f1f0d836012424427b16cb987f51df7087",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "foundational_prior_comparison",
+    "path": "t20-depth-reassessment-20261011/foundational_interface/RESULT.md",
+    "sha256": "85fe7ad6ae92ea2a937a6aeb18d602707c5ef6cc8149e560f86b9d95e52101a3",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  }
+]

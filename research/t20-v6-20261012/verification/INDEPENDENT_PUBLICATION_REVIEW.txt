@@ -1,0 +1,76 @@
+T20 v6 bounded publication review
+Date: 2026-10-12
+Verdict: APPROVE_BOUNDED_SOURCE_ONLY_SCOPE
+
+Reviewed object
+Public root: research/t20-v6-20261012/
+Base commit: 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c
+Base tree: 906b592fb2591ed918c5f0caf485ef79dca513ab
+Public projection manifest SHA256:
+6b6e52c8202a2aa9ebe02a5e50be3186d54555a73e254a122e599eed270217f8
+
+This is a read-only publication/provenance review of the declared source set and its public presentation. No source was edited and no historical research script was executed. The review does not approve merge, T20 scientific acceptance, T21, or an unrestricted release of the private handoff. Final generated controls, their inventory binding, and repository/CI results remain separate integration gates.
+
+Scope and held material
+The manifest retains 1,984 new bodies (1,849 byte-exact and 135 projected), 5,625 existing public body references, 4,404 supplied but unpublished identities, and 16,465 identity-only/excluded entries. All 358 non-administrative curated identities remain published or reused. Every explicitly declared dependency of a published/reused object has a published/reused disposition.
+
+The 4,404 unpublished identities comprise 4,339 outside this bounded historical selection, 29 historical patches/diffs, 25 binary variants requiring decoded publication review, six private transport inventories, four other-project workflow excerpts, and one redundant custody inventory. These distinctions are recorded without representing all omitted bodies as rights-failed. No current curated scientific document was removed by these holds. Selection is referenced-identity closure; it is not complete executable proof/import closure.
+
+Publication findings and remediation
+The independent all-file scan identified one real conversation-message UUID in an authored RESULT and four absolute interpreter locations in historical JSON receipts. These were separate from synthetic fixtures and public scholarly URLs. Final readback confirmed that all five actual locators were replaced, with exact private transformation stages; the missing-R3 qualification, interpreter evidence scope, and scientific content remain preserved.
+
+The four fingerprinted path-rejection test bodies remain exact. Other remaining scanner hits were inspected as detector expressions, LaTeX notation, Lean-generated symbols, or three scholarly citation URLs. They are not treated as actual private-path disclosures. UUID exceptions should remain limited to the exact reviewed citation occurrences and exact owner/body identities; an arbitrary HTTP URL is not a sufficient exception.
+
+All 1,984 new bodies match their manifest hashes and byte counts. They decode as UTF-8; no PDF, DOCX/ZIP, executable, or other unqualified binary body was found in the selected publication. The broader scan included the public manifest, identity index, boundary records, and available navigation/control text, rather than trusting filename suffixes.
+
+Exact preservation
+Independent reversal covered all 1,984 new bodies. The initial/reference stages restored 1,977 final bodies directly; reversing the seven final publication stages and their preceding stages restored the remaining seven. Every restoration equaled the exact supplied handoff source bytes. No original private locator or identifier value is reproduced in this report.
+
+Private transformation ledger bindings:
+- Initial: 6fa0cfa2395c9761f8594e779e3f8512d615b621692a858ae5c1dffafbe51e9b
+- Reference stages: ae04595d990da571bc8af79dc05a57f0ab86d1b38c87c1f22d9860f6e9640b95
+- Final publication stages: 761036a4c54da474b4a6567228dd757870f65cfcc7db0f84ac1e42d8a4e58bb5
+
+The initial ledger includes historical candidate stages for four subsequently held bodies; the final manifest supplies their superseding NOT_PUBLISHED dispositions. Stage history is not counted as published content.
+
+Rights and provenance
+The three new licensed bodies retain their Apache-2.0 attribution headers and bundled license dependency; one further licensed body is reused from the existing repository and the fifth is outside this selection. No new repository-wide license grant is inferred. Targeted restriction/copyright inspection found licensed headers and bibliographic or scope metadata, not a newly republished restricted primary-source body.
+
+All seven received-public versions are exact baseline matches but retain unverified equivalence to unavailable originals. Of 70 supplied public projections, 63 match existing public bodies. The seven newly supplied earlier projections have unavailable original preimages; their earlier original-to-projection equivalence remains inherited evidence. This review verifies transformations from the supplied handoff bytes, not absent predecessors. The underlying historical eligibility ledger is absent, so its reviewed labels are not independent blanket rights certification.
+
+Public navigation and residual boundaries
+The README identifies this as partial public integration with T20 ACTIVE. Archival notes now precede START_HERE and CODEX_HANDOFF, explaining that private-package tools, resolvers and commands do not describe the public executable layout. The historical-reference boundary records preserve unresolved or unselected associations explicitly. ORIGIN_REFERENCES records 32 historical selectors across 10 exact bodies; the scanner exemption is bound to owner, body hash and occurrence counts, and changes only a scan copy.
+
+No remaining source-set publication blocker was identified at the bound manifest. Final control-file pinning and the required public/repository gates must complete before draft-PR publication. Changed source bytes, selection dispositions, or transformation stages invalidate the affected part of this review. This review supplies no fresh empirical result, original-source authentication, human-specialist endorsement, or T20 acceptance.
+
+Bounded addendum: one historical reuse binding and UUID guard
+Date: 2026-10-12
+Verdict: APPROVE_BOUNDED_SOURCE_ONLY_SCOPE remains applicable.
+
+This addendum supersedes the reviewed manifest identity above with:
+18ef8747be0f1f3b5d498eb34083e39cfb9a90cbb08dbb4a6e57d1696d9ac34e
+
+Only the declared mapping adjustment was reviewed; no full-corpus replay or source mutation was performed. Reversing that row's added revision/blob fields and publication-basis wording reconstructs the prior reviewed manifest bytes exactly at SHA256 6b6e52c8202a2aa9ebe02a5e50be3186d54555a73e254a122e599eed270217f8. Counts and the selected scientific source bodies are unchanged.
+
+The source identity 73358843ea99b1b624bc7b6f911e97d9d0192d8bea3f5c631289cca0536151e2 now resolves to scripts/validate_internal_references.py at the verified base revision 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c. Independent Git readback confirms blob 9bba82dc0bfcacc9f9be29333cbcd1143286ce51, 15,246 bytes, and the exact declared SHA256. The current checker has different bytes, so the historical binding correctly avoids a false current-byte identity. The README now distinguishes 5,624 current-checkout reuse rows from this one existing historical Git blob. The reuse total remains 5,625 without installing a duplicate. CI checkout is configured with full history, making the pinned revision available to the check.
+
+The current gate accepts the pinned historical row and rejects a non-pinned revision. UUID exceptions are now bound to the three exact reviewed source-body hashes and exact scholarly URL hashes, with only the matched URL spans masked in the scan copy. Focused read-only checks accepted all three exact citation bodies and rejected changed versions of each, a bare UUID, an arbitrary URL containing a UUID, and a conversation URL containing a UUID. The previously noted broad-URL guard weakness is resolved for this boundary.
+
+No new publication blocker was found. Refresh the public report copy and its control hash; the remaining repository/native CI completion belongs to the integration controller. Prior scientific, custody, missing-original, source-only, and owner-acceptance limitations remain unchanged.
+
+Bounded addendum: exact historical supersession registry
+Date: 2026-10-12
+Verdict: APPROVE_BOUNDED_SOURCE_ONLY_SCOPE remains applicable.
+
+This addendum supersedes the manifest identity in the previous addendum with:
+084674334b7059727c019acadeb217166d1f8ed7157913b1eb99bee631360978
+
+Reversing only the second historical-checker mapping adjustment reconstructs the previous manifest exactly at SHA256 18ef8747be0f1f3b5d498eb34083e39cfb9a90cbb08dbb4a6e57d1696d9ac34e. No scientific source-body or disposition-count change accompanies this delta. Reuse remains 5,625: 5,623 current-checkout bodies and two pinned existing historical Git blobs.
+
+Independent Git readback verifies the original scripts/validate_decision_dependencies.py at base 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c: blob 17bc807d62af1976b4fbb1966b635a2f5313ce3e, 6,268 bytes, SHA256 8d96ba609dfa26a4de8368e089416d142920a170df76b6d1196126c7d13fc62e. The updated checker and preserved original are correctly distinguished. The README explains both historical checker bindings.
+
+The new supersession exception is restricted to the exact historical decision-status.yaml path below source identity 53d15c2fba0185fdbb3bccdd5b586fd67e7f78824a2fd1e8860860ce36560dad and that exact complete body. Its historical adopted/candidate labels remain archived metadata, not current normative decisions. The two existing registry exceptions remain unchanged. No changes were present in the current decision-status registry, math-source inventory, decision documents, or theory surfaces.
+
+The initial review found that universal-newline translation made the helper's full-byte claim imprecise. The final implementation preserves raw newline sequences specifically for this scanner read; other callers retain their prior default behavior. Focused read-only controls verified acceptance of the actual exact body and rejection of changed content, another path, and a CRLF variant with different raw bytes. They also verified that the legacy default read still normalizes newlines. The scanner explicitly uses the raw-newline mode. This closes the reported precision gap without exempting changed normative text or additional files.
+
+No new publication blocker or normative-status weakening was found in this bounded delta. This review did not repeat corpus qualification or claim completion of the controller's full CI run. Refresh the public review copy and its control binding. All previously stated scope, custody, scientific-acceptance and merge limitations remain in force.

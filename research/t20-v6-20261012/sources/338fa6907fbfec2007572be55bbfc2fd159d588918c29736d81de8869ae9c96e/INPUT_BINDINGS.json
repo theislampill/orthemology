@@ -1,0 +1,65 @@
+{
+  "scope": "Read-only inherited inputs inspected before authored work. No inherited mutations authorized.",
+  "inputs": [
+    {
+      "path": "cumulative-credal-audit-coupling-20261011/REPORT.md",
+      "bytes": 18927,
+      "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3"
+    },
+    {
+      "path": "cumulative-credal-audit-coupling-20261011/verify.py",
+      "bytes": 4278,
+      "sha256": "4c76fef04ec007bf92bccd7db045290687814ad68f5260310e0bed4ba313e469"
+    },
+    {
+      "path": "audit-continuation-transport-20261010/RESULT.md",
+      "bytes": 24610,
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc"
+    },
+    {
+      "path": "credal-geometric-transport-20261011/REPAIR.md",
+      "bytes": 7180,
+      "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "posterior-inquiry-value-20261010/RESULT.md",
+      "bytes": 7623,
+      "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf"
+    },
+    {
+      "path": "stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "bytes": 15671,
+      "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+      "bytes": 47537,
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0"
+    },
+    {
+      "path": "constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28"
+    },
+    {
+      "path": "received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/documents/CROSS_FRONT_SYNTHESIS.md",
+      "bytes": 28801,
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4"
+    },
+    {
+      "path": "received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/research/contracts.py",
+      "bytes": 13980,
+      "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06"
+    },
+    {
+      "path": "synthesis-warrant-scope-20261011/RESULT.md",
+      "bytes": 16325,
+      "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7"
+    }
+  ]
+}

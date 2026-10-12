@@ -1,0 +1,30 @@
+{
+  "verified_utc": "2026-10-11T19:19:25.087920+00:00",
+  "identities": 58,
+  "all_source_hashes_match": true,
+  "bytes": 350226,
+  "physical_lines": 9729,
+  "counts": {
+    "identities": 58,
+    "fresh_complete_body_reads": 56,
+    "exact_prior_full_reuse": 1,
+    "complete_structured_template_qualification": 1,
+    "fresh_supplied_python_runs": 3,
+    "new_kernel_proof_bodies": 0,
+    "distinct_supplied_python_sources_executed": 2,
+    "inventory_only_followed_dependency": 1
+  },
+  "schema_only_checks": 45,
+  "original_schema_count": 10,
+  "supplied_python_execution_count": 3,
+  "new_kernel_proof_body_count": 0,
+  "ledger_sha256": "2b5dd539504cd5b39d9527cf8e6c7f1821d355b3b27d1194a3060bf4b6177e9c",
+  "result_sha256": "0a1a526e3d3bef93183670812cc8acaeba47a6fc9d5e8530869ca9438977f4d8",
+  "independent_controls_sha256": "5e95d7cc5b3f6a8db1e5fbb13d65e87d636bdc6726dcf3039b905ff4dbe0a26e",
+  "mutation_scope_sha256": "a5074662be9f7eef837dc9c74e119690682917f8ac23fb688106851dea8dfb6d",
+  "distinct_supplied_python_sources_executed": 2,
+  "additional_inventory_only_dependency": 1,
+  "inventory_dependency_sha256": "b1078ed3a4da54d3e430c499a06d194af85d7f2fe7f7736d04cef8ad8c8a4914",
+  "fresh_replay_sha256": "c42f6b80b7b0e9fada64c43a2501bf357ee5453b869796c2fe97f6d8520d1c08",
+  "updated_utc": "2026-10-11T19:22:26.323371+00:00"
+}

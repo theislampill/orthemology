@@ -1,0 +1,231 @@
+{
+  "frozen_utc": "2026-10-10T07:24:49.481516+00:00",
+  "scope": "Exact review inputs; immutable by digest. No source-currentness or owner-acceptance authority.",
+  "files": [
+    {
+      "path": "audit-aware-correction-root-20261010/TRIPLE_INTERACTION.md",
+      "bytes": 2790,
+      "sha256": "84b17193706810cbf7d85b62b7dd9fffc1f5d9712816ae4558a9a342af9dc4fc"
+    },
+    {
+      "path": "audit-aware-correction-root-20261010/ZERO_AUDIT_BOUNDARY.md",
+      "bytes": 2409,
+      "sha256": "c202f660a5458a6fbc5f597b9e1645fc9a0d25361055abdcf8b8dd45d5186016"
+    },
+    {
+      "path": "audit-aware-correction-root-20261010/check_triple_interaction.py",
+      "bytes": 885,
+      "sha256": "3bd5daac05796bfb462ecf56dd23cc68824693d9688868e0494c92a24cda759c"
+    },
+    {
+      "path": "audit-aware-correction-root-20261010/check_zero_audit.py",
+      "bytes": 744,
+      "sha256": "85fc119c38b15e1b378fdfea1d96662caf12338714ac049c380574d52196d296"
+    },
+    {
+      "path": "basic-recognition-correction-20261009/sources/miftah259-278.txt",
+      "bytes": 39701,
+      "sha256": "582932cc86b10429a7c43fe3f02e980a543fedbc1a7bd4c835dc45a3eb158344"
+    },
+    {
+      "path": "constructive-t20-20261009/revocation-dependency/RESULT.md",
+      "bytes": 10577,
+      "sha256": "e769f345e28a309ee6d26903a24043957212f0658681bba122f8c273cba68dbc"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/REPORT.md",
+      "bytes": 22625,
+      "sha256": "740e3f11837591892649bf6d070b49854a95d0e45f57e2277b2e8d970b25086a"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP03__t20-next-frontier-20261008__fitrah-warrant-bridge__warranting-basis-addendum__CLARIFICATION.md",
+      "bytes": 3893,
+      "sha256": "4f9f8e403a29298d5e2c1b83e97e5b1fea57789e66189f36ab3d1fbc1d4f4803"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP19__necessary-truth-operative-basing-20261009__REPORT.md",
+      "bytes": 15382,
+      "sha256": "f113e0a856bb8b77da573977317f7d70eb04c704a1ddb78442579124572a4810"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/inputs/CP21__attestation-context-source-return-20261009__RESULT.md",
+      "bytes": 10835,
+      "sha256": "51c96a0f1a6dac5e273d32a5ec453426a069def68586dc37fe1676d0957281a6"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_960.txt",
+      "bytes": 5216,
+      "sha256": "8c2af14b466e9269536c3312c1d11ca286570f770fd2ba04f5bb74c0dce89e84"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_963.txt",
+      "bytes": 2051,
+      "sha256": "6ddb8bea91f7375f53a35a2b3bf8046714df347eb19152a1018ae8c7b1564be1"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_964.txt",
+      "bytes": 3964,
+      "sha256": "0ca3620f7f710066811c6124c48c05437449fbdb420129c3d35900ee870ad512"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_967.txt",
+      "bytes": 4578,
+      "sha256": "f4ffcc737f19276f7a19c8da5551c76c0e0cf1710beca40ea39a3124f9fc33a7"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar5_970.txt",
+      "bytes": 2766,
+      "sha256": "883a488d7c21bb9ae0969e48814e3ad92432d1505b5a2113a3b83dec822d51c6"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar7_419_425.txt",
+      "bytes": 18882,
+      "sha256": "a4efe3213b8bf0a9e0d35f4dae3708b2633fbfb7508082e9925c277bfcbfc8d5"
+    },
+    {
+      "path": "evidence-withdrawal-warrant-20261009/sources/dar8_1594.txt",
+      "bytes": 3482,
+      "sha256": "81f3b1c76e47eb356d3af9ccf11b8f75760b26a3ad890832695cc9f9ae1478e4"
+    },
+    {
+      "path": "noetic-correction-semantics-20261009/REPORT.md",
+      "bytes": 14052,
+      "sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04"
+    },
+    {
+      "path": "original-normative-authority-20261009/sources/miftah-925-950.txt",
+      "bytes": 52460,
+      "sha256": "c36d7529e56087d1b3466fc5aad0aeb44699d347243d63fb98ade5ef9c9aed93"
+    },
+    {
+      "path": "provenance-learning-review-20261009/REVIEW.md",
+      "bytes": 8252,
+      "sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403"
+    },
+    {
+      "path": "provenance-learning-review-20261009/independent_controls.py",
+      "bytes": 5478,
+      "sha256": "73173d633d32952e35f467f181c6df6c036c34cc2cae62bed1c43a8c1a10ee16"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/RESULT.md",
+      "bytes": 14332,
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/SOURCE_BINDINGS.json",
+      "bytes": 4591,
+      "sha256": "9001ba57f8c462bb718725f3144f2a5f5c2d46e8e3756515a75965b5c65997af"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/sources/S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "bytes": 8348,
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+    },
+    {
+      "path": "provenance-learning-transport-20261009/sources/S2-PMR-007_DEEP_ROUND_AR_PROVENANCE_ROOT_EVIDENCE_CONSERVATION_V2.md",
+      "bytes": 6935,
+      "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b"
+    },
+    {
+      "path": "source-audit-revision-20261010/CONTROL_RESULTS.json",
+      "bytes": 2421,
+      "sha256": "c33c98db7c98bff30ed0e5682fcbfc576d8a27c1c9168f8c950dfecc03f761c3"
+    },
+    {
+      "path": "source-audit-revision-20261010/INPUT_BINDINGS.json",
+      "bytes": 2246,
+      "sha256": "99207b452403f912d05b6e22e88c858124314a3fc53479462686ada8b76138ca"
+    },
+    {
+      "path": "source-audit-revision-20261010/RESULT.md",
+      "bytes": 29885,
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e"
+    },
+    {
+      "path": "source-audit-revision-20261010/TRIPLE_CONTROL_RESULTS.json",
+      "bytes": 372,
+      "sha256": "8f1b5a381637a1fd3f13e55d271df0a2b64e2dbc67e51163ff8445c4c5f80c33"
+    },
+    {
+      "path": "source-audit-revision-20261010/companions/TRIPLE_INTERACTION.md",
+      "bytes": 2790,
+      "sha256": "84b17193706810cbf7d85b62b7dd9fffc1f5d9712816ae4558a9a342af9dc4fc"
+    },
+    {
+      "path": "source-audit-revision-20261010/companions/check_triple_interaction.py",
+      "bytes": 885,
+      "sha256": "3bd5daac05796bfb462ecf56dd23cc68824693d9688868e0494c92a24cda759c"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/constructive-t20-20261009/revocation-dependency/RESULT.md",
+      "bytes": 10577,
+      "sha256": "e769f345e28a309ee6d26903a24043957212f0658681bba122f8c273cba68dbc"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/evidence-withdrawal-warrant-20261009/REPORT.md",
+      "bytes": 22625,
+      "sha256": "740e3f11837591892649bf6d070b49854a95d0e45f57e2277b2e8d970b25086a"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/provenance-learning-review-20261009/REVIEW.md",
+      "bytes": 8252,
+      "sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/provenance-learning-review-20261009/independent_controls.py",
+      "bytes": 5478,
+      "sha256": "73173d633d32952e35f467f181c6df6c036c34cc2cae62bed1c43a8c1a10ee16"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/provenance-learning-transport-20261009/RESULT.md",
+      "bytes": 14332,
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/provenance-learning-transport-20261009/SOURCE_BINDINGS.json",
+      "bytes": 4591,
+      "sha256": "9001ba57f8c462bb718725f3144f2a5f5c2d46e8e3756515a75965b5c65997af"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/provenance-learning-transport-20261009/sources/S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+      "bytes": 8348,
+      "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca"
+    },
+    {
+      "path": "source-audit-revision-20261010/inputs/warranted-learning-20261009/RESULT.md",
+      "bytes": 21763,
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+    },
+    {
+      "path": "source-audit-revision-20261010/verify.py",
+      "bytes": 11943,
+      "sha256": "445f29a63e680192143879563fa073323f9edfa1fe55966b005789c883d8e593"
+    },
+    {
+      "path": "source-audit-revision-semantics-20261010/REPORT.md",
+      "bytes": 13461,
+      "sha256": "1bdaaf26b6d13627d8002b3b8f292d840bf8308479c03acca38d1bd6fdb7f6ce"
+    },
+    {
+      "path": "source-audit-revision-semantics-20261010/SOURCE_BINDINGS.json",
+      "bytes": 7724,
+      "sha256": "d8f6dcc8ad15f54a868c09dfa09012b35f059f37b75f87232d9f71ecb7f7733a"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "tensor-moment-continuation-20261009/RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    },
+    {
+      "path": "warranted-learning-20261009/RESULT.md",
+      "bytes": 21763,
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69"
+    }
+  ]
+}

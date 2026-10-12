@@ -1,0 +1,77 @@
+{
+  "scope": "Original import names resolved through exact P03 archive python-bases/source and shadow/proposal lineage; standard-library imports separate.",
+  "records": [
+    {
+      "name": "reference.py",
+      "sha256": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "ledger": "type_collective/READING_LEDGER.json",
+      "record": {
+        "sha256": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77",
+        "paths": [
+          "t20-consolidation-20261011/catalogue/objects/39/398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77"
+        ],
+        "source_ids": [
+          "NATIVE-398fdecf3c125f29fbbf"
+        ],
+        "lines": 238,
+        "read_ranges": [
+          [
+            1,
+            238
+          ]
+        ],
+        "disposition": "DIRECT_FULL_BODY_READ",
+        "semantic_claim_scope": "Only these actual source ranges; generated/whole-family qualification, import closure and execution are separate ledgers."
+      }
+    },
+    {
+      "name": "boundaries.py",
+      "sha256": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "ledger": "type_collective/READING_LEDGER.json",
+      "record": {
+        "sha256": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+        "paths": [
+          "t20-consolidation-20261011/catalogue/objects/86/86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4"
+        ],
+        "source_ids": [
+          "NATIVE-86794c3b03f26421dd00"
+        ],
+        "lines": 100,
+        "read_ranges": [
+          [
+            1,
+            100
+          ]
+        ],
+        "disposition": "DIRECT_FULL_BODY_READ",
+        "semantic_claim_scope": "Only these actual source ranges; generated/whole-family qualification, import closure and execution are separate ledgers."
+      }
+    },
+    {
+      "name": "proof_export.py",
+      "sha256": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+      "method": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "ledger": "type_collective/READING_LEDGER.json",
+      "record": {
+        "sha256": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b",
+        "paths": [
+          "t20-consolidation-20261011/catalogue/objects/69/6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b"
+        ],
+        "source_ids": [
+          "NATIVE-6980b13029b17602c1eb"
+        ],
+        "lines": 76,
+        "read_ranges": [
+          [
+            1,
+            76
+          ]
+        ],
+        "disposition": "DIRECT_FULL_BODY_READ",
+        "semantic_claim_scope": "Only these actual source ranges; generated/whole-family qualification, import closure and execution are separate ledgers."
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "parent_sha256": "262503e92380ec868f28670b18939d701cd51808aedc65f7fe6f2fa57e0dbf6d",
+  "section_sha256": "d0d8e7e59d05ebb6a1e8f8566a9dc52a6b704c4b4dd369fc9e2488a1b87bc545",
+  "exact_containment_byte_offset": 19735,
+  "parent_start_line": 202,
+  "section_lines": 33,
+  "mathematical_body_sha256": "679b9c1c4f40deece75eae3603632bedaa2a739354e1adacd42d6b13f2a6b218",
+  "expected_mathematical_body_sha256": "679b9c1c4f40deece75eae3603632bedaa2a739354e1adacd42d6b13f2a6b218",
+  "reading_status": "Section body also directly read in this branch; parent full reading reused separately"
+}

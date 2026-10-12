@@ -1,0 +1,315 @@
+{
+  "prior_verdict_semantics_records": [
+    {
+      "sha256": "aa95d6e44f81041e7755f3ac22d9b3100529d452151f8e54a97495ac435a6a29",
+      "path": "t20-consolidation-20261011/catalogue/objects/aa/aa95d6e44f81041e7755f3ac22d9b3100529d452151f8e54a97495ac435a6a29",
+      "name": "claim-reason-requirements.yaml",
+      "bytes": 5507,
+      "lines": 52,
+      "line_ranges": [
+        [
+          1,
+          52
+        ]
+      ],
+      "queue_index": 0,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "claim_requirement_rule_table",
+      "assessment": "Bounded governed claim-shape rules, intersected with the episode path, distinguish placement, routing and closure relevance, token dependencies, robustness and scoped currency exemption. The table makes no universal governance-calculus claim. Strict soundness additionally requires claim-wise factive truth linkage."
+    },
+    {
+      "sha256": "e24f3aab23d94daf48a953f52bce915aa58e515571877d9db559a3f0d1e38bbe",
+      "path": "t20-consolidation-20261011/catalogue/objects/e2/e24f3aab23d94daf48a953f52bce915aa58e515571877d9db559a3f0d1e38bbe",
+      "name": "verdict-registry.yaml",
+      "bytes": 4231,
+      "lines": 116,
+      "line_ranges": [
+        [
+          1,
+          116
+        ]
+      ],
+      "queue_index": 2,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "verdict_semantic_registry",
+      "assessment": "Four status values, 14 semantic verdict IDs, 11 result-free core path IDs. Only truth linkage entails result correctness claim-wise; reliability, ex-ante justification and robustness have explicit non-entailments. Display aliases and historical migration are not operative IDs."
+    },
+    {
+      "sha256": "c0e613b8f6ab8121609fdb5d12fd8b4ff9c3a7be6bdc381d73b99833204701ad",
+      "path": "t20-consolidation-20261011/catalogue/objects/c0/c0e613b8f6ab8121609fdb5d12fd8b4ff9c3a7be6bdc381d73b99833204701ad",
+      "name": "metaortheme.schema.json",
+      "bytes": 5085,
+      "lines": 184,
+      "line_ranges": [
+        [
+          1,
+          184
+        ]
+      ],
+      "queue_index": 6,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "implementation_protocol_schema",
+      "assessment": "States are a declared set, selectors typed and uncertain/overlapping selection needs semantics. Description says exactly one policy or policy reference, while the actual anyOf permits both. Fresh schema control confirms that cardinality mismatch; no adoption/repair choice is made."
+    },
+    {
+      "sha256": "608abc5d01bb9a9126e6b4ffabf39350814fe6729bc5bcacfcdb7b594e9a79bb",
+      "path": "t20-consolidation-20261011/catalogue/objects/60/608abc5d01bb9a9126e6b4ffabf39350814fe6729bc5bcacfcdb7b594e9a79bb",
+      "name": "metaorthemma.schema.json",
+      "bytes": 8052,
+      "lines": 350,
+      "line_ranges": [
+        [
+          1,
+          350
+        ]
+      ],
+      "queue_index": 7,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "implementation_protocol_schema",
+      "assessment": "Case-bound token is single-typed with nonempty material binding, occurrence/analysis anchors, scoped dependent claims or an explicit external/no-claim reason, binder warrant and declared validity. Binder/executor role distinction does not force different actors. Plural MetaInst is explicitly not implemented."
+    },
+    {
+      "sha256": "9b08c33f516f3f3d98a7923a4a9d9df96938dfec6ce825576abcf69388f85dc3",
+      "path": "t20-consolidation-20261011/catalogue/objects/9b/9b08c33f516f3f3d98a7923a4a9d9df96938dfec6ce825576abcf69388f85dc3",
+      "name": "derive_reqpath.py",
+      "bytes": 3677,
+      "lines": 97,
+      "line_ranges": [
+        [
+          1,
+          97
+        ]
+      ],
+      "queue_index": 10,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "deterministic_requirement_deriver",
+      "assessment": "Derives the episode path from governance rules and registry in conceptual order, with a per-core trace. Default fixture mode checks rule coverage; --shape returns before this sanity check. Shape truthiness assumes a correctly typed declaration; it does not authenticate governance or infer the actual shape.",
+      "static_imports": [
+        "argparse",
+        "json",
+        "os",
+        "sys",
+        "yaml"
+      ]
+    },
+    {
+      "sha256": "377c1ea44f022ede3d38a8ca33a60317d44e62107251d12363a8b9a857508848",
+      "path": "t20-consolidation-20261011/catalogue/objects/37/377c1ea44f022ede3d38a8ca33a60317d44e62107251d12363a8b9a857508848",
+      "name": "validate_claim_reasoning_paths.py",
+      "bytes": 11620,
+      "lines": 234,
+      "line_ranges": [
+        [
+          1,
+          234
+        ]
+      ],
+      "queue_index": 11,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "claim_fixture_validator",
+      "assessment": "Recomputes episode and claim paths independently of the recorded claim projection for its eight declared fixture families. Adequate reasoning is non-factive; strict soundness uses token truth linkage. Tests route/closure independence, mixed claims, luck, rare miss, unresolved status and projection omission. This fixture checker is not called by collect_issues for arbitrary bundles.",
+      "static_imports": [
+        "derive_reqpath",
+        "json",
+        "os",
+        "sys",
+        "yaml"
+      ]
+    },
+    {
+      "sha256": "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+      "path": "t20-consolidation-20261011/catalogue/objects/3b/3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+      "name": "validate_cross_record_semantics.py",
+      "bytes": 45554,
+      "lines": 843,
+      "line_ranges": [
+        [
+          1,
+          843
+        ]
+      ],
+      "queue_index": 12,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": true,
+      "source_role": "bundle_local_semantic_validator",
+      "assessment": "Full 843-line control-flow read. Checks local identity/version anchors, inheritance, scope, cycles, timestamps, dispositions and supplied-path aggregation. It checks token/route requirements but does not fully rederive episode ReqPath; claim derivation then intersects with that supplied path, leaving an upstream omission gap. Rule-load exception is swallowed and skips the claim-derivation equality check. Bundle-local consistency only; external facts and global store invariants are not established.",
+      "static_imports": [
+        "datetime",
+        "json",
+        "os",
+        "re",
+        "sys",
+        "yaml"
+      ],
+      "execution_receipt": "FRESH_EXACT_VALIDATOR_REPLAY.json",
+      "execution_scope": "Four controlled counterbundles via exact collect_issues, plus import-time missing-rule fault injection"
+    },
+    {
+      "sha256": "6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b",
+      "path": "t20-consolidation-20261011/catalogue/objects/66/6631cc99253d14a78b91022b95b646dba48bae1f34a0b86390fbd3e4dd85d92b",
+      "name": "validate_negative_fixtures.py",
+      "bytes": 7429,
+      "lines": 159,
+      "line_ranges": [
+        [
+          1,
+          159
+        ]
+      ],
+      "queue_index": 13,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": false,
+      "source_role": "schema_and_semantic_negative_harness",
+      "assessment": "Loads every schema, checks negative fixtures at their declared layer, and uses any semantic issue as the rejection criterion. Its own generator implements only three top-level operators. Correct shape-layer rejection does not prove the named semantic reason is uniquely responsible; recursive and Task14 dispatchers are separate unexecuted mechanisms.",
+      "static_imports": [
+        "copy",
+        "json",
+        "jsonschema",
+        "os",
+        "referencing",
+        "sys",
+        "validate_cross_record_semantics"
+      ]
+    },
+    {
+      "sha256": "43d4caa093df07751ffa8ca0a0fb20fd4a3e72b3d301465ace34b59e2775c035",
+      "path": "t20-consolidation-20261011/catalogue/objects/43/43d4caa093df07751ffa8ca0a0fb20fd4a3e72b3d301465ace34b59e2775c035",
+      "name": "validate_schemas.py",
+      "bytes": 6231,
+      "lines": 133,
+      "line_ranges": [
+        [
+          1,
+          133
+        ]
+      ],
+      "queue_index": 52,
+      "reading_status": "FULL_BODY_READ",
+      "reading_mode": "fresh_complete_source_or_structured_content",
+      "semantic_read_credit": true,
+      "proof_body_credit": false,
+      "fresh_supplied_python_execution": true,
+      "source_role": "schema_inventory_and_example_validator",
+      "assessment": "Full 133 lines read. Registry enum/core membership, NA reasons, factivity and aggregation are checked on examples. No comparison to the governance-derived episode path is made. current-state derived.schemas is used only for inventory equality; nine bundle filenames and schema compilation are custody/shape assurance, not semantic proof.",
+      "static_imports": [
+        "json",
+        "jsonschema",
+        "os",
+        "referencing",
+        "sys",
+        "yaml"
+      ],
+      "execution_receipt": "FRESH_EXACT_VALIDATOR_REPLAY.json",
+      "execution_scope": "Exact CLI on one synthetic counterbundle and explicit synthetic ten-schema inventory; all record checks pass, exit 1 only for expected nine-bundle denominator"
+    }
+  ],
+  "prior_latent_reason_dynamic_consumers": [
+    {
+      "ledger": "controller_chain/interface_validators/READ_LEDGER.json",
+      "pointer": "records/42",
+      "record": {
+        "sha256": "c651a270f445af9e1b7d07833a64e28ce2a749b0e7f8c2d23ec0445dac6564af",
+        "path": "t20-consolidation-20261011/catalogue/objects/c6/c651a270f445af9e1b7d07833a64e28ce2a749b0e7f8c2d23ec0445dac6564af",
+        "index": 41,
+        "line_ranges": [
+          [
+            1,
+            217
+          ]
+        ],
+        "read_status": "DIRECT_FULL_SOURCE",
+        "scope": "Complete seven latent-state fixture validator. Recomputes registry conformity and declared object distinctness; fixed expected booleans encode seven illustrative distinctions without simulating latent dynamics or proving actual neuronal/state identities.",
+        "execution": "No retained source run.",
+        "bytes": 10057,
+        "lines": 217,
+        "remaining_substantive_ranges": [],
+        "adequacy": "Entire supplied object inspected, including all authored branches and inline data. This does not inherit reading of called code, referenced sources or external inputs."
+      }
+    },
+    {
+      "ledger": "controller_chain/interface_validators/READ_LEDGER.json",
+      "pointer": "records/43",
+      "record": {
+        "sha256": "df3ab20bed0b0c4638b6468c4e7308d47ef19cb056da0510908a2450e19aad77",
+        "path": "t20-consolidation-20261011/catalogue/objects/df/df3ab20bed0b0c4638b6468c4e7308d47ef19cb056da0510908a2450e19aad77",
+        "index": 43,
+        "line_ranges": [
+          [
+            1,
+            134
+          ]
+        ],
+        "read_status": "DIRECT_FULL_SOURCE",
+        "scope": "Complete eight reason fixture validator: episode path core minus token zero-burden, derived claim-relevant projection, factivity and evaluator symmetry. Unlike submitted-path acceptance, this fixture checker derives its episode requirement from the registry core. Fixed fixture role, not general input validation.",
+        "execution": "No retained source run.",
+        "bytes": 6382,
+        "lines": 134,
+        "remaining_substantive_ranges": [],
+        "adequacy": "Entire supplied object inspected, including all authored branches and inline data. This does not inherit reading of called code, referenced sources or external inputs."
+      }
+    },
+    {
+      "ledger": "controller_chain/interface_validators/READ_LEDGER.json",
+      "pointer": "records/49",
+      "record": {
+        "sha256": "9381c38dca315b709c1bfee3c9361a7097e2fc45e52f3e27e422e13c4e9190e4",
+        "path": "t20-consolidation-20261011/catalogue/objects/93/9381c38dca315b709c1bfee3c9361a7097e2fc45e52f3e27e422e13c4e9190e4",
+        "index": 31,
+        "line_ranges": [
+          [
+            1,
+            844
+          ]
+        ],
+        "read_status": "DIRECT_FULL_SOURCE",
+        "scope": "Full844-line dynamic/OSM contract validator. It enforces13 typed objects,9 nonidentity relations,7 distinct learning/decoding method roles, exact article/pinned-code access roles and no metaphysical/human promotion. Endpoint similarity does not establish mechanism; reported trajectory match is among tested models; biological adaptation/model response future-work distinction retained. Four update levels require explicit transport arguments. These are data-contract checks, not a fresh read/replay of external article/code or general semantic validator.",
+        "execution": "No retained source run.",
+        "bytes": 46203,
+        "lines": 844,
+        "remaining_substantive_ranges": [],
+        "adequacy": "Entire supplied object inspected, including all authored branches and inline data. This does not inherit reading of called code, referenced sources or external inputs."
+      }
+    }
+  ],
+  "fresh_targeted_return": {
+    "sha256": "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+    "read_ranges": [
+      [
+        350,
+        485
+      ]
+    ],
+    "additional_search_scope": "Whole source search for governed_component, of_type and duplicate; no governed_component equality check found. Prior full843line scope reused."
+  },
+  "scope": "Existing exact full body routes reused; historical execution receipt applies only to its original counterbundles, not these26 new inputs."
+}

@@ -1,0 +1,189 @@
+{
+  "status": "WORKING_BOUND_INDEX_NOT_YET_EXHAUSTIVE_FINAL_REGISTER",
+  "utc": "2026-10-12T15:35:53.464740+00:00",
+  "records": [
+    {
+      "id": "FOUNDATION-RC",
+      "artifact": "foundations/residual_admission/CORRECTIONS.json",
+      "sha256": "d53762bbaa43dc8d8d4679aaf633de6626391c145481b29dd497205e933c82b4",
+      "description": "Twenty-seven precise mathematical/source/assurance corrections with current positive-claim crosswalk; M2 historical repair chronology retained",
+      "prior_bound_versions": [
+        "4a732ebea3a571c8599c754e9eefa9560218b006a56df26352d1eb280c6fb133",
+        "fac325d32f5458b1e2b7679ee71bcf045ec64c013b7ed6bf0421148d6edea64e",
+        "72c288b0e012a0ba3403ccd60a9af8fe900a542502e2133198a415d99270be60"
+      ]
+    },
+    {
+      "id": "FOUNDATION-CURRENT",
+      "artifact": "foundations/CLAIM_CORRECTION_CROSSWALK.json",
+      "sha256": "846a3e524adae37b39efa9b3dceaef935e3cda760167ee41c35b858317ebe51b",
+      "description": "Links corrections to current34 foundational claims; historical held statuses do not override successor appraisals",
+      "prior_bound_versions": [
+        "4f52e5f6cb13751889d25ee034448343bac32182a719b459da7d7d3ff017e74d",
+        "48f6058cd204f001feaef458b18e8d9b344950c4d9cb968117d289e7f01efb6c",
+        "2d624ddf2334050b7e8f5b48c8f9201c0cccf146d5bce47bf60b2d45caacd774"
+      ]
+    },
+    {
+      "id": "FOUNDATION-PARTICULAR",
+      "artifact": "foundations/particular_source_closure/CURRENTNESS_CROSSWALK.json",
+      "sha256": "bc30efff0b11c8e7b53c549226cd60c8ebbe34968ace5bacf7718b21f6fa5791",
+      "description": "Existential adequacy, simultaneous production and particular wise determination successor dispositions"
+    },
+    {
+      "id": "V6-PROJECTION",
+      "artifact": "type_collective/projection_audit/V6_REPAIR_MANIFEST.json",
+      "sha256": "b2909c8a1114b1b4759775049ae1d979e8c004945c6ded8975d70d41b8bc7057",
+      "description": "Five mathematical spans corrupted by public link rewriting; three additive original-byte recoveries"
+    },
+    {
+      "id": "V6-CALIBRATED-REVIEW",
+      "artifact": "root_math/calibrated_prose/REVIEW_FORMULA_CORRECTION.json",
+      "sha256": "dd13fb39ae62efb7be9d9398dd66a1fb95b79de92a4ede89b9501c21d36b9b3a",
+      "description": "Existing October8 erratum recovered and independently corroborated: missing factor u in one review sentence; original proof and negative theorem survive",
+      "prior_bound_versions": [
+        "7c9803d39880728498a72e9bc39396c5f046aec8d4a187220cb8a42b61f60f37"
+      ]
+    },
+    {
+      "id": "V6-VERDICT",
+      "artifact": "synthesis/CORRECTION_VERDICT_SEMANTICS.json",
+      "sha256": "12fbc33cfbe8bf409df73dc7c1cf6a6fc6475a0e93e62da55f109f91d145f3c6",
+      "description": "Incomplete supplied episode path and fail-open rule loading produce narrower validator assurance",
+      "prior_bound_versions": [
+        "305a15d0d9d78b727af430336e6eb38e5841939225906623f9bc98a530ded9dc",
+        "699809ebb5215ef61d8dad5b96f3c38754b290a07ba6702a7a5eb40516e0b173"
+      ]
+    },
+    {
+      "id": "V6-BH",
+      "artifact": "synthesis/CORRECTION_BH_CHECKER.json",
+      "sha256": "80d9b293030e3c9efe798defa05b2610038e7defc43e618bb39b445c1ecc1d1c",
+      "description": "Proper-function Boolean and named-countermodel checks are not content-sensitive despite output labels"
+    },
+    {
+      "id": "V6-CS",
+      "artifact": "root_math/later_pmr/CS_QUOTIENT_CORRECTION.json",
+      "sha256": "c14c719a57442b4580e07b030933d98b9f2bbd51fad4f2ec80f2a6df4bd1d79a",
+      "description": "Raw sidecar multiplicity differs from inequivalent sufficient joint partitions"
+    },
+    {
+      "id": "T7-F3",
+      "artifact": "root_math/t7_source_scope/F3_SUPERSESSION_LEDGER.json",
+      "sha256": "c97a97a713846f7ed1e7e64ee6d1971c5f6489a39fff2ced343f1861675c3eed",
+      "description": "Historical F3/following bridge supersession with source and currentness distinctions"
+    },
+    {
+      "id": "V6-PROTOCOL",
+      "artifact": "root_math/protocol_boundary_review/REVIEW.md",
+      "sha256": "d02667ba4c52ee38f2248da2c8dfe87e4e958a4edf9ea86f9c05710bc33add94",
+      "description": "Unrun ER/FCSP zero-p and control-denominator errors freshly reproduced; remedy rubric and parse contracts separately qualified"
+    },
+    {
+      "id": "V6-PILOT",
+      "artifact": "operational_successors/CORRECTION_REGISTER.json",
+      "sha256": "88d6a359a2c06b1d84341cd161397a636f777a9f333f9d33f77f0447f3b0c199",
+      "description": "Incomplete-design acceptance in frozen Pilot0v2 CLI, freshly independently reproduced; no actual empirical trial"
+    },
+    {
+      "id": "V6-GRONWALL",
+      "artifact": "early_remaining/geometry_review_completion/GRONWALL_CORRECTION.md",
+      "sha256": "ffc27bc505dbf4b7d414139ff05ff2ad6ee21d2b449cf083d334e27d873d68fd",
+      "description": "Uniform finite-horizon estimate must use max(C,0) or assume C nonnegative; moving-potential escape theorem survives"
+    },
+    {
+      "id": "V6-AM-INDEPENDENT",
+      "artifact": "type_collective/deep_aa_ap_checkers/am_signature_review/REVIEW.md",
+      "sha256": "0b422197856da1e39bbf3915e4b5cedcb9ed4caed59daa049a9a99962e0cf244",
+      "description": "Fixed-family automorphism expansion reverses the proposed multiplicity direction; selector theorem survives with corrected countercontrol"
+    },
+    {
+      "id": "V6-REPLAY-SAFETY",
+      "artifact": "operational_successors/REPLAY_SAFETY_QUALIFICATIONS.json",
+      "sha256": "80c3a34b979564b35490e3fb8243281cc16a0ff887816bfdbb1dc632afe73c00",
+      "description": "Historical output-root and assertion guards plus exact child-exit qualifications; source inspection does not imply an actual failed retained run or mathematical downgrade.",
+      "prior_bound_versions": [
+        "4bd07455f78ff8dd43f7ab56a747d9fc2e51dc5484dcba2fa90c7dea75fde673"
+      ]
+    },
+    {
+      "id": "M2-PRIOR",
+      "artifact": "synthesis/CORRECTION_M2_PRIOR_NECESSITY.json",
+      "sha256": "311e1649cad7a527f3f782678986e6f3950bc7cf696a2caf70812c3593ba3fa0",
+      "description": "High-prior evidence countercontrol and exact Bayes threshold; historical October10 correction recovered, v6 corroboration not first discovery; no deployed source patch"
+    },
+    {
+      "id": "V6-TYPED-REGISTRY",
+      "artifact": "root_math/typed_registry23/CURRENTNESS_OVERLAY.json",
+      "sha256": "5817eeda19e480626e9878e0930f30e03a8cc662fa81df57d3b3da6784640182",
+      "description": "Exact field-level currentness, graph-edge direction and source-status corrections across typed registries"
+    },
+    {
+      "id": "V6-MATHEMATICAL-SCOPE",
+      "artifact": "root_math/mathematical_scope39/REPORT.md",
+      "sha256": "b78551d63a140d3143e62a0d1af97a698b3d87ab58931f9be8342c548c37cb02",
+      "description": "Historical numeric compiler closure and precise tree/type/geometry scope joins"
+    },
+    {
+      "id": "V6-HISTORICAL-REVIEW",
+      "artifact": "root_math/historical_review38/REPORT.md",
+      "sha256": "87f23535a2f05f4a5803a339366efe21d7557f392a0baf30ff5c99e3ba39b7d5",
+      "description": "Full historical source-contract and correction chronology, preserving governance-derived requirements and noncircularity correction"
+    },
+    {
+      "id": "V6-GLOBAL-CONTINUITY",
+      "artifact": "root_math/global_continuity71/REPORT.md",
+      "sha256": "ad7508322800403d5e30a32e415f6c6f152359dd82b44b4fabac7d90f4882952",
+      "description": "Fifty-two exact received historical guide bodies examined; source-bound currentness qualifications prevent reinstating obsolete PR state, unbuilt theorem labels, missing repairs, old corpus denominators or superseded bounded stopping decisions. Underlying scientific evidence remains with controlling owners."
+    },
+    {
+      "id": "V6-LATE199-CURRENTNESS",
+      "artifact": "type_collective/terminal_synthesis_reconciliation/PROPOSED_CORRECTIONS.json",
+      "sha256": "362eca6489fb025cef7ed065841dfa762f48a951514946f96ec7274191d2f0fe",
+      "description": "Explicit polynomial scale, AS parity continuation, clocked/autonomous memory and representation-specific PSPACE/EXPTIME succession, preserving each original proof and verification scope"
+    },
+    {
+      "id": "V6-FINAL-REGISTER-PRECISION",
+      "artifact": "synthesis/FINAL_REGISTER_PRECISION_CORRECTION.json",
+      "sha256": "1f1d65cd0a12f616626353860590fa354cdcde487eb0e9a687c4171bc2558043",
+      "description": "Positive-dimension condition for finite-valued sidecar impossibility and exact erased-state/history scope; source theorems unchanged."
+    },
+    {
+      "id": "V6-FINAL-FOUNDATION-SCOPE",
+      "artifact": "synthesis/FINAL_FOUNDATION_SCOPE_CORRECTION.json",
+      "sha256": "5054e68b9d46f9f58f5a15f738bb740523d86d45b916a137fae83f4a27543d68",
+      "description": "Actual productive-connectedness scope, final chapter pointer and late primary-image attribution/diagram qualifications; affirmative verdict unchanged."
+    },
+    {
+      "id": "FINAL-OWNER-PRECISION",
+      "artifact": "synthesis/OWNER_CASE_PRECISION_CORRECTION.json",
+      "sha256": "6e76e8376cb8f59a19321a8b0d1b1a47f0325a08e7b0742739a6a9905a6acdb7",
+      "description": "Final independent reader restores continuous supplement category, positive kernel dimension, and exported-certificate rather than source-proof identity."
+    },
+    {
+      "id": "FINAL-READER-PRECISION",
+      "artifact": "synthesis/FINAL_READER_SECOND_PRECISION_CORRECTION.json",
+      "sha256": "84e1cd1b7cadae37ad6a8d0d38c54c344eda42254abbe2f931e993b067da478b",
+      "description": "Exact ambient norm family and missing PRSearchComputability certificate consequence; independent HasJ result survives."
+    },
+    {
+      "id": "FINAL-SYNTHESIS-FISHER",
+      "artifact": "synthesis/FINAL_SYNTHESIS_FISHER_PRECISION.json",
+      "sha256": "d69da8758a3bec57954fb904d3e4199cc2c33ffeeb05451b3a03299ee7be3924",
+      "description": "Synthesis2.3 makes the complete norm family, encoding category and d>0/d=0 scope explicit."
+    },
+    {
+      "id": "ROOT-INTAKE-CURRENTNESS",
+      "artifact": "root_math/guarded_kernel_variants/INTAKE_CURRENTNESS_REPAIR.json",
+      "sha256": "92d9c3b9411f00976012ac228e0521965cec780b2804684edac515e8a820ed79",
+      "description": "Separates37 inherited admission-scan fields from already completed full source reading; exact prior ledger preserved."
+    },
+    {
+      "id": "TYPE-INTAKE-CURRENTNESS",
+      "artifact": "type_collective/intake_currentness_repair/RECEIPT.json",
+      "sha256": "7288b0ae1859d32aa9858417593125e774b6e4109973fe43153cf67fd06b182c",
+      "description": "Separates54 inherited intake fields from existing direct/delta/generated qualifications; original ledgers and exact evidence retained."
+    }
+  ],
+  "scope": "Each linked controlling record retains original source locations, limits and verification status. This index adds no fresh reading or replay credit."
+}

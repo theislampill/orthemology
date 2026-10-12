@@ -1,0 +1,9 @@
+ErasureWorkBoundary.lean:17:2: error: failed to synthesize
+  Decidable
+    (encode original = encode repeated ∧
+      sourceRun 0 original = some ((Term.i, identityCode), 22) ∧
+        sourceRun 0 repeated = some ((Term.i, identityCode), 34) ∧
+          sourceCheck 0 original = sourceCheck 0 repeated ∧ exportWork original = 2 ∧ exportWork repeated = 3)
+
+Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'V6ErasureWorkBoundary.same_certificate_different_work' depends on axioms: [sorryAx]

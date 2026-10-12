@@ -1,0 +1,65 @@
+{
+  "id": "M2-PRIOR-NECESSITY-OVERSTATEMENT",
+  "title": "Evidence can strongly lower a high prior",
+  "affected_source_hashes": [
+    "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6"
+  ],
+  "source_locations": [
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/c5/c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+      "lines": [
+        43,
+        50
+      ]
+    },
+    {
+      "path": "atomics/skill/references/tactics/M2-prior-probability.md",
+      "git_blob": "8c9a6dce324db63cb882b9307a8587243f534f19"
+    }
+  ],
+  "earlier_claim": "These arguments only do their claimed work if the prior is near-zero. (line46, evidential evil/hiddenness/diversity discussion)",
+  "precise_defect": "Near-zero prior is not a necessary condition for a likelihood ratio below1 to reduce posterior probability, including a reduction below1/10 from prior9/10.",
+  "counterexample_or_test": {
+    "utc": "2026-10-11T21:22:35.870671+00:00",
+    "method": "Fresh self-authored exact Fraction arithmetic, no retained program imported or executed",
+    "prior": "9/10",
+    "likelihood_E_given_H": "1/100",
+    "likelihood_E_given_not_H": "1",
+    "likelihood_ratio": "1/100",
+    "posterior": "9/109",
+    "high_prior_to_below_one_tenth": true,
+    "logical_scope": "Counterexample to near-zero prior as necessary for substantial evidential reduction; no estimates for the actual theological application."
+  },
+  "evidence_status": {
+    "direct_source": "Full103lines inspected",
+    "fresh_execution": "Only self-authored Fraction arithmetic; retained code not executed",
+    "control_path": "t20-v6-20261011/empirical_occurrence/attestation_interface/M2_BAYES_COUNTERCONTROL.json",
+    "control_sha256": "37243b93872e2c65b691437b67cd1d0b99747f8e4f5661cd40dde723ed3bab26"
+  },
+  "independent_review": [
+    "Historical3550eea2 full51line reviewer already derives correction, preserves charitable conditional activation/release reading and narrows generic-no-go wording. Current fresh reading confirms its actual argument.",
+    "Root and foundations independently accepted new9/109 arithmetic as corroboration. Their initial no-known-later-correction assessment was a retrieval miss, explicitly superseded."
+  ],
+  "corrected_scope": "For nondegenerate prior p and likelihood ratio L, posterior=pL/(pL+1-p); it decreases iff L<1. Reaching threshold tau requires L<=tau(1-p)/(p(1-tau)). Both prior and likelihood warrant remain application premises.",
+  "surviving_positive_result": "Surface contested priors; distinguish deductive from probabilistic arguments; avoid treating grief as a probability debate. Governing warranted-learning06351 inherits only justified-prior requirement, and its general repair/likelihood theorem survives.",
+  "current_integration_status": "Historical source defect already addressed by October10 research successor. Current pass independently corroborates and adds missing reviewer/code body coverage; no first-discovery or deployed-patch claim. Original frozen attestation report is superseded on this chronology by M2_CHRONOLOGY_ADDENDUM.json.",
+  "limitations": "No actual prior/likelihood for religious claims is estimated; mathematical example does not adjudicate theological truth, proper function or any later positive source appraisal.",
+  "previous_correction_version_sha256": "a525dee6c5787c4b0f9e9f9d1ea105178996b97a402d114970c11104ad7bc18e",
+  "historical_correction_chronology": {
+    "author_current_sha256": "7c9a4bc45b9d443661e6bd9b879d87c06dada61b0313d1fd273873b11f8332c8",
+    "author_initial_sha256": "9f466f3f3316e066cda05e61458e92b911e5fe0848399467cf44140685c0533f",
+    "prior_full_routes": "foundations/SUBSTANTIVE_READING sources143/144, ADDITIONAL_READING83/84",
+    "independent_reviewer_sha256": "3550eea2e7e829b02cfe70be977f9266cd3d960ac1d8814f50d806eed499396c",
+    "independent_reviewer_current_read": [
+      1,
+      51
+    ],
+    "independent_code_sha256": "08d824d734bd26a41e6bb1a8209664a91a70d49a516e9c86899aabe83d712289",
+    "independent_code_current_read": [
+      1,
+      32
+    ],
+    "author_code_sha256": "5020d9c358bde81f02cbf21346727beb0d0800b72abc34599978cc19c6590329",
+    "historical_status": "Already corrected in an October10 research successor; archived M2 source expressly unchanged. No deployed patch or runtime fixture failure established."
+  }
+}

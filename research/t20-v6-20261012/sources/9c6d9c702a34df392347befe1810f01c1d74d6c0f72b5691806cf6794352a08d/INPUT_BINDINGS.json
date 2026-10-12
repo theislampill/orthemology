@@ -1,0 +1,131 @@
+{
+  "schema": "t20-grounding-provenance-bindings-v1",
+  "sources": [
+    {
+      "id": "S01",
+      "owner": "same-standard-common-source-20261008",
+      "path": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "bytes": 23526,
+      "read_scope": "Opening judgement; latter part of \u00a74 and \u00a7\u00a75\u20139; intervening displayed text partially truncated, not full-report reading credit. Source reading underlying the report inherited.",
+      "used_for": "Actual common-source appraisal with real secondary differentiation",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S02",
+      "owner": "productive-origination-target-20261011",
+      "path": "t20-consolidation-20261011/catalogue/objects/d2/d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "bytes": 16055,
+      "read_scope": "Full substantive report \u00a7\u00a71\u20136",
+      "used_for": "Fruit/tree identity, local versus original explanatory scope; no fresh primary Arabic",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S03",
+      "owner": "explanatory-warrant corrected report",
+      "path": "t20-consolidation-20261011/catalogue/objects/f9/f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "sha256": "f95e6acc19b8fa2c5f4e2aa8af7c2e6f17e6f1fcfbe16e8fd4b3b9bb0103dd08",
+      "bytes": 26281,
+      "read_scope": "\u00a7\u00a74b\u2013d, lines 93\u2013125; diff against 76b45d27358fe3cb9f44b26f6acd821e44f2e900558ad01513352a74e93cab1e; earlier version \u00a7\u00a71\u20134c read",
+      "used_for": "Already implemented actual-use and shared-token provision adapter; beginningless repaired consumer",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S04",
+      "owner": "provision-identity/src/provision_semantics.py",
+      "path": "t20-consolidation-20261011/catalogue/objects/6b/6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "bytes": 14477,
+      "read_scope": "Full code read; imported unchanged, run with new two-channel program",
+      "used_for": "Typed actual event and rule engine; root queries not declared universal summaries",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S05",
+      "owner": "provision_join.py",
+      "path": "t20-consolidation-20261011/catalogue/objects/35/35a0ae2256f545a158a1d2c4fa037521954a5b3c923b0e00238848b8e2b8dbb5",
+      "sha256": "35a0ae2256f545a158a1d2c4fa037521954a5b3c923b0e00238848b8e2b8dbb5",
+      "bytes": 5514,
+      "read_scope": "Full code read; lines 20\u201382 re-read numbered; not executed",
+      "used_for": "Inherited original-resource/bearer/input-token adapter",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S06",
+      "owner": "information-composition-and-self-revision-v5.tex",
+      "path": "t20-consolidation-20261011/catalogue/objects/4a/4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "sha256": "4a14bdfb39655efa9f851a8875fa9591cd6344715128c43f8b153c88595318b0",
+      "bytes": 47537,
+      "read_scope": "Lines 55\u2013115 read; keyword location scan elsewhere not full-paper reading",
+      "used_for": "Inherited fibre factorization, relational join, actual coupling distinction",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S07",
+      "owner": "Orthemology_Tensor_Geometry_Context_Reconciliation_20261007.md",
+      "path": "t20-consolidation-20261011/catalogue/objects/0a/0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "bytes": 25083,
+      "read_scope": "Original-explanation and cooperation/provision crosswalks; bounded bridge tests; surrounding report excerpts",
+      "used_for": "Prior source-bound transfer obligations and no manufactured gap requirement",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S08",
+      "owner": "source-proof-uniqueness independent SEMANTIC_REVIEW.md",
+      "path": "t20-consolidation-20261011/catalogue/objects/3a/3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca",
+      "sha256": "3ad489924809babbc38f96cf1d60fc3d61d85d4063af8ef1be94fc96d9c06eca",
+      "bytes": 3209,
+      "read_scope": "Full 21-line semantic review; no fresh Lean replay",
+      "used_for": "Internal proof identity distinct from external provenance and labelled data",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S09",
+      "owner": "GraphBridgeAssembly.lean",
+      "path": "t20-consolidation-20261011/catalogue/objects/0d/0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "sha256": "0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3",
+      "bytes": 10725,
+      "read_scope": "First 120 lines including identity_i_hasE declaration/proof; no compile",
+      "used_for": "Typed transport and identity normalizer consume endpoint identity evidence",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S10",
+      "owner": "provenance-learning-transport-20261009",
+      "path": "t20-consolidation-20261011/catalogue/objects/7b/7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "bytes": 14332,
+      "read_scope": "Full substantive report \u00a7\u00a71\u20137",
+      "used_for": "Acquisition roots, root-aware named operations, root membership distinct from likelihood-vector identity",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    },
+    {
+      "id": "S11",
+      "owner": "PMR-007 Deep AR V2 provenance-root evidence conservation",
+      "path": "t20-consolidation-20261011/catalogue/objects/cf/cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "sha256": "cf3a6b9deeef88297bad731a9074f592815b68d1c0ff0c88ebe8a432ec244e9b",
+      "bytes": 6935,
+      "read_scope": "\u00a7\u00a71\u20137 read (first 115 lines); remainder not credited",
+      "used_for": "Authenticated acquisition roots distinct from labels; conditional independence is additional",
+      "fresh_primary_source_reading": false,
+      "fresh_lean_execution": false
+    }
+  ],
+  "baseline": {
+    "path": "t20-consolidation-20261011/foundations/FOUNDATIONAL_SYNTHESIS.md",
+    "scope": "\u00a7\u00a71\u20134 and 9\u201311; relevant passages of SOURCES_AND_READING.json used to locate exact reports"
+  },
+  "claims": "All source claims attributed to bound reports; their Arabic and kernel receipts remain inherited."
+}

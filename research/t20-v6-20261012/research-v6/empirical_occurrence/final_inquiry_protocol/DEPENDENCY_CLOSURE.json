@@ -1,0 +1,30 @@
+{
+  "routes": [
+    {
+      "path": "t20-v6-20261011/empirical_occurrence/preservation_inquiry_children/READING_LEDGER.json",
+      "sha256": "1755cb607796fd58fef962ac93d90b39a15bd667e4b1be4f81c6791897ce53a1",
+      "scope": "Reuse only exact constituent body ranges already recorded; packet note reading adds no transitive source credit."
+    },
+    {
+      "path": "t20-v6-20261011/empirical_occurrence/preservation_inquiry_children/DEPENDENCY_CLOSURE.json",
+      "sha256": "a8e8021952d589ac00d7e1f8e654824c33b0079c5caa636fbdf65864dec95de4",
+      "scope": "Reuse only exact constituent body ranges already recorded; packet note reading adds no transitive source credit."
+    },
+    {
+      "path": "t20-v6-20261011/empirical_occurrence/inquiry_revision/READING_LEDGER.json",
+      "sha256": "c695bb7e7a655c60bb2341a59e6f5f5518e9cbaba80bea6f04c1742774ad80f6",
+      "scope": "Reuse only exact constituent body ranges already recorded; packet note reading adds no transitive source credit."
+    },
+    {
+      "path": "t20-v6-20261011/empirical_occurrence/causal_test_completion/READING_LEDGER.json",
+      "sha256": "6366e1092225e16ca3cd5b3245bc451c85d109b425271a179e0653e9fc78b246",
+      "scope": "Reuse only exact constituent body ranges already recorded; packet note reading adds no transitive source credit."
+    },
+    {
+      "path": "t20-v6-20261011/empirical_occurrence/source_warrant_prose/READING_LEDGER.json",
+      "sha256": "122c528588133e7464d889481512df088c3e268e3708411c8b50726c0ef547f9",
+      "scope": "Reuse only exact constituent body ranges already recorded; packet note reading adds no transitive source credit."
+    }
+  ],
+  "limits": "Protocol and packet notes preserve source-owned identities/replay outcomes. Substantive written arguments in indices4,8,28 were actually read; associated universal source results retain exact earlier ledgers, not new proof credit from these notes."
+}

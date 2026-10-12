@@ -1,0 +1,44 @@
+[
+  {
+    "id": "information",
+    "script": "information-geometry-transport-20261009/verify.py",
+    "expected_log": "information-geometry-transport-20261009/verification.txt",
+    "count": 61,
+    "success_marker": "PASS: 61 exact controls; general proofs in RESULT.md"
+  },
+  {
+    "id": "fixed_reference_noetic",
+    "script": "noetic-gradient-transport-20261009/verify.py",
+    "expected_log": "noetic-gradient-transport-20261009/verification.txt",
+    "count": 33,
+    "success_marker": "33 exact control groups passed."
+  },
+  {
+    "id": "quadratic_independent_review",
+    "script": "geometry-transport-independent-review-20261009/check_independent.py",
+    "expected_log": "geometry-transport-independent-review-20261009/independent-output.txt",
+    "count": 45,
+    "success_marker": "45"
+  },
+  {
+    "id": "state_dependent_obstruction",
+    "script": "state-dependent-gradient-obstruction-20261009/verify.py",
+    "expected_log": "state-dependent-gradient-obstruction-20261009/verification.txt",
+    "count": 19,
+    "success_marker": "19 exact control groups passed"
+  },
+  {
+    "id": "tensor_moment_continuation",
+    "script": "tensor-moment-continuation-20261009/verify.py",
+    "expected_log": "tensor-moment-continuation-20261009/verification.txt",
+    "count": 21,
+    "success_marker": "All 21 exact control groups passed."
+  },
+  {
+    "id": "tensor_independent_review",
+    "script": "tensor-moment-independent-review-20261009/verify_independent.py",
+    "expected_log": "tensor-moment-independent-review-20261009/verification.txt",
+    "count": 38,
+    "success_marker": "38 independent exact control groups passed."
+  }
+]

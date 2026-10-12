@@ -1,0 +1,112 @@
+{
+  "recorded_utc": "2026-10-08T03:29:53.368665+00:00",
+  "root": "Relative to common extracted evidence root",
+  "files": [
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/src/provision_semantics.py",
+      "kind": "runtime_dependency",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "bytes": 14477,
+      "use_or_read_scope": "Entire preserved implementation inspected; direct and created rule/run semantics used."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/src/reactive_context.py",
+      "kind": "runtime_dependency",
+      "sha256": "f73cee9c0271dd2a80843a3994534e1119fca33386e59a483f3175d69880a6cc",
+      "bytes": 6736,
+      "use_or_read_scope": "Preserved joined reactive model imported unchanged; model wrapper preserves its ordinary contexts."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/provision-identity/RESULT.md",
+      "kind": "inherited_report",
+      "sha256": "ca690248a37b789613f7627caae96709089523795732ee0cc22c944b92194885",
+      "bytes": 38962,
+      "use_or_read_scope": "Prior distinction between active derivation, exhaustive attribution, events and contributions."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/sovereignty-choice-semantics/reactive-context-extension/RESULT.md",
+      "kind": "inherited_report",
+      "sha256": "7647808128bc4231091f9d81c779f23adc5b453ea60b911979f0d7f124435db7",
+      "bytes": 25346,
+      "use_or_read_scope": "Reactive candidate scope and model provenance."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/causal-abstraction/RESULT.md",
+      "kind": "inherited_report",
+      "sha256": "9166f0ee3bf7533b07d3a754935c713e99fcc9f6f7b89ce27d572ba72b8672ab",
+      "bytes": 8042,
+      "use_or_read_scope": "Observation-fibre and intervention obstruction; inherited criterion, not new theorem."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/tensor-geometry-lineage/README.md",
+      "kind": "inherited_report",
+      "sha256": "0aeca84614d02ac11675179f5060105580da5387bcdac7e545522ada49de6852",
+      "bytes": 25083,
+      "use_or_read_scope": "Retained source lineage for H tensor factorisation and continuation; original manuscripts not freshly read here."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/tensor-geometry-lineage/SOURCE_BINDINGS.json",
+      "kind": "lineage_binding",
+      "sha256": "3f09899403dbefa6518430c13c54b881a4bf40f67aa13e9135efff0f5f3aa0c2",
+      "bytes": 11343,
+      "use_or_read_scope": "Historical pin and source locators; no claim missing originals were recovered."
+    },
+    {
+      "path": "recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation/RESEARCH_ACCOUNTING_POLICY.md",
+      "kind": "accounting_context",
+      "sha256": "80bae019e21d657f35311f4410ac3d36c3bda8c76df65ba159620fe546d9b742",
+      "bytes": 1722,
+      "use_or_read_scope": "Prior active-research reporting policy."
+    },
+    {
+      "path": "recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+      "kind": "recovered_source_context",
+      "sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+      "bytes": 11803,
+      "use_or_read_scope": "Inherited exact-source summary, not a fresh original-PDF inspection."
+    },
+    {
+      "path": "recovery-t20/addendum/FIXED_VOLITION_DOMAIN.md",
+      "kind": "recovered_source_context",
+      "sha256": "80ed63f7bbdf1769196e2fca22d528081a351d425a713db38c9e7a9167216f00",
+      "bytes": 13334,
+      "use_or_read_scope": "Inherited complete exercise, same product, actual efficacy distinctions."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+      "kind": "current_source_assessment",
+      "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+      "bytes": 17246,
+      "use_or_read_scope": "Complete contemporaneous assessment read."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+      "kind": "current_source_assessment",
+      "sha256": "aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+      "bytes": 6262,
+      "use_or_read_scope": "Complete addendum read; affirmative concentration and de re eligibility restored."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/majmu20-item2032.txt",
+      "kind": "current_primary_source",
+      "sha256": "112b4baf613f483dc6b0e0b22b250a795f9c0ddb10b35328ccfb8e23e511746b",
+      "bytes": 17326,
+      "use_or_read_scope": "Selected source return L001–017; L009–013 independently reread after addendum. No new whole-book credit."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item151.txt",
+      "kind": "current_primary_source",
+      "sha256": "1b35fb6efcb2d32623cc66374ea22e1f3065deb5af9347fab9fdaa89fcef72a5",
+      "bytes": 10776,
+      "use_or_read_scope": "Selected L007–016 as source-warrant controls."
+    },
+    {
+      "path": "t20-continuation-20261008/efficacy-warrant/sources/minhaj2-item156.txt",
+      "kind": "current_primary_source",
+      "sha256": "d3b11f845fdf14156ec1d78d9a833e64cd78adc184d83d55aa97f2ad9e2ecf9f",
+      "bytes": 22494,
+      "use_or_read_scope": "Selected L038–041 as source-warrant controls."
+    }
+  ],
+  "missing_or_unread": "Original H manuscripts and detailed exact-source/PDF package omitted from recovery; inherited reports used with their stated provenance. No file recreated from memory."
+}

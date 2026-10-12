@@ -1,0 +1,21 @@
+{
+  "source_sha256": "bb1ade62418f7670f73c5fc532aff20b4736b955222cc126bfffa7c528c9067f",
+  "command": [
+    "private-locator:915d29ee128338d1c948",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/analyze_pilot0_v2.py",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/INCOMPLETE_DESIGN_CONTROL.json",
+    "--items",
+    "t20-consolidation-20261011/catalogue/objects/d3/d303f3f4cb48f560b828dd75d62acbffbe97f7417b3824efa03657c1de68bdaf",
+    "--out",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/OUTPUT.json"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "outcome": "ADVANCE_TO_PILOT1",
+  "assertions_passed": 3,
+  "control_is_synthetic": true,
+  "input_manifest_synthetic_false": "Intentional adversarial data contract test; no actual model or participant experiment occurred.",
+  "finding": "Two rows from one item, C/Cprime only, one rater each, no negative controls: exact analysis advances because missing cells and absent overhead do not fail, and required in-band count is reduced to observed item count.",
+  "scope": "Invalid/incomplete-design acceptance by frozen analysis; no adoption or empirical utility conclusion."
+}

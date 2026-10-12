@@ -1,0 +1,30 @@
+{
+  "packet": "nonautonomous-energy-drift-reverse-lift-20261010",
+  "scope": "Finite prescribed nonautonomous common-coercive-energy reverse lift",
+  "files": {
+    "EXACT_CHECKS.json": "cb571ac27454920cf9fef3471abbf8ca7da96e1c9fdd6609df231e593e47aa2a",
+    "INPUT_BINDINGS.json": "28d1f7c5fa875c16a660dbee8bfb0eda8d4710f1ea5c840d8198eba3d2e5b578",
+    "PORTABLE_REPLAY.json": "9a88557e3f6ccaa35a2b934ea2059b3a241eee710f15e521d3e37435a08e087b",
+    "REPORT.md": "f5f5d18c883fd9feef3ff2557978ecc49eecbd76840952d3e1a59f8161cf81a2",
+    "RESULT.md": "5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56",
+    "SOURCE_NOTES.md": "8b2b872f392d81881a308e3f728e4959897b6b03d8b810ee23fc4f67bdd20904",
+    "SOURCE_PRESERVATION.json": "851e3048cf5b3f42cf447ce74c177d812657fb336c85b2d506ce0189a39f9b91",
+    "check_exact.log": "cb571ac27454920cf9fef3471abbf8ca7da96e1c9fdd6609df231e593e47aa2a",
+    "check_exact.py": "3e889b4c521bfcc36dbe3b0161b051eed2c28ed1e5fd69c38c6e3c44771a7552",
+    "inputs/coercive-energy-moment-bridge-20261010/RESULT.md": "1c2ded55709895926aae286819634756d9c0a223523bb9e610ad624f0bf576cf",
+    "inputs/energy-controlled-gradient-reverse-lift-20261010/RESULT.md": "971a81b7730dc02da0a8f94433034f9ca42a90acd1833b3b05c740fa2e5e6c45",
+    "inputs/general-coercive-energy-drift-20261010/AUTHOR_MANIFEST.json": "7389c1ddccb14fc62b7b2480a56547efa88066981eff6c77565156af14fbc530",
+    "inputs/general-coercive-energy-drift-20261010/EXACT_CHECKS.json": "c39ddd80a10544d477c72b09597e717349bee1650cc91f32e854df116d36b013",
+    "inputs/general-coercive-energy-drift-20261010/INPUT_BINDINGS.json": "d01a00fd0e571d38aa72bc90066355d1a7d56a5b7d6aca3e1315ea3654d589a3",
+    "inputs/general-coercive-energy-drift-20261010/REPORT.md": "fc7050b0b02d1bc3f34d42a7fa4a5ef96d33aed0dbf34475dcd82b4d9671afd8",
+    "inputs/general-coercive-energy-drift-20261010/RESULT.md": "79a467b9cc0ef67817ad02dafe146cf42709b41d1172559d806d883adf31a96e",
+    "inputs/general-coercive-energy-drift-20261010/SOURCE_NOTES.md": "16bc284ec257fe368ba8af05051ebb34e28b97c5a2f4053f481e555db3bd9b18",
+    "inputs/general-coercive-energy-drift-20261010/check_exact.log": "c39ddd80a10544d477c72b09597e717349bee1650cc91f32e854df116d36b013",
+    "inputs/general-coercive-energy-drift-20261010/check_exact.py": "c0776992ab1ae215a00e9578fdc8164b214bd4141ec8c27e4749fdbf0841f0f2",
+    "inputs/general-coercive-energy-drift-independent-review-20261010/REVIEW_RECEIPT.json": "53dac80c303b4c7f0ef65751cb8ea86dc21e0a9dde0e0b382ebc91b51ce2ab85",
+    "inputs/joint-atomic-gradient-lift-20261010/RESULT.md": "a07003ae729bf2c5e94c0847164ae9ea2ac9209fa9ed99dec789eb1ee26ac18f",
+    "inputs/nonconvex-atomic-limit-classification-20261010/RESULT.md": "fd5e814ce2766f3283b0472b04e6c00234654ff46df5cbebb324fa1c9668789d",
+    "inputs/tensor-objective-switching-20261010/RESULT.md": "4192d9c6bd5020a34b5da8f307531effb8fd7d46a2371f836a77e14d962c9528",
+    "inputs/time-varying-square-positivity-20261010/RESULT.md": "7ffed76cdfb23ee725bd4030c22dd03bb1f66934d885a6800caf260fdb0741bd"
+  }
+}

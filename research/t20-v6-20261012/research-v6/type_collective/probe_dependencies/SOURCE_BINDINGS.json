@@ -1,0 +1,122 @@
+[
+  {
+    "name": "test_candidate_state.py",
+    "sha256": "f408c8d8ad0da8f970faec9347cabc4467ff66be33934b447d8477340beab1cc",
+    "path": "t20-consolidation-20261011/catalogue/objects/f4/f408c8d8ad0da8f970faec9347cabc4467ff66be33934b447d8477340beab1cc",
+    "lines": 363,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 0,
+    "names": [
+      "test_candidate_state.py"
+    ]
+  },
+  {
+    "name": "test_semantic_operator_contract.py",
+    "sha256": "419956a68ddd131beda32962fbbc2f78566d702eeb7ce79ddfd6c60f4449e0bb",
+    "path": "t20-consolidation-20261011/catalogue/objects/41/419956a68ddd131beda32962fbbc2f78566d702eeb7ce79ddfd6c60f4449e0bb",
+    "lines": 331,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 1,
+    "names": [
+      "test_semantic_operator_contract.py"
+    ]
+  },
+  {
+    "name": "test_task7_epistemology_semantics.py",
+    "sha256": "e3f6f18831a600813156f29f39bbe355a647f4434ae4390872b5bf42ca8c15ac",
+    "path": "t20-consolidation-20261011/catalogue/objects/e3/e3f6f18831a600813156f29f39bbe355a647f4434ae4390872b5bf42ca8c15ac",
+    "lines": 642,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 2,
+    "names": [
+      "test_task7_epistemology_semantics.py"
+    ]
+  },
+  {
+    "name": "test_osm_claim_boundaries.py",
+    "sha256": "b98cf56313d93f1afc96f53bf09b74e2ee7e663e32dbe2a8e906ba8c26e8b2b7",
+    "path": "t20-consolidation-20261011/catalogue/objects/b9/b98cf56313d93f1afc96f53bf09b74e2ee7e663e32dbe2a8e906ba8c26e8b2b7",
+    "lines": 641,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 3,
+    "names": [
+      "test_osm_claim_boundaries.py"
+    ]
+  },
+  {
+    "name": "test_argument_map_semantics.py",
+    "sha256": "ed93557204890bc88fedd3991ca4e0931da865332e9a5f25343dd4536b159bad",
+    "path": "t20-consolidation-20261011/catalogue/objects/ed/ed93557204890bc88fedd3991ca4e0931da865332e9a5f25343dd4536b159bad",
+    "lines": 700,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 4,
+    "names": [
+      "test_argument_map_semantics.py"
+    ]
+  },
+  {
+    "name": "test_r7e_llm_witness.py",
+    "sha256": "699bdab68daf7cb9bbaa965b328b708630d7791cdd869e900350f44dcb80d785",
+    "path": "t20-consolidation-20261011/catalogue/objects/69/699bdab68daf7cb9bbaa965b328b708630d7791cdd869e900350f44dcb80d785",
+    "lines": 468,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 5,
+    "names": [
+      "test_r7e_llm_witness.py"
+    ]
+  },
+  {
+    "name": "test_math_source_inventory.py",
+    "sha256": "d2501df4e0622626f4251e03c958d5b6df19c0b44db3150cccd107e70a4c7302",
+    "path": "t20-consolidation-20261011/catalogue/objects/d2/d2501df4e0622626f4251e03c958d5b6df19c0b44db3150cccd107e70a4c7302",
+    "lines": 1123,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 6,
+    "names": [
+      "test_math_source_inventory.py"
+    ]
+  },
+  {
+    "name": "test_candidate_provenance.py",
+    "sha256": "049c3dcbbf9fa02a6365c4b7f4caeaee9b7cb3a6fc2868015fcb6ce4958135fb",
+    "path": "t20-consolidation-20261011/catalogue/objects/04/049c3dcbbf9fa02a6365c4b7f4caeaee9b7cb3a6fc2868015fcb6ce4958135fb",
+    "lines": 308,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 8,
+    "names": [
+      "test_candidate_provenance.py"
+    ]
+  },
+  {
+    "name": "run_task14_probe.py",
+    "sha256": "87259873182eb59f37e515ef6f6c2384df3a7ab65d8289055285d06bbd427845",
+    "path": "t20-consolidation-20261011/catalogue/objects/87/87259873182eb59f37e515ef6f6c2384df3a7ab65d8289055285d06bbd427845",
+    "lines": 118,
+    "prior_routes": [],
+    "role": "Actual production adapter or its fixture/validator dependency; scope requires examination, not inferred from caller.",
+    "queue_index": 9,
+    "names": [
+      "run_task14_probe.py"
+    ]
+  },
+  {
+    "name": "generate_argument_map.py",
+    "sha256": "28b83b1f908006ca07c3dc797536c890de6bd8eb9cb3225d2a3ee5564ba91cf1",
+    "path": "t20-v6-20261011/early_remaining/ar8r/runtime_snapshot/scripts/generate_argument_map.py",
+    "lines": 171,
+    "prior_routes": [],
+    "role": "Discovered controlling renderer dependency; pending direct full examination",
+    "queue_index": 10,
+    "names": [
+      "generate_argument_map.py"
+    ]
+  }
+]

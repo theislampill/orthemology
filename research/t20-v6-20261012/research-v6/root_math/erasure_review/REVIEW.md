@@ -1,0 +1,7 @@
+# Independent root review: constructor erasure and work
+
+Accepted at the exact theorem hash in REVIEW.json. The report and theorem were read in full, together with SourceChecker, SourceResources, SourceExportBoundary and SourceControls. The new theorem was independently replayed with trust=0 using the freshly rebuilt worker dependency artefacts, returning zero axioms. This is not an independent rebuild of the entire dependency union.
+
+The charge calculation is transparent: at variable type 0, the identity result has arrow shape 8 plus term shape 2, hence 10. Universal introduction produces shape 10 plus term shape 2, adding 12, hence 22. A valid singleton reduction preserves the same result and adds another 12, hence 34. Its trace has zero transitions, so encoding adds zero Cert steps, whereas exporter construction counts the reduce wrapper and changes 2 to 3. Thus the inequality is not a measurement artefact or a malformed-source example. Both accepted inputs lie in the same exact certificate fibre.
+
+The ordinary non-factorisation corollary follows immediately from equality substitution: a function of that certificate cannot return two distinct exact charges. This gives a concrete source-level instance of the existing general fibre criterion, not a new discovery of that criterion. Its scientific increment is the actual accepted constructor pair and exact separate work semantics. Target-only cost remains well-defined; host-time conclusions remain unsupported.

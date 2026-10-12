@@ -1,0 +1,112 @@
+[
+  {
+    "source_path": "warranted-learning-20261009/sources/atomics/skill/references/tactics/M2-prior-probability.md",
+    "packet_path": "sources/M2-prior-probability.md",
+    "sha256": "c5af7a5627bd53d33ee189e95b1c236d4cb338694d48cf3da82bf3dcd939f4a6",
+    "git_blob": "8c9a6dce324db63cb882b9307a8587243f534f19",
+    "size": 9464,
+    "read_scope": "Complete file"
+  },
+  {
+    "source_path": "warranted-learning-20261009/sources/atomics/skill/references/sound-reason-epistemology.md",
+    "packet_path": "sources/sound-reason-epistemology.md",
+    "sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+    "git_blob": "d7fa4425d014225940cbbbe86983f8d9a3dc3da5",
+    "size": 49338,
+    "read_scope": "Sections 1 through 5, including section 3-A and introduction; no section 6 substantive use"
+  },
+  {
+    "source_path": "provenance-learning-transport-20261009/sources/S1-PMR-007_DEEP_ROUND_AX_SOURCE_TESTIMONY_LIKELIHOOD_AND_WORLD_GATE_V2.md",
+    "packet_path": "sources/DEEP-AX-V2.md",
+    "sha256": "07f36d8d9bebc188f973f86b826e1c97f48e325ecf802f5f693cb451b8519bca",
+    "git_blob": "4d5960413f16c1f9dab66c2b80ff48316352b804",
+    "size": 8348,
+    "read_scope": "Complete file"
+  },
+  {
+    "source_path": "warranted-learning-20261009/sources/applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+    "packet_path": "sources/SEMANTIC-OPERATOR-CONTRACT.yaml",
+    "sha256": "a6214036972e3d1d14b73ebcb62297d48c33f3629c7081b81cbb0d3dae564ee2",
+    "git_blob": "307c3a0e6c10a91abd5637a8b9921fb5b62e5179",
+    "size": 10844,
+    "read_scope": "Complete file"
+  },
+  {
+    "source_path": "warranted-learning-20261009/sources/applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+    "packet_path": "sources/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+    "sha256": "ff364422f6bf5b88b1407a9fc11683f067852955f468bcfc42e99fd97c8ff154",
+    "git_blob": "a13b7b5cc8832606d88c0b6814777b7d62e4b0d0",
+    "size": 4435,
+    "read_scope": "Complete file"
+  },
+  {
+    "source_path": "basic-recognition-correction-20261009/REPORT.md",
+    "packet_path": "inputs/basic-recognition-correction-20261009__REPORT.md",
+    "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+    "size": 14453,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "warranted-learning-20261009/RESULT.md",
+    "packet_path": "inputs/warranted-learning-20261009__RESULT.md",
+    "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+    "size": 21763,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "warranted-learning-20261009/RELATED_WORK.md",
+    "packet_path": "inputs/warranted-learning-20261009__RELATED_WORK.md",
+    "sha256": "43411d3ab8a37573b9648179699e3c1e11b01761e9d286cae99a09fabeae61c6",
+    "size": 2103,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "warranted-learning-20261009/sources/SOURCE_BINDINGS.json",
+    "packet_path": "inputs/sources__SOURCE_BINDINGS.json",
+    "sha256": "257cff6f7eea2bf8bf9a871a1b72ad249509cc2e1e6b6724fcd039884c950d40",
+    "size": 5107,
+    "read_scope": "Complete file"
+  },
+  {
+    "source_path": "evidence-withdrawal-warrant-20261009/REPORT.md",
+    "packet_path": "inputs/evidence-withdrawal-warrant-20261009__REPORT.md",
+    "sha256": "740e3f11837591892649bf6d070b49854a95d0e45f57e2277b2e8d970b25086a",
+    "size": 22625,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "provenance-learning-transport-20261009/RESULT.md",
+    "packet_path": "inputs/provenance-learning-transport-20261009__RESULT.md",
+    "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+    "size": 14332,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "constrained-learning-possibility-20261010/RESULT.md",
+    "packet_path": "inputs/constrained-learning-possibility-20261010__RESULT.md",
+    "sha256": "a625a2c137d291f514c71eee13e6cc7e4399a1bff491d1b59548a5985f6649f9",
+    "size": 18333,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "source-audit-revision-20261010/RESULT.md",
+    "packet_path": "inputs/source-audit-revision-20261010__RESULT.md",
+    "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+    "size": 29885,
+    "read_scope": "Result, predecessor comparison, and sections 2 through 6; later interface passages selectively"
+  },
+  {
+    "source_path": "source-audit-revision-semantics-20261010/REPORT.md",
+    "packet_path": "inputs/source-audit-revision-semantics-20261010__REPORT.md",
+    "sha256": "1bdaaf26b6d13627d8002b3b8f292d840bf8308479c03acca38d1bd6fdb7f6ce",
+    "size": 13461,
+    "read_scope": "Complete report or result; binding file for source identities"
+  },
+  {
+    "source_path": "local-correction-capacity-20261010/REPORT.md",
+    "packet_path": "inputs/local-correction-capacity-20261010__REPORT.md",
+    "sha256": "2384eda00cc27f056af7a4e484195a5da4b3ac97348fa36c8b2673467fcb8478",
+    "size": 13669,
+    "read_scope": "Complete report or result; binding file for source identities"
+  }
+]

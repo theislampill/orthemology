@@ -1,0 +1,10 @@
+HenkinSoundness.lean:389:45: warning: unused variable `hp`
+note: this linter can be disabled with `set_option linter.unusedVariables false`
+'HenkinSoundness.formation_eligible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.F_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.finite_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.fundamental_j' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.form_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.has_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.fundamental' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HenkinSoundness.formation_coherent' depends on axioms: [propext, Classical.choice, Quot.sound]

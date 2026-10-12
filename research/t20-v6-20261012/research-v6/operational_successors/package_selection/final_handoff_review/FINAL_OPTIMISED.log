@@ -1,0 +1,41 @@
+test_alias_declaration_duplicate_unsorted_or_extra_field (test_handoff.HandoffControls.test_alias_declaration_duplicate_unsorted_or_extra_field) ... ok
+test_alias_must_match_selected_view (test_handoff.HandoffControls.test_alias_must_match_selected_view) ... ok
+test_alias_unsafe_paths (test_handoff.HandoffControls.test_alias_unsafe_paths) ... ok
+test_builder_only_loads_intended_verifier_tool (test_handoff.HandoffControls.test_builder_only_loads_intended_verifier_tool) ... ok
+test_cli_is_read_only_with_exact_expected_manifest_hash (test_handoff.HandoffControls.test_cli_is_read_only_with_exact_expected_manifest_hash) ... ok
+test_complete_finite_manifest_and_exact_preserved_inputs (test_handoff.HandoffControls.test_complete_finite_manifest_and_exact_preserved_inputs) ... ok
+test_declared_extra_file_is_rejected (test_handoff.HandoffControls.test_declared_extra_file_is_rejected) ... ok
+test_dependency_disposition_contract_stays_exact (test_handoff.HandoffControls.test_dependency_disposition_contract_stays_exact) ... ok
+test_destination_ancestor_overlap (test_handoff.HandoffControls.test_destination_ancestor_overlap) ... ok
+test_deterministic_builder (test_handoff.HandoffControls.test_deterministic_builder) ... ok
+test_duplicate_json_key (test_handoff.HandoffControls.test_duplicate_json_key) ... ok
+test_existing_destination_untouched (test_handoff.HandoffControls.test_existing_destination_untouched) ... ok
+test_expected_manifest_hash_mismatch (test_handoff.HandoffControls.test_expected_manifest_hash_mismatch) ... ok
+test_extra_empty_directory (test_handoff.HandoffControls.test_extra_empty_directory) ... ok
+test_extra_file (test_handoff.HandoffControls.test_extra_file) ... ok
+test_fifo_payload_rejected_without_reading (test_handoff.HandoffControls.test_fifo_payload_rejected_without_reading) ... ok
+test_manifest_noncanonical_bytes (test_handoff.HandoffControls.test_manifest_noncanonical_bytes) ... ok
+test_manifest_traversal (test_handoff.HandoffControls.test_manifest_traversal) ... ok
+test_missing_source (test_handoff.HandoffControls.test_missing_source) ... ok
+test_no_future_import_before_read_only_bootstrap (test_handoff.HandoffControls.test_no_future_import_before_read_only_bootstrap) ... ok
+test_no_nonstandard_module_import_from_package_tools (test_handoff.HandoffControls.test_no_nonstandard_module_import_from_package_tools) ... ok
+test_no_retained_import_beneath_interpreter_prefix_or_pythonpath (test_handoff.HandoffControls.test_no_retained_import_beneath_interpreter_prefix_or_pythonpath) ... ok
+test_nonfinite_json (test_handoff.HandoffControls.test_nonfinite_json) ... ok
+test_reserved_and_prefix_alias_collisions (test_handoff.HandoffControls.test_reserved_and_prefix_alias_collisions) ... ok
+test_source_destination_overlap (test_handoff.HandoffControls.test_source_destination_overlap) ... ok
+test_static_contract_matches_reviewed_helpers_exactly (test_handoff.HandoffControls.test_static_contract_matches_reviewed_helpers_exactly) ... ok
+test_symlink_destination_parent (test_handoff.HandoffControls.test_symlink_destination_parent) ... ok
+test_symlink_directory (test_handoff.HandoffControls.test_symlink_directory) ... ok
+test_symlink_source (test_handoff.HandoffControls.test_symlink_source) ... ok
+test_tampered_cas_even_with_rehashed_inventory (test_handoff.HandoffControls.test_tampered_cas_even_with_rehashed_inventory) ... ok
+test_tampered_curated_copy_even_with_rehashed_inventory (test_handoff.HandoffControls.test_tampered_curated_copy_even_with_rehashed_inventory) ... ok
+test_tampered_materialisation_even_with_rehashed_inventory (test_handoff.HandoffControls.test_tampered_materialisation_even_with_rehashed_inventory) ... ok
+test_tampered_view_map_even_with_rehashed_inventory (test_handoff.HandoffControls.test_tampered_view_map_even_with_rehashed_inventory) ... ok
+test_undeclared_input_package_path_prevents_writes (test_handoff.HandoffControls.test_undeclared_input_package_path_prevents_writes) ... ok
+test_wrong_alias_source_identity (test_handoff.HandoffControls.test_wrong_alias_source_identity) ... ok
+test_wrong_received_public_receipt_with_all_hashes_rebound (test_handoff.HandoffControls.test_wrong_received_public_receipt_with_all_hashes_rebound) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 2.816s
+
+OK

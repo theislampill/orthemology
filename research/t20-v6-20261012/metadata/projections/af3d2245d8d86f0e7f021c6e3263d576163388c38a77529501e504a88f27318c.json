@@ -1,0 +1,21 @@
+{
+  "schema": "t20-exact-literal-private-id-projection-v1",
+  "original_sha256": "2b9a94d21464483ddbbe3a2ea6fe3c38816547345a35c6a7ac3eec6119f18184",
+  "projection_sha256": "41f09d0462db497b753e4787ed2d8f192f50176f3e7403a30ff4c5fd3e5ac51a",
+  "original_bytes": 4047,
+  "projection_bytes": 4046,
+  "method": "Exact listed byte spans only; all intervening and remaining bytes verified identical. No pattern substitution, prose reflow, formula edit, code edit or execution.",
+  "replacement_scope": "Private instruction/message identifier literals only. Dates, scientific arguments, source attributions, counters, equations and historical status statements retained.",
+  "spans": [
+    {
+      "start_byte": 3200,
+      "end_byte": 3241,
+      "old_sha256": "4f3c3d9457a5c8ff8ed02496feab737385aafc4c2fa4ecab6a5c7695c37ec8be",
+      "new_utf8": "[private instruction identifier omitted]",
+      "new_sha256": "8a93df9daab9fac7a05fa2745f5a74ac737f4afda04626bc4e42231c9f52469e"
+    }
+  ],
+  "private_identifier_values_distributed": false,
+  "semantic_json_check": "Only /delivered_chat/message_id differs; all other parsed values exactly preserved.",
+  "status": "CANDIDATE_PENDING_ROOT_ACTUAL_REVIEW"
+}

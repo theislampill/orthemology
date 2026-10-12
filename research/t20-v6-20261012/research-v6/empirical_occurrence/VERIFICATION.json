@@ -1,0 +1,73 @@
+{
+  "date_utc": "2026-10-11",
+  "registered_rows": 51,
+  "bound_source_hashes_verified": 49,
+  "frozen_language_hashes_verified": 79,
+  "inherited_review_bodies_read_and_verified": 7,
+  "fresh_synthetic_tests": {
+    "T15": 13,
+    "T16_core": 17,
+    "T16_cli": 3,
+    "unit": "tests, not mathematical proof bodies"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "pandas": "2.2.3",
+    "openpyxl": "3.1.5"
+  },
+  "fresh_replays": [
+    {
+      "file": "T15_FULL_REPLAY_AGGREGATE.json",
+      "sha256": "eda676cfd5ac10b0a92040b9164a6d968b7f23ad68e456089579b7cf2d8f6acd",
+      "scope": "Exact same historical aggregate SHA256"
+    },
+    {
+      "file": "T15_FULL_REPLAY_VALIDATION.json",
+      "sha256": "ac63c2b5c11fd5c0e5ab3ec88ae9566c106dbe0ef67590a48e3407a009d7f955",
+      "scope": "Dual-fit and reference validation PASS"
+    },
+    {
+      "file": "T16_OCCURRENCE_REPLAY.json",
+      "sha256": "30113905f68858d04255a98045eff9eb48efcf89e8405501879521771006eb9e",
+      "scope": "Exact same historical fixture result SHA256; interpretation not certified"
+    },
+    {
+      "file": "LANGUAGE_OCCURRENCE_REPLAY.json",
+      "sha256": "be8e02f6087646a5ea97024ce0470a582cf99412a044a0ce80ace3562c2702c3",
+      "scope": "82 held-byte data assertions PASS, expected output hash; no global regression/linguistic certification"
+    },
+    {
+      "file": "LANGUAGE_SENSE_REPLAY.json",
+      "sha256": "712a777ed6d714a03c862f5d47c9291307a7d03bc4f218f1a16799ce8d2f7bca",
+      "scope": "9 source identities PASS, zero occurrence-data semantic checks"
+    }
+  ],
+  "historical_T16_fresh_output_matches": [
+    {
+      "file": "batch_sensitivity_results_v2.json",
+      "sha256": "14770995dfa633024bb8d602537f091ecd5b24585bdce5f15f2a0006597ea129",
+      "matches_historical_fresh_output": true
+    },
+    {
+      "file": "manipulation_checks_v1.json",
+      "sha256": "7eb4b09d7698cf93d5545cd68318d866b8a8fadb107dc7139cfa3e4d4f463bef",
+      "matches_historical_fresh_output": true
+    },
+    {
+      "file": "reanalysis_results_v3.json",
+      "sha256": "e70cd7607e46d716fd1f24bebfce7d619a71d0fc2d821c7718bc412798a12daa",
+      "matches_historical_fresh_output": true
+    },
+    {
+      "file": "reconstruction_audit.json",
+      "sha256": "9b4fdc6fd3ba661046593cfbfdf2500650d775ba5b901320dc63ec40a57f7ef1",
+      "matches_historical_fresh_output": true
+    }
+  ],
+  "new_experiment": false,
+  "independent_human_review": false,
+  "source_preservation": "No v5 or repository edits. Assembled unmodified packages in scoped scratch for replay.",
+  "empirical_input_policy": "Original data and all participant-derived records excluded from distribution; aggregate statistics and receipt hashes only."
+}

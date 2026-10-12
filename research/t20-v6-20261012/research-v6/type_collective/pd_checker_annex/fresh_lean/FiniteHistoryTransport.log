@@ -1,0 +1,7 @@
+'PDCheckerFiniteHistory.step_erasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.finite_history_erasure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.actual_checker_finite_history' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.actual_checker_observable_history' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.misaligned_initial_receipt_changes_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

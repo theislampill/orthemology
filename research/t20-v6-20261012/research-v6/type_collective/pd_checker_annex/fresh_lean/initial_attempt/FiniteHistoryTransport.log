@@ -1,0 +1,30 @@
+FiniteHistoryTransport.lean:32:6: error: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  K (e hx.2) a
+case h.h
+X : Type u_1
+S : Type u_2
+A : Type u_3
+O : Type u_4
+J : X → A → PMF (O × X)
+K : S → A → PMF (O × S)
+e : X → S
+rows : ∀ (x : X) (a : A), PMF.map (fun rx => (rx.1, e rx.2)) (J x a) = K (e x) a
+policy : History A O → PMF A
+law : PMF (History A O × X)
+hx : History A O × X
+a : A
+⊢ PMF.map (fun rx => (hx.1 ++ [(a, rx.1)], e rx.2)) (J hx.2 a) =
+    PMF.map (fun rs => ((eraseHistory e hx).1 ++ [(a, rs.1)], rs.2)) (K (eraseHistory e hx).2 a)
+'PDCheckerFiniteHistory.step_erasure' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.finite_history_erasure' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'PDCheckerFiniteHistory.actual_checker_finite_history' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'PDCheckerFiniteHistory.actual_checker_observable_history' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'PDCheckerFiniteHistory.misaligned_initial_receipt_changes_action' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

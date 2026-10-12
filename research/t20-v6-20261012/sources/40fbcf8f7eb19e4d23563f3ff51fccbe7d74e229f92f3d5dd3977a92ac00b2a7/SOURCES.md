@@ -1,0 +1,9 @@
+# Primary and inherited source scope
+
+The primary web readings occurred 11 October 2026 UTC. These records identify what was actually inspected, not source authentication or an exhaustive priority search.
+
+- Larry G. Epstein and Martin Schneider, *Recursive Multiple-Priors*, author-hosted September 2002 manuscript, https://people.bu.edu/lepstein/files-research/rectang50.pdf. Read searchable PDF text: §3.1, Definition 3.1, printed pp. 9–10; §3.2, Theorem 3.2 and recurrence, pp. 12–13; selected §4.1 discussion, pp. 15–16; and §4.4 discussion, pp. 19–20. These passages support the classical rectangularity and time-consistency attribution in RESULT, including the distinction between an initial possible-model set and its rectangular enlargement. No full-paper or proof-appendix review claimed. No direct quotation used.
+- Garud N. Iyengar, *Robust Dynamic Programming*, Mathematics of Operations Research 30(2), 257–280 (2005), https://pubsonline.informs.org/doi/10.1287/moor.1040.0129. Publisher abstract and metadata read; PDF request redirected to the abstract. Supports the narrow attribution that robust DP uses rectangularity. No full theorem/proof reading claimed.
+- Nilim–El Ghaoui author-hosted technical report, https://people.eecs.berkeley.edu/~elghaoui/pdffiles/rmdp_erl.pdf, was opened for orientation. Its partly garbled searchable text was not needed for a substantive attribution and is not used as proof evidence.
+
+INPUT_BINDINGS.json identifies exact locally inspected inheritance. Theorem-owner reading ranges and distinctions appear in RESULT §1. The actual warranted-inquiry source hash is 71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28, identical to the supplied synthesis inventory's S0008 source, so the pathwise Bellman attribution is to actual retained content rather than a summary alone.

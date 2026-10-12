@@ -1,0 +1,25 @@
+{
+  "scope": "Review prose transcription only; author theorem and earlier review derivation already correct",
+  "source_sha256": "85284366281cc77a4957ddf8b291d5a91c641fa9e80ce0889eb94a2062460dbf",
+  "section": "3, Computability of the hard names",
+  "old": "Q_N=u(1-b)+bu^(1/N)",
+  "correct": "Q_N=u(1-b)+bu^(1+1/N)=u[1-b+b u^(1/N)]",
+  "control": {
+    "u": "1/4",
+    "b": "1/2",
+    "N": 2,
+    "correct": "3/16",
+    "mistyped": "3/8"
+  },
+  "fresh_control": "Exact Fraction arithmetic PASS",
+  "effect": "Retain factor u in propagating a root enclosure; corrected propagation factor b*u <=1 preserves the computable-name proof. No theorem rejection.",
+  "author_control_sha256": "f8424612e92e5f4f3d45f89317070bf5ed4fd63b5cc53a43ee88b4713bc29f4b",
+  "historical_erratum": {
+    "path": "t20-consolidation-20261011/catalogue/objects/8e/8ed2d479c07d30487072ba0b5dde52228259cb88589ec295de73453f5b3bc9f1",
+    "sha256": "8ed2d479c07d30487072ba0b5dde52228259cb88589ec295de73453f5b3bc9f1",
+    "date": "2026-10-08",
+    "scope": "Entire received erratum directly read by root; explicitly corrects same formula and enclosure; original review/manifests/source unchanged"
+  },
+  "v6_contribution": "Recovery and independent corroboration of an existing October8 correction, not first discovery",
+  "prior_record_sha256": "7c9803d39880728498a72e9bc39396c5f046aec8d4a187220cb8a42b61f60f37"
+}

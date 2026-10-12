@@ -1,0 +1,85 @@
+[
+  {
+    "id": "REG-GEO17-DR01",
+    "kind": "SUBSEQUENTLY_NARROWED_RESIDUAL",
+    "historical": "GEO-17: several-partition analysis remains",
+    "current": "DR-01 establishes common-refinement classification at its fixed-metric/full-domain scope",
+    "limits": "Moving partitions and arbitrary restricted symmetry groups not covered by this successor",
+    "source_digests": [
+      "60f0b9cfb1208d2b12676d34d56324881b3cb48e61a9cc3b7d3e05d1a72fcf9e",
+      "693b46b4c9ae0a2565690fdbfaaa0c2543f9dcbf570ccc75a574107cdf73f62c",
+      "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  },
+  {
+    "id": "REG-ET11-V6C01",
+    "kind": "VALID_BOUND_STRENGTHENED",
+    "historical": "ET-11 conservative conditioning perturbation bound",
+    "current": "V6-C01 sharper common-likelihood normalisation bound",
+    "limits": "Earlier bound valid; positive normalisers and shared likelihood retained",
+    "current_artifact": "root_math/CONDITIONING_CROSS_CONTRIBUTION.md",
+    "source_digests": [
+      "6eff9757961075545ca3a043c67f211ea2d3778abb67cc5682ecde3de1269fa2",
+      "8d7ace69ac867f7e87f4c16266b9feea06feef29c248fac95a2163c2dc1124dd",
+      "e0a09157ed82520d74c8750581aacb44bf4d47af746ab7dae5c3ffd437645b05"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  },
+  {
+    "id": "REG-ET23-DR04",
+    "kind": "CONDITIONAL_EXTENSION",
+    "historical": "ET-23 cone-order instrument classification supplies no metric",
+    "current": "DR-04 adds explicitly chosen metric and audit family",
+    "limits": "No intrinsic metric or metaphysical warrant follows from cone order alone",
+    "source_digests": [
+      "72c8248c63e19b4e616bdc410e8187b2233e5486954827abcaa9fe152dc9c981",
+      "8d7ace69ac867f7e87f4c16266b9feea06feef29c248fac95a2163c2dc1124dd",
+      "f6bf8379cc75e957bb789bfa040b2e878e979d05c1be730970275d3539346384"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  },
+  {
+    "id": "REG-PT19-HAS",
+    "kind": "STRONGER_INTERFACE_PROVENANCE",
+    "historical": "Cross-track shorthand actual HasE deterministic controller",
+    "current": "Original P01AC.Has derivation plus explicit inclusions into HasE and HasJ",
+    "limits": "Stronger provenance, not a refutation of inclusion; literal I witness is not authenticated evidence",
+    "source_digests": [
+      "6eff9757961075545ca3a043c67f211ea2d3778abb67cc5682ecde3de1269fa2",
+      "8d7ace69ac867f7e87f4c16266b9feea06feef29c248fac95a2163c2dc1124dd",
+      "e0a09157ed82520d74c8750581aacb44bf4d47af746ab7dae5c3ffd437645b05",
+      "e7869e8a2578c6fd04e64e5edc3e2293ff2a6ef98ab6c32dfa4a7156d68a2a95",
+      "f1cbc3066303188b645dbdc48b2b5f7aa49c0294769a3f44387e372fb60dcaa0"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  },
+  {
+    "id": "REG-FND014-DAR147",
+    "kind": "INHERITED_CORRECTION_RECOVERED",
+    "historical": "Electronic Dar10:147 sun-negation omission; temporary v6 open-collation wording",
+    "current": "Inherited printed144\u2013147 check resolves missing negation; v6 wording corrected",
+    "limits": "No fresh primary-edition collation",
+    "current_artifact": "synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+    "source_digests": [
+      "6ecf200cb9b7eba406e75072ee8588096a5d5240c922304e1b14494768729d70"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  },
+  {
+    "id": "REG-EDGE-ORIENTATION",
+    "kind": "SEMANTIC_JOIN_GUARD",
+    "historical": "ET consumer-to-reference arrows; PT predecessor-to-consumer arrows",
+    "current": "Retain per-graph orientation and edge types before any common DAG projection",
+    "limits": "Only formal premise subsets imply proof-use acyclicity; comparative/currentness/evidence edges are not implications",
+    "source_digests": [
+      "2dd856c01a79ed612f227f4c9a737f8930e27e7c5839f25418c074a17a0aa841",
+      "8374aeca4d7aaa7ede3f0c7e445942780644810f8b4e5d89fba90a183115821b",
+      "b58633a2ce7965b4a89036665896f1cd110011b6b7e10522e480de36a2c9ddd4",
+      "bf15192be47588ddcdbc960faec6969cf3b7cf15b95b3bb2115d7659e733f123",
+      "f06c6ac3ccf0627aab8f4e168ea43874b3cf67e3f14d57f5a4869ae88b9753c0",
+      "f6bf8379cc75e957bb789bfa040b2e878e979d05c1be730970275d3539346384"
+    ],
+    "status": "V6_RECONCILIATION_NOT_INDEPENDENT_SOURCE_CORROBORATION"
+  }
+]

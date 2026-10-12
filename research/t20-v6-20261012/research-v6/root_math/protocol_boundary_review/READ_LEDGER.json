@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-11T20:11:37.025989+00:00",
+  "records": [
+    {
+      "path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/false-closure-selective-prediction-v2/analysis/analyze_fcsp2.py",
+      "sha256": "0099d454bcb30d672b28e6973fa31a6a70359f8202bd70b7be069671905bd222",
+      "status": "FULL_BODY_READ",
+      "scope": "Complete exact historical analysis source, followed by independent finite function controls; no empirical/model run"
+    },
+    {
+      "path": "t20-v6-20261011/operational_successors/global_auxiliary_roles/protocol_closure/exact_source/episode-reification-v2/analysis/analyze_er2.py",
+      "sha256": "448d7f598916a94855dd6e1060361f7686240ab542caef1a44b8fb9637026f3b",
+      "status": "FULL_BODY_READ",
+      "scope": "Complete exact historical analysis source, followed by independent finite function controls; no empirical/model run"
+    }
+  ]
+}

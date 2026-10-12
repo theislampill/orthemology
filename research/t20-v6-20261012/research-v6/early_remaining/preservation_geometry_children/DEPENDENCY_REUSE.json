@@ -1,0 +1,74 @@
+[
+  {
+    "source_sha256": "7cc30cf19b820541630eb55b0a9305c4e1b707630f7b1ded1b4bff61f69e403b",
+    "ledger": "private-locator:fbc50319228b2c538ef9",
+    "pointer": "$/89",
+    "recorded_scope": {
+      "scope": "complete code body",
+      "status": "DIRECT_COMPLETE_BODY_EXAMINED"
+    },
+    "ranges": [],
+    "recorded_paths": [
+      "t20-consolidation-20261011/catalogue/archive-views/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010.zip--de019f745936/T20_Full_Polynomial_Functional_Corrected_Intermediate_20261010/evidence/full-polynomial-moment-countermodel-20261010/countermodel.py"
+    ],
+    "exact_held_hash": true,
+    "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+  },
+  {
+    "source_sha256": "038608c92a952d8cf54b1641101a40fdbec6515c9925031789319cbe9e3a1c55",
+    "ledger": "private-locator:0159ccd87db091067e82",
+    "pointer": "$/records/20",
+    "recorded_scope": {
+      "scope": "Full actual symbolic-control body; active asserts, exact finite identities and copied-input hash checks, no universal theorem or original-root replay.",
+      "read_status": "DIRECT_FULL_BODY",
+      "remaining_substantive_ranges": []
+    },
+    "ranges": [
+      [
+        1,
+        193
+      ]
+    ],
+    "recorded_paths": [
+      "t20-consolidation-20261011/catalogue/objects/03/038608c92a952d8cf54b1641101a40fdbec6515c9925031789319cbe9e3a1c55"
+    ],
+    "exact_held_hash": true,
+    "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+  },
+  {
+    "source_sha256": "e8a7281115306f2ec9f5f5fb555fa0fcd5f39465b199f20ad90f47633bb99a43",
+    "ledger": "private-locator:3e5a8e8689034c06a3af",
+    "pointer": "$/records/33",
+    "recorded_scope": {
+      "scope": "Complete actual source body",
+      "reading_mode": "DIRECT_FULL_BODY",
+      "remaining_substantive_ranges": []
+    },
+    "ranges": [
+      [
+        1,
+        30
+      ]
+    ],
+    "recorded_paths": [
+      "t20-consolidation-20261011/catalogue/objects/e8/e8a7281115306f2ec9f5f5fb555fa0fcd5f39465b199f20ad90f47633bb99a43"
+    ],
+    "exact_held_hash": true,
+    "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+  },
+  {
+    "source_sha256": "7cc30cf19b820541630eb55b0a9305c4e1b707630f7b1ded1b4bff61f69e403b",
+    "ledger": "private-locator:3e5a8e8689034c06a3af",
+    "pointer": "$/records/66",
+    "recorded_scope": {
+      "scope": "Exact prior full or explicitly completed body scope reused; no new source reading",
+      "reading_mode": "REUSED_EXACT_FULL_OR_COMPOSITE_BODY"
+    },
+    "ranges": [],
+    "recorded_paths": [
+      "t20-consolidation-20261011/catalogue/objects/7c/7cc30cf19b820541630eb55b0a9305c4e1b707630f7b1ded1b4bff61f69e403b"
+    ],
+    "exact_held_hash": true,
+    "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+  }
+]

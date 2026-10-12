@@ -1,0 +1,3529 @@
+{
+  "scope": "Fresh actual Python replay of exact archived native-cross-language-final raw fixtures, plus concrete source erasure/work counterexample. No Python-to-Lean universal refinement theorem.",
+  "python": "private-locator:915d29ee128338d1c948",
+  "python_version": "3.12.14",
+  "python_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+  "source_hashes": {
+    "reference.py": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77",
+    "boundaries.py": "86794c3b03f26421dd007e0d317930fd57fd27dc042342b56815c8ec561eb7c4",
+    "proof_export.py": "6980b13029b17602c1eb516b8cc6ffa6b750e3e226513ba4fd8b7a52fb65467b"
+  },
+  "fixture_cases_sha256": "0be56888e7e331a4459c261bc8dcc75588430dfd95a5c8e762ebaf8c30e48ec9",
+  "cases": [
+    {
+      "name": "case0",
+      "sha256": "5ea3d68544d42d856bcef9ca115126f6cf49c937c29716e2bb747839717a89fa",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case1",
+      "sha256": "9ed291a4867c6ba16d5187401cbd15040a7323d53addcf76b4002d62576d3527",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case2",
+      "sha256": "cdac24342c8f4b07fafb7150947bd98383741502d229a249cc072cc8ea7a3d82",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case3",
+      "sha256": "527885c7b53495648710f6cab899ced2046d5eadc299fe344cf212e096924401",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case4",
+      "sha256": "806fe443f59ea0acc49d8133b4e6f9dc10f9ad585886a57f3a68ac0c5365e22f",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case5",
+      "sha256": "acb00facf23c50ec748e332fc8fdd59952dd97bb9e59f1275c55938b7d484f6c",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule i",
+      "expected_match": true
+    },
+    {
+      "name": "case6",
+      "sha256": "d9936d56e6914bb391d163eb5ca8dc551d3d2c032cc1520ccace754ecf4178a9",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case7",
+      "sha256": "69517ddfb501c3cfcdc268adc1839534efee6a7420ae6b90eccfd7a3c32c7a44",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case8",
+      "sha256": "5efb07015a7c456532e3a338b99b257469ebb1116498e03d22133a1ddce2e661",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule i",
+      "expected_match": true
+    },
+    {
+      "name": "case9",
+      "sha256": "77c404b5e441cd6c3bda44800e8913571aaf3081d3e68875dcf925c18f34d785",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case10",
+      "sha256": "dad67b91db185b01f2b2f69e367b3ba75d60bd692a688b1878445b66adc666b3",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case11",
+      "sha256": "31aa16c38ae67c8627e62ace08ae714a72e3f30f2f6e8c7fbcd20b5930b7022f",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case12",
+      "sha256": "38d4ff3e01505b3b0c9e4fc16679ee0e266c99cfd6cd52183c99f33bd7f1c390",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case13",
+      "sha256": "3bb61967d99e610c08e59706ed3291614fc4a0cb86250d8d000acfd0ee5abb8f",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case14",
+      "sha256": "20e381d4e039c05ceecc0374622f74b060299a2f31186eaf9d2c9f6cfa94590f",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case15",
+      "sha256": "73f143bef138826d9afefe705ab55c0574970e79173beded856f9d6daf1c0a55",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case16",
+      "sha256": "e3ae6e63642f016c01e5f51601135d94649c43c27fd10798cabbfa38e79d94db",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case17",
+      "sha256": "863d10c96811e62783f798af0d357926aa83c37ced45604505613e117da46f78",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case18",
+      "sha256": "70e6f066144dd7fba1073fe85d6560c4f6687f88bee065c62fe05def58c9a5a7",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "k"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "bottom"
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case19",
+      "sha256": "f9169936dbf90cd1b8834d7f815e0e183bfc20ee799e5d2e1721e719eeb3136b",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case20",
+      "sha256": "91a2ee124cfea2ff6dcf6878b40fa4948555645333d32eaf4d62729bbc3cc456",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case21",
+      "sha256": "04e90810738424991a56d99a49ca16a3056e2dc6e7a8dc95a971bf447ce798c9",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case22",
+      "sha256": "d8e08495c90bb61461e83b7253256185583d3bc81578807f1afb85b8e7fbcba8",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule k",
+      "expected_match": true
+    },
+    {
+      "name": "case23",
+      "sha256": "49d012baabc80a66a941b04f0d428b5849dd27a071caa42e025a794e1186be83",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case24",
+      "sha256": "cff8e1fc5760062d89cd95a05822d0184454dd4158e5acad7cb099b1eda157c6",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case25",
+      "sha256": "4f261003d537d7ca6a628b723f08ea204811aac354ab2ff324d1be35f1932f9b",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule k",
+      "expected_match": true
+    },
+    {
+      "name": "case26",
+      "sha256": "88a3e025d0901f8e95119c746af0c6a2be32556e83f0d60bf8d3778135224b85",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key B",
+      "expected_match": true
+    },
+    {
+      "name": "case27",
+      "sha256": "b5a22912d147d1df8790a8f079c4435426b8e2db876adfa0abda6bfecb40bddf",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key B",
+      "expected_match": true
+    },
+    {
+      "name": "case28",
+      "sha256": "748f6cfcafcb448c7ae6c2ef3bd90fcd8d41ec0b52e9ba702d18585465c44854",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule k",
+      "expected_match": true
+    },
+    {
+      "name": "case29",
+      "sha256": "8ede1a0a858f2aea89b1db425986e8da2376f6175acd18fc11af6d9831d086e6",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case30",
+      "sha256": "d1dd2f5e9f5dd9478629bfab65ca7b1c554e7514cd5128fb247c0beb0df6c4f9",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case31",
+      "sha256": "674b61bda882546da0bca81eae095125ca08e02af3b342d82edcfa99fa5f87f5",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case32",
+      "sha256": "b7bac22ee7d9c2ebaccc46df4d7d1b6c578e1b9b514687d04dc88661c317986e",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case33",
+      "sha256": "39832344a9a4fcab59b1915bda521abf4f868c1477e0e612f1f08ab6459b29bc",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case34",
+      "sha256": "8d6dbb61109fc38765b01ecc9d1e2430e85da2a73fa5b5f88786b89f71aef817",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case35",
+      "sha256": "2b3e2959b4510dd0be84eb2296ae1cf3cbb97f1ddbb179bc2ae451d3caa39553",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case36",
+      "sha256": "cfdd1fced305fdf88036cc16b4edb3b24418ddcf95081e7786c2f338c8095849",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case37",
+      "sha256": "4ac71e345471e4bb6d66071aa4ed24aecc47a15dd2f1da5e55720f99754400eb",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case38",
+      "sha256": "860c615bea5b93314c846b025ccc8b9ad8558c4bd75f768e15106cbc9ab3012b",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case39",
+      "sha256": "79dd2d5ab6b3b3f11798f6e038c5efc9fa06c7f803dc8babf24b1d9e76228646",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case40",
+      "sha256": "ffb128ec93402488147bf5a29cd707e727406c8d750358598c9a35c3a9e4e0c3",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case41",
+      "sha256": "52ef36af403802a157a84196610aa9ac191f2ad2413091f1515a1bc3338a2612",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case42",
+      "sha256": "21a49ec28e58f4f638cfe7f9cbd3d7026750ea4dae89760cbd2a5a433ed3ca2d",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case43",
+      "sha256": "8e8c0bf35f25add6765c33faa9029a324e0a96bf2fd9ba02ec6d7ede09d2f1f6",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case44",
+      "sha256": "e9c0bfc3fa31456139e67b78ed998c42b7b3a6c75e3ccef1b59bde233cb82728",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case45",
+      "sha256": "e7b6aa86a85318ad1962cbc77424b7bb333aa6c589d03b9f141a5cb9031ce5f8",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case46",
+      "sha256": "e86c97187a8606f44541b7b55cf650152ee1364fa09b6f6db5a9f2d112a03a07",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case47",
+      "sha256": "ffd569e653844b1ae3a02e0d5b4672b08126bbc52fbe39c018432d59f72b6456",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case48",
+      "sha256": "19caee2a9d2a6102adbc0bcd2dde3371f2528eb4e1de7c05f672377856af1f5d",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case49",
+      "sha256": "dc83b40f9a7ad43926b6e7be758926f548f6aea171dfd158809f17c5e5030c6a",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case50",
+      "sha256": "b9175705d9e86c1556d9ba76511ddb73430002967a60ed3e862aa6817477dff1",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case51",
+      "sha256": "8eda099c4bee17fddc8cc7a7bf06569c0ca0f052a76c3d1359246500478e207b",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case52",
+      "sha256": "abd814297369feb2216b83397b9435217e2f157958a3d4d1cc836b278487e780",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case53",
+      "sha256": "4e992d2fdda1261cb35932d005bdb3a566d6585a1a125a9adac376f96cfe15eb",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case54",
+      "sha256": "fb17bbb9cf6e2e39108a0f6b2b16df89913ee634cbed701c4ac880e4960ac5c2",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case55",
+      "sha256": "93ba8377ff26af5c62d16bcc1952e3fba64f8b9a42dbc0be51e5752af91ae0ac",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case56",
+      "sha256": "a2d1c0a46dfea0ed9ddaa454b3207679f0299428a93f7938055263baaea2a306",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "s"
+        ],
+        [
+          "arr",
+          [
+            "arr",
+            [
+              "bottom"
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ],
+          [
+            "arr",
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ],
+            [
+              "arr",
+              [
+                "bottom"
+              ],
+              [
+                "bottom"
+              ]
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case57",
+      "sha256": "5dbfcaa4f141a273c4c725a869125e0cc9c6021c50bebe7fe03f164e0c70e9df",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case58",
+      "sha256": "8b5e86e4cd5cd448a73cde99eba530cf09ae659161c00a380d887c68bd88e552",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case59",
+      "sha256": "0a213e73c918a023aef13764a88d87084e2205d86bd421ac19ae7caf8dac4fbd",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case60",
+      "sha256": "92dd6758206b83729789fa6a1fcc0ccb2c90affeaee6d0c65ad79fdc90826bf2",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule s",
+      "expected_match": true
+    },
+    {
+      "name": "case61",
+      "sha256": "f428336bbcfe2f7e2095b9d636d6e93d47d5b511c825576d1e480f7717908bde",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case62",
+      "sha256": "731ea2a89c67e22b1c30c11380bdbed9f1387bbe7c99b423ca1c9a0b405c2391",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    },
+    {
+      "name": "case63",
+      "sha256": "4e1504f407d60f64b52a21d5a44640d8245b90fc78a23fad52342e6f1d5eab9c",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule s",
+      "expected_match": true
+    },
+    {
+      "name": "case64",
+      "sha256": "4351da3431f2f7ac1dd455138070552418e0fe0bf882da178035edcaeae60917",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key B",
+      "expected_match": true
+    },
+    {
+      "name": "case65",
+      "sha256": "fc77477cb2a9f48206c7809a3ebfde62af81c422217bf4933c972d03e417a7c0",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key B",
+      "expected_match": true
+    },
+    {
+      "name": "case66",
+      "sha256": "509f3f919705f1860002e027f6596cf02f52f944d799175345f2fc5253f99c7d",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule s",
+      "expected_match": true
+    },
+    {
+      "name": "case67",
+      "sha256": "66994264e65f7f6d8fbfacfe2f6cf2c70c1c18fcbc24b2d3afb18022e42da217",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key C",
+      "expected_match": true
+    },
+    {
+      "name": "case68",
+      "sha256": "8d65058fc43a1c8ed95492666ebcbcb48f4c86e9a0d183797c047f72681c5eb9",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key C",
+      "expected_match": true
+    },
+    {
+      "name": "case69",
+      "sha256": "6b6e0b18c36dd3c283217479398f706ef5489c8ec6df2ca0d23f19838c0d48c1",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule s",
+      "expected_match": true
+    },
+    {
+      "name": "case70",
+      "sha256": "de1ec4ff7692e8fa6740610a9a9b2e6b4c0cfd22df5a5a83ff21b8537b2f5cc9",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case71",
+      "sha256": "e9d8af7b4f0553803863f0b37cab87b973e7d38ff2a3265c8d101d425b83bb82",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case72",
+      "sha256": "f90de91b2caa11bacaaa120ea86a7f2c369410ce8c34425066b5159610d6861c",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case73",
+      "sha256": "eda170ae4097d6983f318f5145f7b03bad62169d071e84eb5cd475ab81e81362",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case74",
+      "sha256": "4d33a9737090fc7f7a522791d3b123c6955e9d1a3aae57e088a63e05fb1960ed",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case75",
+      "sha256": "ed98b95758b4d0ad70faa08be2027ab142fbcabdc76168e5fcdad838276355f7",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case76",
+      "sha256": "8ff48e26cb02df8d1dfef54e7011e82c980a2add26593580d6ef0449e28ee80b",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case77",
+      "sha256": "f67ab0448a743322b1f69a529a1583bf5866746630c05c08aeadb52f62a6ff97",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case78",
+      "sha256": "2dc8b9539386a0b411babb6adb8b1db6bb34bdc997f105836688eca7d0be1725",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case79",
+      "sha256": "815317bcf89c67a020305c06fadbb47d0bf3a93de2d66aa199bbcee5874a1a1d",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case80",
+      "sha256": "ed98845b53961d6a04a051514f4848e5657a91284deccfb5ab4bd1c02b669e55",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case81",
+      "sha256": "6ff533a960571b9491ed14f251b5ce564fdbddd96c5963d7d4a5009e694f54e0",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case82",
+      "sha256": "87d9467338460ed48f3431bb03af6c3db2dad8dd8ac3549b9e2145b1072b25c3",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case83",
+      "sha256": "dac6842326c8b98c6f5c45b47ad0861f51da01d13ad4790f336b24c338d19894",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule app",
+      "expected_match": true
+    },
+    {
+      "name": "case84",
+      "sha256": "ff3b97a51bebf4b7dfa9391d47c6c302e005c16781735c11818f734d611e86f0",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key function",
+      "expected_match": true
+    },
+    {
+      "name": "case85",
+      "sha256": "14e17302756ad41628f9132911df7754a423cb7d43c0bd91282de68dd31e6bd5",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key function",
+      "expected_match": true
+    },
+    {
+      "name": "case86",
+      "sha256": "7d0763b5770feea114a48302a63562b6ae283e99909432647086f9c8dd17fac2",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule app",
+      "expected_match": true
+    },
+    {
+      "name": "case87",
+      "sha256": "61cd42818e734724d1683c01968e987fbbdaced0420a851da03a652b2431a37a",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key argument",
+      "expected_match": true
+    },
+    {
+      "name": "case88",
+      "sha256": "7fdacd7a043238abc41d731407c65ad2233f76710137204aeb8c32999e136649",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key argument",
+      "expected_match": true
+    },
+    {
+      "name": "case89",
+      "sha256": "e447587849942b3dede0dba2f5acb1badaaab67d80a169a3d6c1623776def443",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule app",
+      "expected_match": true
+    },
+    {
+      "name": "case90",
+      "sha256": "efe7b1b9cabdeb22dd763c26ce3474270eaae36fffb76c26ac694188dd5bbd99",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case91",
+      "sha256": "5f6235583e9925eac9d7efe14a989533495912ce27f530be8ece51dd67419e6a",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case92",
+      "sha256": "dd8d76ec3ea4e5746c8ebca04eecde05e9cc0736f04d314d4d7684f08916099f",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case93",
+      "sha256": "758df44e96a88f2724aff95c02493d5584244b766ed13725592f3903c3dcb001",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case94",
+      "sha256": "ff81107fb469f1496d8cb9dcb33eb81ae9faa64ec61a005bd1c84a3657154631",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case95",
+      "sha256": "59f749b74387147c779da09a9c5ba615e92b2c8a6e4cf397cffac675d9e94e68",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case96",
+      "sha256": "e78228f59443dd12f905cc86b9d8a26029ce98935161572887910880f1d3487b",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case97",
+      "sha256": "eb2830cec249670b46f2c90d5e3a52a70f8e1d0736431f4f37106c6b39a49eaf",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case98",
+      "sha256": "861df8b357166b9e21181c33d5d0574f7f274fc963f74d9e538f2b47f3629225",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case99",
+      "sha256": "c0e980cf1fc3c57bc271bddd02faa446dfedf44cbd812e54bdafade9c5f974cf",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule all_i",
+      "expected_match": true
+    },
+    {
+      "name": "case100",
+      "sha256": "e4c95afa55e01a4f8cb7546c826a75d2206feb529d981613bf13399626a9fdbb",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key body",
+      "expected_match": true
+    },
+    {
+      "name": "case101",
+      "sha256": "e5722632b9b767167fa4761d3742c6dc1d6bfab7bc3446e54fb25073791dbe4c",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key body",
+      "expected_match": true
+    },
+    {
+      "name": "case102",
+      "sha256": "a5ea512e57f4fde5c535d6e9e5ab28462e00b0b80858a9ab52656c662cea9dbd",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule all_i",
+      "expected_match": true
+    },
+    {
+      "name": "case103",
+      "sha256": "e2cee6bf4136ff6b80697fc7be738ede54c69e09c98e3380bb896a3f5a6ad8c1",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case104",
+      "sha256": "b3bc70147717801cc427ed1e01d6045f57e19cae8cbe386caad1190a4c6cd41a",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case105",
+      "sha256": "f9a35bb8c6ddb6efe45e88f0e1eb110fad551d0e77b68c6a107fe87f18a34cc3",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case106",
+      "sha256": "84de3108d6a33910dd0e9d832eeed30472327d894471fc01db3ec63a3c3b0754",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case107",
+      "sha256": "2d0c46a531abf0ef266464d403c3adb18b86dab2638d688b441d7e9e06792d36",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case108",
+      "sha256": "04445bb3fe905ce6acf7b3dd8f1428a7b4f66caade42387bcdad229d481c24dc",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case109",
+      "sha256": "c524b27b4abd9d842101196ff0eea157f789c6f8d8d93b1b9b60aa6d2fd9e9d1",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case110",
+      "sha256": "72ab30f039f180e36a67cadc1878511632ab6fcf0fbd052aac4c81213f22b35d",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case111",
+      "sha256": "752337b69539c20d92fdcbd4810d523c6e8f435d7aab67124090ee25a74375b1",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case112",
+      "sha256": "f6cb9a2602366fbd16e24c9f50af27638251bbdae918df3400f5f1661d7c36d5",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "arr",
+          [
+            "bottom"
+          ],
+          [
+            "bottom"
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case113",
+      "sha256": "c1a89ed4a692e603692faa1fc5066d9c88d0c3aa0a4311d1df1f5d2a3b210d25",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case114",
+      "sha256": "fac4bda5312ef6b025e6c488e9439aafa18f183222e885870f546d290d50b2bc",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case115",
+      "sha256": "63284512872dd404f783388ea47e534d92ca7580787563bd1239a397fc909722",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case116",
+      "sha256": "ca21d961801fe9d9184cd240de3dd13dfe62864677447b257aad820cac1dd489",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule all_e",
+      "expected_match": true
+    },
+    {
+      "name": "case117",
+      "sha256": "fcddac6efedb4672b98d9c045af9e7814bcc0c7a7d2c15404a822443cfdd2809",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key polymorphic",
+      "expected_match": true
+    },
+    {
+      "name": "case118",
+      "sha256": "17a02e0534a731af6aa716b95e6b055907dc15de984bab3ba752d324d791be58",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key polymorphic",
+      "expected_match": true
+    },
+    {
+      "name": "case119",
+      "sha256": "e21077501b3d05fccb71bf7060699817d91ec9daed429450bab478eaf57b455a",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule all_e",
+      "expected_match": true
+    },
+    {
+      "name": "case120",
+      "sha256": "30a23774d20e663c2a11ad917149801ca87919baa1adf44bdf5caa82a4b7516f",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key type",
+      "expected_match": true
+    },
+    {
+      "name": "case121",
+      "sha256": "21f24fa6ad67a4c0e2b81b0b2312dbb43408bb5ea9099018424b387fc051cf44",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key type",
+      "expected_match": true
+    },
+    {
+      "name": "case122",
+      "sha256": "5b96dc2597fadd4b3e92d9916cde8aa3def058bd67bd9c2e54bae8b6fb4ab899",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule all_e",
+      "expected_match": true
+    },
+    {
+      "name": "case123",
+      "sha256": "09df2b871c1a39b2f254022c7d693d0185a7b91cc627545aaf8bd4e732ef3bfc",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case124",
+      "sha256": "281ed5a1252bcad7a0f71d2e32d357abfe3aa295a47b84d53d0dcb99b6ba0335",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case125",
+      "sha256": "0c303f87fdf04e84aceedbfc3b2ec0f5a3b464f7eda64209b4bc256893099860",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case126",
+      "sha256": "d3a73671a099aabb6d0a63bfd0fea4c761dea11e14d880cd93733855e637fe3d",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case127",
+      "sha256": "e72f3e69d1188be5273907c65897b3338b4c0076d74a6066d2b8c188c683f054",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case128",
+      "sha256": "f6f25bd4f22038ddfb39ec4bf23dc2ecd90d2fa6574b09bfc869c537543a3f00",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case129",
+      "sha256": "30f1931d9656a9a8e51cff1deb31a2adbdf814e1061bf6eaae910991657dc7a8",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case130",
+      "sha256": "f2528c61a0b643b6d529df5cfb7fa1518d994ad199e0d73d53eaf88e4588f614",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case131",
+      "sha256": "007a59453e417e7acb022ff064488b98630baffcfde8b895633180916be4b114",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case132",
+      "sha256": "584e882ef8ec9664a34943d4b58296600e3f466204b2c404a9f558af1f9dbbe1",
+      "kind": "field-order",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case133",
+      "sha256": "680924c6b1a9c3431e5b4058619666f035af73f6c3fea723f34739e1931af210",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case134",
+      "sha256": "53e66ebb11b79dcc46ef5126c418a07d6eccba2200eff68e3ed6473f68ab6f7b",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case135",
+      "sha256": "77e5ac09e048400eab607d296125f9f0331907981658bd3c3a6345224adc30b4",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key rule",
+      "expected_match": true
+    },
+    {
+      "name": "case136",
+      "sha256": "84d604ab4ddd1e96374d48a4af339e67fbdb83592c66fb64987e35fda2fdd7a4",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule reduce",
+      "expected_match": true
+    },
+    {
+      "name": "case137",
+      "sha256": "fb719aa6f3bbf9ecaca88295bb03fa07ff0c69e50d56dfa5525ce348f39f0260",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key proof",
+      "expected_match": true
+    },
+    {
+      "name": "case138",
+      "sha256": "ed3b2e3008ce7c7f112ab212360289776e6a6a0d884e7699c7a51aa0020fdb4d",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key proof",
+      "expected_match": true
+    },
+    {
+      "name": "case139",
+      "sha256": "92fdd4dc0f891550d4af3c7b13c1f6e8b1177393653bc3962998dea32f5f858f",
+      "kind": "missing-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule reduce",
+      "expected_match": true
+    },
+    {
+      "name": "case140",
+      "sha256": "545ba474107795449cd75c527326085028913e2734dbfa93049b6954ee2677bc",
+      "kind": "duplicate-same",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key trace",
+      "expected_match": true
+    },
+    {
+      "name": "case141",
+      "sha256": "9daab695c3b27a3b64b3982642c8e9b9e0959c40f447a906aa220f53311d899d",
+      "kind": "duplicate-conflicting",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key trace",
+      "expected_match": true
+    },
+    {
+      "name": "case142",
+      "sha256": "782f03412cc67c5efedce2f55ee1e235b20255baa06386343e38675c9ad5c6e2",
+      "kind": "extra-field",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule reduce",
+      "expected_match": true
+    },
+    {
+      "name": "case143",
+      "sha256": "f441aa0696ccdb64275b608a5677442469878fe89acb0b51f88165f4029ebf2f",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case144",
+      "sha256": "83d1643cedc75347a91b0f85be4c4d591a556defc32f7c7960a1c20070449ff3",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case145",
+      "sha256": "c290258177eac944903f81fea55f4da03ad5a22ca4ba9e85b7a73fa4b053666b",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case146",
+      "sha256": "a001094593f5b2ed93f75b5fc0dd16304147e1c1d039d5bb142ca812eb3cb798",
+      "kind": "wrong-rule-type-or-name",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "unknown rule: bogus",
+      "expected_match": true
+    },
+    {
+      "name": "case147",
+      "sha256": "28c1766b08f3cbf02dcc6c2c0d7a33354dcbeda5460bb9a19154b11acf161001",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case148",
+      "sha256": "d689d374e4cc4f1b287bbe8e8611a282b65b76213407718693d82aac52d53b22",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case149",
+      "sha256": "703320b408a6fdbdb56d8a3eaa2f50b18f21c33f6ef64fe0529c9cf69cfecbe3",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case150",
+      "sha256": "a3bbcc3082d91ca4a4c5e7aac02cf2160e58788a9c29a733b8db5327b603adcd",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case151",
+      "sha256": "a1ab062c9a6cff9cac7e24f948c53da4723b7e63da3eaa02ee50d47925df0d42",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case152",
+      "sha256": "d61362733b830ea6a86d2d2d83eb2756c5b0286972782f7b6e8c50d23905f72b",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case153",
+      "sha256": "2131d7dd1a7dc441d5e7f2b9074f7059923a95cf0a4bc39aef44c7d95a81ae9f",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('bottom', 0)",
+      "expected_match": true
+    },
+    {
+      "name": "case154",
+      "sha256": "afd46d976f26b99dc6ee415ad1d0129de74cf47b4bf19da5a97a4635e241a57b",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('v',)",
+      "expected_match": true
+    },
+    {
+      "name": "case155",
+      "sha256": "739e656286dc6b6ae7762a023bf32ef19d9b857455272583591e16597afde0ae",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('v', -1)",
+      "expected_match": true
+    },
+    {
+      "name": "case156",
+      "sha256": "bc8372010d898c1317a376fb9a1bf3edced9fbf9d99697f990fd41d3faf13816",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('v', True)",
+      "expected_match": true
+    },
+    {
+      "name": "case157",
+      "sha256": "c987446128f6c649584455809563f51717a00628a89c96f498a59185fe7c2072",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('v', 0, 0)",
+      "expected_match": true
+    },
+    {
+      "name": "case158",
+      "sha256": "a9737bc51a6f601e24605b0a3d3fd3250a7e059fe43d0a9df17a61c85ba820c7",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "resource: integer bits",
+      "expected_match": true
+    },
+    {
+      "name": "case159",
+      "sha256": "e65c1cacdc3b809442c0834d71a4c0deaa91368b5f070967f9068a48dbe7cefc",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('arr', ('bottom',))",
+      "expected_match": true
+    },
+    {
+      "name": "case160",
+      "sha256": "17ed0347096fdba6eec80e9cb47af86e56de6fea34fbd54109994dd69a5d01e5",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('arr', ('bottom',), 0)",
+      "expected_match": true
+    },
+    {
+      "name": "case161",
+      "sha256": "8ab9ddb3e1fff0a113a08ecbe9717f551a0552b62760e121e7d6d075ca291ab1",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('all',)",
+      "expected_match": true
+    },
+    {
+      "name": "case162",
+      "sha256": "d47ab135134150e47a163145bd3142001aba524c76f799ca1fb913c92ec2ddf0",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('all', None)",
+      "expected_match": true
+    },
+    {
+      "name": "case163",
+      "sha256": "2feb29be246c693206f35c612886ad524a4a72745a879c8601f60bc12836403e",
+      "kind": "malformed-type",
+      "duplicate_field_wire": false,
+      "depth": 1,
+      "actual": "refuse",
+      "details": "ill-scoped or malformed type at depth 1: ('universe',)",
+      "expected_match": true
+    },
+    {
+      "name": "case164",
+      "sha256": "f13cdecc5c9a28847fa91c1bd11f96f0e8e7151e0ba20d0e3ed39b23ff80b3c7",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "reduction trace must be a bounded nonempty sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case165",
+      "sha256": "a44888f18b8537bdde527920170f4986ece5e36735fa1b9b29faab12fabd6a9d",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "reduction trace must be a bounded nonempty sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case166",
+      "sha256": "35d7964afcaba1f058d43770a524b9eb9405cb2e88f30ba2917b13d1b05b65f1",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "reduction trace must be a bounded nonempty sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case167",
+      "sha256": "1e1770cf057660810b07e4ba91b92a876ee85b30475c463c4b7320cff8df9ae5",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "reduction trace must be a bounded nonempty sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case168",
+      "sha256": "542b3e2eb31c357cba8fef74bc32d2a8e022e8d33e38c7d1ac2b08d7cd09111b",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "reduction trace does not start at the proved program",
+      "expected_match": true
+    },
+    {
+      "name": "case169",
+      "sha256": "1d42779f236f193be124bc2acc32ee6d07a5d9b6c2170e625bf4e8150cd561f4",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "app",
+          [
+            "i"
+          ],
+          [
+            "i"
+          ]
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case170",
+      "sha256": "ef8ef8dcf78a65bb5cfd527a8a77bb8b3bbecdb88a32ced81f427f67084627a7",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "invalid computation step",
+      "expected_match": true
+    },
+    {
+      "name": "case171",
+      "sha256": "e72f3e69d1188be5273907c65897b3338b4c0076d74a6066d2b8c188c683f054",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "accept",
+      "details": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "expected_match": true
+    },
+    {
+      "name": "case172",
+      "sha256": "f778f12ac90835870e0971c652a9c1794e2d8964ba361c7ff3b6e129bf28d8f4",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "malformed program: ('unknown',)",
+      "expected_match": true
+    },
+    {
+      "name": "case173",
+      "sha256": "c98b575d312f9312da73f65703e99cde92ea692c256f0c52abf89eaa300a54b0",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "malformed program: ('i', 0)",
+      "expected_match": true
+    },
+    {
+      "name": "case174",
+      "sha256": "bf4eb8d5b8992fda26c335ebf4ac394b9f501df7518cc68ae7e436682b8661b0",
+      "kind": "trace-shape-or-content",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "an expression must be a nonempty tagged sequence",
+      "expected_match": true
+    },
+    {
+      "name": "case175",
+      "sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case176",
+      "sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case177",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case178",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case179",
+      "sha256": "cee059389c67ff991dbd93934adc5a3a7442085766c2ee23ab85877398cf41b1",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case180",
+      "sha256": "b5a666eb4586fa4015f3c37018c0e6d6f37d28297d8484dd74150d488b0a4338",
+      "kind": "wrong-root-shape",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case181",
+      "sha256": "139ee2523fbf2252914fc290cce519252af3a5b28bf2550aca90110fccb69609",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case182",
+      "sha256": "ccc2ce56f3707378ee6fc349b5cf5b178aa0c2031c8b407bd7ed774d224918b6",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case183",
+      "sha256": "de1a22eacbcf43987bcb0c0f586402d479671546cc29dc581ba06a19b5bcbc54",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case184",
+      "sha256": "d98eb5dc082ea1238cc19ff729474e6427dee57ae3dd1168c27bc7d34ce88596",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case185",
+      "sha256": "46ba641766b3cf48ded564f3d712b678a52be2c3a5e38017f4ef9b645c62837a",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "proof node must be a dictionary with a named rule",
+      "expected_match": true
+    },
+    {
+      "name": "case186",
+      "sha256": "5709f9276b14e57be6c4e952fca19cffc411d03cb27dbdd0f60f1707d9ca455a",
+      "kind": "malformed-child",
+      "duplicate_field_wire": false,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "incorrect fields for rule i",
+      "expected_match": true
+    },
+    {
+      "name": "case187",
+      "sha256": "ded4b11dc1ef025a024e4c263eeea647c142368ba6e567584a0eb1af01037ff6",
+      "kind": "nested-duplicate",
+      "duplicate_field_wire": true,
+      "depth": 0,
+      "actual": "refuse",
+      "details": "encoding: duplicate key A",
+      "expected_match": true
+    }
+  ],
+  "case_count": 188,
+  "accepted": 54,
+  "refused": 134,
+  "duplicate_count": 41,
+  "cost_counterexample": [
+    {
+      "result": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "source_work": 22,
+      "export_work": 2,
+      "certificate_text": "(Cert.allI (Cert.i (TypeCode.var 0)))"
+    },
+    {
+      "result": [
+        [
+          "i"
+        ],
+        [
+          "all",
+          [
+            "arr",
+            [
+              "v",
+              0
+            ],
+            [
+              "v",
+              0
+            ]
+          ]
+        ]
+      ],
+      "source_work": 34,
+      "export_work": 3,
+      "certificate_text": "(Cert.allI (Cert.i (TypeCode.var 0)))"
+    }
+  ],
+  "status": "ALL_PASS"
+}

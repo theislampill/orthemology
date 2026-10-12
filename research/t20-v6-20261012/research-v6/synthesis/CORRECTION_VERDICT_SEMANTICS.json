@@ -1,0 +1,178 @@
+{
+  "id": "V6-VERDICT-REQPATH-COMPOSITION",
+  "title": "Bundle validators trust an incomplete supplied episode path",
+  "affected_source_hashes": {
+    "cross_record_validator": "3b75bca002978c6c47dc5120e9114fc8c601b7f7f6da36bdf061799b899fc1e5",
+    "schema_validator": "43d4caa093df07751ffa8ca0a0fb20fd4a3e72b3d301465ace34b59e2775c035",
+    "governance_requirements": "359f77e61848ac6e3654421b6e1480032e625508d6389d31ebe6b796f5b7c4e0",
+    "derive_reqpath": "9b08c33f516f3f3d98a7923a4a9d9df96938dfec6ce825576abcf69388f85dc3",
+    "claim_reason_requirements": "aa95d6e44f81041e7755f3ac22d9b3100529d452151f8e54a97495ac435a6a29",
+    "decision_0003_contract": "25a529b4ed76125f2a10acc824ead56a76ff3d35814457b00b59e07a944fedb4",
+    "decision_0012_contract": "cc9d4913a8c69406822a084314548f6315a481887668e66ad4a2a90a4372805f"
+  },
+  "source_locations": [
+    {
+      "source": "cross_record_validator",
+      "ranges": [
+        [
+          83,
+          89
+        ],
+        [
+          614,
+          626
+        ],
+        [
+          642,
+          647
+        ],
+        [
+          691,
+          723
+        ]
+      ]
+    },
+    {
+      "source": "schema_validator",
+      "ranges": [
+        [
+          94,
+          118
+        ]
+      ]
+    },
+    {
+      "source": "governance_requirements",
+      "ranges": [
+        [
+          20,
+          27
+        ]
+      ]
+    },
+    {
+      "source": "decision_0003_contract",
+      "ranges": [
+        [
+          7,
+          7
+        ]
+      ]
+    },
+    {
+      "source": "decision_0012_contract",
+      "ranges": [
+        [
+          3,
+          3
+        ],
+        [
+          33,
+          35
+        ]
+      ]
+    }
+  ],
+  "earlier_claim": "The bounded interface supplies a governed, result-free required episode path and derives claim-specific reasoning paths. Separate derive_reqpath fixture success and downstream claim-omission checks must not be interpreted as complete governed-path validation of arbitrary submitted bundles. The held Decision0003 requires governance-derived applicability rather than a discretionary list; Decision0012 amendment D8 and section6 expressly promise governance-derived claim paths and both episode/claim pathway recomputation.",
+  "precise_defect": "Both actual bundle validation paths aggregate the submitted required_path without first comparing it with the episode path derived from the governance table. Cross-record claim derivation is itself limited to that supplied episode path. Omitting an unconditional requirement can hide its explicitly recorded failing status. A separate fail-open configuration boundary catches any claim-rule load exception and suppresses the equality check when rules are unavailable.",
+  "counterexample_or_test": {
+    "bundle": "Schema-valid audit-ready episode, placement-claim ledger and verdict record; all seven unconditional statuses are present. PROCEDURE_RELIABLE is fail and the other six pass. Submitted required_path and claim req_reason contain only EVIDENCE_SUPPORT, so the supplied aggregates claim adequate while the seven-item governed conjunction is defective.",
+    "fresh_exact_cross_record_issue_counts": {
+      "reduced_episode_path": 0,
+      "full_path_correctly_defective": 0,
+      "full_path_false_adequacy": 2,
+      "claim_only_omission_with_full_episode_path": 1
+    },
+    "fresh_exact_schema_cli": "All three record shapes and every record-level semantic check pass. Overall exit 1 is solely the expected nine-example population check because this reduced replay supplies one example. Synthetic replay-local inventory lists ten exact schemas, not the original 30-schema inventory.",
+    "missing_rule_fault_injection": "Removing the rule file only in a separate exact-copy workspace changes the full-episode claim-only omission from one issue to zero; the held original configuration remains present and unchanged.",
+    "counterexample_artifact": {
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/INDEPENDENT_CONTROLS.json",
+      "sha256": "5e95d7cc5b3f6a8db1e5fbb13d65e87d636bdc6726dcf3039b905ff4dbe0a26e"
+    }
+  },
+  "evidence_status": {
+    "reading": "Six validator/deriver bodies and their exact rule/schema dependencies inspected in full; initial static finding then exact-copy replay of two distinct supplied Python sources in three process invocations.",
+    "reading_ledger": {
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/READING_LEDGER.json",
+      "sha256": "2b5dd539504cd5b39d9527cf8e6c7f1821d355b3b27d1194a3060bf4b6177e9c"
+    },
+    "execution_receipt": {
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/FRESH_EXACT_VALIDATOR_REPLAY.json",
+      "sha256": "c42f6b80b7b0e9fada64c43a2501bf357ee5453b869796c2fe97f6d8520d1c08"
+    },
+    "source_verification": {
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/VERIFICATION.json",
+      "sha256": "7d0aba3a9e4163a5afd8a500cd774c7a400a0f131194782e1eb5717de15cc110"
+    },
+    "cross_record_stdout_sha256": "0c262854bcaa65a649fc58ac21e583be264ea7d454bdb8f88be3ea486f3e7d0b",
+    "historical_suite_replay": false,
+    "repository_change": false,
+    "later_contract_corroboration": {
+      "path": "t20-v6-20261011/empirical_occurrence/verdict_semantics/DECISION_CONTRACT_CORROBORATION.json",
+      "sha256": "7e122e9b986e455043d27d587296f72286151e6cfbffafe15599eeae3fb432fe",
+      "scope": "Full contract bodies read by controller and independently returned to here. No new code execution or revised historical run status."
+    },
+    "root_historical_contract_reviews": {
+      "routes": [
+        {
+          "ledger": "t20-v6-20261011/root_math/historical_review38/READ_LEDGER.json",
+          "pointer": "$/records/6",
+          "record": {
+            "queue_index": 6,
+            "sha256": "1d660bf8bb955db966bebf87906a323f5978fd4c65b13b65b4a03263461374ea",
+            "path": "t20-consolidation-20261011/catalogue/objects/1d/1d660bf8bb955db966bebf87906a323f5978fd4c65b13b65b4a03263461374ea",
+            "bytes": 5340,
+            "lines": 31,
+            "status": "FULL_RECEIVED_BODY_EXAMINED",
+            "execution": "NO_NEW_REPLAY",
+            "substantive_scope": "Claim-relative strict soundness supersedes episode-wide conjunct; governance-derived ReqReason and omission attack preserve factivity without unrelated route/closure contamination."
+          },
+          "credit": "Root whole-body prior reading reused; no fresh review/body or execution credit here."
+        },
+        {
+          "ledger": "t20-v6-20261011/root_math/historical_review38/READ_LEDGER.json",
+          "pointer": "$/records/7",
+          "record": {
+            "queue_index": 7,
+            "sha256": "1de093e2d5d3326cf99acca73ceaca73e97bc2882a975e543eab7e98c0c62a92",
+            "path": "t20-consolidation-20261011/catalogue/objects/1d/1de093e2d5d3326cf99acca73ceaca73e97bc2882a975e543eab7e98c0c62a92",
+            "bytes": 6360,
+            "lines": 37,
+            "status": "FULL_RECEIVED_BODY_EXAMINED",
+            "execution": "NO_NEW_REPLAY",
+            "substantive_scope": "R4 phase D resolves inheritance, token owner-scope, references and UTC ordering; declaration-shaped ReqReason still depends on trustworthy declared shape and bundle scope."
+          },
+          "credit": "Root whole-body prior reading reused; no fresh review/body or execution credit here."
+        },
+        {
+          "ledger": "t20-v6-20261011/root_math/historical_review38/READ_LEDGER.json",
+          "pointer": "$/records/11",
+          "record": {
+            "queue_index": 11,
+            "sha256": "406456a2f5ddde434fcef401b123a105890aedbb024140810ce0285f965500c6",
+            "path": "t20-consolidation-20261011/catalogue/objects/40/406456a2f5ddde434fcef401b123a105890aedbb024140810ce0285f965500c6",
+            "bytes": 8013,
+            "lines": 39,
+            "status": "FULL_RECEIVED_BODY_EXAMINED",
+            "execution": "NO_NEW_REPLAY",
+            "substantive_scope": "R3 formal audit contains subsequently corrected noncircularity claim, ambiguous claim-level soundness formula, and plural-token extension wording; preserve revised interpretation."
+          },
+          "credit": "Root whole-body prior reading reused; no fresh review/body or execution credit here."
+        }
+      ],
+      "interpretation": "Phase C/D support intended governance-derived claim paths and shape-relative bundle scope; R3 noncircularity wording is historical and superseded. None substitutes for exact validator enforcement or actual shape truth."
+    },
+    "scope_qualification_updated_utc": "2026-10-11T22:19:24.862496+00:00"
+  },
+  "independent_review": "Independent worker source inspection and independently authored counterbundles with paired positive/negative controls. Parent requested and authorized the fresh exact-copy run. No second independent reviewer of this new correction is claimed. Subsequent controller full reading of Decisions0003/0012 independently corroborates the stated contract; this is not a second independent execution review of the counterbundle.",
+  "corrected_scope": "These pins check submitted-path aggregation and conditional claim projection, but do not certify completeness of the governed episode path. First derive and compare the path from an explicit schema-validated declared episode shape and the governing table, then derive claim projections; missing or invalid governing configuration should fail closed. This would establish consistency relative to the declared shape and governing rules. Schema validity and recomputation do not establish that the supplied shape faithfully describes the actual episode, nor independently warrant governance applicability. This is a proposed bounded repair, not an applied source change.",
+  "surviving_positive_result": "Claim-relative strict soundness remains a coherent declared distinction: adequate relevant reasoning plus factive truth linkage. Nonfactive reliability, ex-ante justification and evidence adequacy permit correct-by-luck and justified rare error. The downstream claim-only omission check demonstrably works when the episode path is complete and rules load.",
+  "current_integration_status": "Research qualification and later explicit-contract corroboration sealed; dedicated correction ready for parent aggregation. Historical source and shared master register unchanged.",
+  "limitations": [
+    "Exact held pins only; no unknown later repair ruled out.",
+    "No actual-world claim truth, premise warrant or universal governance adequacy follows.",
+    "Schema CLI overall result is an expected reduced-harness failure, not a complete historical CI pass.",
+    "The separate metaortheme anyOf/exactly-one wording mismatch is recorded in the scoped report, not merged with this path-composition defect.",
+    "The intended governance-derived contract, enforcement by these exact validator bytes, and independently warranted truth of the declared episode shape are three separate evidential questions. The counterexample omits an unconditional requirement, so it does not depend on proving an optional shape flag false."
+  ]
+}

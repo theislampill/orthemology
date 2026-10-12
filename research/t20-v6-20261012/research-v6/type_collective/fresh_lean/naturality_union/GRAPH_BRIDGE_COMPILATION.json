@@ -1,0 +1,18 @@
+{
+  "source_path": "t20-v6-20261011/type_collective/GraphBridgeNegative.lean",
+  "sha256": "e77646dbd733a6fec1bb66c1fd49acbf84f27831490e831a2fece59ee69b158f",
+  "compiler_path": "private-locator:995d2f31daa55d5ebca1",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "argv": [
+    "lean",
+    "--trust=0",
+    "-o",
+    "GraphBridgeNegative.olean",
+    "GraphBridgeNegative.lean"
+  ],
+  "cwd": "private-locator:f1900d3b9d6b3c2ceb16",
+  "exit_code": 0,
+  "log_path": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/GraphBridgeNegative.log",
+  "dependency_receipt": "t20-v6-20261011/type_collective/fresh_lean/naturality_union/FRESH_COMPILATION.json",
+  "scope": "Fresh corollary uses exact freshly compiled dependencies, no historical research oleans."
+}

@@ -1,0 +1,1980 @@
+{
+  "utc": "2026-10-12T15:34:32.904103+00:00",
+  "meaning": "Metadata currentness repair only. Existing completed source reading/generated qualifications control; no new source reading, theorem acceptance or execution. Historical intake remains explicit and old bytes retained.",
+  "files": [
+    {
+      "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_DISPOSITIONS.json",
+      "before_sha256": "b54e1f91989eb12953d95c75c6fb3d0462eae1e1aa59a039c6fa6da215a359e6",
+      "after_sha256": "fee71c950528b937150533427fa2705523674cacc839596603fdbb430487477e",
+      "historical_snapshot": "t20-v6-20261011/type_collective/intake_currentness_repair/historical_ledger_snapshots/b54e1f91989eb12953d95c75c6fb3d0462eae1e1aa59a039c6fa6da215a359e6.json",
+      "changed_records": [
+        {
+          "index": 0,
+          "sha256": "00ed01e669981b0f586d0ed26db10a1db7fd8e66245e3462358972d821c5d476",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/195",
+              "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+              "completed_record": {
+                "source_id": "identity-src-36dc841cc0bbd1a3940d",
+                "path": "t20-v6-20261011/operational_successors/sources/ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e/P01PER.lean",
+                "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    234
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/00_COMPLETE.diff",
+              "sha256": "7a2964921b6c91cbb173d31cb34ce9a0aaa6d099b7d9f5ae903a550796fed1eb"
+            },
+            "baseline_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e"
+          }
+        },
+        {
+          "index": 1,
+          "sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 974,
+              "line_range": [
+                1,
+                189
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/05/0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "sha256": "13f390fdabb6bfea8bc91a3fedb9320c14b7e4817335759bfba3d5240bfc289e",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 982,
+              "line_range": [
+                1,
+                96
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/e3/e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/02_FROM_25.diff",
+              "sha256": "42bfc65342434d16cbcf32a1c79bc741dd2806b0be8cc968cbfd53666d2614b7"
+            },
+            "baseline_sha256": "e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+          }
+        },
+        {
+          "index": 3,
+          "sha256": "2955aa515e77baf2f5e2de8341819891177a5d3b00b88092be328738858c41ac",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/198",
+              "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+              "completed_record": {
+                "source_id": "identity-src-4c1f8e3caa0a7cdb996a",
+                "path": "t20-v6-20261011/operational_successors/sources/d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498/P01DependentCore.lean",
+                "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    426
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/03_COMPLETE.diff",
+              "sha256": "e09d00ec248c849084885956475897466b81b25e48948309ea0ff17aaffba956"
+            },
+            "baseline_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498"
+          }
+        },
+        {
+          "index": 4,
+          "sha256": "33f931b7f03f0237f8f9e3d17b4a0884ceb55454b74a2731c995d01ff80e0c7f",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 974,
+              "line_range": [
+                1,
+                189
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/05/0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/04_FROM_01.diff",
+              "sha256": "901264ef6afce5d0ac43e7400c24643e0f92b4cd4c4cf59d158f2ae25e501713"
+            },
+            "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+          }
+        },
+        {
+          "index": 5,
+          "sha256": "39a2e310e2b6f0d9a322b8145f12e8e284a09cbaf0a98135e4bda11ddd4f2cd0",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 975,
+              "line_range": [
+                1,
+                53
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/39/39a2e310e2b6f0d9a322b8145f12e8e284a09cbaf0a98135e4bda11ddd4f2cd0"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "sha256": "415336d97fa18e256f1c77100f628f4dbc68e6b99c5d46e98b429a7c5214f298",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/217",
+              "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+              "completed_record": {
+                "source_id": "identity-src-5be50422683e5fc79a2a",
+                "path": "t20-v6-20261011/operational_successors/sources/9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a/P01SystemF.lean",
+                "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    187
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/06_COMPLETE.diff",
+              "sha256": "718e84dcef2a06e4968219e3951f4a59cf3ff04bfa2e0a90706d728be5dfd3d4"
+            },
+            "baseline_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+          }
+        },
+        {
+          "index": 7,
+          "sha256": "425bb155ead9d21ca41055260e8d4f72951b8e66e91900de3840464dca4da42f",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/200",
+              "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+              "completed_record": {
+                "source_id": "identity-src-dfe0c149e3ee7205ea3f",
+                "path": "t20-v6-20261011/operational_successors/sources/74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610/P01DependentSubstitution.lean",
+                "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    170
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/07_COMPLETE.diff",
+              "sha256": "437b843f0d10a8632f9703b982d008f82d0039d8ffdadf84b74354fd348c7398"
+            },
+            "baseline_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+          }
+        },
+        {
+          "index": 8,
+          "sha256": "522f44f818d87a3236eeb9e69ce0f34555d4a65b5e85243bf1ab4f0f1902a09f",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 976,
+              "line_range": [
+                1,
+                77
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/52/522f44f818d87a3236eeb9e69ce0f34555d4a65b5e85243bf1ab4f0f1902a09f"
+            }
+          }
+        },
+        {
+          "index": 9,
+          "sha256": "604c355ab04ff6603144ee4e879dbe5d52ddbfbb7d0956fe3e8cbeac3dfec8d7",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/199",
+              "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+              "completed_record": {
+                "source_id": "identity-src-680aaab2bf3e6a15db9e",
+                "path": "t20-v6-20261011/operational_successors/sources/82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa/P01DependentFundamental.lean",
+                "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    198
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/09_COMPLETE.diff",
+              "sha256": "fcee6790233f6d636ec945480c4824feee0e27aff4fb75ccd387a69ad5b2a19c"
+            },
+            "baseline_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa"
+          }
+        },
+        {
+          "index": 10,
+          "sha256": "6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 977,
+              "line_range": [
+                1,
+                73
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/6e/6e04a5bd8477118c5d8c4e3fcc4987c89163833778d185f1632e1679180727c0"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "sha256": "7022dccf5f978feebb34db9aebc8232ce38f75f53e493e961da917f9a1710b8a",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/207",
+              "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+              "completed_record": {
+                "source_id": "identity-src-bc0367b194e8459f3276",
+                "path": "t20-v6-20261011/operational_successors/sources/5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6/P01Certificates.lean",
+                "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    124
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/11_COMPLETE.diff",
+              "sha256": "16952d7cec1152fcf84e4f5e478ab7718b8219efa0240b271b51a7088a448735"
+            },
+            "baseline_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6"
+          }
+        },
+        {
+          "index": 12,
+          "sha256": "707ac140dc356f27647a416b64f483bf3c814e14b1b025b87cf69b69752051a0",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 978,
+              "line_range": [
+                1,
+                47
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/70/707ac140dc356f27647a416b64f483bf3c814e14b1b025b87cf69b69752051a0"
+            }
+          }
+        },
+        {
+          "index": 13,
+          "sha256": "72aa975f546c7de1d02975f9c370b3d7b4497abdc92f9e06f391716ea674602b",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 982,
+              "line_range": [
+                1,
+                96
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/e3/e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/13_FROM_25.diff",
+              "sha256": "aefad1b5204342fee0af73ccd1a40730a2dd421a903f73790ee0b502848a3bea"
+            },
+            "baseline_sha256": "e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+          }
+        },
+        {
+          "index": 14,
+          "sha256": "72b9aafd23af3b63a94571b3c11118939e34fc8a07fa4b9c46dfdd5507704b7a",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 979,
+              "line_range": [
+                1,
+                46
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/72/72b9aafd23af3b63a94571b3c11118939e34fc8a07fa4b9c46dfdd5507704b7a"
+            }
+          }
+        },
+        {
+          "index": 15,
+          "sha256": "9e89031c0c2c0c81fb8075eadc44e9e892545d19d8d6b5fa1566b8130343309c",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/218",
+              "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+              "completed_record": {
+                "source_id": "identity-src-0460ccd8752a7a8fc39d",
+                "path": "t20-v6-20261011/operational_successors/sources/538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d/P01Translation.lean",
+                "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    153
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/15_COMPLETE.diff",
+              "sha256": "913f00824c1363861700c61677b7f441e8b94dc3b39f23bff68a5fd12c97fdb0"
+            },
+            "baseline_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d"
+          }
+        },
+        {
+          "index": 16,
+          "sha256": "a1e0123fa5e9a7b64b08effdc318eeef8178b235f9817accc56f9c9c15a5d885",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 974,
+              "line_range": [
+                1,
+                189
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/05/0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/16_FROM_01.diff",
+              "sha256": "ed8d296e1c13c00eb8eed0ed46e9b8b02381f4c25fd84394f6e333ad9fa9ca4a"
+            },
+            "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+          }
+        },
+        {
+          "index": 17,
+          "sha256": "acd42111458c34eff8f3fd321a1c3122bc6c78d9600610a1db7f39cdf5232469",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 974,
+              "line_range": [
+                1,
+                189
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/05/0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/17_FROM_01.diff",
+              "sha256": "9344e6d0cf192390cca002748de85d7c9fb15236cd8289eb702794f875cce757"
+            },
+            "baseline_sha256": "0507618b6072e18112aa203e98e82bafee2d5972a0e06bcbb3a9eb3e0dd0fb59"
+          }
+        },
+        {
+          "index": 18,
+          "sha256": "b8a6e18373d2edcb09a9e038973c2db6d7dc1733442bb1931c9f43dad1f7c581",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/205",
+              "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+              "completed_record": {
+                "source_id": "identity-src-4576695350242d46a931",
+                "path": "t20-v6-20261011/operational_successors/sources/7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82/P01Examples.lean",
+                "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    83
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/18_COMPLETE.diff",
+              "sha256": "35fda7b32871c0ff9cd61df5e9a4eb5eadd2d354a7de6452124963dd68238506"
+            },
+            "baseline_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82"
+          }
+        },
+        {
+          "index": 19,
+          "sha256": "b9913548690699c680f724085d168bd614816cb0b660d3fce4773c86ea824524",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_NEW_FULL_BODY_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 982,
+              "line_range": [
+                1,
+                96
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/e3/e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/19_FROM_25.diff",
+              "sha256": "5bfc1c95e1f5b49ec7971483b6d93f3dd76af3853eafb2ccfce2488dc996395f"
+            },
+            "baseline_sha256": "e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+          }
+        },
+        {
+          "index": 20,
+          "sha256": "c19e5d1a8134f9f76b5b3d4de44c6cd31caa899359f7c15e553f66f655d16208",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 981,
+              "line_range": [
+                1,
+                103
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/c1/c19e5d1a8134f9f76b5b3d4de44c6cd31caa899359f7c15e553f66f655d16208"
+            }
+          }
+        },
+        {
+          "index": 21,
+          "sha256": "c47660fa966b32286b445a42f9c4c04436e3fe33dcd23b8a93299796fa5fdf75",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/200",
+              "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+              "completed_record": {
+                "source_id": "identity-src-dfe0c149e3ee7205ea3f",
+                "path": "t20-v6-20261011/operational_successors/sources/74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610/P01DependentSubstitution.lean",
+                "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    170
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/21_COMPLETE.diff",
+              "sha256": "e30014369f0ff332f362bf50e3eda761460d0b10b62911e6a755faf8aee967d4"
+            },
+            "baseline_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+          }
+        },
+        {
+          "index": 22,
+          "sha256": "c6e79d0f84e9b7a6181a71aaef3109a3395832ce8d45afc03c0dc280e129cd6d",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/early_remaining/p01ac_compiler/READ_LEDGER.json",
+              "sha256": "30c147bf9179b2041ceab505816291d4686a0b12d76c2b5b64f76600bea07883",
+              "pointer": "$/sources/61",
+              "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+              "completed_record": {
+                "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+                "name": "P01TypeAlgebra.lean",
+                "path": "t20-consolidation-20261011/catalogue/objects/22/222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+                "lines": 123,
+                "imports": [
+                  "Mathlib.Data.Bool.Basic",
+                  "FiniteBridge"
+                ],
+                "resolution": "same preserved compiler-transport/joint-review lineage",
+                "lineage_locations": [
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P01_Canonical_Carrier_Projection_2026-09-30.zip!/qualification-final/sources/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P01_Canonical_Carrier_Projection_Independent_Audit_2026-09-30.zip!/sources/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P01_Qualified_Shadow_2026-09-30.zip!/shadow-packet/formal/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P01_Qualified_Shadow_2026-09-30.zip!/strict-0004/project/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/P01_Raw_Index_Dependent_Successor_2026-09-30.zip!/qualification-final/sources/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/archives/Successor_Independent_Audit_20260930.zip!/p01/sources/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/evidence/dependent-independent/sources/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/sources/p01-canonical-projection/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/sources/p01-dependent/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/sources/p01-repaired/P01TypeAlgebra.lean",
+                  "final-delivery/Orthemology_v5_Frontier_Research_Return_20260930.zip!/sources/p01-successor/P01TypeAlgebra.lean",
+                  "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/hase-joint-proof-uniqueness-preservation-20261011-ae3dd529872c/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/sources/P01TypeAlgebra.lean",
+                  "recovery-20261011/remaining-archives/rational-kernel-additive-preservation-20261011.zip!/rational-kernel-additive-preservation-20261011/payload/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "recovery-20261011/remaining-archives/safe-extracts/correction-interfaces-intermediate-collection-20261011/correction-interfaces-intermediate-collection-20261011/components/hase-joint-proof-uniqueness-preservation-20261011.zip!/hase-joint-proof-uniqueness-preservation-20261011/evidence/hase-joint-proof-uniqueness-independent-review-20261010/sources/P01TypeAlgebra.lean",
+                  "recovery-20261011/remaining-archives/safe-extracts/rational-kernel-additive-preservation-20261011/rational-kernel-additive-preservation-20261011/payload/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/archives/T20bigupdatenext02(2).zip!/Joint_Induction_Computation_Intermediate_Evidence_20261010.zip!/Joint_Induction_Computation_Intermediate_Evidence_20261010/retained-sources/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/archives/T20bigupdateprev(2).zip!/hase-type-completion-evidence-20261010.zip!/hase-type-completion-evidence-20261010/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Finite_Raw_And_Typed_Observers_Evidence_20261010.zip!/T20_Finite_Raw_And_Typed_Observers_Evidence_20261010/inherited/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/T20_Henkin_Model_And_Source_Independence_Evidence_20261010.zip!/T20_Henkin_Model_And_Source_Independence_Evidence_20261010/inherited/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/hase-type-completion-evidence-20261010-v2.zip!/hase-type-completion-evidence-20261010-v2/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdate.zip!/hase-type-completion-evidence-20261010-v3.zip!/hase-type-completion-evidence-20261010-v3/hase-imported-compiler-transport-20261010/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/Orthemology_Codex_FastPath_Launch_v2_20261008.zip!/Orthemology_Codex_FastPath_Launch_v2_20261008/inputs/Orthemology_T16_T20_Consolidated_v1_20261007.zip!/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Eighteenth_Research_Final_Evidence_v2_20261006.zip!/Eighteenth_Public_Code_and_Replay_Evidence_v2/code-evidence/lean/hase/sources/P01TypeAlgebra.lean",
+                  "t20-synthesis-owner-input-20261011/recovered-missing/T20bigupdateprev02(1).zip!/Orthemology_Comprehensive_Research_Handoff_20261009.zip!/Orthemology_Comprehensive_Research_Handoff_20261009/sources/recovered_archives/Orthemology_Codex_FastPath_Launch_v2_20261008.zip!/Orthemology_Codex_FastPath_Launch_v2_20261008/inputs/Orthemology_T16_T20_Consolidated_v1_20261007.zip!/Orthemology_T16_T20_Consolidated_v1_20261007/originals-t16-t19/Orthemology_Sixteenth_Research_Final_Evidence_v1_20261005.zip!/Sixteenth_Orthemology_Public_Evidence_Candidate_v1/proof-core/Sixteenth_Orthemology_Proof_Source_Recovered_v1.zip!/Sixteenth_Orthemology_Proof_Source_Recovered_v1/lean/P01TypeAlgebra.lean"
+                ],
+                "fresh_Lean_replay": false,
+                "disposition": "EXACT_REUSE_PRIOR_V5_FULL_BODY",
+                "new_read_ranges": [],
+                "read_credit": {
+                  "ledger": "t20-closure-audit-20261011/root_types/COVERAGE.json",
+                  "status": "prior_full_body_read",
+                  "scope": "FULL_BODY_READ"
+                }
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/22_COMPLETE.diff",
+              "sha256": "52ea50aabd52d5df801192ca6fba22e3bea17c66d7b573ab4c266d5547649e89"
+            },
+            "baseline_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+          }
+        },
+        {
+          "index": 23,
+          "sha256": "c79a594c05a4a9ef0e77a7f5b539a0feac278aa20cfbd04f63d59163c8626462",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/204",
+              "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+              "completed_record": {
+                "source_id": "identity-src-883b250907ae8b70dc1c",
+                "path": "t20-v6-20261011/operational_successors/sources/57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8/P01Polynomials.lean",
+                "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    214
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/23_COMPLETE.diff",
+              "sha256": "dc9ec6b4b8606f983a55eadb808adfefcfc47a5f0ea5f2b2fed2a32c51a5c250"
+            },
+            "baseline_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8"
+          }
+        },
+        {
+          "index": 24,
+          "sha256": "e1be17a5de1c9e72d1ba8ebbfd9a97616353eeb4cc2637a9645528e378d15d7b",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/196",
+              "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+              "completed_record": {
+                "source_id": "identity-src-6eaf2babfe3594350d70",
+                "path": "t20-v6-20261011/operational_successors/sources/9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e/P01Candidates.lean",
+                "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    265
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/24_COMPLETE.diff",
+              "sha256": "21abad2dda71da1b5766f06f145f03ea0bb53b465b5329f83f1e4516194d394f"
+            },
+            "baseline_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e"
+          }
+        },
+        {
+          "index": 25,
+          "sha256": "e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 982,
+              "line_range": [
+                1,
+                96
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/e3/e3bd6711a15a1ff00613f6ceec44c89e6b0fb158858d7421812e2603fb6d0d2f"
+            }
+          }
+        },
+        {
+          "index": 26,
+          "sha256": "eabaccba66a4c32c78821a4942941a51ad94117e8017f05a0f6c207e23a72f9a",
+          "existing_completed_disposition": "COMPLETE_DIFF_AGAINST_EXACT_SUBSTANTIVE_BASELINE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+              "sha256": "ed2210877e64cbc47d23e9c67f3d8f0ef05cd5832ec864f61153292faef9df61",
+              "pointer": "$/203",
+              "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+              "completed_record": {
+                "source_id": "identity-src-3e35be9cc2bf619e531b",
+                "path": "t20-v6-20261011/operational_successors/sources/e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c/P01ContextualJ.lean",
+                "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+                "read_scope": "full body",
+                "line_ranges": [
+                  [
+                    1,
+                    75
+                  ]
+                ],
+                "fresh_compilation": false,
+                "inherited_kernel_status": "kept separate from direct source reading; see family evidence",
+                "application_warrant": "not established by source reading"
+              }
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/p01_variants/26_COMPLETE.diff",
+              "sha256": "131b5fc6028813a20bf59ef50cdaaa7c2505fe370a07e77f92f2ff2721e8368a"
+            },
+            "baseline_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c"
+          }
+        },
+        {
+          "index": 27,
+          "sha256": "fb20ba7d5a9da5d32b6695f1eaf7d14abb6e7392659a4fd4b9eb6a5dec147d1d",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/P01_P03_VARIANT_SCOPE.md",
+              "sha256": "bd243e27718f72d1fb120d94f554550016755fa33c3da4b673bfe81bdae34e83"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 980,
+              "line_range": [
+                1,
+                70
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/fb/fb20ba7d5a9da5d32b6695f1eaf7d14abb6e7392659a4fd4b9eb6a5dec147d1d"
+            }
+          }
+        }
+      ],
+      "record_count": 28
+    },
+    {
+      "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_DISPOSITIONS.json",
+      "before_sha256": "65a73fc754c9c1ab5fe9d1307a31b0228c4f3971cf014fd1c969e22addb2c2f4",
+      "after_sha256": "97f6f93a14d1edce6f1e54b868f22323eb3e4c9260a2cab9bafc592eae0c6ecd",
+      "historical_snapshot": "t20-v6-20261011/type_collective/intake_currentness_repair/historical_ledger_snapshots/65a73fc754c9c1ab5fe9d1307a31b0228c4f3971cf014fd1c969e22addb2c2f4.json",
+      "changed_records": [
+        {
+          "index": 0,
+          "sha256": "09a3eb40ec65389a7b06a2d7a829d94f76d3bdb6958476c4dc728ea01029c5f0",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 985,
+              "line_range": [
+                1,
+                18
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/09/09a3eb40ec65389a7b06a2d7a829d94f76d3bdb6958476c4dc728ea01029c5f0"
+            }
+          }
+        },
+        {
+          "index": 1,
+          "sha256": "0a87d4ddb3cba9f45ac2cdd298668cfc6403f75aa06d7e6877f774cde7dd049c",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 986,
+              "line_range": [
+                1,
+                12
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/0a/0a87d4ddb3cba9f45ac2cdd298668cfc6403f75aa06d7e6877f774cde7dd049c"
+            }
+          }
+        },
+        {
+          "index": 2,
+          "sha256": "10e2bea7ac848a7b9e9419397f3f5e1910d58124853c3f972b8c30c71d521dc5",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 987,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/10/10e2bea7ac848a7b9e9419397f3f5e1910d58124853c3f972b8c30c71d521dc5"
+            }
+          }
+        },
+        {
+          "index": 3,
+          "sha256": "1496edf136dc93ea9e2cce87effd7d29ed0fd11e68d46742b8df38643b5f2c33",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 988,
+              "line_range": [
+                1,
+                6
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/14/1496edf136dc93ea9e2cce87effd7d29ed0fd11e68d46742b8df38643b5f2c33"
+            }
+          }
+        },
+        {
+          "index": 4,
+          "sha256": "14db6ce3664ed1f0415a9e9c0dffaefd1eb53954a889f3827c9feca1613f23a6",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 989,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/14/14db6ce3664ed1f0415a9e9c0dffaefd1eb53954a889f3827c9feca1613f23a6"
+            }
+          }
+        },
+        {
+          "index": 5,
+          "sha256": "172feddec49ff564c14085fa8d1448ad681b29a9098d67915a43928f54634496",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 990,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/17/172feddec49ff564c14085fa8d1448ad681b29a9098d67915a43928f54634496"
+            }
+          }
+        },
+        {
+          "index": 6,
+          "sha256": "1b83248dc6fe0975f18099558e0a30332105019bd6c282598d32fe50510efea3",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 991,
+              "line_range": [
+                1,
+                5
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/1b/1b83248dc6fe0975f18099558e0a30332105019bd6c282598d32fe50510efea3"
+            }
+          }
+        },
+        {
+          "index": 7,
+          "sha256": "3238b21fe5dae7149de4e1c622e78a50ed723df0cac20ed654247cd2bcee8678",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 992,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/32/3238b21fe5dae7149de4e1c622e78a50ed723df0cac20ed654247cd2bcee8678"
+            }
+          }
+        },
+        {
+          "index": 8,
+          "sha256": "3d3e8fffa94e2376312374cc05f3a43d79c357e0e4b3b7478053f13fa3f9881b",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 993,
+              "line_range": [
+                1,
+                5
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/3d/3d3e8fffa94e2376312374cc05f3a43d79c357e0e4b3b7478053f13fa3f9881b"
+            }
+          }
+        },
+        {
+          "index": 9,
+          "sha256": "4452221dbc0666ddf29c9a302b7ea881fee3b4c2a97578fca39b8d8dfa579e4a",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 994,
+              "line_range": [
+                1,
+                41
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/44/4452221dbc0666ddf29c9a302b7ea881fee3b4c2a97578fca39b8d8dfa579e4a"
+            }
+          }
+        },
+        {
+          "index": 10,
+          "sha256": "49c59f3423376e3810dca6539175d6bc47436babc1d9012a1660865d46fd0617",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 995,
+              "line_range": [
+                1,
+                5
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/49/49c59f3423376e3810dca6539175d6bc47436babc1d9012a1660865d46fd0617"
+            }
+          }
+        },
+        {
+          "index": 11,
+          "sha256": "4a920ea752d0acef94e7df84c64e86755dc2732c9e4cf90f8197e7d808ec8234",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 996,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/4a/4a920ea752d0acef94e7df84c64e86755dc2732c9e4cf90f8197e7d808ec8234"
+            }
+          }
+        },
+        {
+          "index": 12,
+          "sha256": "568831c8e9f6226328560c0e2d1d6803dbcab5a79341cc074ba91c1cb73b268e",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 997,
+              "line_range": [
+                1,
+                7
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/56/568831c8e9f6226328560c0e2d1d6803dbcab5a79341cc074ba91c1cb73b268e"
+            }
+          }
+        },
+        {
+          "index": 13,
+          "sha256": "61a7fbcb6076d71bf5d2c4fd02128cc76103acab57e53ba1af59dc0a1dd2a3ee",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 998,
+              "line_range": [
+                1,
+                7
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/61/61a7fbcb6076d71bf5d2c4fd02128cc76103acab57e53ba1af59dc0a1dd2a3ee"
+            }
+          }
+        },
+        {
+          "index": 14,
+          "sha256": "680346cc7b3fcaa3ca96b5818de33f673a1ae704d36c3da72b7b0d45781fe53d",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 999,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/68/680346cc7b3fcaa3ca96b5818de33f673a1ae704d36c3da72b7b0d45781fe53d"
+            }
+          }
+        },
+        {
+          "index": 15,
+          "sha256": "86f9c6f6a43bc996b9c2d56e669519345f167799512a713de05cdead42288175",
+          "existing_completed_disposition": "EXACT_PRIOR_GENERATED_QUALIFICATION",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "generated_qualification": {
+              "path": "t20-v6-20261011/type_collective/T16_CORE_QUALIFICATION_COVERAGE.json",
+              "sha256": "2a1a96d6db3df755aa6286d01a231c7eae4db4f6796134bde7f8f2e7a92d03d1",
+              "pointer": "$/rows/323",
+              "qualification": {
+                "disposition": "GENERATED_REGRESSION_QUALIFIED",
+                "scope": "Exact byte regeneration from fully read independent finite evaluator/generator; 64 trees, 704 pointwise values, 64 zero-addition, 64 canonical reification examples. No tokenwise manual read or fresh Lean replay of this fixture claimed.",
+                "receipt": "fresh_lean/t16_python_controls/FRESH_COMPILATION.json"
+              }
+            }
+          }
+        },
+        {
+          "index": 16,
+          "sha256": "91c2125bd2b75af9b46dc56c47fe6385726cdf7af3d89f943ef4bb696d483dc6",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1000,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/91/91c2125bd2b75af9b46dc56c47fe6385726cdf7af3d89f943ef4bb696d483dc6"
+            }
+          }
+        },
+        {
+          "index": 17,
+          "sha256": "a482c89d7f7114922fe05059bfe375e368a44769d4c6ad020a8d6559880b813d",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1005,
+              "line_range": [
+                1,
+                186
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/a4/a482c89d7f7114922fe05059bfe375e368a44769d4c6ad020a8d6559880b813d"
+            }
+          }
+        },
+        {
+          "index": 18,
+          "sha256": "be410b79282a16f264dfe6f989c7bbf19153613b796afe76298e247bb4d79b37",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1001,
+              "line_range": [
+                1,
+                4
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/be/be410b79282a16f264dfe6f989c7bbf19153613b796afe76298e247bb4d79b37"
+            }
+          }
+        },
+        {
+          "index": 19,
+          "sha256": "c17cf5cd521c3ceecd277cca968b75f736be1111c55550bef8678b0d00d18dc4",
+          "existing_completed_disposition": "COMPLETE_DIFF_WITH_FULL_BODY_BASE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 538,
+              "line_range": [
+                1,
+                221
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/6b/6b293ac5119cc072754413a7e9b084db0a3b2bcbd65a724b8646cf5666f23429"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/FINAL_RESIDUE_19.diff",
+              "sha256": "77336d374b3544a9410df560ad68c0795ebfe1837988a0c104eb97fbba8f3ea0"
+            },
+            "baseline_sha256": "6b293ac5119cc072754413a7e9b084db0a3b2bcbd65a724b8646cf5666f23429"
+          }
+        },
+        {
+          "index": 20,
+          "sha256": "c3f78e7e06bdfcf714937ac00bd55969abbfa67a7e7e5d1aba8b04b9d88eb265",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1002,
+              "line_range": [
+                1,
+                7
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/c3/c3f78e7e06bdfcf714937ac00bd55969abbfa67a7e7e5d1aba8b04b9d88eb265"
+            }
+          }
+        },
+        {
+          "index": 21,
+          "sha256": "c9a29f2486c204afae58a281f857529c0346b449b2658583da92572906b083bf",
+          "existing_completed_disposition": "COMPLETE_DIFF_WITH_FULL_BODY_BASE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 539,
+              "line_range": [
+                1,
+                162
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/d0/d0c1117bdce0d2990b89534cd88ad64d802c3faee533f22816a04314551bac91"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/FINAL_RESIDUE_21.diff",
+              "sha256": "43624c554692661e0e5ba2878a5a3224bcb70f46f2e3a34f6e1d57ed79fc18f1"
+            },
+            "baseline_sha256": "d0c1117bdce0d2990b89534cd88ad64d802c3faee533f22816a04314551bac91"
+          }
+        },
+        {
+          "index": 22,
+          "sha256": "dffb40323e4c09087ad17f72aa09d0d090c4ea9a7a639899ba620919e06d678c",
+          "existing_completed_disposition": "COMPLETE_DIFF_WITH_FULL_BODY_BASE",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "baseline_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1005,
+              "line_range": [
+                1,
+                186
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/a4/a482c89d7f7114922fe05059bfe375e368a44769d4c6ad020a8d6559880b813d"
+            },
+            "complete_comparison": {
+              "path": "t20-v6-20261011/type_collective/FINAL_RESIDUE_22.diff",
+              "sha256": "2d170b0f89e05e4a2a9d10008594c17e17eaa949f501ecd1ef79a39efe212990"
+            },
+            "baseline_sha256": "a482c89d7f7114922fe05059bfe375e368a44769d4c6ad020a8d6559880b813d"
+          }
+        },
+        {
+          "index": 23,
+          "sha256": "e505bb117b0cf9a9b3a58cecf28be9c5e9896e0f758c41903f2cc5f4af961fe6",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1003,
+              "line_range": [
+                1,
+                8
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/e5/e505bb117b0cf9a9b3a58cecf28be9c5e9896e0f758c41903f2cc5f4af961fe6"
+            }
+          }
+        },
+        {
+          "index": 24,
+          "sha256": "ed53760cbbd18f788c6966b93c45f3d02b90fc6969781a6dee959924f90a1a43",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1006,
+              "line_range": [
+                1,
+                67
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/ed/ed53760cbbd18f788c6966b93c45f3d02b90fc6969781a6dee959924f90a1a43"
+            }
+          }
+        },
+        {
+          "index": 25,
+          "sha256": "f57b2186ccf6738771c5cc8c384f41736fa8ee87617b1a8de31024ef4941adfd",
+          "existing_completed_disposition": "DIRECT_FULL_BODY_READ",
+          "moved_fields": [
+            "method",
+            "semantic_read_credit",
+            "reading_credit",
+            "routing_status",
+            "prior_reading_indices",
+            "route_basis",
+            "admission",
+            "content_evidence"
+          ],
+          "evidence": {
+            "completed_scope_report": {
+              "path": "t20-v6-20261011/type_collective/FINAL_FORMAL_RESIDUE_SCOPE.md",
+              "sha256": "be6382501bf908a3b1d005b2e1c4c7238be6b997b6bd0899f1fe6bb4668edab3"
+            },
+            "direct_reading": {
+              "path": "t20-v6-20261011/type_collective/READ_LOG.jsonl",
+              "sha256": "7a69f38e35cc3bc39832b24f86b7f28cd0e97700b2c05f17704ff555551115d1",
+              "record_index": 1004,
+              "line_range": [
+                1,
+                8
+              ],
+              "source_path": "t20-consolidation-20261011/catalogue/objects/f5/f57b2186ccf6738771c5cc8c384f41736fa8ee87617b1a8de31024ef4941adfd"
+            }
+          }
+        }
+      ],
+      "record_count": 26
+    }
+  ]
+}

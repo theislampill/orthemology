@@ -1,0 +1,218 @@
+{
+  "schema": "t20-v6-integration-finite-controls-v1",
+  "scientific_acceptance": false,
+  "results": [
+    {
+      "source_relative": "root_math/multivalued_reset/check_finite.py",
+      "source_sha256": "3ed5718ba72e8818df40011240eca263b94835e0f2df58ace7e29e7789c7e9db",
+      "exit_code": 0,
+      "source_unchanged": true,
+      "python_version": "3.11.9",
+      "optimized": false,
+      "stdout_sha256": "18a7fd406ade2daa536141647382079e9af8c3bf5040bdb8c42755c132c9c710",
+      "command": [
+        "python",
+        "-B",
+        "check.py"
+      ],
+      "scope": "fresh exact finite controls; not universal proofs or empirical research",
+      "result": {
+        "status": "PASS",
+        "model_counts": {
+          "(3,)": 216,
+          "(2, 2)": 4096,
+          "(2,3)_affine_family": 2304
+        },
+        "total_models": 6616,
+        "ternary_quotient_states_before_action": 2,
+        "after_action": 3,
+        "seconds": 0.1722636300000886,
+        "scope": "All single coupled maps and Boolean observations on3 and4 states; selected exhaustive affine family on6 states; independent finite reference only.",
+        "script_sha256": "3ed5718ba72e8818df40011240eca263b94835e0f2df58ace7e29e7789c7e9db"
+      }
+    },
+    {
+      "source_relative": "root_math/pd_history_review/check.py",
+      "source_sha256": "be7c038526ba0f42d6d8f69223d25b64e46034d85f24b77ec53e346e372cbd5f",
+      "exit_code": 0,
+      "source_unchanged": true,
+      "python_version": "3.11.9",
+      "optimized": false,
+      "stdout_sha256": "e3fdac00ebf1f5d99117d39d622df1e5e40367709fc0b279ce9e7082b59f29e5",
+      "command": [
+        "python",
+        "-B",
+        "check.py"
+      ],
+      "scope": "fresh exact finite controls; not universal proofs or empirical research",
+      "result": {
+        "status": "PASS",
+        "finite_horizon_checks": [
+          {
+            "horizon": 0,
+            "source_cells": 2,
+            "lifted_cells": 4,
+            "exact_equal": true
+          },
+          {
+            "horizon": 1,
+            "source_cells": 8,
+            "lifted_cells": 16,
+            "exact_equal": true
+          },
+          {
+            "horizon": 2,
+            "source_cells": 32,
+            "lifted_cells": 64,
+            "exact_equal": true
+          },
+          {
+            "horizon": 3,
+            "source_cells": 128,
+            "lifted_cells": 256,
+            "exact_equal": true
+          },
+          {
+            "horizon": 4,
+            "source_cells": 512,
+            "lifted_cells": 1024,
+            "exact_equal": true
+          }
+        ],
+        "same_marginals_different_joint": true,
+        "scope": "Independent exact finite controls; no general-proof replacement."
+      }
+    },
+    {
+      "source_relative": "controller_chain/interface_checks.py",
+      "source_sha256": "a0b2bad1bdfac103568ab36d08d2df76f05f62221c9d810bd54ebf06a4718524",
+      "exit_code": 0,
+      "source_unchanged": true,
+      "python_version": "3.11.9",
+      "optimized": false,
+      "stdout_sha256": "d8ff3add6b8c139176694ff8af61f2ccf2f5af23a8a4f826824885e4e07b8730",
+      "command": [
+        "python",
+        "-B",
+        "check.py"
+      ],
+      "scope": "fresh exact finite controls; not universal proofs or empirical research",
+      "result": {
+        "posterior_collision": {
+          "compressed_state": [
+            "same_state",
+            "same_live_support"
+          ],
+          "conditional_next_action_distributions": [
+            {
+              "0": "1",
+              "1": "0"
+            },
+            {
+              "0": "0",
+              "1": "1"
+            }
+          ],
+          "total_variation": "1",
+          "meaning": "No state+support-only restart can preserve both given-policy conditional laws."
+        },
+        "universal_rotor_residue": {
+          "checks": 31209,
+          "max_menu": 8,
+          "lcm": {
+            "1": 1,
+            "2": 2,
+            "3": 6,
+            "4": 12,
+            "5": 60,
+            "6": 60,
+            "7": 420,
+            "8": 840
+          },
+          "old_menu_collision": {
+            "counts": [
+              0,
+              2
+            ],
+            "old_size": 2,
+            "new_size": 3
+          },
+          "general_proof": "Every k<=a divides L=lcm(1,...,a); equality mod L implies equality mod k. Store a residue per source and increment only at its departures.",
+          "limit": "Preserves scheduler decisions under fixed ordering, not phase index or empirical statistics."
+        },
+        "empirical_gate_collision": {
+          "counts": [
+            1,
+            3
+          ],
+          "successes": [
+            0,
+            0
+          ],
+          "phase": 1,
+          "same_rotor_modulus": 2,
+          "test": [
+            false,
+            true
+          ],
+          "qualification": "An interface-level row-test collision; does not claim two entire generated controller states coincide."
+        },
+        "copy_versus_product_affinity": {
+          "one_squared_affinity": "3/4",
+          "duplicated_observation_squared_affinity": "3/4",
+          "independent_two_sample_squared_affinity": "9/16",
+          "qualification": "Duplicate joint law has support {(0,0),(1,1)} and same masses as one observation; genuine tensor law has four cells."
+        },
+        "reset_invalidates_global_charging": {
+          "actual_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              2
+            ]
+          ],
+          "reset_cells": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "meaning": "The linear whole-run low-count budget uses actual globally unique consumed cells, not reset epoch labels."
+        },
+        "status": "PASS: exact finite controls only; no new universal controller proof or Lean replay",
+        "script_sha256": "a0b2bad1bdfac103568ab36d08d2df76f05f62221c9d810bd54ebf06a4718524"
+      }
+    }
+  ]
+}

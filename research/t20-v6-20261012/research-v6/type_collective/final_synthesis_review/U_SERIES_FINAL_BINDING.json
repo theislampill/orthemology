@@ -1,0 +1,11 @@
+{
+  "verdict": "ACCEPT_WITHIN_MATHEMATICAL_AND_SOURCE_SCOPE",
+  "synthesis_sha256": "e77880d87e7715e29c24e1e122ef6975df94cfeeb9e60f73b29992f58c269fdd",
+  "snapshot": "t20-v6-20261011/type_collective/final_synthesis_review/synthesis__WHOLE_CORPUS_SYNTHESIS.md.u_series_accepted",
+  "delta": "t20-v6-20261011/type_collective/final_synthesis_review/U_SERIES_SYNTHESIS_DELTA.diff",
+  "u_series_report_sha256": "10a5fd1754db9254faf1187e654bb132a83134d3f65386df108c419f15a7f483",
+  "hall_source_sha256": "aadef3eca7852d28a7c8e4a0f8cef61c10ac57242d7a70a5a1bb75ccc4d9f4b5",
+  "three_module_receipt_binding": "t20-v6-20261011/type_collective/P01_U_SERIES_ASSURANCE_JOIN.json",
+  "fresh_execution": false,
+  "whole_corpus_denominator_reviewed": false
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "record_index": 458,
+    "id": "GW-T5A",
+    "pointer": "$/theorems/458/statement",
+    "qualification": "Nonempty finite DAG required for existence of a sink; the empty graph is a counterexample to the unguarded historical wording.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 459,
+    "id": "GW-T5B",
+    "pointer": "$/theorems/459/conclusion_text",
+    "qualification": "Sink SCCs identify terminal support/regress regions; cyclic mutual support can also occur in a non-sink SCC feeding another component.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 469,
+    "id": "GW-T9A",
+    "pointer": "$/theorems/469/statement",
+    "qualification": "For safety throughout including the initial state, start the attractor at A intersect S or require A subset S; an unsafe target cannot be a safe winning start.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 473,
+    "id": "GW-T11A",
+    "pointer": "$/theorems/473/statement",
+    "qualification": "Identification modulo target equivalence requires no identical signatures across different target classes. A literal induced map on H/equivalence additionally requires signatures constant within each class, which identification alone does not need.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 489,
+    "id": "MN-GW-T2",
+    "pointer": "$/theorems/489/statement",
+    "qualification": "A transition-respecting quotient requires complete/residual-closed continuation observations, or explicit kernel stability. The adjacent T1/T3 supply the distinction; arbitrary selected predicates do not automatically give a congruence.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 500,
+    "id": "DS-GW-T4",
+    "pointer": "$/theorems/500/statement",
+    "qualification": "The general undecidability interpretation concerns the declared unbounded perfect-recall synthesis encoding, not a fixed finite-horizon exhaustive search.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  },
+  {
+    "record_index": 513,
+    "id": "META-GW-T1",
+    "pointer": "$/theorems/513/conclusion_text",
+    "qualification": "AR5 supplies no new metaphysical bridge merely from these finite information results. Historical surviving-rival language does not defeat stronger later actual-source premises or current positive appraisals.",
+    "status": "INACTIVE_HISTORICAL_COMPACT_FIELD_SCOPE_QUALIFICATION_NOT_CURRENT_THEOREM_WITHDRAWAL"
+  }
+]

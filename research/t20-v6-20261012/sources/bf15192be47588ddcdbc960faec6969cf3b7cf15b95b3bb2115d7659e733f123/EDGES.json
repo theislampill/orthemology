@@ -1,0 +1,813 @@
+{
+  "schema": "t20.cross-front-synthesis.edges.v1",
+  "edge_types": {
+    "proved implication": "A written mathematical implication at the declared scope",
+    "application": "Instantiation or reduction using an owned result; not independent ownership of its machinery",
+    "shared ancestry": "Common inherited mechanism with no asserted direct entailment",
+    "failed mapping": "Specified proposed transport is invalid or insufficient",
+    "conditional interpretation": "An application needing separately warranted semantic premises"
+  },
+  "nodes": {
+    "fibre": {
+      "label": "Inherited task-relative fibre/continuation criterion",
+      "source_id": "GT",
+      "section": "\u00a72.1"
+    },
+    "fullcontrol": {
+      "label": "Inherited full-control fixed-support continuation",
+      "source_id": "GT",
+      "section": "\u00a73.1"
+    },
+    "grouped": {
+      "label": "Inherited fixed-partition audit-gradient classification",
+      "source_id": "GT",
+      "section": "\u00a77.1"
+    },
+    "cone": {
+      "label": "Inherited identity-summing positive-instrument rigidity",
+      "source_id": "ET",
+      "section": "\u00a73.4"
+    },
+    "audref": {
+      "label": "Common-refinement gradient classification",
+      "source_id": "A",
+      "section": "\u00a73"
+    },
+    "auditgroup": {
+      "label": "Restricted row/column generated action group",
+      "source_id": "A",
+      "section": "\u00a74"
+    },
+    "coneref": {
+      "label": "Closed-convex common-refinement stability",
+      "source_id": "A",
+      "section": "\u00a75"
+    },
+    "conegeom": {
+      "label": "Explicitly augmented cone-gradient realization",
+      "source_id": "A",
+      "section": "\u00a76"
+    },
+    "control": {
+      "label": "Restricted-control barycentre record",
+      "source_id": "R",
+      "section": "\u00a7\u00a72\u20134"
+    },
+    "mixed": {
+      "label": "Composed-control refined record",
+      "source_id": "R",
+      "section": "\u00a76"
+    },
+    "isolated": {
+      "label": "Stacked isolated response profiles",
+      "source_id": "R",
+      "section": "\u00a76"
+    },
+    "joint": {
+      "label": "Whole-state second-order update",
+      "source_id": "J",
+      "section": "\u00a7\u00a71\u20134"
+    },
+    "topology": {
+      "label": "Moving-law coordinate/W1 accuracy",
+      "source_id": "J",
+      "section": "\u00a76"
+    },
+    "semantic": {
+      "label": "Fixed semantic conjunction along Gaussian entrance",
+      "source_id": "S",
+      "section": "\u00a7\u00a73\u20135"
+    },
+    "semrepair": {
+      "label": "Absolute-continuity and event-query repairs",
+      "source_id": "S",
+      "section": "\u00a76"
+    },
+    "moment": {
+      "label": "Inherited effective moment recovery contracts",
+      "source_id": "GT",
+      "section": "\u00a73.6"
+    },
+    "policy": {
+      "label": "Inherited fixed-model policy-loss transport",
+      "source_id": "ET",
+      "section": "\u00a75.3"
+    },
+    "bodies": {
+      "label": "Exact four-trial C4 and E4 bodies",
+      "source_id": "U",
+      "section": "\u00a7\u00a73\u20135"
+    },
+    "game": {
+      "label": "Conditioned same-target continuation game",
+      "source_id": "U",
+      "section": "\u00a76"
+    },
+    "saturation": {
+      "label": "Ex ante asymmetric prediction saturation",
+      "source_id": "U",
+      "section": "\u00a77"
+    },
+    "profile": {
+      "label": "Six-loss profile representation minimum",
+      "source_id": "D",
+      "section": "\u00a7\u00a71\u20133"
+    },
+    "fixedanswer": {
+      "label": "Fixed-game precomputed answer",
+      "source_id": "D",
+      "section": "\u00a74"
+    },
+    "staticproof": {
+      "label": "Inherited static guarded whole-DAG attainment",
+      "source_id": "PT",
+      "section": "\u00a72 PT-06\u201307"
+    },
+    "cache": {
+      "label": "Cache-cut marginal-cost compiler",
+      "source_id": "P",
+      "section": "\u00a7\u00a73\u20134"
+    },
+    "revision": {
+      "label": "Exact-state dependency antichain",
+      "source_id": "P",
+      "section": "\u00a75"
+    },
+    "postpone": {
+      "label": "Non-informative check postponement",
+      "source_id": "P",
+      "section": "\u00a7\u00a76\u20137"
+    },
+    "typed": {
+      "label": "Typed proof uniqueness and explicit finite source state",
+      "source_id": "PT",
+      "section": "\u00a7\u00a73\u20134"
+    },
+    "cirs": {
+      "label": "Full-support finite-memory CIRS boundary",
+      "source_id": "P",
+      "section": "\u00a78"
+    },
+    "sourcecontroller": {
+      "label": "Unbounded integer likelihood source representability",
+      "source_id": "P",
+      "section": "\u00a78"
+    },
+    "common": {
+      "label": "Inherited affirmative actual common-source appraisal",
+      "source_id": "F",
+      "section": "\u00a74"
+    },
+    "join": {
+      "label": "Endpoint versus submitted-witness composition",
+      "source_id": "G",
+      "section": "\u00a7\u00a72\u20135"
+    },
+    "rank": {
+      "label": "Unbounded derivative routing rank under one provider",
+      "source_id": "G",
+      "section": "\u00a76"
+    },
+    "roots": {
+      "label": "Provider / intermediary / acquisition identity sorts",
+      "source_id": "G",
+      "section": "\u00a7\u00a71,8"
+    },
+    "foundation": {
+      "label": "Actual warrant, attribution, basing and authority",
+      "source_id": "F",
+      "section": "\u00a7\u00a71\u20139"
+    },
+    "answerlaw": {
+      "label": "Inherited T15 collective answer-law equivalence",
+      "source_id": "C",
+      "section": "\u00a7\u00a71\u20132"
+    },
+    "linked": {
+      "label": "Same-trial linked inquiry and calibration replacement",
+      "source_id": "C",
+      "section": "\u00a73"
+    },
+    "finiteplans": {
+      "label": "Inherited T16 convergent finite plans without computable committed path",
+      "source_id": "C",
+      "section": "\u00a74.2\u20134.3"
+    },
+    "replay": {
+      "label": "Inherited ET-14 exact finite dependency replay/recomputation",
+      "source_id": "ET",
+      "section": "\u00a74.2"
+    },
+    "computablepath": {
+      "label": "Computable committed path in the declared admission tree",
+      "source_id": "C",
+      "section": "\u00a74.4"
+    },
+    "pruned": {
+      "label": "Inherited effective pruned-region continuation repair",
+      "source_id": "C",
+      "section": "\u00a74.4"
+    },
+    "occurrence": {
+      "label": "Actual T16 source-record view 0/1/2-bit application",
+      "source_id": "O",
+      "section": "\u00a7\u00a71\u20132"
+    },
+    "assertion": {
+      "label": "Occurrence, carrier force and contextual assertion ownership",
+      "source_id": "O",
+      "section": "\u00a73"
+    },
+    "duty": {
+      "label": "Source-owned inquiry duty versus actual original ruling",
+      "source_id": "OR",
+      "section": "Practical obligation and beneficial obscurity sections"
+    }
+  },
+  "edges": [
+    {
+      "id": "E01",
+      "source": "grouped",
+      "target": "audref",
+      "type": "proved implication",
+      "claim": "Intersecting homogeneous additive decompositions yields the common-refinement energy form.",
+      "scope_or_failed_premise": "Same C2 energy, specified weighted Fisher-transport metric, full connected product domain, every positive block multiplier.",
+      "evidence": [
+        "A \u00a73",
+        "AR \u00a71"
+      ]
+    },
+    {
+      "id": "E02",
+      "source": "auditgroup",
+      "target": "audref",
+      "type": "failed mapping",
+      "claim": "Generated row/column actions alone do not yield the refinement classification.",
+      "scope_or_failed_premise": "They preserve odds ratio; the additional rigidity is metric-gradient integrability.",
+      "evidence": [
+        "A \u00a7\u00a73\u20134",
+        "AR \u00a72"
+      ]
+    },
+    {
+      "id": "E03",
+      "source": "cone",
+      "target": "coneref",
+      "type": "application",
+      "claim": "A tagged positive mixture instrument reduces simultaneous stability to ET-23.",
+      "scope_or_failed_premise": "Complete instruments; nonempty closed convex normalized family; full outcome columns. Tagged reduction is collaborative reviewer contribution.",
+      "evidence": [
+        "A \u00a75",
+        "AR \u00a73"
+      ]
+    },
+    {
+      "id": "E04",
+      "source": "coneref",
+      "target": "auditgroup",
+      "type": "failed mapping",
+      "claim": "A least stable closed convex hull does not describe finite-word reachability.",
+      "scope_or_failed_premise": "Convexification destroys odds-ratio invariance; closure can add inaccessible boundary points.",
+      "evidence": [
+        "A \u00a75"
+      ]
+    },
+    {
+      "id": "E05",
+      "source": "cone",
+      "target": "conegeom",
+      "type": "conditional interpretation",
+      "claim": "Cone coordinates can carry an explicitly added Fisher-transport geometry.",
+      "scope_or_failed_premise": "The cone alone supplies no metric; transport metric and use full continuous audit families, not only fixed outcomes.",
+      "evidence": [
+        "A \u00a76",
+        "AR \u00a73"
+      ]
+    },
+    {
+      "id": "E06",
+      "source": "fullcontrol",
+      "target": "control",
+      "type": "application",
+      "claim": "The inherited exponential solution and observable-closure machinery yield grouped full-output barycentres.",
+      "scope_or_failed_premise": "Fixed known support, positive laws, declared linear control subspace and full q-output.",
+      "evidence": [
+        "R \u00a7\u00a72\u20134",
+        "AR \u00a7\u00a74\u20136"
+      ]
+    },
+    {
+      "id": "E07",
+      "source": "fibre",
+      "target": "control",
+      "type": "shared ancestry",
+      "claim": "Continuous augmentation uses inherited continuation factorization and dimension obstruction.",
+      "scope_or_failed_premise": "rank(B)-rank(A) counts continuous real coordinates, not finite bits or noisy samples.",
+      "evidence": [
+        "R \u00a74",
+        "AR \u00a75"
+      ]
+    },
+    {
+      "id": "E08",
+      "source": "control",
+      "target": "mixed",
+      "type": "proved implication",
+      "claim": "Actual finite concatenations span the summed control subspace, hence jointly refine signatures.",
+      "scope_or_failed_premise": "Arbitrary real amplitudes and permitted finite concatenations; constrained menus need reachable-set analysis.",
+      "evidence": [
+        "R \u00a76"
+      ]
+    },
+    {
+      "id": "E09",
+      "source": "isolated",
+      "target": "mixed",
+      "type": "failed mapping",
+      "claim": "Stacking individually sufficient histories can miss a jointly observable interaction.",
+      "scope_or_failed_premise": "Nine-support control has stacked rank eight and joint rank nine, missing (1,-2,1) tensor square.",
+      "evidence": [
+        "R \u00a76",
+        "AR \u00a75"
+      ]
+    },
+    {
+      "id": "E10",
+      "source": "audref",
+      "target": "joint",
+      "type": "application",
+      "claim": "Instantiate the whole-state scheme on common-refinement cells to preserve all original partition audits.",
+      "scope_or_failed_premise": "Conditional combined application: same metric/domain; additionally C3 chart potentials and C2 mobility for the Gonzalez construction (A gives only C2), or supplied uniform second-order internal maps; all solver/root/tolerance/mesh choices invariant under full refinement-cell mass action; compactness guards; no automatic invariance of an arbitrary coarser implementation.",
+      "evidence": [
+        "A \u00a73",
+        "J \u00a7\u00a71\u20134"
+      ]
+    },
+    {
+      "id": "E11",
+      "source": "grouped",
+      "target": "joint",
+      "type": "application",
+      "claim": "Group-independent internal dynamics permit descending endpoint-average mass coupling.",
+      "scope_or_failed_premise": "Moving internal states require accurate accumulated loss; positivity alone does not give order.",
+      "evidence": [
+        "J \u00a7\u00a71\u20134",
+        "JR mathematical findings 1\u20136"
+      ]
+    },
+    {
+      "id": "E12",
+      "source": "joint",
+      "target": "topology",
+      "type": "proved implication",
+      "claim": "Whole-coordinate order gives fixed smooth-observable and W1 order two.",
+      "scope_or_failed_premise": "Common Euclidean carrier, bounded positions and compact finite-horizon control; not generic TV or W2 order two.",
+      "evidence": [
+        "J \u00a76",
+        "JR mathematical finding 7"
+      ]
+    },
+    {
+      "id": "E13",
+      "source": "topology",
+      "target": "semantic",
+      "type": "failed mapping",
+      "claim": "Geometric/numerical proximity cannot substitute for arbitrary event-query preservation.",
+      "scope_or_failed_premise": "Different examples: moving Dirac TV obstruction and exact singular Gaussian universal-event loss; no direct transport between their state spaces.",
+      "evidence": [
+        "J \u00a76",
+        "S \u00a7\u00a73\u20135"
+      ]
+    },
+    {
+      "id": "E14",
+      "source": "moment",
+      "target": "semantic",
+      "type": "failed mapping",
+      "claim": "Determination of a law does not give a continuous or uniformly computable arbitrary measurable-event decoder.",
+      "scope_or_failed_premise": "Gaussian variance identifies the law while mass of z=0 is a zero-test; capped countable l1 theorem has different hypotheses.",
+      "evidence": [
+        "S \u00a75",
+        "SR \u00a74"
+      ]
+    },
+    {
+      "id": "E15",
+      "source": "semantic",
+      "target": "semrepair",
+      "type": "proved implication",
+      "claim": "Preserving every initial conull measurable set is equivalent to absolute continuity; TV bounds each event error.",
+      "scope_or_failed_premise": "Same measurable carrier; finite positive reweightings qualify, weak limits require separate control.",
+      "evidence": [
+        "S \u00a76",
+        "SR \u00a75"
+      ]
+    },
+    {
+      "id": "E16",
+      "source": "policy",
+      "target": "bodies",
+      "type": "application",
+      "claim": "The finite complete-path law makes every lawful policy loss affine in (t,s).",
+      "scope_or_failed_premise": "One fixed complete model, same information/action menu and model-independent path costs. C4 curved support differs from E4 vertex evaluation.",
+      "evidence": [
+        "U \u00a75",
+        "UR \u00a72"
+      ]
+    },
+    {
+      "id": "E17",
+      "source": "bodies",
+      "target": "game",
+      "type": "proved implication",
+      "claim": "Exact bodies plus primal/dual certificates give different conditional optimal policies.",
+      "scope_or_failed_premise": "Same reserved X4 target and history 11 of common positive mass; Nature chooses one complete model before the private coin realization; the selected model is not disclosed to the policy.",
+      "evidence": [
+        "U \u00a76",
+        "UR \u00a73"
+      ]
+    },
+    {
+      "id": "E18",
+      "source": "bodies",
+      "target": "saturation",
+      "type": "failed mapping",
+      "claim": "Different higher laws need not change the selected ex ante minimax prediction value.",
+      "scope_or_failed_premise": "Saturation applies before any observation, 0<mu<1 and mu^2<=nu<=mu (deterministic endpoints separate), positive asymmetric loss prices, at least one legal distinct non-target reading, bounded horizon and nonnegative costs.",
+      "evidence": [
+        "U \u00a77",
+        "UR \u00a74"
+      ]
+    },
+    {
+      "id": "E19",
+      "source": "game",
+      "target": "profile",
+      "type": "application",
+      "claim": "The six loss coordinates recover (t,s), yielding two continuous coordinates and posterior plus one-real minimum.",
+      "scope_or_failed_premise": "Exact-byte independently qualified inherited-corollary application; not a universal memory bound.",
+      "evidence": [
+        "D \u00a7\u00a71\u20133",
+        "DR \u00a7\u00a71\u20133"
+      ]
+    },
+    {
+      "id": "E20",
+      "source": "profile",
+      "target": "fixedanswer",
+      "type": "failed mapping",
+      "claim": "A per-model profile lower bound is not a lower bound for returning one fixed minimax answer.",
+      "scope_or_failed_premise": "Fixed family, history, objective and price can have a constant certified answer; variable contracts still need inputs.",
+      "evidence": [
+        "D \u00a74"
+      ]
+    },
+    {
+      "id": "E21",
+      "source": "typed",
+      "target": "profile",
+      "type": "failed mapping",
+      "claim": "Fixed finite typed tags do not encode the full continuous posterior fibre.",
+      "scope_or_failed_premise": "No impossibility for original Has with unbounded natural rational encodings; PT20 already realizes finite rational joint kernels.",
+      "evidence": [
+        "D \u00a7\u00a73,5",
+        "PT \u00a74"
+      ]
+    },
+    {
+      "id": "E22",
+      "source": "staticproof",
+      "target": "cache",
+      "type": "application",
+      "claim": "Zero-price exact-support macros reduce valid-cache remaining-cost compilation to inherited whole-DAG attainment.",
+      "scope_or_failed_premise": "Dependency-closed valid recoverable cache, immutable aligned identities, nonnegative prices; effective enumeration also needs decidable guards and exact computable comparisons.",
+      "evidence": [
+        "P \u00a74",
+        "PR \u00a72"
+      ]
+    },
+    {
+      "id": "E23",
+      "source": "staticproof",
+      "target": "cache",
+      "type": "failed mapping",
+      "claim": "Static proof normalization does not preserve paid-work reuse.",
+      "scope_or_failed_premise": "Actual normalizer changes a cached parent identity: static 14 to 12, remaining 2 to 12, cache optimum 1.",
+      "evidence": [
+        "P \u00a73",
+        "PR \u00a71"
+      ]
+    },
+    {
+      "id": "E24",
+      "source": "cache",
+      "target": "revision",
+      "type": "proved implication",
+      "claim": "Conjunctive complete dependency antichains preserve exact-state macro availability under all declared live-condition sets.",
+      "scope_or_failed_premise": "Snapshot availability alone is insufficient; helper supplies only rule-local factors; not a universal authentication model.",
+      "evidence": [
+        "P \u00a75",
+        "PR \u00a73"
+      ]
+    },
+    {
+      "id": "E25",
+      "source": "cache",
+      "target": "postpone",
+      "type": "application",
+      "claim": "Terminal cache compilation extends to passive interleaved checking by pathwise postponement.",
+      "scope_or_failed_premise": "Successful non-informative checks; no permission, timing, law, resource or price interference; terminal reproducibility and one terminal deliverable.",
+      "evidence": [
+        "P \u00a76",
+        "PR \u00a74"
+      ]
+    },
+    {
+      "id": "E26",
+      "source": "postpone",
+      "target": "policy",
+      "type": "application",
+      "claim": "Pathwise dominance preserves each fixed-model expected cost and its supremum.",
+      "scope_or_failed_premise": "No independent adverse-model selection by branch; mutually exclusive checks are not one simultaneous proof bundle.",
+      "evidence": [
+        "P \u00a77",
+        "ET \u00a75.3"
+      ]
+    },
+    {
+      "id": "E27",
+      "source": "typed",
+      "target": "cache",
+      "type": "failed mapping",
+      "claim": "Typed proof uniqueness does not equate external cached node identity or revalidation dependencies.",
+      "scope_or_failed_premise": "Already fixed typed endpoints and proof erasure differ from source/rule/version/paid-work semantics.",
+      "evidence": [
+        "PT \u00a7\u00a73\u20134",
+        "P \u00a7\u00a72\u20135"
+      ]
+    },
+    {
+      "id": "E28",
+      "source": "typed",
+      "target": "cirs",
+      "type": "failed mapping",
+      "claim": "Finite typed-state realization is not an unbounded restorative-controller theorem.",
+      "scope_or_failed_premise": "Stationary finite memory plus common full-support observations requires a common good action; CIRS inherited controllers retain unbounded data.",
+      "evidence": [
+        "P \u00a78",
+        "PR \u00a75"
+      ]
+    },
+    {
+      "id": "E29",
+      "source": "cirs",
+      "target": "sourcecontroller",
+      "type": "application",
+      "claim": "Rational denominator clearing and inspected PR interfaces provide an unbounded-data representability route.",
+      "scope_or_failed_premise": "Ordinary source representability only; no new literal runtime/controller-law proof or calibration.",
+      "evidence": [
+        "P \u00a78",
+        "PR \u00a75"
+      ]
+    },
+    {
+      "id": "E30",
+      "source": "common",
+      "target": "join",
+      "type": "conditional interpretation",
+      "claim": "Affirmed common original provision can coexist with different actual secondary-use identities.",
+      "scope_or_failed_premise": "Faithful actual-use interpretation at fixed scope/respect required; mathematical graph does not establish metaphysical actuality.",
+      "evidence": [
+        "F \u00a74",
+        "G \u00a7\u00a71\u20133"
+      ]
+    },
+    {
+      "id": "E31",
+      "source": "fibre",
+      "target": "join",
+      "type": "shared ancestry",
+      "claim": "Neighbourhood/profile repair is a concrete continuation-sensitive factorization application.",
+      "scope_or_failed_premise": "Uniform-over-L endpoint preservation differs from fixed L,R and from submitted-witness compatibility.",
+      "evidence": [
+        "G \u00a7\u00a73\u20135",
+        "GR mathematical qualification"
+      ]
+    },
+    {
+      "id": "E32",
+      "source": "join",
+      "target": "rank",
+      "type": "proved implication",
+      "claim": "Diagonal n-route examples have ordinary and Boolean rank n with a constant provider map.",
+      "scope_or_failed_premise": "Represented derivative routing signature, not a count of original bearers or a new metaphysical possibility proof.",
+      "evidence": [
+        "G \u00a76",
+        "GR mathematical qualification 6"
+      ]
+    },
+    {
+      "id": "E33",
+      "source": "common",
+      "target": "roots",
+      "type": "failed mapping",
+      "claim": "Common provider identity does not identify evidence acquisitions or intermediary tokens.",
+      "scope_or_failed_premise": "No conditional independence follows from either one provider or different acquisition keys.",
+      "evidence": [
+        "G \u00a7\u00a71,8"
+      ]
+    },
+    {
+      "id": "E34",
+      "source": "typed",
+      "target": "join",
+      "type": "failed mapping",
+      "claim": "Proof equality at fixed endpoints does not supply missing identity of intermediaries.",
+      "scope_or_failed_premise": "Identity transport consumes its identity premise; explicit data tags remain distinct.",
+      "evidence": [
+        "G \u00a75",
+        "GR operational and ownership qualification"
+      ]
+    },
+    {
+      "id": "E35",
+      "source": "saturation",
+      "target": "foundation",
+      "type": "conditional interpretation",
+      "claim": "Task-relevant decision sufficiency can inform selection of a discriminating next investigation.",
+      "scope_or_failed_premise": "No mathematical stopping rule for philosophical inquiry, human warrant or owed response follows.",
+      "evidence": [
+        "U \u00a79",
+        "F \u00a7\u00a76\u20139"
+      ]
+    },
+    {
+      "id": "E36",
+      "source": "semantic",
+      "target": "foundation",
+      "type": "conditional interpretation",
+      "claim": "The exact event failure tests a proposed numerical-to-semantic preservation claim.",
+      "scope_or_failed_premise": "No actual human belief repertoire, philosophical premise or historical report is assigned these Gaussian semantics.",
+      "evidence": [
+        "S \u00a77",
+        "F \u00a7\u00a75,7"
+      ]
+    },
+    {
+      "id": "E37",
+      "source": "revision",
+      "target": "foundation",
+      "type": "conditional interpretation",
+      "claim": "Declared computational dependencies can support selective revalidation without widening a challenge.",
+      "scope_or_failed_premise": "Premise truth, actual challenge force and the subject's basing remain separately warranted.",
+      "evidence": [
+        "P \u00a7\u00a75,9",
+        "F \u00a78"
+      ]
+    },
+    {
+      "id": "E38",
+      "source": "roots",
+      "target": "answerlaw",
+      "type": "failed mapping",
+      "claim": "Authentic fresh roots and faithful postprocessing cannot discriminate equal answer-only laws.",
+      "scope_or_failed_premise": "Adaptive extension additionally requires common nonanticipating answer-based policy, fixed parameters and fresh conditional noises; informative audits and interventions change the contract.",
+      "evidence": [
+        "C \u00a7\u00a71\u20132"
+      ]
+    },
+    {
+      "id": "E39",
+      "source": "fibre",
+      "target": "linked",
+      "type": "application",
+      "claim": "The actual T15 joint table has a rank-one mixed signal invisible in both retained marginals.",
+      "scope_or_failed_premise": "Same-trial linkage required; disjoint independent trial acquisitions do not supply that relation. No claim that all random shuffling destroys all dependence.",
+      "evidence": [
+        "C \u00a73.1"
+      ]
+    },
+    {
+      "id": "E40",
+      "source": "linked",
+      "target": "policy",
+      "type": "application",
+      "claim": "Calibrated predictive joint probabilities give an exact acquisition-value and source-replacement calculation.",
+      "scope_or_failed_premise": "Equal pair prior and squared-probability loss, not the U minimax bit game; supplied calibration and trial interpretation; uncertain calibration must remain coupled.",
+      "evidence": [
+        "C \u00a7\u00a73.2\u20133.3"
+      ]
+    },
+    {
+      "id": "E41",
+      "source": "replay",
+      "target": "finiteplans",
+      "type": "failed mapping",
+      "claim": "Exact retrospective recomputation at every finite horizon does not yield one computable irrevocable infinite lineage.",
+      "scope_or_failed_premise": "T16 H(n) converges coordinatewise but has no computable stabilization modulus or coherent unbounded computable subsequence. This does not contradict finite-horizon replay.",
+      "evidence": [
+        "ET \u00a74.2",
+        "C \u00a7\u00a74.2\u20134.3",
+        "CR CC-03"
+      ]
+    },
+    {
+      "id": "E42",
+      "source": "computablepath",
+      "target": "pruned",
+      "type": "proved implication",
+      "claim": "A computable path is equivalent to a rooted prefix-closed pruned computably enumerable subtree.",
+      "scope_or_failed_premise": "Inherited theorem for the decidable rooted binary admission tree; sound enumeration and pruning are promised, not automatically decided; restart enumeration at each prefix or retain previous emissions to avoid missing an already emitted child.",
+      "evidence": [
+        "C \u00a74.4",
+        "CR CC-03",
+        "CRF"
+      ]
+    },
+    {
+      "id": "E43",
+      "source": "cirs",
+      "target": "finiteplans",
+      "type": "failed mapping",
+      "claim": "Finite-memory CIRS and no-computable-path renewal obstructions are not interchangeable.",
+      "scope_or_failed_premise": "The first restricts stationary finite memory in full-support stochastic control; the second concerns any computable committed path in a specified decidable tree.",
+      "evidence": [
+        "P \u00a78",
+        "C \u00a74"
+      ]
+    },
+    {
+      "id": "E44",
+      "source": "fibre",
+      "target": "occurrence",
+      "type": "application",
+      "claim": "Inherited finite contract refinement computes exact 0/1/2-bit supplements on the actual seven-record fixture.",
+      "scope_or_failed_premise": "Coarse antecedent row retained; selected view only; no restoration or new linguistic interpretation; finite counts do not measure human memory or warrant.",
+      "evidence": [
+        "O \u00a7\u00a71\u20132",
+        "OVR"
+      ]
+    },
+    {
+      "id": "E45",
+      "source": "occurrence",
+      "target": "assertion",
+      "type": "failed mapping",
+      "claim": "Grammatical antecedent and reporting-voice labels do not supply original assertion ownership.",
+      "scope_or_failed_premise": "M/G are antecedent proposals; attributed report holders are not independently acquired source assertions; null is unspecified, not wildcard.",
+      "evidence": [
+        "O \u00a7\u00a71,3"
+      ]
+    },
+    {
+      "id": "E46",
+      "source": "assertion",
+      "target": "roots",
+      "type": "shared ancestry",
+      "claim": "T10 context-origin, token identity and current-carrier force already distinguish several identity/role queries.",
+      "scope_or_failed_premise": "No equality of word strings, sources, output tokens or present authorization is inferred.",
+      "evidence": [
+        "O \u00a73.2",
+        "G \u00a7\u00a71,8"
+      ]
+    },
+    {
+      "id": "E47",
+      "source": "duty",
+      "target": "foundation",
+      "type": "application",
+      "claim": "The inherited source return distinguishes valid original relief, mistaken mediation and real circumstance-relative inquiry duty.",
+      "scope_or_failed_premise": "Duty to follow inquiry does not entail actual knowledge; absent knowledge does not prove absent opportunity or culpability; stronger content-uptake duty needs a scoped bridge.",
+      "evidence": [
+        "OR",
+        "O \u00a74"
+      ]
+    },
+    {
+      "id": "E48",
+      "source": "saturation",
+      "target": "duty",
+      "type": "failed mapping",
+      "claim": "A fixed-loss minimax saturation result does not prove the source-owned practical-information claim.",
+      "scope_or_failed_premise": "Mathematical saturation fixes objective and target; knowledge can change applicable duties in the source case. Beneficial obscurity is no permission to hide relevant evidence.",
+      "evidence": [
+        "U \u00a77",
+        "OR"
+      ]
+    },
+    {
+      "id": "E49",
+      "source": "semantic",
+      "target": "duty",
+      "type": "failed mapping",
+      "claim": "Loss of a fixed measurable event is not loss or alteration of the original source ruling.",
+      "scope_or_failed_premise": "Gaussian law-path event semantics differ from truthful original permission with mistaken reception and circumstance-relative duty.",
+      "evidence": [
+        "S \u00a7\u00a73\u20137",
+        "OR"
+      ]
+    }
+  ],
+  "source_registry": "SOURCE_BINDINGS.json",
+  "note": "No master theorem or universal chain implied; read all guards. D is an exact-byte independently qualified inherited-corollary application."
+}

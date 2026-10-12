@@ -1,0 +1,57 @@
+{
+  "status": "STATIC_SOURCE_BOUND_QUALIFICATION_NO_EXECUTION",
+  "sources": [
+    {
+      "sha256": "436e9a1136f060548c88a8bbfc90ac9b83d8f894716a41da6dda78452f96c610",
+      "path": "t20-consolidation-20261011/catalogue/objects/43/436e9a1136f060548c88a8bbfc90ac9b83d8f894716a41da6dda78452f96c610",
+      "bytes": 2501,
+      "lines": 31,
+      "reading_mode": "DIRECT_FULL_BODY_INDEPENDENT_STATIC_REVIEW",
+      "line_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "scope": "Output guard only rejects equality with author/HERE; descendants and existing directories pass, mkdir uses exist_ok=True, copy2 and write_text can replace output files. Hash/child-exit/result assertions require enabled assertions. No execution; universal mathematical evidence remains separately owned by root.",
+      "fresh_execution": false
+    },
+    {
+      "sha256": "728afb78743f6d2fbfcdc2a87d5aecfbc321f4122592ea12e96ee0c1308d3b1f",
+      "path": "t20-consolidation-20261011/catalogue/objects/72/728afb78743f6d2fbfcdc2a87d5aecfbc321f4122592ea12e96ee0c1308d3b1f",
+      "bytes": 2549,
+      "lines": 31,
+      "reading_mode": "DIRECT_FULL_BODY_INDEPENDENT_STATIC_REVIEW",
+      "line_ranges": [
+        [
+          1,
+          31
+        ]
+      ],
+      "scope": "Output guard only rejects equality with author/HERE; descendants and existing directories pass, mkdir uses exist_ok=True, copy2 and write_text can replace output files. Hash/child-exit/result assertions require enabled assertions. No execution; universal mathematical evidence remains separately owned by root.",
+      "fresh_execution": false
+    }
+  ],
+  "counterexample_assignments": [
+    {
+      "out": "HERE/new-output",
+      "condition": "out != HERE and out != author is true when source roots are distinct; descendant is not rejected."
+    },
+    {
+      "out": "preexisting unrelated output directory",
+      "condition": "Equality guard passes and mkdir(parents=True,exist_ok=True) preserves preexisting acceptance; copy2/write_text replace same-name outputs."
+    }
+  ],
+  "future_replay_requirements": [
+    "Exact original script/source digests must remain unchanged.",
+    "Use a separately checked nonexistent external output disjoint from source/tool/cache roots, with disposable source staging where programs write adjacent evidence.",
+    "Use assertions-enabled Python and record inherited environment/working directory; do not blanket-run historical scripts.",
+    "Physical invocation, semantic result and final source/package identities need separate receipts."
+  ],
+  "credit": "No new mathematical counterexample, no retained execution and no protected source patch.",
+  "additional_exact_source_qualification": {
+    "ledger": "t20-v6-20261011/type_collective/last_formal_code36/ASSURANCE_INTERPRETATION.json",
+    "sha256": "4339e328c71d329244d597821020503b287f80197dacf5f625d1512ff4b3ab8f",
+    "scope": "Source-only exact implementation reading: three wrappers record child failures without propagating them; child JSON and logs control the result. Assertion-dependent commands require normal Python. No actual failed retained execution or mathematical downgrade follows."
+  }
+}

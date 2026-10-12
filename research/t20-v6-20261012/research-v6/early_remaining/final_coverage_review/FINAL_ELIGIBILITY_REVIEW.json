@@ -1,0 +1,232 @@
+{
+  "scope": "Exact final eligibility action/scope and existing private-projection review join, without new original source examination or materialisation.",
+  "final_eligibility_sha256": "cf1cfa9c9c54c97f4e1259a66300102a8256df06a1f3e4fd1fe5c33764678eec",
+  "exact_metadata22": 22,
+  "identity_only_private_originals13": 13,
+  "separate_current_projection_outputs6": 6,
+  "action_changes": [
+    {
+      "sha256": "a526a561a85decd6bbec11b3bd67295997f09db7b31876b68d3185abe816c8a8",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "01e2faa27ed0a49ad4d62fa0efade92813dc5b93d42f27a7eb09824b193efeda",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "81034f4126bcd0c7bc2f0d9d2405777e72c404d8947e530a193d911b481b8139",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "80bae019e21d657f35311f4410ac3d36c3bda8c76df65ba159620fe546d9b742",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "688c9c7c61291982dab2da4514a863cab7a0bb23862ad94d8ee5c5dd75d636e8",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "ea2a42e6ec5e08b52e54c8beedb56eea2d44a112ee62c3c071bad9c225e54ac1",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "8a7038a031e6be5a6d8169af65f1440ff6692f5f1cbe587902a17d808fd22de4",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "5154794e811e63723097894d17c41ed476c2fce67047f93b020c1476517fe426",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "5e84ba28be560698a08d64b2ddc81b2605d85897a53b8c16ac25b8fbf771a237",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "8300af5e9b87a132c38e772d900cb7675b21214a1beb7ebca21a3b48be133b32",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "f920176359ac120d27ccb0dc9a21fb2e807b7e3ccd8be4b8ab175ed369300c5e",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "103d874769ab737d47027a8586b901337fb97df9c1c7b0252f15d9cfa4bd52f0",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "16c912dc4337bc768946d902e5ff3608e2907492d2fe1d94d9ebe5daa221730c",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "a788df52ff8a7bf12a6246eb3cc49c06c754143f2603e47e3a1d1d64f476abc1",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "6ebe72f190bb50365a1359da5615c90ac9769df7938fd5ae0d29abab3059dac3",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "185257eb5243ca5d570a31ba2e4efc1bee6e38198be64a5618905b4b73012cf9",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "4d2834796e79d848b7d5f61c047e556cb0876b7c557d9555abce14e0de54cbc8",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "9f171736fd443dc040fa1f2e06b64f845c6f78e02b7980c0a383a0e4247f1748",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "d8671b0dba6ec0d81403d59d2a9896a184558662de3fb84fcdf3c3ced188cf5e",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "2a7444cef2fcaae343c9df78023393c55b951bd24978dda07fc5264fba43bcc7",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "23686f9caf446fd5b894ff6b91017a64432f11e1d7015229b03f6870e1903a12",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "f8ff8b9a9580834f14a658e6b7d8ac2a05dfbbd5d7406330b31de34a4370df0e",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "b45fc11608d88df1ac667c544b4081a2b0863964e3978b9223cfd6cdd4b0b6cf",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "5911099602144811a1d89c0ea117656a0b021a29539b87f91033ec2963a1fc12",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "d7ce7754ec75d8ecd9fe05870e09257005d5e49f1abbd076ffa914d75fe47d33",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "e17709b4f21f64266a7f8f8ae2dff5976aa35d03627b54b8a5c222022b70d95a",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "04a7597ac541f5083f9dc7a45d5dea04af972802c0f616d0b280fff3e17e4199",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "93bba772b30dc1a0e0752b95f5670cf06b3b2267b1d709fd37b9e033c78de317",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "042ca56b82afffa403939a60a5c35f546c612aa4e82e36ef4968344f29e856e8",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "ed534a0aeefe93562b4d2dd889c986cf9a88273e3636a262c2de314241ff1430",
+      "from": "identity_only",
+      "to": "include",
+      "reason": "Complete structured/semantic field qualification in exact reader ledger; opaque selectors and historical result claims remain bounded."
+    },
+    {
+      "sha256": "2b9a94d21464483ddbbe3a2ea6fe3c38816547345a35c6a7ac3eec6119f18184",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "3c715aba44b4332ab4ef3d7de2ed98c88ef3d8f364418656ea007e7b69c8741d",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "60fdb8541c20b0f7224341bc31080dabf7c05419e8ba6dbcd559f64f35ffc19f",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "eb0111709dd797b637cad075cb12c106618b9ff62c57fb4b97a7284da04e98b7",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "Exact final-byte review found private instruction identifiers; preserve original identity only and use an independently reviewed public counterpart where available."
+    },
+    {
+      "sha256": "445b18836e6a8cc8f3b329e0306e71be5d89da33954db47ccb0a9458ae871253",
+      "from": "include",
+      "to": "identity_only",
+      "reason": "No affirmative distribution basis selected; identity and exact scoped evidence retained."
+    }
+  ],
+  "counts": {
+    "identity_only": 16285,
+    "include": 11653,
+    "omit": 2
+  },
+  "errors": [],
+  "accepted": true
+}

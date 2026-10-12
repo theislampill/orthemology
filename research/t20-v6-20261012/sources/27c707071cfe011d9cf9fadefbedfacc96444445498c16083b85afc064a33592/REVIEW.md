@@ -1,0 +1,38 @@
+# Independent semantic and executable-correspondence review
+
+Review date: 9 October 2026. Verdict: **PASS within the stated numeric-compiler scope; no blocking finding.** This is an independent internal review, not integration, source-admission approval, or owner closure.
+
+## Reviewed result
+
+The new construction is a genuinely executable finite numeric table implementation of the unchanged guarded saturation recurrence. It does not merely rename the classical recurrence. Its all-round functional correspondence, full-domain materialized lookup correspondence, exact row-membership theorem, and generated-row uniqueness theorem establish the substantive representation claim. Global correctness and stabilization correctly remain conditional on nonnegative prices and inherit the predecessor's pruning/height mathematics.
+
+The returned value is a finite set of exact-key/rational-price rows. A valid finite proof-tree witness exists by the kernel theorems, but the returned value carries no tree, reconstruction pointer, or serialized proof certificate. RESULT.md and READ_FIRST.md make this boundary explicit. Concrete printed numerals and IO assertions are runtime regression observations, not newly proved kernel equations.
+
+## Semantic inspection
+
+- `choices` explicitly takes a finite dependent sum over the supplied `Fintype R` enumeration and a finite Cartesian product of the grammar-support powerset at each `Fin (G.arity r)` position. It never calls the predecessor's noncomputable `Fintype (RuleChoice G)` instance as an enumeration algorithm. `mem_choices` covers every rule/ordered-support tuple, and `candidates_eq` identifies the whole candidate set. Nullary rules have one function on an empty domain, rather than no candidate.
+- Executable grammar fields, finite rule/judgement enumerations, judgement/evidence decidable equality, and the per-rule/per-ordered-tuple guard decision are real inputs. Supplying those inputs noncomputably would not make that particular application executable; the documentation correctly states this condition. Ambient evidence need not be finite.
+- The enabled predicate reads every child entry from the same old table and requires the actual guard on the same ordered support tuple. `getD 0` cannot turn a missing premise into a seed because the `isSome` condition excludes it. Starting from an empty table therefore leaves unsupported cycles unreachable; a permitted nullary seed can activate a cycle.
+- Support output is exact finite union, including rule-local support. Tuple positions remain distinct for guard evaluation. Price output is the rational root price plus a sum over premise positions, so two equal child states are charged twice. The only numerical minimization is within the exact `(judgement, support)` key. There is no support-subset dominance deletion, rounding, or shared-subtree discount.
+- `materialize` stores only enumerated keys, but `round_outside` derives absence of all external-support keys from unchanged proof semantics. Thus `compile_round_eq` is equality on the full table domain, not only equality on sampled or enumerated keys. `mem_compileRounds` separately establishes exact row membership; `row_unique` precludes hiding extra dearer rows behind a minimum-valued lookup. These theorems concern generated tables, not arbitrary externally supplied malformed row sets.
+- Bounded-round equality has no nonnegative-price hypothesis. `compile_correct`, `compile_stable`, `compile_rows_stable`, and `full_table_stopping` carry the necessary nonnegative-price hypothesis for the inherited global transfer. The stopping theorem assumes equality of full consecutive row sets, not just equality of reachable keys. The executable `compile` itself is a fixed bounded run; the stopping theorem does not claim an implemented early-stopping loop.
+
+## Trust and execution boundary
+
+All eight frozen dependencies and the four new modules were rebuilt from copied source in the newly created `review_semantic` directory using the installed Lean 4.19.0 toolchain, with warnings treated as errors. Imports were resolved from that review directory and the pinned mathlib path, not the accepted package's old `.olean` files. No installation or network operation was used.
+
+Source inspection found no custom axiom, `sorry`, `admit`, unsafe definition, evaluator-backed theorem, `native_decide`, or `implemented_by`/`extern` substitution in accepted local sources. Printed dependencies of all new correspondence/materialization/stability theorems are exactly the standard `propext`, `Classical.choice`, and `Quot.sound` set. The same standard axioms appear when printing dependencies of computational constants because their proof/type dependencies are also included: this is not an axiom-free construction. Ordinary definition code generation and successful execution support the narrower, correct claim that no hidden classical noncomputability is required on their computational path. The generic theorem is stronger evidence of correspondence than the concrete runtime probes.
+
+## Fresh checks
+
+1. Eight frozen modules and four new modules compiled successfully in the isolated review directory.
+2. The final 17 runtime assertion groups passed through `#eval` while compiling Controls and again through `lean --run Main.lean`. The separate printed probes also evaluated successfully. The controls cover nullary acceptance/rejection, an unsupported cycle, an activated zero cycle at round four, exact ordered supports, repeated occurrence prices, no support shrinking, improving prices with identical key sets, post-bound row-set equality, negative-price descent, external evidence absence, and retention of a dearer exact support alongside the cheaper empty support.
+3. Seven reviewer-added runtime checks passed: empty rule set; empty judgement universe; negative rational nullary price `-2/3`; seeded cycle at round four; nullary-plus-unary enumeration cardinality 2; one tuple for a nullary rule; and ordered example cardinality `3 + 2 * 4^2 = 35`. These remain runtime checks, not numeral proofs.
+4. All three supplied mutations freshly failed at the intended goals: removing the guard and dropping child occurrence costs fail `candidates_eq`; excluding nullary rules fails `mem_choices`. Failures were not missing imports, missing files, recursion limits, or heartbeat exhaustion. Lean's error-recovery `sorryAx` output occurs only in deliberately rejected mutation logs, not accepted proof dependencies.
+5. All eight frozen source hashes match both BINDING.json and their original predecessor paths. All 201 recorded predecessor files match PREDECESSOR_HASHES.json before and after review.
+
+## Review-currentness and artifacts
+
+The author added a seeded round-four runtime assertion and updated RESULT.md's runtime count during this review. Initial copied inputs and logs were retained. The revised Controls and Main were rebuilt, runtime was rerun, and the receipt binds the final reviewed Controls/RESULT hashes. Executable.lean, FiniteTable.lean, Main.lean, frozen sources, and other reviewed input documents/scripts were not changed by the reviewer. No accepted source or prior package replay log was overwritten.
+
+`review_semantic/REVIEW_RECEIPT.json` binds the final reviewed source/document hashes, review report, actual commands and exit codes, and fresh log hashes. `preservation_after.json` records the final predecessor and frozen-binding checks. `AdditionalChecks.lean` contains the reviewer-added runtime and definition/axiom inspection probes. The successful review does not extend to proof-tree extraction, the earlier Python compiler, efficiency, source authenticity, semantic warrant, publication, or adoption.

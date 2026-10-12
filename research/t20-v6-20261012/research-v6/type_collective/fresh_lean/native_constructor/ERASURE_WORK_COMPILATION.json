@@ -1,0 +1,27 @@
+{
+  "compiler": "private-locator:995d2f31daa55d5ebca1",
+  "compiler_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "source": "ErasureWorkBoundary.lean",
+  "source_sha256": "5ef2842f3094c442cce72d4bac7ab26f6ecff16458ea1840b752731ac56d25f7",
+  "command": [
+    "private-locator:995d2f31daa55d5ebca1",
+    "--trust=0",
+    "-o",
+    "ErasureWorkBoundary.olean",
+    "ErasureWorkBoundary.lean"
+  ],
+  "working_directory": "private-locator:2c74ff28f94e3439cbda",
+  "exit_code": 0,
+  "log_path": "t20-v6-20261011/type_collective/fresh_lean/native_constructor/ErasureWorkBoundary.log",
+  "log_sha256": "d165b344ade9120e83527a69e8176789f1094d947180540d13cd7dfeecdb4e07",
+  "olean_sha256": "b8aa61eb5d18cbf71c4b39399525e6207e46fb3a01e665c00f5431ecf7172d0d",
+  "axioms": [],
+  "historical_failed_attempt": {
+    "source_path": "t20-v6-20261011/type_collective/fresh_lean/native_constructor/ErasureWorkBoundary.attempt01.lean.txt",
+    "source_sha256": "40a3a87f78a770759644defbfb73115e2f11ae57978f98ff9372a27c82a45e0a",
+    "log_path": "t20-v6-20261011/type_collective/fresh_lean/native_constructor/ErasureWorkBoundary.attempt01.log",
+    "log_sha256": "12aaec2e35c1cc9f7f34a57ea7e75f2d3b81ec92fc5957597606dbf3302706c4",
+    "status": "FAILED_TYPECLASS_SYNTHESIS; no proof credit",
+    "reason": "The joint decide tactic lacked Decidable equality on Cert. Corrected proof supplies reflexivity for literal Cert equality, then decides the remaining finite equations."
+  }
+}

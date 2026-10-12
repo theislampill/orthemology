@@ -1,0 +1,139 @@
+{
+  "authored_execution_closure": "All called authored Python bodies resolved by exact content hash: current queue plus four prior full-read dependencies. All six geometry jobs and five unique eighth-checkpoint jobs closed. No filename-only reuse.",
+  "prior_code_reuse": [
+    {
+      "sha256": "964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8",
+      "path": "t20-consolidation-20261011/catalogue/objects/96/964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8",
+      "reading_status": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "role": "authored_script_dependency",
+      "routes": [
+        {
+          "source_sha256": "964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8",
+          "ledger": "private-locator:ac64cded459ab47ab597",
+          "pointer": "$/entries/39",
+          "recorded_scope": {
+            "mode": "Full verifier source inspected during bounded omission check; imports, exact controls, asserts, input-integrity reads and result write checked; not executed."
+          },
+          "ranges": [],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/96/964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "fresh_execution": false
+    },
+    {
+      "sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "path": "t20-consolidation-20261011/catalogue/objects/9f/9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+      "reading_status": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "role": "authored_script_dependency",
+      "routes": [
+        {
+          "source_sha256": "9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2",
+          "ledger": "private-locator:c7cc69666d80d88b75a0",
+          "pointer": "$/records/21",
+          "recorded_scope": {
+            "disposition": "FRESH_FULL_BODY",
+            "adequacy": "Every line was read; controlling content includes complete proof or implementation where present. Bibliographic/source-receipt assertions do not create fresh primary acquisition credit.",
+            "remaining_substantive_ranges": [],
+            "role": "research proof/review or actual finite diagnostic implementation"
+          },
+          "ranges": [
+            [
+              1,
+              256
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/9f/9f1890d70aba5d3f4ca953809a588471226f3e56bb46feaf7cb82c3cf0aa3bd2"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "fresh_execution": false
+    },
+    {
+      "sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+      "path": "t20-consolidation-20261011/catalogue/objects/53/5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+      "reading_status": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "role": "authored_script_dependency",
+      "routes": [
+        {
+          "source_sha256": "5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217",
+          "ledger": "private-locator:c7cc69666d80d88b75a0",
+          "pointer": "$/records/26",
+          "recorded_scope": {
+            "disposition": "FRESH_FULL_BODY",
+            "adequacy": "Every line was read; controlling content includes complete proof or implementation where present. Bibliographic/source-receipt assertions do not create fresh primary acquisition credit.",
+            "remaining_substantive_ranges": [],
+            "role": "research proof/review or actual finite diagnostic implementation"
+          },
+          "ranges": [
+            [
+              1,
+              204
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/53/5319e3f6ccce9836c6e3ac41ec176e50d1447f33eebaf13fa6a2a5d61fa49217"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "fresh_execution": false
+    },
+    {
+      "sha256": "159f8c8c3994c67a9d1211e0b9211652eca6c4be28f7f6c3d2c13f51696b2a95",
+      "path": "t20-consolidation-20261011/catalogue/objects/15/159f8c8c3994c67a9d1211e0b9211652eca6c4be28f7f6c3d2c13f51696b2a95",
+      "reading_status": "EXACT_PRIOR_FULL_BODY_REUSE",
+      "role": "authored_script_dependency",
+      "routes": [
+        {
+          "source_sha256": "159f8c8c3994c67a9d1211e0b9211652eca6c4be28f7f6c3d2c13f51696b2a95",
+          "ledger": "private-locator:c7cc69666d80d88b75a0",
+          "pointer": "$/records/5",
+          "recorded_scope": {
+            "disposition": "FRESH_FULL_BODY",
+            "adequacy": "Every line was read; controlling content includes complete proof or implementation where present. Bibliographic/source-receipt assertions do not create fresh primary acquisition credit.",
+            "remaining_substantive_ranges": [],
+            "role": "research proof/review or actual finite diagnostic implementation"
+          },
+          "ranges": [
+            [
+              1,
+              114
+            ]
+          ],
+          "recorded_paths": [
+            "t20-consolidation-20261011/catalogue/objects/15/159f8c8c3994c67a9d1211e0b9211652eca6c4be28f7f6c3d2c13f51696b2a95"
+          ],
+          "exact_held_hash": true,
+          "qualification": "Association to an explicit examination ledger; original scopes and composite methods preserved. No imported closure or new execution."
+        }
+      ],
+      "fresh_execution": false
+    }
+  ],
+  "configuration_hashes": [
+    "87f4dde15c12e894e881d146ea93233d866533c3e94fb192e7b06051b0615a75",
+    "f13e844ddb9698f40aae92af9258c390e11a8f530b5264bd9c8cf0c2398bd730"
+  ],
+  "source_extractor_unheld_named_inputs": [
+    "existential-law-source-bridge/sources/safadiyya-001.html",
+    "existential-law-source-bridge/sources/safadiyya-003.html"
+  ],
+  "source_extractor_scope": "Neither exact named raw HTML found in frozen catalogue objects/locations and archive-member names. No hash bound by extractor itself; no execution, no inferred whole primary reading. Already retained unrelated renditions do not close these exact historical inputs.",
+  "source_data_scope": "Manifest and source-binding arrays that wrappers use are custody inputs. Their code paths were inspected; no blanket new semantic reading or fresh verification of every referenced source/data byte is claimed. Two actual execution plans separately read.",
+  "external_dependencies": [
+    "Python standard library",
+    "SymPy symbolic arithmetic",
+    "mpmath high precision numerical arithmetic"
+  ],
+  "original_sources_executed": 0,
+  "prior_tensor_context_routes": "t20-v6-20261011/controller_chain/tensor_information/DEPENDENCY_READING_ROUTES.json",
+  "primary_source_credit": "All cited external-source reading and download claims remain historical at their stated scopes. No broad source acquisition campaign."
+}

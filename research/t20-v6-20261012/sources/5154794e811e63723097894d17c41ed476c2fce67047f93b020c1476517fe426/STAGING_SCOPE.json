@@ -1,0 +1,94 @@
+{
+  "status": "UNFINALISED_STAGING",
+  "date_utc": "2026-10-09T21:21:23.917314+00:00",
+  "completed_reviewed_mathematical_targets": [
+    {
+      "path": "information-geometry-transport-20261009/RESULT.md",
+      "sha256": "077fabaf882988d2de23bda85fd40cc03f6f630c0ca859f12864d53c604fbd94"
+    },
+    {
+      "path": "noetic-gradient-transport-20261009/RESULT.md",
+      "sha256": "27f85cd312cb2083d26257e6c74fea8e547c879dce07d94c04d8c87446c0f4a9"
+    },
+    {
+      "path": "transport-interface-root-check-20261009/DERIVATION.md",
+      "sha256": "f9b7ebaa77b5ae925b60f30ac0267a63a41a7e6dd92da23ca5e34857f930ad37"
+    }
+  ],
+  "exact_mathematical_review_receipt": {
+    "path": "geometry-transport-independent-review-20261009/REVIEW_RECEIPT.json",
+    "sha256": "201cf163a999167c156420d4a19d247625edfc1f66f81ec3470e813abeb69496"
+  },
+  "philosophical_note": {
+    "path": "information-duty-bridge-20261009/REPORT.md",
+    "sha256": "c4384909029956b4da5f7ae45eb259c44ba19ae215a6bafa9b0a6b054f830be8",
+    "independently_mathematically_reviewed": false,
+    "input_inclusion": [
+      {
+        "path": "commissioned-content-access-test-20261009/SOURCE_RETURN.md",
+        "bytes": 15782,
+        "sha256": "52fbe080e7bd57f6c06e695a28428052463702d3ccce72bf2c7ba6ad493250d0",
+        "staging_status": "included_exact_bytes",
+        "exclusion_reason": null
+      },
+      {
+        "path": "commissioned-content-access-test-20261009/ARABIC_159_160_SELECTED.txt",
+        "bytes": 2793,
+        "sha256": "7ac204c016439cbd07ea813a2ceb31c2a598653b5469384b21f40ede7e3e32eb",
+        "staging_status": "included_exact_bytes",
+        "exclusion_reason": null
+      },
+      {
+        "path": "directive-normative-qualification-20261009/REPORT.md",
+        "bytes": 18294,
+        "sha256": "d8b168fe9f0b2686fc05dacb052b8d3e3ce0b5c0686be0c8c5fe6a48e4161453",
+        "staging_status": "included_exact_bytes",
+        "exclusion_reason": null
+      },
+      {
+        "path": "directive-normative-qualification-20261009/MODEL_CROSSWALK.md",
+        "bytes": 11519,
+        "sha256": "efdfa00618ec507a41d7aa34c4ce82bee37670565ab6facb1272c18787adeddf",
+        "staging_status": "included_exact_bytes",
+        "exclusion_reason": null
+      },
+      {
+        "path": "directive-normative-qualification-20261009/sources/majmu14_1456.txt",
+        "bytes": 26766,
+        "sha256": "70317af7248f6ca31a87e776ab9590e740fba85c936fa7aa6ae114922ca66f5c",
+        "staging_status": "metadata_only_excluded_from_portable_subset",
+        "exclusion_reason": "full electronic body omitted; limited selected Arabic and earlier reports retained"
+      },
+      {
+        "path": "commissioned-content-access-test-20261009/scan-controls/majmu14-095.png",
+        "bytes": 115310,
+        "sha256": "e21c9ab495874ce31d7b88d4d9cb948d3467aa2f9c0f9c270e3a2194482e7c51",
+        "staging_status": "metadata_only_excluded_from_portable_subset",
+        "exclusion_reason": "scan image excluded; witness identity retained"
+      },
+      {
+        "path": "commissioned-content-access-test-20261009/scan-controls/majmu14-096.png",
+        "bytes": 120519,
+        "sha256": "4114621f901ee402ac66cc3ba0dd2e7f96b87ee0ca600d1b3cbe4354c9ad9cc5",
+        "staging_status": "metadata_only_excluded_from_portable_subset",
+        "exclusion_reason": "scan image excluded; witness identity retained"
+      }
+    ]
+  },
+  "pending_additions": "Any new Fisher/tensor/state-dependent continuation is excluded until parent confirms exact separately reviewed membership.",
+  "excluded_categories": [
+    "modern primary PDFs",
+    "scans and images",
+    "raw transcripts",
+    "full electronic source acquisitions beyond selected Arabic",
+    "prospective activity and unrelated temporary records"
+  ],
+  "scope_limits": [
+    "No protected changes",
+    "No upload or user message",
+    "No archive finalisation",
+    "No final fresh-extraction replay yet",
+    "No new research or primary-reading credit",
+    "No T20 closure"
+  ]
+}

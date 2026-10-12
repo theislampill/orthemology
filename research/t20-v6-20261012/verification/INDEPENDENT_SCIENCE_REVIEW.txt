@@ -1,0 +1,208 @@
+T20 v6 bounded mathematical and proof-dependency review
+2026-10-12; science_review subagent; read-only except this report.
+
+RESULT
+No material mathematical counterexample or invalid changed-claim dependency was found at the scopes examined. The 15 current contribution statements are suitable for a qualified public projection and draft PR, provided the evidence categories, source exclusions and historical review bindings below remain explicit. This is not scientific acceptance, a whole-corpus revalidation, a native/kernel replay, a T21 start, or merge approval.
+
+AUTHORITY AND EXACT INPUT
+The parent explicitly assigned this bounded review and authorized this one report. Immutable input: private-locator:103e333a97ec2c8e78a5. Parent-supplied repository base: 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c; this reviewer did not change or independently reacquire that checkout.
+Current register: research-v6/synthesis/CROSS_CONTRIBUTIONS.json, SHA-256 c8b485a2298809c94b6b1b682278d24e806002c448303326bd6ab46283bb8aaf, 15 current rows (11 C rows and four inherited R rows). The intake's prior all-file/package verification was not rerun. Every artifact and linked review in these 15 rows was read. START_HERE, OWNER_REVIEW_CASE, the correction/supersession index and final scope corrections were read; relevant mathematical synthesis passages were compared with the controlling contribution statements. Additional source reads are identified below. No external source was acquired; no historical wrapper, compiler or inherited scientific checker was executed.
+
+PUBLICATION FINDINGS
+1. Correct current navigation. OWNER_REVIEW_CASE.md says that exact contributions are bound in CROSS_CONTRIBUTIONS_WORKING.json. Current reader navigation should point to CROSS_CONTRIBUTIONS.json. Preserve the historical working register and record a public-projection text transformation; do not rewrite the immutable input. Parent was notified and plans this correction.
+2. Preserve exact review scope rather than treating review-file presence as a current-digest full-body review. C09's REVIEW.json binds earlier report digest 7e0ed3796b4b4bffb1f2460759a76806f7b10d07f988761f73f56473b096a252, while the current report is 08ef01cf9e6fe361c7f51caa187985d1df4de77159bece5561840bea89ea6d08. The formal source digest eaa175dc008b893b8fcb7b6cfaabe0e3b858d4cd7667a9c6bad40cf1fa121162 is current in the compilation/review records. This review independently read the current report and formal source and found the finite-history argument sound. Preserve the old receipt as historical; this report does not make its old prose hash equal the current one.
+3. R03's linked independent review expressly reviews synthesis section 4.2 at its bound snapshot, not every statement in the 65-source lineage report. Four controlling original bodies are identity_only, availability held_excluded, exclusion explicit_owner_private_custody_only in PUBLIC_PLAN: cf5c163cdc2d79443740c6bf892c2132d6b3746817700dab65f27b88d77974e7; 623904df068e2695284b2e54b65f8cdce4dc0b0627f656fd70e2318c62081da0; 57acfff3020ad894e6d6975f3dd81a4d61d57a8f1f55ea886539692617737607; 465c603b11348ce2e142f4753c886f164eb4773c322be834f8950db123d10bd9. Their prior complete readings are recorded in the scope resolver, but their original bytes were not present for this reviewer to reread. Keep inherited crosswalk credit and exact provenance/exclusion references; do not claim a new independent reading of those originals or publish them through a derived-text substitution.
+4. Ordinary proof, finite control, historical source compilation and fresh integration-native verification remain separate. In particular, C06 quotient bijection/cardinality and C09 posterior/stopping consequences are ordinary deductions; the kernel declarations have narrower explicit scopes. C07 remains an ordinary join of exact inherited source theorems. No formal result supplies actual-world source authority or metaphysical warrant.
+
+CLAIMS EXAMINED AND DECISIVE REASONING
+Paths below are relative to handoff/research-v6; each exact artifact identity is the corresponding row of the bound current register.
+
+V6-C01 - root_math/CONDITIONING_CROSS_CONTRIBUTION.md.
+The delta/max(A,B) bound is valid: for A>=B, positive posterior mass is at most A^-1 times the positive part of p-q, and L<=1 gives delta/A. Swapping p,q gives the other case. Both normalizers must be positive. The alpha>0 four-state fixture attains delta/alpha and the five-state fixture attains the clipped value one. Inserting B_L q permits the independent relative-factor triangle bound; the sum is not generally jointly sharp. The bounded-observable transport consequence requires the same observable and its range/Lipschitz hypotheses. Read current proof and complete CONDITIONING_REVIEW, including corrected candidate recheck. No wider source calibration or infinite-horizon consequence accepted.
+
+V6-C02 - root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md.
+Independently checked the full-source Fisher identity from the metric decomposition and the exact controlling source 178adaf0... sections 3 and 9, especially n_(j,i)=p_(j,i)(1-p_(j,i))/w_j. Strict positivity makes each numerator nonzero. The k-1 specified norms recover all weights by normalization. W is a nonempty relatively open affine fibre of dimension k-rank(Q). Injection forbids a finite supplement for d>0; invariance of domain forbids a continuous injection into fewer real coordinates; affine kernel coordinates attain d. The d=0 case needs none. This is a norm-family contract, not one scalar norm, gradients restricted to W, arbitrary discontinuous coding, or a global varying-rank chart. Read complete proof and geometry-sidecar review; the current normalized-q clarification is sufficient.
+
+V6-C03 - root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md.
+Read proof, complete review and the exact defect theorem in source 626504b6... lines 138-176. Because constants belong to W, event error epsilon implies dist_infinity(chi,W)<=2epsilon, even with arbitrary decoders. L2 residual sum is trace(A)-trace(P_U A); the rank-k projection captures at most the k largest eigenvalues. Compression of an orthonormal-character projection gives eigenvalues at most one. The exact zero-error count is the residual span rank and is attained by acquiring its basis. The oblique example correctly has nonzero residual spectrum 1,sin(theta)^2. A positive-error spectral tail condition remains necessary only; no attained uniform-error decoder, bit bound or sample bound inferred.
+
+V6-C04 - type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md.
+Read proof/review and original c77bb25b... lines 110-154. Conditional independence yields a sum of translated-interval noise submeasures, whose union has length at most NL; Gaussian rearrangement gives a=2Phi(NL/(2sqrt(n)))-1. Event-TV adds at most eta. The sharpness construction moves delta=min(eta,1-a) mass outside the capture interval while preserving S; the changed event supplies the matching TV lower bound. L=0 and p-eta=1 boundaries are qualified. Complete mediation and the countably additive Gaussian reference law are essential; no coherent all-horizon process or prescribed Y marginal claimed.
+
+V6-C05 - type_collective/ERASURE_WORK_BOUNDARY.md and ErasureWorkBoundary.lean.
+Read full new Lean theorem and report/review, exact constructor definitions and sourceRun/shape/export equations in SourceChecker 0469fa6f..., SourceResources 6b293ac5..., and SourceExportBoundary eaff0792.... Original allI(i(var 0)) is valid; reduce original [i] is a valid zero-transition singleton trace. Encode adds zero Cert.step nodes, so certificates are definitionally equal. Work is 10+12=22, then an added valid output charge gives 34; exportWork is 2 versus 3. The source proof guards are satisfied by these small shapes, so source-check equality is not equality of two rejections. Non-factorization through the common Cert follows by substitution. These are structural charges, not wall-clock or arbitrary derivation costs. Historical author and reviewer receipt scopes were inspected; no new execution here.
+
+V6-C06 - root_math/multivalued_reset/RESULT.md and MultivaluedReset.lean.
+Read complete current report, 160-line formal source, review and receipts. Necessity resets every coordinate except i to a common context; sufficiency telescopes coordinate replacements along a finite covering list. The Lean observational relation tests every common future word, includes the empty word, and discharges reset congruence with resetLabel/resetCorrect. Coupled actions remain permitted. Quotient/product bijection, reachability from full resets, and minimal state cardinality follow as ordinary consequences; they are not kernel declarations in this file. The infinite-coordinate and missing-reset countercontrols genuinely show the omitted hypotheses matter.
+
+V6-C07 - type_collective/JOINT_COMPLETENESS_BOUNDARY.md.
+Read proof/review and the actual relevant source endpoints in TypeInhabitationSearch d1817d95..., FamilyComputability b77fabcd..., FullPERHalting 8b8951ef..., and JointSoundness 31b121c6.... Type inhabitation is the term-plus-certificate existential projection on exact canonical codes; the family map is computable. Soundness plus completeness on the non-r.e. semantic family would make that family r.e., contradiction. A semantic inhabitant of the omitted A, fed into the actual arrow interpretation, separately excludes an internal negation; no internal proof of A is assumed. Original formation comes from the stronger exists_nonhalting_family endpoint. SourceProofSearch dc43ffbc... imports CanonicalCertificateCode, CertificateImage and Mathlib.Computability.Halting; the described successful actual-source enumeration chain is distinct from historical NegativeSearch's absent PRSearchComputability. This is an ordinary conditional join of retained formal sources, not a fresh kernel proof or a concrete selected omitted index.
+
+V6-C08 - type_collective/GraphBridgeNegative.lean.
+Read complete new theorem, its review, compilation/axiom records, and exact endpoints in GraphBridgeAssembly 0dd6090f... and OriginalWNoninhabitation b4c46829.... The first composes the two exact scalarContext bridge derivations into HasE [] c3 (W originalQ); the second refutes that literal target. Their composition excludes the conjunction. It does not decide which bridge separately fails or say anything corresponding about HasJ. Inherited SourceNaturality/literal-identity companions do not become new discoveries. The 103-module staging import records were compared with actual CAS import headers: no discrepancies; the required graph dependency closure is the 100-module subset specified below.
+
+V6-R01 - root_math/specialist_b_history/REPORT.md, relevant singleton-fibre argument.
+Read report and specific independent review. If each eligible fibre is {s(w)} and transports preserve eligibility, T(s(w))=s(v), hence path composition fixes the selected anchor and the eligible section is unique. A swap counterexample cannot preserve that singleton premise. This is an elementary dependency correction under the exact relevant-edge contract, not global flatness on ineligible tokens or numerical extramental bearer identity. Wider philosophical appraisals in the lineage report were not independently adjudicated here.
+
+V6-C09 - type_collective/pd_checker_annex/FINITE_HISTORY_TRANSPORT.md and fresh_lean/FiniteHistoryTransport.lean.
+Read current complete report, complete formal source, reviews and compilation receipt. Read actual CheckerStateObservation 71bf2c2d... row and initial-erasure endpoints. Joint row equality and a policy depending only on common recorded history allow grouping the induction sum by erased state. Separate observation/state marginals would not suffice. PMF map/bind naturality formalizes the same step and the actual checker instantiation. The support-validity condition is discharged by the original row theorem. Initial-label alignment is real: a policy can distinguish [] from [ordinary]. Positive-history posterior equality and same-clock history-measurable stopping distributions are sound ordinary consequences; no finite expected stopping time, hidden-state equality or unlicensed latent-state policy is supplied. The current prose-hash versus historical-review-hash distinction is finding 2.
+
+V6-R02 - root_math/geometry_audit_annex/JOINT_HULL_OBSTRUCTION.md.
+Read report/review and actual MixedRepair 2a6e62d4... repair endpoint, complete ProductObstruction eb26c550..., and score definitions in MixedScore a7bf5cbb.... The displayed positive barycentric weights produce p=(1/4,1/4,1/2,1/2,1/2,1/2) in both relative interiors. Both tangent spaces impose the duplicated first coordinate and high-coordinate sum constraint. The identical ambient score maps use quartic psi on the first block and curvature 100 on the last four. The mixed-hull theorem gives a small positive strict-repair interval; the product theorem excludes even the four required weak comparisons for 0<epsilon<=1/100 and covers every product-hull candidate. Taking the smaller radius yields opposite answers with the stated shared data. Admissible truth-indexed score lists are not equal, and this is an inherited construction, not new priority or a universal minimal-representation theorem.
+
+V6-C10 - type_collective/formal_annex_residue/LINEAR_SLACK_EXTENSION.md.
+Read complete proof/review and the literal BinaryApproxGood predicate and c=1 theorem in source 16f46797.... At q=1/2 the margins are a*e+a*e^2+eta and -a*e+a*e^2+eta. For eta=c*e, 0<=a<=min(c,1), e>=0 they are nonnegative, with a nondegenerate interval for every c>0. With eta_n/e_n -> c>0, each a<min(c,1) eventually works; the threshold may depend on a. The same singleton private-state law avoids parameter coding. This does not prove an iff for oscillating tolerances or strict repair.
+
+V6-C11 - type_collective/cumulative_damping_prose/ACTIVATION_BOUNDARY.md.
+Read full control/review. Sine-modulated lognormal laws have equal integer moments; multiplying with a common controlled factor preserves equality for every old controlled-only schedule. Positive quadratic hidden-coordinate tilting is injective on normalized probability laws: equal tilts imply proportional originals, and unit mass fixes the ratio. The Gaussian exponential moment after the new tilt makes the laws determinate, so distinct laws must differ on some finite-degree polynomial. No uniform separating degree follows. This changes the operation family and does not contradict its old continuation theorem. The explicit product/quadratic instance suffices for this countercontrol; no independent all-functional representation theorem or kernel replay is claimed.
+
+V6-R03 - root_math/terminal_annex_prose65/REPORT.md, finite-law crosswalk only.
+Read report, complete linked review and current synthesis section 4.2. Independently checked the finite-catalogue interpolation mechanism: one affine statistic separates each pair, products across m-1 independent positions give class delta expectations, and their sums interpolate arbitrary catalogue values. No deterministic identification or catalogue-independent bound follows. The revised common-support, observed-state, action-retaining cycle, bottom-region, sticky-switch, stopped-history and separate positive-exit-hazard premises are all retained. The aggregate chain remains inherited ordinary-proof evidence. Full regenerative/stopped original proof revalidation was not done: the four exact original bodies are excluded as detailed in finding 3. No fresh original-reading, checker or compiler credit is assigned.
+
+V6-R04 - root_math/occurrence_feasibility_join/REPORT.md.
+Read report/review and the complete seven-record source-relative fixture 67f405c2.... Exactly six complete occurrences give MMG/GGG; the Cartesian product adds MGG/GMG. MMnull is not a wildcard. Independently, the binary relation {(0,1),(1,0)} has fixed sum one while both marginals vary. Thus marginal completion bounds require joint feasibility for sharp attainability. This does not authenticate the supplied Arabic interpretation, attributed speakers, empirical coupling, or the separate 61:5:4 applicability contract.
+
+NATIVE VERIFICATION MINIMA FOR THE INTEGRATOR
+These are extracted/derived command recipes, not executions by this reviewer. The historical compiler is Lean 4.19.0, binary SHA-256 92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023. Use a verified current native compiler and isolated origin-scoped staging with exact file hashes. Historical private-locator:c159de79eaf3107f4026 paths are provenance, not current commands. Avoid flattening unequal same-named modules or executing historical wrappers.
+
+C06: root_math/multivalued_reset/MultivaluedReset.lean sha fe4ab0cabdad655057cc898f38299180b301e0973a60b308763d411803477df9. Its sole direct import is Mathlib.Data.List.Basic. Receipt command is lean --trust=0 -o MultivaluedReset.olean MultivaluedReset.lean; root KERNEL_RECEIPT additionally records -j1 -DwarningAsError=true. Official pinned Mathlib dependency environment required; no custom research imports. Printed targets: coordinate_equivalence (no axioms), factorisation and observational_factorisation (propext, Classical.choice, Quot.sound).
+
+C05: compile the following nine exact custom dependencies in the listed order, with lean --trust=0 -o MODULE.olean MODULE.lean, then ErasureWorkBoundary.lean with the same argv pattern. Receipt: type_collective/fresh_lean/native_constructor/FRESH_COMPILATION.json; target receipt: ERASURE_WORK_COMPILATION.json. This nine-module dependency closure excludes unrelated native-decoder proofs from the 24-module original suite.
+InternalPolymorphism 7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee
+FiniteBridge f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042
+SourceTypeOps 579aaaf659975a05aecb874b67f555bd64d642c390477663dbe92dd909ac30d8
+SourceHeadStep dcd10c48454ef1e84c9ed136d040d9cee4a5d746ff2081e9f73e3c02020ae877
+SourceChecker 0469fa6f9f32452bba861eddba88c389f0f9eae4ef529468926ac959c67cc299
+SourceCheckerProofs 22d81a3948be52b14749eb6c200e6e4fcb971bc44bb87240e4760158d8148e27
+SourceResources 6b293ac5119cc072754413a7e9b084db0a3b2bcbd65a724b8646cf5666f23429
+SourceExportBoundary eaff0792a6eab2665c3e34ccc860c3e2d74e23ae49168934680a56bb964dba7c
+SourceControls be028b2ca3d26319e8a76aaa4687c67982cebf5afe6c31cba2f4755d3e36fa38
+ErasureWorkBoundary target 5ef2842f3094c442cce72d4bac7ab26f6ecff16458ea1840b752731ac56d25f7
+Do not substitute the other SourceControls hash 4585df3f... or the other SourceResources hash c17cf5cd.... Only core Init is external in this minimal chain. Target prints zero axioms.
+
+C09: type_collective/pd_checker_annex/fresh_lean/FRESH_COMPILATION.json records lean --trust=0 -j1 -o MODULE.olean MODULE.lean for four originals followed by the new theorem:
+CheckerKernel 074270a22703df806c0615cb6ed17ad90de60e37a9d7e6dcefdcd2695e5a696c
+CheckerSemantics 29a4ea62c379d872aa1821740e61605d74f43aec69017b8cc945c5fa712d6e80
+InitialCheckerBelief 9dcb8abe7dae57e48678b3865acf960c608e645acb87f196fa013987657967a9
+CheckerStateObservation 71bf2c2dc8ab5adabe54a9e0fa2d393408a5f54cc6cd2907f4cefca85d6babb1
+FiniteHistoryTransport eaa175dc008b893b8fcb7b6cfaabe0e3b858d4cd7667a9c6bad40cf1fa121162
+Use the pinned official Mathlib environment. All five printed targets have only propext, Classical.choice and Quot.sound. The preserved failed first attempt is not current successful evidence. The separate root_math/pd_history_review/check.py is a bounded finite corroboration, not a proof of all horizons.
+
+C08: lean --trust=0 -o GraphBridgeNegative.olean GraphBridgeNegative.lean, target e77646dbd733a6fec1bb66c1fd49acbf84f27831490e831a2fece59ee69b158f. Direct imports are GraphBridgeAssembly 0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3 and OriginalWNoninhabitation b4c46829c268c37860114d5d99c08a2bc099373133a591664503ef07d8b75628. Exact source mapping/imports/order: type_collective/fresh_lean/naturality_union/STAGING.json. The transitive custom closure is its 103-entry order with GenericFoldTransport, SourceFoldContract, SourceFoldApplication removed: 100 dependencies, then the target. All 103 staging import lists were compared with actual CAS headers in this review with zero discrepancies. External roots are Init, Std, Lean, Mathlib.Data.Bool.Basic, Mathlib.Algebra.MvPolynomial.Funext, Mathlib.Algebra.Order.BigOperators.Group.Finset, Mathlib.Algebra.BigOperators.Fin; retain their pinned official dependency closure. Compile custom dependencies individually with the same trust-zero argv pattern, or reuse only an explicitly qualified existing dependency suite. GRAPH_BRIDGE_COMPILATION.json and root_math/type_join_review/REPLAY.json are historical evidence, not current-native results. NEW_COROLLARY_AXIOMS.json records only propext, Classical.choice, Quot.sound for the graph theorem.
+
+SOURCE-ONLY PARTIAL DISPOSITION
+If a current Lean runtime is unavailable, the minimum coherent scope is the current scoped mathematical readers/register plus exact source bodies (or already-preserved exact source references), historical compiler/review receipts explicitly marked historical, and current integration execution marked NOT_RUN/unavailable. The four new formal companions C05/C06/C08/C09 can remain as source-backed contributions with their dated original compilation evidence; do not claim a fresh integration kernel pass. Ordinary proof rows do not require a new kernel campaign. Keep R03's crosswalk inherited and its four owner-private original identities excluded, with no new direct-original assurance. The absent PRSearchComputability certificate and missing R3 successor remain explicit exclusions and do not demand replay of unrelated proofs. This bounded disposition is compatible with a draft PR; it does not certify scientific acceptance.
+
+EXACT C08 CUSTOM DEPENDENCY MAP
+This is the minimal 100-module closure derived from the two direct imports and checked STAGING import headers. Order is STAGING.order with the three irrelevant modules omitted. Each body is at handoff/authored_objects/<first two hash characters>/<hash>; official library closure remains separately pinned. The closure fingerprint below is SHA-256 of the following lines encoded as UTF-8 without BOM, joined with LF and with one terminal LF. It is a dependency identity, not compilation evidence.
+STAGING.json SHA-256: 95643c45c7ef639c572f67cf70f169f59d5aa695305c59b2909c6b6a1f8bd4ec
+Closure fingerprint: b333b029806c0c58cbc1a5eaf120b04f48fe01d502fd3cfd1b41b08e96eafd4b
+InternalPolymorphism 7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee
+FiniteBridge f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042
+P01TypeAlgebra 222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188
+P01SNReflection 017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86
+BoundaryResults cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c
+P01Candidates 9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e
+P01Confluence 682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e
+EffectsAndDependence 0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2
+NormalisationAndNumerals 13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2
+P01Omega df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88
+P01Polynomials 57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8
+P01PER ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e
+P01DependentCore d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498
+P01ContextualJ e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c
+P01Certificates 5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6
+P01Examples 7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82
+P01RecursiveModel a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9
+P01LambdaSyntax 1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21
+P01SystemF 9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a
+P01CurryParametricity b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a
+P01Translation 538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d
+P01ModelWitnesses f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f
+P01DependentModel f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59
+P01DependentSubstitution 74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610
+P01DependentFundamental 82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa
+SubstitutionSyntax ad4e0896abf3a7a3354a14db6743349421520d10eca0790cd632821ecd995649
+AllSyntax 633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46
+AllPredicates 8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3
+IntensionalIdentityBridge 37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333
+ExtensionalRepairSyntax dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f
+AllTermAlgebra e159200710e0a397905f1c1767a464f250b6aa8c24d9c0c180eac7bec0ab0906
+AllMixedAlgebra 327cf7b9d6679924b7047a76dbefe1fd632bae72cc3524539a2feedca491b367
+AllStructuralBase be56bb140b8d9c9ce720eb7f142567b2d4f0f9af56684a79544b8b83959b571d
+AllStructuralRename cebb64016e34e145fa817b56751ad2a2087b5609035349839ef210a51dff51f0
+AllStructural 9396848b7cfd7463d1b445783193795eb50fbaa7b6165ba89cb0e6811d03d4e1
+AllRawSubstitution 7f08b75b336aa9b21765fb38aca3903f0e0c66fc7fbc3ba46d4478eda662cd66
+AllRawRenaming 5016345c3ac8ed5c9340108c81cb8e6db004682a5e4a10c6d735f6b19513988f
+AllBaseLaws df3c460633a4ad882a4773f87e7e1868a121e89016fed1055ae0045876803984
+AllPiLaws 8bf72d8305f56d39b629be8d1c417cb58e0259b579d5cfada2fe5017e7ed242f
+AllSigmaLaws a1d160a14284bcbb7b2646b66e539e69c795e1eba35a3d5d28302815e20b113d
+AllTermLemmas 6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e
+AllBinderLaws fdc1ca460ddd4acf8eaf138e364a149c54c8676583d2a31032d65352c89738f9
+AllConstants 9d7daccb21ecbba9e6944fee11fa629fc89171b76bc6236d7233b6a8a079e041
+AllFiniteComparison bf768fbeeff2ff79aba29a1ce1579dbc877239561a8345873b60f2891906ef1a
+AllSemanticSubstitution 352395bd515bdc85e3c4112ca9c9b0f541d6f336bb3ad716bef1ee5198762d09
+AllInstantiation f7de7939a0e2653817dec87c2648b26f66ac422b23cf3bb049c5ddb05ba64606
+AllSoundness e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7
+P01DependentControls 6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c
+AllInheritedPositiveControls 86989a82ccb5c8afd430b1c87a446d30f8b1df76239a80f281c5a0a11316fd37
+EffectiveStandardness ddf25f10d625a38087f237b1d16c0e2968a5fd7ed1a86a6f3f9192318f3b0428
+TypedSyntax b65b90129c3d5e198f9e9266efb8295cea016b41be541b0dbef7683a6438357c
+TypedAlgebra f8228cd89cc6acf3b11ffef45d41948e4b35be91d630bcf0f67172dd04b811fc
+TypedStructural 881b63b6e21657c32cdd5347c0e32b7877214836ba6c15c45d3e67048d2f0caf
+AllNucleusSyntax 74342157f432e9739f986423cf8cd64bb5d5ec41fafbf54b421404a64cbab79e
+EffectiveObserver 4dfa27ed15c9586ae995f6d343995e2c8e680e62f778b29ed1ca3b758cd97a2f
+EffectiveReduction fc3d89c9768e4fedb0c5120b6927c9ea6e2340355d3333f06996345ee057735d
+ExtensionalRepairLemmas 00283060fbb1f8940432f4929b6062fdebe709f4d871e772a4035caafe11a2ac
+ExtensionalRepairSoundness b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5
+IntensionalIdentityWitness 6ce47ff2accaf6630baff07434e2292b3830a03f4f57210d6e6d6eff0a2f7e74
+ExtensionalRepairWitness 0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29
+IntensionalIdentityModel 64bbbb88fb4c10b269584664e8ad6944b18c0d41b42bf0825525d395ad1fa8d4
+IntensionalIdentitySoundness 011a77731c57e1b7f4a2d036acea6c762d537f19a0a45cdf45e337cbea3c9984
+IntensionalIdentityRelations 009a780a862a972466d87100dfd9b599399cec1ee7c621f0b3a130edcfb3063d
+IntensionalIdentityTheorems 48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c
+ExtensionalRepairTheorems 4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51
+EffectiveRuleBoundary df16203390fe6a5106d72a5d6d4323ff8999a85731ed2dfbfa5f944b8e830a4c
+EffectiveCanonicalTests 5a15068f5c6b52130c05c85a1e3680a649b80a8847bfcdc4f89db0bf363805c9
+EffectiveBooleanStandardness 5d359eef565e4114756ae73e159cd6e990ddfe3c8620fb08a78490be9feea1bd
+EffectiveBooleanCertificates c1d0ffad7ea64205e54b342a343fdb80c0c1a5fbfe9f497875c8e774f21a0354
+EffectivePrimitiveRecursion 52d39087b9c1eaf316c497cb265bc34f41a290a9b091e70f8458a98b842e4eba
+RestrictedCompiler 7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30
+PolynomialTestBoundary 1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82
+UnaryPolynomial aa716d61f011942c08532878a322c1b98978d5095bab58fe5ae1e1d5eae37cb6
+UnaryFiniteDescription 061d8de20772e3fca5bd2a73641da266f782f2d23e8ad4843255c17d875a29d5
+UnaryExpressions 9577dc7da47df9915c87b374b9bd87f534849f94ba272bf60ccd7f20313cbe56
+UnaryNormalForm a2be40ceebd2c9293ac2be158abff27ed6093c2a82325fb946b5d2b534040d9c
+ComputablePrelude b03a2697366e285b76da6d846b50a9b3ab9b949bfcac7564ba5c882a4461b292
+SparsePolynomial 2fa686bbe04f48f71db17446ec3b75fcc26356c04d142b2dd1f1c3a3e58c7b0a
+PositiveSeparation 8428453cf8d75c20aea651038cbb5d0b95096c5915f2026de7283dd86cd7ead8
+MaskNormalisation d4a5eb7c20db7b8854818c0b04cc5b6332847e5ca2e1fe4af096a902a6750dd4
+IdentityChecker 989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02
+UnaryCurrentIdentityBoundary 8e943773416edcb225d1c3ed9961938bc75f82d7cc67f0bdb1aea5a98b126eac
+UArrowAndCompilerControls 7fe317d5fbc4657ecd7f793808872941a8bfdf5b3a281f87a2f11b6ea70ac7a9
+OpenTermStandardness d3972a5dff963d07cb1808427686dfdae3bf54bdc811bef025809ec8846a527d
+FrozenCompilerMirror f77cd702ec5f1dd242a8e30959aab203b5215b838a3305d64c5c733ec00d01c0
+PERInterface 312b60aafb9752d02e67c9cec6843c12b0419d96d86202f219b2b10a4b3032f3
+ImportedCompilerTransport 448e9f950a1c51a9267ca04671fe6ade3377a485692621bd8252925ae02fbdbc
+FullPER 2a0d01d92923a22c4b41f512e4c4b3524ea1c630d13478176c5c20d63afa7638
+ScalarFusionCore 975e2220158cf6b285cc994e36c408389a908c77e0f63bfa028c8cb416319618
+InternalGraph 74ef636570ba73c227daf40d913bdba5a9c40bb83b87579f1b902f1f6a2db25e
+ProjectionBoundary 99209853e5882ee3ce54d86c32cd0f33efcc43e66ef7dca934788ca5ecfd8469
+Application 6d57b65eb3c4ffc8b7c34ba66beea17b7705265dcc4fdd11e66b14d0c5702bb9
+GraphBridgeAssembly 0dd6090f8cde9debb2bb58b921bac52c9bd6dd058cece3d2b09fc8f501d1b8e3
+CaseOperational 5575a1d8e69c8f857b0b15dc6f1358a4c3f44bd54a47bf528cf3295ae59c3708
+SourceTransport 3e3e4bcbea2c19c58df20cb7f83c7e5e9a41e7a4c9dcfab6085e09fc2025987a
+HomogeneousPER f06b84a8dd088a9cf82ab99dff2d476023ab50427fee0245ef5d210a8ec57f0f
+ConcreteUniverse 8fb9848611f88b2f2555a15469eb59c3ff98e9a831f92f701cdb0091dc2d6904
+HenkinSoundness d0c9bc80e4014f2dc7ba685af95690b96ea02e166209101966e9a9e797fbcf5f
+LiteralCounterexample af219bfec917e3f083b093ffc9d1e07f54fec5d72e8f8a274915eaa030397c0c
+OriginalWNoninhabitation b4c46829c268c37860114d5d99c08a2bc099373133a591664503ef07d8b75628
+
+VERIFICATION STILL NEEDED / LIMITS
+The integrator must verify any actually changed public bytes, links/resolver targets and chosen fresh native results under the current checkout/environment. Do not upgrade historical compilation or this read-only proof review into fresh execution. Do not re-run all historical wrappers to establish these bounded claims. Ordinary-only rows need their stated mathematical qualifications, not invented kernel obligations. Preserve unavailable R3/88-test successor, exact missing originals/imports, bounded primary-source reads, uncertified historical six-hour activity, owner-acceptance=false, and the no-T21/no-merge boundary. This review does not certify the whole 27,839-input examination denominator, philosophical truth, external novelty, or public eligibility of excluded bodies.
+
+DONE WHEN
+This review's scope is complete with the current 15 claims and linked reviews examined, key source endpoints and native dependency recipes checked, actionable navigation/scope findings returned, and this report read back. Parent remains responsible for public projection, selected native/repository gates and authorized draft-PR effects.
+
+
+FINAL FIDELITY VERIFICATION (2026-10-12): QUALIFIED, NO MATERIAL MATHEMATICAL BLOCKER FOUND IN THE REVIEWED SCOPE. This is an independent model review of source claims, selected dependencies and projection fidelity, not owner acceptance or a whole-corpus scientific certification. The candidate is private-locator:1cd0d278e0d76843100c on base commit 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c. The inspected public manifest SHA-256 is 6b6e52c8202a2aa9ebe02a5e50be3186d54555a73e254a122e599eed270217f8 and final README SHA-256 is 340d7b92d1696c49b4a1e9d5c6d0b29ee15021f3530d68c8e50724eb5c01e5b4. The final contribution register remains c8b485a2298809c94b6b1b682278d24e806002c448303326bd6ab46283bb8aaf, and all 15 registered scientific artifacts retain their exact reviewed source bytes. No manifest PROJECT entry has a .lean path. I independently reconstructed the affected projection chains in memory: 132 retained bodies match the initial locator/navigation ledger plus the 31 reference stages exactly; four unrelated workflow excerpts have explicit NOT_PUBLISHED dispositions. All 20 later Markdown-navigation files change only link destinations, with document/code selectors retained as exact public targets or explicit unresolved historical boundaries. The mathematical repairs in source 4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9 and source 123edeea72714cc9e1e7d4c830730e1fbee1c20aa8473219cfb56b10393d42c8 insert exactly two and four backtick bytes respectively: [m](x0) and both occurrences of [w₁w₂/(w₁+w₂)](x₁−x₂)² retain all original expression bytes, including their actual Unicode subscripts and operators. The current OWNER_REVIEW_CASE changes only its WORKING-register selector to CROSS_CONTRIBUTIONS.json. The seven final-publication stages also reproduce their public bytes and recorded hashes exactly: one private message identifier and four interpreter paths become logical identities, and the two archival-context notes leave the complete original handoff bodies as exact suffixes. The final README and those notes resolve the reader ambiguity: projected environment paths in 26 Python records and one shell record do change their direct executability, so historical wrappers and command fields are archival evidence, not runnable replay instructions. The native receipt NATIVE_LEAN_RESULTS.json is bound at SHA-256 0f16164326baf7ef17feae1bb80c69833cccc3b6b913eae9d1541023bf3545d3. I checked all 117 module instances (C05 10, C06 1, C08 101, C09 5) against public source bytes and native source/log/olean hashes, with no mismatch; all recorded commands are lean --trust=0 -j1 -o MODULE.olean MODULE.lean, exit codes are zero, source_unchanged is true and sorryAx_in_log is false. C08's 100-dependency fingerprint exactly matches the earlier bounded dependency review. The receipt names Lean 4.19.0 compiler SHA-256 92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023 and official Mathlib commit c44e0c8ee63ca166450922a373c7409c5d26b00b; existing pinned compiler/Mathlib imports remain the declared trust boundary. This reviewer inspected that evidence but did not independently rerun the compiler. Ordinary posterior, stopping/event and quotient/cardinality consequences remain ordinary where no separate formal declaration was supplied. The final README truthfully retains C09's earlier reviewed-prose hash versus current exact prose and does not rewrite the old review receipt; R03 retains inherited crosswalk credit, the historical synthesis-section review scope and four excluded controlling original bodies, with no fresh reading of those originals credited here. No new mathematical semantic change was found in this final bounded check. Missing R3/88-test successor, unavailable originals/imports, bounded primary-source readings, uncertified historical six-hour research, scientific_acceptance=false, T20 ACTIVE, no T21 and no merge all remain explicit. Public verification records were not yet present at the instant of this readback; copying the exact receipt/report projections and completing current publication, repository and CI gates remain the integrator's separate work. The qualified science/fidelity finding does not certify those subsequent public effects, execution of historical wrappers, human-specialist validation, actual-world warrant, external novelty, or owner acceptance.

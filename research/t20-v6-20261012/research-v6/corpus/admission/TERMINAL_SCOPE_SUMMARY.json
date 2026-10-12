@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-12T15:36:32.668795+00:00",
+  "status": "CONSERVATIVE_EVIDENCE_CLASSIFICATION_PENDING_MANUAL_RECONCILIATION",
+  "physical_identity_count": 27940,
+  "physical_by_scope": {
+    "QUALIFIED_ROLE_ONLY": 15368,
+    "EXACT_COMPLETE_BODY": 10417,
+    "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION": 1218,
+    "COMPOSITE_EXPLICIT_READING_RANGES": 76,
+    "COMPLETE_BASELINE_AND_DELTA": 718,
+    "EXACT_WHOLE_BODY_DERIVATION_REUSE": 127,
+    "COMPLETE_VISUAL_BODY_EXAMINATION": 4,
+    "BOUNDED_PRIMARY_CONTAINER_AND_EXACT_EXCERPT_SCOPE": 7,
+    "EXACT_SELECTED_OR_REFERENCE_SCOPE": 5
+  },
+  "source_candidate_units": 11584,
+  "source_units_all_variants_body_or_role": 11584,
+  "physical_pending": 0,
+  "warning": "Provisional strict evidence classification. No completeness or publication eligibility claim. Exact scope excerpts and all source pointers retained.",
+  "artifact_axis_counts": {
+    "RECOVERED_SOURCE_INPUT": 27839,
+    "CURRENT_V6_OUTPUT_ARTIFACT": 17,
+    "EXTERNAL_REPLAY_EVIDENCE_INPUT": 84
+  },
+  "input_only_by_scope": {
+    "QUALIFIED_ROLE_ONLY": 15284,
+    "EXACT_COMPLETE_BODY": 10407,
+    "COMPLETE_STRUCTURED_OR_GENERATED_QUALIFICATION": 1217,
+    "COMPOSITE_EXPLICIT_READING_RANGES": 75,
+    "COMPLETE_BASELINE_AND_DELTA": 718,
+    "EXACT_WHOLE_BODY_DERIVATION_REUSE": 127,
+    "COMPLETE_VISUAL_BODY_EXAMINATION": 4,
+    "BOUNDED_PRIMARY_CONTAINER_AND_EXACT_EXCERPT_SCOPE": 7
+  }
+}

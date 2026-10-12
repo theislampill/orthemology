@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-12T15:26:18.443150+00:00",
+  "path": "t20-v6-20261011/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+  "before_sha256": "03a12b1326d2cac5c928091399157f3257a0d37bf4f6940f1ecc567174eec083",
+  "after_sha256": "197c386f8ff645d586d374e3d6816d4da77628d9479dbcd6da0a9db2aa147f22",
+  "corrections": [
+    "Continuous real-coordinate supplement category and d>0/d=0 restriction restored.",
+    "Exported certificate identity replaces formal proof identity; source proofs remain distinct."
+  ],
+  "basis": "Independent final reader review; controlling mathematical source unchanged."
+}

@@ -1,0 +1,4861 @@
+{
+  "scope": "Recovered 66 bodies: exact custom-import endpoint and recursive predecessor reading reconciliation. Vendor Mathlib/Lean is a standard-library boundary, not new original-source reading. Mutation bodies are not kernel-certified by reuse.",
+  "nodes": [
+    {
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "path": "t20-consolidation-20261011/catalogue/objects/01/017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "imports": [
+        "Init"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 114,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 215,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                40
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/212",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "path": "t20-consolidation-20261011/catalogue/objects/08/08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "imports": [
+        "CodecNumeric",
+        "Mathlib.Computability.Primrec"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 146,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse; full status explicitly inspected in original ledger",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [
+              [
+                1,
+                87
+              ]
+            ],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 482,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                87
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "path": "t20-consolidation-20261011/catalogue/objects/0e/0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "imports": [
+        "BoundaryResults"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 104,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 209,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                217
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/423",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "path": "t20-consolidation-20261011/catalogue/objects/13/136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "imports": [
+        "CodecExpr"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 80,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 102,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 456,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                126
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+      "path": "t20-consolidation-20261011/catalogue/objects/13/13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+      "imports": [
+        "PERRefinement"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 54,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 471,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                161
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "path": "t20-consolidation-20261011/catalogue/objects/13/13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "imports": [
+        "EffectsAndDependence"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 88,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 212,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                85
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/470",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/13/13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6",
+      "imports": [
+        "Mathlib"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/7/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/14",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                149
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/16/16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+      "imports": [
+        "EventualCausalRestoration"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/1/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/2",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                153
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+      "path": "t20-consolidation-20261011/catalogue/objects/17/17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+      "imports": [
+        "MealyHitting",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Basic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 78,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 477,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                240
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/18/1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "imports": [
+        "ObserverAbstraction",
+        "P01CanonicalCarrierProjection"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/53/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/58",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                116
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "path": "t20-consolidation-20261011/catalogue/objects/1a/1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 105,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 216,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                179
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/459",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "path": "t20-consolidation-20261011/catalogue/objects/22/222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "FiniteBridge"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 113,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_V5_ROOT_TYPES_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/453",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "path": "t20-consolidation-20261011/catalogue/objects/22/22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "imports": [
+        "PRDerivation"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 94,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 111,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 465,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                74
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "path": "t20-consolidation-20261011/catalogue/objects/27/2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "imports": [
+        "CodecVarint"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 81,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 106,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 457,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                168
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/28/2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+      "imports": [
+        "FiniteQueryMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/11",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                111
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/2d/2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.AbsolutelyContinuous",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/12",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                96
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "path": "t20-consolidation-20261011/catalogue/objects/31/3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "imports": [
+        "PRHeadRecursion",
+        "Mathlib.Computability.Primrec"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 108,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 113,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 464,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                54
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "path": "t20-consolidation-20261011/catalogue/objects/31/31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "imports": [
+        "CodecPrimrec",
+        "Mathlib.Computability.Partrec"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 147,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse; full status explicitly inspected in original ledger",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [
+              [
+                1,
+                72
+              ]
+            ],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 483,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                72
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "path": "t20-consolidation-20261011/catalogue/objects/34/34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "imports": [
+        "Q8Machine",
+        "P02A2.ObserverCore"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 59,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 132,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 486,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                255
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "path": "t20-consolidation-20261011/catalogue/objects/3f/3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "imports": [
+        "P02A2.ObserverCore"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 61,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 128,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 458,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                273
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/44/44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "imports": [
+        "IndexedRuntime",
+        "ObserverFixtures"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/43/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/50",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                93
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "path": "t20-consolidation-20261011/catalogue/objects/46/46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 32,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                195
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "path": "t20-consolidation-20261011/catalogue/objects/4f/4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "imports": [
+        "CodecProgram",
+        "UniformComputabilityNumeric"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 148,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse; full status explicitly inspected in original ledger",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [
+              [
+                1,
+                345
+              ]
+            ],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 484,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                345
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "path": "t20-consolidation-20261011/catalogue/objects/52/520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573",
+      "imports": [
+        "Mathlib"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 0,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                151
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "path": "t20-consolidation-20261011/catalogue/objects/53/538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "imports": [
+        "P01SystemF",
+        "BoundaryResults"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 64,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 218,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                153
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/454",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "path": "t20-consolidation-20261011/catalogue/objects/56/5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "imports": [
+        "CodecVarint",
+        "P02A2.ObserverCore"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 98,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 105,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 455,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                103
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "path": "t20-consolidation-20261011/catalogue/objects/57/577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 7,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                81
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "path": "t20-consolidation-20261011/catalogue/objects/57/57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "imports": [
+        "P01Omega"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 120,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 204,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                214
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/456",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+      "path": "t20-v6-20261011/operational_successors/sources/59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d/Q8ObserverAbstraction.lean",
+      "imports": [
+        "ObserverAbstraction",
+        "Q8Compiler",
+        "MealyMeasureFixtures"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 490,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                117
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "path": "t20-consolidation-20261011/catalogue/objects/5e/5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "imports": [
+        "P01ContextualJ"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 73,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 207,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                124
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/85",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        },
+        {
+          "ledger": "private-locator:3eb082a97beeafd00b44",
+          "pointer": "nodes/141",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "path": "t20-v6-20261011/early_remaining/t3_sources/64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "imports": [
+        "StatisticalRepair",
+        "RepairObstruction"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/T3_READ_LEDGER.json",
+          "pointer": 7,
+          "recorded_scope": {
+            "disposition": "FULL_BODY_EXAMINED",
+            "new_read_ranges": [
+              [
+                1,
+                144
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "path": "t20-consolidation-20261011/catalogue/objects/65/65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "imports": [
+        "BlockMismatch",
+        "Q8Measure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 110,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 475,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                489
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "path": "t20-consolidation-20261011/catalogue/objects/68/682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "imports": [
+        "P01Candidates"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 87,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 213,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                266
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/467",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "path": "t20-consolidation-20261011/catalogue/objects/6a/6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "imports": [
+        "PRRecursion"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 117,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 116,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 463,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                50
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "path": "t20-v6-20261011/operational_successors/sources/6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c/P01DependentControls.lean",
+      "imports": [
+        "P01DependentFundamental"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 202,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                146
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/464",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+      "path": "t20-v6-20261011/operational_successors/sources/6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383/ObserverAbstraction.lean",
+      "imports": [
+        "MealySolver",
+        "TotalVariation"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 480,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                123
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+      "path": "t20-consolidation-20261011/catalogue/objects/72/7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.NoAtoms"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 74,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 142,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 479,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                86
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "path": "t20-consolidation-20261011/catalogue/objects/72/72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "imports": [
+        "GenericFiniteQueryLocality",
+        "Mathlib.Probability.ProductMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 1,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                223
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "path": "t20-consolidation-20261011/catalogue/objects/73/7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "imports": [
+        "P01Certificates"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 68,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 205,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                83
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/460",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "path": "t20-consolidation-20261011/catalogue/objects/73/737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "imports": [
+        "GenericFiniteQueryMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 2,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                119
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+      "path": "t20-v6-20261011/operational_successors/sources/73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3/IndexedRuntime.lean",
+      "imports": [
+        "IndexedObserver",
+        "UniformRuntimeTrace"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 493,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                118
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "path": "t20-v6-20261011/operational_successors/sources/74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610/P01DependentSubstitution.lean",
+      "imports": [
+        "P01DependentModel"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 200,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                170
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/461",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/75/7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+      "imports": [
+        "CorrelatedOracleMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/9/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/13",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                76
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/75/75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+      "imports": [
+        "EventualCausalRestoration"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/4/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/5",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                68
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "path": "t20-consolidation-20261011/catalogue/objects/7a/7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "imports": [
+        "PRComposition"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 121,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 119,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 462,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                120
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "path": "t20-consolidation-20261011/catalogue/objects/7c/7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "imports": [
+        "Init"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 115,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 211,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                403
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/472",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_NATIVE_READ_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/NATIVE_CONSTRUCTOR_CLOSURE.md"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+      "path": "t20-v6-20261011/early_remaining/t3_sources/7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+      "imports": [
+        "RepairTestingBridge"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/T3_READ_LEDGER.json",
+          "pointer": 11,
+          "recorded_scope": {
+            "disposition": "FULL_BODY_EXAMINED",
+            "new_read_ranges": [
+              [
+                1,
+                69
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "path": "t20-v6-20261011/operational_successors/sources/82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa/P01DependentFundamental.lean",
+      "imports": [
+        "P01DependentSubstitution"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 199,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                198
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/463",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "path": "t20-consolidation-20261011/catalogue/objects/85/8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "imports": [
+        "PRProgram"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 123,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 121,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 461,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                107
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/86/8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "imports": [
+        "GuardedObserver",
+        "MealyMeasureFixtures"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/51",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                156
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+      "path": "t20-v6-20261011/operational_successors/sources/87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd/ParsedObserverAbstraction.lean",
+      "imports": [
+        "Q8ObserverAbstraction",
+        "UniformComputabilityMachine"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 491,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                130
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+      "path": "t20-consolidation-20261011/catalogue/objects/89/89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+      "imports": [
+        "MealyRefinement",
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.Finset.Sigma"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 119,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 472,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                224
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "path": "t20-consolidation-20261011/catalogue/objects/8d/8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "imports": [
+        "GenericQueryReference"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 8,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                110
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "path": "t20-v6-20261011/early_remaining/t3_sources/8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4",
+      "imports": [
+        "Mathlib.Data.Real.Sqrt",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/T3_READ_LEDGER.json",
+          "pointer": 13,
+          "recorded_scope": {
+            "disposition": "FULL_BODY_EXAMINED",
+            "new_read_ranges": [
+              [
+                1,
+                190
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 35,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                190
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/8f/8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "imports": [
+        "Mathlib",
+        "SelfVerifyingSupport"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:2e663e8d276bbeef3d4e",
+          "pointer": "records/3",
+          "recorded_scope": {
+            "disposition": "DIRECT_FULL_BODY_READ"
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+      "path": "t20-v6-20261011/operational_successors/sources/98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167/IndexedObserver.lean",
+      "imports": [
+        "GuardedObserver",
+        "UniformComputabilityMachine",
+        "Q8Compiler"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 487,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                91
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "path": "t20-consolidation-20261011/catalogue/objects/9b/9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "imports": [
+        "P01TypeAlgebra",
+        "P01SNReflection",
+        "BoundaryResults"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 103,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 196,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                265
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/469",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "path": "t20-consolidation-20261011/catalogue/objects/9c/9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "imports": [
+        "LoopPrimrec"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 125,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 123,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 460,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                133
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "path": "t20-consolidation-20261011/catalogue/objects/9d/9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "imports": [
+        "P01LambdaSyntax"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 89,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 217,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                187
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/455",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/a0/a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+      "imports": [
+        "IndexedSplitProgram"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/49",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                53
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+      "path": "t20-v6-20261011/early_remaining/t3_sources/a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d",
+      "imports": [
+        "Mathlib"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/T3_READ_LEDGER.json",
+          "pointer": 16,
+          "recorded_scope": {
+            "disposition": "FULL_BODY_EXAMINED",
+            "new_read_ranges": [
+              [
+                1,
+                210
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "path": "t20-consolidation-20261011/catalogue/objects/a5/a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "imports": [
+        "P01Examples"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 72,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 197,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                401
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/179",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+      "path": "t20-consolidation-20261011/catalogue/objects/a6/a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+      "imports": [
+        "MealyMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 97,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 476,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                126
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "path": "t20-consolidation-20261011/catalogue/objects/ac/acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b",
+      "imports": [
+        "Mathlib.MeasureTheory.Measure.Typeclasses.SFinite",
+        "Mathlib.MeasureTheory.Measure.Typeclasses.Probability",
+        "Mathlib.MeasureTheory.Measure.Map",
+        "Mathlib.MeasureTheory.Measure.Restrict",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 70,
+          "recorded_scope": {
+            "disposition": "FULL_BODY_DIRECT_READ",
+            "read_ranges": [
+              [
+                1,
+                138
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 115,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "FULL_BODY_DIRECT_READ",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [
+              [
+                1,
+                138
+              ]
+            ],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 473,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                138
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/ae/ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "imports": [
+        "PolicyTranscriptFiber",
+        "PolicyRowLaw"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/35",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                81
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "path": "t20-consolidation-20261011/catalogue/objects/b2/b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "imports": [
+        "P01RecursiveModel",
+        "P01SystemF"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 65,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 219,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                99
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/465",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "path": "t20-consolidation-20261011/catalogue/objects/b8/b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "imports": [
+        "P02A2.MeasureCore",
+        "Mathlib.Probability.ProductMeasure",
+        "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 101,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 112,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 474,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                103
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+      "path": "t20-consolidation-20261011/catalogue/objects/be/be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+      "imports": [
+        "MealyHitting"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 79,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 488,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                53
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "path": "t20-consolidation-20261011/catalogue/objects/be/beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "imports": [
+        "PRCoverage"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 75,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 107,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 466,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                42
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e",
+      "path": "t20-v6-20261011/operational_successors/sources/c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e/GuardedObserver.lean",
+      "imports": [
+        "ObserverAbstraction"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 481,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                105
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/c6/c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9",
+      "imports": [
+        "GenericQueryReference",
+        "Mathlib.Probability.Distributions.Geometric"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/28",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                176
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/c7/c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "imports": [
+        "RepairTestingBridge",
+        "CountableIdentification",
+        "Mathlib.MeasureTheory.Constructions.Polish.Basic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/16",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                88
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "path": "t20-consolidation-20261011/catalogue/objects/c8/c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "imports": [
+        "MealyAtoms",
+        "MealyRational"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 53,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 489,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                84
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/c9/c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "imports": [
+        "CommonObservationBoundary",
+        "GenericAuditControls"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/17",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                166
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "path": "t20-consolidation-20261011/catalogue/objects/cf/cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "imports": [
+        "FiniteBridge"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 90,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 208,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                232
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/481",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "path": "t20-consolidation-20261011/catalogue/objects/d2/d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "imports": [
+        "P01DependentRepresentation"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/468",
+          "recorded_scope": {
+            "reading": {
+              "kind": "DIRECT_FULL_BODY_READ",
+              "ledger": "t20-v6-20261011/type_collective/READ_LOG.jsonl"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "path": "t20-consolidation-20261011/catalogue/objects/d6/d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "imports": [
+        "P01PER"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 107,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 198,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                426
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/202",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "path": "t20-consolidation-20261011/catalogue/objects/dc/dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "imports": [
+        "CodecStmt",
+        "CodecNumeric",
+        "PRSpecialize"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 55,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 103,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 467,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                79
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "path": "t20-consolidation-20261011/catalogue/objects/df/df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "imports": [
+        "P01Confluence",
+        "NormalisationAndNumerals"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 63,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 214,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                93
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/372",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "path": "t20-consolidation-20261011/catalogue/objects/e0/e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+      "imports": [
+        "Mathlib"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 85,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 110,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 454,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                96
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "path": "t20-consolidation-20261011/catalogue/objects/e3/e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "imports": [
+        "P01DependentCore"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 93,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 203,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                75
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/466",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/e5/e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "imports": [
+        "CommonObservationBoundary"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:2e663e8d276bbeef3d4e",
+          "pointer": "records/4",
+          "recorded_scope": {
+            "disposition": "DIRECT_FULL_BODY_READ"
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "path": "t20-v6-20261011/operational_successors/sources/e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737/P01DependentRepresentation.lean",
+      "imports": [
+        "P01DependentControls"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 201,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                187
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/284",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/T16_PRODUCTION_CLOSURE.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+      "path": "t20-consolidation-20261011/catalogue/objects/eb/eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+      "imports": [
+        "Q8Measure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 84,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 136,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 485,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                124
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+      "path": "t20-consolidation-20261011/catalogue/objects/ed/ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6",
+      "imports": [
+        "Mathlib.Data.Nat.Bitwise",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 99,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 109,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 453,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                207
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "path": "t20-consolidation-20261011/catalogue/objects/ee/ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "imports": [
+        "P01Polynomials"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 116,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 195,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                234
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/457",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/f0/f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "imports": [
+        "FiniteQueryLocality",
+        "RestorationCountability",
+        "Mathlib.Probability.ProductMeasure"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/10/baseline",
+          "recorded_scope": {
+            "scope": "exact full baseline per explicit credited ledger",
+            "reading_credit": null
+          }
+        },
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/15",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                175
+              ],
+              [
+                176,
+                323
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "path": "t20-consolidation-20261011/catalogue/objects/f0/f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "imports": [
+        "LoopRenaming",
+        "Mathlib.Computability.Primrec"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 71,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/early_remaining/unjoined_controls/READ_LEDGER.json",
+          "pointer": 125,
+          "recorded_scope": {
+            "scope": "exact prior full-body reuse",
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "reading_credit": "PRIOR_FULL_BODY",
+            "read_ranges": [],
+            "semantic_read_credit": true
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 459,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                205
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+      "path": "t20-consolidation-20261011/catalogue/objects/f0/f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+      "imports": [
+        "MealyRational",
+        "Mathlib.LinearAlgebra.Determinant"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 52,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 478,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                172
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "path": "t20-consolidation-20261011/catalogue/objects/f2/f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "imports": [
+        "P01RecursiveModel",
+        "P01ModelWitnesses"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/462",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "path": "t20-v6-20261011/corpus/recovery-annex/early_objects/f3/f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "imports": [
+        "ContextualObserver",
+        "ObserverFixtures"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "private-locator:1f56f939f1bd92a06758",
+          "pointer": "sources/65",
+          "recorded_scope": {
+            "scope": "Entire actual source including proof bodies, controls, or evaluation driver; execution separate.",
+            "disposition": "DIRECT_FULL_BODY_READ",
+            "read_ranges": [
+              [
+                1,
+                151
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "path": "t20-consolidation-20261011/catalogue/objects/f4/f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "imports": [
+        "P01CurryParametricity",
+        "P01Translation"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 66,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 206,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                103
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/458",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_PREVIOUS_IMPORT_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/../early_remaining/checker_proofs/READ_LEDGER.json"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "path": "t20-consolidation-20261011/catalogue/objects/f7/f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "imports": [
+        "InternalPolymorphism"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 106,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 210,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                230
+              ]
+            ]
+          }
+        },
+        {
+          "ledger": "private-locator:7336904aebb1f197bc81",
+          "pointer": "nodes/91",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_NATIVE_READ_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/NATIVE_CONSTRUCTOR_CLOSURE.md"
+            }
+          }
+        },
+        {
+          "ledger": "private-locator:3eb082a97beeafd00b44",
+          "pointer": "nodes/322",
+          "recorded_scope": {
+            "reading": {
+              "kind": "EXACT_NATIVE_READ_CLOSURE",
+              "ledger": "t20-v6-20261011/type_collective/NATIVE_CONSTRUCTOR_CLOSURE.md"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "path": "t20-consolidation-20261011/catalogue/objects/f8/f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "imports": [
+        "PolicyRowEvaluator"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/controller_chain/SOURCE_COVERAGE.json",
+          "pointer": 3,
+          "recorded_scope": {
+            "read_ranges": [
+              [
+                1,
+                83
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+      "path": "t20-consolidation-20261011/catalogue/objects/fb/fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d",
+      "imports": [
+        "Mathlib.SetTheory.Cardinal.Finite",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/early_remaining/t1_remaining/READ_LEDGER.json",
+          "pointer": 58,
+          "recorded_scope": {
+            "disposition": "EXACT_REUSE_OPERATIONAL_FULL_BODY",
+            "read_ranges": []
+          }
+        },
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 470,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                187
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sha256": "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea",
+      "path": "t20-v6-20261011/operational_successors/sources/ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea/UniformRuntimeTrace.lean",
+      "imports": [
+        "ParsedObserverAbstraction"
+      ],
+      "reading_routes": [
+        {
+          "ledger": "t20-v6-20261011/operational_successors/READING_LEDGER.json",
+          "pointer": 492,
+          "recorded_scope": {
+            "read_scope": "full body",
+            "line_ranges": [
+              [
+                1,
+                80
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source_sha256": "58a7ab8b9cbec6374ae2d9a952558ef44b4f43ff7b1ebc81d8fe6c63283b26b8",
+      "import": "ApproximateRepairIdentification",
+      "targets": [
+        "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "96602bb78fe532f49e414976e7e7e7ae2520a9da05c634caf2a73b65e67fe58c",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "0f1be769a9486a28c5a16d483a3184335ea030934686da96ac9510facafd9d91",
+      "import": "BlindGuessSharpness",
+      "targets": [
+        "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "3696b2e60c7952292b4d11ad8b0f29b12ced7080e6268fe054abb4bc963bdbaa",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "df9e2b68df6be81664c60ed669465665a27d8503c179b271bd88237d1765f745",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "df9e2b68df6be81664c60ed669465665a27d8503c179b271bd88237d1765f745",
+      "import": "BinaryConstructiveRepair",
+      "targets": [
+        "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "8a0a0c305fab228ab92f0a258405e470737d73ddeea2588190c1740d75d96572",
+      "import": "CorrelatedOracleMeasure",
+      "targets": [
+        "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c6ed659c1b5e31e20a587ccb531a062317652c4baf330373d28db7364a7a79b3",
+      "import": "FiniteQueryLocality",
+      "targets": [
+        "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c6ed659c1b5e31e20a587ccb531a062317652c4baf330373d28db7364a7a79b3",
+      "import": "RestorationCountability",
+      "targets": [
+        "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+      "import": "FiniteQueryMeasure",
+      "targets": [
+        "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+      "import": "CorrelatedOracleMeasure",
+      "targets": [
+        "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "import": "FiniteQueryLocality",
+      "targets": [
+        "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "import": "RestorationCountability",
+      "targets": [
+        "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "import": "CountableIdentification",
+      "targets": [
+        "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "import": "CommonObservationBoundary",
+      "targets": [
+        "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "import": "GenericAuditControls",
+      "targets": [
+        "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "51c4838e214ba48b231639a46ac577a1a36e27abae2e0b7b0242b8c4c6eb4b48",
+      "import": "CommonObservationFiniteActions",
+      "targets": [
+        "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "51c4838e214ba48b231639a46ac577a1a36e27abae2e0b7b0242b8c4c6eb4b48",
+      "import": "CommonObservationControls",
+      "targets": [
+        "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "0bf867a9135761307cec01e18f3a8808f26ee2d4b1908f69c91d814d6e282a02",
+      "import": "CommonObservationFiniteActions",
+      "targets": [
+        "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "0bf867a9135761307cec01e18f3a8808f26ee2d4b1908f69c91d814d6e282a02",
+      "import": "CommonObservationControls",
+      "targets": [
+        "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "fc28adbe95631b497f27d63b5051ff68fdf2ed828d0f5f0de4eec010c0429bfd",
+      "import": "CommonObservationFiniteActions",
+      "targets": [
+        "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "fc28adbe95631b497f27d63b5051ff68fdf2ed828d0f5f0de4eec010c0429bfd",
+      "import": "CommonObservationControls",
+      "targets": [
+        "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "a041df3e6ec7709fe6a7e6722ba287326c2a951e09d8f3fe75211971ee0d65da",
+      "import": "CommonObservationFiniteActions",
+      "targets": [
+        "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "a041df3e6ec7709fe6a7e6722ba287326c2a951e09d8f3fe75211971ee0d65da",
+      "import": "CommonObservationControls",
+      "targets": [
+        "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "7c2e554e6a2848603a12a2031c3a822e109f307ff44e65df53a46dca159e4e63",
+      "import": "StatisticalRepair",
+      "targets": [
+        "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "7c2e554e6a2848603a12a2031c3a822e109f307ff44e65df53a46dca159e4e63",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "7c2e554e6a2848603a12a2031c3a822e109f307ff44e65df53a46dca159e4e63",
+      "import": "CountableIdentification",
+      "targets": [
+        "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "a7034fc2e555919a30177118629ea28af32ef0727a4f996c3b0fd8903268c71c",
+      "import": "RestorationCountability",
+      "targets": [
+        "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "0d2f38c09cdf31b51b3a9dc0460ab01f954e5e6d91ef152982fcd65f730436b9",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "09a8434f4864966687e829301aefa316093a89873e318421f31364746dd87bba",
+      "import": "CountableIdentification",
+      "targets": [
+        "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "5e1dc3522fe6b720da94a99326a46bc79ebfa2d3ccb9022f58e774d6fb44f1c0",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "f496cae91e44c5745c5147adf658f1853775cba97c62149dab8fa0deb893d10b",
+      "import": "CountableIdentification",
+      "targets": [
+        "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9",
+      "import": "GenericQueryReference",
+      "targets": [
+        "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "2f91d36ff158c4fc7e22176fc6b00d604425dc28a898d9be162b319f8283ea2d",
+      "import": "GenericAuditControls",
+      "targets": [
+        "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "f35d0e27429e7b1f21494d81ad0d46c2bb493268d4d35b16ef84ffef86758040",
+      "import": "GenericAuditControls",
+      "targets": [
+        "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "9c0f2b2719e7df529b4d9be67464abcc8579ca45eb97e6982a99cfab44b9b575",
+      "import": "GenericAuditControls",
+      "targets": [
+        "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "d97e8f346772f62d861272943d523da7b74110cad6ce263470f610a48edfff23",
+      "import": "BoundaryControls",
+      "targets": [
+        "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e"
+      ],
+      "basis": "same policy-embedding audit controls"
+    },
+    {
+      "source_sha256": "58d4b093d27ca2342bf775ce25b8ca3ff7892a99af4cd302399fccb45662681d",
+      "import": "BoundaryControls",
+      "targets": [
+        "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e"
+      ],
+      "basis": "same policy-embedding audit controls"
+    },
+    {
+      "source_sha256": "03cf475972674292aed9c72ad8385ec07c63bbdf288dde8412265afc6bddf210",
+      "import": "BoundaryControls",
+      "targets": [
+        "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e"
+      ],
+      "basis": "same policy-embedding audit controls"
+    },
+    {
+      "source_sha256": "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "import": "PolicyTranscriptFiber",
+      "targets": [
+        "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "import": "PolicyRowLaw",
+      "targets": [
+        "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "229ef78d99f4ac14790f97d4351432f4bfd952d4f476373c5ee070f4ff489776",
+      "import": "IndexedControls",
+      "targets": [
+        "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "d765b39d1e8b5a7641fdbf64cdf86d7801c1ed13a03331c3ab73fd6412c5e4e2",
+      "import": "IndexedControls",
+      "targets": [
+        "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "1c30b79b585f5321bdf652870e31e28748f7ebb059ee25b6744760082af16f42",
+      "import": "IndexedRuntime",
+      "targets": [
+        "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "1c30b79b585f5321bdf652870e31e28748f7ebb059ee25b6744760082af16f42",
+      "import": "ObserverFixtures",
+      "targets": [
+        "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "04bcf9da1de8bd2393d00e4532623139b126d32cfc6f4ae4b1ab5dd29395ff10",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "04bcf9da1de8bd2393d00e4532623139b126d32cfc6f4ae4b1ab5dd29395ff10",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "04bcf9da1de8bd2393d00e4532623139b126d32cfc6f4ae4b1ab5dd29395ff10",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "396c687f0002c3a0acd0fbfdf19920488d9b86a3d500f2a63c8fc89523dc6410",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "396c687f0002c3a0acd0fbfdf19920488d9b86a3d500f2a63c8fc89523dc6410",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "396c687f0002c3a0acd0fbfdf19920488d9b86a3d500f2a63c8fc89523dc6410",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "7c7aa67d67a31ea2e0aad6b486dd7e42d0cc4d5e751984184a5c20a781bc5243",
+      "import": "IndexedObserver",
+      "targets": [
+        "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "7c7aa67d67a31ea2e0aad6b486dd7e42d0cc4d5e751984184a5c20a781bc5243",
+      "import": "UniformRuntimeTrace",
+      "targets": [
+        "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c5333bf6a2013ddc6d0c0f8a00e5f7e38b28333ad7bc0e026e6f1884ca97d72b",
+      "import": "IndexedObserver",
+      "targets": [
+        "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "c5333bf6a2013ddc6d0c0f8a00e5f7e38b28333ad7bc0e026e6f1884ca97d72b",
+      "import": "UniformRuntimeTrace",
+      "targets": [
+        "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "375c332e44867c1680ed83fe9b8f26ff37df62ed6a8fce8dc99f9a1f6e65dbe6",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "375c332e44867c1680ed83fe9b8f26ff37df62ed6a8fce8dc99f9a1f6e65dbe6",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "375c332e44867c1680ed83fe9b8f26ff37df62ed6a8fce8dc99f9a1f6e65dbe6",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+      "import": "IndexedSplitProgram",
+      "targets": [
+        "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "import": "IndexedRuntime",
+      "targets": [
+        "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "import": "ObserverFixtures",
+      "targets": [
+        "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "import": "MealyMeasureFixtures",
+      "targets": [
+        "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "2d4720f2fe9d97f7550dde73caef7f65498c4238cc9585c88bbfb5e230db72a1",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "2d4720f2fe9d97f7550dde73caef7f65498c4238cc9585c88bbfb5e230db72a1",
+      "import": "ContextualObserver",
+      "targets": [
+        "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "73e77e21c3d3192037dc9535595ff07ce6dad1538478da16100f35e52be711f5",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "73e77e21c3d3192037dc9535595ff07ce6dad1538478da16100f35e52be711f5",
+      "import": "P01CanonicalCarrierProjection",
+      "targets": [
+        "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "f7bf78b54cd9e0a9a159c46047ae7bcb65de9ed44c621e907d82bae37b3f58a7",
+      "import": "MealySolver",
+      "targets": [
+        "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "f7bf78b54cd9e0a9a159c46047ae7bcb65de9ed44c621e907d82bae37b3f58a7",
+      "import": "TotalVariation",
+      "targets": [
+        "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "3e01bc217cd915cc9f4146cabfc2a82085a1b4134d48de0e6b1028f0842171bd",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "af8965f96a76dd0c80dd20be91dcb9d02fcaf1b430aa4b76364afb18bd0b157f",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "af8965f96a76dd0c80dd20be91dcb9d02fcaf1b430aa4b76364afb18bd0b157f",
+      "import": "P01CanonicalCarrierProjection",
+      "targets": [
+        "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "b1891a715146a46ab59d6fb54da01e0c85eea9c77b984ab19226150e41b4d5ae",
+      "import": "MealySolver",
+      "targets": [
+        "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "b1891a715146a46ab59d6fb54da01e0c85eea9c77b984ab19226150e41b4d5ae",
+      "import": "TotalVariation",
+      "targets": [
+        "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "import": "P01CanonicalCarrierProjection",
+      "targets": [
+        "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "1ff80a6230a742a2f80721528f1885b598132874b269a387ee6c00e2f27f2bb5",
+      "import": "UniformRuntimeTrace",
+      "targets": [
+        "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "1ff80a6230a742a2f80721528f1885b598132874b269a387ee6c00e2f27f2bb5",
+      "import": "ContextualFixtures",
+      "targets": [
+        "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "6ae6fd7314f5d084883dbb0135c749618ee9cab6969a4260421932f6fd67dd62",
+      "import": "Q8ObserverAbstraction",
+      "targets": [
+        "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "6ae6fd7314f5d084883dbb0135c749618ee9cab6969a4260421932f6fd67dd62",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "da3d1eb7cb61de0df8770d8a151121d1a6cb5672c12ee3801c58a14c64e31461",
+      "import": "ParsedObserverAbstraction",
+      "targets": [
+        "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "66c7d7df1a99099d39d226402d6fbc4479feeab88a2d8c65acabe890d7beaaf0",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "66c7d7df1a99099d39d226402d6fbc4479feeab88a2d8c65acabe890d7beaaf0",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "66c7d7df1a99099d39d226402d6fbc4479feeab88a2d8c65acabe890d7beaaf0",
+      "import": "MealyMeasureFixtures",
+      "targets": [
+        "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "a114a063d118e7d089af1c93a89d8a43dc21f233b4002d9d388d8a5d6f23b4af",
+      "import": "Q8ObserverAbstraction",
+      "targets": [
+        "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "a114a063d118e7d089af1c93a89d8a43dc21f233b4002d9d388d8a5d6f23b4af",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "253c0f26b89db97e854627c725d768d6637b4d579ad0f0849e1bc30a2e4ec3b0",
+      "import": "Q8ObserverAbstraction",
+      "targets": [
+        "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "253c0f26b89db97e854627c725d768d6637b4d579ad0f0849e1bc30a2e4ec3b0",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique exact examined original module"
+    },
+    {
+      "source_sha256": "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "import": "ContextualObserver",
+      "targets": [
+        "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "import": "ObserverFixtures",
+      "targets": [
+        "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0"
+      ],
+      "basis": "exact snapshot or seven explicitly matched operational baselines"
+    },
+    {
+      "source_sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0",
+      "import": "MealyMeasureFixtures",
+      "targets": [
+        "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "import": "MealyAtoms",
+      "targets": [
+        "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f",
+      "import": "MealyRational",
+      "targets": [
+        "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a",
+      "import": "MealyHitting",
+      "targets": [
+        "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962",
+      "import": "MealyMeasure",
+      "targets": [
+        "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "import": "BlockMismatch",
+      "targets": [
+        "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "65ddeb0646c373e7022f73079a5f9b67dc05740a5615c49382567f2c471517d9",
+      "import": "Q8Measure",
+      "targets": [
+        "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048",
+      "import": "P02A2.MeasureCore",
+      "targets": [
+        "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "89590f09b77eb40b8c320cbf8a02aaccedb30d14a7fda1efde6657f9afcc9b1e",
+      "import": "MealyRefinement",
+      "targets": [
+        "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "13868f16b0f2a14a41cb515b8861326bcfbb284ea0ea3801272099db7a30fe17",
+      "import": "PERRefinement",
+      "targets": [
+        "fb4cb976520bc761e0405386e86cfdd7b7ff4995983f0ddcc869c0c79a05df4d"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "be4175314d4edc235aca06f205de1f3469b9aa389b0f840de58679012c0d63b5",
+      "import": "MealyHitting",
+      "targets": [
+        "a689461fc7e789e57451d4ed69f8f9ab9acd4d117d8221e46a2151991f628962"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+      "import": "MealySolver",
+      "targets": [
+        "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383",
+      "import": "TotalVariation",
+      "targets": [
+        "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "7289c2117d990a40d53ab43925cebac082b15464d854a670968aa1e6dccb8fbf",
+      "import": "P02A2.MeasureCore",
+      "targets": [
+        "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "f037c56ca783feffbafc6d5643b5356e321cc388e0ade5baec961d62d43655b6",
+      "import": "MealyRational",
+      "targets": [
+        "17c5b6eba13f6a3251a7efed6dbc48b69bc3fc0f8d16bc3c31cf69f327ac453a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106",
+      "import": "P01CanonicalCarrierProjection",
+      "targets": [
+        "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "d2cd1460fd8f15eabdcf0bc7044af5b01e82f7ea05242157f2503eaf5585b41e",
+      "import": "P01DependentRepresentation",
+      "targets": [
+        "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "e7c7bd5d62f361f4f8a283e1fe442341e87f0200f0494cb2553af4da3a0ff737",
+      "import": "P01DependentControls",
+      "targets": [
+        "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "6f1afe90be0a46d00763808013733f068a65b4f0fd34d215fb101f0db313856c",
+      "import": "P01DependentFundamental",
+      "targets": [
+        "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "82cd316ba5a0c4efbfb7bbc8ce5e69659e33cb7227d1d4effbaddb3d2f1d66aa",
+      "import": "P01DependentSubstitution",
+      "targets": [
+        "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "74eec27e534d5b3fe69b0543d343043483288011d7edc85a424cc8458e91a610",
+      "import": "P01DependentModel",
+      "targets": [
+        "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "import": "P01RecursiveModel",
+      "targets": [
+        "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "f2017f4ff67c81eb2d1cb6d4ed3b7efea3e686567409e9d07531a61f6b6d5e59",
+      "import": "P01ModelWitnesses",
+      "targets": [
+        "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "import": "P01CurryParametricity",
+      "targets": [
+        "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "f49f5693dd928e74bb375a3a52a4e8cd0e9792ba0f90b9d543928ab0cf84510f",
+      "import": "P01Translation",
+      "targets": [
+        "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "import": "P01SystemF",
+      "targets": [
+        "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "538b51e6c199bc43ef2f32d4ffdc16f52043e277b8ea50b1da93a73aa9b38b4d",
+      "import": "BoundaryResults",
+      "targets": [
+        "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "import": "FiniteBridge",
+      "targets": [
+        "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "import": "InternalPolymorphism",
+      "targets": [
+        "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a",
+      "import": "P01LambdaSyntax",
+      "targets": [
+        "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "import": "P01TypeAlgebra",
+      "targets": [
+        "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "import": "P01SNReflection",
+      "targets": [
+        "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188",
+      "import": "FiniteBridge",
+      "targets": [
+        "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "import": "P01RecursiveModel",
+      "targets": [
+        "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "b29f2917d48adf8462cc272ecffb12e50cb3217b4de360c71f9f13fe75bbeb2a",
+      "import": "P01SystemF",
+      "targets": [
+        "9d06b1180a90048ebe6249e461ed6551fdbf94971a8ba1232b6ffb86e5d45f1a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "a53b9b16b5013701ab18692035d140db6d34fd3076dd595837dd8808553274f9",
+      "import": "P01Examples",
+      "targets": [
+        "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "7372d4bd7f7c70fb1b4178743ba84c3ba2f072be88c5a0b04a67a53ccf947c82",
+      "import": "P01Certificates",
+      "targets": [
+        "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "5e457f06ecc1622fd53b1917f383c48ce019887910ce0fcb64d99c7e5a2b35f6",
+      "import": "P01ContextualJ",
+      "targets": [
+        "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "e3342d36b3012206cdcf39115d13f14246236f24a122cbd466d6b11bda15d28c",
+      "import": "P01DependentCore",
+      "targets": [
+        "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "d69233c44f1406044f649204626c4f58155bcb2dc81ac319cf451c473ab13498",
+      "import": "P01PER",
+      "targets": [
+        "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "ee15654ad70d9c0e9a77d699a0ff53122d1dcde65f610e26555edc589f97c87e",
+      "import": "P01Polynomials",
+      "targets": [
+        "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8",
+      "import": "P01Omega",
+      "targets": [
+        "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "import": "P01Confluence",
+      "targets": [
+        "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "import": "NormalisationAndNumerals",
+      "targets": [
+        "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "import": "EffectsAndDependence",
+      "targets": [
+        "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "import": "BoundaryResults",
+      "targets": [
+        "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "import": "P01Candidates",
+      "targets": [
+        "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "import": "P01TypeAlgebra",
+      "targets": [
+        "222b99bb10321cfe4fbd55ea252631fb0824fa43d966995bb7873a3c8b11b188"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "import": "P01SNReflection",
+      "targets": [
+        "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e",
+      "import": "BoundaryResults",
+      "targets": [
+        "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "import": "CodecProgram",
+      "targets": [
+        "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73",
+      "import": "UniformComputabilityNumeric",
+      "targets": [
+        "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "31864c8129fab9ef98cc377ef647f9cee8323a2319a3756a1504ce2e8ebe8f0c",
+      "import": "CodecPrimrec",
+      "targets": [
+        "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "08f5ef87a655e07fda4c6fd81330789541a18cf70ef31d0bd55ea082701ec9c9",
+      "import": "CodecNumeric",
+      "targets": [
+        "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01",
+      "import": "CodecVarint",
+      "targets": [
+        "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "import": "CodecStmt",
+      "targets": [
+        "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "import": "CodecNumeric",
+      "targets": [
+        "2716ca254d871a96fa149b3809a55a809d13e2c23a3fd67a63d19a240b79de01"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "dc6594471accf19077201c1c33dd70e80f7c374c31316fbd478eed62245ef1ae",
+      "import": "PRSpecialize",
+      "targets": [
+        "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "beffce2a55f2f2ffcfbd71ef073e72d5fb022273e292798e18ea9b4a58b5a980",
+      "import": "PRCoverage",
+      "targets": [
+        "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "22b2f657fd787eef93957975e38b184d201648949ccdd875e7ae12432279e4e3",
+      "import": "PRDerivation",
+      "targets": [
+        "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "3141c21d177da58b90fbb2c268b6a9b4ef334785f155c0668cff77fbad37ce86",
+      "import": "PRHeadRecursion",
+      "targets": [
+        "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "6a0037a55a1739be1365f08fcd839c8be9de58a19f85e739e6890faa09db9b94",
+      "import": "PRRecursion",
+      "targets": [
+        "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "7a577b8a7c506feb4e5243a577fd09386b2d208ecc8221b8d69a1990b50cb63a",
+      "import": "PRComposition",
+      "targets": [
+        "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "8549db02bf449e14c0d5d6520380a4f2bdae040cef77f11a573ac31ea08f940d",
+      "import": "PRProgram",
+      "targets": [
+        "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "9c66d134902dd8b5d3ee8b9b3ceb30e20daebc5b6a714489b8d95f09c9abce9f",
+      "import": "LoopPrimrec",
+      "targets": [
+        "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "f01b305287f3ae1d977ee72e62e9ea1ab4068358a324933b38572f1c66f02998",
+      "import": "LoopRenaming",
+      "targets": [
+        "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "3fa0d92a221427c1ffdde94cbb34374952112e7a5d6e50e26778ac7aefbdbe89",
+      "import": "P02A2.ObserverCore",
+      "targets": [
+        "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "136772eff0be842ab0007874f84860141662876fcc11a4d02bdb6117004d2d08",
+      "import": "CodecExpr",
+      "targets": [
+        "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "import": "CodecVarint",
+      "targets": [
+        "ed635e3754d8c70655cc8db31392eff9c979c9015f771b50de09b7231f54c3a6"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "5682f0b6f6c94c7c261e096f0a78035c3835c25c32aea50973a861a85af896c3",
+      "import": "P02A2.ObserverCore",
+      "targets": [
+        "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+      "import": "ObserverAbstraction",
+      "targets": [
+        "6f47ec82664394ae24c10eeab20c42396b8522a8fd579aa19256018f322d6383"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d",
+      "import": "MealyMeasureFixtures",
+      "targets": [
+        "c8f3dfb898335e324ca947fc9062a091a920a0a773708c900dc125b685ca9a1f"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "import": "Q8Machine",
+      "targets": [
+        "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2",
+      "import": "P02A2.ObserverCore",
+      "targets": [
+        "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "eb2e669fe278c0cf9feef49ce315cc55da13ae77960beb29f6d68b4e06e23e44",
+      "import": "Q8Measure",
+      "targets": [
+        "b815803aa2aff0656830d0d2384225215687ef473ff124a4de82198dc8e20048"
+      ],
+      "basis": "previous exact hash-bound import closure"
+    },
+    {
+      "source_sha256": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+      "import": "Q8ObserverAbstraction",
+      "targets": [
+        "59dee0059b0f1cd3b035934475edd4fd96690f7fc59edfb59d1257cd03edce0d"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "import": "ContextualObserver",
+      "targets": [
+        "1801e5d0cc144552f8cd3e7ae25d63905181966fa11137ffce08386416422106"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "f36fd50325dae82e5c8be4bf45a196b94d1b269487b098997c0d084c0d0de683",
+      "import": "ObserverFixtures",
+      "targets": [
+        "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea",
+      "import": "ParsedObserverAbstraction",
+      "targets": [
+        "87b884265db13aa42dee7c7581bee0f091239945fef2aa7bf32ead12f21e0ffd"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+      "import": "IndexedObserver",
+      "targets": [
+        "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3",
+      "import": "UniformRuntimeTrace",
+      "targets": [
+        "ffdd64d1a7d01f80a2eb8e9576c5fd503f1835de036d2ef85c42df3c8b03d3ea"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+      "import": "GuardedObserver",
+      "targets": [
+        "c068c4f3c0a668895fc8afa57491ed9d829b764b80a069c480109b13e037ee1e"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+      "import": "UniformComputabilityMachine",
+      "targets": [
+        "4f137dd91e8d56c084dd0a664f182b4fe3f09356eef1fa1fd08102c7e514df73"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "98c1923c5c9ef77094ca28a63c32866fae56ae04b7a1597da59874935d9b1167",
+      "import": "Q8Compiler",
+      "targets": [
+        "34fd76a9ab81edffb61134ad8ea8f39ffd1571b90b9e64af4352ee4a8a6a1cb2"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "import": "IndexedRuntime",
+      "targets": [
+        "73b3cb0b813ff303a6735c3cf8ac3c8dbbc1ed5c5dd335d4e0c239b8ddb23cc3"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d",
+      "import": "ObserverFixtures",
+      "targets": [
+        "8603b2223d533bdf7579674343a16668f345e6736e6dbef8cc12f9628249a8c0"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "a09a9f1c8ff61645b4df6c301cbb3060cc6b6e48b9a67b256a52adc32ffc86cb",
+      "import": "IndexedSplitProgram",
+      "targets": [
+        "44b103ef09eeb6177013a95da0e18f58a70e0761ac797fa7fd39e7c3decf6c4d"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338",
+      "import": "GenericQueryReference",
+      "targets": [
+        "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d",
+      "import": "GenericFiniteQueryMeasure",
+      "targets": [
+        "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b",
+      "import": "GenericFiniteQueryLocality",
+      "targets": [
+        "520c08e4f3bfa298029d651a8a6e6672896560597ac0963edab4780ed2b4a573"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59",
+      "import": "PolicyRowEvaluator",
+      "targets": [
+        "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "737d368aa9f74a3daa751924690dba374cd7838a8f6d9fbb1f5371e5039fdd05",
+      "import": "GenericFiniteQueryMeasure",
+      "targets": [
+        "72974cb133e58a3c33cde719245ca96c4e1a5dff1e91558e18ef1d67b297423b"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "import": "PolicyTranscriptFiber",
+      "targets": [
+        "f872c6ff9b3cd6d7e813640f4f538fcb2edd420d22661dfaff800e16e4758f59"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "ae702ad1bd3619378f0972f267099e0b1f3f0a103a4ac6280944034903c6714e",
+      "import": "PolicyRowLaw",
+      "targets": [
+        "8d66ad4ebbea2ba7e825dbb1f880db994026cef22c55d15f7d4b918884251338"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9",
+      "import": "GenericQueryReference",
+      "targets": [
+        "577666771c95033429bf8ee328a372bc99b637d2abbe1eb11aa4b7e4a7ca514d"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "import": "StatisticalRepair",
+      "targets": [
+        "8e6a771ec5c6b853055f7f13dd1b93b319172a2e10a4f41d71284cc681627bf4"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe",
+      "import": "RepairObstruction",
+      "targets": [
+        "a12ee87fa7a58cbd8384bb9a22f773cbf7e96eeadc3d3783ae2b9750bccc848d"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56",
+      "import": "CountableIdentification",
+      "targets": [
+        "2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "import": "CommonObservationBoundary",
+      "targets": [
+        "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "c954ebb824bae7d64f217f9bccaef21376634dc1adcbb0c960334a92b9e31f0a",
+      "import": "GenericAuditControls",
+      "targets": [
+        "c62e2c5164b0ab1072b9ab781369a1e0bd46a11c1e2f96ca26185fb24de308a9"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "import": "SelfVerifyingSupport",
+      "targets": [
+        "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "import": "CommonObservationBoundary",
+      "targets": [
+        "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb",
+      "import": "FiniteQueryMeasure",
+      "targets": [
+        "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "import": "FiniteQueryLocality",
+      "targets": [
+        "13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280",
+      "import": "RestorationCountability",
+      "targets": [
+        "c70637a1796ceaade41ec9687f55403af5c844ca31f75a6a0fea5c2a4db2bd56"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "7ef4e852ab4f4a53e1e6017e5ef6e9703c5993bf6274a0f8f3369709c68eaa01",
+      "import": "RepairTestingBridge",
+      "targets": [
+        "64728e91ba19c1455a955e23336da054ef7cbbfd07b77e1599a7040e1f3ef4fe"
+      ],
+      "basis": "unique examined original module"
+    },
+    {
+      "source_sha256": "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d",
+      "import": "CorrelatedOracleMeasure",
+      "targets": [
+        "2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "explicit source branch selection"
+    },
+    {
+      "source_sha256": "16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261",
+      "import": "EventualCausalRestoration",
+      "targets": [
+        "7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d"
+      ],
+      "basis": "explicit source branch selection"
+    }
+  ],
+  "unresolved": [],
+  "fresh_execution": false
+}

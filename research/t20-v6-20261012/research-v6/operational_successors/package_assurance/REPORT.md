@@ -1,0 +1,37 @@
+# Historical package and assurance source qualification
+
+All 92 assigned original bodies are read completely: 531,690 bytes and 7,469 lines. `READ_LEDGER.json` gives each exact hash, full range and source-specific role. No retained script was executed. A supplemental ledger adds twelve complete bodies/data tables, one exact full-baseline plus complete-delta examination, one complete consumed inventory qualification and one whole query-driver grammar qualification. These distinctions are not collapsed into a full-proof count.
+
+## Scientific controls actually present
+
+The packet contains substantive finite controls as well as hash, copying and receipt tools. The P03 controls independently enumerate finite type substitution and head reduction using simultaneous substitution and application spines; test quiescent engine-state preservation, version ABA, owned input capture and output aliases; and explore bounded serial histories, selected line-event faults and forced thread schedules. None establishes universal interpreter refinement, all host exceptions, every interleaving, crash persistence or distributed serializability.
+
+The probability bridge checks finite rational observation tables. Its two important boundaries are actual code witnesses: an incompatible zero-weight component still fails the pointwise factor guard despite an almost-sure factorization, and a mathematically normalized table can fail the intermediate 256-bit arithmetic budget in one ordering but pass after complementary terms are interleaved. Coarsening can improve the declared probability defect without reviving a stale version ticket. A separately stipulated finite input/revocation law retains refusal mass rather than silently conditioning it away. Equality of trace support alone does not imply equality of probability laws.
+
+The finite VCT model checks two semantic worlds, exact evidence-contract tokens and eight altered guard coordinates. A valid per-hop authority path does not yield direct endpoint authority; a separately witnessed root change does not yield equality of initial and final roots. Graph image preservation and injectivity alone do not imply target acyclicity. These controls do not authenticate actual sources, authorities or worlds.
+
+Two additional complete modal control bodies close selected command dependencies. They compare direct global sections with rooted holonomy and tensor counts, passive gauge transformations, copyability and witness-back conditions. One supplies a common-fixed-point counterexample even when each loop has an individual fixed point. The independent reviewer also tests finite global/local modal evaluators and actualist Barcan failures. It explicitly distinguishes exhaustive small cases from seeded samples. The author uses explicit raises; the independent reviewer uses Python assertions and requires them enabled. Neither was rerun here.
+
+## Actual implementation closure
+
+The newly bound `operational.py` postimage differs from the fully read original only by capturing an exact built-in list/tuple into a bounded immutable tuple before validation and waiting for the registry lock. The entire diff is retained. `atomic_engine.py` was read in full: it copies the five mutable maps, retains immutable mapped values and issuer identity, excludes public reentrancy, and publishes one private engine reference only after the call succeeds. Its stated host contract requires an all-or-none reference store and no external mutation of private state. An interrupted response after publication can leave a committed/pending operation; it is not rollback.
+
+Exact imported helpers join to prior full bodies: `canonical_gate.py` 04f2bd93, `safe_extract.py` 86e3ed01, `safe_frontend.py` 24fd89ca, original observations/reference and the original-versus-repaired boundary/export modules. Local package verifier/link/archive dependencies are included in the 92-body ledger. `LOCAL_IMPORT_JOIN.json` preserves archive member identities rather than relying on filename similarity. Runtime `P03_SOURCE` selection remains an external replay parameter; a source read does not certify arbitrary future imports.
+
+`COMMAND_TARGET_SOURCE_JOIN.json` and `NAMED_CHILD_SOURCE_JOIN.json` distinguish named children from their actual reading routes. Some children were assigned to concurrent finite-code queues; their later ledgers must be joined at exact hash before claiming complete invoked-science coverage. This packet grants no endpoint-to-import reading credit.
+
+## Assurance and safe future use
+
+The historical wrappers have different contracts. Some delete copied generated outputs before a call and require fresh byte equality; others leave copied outputs in place. Some sanitize assertion mode and source paths; others inherit environment state. Some require an absent output; others allow existing directories, with varying checks against writing into source trees. Generic nonzero exit checks in metadata mutation wrappers and generic `error:` checks in an older Lean-negative driver are weaker than exact diagnostic classification. Their assurance should not be upgraded by later adapters.
+
+The P02 executor's `--offline-deps` branch still calls `lake exe cache get`; its option is therefore not a complete network-isolation guarantee. No such call was made. The public projection verifier checks exact copies fully, but its redacted-copy branch checks a declared hash and marker rather than mathematical equivalence. Later exact projection repairs and comparisons remain necessary separate evidence.
+
+Future replay should use an independently guarded, new external output tree and copied inputs, inspect the selected commands first, preserve required assertion mode and record exact source/tool/package identities. Do not blanket-run historical seal, mutation, download or repository-copy programs against retained evidence. These original programs were not modified.
+
+The full P01 query driver is exactly 19 imports, two print options, one inspected comment and 382 fixed marker/check/audit/axiom blocks. The complete 1,932-line grammar was mechanically compared with its exact inventory order. The inventory's 34 file bindings and 382 declaration-start lines match exact source bytes. This is complete descriptor/query qualification, not 382 new proof bodies or new kernel results.
+
+## Historical status and current successor
+
+The old P01/P02/P03 metadata producers preserve real host-execution blocks, original failed wrappers, unexecuted source and internal formal gaps. Their dated declarations are not current blanket blockers. In particular, the separately held `type_collective/fresh_lean/guarded_vct_variants/FRESH_COMPILATION.json` records the exact repaired P03 VCT shadow a1e0123f and graph e7b6e0df passing pinned Lean 4.19 with trust zero, while original 0507618b and two earlier variants fail. The fourteen audit targets and six control targets have zero-axiom readbacks in that separate replay. The passing contract retains local evidence, supplied policy/currentness and authority-path premises; it does not establish direct endpoint authority, equal roots, an invariant claim field or actual-world truth.
+
+No research result is added by archive counts, generated registry text, repeated receipt templates or copied review labels. Assembly integrity, source examination, kernel acceptance, inherited tests, ordinary arguments and empirical/source warrant retain separate evidence.

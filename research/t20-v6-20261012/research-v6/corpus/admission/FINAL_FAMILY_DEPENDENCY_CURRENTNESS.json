@@ -1,0 +1,716 @@
+{
+  "utc": "2026-10-12T15:17:24.783239+00:00",
+  "status": "FINITE_FAMILY_CURRENTNESS_AND_DEPENDENCY_INDEX_PENDING_ROOT_REVIEW",
+  "registered_families": {
+    "path": "corpus/admission/FINAL_REGISTERED_RESULT_DISPOSITIONS.json",
+    "sha256": "c49f2834226391d11e4f1ed6f7935d725e8b6bfd8d5517d523088c9c994d4032"
+  },
+  "registered_source_scopes": {
+    "path": "corpus/admission/FINAL_REGISTERED_SOURCE_SCOPE_DISPOSITIONS.json",
+    "sha256": "668b1aa03927a0624aa7ddd10807e62da2dc3af25f2222928352b8b026683855"
+  },
+  "principal_explicit_relationships": [
+    {
+      "id": "DEP-C01",
+      "kind": "strengthens",
+      "source_family": "T5 SCC/reference region equality and semantic common-policy iff",
+      "target_family": "T16 submitted-body literal compiler actual-law parity",
+      "guard": "The later proof derives local certificate conditions from accepted syntax and binds the actual returned function. Original existential classical choice alone did not provide this compiler. Strengthens refers to closing the literal compiler gap; it does not claim the new theorem dominates every original T5 guarantee.",
+      "evidence": [
+        {
+          "path": "controller_chain/RESULT.md",
+          "sha256": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+          "scope": "§3–4"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C02",
+      "kind": "transfer_not_established",
+      "source_family": "T6 original cumulative learner cost",
+      "target_family": "T16 submitted-body compiler cost/finite memory/deadline",
+      "guard": "The literal compiler successor has its own parity proof; no old quantitative cost bound, full finite-memory implementation or deadline guarantee follows merely from region equality. This records missing established automatic transport, not a countermodel proving every such transport impossible.",
+      "evidence": [
+        {
+          "path": "controller_chain/RESULT.md",
+          "sha256": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+          "scope": "§3,§9 items7/9,§10"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C03",
+      "kind": "supersedes",
+      "source_family": "Historical checkpoint quadratic cost aggregation/open exponential frontier",
+      "target_family": "Ordinary cumulative linear count budget and later D06 actual positive-exponential formal successor",
+      "guard": "Ordinary source proof, formal successor and historical replay remain separate. Tail-to-moment conversion assumes its tail premise.",
+      "evidence": [
+        {
+          "path": "controller_chain/RESULT.md",
+          "sha256": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+          "scope": "§6,§9 items3–5"
+        },
+        {
+          "path": "root_math/terminal_t6_family_routes/REGISTERED_RESULT_DISPOSITIONS.json",
+          "sha256": "2e08f6b8aae2a026d5b84575d210c7560a01bd74d6a2b9437153c99b7f86d014"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C04",
+      "kind": "independent",
+      "source_family": "T4 stage-reset statistical controller",
+      "target_family": "T5/T6 global cumulative controller",
+      "guard": "Stage resets may be legitimate in the first construction. The second construction uses whole-history cumulative counts; neither all resets are forbidden nor its quantitative theorem transfers automatically.",
+      "evidence": [
+        {
+          "path": "controller_chain/RESULT.md",
+          "sha256": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+          "scope": "§5,§9 item9"
+        }
+      ],
+      "relationship_meaning": "Distinct constructions without automatic policy/cost equivalence. Neither statistical independence nor historically independent discovery is asserted."
+    },
+    {
+      "id": "DEP-C05",
+      "kind": "failed_transfer",
+      "source_family": "Same observed state and live support",
+      "target_family": "Faithful continuation of an arbitrary given randomized policy",
+      "guard": "Full-history policy compatibility determines the residual seed posterior. The exact fair-seed example has identical state/support and opposite next-action laws.",
+      "evidence": [
+        {
+          "path": "controller_chain/RESULT.md",
+          "sha256": "d1e85e62b48ecc1e49b7688f654abf6f253c542d5ddbdf7da07c074cd2c32e5c",
+          "scope": "§2"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C06",
+      "kind": "strengthens",
+      "source_family": "Historical selected atlas/neutral-track philosophical appraisals",
+      "target_family": "Current34 source-owned foundational judgments",
+      "guard": "Current claim/correction crosswalk controls. Earlier disputed-premise, source-not-read or neutral-track stages do not silently reset later affirmative scoped warrant. Primary received/collated scopes remain explicit. Valid older thin conditional controls are retained; the change concerns which later appraisal controls the current substantive judgment.",
+      "evidence": [
+        {
+          "path": "foundations/CURRENT_FOUNDATIONAL_CLAIMS.json",
+          "sha256": "d967c6418179ccc64a6c1d69c8b8bba6756f1c31438abbb501f8d9743a2c2d16"
+        },
+        {
+          "path": "foundations/REGISTERED_SEMANTIC_FINDINGS.json",
+          "sha256": "7e6dcd89086e1c864e4f2cdf7e5fdecd14de10cf94b5198ce36df71b975d6d3a"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C07",
+      "kind": "supersedes",
+      "source_family": "Older fixed-HasE witness/open universal identity-transfer frontier",
+      "target_family": "Actual HasE independence with separately qualified HasJ results",
+      "guard": "Raw Church probes, scalar fusion, modal crossing and rejected PTS transfers keep their original domains; later negative independence is not semantic HasJ incompleteness.",
+      "evidence": [
+        {
+          "path": "type_collective/registered_t20_eight/REGISTERED_RESULT_DISPOSITIONS.json",
+          "sha256": "83c66b21f5701c03632f3a33688e6a939128e1a049ff8d7d536308de87396c78"
+        }
+      ]
+    },
+    {
+      "id": "DEP-C08",
+      "kind": "failed_transfer",
+      "source_family": "Claim/token consistency and finite fixture acceptance",
+      "target_family": "Truth of submitted source evidence or actual warranted episode closure",
+      "guard": "Finite/current validator contracts enforce declared roles and consistency; actual-source warrant and feasibility/closure hypotheses remain substantive independent premises.",
+      "evidence": [
+        {
+          "path": "empirical_occurrence/verdict_semantics/DECISION_CONTRACT_CORROBORATION.json",
+          "sha256": "7e122e9b986e455043d27d587296f72286151e6cfbffafe15599eeae3fb432fe"
+        },
+        {
+          "path": "empirical_occurrence/REGISTERED_COVERAGE.json",
+          "sha256": "f39b1501435c471de0fbe4826b8e1d0000fce29f4994be16896a42e1d71a3631"
+        }
+      ]
+    }
+  ],
+  "reviewed_cross_contributions": {
+    "source": {
+      "path": "synthesis/CROSS_CONTRIBUTIONS_WORKING.json",
+      "sha256": "a44d0274e2bd66da40547cee2182bab31b1369f28e485b090d5c530b234fa87f"
+    },
+    "records": [
+      {
+        "id": "V6-C01",
+        "title": "Sharper common-likelihood conditioning and joint origin/factor error",
+        "artifact": "root_math/CONDITIONING_CROSS_CONTRIBUTION.md",
+        "sha256": "8390b2384bf91469c868d910eb257426e3488011d904e228f7f8f46d61dcb02e",
+        "independent_review": "early_remaining/CONDITIONING_REVIEW.md",
+        "evidence_status": "ORDINARY_PROOF_INDEPENDENTLY_REVIEWED",
+        "contribution": "Sharpens the common-factor2 bound to delta/max(A,B); joins a distinct relative-factor perturbation and transport error.",
+        "limits": "Positive normalisers, bounded common likelihood and shared ratio support; joint sum not claimed sharp; no source likelihood warrant.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C02",
+        "title": "Continuous Fisher audit fibre versus finite sidecars",
+        "artifact": "root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md",
+        "sha256": "be9505471437724555f1610e4d4d27a480cca35e72bff196730712b49179db0a",
+        "independent_review": "type_collective/GEOMETRY_SIDECAR_REVIEW.md",
+        "evidence_status": "ORDINARY_COROLLARY_INDEPENDENTLY_REVIEWED",
+        "contribution": "Fixed-fibre exact source-norm preservation has sharp continuous supplement dimension d=k-rank(Q); when d>0 no finite-valued sidecar suffices, while d=0 needs no supplement.",
+        "limits": "Strict positive fixed conditional columns and ambient source-law Fisher norm contract; not a global varying-rank chart or requirement for posterior-answer-only preservation.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C03",
+        "title": "Residual-spectrum cost of additional moment directions",
+        "artifact": "root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md",
+        "sha256": "aeb9692cdf69625fdb3edb271a6244d64f041f8796d8698784004c207936bdde",
+        "independent_review": "empirical_occurrence/root_review/APPROXIMATE_REVIEW.json",
+        "evidence_status": "ORDINARY_PROOF_INDEPENDENTLY_REVIEWED",
+        "contribution": "Subtracts already retained oblique information before bounding new moment coordinates; exact zero-error endpoint attained.",
+        "limits": "Fixed linear acquisition, full probability simplex, declared accessible Walsh questions; positive-error spectral bound necessary only, no bit or sample complexity theorem.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C04",
+        "title": "Robust finite-mediator capture",
+        "artifact": "type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md",
+        "sha256": "6d8c1b108c74df4638da79a147e6480b6edb9c2b562028c0d17758ab08d45406",
+        "independent_review": "root_math/mediator_review/REVIEW.json",
+        "evidence_status": "ORDINARY_COROLLARY_INDEPENDENTLY_REVIEWED",
+        "contribution": "Adds sharp event-TV allowance to inherited finite-mediator Gaussian bound at one horizon.",
+        "limits": "Complete conditional mediation, at most N mediator values, reference law contract; no prescribed output marginal or coherent all-horizon process.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C05",
+        "title": "Accepted source proofs with equal erasure and distinct work",
+        "artifact": "type_collective/ERASURE_WORK_BOUNDARY.md",
+        "sha256": "c0dfaab116196ab84f4ab51ce3ae2f3c22235edffb61cba6a5f6f4c50f95cc4c",
+        "independent_review": "root_math/erasure_review/REVIEW.md",
+        "evidence_status": "KERNEL_CHECKED_ACCEPTED_PAIR_AND_REVIEW",
+        "contribution": "Actual accepted proof pair erases to same certificate while source charges22/34 and export counts2/3 differ.",
+        "limits": "General fibre criterion inherited; no wall-clock, arbitrary derivation cost or actual epistemic warrant claim.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C06",
+        "title": "Multivalued reset coordinate quotient",
+        "artifact": "root_math/multivalued_reset/RESULT.md",
+        "sha256": "7d280f36ea00d164af7882bb4eee1698d686c95d7ee9b3fc4beb176b79340cc7",
+        "independent_review": "type_collective/multivalued_reset_review/REVIEW.md",
+        "evidence_status": "KERNEL_CORE_AND_REVIEWED_ORDINARY_QUOTIENT_COROLLARIES",
+        "contribution": "Extends binary whole-bit retention to exact contextual value classes for finite full dependent products and all resets.",
+        "limits": "Core/future-word equivalence kernel checked; quotient cardinality ordinary proof; action contract essential, no external novelty claim.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C07",
+        "title": "Actual HasJ semantic incompleteness join",
+        "artifact": "type_collective/JOINT_COMPLETENESS_BOUNDARY.md",
+        "sha256": "4a5c8bce357e8992da70cb4569388c5329dd5a9049b3d04ec8983a733c63e448",
+        "independent_review": "root_math/JOINT_COMPLETENESS_REVIEW.md",
+        "evidence_status": "ORDINARY_JOIN_OF_EXACT_FORMAL_SOURCES",
+        "contribution": "Combines actual source enumerability with faithful FullPER non-r.e. validity; later explicit Raw gap reconciles existential and named boundaries.",
+        "limits": "Existing computability and soundness prerequisites; no semantic validity equals metaphysical truth; individual literal sources retain their own chronology.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C08",
+        "title": "Typed graph bridge incompatibility",
+        "artifact": "type_collective/GraphBridgeNegative.lean",
+        "sha256": "e77646dbd733a6fec1bb66c1fd49acbf84f27831490e831a2fece59ee69b158f",
+        "independent_review": "root_math/type_join_review/REVIEW.md",
+        "evidence_status": "KERNEL_CHECKED_JOIN_WITH_NOVELTY_UNCERTIFIED",
+        "contribution": "Two proposed typed projection bridges cannot jointly be inhabited in the unchanged actual HasE source interface.",
+        "limits": "Does not decide which bridge fails separately. The separately defined HasJ completion is not covered by this HasE noninhabitation result. Source naturality and literal identity-negation companions were found inherited and are not new discoveries.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-R01",
+        "title": "Singleton-fibre holonomy guard redundancy",
+        "artifact": "root_math/specialist_b_history/REPORT.md",
+        "sha256": "8570bf5ebb401846c389eefd459b8a6cf0aba9d3280d6bfb20bb5c8199fcc560",
+        "independent_review": "early_remaining/final_synthesis_review/SINGLETON_FIBRE_REVIEW.md",
+        "evidence_status": "ORDINARY_DEPENDENCY_CORRECTION_INDEPENDENTLY_REVIEWED",
+        "contribution": "Unique eligible carrier per world and eligibility-preserving transport already force selected-section coherence.",
+        "limits": "No numerical bearer identity inferred; triangular swap controls use weaker nonsingleton fibres; elementary known mathematics not promoted to new general theorem.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C09",
+        "title": "PD checker to randomised finite observable history correspondence",
+        "artifact": "type_collective/pd_checker_annex/FINITE_HISTORY_TRANSPORT.md",
+        "sha256": "08ef01cf9e6fe361c7f51caa187985d1df4de77159bece5561840bea89ea6d08",
+        "independent_review": "root_math/pd_history_review/REVIEW.json",
+        "evidence_status": "NEW_KERNEL_CHECKED_CONDITIONAL_TRANSPORT_AND_INDEPENDENT_FINITE_REVIEW",
+        "contribution": "Composes actual checker one-step joint pushforward equality with common erased-history randomised policies to all finite joint laws of the recorded history and erased current state.",
+        "limits": "Same initial erasure, joint transition-observation kernel and common erased-history policy; no unbounded liveness or unlicensed latent-state policy transport.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-R02",
+        "title": "Full ambient scores and block geometry do not determine joint repair",
+        "artifact": "root_math/geometry_audit_annex/JOINT_HULL_OBSTRUCTION.md",
+        "sha256": "d28d8929d34262e05ef684517bf2f4835942257ba15d1fb5b6f6c2cb70f51878",
+        "independent_review": "type_collective/joint_hull_review/REVIEW.json",
+        "evidence_status": "SOURCE_DERIVED_SYNTHESIS_INDEPENDENTLY_REVIEWED",
+        "contribution": "Binds the same-score, same-affine-hull mixed/product separation to actual recovered kernel source endpoints and explicit interior witnesses.",
+        "limits": "Ambient score maps agree, not admissible truth-indexed score lists. Inherited mixed-rank construction; no novel-discovery or cognitive-implementation claim.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C10",
+        "title": "Arbitrarily small positive linear slack admits uninformed repair",
+        "artifact": "type_collective/formal_annex_residue/LINEAR_SLACK_EXTENSION.md",
+        "sha256": "c04bde2c9f96703026c2ac7341afdd980b3213968c70fc58add65057ddd61976",
+        "independent_review": "root_math/linear_slack_review/REVIEW.json",
+        "evidence_status": "ORDINARY_COROLLARY_INDEPENDENTLY_REVIEWED",
+        "contribution": "Extends inherited c=1 constant-output counterexample to every c>0 and a nondegenerate parameter interval; eventual positive ratio variant.",
+        "limits": "Weak BinaryApproxGood predicate, nonnegative disturbance; not strict improvement, general losses, an oscillatory tolerance iff or empirical cognition.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-C11",
+        "title": "Hidden-coordinate activation splits formerly identical full moment histories",
+        "artifact": "type_collective/cumulative_damping_prose/ACTIVATION_BOUNDARY.md",
+        "sha256": "1e75c5ba4db30988a1ef7014515ec7b7bbbdb0c5333b6fb8d5d91f63d4e40028",
+        "independent_review": "root_math/hidden_activation_review/REVIEW.md",
+        "evidence_status": "ORDINARY_DERIVED_COUNTERCONTROL_INDEPENDENTLY_REVIEWED",
+        "contribution": "A fixed controlled-subspace history admits distinct moment-indeterminate hidden lifts; new positive quadratic damping of the hidden coordinate makes their distinct tilted laws determinate and hence finitely moment-separable.",
+        "limits": "An enlarged operation family, not a contradiction of fixed-family continuation. No uniform separating degree, effective reconstruction, real cognition or metaphysical interpretation. General cumulative-SOS bound inherited; explicit quadratic example self-contained.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-R03",
+        "title": "Finite-law product separation, regenerative restoration and stopped permissions",
+        "artifact": "root_math/terminal_annex_prose65/REPORT.md",
+        "sha256": "41730d44c3fac8be4c93fd701784981634149f2a5cccc2b8b0599b652474519d",
+        "independent_review": "early_remaining/finite_law_synthesis_review/REPORT.md",
+        "evidence_status": "INHERITED_ORDINARY_PROOFS_RECOVERED_AND_CROSSWALK_INDEPENDENTLY_REVIEWED",
+        "contribution": "Connects exact finite-catalogue tensor-power interpolation to hidden-target synthetic reward, finite expected sticky switches and stopped-history continuation with separate exit-hazard cost. All underlying proofs are inherited.",
+        "limits": "Known finite law catalogue, independent product observations, complete class-level high/low test, observed-state/common-support cycles or certified support-indexed controlled-iid menus as applicable. No full necessity iff, fresh execution, uniform numerical condition bound or actual warrant supplied.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      },
+      {
+        "id": "V6-R04",
+        "title": "Occurrence-sensitive joint readings and feasible completion bounds",
+        "artifact": "root_math/occurrence_feasibility_join/REPORT.md",
+        "sha256": "85846ce566ad1206b9f855d8435fbc9c0c667e9706b4e847016593c1c3dca1a7",
+        "independent_review": "type_collective/terminal_synthesis_reconciliation/OCCURRENCE_DELTA_REVIEW.json",
+        "evidence_status": "INHERITED_RELATIONAL_FEASIBILITY_JOIN_INDEPENDENTLY_REVIEWED",
+        "contribution": "Links actual source-relative complete/partial reading tuples to the pre-existing joint-feasibility condition on sharp missing-outcome bounds.",
+        "limits": "Supplied interpretation retained; no new linguistic authentication, empirical coupling, general theorem or fresh checker execution. Earlier61:5:4 applicability remains separate.",
+        "external_novelty": "NOT_CLAIMED",
+        "current": true
+      }
+    ],
+    "count": 15,
+    "current": 15
+  },
+  "owner_dependency_companions": [
+    {
+      "path": "../t20-closure-audit-20261011/early_foundations/SOURCE_BINDINGS.json",
+      "sha256": "22f54b462e0c20ad50b1a23c529d99ba0fa1ed61435d6063ff49ececd754a8b6",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-closure-audit-20261011/early_mathematics/SOURCE_BINDINGS.json",
+      "sha256": "be3f4375fb5c47a78d7fbcd5940b1b928df5eea3ed7e8a399f3d1e98a78ad4b8",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-closure-audit-20261011/early_operations/SOURCE_BINDINGS.json",
+      "sha256": "9e11edbe5e19a837abc5c166583b05cd659de92b2acb40b9ffb3d736ff3c9702",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-closure-audit-20261011/root_types/SOURCE_BINDINGS.json",
+      "sha256": "5d7561c8901c07a4da01c8396e1672d0b378cf94be7d05731cc6d0a6df6f5a4d",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-consolidation-20261011/pro-synthesis/SOURCE_BINDINGS.json",
+      "sha256": "d569b681833468b6cc29116084faf9fcb4374380582457dd6eadeed46c005b4c",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/audit_symmetries/SOURCE_BINDINGS.json",
+      "sha256": "dfc082cd0806b4b53482df56de45995bafc2173e9979788394b8aaa3db64020a",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/coverage_review/SOURCE_BINDINGS.json",
+      "sha256": "295c755b70b64c4a0305f21eacb44bb717eafab54f48cef176fa4b78e924c419",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/cross_front_synthesis/SOURCE_BINDINGS.json",
+      "sha256": "0892bc16b1d8b3fabd97bd4df8ce1d37b1d5168240a5946b6d27e26454be3c4d",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/cross_front_synthesis/checkpoint_qualified_1416/SOURCE_BINDINGS.json",
+      "sha256": "0bd88055e87fbe2e393c0d9e844b273d09f9d937107da38b4a342925e2d467d8",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/foundational_interface/SOURCE_BINDINGS.json",
+      "sha256": "fe1ad686f70e8038071e3c609eed8ab14dd411ffdcfe2632c5ab6198f222af0e",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/independent_review/SOURCE_BINDINGS.json",
+      "sha256": "d08460d94935948f75259d1fe53fb6e21edc03c957a81219f452925cf2c447f5",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/joint_correction/SOURCE_BINDINGS.json",
+      "sha256": "bea9c0270986e3b2656deb1162543cfab19ff155c9f64b0b47727ee9cbd66f25",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/proof_inquiry/SOURCE_BINDINGS.json",
+      "sha256": "b195f8698f42ba1357b66b5c60936c26aa36bbd3c09a005f44b4ae23b7cb56aa",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "../t20-depth-reassessment-20261011/semantic_geometry/SOURCE_BINDINGS.json",
+      "sha256": "29375aa6a680c1e5aed93400e27708f8b92f908a75c16e14e0f1ab4a4227e8ea",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/DEPENDENCY_CLOSURE.json",
+      "sha256": "34c9e228d0eccac5ada3af855354c64a665a193babf8a3d306d318cd418ae5e4",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/countable_computability_controls/DEPENDENCY_REUSE.json",
+      "sha256": "19ef89819d80d272cf960d3dd5a55300614706a4686f8e4070945c878d14931c",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/finite_panel_controls/DEPENDENCY_REUSE.json",
+      "sha256": "3ea808cbf6b17d3e79ffcaa26ba9c8ef6912772a4fb58759599500408b9a7a23",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/preservation_geometry_children/DEPENDENCY_REUSE.json",
+      "sha256": "2d722061c340c386c17a57184b99a930a794899da93b8ac9f8cfa6aab66d8aa4",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/skyline_code/DEPENDENCY_CLOSURE.json",
+      "sha256": "6bb382bb6a20ba3a994042439b0324f620f7086dbc7e395c7e19053cc20f1462",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/terminal_annex_code100/DIRECT_HELPER_BINDINGS.json",
+      "sha256": "0e96d3cca573e9e63858c64c9a51d04733645d8237a6631baa214ac2e21433af",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/terminal_annex_prose42/DEPENDENCY_BINDINGS.json",
+      "sha256": "a8ce13e69483940ab693823478145b2c3d3706122449ca8ffc5dc249ea98381a",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "early_remaining/terminal_csv11/DEPENDENCY_BINDINGS.json",
+      "sha256": "a84f69252899466128adbbafd2d70c5cb221c7d698376ae13ee8f7f3189b0f01",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/DEPENDENCY_CLOSURE.json",
+      "sha256": "bb4f9c5f2720d2d805d4b4c0d93ca5d2572125d44d7a212fb11b9b296b92193d",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/aq_bk_implementation/DEPENDENCY_CLOSURE.json",
+      "sha256": "676af8b481a57ad4bd177375c8deb6d9f6e796afc87ddfee74a3836a47c357bd",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/attestation_interface/DEPENDENCY_CLOSURE.json",
+      "sha256": "bbd1c087bd1da36eb741c2c353bf1a29ec8066be799d3988f53928ed2f5b11f5",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/authority_passages/DEPENDENCY_CLOSURE.json",
+      "sha256": "655176830eb5c4bbf684cf7eec279ac236c4c936da457189276036c10b752d2a",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/causal_provision_controls/DEPENDENCY_CLOSURE.json",
+      "sha256": "5c30350f946ff3d73f36cc4b690cf14f2e65ce5300b867f08b005057df7eaacf",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/causal_test_completion/DEPENDENCY_CLOSURE.json",
+      "sha256": "04eeaeb0fbae2c36b1d83f781f6f2a7d20c54fa77cb254d9e1adc0f3f875d5cf",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/cooperation_callers/IMPORT_LAYOUT_CLOSURE.json",
+      "sha256": "ca24ba496731e7b761e332756e84b8b7e2479d862991b5d55510724df6d4ad9d",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/directive_qualification/DEPENDENCY_CLOSURE.json",
+      "sha256": "0cd0d485d2375b6149ac78a10c9c3c2897cff977881d593e71b644e8b98ffb31",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/explanation_continuation/DEPENDENCY_CLOSURE.json",
+      "sha256": "7fd7dd5c943a383a23b0a4ddb52c572417b6162fddd6c86d00d64245d72993f2",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/final_inquiry_protocol/DEPENDENCY_CLOSURE.json",
+      "sha256": "f075df53f2341cf01a4e12fa9f4e5d7f7e9bf328d5acfc1467bd7f1666e979f2",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/final_short_scope_notes/DEPENDENCY_CLOSURE.json",
+      "sha256": "d88b738349db8bf80155f3b1acbb5279d91c1d5d9b4e1495bbcf5c26817c2829",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/inquiry_revision/DEPENDENCY_CLOSURE.json",
+      "sha256": "c699675f64bd09902da257f1f0b72685d9c9dc9ba0c4462f4e88806e9b277540",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/large_authored_reports/DEPENDENCY_CLOSURE.json",
+      "sha256": "a47b6e96f2912e1a9829b50bd17eca646646627d3ab28836e198d55c22536b11",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/last_source_protocol_code/DEPENDENCY_CLOSURE.json",
+      "sha256": "3d0b71e58fc1e270254d4fff2bd503ad8203e5252dd647b3e631b653cace4705",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/original_v5_implementation/DEPENDENCY_CLOSURE.json",
+      "sha256": "095ca6cb9f5330e497e9d0528de9615e487246395793c7695bee6ba94e9475f3",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/pmr_interface_validators/DEPENDENCY_CLOSURE.json",
+      "sha256": "0e69c48d120c120a441f86c7a7c0d2bf654d68dbb826392a154e8bc0923f6a1b",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/preservation_inquiry_children/DEPENDENCY_CLOSURE.json",
+      "sha256": "a8e8021952d589ac00d7e1f8e654824c33b0079c5caa636fbdf65864dec95de4",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/recognition_residue/DEPENDENCY_CLOSURE.json",
+      "sha256": "2d60d695efb91b0241b640331346e01750350a84bde97187ae7be04a85a39449",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/source_warrant_prose/DEPENDENCY_CLOSURE.json",
+      "sha256": "0b3c1c6040b89dae330112fa3f5a26e2cceb5f10b236d39f0f2a2ddad8aa82c0",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/structured_verdict_fixtures/DEPENDENCY_CLOSURE.json",
+      "sha256": "0f531d7f5dcd0f7cb7dce7fd980095d651fb9221f7ed31c90dbc52b30c31e823",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/t17_implementation/DEPENDENCY_CLOSURE.json",
+      "sha256": "7ff0c185484e9cced3da1baac92161f3655c3d7102eba1990fa3d0315e30aa51",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/tensor_implementation/DEPENDENCY_CLOSURE.json",
+      "sha256": "5e8b3ebb00291508971f05bb56b873ffdb81d46defd0d2c13c58848c628b6b6e",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/terminal_annex_code90/DEPENDENCY_CLOSURE.json",
+      "sha256": "83cdae19c3f9f36e475aae8bccfe149f0cf10334783369a4bb4781b9c5677fef",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/terminal_annex_controller26/DEPENDENCY_CLOSURE.json",
+      "sha256": "a47c8aed7093e2da15d2c800d9ea02e536432941ed131d2b6e254cd3b6295815",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "empirical_occurrence/terminal_annex_frontier40/DEPENDENCY_CLOSURE.json",
+      "sha256": "2287efe2a692b40d629f1150904d13280b80f160c10293b06eed7e2b1311834f",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "operational_successors/annex_formal27/DEPENDENCY_REUSE.json",
+      "sha256": "e4e7c3801951dbcfd39579bdfec3d72102d97c6c4ec4589524295af82b0dac1e",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "operational_successors/intrinsic_testimony_implementation/DEPENDENCY_CLOSURE.json",
+      "sha256": "394c8544e99661a840e316a2b75b8e93877ea57d7dc0ce351c1e1336e59df9c1",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "operational_successors/pr30_adapter/HELPER_CLOSURE.json",
+      "sha256": "4c033f66e0b61c567c22de188625d73c9214af51baadda64865aba944bdb42b8",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "operational_successors/pr30_adapter/MAIN_SOURCE_UNION.json",
+      "sha256": "2508da24136e4adafd96eabbaa46cf1710264a9d10a169a2439828de6ea9b227",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "operational_successors/preservation_children/IMPORTED_SOURCE_AND_MODEL_REUSE.json",
+      "sha256": "b3f09b509e8aa8504b281a22ebeaf9b7f4b1b7bcd4032d6a3eb6e240d1ecb183",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "root_math/later_residual_annex/DEPENDENCY_CLOSURE.json",
+      "sha256": "e075e4029988b0e3d8678df2303f0c2e57873b1df5b2576f30a2f6d8c44d4570",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/cumulative_damping_prose/DEPENDENCY_REUSE.json",
+      "sha256": "9765208cdb6bbd9b7c62a680f17e32b05e1e3a6b11b5ca1a3323d94abdacd372",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/cumulative_damping_prose/SOURCE_BINDINGS.json",
+      "sha256": "56a309baf1cad394fe862659c0761620b7dbd236d250bab2791f18fcd148f139",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/current_stack_mutation_tests/EXACT_IMPORT_REUSE.json",
+      "sha256": "a63e49231434d0bd9627ea01de4ac6b3ee87e0b2ca9a5bc687a193ad65b64b7a",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/deep_aa_ap_checkers/SOURCE_BINDINGS.json",
+      "sha256": "8a3a315a055527416df2d77172e4dec27e0a85569a0a429e50da886c3e6dd661",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/final_source_tests/EXACT_IMPORT_REUSE.json",
+      "sha256": "c7395184eec16ff191470bea4c272a0b04a97595094ca604dae4d01abda6d273",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/final_synthesis_review/SOURCE_BINDINGS.json",
+      "sha256": "e9681827ec94cca72c2ccf8b57fb985601f69b6424f7add09320053fe5f21860",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/formal_annex_residue/IMPORT_REUSE.json",
+      "sha256": "8c862324a27482691e0b38d5313c708ffc744bb4434144f7a15fa761f1083b9e",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/frontend_certificate_controls/IMPORT_REUSE.json",
+      "sha256": "bb1b01ccbd67c3db86d8ddb3646c2fd413ae02eebf3eade17aef4fcdf3931761",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/implementation_residue/SOURCE_BINDINGS.json",
+      "sha256": "1f0c3f4c869e6c78701bed91358fde7a1b715e8b582b68426088bfa630fbf41e",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/kernel_replay_assurance/IMPORT_REUSE.json",
+      "sha256": "c2191ff338a3f48025d892538adc13e5e754358f92c2f1c4cd401457de11845d",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/last_formal_code36/IMPORT_REUSE.json",
+      "sha256": "f7109d058799310abcbf98af8fe8431c599305de062c57d0f928a25aabb47729",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/native_export_data_residue/IMPORT_REUSE.json",
+      "sha256": "a4e67261279538706f5cfb96790fd35522ff5cb5950bd0d7d54db3b449afadfa",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/noetic_runtime_contracts/SOURCE_BINDINGS.json",
+      "sha256": "adb51afa7a8cdcc6576be0bd4e3362b07f51000abbd63e7fd20527f012ac2e7f",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/probe_dependencies/EXTERNAL_INPUT_BINDINGS.json",
+      "sha256": "ba9a3579b8de52703141e3beab72b2367fe84fb160f8ab777dabedc2b934d187",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/probe_dependencies/IMPORT_REUSE.json",
+      "sha256": "016cf29c930c7725339328d94773b72fa62c9b3c4ce1cb880164af5a90c26726",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/probe_dependencies/SOURCE_BINDINGS.json",
+      "sha256": "534c64e1aa7cebce463a3c2777185d760e7e6a4bee28a4782f8a58bafaccc89a",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/probe_inputs/SOURCE_BINDINGS.json",
+      "sha256": "26947589e9d1203ee7b66f983bd9b11120a36d8162af3fab43206a8ee99b59ce",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/prose_residue/SOURCE_BINDINGS.json",
+      "sha256": "ce342dc97202d1a41c9620500c9c7261f910f90a25637aea704961df0d237d0f",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    },
+    {
+      "path": "type_collective/replay_scope_residue/IMPORT_REUSE.json",
+      "sha256": "2652a8aad9031e9e96d566d5065c24d764a6daad937317ab72178a9611390184",
+      "role": "Exact completed-reader dependency/import/input binding companion; member semantics and limits remain in the owner record. This index does not grant transitive body or execution credit."
+    }
+  ],
+  "dependency_direction_guard": {
+    "source": {
+      "path": "root_math/dependency_index4/REPORT.md",
+      "sha256": "12b053e91b408b308703ac21da077d4325fc3f65d827762e29bcb583a9dd358e"
+    },
+    "rule": "Ordinary outer dependency edges point consumer-to-reference. The49 nested cross-front edges retain source-to-target. They are not flattened into one orientation or interpreted as one proof DAG."
+  },
+  "scope_limits": [
+    "Registered result-family findings and source-unit examination are different axes.",
+    "A reviewed ordinary argument, a formal theorem, a finite control, inherited receipt and fresh execution keep distinct evidence status.",
+    "Unavailable original bytes and historical re-execution prerequisites remain explicit; current read public versions do not prove unverified original equivalence.",
+    "No complete external-literature search, whole-book reading or external philosophical consensus is claimed."
+  ],
+  "edge_orientation": "For principal_explicit_relationships, source_family denotes the predecessor/input and target_family the later/output. For supersedes, the TARGET supersedes the SOURCE; no converse or flattened proof-DAG orientation is intended.",
+  "review_status": "PRINCIPAL_RELATION_GUARDS_INDEPENDENTLY_REVIEWED_BY_ROOT; ORIENTATION_AND_NONTRANSFER_WORDING_REPAIRED",
+  "unavailable_and_scope_limits": {
+    "path": "corpus/admission/FINAL_UNAVAILABLE_AND_SCOPED_LIMITS.json",
+    "sha256": "1708a30a503591b0fb7662d1f890ee26829a006686d5c70ed364b27829ef0f27"
+  },
+  "external_evidence_scope": {
+    "path": "controller_chain/external_evidence_scope/ROLE_DISPOSITIONS.json",
+    "sha256": "cb9a9706e6ba29898cd39570f62d8fa2315c8446dcdfa4d980e0b18b4aabb273"
+  },
+  "root_review": {
+    "path": "root_math/final_family_join_review/DEPENDENCY_CURRENTNESS_ROOT_REVIEW.json",
+    "sha256": "da12c73683d0c227378357bccf3e526694fa097ec28044f844509e78db8fb436"
+  },
+  "final_binding_note": "Final registered-result/source-scope digest pointers refreshed after exact owner intake-currentness and role-category repairs. Eight reviewed semantic edges,15 contribution records and72 owner dependency companions unchanged; historical root review remains separately bound."
+}

@@ -19,6 +19,7 @@ supersession notice at the superseded site. Checks, deterministically:
      superseded formula — historical archives are exempt.
 
 Deterministic; offline."""
+import hashlib
 import io
 import os
 import re
@@ -42,9 +43,23 @@ def check(name, ok, detail=""):
         FAILS.append(name)
 
 
-def read(rel):
+def read(rel, newline=None):
     p = os.path.join(ROOT, rel)
-    return io.open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+    if not os.path.exists(p):
+        return ""
+    with io.open(p, encoding="utf-8", newline=newline) as stream:
+        return stream.read()
+
+
+def is_supersession_registry(rel, text):
+    """Registries record old formulas without adopting them as current policy."""
+    if rel in ("docs/decision-status.yaml", "docs/math-source-inventory.yaml"):
+        return True
+    # One byte-exact historical registry in the T20 projection. Changed bytes,
+    # new documents and current normative surfaces receive no exception.
+    digest = "53d15c2fba0185fdbb3bccdd5b586fd67e7f78824a2fd1e8860860ce36560dad"
+    return (rel == "research/t20-v6-20261012/sources/" + digest + "/decision-status.yaml"
+            and hashlib.sha256(text.encode("utf-8")).hexdigest() == digest)
 
 
 def main():
@@ -116,10 +131,11 @@ def main():
                     if not fn.endswith((".md", ".yaml", ".yml")):
                         continue
                     rel = (rel_base + "/" + fn).lstrip("./")
-                    if rel in ("docs/decision-status.yaml", "docs/math-source-inventory.yaml"):
+                    text = read(rel, newline="")
+                    if is_supersession_registry(rel, text):
                         continue  # the supersession registry and the math-source ledger
                         # record formula strings by design (a ledger, not a normative surface)
-                    if norm(old["formula"]) in norm(read(rel)):
+                    if norm(old["formula"]) in norm(text):
                         offenders.append(rel)
             check("%s: no current normative surface states the superseded formula "
                   "(md+yaml, ASCII-normalized)" % sym,

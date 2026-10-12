@@ -1,0 +1,252 @@
+{
+  "schema": "t20.typed-claim-edges.v1",
+  "orientation": "source is predecessor/input; target is consumer/comparison claim",
+  "edges": [
+    {
+      "source": "PT-01",
+      "target": "PT-02",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-01",
+      "target": "PT-03",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-03",
+      "target": "PT-04",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-04",
+      "target": "PT-05",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-03",
+      "target": "PT-06",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-04",
+      "target": "PT-07",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-06",
+      "target": "PT-07",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-09",
+      "target": "PT-08",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-08",
+      "target": "PT-10",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-09",
+      "target": "PT-10",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-09",
+      "target": "PT-11",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-10",
+      "target": "PT-12",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-11",
+      "target": "PT-12",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-09",
+      "target": "PT-13",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-10",
+      "target": "PT-13",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-11",
+      "target": "PT-13",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-13",
+      "target": "PT-14",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-13",
+      "target": "PT-15",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-14",
+      "target": "PT-15",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-13",
+      "target": "PT-16",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-09",
+      "target": "PT-17",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-13",
+      "target": "PT-17",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-13",
+      "target": "PT-18",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-17",
+      "target": "PT-18",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-16",
+      "target": "PT-19",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-19",
+      "target": "PT-20",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-19",
+      "target": "PT-22",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-20",
+      "target": "PT-22",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-21",
+      "target": "PT-22",
+      "type": "semantic_application",
+      "justification": "Target applies source interpretation/observational contract with the additional explicit hypotheses in target."
+    },
+    {
+      "source": "PT-23",
+      "target": "PT-24",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-23",
+      "target": "PT-25",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-24",
+      "target": "PT-25",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-23",
+      "target": "PT-26",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-23",
+      "target": "PT-27",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-27",
+      "target": "PT-28",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-28",
+      "target": "PT-29",
+      "type": "implementation_refinement",
+      "justification": "Target gives a more concrete or kernel/executable presentation of source result; first ordinary proof credit remains with source."
+    },
+    {
+      "source": "PT-23",
+      "target": "PT-29",
+      "type": "mathematical_premise",
+      "justification": "Target proof uses the specific source result together with its own stated hypotheses; not a claim of an unconditional implication."
+    },
+    {
+      "source": "PT-30",
+      "target": "PT-31",
+      "type": "methodological_ancestry",
+      "justification": "Source supplies an earlier mechanism/context or scoped interface; this edge does not assert target logically follows solely from source."
+    },
+    {
+      "source": "PT-12",
+      "target": "PT-13",
+      "type": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed."
+    },
+    {
+      "source": "PT-21",
+      "target": "PT-20",
+      "type": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed."
+    },
+    {
+      "source": "PT-30",
+      "target": "PT-32",
+      "type": "comparison_or_interface",
+      "justification": "Related scope boundary; no theorem-premise or entailment claimed."
+    }
+  ]
+}

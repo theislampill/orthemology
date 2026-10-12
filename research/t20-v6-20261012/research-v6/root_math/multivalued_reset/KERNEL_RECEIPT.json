@@ -1,0 +1,37 @@
+{
+  "utc": "2026-10-11T18:28:56.950806+00:00",
+  "status": "PASS",
+  "source_sha256": "fe4ab0cabdad655057cc898f38299180b301e0973a60b308763d411803477df9",
+  "log_sha256": "0d6476c6e57e25df9c2ea85dd26332cf28fd27a90f33684989c52736bbe026eb",
+  "compiler": "Lean 4.19.0",
+  "options": [
+    "--trust=0",
+    "-j1",
+    "-DwarningAsError=true"
+  ],
+  "kernel_scope": [
+    "coordinate_equivalence",
+    "factorisation",
+    "observational_factorisation"
+  ],
+  "axioms": {
+    "coordinate_equivalence": [],
+    "factorisation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "observational_factorisation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "not_kernel_claimed": [
+    "quotient_bijection",
+    "minimal_reachable_cardinality",
+    "infinite_coordinate_control"
+  ],
+  "independent_review": "type_collective/multivalued_reset_review/REVIEW.json",
+  "initial_extension_failure": "final_build.log: unused-section-variable lint errors; corrected with explicit omit; no theorem premise changed"
+}

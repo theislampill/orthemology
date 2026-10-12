@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-11T20:40:15.504807+00:00",
+  "status": "ROOT_INDEPENDENT_EXACT_CLI_REPRODUCTION_PASS",
+  "source_sha256": "bb1ade62418f7670f73c5fc532aff20b4736b955222cc126bfffa7c528c9067f",
+  "command": [
+    "private-locator:915d29ee128338d1c948",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/analyze_pilot0_v2.py",
+    "t20-v6-20261011/operational_successors/global_auxiliary_roles/pilot_matching_closure/INCOMPLETE_DESIGN_CONTROL.json",
+    "--items",
+    "t20-consolidation-20261011/catalogue/objects/d3/d303f3f4cb48f560b828dd75d62acbffbe97f7417b3824efa03657c1de68bdaf",
+    "--out",
+    "t20-v6-20261011/root_math/pilot_readiness_review/ROOT_OUTPUT.json"
+  ],
+  "exit_code": 0,
+  "assertions_passed": 5,
+  "finding": "Exact frozen CLI accepts incomplete synthetic design as ADVANCE_TO_PILOT1. Control deliberately labels manifest synthetic=false. No real participant/model experiment or adoption outcome. Whole script read; external complete-run validation would be additional required contract.",
+  "stdout": "",
+  "stderr": ""
+}

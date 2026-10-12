@@ -1,0 +1,164 @@
+[
+  {
+    "id": "inquiry",
+    "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/coupled-credal-inquiry-transport-20261011/RESULT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/inquiry.md",
+    "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        257
+      ]
+    }
+  },
+  {
+    "id": "inquiry_review",
+    "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/inquiry_review.md",
+    "sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        102
+      ]
+    }
+  },
+  {
+    "id": "continuation",
+    "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/audit-continuation-transport-20261010/RESULT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/continuation.md",
+    "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        239
+      ]
+    }
+  },
+  {
+    "id": "posterior_value",
+    "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/posterior-inquiry-value-20261010/RESULT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/posterior_value.md",
+    "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        67
+      ]
+    }
+  },
+  {
+    "id": "whole",
+    "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/documents/CROSS_FRONT_SYNTHESIS.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/whole.md",
+    "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+    "read_scope": {
+      "mode": "provenance_only_not_body_read"
+    }
+  },
+  {
+    "id": "authorial",
+    "path": "recovery-20261011/received/source/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/authorial.md",
+    "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+    "read_scope": {
+      "mode": "heading_scan_only_not_body_read"
+    }
+  },
+  {
+    "id": "moment",
+    "path": "recovery-20261011/extracted/moment-predictive-application-checkpoint-20261011/moment-predictive-application-checkpoint-20261011/payload/fixed-calibration-moment-repair-20261011/RESULT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/moment.md",
+    "sha256": "93bb189e12d85582871ce7eb30f11b28c50f957a5ea8657fc9acc834db5e0ebe",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        42
+      ]
+    }
+  },
+  {
+    "id": "companion",
+    "path": "t20-consolidation-20261011/catalogue/objects/d3/d3c75cb673b035acafa301aaff440f4083478149ea0287fc8d404fdb8de7e2d3",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/companion.md",
+    "sha256": "d3c75cb673b035acafa301aaff440f4083478149ea0287fc8d404fdb8de7e2d3",
+    "read_scope": {
+      "mode": "full_text",
+      "lines": [
+        1,
+        285
+      ]
+    }
+  },
+  {
+    "id": "credal",
+    "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/cumulative-credal-audit-coupling-20261011/REPORT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/credal.md",
+    "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "geometric",
+    "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/credal-geometric-transport-20261011/REPORT.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/geometric.md",
+    "sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "geometric_repair",
+    "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/credal-geometric-transport-20261011/REPAIR.md",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/geometric_repair.md",
+    "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+    "read_scope": {
+      "mode": "full_text"
+    }
+  },
+  {
+    "id": "h_continuation",
+    "path": "t20-consolidation-20261011/catalogue/objects/62/626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/h_continuation.md",
+    "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+    "read_scope": {
+      "mode": "selected_lines",
+      "lines": [
+        210,
+        295
+      ]
+    }
+  },
+  {
+    "id": "grouped_count",
+    "path": "t20-consolidation-20261011/catalogue/objects/c4/c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/grouped_count.md",
+    "sha256": "c47fd19a08eba9e3ae18885c264b45285defca4ae34e33db60e786385aa82113",
+    "read_scope": {
+      "mode": "selected_lines",
+      "lines": [
+        1,
+        90
+      ]
+    }
+  },
+  {
+    "id": "global_calibration",
+    "path": "t20-consolidation-20261011/catalogue/objects/ec/ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+    "copy": "t20-depth-reassessment-20261011/uncertainty_inquiry/inputs/global_calibration.md",
+    "sha256": "ec620e491fd1c58cdc9dc0bcc8700784b79b4b399247ca1e2a235438138cf827",
+    "read_scope": {
+      "mode": "selected_lines",
+      "lines": [
+        1,
+        75
+      ]
+    }
+  }
+]

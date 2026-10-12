@@ -4,6 +4,9 @@
 *.json text
 *.py text
 
+# The T20 v6 public object has explicit original/projected byte identities.
+research/t20-v6-20261012/** -text
+
 # Recovered AR8R source packets are hash-custodied evidence. Store their bytes
 # verbatim; V11 overlays and corrections live outside these exact directories.
 docs/project-closure/ar8r-v11/programs/full-program-reentry-v2-source/** -text

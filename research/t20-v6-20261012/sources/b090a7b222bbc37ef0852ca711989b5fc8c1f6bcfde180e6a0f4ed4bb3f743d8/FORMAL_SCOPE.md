@@ -1,0 +1,9 @@
+# Additive finite-sidecar formal evidence
+
+The exact ten-file mathematical candidate freeze, six Lean modules, current source-boundary/verifier/author receipt, independent review and reviewer records are preserved. The review accepted the stated deterministic finite-table and externally supplied finite-action-sequence scope. The fixed source-observable minimum and finite-domain/branch-range premises remain stipulated; no D1 partition computation, enforced menu legality, stochastic sampler, authenticity or philosophical-warrant theorem follows.
+
+Recorded Lean4.19.0 --trust=0 runs compiled six fresh candidate modules and two reviewer modules. The 2,835 inherited objects were reused and not rebuilt. This preservation operation does not run a fresh Lean kernel replay. Portable checks verify source hashes and consistency of the retained receipts; they do not convert receipt verification into fresh compilation. No .olean objects or toolchain are packaged. FORMAL_DEPENDENCIES.json records the missing prerequisites and source/object/import-resolution manifests.
+
+VERIFICATION_REVISION.json expressly discloses that earlier SOURCE_BOUNDARY.json and AUTHOR_REPLAY.json metadata bytes were overwritten before the strengthened final import-resolution pins. An earlier boundary digest is recorded, but the old boundary bytes are not held; the earlier author-receipt digest is unavailable and its bytes are not held. They have not been reconstructed. All ten frozen mathematical files remain unchanged. Preservation begins with the exact current metadata, not a false claim that every historical verification byte survives.
+
+The original verification scripts and logs are historical artifacts. They need the exact inherited workspace and may write validation records; collection replay.py is the read-only portable entrypoint for this archive. Repository integration and closure decisions remain outside this packet.

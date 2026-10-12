@@ -1,0 +1,15 @@
+import ReasonKnowledge
+#check ReasonKnowledge.same_output_same_optimality
+#check ReasonKnowledge.two_implementations_defeat_unique_plan
+#check ReasonKnowledge.knowledge_factive
+#check ReasonKnowledge.complete_identity_knowledge
+#check ReasonKnowledge.omniscience_at_distinct_worlds
+#check ReasonKnowledge.factive_record_fixes_value
+#check ReasonKnowledge.frozen_content_fails_changed_object
+#check ReasonKnowledge.equivariant_selection_fixed_input
+#check ReasonKnowledge.odd_target_no_equal_integer_allocation
+#check ReasonKnowledge.known_peer_means_selects_complement
+#check ReasonKnowledge.replan_after_peer_change_changes_command
+#check ReasonKnowledge.relational_end_preserves_created_target
+#check ReasonKnowledge.solo_created_target_not_relational_end
+#check ReasonKnowledge.relational_two_selects_split

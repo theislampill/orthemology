@@ -1,0 +1,106 @@
+{
+  "utc": "2026-10-12T14:58:35.538108+00:00",
+  "review_status": "FOUNDATIONAL_CURRENTNESS_ACCEPTED_THREE_PROPOSED_EDITS_APPLIED_AND_READ_BACK",
+  "targets": [
+    {
+      "path": "t20-v6-20261011/synthesis/WHOLE_CORPUS_SYNTHESIS.md",
+      "sha256": "f1e7cfa205ea6b343b06b2dd4bf8589390740aafb952cb636158bf758494234b",
+      "bytes": 64486
+    },
+    {
+      "path": "t20-v6-20261011/synthesis/OWNER_REVIEW_CASE_DRAFT.md",
+      "sha256": "0880c0e08e264576b662f53f03feef3c975a6af1172b7a4b6efe68c2a301342a",
+      "bytes": 7727
+    }
+  ],
+  "read_scope": {
+    "whole_synthesis": "Complete current297-line document readback, focused independent foundational assessment of sections1,3 noetic interface,5 countermodel discipline,6,7,8 chronology and9 boundary. No reread of completed underlying corpus.",
+    "owner_case": "Complete current60-line draft readback; exact hash unchanged from prior accepted common-field revision."
+  },
+  "controlling_sources": [
+    {
+      "path": "t20-v6-20261011/foundations/REPORT.md",
+      "sha256": "d1878e6f0170fb154496b4d1e7a56bc0f11e7be85efede916b53a0fedaf8dac2",
+      "bytes": 139724
+    },
+    {
+      "path": "t20-v6-20261011/foundations/CURRENT_FOUNDATIONAL_CLAIMS.json",
+      "sha256": "d967c6418179ccc64a6c1d69c8b8bba6756f1c31438abbb501f8d9743a2c2d16",
+      "bytes": 307885
+    },
+    {
+      "path": "t20-v6-20261011/foundations/CLAIM_CORRECTION_CROSSWALK.json",
+      "sha256": "846a3e524adae37b39efa9b3dceaef935e3cda760167ee41c35b858317ebe51b",
+      "bytes": 17387
+    },
+    {
+      "path": "t20-v6-20261011/foundations/terminal_primary_capture6/READ_LEDGER.json",
+      "sha256": "32384c4302289b3977c06b4748234904452526593a70bbdd4654d01d7decb948",
+      "bytes": 12170
+    },
+    {
+      "path": "t20-v6-20261011/foundations/terminal_primary_images23/READ_LEDGER.json",
+      "sha256": "99f785f68c29cde0df44c7711a761d97bd54df6edb2cb37f9ddf7eba96ce0064",
+      "bytes": 41710
+    },
+    {
+      "path": "t20-v6-20261011/foundations/terminal_registry4/READ_LEDGER.json",
+      "sha256": "9374b9a568336ea380e0ceb96b0cc844322f5839a26acc943e2085ab7d26394b",
+      "bytes": 10259
+    }
+  ],
+  "findings": [
+    {
+      "id": "FREV-FINAL-01",
+      "severity": "precision_edit",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md §6.2, first paragraph",
+      "current": "The current appraisal positively warrants one complete common original source of the relevant connected created field.",
+      "proposed": "The current appraisal positively warrants one complete common original source of the relevant actual productively connected created order.",
+      "reason": "Makes the substantive actuality/productive-connectivity restriction explicit and matches the already correct owner-case wording. Spatial co-existence or arbitrary abstract connectedness supplies no substitute for this premise.",
+      "source": "foundations/REPORT.md §§1,31–32; CURRENT_FOUNDATIONAL_CLAIMS FND-007/010; terminal_primary_capture6/REPORT.md"
+    },
+    {
+      "id": "FREV-FINAL-02",
+      "severity": "navigation_currentness_edit",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md §6.4, controlling chapter paragraph",
+      "current": "especially §§14–28",
+      "proposed": "especially §§14–32",
+      "reason": "Includes completed source-context65, source-boundary30, recovered connected-source originals, primary captures/images and structured currentness returns. The full chapter is already linked, so this is a consequential scope-pointer completion rather than missing argument warrant."
+    },
+    {
+      "id": "FREV-FINAL-03",
+      "severity": "recommended_source_correction_addition",
+      "target": "WHOLE_CORPUS_SYNTHESIS.md §6.5, after the existing primary-return paragraphs",
+      "proposed": "The late retained Shifa page-image return distinguishes p.183’s expressly dialectical concession and p.187’s opponent timing objection from p.184’s affirmation of wise acts and p.186’s affirmative own-activity account. The supplied Oneness translation’s spatial-coexistence footnote supplies no universal productive-connectedness theorem, and Figure3a’s no-influence-to-insufficiency branch is a diagram-level defect not made by the separately read prose. These corrections retain the current actual productively connected-field and Wisdom appraisals; the received-page reading adds no independent edition or manuscript authentication.",
+      "reason": "Preserves the latest physical-source corrections in the main synthesis without inventing a new metaphysical defeater. The chapter already preserves them in full.",
+      "source": "terminal_primary_images23 records3,5,13,20; terminal_primary_capture6 record0; operational terminal_annex_auxiliary PRIMARY_IMAGE_SCOPE figures2/3a and exact text-layer comparison"
+    }
+  ],
+  "accepted_boundaries": [
+    "Current34 affirmative necessity, same-bearer independence, complete relevant actual-field sourcehood, Knowledge/Will/Wisdom, practical relation, veracity and recognition retain their documented defeasible warrants.",
+    "Majmu8:145–147 addressed predicate is positively supplied through own activity/fitting occasion; no renewed unanswered-predicate implication.",
+    "Dar10:147 inherited printed negation correction is correctly closed. The separate unused damaged clause does not reopen it.",
+    "Safadiyya opponent exemption, complete determinant, nonexercise/ability and same-act full demonstration limits are accurately stated. No universal creator/effect temporal simultaneity is asserted.",
+    "Expected-publicity and upper-link objections remain specifically open while positive responsive communicative appraisal is preserved.",
+    "Later HasE/HasJ closures are not overridden by the older failed normalisation map or historical ledger OPEN labels.",
+    "No generic formal validity, finite test, source attribution or repeated page image is promoted into actual-world warrant, independent historical testimony or human specialist endorsement.",
+    "Owner-case foundational paragraphs need no substantive repair and already use exact actual productively connected scope.",
+    "Intisar47 editorial emendation and274 comparative-clause tension remain in final chapter and image ledger. Main synthesis makes no premise-count reliability or universal self-knowledge claim that would require another corrective paragraph."
+  ],
+  "not_claimed": [
+    "global finite-corpus closure",
+    "owner acceptance",
+    "fresh underlying corpus or Arabic-book reading",
+    "new philosophical verdict",
+    "T21 activation"
+  ],
+  "root_prose_edited": false,
+  "applied_edit_readback": {
+    "utc": "2026-10-12T15:01:27.323707+00:00",
+    "target_sha256": "ce0ca586cb680e5ee21ea1a7b5e1e6243ebc0595f6c7bcfe8a7dfc2f62f149d0",
+    "read_scope": "The added final paragraph of6.5 read completely; exact6.2 replacement and6.4 pointer strings independently checked. No repeat full-document claim after root edit.",
+    "paragraph_sha256": "c01769ea58702a6715790d63ddafc7040dffab2e82679f73d890a4965a9d9541",
+    "status": "ACCEPTED_ALL_THREE_EDITS_AT_STATED_SCOPE",
+    "root_receipt": "FINAL_FOUNDATION_SCOPE_CORRECTION.json"
+  }
+}
