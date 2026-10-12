@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 510" role="img" aria-labelledby="title description">
+  <title id="title">Illustrative intra-agential architecture</title>
+  <desc id="description">Seven original labels and eleven directed edges, including three feedback arrows. The complete textual edge list is in the companion. This is not a claim about a uniquely correct psychology.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#415c72"/>
+    </marker>
+  </defs>
+  <rect width="920" height="510" fill="white"/>
+  <g fill="none" stroke="#415c72" stroke-width="2" marker-end="url(#arrow)">
+    <path id="edge-01" data-from="evidence" data-to="perception" d="M 210 237 L 300 110"/>
+    <path id="edge-02" data-from="evidence" data-to="source" d="M 210 252 L 300 252"/>
+    <path id="edge-03" data-from="evidence" data-to="memory" d="M 210 267 L 300 395"/>
+    <path id="edge-04" data-from="perception" data-to="coherence" d="M 510 110 L 670 235"/>
+    <path id="edge-05" data-from="source" data-to="coherence" d="M 510 252 L 670 252"/>
+    <path id="edge-06" data-from="memory" data-to="coherence" d="M 510 395 L 670 269"/>
+    <path id="edge-07" data-from="coherence" data-to="defeater" d="M 775 217 L 775 145"/>
+    <path id="edge-08" data-from="coherence" data-to="action" d="M 775 287 L 775 360"/>
+    <path id="edge-09" data-from="defeater" data-to="perception" d="M 670 95 C 595 18 450 18 405 75"/>
+    <path id="edge-10" data-from="defeater" data-to="source" d="M 670 125 C 585 135 600 220 510 237"/>
+    <path id="edge-11" data-from="action" data-to="memory" d="M 670 410 C 600 487 450 487 405 430"/>
+  </g>
+  <g fill="#f3f6f8" stroke="#415c72" stroke-width="1.5">
+    <rect x="25" y="217" width="185" height="70" rx="10"/>
+    <rect x="300" y="75" width="210" height="70" rx="10"/>
+    <rect x="300" y="217" width="210" height="70" rx="10"/>
+    <rect x="300" y="360" width="210" height="70" rx="10"/>
+    <rect x="670" y="75" width="210" height="70" rx="10"/>
+    <rect x="670" y="217" width="210" height="70" rx="10"/>
+    <rect x="670" y="360" width="210" height="70" rx="10"/>
+  </g>
+  <g fill="#182d3e" font-family="Georgia, 'Times New Roman', serif" font-size="21" text-anchor="middle">
+    <text id="node-evidence" x="117.5" y="246"><tspan x="117.5">evidentiary tuple</tspan> <tspan x="117.5" dy="25" font-style="italic">e</tspan></text>
+    <text id="node-perception" x="405" y="104"><tspan x="405">perception /</tspan> <tspan x="405" dy="25">material check</tspan></text>
+    <text id="node-source" x="405" y="259">source monitoring</text>
+    <text id="node-memory" x="405" y="389"><tspan x="405">memory /</tspan> <tspan x="405" dy="25">retention</tspan></text>
+    <text id="node-defeater" x="775" y="104"><tspan x="775">defeater</tspan> <tspan x="775" dy="25">recognition</tspan></text>
+    <text id="node-coherence" x="775" y="246"><tspan x="775">coherence /</tspan> <tspan x="775" dy="25">integration</tspan></text>
+    <text id="node-action" x="775" y="389"><tspan x="775">action /</tspan> <tspan x="775" dy="25">judgment policy</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,659 @@
+{
+  "schema": "epistemic-tuples-source-fidelity-v1",
+  "baseline_commit": "297267f6e49f80871036a95a6dfd81bdad40ea1f",
+  "scope": "Documentation fidelity only; no new scientific result, proof certification, T20 acceptance or T21 work.",
+  "original_pdf": {
+    "sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
+    "bytes": 263286,
+    "physical_pages": 18,
+    "distribution": "NOT_PUBLISHED",
+    "transcription_authority": true
+  },
+  "immutable_sources": [
+    {
+      "role": "full_extraction",
+      "path": "research/t20-v6-20261012/sources/a81201d5cb53b8c6d3d5eaf47abc704286f879cf78579421d6db6e0800fc5255/Epistemic_Tuples_and_Intra_Agential_Equilibrium.txt",
+      "sha256": "a81201d5cb53b8c6d3d5eaf47abc704286f879cf78579421d6db6e0800fc5255"
+    },
+    {
+      "role": "published_correction",
+      "path": "research/t20-v6-20261012/sources/c67c2fa0a538875a2bbbc0df51ad7877a6a701d11cb1567af4f250ff7c2724ad/research.md",
+      "sha256": "c67c2fa0a538875a2bbbc0df51ad7877a6a701d11cb1567af4f250ff7c2724ad"
+    }
+  ],
+  "publication_eligibility": {
+    "classification": "reviewed_owner_authored",
+    "basis": "Both original PDF and extracted text identities carry this classification in PUBLIC_PROJECTION_MANIFEST.json; the owner separately authorized this bounded companion. The PDF has a rendering qualification hold, which is retained. No general PDF redistribution permission is inferred.",
+    "projection_manifest": "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+    "content_scope": "Transcribed mathematical notation, original diagram labels/edges, L0-L7 table and limited contextual passages; new editorial navigation and provenance. No third-party source body or private archive is included."
+  },
+  "transformations": [
+    "Original PDF math is transcribed to TeX displays, preserving expressions and historical qualifications; spacing and display breaks are editorial.",
+    "Diagram is redrawn as an accessible SVG with unchanged labels and directed-edge relation; coordinates, curves, styling and geometry are new.",
+    "L0-L7 cells are transcribed with line-wrap hyphenation removed.",
+    "Section navigation, source page/line coordinates, and explicit editorial notes link the complete unchanged extraction and separate published correction.",
+    "New companion and SVG have their own identities; no byte identity with the input PDF or extraction is claimed."
+  ],
+  "formula_groups": [
+    {
+      "id": "F01",
+      "physical_page": 4,
+      "printed_page": 3,
+      "tex": [
+        "e=(e_1,e_2,\\ldots,e_k)\\in\\mathcal E\\subseteq\\mathbb R^k"
+      ]
+    },
+    {
+      "id": "F02",
+      "physical_page": 4,
+      "printed_page": 3,
+      "tex": [
+        "w(e)\\in\\mathbb R"
+      ]
+    },
+    {
+      "id": "F03",
+      "physical_page": 4,
+      "printed_page": 3,
+      "tex": [
+        "e=(p,t,i,s,d,c,\\ldots)"
+      ]
+    },
+    {
+      "id": "F04",
+      "physical_page": 5,
+      "printed_page": 4,
+      "tex": [
+        "e\\ge f\\quad\\text{nor}\\quad f\\ge e",
+        "e=(0.90,0.35,0.80),\\qquad f=(0.55,0.92,0.70)."
+      ]
+    },
+    {
+      "id": "F05",
+      "physical_page": 5,
+      "printed_page": 4,
+      "tex": [
+        "K\\subseteq\\mathbb R^k",
+        "x\\succeq_K y\\iff x-y\\in K",
+        "K=\\mathbb R_{\\ge0}^k"
+      ]
+    },
+    {
+      "id": "F06",
+      "physical_page": 5,
+      "printed_page": 4,
+      "tex": [
+        "U(e)=\\sum_{j=1}^k\\alpha_j e_j"
+      ]
+    },
+    {
+      "id": "F07",
+      "physical_page": 6,
+      "printed_page": 5,
+      "tex": [
+        "\\mathcal F=\\{F_1,F_2,\\ldots,F_n\\}",
+        "F_i(e,s_{-i})",
+        "F_i(e)."
+      ]
+    },
+    {
+      "id": "F08",
+      "physical_page": 7,
+      "printed_page": 6,
+      "tex": [
+        "S_i=\\{s_i^1,\\ldots,s_i^{m_i}\\}"
+      ]
+    },
+    {
+      "id": "F09",
+      "physical_page": 7,
+      "printed_page": 6,
+      "tex": [
+        "F_i\\leftrightarrow\\text{player }i,\\qquad S_i\\leftrightarrow\\text{strategy set of }i",
+        "s=(s_1,\\ldots,s_n)\\in S_1\\times\\cdots\\times S_n"
+      ]
+    },
+    {
+      "id": "F10",
+      "physical_page": 7,
+      "printed_page": 6,
+      "tex": [
+        "\\Delta(S_i)=\\left\\{p_i\\in\\mathbb R_{\\ge0}^{m_i}:\\sum_{j=1}^{m_i}p_{ij}=1\\right\\}"
+      ]
+    },
+    {
+      "id": "F11",
+      "physical_page": 7,
+      "printed_page": 6,
+      "tex": [
+        "\\Sigma=\\prod_{i=1}^{n}\\Delta(S_i)"
+      ]
+    },
+    {
+      "id": "F12",
+      "physical_page": 8,
+      "printed_page": 7,
+      "tex": [
+        "u_i:S_1\\times\\cdots\\times S_n\\to\\mathbb R"
+      ]
+    },
+    {
+      "id": "F13",
+      "physical_page": 8,
+      "printed_page": 7,
+      "tex": [
+        "\\sigma^*\\in\\Sigma",
+        "u_i(\\sigma_i^*,\\sigma_{-i}^*)\\ge u_i(\\sigma_i,\\sigma_{-i}^*)"
+      ]
+    },
+    {
+      "id": "F14",
+      "physical_page": 9,
+      "printed_page": 8,
+      "tex": [
+        "\\text{equilibrium existence}\\ne\\text{correct scalar weighting}\\ne\\text{historical truth}"
+      ]
+    },
+    {
+      "id": "F15",
+      "physical_page": 9,
+      "printed_page": 8,
+      "tex": [
+        "U_i(s)\\in\\mathbb R^k",
+        "K_i\\subseteq\\mathbb R^k",
+        "x-y\\in K_i"
+      ]
+    },
+    {
+      "id": "F16",
+      "physical_page": 9,
+      "printed_page": 8,
+      "tex": [
+        "U_i(\\sigma_i^{\\prime},\\sigma_{-i}^*)-U_i(\\sigma^*)\\notin K_i\\setminus\\{0\\}."
+      ]
+    },
+    {
+      "id": "F17",
+      "physical_page": 10,
+      "printed_page": 9,
+      "tex": [
+        "\\max_{\\sigma\\in\\Sigma}W(\\sigma)"
+      ]
+    },
+    {
+      "id": "F18",
+      "physical_page": 10,
+      "printed_page": 9,
+      "tex": [
+        "\\max_{x\\in X}f(x)\\quad\\text{subject to}\\quad g_j(x)\\le0"
+      ]
+    },
+    {
+      "id": "F19",
+      "physical_page": 10,
+      "printed_page": 9,
+      "tex": [
+        "e\\to F_1(e)\\to F_2(F_1(e))\\to\\cdots\\to B"
+      ]
+    },
+    {
+      "id": "F20",
+      "physical_page": 10,
+      "printed_page": 9,
+      "tex": [
+        "e=(T,P,I,S,D,C)"
+      ]
+    },
+    {
+      "id": "F21",
+      "physical_page": 11,
+      "printed_page": 10,
+      "tex": [
+        "h=(0.88,0.56,0.61,0.94,0.73,0.81)",
+        "r=(0.72,0.96,0.90,0.42,0.84,0.77)"
+      ]
+    },
+    {
+      "id": "F22",
+      "physical_page": 11,
+      "printed_page": 10,
+      "tex": [
+        "W(e)=.15T+.30P+.20I+.10S+.15D+.10C"
+      ]
+    },
+    {
+      "id": "F23",
+      "physical_page": 14,
+      "printed_page": 13,
+      "tex": [
+        "\\begin{gathered}\n\\text{rational belief regulation}\\approx{}\\\\\n\\text{stable coordination among differentiated epistemic functions}\n\\end{gathered}"
+      ]
+    },
+    {
+      "id": "F24",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "e\\in\\mathcal E\\subseteq\\mathbb R^k",
+        "\\mathcal F=\\{F_1,\\ldots,F_n\\}"
+      ]
+    },
+    {
+      "id": "F25",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "S_i=\\{s_i^1,\\ldots,s_i^{m_i}\\}"
+      ]
+    },
+    {
+      "id": "F26",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "\\sigma_i\\in\\Delta(S_i),\\qquad\\sigma\\in\\prod_i\\Delta(S_i)"
+      ]
+    },
+    {
+      "id": "F27",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "O_i=G_i(e,\\sigma_i,\\sigma_{-i})"
+      ]
+    },
+    {
+      "id": "F28",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "u_i(O_i)\\in\\mathbb R",
+        "u_i(\\sigma_i^*,\\sigma_{-i}^*)\\ge u_i(\\sigma_i,\\sigma_{-i}^*)"
+      ]
+    },
+    {
+      "id": "F29",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "U_i(O_i)\\in\\mathbb R^q"
+      ]
+    },
+    {
+      "id": "F30",
+      "physical_page": 16,
+      "printed_page": 15,
+      "tex": [
+        "\\operatorname*{arg\\,max}_{\\sigma\\in\\Sigma}W(e,\\sigma)"
+      ]
+    }
+  ],
+  "diagram": {
+    "physical_page": 6,
+    "printed_page": 5,
+    "labels": {
+      "evidence": "evidentiary tuple e",
+      "perception": "perception / material check",
+      "source": "source monitoring",
+      "memory": "memory / retention",
+      "defeater": "defeater recognition",
+      "coherence": "coherence / integration",
+      "action": "action / judgment policy"
+    },
+    "directed_edges": [
+      [
+        "evidence",
+        "perception"
+      ],
+      [
+        "evidence",
+        "source"
+      ],
+      [
+        "evidence",
+        "memory"
+      ],
+      [
+        "perception",
+        "coherence"
+      ],
+      [
+        "source",
+        "coherence"
+      ],
+      [
+        "memory",
+        "coherence"
+      ],
+      [
+        "coherence",
+        "defeater"
+      ],
+      [
+        "coherence",
+        "action"
+      ],
+      [
+        "defeater",
+        "perception"
+      ],
+      [
+        "defeater",
+        "source"
+      ],
+      [
+        "action",
+        "memory"
+      ]
+    ],
+    "feedback_edge_numbers": [
+      9,
+      10,
+      11
+    ]
+  },
+  "hierarchy": {
+    "physical_page": 12,
+    "printed_page": 11,
+    "columns": [
+      "Level",
+      "Added structure",
+      "What follows"
+    ],
+    "rows": [
+      [
+        "L0",
+        "Heterogeneous evidence represented by tuples",
+        "Multiple dimensions remain visible; total ranking is not assumed."
+      ],
+      [
+        "L1",
+        "A partial order or admissible improvement relation",
+        "Dominance and incomparability become formally expressible."
+      ],
+      [
+        "L2",
+        "Faculty-mediated apprehension",
+        "The tuples are situated within endogenous cognitive operations."
+      ],
+      [
+        "L3",
+        "Mutually conditioning functional loci with admissible response sets",
+        "An intra-agential strategic interaction can be encoded."
+      ],
+      [
+        "L4",
+        "Finite response sets and meaningful mixtures",
+        "A compact convex product of mixed response simplices is available."
+      ],
+      [
+        "L5",
+        "Real-valued Nash-representable utilities",
+        "The structure is a finite normal-form game; a mixed Nash equilibrium exists."
+      ],
+      [
+        "L6",
+        "Vector-valued utilities with cone/partial orders",
+        "A vector or Pareto equilibrium notion may be used instead of scalar Nash."
+      ],
+      [
+        "L7",
+        "Shared objective or hard constraints",
+        "Team optimisation or constrained optimisation may supersede non-cooperative equilibrium."
+      ]
+    ]
+  },
+  "checklist_corrections": [
+    {
+      "group": "F01",
+      "detail": "Original PDF uses calligraphic E (\\mathcal E); plain E in supplied checklist is not followed."
+    },
+    {
+      "group": "F24",
+      "detail": "Original PDF uses calligraphic E (\\mathcal E); plain E in supplied checklist is not followed."
+    }
+  ],
+  "inherited_binary_coverage": {
+    "evidence_ledger_sha256": "3961c7a4108dc928e4df7822d658f66c4de14bb419668467c4c22d72075c2ecd",
+    "reviewed_main": "297267f6e49f80871036a95a6dfd81bdad40ea1f",
+    "authority": "Inherited independent binary-comparison findings supplied by the owner; the other 24 original binaries are not re-reviewed in this repair.",
+    "summary": {
+      "documents": 25,
+      "duplicate_render": 18,
+      "distinct_historical_expression_substantively_covered": 6,
+      "source_reading_fidelity_repair": 1,
+      "unique_unpublished_scientific_results_found": 0,
+      "genuinely_unreadable": 0
+    },
+    "documents": [
+      {
+        "index": 1,
+        "filename": "daee_epistemics_research_review.docx",
+        "original_binary_sha256": "197c5e17feeeae9ff4b4e2fd9094a1339c8129336b4c0a5d81fea71aed6e795f",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 2,
+        "filename": "Orthemology_Sixteenth_Research_Final_v1_20261005.docx",
+        "original_binary_sha256": "3d5263089763f124367a12c306af7fc5f246c0b9a316e1f36981130f0818dcc7",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "All 3 native equations verified structurally."
+      },
+      {
+        "index": 3,
+        "filename": "Orthemology_Twentieth_Source_Evidence_Guide_v2_20261007.docx",
+        "original_binary_sha256": "409d22c0cec230943e17e6a50ff05015bcb7d9d09c0c1ae0c37f090173923666",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 4,
+        "filename": "Orthemology_Nineteenth_Source_Evidence_Guide_Final_v1_20261006.docx",
+        "original_binary_sha256": "4364e1c90e8a213cde09fffb3766c5205f98b9f5c174aa447e1130114b93df91",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 5,
+        "filename": "Orthemology_T20_Updated_Owner_Review_20261008.pdf",
+        "original_binary_sha256": "44a5c789a941039cb40e4bb81512da432c917d021e36a1980b12100a47dbe005",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 6,
+        "filename": "Orthemology_T20_Updated_Owner_Review_20261008.docx",
+        "original_binary_sha256": "55f8693d966c4b996369ccfb2aa355960eb55407c73d337199c8ae2a8f350526",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 7,
+        "filename": "T20_Closure_Case_for_Owner_Review_20261008.docx",
+        "original_binary_sha256": "59348bd48456e25a56d6b22e7681cdbdcdbb31c8af70e667ba1833562f2d419d",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 8,
+        "filename": "Orthemology_Twentieth_Research_Final_v1_20261007.docx",
+        "original_binary_sha256": "5bf9786c480649ff254888e1f6c94bb7306c485f9acd7f485b65049c545ab38e",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 9,
+        "filename": "Orthemology_T20_Updated_Owner_Review_20261008.pdf",
+        "original_binary_sha256": "5ee11c7cfc9e9f9fc35360d32d2fbf6979dd5a25a026e23266711c39112ea085",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 10,
+        "filename": "Orthemology_Twentieth_Source_Evidence_Guide_v1_20261007.docx",
+        "original_binary_sha256": "6487a11eccf51ba547f9665a5fb94e0c1173db457cb711381c2abae7dfb76b53",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 11,
+        "filename": "Orthemology_Twentieth_Mathematical_Companion_v2.docx",
+        "original_binary_sha256": "64ac3dd33e250a5fc0527421bdeb67227be40962389028911f3f76471537e681",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "All 40 native equations verified; typesetting differences resolved visually."
+      },
+      {
+        "index": 12,
+        "filename": "Orthemology_T20_Updated_Owner_Review_20261008.pdf",
+        "original_binary_sha256": "7013fd0db9d083cc77a9560862db3964cd5d61270a9d68437b3f6c80d45cf66b",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 13,
+        "filename": "Orthemology_Seventeenth_Mathematical_Companion_Final_v1_20261005.docx",
+        "original_binary_sha256": "764c038e4cd2febb74c23e19c15cc86f6377c65f376964b3a33512a7ac83cf89",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "All 398 native equations verified against original structure and public mapping."
+      },
+      {
+        "index": 14,
+        "filename": "Orthemology_Twentieth_Research_Final_v2_20261007.docx",
+        "original_binary_sha256": "7b10f4433974c08971f892d8ab7781aaae561e9b52b8e5b5c050feff2fc36f2f",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 15,
+        "filename": "Orthemology_Seventeenth_Research_Final_v1_20261005.docx",
+        "original_binary_sha256": "8cd31636e50ea255b5b630a16ad08cd7c6f79020aaad92ee6cd8f39c04d66608",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 16,
+        "filename": "Orthemology_Nineteenth_Research_Final_v1_20261006.docx",
+        "original_binary_sha256": "8dc9742f58114a1c66aeaaf4cbc55774769a72b7d697fdb4709ca1a315534569",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 17,
+        "filename": "Orthemology_Eighteenth_Research_Final_v1_20261006.docx",
+        "original_binary_sha256": "99295d834b3e4f2a41c2f44395007a7465dc7c7f01f627e43f0da9bb8fdaa051",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 18,
+        "filename": "Orthemology_Sixteenth_Mathematical_Companion_Final_v1_20261005.docx",
+        "original_binary_sha256": "99f6eb226504f67526ce0935a89c9e817d9cb30dce898019960bc01aa470e460",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "All 1,594 native equations verified structurally, including semantic alphabets; every unresolved alignment delta checked visually."
+      },
+      {
+        "index": 19,
+        "filename": "Orthemology_Formal_Qualification_Audit.docx",
+        "original_binary_sha256": "9d49ff9148962ece39acd3241a21973763d5906cdf42d72c98f8088f9194af75",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 20,
+        "filename": "Orthemology_T20_Updated_Owner_Review_20261008.pdf",
+        "original_binary_sha256": "ac7a11a5662442a84d70e30718ab3de8824254729aaf479068abdca3a09b0634",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 21,
+        "filename": "Orthemology_Eighteenth_Source_and_Validation_Guide_Final_v1_20261006.docx",
+        "original_binary_sha256": "ba46d0a64972d88e0275d68d55474faaf51f27a08b07872b2e4d0e8a6f0539fc",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 22,
+        "filename": "Orthemology_Frontier_Research_Return.docx",
+        "original_binary_sha256": "cc625359ceeb770c5c0f9780042e803345af9fc79949ce3bcf721e0e97047850",
+        "disposition": "DISTINCT_HISTORICAL_EXPRESSION_SUBSTANTIVELY_COVERED",
+        "reader_text_coverage": "All inspected substantive assertions, corrections and limitations covered by full public reports; exact authored narrative/version not claimed equivalent.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      },
+      {
+        "index": 23,
+        "filename": "Epistemic_Tuples_and_Intra_Agential_Equilibrium.pdf",
+        "original_binary_sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
+        "disposition": "SOURCE_READING_FIDELITY_REPAIR",
+        "reader_text_coverage": "Complete substantive prose and scientific programme; mathematical displays and directed graph are not faithfully readable.",
+        "mathematics_and_visual_coverage": "All 30 displayed-expression groups and all 18 PDF pages inspected. Public text loses operators/index attachment and every edge of the 7-node/11-edge diagram. All L0-L7 table cells retained."
+      },
+      {
+        "index": 24,
+        "filename": "Orthemology_Eighteenth_Mathematical_Companion_Final_v1_20261006.docx",
+        "original_binary_sha256": "e1cacf4081f897cdd8eacea9fd8cc75274e4f6f3d90845a01082112b00242960",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "All 455 native equations verified against original structure and public mapping."
+      },
+      {
+        "index": 25,
+        "filename": "Arabic_Volume_Reading_Index_Final_v1_20261006.docx",
+        "original_binary_sha256": "f1c136b1ef3a83ba780a129ce047866b92f41192599722672e4ee6c516f8e708",
+        "disposition": "DUPLICATE_OR_RENDER_EQUIVALENT",
+        "reader_text_coverage": "Complete substantive ordered text and applicable mathematical structures covered; formatting and edition packaging differences resolved.",
+        "mathematics_and_visual_coverage": "No separate native equation or diagram content; complete narrative/table coverage as detailed."
+      }
+    ],
+    "current_repair": {
+      "document_index": 23,
+      "supplement": "README.md",
+      "original_disposition_retained": true,
+      "binary_publication_hold_retained": true
+    }
+  },
+  "fidelity_review": {
+    "status": "PASS_BOUNDED_SOURCE_FIDELITY",
+    "kind": "Independent read-only model source-fidelity review; not human-specialist review, theorem certification or scientific acceptance.",
+    "source_pdf_sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
+    "independent_review_receipt_sha256": "d5d3d41865b06ce784cc831da797218961920a08747e515382e959637181df0b",
+    "reviewed_candidate_record_sha256": "b380ee56d75fcafb3619e5d85f79642435c579e18706381bd0f02d059003c931",
+    "final_record_change": "Only this fidelity_review metadata block changes after candidate review; reviewed companion, SVG, formula inventory, source bindings and inherited coverage are unchanged.",
+    "original_comparison": "All 18 original PDF pages visually read; all 30 expression groups, seven diagram labels, eleven directed edges and L0-L7 table cells compared.",
+    "candidate_comparison": "All 30 groups and 42 native-rendered displays, seven visible labels, eleven visible arrow directions (including three feedbacks), every table cell, qualifications, sixteen full-source navigation anchors and both immutable source hashes checked.",
+    "resolved_findings": [
+      "F01 and F24 follow original calligraphic E rather than the checklist plain E.",
+      "Contextual F03 coordinate list restored to the original terms.",
+      "Contextual F11 mixture interpretations restored to the original terms.",
+      "F16 adjacent-prose quotation restored verbatim; historical formula and separate correction preserved."
+    ],
+    "render_method": "The exact 42 Markdown display bodies were compiled by the repository-pinned TeX Live image with networking and shell escape disabled, rendered from DVI to SVG and displayed with MarkdownIt/Edge. All 43 images loaded without browser errors or horizontal overflow; all affected display, diagram and table screenshots inspected. Private preview inline dollar notation was not rendered; GitHub rendering is a separate integration check.",
+    "scope_limit": "The other 24 originals were not reopened. Their findings remain inherited. No PDF is published and no mathematical conclusion or scientific status is changed."
+  },
+  "reviewed_artifacts": {
+    "README.md": "5ad328358495774a377a34cb077e6bd16b6c766433a9aea5e1db8d961e599e6a",
+    "architecture.svg": "f08e42c8754b05e59b619cbcf5db6574983e5cbdccbbf3bcdf4d0497df52769f"
+  }
+}

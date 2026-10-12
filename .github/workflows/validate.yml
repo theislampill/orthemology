@@ -29,6 +29,8 @@ jobs:
           python -B tests/test_t20_v6_projection.py
           python -B -O tests/test_t20_v6_projection.py
           python -B scripts/validate_t20_v6_projection.py
+      - name: Epistemic Tuples source-reading fidelity
+        run: python -B tests/test_epistemic_tuples_fidelity.py
       - name: Fable R1 claim-language and source-relation gates
         run: python scripts/validate_fable_r1_claim_language.py
       - name: AR8R V8 recovery provenance and payload hashes
