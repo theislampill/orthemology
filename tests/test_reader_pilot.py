@@ -254,5 +254,30 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(before, after)
 
 
+    def test_discovery_owner_drift_is_detected_from_pinned_git(self):
+        p = self.repo / "research/new/README.md"
+        before = p.read_bytes()
+        p.write_bytes(before + b"Altered collection scope.\n")
+        self.assertNotEqual(p.read_bytes(), before)
+        self.reject(self.check(), "owner")
+
+    def test_duplicate_json_field_is_not_silently_replaced(self):
+        with self.assertRaises(ValueError):
+            json.loads('{"scope":"pilot","scope":"complete"}',
+                       object_pairs_hook=self.mod.unique_object)
+
+
+
+    def test_wrong_recorded_baseline_tree_is_rejected(self):
+        altered = deepcopy(self.owners)
+        altered["baseline"]["tree"] = "0" * 40
+        self.reject(self.check(owners=altered), "baseline")
+
+    def test_wrong_recorded_group_count_is_rejected(self):
+        altered = deepcopy(self.owners)
+        altered["collections"][0]["candidate_paths"] = 999
+        self.reject(self.check(owners=altered), "owner-count")
+
+
 if __name__ == "__main__":
     unittest.main()
