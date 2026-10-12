@@ -20,8 +20,17 @@ If a separate reviewer rejects this design, revise the small sample before exten
 | `docs/reader/CURRENT-FRONTIERS.md` | Source-bound sample of unresolved questions and already advanced historical frontiers. |
 | `docs/reader/APPLICATIONS.md` | Explain the sample's uses and required interpretation, not inferred human-cognition validation. |
 | `docs/reader/VERIFICATION-GUIDE.md` | Inspection/replay routes and editing ownership; commands and claims must match available tools. |
+| `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml` | Add only the missing Issue-35 candidate-record classification required by the existing review-state gate; preserve all prior rules and vocabulary. |
 
-These paths extend the existing allowlist only for this sample. Scientific payloads, original proof code, historical reviews, governed PDFs and permanent CI remain protected.
+These paths extend the existing allowlist only for this sample and its necessary integration. Scientific payloads, original proof code, historical reviews, governed PDFs and permanent CI remain protected.
+
+## Observed integration defect and repair
+
+The original PR checkpoint's full CI run `38316950544` completed with failure at the existing review-state gate; later checks were skipped. It had passed provisioning and earlier checks, but was not full-CI success. Local reproduction identified the actual defect: the new files under the Issue-35 closure directory had no classification in the historical-status index.
+
+The bounded repair adds that exact directory prefix with the existing `current-candidate` status and a note excluding independent sign-off, complete corpus coverage, merged current state and scientific acceptance. It does not alter the review-state validator, a historical body, any previous classification or the global review-state wording.
+
+Observed local control: the original index fails; the added rule passes; removing only that rule reproduces the same classification failure; restoring it passes. These are Python 3.13.5 author-environment observations, not the eventual pinned-interpreter full CI result. The failing earlier run remains in history.
 
 ## Qualification to record
 
