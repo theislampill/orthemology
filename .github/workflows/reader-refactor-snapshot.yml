@@ -1,0 +1,64 @@
+name: reader-refactor-snapshot
+
+# Temporary issue-35 transport, not a verification gate. Remove before final
+# qualification unless separately justified. Only public tracked Git objects
+# are exported; credentials, .git/config, runner environment and caches are not.
+on:
+  push:
+    branches:
+      - refactor/issue-35-research-reader-20261012
+    paths:
+      - .github/workflows/reader-refactor-snapshot.yml
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ github.sha }}
+      - name: Export exact public baseline and checkpoint delta
+        shell: bash
+        env:
+          SNAPSHOT_DIR: ${{ runner.temp }}/reader-refactor-snapshot
+        run: |
+          set -euo pipefail
+          base=297267f6e49f80871036a95a6dfd81bdad40ea1f
+          expected_tree=fc702fe8456b48ff89b0c28df31f5fe232058538
+          test "$(git rev-parse "$base^{tree}")" = "$expected_tree"
+          git merge-base --is-ancestor "$base" HEAD
+          mkdir -p "$SNAPSHOT_DIR/commits"
+          git archive --format=tar.gz "$base" > "$SNAPSHOT_DIR/baseline.tar.gz"
+          git diff --binary "$base" HEAD > "$SNAPSHOT_DIR/checkpoint.patch"
+          git ls-tree -r -l -z "$base" > "$SNAPSHOT_DIR/baseline-tree.z"
+          git rev-parse HEAD > "$SNAPSHOT_DIR/head.txt"
+          git rev-parse 'HEAD^{tree}' > "$SNAPSHOT_DIR/head-tree.txt"
+          printf '%s\n' "$base" > "$SNAPSHOT_DIR/base.txt"
+          printf '%s\n' "$expected_tree" > "$SNAPSHOT_DIR/base-tree.txt"
+          { printf '%s\n' "$base"; git rev-list --reverse "$base..HEAD"; } |
+            while IFS= read -r commit; do
+              git cat-file commit "$commit" > "$SNAPSHOT_DIR/commits/$commit"
+            done
+          (
+            cd "$SNAPSHOT_DIR"
+            find . -type f ! -name SHA256SUMS -print0 |
+              LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS
+          )
+          printf 'Public snapshot only; no research tests or curation credit.\n'
+          printf 'Baseline: %s\n' "$base"
+          printf 'Checkpoint: %s\n' "$(git rev-parse HEAD)"
+          printf 'Tracked baseline entries: %s\n' "$(git ls-tree -r --name-only "$base" | wc -l)"
+      - name: Retain source transport
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: reader-refactor-baseline-${{ github.sha }}
+          path: ${{ runner.temp }}/reader-refactor-snapshot/
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0
