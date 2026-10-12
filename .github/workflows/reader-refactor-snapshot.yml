@@ -1,0 +1,48 @@
+name: issue-35-recovery-03
+
+# Temporary recovery transport within the existing Issue 35 allowlist.
+# Exports public Git objects only. No write token, secrets, caches or environment.
+# Remove this workflow before the next qualified checkpoint.
+on:
+  push:
+    branches: [refactor/issue-35-research-reader-20261012]
+    paths: [.github/workflows/reader-refactor-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  recover:
+    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Export the exact saved pre-recovery checkpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=297267f6e49f80871036a95a6dfd81bdad40ea1f
+          target=a3290bb16d68e3b8c6f5764e83f8679001bf4e81
+          test "$(git rev-parse "$base^{tree}")" = fc702fe8456b48ff89b0c28df31f5fe232058538
+          test "$(git rev-parse "$target^{tree}")" = 355b080ae21e186272e08de849a2c2840777d647
+          git merge-base --is-ancestor "$base" "$target"
+          out="$RUNNER_TEMP/issue35-recovery-03"
+          mkdir -p "$out/commits"
+          printf '%s\n' "$base" > "$out/base.txt"
+          printf '%s\n' "$target" > "$out/head.txt"
+          git rev-parse "$target^{tree}" > "$out/head-tree.txt"
+          git diff --binary "$base" "$target" > "$out/checkpoint.patch"
+          git rev-list --reverse "$base..$target" | while IFS= read -r commit; do
+            git cat-file commit "$commit" > "$out/commits/$commit"
+          done
+          git cat-file commit "$base" > "$out/commits/$base"
+          git ls-tree -r -z "$target" > "$out/head-tree.z"
+          (cd "$out"; find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS)
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: issue35-recovery-03-a3290bb1
+          path: ${{ runner.temp }}/issue35-recovery-03/
+          retention-days: 14
+          if-no-files-found: error
