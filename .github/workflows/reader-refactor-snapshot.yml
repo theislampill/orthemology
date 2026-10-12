@@ -24,9 +24,13 @@ jobs:
     timeout-minutes: 20
     env:
       TARGET_BRANCH: refactor/issue-35-research-reader-20261012
-      BASE: 297267f6e49f80871036a95a6dfd81f5e232058538
-      EVIDENCE_DIR: ${{ runner.temp }}/issue-35-checkpoint
     steps:
+      - name: Initialise runner-local evidence destination
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/issue-35-checkpoint/commits"
+          printf 'EVIDENCE_DIR=%s/issue-35-checkpoint\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
@@ -47,7 +51,6 @@ jobs:
           test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
           git merge-base --is-ancestor "$base" HEAD
           test -z "$(git status --porcelain)"
-          mkdir -p "$EVIDENCE_DIR/commits"
           python - <<'PY'
           import subprocess
           base = '297267f6e49f80871036a95a6dfd81bdad40ea1f'
