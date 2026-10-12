@@ -1,0 +1,46 @@
+PASS common reverse recovers p
+PASS common reverse recovers q
+PASS common reverse recovers mu
+PASS fine half-Brier regret
+PASS reset coarse half-Brier regret
+PASS transported coarse weighted regret
+PASS standard Brier regrets also differ
+PASS fine absolute expected half-Brier score
+PASS coarse reset absolute expected half-Brier score
+PASS fine Bayes half-Brier score
+PASS coarse reset Bayes half-Brier score
+PASS coarse transported absolute expected weighted score
+PASS pair-divergence equality is not absolute score equality
+PASS unequal-reference fine energy
+PASS unequal-reference coarse energy
+PASS two-law sufficiency alone does not force weighted equality
+PASS reference recovery fails under the declared reverse
+PASS deterministic canonical mobility equality
+PASS noisy projected velocity
+PASS noisy canonical velocity
+PASS noisy mobility defect
+PASS invertibility alone does not imply stochastic recoverability
+PASS same-mass normalization commutes
+PASS quotient mobility exact rank
+PASS minimum-energy lift is fine tangent
+PASS minimum-energy lift is feasible
+PASS null perturbation is tangent
+PASS null perturbation has zero output
+PASS least-energy lift is orthogonal to fibre kernel
+PASS least energy is pseudoinverse form
+PASS quotient energy exact value
+PASS all feasible lifts obey Pythagoras
+PASS unreachable direction is annihilated
+PASS unreachable direction is outside image
+PASS quotient energy independent of nonorthogonal coordinates
+PASS least lift independent of nonorthogonal coordinates
+PASS quartic densities positive
+PASS quartic p coherent
+PASS quartic q coherent
+PASS quartic contraction counterexample gap
+PASS arbitrary weighted Bregman contraction is false
+PASS canonical linear objective reaches boundary at finite time
+PASS variance defect polynomial identity
+PASS defect annihilates constants
+PASS defect trace is sum of column impurity
+ALL 45 EXACT INDEPENDENT CONTROLS PASSED

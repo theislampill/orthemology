@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "date": "2026-10-10",
+  "scope": "Finite prescribed horizon; fixed coercive SOS H>=1; common finite-basis continuous polynomial coefficients; SOS CH\u2212b_t\u00b7\u2207H and V_t+D\u2212\u03baH; normalized full-square-positive C1 all-polynomial path.",
+  "author_result_sha256": "5ccaf69ac4c3b5b74471bdea10be494482bfd121c05233a8bc67810bdf0bbf56",
+  "author_manifest_sha256": "7d5818a87e798dae073455ff499b03e5c0d0796e98e2a655b07376db19d888e4",
+  "author_checks_replayed": 84,
+  "independent_checks": 56,
+  "review_files": {
+    "REVIEW.md": "04a4223bc4666a986b8c3a3c085913715a4a02ea7adb47b92dfbe5fd764f5930",
+    "AUTHOR_SNAPSHOT_BINDINGS.json": "907539cabc7140bbe05f036e8d9b5d16a1baf1f2a2d75071ed7f45f346acb211",
+    "ORIGINAL_SOURCE_BINDINGS.json": "cbc1292c46a2738a6e39436ba4d42afef72c710124e92f3ebc335d14eb5ebb2d",
+    "check_independent.py": "d2719d5f4f7ef6da483352302d01502f4d7600a1fff11f8a7047e5d8275d74a6",
+    "INDEPENDENT_RESULTS.json": "9f71aab449dfdf9991e7005576aa87baa574a51bf6c9efad50eb41c2fd7b56d0",
+    "replay_review.py": "728afb78743f6d2fbfcdc2a87d5aecfbc321f4122592ea12e96ee0c1308d3b1f",
+    "verify_review.py": "2623b231bed2c580bfbde2bf2db832e281a359c8a15bd0e78f0001f29e982c0d",
+    "REPLAY_RESULTS.json": "43cee1bd288312e8cf093378758bf031001df125c62aa6fc988737f4e1299274",
+    "author-replay.log": "cb571ac27454920cf9fef3471abbf8ca7da96e1c9fdd6609df231e593e47aa2a",
+    "independent-replay.log": "e94f00ef6cba611af6ab401801651cabae2931aee20ce5c35e3afce6026b8bf3"
+  },
+  "findings": {
+    "blocking": 0,
+    "qualified_acceptance": false,
+    "frozen_author_files_unchanged": 26,
+    "original_and_copied_source_files_unchanged": 15,
+    "continuous_only_regularity_control_passed": true
+  },
+  "nonclaims": [
+    "Formal kernel verification",
+    "Protected integration",
+    "Pure-killing moving quadratic novelty",
+    "Unspecified future schedule continuation",
+    "Arbitrary adaptive policy",
+    "Energy monotonicity for moving objectives",
+    "T20 closure"
+  ]
+}

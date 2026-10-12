@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "runtime": "3.12.14",
+  "seconds": 16.0719,
+  "counts": {
+    "unkeyed_words": 21845,
+    "unkeyed_direct_cases": 196605,
+    "unkeyed_binary_splits": 167481,
+    "unkeyed_triple_parenthesisations": 26093,
+    "keyed_words": 9331,
+    "keyed_direct_cases": 83979,
+    "keyed_binary_splits": 54121,
+    "interval_menu_cost_demand_cases": 50796,
+    "all_boolean_menu_adaptive_cover_cases": 414
+  },
+  "limits": {
+    "unkeyed_max_word_length": 7,
+    "unkeyed_entry_depths": [
+      1,
+      9
+    ],
+    "keyed_max_word_length": 5,
+    "keyed_entry_stacks": 9,
+    "interval_max_origins": 4,
+    "adaptive_max_origins": 3
+  },
+  "scope": "Bounded synthetic exhaustive controls, not a universal proof or source-world validation."
+}
+
+exit_code=0

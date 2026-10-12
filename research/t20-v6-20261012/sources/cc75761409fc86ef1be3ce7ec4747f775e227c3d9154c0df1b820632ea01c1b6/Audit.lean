@@ -1,0 +1,37 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import GenericQueryReference
+import PolicyRowLaw
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+
+#check Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_normalized
+#check Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMass_coordinate
+#check Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_coordinate
+#check Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowMeasure_full_support
+#check Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#print axioms Orthemology.Tranche2.PolicyEmbedding.rowOracle_finite_prefix_positive
+#check Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_preserves_seed
+#check Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_inside_row_independent
+#check Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_outside_coordinate_only
+#check Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_counter_eq_outside_actions
+#check Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.query_measurable
+#check Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#print axioms Orthemology.Tranche2.PolicyEmbedding.step_measurable
+#check Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_length
+#check Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_eq_observedHistory
+#check Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.observedHistory_fiber
+#check Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber
+#print axioms Orthemology.Tranche2.PolicyEmbedding.policyRun_transcript_fiber

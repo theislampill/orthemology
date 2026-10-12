@@ -1,0 +1,14 @@
+test_another_institution_same_named_holder_cannot_inherit_attestation (test_models.Models.test_another_institution_same_named_holder_cannot_inherit_attestation) ... FAIL
+
+======================================================================
+FAIL: test_another_institution_same_named_holder_cannot_inherit_attestation (test_models.Models.test_another_institution_same_named_holder_cannot_inherit_attestation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:91486cbda07423ca05e7", line 80, in test_another_institution_same_named_holder_cannot_inherit_attestation
+    self.assertIsNone(m.prospective_owner(o, rule, {rule.rule_event: rule}, other, other_endpoint))
+AssertionError: 'Principal' is not None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (failures=1)

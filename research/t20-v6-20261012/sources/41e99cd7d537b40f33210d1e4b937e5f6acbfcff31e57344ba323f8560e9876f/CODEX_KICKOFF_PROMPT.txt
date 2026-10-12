@@ -1,0 +1,13 @@
+Integrate the attached Orthemology T20 consolidated research package as one bounded PR. Do not merge.
+
+Start with public_candidate/CODEX_START_HERE.md and the package validation/apply instructions. The pinned adopted baseline is theislampill/orthemology main at 7efc6217c090b92d65f2c4cb8b011c18eb96bf7c. Verify the current remote state before changing anything. If main has moved, assess the exact relevant drift; do not force an old baseline, overwrite changes or re-integrate CP01–23/S01.
+
+The package supplies the consolidated reader, foundational crosswalk, current claim/correction records and later source/proof/code artefacts. Use its explicit source-to-destination map. Preserve isolated Lean suites, original/public hash distinctions, negative results, qualifications and inherited-versus-fresh statuses.
+
+Your task is repository integration and its acceptance checks, not reconstruction of the research from every archive. Do not repeat whole-corpus literature review or rebuild unchanged historical suites merely because a new package has arrived. Run the package verifier, its declared portable tests, affected repository gates and any genuinely required dependent checks. If an expected check cannot run, record its exact obstruction; do not convert an inherited receipt into a fresh PASS.
+
+Apply only the declared public payload and the narrow navigation/derived-state changes required by existing repository conventions. Keep private custody, raw archives, transcripts, signed links and delivery metadata outside Git. Do not modify philosophical appraisals, historical results, protected manuscript content or validation policy to make integration pass.
+
+Preserve T20 research acceptance, repository adoption and T21 initiation as separate decisions. This PR does not start T21 or authorise a DAEE patch.
+
+Return the PR URL, final head commit, changed-scope summary, validation commands/results, explicit unrun checks and remaining owner decisions. Stop after the PR and its integration verification; do not open another research campaign.

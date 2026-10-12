@@ -1,0 +1,3 @@
+# Third-party source notices
+
+The copied LocalFintypeProd and CodecDeriveEncodable source bodies are unchanged pinned Mathlib files. PolyCertificateEncoding is explicitly identified as an adaptation in its source header. Original copyright and attribution headers remain intact. The exact [Apache 2.0 licence](../../PUBLIC_BOUNDARIES.md#recovered-reference-137) is included. [THIRD_PARTY_ATTRIBUTION](../../PUBLIC_BOUNDARIES.md#recovered-reference-138) lists each actual copy and upstream owner. The original constructive packet notice is preserved separately; its internal locators describe that original packet. No new licence is asserted for other research.

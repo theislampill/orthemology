@@ -1,0 +1,15 @@
+# P02 attempt-0002 continuation boundary
+
+The accepted predecessor is preserved byte-for-byte at `predecessor/Orthemology_P02_Measure_Research_Checkpoint_20260922.zip`: 4,192,393 bytes, SHA-256 `365d6e27c953102aba2f1749286ff731e0b1b50bf15c2a4cc9ed576eeb02bfc9`, 693 members. Its original statuses and contents are not edited. The exact original packet remains embedded within that archive. There is no reconstruction from conversational prose.
+
+Fresh predecessor validation covers both manifests and receipts, detached receipt hashes, complete nested packet membership, exact source selectors, all 539 source SHA/Git-blob bindings and 54 accepted-evidence projections. These are integrity and source-binding checks, not a replay of old proof/test populations or a requalification of main.
+
+The 24 named predecessor result families are classified in `PREDECESSOR_CLASSIFICATION.json`. Mathematical assertions, concrete computations, candidate source and actual historical kernel evidence remain separate. The old 46,656-machine census and parity census are retained without rerunning them. Eleven predecessor theorem candidates are copied without alteration to the new research formal project; they remain unexecuted here.
+
+The original CV-R statement already included the extinction residual J. No source-status repair from a supposedly residual-free original is claimed. Countermodels refute explicitly stated stronger extrapolations, not an invented version of the accepted theorem. Finite-state decision procedures do not decide general productive-observer defect. Existence of a fixed point does not provide iteration convergence or an effective sampler.
+
+The new P02-L1 byte grammar and compilers are a separately specified representation. They supersede attempt-0001's unimplemented syntax *proposal* as this attempt's concrete research interface, without asserting identical old indices or recovered history. The T300 half-mixture is still a new scoped witness, not recovered historical weights. New real/measure/probability constructions are proposals at their explicit hypotheses, not canonical definitions adopted by assertion.
+
+Canonical boundary is inherited unchanged: main `03e2604dfcef278b01c60d19b05370fcec4194b6`, tree `3d06e80277ce39286c94307e0f14b215bc94ed83`, PR #28 merged, no Integration DAG cells. No authoritative repository file, branch, receipt, source status or package has been changed. Mapped-native 4.19.0 and separately scoped 4.32.2 accepted evidence remains historical input, not evidence that these new modules compile. The original strict-wrapper FAIL is preserved as genuine failure, not renamed missing-tool.
+
+A proof in the ordinary mathematical reports is not a kernel proof. Static Lean declaration counts are not successful declarations. ResourceLimit is not a semantic zero result. Synthetic audit-gate fixtures are not real Lean readbacks. A fresh independent archive-reopen process is not independent specialist review. No external custody, owner adoption, publication, licence decision, registration, contact, empirical authority or novelty credit is granted.

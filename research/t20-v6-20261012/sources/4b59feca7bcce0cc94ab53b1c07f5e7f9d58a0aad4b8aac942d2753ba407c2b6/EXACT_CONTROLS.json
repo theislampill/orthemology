@@ -1,0 +1,16 @@
+{
+  "exact_assertions": 931318,
+  "formal_complexity_credit": false,
+  "global_path_law_credit": false,
+  "honest_index_pairs": 28800,
+  "kernel_rows": 100800,
+  "negative_controls": {
+    "invalid_copy_receipt_not_preserved": true,
+    "known_boot_hidden_selection_not_pd": true,
+    "out_of_bounds_acceptance_must_reject": true,
+    "revealed_initial_label_not_common": true,
+    "suppressed_branch_receipt_not_pd": true,
+    "unchecked_false_read_can_survive": true
+  },
+  "status": "PASS_INDEPENDENT_LOCAL_CONTROLS"
+}

@@ -1,0 +1,29 @@
+Bounded integrity verification only; no historical-time certification or metaphysical closure.
+
+t20-next-frontier-20261008/wise-determination/REPORT.md: OK
+t20-next-frontier-20261008/wise-determination/SOURCE_READS.json: OK
+t20-next-frontier-20261008/modal-psr-bridge/RESULT.md: OK
+t20-next-frontier-20261008/modal-psr-bridge/LCA_ORIGIN_ACQUISITION.json: OK
+t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.txt: OK
+t20-next-frontier-20261008/wise-determination/sources/majmu8-item805.html: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item960.txt: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item960.html: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.txt: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item961.html: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.txt: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item962.html: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item963.txt: OK
+t20-next-frontier-20261008/wise-determination/sources/bayan5-item963.html: OK
+t20-next-frontier-20261008/bearer-eligibility/sources/majmu-item591.txt: OK
+t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.html: OK
+t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-origin.txt: OK
+t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-libertarian-continuous.txt: OK
+t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-contrastive-continuous.txt: OK
+t20-next-frontier-20261008/modal-psr-bridge/sources/pruss-lca-taxicab-continuous.txt: OK
+Libertarian origin slice 1710–1853: exact match
+Contrastive origin slice 1953–2073: exact match
+Taxicab origin slice 3538–3585: exact match
+
+New report and source-binding hashes:
+fc29f0403f42aec87c48455d7b078b4653dd13736fa7895c65d1060bd77e2080  t20-next-frontier-20261008/particular-reasons-comparison/RESULT.md
+10f49803cd5cc3f5a9cbce542e75f2603cae9053d73a229438c8669be9b61c8e  t20-next-frontier-20261008/particular-reasons-comparison/SOURCE_BINDINGS.md

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "finite_caps": 709,
+  "stationary_split_witnesses": 2130,
+  "dyadic_prefix_tail_controls": 32,
+  "C2_strict_contraction_cap": "(9/10,9/10,1/5)",
+  "C2_strict_coefficient": "9/10",
+  "scope": "Finite exact rational controls, not a proof of general subset-sum computability or effective maximizing-partition choice."
+}

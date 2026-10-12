@@ -1,0 +1,16 @@
+# Proposed only; not applied. Each exact path and hash is inventoried in EXACT_SOURCE_WHITESPACE.json.
+# Existing baseline uses scoped exact-source -text/whitespace attributes; these entries require integration review.
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/RuleBounds.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/RuleImageRule.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/diagnostics/generator-replay-mzaxfwlp/RuleBounds.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/diagnostics/generator-replay-mzaxfwlp/RuleImageRule.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/diagnostics/generator-replay-vvxngbew/RuleBounds.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-code-validity-20261010/diagnostics/generator-replay-vvxngbew/RuleImageRule.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-domain-independent-review-20261010/generator-review-52smzdz8/RuleBounds.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-certificate-domain-independent-review-20261010/generator-review-52smzdz8/RuleImageRule.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/effective-source/Effective_Source_Presentation_Evidence_20261010/hase-joint-certificate-checker-20261010/CertificateRules.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/rational-hase-j/rational-kernel-additive-preservation-20261011/payload/hase-imported-compiler-transport-20261010/sources/EffectiveStandardness.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/proof-families/rational-hase-j/rational-kernel-additive-preservation-20261011/payload/hase-induction-rigidity-converse-20261010/InductionRigidityConverse.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/sources/38d6d7eab3f9453d/FullESigmaBoundary.lean -text whitespace=-trailing-space
+research/t20-consolidated-20261011/sources/82264692d5edcdf7/REPORT.md -text whitespace=-trailing-space
+research/t20-consolidated-20261011/sources/ba1c28f70bc74b70/UNAPPLIED_RECOGNITION_GUARD.patch -text whitespace=-trailing-space

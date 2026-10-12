@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-10-10T20:18:24.287253+00:00",
+  "status": "PASS_EXACT_SYMBOLIC_CONTROL",
+  "energy": "(x-t)^2",
+  "integrated_energy": "t*x^2-x*t^2+t^3/3",
+  "derivative_identity": "w_second=w*(h^2-d_t_h)",
+  "atoms": [
+    -1,
+    0
+  ],
+  "initial_weights": [
+    "1/2",
+    "1/2"
+  ],
+  "time": "1/10",
+  "coefficients": [
+    "-7359/10000",
+    "-1999/10000"
+  ],
+  "weight_ratio": "exp(-t-t^2)",
+  "conclusion": "A_second(1)<0 for a genuine, varying law; proof-route obstruction only",
+  "kernel_verified": false,
+  "inputs": {
+    "tensor-moment-continuation-20261009/RESULT.md": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11",
+    "measure-moment-continuation-boundary-20261009/RESULT.md": "a0fa9117ff47df9f07133c1ed49c682c7c2e73d20881e83f3c242dfb3faeb9e3",
+    "coercive-square-positivity-20261010/RESULT.md": "204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10",
+    "tensor-realizability-extension-20261010/RESULT.md": "449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a"
+  }
+}

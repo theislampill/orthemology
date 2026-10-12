@@ -1,0 +1,24 @@
+import SourceResources
+set_option maxRecDepth 200000
+set_option maxHeartbeats 0
+open P03Source OrthemologyV2 OrthemologyV3
+theorem actual_work_scope122 : sourceRun 0 (SourceProof.i (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))))), 24) := by decide
+theorem actual_work_scope125 : sourceRun 1 (SourceProof.i TypeCode.bottom) = some ((Term.i, (TypeCode.arrow TypeCode.bottom TypeCode.bottom)), 8) := by decide
+theorem actual_work_scope126 : sourceRun 1 (SourceProof.i (TypeCode.var 0)) = some ((Term.i, (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))), 10) := by decide
+theorem actual_work_scope128 : sourceRun 1 (SourceProof.i (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))))), 24) := by decide
+theorem actual_work_scope129 : sourceRun 1 (SourceProof.i (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom)) = some ((Term.i, (TypeCode.arrow (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom) (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom))), 18) := by decide
+theorem actual_work_scope130 : sourceRun 1 (SourceProof.i (TypeCode.all (TypeCode.var 1))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.var 1)) (TypeCode.all (TypeCode.var 1)))), 14) := by decide
+theorem actual_work_scope131 : sourceRun 2 (SourceProof.i TypeCode.bottom) = some ((Term.i, (TypeCode.arrow TypeCode.bottom TypeCode.bottom)), 8) := by decide
+theorem actual_work_scope132 : sourceRun 2 (SourceProof.i (TypeCode.var 0)) = some ((Term.i, (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))), 10) := by decide
+theorem actual_work_scope133 : sourceRun 2 (SourceProof.i (TypeCode.var 1)) = some ((Term.i, (TypeCode.arrow (TypeCode.var 1) (TypeCode.var 1))), 10) := by decide
+theorem actual_work_scope134 : sourceRun 2 (SourceProof.i (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))))), 24) := by decide
+theorem actual_work_scope135 : sourceRun 2 (SourceProof.i (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom)) = some ((Term.i, (TypeCode.arrow (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom) (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom))), 18) := by decide
+theorem actual_work_scope136 : sourceRun 2 (SourceProof.i (TypeCode.all (TypeCode.var 1))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.var 1)) (TypeCode.all (TypeCode.var 1)))), 14) := by decide
+theorem actual_work_scope137 : sourceRun 100 (SourceProof.i TypeCode.bottom) = some ((Term.i, (TypeCode.arrow TypeCode.bottom TypeCode.bottom)), 8) := by decide
+theorem actual_work_scope138 : sourceRun 100 (SourceProof.i (TypeCode.var 0)) = some ((Term.i, (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))), 10) := by decide
+theorem actual_work_scope139 : sourceRun 100 (SourceProof.i (TypeCode.var 1)) = some ((Term.i, (TypeCode.arrow (TypeCode.var 1) (TypeCode.var 1))), 10) := by decide
+theorem actual_work_scope140 : sourceRun 100 (SourceProof.i (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0))))), 24) := by decide
+theorem actual_work_scope141 : sourceRun 100 (SourceProof.i (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom)) = some ((Term.i, (TypeCode.arrow (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom) (TypeCode.arrow (TypeCode.var 0) TypeCode.bottom))), 18) := by decide
+theorem actual_work_scope142 : sourceRun 100 (SourceProof.i (TypeCode.all (TypeCode.var 1))) = some ((Term.i, (TypeCode.arrow (TypeCode.all (TypeCode.var 1)) (TypeCode.all (TypeCode.var 1)))), 14) := by decide
+theorem actual_work_trace369 : sourceRun 0 (SourceProof.reduce (SourceProof.app (SourceProof.allE (SourceProof.allI (SourceProof.i (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) (SourceProof.allI (SourceProof.i (TypeCode.var 0)))) [(Term.app Term.i Term.i)]) = some (((Term.app Term.i Term.i), (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))), 100) := by decide
+theorem actual_work_trace382 : sourceRun 0 (SourceProof.reduce (SourceProof.app (SourceProof.allE (SourceProof.allI (SourceProof.i (TypeCode.var 0))) (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))) (SourceProof.allI (SourceProof.i (TypeCode.var 0)))) [(Term.app Term.i Term.i), Term.i]) = some ((Term.i, (TypeCode.all (TypeCode.arrow (TypeCode.var 0) (TypeCode.var 0)))), 96) := by decide

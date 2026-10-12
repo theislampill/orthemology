@@ -1,0 +1,13 @@
+# Current canonical state
+
+Repository: theislampill/orthemology. PR #28 MERGED. Main 03e2604dfcef278b01c60d19b05370fcec4194b6; tree 3d06e80277ce39286c94307e0f14b215bc94ed83. Candidate 9ab28a5f67d19fc04c811ad1f50d7741b65da329 has the same 3695-file tree. Main parents retain accepted base f50dc1aee52356cc6adbef342387576b02afc124 and candidate construction ancestry, including publication source preparation 1db15916a3965ccbba101969341bad4cb44ba22b. No Integration DAG cells remain.
+
+This packet preserves the completed integration, not a new research generation. A research conversation may produce separately labelled proposed results; it cannot mutate main or silently promote source statuses. Original accepted records below are historical at their recorded epoch unless a later exact result explicitly supersedes that scope.
+
+Reusable qualification: A8G 65 workflow blocks, two zero-drift passes, six reproduced draft PDFs. A8R 183 tests per mode, 335744 census cases per mode, 6+10 mutation controls, 12 positive scenarios plus reject-all, 9+3 probes per mode/lineage, 256 Mealy machines and 1365 traces; 29 integration tests are separate. A8F mapped Lean 4.19.0 twelve modules, 145 baseline and 146 standalone names, independent repeat and transitive axiom audits, no sorryAx or wrong-version substitution. Exact separate 4.32.2 scopes also passed. None proves the unsupplied CV-R/CV-C mathematics or actual Python refinement.
+
+Formal pins: Lean 4.19.0 commit 6caaee842e94 / Lake 5.0.0-6caaee8 / Mathlib c44e0c8ee63ca166450922a373c7409c5d26b00b; Lean 4.32.2 commit f3b06c705e6c85f5314019d5d3baab0fec5b580c / Lake 5.0.0-src+f3b06c7 / Mathlib 905b95818eb32af7874a58b427f50c1711a5e96c. Approved observed axiom union: Classical.choice, Quot.sound, propext. Do not claim the future Pro environment has these installed. See FORMAL_TOOLCHAIN_STATE.json and exact included source locks.
+
+Publication source pins and six PDFs remain accepted draft artefacts, not peer-review or release credit. Bibliography/source registries remain per-claim authoritative. Novelty UNESTABLISHED; empirical validation and terminology adoption absent. Track T, B/H/RB, school-internal theological scope and the analysis-relative core remain distinct.
+
+All source-main files are exact merged-main bytes with modes/blob/SHA-256 inventory. Accepted-evidence members are exact compact projections of sealed receipts/logs, not recreated original packets. Historical absolute paths in them are inert. No private transcripts, original bulk archives or credentials are intentionally included; no new research or qualification commands were run for this preparation.

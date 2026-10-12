@@ -1,0 +1,109 @@
+{
+  "schema": "origin-identity-bridge/1",
+  "run_utc": "2026-10-07T22:50:43.424072+00:00",
+  "source_bindings": [
+    {
+      "path": "private-locator:c156dee56a3c03afee12",
+      "sha256": "6b06c7cec417a961052971d605b54570c34e44d3e0f0ddfc1a2021e384038268",
+      "role": "imported_unchanged"
+    },
+    {
+      "path": "private-locator:444630dcdf280661cc0f",
+      "sha256": "5b658022264981d8c0c4c06cb41a4651770290f1bea244f3630154ce02b07edf",
+      "role": "imported_unchanged"
+    },
+    {
+      "path": "private-locator:2b6447f6d8e14e029138",
+      "sha256": "8969363b01296d1447ea9e4b742c53f0c102256ef4dff1ed02b59c665bc9b0f2",
+      "role": "context_only_not_executed"
+    }
+  ],
+  "same_operational_skeleton": {
+    "joint": {
+      "events": [
+        [
+          "e",
+          "exists-at-t"
+        ]
+      ],
+      "supports": {
+        "e": [
+          "A",
+          "B"
+        ]
+      },
+      "exact_profile_intention": {
+        "A": true,
+        "B": true
+      },
+      "A_own_end": true
+    },
+    "birth_suppressed": {
+      "events": [
+        [
+          "e",
+          "exists-at-t"
+        ]
+      ],
+      "supports": {
+        "e": [
+          "A"
+        ]
+      },
+      "exact_profile_intention": {
+        "A": true
+      },
+      "A_own_end": true
+    },
+    "reuses_A_object": true,
+    "created_role_output_equal": true,
+    "actual_support_changes": true
+  },
+  "models": {
+    "flexible_identity": {
+      "actual_token": "q",
+      "birth_suppressed_token": "q",
+      "exact_source_origin_essential": false,
+      "same_numerical_token": true
+    },
+    "origin_essential": {
+      "actual_token": "q",
+      "birth_suppressed_token": "q-prime",
+      "exact_source_origin_essential": true,
+      "same_numerical_token": false,
+      "same_qualitative_role": true,
+      "A_profile_end_survives": true,
+      "A_rigid_q_end_survives": false
+    },
+    "counterpart": {
+      "actual_token": "q",
+      "birth_suppressed_token": "q-prime",
+      "counterpart_for_profile_comparison": true,
+      "strict_identity_claim": false,
+      "actual_world_numerical_effect_count": 1
+    },
+    "fixed_origin_later_suppression": {
+      "roots_exist_unchanged": true,
+      "other_activity_unchanged": true,
+      "same_numerical_bearer": true,
+      "same_exact_origin_event": true,
+      "same_initial_support_record": true,
+      "same_entire_represented_prefix_before_probe": true,
+      "same_all_stage_existence_facts": true,
+      "later_support_changes": true,
+      "same_A_preserving_exercises": true,
+      "origin_essentiality_holds": true,
+      "full_sustaining_history_essentiality_holds": false,
+      "no_intrinsic_receipt": true,
+      "all_support_shutdown_breaks_persistence_without_resurrection": true,
+      "under_added_necessary_concord": "Diagnostic schedule inadmissible; this is policy/modal exclusion, not numerical-identity failure."
+    }
+  },
+  "limits": [
+    "Origin-essentiality is an additional interpretation, not inferred from numerical labels.",
+    "Later-suppression fixture enriches the existing temporal interpreter with shared rigid origin and bearer; it does not establish metaphysical admissibility.",
+    "Fixed background activity prevents global-inactivity and bearer-deletion readings; its independent goodness is not established.",
+    "No classification of intrinsic power as perfect is derived from the finite model.",
+    "Current solo preservation is not sole origination or exhaustive provision of the whole causal history."
+  ]
+}

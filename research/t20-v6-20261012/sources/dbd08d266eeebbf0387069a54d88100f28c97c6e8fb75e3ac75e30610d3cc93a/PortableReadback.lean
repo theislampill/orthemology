@@ -1,0 +1,36 @@
+import PolynomialAND
+import ANDCorrection
+import ANDScore
+import ANDRepair
+import ANDPotentialBinding
+import FiniteHullWeights
+import ANDIntrinsic
+import PolynomialBounds
+import ConstraintBounds
+import ExplicitANDScale
+import ScaleReadback
+import IndependentScaleAudit
+set_option pp.universes true
+set_option pp.explicit true
+#check @ANDRepair.universal_strict_repair
+#print axioms ANDRepair.universal_strict_repair
+#check @ANDPotentialBinding.universal_Bregman_repair
+#print axioms ANDPotentialBinding.universal_Bregman_repair
+#check @ANDPotentialBinding.potential_hasFDerivAt
+#print axioms ANDPotentialBinding.potential_hasFDerivAt
+#check @ANDIntrinsic.intrinsic_universal_Bregman_repair
+#print axioms ANDIntrinsic.intrinsic_universal_Bregman_repair
+#check @PolynomialBounds.strict_gain_of_budget
+#print axioms PolynomialBounds.strict_gain_of_budget
+#check @ConstraintBounds.positive_inside_radius
+#print axioms ConstraintBounds.positive_inside_radius
+#check @ExplicitANDScale.intrinsic_explicit_strict_repair
+#print axioms ExplicitANDScale.intrinsic_explicit_strict_repair
+#check @ExplicitANDScale.Data.explicit_strict_repair
+#print axioms ExplicitANDScale.Data.explicit_strict_repair
+#check @PolynomialBounds.value_bound
+#print axioms PolynomialBounds.value_bound
+#check @IndependentScaleAudit.fixture_delta
+#print axioms IndependentScaleAudit.fixture_delta
+#check @IndependentScaleAudit.fixture_valid
+#print axioms IndependentScaleAudit.fixture_valid

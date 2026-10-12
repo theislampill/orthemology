@@ -1,0 +1,107 @@
+[
+  {
+    "source": "P02A2/AllNParity.lean",
+    "theorems": 11,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "fdf91e8a2f97f57a81e5814a8b552dc2be901b8e6a9e5489919ff1d2eb13e232",
+    "repaired_sha256": "527e11239cdf880b52993f1737560c5dbfb7f3fb1424a9302e8f4cd2acc50ba7"
+  },
+  {
+    "source": "P02A2/Fibres.lean",
+    "theorems": 9,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "a28f557cd5c743911948716a9d82140f53793d56dbd4263ea114b63dda107b34",
+    "repaired_sha256": "10db75c79f8286c1c69dae038577141f6c901d7a8fd5dbe77f464447f149b7b9"
+  },
+  {
+    "source": "P02A2/FiniteLaw.lean",
+    "theorems": 6,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "236cf27379865791288a8a851c4227939b73f1102217d292e8652ee1a8e17003",
+    "repaired_sha256": "6fc53381792db1d718fffb1e207db3e469d88147ddbaa8d0037614939441b11f"
+  },
+  {
+    "source": "P02A2/FiniteMeasureBridge.lean",
+    "theorems": 6,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "a56e8d42ce1729293b533c8e76947945e13f03dc49a9e8dd75649a7a96a46e4c",
+    "repaired_sha256": "a2ee7cd36a61ce0097a9815d6b17e23854522757b812e68e0aa5bc8560d7973c"
+  },
+  {
+    "source": "P02A2/Flow.lean",
+    "theorems": 3,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770",
+    "repaired_sha256": "262dbaf5d6ad39cce576ce7ef7aa247612d0b1ef9222459c8d3a3b719ded4770"
+  },
+  {
+    "source": "P02A2/MeasureCore.lean",
+    "theorems": 19,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "89d5cc5dc5822cce27bfddf270b1c9bc046c3de5e3a40f844135cd3b2304b5e3",
+    "repaired_sha256": "acd3d802db12b8b610ee8301f63f36b04906bedb2a28995c719aa7eb16f8047b"
+  },
+  {
+    "source": "P02A2/Mixture.lean",
+    "theorems": 5,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "bb015bcba346764bc4d6b390ae2b823f636223477e4217a697e3c6320a3508d9",
+    "repaired_sha256": "ca0993e8c106672be0732f289c3040eb4929d3913b701a974a1371eccac62f66"
+  },
+  {
+    "source": "P02A2/Observation.lean",
+    "theorems": 17,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "a8170b2a8d0d24367a1c1b5c09791e840fcea3cd1d6ac00bb42b2f60b157f876",
+    "repaired_sha256": "f74a3d14879ac7900f60e3460e75565c0d0c4f8649bd701de92ec8a9b86da08e"
+  },
+  {
+    "source": "P02A2/ObserverCore.lean",
+    "theorems": 8,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5",
+    "repaired_sha256": "e032088073d2fd667f568de952afba3f2b84aa500d4303ff37268e125fd363e5"
+  },
+  {
+    "source": "P02A2/ParityBridge.lean",
+    "theorems": 8,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "f4f2f04ab27e73fc48abb6f0ef5a7421bd86cb619de52c8db7952c168410c103",
+    "repaired_sha256": "34518db955169af9a1bb9756ad41e10370b0560130b9f537e7b7e0749f044dd1"
+  },
+  {
+    "source": "P02A2/Refinement.lean",
+    "theorems": 13,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "94fc1dd55f0083e9aa00d16a42f86696accf0e49f507771cb8606d784668f240",
+    "repaired_sha256": "6bcc51d54debb63822cc9e4e95023b86b2e664462842ca6c81395a26c48bc158"
+  },
+  {
+    "source": "P02A2/SimplexStationary.lean",
+    "theorems": 6,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85",
+    "repaired_sha256": "3dc9af004d538724b19288fcb169c4e65b62d12e251c29ae0b154ad14e4d5c85"
+  },
+  {
+    "source": "P02A2/Stationary.lean",
+    "theorems": 8,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "856dd9b87b6f48b1d9299f2c1a071c15db2c513e18fa63b732351b1a9eecc8d3",
+    "repaired_sha256": "a78f6f3705b95c704edf0721f493a8c6ee8ddcf6ff8e76ce8bc1b122e7401915"
+  },
+  {
+    "source": "Predecessor/P02/MeasureCore.lean",
+    "theorems": 4,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "0341df528faa84edf75274b1526a8086ad3b2f70e4f05cadaed8954b991c83a4",
+    "repaired_sha256": "a7cd3994ec4bb0ca8b897ee7cc5d3092fd3b8615cfc4c4c8b7d26f7c7827d510"
+  },
+  {
+    "source": "Predecessor/P02/T300ThreeBit.lean",
+    "theorems": 7,
+    "statement_headers_whitespace_equivalent": true,
+    "original_sha256": "24ea0c7057e3802c307bbff9e4707ed3316d56d98266db9cc16e39f007a345fe",
+    "repaired_sha256": "db49f44c8e562db1034304ac770bdac6fd884fb45e596b254f7e8f21d6400fa6"
+  }
+]

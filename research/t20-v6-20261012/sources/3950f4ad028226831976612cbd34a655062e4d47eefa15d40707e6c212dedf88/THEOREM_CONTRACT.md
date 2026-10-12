@@ -1,0 +1,7 @@
+# Arbitrary-policy recurrent graph and stable-support necessity
+
+Target 1: For any normalized finite Markov rows and a measurable seeded state-consistent history policy, prove that its exact recurrent pair set is almost surely a concrete nonempty closed strongly connected end component of the actual positive-support graph. No fairness or recurrence assumption on the adaptive policy is permitted.
+
+Method: the retained canonical all-stack law is an actual independently proved representation. Prove every positive symbol recurs infinitely often in each actual raw iid pair tape, and that all tape symbols are supported. Prove pathwise that infinitely many queries consume every tape index sequentially; infer positive-successor recurrence. Transfer to the actual history/pair law. Then derive recurrent graph closure and strong connectivity from actual consecutive source-state transitions after transient pairs disappear.
+
+Target 2 if feasible: combine that theorem, the checked target predicate and actual positive-tail transfer to prove stable-support self-verifying parity necessity for arbitrary common policies. Explicit hypotheses will be almost-sure parity success under every live model, always-used lawful pair set under the candidate, and relative positive-support stability of that set across live models. The theorem will derive the qualifying end component; it must not assume row-law transfer, end-component structure, or the desired minimum parity conclusion. Full support-changing recursive equivalence remains a separate composition problem.

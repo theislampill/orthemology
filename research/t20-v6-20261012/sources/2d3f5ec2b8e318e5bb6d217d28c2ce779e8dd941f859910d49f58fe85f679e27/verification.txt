@@ -1,0 +1,62 @@
+PASS: plus strictly positive likelihood
+PASS: plus observation probability
+PASS: plus exact Bayes posterior
+PASS: plus fine Brier regret
+PASS: plus reset coarse Brier regret
+PASS: plus KL equality
+PASS: plus KL expression
+PASS: plus reference-transported regret
+PASS: plus reverse recovers posterior
+PASS: plus normalization commutes
+PASS: plus fixed block conditional
+PASS: minus strictly positive likelihood
+PASS: minus observation probability
+PASS: minus exact Bayes posterior
+PASS: minus fine Brier regret
+PASS: minus reset coarse Brier regret
+PASS: minus KL equality
+PASS: minus KL expression
+PASS: minus reference-transported regret
+PASS: minus reverse recovers posterior
+PASS: minus normalization commutes
+PASS: minus fixed block conditional
+PASS: posterior martingale
+PASS: reverse recovers prior
+PASS: reverse recovers reference
+PASS: reverse recovers whole stated submodel
+PASS: fine Hessian energy
+PASS: reset coarse Hessian energy
+PASS: Hessian contraction fails
+PASS: fine prior Bayes risk
+PASS: fine expected posterior risk
+PASS: transported prior Bayes risk
+PASS: transported expected posterior risk
+PASS: absolute risk discrepancy persists
+PASS: fixed-truth noisy-signal information
+PASS: fixed-truth exact conditional Bregman gap
+PASS: fixed-truth noisy-signal monotonicity
+PASS: fixed-truth constant-signal information
+PASS: pair-only recovery fine divergence
+PASS: pair-only recovery coarse divergence
+PASS: pair-only recovery strict gap
+PASS: pair-only reverse does not recover reference
+PASS: quartic positive coherent p mass
+PASS: quartic positive coherent q mass
+PASS: quartic weighted Bregman increase
+PASS: stochastic exact weighted variance gap
+PASS: stochastic weighted contraction
+PASS: ambient divergence split
+PASS: ambient sufficient weighted equality
+PASS: source SHA-256 warranted-learning-20261009/sources/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md
+PASS: pinned Git blob warranted-learning-20261009/sources/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md
+PASS: source SHA-256 warranted-learning-20261009/sources/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex
+PASS: pinned Git blob warranted-learning-20261009/sources/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex
+PASS: source SHA-256 noetic-gradient-transport-20261009/INHERITED_HESSIAN_SOURCE.md
+PASS: pinned Git blob noetic-gradient-transport-20261009/INHERITED_HESSIAN_SOURCE.md
+PASS: source SHA-256 nonseparable-bayes-repair-20261009/RESULT.md
+PASS: source SHA-256 constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+PASS: pinned Git blob constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+PASS: source SHA-256 transport-interface-root-check-20261009/DERIVATION.md
+PASS: source SHA-256 geometry-transport-independent-review-20261009/NEGATIVE_CONTROLS.json
+PASS: source SHA-256 geometry-transport-independent-review-20261009/check_independent.py
+PASS: 61 exact controls; general proofs in RESULT.md

@@ -1,0 +1,286 @@
+{
+  "schema": "p02-research-dependencies-v2",
+  "not_integration_DAG": true,
+  "nodes": [
+    {
+      "id": "C2-01",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-02",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-03",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-04",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-05",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-06",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-07",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-08",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-09",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-10",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-11",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-12",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-13",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "C2-14",
+      "obligation": "CV-C"
+    },
+    {
+      "id": "R2-01",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-02",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-03",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-04",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-05",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-06",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "R2-07",
+      "obligation": "CV-R"
+    },
+    {
+      "id": "Q2-01",
+      "obligation": "Q1c"
+    },
+    {
+      "id": "Q2-02",
+      "obligation": "Q1c"
+    },
+    {
+      "id": "Q2-03",
+      "obligation": "Q1c"
+    },
+    {
+      "id": "Q2-04",
+      "obligation": "Q1c"
+    },
+    {
+      "id": "Q2-05",
+      "obligation": "Q1c"
+    },
+    {
+      "id": "M2-01",
+      "obligation": "U05"
+    },
+    {
+      "id": "M2-02",
+      "obligation": "U05"
+    },
+    {
+      "id": "M2-03",
+      "obligation": "U05"
+    },
+    {
+      "id": "M2-04",
+      "obligation": "U05"
+    },
+    {
+      "id": "M2-05",
+      "obligation": "U05"
+    },
+    {
+      "id": "M2-06",
+      "obligation": "U05"
+    },
+    {
+      "id": "F2-01",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-02",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-03",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-04",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-05",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-06",
+      "obligation": "U08"
+    },
+    {
+      "id": "F2-07",
+      "obligation": "U08"
+    }
+  ],
+  "edges": [
+    {
+      "source": "M2-01",
+      "target": "R2-01",
+      "kind": "MEASURE_PREREQUISITE",
+      "reason": "Countable measurable positive-singleton support"
+    },
+    {
+      "source": "M2-03",
+      "target": "R2-02",
+      "kind": "MEASURE_PREREQUISITE",
+      "reason": "Normalized positive fibre one-step debt"
+    },
+    {
+      "source": "R2-01",
+      "target": "R2-03",
+      "kind": "CORE_DEPENDENCY",
+      "reason": "Decreasing measurable events and full-history subset"
+    },
+    {
+      "source": "R2-03",
+      "target": "R2-06",
+      "kind": "SEMANTIC_BUDGET",
+      "reason": "Exact residual formula"
+    },
+    {
+      "source": "M2-02",
+      "target": "R2-06",
+      "kind": "RICHNESS_CONDITIONAL_ONLY",
+      "reason": "Necessity for arbitrary conull conjunction certificates"
+    },
+    {
+      "source": "M2-01",
+      "target": "C2-08",
+      "kind": "MEASURE_PREREQUISITE",
+      "reason": "Countable support and singleton measurability"
+    },
+    {
+      "source": "M2-04",
+      "target": "C2-11",
+      "kind": "MEASURE_PREREQUISITE",
+      "reason": "Countable selector mixture identity"
+    },
+    {
+      "source": "M2-04",
+      "target": "C2-12",
+      "kind": "MEASURE_PREREQUISITE",
+      "reason": "Rational selector law, including non-dyadic q"
+    },
+    {
+      "source": "C2-01",
+      "target": "C2-06",
+      "kind": "CODEC_DEPENDENCY",
+      "reason": "Concrete syntax and indexing"
+    },
+    {
+      "source": "C2-02",
+      "target": "C2-06",
+      "kind": "COMPILER_DEPENDENCY",
+      "reason": "PR byte constructors and numeric coding"
+    },
+    {
+      "source": "C2-03",
+      "target": "C2-10",
+      "kind": "EXPRESSIVE_CLASS",
+      "reason": "Every fixed PR matrix admits the implemented LOOP representation"
+    },
+    {
+      "source": "C2-06",
+      "target": "C2-10",
+      "kind": "REDUCTION_COMPILER",
+      "reason": "Sigma2 compiler semantics"
+    },
+    {
+      "source": "C2-06",
+      "target": "C2-11",
+      "kind": "REDUCTION_COMPILER",
+      "reason": "Pi3 row compiler semantics"
+    },
+    {
+      "source": "C2-06",
+      "target": "C2-12",
+      "kind": "REDUCTION_COMPILER",
+      "reason": "Rational shift compiler semantics"
+    },
+    {
+      "source": "C2-08",
+      "target": "C2-09",
+      "kind": "HIERARCHY_MEMBERSHIP",
+      "reason": "Soft atomic mass formula"
+    },
+    {
+      "source": "F2-03",
+      "target": "F2-06",
+      "kind": "FEASIBILITY_EXISTENCE",
+      "reason": "Actual finite-row stationary point implies rational-flow polytope is nonempty"
+    },
+    {
+      "source": "M2-01",
+      "target": "F2-03",
+      "kind": "OPTIONAL_MEASURE_INTERPRETATION",
+      "reason": "Finite-support laws have zero singleton defect"
+    },
+    {
+      "source": "M2-01",
+      "target": "Q2-01",
+      "kind": "OPTIONAL_MEASURE_INTERPRETATION",
+      "reason": "Zero-defect interpretation only; pure finite law does not need infinite measure theory"
+    },
+    {
+      "source": "Q2-01",
+      "target": "Q2-04",
+      "kind": "FINITE_PROBABILITY",
+      "reason": "Mixture and kernel algebra"
+    }
+  ],
+  "independence": [
+    "CV-R does not require U08 fixed-point existence or a CV-C decision procedure.",
+    "CV-C hardness uses elementary fair finite bit probabilities, not the T300 parity theorem.",
+    "Q1c pure parity/counting does not require U05 formal PASS.",
+    "No U08 convergence/effective selection is consumed implicitly.",
+    "Finite Mealy decidability is a separate representation, not an algorithm for the PR hierarchy."
+  ],
+  "other_packet_new_passes_assumed": []
+}

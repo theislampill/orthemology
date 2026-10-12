@@ -1,0 +1,53 @@
+{
+  "scope": "Read-only inherited sources; no copied or modified protected inputs. Hashes bind exact local bytes, not a whole-repository priority claim.",
+  "inputs": [
+    {
+      "source_path": "../bayes-feasibility-compatibility-20261010/RESULT.md",
+      "bytes": 25743,
+      "sha256": "c6b3b3e006a25eb33b969f8d490fb9bf0906377eda86bcf27b67d5e1726a5b8f",
+      "reading_scope": "Complete report; especially global affine invariance, actual-prior check and inherited fixed-mass example in section 4.2"
+    },
+    {
+      "source_path": "../posterior-inquiry-value-20261010/RESULT.md",
+      "bytes": 7623,
+      "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+      "reading_scope": "Complete report; expected score values need outcome weights, already inherited"
+    },
+    {
+      "source_path": "../stochastic-exact-inquiry-20261010/RESULT.md",
+      "bytes": 25542,
+      "sha256": "5a6983eaeadb281736db29657b73145337e7194a2ceec017d436acb3d8d1ff7a",
+      "reading_scope": "Sections 1-4 and 7-9 inspected; finite hidden-state instrument, permission and exact stopping contracts"
+    },
+    {
+      "source_path": "../stochastic-inquiry-quotient-transport-20261010/ADDENDUM.md",
+      "bytes": 15671,
+      "sha256": "ba10cde70c12e6594ee769088415b2743485ca28cf97d2f561271305292f82ee",
+      "reading_scope": "Complete addendum; full predictive and permission contract, no posterior-only stopping guarantee"
+    },
+    {
+      "source_path": "../warranted-learning-20261009/RESULT.md",
+      "bytes": 21763,
+      "sha256": "06351f384910bb9984c75712bea3b483201fad575a0ac8da258406b5f56d7f69",
+      "reading_scope": "Sections 6-8 read; inherited barycenter and proper-score accounting, provenance, model and operative warrant distinctions"
+    },
+    {
+      "source_path": "../tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "reading_scope": "Action-observation instruments and complete Theorem 2 with proof read; keyword discovery elsewhere"
+    },
+    {
+      "source_path": "../constructive-t20-20261009/sources/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md",
+      "bytes": 33268,
+      "sha256": "71551ae962a17ec72709b6d36cfb58ed99237a2ef776339709a43b8d3b436d28",
+      "reading_scope": "Result and sections 1-2.3, 5.4-9 read; proof-sensitive persistent inquiry and cost not duplicated"
+    },
+    {
+      "source_path": "../measure-bayes-face-transport-20261010/RESULT.md",
+      "bytes": 19533,
+      "sha256": "1ec3513ece5022a0167395fb9f4a7caffa2a3d4006c323ba292da94441d889c8",
+      "reading_scope": "Sections 1-3 beginning read; nearby universal measure-space theorem distinguished, not imported"
+    }
+  ]
+}

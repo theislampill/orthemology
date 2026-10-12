@@ -1,0 +1,140 @@
+import PERRefinement
+import MealyRefinement
+import BlockMismatch
+import P02A2.MeasureCore
+import Q8Measure
+import MealyMeasure
+import MealyHitting
+import MealyRational
+import MealySolver
+import TotalVariation
+import ObserverAbstraction
+import GuardedObserver
+import InternalPolymorphism
+import FiniteBridge
+import P01TypeAlgebra
+import P01SNReflection
+import BoundaryResults
+import P01Candidates
+import P01Confluence
+import EffectsAndDependence
+import NormalisationAndNumerals
+import P01Omega
+import P01Polynomials
+import P01PER
+import P01DependentCore
+import P01ContextualJ
+import P01Certificates
+import P01Examples
+import P01RecursiveModel
+import P01LambdaSyntax
+import P01SystemF
+import P01CurryParametricity
+import P01Translation
+import P01ModelWitnesses
+import P01DependentModel
+import P01DependentSubstitution
+import P01DependentFundamental
+import P01DependentControls
+import P01DependentRepresentation
+import P01CanonicalCarrierProjection
+import ContextualObserver
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.CertifiedObserver.state_measurable
+#print axioms Orthemology.CertifiedObserver.state_measurable
+#check @Orthemology.CertifiedObserver.output_measurable
+#print axioms Orthemology.CertifiedObserver.output_measurable
+#check @Orthemology.CertifiedObserver.law_probability
+#print axioms Orthemology.CertifiedObserver.law_probability
+#check @Orthemology.CertifiedObserver.simulation_states
+#print axioms Orthemology.CertifiedObserver.simulation_states
+#check @Orthemology.CertifiedObserver.simulation_output
+#print axioms Orthemology.CertifiedObserver.simulation_output
+#check @Orthemology.CertifiedObserver.simulation_law
+#print axioms Orthemology.CertifiedObserver.simulation_law
+#check @Orthemology.CertifiedObserver.certified_defect_exact
+#print axioms Orthemology.CertifiedObserver.certified_defect_exact
+#check @Orthemology.CertifiedObserver.simulationOfMap
+#print axioms Orthemology.CertifiedObserver.simulationOfMap
+#check @Orthemology.CertifiedObserver.map_eventTV_le_bad
+#print axioms Orthemology.CertifiedObserver.map_eventTV_le_bad
+#check @Orthemology.CertifiedObserver.certified_defect_error
+#print axioms Orthemology.CertifiedObserver.certified_defect_error
+#check @Orthemology.CertifiedObserver.Simulation
+#print axioms Orthemology.CertifiedObserver.Simulation
+#check @Orthemology.CertifiedObserver.badMonitor
+#print axioms Orthemology.CertifiedObserver.badMonitor
+#check @Orthemology.CertifiedObserver.badMonitor_state
+#print axioms Orthemology.CertifiedObserver.badMonitor_state
+#check @Orthemology.CertifiedObserver.badAt
+#print axioms Orthemology.CertifiedObserver.badAt
+#check @Orthemology.CertifiedObserver.badRun
+#print axioms Orthemology.CertifiedObserver.badRun
+#check @Orthemology.CertifiedObserver.badAt_measurable
+#print axioms Orthemology.CertifiedObserver.badAt_measurable
+#check @Orthemology.CertifiedObserver.badRun_measurable
+#print axioms Orthemology.CertifiedObserver.badRun_measurable
+#check @Orthemology.CertifiedObserver.guarded_states
+#print axioms Orthemology.CertifiedObserver.guarded_states
+#check @Orthemology.CertifiedObserver.guarded_output
+#print axioms Orthemology.CertifiedObserver.guarded_output
+#check @Orthemology.CertifiedObserver.guarded_defect_error
+#print axioms Orthemology.CertifiedObserver.guarded_defect_error
+#check @Orthemology.CertifiedObserver.badRun_le_tsum
+#print axioms Orthemology.CertifiedObserver.badRun_le_tsum
+#check @Orthemology.CertifiedObserver.guarded_defect_error_budget
+#print axioms Orthemology.CertifiedObserver.guarded_defect_error_budget
+#check @Orthemology.CertifiedObserver.GuardedSimulation
+#print axioms Orthemology.CertifiedObserver.GuardedSimulation
+#check @Orthemology.CertifiedObserver.ObserverFamily.simulation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.simulation
+#check @Orthemology.CertifiedObserver.ObserverFamily.observe
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.observe
+#check @Orthemology.CertifiedObserver.ObserverFamily.observe_literal_source
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.observe_literal_source
+#check @Orthemology.CertifiedObserver.ObserverFamily.eqTm_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.eqTm_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.valuation_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.valuation_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.pull
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.pull
+#check @Orthemology.CertifiedObserver.ObserverFamily.substitution_square
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.substitution_square
+#check @Orthemology.CertifiedObserver.ObserverFamily.related_substitution_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.related_substitution_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.finite_solver_transport
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.finite_solver_transport
+#check @Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#check @Orthemology.CertifiedObserver.ObserverFamily.candidate_source_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.candidate_source_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily
+#print axioms Orthemology.CertifiedObserver.ObserverFamily
+#check @IndependentObserverControls.arbitrary_state_measurable
+#print axioms IndependentObserverControls.arbitrary_state_measurable
+#check @IndependentObserverControls.arbitrary_state_law
+#print axioms IndependentObserverControls.arbitrary_state_law
+#check @IndependentObserverControls.infinite_counter_solver
+#print axioms IndependentObserverControls.infinite_counter_solver
+#check @IndependentObserverControls.echo_not_input_independent
+#print axioms IndependentObserverControls.echo_not_input_independent
+#check @IndependentObserverControls.no_false_echo_simulation
+#print axioms IndependentObserverControls.no_false_echo_simulation
+#check @IndependentObserverControls.same_initial_output
+#print axioms IndependentObserverControls.same_initial_output
+#check @IndependentObserverControls.next_obligation_is_essential
+#print axioms IndependentObserverControls.next_obligation_is_essential
+#check @IndependentObserverControls.vacuous_guard_is_whole_failure
+#print axioms IndependentObserverControls.vacuous_guard_is_whole_failure
+#check @IndependentObserverControls.actual_guard_event_measurable
+#print axioms IndependentObserverControls.actual_guard_event_measurable
+#check @IndependentObserverControls.empty_guard
+#print axioms IndependentObserverControls.empty_guard
+#check @IndependentObserverControls.clean_whole_output
+#print axioms IndependentObserverControls.clean_whole_output
+#check @IndependentObserverControls.term_ignoring_start_erases_source
+#print axioms IndependentObserverControls.term_ignoring_start_erases_source
+#check @IndependentObserverControls.two_states_one_observer
+#print axioms IndependentObserverControls.two_states_one_observer

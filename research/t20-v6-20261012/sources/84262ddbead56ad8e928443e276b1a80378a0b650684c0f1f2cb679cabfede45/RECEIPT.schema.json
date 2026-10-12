@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema",
+    "status",
+    "created_utc",
+    "canonical_boundary",
+    "obligation_statuses",
+    "output_hashes",
+    "full_exhaustion_certified",
+    "kernel_verified",
+    "input_predecessor"
+  ],
+  "properties": {
+    "schema": {
+      "const": "orthemology-p02-attempt2-research-receipt-v1"
+    },
+    "status": {
+      "const": "SUPERSEDING_RESEARCH_CHECKPOINT_NOT_FULL_EXHAUSTION"
+    },
+    "created_utc": {
+      "type": "string"
+    },
+    "full_exhaustion_certified": {
+      "const": false
+    },
+    "kernel_verified": {
+      "const": false
+    },
+    "canonical_boundary": {
+      "type": "object",
+      "required": [
+        "main",
+        "tree",
+        "repository_effects"
+      ],
+      "properties": {
+        "main": {
+          "const": "03e2604dfcef278b01c60d19b05370fcec4194b6"
+        },
+        "tree": {
+          "const": "3d06e80277ce39286c94307e0f14b215bc94ed83"
+        },
+        "repository_effects": {
+          "const": []
+        }
+      }
+    },
+    "obligation_statuses": {
+      "type": "object",
+      "required": [
+        "U05",
+        "U08",
+        "CV-R",
+        "CV-C",
+        "Q1c"
+      ]
+    },
+    "input_predecessor": {
+      "type": "object",
+      "required": [
+        "bytes",
+        "sha256",
+        "zip_members"
+      ],
+      "properties": {
+        "bytes": {
+          "const": 4192393
+        },
+        "sha256": {
+          "const": "365d6e27c953102aba2f1749286ff731e0b1b50bf15c2a4cc9ed576eeb02bfc9"
+        },
+        "zip_members": {
+          "const": 693
+        }
+      }
+    },
+    "output_hashes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "bytes",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

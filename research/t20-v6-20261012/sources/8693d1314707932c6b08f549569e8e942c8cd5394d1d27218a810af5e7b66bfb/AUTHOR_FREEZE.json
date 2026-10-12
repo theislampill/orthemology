@@ -1,0 +1,87 @@
+{
+  "status": "AUTHOR_FROZEN_FOR_SEPARATE_REVIEW",
+  "created_utc": "2026-10-11T03:18:15.222876+00:00",
+  "files": [
+    {
+      "path": "INPUT_BINDINGS.json",
+      "sha256": "94e9d593661fd70cb4e6fc357cda6f75c8d430789b8c8eeb764f4f419c2a8d5b",
+      "bytes": 2332
+    },
+    {
+      "path": "README.md",
+      "sha256": "51dcbf4b8be3cfbbb957a053dad43b0412b3cbbccc3a849c18749f9fa4f5233a",
+      "bytes": 1867
+    },
+    {
+      "path": "RESULT.md",
+      "sha256": "dc3ba21616f4e2896731541f8c2877e8ac46baacd11ed37519d34291d505fb73",
+      "bytes": 16500
+    },
+    {
+      "path": "SOURCE_READING.json",
+      "sha256": "e3d0dd303f29a93736df40bd9e76042934d11be601385b1389d6cb17df079641",
+      "bytes": 2898
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "853edb222ddb3ae0b0b2948c3c03828539071bda92c1c1a6da44fba0bd056982",
+      "bytes": 1788
+    },
+    {
+      "path": "inputs/authorial-cross-front.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541
+    },
+    {
+      "path": "inputs/authorial-flow-review.md",
+      "sha256": "1388d9702c418f0b2f436c6a5ae359ec376395a9507afe2a04b8eb9ad42408ec",
+      "bytes": 13370
+    },
+    {
+      "path": "inputs/gaussian_step.py",
+      "sha256": "76ff5de8c0a2f299530a4fb84905c622cd19b7188df11109988592f18a722711",
+      "bytes": 4013
+    },
+    {
+      "path": "inputs/heat-review.md",
+      "sha256": "3ca0dd42eb066da481ad07cfad5a79dc4d665ad3f1d4aa305acc3cd953afd771",
+      "bytes": 16269
+    },
+    {
+      "path": "inputs/historical-source.md",
+      "sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+      "bytes": 25884
+    },
+    {
+      "path": "inputs/likelihood-closure.md",
+      "sha256": "4f5d51008ec623911221c23d685ce21e64c76d9cb6c1ef6c53877b802053fda9",
+      "bytes": 25391
+    },
+    {
+      "path": "inputs/moment-continuation.md",
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11",
+      "bytes": 21695
+    },
+    {
+      "path": "inputs/source-audit.md",
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "bytes": 29885
+    },
+    {
+      "path": "inputs/split-primary-comparison.md",
+      "sha256": "5a2aabc65c8cc624b354bd2aaed55a77f7595b12bc24abd4e4d5d26888b92f40",
+      "bytes": 9333
+    },
+    {
+      "path": "inputs/split-result.md",
+      "sha256": "470c32630baad4b42a5ce960b73de9bf5c6e5cad0a1e32cf1d3f964a5373967d",
+      "bytes": 18095
+    },
+    {
+      "path": "verify.py",
+      "sha256": "1d60d17c02864c999ab48ec4103536f4449942522fee4deef4f353519591e8fe",
+      "bytes": 10855
+    }
+  ],
+  "claims": "Ordinary mathematical application; no protected edit or closure; not independent review."
+}

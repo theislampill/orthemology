@@ -1,0 +1,43 @@
+=== required_dependency_flags ===
+usage: replay.py [-h] --lean LEAN --mathlib MATHLIB --output OUTPUT
+replay.py: error: the following arguments are required: --lean, --mathlib, --output
+
+=== required_mathlib_flag ===
+usage: replay.py [-h] --lean LEAN --mathlib MATHLIB --output OUTPUT
+replay.py: error: the following arguments are required: --mathlib
+
+=== wrong_compiler ===
+REPLAY FAILED: Compiler does not match the exact official Lean 4.19.0 executable pin
+
+=== missing_compiler ===
+REPLAY FAILED: Compiler does not match the exact official Lean 4.19.0 executable pin
+
+=== corrupt_source ===
+REPLAY FAILED: Hash/size mismatch: tranche7-restart/formal/interlock-history-kernel/HistorySafety.lean
+
+=== missing_source ===
+REPLAY FAILED: Missing required file: tranche7-restart/formal/interlock-history-kernel/HistoryModel.lean
+
+=== corrupt_wrapper ===
+REPLAY FAILED: Hash/size mismatch: replay.py
+
+=== corrupt_provenance ===
+REPLAY FAILED: Hash/size mismatch: provenance/ORIGINAL_PACKAGE_README.md
+
+=== reintroduced_root_plan ===
+REPLAY FAILED: Omitted plan body was reintroduced
+
+=== reintroduced_v1_plan ===
+REPLAY FAILED: Omitted plan body was reintroduced
+
+=== corrupt_mathlib_source ===
+REPLAY FAILED: Hash/size mismatch: .devcontainer/Dockerfile
+
+=== missing_mathlib_source ===
+REPLAY FAILED: Missing required file: .devcontainer/Dockerfile
+
+=== missing_mathlib_cache ===
+REPLAY FAILED: Mathlib compiled cache is absent
+
+=== nonempty_output ===
+REPLAY FAILED: Output directory must be new or empty

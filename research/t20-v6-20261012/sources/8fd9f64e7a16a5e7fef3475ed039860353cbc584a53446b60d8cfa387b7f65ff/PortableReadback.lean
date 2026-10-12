@@ -1,0 +1,356 @@
+import PERRefinement
+import MealyRefinement
+import BlockMismatch
+import P02A2.MeasureCore
+import Q8Measure
+import MealyMeasure
+import MealyHitting
+import MealyRational
+import MealySolver
+import MealyAtoms
+import MealyMeasureFixtures
+import TotalVariation
+import InternalPolymorphism
+import FiniteBridge
+import P01TypeAlgebra
+import P01SNReflection
+import BoundaryResults
+import P01Candidates
+import P01Confluence
+import EffectsAndDependence
+import NormalisationAndNumerals
+import P01Omega
+import P01Polynomials
+import P01PER
+import P01DependentCore
+import P01ContextualJ
+import P01Certificates
+import P01Examples
+import P01RecursiveModel
+import P01LambdaSyntax
+import P01SystemF
+import P01CurryParametricity
+import P01Translation
+import P01ModelWitnesses
+import P01DependentModel
+import P01DependentSubstitution
+import P01DependentFundamental
+import P01DependentControls
+import P01DependentRepresentation
+import P01CanonicalCarrierProjection
+import P02A2.ObserverCore
+import Q8Machine
+import Q8Compiler
+import CodecVarint
+import CodecExpr
+import CodecStmt
+import CodecNumeric
+import LoopRenaming
+import LoopPrimrec
+import PRProgram
+import PRComposition
+import PRRecursion
+import PRHeadRecursion
+import PRDerivation
+import PRCoverage
+import PRSpecialize
+import CodecProgram
+import CodecPrimrec
+import UniformComputabilityNumeric
+import UniformComputabilityMachine
+import ObserverAbstraction
+import GuardedObserver
+import ContextualObserver
+import ObserverFixtures
+import ContextualFixtures
+import Q8ObserverAbstraction
+import ParsedObserverAbstraction
+import UniformRuntimeTrace
+import ObserverReadback
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.CertifiedObserver.state_measurable
+#print axioms Orthemology.CertifiedObserver.state_measurable
+#check @Orthemology.CertifiedObserver.output_measurable
+#print axioms Orthemology.CertifiedObserver.output_measurable
+#check @Orthemology.CertifiedObserver.law_probability
+#print axioms Orthemology.CertifiedObserver.law_probability
+#check @Orthemology.CertifiedObserver.Simulation
+#print axioms Orthemology.CertifiedObserver.Simulation
+#check @Orthemology.CertifiedObserver.simulation_states
+#print axioms Orthemology.CertifiedObserver.simulation_states
+#check @Orthemology.CertifiedObserver.simulation_output
+#print axioms Orthemology.CertifiedObserver.simulation_output
+#check @Orthemology.CertifiedObserver.simulation_law
+#print axioms Orthemology.CertifiedObserver.simulation_law
+#check @Orthemology.CertifiedObserver.certified_defect_exact
+#print axioms Orthemology.CertifiedObserver.certified_defect_exact
+#check @Orthemology.CertifiedObserver.simulationOfMap
+#print axioms Orthemology.CertifiedObserver.simulationOfMap
+#check @Orthemology.CertifiedObserver.map_eventTV_le_bad
+#print axioms Orthemology.CertifiedObserver.map_eventTV_le_bad
+#check @Orthemology.CertifiedObserver.certified_defect_error
+#print axioms Orthemology.CertifiedObserver.certified_defect_error
+#check @Orthemology.CertifiedObserver.GuardedSimulation
+#print axioms Orthemology.CertifiedObserver.GuardedSimulation
+#check @Orthemology.CertifiedObserver.badMonitor
+#print axioms Orthemology.CertifiedObserver.badMonitor
+#check @Orthemology.CertifiedObserver.badMonitor_state
+#print axioms Orthemology.CertifiedObserver.badMonitor_state
+#check @Orthemology.CertifiedObserver.badAt
+#print axioms Orthemology.CertifiedObserver.badAt
+#check @Orthemology.CertifiedObserver.badRun
+#print axioms Orthemology.CertifiedObserver.badRun
+#check @Orthemology.CertifiedObserver.badAt_measurable
+#print axioms Orthemology.CertifiedObserver.badAt_measurable
+#check @Orthemology.CertifiedObserver.badRun_measurable
+#print axioms Orthemology.CertifiedObserver.badRun_measurable
+#check @Orthemology.CertifiedObserver.guarded_states
+#print axioms Orthemology.CertifiedObserver.guarded_states
+#check @Orthemology.CertifiedObserver.guarded_output
+#print axioms Orthemology.CertifiedObserver.guarded_output
+#check @Orthemology.CertifiedObserver.guarded_defect_error
+#print axioms Orthemology.CertifiedObserver.guarded_defect_error
+#check @Orthemology.CertifiedObserver.badRun_le_tsum
+#print axioms Orthemology.CertifiedObserver.badRun_le_tsum
+#check @Orthemology.CertifiedObserver.guarded_defect_error_budget
+#print axioms Orthemology.CertifiedObserver.guarded_defect_error_budget
+#check @Orthemology.CertifiedObserver.ObserverFamily
+#print axioms Orthemology.CertifiedObserver.ObserverFamily
+#check @Orthemology.CertifiedObserver.ObserverFamily.simulation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.simulation
+#check @Orthemology.CertifiedObserver.ObserverFamily.observe
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.observe
+#check @Orthemology.CertifiedObserver.ObserverFamily.observe_literal_source
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.observe_literal_source
+#check @Orthemology.CertifiedObserver.ObserverFamily.eqTm_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.eqTm_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.valuation_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.valuation_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.pull
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.pull
+#check @Orthemology.CertifiedObserver.ObserverFamily.substitution_square
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.substitution_square
+#check @Orthemology.CertifiedObserver.ObserverFamily.related_substitution_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.related_substitution_observation
+#check @Orthemology.CertifiedObserver.ObserverFamily.finite_solver_transport
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.finite_solver_transport
+#check @Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.related_substitution_solvers
+#check @Orthemology.CertifiedObserver.ObserverFamily.candidate_source_observation
+#print axioms Orthemology.CertifiedObserver.ObserverFamily.candidate_source_observation
+#check @Orthemology.CertifiedObserver.Fixtures.counterLift
+#print axioms Orthemology.CertifiedObserver.Fixtures.counterLift
+#check @Orthemology.CertifiedObserver.Fixtures.counterSimulation
+#print axioms Orthemology.CertifiedObserver.Fixtures.counterSimulation
+#check @Orthemology.CertifiedObserver.Fixtures.counter_law
+#print axioms Orthemology.CertifiedObserver.Fixtures.counter_law
+#check @Orthemology.CertifiedObserver.Fixtures.unbounded_split_defect
+#print axioms Orthemology.CertifiedObserver.Fixtures.unbounded_split_defect
+#check @Orthemology.CertifiedObserver.Fixtures.split_solver_exact
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_solver_exact
+#check @Orthemology.CertifiedObserver.Fixtures.unbounded_split_solver
+#print axioms Orthemology.CertifiedObserver.Fixtures.unbounded_split_solver
+#check @Orthemology.CertifiedObserver.Fixtures.splitZeroGuard
+#print axioms Orthemology.CertifiedObserver.Fixtures.splitZeroGuard
+#check @Orthemology.CertifiedObserver.Fixtures.split_badAt_zero
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_badAt_zero
+#check @Orthemology.CertifiedObserver.Fixtures.split_badAt_succ
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_badAt_succ
+#check @Orthemology.CertifiedObserver.Fixtures.split_badRun
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_badRun
+#check @Orthemology.CertifiedObserver.Fixtures.split_budget_exact
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_budget_exact
+#check @Orthemology.CertifiedObserver.Fixtures.split_guarded_error
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_guarded_error
+#check @Orthemology.CertifiedObserver.Fixtures.delayedCopy
+#print axioms Orthemology.CertifiedObserver.Fixtures.delayedCopy
+#check @Orthemology.CertifiedObserver.Fixtures.delayed_state
+#print axioms Orthemology.CertifiedObserver.Fixtures.delayed_state
+#check @Orthemology.CertifiedObserver.Fixtures.delayed_output
+#print axioms Orthemology.CertifiedObserver.Fixtures.delayed_output
+#check @Orthemology.CertifiedObserver.Fixtures.delayed_defect_one
+#print axioms Orthemology.CertifiedObserver.Fixtures.delayed_defect_one
+#check @Orthemology.CertifiedObserver.Fixtures.delayed_prefix_exact
+#print axioms Orthemology.CertifiedObserver.Fixtures.delayed_prefix_exact
+#check @Orthemology.CertifiedObserver.Fixtures.zero_defect
+#print axioms Orthemology.CertifiedObserver.Fixtures.zero_defect
+#check @Orthemology.CertifiedObserver.Fixtures.finite_prefix_is_not_defect_certificate
+#print axioms Orthemology.CertifiedObserver.Fixtures.finite_prefix_is_not_defect_certificate
+#check @Orthemology.CertifiedObserver.Fixtures.split_error_sharp
+#print axioms Orthemology.CertifiedObserver.Fixtures.split_error_sharp
+#check @Orthemology.CertifiedObserver.Fixtures.transition_omission_fails
+#print axioms Orthemology.CertifiedObserver.Fixtures.transition_omission_fails
+#check @Orthemology.CertifiedObserver.Fixtures.output_omission_fails
+#print axioms Orthemology.CertifiedObserver.Fixtures.output_omission_fails
+#check @Orthemology.CertifiedObserver.ContextFixtures.nodes
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.nodes
+#check @Orthemology.CertifiedObserver.ContextFixtures.isI
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.isI
+#check @Orthemology.CertifiedObserver.ContextFixtures.isI_transport
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.isI_transport
+#check @Orthemology.CertifiedObserver.ContextFixtures.State
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.State
+#check @Orthemology.CertifiedObserver.ContextFixtures.machine
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.machine
+#check @Orthemology.CertifiedObserver.ContextFixtures.observer
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.observer
+#check @Orthemology.CertifiedObserver.ContextFixtures.observerStateFintype
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.observerStateFintype
+#check @Orthemology.CertifiedObserver.ContextFixtures.iEnv
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.iEnv
+#check @Orthemology.CertifiedObserver.ContextFixtures.iiEnv
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.iiEnv
+#check @Orthemology.CertifiedObserver.ContextFixtures.skkEnv
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.skkEnv
+#check @Orthemology.CertifiedObserver.ContextFixtures.iSub
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.iSub
+#check @Orthemology.CertifiedObserver.ContextFixtures.iiSub
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.iiSub
+#check @Orthemology.CertifiedObserver.ContextFixtures.substitutions_related
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.substitutions_related
+#check @Orthemology.CertifiedObserver.ContextFixtures.source
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source
+#check @Orthemology.CertifiedObserver.ContextFixtures.substitution_codes_distinct
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.substitution_codes_distinct
+#check @Orthemology.CertifiedObserver.ContextFixtures.genuinely_different_state_carriers
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.genuinely_different_state_carriers
+#check @Orthemology.CertifiedObserver.ContextFixtures.concrete_substitution_laws
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.concrete_substitution_laws
+#check @Orthemology.CertifiedObserver.ContextFixtures.zeroSimulation
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.zeroSimulation
+#check @Orthemology.CertifiedObserver.ContextFixtures.copySimulation
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.copySimulation
+#check @Orthemology.CertifiedObserver.ContextFixtures.source_I_zero
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source_I_zero
+#check @Orthemology.CertifiedObserver.ContextFixtures.source_II_zero
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source_II_zero
+#check @Orthemology.CertifiedObserver.ContextFixtures.source_SKK_copy
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source_SKK_copy
+#check @Orthemology.CertifiedObserver.ContextFixtures.source_sensitive_defects
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.source_sensitive_defects
+#check @Orthemology.CertifiedObserver.ContextFixtures.inspectSyntax
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.inspectSyntax
+#check @Orthemology.CertifiedObserver.ContextFixtures.raw_related_but_unlicensed_observer_distinguishes
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.raw_related_but_unlicensed_observer_distinguishes
+#check @Orthemology.CertifiedObserver.ContextFixtures.silent
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.silent
+#check @Orthemology.CertifiedObserver.ContextFixtures.silentSimulation
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.silentSimulation
+#check @Orthemology.CertifiedObserver.ContextFixtures.law_equality_not_raw_identity
+#print axioms Orthemology.CertifiedObserver.ContextFixtures.law_equality_not_raw_identity
+#check @Orthemology.CertifiedObserver.Q8.observer
+#print axioms Orthemology.CertifiedObserver.Q8.observer
+#check @Orthemology.CertifiedObserver.Q8.state_eq_run
+#print axioms Orthemology.CertifiedObserver.Q8.state_eq_run
+#check @Orthemology.CertifiedObserver.Q8.output_eq_switched
+#print axioms Orthemology.CertifiedObserver.Q8.output_eq_switched
+#check @Orthemology.CertifiedObserver.Q8.compiled_output
+#print axioms Orthemology.CertifiedObserver.Q8.compiled_output
+#check @Orthemology.CertifiedObserver.Q8.compiled_law
+#print axioms Orthemology.CertifiedObserver.Q8.compiled_law
+#check @Orthemology.CertifiedObserver.Q8.compiled_finite_solver
+#print axioms Orthemology.CertifiedObserver.Q8.compiled_finite_solver
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.grow
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.grow
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.growSimulation
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.growSimulation
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.grow_run_unbounded
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.grow_run_unbounded
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.grow_compiled_zero
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.grow_compiled_zero
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.grow_solver
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.grow_solver
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.haltNow
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.haltNow
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.haltSimulation
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.haltSimulation
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.halt_compiled_copy
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.halt_compiled_copy
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.wrongClock
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.wrongClock
+#check @Orthemology.CertifiedObserver.Q8.Fixtures.wrong_clock_rejected
+#print axioms Orthemology.CertifiedObserver.Q8.Fixtures.wrong_clock_rejected
+#check @Orthemology.CertifiedObserver.ParsedQ8.packed
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.packed
+#check @Orthemology.CertifiedObserver.ParsedQ8.code
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.code
+#check @Orthemology.CertifiedObserver.ParsedQ8.decoded_source_exact
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.decoded_source_exact
+#check @Orthemology.CertifiedObserver.ParsedQ8.generated_bytes_exact
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.generated_bytes_exact
+#check @Orthemology.CertifiedObserver.ParsedQ8.observer
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.observer
+#check @Orthemology.CertifiedObserver.ParsedQ8.parsed_output_compiled
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.parsed_output_compiled
+#check @Orthemology.CertifiedObserver.ParsedQ8.parsed_output_mealy
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.parsed_output_mealy
+#check @Orthemology.CertifiedObserver.ParsedQ8.law
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.law
+#check @Orthemology.CertifiedObserver.ParsedQ8.parsed_law_compiled
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.parsed_law_compiled
+#check @Orthemology.CertifiedObserver.ParsedQ8.parsed_finite_solver
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.parsed_finite_solver
+#check @Orthemology.CertifiedObserver.ParsedQ8.inputWord
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.inputWord
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtimeTick
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtimeTick
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_sound
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_sound
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_complete
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_complete
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_finite_trace
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_finite_trace
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.grow_parsed_solver
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.grow_parsed_solver
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.halt_parsed_solver
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.halt_parsed_solver
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.zero_fuel_is_not_zero
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.zero_fuel_is_not_zero
+#check @Orthemology.CertifiedObserver.ParsedQ8.Fixtures.timeout_defaulting_corrupts_halt
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.Fixtures.timeout_defaulting_corrupts_halt
+#check @Orthemology.CertifiedObserver.ParsedQ8.extendBits
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.extendBits
+#check @Orthemology.CertifiedObserver.ParsedQ8.completeThrough
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.completeThrough
+#check @Orthemology.CertifiedObserver.ParsedQ8.completeThrough_decidable
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.completeThrough_decidable
+#check @Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_mono
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.runtime_tick_mono
+#check @Orthemology.CertifiedObserver.ParsedQ8.exists_completeThrough
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.exists_completeThrough
+#check @Orthemology.CertifiedObserver.ParsedQ8.uniformFuel
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.uniformFuel
+#check @Orthemology.CertifiedObserver.ParsedQ8.uniformFuel_complete
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.uniformFuel_complete
+#check @Orthemology.CertifiedObserver.ParsedQ8.inputWord_extend_prefix
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.inputWord_extend_prefix
+#check @Orthemology.CertifiedObserver.ParsedQ8.uniform_runtime_trace
+#print axioms Orthemology.CertifiedObserver.ParsedQ8.uniform_runtime_trace
+#check @IndependentSourceRuntimeControls.first_tick_precedes_halt
+#print axioms IndependentSourceRuntimeControls.first_tick_precedes_halt
+#check @IndependentSourceRuntimeControls.second_tick_reads_current_bit
+#print axioms IndependentSourceRuntimeControls.second_tick_reads_current_bit
+#check @IndependentSourceRuntimeControls.source_bytes_roundtrip
+#print axioms IndependentSourceRuntimeControls.source_bytes_roundtrip
+#check @IndependentSourceRuntimeControls.source_index_roundtrip
+#print axioms IndependentSourceRuntimeControls.source_index_roundtrip
+#check @IndependentSourceRuntimeControls.malformed_empty_bytes
+#print axioms IndependentSourceRuntimeControls.malformed_empty_bytes
+#check @IndependentSourceRuntimeControls.no_timeout_bit
+#print axioms IndependentSourceRuntimeControls.no_timeout_bit
+#check @IndependentSourceRuntimeControls.successful_tick_is_source_tick
+#print axioms IndependentSourceRuntimeControls.successful_tick_is_source_tick
+#check @IndependentSourceRuntimeControls.chosen_horizon_uniform
+#print axioms IndependentSourceRuntimeControls.chosen_horizon_uniform
+#check @IndependentSourceRuntimeControls.no_horizon_zero_tick
+#print axioms IndependentSourceRuntimeControls.no_horizon_zero_tick
+#check @IndependentSourceRuntimeControls.prefix_cutoff_is_strict
+#print axioms IndependentSourceRuntimeControls.prefix_cutoff_is_strict
+#check @IndependentSourceRuntimeControls.old_clock_loses_real_first_output
+#print axioms IndependentSourceRuntimeControls.old_clock_loses_real_first_output
+#check @IndependentSourceRuntimeControls.actual_counter_is_unbounded
+#print axioms IndependentSourceRuntimeControls.actual_counter_is_unbounded
+#check @IndependentSourceRuntimeControls.concrete_carriers_differ
+#print axioms IndependentSourceRuntimeControls.concrete_carriers_differ

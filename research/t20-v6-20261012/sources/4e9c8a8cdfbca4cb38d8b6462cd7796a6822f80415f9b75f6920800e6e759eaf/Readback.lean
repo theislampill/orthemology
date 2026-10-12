@@ -1,0 +1,40 @@
+import UpstreamGround
+set_option pp.universes true
+set_option pp.explicit true
+#print Orthemology.Tranche6.UpstreamGround.Coverage
+#check @Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage
+#print axioms Orthemology.Tranche6.UpstreamGround.predecessor_free_of_coverage
+#check @Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage
+#print axioms Orthemology.Tranche6.UpstreamGround.uniform_of_complete_coverage
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_irreflexive
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_irreflexive
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_transitive
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_transitive
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_every_member_receives
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_every_member_receives
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_has_no_covering_member
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.chain_has_no_covering_member
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_dependency_factive
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_dependency_factive
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_reception
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.contingent_reception
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.generic_reception_without_foundation
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.generic_reception_without_foundation
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.actual_chain_but_no_root
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.actual_chain_but_no_root
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.all_necessarily_exist_without_root
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.all_necessarily_exist_without_root
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_irreflexive
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_irreflexive
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_transitive
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.rooted_transitive
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.root_covers_infinite_ancestry
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.root_covers_infinite_ancestry
+#check @Orthemology.Tranche6.UpstreamGround.InfiniteControls.complete_root_without_global_wellfoundedness
+#print axioms Orthemology.Tranche6.UpstreamGround.InfiniteControls.complete_root_without_global_wellfoundedness
+#check @Orthemology.Tranche6.UpstreamGround.FiniteControls.split_local_coverage
+#print axioms Orthemology.Tranche6.UpstreamGround.FiniteControls.split_local_coverage
+#check @Orthemology.Tranche6.UpstreamGround.FiniteControls.split_no_common_source
+#print axioms Orthemology.Tranche6.UpstreamGround.FiniteControls.split_no_common_source
+#check @Orthemology.Tranche6.UpstreamGround.FiniteControls.brute_actual_root_without_necessity
+#print axioms Orthemology.Tranche6.UpstreamGround.FiniteControls.brute_actual_root_without_necessity

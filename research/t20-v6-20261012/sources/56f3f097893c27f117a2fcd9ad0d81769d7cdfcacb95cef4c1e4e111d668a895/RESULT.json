@@ -1,0 +1,159 @@
+{
+  "status": "ACCEPTED_LOCAL_CONSTRUCTION_AND_RESTRICTION",
+  "author_source_cold_replay": "PASS",
+  "reviewer_probe_compile": "PASS",
+  "axiom_footprints": {
+    "PDCheckerIndependentReview.universal_ignores_action_branch": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.old_copy_label_irrelevant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.rejecting_target_visible": [
+      "propext"
+    ],
+    "PDCheckerIndependentReview.rejecting_target_absorbing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.raw_lifted_joint_entry": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.initial_hidden_mixing_contract": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.invalid_copy_does_not_preserve_receipt": [
+      "propext"
+    ],
+    "PDCheckerIndependentReview.distinct_terminal_half_masses": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDCheckerIndependentReview.unchecked_false_read_not_rejected": [
+      "propext"
+    ],
+    "PDChecker.kernel_posterior_deterministic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.advance_failed_read": [
+      "propext"
+    ],
+    "PDChecker.advance_outside": [
+      "propext"
+    ],
+    "PDChecker.advance_running": [
+      "propext"
+    ],
+    "PDChecker.kernel_failed_read": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.kernel_universal_row": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.kernel_entry_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.card_state": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initialBelief_support": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initialBelief_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initialBelief_positive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initialBelief_normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.lifted_kernel_posterior_deterministic": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.lifted_joint_row_exact": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.observe_accept_iff": [
+      "propext"
+    ],
+    "PDChecker.lifted_top_absorbing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initial_lift_erases": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.initial_lift_common_label": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.lift_cardinality_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.honest_running_step": [
+      "propext"
+    ],
+    "PDChecker.honest_branch_receipt": [
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.honest_receipt_law": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.Controls.known_state_hidden_selection_not_pd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "PDChecker.Controls.suppressed_branch_receipt_not_pd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "exact_assertions": 931318,
+  "formal_complexity_credit": false,
+  "global_path_law_credit": false,
+  "redundant_replay": "Not launched under host contention; first independent cold replay and dependent reviewer probes passed."
+}

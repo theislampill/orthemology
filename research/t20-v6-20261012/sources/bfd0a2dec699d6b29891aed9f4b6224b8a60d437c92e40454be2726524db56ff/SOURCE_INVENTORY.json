@@ -1,0 +1,3790 @@
+{
+  "schema": "p01-formal-source-inventory-v1",
+  "lean_pin": "leanprover/lean4:v4.19.0",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "files": [
+    {
+      "path": "formal/P01Audit.lean",
+      "bytes": 77502,
+      "sha256": "49d1b84cf0f5e345b8d59db5971d4c97a85de1a1126839510196dcac1dc7bace",
+      "kind": "generated_readback_commands"
+    },
+    {
+      "path": "formal/P01Candidates.lean",
+      "bytes": 10240,
+      "sha256": "e1be17a5de1c9e72d1ba8ebbfd9a97616353eeb4cc2637a9645528e378d15d7b",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Certificates.lean",
+      "bytes": 5029,
+      "sha256": "7022dccf5f978feebb34db9aebc8232ce38f75f53e493e961da917f9a1710b8a",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Confluence.lean",
+      "bytes": 9226,
+      "sha256": "682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01ContextualJ.lean",
+      "bytes": 3517,
+      "sha256": "eabaccba66a4c32c78821a4942941a51ad94117e8017f05a0f6c207e23a72f9a",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01DependentCore.lean",
+      "bytes": 16413,
+      "sha256": "2955aa515e77baf2f5e2de8341819891177a5d3b00b88092be328738858c41ac",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Examples.lean",
+      "bytes": 3408,
+      "sha256": "b8a6e18373d2edcb09a9e038973c2db6d7dc1733442bb1931c9f43dad1f7c581",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01GeneratedExports.lean",
+      "bytes": 25569,
+      "sha256": "b8c500ea517e8562087942e41b97eb85f6e1f5c056d11fe7b2c44ddc442e857e",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01LambdaSyntax.lean",
+      "bytes": 5547,
+      "sha256": "1a969ade6fc6daf226cde5a9f077bb7f16ef5a396a090728c8468356df555e21",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Omega.lean",
+      "bytes": 3201,
+      "sha256": "df83be41f01616777a5e53aba4e890161c155ad21d6c8b594d0c6cf7806fdf88",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01PER.lean",
+      "bytes": 9397,
+      "sha256": "00ed01e669981b0f586d0ed26db10a1db7fd8e66245e3462358972d821c5d476",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Polynomials.lean",
+      "bytes": 8276,
+      "sha256": "c79a594c05a4a9ef0e77a7f5b539a0feac278aa20cfbd04f63d59163c8626462",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01ReflectionCountermodel.lean",
+      "bytes": 1735,
+      "sha256": "86e3f887547fc712f5906185e367c7d513dbfe7539c9ccc633ad563d3f34949a",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01SNReflection.lean",
+      "bytes": 1447,
+      "sha256": "017d12cb7f47f1767310f550277043536a6606e520bdd2f406eabcd91480dd86",
+      "kind": "exact_attempt1_candidate"
+    },
+    {
+      "path": "formal/P01SystemF.lean",
+      "bytes": 6795,
+      "sha256": "415336d97fa18e256f1c77100f628f4dbc68e6b99c5d46e98b429a7c5214f298",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01Translation.lean",
+      "bytes": 6479,
+      "sha256": "9e89031c0c2c0c81fb8075eadc44e9e892545d19d8d6b5fa1566b8130343309c",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01TypeAlgebra.lean",
+      "bytes": 3987,
+      "sha256": "c6e79d0f84e9b7a6181a71aaef3109a3395832ce8d45afc03c0dc280e129cd6d",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01TypeAssertions.lean",
+      "bytes": 2392,
+      "sha256": "90983d0397f437897df4950c5533010adf041ff0f2508d55b514a2d9060bcd98",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/P01UniverseBoundary.lean",
+      "bytes": 1398,
+      "sha256": "a0f81b5116ea06b6df5cb7127ab47d56293b2787f87560ae8351b7c31f4b4d6a",
+      "kind": "new_candidate"
+    },
+    {
+      "path": "formal/lake-manifest.json",
+      "bytes": 3534,
+      "sha256": "f3dcef40bae32a354422f4c9eebd7e3603698b8c960d3fdb8ee71ffa39196294",
+      "kind": "project_metadata"
+    },
+    {
+      "path": "formal/lakefile.lean",
+      "bytes": 229,
+      "sha256": "3ce20e04954a4528c5ee684d920c00d891917277e4fad8feae7fc736a5208d1c",
+      "kind": "project_metadata"
+    },
+    {
+      "path": "formal/lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
+      "kind": "project_metadata"
+    },
+    {
+      "path": "formal/vendor/AlmostSureBoundary.lean",
+      "bytes": 3234,
+      "sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/AuditSupport.lean",
+      "bytes": 1024,
+      "sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/BoundaryResults.lean",
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/EffectsAndDependence.lean",
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/FiniteBridge.lean",
+      "bytes": 8366,
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/GeneratedExamples.lean",
+      "bytes": 13685,
+      "sha256": "0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/HurkensBoundary.lean",
+      "bytes": 2245,
+      "sha256": "4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/InternalPolymorphism.lean",
+      "bytes": 15288,
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/NormalisationAndNumerals.lean",
+      "bytes": 3101,
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/OperationalBoundary.lean",
+      "bytes": 2599,
+      "sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/OperationalKernel.lean",
+      "bytes": 8778,
+      "sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+      "kind": "exact_canonical_vendor"
+    },
+    {
+      "path": "formal/vendor/RelationalFragment.lean",
+      "bytes": 6417,
+      "sha256": "12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb",
+      "kind": "exact_canonical_vendor"
+    }
+  ],
+  "build_order": [
+    "AlmostSureBoundary",
+    "AuditSupport",
+    "InternalPolymorphism",
+    "FiniteBridge",
+    "BoundaryResults",
+    "EffectsAndDependence",
+    "GeneratedExamples",
+    "HurkensBoundary",
+    "NormalisationAndNumerals",
+    "OperationalKernel",
+    "OperationalBoundary",
+    "P01TypeAlgebra",
+    "P01SNReflection",
+    "P01Candidates",
+    "P01Confluence",
+    "P01Omega",
+    "P01Polynomials",
+    "P01PER",
+    "P01DependentCore",
+    "P01ContextualJ",
+    "P01Certificates",
+    "P01Examples",
+    "P01GeneratedExports",
+    "P01LambdaSyntax",
+    "P01SystemF",
+    "P01Translation",
+    "P01ReflectionCountermodel",
+    "P01UniverseBoundary",
+    "P01TypeAssertions",
+    "RelationalFragment"
+  ],
+  "imports": {
+    "P01Candidates": [
+      "P01TypeAlgebra",
+      "P01SNReflection",
+      "BoundaryResults"
+    ],
+    "P01Certificates": [
+      "P01ContextualJ"
+    ],
+    "P01Confluence": [
+      "P01Candidates"
+    ],
+    "P01ContextualJ": [
+      "P01DependentCore"
+    ],
+    "P01DependentCore": [
+      "P01PER"
+    ],
+    "P01Examples": [
+      "P01Certificates"
+    ],
+    "P01GeneratedExports": [
+      "P01Certificates"
+    ],
+    "P01LambdaSyntax": [
+      "P01TypeAlgebra",
+      "P01SNReflection"
+    ],
+    "P01Omega": [
+      "P01Confluence",
+      "NormalisationAndNumerals"
+    ],
+    "P01PER": [
+      "P01Polynomials"
+    ],
+    "P01Polynomials": [
+      "P01Omega"
+    ],
+    "P01ReflectionCountermodel": [
+      "P01Omega",
+      "P01Translation"
+    ],
+    "P01SNReflection": [],
+    "P01SystemF": [
+      "P01LambdaSyntax"
+    ],
+    "P01Translation": [
+      "P01SystemF",
+      "BoundaryResults"
+    ],
+    "P01TypeAlgebra": [
+      "FiniteBridge"
+    ],
+    "P01TypeAssertions": [
+      "P01GeneratedExports",
+      "P01ReflectionCountermodel",
+      "P01UniverseBoundary"
+    ],
+    "P01UniverseBoundary": [
+      "P01Examples",
+      "HurkensBoundary"
+    ],
+    "GeneratedExamples": [
+      "FiniteBridge"
+    ],
+    "AlmostSureBoundary": [],
+    "AuditSupport": [],
+    "EffectsAndDependence": [
+      "BoundaryResults"
+    ],
+    "NormalisationAndNumerals": [
+      "EffectsAndDependence"
+    ],
+    "FiniteBridge": [
+      "InternalPolymorphism"
+    ],
+    "OperationalKernel": [
+      "FiniteBridge"
+    ],
+    "BoundaryResults": [
+      "FiniteBridge"
+    ],
+    "RelationalFragment": [
+      "FiniteBridge"
+    ],
+    "HurkensBoundary": [],
+    "InternalPolymorphism": [],
+    "OperationalBoundary": [
+      "OperationalKernel",
+      "HurkensBoundary"
+    ]
+  },
+  "targets": [
+    {
+      "name": "P01Candidates.SN",
+      "kind": "abbrev",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "abbrev SN (t : Term) := Acc (fun u t => Step t u) t"
+    },
+    {
+      "name": "P01Candidates.Neutral",
+      "kind": "def",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 12,
+      "qualifier": null,
+      "declaration_start_text": "def Neutral : Term \u2192 Prop"
+    },
+    {
+      "name": "P01Candidates.neutral_app",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 17,
+      "qualifier": null,
+      "declaration_start_text": "theorem neutral_app {f : Term} (h : Neutral f) (x) : Neutral (.app f x) := by"
+    },
+    {
+      "name": "P01Candidates.neutral_successor",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 21,
+      "qualifier": null,
+      "declaration_start_text": "theorem neutral_successor {f x u} (nf : Neutral f) (h : Step (.app f x) u) :"
+    },
+    {
+      "name": "P01Candidates.sn_step",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 31,
+      "qualifier": null,
+      "declaration_start_text": "theorem sn_step {t u} (h : SN t) (r : Step t u) : SN u := h.inv r"
+    },
+    {
+      "name": "P01Candidates.sn_red",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 33,
+      "qualifier": null,
+      "declaration_start_text": "theorem sn_red {t u} (h : SN t) (r : Red t u) : SN u := by"
+    },
+    {
+      "name": "P01Candidates.sn_function",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 38,
+      "qualifier": null,
+      "declaration_start_text": "theorem sn_function {f x} (h : SN (.app f x)) : SN f :="
+    },
+    {
+      "name": "P01Candidates.Candidate",
+      "kind": "structure",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 42,
+      "qualifier": null,
+      "declaration_start_text": "structure Candidate where"
+    },
+    {
+      "name": "P01Candidates.candidate_ext",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 48,
+      "qualifier": null,
+      "declaration_start_text": "@[ext] theorem candidate_ext {P Q : Candidate} (h : \u2200t, P.mem t \u2194 Q.mem t) : P = Q := by"
+    },
+    {
+      "name": "P01Candidates.snCandidate",
+      "kind": "def",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 52,
+      "qualifier": null,
+      "declaration_start_text": "def snCandidate : Candidate where"
+    },
+    {
+      "name": "P01Candidates.zero_mem",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 58,
+      "qualifier": null,
+      "declaration_start_text": "theorem zero_mem (P : Candidate) : P.mem .zero := by"
+    },
+    {
+      "name": "P01Candidates.descend_red",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 62,
+      "qualifier": null,
+      "declaration_start_text": "theorem descend_red (P : Candidate) {t u} (h : P.mem t) (r : Red t u) : P.mem u := by"
+    },
+    {
+      "name": "P01Candidates.arrow",
+      "kind": "def",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 67,
+      "qualifier": null,
+      "declaration_start_text": "def arrow (P Q : Candidate) : Candidate where"
+    },
+    {
+      "name": "P01Candidates.intersection",
+      "kind": "def",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 85,
+      "qualifier": null,
+      "declaration_start_text": "def intersection {\u03b9 : Type} (i\u2080 : \u03b9) (F : \u03b9 \u2192 Candidate) : Candidate where"
+    },
+    {
+      "name": "P01Candidates.i_successor",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 92,
+      "qualifier": null,
+      "declaration_start_text": "theorem i_successor {x u} (h : Step (.app .i x) u) :"
+    },
+    {
+      "name": "P01Candidates.k_successor",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 99,
+      "qualifier": null,
+      "declaration_start_text": "theorem k_successor {x y u} (h : Step (.app (.app .k x) y) u) :"
+    },
+    {
+      "name": "P01Candidates.s_successor",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 110,
+      "qualifier": null,
+      "declaration_start_text": "theorem s_successor {f g x u} (h : Step (.app (.app (.app .s f) g) x) u) :"
+    },
+    {
+      "name": "P01Candidates.i_expand",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 126,
+      "qualifier": null,
+      "declaration_start_text": "theorem i_expand (P : Candidate) {x} (hx : P.mem x) : P.mem (.app .i x) := by"
+    },
+    {
+      "name": "P01Candidates.k_expand",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 139,
+      "qualifier": null,
+      "declaration_start_text": "theorem k_expand (P : Candidate) {x y} (hx : P.mem x) (hy : SN y) :"
+    },
+    {
+      "name": "P01Candidates.s_expand",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 156,
+      "qualifier": null,
+      "declaration_start_text": "theorem s_expand (P : Candidate) {f g x}"
+    },
+    {
+      "name": "P01Candidates.i_member",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 187,
+      "qualifier": null,
+      "declaration_start_text": "theorem i_member (P) : (arrow P P).mem .i := fun x hx => i_expand P hx"
+    },
+    {
+      "name": "P01Candidates.k_member",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 189,
+      "qualifier": null,
+      "declaration_start_text": "theorem k_member (P Q) : (arrow P (arrow Q P)).mem .k :="
+    },
+    {
+      "name": "P01Candidates.s_member",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 192,
+      "qualifier": null,
+      "declaration_start_text": "theorem s_member (P Q R) :"
+    },
+    {
+      "name": "P01Candidates.interpret",
+      "kind": "def",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 199,
+      "qualifier": null,
+      "declaration_start_text": "def interpret : TypeCode \u2192 (Nat \u2192 Candidate) \u2192 Candidate"
+    },
+    {
+      "name": "P01Candidates.rename_interpret",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 205,
+      "qualifier": null,
+      "declaration_start_text": "theorem rename_interpret (A : TypeCode) : \u2200 r \u03c1,"
+    },
+    {
+      "name": "P01Candidates.substitute_interpret",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 220,
+      "qualifier": null,
+      "declaration_start_text": "theorem substitute_interpret (A : TypeCode) : \u2200 \u03c3 \u03c1,"
+    },
+    {
+      "name": "P01Candidates.instantiate_interpret",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 241,
+      "qualifier": null,
+      "declaration_start_text": "theorem instantiate_interpret (B A : TypeCode) (\u03c1 : Nat \u2192 Candidate) :"
+    },
+    {
+      "name": "P01Candidates.finite_reducibility",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 250,
+      "qualifier": null,
+      "declaration_start_text": "theorem finite_reducibility {t A} (h : FiniteDerives t A) :"
+    },
+    {
+      "name": "P01Candidates.finite_SN",
+      "kind": "theorem",
+      "module": "P01Candidates",
+      "path": "formal/P01Candidates.lean",
+      "line": 261,
+      "qualifier": null,
+      "declaration_start_text": "theorem finite_SN {t A} (h : FiniteDerives t A) : SN t :="
+    },
+    {
+      "name": "P01Certificate.Direction",
+      "kind": "inductive",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 7,
+      "qualifier": null,
+      "declaration_start_text": "inductive Direction where"
+    },
+    {
+      "name": "P01Certificate.Address",
+      "kind": "abbrev",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "abbrev Address := List Direction"
+    },
+    {
+      "name": "P01Certificate.root",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 12,
+      "qualifier": null,
+      "declaration_start_text": "def root (t : Term) : Option {u : Term // Step t u} := match t with"
+    },
+    {
+      "name": "P01Certificate.stepAt",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 18,
+      "qualifier": null,
+      "declaration_start_text": "def stepAt : (t : Term) \u2192 Address \u2192 Option {u : Term // Step t u}"
+    },
+    {
+      "name": "P01Certificate.replay",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 28,
+      "qualifier": null,
+      "declaration_start_text": "def replay : (t : Term) \u2192 List Address \u2192 Option {u : Term // Red t u}"
+    },
+    {
+      "name": "P01Certificate.checkJoin",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 36,
+      "qualifier": null,
+      "declaration_start_text": "def checkJoin (t u : Term) (l r : List Address) : Option (Conv t u) :="
+    },
+    {
+      "name": "P01Certificate.replay_sound",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 45,
+      "qualifier": null,
+      "declaration_start_text": "theorem replay_sound (t : Term) (p : List Address)"
+    },
+    {
+      "name": "P01Certificate.join_sound",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 48,
+      "qualifier": null,
+      "declaration_start_text": "theorem join_sound (t u : Term) (l r : List Address)"
+    },
+    {
+      "name": "P01Certificate.FiniteEnvelope",
+      "kind": "structure",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 53,
+      "qualifier": null,
+      "declaration_start_text": "structure FiniteEnvelope (t : Term) (A : TypeCode) where"
+    },
+    {
+      "name": "P01Certificate.finite_envelope_sound",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 58,
+      "qualifier": null,
+      "declaration_start_text": "theorem finite_envelope_sound {t A} (e : FiniteEnvelope t A) : FiniteDerives t A := by"
+    },
+    {
+      "name": "P01Certificate.finite_envelope_SN",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 63,
+      "qualifier": null,
+      "declaration_start_text": "theorem finite_envelope_SN {t A} (e : FiniteEnvelope t A) : P01Candidates.SN t :="
+    },
+    {
+      "name": "P01Certificate.DependentEnvelope",
+      "kind": "structure",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 69,
+      "qualifier": null,
+      "declaration_start_text": "structure DependentEnvelope (\u0393 : P01D.Context) (A : P01D.Ty \u0393) (p : P01D.Poly) where"
+    },
+    {
+      "name": "P01Certificate.dependent_envelope_sound",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 73,
+      "qualifier": null,
+      "declaration_start_text": "theorem dependent_envelope_sound {\u0393 A p} (e : DependentEnvelope \u0393 A p)"
+    },
+    {
+      "name": "P01Certificate.ReplayResult",
+      "kind": "inductive",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 82,
+      "qualifier": null,
+      "declaration_start_text": "inductive ReplayResult (\u0393 : P01D.Context) (A : P01D.Ty \u0393) (p : P01D.Poly) where"
+    },
+    {
+      "name": "P01Certificate.acceptedProof",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 86,
+      "qualifier": null,
+      "declaration_start_text": "def acceptedProof {\u0393 A p} : ReplayResult \u0393 A p \u2192 Option (DependentEnvelope \u0393 A p)"
+    },
+    {
+      "name": "P01Certificate.refusal_preserved",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 90,
+      "qualifier": null,
+      "declaration_start_text": "theorem refusal_preserved {\u0393 A p} (reason : String) :"
+    },
+    {
+      "name": "P01Certificate.accepted_replay_sound",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 93,
+      "qualifier": null,
+      "declaration_start_text": "theorem accepted_replay_sound {\u0393 A p} (r : ReplayResult \u0393 A p)"
+    },
+    {
+      "name": "P01Certificate.TypeShape",
+      "kind": "inductive",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 102,
+      "qualifier": null,
+      "declaration_start_text": "inductive TypeShape where"
+    },
+    {
+      "name": "P01Certificate.image",
+      "kind": "def",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 111,
+      "qualifier": null,
+      "declaration_start_text": "def image : TypeCode \u2192 TypeShape"
+    },
+    {
+      "name": "P01Certificate.identity_not_in_exact_target_image",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 117,
+      "qualifier": null,
+      "declaration_start_text": "theorem identity_not_in_exact_target_image (A : TypeShape) :"
+    },
+    {
+      "name": "P01Certificate.sigma_not_in_exact_target_image",
+      "kind": "theorem",
+      "module": "P01Certificates",
+      "path": "formal/P01Certificates.lean",
+      "line": 121,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_not_in_exact_target_image (A B : TypeShape) :"
+    },
+    {
+      "name": "P01Source.Par",
+      "kind": "inductive",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "inductive Par : Term \u2192 Term \u2192 Prop where"
+    },
+    {
+      "name": "P01Source.par_refl",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 20,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_refl (t : Term) : Par t t := by"
+    },
+    {
+      "name": "P01Source.dev",
+      "kind": "def",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 29,
+      "qualifier": null,
+      "declaration_start_text": "def dev : Term \u2192 Term"
+    },
+    {
+      "name": "P01Source.par_i_form",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 36,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_i_form {u} (h : Par .i u) : u = .i := by cases h; rfl"
+    },
+    {
+      "name": "P01Source.par_k_form",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 38,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_k_form {a u} (h : Par (.app .k a) u) :"
+    },
+    {
+      "name": "P01Source.par_s1_form",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 43,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_s1_form {a u} (h : Par (.app .s a) u) :"
+    },
+    {
+      "name": "P01Source.par_s2_form",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 48,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_s2_form {a b u} (h : Par (.app (.app .s a) b) u) :"
+    },
+    {
+      "name": "P01Source.par_k_args",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 55,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_k_args {a a'} (h : Par (.app .k a) (.app .k a')) : Par a a' := by"
+    },
+    {
+      "name": "P01Source.par_s2_args",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 59,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_s2_args {a b a' b'}"
+    },
+    {
+      "name": "P01Source.dev_plain",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 66,
+      "qualifier": null,
+      "declaration_start_text": "theorem dev_plain (f x : Term) (hi : f \u2260 .i)"
+    },
+    {
+      "name": "P01Source.par_develop",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 92,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_develop {t u} (h : Par t u) : Par u (dev t) := by"
+    },
+    {
+      "name": "P01Source.par_diamond",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 124,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_diamond {t u v} (h : Par t u) (k : Par t v) :"
+    },
+    {
+      "name": "P01Source.red_trans",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 127,
+      "qualifier": null,
+      "declaration_start_text": "theorem red_trans {t u v} (h : Red t u) (k : Red u v) : Red t v := by"
+    },
+    {
+      "name": "P01Source.red_right",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 132,
+      "qualifier": null,
+      "declaration_start_text": "theorem red_right (f) {x y} (h : Red x y) : Red (.app f x) (.app f y) := by"
+    },
+    {
+      "name": "P01Source.red_app",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 137,
+      "qualifier": null,
+      "declaration_start_text": "theorem red_app {f g x y} (h : Red f g) (k : Red x y) :"
+    },
+    {
+      "name": "P01Source.par_red",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 140,
+      "qualifier": null,
+      "declaration_start_text": "theorem par_red {t u} (h : Par t u) : Red t u := by"
+    },
+    {
+      "name": "P01Source.step_par",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 154,
+      "qualifier": null,
+      "declaration_start_text": "theorem step_par {t u} (h : Step t u) : Par t u := by"
+    },
+    {
+      "name": "P01Source.PStar",
+      "kind": "abbrev",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 162,
+      "qualifier": null,
+      "declaration_start_text": "abbrev PStar := P01SNReflection.Star Par"
+    },
+    {
+      "name": "P01Source.pstar_trans",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 164,
+      "qualifier": null,
+      "declaration_start_text": "theorem pstar_trans {t u v} (h : PStar t u) (k : PStar u v) : PStar t v := by"
+    },
+    {
+      "name": "P01Source.strip",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 169,
+      "qualifier": null,
+      "declaration_start_text": "theorem strip {t u v} (h : Par t u) (r : PStar t v) :"
+    },
+    {
+      "name": "P01Source.pstar_confluence",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 178,
+      "qualifier": null,
+      "declaration_start_text": "theorem pstar_confluence {t u v} (h : PStar t u) (k : PStar t v) :"
+    },
+    {
+      "name": "P01Source.red_pstar",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 187,
+      "qualifier": null,
+      "declaration_start_text": "theorem red_pstar {t u} (h : Red t u) : PStar t u := by"
+    },
+    {
+      "name": "P01Source.pstar_red",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 192,
+      "qualifier": null,
+      "declaration_start_text": "theorem pstar_red {t u} (h : PStar t u) : Red t u := by"
+    },
+    {
+      "name": "P01Source.confluence",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 197,
+      "qualifier": null,
+      "declaration_start_text": "theorem confluence {t u v} (h : Red t u) (k : Red t v) :"
+    },
+    {
+      "name": "P01Source.conv_join",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 202,
+      "qualifier": null,
+      "declaration_start_text": "theorem conv_join {t u} (h : Conv t u) : \u2203 w, Red t w \u2227 Red u w := by"
+    },
+    {
+      "name": "P01Source.Normal",
+      "kind": "def",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 213,
+      "qualifier": null,
+      "declaration_start_text": "def Normal (t : Term) := \u2200 u, \u00ac Step t u"
+    },
+    {
+      "name": "P01Source.normal_red",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 215,
+      "qualifier": null,
+      "declaration_start_text": "theorem normal_red {t u} (h : Normal t) (r : Red t u) : u = t := by"
+    },
+    {
+      "name": "P01Source.normal_exists",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 220,
+      "qualifier": null,
+      "declaration_start_text": "theorem normal_exists {t} (h : P01Candidates.SN t) : \u2203n, Red t n \u2227 Normal n := by"
+    },
+    {
+      "name": "P01Source.normal_unique",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 230,
+      "qualifier": null,
+      "declaration_start_text": "theorem normal_unique {t u} (ht : Normal t) (hu : Normal u) (h : Conv t u) : t = u := by"
+    },
+    {
+      "name": "P01Source.red_conv",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 234,
+      "qualifier": null,
+      "declaration_start_text": "theorem red_conv {t u} (h : Red t u) : Conv t u := by"
+    },
+    {
+      "name": "P01Source.conversion_by_normal_forms",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 240,
+      "qualifier": null,
+      "declaration_start_text": "theorem conversion_by_normal_forms {t u n m} (ht : Red t n) (hu : Red u m)"
+    },
+    {
+      "name": "P01Source.finite_normal_form",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 248,
+      "qualifier": null,
+      "declaration_start_text": "theorem finite_normal_form {t A} (h : FiniteDerives t A) :"
+    },
+    {
+      "name": "P01Source.I_SKK_not_convertible",
+      "kind": "theorem",
+      "module": "P01Confluence",
+      "path": "formal/P01Confluence.lean",
+      "line": 253,
+      "qualifier": null,
+      "declaration_start_text": "theorem I_SKK_not_convertible : \u00ac Conv .i (.app (.app .s .k) .k) := by"
+    },
+    {
+      "name": "P01D.idBody",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 7,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def idBody {\u0393 A} (x : Tm \u0393 A) : Ty (extend \u0393 A) :="
+    },
+    {
+      "name": "P01D.idContext",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 10,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def idContext {\u0393 A} (x : Tm \u0393 A) : Context := extend (extend \u0393 A) (idBody x)"
+    },
+    {
+      "name": "P01D.baseProof",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 12,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def baseProof {\u0393 A} (x : Tm \u0393 A) : Tm \u0393 (instanceTy (idBody x) x) where"
+    },
+    {
+      "name": "P01D.baseSub",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 20,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def baseSub {\u0393 A} (x : Tm \u0393 A) : Sub \u0393 (idContext x) :="
+    },
+    {
+      "name": "P01D.pointSub",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 23,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def pointSub {\u0393 A} (x y : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.identity_at",
+      "kind": "theorem",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 27,
+      "qualifier": null,
+      "declaration_start_text": "theorem identity_at {\u0393 A} (x y : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.base_point_related",
+      "kind": "theorem",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 37,
+      "qualifier": null,
+      "declaration_start_text": "theorem base_point_related {\u0393 A} (x y : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.j",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 47,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def j {\u0393 A} (x y : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.j_computation",
+      "kind": "theorem",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 60,
+      "qualifier": null,
+      "declaration_start_text": "theorem j_computation {\u0393 A} (x y : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.inspectProof",
+      "kind": "def",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 65,
+      "qualifier": null,
+      "declaration_start_text": "def inspectProof (p : Term) : PER := if p = .i then rawPER else botPER"
+    },
+    {
+      "name": "P01D.proof_inspection_not_coherent",
+      "kind": "theorem",
+      "module": "P01ContextualJ",
+      "path": "formal/P01ContextualJ.lean",
+      "line": 67,
+      "qualifier": null,
+      "declaration_start_text": "theorem proof_inspection_not_coherent :"
+    },
+    {
+      "name": "P01D.Context",
+      "kind": "structure",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 11,
+      "qualifier": null,
+      "declaration_start_text": "structure Context where"
+    },
+    {
+      "name": "P01D.nilContext",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 19,
+      "qualifier": null,
+      "declaration_start_text": "def nilContext : Context where"
+    },
+    {
+      "name": "P01D.Ty",
+      "kind": "structure",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 27,
+      "qualifier": null,
+      "declaration_start_text": "structure Ty (\u0393 : Context) where"
+    },
+    {
+      "name": "P01D.Tm",
+      "kind": "structure",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 31,
+      "qualifier": null,
+      "declaration_start_text": "structure Tm (\u0393 : Context) (A : Ty \u0393) where"
+    },
+    {
+      "name": "P01D.tracked",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 38,
+      "qualifier": null,
+      "declaration_start_text": "theorem tracked (\u0393 A) (t : Tm \u0393 A) : \u2203p : Poly, p = t.code := \u27e8t.code,rfl\u27e9"
+    },
+    {
+      "name": "P01D.Tm.at",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 40,
+      "qualifier": null,
+      "declaration_start_text": "def Tm.at {\u0393 A} (t : Tm \u0393 A) (\u03b3 : \u0393.Val) : Term := eval t.code (\u0393.environment \u03b3)"
+    },
+    {
+      "name": "P01D.Tm.member",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 41,
+      "qualifier": null,
+      "declaration_start_text": "theorem Tm.member {\u0393 A} (t : Tm \u0393 A) (\u03b3) : (A.obj \u03b3).dom (t.at \u03b3) := t.valid (\u0393.refl \u03b3)"
+    },
+    {
+      "name": "P01D.EqTm",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 43,
+      "qualifier": null,
+      "declaration_start_text": "def EqTm {\u0393 A} (t u : Tm \u0393 A) :="
+    },
+    {
+      "name": "P01D.eqTm_refl",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 46,
+      "qualifier": null,
+      "declaration_start_text": "theorem eqTm_refl {\u0393 A} (t : Tm \u0393 A) : EqTm t t := fun _ _ h => t.valid h"
+    },
+    {
+      "name": "P01D.eqTm_sym",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 48,
+      "qualifier": null,
+      "declaration_start_text": "theorem eqTm_sym {\u0393 A} {t u : Tm \u0393 A} (h : EqTm t u) : EqTm u t := by"
+    },
+    {
+      "name": "P01D.eqTm_trans",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 53,
+      "qualifier": null,
+      "declaration_start_text": "theorem eqTm_trans {\u0393 A} {t u v : Tm \u0393 A} (h : EqTm t u) (k : EqTm u v) : EqTm t v :="
+    },
+    {
+      "name": "P01D.Sub",
+      "kind": "structure",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 56,
+      "qualifier": null,
+      "declaration_start_text": "structure Sub (\u0394 \u0393 : Context) where"
+    },
+    {
+      "name": "P01D.Sub.id",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 64,
+      "qualifier": null,
+      "declaration_start_text": "def Sub.id (\u0393 : Context) : Sub \u0393 \u0393 where"
+    },
+    {
+      "name": "P01D.Sub.comp",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 70,
+      "qualifier": null,
+      "declaration_start_text": "def Sub.comp {\u0393 \u0394 \u0398} (\u03c3 : Sub \u0394 \u0393) (\u03c4 : Sub \u0398 \u0394) : Sub \u0398 \u0393 where"
+    },
+    {
+      "name": "P01D.SubEq",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 83,
+      "qualifier": null,
+      "declaration_start_text": "def SubEq {\u0394 \u0393} (\u03c3 \u03c4 : Sub \u0394 \u0393) := \u03c3.map = \u03c4.map \u2227 \u2200n, \u03c3.code n = \u03c4.code n"
+    },
+    {
+      "name": "P01D.SubRel",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 87,
+      "qualifier": null,
+      "declaration_start_text": "def SubRel {\u0394 \u0393} (\u03c3 \u03c4 : Sub \u0394 \u0393) : Prop :="
+    },
+    {
+      "name": "P01D.subrel_refl",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 90,
+      "qualifier": null,
+      "declaration_start_text": "theorem subrel_refl {\u0394 \u0393} (\u03c3 : Sub \u0394 \u0393) : SubRel \u03c3 \u03c3 :="
+    },
+    {
+      "name": "P01D.subrel_sym",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 93,
+      "qualifier": null,
+      "declaration_start_text": "theorem subrel_sym {\u0394 \u0393} {\u03c3 \u03c4 : Sub \u0394 \u0393} (h : SubRel \u03c3 \u03c4) : SubRel \u03c4 \u03c3 :="
+    },
+    {
+      "name": "P01D.subrel_trans",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 96,
+      "qualifier": null,
+      "declaration_start_text": "theorem subrel_trans {\u0394 \u0393} {\u03c3 \u03c4 \u03c5 : Sub \u0394 \u0393}"
+    },
+    {
+      "name": "P01D.code_exact_substitution_implies_related",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 100,
+      "qualifier": null,
+      "declaration_start_text": "theorem code_exact_substitution_implies_related {\u0394 \u0393} {\u03c3 \u03c4 : Sub \u0394 \u0393}"
+    },
+    {
+      "name": "P01D.subrel_composition",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 106,
+      "qualifier": null,
+      "declaration_start_text": "theorem subrel_composition {\u0393 \u0394 \u0398} {\u03c3 \u03c3' : Sub \u0394 \u0393} {\u03c4 \u03c4' : Sub \u0398 \u0394}"
+    },
+    {
+      "name": "P01D.sub_left_identity",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 110,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_left_identity {\u0393 \u0394} (\u03c3 : Sub \u0394 \u0393) : SubEq ((Sub.id \u0393).comp \u03c3) \u03c3 := by"
+    },
+    {
+      "name": "P01D.sub_right_identity",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 115,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_right_identity {\u0393 \u0394} (\u03c3 : Sub \u0394 \u0393) : SubEq (\u03c3.comp (Sub.id \u0394)) \u03c3 := by"
+    },
+    {
+      "name": "P01D.sub_associative",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 120,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_associative {\u0393 \u0394 \u0398 \u039e} (\u03c3 : Sub \u0394 \u0393) (\u03c4 : Sub \u0398 \u0394) (\u03c5 : Sub \u039e \u0398) :"
+    },
+    {
+      "name": "P01D.Ty.pull",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 126,
+      "qualifier": null,
+      "declaration_start_text": "def Ty.pull {\u0393 \u0394} (A : Ty \u0393) (\u03c3 : Sub \u0394 \u0393) : Ty \u0394 where"
+    },
+    {
+      "name": "P01D.Tm.subst",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 130,
+      "qualifier": null,
+      "declaration_start_text": "def Tm.subst {\u0393 \u0394 A} (t : Tm \u0393 A) (\u03c3 : Sub \u0394 \u0393) : Tm \u0394 (A.pull \u03c3) where"
+    },
+    {
+      "name": "P01D.related_substitution_fibres",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 140,
+      "qualifier": null,
+      "declaration_start_text": "theorem related_substitution_fibres {\u0393 \u0394} (A : Ty \u0393) {\u03c3 \u03c4 : Sub \u0394 \u0393}"
+    },
+    {
+      "name": "P01D.term_substitution_related",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 145,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_substitution_related {\u0393 \u0394 A} (t : Tm \u0393 A) {\u03c3 \u03c4 : Sub \u0394 \u0393}"
+    },
+    {
+      "name": "P01D.typing_under_substitution",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 157,
+      "qualifier": null,
+      "declaration_start_text": "theorem typing_under_substitution {\u0393 \u0394 A} (t : Tm \u0393 A) (\u03c3 : Sub \u0394 \u0393) (\u03b3 \u03b4) (h : \u0394.eqv \u03b3 \u03b4) :"
+    },
+    {
+      "name": "P01D.term_substitution_identity",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 161,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_substitution_identity {\u0393 A} (t : Tm \u0393 A) :"
+    },
+    {
+      "name": "P01D.term_substitution_composition",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 164,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_substitution_composition {\u0393 \u0394 \u0398 A} (t : Tm \u0393 A)"
+    },
+    {
+      "name": "P01D.extend",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 168,
+      "qualifier": null,
+      "declaration_start_text": "def extend (\u0393 : Context) (A : Ty \u0393) : Context where"
+    },
+    {
+      "name": "P01D.weaken",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 183,
+      "qualifier": null,
+      "declaration_start_text": "def weaken (\u0393 A) : Sub (extend \u0393 A) \u0393 where"
+    },
+    {
+      "name": "P01D.variable",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 189,
+      "qualifier": null,
+      "declaration_start_text": "def variable (\u0393 A) : Tm (extend \u0393 A) (A.pull (weaken \u0393 A)) where"
+    },
+    {
+      "name": "P01D.Sub.extend",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 193,
+      "qualifier": null,
+      "declaration_start_text": "def Sub.extend {\u0393 \u0394} (\u03c3 : Sub \u0394 \u0393) (A : Ty \u0393) (t : Tm \u0394 (A.pull \u03c3)) :"
+    },
+    {
+      "name": "P01D.instanceSub",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 202,
+      "qualifier": null,
+      "declaration_start_text": "def instanceSub {\u0393 A} (t : Tm \u0393 A) : Sub \u0393 (extend \u0393 A) := (Sub.id \u0393).extend A t"
+    },
+    {
+      "name": "P01D.instanceTy",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 204,
+      "qualifier": null,
+      "declaration_start_text": "def instanceTy {\u0393 A} (B : Ty (extend \u0393 A)) (t : Tm \u0393 A) : Ty \u0393 := B.pull (instanceSub t)"
+    },
+    {
+      "name": "P01D.fibre",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 206,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def fibre {\u0393 A} (B : Ty (extend \u0393 A)) (\u03b3 : \u0393.Val) (x : Term) : PER :="
+    },
+    {
+      "name": "P01D.fibre_cross",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 209,
+      "qualifier": null,
+      "declaration_start_text": "theorem fibre_cross {\u0393 A} (B : Ty (extend \u0393 A)) {\u03b3 \u03b4 x y}"
+    },
+    {
+      "name": "P01D.piTy",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 217,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def piTy {\u0393 A} (B : Ty (extend \u0393 A)) : Ty \u0393 where"
+    },
+    {
+      "name": "P01D.lam",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 233,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def lam {\u0393 A B} (b : Tm (extend \u0393 A) B) : Tm \u0393 (piTy B) where"
+    },
+    {
+      "name": "P01D.app",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 246,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def app {\u0393 A B} (f : Tm \u0393 (piTy B)) (a : Tm \u0393 A) : Tm \u0393 (instanceTy B a) where"
+    },
+    {
+      "name": "P01D.abstraction_congruence",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 257,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstraction_congruence {\u0393 A B} {b c : Tm (extend \u0393 A) B} (h : EqTm b c) :"
+    },
+    {
+      "name": "P01D.pi_beta",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 269,
+      "qualifier": null,
+      "declaration_start_text": "theorem pi_beta {\u0393 A B} (b : Tm (extend \u0393 A) B) (a : Tm \u0393 A) (\u03b3 : \u0393.Val) :"
+    },
+    {
+      "name": "P01D.sigmaTy",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 275,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def sigmaTy {\u0393 A} (B : Ty (extend \u0393 A)) : Ty \u0393 where"
+    },
+    {
+      "name": "P01D.pair",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 294,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def pair {\u0393 A B} (a : Tm \u0393 A) (b : Tm \u0393 (instanceTy B a)) : Tm \u0393 (sigmaTy B) where"
+    },
+    {
+      "name": "P01D.fst",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 303,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def fst {\u0393 A B} (z : Tm \u0393 (sigmaTy B)) : Tm \u0393 A where"
+    },
+    {
+      "name": "P01D.snd",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 307,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def snd {\u0393 A B} (z : Tm \u0393 (sigmaTy B)) : Tm \u0393 (instanceTy B (fst z)) where"
+    },
+    {
+      "name": "P01D.sigma_beta_first",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 317,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_beta_first {\u0393 A B} (a : Tm \u0393 A) (b : Tm \u0393 (instanceTy B a)) (\u03b3) :"
+    },
+    {
+      "name": "P01D.sigma_beta_second",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 320,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_beta_second {\u0393 A B} (a : Tm \u0393 A) (b : Tm \u0393 (instanceTy B a)) (\u03b3) :"
+    },
+    {
+      "name": "P01D.sigma_eta_context",
+      "kind": "theorem",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 323,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_eta_context {\u0393 A B} (z : Tm \u0393 (sigmaTy B)) (\u03b3) :"
+    },
+    {
+      "name": "P01D.identityTy",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 326,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def identityTy {\u0393 A} (x y : Tm \u0393 A) : Ty \u0393 where"
+    },
+    {
+      "name": "P01D.reflTm",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 344,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def reflTm {\u0393 A} (x : Tm \u0393 A) : Tm \u0393 (identityTy x x) where"
+    },
+    {
+      "name": "P01D.typeExtend",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 350,
+      "qualifier": null,
+      "declaration_start_text": "def typeExtend (\u0393 : Context) : Context where"
+    },
+    {
+      "name": "P01D.typeWeaken",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 358,
+      "qualifier": null,
+      "declaration_start_text": "def typeWeaken (\u0393) : Sub (typeExtend \u0393) \u0393 where"
+    },
+    {
+      "name": "P01D.typeVariable",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 364,
+      "qualifier": null,
+      "declaration_start_text": "def typeVariable (\u0393) : Ty (typeExtend \u0393) where"
+    },
+    {
+      "name": "P01D.typeInstance",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 368,
+      "qualifier": null,
+      "declaration_start_text": "def typeInstance {\u0393} (A : Ty \u0393) : Sub \u0393 (typeExtend \u0393) where"
+    },
+    {
+      "name": "P01D.AllFormation",
+      "kind": "structure",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 378,
+      "qualifier": null,
+      "declaration_start_text": "structure AllFormation {\u0393} (B : Ty (typeExtend \u0393)) where"
+    },
+    {
+      "name": "P01D.allTy",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 383,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def allTy {\u0393 B} (F : @AllFormation \u0393 B) : Ty \u0393 where"
+    },
+    {
+      "name": "P01D.allIntro",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 389,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def allIntro {\u0393 B} (F : @AllFormation \u0393 B) (b : Tm (typeExtend \u0393) B)"
+    },
+    {
+      "name": "P01D.allElim",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 402,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def allElim {\u0393 B} (F : @AllFormation \u0393 B)"
+    },
+    {
+      "name": "P01D.allSelf",
+      "kind": "def",
+      "module": "P01DependentCore",
+      "path": "formal/P01DependentCore.lean",
+      "line": 412,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def allSelf {\u0393 B} (F : @AllFormation \u0393 B) (t : Tm \u0393 (allTy F)) :"
+    },
+    {
+      "name": "P01D.constantTy",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 7,
+      "qualifier": null,
+      "declaration_start_text": "def constantTy (\u0393 : Context) (P : PER) : Ty \u0393 where"
+    },
+    {
+      "name": "P01D.identity_rel",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 11,
+      "qualifier": null,
+      "declaration_start_text": "def identity_rel (P : PER) : (ArrPER P P).dom .i := by"
+    },
+    {
+      "name": "P01D.identity_link",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 15,
+      "qualifier": null,
+      "declaration_start_text": "def identity_link {P Q} (R : Link P Q) : (arrowLink R R).rel .i .i := by"
+    },
+    {
+      "name": "P01D.idParamFamily",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 20,
+      "qualifier": null,
+      "declaration_start_text": "def idParamFamily : ParamFamily where"
+    },
+    {
+      "name": "P01D.idBodyTy",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 25,
+      "qualifier": null,
+      "declaration_start_text": "def idBodyTy (\u0393 : Context) : Ty (typeExtend \u0393) where"
+    },
+    {
+      "name": "P01D.idAllFormation",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 29,
+      "qualifier": null,
+      "declaration_start_text": "def idAllFormation (\u0393 : Context) : AllFormation (idBodyTy \u0393) where"
+    },
+    {
+      "name": "P01D.idAllBody",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 34,
+      "qualifier": null,
+      "declaration_start_text": "def idAllBody (\u0393 : Context) : Tm (typeExtend \u0393) (idBodyTy \u0393) where"
+    },
+    {
+      "name": "P01D.polymorphicIdentity",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 38,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def polymorphicIdentity (\u0393 : Context) : Tm \u0393 (allTy (idAllFormation \u0393)) :="
+    },
+    {
+      "name": "P01D.polymorphicIdentitySelf",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 41,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def polymorphicIdentitySelf (\u0393 : Context) :="
+    },
+    {
+      "name": "P01D.atomIdentity",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 44,
+      "qualifier": null,
+      "declaration_start_text": "def atomIdentity : Tm nilContext (constantTy nilContext rawPER) where"
+    },
+    {
+      "name": "P01D.dependentReflexivity",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 50,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def dependentReflexivity :="
+    },
+    {
+      "name": "P01D.dependentReflexivityEnvelope",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 53,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def dependentReflexivityEnvelope :"
+    },
+    {
+      "name": "P01D.pairBody",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 59,
+      "qualifier": null,
+      "declaration_start_text": "def pairBody : Ty (extend nilContext (constantTy nilContext rawPER)) :="
+    },
+    {
+      "name": "P01D.representedPair",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 62,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def representedPair : Tm nilContext (sigmaTy pairBody) :="
+    },
+    {
+      "name": "P01D.representedPair_eta",
+      "kind": "theorem",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 65,
+      "qualifier": null,
+      "declaration_start_text": "theorem representedPair_eta (\u03b3 : nilContext.Val) :"
+    },
+    {
+      "name": "P01D.constantMotive",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 69,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def constantMotive : Ty (idContext atomIdentity) := constantTy _ rawPER"
+    },
+    {
+      "name": "P01D.basedJExample",
+      "kind": "def",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 71,
+      "qualifier": "noncomputable",
+      "declaration_start_text": "noncomputable def basedJExample :="
+    },
+    {
+      "name": "P01D.basedJExample_computes",
+      "kind": "theorem",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 75,
+      "qualifier": null,
+      "declaration_start_text": "theorem basedJExample_computes (\u03b3 : nilContext.Val) : Red (basedJExample.at \u03b3) .i :="
+    },
+    {
+      "name": "P01D.polymorphicIdentity_uniform",
+      "kind": "theorem",
+      "module": "P01Examples",
+      "path": "formal/P01Examples.lean",
+      "line": 80,
+      "qualifier": null,
+      "declaration_start_text": "theorem polymorphicIdentity_uniform (P Q : PER) (R : Link P Q) :"
+    },
+    {
+      "name": "P01Generated.cert_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 5,
+      "qualifier": null,
+      "declaration_start_text": "def cert_identity : Cert := (OrthemologyV3.Cert.i OrthemologyV2.TypeCode.bottom)"
+    },
+    {
+      "name": "P01Generated.checked_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 6,
+      "qualifier": null,
+      "declaration_start_text": "def checked_identity : Checked := (check 0 cert_identity).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 7,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_identity : checked_identity.term = OrthemologyV2.Term.i := by rfl"
+    },
+    {
+      "name": "P01Generated.type_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_identity : checked_identity.ty = (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 9,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_identity : P01Certificate.FiniteEnvelope OrthemologyV2.Term.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) :="
+    },
+    {
+      "name": "P01Generated.derives_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 11,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_identity : FiniteDerives OrthemologyV2.Term.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) :="
+    },
+    {
+      "name": "P01Generated.cert_polymorphic_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 13,
+      "qualifier": null,
+      "declaration_start_text": "def cert_polymorphic_identity : Cert := (OrthemologyV3.Cert.allI (OrthemologyV3.Cert.i (OrthemologyV2.TypeCode.var 0)))"
+    },
+    {
+      "name": "P01Generated.checked_polymorphic_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "def checked_polymorphic_identity : Checked := (check 0 cert_polymorphic_identity).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_polymorphic_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 15,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_polymorphic_identity : checked_polymorphic_identity.term = OrthemologyV2.Term.i := by rfl"
+    },
+    {
+      "name": "P01Generated.type_polymorphic_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 16,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_polymorphic_identity : checked_polymorphic_identity.ty = (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_polymorphic_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 17,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_polymorphic_identity : P01Certificate.FiniteEnvelope OrthemologyV2.Term.i (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) :="
+    },
+    {
+      "name": "P01Generated.derives_polymorphic_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 19,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_polymorphic_identity : FiniteDerives OrthemologyV2.Term.i (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) :="
+    },
+    {
+      "name": "P01Generated.cert_identity_self",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 21,
+      "qualifier": null,
+      "declaration_start_text": "def cert_identity_self : Cert := (OrthemologyV3.Cert.app (OrthemologyV3.Cert.allE (OrthemologyV3.Cert.allI (OrthemologyV3.Cert.i (OrthemologyV2.TypeCode.var 0))) (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0)))) (OrthemologyV3.Cert.allI (OrthemologyV3.Cert.i (OrthemologyV2.TypeCode.var 0))))"
+    },
+    {
+      "name": "P01Generated.checked_identity_self",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 22,
+      "qualifier": null,
+      "declaration_start_text": "def checked_identity_self : Checked := (check 0 cert_identity_self).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_identity_self",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 23,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_identity_self : checked_identity_self.term = (OrthemologyV2.Term.app OrthemologyV2.Term.i OrthemologyV2.Term.i) := by rfl"
+    },
+    {
+      "name": "P01Generated.type_identity_self",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 24,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_identity_self : checked_identity_self.ty = (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_identity_self",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 25,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_identity_self : P01Certificate.FiniteEnvelope (OrthemologyV2.Term.app OrthemologyV2.Term.i OrthemologyV2.Term.i) (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) :="
+    },
+    {
+      "name": "P01Generated.derives_identity_self",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 27,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_identity_self : FiniteDerives (OrthemologyV2.Term.app OrthemologyV2.Term.i OrthemologyV2.Term.i) (OrthemologyV2.TypeCode.all (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.var 0) (OrthemologyV2.TypeCode.var 0))) :="
+    },
+    {
+      "name": "P01Generated.cert_binder_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 29,
+      "qualifier": null,
+      "declaration_start_text": "def cert_binder_identity : Cert := (OrthemologyV3.Cert.i OrthemologyV2.TypeCode.bottom)"
+    },
+    {
+      "name": "P01Generated.checked_binder_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 30,
+      "qualifier": null,
+      "declaration_start_text": "def checked_binder_identity : Checked := (check 0 cert_binder_identity).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_binder_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 31,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_binder_identity : checked_binder_identity.term = OrthemologyV2.Term.i := by rfl"
+    },
+    {
+      "name": "P01Generated.type_binder_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 32,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_binder_identity : checked_binder_identity.ty = (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_binder_identity",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 33,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_binder_identity : P01Certificate.FiniteEnvelope OrthemologyV2.Term.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) :="
+    },
+    {
+      "name": "P01Generated.derives_binder_identity",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 35,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_binder_identity : FiniteDerives OrthemologyV2.Term.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) :="
+    },
+    {
+      "name": "P01Generated.cert_binder_K",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 37,
+      "qualifier": null,
+      "declaration_start_text": "def cert_binder_K : Cert := (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) OrthemologyV2.TypeCode.bottom) (OrthemologyV3.Cert.k OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.i OrthemologyV2.TypeCode.bottom))"
+    },
+    {
+      "name": "P01Generated.checked_binder_K",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 38,
+      "qualifier": null,
+      "declaration_start_text": "def checked_binder_K : Checked := (check 0 cert_binder_K).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_binder_K",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 39,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_binder_K : checked_binder_K.term = (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i) := by rfl"
+    },
+    {
+      "name": "P01Generated.type_binder_K",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 40,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_binder_K : checked_binder_K.ty = (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_binder_K",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 41,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_binder_K : P01Certificate.FiniteEnvelope (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) :="
+    },
+    {
+      "name": "P01Generated.derives_binder_K",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 43,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_binder_K : FiniteDerives (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) :="
+    },
+    {
+      "name": "P01Generated.cert_binder_S",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 45,
+      "qualifier": null,
+      "declaration_start_text": "def cert_binder_S : Cert := (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.s OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.s OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)))))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.i OrthemologyV2.TypeCode.bottom))))))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV3.Cert.s OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.app (OrthemologyV3.Cert.s (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) OrthemologyV2.TypeCode.bottom))) (OrthemologyV3.Cert.i (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))))) (OrthemologyV3.Cert.app (OrthemologyV3.Cert.k (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV3.Cert.i OrthemologyV2.TypeCode.bottom)))))"
+    },
+    {
+      "name": "P01Generated.checked_binder_S",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 46,
+      "qualifier": null,
+      "declaration_start_text": "def checked_binder_S : Checked := (check 0 cert_binder_S).get (by decide)"
+    },
+    {
+      "name": "P01Generated.term_binder_S",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 47,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_binder_S : checked_binder_S.term = (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))))) (OrthemologyV2.Term.app OrthemologyV2.Term.k (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))) := by rfl"
+    },
+    {
+      "name": "P01Generated.type_binder_S",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 48,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_binder_S : checked_binder_S.ty = (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) := by rfl"
+    },
+    {
+      "name": "P01Generated.envelope_binder_S",
+      "kind": "def",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 49,
+      "qualifier": null,
+      "declaration_start_text": "def envelope_binder_S : P01Certificate.FiniteEnvelope (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))))) (OrthemologyV2.Term.app OrthemologyV2.Term.k (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) :="
+    },
+    {
+      "name": "P01Generated.derives_binder_S",
+      "kind": "theorem",
+      "module": "P01GeneratedExports",
+      "path": "formal/P01GeneratedExports.lean",
+      "line": 51,
+      "qualifier": null,
+      "declaration_start_text": "theorem derives_binder_S : FiniteDerives (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))))) (OrthemologyV2.Term.app OrthemologyV2.Term.k (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.s)) (OrthemologyV2.Term.app (OrthemologyV2.Term.app OrthemologyV2.Term.s (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.k)) OrthemologyV2.Term.i))) (OrthemologyV2.Term.app OrthemologyV2.Term.k OrthemologyV2.Term.i)))) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom)) (OrthemologyV2.TypeCode.arrow (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom) (OrthemologyV2.TypeCode.arrow OrthemologyV2.TypeCode.bottom OrthemologyV2.TypeCode.bottom))) :="
+    },
+    {
+      "name": "P01F.LTerm",
+      "kind": "inductive",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "inductive LTerm where"
+    },
+    {
+      "name": "P01F.ren",
+      "kind": "def",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 15,
+      "qualifier": null,
+      "declaration_start_text": "def ren (r : Nat \u2192 Nat) : LTerm \u2192 LTerm"
+    },
+    {
+      "name": "P01F.up",
+      "kind": "def",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 22,
+      "qualifier": null,
+      "declaration_start_text": "def up (\u03c3 : Nat \u2192 LTerm) : Nat \u2192 LTerm"
+    },
+    {
+      "name": "P01F.sub",
+      "kind": "def",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 26,
+      "qualifier": null,
+      "declaration_start_text": "def sub (\u03c3 : Nat \u2192 LTerm) : LTerm \u2192 LTerm"
+    },
+    {
+      "name": "P01F.single",
+      "kind": "def",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 33,
+      "qualifier": null,
+      "declaration_start_text": "def single (a : LTerm) : Nat \u2192 LTerm"
+    },
+    {
+      "name": "P01F.inst",
+      "kind": "def",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 37,
+      "qualifier": null,
+      "declaration_start_text": "def inst (b a : LTerm) := sub (single a) b"
+    },
+    {
+      "name": "P01F.ren_id",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 39,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem ren_id (t : LTerm) : ren id t = t := by"
+    },
+    {
+      "name": "P01F.ren_comp",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 49,
+      "qualifier": null,
+      "declaration_start_text": "theorem ren_comp (t : LTerm) (r s : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.sub_id",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 62,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem sub_id (t : LTerm) : sub LTerm.var t = t := by"
+    },
+    {
+      "name": "P01F.sub_ren",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 72,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_ren (t : LTerm) (\u03c3 : Nat \u2192 LTerm) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.ren_sub",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 85,
+      "qualifier": null,
+      "declaration_start_text": "theorem ren_sub (t : LTerm) (\u03c3 : Nat \u2192 LTerm) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.sub_comp",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 101,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_comp (t : LTerm) (\u03c3 \u03c4 : Nat \u2192 LTerm) :"
+    },
+    {
+      "name": "P01F.sub_up_shift",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 120,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem sub_up_shift (t : LTerm) (\u03c3 : Nat \u2192 LTerm) :"
+    },
+    {
+      "name": "P01F.inst_shift",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 124,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem inst_shift (t a : LTerm) : inst (ren Nat.succ t) a = t := by"
+    },
+    {
+      "name": "P01F.sub_inst",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 127,
+      "qualifier": null,
+      "declaration_start_text": "theorem sub_inst (b a : LTerm) (\u03c3 : Nat \u2192 LTerm) :"
+    },
+    {
+      "name": "P01F.Beta",
+      "kind": "inductive",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 137,
+      "qualifier": null,
+      "declaration_start_text": "inductive Beta : LTerm \u2192 LTerm \u2192 Prop where"
+    },
+    {
+      "name": "P01F.BStar",
+      "kind": "abbrev",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 143,
+      "qualifier": null,
+      "declaration_start_text": "abbrev BStar := P01SNReflection.Star Beta"
+    },
+    {
+      "name": "P01F.BPositive",
+      "kind": "abbrev",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 144,
+      "qualifier": null,
+      "declaration_start_text": "abbrev BPositive := P01SNReflection.Positive Beta"
+    },
+    {
+      "name": "P01F.beta_sub",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 146,
+      "qualifier": null,
+      "declaration_start_text": "theorem beta_sub {t u} (h : Beta t u) (\u03c3 : Nat \u2192 LTerm) :"
+    },
+    {
+      "name": "P01F.bstar_trans",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 154,
+      "qualifier": null,
+      "declaration_start_text": "theorem bstar_trans {t u v} (h : BStar t u) (k : BStar u v) : BStar t v := by"
+    },
+    {
+      "name": "P01F.bstar_left",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 159,
+      "qualifier": null,
+      "declaration_start_text": "theorem bstar_left {t u} (h : BStar t u) (a) : BStar (.app t a) (.app u a) := by"
+    },
+    {
+      "name": "P01F.bstar_right",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 164,
+      "qualifier": null,
+      "declaration_start_text": "theorem bstar_right (f) {t u} (h : BStar t u) : BStar (.app f t) (.app f u) := by"
+    },
+    {
+      "name": "P01F.BConv",
+      "kind": "inductive",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 169,
+      "qualifier": null,
+      "declaration_start_text": "inductive BConv : LTerm \u2192 LTerm \u2192 Prop where"
+    },
+    {
+      "name": "P01F.bstar_conv",
+      "kind": "theorem",
+      "module": "P01LambdaSyntax",
+      "path": "formal/P01LambdaSyntax.lean",
+      "line": 175,
+      "qualifier": null,
+      "declaration_start_text": "theorem bstar_conv {t u} (h : BStar t u) : BConv t u := by"
+    },
+    {
+      "name": "P01Source.tower",
+      "kind": "def",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "def tower : Nat \u2192 Term"
+    },
+    {
+      "name": "P01Source.omegaShape",
+      "kind": "def",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 12,
+      "qualifier": null,
+      "declaration_start_text": "def omegaShape (m n : Nat) := Term.app (tower m) (tower n)"
+    },
+    {
+      "name": "P01Source.duplicator_normal",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "theorem duplicator_normal : Normal duplicator := by"
+    },
+    {
+      "name": "P01Source.tower_step",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 23,
+      "qualifier": null,
+      "declaration_start_text": "theorem tower_step {n u} (h : Step (tower n) u) :"
+    },
+    {
+      "name": "P01Source.shape_step",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 33,
+      "qualifier": null,
+      "declaration_start_text": "theorem shape_step {m n u} (h : Step (omegaShape m n) u) :"
+    },
+    {
+      "name": "P01Source.shape_has_step",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 53,
+      "qualifier": null,
+      "declaration_start_text": "theorem shape_has_step (m n : Nat) : \u2203u, Step (omegaShape m n) u := by"
+    },
+    {
+      "name": "P01Source.shape_red",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 58,
+      "qualifier": null,
+      "declaration_start_text": "theorem shape_red {m n u} (r : Red (omegaShape m n) u) :"
+    },
+    {
+      "name": "P01Source.omega_no_normal_reduct",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 70,
+      "qualifier": null,
+      "declaration_start_text": "theorem omega_no_normal_reduct {u} (r : Red omega u) : \u00ac Normal u := by"
+    },
+    {
+      "name": "P01Source.omega_no_finite_representative",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 78,
+      "qualifier": null,
+      "declaration_start_text": "theorem omega_no_finite_representative :"
+    },
+    {
+      "name": "P01Source.omega_semantic_bottom_arrow",
+      "kind": "theorem",
+      "module": "P01Omega",
+      "path": "formal/P01Omega.lean",
+      "line": 90,
+      "qualifier": null,
+      "declaration_start_text": "theorem omega_semantic_bottom_arrow : (Code.arrow Code.bottom Code.bottom).accepts omega := by"
+    },
+    {
+      "name": "P01D.PER",
+      "kind": "structure",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 7,
+      "qualifier": null,
+      "declaration_start_text": "structure PER where"
+    },
+    {
+      "name": "P01D.PER.dom",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 13,
+      "qualifier": null,
+      "declaration_start_text": "def PER.dom (P : PER) (a) := P.rel a a"
+    },
+    {
+      "name": "P01D.PER.left",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 15,
+      "qualifier": null,
+      "declaration_start_text": "theorem PER.left {P : PER} {a b} (h : P.rel a b) : P.dom a := P.trans h (P.sym h)"
+    },
+    {
+      "name": "P01D.PER.right",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 16,
+      "qualifier": null,
+      "declaration_start_text": "theorem PER.right {P : PER} {a b} (h : P.rel a b) : P.dom b := P.trans (P.sym h) h"
+    },
+    {
+      "name": "P01D.per_ext",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 18,
+      "qualifier": null,
+      "declaration_start_text": "@[ext] theorem per_ext {P Q : PER} (h : \u2200a b, P.rel a b \u2194 Q.rel a b) : P = Q := by"
+    },
+    {
+      "name": "P01D.botPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 22,
+      "qualifier": null,
+      "declaration_start_text": "def botPER : PER where"
+    },
+    {
+      "name": "P01D.rawPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 28,
+      "qualifier": null,
+      "declaration_start_text": "def rawPER : PER where"
+    },
+    {
+      "name": "P01D.conv_app",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 34,
+      "qualifier": null,
+      "declaration_start_text": "theorem conv_app {f g x y} (h : Conv f g) (k : Conv x y) :"
+    },
+    {
+      "name": "P01D.PiPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 37,
+      "qualifier": null,
+      "declaration_start_text": "def PiPER (P : PER) (B : Term \u2192 PER)"
+    },
+    {
+      "name": "P01D.ArrPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 51,
+      "qualifier": null,
+      "declaration_start_text": "def ArrPER (P Q : PER) : PER := PiPER P (fun _ => Q) (fun _ => rfl)"
+    },
+    {
+      "name": "P01D.Link",
+      "kind": "structure",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 54,
+      "qualifier": null,
+      "declaration_start_text": "structure Link (P Q : PER) where"
+    },
+    {
+      "name": "P01D.Link.raw",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 59,
+      "qualifier": null,
+      "declaration_start_text": "theorem Link.raw {P Q} (R : Link P Q) {x y x' y'}"
+    },
+    {
+      "name": "P01D.diagonal",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 64,
+      "qualifier": null,
+      "declaration_start_text": "def diagonal (P : PER) : Link P P where"
+    },
+    {
+      "name": "P01D.arrowLink",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 69,
+      "qualifier": null,
+      "declaration_start_text": "def arrowLink {P Q A B : PER} (R : Link P Q) (S : Link A B) :"
+    },
+    {
+      "name": "P01D.arrow_identity",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 81,
+      "qualifier": null,
+      "declaration_start_text": "theorem arrow_identity (P A : PER) (f g : Term) :"
+    },
+    {
+      "name": "P01D.pair_congr",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 87,
+      "qualifier": null,
+      "declaration_start_text": "theorem pair_congr {x x' y y'} (hx : Conv x x') (hy : Conv y y') :"
+    },
+    {
+      "name": "P01D.Represented",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 93,
+      "qualifier": null,
+      "declaration_start_text": "def Represented (z : Term) := Conv z (pairTerm (firstTerm z) (secondTerm z))"
+    },
+    {
+      "name": "P01D.pair_represented",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 95,
+      "qualifier": null,
+      "declaration_start_text": "theorem pair_represented (x y : Term) : Represented (pairTerm x y) :="
+    },
+    {
+      "name": "P01D.represented_raw",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 98,
+      "qualifier": null,
+      "declaration_start_text": "theorem represented_raw {z w} (h : Conv z w) (hz : Represented z) : Represented w :="
+    },
+    {
+      "name": "P01D.SigmaPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 103,
+      "qualifier": null,
+      "declaration_start_text": "def SigmaPER (P : PER) (B : Term \u2192 PER)"
+    },
+    {
+      "name": "P01D.sigma_pair",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 130,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_pair {P B coh x x' y y'} (hx : P.rel x x')"
+    },
+    {
+      "name": "P01D.sigma_witness_iff",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 139,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_witness_iff (P B coh z w) :"
+    },
+    {
+      "name": "P01D.sigma_eta",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 149,
+      "qualifier": null,
+      "declaration_start_text": "theorem sigma_eta {P B coh z} (h : (SigmaPER P B coh).dom z) :"
+    },
+    {
+      "name": "P01D.IdPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 152,
+      "qualifier": null,
+      "declaration_start_text": "def IdPER (P : PER) (x y : Term) : PER where"
+    },
+    {
+      "name": "P01D.id_intro",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 158,
+      "qualifier": null,
+      "declaration_start_text": "theorem id_intro {P x} (h : P.dom x) : (IdPER P x x).dom .i :="
+    },
+    {
+      "name": "P01D.BasedMotive",
+      "kind": "structure",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 162,
+      "qualifier": null,
+      "declaration_start_text": "structure BasedMotive (P : PER) (x : Term) where"
+    },
+    {
+      "name": "P01D.based_transport",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 167,
+      "qualifier": null,
+      "declaration_start_text": "theorem based_transport {P x y p d e} (M : BasedMotive P x)"
+    },
+    {
+      "name": "P01D.Jterm",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 174,
+      "qualifier": null,
+      "declaration_start_text": "def Jterm (d y p : Term) := Term.app (.app (.app .k (.app .k d)) y) p"
+    },
+    {
+      "name": "P01D.J_red",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 176,
+      "qualifier": null,
+      "declaration_start_text": "theorem J_red (d y p : Term) : Red (Jterm d y p) d :="
+    },
+    {
+      "name": "P01D.based_J",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 179,
+      "qualifier": null,
+      "declaration_start_text": "theorem based_J {P x y p d e} (M : BasedMotive P x)"
+    },
+    {
+      "name": "P01D.ParamFamily",
+      "kind": "structure",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 187,
+      "qualifier": null,
+      "declaration_start_text": "structure ParamFamily where"
+    },
+    {
+      "name": "P01D.Parametric",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 192,
+      "qualifier": null,
+      "declaration_start_text": "def Parametric (F : ParamFamily) (t : Term) :="
+    },
+    {
+      "name": "P01D.AllPER",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 195,
+      "qualifier": null,
+      "declaration_start_text": "def AllPER (F : ParamFamily) : PER where"
+    },
+    {
+      "name": "P01D.all_domain",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 203,
+      "qualifier": null,
+      "declaration_start_text": "theorem all_domain (F : ParamFamily) (t) : (AllPER F).dom t \u2194 Parametric F t := by"
+    },
+    {
+      "name": "P01D.AllDiagonal",
+      "kind": "def",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 209,
+      "qualifier": null,
+      "declaration_start_text": "def AllDiagonal (F : ParamFamily) : Link (AllPER F) (AllPER F) where"
+    },
+    {
+      "name": "P01D.all_identity_extension",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 216,
+      "qualifier": null,
+      "declaration_start_text": "theorem all_identity_extension (F : ParamFamily) (t u) :"
+    },
+    {
+      "name": "P01D.all_eliminate",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 227,
+      "qualifier": null,
+      "declaration_start_text": "theorem all_eliminate {F t u} (h : (AllPER F).rel t u) (P : PER) :"
+    },
+    {
+      "name": "P01D.all_self_eliminate",
+      "kind": "theorem",
+      "module": "P01PER",
+      "path": "formal/P01PER.lean",
+      "line": 232,
+      "qualifier": null,
+      "declaration_start_text": "theorem all_self_eliminate {F t u} (h : (AllPER F).rel t u) :"
+    },
+    {
+      "name": "P01D.Poly",
+      "kind": "inductive",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "inductive Poly where"
+    },
+    {
+      "name": "P01D.Env",
+      "kind": "abbrev",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "abbrev Env := Nat \u2192 Term"
+    },
+    {
+      "name": "P01D.eval",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 16,
+      "qualifier": null,
+      "declaration_start_text": "def eval (p : Poly) (\u03b3 : Env) : Term := match p with"
+    },
+    {
+      "name": "P01D.psub",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 21,
+      "qualifier": null,
+      "declaration_start_text": "def psub (\u03c3 : Nat \u2192 Poly) : Poly \u2192 Poly"
+    },
+    {
+      "name": "P01D.pren",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 26,
+      "qualifier": null,
+      "declaration_start_text": "def pren (r : Nat \u2192 Nat) : Poly \u2192 Poly := psub (fun n => .var (r n))"
+    },
+    {
+      "name": "P01D.pup",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 28,
+      "qualifier": null,
+      "declaration_start_text": "def pup (\u03c3 : Nat \u2192 Poly) : Nat \u2192 Poly"
+    },
+    {
+      "name": "P01D.eval_sub",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 32,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem eval_sub (p : Poly) (\u03c3) (\u03b3) :"
+    },
+    {
+      "name": "P01D.psub_id",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 39,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem psub_id (p : Poly) : psub Poly.var p = p := by"
+    },
+    {
+      "name": "P01D.psub_comp",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 45,
+      "qualifier": null,
+      "declaration_start_text": "theorem psub_comp (p : Poly) (\u03c3 \u03c4) :"
+    },
+    {
+      "name": "P01D.eval_ren",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 52,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem eval_ren (p : Poly) (r) (\u03b3) :"
+    },
+    {
+      "name": "P01D.freeZero",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 56,
+      "qualifier": null,
+      "declaration_start_text": "def freeZero : Poly \u2192 Bool"
+    },
+    {
+      "name": "P01D.drop",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 61,
+      "qualifier": null,
+      "declaration_start_text": "def drop : Poly \u2192 Poly := pren Nat.pred"
+    },
+    {
+      "name": "P01D.abstract",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 63,
+      "qualifier": null,
+      "declaration_start_text": "def abstract (p : Poly) : Poly :="
+    },
+    {
+      "name": "P01D.freeZero_pren_succ",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 72,
+      "qualifier": null,
+      "declaration_start_text": "theorem freeZero_pren_succ (p : Poly) : freeZero (pren Nat.succ p) = false := by"
+    },
+    {
+      "name": "P01D.drop_pren_succ",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 80,
+      "qualifier": null,
+      "declaration_start_text": "theorem drop_pren_succ (p : Poly) : drop (pren Nat.succ p) = p := by"
+    },
+    {
+      "name": "P01D.freeZero_lifted_sub",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 88,
+      "qualifier": null,
+      "declaration_start_text": "theorem freeZero_lifted_sub (p : Poly) (\u03c3 : Nat \u2192 Poly) :"
+    },
+    {
+      "name": "P01D.drop_lifted_sub_absent",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 101,
+      "qualifier": null,
+      "declaration_start_text": "theorem drop_lifted_sub_absent (p : Poly) (\u03c3 : Nat \u2192 Poly) (h : freeZero p = false) :"
+    },
+    {
+      "name": "P01D.abstract_absent",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 114,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstract_absent (p : Poly) (h : freeZero p = false) :"
+    },
+    {
+      "name": "P01D.abstract_present_app",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 118,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstract_present_app (f x : Poly) (h : freeZero (.app f x) = true) :"
+    },
+    {
+      "name": "P01D.abstraction_naturality",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 125,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstraction_naturality (p : Poly) (\u03c3 : Nat \u2192 Poly) :"
+    },
+    {
+      "name": "P01D.eval_absent",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 154,
+      "qualifier": null,
+      "declaration_start_text": "theorem eval_absent (p : Poly) (h : freeZero p = false) (\u03b3) (a) :"
+    },
+    {
+      "name": "P01D.abstraction_beta",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 165,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstraction_beta (p : Poly) (\u03b3 : Env) (a : Term) :"
+    },
+    {
+      "name": "P01D.abstraction_substitution",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 185,
+      "qualifier": null,
+      "declaration_start_text": "theorem abstraction_substitution (p : Poly) (\u03c3 : Nat \u2192 Poly) (\u03b3 : Env) (a : Term) :"
+    },
+    {
+      "name": "P01D.pairPoly",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 196,
+      "qualifier": null,
+      "declaration_start_text": "def pairPoly (x y : Poly) : Poly :="
+    },
+    {
+      "name": "P01D.fstPoly",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 199,
+      "qualifier": null,
+      "declaration_start_text": "def fstPoly (z : Poly) := Poly.app z (.atom .k)"
+    },
+    {
+      "name": "P01D.sndPoly",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 200,
+      "qualifier": null,
+      "declaration_start_text": "def sndPoly (z : Poly) := Poly.app z (.app (.atom .k) (.atom .i))"
+    },
+    {
+      "name": "P01D.jPoly",
+      "kind": "def",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 201,
+      "qualifier": null,
+      "declaration_start_text": "def jPoly (d y p : Poly) := Poly.app (.app (.app (.atom .k) (.app (.atom .k) d)) y) p"
+    },
+    {
+      "name": "P01D.eval_pair",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 203,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem eval_pair (x y : Poly) (\u03b3) :"
+    },
+    {
+      "name": "P01D.eval_fst",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 205,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem eval_fst (z : Poly) (\u03b3) : eval (fstPoly z) \u03b3 = firstTerm (eval z \u03b3) := rfl"
+    },
+    {
+      "name": "P01D.eval_snd",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 206,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem eval_snd (z : Poly) (\u03b3) : eval (sndPoly z) \u03b3 = secondTerm (eval z \u03b3) := rfl"
+    },
+    {
+      "name": "P01D.eval_j",
+      "kind": "theorem",
+      "module": "P01Polynomials",
+      "path": "formal/P01Polynomials.lean",
+      "line": 208,
+      "qualifier": null,
+      "declaration_start_text": "theorem eval_j (d y p : Poly) (\u03b3) : Red (eval (jPoly d y p) \u03b3) (eval d \u03b3) :="
+    },
+    {
+      "name": "P01F.bstar_under",
+      "kind": "theorem",
+      "module": "P01ReflectionCountermodel",
+      "path": "formal/P01ReflectionCountermodel.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "theorem bstar_under {t u} (h : BStar t u) : BStar (.lam t) (.lam u) := by"
+    },
+    {
+      "name": "P01F.SKK_beta_I",
+      "kind": "theorem",
+      "module": "P01ReflectionCountermodel",
+      "path": "formal/P01ReflectionCountermodel.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "theorem SKK_beta_I :"
+    },
+    {
+      "name": "P01F.target_conversion_reflection_false",
+      "kind": "theorem",
+      "module": "P01ReflectionCountermodel",
+      "path": "formal/P01ReflectionCountermodel.lean",
+      "line": 35,
+      "qualifier": null,
+      "declaration_start_text": "theorem target_conversion_reflection_false :"
+    },
+    {
+      "name": "P01SNReflection.Star",
+      "kind": "inductive",
+      "module": "P01SNReflection",
+      "path": "formal/P01SNReflection.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "inductive Star {X : Sort u} (r : X \u2192 X \u2192 Prop) : X \u2192 X \u2192 Prop where"
+    },
+    {
+      "name": "P01SNReflection.Positive",
+      "kind": "def",
+      "module": "P01SNReflection",
+      "path": "formal/P01SNReflection.lean",
+      "line": 12,
+      "qualifier": null,
+      "declaration_start_text": "def Positive {X : Sort u} (r : X \u2192 X \u2192 Prop) (x y : X) : Prop :="
+    },
+    {
+      "name": "P01SNReflection.SN",
+      "kind": "def",
+      "module": "P01SNReflection",
+      "path": "formal/P01SNReflection.lean",
+      "line": 15,
+      "qualifier": null,
+      "declaration_start_text": "def SN {X : Sort u} (r : X \u2192 X \u2192 Prop) (x : X) : Prop :="
+    },
+    {
+      "name": "P01SNReflection.positive_simulation_reflects_SN",
+      "kind": "theorem",
+      "module": "P01SNReflection",
+      "path": "formal/P01SNReflection.lean",
+      "line": 34,
+      "qualifier": null,
+      "declaration_start_text": "theorem positive_simulation_reflects_SN {X : Sort u} {Y : Sort v}"
+    },
+    {
+      "name": "P01F.Context",
+      "kind": "abbrev",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "abbrev Context := Nat \u2192 Ty"
+    },
+    {
+      "name": "P01F.shiftContext",
+      "kind": "def",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "def shiftContext (\u0393 : Context) : Context := fun n => rename Nat.succ (\u0393 n)"
+    },
+    {
+      "name": "P01F.subContext",
+      "kind": "def",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 11,
+      "qualifier": null,
+      "declaration_start_text": "def subContext (\u03c3 : Nat \u2192 Ty) (\u0393 : Context) : Context := fun n => substitute \u03c3 (\u0393 n)"
+    },
+    {
+      "name": "P01F.Has",
+      "kind": "inductive",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 13,
+      "qualifier": null,
+      "declaration_start_text": "inductive Has : Context \u2192 LTerm \u2192 Ty \u2192 Prop where"
+    },
+    {
+      "name": "P01F.subContext_cons",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 20,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem subContext_cons (\u03c3) (A) (\u0393) :"
+    },
+    {
+      "name": "P01F.subContext_up",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 24,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem subContext_up (\u03c3) (\u0393) :"
+    },
+    {
+      "name": "P01F.subContext_single_shift",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 28,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem subContext_single_shift (A) (\u0393) :"
+    },
+    {
+      "name": "P01F.type_substitution",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 34,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_substitution {\u0393 t A} (h : Has \u0393 t A) (\u03c3 : Nat \u2192 Ty) :"
+    },
+    {
+      "name": "P01F.type_renaming",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 49,
+      "qualifier": null,
+      "declaration_start_text": "theorem type_renaming {\u0393 t A} (h : Has \u0393 t A) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.term_renaming",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 54,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_renaming {\u0393 t A} (h : Has \u0393 t A) :"
+    },
+    {
+      "name": "P01F.term_weakening",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 81,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_weakening {\u0393 t A} (h : Has \u0393 t A) (B : Ty) :"
+    },
+    {
+      "name": "P01F.term_substitution",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 86,
+      "qualifier": null,
+      "declaration_start_text": "theorem term_substitution {\u0393 t A} (h : Has \u0393 t A) :"
+    },
+    {
+      "name": "P01F.instantiate_term",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 112,
+      "qualifier": null,
+      "declaration_start_text": "theorem instantiate_term {\u0393 b a A B}"
+    },
+    {
+      "name": "P01F.LamView",
+      "kind": "inductive",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 122,
+      "qualifier": null,
+      "declaration_start_text": "inductive LamView : Context \u2192 LTerm \u2192 Ty \u2192 Prop where"
+    },
+    {
+      "name": "P01F.lamView_substitution",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 126,
+      "qualifier": null,
+      "declaration_start_text": "theorem lamView_substitution {\u0393 b A} (h : LamView \u0393 b A) (\u03c3 : Nat \u2192 Ty) :"
+    },
+    {
+      "name": "P01F.lamView_instantiation",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 136,
+      "qualifier": null,
+      "declaration_start_text": "theorem lamView_instantiation {\u0393 b B} (h : LamView \u0393 b (.all B)) (A : Ty) :"
+    },
+    {
+      "name": "P01F.lambda_view",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 145,
+      "qualifier": null,
+      "declaration_start_text": "theorem lambda_view {\u0393 t A} (h : Has \u0393 t A) :"
+    },
+    {
+      "name": "P01F.lambda_generation",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 154,
+      "qualifier": null,
+      "declaration_start_text": "theorem lambda_generation {\u0393 b A B} (h : Has \u0393 (.lam b) (.arrow A B)) :"
+    },
+    {
+      "name": "P01F.subject_reduction",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 161,
+      "qualifier": null,
+      "declaration_start_text": "theorem subject_reduction {\u0393 t A} (h : Has \u0393 t A) :"
+    },
+    {
+      "name": "P01F.subject_reduction_star",
+      "kind": "theorem",
+      "module": "P01SystemF",
+      "path": "formal/P01SystemF.lean",
+      "line": 178,
+      "qualifier": null,
+      "declaration_start_text": "theorem subject_reduction_star {\u0393 t u A} (h : Has \u0393 t A) (r : BStar t u) :"
+    },
+    {
+      "name": "P01F.translateType",
+      "kind": "def",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "def translateType (A : TypeCode) : Ty := A"
+    },
+    {
+      "name": "P01F.translate",
+      "kind": "def",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 12,
+      "qualifier": null,
+      "declaration_start_text": "def translate : Term \u2192 LTerm"
+    },
+    {
+      "name": "P01F.translate_ren",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 21,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem translate_ren (t : Term) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.translate_sub",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 31,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem translate_sub (t : Term) (\u03c3 : Nat \u2192 LTerm) :"
+    },
+    {
+      "name": "P01F.translate_type_substitution",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 43,
+      "qualifier": null,
+      "declaration_start_text": "theorem translate_type_substitution (A : TypeCode) (\u03c3 : Nat \u2192 TypeCode) :"
+    },
+    {
+      "name": "P01F.positive_left",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 47,
+      "qualifier": null,
+      "declaration_start_text": "theorem positive_left {t u} (h : BPositive t u) (a) :"
+    },
+    {
+      "name": "P01F.positive_right",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 52,
+      "qualifier": null,
+      "declaration_start_text": "theorem positive_right (f) {t u} (h : BPositive t u) :"
+    },
+    {
+      "name": "P01F.positive_to_star",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 57,
+      "qualifier": null,
+      "declaration_start_text": "theorem positive_to_star {t u} (h : BPositive t u) : BStar t u := by"
+    },
+    {
+      "name": "P01F.step_simulation",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 63,
+      "qualifier": null,
+      "declaration_start_text": "theorem step_simulation {t u} (h : Step t u) :"
+    },
+    {
+      "name": "P01F.reduction_simulation",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 98,
+      "qualifier": null,
+      "declaration_start_text": "theorem reduction_simulation {t u} (h : Red t u) :"
+    },
+    {
+      "name": "P01F.conversion_preservation",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 105,
+      "qualifier": null,
+      "declaration_start_text": "theorem conversion_preservation {t u} (h : Conv t u) :"
+    },
+    {
+      "name": "P01F.typing_preservation",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 116,
+      "qualifier": null,
+      "declaration_start_text": "theorem typing_preservation {t A} (h : FiniteDerives t A) :"
+    },
+    {
+      "name": "P01F.target_SN_implies_source_SN",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 132,
+      "qualifier": null,
+      "declaration_start_text": "theorem target_SN_implies_source_SN (t : Term)"
+    },
+    {
+      "name": "P01F.chain_simulation",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 140,
+      "qualifier": null,
+      "declaration_start_text": "theorem chain_simulation (ts : Nat \u2192 Term) (h : \u2200 n, Step (ts n) (ts (n+1))) :"
+    },
+    {
+      "name": "P01F.SN_no_chain",
+      "kind": "theorem",
+      "module": "P01Translation",
+      "path": "formal/P01Translation.lean",
+      "line": 146,
+      "qualifier": null,
+      "declaration_start_text": "theorem SN_no_chain {t : Term} (h : P01SNReflection.SN Step t) :"
+    },
+    {
+      "name": "P01F.Ty",
+      "kind": "abbrev",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 8,
+      "qualifier": null,
+      "declaration_start_text": "abbrev Ty := TypeCode"
+    },
+    {
+      "name": "P01F.cons",
+      "kind": "def",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "def cons {\u03b1 : Type} (a : \u03b1) (\u03c1 : Nat \u2192 \u03b1) : Nat \u2192 \u03b1"
+    },
+    {
+      "name": "P01F.ty_rename_id",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem ty_rename_id (A : Ty) : rename id A = A := by"
+    },
+    {
+      "name": "P01F.ty_rename_comp",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 24,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_rename_comp (A : Ty) (r s : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.ty_sub_id",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 36,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem ty_sub_id (A : Ty) : substitute TypeCode.var A = A := by"
+    },
+    {
+      "name": "P01F.ty_sub_rename",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 47,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_sub_rename (A : Ty) (\u03c3 : Nat \u2192 Ty) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.ty_rename_sub",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 59,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_rename_sub (A : Ty) (\u03c3 : Nat \u2192 Ty) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01F.ty_sub_comp",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 77,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_sub_comp (A : Ty) (\u03c3 \u03c4 : Nat \u2192 Ty) :"
+    },
+    {
+      "name": "P01F.ty_sub_up_shift",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 96,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem ty_sub_up_shift (A : Ty) (\u03c3 : Nat \u2192 Ty) :"
+    },
+    {
+      "name": "P01F.ty_inst_shift",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 102,
+      "qualifier": null,
+      "declaration_start_text": "@[simp] theorem ty_inst_shift (A X : Ty) :"
+    },
+    {
+      "name": "P01F.ty_sub_inst",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 107,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_sub_inst (B A : Ty) (\u03c3 : Nat \u2192 Ty) :"
+    },
+    {
+      "name": "P01F.ty_sub_vars",
+      "kind": "theorem",
+      "module": "P01TypeAlgebra",
+      "path": "formal/P01TypeAlgebra.lean",
+      "line": 120,
+      "qualifier": null,
+      "declaration_start_text": "theorem ty_sub_vars (A : Ty) (r : Nat \u2192 Nat) :"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_subject_reduction",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 9,
+      "qualifier": null,
+      "declaration_start_text": "theorem bridge_subject_reduction : \u2200 (\u0393 : P01F.Context) (t u : P01F.LTerm) (A : TypeCode),"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_typing",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 13,
+      "qualifier": null,
+      "declaration_start_text": "theorem bridge_typing : \u2200 t A, FiniteDerives t A \u2192 \u2200\u0393 : P01F.Context,"
+    },
+    {
+      "name": "P01TypeAssertions.bridge_nonempty",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 16,
+      "qualifier": null,
+      "declaration_start_text": "theorem bridge_nonempty : \u2200t u, Step t u \u2192"
+    },
+    {
+      "name": "P01TypeAssertions.direct_normalisation",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 20,
+      "qualifier": null,
+      "declaration_start_text": "theorem direct_normalisation : \u2200t A, FiniteDerives t A \u2192 StronglyNormalising t :="
+    },
+    {
+      "name": "P01TypeAssertions.raw_source_confluence",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 23,
+      "qualifier": null,
+      "declaration_start_text": "theorem raw_source_confluence : \u2200t u v, Red t u \u2192 Red t v \u2192 \u2203w, Red u w \u2227 Red v w :="
+    },
+    {
+      "name": "P01TypeAssertions.typed_conversion",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 26,
+      "qualifier": null,
+      "declaration_start_text": "theorem typed_conversion : \u2200t u n m, Red t n \u2192 Red u m \u2192"
+    },
+    {
+      "name": "P01TypeAssertions.exact_nonrepresentability",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 30,
+      "qualifier": null,
+      "declaration_start_text": "theorem exact_nonrepresentability : \u00ac\u2203u A, FiniteDerives u A \u2227 Conv omega u :="
+    },
+    {
+      "name": "P01TypeAssertions.no_target_reflection",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 33,
+      "qualifier": null,
+      "declaration_start_text": "theorem no_target_reflection : \u00ac(\u2200t u, P01F.BConv (P01F.translate t) (P01F.translate u) \u2192 Conv t u) :="
+    },
+    {
+      "name": "P01TypeAssertions.code_bound_intrinsic_soundness",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 36,
+      "qualifier": null,
+      "declaration_start_text": "theorem code_bound_intrinsic_soundness : \u2200(\u0393 : P01D.Context) (A : P01D.Ty \u0393) (p : P01D.Poly),"
+    },
+    {
+      "name": "P01TypeAssertions.all_new_identity_extension",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 41,
+      "qualifier": null,
+      "declaration_start_text": "theorem all_new_identity_extension : \u2200(F : P01D.ParamFamily) t u,"
+    },
+    {
+      "name": "P01TypeAssertions.j_two_coordinate_transport",
+      "kind": "theorem",
+      "module": "P01TypeAssertions",
+      "path": "formal/P01TypeAssertions.lean",
+      "line": 45,
+      "qualifier": null,
+      "declaration_start_text": "theorem j_two_coordinate_transport : \u2200(P : P01D.PER) x (M : P01D.BasedMotive P x) y p d e,"
+    },
+    {
+      "name": "P01D.Realiser",
+      "kind": "def",
+      "module": "P01UniverseBoundary",
+      "path": "formal/P01UniverseBoundary.lean",
+      "line": 10,
+      "qualifier": null,
+      "declaration_start_text": "def Realiser (P : PER) := {t : Term // P.dom t}"
+    },
+    {
+      "name": "P01D.internal_all_self_instance",
+      "kind": "theorem",
+      "module": "P01UniverseBoundary",
+      "path": "formal/P01UniverseBoundary.lean",
+      "line": 14,
+      "qualifier": null,
+      "declaration_start_text": "theorem internal_all_self_instance (F : ParamFamily) (t u : Term)"
+    },
+    {
+      "name": "P01D.no_same_level_Girard_retraction",
+      "kind": "theorem",
+      "module": "P01UniverseBoundary",
+      "path": "formal/P01UniverseBoundary.lean",
+      "line": 21,
+      "qualifier": null,
+      "declaration_start_text": "theorem no_same_level_Girard_retraction (P : PER)"
+    }
+  ],
+  "private_dependencies": [
+    {
+      "name": "P01SNReflection.reflect_aux",
+      "kind": "theorem",
+      "module": "P01SNReflection",
+      "path": "formal/P01SNReflection.lean",
+      "line": 18,
+      "qualifier": "private",
+      "declaration_start_text": "private theorem reflect_aux {X : Sort u} {Y : Sort v}"
+    }
+  ],
+  "static_only": true,
+  "kernel_credit": false,
+  "target_policy": "Every public explicit declaration in new modules; private dependencies audited transitively. Auto-generated constructors/projections are not separate counted claims.",
+  "type_authority": "Actual pinned compiler #check plus P01TypeAssertions, not this lexical inventory."
+}

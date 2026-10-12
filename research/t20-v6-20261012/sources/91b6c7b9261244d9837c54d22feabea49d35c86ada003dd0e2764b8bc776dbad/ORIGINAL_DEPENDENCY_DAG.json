@@ -1,0 +1,247 @@
+{
+  "schema": "orthemology-research-handoff-dag-v1",
+  "not_integration_DAG": true,
+  "interpretation": "Direction means scoped input reuse/prerequisite for the named downstream component. No blanket serial campaign is inferred. Only owner-recorded wrapper guards are hard prerequisites; other edges describe justified input relationships.",
+  "nodes": [
+    {
+      "id": "U09",
+      "packet": "P01"
+    },
+    {
+      "id": "U10",
+      "packet": "P01"
+    },
+    {
+      "id": "U11",
+      "packet": "P01"
+    },
+    {
+      "id": "U05",
+      "packet": "P02"
+    },
+    {
+      "id": "U08",
+      "packet": "P02"
+    },
+    {
+      "id": "CV-R",
+      "packet": "P02"
+    },
+    {
+      "id": "CV-C",
+      "packet": "P02"
+    },
+    {
+      "id": "Q1c",
+      "packet": "P02"
+    },
+    {
+      "id": "U03",
+      "packet": "P03"
+    },
+    {
+      "id": "U04",
+      "packet": "P03"
+    },
+    {
+      "id": "Q1f",
+      "packet": "P03"
+    },
+    {
+      "id": "U06",
+      "packet": "P04"
+    },
+    {
+      "id": "U07",
+      "packet": "P04"
+    },
+    {
+      "id": "U12",
+      "packet": "P04"
+    },
+    {
+      "id": "A4C-O003",
+      "packet": "P05"
+    },
+    {
+      "id": "A4C-O004",
+      "packet": "P05"
+    },
+    {
+      "id": "A4C-O005",
+      "packet": "P06"
+    },
+    {
+      "id": "U14",
+      "packet": "P07"
+    },
+    {
+      "id": "A4C-O007",
+      "packet": "P07"
+    },
+    {
+      "id": "HANDOFF-PARAM-01",
+      "packet": "P08"
+    },
+    {
+      "id": "HANDOFF-PARAM-02",
+      "packet": "P08"
+    },
+    {
+      "id": "HANDOFF-PARAM-03",
+      "packet": "P08"
+    },
+    {
+      "id": "HANDOFF-PARAM-04",
+      "packet": "P08"
+    },
+    {
+      "id": "HANDOFF-PARAM-05",
+      "packet": "P08"
+    },
+    {
+      "id": "HANDOFF-PARAM-06",
+      "packet": "P08"
+    },
+    {
+      "id": "U13",
+      "packet": "P09"
+    },
+    {
+      "id": "RR-1",
+      "packet": "P10"
+    },
+    {
+      "id": "RR-2",
+      "packet": "P10"
+    },
+    {
+      "id": "RR-3",
+      "packet": "P10"
+    },
+    {
+      "id": "Q1a",
+      "packet": "P11"
+    },
+    {
+      "id": "Q1g",
+      "packet": "P11"
+    },
+    {
+      "id": "Q1h",
+      "packet": "P11"
+    },
+    {
+      "id": "Q1i",
+      "packet": "P11"
+    },
+    {
+      "id": "Q1b",
+      "packet": "P12"
+    },
+    {
+      "id": "Q1e",
+      "packet": "P12"
+    },
+    {
+      "id": "Q1d",
+      "packet": "P13"
+    }
+  ],
+  "edges": [
+    {
+      "source": "U05",
+      "target": "CV-R",
+      "kind": "SHARED_FORMAL_INPUT",
+      "reason": "R-FORMAL-MATH lists positive-singleton and restricted-fibre laws before the finite/decreasing-cell proof.",
+      "source_path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md"
+    },
+    {
+      "source": "U05",
+      "target": "CV-C",
+      "kind": "SHARED_FORMAL_INPUT",
+      "reason": "R-FORMAL-MATH requires exact cylinder/soft-mass and observer syntax.",
+      "source_path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md"
+    },
+    {
+      "source": "U05",
+      "target": "U06",
+      "kind": "SHARED_FORMAL_INPUT",
+      "reason": "U06 requires prefix-cylinder probability semantics; it can be specified while U05 proceeds.",
+      "source_path": "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json"
+    },
+    {
+      "source": "U06",
+      "target": "U07",
+      "kind": "CONDITIONAL_RESULT_REUSE",
+      "reason": "Expected-bit costs require the declared sampler law; real instruction costs remain separate.",
+      "source_path": "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json"
+    },
+    {
+      "source": "U03",
+      "target": "U04",
+      "kind": "IMPLEMENTATION_INTERFACE",
+      "reason": "R-REFINEMENT calls for parser/substitution/export and registry operations in one simulation.",
+      "source_path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md"
+    },
+    {
+      "source": "U03",
+      "target": "U12",
+      "kind": "IMPLEMENTATION_INTERFACE",
+      "reason": "Exact traces cover the actual parser/replayer and exported terms.",
+      "source_path": "docs/provenance/v5-consolidation/reconciliation/RECONCILED_OBLIGATIONS.json"
+    },
+    {
+      "source": "Q1c",
+      "target": "Q1a",
+      "kind": "WRAPPER_ONLY_PREREQUISITE",
+      "reason": "Q1a T300/T304 wrapper requires concrete T300 lemmas; pure factorisation need not wait.",
+      "source_path": "docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml"
+    },
+    {
+      "source": "Q1e",
+      "target": "Q1b",
+      "kind": "OPTIONAL_WRAPPER_ONLY",
+      "reason": "Pure COB has no FRLA dependency; optional local-action wrapper does.",
+      "source_path": "docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml"
+    },
+    {
+      "source": "Q1f",
+      "target": "Q1b",
+      "kind": "OPTIONAL_WRAPPER_ONLY",
+      "reason": "Guarded version base may support a TRC wrapper, not pure graph/game results.",
+      "source_path": "docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml"
+    },
+    {
+      "source": "Q1h",
+      "target": "Q1i",
+      "kind": "WRAPPER_ONLY_PREREQUISITE",
+      "reason": "Pure PRRC does not depend on PRQT; application wrapper needs the PRQT-interface gate.",
+      "source_path": "docs/project-closure/ar8r-v11/formalization/AR8R-V11-LEAN-FORMALIZATION-QUEUE.yaml"
+    }
+  ],
+  "independent_entry_packets": [
+    "P01",
+    "P02",
+    "P03",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P13"
+  ],
+  "partially_parallel": [
+    "P04 can specify semantics/cost/traces now; later formal closure reuses P02 measure inputs and P03 parser interface.",
+    "P09 literature comparison can run now; refresh its statement bindings after any accepted theorem change.",
+    "Q0 scoped T299 evidence is included; exact pins/current environment must be independently checked before future compilation."
+  ],
+  "owner_or_external_gates": [
+    "No externally dependent claim is completed by a Pro conversation.",
+    "No source-absent historical declaration may be recreated under its lost historical identity.",
+    "No roadmap/PMR adoption or empirical execution is authorised by packet preparation."
+  ]
+}

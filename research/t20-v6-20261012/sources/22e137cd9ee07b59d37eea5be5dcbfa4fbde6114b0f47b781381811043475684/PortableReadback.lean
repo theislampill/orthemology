@@ -1,0 +1,42 @@
+import RecurrentSupport
+set_option pp.universes true
+#check @Orthemology.Tranche2.RecurrentSupport.Recurs
+#print axioms Orthemology.Tranche2.RecurrentSupport.Recurs
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.mem_recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.exists_recurrent
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_recurrent
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet_nonempty
+#check @Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet
+#print axioms Orthemology.Tranche2.RecurrentSupport.eventually_mem_recurrentSet
+#check @Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem
+#print axioms Orthemology.Tranche2.RecurrentSupport.recurrentSet_subset_of_eventually_mem
+#check @Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.exactRecurrentEvent
+#check @Orthemology.Tranche2.RecurrentSupport.tailEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.tailEvent
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_eventually_mem
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_finitely_many_outside
+#check @Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail
+#print axioms Orthemology.Tranche2.RecurrentSupport.exact_event_eq_iUnion_tail
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_recurrence
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_recurrence
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_exactRecurrentEvent
+#check @Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent
+#print axioms Orthemology.Tranche2.RecurrentSupport.measurable_tailEvent
+#check @Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_positive_recurrent_support
+#check @Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_positive_tail_index
+#check @Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.exists_measurable_positive_recurrent_support
+#check @Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event
+#print axioms Orthemology.Tranche2.RecurrentSupport.support_subset_of_positive_exact_event
+#check @Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support
+#print axioms Orthemology.Tranche2.RecurrentSupport.abstract_self_verifying_support

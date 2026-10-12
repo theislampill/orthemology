@@ -1,0 +1,534 @@
+{
+  "scope": "Actual substantive reading for evidence/transport track; inventory is not reading. Ranges and truncation qualifications explicit. External literature/source claims in reports are inherited.",
+  "entries": [
+    {
+      "path": "t20-synthesis-owner-input-20261011/instruction-packet/02_Pro_Synthesis_Reviews_and_Repairs.md",
+      "sha256": "1d8c75643bde3554b3e47a271309aa0d6c2700087bb573cc33498946954689d9",
+      "bytes": 31167,
+      "mode": "Orientation only; multi-file output partly truncated. Canonical underlying reports subsequently inspected independently.",
+      "read_at": "2026-10-11T11:37:28.945140+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": []
+    },
+    {
+      "path": "t20-synthesis-owner-input-20261011/instruction-packet/04_Evidence_and_Credal_Coupling.md",
+      "sha256": "4a263faf699b48e91a318334cef5af8fe46e09088259cdd6848916a94733ba1d",
+      "bytes": 23610,
+      "mode": "Orientation only; multi-file output partly truncated. Canonical underlying reports subsequently inspected independently.",
+      "read_at": "2026-10-11T11:37:28.945378+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": []
+    },
+    {
+      "path": "t20-synthesis-owner-input-20261011/instruction-packet/10_DAEE_Implementation_Boundary.md",
+      "sha256": "0b56473413ca85ada80f7ca94782958ea6a8c01829a444c2308ab77f54c4fbef",
+      "bytes": 5375,
+      "mode": "Orientation only; multi-file output partly truncated. Canonical underlying reports subsequently inspected independently.",
+      "read_at": "2026-10-11T11:37:28.945484+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": []
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+      "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "bytes": 16325,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:37:34.810385+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "support"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-hybrid-timing-review-20261011/RESULT.md",
+      "sha256": "fef98acb62cd651dd97bf278645807e35dc519b30f977b701db797100bb065d3",
+      "bytes": 20372,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:37:38.958483+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "timing"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/cumulative-credal-audit-coupling-20261011/REPORT.md",
+      "sha256": "9716316c110d736c7fdffa57949bf5bf439bacdf38f103e947ac9d24f6c257d3",
+      "bytes": 18927,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:03.517416+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "credal"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/coupled-credal-inquiry-transport-20261011/RESULT.md",
+      "sha256": "7f0d42d87119221c01358874ddbd007e39c57f9cbd9f8f918d11cfffd15c6946",
+      "bytes": 28059,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:07.619341+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "inquiry"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/coupled-credal-inquiry-independent-review-20261011/REVIEW.md",
+      "sha256": "e31ed9660c551f957ffea3e81ed827531e6311728c230e134e15fc7809e51340",
+      "bytes": 14670,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:15.381729+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "inquiry_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/cumulative-revision-coupling-independent-review-20261011/REVIEW.md",
+      "sha256": "e448b176567b156fca4e73f8d5e9ee6c8f5b8a2b2c1ee9553d280c54bbc9c5b6",
+      "bytes": 8314,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:15.381908+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "credal_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/source-audit-revision-20261010/RESULT.md",
+      "sha256": "7b8a82a3ee87d1367a709c9250b2ee8b019ed15794c59015e6382175de46c88e",
+      "bytes": 29885,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:30.892253+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "audit"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/inherited/historical-source-revision-20261010/RESULT.md",
+      "sha256": "06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2",
+      "bytes": 25884,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:38:30.892473+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "history"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/audit-continuation-transport-20261010/RESULT.md",
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc",
+      "bytes": 24610,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:07.245627+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "continuation"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/provenance-learning-transport-20261009/RESULT.md",
+      "sha256": "7b4d4bd3efe0e2588a1e8751a99fcbc197ca4aa9733f98ec6b7ad452203c93e2",
+      "bytes": 14332,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:13.730935+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "provenance"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/active-t20-evidence-revision-checkpoint-20261009.zip--8204f616f701/active-t20-evidence-revision-checkpoint-20261009/constructive-t20-20261009/revocation-dependency/THEOREM.md",
+      "sha256": "95a636b7eaa8a054657426caeeb569991f6e32ba5bc8f53639d2c919a812aa34",
+      "bytes": 10324,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:20.197326+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "reset"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/research/contracts.py",
+      "sha256": "3c42622d5bebb3d07da5f231e7a8b22bc4d174f806f80a92ecf7817d21a29c06",
+      "bytes": 13980,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:28.636853+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "code26"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/posterior-inquiry-value-20261010/RESULT.md",
+      "sha256": "5f6f84b1af7e5049139a381142a791eb7aeebdb57ebf9095e14fa49cfc652fcf",
+      "bytes": 7623,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:39.748014+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "posterior_value"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/noetic-recognition-guard-intermediate-20261009.zip--0d59830133a1/noetic-recognition-guard-intermediate-20261009/evidence/noetic-correction-semantics-20261009/REPORT.md",
+      "sha256": "8701b569e60ab413acd6ab225941e0089eceedd436a5fef55d25ea5dee978b04",
+      "bytes": 14052,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:57.962730+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "daee"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/noetic-recognition-guard-intermediate-20261009.zip--0d59830133a1/noetic-recognition-guard-intermediate-20261009/evidence/noetic-guard-repair-peer-review-20261009/REPAIR_ADDENDUM.md",
+      "sha256": "a5c340ca0d30bd950d12e03b6aead5e31d5b80852fc92d067807566f984a27d4",
+      "bytes": 3433,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:39:57.962971+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "daee_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/pairwise-corroboration-bound-20261011/RESULT.md",
+      "sha256": "a86cced3f856527cbfab677458c2792e36bab1a89dc0684f3c5a0447c8ef0eb2",
+      "bytes": 13663,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:41:15.085038+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "pairwise"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/credal-geometric-transport-20261011/REPAIR.md",
+      "sha256": "6b77cd702ae8ce8124a589b7c0603b05b90a536578f9cdfcf0df38d226acedfe",
+      "bytes": 7180,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:42:29.147021+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "geometric_repair"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/credal-geometric-independent-review-20261011/REPAIR_REVIEW.md",
+      "sha256": "0cf4dbdff58a63147e5abe2453a181038728c01ca1a2b6c3de692925d806a98d",
+      "bytes": 3255,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:42:29.147320+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "geometric_repair_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/credal-coupling-geometric-final-delivery-20261011/credal-coupling-geometric-final-delivery-20261011/payload/credal-geometric-transport-20261011/REPORT.md",
+      "sha256": "5aa3e5cd0a76ea8e38d656ee20062a9cc34d05ffafc6ff3b1dde00a614390918",
+      "bytes": 16183,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:42:34.401114+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "geometric"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/support_scope_check.py",
+      "sha256": "6c1e414a8a0d0997e116767bd3caf143868369eef195de4918164e5d0928d1d3",
+      "bytes": 6501,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:42:50.118614+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "support_code"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/18/18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+      "sha256": "18ab13ba1910e8ee697d66af0838fff143ad380561aeef513cd410f18d18a403",
+      "bytes": 8252,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:43:49.014193+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "provenance_review"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/50/505821674301ee1da70a5124e06d746df86f8bbdfcf8afe6eef603b1c546186a",
+      "sha256": "505821674301ee1da70a5124e06d746df86f8bbdfcf8afe6eef603b1c546186a",
+      "bytes": 16603,
+      "mode": "Partial read; mistaken historical-transport search hit, not historical-source-revision owner; not used as support for ET claims.",
+      "read_at": "2026-10-11T11:43:49.014370+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": []
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/17/17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+      "sha256": "17becb516a095b265ee6171efa34433497033359262067723640603e2de30d7e",
+      "bytes": 7765,
+      "mode": "Complete substantive review read across output and follow-up header read",
+      "read_at": "2026-10-11T11:43:49.014445+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "posterior_value_review"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/ad/adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "bytes": 12304,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:43:49.014499+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "pairwise_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/pairwise-corroboration-asymmetric-supplement-20261011/SUPPLEMENT.md",
+      "sha256": "74e6456068e0cbb529d143bb225e82cd063783d782bc9bfef5b93392310ea8e3",
+      "bytes": 5783,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:44:06.963992+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "pairwise_asym"
+      ]
+    },
+    {
+      "path": "authorial-synthesis-root-review-20261011/ASSESSMENT.md",
+      "sha256": "25b5fca3d7d67f347e65931385f7e3c196b5ffd229a8a40f0ecfc6f1cea24760",
+      "bytes": 9201,
+      "mode": "full text read",
+      "read_at": "2026-10-11T11:48:42.671260+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "authorial_review"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/received-cross-front-synthesis-20261011/Orthemology_T20_Whole_Corpus_Synthesis_20261010/documents/CROSS_FRONT_SYNTHESIS.md",
+      "sha256": "8aad39f6fb030620059edd4e0639f58078537a10181836b64089f6d82dbe10f4",
+      "bytes": 28801,
+      "mode": "Sections 0–5 / lines1–279 read directly; D5–D6 inspected through exact bound later review; later moment portions not reread by this track",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "whole"
+      ]
+    },
+    {
+      "path": "recovery-20261011/received/source/Orthemology_T20_111min_Recovered_Authored_Work_20261010/Cross_Front_Theorems.md",
+      "sha256": "c2ca691c70c953bd5e7af3f2e0d6a86f9ef72d7cf8996cb3b369bdd9afa1e1e1",
+      "bytes": 46541,
+      "mode": "Sections1–8 / lines1–406 read directly; geometry I–L owned by geometry track; G/H appraisal read in root assessment",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "authorial"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-hybrid-timing-review-20261011/checks.py",
+      "sha256": "5e5a186a5ec1756c0be097aa1521ddd77b66c2dae53fd394cae35d400ebca5a1",
+      "bytes": 9794,
+      "mode": "Critical refinement/signature/minimum/stability implementation lines1–103 inspected; later controls executed, not all code reread",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "timing_code"
+      ]
+    },
+    {
+      "path": "recovery-20261011/extracted/fixed-inquiry-guide-source-checkpoint-20261011/fixed-inquiry-guide-source-checkpoint-20261011/payload/coupled-credal-inquiry-transport-20261011/verify.py",
+      "sha256": "9be6d46c884c4022c7e44cb5766648ba813d30082311c624392518bb818199f1",
+      "bytes": 16221,
+      "mode": "Critical dynamic_sets, escort/decode and independent loss-row recursion lines71–113 inspected; complete final report/review read; all controls executed by wrapper",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "inquiry_code"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/noetic-recognition-guard-intermediate-20261009.zip--0d59830133a1/noetic-recognition-guard-intermediate-20261009/evidence/noetic-correction-semantics-20261009/sources/tools/check_ir_instance_integrity.py",
+      "sha256": "ea6630a53ce8c77d6cc3102ae6ffd5aba0dc84539f1ffe5350fbc1aa4d9c4d1a",
+      "bytes": 118334,
+      "mode": "schema_errors lines1587–1660 and field-witness closure/transfer checks lines1900–1940 inspected",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "daee_checker"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/noetic-recognition-guard-intermediate-20261009.zip--0d59830133a1/noetic-recognition-guard-intermediate-20261009/evidence/noetic-correction-semantics-20261009/sources/atomics/skill/references/diagnostics/diagnostic-ir.schema.json",
+      "sha256": "c2cac1a403d64f27bb7597c4e7e0d7b3f2663e91303960ba68817608e8ffd566",
+      "bytes": 60634,
+      "mode": "Advanced alignment and adjacent category conditional lines1765–1797 inspected",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "daee_schema"
+      ]
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/archive-views/noetic-recognition-guard-intermediate-20261009.zip--0d59830133a1/noetic-recognition-guard-intermediate-20261009/evidence/noetic-correction-semantics-20261009/UNAPPLIED_RECOGNITION_GUARD.patch",
+      "sha256": "ba1c28f70bc74b70451ae4a63910f49308a23d5b068d1a3e61c8cb0bf9c97a58",
+      "bytes": 816,
+      "mode": "Full seven-inserted-line patch read; no application in this consolidation",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "daee_patch"
+      ]
+    },
+    {
+      "path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/pairwise-corroboration-independent-review-20261011/REVIEW.md",
+      "sha256": "adf1b6bbb7de75c0f34718e244e5b35b74fbaecf741aebf7a446d5a260e8762a",
+      "bytes": 12304,
+      "mode": "Complete substantive independent review read; no fresh reviewer-code execution",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "pairwise_review"
+      ]
+    },
+    {
+      "path": "t20-synthesis-owner-input-20261011/instruction-packet/T20_Consolidation_and_T21_Continuation_Prompt.md",
+      "sha256": "40ab92e313e1d2a4fa199ffb56c6952b14a2a634678e3d3d26b061cde25d6954",
+      "bytes": 5264,
+      "mode": "Full owner instruction read at start; governs scope, not scientific evidence",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": []
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/5c/5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0",
+      "sha256": "5c74c7086c038dce1be0e9098b42fce9cc4c7aee8670fe0ba682b50d780af5c0",
+      "bytes": 28972,
+      "mode": "Substantive theorem/control/transport reading §§1–9; ancestry/evidence §§10–11 inspected as inherited source claims. Combined re-read output partly truncated; selected sections re-opened. No external primary-source reading.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_report"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/96/964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8",
+      "sha256": "964bfcc442c2c0be289de8382328cee3009592f1efe881a8a0ca07a9df6da5c8",
+      "bytes": 7722,
+      "mode": "Full verifier source inspected during bounded omission check; imports, exact controls, asserts, input-integrity reads and result write checked; not executed.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_code"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/64/64e8c7791e05f92f9b7b5f50db4389cdb677dfd532f340938c9f2ec09a4585c3",
+      "sha256": "64e8c7791e05f92f9b7b5f50db4389cdb677dfd532f340938c9f2ec09a4585c3",
+      "bytes": 3044,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_author_controls"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/2f/2f3339d23e83edde8512886b48a4d00be1aa44ef590164ea73103400211dd107",
+      "sha256": "2f3339d23e83edde8512886b48a4d00be1aa44ef590164ea73103400211dd107",
+      "bytes": 3422,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_author_bindings"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/76/76724a4e3c578f7b61fe9892cd289d7b61ca87b77b3b26904af97833cb9ae35d",
+      "sha256": "76724a4e3c578f7b61fe9892cd289d7b61ca87b77b3b26904af97833cb9ae35d",
+      "bytes": 2923,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_manifest"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/31/318bb3e78e92da093f214017f104764c2846ebf336e62591096913b71718d0ce",
+      "sha256": "318bb3e78e92da093f214017f104764c2846ebf336e62591096913b71718d0ce",
+      "bytes": 18527,
+      "mode": "Verdict, exact target and §§1–9 mathematical/semantic/evidence assessment read; cited external-source inspections are reviewer-reported, not newly performed.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_review"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/d0/d0cc57afa0a34ccad1c51b8a1171fd29470c1c4ecb36f525e74162194ae43f15",
+      "sha256": "d0cc57afa0a34ccad1c51b8a1171fd29470c1c4ecb36f525e74162194ae43f15",
+      "bytes": 4548,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_review_bindings"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/5f/5fe641f477d2a5ce625bcc1d827c49abc56f04d17065d046cb7208f3ae37a423",
+      "sha256": "5fe641f477d2a5ce625bcc1d827c49abc56f04d17065d046cb7208f3ae37a423",
+      "bytes": 3516,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_review_currentness"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/2a/2a9bccd49ab39d8b874b90262d9d58a611e1ad5bc65f2823aea30ce63796a9b7",
+      "sha256": "2a9bccd49ab39d8b874b90262d9d58a611e1ad5bc65f2823aea30ce63796a9b7",
+      "bytes": 1822,
+      "mode": "Binding/control/currentness JSON inspected; file identities and relevant count/status fields verified. This is record reading, not rerunning controls or reading all listed input contents.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_review_controls"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    },
+    {
+      "path": "t20-consolidation-20261011/catalogue/objects/04/0410b6dd021eabbb85c5c5e70610459081a87f02ce0d3f25ffe3e6828e97a7b3",
+      "sha256": "0410b6dd021eabbb85c5c5e70610459081a87f02ce0d3f25ffe3e6828e97a7b3",
+      "bytes": 5780,
+      "mode": "Both precision hunks inspected; no theorem/hypothesis change; pre-precision full report not reread.",
+      "read_at": "2026-10-11T12:31:46.585953+00:00",
+      "read_window_utc": "2026-10-11T12:25:00Z to 2026-10-11T12:31:46.585953+00:00",
+      "fresh_external_source_reading": false,
+      "canonical_source_ids": [
+        "cone_precision_diff"
+      ],
+      "version_added": "bounded-cone-addendum-v2"
+    }
+  ]
+}

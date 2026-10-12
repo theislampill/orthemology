@@ -1,0 +1,12 @@
+Diagnostic IR instance integrity summary
+------------------------------------------------------------
+Embedded bad samples checked: 54
+tests/ir-fixtures valid checked: 0
+tests/ir-fixtures invalid checked: 0
+smoke sidecars checked: 0
+smoke sidecar IR instances checked: 0
+Non-IR JSON files ignored: 0
+Total JSON files scanned: 1
+Total expected-valid IR instances checked: 1
+------------------------------------------------------------
+diagnostic IR instance integrity: PASS

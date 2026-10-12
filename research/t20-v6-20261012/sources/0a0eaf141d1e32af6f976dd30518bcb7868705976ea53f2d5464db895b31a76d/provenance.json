@@ -1,0 +1,112 @@
+{
+  "schema": "orthing-formalisation-provenance-v1",
+  "version": 1,
+  "date": "2026-09-08",
+  "status": "RESEARCH_DRAFT_NO_ADOPTION",
+  "repository": {
+    "name": "theislampill/orthemology",
+    "observed_main_sha": "f50dc1aee52356cc6adbef342387576b02afc124",
+    "observation_method": "GitHub connector branch read",
+    "files": [
+      {
+        "id": "R1",
+        "path": "theory/orthemic-core-formalization.md",
+        "git_blob_sha_reported_by_connector": "34effd9e917b5372e53d03a71e052fd38050490c",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/theory/orthemic-core-formalization.md",
+        "scope": "Type/token, reification, canonical signature and finite record/trace interface"
+      },
+      {
+        "id": "R2",
+        "path": "docs/notation-registry.yaml",
+        "git_blob_sha_reported_by_connector": "6964d65a613d9687d8c00a07b1826fff60e8b70d",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/docs/notation-registry.yaml",
+        "scope": "Normative symbol roles and relevant render entries"
+      },
+      {
+        "id": "R3",
+        "path": "docs/project-closure/ar8r-v11/theorems/ar8r-t300-lower-order-alignment-blind-restoration.md",
+        "git_blob_sha_reported_by_connector": "d13c504037255a6bd1a0a8c8d10aa3c6ae7baf3d",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/docs/project-closure/ar8r-v11/theorems/ar8r-t300-lower-order-alignment-blind-restoration.md",
+        "scope": "Repaired parity diagnostic and scope"
+      },
+      {
+        "id": "R4",
+        "path": "docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md",
+        "git_blob_sha_reported_by_connector": "73c1c3dc54d4f3a8ed8358029c492984eab1af87",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/docs/project-closure/ar8r-v11/programs/tensor-and-bitter-lesson.md",
+        "scope": "Representation/ontology boundary and experiment-arm ambiguity"
+      },
+      {
+        "id": "R5",
+        "path": "docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+        "git_blob_sha_reported_by_connector": "66f1c9c1a2cda1678b835913e1268eec9345e675",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/docs/decisions/0033-governed-corrective-search-and-transition-witness.md",
+        "scope": "Witness retention, scope and fast/slow governance"
+      },
+      {
+        "id": "R6",
+        "path": "docs/decisions/0032-governed-metaorthemic-ecology-and-source-dependence.md",
+        "git_blob_sha_reported_by_connector": "33919d8ea7a20c7cdcc3961cf7b2b4f3474f9d44",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/docs/decisions/0032-governed-metaorthemic-ecology-and-source-dependence.md",
+        "scope": "Typed ecology graph; propagation does not supply warrant"
+      },
+      {
+        "id": "R7",
+        "path": "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+        "git_blob_sha_reported_by_connector": "0929ef49e847b3bcfd5847600a6a80c46283f2f7",
+        "url": "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+        "scope": "Order-theoretic dynamics and the narrower conditional gradient-flow frontier"
+      }
+    ],
+    "full_repository_audit_performed": false,
+    "repository_mutated": false
+  },
+  "uploaded_source": {
+    "filename": "Euler.pdf",
+    "bytes": 3556634,
+    "sha256": "f0164c40fad09a646412acec95f7908ea6b2fd61d16b809954a4048665fb5f78",
+    "pages": 107,
+    "scope": "User-supplied full text; cited sections/figures inspected. No full proof or Lean audit. Online version byte equality not established."
+  },
+  "external_source_limits": {
+    "fluid_lean": "Metadata and root-directory read only; no end-to-end build or proof audit.",
+    "cims_pdfs": "Not retrievable for full review in this execution.",
+    "tao_posts": "Supplied excerpts used; exact original post text not independently retrieved.",
+    "screenshot": "Visible crop supplied by user; independent authorship not established.",
+    "kakutani": "Original full text not inspected; theorem formulation checked against official Lean project statement and Nash use.",
+    "clay": "Official problem statement inspected including smooth-forcing breakdown alternatives."
+  },
+  "production": {
+    "pdf_pages": 35,
+    "numbered_mathematical_items": {
+      "Definition": 5,
+      "Proposition": 17,
+      "Theorem": 9,
+      "Corollary": 3,
+      "Counterexample": 4
+    },
+    "latex_generator": "pandoc 3.1.11.1",
+    "tex_engine": "This is LuaHBTeX, Version 1.18.0 (TeX Live 2025/dev/Debian)",
+    "compile_exit_status": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "missing_character_warnings": 0,
+    "unresolved_reference_warnings": 0,
+    "proof_assistant_check": false,
+    "verification_receipt": "verification.json",
+    "md_tex_relation": "Delivered TeX is generated from delivered Markdown using included layout-only template/filter."
+  },
+  "authority_limits": [
+    "No tensor ontology",
+    "No actual-unbounded-degree theorem",
+    "No empirical framework validation",
+    "No general novelty claim",
+    "No new experimental representation arm",
+    "No controller-G identification",
+    "No canonical registration of the chat",
+    "No Nash identification of the chat",
+    "No source-world bridge promotion",
+    "No Lean/kernel verification",
+    "No claim of solving Euler or Navier-Stokes"
+  ]
+}

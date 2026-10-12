@@ -1,0 +1,11 @@
+import AuxiliaryControls
+#print axioms AuxiliaryCodeComputability.primrec_checkStepCode
+#print axioms AuxiliaryCodeComputability.checkStepCode_exact
+#print axioms AuxiliaryCodeComputability.primrec_checkRedCode
+#print axioms AuxiliaryCodeComputability.checkRedCode_exact
+#print axioms AuxiliaryCodeComputability.primrec_checkFiniteCode
+#print axioms AuxiliaryCodeComputability.checkFiniteCode_exact
+#print axioms AuxiliaryCodeComputability.primrec_checkPolyCode
+#print axioms AuxiliaryCodeComputability.checkPolyCode_exact
+#print axioms AuxiliaryCodeComputability.primrec_checkLookupCode
+#print axioms AuxiliaryCodeComputability.checkLookupCode_exact

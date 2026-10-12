@@ -1,0 +1,2048 @@
+[
+  {
+    "type": "StepCert",
+    "sort": 6,
+    "ctors": [
+      {
+        "name": "i",
+        "fields": [
+          "Term"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          0
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_step_i"
+      },
+      {
+        "name": "k",
+        "fields": [
+          "Term",
+          "Term"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          0,
+          0
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_step_k"
+      },
+      {
+        "name": "s",
+        "fields": [
+          "Term",
+          "Term",
+          "Term"
+        ],
+        "tag": 2,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          0,
+          0,
+          0
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_step_s"
+      },
+      {
+        "name": "left",
+        "fields": [
+          "Term",
+          "Term",
+          "Term",
+          "StepCert"
+        ],
+        "tag": 3,
+        "wrapped": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_step_left"
+      },
+      {
+        "name": "right",
+        "fields": [
+          "Term",
+          "Term",
+          "Term",
+          "StepCert"
+        ],
+        "tag": 4,
+        "wrapped": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          0,
+          0,
+          0,
+          6
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_step_right"
+      }
+    ],
+    "description": "stepCertDescription"
+  },
+  {
+    "type": "RedCert",
+    "sort": 7,
+    "ctors": [
+      {
+        "name": "refl",
+        "fields": [
+          "Term"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          0
+        ],
+        "lemma": "encode_RedCert_refl"
+      },
+      {
+        "name": "tail",
+        "fields": [
+          "Term",
+          "Term",
+          "Term",
+          "StepCert",
+          "RedCert"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          0,
+          0,
+          0,
+          6,
+          7
+        ],
+        "lemma": "encode_RedCert_tail"
+      }
+    ],
+    "description": "redCertDescription"
+  },
+  {
+    "type": "FiniteCert",
+    "sort": 8,
+    "ctors": [
+      {
+        "name": "i",
+        "fields": [
+          "TypeCode"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          1
+        ],
+        "lemma": "encode_FiniteCert_i"
+      },
+      {
+        "name": "k",
+        "fields": [
+          "TypeCode",
+          "TypeCode"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          1,
+          1
+        ],
+        "lemma": "encode_FiniteCert_k"
+      },
+      {
+        "name": "s",
+        "fields": [
+          "TypeCode",
+          "TypeCode",
+          "TypeCode"
+        ],
+        "tag": 2,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          1,
+          1,
+          1
+        ],
+        "lemma": "encode_FiniteCert_s"
+      },
+      {
+        "name": "app",
+        "fields": [
+          "Term",
+          "Term",
+          "TypeCode",
+          "TypeCode",
+          "FiniteCert",
+          "FiniteCert"
+        ],
+        "tag": 3,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "sorts": [
+          0,
+          0,
+          1,
+          1,
+          8,
+          8
+        ],
+        "lemma": "encode_FiniteCert_app"
+      },
+      {
+        "name": "allI",
+        "fields": [
+          "Term",
+          "TypeCode",
+          "FiniteCert"
+        ],
+        "tag": 4,
+        "wrapped": [
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          0,
+          1,
+          8
+        ],
+        "lemma": "encode_FiniteCert_allI"
+      },
+      {
+        "name": "allE",
+        "fields": [
+          "Term",
+          "TypeCode",
+          "TypeCode",
+          "FiniteCert"
+        ],
+        "tag": 5,
+        "wrapped": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          0,
+          1,
+          1,
+          8
+        ],
+        "lemma": "encode_FiniteCert_allE"
+      },
+      {
+        "name": "reduce",
+        "fields": [
+          "Term",
+          "Term",
+          "TypeCode",
+          "FiniteCert",
+          "RedCert"
+        ],
+        "tag": 6,
+        "wrapped": [
+          true,
+          true,
+          true,
+          false,
+          true
+        ],
+        "sorts": [
+          0,
+          0,
+          1,
+          8,
+          7
+        ],
+        "lemma": "encode_FiniteCert_reduce"
+      }
+    ],
+    "description": "finiteCertDescription"
+  },
+  {
+    "type": "PolyCert",
+    "sort": 9,
+    "ctors": [
+      {
+        "name": "refl",
+        "fields": [
+          "Poly"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          2
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_refl"
+      },
+      {
+        "name": "symm",
+        "fields": [
+          "Poly",
+          "Poly",
+          "PolyCert"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          2,
+          2,
+          9
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_symm"
+      },
+      {
+        "name": "trans",
+        "fields": [
+          "Poly",
+          "Poly",
+          "Poly",
+          "PolyCert",
+          "PolyCert"
+        ],
+        "tag": 2,
+        "wrapped": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "sorts": [
+          2,
+          2,
+          2,
+          9,
+          9
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_trans"
+      },
+      {
+        "name": "app",
+        "fields": [
+          "Poly",
+          "Poly",
+          "Poly",
+          "Poly",
+          "PolyCert",
+          "PolyCert"
+        ],
+        "tag": 3,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        "sorts": [
+          2,
+          2,
+          2,
+          2,
+          9,
+          9
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_app"
+      },
+      {
+        "name": "i",
+        "fields": [
+          "Poly"
+        ],
+        "tag": 4,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          2
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_i"
+      },
+      {
+        "name": "k",
+        "fields": [
+          "Poly",
+          "Poly"
+        ],
+        "tag": 5,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          2,
+          2
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_k"
+      },
+      {
+        "name": "s",
+        "fields": [
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 6,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          2,
+          2,
+          2
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_s"
+      },
+      {
+        "name": "bridge",
+        "fields": [
+          "Term",
+          "Term"
+        ],
+        "tag": 7,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          0,
+          0
+        ],
+        "lemma": "AuxiliaryCodeComputability.encode_poly_bridge"
+      }
+    ],
+    "description": "polyCertDescription"
+  },
+  {
+    "type": "LookupCert",
+    "sort": 10,
+    "ctors": [
+      {
+        "name": "zero",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_LookupCert_zero"
+      },
+      {
+        "name": "succ",
+        "fields": [
+          "Tel",
+          "Nat",
+          "Ty",
+          "Ty",
+          "LookupCert"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "sorts": [
+          5,
+          4,
+          3,
+          3,
+          10
+        ],
+        "lemma": "encode_LookupCert_succ"
+      }
+    ],
+    "description": "lookupCertDescription"
+  },
+  {
+    "type": "Claim",
+    "sort": 11,
+    "ctors": [
+      {
+        "name": "ctxJ",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Claim_ctxJ"
+      },
+      {
+        "name": "formJ",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 1,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Claim_formJ"
+      },
+      {
+        "name": "hasJ",
+        "fields": [
+          "Tel",
+          "Poly",
+          "Ty"
+        ],
+        "tag": 2,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          2,
+          3
+        ],
+        "lemma": "encode_Claim_hasJ"
+      },
+      {
+        "name": "ctxE",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 3,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Claim_ctxE"
+      },
+      {
+        "name": "formE",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 4,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Claim_formE"
+      },
+      {
+        "name": "hasE",
+        "fields": [
+          "Tel",
+          "Poly",
+          "Ty"
+        ],
+        "tag": 5,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          2,
+          3
+        ],
+        "lemma": "encode_Claim_hasE"
+      }
+    ],
+    "description": "claimDescription"
+  },
+  {
+    "type": "Rule",
+    "sort": 12,
+    "ctors": [
+      {
+        "name": "CtxJ_ctxBase",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Rule_CtxJ_ctxBase"
+      },
+      {
+        "name": "CtxJ_nil",
+        "fields": [],
+        "tag": 1,
+        "wrapped": [],
+        "sorts": [],
+        "lemma": "encode_Rule_CtxJ_nil"
+      },
+      {
+        "name": "CtxJ_ext",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 2,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_CtxJ_ext"
+      },
+      {
+        "name": "FormJ_formBase",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 3,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_FormJ_formBase"
+      },
+      {
+        "name": "FormJ_param",
+        "fields": [
+          "Tel",
+          "Nat"
+        ],
+        "tag": 4,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          4
+        ],
+        "lemma": "encode_Rule_FormJ_param"
+      },
+      {
+        "name": "FormJ_bottom",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 5,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Rule_FormJ_bottom"
+      },
+      {
+        "name": "FormJ_all",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 6,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_FormJ_all"
+      },
+      {
+        "name": "FormJ_raw",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 7,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Rule_FormJ_raw"
+      },
+      {
+        "name": "FormJ_pi",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 8,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_FormJ_pi"
+      },
+      {
+        "name": "FormJ_sigma",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 9,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_FormJ_sigma"
+      },
+      {
+        "name": "FormJ_identity",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 10,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_FormJ_identity"
+      },
+      {
+        "name": "HasJ_hasBase",
+        "fields": [
+          "Tel",
+          "Poly",
+          "Ty"
+        ],
+        "tag": 11,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          2,
+          3
+        ],
+        "lemma": "encode_Rule_HasJ_hasBase"
+      },
+      {
+        "name": "HasJ_var",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Nat",
+          "LookupCert"
+        ],
+        "tag": 12,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          4,
+          10
+        ],
+        "lemma": "encode_Rule_HasJ_var"
+      },
+      {
+        "name": "HasJ_i",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 13,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_HasJ_i"
+      },
+      {
+        "name": "HasJ_k",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 14,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_HasJ_k"
+      },
+      {
+        "name": "HasJ_s",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 15,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_HasJ_s"
+      },
+      {
+        "name": "HasJ_finite",
+        "fields": [
+          "TypeCode",
+          "Tel",
+          "Term",
+          "List P01AC.Ty",
+          "FiniteCert"
+        ],
+        "tag": 16,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          1,
+          5,
+          0,
+          5,
+          8
+        ],
+        "lemma": "encode_Rule_HasJ_finite"
+      },
+      {
+        "name": "HasJ_allIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 17,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_allIntro"
+      },
+      {
+        "name": "HasJ_allElim",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 18,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_allElim"
+      },
+      {
+        "name": "HasJ_rawAtom",
+        "fields": [
+          "Tel",
+          "Term"
+        ],
+        "tag": 19,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          0
+        ],
+        "lemma": "encode_Rule_HasJ_rawAtom"
+      },
+      {
+        "name": "HasJ_rawApp",
+        "fields": [
+          "Tel",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 20,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_rawApp"
+      },
+      {
+        "name": "HasJ_piIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 21,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_piIntro"
+      },
+      {
+        "name": "HasJ_piElim",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 22,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_piElim"
+      },
+      {
+        "name": "HasJ_sigmaIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 23,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_sigmaIntro"
+      },
+      {
+        "name": "HasJ_sigmaFst",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 24,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_sigmaFst"
+      },
+      {
+        "name": "HasJ_sigmaSnd",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 25,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_sigmaSnd"
+      },
+      {
+        "name": "HasJ_identityIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "PolyCert"
+        ],
+        "tag": 26,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          9
+        ],
+        "lemma": "encode_Rule_HasJ_identityIntro"
+      },
+      {
+        "name": "HasJ_proofErase",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 27,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_proofErase"
+      },
+      {
+        "name": "HasJ_j",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 28,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_j"
+      },
+      {
+        "name": "HasJ_conv",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "PolyCert"
+        ],
+        "tag": 29,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          9
+        ],
+        "lemma": "encode_Rule_HasJ_conv"
+      },
+      {
+        "name": "HasJ_piExt",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 30,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_piExt"
+      },
+      {
+        "name": "HasJ_allExt",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 31,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_allExt"
+      },
+      {
+        "name": "HasJ_sigmaElim",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 32,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_sigmaElim"
+      },
+      {
+        "name": "HasJ_natInduction",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 33,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasJ_natInduction"
+      },
+      {
+        "name": "CtxE_nil",
+        "fields": [],
+        "tag": 34,
+        "wrapped": [],
+        "sorts": [],
+        "lemma": "encode_Rule_CtxE_nil"
+      },
+      {
+        "name": "CtxE_ext",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 35,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_CtxE_ext"
+      },
+      {
+        "name": "FormE_param",
+        "fields": [
+          "Tel",
+          "Nat"
+        ],
+        "tag": 36,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          4
+        ],
+        "lemma": "encode_Rule_FormE_param"
+      },
+      {
+        "name": "FormE_bottom",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 37,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Rule_FormE_bottom"
+      },
+      {
+        "name": "FormE_all",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 38,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_FormE_all"
+      },
+      {
+        "name": "FormE_raw",
+        "fields": [
+          "Tel"
+        ],
+        "tag": 39,
+        "wrapped": [
+          true
+        ],
+        "sorts": [
+          5
+        ],
+        "lemma": "encode_Rule_FormE_raw"
+      },
+      {
+        "name": "FormE_pi",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 40,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_FormE_pi"
+      },
+      {
+        "name": "FormE_sigma",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 41,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_FormE_sigma"
+      },
+      {
+        "name": "FormE_identity",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 42,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_FormE_identity"
+      },
+      {
+        "name": "HasE_var",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Nat",
+          "LookupCert"
+        ],
+        "tag": 43,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          4,
+          10
+        ],
+        "lemma": "encode_Rule_HasE_var"
+      },
+      {
+        "name": "HasE_i",
+        "fields": [
+          "Tel",
+          "Ty"
+        ],
+        "tag": 44,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3
+        ],
+        "lemma": "encode_Rule_HasE_i"
+      },
+      {
+        "name": "HasE_k",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 45,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_HasE_k"
+      },
+      {
+        "name": "HasE_s",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Ty"
+        ],
+        "tag": 46,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          3
+        ],
+        "lemma": "encode_Rule_HasE_s"
+      },
+      {
+        "name": "HasE_finite",
+        "fields": [
+          "TypeCode",
+          "Tel",
+          "Term",
+          "List P01AC.Ty",
+          "FiniteCert"
+        ],
+        "tag": 47,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          1,
+          5,
+          0,
+          5,
+          8
+        ],
+        "lemma": "encode_Rule_HasE_finite"
+      },
+      {
+        "name": "HasE_allIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 48,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_allIntro"
+      },
+      {
+        "name": "HasE_allElim",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 49,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_allElim"
+      },
+      {
+        "name": "HasE_rawAtom",
+        "fields": [
+          "Tel",
+          "Term"
+        ],
+        "tag": 50,
+        "wrapped": [
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          0
+        ],
+        "lemma": "encode_Rule_HasE_rawAtom"
+      },
+      {
+        "name": "HasE_rawApp",
+        "fields": [
+          "Tel",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 51,
+        "wrapped": [
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_rawApp"
+      },
+      {
+        "name": "HasE_piIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 52,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_piIntro"
+      },
+      {
+        "name": "HasE_piElim",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 53,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_piElim"
+      },
+      {
+        "name": "HasE_sigmaIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 54,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_sigmaIntro"
+      },
+      {
+        "name": "HasE_sigmaFst",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 55,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_sigmaFst"
+      },
+      {
+        "name": "HasE_sigmaSnd",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly"
+        ],
+        "tag": 56,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_sigmaSnd"
+      },
+      {
+        "name": "HasE_identityIntro",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "PolyCert"
+        ],
+        "tag": 57,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          9
+        ],
+        "lemma": "encode_Rule_HasE_identityIntro"
+      },
+      {
+        "name": "HasE_proofErase",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 58,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_proofErase"
+      },
+      {
+        "name": "HasE_j",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 59,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_j"
+      },
+      {
+        "name": "HasE_conv",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "PolyCert"
+        ],
+        "tag": 60,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          9
+        ],
+        "lemma": "encode_Rule_HasE_conv"
+      },
+      {
+        "name": "HasE_piExt",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 61,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_piExt"
+      },
+      {
+        "name": "HasE_allExt",
+        "fields": [
+          "Tel",
+          "Ty",
+          "Poly",
+          "Poly",
+          "Poly"
+        ],
+        "tag": 62,
+        "wrapped": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "sorts": [
+          5,
+          3,
+          2,
+          2,
+          2
+        ],
+        "lemma": "encode_Rule_HasE_allExt"
+      }
+    ],
+    "description": "ruleDescription"
+  },
+  {
+    "type": "SerialCert",
+    "sort": 13,
+    "ctors": [
+      {
+        "name": "node",
+        "fields": [
+          "Rule",
+          "SerialCertList"
+        ],
+        "tag": 0,
+        "wrapped": [
+          true,
+          false
+        ],
+        "sorts": [
+          12,
+          14
+        ],
+        "lemma": "encode_SerialCert_node"
+      }
+    ],
+    "description": "serialCertDescription"
+  },
+  {
+    "type": "SerialCertList",
+    "sort": 14,
+    "ctors": [
+      {
+        "name": "nil",
+        "fields": [],
+        "tag": 0,
+        "wrapped": [],
+        "sorts": [],
+        "lemma": "encode_SerialCertList_nil"
+      },
+      {
+        "name": "cons",
+        "fields": [
+          "SerialCert",
+          "SerialCertList"
+        ],
+        "tag": 1,
+        "wrapped": [
+          false,
+          false
+        ],
+        "sorts": [
+          13,
+          14
+        ],
+        "lemma": "encode_SerialCertList_cons"
+      }
+    ],
+    "description": "serialCertListDescription"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "date_utc": "2026-10-11",
+  "primary": {
+    "title": "Why We Care About Understanding: Competence through Predictive Compression",
+    "authors": ["Matthieu Queloz", "Pierre Beckmann"],
+    "version": "arXiv:2609.04962v1",
+    "submitted": "2026-09-04",
+    "abstract_metadata": "https://arxiv.org/abs/2609.04962",
+    "pdf": "https://arxiv.org/pdf/2609.04962v1",
+    "html": "https://arxiv.org/html/2609.04962v1",
+    "pdf_total_pages": 29,
+    "continuous_text_read": "Main argument pp.1–23, sections 1 through 5 and intervening notes; extracted PDF text cross-checked against HTML and selected rendered PDF pages.",
+    "visual_pages_inspected": [8, 9, 14, 18, 19, 20, 23],
+    "bibliography_boundary": "No independent investigation of cited works. Not all bibliography pages read. No full visual inspection claimed.",
+    "load_bearing_units": [
+      {"pages": "5–9", "sections": "2.1–2.2", "topic": "Domain-relative reliance, mental organization, preserved relations across variation, intervention, and counterfactual probes."},
+      {"pages": "13–17", "sections": "3.2", "topic": "Model plus residual coding, past/future objectives, overfitting, declared task family."},
+      {"pages": "18–19", "sections": "3.3", "topic": "Constitution versus fallible indicators; explanation as model transmission."},
+      {"pages": "20–22", "sections": "4.1–4.2", "topic": "Which domain/task structure is compressed; tacit forms."},
+      {"pages": "23", "sections": "5", "topic": "Predictive success alone does not settle understanding."}
+    ]
+  },
+  "inherited": [
+    {"source": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md", "read": "Finite law/moment setup, Theorems 1–2 and proofs, action–observation setup and scope limits; adjacent higher-order example and discharge controls inspected."},
+    {"source": "audit-continuation-transport-20261010/RESULT.md", "read": "Complete report, with targeted second reading of sections 1–4 and existing verify.py implementation."},
+    {"source": "guide-domain-warrant-test-20261011/REPORT.md", "read": "Complete report. No fresh Arabic-primary reread credited."}
+  ],
+  "search_boundary": "Parent's previous bounded top-level report search is context only; no new corpus survey.",
+  "lampinen_boundary": "Retained connection motivates task; no Lampinen paper independently inspected in this operation.",
+  "status": "Candidate external comparison and local application, not independent validation. No new theorem or programme closure."
+}

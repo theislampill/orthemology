@@ -1,0 +1,57 @@
+[
+  {
+    "source": "research/rational-winning-control/lean/RationalWinningPolicyEquivalence.lean",
+    "sha256": "c74fa0d302653220cbee3c17fc996db99ff4a4d71978f72b679ddec7cd7ffe00",
+    "imports": [
+      "RationalWinningWitness",
+      "AELicensedEquivalence"
+    ],
+    "matches_delivered_fourth_bytes": true,
+    "source_guard": "PASS",
+    "status": "BLOCKED_MISSING_QUALIFIED_IMPORT_CLOSURE",
+    "blocker": "Transitive RationalWinningWitness closure requires missing qualified RationalWinningCorrectness. AELicensedEquivalence is retained in the third return but cannot resolve that missing successor closure.",
+    "compile_attempted": false
+  },
+  {
+    "source": "research/rational-winning-control/lean/RationalWinningWitness.lean",
+    "sha256": "2571a21e9c7dfbad6919d4b17b910bea786efcc2cf0755f74c84555156211f23",
+    "imports": [
+      "RationalWinningCorrectness"
+    ],
+    "matches_delivered_fourth_bytes": true,
+    "source_guard": "PASS",
+    "status": "BLOCKED_MISSING_QUALIFIED_IMPORT_CLOSURE",
+    "blocker": "Exact RationalWinningCorrectness unavailable; the known transcription mismatches its recorded digest. Enumeration and Cast are also not recovered.",
+    "compile_attempted": false
+  },
+  {
+    "source": "research/rational-winning-control/lean/RationalWinningCore.lean",
+    "sha256": "f95f86dc8de4998b6172e93e1563f5bdd719d701128625acd713352afc288a63",
+    "imports": [
+      "Mathlib.Data.Finset.Powerset",
+      "Mathlib.Data.List.FinRange",
+      "Mathlib.Data.Rat.Defs",
+      "Mathlib.Tactic"
+    ],
+    "matches_delivered_fourth_bytes": true,
+    "source_guard": "PASS",
+    "status": "FRESH_COMPILE_AND_19_TYPE_AXIOM_READBACK_PASS",
+    "observed_utc": "2026-10-01T14:25:00Z",
+    "scope": "Elaboration of executable definitions and generated proof obligations only; no correctness theorem or old fourth audit credit",
+    "proof_hole_guard": "PASS",
+    "readback_target_count": 19
+  },
+  {
+    "source": "research/semantic-recovery/RepairTestingReduction.lean",
+    "sha256": "c86a552e28c596255b14bfaca8ef99c155ec5000a52301c127fbc12bc3e77de5",
+    "imports": [
+      "FiniteLikelihoodRisk",
+      "RobustBinaryRepair"
+    ],
+    "matches_delivered_fourth_bytes": true,
+    "source_guard": "PASS",
+    "status": "BLOCKED_MISSING_QUALIFIED_IMPORT_CLOSURE",
+    "blocker": "FiniteLikelihoodRisk is not among recovered exact sources. RobustBinaryRepair is retained in the third return but does not supply the missing likelihood closure.",
+    "compile_attempted": false
+  }
+]

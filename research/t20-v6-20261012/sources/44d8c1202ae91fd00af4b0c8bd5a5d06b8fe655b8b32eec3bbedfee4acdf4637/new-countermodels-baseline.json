@@ -1,0 +1,146 @@
+[
+  {
+    "id": "P03-A2-CE-HOST-REVISION",
+    "mode": "baseline",
+    "fault": [
+      {
+        "function": "set_observation",
+        "line": 89,
+        "source": "for key in ['vocabulary','obs:'+name]:self._rules[key]=(self._rules.get(key,(-1,False))[0]+1,True)"
+      }
+    ],
+    "before_observations": {
+      "v": [
+        0,
+        0
+      ]
+    },
+    "after_observations": {
+      "v": [
+        0,
+        1
+      ]
+    },
+    "before_rules": {
+      "schema": [
+        0,
+        true
+      ],
+      "vocabulary": [
+        1,
+        true
+      ],
+      "structural": [
+        0,
+        true
+      ],
+      "primitive:succ": [
+        0,
+        true
+      ],
+      "primitive:iszero": [
+        0,
+        true
+      ],
+      "primitive:not": [
+        0,
+        true
+      ],
+      "core": [
+        0,
+        true
+      ],
+      "selector": [
+        0,
+        true
+      ],
+      "edge": [
+        0,
+        true
+      ],
+      "sampler": [
+        0,
+        true
+      ],
+      "observer": [
+        0,
+        true
+      ],
+      "obs:v": [
+        0,
+        true
+      ]
+    },
+    "after_rules": {
+      "schema": [
+        0,
+        true
+      ],
+      "vocabulary": [
+        1,
+        true
+      ],
+      "structural": [
+        0,
+        true
+      ],
+      "primitive:succ": [
+        0,
+        true
+      ],
+      "primitive:iszero": [
+        0,
+        true
+      ],
+      "primitive:not": [
+        0,
+        true
+      ],
+      "core": [
+        0,
+        true
+      ],
+      "selector": [
+        0,
+        true
+      ],
+      "edge": [
+        0,
+        true
+      ],
+      "sampler": [
+        0,
+        true
+      ],
+      "observer": [
+        0,
+        true
+      ],
+      "obs:v": [
+        0,
+        true
+      ]
+    },
+    "old_licence_current": true,
+    "dispatch_result": 1,
+    "logical_state_unchanged": false
+  },
+  {
+    "id": "P03-A2-CE-MUTABLE-ENCODE",
+    "mode": "baseline",
+    "mutation": [
+      {
+        "function": "dump_json",
+        "line": 92,
+        "source": "encoder=json.JSONEncoder(sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False)"
+      }
+    ],
+    "caller_after": {
+      "v": 1.25
+    },
+    "returned_bytes": "{\"v\":1.25}",
+    "decode_error": "encoding: integral JSON numbers only",
+    "encoder_refusal": null,
+    "decoded": null
+  }
+]

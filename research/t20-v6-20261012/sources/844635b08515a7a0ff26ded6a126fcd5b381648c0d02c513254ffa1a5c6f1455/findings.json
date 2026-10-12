@@ -1,0 +1,99 @@
+[
+  {
+    "id": "S3-A01",
+    "severity": "blocking",
+    "target": "complete original source-reading requirement",
+    "finding": "The resumed segment has no fresh byte-bound source-line review receipts; inherited receipts have not been fully reconciled.",
+    "disposition": "OPEN",
+    "reason": "Tool-result bodies were not available for semantic readback. Byte processing is not perusal.",
+    "next_evidence": "Read every inherited review ledger and resume exact original queue IDs and ranges."
+  },
+  {
+    "id": "S3-A02",
+    "severity": "blocking",
+    "target": "actual modal support-helper repair",
+    "finding": "The interrupted attempt reports a real-source reproduction and patch, but the raw command/source/test/result binding is not inspected here.",
+    "disposition": "OPEN_NO_RESET_OF_PRIOR_RECEIPTS",
+    "next_evidence": "Locate preserved actual-source receipts, confirm hashes, read original helper/tests and candidate diff, and reproduce their direct-world oracle."
+  },
+  {
+    "id": "S3-A03",
+    "severity": "blocking",
+    "target": "original verification/verify_package.py",
+    "finding": "The authored byte-manifest comparison is not the specifically requested source review and execution of the inherited verifier.",
+    "disposition": "OPEN",
+    "next_evidence": "Read the original verifier, run ordinary Python against its root SHA256SUMS, inspect its actual output."
+  },
+  {
+    "id": "S3-A04",
+    "severity": "blocking for novelty/meniscus",
+    "target": "stage-one and frontier theorem-family comparison",
+    "finding": "The finite arguments may already occur with equal or stronger hypotheses/results in the unreviewed frontier material or conventional prior art.",
+    "disposition": "OPEN",
+    "next_evidence": "Full manuscripts, proof dependencies, earlier/equal/stronger classification, primary sources and strongest rival comparison."
+  },
+  {
+    "id": "S3-A05",
+    "severity": "blocking for reviewer execution-clearance",
+    "target": "new machine-written test receipts",
+    "finding": "A subprocess may create a valid receipt without the reviewing assistant having read back its body.",
+    "disposition": "OPEN_READBACK",
+    "next_evidence": "Read stdout, stderr, exit code, hashes, interpreter and model scope in results.json."
+  },
+  {
+    "id": "S3-A06",
+    "severity": "clarification",
+    "target": "REPORT section 9",
+    "finding": "State explicitly that the finite-profile descent count concerns pure profiles; mixed strategy spaces need not be finite.",
+    "disposition": "RESOLVED_IN_CANDIDATE2",
+    "repair": "Replace finite profile space with finite pure-profile space; preserve separate mixed saddle discussion."
+  },
+  {
+    "id": "S3-A07",
+    "severity": "clarification",
+    "target": "REPORT sections 9.2 and 10.2",
+    "finding": "Specify an admissible small perturbation and positivity for the reversible cycle comparison.",
+    "disposition": "RESOLVED_IN_CANDIDATE2",
+    "repair": "Require 0 < |t| < 1/2 and refer to a positive reversible law."
+  },
+  {
+    "id": "S3-A08",
+    "severity": "clarification",
+    "target": "candidate core documentation patch",
+    "finding": "Removing only the bare intersection while retaining 'disjoint extensions' would leave the same typing ambiguity in prose.",
+    "disposition": "RESOLVED_IN_PATCH_SPECIFICATION",
+    "repair": "The isolated proposal addresses the entire isomorphism bullet; applicability remains hash- and exact-text guarded."
+  },
+  {
+    "id": "S3-A09",
+    "severity": "distribution safety",
+    "target": "verification/preserve_work.py",
+    "finding": "TrueType magic should also be screened when a font has an opaque extension, not only by its filename.",
+    "disposition": "RESOLVED_IN_CANDIDATE2_CODE",
+    "repair": "Add 0x00010000 signature and remove any now-excluded generated distribution copy; never alter an original."
+  },
+  {
+    "id": "S3-A10",
+    "severity": "process",
+    "target": "candidate1 freeze scope",
+    "finding": "A report-only freeze is not a freeze of all authored code and assessment surfaces.",
+    "disposition": "RESOLVED_FOR_CANDIDATE2_FREEZE",
+    "repair": "Create a full authored-candidate manifest, preserving candidate1 and keeping mutable acquisition logs outside the candidate claim."
+  },
+  {
+    "id": "S3-A11",
+    "severity": "not a defect in stated conditional proof",
+    "target": "approximate Nash, cover bound, decision game, logit examples",
+    "finding": "The algebraic arguments survive the stated symbol-level challenge; this is not a whole-source or independent mathematical clearance.",
+    "disposition": "SCOPED_SELF_REVIEW_ONLY",
+    "next_evidence": "Complete source and prior-art comparisons plus independent review where required."
+  },
+  {
+    "id": "S3-A12",
+    "severity": "substantive mathematical scope",
+    "target": "Mixed-strategy transport and ordinal/potential readings",
+    "finding": "Pure per-opponent preference signs do not determine mixed-strategy indifference probabilities.",
+    "disposition": "RESOLVED_AS_EXPLICIT_COUNTERMODEL_IN_CANDIDATE2",
+    "repair": "Added exact two-game calculation and an executable regression; full frontier ancestry comparison remains open."
+  }
+]

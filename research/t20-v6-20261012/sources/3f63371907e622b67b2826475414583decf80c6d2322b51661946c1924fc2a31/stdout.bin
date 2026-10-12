@@ -1,0 +1,819 @@
+{
+  "timestamp_utc": "2026-09-21T21:05:25.652097+00:00",
+  "python": "3.11.9 (main, Aug 14 2024, 05:07:28) [Clang 18.1.8 ]",
+  "scope": "REFERENCE_ONLY",
+  "lean": {
+    "kernel_verified": false,
+    "status": "EXPLICITLY_NOT_ATTEMPTED",
+    "available": true
+  },
+  "novelty_established": false,
+  "trust_boundary": "Real selected compiler/OS/filesystem trusted; pure policy fixtures are not kernel evidence.",
+  "manifest": {
+    "status": "PASS",
+    "members": 71,
+    "manifest_sha256": "1c023ff46192fea6d281630e2f958585c345c37b452d6a28caa6e12aaf3e2789"
+  },
+  "toolchain_lock": {
+    "lean": "leanprover/lean4:v4.19.0",
+    "compiler_version": "4.19.0",
+    "mathlib_package": null,
+    "mathlib_adaptation": {
+      "file": "lean/HurkensBoundary.lean",
+      "upstream": "leanprover-community/mathlib4",
+      "commit": "81a5d257c8e410db227a6665ed08f64fea08e997",
+      "path": "Counterexamples/Girard.lean",
+      "status": "attributed preserved adaptation, not installed Mathlib"
+    },
+    "python_observed": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "dependencies": "Python standard library; active Lean imports Init or Lean plus local modules",
+    "migration": "none; wrong versions fail; no compiler obtained",
+    "approved_axiom_ceiling": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "source_hygiene": [
+    {
+      "module": "AlmostSureBoundary",
+      "bytes": 3234,
+      "sha256": "8485a2156b943ce569af6f219d69d7d24b00b41b04b8225a68d7480d2d70522d",
+      "theorems_static": 3,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "AuditSupport",
+      "bytes": 1024,
+      "sha256": "f3e08557b57a745bae547dc827755616cd6c6824bf1360441a72789036e1cd96",
+      "theorems_static": 0,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "BoundaryResults",
+      "bytes": 8581,
+      "sha256": "cf337cad057a4c2cb93f2c0145f8132368867257c2b0bf7ee32f7be70d29d11c",
+      "theorems_static": 22,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "EffectsAndDependence",
+      "bytes": 8707,
+      "sha256": "0e3adde9d907e2c0a28afb5087feb42986e2e1fd880682edd70d4b4214790be2",
+      "theorems_static": 15,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "FiniteBridge",
+      "bytes": 8366,
+      "sha256": "f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042",
+      "theorems_static": 8,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "GeneratedExamples",
+      "bytes": 13685,
+      "sha256": "0f8e551de28b6bdf549e0d2ecba0932bb2758b8ff57aaf5f1cf5956d7d88d8cd",
+      "theorems_static": 24,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "HurkensBoundary",
+      "bytes": 2245,
+      "sha256": "4c1d8a9d8a9a6ebec9f5e1a1ee41008b75fbfffeabbbd9ee489ea21982425a08",
+      "theorems_static": 1,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "InternalPolymorphism",
+      "bytes": 15288,
+      "sha256": "7cf85525305944e343b50f63e9b593a0fdcab3c89303f2f32cdb37d92c70b1ee",
+      "theorems_static": 37,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "NormalisationAndNumerals",
+      "bytes": 3101,
+      "sha256": "13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2",
+      "theorems_static": 7,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "OperationalBoundary",
+      "bytes": 2599,
+      "sha256": "d3494436356f8aec5510b004e2a977c9946533f6190219f30eee2de511b53f4e",
+      "theorems_static": 2,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "OperationalKernel",
+      "bytes": 8778,
+      "sha256": "766ae9391263f193c6e84e16042281fb5e70fe680f083f0359b4b3c10f215779",
+      "theorems_static": 15,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    },
+    {
+      "module": "RelationalFragment",
+      "bytes": 6417,
+      "sha256": "12dfbed26b887067f2bbd2a75930d038558b3a5c715100d7c25d3cfee79a7fdb",
+      "theorems_static": 10,
+      "status": "STATIC_HYGIENE_NOT_KERNEL"
+    }
+  ],
+  "required_inventory": {
+    "modules": 12,
+    "targets": 145,
+    "status": "STATIC_COMPLETE_NOT_READBACK"
+  },
+  "unit_tests": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 20913,
+    "elapsed_seconds": 1.452328,
+    "tests": 183
+  },
+  "unit_tests_optimised": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "-O",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 20913,
+    "elapsed_seconds": 1.544207,
+    "tests": 183
+  },
+  "census": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "census.py"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 1629,
+    "elapsed_seconds": 6.431685,
+    "results": {
+      "relation_extension": {
+        "carrier_size": 3,
+        "base_relations": 512,
+        "added_relations": 512,
+        "cases": 262144,
+        "claim": "old invariant codes preserved iff new edges stay within old undirected components"
+      },
+      "independent_substitution": {
+        "body_max_nodes": 4,
+        "argument_max_nodes": 3,
+        "open_depths": [
+          0,
+          1,
+          2
+        ],
+        "cases": 3307,
+        "breakdown": {
+          "0": {
+            "body_types": 39,
+            "argument_types": 7,
+            "pairs": 273
+          },
+          "1": {
+            "body_types": 67,
+            "argument_types": 13,
+            "pairs": 871
+          },
+          "2": {
+            "body_types": 103,
+            "argument_types": 21,
+            "pairs": 2163
+          }
+        }
+      },
+      "finite_interpretation": {
+        "carrier_size": 2,
+        "application_tables": 16,
+        "cases": 60112,
+        "scope": "substitution algebra only; NOT a model of SKI equations"
+      },
+      "observation_factorisation": {
+        "index_sizes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "observations": 2,
+        "values": 2,
+        "cases": 340
+      },
+      "symbolic_specialisation": {
+        "wrapped_selectors": 66,
+        "input_pairs_each": 25,
+        "cases": 1650,
+        "includes_divergent_inputs": true
+      },
+      "irrational_sampler": {
+        "all_bit_prefixes_through_length": 12,
+        "cases": 8191,
+        "residual_at_depth_512": "1/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096",
+        "scope": "exact finite prefixes; almost-sure termination and expected cost proved in prose"
+      },
+      "status": "PASS",
+      "elapsed_seconds": 6.339
+    }
+  },
+  "census_optimised": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "-O",
+      "census.py"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 1629,
+    "elapsed_seconds": 6.377627,
+    "results": {
+      "relation_extension": {
+        "carrier_size": 3,
+        "base_relations": 512,
+        "added_relations": 512,
+        "cases": 262144,
+        "claim": "old invariant codes preserved iff new edges stay within old undirected components"
+      },
+      "independent_substitution": {
+        "body_max_nodes": 4,
+        "argument_max_nodes": 3,
+        "open_depths": [
+          0,
+          1,
+          2
+        ],
+        "cases": 3307,
+        "breakdown": {
+          "0": {
+            "body_types": 39,
+            "argument_types": 7,
+            "pairs": 273
+          },
+          "1": {
+            "body_types": 67,
+            "argument_types": 13,
+            "pairs": 871
+          },
+          "2": {
+            "body_types": 103,
+            "argument_types": 21,
+            "pairs": 2163
+          }
+        }
+      },
+      "finite_interpretation": {
+        "carrier_size": 2,
+        "application_tables": 16,
+        "cases": 60112,
+        "scope": "substitution algebra only; NOT a model of SKI equations"
+      },
+      "observation_factorisation": {
+        "index_sizes": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "observations": 2,
+        "values": 2,
+        "cases": 340
+      },
+      "symbolic_specialisation": {
+        "wrapped_selectors": 66,
+        "input_pairs_each": 25,
+        "cases": 1650,
+        "includes_divergent_inputs": true
+      },
+      "irrational_sampler": {
+        "all_bit_prefixes_through_length": 12,
+        "cases": 8191,
+        "residual_at_depth_512": "1/13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096",
+        "scope": "exact finite prefixes; almost-sure termination and expected cost proved in prose"
+      },
+      "status": "PASS",
+      "elapsed_seconds": 6.289
+    }
+  },
+  "mutations": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "check_mutations.py",
+      "--output-dir",
+      "private-locator:5ebf871b27360814ee71"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 3433,
+    "elapsed_seconds": 1.571912,
+    "results": {
+      "status": "PASS",
+      "mutants": 6,
+      "detected": 6,
+      "results": [
+        {
+          "name": "remove_freshness",
+          "test": "test_extensions.ExtensionTests.test_marker_capture_rejected",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_remove_freshness.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "if not marker_free(program):",
+            "after": "if False:"
+          }
+        },
+        {
+          "name": "wrong_probability_mass",
+          "test": "test_extensions.ExtensionTests.test_probabilistic_application",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_wrong_probability_mass.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "_add(out,t,(1-q)*p)",
+            "after": "_add(out,t,q*p)"
+          }
+        },
+        {
+          "name": "retain_type_instantiation_at_runtime",
+          "test": "test_extensions.ExtensionTests.test_probabilistic_self_instantiation_is_erased",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_retain_type_instantiation_at_runtime.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "return t,out",
+            "after": "return ('type_application',t,b),out"
+          }
+        },
+        {
+          "name": "accept_mismatched_mixture_types",
+          "test": "test_extensions.ExtensionTests.test_probability_bad_typing",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_accept_mismatched_mixture_types.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "if a!=b: raise r.Rejection('mixture branches have different types')",
+            "after": "if False: raise r.Rejection('mixture branches have different types')"
+          }
+        },
+        {
+          "name": "wrong_irrational_threshold",
+          "test": "test_reflective_sampler.IrrationalReflectiveSampler.test_all_prefixes_through_twelve_bits",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_wrong_irrational_threshold.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "if upper*upper+2*upper*d-d*d < 0:",
+            "after": "if upper*upper+2*upper*d-d*d > 0:"
+          }
+        },
+        {
+          "name": "unknown_probability_fields",
+          "test": "test_extensions.ExtensionTests.test_probability_no_unknown_fields",
+          "exit_code": 1,
+          "positive_exit_code": 0,
+          "positive_ok": true,
+          "one_named_test_executed": true,
+          "detected": true,
+          "log": "MUTATION_unknown_probability_fields.txt",
+          "source_sha256": "77a808b83deb74603c68e5ac2c54371e8f663443a1c12c1f43e48a4678e6e044",
+          "patch": {
+            "before": "if set(n) != {'op',*keys}:",
+            "after": "if False:"
+          }
+        }
+      ]
+    }
+  },
+  "v4_mutations": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "v4_mutations.py",
+      "--output-dir",
+      "private-locator:8d0ee5e7d6fe4e3f59d1"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 2267,
+    "elapsed_seconds": 9.491441,
+    "results": {
+      "status": "PASS",
+      "mutants": 10,
+      "results": [
+        {
+          "name": "version_identity",
+          "test": "test_build_gate.BuildGateTests.test_version_exact_not_just_recorded",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "audit_target_coverage",
+          "test": "test_build_gate.BuildGateTests.test_each_target_requires_type_and_axioms",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "mandatory_role_floor",
+          "test": "test_build_gate.ContractGateTests.test_required_role_cannot_be_deleted_with_its_source",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "nested_manifest_coverage",
+          "test": "test_build_gate.BuildGateTests.test_manifest_exact_including_nested_manifest",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "raw_duplicate_keys",
+          "test": "test_v4_regressions.InputRepairs.test_bytes_duplicate_and_bad_encoding",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "absence_of_obligation_binding",
+          "test": "test_observation_revision.ProbabilityLicences.test_add_requirement_invalidates_preexisting",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "dispatch_version_binding",
+          "test": "test_observation_revision.ProbabilityLicences.test_law_version_change_same_numbers_invalidates",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "ticket_issuer_binding",
+          "test": "test_ticket_collision.IssuerBindingTests.test_identical_ticket_bytes_in_two_engines_do_not_cross_authorise",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "ticket_registry_uniqueness",
+          "test": "test_ticket_collision.TicketCollisionTests.test_collision_cannot_revive_revoked_ticket",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        },
+        {
+          "name": "census_assertion_under_optimisation",
+          "test": "test_v4_regressions.InputRepairs.test_optimisation_negative_control",
+          "positive_ok": true,
+          "detected_by_intended_test": true
+        }
+      ]
+    }
+  },
+  "positive_demonstration": {
+    "command": [
+      "private-locator:6443df333147b9001a40",
+      "-B",
+      "demonstrate.py"
+    ],
+    "cwd": "private-locator:7fbac8b4f3576af0cb5c",
+    "ok": true,
+    "status": "EXIT",
+    "exit_code": 0,
+    "output_bytes": 6390,
+    "elapsed_seconds": 0.121416,
+    "results": {
+      "status": "PASS",
+      "scope": "FINITE_EXECUTABLE_EVIDENCE",
+      "kernel_verified": false,
+      "positive_cases": 12,
+      "projection_current_entries": 6,
+      "reject_all_fails": true,
+      "events": [
+        {
+          "test": "unavailable-before-add",
+          "refusal": "authority: disabled dependency primitive:succ"
+        },
+        {
+          "test": "add-permission-and-nonidentity",
+          "input": 2,
+          "output": 3
+        },
+        {
+          "test": "revocation",
+          "old_refusal": "authority: stale evidence",
+          "new_refusal": "authority: disabled dependency primitive:succ"
+        },
+        {
+          "test": "ABA-no-revival",
+          "old_refusal": "authority: stale evidence",
+          "new_output": 5
+        },
+        {
+          "test": "distinguishable-and-composition",
+          "iszero": [
+            true,
+            false
+          ],
+          "composed": [
+            false,
+            true
+          ]
+        },
+        {
+          "test": "internal-source-self-instantiation-and-application",
+          "term": [
+            "app",
+            [
+              "i"
+            ],
+            [
+              "i"
+            ]
+          ],
+          "type": [
+            "all",
+            [
+              "arr",
+              [
+                "v",
+                0
+              ],
+              [
+                "v",
+                0
+              ]
+            ]
+          ],
+          "normal": [
+            "i"
+          ]
+        },
+        {
+          "test": "active-invariant-revision",
+          "old_refusal": "authority: stale evidence",
+          "fresh_refusal": "preservation: edge changes active observation"
+        },
+        {
+          "test": "quantitative-refinement",
+          "identity": {
+            "status": "CHECKED_DECLARED_MODEL",
+            "theorem": "V4-Q1",
+            "coarse_fingerprint": "34c9916c76efb66ce4489becb572a94e9fe6edfc84666862e0c82e4c363d54d4",
+            "fine_fingerprint": "962df76222def92912c52276b127b1b17c808d3b16f2289deda7ae9e858512a7",
+            "coarse_defect": [
+              0,
+              1
+            ],
+            "fine_defect": [
+              1,
+              2
+            ],
+            "increment": [
+              1,
+              2
+            ],
+            "positive_coarse_fibres": [
+              {
+                "component": 0,
+                "bin": 0,
+                "weight": [
+                  1,
+                  2
+                ],
+                "conditional_defect": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "component": 1,
+                "bin": 0,
+                "weight": [
+                  1,
+                  2
+                ],
+                "conditional_defect": [
+                  1,
+                  1
+                ]
+              }
+            ],
+            "equality": false,
+            "scope": "full measurable event family in declared law grammar; not empirical model identification"
+          },
+          "old_refusal": "authority: stale evidence",
+          "fresh_refusal": "probability: revised universal-failure obligation exceeds tolerance"
+        },
+        {
+          "test": "new-evidence",
+          "certificate": {
+            "current": true,
+            "source_sha256": "639e4a69a3e8532a0c24159d08720da180a9122fef7142a8234f5fc2ef60b634",
+            "bindings": [
+              [
+                "need:primitive:succ",
+                [
+                  2,
+                  true
+                ]
+              ],
+              [
+                "primitive:succ",
+                [
+                  0,
+                  true
+                ]
+              ],
+              [
+                "probobs:signal",
+                [
+                  1,
+                  true
+                ]
+              ],
+              [
+                "schema",
+                [
+                  0,
+                  true
+                ]
+              ]
+            ],
+            "probability_evidence": [
+              {
+                "defect": [
+                  1,
+                  2
+                ],
+                "epsilon": [
+                  3,
+                  4
+                ],
+                "events": "full-measurable",
+                "law": "demonstration-law",
+                "observation": "signal",
+                "observation_fingerprint": "962df76222def92912c52276b127b1b17c808d3b16f2289deda7ae9e858512a7",
+                "operation_policy": "primitive:succ",
+                "scope": "finite exact symbolic calculation; external law identification is a trusted-host obligation",
+                "space": "tagged-uniform-intervals",
+                "status": "CHECKED_DECLARED_MODEL",
+                "theorem": "V4-Q2/Q3"
+              }
+            ]
+          },
+          "output": 3
+        },
+        {
+          "test": "coarsening-requires-new-authority",
+          "old_refusal": "authority: stale evidence",
+          "new_output": 6
+        },
+        {
+          "test": "typed-productive-source",
+          "certificate": {
+            "source_sha256": "8c54f1b24cb4c48bcf1593bc59dd6dfcbb7b2bff9153096da761d8f5582c8bfe",
+            "status": "EXACT_DECLARED_FAIR_BIT_MODEL",
+            "max_bits": 8,
+            "left_mass": [
+              53,
+              128
+            ],
+            "right_mass": [
+              149,
+              256
+            ],
+            "pending_mass": [
+              1,
+              256
+            ],
+            "expected_bits": [
+              255,
+              128
+            ],
+            "ideal_expected_bits": [
+              2,
+              1
+            ],
+            "ideal_second_moment_bits": [
+              6,
+              1
+            ],
+            "assumptions": [
+              "independent fair input bits",
+              "declared quadratic threshold"
+            ],
+            "cost_scope": "Expected bit count; arithmetic counters exclude validation, checking, allocation and bit acquisition",
+            "kernel_verified": false
+          },
+          "leaf": {
+            "bits": 2,
+            "branch": "left",
+            "proof": {
+              "body": {
+                "A": [
+                  "v",
+                  0
+                ],
+                "B": [
+                  "v",
+                  0
+                ],
+                "rule": "k"
+              },
+              "rule": "all_i"
+            },
+            "status": "done"
+          },
+          "pending": {
+            "bits": 0,
+            "cell": 0,
+            "status": "pending"
+          },
+          "overclaim_refusal": "sampler: residual budget not met"
+        },
+        {
+          "test": "finite-invariant-full-stream-certificate",
+          "certificate": {
+            "status": "FINITE_INVARIANT_CHECKED",
+            "source_sha256": "675391e288a9b3b7a5775c6d82da3218651329b7676ade0863c177d74aed62d0",
+            "invariant": [
+              0
+            ],
+            "full_stream_defect": [
+              0,
+              1
+            ],
+            "reason": "all reachable control states remain in the supplied nonhalting closed set",
+            "kernel_verified": false
+          },
+          "input": [
+            1,
+            0,
+            1
+          ],
+          "output": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "post_run_manifest": {
+    "status": "PASS",
+    "members": 71,
+    "manifest_sha256": "1c023ff46192fea6d281630e2f958585c345c37b452d6a28caa6e12aaf3e2789"
+  },
+  "exit_code": 0,
+  "overall": "REFERENCE_ONLY_PASS"
+}

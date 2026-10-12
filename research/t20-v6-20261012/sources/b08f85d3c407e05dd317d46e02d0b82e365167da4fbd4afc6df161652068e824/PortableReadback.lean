@@ -1,0 +1,102 @@
+import SelfVerifyingSupport
+import CommonObservationBoundary
+import CommonObservationFiniteActions
+import CompactObservationBoundary
+import CompactBoundaryControls
+set_option pp.universes true
+#check @Orthemology.Tranche2.AgreeOn
+#print axioms Orthemology.Tranche2.AgreeOn
+#check @Orthemology.Tranche2.SelfVerifying
+#print axioms Orthemology.Tranche2.SelfVerifying
+#check @Orthemology.Tranche2.prune
+#print axioms Orthemology.Tranche2.prune
+#check @Orthemology.Tranche2.mem_prune
+#print axioms Orthemology.Tranche2.mem_prune
+#check @Orthemology.Tranche2.prune_subset
+#print axioms Orthemology.Tranche2.prune_subset
+#check @Orthemology.Tranche2.agreeOn_mono
+#print axioms Orthemology.Tranche2.agreeOn_mono
+#check @Orthemology.Tranche2.prune_mono
+#print axioms Orthemology.Tranche2.prune_mono
+#check @Orthemology.Tranche2.selfVerifying_empty
+#print axioms Orthemology.Tranche2.selfVerifying_empty
+#check @Orthemology.Tranche2.selfVerifying_union
+#print axioms Orthemology.Tranche2.selfVerifying_union
+#check @Orthemology.Tranche2.selfVerifying_iff_fixed
+#print axioms Orthemology.Tranche2.selfVerifying_iff_fixed
+#check @Orthemology.Tranche2.pruneIter
+#print axioms Orthemology.Tranche2.pruneIter
+#check @Orthemology.Tranche2.pruneIter_step_subset
+#print axioms Orthemology.Tranche2.pruneIter_step_subset
+#check @Orthemology.Tranche2.pruneIter_subset_target
+#print axioms Orthemology.Tranche2.pruneIter_subset_target
+#check @Orthemology.Tranche2.selfVerifying_survives
+#print axioms Orthemology.Tranche2.selfVerifying_survives
+#check @Orthemology.Tranche2.pruneIter_fixed_propagates
+#print axioms Orthemology.Tranche2.pruneIter_fixed_propagates
+#check @Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_bound_of_no_fixed
+#check @Orthemology.Tranche2.pruneIter_exists_fixed
+#print axioms Orthemology.Tranche2.pruneIter_exists_fixed
+#check @Orthemology.Tranche2.pruneIter_card_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_fixed
+#check @Orthemology.Tranche2.supportKernel
+#print axioms Orthemology.Tranche2.supportKernel
+#check @Orthemology.Tranche2.supportKernel_selfVerifying
+#print axioms Orthemology.Tranche2.supportKernel_selfVerifying
+#check @Orthemology.Tranche2.supportKernel_greatest
+#print axioms Orthemology.Tranche2.supportKernel_greatest
+#check @Orthemology.Tranche2.supportKernel_nonempty_iff
+#print axioms Orthemology.Tranche2.supportKernel_nonempty_iff
+#check @Orthemology.Tranche2.CommonObservationBoundary.common_action_of_dominated_eventual_success
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.common_action_of_dominated_eventual_success
+#check @Orthemology.Tranche2.CommonObservationBoundary.common_action_of_same_law
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.common_action_of_same_law
+#check @Orthemology.Tranche2.CommonObservationBoundary.constant_action_success
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.constant_action_success
+#check @Orthemology.Tranche2.CommonObservationBoundary.selfVerifying_iff_common_target
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.selfVerifying_iff_common_target
+#check @Orthemology.Tranche2.CommonObservationBoundary.infinite_target_counterexample
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.infinite_target_counterexample
+#check @Orthemology.Tranche2.CommonObservationBoundary.common_action_of_finite_actions
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.common_action_of_finite_actions
+#check @Orthemology.Tranche2.CommonObservationBoundary.common_action_of_either_finite
+#print axioms Orthemology.Tranche2.CommonObservationBoundary.common_action_of_either_finite
+#check @Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_confinement
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_confinement
+#check @Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_space
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.common_action_of_compact_space
+#check @Orthemology.Tranche2.CompactObservationBoundary.common_action_of_one_compact_target
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.common_action_of_one_compact_target
+#check @Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget
+#check @Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget_closed
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.nonworseningTarget_closed
+#check @Orthemology.Tranche2.CompactObservationBoundary.common_nonworsening_of_continuous_scores
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.common_nonworsening_of_continuous_scores
+#check @Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss
+#check @Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss_continuous
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.quadraticLoss_continuous
+#check @Orthemology.Tranche2.CompactObservationBoundary.common_finite_hull_quadratic_repair
+#print axioms Orthemology.Tranche2.CompactObservationBoundary.common_finite_hull_quadratic_repair
+#check @Orthemology.Tranche2.CompactBoundaryControls.reciprocal
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.reciprocal
+#check @Orthemology.Tranche2.CompactBoundaryControls.reciprocal_pos
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.reciprocal_pos
+#check @Orthemology.Tranche2.CompactBoundaryControls.reciprocal_le_one
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.reciprocal_le_one
+#check @Orthemology.Tranche2.CompactBoundaryControls.reciprocal_tendsto
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.reciprocal_tendsto
+#check @Orthemology.Tranche2.CompactBoundaryControls.eventually_in_shrinking_target
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.eventually_in_shrinking_target
+#check @Orthemology.Tranche2.CompactBoundaryControls.no_common_shrinking_target
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.no_common_shrinking_target
+#check @Orthemology.Tranche2.CompactBoundaryControls.target_not_closed
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.target_not_closed
+#check @Orthemology.Tranche2.CompactBoundaryControls.nonclosed_compact_confinement_counterexample
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.nonclosed_compact_confinement_counterexample
+#check @Orthemology.Tranche2.CompactBoundaryControls.naturals_not_compact
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.naturals_not_compact
+#check @Orthemology.Tranche2.CompactBoundaryControls.noncompact_closed_targets_counterexample
+#print axioms Orthemology.Tranche2.CompactBoundaryControls.noncompact_closed_targets_counterexample

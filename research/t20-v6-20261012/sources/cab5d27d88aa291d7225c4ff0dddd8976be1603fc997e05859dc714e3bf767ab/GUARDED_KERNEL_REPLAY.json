@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-10-09T12:44:43.221953+00:00",
+  "status": "PASS",
+  "scope": "Root read full GuardedTree.lean, Bound.lean, Controls.lean and RESULT.md; separately replayed copied source using Lean4.19.0 trust0 warnings-as-errors. Four modules checked and three expected false mutations rejected.",
+  "theorems": [
+    "context replacement under ordered exact-support guards",
+    "nonnegative rational occurrence-cost pruning",
+    "bounded exact-state representative |J|(|S|+1) and finite-E uniform corollary"
+  ],
+  "not_verified": [
+    "minimum-price attainment",
+    "saturation recurrence",
+    "Python implementation correspondence",
+    "source soundness",
+    "metaphysical premise warrant"
+  ],
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_hashes": {
+    "GuardedTree.lean": "0a6faff768aa8aaa09dbddb48a155c7135d06b0762e522c7835d19d8c798d8b2",
+    "Bound.lean": "8f7e1c4cc69a6354edb4d8e55f90aece93a22adf9c7ee733e685390f32c91a8c",
+    "Controls.lean": "7514451ff7cf9638e7182ff53cb4ac2ca7efe1e06ba24fe6ce5b2bd7938683ee",
+    "RESULT.md": "4d5ae69cb561d1cf44127d69daf93c272a7b464f23b050ab81c7f6404488ddcb"
+  },
+  "log": "root-resumed-research-20261009/guarded-kernel-replay/ROOT_REPLAY.log",
+  "T20": "ACTIVE",
+  "verification_credit_only": true
+}

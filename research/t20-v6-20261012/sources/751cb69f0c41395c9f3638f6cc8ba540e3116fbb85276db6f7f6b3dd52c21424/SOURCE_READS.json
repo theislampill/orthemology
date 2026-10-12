@@ -1,0 +1,80 @@
+{
+  "recorded_utc": "2026-10-11T00:08:56.573277+00:00",
+  "primary": [
+    {
+      "work": "Ibn Taymiyyah, Dar taarud",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-014.html",
+      "scope": "Prior authorial antecedent-awareness argument web913–928 and surrounding Abu Muhammad attribution, then adjoining Ibn Abi Musa quotation through electronic014 end. Retained body reread directly; no new primary-discovery credit.",
+      "body": {
+        "path": "evidence-withdrawal-warrant-20261009/sources/dar014.txt",
+        "bytes": 361598,
+        "sha256": "5983b6c8296f7e2f6a61f26b2fb6ac7bc3d99b84c063df6f6ade5250b98c7679",
+        "git_blob_sha1": "494e804876aea3b170884128c935e892e81a09a1"
+      }
+    },
+    {
+      "work": "Ibn Taymiyyah, Dar taarud",
+      "source_url": "https://www.islamicbook.ws/amma/dr-taardh-alaql-walnql-015.html",
+      "scope": "Complete opening authorial response from Qultu through next named speaker heading, web8–56. Read continuously in web return and local untruncated extraction. Fresh source return to already-read material.",
+      "body": {
+        "path": "particular-recognition-source-reconciliation-20261011/private_sources/dar015-identification-unit.txt",
+        "bytes": 20024,
+        "sha256": "29a6bd8c9e51ccf614d4d9bc71ead2da27559eacf33a46a271d0cc9527f9931c",
+        "git_blob_sha1": "73cd71680ca8e735fd65a70a0edede91a42a3fda"
+      },
+      "parent_html": {
+        "path": "particular-recognition-source-reconciliation-20261011/private_sources/dar015.html",
+        "bytes": 371199,
+        "sha256": "0748ceaafca2f588d083765ddbd0ab80e3dfffd550f51ca7fed0404f26a89d6f",
+        "git_blob_sha1": "25ef1fc20a3ab7ad0bda7514885dc909858ed243"
+      },
+      "voice": "Ibn Abi Musa position in preceding quotation distinguished from Ibn Taymiyyah response; proposed objections, hearing-only replies and disputed attributes retain their markers."
+    },
+    {
+      "work": "Dar taarud electronic page controls",
+      "source_url": "https://islamweb.net/ar/library/content/413/1596/تعليق-ابن-تيمية-على-كلام-ابن-أبي-موسى-المعرفة-هل-تدرك-بالعقول-أم-بالسمع؟",
+      "scope": "Complete unvocalized authorial body web2143–2162; displayed page markers9,10,11. Opening precedes marker9; no new independent exact first-page claim.",
+      "credit": "Parallel electronic wording and page-locator control; not an independent manuscript witness."
+    },
+    {
+      "work": "Dar taarud electronic page controls",
+      "source_url": "https://www.islamweb.net/ar/library/content/413/1597/تعليق-ابن-تيمية-على-كلام-ابن-أبي-موسى-المعرفة-هل-تدرك-بالعقول-أم-بالسمع؟",
+      "scope": "Unvocalized body covering legal analogies through unseen/seen distinction, displayed12–15. Absence of firsthand acquaintance and exclusive-description limit both retained.",
+      "credit": "Parallel electronic wording and page-locator control; not an independent manuscript witness."
+    }
+  ],
+  "saved_coverage": [
+    {
+      "file": "inputs/DAR9_READING_LOG.md",
+      "read_scope": "Method, first pass01, reflection01, first pass02, first pass03 and reflection02–03; later log not read in this operation. Decisive inherited identification result is first pass01/reflection01.",
+      "credit": "The original ledger already records complete electronic first read; current operation claims only listed selective log reading."
+    },
+    {
+      "file": "inputs/DAR9_STUDY_SUMMARY.md",
+      "read_scope": "Complete; historical whole-volume coverage and textual qualifications retained, no duration re-credit."
+    },
+    {
+      "file": "inputs/CP03_REFERENCE_ACQUISITION_ASSESSMENT.md",
+      "read_scope": "Complete; existing description-permission, acquaintance-neutral transmission and open source-target compatibility question distinguished."
+    },
+    {
+      "file": "inputs/CP03_DAR_RECOGNITION_READ.md",
+      "read_scope": "Complete; strongest retained trace/description alternative and exact epistemic limits."
+    }
+  ],
+  "textual_controls": [
+    "No print-scan or manuscript collation; no electronic presentations counted as independent evidence.",
+    "The exclusive-description/continued-identification contrast and parenthetical rational-identification wording are not silently harmonized into a uniqueness sufficiency theorem.",
+    "The inferred cross-presentation explanation is explicitly identified as our reconstruction.",
+    "Historical legal examples are not contemporary legal advice.",
+    "No complete theory of first reference or proof that every initial Creator-recognition predates all instruction."
+  ],
+  "access_notes": [
+    "Two attempted relative volume09 paths under the START_HERE content-address returned404; correct indexed content-address paths were then fetched.",
+    "Short Islamweb URLs and one complete1598 URL returned tool availability errors. Existing public Islamicbook body supplies complete continuous context; no authorisation denial occurred.",
+    "Full displayed1596/1597 URLs opened successfully.1599 was opened as a boundary check but its body is not used for the argument.",
+    "Search results beyond the primary text were discovery only and do not support the report."
+  ],
+  "distribution": "Private source HTML/text are research intermediates, excluded from shareable manifest. Report, metadata and prior research inputs are included.",
+  "claim": "Partial source reconciliation supplying inherited positive mediated-identification evidence. CP03 already rejects compulsory acquaintance; its stronger FIRST-reference residual remains. No new theorem, actual human warrant verdict, protected edit, integration or closure."
+}

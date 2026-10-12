@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-11",
+  "scope": "Bounded qualification of actual recovered Pro inputs.",
+  "claims": [
+    {
+      "id": "package-stage",
+      "status": "verified-older-stage",
+      "claim": "The new reconciled input shares 34 identical files with known 111-minute package.",
+      "evidence": [
+        "ARCHIVE_COMPARISON.json",
+        "ACTUAL_MEMBERS.json"
+      ],
+      "boundary": "No shared changed file; not a qualified R3 successor."
+    },
+    {
+      "id": "source-custody",
+      "status": "trimmed-incomplete",
+      "claim": "Root manifest and all 9814 advertised source-copy paths are absent.",
+      "evidence": [
+        "SOURCE_BINDINGS.json",
+        "MISSING_MANIFEST_MEMBERS.json",
+        "logs/trimmed-reconciled-manifest.stdout"
+      ],
+      "boundary": "1492 missing-path hashes survive at alternate archive paths. Anthology content is separate."
+    },
+    {
+      "id": "prior-manifest",
+      "status": "file-hashes-verified",
+      "claim": "Embedded prior synthesis has 1517 matching manifest file entries.",
+      "evidence": [
+        "MISSING_MANIFEST_MEMBERS.json"
+      ],
+      "boundary": "File-byte check only; original directory-inventory and prior-program replay owned by evidence/transport track."
+    },
+    {
+      "id": "anthology",
+      "status": "mechanical-coverage-only",
+      "claim": "2095 of 2095 advertised report IDs occur in retained anthology.",
+      "evidence": [
+        "ANTHOLOGY_STRUCTURAL_COVERAGE.json"
+      ],
+      "boundary": "Not semantic reading or byte reconstruction of missing source files."
+    },
+    {
+      "id": "A-B",
+      "status": "requalified-existing-written-proof",
+      "claim": "Universal deterministic and stochastic likelihood transport",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Full unnormalized evidence contract; measurable extensions require factorization."
+    },
+    {
+      "id": "C",
+      "status": "requalified-existing-written-proof",
+      "claim": "Minimal finite static audit-profile sidecar",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Per-origin labels, fixed finite audit family, not future transition sufficiency or real-weight storage."
+    },
+    {
+      "id": "D-joined",
+      "status": "requalified-existing-written-proof",
+      "claim": "Sharp relative-error TV and bounded-Lipschitz evidence/geometry bound",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Strict positivity and uniform relative error; not R3 polynomial-observable bounds."
+    },
+    {
+      "id": "E-F",
+      "status": "requalified-existing-written-proof",
+      "claim": "Revision semantics and dependency-directed replay",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Complete dependency DAG/current cache; direct helper defect survives."
+    },
+    {
+      "id": "G-H",
+      "status": "requalified-existing-written-proof",
+      "claim": "Conditional common-source gluing and complete-witness survival",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Substantive source individuation/overlap/coverage and actual warrant premises not manufactured."
+    },
+    {
+      "id": "I",
+      "status": "requalified-existing-written-proof",
+      "claim": "Exact separable no-replay repair",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Same labels/trajectories/factors and finite positive joint normalizer."
+    },
+    {
+      "id": "J",
+      "status": "requalified-existing-written-proof",
+      "claim": "Universal audit-covariant flow classification",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Full positive audit family, labelled interior product; separable-energy conclusion uses specified metric/connected Cartesian position domains."
+    },
+    {
+      "id": "K",
+      "status": "requalified-existing-written-proof",
+      "claim": "First-order reciprocal step and Euler audit discrepancy",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Inherited first-order mechanism, fixed potentials/audit-invariant steps, no general high-order or production-defect claim."
+    },
+    {
+      "id": "L",
+      "status": "requalified-existing-written-proof",
+      "claim": "Exponential-envelope transfer and withdrawal loss",
+      "evidence": [
+        "Cross_Front_Theorems.md",
+        "authorial-synthesis-root-review-20261011/ASSESSMENT.md"
+      ],
+      "boundary": "Tail certificate, not determinacy loss with all moments finite; bounded-output alternative independent of budget."
+    },
+    {
+      "id": "suite-52",
+      "status": "observed-pass-both-modes",
+      "claim": "Original reference suite: 52 tests normal and direct -O.",
+      "evidence": [
+        "TEST_RUNS.json",
+        "logs/received-52-normal.stderr",
+        "logs/received-52-optimized.stderr"
+      ],
+      "boundary": "Same suite in two supplied locations; do not sum duplicate counts. Includes seven verifier fixtures."
+    },
+    {
+      "id": "helper-defect",
+      "status": "observed-original-failure",
+      "claim": "affected_nodes mishandles one-shot Iterable parents on repeated propagation.",
+      "evidence": [
+        "HELPER_REPRODUCTION.json",
+        "research/contracts.py"
+      ],
+      "boundary": "Ordinary replay_dag materializes dependencies first."
+    },
+    {
+      "id": "suite-55",
+      "status": "observed-inherited-correction-pass-both-modes",
+      "claim": "Existing separately preserved helper repair: 55 tests normal and direct -O.",
+      "evidence": [
+        "TEST_RUNS.json",
+        "HELPER_REPRODUCTION.json",
+        "logs/corrected-55-normal.stderr",
+        "logs/corrected-55-optimized.stderr"
+      ],
+      "boundary": "52 original plus three existing regressions. No newly authored repair or R3 credit."
+    },
+    {
+      "id": "R3-second-order",
+      "status": "reported-artifact-unavailable",
+      "claim": "Second-order positive/descent/audit-compatible construction",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-determinacy",
+      "status": "reported-artifact-unavailable",
+      "claim": "Bounded-update determinacy preservation and withdrawal loss with all moments finite",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-polynomial-inverse",
+      "status": "reported-artifact-unavailable",
+      "claim": "Polynomial coordinate change and nonpolynomial inverse issue",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-polynomial-observables",
+      "status": "reported-artifact-unavailable",
+      "claim": "Polynomial-observable error bounds",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-four-iterator-fixes",
+      "status": "reported-artifact-unavailable",
+      "claim": "Four iterator repairs in successor code",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-88",
+      "status": "reported-artifact-unavailable",
+      "claim": "88 combined tests passing",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-foundations",
+      "status": "reported-artifact-unavailable",
+      "claim": "Later source-bound foundational reconciliation and beginningless-succession fixed-point issue",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "R3-recovery-17",
+      "status": "reported-artifact-unavailable",
+      "claim": "Reconciliation of 17 omitted recovery archives",
+      "evidence": [
+        "REPORTED_SUCCESSOR_MESSAGES.json",
+        "ARCHIVE_COMPARISON.json"
+      ],
+      "boundary": "No qualifying successor source/code/log binding in these uploads; neither verified nor refuted; no reconstruction from chat."
+    },
+    {
+      "id": "later-high-order",
+      "status": "separate-source-read-not-replayed-here",
+      "claim": "Available local full-law arbitrary-order correction has its own proof/review lineage.",
+      "evidence": [
+        "positive-high-order-correction-20261011/RESULT.md",
+        "positive-high-order-root-20261011/DERIVATION.md",
+        "positive-high-order-root-20261011/ROOT_APPRAISAL.md",
+        "high-order-law-independent-review-20261011/REVIEW.md"
+      ],
+      "boundary": "Do not attribute to new trimmed Pro input or assert priority over unavailable R3. Geometry/moment track owns separate execution."
+    },
+    {
+      "id": "full-held-corpus-recovery",
+      "status": "all-advertised-document-bytes-verified",
+      "claim": "All 10104 documents advertised by the older reconciled corpus index are available with exact hashes and sizes across the full held corpus.",
+      "evidence": [
+        "RECOVERY_ADDENDUM.json",
+        "logs/held-corpus-recovery.stdout"
+      ],
+      "boundary": "This is distinct from membership of the trimmed ZIP, its missing root manifest, semantic reading, execution, and the unavailable R3 successor. No tests rerun. Final transcript excluded from publication."
+    }
+  ],
+  "evidence_path_resolution": {
+    "qualification_directory": "t20-consolidation-20261011/pro-synthesis",
+    "received_root_relative_paths": "t20-consolidation-20261011/catalogue/archive-views/Orthemology_T20_Reconciled_Research_20261010_1_.zip--685678574a92/Orthemology_T20_Reconciled_Research_20261010",
+    "other_project_paths": "Paths identifying existing project directories are relative to the workspace root."
+  }
+}

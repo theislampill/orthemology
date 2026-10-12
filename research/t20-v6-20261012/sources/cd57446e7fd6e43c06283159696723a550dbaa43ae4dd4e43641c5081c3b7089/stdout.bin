@@ -1,0 +1,59 @@
+{
+  "status": "PASS_FINITE_ONLY",
+  "types": 308,
+  "types_ast_nodes_max": 5,
+  "variable_indices": [
+    0,
+    1,
+    2
+  ],
+  "shift_cases": 4928,
+  "shift_amounts": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cutoffs": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "substitution_pairs": 94864,
+  "head_step_terms": 3405,
+  "term_ast_nodes_max": 7,
+  "failures": 0,
+  "corpus_bytes": 184259,
+  "corpus_sha256": "376d15bdee09dc1b7765f95cef82c54af992061ea5e9ff7b0a841800277bbf59",
+  "reference_sha256": "398fdecf3c125f29fbbf7d242327cae0c5044440d58d5d8cdad9297b6e76ea77",
+  "binder_lift_sensitivity_witness": {
+    "body": [
+      "all",
+      [
+        "v",
+        1
+      ]
+    ],
+    "argument": [
+      "v",
+      0
+    ],
+    "correct": [
+      "all",
+      [
+        "v",
+        1
+      ]
+    ],
+    "uncaptured_lift_mutant": [
+      "all",
+      [
+        "v",
+        0
+      ]
+    ]
+  },
+  "kernel_credit": false,
+  "universal_python_refinement_credit": false
+}

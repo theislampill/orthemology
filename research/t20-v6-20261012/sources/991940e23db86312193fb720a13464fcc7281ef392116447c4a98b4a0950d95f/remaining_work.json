@@ -1,0 +1,82 @@
+[
+  {
+    "id": "O-01",
+    "obligation": "Read and run the original recovery verification/verify_package.py; inspect the actual output.",
+    "why_open": "No fresh readable verifier body in resumed segment.",
+    "completion_evidence": "Original script hash, ordinary command, stdout/stderr, manifest comparison.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-02",
+    "obligation": "Read every requested intake/preservation/coverage/scope/audit ledger and reconcile inherited completed reviews.",
+    "why_open": "Preservation is not semantic review.",
+    "completion_evidence": "Original IDs and exact source/range status retained with substantive findings.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-03",
+    "obligation": "Complete current tree, reachable history and relevant discussion custody through the connected repository.",
+    "why_open": "Pin is readable; acquisition outcomes are separately machine-recorded; complete discussion review not established.",
+    "completion_evidence": "Versioned complete inventories and discussion/comment coverage; public failures must not override connector reads.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-04",
+    "obligation": "Finish canonical core, notation, every operative decision/amendment and all programme prompts.",
+    "why_open": "Context-visible passages are not a full new line-by-line certificate.",
+    "completion_evidence": "Source hashes, contiguous range receipts, authority/amendment graph.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-05",
+    "obligation": "Read both frontier archives in full and all four PDFs, with relevant page-image checks.",
+    "why_open": "No fresh full-range certification in this segment.",
+    "completion_evidence": "Every source and binary/visual disposition; no OCR where native text and vision suffice.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-06",
+    "obligation": "Bind and independently reproduce the actual modal iterator helper investigation.",
+    "why_open": "Interrupted result retained, not replaced with toy code.",
+    "completion_evidence": "Original/candidate source and tests, 7-test baseline and exact direct-world oracle receipt.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-07",
+    "obligation": "Adjudicate stage-one \u00a7\u00a76\u201316 and continuation-information supplement against full predecessors.",
+    "why_open": "Only bounded conceptual comparisons supplied here.",
+    "completion_evidence": "Older/equal/stronger family classifications and all actual proof/counterexample checks.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-08",
+    "obligation": "Read back new ordinary test outputs and reconcile all hashes after final changes.",
+    "why_open": "Machine-written receipts are not readback.",
+    "completion_evidence": "Observed exit/output/interpreter/hash and explicit scope; no optimised assertion pass.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-09",
+    "obligation": "Complete primary prior-art, strongest-rival and model/source/world comparisons.",
+    "why_open": "Search attempts provided no readable primary body to this reviewing segment.",
+    "completion_evidence": "Actual primary passages and comparison; independent novelty not inferred.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  },
+  {
+    "id": "O-10",
+    "obligation": "Re-run both audits on the fully reviewed refined candidate and obtain required independent specialist review.",
+    "why_open": "Both current same-assistant cycles remain unapproved for the whole task.",
+    "completion_evidence": "No unresolved candidate-specific blocking defect; no artificial reduction of scope.",
+    "status": "OPEN",
+    "original_scope_reduced": false
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "claim": "Set Cover is NP-complete",
+    "basis": "Karp 1972 Main Theorem item 6 and Node Cover reduction; standard external result",
+    "verification": "Targeted original-article OCR read; historical scan not verified"
+  },
+  {
+    "claim": "Shared AND/OR subproblem optimization is classically hard, including acyclic 0/1 constructions",
+    "basis": "Sahni 1974 G2/Theorem 2.3.2",
+    "verification": "Full relevant proof text read; scan screenshots failed; not a new finding"
+  },
+  {
+    "claim": "Exact layered compiler transport and optimum equality",
+    "basis": "RESULT.md \u00a73 forward/reverse witness inequalities",
+    "verification": "Written proof plus inherited compiler controls on 689 systems; not Lean-certified"
+  },
+  {
+    "claim": "Explicit acyclic SharedProofBudget is in NP",
+    "basis": "RESULT.md \u00a72 normal form and polynomial verification; predecessor redirection lemma",
+    "verification": "Written membership proof; local replay corroborates returned witnesses only"
+  },
+  {
+    "claim": "Empty-support occurrence-tree numeric minima are polynomial in explicit acyclic input",
+    "basis": "RESULT.md \u00a74 topological min/sum recurrence; Nederhof primary exposition",
+    "verification": "Written elementary proof and explicit scope; excludes literal expanded output and compact exact-support expansion"
+  },
+  {
+    "claim": "Exact-support budget is NP-complete even on unary acyclic take/skip chains",
+    "basis": "RESULT.md \u00a74a Set Cover witness equivalence, polynomial chain encoding and certificate",
+    "verification": "Written proof plus 689 cases each for loop and acyclic chain in inherited exact compiler"
+  },
+  {
+    "claim": "No general novelty",
+    "basis": "Sahni/Karp/Gallo/Nederhof prior art plus local RP-T7/RP-T34 summary",
+    "verification": "No programme-wide negative search; full RP proof unavailable"
+  }
+]

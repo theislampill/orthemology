@@ -1,0 +1,16 @@
+--- a/tools/check_ir_instance_integrity.py
++++ b/tools/check_ir_instance_integrity.py
+@@ -1628,6 +1628,13 @@
+             errors.append(f"schema: {field} must be array")
+         if spec.get("type") == "object" and not isinstance(value, dict):
+             errors.append(f"schema: {field} must be object")
++
++    if (
++        instance.get("alignment_state") == "alignment-advanced"
++        and "recognition_strength" in instance
++        and instance["recognition_strength"] != "strong"
++    ):
++        errors.append("schema: alignment-advanced requires recognition_strength strong when supplied")
+ 
+     if "reason_category" in instance and instance.get("reason_category") not in REASON_CATEGORY_VALUES:
+         errors.append(f"schema: reason_category invalid oneOf value: {instance.get('reason_category')!r}")

@@ -1,0 +1,31 @@
+{
+  "scope": "Only the five exact workflow prose replacements and one bibliography addition are authorised by this revision.",
+  "replacements": [
+    {
+      "id": "E1-interface-scope",
+      "before": "Consider three supplied mechanisms: a dispatcher for two independently qualified, noninterfering jobs; an interrupt handler that records a reported fault; and an acceptance operation guarded by evidence. Guarded execution has established semantics~\\cite{dijkstra}; the following interfaces are a specified example, not a reconstruction of an entire engineering tradition.",
+      "after": "Consider three supplied operation interfaces: a dispatcher for two independently qualified jobs; an interrupt handler that records a reported fault; and an acceptance operation guarded by evidence. Guarded execution has established semantics~\\cite{dijkstra}; these interfaces are a specified example, not a reconstruction of an entire engineering tradition."
+    },
+    {
+      "id": "E2-candidate-version-identity",
+      "before": "Let $Q=\\{\\alpha,\\beta\\}$ name immutable candidates, including their material acceptance context.",
+      "after": "Let $Q=\\{\\alpha,\\beta\\}$ label immutable candidate versions, including their material acceptance context; a label is not reused for changed content or context."
+    },
+    {
+      "id": "E3-version-bound-meaning",
+      "before": "Accuracy of that meaning is a premise, not established by the token.\n\nJobs may finish",
+      "after": "Version-bound acceptance checks these receipts against the current candidate identity at the protected boundary. Accuracy of receipt meaning is a premise, not established by the token.\n\nJobs may finish"
+    },
+    {
+      "id": "E4-noninterference-assumption",
+      "before": "Jobs may finish in either order or overlap when their noninterference is established.",
+      "after": "Jobs may finish in either order or overlap under the \\emph{noninterference assumption}: neither invalidates state or evidence required by the other. This is an implementation premise, not a consequence of the interface names."
+    },
+    {
+      "id": "E5-joint-boundary-protection",
+      "before": "The current identity and interrupt state must remain fixed from the guard's read through its effect, or an equivalent atomic check must reject intervening change. Otherwise an interrupt after the check permits a stale completion. A later material change opens a new acceptance boundary; it does not rewrite the old verdict's scope. Noninterference, receipt accuracy, interface reliability and this boundary protection require evidence in an implementation~\\cite{abadi}. The construction certifies none of them.",
+      "after": "All guard-relevant state $(q,e_1,e_2,b)$ must remain stable from a coherent read through the verdict's effect, or be jointly revalidated with publication as one atomic operation. Otherwise an interrupt or receipt change after the check can permit a stale completion. Linearizability supplies a standard specification of an indivisible effect amid concurrent operations~\\cite{herlihywing}; it must cover the combined guard-and-publication operation, not merely individual field reads. The verdict concerns the state at that effect, not uninterrupted validity until or after the response. A later material change opens a new acceptance boundary; it does not rewrite the old verdict's scope. Noninterference, receipt accuracy, interface reliability and boundary protection require evidence in an implementation~\\cite{abadi}. The construction certifies none of them."
+    }
+  ],
+  "added_bibliography": "\\bibitem{herlihywing} M. P. Herlihy and J. M. Wing. Linearizability: a correctness condition for concurrent objects. \\emph{ACM Transactions on Programming Languages and Systems} 12(3), 463--492 (1990). \\doi{10.1145/78969.78972}. Sections 1.1 and 2.2."
+}

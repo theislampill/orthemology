@@ -1,0 +1,334 @@
+{
+  "contract_version": "0.4.3.0",
+  "policy_id": "diagnostic-ir-delta-result-vocabulary-v1",
+  "description": "Source-owned owner-local delta_result suffix vocabulary for governed ACT and normalized_activation_record emission.",
+  "owner_aliases": {
+    "authority-order-repair": "SOURCE",
+    "do-attribute-precision": "DO_ATTRIBUTE",
+    "do-christian-extensions": "DO_CHRISTIAN",
+    "do-second-loop": "DO_SECOND_LOOP",
+    "doubt-vs-skepticism": "DOUBT_SKEPTICISM",
+    "foreign-premise-detection": "FPD",
+    "husn-al-nazar": "HUSN_AL_NAZAR",
+    "husn-al-nazar-arguments": "HUSN_AL_NAZAR",
+    "inductive-fitri": "INDUCTIVE_FITRI",
+    "inductive-fitri-method": "INDUCTIVE_FITRI",
+    "M1-self-refutation": "M1",
+    "LoopBreak": "LOOPBREAK",
+    "M1P": "M1-P",
+    "M1P-performative-self-refutation": "M1-P",
+    "M7-definition-anchor": "M7",
+    "M8-reductio": "M8",
+    "M9-predication-mode": "M9",
+    "P1-fitrah-restoration": "P1",
+    "P2-objection-mapping": "P2",
+    "P3-reason-revelation-tension": "P3",
+    "P4-maieutic": "P4",
+    "P5-already-believing": "P5",
+    "P6-universal-aqidah-principle": "P6",
+    "P7-restoration-stops": "P7",
+    "pattern-profiling": "PATTERN_PROFILE",
+    "proof-method-audit": "PROOF_METHOD",
+    "source-status-repair": "SOURCE",
+    "symmetric-taqlid": "SYMMETRIC_TAQLID",
+    "symmetric-taqlid-check": "SYMMETRIC_TAQLID",
+    "V12-tamanuc-exhaustion": "V12",
+    "V10-transmission-content-vetting": "V10",
+    "V2": "V2",
+    "V2-reconstituting-reason": "V2",
+    "V3-regress-dissolution": "V3",
+    "V6-convergence": "V6"
+  },
+  "owner_operations": {
+    "M1": [
+      "test",
+      "self-grounding-test"
+    ],
+    "M1-P": [
+      "test",
+      "performative-test"
+    ],
+    "M3": [
+      "orphaned-intuition"
+    ],
+    "M7": [
+      "anchor",
+      "definition-anchor"
+    ],
+    "M8": [
+      "consequence-trace",
+      "trace",
+      "dependency-trace"
+    ],
+    "M9": [
+      "predication-repair",
+      "sense-split"
+    ],
+    "FPD": [
+      "expose",
+      "foreign-premise",
+      "foreign-premise-detection"
+    ],
+    "SOURCE": [
+      "authority-order-repair",
+      "source-order-repair",
+      "source-order",
+      "sort"
+    ],
+    "P1": [
+      "restore",
+      "restoration"
+    ],
+    "P2": [
+      "map"
+    ],
+    "P3": [
+      "order",
+      "reason-revelation-tension"
+    ],
+    "P4": [
+      "elicit"
+    ],
+    "P5": [
+      "strengthen"
+    ],
+    "P6": [
+      "bind"
+    ],
+    "P7": [
+      "bound",
+      "boundary",
+      "scope-boundary"
+    ],
+    "PROOF_METHOD": [
+      "proof-family-and-carrier-audit",
+      "proof-family-classification",
+      "proof-denominator-audit",
+      "proof-route-status-audit",
+      "proof-overreach-audit"
+    ],
+    "DO_CHRISTIAN": [
+      "model-identification"
+    ],
+    "DO_ATTRIBUTE": [
+      "attribute-precision"
+    ],
+    "DO_SECOND_LOOP": [
+      "accountability-hujjah-compression",
+      "coercive-guidance-demand",
+      "fitrah-ayat-baseline",
+      "punishment-proportionality-accountability"
+    ],
+    "DOUBT_SKEPTICISM": [
+      "method-distinction"
+    ],
+    "HUSN_AL_NAZAR": [
+      "infer"
+    ],
+    "INDUCTIVE_FITRI": [
+      "separate"
+    ],
+    "SYMMETRIC_TAQLID": [
+      "classify"
+    ],
+    "PATTERN_PROFILE": [
+      "loaded-label-carrier-audit",
+      "proof-packet-reconstruction",
+      "mutation-after-challenge-tracking",
+      "collapse-radius-mapping",
+      "pattern-profile"
+    ],
+    "V2": [
+      "reconstituting-reason",
+      "reason-role-repair",
+      "proof-burden-order"
+    ],
+    "V3": [
+      "dissolve"
+    ],
+    "V6": [
+      "integrate"
+    ],
+    "V10": [
+      "provenance",
+      "provenance-content-authority"
+    ],
+    "V12": [
+      "exhaust"
+    ]
+  },
+  "owner_operation_delta_results": {
+    "M8": {
+      "dependency-trace": [
+        "dependency-exposed"
+      ]
+    }
+  },
+  "owner_families": {
+    "M1": [
+      "self-authorizing-standard-invalidated",
+      "internal-contradiction-exposed",
+      "criterion-self-failed",
+      "self-authorizing-falsifiability-standard-invalidated"
+    ],
+    "M1-P": [
+      "performative-contradiction-exposed",
+      "speech-act-presupposition-named"
+    ],
+    "M3": [
+      "orphaned-intuition-identified",
+      "grounding-severed",
+      "normativity-restored-to-ground"
+    ],
+    "M7": [
+      "definition-anchored",
+      "semantic-anchor-stabilized",
+      "term-meaning-bounded",
+      "falsifiability-standard-defined"
+    ],
+    "M8": [
+      "consequence-traced",
+      "implication-demoted",
+      "mechanism-totality-demoted",
+      "entailment-blocked",
+      "dependency-exposed",
+      "coercive-clarity-entailment-demoted",
+      "finite-answer-evasion-claim-invalidated",
+      "total-veto-consequence-demoted"
+    ],
+    "M9": [
+      "predicate-separated",
+      "category-separated",
+      "referent-separated",
+      "person-nature-transfer-blocked",
+      "sense-separated"
+    ],
+    "FPD": [
+      "hidden-tribunal-blocked",
+      "imported-criterion-blocked",
+      "foreign-premise-exposed",
+      "smuggled-support-blocked",
+      "imported-control-criterion-blocked"
+    ],
+    "SOURCE": [
+      "source-order-repaired",
+      "hidden-support-blocked",
+      "science-source-bounded",
+      "proof-text-sorted",
+      "authority-order-repaired",
+      "proof-text-hidden-support-blocked",
+      "authority-order-separated",
+      "hidden-authority-source-status-bounded",
+      "source-function-bounded"
+    ],
+    "P1": [
+      "fitrah-reorientation-restored",
+      "tawhid-orientation-restored",
+      "sound-worship-frame-returned",
+      "fitrah-orientation-restored"
+    ],
+    "P2": [
+      "objection-topology-mapped",
+      "objection-sequence-stabilized"
+    ],
+    "P3": [
+      "reason-revelation-order-stabilized"
+    ],
+    "P4": [
+      "recognition-elicitation-bounded",
+      "maieutic-question-routed"
+    ],
+    "P5": [
+      "article-strengthening-sequenced",
+      "examined-conviction-stabilized"
+    ],
+    "P6": [
+      "worldview-binding-exposed",
+      "pseudo-neutrality-bound"
+    ],
+    "P7": [
+      "scope-boundary-named",
+      "stop-condition-defined",
+      "held-route-bounded",
+      "reopen-condition-stated",
+      "personal-hiddenness-held-with-reason",
+      "reopen-boundary-licensed",
+      "shubhah-boundary-routed"
+    ],
+    "PROOF_METHOD": [
+      "proof-family-carrier-typed",
+      "proof-denominator-exposed",
+      "proof-route-status-clarified",
+      "proof-overreach-bounded",
+      "proof-tribunal-status-bounded"
+    ],
+    "LOOPBREAK": [
+      "circular-dependency-broken",
+      "loop-grounded-in-owner-source"
+    ],
+    "DO_CHRISTIAN": [
+      "trinitarian-model-identified",
+      "fan-out-route-named"
+    ],
+    "DO_ATTRIBUTE": [
+      "attribute-precision-typed",
+      "person-nature-transfer-blocked",
+      "attribute-multiplicity-bounded",
+      "predicate-identity-separated"
+    ],
+    "DO_SECOND_LOOP": [
+      "accountability-hujjah-narrowed",
+      "coercive-guidance-demand-bounded",
+      "fitrah-ayat-baseline-established",
+      "punishment-proportionality-calibrated"
+    ],
+    "DOUBT_SKEPTICISM": [
+      "doubt-distinguished-from-skeptical-methodology",
+      "burden-inverted",
+      "evidence-demand-tribunal-exposed",
+      "doubt-method-separated-from-sincere-question"
+    ],
+    "HUSN_AL_NAZAR": [
+      "secondary-inference-routed",
+      "proof-readiness-stabilized"
+    ],
+    "INDUCTIVE_FITRI": [
+      "foundation-superstructure-separated",
+      "cross-cultural-variation-bounded"
+    ],
+    "SYMMETRIC_TAQLID": [
+      "symmetric-taqlid-classified",
+      "inward-examination-required"
+    ],
+    "PATTERN_PROFILE": [
+      "carrier-function-typed",
+      "proof-packet-reconstructed",
+      "mutation-same-function-tracked",
+      "collapse-radius-mapped",
+      "pattern-profile-routed"
+    ],
+    "V2": [
+      "reason-role-repaired",
+      "tribunal-loosened",
+      "frame-cleared",
+      "proof-burden-order-restored"
+    ],
+    "V3": [
+      "regress-demand-dissolved",
+      "foundation-regress-bounded"
+    ],
+    "V6": [
+      "register-conflict-converted",
+      "convergence-pattern-integrated"
+    ],
+    "V10": [
+      "source-function-bounded",
+      "hidden-authority-source-status-bounded",
+      "proof-text-sorted"
+    ],
+    "V12": [
+      "plurality-claim-refused",
+      "independent-lordship-exhausted"
+    ]
+  }
+}

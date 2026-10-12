@@ -1,0 +1,11 @@
+--- previous-reviewed/RESULT.md
++++ current/RESULT.md
+@@ -134,7 +134,7 @@
+ 
+ ### 4.4 The positive transport condition
+ 
+-For a decidable rooted binary admission tree, T16 proves equivalence of a computable path and a rooted, prefix-closed, pruned computably enumerable subtree R. Given a warranted enumerator for R, wait for either child of the current prefix to be enumerated and choose it. Pruning makes this wait finite at each step; soundness keeps the next prefix inside the same continuing region.
++For a decidable rooted binary admission tree, T16 proves equivalence of a computable path and a rooted, prefix-closed, pruned computably enumerable subtree R. Given a warranted enumerator for R, restart its enumeration at each current prefix, or retain all earlier emissions, and wait until either child of that prefix is available; choose that child. Restarting or retaining earlier emissions prevents missing a child emitted before its parent was selected. Pruning makes this search finite at each step; soundness keeps the next prefix inside the same continuing region.
+ 
+ This is the appropriate constructive join to T20 continuation contracts. A finite invariant with a computable closed next-choice rule is one special case. It is not necessary that all viable histories be enumerated or that an arbitrary supplied code's pruning promise be decidable. In the diagonal example the full indefinitely viable set is co-c.e. but not c.e.; the missing positive region cannot be extracted just by accumulating finite successes.
+ 

@@ -1,0 +1,13 @@
+# Consolidation-depth reassessment: intermediate checkpoint
+
+11 October 2026. T20 remains active. Owner acceptance is pending. This complete working edition records a bounded reassessment while the broader cross-front investigation continues; it neither calls T20 closed nor starts T21.
+
+Start with OWNER_ASSESSMENT.md and COMBINED_RESEARCH_SYNTHESIS.md, then CLAIMS.json. Reports are under audit_symmetries, restricted_controls and foundational_interface. The independent scientific review is under independent_review; reconstructed code review is under contract_repair. SOURCE_OWNERS.json resolves inherited proof owners to the selected included bytes or verified pinned public owners.
+
+Original scientific reports and original review bodies retain their exact authored wording and historical custody references. An original “review pending” status records its author-freeze stage; the exact subsequent independent REVIEW.md and CURRENTNESS.json control this checkpoint's review state. No review is enlarged to cover claims outside its declared scope. The tagged-instrument corollary proof was contributed by the reviewer and therefore does not receive independent corroboration credit from the same review.
+
+Public source-binding registries are declared locator projections. The reviewer’s original private snapshots and absolute/workspace custody paths are not a portable execution promise. PORTABLE_REVIEW_BINDINGS.json binds the exact report/checker targets. Historical v2 authored reader snapshots remain under inherited-reader-v2 so current headers cannot alter the inspected reader bytes. These duplicate reader copies are provenance, not instructions to integrate multiple editions.
+
+The audit-refinement replay uses an unchanged mathematical checker plus a derived ROOT relocation and public fixture registry. Original scientific inputs remain exact; selected assembly/index/ancestry counterparts are explicitly bound public projections. This validates the portable fixtures and mathematical controls, not the absent private assembly. Other selected suites are run in disposable copies by replay_selected.py. The contract-downstream probe carries unchanged caller/fixture bytes with a disclosed repaired dependency substitution; the old hash-pin rejection is retained, and the historical rational-hase-j source family is untouched.
+
+CUSTODY_UPDATE.json in intake closes the newly supplied full-archive seal only. The original trimmed failure and unavailable R3 state remain. Transfer helpers, raw user instructions/chat, private operational notes, signed file URLs and bulk corpus archives are not included.

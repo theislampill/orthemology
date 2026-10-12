@@ -1,0 +1,179 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "The source argues nonabsorption for an unchanged genuinely productive agent joined by an equal contributor.",
+      "supports": [
+        "S1:L908"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "High confidence; argumentative truth remains separately appraised."
+    },
+    {
+      "id": "C2",
+      "claim": "Complete power and decisive will are explicitly taken to entail production through the agent alone.",
+      "supports": [
+        "S1:L912–915"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Not merely ordinary outcome entailment; its universal application is the target bridge."
+    },
+    {
+      "id": "C3",
+      "claim": "Intrinsic attributes, harmless concomitance and efficient donation are distinct in the source.",
+      "supports": [
+        "S3a:167–172"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Does not automatically license plural intrinsically concordant originals; prevents correlation being identified with donation without argument."
+    },
+    {
+      "id": "C4",
+      "claim": "Efficacy is a perfection, and externally supplied constitutive perfection conflicts with intrinsic necessity.",
+      "supports": [
+        "S3a:180",
+        "S3b:181–182",
+        "S3c:182–184"
+      ],
+      "claim_type": "source argument with positive philosophical warrant",
+      "qualification": "Substantial warrant; shared actual realization must still be shown to constitute receipt of intrinsic perfection."
+    },
+    {
+      "id": "C5",
+      "claim": "The source considers intact original capacities and rejects efficacy dependent on peer enabling/noninterference.",
+      "supports": [
+        "S2:438–441",
+        "S8:720–750"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "The strongest rival denies blockage of Q or its own end; absence of exclusive provenance is the remaining disputed perfection."
+    },
+    {
+      "id": "C6",
+      "claim": "The external product can contain two effects, distinct from the two agents intrinsic acts.",
+      "supports": [
+        "S4d:V03L0268,0272",
+        "S4e:321"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Strong support for contribution-sensitive ontology, not independent proof of fresh per-root sole-owned preserving tokens or locality."
+    },
+    {
+      "id": "C7",
+      "claim": "Contingent coalescence requires a doer, but joint-doer exclusion uses the prior cooperation exclusion.",
+      "supports": [
+        "S5-144",
+        "S5-145",
+        "S5-146",
+        "S5-147"
+      ],
+      "claim_type": "direct source reconstruction",
+      "qualification": "A direct joint efficient explanation cannot be rejected by reifying its law into an unexplained third maker."
+    },
+    {
+      "id": "C8",
+      "claim": "Means can have additional goods even where a selected endpoint is directly attainable.",
+      "supports": [
+        "S6-422",
+        "S6-423",
+        "S6-424"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Blocks endpoint-only futility objection; does not validate this coalescent original act."
+    },
+    {
+      "id": "C9",
+      "claim": "Continued production/preservation is a fuller form of agency than merely supplying a condition or initiating the product.",
+      "supports": [
+        "S7:231,255–266"
+      ],
+      "claim_type": "direct source reconstruction and positive warrant",
+      "qualification": "Ibn Rushd quoted then Ibn Taymiyyah explicitly assents in the qualified proper sense."
+    },
+    {
+      "id": "C10",
+      "claim": "Preservation does not by itself imply a fresh, separately source-owned external token for each preserving root.",
+      "supports": [
+        "S7:255–266",
+        "S4d:V03L0272"
+      ],
+      "claim_type": "bounded negative/source-applicability judgement",
+      "qualification": "No inspected passage supplies that individuation; no global absence claim."
+    },
+    {
+      "id": "C11",
+      "claim": "The trace reduction is valid under real manifestation, locality, disjoint whole-token attribution and faithful retention.",
+      "supports": [
+        "TraceReduction.lean",
+        "S1:L908",
+        "S4d:V03L0272"
+      ],
+      "claim_type": "conditional proof appraisal",
+      "qualification": "The theorem source was read; no new kernel replay. The source does not independently discharge every premise for co-preservers."
+    },
+    {
+      "id": "C12",
+      "claim": "The improved rival concedes relational coproduction but not efficient receipt of intrinsic power, cognition, act or own end.",
+      "supports": [
+        "JOINT_RESULT.md",
+        "COGNITION_REFINEMENT.md",
+        "S3a:168–172"
+      ],
+      "claim_type": "interpretation of the exact rival",
+      "qualification": "Reduced-signature affirmative credit; no metaphysical-possibility certificate."
+    },
+    {
+      "id": "C13",
+      "claim": "An additional intrinsic original act cannot simply be counted as an additional created-output trace.",
+      "supports": [
+        "S9a:V02L0243–0246"
+      ],
+      "claim_type": "source-based type control",
+      "qualification": "Creating and created product remain distinct."
+    },
+    {
+      "id": "C14",
+      "claim": "Knowledge-fixed nonoccurrence is distinct from intrinsic impossibility and lack of standing power.",
+      "supports": [
+        "S9a:V02L0181–0185"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Supports relevant-resource suppression comparison; not a possible-world certificate preserving all knowledge and policy facts."
+    },
+    {
+      "id": "C15",
+      "claim": "Essential genus of efficacy is distinct from each particular act and product.",
+      "supports": [
+        "S9b:L0623–0628"
+      ],
+      "claim_type": "direct historical claim",
+      "qualification": "Optionality alone does not vindicate a defective exercise; particular relational completion is not automatically an essential intrinsic perfection."
+    },
+    {
+      "id": "C16",
+      "claim": "Wise activity and a loved end realized at the fitting time are not deficient merely because the end newly occurs.",
+      "supports": [
+        "S10-414:reply7",
+        "S10-415:reply7 continuation",
+        "S10-416:reply10"
+      ],
+      "claim_type": "additional direct source discrimination",
+      "qualification": "Positive authorial claims separated from opponent-relative/arguendo replies8–9; does not establish goodness of the particular coalescent act."
+    },
+    {
+      "id": "C17",
+      "claim": "A defeasible preference for one actual common original source remains reasonable while universal exclusion of the improved rival is not established.",
+      "supports": [
+        "C1",
+        "C4",
+        "C7",
+        "C9",
+        "C10",
+        "C12",
+        "C16"
+      ],
+      "claim_type": "independent philosophical judgement",
+      "qualification": "Positive complete-provision basis; rival improvements weaken older dismissal grounds. This is confidence appraisal, not a deductive theorem or closure."
+    }
+  ]
+}

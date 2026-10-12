@@ -1,0 +1,69 @@
+# Research contributions and prior ownership
+
+Public projection of the independent research-leverage assessment, snapshot through 14:21 UTC on 3 October 2026. This is a dated comparison of research contributions, not a current acceptance authority or final completion assessment. Later accepted source-level work is governed by its separate papers and receipts. PROJECTION_BINDING.json identifies the preserved original and the selected sections. No additional primary synopsis or quotation is introduced.
+
+## 2. Foundation: several definite discriminators, one continuing central burden
+
+### The strongest new changes
+
+The **fixed-kind target** is a material strategic improvement over the full qualitative inventory. Its modal witness needs one suitable instance, not every actual bearer/count/origin. The associated cost is equally material: an existential witness does not have to explain every other witness. The common-basis diagnosis exposes that problem already for a single source and distinct recipient. This is more informative than repeating Ninth's generic local-to-global warning. It changes which premise the affirmative must defend before an infinite regress is even discussed.
+
+The **bounded local supply judgment** also has positive warrant. It is rationally appropriate to distinguish an output from the antecedent existential availability on which that output's channel depends. That judgment is not a mere stipulation or a request for another proof. Its accepted scope does not yet identify the transferred explanation relation or settle a whole account's upstream completion. This exact scope is the result, rather than a reason to erase its positive force.
+
+The **null-preservation test** provides a usable resource audit of one claimed law-only explanation. If the very same full represented constraint package admits and preserves null, unique positive determination cannot come from that package alone. The actual decision is to locate the additional existential resource or decline that reuse of the theorem. It is elementary mathematics, applied to a real argument boundary. It does not delete the actual productive content of the stronger received-efficacy rival or show that an empty cosmos is possible.
+
+The **transfer study** earns a distinct negative diagnosis: removing all ordinary token causes differs from removing only accounts adequate to the supply-specific relation. Internal causes may remain under the latter deletion. It therefore blocks an allegedly independent causal route unless its changed domain is justified. Its `q_A` contingency check also avoids the invalid inference from contingent witnesses to a contingent existential proposition. Both are worthwhile target-specific findings.
+
+### What must not be counted repeatedly
+
+Ninth F3 and the supplementary warrant assessment already own the same-E requirement, the collective nonpresupposition proposal, prima-facie original-possession appeal, the active rival's genuine efficacy, and the eligibility of basic rational warrant. Tenth's targeted anti-exemption defence develops that positive reason. It is not an independent second evidence source to be added to the kind paper's local judgment as though both supplied separate confirmation of the same conclusion. Nor does the law-only criticism refute the non-law-only active history.
+
+Ninth F1 already owns the qualified-achievement contradiction method and the warning that target-specific completeness can relocate conclusion-strength into coverage. The current actual-power route changes the target and the kind of actual witness sought. That is a potentially useful conditional bypass, not a new proof technique or an established actual necessary particular.
+
+The candidate-v2 joint-coverage paper was read in full together with its companion and the candidate-v1 independent criticism. Its exact `ACCEPTANCE_v2.md` appeared during this audit and was then inspected; the three scientific file digests match its declared identities. The corrected distinction between necessary concrete **resource** and necessary **supplying-power bearer**, the supplier-specific positive anchor and the possible-route/actual-power distinction are indispensable and are now accepted at their conditional scope. The finite mixed-history and independently supported infinite-history controls identify real overbroad exclusions; they do not certify a rootless metaphysics.
+
+The review's separate global-exclusion control confirms a genuine structural advantage: a necessary resource can carry an unexercised relevant power while the adequacy of the actual internal history remains undecided. Thus this route need not solve whole-history exclusion first. This is a useful conditional bypass, and actual exercise must not be imposed as the admission price. The accepted route nevertheless adds no independently targeted warrant for the conjunction of possible S and its absolute generative realisation package. It is lighter in inventory demand and stronger in ancestry/transport demand, not uniformly easier in every respect.
+
+## 3. Practical reasons: genuine action consequences, modest source-theory increment
+
+The care paper passes the target-admission challenge better than a silent-sabotage example would. Its discriminating question is **who owes advance arrangement**, even when an unrelated equally able agent might later rescue the recipient. Active organisation of legitimate bounded reliance can give the organiser a particular due-care reason before a fresh assurance and after its purpose changes. That extends the action/time scope of Seventh's offered-word responsibility. Mere creation, superior capacity or a named proper function does not do the work.
+
+The governance paper adds recipient-facing consequences. Fairly formed actual coordination can make an initially optional procedure fittingly obligatory under the specified balance. A harmless alternative can remove that reason; a gratuitous control condition need not be accepted or treated as a waiver of care. Looking at both selection-time alternatives and later constraints prevents manufactured dependence from legitimating its maker. Present concern for innocent third parties can survive that historical wrong. These are real conditional differences in what participants should do, even without a general command power.
+
+The practical-perfection v2 review appeared during this audit and was read with its exact article and identity record. It accepts a further **comparison application**: an already incurred responsibility belongs on both alternatives, and abandoning unsupported control does not surrender authority established by care. This removes two alleged compensating advantages. It does not eliminate costs of performance, establish same-bearer eligibility, prove that all remaining effects favour the repair, or establish R_G/N.
+
+Direct comparison with Sixth `ATTRIBUTE_ASCENT` §§6.2–6.3 and Seventh `SOURCE_TRUTHFULNESS_WARRANT` §§55–105 confirms that the original-perfection/intellectualist rationale, its positive appeal and endogenous-ordering challenge were already developed. Fresh print/electronic inspection improves attribution and witness custody. It is not discovery of a formerly overlooked argument, and the combined rationale must not be credited as a newly independent warrant for N. Equally, inherited prima-facie support for comprehensive integration must not be recast as absent warrant merely because this inquiry adds no new N conclusion.
+
+These results advance avenue 3 at the level of **particular normative reasons and their application**, and avenue 2 by sharpening a source-practical comparison. They do not yet identify the ultimate norm-fixing ground, unify norm and productive roles, or supply an actual disclosure.
+
+## 4. Continuation: the strongest actual join is a choice, not a new general calculus
+
+The accepted occurrence construction derives selected post-return source dependencies from open-fragment effects, resolves shared origin references before cost calculation, and keeps original role separate from present-carrier force. That is a useful project-specific interface. The source-bound case grounds the attribution distinction; the independently available full page prevents treating its current public access as a hard or retired service.
+
+Direct inspection of Deep CN V2 confirms that eligible target-conflict cover and guarded context migration already have an internal owner. Under the all-positive/one-negative star, the static occurrence cover is a direct specialization. The adaptive lower bound is elementary transcript indistinguishability; the effect composition and interval algorithm use established methods. The checker provides bounded implementation evidence, not scientific novelty proportional to its case count.
+
+The most valuable correction is **quotienting original identities before claiming complexity**. Duplicated or reordered carriers do not destroy convexity of genuine source-ordered adequate witness windows. A different card-only service can have different incidence, but that difference is a changed access contract. This rejects a tempting false cross-programme story rather than manufacturing hardness through notation.
+
+The **joined release case** is the clearest realised cross-programme outcome. Every fact and permission can survive while a one-request undertaking becomes impossible. A fixed endpoint witness removes the uncovered edge; a fixed middle witness does not. Combined with the separately warranted care premise and fitting available precautions, this changes the organiser's justified release choice. Ninth already required preserving future-relevant evidence or a real permitted observation route; Tenth calculates **which equally sized relevant packet suffices when complete access remains but its organisation changes**. An adequate verdict, informative selector, live reader, restored read or accepted budget change remains a real alternative.
+
+Both displayed cards are convex. There is no new hardness result in that tiny case. The result concerns a supplied deterministic total-decision contract, not every actual snapshot, arbitrary encoding, risk tolerance or future query. It is enough to earn useful bounded credit. It does not meet MEN-1/MEN-9's stronger general-theory ambition or demonstrate three new application domains merely because the same vocabulary names them.
+
+For avenues 5–7, actual authenticity, permitted access, source maps and realiser facts remain inputs. There is no new realised collective acquisition protocol, authenticated new grant, physical succession or recursively repeatable handoff. That is a limitation on **additional** credit, not a demand for numerical identity before recognising the exact information-preservation result.
+
+## 5. Formal work and source evidence: keep the returns separate
+
+The completion correction identifies a genuine invalid unrestricted equivalence and supplies positive compact-continuous repairs. It materially affects whether a cited determination argument can be used at the displayed mathematical scope. It is not merely a theorem count. The nonuniform result is genuinely indexed and cannot be dismissed as the stationary result with renamed variables.
+
+However, the philosophical revision acceptance explicitly says it neither depends on the separate correction nor endorses every mathematical claim of its source. The Lean packets validate selected interfaces and controls; they do not create extra metaphysical warrant. Their reviewers authored the ordinary derivations but independently reviewed implementation.
+
+The finite-warrant addendum earns a distinct representation/query boundary: effective unique completion with a known rate still does not make exact equality uniformly certifiable, while robust strict answers admit finite witnesses. Direct P02 C2-06 inspection confirms prior ownership of the dyadic interval/integer comparison method. P02/V5 already own broad computability cautions and Ninth the different finite-rational certificate interface. This is a useful small addendum, not a new generic checker, hierarchy or collective mechanism. The reviewer found no consumer or verification-cost gain and correctly recommended no implementation.
+
+The printed-source collation is genuinely new **witness-relative evidence** compared with the earlier unperformed-inspection boundary. The exact supported finding belongs to the sole accepted capsule and its receipt. It changes a textual attribution limit, not a source's philosophical truth, translators' production responsibility or general translation fidelity. The separate proof-witness version check leaves finality unresolved. Neither activity is external specialist validation.
+
+## 6. Has the original allocation been honoured?
+
+Partly and materially. Avenues 1–3 now receive sustained argument appraisal and bounded positive conclusions; 11 receives a substantive source-context case; the joined release question genuinely links 3, 5–7 and 11. That differs from simply continuing an existing runtime lane.
+
+The remaining imbalance is marginal return. Most accepted results are specific argument diagnoses, standard-method applications or new evidence about witnesses. The actual foundational application, collective warrant, source authenticity and realisation interfaces remain where the highest leverage lies. Additional implementation breadth cannot substitute for those results. Avenue 8 is doing useful work but risks dominating the narrative; avenue 10's completion/certificate branch should remain a supporting leaf. No new independent avenue-4 controller, avenue-9 completion or avenue-12 human/empirical validation is established.
+
+No percentage-complete judgment or elapsed-effort estimate follows from these files. Artifact volume and parallel activity do not measure research gain.

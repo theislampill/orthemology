@@ -1,0 +1,266 @@
+\section{Information for a continuation is relative to what must follow}
+\label{sec:information}
+
+\subsection{Target-preserving records}
+
+Let \(W\) be a nonempty situation space, \(e:W\to Z\) a record with fixed meaning, and \(g:W\to Y\) a target answer. The basic condition is
+\begin{equation}
+\exists d:\im(e)\to Y\quad g=d\circ e
+\quad\Longleftrightarrow\quad
+ e(w)=e(v)\Longrightarrow g(w)=g(v).
+\label{eq:fibres}
+\end{equation}
+Necessity follows by applying \(d\) to equal records. For sufficiency, assign each attained record its common answer. The condition is set-theoretic: it does not provide a computable decoder, cheap encoding or a reliable physical observation. It is inherited across LM3, GF1, ICS5 and CDR rather than claimed as new mathematics \cite[\S10.3]{LM3}\cite[\S11]{GF1}\cite[(1)]{ICS}\cite[\S3]{CDR}.
+
+A change of purpose changes \(g\). A record sufficient for the old target need not satisfy \eqref{eq:fibres} for the new one. If record meanings or the situation space change, the old fibre statement cannot even be reused without an interpretation or transport argument. Equal bytes are not equal meanings by themselves.
+
+For a declared future family \((g_q)_{q\in\F}\), a no-new-observation record must avoid merging any pair separated by any required \(g_q\). This need not make the record injective. Injectivity is necessary only for the much stronger demand of answering \emph{every} Boolean predicate on \(W\): any merged pair can be separated by one such predicate. The apoautotic faculty claim must therefore identify \(\F\), rather than treating a demand for universal retention as implicit.
+
+\subsection{Acceptable continuations need not identify the world}
+
+Many tasks admit more than one acceptable successor. Let \(W\) and \(C\) be finite nonempty sets and let
+\begin{equation}
+A(w)\subseteq C,\qquad A(w)\ne\varnothing,
+\label{eq:acceptance}
+\end{equation}
+be the acceptable candidates in situation \(w\). Here \(A(w)\) is an acceptability relation, not the \(\mathsf A\) coordinate by definition; physical, target and permission conditions must give it its intended meaning. At residual possibilities \(B\subseteq W\), a uniformly acceptable choice exists exactly when
+\begin{equation}
+\operatorname{Common}(B)=\bigcap_{w\in B}A(w)\ne\varnothing.
+\label{eq:common}
+\end{equation}
+Knowing which situation is actual is sufficient but not necessary. A common acceptable action can resolve the practical decision without resolving every factual uncertainty.
+
+Define the covering quantity
+\begin{equation}
+\kappa(A)=\min\bigl\{|D|:D\subseteq C,\ D\cap A(w)\ne\varnothing\text{ for all }w\in W\bigr\}.
+\label{eq:cover}
+\end{equation}
+It counts a smallest set of candidates collectively containing an acceptable option for every situation.
+
+\begin{proposition}[Exact unrestricted retained-record requirement]
+\label{prop:cover}
+Among unrestricted encoders \(e:W\to Z\) and fixed decoders \(d:Z\to C\) satisfying \(d(e(w))\in A(w)\) for every \(w\), the least number of attained record values is \(\kappa(A)\). A fixed-length binary encoding therefore requires and, in this abstract model, can use \(\lceil\log_2\kappa(A)\rceil\) bits.
+\end{proposition}
+\begin{proof}
+The decoder outputs associated with attained record values form a cover: each \(w\) is served by its decoded candidate. Thus the number of values is at least \(\kappa(A)\). Conversely, choose a minimum cover \(D\) and assign to every \(w\) an element of \(D\cap A(w)\). Use that element's label as the record. This gives at most \(\kappa(A)\) attained values; minimality gives equality. Binary labels give the bit statement.
+\end{proof}
+\src{S2, Proposition 4.1. The encoder is unrestricted and may be assumed to access \(w\); the theorem does not establish such access, physical memory reliability or encoder computation cost.}
+
+The covering problem is not generally captured by pairwise incompatibility. For
+\begin{equation}
+A(1)=\{a,b\},\quad A(2)=\{b,c\},\quad A(3)=\{a,c\},
+\end{equation}
+every pair intersects but the three-way intersection is empty. No zero-information fixed candidate works. Two candidates suffice as a cover, so \(\kappa(A)=2\). A pairwise graph with an edge only for disjoint acceptable sets would miss this obstruction. The joint relation, or its incompatible-subset hypergraph, must be retained.
+
+\subsection{Retained information and later observations}
+
+Suppose one fixed decision relation \(A\) is addressed using an initial record with at most \(m\) attained values and at most \(d\) subsequent binary responses on every run. A deterministic policy sees no uncounted situation-dependent advice. Its terminal choice must satisfy \eqref{eq:acceptance}.
+
+\begin{proposition}[Fixed-target information budget]
+\label{prop:budget}
+Under these assumptions,
+\begin{equation}
+\kappa(A)\le m2^d.
+\label{eq:budget}
+\end{equation}
+If the initial record consists of \(b\) fixed-length bits, then
+\(b+d\ge\lceil\log_2\kappa(A)\rceil\).
+\end{proposition}
+\begin{proof}
+For each retained record value the policy has a binary decision tree of depth at most \(d\), with at most \(2^d\) leaves. The outputs over all nonempty leaves form a cover of \(W\). There are at most \(m2^d\) such leaves. Apply \eqref{eq:cover}; the bit inequality uses \(m\le2^b\).
+\end{proof}
+\src{S2, Proposition 5.1. This is a necessary counting condition, not sufficiency for the actual permitted repertoire.}
+
+The qualification matters. Let \(W=\{0,1\}\), \(A(w)=\{w\}\), no informative retained record, and one permitted binary probe that always returns zero. Then \(\kappa(A)=2\le 1\cdot2\), but the probe reveals nothing and the decision is impossible. The bound counts potential branches, not branches that a physical interface actually provides.
+
+Source-dependent controller memory, a destination label chosen with knowledge of \(w\), timing information or an external advisory response all belong in the information account. Calling them implementation details does not exempt them. Conversely, a fixed programme common to all situations need not be charged as fresh information about \(w\); its construction and execution costs are different quantities.
+
+\subsection{The future-query quantifier cannot be exchanged}
+
+Suppose \(w\in\{0,1\}^k\), and a later request \(q\in\{1,\ldots,k\}\) asks for \(w_q\). An exact authorised interface that reads the requested coordinate can answer any \emph{one} request using one binary response and no retained \(w\)-dependent record. This is true for every \(k\). It does not mean that one response reveals the entire vector.
+
+The two requirements are
+\begin{align}
+&\text{for each supplied }q,\text{ answer }w_q\text{ using at most one response};\label{eq:onequery}\\
+&\text{recover }(w_1,\ldots,w_k)\text{ from one shared response transcript}.\label{eq:allquery}
+\end{align}
+The second requires \(k\) bits in the unrestricted fixed-length zero-error model. Applying that lower bound to \eqref{eq:onequery} is a quantifier error, not a discovery that the faculty violates information theory \cite[\S6]{S2}.
+
+For no-new-observation preservation of a finite request family with acceptable answer sets \(A_q(w)\), the condition is
+\begin{equation}
+\forall z\in\im(e)\ \forall q\in\F:\quad
+\bigcap_{w:e(w)=z}A_q(w)\ne\varnothing.
+\label{eq:family}
+\end{equation}
+One can equivalently apply Proposition~\ref{prop:cover} to complete answer policies in \(\prod_{q\in\F}C_q\), whose acceptable set at \(w\) is \(\prod_q A_q(w)\). Once request-dependent observations are allowed, their budgets and effects must be analysed per request or per declared sequence, not replaced by the no-observation answer-policy bound.
+
+\subsection{When a priced recurrence is applicable}
+
+For a finite Boolean target \(g\), exact fixed-cost probes \(h\) that do not change the situation, and a residual set \(S\), CDR's standard decision-tree recurrence is
+\begin{equation}
+V_g(S)=
+\begin{cases}
+0,&|g(S)|=1,\\
+\displaystyle\min_{h:\,|h(S)|>1}
+\left(c_h+\max_{y\in h(S)}V_g(S_{h,y})\right),&|g(S)|>1,
+\end{cases}
+\label{eq:priced}
+\end{equation}
+where \(S_{h,y}=\{w\in S:h(w)=y\}\) and \(\min\varnothing=+\infty\). It gives minimum worst-case total probe cost under its declared conditions, including retained-record reuse by starting in the observed fibre \cite[Theorem 1]{CDR}.
+
+For apoautotic questions, the applicability test is substantive. A calibration action can consume a finite reference sample; a probe can alter the candidate or disable a later interface. Then \eqref{eq:priced} cannot be reused as though observations were non-destructive. Model construction, establishing probe semantics, and computing the policy are also outside that recurrence's cost. The next section supplies a finite state-changing formulation rather than hiding these differences.
+
+\section{Inquiry changes the machinery that makes inquiry possible}
+\label{sec:strategy}
+
+\subsection{An invariance obstruction to self-revision}
+
+Consider a finite known state space \(X\), observation \(\ell:X\to Z\), and a common finite repertoire of authorised deterministic maps \(a:X\to X\). A controller chooses from its observation--action history. Equal histories force equal choices, including any changes to its internal code or memory; no hidden initial advice distinguishes the situations.
+
+\begin{proposition}[Observation-congruent reconstruction]
+\label{prop:congruence}
+If every available action satisfies
+\begin{equation}
+\ell(x)=\ell(x')\Longrightarrow\ell(a(x))=\ell(a(x')),
+\label{eq:congruence}
+\end{equation}
+then every observation-based controller has identical histories from equally observed initial states. It cannot uniformly decide an initial-state target assigning those states different answers.
+\end{proposition}
+\begin{proof}
+Equal initial observations give the same first action. Equation~\eqref{eq:congruence} gives equal next observations. Induction gives equal complete histories and hence equal terminating verdicts. One verdict cannot equal opposite target answers.
+\end{proof}
+\src{ICS5, Theorem 7. Each condition is equivalently \(\ell\circ a=\bar a\circ\ell\) on the attained image. This is an inherited congruence argument, not a ban on all informative reconstruction.}
+
+A changed relation to the environment can violate \eqref{eq:congruence} and expose an existing distinction. In ICS5's four-state example,
+\begin{equation}
+X=\{(s,b):s,b\in\{0,1\}\},\quad
+\ell(s,b)=(s,sb),\quad u(s,b)=(1,b).
+\label{eq:reconnect}
+\end{equation}
+At \(s=0\), \(b\) is hidden; after the specified action it is observed. The reconstruction makes a previously reachable observation immediate. It does not create evidence from a self-endorsement, and the map \(u\) presupposes an available and permitted interface. No physical connector is established by this finite example \cite[\S5.2]{ICS}.
+
+For a transductive faculty, this clarifies both possibility and limit. A representation can help identify a useful interaction; an actual interaction can supply new information. Merely recomputing an inadequate record cannot supply a distinction absent from every accessible consequence of that record.
+
+\subsection{The original question must survive destructive inquiry}
+
+Let \(W\) name initial situations and \(X\) current operative states. A belief is a nonempty finite set
+\begin{equation}
+B\subseteq W\times X.
+\end{equation}
+The first coordinate preserves the original target's referent even if inquiry changes or merges current states. The second records what is now executable. States in a coherent belief share the same current observation. The actual initial/current pair is assumed to remain in the belief under valid updates.
+
+For a request \(q\), terminal candidate \(c\in C_q\), and a declared acceptance predicate, write
+\begin{equation}
+\Good_q(w,x,c).
+\label{eq:good}
+\end{equation}
+This predicate can require correctness about the original situation, present resources, contract preservation, the specified support exclusion and current permission. Its truth conditions are supplied model inputs, not certified by calling the predicate \(\Good\). A terminal candidate is warranted by the present belief exactly when it is good for \emph{every} remaining pair.
+
+An action \(a\) is legal at \(B\) only if legal at every current state in \(B\), and its stipulated transition must preserve the required intermediate conditions. Define the successor after observing \(z\) by
+\begin{equation}
+B_{a,z}=\{(w,a(x)):(w,x)\in B,\ \ell(a(x))=z\}.
+\label{eq:beliefupdate}
+\end{equation}
+Only nonempty branches count. Observable refusals or changes of permission must be represented in the transition/observation model; the controller cannot learn an unmodelled fact by attempting an action already forbidden at a possible state.
+
+\begin{theorem}[Finite warranted-continuation criterion]
+\label{thm:belief}
+Fix the finite model just described. Let
+\begin{align}
+\Win_q^0&=\{B:\exists c\in C_q\ \forall(w,x)\in B,\ \Good_q(w,x,c)\},\label{eq:winzero}\\
+\Win_q^{n+1}&=\Win_q^n\ \cup\
+\{B:\exists a\text{ legal and safe at }B,\
+\forall z\text{ with }B_{a,z}\ne\varnothing,\ B_{a,z}\in\Win_q^n\}.
+\label{eq:win}
+\end{align}
+Then \(B\in\Win_q^n\) if and only if an observation-based policy can return a uniformly good terminal candidate within at most \(n\) inquiry actions on every possible run from \(B\).
+\end{theorem}
+\begin{proof}
+A rank-zero witness supplies a common good terminal choice. At a positive least rank, take the witnessing legal action and use a lower-rank policy after each possible observation. The maximum number of actions is bounded by the initial rank. Conversely, a zero-action successful policy returns one common candidate and hence satisfies \eqref{eq:winzero}. A successful policy using at most \(n+1\) actions either terminates immediately or first takes an action legal at every remaining state. Each nonempty successor has a successful policy with at most \(n\) further actions. Induction gives \eqref{eq:win}.
+\end{proof}
+\src{Explicit synthesis of S2, \S7, and ICS5, Theorem 8, with current executability and state-dependent legality made part of the terminal and action conditions. The proof is standard finite backward reachability. No new general game-solving theorem is claimed.}
+
+The theorem characterises a policy only inside its finite, exact, deterministic model. It does not establish the model's sensor semantics, actual parameter values or completeness. Resources can be represented in \(X\) only to the declared granularity. Stochastic or continuous observations and drift require a different argument or a justified abstraction. An empty belief signals inconsistency, not permission to certify every candidate.
+
+\subsection{A complete destructive counterexample}
+
+Take three initially possible states \(p,q,r\), all observed as \(?\), with desired original labels \(0,0,1\). Add two absorbing states \(t_0,t_1\), observed as \(0,1\). Both available actions fix the absorbing states and otherwise act as follows:
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Initial state & Action \(a\) & Action \(b\) & Required initial label\\
+\midrule
+\(p\)&\(t_1\)&\(t_0\)&0\\
+\(q\)&\(t_0\)&\(t_1\)&0\\
+\(r\)&\(t_0\)&\(t_0\)&1\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every pair is distinguishable by some action. But starting with \(a\) can merge \(q\) and \(r\), which require different original answers, into the same absorbing state. Starting with \(b\) can merge \(p\) and \(r\) instead. No later action repairs the ambiguity. A known present state is not knowledge of its erased history \cite[\S5.3]{ICS}.
+
+Thus failure of observation congruence is not sufficient for successful inquiry. The missing property is a \emph{single safe strategy} for the initial uncertainty, rather than a collection of pairwise experiments each selected with knowledge of which pair matters. In an apoautotic setting the lost distinction might concern which successor is adequate, whether calibration remains usable, or which support the next operation requires. Renaming the action self-revision does not repair the quantifier order.
+
+\section{Preserving the faculty through successive requests}
+\label{sec:iteration}
+
+\subsection{One request, separate requests and a continuing service}
+
+Three claims must be distinguished:
+\begin{equation}
+\begin{split}
+&\text{this request succeeds from the present state};\\
+&\text{each request could succeed separately from that state};\\
+&\text{one policy can serve successive requests as the state changes}.
+\end{split}
+\label{eq:threecap}
+\end{equation}
+The second does not imply the third. Suppose either of two permitted assessments consumes the same single-use reference. Each is feasible when performed first. After one, the resource needed for the other is gone. The problem is not lack of a proof for either individual task; it is that their capability premises do not compose along the actual sequence.
+
+This is the recursive analogue of the current-parity/future-calibration case. It explains why the machinery for re-realisation must be included in successor assessment, without requiring reproduction of every incidental part. The preserved object is a sufficient policy and support relation for the requests being claimed, not an inventory of original components \cite[\S\S6,8]{S2}\cite[\S12]{S3}.
+
+\subsection{An explicit finite-request composition statement}
+
+The following formulation makes S2's finite composition argument explicit. It introduces no physical construction. Fix a finite boundary-belief space \(\B\), a finite externally supplied request set \(\F\), and a per-request inquiry bound \(n\). Each request \(q\) has terminal choices \(c\), a predicate \(\Good_q\), and a stipulated terminal effect. Write \(\operatorname{Post}_{q,c}(B,z)\) for the nonempty successor belief after that effect and its observation. The effect includes any resource consumption, changed support and new configuration. Context histories are included in the state wherever they matter.
+
+For \(U\subseteq\B\), define \(\Win_q^n(U)\) exactly as in Theorem~\ref{thm:belief}, except that a zero-inquiry terminal choice must both be uniformly good and put \emph{every} possible terminal observation branch into \(U\). This is a bounded request-serving predecessor operator. It is monotone in \(U\).
+
+Let \(S\subseteq\B\) be the admissible continuation boundaries. Set
+\begin{equation}
+U_0=S,\qquad
+U_{j+1}=S\cap\bigcap_{q\in\F}\Win_q^n(U_j).
+\label{eq:recursivefamily}
+\end{equation}
+Requests are observed before selecting a request policy; future requests are not known in advance. External permitted termination is a distinct governed transition, not a request the process must resist.
+
+\begin{theorem}[Finite-request preservation of a transductive capability]
+\label{thm:requests}
+Under the finite model above, \(B\in U_j\) if and only if a history-based policy can serve every supplied sequence of at most \(j\) requests from \(\F\), using at most \(n\) inquiry actions per request, meeting every request's \(\Good\) condition and remaining in \(S\) at the successive boundaries.
+\end{theorem}
+\begin{proof}
+For \(j=0\), the condition is membership in \(S\). Suppose the statement holds at \(j\). Membership in \(U_{j+1}\) gives, for each observed first request, a bounded policy ending in \(U_j\) on every possible observation branch. The induction hypothesis supplies the continuation for each remaining request history. Conversely, a policy serving every sequence of at most \(j+1\) must remain in \(S\). For every first request and every resulting branch, its continuation serves all remaining sequences of at most \(j\); hence the successor lies in \(U_j\). The first request is therefore served by a witness to \(\Win_q^n(U_j)\), for every \(q\), giving \eqref{eq:recursivefamily}.
+\end{proof}
+\src{This paper's explicit finite-request synthesis of S2, \S8, using the inherited bounded-belief construction. Its mechanism is standard finite policy composition; historical mathematical novelty and physical validity are not claimed.}
+
+The theorem explains what the stronger faculty-preserving condition adds. It is not enough for \(c\) to satisfy today's \(\Good_q\). Its actual successor must lie inside the capability set needed for later requests. Otherwise a locally successful choice can end the very process whose continuation was being claimed.
+
+A fixed point in this \emph{fully specified finite model} can support repeated request service: if \(U_*=S\cap\bigcap_q\Win_q^n(U_*)\), choose the corresponding bounded policies after each request and boundary observation. But physical application still requires that the finite state captures all accumulating resources, disturbances, policy overhead and timing. A model that replenishes its reference automatically has assumed replenishment; it has not proved it for a real system.
+
+\subsection{Finite induction is not indefinite physical autonomy}
+
+For a finite sequence of certified realisation changes, Theorem~\ref{thm:continuation} preserves the current kernel. Theorem~\ref{thm:requests} adds a finite future-service obligation within a stated model. Neither says that every finite physical proof extends to unbounded operation.
+
+The limit requires additional questions. Can resources be replenished under the same support exclusions? Do error estimates remain uniform? Can the allowed transition schedule accumulate infinitely many events in finite physical time? Does the operating environment remain in the certified class? Is the request rate compatible with capacity? Does permission continue? GF1 explicitly separates finite hybrid concatenations from an unhandled infinite-event accumulation; LM3 separates safety, progress and authorised operation \cite[\S10.12]{GF1}\cite[\S18]{LM3}.
+
+Approximate continuation makes the issue visible. If the checkpoint discrepancy satisfies
+\begin{equation}
+e_{k+1}\le L_ke_k+\eta_k,
+\end{equation}
+then
+\begin{equation}
+e_N\le\left(\prod_{k=0}^{N-1}L_k\right)e_0+
+\sum_{j=0}^{N-1}\left(\prod_{k=j+1}^{N-1}L_k\right)\eta_j.
+\label{eq:error}
+\end{equation}
+Repeated substitution proves the bound. A migration whose abstract reference is identity has reference Lipschitz bound one; it cannot inherit a smaller bound from a different execution step. The inequality can certify a tolerance when sufficiently small, but an inconclusive or large upper bound does not prove actual failure \cite[\S14.2--14.4]{LM3}.
+
+Similarly, for a finite chain with conditional failure probabilities at most \(\epsilon_j\) given earlier success, the probability of some failure is at most \(\sum_j\epsilon_j\). This neither proves eventual failure from a loose bound nor gives unlimited reliable operation by repeating a finite certificate. A claim about indefinite faculty preservation needs a separate maintenance and reliability argument.

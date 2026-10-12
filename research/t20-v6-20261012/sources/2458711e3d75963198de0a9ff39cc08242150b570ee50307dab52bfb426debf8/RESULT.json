@@ -1,0 +1,254 @@
+{
+  "counts": {
+    "tagged_pairs": 6480,
+    "finite_pairs": 729,
+    "threshold_checks": 135
+  },
+  "new_countermodels": [
+    {
+      "id": "P03-A2-CE-AE-COMPLETENESS",
+      "coarse": {
+        "space": "tagged-uniform-intervals",
+        "law": "P03-A2-declared-law",
+        "events": "full-measurable",
+        "weights": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "view": [
+          2,
+          0
+        ]
+      },
+      "fine": {
+        "space": "tagged-uniform-intervals",
+        "law": "P03-A2-declared-law",
+        "events": "full-measurable",
+        "weights": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "view": [
+          3,
+          0
+        ]
+      },
+      "engine_result": "refinement: coordinate information discarded or bins incompatible",
+      "a_s_factorisation_exists": true,
+      "proof": "The law is concentrated on component 1, where both observations are constant; the incompatible bins are in the zero-weight component 0. The implementation deliberately checks every component."
+    },
+    {
+      "id": "P03-A2-CE-ARITHMETIC-COMPLETENESS",
+      "refused_model": {
+        "space": "finite-programs",
+        "law": "P03-A2-declared-law",
+        "events": "full-measurable",
+        "weights": [
+          [
+            1,
+            1856910058928070412348686333
+          ],
+          [
+            1,
+            1856910058928070412348686339
+          ],
+          [
+            1,
+            1856910058928070412348686345
+          ],
+          [
+            206323339880896712483187370,
+            618970019642690137449562111
+          ],
+          [
+            618970019642690137449562112,
+            1856910058928070412348686339
+          ],
+          [
+            618970019642690137449562114,
+            1856910058928070412348686345
+          ]
+        ],
+        "view": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "reordered_model": {
+        "space": "finite-programs",
+        "law": "P03-A2-declared-law",
+        "events": "full-measurable",
+        "weights": [
+          [
+            1,
+            1856910058928070412348686333
+          ],
+          [
+            206323339880896712483187370,
+            618970019642690137449562111
+          ],
+          [
+            1,
+            1856910058928070412348686339
+          ],
+          [
+            618970019642690137449562112,
+            1856910058928070412348686339
+          ],
+          [
+            1,
+            1856910058928070412348686345
+          ],
+          [
+            618970019642690137449562114,
+            1856910058928070412348686345
+          ]
+        ],
+        "view": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "refusal": "resource: probability arithmetic bits",
+      "final_mathematical_total": [
+        1,
+        1
+      ],
+      "prefix_numerator_denominator_bits": [
+        [
+          1,
+          91
+        ],
+        [
+          91,
+          180
+        ],
+        [
+          180,
+          269
+        ],
+        [
+          179,
+          180
+        ],
+        [
+          91,
+          91
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "reordered_defect": [
+        0,
+        1
+      ],
+      "proof": "Three pairs each sum to 1/3. Grouping the three small terms first creates an intermediate denominator above 256 bits, while interleaving complements cancels it. Both observed laws are the same point mass; only the literal resource path differs."
+    }
+  ],
+  "concrete_revision_instantiation": {
+    "increment": [
+      1,
+      4
+    ],
+    "coarse_defect": [
+      0,
+      1
+    ],
+    "fine_defect": [
+      1,
+      4
+    ],
+    "old_stale_after_refine": true,
+    "both_old_handles_stale_after_coarsen": true,
+    "new_admission_success": true
+  },
+  "probability_lift": {
+    "joint_law": "X with masses 1/2,1/3,1/6; independent revoke flag of mass 1/4 (explicit experimental assumption)",
+    "concrete_and_abstract_laws_equal": true,
+    "outcome_masses": [
+      {
+        "outcome": [
+          "Success",
+          1
+        ],
+        "mass": [
+          3,
+          8
+        ]
+      },
+      {
+        "outcome": [
+          "Refusal",
+          "stale"
+        ],
+        "mass": [
+          1,
+          4
+        ]
+      },
+      {
+        "outcome": [
+          "Success",
+          2
+        ],
+        "mass": [
+          1,
+          4
+        ]
+      },
+      {
+        "outcome": [
+          "Success",
+          3
+        ],
+        "mass": [
+          1,
+          8
+        ]
+      }
+    ],
+    "success_mass": [
+      3,
+      4
+    ],
+    "conditional_success_law": {
+      "('Success', 1)": [
+        1,
+        2
+      ],
+      "('Success', 2)": [
+        1,
+        3
+      ],
+      "('Success', 3)": [
+        1,
+        6
+      ]
+    },
+    "refusal_mass_not_dropped": true
+  },
+  "mismatches": 0,
+  "kernel_credit": false
+}

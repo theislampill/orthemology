@@ -1,0 +1,61 @@
+--- provisional/research/contracts.py
++++ reconstruction/research/contracts.py
+@@ -46,17 +46,21 @@
+                 pairs.add((s,a))
+         if set(self.costs)!=pairs or set(self.kernels)!=pairs:
+             raise ValueError('Costs/kernels must cover exactly the enabled pairs')
++        # Validate and freeze each transition row in the SAME iteration:
++        # a one-shot iterable must not be consumed by validation and then lost.
++        frozen_kernels={}
+         for key in pairs:
+             if rational(self.costs[key])<0:
+                 raise ValueError('Negative cost outside this contract')
+-            mass=F(0)
++            mass=F(0); frozen_row=[]
+             for o,t,p in self.kernels[key]:
+                 if o not in oo or t not in ss:
+                     raise ValueError('Unknown outcome or successor')
+                 p=rational(p)
+                 if p<0: raise ValueError('Negative transition probability')
+-                mass+=p
++                mass+=p; frozen_row.append((o,t,p))
+             if mass!=1: raise ValueError('Every enabled row must have total mass one')
++            frozen_kernels[key]=tuple(frozen_row)
+         # Freeze copies so validation cannot silently be invalidated by a caller.
+         for value in self.labels.values():
+             try: hash(value)
+@@ -64,7 +68,7 @@
+         object.__setattr__(self,'labels',MappingProxyType(dict(self.labels)))
+         object.__setattr__(self,'enabled',MappingProxyType({s:tuple(a) for s,a in self.enabled.items()}))
+         object.__setattr__(self,'costs',MappingProxyType({k:rational(v) for k,v in self.costs.items()}))
+-        object.__setattr__(self,'kernels',MappingProxyType({k:tuple((o,t,rational(p)) for o,t,p in row) for k,row in self.kernels.items()}))
++        object.__setattr__(self,'kernels',MappingProxyType(frozen_kernels))
+ 
+ 
+ def _blocks_from_keys(states,keys):
+@@ -87,6 +91,8 @@
+ 
+ 
+ def valid_partition(c,blocks,coarse=None):
++    # Snapshot the partition ONCE; later validation must see the same blocks.
++    blocks=tuple(tuple(b) for b in blocks)
+     flat=[s for b in blocks for s in b]
+     if not blocks or any(not b for b in blocks) or len(flat)!=len(set(flat)) or set(flat)!=set(c.states):
+         return False
+@@ -180,6 +186,7 @@
+ 
+ def as_reaches(c,start,target,policy):
+     """Exact finite-chain almost-sure reachability for a fixed stationary policy."""
++    target=frozenset(target)  # reuse target through validation, graph and closure
+     if start not in c.states or not set(target)<=set(c.states): raise ValueError('Invalid states')
+     succ={}
+     for s in c.states:
+@@ -300,6 +307,8 @@
+ 
+ 
+ def closure_basis(outputs,actions):
++    # The same allowed updates are needed during validation and every round.
++    actions=tuple(tuple(tuple(row) for row in a) for a in actions)
+     b=row_reduce(outputs)
+     if not b: return (),[]
+     n=len(b[0])

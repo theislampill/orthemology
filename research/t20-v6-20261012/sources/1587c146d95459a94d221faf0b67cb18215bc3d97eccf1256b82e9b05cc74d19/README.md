@@ -1,0 +1,1 @@
+Independent review of the frozen scoped singular Gaussian entrance. Read REVIEW.md. Replay check_independent.py; author-snapshot/verify.py supports --output-dir and --original-root. Accepted ordinary scope only; no integration or closure authority.

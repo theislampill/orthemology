@@ -1,0 +1,35 @@
+PASS 01: bound input tensor-likelihood-closure-20261010/RESULT.md
+PASS 02: bound input leafwise-noetic-geometry-20261010/RESULT.md
+PASS 03: bound input tensor-likelihood-review-20261010/REVIEW.md
+PASS 04: bound input leafwise-noetic-review-20261010/REVIEW.md
+PASS 05: bound input constructive-t20-20261009/sources/theory/lineages/h-formalisation/orthing_formalisation_v1.md
+PASS 06: stabilizer binary star
+PASS 07: stabilizer four-slot edge chain
+PASS 08: stabilizer disjoint cliques
+PASS 09: stabilizer categorical star
+PASS 10: stabilizer two-slot categorical core
+PASS 11: stabilizer omitted coordinate
+PASS 12: stabilizer mass only
+PASS 13: stabilizer full marginal
+PASS 14: stabilizer proper order two
+PASS 15: arbitrary-prior core branch probability (2, 2, 2)
+PASS 16: arbitrary-prior clique numerator (2, 2, 2), (0, 1)
+PASS 17: arbitrary-prior clique numerator (2, 2, 2), (0, 2)
+PASS 18: arbitrary-prior core branch probability (3, 2, 2)
+PASS 19: arbitrary-prior clique numerator (3, 2, 2), (0, 1)
+PASS 20: arbitrary-prior clique numerator (3, 2, 2), (0, 2)
+PASS 21: correlated star priors share the complete retained record
+PASS 22: neither star prior assumes conditional independence
+PASS 23: center evidence updates every retained star marginal exactly
+PASS 24: leaf evidence has equal probability but unequal retained posterior
+PASS 25: center objective has equal nonzero projected Fisher fields
+PASS 26: leaf objective projected Fisher field distinguishes hidden dependence
+PASS 27: chain informative evidence fails retained posterior
+PASS 28: disjoint cliques informative evidence fails retained posterior
+PASS 29: non-pure categorical forbidden tensor component is nonzero
+PASS 30: omitted-coordinate cylinder has constant posterior and unknown probability
+PASS 31: whole-cylinder support preserves feasibility through covered marginal
+PASS 32: partial cylinder can lose feasibility at an identical record
+PASS 33: proper-star singleton revelation does not carry feasibility
+PASS 34: declared core-channel enlargement equals product-module span
+ALL 34 ASSERTION GROUPS PASSED

@@ -1,0 +1,21 @@
+--- a/experiments/orthemology-v5/source/boundaries.py
++++ b/experiments/orthemology-v5/source/boundaries.py
+@@ -73,6 +73,18 @@
+ 
+ def dump_json(x:Any)->bytes:
+     bound_tree(x)
++    # JSON counts containers from one; bound_tree counts native nodes from zero.
++    # An empty container at native depth MAX_DEPTH must not be emitted as a
++    # successful transport that load_json immediately refuses. Scalar leaves at
++    # native depth MAX_DEPTH remain allowed. Caller-owned input must be stable.
++    containers=[(x,0)]
++    while containers:
++        value,nesting=containers.pop()
++        if type(value) in (list,tuple,dict):
++            nesting+=1
++            if nesting>MAX_DEPTH:raise Rejection('resource: JSON output depth')
++            children=value.values() if type(value) is dict else value
++            containers.extend((child,nesting) for child in children)
+     # Streaming, bounded assembly: no complete oversize string is allocated.
+     # Each emitted string chunk is bounded by the input's 4096-character cap.
+     chunks=[];size=0

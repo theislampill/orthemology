@@ -1,0 +1,72 @@
+{
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "created_utc": "2026-10-10T22:21:51.880925+00:00",
+  "result_sha256": "adbbea04d51ac90692d167c5d522fa4cda23558dcc2e093c6bcf76e24f3a3553",
+  "check_count": 457,
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "bytes": 55524,
+      "sha256": "2a61a65bc97733a46b9bf76250768fa2a2717af10675452aa410a78eae802a69"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1175,
+      "sha256": "55f0f08c8a993abe7a19edd025836fdc09adc3e1e523e0f45e0db30c259a94c0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1850,
+      "sha256": "a8c79cf80ba9fd5643dea744bfc6c9d679421404c9d0ada722e4f3626a76e2b7"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 30829,
+      "sha256": "adbbea04d51ac90692d167c5d522fa4cda23558dcc2e093c6bcf76e24f3a3553"
+    },
+    {
+      "path": "check_controls.log",
+      "bytes": 439,
+      "sha256": "e8c5169fc557983a8d604ed64dac9615042981faec7448987a371aa9d167d111"
+    },
+    {
+      "path": "check_controls.py",
+      "bytes": 14063,
+      "sha256": "bfc758edda4fe5492f42a28d58f122986060b5446d637a5b860ffb690503f3d7"
+    },
+    {
+      "path": "inputs/01-compact-initial-law-preservation-20261010-RESULT.md",
+      "bytes": 7763,
+      "sha256": "6943a1c274b177d107c8935e7d12d6a9e5094aa79df41546fb8e7d4d121914ce"
+    },
+    {
+      "path": "inputs/02-tensor-realizability-extension-20261010-RESULT.md",
+      "bytes": 27598,
+      "sha256": "449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a"
+    },
+    {
+      "path": "inputs/03-compact-initial-law-independent-review-20261010-REVIEW.md",
+      "bytes": 11225,
+      "sha256": "d0243e4000ce5e3aa2ce7cd7a2f1f96a3519779f684fbaa1219f9ee03dad4cc1"
+    },
+    {
+      "path": "inputs/04-tensor-moment-continuation-20261009-RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    }
+  ],
+  "claims": [
+    "ordinary proof only",
+    "signed autonomous weighted-energy forcing",
+    "bounded-energy global corollary",
+    "compact locally finite switching",
+    "null-ideal persistence",
+    "Gaussian finite maximal horizon"
+  ],
+  "no_claims": [
+    "formal kernel proof",
+    "field priority",
+    "protected integration",
+    "T20 closure"
+  ]
+}

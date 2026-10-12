@@ -1,0 +1,59 @@
+test_communicative_intention_is_not_truth (test_implicit.ImplicitAttestationControls.test_communicative_intention_is_not_truth) ... FAIL
+test_contextual_interventions_discriminate_reasons (test_implicit.ImplicitAttestationControls.test_contextual_interventions_discriminate_reasons) ... FAIL
+test_defeasible_weights_do_not_become_empirical_certainty (test_implicit.ImplicitAttestationControls.test_defeasible_weights_do_not_become_empirical_certainty) ... FAIL
+test_nonconventional_positive_has_no_rule_or_endorsement_words (test_implicit.ImplicitAttestationControls.test_nonconventional_positive_has_no_rule_or_endorsement_words) ... FAIL
+test_same_visible_transfer_can_have_other_purposes (test_implicit.ImplicitAttestationControls.test_same_visible_transfer_can_have_other_purposes) ... FAIL
+test_separate_choice_episodes_constrain_policy_without_an_intent_observation (test_implicit.ImplicitAttestationControls.test_separate_choice_episodes_constrain_policy_without_an_intent_observation) ... FAIL
+
+======================================================================
+FAIL: test_communicative_intention_is_not_truth (test_implicit.ImplicitAttestationControls.test_communicative_intention_is_not_truth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 42, in test_communicative_intention_is_not_truth
+    self.assertTrue(cases['mistaken']['intended_positive_claim'])
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_contextual_interventions_discriminate_reasons (test_implicit.ImplicitAttestationControls.test_contextual_interventions_discriminate_reasons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 24, in test_contextual_interventions_discriminate_reasons
+    self.assertEqual(t['positive']['remove_question'],'keep')
+AssertionError: None != 'keep'
+
+======================================================================
+FAIL: test_defeasible_weights_do_not_become_empirical_certainty (test_implicit.ImplicitAttestationControls.test_defeasible_weights_do_not_become_empirical_certainty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 49, in test_defeasible_weights_do_not_become_empirical_certainty
+    self.assertEqual(rows[0]['conditional_purpose_probability'],'999/1000')
+AssertionError: None != '999/1000'
+
+======================================================================
+FAIL: test_nonconventional_positive_has_no_rule_or_endorsement_words (test_implicit.ImplicitAttestationControls.test_nonconventional_positive_has_no_rule_or_endorsement_words)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 7, in test_nonconventional_positive_has_no_rule_or_endorsement_words
+    self.assertEqual(w['action'],'send_mantle')
+AssertionError: None != 'send_mantle'
+
+======================================================================
+FAIL: test_same_visible_transfer_can_have_other_purposes (test_implicit.ImplicitAttestationControls.test_same_visible_transfer_can_have_other_purposes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 19, in test_same_visible_transfer_can_have_other_purposes
+    self.assertTrue(cases['appropriation']['token_reaches_E'])
+AssertionError: None is not true
+
+======================================================================
+FAIL: test_separate_choice_episodes_constrain_policy_without_an_intent_observation (test_implicit.ImplicitAttestationControls.test_separate_choice_episodes_constrain_policy_without_an_intent_observation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 34, in test_separate_choice_episodes_constrain_policy_without_an_intent_observation
+    self.assertGreater(result['initial_policies'],result['surviving_policies'])
+AssertionError: 0 not greater than 0
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+FAILED (failures=6)

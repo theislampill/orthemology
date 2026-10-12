@@ -1,0 +1,133 @@
+{
+  "schema": "orthing-formalisation-example-checks-v1",
+  "version": 1,
+  "status": "PASS",
+  "test_groups": 11,
+  "results": [
+    {
+      "name": "finite_record_channel",
+      "scope": "Proposition 4.1: finite synthetic corpus only",
+      "status": "PASS",
+      "round_trip_records": 19,
+      "cross_record_collisions": 0,
+      "model": "finite JSON tree; references retained as typed values"
+    },
+    {
+      "name": "typed_words",
+      "scope": "Section 3: ordering and degree-profile example",
+      "status": "PASS",
+      "sample_degree_profile": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "word_order_retained": true
+    },
+    {
+      "name": "parity_marginalisation",
+      "scope": "Theorem 5.1: all proper marginals for n=2..8",
+      "status": "PASS",
+      "arity_range_inclusive": [
+        2,
+        8
+      ],
+      "proper_subsets_checked": 501,
+      "marginal_entries_checked": 9329,
+      "parity_expectations": [
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "fibre_factorisation",
+      "scope": "Theorem 4.2: four-state binary maps",
+      "status": "PASS",
+      "representation_target_pairs_checked": 256,
+      "target_erasing_contraction_rejected": true
+    },
+    {
+      "name": "witness_retention",
+      "scope": "Theorem 6.5: toy record contract, not semantic certificates",
+      "status": "PASS",
+      "positive_cases": 3,
+      "negative_cases": 4,
+      "semantic_validity_established": false
+    },
+    {
+      "name": "finite_games",
+      "scope": "Section 8: synthetic race, disclosure and matching pennies",
+      "status": "PASS",
+      "race_pure_equilibria": [
+        [
+          0,
+          0
+        ]
+      ],
+      "race_strict_dominance": true,
+      "matching_pennies_pure_equilibria": [],
+      "matching_pennies_mixed": "(1/2,1/2)",
+      "fixed_analysis_equilibrium_change": true,
+      "forbidden_resource_profile_probability": "1/4"
+    },
+    {
+      "name": "regret_transport",
+      "scope": "Proposition 8.5: rational grid and array perturbations",
+      "status": "PASS",
+      "payoff_perturbation_profile_cases": 32400,
+      "profile_grid": [
+        "0",
+        "1/4",
+        "1/2",
+        "3/4",
+        "1"
+      ],
+      "entry_error_upper_bound": "1/4"
+    },
+    {
+      "name": "energy_and_radius",
+      "scope": "Theorems 10.1-10.3: rational coefficient checks",
+      "status": "PASS",
+      "coupled_coefficient_cases": 1764,
+      "positive_weight_cases": 1073,
+      "empty_positive_weight_interval_cases": 691,
+      "radius_grid_cases": 400,
+      "am_gm_identity_cases": 196
+    },
+    {
+      "name": "discrete_residual",
+      "scope": "Theorem 10.5: exact recurrence instances",
+      "status": "PASS",
+      "recurrence_time_instances": 1116
+    },
+    {
+      "name": "landscape_countermodels",
+      "scope": "Section 7: illustrative values, not measured values",
+      "status": "PASS",
+      "option_value_changes": [
+        -4,
+        4
+      ],
+      "smaller_equal_value_landscape": true,
+      "shape_not_sufficient_for_feasibility": true
+    },
+    {
+      "name": "future_safe_quotient",
+      "scope": "Theorem 11.2: exhaustive specified four-state family",
+      "status": "PASS",
+      "finite_map_cases": 65536,
+      "compatible_cases": 6144,
+      "iterates_per_start_state": 7,
+      "domain_size": 4
+    }
+  ],
+  "arithmetic": "exact integer/Fraction calculations; finite float hex only in record serialisation",
+  "limits": [
+    "not a machine proof of the manuscript",
+    "not a Lean/kernel check",
+    "not an empirical Orthemology experiment",
+    "not a fluid proof audit",
+    "not repository adoption",
+    "not semantic authentication of witnesses"
+  ]
+}

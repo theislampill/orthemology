@@ -1,0 +1,293 @@
+schema: orthemology-current-state-v1
+note: GENERATED derived block — edit only the authored block, then run scripts/generate_current_state.py.
+  CI checks for drift.
+authored:
+  revision: R6
+  revision_label: R6 (2026-07-20) — experiment-readiness, sourcing-state, and reference-apparatus tie-off
+  release_status: research revision, not a numbered stable release; no tag, DOI, or archival claim
+  review_state:
+    status: fresh-session-review-completed
+    scope: repository/formal/schema/source-internal review of the mixed-provenance R4 candidate; not external
+      human peer review
+    current_signoff: docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md
+    current_merge_verification: docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md
+    historical_status_index: docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
+    empirical_validation: not run
+    terminology_adoption: none
+    header_wording: fresh-session repository review completed; not external human peer review; not empirically
+      validated
+  primary_documents:
+    manuscript: manuscript/orthemma-ortheme-systems-revised-draft.md
+    formal_core: theory/orthemic-core-formalization.md
+    multi_actor_note: theory/orthemic-multi-actor-conflict-note.md
+    companion_school_neutral: companion/orthability-and-the-ground-of-intelligibility.md
+    companion_athari: companion/orthability-divine-attributes-and-speech-athari.md
+  terminology_status: READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018); NOT RUN; NO TERM ADOPTED
+  empirical_status: no designed study has been run; no utility result exists; deterministic validation
+    only
+  license_status: OPEN — none chosen; default copyright applies
+  citation_status: OPEN — no CITATION.cff and no author identity; cite by commit (docs/CITING.md)
+  owner_only_burdens:
+  - id: OWNER-LICENSE
+    text: Legal license choice
+    detail: no license exists; default copyright applies; choosing one is a legal act
+  - id: OWNER-CITATION-IDENTITY
+    text: Author/citation identity
+    detail: real-world author name, affiliation, ORCID, preferred bibliographic identity
+  - id: OWNER-EMPIRICAL-EXECUTION
+    text: Empirical execution
+    detail: model spend; >=3 human raters; blind human matching review; freeze decision
+  - id: OWNER-EXTERNAL-PUBLICATION
+    text: External peer review and publication
+    detail: preprint server, journal, DOI archive, or any submission under the owner's identity
+  - id: OWNER-PRIVATE-MATERIAL
+    text: Publication of private material
+    detail: internal casebook, longitudinal record, screenshots, transcripts
+  - id: OWNER-PAID-SOURCE
+    text: Acquisition of a genuinely inaccessible paid source
+    detail: none currently identified; standing category only
+  research_residuals_with_triggers:
+  - id: RR-1
+    burden: edition-level pagination for six classical loci
+    trigger: library/edition access before any external submission
+  - id: RR-2
+    burden: direct full-text verification of the Evans 1998 concrete/ideal-reason page locus
+    trigger: full-text access; currently cited as reported by Doko & Turner 2023
+  - id: RR-3
+    burden: primary-locus verification queue for Taymiyyan Dar' attributions
+    trigger: continued research; all such attributions labeled secondary reconstruction meanwhile
+  open_formal_parameters:
+  - RequiredBy beyond the shipped machine-readable governance instance
+  - evidence-class exhaustiveness (working hypothesis)
+  - fusion-mapping non-uniqueness
+  - Delta_A idealizations
+  - many-to-many MetaInst typing (explicitly unimplemented in R4)
+  - the ProfileOf_A bridge between latent-state models and orthemic profiles is partial and analysis-declared
+  claim_status_wording:
+    formal: internally conformance-checked current specification over the declared definitions, schemas,
+      positive and adversarial fixtures, and source-status contract; acknowledged open parameters; no
+      proof of consistency, completeness, or utility
+    manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not
+      empirically validated
+    companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
+    companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal
+      draft; comparative positions accurately sourced; not a neutral theological conclusion
+    terminology: v2 instrument READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018), not run; no term adopted
+    empirical: designed public experiment packets not run / open; one separately classified historical
+      internal synthetic AR8R pilot is negative at its tested evidential class and supplies no external
+      framework-validation credit
+    pdfs: reproducibly built and visually inspected draft artifacts
+    legal_publication: open on license, identity, peer review, and external submission
+  ar8r_v11_task7:
+    status: RECONCILIATION_EXPANDED_VALIDATION_AND_INDEPENDENT_REVIEW_REQUIRED
+    exact_deferred_source_files: 24
+    exact_deferred_source_bytes: 84163
+    candidate_e_status: DEFERRED_INSUFFICIENT_AUDIT
+    candidate_g_status: DEFERRED_INSUFFICIENT_AUDIT
+    pmr007_results: 10
+    pmr007_owner_adoption: PENDING
+    t354_status: BLOCKED_FORMAL_DEFECT
+    ten_advances_comparator_count: CONFLICTING_38_42
+    connes_rigidity_status: UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW
+    lean_machine_check_claim: NONE
+    integrated_champion: NO_INTEGRATED_CHAMPION
+    meniscus: MENISCUS_NOT_REACHED
+    natural_closure: NATURAL_CLOSURE_NOT_REACHED
+  ar8r_v11_task7a:
+    status: OWNER_PROGRAM_CHARTER_RECORDED_VALIDATION_AND_REREVIEW_REQUIRED
+    charter_sha256: f4245d44e79e50c9fbef9173ee22e50795a08b02c027059d4abbae2aef15a0c8
+    charter_bytes: 76682
+    milestone_count: 18
+    meniscus_candidate_count: 9
+    completed_milestones: 0
+    adopted_meniscus_candidates: 0
+    daee_main_sha: c86b3c6673147b8802fe222373a165a37d4d24a8
+    daee_pr8_status: OPEN_DRAFT_NOT_MERGED_MAIN
+    daee_pr9_status: OPEN_DRAFT_NOT_MERGED_MAIN
+    fusha_qamus_implementation_status: NOT_ESTABLISHED
+    integrated_champion: NO_INTEGRATED_CHAMPION
+    meniscus: MENISCUS_NOT_REACHED
+    natural_closure: NATURAL_CLOSURE_NOT_REACHED
+derived:
+  source_tree_digest: 7a19effa4ba61e2b2090c49ba1d6b1a427a99438d0cd0d55840287f6f831aeab
+  source_tree_digest_policy: docs/project-state-inputs.yaml
+  tracked_files: 3695
+  decision_ids:
+  - '0001'
+  - '0002'
+  - '0003'
+  - '0004'
+  - '0005'
+  - '0006'
+  - '0007'
+  - 0008
+  - 0009
+  - '0010'
+  - '0011'
+  - '0012'
+  - '0013'
+  - '0014'
+  - '0015'
+  - '0016'
+  - '0017'
+  - 0018
+  - 0019
+  - '0020'
+  - '0021'
+  - '0022'
+  - '0023'
+  - '0024'
+  - '0025'
+  - '0026'
+  - '0027'
+  - 0028
+  - 0029
+  - '0030'
+  - '0031'
+  - '0032'
+  - '0033'
+  - '0034'
+  - '0035'
+  - '0036'
+  decision_count: 36
+  schemas:
+  - activation-contract-fixtures.schema.json
+  - activation-contract.schema.json
+  - analysis.schema.json
+  - candidate-overlay.schema.json
+  - candidate-topology.schema.json
+  - claim-ledger.schema.json
+  - collective-somnus-transclusion-profile.schema.json
+  - handoff.schema.json
+  - hermes-writeback-adoption-profile.schema.json
+  - inter-somnic-relation.schema.json
+  - llm-mediated-orthing-witness.schema.json
+  - meta-orthability-assessment.schema.json
+  - metaortheme.schema.json
+  - metaorthemma.schema.json
+  - orthemma.schema.json
+  - orthing-candidate-ledger.schema.json
+  - orthing-episode.schema.json
+  - orthing-event.schema.json
+  - perturbation-spec.schema.json
+  - publication-profile.schema.json
+  - reliability-spec.schema.json
+  - residual-recurrence-report.schema.json
+  - somnic-assessment.schema.json
+  - somnic-episode.schema.json
+  - somnus-candidate-inventory.schema.json
+  - somnus-claim-status.schema.json
+  - somnus-history-checkpoints.schema.json
+  - somnus-record-fixtures.schema.json
+  - somnus-run.schema.json
+  - verdict-record.schema.json
+  schema_count: 30
+  example_json_count: 9
+  example_markdown_count: 2
+  validator_scripts:
+  - audit_terminology_matching.py
+  - derive_reqpath.py
+  - validate_ar8r_codex_corpus_synthesis_v14.py
+  - validate_ar8r_external_challenges.py
+  - validate_ar8r_reconciliation.py
+  - validate_ar8r_recovery.py
+  - validate_ar8r_six_lane_v14_intake.py
+  - validate_argument_map.py
+  - validate_arxiv_source_package.py
+  - validate_candidate_provenance.py
+  - validate_candidate_state.py
+  - validate_claim_reasoning_paths.py
+  - validate_claim_sources.py
+  - validate_companion_references.py
+  - validate_corrective_transition.py
+  - validate_cross_document_consistency.py
+  - validate_cross_record_semantics.py
+  - validate_current_state.py
+  - validate_daee_crosswalk.py
+  - validate_daee_current_crosswalk.py
+  - validate_decision_dependencies.py
+  - validate_decision_references.py
+  - validate_dependency_lock.py
+  - validate_dynamic_orthing.py
+  - validate_evidence_boundary.py
+  - validate_experiment_methods.py
+  - validate_experiment_readiness.py
+  - validate_fable_r1_claim_language.py
+  - validate_internal_references.py
+  - validate_latent_state_fixtures.py
+  - validate_latex_sources.py
+  - validate_layer_map.py
+  - validate_math_source.py
+  - validate_memetic_ecology.py
+  - validate_meta_noetic_memetics.py
+  - validate_negative_fixtures.py
+  - validate_noetic_application.py
+  - validate_noetic_claims.py
+  - validate_noetic_targets.py
+  - validate_notation.py
+  - validate_pdf_math.py
+  - validate_pmr007_deep_bk_public_snapshot.py
+  - validate_pmr007_deep_bv_semantic_reissue.py
+  - validate_pmr007_deep_bw_cj_semantic_reissue.py
+  - validate_public_readiness.py
+  - validate_publication_profile.py
+  - validate_quran_loci.py
+  - validate_r7e_llm_witness.py
+  - validate_reason_fixtures.py
+  - validate_recursive_mutations.py
+  - validate_repo.py
+  - validate_review_state.py
+  - validate_schemas.py
+  - validate_semantic_operator_contract.py
+  - validate_somnic_orthing.py
+  - validate_source_status.py
+  - validate_sourcing_state.py
+  - validate_state_convergence.py
+  - validate_terminology_etymology.py
+  - validate_type_token_semantics.py
+  - validate_verdict_semantics.py
+  validator_count: 61
+  fixture_counts:
+    verdict: 7
+    reason: 8
+    claim_reasoning: 8
+    reqpath: 5
+    latent_state: 7
+    negative: 11
+    invalid_records: 48
+  pdfs:
+    dynamic-orthing-noetic-learning-orthability-draft.pdf:
+      sha256: 23f6ede49277396073752570ca8b6a9942c5aba84fa0700dd58140ae4e81c896
+      pages: 5
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+    notation-gallery.pdf:
+      sha256: ec057d86ac5f3edc37ea85c3d54ddf5d5e1f3ce7b828f4a5f615bc789692928f
+      pages: 2
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+    orthability-divine-speech-athari-draft.pdf:
+      sha256: 4affb68da10224c70d63db923397f19ca14fed242faa39e1f5dbdfe43ab28474
+      pages: 6
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+    orthability-ground-of-intelligibility-draft.pdf:
+      sha256: dc2e04ed58e581fb0cecb9fdd7619f04143d68ad5f48a7c803070f67a1d03ef3
+      pages: 8
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+    orthemic-core-reference-draft.pdf:
+      sha256: 9a9f814feb6062cf49332bb5deb4edfe31c58b9503b75395c14edd2bafba46da
+      pages: 15
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+    orthemma-ortheme-systems-draft.pdf:
+      sha256: e98bd813ce177af6f8a080f7cf5fe1786beb1b3971748717b4b2de727314fce8
+      pages: 26
+      source_commit: 1db15916a3965ccbba101969341bad4cb44ba22b
+  terminology_freeze_hashes:
+    pilot0_v1: 988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772
+    pilot0_v2: e5e65b2f1b38d5767d79103c57afee76a02e09e9fec2fd150a3a680b0fe19c3d
+  source_status_summary:
+    SECONDARY_VERIFIED: 12
+    COMPILATION_MEDIATED: 1
+    SECONDARY_RECONSTRUCTION: 2
+    PRIMARY_TEXT_EXACT: 6
+    PRIMARY_WORK_THEME: 1
+    PRIMARY_LOCUS_EDITION_DEPENDENT: 2
+    ORTHEMOLOGICAL_EXTENSION: 1

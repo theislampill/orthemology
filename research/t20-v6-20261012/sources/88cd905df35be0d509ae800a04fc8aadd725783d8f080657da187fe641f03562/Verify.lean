@@ -1,0 +1,36 @@
+import Checks
+
+#print axioms FiniteMoment.moment
+#print axioms FiniteMoment.record
+#print axioms FiniteMoment.recoveryCoefficient
+#print axioms FiniteMoment.recover
+#print axioms FiniteMoment.determinant_ne_zero
+#print axioms FiniteMoment.record_eq_vecMul
+#print axioms FiniteMoment.recover_eq_vecMul
+#print axioms FiniteMoment.recover_record
+#print axioms FiniteMoment.record_recover
+#print axioms FiniteMoment.recordLinearEquiv
+#print axioms FiniteMoment.weight_eq_sum_moments
+#print axioms FiniteMoment.weights_eq_of_moments_eq
+#print axioms FiniteMoment.record_injective
+#print axioms FiniteMoment.all_moments_eq_of_record_eq
+#print axioms FiniteMoment.observable_reconstruction
+#print axioms FiniteMoment.higher_moment_reconstruction
+#print axioms FiniteMoment.vector_observable_reconstruction
+#print axioms FiniteMoment.coordinatePolynomial
+#print axioms FiniteMoment.coordinatePolynomial_coeff
+#print axioms FiniteMoment.coordinatePolynomial_injective
+#print axioms FiniteMoment.coordinatePolynomial_eval
+#print axioms FiniteMoment.projection
+#print axioms FiniteMoment.projectionLinearMap
+#print axioms FiniteMoment.exists_separating_parameter
+#print axioms FiniteMoment.exists_separating_projection
+#print axioms FiniteMoment.exists_separating_linearMap
+#print axioms FiniteMoment.exists_projection_recovery
+#print axioms FiniteMoment.exists_injective_projected_record
+#print axioms FiniteMoment.exists_projected_observable_reconstruction
+#print axioms FiniteMoment.Checks.empty_support
+#print axioms FiniteMoment.Checks.singleton_support
+#print axioms FiniteMoment.Checks.zero_dimension_card_le_one
+#print axioms FiniteMoment.Checks.empty_zero_dimension
+#print axioms FiniteMoment.Checks.finite_field_counterexample

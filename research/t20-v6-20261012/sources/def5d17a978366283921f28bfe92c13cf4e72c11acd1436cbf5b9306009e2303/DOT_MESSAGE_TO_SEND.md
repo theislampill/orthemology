@@ -1,0 +1,9 @@
+# Paste this message to Dot (attach the compact ZIP; optionally also the full ZIP)
+
+Please **consume this as an additive parallel T20 research handoff, not a restart or substitute for your ongoing whole-corpus work**. I recovered original authored mathematical research from the 111-minute cross-front synthesis and a separate reconstructed 80-minute repair packet. Both are included *unchanged* inside the attached ZIP, with direct readable manuscript copies and fresh replay logs.
+
+Start with `DOT_START_HERE.md`, `Research_Manuscripts/Cross_Front_Theorems.md`, `Research_Manuscripts/Foundational_Synthesis.md` and `TRIAGE_AND_REVIEW.md`. The mathematical work addresses exact source-audit/likelihood transport, audit-safe correction and discretisation, explicit finite sidecars, source-dependent replay, tail budgets, and a conditional local-to-common-source bridge. The reconstruction separately fixes four proven one-shot iterator defects and identifies the missing timed-jump law in the provisional hybrid theorem.
+
+**Fresh observations:** authorial reference suite 52/52 PASS; repaired provisional suite 30/30 PASS in normal and optimised Python; the four new one-shot regressions each FAIL against the unchanged provisional code as expected; both nested authored/repair ZIPs pass CRC; the reconciled full source archive has 11,392 manifest entries byte-verified. These results do *not* prove theorem generality, refresh inherited Lean receipts, or constitute exhaustive Arabic/source reading.
+
+Please compare every contribution against your current T20 frontier, identify overlap/attribution, challenge the assumptions and counterexamples, and incorporate only independently supported gains. Do not turn packet inclusion into PASS, claims of novel priority, automatic GitHub changes, or T20 closure. Preserve prior research artifacts unchanged. Continue the active broader programme, including the affirmative foundations.

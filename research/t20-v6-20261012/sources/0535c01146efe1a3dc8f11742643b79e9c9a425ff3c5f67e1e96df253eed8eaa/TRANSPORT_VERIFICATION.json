@@ -1,0 +1,24 @@
+{
+  "status": "TRANSPORT_REASSEMBLY_PASS",
+  "parts": 8,
+  "original_bytes": 79884298,
+  "original_sha256": "866c6ff6e74a67f2bc452b49a0ada05311c0c2601585ea166404719172bd8086",
+  "negative_controls": [
+    {
+      "case": "missing",
+      "exit": 1,
+      "diagnostic": "ERROR: Missing verified part(s): 1"
+    },
+    {
+      "case": "corrupt",
+      "exit": 1,
+      "diagnostic": "ERROR: Chunk checksum failed: Orthemology_v5_20260930_Part_01_of_08.zip"
+    },
+    {
+      "case": "refuse_overwrite",
+      "exit": 1,
+      "diagnostic": "ERROR: Output already exists with different bytes; nothing was overwritten: private-locator:f29eb76837cb9e817269"
+    }
+  ],
+  "script_sha256": "378cf255bf41217db32bbc86a563bb6070be24e3ee580397857449c0e3813217"
+}

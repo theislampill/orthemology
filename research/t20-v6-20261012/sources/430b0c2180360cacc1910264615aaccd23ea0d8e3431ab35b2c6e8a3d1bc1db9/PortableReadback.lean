@@ -1,0 +1,137 @@
+import SourceIdentity
+import ProductiveCompleteness
+import IntegratedContingency
+import CompleteControl
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.SourceIdentity.Received
+#print axioms Orthemology.Tranche3.SourceIdentity.Received
+#check @Orthemology.Tranche3.SourceIdentity.Root
+#print axioms Orthemology.Tranche3.SourceIdentity.Root
+#check @Orthemology.Tranche3.SourceIdentity.Necessary
+#print axioms Orthemology.Tranche3.SourceIdentity.Necessary
+#check @Orthemology.Tranche3.SourceIdentity.UniformRoot
+#print axioms Orthemology.Tranche3.SourceIdentity.UniformRoot
+#check @Orthemology.Tranche3.SourceIdentity.GenericReception
+#print axioms Orthemology.Tranche3.SourceIdentity.GenericReception
+#check @Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation
+#print axioms Orthemology.Tranche3.SourceIdentity.ActualReceptionPreservation
+#check @Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root
+#print axioms Orthemology.Tranche3.SourceIdentity.necessary_of_actual_root
+#check @Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root
+#print axioms Orthemology.Tranche3.SourceIdentity.uniform_of_necessary_actual_root
+#check @Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception
+#print axioms Orthemology.Tranche3.SourceIdentity.uniform_of_contingent_reception
+#check @Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform
+#print axioms Orthemology.Tranche3.SourceIdentity.local_transfer_iff_uniform
+#check @Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin
+#print axioms Orthemology.Tranche3.SourceIdentity.generic_of_fixed_origin
+#check @Orthemology.Tranche3.SourceIdentity.Controls.changingDep
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.changingDep
+#check @Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.actual_preservation_does_not_give_uniform
+#check @Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.variableOrigin
+#check @Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.generic_not_fixed_origin
+#check @Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.switchingOrder
+#check @Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.generic_allows_modal_cycle
+#check @Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary
+#print axioms Orthemology.Tranche3.SourceIdentity.Controls.reception_alone_does_not_give_necessary
+#check @Orthemology.Tranche3.CompleteControl.CompatibleOutcomes
+#print axioms Orthemology.Tranche3.CompleteControl.CompatibleOutcomes
+#check @Orthemology.Tranche3.CompleteControl.Edge
+#print axioms Orthemology.Tranche3.CompleteControl.Edge
+#check @Orthemology.Tranche3.CompleteControl.Label
+#print axioms Orthemology.Tranche3.CompleteControl.Label
+#check @Orthemology.Tranche3.CompleteControl.Reachable
+#print axioms Orthemology.Tranche3.CompleteControl.Reachable
+#check @Orthemology.Tranche3.CompleteControl.Connected
+#print axioms Orthemology.Tranche3.CompleteControl.Connected
+#check @Orthemology.Tranche3.CompleteControl.equal_on_edge
+#print axioms Orthemology.Tranche3.CompleteControl.equal_on_edge
+#check @Orthemology.Tranche3.CompleteControl.equal_on_path
+#print axioms Orthemology.Tranche3.CompleteControl.equal_on_path
+#check @Orthemology.Tranche3.CompleteControl.connected_control_is_constant
+#print axioms Orthemology.Tranche3.CompleteControl.connected_control_is_constant
+#check @Orthemology.Tranche3.CompleteControl.nonconstant_requires_disconnected
+#print axioms Orthemology.Tranche3.CompleteControl.nonconstant_requires_disconnected
+#check @Orthemology.Tranche3.CompleteControl.rectangular_control_is_constant
+#print axioms Orthemology.Tranche3.CompleteControl.rectangular_control_is_constant
+#check @Orthemology.Tranche3.CompleteControl.no_conflicting_guarantees
+#print axioms Orthemology.Tranche3.CompleteControl.no_conflicting_guarantees
+#check @Orthemology.Tranche3.CompleteControl.Controls.diagonal_harmony
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.diagonal_harmony
+#check @Orthemology.Tranche3.CompleteControl.Controls.diagonal_is_disconnected
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.diagonal_is_disconnected
+#check @Orthemology.Tranche3.CompleteControl.Controls.or_is_only_one_sided
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.or_is_only_one_sided
+#check @Orthemology.Tranche3.CompleteControl.Controls.threeEdge
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.threeEdge
+#check @Orthemology.Tranche3.CompleteControl.Controls.three_edges_force_constancy
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.three_edges_force_constancy
+#check @Orthemology.Tranche3.CompleteControl.Controls.three_edge_not_rectangular
+#print axioms Orthemology.Tranche3.CompleteControl.Controls.three_edge_not_rectangular
+#check @Orthemology.Tranche3.ProductiveCompleteness.HistoryComplete
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.HistoryComplete
+#check @Orthemology.Tranche3.ProductiveCompleteness.UnborrowedActs
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.UnborrowedActs
+#check @Orthemology.Tranche3.ProductiveCompleteness.ProductiveWitness
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.ProductiveWitness
+#check @Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_history_complete
+#check @Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.uniqueness_of_universal_activity_scope
+#check @Orthemology.Tranche3.ProductiveCompleteness.Controls.endpointOnly
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.Controls.endpointOnly
+#check @Orthemology.Tranche3.ProductiveCompleteness.Controls.everyMode
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.Controls.everyMode
+#check @Orthemology.Tranche3.ProductiveCompleteness.Controls.ownMode
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.Controls.ownMode
+#check @Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure
+#print axioms Orthemology.Tranche3.ProductiveCompleteness.Controls.endpoint_sufficiency_does_not_give_history_closure
+#check @Orthemology.Tranche3.IntegratedContingency.Ex
+#print axioms Orthemology.Tranche3.IntegratedContingency.Ex
+#check @Orthemology.Tranche3.IntegratedContingency.Dep
+#print axioms Orthemology.Tranche3.IntegratedContingency.Dep
+#check @Orthemology.Tranche3.IntegratedContingency.Will
+#print axioms Orthemology.Tranche3.IntegratedContingency.Will
+#check @Orthemology.Tranche3.IntegratedContingency.Power
+#print axioms Orthemology.Tranche3.IntegratedContingency.Power
+#check @Orthemology.Tranche3.IntegratedContingency.source_with_contingent_effect
+#print axioms Orthemology.Tranche3.IntegratedContingency.source_with_contingent_effect
+#check @Orthemology.Tranche3.IntegratedContingency.Complete
+#print axioms Orthemology.Tranche3.IntegratedContingency.Complete
+#check @Orthemology.Tranche3.IntegratedContingency.Mode
+#print axioms Orthemology.Tranche3.IntegratedContingency.Mode
+#check @Orthemology.Tranche3.IntegratedContingency.Proper
+#print axioms Orthemology.Tranche3.IntegratedContingency.Proper
+#check @Orthemology.Tranche3.IntegratedContingency.Account
+#print axioms Orthemology.Tranche3.IntegratedContingency.Account
+#check @Orthemology.Tranche3.IntegratedContingency.productive_package_is_inhabited
+#print axioms Orthemology.Tranche3.IntegratedContingency.productive_package_is_inhabited
+#check @Orthemology.Tranche3.IntegratedContingency.integrated_noncollapse_witness
+#print axioms Orthemology.Tranche3.IntegratedContingency.integrated_noncollapse_witness
+#check @IndependentOrthabilityControls.closure_is_indispensable
+#print axioms IndependentOrthabilityControls.closure_is_indispensable
+#check @IndependentOrthabilityControls.unborrowed_is_indispensable
+#print axioms IndependentOrthabilityControls.unborrowed_is_indispensable
+#check @IndependentOrthabilityControls.witness_is_indispensable
+#print axioms IndependentOrthabilityControls.witness_is_indispensable
+#check @IndependentOrthabilityControls.generic_reception_is_not_necessity
+#print axioms IndependentOrthabilityControls.generic_reception_is_not_necessity
+#check @IndependentOrthabilityControls.actual_root_is_indispensable
+#print axioms IndependentOrthabilityControls.actual_root_is_indispensable
+#check @IndependentOrthabilityControls.uniform_roothood_is_not_uniqueness
+#print axioms IndependentOrthabilityControls.uniform_roothood_is_not_uniqueness
+#check @IndependentOrthabilityControls.empty_compatibility_allows_variation
+#print axioms IndependentOrthabilityControls.empty_compatibility_allows_variation
+#check @IndependentOrthabilityControls.rectangular_nonempty_is_essential
+#print axioms IndependentOrthabilityControls.rectangular_nonempty_is_essential
+#check @IndependentOrthabilityControls.model_has_actual_effect
+#print axioms IndependentOrthabilityControls.model_has_actual_effect
+#check @IndependentOrthabilityControls.power_does_not_fix_will
+#print axioms IndependentOrthabilityControls.power_does_not_fix_will

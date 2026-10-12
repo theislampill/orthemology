@@ -1,0 +1,48 @@
+{
+  "input_implementation": "fibrewise-split-correction-20261011/gaussian_step.py",
+  "scope": "Observed finite floating-point collision; does not contradict exact-real injectivity or establish a missing universal numerical guarantee.",
+  "cases": [
+    {
+      "h": 20.0,
+      "different_input_means": [
+        1,
+        2
+      ],
+      "output_mean_1": [
+        1.0
+      ],
+      "output_mean_2": [
+        1.0
+      ],
+      "output_covariance_equal": true,
+      "mean_collision": true,
+      "reaction_exponent": 2.061153622438558e-09,
+      "diffusion_matrix": [
+        [
+          2.061153622438558e-09
+        ]
+      ]
+    },
+    {
+      "h": 1000.0,
+      "different_input_means": [
+        1,
+        2
+      ],
+      "output_mean_1": [
+        1.0
+      ],
+      "output_mean_2": [
+        1.0
+      ],
+      "output_covariance_equal": true,
+      "mean_collision": true,
+      "reaction_exponent": 0.0,
+      "diffusion_matrix": [
+        [
+          0.0
+        ]
+      ]
+    }
+  ]
+}

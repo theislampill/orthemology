@@ -1,0 +1,84 @@
+{
+  "retrieved_utc": "2026-10-09T09:34:00Z",
+  "repository": "Nakammura/spinoza-ethica-lean",
+  "commit": "6d4c0461265e50a3bbedb640fe60d9ad292b50a7",
+  "files": [
+    {
+      "path": "Ethica/Pars1/Definitions.lean",
+      "blob_sha": "2517ddd3fdd159e2ce0e4dc4d5deabba1eddae72",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/Definitions.lean",
+      "local_file": "sources/Ethica__Pars1__Definitions.lean",
+      "lines": 270
+    },
+    {
+      "path": "Ethica/Pars1/Axioms.lean",
+      "blob_sha": "75d21ecdbdb2c17e265ca000283ef2266366762f",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/Axioms.lean",
+      "local_file": "sources/Ethica__Pars1__Axioms.lean",
+      "lines": 320
+    },
+    {
+      "path": "Ethica/Pars1/ModalForm.lean",
+      "blob_sha": "c60e09c1bba1317dd3ef4baeea52d9a156f8d433",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/ModalForm.lean",
+      "local_file": "sources/Ethica__Pars1__ModalForm.lean",
+      "lines": 746
+    },
+    {
+      "path": "Ethica/Pars1/Causation.lean",
+      "blob_sha": "a4c72a94548447617ae599a71b6757553b592d4e",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/Causation.lean",
+      "local_file": "sources/Ethica__Pars1__Causation.lean",
+      "lines": 222
+    },
+    {
+      "path": "Ethica/Pars1/Propositions.lean",
+      "blob_sha": "9e3b5833235f588686ffacfb98094f797e5280c3",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/Propositions.lean",
+      "local_file": "sources/Ethica__Pars1__Propositions.lean",
+      "lines": 380
+    },
+    {
+      "path": "docs/auxiliary_axioms.md",
+      "blob_sha": "37429eb5d9688e71b0c6bb974d78fc4f5c053809",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/docs/auxiliary_axioms.md",
+      "local_file": "sources/docs__auxiliary_axioms.md",
+      "lines": 960
+    },
+    {
+      "path": "papers/cluster_a_irreducibility/08_scope.md",
+      "blob_sha": "2d7129525d3fa995ea5721b028c1a54ef6ae4c17",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/papers/cluster_a_irreducibility/08_scope.md",
+      "local_file": "sources/papers__cluster_a_irreducibility__08_scope.md",
+      "lines": 228
+    },
+    {
+      "path": "lean-toolchain",
+      "blob_sha": "4f86f953fbe80954f58fdd04358ee3bbb2037f0b",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/lean-toolchain",
+      "local_file": "sources/lean-toolchain",
+      "lines": 2
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "937c24bc6d7c051c22398bc84f370ca65580b6a1",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/README.md",
+      "local_file": "sources/README.md",
+      "lines": 176
+    },
+    {
+      "path": "Ethica/Pars1/Models/Counterexamples.lean",
+      "blob_sha": "87822603c1161add600e23a0ac4919c024fabc2d",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/Ethica/Pars1/Models/Counterexamples.lean",
+      "local_file": "sources/Ethica__Pars1__Models__Counterexamples.lean",
+      "lines": 435
+    },
+    {
+      "path": "LICENSE",
+      "blob_sha": "9ab7646d2f3262fdb9be15ba6082a8df662a801e",
+      "url": "https://github.com/Nakammura/spinoza-ethica-lean/blob/6d4c0461265e50a3bbedb640fe60d9ad292b50a7/LICENSE",
+      "local_file": "sources/LICENSE",
+      "lines": 25
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+--- immutable/tools/run_formal419.py
++++ shadow/tools/run_formal419.py
+@@ -60,7 +60,7 @@
+         audit=((out/'build-P03Audit.stdout.bin').read_bytes()+(out/'build-P03Audit.stderr.bin').read_bytes()).decode(errors='replace')
+         for target in expected['targets']:
+             if f"'{target}' does not depend on any axioms" not in audit:raise RuntimeError('Missing or unexpected axiom readback '+target)
+-            if not re.search(r'(?m)^'+re.escape(target)+r'(?:\.|\{|\s|:)',audit):raise RuntimeError('Missing type readback '+target)
++            if not re.search(r'(?m)^@?'+re.escape(target)+r'(?:\.\{[^}]*\})?\s*:',audit):raise RuntimeError('Missing type readback '+target)
+         receipt['observed_theorem_targets']=len(expected['targets']);receipt['observed_axiom_readbacks']=len(expected['targets'])
+         receipt['status']='BUILD_READBACK_PASS_PENDING_INDEPENDENT_TYPE_AND_ORIGIN_REVIEW'
+         receipt['note']='Review actual #check/#print types, the restated main-type example and all model definitions. No historical identity, optional TRC or repository adoption follows.'

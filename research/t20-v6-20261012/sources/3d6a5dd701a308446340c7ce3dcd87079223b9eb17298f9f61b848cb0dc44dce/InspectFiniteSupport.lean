@@ -1,0 +1,9 @@
+import FamilyComputability
+#print P01AC.finSupport
+#print P01AC.fin
+#print P01AC.arr
+#print P01AC.theta
+#print P01AC.motiveAt
+#print SigmaCompletion.branchType
+#print RigidityInitiality.dependentStepType
+#print RigidityInitiality.sectionPoly

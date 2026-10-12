@@ -1,0 +1,44 @@
+PASS 01: proper stabilizer (2, 2), k=1
+PASS 02: proper stabilizer (2, 2, 2), k=1
+PASS 03: proper stabilizer (2, 2, 2), k=2
+PASS 04: proper stabilizer (2, 2, 2, 2), k=1
+PASS 05: proper stabilizer (2, 2, 2, 2), k=2
+PASS 06: proper stabilizer (2, 2, 2, 2), k=3
+PASS 07: proper stabilizer (2, 3), k=1
+PASS 08: proper stabilizer (2, 2, 3), k=1
+PASS 09: proper stabilizer (2, 2, 3), k=2
+PASS 10: proper stabilizer (3, 3), k=1
+PASS 11: full-order observables permit every fitness
+PASS 12: blockconstant observable space stabilizes itself
+PASS 13: mixed-block stabilizer has exactly two block indicators
+PASS 14: mixed-block mass objective closes
+PASS 15: mixed-block within-block objective fails at same record
+PASS 16: arbitrary two-bit fibre has declared means
+PASS 17: symbolic two-bit covariance
+PASS 18: generic projected fibre difference identity
+PASS 19: all-mean objective obstruction is exactly (a,b)=0
+PASS 20: mass covector gauge cancels
+PASS 21: all reference correlations share zero unary means
+PASS 22: reference cometric and inverse
+PASS 23: opposite correlation references yield opposite transverse velocities
+PASS 24: reference odds ratios distinguish the leaves
+PASS 25: finite exponential family normalizes
+PASS 26: exponential unary tilts preserve reference odds ratio
+PASS 27: partition gradient equals the mean
+PASS 28: partition Hessian and mean derivative equal covariance
+PASS 29: leaf tangent is full Fisher lift of statistic covectors
+PASS 30: induced parameter Fisher metric equals covariance
+PASS 31: leaf tangents are Fisher-orthogonal to moment fibre
+PASS 32: full fine and leaf Fisher objective gradients coincide
+PASS 33: exact mean dynamics use covariance cometric
+PASS 34: two-field rational tilt moments
+PASS 35: fixed log interaction permits changing raw cross moment
+PASS 36: exact horizontal lift attains the quotient energy
+PASS 37: single-coordinate positive likelihood preserves leaf
+PASS 38: L in unary V does not imply log L in unary V
+PASS 39: linear-objective orbit solves the exact Fisher ODE
+PASS 40: linear orbit means have the stated hyperbolic form
+PASS 41: uniform unary leaf is the product family
+PASS 42: product Legendre-dual Hessian is inverse cometric
+PASS 43: scalar stabilizer can coexist with a simplicial image cone
+All 43 exact control groups passed.

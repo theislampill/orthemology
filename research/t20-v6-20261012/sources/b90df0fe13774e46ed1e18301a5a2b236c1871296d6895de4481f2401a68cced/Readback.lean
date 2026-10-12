@@ -1,0 +1,58 @@
+import ObservedHistoryLicensing
+import AELicensedEquivalence
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.LicensedHistoryPath
+#print Orthemology.Tranche3.LicensedHistoryPath
+#print axioms Orthemology.Tranche3.LicensedHistoryPath
+#check Orthemology.Tranche3.measurableSet_licensedHistoryPath
+#print Orthemology.Tranche3.measurableSet_licensedHistoryPath
+#print axioms Orthemology.Tranche3.measurableSet_licensedHistoryPath
+#check Orthemology.Tranche3.actionCompatible_measurable
+#print Orthemology.Tranche3.actionCompatible_measurable
+#print axioms Orthemology.Tranche3.actionCompatible_measurable
+#check Orthemology.Tranche3.actionCompatible_fixed
+#print Orthemology.Tranche3.actionCompatible_fixed
+#print axioms Orthemology.Tranche3.actionCompatible_fixed
+#check Orthemology.Tranche3.rowHistory_measurable
+#print Orthemology.Tranche3.rowHistory_measurable
+#print axioms Orthemology.Tranche3.rowHistory_measurable
+#check Orthemology.Tranche3.observedTraceLaw_dirac_raw
+#print Orthemology.Tranche3.observedTraceLaw_dirac_raw
+#print axioms Orthemology.Tranche3.observedTraceLaw_dirac_raw
+#check Orthemology.Tranche3.observedTraceLaw_dirac_rows
+#print Orthemology.Tranche3.observedTraceLaw_dirac_rows
+#print axioms Orthemology.Tranche3.observedTraceLaw_dirac_rows
+#check Orthemology.Tranche3.rowHistory_marginal_formula
+#print Orthemology.Tranche3.rowHistory_marginal_formula
+#print axioms Orthemology.Tranche3.rowHistory_marginal_formula
+#check Orthemology.Tranche3.rowHistory_marginal_eq_historyPMF
+#print Orthemology.Tranche3.rowHistory_marginal_eq_historyPMF
+#print axioms Orthemology.Tranche3.rowHistory_marginal_eq_historyPMF
+#check Orthemology.Tranche3.historySupport_positive
+#print Orthemology.Tranche3.historySupport_positive
+#print axioms Orthemology.Tranche3.historySupport_positive
+#check Orthemology.Tranche3.feasible_rowHistory_positive
+#print Orthemology.Tranche3.feasible_rowHistory_positive
+#print axioms Orthemology.Tranche3.feasible_rowHistory_positive
+#check Orthemology.Tranche3.fixed_seed_ae_license_is_pointwise
+#print Orthemology.Tranche3.fixed_seed_ae_license_is_pointwise
+#print axioms Orthemology.Tranche3.fixed_seed_ae_license_is_pointwise
+#check Orthemology.Tranche3.rowHistory_actionCompatible
+#print Orthemology.Tranche3.rowHistory_actionCompatible
+#print axioms Orthemology.Tranche3.rowHistory_actionCompatible
+#check Orthemology.Tranche3.rowHistory_true_live_ae
+#print Orthemology.Tranche3.rowHistory_true_live_ae
+#print axioms Orthemology.Tranche3.rowHistory_true_live_ae
+#check Orthemology.Tranche3.pointwise_license_implies_ae_license
+#print Orthemology.Tranche3.pointwise_license_implies_ae_license
+#print axioms Orthemology.Tranche3.pointwise_license_implies_ae_license
+#check Orthemology.Tranche3.common_seed_success_and_history_event
+#print Orthemology.Tranche3.common_seed_success_and_history_event
+#print axioms Orthemology.Tranche3.common_seed_success_and_history_event
+#check Orthemology.Tranche3.ae_licensed_policy_exists_iff_recursiveWinning
+#print Orthemology.Tranche3.ae_licensed_policy_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.ae_licensed_policy_exists_iff_recursiveWinning
+#check Orthemology.Tranche3.ae_licensed_finite_budget_exists_iff_recursiveWinning
+#print Orthemology.Tranche3.ae_licensed_finite_budget_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.ae_licensed_finite_budget_exists_iff_recursiveWinning

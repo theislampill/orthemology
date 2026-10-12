@@ -1,0 +1,144 @@
+import CoverageBoundary
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.CoverageBoundary.Source
+#print Orthemology.Tranche3.CoverageBoundary.Source
+#print axioms Orthemology.Tranche3.CoverageBoundary.Source
+#check Orthemology.Tranche3.CoverageBoundary.Token
+#print Orthemology.Tranche3.CoverageBoundary.Token
+#print axioms Orthemology.Tranche3.CoverageBoundary.Token
+#check Orthemology.Tranche3.CoverageBoundary.World
+#print Orthemology.Tranche3.CoverageBoundary.World
+#print axioms Orthemology.Tranche3.CoverageBoundary.World
+#check Orthemology.Tranche3.CoverageBoundary.SourceExists
+#print Orthemology.Tranche3.CoverageBoundary.SourceExists
+#print axioms Orthemology.Tranche3.CoverageBoundary.SourceExists
+#check Orthemology.Tranche3.CoverageBoundary.actual
+#print Orthemology.Tranche3.CoverageBoundary.actual
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual
+#check Orthemology.Tranche3.CoverageBoundary.available
+#print Orthemology.Tranche3.CoverageBoundary.available
+#print axioms Orthemology.Tranche3.CoverageBoundary.available
+#check Orthemology.Tranche3.CoverageBoundary.Payload
+#print Orthemology.Tranche3.CoverageBoundary.Payload
+#print axioms Orthemology.Tranche3.CoverageBoundary.Payload
+#check Orthemology.Tranche3.CoverageBoundary.evaluationOutput
+#print Orthemology.Tranche3.CoverageBoundary.evaluationOutput
+#print axioms Orthemology.Tranche3.CoverageBoundary.evaluationOutput
+#check Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput
+#print Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput
+#print axioms Orthemology.Tranche3.CoverageBoundary.auxiliaryOutput
+#check Orthemology.Tranche3.CoverageBoundary.output
+#print Orthemology.Tranche3.CoverageBoundary.output
+#print axioms Orthemology.Tranche3.CoverageBoundary.output
+#check Orthemology.Tranche3.CoverageBoundary.ExistsToken
+#print Orthemology.Tranche3.CoverageBoundary.ExistsToken
+#print axioms Orthemology.Tranche3.CoverageBoundary.ExistsToken
+#check Orthemology.Tranche3.CoverageBoundary.Provides
+#print Orthemology.Tranche3.CoverageBoundary.Provides
+#print axioms Orthemology.Tranche3.CoverageBoundary.Provides
+#check Orthemology.Tranche3.CoverageBoundary.Complete
+#print Orthemology.Tranche3.CoverageBoundary.Complete
+#print axioms Orthemology.Tranche3.CoverageBoundary.Complete
+#check Orthemology.Tranche3.CoverageBoundary.requirements
+#print Orthemology.Tranche3.CoverageBoundary.requirements
+#print axioms Orthemology.Tranche3.CoverageBoundary.requirements
+#check Orthemology.Tranche3.CoverageBoundary.Needs
+#print Orthemology.Tranche3.CoverageBoundary.Needs
+#print axioms Orthemology.Tranche3.CoverageBoundary.Needs
+#check Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements
+#print Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements
+#print axioms Orthemology.Tranche3.CoverageBoundary.provides_iff_requirements
+#check Orthemology.Tranche3.CoverageBoundary.actual_outputs
+#print Orthemology.Tranche3.CoverageBoundary.actual_outputs
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_outputs
+#check Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct
+#print Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_evaluation_correct
+#check Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily
+#print Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily
+#print axioms Orthemology.Tranche3.CoverageBoundary.enablers_exist_necessarily
+#check Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced
+#print Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced
+#print axioms Orthemology.Tranche3.CoverageBoundary.every_actual_token_produced
+#check Orthemology.Tranche3.CoverageBoundary.local_but_not_universal
+#print Orthemology.Tranche3.CoverageBoundary.local_but_not_universal
+#print axioms Orthemology.Tranche3.CoverageBoundary.local_but_not_universal
+#check Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint
+#print Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint
+#print axioms Orthemology.Tranche3.CoverageBoundary.no_individual_complete_for_joint
+#check Orthemology.Tranche3.CoverageBoundary.no_universal_individual
+#print Orthemology.Tranche3.CoverageBoundary.no_universal_individual
+#print axioms Orthemology.Tranche3.CoverageBoundary.no_universal_individual
+#check Orthemology.Tranche3.CoverageBoundary.local_exclusive
+#print Orthemology.Tranche3.CoverageBoundary.local_exclusive
+#print axioms Orthemology.Tranche3.CoverageBoundary.local_exclusive
+#check Orthemology.Tranche3.CoverageBoundary.prerequisite_closed
+#print Orthemology.Tranche3.CoverageBoundary.prerequisite_closed
+#print axioms Orthemology.Tranche3.CoverageBoundary.prerequisite_closed
+#check Orthemology.Tranche3.CoverageBoundary.connected_hub
+#print Orthemology.Tranche3.CoverageBoundary.connected_hub
+#print axioms Orthemology.Tranche3.CoverageBoundary.connected_hub
+#check Orthemology.Tranche3.CoverageBoundary.genuine_cooperation
+#print Orthemology.Tranche3.CoverageBoundary.genuine_cooperation
+#print axioms Orthemology.Tranche3.CoverageBoundary.genuine_cooperation
+#check Orthemology.Tranche3.CoverageBoundary.effects_contingent
+#print Orthemology.Tranche3.CoverageBoundary.effects_contingent
+#print axioms Orthemology.Tranche3.CoverageBoundary.effects_contingent
+#check Orthemology.Tranche3.CoverageBoundary.Node
+#print Orthemology.Tranche3.CoverageBoundary.Node
+#print axioms Orthemology.Tranche3.CoverageBoundary.Node
+#check Orthemology.Tranche3.CoverageBoundary.NodeExists
+#print Orthemology.Tranche3.CoverageBoundary.NodeExists
+#print axioms Orthemology.Tranche3.CoverageBoundary.NodeExists
+#check Orthemology.Tranche3.CoverageBoundary.Origin
+#print Orthemology.Tranche3.CoverageBoundary.Origin
+#print axioms Orthemology.Tranche3.CoverageBoundary.Origin
+#check Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable
+#print Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable
+#print axioms Orthemology.Tranche3.CoverageBoundary.nodeExistsDecidable
+#check Orthemology.Tranche3.CoverageBoundary.originDecidable
+#print Orthemology.Tranche3.CoverageBoundary.originDecidable
+#print axioms Orthemology.Tranche3.CoverageBoundary.originDecidable
+#check Orthemology.Tranche3.CoverageBoundary.rank
+#print Orthemology.Tranche3.CoverageBoundary.rank
+#print axioms Orthemology.Tranche3.CoverageBoundary.rank
+#check Orthemology.Tranche3.CoverageBoundary.source_roots_necessary
+#print Orthemology.Tranche3.CoverageBoundary.source_roots_necessary
+#print axioms Orthemology.Tranche3.CoverageBoundary.source_roots_necessary
+#check Orthemology.Tranche3.CoverageBoundary.origin_factive
+#print Orthemology.Tranche3.CoverageBoundary.origin_factive
+#print axioms Orthemology.Tranche3.CoverageBoundary.origin_factive
+#check Orthemology.Tranche3.CoverageBoundary.origin_strict_rank
+#print Orthemology.Tranche3.CoverageBoundary.origin_strict_rank
+#print axioms Orthemology.Tranche3.CoverageBoundary.origin_strict_rank
+#check Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle
+#print Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle
+#print axioms Orthemology.Tranche3.CoverageBoundary.actual_contingent_source_principle
+#check Orthemology.Tranche3.CoverageBoundary.generic_reception_retained
+#print Orthemology.Tranche3.CoverageBoundary.generic_reception_retained
+#print axioms Orthemology.Tranche3.CoverageBoundary.generic_reception_retained
+#check Orthemology.Tranche3.CoverageBoundary.InEnvelope
+#print Orthemology.Tranche3.CoverageBoundary.InEnvelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.InEnvelope
+#check Orthemology.Tranche3.CoverageBoundary.ClosedUnder
+#print Orthemology.Tranche3.CoverageBoundary.ClosedUnder
+#print axioms Orthemology.Tranche3.CoverageBoundary.ClosedUnder
+#check Orthemology.Tranche3.CoverageBoundary.envelope_closed
+#print Orthemology.Tranche3.CoverageBoundary.envelope_closed
+#print axioms Orthemology.Tranche3.CoverageBoundary.envelope_closed
+#check Orthemology.Tranche3.CoverageBoundary.envelope_least
+#print Orthemology.Tranche3.CoverageBoundary.envelope_least
+#print axioms Orthemology.Tranche3.CoverageBoundary.envelope_least
+#check Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope
+#print Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.universal_propagation_iff_envelope
+#check Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope
+#print Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope
+#print axioms Orthemology.Tranche3.CoverageBoundary.complete_on_field_of_envelope
+#check Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only
+#print Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only
+#print axioms Orthemology.Tranche3.CoverageBoundary.seed_evaluation_envelope_only
+#check Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope
+#print Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope
+#print axioms Orthemology.Tranche3.CoverageBoundary.connected_does_not_give_prerequisite_scope

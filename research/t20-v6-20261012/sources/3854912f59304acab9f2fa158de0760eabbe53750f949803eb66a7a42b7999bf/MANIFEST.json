@@ -1,0 +1,106 @@
+{
+  "date_utc": "2026-10-11",
+  "status": "Bounded candidate T20 application; no independent review or closure claimed.",
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "bytes": 1631,
+      "sha256": "c4647ae2e940e17e2dfbd61978ea874c0474a3fe24258ea9257b743de73486df"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1164,
+      "sha256": "74b47c8711bc1a3085411765a7d94f744e07d54c3ed372ac1f3ee1c8d10719f1"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 13512,
+      "sha256": "6db62237484ab7e2c19272aeb615cea47e6f01ac382486f8cebdfeb92a7a7906"
+    },
+    {
+      "path": "SOURCE_READS.json",
+      "bytes": 2523,
+      "sha256": "80b410dd06b55a18a6a099ec74d0036293f24e19c70681e3665119970fbd22b0"
+    },
+    {
+      "path": "inputs/AUDIT_CONTINUATION_RESULT.md",
+      "bytes": 24610,
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc"
+    },
+    {
+      "path": "inputs/GUIDE_DOMAIN_REPORT.md",
+      "bytes": 12175,
+      "sha256": "744b525a8b582e7d99f17ebf7457a3b2f3af91f8df0921b45a286ba20366f87c"
+    },
+    {
+      "path": "inputs/H_CONTINUATION_SOURCE.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.html",
+      "bytes": 219311,
+      "sha256": "5fdbf799a933317413208d9269e95831cf31efa30a4db271b8ac4a555466de9f"
+    },
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.html.txt",
+      "bytes": 97372,
+      "sha256": "d73782538bb41bdb1a83155a4cdac020ef1dc892e74374d08f4d3b31d69f1e66"
+    },
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.pdf",
+      "bytes": 429766,
+      "sha256": "b2511e841cde1461e4524c826c1fcbc71b788d2537b4f0f2b5e76c705cc13857"
+    },
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.txt",
+      "bytes": 99373,
+      "sha256": "8a13f9058021b05c95d20367905f55fd4a42f3e3b86fbb9c012f46c07c9ccae8"
+    },
+    {
+      "path": "sources/rendered/page-08.png",
+      "bytes": 379067,
+      "sha256": "1f528c069f9cc6acf2f50481a7212c0edc890f0e5cea6b8438c0103639ad2134"
+    },
+    {
+      "path": "sources/rendered/page-09.png",
+      "bytes": 419137,
+      "sha256": "0c0afd039ca8fbbb77341926b1401b6e7b1614c1c79204f10acd9f40001485b2"
+    },
+    {
+      "path": "sources/rendered/page-14.png",
+      "bytes": 419914,
+      "sha256": "6de4a127748bf2e4d3604aae9c7cb9ce7d5f5651aec6bc400de6bc0e5a2242a1"
+    },
+    {
+      "path": "sources/rendered/page-18.png",
+      "bytes": 357179,
+      "sha256": "373fe004c981bbdc308e4f8010138ea3cf8d0dd0677013d5f0bcef669ccaac61"
+    },
+    {
+      "path": "sources/rendered/page-19.png",
+      "bytes": 403809,
+      "sha256": "f046745b97ce9c5dbedf89e4ce3e1c7e8fb51a3db5db5dec35264a2d10707a21"
+    },
+    {
+      "path": "sources/rendered/page-20.png",
+      "bytes": 448748,
+      "sha256": "aec0113b882f1de1d7a896e28ed8dc30d8092314582454183c39490f59278e70"
+    },
+    {
+      "path": "sources/rendered/page-23.png",
+      "bytes": 373964,
+      "sha256": "2b74f19e0cb50a7a38f0ed57372b6ba33ab0c9c64ad321286666665f1a8c6bb8"
+    },
+    {
+      "path": "verification.txt",
+      "bytes": 1631,
+      "sha256": "c4647ae2e940e17e2dfbd61978ea874c0474a3fe24258ea9257b743de73486df"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 5797,
+      "sha256": "6b34d82f0fa079916765a99b30df6c7a64bb173c6036eff9b6f54729abd83ade"
+    }
+  ]
+}

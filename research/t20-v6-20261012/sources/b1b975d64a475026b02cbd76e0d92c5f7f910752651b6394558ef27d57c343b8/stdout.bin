@@ -1,0 +1,51 @@
+{
+  "serial": {
+    "histories": 4680,
+    "transitions": 18056,
+    "alphabet": [
+      "admit",
+      "dispatch",
+      "disable",
+      "enable",
+      "require",
+      "remove",
+      "model",
+      "revalidate"
+    ],
+    "max_length": 4,
+    "outcomes": {
+      "success": 14589,
+      "refusal": 3467
+    },
+    "mismatches": 0,
+    "oracle": "independently written complete-state fragment equations; controlled nonces, no statistical randomness claim"
+  },
+  "faults": {
+    "operations": 14,
+    "injected_prefixes": 534,
+    "bad_state_changes": 0,
+    "scope": "Every operational.py line event along each of 14 chosen successful call paths, not every opcode or all inputs."
+  },
+  "concurrent": {
+    "forced_actual_thread_histories": 6,
+    "mismatches": 0,
+    "fairness_or_all_schedule_claim": false
+  },
+  "files": [
+    {
+      "path": "actual_concurrent_histories.json",
+      "bytes": 3564,
+      "sha256": "44261b7169733cd1999fe163dd1695cfda2c3a9d43b88f2b3dd3fcb051d62541"
+    },
+    {
+      "path": "fault_prefixes.json",
+      "bytes": 104755,
+      "sha256": "a0a77b06d94c5d69ff54133eda978153d29be8ca512c4d22e990961f4903e43b"
+    },
+    {
+      "path": "serial_histories.jsonl",
+      "bytes": 1669325,
+      "sha256": "1db23e2071fc6e914fb4dbb69bc0b78f809f6679023142d2053aa0c324a02f02"
+    }
+  ]
+}

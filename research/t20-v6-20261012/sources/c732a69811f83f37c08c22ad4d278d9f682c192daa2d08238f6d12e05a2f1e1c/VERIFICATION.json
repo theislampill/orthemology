@@ -1,0 +1,16 @@
+{
+  "source_acquisition_checks": [
+    {
+      "path": "sufficient-reasons-contrast-20261010/sources/shifa-edited.doc",
+      "hash_matches": true
+    },
+    {
+      "path": "sufficient-reasons-contrast-20261010/sources/shifa-edited-volume2.pdf",
+      "hash_matches": true
+    }
+  ],
+  "all_three_selected_ranges_literal_in_declared_transformation": true,
+  "180_188_inherited_selection_matches_ignoring_only_outer_whitespace": true,
+  "historical_notes_source_store_hashes_match": true,
+  "claim": "Custody/extraction verification only;not independent philosophical review"
+}

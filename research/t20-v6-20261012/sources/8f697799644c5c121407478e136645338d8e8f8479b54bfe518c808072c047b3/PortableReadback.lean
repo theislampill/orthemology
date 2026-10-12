@@ -1,0 +1,65 @@
+import PolynomialAND
+import ANDCorrection
+import ANDScore
+import ANDRepair
+import ANDPotentialBinding
+import FiniteHullWeights
+import ANDIntrinsic
+import IsolatedObstruction
+import AuditReadback
+import IndependentReadback
+import AuditControls
+set_option pp.universes true
+set_option pp.explicit true
+#check @ANDRepair.universal_strict_repair
+#print axioms ANDRepair.universal_strict_repair
+#check @ANDPotentialBinding.universal_Bregman_repair
+#print axioms ANDPotentialBinding.universal_Bregman_repair
+#check @ANDPotentialBinding.potential_hasFDerivAt
+#print axioms ANDPotentialBinding.potential_hasFDerivAt
+#check @ANDIntrinsic.intrinsic_universal_Bregman_repair
+#print axioms ANDIntrinsic.intrinsic_universal_Bregman_repair
+#check @IsolatedObstruction.no_isolated_common_repair
+#print axioms IsolatedObstruction.no_isolated_common_repair
+#check @ANDPotentialBinding.coordF_deriv
+#print axioms ANDPotentialBinding.coordF_deriv
+#check @ANDPotentialBinding.coordDF_deriv
+#print axioms ANDPotentialBinding.coordDF_deriv
+#check @ANDPotentialBinding.common_hessian_normal
+#print axioms ANDPotentialBinding.common_hessian_normal
+#check @ANDPotentialBinding.potentialF_contDiff
+#print axioms ANDPotentialBinding.potentialF_contDiff
+#check @IsolatedObstruction.no_isolated_all_state_repair
+#print axioms IsolatedObstruction.no_isolated_all_state_repair
+#check @IsolatedObstruction.isolated_slope_violation
+#print axioms IsolatedObstruction.isolated_slope_violation
+#check @ANDIntrinsic.transverse_iff
+#print axioms ANDIntrinsic.transverse_iff
+#check @PolynomialAND.certificateP_lower
+#print axioms PolynomialAND.certificateP_lower
+#check @ANDCorrection.all_leading_positive
+#print axioms ANDCorrection.all_leading_positive
+#check @ANDScore.g_gain_identity
+#print axioms ANDScore.g_gain_identity
+#check @ANDScore.f_gain_identity
+#print axioms ANDScore.f_gain_identity
+#check @ANDScore.hull_of_inequalities
+#print axioms ANDScore.hull_of_inequalities
+#check @ANDPotentialBinding.coordF_curvature_positive
+#print axioms ANDPotentialBinding.coordF_curvature_positive
+#check @ANDPotentialBinding.scoreF_is_actual_Bregman
+#print axioms ANDPotentialBinding.scoreF_is_actual_Bregman
+#check @ANDPotentialBinding.scoreG_is_actual_Bregman
+#print axioms ANDPotentialBinding.scoreG_is_actual_Bregman
+#check @FiniteHullWeights.intrinsicInterior_positive_barycentric
+#print axioms FiniteHullWeights.intrinsicInterior_positive_barycentric
+#check @PolynomialANDAudit.full_success_with_projected_failure
+#print axioms PolynomialANDAudit.full_success_with_projected_failure
+#check @PolynomialANDAudit.transverse_baseline_outside
+#print axioms PolynomialANDAudit.transverse_baseline_outside
+#check @PolynomialANDAudit.tangent_not_strict
+#print axioms PolynomialANDAudit.tangent_not_strict
+#check @PolynomialANDAudit.natural_truth_binding
+#print axioms PolynomialANDAudit.natural_truth_binding
+#check @PolynomialANDAudit.psi_strictConvex
+#print axioms PolynomialANDAudit.psi_strictConvex

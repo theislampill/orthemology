@@ -1,0 +1,22 @@
+{
+  "schema": "orthemology-stage3-resolution-record-v1",
+  "utc": "2026-09-13T02:51:18.579817+00:00",
+  "resolved_in_authored_candidate": [
+    "pure-profile qualification",
+    "perturbation and positive-reversible-law qualifiers",
+    "typed-target patch specification including its accompanying gloss",
+    "fixed-target versus future-query quantifiers",
+    "full authored-candidate byte freeze"
+  ],
+  "still_open": [
+    "full semantic source coverage",
+    "original recovery verifier/source receipt reconciliation",
+    "actual modal helper repair receipt reconciliation",
+    "full frontier and primary-prior-art comparison",
+    "physical bridge and empirical utility",
+    "required independent specialist review",
+    "assistant readback of current tool-returned bodies"
+  ],
+  "resolution_not_equivalent_to_certification": true,
+  "overall_gate": "OPEN_NOT_APPROVED"
+}

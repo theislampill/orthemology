@@ -1,0 +1,3207 @@
+{
+  "models": [
+    {
+      "id": "VCT-A2-POSITIVE",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": true,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": []
+      }
+    },
+    {
+      "id": "VCT-A2-EVIDENCE-CONTRACT-DRIFT",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": false,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "reason_evidence"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-TARGET-CONTRACT-OMISSION",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission",
+              "new-target-obligation"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission",
+              "new-target-obligation"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": false,
+            "target_coverage": false,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "reason_evidence"
+          ],
+          [
+            2,
+            "target_coverage"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-AUTHORITY-ABSENT",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": false,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "authority"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-REDELEGATION-ABSENT",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": false,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "redelegation"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-VERSION-EPOCH-CHANGE",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 8,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": false,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": false,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            1,
+            "version_currentness"
+          ],
+          [
+            2,
+            "version_currentness"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-INVALIDATOR-OPEN",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {
+            "C": [
+              "source-retracted"
+            ]
+          },
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": false,
+            "semantic_square": true,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "invalidators"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-SEMANTIC-NONCOMMUTATION",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              1,
+              0
+            ],
+            "new_root_evidence": "independent-root-B"
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": false,
+            "root_custody": true
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "semantic_square"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    },
+    {
+      "id": "VCT-A2-NEW-ROOT-WITHOUT-WITNESS",
+      "model": {
+        "frames": [
+          {
+            "id": "A",
+            "version": 1,
+            "root": "ROOT-A",
+            "claim": "claim-1",
+            "nodes": [
+              "A0",
+              "A1"
+            ],
+            "edges": [
+              [
+                "A0",
+                "A1"
+              ]
+            ],
+            "rank": {
+              "A0": 0,
+              "A1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-1",
+              "reason-valid": "reason-valid/contract-1"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "B",
+            "version": 2,
+            "root": "ROOT-A",
+            "claim": "claim-2",
+            "nodes": [
+              "B0",
+              "B1"
+            ],
+            "edges": [
+              [
+                "B0",
+                "B1"
+              ]
+            ],
+            "rank": {
+              "B0": 0,
+              "B1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-2",
+              "reason-valid": "reason-valid/contract-2",
+              "version-valid": "version-valid/contract-2"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          },
+          {
+            "id": "C",
+            "version": 3,
+            "root": "ROOT-B",
+            "claim": "claim-3",
+            "nodes": [
+              "C0",
+              "C1"
+            ],
+            "edges": [
+              [
+                "C0",
+                "C1"
+              ]
+            ],
+            "rank": {
+              "C0": 0,
+              "C1": 1
+            },
+            "required": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "discharged": [
+              "source-auth",
+              "reason-valid",
+              "version-valid",
+              "permission"
+            ],
+            "expected_evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "evidence": {
+              "source-auth": "source-auth/contract-3",
+              "reason-valid": "reason-valid/contract-3",
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "meaning": [
+              false,
+              true
+            ]
+          }
+        ],
+        "hops": [
+          {
+            "input_frame": {
+              "id": "A",
+              "version": 1,
+              "root": "ROOT-A",
+              "claim": "claim-1",
+              "nodes": [
+                "A0",
+                "A1"
+              ],
+              "edges": [
+                [
+                  "A0",
+                  "A1"
+                ]
+              ],
+              "rank": {
+                "A0": 0,
+                "A1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-1",
+                "reason-valid": "reason-valid/contract-1"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "A0": "B0",
+              "A1": "B1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-1": "source-auth/contract-2"
+              },
+              "reason-valid": {
+                "reason-valid/contract-1": "reason-valid/contract-2"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-2"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          },
+          {
+            "input_frame": {
+              "id": "B",
+              "version": 2,
+              "root": "ROOT-A",
+              "claim": "claim-2",
+              "nodes": [
+                "B0",
+                "B1"
+              ],
+              "edges": [
+                [
+                  "B0",
+                  "B1"
+                ]
+              ],
+              "rank": {
+                "B0": 0,
+                "B1": 1
+              },
+              "required": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "discharged": [
+                "source-auth",
+                "reason-valid",
+                "version-valid"
+              ],
+              "expected_evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "evidence": {
+                "source-auth": "source-auth/contract-2",
+                "reason-valid": "reason-valid/contract-2",
+                "version-valid": "version-valid/contract-2"
+              },
+              "meaning": [
+                false,
+                true
+              ]
+            },
+            "map": {
+              "B0": "C0",
+              "B1": "C1"
+            },
+            "preserved": [
+              "source-auth",
+              "reason-valid"
+            ],
+            "revalidated": [
+              "version-valid",
+              "permission"
+            ],
+            "carry": {
+              "source-auth": {
+                "source-auth/contract-2": "source-auth/contract-3"
+              },
+              "reason-valid": {
+                "reason-valid/contract-2": "reason-valid/contract-3"
+              }
+            },
+            "fresh": {
+              "version-valid": "version-valid/contract-3",
+              "permission": "permission/contract-3"
+            },
+            "world_map": [
+              0,
+              1
+            ],
+            "new_root_evidence": null
+          }
+        ],
+        "policy": {
+          "epoch": 7,
+          "compatible_versions": {
+            "7": [
+              1,
+              2,
+              3
+            ],
+            "8": [
+              4
+            ]
+          },
+          "authority": [
+            [
+              "A",
+              "B"
+            ],
+            [
+              "B",
+              "C"
+            ]
+          ],
+          "redelegable": [
+            "B"
+          ],
+          "invalidators": {},
+          "independent_root_tokens": {
+            "ROOT-B": "independent-root-B"
+          }
+        }
+      },
+      "result": {
+        "accepted": false,
+        "guard_rows": [
+          {
+            "initial_evidence_sound": true,
+            "initial_DAG": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": true
+          },
+          {
+            "exact_boundary": true,
+            "graph_DAG_and_domain": true,
+            "reason_evidence": true,
+            "target_coverage": true,
+            "authority": true,
+            "redelegation": true,
+            "version_currentness": true,
+            "invalidators": true,
+            "semantic_square": true,
+            "root_custody": false
+          }
+        ],
+        "failed_coordinates": [
+          [
+            2,
+            "root_custody"
+          ]
+        ]
+      },
+      "scope": "finite declared-contract guard-deletion/alteration model; no new historical theorem credit"
+    }
+  ],
+  "shortcut_countermodel": {
+    "path_accepted": true,
+    "direct_A_C_authority": false,
+    "initial_final_root_equal": false,
+    "reason": "Per-hop authority plus intermediate redelegation yields an authorised PATH. A separately witnessed independent root can legitimately change the final root. Neither direct authority transitivity nor root equality is an unconditional conclusion."
+  }
+}

@@ -1,0 +1,23 @@
+"""Initial missing-feature baseline, retained only by red-stage source snapshot."""
+from dataclasses import dataclass
+from fractions import Fraction as F
+from pathlib import Path
+import importlib.util
+import sys
+sys.dont_write_bytecode=True
+WORK=Path(__file__).resolve().parents[2]
+BASE=Path(__file__).resolve().parent/'inherited'
+def load(name,path):
+    spec=importlib.util.spec_from_file_location(name,path); mod=importlib.util.module_from_spec(spec)
+    sys.modules[name]=mod; spec.loader.exec_module(mod); return mod
+g=load('proof_inquiry_inherited',BASE/'guarded-shared-dag-attainment-20261009/guarded_dag.py')
+@dataclass(frozen=True)
+class Node:
+    rule: object
+    children: tuple
+
+def cached_optimum(J,E,R,target,inventory,cache):
+    return F(12),None
+
+def active_cache(cache,rules,inventory):
+    return cache

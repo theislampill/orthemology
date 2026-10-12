@@ -1,0 +1,37 @@
+import RecurrenceControls
+#check @RecurrenceAudit.constant_recurrence
+#print axioms RecurrenceAudit.constant_recurrence
+#check @RecurrenceAudit.constant_support
+#print axioms RecurrenceAudit.constant_support
+#check @RecurrenceAudit.infinite_alphabet_no_recurrence
+#print axioms RecurrenceAudit.infinite_alphabet_no_recurrence
+#check @RecurrenceAudit.delayed_eventually_true
+#print axioms RecurrenceAudit.delayed_eventually_true
+#check @RecurrenceAudit.delayed_support
+#print axioms RecurrenceAudit.delayed_support
+#check @RecurrenceAudit.no_uniform_tail_time
+#print axioms RecurrenceAudit.no_uniform_tail_time
+#check @RecurrenceAudit.selected_support_is_nonempty
+#print axioms RecurrenceAudit.selected_support_is_nonempty
+#check @RecurrenceAudit.superset_tail_does_not_certify_all_actions
+#print axioms RecurrenceAudit.superset_tail_does_not_certify_all_actions
+#check @RecurrenceAudit.exact_false_event
+#print axioms RecurrenceAudit.exact_false_event
+#check @RecurrenceAudit.false_tail_event
+#print axioms RecurrenceAudit.false_tail_event
+#check @RecurrenceAudit.true_law_null_false_event
+#print axioms RecurrenceAudit.true_law_null_false_event
+#check @RecurrenceAudit.false_law_positive_tail
+#print axioms RecurrenceAudit.false_law_positive_tail
+#check @RecurrenceAudit.true_law_null_tail
+#print axioms RecurrenceAudit.true_law_null_tail
+#check @RecurrenceAudit.modelwise_success
+#print axioms RecurrenceAudit.modelwise_success
+#check @RecurrenceAudit.no_common_nonempty_support
+#print axioms RecurrenceAudit.no_common_nonempty_support
+#check @RecurrenceAudit.positive_transfer_is_substantive
+#print axioms RecurrenceAudit.positive_transfer_is_substantive
+#check @RecurrenceAudit.zero_measure_has_no_positive_cell
+#print axioms RecurrenceAudit.zero_measure_has_no_positive_cell
+#check @RecurrenceAudit.nonempty_event_can_be_null
+#print axioms RecurrenceAudit.nonempty_event_can_be_null

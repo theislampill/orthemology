@@ -1,0 +1,11 @@
+# Computable positive hierarchy and negative certificates
+
+This computational follow-on proves uniform computability of the particular spurious hierarchy's coordinates in grade and named nonnegative safe time, using explicit Gaussian tails, compact integration and the computable infinite-product mass. It also specifies a sound terminating dovetailed search for a finite integer-polynomial negative certificate at each positive safe rational time. That general search is mathematically justified but not implemented or executed here; no runtime or detecting-degree bound is supplied.
+
+One fixed witness is executed: t=1/10, p(x)=1−17x/50. Outward interval rectangles enclose the whole compact integrand range, with analytic Gaussian-tail and infinite-product remainder bounds. A strictly negative upper bound for the unnormalized quadratic form, together with positive D(t), certifies failure of the degree-one unshifted Hankel condition. The absence of a uniform fixed detecting degree near zero remains compatible with this single certificate.
+
+Python and mpmath 1.3.0 interval elementary arithmetic are trusted computational components. This is not verified-kernel arithmetic or a universal extraction implementation. explore_candidate.py uses unverified high-precision quadrature to propose a candidate and is explicitly excluded from certification credit. Independent review and successful controls remain separate from exploratory or failed preliminary enclosures.
+
+The determinate-initial theorem, diagnostic and prior packets remain frozen. Their source theorems are retained assumptions and ancestry, not independently established by interval arithmetic. Fresh extraction replays only accepted fixed certificate scripts and compares exact output with the frozen successful logs; no source downloads, installation or baseline rebuild occurs.
+
+The external receipt records actual successful run counts, bound originals and ancestry, twenty-four previous archives and five custody guards. Run `python verify_replay.py --expected-manifest-sha256 <external-receipt-pin> --output <new-output-directory> --replay` from the extracted packet. This preservation adds no independent review, protected changes, upload, integration or closure.

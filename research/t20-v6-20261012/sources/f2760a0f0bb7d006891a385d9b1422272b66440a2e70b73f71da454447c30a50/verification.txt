@@ -1,0 +1,21 @@
+PASS: complex Gaussian exponent separates into amplitude and phase
+PASS: sine perturbation vanishes at every integer moment
+PASS: normalization control n=0
+PASS: strict positivity for selected epsilon=+/-1/2
+PASS: right mean jets orders 0 through 5 match independent quotient recurrence
+PASS: mass equation closes exactly
+PASS: first mean derivative is negative variance
+PASS: second mean derivative is third cumulant
+PASS: initial Fisher squared norm is exp(2)-exp(1)
+PASS: grade 1 contraction has no slot-count multiplier
+PASS: grade 2 contraction has no slot-count multiplier
+PASS: grade 3 contraction has no slot-count multiplier
+PASS: grade 4 contraction has no slot-count multiplier
+PASS: compact finite-law control cutoff 0: equal retained tensors, distinct next grade
+PASS: compact finite-law control cutoff 1: equal retained tensors, distinct next grade
+PASS: compact finite-law control cutoff 2: equal retained tensors, distinct next grade
+PASS: compact finite-law control cutoff 3: equal retained tensors, distinct next grade
+PASS: compact finite-law control cutoff 4: equal retained tensors, distinct next grade
+PASS: compact finite-law control cutoff 5: equal retained tensors, distinct next grade
+PASS: 19 exact control groups. No numerical quadrature used.
+Scope: these checks support algebra only; domination, analyticity, determinacy, and interval separation rely on ordinary proofs.

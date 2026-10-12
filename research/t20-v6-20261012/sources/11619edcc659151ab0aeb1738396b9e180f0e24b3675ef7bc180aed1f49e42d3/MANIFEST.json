@@ -1,0 +1,13 @@
+{
+  "ENVIRONMENT.json": "f90a5d81f331be02bf1b6e873fea3b8061a43a5ec64481d1e7ab7ff1062b426a",
+  "README.md": "437b9987fe65e280e46dc344b64f526d2ed533f76f3b0abb6eeaa99da08d675c",
+  "SOURCE_PROVENANCE.json": "f17ac27d83b56bab4162aa9d1c7a455f41bedd622b0e71b64cdf01523937fbd1",
+  "reference/PD_EXPTIME_HARDNESS_CANDIDATE.md": "2954b8a6818e43bbfde31c3440223dfe5d7fe72476fa4b7847dcf10f47b4182d",
+  "replay.py": "1e1784a024a1d18c29c8775f89dece3e945eb9c99f567e5d81e3090f9d4b8883",
+  "src/CheckerControls.lean": "2c1e55ed843ac11bac8e248ad1cf174dbf7e771e470bb135a7daebc693f6d158",
+  "src/CheckerKernel.lean": "074270a22703df806c0615cb6ed17ad90de60e37a9d7e6dcefdcd2695e5a696c",
+  "src/CheckerSemantics.lean": "29a4ea62c379d872aa1821740e61605d74f43aec69017b8cc945c5fa712d6e80",
+  "src/CheckerStateObservation.lean": "71bf2c2dc8ab5adabe54a9e0fa2d393408a5f54cc6cd2907f4cefca85d6babb1",
+  "src/HonestCheckerStep.lean": "77a6d3e711c26a58a482d31df0847df2f30bb8fb3a3d845d99fd633c3752fba3",
+  "src/InitialCheckerBelief.lean": "9dcb8abe7dae57e48678b3865acf960c608e645acb87f196fa013987657967a9"
+}

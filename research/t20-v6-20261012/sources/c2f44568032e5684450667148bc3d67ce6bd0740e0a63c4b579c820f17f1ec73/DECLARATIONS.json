@@ -1,0 +1,31 @@
+{
+  "theorems": [
+    "fixed_solo_excludes_indispensable_peer",
+    "joint_and_solo_exact_additive",
+    "two_fixed_solos_exact_additive",
+    "every_eligible_target_has_command",
+    "every_nat_vector_constructive",
+    "concentrate_additive_power_for_same_bearer",
+    "equal_capacities",
+    "actual_additive_joint",
+    "actual_additive_fixed_solo_failure",
+    "actual_additive_positive_commands",
+    "each_already_has_profile_union",
+    "no_missing_union_capacity",
+    "rectangular_control_incompatible_targets",
+    "concordant_all_targets",
+    "saturation_cannot_force_false",
+    "saturation_fixed_actual_determination",
+    "saturation_no_actual_indispensability",
+    "emitted_token_cnd",
+    "neither_owns_entire_emission_process",
+    "duplicate_ownership_rejected",
+    "outcome_guarantee_does_not_imply_entire_emission_provenance",
+    "sufficient_as_entire_breaks_whole_target_cnd",
+    "entire_same_respect_excludes_two"
+  ],
+  "count": 23,
+  "axiom_readback": "receipts/lean-readback-final.log",
+  "custom_metaphysical_axioms": [],
+  "sorry_or_admit": false
+}

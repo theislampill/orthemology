@@ -1,0 +1,27 @@
+import EmpiricalEndpointLaw
+set_option pp.universes true
+set_option pp.explicit true
+#check Orthemology.Tranche3.EndpointBridge.endpointWeight
+#print Orthemology.Tranche3.EndpointBridge.endpointWeight
+#print axioms Orthemology.Tranche3.EndpointBridge.endpointWeight
+#check Orthemology.Tranche3.EndpointBridge.endpointWeight_nonneg
+#print Orthemology.Tranche3.EndpointBridge.endpointWeight_nonneg
+#print axioms Orthemology.Tranche3.EndpointBridge.endpointWeight_nonneg
+#check Orthemology.Tranche3.EndpointBridge.endpointWeight_le_one
+#print Orthemology.Tranche3.EndpointBridge.endpointWeight_le_one
+#print axioms Orthemology.Tranche3.EndpointBridge.endpointWeight_le_one
+#check Orthemology.Tranche3.EndpointBridge.sourceCoin_endpoint
+#print Orthemology.Tranche3.EndpointBridge.sourceCoin_endpoint
+#print axioms Orthemology.Tranche3.EndpointBridge.sourceCoin_endpoint
+#check Orthemology.Tranche3.EndpointBridge.auditSource_endpoint_constant
+#print Orthemology.Tranche3.EndpointBridge.auditSource_endpoint_constant
+#print axioms Orthemology.Tranche3.EndpointBridge.auditSource_endpoint_constant
+#check Orthemology.Tranche3.EndpointBridge.observedPrefix_constant
+#print Orthemology.Tranche3.EndpointBridge.observedPrefix_constant
+#print axioms Orthemology.Tranche3.EndpointBridge.observedPrefix_constant
+#check Orthemology.Tranche3.EndpointBridge.endpoint_empirical_all_time_weak_repair
+#print Orthemology.Tranche3.EndpointBridge.endpoint_empirical_all_time_weak_repair
+#print axioms Orthemology.Tranche3.EndpointBridge.endpoint_empirical_all_time_weak_repair
+#check Orthemology.Tranche3.EndpointBridge.endpoint_empirical_expected_failure_zero
+#print Orthemology.Tranche3.EndpointBridge.endpoint_empirical_expected_failure_zero
+#print axioms Orthemology.Tranche3.EndpointBridge.endpoint_empirical_expected_failure_zero

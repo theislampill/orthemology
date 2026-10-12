@@ -1,0 +1,108 @@
+{
+  "status": "RESEARCH_LOCAL_NOT_CANONICAL",
+  "nodes": [
+    {
+      "id": "BASE",
+      "assumptions": [
+        "fixed carriers and descriptive interpretations",
+        "disclosed mixed extraction if present"
+      ],
+      "claim": "shared reduct is well typed"
+    },
+    {
+      "id": "BRIDGE",
+      "depends_on": [
+        "BASE"
+      ],
+      "assumptions": [
+        "declared orientations",
+        "positive linear two-criterion aggregation",
+        "supplied rational interval and admissibility rationale"
+      ],
+      "claim": "specified nontrivial extension class, without substantive authority credit"
+    },
+    {
+      "id": "RELATIVE",
+      "depends_on": [
+        "BRIDGE"
+      ],
+      "assumptions": [
+        "classical bivalent semantics",
+        "complete designated extension class"
+      ],
+      "claim": "nonentailment of target and negation iff true/false witnesses"
+    },
+    {
+      "id": "SIGN_CELLS",
+      "depends_on": [
+        "BRIDGE"
+      ],
+      "assumptions": [
+        "rational affine atoms",
+        "finite closed Boolean grammar",
+        "all in-interval roots and boundary points retained"
+      ],
+      "claim": "finite representatives decide all target truth values on the continuous interval"
+    },
+    {
+      "id": "CHECKER",
+      "depends_on": [
+        "SIGN_CELLS"
+      ],
+      "assumptions": [
+        "Python exact Fraction/JSON behavior",
+        "checked source implementation",
+        "bound inputs and declared kinds"
+      ],
+      "claim": "recomputed relative verdict; no semantic partition or normative authority certification"
+    },
+    {
+      "id": "ASCENT",
+      "assumptions": [
+        "finite nonempty state set",
+        "strict increase outside argmax",
+        "argmax forward closure"
+      ],
+      "claim": "bounded entry and persistence"
+    },
+    {
+      "id": "FIX_MAX",
+      "depends_on": [
+        "ASCENT"
+      ],
+      "assumptions": [
+        "every maximum fixed pointwise"
+      ],
+      "claim": "fixed points equal maxima"
+    },
+    {
+      "id": "CANONICAL",
+      "assumptions": [
+        "specified signature without distinguished labels",
+        "base-preserving symmetry",
+        "equivariant single-candidate selector demanded"
+      ],
+      "claim": "no selector at a fixed-point-free candidate symmetry; tied/set-valued enrichment may exist"
+    },
+    {
+      "id": "SUFFICIENCY",
+      "assumptions": [
+        "specified projection and target"
+      ],
+      "claim": "factorization on projection image iff fibre constancy; standard owner ancestry"
+    },
+    {
+      "id": "METAETHICAL",
+      "depends_on": [
+        "RELATIVE"
+      ],
+      "status": "NOT_DERIVED",
+      "additional_obligations": [
+        "independent metaphysical admissibility",
+        "adequate descriptive/normative partition",
+        "substantive bridge warrant"
+      ],
+      "claim": "no global Hume/anti-naturalism/supervenience theorem follows"
+    }
+  ]
+}

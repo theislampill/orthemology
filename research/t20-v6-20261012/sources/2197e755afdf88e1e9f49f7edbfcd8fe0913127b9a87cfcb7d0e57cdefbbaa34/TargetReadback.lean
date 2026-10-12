@@ -1,0 +1,11 @@
+import StaticLicensedEquivalence
+#check @Orthemology.Tranche2.MicroPolicy.queue_mem_menu
+#print axioms Orthemology.Tranche2.MicroPolicy.queue_mem_menu
+#check @Orthemology.Tranche2.MicroPolicy.sharedPolicy_mem_menu
+#print axioms Orthemology.Tranche2.MicroPolicy.sharedPolicy_mem_menu
+#check @Orthemology.Tranche2.MicroPolicy.measurableSet_always_mem
+#print axioms Orthemology.Tranche2.MicroPolicy.measurableSet_always_mem
+#check @Orthemology.Tranche2.MicroPolicy.actionLaw_always_licensed
+#print axioms Orthemology.Tranche2.MicroPolicy.actionLaw_always_licensed
+#check @Orthemology.Tranche2.MicroPolicy.licensed_seeded_policy_exists_iff_kernel_nonempty
+#print axioms Orthemology.Tranche2.MicroPolicy.licensed_seeded_policy_exists_iff_kernel_nonempty

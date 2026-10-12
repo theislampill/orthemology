@@ -1,0 +1,55 @@
+{
+  "artifact": "The Last Moat — Edition 2",
+  "version": "2.0",
+  "audit_timestamp_utc": "2026-09-10T11:21:36.650148+00:00",
+  "pdf": {
+    "filename": "The_Last_Moat_Edition_2.pdf",
+    "pages": 47,
+    "bytes": 536738,
+    "sha256": "aae5d876c7b71c4df64c8bf94f58dce82e00d102d2c8698296dfb70f7f4a1ebc",
+    "format": "A4"
+  },
+  "source_checks": {
+    "unique_labels": 84,
+    "named_results_with_written_proofs": 21,
+    "bibliography_entries": 31,
+    "unresolved_references": 0,
+    "unresolved_citations": 0
+  },
+  "build_checks": {
+    "compiler": "pdfLaTeX via latexmk",
+    "main_document_clean_build": "PASS",
+    "flattened_document_clean_build": "PASS",
+    "clean_build_page_text_matches_delivered_pdf": true,
+    "latex_warnings": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0
+  },
+  "layout_checks": {
+    "all_pages_rendered": true,
+    "visual_review": "All-page contact-sheet review and full-size inspections of key equations, revised theorem placement, final claim-audit tables and references.",
+    "final_changed_pages_rechecked": true,
+    "automatic_scan": {
+      "empty_pages": 0,
+      "out_of_page_text_spans": 0,
+      "unicode_replacement_characters": 0
+    }
+  },
+  "finite_checks": {
+    "normal_mode": {
+      "passed": 27,
+      "total": 27
+    },
+    "optimized_mode": {
+      "passed": 27,
+      "total": 27
+    },
+    "per_check_results_agree": true,
+    "python_version": "3.13.5",
+    "test_source_sha256": {
+      "verify_models.py": "c89f73c38a098a4a53afa2717b4fae22804a3df31531b2393dfabaa6f94035d6",
+      "verify_models_v1.py": "3b4ecfa35e29a239253573319fa73f855ced0883bdc107f4dd822a823518d026"
+    }
+  },
+  "scope": "Written proofs were reviewed in this preparation; tests are bounded finite/dimensionless checks, not proof-assistant verification, independent expert review or empirical validation. The 2026 NS report was not independently proof-verified. No physical channel experiment or operational discovery engine is included."
+}

@@ -1,0 +1,271 @@
+{
+  "edition": 2,
+  "result_count": 21,
+  "results": [
+    {
+      "label": "prop:nsresidual",
+      "number": "6.1",
+      "page": 12,
+      "kind": "proposition",
+      "title": "Residual-to-state estimate",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "residual_comparison_ode_envelope"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed.",
+      "check_limit": "Only a scalar comparison envelope and output-ball arithmetic were checked; no fluid model was numerically or physically validated."
+    },
+    {
+      "label": "cor:nsobservation",
+      "number": "6.2",
+      "page": 12,
+      "kind": "corollary",
+      "title": "Separation of two specified fluid observations",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "bounded_observation_ball_separation"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed.",
+      "check_limit": "Only a scalar comparison envelope and output-ball arithmetic were checked; no fluid model was numerically or physically validated."
+    },
+    {
+      "label": "prop:noninterference",
+      "number": "7.1",
+      "page": 14,
+      "kind": "proposition",
+      "title": "No channel without message-dependent observations",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "message_independent_observation"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "thm:bit",
+      "number": "7.2",
+      "page": 15,
+      "kind": "theorem",
+      "title": "Robust binary distinguishability",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "scalar_robust_bit_table",
+        "gramian_numerical_integral",
+        "optimal_scalar_control",
+        "closed_noise_balls_at_equality"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:nonlinearbit",
+      "number": "7.3",
+      "page": 15,
+      "kind": "proposition",
+      "title": "Sufficient nonlinear signalling margin",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "nonlinear_margin"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:uniform",
+      "number": "7.4",
+      "page": 16,
+      "kind": "proposition",
+      "title": "A uniform reference-decoder margin",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "uniform_model_uncertainty_margin",
+        "uncalibrated_polarity_counterexample"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:fibre",
+      "number": "8.1",
+      "page": 18,
+      "kind": "proposition",
+      "title": "Task-sufficient abstraction on the attained image",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "attained_image_factorisation_and_empty_guard"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:join",
+      "number": "8.2",
+      "page": 19,
+      "kind": "proposition",
+      "title": "Conditional soundness and idempotence of evidential JOIN",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "evidential_join_soundness_and_idempotence"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:relabel",
+      "number": "9.1",
+      "page": 20,
+      "kind": "proposition",
+      "title": "Relabelling does not identify an intrinsic latent language",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "latent_relabelling_equivalence"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:finitecorpus",
+      "number": "9.2",
+      "page": 20,
+      "kind": "proposition",
+      "title": "An unobserved response is not fixed by unrestricted finite data",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "finite_corpus_nonidentification"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:serial",
+      "number": "10.1",
+      "page": 21,
+      "kind": "proposition",
+      "title": "Serial reliability requires compatibility",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "serial_reliability_without_independence",
+        "joint_resource_and_role_countermodels"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:cut",
+      "number": "11.1",
+      "page": 23,
+      "kind": "proposition",
+      "title": "Cut bound for finite-message recovery",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "fresh_state_transfer_lower_bound"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "thm:continuation",
+      "number": "12.1",
+      "page": 24,
+      "kind": "theorem",
+      "title": "Behavioural continuation under certified migration",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "exact_encoding_and_migration",
+        "mixed_execution_and_migration_error"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:hitting",
+      "number": "13.1",
+      "page": 26,
+      "kind": "proposition",
+      "title": "Failure tolerance is a hitting-set property",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "failure_support_hitting_set"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "lem:commute",
+      "number": "14.1",
+      "page": 27,
+      "kind": "lemma",
+      "title": "Order independence of certified commuting updates",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "commuting_workflow_updates"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "thm:undecidable",
+      "number": "14.2",
+      "page": 28,
+      "kind": "theorem",
+      "title": "Undecidability of eventual distinguishability at an unspecified horizon",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "bounded_paired_state_decidability"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed.",
+      "check_limit": "Finite checks cover the contrasting decidable finite-state case, not a computational verification of undecidability."
+    },
+    {
+      "label": "thm:viability",
+      "number": "15.1",
+      "page": 29,
+      "kind": "theorem",
+      "title": "Finite-state viability kernel",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "finite_viability_kernel"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:progress",
+      "number": "15.2",
+      "page": 30,
+      "kind": "proposition",
+      "title": "Finite-rank progress certificate",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "finite_rank_progress_and_idle_countermodel"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "thm:autonomy",
+      "number": "15.3",
+      "page": 31,
+      "kind": "theorem",
+      "title": "Sufficient conditions for host-relative operational autonomy",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "exact_encoding_and_migration",
+        "failure_support_hitting_set",
+        "finite_viability_kernel",
+        "finite_rank_progress_and_idle_countermodel"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed.",
+      "check_limit": "Component toy obligations were checked; no complete real-world replacement architecture is exhibited."
+    },
+    {
+      "label": "prop:attribution",
+      "number": "16.1",
+      "page": 33,
+      "kind": "proposition",
+      "title": "Observational equivalence blocks attribution",
+      "introduced_in_edition": 1,
+      "related_finite_checks": [
+        "attribution_total_variation"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    },
+    {
+      "label": "prop:heldout",
+      "number": "17.1",
+      "page": 35,
+      "kind": "proposition",
+      "title": "Simultaneous held-out loss bound",
+      "introduced_in_edition": 2,
+      "related_finite_checks": [
+        "heldout_bound_exact_binomial_tails"
+      ],
+      "proof_status": "Written conditional argument; reviewed here, not proof-assistant verified or independently peer reviewed."
+    }
+  ]
+}

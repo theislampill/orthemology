@@ -1,0 +1,27 @@
+{
+  "decision": "ACCEPTED_ORDINARY_MATHEMATICAL_EVIDENCE",
+  "author_artifacts": {
+    "complete-flow-finite-rank-20261010/EXACT_CHECKS.json": {
+      "sha256": "ffbaf65d78948cb07e36c55da076f391ec17252fb6f923fe03988aaa73f8e53d",
+      "bytes": 5784
+    },
+    "complete-flow-finite-rank-20261010/INPUT_BINDINGS.json": {
+      "sha256": "d800456c722ff6d847be4afefb3c82dc06f18183c88b1807d037f843f204ec4b",
+      "bytes": 618
+    },
+    "complete-flow-finite-rank-20261010/REPLAY.md": {
+      "sha256": "1193507ee88e2a90dc639f24ec7cbd1d541b82671a73d55627374579bd6b2c60",
+      "bytes": 1006
+    },
+    "complete-flow-finite-rank-20261010/RESULT.md": {
+      "sha256": "e0600eeef1403bd680fe860bb0e0bfe7a31a72905ff8aaa3e389b1d60521d7e0",
+      "bytes": 22581
+    },
+    "complete-flow-finite-rank-20261010/check_exact.py": {
+      "sha256": "acf390f50b5cf3f2fa4e068a7ba0c3d88b75944e8b47638358333f27cd0fd4c8",
+      "bytes": 5899
+    }
+  },
+  "kernel_checked": false,
+  "integration_or_closure": false
+}

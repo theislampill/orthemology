@@ -1,0 +1,36 @@
+PASS 01: bound snapshot inputs/leafwise_RESULT.md
+PASS 02: bound snapshot inputs/event_feasibility_RESULT.md
+PASS 03: bound snapshot inputs/event_feasibility_REVIEW.md
+PASS 04: bound snapshot inputs/leafwise_PRIMARY_SOURCE_NOTES.json
+PASS 05: bound snapshot inputs/source_audit_RESULT.md
+PASS 06: bound snapshot inputs/hierarchical_RESULT.md
+PASS 07: minimal square observable rank and circuit
+PASS 08: opposite diagonal posteriors share the global interior mean
+PASS 09: diagonal supports violate product closure polynomial
+PASS 10: actual diagonal covariances differ from entropy-completion covariance
+PASS 11: restricted diagonal charts have positive one-dimensional covariance
+PASS 12: all 80 nonzero ternary likelihoods obey one-parameter/all-parameter criterion at two controls
+PASS 13: positive-support and zero-set face contracts are independent
+PASS 14: normal exponential ray reaches the entire saturated edge
+PASS 15: ambient edge covariance is singular with correct positive reduction
+PASS 16: intrinsic edge Fisher metric equals inverse covariance
+PASS 17: facial support without restricted log membership fails
+PASS 18: facial nonaffine likelihood creates exact odds ratio nine
+PASS 19: facial affine-log likelihood passes the same support control
+PASS 20: bottom face is saturated over duplicate and nonvertex supplied columns
+PASS 21: mean does not identify unknown support even on a proper face
+PASS 22: duplicate splitting and nonaffine interior weights both violate restricted log condition
+PASS 23: finite relative parameter realizes an exact nonzero boundary mean
+PASS 24: boundary entropy identity and exposed-ray dual value
+PASS 25: pairwise global facet has six saturated atoms and dimension five
+PASS 26: ambient covariance loses exactly the global face normal
+PASS 27: reduced pairwise-facet covariance has exact positive blocks and eigenvalues
+PASS 28: observable normal-ray limit realizes the inherited global facet
+PASS 29: minimal facet coordinates remove the true affine redundancy
+PASS 30: six-atom face has full projection onto every pair
+PASS 31: pair-local soft limit has vanishing event mass but the stated posterior limit
+PASS 32: simultaneous hard pair anti-alignment is impossible while the global six-atom event is positive
+PASS 33: all local unary ternary likelihoods preserve every selected closed stratum of a nonproduct reference
+PASS 34: fixed-reference local closure does not imply all-prior marginal sufficiency
+PASS 35: duplicate vertex stratum retains reference proportions without fake positive dimension
+PASS: 35 exact assertion groups

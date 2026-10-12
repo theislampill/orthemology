@@ -1,0 +1,22 @@
+{
+  "original_queue": "Retained under predecessor paths; do not replace original IDs with this policy.",
+  "new_source_ranges": "Acquisition inventories are starting points only; reconcile against existing completed receipts.",
+  "required_record_fields": [
+    "source_identity",
+    "source_version",
+    "start_line",
+    "end_line",
+    "definitions",
+    "claims",
+    "assumptions",
+    "proof_dependencies",
+    "authority_status",
+    "evidence",
+    "counterexamples",
+    "cross_source_tensions",
+    "report_sections_affected"
+  ],
+  "automatic_extraction_or_hashing_counts_as_reading": false,
+  "inherited_receipts_auto_recredited": false,
+  "inherited_completed_receipts_silently_reset": false
+}

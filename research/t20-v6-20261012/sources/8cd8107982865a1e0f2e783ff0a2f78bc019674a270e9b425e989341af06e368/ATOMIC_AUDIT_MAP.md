@@ -1,0 +1,13 @@
+# Atomic extension adversarial readback map
+
+1. Does the auxiliary deterministic-output domain hide the desired result? No: `mismatch_domain` unfolds immediate output at `false` and `true` for every non-sink state. It proves exact sink equality independently of finite-state bounds.
+2. Does the monitor compare the correct output tick? `mismatch_state` tracks the original state and target position at n and tests equality of the first n outputs. A mismatch on input n enters the sink at time n+1.
+3. Does avoiding mismatch equal the original singleton? `mismatch_hits_eq` proves equality to the complement of the literal preimage of the target singleton, using every finite prefix. `targetMassQ_correct` then invokes actual probability complement arithmetic and measurability.
+4. Is rationality only total-mass rationality relabelled? No: each singleton is a new target-monitor reduction. Each positive atom has a separately constructed finite generator.
+5. Are duplicate finite descriptions confused with duplicate streams? No: `atomCandidatesEqual_spec` characterizes equality of whole infinite output functions. The skip condition compares all earlier candidate streams.
+6. Is a total nth-positive-atom function asserted on finite support? No: the enumerator returns `Option` at each natural index. Soundness/completeness and duplicate-freedom do not promise another positive entry.
+7. Does support enumeration get silently promoted to measure reconstruction? No: `atomSet_disjoint`, `iUnion_atomSet`, `atomPointMeasure_eq_restrict`, and `Measure.restrict_iUnion` establish equality of measures. Each singleton's rational weight is proved equal to the original law's singleton measure.
+8. Does the residual subtract the wrong total? `residualMassQ` uses the independently proved exact total atomic mass (`solveHitting`), not total probability1. `residualMassQ_correct` identifies subtraction with the actual residual atomic restriction.
+9. Is convergence assumed effective? No: the series-to-total identity proves residual convergence; exact rational residual testing makes `Nat.find` a terminating executable search. Nonincrease strengthens the cutoff guarantee to all later partial sums.
+10. Is the result an approximation to the entire output law? No: it approximates the point-atomic restriction. Any nonatomic component remains outside this measure decomposition and error bound.
+11. Is kernel evidence confused with VM execution? No: general correctness and concrete law fixtures are kernel theorems; the `#eval` values separately check executable definitions. All audited proofs remain under propext/Classical.choice/Quot.sound only.

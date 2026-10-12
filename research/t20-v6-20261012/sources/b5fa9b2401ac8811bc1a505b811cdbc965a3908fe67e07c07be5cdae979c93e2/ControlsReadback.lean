@@ -1,0 +1,38 @@
+import Controls
+
+#check IndependentRobustControls.boundary_01
+#print axioms IndependentRobustControls.boundary_01
+#check IndependentRobustControls.boundary_02
+#print axioms IndependentRobustControls.boundary_02
+#check IndependentRobustControls.boundary_03
+#print axioms IndependentRobustControls.boundary_03
+#check IndependentRobustControls.boundary_04
+#print axioms IndependentRobustControls.boundary_04
+#check IndependentRobustControls.boundary_05
+#print axioms IndependentRobustControls.boundary_05
+#check IndependentRobustControls.boundary_06
+#print axioms IndependentRobustControls.boundary_06
+#check IndependentRobustControls.boundary_07
+#print axioms IndependentRobustControls.boundary_07
+#check IndependentRobustControls.boundary_08
+#print axioms IndependentRobustControls.boundary_08
+#check IndependentRobustControls.boundary_09
+#print axioms IndependentRobustControls.boundary_09
+#check IndependentRobustControls.boundary_10
+#print axioms IndependentRobustControls.boundary_10
+#check IndependentRobustControls.boundary_11
+#print axioms IndependentRobustControls.boundary_11
+#check IndependentRobustControls.boundary_12
+#print axioms IndependentRobustControls.boundary_12
+#check IndependentRobustControls.boundary_13
+#print axioms IndependentRobustControls.boundary_13
+#check IndependentRobustControls.boundary_14
+#print axioms IndependentRobustControls.boundary_14
+#check IndependentRobustControls.boundary_15
+#print axioms IndependentRobustControls.boundary_15
+#check IndependentRobustControls.boundary_16
+#print axioms IndependentRobustControls.boundary_16
+#check IndependentRobustControls.boundary_17
+#print axioms IndependentRobustControls.boundary_17
+#check IndependentRobustControls.boundary_18
+#print axioms IndependentRobustControls.boundary_18

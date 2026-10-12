@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-07T21:39:49.440524+00:00",
+  "source": "research-frontier-continuation/explanatory-warrant/IntegratedConsumers.lean",
+  "sha256": "b0a397370f05ea04dbe15b79498d3de28b73d5d47a84b6cdf397eecc260a85ce",
+  "theorems": [
+    "IntegratedConsumers.nonidle_sound",
+    "IntegratedConsumers.nonidle_seeds",
+    "IntegratedConsumers.nonidle_nonempty",
+    "IntegratedConsumers.nonidle_positive_G_path",
+    "IntegratedConsumers.nonidle_repaired_interface_and_target_failure",
+    "IntegratedConsumers.nonidle_generic_support_witness",
+    "IntegratedConsumers.beginningless_sound",
+    "IntegratedConsumers.beginningless_seeds",
+    "IntegratedConsumers.beginningless_nonempty",
+    "IntegratedConsumers.beginningless_positive_path",
+    "IntegratedConsumers.beginningless_generic_support_witness",
+    "IntegratedConsumers.generation_maps_to_review",
+    "IntegratedConsumers.beginningless_consumer_keeps_same_bearer_without_full_generation"
+  ]
+}

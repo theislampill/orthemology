@@ -1,0 +1,29 @@
+{
+  "cycle": 2,
+  "pass": "adversarial",
+  "reviewer": "same assistant; no independent reviewer claimed",
+  "candidate_sha256": "518e4acd6eb55f169cf7700b8f5b09f428143f8305e25386fd91891d3be3ecca",
+  "source_modification_authorised": false,
+  "overall_requested_gate": "NOT_PASSED",
+  "source_line_by_line_review_complete": false,
+  "disposition": "PARTIAL_STAGED_DELIVERY",
+  "new_finite_verification_status": "PASS",
+  "finding_ids": [
+    "B001",
+    "B002",
+    "B003",
+    "B004",
+    "B005",
+    "B006",
+    "B007",
+    "B008",
+    "B009",
+    "B010",
+    "B011",
+    "B012",
+    "B013",
+    "B015",
+    "B014"
+  ],
+  "note": "Cycle 1 records substantive planning-stage challenges. Cycle 2 assesses the refined local report while preserving the still-blocking all-source coverage finding. This is not an invented independent audit approval."
+}

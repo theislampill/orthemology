@@ -1,0 +1,81 @@
+{
+  "started_utc": "2026-10-07T21:30:47.868831+00:00",
+  "scope": "Kernel checks of declared controls, not premise warrant, metaphysical possibility, or closure.",
+  "modules": [
+    {
+      "name": "ActualProvisionReview",
+      "sha256": "7c9993e1c3afe66690d8250ca47196d27e8a421b7195a381c383fde1acf2e74a",
+      "command": [
+        "private-locator:35c954da8cf60e3897f3",
+        "--trust=0",
+        "-o",
+        "private-locator:d3c958b7e398e3cf9a05",
+        "private-locator:49ccffcbe88c8b2f76a5"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "BeginninglessProvision",
+      "sha256": "508da994aa96b57fc57301decea302c65571d636538f5bd517d1f106b654e2cd",
+      "command": [
+        "private-locator:35c954da8cf60e3897f3",
+        "--trust=0",
+        "-o",
+        "private-locator:32ea44b4fe968ba7ee50",
+        "private-locator:06d68ce139d24f918035"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "finished_utc": "2026-10-07T21:30:48.614602+00:00",
+  "lean_sha256": "92c3d35b5bfaa5e0fea413a775d504cf46cd95e1345df61c2274f76779e7e023",
+  "version": "Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)",
+  "theorem_count": 42,
+  "theorems": [
+    "ActualProvisionReview.StrictPath.toPath",
+    "ActualProvisionReview.StrictPath.trans",
+    "ActualProvisionReview.certified_route_is_support",
+    "ActualProvisionReview.certified_route_is_productive",
+    "ActualProvisionReview.same_resource_same_bearer_transfer",
+    "ActualProvisionReview.all_rules_used_and_sound",
+    "ActualProvisionReview.no_empty_rules",
+    "ActualProvisionReview.all_resources_generated",
+    "ActualProvisionReview.actual_local_equation",
+    "ActualProvisionReview.originals_receive_no_support",
+    "ActualProvisionReview.support_increases_rank",
+    "ActualProvisionReview.support_path_increases_rank",
+    "ActualProvisionReview.support_acyclic",
+    "ActualProvisionReview.control_realisation",
+    "ActualProvisionReview.control_received_transport",
+    "ActualProvisionReview.g_original_resource",
+    "ActualProvisionReview.g_same_original_bearer",
+    "ActualProvisionReview.g_strict_live_support_to_target",
+    "ActualProvisionReview.g_actually_produces_side",
+    "ActualProvisionReview.k_actually_contributes_target",
+    "ActualProvisionReview.g_productive_path_restricted",
+    "ActualProvisionReview.g_has_no_productive_path_to_target",
+    "ActualProvisionReview.g_is_target_noncontributor",
+    "ActualProvisionReview.nonidle_same_witness_obstruction",
+    "ActualProvisionReview.target_route_certificate_fails_for_g",
+    "ActualProvisionReview.target_route_certificate_succeeds_for_k",
+    "BeginninglessProvision.live_sound_nonempty",
+    "BeginninglessProvision.local_fixed",
+    "BeginninglessProvision.seed_no_incoming",
+    "BeginninglessProvision.same_original_directly_supplies_every_token",
+    "BeginninglessProvision.prior_token_actually_supplies_next",
+    "BeginninglessProvision.all_generated_are_seed",
+    "BeginninglessProvision.all_actual_tokens_ungenerated",
+    "BeginninglessProvision.earlier_irreflexive",
+    "BeginninglessProvision.earlier_transitive",
+    "BeginninglessProvision.productive_is_earlier",
+    "BeginninglessProvision.productive_path_is_earlier",
+    "BeginninglessProvision.productive_acyclic",
+    "BeginninglessProvision.bridge_realisation",
+    "BeginninglessProvision.bridge_received_transport",
+    "BeginninglessProvision.same_bearer_productive_without_token_generation",
+    "BeginninglessProvision.original_productive_coverage_does_not_imply_full_generation"
+  ],
+  "axiom_readback_sha256": "9024a66acd4e866c02849e2a5d5775b91bb65f09797a87f1452254b91d1e145b",
+  "axiom_readback": "'ActualProvisionReview.StrictPath.toPath' does not depend on any axioms\n'ActualProvisionReview.StrictPath.trans' does not depend on any axioms\n'ActualProvisionReview.certified_route_is_support' does not depend on any axioms\n'ActualProvisionReview.certified_route_is_productive' does not depend on any axioms\n'ActualProvisionReview.same_resource_same_bearer_transfer' does not depend on any axioms\n'ActualProvisionReview.all_rules_used_and_sound' does not depend on any axioms\n'ActualProvisionReview.no_empty_rules' does not depend on any axioms\n'ActualProvisionReview.all_resources_generated' does not depend on any axioms\n'ActualProvisionReview.actual_local_equation' does not depend on any axioms\n'ActualProvisionReview.originals_receive_no_support' depends on axioms: [propext]\n'ActualProvisionReview.support_increases_rank' depends on axioms: [propext]\n'ActualProvisionReview.support_path_increases_rank' depends on axioms: [propext]\n'ActualProvisionReview.support_acyclic' depends on axioms: [propext]\n'ActualProvisionReview.control_realisation' does not depend on any axioms\n'ActualProvisionReview.control_received_transport' does not depend on any axioms\n'ActualProvisionReview.g_original_resource' does not depend on any axioms\n'ActualProvisionReview.g_same_original_bearer' does not depend on any axioms\n'ActualProvisionReview.g_strict_live_support_to_target' does not depend on any axioms\n'ActualProvisionReview.g_actually_produces_side' does not depend on any axioms\n'ActualProvisionReview.k_actually_contributes_target' does not depend on any axioms\n'ActualProvisionReview.g_productive_path_restricted' depends on axioms: [propext]\n'ActualProvisionReview.g_has_no_productive_path_to_target' depends on axioms: [propext]\n'ActualProvisionReview.g_is_target_noncontributor' depends on axioms: [propext]\n'ActualProvisionReview.nonidle_same_witness_obstruction' depends on axioms: [propext]\n'ActualProvisionReview.target_route_certificate_fails_for_g' depends on axioms: [propext]\n'ActualProvisionReview.target_route_certificate_succeeds_for_k' does not depend on any axioms\n'BeginninglessProvision.live_sound_nonempty' does not depend on any axioms\n'BeginninglessProvision.local_fixed' does not depend on any axioms\n'BeginninglessProvision.seed_no_incoming' does not depend on any axioms\n'BeginninglessProvision.same_original_directly_supplies_every_token' does not depend on any axioms\n'BeginninglessProvision.prior_token_actually_supplies_next' does not depend on any axioms\n'BeginninglessProvision.all_generated_are_seed' does not depend on any axioms\n'BeginninglessProvision.all_actual_tokens_ungenerated' does not depend on any axioms\n'BeginninglessProvision.earlier_irreflexive' does not depend on any axioms\n'BeginninglessProvision.earlier_transitive' does not depend on any axioms\n'BeginninglessProvision.productive_is_earlier' does not depend on any axioms\n'BeginninglessProvision.productive_path_is_earlier' does not depend on any axioms\n'BeginninglessProvision.productive_acyclic' does not depend on any axioms\n'BeginninglessProvision.bridge_realisation' does not depend on any axioms\n'BeginninglessProvision.bridge_received_transport' does not depend on any axioms\n'BeginninglessProvision.same_bearer_productive_without_token_generation' does not depend on any axioms\n'BeginninglessProvision.original_productive_coverage_does_not_imply_full_generation' does not depend on any axioms\n",
+  "status": "Fresh --trust=0 module and theorem readback success"
+}

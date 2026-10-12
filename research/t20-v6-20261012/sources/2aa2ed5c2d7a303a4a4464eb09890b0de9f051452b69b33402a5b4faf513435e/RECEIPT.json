@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-09-30T23:02:31.793463+00:00",
+  "kind": "author fresh-copy replay, independent review separate",
+  "sources": [
+    {
+      "module": "CompactObservationBoundary",
+      "sha256": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+      "warnings": 0
+    },
+    {
+      "module": "CompactBoundaryControls",
+      "sha256": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58",
+      "warnings": 0
+    }
+  ],
+  "expected_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_closure": "common-observation-audit freshly compiled sealed closure",
+  "lean": "4.19.0",
+  "mathlib_commit": "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+}

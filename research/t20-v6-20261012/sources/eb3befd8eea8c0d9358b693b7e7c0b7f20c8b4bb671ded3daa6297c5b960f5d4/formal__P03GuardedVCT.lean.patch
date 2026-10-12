@@ -1,0 +1,58 @@
+--- immutable/formal/P03GuardedVCT.lean
++++ shadow/formal/P03GuardedVCT.lean
+@@ -111,11 +111,11 @@
+ variable {O V R C : Type} {p : Policy O V R C}
+ variable {a b c : Frame O V R C}
+ 
+-def Path.graph : Path p a b → P03Q1f.Hom a.graph b.graph
++def Path.graph {a b : Frame O V R C} : Path p a b → P03Q1f.Hom a.graph b.graph
+   | .one h => h.graphMap
+   | .cons h rest _ => P03Q1f.Hom.compose h.graphMap (Path.graph rest)
+ 
+-def Path.preimage : (q : Path p a b) →
++def Path.preimage {a b : Frame O V R C} : (q : Path p a b) →
+     ∀ v : Fin b.graph.size, ∃ u : Fin a.graph.size, (Path.graph q).node u = v
+   | .one h, v => h.onto v
+   | .cons h rest _, v => by
+@@ -126,33 +126,33 @@
+       rw [hs]
+       exact hm
+ 
+-def Path.semantics : Path p a b → SemanticHop a.semantics b.semantics
++def Path.semantics {a b : Frame O V R C} : Path p a b → SemanticHop a.semantics b.semantics
+   | .one h => h.semantics
+   | .cons h rest _ => SemanticHop.comp h.semantics (Path.semantics rest)
+ 
+-def Path.transportSound : (q : Path p a b) → Sound a.reasons → Sound b.reasons
++def Path.transportSound {a b : Frame O V R C} : (q : Path p a b) → Sound a.reasons → Sound b.reasons
+   | .one h, hs => h.reasons.sound hs
+   | .cons h rest _, hs => Path.transportSound rest (h.reasons.sound hs)
+ 
+-def Path.closeTarget : (q : Path p a b) → Sound a.reasons → Closed b.reasons
++def Path.closeTarget {a b : Frame O V R C} : (q : Path p a b) → Sound a.reasons → Closed b.reasons
+   | .one h, hs => h.reasons.closed hs
+   | .cons h rest _, hs => Path.closeTarget rest (h.reasons.sound hs)
+ 
+-def Path.finalVersion : (q : Path p a b) → p.versionAllowed b.version
++def Path.finalVersion {a b : Frame O V R C} : (q : Path p a b) → p.versionAllowed b.version
+   | .one h => h.targetVersion
+   | .cons _ rest _ => Path.finalVersion rest
+ 
+-def Path.finalInvalidators : (q : Path p a b) → p.invalidatorsClosed b
++def Path.finalInvalidators {a b : Frame O V R C} : (q : Path p a b) → p.invalidatorsClosed b
+   | .one h => h.noOpenInvalidator
+   | .cons _ rest _ => Path.finalInvalidators rest
+ 
+-def Path.rootTrace : (q : Path p a b) → Via p.rootStep a.root b.root
++def Path.rootTrace {a b : Frame O V R C} : (q : Path p a b) → Via p.rootStep a.root b.root
+   | .one h => .one h.rootCustody
+   | .cons h rest _ => .comp (.one h.rootCustody) (Path.rootTrace rest)
+ 
+-def Path.authorityTrace : (q : Path p a b) → Via p.authority a b
++def Path.authorityTrace {a b : Frame O V R C} : (q : Path p a b) → AuthorityPath p a b
+   | .one h => .one h.authority
+-  | .cons h rest _ => .comp (.one h.authority) (Path.authorityTrace rest)
++  | .cons h rest allowMiddle => .cons h.authority allowMiddle (Path.authorityTrace rest)
+ 
+ theorem Path.mapEdge (q : Path p a b) {u v : Fin a.graph.size}
+     (h : a.graph.Edge u v) : b.graph.Edge ((Path.graph q).node u) ((Path.graph q).node v) :=

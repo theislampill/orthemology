@@ -1,0 +1,14 @@
+import IntegratedConsumers
+#print axioms IntegratedConsumers.nonidle_sound
+#print axioms IntegratedConsumers.nonidle_seeds
+#print axioms IntegratedConsumers.nonidle_nonempty
+#print axioms IntegratedConsumers.nonidle_positive_G_path
+#print axioms IntegratedConsumers.nonidle_repaired_interface_and_target_failure
+#print axioms IntegratedConsumers.nonidle_generic_support_witness
+#print axioms IntegratedConsumers.beginningless_sound
+#print axioms IntegratedConsumers.beginningless_seeds
+#print axioms IntegratedConsumers.beginningless_nonempty
+#print axioms IntegratedConsumers.beginningless_positive_path
+#print axioms IntegratedConsumers.beginningless_generic_support_witness
+#print axioms IntegratedConsumers.generation_maps_to_review
+#print axioms IntegratedConsumers.beginningless_consumer_keeps_same_bearer_without_full_generation

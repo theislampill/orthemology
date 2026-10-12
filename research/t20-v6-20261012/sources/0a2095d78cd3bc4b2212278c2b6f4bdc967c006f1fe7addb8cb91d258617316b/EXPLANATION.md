@@ -1,0 +1,3 @@
+# Initial packaging replay
+
+The initial packaging attempt included three inherited proof inputs but missed three read-only hash-check dependencies of the grouped reviewer control. That command stopped with FileNotFoundError before its checks; the other eleven passed. The missing frozen manifest and two proof texts were then copied unchanged from verified local inputs and matched to prior archive members. No research code or expected output was changed. The final staged and fresh-extraction replays use all six minimal inherited inputs. This was a packaging dependency omission, not a mathematical failure.

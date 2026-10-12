@@ -1,0 +1,26 @@
+[
+  {
+    "source": "time-varying-square-positivity-20261010/RESULT.md",
+    "snapshot": "inputs/time-varying-square-positivity-20261010__RESULT.md",
+    "sha256": "7ffed76cdfb23ee725bd4030c22dd03bb1f66934d885a6800caf260fdb0741bd",
+    "read_boundary": "entire RESULT.md"
+  },
+  {
+    "source": "coercive-square-positivity-20261010/RESULT.md",
+    "snapshot": "inputs/coercive-square-positivity-20261010__RESULT.md",
+    "sha256": "204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10",
+    "read_boundary": "entire RESULT.md"
+  },
+  {
+    "source": "moment-evolution-source-comparison-20261010/RESULT.md",
+    "snapshot": "inputs/moment-evolution-source-comparison-20261010__RESULT.md",
+    "sha256": "c9170636819e8c10b3a94362bc446e5b4424b2a149079f4fc4b1eaeb339b30ac",
+    "read_boundary": "entire RESULT.md"
+  },
+  {
+    "source": "diffusive-moment-source-followup-20261010/RESULT.md",
+    "snapshot": "inputs/diffusive-moment-source-followup-20261010__RESULT.md",
+    "sha256": "ebb96ad3efb849ef747dd24fd7a4f741f9f697f4ed26885e36b6f34bec428dac",
+    "read_boundary": "entire RESULT.md; comparison evidence only, not a theorem dependency"
+  }
+]

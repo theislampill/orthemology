@@ -1,0 +1,79 @@
+{
+  "source_hash_checks": [
+    {
+      "repository_path": "atomics/skill/references/techniques/V9-necessary-knowledge-priority.md",
+      "local_path": "sources/V9-necessary-knowledge-priority.md",
+      "git_blob_sha": "b6d53f151ef618e5e44aafd85cb6b9a75b762df4",
+      "url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/techniques/V9-necessary-knowledge-priority.md",
+      "path": "local-resolution-warrant-20261010/sources/V9-necessary-knowledge-priority.md",
+      "bytes": 5831,
+      "sha256": "efd17bf1128fb86a1a8dcc9587783a274d59834044125332cbf0fbd3bf7f1d41",
+      "git_blob_sha1": "b6d53f151ef618e5e44aafd85cb6b9a75b762df4",
+      "matches_returned_git_blob": true
+    },
+    {
+      "repository_path": "atomics/skill/references/techniques/V11-taqlid-transition.md",
+      "local_path": "sources/V11-taqlid-transition.md",
+      "git_blob_sha": "5e900f68dd8fb002541a8ba14552856978f8ea60",
+      "url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/techniques/V11-taqlid-transition.md",
+      "path": "local-resolution-warrant-20261010/sources/V11-taqlid-transition.md",
+      "bytes": 10482,
+      "sha256": "42b7a8b0da080ec2637191086ba5f9a7e23efedf5ba3bcf959142aa4d2f1a070",
+      "git_blob_sha1": "5e900f68dd8fb002541a8ba14552856978f8ea60",
+      "matches_returned_git_blob": true
+    },
+    {
+      "repository_path": "atomics/skill/references/tactics/R3-warranted-basic-belief.md",
+      "local_path": "sources/R3-warranted-basic-belief.md",
+      "git_blob_sha": "b958d00daeb56094840749374db813ae84af3e83",
+      "url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/tactics/R3-warranted-basic-belief.md",
+      "path": "local-resolution-warrant-20261010/sources/R3-warranted-basic-belief.md",
+      "bytes": 11260,
+      "sha256": "c668da0986d1a21914e4be1c78a29ade24bed1fb59636cc9671a7f80fbb40a2f",
+      "git_blob_sha1": "b958d00daeb56094840749374db813ae84af3e83",
+      "matches_returned_git_blob": true
+    },
+    {
+      "repository_path": "atomics/skill/references/case-library/do-second-loop.md",
+      "local_path": "sources/do-second-loop.md",
+      "git_blob_sha": "159aaf9477a943b65433484967181a5aabb044a7",
+      "url": "https://github.com/theislampill/daee-epistemics/blob/c86b3c6673147b8802fe222373a165a37d4d24a8/atomics/skill/references/case-library/do-second-loop.md",
+      "path": "local-resolution-warrant-20261010/sources/do-second-loop.md",
+      "bytes": 49482,
+      "sha256": "4ff76e4e0c8c140cb5195f319c88a64b0bf2ea80dd73e18516b250df15096adf",
+      "git_blob_sha1": "159aaf9477a943b65433484967181a5aabb044a7",
+      "matches_returned_git_blob": true
+    },
+    {
+      "path": "local-resolution-warrant-20261010/sources/P4-maieutic.md",
+      "bytes": 8985,
+      "sha256": "d0cef9d50b7cb8085394efd578d1d97690cc27544c86cf926be4d235784c5c17",
+      "git_blob_sha1": "e2bc096e3f9e037e9417e1d024efeb7c5fe5535a",
+      "repository_path": "atomics/skill/references/procedures/P4-maieutic.md",
+      "expected_git_blob": "e2bc096e3f9e037e9417e1d024efeb7c5fe5535a",
+      "matches_returned_git_blob": true
+    },
+    {
+      "path": "local-resolution-warrant-20261010/sources/noetic-reading-checklist.md",
+      "bytes": 27174,
+      "sha256": "d190b661b063c58a3e29a24fb2cc47cb812931479a9598fcb5f2c57c5711328c",
+      "git_blob_sha1": "47dea8cfa6923635465b98b8745a44ef32f2427b",
+      "repository_path": "atomics/skill/references/diagnostics/noetic-reading-checklist.md",
+      "expected_git_blob": "47dea8cfa6923635465b98b8745a44ef32f2427b",
+      "matches_returned_git_blob": true
+    },
+    {
+      "path": "local-resolution-warrant-20261010/sources/sound-reason-epistemology.md",
+      "bytes": 49338,
+      "sha256": "55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810",
+      "git_blob_sha1": "d7fa4425d014225940cbbbe86983f8d9a3dc3da5",
+      "repository_path": "atomics/skill/references/sound-reason-epistemology.md",
+      "expected_git_blob": "d7fa4425d014225940cbbbe86983f8d9a3dc3da5",
+      "matches_returned_git_blob": true
+    }
+  ],
+  "all_match": true,
+  "claim": "Byte-identity checks only; no runtime or empirical execution",
+  "transport_normalization": "The initial apply_patch transport added one final newline to each of the four freshly fetched bodies. Exactly one trailing newline was removed from each; all now match the connector-provided Git blob identities. No source content was edited.",
+  "recorded_utc": "2026-10-10T21:53:40.053252+00:00"
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "orthemology-p03-research-receipt-v1",
+  "checkpoint_id": "Orthemology_P03_Engine_Refinement_Checkpoint_attempt-0001",
+  "sealed_utc": "2026-09-22T10:12:43.483849+00:00",
+  "status": "SEALED_PARTIAL_RESEARCH_CHECKPOINT",
+  "obligations": {
+    "U03": "PARTIAL",
+    "U04": "PARTIAL",
+    "Q1f": "PARTIAL"
+  },
+  "alias": {
+    "CV-O": "U04"
+  },
+  "canonical_obligation_statuses_changed": false,
+  "scope_complete": "bounded research deliverables and handoff only",
+  "preserved_canonical_state": {
+    "repository": "theislampill/orthemology",
+    "main": "03e2604dfcef278b01c60d19b05370fcec4194b6",
+    "tree": "3d06e80277ce39286c94307e0f14b215bc94ed83",
+    "merged_pr": 28,
+    "integration_cells_remaining": 0,
+    "new_live_ref_reverification_claim": false
+  },
+  "input": {
+    "filename": "Orthemology_Pro_P03_Engine_Refinement.zip",
+    "bytes": 1819667,
+    "sha256": "050aac77db52ad70e0155bbeb76f903a4dae65a36977a4159c8dcaf5634bcab0",
+    "embedded_path": "inputs/Orthemology_Pro_P03_Engine_Refinement.zip"
+  },
+  "exact_obligation_confirmation_path": "inputs/OBLIGATION_CONFIRMATIONS.json",
+  "supplemental_sources_path": "inputs/SUPPLEMENTAL_IDENTITIES.json",
+  "statement_reports": {
+    "U03": {
+      "path": "research/U03_REFINEMENT_AND_COUNTERMODELS.md",
+      "sha256": "f4659611d5a908f1c426a46e1c22dfa659bddd4f85f5d78cad33133f744f4172",
+      "proof_class": "ORDINARY_ARGUMENT_AND_SOURCE_COMPARISON_WITH_EXECUTED_COUNTEREXAMPLES"
+    },
+    "U04": {
+      "path": "research/U04_COMPLETE_STATE_SIMULATION.md",
+      "sha256": "ad0fcf052f191c2a1bfe4f7c0d30aaf8b3c85d8a8cd8a272a2f3fb0a36a13974",
+      "proof_class": "DEFINITION_PROPOSAL_AND_CONDITIONAL_ORDINARY_SIMULATION_WITH_EXECUTED_COUNTEREXAMPLE"
+    },
+    "Q1f": {
+      "path": "research/Q1F_SOURCE_COMPARISON_AND_PROPOSAL.md",
+      "sha256": "8daa1da4b04163eac3a93d226beda844e91cfdfb38d45d699fb0d7dfc747033e",
+      "proof_class": "EXACT_SOURCE_COMPARISON_ORDINARY_GRAPH_PROOF_AND_UNVERIFIED_LEAN_CANDIDATE"
+    }
+  },
+  "completed_scoped_results": [
+    "P03-U03-CE01: encoder/decoder domain counterexample",
+    "P03-U03-CE02: malformed exporter row refusal counterexample",
+    "P03-U04-CE01: validation/copy lock-wait counterexample",
+    "P03-Q1f-CE01/02: countermodels to untyped DAG extrapolation, not typed VCT",
+    "three proposal-only patches with exact pre/post images and finite red-green evidence",
+    "complete-state and outcome-relation proposals; ordinary graph and substitution arguments",
+    "exact pinned VCT/TRC statement comparison; later Codex handoff"
+  ],
+  "remaining_dependencies_path": "research/UNRESOLVED_DEPENDENCIES.md",
+  "negative_findings_path": "research/NEGATIVE_FINDINGS.md",
+  "definition_status_proposals": "proposal/DEFINITION_AND_STATUS_CHANGE_PROPOSALS.json",
+  "executable_summary": "evidence/EVIDENCE_SUMMARY.json",
+  "finite_test_methods": {
+    "normal": 199,
+    "optimised": 199
+  },
+  "bounded_comparisons": {
+    "shift": 4928,
+    "substitution": 94864,
+    "head_step": 3405,
+    "scope": "FINITE_ONLY"
+  },
+  "candidate_source_files": 70,
+  "proposed_source_changes": 3,
+  "patch_map": "proposal/PATCH_MAP.json",
+  "new_formal_execution": {
+    "status": "UNAVAILABLE",
+    "lean_version_probe_exit": 127,
+    "required_pin": "4.19.0 / 6caaee842e94",
+    "new_kernel_credit": false,
+    "new_lean_artifacts": 0,
+    "new_declaration_type_axiom_readbacks": 0,
+    "candidate_status": "UNVERIFIED_GRAPH_ONLY"
+  },
+  "preserved_formal_boundaries": [
+    "accepted mapped-native 4.19.0 scopes unchanged",
+    "accepted 4.32.2 scopes remain separate",
+    "original strict-wrapper genuine FAIL preserved",
+    "no sorryAx/error/wrong-version acceptance",
+    "no missing historical declaration recovery"
+  ],
+  "handoff_path": "handoff/CODEX_IMPLEMENTATION_HANDOFF.md",
+  "effects": {
+    "canonical_repository_write": false,
+    "github_write": false,
+    "integration_replay": false,
+    "publication": false,
+    "canonical_manifest_index_change": false,
+    "owner_adoption": false,
+    "external_review_credit": false,
+    "historical_recovery_credit": false,
+    "empirical_world_authority": false,
+    "licensing_or_policy_adjudication": false,
+    "novelty_credit": false
+  },
+  "manifest_sha256": "ca1df1b4385030c5e2e6fd790d91a6f4afa62657eeb21f08f7b2b12787aa51d7",
+  "manifest_sidecar_sha256": "3b1e1df538807ebbc72d9180073dc80dad380065e5ebd3144cb65aa589b76078",
+  "payload_files": 126,
+  "archive_members": 130,
+  "fresh_reopen": {
+    "required": true,
+    "external_report_suffix": ".FRESH_REOPEN_VERIFICATION.json",
+    "verification_tool": "tools/verify_checkpoint.py",
+    "note": "Final archive identity and fresh report remain external to avoid self-hash cycles; this receipt alone does not assert that the later reopen passed."
+  }
+}

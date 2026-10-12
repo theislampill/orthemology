@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "fixtures": [
+    {
+      "bytes": 9,
+      "sha256": "73f6c165f84bdfb6841e8878c85dc8e31fce88c8d2891158b8e0f73c722bfd0b",
+      "arity": 0,
+      "output": 0
+    },
+    {
+      "bytes": 12,
+      "sha256": "588ab11b83bfc5070af884ce39b7c2ca40697756e7f3c9036ac2266684b0cfda",
+      "arity": 2,
+      "output": 2
+    },
+    {
+      "bytes": 42,
+      "sha256": "a0636b362a0b663120b405a5257ea4c23ac6d4763c524d813e6d5da7bd509f9b",
+      "arity": 2,
+      "output": 2
+    },
+    {
+      "bytes": 31,
+      "sha256": "39322589629e91abd680dfbb46894f4950d6e851af9b3898e4fd1da56417b5eb",
+      "arity": 2,
+      "output": 2
+    },
+    {
+      "bytes": 832,
+      "sha256": "7f0d9e0443d096cd0f5d301722f5f9190af695851150f131bc9b0d46af9ae242",
+      "arity": 2,
+      "output": 2
+    },
+    {
+      "bytes": 641,
+      "sha256": "01ad0ca8726752b79950ad7d9d28b07f5adbaa3de18733b4a99512b7b8f571c5",
+      "arity": 2,
+      "output": 2
+    },
+    {
+      "bytes": 326,
+      "sha256": "93dc89d7567ad237ae657451f80c6b20514bf985cb167167099008b92df1ff43",
+      "arity": 2,
+      "output": 2
+    }
+  ],
+  "checked": "Each of seven actual Lean-serialized programs is accepted by recovered Python decoder, exactly re-encodes, and has the same sentinel numeric index. Execution comparison is handled separately; no universal host runtime claim.",
+  "python_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c"
+}

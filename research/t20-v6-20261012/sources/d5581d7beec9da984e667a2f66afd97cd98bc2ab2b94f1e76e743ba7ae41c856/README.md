@@ -1,0 +1,7 @@
+# Finite polynomial state closure: intermediate preservation
+
+Accepted ordinary theorem and proof: for nonconstant polynomial objective on R^d, a fixed finite vector of polynomial expectations containing a nonconstant coordinate cannot have universal arbitrary nonlinear vector-field closure over all finitely supported laws. This quantifier does not exclude known-support closure, rank-restricted atomic charts or invariant Gaussian families. The rank-two versus rank-three boundary control is retained in REVIEW.md and the independent suite; matching only the first three moments does not identify a promised-rank representation. Written proofs establish universal statements; executable finite controls support them.
+
+Author packet and separate review, verified author snapshot, exact scripts/results, bounded source/novelty scan and input copies are retained unchanged. Root candidate/companion note is same-session participating context, not a separate independent ancestor. The caught float-coercion and exact-arithmetic correction record is preserved.
+
+Replay: python replay.py --output-dir /fresh/output (Python3+SymPy). Replays 616 author controls and 117 independent controls, with exact retained report comparisons. No live original paths, network, full modern source bodies, source-scan rerun or relocation required. This is not renewed source reading, kernel formalization, empirical deployment, integration, owner acceptance or T20 closure.

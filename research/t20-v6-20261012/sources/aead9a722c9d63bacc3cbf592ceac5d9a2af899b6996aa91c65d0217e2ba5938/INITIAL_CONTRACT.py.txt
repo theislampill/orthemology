@@ -1,0 +1,106 @@
+"""Two-layer actual-route/certificate contract over preserved models.
+A route record is not automatically a new created entity. Exact IDs concern
+one represented episode; no transworld origin-essentiality verdict is implied.
+"""
+from dataclasses import dataclass,replace
+from pathlib import Path
+from itertools import product,combinations
+import sys
+sys.dont_write_bytecode=True
+ROOT=Path('private-locator:8f24556a330b05a11a95')
+CHECKPOINT=ROOT/'recovery-t20/checkpoint/Orthemology_T20_Continuation_Owner_Review_Checkpoint_20261008/tranche20/research-frontier-continuation'
+sys.path.insert(0,str(CHECKPOINT/'provision-identity/src'))
+import provision_semantics as inherited
+sys.path.insert(0,str(CHECKPOINT/'sovereignty-choice-semantics/reactive-context-extension/src'))
+import reactive_context as reactive
+
+@dataclass(frozen=True)
+class EffectID:
+    episode: str
+    key: str
+
+@dataclass(frozen=True)
+class BirthID:
+    effect: EffectID
+    ordinal: int=0
+
+@dataclass(frozen=True)
+class OperativeRoute:
+    route_id: str
+    birth: BirthID
+    actual_positive_roots: frozenset
+    absence_guards: frozenset
+
+@dataclass(frozen=True)
+class Certificate:
+    proof_id: str
+    conclusion: EffectID
+    positive_facts: frozenset
+    negative_facts: frozenset=frozenset()
+
+@dataclass(frozen=True)
+class Ledger:
+    effects: tuple
+    births: tuple
+    operative_routes: tuple
+    certificates: tuple=()
+
+    def roots(self,e):
+        return frozenset().union(*(r.actual_positive_roots for r in self.operative_routes if r.birth.effect==e))
+    def guarded_absences(self,e):
+        return frozenset().union(*(r.absence_guards for r in self.operative_routes if r.birth.effect==e))
+    def exhaustive_positive_sources(self,e):
+        s=self.roots(e)
+        return s if len(s)==1 else frozenset()
+    def source_only_actual_routes(self,e):
+        return frozenset(next(iter(r.actual_positive_roots)) for r in self.operative_routes
+                         if r.birth.effect==e and len(r.actual_positive_roots)==1)
+    def cited_sources(self,e):
+        # Deliberately proof-sensitive comparator, not actual productive support.
+        return frozenset().union(*(c.positive_facts for c in self.certificates if c.conclusion==e))
+    def unique_birth_per_effect(self):
+        return all(sum(b.effect==e for b in self.births)==1 for e in self.effects)
+
+
+def adapt_run(run,episode='actual-episode'):
+    ids={key:EffectID(episode,key) for key in run.events}
+    births={key:BirthID(e) for key,e in ids.items()}
+    # Proof records in the inherited engine denote executed productive Rules.
+    # They enter the operative layer, unlike extra logical certificates below.
+    routes=tuple(OperativeRoute(p.rule,births[key],p.roots,p.absent_guards)
+                 for key,ps in sorted(run.proofs.items()) for p in sorted(ps,key=lambda p:p.rule))
+    return Ledger(tuple(ids.values()),tuple(births.values()),routes)
+
+
+def extend_certificates(ledger,*certs):return replace(ledger,certificates=ledger.certificates+tuple(certs))
+
+def certificate_valid(cert,output):
+    # Full two-input truth-functional sufficiency, not actual causation.
+    for a,b in product((False,True),repeat=2):
+        facts={'A':a,'B':b}
+        if all(facts[x] for x in cert.positive_facts) and all(not facts[x] for x in cert.negative_facts):
+            if not output(a,b):return False
+    return True
+
+
+def minimal_true_certificates(output,actual=(True,True)):
+    literals=[(g,v) for g,v in zip(('A','B'),actual)]
+    valid=[]
+    e=EffectID('actual-episode','e')
+    for size in range(3):
+        for chosen in combinations(literals,size):
+            c=Certificate(str(chosen),e,frozenset(g for g,v in chosen if v),frozenset(g for g,v in chosen if not v))
+            if certificate_valid(c,output) and not any(s<=set(chosen) for s in valid):valid.append(set(chosen))
+    return tuple(frozenset(x) for x in valid)
+
+
+def reactive_ledgers():
+    c=reactive.Catalogue(('e0','e1'));model=reactive.epistemic_model(c);out=[]
+    for w in model['worlds']:
+        a=w['actual'];ids={e:EffectID(f'ordinary-{w["context"]}',e) for e in sorted(a['events'])}
+        births={e:BirthID(t) for e,t in ids.items()}
+        routes=tuple(OperativeRoute(f'actual-direct-{e}',births[e],frozenset(a['supports'][e]),frozenset()) for e in ids)
+        ledger=Ledger(tuple(ids.values()),tuple(births.values()),routes)
+        out.append({'context':w['context'],'ledger':ledger,'actual':a,'forecasts':w['forecasts'],
+                    'originals':w['originals'],'efficient_edges':w['efficient_edges']})
+    return out

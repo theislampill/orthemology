@@ -1,0 +1,35 @@
+{
+  "scope": "Bounded local predecessor comparison only; no field-wide novelty or exhaustive repository-search claim.",
+  "inputs": [
+    {
+      "path": "repeatable-channel-constraints-20261010/RESULT.md",
+      "sha256": "8542fbf86cc2914790bfd0fdcd22920bae8fee9569927524df4e2af3ec527336",
+      "bytes": 24815,
+      "reading_scope": "Entire RESULT.md"
+    },
+    {
+      "path": "bayes-feasibility-compatibility-20261010/RESULT.md",
+      "sha256": "c6b3b3e006a25eb33b969f8d490fb9bf0906377eda86bcf27b67d5e1726a5b8f",
+      "bytes": 25743,
+      "reading_scope": "Entire RESULT.md"
+    },
+    {
+      "path": "nonseparable-bayes-repair-20261009/RESULT.md",
+      "sha256": "a9b3f91f320ee752ee732dc85af793f8a4736a98c01035fb5b197dfe2bf7eecb",
+      "bytes": 25964,
+      "reading_scope": "Entire RESULT.md"
+    },
+    {
+      "path": "channel-natural-repair-20261009/RESULT.md",
+      "sha256": "8aea89886533a3357a671432fd90ec044aa070a40d7f0152c0116156f44ff27b",
+      "bytes": 20354,
+      "reading_scope": "Entire RESULT.md"
+    },
+    {
+      "path": "face-stratified-noetic-geometry-20261010/RESULT.md",
+      "sha256": "41d1343f00006d5e97d6a0b09264cc1d99ee2dd23a13ba5caaf2169afce63fa4",
+      "bytes": 32177,
+      "reading_scope": "Entire RESULT.md"
+    }
+  ]
+}

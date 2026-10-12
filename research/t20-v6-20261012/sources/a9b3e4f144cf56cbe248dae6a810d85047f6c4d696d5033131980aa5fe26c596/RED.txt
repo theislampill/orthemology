@@ -1,0 +1,14 @@
+test_exact_operation_relative_alphabets (test_contract.SourceRecordContractTest.test_exact_operation_relative_alphabets) ... FAIL
+
+======================================================================
+FAIL: test_exact_operation_relative_alphabets (test_contract.SourceRecordContractTest.test_exact_operation_relative_alphabets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:6e241fbd38968a5b248f", line 7, in test_exact_operation_relative_alphabets
+    self.assertEqual(result.get('minimum_alphabets'), {'content_only': 1, 'content_and_voice': 2, 'content_voice_and_work_exclusion': 3})
+AssertionError: None != {'content_only': 1, 'content_and_voice': [36 chars]': 3}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)

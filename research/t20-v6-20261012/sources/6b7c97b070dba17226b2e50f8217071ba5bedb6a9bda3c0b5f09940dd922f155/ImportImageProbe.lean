@@ -1,0 +1,2 @@
+import CertificateImage
+#check CertificateCodeValidity.certValid_exact

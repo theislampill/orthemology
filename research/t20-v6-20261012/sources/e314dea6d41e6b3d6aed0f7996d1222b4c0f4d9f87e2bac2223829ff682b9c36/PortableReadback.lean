@@ -1,0 +1,146 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import FeedbackRequests
+import ProductObservationLaw
+import IndependentProductFamilies
+import GenericQueryReference
+import PolicyRowLaw
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import StackActionLaw
+import CommonSeedDerandomization
+import IIDHeadTail
+import DeterministicContinuation
+import RecurrentSupport
+import PolicyTailTransfer
+import RelativeTailTransfer
+import SafeSetTailTransfer
+import SelfVerifyingSupport
+import SeededPolicyNecessity
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+import CausalActionTree
+import CanonicalHistoryPMF
+import CanonicalHistoryBudget
+import CausalTreeLaw
+import NormalizedResetPotential
+import RecursiveMacroPotential
+import RecursiveCausalPolicy
+import RecursiveHistorySafety
+import RecursiveCanonicalSufficiency
+import StableSupportNecessity
+import WinningContinuation
+import CanonicalInvariantSafety
+import RecursiveKernelEquivalence
+import RecursiveNecessity
+import RecursiveCanonicalEquivalence
+import ObservedHistoryLicensing
+import AELicensedEquivalence
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.LicensedHistoryPath
+#print axioms Orthemology.Tranche3.LicensedHistoryPath
+#check @Orthemology.Tranche3.measurableSet_licensedHistoryPath
+#print axioms Orthemology.Tranche3.measurableSet_licensedHistoryPath
+#check @Orthemology.Tranche3.actionCompatible_measurable
+#print axioms Orthemology.Tranche3.actionCompatible_measurable
+#check @Orthemology.Tranche3.actionCompatible_fixed
+#print axioms Orthemology.Tranche3.actionCompatible_fixed
+#check @Orthemology.Tranche3.rowHistory_measurable
+#print axioms Orthemology.Tranche3.rowHistory_measurable
+#check @Orthemology.Tranche3.observedTraceLaw_dirac_raw
+#print axioms Orthemology.Tranche3.observedTraceLaw_dirac_raw
+#check @Orthemology.Tranche3.observedTraceLaw_dirac_rows
+#print axioms Orthemology.Tranche3.observedTraceLaw_dirac_rows
+#check @Orthemology.Tranche3.rowHistory_marginal_formula
+#print axioms Orthemology.Tranche3.rowHistory_marginal_formula
+#check @Orthemology.Tranche3.rowHistory_marginal_eq_historyPMF
+#print axioms Orthemology.Tranche3.rowHistory_marginal_eq_historyPMF
+#check @Orthemology.Tranche3.historySupport_positive
+#print axioms Orthemology.Tranche3.historySupport_positive
+#check @Orthemology.Tranche3.feasible_rowHistory_positive
+#print axioms Orthemology.Tranche3.feasible_rowHistory_positive
+#check @Orthemology.Tranche3.fixed_seed_ae_license_is_pointwise
+#print axioms Orthemology.Tranche3.fixed_seed_ae_license_is_pointwise
+#check @Orthemology.Tranche3.rowHistory_actionCompatible
+#print axioms Orthemology.Tranche3.rowHistory_actionCompatible
+#check @Orthemology.Tranche3.rowHistory_true_live_ae
+#print axioms Orthemology.Tranche3.rowHistory_true_live_ae
+#check @Orthemology.Tranche3.pointwise_license_implies_ae_license
+#print axioms Orthemology.Tranche3.pointwise_license_implies_ae_license
+#check @Orthemology.Tranche3.common_seed_success_and_history_event
+#print axioms Orthemology.Tranche3.common_seed_success_and_history_event
+#check @Orthemology.Tranche3.ae_licensed_policy_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.ae_licensed_policy_exists_iff_recursiveWinning
+#check @Orthemology.Tranche3.ae_licensed_finite_budget_exists_iff_recursiveWinning
+#print axioms Orthemology.Tranche3.ae_licensed_finite_budget_exists_iff_recursiveWinning
+#check @IndependentAELicensingControls.null_seed_policy_is_ae_licensed
+#print axioms IndependentAELicensingControls.null_seed_policy_is_ae_licensed
+#check @IndependentAELicensingControls.original_null_seed_is_not_pointwise_safe
+#print axioms IndependentAELicensingControls.original_null_seed_is_not_pointwise_safe
+#check @IndependentAELicensingControls.null_seed_is_measure_zero
+#print axioms IndependentAELicensingControls.null_seed_is_measure_zero
+#check @IndependentAELicensingControls.acquired_history_is_positive
+#print axioms IndependentAELicensingControls.acquired_history_is_positive
+#check @IndependentAELicensingControls.forged_action_is_incompatible
+#print axioms IndependentAELicensingControls.forged_action_is_incompatible
+#check @IndependentAELicensingControls.acquired_feedback_changes_support
+#print axioms IndependentAELicensingControls.acquired_feedback_changes_support
+#check @IndependentAELicensingControls.same_actions_do_not_determine_feedback
+#print axioms IndependentAELicensingControls.same_actions_do_not_determine_feedback
+#check @IndependentAELicensingControls.same_actions_have_different_live_support
+#print axioms IndependentAELicensingControls.same_actions_have_different_live_support
+#check @IndependentAELicensingControls.license_reads_pre_action_support
+#print axioms IndependentAELicensingControls.license_reads_pre_action_support

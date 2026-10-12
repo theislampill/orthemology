@@ -1,0 +1,85 @@
+{
+  "schema": "orthemology-modal-input-manifest-v2",
+  "session_document_date": "2026-09-08",
+  "input_records": [
+    {
+      "source_id": "I1",
+      "input_name": "orthing_continuation_frontier_v1.zip",
+      "bytes": 233062,
+      "sha256": "9dffb220edadc05eaba6b7e00092ed8c75e2bb334a49009ec77aab3c2b20c772",
+      "role": "principal predecessor archive",
+      "zip_bad_member": null,
+      "zip_members": 14
+    },
+    {
+      "source_id": "I1",
+      "input_name": "orthing_continuation_frontier_v1/continuation_complete_orthing.md",
+      "bytes": 66411,
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9",
+      "role": "principal mathematical reading copy"
+    },
+    {
+      "source_id": "I1",
+      "input_name": "orthing_continuation_frontier_v1/continuation_complete_orthing.pdf",
+      "bytes": 165270,
+      "sha256": "e07265bed9dac7a464fd402272e9ad61fce1bbfb3b445f66870aad571409aeec",
+      "role": "predecessor PDF"
+    },
+    {
+      "source_id": "I1",
+      "input_name": "orthing_continuation_frontier_v1/continuation_complete_orthing.tex",
+      "bytes": 77110,
+      "sha256": "878c562eed0f42714da8f223c68e9342629be07cf3f08f14e76b904df9df8e41",
+      "role": "predecessor LaTeX"
+    },
+    {
+      "source_id": "I2",
+      "input_name": "orthing_formalisation_v1.zip",
+      "bytes": 331357,
+      "sha256": "d2ca54c2eef34a3ab4983c67cb8413ffefccce79a9387c139e1ec99d8279d52b",
+      "role": "earlier representation and dynamics packet",
+      "zip_bad_member": null,
+      "zip_members": 11
+    },
+    {
+      "source_id": "I2",
+      "input_name": "orthing_formalisation_v1/orthing_formalisation_v1.md",
+      "bytes": 93523,
+      "sha256": "cd5070341a46658c0e4ac2c077d343d276cf16e50f0305f61ebb90ba0b624c2e",
+      "role": "earlier Markdown reading copy"
+    },
+    {
+      "source_id": "I3",
+      "input_name": "cdc_prompt(2).pdf",
+      "bytes": 123015,
+      "sha256": "0e48deee28caba82ee5b4191d4c5c6ec4d62e5d27890fa7f0d2c8868f8b758f3",
+      "role": "rough campaign guidance only"
+    },
+    {
+      "source_id": "I4",
+      "input_name": "navierstokes.pdf",
+      "bytes": 203736,
+      "sha256": "c1b5f27b1a64705cfaf1afceea513db5deedca8a18ca56ab32e7f86445a06d0c",
+      "role": "Fefferman statement with errata"
+    },
+    {
+      "source_id": "I5",
+      "input_name": "Euler.pdf",
+      "bytes": 3556634,
+      "sha256": "f0164c40fad09a646412acec95f7908ea6b2fd61d16b809954a4048665fb5f78",
+      "role": "inherited external method context"
+    },
+    {
+      "source_id": "I6",
+      "input_name": "private-identity:140ece9ebfbce267e466.png",
+      "bytes": 473360,
+      "sha256": "26ecb3efd98ea43cf244fb824e43dc1713be52ee9cc5285cec37b07bf54a9a03",
+      "role": "supplied screenshot context"
+    }
+  ],
+  "notes": [
+    "Hashes establish input byte identity, not mathematical correctness or source authority.",
+    "Conversation text is supplied contextual evidence; no fabricated complete transcript file is claimed.",
+    "Prior archives are referenced, not overwritten or silently revised."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "source_sha256": "c19e5d1a8134f9f76b5b3d4de44c6cd31caa899359f7c15e553f66f655d16208",
+  "olean_sha256": "acd227acb4abef97cbaa6a30953de5952c2681c99207d701f1ed4ebea3692298",
+  "theorem_count": 16,
+  "theorems": [
+    "IndependentDependentAudit.varying_body_inhabited_everywhere",
+    "IndependentDependentAudit.varying_body_accepts_at_skk",
+    "IndependentDependentAudit.varying_body_rejects_at_i",
+    "IndependentDependentAudit.varying_body_nonconstant",
+    "IndependentDependentAudit.varying_pi_typed",
+    "IndependentDependentAudit.varying_pi_nonempty",
+    "IndependentDependentAudit.nested_two_sort_capture_control",
+    "IndependentDependentAudit.nested_index_capture_control",
+    "IndependentDependentAudit.two_coordinate_j_typed",
+    "IndependentDependentAudit.two_coordinate_j_nonempty",
+    "IndependentDependentAudit.raw_variable_not_arbitrary_parameter",
+    "IndependentDependentAudit.no_unrestricted_link_index_transport",
+    "IndependentDependentAudit.mixed_all_typed",
+    "IndependentDependentAudit.mixed_all_nonempty",
+    "IndependentDependentAudit.mixed_all_self_typed",
+    "IndependentDependentAudit.mixed_all_self_nonempty"
+  ],
+  "expected_rejection_controls": 3,
+  "initial_failed_probe": "preseal/evidence/IndependentDependentControls-attempt1.lean"
+}

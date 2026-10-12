@@ -1,0 +1,12 @@
+# Polynomial boundary and Gaussian geometry: intermediate pair
+
+Two separately accepted components are retained as unchanged archives. Their claims are complementary at different quantifiers.
+
+## Evidence and dependency map
+- Finite polynomial state no-go: arbitrary nonlinear universal vector-field closure is impossible for a fixed finite vector of polynomial expectations containing a nonconstant coordinate, a nonconstant polynomial objective, and all finitely supported laws on R^d. The ordinary written proof carries arbitrary degree/dimension; 616 author and 117 independent exact controls support it. Known-support closure, promised-rank atomic recovery, and invariant Gaussian families are not excluded. The independent rank-two countercontrol is preserved: the conditional rank promise remains valid and is not replaced by low-order matching. Root candidate/companion note is participating same-session context, not a second independent ancestor.
+- Gaussian correction geometry: exact induced full-density tangent Riemannian metric with unrestricted admissible L2 tangent minimization. Functional minimality is proved analytically in the separate review. One-dimensional polynomial/curvature controls and invariant quadratic dynamics are distinguished from multivariate SPD/noncommuting precision results. Restricted Gaussian geometry is not unrestricted endpoint distance; inherited Hessian/Bregman results remain intact. This is an invariant-family repair, not universal finite-descriptor closure.
+
+## Fresh replay and boundaries
+Run python replay.py --output-dir /fresh/output with Python and SymPy. The no-go component replays all 616+117 controls and exact retained reports. Gaussian replays 157 portable author controls and 25 independent controls; the historical 166 author run includes nine additional live-original-path checks. Comparison removes those nine integrity labels only, without changing code or original evidence; all mathematical controls remain. The nine live originals are separately guarded at seal. All inner receipts are compared byte-for-byte after extraction.
+
+No source bodies, network or live original paths are needed for default replay. Bounded source/novelty scans and source reading are historical evidence, not newly replayed research. No universal kernel proof, deployment, cognitive/empirical identification, protected integration, owner acceptance or T20 closure. Later source-orthability investigations are excluded. Earlier delivered archives remain unchanged; this packet is additive only.

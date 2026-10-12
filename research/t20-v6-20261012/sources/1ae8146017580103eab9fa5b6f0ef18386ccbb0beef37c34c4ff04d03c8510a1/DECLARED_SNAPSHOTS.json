@@ -1,0 +1,106 @@
+{
+  "repair-before": {
+    "source_anchor": {
+      "kind": "received-authorial-reading",
+      "path": "wise-reason-root-20261010/SHIFA_e179_e193.txt",
+      "sha256": "3f363ca4eedf5edbe9a3edbcc0c53c04005433f42179e1580b5e77d6eb0d3a73",
+      "markers": "e192-e193"
+    },
+    "established_content_possibilities": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "established_content_version": "fixed",
+    "interpreted_possibilities": [
+      [
+        true,
+        true
+      ]
+    ],
+    "operative_punishment_inference": true
+  },
+  "repair-after": {
+    "source_anchor": {
+      "kind": "received-authorial-reading",
+      "path": "wise-reason-root-20261010/SHIFA_e179_e193.txt",
+      "sha256": "3f363ca4eedf5edbe9a3edbcc0c53c04005433f42179e1580b5e77d6eb0d3a73",
+      "markers": "e192-e193"
+    },
+    "established_content_possibilities": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "established_content_version": "fixed",
+    "interpreted_possibilities": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "operative_punishment_inference": false
+  },
+  "change-before": {
+    "source_anchor": {
+      "kind": "synthetic-control",
+      "source_authority": "same-authority"
+    },
+    "established_content_possibilities": [
+      [
+        true,
+        true
+      ]
+    ],
+    "established_content_version": "v1",
+    "interpreted_possibilities": [
+      [
+        true,
+        true
+      ]
+    ],
+    "operative_punishment_inference": true
+  },
+  "change-after": {
+    "source_anchor": {
+      "kind": "synthetic-control",
+      "source_authority": "same-authority"
+    },
+    "established_content_possibilities": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "established_content_version": "v2",
+    "interpreted_possibilities": [
+      [
+        true,
+        false
+      ],
+      [
+        true,
+        true
+      ]
+    ],
+    "operative_punishment_inference": false
+  }
+}

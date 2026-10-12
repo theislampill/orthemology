@@ -1,0 +1,98 @@
+[
+  {
+    "id": "RESET_OMITTED",
+    "test": "CodecTests.test_local_reset_on_repeated_inline",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "0306760a940d38ff198531de7f9c3be6e6192db389b1591448c9abfd21b2d5d9",
+    "before": "return Seq(*(Set(r,C(0)) for r in m.values()),",
+    "after": "return Seq(",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  },
+  {
+    "id": "Q8_SNAPSHOT_WRONG",
+    "test": "CompilerTests.test_q8_bounded_machine_compiler",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "42bba63fc182ae2cf4fe98467b3b7a5542911014b58621a10ee0195990dc3de5",
+    "before": "Seq(Set(oldpc,V(pc)),*cases)",
+    "after": "Seq(Set(oldpc,C(0)),*cases)",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  },
+  {
+    "id": "SELECTOR_OFFSET",
+    "test": "CompilerTests.test_pi3_compilation",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "4759fc87d87247ee97fea127d7bd39fee204c4a2a517e024d48a35454bf41a7a",
+    "before": "Set(stage,E('sub',E('sub',V(0),V(sel)),C(1)))",
+    "after": "Set(stage,E('sub',V(0),V(sel)))",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  },
+  {
+    "id": "SHIFT_TAIL_WRONG",
+    "test": "CompilerTests.test_rational_shift_compilation",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "d1b4c962919bc86bee28aebc4ab7f2f3d70201769ad696dcffb0d2c3ff8a89d4",
+    "before": "E('mod',V(1),E('pow2',V(tail_len)))",
+    "after": "E('mod',V(1),E('pow2',E('add',V(tail_len),C(1))))",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  },
+  {
+    "id": "RESOURCE_AS_ZERO",
+    "test": "CodecTests.test_invalid_is_zero_resource_is_not",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "def921760f1d9d456ef86ba28ea08b27d619aa64774692118d398928f7cbe0da",
+    "before": null,
+    "after": "\n_original_run=run\ndef run(*args,**kwargs):\n    try:return _original_run(*args,**kwargs)\n    except ResourceLimit:return 0\n",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  },
+  {
+    "id": "FLOW_CHECKER_ALWAYS_TRUE",
+    "test": "FlowTests.test_exact_data_and_infeasibility",
+    "original_sha256": "41278054bd626e2c0b50a6ff887b63ac27311415eeabb3a7e40f60958205502b",
+    "mutant_sha256": "d429d00cc7250477f573a0ac3662c7de534dd7b0e1df46bf146cb3342be983ff",
+    "before": null,
+    "after": "\n_original_verify=verify\ndef verify(*args,**kwargs):return True\n",
+    "exit": 1,
+    "result": {
+      "tests_run": 1,
+      "failures": 1,
+      "errors": 0,
+      "success": false
+    },
+    "detected": true
+  }
+]

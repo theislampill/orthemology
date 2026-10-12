@@ -1,0 +1,68 @@
+Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+Compiling GroundedSupport.lean
+Compiling ContextualEncoding.lean
+Compiling SupportBridge.lean
+SupportBridge.lean:8:0: warning: automatically included section variable(s) unused in theorem 'T20Resumed.minimal_operational_support_cover':
+  [DecidableEq Root]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq Root] in theorem ...
+note: this linter can be disabled with `set_option linter.unusedSectionVars false`
+Compiling Readback.lean
+T20Resumed.grounded_retractions_iff_operational_cover {Root : Type} [DecidableEq Root] {Claim : Type}
+  (base : Root → Claim → Prop) (rule : Finset Claim → Claim → Prop) (claim : Claim) (U : Finset Root)
+  (O : Finset Root → Prop) (operation_mono : ∀ (A B : Finset Root), A ⊆ B → O A → O B) :
+  (∀ removed ⊆ U, T20Grounded.Derivable base rule (U \ removed) claim → O (U \ removed)) ↔
+    ∀ S ⊆ U,
+      T20Grounded.MinimalFor (fun A => T20Grounded.Derivable base rule A claim) S → ∃ C ⊆ S, T20Grounded.MinimalFor O C
+'T20Resumed.minimal_operational_support_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T20Resumed.all_retractions_iff_support_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T20Resumed.grounded_retractions_iff_operational_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'T20Resumed.Language.compositional_contextual_translation' depends on axioms: [propext]
+'T20Resumed.Language.relay_preserves_source_act' depends on axioms: [propext]
+'T20Resumed.Language.same_formula_rebound_different_proposition' does not depend on any axioms
+'T20Resumed.Language.changed_binding_changes_truth_in_a_valuation' does not depend on any axioms
+'T20Resumed.Language.quote_is_not_assertion' does not depend on any axioms
+'T20Resumed.Language.directive_is_not_assertion' does not depend on any axioms
+Compiling ReviewerControls.lean
+'T20IndependentReview.minimal_cover_without_monotonicity' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.failed_larger_retained_profile' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.actual_upward_closure_missing' depends on axioms: [propext, Quot.sound]
+'T20IndependentReview.upward_completion_is_not_direct_operation' depends on axioms: [propext, Quot.sound]
+Compiling ReviewerReadback.lean
+T20Resumed.Language.compositional_contextual_translation (c : T20Resumed.Language.Context)
+  (f : T20Resumed.Language.Formula) :
+  T20Resumed.Language.interpretB c (T20Resumed.Language.translate f) = T20Resumed.Language.resolve c f
+T20Resumed.Language.relay_preserves_source_act (o : T20Resumed.Language.OccurrenceA) (event : ℕ)
+  (ctx : T20Resumed.Language.Context) :
+  let r := T20Resumed.Language.relay o event ctx;
+  r.sourceEvent = o.event ∧
+    r.sourceForce = o.force ∧
+      T20Resumed.Language.interpretB r.sourceContext r.payload = T20Resumed.Language.resolve o.original o.formula ∧
+        r.carrierForce = T20Resumed.Language.Force.quote
+T20Resumed.Language.same_formula_rebound_different_proposition :
+  T20Resumed.Language.resolve T20Resumed.Language.c0 T20Resumed.Language.indexedClaim ≠
+    T20Resumed.Language.resolve T20Resumed.Language.c1 T20Resumed.Language.indexedClaim
+T20Resumed.Language.changed_binding_changes_truth_in_a_valuation :
+  T20Resumed.Language.valuation (T20Resumed.Language.resolve T20Resumed.Language.c0 T20Resumed.Language.indexedClaim) ∧
+    ¬T20Resumed.Language.valuation (T20Resumed.Language.resolve T20Resumed.Language.c1 T20Resumed.Language.indexedClaim)
+T20Resumed.minimal_operational_support_cover {Root : Type} [DecidableEq Root] (U : Finset Root)
+  (E O : Finset Root → Prop) (operation_mono : ∀ (A B : Finset Root), A ⊆ B → O A → O B) :
+  (∀ A ⊆ U, E A → O A) ↔ ∀ S ⊆ U, T20Grounded.MinimalFor E S → ∃ C ⊆ S, T20Grounded.MinimalFor O C
+T20Resumed.all_retractions_iff_support_cover {Root : Type} [DecidableEq Root] (U : Finset Root)
+  (E O : Finset Root → Prop) (operation_mono : ∀ (A B : Finset Root), A ⊆ B → O A → O B) :
+  (∀ removed ⊆ U, E (U \ removed) → O (U \ removed)) ↔
+    ∀ S ⊆ U, T20Grounded.MinimalFor E S → ∃ C ⊆ S, T20Grounded.MinimalFor O C
+T20Resumed.grounded_retractions_iff_operational_cover {Root : Type} [DecidableEq Root] {Claim : Type}
+  (base : Root → Claim → Prop) (rule : Finset Claim → Claim → Prop) (claim : Claim) (U : Finset Root)
+  (O : Finset Root → Prop) (operation_mono : ∀ (A B : Finset Root), A ⊆ B → O A → O B) :
+  (∀ removed ⊆ U, T20Grounded.Derivable base rule (U \ removed) claim → O (U \ removed)) ↔
+    ∀ S ⊆ U,
+      T20Grounded.MinimalFor (fun A => T20Grounded.Derivable base rule A claim) S → ∃ C ⊆ S, T20Grounded.MinimalFor O C
+T20IndependentReview.minimal_cover_without_monotonicity (s : Finset Bool) :
+  T20Grounded.MinimalFor T20IndependentReview.E s → ∃ c ⊆ s, T20Grounded.MinimalFor T20IndependentReview.O c
+T20IndependentReview.failed_larger_retained_profile :
+  T20IndependentReview.E {false, true} ∧ ¬T20IndependentReview.O {false, true}
+T20IndependentReview.actual_upward_closure_missing :
+  ¬∀ (a b : Finset Bool), a ⊆ b → T20IndependentReview.O a → T20IndependentReview.O b
+T20IndependentReview.upward_completion_is_not_direct_operation :
+  (∃ c ⊆ {false, true}, T20Grounded.MinimalFor T20IndependentReview.O c) ∧ ¬T20IndependentReview.O {false, true}

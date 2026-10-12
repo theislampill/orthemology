@@ -1,0 +1,74 @@
+from dataclasses import replace
+import unittest
+from production_contract import *
+
+class ProductionContractTests(unittest.TestCase):
+    def test_sound_redundant_certificate_changes_no_actual_production(self):
+        r=inherited.run((inherited.rule('A-actual','A'),),'AB')
+        l=adapt_run(r);e=l.effects[0]
+        ca=Certificate('A-suffices',e,frozenset('A'))
+        cab=Certificate('A-and-B-also-suffice',e,frozenset('AB'))
+        self.assertTrue(certificate_valid(ca,lambda a,b:a))
+        self.assertTrue(certificate_valid(cab,lambda a,b:a))
+        x=extend_certificates(l,ca);y=extend_certificates(x,cab)
+        self.assertEqual(x.effects,y.effects);self.assertEqual(x.births,y.births)
+        self.assertEqual(x.operative_routes,y.operative_routes)
+        self.assertEqual(x.exhaustive_positive_sources(e),frozenset('A'))
+        self.assertEqual(y.exhaustive_positive_sources(e),frozenset('A'))
+        self.assertNotEqual(x.cited_sources(e),y.cited_sources(e))
+    def test_old_rule_addition_is_new_declared_production_not_proof_weakening(self):
+        base=(inherited.rule('A-actual','A'),)
+        extra=base+(inherited.rule('new-AB-production','AB'),)
+        for profile in inherited.PROFILES:
+            self.assertEqual(inherited.run(base,profile).history(),inherited.run(extra,profile).history())
+        x=adapt_run(inherited.run(base,'AB'));y=adapt_run(inherited.run(extra,'AB'));e=x.effects[0]
+        self.assertEqual(x.effects,y.effects)
+        self.assertNotEqual(x.operative_routes,y.operative_routes)
+        self.assertEqual(x.roots(e),frozenset('A'));self.assertEqual(y.roots(e),frozenset('AB'))
+    def test_joint_overdetermined_priority_same_birth_distinct_actual_routes(self):
+        ledgers={p:adapt_run(inherited.run(inherited.direct_rules(p),'AB')) for p in ('coalescence','redundant','priority_A')}
+        for l in ledgers.values():self.assertTrue(l.unique_birth_per_effect())
+        j,o,p=[ledgers[k] for k in ('coalescence','redundant','priority_A')];e=j.effects[0]
+        self.assertEqual(j.effects,o.effects);self.assertEqual(o.effects,p.effects)
+        self.assertEqual(j.births,o.births);self.assertEqual(o.births,p.births)
+        self.assertEqual(j.source_only_actual_routes(e),frozenset())
+        self.assertEqual(o.source_only_actual_routes(e),frozenset('AB'))
+        self.assertEqual(p.source_only_actual_routes(e),frozenset('A'))
+        self.assertEqual(j.exhaustive_positive_sources(e),frozenset())
+        self.assertEqual(o.exhaustive_positive_sources(e),frozenset())
+        self.assertEqual(p.exhaustive_positive_sources(e),frozenset('A'))
+    def test_multiple_minimal_certificates_do_not_force_exclusive_attribution(self):
+        self.assertEqual(set(minimal_true_certificates(lambda a,b:a or b)),{frozenset({('A',True)}),frozenset({('B',True)})})
+        self.assertEqual(set(minimal_true_certificates(lambda a,b:a and b)),{frozenset({('A',True),('B',True)})})
+        # Minimality removes redundant premises, not rival sufficient explanations.
+    def test_output_sufficiency_does_not_make_a_route_actual(self):
+        l=adapt_run(inherited.run(inherited.direct_rules('priority_A'),'AB'));e=l.effects[0]
+        cb=Certificate('B-output-sufficiency',e,frozenset('B'))
+        self.assertTrue(certificate_valid(cb,lambda a,b:a or b))
+        self.assertNotIn('B',l.source_only_actual_routes(e))
+    def test_absence_guard_not_positive_producer_or_unconditioned_power(self):
+        rule=inherited.rule('A-needs-B-absent','A','B')
+        r=inherited.run((rule,),'A');l=adapt_run(r);e=l.effects[0]
+        self.assertEqual(l.exhaustive_positive_sources(e),frozenset('A'))
+        self.assertEqual(l.guarded_absences(e),frozenset('B'))
+        self.assertFalse(inherited.run((rule,),'AB').events)
+        self.assertNotIn('B',l.roots(e))
+    def test_current_joined_candidate_survives_certificate_enrichment(self):
+        for item in reactive_ledgers():
+            l=item['ledger'];a=item['actual']
+            self.assertTrue(all(a['intentions'].values()));self.assertTrue(all(a['own_activity_ends'].values()))
+            self.assertTrue(all(f==a for f in item['forecasts'].values()))
+            self.assertTrue(l.unique_birth_per_effect())
+            for e in l.effects:
+                self.assertEqual(l.roots(e),frozenset('AB'))
+                self.assertFalse(l.exhaustive_positive_sources(e))
+                enriched=extend_certificates(l,Certificate('record-of-observed-event',e,frozenset('AB')))
+                self.assertEqual(l.operative_routes,enriched.operative_routes)
+                self.assertEqual(l.roots(e),enriched.roots(e))
+    def test_effect_and_birth_ids_have_no_source_component(self):
+        l=adapt_run(inherited.run(inherited.direct_rules('coalescence'),'AB'));e=l.effects[0]
+        self.assertEqual(e,EffectID('actual-episode','e'))
+        self.assertEqual(l.births,(BirthID(e),))
+        self.assertNotIn('A',repr(e));self.assertNotIn('B',repr(e))
+
+if __name__=='__main__':unittest.main(verbosity=2)

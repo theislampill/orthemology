@@ -1,0 +1,69 @@
+import SelfVerifyingSupport
+import SupportStageCertificate
+import SupportFixtures
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+
+#check Orthemology.Tranche2.prune_mono
+#print axioms Orthemology.Tranche2.prune_mono
+#check Orthemology.Tranche2.selfVerifying_union
+#print axioms Orthemology.Tranche2.selfVerifying_union
+#check Orthemology.Tranche2.selfVerifying_iff_fixed
+#print axioms Orthemology.Tranche2.selfVerifying_iff_fixed
+#check Orthemology.Tranche2.selfVerifying_survives
+#print axioms Orthemology.Tranche2.selfVerifying_survives
+#check Orthemology.Tranche2.pruneIter_card_fixed
+#print axioms Orthemology.Tranche2.pruneIter_card_fixed
+#check Orthemology.Tranche2.supportKernel_selfVerifying
+#print axioms Orthemology.Tranche2.supportKernel_selfVerifying
+#check Orthemology.Tranche2.supportKernel_greatest
+#print axioms Orthemology.Tranche2.supportKernel_greatest
+#check Orthemology.Tranche2.supportKernel_nonempty_iff
+#print axioms Orthemology.Tranche2.supportKernel_nonempty_iff
+#check Orthemology.Tranche2.stageCertificate_iff_witness
+#print axioms Orthemology.Tranche2.stageCertificate_iff_witness
+#check Orthemology.Tranche2.supportKernel_signal_refinement
+#print axioms Orthemology.Tranche2.supportKernel_signal_refinement
+#check Orthemology.Tranche2.supportKernel_target_enlargement
+#print axioms Orthemology.Tranche2.supportKernel_target_enlargement
+#check Orthemology.Tranche2.Fixtures.cascade_kernel_empty
+#print axioms Orthemology.Tranche2.Fixtures.cascade_kernel_empty
+#check Orthemology.Tranche2.Fixtures.cascade_first_round
+#print axioms Orthemology.Tranche2.Fixtures.cascade_first_round
+#check Orthemology.Tranche2.Fixtures.cascade_second_round
+#print axioms Orthemology.Tranche2.Fixtures.cascade_second_round
+#check Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty
+#print axioms Orthemology.Tranche2.Fixtures.informative_all_kernels_nonempty
+#check Orthemology.Tranche2.Fixtures.informative_no_common_target
+#print axioms Orthemology.Tranche2.Fixtures.informative_no_common_target
+#check Orthemology.Tranche2.finiteKL_pos
+#print axioms Orthemology.Tranche2.finiteKL_pos
+#check Orthemology.Tranche2.logScore_expectation
+#print axioms Orthemology.Tranche2.logScore_expectation
+#check Orthemology.Tranche2.logScore_strong_law
+#print axioms Orthemology.Tranche2.logScore_strong_law
+#check Orthemology.Tranche2.logScore_sum_tendsto_atTop
+#print axioms Orthemology.Tranche2.logScore_sum_tendsto_atTop
+#check Orthemology.Tranche2.sampled_logScore_tendsto_atTop
+#print axioms Orthemology.Tranche2.sampled_logScore_tendsto_atTop
+#check Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent
+#print axioms Orthemology.Tranche2.sampled_logScore_tendsto_of_joint_independent
+#check Orthemology.Tranche2.log_prefixLikelihood_ratio
+#print axioms Orthemology.Tranche2.log_prefixLikelihood_ratio
+#check Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero
+#print axioms Orthemology.Tranche2.sampled_false_likelihood_ratio_tendsto_zero
+#check Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite
+#print axioms Orthemology.Tranche2.blockCount_tendsto_of_selected_infinite
+#check Orthemology.Tranche2.likelihood_block_controller_eventually_good
+#print axioms Orthemology.Tranche2.likelihood_block_controller_eventually_good
+#check Orthemology.Tranche2.canonicalSelected_maximizes
+#print axioms Orthemology.Tranche2.canonicalSelected_maximizes
+#check Orthemology.Tranche2.candidateFor_prefix_local
+#print axioms Orthemology.Tranche2.candidateFor_prefix_local
+#check Orthemology.Tranche2.canonicalSelected_measurable
+#print axioms Orthemology.Tranche2.canonicalSelected_measurable
+#check Orthemology.Tranche2.canonical_block_policy_eventually_good
+#print axioms Orthemology.Tranche2.canonical_block_policy_eventually_good

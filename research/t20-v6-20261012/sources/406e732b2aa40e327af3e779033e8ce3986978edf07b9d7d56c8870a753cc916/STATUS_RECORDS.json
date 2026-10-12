@@ -1,0 +1,101 @@
+{
+  "U09": {
+    "kernel_credit": false,
+    "canonical_adoption": false,
+    "historical_status_rewritten": false,
+    "lean_4_19_compilation": "HOST_EXECUTION_BLOCKED",
+    "declaration_type_readback": {},
+    "axiom_audit": {},
+    "compiled_artifacts": [],
+    "source_inventory_sha256": "bfd0a2dec699d6b29891aed9f4b6224b8a60d437c92e40454be2726524db56ff",
+    "novelty_claim": false,
+    "terminal_status": "PARTIAL \u2014 EXACT IRREDUCIBLE BLOCKER: exact Lean 4.19.0 compilation, declaration/type readback and axiom audit of the fully authored U09 candidate modules cannot execute on this host.",
+    "inherited_status": "PARTIAL",
+    "ordinary_mathematics": "PROVED_AT_EXACT_SOURCE_SCOPE",
+    "formal_source_status": "COMPLETE_AUTHORED_CANDIDATE_BODIES_BUT_UNVERIFIED",
+    "completed_local_gates": [
+      "canonical seven-rule finite typing and source relations fixed",
+      "target Curry syntax/typing and both substitutions",
+      "lambda generation across forall rules and target subject reduction",
+      "typing preservation and positive compatible simulation",
+      "finite/chain and conditional target-SN reflection",
+      "independent direct source SN",
+      "source confluence/NF completeness",
+      "Omega no finite representative modulo Conv"
+    ],
+    "refuted_subclaim": "Target beta-convertibility implies raw source Conv.",
+    "replacement": "Source conversion is preserved; finitely typed source inputs have unique source normal forms, and conversion is equality of those normal forms.",
+    "ordinary_work_not_deferred": true,
+    "not_claimed": [
+      "target-conversion reflection",
+      "new global target-System-F-SN mechanisation",
+      "semantic Code SN",
+      "kernel proof before actual compile"
+    ]
+  },
+  "U10": {
+    "kernel_credit": false,
+    "canonical_adoption": false,
+    "historical_status_rewritten": false,
+    "lean_4_19_compilation": "HOST_EXECUTION_BLOCKED",
+    "declaration_type_readback": {},
+    "axiom_audit": {},
+    "compiled_artifacts": [],
+    "source_inventory_sha256": "bfd0a2dec699d6b29891aed9f4b6224b8a60d437c92e40454be2726524db56ff",
+    "novelty_claim": false,
+    "terminal_status": "REFUTED_AS_STATED / REPLACEMENT_PROVED",
+    "inherited_status": "REFUTED_AS_STATED / REPLACEMENT_PROVED",
+    "ordinary_mathematics": "PRESERVED_EXACT_ATTEMPT2_REPLACEMENT_MODEL_AND_THEOREMS",
+    "formal_source_status": "GENERIC_PER_AND_EXPLICIT_ALL_INTERFACES_AUTHORED_UNCOMPILED; FULL_RECURSIVE_ORDINARY_MODEL_MECHANISATION_NOT_CLAIMED",
+    "refutation_scope": [
+      "unrestricted raw-conversion identity extension",
+      "arbitrary fixed-environment unary membership entails relational membership",
+      "unconditional coupling-existence/intersection interchange"
+    ],
+    "replacement": "Endpoint-indexed respectful PER/link model and source abstraction theorem with explicit dependent coherence; finite common-coupling criterion and shared-seed effect theorem.",
+    "original_contract_disposition": "Resolved by precise refutations plus the preserved ordinary replacement at its stated hypotheses; accepted finite R1 unchanged.",
+    "new_research_repetition": false,
+    "kernel_qualification_required_for_formal_claims": true,
+    "not_claimed": [
+      "arbitrary canonical Code is parametric",
+      "new full recursive/dependent U10 kernel model",
+      "novelty or independent expert review"
+    ]
+  },
+  "U11": {
+    "kernel_credit": false,
+    "canonical_adoption": false,
+    "historical_status_rewritten": false,
+    "lean_4_19_compilation": "HOST_EXECUTION_BLOCKED",
+    "declaration_type_readback": {},
+    "axiom_audit": {},
+    "compiled_artifacts": [],
+    "source_inventory_sha256": "bfd0a2dec699d6b29891aed9f4b6224b8a60d437c92e40454be2726524db56ff",
+    "novelty_claim": false,
+    "terminal_status": "PARTIAL \u2014 EXACT IRREDUCIBLE BLOCKER: exact Lean 4.19.0 qualification of the authored intrinsic tracked dependent core, generated finite envelopes and partial proof-replay soundness targets cannot execute on this host.",
+    "inherited_status": "PARTIAL",
+    "ordinary_mathematics": "PROVED_FOR_PROPOSED_INTRINSIC_CORE_AND_EXPLICIT_PARTIAL_REPLAY_INTERFACE",
+    "formal_source_status": "COMPLETE_AUTHORED_CANDIDATE_BODIES_FOR_NAMED_CORE_AND_REPLAY_SCOPE_BUT_UNVERIFIED",
+    "completed_local_gates": [
+      "finite polynomial abstraction beta and structural laws",
+      "valid contexts/coherent types/tracked terms/substitutions",
+      "Pi/Sigma/identity/contextual J with both coherence coordinates",
+      "explicit parametric All formation/uniform introduction/elimination/self",
+      "exact Girard-sensitive closure exclusion",
+      "strict finite-evidence frontend and source-path proof replay",
+      "partial canonical exporter with bound target objects",
+      "nonempty dependent/All examples and finite generated replay targets"
+    ],
+    "refuted_subclaim": "Every accepted dependent frontend result has a total literal export to unchanged canonical TypeCode/Cert with no refusal.",
+    "replacement": "Partial exact finite rendering plus kernel admission only through real bound FiniteEnvelope/DependentEnvelope; accepted replay is sound, refusal produces no proof.",
+    "ordinary_work_not_deferred_at_replacement_scope": true,
+    "not_claimed": [
+      "universal machine verification of Python/JSON interpreter",
+      "a total arbitrary-JSON-to-intrinsic dependent interpreter",
+      "decision of all PER equalities",
+      "SN of all semantic/dependent realisers",
+      "same-level Girard-sensitive closure",
+      "canonical adoption of the new admission interface"
+    ]
+  }
+}

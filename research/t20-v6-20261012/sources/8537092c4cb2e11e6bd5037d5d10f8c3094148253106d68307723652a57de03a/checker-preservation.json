@@ -1,0 +1,32 @@
+[
+  {
+    "file": "legacy_relational_checks.py",
+    "bytes": 10678,
+    "sha256": "f555e4fc20f2f263ae9222523c28434202317c963c202d65789fdda570bf0c0f"
+  },
+  {
+    "file": "legacy_reflexive_checks.py",
+    "bytes": 13209,
+    "sha256": "a7f017e94af544e8c9ecec2f3c475fd18f708b4d686942fff87b0e1e2d27e13f"
+  },
+  {
+    "file": "verify_integrated.py",
+    "bytes": 23227,
+    "sha256": "a6c36b7386a7642274ed8607bbfc09225eec0b42026796af84c99e00510a140e"
+  },
+  {
+    "file": "verify_v2.py",
+    "bytes": 9768,
+    "sha256": "6d5b2b43023ad5abc54f5fefc4e218ff16716d70003c53ed0f2e624476159142"
+  },
+  {
+    "file": "verify_revision.py",
+    "bytes": 6679,
+    "sha256": "e3dd85e04b878542595a958336bbce41ce677911bea241a6f18b812b32f6cb72"
+  },
+  {
+    "file": "verify_v4.py",
+    "bytes": 7542,
+    "sha256": "839e21ae7e9bfb3c6accf14335c1a9cb2af65b18c2fc6c9434538e4034c40144"
+  }
+]

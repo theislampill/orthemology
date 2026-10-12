@@ -1,0 +1,29 @@
+{
+  "two_players_two_responses": {
+    "tables": 81,
+    "additive_tables": 19,
+    "nonadditive_tables": 62,
+    "verified_concavity_violations": 62,
+    "verified_convexity_violations": 62
+  },
+  "three_players_two_responses": {
+    "tables": 6561,
+    "additive_tables": 33,
+    "nonadditive_tables": 6528,
+    "verified_concavity_violations": 6528,
+    "verified_convexity_violations": 6528
+  },
+  "coordination_control": {
+    "payoff": {
+      "00": 2,
+      "01": 0,
+      "10": 0,
+      "11": 1
+    },
+    "product_half_marginals": "3/4",
+    "correlated_half_diagonals_same_marginals": "3/2",
+    "unrestricted_product_optimum": 2,
+    "unrestricted_joint_optimum": 2
+  },
+  "scope": "Finite exact arithmetic checks support the analytic theorem; not an exhaustive test over arbitrary real tables."
+}

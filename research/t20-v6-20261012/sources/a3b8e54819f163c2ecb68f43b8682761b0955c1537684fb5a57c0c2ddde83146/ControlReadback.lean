@@ -1,0 +1,29 @@
+import LicenseControls
+#check @LicenseAudit.safeSupport
+#print axioms LicenseAudit.safeSupport
+#check @LicenseAudit.output_licensed_even_with_bad_default
+#print axioms LicenseAudit.output_licensed_even_with_bad_default
+#check @LicenseAudit.unreachable_history_still_licensed
+#print axioms LicenseAudit.unreachable_history_still_licensed
+#check @LicenseAudit.default_really_outside
+#print axioms LicenseAudit.default_really_outside
+#check @LicenseAudit.malformed_past_contains_unlicensed
+#print axioms LicenseAudit.malformed_past_contains_unlicensed
+#check @LicenseAudit.no_pointwise_empty_menu_policy
+#print axioms LicenseAudit.no_pointwise_empty_menu_policy
+#check @LicenseAudit.empty_target_kernel
+#print axioms LicenseAudit.empty_target_kernel
+#check @LicenseAudit.empty_menu_kernel
+#print axioms LicenseAudit.empty_menu_kernel
+#check @LicenseAudit.disjoint_target_menu_kernel
+#print axioms LicenseAudit.disjoint_target_menu_kernel
+#check @LicenseAudit.empty_plans_satisfy_menu_inclusion
+#print axioms LicenseAudit.empty_plans_satisfy_menu_inclusion
+#check @LicenseAudit.empty_plan_exposes_unlicensed_default
+#print axioms LicenseAudit.empty_plan_exposes_unlicensed_default
+#check @LicenseAudit.unlicensed_nonempty_plan
+#print axioms LicenseAudit.unlicensed_nonempty_plan
+#check @LicenseAudit.legal_can_be_target_bad
+#print axioms LicenseAudit.legal_can_be_target_bad
+#check @LicenseAudit.all_time_license_does_not_follow_from_eventual_target
+#print axioms LicenseAudit.all_time_license_does_not_follow_from_eventual_target

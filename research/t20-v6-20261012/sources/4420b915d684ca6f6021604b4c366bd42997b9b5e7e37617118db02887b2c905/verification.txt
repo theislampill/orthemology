@@ -1,0 +1,25 @@
+PASS 01: Fisher tangent-duality identity for the declared pulled-back objective
+PASS 02: normalization is preserved by the aggregate replicator field
+PASS 03: all symmetric tensor components of the hierarchy in degrees zero through five
+PASS 04: augmentation contraction lowers moment degree exactly
+PASS 05: projected mobility is the covariance matrix
+PASS 06: adding a constant covector leaves the controlled field unchanged
+PASS 07: Lagrange inversion recovers all three aggregate weights
+PASS 08: two-moment coordinate inverse and cubic support identity
+PASS 09: closed two-moment ODE is conjugate to every aggregate weight equation
+PASS 10: same first moment but distinct second moments and immediate velocities
+PASS 11: equal first two moments hide a third-moment continuation difference
+PASS 12: finite exact separating-vector search and Vandermonde nonsingularity: v=[1, 2, 4]
+PASS 13: five-point closure reconstructs every symmetric component through degree seven
+PASS 14: N=1 known-support closure is degree zero and the motion vanishes
+PASS 15: positive diagonal tilts normalize and compose by factor multiplication
+PASS 16: different within-class states retain equal controlled outputs and fixed ratios
+PASS 17: normalized exponential solution differentiates to the exact constant-control ODE
+PASS 18: coarse expectation equals negative log-partition gradient
+PASS 19: zero-time partition derivatives recover weights by finite exponential independence
+PASS 20: affinely independent deterministic and noisy supports have first-moment closure
+PASS 21: affinely dependent examples have quadratic observables outside the first-moment span
+
+All 21 exact control groups passed.
+SymPy version: 1.14.0
+No floating-point sampling, numerical integration, empirical claims, or general-proof enumeration.

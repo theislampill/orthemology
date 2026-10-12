@@ -1,0 +1,135 @@
+{
+  "status": "PASS_INDEPENDENT_COMPACT_OBSERVATION_AUDIT",
+  "timestamp_utc": "2026-09-30T23:05:58.289768+00:00",
+  "scope": "Classical compact-confinement common-action theorem and stated wrappers; fixed closed targets, nonzero full-path common reference, exact eventual membership",
+  "inputs": [
+    {
+      "path_from_tranche2": "common-observation-audit/snapshot/SelfVerifyingSupport.lean",
+      "sha256": "46643e3bd1194b699ffe67687dfba24761e2eb05ad750bae8b25d2f5fe96470b",
+      "bytes": 8289,
+      "preserved": true
+    },
+    {
+      "path_from_tranche2": "root-research/lean/CommonObservationBoundary.lean",
+      "sha256": "8fdc8956bc6176f220dc6ec217aa2d3df5ce0c3c6c3ad2911523bb9198692fb4",
+      "bytes": 3494,
+      "preserved": true
+    },
+    {
+      "path_from_tranche2": "root-research/lean/CommonObservationFiniteActions.lean",
+      "sha256": "e5b0b4c3152654377a4dfb7146039ccbdb4f4a1f54a89cab5ffae1e9647a8040",
+      "bytes": 1845,
+      "preserved": true
+    },
+    {
+      "path_from_tranche2": "compact-observation/lean/CompactObservationBoundary.lean",
+      "sha256": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+      "bytes": 6715,
+      "preserved": true
+    },
+    {
+      "path_from_tranche2": "compact-observation/lean/CompactBoundaryControls.lean",
+      "sha256": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58",
+      "bytes": 3225,
+      "preserved": true
+    }
+  ],
+  "replay_result_sha256": "fa428e6ee181d761f6fb1656a21ba266ae5c4e4e1f4ad3f3f940b3ee8e270712",
+  "checks": [
+    {
+      "module": "TypeReadback",
+      "compiler_exit_code": 0,
+      "axiom_readbacks": 7,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "3c4035c0ca8179557348d262a3e3ba2e12634f4e3538a1922e8ed0a6280c8030"
+    },
+    {
+      "module": "CompactBoundaryControls",
+      "compiler_exit_code": 0,
+      "axiom_readbacks": 4,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "f0ec8eff419a4d14d13a60a77aeb30c6044c773ef086045057e9a83a264cf788"
+    },
+    {
+      "module": "ConfinementControl",
+      "compiler_exit_code": 0,
+      "axiom_readbacks": 2,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "dd34ccf0a7b1cd15e685d999b2c784fb8f71a1bb42e1615e2948d9363ee8f27c"
+    },
+    {
+      "module": "ConclusionScopeControl",
+      "compiler_exit_code": 0,
+      "axiom_readbacks": 4,
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "log_sha256": "32423f6eae0b3af65404bccf7bddf20577c825bfdc9c21cad49b9b6ebc7dc4d8"
+    }
+  ],
+  "positive_deletion_controls": [
+    "Nonclosed targets despite compact confinement",
+    "Noncompact action space with closed targets",
+    "Missing reference-law confinement despite a named compact set"
+  ],
+  "conclusion_control": "Unique common point 0 never produced by the reciprocal sequence; no uniform simultaneous-target tail",
+  "nonclaims": [
+    "No novelty",
+    "No stochastic-policy law refinement",
+    "No full CIRS necessity",
+    "No realised-output or measurable-selector conclusion",
+    "No time-varying target extension"
+  ],
+  "preserved_seals": [
+    {
+      "lane": "orthability",
+      "manifest_sha256": "f50d4ec3a121618c24bd55c6c3dd1a86618fbf535fc678dbe11111d5ed179fb9",
+      "verified_file_count": 53,
+      "result": "UNCHANGED"
+    },
+    {
+      "lane": "block-rigidity-review",
+      "manifest_sha256": "96b751c0512252dd733e4892e766018ce3c8e796701b0803af1a58eeaf847d86",
+      "verified_file_count": 10,
+      "result": "UNCHANGED"
+    },
+    {
+      "lane": "block-rigidity-review/anchored-family-delta",
+      "manifest_sha256": "d2709517faefd04c5520882c8682c3f33d856891dd5791a17b7885025e4957e0",
+      "verified_file_count": 7,
+      "result": "UNCHANGED"
+    },
+    {
+      "lane": "necessity-bridge-review",
+      "manifest_sha256": "0b72ee84e7e261b218ad8e43a10c7a638eed854701de9aa7017b7bc94cd6096f",
+      "verified_file_count": 6,
+      "result": "UNCHANGED"
+    },
+    {
+      "lane": "necessity-bridge-review/recurrence-formal",
+      "manifest_sha256": "6ee0ff22552034b7621de594c2282018f84ff94e7925b960892bf0c9198765a8",
+      "verified_file_count": 4,
+      "result": "UNCHANGED"
+    },
+    {
+      "lane": "policy-embedding-audit",
+      "manifest_sha256": "7a624fcd0b4d577320cf9c9f6abd7e9e09c23e15d2f88dd91f59da72e2ddad5d",
+      "verified_file_count": 31,
+      "result": "UNCHANGED"
+    }
+  ]
+}

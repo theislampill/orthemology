@@ -1,0 +1,28 @@
+{
+  "schema": "p15-p14-predecessor-contract-v1",
+  "bundled_input_handoff": {
+    "filename": "predecessor/Orthemology_Pro_P14_Epistemic_Tuples_Equilibrium_INPUT_HANDOFF.zip",
+    "bytes": 2090489,
+    "sha256": "1c8586cfa111b704bc40e9736c9853ce59f26fdfa190c33ff76ffdb50b96ad47",
+    "status": "SEALED_HANDOFF_ONLY",
+    "research_executed": false
+  },
+  "completed_result_required_at_runtime": true,
+  "completed_result_identity": "UNKNOWN_UNTIL_P14_EXECUTION",
+  "absence_status": "BLOCKED_P14_RESULT_ABSENT",
+  "do_not_reconstruct_p14": true,
+  "main_commit": "03e2604dfcef278b01c60d19b05370fcec4194b6",
+  "main_tree": "3d06e80277ce39286c94307e0f14b215bc94ed83",
+  "required_terminal_units": [
+    "P14-ET01",
+    "P14-ET02",
+    "P14-ET03",
+    "P14-ET04",
+    "P14-ET05",
+    "P14-ET06",
+    "P14-ET07",
+    "P14-ET08"
+  ],
+  "positive_P14_not_required": true,
+  "rule": "P15 consumes P14 actual results including negative/rejected bridges; it never upgrades P14 by assumption."
+}

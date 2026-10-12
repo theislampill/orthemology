@@ -1,0 +1,17 @@
+{
+  "status": "EXACT_SOURCE_BYTES_RECOVERED",
+  "source": "RepairTestingReduction.lean",
+  "bytes": 5135,
+  "sha256": "c86a552e28c596255b14bfaca8ef99c155ec5000a52301c127fbc12bc3e77de5",
+  "basis": "Complete earlier tool-returned source text, reconstructed without omitted lines, matched to the previously recorded immutable source digest",
+  "original_path": "tranche4/root-research/lean/RepairTestingReduction.lean",
+  "original_root_manifest_sha256": "96ae81a53b205478d8594f003ca32bf6c69527ad61d68b13f31e614c597f3fe0",
+  "current_replay": "NOT_PERFORMED",
+  "missing_for_current_replay": [
+    "FiniteLikelihoodRisk dependency closure and pinned toolchain availability must be established separately"
+  ],
+  "old_archive_status": "Reported old review archives are unavailable; their seals are not restored by this single-file recovery",
+  "executor_clock_record": "2026-10-01T12:30:25.242543+00:00",
+  "verified_session_utc": "2026-10-01T12:30:38Z",
+  "clock_note": "The recovered executor clock is four hours behind the session UTC clock; use verified_session_utc for custody chronology."
+}

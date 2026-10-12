@@ -1,0 +1,216 @@
+import GenericFiniteQueryLocality
+import GenericFiniteQueryMeasure
+import PolicyRowEvaluator
+import PolicyTranscriptFiber
+import FeedbackRequests
+import ProductObservationLaw
+import IndependentProductFamilies
+import GenericQueryReference
+import PolicyRowLaw
+import FeedbackFiberProbability
+import PolicyCylinderProbability
+import HistoryPathConsistency
+import PolicyObservedLaw
+import PolicyTraceBinding
+import dependencies.StatisticalRepair
+import HellingerTree
+import SubprobHellinger
+import DependentHellinger
+import ResetBudget
+import BlockKernel
+import StoppedBlock
+import SelfVerifyingSupport
+import ResidualDeficit
+import FiniteLikelihood
+import AdaptiveLikelihood
+import LikelihoodProducts
+import BlockController
+import CanonicalBlockPolicy
+import StoppedPhasePolicy
+import WeightedPotential
+import ResetHellinger
+import LiveSourceCertificate
+import GuardedResetBudget
+import GuardedResetHellinger
+import GuardedLiveController
+import StoppedActionCost
+import ResetLaw
+import ResetTrajectory
+import ResetFutureCost
+import MarkovCharge
+import ResetExpectation
+import FiniteBudgetAlmostSure
+import TrajectoryBudget
+import GeneratedLiveController
+import SupportStageCertificate
+import RecursiveWinningCertificate
+import StoppedSupportUpdate
+import RecursivePhaseExtraction
+import RecursiveGeneratedController
+import RecordedTransition
+import RecordedCharge
+import RecordedBudgetTransfer
+import StoppedRecordActions
+import dependencies.PhysicalFlattening
+import RecursiveRecordedController
+import MarkovZeroEvent
+import dependencies.MeasurablePhysicalFlattening
+import RecursivePhysicalDecoder
+import PhysicalCostConservation
+import RecursivePhysicalBudget
+import AcyclicPhaseBudget
+import ChainHellingerBudget
+import ChainPhysicalBudget
+import CanonicalHistoryPMF
+import CanonicalHistoryBudget
+import FiniteTailCoverage
+import BernoulliTailMonotonicity
+import BernoulliIntervalCoverage
+import BernoulliPrefixLaw
+import RobustBinaryRepair
+import RepairEndpointCells
+import AuditedBitControlLaw
+import StackActionLaw
+import CommonSeedDerandomization
+import IIDHeadTail
+import DeterministicContinuation
+import RecurrentSupport
+import PolicyTailTransfer
+import RelativeTailTransfer
+import SafeSetTailTransfer
+import SeededPolicyNecessity
+import CausalActionTree
+import CausalTreeLaw
+import NormalizedResetPotential
+import RecursiveMacroPotential
+import RecursiveCausalPolicy
+import RecursiveHistorySafety
+import RecursiveCanonicalSufficiency
+import StableSupportNecessity
+import WinningContinuation
+import CanonicalInvariantSafety
+import RecursiveKernelEquivalence
+import RecursiveNecessity
+import RecursiveCanonicalEquivalence
+import FiniteAuditRepair
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.AuditControlBridge.actionBlindKernel
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel
+#check @Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_nonneg
+#check @Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized
+#print axioms Orthemology.Tranche3.AuditControlBridge.actionBlindKernel_normalized
+#check @Orthemology.Tranche3.AuditControlBridge.wordPMF
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF
+#check @Orthemology.Tranche3.AuditControlBridge.wordPMF_zero
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_zero
+#check @Orthemology.Tranche3.AuditControlBridge.wordPMF_succ
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_succ
+#check @Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix
+#print axioms Orthemology.Tranche3.AuditControlBridge.wordPMF_eq_audit_prefix
+#check @Orthemology.Tranche3.AuditControlBridge.encodeHistory
+#print axioms Orthemology.Tranche3.AuditControlBridge.encodeHistory
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory
+#check @Orthemology.Tranche3.AuditControlBridge.auditActions
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_succ
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_succ
+#check @Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF
+#print axioms Orthemology.Tranche3.AuditControlBridge.encoded_wordPMF_eq_historyPMF
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_measurable
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_drop
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_drop
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_prefix_from_last
+#check @Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees
+#print axioms Orthemology.Tranche3.AuditControlBridge.observedPrefix_agrees
+#check @Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_uses_only_past
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_marginal_eq_canonical
+#check @Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditHistory_law_eq_canonical
+#check @Orthemology.Tranche3.AuditControlBridge.auditActions_measurable
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_measurable
+#check @Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical
+#print axioms Orthemology.Tranche3.AuditControlBridge.auditActions_law_eq_canonical
+#check @Orthemology.Tranche3.FiniteAuditRepair.weight
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight
+#check @Orthemology.Tranche3.FiniteAuditRepair.report
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.report
+#check @Orthemology.Tranche3.FiniteAuditRepair.kernels
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels
+#check @Orthemology.Tranche3.FiniteAuditRepair.literalGood
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literalGood
+#check @Orthemology.Tranche3.FiniteAuditRepair.publicMenu
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.publicMenu
+#check @Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight_nonneg
+#check @Orthemology.Tranche3.FiniteAuditRepair.weight_le_one
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.weight_le_one
+#check @Orthemology.Tranche3.FiniteAuditRepair.kernels_pos
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_pos
+#check @Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_nonneg
+#check @Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_normalized
+#check @Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literalGood_exact
+#check @Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.matching_report_losses
+#check @Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.crossed_report_losses
+#check @Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.no_static_common_literal_repair
+#check @Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.all_reports_coherent
+#check @Orthemology.Tranche3.FiniteAuditRepair.kernels_identify
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.kernels_identify
+#check @Orthemology.Tranche3.FiniteAuditRepair.support_stays
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.support_stays
+#check @Orthemology.Tranche3.FiniteAuditRepair.full_family_winning
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.full_family_winning
+#check @Orthemology.Tranche3.FiniteAuditRepair.initialPhase
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.initialPhase
+#check @Orthemology.Tranche3.FiniteAuditRepair.policy
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.policy
+#check @Orthemology.Tranche3.FiniteAuditRepair.reports
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports
+#check @Orthemology.Tranche3.FiniteAuditRepair.budget
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.budget
+#check @Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.actual_audit_control_law
+#check @Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_always_coherent
+#check @Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_eventually_strict
+#check @Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.literal_failure_cost
+#check @Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures
+#check @Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite
+#print axioms Orthemology.Tranche3.FiniteAuditRepair.reports_expected_literal_failures_finite
+#check @IndependentFiniteAuditControls.action_zero_precedes_first_bit
+#print axioms IndependentFiniteAuditControls.action_zero_precedes_first_bit
+#check @IndependentFiniteAuditControls.action_one_uses_acquired_bit
+#print axioms IndependentFiniteAuditControls.action_one_uses_acquired_bit
+#check @IndependentFiniteAuditControls.generic_past_only
+#print axioms IndependentFiniteAuditControls.generic_past_only
+#check @IndependentFiniteAuditControls.no_current_bit_access_at_initial_action
+#print axioms IndependentFiniteAuditControls.no_current_bit_access_at_initial_action
+#check @IndependentFiniteAuditControls.actual_source_action_law_for_concrete_policy
+#print axioms IndependentFiniteAuditControls.actual_source_action_law_for_concrete_policy
+#check @IndependentFiniteAuditControls.report_labels_are_literal_scores
+#print axioms IndependentFiniteAuditControls.report_labels_are_literal_scores
+#check @IndependentFiniteAuditControls.static_obstruction_covers_all_real_reports
+#print axioms IndependentFiniteAuditControls.static_obstruction_covers_all_real_reports
+#check @IndependentFiniteAuditControls.fixed_expected_score_gains
+#print axioms IndependentFiniteAuditControls.fixed_expected_score_gains
+#check @IndependentFiniteAuditControls.every_observation_retains_both_models
+#print axioms IndependentFiniteAuditControls.every_observation_retains_both_models
+#check @IndependentFiniteAuditControls.all_reports_licensed
+#print axioms IndependentFiniteAuditControls.all_reports_licensed

@@ -1,0 +1,5648 @@
+[
+  {
+    "ctor": "JointCompletion.CtxJ.ctxBase",
+    "conclusion": "JointCompletion.CtxJ Γ",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.27"
+      }
+    ],
+    "tag": "CtxJ_ctxBase",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".CtxJ_ctxBase Γ",
+    "declaration": "  | CtxJ_ctxBase (Γ : P01AC.Tel)",
+    "claim": "Claim.ctxJ Γ",
+    "plist": "[Claim.ctxE Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.CtxJ.nil",
+    "conclusion": "JointCompletion.CtxJ []",
+    "args": [],
+    "tag": "CtxJ_nil",
+    "params": [],
+    "children": [],
+    "sides": [],
+    "sourceargs": [],
+    "auxes": [],
+    "pattern": ".CtxJ_nil ",
+    "declaration": "  | CtxJ_nil ",
+    "claim": "Claim.ctxJ []",
+    "plist": "[]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.CtxJ.ext",
+    "conclusion": "JointCompletion.CtxJ (A :: Γ)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.46"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.49"
+      }
+    ],
+    "tag": "CtxJ_ext",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".CtxJ_ext Γ A",
+    "declaration": "  | CtxJ_ext (Γ : P01AC.Tel) (A : P01AC.Ty)",
+    "claim": "Claim.ctxJ (A :: Γ)",
+    "plist": "[Claim.ctxJ Γ, Claim.formJ Γ A]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.formBase",
+    "conclusion": "JointCompletion.FormJ Γ A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.68"
+      }
+    ],
+    "tag": "FormJ_formBase",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_formBase Γ A",
+    "declaration": "  | FormJ_formBase (Γ : P01AC.Tel) (A : P01AC.Ty)",
+    "claim": "Claim.formJ Γ A",
+    "plist": "[Claim.formE Γ A]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.param",
+    "conclusion": "JointCompletion.FormJ Γ (P01AC.Ty.param n)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "ℕ",
+        "prop": false,
+        "name": "n"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.87"
+      }
+    ],
+    "tag": "FormJ_param",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "n",
+        "Nat"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "n",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_param Γ n",
+    "declaration": "  | FormJ_param (Γ : P01AC.Tel) (n : Nat)",
+    "claim": "Claim.formJ Γ (P01AC.Ty.param n)",
+    "plist": "[Claim.ctxJ Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.bottom",
+    "conclusion": "JointCompletion.FormJ Γ P01AC.Ty.bottom",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.99"
+      }
+    ],
+    "tag": "FormJ_bottom",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_bottom Γ",
+    "declaration": "  | FormJ_bottom (Γ : P01AC.Tel)",
+    "claim": "Claim.formJ Γ P01AC.Ty.bottom",
+    "plist": "[Claim.ctxJ Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.all",
+    "conclusion": "JointCompletion.FormJ Γ B.all",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.118"
+      },
+      {
+        "type": "JointCompletion.FormJ (P01AC.twkTel Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.121"
+      }
+    ],
+    "tag": "FormJ_all",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ],
+      [
+        "h1",
+        "Claim.formJ (P01AC.twkTel Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_all Γ B",
+    "declaration": "  | FormJ_all (Γ : P01AC.Tel) (B : P01AC.Ty)",
+    "claim": "Claim.formJ Γ B.all",
+    "plist": "[Claim.ctxJ Γ, Claim.formJ (P01AC.twkTel Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.raw",
+    "conclusion": "JointCompletion.FormJ Γ P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.137"
+      }
+    ],
+    "tag": "FormJ_raw",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_raw Γ",
+    "declaration": "  | FormJ_raw (Γ : P01AC.Tel)",
+    "claim": "Claim.formJ Γ P01AC.Ty.raw",
+    "plist": "[Claim.ctxJ Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.pi",
+    "conclusion": "JointCompletion.FormJ Γ (A.pi B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.164"
+      },
+      {
+        "type": "JointCompletion.FormJ (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.168"
+      }
+    ],
+    "tag": "FormJ_pi",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ (A :: Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_pi Γ A B",
+    "declaration": "  | FormJ_pi (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.formJ Γ (A.pi B)",
+    "plist": "[Claim.formJ Γ A, Claim.formJ (A :: Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.sigma",
+    "conclusion": "JointCompletion.FormJ Γ (A.sigma B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.206"
+      },
+      {
+        "type": "JointCompletion.FormJ (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.210"
+      }
+    ],
+    "tag": "FormJ_sigma",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ (A :: Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_sigma Γ A B",
+    "declaration": "  | FormJ_sigma (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.formJ Γ (A.sigma B)",
+    "plist": "[Claim.formJ Γ A, Claim.formJ (A :: Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.FormJ.identity",
+    "conclusion": "JointCompletion.FormJ Γ (A.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.255"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.259"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ q A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.264"
+      }
+    ],
+    "tag": "FormJ_identity",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.hasJ Γ p A"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ q A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".FormJ_identity Γ A p q",
+    "declaration": "  | FormJ_identity (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly)",
+    "claim": "Claim.formJ Γ (A.identity p q)",
+    "plist": "[Claim.formJ Γ A, Claim.hasJ Γ p A, Claim.hasJ Γ q A]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.hasBase",
+    "conclusion": "JointCompletion.HasJ Γ p A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.289"
+      }
+    ],
+    "tag": "HasJ_hasBase",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.hasE Γ p A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "p",
+      "A",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_hasBase Γ p A",
+    "declaration": "  | HasJ_hasBase (Γ : P01AC.Tel) (p : P01D.Poly) (A : P01AC.Ty)",
+    "claim": "Claim.hasJ Γ p A",
+    "plist": "[Claim.hasE Γ p A]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.var",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.var n) A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "ℕ",
+        "prop": false,
+        "name": "n"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.313"
+      },
+      {
+        "type": "P01AC.Lookup Γ n A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.317"
+      }
+    ],
+    "tag": "HasJ_var",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "n",
+        "Nat"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.LookupCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkLookup aux0 Γ n A = true"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "n",
+      "h0",
+      "(AuxiliaryCertificates.checkLookup_sound s0)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "lookup_complete",
+        "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.317",
+        "P01AC.Lookup Γ n A"
+      ]
+    ],
+    "pattern": ".HasJ_var Γ A n aux0",
+    "declaration": "  | HasJ_var (Γ : P01AC.Tel) (A : P01AC.Ty) (n : Nat) (aux0 : AuxiliaryCertificates.LookupCert)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.var n) A",
+    "plist": "[Claim.formJ Γ A]",
+    "side": "(AuxiliaryCertificates.checkLookup aux0 Γ n A = true) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.i",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (P01AC.arr A A)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.336"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.arr A A)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.340"
+      }
+    ],
+    "tag": "HasJ_i",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (P01AC.arr A A)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_i Γ A",
+    "declaration": "  | HasJ_i (Γ : P01AC.Tel) (A : P01AC.Ty)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (P01AC.arr A A)",
+    "plist": "[Claim.formJ Γ A, Claim.formJ Γ (P01AC.arr A A)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.k",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.k) (P01AC.arr A (P01AC.arr B A))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.374"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.378"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.arr A (P01AC.arr B A))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.382"
+      }
+    ],
+    "tag": "HasJ_k",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ B"
+      ],
+      [
+        "h2",
+        "Claim.formJ Γ (P01AC.arr A (P01AC.arr B A))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_k Γ A B",
+    "declaration": "  | HasJ_k (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.k) (P01AC.arr A (P01AC.arr B A))",
+    "plist": "[Claim.formJ Γ A, Claim.formJ Γ B, Claim.formJ Γ (P01AC.arr A (P01AC.arr B A))]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.s",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.s)\n  (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "C"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.436"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.440"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ C",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.444"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.448"
+      }
+    ],
+    "tag": "HasJ_s",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "C",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ B"
+      ],
+      [
+        "h2",
+        "Claim.formJ Γ C"
+      ],
+      [
+        "h3",
+        "Claim.formJ Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "C",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_s Γ A B C",
+    "declaration": "  | HasJ_s (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (C : P01AC.Ty)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.s) (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+    "plist": "[Claim.formJ Γ A, Claim.formJ Γ B, Claim.formJ Γ C, Claim.formJ Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.finite",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom t) (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+    "args": [
+      {
+        "type": "OrthemologyV2.TypeCode",
+        "prop": false,
+        "name": "C"
+      },
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "OrthemologyV2.Term",
+        "prop": false,
+        "name": "t"
+      },
+      {
+        "type": "List P01AC.Ty",
+        "prop": false,
+        "name": "τ"
+      },
+      {
+        "type": "P01AC.finSupport C ≤ τ.length",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.589"
+      },
+      {
+        "type": "∀ n < τ.length, JointCompletion.FormJ Γ (P01AC.typeImages τ n)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.596"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.615"
+      },
+      {
+        "type": "OrthemologyV3.FiniteDerives t C",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.629"
+      }
+    ],
+    "tag": "HasJ_finite",
+    "params": [
+      [
+        "C",
+        "OrthemologyV2.TypeCode"
+      ],
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "t",
+        "OrthemologyV2.Term"
+      ],
+      [
+        "τ",
+        "List P01AC.Ty"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.FiniteCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.finSupport C ≤ τ.length"
+      ],
+      [
+        "s1",
+        "AuxiliaryCertificates.checkFinite aux0 t C = true"
+      ]
+    ],
+    "sourceargs": [
+      "C",
+      "Γ",
+      "t",
+      "τ",
+      "s0",
+      "(fun n hn => hfamily ⟨n,hn⟩)",
+      "h0",
+      "(AuxiliaryCertificates.checkFinite_sound s1)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "finite_complete",
+        "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.629",
+        "OrthemologyV3.FiniteDerives t C"
+      ]
+    ],
+    "family": [
+      "n",
+      "τ",
+      "Claim.formJ Γ (P01AC.typeImages τ n)"
+    ],
+    "pattern": ".HasJ_finite C Γ t τ aux0",
+    "declaration": "  | HasJ_finite (C : OrthemologyV2.TypeCode) (Γ : P01AC.Tel) (t : OrthemologyV2.Term) (τ : List P01AC.Ty) (aux0 : AuxiliaryCertificates.FiniteCert)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom t) (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+    "plist": "(List.ofFn (fun i : Fin τ.length => Claim.formJ Γ (P01AC.typeImages τ i.val))) ++ [Claim.formJ Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))]",
+    "side": "(P01AC.finSupport C ≤ τ.length) ∧ (AuxiliaryCertificates.checkFinite aux0 t C = true) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.allIntro",
+    "conclusion": "JointCompletion.HasJ Γ p B.all",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.674"
+      },
+      {
+        "type": "JointCompletion.HasJ (P01AC.twkTel Γ) p B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.681"
+      }
+    ],
+    "tag": "HasJ_allIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ B.all"
+      ],
+      [
+        "h1",
+        "Claim.hasJ (P01AC.twkTel Γ) p B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "p",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_allIntro Γ B p",
+    "declaration": "  | HasJ_allIntro (Γ : P01AC.Tel) (B : P01AC.Ty) (p : P01D.Poly)",
+    "claim": "Claim.hasJ Γ p B.all",
+    "plist": "[Claim.formJ Γ B.all, Claim.hasJ (P01AC.twkTel Γ) p B]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.allElim",
+    "conclusion": "JointCompletion.HasJ Γ p (P01AC.tinst B A)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.740"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.747"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.tinst B A)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.751"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.759"
+      }
+    ],
+    "tag": "HasJ_allElim",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ B.all"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h2",
+        "Claim.formJ Γ (P01AC.tinst B A)"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ p B.all"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "A",
+      "p",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_allElim Γ B A p",
+    "declaration": "  | HasJ_allElim (Γ : P01AC.Tel) (B : P01AC.Ty) (A : P01AC.Ty) (p : P01D.Poly)",
+    "claim": "Claim.hasJ Γ p (P01AC.tinst B A)",
+    "plist": "[Claim.formJ Γ B.all, Claim.formJ Γ A, Claim.formJ Γ (P01AC.tinst B A), Claim.hasJ Γ p B.all]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.rawAtom",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom t) P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "OrthemologyV2.Term",
+        "prop": false,
+        "name": "t"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.788"
+      }
+    ],
+    "tag": "HasJ_rawAtom",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "t",
+        "OrthemologyV2.Term"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ P01AC.Ty.raw"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "t",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_rawAtom Γ t",
+    "declaration": "  | HasJ_rawAtom (Γ : P01AC.Tel) (t : OrthemologyV2.Term)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom t) P01AC.Ty.raw",
+    "plist": "[Claim.formJ Γ P01AC.Ty.raw]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.rawApp",
+    "conclusion": "JointCompletion.HasJ Γ (f.app a) P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "f"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.823"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ f P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.827"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ a P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.832"
+      }
+    ],
+    "tag": "HasJ_rawApp",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "f",
+        "P01D.Poly"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ P01AC.Ty.raw"
+      ],
+      [
+        "h1",
+        "Claim.hasJ Γ f P01AC.Ty.raw"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ a P01AC.Ty.raw"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "f",
+      "a",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_rawApp Γ f a",
+    "declaration": "  | HasJ_rawApp (Γ : P01AC.Tel) (f : P01D.Poly) (a : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (f.app a) P01AC.Ty.raw",
+    "plist": "[Claim.formJ Γ P01AC.Ty.raw, Claim.hasJ Γ f P01AC.Ty.raw, Claim.hasJ Γ a P01AC.Ty.raw]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.piIntro",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.abstract b) (A.pi B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "b"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.881"
+      },
+      {
+        "type": "JointCompletion.HasJ (A :: Γ) b B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.889"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) (P01D.abstract b)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.900"
+      }
+    ],
+    "tag": "HasJ_piIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "b",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (A.pi B)"
+      ],
+      [
+        "h1",
+        "Claim.hasJ (A :: Γ) b B"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) (P01D.abstract b)"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "b",
+      "h0",
+      "h1",
+      "s0"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_piIntro Γ A B b",
+    "declaration": "  | HasJ_piIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (b : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.abstract b) (A.pi B)",
+    "plist": "[Claim.formJ Γ (A.pi B), Claim.hasJ (A :: Γ) b B]",
+    "side": "(P01AC.Scoped (List.length Γ) (P01D.abstract b)) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.piElim",
+    "conclusion": "JointCompletion.HasJ Γ (f.app a) (P01AC.inst B a)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "f"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.972"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.980"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ f (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.988"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ a A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.997"
+      }
+    ],
+    "tag": "HasJ_piElim",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ],
+      [
+        "f",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (A.pi B)"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (P01AC.inst B a)"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ f (A.pi B)"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ a A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "a",
+      "f",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_piElim Γ A B a f",
+    "declaration": "  | HasJ_piElim (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (a : P01D.Poly) (f : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (f.app a) (P01AC.inst B a)",
+    "plist": "[Claim.formJ Γ (A.pi B), Claim.formJ Γ (P01AC.inst B a), Claim.hasJ Γ f (A.pi B), Claim.hasJ Γ a A]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.sigmaIntro",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.pairPoly a b) (A.sigma B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "b"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1073"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1081"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ a A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1089"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ b (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1094"
+      }
+    ],
+    "tag": "HasJ_sigmaIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ],
+      [
+        "b",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (A.sigma B)"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (P01AC.inst B a)"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ a A"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ b (P01AC.inst B a)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "a",
+      "b",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_sigmaIntro Γ A B a b",
+    "declaration": "  | HasJ_sigmaIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (a : P01D.Poly) (b : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.pairPoly a b) (A.sigma B)",
+    "plist": "[Claim.formJ Γ (A.sigma B), Claim.formJ Γ (P01AC.inst B a), Claim.hasJ Γ a A, Claim.hasJ Γ b (P01AC.inst B a)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.sigmaFst",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.fstPoly z) A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "z"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1150"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1154"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ z (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1162"
+      }
+    ],
+    "tag": "HasJ_sigmaFst",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "z",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (A.sigma B)"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ z (A.sigma B)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "z",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_sigmaFst Γ A B z",
+    "declaration": "  | HasJ_sigmaFst (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (z : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.fstPoly z) A",
+    "plist": "[Claim.formJ Γ A, Claim.formJ Γ (A.sigma B), Claim.hasJ Γ z (A.sigma B)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.sigmaSnd",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.sndPoly z) (P01AC.inst B (P01D.fstPoly z))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "z"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1215"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.inst B (P01D.fstPoly z))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1223"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ z (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1234"
+      }
+    ],
+    "tag": "HasJ_sigmaSnd",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "z",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (A.sigma B)"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (P01AC.inst B (P01D.fstPoly z))"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ z (A.sigma B)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "z",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_sigmaSnd Γ A B z",
+    "declaration": "  | HasJ_sigmaSnd (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (z : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.sndPoly z) (P01AC.inst B (P01D.fstPoly z))",
+    "plist": "[Claim.formJ Γ (A.sigma B), Claim.formJ Γ (P01AC.inst B (P01D.fstPoly z)), Claim.hasJ Γ z (A.sigma B)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.identityIntro",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (A.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.identity p q)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1284"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1293"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ q A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1298"
+      },
+      {
+        "type": "P01AC.Intensional.Plus.PolyConvPlus p q",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1303"
+      }
+    ],
+    "tag": "HasJ_identityIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.PolyCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ (A.identity p q)"
+      ],
+      [
+        "h1",
+        "Claim.hasJ Γ p A"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ q A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkPoly aux0 p q = true"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "h2",
+      "(AuxiliaryCertificates.checkPoly_sound s0)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "poly_complete",
+        "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1303",
+        "P01AC.Intensional.Plus.PolyConvPlus p q"
+      ]
+    ],
+    "pattern": ".HasJ_identityIntro Γ A p q aux0",
+    "declaration": "  | HasJ_identityIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (aux0 : AuxiliaryCertificates.PolyCert)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (A.identity p q)",
+    "plist": "[Claim.formJ Γ (A.identity p q), Claim.hasJ Γ p A, Claim.hasJ Γ q A]",
+    "side": "(AuxiliaryCertificates.checkPoly aux0 p q = true) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.proofErase",
+    "conclusion": "JointCompletion.HasJ Γ p P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "x"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "y"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1375"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.identity x y)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1379"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p (A.identity x y)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1388"
+      }
+    ],
+    "tag": "HasJ_proofErase",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "x",
+        "P01D.Poly"
+      ],
+      [
+        "y",
+        "P01D.Poly"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ P01AC.Ty.raw"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ (A.identity x y)"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ p (A.identity x y)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "x",
+      "y",
+      "p",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_proofErase Γ A x y p",
+    "declaration": "  | HasJ_proofErase (Γ : P01AC.Tel) (A : P01AC.Ty) (x : P01D.Poly) (y : P01D.Poly) (p : P01D.Poly)",
+    "claim": "Claim.hasJ Γ p P01AC.Ty.raw",
+    "plist": "[Claim.formJ Γ P01AC.Ty.raw, Claim.formJ Γ (A.identity x y), Claim.hasJ Γ p (A.identity x y)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.j",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.jPoly d y e) (P01AC.motiveAt B y e)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "x"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "y"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "e"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "d"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1566"
+      },
+      {
+        "type": "JointCompletion.FormJ (P01AC.theta Γ A x) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1570"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.identity x y)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1579"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1588"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (P01AC.motiveAt B y e)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1600"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ x A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1609"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ y A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1614"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ e (A.identity x y)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1619"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1629"
+      }
+    ],
+    "tag": "HasJ_j",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "x",
+        "P01D.Poly"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "y",
+        "P01D.Poly"
+      ],
+      [
+        "e",
+        "P01D.Poly"
+      ],
+      [
+        "d",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ (P01AC.theta Γ A x) B"
+      ],
+      [
+        "h2",
+        "Claim.formJ Γ (A.identity x y)"
+      ],
+      [
+        "h3",
+        "Claim.formJ Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))"
+      ],
+      [
+        "h4",
+        "Claim.formJ Γ (P01AC.motiveAt B y e)"
+      ],
+      [
+        "h5",
+        "Claim.hasJ Γ x A"
+      ],
+      [
+        "h6",
+        "Claim.hasJ Γ y A"
+      ],
+      [
+        "h7",
+        "Claim.hasJ Γ e (A.identity x y)"
+      ],
+      [
+        "h8",
+        "Claim.hasJ Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "x",
+      "B",
+      "y",
+      "e",
+      "d",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "h8"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_j Γ A x B y e d",
+    "declaration": "  | HasJ_j (Γ : P01AC.Tel) (A : P01AC.Ty) (x : P01D.Poly) (B : P01AC.Ty) (y : P01D.Poly) (e : P01D.Poly) (d : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.jPoly d y e) (P01AC.motiveAt B y e)",
+    "plist": "[Claim.formJ Γ A, Claim.formJ (P01AC.theta Γ A x) B, Claim.formJ Γ (A.identity x y), Claim.formJ Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i)), Claim.formJ Γ (P01AC.motiveAt B y e), Claim.hasJ Γ x A, Claim.hasJ Γ y A, Claim.hasJ Γ e (A.identity x y), Claim.hasJ Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.conv",
+    "conclusion": "JointCompletion.HasJ Γ q A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1684"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1688"
+      },
+      {
+        "type": "P01AC.Intensional.Plus.PolyConvPlus p q",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1693"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1697"
+      }
+    ],
+    "tag": "HasJ_conv",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.PolyCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.hasJ Γ p A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkPoly aux0 p q = true"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "(AuxiliaryCertificates.checkPoly_sound s0)",
+      "s1"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "poly_complete",
+        "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1693",
+        "P01AC.Intensional.Plus.PolyConvPlus p q"
+      ]
+    ],
+    "pattern": ".HasJ_conv Γ A p q aux0",
+    "declaration": "  | HasJ_conv (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (aux0 : AuxiliaryCertificates.PolyCert)",
+    "claim": "Claim.hasJ Γ q A",
+    "plist": "[Claim.formJ Γ A, Claim.hasJ Γ p A]",
+    "side": "(AuxiliaryCertificates.checkPoly aux0 p q = true) ∧ (P01AC.Scoped (List.length Γ) q) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.piExt",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) ((A.pi B).identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "h"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1903"
+      },
+      {
+        "type": "JointCompletion.FormJ (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1907"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1917"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1925"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ q (A.pi B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1934"
+      },
+      {
+        "type": "JointCompletion.FormJ (A :: Γ)\n  (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1943"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ\n  (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.1980"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ h\n  (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2015"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ ((A.pi B).identity p q)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2051"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) p",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2064"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2068"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) h",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2072"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ) A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2076"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ + 1) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2080"
+      }
+    ],
+    "tag": "HasJ_piExt",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "h",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formJ (A :: Γ) B"
+      ],
+      [
+        "h2",
+        "Claim.formJ Γ (A.pi B)"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ p (A.pi B)"
+      ],
+      [
+        "h4",
+        "Claim.hasJ Γ q (A.pi B)"
+      ],
+      [
+        "h5",
+        "Claim.formJ (A :: Γ) (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))"
+      ],
+      [
+        "h6",
+        "Claim.formJ Γ (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))"
+      ],
+      [
+        "h7",
+        "Claim.hasJ Γ h (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))"
+      ],
+      [
+        "h8",
+        "Claim.formJ Γ ((A.pi B).identity p q)"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) p"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ],
+      [
+        "s2",
+        "P01AC.Scoped (List.length Γ) h"
+      ],
+      [
+        "s3",
+        "P01AC.TyScoped (List.length Γ) A"
+      ],
+      [
+        "s4",
+        "P01AC.TyScoped (List.length Γ + 1) B"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "p",
+      "q",
+      "h",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "h8",
+      "s0",
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_piExt Γ A B p q h",
+    "declaration": "  | HasJ_piExt (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (h : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) ((A.pi B).identity p q)",
+    "plist": "[Claim.formJ Γ A, Claim.formJ (A :: Γ) B, Claim.formJ Γ (A.pi B), Claim.hasJ Γ p (A.pi B), Claim.hasJ Γ q (A.pi B), Claim.formJ (A :: Γ) (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))), Claim.formJ Γ (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))), Claim.hasJ Γ h (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))), Claim.formJ Γ ((A.pi B).identity p q)]",
+    "side": "(P01AC.Scoped (List.length Γ) p) ∧ (P01AC.Scoped (List.length Γ) q) ∧ (P01AC.Scoped (List.length Γ) h) ∧ (P01AC.TyScoped (List.length Γ) A) ∧ (P01AC.TyScoped (List.length Γ + 1) B) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.allExt",
+    "conclusion": "JointCompletion.HasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (B.all.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "h"
+      },
+      {
+        "type": "JointCompletion.FormJ (P01AC.twkTel Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2212"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2219"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2226"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ q B.all",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2234"
+      },
+      {
+        "type": "JointCompletion.FormJ (P01AC.twkTel Γ) (B.identity p q)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2242"
+      },
+      {
+        "type": "JointCompletion.HasJ (P01AC.twkTel Γ) h (B.identity p q)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2254"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ (B.all.identity p q)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2267"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) p",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2279"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2283"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) h",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2287"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2291"
+      }
+    ],
+    "tag": "HasJ_allExt",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "h",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formJ (P01AC.twkTel Γ) B"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ B.all"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ p B.all"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ q B.all"
+      ],
+      [
+        "h4",
+        "Claim.formJ (P01AC.twkTel Γ) (B.identity p q)"
+      ],
+      [
+        "h5",
+        "Claim.hasJ (P01AC.twkTel Γ) h (B.identity p q)"
+      ],
+      [
+        "h6",
+        "Claim.formJ Γ (B.all.identity p q)"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) p"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ],
+      [
+        "s2",
+        "P01AC.Scoped (List.length Γ) h"
+      ],
+      [
+        "s3",
+        "P01AC.TyScoped (List.length Γ) B"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "p",
+      "q",
+      "h",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_allExt Γ B p q h",
+    "declaration": "  | HasJ_allExt (Γ : P01AC.Tel) (B : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (h : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (P01D.Poly.atom OrthemologyV2.Term.i) (B.all.identity p q)",
+    "plist": "[Claim.formJ (P01AC.twkTel Γ) B, Claim.formJ Γ B.all, Claim.hasJ Γ p B.all, Claim.hasJ Γ q B.all, Claim.formJ (P01AC.twkTel Γ) (B.identity p q), Claim.hasJ (P01AC.twkTel Γ) h (B.identity p q), Claim.formJ Γ (B.all.identity p q)]",
+    "side": "(P01AC.Scoped (List.length Γ) p) ∧ (P01AC.Scoped (List.length Γ) q) ∧ (P01AC.Scoped (List.length Γ) h) ∧ (P01AC.TyScoped (List.length Γ) B) ∧ True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.sigmaElim",
+    "conclusion": "JointCompletion.HasJ Γ (SigmaCompletion.branchAt d (P01D.fstPoly z) (P01D.sndPoly z)) (P01AC.inst P z)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "P"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "d"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "z"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2460"
+      },
+      {
+        "type": "JointCompletion.FormJ Γ A",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2463"
+      },
+      {
+        "type": "JointCompletion.FormJ (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2467"
+      },
+      {
+        "type": "JointCompletion.FormJ (A.sigma B :: Γ) P",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2477"
+      },
+      {
+        "type": "JointCompletion.HasJ (B :: A :: Γ) d (SigmaCompletion.branchType P)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2489"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ z (A.sigma B)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2507"
+      }
+    ],
+    "tag": "HasJ_sigmaElim",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "P",
+        "P01AC.Ty"
+      ],
+      [
+        "d",
+        "P01D.Poly"
+      ],
+      [
+        "z",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ],
+      [
+        "h1",
+        "Claim.formJ Γ A"
+      ],
+      [
+        "h2",
+        "Claim.formJ (A :: Γ) B"
+      ],
+      [
+        "h3",
+        "Claim.formJ (A.sigma B :: Γ) P"
+      ],
+      [
+        "h4",
+        "Claim.hasJ (B :: A :: Γ) d (SigmaCompletion.branchType P)"
+      ],
+      [
+        "h5",
+        "Claim.hasJ Γ z (A.sigma B)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "P",
+      "d",
+      "z",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_sigmaElim Γ A B P d z",
+    "declaration": "  | HasJ_sigmaElim (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (P : P01AC.Ty) (d : P01D.Poly) (z : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (SigmaCompletion.branchAt d (P01D.fstPoly z) (P01D.sndPoly z)) (P01AC.inst P z)",
+    "plist": "[Claim.ctxJ Γ, Claim.formJ Γ A, Claim.formJ (A :: Γ) B, Claim.formJ (A.sigma B :: Γ) P, Claim.hasJ (B :: A :: Γ) d (SigmaCompletion.branchType P), Claim.hasJ Γ z (A.sigma B)]",
+    "side": "True"
+  },
+  {
+    "ctor": "JointCompletion.HasJ.natInduction",
+    "conclusion": "JointCompletion.HasJ Γ (RigidityInitiality.sectionPoly p s) (P01AC.EffectiveCompleteness.N.pi P)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "P"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "s"
+      },
+      {
+        "type": "JointCompletion.CtxJ Γ",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2594"
+      },
+      {
+        "type": "JointCompletion.FormJ (P01AC.EffectiveCompleteness.N :: Γ) P",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2597"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ p (P01AC.inst P SourceRigidity.zero)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2607"
+      },
+      {
+        "type": "JointCompletion.HasJ Γ s (RigidityInitiality.dependentStepType P)",
+        "prop": true,
+        "name": "a._@.hase-joint-completion-soundness-20261010.JointSyntax._hyg.2616"
+      }
+    ],
+    "tag": "HasJ_natInduction",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "P",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "s",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxJ Γ"
+      ],
+      [
+        "h1",
+        "Claim.formJ (P01AC.EffectiveCompleteness.N :: Γ) P"
+      ],
+      [
+        "h2",
+        "Claim.hasJ Γ p (P01AC.inst P SourceRigidity.zero)"
+      ],
+      [
+        "h3",
+        "Claim.hasJ Γ s (RigidityInitiality.dependentStepType P)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "P",
+      "p",
+      "s",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasJ_natInduction Γ P p s",
+    "declaration": "  | HasJ_natInduction (Γ : P01AC.Tel) (P : P01AC.Ty) (p : P01D.Poly) (s : P01D.Poly)",
+    "claim": "Claim.hasJ Γ (RigidityInitiality.sectionPoly p s) (P01AC.EffectiveCompleteness.N.pi P)",
+    "plist": "[Claim.ctxJ Γ, Claim.formJ (P01AC.EffectiveCompleteness.N :: Γ) P, Claim.hasJ Γ p (P01AC.inst P SourceRigidity.zero), Claim.hasJ Γ s (RigidityInitiality.dependentStepType P)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.CtxE.nil",
+    "conclusion": "P01AC.ExtensionalRepair.CtxE []",
+    "args": [],
+    "tag": "CtxE_nil",
+    "params": [],
+    "children": [],
+    "sides": [],
+    "sourceargs": [],
+    "auxes": [],
+    "pattern": ".CtxE_nil ",
+    "declaration": "  | CtxE_nil ",
+    "claim": "Claim.ctxE []",
+    "plist": "[]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.CtxE.ext",
+    "conclusion": "P01AC.ExtensionalRepair.CtxE (A :: Γ)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.40"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.43"
+      }
+    ],
+    "tag": "CtxE_ext",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".CtxE_ext Γ A",
+    "declaration": "  | CtxE_ext (Γ : P01AC.Tel) (A : P01AC.Ty)",
+    "claim": "Claim.ctxE (A :: Γ)",
+    "plist": "[Claim.ctxE Γ, Claim.formE Γ A]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.param",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ (P01AC.Ty.param n)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "ℕ",
+        "prop": false,
+        "name": "n"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.67"
+      }
+    ],
+    "tag": "FormE_param",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "n",
+        "Nat"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "n",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_param Γ n",
+    "declaration": "  | FormE_param (Γ : P01AC.Tel) (n : Nat)",
+    "claim": "Claim.formE Γ (P01AC.Ty.param n)",
+    "plist": "[Claim.ctxE Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.bottom",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ P01AC.Ty.bottom",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.79"
+      }
+    ],
+    "tag": "FormE_bottom",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_bottom Γ",
+    "declaration": "  | FormE_bottom (Γ : P01AC.Tel)",
+    "claim": "Claim.formE Γ P01AC.Ty.bottom",
+    "plist": "[Claim.ctxE Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.all",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ B.all",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.98"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (P01AC.twkTel Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.101"
+      }
+    ],
+    "tag": "FormE_all",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ],
+      [
+        "h1",
+        "Claim.formE (P01AC.twkTel Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_all Γ B",
+    "declaration": "  | FormE_all (Γ : P01AC.Tel) (B : P01AC.Ty)",
+    "claim": "Claim.formE Γ B.all",
+    "plist": "[Claim.ctxE Γ, Claim.formE (P01AC.twkTel Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.raw",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.CtxE Γ",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.117"
+      }
+    ],
+    "tag": "FormE_raw",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.ctxE Γ"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_raw Γ",
+    "declaration": "  | FormE_raw (Γ : P01AC.Tel)",
+    "claim": "Claim.formE Γ P01AC.Ty.raw",
+    "plist": "[Claim.ctxE Γ]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.pi",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ (A.pi B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.144"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.148"
+      }
+    ],
+    "tag": "FormE_pi",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE (A :: Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_pi Γ A B",
+    "declaration": "  | FormE_pi (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.formE Γ (A.pi B)",
+    "plist": "[Claim.formE Γ A, Claim.formE (A :: Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.sigma",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ (A.sigma B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.186"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.190"
+      }
+    ],
+    "tag": "FormE_sigma",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE (A :: Γ) B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_sigma Γ A B",
+    "declaration": "  | FormE_sigma (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.formE Γ (A.sigma B)",
+    "plist": "[Claim.formE Γ A, Claim.formE (A :: Γ) B]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.FormE.identity",
+    "conclusion": "P01AC.ExtensionalRepair.FormE Γ (A.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.235"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.239"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ q A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.244"
+      }
+    ],
+    "tag": "FormE_identity",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.hasE Γ p A"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ q A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".FormE_identity Γ A p q",
+    "declaration": "  | FormE_identity (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly)",
+    "claim": "Claim.formE Γ (A.identity p q)",
+    "plist": "[Claim.formE Γ A, Claim.hasE Γ p A, Claim.hasE Γ q A]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.var",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.var n) A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "ℕ",
+        "prop": false,
+        "name": "n"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.272"
+      },
+      {
+        "type": "P01AC.Lookup Γ n A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.276"
+      }
+    ],
+    "tag": "HasE_var",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "n",
+        "Nat"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.LookupCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkLookup aux0 Γ n A = true"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "n",
+      "h0",
+      "(AuxiliaryCertificates.checkLookup_sound s0)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "lookup_complete",
+        "a._@.ExtensionalRepairSyntax._hyg.276",
+        "P01AC.Lookup Γ n A"
+      ]
+    ],
+    "pattern": ".HasE_var Γ A n aux0",
+    "declaration": "  | HasE_var (Γ : P01AC.Tel) (A : P01AC.Ty) (n : Nat) (aux0 : AuxiliaryCertificates.LookupCert)",
+    "claim": "Claim.hasE Γ (P01D.Poly.var n) A",
+    "plist": "[Claim.formE Γ A]",
+    "side": "(AuxiliaryCertificates.checkLookup aux0 Γ n A = true) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.i",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (P01AC.arr A A)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.295"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.arr A A)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.299"
+      }
+    ],
+    "tag": "HasE_i",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (P01AC.arr A A)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_i Γ A",
+    "declaration": "  | HasE_i (Γ : P01AC.Tel) (A : P01AC.Ty)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (P01AC.arr A A)",
+    "plist": "[Claim.formE Γ A, Claim.formE Γ (P01AC.arr A A)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.k",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.k) (P01AC.arr A (P01AC.arr B A))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.333"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.337"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.arr A (P01AC.arr B A))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.341"
+      }
+    ],
+    "tag": "HasE_k",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ B"
+      ],
+      [
+        "h2",
+        "Claim.formE Γ (P01AC.arr A (P01AC.arr B A))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_k Γ A B",
+    "declaration": "  | HasE_k (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.k) (P01AC.arr A (P01AC.arr B A))",
+    "plist": "[Claim.formE Γ A, Claim.formE Γ B, Claim.formE Γ (P01AC.arr A (P01AC.arr B A))]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.s",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.s)\n  (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "C"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.395"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.399"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ C",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.403"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.407"
+      }
+    ],
+    "tag": "HasE_s",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "C",
+        "P01AC.Ty"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ B"
+      ],
+      [
+        "h2",
+        "Claim.formE Γ C"
+      ],
+      [
+        "h3",
+        "Claim.formE Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "C",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_s Γ A B C",
+    "declaration": "  | HasE_s (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (C : P01AC.Ty)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.s) (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))",
+    "plist": "[Claim.formE Γ A, Claim.formE Γ B, Claim.formE Γ C, Claim.formE Γ (P01AC.arr (P01AC.arr A (P01AC.arr B C)) (P01AC.arr (P01AC.arr A B) (P01AC.arr A C)))]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.finite",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom t) (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+    "args": [
+      {
+        "type": "OrthemologyV2.TypeCode",
+        "prop": false,
+        "name": "C"
+      },
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "OrthemologyV2.Term",
+        "prop": false,
+        "name": "t"
+      },
+      {
+        "type": "List P01AC.Ty",
+        "prop": false,
+        "name": "τ"
+      },
+      {
+        "type": "P01AC.finSupport C ≤ τ.length",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.548"
+      },
+      {
+        "type": "∀ n < τ.length, P01AC.ExtensionalRepair.FormE Γ (P01AC.typeImages τ n)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.555"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.574"
+      },
+      {
+        "type": "OrthemologyV3.FiniteDerives t C",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.588"
+      }
+    ],
+    "tag": "HasE_finite",
+    "params": [
+      [
+        "C",
+        "OrthemologyV2.TypeCode"
+      ],
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "t",
+        "OrthemologyV2.Term"
+      ],
+      [
+        "τ",
+        "List P01AC.Ty"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.FiniteCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.finSupport C ≤ τ.length"
+      ],
+      [
+        "s1",
+        "AuxiliaryCertificates.checkFinite aux0 t C = true"
+      ]
+    ],
+    "sourceargs": [
+      "C",
+      "Γ",
+      "t",
+      "τ",
+      "s0",
+      "(fun n hn => hfamily ⟨n,hn⟩)",
+      "h0",
+      "(AuxiliaryCertificates.checkFinite_sound s1)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "finite_complete",
+        "a._@.ExtensionalRepairSyntax._hyg.588",
+        "OrthemologyV3.FiniteDerives t C"
+      ]
+    ],
+    "family": [
+      "n",
+      "τ",
+      "Claim.formE Γ (P01AC.typeImages τ n)"
+    ],
+    "pattern": ".HasE_finite C Γ t τ aux0",
+    "declaration": "  | HasE_finite (C : OrthemologyV2.TypeCode) (Γ : P01AC.Tel) (t : OrthemologyV2.Term) (τ : List P01AC.Ty) (aux0 : AuxiliaryCertificates.FiniteCert)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom t) (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))",
+    "plist": "(List.ofFn (fun i : Fin τ.length => Claim.formE Γ (P01AC.typeImages τ i.val))) ++ [Claim.formE Γ (P01AC.tsubst (P01AC.typeImages τ) (P01AC.fin C))]",
+    "side": "(P01AC.finSupport C ≤ τ.length) ∧ (AuxiliaryCertificates.checkFinite aux0 t C = true) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.allIntro",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ p B.all",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.633"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE (P01AC.twkTel Γ) p B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.640"
+      }
+    ],
+    "tag": "HasE_allIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ B.all"
+      ],
+      [
+        "h1",
+        "Claim.hasE (P01AC.twkTel Γ) p B"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "p",
+      "h0",
+      "h1"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_allIntro Γ B p",
+    "declaration": "  | HasE_allIntro (Γ : P01AC.Tel) (B : P01AC.Ty) (p : P01D.Poly)",
+    "claim": "Claim.hasE Γ p B.all",
+    "plist": "[Claim.formE Γ B.all, Claim.hasE (P01AC.twkTel Γ) p B]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.allElim",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ p (P01AC.tinst B A)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.699"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.706"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.tinst B A)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.710"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.718"
+      }
+    ],
+    "tag": "HasE_allElim",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ B.all"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h2",
+        "Claim.formE Γ (P01AC.tinst B A)"
+      ],
+      [
+        "h3",
+        "Claim.hasE Γ p B.all"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "A",
+      "p",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_allElim Γ B A p",
+    "declaration": "  | HasE_allElim (Γ : P01AC.Tel) (B : P01AC.Ty) (A : P01AC.Ty) (p : P01D.Poly)",
+    "claim": "Claim.hasE Γ p (P01AC.tinst B A)",
+    "plist": "[Claim.formE Γ B.all, Claim.formE Γ A, Claim.formE Γ (P01AC.tinst B A), Claim.hasE Γ p B.all]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.rawAtom",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom t) P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "OrthemologyV2.Term",
+        "prop": false,
+        "name": "t"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.747"
+      }
+    ],
+    "tag": "HasE_rawAtom",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "t",
+        "OrthemologyV2.Term"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ P01AC.Ty.raw"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "t",
+      "h0"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_rawAtom Γ t",
+    "declaration": "  | HasE_rawAtom (Γ : P01AC.Tel) (t : OrthemologyV2.Term)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom t) P01AC.Ty.raw",
+    "plist": "[Claim.formE Γ P01AC.Ty.raw]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.rawApp",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (f.app a) P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "f"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.782"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ f P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.786"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ a P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.791"
+      }
+    ],
+    "tag": "HasE_rawApp",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "f",
+        "P01D.Poly"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ P01AC.Ty.raw"
+      ],
+      [
+        "h1",
+        "Claim.hasE Γ f P01AC.Ty.raw"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ a P01AC.Ty.raw"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "f",
+      "a",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_rawApp Γ f a",
+    "declaration": "  | HasE_rawApp (Γ : P01AC.Tel) (f : P01D.Poly) (a : P01D.Poly)",
+    "claim": "Claim.hasE Γ (f.app a) P01AC.Ty.raw",
+    "plist": "[Claim.formE Γ P01AC.Ty.raw, Claim.hasE Γ f P01AC.Ty.raw, Claim.hasE Γ a P01AC.Ty.raw]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.piIntro",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.abstract b) (A.pi B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "b"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.840"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE (A :: Γ) b B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.848"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) (P01D.abstract b)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.859"
+      }
+    ],
+    "tag": "HasE_piIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "b",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (A.pi B)"
+      ],
+      [
+        "h1",
+        "Claim.hasE (A :: Γ) b B"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) (P01D.abstract b)"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "b",
+      "h0",
+      "h1",
+      "s0"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_piIntro Γ A B b",
+    "declaration": "  | HasE_piIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (b : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.abstract b) (A.pi B)",
+    "plist": "[Claim.formE Γ (A.pi B), Claim.hasE (A :: Γ) b B]",
+    "side": "(P01AC.Scoped (List.length Γ) (P01D.abstract b)) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.piElim",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (f.app a) (P01AC.inst B a)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "f"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.931"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.939"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ f (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.947"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ a A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.956"
+      }
+    ],
+    "tag": "HasE_piElim",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ],
+      [
+        "f",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (A.pi B)"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (P01AC.inst B a)"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ f (A.pi B)"
+      ],
+      [
+        "h3",
+        "Claim.hasE Γ a A"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "a",
+      "f",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_piElim Γ A B a f",
+    "declaration": "  | HasE_piElim (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (a : P01D.Poly) (f : P01D.Poly)",
+    "claim": "Claim.hasE Γ (f.app a) (P01AC.inst B a)",
+    "plist": "[Claim.formE Γ (A.pi B), Claim.formE Γ (P01AC.inst B a), Claim.hasE Γ f (A.pi B), Claim.hasE Γ a A]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.sigmaIntro",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.pairPoly a b) (A.sigma B)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "a"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "b"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1032"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1040"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ a A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1048"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ b (P01AC.inst B a)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1053"
+      }
+    ],
+    "tag": "HasE_sigmaIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "a",
+        "P01D.Poly"
+      ],
+      [
+        "b",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (A.sigma B)"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (P01AC.inst B a)"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ a A"
+      ],
+      [
+        "h3",
+        "Claim.hasE Γ b (P01AC.inst B a)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "a",
+      "b",
+      "h0",
+      "h1",
+      "h2",
+      "h3"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_sigmaIntro Γ A B a b",
+    "declaration": "  | HasE_sigmaIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (a : P01D.Poly) (b : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.pairPoly a b) (A.sigma B)",
+    "plist": "[Claim.formE Γ (A.sigma B), Claim.formE Γ (P01AC.inst B a), Claim.hasE Γ a A, Claim.hasE Γ b (P01AC.inst B a)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.sigmaFst",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.fstPoly z) A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "z"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1109"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1113"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ z (A.sigma B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1121"
+      }
+    ],
+    "tag": "HasE_sigmaFst",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "z",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (A.sigma B)"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ z (A.sigma B)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "z",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_sigmaFst Γ A B z",
+    "declaration": "  | HasE_sigmaFst (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (z : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.fstPoly z) A",
+    "plist": "[Claim.formE Γ A, Claim.formE Γ (A.sigma B), Claim.hasE Γ z (A.sigma B)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.sigmaSnd",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.sndPoly z) (P01AC.inst B (P01D.fstPoly z))",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "z"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.sigma B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1174"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.inst B (P01D.fstPoly z))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1182"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ z (A.sigma B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1193"
+      }
+    ],
+    "tag": "HasE_sigmaSnd",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "z",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (A.sigma B)"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (P01AC.inst B (P01D.fstPoly z))"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ z (A.sigma B)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "z",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_sigmaSnd Γ A B z",
+    "declaration": "  | HasE_sigmaSnd (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (z : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.sndPoly z) (P01AC.inst B (P01D.fstPoly z))",
+    "plist": "[Claim.formE Γ (A.sigma B), Claim.formE Γ (P01AC.inst B (P01D.fstPoly z)), Claim.hasE Γ z (A.sigma B)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.identityIntro",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (A.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.identity p q)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1243"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1252"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ q A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1257"
+      },
+      {
+        "type": "P01AC.Intensional.Plus.PolyConvPlus p q",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1262"
+      }
+    ],
+    "tag": "HasE_identityIntro",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.PolyCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ (A.identity p q)"
+      ],
+      [
+        "h1",
+        "Claim.hasE Γ p A"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ q A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkPoly aux0 p q = true"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "h2",
+      "(AuxiliaryCertificates.checkPoly_sound s0)"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "poly_complete",
+        "a._@.ExtensionalRepairSyntax._hyg.1262",
+        "P01AC.Intensional.Plus.PolyConvPlus p q"
+      ]
+    ],
+    "pattern": ".HasE_identityIntro Γ A p q aux0",
+    "declaration": "  | HasE_identityIntro (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (aux0 : AuxiliaryCertificates.PolyCert)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (A.identity p q)",
+    "plist": "[Claim.formE Γ (A.identity p q), Claim.hasE Γ p A, Claim.hasE Γ q A]",
+    "side": "(AuxiliaryCertificates.checkPoly aux0 p q = true) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.proofErase",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ p P01AC.Ty.raw",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "x"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "y"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ P01AC.Ty.raw",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1334"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.identity x y)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1338"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p (A.identity x y)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1347"
+      }
+    ],
+    "tag": "HasE_proofErase",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "x",
+        "P01D.Poly"
+      ],
+      [
+        "y",
+        "P01D.Poly"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ P01AC.Ty.raw"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ (A.identity x y)"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ p (A.identity x y)"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "x",
+      "y",
+      "p",
+      "h0",
+      "h1",
+      "h2"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_proofErase Γ A x y p",
+    "declaration": "  | HasE_proofErase (Γ : P01AC.Tel) (A : P01AC.Ty) (x : P01D.Poly) (y : P01D.Poly) (p : P01D.Poly)",
+    "claim": "Claim.hasE Γ p P01AC.Ty.raw",
+    "plist": "[Claim.formE Γ P01AC.Ty.raw, Claim.formE Γ (A.identity x y), Claim.hasE Γ p (A.identity x y)]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.j",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.jPoly d y e) (P01AC.motiveAt B y e)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "x"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "y"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "e"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "d"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1525"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (P01AC.theta Γ A x) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1529"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.identity x y)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1538"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1547"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (P01AC.motiveAt B y e)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1559"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ x A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1568"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ y A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1573"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ e (A.identity x y)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1578"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1588"
+      }
+    ],
+    "tag": "HasE_j",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "x",
+        "P01D.Poly"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "y",
+        "P01D.Poly"
+      ],
+      [
+        "e",
+        "P01D.Poly"
+      ],
+      [
+        "d",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE (P01AC.theta Γ A x) B"
+      ],
+      [
+        "h2",
+        "Claim.formE Γ (A.identity x y)"
+      ],
+      [
+        "h3",
+        "Claim.formE Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))"
+      ],
+      [
+        "h4",
+        "Claim.formE Γ (P01AC.motiveAt B y e)"
+      ],
+      [
+        "h5",
+        "Claim.hasE Γ x A"
+      ],
+      [
+        "h6",
+        "Claim.hasE Γ y A"
+      ],
+      [
+        "h7",
+        "Claim.hasE Γ e (A.identity x y)"
+      ],
+      [
+        "h8",
+        "Claim.hasE Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))"
+      ]
+    ],
+    "sides": [],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "x",
+      "B",
+      "y",
+      "e",
+      "d",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "h8"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_j Γ A x B y e d",
+    "declaration": "  | HasE_j (Γ : P01AC.Tel) (A : P01AC.Ty) (x : P01D.Poly) (B : P01AC.Ty) (y : P01D.Poly) (e : P01D.Poly) (d : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.jPoly d y e) (P01AC.motiveAt B y e)",
+    "plist": "[Claim.formE Γ A, Claim.formE (P01AC.theta Γ A x) B, Claim.formE Γ (A.identity x y), Claim.formE Γ (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i)), Claim.formE Γ (P01AC.motiveAt B y e), Claim.hasE Γ x A, Claim.hasE Γ y A, Claim.hasE Γ e (A.identity x y), Claim.hasE Γ d (P01AC.motiveAt B x (P01D.Poly.atom OrthemologyV2.Term.i))]",
+    "side": "True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.conv",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ q A",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1643"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1647"
+      },
+      {
+        "type": "P01AC.Intensional.Plus.PolyConvPlus p q",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1652"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1656"
+      }
+    ],
+    "tag": "HasE_conv",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "aux0",
+        "AuxiliaryCertificates.PolyCert"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.hasE Γ p A"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "AuxiliaryCertificates.checkPoly aux0 p q = true"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "p",
+      "q",
+      "h0",
+      "h1",
+      "(AuxiliaryCertificates.checkPoly_sound s0)",
+      "s1"
+    ],
+    "auxes": [
+      [
+        "aux0",
+        "poly_complete",
+        "a._@.ExtensionalRepairSyntax._hyg.1652",
+        "P01AC.Intensional.Plus.PolyConvPlus p q"
+      ]
+    ],
+    "pattern": ".HasE_conv Γ A p q aux0",
+    "declaration": "  | HasE_conv (Γ : P01AC.Tel) (A : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (aux0 : AuxiliaryCertificates.PolyCert)",
+    "claim": "Claim.hasE Γ q A",
+    "plist": "[Claim.formE Γ A, Claim.hasE Γ p A]",
+    "side": "(AuxiliaryCertificates.checkPoly aux0 p q = true) ∧ (P01AC.Scoped (List.length Γ) q) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.piExt",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) ((A.pi B).identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "A"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "h"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1862"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (A :: Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1866"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1876"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1884"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ q (A.pi B)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1893"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (A :: Γ)\n  (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1902"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ\n  (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1939"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ h\n  (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.1974"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ ((A.pi B).identity p q)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2010"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) p",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2023"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2027"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) h",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2031"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ) A",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2035"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ + 1) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2039"
+      }
+    ],
+    "tag": "HasE_piExt",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "A",
+        "P01AC.Ty"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "h",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE Γ A"
+      ],
+      [
+        "h1",
+        "Claim.formE (A :: Γ) B"
+      ],
+      [
+        "h2",
+        "Claim.formE Γ (A.pi B)"
+      ],
+      [
+        "h3",
+        "Claim.hasE Γ p (A.pi B)"
+      ],
+      [
+        "h4",
+        "Claim.hasE Γ q (A.pi B)"
+      ],
+      [
+        "h5",
+        "Claim.formE (A :: Γ) (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))"
+      ],
+      [
+        "h6",
+        "Claim.formE Γ (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))"
+      ],
+      [
+        "h7",
+        "Claim.hasE Γ h (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))))"
+      ],
+      [
+        "h8",
+        "Claim.formE Γ ((A.pi B).identity p q)"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) p"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ],
+      [
+        "s2",
+        "P01AC.Scoped (List.length Γ) h"
+      ],
+      [
+        "s3",
+        "P01AC.TyScoped (List.length Γ) A"
+      ],
+      [
+        "s4",
+        "P01AC.TyScoped (List.length Γ + 1) B"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "A",
+      "B",
+      "p",
+      "q",
+      "h",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "h7",
+      "h8",
+      "s0",
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_piExt Γ A B p q h",
+    "declaration": "  | HasE_piExt (Γ : P01AC.Tel) (A : P01AC.Ty) (B : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (h : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) ((A.pi B).identity p q)",
+    "plist": "[Claim.formE Γ A, Claim.formE (A :: Γ) B, Claim.formE Γ (A.pi B), Claim.hasE Γ p (A.pi B), Claim.hasE Γ q (A.pi B), Claim.formE (A :: Γ) (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0))), Claim.formE Γ (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))), Claim.hasE Γ h (A.pi (B.identity ((P01D.pren Nat.succ p).app (P01D.Poly.var 0)) ((P01D.pren Nat.succ q).app (P01D.Poly.var 0)))), Claim.formE Γ ((A.pi B).identity p q)]",
+    "side": "(P01AC.Scoped (List.length Γ) p) ∧ (P01AC.Scoped (List.length Γ) q) ∧ (P01AC.Scoped (List.length Γ) h) ∧ (P01AC.TyScoped (List.length Γ) A) ∧ (P01AC.TyScoped (List.length Γ + 1) B) ∧ True"
+  },
+  {
+    "ctor": "P01AC.ExtensionalRepair.HasE.allExt",
+    "conclusion": "P01AC.ExtensionalRepair.HasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (B.all.identity p q)",
+    "args": [
+      {
+        "type": "P01AC.Tel",
+        "prop": false,
+        "name": "Γ"
+      },
+      {
+        "type": "P01AC.Ty",
+        "prop": false,
+        "name": "B"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "p"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "q"
+      },
+      {
+        "type": "P01D.Poly",
+        "prop": false,
+        "name": "h"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (P01AC.twkTel Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2171"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2178"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ p B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2185"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE Γ q B.all",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2193"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE (P01AC.twkTel Γ) (B.identity p q)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2201"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.HasE (P01AC.twkTel Γ) h (B.identity p q)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2213"
+      },
+      {
+        "type": "P01AC.ExtensionalRepair.FormE Γ (B.all.identity p q)",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2226"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) p",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2238"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) q",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2242"
+      },
+      {
+        "type": "P01AC.Scoped (List.length Γ) h",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2246"
+      },
+      {
+        "type": "P01AC.TyScoped (List.length Γ) B",
+        "prop": true,
+        "name": "a._@.ExtensionalRepairSyntax._hyg.2250"
+      }
+    ],
+    "tag": "HasE_allExt",
+    "params": [
+      [
+        "Γ",
+        "P01AC.Tel"
+      ],
+      [
+        "B",
+        "P01AC.Ty"
+      ],
+      [
+        "p",
+        "P01D.Poly"
+      ],
+      [
+        "q",
+        "P01D.Poly"
+      ],
+      [
+        "h",
+        "P01D.Poly"
+      ]
+    ],
+    "children": [
+      [
+        "h0",
+        "Claim.formE (P01AC.twkTel Γ) B"
+      ],
+      [
+        "h1",
+        "Claim.formE Γ B.all"
+      ],
+      [
+        "h2",
+        "Claim.hasE Γ p B.all"
+      ],
+      [
+        "h3",
+        "Claim.hasE Γ q B.all"
+      ],
+      [
+        "h4",
+        "Claim.formE (P01AC.twkTel Γ) (B.identity p q)"
+      ],
+      [
+        "h5",
+        "Claim.hasE (P01AC.twkTel Γ) h (B.identity p q)"
+      ],
+      [
+        "h6",
+        "Claim.formE Γ (B.all.identity p q)"
+      ]
+    ],
+    "sides": [
+      [
+        "s0",
+        "P01AC.Scoped (List.length Γ) p"
+      ],
+      [
+        "s1",
+        "P01AC.Scoped (List.length Γ) q"
+      ],
+      [
+        "s2",
+        "P01AC.Scoped (List.length Γ) h"
+      ],
+      [
+        "s3",
+        "P01AC.TyScoped (List.length Γ) B"
+      ]
+    ],
+    "sourceargs": [
+      "Γ",
+      "B",
+      "p",
+      "q",
+      "h",
+      "h0",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "s0",
+      "s1",
+      "s2",
+      "s3"
+    ],
+    "auxes": [],
+    "pattern": ".HasE_allExt Γ B p q h",
+    "declaration": "  | HasE_allExt (Γ : P01AC.Tel) (B : P01AC.Ty) (p : P01D.Poly) (q : P01D.Poly) (h : P01D.Poly)",
+    "claim": "Claim.hasE Γ (P01D.Poly.atom OrthemologyV2.Term.i) (B.all.identity p q)",
+    "plist": "[Claim.formE (P01AC.twkTel Γ) B, Claim.formE Γ B.all, Claim.hasE Γ p B.all, Claim.hasE Γ q B.all, Claim.formE (P01AC.twkTel Γ) (B.identity p q), Claim.hasE (P01AC.twkTel Γ) h (B.identity p q), Claim.formE Γ (B.all.identity p q)]",
+    "side": "(P01AC.Scoped (List.length Γ) p) ∧ (P01AC.Scoped (List.length Γ) q) ∧ (P01AC.Scoped (List.length Γ) h) ∧ (P01AC.TyScoped (List.length Γ) B) ∧ True"
+  }
+]

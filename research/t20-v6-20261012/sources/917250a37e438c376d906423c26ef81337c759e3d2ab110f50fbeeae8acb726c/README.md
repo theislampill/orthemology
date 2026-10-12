@@ -1,0 +1,7 @@
+# Productive origination: accepted additive source component
+
+Accepted author REPORT and separate independent REVIEW are preserved with exact manifests, receipts, input reports, source acquisition bindings and reading/dependency ledger. Root READING_NOTE is participating context, not independent review. The field/member relevance correction in section 4 is resolved without withdrawing the foundational judgment. Initial REPORT bytes were overwritten before snapshot and were not recovered: only initial independently verified manifest and receipt survive. No original-draft custody, reconstructed exact diff, or fabricated historical text is claimed.
+
+Replay: python replay.py --output-dir /fresh/output. Included byte identities, accepted pins, review manifest, available author manifest members and ten retained antecedent-copy bindings are verified offline. Raw sources and selected extracts are excluded with exact hashes; acquisition URLs and reading loci remain. The historical 57-check reviewer result is preserved but is not freshly rerun as 57 checks. Original verify_review.py requires excluded source ranges and ten live-original paths, and writes receipts; original verify.py also writes its manifest. Do not run either on originals. No new source reading, source-selection continuity, download-byte check, philosophical proof or kernel verification is claimed by portable replay. Original live inputs were checked separately at sealing.
+
+Prior archives remain unchanged. No whole-paper redistribution, integration, owner acceptance, upload or T20 closure.

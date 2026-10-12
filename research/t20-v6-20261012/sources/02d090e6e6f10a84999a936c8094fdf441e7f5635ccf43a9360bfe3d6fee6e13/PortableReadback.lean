@@ -1,0 +1,36 @@
+import CriticalZero
+import FiniteLPCertificates
+import BoundaryReadback
+import IndependentBoundaryAudit
+set_option pp.universes true
+set_option pp.explicit true
+#check @CriticalZero.no_exact_repair
+#print axioms CriticalZero.no_exact_repair
+#check @CriticalZero.second_order_optimum_zero
+#print axioms CriticalZero.second_order_optimum_zero
+#check @CriticalZero.actual_second_order_F
+#print axioms CriticalZero.actual_second_order_F
+#check @FiniteLPCertificates.dual_bound
+#print axioms FiniteLPCertificates.dual_bound
+#check @FiniteLPCertificates.negative_dual_excludes_weak
+#print axioms FiniteLPCertificates.negative_dual_excludes_weak
+#check @FiniteLPCertificates.zero_dual_excludes_strict
+#print axioms FiniteLPCertificates.zero_dual_excludes_strict
+#check @CriticalZero.psi_deriv
+#print axioms CriticalZero.psi_deriv
+#check @CriticalZero.dpsi_deriv
+#print axioms CriticalZero.dpsi_deriv
+#check @CriticalZero.curvature_pos
+#print axioms CriticalZero.curvature_pos
+#check @CriticalZero.actual_second_order_G
+#print axioms CriticalZero.actual_second_order_G
+#check @IndependentBoundaryAudit.actual_four_rows
+#print axioms IndependentBoundaryAudit.actual_four_rows
+#check @IndependentBoundaryAudit.critical_generic_dual_bound
+#print axioms IndependentBoundaryAudit.critical_generic_dual_bound
+#check @IndependentBoundaryAudit.critical_generic_no_strict
+#print axioms IndependentBoundaryAudit.critical_generic_no_strict
+#check @IndependentBoundaryAudit.bound_zero_but_no_exact
+#print axioms IndependentBoundaryAudit.bound_zero_but_no_exact
+#check @IndependentBoundaryAudit.critical_curvature_slope
+#print axioms IndependentBoundaryAudit.critical_curvature_slope

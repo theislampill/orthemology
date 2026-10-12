@@ -1,0 +1,47 @@
+{
+  "status": "PASS_SEPARATE_OBJECT_RECEIPT_BINDINGS",
+  "bindings": [
+    {
+      "object_path": "full-polynomial-moment-countermodel-20261010/lean-support/ScalarSupport.olean",
+      "receipt_path": "full-polynomial-moment-countermodel-20261010/lean-support/SUPPORT_RECEIPT.json",
+      "receipt_selector": [
+        "object_sha256"
+      ],
+      "expected_sha256": "b7419cb7fedd5945be0c2f861c2ee767d89a6909035f9999b767b7fcd4f47862",
+      "actual_sha256": "b7419cb7fedd5945be0c2f861c2ee767d89a6909035f9999b767b7fcd4f47862",
+      "bytes": 316256,
+      "match": true
+    },
+    {
+      "object_path": "full-functional-lean-20261010/ScalarSupport.olean",
+      "receipt_path": "full-functional-lean-20261010/LEAN_RECEIPT.json",
+      "receipt_selector": [
+        "objects",
+        "ScalarSupport"
+      ],
+      "expected_sha256": "cd54029f6f8659cb2839706e51a3c6156f04ac18ce50fffb21acc2f5bfef58f0",
+      "actual_sha256": "cd54029f6f8659cb2839706e51a3c6156f04ac18ce50fffb21acc2f5bfef58f0",
+      "bytes": 316256,
+      "match": true
+    },
+    {
+      "object_path": "full-functional-lean-independent-review-20261010/replay/ScalarSupport.olean",
+      "receipt_path": "full-functional-lean-independent-review-20261010/BUILD_RECEIPT.json",
+      "receipt_selector": [
+        "records",
+        5,
+        "object_sha256"
+      ],
+      "expected_sha256": "41bc92c6fe379509ff1c7b189c7bc65fd6f452ee7dae11e0884f4bb53ccf0880",
+      "actual_sha256": "41bc92c6fe379509ff1c7b189c7bc65fd6f452ee7dae11e0884f4bb53ccf0880",
+      "bytes": 316256,
+      "match": true
+    }
+  ],
+  "ordinary_review_frozen_object_sha256": "b7419cb7fedd5945be0c2f861c2ee767d89a6909035f9999b767b7fcd4f47862",
+  "common_source_sha256": "07098745a89d4948f7fb72fd05b7cf32cb4469d628b6671689a5e4769e16b526",
+  "historical_receipt_object_mismatch": false,
+  "source_freeze_drift_detected": false,
+  "conclusion": "The ordinary retained ScalarSupport object matches its historical support receipt and freeze. The full-functional retained object is a different file and matches its own full-functional receipt. The independent full-functional build object matches its own build receipt. Cross-build object identity is not required or claimed.",
+  "historical_objects_used_as_imports": false
+}

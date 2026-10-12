@@ -1,0 +1,146 @@
+{
+  "title": "Attribution and verification ledger",
+  "date_utc": "2026-10-09",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Finite support-refined weighted grammar and exact labelled tree bijection",
+      "attribution": "Written specialization in TREE_BIJECTION_AND_BOUND.md; state-refinement idea is already acknowledged in the first local RESULT.md.",
+      "evidence": [
+        "Local input 1, sections 2–3",
+        "N03 section 2 as receiving framework"
+      ],
+      "verification": "Written induction supplied; no new formalization or executable construction."
+    },
+    {
+      "id": "C2",
+      "claim": "Ordered support guards are discharged at admitted production construction",
+      "attribution": "The local guard contract and this explicit semantic transport.",
+      "evidence": [
+        "Local input 1, section 2",
+        "N03 sections 2–3"
+      ],
+      "verification": "Written argument; does not validate substantive policy soundness or decidability."
+    },
+    {
+      "id": "C3",
+      "claim": "Nonnegative additive occurrence valuation satisfies superior-function hypotheses",
+      "attribution": "Established K77/N03 hypothesis, checked algebraically for this instance.",
+      "evidence": [
+        "K77 section 1",
+        "N03 section 4"
+      ],
+      "verification": "Written inequality and monotonicity check; no new kernel-checked theorem."
+    },
+    {
+      "id": "C4",
+      "claim": "Minimum derivations transfer to original guarded exact states",
+      "attribution": "Established minimum-derivation result plus C1–C3.",
+      "evidence": [
+        "K77 sections 3–4",
+        "N03 Figure 4 and section 4",
+        "TREE_BIJECTION_AND_BOUND.md"
+      ],
+      "verification": "Conditional written mathematical transfer under the declared finite nonnegative contract; no novel priority algorithm."
+    },
+    {
+      "id": "C5",
+      "claim": "Finalization order supplies no repeated refined state, including zero-price cycles",
+      "attribution": "Specialization of finalized-antecedent witness construction in K77/N03.",
+      "evidence": [
+        "K77 section 3 algorithm",
+        "N03 Figure 4",
+        "TREE_BIJECTION_AND_BOUND.md"
+      ],
+      "verification": "Written strict-index argument. Nullary seeds and unsupported/zero-price cycles handled explicitly. Strict cost improvement is not assumed."
+    },
+    {
+      "id": "C6",
+      "claim": "Optimal witness height at most n(|S|+1), hence n(|B|+1)",
+      "attribution": "Support-chain refinement of C5. The local predecessor already established the height result; this package supplies its external-theorem relationship.",
+      "evidence": [
+        "Local input 1, section 3",
+        "Local input 2, checked-result item 2",
+        "TREE_BIJECTION_AND_BOUND.md"
+      ],
+      "verification": "Written argument here; predecessor verification status is reported from its RESULT.md, not independently rerun."
+    },
+    {
+      "id": "C7",
+      "claim": "Uniform support-chain bound is sharp for the declared class",
+      "attribution": "Zero-cost prefix-support family already given in local input 1; not constructed anew.",
+      "evidence": [
+        "Local input 1, section 3, The uniform height bound is sharp"
+      ],
+      "verification": "Its written construction was inspected; no new test or formal sharpness proof run here."
+    },
+    {
+      "id": "C8",
+      "claim": "Synchronous recurrence and priority finalization solve the same refined optimum with different schedules",
+      "attribution": "Comparison of the local actual recurrence with K77/N03 algorithm.",
+      "evidence": [
+        "Local input 2, Actual recurrence and Why the proof is not definitional",
+        "N03 Figure 4"
+      ],
+      "verification": "Written comparison; no implementation equivalence, extracted compiler, or code change."
+    },
+    {
+      "id": "C9",
+      "claim": "Tree occurrence charging is preserved; shared distinct-edge cost is different",
+      "attribution": "C1 cost induction; G99 tree semantics; GLPN92 valuation distinction.",
+      "evidence": [
+        "G99 sections 2.4.2–2.4.3",
+        "GLPN92 sections 6.1–6.2",
+        "TREE_BIJECTION_AND_BOUND.md"
+      ],
+      "verification": "Written cost preservation and boundary statement; no DAG optimizer or sharing-aware completeness claim."
+    },
+    {
+      "id": "C10",
+      "claim": "Union-only summary cannot represent arbitrary ordered guards",
+      "attribution": "Original small counterexample in this package using reversed premise supports.",
+      "evidence": [
+        "RESULT.md, What the exact state contributes"
+      ],
+      "verification": "Direct comparison of equal unions and different fixed guard values; no global impossibility claim about every provenance encoding."
+    },
+    {
+      "id": "C11",
+      "claim": "Provenance fixed-point literature does not automatically supply the required guard-admissibility representation",
+      "attribution": "Bounded interface comparison with GKT07 definitions and theorem statement.",
+      "evidence": [
+        "GKT07 section 5",
+        "C2",
+        "C10"
+      ],
+      "verification": "Scope distinction, not a refutation of the source or a novelty result."
+    },
+    {
+      "id": "C12",
+      "claim": "No substantive source truth, unrestricted cut, integration, adoption, closure, or duration result",
+      "attribution": "Explicit contract and task boundary.",
+      "evidence": [
+        "Both local inputs, limits sections",
+        "Parent task scope"
+      ],
+      "verification": "No such action or proof attempted."
+    }
+  ],
+  "this_package_status": {
+    "nature": "Written mathematical assessment and proof plus metadata ledgers",
+    "formal_proof": "No new Lean or other kernel-checked proof",
+    "implementation": "No code implementation or algorithm optimization",
+    "predecessor_replay": "Not run; predecessor result reports only were read",
+    "external_proof_audit": "Targeted reading at SOURCE_LEDGER.json depth, not exhaustive source validation",
+    "novelty": "No original-algorithm or literature-exhaustion claim; exact formula not found verbatim in inspected passages does not imply novelty",
+    "mutations": "Only files in this newly created additive directory; original input preservation separately checked"
+  },
+  "required_packaging_checks": [
+    "Parse both JSON ledgers",
+    "Check recorded local-input SHA-256 values against current bytes",
+    "Read written mathematical report and proof for the declared assumptions and zero-cost argument",
+    "Hash deliverables into SHA256SUMS",
+    "Run sha256sum -c SHA256SUMS"
+  ],
+  "check_status": "See PACKAGING_VERIFICATION.json for actual results."
+}

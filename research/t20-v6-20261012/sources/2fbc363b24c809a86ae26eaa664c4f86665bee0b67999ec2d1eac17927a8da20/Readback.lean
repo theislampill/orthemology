@@ -1,0 +1,25 @@
+import ReviewerExplicitProbes
+#check @HiddenParity.ExplicitController.tolerance
+#print axioms HiddenParity.ExplicitController.tolerance
+#check @HiddenParity.ExplicitController.policy
+#print axioms HiddenParity.ExplicitController.policy
+#check @HiddenParity.ExplicitController.winningRecord
+#print axioms HiddenParity.ExplicitController.winningRecord
+#check @HiddenParity.ExplicitController.winningRecord_policy
+#print axioms HiddenParity.ExplicitController.winningRecord_policy
+#check @HiddenParity.ExplicitController.winningRecord_seedLaw
+#print axioms HiddenParity.ExplicitController.winningRecord_seedLaw
+#check @HiddenParity.IndependentExplicit.literal_generator_field
+#print axioms HiddenParity.IndependentExplicit.literal_generator_field
+#check @HiddenParity.IndependentExplicit.literal_dirac_field
+#print axioms HiddenParity.IndependentExplicit.literal_dirac_field
+#check @HiddenParity.IndependentExplicit.literal_generator_measurable
+#print axioms HiddenParity.IndependentExplicit.literal_generator_measurable
+#check @HiddenParity.IndependentExplicit.literal_generator_common_success
+#print axioms HiddenParity.IndependentExplicit.literal_generator_common_success
+#check @HiddenParity.IndependentExplicit.literal_generator_lawful
+#print axioms HiddenParity.IndependentExplicit.literal_generator_lawful
+#check @HiddenParity.IndependentExplicit.tolerance_positive
+#print axioms HiddenParity.IndependentExplicit.tolerance_positive
+#check @HiddenParity.IndependentExplicit.policy_ignores_dummy_source
+#print axioms HiddenParity.IndependentExplicit.policy_ignores_dummy_source

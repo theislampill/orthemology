@@ -1,0 +1,5 @@
+# Scope control identified during the probe
+
+The least-generated proposal must not classify every necessary condition as an efficient or existential supplier. Ṣafadiyya S003 L207 permits mutually conditioned powers of created agents when both derive from a third cause. A mixed AND-rule system (A requires original g and B; B requires original g and A) has a nonempty original, locally satisfied all-active assignment, and no generated A/B. This shows that the least account rejects cyclic prerequisite *representations*. It does not show that the permitted common-cause reality is impossible.
+
+A faithful representation can instead place g's provision of A and B in the generative relation, while keeping their required co-presence in a separate constraint relation. The proposed probe must display both encodings and their different result. This comparison can decide whether the generation semantics is a faithful proposed reading in a case; it cannot independently establish that every actual received resource has a generative account of this kind.

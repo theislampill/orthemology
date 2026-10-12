@@ -1,0 +1,818 @@
+Epistemic Tuples and
+Intra-Agential Equilibrium
+A formal thesis on evidentiary profiles, cognitive faculties, mixed epistemic policies,
+and equilibrium
+
+
+
+
+   Central thesis. Evidentiary weight is often better represented as a tuple than as a scalar.
+   Once such evidence is understood as genuinely epistemic – that is, as apprehended, discriminated,
+   integrated, defeated, retained, compared, and acted upon by a differentiated cognitive architecture
+   – the relevant interaction need not be between historians or external agents. It can be intra-agential:
+   functionally distinct cognitive faculties can jointly regulate belief. When their admissible responses
+   are finite and mutually conditioning, mixed response policies generate the finite-dimensional
+   compact convex mixed-strategy space of a finite game. Ordinary Nash equilibrium follows only
+   after the additional assumptions required for Nash-representable utilities are supplied. If the
+   evidentiary values remain genuinely vector-valued or partially ordered, a vector, Pareto, team, or
+   constrained-optimality solution concept may be more faithful than scalar Nash.
+
+
+
+
+Standalone synthesis and formal breakdown
+September 2026
+Epistemic Tuples and Intra-Agential Equilibrium                                                               1
+
+
+
+Contents
+
+1 Executive statement                                                                                         3
+
+2 Evidentiary weight as a tuple                                                                               3
+  2.1 Why scalarisation is often premature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        3
+  2.2 Partial order before total order . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      4
+
+3 What makes an evidentiary tuple epistemic                                                                   4
+  3.1 Differentiated cognitive loci . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+  3.2 A simple architecture diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+
+4 From cognitive architecture to game structure                                                              6
+  4.1 The functional encoding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      6
+  4.2 Why this is genuinely intra-agential . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+
+5 Mixed epistemic policies                                                                                    6
+  5.1 What does “mixing” mean cognitively? . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          7
+
+6 Exactly where Nash enters                                                                                  7
+  6.1 The mixed extension of a finite game is not yet the theorem . . . . . . . . . . . . . . . . .          7
+  6.2 What the theorem does and does not establish . . . . . . . . . . . . . . . . . . . . . . . .           7
+
+7 The vector-valued problem: when scalar Nash is too strong                                                  8
+  7.1 Cone-ordered improvement . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         8
+  7.2 Pareto-Nash intuition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
+
+8 Nash may exist and still be the wrong solution concept                                                      8
+  8.1 Common-interest or team formulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           9
+  8.2 Constrained optimisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        9
+  8.3 Belief-revision or pipeline formulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       9
+  8.4 Correlated and bargaining formulations . . . . . . . . . . . . . . . . . . . . . . . . . . . .          9
+
+9 Worked example: hadith and inscriptions                                                                  9
+  9.1 Faculty-mediated handling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+  9.2 The error of forced scalarisation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+10 A formal hierarchy of claims                                                                              10
+
+11 Propositions and consequences                                                                             11
+
+12 Common misunderstandings                                                                                  12
+   12.1 “One mind means one player” . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      12
+   12.2 “If the space is convex, Nash follows” . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   12
+   12.3 “A mixed policy is just uncertainty” . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     12
+   12.4 “An equilibrium gives the correct evidentiary weights” . . . . . . . . . . . . . . . . . . . .       12
+   12.5 “If Nash is not uniquely appropriate, the game model fails” . . . . . . . . . . . . . . . . .        12
+
+13 The deeper epistemological picture                                                                        13
+Epistemic Tuples and Intra-Agential Equilibrium                                                                2
+
+
+14 Research programme                                                                                         13
+   14.1 Step 1: define the evidentiary coordinates . . . . . . . . . . . . . . . . . . . . . . . . . . .      13
+   14.2 Step 2: specify the faculty decomposition . . . . . . . . . . . . . . . . . . . . . . . . . . .       14
+   14.3 Step 3: define admissible responses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     14
+   14.4 Step 4: formalise mutual conditionality . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     14
+   14.5 Step 5: interpret mixture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     14
+   14.6 Step 6: choose the solution concept . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     14
+   14.7 Step 7: distinguish descriptive from normative success . . . . . . . . . . . . . . . . . . . .        14
+   14.8 Step 8: test robustness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   14
+
+15 Compact formal template                                                                                    15
+
+16 Conclusion                                                                                                 15
+
+A Glossary                                                                                                    16
+
+B Minimal references                                                                                          17
+Epistemic Tuples and Intra-Agential Equilibrium                                                             3
+
+
+
+1 Executive statement
+The ordinary question “which source should carry more weight?” is frequently ill-posed. It presupposes
+that evidentiary force lies on a single common scale. In many real comparisons, especially across
+heterogeneous source classes, one source is stronger in one respect and weaker in another. A better
+representation is therefore a profile
+
+                                       e = (e1 , e2 , . . . , ek ) ∈ E ⊆ Rk ,
+
+whose coordinates track distinct evidentiary virtues or liabilities.
+This changes the structure of epistemic comparison. A scalar asks for a total ranking. A tuple can preserve
+incomparability, trade-offs, and partial dominance. The crucial next step is not to imagine the tuples
+as inert mathematical objects and then append a historian from outside. They are epistemic because
+they occur within a faculty-mediated system of apprehension. Perception, memory, source-monitoring,
+coherence-checking, defeater-recognition, inferential integration, and action-guidance can each constrain
+what responses are admissible, and their outputs can condition one another.
+Thus, the relevant “players” in a game-theoretic encoding need not be separate persons. They may be
+functionally differentiated cognitive processes within one subject:
+
+             faculty/process ←→ player            admissible epistemic response ←→ strategy .
+
+If each process has finitely many coarse-grained admissible responses, and mixtures over those responses
+have a coherent cognitive interpretation, the product of mixed response sets is a compact convex strategy
+space. If, in addition, each process has a Nash-representable real-valued payoff over joint response profiles,
+the standard finite-game equilibrium result applies. But the existence of such an equilibrium is not the
+discovery of a uniquely correct historical weighting. It is the existence of a stable joint policy profile
+under the chosen encoding.
+The deepest lesson is therefore not “Nash tells us whether hadith beats inscriptions.” It is:
+
+    Structural lesson
+    Heterogeneous evidence may be epistemically stable without being reducible to one scalar ranking.
+    The stable object can be a joint policy for handling several incomparable evidentiary dimensions
+    at once.
+
+
+2 Evidentiary weight as a tuple
+2.1 Why scalarisation is often premature
+A scalar weight
+                                                    w(e) ∈ R
+forces every evidentiary consideration onto one axis. That may be legitimate after a justified aggregation
+rule has been established, but it should not be assumed at the outset. A tuple instead records the profile
+directly:
+                                          e = (p, t, i, s, d, c, . . .),
+where, for example, the coordinates might encode provenance quality, temporal proximity, independence,
+semantic specificity, defeater exposure, coherence, or other case-specific dimensions.
+Epistemic Tuples and Intra-Agential Equilibrium                                                           4
+
+
+Two profiles may therefore satisfy neither
+
+                                             e≥f        nor    f ≥e
+
+coordinatewise. This is not a defect. It can be the correct representation of the evidence.
+For example,
+                              e = (0.90, 0.35, 0.80),         f = (0.55, 0.92, 0.70)
+need not be forced into a total ranking. One may dominate on transmission integrity while the other
+dominates on material proximity. Which coordinate may compensate for which other coordinate is a
+further normative or functional question.
+
+2.2 Partial order before total order
+Let K ⊆ Rk be an admissibility or improvement cone. Define
+
+                                        x ⪰K y     ⇐⇒          x − y ∈ K.
+
+When K = Rk≥0 , this is ordinary Pareto dominance. Such an order is generally partial, not total. Partiality
+preserves the fact that epistemic strengths can hold in different respects.
+The phrase “which should hold more?” then decomposes into at least three questions:
+
+1. Which coordinates matter for the inquiry?
+
+2. Which coordinates, if any, may trade off against one another?
+
+3. Is a scalarisation of those trade-offs warranted at all?
+
+Only after those questions have answers is a function such as
+                                                         k
+                                              U (e) =
+                                                         X
+                                                               αj ej
+                                                         j=1
+
+licensed. Without such a licence, the coefficients αj merely hide the dispute inside a number.
+
+
+3 What makes an evidentiary tuple epistemic
+An evidentiary tuple is not epistemic merely because the word epistemic is written beside it. It is
+epistemic insofar as its coordinates enter the operations of a cognitive system: they are apprehended,
+discriminated, integrated, retained, compared, defeated, revised, and used in judgment or action.
+This means cognition is endogenous to the object under study. The more faithful schematic is not
+
+                                tuple −→ external observer later added,
+
+but
+               evidence −→ faculty-mediated apprehension −→ joint epistemic regulation.
+Epistemic Tuples and Intra-Agential Equilibrium                                                      5
+
+
+3.1 Differentiated cognitive loci
+Let
+                                           F = {F1 , F2 , . . . , Fn }
+be a set of functionally differentiated cognitive operations. They need not correspond one-to-one with
+traditional philosophical faculties; they may be computational or functional decompositions. Examples
+include:
+
+• perception or material-evidence assessment;
+
+• memory and retention;
+
+• source-monitoring and provenance assessment;
+
+• testimony assessment;
+
+• coherence and consistency checking;
+
+• defeater and undercutting-defeater recognition;
+
+• inferential integration;
+
+• confidence calibration;
+
+• action-guidance or decision thresholding.
+
+The important feature is not the labels but the interaction. If the response of Fi depends upon outputs
+of other processes, then
+                                               Fi (e, s−i )
+is more accurate than
+                                                    Fi (e).
+The architecture is mutually conditioning rather than merely parallel.
+
+3.2 A simple architecture diagram
+
+                                          perception /                       defeater
+                                         material check                    recognition
+
+
+
+                 evidentiary               source                          coherence /
+                   tuple e                monitoring                       integration
+
+
+
+                                           memory /                          action /
+                                           retention                     judgment policy
+
+
+The arrows are not a claim about a uniquely correct psychology. They display the structural idea:
+epistemic responses can be recursively and mutually conditioning.
+Epistemic Tuples and Intra-Agential Equilibrium                                                          6
+
+
+
+4 From cognitive architecture to game structure
+4.1 The functional encoding
+Suppose each process Fi has a finite set of admissible coarse-grained responses
+
+                                              Si = {s1i , . . . , sm
+                                                                   i }.
+                                                                     i
+
+
+
+Examples might include retain, discount, quarantine, revise, seek corroboration, treat as defeated, or pass
+downstream with a confidence interval. These are illustrative response types, not a universal vocabulary.
+The functional game-theoretic encoding is:
+
+                                  Fi ↔ player i,        Si ↔ strategy set of i.
+
+A joint response profile is
+                                      s = (s1 , . . . , sn ) ∈ S1 × · · · × Sn .
+The epistemic consequence of one response may depend on the entire profile. A source-monitoring process
+that would ordinarily retain a report may instead discount it after a defeater process identifies common
+dependence; a coherence process may revise an inference after memory retrieval supplies a conflicting
+datum. This profile-dependence is the interaction term.
+
+4.2 Why this is genuinely intra-agential
+Nothing in the formal vocabulary of game theory requires that a “player” be a biologically independent
+person. A player is a locus to which a strategy set and preference/payoff structure are assigned. Treating
+functional sub-processes as players is therefore an abstraction. Its legitimacy depends on whether
+the decomposition captures useful conditional independence, competing constraints, or best-response
+structure.
+The result is an intra-agential game: one cognitive subject, several functionally differentiated loci of
+response, and one jointly regulated belief state.
+
+    Important distinction
+    The plurality required for game structure can be functional rather than personal. The interaction
+    can occur inside one cognitive architecture.
+
+
+5 Mixed epistemic policies
+For finite Si , the mixed response set is the simplex
+                                                                            
+                                                               mi           
+                                     ∆(Si ) =       p ∈ Rm
+                                                         ≥0 :          pij = 1 .
+                                                                X
+                                                          i
+                                                 i                          
+                                                                j=1
+
+The joint mixed-policy space is
+                                                       n
+                                                 Σ=          ∆(Si ).
+                                                       Y
+
+                                                       i=1
+
+Each simplex is compact and convex, so Σ is compact and convex.
+Epistemic Tuples and Intra-Agential Equilibrium                                                          7
+
+
+5.1 What does “mixing” mean cognitively?
+A probability vector in a mathematical model should not be mistaken automatically for a literal mental
+roulette wheel. Several cognitive interpretations are possible:
+
+• Stochastic uptake: a process probabilistically selects among admissible responses under uncertainty.
+
+• Graded policy: mixture weights encode degrees of endorsement or allocation of attention rather
+  than repeated random choice.
+
+• Unresolved competition: several candidate responses remain active with different strengths until
+  downstream resolution.
+
+• Population or temporal interpretation: the mixture represents frequencies across repeated
+  episodes, sub-processes, or time slices.
+
+The model must say which interpretation is intended. “Convex” is not itself enough; the convex
+combination has to correspond to something cognitively or epistemically meaningful.
+
+
+6 Exactly where Nash enters
+6.1 The mixed extension of a finite game is not yet the theorem
+The existence of Σ gives the geometry needed for mixed strategies, but an ordinary Nash game also
+requires real-valued payoff functions
+
+                                               ui : S1 × · · · × Sn → R,
+
+or their multilinear extensions to mixed strategies. Such utilities can be posited directly, or they
+can represent preferences over lotteries when the relevant completeness, transitivity, continuity, and
+independence conditions are satisfied. A merely partial or non-von-Neumann–Morgenstern ordering does
+not automatically supply this representation. A Nash equilibrium σ ∗ ∈ Σ satisfies
+
+                       ui (σi∗ , σ−i
+                                  ∗                ∗
+                                     ) ≥ ui (σi , σ−i )   for every i and every σi ∈ ∆(Si ).
+
+No locus gains, according to its encoded payoff, by unilateral deviation.
+For a finite normal-form game, a mixed Nash equilibrium exists. The convexity relevant to the standard
+proof is obtained by passing from finite pure strategy sets to mixed-strategy simplices; expected payoff is
+continuous and affine in each player’s own mixture.
+
+6.2 What the theorem does and does not establish
+Once the encoding has supplied finite strategy sets and Nash-representable utilities, equilibrium existence
+is guaranteed. But this is an existence theorem for that model. It does not establish:
+
+• that the original evidence uniquely determines the player decomposition;
+
+• that the chosen utilities are historically or epistemically correct;
+
+• that a Nash equilibrium is unique;
+Epistemic Tuples and Intra-Agential Equilibrium                                                            8
+
+
+• that equilibrium coincides with truth;
+
+• that one source class receives a uniquely correct scalar weight;
+
+• that non-cooperative Nash is the best solution concept for the cognitive architecture.
+
+Thus,
+                   equilibrium existence ̸= correct scalar weighting ̸= historical truth.
+
+What equilibrium establishes is conditional stability: under the specified decomposition, admissible
+responses, and payoff representation, there exists a policy profile resistant to unilateral improvement.
+
+
+7 The vector-valued problem: when scalar Nash is too strong
+The original motivation was precisely to avoid premature scalarisation. If each process evaluates outcomes
+by a vector
+                                                Ui (s) ∈ Rk
+with only a partial order, then ordinary “profitable deviation” is not automatically well-defined. One
+must specify how vector outcomes are compared.
+
+7.1 Cone-ordered improvement
+Let Ki ⊆ Rk be a cone defining admissible improvement for process i. We may say that x weakly improves
+upon y when
+                                              x − y ∈ Ki .
+A vector equilibrium can then be characterised by the absence of a unilateral deviation whose outcome
+lies in the strict improvement cone:
+
+                                       Ui (σi′ , σ−i
+                                                  ∗
+                                                     ) − Ui (σ ∗ ) ∈
+                                                                   / Ki \ {0}
+
+for every admissible unilateral deviation σi′ .
+This preserves multidimensional evidentiary profiles instead of collapsing them into a scalar merely to
+invoke the classical theorem.
+
+7.2 Pareto-Nash intuition
+The corresponding epistemic intuition is simple: a stable profile is one in which no process can unilaterally
+change its policy and make the relevant epistemic outcome strictly better in every dimension recognised
+by its improvement order.
+Such an equilibrium may leave trade-offs unresolved. That is a feature. If one response improves
+provenance sensitivity while reducing semantic coverage, neither response need dominate. The equilibrium
+can preserve the tension rather than hiding it.
+
+
+8 Nash may exist and still be the wrong solution concept
+A cognitive architecture may be representable as a game without being best understood as a non-
+cooperative game. Several alternatives deserve explicit separation.
+Epistemic Tuples and Intra-Agential Equilibrium                                                               9
+
+
+8.1 Common-interest or team formulation
+If all faculties serve one shared epistemic end, such as reliable true-enough belief under resource constraints,
+then the more natural object may be
+                                                   max W (σ)
+                                                  σ∈Σ
+
+for a common objective W . The faculties are then components of a team rather than strategic competitors.
+
+8.2 Constrained optimisation
+If one process proposes responses while others act as hard constraints, the model may instead be
+
+                                     max f (x)    subject to   gj (x) ≤ 0.
+                                      x∈X
+
+For example, a coherence process may not have its own “interest” but may forbid policies violating
+consistency constraints.
+
+8.3 Belief-revision or pipeline formulation
+If the architecture is essentially sequential,
+
+                                    e → F1 (e) → F2 (F1 (e)) → · · · → B,
+
+a pipeline or belief-revision operator may be more faithful. Strategic interaction should not be imposed
+merely because a game-theoretic vocabulary is available.
+
+8.4 Correlated and bargaining formulations
+If cognitive processes share signals, common causes, or coordination devices, correlated equilibrium
+may describe stable coordination better than independent mixing. If the core phenomenon is negoti-
+ated compromise among incompatible desiderata, bargaining or social-choice machinery may be more
+appropriate.
+
+    Model-selection principle
+    The thesis is not that every faculty-mediated epistemic problem is a Nash game. It is that
+    intra-agential game structure is a coherent and sometimes natural encoding once responses are
+    mutually conditioning. The correct solution concept depends on the architecture.
+
+
+9 Worked example: hadith and inscriptions
+The example is not intended to resolve any particular historical dispute. Its purpose is to show why source
+classes can carry strength in different respects and why scalar ranking can destroy useful information.
+Let a source profile contain six dimensions:
+
+                                            e = (T, P, I, S, D, C),
+
+where, illustratively:
+
+• T : transmission integrity;
+Epistemic Tuples and Intra-Agential Equilibrium                                                          10
+
+
+• P : temporal or material proximity;
+
+• I: independence from other witnesses;
+
+• S: semantic specificity or richness;
+
+• D: resistance to known defeaters;
+
+• C: coherence with independently supported background information.
+
+A hadith report h and an inscription r could have profiles of the form
+
+                                   h = (0.88, 0.56, 0.61, 0.94, 0.73, 0.81),
+
+                                   r = (0.72, 0.96, 0.90, 0.42, 0.84, 0.77).
+These numbers are purely schematic. Their role is to make the structure visible. The report is stronger
+on semantic richness and perhaps transmission-specific dimensions; the inscription is stronger on material
+proximity and independence. Neither coordinatewise dominates the other.
+
+9.1 Faculty-mediated handling
+Different cognitive operations may respond differently:
+
+• source-monitoring may privilege the chain and provenance structure of h;
+
+• material-evidence assessment may privilege the direct physical dating of r;
+
+• defeater-recognition may discount either profile when dependence or anachronism appears;
+
+• coherence-checking may compare both against a wider evidentiary network;
+
+• action-guidance may require a decision threshold without pretending that the underlying profiles have
+  become one-dimensional.
+
+The system therefore seeks a joint response policy, not necessarily a winner.
+
+9.2 The error of forced scalarisation
+Suppose one chooses
+                           W (e) = .15T + .30P + .20I + .10S + .15D + .10C.
+The output may rank r above h. Another defensible coefficient vector may reverse the result. Unless
+the coefficient choice is independently justified by the inquiry, the scalar ranking simply relocates the
+substantive disagreement into the weights.
+Preserving the tuples keeps visible the fact that the two source classes “hold” in different respects.
+
+
+10 A formal hierarchy of claims
+The overall thesis is clearest when separated into levels. Each level adds assumptions; conclusions should
+not be imported upward or downward without notice.
+Epistemic Tuples and Intra-Agential Equilibrium                                                              11
+
+
+
+
+  Level              Added structure                          What follows
+  L0                 Heterogeneous evidence represented   Multiple dimensions remain visible; total
+                     by tuples                            ranking is not assumed.
+  L1                 A partial order or admissible im-    Dominance and incomparability become for-
+                     provement relation                   mally expressible.
+  L2                 Faculty-mediated apprehension        The tuples are situated within endogenous
+                                                          cognitive operations.
+  L3                 Mutually conditioning functional An intra-agential strategic interaction can
+                     loci with admissible response sets   be encoded.
+  L4                 Finite response sets and meaningful A compact convex product of mixed response
+                     mixtures                             simplices is available.
+  L5                 Real-valued Nash-representable util- The structure is a finite normal-form game;
+                     ities                                a mixed Nash equilibrium exists.
+  L6                 Vector-valued      utilities   with A vector or Pareto equilibrium notion may
+                     cone/partial orders                  be used instead of scalar Nash.
+  L7                 Shared objective or hard constraints Team optimisation or constrained optimisa-
+                                                          tion may supersede non-cooperative equilib-
+                                                          rium.
+
+
+This hierarchy blocks two opposite errors: under-formalising the cognitive architecture, and over-claiming
+from the equilibrium theorem.
+
+
+11 Propositions and consequences
+Proposition 1: tuple preservation
+If evidentiary dimensions are not known to be commensurable, preserving the tuple contains weakly more
+explicit comparative information than an unexplained scalarisation.
+Reason. A scalarisation maps many distinct tuples to the same or comparable numbers and therefore
+discards coordinate-level structure unless the aggregation rule itself is retained and justified.
+
+Proposition 2: endogenous cognition
+If an evidentiary object is defined by its role in apprehension, discrimination, integration, defeat, retention,
+comparison, and action, then the cognitive architecture is part of the epistemic model rather than an
+external add-on.
+Consequence. Interaction among cognitive processes can supply the functional plurality required for an
+intra-agential strategic encoding.
+
+Proposition 3: finite-game mixed architecture
+If there are finitely many functional loci and each has a finite admissible response set, then allowing
+probability distributions over those responses yields a product of finite-dimensional simplices.
+Consequence. The mixed policy space is compact and convex.
+Epistemic Tuples and Intra-Agential Equilibrium                                                          12
+
+
+Proposition 4: conditional Nash existence
+If, in addition to Proposition 3, each locus has a real-valued payoff over joint response profiles and the
+usual mixed extension is used, then the resulting finite normal-form game has at least one mixed Nash
+equilibrium.
+Consequence. Existence follows from the formal construction, not directly from the historical evidence.
+
+Proposition 5: equilibrium is not truth
+A Nash equilibrium is stable relative to the encoded utilities and strategy sets. It need not maximise
+truth, evidential adequacy, historical accuracy, or any unencoded epistemic good.
+Consequence. Equilibrium should be read as a property of the cognitive-policy model, not as an oracle of
+fact.
+
+Proposition 6: vector order changes the solution concept
+If outcomes are genuinely vector-valued and only partially ordered, ordinary scalar best-response language
+is not available without an additional comparison rule.
+Consequence. One may either justify a scalarisation or adopt a vector/Pareto equilibrium or another
+multi-objective solution concept.
+
+
+12 Common misunderstandings
+12.1 “One mind means one player”
+Not necessarily. Game-theoretic “players” can be functional loci in a model. The modelling question
+is whether the sub-processes have sufficiently distinct response sets and conditional objectives to make
+strategic decomposition informative.
+
+12.2 “If the space is convex, Nash follows”
+Not by convexity alone. In finite games, convexity arrives through mixed-strategy simplices, while
+equilibrium existence also relies on the payoff/best-response structure. In more general games, compactness,
+continuity, convexity or quasi-concavity assumptions must be stated carefully.
+
+12.3 “A mixed policy is just uncertainty”
+Not necessarily. It may encode graded endorsement, probabilistic response, unresolved competition, or
+temporal/population frequency. The interpretation must be supplied.
+
+12.4 “An equilibrium gives the correct evidentiary weights”
+No. It gives a stable policy profile under the chosen encoding. Correctness of the encoding remains a
+separate epistemological question.
+
+12.5 “If Nash is not uniquely appropriate, the game model fails”
+No. The discovery that a team, vector, correlated, bargaining, or constrained-optimality formulation
+fits better is itself information about the architecture. Game-theoretic analysis can identify where
+Epistemic Tuples and Intra-Agential Equilibrium                                                        13
+
+
+non-cooperative assumptions are too strong.
+
+
+13 The deeper epistemological picture
+The thesis can be read as a general argument against treating epistemic rationality as a single scalar
+scoreboard.
+A cognitively realistic subject often faces several non-identical goods:
+
+• sensitivity to provenance;
+
+• responsiveness to direct material evidence;
+
+• semantic informativeness;
+
+• resistance to defeat;
+
+• coherence with background knowledge;
+
+• calibration of confidence;
+
+• actionability under finite time and attention.
+
+Some of these goods can conflict. A system that jointly regulates them may reach a stable policy without
+proving that one good always outweighs another. The equilibrium, optimum, or fixed point is therefore
+best understood as a mode of coordinated epistemic governance.
+This suggests a broader conception:
+
+        rational belief regulation ≈ stable coordination among differentiated epistemic functions
+
+subject to the evidence, the admissible transformations of that evidence, and the architecture’s governing
+norms.
+The important shift is from asking
+
+                                 “Which source has the bigger weight?”
+
+to asking
+
+“What joint cognitive policy handles these dimensions without destroying their relevant distinctions?”
+
+
+14 Research programme
+A serious development of the thesis would separate empirical cognitive science, formal epistemology, and
+mathematical game theory rather than allowing one to stand in for the others.
+
+14.1 Step 1: define the evidentiary coordinates
+Specify what each coordinate measures, its scale type, uncertainty, and dependence on other coordinates.
+Determine which dimensions are genuinely independent and which are derived.
+Epistemic Tuples and Intra-Agential Equilibrium                                                           14
+
+
+14.2 Step 2: specify the faculty decomposition
+Identify the smallest useful set of functionally distinct processes. Avoid both extremes: a single undiffer-
+entiated agent, and an artificial proliferation of pseudo-players.
+
+14.3 Step 3: define admissible responses
+For each process, define coarse-grained response types and the conditions under which each is available.
+This is where the word “admissible” becomes substantive rather than decorative.
+
+14.4 Step 4: formalise mutual conditionality
+Specify how one process’s output changes another’s available responses, payoffs, constraints, or information.
+If there is no meaningful interaction, a game model may be unnecessary.
+
+14.5 Step 5: interpret mixture
+Decide whether mixture means stochastic choice, graded activation, temporal frequency, unresolved
+competition, or another mechanism. Test whether convex combinations correspond to possible cognitive
+states.
+
+14.6 Step 6: choose the solution concept
+Ask whether the architecture is best represented by:
+
+• non-cooperative Nash equilibrium;
+
+• vector/Pareto equilibrium;
+
+• correlated equilibrium;
+
+• common-interest/team optimisation;
+
+• constrained optimisation;
+
+• bargaining;
+
+• belief revision or fixed-point dynamics.
+
+14.7 Step 7: distinguish descriptive from normative success
+A psychologically stable equilibrium can be epistemically bad. A normatively desirable policy can be
+psychologically unstable. The model should state whether it is describing actual cognition, prescribing
+rational cognition, or connecting the two.
+
+14.8 Step 8: test robustness
+A useful model should be tested under alternative coordinate systems, faculty decompositions, scalar-
+isations, partial orders, and perturbations of response sets. If the conclusion disappears under trivial
+re-encoding, it is not a robust epistemic result.
+Epistemic Tuples and Intra-Agential Equilibrium                                                      15
+
+
+
+15 Compact formal template
+A reusable formal specification can be written as follows.
+
+Evidence.
+                                                   e ∈ E ⊆ Rk .
+
+Cognitive loci.
+                                              F = {F1 , . . . , Fn }.
+
+Finite admissible responses.
+                                              Si = {s1i , . . . , sm
+                                                                   i }.
+                                                                     i
+
+
+
+
+Mixed policies.
+                                        σi ∈ ∆(Si ),                   ∆(Si ).
+                                                                  Y
+                                                            σ∈
+                                                                   i
+
+
+Interaction. The consequence for locus i depends on the joint profile:
+
+                                              Oi = Gi (e, σi , σ−i ).
+
+Scalar Nash option. If there are utilities
+
+                                                   ui (Oi ) ∈ R,
+
+then seek σ ∗ satisfying
+                                           ui (σi∗ , σ−i
+                                                      ∗                ∗
+                                                         ) ≥ ui (σi , σ−i )
+for every admissible unilateral deviation.
+
+Vector option. If
+                                                   Ui (Oi ) ∈ Rq
+with an improvement cone Ki , seek a profile with no unilateral strict Ki -improvement.
+
+Team option. If all loci share a common epistemic objective W , seek
+
+                                                arg max W (e, σ)
+                                                     σ∈Σ
+
+subject to architectural constraints.
+This template makes explicit which assumptions are being added at each stage.
+
+
+16 Conclusion
+The substantive thesis is not the trivial conditional “if one has a finite game, Nash gives a mixed
+equilibrium.” The substantive work lies in identifying a cognitively defensible route from heterogeneous
+evidentiary profiles to an endogenous architecture of mutually conditioning epistemic responses.
+Epistemic Tuples and Intra-Agential Equilibrium                                                             16
+
+
+Evidentiary weights are often tuples, not scalars. Their coordinates can carry force in different respects
+and need not be totally ordered. Because the objects are epistemic, they are situated within cognitive
+operations rather than floating outside cognition. Those operations can be functionally differentiated
+and mutually conditioning. In an appropriate coarse-grained model, they can therefore be represented
+as strategic loci with admissible response sets. Finite responses and meaningful mixtures yield the
+finite-dimensional compact convex mixed-policy space associated with a finite game.
+At that point, ordinary Nash equilibrium is available only if the additional real-valued preference structure
+required by Nash has been justified. If the original multidimensionality is retained, vector or Pareto
+equilibrium may be more faithful. If the faculties genuinely share one end, a team or constrained optimum
+may be better still.
+The durable result is consequently architectural:
+
+    Central thesis. A well-formed epistemology of heterogeneous evidence need not ask which
+    source class “wins.” It can model how differentiated cognitive faculties jointly regulate belief
+    while preserving the dimensions in which each source class succeeds or fails. Stability may reside
+    in the policy of coordination itself. Equilibrium, where appropriate, is a formal account of that
+    stability – not a substitute for truth and not a licence for unexplained scalarisation.
+
+
+A Glossary
+Evidentiary tuple
+A multidimensional representation of an item or source’s evidentiary profile.
+Scalarisation
+A rule mapping a multidimensional profile to one real number.
+Partial order
+A comparison relation that permits some pairs to remain incomparable.
+Faculty-mediated apprehension
+The treatment of evidence through functionally differentiated cognitive operations.
+Intra-agential game
+A strategic model whose functional players are processes within one cognitive subject.
+Admissible response
+A response available to a cognitive process under the governing architecture or norms.
+Mixed epistemic policy
+A probability distribution or other convex weighting over admissible responses, with an explicit cognitive
+interpretation.
+Nash equilibrium
+A joint strategy profile in which no player benefits, according to its payoff, from unilateral deviation.
+Vector equilibrium
+An equilibrium notion for multi-objective or partially ordered outcomes that does not require scalar
+utility.
+Team solution
+A joint policy chosen to optimise a common objective shared by the component processes.
+Epistemic Tuples and Intra-Agential Equilibrium                                                    17
+
+
+Congenial tuples
+Evidentiary profiles admitted into a common cognitive comparison or coordination problem under a
+specified compatibility/admissibility regime; the term does not itself imply total commensurability.
+
+
+B Minimal references
+
+References
+[1] John F. Nash Jr., “Equilibrium Points in N -Person Games,” Proceedings of the National Academy of
+    Sciences, 36(1), 1950, pp. 48–49.
+[2] John Nash, “Non-Cooperative Games,” Annals of Mathematics, 54(2), 1951, pp. 286–295.
+[3] John von Neumann and Oskar Morgenstern, Theory of Games and Economic Behavior, Princeton
+    University Press, 1944.
+

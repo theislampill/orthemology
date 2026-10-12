@@ -1,0 +1,30 @@
+PASS 01: bound input hierarchical-marginal-core-20261010/RESULT.md
+PASS 02: bound input tensor-likelihood-closure-20261010/RESULT.md
+PASS 03: bound input leafwise-noetic-geometry-20261010/RESULT.md
+PASS 04: pairwise rank, parity kernel, and exact q indicator
+PASS 05: q is a nonnegative retained support witness for L
+PASS 06: L has unretained cubic coefficient 1/12 and valid scaled likelihood
+PASS 07: interior parity priors retain exactly the same pairwise record
+PASS 08: same feasible status, different branch mass and retained posterior
+PASS 09: q descends as probability but not as retained normalized posterior
+PASS 10: symbolic epsilon branch and posterior formulas
+PASS 11: singleton normalized-only branch has boundary feasibility ambiguity
+PASS 12: six zero columns expose a dimension-five facet of dimension-six P
+PASS 13: six zero atoms cover every unary/pair assignment, excluding local nonnegative sums
+PASS 14: uniform six-zero law lies on facet with expected pairwise record
+PASS 15: all local pair cells positive despite global boundary record
+PASS 16: boundary record has a unique six-zero representation
+PASS 17: uniform exponential leaf approaches boundary only as parameter diverges
+PASS 18: positive local tables and positive-definite proposed covariance do not ensure realizability
+PASS 19: duplicate-column example retains feasibility plus posterior but not probability
+PASS 20: convex-hull face without column saturation does not suffice
+PASS 21: mass retention is needed for row-space rather than affine certification
+PASS 22: three-bit pairwise matrix: every support has exact certificate or fibre counterexample
+PASS 23: collinear nonvertex columns: every support has exact certificate or fibre counterexample
+PASS 24: duplicate endpoint columns: every support has exact certificate or fibre counterexample
+PASS 25: triangle with supplied interior column: every support has exact certificate or fibre counterexample
+PASS 26: mass-only matrix: every support has exact certificate or fibre counterexample
+PASS 27: full record matrix: every support has exact certificate or fibre counterexample
+PASS 28: all-support sweep totals
+PASS 29: empty support and strictly positive endpoints have v=0 and v=1 certificates
+PASS: 29 assertion groups; 304 support patterns (252 certificates, 52 ambiguities).

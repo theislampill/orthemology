@@ -1,0 +1,24 @@
+{
+  "kind": "countervaluation of displayed relational entailment only",
+  "guidance": [
+    [
+      "r",
+      "w"
+    ]
+  ],
+  "production": [
+    [
+      "u",
+      "r"
+    ],
+    [
+      "w",
+      "q"
+    ]
+  ],
+  "distinct_willing_labels": true,
+  "productive_cycle": false,
+  "source_fragment_strengthening": "An optional particular own exercise witness u is supplied, not inferred as the source's canonical individuation.",
+  "metaphysical_possibility_claim": false,
+  "adequacy_claim": false
+}

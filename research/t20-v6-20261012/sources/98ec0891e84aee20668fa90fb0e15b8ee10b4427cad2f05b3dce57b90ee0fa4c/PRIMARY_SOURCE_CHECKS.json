@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "url": "https://members.loria.fr/MHoyrup/computinvmeas.pdf",
+      "read_scope": [
+        "Theorem2.9",
+        "Remark5",
+        "Corollary3",
+        "introductory uniformity passage"
+      ],
+      "role": "Classical unique/isolated zero method in recursively compact sets",
+      "whole_paper_read": false,
+      "doi_resolver_success": false
+    },
+    {
+      "url": "https://arxiv.org/pdf/1307.4649",
+      "read_scope": [
+        "Introduction",
+        "equations1\u20132"
+      ],
+      "role": "Classical row-distance/overlap Dobrushin coefficient",
+      "whole_paper_read": false
+    }
+  ],
+  "repository_searches_repeated": false
+}

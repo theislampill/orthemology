@@ -1,0 +1,16 @@
+{
+  "archive": "Sparse_Prior_Rational_Effective_Reference_Candidate_3_20261001.zip",
+  "archive_sha256": "78f19b47a154a2a4fbf7282e3c56c0a52b00eaab2c0d9fe096b4364bc9416e78",
+  "manifest_sha256": "6e8e9d3094400ab70bc9583f557e799d5be689bf531f8188f8490e158a83bae2",
+  "reference_sha256": "28dcd6c5c6e2a5a43fe186c7d099f2165f319c864821024de9dd6e14d11744b9",
+  "theorem_sha256": "648f418096a4c43875ed41a8aa17bbcc5aac388d51113c5a2dec794d91318dbd",
+  "bounded_test_assertions": 14892,
+  "uncapped_core_test_assertions": 673,
+  "decimal_guard_assertions": 24,
+  "mutation_controls": 5,
+  "uncapped_core": true,
+  "guarded_wrappers_retained": true,
+  "chunked_input_and_output": true,
+  "physical_resource_guarantee": false,
+  "independent_acceptance": false
+}

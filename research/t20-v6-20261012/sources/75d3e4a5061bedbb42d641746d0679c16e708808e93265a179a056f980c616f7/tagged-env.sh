@@ -1,0 +1,2 @@
+export PATH=private-locator:9a9a5a5cec522626cf2b
+export LEAN_PATH=private-locator:d3790b66e93cf3a5ac1e

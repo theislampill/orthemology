@@ -1,0 +1,9 @@
+def check_object_census(build,runs,sources):
+ actual={str(x.relative_to(build)) for x in build.rglob('*.olean')}
+ expected={str(Path(*name.split('.')).with_suffix('.olean')) for name in runs}
+ assert actual==expected,'Unexpected or missing custom object: '+repr(sorted(actual^expected))
+ for f in build.rglob('*'):assert not f.is_symlink(),'Custom object tree has symlink: '+str(f)
+ for name,r in runs.items():
+  assert r['exit_code']==0 and r['source_sha256']==sources[name]
+  obj=build/Path(*name.split('.')).with_suffix('.olean');assert obj.is_file() and sha(obj)==r['object_sha256'],name
+ return len(actual)

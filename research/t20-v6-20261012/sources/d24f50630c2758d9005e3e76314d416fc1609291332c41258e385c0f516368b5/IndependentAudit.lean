@@ -1,0 +1,184 @@
+import PositiveMass
+import TotalVariation
+import ResidualStability
+import AtomicPattern
+import LossDecoder
+import HistoryClass
+import ArbitraryPattern
+import PatternBoundary
+import FinitePrefixBoundary
+import PatternAdditivity
+import NoUniversalClassifier
+import PrefixMixture
+import PointAtomBoundary
+set_option pp.universes true
+set_option pp.explicit true
+set_option format.width 180
+#check @OrthemologyMeasure.positivePoints_countable
+#print axioms OrthemologyMeasure.positivePoints_countable
+#check @OrthemologyMeasure.positiveEvent_measurable
+#print axioms OrthemologyMeasure.positiveEvent_measurable
+#check @OrthemologyMeasure.positiveEvent_refinement
+#print axioms OrthemologyMeasure.positiveEvent_refinement
+#check @OrthemologyMeasure.full_cell_eq_iInter
+#print axioms OrthemologyMeasure.full_cell_eq_iInter
+#check @OrthemologyMeasure.positiveEvent_full_subset
+#print axioms OrthemologyMeasure.positiveEvent_full_subset
+#check @OrthemologyMeasure.residual_mass_identity
+#print axioms OrthemologyMeasure.residual_mass_identity
+#check @OrthemologyMeasure.eventTV_range_bddAbove
+#print axioms OrthemologyMeasure.eventTV_range_bddAbove
+#check @OrthemologyMeasure.measurable_event_le_eventTV
+#print axioms OrthemologyMeasure.measurable_event_le_eventTV
+#check @OrthemologyMeasure.eventTV_le_iff
+#print axioms OrthemologyMeasure.eventTV_le_iff
+#check @OrthemologyMeasure.eventTV_nonnegative
+#print axioms OrthemologyMeasure.eventTV_nonnegative
+#check @OrthemologyMeasure.eventTV_map_le
+#print axioms OrthemologyMeasure.eventTV_map_le
+#check @OrthemologyMeasure.defect_eventTV_bound
+#print axioms OrthemologyMeasure.defect_eventTV_bound
+#check @OrthemologyMeasure.observedSupport_measurable
+#print axioms OrthemologyMeasure.observedSupport_measurable
+#check @OrthemologyMeasure.commonObservedSupport_measurable
+#print axioms OrthemologyMeasure.commonObservedSupport_measurable
+#check @OrthemologyMeasure.observedSupport_ae_common_left
+#print axioms OrthemologyMeasure.observedSupport_ae_common_left
+#check @OrthemologyMeasure.observedSupport_ae_common_right
+#print axioms OrthemologyMeasure.observedSupport_ae_common_right
+#check @OrthemologyMeasure.ae_iInter
+#print axioms OrthemologyMeasure.ae_iInter
+#check @OrthemologyMeasure.commonResidual_measurable
+#print axioms OrthemologyMeasure.commonResidual_measurable
+#check @OrthemologyMeasure.ownResidual_ae_common_left
+#print axioms OrthemologyMeasure.ownResidual_ae_common_left
+#check @OrthemologyMeasure.ownResidual_ae_common_right
+#print axioms OrthemologyMeasure.ownResidual_ae_common_right
+#check @OrthemologyMeasure.residual_eventTV_bound
+#print axioms OrthemologyMeasure.residual_eventTV_bound
+#check @OrthemologyMeasure.membershipPattern_measurable
+#print axioms OrthemologyMeasure.membershipPattern_measurable
+#check @OrthemologyMeasure.membershipPattern_ae
+#print axioms OrthemologyMeasure.membershipPattern_ae
+#check @OrthemologyMeasure.atomicPattern_eventTV_bound
+#print axioms OrthemologyMeasure.atomicPattern_eventTV_bound
+#check @OrthemologyMeasure.decodedAtomicPattern_eventTV_bound
+#print axioms OrthemologyMeasure.decodedAtomicPattern_eventTV_bound
+#check @OrthemologyMeasure.firstLoss_none
+#print axioms OrthemologyMeasure.firstLoss_none
+#check @OrthemologyMeasure.firstLoss_some
+#print axioms OrthemologyMeasure.firstLoss_some
+#check @OrthemologyMeasure.firstLoss_measurable
+#print axioms OrthemologyMeasure.firstLoss_measurable
+#check @OrthemologyMeasure.lossClass_measurable
+#print axioms OrthemologyMeasure.lossClass_measurable
+#check @OrthemologyMeasure.historyPattern_measurable
+#print axioms OrthemologyMeasure.historyPattern_measurable
+#check @OrthemologyMeasure.historyClass_measurable
+#print axioms OrthemologyMeasure.historyClass_measurable
+#check @OrthemologyMeasure.historyPattern_eventTV_bound
+#print axioms OrthemologyMeasure.historyPattern_eventTV_bound
+#check @OrthemologyMeasure.historyClass_eventTV_bound
+#print axioms OrthemologyMeasure.historyClass_eventTV_bound
+#check @OrthemologyMeasure.historyClass_atom
+#print axioms OrthemologyMeasure.historyClass_atom
+#check @OrthemologyMeasure.historyClass_residual
+#print axioms OrthemologyMeasure.historyClass_residual
+#check @OrthemologyMeasure.historyClass_finite
+#print axioms OrthemologyMeasure.historyClass_finite
+#check @OrthemologyMeasure.historyClass_initial
+#print axioms OrthemologyMeasure.historyClass_initial
+#check @OrthemologyMeasure.historyClass_step
+#print axioms OrthemologyMeasure.historyClass_step
+#check @OrthemologyMeasure.historyClass_residual_mass
+#print axioms OrthemologyMeasure.historyClass_residual_mass
+#check @OrthemologyMeasure.historyClass_initial_mass
+#print axioms OrthemologyMeasure.historyClass_initial_mass
+#check @OrthemologyMeasure.historyClass_step_mass
+#print axioms OrthemologyMeasure.historyClass_step_mass
+#check @OrthemologyMeasure.product_map_congr_coordinate_ae
+#print axioms OrthemologyMeasure.product_map_congr_coordinate_ae
+#check @OrthemologyMeasure.arbitraryPattern_measurable
+#print axioms OrthemologyMeasure.arbitraryPattern_measurable
+#check @OrthemologyMeasure.arbitraryAtomicPattern_eventTV_bound
+#print axioms OrthemologyMeasure.arbitraryAtomicPattern_eventTV_bound
+#check @OrthemologyMeasure.spike_measurable
+#print axioms OrthemologyMeasure.spike_measurable
+#check @OrthemologyMeasure.spike_ne_zero
+#print axioms OrthemologyMeasure.spike_ne_zero
+#check @OrthemologyMeasure.spike_coordinate_ae
+#print axioms OrthemologyMeasure.spike_coordinate_ae
+#check @OrthemologyMeasure.fairCantor_singleton_zero
+#print axioms OrthemologyMeasure.fairCantor_singleton_zero
+#check @OrthemologyMeasure.spike_law_dirac
+#print axioms OrthemologyMeasure.spike_law_dirac
+#check @OrthemologyMeasure.spike_not_ae_zero
+#print axioms OrthemologyMeasure.spike_not_ae_zero
+#check @OrthemologyMeasure.zero_pattern_not_measurable
+#print axioms OrthemologyMeasure.zero_pattern_not_measurable
+#check @OrthemologyMeasure.truncateBits_measurable
+#print axioms OrthemologyMeasure.truncateBits_measurable
+#check @OrthemologyMeasure.prefixBits_measurable
+#print axioms OrthemologyMeasure.prefixBits_measurable
+#check @OrthemologyMeasure.truncate_extend
+#print axioms OrthemologyMeasure.truncate_extend
+#check @OrthemologyMeasure.truncatedLaw_finite_carrier
+#print axioms OrthemologyMeasure.truncatedLaw_finite_carrier
+#check @OrthemologyMeasure.truncatedLaw_defect_zero
+#print axioms OrthemologyMeasure.truncatedLaw_defect_zero
+#check @OrthemologyMeasure.fairCantor_defect_one
+#print axioms OrthemologyMeasure.fairCantor_defect_one
+#check @OrthemologyMeasure.finite_prefix_laws_equal
+#print axioms OrthemologyMeasure.finite_prefix_laws_equal
+#check @OrthemologyMeasure.probability_eventTV_le_one
+#print axioms OrthemologyMeasure.probability_eventTV_le_one
+#check @OrthemologyMeasure.finite_prefix_full_TV_one
+#print axioms OrthemologyMeasure.finite_prefix_full_TV_one
+#check @OrthemologyMeasure.observedSupport_add
+#print axioms OrthemologyMeasure.observedSupport_add
+#check @OrthemologyMeasure.atomicPatternLaw_add
+#print axioms OrthemologyMeasure.atomicPatternLaw_add
+#check @OrthemologyMeasure.observedSupport_smul
+#print axioms OrthemologyMeasure.observedSupport_smul
+#check @OrthemologyMeasure.atomicPatternLaw_smul
+#print axioms OrthemologyMeasure.atomicPatternLaw_smul
+#check @OrthemologyMeasure.atomicBit_measurable
+#print axioms OrthemologyMeasure.atomicBit_measurable
+#check @OrthemologyMeasure.atomicBit_dirac_self
+#print axioms OrthemologyMeasure.atomicBit_dirac_self
+#check @OrthemologyMeasure.atomicBit_fair_zero
+#print axioms OrthemologyMeasure.atomicBit_fair_zero
+#check @OrthemologyMeasure.no_universal_atomic_classifier
+#print axioms OrthemologyMeasure.no_universal_atomic_classifier
+#check @OrthemologyMeasure.no_universal_randomised_atomic_test
+#print axioms OrthemologyMeasure.no_universal_randomised_atomic_test
+#check @OrthemologyMeasure.positive_add
+#print axioms OrthemologyMeasure.positive_add
+#check @OrthemologyMeasure.mass_add
+#print axioms OrthemologyMeasure.mass_add
+#check @OrthemologyMeasure.mass_smul
+#print axioms OrthemologyMeasure.mass_smul
+#check @OrthemologyMeasure.fairCantor_mass_zero
+#print axioms OrthemologyMeasure.fairCantor_mass_zero
+#check @OrthemologyMeasure.truncatedLaw_mass_one
+#print axioms OrthemologyMeasure.truncatedLaw_mass_one
+#check @OrthemologyMeasure.prefixMixture_probability
+#print axioms OrthemologyMeasure.prefixMixture_probability
+#check @OrthemologyMeasure.prefixMixture_defect
+#print axioms OrthemologyMeasure.prefixMixture_defect
+#check @OrthemologyMeasure.prefixMixture_prefix_law
+#print axioms OrthemologyMeasure.prefixMixture_prefix_law
+#check @OrthemologyMeasure.CoCountable.value_iUnion
+#print axioms OrthemologyMeasure.CoCountable.value_iUnion
+#check @OrthemologyMeasure.CoCountable.law_apply
+#print axioms OrthemologyMeasure.CoCountable.law_apply
+#check @OrthemologyMeasure.CoCountable.singleton_zero
+#print axioms OrthemologyMeasure.CoCountable.singleton_zero
+#check @OrthemologyMeasure.CoCountable.measurable_zero_or_one
+#print axioms OrthemologyMeasure.CoCountable.measurable_zero_or_one
+#check @OrthemologyMeasure.CoCountable.whole_space_atom
+#print axioms OrthemologyMeasure.CoCountable.whole_space_atom
+#check @OrthemologyMeasure.CoCountable.point_defect_one
+#print axioms OrthemologyMeasure.CoCountable.point_defect_one
+#check @OrthemologyMeasure.CoCountable.real_counterexample
+#print axioms OrthemologyMeasure.CoCountable.real_counterexample

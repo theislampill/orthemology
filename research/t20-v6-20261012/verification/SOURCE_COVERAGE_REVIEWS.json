@@ -1,0 +1,56 @@
+{
+  "schema": "t20-v6-source-coverage-review-summary-v1",
+  "reviewed_predecessor": "d663da577c3c5b698ada68bf2e22634fdc643ba8",
+  "review_type": "two bounded independent model reviews; not human-specialist validation",
+  "private_evidence_sha256": {
+    "publication_report": "ff814bcfe686a65fee1e6beadf6e759e942bc66f94ad3dbb4d25e72642b036b3",
+    "publication_readback": "8eb391e6752bcc0f44dac23b1dc366525c089bcc811884a411a19ea5f277a09e",
+    "science_report": "14920b4a1e36c5bd8a0da3335827fbccc65a5febbdd98c4668b1931376792e3b",
+    "science_readback": "047d3b434829fa0fe2cd053563338ea5123cf89702c6bf172884814117d59764"
+  },
+  "reviewed_manifest_sha256": "457e7c03a929e657b8603943c37bdf887cc6d8865ddfcdd263c8b145f435ef22",
+  "final_manifest_sha256": "c1cbb1720991b25896be457275d512228fc56308b6134a0205f24828d45c6dd7",
+  "final_metadata_delta": "Only source-qualification status fields changed; all source rows and bindings are unchanged.",
+  "graph": {
+    "reviewed_sha256": "5439543101553280038c9dd669ac908114ba8bc09adf39d758351924a31a51bf",
+    "public_sha256": "ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff",
+    "change": "CRLF to LF in newly authored control only; parsed JSON is identical; shared resolver digest updated."
+  },
+  "publication_review": {
+    "status": "APPROVE_BOUNDED_SOURCE_SCOPE",
+    "public_bodies_screened": 6347,
+    "restored_identities": 4363,
+    "specific_holds": 41,
+    "prior_bodies_unchanged": 1984,
+    "baseline_reuse_identities": 5625,
+    "findings_closed": [
+      "Four colon-delimited locator cases corrected with exact reversible nine-span transformations.",
+      "Historical privacy-detector exception requires exact raw source bytes and path; CRLF mutation is rejected."
+    ]
+  },
+  "scientific_source_review": {
+    "status": "NO_BLOCKER_IN_BOUNDED_REVIEW_SCOPE",
+    "restored_exact_lean_supports": 75,
+    "restored_exact_ordinary_supports": 13,
+    "formal_bodies": 233,
+    "custom_import_edges": 323,
+    "official_import_edges": 20,
+    "ordinary_support_bindings": 38,
+    "unchanged_contributions_and_reviews": 15,
+    "unchanged_foundational_claim_records": 34,
+    "findings_closed": [
+      "Standalone suite exporter now enforces the same reviewed graph digest as the integrated gate before creating an output."
+    ],
+    "limits": [
+      "Ordinary proof hypotheses and historical status retained; no new ordinary proof or finite-control execution credit.",
+      "The parent integration records the separate 218-module native replay; these reviewers did not independently repeat it."
+    ]
+  },
+  "scope_limits": [
+    "Source integrity and publication eligibility do not grant T20 scientific acceptance, merge authority or T21.",
+    "Missing R3 successor, unavailable originals, bounded primary readings and uncertified historical research duration remain explicit.",
+    "Final public controls and repository CI require their own checks against the resulting commit."
+  ],
+  "scientific_acceptance": false,
+  "t21_started": false
+}

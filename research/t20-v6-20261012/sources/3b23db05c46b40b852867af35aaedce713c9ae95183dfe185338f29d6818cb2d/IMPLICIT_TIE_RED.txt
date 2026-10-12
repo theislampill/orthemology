@@ -1,0 +1,20 @@
+test_communicative_intention_is_not_truth (test_implicit.ImplicitAttestationControls.test_communicative_intention_is_not_truth) ... ok
+test_contextual_interventions_discriminate_reasons (test_implicit.ImplicitAttestationControls.test_contextual_interventions_discriminate_reasons) ... ok
+test_defeasible_weights_do_not_become_empirical_certainty (test_implicit.ImplicitAttestationControls.test_defeasible_weights_do_not_become_empirical_certainty) ... ok
+test_equal_reason_scores_preserve_intention_ambiguity (test_implicit.ImplicitAttestationControls.test_equal_reason_scores_preserve_intention_ambiguity) ... FAIL
+test_nonconventional_positive_has_no_rule_or_endorsement_words (test_implicit.ImplicitAttestationControls.test_nonconventional_positive_has_no_rule_or_endorsement_words) ... ok
+test_same_visible_transfer_can_have_other_purposes (test_implicit.ImplicitAttestationControls.test_same_visible_transfer_can_have_other_purposes) ... ok
+test_separate_choice_episodes_constrain_policy_without_an_intent_observation (test_implicit.ImplicitAttestationControls.test_separate_choice_episodes_constrain_policy_without_an_intent_observation) ... ok
+
+======================================================================
+FAIL: test_equal_reason_scores_preserve_intention_ambiguity (test_implicit.ImplicitAttestationControls.test_equal_reason_scores_preserve_intention_ambiguity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "private-locator:e7f15ae4d2ec1ffc9470", line 50, in test_equal_reason_scores_preserve_intention_ambiguity
+    self.assertIsNone(w['intended_positive_claim'])
+AssertionError: False is not None
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=1)

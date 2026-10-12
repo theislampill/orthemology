@@ -1,0 +1,19 @@
+import TruncatedMoment
+import Mathlib.Algebra.MvPolynomial.Degrees
+open MvPolynomial TruncatedMoment
+#check MvPolynomial.monomial_add
+#check MvPolynomial.monomial_single
+#check Finsupp.sum_fintype
+#check MvPolynomial.totalDegree
+#check MvPolynomial.totalDegree_add
+#check MvPolynomial.totalDegree_monomial
+#check MvPolynomial.coeff_eq_zero_of_totalDegree_lt
+#check MvPolynomial.totalDegree_mul
+#check MvPolynomial.totalDegree_pow
+#check Finsupp.prod_add_index
+#check Finsupp.prod_single_index
+example (a b c : ℕ) (r : ℝ) (v : Fin 3 → ℝ) :
+    eval v (term a b c r) = r * v 0 ^ a * v 1 ^ b * v 2 ^ c := by
+  simp [term, exponent, eval_monomial, Finsupp.prod_add_index, pow_add,
+    Finsupp.prod_single_index]
+  ring

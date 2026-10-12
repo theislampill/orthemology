@@ -1,0 +1,39 @@
+Read the latest context first: t20/final-context-audit/CONTEXT_SCOPE.md and t20/cooperation-reassessment/ROOT_REASSESSMENT.md. Earlier v2 DOCXs remain unchanged dated documents. The twenty-one-record source append is not new science or retroactive reading credit.
+
+Exactly one current full fd0903d-to-32e607c patch is supplied. The old full patch body is not duplicated. The inherited whole review remains at fadbecadf440641d117d9eabb44faf2fae2ceab4 in integration/final-patch/prior-review/. The new review/ receipt is only the final context-delta/preservation review. Do not relabel either scope as a new whole-diff run.
+
+Integrate the supplied Orthemology through Twentieth package and open a draft review PR. Do not merge.
+
+Use the prepared base-pinned repository patch and its manifest as the primary input. The archive consolidates the original Sixteenth through Nineteenth deliveries, the Twentieth reports and evidence, and the prepared repository extension. You do not need to reconstruct the research or design another integration framework.
+
+1. Read START_HERE and the exact patch manifest. Inspect the real repository state. The preparation base is PR30 head fd0903d99d657c35e32fddcc8864d2a77930cf40. Treat main and an unmerged candidate separately. If PR30 is still unmerged, reuse that exact candidate as the starting history for the new through-Twentieth branch; do not reimplement its 54 commits. Open the new draft PR against main and clearly identify the included, still-unadopted PR30 history. Do not close or change PR30. If main has since adopted it, use the documented preimage/ancestry checks. Stop and report an actual incompatible drift rather than guessing or overwriting newer work.
+
+2. Verify the archive/member hashes and perform the prepared clean-application check. Apply the exact patch to an isolated feature branch. Preserve the historical evidence and the two explicitly documented Sixteenth fidelity corrections. Do not blanket-promote inherited checks, integration admission or source assessments to fresh science. Do not import caches, toolchains, raw books, the prior Codex transcript or unselected originals into GitHub.
+
+3. Run the supplied focused clean-apply checks as documented and use the new PR’s existing native CI for the full required workflow. Reuse the supplied bounded verification and preservation records at their stated scopes. Do not replay every old scientific suite, reconstruct old archives, invent new evidence schemas, or rerun completed research solely to file the PR. Where actual changes demand a new check, run that check and record why.
+
+4. The prepared environment could not run the repository's exact Docker/Poppler PDF rebuild. That mandatory gate must be completed in actual GitHub CI, or locally only if the environment already matches the required tooling; the carried-artifact check is not a substitute. Report the actual state. Do not repeatedly install alternate renderers or call the gate passed without its real result.
+
+5. Use the supplied bounded whole-diff review at its stated scope. Inspect the compact changed-file map and any actual executable or semantic integration changes; verify bulk registries mechanically rather than loading their full text into model context. Fix only demonstrated integration defects and update only affected checks. Open the requested draft PR against main after the documented currentness and clean-apply checks, then use its existing CI for the full required workflow. Explain the through-Twentieth scope, reused through-Sixteenth candidate, current verification, remaining philosophical/formal obligations and any pending CI. Wait for actual CI results where supported and report the PR URL and exact head.
+
+No merge, no main write, no automatic philosophical adoption, and no new tranche. A successful PR filing does not complete the separately required independent review or owner-controlled adoption.
+
+Read the detailed research only if a concrete integration ambiguity requires it. The compact integration map already identifies the exact result, source, declaration, evidence class, dependency, public projection, reusable verification and unresolved residual. Do not convert this bounded task into another research programme. Use the supplied validators and compact maps; do not dump the full source or evidence registries into model context.
+
+Exact supplied files and commands:
+- START_HERE.md
+- integration/final-patch/PATCH_MANIFEST.json and through-twentieth.patch
+- integration/final-patch/review/REVIEW.json and REVIEW.md
+- integration/final-patch/CLEAN_APPLY_VERIFICATION.json and VERIFICATION.json
+- verification/verify_native_integration.py
+
+From the extracted archive root, verify all bytes and native receipt bindings:
+python3 -B verification/verify_native_integration.py --root .
+
+After checking remote currentness, prepare a fresh clone at exact fd0903d99d657c35e32fddcc8864d2a77930cf40 and create an isolated named feature branch, for example integration/t20-review. The apply helper refuses main/master, detached apply, dirty state, wrong HEAD/preimages or changed patch bytes.
+python3 -B integration/final-patch/apply_checked_patch.py --repository /path/to/fresh-clone
+python3 -B integration/final-patch/apply_checked_patch.py --repository /path/to/fresh-clone --apply
+
+Expected post-application index tree: 32e607c34ed32e9f90fed13bdde294fbc47ca7c2. Exact final counts: 262 results, 3,828 source identities, 37 suites and 44 native receipts. These are integration records, not newly independent sources or scientific replays. The supplied clean application verified 1,016 changed-file pre/postimages and all 7,637 tracked blobs; no commit or remote mutation was performed.
+
+The remote receipt is a timestamped readback at 2026-10-07T18:25:39Z. PR30 was open/unmerged at fd0903d and its old-head workflow passed. It is not CI evidence for this final local tree. Recheck current remote state before filing the new PR.

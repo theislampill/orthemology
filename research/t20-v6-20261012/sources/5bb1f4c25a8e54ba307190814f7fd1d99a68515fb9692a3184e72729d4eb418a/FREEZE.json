@@ -1,0 +1,80 @@
+{
+  "status": "FROZEN_FOR_INDEPENDENT_REVIEW",
+  "revision": 2,
+  "created_utc": "2026-10-10T22:24:13.811510+00:00",
+  "result_sha256": "2ac90188cc0cb17d3bb80f3ba63d9dfe62742db5919cf86d7001c7e0baf39e55",
+  "supersedes_result_sha256": "adbbea04d51ac90692d167c5d522fa4cda23558dcc2e093c6bcf76e24f3a3553",
+  "supersedes_freeze_sha256": "7320a0b20cd0539785f83c23f116e5ebe8edc9338287814e5ac694bc22d8040b",
+  "check_count": 501,
+  "files": [
+    {
+      "path": "CONTROL_RESULTS.json",
+      "bytes": 60492,
+      "sha256": "4e86b3d324a5a36d821a1d7e4bd92bf7653c5469964feb90cde80c99af19b1cc"
+    },
+    {
+      "path": "INPUT_BINDINGS.json",
+      "bytes": 1175,
+      "sha256": "55f0f08c8a993abe7a19edd025836fdc09adc3e1e523e0f45e0db30c259a94c0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1921,
+      "sha256": "05602a7c8e1353961c33efecd62b7d955064901ca43315aca2c94e704fdbe0cc"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 31800,
+      "sha256": "2ac90188cc0cb17d3bb80f3ba63d9dfe62742db5919cf86d7001c7e0baf39e55"
+    },
+    {
+      "path": "REVISION_HISTORY.json",
+      "bytes": 540,
+      "sha256": "09b6e4932603cb8bf60cbd12279090cc1fb2bdf0d4dab0964d8aceadd23eb656"
+    },
+    {
+      "path": "check_controls.log",
+      "bytes": 455,
+      "sha256": "a2205ec6b311aba4fa7f70852d5e9ab701f8f8f3e3a906a6a6f35d53af1c231d"
+    },
+    {
+      "path": "check_controls.py",
+      "bytes": 15204,
+      "sha256": "2dc4ca568dcff15e1c4d8b5c9817eea049e72e47bfe91c1a7afebb16da69463b"
+    },
+    {
+      "path": "inputs/01-compact-initial-law-preservation-20261010-RESULT.md",
+      "bytes": 7763,
+      "sha256": "6943a1c274b177d107c8935e7d12d6a9e5094aa79df41546fb8e7d4d121914ce"
+    },
+    {
+      "path": "inputs/02-tensor-realizability-extension-20261010-RESULT.md",
+      "bytes": 27598,
+      "sha256": "449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a"
+    },
+    {
+      "path": "inputs/03-compact-initial-law-independent-review-20261010-REVIEW.md",
+      "bytes": 11225,
+      "sha256": "d0243e4000ce5e3aa2ce7cd7a2f1f96a3519779f684fbaa1219f9ee03dad4cc1"
+    },
+    {
+      "path": "inputs/04-tensor-moment-continuation-20261009-RESULT.md",
+      "bytes": 21695,
+      "sha256": "03f027122c0a908f1f6bcfcc61951223ca1fca547d8599aac2aa3437e3c01a11"
+    }
+  ],
+  "claims": [
+    "ordinary proof only",
+    "signed autonomous weighted-energy forcing",
+    "bounded-energy global corollary",
+    "compact locally finite switching",
+    "exact null-ideal and finite Gram kernel/rank invariance",
+    "Gaussian finite maximal horizon"
+  ],
+  "no_claims": [
+    "formal kernel proof",
+    "field priority",
+    "protected integration",
+    "T20 closure"
+  ]
+}

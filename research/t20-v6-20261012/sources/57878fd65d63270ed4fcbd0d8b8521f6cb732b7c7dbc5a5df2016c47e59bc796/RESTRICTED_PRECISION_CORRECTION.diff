@@ -1,0 +1,11 @@
+--- reviewed-draft-f593393
++++ corrected-final-cd253226
+@@ -69,7 +69,7 @@
+ 
+ A factors through B by summing its blocks. Extend a basis of row(A) to row(B) with k rows; their expectations give a linear sufficient sidecar. This proves attainability.
+ 
+-For necessity, the theorem forces any sufficient combined representation (Aw,h(w)) to distinguish different B-values. Restrict B to ker A. Its rank is k by rank subtraction. Choose k tangent vectors in ker A with independent B-images. Their coordinate sums vanish because mass is a row of A. A sufficiently small open k-box around any positive w remains positive and has constant Aw and distinct B-values. The continuous sidecar must inject this box into R^r. By the same invariance-of-domain dimension obstruction used in inherited H-Continuation Proposition 9, r≥k. For r<k, compose with the coordinate inclusion R^r→R^k; an injective continuous image would have to be open in R^k but lies in a proper subspace. □
++For necessity, the theorem forces any sufficient combined representation (Aw,h(w)) to distinguish different B-values. Restrict B to ker A. Its rank is k by rank subtraction. Choose k tangent vectors in ker A with independent B-images. Their coordinate sums vanish because the mass row lies in row(A), since 1ᵀA=1ᵀ. A sufficiently small open k-box around any positive w remains positive and has constant Aw and distinct B-values. The continuous sidecar must inject this box into R^r. By the same invariance-of-domain dimension obstruction used in inherited H-Continuation Proposition 9, r≥k. For r<k, compose with the coordinate inclusion R^r→R^k; an injective continuous image would have to be open in R^k but lies in a proper subspace. □
+ 
+ If k>0, no finite or countably valued sidecar, even discontinuous, suffices, because the same box contains uncountably many B-values. Conversely arbitrary pathological real-valued encodings are excluded from the dimension theorem by continuity. This is not a finite-bit lower bound for approximate/noisy operation, nor an acquisition or sample-complexity claim.
+ 

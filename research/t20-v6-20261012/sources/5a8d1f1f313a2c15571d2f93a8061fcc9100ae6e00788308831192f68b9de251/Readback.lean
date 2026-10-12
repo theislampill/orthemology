@@ -1,0 +1,37 @@
+import ActionDisclosureControls
+import DisclosureRepair
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.ActionDisclosure.safeDecoder_iff_range_card
+#check @Orthemology.ActionDisclosure.safeDecoder_message_lower_bound
+#check @Orthemology.ActionDisclosure.injective_menu_suffices
+#check @Orthemology.ActionDisclosure.support_code_lower_bound
+#check @Orthemology.ActionDisclosure.residual_budget_card
+#check @Orthemology.ActionDisclosure.twoRootMenu_safe
+#check @Orthemology.ActionDisclosure.duplicate_labels_not_safe
+#check @Orthemology.ActionDisclosure.equal_size_menu_not_safe
+#check @Orthemology.ActionDisclosure.two_root_supports_not_safe
+#print axioms Orthemology.ActionDisclosure.safeDecoder_iff_range_card
+#print axioms Orthemology.ActionDisclosure.safeDecoder_message_lower_bound
+#print axioms Orthemology.ActionDisclosure.injective_menu_suffices
+#print axioms Orthemology.ActionDisclosure.support_code_lower_bound
+#print axioms Orthemology.ActionDisclosure.residual_budget_card
+#print axioms Orthemology.ActionDisclosure.twoRootMenu_safe
+#print axioms Orthemology.ActionDisclosure.duplicate_labels_not_safe
+#print axioms Orthemology.ActionDisclosure.equal_size_menu_not_safe
+#print axioms Orthemology.ActionDisclosure.two_root_supports_not_safe
+
+#check @Orthemology.ActionDisclosure.repair_success_iff
+#print axioms Orthemology.ActionDisclosure.repair_success_iff
+
+#check @Orthemology.ActionDisclosure.repair_message_contract_iff
+#print axioms Orthemology.ActionDisclosure.repair_message_contract_iff
+
+#check @Orthemology.ActionDisclosure.successful_repair_message_lower_bound
+#print axioms Orthemology.ActionDisclosure.successful_repair_message_lower_bound
+
+#check @Orthemology.ActionDisclosure.corrupt_action_irreversible
+#print axioms Orthemology.ActionDisclosure.corrupt_action_irreversible
+
+#check @Orthemology.ActionDisclosure.corrupt_action_not_restorative
+#print axioms Orthemology.ActionDisclosure.corrupt_action_not_restorative

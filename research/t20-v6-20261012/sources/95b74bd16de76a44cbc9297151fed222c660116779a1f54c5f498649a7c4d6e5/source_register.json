@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-21",
+  "local_source_corpus": [
+    {
+      "id": "LM3",
+      "filename": "The_Last_Moat_Edition_3(3).pdf",
+      "bytes": 607313,
+      "sha256": "09dc4c019e57912e18bb386f77497ddacbfc781f06f87aa2a4e880f28d8e39b8",
+      "inspection_scope": "Full parsed text; selected equation/continuation page images inspected.",
+      "redistributed": false,
+      "pages": 58
+    },
+    {
+      "id": "D",
+      "filename": "theIslampill-grok-conversation-2098293711272587638(2)(1).md",
+      "bytes": 215288,
+      "sha256": "ba0eddffb2a76d1921741b69ce3805326f982c199255298728953602e2ecb989",
+      "inspection_scope": "First 440 original lines; messages principally 06:39:05–07:22:32 GMT.",
+      "redistributed": false
+    },
+    {
+      "id": "S2",
+      "filename": "orthemology_consolidation_stage2_report.md",
+      "bytes": 32919,
+      "sha256": "4913e8508c35e12eeb8be5455cc351204deccb08bdb88307609bd7118338db65",
+      "inspection_scope": "Full report including the apoautotic continuation supplement.",
+      "redistributed": false
+    },
+    {
+      "id": "S3",
+      "filename": "orthemology_consolidation_stage3_delivery_report.md",
+      "bytes": 46878,
+      "sha256": "f551a13479056b00e4a866a1b58d372c716796d08fb8f731a498a11b233cfc4c",
+      "inspection_scope": "Section 12 through conclusion/status material.",
+      "redistributed": false
+    },
+    {
+      "id": "ICS5",
+      "filename": "information-composition-and-self-revision-v5(2).pdf",
+      "bytes": 341285,
+      "sha256": "75527bc45892a3447b8d9f554f8e55ea464790f43a172b784c6761367089cf70",
+      "inspection_scope": "Full text; destructive-experiment table visually inspected.",
+      "redistributed": false,
+      "pages": 12
+    },
+    {
+      "id": "CDR",
+      "filename": "the-cost-of-a-decisive-revision(2).pdf",
+      "bytes": 221506,
+      "sha256": "4e5eb8e7559c4daaf1757386a5a101bfc399bf0ba77c769e025512bd2f6ac5c3",
+      "inspection_scope": "Full text.",
+      "redistributed": false,
+      "pages": 4
+    },
+    {
+      "id": "GF1",
+      "filename": "orthing_formalisation_v1(1).pdf",
+      "inspection_scope": "Extracted text from physical pages 26–29 (sections 10.12, 11, 12).",
+      "raw_bytes_materialized": false,
+      "sha256": null,
+      "limitation": "Two raw materialization attempts returned no authorized raw-byte path. No fresh raw hash or rendered-page inspection is claimed.",
+      "redistributed": false
+    },
+    {
+      "id": "REC",
+      "filename": "Pasted text(20260920-231602).txt",
+      "inspection_scope": "Files retrieval of the A4C T/C/G/A list and explicit non-equivalence instructions.",
+      "sha256": null,
+      "raw_bytes_materialized": false,
+      "redistributed": false
+    }
+  ],
+  "external_primary_source_check": [
+    {
+      "id": "AL",
+      "url": "https://www.microsoft.com/en-us/research/publication/the-existence-of-refinement-mappings/",
+      "scope": "Author-institution publication record and abstract; 1988 conference version."
+    },
+    {
+      "id": "CON",
+      "url": "https://research-explorer.ista.ac.at/record/5677",
+      "scope": "Institutional publication record and abstract."
+    },
+    {
+      "id": "EUR",
+      "url": "https://doi.org/10.1145/2555612",
+      "scope": "Publisher record and abstract."
+    },
+    {
+      "id": "ID",
+      "url": "https://doi.org/10.1016/j.scico.2021.102678",
+      "scope": "Publisher abstract and relevant introductory/concluding material."
+    },
+    {
+      "id": "AUTO",
+      "url": "https://doi.org/10.1016/0303-2647(74)90031-8",
+      "scope": "Publisher abstract and bibliographic metadata; names/year cross-checked with PubMed."
+    },
+    {
+      "id": "CM",
+      "url": "https://montevil.org/publications/articles/2015-mm-organisation-closure-constraints/",
+      "scope": "Author-hosted text, especially sections 3–5."
+    }
+  ],
+  "review_scope": "Source-grounded synthesis plus bounded external related-work check, not an exhaustive priority survey.",
+  "no_source_corpus_redistributed": true
+}

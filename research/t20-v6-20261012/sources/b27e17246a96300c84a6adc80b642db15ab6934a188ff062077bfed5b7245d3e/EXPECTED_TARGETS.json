@@ -1,0 +1,52 @@
+{
+  "status": "UNVERIFIED_CANDIDATE",
+  "pin": {
+    "lean": "4.19.0",
+    "lean_commit": "6caaee842e94",
+    "imports": [
+      "Init"
+    ],
+    "mathlib_required_for_this_standalone_graph_candidate": false
+  },
+  "source_sha256": {
+    "P03GuardedGraph.lean": "e7b6e0df73f1ed2e8de8e2301c30237a644979e99a0dab437d0e3bb02ea398de",
+    "P03GuardedGraphAudit.lean": "1c50574e2a937440e4f19e81aaa88df5aa3e4d29a3b66b1e7a989a1ed982f8ec"
+  },
+  "targets": [
+    {
+      "name": "P03Q1f.Chain.mapEdge",
+      "expected_type_content": "Any typed Chain A B maps an A.Edge u v to B.Edge of the composite node images.",
+      "predicted_axioms": [],
+      "axioms_actually_read_back": false
+    },
+    {
+      "name": "P03Q1f.walkRank",
+      "expected_type_content": "Every nonempty Walk A u v strictly increases the topological rank.",
+      "predicted_axioms": [],
+      "axioms_actually_read_back": false
+    },
+    {
+      "name": "P03Q1f.Hom.mapWalk",
+      "expected_type_content": "Any Hom A B preserves a nonempty Walk on its node images.",
+      "predicted_axioms": [],
+      "axioms_actually_read_back": false
+    },
+    {
+      "name": "P03Q1f.noClosedWalk",
+      "expected_type_content": "For every ranked ReasonDAG A and node u, no nonempty Walk A u u exists.",
+      "predicted_axioms": [],
+      "axioms_actually_read_back": false
+    },
+    {
+      "name": "P03Q1f.Hom.noCollapseOfWalk",
+      "expected_type_content": "For any Hom A B and nonempty Walk A u v, the images of u and v differ.",
+      "predicted_axioms": [],
+      "axioms_actually_read_back": false
+    }
+  ],
+  "not_targets": [
+    "VersionCustodyTransport.guarded_reason_dag_composition",
+    "TemporalCertificate.model_bound_certificate"
+  ],
+  "kernel_credit": false
+}

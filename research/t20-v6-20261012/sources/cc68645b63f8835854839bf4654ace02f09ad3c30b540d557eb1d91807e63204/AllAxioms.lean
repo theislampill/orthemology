@@ -1,0 +1,593 @@
+import TypedCriterionGuard
+import CriterionInstallation
+import DynamicInterlock
+import Composition
+import HistoryModel
+import HistoryInvariant
+import HistorySafety
+import HistoryTrace
+import Fixtures
+import JoinModel
+import JoinInvariant
+import JoinSafety
+import JoinTrace
+import OriginalTranslation
+import TypedInstantiation
+import JoinOperations
+import TypedHistoryProperties
+import TypedExamples
+import TypedFixtureHelpers
+import TypedControls
+import EpochOffset
+import JoinBatches
+import LifecycleModel
+import LifecycleCertification
+import LifecycleDelivery
+import LifecycleAdmission
+import JoinPreparation
+import LifecyclePreparation
+import LifecycleAttempt
+import RuntimeTrace
+import PinnedSource
+import RuntimeFixture
+import OffsetHistoryProperties
+import RuntimeControls
+import JoinCancellation
+import LifecycleCancellation
+import RuntimeCancellationTrace
+import RuntimeCancellationControls
+import ReferenceClock
+import MonotoneReferenceTrace
+import ReferenceClockControls
+import BatchSource
+import BatchTrial
+import BatchUniqueness
+import BatchReadiness
+import BatchProgress
+import BatchMemory
+import BatchFrames
+import BatchExtraction
+import BatchSafety
+import BatchCleanup
+import BatchExactFreshness
+import BatchExactProgress
+import BatchAdmission
+import BatchNative
+import BatchExactControls
+import BatchRetryControls
+import BatchControllerProjection
+import BatchSurvivalModel
+import BatchSurvival
+import BatchSurvivalControls
+import BatchSourceChallenges
+import BatchHistoryPremiseChallenges
+import BatchAvailabilityChallenges
+import BatchFaultSemanticsChallenges
+import BatchContractChallenges
+import BatchFreshnessV2SourceChallenges
+import BatchV2ContractChallenges
+import BatchAvailabilityIffSourceChallenges
+import BatchSurvivalContractChallenges
+#print axioms OperationalJoin.consistent_initial
+#print axioms OperationalJoin.consistent_setRoot
+#print axioms OperationalJoin.consistent_request
+#print axioms OperationalJoin.consistent_prepare
+#print axioms OperationalJoin.consistent_corrupt
+#print axioms OperationalJoin.consistent_deliver
+#print axioms OperationalJoin.consistent_acknowledge
+#print axioms OperationalJoin.consistent_complete
+#print axioms OperationalJoin.consistent_cancelAck
+#print axioms OperationalJoin.consistent_land
+#print axioms OperationalJoin.consistent_step
+#print axioms OperationalJoin.consistent_trace
+#print axioms OperationalJoin.reachable_consistent
+#print axioms OperationalJoin.good_member
+#print axioms OperationalJoin.good_cross_member
+#print axioms OperationalJoin.path_has_good
+#print axioms OperationalJoin.authentic_same_epoch
+#print axioms OperationalJoin.stale_cannot_land
+#print axioms OperationalJoin.admitted_current_authorized
+#print axioms OperationalJoin.cancelled_cannot_land
+#print axioms OperationalJoin.step_memory
+#print axioms OperationalJoin.step_cancelAcks
+#print axioms OperationalJoin.step_epoch
+#print axioms OperationalJoin.trace_memory
+#print axioms OperationalJoin.trace_cancelled
+#print axioms OperationalJoin.no_landing_after_cancellation
+#print axioms OperationalJoin.step_writeSafe
+#print axioms OperationalJoin.trace_writes_authorized
+#print axioms OperationalJoin.step_safe
+#print axioms OperationalJoin.trace_safe
+#print axioms OperationalJoin.finite_history_safety
+#print axioms OperationalJoin.finite_history_admission
+#print axioms OperationalJoin.step_deterministic
+#print axioms OperationalJoin.trace_epoch
+#print axioms OperationalJoin.step_preserves
+#print axioms OperationalJoin.trace_preserves
+#print axioms OperationalJoin.trace_append
+#print axioms OperationalJoin.reachable_after
+#print axioms OperationalJoin.admitted_externally_authorized
+#print axioms OperationalJoin.OriginalTranslation.lower_lift_root
+#print axioms OperationalJoin.OriginalTranslation.lift_lower_root
+#print axioms OperationalJoin.OriginalTranslation.lower_lift_state
+#print axioms OperationalJoin.OriginalTranslation.lift_lower_state
+#print axioms OperationalJoin.OriginalTranslation.lower_lift_event
+#print axioms OperationalJoin.OriginalTranslation.envelope_iff
+#print axioms OperationalJoin.OriginalTranslation.permits_iff
+#print axioms OperationalJoin.OriginalTranslation.lands_iff
+#print axioms OperationalJoin.OriginalTranslation.lower_initial
+#print axioms OperationalJoin.OriginalTranslation.lower_setRoot
+#print axioms OperationalJoin.OriginalTranslation.lower_request
+#print axioms OperationalJoin.OriginalTranslation.lower_acknowledge
+#print axioms OperationalJoin.OriginalTranslation.lower_complete
+#print axioms OperationalJoin.OriginalTranslation.lower_deliver
+#print axioms OperationalJoin.OriginalTranslation.lower_prepare
+#print axioms OperationalJoin.OriginalTranslation.lower_cancelAck
+#print axioms OperationalJoin.OriginalTranslation.lower_land
+#print axioms OperationalJoin.OriginalTranslation.lowerState_injective
+#print axioms OperationalJoin.OriginalTranslation.lift_setRoot
+#print axioms OperationalJoin.OriginalTranslation.lift_request
+#print axioms OperationalJoin.OriginalTranslation.lift_acknowledge
+#print axioms OperationalJoin.OriginalTranslation.lift_complete
+#print axioms OperationalJoin.OriginalTranslation.lift_deliver
+#print axioms OperationalJoin.OriginalTranslation.lift_prepare
+#print axioms OperationalJoin.OriginalTranslation.lift_cancelAck
+#print axioms OperationalJoin.OriginalTranslation.lift_land
+#print axioms OperationalJoin.OriginalTranslation.lower_step
+#print axioms OperationalJoin.OriginalTranslation.lift_step
+#print axioms OperationalJoin.OriginalTranslation.lower_trace
+#print axioms OperationalJoin.OriginalTranslation.lift_trace
+#print axioms OperationalJoin.OriginalTranslation.trace_iff_lift_exists
+#print axioms OperationalJoin.Typed.mem_path
+#print axioms OperationalJoin.Typed.path_card
+#print axioms OperationalJoin.Typed.mem_memory
+#print axioms OperationalJoin.Typed.rootView_represents
+#print axioms OperationalJoin.Typed.root_gate_iff
+#print axioms OperationalJoin.Typed.valid_path_iff
+#print axioms OperationalJoin.Typed.attempted_path_well_formed
+#print axioms OperationalJoin.Typed.successful_attempt_lands
+#print axioms OperationalJoin.Typed.open_attempt_iff_lands
+#print axioms OperationalJoin.Typed.successful_attempt_exact_effect
+#print axioms OperationalJoin.Typed.finite_history_compiled_admission
+#print axioms OperationalJoin.Typed.finite_history_install_effect
+#print axioms OperationalJoin.Typed.finite_history_repair_effect
+#print axioms OperationalJoin.Typed.finite_history_goals_persist
+#print axioms OperationalJoin.Typed.admitted_action_cannot_repeat
+#print axioms OperationalJoin.prepare_plant
+#print axioms OperationalJoin.prepare_epoch
+#print axioms OperationalJoin.prepare_damaged
+#print axioms OperationalJoin.prepare_envelope
+#print axioms OperationalJoin.deliver_plant
+#print axioms OperationalJoin.deliver_epoch
+#print axioms OperationalJoin.deliver_damaged
+#print axioms OperationalJoin.land_epoch
+#print axioms OperationalJoin.land_pending
+#print axioms OperationalJoin.Typed.reachable_safe
+#print axioms OperationalJoin.Typed.step_plant
+#print axioms OperationalJoin.Typed.finite_history_custody
+#print axioms OperationalJoin.Typed.step_counters
+#print axioms OperationalJoin.Typed.trace_counters
+#print axioms OperationalJoin.Typed.fixed_action_excluded_after_continuation
+#print axioms OperationalJoin.Typed.Examples.install_local
+#print axioms OperationalJoin.Typed.Examples.repair_local
+#print axioms OperationalJoin.Typed.Examples.installation_preparation_trace
+#print axioms OperationalJoin.Typed.Examples.installation_lands
+#print axioms OperationalJoin.Typed.Examples.installation_state
+#print axioms OperationalJoin.Typed.Examples.transition_trace
+#print axioms OperationalJoin.Typed.Examples.delivery_trace
+#print axioms OperationalJoin.Typed.Examples.delivered_fields
+#print axioms OperationalJoin.Typed.Examples.repair_ready
+#print axioms OperationalJoin.Typed.Examples.repair_preparation_trace
+#print axioms OperationalJoin.Typed.Examples.repair_lands
+#print axioms OperationalJoin.Typed.Examples.two_stage_history
+#print axioms OperationalJoin.Typed.Examples.repair_state
+#print axioms OperationalJoin.Typed.Examples.exact_two_stage_result
+#print axioms OperationalJoin.Typed.Examples.repair_cancellation_trace
+#print axioms OperationalJoin.Typed.Examples.closedRepair_certificate
+#print axioms OperationalJoin.Typed.Examples.closed_repair_blocks_all_continuations
+#print axioms OperationalJoin.Typed.prepare123_trace
+#print axioms OperationalJoin.Typed.prepare123_lands
+#print axioms OperationalJoin.Typed.Controls.no_full_plant_table_injection
+#print axioms OperationalJoin.Typed.Controls.fresh_install_not_idempotent
+#print axioms OperationalJoin.Typed.Controls.original_action_rejected_after_install
+#print axioms OperationalJoin.Typed.Controls.same_nonce_does_not_identify_command
+#print axioms OperationalJoin.Typed.Controls.full_successor_tampering_rejected
+#print axioms OperationalJoin.Typed.Controls.ordered_path_identity_preserved
+#print axioms OperationalJoin.Typed.Controls.cached_observation_would_overwrite_intervening_audit
+#print axioms OperationalJoin.Typed.Controls.actual_successor_binding_blocks_cached_overwrite
+#print axioms OperationalJoin.Typed.Controls.actual_expiry_changes_admission
+#print axioms OperationalJoin.Typed.Controls.grant_scope_is_separate
+#print axioms OperationalJoin.Typed.Controls.external_reservation_not_automatic
+#print axioms OperationalJoin.Typed.Controls.late_install_ready
+#print axioms OperationalJoin.Typed.Controls.late_install_preparation
+#print axioms OperationalJoin.Typed.Controls.late_install_revocation
+#print axioms OperationalJoin.Typed.Controls.dropped_revocation_admits_a_reachable_stale_write
+#print axioms OperationalJoin.Offset.low_raw_epoch_rejected
+#print axioms OperationalJoin.Offset.root_gate_iff
+#print axioms OperationalJoin.Offset.low_raw_attempt_rejected
+#print axioms OperationalJoin.Offset.reachable_policy_above
+#print axioms OperationalJoin.Offset.finite_history_raw_current
+#print axioms OperationalJoin.acknowledgeMany_epoch
+#print axioms OperationalJoin.acknowledgeMany_plant
+#print axioms OperationalJoin.acknowledgeMany_pending
+#print axioms OperationalJoin.acknowledgeMany_damaged
+#print axioms OperationalJoin.acknowledgeMany_certificates
+#print axioms OperationalJoin.acknowledgeMany_cancelAcks
+#print axioms OperationalJoin.acknowledgeMany_acks
+#print axioms OperationalJoin.acknowledgeMany_root
+#print axioms OperationalJoin.acknowledgeMany_trace
+#print axioms OperationalJoin.certifyMany_trace
+#print axioms OperationalJoin.certifyMany_epoch
+#print axioms OperationalJoin.certifyMany_plant
+#print axioms OperationalJoin.certifyMany_pending
+#print axioms OperationalJoin.certifyMany_damaged
+#print axioms OperationalJoin.certifyMany_cancelAcks
+#print axioms OperationalJoin.certifyMany_certificates
+#print axioms OperationalJoin.certifyMany_root
+#print axioms OperationalJoin.deliverMany_epoch
+#print axioms OperationalJoin.deliverMany_plant
+#print axioms OperationalJoin.deliverMany_pending
+#print axioms OperationalJoin.deliverMany_damaged
+#print axioms OperationalJoin.deliverMany_certificates
+#print axioms OperationalJoin.deliverMany_cancelAcks
+#print axioms OperationalJoin.deliverMany_root
+#print axioms OperationalJoin.deliverMany_trace
+#print axioms OperationalJoin.Offset.rootsOf_values
+#print axioms OperationalJoin.Offset.rootsOf_length
+#print axioms OperationalJoin.Offset.mem_rootsOf
+#print axioms OperationalJoin.Offset.rootsOf_nodup
+#print axioms OperationalJoin.Offset.rootsOf_card
+#print axioms OperationalJoin.Offset.aligned_raw_epoch
+#print axioms OperationalJoin.Offset.initial_aligned
+#print axioms OperationalJoin.Offset.aligned_certificate_not_prebase
+#print axioms OperationalJoin.Offset.certifyTransition_exact
+#print axioms OperationalJoin.Offset.certificateAt_old_iff
+#print axioms OperationalJoin.Offset.ownerCertificate_at
+#print axioms OperationalJoin.Offset.owner_certificates_aligned
+#print axioms OperationalJoin.Offset.owner_root_represents
+#print axioms OperationalJoin.Offset.certifyTransition_preserves_alignment
+#print axioms OperationalJoin.Offset.mem_goodIndices
+#print axioms OperationalJoin.Offset.deliver_exact
+#print axioms OperationalJoin.Offset.delivery_root_represents
+#print axioms OperationalJoin.Offset.delivery_certificates_aligned
+#print axioms OperationalJoin.Offset.deliver_preserves_alignment
+#print axioms OperationalJoin.Offset.successful_attempt_lands
+#print axioms OperationalJoin.Offset.successful_attempt_current_policy
+#print axioms OperationalJoin.Offset.low_raw_attempt_rejected_from_aligned
+#print axioms OperationalJoin.Offset.successful_attempt_exact_plant
+#print axioms OperationalJoin.prepareMany_epoch
+#print axioms OperationalJoin.prepareMany_plant
+#print axioms OperationalJoin.prepareMany_pending
+#print axioms OperationalJoin.prepareMany_damaged
+#print axioms OperationalJoin.prepareMany_certificates
+#print axioms OperationalJoin.prepareMany_cancelAcks
+#print axioms OperationalJoin.prepareMany_root
+#print axioms OperationalJoin.prepareMany_trace
+#print axioms OperationalJoin.Offset.root_eligibility_iff
+#print axioms OperationalJoin.Offset.mem_signers
+#print axioms OperationalJoin.Offset.prepare_exact
+#print axioms OperationalJoin.Offset.prepare_invalid_path_identity
+#print axioms OperationalJoin.Offset.signer_grant
+#print axioms OperationalJoin.Offset.prepared_root_represents
+#print axioms OperationalJoin.Offset.prepared_certificates_aligned
+#print axioms OperationalJoin.Offset.prepare_preserves_alignment
+#print axioms OperationalJoin.Offset.attempt_success_effect
+#print axioms OperationalJoin.Offset.attempt_invalid_path_identity
+#print axioms OperationalJoin.Offset.admitted_land_exact
+#print axioms OperationalJoin.Offset.successful_attempt_preserves_alignment
+#print axioms OperationalJoin.Offset.attempt_preserves_alignment
+#print axioms OperationalJoin.Offset.runtime_step_refines_history
+#print axioms OperationalJoin.Offset.runtime_trace_refines_history
+#print axioms OperationalJoin.Offset.reached_runtime_current_admission
+#print axioms OperationalJoin.Offset.NativeFixture.source_length
+#print axioms OperationalJoin.Offset.NativeFixture.install_local
+#print axioms OperationalJoin.Offset.NativeFixture.repair_local
+#print axioms OperationalJoin.Offset.NativeFixture.install_proposal_from_actor_observation
+#print axioms OperationalJoin.Offset.NativeFixture.repair_proposal_from_predicted_plant
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_install_prepares
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_install_lands
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_certifies_exact_policy
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_repair_prepares
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_repair_lands
+#print axioms OperationalJoin.Offset.NativeFixture.exact_runtime_history
+#print axioms OperationalJoin.Offset.NativeFixture.start_aligned
+#print axioms OperationalJoin.Offset.NativeFixture.start_reachable
+#print axioms OperationalJoin.Offset.NativeFixture.exact_runtime_has_common_history
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_full_final_plant
+#print axioms OperationalJoin.Offset.NativeFixture.runtime_full_source_and_audits
+#print axioms OperationalJoin.Offset.step_plant
+#print axioms OperationalJoin.Offset.finite_history_custody
+#print axioms OperationalJoin.Offset.step_counters
+#print axioms OperationalJoin.Offset.trace_counters
+#print axioms OperationalJoin.Offset.fixed_action_excluded_after_continuation
+#print axioms OperationalJoin.Offset.RuntimeControls.partial_prepare_is_not_identity
+#print axioms OperationalJoin.Offset.RuntimeControls.shared_badOpen_has_exact_runtime_force
+#print axioms OperationalJoin.Offset.RuntimeControls.partial_prepare_actual_trace
+#print axioms OperationalJoin.Offset.RuntimeControls.partial_prepare_has_common_trace
+#print axioms OperationalJoin.Offset.RuntimeControls.same_epoch_policy_shape_is_not_authenticity
+#print axioms OperationalJoin.Offset.RuntimeControls.forged_effective_policy
+#print axioms OperationalJoin.Offset.RuntimeControls.forged_policy_cannot_preserve_alignment
+#print axioms OperationalJoin.Offset.RuntimeControls.prebase_raw_command_is_rejected
+#print axioms OperationalJoin.Offset.RuntimeControls.prebase_certificate_not_in_completed
+#print axioms OperationalJoin.Offset.RuntimeControls.prebase_delivery_is_identity
+#print axioms OperationalJoin.Offset.RuntimeControls.stale_actor_clock_not_replaced_by_actual_clock
+#print axioms OperationalJoin.Offset.RuntimeControls.raw_fixture_coordinates_retained
+#print axioms OperationalJoin.cancelMany_epoch
+#print axioms OperationalJoin.cancelMany_plant
+#print axioms OperationalJoin.cancelMany_pending
+#print axioms OperationalJoin.cancelMany_damaged
+#print axioms OperationalJoin.cancelMany_certificates
+#print axioms OperationalJoin.cancelMany_root
+#print axioms OperationalJoin.cancelMany_cancelAcks
+#print axioms OperationalJoin.cancelMany_trace
+#print axioms OperationalJoin.Offset.mem_cancelResponders
+#print axioms OperationalJoin.Offset.cancelResponders_values
+#print axioms OperationalJoin.Offset.cancelResponders_length
+#print axioms OperationalJoin.Offset.cancelResponders_nodup
+#print axioms OperationalJoin.Offset.cancelWith_exact
+#print axioms OperationalJoin.Offset.cancelWith_invalid_identity
+#print axioms OperationalJoin.Offset.true_cancel_outer_guards
+#print axioms OperationalJoin.Offset.cancel_responder_auth
+#print axioms OperationalJoin.Offset.cancelled_root_represents
+#print axioms OperationalJoin.Offset.cancelled_certificates_aligned
+#print axioms OperationalJoin.Offset.cancelWith_preserves_alignment
+#print axioms OperationalJoin.Offset.true_cancel_implies_certificate
+#print axioms OperationalJoin.Offset.true_cancel_requester_matches
+#print axioms OperationalJoin.Offset.ordinary_runtime_trace_lifts
+#print axioms OperationalJoin.Offset.runtime_cancel_step_refines_history
+#print axioms OperationalJoin.Offset.runtime_cancel_trace_refines_history
+#print axioms OperationalJoin.Offset.true_runtime_cancel_blocks_all_continuations
+#print axioms OperationalJoin.Offset.reached_runtime_cancel_current_admission
+#print axioms OperationalJoin.Offset.runtime_cancel_step_clock
+#print axioms OperationalJoin.Offset.runtime_cancel_trace_clock
+#print axioms OperationalJoin.Offset.CancellationControls.B_replies_are_insufficient
+#print axioms OperationalJoin.Offset.CancellationControls.B_plus_one_closes_unlanded_operation
+#print axioms OperationalJoin.Offset.CancellationControls.wrong_requester_cannot_close
+#print axioms OperationalJoin.Offset.CancellationControls.false_returns_retain_distinct_partial_tombstones
+#print axioms OperationalJoin.Offset.CancellationControls.first_responders
+#print axioms OperationalJoin.Offset.CancellationControls.second_responders
+#print axioms OperationalJoin.Offset.CancellationControls.repeated_responders
+#print axioms OperationalJoin.Offset.CancellationControls.cumulative_acknowledgement_sets
+#print axioms OperationalJoin.Offset.CancellationControls.cumulative_certificate_does_not_equal_current_call_boolean
+#print axioms OperationalJoin.Offset.CancellationControls.cumulative_states_are_genuine
+#print axioms OperationalJoin.Offset.CancellationControls.duplicate_acknowledgements_are_identity
+#print axioms OperationalJoin.Offset.CancellationControls.unselected_acknowledgements_are_identity
+#print axioms OperationalJoin.Offset.CancellationControls.cleanup_after_revocation_still_records_tombstones
+#print axioms OperationalJoin.Offset.CancellationControls.cancellation_does_not_roll_back_a_lawful_landing
+#print axioms OperationalJoin.Offset.CancellationControls.delayed_prepare_cannot_reopen_closed_envelope
+#print axioms OperationalJoin.Offset.CancellationControls.cancellation_is_full_command_scoped
+#print axioms OperationalJoin.Offset.CancellationControls.native_cancellation_blocks_every_later_trace
+#print axioms OperationalJoin.Offset.setReferenceTime_aligned
+#print axioms OperationalJoin.Offset.setReferenceTime_fields
+#print axioms OperationalJoin.Offset.localStep_before_lease_end
+#print axioms OperationalJoin.Offset.expired_localStep_is_none
+#print axioms OperationalJoin.Offset.expired_aligned_attempt_rejected
+#print axioms OperationalJoin.Offset.runtime_cancel_trace_lifts
+#print axioms OperationalJoin.Offset.monotone_reference_step_refines_history
+#print axioms OperationalJoin.Offset.monotone_reference_trace_refines_history
+#print axioms OperationalJoin.Offset.monotone_reference_step_time
+#print axioms OperationalJoin.Offset.monotone_reference_trace_time
+#print axioms OperationalJoin.Offset.reached_monotone_reference_current_admission
+#print axioms OperationalJoin.Offset.expired_envelope_stays_rejected
+#print axioms OperationalJoin.Offset.true_cancel_blocks_monotone_reference_continuations
+#print axioms OperationalJoin.Offset.ReferenceClockControls.time_advancing_installation_repair_trace
+#print axioms OperationalJoin.Offset.ReferenceClockControls.time_advancing_trace_has_exact_effect
+#print axioms OperationalJoin.Offset.ReferenceClockControls.time_advancing_trace_has_common_witness
+#print axioms OperationalJoin.Offset.ReferenceClockControls.exact_install_lease_boundary
+#print axioms OperationalJoin.Offset.ReferenceClockControls.exact_repair_lease_boundary
+#print axioms OperationalJoin.Offset.ReferenceClockControls.backward_time_resurrects_uncancelled_envelope
+#print axioms OperationalJoin.Offset.ReferenceClockControls.backward_time_has_no_monotone_trace
+#print axioms OperationalJoin.Offset.ReferenceClockControls.reference_update_does_not_refresh_actor_observation
+#print axioms OperationalJoin.Offset.ReferenceClockControls.advancing_or_rolling_back_does_not_erase_cancellation
+#print axioms OperationalJoin.Offset.ReferenceClockControls.earlier_nonadmitting_actor_observation_is_not_repaired
+#print axioms OperationalJoin.Offset.Batch.runBatch_eq_fold
+#print axioms OperationalJoin.Offset.Batch.proposal_fields
+#print axioms OperationalJoin.Offset.Batch.fourPaths_bounded
+#print axioms OperationalJoin.Offset.Batch.fourPaths_length
+#print axioms OperationalJoin.Offset.Batch.batchBody_record
+#print axioms OperationalJoin.Offset.Batch.batchBody_length
+#print axioms OperationalJoin.Offset.Batch.fold_length
+#print axioms OperationalJoin.Offset.Batch.fold_paths
+#print axioms OperationalJoin.Offset.Batch.runBatch_paths
+#print axioms OperationalJoin.Offset.Batch.runBatch_length
+#print axioms OperationalJoin.Offset.Batch.runBatch_nonces
+#print axioms OperationalJoin.Offset.Batch.batchBody_of_proposal
+#print axioms OperationalJoin.Offset.Batch.prepare_plant
+#print axioms OperationalJoin.Offset.Batch.prepare_static
+#print axioms OperationalJoin.Offset.Batch.attempt_static
+#print axioms OperationalJoin.Offset.Batch.cancel_plant
+#print axioms OperationalJoin.Offset.Batch.cancel_static
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_static
+#print axioms OperationalJoin.Offset.Batch.withholding_attempt_witness
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_landing_witness
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_plant
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_no_relanding
+#print axioms OperationalJoin.Offset.Batch.landedCount_append
+#print axioms OperationalJoin.Offset.Batch.batchBody_unique
+#print axioms OperationalJoin.Offset.Batch.fold_unique
+#print axioms OperationalJoin.Offset.Batch.runBatch_unique
+#print axioms OperationalJoin.Offset.Batch.runBatch_at_most_one_landing
+#print axioms OperationalJoin.Offset.Batch.runBatch_zero_landings_unchanged
+#print axioms OperationalJoin.Offset.Batch.runBatch_one_landing_blocks_fixed_action
+#print axioms OperationalJoin.Offset.Batch.ready_eligible
+#print axioms OperationalJoin.Offset.Batch.prepare_eligible_preserved
+#print axioms OperationalJoin.Offset.Batch.prepare_succeeds
+#print axioms OperationalJoin.Offset.Batch.prepare_commits_good_selected
+#print axioms OperationalJoin.Offset.Batch.intact_prepared_attempt
+#print axioms OperationalJoin.Offset.Batch.ready_intact_trial_lands
+#print axioms OperationalJoin.Offset.Batch.prepare_ready
+#print axioms OperationalJoin.Offset.Batch.cancel_ready
+#print axioms OperationalJoin.Offset.Batch.rejected_serviceTrial_ready
+#print axioms OperationalJoin.Offset.Batch.batchBody_static
+#print axioms OperationalJoin.Offset.Batch.batchBody_count_mono
+#print axioms OperationalJoin.Offset.Batch.fold_count_mono
+#print axioms OperationalJoin.Offset.Batch.fold_progress
+#print axioms OperationalJoin.Offset.Batch.fourPaths_has_intact
+#print axioms OperationalJoin.Offset.Batch.runBatch_exactly_one_landing
+#print axioms OperationalJoin.Offset.Batch.fold_positive_plant
+#print axioms OperationalJoin.Offset.Batch.runBatch_successor_of_landing
+#print axioms OperationalJoin.Offset.Batch.runBatch_stable_completion
+#print axioms OperationalJoin.Offset.Batch.prepare_fresh
+#print axioms OperationalJoin.Offset.Batch.attempt_fresh
+#print axioms OperationalJoin.Offset.Batch.cancel_fresh
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_fresh
+#print axioms OperationalJoin.Offset.Batch.batchBody_fresh
+#print axioms OperationalJoin.Offset.Batch.fold_fresh
+#print axioms OperationalJoin.Offset.Batch.runBatch_fresh
+#print axioms OperationalJoin.Offset.Batch.certifyTransition_fresh
+#print axioms OperationalJoin.Offset.Batch.deliver_fresh
+#print axioms OperationalJoin.Offset.Batch.prepare_root_policy
+#print axioms OperationalJoin.Offset.Batch.prepare_root_revoked
+#print axioms OperationalJoin.Offset.Batch.attempt_roots
+#print axioms OperationalJoin.Offset.Batch.cancel_root_policy
+#print axioms OperationalJoin.Offset.Batch.cancel_root_revoked
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_root_frame
+#print axioms OperationalJoin.Offset.Batch.batchBody_root_frame
+#print axioms OperationalJoin.Offset.Batch.fold_root_frame
+#print axioms OperationalJoin.Offset.Batch.runBatch_root_frame
+#print axioms OperationalJoin.Offset.Batch.fold_static
+#print axioms OperationalJoin.Offset.Batch.runBatch_static
+#print axioms OperationalJoin.Offset.Batch.runtime_trace_append
+#print axioms OperationalJoin.Offset.Batch.batchBody_runtime_trace
+#print axioms OperationalJoin.Offset.Batch.fold_runtime_trace
+#print axioms OperationalJoin.Offset.Batch.runBatch_runtime_trace
+#print axioms OperationalJoin.Offset.Batch.runBatch_clock
+#print axioms OperationalJoin.Offset.Batch.runBatch_refines_history
+#print axioms OperationalJoin.Offset.Batch.after_runBatch_current_admission
+#print axioms OperationalJoin.Offset.Batch.true_cancel_blocks_after_runBatch
+#print axioms OperationalJoin.Offset.Batch.monotone_prefix_then_batch_refines
+#print axioms OperationalJoin.Offset.Batch.full_path_cancel_closes
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_closes
+#print axioms OperationalJoin.Offset.Batch.batchBody_records_closed
+#print axioms OperationalJoin.Offset.Batch.fold_records_closed
+#print axioms OperationalJoin.Offset.Batch.runBatch_records_closed
+#print axioms OperationalJoin.Offset.Batch.trialEnvelopes_nonce_gt
+#print axioms OperationalJoin.Offset.Batch.freshAbove_implies_freshTrials
+#print axioms OperationalJoin.Offset.Batch.ready_implies_exactReady
+#print axioms OperationalJoin.Offset.Batch.exactReady_head_eligible
+#print axioms OperationalJoin.Offset.Batch.exactReady_head_lands
+#print axioms OperationalJoin.Offset.Batch.prepare_exactReady
+#print axioms OperationalJoin.Offset.Batch.cancel_exactReady_tail
+#print axioms OperationalJoin.Offset.Batch.rejected_trial_exactReady_tail
+#print axioms OperationalJoin.Offset.Batch.fold_exact_progress
+#print axioms OperationalJoin.Offset.Batch.runBatch_exact_fresh_completion
+#print axioms OperationalJoin.Offset.Batch.exact_four_predicted_envelopes
+#print axioms OperationalJoin.Offset.Batch.proposal_step
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_current_admission
+#print axioms OperationalJoin.Offset.Batch.fold_landing_admitted
+#print axioms OperationalJoin.Offset.Batch.runBatch_landing_admitted
+#print axioms OperationalJoin.Offset.Batch.Native.native_install_ready
+#print axioms OperationalJoin.Offset.Batch.Native.native_install_batch_once
+#print axioms OperationalJoin.Offset.Batch.Native.native_install_batch_common_history
+#print axioms OperationalJoin.Offset.Batch.Native.native_certificate_exact
+#print axioms OperationalJoin.Offset.Batch.Native.native_actor_receives_full_policy
+#print axioms OperationalJoin.Offset.Batch.Native.native_repair_proposal
+#print axioms OperationalJoin.Offset.Batch.Native.native_repair_ready
+#print axioms OperationalJoin.Offset.Batch.Native.native_repair_batch_once
+#print axioms OperationalJoin.Offset.Batch.Native.native_full_batch_runtime_trace
+#print axioms OperationalJoin.Offset.Batch.Native.native_full_batch_common_history
+#print axioms OperationalJoin.Offset.Batch.Native.native_full_plant_and_audits
+#print axioms OperationalJoin.Offset.Batch.Native.native_install_four_closed
+#print axioms OperationalJoin.Offset.Batch.Native.native_repair_four_closed
+#print axioms OperationalJoin.Offset.Batch.Native.native_expired_batch_zero
+#print axioms OperationalJoin.Offset.Batch.Native.native_expired_batch_unchanged
+#print axioms OperationalJoin.Offset.Batch.Native.native_expired_still_prepared_or_cancelled
+#print axioms OperationalJoin.Offset.Batch.Native.native_synthetic_closure_without_cancellation
+#print axioms OperationalJoin.Offset.Batch.ExactControls.high_tombstone_exact_ready
+#print axioms OperationalJoin.Offset.Batch.ExactControls.high_tombstone_violates_conservative_freshness
+#print axioms OperationalJoin.Offset.Batch.ExactControls.high_tombstone_sharpened_completion
+#print axioms OperationalJoin.Offset.Batch.ExactControls.exact_freshness_strictly_less_restrictive
+#print axioms OperationalJoin.Offset.Batch.RetryControls.before_delivery_zero_landing
+#print axioms OperationalJoin.Offset.Batch.RetryControls.before_delivery_preserves_installed
+#print axioms OperationalJoin.Offset.Batch.RetryControls.after_delivery_preserves_installed
+#print axioms OperationalJoin.Offset.Batch.RetryControls.failed_batch_records_durable_cancellation
+#print axioms OperationalJoin.Offset.Batch.RetryControls.delivery_keeps_old_cancellation
+#print axioms OperationalJoin.Offset.Batch.RetryControls.same_actor_retry_still_zero
+#print axioms OperationalJoin.Offset.Batch.RetryControls.same_actor_retry_unchanged
+#print axioms OperationalJoin.Offset.Batch.RetryControls.fresh_retry_ready
+#print axioms OperationalJoin.Offset.Batch.RetryControls.fresh_retry_completes_once
+#print axioms OperationalJoin.Offset.Batch.RetryControls.renewed_repair_local
+#print axioms OperationalJoin.Offset.Batch.RetryControls.renewed_repair_exact_ready
+#print axioms OperationalJoin.Offset.Batch.RetryControls.same_nonce_changed_command_completes
+#print axioms OperationalJoin.Offset.Batch.RetryControls.reused_nonce_violates_high_water
+#print axioms OperationalJoin.Offset.Batch.RetryControls.retry_boundary
+#print axioms OperationalJoin.Offset.Batch.ControllerProjection.native_is_exact_controller_projection
+#print axioms OperationalJoin.Offset.Batch.ControllerProjection.exact_source_projection_completes
+#print axioms OperationalJoin.Offset.Batch.prepare_cancelled
+#print axioms OperationalJoin.Offset.Batch.cancel_memory_mono
+#print axioms OperationalJoin.Offset.Batch.cancel_other_memory_iff
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_memory_mono
+#print axioms OperationalJoin.Offset.Batch.serviceTrial_other_memory_iff
+#print axioms OperationalJoin.Offset.Batch.intact_uncancelled_before_trial
+#print axioms OperationalJoin.Offset.Batch.intact_uncancelled_after_other_trial
+#print axioms OperationalJoin.Offset.Batch.landed_trial_was_intact_uncancelled
+#print axioms OperationalJoin.Offset.Batch.intact_uncancelled_trial_lands
+#print axioms OperationalJoin.Offset.Batch.rejected_trial_admission_ready
+#print axioms OperationalJoin.Offset.Batch.cancel_admission_ready
+#print axioms OperationalJoin.Offset.Batch.unselected_tombstone_irrelevant
+#print axioms OperationalJoin.Offset.Batch.fold_landing_has_surviving_trial
+#print axioms OperationalJoin.Offset.Batch.fold_surviving_trial_progress
+#print axioms OperationalJoin.Offset.Batch.runBatch_survival_iff
+#print axioms OperationalJoin.Offset.Batch.runBatch_survival_effect_iff
+#print axioms OperationalJoin.Offset.Batch.runBatch_zero_iff_no_surviving_trial
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.initial_admission_ready
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.first_cancelled_ready
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.fourth_cancelled_ready
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.fourth_survives_first_cancellation
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.first_cancellation_does_not_prevent_progress
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.first_cancellation_violates_all_four_freshness
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.fourth_cancellation_leaves_no_survivor
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.fourth_cancellation_blocks_actual_batch
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.delayed_retry_has_no_survivor
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.fresh_retry_has_survivor
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.before_delivery_has_surviving_trial
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.before_delivery_not_synchronized_ready
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.availability_without_policy_synchronization_can_stall
+#print axioms OperationalJoin.Offset.Batch.SurvivalControls.unselected_memory_does_not_veto_first_trial
+#print axioms BatchSourceReview.source_admits
+#print axioms BatchSourceReview.intact_portfolio_path_iff_at_most_one_fault
+#print axioms BatchSourceReview.deleting_any_path_loses_one_fault_guarantee
+#print axioms BatchSourceReview.no_proposal_has_synthetic_closed_logs
+#print axioms BatchSourceReview.wrong_requester_retains_partial_prepare_effect
+#print axioms BatchSourceReview.stale_time_observation_does_not_create_progress
+#print axioms BatchSourceReview.success_does_not_stop_or_refresh_actor
+#print axioms BatchSourceReview.one_fault_portfolio_positions
+#print axioms BatchSourceReview.two_faults_block_every_path
+#print axioms BatchSourceReview.prior_tombstone_blocks_only_intact_path
+#print axioms BatchSourceReview.unrelated_high_nonce_tombstone_does_not_block_progress
+#print axioms BatchSourceReview.repeated_actor_reuses_nonce_sequence
+#print axioms BatchSourceReview.wrong_path_quorum_rejects_before_mutation
+#print axioms BatchSourceReview.cancellation_threshold_is_separate_from_progress
+#print axioms BatchHistoryPremiseReview.cancellation_reaches_aligned_blocked_start
+#print axioms BatchHistoryPremiseReview.aligned_reachable_current_proposal_can_still_stall
+#print axioms BatchHistoryPremiseReview.full_envelope_cancellation_is_the_missing_premise
+#print axioms BatchAvailabilityReview.undelivered_runtime_prefix
+#print axioms BatchAvailabilityReview.certified_without_delivery_is_aligned_reachable
+#print axioms BatchAvailabilityReview.current_admission_and_freshness_do_not_replace_delivery
+#print axioms BatchFaultSemanticsReview.budget_free_uniqueness_does_not_generalize_to_permissive_faults
+#print axioms BatchContractReview.uniqueness_has_no_hidden_readiness_argument
+#print axioms BatchContractReview.failed_proposal_is_full_world_identity
+#print axioms BatchContractReview.semantics_progress_does_not_require_successful_cleanup
+#print axioms BatchContractReview.FreshAbove_is_not_a_necessary_progress_condition
+#print axioms BatchContractReview.arbitrary_actor_refinement_has_exact_assumptions
+#print axioms BatchContractReview.full_native_installation_batch_reaches_exact_successor
+#print axioms BatchFreshnessV2SourceReview.cancelled_faulty_trial_does_not_block_the_intact_trial
+#print axioms BatchFreshnessV2SourceReview.false_preparation_still_consumes_exact_envelopes
+#print axioms BatchFreshnessV2SourceReview.delivery_does_not_revive_cancelled_trials_but_fresh_batch_lands
+#print axioms BatchFreshnessV2SourceReview.restored_policy_countercontrol_is_genuinely_reachable
+#print axioms BatchV2ContractReview.high_nonce_counterstate_is_genuinely_reachable
+#print axioms BatchV2ContractReview.reached_high_nonce_still_has_exact_trial_readiness
+#print axioms BatchV2ContractReview.reached_high_nonce_refutes_global_high_water_necessity
+#print axioms BatchV2ContractReview.exact_four_freshness_is_not_necessary_for_progress
+#print axioms BatchV2ContractReview.aggregate_safety_has_exact_source_world_endpoint
+#print axioms BatchV2ContractReview.owner_cleanup_boolean_has_no_fault_count_requirement
+#print axioms BatchAvailabilityIffSourceReview.four_preliminary_cancellation_replies_are_false
+#print axioms BatchAvailabilityIffSourceReview.selected_singleton_tombstones_block_all_four_trials
+#print axioms BatchAvailabilityIffSourceReview.zero_fault_initial_alignment
+#print axioms BatchAvailabilityIffSourceReview.partial_cleanup_history_is_genuine
+#print axioms BatchAvailabilityIffSourceReview.partial_cleanup_blockage_is_aligned_and_reachable
+#print axioms BatchSurvivalContractReview.exact_iff_has_only_declared_stable_obligations
+#print axioms BatchSurvivalContractReview.successful_batch_necessity_has_no_extra_readiness_premise
+#print axioms BatchSurvivalContractReview.false_singleton_cleanup_can_eliminate_every_surviving_trial
+#print axioms BatchSurvivalContractReview.numerical_cleanup_budget_does_not_enter_the_effect_iff
+#print axioms BatchSurvivalContractReview.rejecting_actor_stalls_despite_actual_ready_surviving_path

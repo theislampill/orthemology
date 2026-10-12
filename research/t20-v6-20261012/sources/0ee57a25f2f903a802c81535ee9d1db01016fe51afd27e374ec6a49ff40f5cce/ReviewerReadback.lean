@@ -1,0 +1,27 @@
+import ReviewerTargetControls
+#check @HiddenParity.IndependentTarget.one_state_support_exact
+#print axioms HiddenParity.IndependentTarget.one_state_support_exact
+#check @HiddenParity.IndependentTarget.one_state_actual_component
+#print axioms HiddenParity.IndependentTarget.one_state_actual_component
+#check @HiddenParity.IndependentTarget.proper_closed_subset_without_fairness
+#print axioms HiddenParity.IndependentTarget.proper_closed_subset_without_fairness
+#check @HiddenParity.IndependentTarget.literal_actual_recurrent_equality
+#print axioms HiddenParity.IndependentTarget.literal_actual_recurrent_equality
+#check @HiddenParity.IndependentTarget.odd_pair_recurrent_on_actual_law
+#print axioms HiddenParity.IndependentTarget.odd_pair_recurrent_on_actual_law
+#check @HiddenParity.IndependentTarget.odd_pair_priority_three
+#print axioms HiddenParity.IndependentTarget.odd_pair_priority_three
+#check @HiddenParity.IndependentTarget.initial_action_in_retained_menu
+#print axioms HiddenParity.IndependentTarget.initial_action_in_retained_menu
+#check @HiddenParity.IndependentTarget.cycling_ignores_private_seed
+#print axioms HiddenParity.IndependentTarget.cycling_ignores_private_seed
+#check @HiddenParity.IndependentTarget.departure_count_not_receipt_count
+#print axioms HiddenParity.IndependentTarget.departure_count_not_receipt_count
+#check @HiddenParity.IndependentTarget.unequal_full_support
+#print axioms HiddenParity.IndependentTarget.unequal_full_support
+#check @HiddenParity.IndependentTarget.unequal_full_rows
+#print axioms HiddenParity.IndependentTarget.unequal_full_rows
+#check @HiddenParity.IndependentTarget.unequal_candidate_qualifies
+#print axioms HiddenParity.IndependentTarget.unequal_candidate_qualifies
+#check @HiddenParity.IndependentTarget.unequal_rival_never_parity
+#print axioms HiddenParity.IndependentTarget.unequal_rival_never_parity

@@ -1,0 +1,25 @@
+{
+  "ordinary_source_sha256": "2954b8a6818e43bbfde31c3440223dfe5d7fe72476fa4b7847dcf10f47b4182d",
+  "ordinary_review_archive_sha256": "c86174f55f8474787ce124b2d1f8601e8b13ef0667242d6109ddaaaa8f0578b3",
+  "primary_ancestry": [
+    {
+      "source": "CDHR2007 section5",
+      "url": "https://arxiv.org/pdf/0706.2619",
+      "role": "Hidden one-cell checker and public universal transition ancestry"
+    },
+    {
+      "source": "CDH2010 section4",
+      "url": "https://lsv.ens-paris-saclay.fr/~doyen/papers/Qualitative_Analysis_of_Partially-observable_MDP.pdf",
+      "role": "Clock-bounded ATM and randomization ancestry; not formalized here"
+    },
+    {
+      "source": "FGKPV2026v2 Definition3.1",
+      "url": "https://arxiv.org/pdf/2602.07473v2",
+      "role": "Joint-kernel posterior-determinism interface"
+    }
+  ],
+  "scope": "Local finite construction, PMFs, restriction preservation, initial mixing, state-observation conversion and one-step honest invariants",
+  "formal_ATM_language_reduction": false,
+  "formal_EXPTIME_hardness": false,
+  "historical_novelty_claim": false
+}

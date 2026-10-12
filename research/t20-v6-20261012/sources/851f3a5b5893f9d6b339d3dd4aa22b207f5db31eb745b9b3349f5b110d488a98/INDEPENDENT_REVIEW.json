@@ -1,0 +1,23 @@
+{
+  "status": "PASS_INDEPENDENT_COMPACT_OBSERVATION_AUDIT",
+  "directory_from_tranche2": "compact-observation-audit",
+  "manifest_sha256": "d3b05029f0456863423a4fdb9645c0d11360f5f0f696cc0ed20f5132749b6aa2",
+  "receipt_sha256": "6034a0aceca7c2cc5c34a1dbd756fccba5dc0a5da555c40b09d33ca2c2b3a42f",
+  "audit_sha256": "fecf70cf1588fdf51a8679210f194bd5ec4c041625209fdfcbf9fb2287decce4",
+  "source_sha256": {
+    "CompactObservationBoundary": "874ceabb1267306eaff41f28fa4e2450c47d6bc10cdde2e7cee4ce5819dd1b10",
+    "CompactBoundaryControls": "a6fdb6988be16dd35cca26cc8573d98c0b5f4828ef340446cc315d9d613c7d58"
+  },
+  "readbacks": {
+    "main_and_helper": 7,
+    "controls": 10
+  },
+  "controls": [
+    "nonclosed targets",
+    "noncompact action space",
+    "missing reference-law confinement",
+    "common point need never be output",
+    "no uniform simultaneous-target tail"
+  ],
+  "scope": "Fixed closed targets, eventual exact membership, compact reference-law confinement, nonzero full-path common reference; no realised-output or selector conclusion"
+}

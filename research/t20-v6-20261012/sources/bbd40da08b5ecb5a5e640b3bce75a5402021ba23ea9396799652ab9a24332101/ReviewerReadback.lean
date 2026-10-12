@@ -1,0 +1,14 @@
+import ContextualEncoding
+import SupportBridge
+import ReviewerControls
+#check T20Resumed.Language.compositional_contextual_translation
+#check T20Resumed.Language.relay_preserves_source_act
+#check T20Resumed.Language.same_formula_rebound_different_proposition
+#check T20Resumed.Language.changed_binding_changes_truth_in_a_valuation
+#check T20Resumed.minimal_operational_support_cover
+#check T20Resumed.all_retractions_iff_support_cover
+#check T20Resumed.grounded_retractions_iff_operational_cover
+#check T20IndependentReview.minimal_cover_without_monotonicity
+#check T20IndependentReview.failed_larger_retained_profile
+#check T20IndependentReview.actual_upward_closure_missing
+#check T20IndependentReview.upward_completion_is_not_direct_operation

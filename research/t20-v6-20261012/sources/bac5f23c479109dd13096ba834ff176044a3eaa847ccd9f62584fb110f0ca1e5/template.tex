@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=25mm,bottom=26mm,left=26mm,right=26mm,headheight=23pt,headsep=9mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]
+\setmonofont{lmmono10-regular.otf}[Scale=0.88]
+\usepackage{amsmath,amssymb}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage{microtype}
+\usepackage{xcolor}
+\definecolor{ink}{HTML}{17394B}
+\definecolor{softink}{HTML}{536674}
+\definecolor{hairline}{HTML}{CCD6DD}
+\usepackage{booktabs,longtable,array,calc}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{footnotehyper}
+\makesavenoteenv{longtable}
+\hypersetup{colorlinks=true,linkcolor=ink,urlcolor=ink,citecolor=ink,
+  pdftitle={$title$},pdfauthor={$author$},pdfsubject={Conditional mathematical research draft; not a Lean-verified development}}
+\urlstyle{tt}
+\setlength{\emergencystretch}{2.5em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5.5pt plus 1pt minus 1pt}
+\linespread{1.045}
+\setlist{nosep,leftmargin=1.6em,topsep=5pt}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+\titleformat{\section}{\Large\sffamily\bfseries\color{ink}}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\large\sffamily\bfseries\color{ink}}{\thesubsection}{0.65em}{}
+\titlespacing*{\section}{0pt}{20pt}{9pt}
+\titlespacing*{\subsection}{0pt}{13pt}{5pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\sffamily\color{softink} ORTHEMOLOGY \; / \; CONTINUATION AND DISCHARGE}
+\fancyhead[R]{\footnotesize\sffamily\color{softink} VERSION 1}
+\fancyfoot[L]{\footnotesize\sffamily\color{softink} Research draft \;\textbullet\; 8 September 2026}
+\fancyfoot[R]{\footnotesize\sffamily\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{hairline}\leaders\hrule height \headrulewidth\hfill}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\providecommand{\passthrough}[1]{#1}
+\renewcommand{\arraystretch}{1.18}
+\AtBeginEnvironment{longtable}{\small\setlength{\LTpre}{7pt}\setlength{\LTpost}{8pt}}
+\AtBeginEnvironment{quote}{\small\itshape}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\allowdisplaybreaks[1]
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{5mm}
+{\sffamily\small\bfseries\color{ink} ORTHEMOLOGY \hfill RESEARCH SUPPLEMENT / 01\par}
+\vspace{15mm}
+{\sffamily\fontsize{29}{34}\selectfont\bfseries\color{ink} Continuation-Complete\\[2pt]Orthings\par}
+\vspace{6mm}
+{\sffamily\large\color{softink} $subtitle$\par}
+\vspace{10mm}
+{\color{hairline}\hrule height 0.6pt}
+\vspace{8mm}
+{\sffamily\small\bfseries\color{ink} ABSTRACT\par}
+\vspace{2mm}
+$abstract$
+\vfill
+{\sffamily\small\bfseries\color{ink} PROVED UNDER DECLARED ASSUMPTIONS\par}
+{\small Ordinary mathematical proofs and finite executable checks. No claim of general novelty, empirical validation, repository adoption, or Lean/kernel verification.\par}
+\vspace{6mm}
+{\sffamily\small $author$\par}
+{\sffamily\small\color{softink} $date$\par}
+\vspace{4mm}
+{\footnotesize Repository basis: \path{f50dc1aee52356cc6adbef342387576b02afc124}\par}
+\end{titlepage}
+\pagenumbering{roman}
+\tableofcontents
+\vspace{8mm}
+{\small\color{softink} Proof assumptions, source comparisons, and verification scope appear in the appendices. The accompanying verification receipt gives the exact scope of the executable checks.}
+\clearpage
+\pagenumbering{arabic}
+$body$
+\end{document}

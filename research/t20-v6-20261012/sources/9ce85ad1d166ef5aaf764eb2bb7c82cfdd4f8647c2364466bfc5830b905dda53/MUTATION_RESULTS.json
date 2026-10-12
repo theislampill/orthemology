@@ -1,0 +1,62 @@
+[
+  {
+    "id": "RESET_OMITTED",
+    "test": "CodecTests.test_inlined_program_register_reset",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "0306760a940d38ff198531de7f9c3be6e6192db389b1591448c9abfd21b2d5d9",
+    "before": "return Seq(*(Set(r,C(0)) for r in m.values()),",
+    "after": "return Seq(",
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "id": "Q8_SNAPSHOT_WRONG",
+    "test": "CodecTests.test_q8_simulation",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "42bba63fc182ae2cf4fe98467b3b7a5542911014b58621a10ee0195990dc3de5",
+    "before": "Seq(Set(oldpc,V(pc)),*cases)",
+    "after": "Seq(Set(oldpc,C(0)),*cases)",
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "id": "SELECTOR_OFFSET",
+    "test": "CodecTests.test_pi3_against_independent_semantics",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "4759fc87d87247ee97fea127d7bd39fee204c4a2a517e024d48a35454bf41a7a",
+    "before": "Set(stage,E('sub',E('sub',V(0),V(sel)),C(1)))",
+    "after": "Set(stage,E('sub',V(0),V(sel)))",
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "id": "SHIFT_TAIL_WRONG",
+    "test": "CodecTests.test_rational_shift_all_short_prefixes",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "d1b4c962919bc86bee28aebc4ab7f2f3d70201769ad696dcffb0d2c3ff8a89d4",
+    "before": "E('mod',V(1),E('pow2',V(tail_len)))",
+    "after": "E('mod',V(1),E('pow2',E('add',V(tail_len),C(1))))",
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "id": "RESOURCE_AS_ZERO",
+    "test": "CodecTests.test_resource_limit_not_zero",
+    "original_sha256": "dd79f63f5af91bbe1c3695fa401a41a726b224fa5e3d80aa9c589de95949da6c",
+    "mutant_sha256": "def921760f1d9d456ef86ba28ea08b27d619aa64774692118d398928f7cbe0da",
+    "before": null,
+    "after": "\n_original_run=run\ndef run(*args,**kwargs):\n    try:return _original_run(*args,**kwargs)\n    except ResourceLimit:return 0\n",
+    "exit": 1,
+    "detected": true
+  },
+  {
+    "id": "FLOW_CHECKER_ALWAYS_TRUE",
+    "test": "FlowTests.test_float_refused_and_inconsistent_system",
+    "original_sha256": "83056a0a3b674fa60651fd950f4af14017d60b11ef121a1332c5e5e3a7d45940",
+    "mutant_sha256": "53ad29ae8c2817ef30e35193de92e508f90a696a0a6a236598c79ec5afed48f5",
+    "before": null,
+    "after": "\n_original_verify=verify\ndef verify(rows,result):return True\n",
+    "exit": 1,
+    "detected": true
+  }
+]

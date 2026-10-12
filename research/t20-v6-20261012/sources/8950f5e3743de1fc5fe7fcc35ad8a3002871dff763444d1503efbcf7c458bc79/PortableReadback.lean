@@ -1,0 +1,135 @@
+import StatisticalRepair
+import FiniteTailCoverage
+import BernoulliTailMonotonicity
+import BernoulliIntervalCoverage
+import BernoulliPrefixLaw
+import RobustBinaryRepair
+import CertifiedRepairCoverage
+import AnytimeRepairCoverage
+import RationalTailReference
+import RationalRepairCertificate
+import ExecutableAuditRepair
+import AuditContractBinding
+import ProductObservationLaw
+import RepairObstruction
+import RepairTestingBridge
+import BinaryConstructiveRepair
+import ContinuumAuditRestoration
+import RepairEndpointCells
+import EmpiricalRepairCost
+import EmpiricalFourthMoment
+import GroupedBinomialTails
+import EfficientAuditRepair
+import EventualAuditSafety
+import EmpiricalExpectedCost
+import Controls
+set_option pp.universes true
+set_option pp.explicit true
+#check @Orthemology.Tranche3.empiricalWeight
+#print axioms Orthemology.Tranche3.empiricalWeight
+#check @Orthemology.Tranche3.empiricalRepair
+#print axioms Orthemology.Tranche3.empiricalRepair
+#check @Orthemology.Tranche3.bitValue
+#print axioms Orthemology.Tranche3.bitValue
+#check @Orthemology.Tranche3.count_prefix_real
+#print axioms Orthemology.Tranche3.count_prefix_real
+#check @Orthemology.Tranche3.empiricalWeight_mem
+#print axioms Orthemology.Tranche3.empiricalWeight_mem
+#check @Orthemology.Tranche3.empiricalRepair_coherent
+#print axioms Orthemology.Tranche3.empiricalRepair_coherent
+#check @Orthemology.Tranche3.source_bit_expectation
+#print axioms Orthemology.Tranche3.source_bit_expectation
+#check @Orthemology.Tranche3.empiricalWeight_converges
+#print axioms Orthemology.Tranche3.empiricalWeight_converges
+#check @Orthemology.Tranche3.interior_empirical_strict_restoration
+#print axioms Orthemology.Tranche3.interior_empirical_strict_restoration
+#check @Orthemology.Tranche3.LiteralRepairGood
+#print axioms Orthemology.Tranche3.LiteralRepairGood
+#check @Orthemology.Tranche3.positive_weight_punctured_cell
+#print axioms Orthemology.Tranche3.positive_weight_punctured_cell
+#check @Orthemology.Tranche3.zero_weight_unique
+#print axioms Orthemology.Tranche3.zero_weight_unique
+#check @Orthemology.Tranche3.one_weight_unique
+#print axioms Orthemology.Tranche3.one_weight_unique
+#check @Orthemology.Tranche3.below_one_punctured_cell
+#print axioms Orthemology.Tranche3.below_one_punctured_cell
+#check @Orthemology.Tranche3.constantBits
+#print axioms Orthemology.Tranche3.constantBits
+#check @Orthemology.Tranche3.constantBits_count
+#print axioms Orthemology.Tranche3.constantBits_count
+#check @Orthemology.Tranche3.constantBits_mass
+#print axioms Orthemology.Tranche3.constantBits_mass
+#check @Orthemology.Tranche3.empiricalRepair_constant
+#print axioms Orthemology.Tranche3.empiricalRepair_constant
+#check @Orthemology.Tranche3.EmpiricalFailure
+#print axioms Orthemology.Tranche3.EmpiricalFailure
+#check @Orthemology.Tranche3.empiricalFailure_measurable
+#print axioms Orthemology.Tranche3.empiricalFailure_measurable
+#check @Orthemology.Tranche3.constant_prefix_failure
+#print axioms Orthemology.Tranche3.constant_prefix_failure
+#check @Orthemology.Tranche3.constant_prefix_probability
+#print axioms Orthemology.Tranche3.constant_prefix_probability
+#check @Orthemology.Tranche3.empirical_failure_probability_lower
+#print axioms Orthemology.Tranche3.empirical_failure_probability_lower
+#check @Orthemology.Tranche3.empirical_expected_failure_lower
+#print axioms Orthemology.Tranche3.empirical_expected_failure_lower
+#check @Orthemology.Tranche3.centeredTotal
+#print axioms Orthemology.Tranche3.centeredTotal
+#check @Orthemology.Tranche3.centeredMoment
+#print axioms Orthemology.Tranche3.centeredMoment
+#check @Orthemology.Tranche3.expectation_add
+#print axioms Orthemology.Tranche3.expectation_add
+#check @Orthemology.Tranche3.expectation_mul
+#print axioms Orthemology.Tranche3.expectation_mul
+#check @Orthemology.Tranche3.expectation_const
+#print axioms Orthemology.Tranche3.expectation_const
+#check @Orthemology.Tranche3.centeredTotal_step
+#print axioms Orthemology.Tranche3.centeredTotal_step
+#check @Orthemology.Tranche3.centeredMoment_step
+#print axioms Orthemology.Tranche3.centeredMoment_step
+#check @Orthemology.Tranche3.centeredMoment_one_step
+#print axioms Orthemology.Tranche3.centeredMoment_one_step
+#check @Orthemology.Tranche3.centeredMoment_two_step
+#print axioms Orthemology.Tranche3.centeredMoment_two_step
+#check @Orthemology.Tranche3.centeredMoment_four_step
+#print axioms Orthemology.Tranche3.centeredMoment_four_step
+#check @Orthemology.Tranche3.centered_moments
+#print axioms Orthemology.Tranche3.centered_moments
+#check @Orthemology.Tranche3.centered_fourth_le
+#print axioms Orthemology.Tranche3.centered_fourth_le
+#check @Orthemology.Tranche3.repairRadius
+#print axioms Orthemology.Tranche3.repairRadius
+#check @Orthemology.Tranche3.empirical_good_of_error
+#print axioms Orthemology.Tranche3.empirical_good_of_error
+#check @Orthemology.Tranche3.empirical_centered_identity
+#print axioms Orthemology.Tranche3.empirical_centered_identity
+#check @Orthemology.Tranche3.empirical_bad_fourth
+#print axioms Orthemology.Tranche3.empirical_bad_fourth
+#check @Orthemology.Tranche3.empirical_failure_probability_upper
+#print axioms Orthemology.Tranche3.empirical_failure_probability_upper
+#check @Orthemology.Tranche3.empirical_probability_spending
+#print axioms Orthemology.Tranche3.empirical_probability_spending
+#check @Orthemology.Tranche3.empirical_expected_failure_upper
+#print axioms Orthemology.Tranche3.empirical_expected_failure_upper
+#check @IndependentContinuumControls.plugin_oracle_exact_margin
+#print axioms IndependentContinuumControls.plugin_oracle_exact_margin
+#check @IndependentContinuumControls.no_strict_margin_at_zero
+#print axioms IndependentContinuumControls.no_strict_margin_at_zero
+#check @IndependentContinuumControls.no_strict_margin_at_one
+#print axioms IndependentContinuumControls.no_strict_margin_at_one
+#check @IndependentContinuumControls.empirical_always_emits_rational_coherent
+#print axioms IndependentContinuumControls.empirical_always_emits_rational_coherent
+#check @IndependentContinuumControls.first_report_is_wrong_with_probability_one
+#print axioms IndependentContinuumControls.first_report_is_wrong_with_probability_one
+#check @IndependentContinuumControls.zero_disturbance_is_always_weakly_good
+#print axioms IndependentContinuumControls.zero_disturbance_is_always_weakly_good
+#check @IndependentContinuumControls.two_bits_centered_moments
+#print axioms IndependentContinuumControls.two_bits_centered_moments
+#check @IndependentContinuumControls.missing_cross_terms_give_wrong_fourth
+#print axioms IndependentContinuumControls.missing_cross_terms_give_wrong_fourth
+#check @IndependentContinuumControls.large_disturbance_can_break_coherence
+#print axioms IndependentContinuumControls.large_disturbance_can_break_coherence
+#check @IndependentContinuumControls.convergent_estimate_alone_has_no_vanishing_disturbance_guarantee
+#print axioms IndependentContinuumControls.convergent_estimate_alone_has_no_vanishing_disturbance_guarantee
+#check @IndependentContinuumControls.finite_upper_is_parameterwise
+#print axioms IndependentContinuumControls.finite_upper_is_parameterwise

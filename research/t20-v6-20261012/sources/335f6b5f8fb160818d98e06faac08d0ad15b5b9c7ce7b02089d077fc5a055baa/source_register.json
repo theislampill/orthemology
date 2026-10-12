@@ -1,0 +1,303 @@
+{
+  "edition": 2,
+  "reference_count": 31,
+  "source_status": "Primary sources at stated scope; no general independent replication claim",
+  "orthemology_commit": "f50dc1aee52356cc6adbef342387576b02afc124",
+  "baseline": {
+    "pdf_filename": "The_Last_Moat.pdf",
+    "pdf_sha256": "c6e3e36fb67bf6938430b3f5fa9de7ac005c9e08d4aa66fd79f91b36060fea0f",
+    "source_zip_sha256": "ee0aac7f6d1f0f02c70a6cdad46e36354ac645991093a596f39fcfe0b77ebb1f",
+    "scope": "Full first edition read; original files preserved"
+  },
+  "sources": [
+    {
+      "key": "fefferman",
+      "source_kind": "official_problem_statement",
+      "urls": [
+        "https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Full user-supplied six-page statement including errata; official counterpart checked."
+    },
+    {
+      "key": "openains",
+      "source_kind": "reported_research_manuscript",
+      "urls": [
+        "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Theorem 1.1 and introductory exposition; 166-page proof and formalisation not independently verified."
+    },
+    {
+      "key": "openaiannounce",
+      "source_kind": "official_research_announcement",
+      "urls": [
+        "https://openai.com/index/navier-stokes-solution/"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Announcement and account of the reported coordination process, not independent proof validation."
+    },
+    {
+      "key": "claystatus",
+      "source_kind": "official_status_page",
+      "urls": [
+        "https://www.claymath.org/millennium/navier-stokes-equation/"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Status page observed on retrieval date; status is not a proof adjudication."
+    },
+    {
+      "key": "bitwhisper",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1503.07919"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and setup-level claims; performance tables and operational procedures are not reproduced."
+    },
+    {
+      "key": "fansmitter",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1606.05915"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and setup-level acoustic-channel claims; no operational reproduction."
+    },
+    {
+      "key": "airhopper",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1411.0237"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and setup-level electromagnetic-channel claims; no operational reproduction."
+    },
+    {
+      "key": "gsmem",
+      "source_kind": "primary_conference_publication_page",
+      "urls": [
+        "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/guri"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "USENIX abstract, author list and proceedings metadata; no operational reproduction."
+    },
+    {
+      "key": "noaa",
+      "source_kind": "official_technical_explainer",
+      "urls": [
+        "https://www.spaceweather.gov/impacts/hf-radio-communications"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "HF propagation role, ionospheric variation and limits; no inference of independent computation."
+    },
+    {
+      "key": "eckford",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/0812.1554"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and physically modelled molecular information-rate scope."
+    },
+    {
+      "key": "wright",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://doi.org/10.1038/s41586-021-04223-6",
+        "https://arxiv.org/abs/2104.13386"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and reported optical, mechanical and electrical demonstrations; no replication."
+    },
+    {
+      "key": "tempest",
+      "source_kind": "official_glossary",
+      "urls": [
+        "https://csrc.nist.gov/glossary/term/tempest"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "NIST definition of TEMPEST; not treated as identical to all covert-channel research."
+    },
+    {
+      "key": "sindy",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://doi.org/10.1073/pnas.1517384113",
+        "https://arxiv.org/abs/1509.03580"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and selected model-identification context; no unrestricted physics-discovery guarantee."
+    },
+    {
+      "key": "rudy",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://doi.org/10.1126/sciadv.1602614",
+        "https://arxiv.org/abs/1609.06401"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and PDE identification context; no unconstrained discovery oracle."
+    },
+    {
+      "key": "dambre",
+      "source_kind": "primary_article_and_author_repository",
+      "urls": [
+        "https://doi.org/10.1038/srep00514",
+        "https://biblio.ugent.be/publication/2972574"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Article abstract and author institutional record; driven-system computational-capacity context."
+    },
+    {
+      "key": "schneider",
+      "source_kind": "primary_author_tutorial",
+      "urls": [
+        "https://www.cs.cornell.edu/fbs/publications/SMSurvey.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Author-hosted paper and state-machine replication scope."
+    },
+    {
+      "key": "dtn",
+      "source_kind": "official_architecture_document",
+      "urls": [
+        "https://www.rfc-editor.org/rfc/rfc4838"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Historical RFC 4838 architecture and storage/intermittent-contact assumptions; not represented as a new standard."
+    },
+    {
+      "key": "lei",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1212.5968"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and incompressible MHD scope, as a coupled-model example only."
+    },
+    {
+      "key": "bousquet",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1512.08464"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and near-decomposability/contraction scope."
+    },
+    {
+      "key": "tao",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/1402.0290"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and stated scope of averaged-equation blow-up, not a transfer to an arbitrary physical plant."
+    },
+    {
+      "key": "cardona3",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://doi.org/10.1073/pnas.2026818118",
+        "https://arxiv.org/abs/2012.12828"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and geometric scope of the Euler computational embedding."
+    },
+    {
+      "key": "cardonaeuclid",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://doi.org/10.1016/j.matpur.2022.11.007",
+        "https://arxiv.org/abs/2111.03559"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Abstract and resource/geometry limitations of the Euclidean and torus constructions."
+    },
+    {
+      "key": "nist",
+      "source_kind": "official_glossary",
+      "urls": [
+        "https://csrc.nist.gov/glossary/term/air_gap"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Definition of air gap."
+    },
+    {
+      "key": "shannon",
+      "source_kind": "primary_research_paper",
+      "urls": [
+        "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Definitions and communication-model context; cited mathematics is derived explicitly in the manuscript."
+    },
+    {
+      "key": "orthemology",
+      "source_kind": "primary_project_source",
+      "urls": [
+        "https://github.com/theislampill/orthemology/tree/f50dc1aee52356cc6adbef342387576b02afc124",
+        "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/README.md",
+        "https://github.com/theislampill/orthemology/blob/f50dc1aee52356cc6adbef342387576b02afc124/theory/orthemic-core-formalization.md"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Current README and relevant formal-core definitions at the exact commit pin. Historical Library candidates were consulted for discovery, not used as current authority."
+    },
+    {
+      "key": "neuralese",
+      "source_kind": "primary_conference_paper_record",
+      "urls": [
+        "https://doi.org/10.18653/v1/P17-1022",
+        "https://aclanthology.org/P17-1022/",
+        "https://arxiv.org/abs/1704.06960"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "ACL abstract and bibliographic record, with author preprint; learned agent communication, not universal biological thought decoding."
+    },
+    {
+      "key": "bennett",
+      "source_kind": "primary_research_preprint",
+      "urls": [
+        "https://arxiv.org/abs/physics/0210005"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Scope of Landauer discussion and thermodynamic qualifications."
+    },
+    {
+      "key": "flp",
+      "source_kind": "primary_research_paper",
+      "urls": [
+        "https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Theorem context: deterministic, fully asynchronous consensus with a possible crash."
+    },
+    {
+      "key": "turing",
+      "source_kind": "primary_research_paper",
+      "urls": [
+        "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Computability context; the reduction used here is written out independently."
+    },
+    {
+      "key": "rao",
+      "source_kind": "primary_experimental_article",
+      "urls": [
+        "https://doi.org/10.1371/journal.pone.0111332"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Published instrumented brain-interface account and narrow transmitted motor-task scope; no replication."
+    },
+    {
+      "key": "hoeffding",
+      "source_kind": "primary_research_publication",
+      "urls": [
+        "https://doi.org/10.1080/01621459.1963.10500830"
+      ],
+      "consulted_on": "2026-09-10",
+      "scope": "Publisher abstract and metadata; the bounded-loss concentration proof is supplied explicitly."
+    }
+  ]
+}

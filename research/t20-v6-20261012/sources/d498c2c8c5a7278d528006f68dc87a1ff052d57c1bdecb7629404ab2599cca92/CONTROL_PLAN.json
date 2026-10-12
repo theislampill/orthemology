@@ -1,0 +1,108 @@
+{
+  "commands": [
+    {
+      "id": "full-information-author",
+      "script": "t20-next-frontier-20261008/full-face-threshold-information/controls.py",
+      "script_sha256": "ea38c0af21875d60e59c379e07236fa45389ea0a00bfa30eb3b15d119a9a15db",
+      "cwd": "t20-next-frontier-20261008/full-face-threshold-information",
+      "stdout_target": "t20-next-frontier-20261008/full-face-threshold-information/CONTROL_RESULTS.json",
+      "generated_outputs": [],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "full-information-review",
+      "script": "t20-next-frontier-20261008/full-face-threshold-information-review/independent_controls.py",
+      "script_sha256": "e8a8feb53f4abdce050043f1e2e12fc11da241e1835bd0053d0786f82c37bfd3",
+      "cwd": "t20-next-frontier-20261008/full-face-threshold-information-review",
+      "stdout_target": "t20-next-frontier-20261008/full-face-threshold-information-review/CONTROL_RESULTS.json",
+      "generated_outputs": [],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "kl-author",
+      "script": "t20-next-frontier-20261008/full-face-threshold-kl-rate/controls.py",
+      "script_sha256": "a3ea9d2fe5dd375e25dddb345725e8e3b0bd4e0346d83bd3d5f2a8da323bdfc4",
+      "cwd": "t20-next-frontier-20261008/full-face-threshold-kl-rate",
+      "stdout_target": "t20-next-frontier-20261008/full-face-threshold-kl-rate/CONTROL_RESULTS.json",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/full-face-threshold-kl-rate/CONTROL_RESULTS.json"
+      ],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "kl-review",
+      "script": "t20-next-frontier-20261008/full-face-threshold-kl-review/checks.py",
+      "script_sha256": "130e33f3b875b035ddece66f399ab84138a5ac62faad9a6c01b50c059af805e6",
+      "cwd": "t20-next-frontier-20261008/full-face-threshold-kl-review",
+      "stdout_target": "t20-next-frontier-20261008/full-face-threshold-kl-review/CONTROL_RESULTS.json",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/full-face-threshold-kl-review/CONTROL_RESULTS.json"
+      ],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "certificate-author",
+      "script": "t20-next-frontier-20261008/retained-interior-certificate/controls.py",
+      "script_sha256": "8b88ebefafedf4afdee817f73420870648b5b162ffb0ad8e6699b4a2aab9dced",
+      "cwd": "t20-next-frontier-20261008/retained-interior-certificate",
+      "stdout_target": "t20-next-frontier-20261008/retained-interior-certificate/CONTROL_RESULTS.json",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/retained-interior-certificate/CONTROL_RESULTS.json"
+      ],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "certificate-review",
+      "script": "t20-next-frontier-20261008/retained-interior-certificate-review/REVIEW_CONTROLS.py",
+      "script_sha256": "ba0529133beeea7a7146c3ca94f2242ad0bb9b7c1b1cf6fcff30778a212e4d09",
+      "cwd": "t20-next-frontier-20261008/retained-interior-certificate-review",
+      "stdout_target": "t20-next-frontier-20261008/retained-interior-certificate-review/REVIEW_CONTROL_RESULTS.json",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/retained-interior-certificate-review/REVIEW_CONTROL_RESULTS.json"
+      ],
+      "kind": "bounded_deterministic_controls_not_general_proof"
+    },
+    {
+      "id": "minimal-author",
+      "script": "t20-next-frontier-20261008/minimal-interior-panel/controls.py",
+      "script_sha256": "e25155d67aa6dc0ea43ddb83d2126facd7f1a0c4652a33dd4f4d181643137cae",
+      "cwd": "t20-next-frontier-20261008/minimal-interior-panel",
+      "stdout_target": "t20-next-frontier-20261008/minimal-interior-panel/CONTROL_RUN.log",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/minimal-interior-panel/CONTROL_RESULTS.json"
+      ],
+      "json_ignore_keys": [
+        "started_utc",
+        "completed_utc"
+      ],
+      "kind": "Bounded finite control; seeded 4x4 synthetic panel checks in minimal reviewer are not empirical sampling."
+    },
+    {
+      "id": "minimal-review",
+      "script": "t20-next-frontier-20261008/minimal-interior-panel-review/independent_checks.py",
+      "script_sha256": "c01a0dc9c6dc183e2128109b8442937f8cb4b9cd194e669809a2e653ec3289c5",
+      "cwd": "t20-next-frontier-20261008/minimal-interior-panel-review",
+      "stdout_target": "t20-next-frontier-20261008/minimal-interior-panel-review/CHECKS.log",
+      "generated_outputs": [],
+      "json_ignore_keys": [],
+      "kind": "Bounded finite control; seeded 4x4 synthetic panel checks in minimal reviewer are not empirical sampling."
+    },
+    {
+      "id": "reconstruction-review",
+      "script": "t20-next-frontier-20261008/readout-reconstruction-review/REVIEW_CONTROLS.py",
+      "script_sha256": "533c8d8d7363d06913b21260a1831084a220d6ddc8d36264ffc782c9e3f7dd79",
+      "cwd": "t20-next-frontier-20261008/readout-reconstruction-review",
+      "stdout_target": "t20-next-frontier-20261008/readout-reconstruction-review/REVIEW_CONTROLS.log",
+      "generated_outputs": [
+        "t20-next-frontier-20261008/readout-reconstruction-review/REVIEW_CONTROL_RESULTS.json"
+      ],
+      "json_ignore_keys": [],
+      "kind": "Bounded finite control; seeded 4x4 synthetic panel checks in minimal reviewer are not empirical sampling."
+    }
+  ],
+  "unreplayed_original_programs": {
+    "retained-interior-certificate/verify_kernel.sh": "Preserved original harness; portable replay_lean.py supplies parameterized external dependency paths without editing originals.",
+    "retained-interior-certificate-review/VERIFY_BINDINGS.py": "Preserved historical checker; portable binding audit and replay_lean.py replace CWD-sensitive full-external check.",
+    "retained-interior-certificate-review/AUTHOR_CONTROLS_REPLAY.py": "Exact duplicate author program; not counted as a new independent suite."
+  }
+}

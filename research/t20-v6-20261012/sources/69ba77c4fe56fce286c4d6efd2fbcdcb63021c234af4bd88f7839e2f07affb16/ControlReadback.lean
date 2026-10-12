@@ -1,0 +1,41 @@
+import ProcessControls
+#check @ProcessAudit.empty_live_support_is_vacuous
+#print axioms ProcessAudit.empty_live_support_is_vacuous
+#check @ProcessAudit.empty_plan_charge
+#print axioms ProcessAudit.empty_plan_charge
+#check @ProcessAudit.empty_block_is_completed
+#print axioms ProcessAudit.empty_block_is_completed
+#check @ProcessAudit.interruption_executes_only_first
+#print axioms ProcessAudit.interruption_executes_only_first
+#check @ProcessAudit.no_tail_mass_after_exit
+#print axioms ProcessAudit.no_tail_mass_after_exit
+#check @ProcessAudit.full_exit_mass_is_retained
+#print axioms ProcessAudit.full_exit_mass_is_retained
+#check @ProcessAudit.duplicate_actions_are_charged
+#print axioms ProcessAudit.duplicate_actions_are_charged
+#check @ProcessAudit.planned_charge_can_strictly_overcount_execution
+#print axioms ProcessAudit.planned_charge_can_strictly_overcount_execution
+#check @ProcessAudit.different_exits_collapse_to_same_state
+#print axioms ProcessAudit.different_exits_collapse_to_same_state
+#check @ProcessAudit.reset_forgets_old_history
+#print axioms ProcessAudit.reset_forgets_old_history
+#check @ProcessAudit.continuation_appends_actual_observation
+#print axioms ProcessAudit.continuation_appends_actual_observation
+#check @ProcessAudit.one_step_charge_is_current
+#print axioms ProcessAudit.one_step_charge_is_current
+#check @ProcessAudit.two_step_charge_has_no_extra_terminal
+#print axioms ProcessAudit.two_step_charge_has_no_extra_terminal
+#check @ProcessAudit.zero_history_mass_implies_zero_budget
+#print axioms ProcessAudit.zero_history_mass_implies_zero_budget
+#check @ProcessAudit.deterministic_self_reset_cannot_have_decreasing_rank
+#print axioms ProcessAudit.deterministic_self_reset_cannot_have_decreasing_rank
+#check @ProcessAudit.excluding_true_model_violates_retention
+#print axioms ProcessAudit.excluding_true_model_violates_retention
+#check @ProcessAudit.natural_positive_charge_at_least_one
+#print axioms ProcessAudit.natural_positive_charge_at_least_one
+#check @ProcessAudit.positive_real_charges_need_not_be_eventually_zero
+#print axioms ProcessAudit.positive_real_charges_need_not_be_eventually_zero
+#check @ProcessAudit.positive_real_charge_prefix_is_bounded
+#print axioms ProcessAudit.positive_real_charge_prefix_is_bounded
+#check @ProcessAudit.positive_real_charge_prefix_le_one
+#print axioms ProcessAudit.positive_real_charge_prefix_le_one

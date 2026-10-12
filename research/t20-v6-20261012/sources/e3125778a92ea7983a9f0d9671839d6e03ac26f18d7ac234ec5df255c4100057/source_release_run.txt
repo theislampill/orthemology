@@ -1,0 +1,45 @@
+{
+  "source_fixture": {
+    "status": "PASS",
+    "suffix_depth": 3,
+    "selected_input_reference": 2,
+    "missing_identity_rejected": true,
+    "identity_and_role_path_read_count": 1,
+    "path_read_phase": "separate from role-only cover optimum",
+    "post_fork_carrier_occurrences": 2,
+    "original_dependencies": 1,
+    "actual_full_page_available": true,
+    "proposition_preservation": "not certified",
+    "scope": "Consistency of supplied source-linked extraction only"
+  },
+  "release_fixture": {
+    "status": "PASS",
+    "selected_carrier_order": [
+      "c",
+      "a_1",
+      "b",
+      "a_2"
+    ],
+    "distinct_originals": [
+      "a",
+      "b",
+      "c"
+    ],
+    "future_request_budget": 1,
+    "exact_worst_case_costs": {
+      "old_service": 1,
+      "retired_source_no_retention": 2,
+      "fixed_carry_a": 1,
+      "fixed_carry_b": 2,
+      "fixed_carry_c": 1,
+      "fixed_carry_d": 2,
+      "valid_fixed_query_verdict": 0,
+      "agreed_label_dependent_identity_code": 0
+    },
+    "known_negative_carry_extra_reads": 0,
+    "retention_policies": "fixed in advance except explicitly identified verdict-code alternative",
+    "scope": "Synthetic operational calculation; no normative premise is proved"
+  }
+}
+
+exit_code=0

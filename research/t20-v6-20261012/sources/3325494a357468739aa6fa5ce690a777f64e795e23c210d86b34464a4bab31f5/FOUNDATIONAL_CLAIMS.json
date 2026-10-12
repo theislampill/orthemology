@@ -1,0 +1,2587 @@
+{
+  "schema": "t20-foundational-claim-register-v1",
+  "cutoff_utc": "2026-10-11T11:32:55Z",
+  "status": "PROPOSED_OWNER_REVIEW",
+  "authorship": "Consolidation synthesis of held T20 research; not newly established philosophical results",
+  "claim_count": 34,
+  "dependency_types": [
+    "formal_entailment",
+    "source_support",
+    "semantic_mapping",
+    "methodological_constraint"
+  ],
+  "external_claim_references": [
+    "ET-18"
+  ],
+  "claims": [
+    {
+      "id": "FND-001",
+      "exact_statement": "Local analysis-relative orthability, objective conditions of evaluability, and created representation/application are distinct. Objective orthability is a family of conditions, not an additional entity; the L-to-O bridge requires actual true evaluation and cannot be obtained by relabeling a local predicate.",
+      "hypotheses": [
+        "Actual evaluation has warranted truth, not merely an observed inscription or procedure."
+      ],
+      "scope": "Historical adopted sense discipline retained as methodological baseline.",
+      "semantic_owner": "orthability-senses-decision0010",
+      "canonical_source": {
+        "source_id": "orthability-senses-decision0010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/4d/4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+        "sha256": "4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "orthability-senses-decision0010",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/4d/4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/4d/4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+          "sha256": "4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "actual-correction-entry-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "sha256": "2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "methodological_constraint",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [],
+      "supersessions": [
+        "Practice-relative orthability may not silently serve as the objective transcendental target."
+      ],
+      "residuals": [
+        "No deduction of a concrete instantiated original from standards alone."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-002",
+      "exact_statement": "An actual correction can enter the original-ground argument when its occurrence and relevant productive reception are warranted; its correctness, cognitive warrant, and the original bearer’s existential status remain distinct. The programme already accepts actual received entry rather than suspending it because the formal bridge names an occurrence premise.",
+      "hypotheses": [
+        "Independently warranted actual occurrence",
+        "Relevant same-respect productive reception"
+      ],
+      "scope": "Actual-entry route; neither AI consciousness nor instantiation of every referenced object follows.",
+      "semantic_owner": "actual-correction-entry-20261009",
+      "canonical_source": {
+        "source_id": "actual-correction-entry-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+        "sha256": "2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "actual-correction-entry-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "sha256": "2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "original-adequacy-currentness-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/original-adequacy-currentness-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/83/8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+          "sha256": "8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "synthesis-warrant-scope-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "semantic_interpretation",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-001",
+          "type": "methodological_constraint",
+          "relation": "Keep objective norm, actual episode, and representation distinct."
+        }
+      ],
+      "supersessions": [
+        "First completion objection and historical open labels do not supersede later accepted actuality/bearer work."
+      ],
+      "residuals": [
+        "Exact 11 October orthability-actual-entry successor is only inherited through directly read currentness/support-scope reports; earlier actual-entry owner was directly read."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-003",
+      "exact_statement": "Material generation can supply a genuine received concrete product distinct from its continuing producer. In the fruit/tree application, the minimal formal target is the received productive field F including the fruit’s derivation and relevant received suppliers; membership in F alone does not prove stronger member-level relevance or individual entire production.",
+      "hypotheses": [
+        "Numerically distinct fruit/tree application",
+        "Warranted material/developmental productive derivation",
+        "Relevant received suppliers included in the explanandum"
+      ],
+      "scope": "Generic source-controlled ordinary case, not a newly observed fruit, modern microphysical thesis, or inference that every new act is created.",
+      "semantic_owner": "productive-origination-target",
+      "canonical_source": {
+        "source_id": "productive-origination-target",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d2/d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+        "sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "productive-origination-target",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d2/d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+          "sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "CP16_PRODUCTIVE_TOTALITY",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3c/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-002",
+          "type": "semantic_mapping",
+          "relation": "Provides a concrete received-entry interpretation."
+        },
+        {
+          "target": "FND-004",
+          "type": "source_support",
+          "relation": "Uses already accepted complete-account rationale."
+        }
+      ],
+      "supersessions": [
+        "Source or material continuity does not eliminate the new product; target narrowed from unproved member-level complete provision to F."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-004",
+      "exact_statement": "The complete received productive field has substantive positive warrant for a relevant actual unreceived productive basis: derivative suppliers’ own received actuality must be covered, and collective arrangement does not itself supply it. This is global productive adequacy, not local need alone, a first-temporal-member argument, or an inference from individual to joint possible absence.",
+      "hypotheses": [
+        "Actual received productive field",
+        "Complete account includes the actuality of derivative suppliers",
+        "Same-respect productive interpretation"
+      ],
+      "scope": "Accepted defeasible productive-totality judgment; not unrestricted reduction of every noncausal explanation to primitive-individual production.",
+      "semantic_owner": "CP16_PRODUCTIVE_TOTALITY",
+      "canonical_source": {
+        "source_id": "CP16_PRODUCTIVE_TOTALITY",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3c/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+        "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "CP16_PRODUCTIVE_TOTALITY",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3c/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "intrinsic-necessity-bridge-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/intrinsic-necessity-bridge-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "sha256": "82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-002",
+          "type": "source_support",
+          "relation": "Requires actual received entry."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "A developed autonomous qualitative account could undercut or rebut the exact productive-adequacy claim; vocabulary substitution alone does not.",
+        "No newly unperformed discriminator identified by latest currentness owner."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "If a genuinely new qualitative target/resource/bearer proposal is supplied, does it warrant denial of original productive provision or an actual undercutter of this same-scope adequacy inference?",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-005",
+      "exact_statement": "Given occurrence, Completion, Realisation, and same-respect SupportTransport, original_bearer_of_completion returns the same target/resource/bearer OriginalWitness. It does not consume ContingencyNeed or ConstitutiveReception and does not establish unique or individually complete field coverage.",
+      "hypotheses": [
+        "Actual received target",
+        "Relevant actual unreceived concrete intrinsic resource",
+        "Actual intrinsic bearer",
+        "Whole-bearer receipt transports to resource receipt in the same respect"
+      ],
+      "scope": "Exact unchanged OriginalBearerBridge.lean interface; conditional formal entailment, with inherited recorded Lean status only.",
+      "semantic_owner": "authorial-common-source-review-20261011",
+      "canonical_source": {
+        "source_id": "authorial-common-source-review-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+        "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "authorial-common-source-review-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "synthesis-warrant-scope-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "CP16_PRODUCTIVE_TOTALITY",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/purpose-origination-ordered-transport-intermediate-collection-20261011/productive-origination-target-preservation-20261011-da2620b5782d/productive-origination-target-20261011/inputs/I02__sources__CP16_PRODUCTIVE_TOTALITY.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3c/3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "formal_entailment",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-004",
+          "type": "semantic_mapping",
+          "relation": "Philosophical productive adequacy supports intended Completion, not every arbitrary predicate."
+        },
+        {
+          "target": "FND-003",
+          "type": "semantic_mapping",
+          "relation": "Material entry uses F at field scope."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "No unrestricted arbitrary-fact-to-bearer bridge",
+        "No fresh kernel replay by this synthesis."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-006",
+      "exact_statement": "Complete intrinsic existential adequacy warrants intrinsic necessity of the same actual original g. The source’s positive no-unprovided-actuality judgment includes the modal reach; bearer-presupposing exercise and conditional-instantiation analyses support it but do not derive it solely from anti-self-production.",
+      "hypotheses": [
+        "Same independently established actual g",
+        "Complete existential independence at intended scope",
+        "Positive complete self-adequacy/no-unprovided-actuality judgment"
+      ],
+      "scope": "Affirmative defeasible philosophical warrant, not a neutral modal theorem, varying-witness conclusion, necessary-product thesis, or mere essence/existence identity.",
+      "semantic_owner": "CP23__affirmative-intrinsic-necessity",
+      "canonical_source": {
+        "source_id": "CP23__affirmative-intrinsic-necessity",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ef/ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+        "sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "CP23__affirmative-intrinsic-necessity",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/CP23__affirmative-intrinsic-necessity-20261009__REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ef/ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+          "sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+          "read_scope": "Affirmative result and substantive §§1–8; source record only through S2; no full source-record reading claim. The brief instantiated-nature quotation was partly clipped in a combined output, so substantive §3 is read as its surrounding explanation rather than quotation-level inspection."
+        },
+        {
+          "source_id": "intrinsic-necessity-bridge-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/intrinsic-necessity-bridge-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "sha256": "82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "original-adequacy-currentness-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/original-adequacy-currentness-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/83/8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+          "sha256": "8331ee7d758cffebcd1bd3651e97413a284278352a2645bdb8608593e1f7c07f",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-005",
+          "type": "source_support",
+          "relation": "Retains actual original witness under intended meanings."
+        }
+      ],
+      "supersessions": [
+        "Proposed missing sufficiency-to-necessity discriminator is already completed in CP23.",
+        "CP23 report-specific nonclaims do not retract T17 essential independence."
+      ],
+      "residuals": [
+        "A substantive new undercutter can challenge the foundational judgment; its mere deniability is not neutral suspension."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-007",
+      "exact_statement": "One actual complete common original source of the relevant productively connected created order is sufficiently warranted for provisional belief under the adopted original-actuality, necessity, independence, and pure-perfection framework. It is stronger than unspecified preference and weaker than demonstrated impossibility of every plural-original reality.",
+      "hypotheses": [
+        "Accepted original actuality/necessity/independence",
+        "Eligible original cognitive/practical perfection and standing power",
+        "Actual complete efficacy and source-preserving mediation",
+        "Relevant actual productive connectedness and coverage"
+      ],
+      "scope": "Actual field scope; does not quantify over every disconnected domain, idle putative original, or alternative reality.",
+      "semantic_owner": "same-standard-common-source-20261008",
+      "canonical_source": {
+        "source_id": "same-standard-common-source-20261008",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+        "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "same-standard-common-source-20261008",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "oneness-root-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "authorial-common-source-review-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-004",
+          "type": "source_support",
+          "relation": "Original provision contributes to cumulative appraisal."
+        },
+        {
+          "target": "FND-006",
+          "type": "source_support",
+          "relation": "Same bearer necessity retained."
+        },
+        {
+          "target": "FND-008",
+          "type": "source_support",
+          "relation": "Essential independence retained."
+        },
+        {
+          "target": "FND-010",
+          "type": "source_support",
+          "relation": "Local nonduplication contributes at its scope."
+        },
+        {
+          "target": "FND-011",
+          "type": "source_support",
+          "relation": "Pure-perfection eligibility contributes."
+        }
+      ],
+      "supersessions": [
+        "T17 withholding remains historical; T19 affirmation, 8 October same-standard affirmation, and 9 October root/CP23 refinements control current status."
+      ],
+      "residuals": [
+        "Unrestricted original-efficacy application and universal external-bearer supremacy require their own stronger warrant.",
+        "The refined coactive rival lacks demonstrated parity, but an actual undercutter need not construct a complete cosmology."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-008",
+      "exact_statement": "T17 affirmatively warrants essential whole-existence independence of the same actual original through its constitutive rationale. The formal conditional nonreceipt theorem needs actual originality and ConstitutiveReception, not necessity; a CND alternative route with productive-role retention and complete matching attribution is valid but does not presently add independent warrant.",
+      "hypotheses": [
+        "Actual whole originality",
+        "Constitutive judgment preserving whole-existential mode when the same bearer exists",
+        "For alternative CND route: retained entire original role and complete matching supplier attribution"
+      ],
+      "scope": "Constitutive philosophical warrant plus conditional formal consequence. Whole receipt, received state, and proximate activity are distinct.",
+      "semantic_owner": "CND_ESSENTIAL_INDEPENDENCE_PUBLIC",
+      "canonical_source": {
+        "source_id": "CND_ESSENTIAL_INDEPENDENCE_PUBLIC",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/73/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+        "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "CND_ESSENTIAL_INDEPENDENCE_PUBLIC",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/intrinsic-necessity-bridge-20261009/sources/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74__CND_ESSENTIAL_INDEPENDENCE_PUBLIC.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/73/735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+          "sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "intrinsic-necessity-bridge-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/intrinsic-necessity-bridge-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "sha256": "82264692d5edcdf7bcbad8a1e9fd9e5c11833d082b8e808b72fc74ae287dcc4a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "synthesis-warrant-scope-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-005",
+          "type": "source_support",
+          "relation": "Actual witness supports the inherited application."
+        },
+        {
+          "target": "FND-010",
+          "type": "formal_entailment",
+          "relation": "CND alternative excludes receipt only with PRI and SUP."
+        }
+      ],
+      "supersessions": [
+        "Failure of the additional productive route is not failure of T17’s accepted constitutive route."
+      ],
+      "residuals": [
+        "No fresh CND Lean replay; inherited Lean 4.19.0 axiom-free general lemma receipt."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-009",
+      "exact_statement": "The strongest coactive models retain real restricted structural gains, but do not refute the full source argument by denying only efficient donation while producing joint-root outputs with no individual entire provider. Actual own-end success, standing solo power, whole actual original efficacy, and source eligibility are different.",
+      "hypotheses": [
+        "Exact original-agent scope and complete same-respect efficacy maintained",
+        "No semantic replacement of intrinsic act identity by output labels or equal-valued clones"
+      ],
+      "scope": "Methodological and comparative interpretation of existing source/model results; no metaphysical countermodel or universal exclusion.",
+      "semantic_owner": "targeted-source-model-addendum",
+      "canonical_source": {
+        "source_id": "targeted-source-model-addendum",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c7/c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+        "sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "targeted-source-model-addendum",
+          "original_read_path": "recovery-t20/addendum/SOURCE_AND_MODEL_FINDINGS.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c7/c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+          "sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "efficacy-warrant-20261008",
+          "original_read_path": "t20-continuation-20261008/efficacy-warrant/WARRANT_ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+          "sha256": "d404956af038d0326a26260956cf689b605978f6cf1f2cedbf005d13641b45f6",
+          "read_scope": "Result and §§1–3.3, followed by §7 disposition; combined output clipped intervening remainder. The concentration addendum and root source controls were fully read. No full-report reading credit."
+        },
+        {
+          "source_id": "efficacy-concentration-addendum",
+          "original_read_path": "t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/aa/aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+          "sha256": "aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "same-standard-common-source-20261008",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "oneness-root-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "semantic_interpretation",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-007",
+          "type": "methodological_constraint",
+          "relation": "Preserves actual-field appraisal despite stronger open universal claim."
+        }
+      ],
+      "supersessions": [
+        "Sources did not overlook harmonious cooperation or standing solo capacity.",
+        "B5 acquireability limitation is no longer a blanket objection after comparative eligibility work."
+      ],
+      "residuals": [
+        "Whether irreducibly joint actual manifestation necessarily foreign-completes appropriate original efficacy remains a stronger substantive issue."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-010",
+      "exact_statement": "For a fixed numerical created effect, state, and productive respect, the source’s local noncoincidence judgment has positive prima facie warrant: distinct coequal original contributions have differentiated external productive content. Together with entire-production identities, this excludes duplicate whole original attribution; intrinsic-act difference alone does not.",
+      "hypotheses": [
+        "Fixed e and r",
+        "Two genuinely effective coequal original contributions",
+        "Entire unreceived productive adequacy",
+        "Source-supported local external-content noncoincidence"
+      ],
+      "scope": "Local actual-state nonduplication; at-most-one, not existence of an entire original provider per effect.",
+      "semantic_owner": "affirmative-original-exclusivity-20261009",
+      "canonical_source": {
+        "source_id": "affirmative-original-exclusivity-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/96/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+        "sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "affirmative-original-exclusivity-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/96/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/96/9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+          "sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "authorial-common-source-review-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-009",
+          "type": "methodological_constraint",
+          "relation": "Do not substitute standing power or local own-end success for entire efficacy."
+        }
+      ],
+      "supersessions": [
+        "Full disjoint measurable traces, deletion of necessary originals, origin-essentialism, and global quantitative augmentation are not required for the narrower local inference."
+      ],
+      "residuals": [
+        "Local N is a substantive warranted premise, not derived solely from thin nonreceipt or occurrence-entailment."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-011",
+      "exact_statement": "Pure-perfection eligibility evaluates a restricted candidate rather than exempting it by stipulating essential incapacity; it need not require an identity-preserving upgrade or merger. Concentration of compatible work-capacities, each bearer’s eligibility, and preservation of participant-sensitive ends are separate.",
+      "hypotheses": [
+        "A genuine eligible nondefective excellence",
+        "Independently established actual original",
+        "Substantive pure-perfection comparison"
+      ],
+      "scope": "Inherited T17 acceptance and later source-bound clarification; not proof of every external-bearer domain or every particular exercise.",
+      "semantic_owner": "oneness-root-20261009",
+      "canonical_source": {
+        "source_id": "oneness-root-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+        "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "oneness-root-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0d/0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "veracity-crosscheck-20261008",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "efficacy-concentration-addendum",
+          "original_read_path": "t20-continuation-20261008/efficacy-warrant/concentration-addendum/ADDENDUM.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/aa/aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+          "sha256": "aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "affirmative-knowledge-ascent-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "sha256": "c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [],
+      "supersessions": [
+        "Standing eligibility already accepted in T17; later direct return is not first discovery.",
+        "Failure to preserve a two-participant end does not refute source-neutral concentration."
+      ],
+      "residuals": [
+        "Domain and purity must be warranted in stronger universal-supremacy applications."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-012",
+      "exact_statement": "If E is nonempty, every U_e is singleton, and a graph connects E by finite paths with endpoint adequacy overlap on each used edge, all U_e have the same member. This sound Pro G gluing lemma reformulates an inherited conditional source-mode route; it supplies no new warrant for individual complete coverage or overlap.",
+      "hypotheses": [
+        "Nonempty target field",
+        "Exactly one adequate source locally",
+        "Actual overlap on finite connecting paths",
+        "Same source individuation and productive respect"
+      ],
+      "scope": "Formal gluing over chosen field, including infinite graphs with finite paths; no globality beyond that field.",
+      "semantic_owner": "authorial-common-source-review-20261011",
+      "canonical_source": {
+        "source_id": "authorial-common-source-review-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+        "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "authorial-common-source-review-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "formal_entailment",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-010",
+          "type": "semantic_mapping",
+          "relation": "At-most-one is only one part of G’s singleton premise."
+        },
+        {
+          "target": "FND-004",
+          "type": "semantic_mapping",
+          "relation": "Relevant original resource does not alone give individual complete adequacy."
+        },
+        {
+          "target": "FND-007",
+          "type": "source_support",
+          "relation": "Existing cumulative judgment may explain an application without adding independent warrant."
+        }
+      ],
+      "supersessions": [
+        "Recovered authorial Pro bridge is not a newly completed philosophical universal proof."
+      ],
+      "residuals": [
+        "Individual full-coverage and edge-overlap meanings remain separate source applications."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-013",
+      "exact_statement": "The retained argument positively warrants particular Knowledge of the original’s intentional production and comprehensive Knowledge by a separate pure-perfection route. Production is evidence of being known, not a necessary condition of knowing; nonactual possibilities and impossibilities need not be produced or reified.",
+      "hypotheses": [
+        "Actual informed intentional original production for local route",
+        "Complete self-knowledge at relevant productive scope for property extension",
+        "Eligible comprehensive cognitive perfection for universal route"
+      ],
+      "scope": "Defeasible philosophical ascription; no unrestricted inference from any successful human intention or thin formal Knows predicate.",
+      "semantic_owner": "affirmative-knowledge-ascent-20261009",
+      "canonical_source": {
+        "source_id": "affirmative-knowledge-ascent-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+        "sha256": "c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "affirmative-knowledge-ascent-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/c2/c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "sha256": "c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "knowing-production-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-011",
+          "type": "source_support",
+          "relation": "Comprehensive rather than merely productive knowledge uses purity/eligibility."
+        },
+        {
+          "target": "FND-007",
+          "type": "source_support",
+          "relation": "Actual-field product coverage has separately warranted scope."
+        }
+      ],
+      "supersessions": [
+        "Comprehensive Knowledge is not still missing because the thin production signature admits Knows=false."
+      ],
+      "residuals": [
+        "No fresh attribute proof or kernel checking; currentness owner identifies no new unperformed generic knowledge-ascent task."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-014",
+      "exact_statement": "Informed effective practical self-determination has affirmative defeasible warrant beyond factive awareness. The bodily-awareness example fails to preserve original productive cognition; the source nevertheless recognizes a stronger intellectual-production rival. Life–will supports a willing bearer, while act-level practical determination needs its own relation.",
+      "hypotheses": [
+        "Complete relevant original productive cognition",
+        "Substantive practical-perfection and apprehended-end account",
+        "Cognition, willing, power, act, and effect kept distinct"
+      ],
+      "scope": "Positive Will appraisal with exact local inference limits; necessity through own willing is not involuntariness.",
+      "semantic_owner": "knowing-production-20261009",
+      "canonical_source": {
+        "source_id": "knowing-production-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+        "sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "knowing-production-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bc/bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "original-cognitive-efficacy-20261009",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/72/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/72/72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+          "sha256": "72d9fd33dece09521ff397fd1b3cfdcdd4d476d05388707705378df04469eedc",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-011",
+          "type": "source_support",
+          "relation": "Practical excellence contributes to ascription."
+        },
+        {
+          "target": "FND-013",
+          "type": "methodological_constraint",
+          "relation": "Knowing effect is not by itself practical basing."
+        }
+      ],
+      "supersessions": [
+        "Darʾ 10:147 missing electronic negation corrected by inherited print check.",
+        "Previously suggested intellectual-production comparative task was subsequently completed and is not pending."
+      ],
+      "residuals": [
+        "An adequate original intellectual mode without practical self-determination would require a substantive original-level account, not a false-Will flag."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-015",
+      "exact_statement": "Actual intrinsic willing belongs to completed production; explaining its particular direction requires more than restating occurrence but not an external, temporally prior, or will-excluding determinant. Prospective resolve and executive intent differ by content and occasion without atomizing attributes.",
+      "hypotheses": [
+        "Source-owned voluntary productive activity",
+        "Relevant intrinsic cognitive/practical differentiator",
+        "Actual determining role at declared scope"
+      ],
+      "scope": "Application-specific explanatory standard; not a demand for one numerical maximum or full disclosed history.",
+      "semantic_owner": "particular-determination-semantics-20261010",
+      "canonical_source": {
+        "source_id": "particular-determination-semantics-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f1/f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+        "sha256": "f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "particular-determination-semantics-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/particular-determination-semantics-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f1/f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+          "sha256": "f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "wise-reason-asymmetry-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/wise-reason-asymmetry-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/5e/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+          "sha256": "5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-014",
+          "type": "source_support",
+          "relation": "Preserves actual practical agency."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "Full content/occasion explanation of a newly specified intrinsic representation remains stronger than the achieved local applications."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "For a genuinely new concrete own act, which independently specified feature, relation, or undertaking explains its particular direction, and how is the actual role warranted?",
+        "acceptance_evidence": [
+          "A particular content/occasion and independently characterized ground",
+          "Evidence of practical role and exact discrimination achieved",
+          "No reverse-encoding of the chosen result"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-016",
+      "exact_statement": "The source’s love of its own act entails occurrence through willing and own-act aversion excludes it; creaturely or respect-specific approval does not establish that antecedent. Transferred guilt as culpability, absent the recipient’s participation, is a content-sensitive excluded punitive determination under the justice/Wisdom premises.",
+      "hypotheses": [
+        "Correctly typed own-act love or aversion",
+        "Relevant circumstances rather than subordinate good alone",
+        "For exclusion: A’s deed imputed solely as B’s guilt without B’s acquisition/culpable participation"
+      ],
+      "scope": "Positive source-bound practical application, not exclusion of all innocent suffering or a unique history selector.",
+      "semantic_owner": "wise-reason-asymmetry-20261010",
+      "canonical_source": {
+        "source_id": "wise-reason-asymmetry-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/5e/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+        "sha256": "5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "wise-reason-asymmetry-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/wise-reason-asymmetry-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/5e/5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+          "sha256": "5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-015",
+          "type": "source_support",
+          "relation": "Uses independently specified practical content."
+        }
+      ],
+      "supersessions": [
+        "Love-never-suffices shorthand is corrected to object-and-respect-specific efficacy."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-017",
+      "exact_statement": "A requested showing after affirmed belief can serve a real further cognitive aim; repeated assertion or induced firmness does not preserve the requested encounter. The later Ibn Uthaymeen transcript explicitly supports an acknowledgment function for the question, while possible procedural benefits do not decide walking/flight details.",
+      "hypotheses": [
+        "Inherited source warrant for narrated exchange",
+        "Prior central affirmation",
+        "Request for showing and matched response",
+        "Attributed commentary and its interpretive qualifications"
+      ],
+      "scope": "Particular response-kind rationale; no equal-total-belief assumption, numeric certainty scale, first-acquisition proof, or micro-volition count.",
+      "semantic_owner": "responsive-demonstration-20261011",
+      "canonical_source": {
+        "source_id": "responsive-demonstration-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/cd/cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+        "sha256": "cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "responsive-demonstration-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/responsive-demonstration-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/cd/cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+          "sha256": "cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "uthaymin-question-purpose-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/uthaymin-question-purpose-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/fa/fac7655deeb88f6381ae3f75fa20801a143f0666267db45bde89d4475f99a473",
+          "sha256": "fac7655deeb88f6381ae3f75fa20801a143f0666267db45bde89d4475f99a473",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "tibyan-addendum",
+          "original_read_path": "wisdom-attestation-own-act-20261011/ADDENDUM.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/87/8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+          "sha256": "8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cognitive-mode-owner-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/MODE_OWNER_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3b/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-015",
+          "type": "source_support",
+          "relation": "Concrete content-sensitive means/aim relation."
+        }
+      ],
+      "supersessions": [
+        "Earlier report’s unlocated acknowledgment gloss is superseded locally by the Ibn Uthaymeen return; earlier commentators’ differences remain."
+      ],
+      "residuals": [
+        "Every procedural detail and full intrinsic determination are not thereby explained."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-018",
+      "exact_statement": "Each particular production’s completed basis need not be one jointly completed production of the whole successive history. Beginningless intrinsic succession is not unfinished same-act completion; acyclicity alone also does not establish completed efficacy.",
+      "hypotheses": [
+        "Fixed particular explanandum",
+        "Completed relevant efficacy for that occurrence",
+        "Intrinsic prior acts distinguished from external donor of whole bearer"
+      ],
+      "scope": "Source-bound semantic clarification; neither temporal well-foundedness requirement nor unrestricted permission for every infinite explanatory arrangement.",
+      "semantic_owner": "representation-completion-succession-20261010",
+      "canonical_source": {
+        "source_id": "representation-completion-succession-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/10/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+        "sha256": "100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "representation-completion-succession-20261010",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/10/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/10/100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+          "sha256": "100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "particular-determination-semantics-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/particular-determination-semantics-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f1/f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+          "sha256": "f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "semantic_interpretation",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-015",
+          "type": "methodological_constraint",
+          "relation": "Do not inflate particular explanation into first-act or globally joint requirement."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "Specific fully detailed content-and-occasion account remains an application frontier, without downgrading general Wisdom."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-019",
+      "exact_statement": "The actual wise good original is owed practical acknowledgment, love, worship, allegiance, and obedience in the actual normative mode. This is more than admiration, and does not make every greater excellence obligatory or infer duties from bare force/ownership.",
+      "hypotheses": [
+        "Actual original and continuing benefaction",
+        "Complete practical wisdom/goodness",
+        "Substantive fittingness of directed acknowledgment",
+        "Finite recipient capacity and actual obligatory/recommended force"
+      ],
+      "scope": "Affirmative defeasible normative appraisal, not norm-free deduction or universal jurisdiction theorem.",
+      "semantic_owner": "original-normative-authority-20261009",
+      "canonical_source": {
+        "source_id": "original-normative-authority-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8c/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+        "sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "original-normative-authority-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/original-normative-authority-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8c/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "scoped-original-authority-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ea/ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "sha256": "ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-007",
+          "type": "source_support",
+          "relation": "Actual source relation is material."
+        },
+        {
+          "target": "FND-014",
+          "type": "source_support",
+          "relation": "Practical perfection contributes."
+        }
+      ],
+      "supersessions": [
+        "Generic is–ought objection does not erase substantive evaluative warrant."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-020",
+      "exact_statement": "Warranted retained control can specify an in-scope response; authenticated in-scope truthful normative disclosure already warrants a particular obligation without a second constitutive-title proof. The open local constitutive explanation is why this owed relation can exclude an otherwise adequate feasible form.",
+      "hypotheses": [
+        "Proper source attribution, content, normative mode, audience, conditions",
+        "For constitutive route: retained rightful title and admissible feasible exercise",
+        "For testimonial route: established reporting veracity and in-scope obligation assertion"
+      ],
+      "scope": "Further explanatory residual is not a practical-warrant gap for an authenticated duty.",
+      "semantic_owner": "source-selection-fitness-20261011",
+      "canonical_source": {
+        "source_id": "source-selection-fitness-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+        "sha256": "2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "source-selection-fitness-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/source-selection-fitness-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+          "sha256": "2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "scoped-original-authority-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ea/ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "sha256": "ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "original-normative-authority-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/original-normative-authority-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8c/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-019",
+          "type": "source_support",
+          "relation": "Owed relation retained."
+        },
+        {
+          "target": "FND-022",
+          "type": "source_support",
+          "relation": "Truthful normative disclosure supplies a sufficient route."
+        },
+        {
+          "target": "FND-030",
+          "type": "semantic_mapping",
+          "relation": "Particular content/attribution must be established."
+        }
+      ],
+      "supersessions": [
+        "Source-selection revised report foregrounds compliance with the actual authenticated command; initial review clarification is not open."
+      ],
+      "residuals": [
+        "Fitness of elected messenger or rejection of lawlessness does not independently establish selection over an otherwise adequate response form."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "For a specific proposed title explanation, is there a warranted relation-specific selection entitlement or an independent demonstration that the alternative fails the owed response?",
+        "acceptance_evidence": [
+          "Exact source-recipient-domain relation",
+          "A title or performance discriminator independent of calling the selected form obligatory",
+          "Preserve sufficiency of already authenticated normative disclosure"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-021",
+      "exact_statement": "Present permission, an undertaking not to exercise control, and constitutive surrender of control differ. A valid source-owned conditional undertaking may ground a beneficiary claim without foreign legislation or donation of essential perfection; its operative terms can constrain a later source-owned act even without extinguishing the power.",
+      "hypotheses": [
+        "Independently warranted source-owned valid undertaking",
+        "Specified beneficiary/domain/time/conditions/reservations",
+        "Relevant condition actually fulfilled and terms still operative"
+      ],
+      "scope": "Bounded source-owned fidelity application; no universal promise theory or claim such surrender actually occurred.",
+      "semantic_owner": "continuing-title-source-test-20261010",
+      "canonical_source": {
+        "source_id": "continuing-title-source-test-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0a/0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+        "sha256": "0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "continuing-title-source-test-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/continuing-title-source-test-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/0a/0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+          "sha256": "0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "scoped-original-authority-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/scoped-original-authority-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ea/ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "sha256": "ea7f8680df2137e56f5a37ff6c286978d41cf063631d8995828ee9315808f7a8",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "original-normative-authority-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/original-normative-authority-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8c/8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-019",
+          "type": "source_support",
+          "relation": "Practical fidelity belongs to accepted source account."
+        },
+        {
+          "target": "FND-020",
+          "type": "methodological_constraint",
+          "relation": "Power to undertake own performance is not automatically title to require another’s."
+        }
+      ],
+      "supersessions": [
+        "Prior nonprohibition alone proves neither surrender nor universal retained title."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-022",
+      "exact_statement": "Exceptionless truthfulness of genuinely source-owned assertions remains affirmatively and defeasibly warranted through practical integrity. A respect-specific counterfeit defect alone does not entail the all-context purity premise; the formal theorem is conditional on the fuller package. Generic origination is not assertoric ownership.",
+      "hypotheses": [
+        "Genuine source-owned assertion",
+        "Knowing counterfeit classified as declarative defect",
+        "All-context original integrity/purity",
+        "Practical conformance to fittingness"
+      ],
+      "scope": "Exceptionless content scope with defeasible warrant; not infallibility of every narrator or every caused utterance.",
+      "semantic_owner": "veracity-crosscheck-20261008",
+      "canonical_source": {
+        "source_id": "veracity-crosscheck-20261008",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+        "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "veracity-crosscheck-20261008",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/2b/2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "same-standard-common-source-20261008",
+          "original_read_path": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "attestation-capacity-warrant-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/attestation-capacity-warrant-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+          "sha256": "d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-011",
+          "type": "source_support",
+          "relation": "Pure-perfection application retained."
+        }
+      ],
+      "supersessions": [
+        "Missing universal truthful-substitute theorem is not a new unmet requirement of the accepted integrity argument."
+      ],
+      "residuals": [
+        "Authenticity, force, domain, and exact source ownership remain real application conditions."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-023",
+      "exact_statement": "Sound basic recognition can warrant belief without prior reflective faculty certification. New recognition, recollection, operative acquired competence, and practical change differ; compliance/refusal or stable assent alone does not identify earlier acquisition, retention, or warrant.",
+      "hypotheses": [
+        "Competent truth-responsive recognition or genuinely warranted ground",
+        "No applicable defeating evidence",
+        "Actual uptake distinguished from observer reconstruction"
+      ],
+      "scope": "Affirmative first-order epistemic stance plus bounded observer-classification limits.",
+      "semantic_owner": "basic-recognition-correction-20261009",
+      "canonical_source": {
+        "source_id": "basic-recognition-correction-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/38/3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+        "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "basic-recognition-correction-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/basic-recognition-correction-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/38/3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+          "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "fitrah-positive-warrant-inspection-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/responsive-demonstration-preservation-20261011-78f62260b48c/fitrah-positive-warrant-inspection-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/ab/abba899f264a90326c40a808fa156bc24e0380f59c18001609f2bc2611568446",
+          "sha256": "abba899f264a90326c40a808fa156bc24e0380f59c18001609f2bc2611568446",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [],
+      "supersessions": [
+        "Older Ameri unread flags are superseded by CP20 coverage.",
+        "A missing new episode test is not a withdrawal of positive basic reliance."
+      ],
+      "residuals": [
+        "No new authenticated initial Creator-recognition episode; no universal behavioral test."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "Only if an actual corrective/recognition case is available: what content and ground were competently operative, and what independently warrants its chronology?",
+        "acceptance_evidence": [
+          "Ground/content/uptake/time evidence",
+          "Distinguish cognitive change from practical impediment",
+          "Do not impose investigator’s reconstruction as a condition on ordinary knowledge"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-024",
+      "exact_statement": "Mediated evidence through distinctive properties, effects, testimony, and inference can ground particular identification of an unseen individual. Prior firsthand acquaintance is not universally required; bare unique-description satisfaction does not establish every cross-identification or the first-acquisition chronology.",
+      "hypotheses": [
+        "Actual identifying relation and competent use of its grounds",
+        "Source attribution and content appropriate to route"
+      ],
+      "scope": "Positive source-compatibility reconciliation; stronger FIRST-reference episode question remains separate.",
+      "semantic_owner": "particular-recognition-source-reconciliation-20261011",
+      "canonical_source": {
+        "source_id": "particular-recognition-source-reconciliation-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/27/2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+        "sha256": "2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "particular-recognition-source-reconciliation-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/particular-recognition-source-preservation-20261011-912f9836170b/particular-recognition-source-reconciliation-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/27/2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+          "sha256": "2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-023",
+          "type": "methodological_constraint",
+          "relation": "No compulsory reflective or acquaintance prerequisite."
+        }
+      ],
+      "supersessions": [
+        "Do not withhold all source permission for mediated identifying routes; the adjoining positive argument was already in volume09 notes."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-025",
+      "exact_statement": "The Heraclius source appraisal of prophetic-identity knowledge is not Abū Sufyān’s adjacent conviction of future ascendancy. Failure of full submission does not prove absence of every relevant inner response; the source still grants behavior evidential relevance in its specified religious-assent scope.",
+      "hypotheses": [
+        "Exact subject/proposition/time",
+        "Some-response versus full-response distinction",
+        "Capacity and practical impediments"
+      ],
+      "scope": "Textual/cognitive-content reconciliation, not newly authenticated historical minds or present-day diagnosis.",
+      "semantic_owner": "recognition-practical-impediment-20261011",
+      "canonical_source": {
+        "source_id": "recognition-practical-impediment-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/26/267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+        "sha256": "267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "recognition-practical-impediment-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/recognition-selection-source-checkpoint-20261011/recognition-selection-source-checkpoint-20261011/payload/recognition-practical-impediment-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/26/267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+          "sha256": "267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "basic-recognition-correction-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/basic-recognition-correction-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/38/3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+          "sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_bound_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-023",
+          "type": "methodological_constraint",
+          "relation": "Do not infer acquisition history from conduct alone."
+        },
+        {
+          "target": "FND-026",
+          "type": "source_support",
+          "relation": "Preserves source’s affirmative cumulative appraisal."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-026",
+      "exact_statement": "Qualitatively different warranted indications can jointly support knowledge though none alone suffices. The inherited Heraclius rationale is content-sensitive cumulative discrimination; it does not require a universal numerical threshold, universal independence, or consciously articulated premise list.",
+      "hypotheses": [
+        "Inputs genuinely warranted",
+        "Relevant distinct evidential contribution and dependence tracked",
+        "Appropriate actual uptake or retention",
+        "Defeaters assessed at actual target"
+      ],
+      "scope": "Affirmative source-philosophical account; historical authentication and application-specific joint sufficiency remain separate.",
+      "semantic_owner": "corroborative-source-argument-20261011",
+      "canonical_source": {
+        "source_id": "corroborative-source-argument-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f4/f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+        "sha256": "f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "corroborative-source-argument-20261011",
+          "original_read_path": "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-argument-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/f4/f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+          "sha256": "f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "corroborative-source-transfer-review-20261011",
+          "original_read_path": "recovery-20261011/extracted/corroborative-source-preservation-20261011/corroborative-source-preservation-20261011/originals/corroborative-source-transfer-review-20261011/REVIEW.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/77/775b7fb989398e4a49b45d25ea01989d8ed6034d5694fd5c066702ae59c7d5a0",
+          "sha256": "775b7fb989398e4a49b45d25ea01989d8ed6034d5694fd5c066702ae59c7d5a0",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-warrant-primary-check-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/broad-correction-research-preservation-20261011/broad-correction-research-preservation-20261011/cumulative-warrant-primary-check-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/b3/b34bf62869c8da81812bb148ffe368511fa7f90e9492bafd44a80270ffd91aea",
+          "sha256": "b34bf62869c8da81812bb148ffe368511fa7f90e9492bafd44a80270ffd91aea",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-source-transmission-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/cumulative-source-transmission-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/94/944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+          "sha256": "944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Final author report passes independently read bounded source-transfer review; contextual variant at p561 preserved.",
+      "dependencies": [
+        {
+          "target": "FND-023",
+          "type": "methodological_constraint",
+          "relation": "Articulability is not identical to knowing."
+        }
+      ],
+      "supersessions": [
+        "A30/A32/A34 and Nubuwwat appraisal already own combination/basing/dependence distinctions.",
+        "Darʾ route-plurality locus alone does not supply a combination theorem; later bounded no-new-result verdict is not global absence."
+      ],
+      "residuals": [
+        "No new historical episode or general combination calculus."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "For a proposed new application, what does each grounded indication actually add, how are dependencies preserved, and why does the combination discriminate relevant alternatives?",
+        "acceptance_evidence": [
+          "Content-sensitive comparison",
+          "Actual transmission/acquisition scope",
+          "No multiplication of repeated sources or synthetic probability calibration"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-027",
+      "exact_statement": "An observed source-disclosing performance can reveal an unacknowledged producer without antecedent trust in its testimony; appropriately grounded confirming context can jointly disclose sender and messenger. Copyist performance, royal confirming purpose, and universal faculty reliability are distinct targets.",
+      "hypotheses": [
+        "Warranted observed arrangement and change",
+        "Competent match comparison and causal interpretation",
+        "For commission: source attribution and confirming purpose",
+        "No borrowed-only authority for occurrence under test"
+      ],
+      "scope": "Positive noncircular route architecture, not a newly authenticated miracle or comprehensive reliability theorem.",
+      "semantic_owner": "joint-disclosure-warrant-20261011",
+      "canonical_source": {
+        "source_id": "joint-disclosure-warrant-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+        "sha256": "673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "joint-disclosure-warrant-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/joint-disclosure-warrant-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/67/673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+          "sha256": "673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-source-transmission-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/reference-geometry-gradient-combined-delivery-20261011/reference-geometry-gradient-combined-delivery-20261011/payload/cumulative-source-transmission-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/94/944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+          "sha256": "944a77c362d91d9a2ae3338b4975f780babe9e76d2d79ae286bfc89f3bfa7010",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-026",
+          "type": "methodological_constraint",
+          "relation": "One joint encounter is not independent evidence twice."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "Actual occurrence/source/purpose application remains substantive; general bootstrapping controversy not solved."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-028",
+      "exact_statement": "The warranted lunar event-plus-request scene and informed source control support positive defeasible communicative-adoption inference. Request, responsive showing, located group setting, and witnessing have conjunctive force. Warning and attestation can coexist; bare spectacle-only possibility is not an earned equal explanation.",
+      "hypotheses": [
+        "Warranted occurrence plus actual narrated request context",
+        "Informed relevant source control",
+        "Contextual link to claimant’s evidential presentation",
+        "Existing source/perfection/veracity background in its proper role"
+      ],
+      "scope": "Source-bound affirmative attestation; no new full transmission/causal authentication, exact advance lunar pledge, or deduction from nonprevention.",
+      "semantic_owner": "attestation-response-case-20261010",
+      "canonical_source": {
+        "source_id": "attestation-response-case-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+        "sha256": "d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "attestation-response-case-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/attestation-response-case-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+          "sha256": "d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "tibyan-current",
+          "original_read_path": "wisdom-attestation-own-act-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/74/744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+          "sha256": "744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-022",
+          "type": "methodological_constraint",
+          "relation": "An event is not already a source-owned assertion."
+        },
+        {
+          "target": "FND-026",
+          "type": "source_support",
+          "relation": "Cumulative contextual evidence may support interpretation."
+        },
+        {
+          "target": "FND-029",
+          "type": "source_support",
+          "relation": "Request provenance has narrower but positive support."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "Historical and causal application not freshly fully established; expected-publicity challenge preserved."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-029",
+      "exact_statement": "The explicit Anas narration clause and three Qatāda pupils support the request account at the lower-link level; Companion-mursal acceptance is not automatic rejection. Anas’s event informant remains unidentified, and Rida’s expected-publicity/adequate-audience-clarity objection remains incompletely resolved.",
+      "hypotheses": [
+        "Actual canonical wording and branching as described in owner",
+        "Methodological Companion-mursal presumption with acknowledged exceptions",
+        "Distinguish request testimony from broader occurrence testimony"
+      ],
+      "scope": "Historical/source warrant, retaining positive appraisal without declaring the actual criticism harmless or decisive.",
+      "semantic_owner": "request-context-provenance-20261010",
+      "canonical_source": {
+        "source_id": "request-context-provenance-20261010",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8b/8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+        "sha256": "8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "request-context-provenance-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/source-reconciliation-escape-intermediate-collection-20261011/request-boundary-notes-preservation-20261011-7e355365765f/request-context-provenance-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/8b/8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+          "sha256": "8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "request-publicity-feasibility-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/uthaymin-question-purpose-preservation-20261011/request-publicity-feasibility-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bb89f0e87595029b9061ff45a17426ede9c64080bcd85ad5f02b47f411fb1d8b",
+          "sha256": "bb89f0e87595029b9061ff45a17426ede9c64080bcd85ad5f02b47f411fb1d8b",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "historical_source_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-028",
+          "type": "methodological_constraint",
+          "relation": "Retain positive context while appraising actual criticism."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "No independently preserved new request eyewitness",
+        "Addressed clarity does not establish global visibility or later testimonial survival",
+        "No new narrowly responsive argument found in bounded follow-on records"
+      ],
+      "next_discriminating_T21_task": {
+        "question": "Would this clear deliberately requested certification be expected to leave broader surviving request testimony, given independently supported audience and transmission conditions?",
+        "acceptance_evidence": [
+          "Precisely reconstructed critic’s expectation and actual record",
+          "Relevant audience/transmission evidence without invented probabilities",
+          "Separate lower-link testimony from unnamed event-source and survival questions",
+          "A bounded disposition that can retain uncertainty without manufacturing a rescue"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-030",
+      "exact_statement": "Established commission/reporting veracity warrants assent to particular C when actual attribution, content, reporting-domain inclusion, and appropriate uptake/retention are warranted. Present constitutive appointment does not alone establish earlier commission or every later report’s truth.",
+      "hypotheses": [
+        "Warranted actual report of C by S",
+        "Source-owned truthfulness in this reporting domain",
+        "Recipient’s operative or retained warranted access"
+      ],
+      "scope": "Positive content-bearing testimonial bridge, not generalized trust substituting for content attribution.",
+      "semantic_owner": "commissioned-content-access-test-20261009",
+      "canonical_source": {
+        "source_id": "commissioned-content-access-test-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+        "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "commissioned-content-access-test-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "attestation-capacity-warrant-20261010",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/correction-interfaces-intermediate-collection-20261011/request-context-provenance-preservation-20261010-fc3ca29cc991/request-context-provenance-preservation-20261010/evidence/attestation-capacity-warrant-20261010/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/d4/d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+          "sha256": "d4db24720b59e1cd779ef4ed71251b506b1ebe2b8e246184a89e18643fcad8e7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-content-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/SOURCE_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-022",
+          "type": "source_support",
+          "relation": "Reporter veracity is one real premise."
+        }
+      ],
+      "supersessions": [
+        "Al-Juwayni explicitly separates present appointment from later-report veracity; criticism must address his actual stronger reply.",
+        "Tibyan content-attribution check corroborates an already owned bridge, not a new gap."
+      ],
+      "residuals": [],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-031",
+      "exact_statement": "Authenticated successful explanatory guidance cannot coexist in its proper scope with a genuinely false communicative indication and no warranted clarification. Original success alone does not entail perpetual access: later-access claims need an enduring undertaking or a specifically defended unexcused obligation-to-opportunity bridge.",
+      "hypotheses": [
+        "Named intended teaching C",
+        "Actual audience/time/circumstances",
+        "Authenticated explanatory commission and successful discharge",
+        "Correct contextual indication",
+        "Actual warranted routes assessed"
+      ],
+      "scope": "Purpose-sensitive source-content access, not universal autograph recovery or historical verdict about any scripture.",
+      "semantic_owner": "communication-availability-20261009",
+      "canonical_source": {
+        "source_id": "communication-availability-20261009",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/59/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+        "sha256": "5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "communication-availability-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/nested-safe-extracts/entropy-coarse-graining-corroboration-intermediate-collection-20261011/pairwise-corroboration-preservation-20261011-1eaa4aec882d/communication-availability-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/59/5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+          "sha256": "5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "commissioned-content-access-test-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "philosophical_warrant",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-030",
+          "type": "semantic_mapping",
+          "relation": "Correctness and attribution differ."
+        },
+        {
+          "target": "FND-021",
+          "type": "source_support",
+          "relation": "Continuing undertaking requires actual operative terms."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "Later custodial loss consistent with original delivery when no enduring access/duty premise is supplied.",
+        "Uniform exact recovery failure is not all defeasible-warrant failure."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "Which commissioned teaching or prescribed form, for which audience and period, lacks an adequate route once the actual explanatory channels and qualified obligation are established?",
+        "acceptance_evidence": [
+          "Warranted target/audience/time/undertaking",
+          "Examination of actual relevant channels",
+          "Exact contradiction or scoped uncertainty; no blanket comparative-scripture campaign"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-032",
+      "exact_statement": "Latest Tibyan report/revision/addendum and cumulative-content note add same-author corroboration: the discriminating cumulative career is stronger than bare success; tyrant and patience controls limit standalone inference; legitimate warranted whole-profile use for a connected particular act remains available. Content-attribution/veracity and testimony/sight/encounter distinctions are already owned.",
+      "hypotheses": [
+        "Edited electronic witness and page boundaries as declared",
+        "Distinct author, reported speaker, and apparatus attribution",
+        "Actually warranted cumulative grounds for an application",
+        "Particular act/content connection preserved"
+      ],
+      "scope": "Corroboration/source reconciliation, not independent historical witness, new transmission authentication, or standalone general-Wisdom-to-endorsement deduction.",
+      "semantic_owner": "tibyan-current",
+      "canonical_source": {
+        "source_id": "tibyan-current",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/74/744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+        "sha256": "744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "tibyan-current",
+          "original_read_path": "wisdom-attestation-own-act-20261011/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/74/744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+          "sha256": "744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "tibyan-addendum",
+          "original_read_path": "wisdom-attestation-own-act-20261011/ADDENDUM.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/87/8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+          "sha256": "8744b9a8c6b1d94d072f6dd21b7b7ac6d172a04e67802c25564881226107a52e",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-content-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/SOURCE_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cognitive-mode-owner-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/MODE_OWNER_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3b/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "source_corroboration",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-028",
+          "type": "source_support",
+          "relation": "Preserves affirmative contextual lunar application."
+        },
+        {
+          "target": "FND-030",
+          "type": "source_support",
+          "relation": "Corroborates two-premise content/reporting bridge."
+        },
+        {
+          "target": "FND-017",
+          "type": "source_support",
+          "relation": "Corroborates further encounter after prior knowledge."
+        },
+        {
+          "target": "FND-029",
+          "type": "methodological_constraint",
+          "relation": "Does not answer historical expected-publicity residual."
+        }
+      ],
+      "supersessions": [
+        "REPORT.prior-v1 overbroad cumulative-transport restriction superseded by current REPORT.md; archive original preserved.",
+        "Edited 1:276 preference correction is transcription-level, not doctrinal contradiction."
+      ],
+      "residuals": [
+        "No new historical cumulative profile appraisal performed; no new defeater or broad research obligation."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-033",
+      "exact_statement": "The actual CP16/CP23/T17 formal routes have asymmetric revalidation scopes: need-specific challenge targets necessity; constitutive challenge targets conditional nonreceipt; shared target/resource/bearer challenge can reach both. Pro H support survival requires a complete initially live witness still present and disjoint from revocation.",
+      "hypotheses": [
+        "Exact represented dependency structure",
+        "Justified challenge scope",
+        "Complete support and initial liveness",
+        "Actual basing/retention when knowledge is at issue"
+      ],
+      "scope": "Worked static dependency application plus conditional support theorem; inherited 33 tests, not new Lean replay or actual defeater.",
+      "semantic_owner": "synthesis-warrant-scope-20261011",
+      "canonical_source": {
+        "source_id": "synthesis-warrant-scope-20261011",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+        "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "synthesis-warrant-scope-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "authorial-common-source-review-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/authorial-synthesis-response-preservation-20261011/authorial-synthesis-response-preservation-20261011/payload/authorial-common-source-review-20261011/ASSESSMENT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/e0/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "formal_semantic_application",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-005",
+          "type": "formal_entailment",
+          "relation": "Original witness route excludes later premises."
+        },
+        {
+          "target": "FND-006",
+          "type": "source_support",
+          "relation": "Need/modality grounds kept separate."
+        },
+        {
+          "target": "FND-008",
+          "type": "formal_entailment",
+          "relation": "Constitution route has distinct premises."
+        },
+        {
+          "target": "ET-18",
+          "type": "semantic_mapping",
+          "relation": "Evidence/transport register owns the shared selective-revalidation application; cross-reference rather than duplicate credit."
+        }
+      ],
+      "supersessions": [
+        "A single undifferentiated premise bundle overpropagates local challenges; deleting constitutive dependency underpropagates it."
+      ],
+      "residuals": [
+        "Proof availability is not subject’s operative warrant; nominal document multiplicity does not prove ground independence."
+      ],
+      "next_discriminating_T21_task": {
+        "question": "No automatic repeat is warranted. Reopen only for a developed new application or substantive challenge at this exact scope.",
+        "acceptance_evidence": [
+          "Evidence that actually discriminates the stated premise/application; a new label, thin formal assignment, or duplicated source reading is insufficient."
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    },
+    {
+      "id": "FND-034",
+      "exact_statement": "Fibre recovery, root-aware equal-posterior distinctions, finite contract sidecars, and noetic geometry have exact model-level results. Their application to testimony/sight/experience, actual basing, warrant, authority, or psychological geometry requires justified source/content/mode semantics; no such full psychological implementation is established by the inspected owners.",
+      "hypotheses": [
+        "Declared model state/target/operations",
+        "Genuinely admissible histories for exact recovery",
+        "Independently supported source/content/mode or cognitive interpretation for application"
+      ],
+      "scope": "Candidate semantic connections explicitly separated from proved formal results.",
+      "semantic_owner": "cognitive-mode-owner-note",
+      "canonical_source": {
+        "source_id": "cognitive-mode-owner-note",
+        "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3b/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+        "sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03"
+      },
+      "supporting_sources": [
+        {
+          "source_id": "cognitive-mode-owner-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/MODE_OWNER_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/3b/3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "cumulative-content-note",
+          "original_read_path": "cumulative-content-bridge-source-check-20261011/SOURCE_NOTE.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/82/82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "sha256": "82cfb1ca1489aaaa92a1b92ba524d2bb4cc7b0aa1ce9d4d91869bf890706a71a",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "synthesis-warrant-scope-20261011",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/synthesis-additive-response-20261011/synthesis-additive-response-20261011/synthesis-warrant-scope-20261011/RESULT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/bb/bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        },
+        {
+          "source_id": "commissioned-content-access-test-20261009",
+          "original_read_path": "recovery-20261011/remaining-archives/safe-extracts/continuation-disclosure-evidence-20261011/continuation-disclosure-evidence-20261011/portable-source-inputs/commissioned-content-access-test-20261009/REPORT.md",
+          "canonical_byte_home": "t20-consolidation-20261011/catalogue/objects/6b/6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+          "read_scope": "Full substantive report, including result, argument, scope and disposition."
+        }
+      ],
+      "evidence_level": "candidate_mapping",
+      "inheritance": {
+        "result": "Inherited pre-cutoff achievement or frontier; no new research result claimed by consolidation.",
+        "fresh_now": [
+          "Read and reconciled actual report bytes and specified sections",
+          "Computed source hashes and checked claim-register structure"
+        ],
+        "not_fresh": [
+          "Primary Arabic/print/manuscript authentication",
+          "Historical episode verification",
+          "Lean or numerical execution",
+          "Repository adoption"
+        ]
+      },
+      "review_status": "Source-bound reconciliation; original scoped reviews retained. This consolidation has not yet received owner acceptance.",
+      "dependencies": [
+        {
+          "target": "FND-017",
+          "type": "semantic_mapping",
+          "relation": "Source modes distinguish more than the current central proposition."
+        },
+        {
+          "target": "FND-031",
+          "type": "semantic_mapping",
+          "relation": "Commissioned content selects the right recovery target."
+        },
+        {
+          "target": "FND-033",
+          "type": "methodological_constraint",
+          "relation": "Future revision demands more than present answer."
+        }
+      ],
+      "supersessions": [],
+      "residuals": [
+        "No certainty-to-probability-one translation",
+        "No empirical Fisher distance between source cognitive modes",
+        "No minimum memory theorem for all human knowing",
+        "No score-maximization explanation of divine choice"
+      ],
+      "next_discriminating_T21_task": {
+        "question": "For one concrete authorized representation task, do its source/content/mode fields and future operations preserve the actual semantic distinctions required by the task?",
+        "acceptance_evidence": [
+          "Explicit interpretation map",
+          "Discriminating retained/lost relation",
+          "Operational check within model and separate source-warrant justification"
+        ],
+        "stopping_condition": "A bounded application has an accountable result or exact blocker; do not make a broad new research campaign a prerequisite to retaining this baseline."
+      },
+      "repository_adoption": "Not asserted by this consolidation; consult repository reconciliation."
+    }
+  ]
+}

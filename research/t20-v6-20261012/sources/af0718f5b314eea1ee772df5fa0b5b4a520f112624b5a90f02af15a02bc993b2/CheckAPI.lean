@@ -1,0 +1,10 @@
+import CodedScope
+#check Primrec.list_all
+#check Primrec.list_filter
+#check Primrec.list_foldl
+#check Primrec.list_foldr
+#check Primrec.list_filterMap
+#check Primrec.snd.comp₂
+#check Primrec.nat_omega_rec'
+#check List.all_eq_true
+#check List.all_map

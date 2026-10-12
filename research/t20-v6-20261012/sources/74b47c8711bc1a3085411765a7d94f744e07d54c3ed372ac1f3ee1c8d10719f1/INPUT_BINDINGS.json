@@ -1,0 +1,32 @@
+{
+  "date_utc": "2026-10-11",
+  "inherited_inputs": [
+    {
+      "original": "tensor-moment-continuation-20261009/H_CONTINUATION_SOURCE.md",
+      "snapshot": "inputs/H_CONTINUATION_SOURCE.md",
+      "sha256": "626504b64c2d7817b882e74992ba989d83c7ef8e67b1467b537101c2b804edb9"
+    },
+    {
+      "original": "audit-continuation-transport-20261010/RESULT.md",
+      "snapshot": "inputs/AUDIT_CONTINUATION_RESULT.md",
+      "sha256": "3add44ffbe7e0bf188f870259bce338387385e1e5c04a5d98a3716cb2c2a84cc"
+    },
+    {
+      "original": "guide-domain-warrant-test-20261011/REPORT.md",
+      "snapshot": "inputs/GUIDE_DOMAIN_REPORT.md",
+      "sha256": "744b525a8b582e7d99f17ebf7457a3b2f3af91f8df0921b45a286ba20366f87c"
+    }
+  ],
+  "primary_sources": [
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.pdf",
+      "url": "https://arxiv.org/pdf/2609.04962v1",
+      "sha256": "b2511e841cde1461e4524c826c1fcbc71b788d2537b4f0f2b5e76c705cc13857"
+    },
+    {
+      "path": "sources/queloz-beckmann-2609.04962v1.html",
+      "url": "https://arxiv.org/html/2609.04962v1",
+      "sha256": "5fdbf799a933317413208d9269e95831cf31efa30a4db271b8ac4a555466de9f"
+    }
+  ]
+}

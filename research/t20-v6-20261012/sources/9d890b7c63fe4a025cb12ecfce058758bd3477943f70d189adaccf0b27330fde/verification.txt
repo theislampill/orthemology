@@ -1,0 +1,25 @@
+PASS 01: bound input inputs/face_stratified_RESULT.md
+PASS 02: bound input inputs/face_stratified_MANIFEST.json
+PASS 03: bound input inputs/tensor_likelihood_RESULT.md
+PASS 04: bound input inputs/event_feasibility_RESULT.md
+PASS 05: bound input inputs/hierarchical_RESULT.md
+PASS 06: bound input inputs/leafwise_RESULT.md
+PASS 07: square completion symbolic mass and moment identities
+PASS 08: square completion is idempotent
+PASS 09: all 80 square likelihood arrays satisfy exact symbolic positive-input classification
+PASS 10: feasibility-sensitive square classification collapses to the stabilizer
+PASS 11: unary event preserves branch mass but fails completion commutation
+PASS 12: both local-event results are inside the closed product model
+PASS 13: opposite boundary diagonals share a mean and disagree on vertex feasibility
+PASS 14: completion invents vertex possibility but does not change a genuine vertex posterior
+PASS 15: positive-input vertex commutation does not preserve branch probability
+PASS 16: completion cannot destroy actual branch feasibility on the exact finite grid
+PASS 17: full duplicate-column vertex fibre commutes with constant weights
+PASS 18: unequal duplicate weights break completion commutation
+PASS 19: partial duplicate support breaks completion commutation
+PASS 20: duplicate vertex indicator is facial but outside the stabilizing algebra
+PASS 21: nonvertex rank-one likelihood cannot be repaired by normalized-record sufficiency
+PASS 22: all 80 one-coordinate likelihood arrays satisfy the exact blockconstant classification
+PASS 23: nontrivial stabilizer preserves symbolic branch mass, including zero block values
+PASS 24: vertex-complement face yields an affine stabilizing indicator
+PASS: 24 exact assertion groups
