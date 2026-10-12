@@ -71,6 +71,7 @@ rules:
   status: current
 - prefix: docs/project-closure/r4-fresh-fable-review/
   status: historical-snapshot
+  note: phase reports of the completed fresh review (evidence trail of a finished pass)
 - prefix: docs/project-closure/r4-independent-review/
   status: historical-snapshot
   note: the R4 candidate session's own phase reports; the two post-substitution reports carry additive provenance qualifiers
