@@ -4,7 +4,7 @@ This companion restores notation and the architecture diagram from the September
 
 The transcription authority is the original 18-page PDF, SHA-256 `d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5`. The extraction's SHA-256 is `a81201d5cb53b8c6d3d5eaf47abc704286f879cf78579421d6db6e0800fc5255`. The PDF is not redistributed. Both identities are classified `reviewed_owner_authored` in the existing [public projection manifest][projection]; the owner's bounded authorization permits this separately reviewed transcription. The binary's existing publication hold remains in force. [FIDELITY.json](FIDELITY.json) records the source bindings, transformations and inherited 25-document coverage dispositions.
 
-Physical PDF page 1 is the unnumbered cover; printed pages 1–17 are physical pages 2–18. F01–F30 identify comparison groups, not original equation numbers. Display breaks and spacing are editorial. Calligraphic $\mathcal E$ in F01 and F24 follows the PDF, correcting plain `E` in the supplied comparison checklist. The remaining notation follows the source, including its historical ambiguities.
+Physical PDF page 1 is the unnumbered cover; printed pages 1–17 are physical pages 2–18. F01–F30 identify comparison groups, not original equation numbers. Display breaks and spacing are editorial. Calligraphic $`ℰ`$ in F01 and F24 follows the PDF, correcting plain `E` in the supplied comparison checklist. The remaining notation follows the source, including its historical ambiguities.
 
 ## Read with the complete paper
 
@@ -33,25 +33,25 @@ The six proposition titles are “tuple preservation,” “endogenous cognition
 
 Physical p. 4 / printed p. 3; source §1, extraction line 108.
 
-$$
-e=(e_1,e_2,\ldots,e_k)\in\mathcal E\subseteq\mathbb R^k
-$$
+```math
+e=(e_1,e_2,\ldots,e_k)\inℰ\subseteqℝ^k
+```
 
 ### F02. Scalar evidentiary weight
 
 Physical p. 4 / printed p. 3; source §2.1, line 139.
 
-$$
-w(e)\in\mathbb R
-$$
+```math
+w(e)\inℝ
+```
 
 ### F03. Example tuple
 
 Physical p. 4 / printed p. 3; source §2.1, line 143.
 
-$$
+```math
 e=(p,t,i,s,d,c,\ldots)
-$$
+```
 
 The source lists provenance quality, temporal proximity, independence, semantic specificity, defeater exposure, coherence, or other case-specific dimensions. It does not declare a universal coordinate system.
 
@@ -59,31 +59,31 @@ The source lists provenance quality, temporal proximity, independence, semantic 
 
 Physical p. 5 / printed p. 4; source §2.1, lines 151–155. Two profiles may satisfy **neither**
 
-$$
+```math
 e\ge f\quad\text{nor}\quad f\ge e
-$$
+```
 
 under coordinatewise comparison. The source's example is
 
-$$
+```math
 e=(0.90,0.35,0.80),\qquad f=(0.55,0.92,0.70).
-$$
+```
 
 ### F05. Partial order
 
 Physical p. 5 / printed p. 4; source §2.2, lines 161–166.
 
-$$
-K\subseteq\mathbb R^k
-$$
+```math
+K\subseteqℝ^k
+```
 
-$$
+```math
 x\succeq_K y\iff x-y\in K
-$$
+```
 
-$$
-K=\mathbb R_{\ge0}^k
-$$
+```math
+K=ℝ_{\ge0}^k
+```
 
 The last display is the source's simplest coordinatewise case.
 
@@ -91,9 +91,9 @@ The last display is the source's simplest coordinatewise case.
 
 Physical p. 5 / printed p. 4; source §2.2, lines 175–182.
 
-$$
+```math
 U(e)=\sum_{j=1}^k\alpha_j e_j
-$$
+```
 
 The source requires justification for coordinates, trade-offs and weights; this formula does not license scalarisation by itself.
 
@@ -101,21 +101,21 @@ The source requires justification for coordinates, trade-offs and weights; this 
 
 Physical p. 6 / printed p. 5; source §3.1, lines 199–228.
 
-$$
-\mathcal F=\{F_1,F_2,\ldots,F_n\}
-$$
+```math
+ℱ=\{F_1,F_2,\ldots,F_n\}
+```
 
 Mutual conditioning motivates writing
 
-$$
+```math
 F_i(e,s_{-i})
-$$
+```
 
 rather than merely
 
-$$
+```math
 F_i(e).
-$$
+```
 
 ## Architecture diagram
 
@@ -145,37 +145,37 @@ Accessible directed edge list (the last three are feedback arrows):
 
 Physical p. 7 / printed p. 6; source §4.1, lines 254–258.
 
-$$
+```math
 S_i=\{s_i^1,\ldots,s_i^{m_i}\}
-$$
+```
 
 ### F09. Functional encoding and joint response
 
 Physical p. 7 / printed p. 6; source §4.1, lines 266–269.
 
-$$
+```math
 F_i\leftrightarrow\text{player }i,\qquad S_i\leftrightarrow\text{strategy set of }i
-$$
+```
 
-$$
+```math
 s=(s_1,\ldots,s_n)\in S_1\times\cdots\times S_n
-$$
+```
 
 ### F10. Mixed response simplex
 
 Physical p. 7 / printed p. 6; source §5, lines 289–298.
 
-$$
-\Delta(S_i)=\left\{p_i\in\mathbb R_{\ge0}^{m_i}:\sum_{j=1}^{m_i}p_{ij}=1\right\}
-$$
+```math
+\Delta(S_i)=\left\{p_i\inℝ_{\ge0}^{m_i}:\sum_{j=1}^{m_i}p_{ij}=1\right\}
+```
 
 ### F11. Joint mixed-policy space
 
 Physical p. 7 / printed p. 6; source §5, lines 300–307.
 
-$$
+```math
 \Sigma=\prod_{i=1}^{n}\Delta(S_i)
-$$
+```
 
 Finiteness and a meaningful cognitive interpretation of mixture are assumptions. The source's §5.1 lists stochastic uptake, graded policy, unresolved competition, and population or temporal interpretation. The model must specify the intended interpretation; a probability vector is not automatically a literal mental roulette wheel. Convexity alone is not the Nash theorem.
 
@@ -183,57 +183,57 @@ Finiteness and a meaningful cognitive interpretation of mixture are assumptions.
 
 Physical p. 8 / printed p. 7; source §6.1, line 335.
 
-$$
-u_i:S_1\times\cdots\times S_n\to\mathbb R
-$$
+```math
+u_i:S_1\times\cdots\times S_n\toℝ
+```
 
 ### F13. Mixed Nash equilibrium
 
 Physical p. 8 / printed p. 7; source §6.1, lines 340–346. There exists
 
-$$
+```math
 \sigma^*\in\Sigma
-$$
+```
 
 satisfying
 
-$$
+```math
 u_i(\sigma_i^*,\sigma_{-i}^*)\ge u_i(\sigma_i,\sigma_{-i}^*)
-$$
+```
 
-for every player $i$ and every alternative mixed response $\sigma_i\in\Delta(S_i)$, under the source's finite-game and real-valued mixed-extension assumptions. This is conditional Nash existence, not an unconditional epistemic guarantee.
+for every player $`i`$ and every alternative mixed response $`\sigma_i\in\Delta(S_i)`$, under the source's finite-game and real-valued mixed-extension assumptions. This is conditional Nash existence, not an unconditional epistemic guarantee.
 
 ### F14. Limits of equilibrium existence
 
 Physical p. 9 / printed p. 8; source §6.2, lines 369–373.
 
-$$
+```math
 \text{equilibrium existence}\ne\text{correct scalar weighting}\ne\text{historical truth}
-$$
+```
 
 ### F15. Cone-ordered improvement
 
 Physical p. 9 / printed p. 8; source §§7–7.1, lines 379–386.
 
-$$
-U_i(s)\in\mathbb R^k
-$$
+```math
+U_i(s)\inℝ^k
+```
 
-$$
-K_i\subseteq\mathbb R^k
-$$
+```math
+K_i\subseteqℝ^k
+```
 
-$$
+```math
 x-y\in K_i
-$$
+```
 
 ### F16. Original vector-equilibrium statement
 
-Physical p. 9 / printed p. 8; source §7.1, lines 390–395. **Historical source transcription:** for every admissible unilateral deviation $\sigma_i^{\prime}$,
+Physical p. 9 / printed p. 8; source §7.1, lines 390–395. **Historical source transcription:** for every admissible unilateral deviation $`\sigma_i^{\prime}`$,
 
-$$
+```math
 U_i(\sigma_i^{\prime},\sigma_{-i}^*)-U_i(\sigma^*)\notin K_i\setminus\{0\}.
-$$
+```
 
 **Separate mathematical correction:** the original formula excludes nonzero cone gains. Adjacent source §7.2 instead says “strictly better in every dimension recognised by its improvement order.” Those conditions differ. This companion preserves both the original formula and the original prose; it does not substitute an interior cone. Read [ET05 strict-cone repair and vector equilibrium][correction], especially its lines 124–155, for the published distinction between nondominated equilibrium and no-every-coordinate-strict-improvement equilibrium, the counterexample, and the weighted-Nash qualifications.
 
@@ -243,25 +243,25 @@ $$
 
 Physical p. 10 / printed p. 9; source §8.1, lines 414–420.
 
-$$
+```math
 \max_{\sigma\in\Sigma}W(\sigma)
-$$
+```
 
 ### F18. Constrained optimisation
 
 Physical p. 10 / printed p. 9; source §8.2, lines 422–429.
 
-$$
+```math
 \max_{x\in X}f(x)\quad\text{subject to}\quad g_j(x)\le0
-$$
+```
 
 ### F19. Revision pipeline
 
 Physical p. 10 / printed p. 9; source §8.3, lines 431–437.
 
-$$
+```math
 e\to F_1(e)\to F_2(F_1(e))\to\cdots\to B
-$$
+```
 
 The source also retains correlated and bargaining formulations in §8.4; the game encoding does not uniquely privilege Nash as the intended solution concept.
 
@@ -269,23 +269,23 @@ The source also retains correlated and bargaining formulations in §8.4; the gam
 
 Physical p. 10 / printed p. 9; source §9, lines 454–458.
 
-$$
+```math
 e=(T,P,I,S,D,C)
-$$
+```
 
-Here $T$ is transmission integrity; $P$, temporal/material proximity; $I$, independence from other witnesses; $S$, semantic specificity or richness; $D$, resistance to known defeaters; and $C$, coherence with independently supported background. The worked example is illustrative, not a verdict about actual historical materials.
+Here $`T`$ is transmission integrity; $`P`$, temporal/material proximity; $`I`$, independence from other witnesses; $`S`$, semantic specificity or richness; $`D`$, resistance to known defeaters; and $`C`$, coherence with independently supported background. The worked example is illustrative, not a verdict about actual historical materials.
 
 ### F21. Schematic profiles
 
 Physical p. 11 / printed p. 10; source §9, lines 474–478.
 
-$$
+```math
 h=(0.88,0.56,0.61,0.94,0.73,0.81)
-$$
+```
 
-$$
+```math
 r=(0.72,0.96,0.90,0.42,0.84,0.77)
-$$
+```
 
 The numbers are purely schematic. The source preserves incomparable strengths rather than deriving a historical ranking from them.
 
@@ -293,9 +293,9 @@ The numbers are purely schematic. The source preserves incomparable strengths ra
 
 Physical p. 11 / printed p. 10; source §9.2, lines 499–505.
 
-$$
+```math
 W(e)=.15T+.30P+.20I+.10S+.15D+.10C
-$$
+```
 
 The coefficients illustrate a demanded trade-off that needs a principled explanation; they are not endorsed weights.
 
@@ -320,12 +320,12 @@ Physical p. 12 / printed p. 11; source §10, lines 516–533. The table transcri
 
 Physical p. 14 / printed p. 13; source §13, lines 630–635.
 
-$$
+```math
 \begin{gathered}
 \text{rational belief regulation}\approx{}\\
 \text{stable coordination among differentiated epistemic functions}
 \end{gathered}
-$$
+```
 
 The source immediately qualifies this by evidence, admissible transformations and governing norms. The line break above is for readability.
 
@@ -333,71 +333,71 @@ The source immediately qualifies this by evidence, admissible transformations an
 
 Physical p. 16 / printed p. 15; source §15, lines 705–709.
 
-$$
-e\in\mathcal E\subseteq\mathbb R^k
-$$
+```math
+e\inℰ\subseteqℝ^k
+```
 
-$$
-\mathcal F=\{F_1,\ldots,F_n\}
-$$
+```math
+ℱ=\{F_1,\ldots,F_n\}
+```
 
 ### F25. Admissible responses
 
 Physical p. 16 / printed p. 15; source §15, lines 711–714.
 
-$$
+```math
 S_i=\{s_i^1,\ldots,s_i^{m_i}\}
-$$
+```
 
 ### F26. Mixed policies
 
 Physical p. 16 / printed p. 15; source §15, lines 719–723.
 
-$$
+```math
 \sigma_i\in\Delta(S_i),\qquad\sigma\in\prod_i\Delta(S_i)
-$$
+```
 
 ### F27. Evaluated outcome
 
 Physical p. 16 / printed p. 15; source §15, lines 726–728.
 
-$$
+```math
 O_i=G_i(e,\sigma_i,\sigma_{-i})
-$$
+```
 
 ### F28. Scalar evaluation and Nash condition
 
 Physical p. 16 / printed p. 15; source §15, lines 730–738. If evaluation is scalar and Nash-representable, define
 
-$$
-u_i(O_i)\in\mathbb R
-$$
+```math
+u_i(O_i)\inℝ
+```
 
-and seek $\sigma^*$ satisfying
+and seek $`\sigma^*`$ satisfying
 
-$$
+```math
 u_i(\sigma_i^*,\sigma_{-i}^*)\ge u_i(\sigma_i,\sigma_{-i}^*)
-$$
+```
 
-for every admissible unilateral deviation. **Editorial notation note:** the compact source uses $u_i$ both on outcomes and on strategy profiles. That overload is retained, not silently regularised.
+for every admissible unilateral deviation. **Editorial notation note:** the compact source uses $`u_i`$ both on outcomes and on strategy profiles. That overload is retained, not silently regularised.
 
 ### F29. Vector evaluation
 
 Physical p. 16 / printed p. 15; source §15, lines 740–742.
 
-$$
-U_i(O_i)\in\mathbb R^q
-$$
+```math
+U_i(O_i)\inℝ^q
+```
 
-The source then calls for an improvement cone $K_i$ and a profile with no unilateral strict $K_i$-improvement. Its dimension $q$ is retained even though earlier displays use $k$. This transcription does not resolve the strictness ambiguity; see [F16 and the existing correction](#f16-original-vector-equilibrium-statement).
+The source then calls for an improvement cone $`K_i`$ and a profile with no unilateral strict $`K_i`$-improvement. Its dimension $`q`$ is retained even though earlier displays use $`k`$. This transcription does not resolve the strictness ambiguity; see [F16 and the existing correction](#f16-original-vector-equilibrium-statement).
 
 ### F30. Common-objective formulation
 
 Physical p. 16 / printed p. 15; source §15, lines 744–749.
 
-$$
-\operatorname*{arg\,max}_{\sigma\in\Sigma}W(e,\sigma)
-$$
+```math
+\underset{\sigma\in\Sigma}{\mathrm{arg\,max}}\,W(e,\sigma)
+```
 
 The source makes this subject to architectural constraints. Its conclusion treats equilibrium, where appropriate, as an account of coordination stability, not a substitute for truth or a licence for unexplained scalarisation.
 

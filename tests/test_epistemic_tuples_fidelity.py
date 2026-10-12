@@ -11,6 +11,8 @@ import re
 import unittest
 import xml.etree.ElementTree as ET
 
+from markdown_it import MarkdownIt
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECTORY = ROOT / "research/source-fidelity/epistemic-tuples"
@@ -34,7 +36,7 @@ def issues(markdown, svg_text, record):
     expected = {row["id"]: row for row in record["formula_groups"]}
     for key, body in sections:
         row = expected[key]
-        if re.findall(r"^\$\$\n(.*?)\n\$\$", body, re.M | re.S) != row["tex"]:
+        if re.findall(r"^```math\n(.*?)\n```$", body, re.M | re.S) != row["tex"]:
             errors.append(key + " notation")
         coordinates = f"Physical p. {row['physical_page']} / printed p. {row['printed_page']}"
         if coordinates not in body:
@@ -68,6 +70,13 @@ def issues(markdown, svg_text, record):
 
 
 class FidelityTests(unittest.TestCase):
+    def test_markdown_preserves_tex_before_math_rendering(self):
+        tokens = MarkdownIt("commonmark").parse(README)
+        rendered_inputs = [t.content.rstrip("\n") for t in tokens
+                           if t.type == "fence" and t.info == "math"]
+        reviewed_tex = [tex for row in RECORD["formula_groups"] for tex in row["tex"]]
+        self.assertEqual(rendered_inputs, reviewed_tex)
+
     def test_reviewed_document(self):
         self.assertEqual(issues(README, SVG, RECORD), [])
         self.assertEqual(RECORD["fidelity_review"]["status"], "PASS_BOUNDED_SOURCE_FIDELITY")
@@ -121,7 +130,7 @@ class FidelityTests(unittest.TestCase):
 
     def test_lost_mathematical_glyph_is_detected(self):
         for old, new, group in [
-            (r"\mathcal E", "E", "F01"),
+            ("ℰ", "E", "F01"),
             (r"\setminus\{0\}", r"^\circ", "F16"),
             (r"\sigma_{-i}^*", r"\sigma_{-i}", "F13"),
             (r"\sum_{j=1}^k", r"\sum_j", "F06"),

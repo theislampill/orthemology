@@ -40,7 +40,7 @@
       "physical_page": 4,
       "printed_page": 3,
       "tex": [
-        "e=(e_1,e_2,\\ldots,e_k)\\in\\mathcal E\\subseteq\\mathbb R^k"
+        "e=(e_1,e_2,\\ldots,e_k)\\inℰ\\subseteqℝ^k"
       ]
     },
     {
@@ -48,7 +48,7 @@
       "physical_page": 4,
       "printed_page": 3,
       "tex": [
-        "w(e)\\in\\mathbb R"
+        "w(e)\\inℝ"
       ]
     },
     {
@@ -73,9 +73,9 @@
       "physical_page": 5,
       "printed_page": 4,
       "tex": [
-        "K\\subseteq\\mathbb R^k",
+        "K\\subseteqℝ^k",
         "x\\succeq_K y\\iff x-y\\in K",
-        "K=\\mathbb R_{\\ge0}^k"
+        "K=ℝ_{\\ge0}^k"
       ]
     },
     {
@@ -91,7 +91,7 @@
       "physical_page": 6,
       "printed_page": 5,
       "tex": [
-        "\\mathcal F=\\{F_1,F_2,\\ldots,F_n\\}",
+        "ℱ=\\{F_1,F_2,\\ldots,F_n\\}",
         "F_i(e,s_{-i})",
         "F_i(e)."
       ]
@@ -118,7 +118,7 @@
       "physical_page": 7,
       "printed_page": 6,
       "tex": [
-        "\\Delta(S_i)=\\left\\{p_i\\in\\mathbb R_{\\ge0}^{m_i}:\\sum_{j=1}^{m_i}p_{ij}=1\\right\\}"
+        "\\Delta(S_i)=\\left\\{p_i\\inℝ_{\\ge0}^{m_i}:\\sum_{j=1}^{m_i}p_{ij}=1\\right\\}"
       ]
     },
     {
@@ -134,7 +134,7 @@
       "physical_page": 8,
       "printed_page": 7,
       "tex": [
-        "u_i:S_1\\times\\cdots\\times S_n\\to\\mathbb R"
+        "u_i:S_1\\times\\cdots\\times S_n\\toℝ"
       ]
     },
     {
@@ -159,8 +159,8 @@
       "physical_page": 9,
       "printed_page": 8,
       "tex": [
-        "U_i(s)\\in\\mathbb R^k",
-        "K_i\\subseteq\\mathbb R^k",
+        "U_i(s)\\inℝ^k",
+        "K_i\\subseteqℝ^k",
         "x-y\\in K_i"
       ]
     },
@@ -234,8 +234,8 @@
       "physical_page": 16,
       "printed_page": 15,
       "tex": [
-        "e\\in\\mathcal E\\subseteq\\mathbb R^k",
-        "\\mathcal F=\\{F_1,\\ldots,F_n\\}"
+        "e\\inℰ\\subseteqℝ^k",
+        "ℱ=\\{F_1,\\ldots,F_n\\}"
       ]
     },
     {
@@ -267,7 +267,7 @@
       "physical_page": 16,
       "printed_page": 15,
       "tex": [
-        "u_i(O_i)\\in\\mathbb R",
+        "u_i(O_i)\\inℝ",
         "u_i(\\sigma_i^*,\\sigma_{-i}^*)\\ge u_i(\\sigma_i,\\sigma_{-i}^*)"
       ]
     },
@@ -276,7 +276,7 @@
       "physical_page": 16,
       "printed_page": 15,
       "tex": [
-        "U_i(O_i)\\in\\mathbb R^q"
+        "U_i(O_i)\\inℝ^q"
       ]
     },
     {
@@ -284,7 +284,7 @@
       "physical_page": 16,
       "printed_page": 15,
       "tex": [
-        "\\operatorname*{arg\\,max}_{\\sigma\\in\\Sigma}W(e,\\sigma)"
+        "\\underset{\\sigma\\in\\Sigma}{\\mathrm{arg\\,max}}\\,W(e,\\sigma)"
       ]
     }
   ],
@@ -640,7 +640,7 @@
     "source_pdf_sha256": "d39f084222fe3b372b365a729b1cd3e4ab6c09c389efaeb18d7727d4b845aba5",
     "independent_review_receipt_sha256": "d5d3d41865b06ce784cc831da797218961920a08747e515382e959637181df0b",
     "reviewed_candidate_record_sha256": "b380ee56d75fcafb3619e5d85f79642435c579e18706381bd0f02d059003c931",
-    "final_record_change": "Only this fidelity_review metadata block changes after candidate review; reviewed companion, SVG, formula inventory, source bindings and inherited coverage are unchanged.",
+    "final_record_change": "The original review is supplemented by a bounded render-encoding delta review. Source bindings, graph, hierarchy, inherited coverage and scientific qualifications remain unchanged.",
     "original_comparison": "All 18 original PDF pages visually read; all 30 expression groups, seven diagram labels, eleven directed edges and L0-L7 table cells compared.",
     "candidate_comparison": "All 30 groups and 42 native-rendered displays, seven visible labels, eleven visible arrow directions (including three feedbacks), every table cell, qualifications, sixteen full-source navigation anchors and both immutable source hashes checked.",
     "resolved_findings": [
@@ -649,11 +649,53 @@
       "Contextual F11 mixture interpretations restored to the original terms.",
       "F16 adjacent-prose quotation restored verbatim; historical formula and separate correction preserved."
     ],
-    "render_method": "The exact 42 Markdown display bodies were compiled by the repository-pinned TeX Live image with networking and shell escape disabled, rendered from DVI to SVG and displayed with MarkdownIt/Edge. All 43 images loaded without browser errors or horizontal overflow; all affected display, diagram and table screenshots inspected. Private preview inline dollar notation was not rendered; GitHub rendering is a separate integration check.",
-    "scope_limit": "The other 24 originals were not reopened. Their findings remain inherited. No PDF is published and no mathematical conclusion or scientific status is changed."
+    "render_method": "The previously reviewed 42 display bodies were compiled by the repository-pinned TeX Live image with networking and shell escape disabled, rendered from DVI to SVG and displayed with MarkdownIt/Edge. All 43 images loaded without browser errors or horizontal overflow; all affected display, diagram and table screenshots were inspected. The present companion uses the separately reviewed GitHub-safe encodings below; inverse transformation recovers the approved original companion exactly.",
+    "scope_limit": "The other 24 originals were not reopened. Their findings remain inherited. No PDF is published and no mathematical conclusion or scientific status is changed.",
+    "render_encoding_delta": {
+      "status": "PASS_BOUNDED_RENDER_ENCODING_DELTA",
+      "receipt_sha256": "fdf3a8e02dc193470888f62e96fbc40ce58a9d17ee826f349c7351c3c10daf4c",
+      "reviewed_readme_sha256": "e04f696141b7d078b6ffef9e016cef497cf324259c8f5be2fcdeee6f8fe0fb83",
+      "previously_reviewed_readme_sha256": "5ad328358495774a377a34cb077e6bd16b6c766433a9aea5e1db8d961e599e6a",
+      "prior_encoding_commit": "d6fd2e58b20402f2f8022b8490cf99e3a6f4a1d0",
+      "comparison": "All 42 display and 16 inline expressions, prose, qualifications, table and navigation recover the previously reviewed companion byte-for-byte after reversing only the documented render encodings. Visible script E/F, double-struck R and the complete arg max lower limit were independently checked.",
+      "scope": "Candidate rendered in the GitHub browser component; committed-head readback and CI are separate publication checks."
+    }
   },
   "reviewed_artifacts": {
-    "README.md": "5ad328358495774a377a34cb077e6bd16b6c766433a9aea5e1db8d961e599e6a",
+    "README.md": "e04f696141b7d078b6ffef9e016cef497cf324259c8f5be2fcdeee6f8fe0fb83",
     "architecture.svg": "f08e42c8754b05e59b619cbcf5db6574983e5cbdccbbf3bcdf4d0497df52769f"
+  },
+  "render_compatibility": {
+    "failure_observed_at": "d6fd2e58b20402f2f8022b8490cf99e3a6f4a1d0",
+    "cause": "GitHub Markdown processing removed TeX escapes and altered stars in dollar-delimited displays; GitHub disallowed operatorname; native browser MathML did not visibly distinguish mathvariant-only E/F/R.",
+    "fix": "Fenced math and protected inline delimiters preserve TeX through Markdown. Explicit Unicode script E/F and double-struck R preserve the source glyph distinctions. The original arg max with limits below is encoded using underset and upright text.",
+    "notation_equivalent_substitutions": [
+      {
+        "from": "\\mathcal E",
+        "to": "ℰ"
+      },
+      {
+        "from": "\\mathcal F",
+        "to": "ℱ"
+      },
+      {
+        "from": "\\mathbb R",
+        "to": "ℝ"
+      },
+      {
+        "from": "\\operatorname*{arg\\,max}_{\\sigma\\in\\Sigma}",
+        "to": "\\underset{\\sigma\\in\\Sigma}{\\mathrm{arg\\,max}}\\,"
+      }
+    ],
+    "source_math_changed": false,
+    "candidate_browser_check": {
+      "display_math": 42,
+      "inline_math": 16,
+      "rendered_math": 58,
+      "render_errors": 0,
+      "scope": "GitHub Markdown API candidate in the live GitHub math component, prior to committed-head readback.",
+      "renderer_input_byte_identity_claimed": false,
+      "renderer_normalization": "F23 has a harmless line-break whitespace normalization in the Markdown API output; its two textual rows and approximation relation are preserved."
+    }
   }
 }
