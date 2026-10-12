@@ -24,6 +24,8 @@ The initial projection changes private machine locators to consistent logical id
 
 Seven newly supplied earlier projection receipts have unavailable original preimages. Their supplied projected bytes and this integration's subsequent transformations were checked; their earlier original-to-projection equivalence remains inherited evidence. All seven received-public versions are exact baseline matches, but do not acquire equivalence to unavailable originals.
 
+The [Epistemic Tuples reading companion](../source-fidelity/epistemic-tuples/README.md) restores the original paper's equations, diagram and hierarchy table alongside its unchanged full extraction, with the existing ET05 correction kept separate.
+
 ## Verification and scientific limits
 
 The original six ZIPs, independent extraction, package hashes, and source-only handoff check passed at intake. That establishes package integrity and declared custody only. The public object has its own privacy, inventory, source, original-reference and contribution-binding gate:
