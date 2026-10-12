@@ -88,6 +88,13 @@ def check(repo, owners, cross):
         fail("baseline", str(exc))
         return errors
     indexed = {row["path"]: row for row in rows}
+    if owners["baseline"].get("tree"):
+        actual_tree = subprocess.run(
+            ["git", "rev-parse", owners["baseline"]["commit"] + "^{tree}"],
+            cwd=repo, capture_output=True, text=True, check=False,
+        )
+        if actual_tree.returncode or actual_tree.stdout.strip() != owners["baseline"]["tree"]:
+            fail("baseline", "Recorded tree is not the pinned commit tree")
     expected_digest = owners.get("entries_sha256")
     if expected_digest:
         canonical = json.dumps(rows, sort_keys=True, ensure_ascii=False,
@@ -98,6 +105,7 @@ def check(repo, owners, cross):
     group_ids = [c.get("key") for c in groups]
     if len(set(group_ids)) != len(group_ids):
         fail("owner", "Duplicate collection key")
+    group_counts = Counter()
     for row in rows:
         path = row["path"]
         assigned = [c["key"] for c in groups if matches(path, c.get("include", []))
@@ -106,20 +114,29 @@ def check(repo, owners, cross):
             fail("unassigned-source", path)
         elif len(assigned) != 1:
             fail("overlapping-source", path)
+        else:
+            group_counts[assigned[0]] += 1
+    for group in groups:
+        if "candidate_paths" in group and group["candidate_paths"] != group_counts[group["key"]]:
+            fail("owner-count", group["key"] + " count differs from the pinned population")
+    discovered_owners = set()
     for group in groups:
         if not group.get("owners"):
             fail("owner", str(group.get("key")) + " has no discovery owner")
-        for path in group.get("owners", []):
-            row = indexed.get(path)
-            if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
-                fail("owner", str(path) + " is not a regular pinned discovery owner")
-    for binding in owners.get("owner_bindings", []):
+        discovered_owners.update(group.get("owners", []))
+    for path in sorted(discovered_owners):
+        row = indexed.get(path)
+        if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
+            fail("owner", str(path) + " is not a regular pinned discovery owner")
+            continue
         try:
-            body = safe_path(repo, binding["path"]).read_bytes()
-            if hashlib.sha256(body).hexdigest() != binding["sha256"]:
-                fail("owner", binding["path"] + " changed; review its routing scope")
-        except (KeyError, ValueError, OSError) as exc:
-            fail("owner", str(exc))
+            body = safe_path(repo, path).read_bytes()
+            raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
+            digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
+            if digest != row["git_oid"]:
+                fail("owner", path + " changed; review its routing scope")
+        except (ValueError, OSError) as exc:
+            fail("owner", str(path) + ": " + str(exc))
 
     sources = cross.get("sources", {})
     for key, source in sources.items():
