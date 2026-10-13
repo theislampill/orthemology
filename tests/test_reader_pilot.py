@@ -254,6 +254,36 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(before, after)
 
 
+    def test_rehashed_scientific_source_cannot_rebind_baseline(self):
+        p = self.repo / "theory/note.md"
+        before = p.read_bytes()
+        p.write_bytes(before + b"A different scientific conclusion.\n")
+        altered = deepcopy(self.cross)
+        altered["sources"]["theory/note.md"]["sha256"] = hashlib.sha256(p.read_bytes()).hexdigest()
+        self.assertNotEqual(p.read_bytes(), before)
+        self.reject(self.check(cross=altered), "baseline-source")
+
+    def test_source_executable_mode_is_preserved(self):
+        p = self.repo / "theory/note.md"
+        p.chmod(0o755)
+        self.assertTrue(p.stat().st_mode & 0o111)
+        self.reject(self.check(), "source-mode")
+
+    def test_unknown_reading_form_source_is_rejected(self):
+        altered = deepcopy(self.cross)
+        altered["works"][0]["reading_forms"] = [{"source": "ghost", "relationship": "governed-rendering"}]
+        self.reject(self.check(cross=altered), "reading-form")
+
+    def test_governed_reading_form_cannot_point_to_other_pdf(self):
+        altered = deepcopy(self.cross)
+        altered["works"][0]["reading_forms"] = [{"source": "artifacts/gallery.pdf", "relationship": "governed-rendering"}]
+        self.reject(self.check(cross=altered), "rendering-target")
+
+    def test_correct_governed_reading_form_is_accepted(self):
+        altered = deepcopy(self.cross)
+        altered["works"][0]["reading_forms"] = [{"source": "artifacts/core.pdf", "relationship": "governed-rendering"}]
+        self.assertEqual(self.check(cross=altered), [])
+
     def test_discovery_owner_drift_is_detected_from_pinned_git(self):
         p = self.repo / "research/new/README.md"
         before = p.read_bytes()
@@ -277,6 +307,123 @@ class ReaderPilotTests(unittest.TestCase):
         altered = deepcopy(self.owners)
         altered["collections"][0]["candidate_paths"] = 999
         self.reject(self.check(owners=altered), "owner-count")
+
+
+
+class ReaderPageRouteTests(unittest.TestCase):
+    """Real Markdown link parsing; semantic truth deliberately remains outside it."""
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location("reader_routes_under_test", MODULE)
+        self.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.mod)
+        self.assertTrue(hasattr(self.mod, "check_reader_pages"), "reader-page route check not implemented")
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        (self.repo / "theory").mkdir()
+        (self.repo / "theory/source.md").write_text("# Source\n## Assumptions\nA scoped fixture.\n")
+        (self.repo / "theory/other.md").write_text("# Different source\nA different fixture.\n")
+        self.pages = ["RESEARCH-ATLAS.md", "PAPER-CATALOGUE.md", "RESULT-INDEX.md",
+                      "CURRENT-FRONTIERS.md", "APPLICATIONS.md", "VERIFICATION-GUIDE.md"]
+        for name in self.pages:
+            path = self.repo / "docs/reader" / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# Reader\n\n## Overview\nA conditional construction.\n[Read][source]\n\n"
+                            "[source]: ../../theory/source.md#assumptions\n")
+        self.cross = {
+            "sources": {"source": {"path": "theory/source.md"}},
+            "reader_journeys": [
+                {"id": "J%02d" % i,
+                 "entry": "docs/reader/" + self.pages[(i - 1) % len(self.pages)] + "#overview",
+                 "source_keys": ["source"]}
+                for i in range(1, 8)
+            ],
+        }
+
+    def check(self, cross=None):
+        return self.mod.check_reader_pages(self.repo, cross or self.cross)
+
+    def page(self, name="RESEARCH-ATLAS.md"):
+        return self.repo / "docs/reader" / name
+
+    def mutate(self, old, new):
+        p = self.page()
+        before = p.read_text()
+        self.assertIn(old, before, "negative control must actually mutate its target")
+        p.write_text(before.replace(old, new))
+        self.assertNotEqual(p.read_text(), before)
+
+    def reject(self, code):
+        errors = self.check()
+        self.assertTrue(any(e.startswith(code + ":") for e in errors), errors)
+
+    def test_valid_reference_style_links_and_source_fragments(self):
+        self.assertEqual(self.check(), [])
+
+    def test_missing_reader_page(self):
+        self.page().unlink()
+        self.reject("reader-page")
+
+    def test_nonexistent_heading_fragment(self):
+        self.mutate("#assumptions", "#not-a-real-heading")
+        self.reject("reader-fragment")
+
+    def test_correct_http_like_success_is_not_correct_source(self):
+        self.mutate("../../theory/source.md#assumptions", "../../theory/other.md")
+        self.reject("journey-target")
+
+    def test_wrong_valid_source_fragment_is_not_the_requested_section(self):
+        p = self.repo / "theory/source.md"
+        p.write_text(p.read_text() + "## Other result\nDifferent scope.\n")
+        self.cross["reader_journeys"][0]["source_fragments"] = {"source": "assumptions"}
+        self.mutate("#assumptions", "#other-result")
+        self.reject("journey-target")
+
+    def test_missing_journey_cannot_pass(self):
+        self.cross["reader_journeys"].pop()
+        self.reject("journey-map")
+
+    def test_duplicate_journey_cannot_pass(self):
+        self.cross["reader_journeys"].append(deepcopy(self.cross["reader_journeys"][0]))
+        self.reject("journey-map")
+
+    def test_wrong_entry_fragment_cannot_pass(self):
+        self.cross["reader_journeys"][0]["entry"] = "docs/reader/RESEARCH-ATLAS.md#absent"
+        self.reject("journey-entry")
+
+    def test_link_elsewhere_is_not_the_promised_section_route(self):
+        self.mutate("[Read][source]", "No source here.\n\n## Other section\n[Read][source]")
+        self.reject("journey-target")
+
+    def test_fenced_link_is_not_navigation(self):
+        self.mutate("[Read][source]", "```text\n[Read](../../theory/source.md#assumptions)\n```")
+        self.reject("journey-target")
+
+    def test_absolute_machine_link_is_rejected(self):
+        self.mutate("../../theory/source.md#assumptions", "file:///private/example.md")
+        with self.assertRaises(ValueError):
+            self.mod.resolve_reader_link(self.repo, "docs/reader/RESEARCH-ATLAS.md", "file:///private/example.md")
+        # CommonMark suppresses this forbidden link; the promised source
+        # route therefore disappears instead of becoming an active URL.
+        self.reject("journey-target")
+
+    def test_symlink_reading_target_is_rejected(self):
+        p = self.repo / "theory/source.md"
+        p.unlink()
+        p.symlink_to(self.repo / "theory/other.md")
+        self.reject("reader-link")
+
+    def test_semantic_false_friend_is_not_mechanically_certified(self):
+        # Deliberately show the limit of the mechanical check. A separate
+        # source-bound reviewer must reject this altered prose under T17.
+        self.mutate("A conditional construction.", "This proves all real human cognition is correct.")
+        self.assertEqual(self.check(), [])
+
+    def test_page_check_does_not_modify_files(self):
+        before = {p.relative_to(self.repo): p.read_bytes() for p in self.repo.rglob("*") if p.is_file()}
+        self.assertEqual(self.check(), [])
+        after = {p.relative_to(self.repo): p.read_bytes() for p in self.repo.rglob("*") if p.is_file()}
+        self.assertEqual(before, after)
 
 
 if __name__ == "__main__":
