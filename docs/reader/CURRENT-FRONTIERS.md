@@ -42,6 +42,17 @@ The [finite-mediator bound][coordination] gives an exact fixed-horizon constrain
 
 The source also distinguishes attainment at a single horizon from a prescribed state marginal or one common, forward-causal history across horizons. **The useful next step is a faithful model binding**, not repeating the already supplied bound or claiming that its retrospective construction establishes physical coordination.
 
+## Fresh histories, access and rational policy
+
+**This is the Twelfth sources' particular application boundary, not a new programme-wide foundational verdict.** The [fresh-history article][t12-fresh] already proves its concentration obstruction and constructs a coherent diffuse history. The [bounded-access paper][t12-access] identifies a positive operational premise: warranted success in a magnitude-sensitive task, combined with sufficient resource-tail control, forces bounded capture. The next application needs that target, law, information state and actual acquisition contract—not merely a finite answer or a realised successful correction.
+
+The [integer protocol][t12-integer] has advanced a different question: it supplies an all-tapes-total finite-input procedure. A remaining objection cannot simply say that this integer report is only measurable and no computation exists. Its input supply, hidden-information interface and maintained service remain application burdens; Gaussian exact-real acquisition is a separate question. Do not relabel pointwise finite execution as a tight runtime bound.
+
+The [final clarification][t12-clarification] distinguishes two conclusions. Positive bounded capture contradicts the fresh diffuse law under the joint assumptions. The completed-report calculation instead shows domination of a policy. The architecture, reporter and losing behaviour remain mathematically consistent. A stronger original-support inference through that policy route must address the agent's possible abstention, commitment, model revision or justified rejection of the service assumption—not merely show that the architecture could run the reporter.
+
+The [local chain-foundation candidate][t12-chain] likewise narrows its actual-warrant obligation to one complete incoming-closed ancestor cone, without supplying that witness. Its root conclusion must not be silently upgraded to a unique complete necessary bearer. These source-specific limits do not revoke the [later retained foundational appraisals][retained] or require independent foundational routes to pass through this stochastic example.
+
+
 ## Joint feasibility is not supplied by marginal ranges
 
 The [occurrence/feasibility join][join] already gives the common relational lesson. Applying it elsewhere requires the actual admissible joint relation and the justification for that relation. The missing-outcome work's sharp endpoint claim depends on feasible completions; the linguistic record's complete rows depend on the particular source occurrences and their interpretative roles.
@@ -68,3 +79,9 @@ The full frontier page will need the original obligation, argument and supersess
 [qualification]: ../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md
 [recovery]: ../../research/t20-v6-20261012/SOURCE_RECOVERY.md
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
+
+[t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
+[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
+[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
+[t12-chain]: ../../experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md

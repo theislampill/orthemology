@@ -94,6 +94,58 @@ For missing outcomes, the source's endpoint bounds require jointly feasible comp
 
 The shared operation is retention of the admissible joint relation before projection or optimisation. The owner records this as an inherited source-bound join, not a new general theorem, fresh primary acquisition or actual empirical coupling. Its linguistic and empirical contracts remain distinct.
 
+## Fresh histories, acquisition and policy
+
+The following are the existing **Twelfth** result identifiers and source-scoped statements, not new IDs or fresh acceptance decisions. [Full collection statements][twelfth] · [Work-level reading order](PAPER-CATALOGUE.md#fresh-histories-access-and-source-warrant-the-twelfth-checkpoint).
+
+### Concentration and coherent histories
+
+**`T12-CONCENTRATION`, `T12-COHERENT-HISTORY`, `T12-BOUNDED-CAPTURE`.** The [article][t12-fresh], [ordinary review][t12-concentration-review] and [quantitative supplement][t12-capture] preserve the relevant event-domain, ordinary-real-value and independence assumptions. For Gaussian innovation variance `n`, the finite-additive bound is
+
+```text
+P(Y + Z ∈ I) ≤ |I| / √(2πn).
+```
+
+If arbitrarily long fresh blocks bind the same terminal law, every bounded terminal interval is null. One justified positive bounded capture excludes that package; terminal tightness is stronger than necessary for this contradiction. Conversely, the ultralimit construction supplies a coherent non-tight history with the full ordinary noise marginal and pointwise finite positions. Recurrences and iid increments alone are weaker than state/future freshness. The quantitative supplement gives state/block separation from an independent benchmark and explains when that separation tends to one.
+
+### Information growth and complete coordination
+
+**`T12-COORDINATION-INFORMATION`.** [Coordination paper, sections 1–4][coordination]. In the **ordinary countably additive** setting, for fixed bounded interval length `L > 0`, common terminal capture `p > 0`, and binary entropy `h(p)` in nats,
+
+```text
+I(Y_n; S_n) ≥ (p/2) log n
+              - p log(L/√(2π)) - h(p).
+```
+
+Tightness yields `liminf I/log n ≥ 1/2`, and the supplied consistent Gaussian anchor attains that coefficient. A complete discrete mediator requires `I(Y_n;S_n) ≤ H(R_n)`; uncontrolled side information must also be counted. This is not a finitely additive entropy theory. The [finite-alphabet result above](#finite-mediator) is a sharper exact one-horizon capacity statement from the **same work**, not a second paper or a forward-causal implementation.
+
+### Magnitude-sensitive acquisition
+
+**`T12-OBSERVATION-RESOURCE`.** [Access paper, section 3][t12-access]. Suppose successful acquisition `C` within resource budget `m` implies `|X_0| ≤ b(m)`. Under the same operative probability and information state,
+
+```text
+P(C) ≤ P(|X_0| ≤ b(m)) + P(T > m).
+```
+
+Positive warranted success and a tail smaller than that success probability force positive bounded mass. Tight resources suffice, but one suitable tail bound is enough. Independence between the resource and target is unnecessary. Finite output, conditional accuracy, realised success and pointwise eventual search do not alone establish this magnitude-sensitive contract.
+
+### Total reporting and diachronic policy
+
+**`T12-TOTAL-INTEGER-REPORT`, `T12-REPORT-POLICY`.** [Total integer procedure][t12-integer] · [Access/policy derivations][t12-access] · [Final clarification][t12-clarification]. The integer procedure halts on every supplied finite input and every bit tape, including all tails. Its runtime is nevertheless non-tight. At exact reports the stipulated event has posterior zero although its prior is one half; a completed two-trade policy is uniformly dominated, and the forecast comparison differs from finite-deadline averaging.
+
+The [deadline example](APPLICATIONS.md#finite-deadlines-and-the-no-report-branch) retains the residual no-report cell. The clarification does not rewrite the frozen article: it explains that the completed policy's domination is not impossibility of the history or reporting architecture. Input, information and action-opportunity assumptions remain part of the result's application.
+
+### Prescribed finite interventions
+
+**`T12-FORWARD-INTERVENTIONS`.** [Complete intervention supplement][t12-interventions]. On the declared anchored path law, finite prescribed overwrites have exact effects
+
+```text
+X′_t - X_t = Σ_{j ∈ J, j < t} (a_j - ξ_j).
+```
+
+The whole prehistory through the earliest selected time is preserved. Distinct-time replacements commute, with explicit exceptions for inconsistent overlapping prescriptions; pushforward preserves the stated transformed past/future factorisation. Infinite-past, adaptive and future-dependent replacement families need additional hypotheses. This constructive result is not a claim of physical manipulability or a Gaussian-null conditioning rule.
+
+
 ## Philosophical arguments have source routes too
 
 The positive recognition/correction route is not forced into a theorem status it does not own. Read the [atlas account](RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction), the [source substrate][sound] and the [later retained-passage qualification][retained]. Their arguments, premises and source scopes are visible without either declaring them kernel-verified or erasing their affirmative content under a blanket “open” label.
@@ -168,3 +220,11 @@ The independent [candidate/owner map][owner-map] retains all baseline paths, inc
 [experiment-status]: ../../experiments/experiment-status.yaml
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
 [fisher-control]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
+
+[t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
+[t12-concentration-review]: ../../experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md
+[t12-capture]: ../../experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md
+[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
+[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
+[t12-interventions]: ../../experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md

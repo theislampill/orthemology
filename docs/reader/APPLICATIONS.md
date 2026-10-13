@@ -56,6 +56,23 @@ Their sum is always one. The Cartesian relaxation admits sums zero and two; thos
 
 **What transfers:** preserve the jointly admissible relation before projecting to coordinate answers or optimising an objective. The Cartesian set can still be a labelled outer relaxation. **What does not transfer:** the linguistic records do not prove dependence among actual missing outcomes, and the statistical example does not authenticate Arabic sources or decide an interpretative truth dispute. The [existing review][join-review] preserves that boundary.
 
+## Finite deadlines and the no-report branch
+
+The [bounded-access paper, section 6][t12-access], supplies a concrete test of what counts as acquired information. In its stated report model let `A` have prior probability one half, and let `Q_m = 1 - 2^(-m)`. Each exact report has posterior zero for `A`, but a finite deadline also leaves `D_m`, the event that no report has arrived.
+
+Substituting deadline **two** into the source's formulas gives
+
+```text
+P(H₁) = 1/4; P(H₂) = 1/8; P(D₂) = 5/8.
+P(A | H₁) = P(A | H₂) = 0.
+P(A | D₂) = 4/5.
+```
+
+The weighted posterior is still `0 + 0 + (5/8)(4/5) = 1/2`. The appropriate finite-deadline forecast has prior quadratic loss `1/10`, compared with `1/4` for the constant prior forecast. Deleting the no-report cell would erase precisely the information state that restores finite-partition averaging. These numbers are a checked substitution into the existing analytic formulas, not observed experimental data or a new result.
+
+The [total integer construction][t12-integer] makes completed reporting available under its supplied-input interface; that does not make its runtime law tight. The [clarification][t12-clarification] preserves the distinction between the dominated completed policy and impossibility of the supporting architecture. Applying this example to actual inquiry requires the law, information protocol, operational access and scoring/action norm to be warranted together. It does not redefine reason-responsive correction as merely a favourable score.
+
+
 ## From reading a proposal to using an implementation
 
 For any application reached through this guide, identify whether the target is a manuscript, worked fixture, reference implementation, executable package, or an empirical result. Follow the target package's actual maintained entry point and its declared environment.
@@ -76,3 +93,7 @@ The eventual full applications page must connect the remaining application famil
 [latent]: ../../applications/latent-state-orthing/README.md
 [agentic]: ../../applications/agentic-runtime/README.md
 [recovery]: ../../research/t20-v6-20261012/SOURCE_RECOVERY.md
+
+[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
+[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md

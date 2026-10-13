@@ -601,5 +601,82 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         self.assertFalse(self.permitted(value))
 
 
+
+class TwelfthCollectionCoverageTests(unittest.TestCase):
+    """Bounded semantic-catalogue coverage, not a new theorem registry."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_twelfth", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        prefix = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((prefix / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((prefix / "CROSSWALK.json").read_text())
+        identity_path = (
+            "experiments/orthemology-v5-successors/source-store/"
+            "ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/"
+            "CHECKPOINT_IDENTITY.json"
+        )
+        raw = subprocess.check_output(
+            ["git", "show", cls.owners["baseline"]["commit"] + ":" + identity_path], cwd=ROOT)
+        cls.members = json.loads(raw)["payloads"]
+
+    def test_all_nine_declared_twelfth_texts_have_work_and_reading_routes(self):
+        # The denominator is the original checkpoint owner, not a list copied
+        # from whichever catalogue entries happen to survive a change.
+        self.assertEqual(len(self.members), 9)
+        sources = self.cross["sources"]
+        catalogue = ROOT / "docs/reader/PAPER-CATALOGUE.md"
+        headings = self.mod.markdown_index(catalogue.read_text())["anchors"]
+        for member in self.members:
+            with self.subTest(source=member["path"]):
+                keys = {k for k, v in sources.items() if v["sha256"] == member["sha256"]}
+                self.assertTrue(keys, "Declared Twelfth source is absent from the crosswalk")
+                represented = [w for w in self.cross["works"] if keys.intersection(w["source_keys"])]
+                self.assertTrue(represented, "A collection link is not a work-level disposition")
+                for key in keys:
+                    path = sources[key]["path"]
+                    self.assertIn(path, self.owners["required_work_sources"])
+                    body = (ROOT / path).read_bytes()
+                    self.assertEqual(len(body), member["bytes"])
+                    self.assertEqual(hashlib.sha256(body).hexdigest(), member["sha256"])
+                for work in represented:
+                    entry = work.get("catalogue_entry", "")
+                    self.assertTrue(entry.startswith("docs/reader/PAPER-CATALOGUE.md#"))
+                    fragment = entry.partition("#")[2]
+                    self.assertIn(fragment, headings)
+                    page = self.mod.markdown_index(catalogue.read_text())
+                    selected = [h for h in page["headings"] if h[0] == fragment]
+                    self.assertEqual(len(selected), 1)
+                    _, level, start = selected[0]
+                    end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+                    linked = set()
+                    for line, href in page["links"]:
+                        if start <= line < end:
+                            target = self.mod.resolve_reader_link(ROOT, "docs/reader/PAPER-CATALOGUE.md", href)
+                            if target is not None:
+                                linked.add(target[0])
+                    self.assertTrue(any(sources[key]["path"] in linked for key in keys),
+                                    "The named work section must directly reach its source")
+
+    def test_source_review_does_not_become_another_independent_theorem(self):
+        works = [w for w in self.cross["works"] if w["key"] == "t12-concentration-review"]
+        self.assertEqual(len(works), 1, "The substantive review needs an explicit role")
+        self.assertEqual(works[0]["role"], "review")
+        self.assertIn("t12-concentration-review", self.cross["sources"])
+
+    def test_each_new_twelfth_work_omission_is_detected(self):
+        self.assertEqual(self.mod.check(ROOT, self.owners, self.cross), [])
+        for member in self.members:
+            keys = {k for k, v in self.cross["sources"].items() if v["sha256"] == member["sha256"]}
+            altered = deepcopy(self.cross)
+            before = len(altered["works"])
+            altered["works"] = [w for w in altered["works"] if not keys.intersection(w["source_keys"])]
+            with self.subTest(source=member["path"]):
+                self.assertLess(len(altered["works"]), before, "The omission must change the catalogue")
+                errors = self.mod.check(ROOT, self.owners, altered)
+                self.assertTrue(any(e.startswith("missing-work:") for e in errors), errors)
+
+
 if __name__ == "__main__":
     unittest.main()

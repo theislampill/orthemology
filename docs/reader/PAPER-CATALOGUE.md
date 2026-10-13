@@ -8,7 +8,9 @@
 
 Choose a work, not a file extension. A work can have several reading forms; a reference volume can contain more than one source document; a checkpoint can contain many works and supporting records. A PDF, its generated TeX and its Markdown input are not three independently authored papers.
 
-This expanding catalogue maps the representative works, five further manuscript families and all governed publication-profile relationships. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] and [continuation record][curation04] make the actual examination scope explicit.
+This expanding catalogue maps the representative works, five further manuscript families, the nine current Twelfth checkpoint texts and all governed publication-profile relationships. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] and [continuation record][curation04] make the actual examination scope explicit.
+
+Browse by role: [core exposition](#core-exposition-and-formal-reference), [philosophical/theological manuscripts](#philosophical-and-theological-manuscripts), [mathematical manuscripts](#mathematical-manuscripts-and-preserved-editions), [Twelfth histories and access](#fresh-histories-access-and-source-warrant-the-twelfth-checkpoint), [recognition and correction](#recognition-and-correction), [occurrence and feasibility](#occurrence-and-feasible-completion), or [supporting reference](#supporting-reference-not-another-research-article).
 
 ## Core exposition and formal reference
 
@@ -112,7 +114,7 @@ The original PDF’s publication hold remains in force. The companion’s readab
 
 **A bounded information consequence for coordination explanations.** [Ordinary mathematical text][coordination] · [Twelfth collection guide][twelfth].
 
-The paper analyses the information needed by a complete coordination mediator. Its finite-alphabet capture result supplies a sharp fixed-horizon Gaussian bound and a matching construction. Its exact role and limitations appear in the [result entry](RESULT-INDEX.md#finite-mediator): a finite program description need not be a complete mediator, and single-horizon attainment does not establish one forward-causal history across all horizons.
+The paper analyses the information needed by a complete coordination mediator. In its ordinary countably additive setting, a fixed positive bounded-capture probability forces logarithmic information growth with the horizon; terminal tightness yields the asymptotic coefficient one half, attained by a consistent Gaussian anchor. A uniformly bounded complete-record entropy cannot supply that dependence across all horizons. Its finite-alphabet capture result supplies a sharper exact fixed-horizon Gaussian bound and a matching construction. Its exact role and limitations appear in the [result entry](RESULT-INDEX.md#finite-mediator): a finite program description need not be a complete mediator, and single-horizon attainment does not establish one forward-causal history across all horizons.
 
 This substantive work is readable in Markdown. Lack of a PDF is not a reason to omit it.
 
@@ -135,6 +137,81 @@ The [tensor result entry](RESULT-INDEX.md#tensor-moments) distinguishes all-grad
 The first work defines a full-source Fisher metric and gradient-descent problem on finite positive joint laws. The corollary states what preserving selected ambient norms requires on a fixed weight fibre. A finite-valued supplement cannot distinguish that entire fibre when it has positive dimension; the sharp continuous-coordinate count is fixed-fibre, not a general global chart theorem.
 
 The [geometry result entry](RESULT-INDEX.md#fisher-geometry) specifies the stronger preservation contract. These are actual conditional constructions; identifying their variables with a real person's cognition requires additional modelling and evidence.
+
+## Fresh histories, access and source warrant: the Twelfth checkpoint
+
+The [Twelfth collection guide][twelfth] brings together nine current research texts, not nine PDF renderings or nine independent confirmations. The coordination paper is [catalogued above](#finite-coordination-information); the other eight texts are distinguished below. The [checkpoint identity][t12-identity] fixes this particular nine-text population. Earlier two-paper recovery records and repeated copies remain historical material, not substitutes for it.
+
+The sequence is useful to read as a connected inquiry. A concentration bound identifies incompatible chance and capture assumptions; an explicit diffuse history shows what remains mathematically possible without capture. Observation and reporting then make the resource and policy questions concrete. The source-use and chain-foundation texts examine different actual-warrant questions rather than treating the mathematical model as proof of their premises.
+
+### Fresh innovation histories and original support
+
+**Fresh histories, bounded observation, and original support.** [Complete written article][t12-fresh] · [Mathematical review][t12-concentration-review].
+
+The article proves a Gaussian anti-concentration bound for an ordinary real-valued **finitely additive** joint probability. Independence and the Gaussian marginal's tail control suffice; tightness of the other variable and joint countable additivity are not required. Applying the bound to arbitrarily long fresh innovation blocks, all bound to one terminal law, makes every bounded terminal interval null. Thus even one warranted positive bounded-capture probability contradicts that package.
+
+Its constructive counterbalance is equally important: a fixed ultralimit of uniform-anchor laws gives a coherent fresh history in which every sample position is finite, the full noise marginal is ordinary iid Gaussian, and every bounded position interval has probability zero. The article also supplies finite forward interventions and distinguishes a stable contractive process from its accumulating-variance obstruction. These are positive mathematical constructions, not merely warnings about evidence.
+
+For an original-support argument, the article identifies an additional joint-realisability burden concerning the actual received support, stochastic mechanism and observation contract. It credits the inherited original-possession and recognition arguments without pretending that this stochastic route establishes an actual original participant, unique complete bearer or intrinsic necessity. The [source-specific frontier](CURRENT-FRONTIERS.md#fresh-histories-access-and-rational-policy) preserves that distinction rather than turning a local limitation into a verdict on every foundational route.
+
+### Bounded acquisition and diachronic policy
+
+**Bounded access and diachronic coherence.** [Complete assessment][t12-access] · [Separate final clarification][t12-clarification].
+
+The positive operational result replaces a blanket preference for countable additivity with a specified acquisition task. If successful acquisition within resource budget `m` confines the target to a bounded range, then finite subadditivity bounds success by bounded capture plus the resource tail. A warranted positive success probability and a sufficiently small tail therefore force positive bounded mass. The law, information state, target and magnitude-sensitive task must stay fixed. A finite output alphabet or a correct actual answer does not by itself supply that contract.
+
+A second construction uses a countable partition of positive-probability exact reports. Each report gives a specified event posterior zero although its prior is one half. Under the stated reporting and trading interface, two locally favourable transactions incur a fixed loss in every completed outcome; a quadratic forecast calculation supplies a related prospective-accuracy comparison. Every finite deadline retains a no-report branch and does not inherit the same completed-policy conclusion.
+
+The final clarification is a **separate interpretative supplement**, not an edited edition of the article. It distinguishes mathematical incompatibility of positive bounded capture from domination of a particular completed policy: the history, reporter and losing behaviour are mathematically consistent. Abstention, precommitment, model revision and rejection of an unwarranted service assumption remain different responses. Outright resale can lock in the loss at report time without an extra executed settlement stage, while warranted ticket value and transfer conditions remain necessary.
+
+### Total finite-input reporting
+
+**A total integer report protocol with non-tight resources.** [Complete supplied-input construction][t12-integer] · [Clarification of completed execution][t12-clarification].
+
+For the retained integer analogue, the paper gives an explicit finite-state reporting procedure using a private sign bit, a finite unary magnitude tape and sequential noise bits. The end marker caps the waiting rule, so **every valid finite input and every tape—including all tails—terminates**. The public clock, silence and pulse are specified so the original exact-report probabilities and policy calculations survive. This positively answers the objection that the integer report is merely measurable or only almost-surely computable.
+
+Total execution is not a uniform or tight resource guarantee. Every fixed bound on the full magnitude input has probability zero in this law, whereas the runtime meets a fixed deadline with the paper's stated positive probability on one branch; its tail tends to one half. These are different resource claims. The procedure needs fixed finite control plus the supplied tape, not infinite working memory in an actual run. Supplying that input, maintaining the clock/channel/opportunities, generating the diffuse law and handling Gaussian exact-real acquisition remain distinct application questions. No physical implementation or fresh execution is claimed here.
+
+### Finite forward interventions
+
+**Exact finite forward intervention semantics.** [Complete ordinary mathematical supplement][t12-interventions].
+
+The supplement supplies Borel overwrite maps on the anchored path space. A prescribed innovation replacement leaves all earlier states fixed and changes subsequent states by exactly the replacement displacement; at negative times an explicit anchor correction is essential. Finite disjoint replacements compose and commute, and pushforward preserves the relevant recurrence and transformed past/future independence. This is additional, constructive intervention structure—not an inference of intervention semantics from a causal-looking arrow.
+
+Overlapping replacements commute only when their prescribed values agree; otherwise the last replacement wins. Arbitrary infinite-past, adaptive or future-dependent replacements are not included. Unmodified Gaussian noise retains its law, the targeted coordinates become fixed, and bounded capture is not created. The operation is pushforward, not conditioning on a Gaussian-null event. Its mathematical availability leaves actual manipulability and productive realisability as separate questions.
+
+### Concentration review and consistency construction
+
+**Finitely additive concentration and a past-complete innovation law.** [Complete scoped ordinary-mathematics review][t12-concentration-review].
+
+This substantive review checks the finite-partition proof, event measurability, endpoints, sharp Gaussian form and common-terminal-law consequence. It also develops the full Borel ultralimit construction, including reanchoring, full past/future factorisation and an integer analogue used by the later total-report protocol. Its discussion of non-Archimedean values distinguishes the coarse bound with strict slack from conclusions whose limit step requires ordinary real values.
+
+It is catalogued with the role **review**, not counted as another independent discovery of every reviewed theorem. Its recorded acceptance is limited to the ordinary arguments and their hypotheses. This refactor's reading is not a new independent mathematical review, human-specialist endorsement or external priority assessment. The [final verification scope][t12-scope] retains the same distinction between recorded checks and stronger claims.
+
+### Quantitative capture and positive controls
+
+**Quantitative independence, bounded capture, and positive controls.** [Complete quantitative supplement][t12-capture].
+
+Using the event-distance convention `d_TV(P,Q) = sup_E |P(E)-Q(E)|`, the supplement turns bounded capture into a finite-horizon lower bound on departure from an independent state/noise benchmark. One positive capture probability gives its corresponding asymptotic lower bound; a tight common terminal law strengthens this to distance tending to one. The benchmark needs the specified marginals and common event domain; the finitely additive construction states its integration order rather than assuming product uniqueness.
+
+Its positive controls matter to interpretation: an expanding search can terminate at every finite-valued sample while missing every fixed budget almost surely under the diffuse law; a contractive Gaussian autoregression has a tight fresh history because block variance stays bounded; and deterministic translation has a nonstationary entrance law despite lacking a countably additive stationary probability. These are scoped applications and standard controls, not claims of new general probability-theory priority or original-source existence.
+
+### A declared standard and an attested occurrence
+
+**A declared standard and an attested occurrence.** [Complete source-use report][t12-occurrence].
+
+The report records two distinct positive findings: the selected divergent reading is attested in an imaged 1911 printed witness, and that witness's introduction declares the Leonine edition as a revision/correction standard. Attestation can exclude a later stage as the first introduction of an already present feature; the declaration supplies defeasible evidence of an editorial relationship. Neither alone identifies the exact Latin exemplar, responsible actor or local production operation.
+
+This is a claim-relative improvement to actual source-use evidence, not merely another provenance label. The report preserves the stronger genealogy question and distinguishes declared practice from universal occurrence-level conformity. Its own image-inspection and source-review record is inherited evidence here: the refactor read the report, **not** the 460-page facsimile or private captures. A further occurrence-level production finding would need discriminating evidence such as an identified working exemplar, annotated proof or contemporary correction, not another mirror of the same wording.
+
+### A local route to original participation
+
+**A local route to an original participant.** [Complete source-bound foundational candidate][t12-chain].
+
+The candidate applies its attributed conditional first-cause argument to the complete incoming-closed ancestor cone of **one** relevant ancestor of the correction. If that cone has a root under the stated acyclicity, chain-foundation/common-bound and size restrictions, that root is also an ancestor of the correction. The conditions need not hold on every other branch. This is a useful reduction of the warrant burden, not a new general theorem or an actual witness already supplied.
+
+Incoming closure prevents a selected mechanism from being called independent merely because its earlier suppliers were omitted. Identifying a root with original existential supply additionally requires that the chosen relation exhaust the relevant supply respect. The text retains the positive fixed-input principle and original possession's prima-facie force, but does not infer that ordered receiving acts identify one common input. A root, an original participant, a unique complete bearer and intrinsic necessity remain separate claims. The present synopsis attributes the argument to the inspected programme text; it is not a fresh inspection of the external author notes.
+
 
 ## Recognition and correction
 
@@ -214,3 +291,15 @@ Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publica
 [epistemic-tuples-reading]: ../../research/source-fidelity/epistemic-tuples/README.md
 [epistemic-tuples-correction]: ../../research/t20-v6-20261012/sources/c67c2fa0a538875a2bbbc0df51ad7877a6a701d11cb1567af4f250ff7c2724ad/research.md#5-et05-strict-cone-repair-and-vector-equilibrium
 [curation04]: ../project-closure/reader-refactor-issue-35/RECOVERY-04.md
+
+[t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
+[t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
+[t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
+[t12-interventions]: ../../experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md
+[t12-concentration-review]: ../../experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md
+[t12-capture]: ../../experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md
+[t12-occurrence]: ../../experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md
+[t12-chain]: ../../experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md
+[t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
+[t12-scope]: ../../experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md
+[t12-identity]: ../../experiments/orthemology-v5-successors/source-store/ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/CHECKPOINT_IDENTITY.json
