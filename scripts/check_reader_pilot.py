@@ -98,6 +98,41 @@ def permitted_reader_ci_addition(repo, row, body):
             and body == before.replace(anchor, addition + anchor, 1))
 
 
+def permitted_historical_status_pin(repo, row, body):
+    """Admit one exact historical metadata reference, never rewritten science.
+
+    The current status index acquired this work order's candidate classification.
+    T20 still owns its original bytes. Resolve that one REUSE record at the
+    existing T20 baseline, using the resolver's already supported historical form.
+    No other record, eligibility, count, source/public hash or status may change.
+    """
+    if row["path"] != "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json":
+        return False
+    original = subprocess.run(["git", "cat-file", "blob", row["git_oid"]],
+                              cwd=repo, capture_output=True, check=False)
+    if original.returncode:
+        return False
+    try:
+        expected = json.loads(original.stdout, object_pairs_hook=unique_object)
+        candidate = json.loads(body, object_pairs_hook=unique_object)
+        identity = "94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074"
+        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+        if len(selected) != 1:
+            return False
+        source = selected[0]
+        if (source.get("disposition") != "REUSE"
+                or source.get("repository_path") != "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"
+                or source.get("source_bytes") != 5312
+                or source.get("public_bytes") != 5312
+                or source.get("public_sha256") != identity):
+            return False
+        source.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+                      git_blob="d4ec27e7da404b830f1a6fe687809c1cf2011413")
+        return candidate == expected
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
 def check(repo, owners, cross):
     """Return precise mechanical errors; an empty list is not semantic acceptance."""
     repo = Path(repo)
@@ -163,7 +198,9 @@ def check(repo, owners, cross):
             body = safe_path(repo, path).read_bytes()
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
-            if digest != row["git_oid"] and not permitted_reader_ci_addition(repo, row, body):
+            if (digest != row["git_oid"]
+                    and not permitted_reader_ci_addition(repo, row, body)
+                    and not permitted_historical_status_pin(repo, row, body)):
                 fail("owner", path + " changed; review its routing scope")
             mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
             if mode != row["mode"]:

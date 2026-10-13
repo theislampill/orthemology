@@ -192550,7 +192550,9 @@
       "repository_path": "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
       "public_sha256": "94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074",
       "public_bytes": 5312,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "d4ec27e7da404b830f1a6fe687809c1cf2011413"
     },
     {
       "source_sha256": "94fb758bbf8a2b8e3cb466b1db4c6cc56329461eade84ddb54b3acf59e62d35b",

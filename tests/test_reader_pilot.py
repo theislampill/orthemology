@@ -547,5 +547,59 @@ class ReaderFixtureReferenceTests(unittest.TestCase):
         self.assertEqual(missing, [], "Synthetic fixture paths must not claim live repository sources")
 
 
+
+class HistoricalMetadataPinTests(unittest.TestCase):
+    """Historical source custody survives an authorised current-index addition."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_metadata_pin", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        owner_path = ROOT / "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json"
+        baseline = json.loads(owner_path.read_text())["baseline"]["commit"]
+        cls.manifest_path = "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
+        oid = subprocess.check_output(["git", "rev-parse", baseline + ":" + cls.manifest_path], cwd=ROOT).decode().strip()
+        cls.row = {"path": cls.manifest_path, "git_oid": oid}
+        cls.original = json.loads(subprocess.check_output(["git", "cat-file", "blob", oid], cwd=ROOT))
+        cls.identity = "94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074"
+
+    def candidate(self):
+        value = deepcopy(self.original)
+        row = next(r for r in value["objects"] if r["source_sha256"] == self.identity)
+        row.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+                   git_blob="d4ec27e7da404b830f1a6fe687809c1cf2011413")
+        return value, row
+
+    def permitted(self, value):
+        gate = getattr(self.mod, "permitted_historical_status_pin", None)
+        return bool(gate and gate(ROOT, self.row, json.dumps(value).encode()))
+
+    def test_exact_historical_status_pin_preserves_source_identity(self):
+        value, row = self.candidate()
+        self.assertTrue(self.permitted(value), "the exact historical metadata pin is not admitted")
+        self.assertEqual(row["public_sha256"], self.identity)
+        self.assertEqual(row["source_bytes"], 5312)
+
+    def test_historical_pin_cannot_replace_the_scientific_source_hash(self):
+        value, row = self.candidate()
+        row["public_sha256"] = "0" * 64
+        self.assertFalse(self.permitted(value))
+
+    def test_historical_pin_cannot_use_a_moving_revision(self):
+        value, row = self.candidate()
+        row["repository_revision"] = "HEAD"
+        self.assertFalse(self.permitted(value))
+
+    def test_historical_pin_cannot_change_an_unrelated_row(self):
+        value, row = self.candidate()
+        value["objects"][0]["role"] = "reclassified"
+        self.assertFalse(self.permitted(value))
+
+    def test_historical_pin_cannot_claim_another_git_blob(self):
+        value, row = self.candidate()
+        row["git_blob"] = "0" * 40
+        self.assertFalse(self.permitted(value))
+
+
 if __name__ == "__main__":
     unittest.main()
