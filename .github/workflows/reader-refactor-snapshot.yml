@@ -1,44 +1,44 @@
-name: issue-35-recovery-05
+name: issue-35-curation-checkpoint-05
 
-# Temporary read-only transport for the already authorised Issue 35 branch.
-# Export public Git objects only; remove before the next qualified checkpoint.
+# One-shot, exact-tree checkpoint for the owner-authorised feature branch.
+# The encoded patch contains only the five named documentation/generated files.
+# This workflow removes itself; no merge, source rewrite or release is permitted.
 on:
   push:
     branches: [refactor/issue-35-research-reader-20261012]
     paths: [.github/workflows/reader-refactor-snapshot.yml]
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: issue-35-curation-checkpoint-05
+  cancel-in-progress: false
 jobs:
-  recover:
+  checkpoint:
     if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
+    env:
+      TARGET_BRANCH: refactor/issue-35-research-reader-20261012
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ github.sha }}
-          persist-credentials: false
-      - name: Export incremental public history over the preserved recovery bundle
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - name: Install existing locked dependencies
+        run: python -m pip install --quiet --disable-pip-version-check -r requirements-ci.lock.txt
+      - name: Apply the exact locally tested documentation patch
         shell: bash
         run: |
           set -euo pipefail
-          test "$(git rev-parse HEAD^)" = 32440aad4db897be5b8ef2fb7086a6f7a87f4cd4
-          test "$(git rev-parse 'HEAD^^{tree}')" = 1f1e0873752ae9125fb5cfd22d7632e61f1b0806
-          base=2a55c3ab60bae8e8161b80ab3ea78cdfab945412
-          git merge-base --is-ancestor "$base" HEAD
-          out="$RUNNER_TEMP/issue35-recovery05"
-          mkdir -p "$out"
-          git update-ref refs/heads/issue35-public-recovery "$GITHUB_SHA"
-          git bundle create "$out/increment.bundle" refs/heads/issue35-public-recovery "^$base"
-          git rev-parse HEAD > "$out/transport-head.txt"
-          git rev-parse 'HEAD^{tree}' > "$out/transport-tree.txt"
-          git rev-parse HEAD^ > "$out/saved-head.txt"
-          git rev-parse origin/main > "$out/main-head.txt"
-          (cd "$out"; sha256sum increment.bundle transport-head.txt transport-tree.txt saved-head.txt main-head.txt > SHA256SUMS)
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: issue35-recovery05-public-increment
-          path: ${{ runner.temp }}/issue35-recovery05/
-          retention-days: 14
-          if-no-files-found: error
+          test "$(git rev-parse HEAD^)" = 027be47c7426e1e52da640ac0066f85de4fe5892
+          test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
+          test -z "$(git status --porcelain)"
+          mkdir -p "$RUNNER_TEMP/issue35-curation05"
+          printf 'EVIDENCE_DIR=%s/issue35-curation05\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import base64, hashlib, os, pathlib, subprocess, zlib
+          data = '''eNrtfdlyHMmR4Du/Ig160K6xEojIuDLIl6EottQ23U0a2Vrt2thYdZxAqgtVpcwskljZmM0/7HzhfMm4Rx6VdaFAcsQWVjK1QBQqI8LDb49w9/RVjFmeX1dtZq78yjVXblPXYdnmTWvacHlnbheZPfXNk2rpw8dM0qB5MOHyUpdO8VCYjBIiOX+S5/npeZ88ffr0nrn/3HviHLf2gTBPzwUf4IPdmU+JwkKe/ySuRDx478ZIrq9ftGeozHXKucmfk91ykrri+75rq0XEIz21V87qt/pWPbScy/GtJKIpDytd+(?)'''
+          PY
