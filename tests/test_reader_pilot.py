@@ -284,6 +284,48 @@ class ReaderPilotTests(unittest.TestCase):
         altered["works"][0]["reading_forms"] = [{"source": "artifacts/core.pdf", "relationship": "governed-rendering"}]
         self.assertEqual(self.check(cross=altered), [])
 
+    def second_edition_fixture(self):
+        profile = self.repo / "docs/profile.yaml"
+        profile.write_text(profile.read_text() +
+                          "- artifact_id: core-second\n  sources: [theory/core.md, theory/multi.md]\n"
+                          "  profile_kind: technical-paper\n")
+        edition = self.repo / "artifacts/core-second.pdf"
+        edition.write_text("synthetic second governed edition")
+        self.git("add", ".")
+        self.git("commit", "-qm", "fixture second edition")
+        owners, cross = deepcopy(self.owners), deepcopy(self.cross)
+        owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").strip()
+        cross["sources"]["docs/profile.yaml"]["sha256"] = hashlib.sha256(profile.read_bytes()).hexdigest()
+        cross["sources"]["artifacts/core-second.pdf"] = {
+            "path": "artifacts/core-second.pdf",
+            "sha256": hashlib.sha256(edition.read_bytes()).hexdigest(),
+            "read_scope": "fixture only",
+        }
+        return owners, cross
+
+    def test_second_governed_edition_does_not_duplicate_the_work(self):
+        owners, cross = self.second_edition_fixture()
+        count = len(cross["works"])
+        cross["works"][0]["reading_forms"] = [
+            {"source": "artifacts/core.pdf", "relationship": "governed-rendering"},
+            {"source": "artifacts/core-second.pdf", "artifact_id": "core-second",
+             "relationship": "governed-rendering"},
+        ]
+        self.assertEqual(self.check(owners=owners, cross=cross), [])
+        self.assertEqual(len(cross["works"]), count)
+
+    def test_new_governed_edition_cannot_disappear(self):
+        owners, cross = self.second_edition_fixture()
+        self.reject(self.check(owners=owners, cross=cross), "artifact")
+
+    def test_second_edition_must_target_its_own_governed_pdf(self):
+        owners, cross = self.second_edition_fixture()
+        cross["works"][0]["reading_forms"] = [
+            {"source": "artifacts/gallery.pdf", "artifact_id": "core-second",
+             "relationship": "governed-rendering"},
+        ]
+        self.reject(self.check(owners=owners, cross=cross), "rendering-target")
+
     def test_discovery_owner_drift_is_detected_from_pinned_git(self):
         p = self.repo / "research/new/README.md"
         before = p.read_bytes()
