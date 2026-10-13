@@ -326,6 +326,66 @@ class ReaderPilotTests(unittest.TestCase):
         ]
         self.reject(self.check(owners=owners, cross=cross), "rendering-target")
 
+    def ci_owner_fixture(self):
+        path = self.repo / ".github/workflows/validate.yml"
+        path.parent.mkdir(parents=True)
+        before = ("name: validate\npermissions:\n  contents: read\njobs:\n"
+                  "  validate:\n    steps:\n"
+                  "      - name: Repository hygiene + honesty checks\n"
+                  "        run: python scripts/validate_repo.py\n"
+                  "      - name: T20 v6 independent public projection and source boundaries\n"
+                  "        run: python -B scripts/validate_t20_v6_projection.py\n")
+        step = ("      - name: Reader pilot source, edition and navigation controls (not semantic acceptance)\n"
+                "        run: |\n"
+                "          python -B tests/test_reader_census.py\n"
+                "          python -B -O tests/test_reader_census.py\n"
+                "          python -B tests/test_reader_pilot.py\n"
+                "          python -B -O tests/test_reader_pilot.py\n"
+                "          python -B scripts/check_reader_pilot.py\n")
+        path.write_text(before)
+        self.git("add", ".github/workflows/validate.yml")
+        self.git("commit", "-qm", "fixture operational CI owner")
+        owners = deepcopy(self.owners)
+        owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").strip()
+        owners["collections"].append({
+            "key": "ci", "include": [".github/"], "exclude": [],
+            "owners": [".github/workflows/validate.yml"],
+        })
+        anchor = "      - name: T20 v6 independent public projection and source boundaries\n"
+        candidate = before.replace(anchor, step + anchor)
+        path.write_text(candidate)
+        return path, owners, before, candidate, step
+
+    def test_exact_reader_ci_addition_retains_pinned_operational_owner(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        self.assertNotEqual(candidate, before)
+        self.assertEqual(self.check(owners=owners), [])
+
+    def test_ci_owner_extension_cannot_remove_an_existing_gate(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        path.write_text(candidate.replace("        run: python scripts/validate_repo.py\n", "        run: true\n"))
+        self.reject(self.check(owners=owners), "owner")
+
+    def test_ci_owner_extension_cannot_expand_token_permissions(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        path.write_text(candidate.replace("contents: read", "contents: write"))
+        self.reject(self.check(owners=owners), "owner")
+
+    def test_ci_owner_extension_cannot_duplicate_the_reader_step(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        path.write_text(candidate.replace(step, step + step))
+        self.reject(self.check(owners=owners), "owner")
+
+    def test_ci_owner_extension_cannot_relax_the_reader_command(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        path.write_text(candidate.replace("python -B scripts/check_reader_pilot.py", "python -B scripts/check_reader_pilot.py || true"))
+        self.reject(self.check(owners=owners), "owner")
+
+    def test_ci_owner_extension_keeps_the_original_file_mode(self):
+        path, owners, before, candidate, step = self.ci_owner_fixture()
+        path.chmod(0o755)
+        self.reject(self.check(owners=owners), "owner")
+
     def test_discovery_owner_drift_is_detected_from_pinned_git(self):
         p = self.repo / "research/new/README.md"
         before = p.read_bytes()
