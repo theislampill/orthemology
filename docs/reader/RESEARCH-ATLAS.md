@@ -75,6 +75,18 @@ These distinctions connect **objective norm-fixing (avenue 3)** and **semantic f
 
 The [learning route](APPLICATIONS.md#learning-without-silently-changing-the-analysis) asks which earlier results survive inference, model change, repertoire revision or a new analysis. The [collective outlines](APPLICATIONS.md#agentic-coordination-and-writeback-outlines) distinguish shared information from transferred authority and preserve dissent. These are source-owned application contracts and proposals at their stated stages; the later [tensor/Fisher mathematics](#tensor-histories-and-information-geometry) supplies different, genuinely mathematical preservation questions whose noetic interpretation needs its own binding.
 
+## When representations preserve answers but lose proofs
+
+**Question:** If two descriptions evaluate to the same object, may a proof or type certificate be moved from one description to the other?
+
+The [opaque-atom study][t13-opaque] supplies a negative example for a particular representation at a particular type. The [atom/application bridge][t13-bridge] shows a positive, separately specified repair for closed conversion. Neither result by itself answers whether *any* proof exists of every semantically true identity.
+
+The next stage asks that stronger question. The [historical I/SKK note][t13-residual] distinguishes a semantic witness from a missing direct introduction rule; the [Fourteenth full-rule development][t14-separation] then proves noninhabitation through every rule, not just the obvious route. The [separate HasE development][t14-repair] restores the missed typed identity with two stated extensionality rules while retaining the old judgments and a `Raw`-carrier obstruction.
+
+**The connection across avenues 8, 9 and 10 is substantive:** semantic fidelity determines which representation/equality contract a certificate must respect; the exact type-theoretic rules determine what counts as a derivation; and the [certificate/search analysis][t14-certificates] distinguishes checking supplied finite evidence from deciding whether evidence exists. Its closed-identity criterion enables a computability reduction rather than automatically supplying an algorithm.
+
+The shared lesson is not that semantic claims are unusable or that formalisation is futile. It is to state precisely what is preserved, by which operation, under which judgment. A typed extensional repair can be useful without changing raw conversion or proving universal completeness. Read the [work sequence](PAPER-CATALOGUE.md#identity-representations-and-finite-proof), [scoped results](RESULT-INDEX.md#representation-identity-and-proof-search) and [dated frontier distinctions](CURRENT-FRONTIERS.md#identity-obstructions-repairs-and-later-checkers).
+
 ## The original twelve avenues
 
 The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.
@@ -121,3 +133,15 @@ For a named manuscript use the [work catalogue](PAPER-CATALOGUE.md). For an exac
 [t12-access]: ../../experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
+
+[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+
+[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+
+[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+
+[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+
+[t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
+
+[t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md

@@ -67,6 +67,16 @@ The [learning contract][app-coupling] requires explicit per-claim transport acro
 
 The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimplemented outlines. Their next work is proposal-specific source and authority verification followed by bounded implementation and testing; publishing these profiles does not satisfy it. These engineering/interpretation obligations are distinct from proving another theorem or reclassifying any original philosophical argument. Full repository-wide application coverage is also still an editorial obligation of this refactor.
 
+## Identity obstructions, repairs and later checkers
+
+The [Thirteenth residual note][t13-residual] really did leave the all-inhabitant `I/SKK` question unresolved. That is historical, not the last word on the exact target. The [Fourteenth written development][t14-separation] and its [formal component][t14-separation-lean] address the all-rule obstruction in both original judgments. A reader should not be sent back to prove that same negative result simply because the earlier note retains a pending header.
+
+The [separate HasE extension][t14-repair] advances a different target: deriving the missed typed identity through its explicitly added rules. It does not adopt that judgment as the operational calculus, establish universal completeness or remove the `Raw` obstruction. **The useful next application question is which judgment and equality notion the task actually needs**, not whether the old derivation rules secretly changed.
+
+The [finite-certificate paper][t14-certificates] also separates a total check of a supplied finite annotated proof from bare proof search. Its restricted-conversion hypotheses and imported computability premise must accompany a use of the undecidability argument. The [Fifteenth identity collection][t15-group-followup] already records separately scoped exact finite coefficient-checker and certificate developments. Therefore neither “no checker exists anywhere” nor “all semantic equality is now decidable” is a faithful frontier description.
+
+This page records the inspected Thirteenth/Fourteenth sequence and the existence and scope of the named later owner. It does not claim exhaustive curation or fresh verification of the much larger Fifteenth compendium. That remaining reading belongs to the full catalogue task, not to a repetition of the earlier mathematics.
+
 ## Source availability and editorial completion
 
 The [source recovery guide][recovery] distinguishes recovered proof bodies from held or unavailable material and from historical evidence whose original scope remains limited. Its record of binary variants without decoded-equivalence qualification must not become a claim that their texts are all duplicates.
@@ -98,3 +108,15 @@ The full frontier page will need the original obligation, argument and supersess
 [app-runtime]: ../../applications/daee-epistemics/CURRENT-RUNTIME-BOUNDARY.md
 [app-coupling]: ../../applications/latent-state-orthing/UPDATE-COUPLING.yaml
 [app-runtime-outlines]: ../../applications/agentic-runtime/README.md
+
+[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+
+[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+
+[t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
+
+[t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
+
+[t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+
+[t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md

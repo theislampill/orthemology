@@ -30,6 +30,14 @@ For [tensor Theorem G](RESULT-INDEX.md#tensor-moments), distinguish the all-poly
 
 For [the Fisher corollary](RESULT-INDEX.md#fisher-geometry), check the ambient norm identity in the controlling source as well as the corollary and its existing review. The fixed-fibre dimension result does not assert a globally minimal chart or that every posterior task needs the same information.
 
+## Checking an identity result without merging its evidence scopes
+
+Start with the [Thirteenth/Fourteenth work sequence](PAPER-CATALOGUE.md#identity-representations-and-finite-proof). The Thirteenth papers and the Fourteenth certificate/search paper have ordinary written claims. The [later formal suite][t14-suite] names five target declarations, including full-rule separation, the closed `HasPlus` identity criterion and the separate `HasE` witness/soundness package. The [recorded completion review][t14-review] concerns those declared targets and their controls; it is not fresh execution by this refactor.
+
+A source file containing formal declarations does not make every theorem, computability premise or explanatory paragraph in a linked manuscript kernel-checked. Conversely, the historical written-only label on the earlier manuscript does not erase its later, narrower formal component. Check the exact calculus namespace and target theorem before transferring any evidence label. Do not identify a dated package label with every current public calculus bearing a similar name.
+
+The [certificate/search work][t14-certificates] describes a total mathematical check of supplied finite annotated derivations. Its written undecidability argument explicitly identifies an imported representation premise. No fresh verification of that external premise or executable unrestricted solver is supplied here. The [later restricted checker owner][t15-group-followup] is a different source and problem boundary.
+
 ## Reading and editing a publication
 
 Start with the [publication profile][profile]. It identifies the substantive sources, generated LaTeX and governed rendering relationships. The formal-reference PDF combines the core and multi-actor note; the notation gallery is a diagnostic reference.
@@ -123,3 +131,11 @@ These are selected integration checks, not a substitute for the complete [.githu
 [decision14]: ../decisions/0014-generated-project-state-and-whole-state-reread.md
 
 [application-coverage]: ../project-closure/reader-refactor-issue-35/APPLICATION-COVERAGE.md
+
+[t14-suite]: ../../experiments/orthemology-v5-successors/suites/t14-identity.json
+
+[t14-review]: ../../experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json
+
+[t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+
+[t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md

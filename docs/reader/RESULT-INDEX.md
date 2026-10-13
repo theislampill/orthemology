@@ -146,6 +146,58 @@ X′_t - X_t = Σ_{j ∈ J, j < t} (a_j - ξ_j).
 The whole prehistory through the earliest selected time is preserved. Distinct-time replacements commute, with explicit exceptions for inconsistent overlapping prescriptions; pushforward preserves the stated transformed past/future factorisation. Infinite-past, adaptive and future-dependent replacement families need additional hypotheses. This constructive result is not a claim of physical manipulability or a Gaussian-null conditioning rule.
 
 
+## Representation, identity and proof search
+
+These entries preserve **twelve existing result scopes across six works**, not twelve new papers. The [Thirteenth][t13-group] and [Fourteenth][t14-group] owners distinguish original `P01AC.Has`, `P01AC.Intensional.Plus.HasPlus` and `P01AC.ExtensionalRepair.HasE`. Similar historical package names do not identify every later calculus with the current public calculus.
+
+### Equal evaluation need not preserve a supplied certificate
+
+**`T13-OPAQUE-REPRESENTATION`.** The [opaque-atom paper][t13-opaque] gives an exposed polynomial `p` and a whole opaque atom `q` whose raw evaluations are literally equal, but only `p` has the specified polymorphic identity type. The proof covers every original typing rule through whole-label replacement and its stated side conditions. The opaque `q` can still have type `Raw`; the failure concerns its prescribed representation at the specified target.
+
+The discarded-loop corollary shows that having a finite typable representative modulo raw conversion does not suffice for that opaque representation. This is **not** a counterexample to forward subject reduction, and it does not show that no other inhabitant exists. Its evidence is ordinary written mathematics; no new Lean status is assigned here.
+
+**`T13-ATOM-APPLICATION-BRIDGE`.** The [bridge paper][t13-bridge] defines a separate copied eighteen-rule `HasPlus` judgment using one extra polynomial-conversion equation:
+
+```text
+atom(app(r,s)) ≈ app(atom(r),atom(s)).
+```
+
+For closed polynomials, its enlarged polynomial conversion is equivalent to raw conversion of their evaluations. The paper gives a written original-`F/G` soundness argument. This repairs the packing obstruction under that contract; it is not arbitrary typed semantic equality, an open-endpoint theorem or a conversion decision algorithm. The historical paper's hypothetical status is retained; the later formal identity results use an explicitly identified `HasPlus` owner.
+
+### An open all-rule question acquires a later resolution
+
+**Historical scopes `T13-RESIDUAL-HAS` and `T13-RESIDUAL-PLUS`.** Both refer to one [residual-identity note][t13-residual], not two papers. With `A` the polymorphic identity carrier, let `B` express typed identity between `atom(I)` and `atom(SKK)` at `A`. The note supplies formation and an original `F/G` semantic witness. It explicitly does **not** conclude all-rule noninhabitation merely because direct identity introduction fails.
+
+**Later scopes `T14-I-SKK-HAS` and `T14-I-SKK-PLUS`.** The [full-rule written development][t14-separation] and its [specified formal component][t14-separation-lean] establish that **every** polynomial fails that exact identity typing in the respective old judgments. The alternate interpretation coherently transports types, contexts and substitutions and covers all eighteen constructors, including finite import, universal types and identity elimination. The original `F/G` semantic witness remains. This proves the stated incompleteness relative to that semantics, not unsoundness of the rules.
+
+The Fourteenth owner records formal status for these particular results. That does not retroactively change the Thirteenth note's historical verdict or formally certify every claim in the surrounding written compendium.
+
+### Closed typed identity and raw conversion
+
+**`T14-CLOSED-PLUS-IDENTITY`.** Under the five hypotheses
+
+```text
+FormPlus [] C
+HasPlus [] p C       HasPlus [] q C
+scope(p) = 0         scope(q) = 0
+```
+
+the existence of any inhabitant of `identity(C,p,q)`, the canonical `atom(I)` identity certificate, and raw `Conv(eval(p),eval(q))` are equivalent. The [written statement][t14-separation] and [formal declaration][t14-separation-lean] retain those hypotheses. Endpoint polynomials are closed in term variables; the carrier may retain free type parameters. The equivalence does not decide raw conversion or identify arbitrary semantic equality with `Conv`.
+
+### Supplied certificates versus searching for a proof
+
+**`T14-FINITE-CERTIFICATE-HAS` and `T14-FINITE-CERTIFICATE-PLUS`.** The [finite-certificate paper][t14-certificates] supplies a total mathematical validator for finite annotated derivations of the exact rules. Its inputs carry the required finite witnesses, including finite-import image premises and compatible raw-reduction certificates. An arbitrary metatheoretic function is not an oracle supplied to the checker. This is an ordinary written construction, not an executable parser or a complexity bound delivered by that paper.
+
+**`T14-INHABITATION-LIMIT-HAS` and `T14-INHABITATION-LIMIT-PLUS`.** The same paper makes bare derivability and inhabitation semidecidable, then gives raw-conversion reductions using **fully exposed endpoints for old `Has`** and **opaque endpoints for `HasPlus`**. Its undecidability argument explicitly imports the stated closed weak-IKS representation premise and handles additional inert constants; this reader layer has not independently verified that external premise. Searching finite certificates may eventually find a proof, but failure so far is not a terminating negative decision procedure.
+
+These are distinct input problems. A total supplied-certificate checker is compatible with undecidable unrestricted proof search. The [later Fifteenth collection][t15-group-followup] also records a positive exact checker for a separately restricted coefficient problem. The Fourteenth paper's implementation boundary must not erase that different later capability.
+
+### Typed extension without rewriting the original rules
+
+**`T14-TYPED-EXTENSION`.** The [HasE formal development][t14-repair] adds exactly `PiExt` and `AllExt` to a separately named successor, with their formation, endpoint-typing and scope premises. It derives the missed **typed** `I/SKK` identity while preserving original `F/G` soundness. The [syntax/inclusion][t14-repair-syntax], [soundness module][t14-repair-soundness] and [finite witness][t14-repair-witness] expose the implementation and its proof dependencies.
+
+The original `Has`/`HasPlus` noninhabitation, raw polynomial-conversion separation and `Raw`-carrier obstruction remain. Thus it is neither an arbitrary untyped eta rule nor an edit that makes the old negative result false. The [declared five-target suite][t14-suite] and [recorded completion review][t14-review] supply historical formal-evidence scope, not a fresh Lean replay by this refactor. Operational adoption, minimality and universal semantic completeness do not follow.
+
 ## Philosophical arguments have source routes too
 
 The positive recognition/correction route is not forced into a theorem status it does not own. Read the [atlas account](RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction), the [source substrate][sound] and the [later retained-passage qualification][retained]. Their arguments, premises and source scopes are visible without either declaring them kernel-verified or erasing their affirmative content under a blanket “open” label.
@@ -228,3 +280,33 @@ The independent [candidate/owner map][owner-map] retains all baseline paths, inc
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 [t12-interventions]: ../../experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md
+
+[t13-group]: ../../experiments/orthemology-v5-successors/groups/t13-identity/README.md
+
+[t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
+
+[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+
+[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+
+[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+
+[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+
+[t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
+
+[t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+
+[t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+[t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
+
+[t14-repair-syntax]: ../../experiments/orthemology-v5-successors/source-store/dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f/ExtensionalRepairSyntax.lean
+
+[t14-repair-soundness]: ../../experiments/orthemology-v5-successors/source-store/b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5/ExtensionalRepairSoundness.lean
+
+[t14-repair-witness]: ../../experiments/orthemology-v5-successors/source-store/0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29/ExtensionalRepairWitness.lean
+
+[t14-suite]: ../../experiments/orthemology-v5-successors/suites/t14-identity.json
+
+[t14-review]: ../../experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json

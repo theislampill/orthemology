@@ -846,5 +846,121 @@ class ApplicationReaderRouteTests(unittest.TestCase):
                     self.assertNotEqual(mutated, self.text)
                     self.assertFalse(expected <= self.targets(mutated, heading))
 
+
+class IdentityLineageCoverageTests(unittest.TestCase):
+    """Read the original group owners, not a self-selected catalogue denominator."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_identity_lineage", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        prefix = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((prefix / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((prefix / "CROSSWALK.json").read_text())
+        cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
+        cls.text = (ROOT / cls.catalogue).read_text()
+        cls.baseline = cls.owners["baseline"]["commit"]
+        cls.members = set()
+        for group in ("t13-identity", "t14-identity"):
+            path = "experiments/orthemology-v5-successors/groups/" + group + "/README.md"
+            raw = subprocess.check_output(["git", "show", cls.baseline + ":" + path], cwd=ROOT).decode()
+            for _, href in cls.mod.markdown_index(raw)["links"]:
+                if "source-store/" in href and href.endswith((".md", ".lean")):
+                    target = cls.mod.resolve_reader_link(ROOT, path, href)
+                    cls.members.add(target[0])
+        cls.results = json.loads(subprocess.check_output([
+            "git", "show", cls.baseline + ":docs/provenance/v5-successors/RESULT_STATUS.json"], cwd=ROOT))
+
+    def routes(self, text, cross):
+        page = self.mod.markdown_index(text)
+        errors = []
+        for member in sorted(self.members):
+            keys = {k for k, v in cross["sources"].items() if v["path"] == member}
+            works = [w for w in cross["works"] if keys.intersection(w["source_keys"])]
+            if not keys or not works:
+                errors.append("missing-work: " + member)
+                continue
+            reachable = False
+            for work in works:
+                entry = work.get("catalogue_entry", "")
+                if not entry.startswith(self.catalogue + "#"):
+                    continue
+                fragment = entry.partition("#")[2]
+                selected = [h for h in page["headings"] if h[0] == fragment]
+                if len(selected) != 1:
+                    continue
+                _, level, start = selected[0]
+                end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+                for line, href in page["links"]:
+                    if start <= line < end:
+                        target = self.mod.resolve_reader_link(ROOT, self.catalogue, href)
+                        if target is not None and target[0] == member:
+                            reachable = True
+            if not reachable:
+                errors.append("missing-route: " + member)
+        return errors
+
+    def test_all_seven_source_bodies_have_work_and_section_routes(self):
+        self.assertEqual(len(self.members), 7)
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        self.assertTrue(self.members <= set(self.owners["required_work_sources"]))
+
+    def test_each_identity_work_omission_is_detected(self):
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        for member in sorted(self.members):
+            keys = {k for k, v in self.cross["sources"].items() if v["path"] == member}
+            altered = deepcopy(self.cross)
+            altered["works"] = [w for w in altered["works"] if not keys.intersection(w["source_keys"])]
+            with self.subTest(source=member):
+                self.assertLess(len(altered["works"]), len(self.cross["works"]))
+                self.assertTrue(self.routes(self.text, altered))
+                errors = self.mod.check(ROOT, self.owners, altered)
+                self.assertTrue(any(e.startswith("missing-work:") for e in errors), errors)
+
+    def test_each_real_source_route_cannot_be_retargeted_to_another_file(self):
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        for member in sorted(self.members):
+            # Alter every use of this source target, not its visible link label.
+            href = "../../" + member
+            altered = self.text.replace(href, "../../README.md")
+            with self.subTest(source=member):
+                self.assertNotEqual(altered, self.text)
+                self.assertIn("missing-route: " + member, self.routes(altered, self.cross))
+
+    def test_historical_open_note_has_one_work_and_statement_specific_resolution(self):
+        sources = self.cross["sources"]
+        keys = {k for k, v in sources.items() if v["path"].endswith("/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md")}
+        works = [w for w in self.cross["works"] if keys.intersection(w["source_keys"])]
+        self.assertEqual(len(works), 1, "Two result scopes do not make two historical notes")
+        relations = [r for r in self.cross["relations"] if r.get("from") in keys
+                     and r.get("kind") == "resolves-specific-open-obligation"]
+        self.assertEqual(len(relations), 1)
+        target = sources[relations[0]["to"]]["path"]
+        self.assertTrue(target.endswith("/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md"))
+        self.assertEqual(relations[0]["basis"], relations[0]["to"])
+
+    def test_written_identity_and_formal_component_share_work_but_repair_is_distinct(self):
+        def work_for(suffix):
+            keys = {k for k, v in self.cross["sources"].items() if v["path"].endswith(suffix)}
+            return {w["key"] for w in self.cross["works"] if keys.intersection(w["source_keys"])}
+        written = work_for("/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md")
+        formal = work_for("/IntensionalIdentityTheorems.lean")
+        repair = work_for("/ExtensionalRepairTheorems.lean")
+        self.assertEqual(len(written), 1)
+        self.assertEqual(formal, written, "A formal component is not another copy of the paper")
+        self.assertEqual(len(repair), 1)
+        self.assertFalse(written.intersection(repair), "HasE is a separately named development")
+
+    def test_declared_identity_result_scopes_remain_findable(self):
+        expected = {r["id"] for r in self.results["results"]
+                    if r["id"].startswith(("T13-", "T14-")) and r.get("calculus") != "NONE"}
+        self.assertEqual(len(expected), 12)
+        index = (ROOT / "docs/reader/RESULT-INDEX.md").read_text()
+        for identity in sorted(expected):
+            with self.subTest(result=identity):
+                self.assertIn("`" + identity + "`", index)
+        # This is discoverability, not automated adjudication of the prose.
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -213,6 +213,58 @@ The candidate applies its attributed conditional first-cause argument to the com
 Incoming closure prevents a selected mechanism from being called independent merely because its earlier suppliers were omitted. Identifying a root with original existential supply additionally requires that the chosen relation exhaust the relevant supply respect. The text retains the positive fixed-input principle and original possession's prima-facie force, but does not infer that ordered receiving acts identify one common input. A root, an original participant, a unique complete bearer and intrinsic necessity remain separate claims. The present synopsis attributes the argument to the inspected programme text; it is not a fresh inspection of the external author notes.
 
 
+## Identity, representations and finite proof
+
+The following lineage asks when a representation preserves a typing certificate, when a semantic identity has any syntactic proof, and what finite evidence can decide. `Has`, `HasPlus` and `HasE` name **different rule systems**, not successive spellings of one adopted calculus. A result's later formal component does not rewrite the status of its original paper.
+
+### Opaque atoms and prescribed typing
+
+**Opaque atoms and fixed polynomial semantic incompleteness.** [Read the complete written proof][t13-opaque] · [Thirteenth source owner][t13-group].
+
+A structured polynomial and an opaque atom can evaluate to exactly the same raw program while only the structured representation is typable at the selected polymorphic identity type. The proof replaces one whole opaque label in every possible derivation and uses a singleton conversion-class interpretation to force a contradiction. It covers the unchanged typing rules, including finite import and dependent identity elimination, rather than reporting that a search found no proof.
+
+The positive structured representation remains available. Thus this is **failure to type a prescribed representation**, not proof that the target has no inhabitants. Its discarded-loop corollary also shows that having a finite-typed representative modulo raw conversion need not type the supplied opaque atom. This is backward representation expansion, not a counterexample to forward subject reduction. The note is ordinary written mathematics; its inherited normalization and semantic-soundness results keep their own evidence.
+
+### The atom/application bridge
+
+**A hypothetical atom application conversion bridge.** [Read the written design and proofs][t13-bridge].
+
+The single added conversion schema exposes an application hidden inside an atom: `atom(app(r,s))` is convertible to `app(atom(r),atom(s))`. In the separately copied `HasPlus` judgement it supports closed packing and makes closed polynomial conversion exactly match raw conversion of evaluations. The paper supplies a mutual soundness argument using the original `F/G` interpretation, including newly formed types; it does not simply reuse a theorem whose input still expects old `Has` evidence.
+
+This is a constructive answer to the preceding representation problem, with a real admission trade-off. The old replacement invariant no longer survives the new generator. It does **not** identify every semantically equal pair, decide conversion, or prove full semantic completeness. The general packing theorem needs closed term polynomials; open environments are not silently encoded as one atom. The source's written-only, hypothetical status remains historical even though later separately identified code studies the bridge.
+
+### The historical I/S KK question
+
+**Residual identity completeness feasibility.** [Read the historical note][t13-residual] · [Later full-rule resolution][t14-separation].
+
+The note constructs a formed identity type between `I` and `S K K` at the polymorphic identity-function carrier. The original semantics admits a proof witness, while direct identity introduction is blocked because the endpoints are not raw-convertible. The note correctly stops short of ruling out all derivations: elimination or dependent `J` could, in principle, supply a different route.
+
+Its attempted shortcut—strengthen only the identity interpretation while keeping the old context relation—fails a transport requirement. That failed route is part of the intellectual content, not disposable bookkeeping. **One note supports two historical result scopes, not two papers.** The later resolution below answers the missing all-rule obligation; the original unresolved header remains unchanged.
+
+### Full-rule identity separation
+
+**Intensional identity separation and closed identity conversion.** [Read the complete paper][t14-separation] · [Later formal declarations][t14-separation-lean] · [Exact formal-suite owner][t14-suite].
+
+A coherent saturated-set interpretation makes every type relation refine raw conversion, including its context and substitution behaviour. Checking all typing constructors—particularly finite imports, both binders and both coordinates of `J`—then excludes **every** inhabitant of the selected `I/S K K` identity type in both `Has` and `HasPlus`. The unchanged original `F/G` interpretation still admits that type's semantic witness. This is incompleteness of those exact syntactic judgements for that semantic target, not unsoundness of the original semantics.
+
+The same argument supplies a useful positive criterion: for a formed carrier and two already typed, term-closed endpoints in `HasPlus`, existence of an identity proof, the canonical `atom(I)` proof, and raw conversion of evaluations are equivalent. The carrier may retain free type parameters. The paper's written proof and later formal component are **one work with distinct evidence stages**, not duplicate discoveries. The recorded suite covers named declarations; this reader refactor does not claim a fresh Lean run or whole-paper formalisation.
+
+### Finite certificates and unbounded search
+
+**Finite certificates and inhabitation limits for exact P01AC and HasPlus.** [Read the complete written argument][t14-certificates].
+
+A fully annotated finite derivation can be checked by a total mathematical validator. Even finite import has a finite certificate: one formation child for each image-list position. That is different from receiving only a desired conclusion and searching for a proof. Enumeration semidecides positive derivability and inhabitation, without a stopping rule for unsuccessful searches.
+
+The paper reduces raw conversion to formed closed identity targets in two distinct ways: **opaque** endpoints in `HasPlus`, and **exposed** polynomial endpoints in unchanged `Has`. Its undecidability conclusion retains the explicitly imported weak-combinatory representation premise and the proof that added inert constants preserve the relevant closed problem. No executable parser or global complexity formalisation is supplied by this paper. Later [restricted semantic checkers][t15-group-followup] have their own narrower input contracts; their existence is not a general solver for this problem.
+
+### A separate typed extensional repair
+
+**Typed extensional repair in HasE — a formal development.** [Exact positive and preserved-negative statements][t14-repair] · [Rule definitions][t14-repair-syntax] · [Finite witness][t14-repair-witness] · [Original-semantics soundness][t14-repair-soundness] · [Recorded completion scope][t14-review].
+
+`HasE` adds two finite typed-extensionality rules, for dependent functions and polymorphic `All`, while retaining the imported bridge conversion. The supplied witness first proves the endpoints agree on an explicit open argument, then uses one function-extensionality and one `All`-extensionality step to obtain the previously missing **typed** identity.
+
+This is positive additional typing power, not permission to rename an old theorem. The old `Has`/`HasPlus` noninhabitation results remain true; the same endpoints are still not raw-convertible, and their **Raw-carrier** identity remains uninhabited even in `HasE`. The original `F/G` soundness is separately supported. Formal code, an inherited checked suite and a demonstrated witness are present, but operational adoption, minimality and universal semantic completeness do not follow.
+
 ## Recognition and correction
 
 **The Epistemological Architecture of Sound Reason.** [Preserved source substrate][sound].
@@ -387,3 +439,21 @@ Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publica
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 [t12-scope]: ../../experiments/orthemology-v5-successors/source-store/fbd99729b2e43ad0b367fd2c8b89c6aeb1777dd66fa3f11eb2dc09aab3270fc1/VERIFICATION_SCOPE.md
 [t12-identity]: ../../experiments/orthemology-v5-successors/source-store/ec29806cb3087a8a707341d352bbbf8c818a536ce0083a8e6cf75a6b75d3e7bb/CHECKPOINT_IDENTITY.json
+
+[t13-opaque]: ../../experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[t13-bridge]: ../../experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[t13-residual]: ../../experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[t14-separation]: ../../experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+[t14-separation-lean]: ../../experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
+[t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
+[t14-repair-syntax]: ../../experiments/orthemology-v5-successors/source-store/dc4415c2e367c957589f1162243804cce1955f28894355a0d73a4a0b7ef66d9f/ExtensionalRepairSyntax.lean
+[t14-repair-soundness]: ../../experiments/orthemology-v5-successors/source-store/b0d879f3ac11bc29f56887c0f56cc7e59e677150357da7304b783b3aefb0cda5/ExtensionalRepairSoundness.lean
+[t14-repair-witness]: ../../experiments/orthemology-v5-successors/source-store/0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29/ExtensionalRepairWitness.lean
+[t13-review]: ../../experiments/orthemology-v5-successors/source-store/24ecaa8950cfde523153e70210f925d7b17abbd6df28670ddc913b86ea04508a/Orthemology_Thirteenth_Research_Verification_v1_20261004.json
+[t14-review]: ../../experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json
+[t14-written-review]: ../../experiments/orthemology-v5-successors/source-store/996107254670edb11d47dddc03ce0b6dd4fe045ae41b6d73b2079f3c827862f1/Orthemology_Fourteenth_Checkpoint_Verification_v1_20261005.json
+[t13-group]: ../../experiments/orthemology-v5-successors/groups/t13-identity/README.md
+[t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
+[t14-suite]: ../../experiments/orthemology-v5-successors/suites/t14-identity.json
+[t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
