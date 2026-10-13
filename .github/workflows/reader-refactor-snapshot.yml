@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(git rev-parse HEAD^)" = eb9e3627a20106c30a16bb80b759f6174a2f8e81
+          test "$(git rev-parse HEAD^)" = 6dd6c7d2cdf09c4785021b5a4ddc647acdcd2202
           test "$(git ls-remote origin "refs/heads/$BRANCH" | cut -f1)" = "$GITHUB_SHA"
           test "$(git rev-parse "$MAIN^{tree}")" = 38b18f38db2e38dabe1ec391c07c0b0f2b20d574
           test -z "$(git status --porcelain)"
@@ -87,9 +87,6 @@ jobs:
 
 
           '''
-          # Strip the Python-source indentation carried by the YAML block.
-          lines=block.splitlines(True)
-          block=lines[0]+''.join(line[10:] if line.startswith('          ') else line for line in lines[1:])
           s=s.replace('if __name__ == "__main__":',block+'if __name__ == "__main__":')
           s=s.replace('theory/','fixture-theory/').replace('"theory"','"fixture-theory"')
           s=s.replace('docs/profile.yaml','fixture-docs/profile.yaml').replace('docs/gallery.md','fixture-docs/gallery.md')
