@@ -1,150 +1,18 @@
 {
+  "schema": "orthemology-reader-census-v1",
   "baseline": {
-    "commit": "297267f6e49f80871036a95a6dfd81bdad40ea1f",
-    "tree": "fc702fe8456b48ff89b0c28df31f5fe232058538"
+    "commit": "0784acddd4770f1190f758f264ba52b2b110bd27",
+    "tree": "38b18f38db2e38dabe1ec391c07c0b0f2b20d574"
   },
-  "entries_sha256": "b920fc6db020680b9bc8477f1cd9604b4d0c8ef181b9b06a783014cc2099076c",
-  "external_body_admissions": [],
-  "owners": [
-    {
-      "bytes": 20143,
-      "git_oid": "43776fef7bc30ad6ae99fc17207ea4ddd6917061",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml"
-    },
-    {
-      "bytes": 14950,
-      "git_oid": "459d8e6d62eaae40b99b107ba284c45f067c68c3",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/current-state.yaml"
-    },
-    {
-      "bytes": 693784,
-      "git_oid": "665e4675148f62b4855262ab04843f8132ab56e9",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-consolidation/SOURCE_MAP.json"
-    },
-    {
-      "bytes": 69376,
-      "git_oid": "c00b45d757ee35877bc748351a6185faa6a1c360",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/CALCULUS_MAP.json"
-    },
-    {
-      "bytes": 20211043,
-      "git_oid": "1c724cd0a8e70dd2634ff5e95174f87a76da1263",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json"
-    },
-    {
-      "bytes": 100426,
-      "git_oid": "03b020a30b556cac627d864cf631ceaeff1f7e22",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json"
-    },
-    {
-      "bytes": 112934,
-      "git_oid": "5e128f7b78af0b9be3d653a91e145ef167e22e35",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json"
-    },
-    {
-      "bytes": 855613,
-      "git_oid": "de45612a3d7d68b78ed65dacf4dc8a9080b00f9b",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/RESULT_STATUS.json"
-    },
-    {
-      "bytes": 4978847,
-      "git_oid": "4d61a64f4e9022dc24e517f26923980aaf6fdcda",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/SOURCE_MAP.json"
-    },
-    {
-      "bytes": 54774,
-      "git_oid": "3cdb40f5d16146cf5e899d95596d4258f11cb479",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/SUPERSESSION.json"
-    },
-    {
-      "bytes": 21780,
-      "git_oid": "599eddbeef6908e30d94608d2958622697647ab2",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/provenance/v5-successors/TWELVE_AVENUES.json"
-    },
-    {
-      "bytes": 5765,
-      "git_oid": "9becce2edddb23b3ed298d726027f7389cb19846",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "docs/publication-profile.yaml"
-    },
-    {
-      "bytes": 6886,
-      "git_oid": "eb979d8fd40710cbe9adeabd1c76c3571c4f22d6",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "experiments/experiment-status.yaml"
-    },
-    {
-      "bytes": 30946,
-      "git_oid": "3f72a2f8f54bde58452a94c5eb25f4b28f15c282",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "references/source-status.yaml"
-    },
-    {
-      "bytes": 15728,
-      "git_oid": "533205328be61d4ef00734ec5ab1726af056ce24",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "research/t20-live-20261009/INDEX.json"
-    },
-    {
-      "bytes": 239538,
-      "git_oid": "f6f7691f7f73abe581d72d438e74c5cb724bb4d6",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json"
-    },
-    {
-      "bytes": 14155797,
-      "git_oid": "c7a619e630133ae616e6d3a0bd8be21fcbd091cc",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
-    },
-    {
-      "bytes": 11218,
-      "git_oid": "9a7346714c787d3dcc7636a2158ef68c684c81b3",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "research/t20-v6-20261012/research-v6/synthesis/CORRECTION_SUPERSESSION_INDEX.json"
-    },
-    {
-      "bytes": 13005,
-      "git_oid": "0c4390500bdf4566e0a383d46cbb6e96c6b15952",
-      "kind": "blob",
-      "mode": "100644",
-      "path": "research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json"
-    }
-  ],
+  "scope": "Every tracked entry at the pinned commit; external body set is empty",
+  "reading_status": "NOT_SEMANTICALLY_READ",
+  "qualification": "Object census only; owner completeness and scholarly dispositions require separate review",
+  "entries_sha256": "93bfe22dc9b785c46bef388920280aa7668fefaef37c000301071c7fc7fc7bde",
   "population": {
-    "blob_paths": 16073,
-    "by_mode": {
-      "100644": 16073
-    },
+    "tracked_entries": 16077,
+    "blob_paths": 16077,
+    "distinct_blob_objects": 14443,
+    "gitlinks": 0,
     "by_root": {
       "(root)": 11,
       ".github": 1,
@@ -158,11 +26,11 @@
       "manuscript": 1,
       "publication": 10,
       "references": 3,
-      "research": 8430,
+      "research": 8433,
       "schemas": 30,
       "scripts": 125,
       "terminology": 31,
-      "tests": 129,
+      "tests": 130,
       "theory": 33
     },
     "by_suffix": {
@@ -172,18 +40,19 @@
       ".csv": 19,
       ".diff": 10,
       ".gz": 6,
-      ".json": 3377,
+      ".json": 3378,
       ".jsonl": 4,
       ".lean": 3547,
       ".log": 32,
-      ".md": 5077,
+      ".md": 5078,
       ".p02l": 6,
       ".patch": 22,
       ".pdf": 8,
-      ".py": 2446,
+      ".py": 2447,
       ".rejected-invalid": 4,
       ".sh": 132,
       ".sha256": 264,
+      ".svg": 1,
       ".tex": 60,
       ".toml": 1,
       ".tsv": 1,
@@ -192,12 +61,158 @@
       ".yaml": 734,
       ".yml": 1
     },
-    "distinct_blob_objects": 14439,
-    "gitlinks": 0,
-    "tracked_entries": 16073
+    "by_mode": {
+      "100644": 16077
+    }
   },
-  "qualification": "Object census only; owner completeness and scholarly dispositions require separate review",
-  "reading_status": "NOT_SEMANTICALLY_READ",
-  "schema": "orthemology-reader-census-v1",
-  "scope": "Every tracked entry at the pinned commit; external body set is empty"
+  "owners": [
+    {
+      "path": "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "43776fef7bc30ad6ae99fc17207ea4ddd6917061",
+      "bytes": 20143
+    },
+    {
+      "path": "docs/current-state.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "d245267e6166774b63895776839d07e92c4299ef",
+      "bytes": 14950
+    },
+    {
+      "path": "docs/provenance/v5-consolidation/SOURCE_MAP.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "665e4675148f62b4855262ab04843f8132ab56e9",
+      "bytes": 693784
+    },
+    {
+      "path": "docs/provenance/v5-successors/CALCULUS_MAP.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "c00b45d757ee35877bc748351a6185faa6a1c360",
+      "bytes": 69376
+    },
+    {
+      "path": "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "1c724cd0a8e70dd2634ff5e95174f87a76da1263",
+      "bytes": 20211043
+    },
+    {
+      "path": "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "03b020a30b556cac627d864cf631ceaeff1f7e22",
+      "bytes": 100426
+    },
+    {
+      "path": "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "5e128f7b78af0b9be3d653a91e145ef167e22e35",
+      "bytes": 112934
+    },
+    {
+      "path": "docs/provenance/v5-successors/RESULT_STATUS.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "de45612a3d7d68b78ed65dacf4dc8a9080b00f9b",
+      "bytes": 855613
+    },
+    {
+      "path": "docs/provenance/v5-successors/SOURCE_MAP.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "4d61a64f4e9022dc24e517f26923980aaf6fdcda",
+      "bytes": 4978847
+    },
+    {
+      "path": "docs/provenance/v5-successors/SUPERSESSION.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "3cdb40f5d16146cf5e899d95596d4258f11cb479",
+      "bytes": 54774
+    },
+    {
+      "path": "docs/provenance/v5-successors/TWELVE_AVENUES.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "599eddbeef6908e30d94608d2958622697647ab2",
+      "bytes": 21780
+    },
+    {
+      "path": "docs/publication-profile.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "9becce2edddb23b3ed298d726027f7389cb19846",
+      "bytes": 5765
+    },
+    {
+      "path": "experiments/experiment-status.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "eb979d8fd40710cbe9adeabd1c76c3571c4f22d6",
+      "bytes": 6886
+    },
+    {
+      "path": "references/source-status.yaml",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "3f72a2f8f54bde58452a94c5eb25f4b28f15c282",
+      "bytes": 30946
+    },
+    {
+      "path": "research/source-fidelity/epistemic-tuples/FIDELITY.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "926198b6cc108030bd6c4492e770726799d0d77e",
+      "bytes": 31437
+    },
+    {
+      "path": "research/source-fidelity/epistemic-tuples/README.md",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "fd76d5288abb124a5b7a6658798823f789675da5",
+      "bytes": 18921
+    },
+    {
+      "path": "research/t20-live-20261009/INDEX.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "533205328be61d4ef00734ec5ab1726af056ce24",
+      "bytes": 15728
+    },
+    {
+      "path": "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "f6f7691f7f73abe581d72d438e74c5cb724bb4d6",
+      "bytes": 239538
+    },
+    {
+      "path": "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "c7a619e630133ae616e6d3a0bd8be21fcbd091cc",
+      "bytes": 14155797
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/synthesis/CORRECTION_SUPERSESSION_INDEX.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "9a7346714c787d3dcc7636a2158ef68c684c81b3",
+      "bytes": 11218
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json",
+      "mode": "100644",
+      "kind": "blob",
+      "git_oid": "0c4390500bdf4566e0a383d46cbb6e96c6b15952",
+      "bytes": 13005
+    }
+  ],
+  "external_body_admissions": []
 }

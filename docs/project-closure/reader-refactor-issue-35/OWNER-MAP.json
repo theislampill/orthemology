@@ -1,36 +1,405 @@
 {
   "schema": "orthemology-reader-owner-map-v1",
-  "baseline": {"commit": "297267f6e49f80871036a95a6dfd81bdad40ea1f","tree": "fc702fe8456b48ff89b0c28df31f5fe232058538"},
-  "entries_sha256": "b920fc6db020680b9bc8477f1cd9604b4d0c8ef181b9b06a783014cc2099076c",
+  "baseline": {
+    "commit": "0784acddd4770f1190f758f264ba52b2b110bd27",
+    "tree": "38b18f38db2e38dabe1ec391c07c0b0f2b20d574"
+  },
+  "entries_sha256": "93bfe22dc9b785c46bef388920280aa7668fefaef37c000301071c7fc7fc7bde",
   "external_body_admissions": [],
   "scope_note": "Complete tracked source-candidate routing, not a complete substantive work catalogue or new theorem registry.",
   "review_state": "AUTHOR_RECONCILED; independent semantic coverage review remains pending",
   "collections": [
-    {"key": "root-navigation-and-policy","include": [".editorconfig",".gitattributes",".gitignore","CHANGELOG.md","CONTRIBUTING.md","OPEN-DECISIONS.md","README.md","STATUS.md","TODO.md","VERSION","requirements-ci.lock.txt"],"exclude": [],"owners": ["CONTRIBUTING.md","docs/project-state-inputs.yaml"],"candidate_paths": 11,"candidate_role": "Mutable entrance/control documents; not a scientific catalogue."},
-    {"key": "principal-manuscript","include": ["manuscript/"],"exclude": [],"owners": ["docs/publication-profile.yaml"],"candidate_paths": 1,"candidate_role": "Principal maintained manuscript and its rendering bindings."},
-    {"key": "formal-core","include": ["theory/"],"exclude": ["theory/lineages/"],"owners": ["docs/publication-profile.yaml"],"candidate_paths": 2,"candidate_role": "Formal components, separate from mathematical manuscript lineages."},
-    {"key": "lineage-h-continuation","include": ["theory/lineages/h-continuation/"],"exclude": [],"owners": ["theory/lineages/h-continuation/continuation_complete_orthing.md"],"candidate_paths": 1,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "lineage-h-formalisation","include": ["theory/lineages/h-formalisation/"],"exclude": [],"owners": ["theory/lineages/h-formalisation/orthing_formalisation_v1.md"],"candidate_paths": 1,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "lineage-h-ics-v5","include": ["theory/lineages/h-ics-v5/"],"exclude": [],"owners": ["theory/lineages/h-ics-v5/README.md"],"candidate_paths": 4,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "lineage-h-moat-e3","include": ["theory/lineages/h-moat-e3/"],"exclude": [],"owners": ["theory/lineages/h-moat-e3/the_last_moat_e3.tex"],"candidate_paths": 23,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "lineage-h-modal","include": ["theory/lineages/h-modal/"],"exclude": [],"owners": ["theory/lineages/h-modal/orthability_modal_grounding.md"],"candidate_paths": 1,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "lineage-h-reflexive-v3","include": ["theory/lineages/h-reflexive-v3/"],"exclude": [],"owners": ["theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex"],"candidate_paths": 1,"candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."},
-    {"key": "companion","include": ["companion/"],"exclude": [],"owners": ["companion/README.md","companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml","docs/publication-profile.yaml"],"candidate_paths": 12,"candidate_role": "Separate philosophical and school-labelled manuscripts, arguments and objections."},
-    {"key": "applications","include": ["applications/"],"exclude": [],"owners": ["applications/agentic-runtime/README.md","applications/daee-epistemics/README.md","applications/latent-state-orthing/README.md"],"candidate_paths": 50,"candidate_role": "Application proposals, worked systems and typed interpretation boundaries."},
-    {"key": "examples","include": ["examples/"],"exclude": [],"owners": ["docs/semantic-roles.yaml"],"candidate_paths": 15,"candidate_role": "Worked examples and source schema roles, not empirical validation."},
-    {"key": "publication-and-renderings","include": ["publication/","artifacts/"],"exclude": [],"owners": ["docs/publication-profile.yaml","docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json"],"candidate_paths": 34,"candidate_role": "Generated reading/build alternatives and sidecars; no format multiplication."},
-    {"key": "v5-consolidation","include": ["experiments/orthemology-v5/","docs/provenance/v5-consolidation/"],"exclude": [],"owners": ["docs/provenance/v5-consolidation/README.md","docs/provenance/v5-consolidation/THEOREM_INDEX.md","docs/provenance/v5-consolidation/SOURCE_MAP.json","docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json"],"candidate_paths": 119,"candidate_role": "Origin-scoped theorem/argument/definition index, native adapter and original-to-derived source boundaries."},
-    {"key": "v5-continuations","include": ["experiments/orthemology-v5-continuations/","docs/provenance/v5-research-continuations/"],"exclude": [],"owners": ["experiments/orthemology-v5-continuations/registry.json","docs/provenance/v5-research-continuations/README.md","docs/provenance/v5-research-continuations/RESULT_STATUS.json","docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json","docs/provenance/v5-research-continuations/SOURCE_MAP.json","docs/provenance/v5-research-continuations/SUPERSESSION.json","docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json"],"candidate_paths": 1200,"candidate_role": "Checkpoint-3 families and final-sixth overlays retain distinct selections, suites and evidence."},
-    {"key": "v5-successors","include": ["experiments/orthemology-v5-successors/","docs/provenance/v5-successors/"],"exclude": [],"owners": ["experiments/orthemology-v5-successors/registry.json","docs/provenance/v5-successors/RESULT_STATUS.json","docs/provenance/v5-successors/SOURCE_MAP.json","docs/provenance/v5-successors/EVIDENCE_BINDINGS.json","docs/provenance/v5-successors/SUPERSESSION.json","docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json","docs/provenance/v5-successors/CALCULUS_MAP.json","docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json","docs/provenance/v5-successors/TWELVE_AVENUES.json"],"candidate_paths": 2661,"candidate_role": "Seventh-through-Twentieth scoped result owners; not the entire later public corpus."},
-    {"key": "t20-live","include": ["research/t20-live-20261009/"],"exclude": [],"owners": ["research/t20-live-20261009/README.md","research/t20-live-20261009/INDEX.json"],"candidate_paths": 2067,"candidate_role": "Twenty-three numbered checkpoints and S01; a collection index is not a new theorem register."},
-    {"key": "t20-v6","include": ["research/t20-v6-20261012/"],"exclude": [],"owners": ["research/t20-v6-20261012/README.md","research/t20-v6-20261012/SOURCE_RECOVERY.md","research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json","research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json","research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json","research/t20-v6-20261012/research-v6/synthesis/CORRECTION_SUPERSESSION_INDEX.json"],"candidate_paths": 6363,"candidate_role": "Repaired public selection, reused objects and qualified contributions; unavailable/held identities remain outside body reading."},
-    {"key": "ar8r-research-and-proposals","include": ["docs/project-closure/ar8r-v11/"],"exclude": [],"owners": ["docs/project-closure/ar8r-v11/README.md","docs/project-closure/ar8r-v11/AR8R-V11-EVIDENCE-CATALOG.yaml","docs/project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml","docs/project-closure/ar8r-v11/AR8R-V11-RECONCILIATION-LEDGER.yaml","docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml","docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml","docs/project-closure/ar8r-v11/post-merge-proposals/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/PROPOSED_RESULT_INDEX.yaml","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_RESULT_INDEX.yaml","docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/README.md","docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md"],"candidate_paths": 2796,"candidate_role": "Theorem origins, fable research, programmes and PMR/reissue/intake collections are retained separately; no adoption is inferred."},
-    {"key": "experimental-packets","include": ["experiments/"],"exclude": ["experiments/orthemology-v5/","experiments/orthemology-v5-continuations/","experiments/orthemology-v5-successors/"],"owners": ["experiments/README.md","experiments/experiment-status.yaml"],"candidate_paths": 143,"candidate_role": "Designed study packets and scoped smoke/control material; packet status owner remains authoritative."},
-    {"key": "documentation-and-other-history","include": ["docs/"],"exclude": ["docs/provenance/v5-consolidation/","docs/provenance/v5-research-continuations/","docs/provenance/v5-successors/","docs/project-closure/ar8r-v11/"],"owners": ["docs/architecture-overview.md","docs/decision-status.yaml","docs/math-source-inventory.yaml"],"candidate_paths": 239,"candidate_role": "Includes substantive architecture, source notes and historical assessment candidates; not an administrative exclusion."},
-    {"key": "references","include": ["references/"],"exclude": [],"owners": ["references/source-status.yaml"],"candidate_paths": 3,"candidate_role": "Bibliography and source-status owners; bibliography links do not recursively admit new bodies."},
-    {"key": "terminology","include": ["terminology/"],"exclude": [],"owners": ["terminology/README.md"],"candidate_paths": 31,"candidate_role": "Candidate terminology, designed comparisons and frozen packet roles."},
-    {"key": "archive","include": ["archive/"],"exclude": [],"owners": ["docs/provenance/document-history.md"],"candidate_paths": 10,"candidate_role": "Preserved historical evidence; no dismissal of unique substantive work by directory name."},
-    {"key": "repository-support","include": ["scripts/","tests/","schemas/",".github/"],"exclude": [],"owners": [".github/workflows/validate.yml","CONTRIBUTING.md"],"candidate_paths": 285,"candidate_role": "Verification and schema implementations, fixtures and workflow owners; source candidates remain visible."}
+    {
+      "key": "root-navigation-and-policy",
+      "include": [
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "OPEN-DECISIONS.md",
+        "README.md",
+        "STATUS.md",
+        "TODO.md",
+        "VERSION",
+        "requirements-ci.lock.txt"
+      ],
+      "exclude": [],
+      "owners": [
+        "CONTRIBUTING.md",
+        "docs/project-state-inputs.yaml"
+      ],
+      "candidate_paths": 11,
+      "candidate_role": "Mutable entrance/control documents; not a scientific catalogue."
+    },
+    {
+      "key": "principal-manuscript",
+      "include": [
+        "manuscript/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Principal maintained manuscript and its rendering bindings."
+    },
+    {
+      "key": "formal-core",
+      "include": [
+        "theory/"
+      ],
+      "exclude": [
+        "theory/lineages/"
+      ],
+      "owners": [
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 2,
+      "candidate_role": "Formal components, separate from mathematical manuscript lineages."
+    },
+    {
+      "key": "lineage-h-continuation",
+      "include": [
+        "theory/lineages/h-continuation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-continuation/continuation_complete_orthing.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-formalisation",
+      "include": [
+        "theory/lineages/h-formalisation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-ics-v5",
+      "include": [
+        "theory/lineages/h-ics-v5/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-ics-v5/README.md"
+      ],
+      "candidate_paths": 4,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-moat-e3",
+      "include": [
+        "theory/lineages/h-moat-e3/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-moat-e3/the_last_moat_e3.tex"
+      ],
+      "candidate_paths": 23,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-modal",
+      "include": [
+        "theory/lineages/h-modal/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-modal/orthability_modal_grounding.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-reflexive-v3",
+      "include": [
+        "theory/lineages/h-reflexive-v3/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "companion",
+      "include": [
+        "companion/"
+      ],
+      "exclude": [],
+      "owners": [
+        "companion/README.md",
+        "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 12,
+      "candidate_role": "Separate philosophical and school-labelled manuscripts, arguments and objections."
+    },
+    {
+      "key": "applications",
+      "include": [
+        "applications/"
+      ],
+      "exclude": [],
+      "owners": [
+        "applications/agentic-runtime/README.md",
+        "applications/daee-epistemics/README.md",
+        "applications/latent-state-orthing/README.md"
+      ],
+      "candidate_paths": 50,
+      "candidate_role": "Application proposals, worked systems and typed interpretation boundaries."
+    },
+    {
+      "key": "examples",
+      "include": [
+        "examples/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/semantic-roles.yaml"
+      ],
+      "candidate_paths": 15,
+      "candidate_role": "Worked examples and source schema roles, not empirical validation."
+    },
+    {
+      "key": "publication-and-renderings",
+      "include": [
+        "publication/",
+        "artifacts/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/publication-profile.yaml",
+        "docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json"
+      ],
+      "candidate_paths": 34,
+      "candidate_role": "Generated reading/build alternatives and sidecars; no format multiplication."
+    },
+    {
+      "key": "v5-consolidation",
+      "include": [
+        "experiments/orthemology-v5/",
+        "docs/provenance/v5-consolidation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/provenance/v5-consolidation/README.md",
+        "docs/provenance/v5-consolidation/THEOREM_INDEX.md",
+        "docs/provenance/v5-consolidation/SOURCE_MAP.json",
+        "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json"
+      ],
+      "candidate_paths": 119,
+      "candidate_role": "Origin-scoped theorem/argument/definition index, native adapter and original-to-derived source boundaries."
+    },
+    {
+      "key": "v5-continuations",
+      "include": [
+        "experiments/orthemology-v5-continuations/",
+        "docs/provenance/v5-research-continuations/"
+      ],
+      "exclude": [],
+      "owners": [
+        "experiments/orthemology-v5-continuations/registry.json",
+        "docs/provenance/v5-research-continuations/README.md",
+        "docs/provenance/v5-research-continuations/RESULT_STATUS.json",
+        "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+        "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
+        "docs/provenance/v5-research-continuations/SUPERSESSION.json",
+        "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json"
+      ],
+      "candidate_paths": 1200,
+      "candidate_role": "Checkpoint-3 families and final-sixth overlays retain distinct selections, suites and evidence."
+    },
+    {
+      "key": "v5-successors",
+      "include": [
+        "experiments/orthemology-v5-successors/",
+        "docs/provenance/v5-successors/"
+      ],
+      "exclude": [],
+      "owners": [
+        "experiments/orthemology-v5-successors/registry.json",
+        "docs/provenance/v5-successors/RESULT_STATUS.json",
+        "docs/provenance/v5-successors/SOURCE_MAP.json",
+        "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
+        "docs/provenance/v5-successors/SUPERSESSION.json",
+        "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json",
+        "docs/provenance/v5-successors/CALCULUS_MAP.json",
+        "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json",
+        "docs/provenance/v5-successors/TWELVE_AVENUES.json"
+      ],
+      "candidate_paths": 2661,
+      "candidate_role": "Seventh-through-Twentieth scoped result owners; not the entire later public corpus."
+    },
+    {
+      "key": "t20-live",
+      "include": [
+        "research/t20-live-20261009/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/t20-live-20261009/README.md",
+        "research/t20-live-20261009/INDEX.json"
+      ],
+      "candidate_paths": 2067,
+      "candidate_role": "Twenty-three numbered checkpoints and S01; a collection index is not a new theorem register."
+    },
+    {
+      "key": "t20-v6",
+      "include": [
+        "research/t20-v6-20261012/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/t20-v6-20261012/README.md",
+        "research/t20-v6-20261012/SOURCE_RECOVERY.md",
+        "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json",
+        "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+        "research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json",
+        "research/t20-v6-20261012/research-v6/synthesis/CORRECTION_SUPERSESSION_INDEX.json"
+      ],
+      "candidate_paths": 6363,
+      "candidate_role": "Repaired public selection, reused objects and qualified contributions; unavailable/held identities remain outside body reading."
+    },
+    {
+      "key": "epistemic-tuples-source-fidelity",
+      "include": [
+        "research/source-fidelity/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/source-fidelity/epistemic-tuples/README.md",
+        "research/source-fidelity/epistemic-tuples/FIDELITY.json"
+      ],
+      "candidate_paths": 3,
+      "candidate_role": "Reading transcription and diagram attached to the existing work; held PDF and separate ET05 scientific correction keep their own standing."
+    },
+    {
+      "key": "ar8r-research-and-proposals",
+      "include": [
+        "docs/project-closure/ar8r-v11/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/project-closure/ar8r-v11/README.md",
+        "docs/project-closure/ar8r-v11/AR8R-V11-EVIDENCE-CATALOG.yaml",
+        "docs/project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml",
+        "docs/project-closure/ar8r-v11/AR8R-V11-RECONCILIATION-LEDGER.yaml",
+        "docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml",
+        "docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md"
+      ],
+      "candidate_paths": 2796,
+      "candidate_role": "Theorem origins, fable research, programmes and PMR/reissue/intake collections are retained separately; no adoption is inferred."
+    },
+    {
+      "key": "experimental-packets",
+      "include": [
+        "experiments/"
+      ],
+      "exclude": [
+        "experiments/orthemology-v5/",
+        "experiments/orthemology-v5-continuations/",
+        "experiments/orthemology-v5-successors/"
+      ],
+      "owners": [
+        "experiments/README.md",
+        "experiments/experiment-status.yaml"
+      ],
+      "candidate_paths": 143,
+      "candidate_role": "Designed study packets and scoped smoke/control material; packet status owner remains authoritative."
+    },
+    {
+      "key": "documentation-and-other-history",
+      "include": [
+        "docs/"
+      ],
+      "exclude": [
+        "docs/provenance/v5-consolidation/",
+        "docs/provenance/v5-research-continuations/",
+        "docs/provenance/v5-successors/",
+        "docs/project-closure/ar8r-v11/"
+      ],
+      "owners": [
+        "docs/architecture-overview.md",
+        "docs/decision-status.yaml",
+        "docs/math-source-inventory.yaml"
+      ],
+      "candidate_paths": 239,
+      "candidate_role": "Includes substantive architecture, source notes and historical assessment candidates; not an administrative exclusion."
+    },
+    {
+      "key": "references",
+      "include": [
+        "references/"
+      ],
+      "exclude": [],
+      "owners": [
+        "references/source-status.yaml"
+      ],
+      "candidate_paths": 3,
+      "candidate_role": "Bibliography and source-status owners; bibliography links do not recursively admit new bodies."
+    },
+    {
+      "key": "terminology",
+      "include": [
+        "terminology/"
+      ],
+      "exclude": [],
+      "owners": [
+        "terminology/README.md"
+      ],
+      "candidate_paths": 31,
+      "candidate_role": "Candidate terminology, designed comparisons and frozen packet roles."
+    },
+    {
+      "key": "archive",
+      "include": [
+        "archive/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/provenance/document-history.md"
+      ],
+      "candidate_paths": 10,
+      "candidate_role": "Preserved historical evidence; no dismissal of unique substantive work by directory name."
+    },
+    {
+      "key": "repository-support",
+      "include": [
+        "scripts/",
+        "tests/",
+        "schemas/",
+        ".github/"
+      ],
+      "exclude": [],
+      "owners": [
+        ".github/workflows/validate.yml",
+        "CONTRIBUTING.md"
+      ],
+      "candidate_paths": 286,
+      "candidate_role": "Verification and schema implementations, fixtures and workflow owners; source candidates remain visible."
+    }
   ],
   "required_work_sources": [
     "companion/CONCRETE-AND-SOUND-REASON.md",
@@ -56,7 +425,13 @@
   ],
   "publication_profile": "docs/publication-profile.yaml",
   "edition_constraints": [
-    {"source": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex","rendering": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf","permitted_relation": "related-source","basis": "theory/lineages/h-ics-v5/README.md"}
+    {
+      "source": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "rendering": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "permitted_relation": "related-source",
+      "basis": "theory/lineages/h-ics-v5/README.md"
+    }
   ],
-  "owner_binding_policy": "Each declared owner must match its exact blob identity in the pinned Git tree; no second checksum inventory is authored."
+  "owner_binding_policy": "Each declared owner must match its exact blob identity in the pinned Git tree; no second checksum inventory is authored.",
+  "baseline_change_note": "Recovery 04 includes merged PR 37. Prior census and owner map remain in exact pre-reconciliation Git history; this is not evidence of rereading unchanged scientific bodies."
 }

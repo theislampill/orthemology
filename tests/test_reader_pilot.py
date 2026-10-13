@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Mechanical reader-pilot controls; not a classifier of philosophical truth."""
+"""Mechanical reader-pilot controls; not a classifier of philosophical truth.
+
+Fixture-only scientific and profile paths use explicit fixture roots. They are
+created in temporary repositories, not citations to missing project documents.
+The real reader and generated-publication paths still exercise their actual
+production contracts; the repository reference gate is unchanged.
+"""
 from copy import deepcopy
 import hashlib
 import importlib.util
@@ -23,21 +29,21 @@ class ReaderPilotTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.repo = Path(self.tmp.name)
         self.files = {
-            "theory/core.md": "# Core\nA scoped definition.\n",
-            "theory/multi.md": "# Multi\nAn additional component.\n",
-            "theory/note.md": "# Note\nA substantive work without a PDF.\n",
-            "theory/related.tex": r"\title{Related, differently titled source}",
-            "theory/edition.pdf": "synthetic preserved edition, not a real PDF",
-            "theory/lineage.md": "# Lineage\nExact build provenance is unverified.\n",
+            "fixture-theory/core.md": "# Core\nA scoped definition.\n",
+            "fixture-theory/multi.md": "# Multi\nAn additional component.\n",
+            "fixture-theory/note.md": "# Note\nA substantive work without a PDF.\n",
+            "fixture-theory/related.tex": r"\title{Related, differently titled source}",
+            "fixture-theory/edition.pdf": "synthetic preserved edition, not a real PDF",
+            "fixture-theory/lineage.md": "# Lineage\nExact build provenance is unverified.\n",
             "research/new/README.md": "# Later collection\nIts own scope.\n",
-            "docs/profile.yaml": (
+            "fixture-docs/profile.yaml": (
                 "artifacts:\n"
-                "- artifact_id: core\n  sources: [theory/core.md, theory/multi.md]\n"
+                "- artifact_id: core\n  sources: [fixture-theory/core.md, fixture-theory/multi.md]\n"
                 "  profile_kind: technical-paper\n"
-                "- artifact_id: gallery\n  sources: [docs/gallery.md]\n"
+                "- artifact_id: gallery\n  sources: [fixture-docs/gallery.md]\n"
                 "  profile_kind: diagnostic-reference\n"
             ),
-            "docs/gallery.md": "# Gallery\nReference only.\n",
+            "fixture-docs/gallery.md": "# Gallery\nReference only.\n",
             "publication/latex/core/main.tex": "synthetic generated text",
             "artifacts/core.pdf": "synthetic composite rendering",
             "artifacts/gallery.pdf": "synthetic reference rendering",
@@ -57,21 +63,21 @@ class ReaderPilotTests(unittest.TestCase):
             "baseline": {"commit": self.base},
             "external_body_admissions": [],
             "collections": [
-                {"key": "theory", "include": ["theory/"], "exclude": [],
-                 "owners": ["theory/lineage.md"]},
+                {"key": "fixture-theory", "include": ["fixture-theory/"], "exclude": [],
+                 "owners": ["fixture-theory/lineage.md"]},
                 {"key": "later", "include": ["research/new/"], "exclude": [],
                  "owners": ["research/new/README.md"]},
-                {"key": "docs", "include": ["docs/"], "exclude": [],
-                 "owners": ["docs/profile.yaml"]},
+                {"key": "fixture-docs", "include": ["fixture-docs/"], "exclude": [],
+                 "owners": ["fixture-docs/profile.yaml"]},
                 {"key": "publication", "include": ["publication/", "artifacts/"],
-                 "exclude": [], "owners": ["docs/profile.yaml"]},
+                 "exclude": [], "owners": ["fixture-docs/profile.yaml"]},
             ],
-            "required_work_sources": ["theory/core.md", "theory/note.md"],
-            "publication_profile": "docs/profile.yaml",
+            "required_work_sources": ["fixture-theory/core.md", "fixture-theory/note.md"],
+            "publication_profile": "fixture-docs/profile.yaml",
             "edition_constraints": [{
-                "source": "theory/related.tex", "rendering": "theory/edition.pdf",
+                "source": "fixture-theory/related.tex", "rendering": "fixture-theory/edition.pdf",
                 "permitted_relation": "related-source",
-                "basis": "theory/lineage.md",
+                "basis": "fixture-theory/lineage.md",
             }],
         }
         def src(path):
@@ -83,27 +89,27 @@ class ReaderPilotTests(unittest.TestCase):
             "sources": {p: src(p) for p in self.files},
             "works": [
                 {"key": "core", "title": "Composite core", "role": "composite-reference",
-                 "source_keys": ["theory/core.md", "theory/multi.md"], "artifact_id": "core"},
+                 "source_keys": ["fixture-theory/core.md", "fixture-theory/multi.md"], "artifact_id": "core"},
                 {"key": "note", "title": "Substantive note", "role": "research-note",
-                 "source_keys": ["theory/note.md"]},
+                 "source_keys": ["fixture-theory/note.md"]},
                 {"key": "related", "title": "Related source", "role": "research-note",
-                 "source_keys": ["theory/related.tex"]},
+                 "source_keys": ["fixture-theory/related.tex"]},
                 {"key": "edition", "title": "Preserved edition", "role": "preserved-edition",
-                 "source_keys": ["theory/edition.pdf"]},
+                 "source_keys": ["fixture-theory/edition.pdf"]},
                 {"key": "gallery", "title": "Reference gallery", "role": "supporting-reference",
-                 "source_keys": ["docs/gallery.md"], "artifact_id": "gallery"},
+                 "source_keys": ["fixture-docs/gallery.md"], "artifact_id": "gallery"},
             ],
             "relations": [{
-                "from": "theory/related.tex", "to": "theory/edition.pdf",
-                "kind": "related-source", "basis": "theory/lineage.md",
+                "from": "fixture-theory/related.tex", "to": "fixture-theory/edition.pdf",
+                "kind": "related-source", "basis": "fixture-theory/lineage.md",
             }],
             "probes": [
                 {"key": "recognition-correction", "works": ["note"],
-                 "sources": ["theory/note.md"]},
+                 "sources": ["fixture-theory/note.md"]},
                 {"key": "tensor-geometry", "works": ["core"],
-                 "sources": ["theory/core.md"]},
+                 "sources": ["fixture-theory/core.md"]},
                 {"key": "cross-avenue", "works": ["note", "core"],
-                 "sources": ["theory/note.md", "theory/core.md"]},
+                 "sources": ["fixture-theory/note.md", "fixture-theory/core.md"]},
             ],
         }
 
@@ -142,8 +148,8 @@ class ReaderPilotTests(unittest.TestCase):
 
     def test_overlapping_owner_groups(self):
         altered = deepcopy(self.owners)
-        altered["collections"].append({"key": "duplicate", "include": ["theory/"],
-                                      "exclude": [], "owners": ["theory/core.md"]})
+        altered["collections"].append({"key": "duplicate", "include": ["fixture-theory/"],
+                                      "exclude": [], "owners": ["fixture-theory/core.md"]})
         self.reject(self.check(owners=altered), "overlapping-source")
 
     def test_missing_bound_owner(self):
@@ -162,33 +168,33 @@ class ReaderPilotTests(unittest.TestCase):
         self.reject(self.check(owners=altered), "external")
 
     def test_source_drift_requires_synopsis_review(self):
-        p = self.repo / "theory/note.md"
+        p = self.repo / "fixture-theory/note.md"
         before = p.read_bytes()
         p.write_bytes(before + b"Changed premise.\n")
         self.assertNotEqual(p.read_bytes(), before)
         self.reject(self.check(), "source-drift")
 
     def test_symlink_source_is_not_followed(self):
-        p = self.repo / "theory/note.md"
+        p = self.repo / "fixture-theory/note.md"
         p.unlink()
-        p.symlink_to(self.repo / "theory/core.md")
+        p.symlink_to(self.repo / "fixture-theory/core.md")
         self.reject(self.check(), "unsafe-source")
 
     def test_parent_symlink_is_not_followed(self):
         p = self.repo / "elsewhere"
-        p.symlink_to(self.repo / "theory", target_is_directory=True)
+        p.symlink_to(self.repo / "fixture-theory", target_is_directory=True)
         altered = deepcopy(self.cross)
-        altered["sources"]["theory/note.md"]["path"] = "elsewhere/note.md"
+        altered["sources"]["fixture-theory/note.md"]["path"] = "elsewhere/note.md"
         self.reject(self.check(cross=altered), "unsafe-source")
 
     def test_path_traversal_rejected(self):
         altered = deepcopy(self.cross)
-        altered["sources"]["theory/note.md"]["path"] = "../outside.md"
+        altered["sources"]["fixture-theory/note.md"]["path"] = "../outside.md"
         self.reject(self.check(cross=altered), "unsafe-source")
 
     def test_missing_composite_component(self):
         altered = deepcopy(self.cross)
-        altered["works"][0]["source_keys"].remove("theory/multi.md")
+        altered["works"][0]["source_keys"].remove("fixture-theory/multi.md")
         self.reject(self.check(cross=altered), "composite")
 
     def test_generated_tex_is_not_another_authored_work(self):
@@ -220,7 +226,7 @@ class ReaderPilotTests(unittest.TestCase):
 
     def test_bound_path_with_wrong_source_bytes(self):
         altered = deepcopy(self.cross)
-        altered["sources"]["theory/note.md"]["path"] = "theory/core.md"
+        altered["sources"]["fixture-theory/note.md"]["path"] = "fixture-theory/core.md"
         self.reject(self.check(cross=altered), "source-drift")
 
     def test_all_three_intellectual_routes_required(self):
@@ -255,16 +261,16 @@ class ReaderPilotTests(unittest.TestCase):
 
 
     def test_rehashed_scientific_source_cannot_rebind_baseline(self):
-        p = self.repo / "theory/note.md"
+        p = self.repo / "fixture-theory/note.md"
         before = p.read_bytes()
         p.write_bytes(before + b"A different scientific conclusion.\n")
         altered = deepcopy(self.cross)
-        altered["sources"]["theory/note.md"]["sha256"] = hashlib.sha256(p.read_bytes()).hexdigest()
+        altered["sources"]["fixture-theory/note.md"]["sha256"] = hashlib.sha256(p.read_bytes()).hexdigest()
         self.assertNotEqual(p.read_bytes(), before)
         self.reject(self.check(cross=altered), "baseline-source")
 
     def test_source_executable_mode_is_preserved(self):
-        p = self.repo / "theory/note.md"
+        p = self.repo / "fixture-theory/note.md"
         p.chmod(0o755)
         self.assertTrue(p.stat().st_mode & 0o111)
         self.reject(self.check(), "source-mode")
@@ -285,9 +291,9 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(self.check(cross=altered), [])
 
     def second_edition_fixture(self):
-        profile = self.repo / "docs/profile.yaml"
+        profile = self.repo / "fixture-docs/profile.yaml"
         profile.write_text(profile.read_text() +
-                          "- artifact_id: core-second\n  sources: [theory/core.md, theory/multi.md]\n"
+                          "- artifact_id: core-second\n  sources: [fixture-theory/core.md, fixture-theory/multi.md]\n"
                           "  profile_kind: technical-paper\n")
         edition = self.repo / "artifacts/core-second.pdf"
         edition.write_text("synthetic second governed edition")
@@ -295,7 +301,7 @@ class ReaderPilotTests(unittest.TestCase):
         self.git("commit", "-qm", "fixture second edition")
         owners, cross = deepcopy(self.owners), deepcopy(self.cross)
         owners["baseline"]["commit"] = self.git("rev-parse", "HEAD").strip()
-        cross["sources"]["docs/profile.yaml"]["sha256"] = hashlib.sha256(profile.read_bytes()).hexdigest()
+        cross["sources"]["fixture-docs/profile.yaml"]["sha256"] = hashlib.sha256(profile.read_bytes()).hexdigest()
         cross["sources"]["artifacts/core-second.pdf"] = {
             "path": "artifacts/core-second.pdf",
             "sha256": hashlib.sha256(edition.read_bytes()).hexdigest(),
@@ -422,18 +428,18 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.repo = Path(self.tmp.name)
-        (self.repo / "theory").mkdir()
-        (self.repo / "theory/source.md").write_text("# Source\n## Assumptions\nA scoped fixture.\n")
-        (self.repo / "theory/other.md").write_text("# Different source\nA different fixture.\n")
+        (self.repo / "fixture-theory").mkdir()
+        (self.repo / "fixture-theory/source.md").write_text("# Source\n## Assumptions\nA scoped fixture.\n")
+        (self.repo / "fixture-theory/other.md").write_text("# Different source\nA different fixture.\n")
         self.pages = ["RESEARCH-ATLAS.md", "PAPER-CATALOGUE.md", "RESULT-INDEX.md",
                       "CURRENT-FRONTIERS.md", "APPLICATIONS.md", "VERIFICATION-GUIDE.md"]
         for name in self.pages:
             path = self.repo / "docs/reader" / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("# Reader\n\n## Overview\nA conditional construction.\n[Read][source]\n\n"
-                            "[source]: ../../theory/source.md#assumptions\n")
+                            "[source]: ../../fixture-theory/source.md#assumptions\n")
         self.cross = {
-            "sources": {"source": {"path": "theory/source.md"}},
+            "sources": {"source": {"path": "fixture-theory/source.md"}},
             "reader_journeys": [
                 {"id": "J%02d" % i,
                  "entry": "docs/reader/" + self.pages[(i - 1) % len(self.pages)] + "#overview",
@@ -471,11 +477,11 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.reject("reader-fragment")
 
     def test_correct_http_like_success_is_not_correct_source(self):
-        self.mutate("../../theory/source.md#assumptions", "../../theory/other.md")
+        self.mutate("../../fixture-theory/source.md#assumptions", "../../fixture-theory/other.md")
         self.reject("journey-target")
 
     def test_wrong_valid_source_fragment_is_not_the_requested_section(self):
-        p = self.repo / "theory/source.md"
+        p = self.repo / "fixture-theory/source.md"
         p.write_text(p.read_text() + "## Other result\nDifferent scope.\n")
         self.cross["reader_journeys"][0]["source_fragments"] = {"source": "assumptions"}
         self.mutate("#assumptions", "#other-result")
@@ -498,11 +504,11 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.reject("journey-target")
 
     def test_fenced_link_is_not_navigation(self):
-        self.mutate("[Read][source]", "```text\n[Read](../../theory/source.md#assumptions)\n```")
+        self.mutate("[Read][source]", "```text\n[Read](../../fixture-theory/source.md#assumptions)\n```")
         self.reject("journey-target")
 
     def test_absolute_machine_link_is_rejected(self):
-        self.mutate("../../theory/source.md#assumptions", "file:///private/example.md")
+        self.mutate("../../fixture-theory/source.md#assumptions", "file:///private/example.md")
         with self.assertRaises(ValueError):
             self.mod.resolve_reader_link(self.repo, "docs/reader/RESEARCH-ATLAS.md", "file:///private/example.md")
         # CommonMark suppresses this forbidden link; the promised source
@@ -510,9 +516,9 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.reject("journey-target")
 
     def test_symlink_reading_target_is_rejected(self):
-        p = self.repo / "theory/source.md"
+        p = self.repo / "fixture-theory/source.md"
         p.unlink()
-        p.symlink_to(self.repo / "theory/other.md")
+        p.symlink_to(self.repo / "fixture-theory/other.md")
         self.reject("reader-link")
 
     def test_semantic_false_friend_is_not_mechanically_certified(self):
@@ -526,6 +532,19 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.assertEqual(self.check(), [])
         after = {p.relative_to(self.repo): p.read_bytes() for p in self.repo.rglob("*") if p.is_file()}
         self.assertEqual(before, after)
+
+
+class ReaderFixtureReferenceTests(unittest.TestCase):
+    def test_temporary_fixture_names_are_not_ghost_repository_citations(self):
+        import sys
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import validate_internal_references as refs
+        owner = "tests/test_reader_pilot.py"
+        text = (ROOT / owner).read_text(encoding="utf-8")
+        missing = sorted({path for path, _ in refs._citation_occurrences(
+            owner, text, root=str(ROOT), successor_sources={})
+            if not refs._resolves(owner, path)})
+        self.assertEqual(missing, [], "Synthetic fixture paths must not claim live repository sources")
 
 
 if __name__ == "__main__":
