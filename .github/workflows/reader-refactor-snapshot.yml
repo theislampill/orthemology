@@ -1,48 +1,155 @@
-name: issue-35-recovery-03
+name: issue-35-recovery-03-finalise
 
-# Temporary recovery transport within the existing Issue 35 allowlist.
-# Exports public Git objects only. No write token, secrets, caches or environment.
-# Remove this workflow before the next qualified checkpoint.
+# One-shot maintenance of the explicitly frozen reader checkpoint.
+# This does not reconcile later main, merge PR 36, or accept the research.
+# Only existing generated owners and this helper's removal may be committed.
 on:
   push:
     branches: [refactor/issue-35-research-reader-20261012]
     paths: [.github/workflows/reader-refactor-snapshot.yml]
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: issue-35-recovery-03-finalise
+  cancel-in-progress: false
 jobs:
-  recover:
-    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
+  finalise:
+    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012' && github.event_name == 'push'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
+    env:
+      TARGET_BRANCH: refactor/issue-35-research-reader-20261012
     steps:
       - uses: actions/checkout@v6
         with:
           fetch-depth: 0
-          persist-credentials: false
-      - name: Export the exact saved pre-recovery checkpoint
+          ref: ${{ github.sha }}
+          persist-credentials: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - name: Install the existing locked CI environment
+        run: python -m pip install --quiet --disable-pip-version-check -r requirements-ci.lock.txt
+      - name: Bind exact feature head, original corpus and later-main boundary
         shell: bash
         run: |
           set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/issue35-recovery03/commits"
+          printf 'EVIDENCE_DIR=%s/issue35-recovery03\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
           base=297267f6e49f80871036a95a6dfd81bdad40ea1f
-          target=a3290bb16d68e3b8c6f5764e83f8679001bf4e81
           test "$(git rev-parse "$base^{tree}")" = fc702fe8456b48ff89b0c28df31f5fe232058538
-          test "$(git rev-parse "$target^{tree}")" = 355b080ae21e186272e08de849a2c2840777d647
-          git merge-base --is-ancestor "$base" "$target"
-          out="$RUNNER_TEMP/issue35-recovery-03"
-          mkdir -p "$out/commits"
-          printf '%s\n' "$base" > "$out/base.txt"
-          printf '%s\n' "$target" > "$out/head.txt"
-          git rev-parse "$target^{tree}" > "$out/head-tree.txt"
-          git diff --binary "$base" "$target" > "$out/checkpoint.patch"
-          git rev-list --reverse "$base..$target" | while IFS= read -r commit; do
-            git cat-file commit "$commit" > "$out/commits/$commit"
+          test "$(git rev-parse HEAD^)" = d254d25d8223e17c18941bcaada58f06cca40bbe
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
+          git merge-base --is-ancestor "$base" HEAD
+          test -z "$(git status --porcelain)"
+          git rev-parse origin/main > "$RUNNER_TEMP/issue35-recovery03/main-at-check.txt"
+          printf '%s\n' "$base" > "$RUNNER_TEMP/issue35-recovery03/corpus-base.txt"
+          python - <<'PY'
+          import subprocess
+          base = '297267f6e49f80871036a95a6dfd81bdad40ea1f'
+          prefix = 'docs/project-closure/reader-refactor-issue-35/'
+          allowed = {prefix + name for name in (
+              'EXECUTION.md', 'CONTINUATION.md', 'CENSUS.json', 'OWNER-MAP.json',
+              'CROSSWALK.json', 'PILOT.md', 'PILOT-QUALIFICATION.md')}
+          allowed |= {'docs/reader/' + name for name in (
+              'RESEARCH-ATLAS.md', 'PAPER-CATALOGUE.md', 'RESULT-INDEX.md',
+              'CURRENT-FRONTIERS.md', 'APPLICATIONS.md', 'VERIFICATION-GUIDE.md')}
+          allowed |= {
+              'scripts/reader_census.py', 'scripts/check_reader_pilot.py',
+              'tests/test_reader_census.py', 'tests/test_reader_pilot.py',
+              'docs/project-closure/HISTORICAL-STATUS-INDEX.yaml',
+              'docs/current-state.yaml', 'docs/provenance/RELEASE-MANIFEST.sha256',
+              '.github/workflows/validate.yml', '.github/workflows/reader-refactor-snapshot.yml',
+          }
+          changed = set(subprocess.check_output(['git','diff','--name-only','-z',base,'HEAD']).decode().rstrip('\0').split('\0'))
+          if not changed <= allowed:
+              raise SystemExit('Unapproved source changes: ' + repr(sorted(changed - allowed)))
+          print('PASS: bounded feature diff against the original frozen corpus')
+          print('Later main is recorded separately; this helper does not merge or reclassify it.')
+          PY
+      - name: Run the actual census, reader and dependency controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census-normal.txt"
+          python -B -O tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census-optimized.txt"
+          python -B tests/test_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/pilot-normal.txt"
+          python -B -O tests/test_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/pilot-optimized.txt"
+          python -B scripts/check_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/actual-reader-bindings.txt"
+          python -B tests/test_dependency_lock.py 2>&1 | tee "$EVIDENCE_DIR/dependency-tests.txt"
+          python -B scripts/validate_dependency_lock.py 2>&1 | tee "$EVIDENCE_DIR/dependency-lock.txt"
+          python -B - <<'PY' | tee "$EVIDENCE_DIR/census-readback.txt"
+          import json
+          from pathlib import Path
+          from scripts.reader_census import census
+          expected = json.loads(Path('docs/project-closure/reader-refactor-issue-35/CENSUS.json').read_text())
+          actual = census(Path.cwd(), expected['baseline']['commit'], owners=[r['path'] for r in expected['owners']])
+          if actual != expected:
+              raise SystemExit('Census does not match exact baseline execution')
+          print('PASS: exact frozen census readback; not complete semantic reading')
+          PY
+      - name: Retire helper and regenerate existing owners
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm -- .github/workflows/reader-refactor-snapshot.yml
+          python -B - <<'PY' | tee "$EVIDENCE_DIR/generation.txt"
+          import subprocess
+          from pathlib import Path
+          import yaml
+          p = Path('docs/current-state.yaml')
+          before = yaml.safe_load(p.read_text())['authored']
+          subprocess.run(['python','-B','scripts/generate_current_state.py'], check=True)
+          if yaml.safe_load(p.read_text())['authored'] != before:
+              raise SystemExit('Authored state changed')
+          subprocess.run(['python','-B','scripts/make_manifest.py'], check=True)
+          subprocess.run(['python','-B','scripts/generate_current_state.py','--check'], check=True)
+          print('PASS: generated owners reconciled; authored state unchanged')
+          PY
+      - name: Existing hygiene, state, review and reference gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B scripts/validate_repo.py 2>&1 | tee "$EVIDENCE_DIR/hygiene.txt"
+          python -B scripts/validate_current_state.py 2>&1 | tee "$EVIDENCE_DIR/current-state.txt"
+          python -B scripts/validate_review_state.py 2>&1 | tee "$EVIDENCE_DIR/review-state.txt"
+          python -B scripts/validate_internal_references.py 2>&1 | tee "$EVIDENCE_DIR/internal-references.txt"
+          python -B scripts/validate_state_convergence.py 2>&1 | tee "$EVIDENCE_DIR/convergence.txt"
+      - name: Commit only generated state, manifest and helper removal
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess
+          allowed = {'.github/workflows/reader-refactor-snapshot.yml',
+                     'docs/current-state.yaml', 'docs/provenance/RELEASE-MANIFEST.sha256'}
+          changed = set(subprocess.check_output(['git','diff','HEAD','--name-only','-z']).decode().rstrip('\0').split('\0'))
+          if changed != allowed:
+              raise SystemExit('Unexpected maintenance write set: ' + repr(sorted(changed)))
+          if subprocess.check_output(['git','ls-files','--others','--exclude-standard']).strip():
+              raise SystemExit('Unexpected untracked output')
+          PY
+          test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
+          git add -- docs/current-state.yaml docs/provenance/RELEASE-MANIFEST.sha256
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore: reconcile recovered reader checkpoint and retire temporary helper'
+          python -B scripts/generate_current_state.py --check | tee "$EVIDENCE_DIR/committed-state.txt"
+          git push origin "HEAD:refs/heads/$TARGET_BRANCH"
+          git rev-parse HEAD > "$EVIDENCE_DIR/head.txt"
+          git rev-parse 'HEAD^{tree}' > "$EVIDENCE_DIR/head-tree.txt"
+          base=297267f6e49f80871036a95a6dfd81bdad40ea1f
+          git diff --binary "$base" HEAD > "$EVIDENCE_DIR/checkpoint.patch"
+          git rev-list --reverse "$base..HEAD" | while IFS= read -r commit; do
+            git cat-file commit "$commit" > "$EVIDENCE_DIR/commits/$commit"
           done
-          git cat-file commit "$base" > "$out/commits/$base"
-          git ls-tree -r -z "$target" > "$out/head-tree.z"
-          (cd "$out"; find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS)
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+          (cd "$EVIDENCE_DIR"; find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS)
+      - name: Retain checkpoint evidence without claiming full PR CI
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: issue35-recovery-03-a3290bb1
-          path: ${{ runner.temp }}/issue35-recovery-03/
+          name: issue35-recovery03-qualified-${{ github.sha }}
+          path: ${{ runner.temp }}/issue35-recovery03/
           retention-days: 14
           if-no-files-found: error
