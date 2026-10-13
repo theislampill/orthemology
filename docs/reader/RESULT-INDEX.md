@@ -14,10 +14,10 @@ For background and editions, use the [work catalogue](PAPER-CATALOGUE.md). For t
 
 **Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Ordinary proof, section 5][coordination].
 
-Let `S` have a centred Gaussian law of variance `n > 0`, let `M` have at most `N` values, and suppose `Y` and `S` are conditionally independent given `M`. For a fixed interval of length `L`,
+Let `S` have a centred Gaussian law of variance `n > 0`, let `M` have at most `N` values, and suppose `Y` and `S` are conditionally independent given `M`. For a fixed interval `I` of length `L ≥ 0` and a positive integer `N`,
 
 ```text
-P(Y + S in I) <= 2 Phi(N L / (2 sqrt(n))) - 1.
+P(Y + S ∈ I) ≤ 2 Φ(NL/(2√n)) − 1.
 ```
 
 The source supplies a matching fixed-horizon construction. The conclusion quantifies complete-mediation capacity; it does not identify a finite program's description length with a complete mediator. Side information, prescribed state marginals, a common history across horizons and forward-causal realisation are separate conditions. **Evidence here:** written mathematics and the source's scoped records, not a new replay by this reader layer.
@@ -31,13 +31,15 @@ In finite-dimensional real space, let `h` be a coercive real polynomial. On an i
 ```text
 L_t(1) = 1
 L_t(q^2) >= 0
-L_t'(p) = -L_t(h p) + L_t(h) L_t(p), for every polynomial p.
+L_t'(p) = -L_t(h p) + L_t(h) L_t(p)
+for every polynomial p.
 ```
 
 The written theorem produces exactly one probability law for that **complete path**, with all absolute polynomial moments finite, such that
 
 ```text
-L_t(p) = integral(p exp(-t h) d mu) / integral(exp(-t h) d mu).
+Z_t = ∫ exp(-t h) dμ
+L_t(p) = ∫ p exp(-t h) dμ / Z_t
 ```
 
 Positive-time full moment records are determinate and the path extends uniquely. A fixed initial moment record can nevertheless admit several representing laws and hence several paths. Initial representability is obtained from the path hypotheses, not assumed.
@@ -66,6 +68,21 @@ The corollary requires preservation of selected **ambient full-source** squared 
 For fixed known conditionals, these norms recover the weights. Therefore a positive-dimensional fibre cannot have an exact finite-valued supplement under this contract. A continuous supplement needs, and on this fixed fibre can use, `d` real coordinates.
 
 This is not the gradient intrinsic to a fibre on which the conditionals are fixed. It is not a globally continuous minimal chart across changing-rank strata, and it does not require full weight retention for the weaker posterior-answer-only task. The contribution owner records an ordinary reviewed corollary, with no external-novelty claim; its existing review is not a new independent review of this refactor.
+
+### A metric with observable consequences
+
+The controlling Fisher paper also gives an explicit dynamical test, not only a counting obstruction. With a two-state target, retain the three conditional laws
+
+```text
+p₁ = (1/4, 3/4)
+p₂ = (1/2, 1/2)
+p₃ = (3/4, 1/4)
+```
+
+Both weight vectors `(1/4, 1/2, 1/4)` and `(1/8, 3/4, 1/8)` give the same mixture `(1/2, 1/2)`. For the stipulated objective `J = p₁,₁`, however, the negative full-source Fisher velocity of `p₁` is respectively `(-3/4, 3/4)` and `(-3/2, 3/2)`. A record can therefore preserve the conditional answers and current mixture while failing to preserve their dynamics. The source’s [section 9 control][fisher-control] supplies the example; the refactor is not claiming a new experiment.
+
+The positive classification is also useful: for the source’s ambient `C2` objective on the full strictly positive domain, with more audit outcomes than target states, its negative full-source Fisher gradient flow projects consistently to the retained signature exactly when the restricted objective is a function of the current target alone. Here “descend” means the same projected dynamics for every admissible discarded-weight representative, not merely making a loss smaller. For this case the source supplies a closed target flow. Restricted source families, other metrics and the complementary cardinality regime have different conclusions. The [classification and assumptions][fisher] must accompany any application; numerical decrease is not itself epistemic warrant.
+
 
 ## Joint feasible readings and completions
 
@@ -129,3 +146,4 @@ The independent [candidate/owner map][owner-map] retains all baseline paths, inc
 [ar8r-post]: ../project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml
 [experiment-status]: ../../experiments/experiment-status.yaml
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
+[fisher-control]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
