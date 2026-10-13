@@ -8,14 +8,17 @@
 
 A claim that a PDF matches its source, a theorem follows from stated assumptions, a finite test passes, and a philosophical interpretation is warranted needs different evidence. The repository preserves those distinctions in its publication, source, result and review owners.
 
-| Evidence | What it can establish at its declared scope | What it does not establish by itself |
-|---|---|---|
-| Source identity / content hash | Which exact bytes were retained or compared. | Correctness, novelty, source reliability or semantic equivalence of different editions. |
-| Written mathematical argument | A stated reasoning route under its assumptions, available for scrutiny. | Fresh kernel checking or empirical applicability. |
-| Recorded formal compilation | The formal declarations and imports checked in the named environment. | Every surrounding prose claim, proposed application or metaphysical premise. |
-| Finite controls | Observed behaviour for the actual tested cases. | A universal theorem or empirical validation of an unrun study. |
-| Existing review | What the named reviewer/session examined and concluded at that time. | A fresh independent review of changed prose or this refactor. |
-| Owner acceptance / repository merge | The applicable decision or integration event. | Automatic research closure, external peer review or validation of every component. |
+**Source identity and content hashes.** These establish which exact bytes were retained or compared. They do not establish correctness, novelty, source reliability or equivalence between different editions.
+
+**Written mathematical arguments.** Read the actual argument and its assumptions. An ordinary proof is not made less mathematical by lacking Lean formalisation, but its existence is not evidence of fresh kernel checking or empirical applicability.
+
+**Recorded formal compilation.** A receipt concerns the formal declarations and imports checked in its named environment. It does not automatically certify surrounding prose, a proposed application or a metaphysical premise.
+
+**Finite controls.** Observed tests establish behaviour for the cases actually exercised. They are not universal proofs or empirical validation of an unrun study.
+
+**Existing review.** A review establishes what its named reviewer examined and concluded at that time. It is not a fresh independent review of changed prose or of this refactor.
+
+**Owner acceptance and repository merge.** These record the applicable decision or integration event. They do not automatically close research questions, constitute external peer review or validate every component.
 
 The [result/evidence owners][evidence] and [T20 source recovery guide][recovery] supply the scope for concrete results. Do not replace that scope with one badge for an entire page.
 
