@@ -14,11 +14,19 @@ The wider research cannot be reduced to an audit checklist. The sample below inc
 
 **Question:** How can a person recognise something correctly without first proving that every cognitive faculty is reliable, and what can reasoning contribute when recognition is obstructed?
 
-The [Sound Reason substrate][sound], especially sections 1–2, 4 and 5, offers a positive answer: truth-directed proper functioning in an appropriate environment grounds basic cognition; reasoning may clarify, remind and remove obstructions rather than supply an endlessly prior reflective proof. In its broader use of **tawātur**, diverse, widespread and non-collusive concordance of rational and fitri deliverances contributes to vindicating cognitive functioning itself. It is not merely a count of copied reports.
+The [Sound Reason substrate][sound] offers a positive answer. Its [basic-cognition account][sound-basic] and [proper-function account][sound-function] ground knowledge in truth-directed faculties operating in an appropriate environment, without requiring first-person access to an endlessly prior proof of their reliability. Its [corrective-reasoning account][sound-correction] gives argument a constructive role: clarify, remind and remove obstructions to recognition.
+
+In its [broader use of **tawātur**][sound-tawatur], diverse, widespread and non-collusive concordance of rational and fiṭrī deliverances vindicates cognitive functioning itself. That is a substantive epistemological thesis, not merely a count of copied reports. The source argues it within its own account; this guide does not convert that account’s claims about all cultures or unimpaired cognisers into a newly verified empirical survey.
 
 The [concrete/sound distinction note][concrete] contributes a different precision: actual instantiation is not the same predicate as epistemic soundness, and a correct output is not sufficient for an adequate truth-linked pathway. The [later retained-passage qualification][retained] keeps affirmative recognition and foundational appraisals while separating them from infallibility in every exercise and from additional productive-source premises.
 
 **What the connection contributes:** recognition, cognitive vindication and correction form a substantive epistemic account. A source-dependence graph alone does not supply that whole account. These texts' philosophical assertions, source qualifications and stated premises remain their own; this reader layer neither authenticates all underlying primary passages nor diagnoses individuals as cognitively impaired.
+
+### A positive foundational route
+
+The [retained-passage report, section 2][retained-productive], explains a productive-adequacy argument: if the existence and productive actuality of an entire field are received, merely collecting its members—even without a first temporal member—does not supply an unreceived productive basis. The target is the wholly received field, not a fallacious inference that a cooperating whole must be as ineffective as each participant. The same report expressly allows real contributions and gains from cooperation.
+
+This is the report’s affirmative source-bound route, not a new proof issued by this guide. Its premises concern actual receipt and sufficient production; their warranted application matters. The report also distinguishes a route whose bare conclusion is a Necessary Being from the later identification of the actual common Creator. Its later positive appraisals remain at their recorded, defeasible scopes; this distinction does not reset them to a blanket unresolved status. Nor does recognition have to wait for every person to traverse this particular proof.
 
 Read the [three related works](PAPER-CATALOGUE.md#recognition-and-correction), then the [remaining interpretation questions](CURRENT-FRONTIERS.md#recognition-and-foundational-application).
 
@@ -88,3 +96,8 @@ For a named manuscript use the [work catalogue](PAPER-CATALOGUE.md). For an exac
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
 [avenues]: ../provenance/v5-successors/TWELVE_AVENUES.json
+[sound-basic]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md#11---basic-cognition-and-rational-reminder
+[sound-function]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md#2-warrant-proper-function-and-the-fiṭrah
+[sound-tawatur]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md#42--extension-to-rational-and-fiṭrī-deliverables
+[sound-correction]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md#5-ḥusn-al-naẓar--sound-inferential-reasoning-for-the-impaired-fiṭrah
+[retained-productive]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md#2-necessity-and-productive-completeness-are-stronger-than-a-generic-regress-ban
