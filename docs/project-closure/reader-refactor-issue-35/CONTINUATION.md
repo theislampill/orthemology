@@ -36,3 +36,15 @@ The existing `reader_census.py` and its tests may receive bounded owner-map supp
 ## Evidence rule
 
 Save source passages actually examined, not retrospective reading claims. Record both positive intellectual contributions and their limitations. A count, keyword match, successful link, rendered page or author self-check is not independent scholarly acceptance. Any remaining work must have an explicit next action rather than a false completion label.
+
+## Recovery 03 — interrupted continuation preserved
+
+The response interruption did not erase the remotely saved work. The next live read found PR 36 still draft at `a3290bb16d68e3b8c6f5764e83f8679001bf4e81`, tree `355b080ae21e186272e08de849a2c2840777d647`: 25 commits and 20 changed files relative to the original baseline. All six reader pages, OWNER-MAP, CROSSWALK, the pilot checker and tests were present. The older PR description and EXECUTION ledger are historical checkpoint accounts, not complete statements of this newer head.
+
+Direct Git transport remained unavailable. The existing temporary-workflow path was reused with a read-only token to export the exact pre-recovery checkpoint, not credentials or runner configuration. [Recovery run 38324978431](https://github.com/theislampill/orthemology/actions/runs/38324978431) produced artifact 11780690875, ZIP SHA-256 `51e396b84bf2a037f7b90db6b0845ffeb7705c1799aa74b14bd3a2cf08ceb5fc`. All 31 listed member hashes matched. Applying the recovered patch to the verified baseline reproduced the exact saved tree and a clean worktree. The 26 archived commit bodies were hash-checked; earlier ancestry remains shallow. The original supplied archives were not changed.
+
+Fresh local replay under Python 3.13.5 passed the ten census tests and twenty-eight pilot tests. The full PR run 38322079165 had failed at repository hygiene, with later gates skipped. Local reproduction found a release-manifest hash mismatch for `docs/project-closure/HISTORICAL-STATUS-INDEX.yaml`; it was not a licence to weaken that check. Generated-state reconciliation and exact-head full CI remain mandatory at the next checkpoint.
+
+The recovered map contains 71 distinct discovery-owner paths. This is an observed routing count, not 71 completed independent source reviews. The six pages remain representative design previews, not complete semantic coverage.
+
+Next bounded bundle: strengthen the existing checker against self-rehashed scientific-source changes, wrong rendering targets and broken or retargeted reader routes; retain paired source-based intellectual answers; reconcile generated outputs and remove the temporary workflow. Existing script, test, crosswalk and qualification-report paths suffice. C03 bulk completion, C05 independent review, Dot assessment and owner integration remain unclaimed.
