@@ -38,6 +38,16 @@ A source file containing formal declarations does not make every theorem, comput
 
 The [certificate/search work][t14-certificates] describes a total mathematical check of supplied finite annotated derivations. Its written undecidability argument explicitly identifies an imported representation premise. No fresh verification of that external premise or executable unrestricted solver is supplied here. The [later restricted checker owner][t15-group-followup] is a different source and problem boundary.
 
+## Verifying a restricted checker claim
+
+Start at [Paper 4](PAPER-CATALOGUE.md#a-complete-restricted-identity-checker) and the [declaration-to-claim map][t15-declarations]. The original restricted Lean checker proves a complete coefficient decision and finite typed-certificate service under the original semantics for its declared grammar. Do not replace that theorem with “finite tests only”. Conversely, do not transfer it to the source's strict Python wire-format interface, explicit grid/witness generator or arbitrary endpoint recognition.
+
+The [reference-interface guide][t15-reference-guide] records three separately scoped executions: canonical decoded-JSON checking, finite generated Python/Lean runtime comparison, and one-variable root-extension checking. It links each source and exact suite record. Replaying a source package must retain its declared dependencies and work layout; a hashed source-store directory is not necessarily a directly runnable standalone project. Successful finite comparisons are not a universal refinement theorem.
+
+The [Python certificate implementation][t15-json-reference] uses standard JSON decoding followed by strict structural checks, including rejection of Boolean values where natural integers are required. That is not a proved duplicate-key-rejecting parser. Lean certificates instead admit harmless redundant/split coefficient representations while requiring genuine coverage of every mask. A user-facing verification claim must say which representation was accepted.
+
+The original whole-domain classifications and collective-observation arguments are written mathematics with the particular checked components recorded by their owners. The latter's exact-real sequential decision rule is not a validated floating-point monitor. A fresh reader check establishes neither full scientific replay nor independent acceptance of this refactor.
+
 ## Reading and editing a publication
 
 Start with the [publication profile][profile]. It identifies the substantive sources, generated LaTeX and governed rendering relationships. The formal-reference PDF combines the core and multi-actor note; the notation gallery is a diagnostic reference.
@@ -139,3 +149,9 @@ These are selected integration checks, not a substitute for the complete [.githu
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
 
 [t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+[t15-declarations]: ../../experiments/orthemology-v5-successors/source-store/3f6e138825d599075b6f920f0079ccc2ca8b7d6c24c8bba0940af4f62d68de1a/DECLARATION_CLAIM_MAP.md
+
+[t15-reference-guide]: ../../experiments/orthemology-v5-successors/groups/t15-restricted-reference/README.md
+
+[t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py

@@ -962,5 +962,127 @@ class IdentityLineageCoverageTests(unittest.TestCase):
         # This is discoverability, not automated adjudication of the prose.
 
 
+
+class FifteenthCompendiumCoverageTests(unittest.TestCase):
+    """Constituent papers come from the original volume, not the new catalogue."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_fifteenth", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        prefix = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((prefix / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((prefix / "CROSSWALK.json").read_text())
+        cls.baseline = cls.owners["baseline"]["commit"]
+        cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
+        cls.text = (ROOT / cls.catalogue).read_text()
+        group = "experiments/orthemology-v5-successors/groups/t15-identity/README.md"
+        raw = subprocess.check_output(["git", "show", cls.baseline + ":" + group], cwd=ROOT).decode()
+        matches = {cls.mod.resolve_reader_link(ROOT, group, href)[0]
+                   for _, href in cls.mod.markdown_index(raw)["links"]
+                   if href.endswith("/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md")}
+        if len(matches) != 1:
+            raise ValueError("The original guide must identify one compendium body")
+        cls.volume = matches.pop()
+        text = subprocess.check_output(["git", "show", cls.baseline + ":" + cls.volume], cwd=ROOT).decode()
+        lines = text.splitlines()
+        cls.chapters = {anchor: lines[line][3:] for anchor, level, line
+                        in cls.mod.markdown_index(text)["headings"]
+                        if level == 2 and lines[line] != "## Relation to established methods"}
+        cls.results = json.loads(subprocess.check_output([
+            "git", "show", cls.baseline + ":docs/provenance/v5-successors/RESULT_STATUS.json"], cwd=ROOT))
+
+    def bindings(self, cross):
+        keys = {key for key, value in cross["sources"].items() if value["path"] == self.volume}
+        result = {anchor: [] for anchor in self.chapters}
+        for work in cross["works"]:
+            for section in work.get("reading_forms", []):
+                if section.get("source") in keys and section.get("fragment") in result:
+                    if section["source"] in work["source_keys"]:
+                        result[section["fragment"]].append(work)
+        return result
+
+    def routes(self, text, cross):
+        page = self.mod.markdown_index(text)
+        errors = []
+        for chapter, works in self.bindings(cross).items():
+            if len(works) != 1:
+                errors.append("constituent-work: " + chapter)
+                continue
+            entry = works[0].get("catalogue_entry", "")
+            if not entry.startswith(self.catalogue + "#"):
+                errors.append("constituent-route: " + chapter)
+                continue
+            selected = [h for h in page["headings"] if h[0] == entry.partition("#")[2]]
+            if len(selected) != 1:
+                errors.append("constituent-route: " + chapter)
+                continue
+            _, level, start = selected[0]
+            end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+            found = {self.mod.resolve_reader_link(ROOT, self.catalogue, href)
+                     for line, href in page["links"] if start <= line < end}
+            if (self.volume, chapter) not in found:
+                errors.append("constituent-route: " + chapter)
+        return errors
+
+    def test_all_six_source_named_papers_have_exact_section_routes(self):
+        self.assertEqual(len(self.chapters), 6)
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        self.assertIn(self.volume, self.owners["required_work_sources"])
+        for chapter, works in self.bindings(self.cross).items():
+            self.assertEqual(works[0]["title"], self.chapters[chapter])
+
+    def test_each_constituent_omission_fails_even_when_volume_remains_linked(self):
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        for chapter, works in self.bindings(self.cross).items():
+            altered = deepcopy(self.cross)
+            altered["works"] = [w for w in altered["works"] if w["key"] != works[0]["key"]]
+            with self.subTest(chapter=chapter):
+                self.assertEqual(len(altered["works"]), len(self.cross["works"]) - 1)
+                self.assertIn("constituent-work: " + chapter, self.routes(self.text, altered))
+
+    def test_valid_volume_link_or_other_chapter_is_not_the_required_paper(self):
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        for chapter in self.chapters:
+            href = "../../" + self.volume + "#" + chapter
+            other = next(c for c in self.chapters if c != chapter)
+            for replacement in ("../../" + self.volume, "../../" + self.volume + "#" + other):
+                with self.subTest(chapter=chapter, replacement=replacement):
+                    self.assertIn(href, self.text)
+                    changed = self.text.replace(href, replacement)
+                    self.assertNotEqual(changed, self.text)
+                    self.assertIn("constituent-route: " + chapter, self.routes(changed, self.cross))
+
+    def test_duplicate_edition_entry_does_not_become_a_second_constituent(self):
+        self.assertEqual(self.routes(self.text, self.cross), [])
+        chapter, works = next(iter(self.bindings(self.cross).items()))
+        altered = deepcopy(self.cross)
+        duplicate = deepcopy(works[0])
+        duplicate["key"] += "-synthetic-duplicate-edition"
+        altered["works"].append(duplicate)
+        self.assertIn("constituent-work: " + chapter, self.routes(self.text, altered))
+
+    def test_lean_checker_and_json_reference_support_the_same_restricted_paper(self):
+        chapter = next(c for c, title in self.chapters.items() if title.startswith("Restricted Semantic"))
+        works = self.bindings(self.cross)[chapter]
+        self.assertEqual(len(works), 1)
+        support = {self.cross["sources"][key]["path"] for key in works[0].get("supporting_source_keys", [])}
+        for name in ("IdentityChecker.lean", "RestrictedCompiler.lean", "certificate_checker.py"):
+            with self.subTest(component=name):
+                self.assertTrue(any(path.endswith("/" + name) for path in support))
+        # The formal procedure and wire-format reference remain different interfaces.
+        self.assertTrue(any(path.endswith("/DECLARATION_CLAIM_MAP.md") for path in support))
+
+    def test_source_owned_identity_and_collective_result_scopes_remain_findable(self):
+        selected = {r["id"] for r in self.results["results"]
+                    if (r["id"].startswith("T15-") and r.get("calculus") != "NONE")
+                    or (r["id"].startswith("D18-T15-") and
+                        "T15-COMPENDIUM-DERIVED-MARKDOWN" in r.get("source_ids", []))}
+        self.assertGreaterEqual(len(selected), 20)
+        index = (ROOT / "docs/reader/RESULT-INDEX.md").read_text()
+        missing = {key for key in selected if "`" + key + "`" not in index}
+        self.assertEqual(missing, set(), "Names alone do not establish the fidelity of the accompanying summaries")
+
+
 if __name__ == "__main__":
     unittest.main()

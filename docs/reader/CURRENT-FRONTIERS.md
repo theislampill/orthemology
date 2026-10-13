@@ -77,6 +77,18 @@ The [finite-certificate paper][t14-certificates] also separates a total check of
 
 This page records the inspected Thirteenth/Fourteenth sequence and the existence and scope of the named later owner. It does not claim exhaustive curation or fresh verification of the much larger Fifteenth compendium. That remaining reading belongs to the full catalogue task, not to a repetition of the earlier mathematics.
 
+## Restricted completeness is established at a specific interface
+
+The [Fifteenth restricted development](PAPER-CATALOGUE.md#a-complete-restricted-identity-checker) has a recorded complete Lean coefficient checker and typed finite-certificate theorem for every finite arity of its declared grammar. It should not remain labelled merely a proposal or a compiler bridge. Its positive result does not solve arbitrary current-typed endpoint identity, extend the grammar by stealth or prove current syntactic identity completeness.
+
+The remaining interfaces are specific: literal endpoint membership for external claims; strict JSON versus typed sparse certificate representations; parser and implementation refinement; the separately written grid/witness construction; and operational resource/error handling. Finite Python/Lean agreement does not close those general refinement questions. The [root-equality extension](PAPER-CATALOGUE.md#equality-tests-and-the-univariate-exception) also retains its proved univariate criterion alongside the general hardness boundary; the source gives no particular hardness arity of at least two.
+
+## Observation design before collective attribution
+
+The [Fifteenth observation argument](PAPER-CATALOGUE.md#what-final-answers-can-identify) already constructs an observation that distinguishes its matched laws and supplies finite/sequential guarantees under explicit assumptions. Calling the whole programme “unidentifiable” would discard that positive result. Equally, merely adding a final-answer dataset does not discriminate mechanisms with the same observation law.
+
+The next applicable work concerns warranted mechanisms and linked, conditionally comparable observations; recording error and participant effects; defensible separation assumptions; and numerically qualified implementations of the exact-real service. The one-sided detector's lack of a terminating null answer is a mathematical boundary on its contract, not an accidentally unimplemented branch. The separate reanalysis and the constructed models remain distinct evidence until a justified connection is supplied.
+
 ## Source availability and editorial completion
 
 The [source recovery guide][recovery] distinguishes recovered proof bodies from held or unavailable material and from historical evidence whose original scope remains limited. Its record of binary variants without decoded-equivalence qualification must not become a claim that their texts are all duplicates.

@@ -8,9 +8,9 @@
 
 Choose a work, not a file extension. A work can have several reading forms; a reference volume can contain more than one source document; a checkpoint can contain many works and supporting records. A PDF, its generated TeX and its Markdown input are not three independently authored papers.
 
-This expanding catalogue maps the representative works, five further manuscript families, the nine current Twelfth checkpoint texts and all governed publication-profile relationships. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] and [continuation record][curation04] make the actual examination scope explicit.
+This expanding catalogue includes the representative works and governed publication relationships, further manuscript families, the current Twelfth texts, Thirteenth/Fourteenth identity developments, application works and the six Fifteenth compendium papers. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] and [continuation record][curation04] make the actual examination scope explicit.
 
-Browse by role: [core exposition](#core-exposition-and-formal-reference), [philosophical/theological manuscripts](#philosophical-and-theological-manuscripts), [mathematical manuscripts](#mathematical-manuscripts-and-preserved-editions), [Twelfth histories and access](#fresh-histories-access-and-source-warrant-the-twelfth-checkpoint), [recognition and correction](#recognition-and-correction), [occurrence and feasibility](#occurrence-and-feasible-completion), or [supporting reference](#supporting-reference-not-another-research-article).
+Browse by role: [core exposition](#core-exposition-and-formal-reference), [philosophical/theological manuscripts](#philosophical-and-theological-manuscripts), [mathematical manuscripts](#mathematical-manuscripts-and-preserved-editions), [Twelfth histories and access](#fresh-histories-access-and-source-warrant-the-twelfth-checkpoint), [recognition and correction](#recognition-and-correction), [occurrence and feasibility](#occurrence-and-feasible-completion), [identity and finite proof](#identity-representations-and-finite-proof), the [Fifteenth compendium](#six-papers-in-the-fifteenth-mathematical-compendium), [application studies](#application-studies-contracts-and-runtime-outlines), or [supporting reference](#supporting-reference-not-another-research-article).
 
 ## Core exposition and formal reference
 
@@ -265,6 +265,64 @@ The paper reduces raw conversion to formed closed identity targets in two distin
 
 This is positive additional typing power, not permission to rename an old theorem. The old `Has`/`HasPlus` noninhabitation results remain true; the same endpoints are still not raw-convertible, and their **Raw-carrier** identity remains uninhabited even in `HasE`. The original `F/G` soundness is separately supported. Formal code, an inherited checked suite and a demonstrated witness are present, but operational adoption, minimality and universal semantic completeness do not follow.
 
+## Six papers in the Fifteenth mathematical compendium
+
+The source's [contents and projection notice][t15-compendium] identify six constituent mathematical papers. The original volume and its derived Markdown are reading forms, not additional independent papers. Each entry below reaches the exact paper, rather than only the top of the volume. The [reading and coverage record][fifteenth-coverage] distinguishes selected argument reading from unexamined dependencies.
+
+The first five papers retain **research P01AC's current `Has` judgement and original `F/G` interpretations**. They do not change public P01DF or adopt the separate HasE extension. The [existing result owner][t15-identity-owner] and [declaration map][t15-declarations] distinguish written whole-result arguments from their recorded formal components.
+
+### Raw-valued semantic identity
+
+**Exact Complexity of Original Semantic Identity.** [Read Paper 1][t15-paper-1].
+
+At the fixed carrier from Church naturals to `Raw`, the paper gives a Π₂⁰-complete classification both for bare endpoint codes and for inputs carrying checked endpoint-typing certificates. This is an actual set of codes: the recursive matrix handles invalid or untypable inputs, not merely a promise that typing has already been established. The canonical-test equivalence uses **both endpoint typings** to carry independently related arguments through the unchanged semantics.
+
+Its consequence is that neither all valid identities nor all invalid identities in that typed slice admit a sound, complete, recursively enumerable certificate system. A sound effective repair such as HasE therefore cannot prove every original semantic identity there. The argument uses an explicitly imported representation premise and inherited computability methods; its canonical-test and semantic bridge components are formally checked in the recorded development, not the entire external hierarchy argument. The result is neither an arbitrary-carrier classification nor a claim about finite restricted expression families.
+
+### Boolean identity with typing certificates
+
+**Boolean Identity Completeness.** [Read Paper 2][t15-paper-2].
+
+For certified current-typed functions from Church naturals to Church Booleans, identity is Π₁⁰-complete. Every semantic inequality has a finite negative witness: a canonical input and two finite conversion derivations to opposite inert markers. The Boolean codomain makes each output's observation effectively discoverable, while the unbounded natural input domain still prevents a universal finite equality test.
+
+There is no computable uniform upper bound on a distinguishing input over this whole certified domain—even for a proposed bound terminating on every valid annotation. That does not deny a least witness for each unequal pair, finite maxima at a fixed syntax size, or separately proved bounds for a restricted family. The ordinary completeness proof has substantial checked standardness, compiler, mismatch and semantic-transfer components; its machine-indexing and full hierarchy argument remain written mathematics. Removing the supplied typing certificates changes the problem, as the next paper explains.
+
+### Bare Boolean inputs and typability
+
+**Bare Boolean Identity and Fixed Type Typability.** [Read Paper 3][t15-paper-3].
+
+On bare endpoint syntax, the paper expresses Boolean identity as `D \ M`: the enumerable set of currently typable pairs minus the enumerable mismatch set. It proves d.c.e.-completeness for equality and Σ₁⁰-completeness for closed typability at the fixed function type. A supplied certificate is therefore not merely a more convenient display of the same decision problem.
+
+The reduction separates two computations: one gate must halt for typing to become possible; once it returns, equality depends on a second machine not halting. The negative argument preserves the whole trailing argument list under head reduction—an unapplied divergent subterm alone would not suffice. Formal support checks positive typing/equality transport and a stated semantic non-typability interface. The complete head-reduction argument and complexity classifications remain written; no general normalisation or type-inference algorithm is claimed.
+
+### A complete restricted identity checker
+
+**Restricted Semantic Identity Completeness for Natural Number Expressions in P01AC.** [Read Paper 4][t15-paper-4] · [Lean checker and certificate theorem][t15-checker-lean] · [Compiler bridge][t15-restricted-compiler].
+
+This is a positive completeness result for finite expressions with natural constants, finitely many variables, addition, multiplication and nested **zero tests**. Each zero/nonzero input mask fixes a polynomial normal form. Agreement of all mask coefficient maps is equivalent to equality on every natural tuple and to the original semantic identity of the literal compiled endpoints. The written paper also gives a degree-bounded finite grid and bounded distinguishing witnesses; arity zero is included.
+
+The Lean development proves the executable coefficient checker's full semantic correctness and finite typed-certificate completeness for this grammar. It is not only a compiler bridge. Its finite sparse certificate lists may contain harmless redundant rows, split coefficients and zero entries, provided every required mask has a correct aggregate map. The separate [Python reference][t15-json-reference] requires a strict canonical **decoded-JSON** object; standard decoding is not a proved duplicate-key-rejecting parser. [Finite Python/Lean comparisons][t15-runtime-reference] do not establish universal parser or implementation refinement.
+
+Literal endpoint binding, the original semantics and the grammar restrictions are substantive. The theorem does not recognise arbitrary conversion-equivalent P01AC programs as fragment members, derive every current syntactic identity, include subtraction or arbitrary equality tests, or certify service availability under resource exhaustion. The explicit grid and Python interfaces retain their written-proof/reference-code scope beside the stronger recorded Lean coefficient theorem.
+
+### Equality tests and the univariate exception
+
+**Polynomial Equality Tests and the Boundary of Effective Semantic Identity Completeness.** [Read Paper 5][t15-paper-5] · [Formal root-test bridge][t15-root-compiler] · [Univariate reference][t15-univariate-reference].
+
+Replacing the structural zero test with equality between two positive arithmetic expressions changes the effective problem. In the separately declared extension, an input is either an old expression or one root-equality test of two pure arithmetic expressions. Equality of that test to constant zero means **absence of a nonnegative root**, not that two polynomials are identically equal. With arity included in the input, the paper gives a Π₁⁰-complete classification using its attributed external computability premise. The formal file checks the compiler and semantic equivalence, not that complete external reduction.
+
+The one-variable subcase remains decidable. Exact integer coefficient aggregation yields a polynomial tail and root bound; the resulting inclusive finite interval `0..M` suffices. Different tails provide a witness at their bound, while equal tails need only the finite prefix. The Python implementation is a separately tested reference, not formally refined Lean code. No particular hardness arity of at least two is supplied, and no result for arbitrary nested equality-test programs follows. The [interface guide][t15-reference-guide] preserves these distinctions.
+
+### What final answers can identify
+
+**What final answers can identify about collective evidence use.** [Read Paper 6][t15-paper-6] · [Observation-contract guide][t15-attribution-guide].
+
+The paper constructs a matched Gaussian pair: a one-input mechanism and a genuinely two-input mechanism have the same final-score and final-answer law, although the second input is causally consequential in only one mechanism. Whole-sequence agreement needs the same complete fixed or exogenous joint design and fresh noises; matching stimulus marginals alone is insufficient. Final answers cannot discriminate this pair, but that is not a claim that all mechanisms are equally plausible.
+
+Same-trial linked passive evidence, even one threshold bit, separates the stipulated laws when the measurement contract is retained. Independent bit error attenuates that separation; a fair random flip removes it. A fixed-sample error guarantee needs a known positive gap. An exact-real, one-sided sequential service can instead detect each fixed positive covariance without known marginals, while offering no terminating null answer or uniform deadline. The near-null argument explains why a uniformly reliable, almost-surely terminating two-answer service cannot generally be added.
+
+These are ordinary mathematical arguments about an observation design, not a fitted participant model, a new human experiment or a certified floating-point classifier. The [separate reanalysis guide][t15-reanalysis-guide] must not be mistaken for empirical identification of the paper's constructed mechanisms. The [recorded verification][t15-final-verification] does not become fresh independent review merely because the paper is now easier to find.
+
 ## Recognition and correction
 
 **The Epistemological Architecture of Sound Reason.** [Preserved source substrate][sound].
@@ -457,3 +515,43 @@ Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publica
 [t14-group]: ../../experiments/orthemology-v5-successors/groups/t14-identity/README.md
 [t14-suite]: ../../experiments/orthemology-v5-successors/suites/t14-identity.json
 [t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+[t15-compendium]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md
+
+[fifteenth-coverage]: ../project-closure/reader-refactor-issue-35/FIFTEENTH-COVERAGE.md
+
+[t15-identity-owner]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+[t15-declarations]: ../../experiments/orthemology-v5-successors/source-store/3f6e138825d599075b6f920f0079ccc2ca8b7d6c24c8bba0940af4f62d68de1a/DECLARATION_CLAIM_MAP.md
+
+[t15-paper-1]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#exact-complexity-of-original-semantic-identity
+
+[t15-paper-2]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#boolean-identity-completeness
+
+[t15-paper-3]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#bare-boolean-identity-and-fixed-type-typability
+
+[t15-paper-4]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#restricted-semantic-identity-completeness-for-natural-number-expressions-in-p01ac
+
+[t15-paper-5]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#polynomial-equality-tests-and-the-boundary-of-effective-semantic-identity-completeness
+
+[t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
+
+[t15-checker-lean]: ../../experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean
+
+[t15-restricted-compiler]: ../../experiments/orthemology-v5-successors/source-store/7a29142ab5f29a1b213aff3481fd8926b9ff1811fee31e429f18cd5d1e93ce30/RestrictedCompiler.lean
+
+[t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py
+
+[t15-runtime-reference]: ../../experiments/orthemology-v5-successors/source-store/dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd/check_runtime_agreement.py
+
+[t15-root-compiler]: ../../experiments/orthemology-v5-successors/source-store/1f12008a084bae138d375e7a9abe05004284f99e688db06a474b0eabbc3d2a82/PolynomialTestBoundary.lean
+
+[t15-univariate-reference]: ../../experiments/orthemology-v5-successors/source-store/bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9/root_extension_checker.py
+
+[t15-reference-guide]: ../../experiments/orthemology-v5-successors/groups/t15-restricted-reference/README.md
+
+[t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md
+
+[t15-reanalysis-guide]: ../../experiments/orthemology-v5-successors/groups/t15-reanalysis/README.md
+
+[t15-final-verification]: ../../experiments/orthemology-v5-successors/source-store/9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27/Orthemology_Fifteenth_Final_Verification_v1_20261005.json

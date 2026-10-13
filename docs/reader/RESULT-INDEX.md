@@ -198,6 +198,56 @@ These are distinct input problems. A total supplied-certificate checker is compa
 
 The original `Has`/`HasPlus` noninhabitation, raw polynomial-conversion separation and `Raw`-carrier obstruction remain. Thus it is neither an arbitrary untyped eta rule nor an edit that makes the old negative result false. The [declared five-target suite][t14-suite] and [recorded completion review][t14-review] supply historical formal-evidence scope, not a fresh Lean replay by this refactor. Operational adoption, minimality and universal semantic completeness do not follow.
 
+## Fifteenth identity classifications and constructive subcases
+
+The [six work entries](PAPER-CATALOGUE.md#six-papers-in-the-fifteenth-mathematical-compendium) provide context. The identifiers below are the **existing scoped results**, not new scientific IDs. Their [source owner][t15-identity-owner] distinguishes ordinary whole-result classifications, formally checked components and finite implementation observations.
+
+### The input contract changes the classification
+
+`T15-RAW-BARE` and `T15-RAW-CERTIFIED`: [Paper 1][t15-paper-1] classifies original semantic identity at `N → Raw` as Π₂⁰-complete for both bare and certified endpoint codes, with `N` the Church-natural carrier. Endpoint typing is checked within the actual recursive-matrix presentation. `T15-RAW-KERNEL-BRIDGES` records checked canonical-test and semantic components, not a kernel proof of the whole computability classification. The written lower bound retains its attributed representation premise.
+
+`T15-BOOLEAN-ANNOTATED`: [Paper 2][t15-paper-2] gives the Π₁⁰-complete certified `N → B` classification. For typed unequal endpoints, a canonical input plus two finite marker-conversion derivations witnesses inequality. There is no computable uniform bound for those inputs over the whole certified domain. `T15-BOOLEAN-KERNEL-BRIDGES` covers the actual checked standardness, primitive-recursion compiler and observation/mismatch interfaces; it is not the full external hierarchy proof.
+
+`T15-BOOLEAN-BARE` and `T15-BOOLEAN-TYPABILITY`: [Paper 3][t15-paper-3] instead gives d.c.e.-complete bare equality and Σ₁⁰-complete fixed-type typability. Its `D \ M` presentation separates derivable endpoint typing from an enumerable mismatch. `T15-BARE-GATE-BRIDGES` records the positive gate transport and the stated non-typability interface. The entire application-sensitive nonhalting argument is written mathematics, not an unqualified kernel conclusion inferred from a divergent unapplied term.
+
+### A complete checker for a declared grammar
+
+`T15-RESTRICTED-COMPILER`, `T15-RESTRICTED-CHECKER` and `T15-RESTRICTED-CERTIFICATES` are the recorded formal component results for the actual typed finite-expression grammar in [Paper 4][t15-paper-4]. It permits natural constants, variables, addition, multiplication and nested zero tests. The compiled endpoints and original `F/G` interpretation remain fixed.
+
+For every finite arity, the [Lean implementation][t15-checker-lean] establishes
+
+```text
+identityCheck(e,f) = true
+    iff original fragment semantic identity
+
+there exists c with verifyCertificate(e,f,c) = true
+    iff that same semantic identity.
+```
+
+This is full checker/certificate completeness **within that grammar**, not merely an assumed injectivity bridge. It does not yield current `Has` derivability of every identity or recognise arbitrary extensionally equivalent endpoint programs. Both expressions are explicit verifier inputs; externally claimed P01AC endpoints need literal compiler-output binding.
+
+`T15-RESTRICTED-GRID` is the separately written finite-grid equivalence: maskwise polynomial degrees determine an explicit finite complete test. The formal coefficient theorem does not silently formalise that grid-search algorithm. Arity zero retains its single empty tuple, rather than an empty domain. `T15-PYTHON-REFERENCE` and `T15-RUNTIME-AGREEMENT` concern the strict decoded-object [Python verifier][t15-json-reference] and its [finite Lean/Python comparison][t15-runtime-reference]. They are not universal parsing/refinement proofs or replacements for the more permissive typed Lean certificate representation.
+
+### The root-test boundary is not a blanket impossibility
+
+`T15-POLYNOMIAL-BOUNDARY`: in the separate [Paper 5][t15-paper-5] grammar, one equality test of pure natural arithmetic polynomials is identically zero exactly when the associated integer polynomial has no nonnegative root. The variable-arity Π₁⁰-complete classification retains its external computability premise. `T15-POLYNOMIAL-COMPILER` checks the literal semantic bridge, not that entire classification.
+
+`T15-UNIVARIATE-CRITERION` gives a positive exact result for one variable: equality is equivalent to testing an explicitly constructed **inclusive** interval `0..M`. The cutoff uses both tail-start bounds and the root bound of the difference of the two eventual polynomial tails. `T15-UNIVARIATE-REFERENCE` is the [exact-arithmetic reference implementation][t15-univariate-reference], not a Lean refinement theorem. The source does not specify a particular hardness arity of at least two or cover arbitrary nested new tests.
+
+## What an observation identifies about a collective
+
+The ordinary results in [Paper 6][t15-paper-6] and the [attribution guide][t15-attribution-guide] separate observational equivalence, passive discrimination and intervention claims.
+
+`D18-T15-ANSWER-LAW`: a matched one-input/two-input Gaussian pair has identical final-score and answer-vector laws under the same complete fixed or exogenous joint design and fresh trial noises. Equality in law is not pathwise equality. `D18-T15-CAUSAL-CONTRIBUTION`: within the stipulated models, intervention on the second input changes one response law but not the other. This is not an intervention on actual participants.
+
+`D18-T15-PASSIVE-LINK`: conditioning on the same stimulus/announcer, a **same-trial** linked evidence value or threshold bit distinguishes the pair through zero versus positive covariance. Pooled stimuli or unlinked marginals do not satisfy that contract. `D18-T15-RECORDING-ERROR`: an independent bit flip of rate `ε` multiplies the covariance by `1−2ε`; fair independent flips destroy separation, and flips above one-half reverse its sign. Arbitrarily dependent errors are not covered.
+
+`D18-T15-FIXED-SAMPLE`: known marginal baseline, a known covariance gap at least `δ₀ > 0` and independent fixed-design repetitions give each error bound `exp(−n δ₀²/2)`. There is no one finite sample bound over an unseparated family whose positive gap can approach zero.
+
+`D18-T15-SEQUENTIAL`: for iid binary pairs, the exact-real rule tests estimated covariance against a vanishing, time-uniform concentration threshold. It controls ever selecting the positive model under independence and detects each fixed positive-covariance alternative almost surely, without known marginals. It promises neither a null answer nor a uniform finite detection time.
+
+`D18-T15-TWO-ANSWER-LIMIT`: in the source's near-null family, a two-answer procedure terminating almost surely under its fixed null cannot have uniform null/alternative error bounds whose sum is less than one. The obstruction does not assume alternative-side almost-sure termination or finite expected stopping time. None of these law-level results identifies an actual human contributor, and the exact-real theorem is not a certified numerical implementation.
+
 ## Philosophical arguments have source routes too
 
 The positive recognition/correction route is not forced into a theorem status it does not own. Read the [atlas account](RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction), the [source substrate][sound] and the [later retained-passage qualification][retained]. Their arguments, premises and source scopes are visible without either declaring them kernel-verified or erasing their affirmative content under a blanket “open” label.
@@ -310,3 +360,27 @@ The independent [candidate/owner map][owner-map] retains all baseline paths, inc
 [t14-suite]: ../../experiments/orthemology-v5-successors/suites/t14-identity.json
 
 [t14-review]: ../../experiments/orthemology-v5-successors/source-store/e9c756ef20f5eb9b5188c3d55c9808fb0462280caa8a6048182ad7b3d55c9cbb/Orthemology_Fourteenth_Completion_Verification_v1_20261005.json
+
+[t15-identity-owner]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+[t15-paper-1]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#exact-complexity-of-original-semantic-identity
+
+[t15-paper-2]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#boolean-identity-completeness
+
+[t15-paper-3]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#bare-boolean-identity-and-fixed-type-typability
+
+[t15-paper-4]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#restricted-semantic-identity-completeness-for-natural-number-expressions-in-p01ac
+
+[t15-paper-5]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#polynomial-equality-tests-and-the-boundary-of-effective-semantic-identity-completeness
+
+[t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
+
+[t15-checker-lean]: ../../experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean
+
+[t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py
+
+[t15-runtime-reference]: ../../experiments/orthemology-v5-successors/source-store/dd69712d1a7b79bdb5fcb55c855c4c13a00725dda1cd8f4dfcdc4544afcbe8fd/check_runtime_agreement.py
+
+[t15-univariate-reference]: ../../experiments/orthemology-v5-successors/source-store/bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9/root_extension_checker.py
+
+[t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md

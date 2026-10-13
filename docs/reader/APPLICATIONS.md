@@ -117,6 +117,34 @@ The writeback profile still requires the named upstream source, licence, commit 
 
 A contributor should therefore read the [three work entries](PAPER-CATALOGUE.md#somnus-candidate-inventory) and their complete profiles before forming an implementation obligation. This refactor makes them discoverable; it does not implement them, activate a service, grant writeback authority or import current external repositories into the bounded census.
 
+## A complete finite test without arbitrary-program equivalence
+
+The [restricted identity paper](PAPER-CATALOGUE.md#a-complete-restricted-identity-checker) gives a concrete service for exchanging natural-number expressions whose literal compiled endpoints use the stated P01AC semantics. Consider its two-variable example:
+
+```text
+e: if x+y=0 then 7 else (x+1)(y+1)
+f: if x=0 then (if y=0 then 7 else y+1)
+   else xy+x+y+1
+```
+
+Their four zero/nonzero cells have the same respective polynomials: `7`, `y+1`, `x+1`, and `xy+x+y+1`. This is not random testing: complete mask normalisation is justified by the grammar's nonnegative arithmetic and zero tests. The [source example][t15-paper-4] and [Python reference][t15-json-reference] make the input and certificate inspectable; the [Lean checker][t15-checker-lean] has its own complete typed interface.
+
+A contrasting source example compares `x` with `x²`. Agreement at zero and one is insufficient: the positive cell's degree-bound grid includes `1,2,3` and finds the witness `2`. Arity zero has an empty-tuple **input**, not no inputs. Missing that cell or using a fixed arbitrary test budget would break the contract.
+
+Use the procedure for its admitted expression syntax; bind external endpoints literally to the compiler output and preserve the chosen certificate representation. Resource exhaustion is inconclusive, not an inequality verdict. Neither the theorem nor the Python parser recognises arbitrary endpoint programs as members of the fragment. The [separate root-test/univariate interface](PAPER-CATALOGUE.md#equality-tests-and-the-univariate-exception) is a distinct extension, not an undocumented relaxation of zero tests.
+
+## Designing a collective observation without claiming attribution
+
+The [collective paper][t15-paper-6] constructs one-input and two-input mechanisms with the same final answers in law. Keeping the final score does not help for this matched pair. Keeping one **same-trial** threshold bit from the otherwise hidden second evidence value can help, provided the stimulus/announcer conditioning and non-disturbing, independently noisy recording assumptions are justified.
+
+In the source's mathematical illustration, joint bit/answer success has probability `1/4` under the one-input mechanism and `5/12` under the two-input mechanism. With the specified known gap `1/6`, 216 independent fixed-design repetitions and a joint count threshold of 72 bound each error by `exp(−3) < 1/20`. These are derived design numbers—not a report that a study of 216 people or trials was run, and not certainty from a finite observation. [The observation-contract guide][t15-attribution-guide] states the assumptions and derivation.
+
+### A one-sided monitor is not a two-answer judge
+
+When the marginals and positive separation are unknown, the paper's exact-real sequential covariance rule can control false positive selection under independence and eventually detect each fixed positive covariance almost surely. It may continue indefinitely under the null. Turning a timeout into a negative verdict is not licensed by that theorem: a sufficiently near-null alternative can resemble any finite null stopping prefix.
+
+The next design decision is therefore what service is needed: a known-gap fixed-sample test, a one-sided sequential detector, or a two-answer procedure under genuinely stronger separation assumptions. Actual causal attribution additionally needs a warranted mechanism model. Linked association alone does not select an actual participant's causal role, and a floating-point implementation needs its own conservative numerical qualification.
+
 ## From reading a proposal to using an implementation
 
 For any application reached through this guide, identify whether the target is a manuscript, worked fixture, reference implementation, executable package, or an empirical result. Follow the target package's actual maintained entry point and its declared environment.
@@ -159,3 +187,13 @@ Remaining application material in other research collections still needs work-le
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+
+[t15-paper-4]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#restricted-semantic-identity-completeness-for-natural-number-expressions-in-p01ac
+
+[t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py
+
+[t15-checker-lean]: ../../experiments/orthemology-v5-successors/source-store/989b586bcd7b333e62c4a811f9d094c8347b5f89f703b0c4a2618b9f85124f02/IdentityChecker.lean
+
+[t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
+
+[t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md

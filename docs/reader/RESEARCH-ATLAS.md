@@ -87,6 +87,22 @@ The next stage asks that stronger question. The [historical I/SKK note][t13-resi
 
 The shared lesson is not that semantic claims are unusable or that formalisation is futile. It is to state precisely what is preserved, by which operation, under which judgment. A typed extensional repair can be useful without changing raw conversion or proving universal completeness. Read the [work sequence](PAPER-CATALOGUE.md#identity-representations-and-finite-proof), [scoped results](RESULT-INDEX.md#representation-identity-and-proof-search) and [dated frontier distinctions](CURRENT-FRONTIERS.md#identity-obstructions-repairs-and-later-checkers).
 
+## From general proof limits to a complete restricted service
+
+**Question:** Which exact representation makes identity verification both semantically adequate and executable?
+
+The [Fifteenth sequence](PAPER-CATALOGUE.md#six-papers-in-the-fifteenth-mathematical-compendium) connects the earlier identity distinctions to exact classification and constructive algorithms. Certified Boolean endpoints have finite negative witnesses but no universal computable distinguishing-input bound; bare syntax adds a separate typability problem. Yet a declared finite grammar of natural arithmetic and zero tests admits a complete mask/coefficient checker and finite certificates, with an actual recorded Lean semantic-completeness theorem. A general obstruction and a restricted positive construction can therefore both hold.
+
+This connects **avenue 8's semantic fidelity, avenue 9's exact calculus and avenue 10's effective procedures**. The contribution is to specify the service: endpoint syntax, certificate format, semantic relation and admitted expression grammar must match. Extending zero tests to equality tests changes the general problem again, while a one-variable subcase remains decidable. A finite Python/Lean comparison helps qualify an implementation but does not identify two wire formats or prove a parser. The [scoped result sequence](RESULT-INDEX.md#fifteenth-identity-classifications-and-constructive-subcases) keeps those distinctions and the positive algorithms visible.
+
+## Collective competence and discriminating observations
+
+**Question:** What additional observation could distinguish genuine use of two evidence inputs from a successful answer that used only one?
+
+The [collective-observation paper](PAPER-CATALOGUE.md#what-final-answers-can-identify) supplies a concrete connection between **avenue 6's warranted collective diagnosis and avenue 12's empirical validation**. Two constructed mechanisms can have the same whole final-answer law and different intervention behaviour. A linked passive observation can separate their laws when the required conditioning, freshness and error model hold; final answers alone cannot supply that distinction for the matched pair.
+
+The positive contribution is an observation contract and statistical decision services, not just a warning about underdetermination. Known separation supports finite error bounds; without it, a one-sided sequential detector has a different lawful stopping promise. The [worked applications](APPLICATIONS.md#designing-a-collective-observation-without-claiming-attribution) explain the role of the extra observation and the no-null-answer boundary. Applying the mathematics to actual groups still requires a warranted model and observation design; that bridge is not supplied by the group's success rate.
+
 ## The original twelve avenues
 
 The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.
