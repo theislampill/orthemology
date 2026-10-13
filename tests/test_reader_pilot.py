@@ -678,5 +678,112 @@ class TwelfthCollectionCoverageTests(unittest.TestCase):
                 self.assertTrue(any(e.startswith("missing-work:") for e in errors), errors)
 
 
+
+
+class ApplicationCollectionCoverageTests(unittest.TestCase):
+    """A fifty-file source population is not fifty papers or deployed services."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_applications", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        record = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((record / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((record / "CROSSWALK.json").read_text())
+        cls.population = {r["path"] for r in cls.mod.entries_at(ROOT, cls.owners["baseline"]["commit"])
+                          if r["path"].startswith("applications/")}
+        # Independently selected substantive sources, not an output-derived count.
+        cls.primary = {
+            "applications/daee-epistemics/NOETIC-ORTHING-APPLICATION.md",
+            "applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+            "applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md",
+            "applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+            "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+            "applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+            "applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md",
+            "applications/agentic-runtime/SOMNUS-CANDIDATE-INVENTORY.yaml",
+            "applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml",
+            "applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml",
+        }
+
+    def disposition_errors(self, cross):
+        sources, works = cross["sources"], {w["key"]: w for w in cross["works"]}
+        permitted = {"work-source", "collection-guide", "source-boundary", "crosswalk",
+                     "notation-owner", "contract", "schema", "example", "fixture"}
+        seen, errors = [], []
+        for row in cross.get("application_dispositions", []):
+            source, work = sources.get(row.get("source")), works.get(row.get("work"))
+            if not source or not work or row.get("role") not in permitted:
+                errors.append("unbound-disposition")
+                continue
+            path = source["path"]
+            seen.append(path)
+            if path not in self.population:
+                errors.append("outside-population")
+            if row["role"] == "work-source" and row["source"] not in work["source_keys"]:
+                errors.append("wrong-work-source")
+            if path.endswith(".schema.json") and row["role"] != "schema":
+                errors.append("schema-is-not-a-paper")
+        if set(seen) != self.population or len(seen) != len(set(seen)):
+            errors.append("population-coverage")
+        bound_primary = {sources[k]["path"] for w in works.values()
+                         for k in w["source_keys"] if k in sources}
+        if not self.primary <= bound_primary:
+            errors.append("missing-substantive-work")
+        return errors
+
+    def test_every_baseline_application_file_has_one_explained_disposition(self):
+        self.assertEqual(len(self.population), 50)
+        self.assertEqual(self.disposition_errors(self.cross), [])
+
+    def test_application_work_sections_reach_their_exact_sources(self):
+        page = self.mod.markdown_index((ROOT / "docs/reader/PAPER-CATALOGUE.md").read_text())
+        sources = self.cross["sources"]
+        for path in sorted(self.primary):
+            keys = {k for k,v in sources.items() if v["path"] == path}
+            works = [w for w in self.cross["works"] if keys.intersection(w["source_keys"])]
+            with self.subTest(source=path):
+                self.assertTrue(works, "The application has no work-level reader disposition")
+                self.assertIn(path, self.owners["required_work_sources"])
+                for work in works:
+                    entry = work.get("catalogue_entry", "")
+                    self.assertTrue(entry.startswith("docs/reader/PAPER-CATALOGUE.md#"))
+                    selected = [h for h in page["headings"] if h[0] == entry.partition("#")[2]]
+                    self.assertEqual(len(selected), 1)
+                    _, level, start = selected[0]
+                    end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+                    targets = [self.mod.resolve_reader_link(ROOT, "docs/reader/PAPER-CATALOGUE.md", href)
+                               for line,href in page["links"] if start <= line < end]
+                    self.assertTrue(any(t and t[0] == path for t in targets),
+                                    "A package README alone is not the promised work route")
+
+    def test_each_application_disposition_omission_is_detected(self):
+        self.assertEqual(self.disposition_errors(self.cross), [])
+        for i, row in enumerate(self.cross["application_dispositions"]):
+            with self.subTest(source=row["source"]):
+                changed = deepcopy(self.cross)
+                del changed["application_dispositions"][i]
+                self.assertIn("population-coverage", self.disposition_errors(changed))
+
+    def test_schema_cannot_be_promoted_to_an_independent_paper(self):
+        self.assertEqual(self.disposition_errors(self.cross), [])
+        changed = deepcopy(self.cross)
+        row = next(r for r in changed["application_dispositions"]
+                   if changed["sources"][r["source"]]["path"].endswith(".schema.json"))
+        row["role"] = "work-source"
+        self.assertIn("schema-is-not-a-paper", self.disposition_errors(changed))
+
+    def test_runtime_outlines_keep_their_source_declared_nonexecution(self):
+        import yaml
+        sources = self.cross["sources"]
+        for path in sorted(p for p in self.primary if p.startswith("applications/agentic-runtime/")):
+            with self.subTest(source=path):
+                original = yaml.safe_load((ROOT / path).read_text())
+                self.assertEqual(original["status"], "outline-only")
+                keys = {k for k,v in sources.items() if v["path"] == path}
+                represented = [w for w in self.cross["works"] if keys.intersection(w["source_keys"])]
+                self.assertEqual(len(represented), 1)
+                self.assertEqual(represented[0]["role"], "application-proposal")
+
 if __name__ == "__main__":
     unittest.main()

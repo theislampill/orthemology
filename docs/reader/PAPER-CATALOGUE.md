@@ -235,6 +235,90 @@ Together with the [selected occurrence records][occurrences], these supply the e
 
 See the [worked application](APPLICATIONS.md#joint-feasibility-across-avenues). The complete source-relative interpretations, partial occurrences, attribution roles and actual feasible completions remain distinct.
 
+## Application studies, contracts and runtime outlines
+
+These are ten work-level entries for the three existing application families, not fifty independent papers. Their schemas, crosswalks, examples and fixtures remain supporting records. The [application coverage record](../project-closure/reader-refactor-issue-35/APPLICATION-COVERAGE.md) accounts for the complete fifty-file baseline directory and states the reading depth. The dated source pins and review labels below belong to the inspected records; this refactor neither refreshes the external repositories nor promotes their proposals.
+
+### Noetic orthing as a domain application
+
+**Noetic orthing: daee-epistemics as a worked application.** [Complete narrative](../../applications/daee-epistemics/NOETIC-ORTHING-APPLICATION.md) · [Typed correspondence](../../applications/daee-epistemics/DAEE-ORTHEMOLOGY-CROSSWALK.yaml) · [Fuller runtime correspondence](../../applications/daee-epistemics/CURRENT-RUNTIME-CROSSWALK.yaml).
+
+The narrative types a concrete engagement, public observations, candidate interpretations, governing criteria, case bindings and response routing as distinct parts of an orthing episode. Its constructive contribution is a two-way test: Orthemology supplies distinctions with which to describe a designed noetic system; the application exposes places where the general architecture must not collapse observations into interior conditions or a diagnosis into a restorative route. The Diagnostic IR is a composite episode-internal control representation, not one metaorthemma or ground truth.
+
+The narrative's `direct`, `crosswalk` and `creed-internal` labels distinguish attributed DAEE descriptions, this project's interpretation and the analysis's premises. The [source boundary](../../applications/daee-epistemics/SOURCE-BOUNDARY.md) and [runtime boundary](../../applications/daee-epistemics/CURRENT-RUNTIME-BOUNDARY.md) preserve the recorded external pin, co-development limitation and non-transfer of runtime closure to human restoration. Later [multi-target precision](#multi-target-noetic-claims) must accompany a subject-level placement; the original engagement-level description is not permission to identify discourse with its speaker.
+
+### Epistemological and metaphysical placement
+
+**Epistemological and metaphysical placement of the daee application.** [Complete placement note](../../applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md).
+
+The note explains why the application is a worked concretisation of first-order versus higher-order assessment, concrete versus sound reasoning, distinct warrant channels and evaluator symmetry. It also provides a worked **explanandum**: a designed practice whose operation presupposes standards of proper and improper cognition and fitting correction. This is substantive philosophical placement, not merely a software provenance disclaimer.
+
+Operationalising those commitments does not establish their ultimate ground. The note does not infer a Necessary Being, divine attributes, the truth of its deformation taxonomy or irreducible teleology from the system's existence. Its Atharī/Taymiyyan scope and modern comparative use of proper-function terminology remain explicit. Those limitations qualify this application route; they do not erase the separate affirmative foundational arguments linked in the [atlas](RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction).
+
+### Multi-target noetic claims
+
+**Multi-target noetic orthing.** [Complete target-separation note](../../applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md) · [Worked target map](../../applications/daee-epistemics/NOETIC-TARGET-MAP.example.json) · [Evidence-bound claim examples](../../applications/daee-epistemics/NOETIC-CLAIM.example.json).
+
+This application-level refinement separates the observed discourse, person-at-time, runtime state, released response and later uptake occurrence. An observation can be *from* discourse and *about* a subject without being true, sufficient or uniquely identifying evidence of the subject's condition. Every claim therefore needs its own target identity/version, analysis, evidence scope, alternatives and uncertainty.
+
+The worked records make the distinction operational: a discourse-level interpretation can be asserted while the subject-level profile remains held with live alternatives; motive and culpability are out of scope, and a runtime-closure claim does not settle the person's uptake. This supplies a concrete way to represent restraint without discarding the positive discourse analysis. The [target schema](../../applications/daee-epistemics/NOETIC-TARGET-MAP.schema.json), [claim schema](../../applications/daee-epistemics/NOETIC-CLAIM.schema.json) and [evidence registry](../../applications/daee-epistemics/NOETIC-EVIDENCE-REGISTRY.example.json) support the distinction; validating their structure is not empirical diagnosis or soul access.
+
+### Represented standards, carriers and memetic ecology
+
+**Meta-noetic memetics and dynamic orthing.** [Complete study](../../applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md) · [Dynamic correspondence](../../applications/daee-epistemics/DYNAMIC-CROSSWALK.yaml) · [Ecology example](../../applications/daee-epistemics/MEMETIC-ECOLOGY.example.json).
+
+The study distinguishes a normative standard type, an actor/institution's represented standard, an episode-local binding and its execution. A represented standard persists and travels across episodes; it cannot be replaced by a case token. Its typed ecology tracks carriers, inheritance, compression, mutation and replacement. This permits changed wording with a stable carried rule, or unchanged wording with a changed rule. The [relation-level assessment](../../applications/daee-epistemics/REP-META-ASSESSMENT.example.json) also keeps fidelity/stance towards different standards separate rather than forcing one global assessment onto the carrier.
+
+For testimony, copying and dependence can be analysed without converting report count or graph degree into warrant. The separate [qualitative tawātur record](../../applications/daee-epistemics/TAWATUR-WARRANT.example.yaml) requires school-labelled, source- and subject-sensitive judgements; its two subjects can have different access/warrant dispositions while the proposition retains the same identity and unadjudicated objective truth. This record is an illustrative reconstruction, not an assessed historical proposition. The [broader cognitive-vindication account](RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction) remains a distinct source route, not something replaced by this dependence model.
+
+### Feasibility-first corrective descent
+
+**Sound descent: G0 / G1 / G2 model comparison.** [Complete comparison](../../applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md) · [Field-dynamics contract](../../applications/daee-epistemics/NOETIC-FIELD-DYNAMICS.yaml) · [Current worked transition](../../applications/daee-epistemics/CORRECTIVE-TRANSITION.example.json).
+
+The comparison distinguishes metaphor (G0), a proposed order-theoretic/route-ranked account (G1), and literal differentiable flow requiring additional structure (G2). G1 first excludes routes violating hard constraints, preserves disclosure/provenance and uncertainty, and only then compares admissible successors by a declared order. Hard constraints are not another dimension that a favourable score may outweigh. Newly discovered burdens can increase the ledger while improving the epistemic position; deleting unresolved burdens is not progress.
+
+Fast episode-level correction and slow changes to represented standards, repertoires and analyses have different histories. In the current transition example, one criterion burden is addressed, a source-independence dependency is retained, and rereading returns **HOLD**. Neither admissibility nor pathway adequacy entails factive strict soundness. The [retained v1 example](../../applications/daee-epistemics/CORRECTIVE-TRANSITION.v1.example.json) is a supporting historical version, not another work. The source's unsupplied DAEE G2 structure must not be misread as denying the separately established conditional [T20 Fisher construction](RESULT-INDEX.md#fisher-geometry), which has a different state space and contract.
+
+### Typed runtime semantic operators
+
+**DAEE semantic-operator contract.** [Complete typed contract](../../applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml) · [Schema](../../applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.schema.json) · [Fixtures](../../applications/daee-epistemics/SEMANTIC-OPERATOR-FIXTURES.yaml).
+
+This is a supporting formal contract, not a conventional paper or a deployed runtime. Its seven operators give route pressure, event transition, field divergence, field curl, loop interruption, whole-state rereading and runtime closure explicit input/output types, targets, preconditions and owners. Route pressure ranks already eligible routes; divergence/curl need an explicit multi-node field. Acyclic residual propagation is not automatically a loop, and a single scalar summary supplies neither diagnostic.
+
+The contract's predicate registry separately binds non-factive governance predicates and the claim-relative conjunction required for strict soundness. A successful parse, a control-state delta and terminal runtime status therefore cannot silently become truth or restoration. The [comparison's diagnostic discussion](../../applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md#divergencecurl-diagnostics-require-an-explicit-target-field) supplies the interpretation boundary. The contract's own `current` schema status does not adopt a literal differential theory of cognition.
+
+### Latent-state learning and governed updates
+
+**Dynamic orthing and latent-state learning.** [Complete application study](../../applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md) · [Four-level update coupling](../../applications/latent-state-orthing/UPDATE-COUPLING.yaml) · [Definitions](../../applications/latent-state-orthing/OSM-DYNAMICS-DEFINITIONS.yaml) · [Reported-source correspondence](../../applications/latent-state-orthing/OSM-CSCG-ORTHEME-CROSSWALK.yaml).
+
+The study distinguishes inference with fixed analysis/model, representation learning, repertoire revision and analysis-version change. A world transition is not a learner update. Matching final representation geometry does not identify a learning trajectory or mechanism, and latent state to orthemic profile is a partial many-to-many relation. A latent split earns the stipulated analysis-relative admission only when its declared merger contrast exceeds the tolerance; orthogonality alone does not define an ortheme.
+
+The update contract supplies per-level triggers, authority, invalidation, calibration, reopening and rollback. There is no silent blanket transport of old claims after changing the model or analysis; repertoire revision changes what the declared model distinguishes, not worldly facts. The OSM comparison is source-reported computational exemplification and constraint, not fresh empirical evidence for human noetics or metaphysics. Its external article/code are bounded references, not new acquisitions or an expanded research assignment here. The [fixture collection](../../applications/latent-state-orthing/DYNAMIC-FIXTURES.yaml) tests representational distinctions, not a biological mechanism.
+
+### Somnus candidate inventory
+
+**Somnus candidate inventory.** [Complete outline](../../applications/agentic-runtime/SOMNUS-CANDIDATE-INVENTORY.yaml) · [Application-family boundary](../../applications/agentic-runtime/README.md).
+
+Fifteen candidate operations distinguish live capture and claimant checks from later recurrence assessment, intervention disposition, proposal production, downstream actuation and collective exchange. Recording an interruption, assessing an unresolved recurrence and proposing a repair are different operations with different inputs, events and residual behaviour. No-change, investigation and evidence requests remain legitimate outcomes; proposal generation is not forced by every assessment.
+
+Every candidate is explicitly outline-only, externally/downstream owned and **not implemented here**. The inventory does not install executable skills, a scheduler, durable ledger service, learning loop or automatic authority. Its value is the discriminating contract for a future implementation, not an existing runtime feature count.
+
+### Guarded writeback adoption outline
+
+**Hermes writeback adoption profile.** [Complete outline](../../applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml).
+
+The profile treats guarded writeback as a first-class downstream actuator: proposal, review, approval/rejection, validation, dry run and application/reversion remain distinct. Assessment, intervention disposition, mutation proposal, authorisation, applied mutation and later-outcome evaluation have separate records. Ordinary memory/fact/skill targets are retained alongside governance targets, rather than excluding normal reflective writeback from the architecture.
+
+Its external source-code, licence, commit and test verification are recorded as pending. Automatic proposal, authorisation, application and writeback are prohibited; the profile does not demonstrate implemented writeback, empirical superiority or governed learning. The filename's word “adoption” supplies no adoption or execution authority.
+
+### Collective Somnus and transclusion
+
+**Collective Somnus/transclusion profile.** [Complete outline](../../applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml).
+
+The profile distinguishes independent type-convergent activity, provenance-preserving exchange followed by local reassessment, and intentionally coordinated council activity. Transclusion makes source-preserved material available; it does not make it locally governing or executable. Evidence artifacts, represented standards and operational DSL/IR have different receiving gates. Source envelopes remain immutable, while receiving assessments retain local versions, residuals, redactions and dissent.
+
+The positive design admits plural local placements, bounded agreement with dissent and unresolved conflict—not only unanimous closure. Shared types provide no transport service by themselves; multiple operators imply neither independence nor truth or tawātur. This is an unimplemented downstream outline. Its local-authorisation, source-authenticity, semantic-reconstruction and execution-witness requirements are not bypassed by receiving or parsing a packet.
+
 ## Supporting reference, not another research article
 
 **Orthemology notation gallery.** [Markdown reference][gallery] · [Governed PDF][render-notation-gallery].

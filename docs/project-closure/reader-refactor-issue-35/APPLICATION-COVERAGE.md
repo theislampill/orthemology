@@ -25,3 +25,25 @@ The agentic profiles explicitly describe unimplemented downstream outlines. Thei
 ## Next
 
 Complete content-role dispositions for the fifty baseline files, test their work-level routes against that independent population, add the source-bound catalogue/application explanations, and run the applicable existing validators. Save coherent increments on the same draft PR. Complete-corpus coverage, independent review, Dot assessment and merge remain outstanding.
+
+## First application increment — mapped works and supporting records
+
+Ruling: extend the existing catalogue with ten work-level entries: six substantive studies/notes, one typed semantic-operator reference, and three agentic-runtime proposals. Keep the remaining application files as supporting guides, boundaries, crosswalks, contracts, schemas, examples and fixtures. A versioned example or schema does not become another paper. This uses the tested work/source model without a new scientific registry or directory hierarchy.
+
+`CROSSWALK.json` now holds 42 total works and 123 bound sources. Its `application_dispositions` gives each of the fifty baseline application paths exactly one primary work/role disposition, including support files. `OWNER-MAP.json`'s independent required-work subset includes the ten substantive/contract/outline sources. The full candidate census is unchanged and still independently fixes the repository-wide denominator. These counts do not establish complete C03 coverage outside this bounded directory.
+
+All ten principal sources and every application Markdown document were read in full. The field-dynamics and update-coupling contracts, both corrective-transition example versions, the evidence-bound noetic-claim example and the qualitative tawatur example were also read in full. Every remaining schema/record received content-role inspection of its declared identity and structure; these are recorded as structural inspections, not complete readings of every nested fixture, external primary source or mathematical proof. The source records preserve that difference. The original fifty bodies and modes remain unchanged.
+
+### Reader findings retained
+
+The catalogue explains each work at its own source-owned scope. In particular, the multi-target note refines an earlier engagement-level description rather than turning discourse into its speaker. The memetic study distinguishes type, represented standard, case binding and execution, and separates carrier wording from the carried rule. The qualitative tawatur example holds proposition identity fixed while varying access/warrant dispositions by subject; it is not an evaluated historical proposition. The literal T20 Fisher construction and the early DAEE G1/G2 account are separate scoped models, not competing universal status badges.
+
+The latent-state study separates four update levels, a many-to-many profile relation and analysis-relative merger admission. Source-reported computational exemplification is not biological or human validation. The three agentic profiles remain outline-only and unimplemented, including source/licence/test verification pending in the Hermes profile. Their proposed contracts contribute useful distinctions without acquiring execution or mutation authority from their filenames.
+
+### Observed qualification of this increment
+
+Five new application tests first failed against the inherited catalogue, exposing the genuinely missing application work routes and dispositions; the run recorded sixteen failures including source-level subtests. After the source-bound mapping and catalogue entries, all **70 reader tests passed normally and with optimisation**, and the actual crosswalk/reader-link check passed in the local Python 3.13.5 environment. The new controls compare the independently pinned fifty-file population, require direct work-section source routes, reject removal of each support disposition, prevent schema-to-paper promotion and retain outline roles from the original YAML. These are mechanical coverage controls, not semantic certification.
+
+All eleven existing application-related validators also passed locally: DAEE correspondence, noetic application, fuller DAEE runtime correspondence, noetic targets, noetic claims, meta-noetic memetics, memetic ecology, corrective transitions, semantic operators, dynamic orthing and somnic orthing. These unchanged checks validate their declared offline contracts and fixtures. They do not execute the external runtime, observe cognition, prove metaphysical premises or establish independent acceptance. Pinned-CI and complete normal-CI outcomes must still be recorded from their own runs.
+
+Next in this same continuation: connect worked application routes, update the relevant atlas/frontier/verification explanations, and retain the distinction between addressed burdens, carried dependencies and human uptake. Repository-wide coverage, complete maintenance exercises and independent review remain unfinished.
