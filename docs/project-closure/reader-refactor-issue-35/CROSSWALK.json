@@ -71,5 +71,71 @@
     {"key": "recognition-correction","works": ["sound-reason","concrete-and-sound","retained-foundations"],"sources": ["sound","concrete","retained"],"answer": "PILOT.md section 3","semantic_requirement": "Explain cognitive vindication beyond transmitter counting; preserve the source's affirmative argument and its premises."},
     {"key": "tensor-geometry","works": ["tensor-moments","coercive-successor","fisher-audit","finite-sidecars"],"sources": ["tensor","coercive","fisher","sidecar","sidecar-review"],"answer": "PILOT.md section 4","semantic_requirement": "Expose actual conditional tensor/Fisher constructions; distinguish proposed noetic transfer from empirical human-cognition validation."},
     {"key": "cross-avenue","works": ["occurrence-feasibility","missing-outcomes"],"sources": ["join","occurrences","missing","join-review"],"answer": "PILOT.md section 5","semantic_requirement": "Explain what retaining a joint feasible relation contributes across avenues 11 and 12, and what each domain must establish."}
-  ]
+  ],
+  "reader_journeys": [
+    {
+      "id": "J01",
+      "entry": "docs/reader/RESEARCH-ATLAS.md#begin-with-the-question-not-the-archive",
+      "source_keys": [
+        "main"
+      ]
+    },
+    {
+      "id": "J02",
+      "entry": "docs/reader/PAPER-CATALOGUE.md#formal-reference",
+      "source_keys": [
+        "core",
+        "multi",
+        "render-orthemic-core-reference-draft"
+      ]
+    },
+    {
+      "id": "J03",
+      "entry": "docs/reader/PAPER-CATALOGUE.md#decisive-and-reflexive-revision",
+      "source_keys": [
+        "decisive-pdf",
+        "reflexive",
+        "lineage"
+      ]
+    },
+    {
+      "id": "J04",
+      "entry": "docs/reader/RESULT-INDEX.md#finite-mediator",
+      "source_keys": [
+        "coordination"
+      ]
+    },
+    {
+      "id": "J05",
+      "entry": "docs/reader/RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction",
+      "source_keys": [
+        "sound",
+        "concrete",
+        "retained"
+      ],
+      "source_fragments": {
+        "sound": "42--extension-to-rational-and-fiṭrī-deliverables"
+      }
+    },
+    {
+      "id": "J06",
+      "entry": "docs/reader/RESEARCH-ATLAS.md#tensor-histories-and-information-geometry",
+      "source_keys": [
+        "tensor",
+        "coercive",
+        "fisher",
+        "sidecar"
+      ]
+    },
+    {
+      "id": "J07",
+      "entry": "docs/reader/APPLICATIONS.md#joint-feasibility-across-avenues",
+      "source_keys": [
+        "join",
+        "occurrences",
+        "missing"
+      ]
+    }
+  ],
+  "reader_journey_scope": "Pre-merge sample routes from the six reader pages. Root-navigation replacement, independent comprehension review and complete C03 coverage remain outstanding. Link checks do not certify semantic claims."
 }
