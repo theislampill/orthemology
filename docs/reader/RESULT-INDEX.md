@@ -53,16 +53,16 @@ The successor explicitly removes the predecessor's quadratic/sum-of-squares brid
 The full-source geometry starts from a strictly positive joint law `mu[j,i] = w[j] p[j,i]`. Its categorical Fisher metric is
 
 ```text
-g = sum_j dw[j] d'w[j] / w[j]
-  + sum_j w[j] sum_i dp[j,i] d'p[j,i] / p[j,i].
+g = Σ_j dw_j d′w_j / w_j
+  + Σ_j w_j Σ_i dp_ji d′p_ji / p_ji
 ```
 
-Fix positive normalised conditional columns `P`, with at least two outcomes per column, and a mixture `q = Qw` admitting a positive weight representation. The weight fibre is `W = {w > 0 : Qw = q}`, of dimension `d = k - rank(Q)`.
+Here `p_ji` abbreviates `p[j,i]`; `d` and `d′` denote two tangent perturbations. Fix positive normalised conditional columns `P`, with at least two outcomes per column, and a mixture `q = Qw` admitting a positive weight representation. The weight fibre is `W = {w > 0 : Qw = q}`, of dimension `d = k - rank(Q)`.
 
 The corollary requires preservation of selected **ambient full-source** squared gradient norms:
 
 ```text
-||grad p[j,i]||^2 = p[j,i] (1 - p[j,i]) / w[j].
+||grad p_ji||² = p_ji(1 - p_ji)/w_j
 ```
 
 For fixed known conditionals, these norms recover the weights. Therefore a positive-dimensional fibre cannot have an exact finite-valued supplement under this contract. A continuous supplement needs, and on this fixed fibre can use, `d` real coordinates.
@@ -102,16 +102,37 @@ The positive recognition/correction route is not forced into a theorem status it
 
 These collections must remain separately discoverable when the full index is completed. Their presence here is a coverage route, not proof that every contained result has been substantively re-read for this preview.
 
-| Collection | Existing lookup / evidence owner | Keep distinct |
-|---|---|---|
-| Original v5 consolidation | [Theorem/argument index][v5-index] and [provenance guide][v5-guide] | Original statements, derived adapters and source-construction scope. |
-| Predecessor continuations and final-Sixth overlay | [Result status][continuation-results] and [continuation guide][continuation-guide] | Earlier families, later overlays and exact suite variants. |
-| Seventh–Twentieth successors | [Result status][successor-results], [evidence bindings][successor-evidence], [twelve avenues][avenues] | Registered statement scopes, source owners and scientific evidence. |
-| Later T20 live checkpoints and S01 | [Collection guide][live-guide] and [checkpoint index][live-index] | This additive collection does not simply replace the frozen registry. |
-| T20 v6 synthesis and repaired sources | [Contributions][contributions], [source recovery][source-recovery], [current source graph][source-graph] | Reused/public/held source identities, formal components and ordinary work. |
-| AR8R theorem and research records | [Collection guide][ar8r-guide] and [theorem-origin owner][ar8r-origin] | Historical theorem identities, bounded interpretations and recorded failures. |
-| AR8R proposals and semantic reissues | [Post-merge proposal guide][ar8r-proposals] and [evidence catalogue][ar8r-post] | Preservation or intake is not proposal adoption or replacement of an old verdict. |
-| Designed public experiments | [Packet status][experiment-status] | A runnable smoke test, planned experiment and empirical result are different things. |
+### Original v5 consolidation
+
+[Theorem/argument index][v5-index] and [provenance guide][v5-guide]. Original statements, derived adapters and source-construction scope.
+
+### Predecessor continuations and final-Sixth overlay
+
+[Result status][continuation-results] and [continuation guide][continuation-guide]. Earlier families, later overlays and exact suite variants.
+
+### Seventh–Twentieth successors
+
+[Result status][successor-results], [evidence bindings][successor-evidence], [twelve avenues][avenues]. Registered statement scopes, source owners and scientific evidence.
+
+### Later T20 live checkpoints and S01
+
+[Collection guide][live-guide] and [checkpoint index][live-index]. This additive collection does not simply replace the frozen registry.
+
+### T20 v6 synthesis and repaired sources
+
+[Contributions][contributions], [source recovery][source-recovery], [current source graph][source-graph]. Reused/public/held source identities, formal components and ordinary work.
+
+### AR8R theorem and research records
+
+[Collection guide][ar8r-guide] and [theorem-origin owner][ar8r-origin]. Historical theorem identities, bounded interpretations and recorded failures.
+
+### AR8R proposals and semantic reissues
+
+[Post-merge proposal guide][ar8r-proposals] and [evidence catalogue][ar8r-post]. Preservation or intake is not proposal adoption or replacement of an old verdict.
+
+### Designed public experiments
+
+[Packet status][experiment-status]. A runnable smoke test, planned experiment and empirical result are different things.
 
 The independent [candidate/owner map][owner-map] retains all baseline paths, including substantive candidates outside those obvious paper directories. The next stage must reconcile the actual works and results against that population. It must not silently treat the selected entries above as comprehensive coverage.
 
