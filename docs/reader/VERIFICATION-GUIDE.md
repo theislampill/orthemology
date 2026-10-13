@@ -77,6 +77,22 @@ The optimisation runs above apply to these new validator tests. They are not an 
 
 The [pilot qualification record][qualification] separates actually observed runs, local rendering, existing evidence, remaining review and the complete RLGWO acceptance predicates.
 
+## Checking an application contract without overstating it
+
+For the [worked corrective transition](APPLICATIONS.md#a-corrective-step-that-legitimately-ends-in-hold), inspect the original burden accounting, reread and verdict fields together. The result is an admissible transition ending in HOLD, not a hidden claim of closure. The existing commands include:
+
+```sh
+python -B scripts/validate_corrective_transition.py
+python -B scripts/validate_semantic_operator_contract.py
+python -B scripts/validate_noetic_claims.py
+python -B scripts/validate_dynamic_orthing.py
+python -B scripts/validate_somnic_orthing.py
+```
+
+These are repository-local contract/fixture checks, not execution of an external DAEE installation or measurement of cognition. The [application-coverage record][application-coverage] identifies all eleven existing validators actually exercised for this curation increment, the precise reading scopes, and the independent fifty-file denominator. The three runtime profiles' outline status is not changed by a passing schema or fixture.
+
+The reader tests separately require every baseline application file to have a disposition and every principal work to have a direct source route. They reject omitted support files, schema-to-paper promotion and loss of the worked corrective, learning or collective routes. Their coverage proves neither that each interpretation is correct nor that every application elsewhere in the repository is represented. Those remain source-based review and complete-corpus obligations.
+
 ## Maintaining the reader layer
 
 The work catalogue is the primary editorial home for a work's description and edition presentation. The atlas explains subject relationships; the result index locates claims; frontiers discuss the relevant open question; applications explain a use and its additional assumptions. They should not independently maintain competing status or edition lists.
@@ -105,3 +121,5 @@ These are selected integration checks, not a substitute for the complete [.githu
 [qualification]: ../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md
 [ci]: ../../.github/workflows/validate.yml
 [decision14]: ../decisions/0014-generated-project-state-and-whole-state-reread.md
+
+[application-coverage]: ../project-closure/reader-refactor-issue-35/APPLICATION-COVERAGE.md

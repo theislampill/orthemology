@@ -785,5 +785,66 @@ class ApplicationCollectionCoverageTests(unittest.TestCase):
                 self.assertEqual(len(represented), 1)
                 self.assertEqual(represented[0]["role"], "application-proposal")
 
+
+class ApplicationReaderRouteTests(unittest.TestCase):
+    """Require source-bearing use routes, not just a list of application titles."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("reader_application_routes", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        cls.page_path = "docs/reader/APPLICATIONS.md"
+        cls.text = (ROOT / cls.page_path).read_text()
+        cls.routes = {
+            "a-corrective-step-that-legitimately-ends-in-hold": {
+                "applications/daee-epistemics/CORRECTIVE-TRANSITION.example.json",
+                "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+                "applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+            },
+            "learning-without-silently-changing-the-analysis": {
+                "applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md",
+                "applications/latent-state-orthing/UPDATE-COUPLING.yaml",
+            },
+            "agentic-coordination-and-writeback-outlines": {
+                "applications/agentic-runtime/SOMNUS-CANDIDATE-INVENTORY.yaml",
+                "applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml",
+                "applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml",
+            },
+        }
+
+    def targets(self, text, heading):
+        page = self.mod.markdown_index(text)
+        selected = [h for h in page["headings"] if h[0] == heading]
+        if len(selected) != 1:
+            return set()
+        _, level, start = selected[0]
+        end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+        found = set()
+        for line, href in page["links"]:
+            if start <= line < end:
+                try:
+                    target = self.mod.resolve_reader_link(ROOT, self.page_path, href)
+                except ValueError:
+                    continue
+                if target is not None:
+                    found.add(target[0])
+        return found
+
+    def test_worked_application_routes_reach_their_controlling_sources(self):
+        for heading, expected in self.routes.items():
+            with self.subTest(heading=heading):
+                self.assertTrue(expected <= self.targets(self.text, heading),
+                                "A worked application route is missing its actual source or contract")
+
+    def test_each_worked_route_loses_coverage_when_its_source_link_is_removed(self):
+        for heading, expected in self.routes.items():
+            for path in expected:
+                with self.subTest(heading=heading, source=path):
+                    href = "../../" + path
+                    self.assertIn(href, self.text, "Control must change an existing source link")
+                    mutated = self.text.replace(href, "#removed-source-control")
+                    self.assertNotEqual(mutated, self.text)
+                    self.assertFalse(expected <= self.targets(mutated, heading))
+
 if __name__ == "__main__":
     unittest.main()

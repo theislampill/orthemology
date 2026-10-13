@@ -59,6 +59,14 @@ The [occurrence/feasibility join][join] already gives the common relational less
 
 The join explicitly keeps an earlier entry/grammar-versus-sense applicability contract separate. The later complete-tuple calculation does not close that different question. **What advances the application is a justified joint witness or completion model**, not freely combining coordinate answers or transferring an empirical dependence claim from a linguistic example.
 
+## Application contracts and the work required to realise them
+
+The [corrective-control example](APPLICATIONS.md#a-corrective-step-that-legitimately-ends-in-hold) already represents a useful partial repair: the addressed criterion defect does not erase a separate source-independence dependency, and the final posture remains HOLD. What it does not establish is actual human uptake or an externally executed runtime. Its [typed operator owner][app-operators] and [dated runtime boundary][app-runtime] should accompany any claim about implementation or soundness. A later runtime inspection requires a separately identified source revision; the old pin is not a live-status assertion.
+
+The [learning contract][app-coupling] requires explicit per-claim transport across analysis changes and preserves earlier versions. Extending an implementation means supplying and checking those transport/invalidation/reopening obligations, not asserting that all old verdicts remain current. Neither the early route-ranked G1/G2 account nor the actual later Fisher construction should be used as a blanket status for all noetic dynamics.
+
+The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimplemented outlines. Their next work is proposal-specific source and authority verification followed by bounded implementation and testing; publishing these profiles does not satisfy it. These engineering/interpretation obligations are distinct from proving another theorem or reclassifying any original philosophical argument. Full repository-wide application coverage is also still an editorial obligation of this refactor.
+
 ## Source availability and editorial completion
 
 The [source recovery guide][recovery] distinguishes recovered proof bodies from held or unavailable material and from historical evidence whose original scope remains limited. Its record of binary variants without decoded-equivalence qualification must not become a claim that their texts are all duplicates.
@@ -85,3 +93,8 @@ The full frontier page will need the original obligation, argument and supersess
 [t12-integer]: ../../experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md
 [t12-clarification]: ../../experiments/orthemology-v5-successors/source-store/32bb7071666b4582b5547d484cafe9d5973dc0aaca7f099380fe6eda613f3c68/OBSERVATION_ROUTE_CLARIFICATION_v1.md
 [t12-chain]: ../../experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md
+
+[app-operators]: ../../applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml
+[app-runtime]: ../../applications/daee-epistemics/CURRENT-RUNTIME-BOUNDARY.md
+[app-coupling]: ../../applications/latent-state-orthing/UPDATE-COUPLING.yaml
+[app-runtime-outlines]: ../../applications/agentic-runtime/README.md

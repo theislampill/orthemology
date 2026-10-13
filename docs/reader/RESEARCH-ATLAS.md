@@ -67,6 +67,14 @@ The [Twelfth work family](PAPER-CATALOGUE.md#fresh-histories-access-and-source-w
 The [total integer reporter][t12-integer] shows why an effective procedure is not automatically a tight-resource guarantee. The [policy clarification][t12-clarification] shows why a dominated course of action is not an impossible supporting architecture. The [worked finite-deadline example](APPLICATIONS.md#finite-deadlines-and-the-no-report-branch) makes the epistemic difference visible: omitting the residual information state changes the decision problem. This is a substantive connection between avenue 10's measure/effectivity distinctions and the source-specific epistemic and foundational applications—not evidence that a mathematical state variable has already been identified with real human cognition.
 
 
+## Noetic correction, learning and collective operation
+
+The [application studies](PAPER-CATALOGUE.md#application-studies-contracts-and-runtime-outlines) connect the general framework to concrete analysis of discourse, subject-relative acquisition, runtime control and learning. Their contribution is not to identify a person with a transcript or to turn a numerical optimiser into an epistemic authority. The multi-target account separates the bearer of each claim; the represented-standard account separates a carried rule from its wording and case binding; the corrective example shows an addressed defect with a legitimately unresolved dependency.
+
+These distinctions connect **objective norm-fixing (avenue 3)** and **semantic fidelity (avenue 8)**: admissibility under a configured standard, truth linkage, accurate source representation and a subject's warrant must not collapse into one score. The [worked HOLD route](APPLICATIONS.md#a-corrective-step-that-legitimately-ends-in-hold) explains a positive local repair and its retained limits. Applying it requires the actual targets, standards, evidence and dependencies, not just the avenue labels.
+
+The [learning route](APPLICATIONS.md#learning-without-silently-changing-the-analysis) asks which earlier results survive inference, model change, repertoire revision or a new analysis. The [collective outlines](APPLICATIONS.md#agentic-coordination-and-writeback-outlines) distinguish shared information from transferred authority and preserve dissent. These are source-owned application contracts and proposals at their stated stages; the later [tensor/Fisher mathematics](#tensor-histories-and-information-geometry) supplies different, genuinely mathematical preservation questions whose noetic interpretation needs its own binding.
+
 ## The original twelve avenues
 
 The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.
