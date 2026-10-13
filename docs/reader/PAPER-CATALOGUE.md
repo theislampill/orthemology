@@ -8,7 +8,7 @@
 
 Choose a work, not a file extension. A work can have several reading forms; a reference volume can contain more than one source document; a checkpoint can contain many works and supporting records. A PDF, its generated TeX and its Markdown input are not three independently authored papers.
 
-This preview maps the representative works and all governed publication-profile relationships. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] makes the actual examination scope explicit.
+This expanding catalogue maps the representative works, five further manuscript families and all governed publication-profile relationships. It is **not** a list of every substantive work in the repository. Entries based only on an introduction or edition record do not claim a complete substantive review. The [source-reading record][pilot] and [continuation record][curation04] make the actual examination scope explicit.
 
 ## Core exposition and formal reference
 
@@ -50,6 +50,8 @@ The source relates represented standards, learning, cognition and orthability wh
 
 **Information, Composition, and Self-Revision: Local Descriptions and Operative Access.** [Preserved PDF][information-pdf] · [Tracked TeX][information] · [Edition relationship note][lineage].
 
+The tracked TeX distinguishes whether local records merely permit a joint invariant or determine it. Sections 1–2 give a fibre criterion and a relational strengthening theorem: a compatible composition satisfying a property can exist even when the retained local descriptions do not warrant that every compatible composition satisfies it. The abstract connects this distinction to operative access, adaptive reconstruction and safe inquiry. These are conditional results for the declared models, not permission to carry out an operation or proof that it improves anything.
+
 The lineage note establishes matching title/abstract and the companion citation. It does **not** establish a byte-identical rebuild of the supplied PDF. The PDF is a preserved reading edition; the tracked TeX is not silently promoted to verified exact build input.
 
 ### Decisive and reflexive revision
@@ -58,7 +60,53 @@ The lineage note establishes matching title/abstract and the companion citation.
 
 **Reflexive Revision under an Evidence Budget.** [Related TeX manuscript][reflexive].
 
+The tracked reflexive manuscript gives an exact finite, priced-probe model for the worst-case cost of a uniformly sound decision. Its Bellman recurrence distinguishes identifiability from affordability; a retained record can reduce additional cost only under its unchanged meaning and the new target. The address-function example contrasts five adaptive queries with twenty fixed queries when there are four address bits. These are probe costs, not a complete engineering-cost optimum. The source also requires a method revision to justify its evidence transfer rather than making the successor its own sole warrant.
+
 Keep both titles visible. The [lineage note][lineage] identifies the relationship and shared abstract but explicitly leaves exact source-to-PDF provenance unverified. These are not known to be independent unrelated discoveries, nor established interchangeable editions. Retaining that unresolved relationship is more informative than either merging or separating them without qualification.
+
+### Graded representations and witnessed revision
+
+**Graded Representations, Witnessed Revision, and Inquiry Landscapes — a conditional mathematical extension of Orthemology.** [Manuscript][graded-representations]. September 2026 research draft.
+
+This work starts from concrete episodes and a **declared representation map**, not an assertion that cognition or an episode is intrinsically a tensor. It constructs finite typed record representations, separates a prospective inquiry landscape from historical ecology, and asks what compression and revision must preserve. Its target criterion is constancy on representation fibres; the arbitrary-arity parity construction explains why fixed-order marginals cannot capture every possible joint distinction. That does not prohibit a small target-specific representation.
+
+The selected later statements give a deterministic future-safe quotient criterion and connect representation, transitions, retained obligations and inquiry readouts. The manuscript also states conditional strategic and stability constructions. Ordinary proofs, proposed definitions, finite examples and transfers to real cognitive or software systems keep their different scopes; no proof-assistant certification or empirical adoption follows from this catalogue entry.
+
+### Continuation-complete information
+
+**Continuation-Complete Orthings: Sharp information loss, minimal predictive memory, and safe strategic composition.** [Research supplement][continuation-complete]. September 2026 supplement v1.
+
+This is the preceding manuscript’s **explicit stochastic-continuation extension**, not another filename for the same work. In its finite reference model, Theorem 1 and its proof identify the exact minimax error left by a linear moment summary: the distance of the target observable from the retained observable space equals half the largest disagreement between laws that share the retained record. This supplies both a quantitative loss and indistinguishable countermodels.
+
+The abstract and central account go on to construct the least space closed under the permitted action–observation operations and state a sharp continuous-coordinate cost. Its pairwise binary update family can require exponentially many predictive coordinates as the horizon grows. The object being summarised is an uncertain **law**, not an already observed bit string. These conclusions depend on the declared future inquiries, finite model and representation assumptions; the paper does not claim to solve fluid dynamics or certify an application to a mind.
+
+### Modal support and necessary being
+
+**Orthability and Necessary Being: Modal support, concrete grounding, and the common-bearer frontier.** [Research supplement][modal-grounding]. September 2026 supplement 02 / v2.
+
+This work moves from continuation of representations to an explicitly modal and metaphysical question. It separates necessary truths, necessary instantiation, one necessarily existing bearer, uniform underivability, necessity in itself and a knowing common bearer. Its actual-ancestry theorem gives a positive conditional route: a nonempty complete ancestor domain, well-founded dependence and the stated explanation requirement for contingent members yield an actual underived necessary bearer. The explanatory requirement is substantive, not merely a ban on self-causation.
+
+The manuscript’s broader programme includes joint-support and minimal-cut analysis, conditional further routes and countermodels separating stronger conclusions. It does not make necessary personhood or knowledge follow from a tensor representation. Its September frontier is a dated source assessment: read the [later affirmative foundational route](RESEARCH-ATLAS.md#a-positive-foundational-route) alongside it, rather than replacing later source-owned appraisals with this older draft’s limits.
+
+### Stateful cross-substrate realisation
+
+**The Last Moat, Third Edition: Physical Realisability, Cross-Substrate Communication, and Holarchic Agency.** [Root TeX manuscript][last-moat] · [Edition 3 changes and evidence ledger][last-moat-changes].
+
+This is **one componentised manuscript**. Its root includes twenty-two TeX components, all retained in the crosswalk as components, not twenty-two additional papers. The root and included files belong together for authoring; this catalogue does not assert that a governed PDF or a freshly verified build exists for it.
+
+The work asks when an organised process can preserve a specified stateful contract while replacing its original host. It distinguishes behavioural realisation from copying weights, the joint realisation from each constituent, and role/classification claims from evidence maturity. Its introduction and revision ledger describe a useful paired contrast: a declared parity-memory witness supplies two models and state-preserving handovers, whereas two individually correct processors and a correct packet channel can still fail continuation if the exported information omits consequential hidden state.
+
+The mathematical witness covers its stipulated model; recorded simulations are not a laboratory migration. The source’s literature discussion is distinct from newly performed experiments, and its own revision ledger rejects an unsupported blanket absence claim about alternative processors. No personal conscious identity or support-free agency is inferred here. Component identities are fully bound, but this entry does not claim fresh substantive reading of every included section.
+
+### Epistemic profiles and intra-agential equilibrium
+
+**Epistemic Tuples and Intra-Agential Equilibrium.** [Complete immutable text extraction][epistemic-tuples] · [Readable notation and architecture companion][epistemic-tuples-reading] · [Separate ET05 correction][epistemic-tuples-correction].
+
+The original work preserves heterogeneous evidentiary strengths as a tuple rather than forcing a premature scalar ranking. Cognition is endogenous to the account: perception, source monitoring, memory, coherence, defeater recognition and judgement mutually condition admissible responses. With justified functional decomposition, finite response sets, meaningful mixtures and appropriate real-valued payoffs, an intra-agential game supplies conditional mixed Nash existence. Equilibrium is not thereby truth, a unique correct weighting or the only suitable solution concept.
+
+The later reading companion restores notation and a diagram **alongside the original**, rather than replacing it or becoming a revised paper. The separate ET05 assessment distinguishes absence of nonzero nonnegative gains from absence of gains strictly positive in every coordinate. Its finite mixed-game results explain what strictly positive versus merely nonnegative scalarisation weights establish; the weights are existence witnesses, not prescribed epistemic trade-offs. Preserve the original statement and the correction as distinct source roles.
+
+The original PDF’s publication hold remains in force. The companion’s readable transcription does not release that binary, and the refactor does not requalify all inherited transcription or binary-coverage findings. This entry’s new substantive reading covers the original executive statement through its conditional Nash discussion and the named correction passage, not every original page.
 
 ### Finite coordination information
 
@@ -156,3 +204,13 @@ Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publica
 [render-dynamic-orthing-noetic-learning-orthability-draft]: ../../artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf
 [render-notation-gallery]: ../../artifacts/notation-gallery.pdf
 [pilot]: ../project-closure/reader-refactor-issue-35/PILOT.md
+
+[graded-representations]: ../../theory/lineages/h-formalisation/orthing_formalisation_v1.md
+[continuation-complete]: ../../theory/lineages/h-continuation/continuation_complete_orthing.md
+[modal-grounding]: ../../theory/lineages/h-modal/orthability_modal_grounding.md
+[last-moat]: ../../theory/lineages/h-moat-e3/the_last_moat_e3.tex
+[last-moat-changes]: ../../theory/lineages/h-moat-e3/edition3_changes.tex
+[epistemic-tuples]: ../../research/t20-v6-20261012/sources/a81201d5cb53b8c6d3d5eaf47abc704286f879cf78579421d6db6e0800fc5255/Epistemic_Tuples_and_Intra_Agential_Equilibrium.txt
+[epistemic-tuples-reading]: ../../research/source-fidelity/epistemic-tuples/README.md
+[epistemic-tuples-correction]: ../../research/t20-v6-20261012/sources/c67c2fa0a538875a2bbbc0df51ad7877a6a701d11cb1567af4f250ff7c2724ad/research.md#5-et05-strict-cone-repair-and-vector-equilibrium
+[curation04]: ../project-closure/reader-refactor-issue-35/RECOVERY-04.md
