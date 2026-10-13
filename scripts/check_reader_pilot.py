@@ -193,7 +193,8 @@ def check(repo, owners, cross):
                 fail("reading-form", str(work.get("key")) + " refers to an absent reading form")
                 continue
             if form.get("relationship") == "governed-rendering":
-                expected = "artifacts/" + str(work.get("artifact_id", "")) + ".pdf"
+                artifact_id = form.get("artifact_id", work.get("artifact_id", ""))
+                expected = "artifacts/" + str(artifact_id) + ".pdf"
                 if sources[form["source"]]["path"] != expected:
                     fail("rendering-target", str(work.get("key")) + " points to another rendering")
     for path in owners.get("required_work_sources", []):
@@ -207,22 +208,39 @@ def check(repo, owners, cross):
     except (KeyError, ValueError, OSError, TypeError, yaml.YAMLError) as exc:
         fail("artifact", "Publication owner cannot be read: " + str(exc))
         artifact_specs = []
+    def governed_ids(work):
+        # A work can have several governed editions. The existing work-level
+        # ID remains the default; additional reading forms name the existing
+        # publication-profile ID rather than becoming duplicate scholarly works.
+        ids = {work["artifact_id"]} if "artifact_id" in work else set()
+        forms = work.get("reading_forms", [])
+        if isinstance(forms, list):
+            for form in forms:
+                if isinstance(form, dict) and form.get("relationship") == "governed-rendering":
+                    identity = form.get("artifact_id", work.get("artifact_id"))
+                    if isinstance(identity, str) and identity:
+                        ids.add(identity)
+        return ids
+
     declared = {a["artifact_id"] for a in artifact_specs}
-    actual = [w["artifact_id"] for w in works if "artifact_id" in w]
+    actual = [identity for work in works for identity in governed_ids(work)]
     if set(actual) != declared or len(actual) != len(set(actual)):
         fail("artifact", "The governed rendering population is missing, extra or duplicated")
-    for artifact in artifact_specs:
-        associated = [w for w in works if w.get("artifact_id") == artifact["artifact_id"]]
-        if len(associated) != 1:
+    for work in works:
+        associated = [a for a in artifact_specs if a["artifact_id"] in governed_ids(work)]
+        if not associated:
             continue
-        work = associated[0]
+        # Every component of every represented edition must remain discoverable.
+        # The profile, not a copied synopsis, owns each edition's exact inputs.
+        required_paths = {path for artifact in associated for path in artifact["sources"]}
         actual_paths = {sources[k]["path"] for k in work.get("source_keys", []) if k in sources}
-        if actual_paths != set(artifact["sources"]):
-            fail("composite", artifact["artifact_id"] + " lost or added a source component")
-        if len(artifact["sources"]) > 1 and work.get("role") != "composite-reference":
-            fail("composite", artifact["artifact_id"] + " must remain explicitly composite")
-        if artifact.get("profile_kind") == "diagnostic-reference" and work.get("role") != "supporting-reference":
-            fail("reference-role", artifact["artifact_id"] + " is a diagnostic reference")
+        if actual_paths != required_paths:
+            fail("composite", str(work.get("key")) + " lost or added an edition source component")
+        for artifact in associated:
+            if len(artifact["sources"]) > 1 and work.get("role") != "composite-reference":
+                fail("composite", artifact["artifact_id"] + " must remain explicitly composite")
+            if artifact.get("profile_kind") == "diagnostic-reference" and work.get("role") != "supporting-reference":
+                fail("reference-role", artifact["artifact_id"] + " is a diagnostic reference")
 
     relations = cross.get("relations", [])
     for rel in relations:
