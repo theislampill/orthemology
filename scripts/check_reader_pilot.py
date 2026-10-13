@@ -11,10 +11,13 @@ from collections import Counter
 import hashlib
 import json
 from pathlib import Path
+import posixpath
 import re
 import subprocess
 import sys
+from urllib.parse import unquote, urlsplit
 
+from markdown_it import MarkdownIt
 import yaml
 
 
@@ -146,8 +149,17 @@ def check(repo, owners, cross):
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
-        if path not in indexed:
-            fail("unsafe-source", path + " is outside the approved baseline")
+        row = indexed.get(path)
+        if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
+            fail("unsafe-source", path + " is outside the regular-file baseline")
+        else:
+            raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
+            oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
+            if oid != row["git_oid"]:
+                fail("baseline-source", path + " differs from the independently pinned source")
+            mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
+            if mode != row["mode"]:
+                fail("source-mode", path + " changed executable mode")
         if hashlib.sha256(body).hexdigest() != source.get("sha256"):
             fail("source-drift", str(key) + " requires source/summary review")
         if not source.get("read_scope"):
@@ -172,6 +184,18 @@ def check(repo, owners, cross):
             covered.add(path)
             if path.startswith(("publication/latex/", "artifacts/")):
                 fail("generated-work", path + " is a rendering, not another authored source")
+        forms = work.get("reading_forms", [])
+        if not isinstance(forms, list):
+            fail("reading-form", str(work.get("key")) + " has malformed reading forms")
+            continue
+        for form in forms:
+            if not isinstance(form, dict) or form.get("source") not in sources:
+                fail("reading-form", str(work.get("key")) + " refers to an absent reading form")
+                continue
+            if form.get("relationship") == "governed-rendering":
+                expected = "artifacts/" + str(work.get("artifact_id", "")) + ".pdf"
+                if sources[form["source"]]["path"] != expected:
+                    fail("rendering-target", str(work.get("key")) + " points to another rendering")
     for path in owners.get("required_work_sources", []):
         if path not in covered:
             fail("missing-work", path + " disappeared from the independent pilot input list")
@@ -228,6 +252,143 @@ def check(repo, owners, cross):
     return errors
 
 
+
+READER_PAGES = (
+    "RESEARCH-ATLAS.md", "PAPER-CATALOGUE.md", "RESULT-INDEX.md",
+    "CURRENT-FRONTIERS.md", "APPLICATIONS.md", "VERIFICATION-GUIDE.md",
+)
+JOURNEYS = {"J%02d" % i for i in range(1, 8)}
+
+
+def markdown_index(text):
+    """Index ordinary Markdown headings and real links, never fenced decoys.
+
+    The slug rule covers these authored reader headings, not a claim to emulate
+    all GitHub rendering features. Explicit HTML id/name anchors are retained.
+    Actual rendered reading and semantic adjudication remain separate checks.
+    """
+    tokens = MarkdownIt("commonmark", {"html": True}).parse(text)
+    headings, links, used = [], [], set()
+    for i, token in enumerate(tokens):
+        if token.type == "heading_open" and token.map:
+            inline = tokens[i + 1]
+            title = "".join(t.content for t in inline.children or []
+                            if t.type in ("text", "code_inline", "image"))
+            slug = re.sub(r"[^\w\- ]", "", title.lower()).replace(" ", "-")
+            candidate, suffix = slug, 0
+            while candidate in used:
+                suffix += 1
+                candidate = slug + "-" + str(suffix)
+            used.add(candidate)
+            headings.append((candidate, int(token.tag[1:]), token.map[0]))
+        if token.type == "inline" and token.map:
+            for child in token.children or []:
+                if child.type == "link_open":
+                    links.append((token.map[0], child.attrGet("href")))
+        if token.type in ("html_block", "inline"):
+            fragments = ([token.content] if token.type == "html_block" else
+                         [c.content for c in token.children or [] if c.type == "html_inline"])
+            for fragment in fragments:
+                used.update(re.findall(r"\b(?:id|name)=[\"']([^\"']+)[\"']", fragment))
+    return {"anchors": used, "headings": headings, "links": links,
+            "line_count": len(text.splitlines())}
+
+
+def resolve_reader_link(repo, owner, href):
+    """Return a local (path, fragment), or None for an ordinary external link."""
+    if not isinstance(href, str):
+        raise ValueError("Missing link target")
+    parsed = urlsplit(href)
+    if parsed.scheme or parsed.netloc:
+        if parsed.scheme in ("https", "http") and parsed.netloc:
+            return None
+        raise ValueError("Unsupported external or machine-local link")
+    raw_path = unquote(parsed.path)
+    if raw_path.startswith("/") or "\\" in raw_path or "\0" in raw_path:
+        raise ValueError("Absolute or unsafe local link")
+    rel = posixpath.normpath(posixpath.join(posixpath.dirname(owner), raw_path)) if raw_path else owner
+    if rel.startswith("../") or rel in ("..", ".") or ".git" in rel.split("/"):
+        raise ValueError("Link escapes the repository reading surface")
+    node = Path(repo)
+    for part in rel.split("/"):
+        node = node / part
+        if node.is_symlink():
+            raise ValueError("Link follows a symlink")
+    if not node.exists() or not (node.is_file() or node.is_dir()):
+        raise ValueError("Link target is absent")
+    return rel, unquote(parsed.fragment)
+
+
+def check_reader_pages(repo, cross):
+    """Check seven declared routes and six pages, not the truth of their prose."""
+    repo = Path(repo)
+    errors, indexes, resolved_links = [], {}, {}
+    def fail(code, message):
+        errors.append(code + ": " + message)
+    def index(rel):
+        if rel not in indexes:
+            indexes[rel] = markdown_index(safe_path(repo, rel).read_text(encoding="utf-8"))
+        return indexes[rel]
+    page_paths = {"docs/reader/" + name for name in READER_PAGES}
+    for rel in sorted(page_paths):
+        try:
+            page = index(rel)
+        except (ValueError, OSError, UnicodeError) as exc:
+            fail("reader-page", rel + ": " + str(exc))
+            continue
+        targets = []
+        for line, href in page["links"]:
+            try:
+                target = resolve_reader_link(repo, rel, href)
+                if target is None:
+                    continue
+                path, fragment = target
+                if fragment:
+                    if not path.endswith(".md") or fragment not in index(path)["anchors"]:
+                        fail("reader-fragment", rel + " -> " + href)
+                targets.append((line, path, fragment))
+            except (ValueError, OSError, UnicodeError) as exc:
+                fail("reader-link", rel + " -> " + str(href) + ": " + str(exc))
+        resolved_links[rel] = targets
+    journeys = cross.get("reader_journeys", [])
+    ids = [j.get("id") for j in journeys if isinstance(j, dict)]
+    if set(ids) != JOURNEYS or len(ids) != len(JOURNEYS) or len(ids) != len(journeys):
+        fail("journey-map", "All seven distinct J01-J07 reading routes are required")
+    sources = cross.get("sources", {})
+    for journey in journeys:
+        if not isinstance(journey, dict):
+            continue
+        name = str(journey.get("id"))
+        entry = journey.get("entry", "")
+        rel, separator, fragment = entry.partition("#") if isinstance(entry, str) else ("", "", "")
+        if rel not in page_paths or rel not in indexes or not separator:
+            fail("journey-entry", name + " does not enter a reader section")
+            continue
+        page = indexes[rel]
+        selected = [h for h in page["headings"] if h[0] == fragment]
+        if len(selected) != 1:
+            fail("journey-entry", name + " has an absent or ambiguous entry heading")
+            continue
+        _, level, start = selected[0]
+        end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+        targets = {(path, anchor) for line, path, anchor in resolved_links.get(rel, [])
+                   if start <= line < end}
+        keys = journey.get("source_keys", [])
+        if not keys or len(keys) != len(set(keys)):
+            fail("journey-target", name + " needs distinct source targets")
+        for key in keys:
+            source = sources.get(key)
+            if not isinstance(source, dict) or not source.get("path"):
+                fail("journey-target", name + " has an unbound source target")
+                continue
+            expected = source["path"]
+            required_fragment = journey.get("source_fragments", {}).get(key)
+            found = any(path == expected and (required_fragment is None or anchor == required_fragment)
+                        for path, anchor in targets)
+            if not found:
+                fail("journey-target", name + " section does not directly reach " + expected)
+    return errors
+
 def unique_object(pairs):
     result = {}
     for key, value in pairs:
@@ -247,6 +408,7 @@ def main():
         owners = json.loads(safe_path(args.repo, args.owner_map).read_text(), object_pairs_hook=unique_object)
         cross = json.loads(safe_path(args.repo, args.crosswalk).read_text(), object_pairs_hook=unique_object)
         errors = check(args.repo, owners, cross)
+        errors.extend(check_reader_pages(args.repo, cross))
     except (KeyError, ValueError, TypeError, OSError) as exc:
         parser.exit(2, "PILOT INPUT ERROR: " + str(exc) + "\n")
     for error in errors:
