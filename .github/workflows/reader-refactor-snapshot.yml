@@ -38,7 +38,7 @@ jobs:
           printf 'EVIDENCE_DIR=%s/issue35-recovery03\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
           base=297267f6e49f80871036a95a6dfd81bdad40ea1f
           test "$(git rev-parse "$base^{tree}")" = fc702fe8456b48ff89b0c28df31f5fe232058538
-          test "$(git rev-parse HEAD^)" = d254d25d8223e17c18941bcaada58f06cca40bbe
+          test "$(git rev-parse HEAD^)" = e5c4b76317b42c7c1e2ed3b039d46f3083c0a219
           test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
           test "$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | cut -f1)" = "$GITHUB_SHA"
           git merge-base --is-ancestor "$base" HEAD
