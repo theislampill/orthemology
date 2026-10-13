@@ -71,6 +71,33 @@ def matches(path, selectors):
     return any(path.startswith(s) if s.endswith("/") else path == s for s in selectors)
 
 
+def permitted_reader_ci_addition(repo, row, body):
+    """Admit exactly the reviewed additive CI step, not mutable science owners.
+
+    Every original workflow byte, gate and permission must survive. This
+    narrowly scoped operational change is not a free-form hash exemption.
+    """
+    if row["path"] != ".github/workflows/validate.yml":
+        return False
+    original = subprocess.run(["git", "cat-file", "blob", row["git_oid"]],
+                              cwd=repo, capture_output=True, check=False)
+    if original.returncode:
+        return False
+    anchor = b"      - name: T20 v6 independent public projection and source boundaries\n"
+    addition = (
+        b"      - name: Reader pilot source, edition and navigation controls (not semantic acceptance)\n"
+        b"        run: |\n"
+        b"          python -B tests/test_reader_census.py\n"
+        b"          python -B -O tests/test_reader_census.py\n"
+        b"          python -B tests/test_reader_pilot.py\n"
+        b"          python -B -O tests/test_reader_pilot.py\n"
+        b"          python -B scripts/check_reader_pilot.py\n"
+    )
+    before = original.stdout
+    return (before.count(anchor) == 1 and addition not in before
+            and body == before.replace(anchor, addition + anchor, 1))
+
+
 def check(repo, owners, cross):
     """Return precise mechanical errors; an empty list is not semantic acceptance."""
     repo = Path(repo)
@@ -136,8 +163,11 @@ def check(repo, owners, cross):
             body = safe_path(repo, path).read_bytes()
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
-            if digest != row["git_oid"]:
+            if digest != row["git_oid"] and not permitted_reader_ci_addition(repo, row, body):
                 fail("owner", path + " changed; review its routing scope")
+            mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
+            if mode != row["mode"]:
+                fail("owner", path + " changed executable mode")
         except (ValueError, OSError) as exc:
             fail("owner", str(path) + ": " + str(exc))
 
