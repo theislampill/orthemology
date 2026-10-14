@@ -189,3 +189,9 @@ The constructive side matters: coherent finite debt is computable in appropriate
 [t14-repair]: ../../experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean
 
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
+
+## Correction geometry becomes a condition on access
+
+Avenues **3, 4, 5 and 8** connect in the [continuation repair programme](PAPER-CATALOGUE.md#continuation-repair-geometry-and-information). It first asks when multiple fixed score systems can share a correction, then asks what information a controller must acquire to produce that correction without already knowing the true system. The answer is substantive: compatible geometries admit a common constructive repair; certain accepted repairs reveal a hidden norm parameter; a self-verifying action support can continue acquiring useful evidence while remaining eventually correct.
+
+The corresponding failures have different causes. Incompatible geometries obstruct a common action; target-bad information acquisition obstructs eventual restoration; a changed representation or norm identity can invalidate the transfer itself. The [generated binary experiment](PAPER-CATALOGUE.md#a-generated-experiment-joins-score-repair-and-causal-control) gives one fully specified positive mathematical composition. None of these results identifies its modeled norm with a warranted norm of actual human cognition merely by fitting a loss function.

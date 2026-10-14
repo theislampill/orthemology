@@ -229,3 +229,9 @@ For reuse, the [operational transport theorem](../../experiments/orthemology-v5/
 [t15-paper-6]: ../../experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md#what-final-answers-can-identify-about-collective-evidence-use
 
 [t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md
+
+## Repairing while learning rather than learning before every repair
+
+The [generated binary experiment](PAPER-CATALOGUE.md#a-generated-experiment-joins-score-repair-and-causal-control) makes the norm-to-observation law and permissions explicit: each ordinary repair also supplies fresh evidence, and the common controller eventually chooses score-correct repairs. The [finite-query obstruction](PAPER-CATALOGUE.md#a-finite-query-restoration-obstruction-and-its-positive-sharpness) instead makes continued information acquisition target-bad. These are different design contracts, not a positive theorem contradicted by a negative one.
+
+For an agent application, identify which actions genuinely preserve the target, which observations are freshly acquired, and how the target relation is justified. Counting copied reports as independent observations invalidates the inference mechanism. For multi-standard correction, the [anchor corollary](PAPER-CATALOGUE.md#one-anchor-can-repair-an-entire-compatible-family) gives a constructive route under actual structural compatibility; pairwise intersections of arbitrary repair sets are not enough.

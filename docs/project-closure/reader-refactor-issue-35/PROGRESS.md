@@ -6,7 +6,7 @@
 
 The current owner-directed continuation began at `a67e04c6c5efc4fc316b2001a1b455c62e2b2963`, tree `327fbe8f92740a5f7879dca15e5298024266dc5f`; corpus baseline `0784acddd4770f1190f758f264ba52b2b110bd27`. Its [full normal CI run 38626098224](https://github.com/theislampill/orthemology/actions/runs/38626098224) was observed completed successfully. Later changes require their own result. Owner authority covers this branch and PR, not merge, scientific reclassification or independent self-approval.
 
-There are **63 catalogue work entries, 187 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
+There are **80 catalogue work entries, 207 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
 
 Counts below distinguish implementation delivered, required work remaining and independent acceptance. They overlap and must not be added into an artificial grand total.
 
@@ -17,7 +17,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 | C00 — Re-anchor and bind | Authorised feature branch, pinned corpus, write boundaries, baseline failures and repeated live checks. | Final separate reviewer binding and candidate/currentness review. |
 | C01 — Population and owners | 16,077 baseline paths in 26 disjoint routing groups, 73 discovery owners, no recursive external admissions. | Independent denominator/classification reconciliation. Full work semantics belong to C03, not this inventory count. |
 | C02 — Representative design | Composite reference, related editions, non-PDF mathematics and all three intellectual probes, with positive/adverse source readings. | Independent reader/design assessment; author-side mechanical checks cannot supply it. |
-| C03 — Full curation and navigation | Six pages, 63 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
+| C03 — Full curation and navigation | Six pages, 80 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
 | C04 — Maintenance and checks | Source/edition/route controls, multi-edition repair, targeted CI and repeatable state generation. | Complete all five M01–M05 change-footprint exercises and T01–T18 contracts; final-candidate qualification. |
 | C05 — Independent review | Evidence and candidate exist; independent review not performed. | Separate semantic/usability/engineering review, repair findings, final SHA/tree approval. |
 | C06 — Owner and public readback | Draft PR 36 exists. | Dot/owner assessment and integration decision; only after explicit merge authority, resulting-main and public-route readback. |
@@ -30,7 +30,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 |---|---:|---|
 | Reader surfaces | 6 of 6 authored | Complete their corpus coverage and make the agreed entrance current. |
 | Current root entrance files | 0 of 3 refactored | README, STATUS and CONTRIBUTING; reconcile other editable current guides. |
-| Catalogue work records | 63 | Remaining count unknown until source-owned work/support disposition is completed. |
+| Catalogue work records | 80 | Remaining count unknown until source-owned work/support disposition is completed. |
 | Governed publication families | 6 of 6 routed | Final independent relationship/availability review; no invented build equivalence. |
 | Application files | 50 of 50 role-dispositioned | Final independent review of the ten works and supporting roles. |
 | Pilot reader journeys | 7 of 7 authored | Hosted/independent comprehension and exact-source qualification still needed. |
@@ -38,11 +38,11 @@ Counts below distinguish implementation delivered, required work remaining and i
 | Discriminating contracts | 18 specified | Map actual mechanical and semantic observations to every T01–T18 requirement; tests alone do not close them. |
 | Acceptance predicates | 14 specified | Independent A01–A13 qualification; A14 requires owner-controlled integration/readback. |
 
-The reader tests are now **105**, plus **ten census tests**; they are neither 115 research results nor 115 RLGWO exits. The prior curation includes primary manuscripts/formal reference/companions, six other mathematical lineage records, recognition and tensor/Fisher sources, nine current Twelfth texts, ten application works, six Thirteenth/Fourteenth identity works, six Fifteenth constituent papers, its separate programme report and research software. These categories overlap at source/result level; do not sum them as a new paper total.
+The reader tests are now **108**, plus **ten census tests**; they are neither 115 research results nor 115 RLGWO exits. The prior curation includes primary manuscripts/formal reference/companions, six other mathematical lineage records, recognition and tensor/Fisher sources, nine current Twelfth texts, ten application works, six Thirteenth/Fourteenth identity works, six Fifteenth constituent papers, its separate programme report and research software. These categories overlap at source/result level; do not sum them as a new paper total.
 
 ## Corpus remainder map — the existing 26 groups
 
-The middle counts below are mechanical file/binding counts, **not semantic completion**. Sixteen groups have at least one crosswalk source binding; ten have none. Several unbound groups are support/history rather than missing papers. Even a fully bound component set can need substantive examination, as with Last Moat. A generic collection link is not a complete work disposition.
+The middle counts below are mechanical file/binding counts, **not semantic completion**. Seventeen groups have at least one crosswalk source binding; nine have none. Several unbound groups are support/history rather than missing papers. Even a fully bound component set can need substantive examination, as with Last Moat. A generic collection link is not a complete work disposition.
 
 | Existing routing group | Baseline paths | Bound source records | Next disposition / limit |
 |---|---:|---:|---|
@@ -60,7 +60,7 @@ The middle counts below are mechanical file/binding counts, **not semantic compl
 | `examples` | 15 | 0 | Fifteen example files still need their final work/support disposition. |
 | `publication-and-renderings` | 34 | 6 | All six governed reading forms routed; retain generated/build/sidecar roles for the rest. |
 | `v5-consolidation` | 119 | 16 | All 119 paths have work/support/history dispositions; seven source-bound work entries added. Independent reconciliation remains. |
-| `v5-continuations` | 1,200 | 0 | 1,200-path collection has owner routes; its substantive work dispositions remain. |
+| `v5-continuations` | 1,200 | 20 | First-return package and sixteen Second-return notes substantively routed; later returns/support lineage still in progress. |
 | `v5-successors` | 2,661 | 61 | Selected Twelfth–Fifteenth and earlier probes treated; substantial other tranche/owner material remains. |
 | `t20-live` | 2,067 | 0 | CP01–CP23/S01 collection is linked but not substantively mapped in this crosswalk. |
 | `t20-v6` | 6,363 | 11 | Selected synthesis/foundation/tensor/geometry joins treated; most source-owned work remains to disposition. |
@@ -112,3 +112,7 @@ The complete local reader suite passed 99 tests normally and under optimisation;
 Twelve offline focused reader previews were rendered at 390 and 1440 pixels with network requests blocked. The first mobile recurrence was unnecessarily wide within a scrolling code block; its line break was repaired without changing the equation. These are local presentation observations, not hosted GitHub navigation or independent comprehension. The long catalogue preview is inspected separately rather than declaring an unreadable thumbnail sufficient.
 
 The final branch checkpoint must reproduce the reviewed content tree, preserve all protected source bytes and scientific relations, and report its own native/full-CI outcome. The PR description and checkpoint comment bind that evidence without embedding a self-referential containing commit in a generated field.
+
+## Continuous execution — continuation geometry checkpoint
+
+The original v5 collection is saved at `26aef41055a0a03451add1691f6cd9305bce89c1`, tree `00871b408b289a0b446fdba9a64b21014afad196`; native run 38631842456 passed. The next increment supplies seventeen continuation work entries while preserving every existing entry. Source-reading scope and countercontrols are in COLLECTION-COVERAGE.md. The 1,200-path group remains partial until later returns, variants and support paths are reconciled. C03/C04 and final independent review remain unfinished.

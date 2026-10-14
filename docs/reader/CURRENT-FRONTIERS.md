@@ -158,3 +158,9 @@ The [convergence catalogue routes](PAPER-CATALOGUE.md#original-v5-construction-a
 [t14-certificates]: ../../experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md
 
 [t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
+
+## From repair compatibility to justified application
+
+The [earlier continuation works](PAPER-CATALOGUE.md#continuation-repair-geometry-and-information) have positive analytic and controlled-restoration results; they are not all merely prospective geometric models. Their exact remaining application questions concern norm identity and authority, faithful representation, available signals, licensed actions and physical execution. The [source-bridge synthesis](PAPER-CATALOGUE.md#what-repair-geometry-contributes-to-the-source-question) states its philosophical alternatives and positive hosting conditional without claiming a general theorem of an ultimate intellectual bearer.
+
+Later continuation returns refine critical tolerances, finite audit issuance, physical costs, controller semantics and foundational arguments. The original [supersession owner](../provenance/v5-research-continuations/SUPERSESSION.json) and [Sixth-final overlay](../provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json) must be consulted for those exact targets. An early note's then-open statement must not erase a later scoped resolution, and a later acceptance must not be transferred to a different theorem or empirical interpretation.

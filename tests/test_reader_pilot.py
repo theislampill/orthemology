@@ -1503,5 +1503,86 @@ class CollectionDispositionTests(unittest.TestCase):
             self.assertTrue(entry.startswith("docs/reader/PAPER-CATALOGUE.md#"))
             self.assertIn(family["id"], (ROOT / "docs/reader/RESULT-INDEX.md").read_text())
 
+
+class ContinuationGeometryRoutesTests(unittest.TestCase):
+    """Source-owned note population, not a keyword test of philosophical truth."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("continuation_geometry_routes", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        cls.directory = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.cross = json.loads((cls.directory / "CROSSWALK.json").read_text())
+        owners = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        raw = subprocess.check_output(["git", "show", owners["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT)
+        source_rows = json.loads(raw)["sources"]
+        members = (
+            "source-bridges/ANCHORED_FAMILY_COMMON_REPAIR.md",
+            "source-bridges/DEPENDENCY_BLOCK_SMOOTH_CLASSIFICATION.md",
+            "source-bridges/LOCAL_REPAIR_RIGIDITY.md",
+            "source-bridges/LOCAL_SMOOTH_APPROXIMATE_IFF.md",
+            "source-bridges/SMOOTH_SCORE_RIGIDITY.md",
+            "source-bridges/CONTEXT_IDENTITY_CONTROL.md",
+            "source-bridges/NUDGE_COMPARISON.md",
+            "source-bridges/SOURCE_BRIDGE_SYNTHESIS.md",
+            "root-research/DEPENDENCY_BLOCK_NORM_RIGIDITY.md",
+            "root-research/REPRESENTATION_TRANSPORT_BOUNDARY.md",
+            "root-research/FIRST_ORDER_REPAIR_REGRET.md",
+            "root-research/STATISTICAL_REPAIR_BRIDGE.md",
+            "root-research/COMMON_OBSERVATION_BOUNDARY.md",
+            "root-research/CONTINUUM_RESTORATION_OBSTRUCTION.md",
+            "root-research/INTEGRATED_BINARY_EXPERIMENT.md",
+            "necessity-bridge-review/sources/CONTROLLED_INFORMATION_RESTORATION.md",
+        )
+        cls.expected = {}
+        for member in members:
+            paths = {v["path"] for v in source_rows
+                     if v["origin"].startswith("d6f6fa5be51464c0") and v["member"] == member and v["path"]}
+            if len(paths) != 1:
+                raise AssertionError("Independent source owner not unique: " + member)
+            cls.expected[member] = paths.pop()
+        cls.text = (ROOT / "docs/reader/PAPER-CATALOGUE.md").read_text()
+
+    def errors(self, cross, text):
+        errors = []
+        page = self.mod.markdown_index(text)
+        for member, path in self.expected.items():
+            keys = {k for k,v in cross["sources"].items() if v["path"] == path}
+            works = [w for w in cross["works"] if keys.intersection(w["source_keys"])]
+            if len(works) != 1:
+                errors.append("work:" + member)
+                continue
+            entry = works[0].get("catalogue_entry", "")
+            heading = [h for h in page["headings"] if h[0] == entry.partition("#")[2]]
+            if not entry.startswith("docs/reader/PAPER-CATALOGUE.md#") or len(heading) != 1:
+                errors.append("entry:" + member)
+                continue
+            _, level, start = heading[0]
+            end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level),page["line_count"])
+            targets = {href.split("#", 1)[0] for line,href in page["links"] if start <= line < end}
+            if "../../" + path not in targets:
+                errors.append("source:" + member)
+        return errors
+
+    def test_source_owned_geometry_and_restoration_notes_have_distinct_reading_routes(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+
+    def test_missing_note_is_not_hidden_by_the_parent_collection_link(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for member,path in self.expected.items():
+            altered = deepcopy(self.cross)
+            keys = {k for k,v in altered["sources"].items() if v["path"] == path}
+            altered["works"] = [w for w in altered["works"] if not keys.intersection(w["source_keys"])]
+            self.assertIn("work:" + member,self.errors(altered,self.text))
+
+    def test_another_existing_note_is_not_an_equivalent_source_route(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for member,path in self.expected.items():
+            replacement = next(v for v in self.expected.values() if v != path)
+            changed = self.text.replace("../../"+path, "../../"+replacement)
+            self.assertNotEqual(changed,self.text)
+            self.assertIn("source:" + member,self.errors(self.cross,changed))
+
 if __name__ == "__main__":
     unittest.main()

@@ -185,3 +185,9 @@ This refactor's path dispositions account for code, tests, ledgers, prior editio
 [t15-reference-guide]: ../../experiments/orthemology-v5-successors/groups/t15-restricted-reference/README.md
 
 [t15-json-reference]: ../../experiments/orthemology-v5-successors/source-store/8f5ba88d07447c8c92d49161f82118f805cae707404b477c81936828103d60ef/certificate_checker.py
+
+## Continuation source identity, theorem scope and replay
+
+For a retained continuation note, the [source map](../provenance/v5-research-continuations/SOURCE_MAP.json) records its origin/member, exact public path and whether it is an exact body, a reading projection or a held identity. The [result owner](../provenance/v5-research-continuations/RESULT_STATUS.json) binds the relevant scientific result to source/review/suite IDs; the [registry](../../experiments/orthemology-v5-continuations/registry.json) resolves those suites. Equal public bytes can have several original aliases without becoming independent evidence.
+
+[The geometric scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) identifies kernel-checked spines, intrinsic-interior wrappers and ordinary-only block/symmetry/philosophical conclusions. [The causal-restoration guide](../../docs/provenance/v5-research-continuations/notes/b5150cb34c158dfec81cb9a738c02396946dfb2fc8aee0f9abb56b7cecd56347.md) distinguishes finite-sample, causal-locality and generated-process endpoints. Follow the current [isolated export/replay procedure](../../experiments/orthemology-v5-continuations/README.md), not a machine-local command preserved inside an old note. This reader curation does not replay the underlying science or authenticate its external bibliography.

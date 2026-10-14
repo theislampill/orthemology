@@ -33,3 +33,24 @@ Reject these summaries: finite-prefix zero defect implies full-stream zero defec
 Six new controls first failed for the unrepresented collection, missing CV proof/work routes and absent disposition checking. The general checker compares the declared completed collection against the independent Git denominator, requires the original owner basis, and rejects omitted/duplicate paths, unexplained roles and absent work destinations. It is an editorial completeness check, not scientific acceptance. Proportionate source/page checks and complete reader tests are recorded at each branch checkpoint. Existing scientific owners remain unchanged.
 
 **Next executable unit:** the v5 continuation collection, using its own suite, source and result owners; do not repeat the completed primary, application, Twelfth–Fifteenth or composition readings. C03 whole-corpus completeness and C04's full maintenance/control matrix remain in progress; C05 still requires a genuinely separate context.
+
+## Continuation repair geometry and information
+
+**Seventeen additional work entries; first continuation slice, not complete 1,200-path disposition.** The repaired P01–P03 software package and sixteen distinct Second-return mathematical/synthesis notes now have substantive descriptions and source routes. Named notes are not absorbed into a generic return summary; formal modules, reviews and source projections are not counted as new papers. Existing 63 work values and 187 source-record values remain unchanged.
+
+### Reading performed
+
+The complete first-return STATUS_MAP and the complete later continuation guide were read as package/result-scope owners, not as substitutes for every proof. The anchor, dependency-block, local quadratic, local approximate, nudge, context-identity, representation-transport, minimax-regret, statistical-repair, common-observation, continuum-obstruction, integrated-binary and controlled-information notes were read at their full substantive statements, arguments, examples and qualifications. The smooth-score note received its definitions, exact/robust classification derivations and exception passages; no external literature was reacquired. The source-bridge synthesis was read in full. The formalisation record was examined at theorem inputs, explicit endpoints, ordinary-only limitations and receipt scope; the causal-restoration guide was examined at its reading order and finite/causal/generated endpoint sections. No claim is made that every formal source in those closures was reread or recompiled.
+
+The new work records retain exact source hashes and direct reading forms. Their source-map origin `d6f6fa5be51464c0…` controls the Second-return membership, independently of the catalogue. Two earlier status-only versions of the block/approximate notes remain in the collection; they have not been silently replaced or counted as independent new discoveries. The full later lineage/support disposition is still underway.
+
+### Positive content and adverse readings
+
+Common normal equations provide a constructive strict repair; universal fixed additive scores on at least three categorical outcomes have the specified affine-equivalence classification; a fixed anchor can repair an arbitrary compatible family. Rank-one and binary exceptions, actual feasible hulls and fixed cross-context score identities survive. Existence of some sublinear tolerance is not every tolerance or exact repair. A common infinitesimal direction is not a pointwise common dominating endpoint.
+
+The norm-information bridge supplies both a sample lower bound and a constructive estimated repair. Self-verifying good supports supply a positive common controller, and a generated binary process connects score-derived targets to acquired observation histories. Target-bad informative queries instead give a countable positive-success set under the stated causal contracts; this is not failure at every parameter or a parameter defeating every possible controller. Full-path common domination has its stated direction and is stronger than finite-prefix equivalence. These source results constrain modeled repair and access; they do not by themselves authenticate a norm, real cognition or an ultimate bearer.
+
+Three source-owned reading-route controls first failed for all sixteen absent note routes and then pass after curation. Omission and retargeting to another existing source are exercised separately. The previous mechanical suites remain unchanged. Valid navigation does not adjudicate the philosophical prose; independent C05 remains required.
+
+**Next in the same execution:** continue the Third–Sixth returns and complete the collection's work/support lineage, then proceed to remaining collections and C04. No owner prompt is needed for ordinary bounded curation.
+

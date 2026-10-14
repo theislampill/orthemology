@@ -676,3 +676,109 @@ Use the [native entry point](../../experiments/orthemology-v5/verify_repository.
 [orthability-step-map]: ../../companion/ARGUMENT-MAP-ORTHABILITY.md
 [dynamic-argument-map]: ../../companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
 [source-status-owner]: ../../references/source-status.yaml
+
+## Continuation repair geometry and information
+
+These are the source-owned first-return package and Second-return mathematical notes, not new results created by this index. The [continuation result owner](../provenance/v5-research-continuations/RESULT_STATUS.json), [source map](../provenance/v5-research-continuations/SOURCE_MAP.json) and [isolated-suite guide](../../experiments/orthemology-v5-continuations/README.md) connect each existing result family to its exact sources, reviews and toolchain. Formal components, dated reviews and corrected interfaces retain separate scopes. The full collection remains broader than this first curation slice.
+
+### The repaired P01–P03 research package
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/f3a3bb02cfa49054a46d4ff108ac0f8f603b78b10a4799952b6a336de2a16226.md). The first return supplies repaired finite-source/type-effect, dependent-index, measure and guarded-runtime components. Its status map distinguishes actual constructive interfaces: recursive PER semantics; finite raw-index dependent transport; exact finite-Mealy atomic mass; a computable numeric observer interface; and finite parser/runtime comparisons. `Option`/`PLift` is a real representation change, not evidence that every original signature survived unchanged.
+
+The finite observer solver is a positive algorithmic result; it does not decide the infinite quantified property of every productive program. The structural primitive-recursion compiler is not a numeric codec theorem. The finite JSON agreement cases do not certify the whole parser, exporter, locking system or distributed revocation. This is one linked research-software package, not one new paper per compiled module or receipt. Its named `T1-*` result scopes remain individually available in the original result owner.
+
+### A shared local repair direction
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/a9eb8521054eb3769ff424037f438ae38f0f0c113d73624efc9d05dea3b35483.md). For a finite truth hull, an interior point and a transverse perturbation, the note characterises common small coherent repairs under a family of positive-definite quadratic scores by agreement of their tangent normal-equation solution. The necessity does not simply assume convergent normalised repairs. The converse gives a common **strict** repair ray, not only an obstruction to repair.
+
+On a categorical simplex, diagonal metrics give a proportional-weight consequence; in a general truth hull the geometry can leave more freedom. A norm read out from an accepted repair is a model parameter, not automatically a warranted norm. The supplied formal-scope record distinguishes the original positive-barycentric input from its later intrinsic-interior wrapper, and formal results from ordinary quantitative/symmetry consequences.
+
+### Dependency blocks and quadratic norm freedom
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/55dc1c64cb207d0a4425ec989aab9c94a65490bda4191814fa4a055d5e148aab.md). The quadratic classification asks which changes of coordinate weights preserve the same corrective access on a finite truth hull. The diagonal ratio must preserve its tangent space, equivalently it is constant on each elementary affine-dependency component. Weight ratios inside a constrained block are fixed; relative scales between blocks can remain free.
+
+These are affine dependencies of truth vectors, not assertions of statistical dependence between witnesses. The finite transverse tests establish a sufficient testing arrangement, not a proven minimal query budget. Its classical linear-algebra ancestry is acknowledged by the source. The result restricts compatible norm representations without selecting the true norm or all comparisons between coherent alternatives.
+
+### Smooth categorical repair and its sharp exceptions
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/3d1c584a1b91f4d0190605cd73d1cba8ae3bf631e461865de301b4711928d9be.md). For two fixed coordinate-additive smooth proper Bregman generators on a genuine categorical simplex with at least three outcomes, universal local common repair is equivalent to one common positive scale and coordinatewise affine differences. The constructive Bregman minimiser provides the converse; neither its existence nor Hessian agreement is silently assumed.
+
+Two outcomes are a real exception: the specified quadratic and logarithmic scores share arithmetic coherification without proportional generators. A three-coordinate counterexample has no common repair, and nonseparable scores need a different contract. The same standard identities must be retained across all coherent contexts. The formal-scope record identifies the exact theorem spine and the separate ordinary interpretations; it is not a historical-priority certificate or an executable optimiser for arbitrary smooth inputs.
+
+### Smooth repair on general dependency blocks
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/fbf8481b03ad278b916bebf337cf340f44597697764f7e9a6fffe219f2707805.md). The note extends the question beyond a categorical simplex. For a finite truth hull, fixed additive generators and constrained tangent-dependency blocks of rank at least two, universal local common repair fixes a positive affine generator relation **on each attained coordinate range and block**. Unconstrained singleton coordinates remain free, and rank-one blocks have separate behaviour.
+
+The hull need not be a Cartesian product of its blocks. The proof uses its actual affine structure and a common constrained minimiser. Global fixed-generator quantifiers, positive curvature and rank restrictions are load-bearing. The full block classification and stabiliser argument have an ordinary proof/review scope; the separately formalised finite-hull necessity bridge is not a kernel proof of the entire classification.
+
+### One anchor can repair an entire compatible family
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/edb8d215fa5d1aa568c596d749385b42710030e9ff3215347cdaec5185f0e854.md). The corollary considers a possibly infinite family of fixed score systems and one fixed anchor. When each member satisfies the block-classification hypotheses and universal joint correctability with that anchor, the structural relation makes one anchor minimiser a simultaneous strict repair for the whole family.
+
+This is a constructive answer to a quantifier problem: it does not infer a common point merely from arbitrary pairwise intersections. Rank, attained-range and cross-context identity conditions remain necessary parts of the stated route. It supplies no uniform strict improvement margin across an unbounded family and does not choose the norm's authority.
+
+### Approximate smooth repair with a specified loss scale
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/c08f6d75254247a8c68f49f6b4e88bedc510790c38e9d7f8c493281eafc5c418.md). For a finite nonempty score family on a finite truth hull, a common Hessian-normal solution is equivalent to the existence of **some** common nonnegative tolerance `η = o(ε)` allowing the actual statewise loss comparisons. The converse constructs a tolerance from the finite collection of remainders rather than giving every prescribed tolerance.
+
+The rank-one quadratic/quartic example separates approximate compatibility from exact nonlinear repair. `η` is an additive loss allowance, not an error probability. Literal intrinsic-interior wrappers remove an earlier interface obligation without changing the frozen predecessor theorem. Universal categorical rigidity and this local finite-family statement have related but different quantifiers.
+
+### Nudges, coherent directions and full endpoint repairs
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/1a5d94a8d7a2bca031de09dafcb3fc929797b94488d10836ddb696b0e6a1be0d.md). In the same fixed additive categorical regime, universal access to strict common infinitesimal improvement has the same affine-equivalence classification as universal endpoint repair. A reciprocal-Hessian formula supplies an actual common descent direction; a separate wrapper aims that direction towards an interior coherent vector.
+
+The equivalence is universal across contexts, **not pointwise**. The source gives a concrete shared strict direction towards a coherent point while no coherent endpoint dominates under both scores. The nudge and its coherent-directed wrapper are separate formal components, with the pointwise separator in the original audit. This precisely positions the contribution relative to earlier common-improvement work without claiming to have invented that problem.
+
+### Why standards must stay the same across contexts
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/0113c7c7e1e78bd51645e77ee3646c856faac79f178e9b5760285c28aeeceac2.md). The algebraic control fixes a quadratic generator `F`, but at each coherent baseline chooses a new quadratic-plus-quartic `Gₚ`. They share exact strict local repairs near that baseline even though `Gₚ` is not positive-affine equivalent to `F`.
+
+Thus “the same two generators work at every baseline” cannot be replaced with “at every baseline some generator works.” The example identifies a substantive source/identity premise in norm comparison; it does not decide a theory of mental content or the identity of a metaphysical bearer. Its exact symbolic checks and ordinary argument are not silently promoted to the frozen general Lean theorem.
+
+### Faithful score transport is more than injective encoding
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/752593a77fa180409da3bf6aa55816508362669bb055233a79ba775cd55bdd5a.md). The note distinguishes pulling back the **whole score** from composing only its potential with a representation map. An injective nonlinear encoding introduces a chain-rule curvature term, so the latter operation need not preserve the original Bregman loss; the displayed quadratic example gives different numerical values.
+
+A faithful translation must transport the truths, admissible forecasts, interventions and actual loss together. Injectivity alone does not certify an unchanged decision problem. This is a conditional representation theorem/countercontrol, not an argument that one coordinate convention has normative privilege.
+
+### The first-order cost of unresolved norm conflict
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/a972fc4836f42db0ca2275134ba70388eb52b7e8e53937dac969995907f052ce.md). For a finite family of positive-definite quadratic scores in fixed loss units, the minimax signed excess from a common repair has expansion `R(ε) = ε κ + O(ε²)`. A finite linear optimisation on the tangent space supplies `κ`. It vanishes exactly when the scores share the relevant normal projection; that compatible case has an explicit strictly improving repair.
+
+Otherwise the leading unavoidable harm is linear, even though its absolute size tends to zero. The binary model has an exact higher-order formula. The numerical coefficient is not invariant under independent rescaling of the candidate scores: comparing losses requires declared units. The result credits classical minimax sensitivity analysis and does not convert a worst-case standard into a justified prior or objective authority.
+
+### How a successful repair reveals a hidden norm
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md). For the weighted binary score, sufficiently accurate repair constrains the hidden weight to a narrowing interval. With fresh Bernoulli observations under the stipulated norm-to-signal law, this yields a finite-sample lower bound of inverse-square precision order, with confidence dependence. Copies of one observation are not new independent samples.
+
+The positive side uses an estimated, clipped weight to construct strict repairs on issued opportunities under the stated target-preserving observation licence and summable failure probabilities. Reusing growing samples does not by itself invalidate the summable-failure argument. Physical disturbance costs, permission and epistemic authentication of the signal relation are separate conditions. The stronger ordinary statistical bounds and selected formal identities retain their distinct verification scopes.
+
+### Common complete-path evidence constrains eventual choice
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/71899f46c0346c901fd19697436beaa511b9814f879835604bbe23264d062aeb.md). A nonzero common measure dominated by every candidate's **full observed-path law** transfers eventual correctness into a common accepted action under the stated finiteness conditions. Compactness and closed target sets give a separate existence extension. The direction of domination matters; equivalence of finite-prefix laws alone does not establish the premise.
+
+The counterexamples explain the boundary: when both relevant families are infinite, success can occur without a common action; even a compact intersection point need not ever be emitted by the controller. This is a condition on complete observation and policy laws, not an authentication procedure for testimony or a guarantee that a finite transcript identifies the true standard.
+
+### A finite-query restoration obstruction and its positive sharpness
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md). When increasingly accurate repairs encode a real norm parameter, but continued informative queries are target-bad, a shared causal controller satisfying the declared seed/oracle conditions can have positive eventual-success probability at only countably many parameters. The later source construction discharges an earlier common-reference premise for the actual causal evaluator, including its stated correlated-seed case.
+
+The order of quantifiers matters: each fixed controller has a countable success set, not one parameter defeating every controller. A blind initial guess attains exactly its atomic probability at the true parameter, showing sharpness for an arbitrary countable set. Sublinear additive-loss tolerance retains the obstruction; linear tolerance can change it. The proof does not misuse the last informative query as a stopping time.
+
+### Self-verifying actions make controlled restoration possible
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/bd83f4c2bb1a41151405872a6aa57fe9bdc352f0b63db4cfb302e0068c8b0d4a.md). For finite hidden standards, actions and observations with full-support controlled-iid kernels, the paper characterises restoration by **self-verifying good supports**. The greatest-support elimination procedure removes an action when an observationally indistinguishable rival would make it bad; it may need several rounds. A shared likelihood-based controller supplies the positive direction instead of assuming the hidden model is known.
+
+A common good action can restore without identifying an ontological label. Conversely, an informative but permanently target-bad probe need not permit almost-sure eventual restoration, even when finite-confidence success approaches one. The later guide records the actual micro-policy iff and fixed common-permission refinement. Changing permissions, copied evidence, arbitrary POMDPs and authentication of a normative target require their own contracts; the zero-support extension has a constructive scope, not automatically the same-runner iff.
+
+### A generated experiment joins score repair and causal control
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/b0672a56d007c718a42a7ee6fdc875c915630ad95dff5cfbae7f7e9a419d5349.md). This mathematical benchmark uses two hidden binary score weights, fixed throughout a run. Its two actions are genuine coherent score repairs; the target relation is proved from score inequalities rather than assigned by a label. Every repair yields a fresh observation under the model's specified norm-to-signal law.
+
+The supplied product-law and acquired-history controller chain proves that eventually all issued repairs satisfy the true score inequalities almost surely. The true standard selects the probability law, not the controller's inputs. Early errors remain possible. The separate ordinary expected-error comparison and finite-confidence sample bound are different quantities, and the real-comparison selector is not a certified Python deployment. Permitting information during repair distinguishes this positive model from the finite-query no-go; it does not contradict it.
+
+### What repair geometry contributes to the source question
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md). The synthesis credits the new common-correction and precision results as genuine restrictions on admissible norm models, rather than mere bookkeeping. It separates norm compatibility, access and causal implementation from authority, original representation and the identity of an ultimate bearer. A fixed physical parameter can implement a repair without thereby establishing its normative authority.
+
+Its positive hosting conditional remains explicit: one persisting representational particular with one essential intellectual host entails that host's existence throughout the intended modal range. The geometry does not itself supply that first premise or identify the host with the proposed ground. The note treats endogenous functional-norm proposals as substantive rivals and asks for constitutive, bearer-identity, discriminating-intervention, abductive or authenticated-source bridges. These are this dated synthesis's philosophical assessments, not new verdicts on separately scoped later foundational work.

@@ -432,3 +432,15 @@ The [catalogue](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-fami
 [t15-univariate-reference]: ../../experiments/orthemology-v5-successors/source-store/bd796dc6d0157d0b8a125cc3b394a866812567f12ce132ee11d2fa3844e081d9/root_extension_checker.py
 
 [t15-attribution-guide]: ../../experiments/orthemology-v5-successors/groups/t15-attribution/README.md
+
+## Earlier continuation geometry and restoration
+
+The original [result/evidence owner](../provenance/v5-research-continuations/RESULT_STATUS.json) separates first-return `T1-*` interfaces from the Second-return geometry, dynamics and source assessments. These are its existing scoped families, not new scientific IDs. The [work sequence](PAPER-CATALOGUE.md#continuation-repair-geometry-and-information) links directly to each substantive argument rather than presenting the whole return as one undifferentiated theorem.
+
+**Constructive geometry:** [local normal-equation repair](PAPER-CATALOGUE.md#a-shared-local-repair-direction), [smooth block classification](PAPER-CATALOGUE.md#smooth-repair-on-general-dependency-blocks) and [one anchor for an entire family](PAPER-CATALOGUE.md#one-anchor-can-repair-an-entire-compatible-family).
+
+**Precision and dynamics:** [first-order repair regret](PAPER-CATALOGUE.md#the-first-order-cost-of-unresolved-norm-conflict), [norm-information readout](PAPER-CATALOGUE.md#how-a-successful-repair-reveals-a-hidden-norm), [self-verifying support criterion](PAPER-CATALOGUE.md#self-verifying-actions-make-controlled-restoration-possible), and [the generated positive experiment](PAPER-CATALOGUE.md#a-generated-experiment-joins-score-repair-and-causal-control).
+
+**Exact scope controls:** [nudge versus endpoint](PAPER-CATALOGUE.md#nudges-coherent-directions-and-full-endpoint-repairs), [cross-context identity](PAPER-CATALOGUE.md#why-standards-must-stay-the-same-across-contexts), [nonlinear score transport](PAPER-CATALOGUE.md#faithful-score-transport-is-more-than-injective-encoding), and [the countable-success/finite-query boundary](PAPER-CATALOGUE.md#a-finite-query-restoration-obstruction-and-its-positive-sharpness).
+
+[The formalisation-scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
