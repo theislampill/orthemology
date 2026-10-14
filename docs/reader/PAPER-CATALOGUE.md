@@ -18,13 +18,25 @@ Browse by role: [core exposition](#core-exposition-and-formal-reference), [philo
 
 **Orthemma–Ortheme Systems: An Analysis-Relative Architecture for Auditable Classification and Handling.** Read the [Markdown manuscript][main] or its [governed PDF][render-orthemma-ortheme-systems-draft].
 
-This is the principal exposition of cases, state-types, bound standards and rule-governed handling. It separates correctness of a result from adequacy of its pathway. Its current-draft role does not imply that it incorporates every later tranche or mathematical development. The Markdown is the substantive editing source; the PDF is a reading output.
+**Why read it:** this is the principal account of how one concrete occurrence moves through observation, competing descriptions, evidence, placement, routing and correction. An *orthemma* is the situated occurrence; its *orthemes* are repeatable, consequence-bearing state-types under a declared analysis. The actual profile is distinct from both an observation and an actor’s inferred placement. Analysis-relativity does not let the actor manufacture what is true.
+
+The [integration thesis](../../manuscript/orthemma-ortheme-systems-revised-draft.md#13-the-thesis-stated-as-an-integration-discipline) is deliberately specific: combine established classification, uncertainty, provenance and handling practices in a shared lifecycle and an auditable **episode record**. The six additions concern versioned lineage; analysis/actor/time indices; typed and expiring evidence; factorised candidates; per-burden closure; and episode reification. The manuscript does not claim that each neighbouring technique is new.
+
+Its [stopped-clock validator](../../manuscript/orthemma-ortheme-systems-revised-draft.md#85-worked-example-the-stopped-clock-validator) returns a correct answer merely because a marker occurs in a log. Removing or spoofing the marker exposes a defective method. The [result/pathway matrix](../../manuscript/orthemma-ortheme-systems-revised-draft.md#84-the-result--pathway-matrix) also admits the converse: an adequate, sufficiently reliable procedure can produce a rare wrong result. Pathway adequacy is therefore non-factive; factive token truth linkage is reported separately. Undetermined required checks are neither passes nor automatic failures. The distinctions direct different repairs instead of blaming every error on the same component.
+
+The [empirical programme](../../manuscript/orthemma-ortheme-systems-revised-draft.md#13-empirical-program) separates machinery benefit, episode-record benefit and vocabulary benefit. Its ready-to-run packets and conformance fixtures are not completed experiments or proof of mathematical completeness. These are this manuscript’s evidence boundaries, not a denial of later separately scoped research. The [limitations](../../manuscript/orthemma-ortheme-systems-revised-draft.md#151-limitations) also deny that task-relative success supplies the legitimacy of the task or its authority. Edit the Markdown, not generated TeX or the PDF; this exposition does not silently incorporate every later tranche.
 
 ### Formal reference
 
 **Orthemic core reference.** Read the [composite PDF][render-orthemic-core-reference-draft], the [formal core][core], or the [multi-actor conflict note][multi].
 
-The [publication profile][profile] binds **both** source documents to this one rendering. They remain independently discoverable components: the core formalisation and a derived multi-actor extension. Edit the appropriate Markdown component, not generated LaTeX. The composite PDF is not a third independent manuscript, and a catalogue route that loses the multi-actor component is incomplete.
+The [publication profile][profile] binds **both** source documents to this one rendering. The core adopts a structured episode rather than identifying a run with its answer: observations, candidate families, a partial placement, claim ledger, residuals, authority and successors remain separately accessible. Its [endpoint-plus-bounded-trace contract](../../theory/orthemic-core-formalization.md#22a-endpoint-plus-bounded-trace) supplies ordered evidence/action history when the required verdicts need it. It does **not** demand maximal logging for every case; governance determines applicability and trace granularity.
+
+The [distributed composition account](../../theory/orthemic-core-formalization.md#52-distributed-episodes-graph-and-composition) explains when a graph of sub-episodes also constitutes one boundary-level episode: compatible occurrence lineage and analysis, a declared actor/governance boundary, and an explicit fusion rule. Retries add later episode tokens, not backwards edges in the token DAG. Sharing a task alone does not establish that different analyses compose.
+
+The multi-actor component’s [formal residue](../../theory/orthemic-multi-actor-conflict-note.md#3-formal-residue-assessed-against-the-existing-core) compares actor-specific targets by pulling them back to a **shared reachable-occurrence domain**. Similar goal schemata are not identical targets; differing information does not multiply the underlying occurrence. Game rules, objectives and strategies retain distinct roles, and strict zero-sum permits draws. This is a derived clarification, not a seventh addition or a deployed competitive-agent product.
+
+The core’s [status ledger](../../theory/orthemic-core-formalization.md#status-ledger) reports analytic/definitional acceptance and scoped internal conformance, not experimental utility or universal consistency/completeness. Both editing components stay visible; their composite PDF is not a third independent manuscript.
 
 ## Philosophical and theological manuscripts
 
@@ -32,19 +44,37 @@ The [publication profile][profile] binds **both** source documents to this one r
 
 **Orthability and the Ground of Intelligibility: A Transcendental Argument from Rule-Governed Resolution.** [Source][ground] · [Governed PDF][render-orthability-ground-of-intelligibility-draft].
 
-The source presents its argument and premise qualifications as a cross-framework dialectical analysis. Its philosophical claims are not validated by the engineering examples. This preview identifies the manuscript and edition relationship; the broader comparison with later foundational research remains to be completed.
+**Why read it:** it asks what makes genuine recognition, error, fittingness and correction possible, rather than treating the engineering rulebook as its own ultimate justification. It distinguishes local analysis-relative aptness (**L**), objective conditions of evaluability (**O**) and created representation/application (**R**). The [labelled argument chain](../../companion/orthability-and-the-ground-of-intelligibility.md#42-the-chain-with-each-step-labeled) passes from *true* evaluations to their objective preconditions, not from an arbitrary local convention to a reified object called Orthability.
+
+The affirmative reductio is that an intelligible construction of **all** objective evaluability would already use identity, possibility, lawful transition and success/failure conditions. It would therefore presuppose what it claims wholly to produce. The [adjudication](../../companion/orthability-and-the-ground-of-intelligibility.md#53-adjudication) makes its reach explicit: an opponent who instead accepts brute modal structure or refuses the intelligible-production model is not thereby demonstratively refuted. Reliability alone does not establish a Designer; the faculty argument separately needs irreducible teleology and causal adequacy. Intellect, Will, Power and Wisdom are not obtained by relabelling one result. The [step map][orthability-step-map] explicitly holds the common-premise Wisdom bridge.
+
+The [disclosure argument](../../companion/orthability-and-the-ground-of-intelligibility.md#8-a-ground-capable-of-disclosure) supports at most a **conditional capacity** for intentional disclosure, not that the ground has actually spoken or that a particular text is its speech. The separate Atharī manuscript supplies its own revelational premises.
+
+**Reading the historical claim correctly:** the source’s [later V11 authority qualification](../../companion/orthability-and-the-ground-of-intelligibility.md#later-v11-authority-qualification) says that this positive philosophical language is not itself the current audit verdict; it directs that verdict to Track T/B0–B16 and retains `NECESSARY_BEING_NOT_DEDUCTIVELY_ESTABLISHED`. That explicit qualification stays with this work. The [later source-bound foundational account](RESEARCH-ATLAS.md#a-positive-foundational-route) has its own premises and appraisals; this catalogue neither merges the assessments nor rewrites the older argument. Engineering conformance supplies no metaphysical proof.
 
 ### Atharī companion
 
 **Orthability, the Divine Attributes, and the Uncreated Speech of Allah: An Atharī Creed-Internal Development.** [Source][athari] · [Governed PDF][render-orthability-divine-speech-athari-draft].
 
-This is an explicitly Atharī, creed-internal development, not a conclusion attributed to every Islamic school. Preserve that stated route and the source's reasoning/revelation distinctions when reading it beside other foundational works. Do not treat a build receipt as support for its metaphysical premises.
+**Why read it:** this is the explicitly Atharī/Taymiyyan articulation of divine Knowledge, Speech, linguistic possibility and created reception. It is not merely the preceding philosophical conditional with a religious title attached. Its identification of Allah and actual divine Speech is revelational and creed-internal, rather than an engineering inference or a claim attributed to every Islamic school.
+
+Its [seven Speech bearers](../../companion/orthability-divine-attributes-and-speech-athari.md#21-seven-speech-bearers) separate human convention, creaturely acts, voice/breath, media, Allah’s act of speaking, revealed Arabic wording as His Speech, and creaturely reception. The [perfection/genus/particular distinctions](../../companion/orthability-divine-attributes-and-speech-athari.md#32-perfection-genus-and-particulars-the-precise-taymiyyan-distinctions) articulate the source’s positive position: the perfection and genus of Speech are eternal, particular speeches occur when He wills, and a particular divine Speech is not thereby a created thing. Neither unqualified “eternal” nor a language label alone fixes the intended bearer.
+
+The [recitation discussion](../../companion/orthability-divine-attributes-and-speech-athari.md#5-the-reciters-act-and-the-carried-word) distinguishes created reciting, voice, ink and page from the uncreated Word they carry within this account. “Uncreated grammar” is only the source’s defined metaphor for divinely grounded expressibility and fitting signification, not another eternal entity or a pre-existent human grammar book. The [reason/revelation accounting](../../companion/orthability-divine-attributes-and-speech-athari.md#8-reason-and-revelation-the-final-accounting) identifies which premises support each claim. Its contrasting Sunni account is comparative; the manuscript does not adjudicate that dispute on behalf of all schools.
+
+Per-claim sourcing remains at the existing [source-status owner][source-status-owner] and the manuscript’s own loci. This synopsis does not reauthenticate classical quotations, endorse every historical narration or convert a PDF build into theological evidence.
 
 ### Dynamic orthability
 
 **Dynamic orthing, noetic learning, and dynamic orthability.** [Source][dynamic] · [Governed PDF][render-dynamic-orthing-noetic-learning-orthability-draft].
 
-The source relates represented standards, learning, cognition and orthability while distinguishing primary-text verification, secondary reconstruction, cross-source synthesis, Orthemological extension and creed-internal inference. It is a separate manuscript, not merely an appendix hidden behind the older companion README. Its source-labelled and empirical boundaries remain part of the reading.
+**Why read it:** it turns the static question of evaluability towards the availability of correction trajectories: can error be discovered and representations improved **without the learner creating truth**? Its candidate concept is the analysis-relative availability of lawful, evidence-sensitive, correction-capable trajectories. Faculty/disposition, represented standard, normative type, case binding, execution, placement and objective result remain different bearers.
+
+The [eight modalities](../../companion/dynamic-orthing-noetic-learning-and-orthability.md#81-eight-modalities-that-must-not-collapse) distinguish metaphysical possibility, nomological possibility, objective reachability and controllability from this actor’s accessibility, evidence-relative discoverability, representation-class learnability and guaranteed convergence. Merely having a correction available does not give every actor a way to find it. These modalities are not the fourteen stable nodes in the separate [argument map](../../companion/dynamic-orthing-noetic-learning-and-orthability.md#9-metaphysical-argument-map) and its [structured owner][dynamic-argument-map].
+
+The map’s critical regularity-to-norm step is explicit: more examples of a learner converging do not, without the separate bridge premise, establish what the faculty *ought* to do. The OSM and DAEE examples are worked explananda at their stated levels, not proof of the metaphysical or revelational nodes. Within the manuscript’s school-labelled account, fiṭrah is a normative disposition, not a discourse-measured coordinate; its testimony/ecology discussion distinguishes corroboration from copied propagation. The [broader cognitive-vindication treatment](#recognition-and-correction) remains a distinct source route, not silently attributed to this paper.
+
+Its earlier scalar-gradient proposal is likewise not a verdict that the separately scoped [tensor/Fisher mathematics](RESULT-INDEX.md#tensor-moments) is absent. Primary-text verification, secondary reconstruction, cross-source synthesis, Orthemological extension and creed-internal inference keep their own evidence roles. No guarantee about real human learning, soul access or theological validation follows from the model.
 
 ## Mathematical manuscripts and preserved editions
 
@@ -579,3 +609,7 @@ Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publica
 [t15-reanalysis-guide]: ../../experiments/orthemology-v5-successors/groups/t15-reanalysis/README.md
 
 [t15-final-verification]: ../../experiments/orthemology-v5-successors/source-store/9e799d654bbf71e75b70e70d622b8b7e4d7e86719d738146409e80a06aff9d27/Orthemology_Fifteenth_Final_Verification_v1_20261005.json
+
+[orthability-step-map]: ../../companion/ARGUMENT-MAP-ORTHABILITY.md
+[dynamic-argument-map]: ../../companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml
+[source-status-owner]: ../../references/source-status.yaml

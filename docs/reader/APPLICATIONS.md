@@ -10,6 +10,12 @@ An application should say what its variables represent, what operation is being 
 
 The [application work catalogue](PAPER-CATALOGUE.md#application-studies-contracts-and-runtime-outlines) now accounts for the fifty files in the baseline `applications/` directory as ten work-level entries and their supporting records. That is one bounded collection, not every application scattered across the research corpus. The [DAEE crosswalk][daee], [latent-state application][latent] and [agentic-runtime guide][agentic] remain their scoped source entrances.
 
+## Choose the repair after separating the defects
+
+In the principal manuscript's [result/pathway matrix](../../manuscript/orthemma-ortheme-systems-revised-draft.md#84-the-result--pathway-matrix), a correct result and an adequate method are separate questions. The [worked stopped-clock case](PAPER-CATALOGUE.md#main-exposition) explains why rechecking the same successful output is not enough: the relevant adverse control changes the misleading cue and tests whether the method still tracks the property it was meant to assess. A deficient method needs a method repair; a rare false output from an adequate method needs correction without automatically declaring the entire procedure unsound. This is the source's diagnostic use of the distinction, not a new performance trial.
+
+The [multi-actor note](../../theory/orthemic-multi-actor-conflict-note.md#3-formal-residue-assessed-against-the-existing-core) adds a related comparison problem. Actor A's desired profiles and actor B's desired profiles need not inhabit the same space. Pull both targets back to the shared set of reachable occurrences before asking whether one occurrence can satisfy both. Two differently informed descriptions of one game position do not become two positions, and two isomorphic goals do not become the same goal. This preserves a meaningful test of cooperation or conflict instead of intersecting unlike objects. Neither example licenses a clinical assessment of a person.
+
 ## Recognition and corrective reasoning
 
 The [Sound Reason substrate][sound] gives reasoning a constructive role when basic recognition is obscured: clarify the question, identify the obstructing premise or acquired distortion, and restore access to the cognition the account treats as basic. In that account, wider non-collusive concordance can vindicate cognitive functioning; it is not only a transmission-provenance check.

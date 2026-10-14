@@ -1225,5 +1225,128 @@ class ReportReanalysisCoverageTests(unittest.TestCase):
         bound_names = {Path(v["path"]).name for v in self.cross["sources"].values()}
         self.assertFalse(bound_names.intersection(self.input_names), "External participant inputs are not public reader bodies")
 
+
+class PrimaryWorkCurationTests(unittest.TestCase):
+    """Primary works need source-chapter routes, not another publication count."""
+    @classmethod
+    def setUpClass(cls):
+        import yaml
+        spec = importlib.util.spec_from_file_location("primary_reader_check", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        prefix = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.cross = json.loads((prefix / "CROSSWALK.json").read_text())
+        cls.base = json.loads((prefix / "OWNER-MAP.json").read_text())["baseline"]["commit"]
+        cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
+        cls.text = (ROOT / cls.catalogue).read_text()
+        profile = yaml.safe_load(subprocess.check_output([
+            "git", "show", cls.base + ":docs/publication-profile.yaml"], cwd=ROOT))
+        cls.artifacts = {a["artifact_id"]: set(a["sources"]) for a in profile["artifacts"]}
+        # Exact source chapters selected by this bounded reading task. Their
+        # existence is checked against the original corpus, not rendered output.
+        cls.required = {
+            "main-exposition": {"main": {
+                "13-the-thesis-stated-as-an-integration-discipline",
+                "85-worked-example-the-stopped-clock-validator", "13-empirical-program"}},
+            "formal-reference": {"core": {"22a-endpoint-plus-bounded-trace",
+                "52-distributed-episodes-graph-and-composition"},
+                "multi": {"3-formal-residue-assessed-against-the-existing-core"}},
+            "ground-of-intelligibility": {"ground": {"42-the-chain-with-each-step-labeled",
+                "53-adjudication", "8-a-ground-capable-of-disclosure",
+                "later-v11-authority-qualification"}},
+            "athari-companion": {"athari": {"21-seven-speech-bearers",
+                "32-perfection-genus-and-particulars-the-precise-taymiyyan-distinctions",
+                "5-the-reciters-act-and-the-carried-word", "8-reason-and-revelation-the-final-accounting"}},
+            "dynamic-orthability": {"dynamic": {"81-eight-modalities-that-must-not-collapse",
+                "9-metaphysical-argument-map"}},
+        }
+        for requirements in cls.required.values():
+            for key, fragments in requirements.items():
+                path = cls.cross["sources"][key]["path"]
+                body = subprocess.check_output(["git", "show", cls.base + ":" + path], cwd=ROOT).decode()
+                if not fragments <= cls.mod.markdown_index(body)["anchors"]:
+                    raise AssertionError("Expected original source chapters are missing: " + path)
+
+    def targets(self, text, entry):
+        if not entry.startswith(self.catalogue + "#"):
+            return set()
+        page = self.mod.markdown_index(text)
+        chosen = [h for h in page["headings"] if h[0] == entry.partition("#")[2]]
+        if len(chosen) != 1:
+            return set()
+        _, level, start = chosen[0]
+        end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+        return {self.mod.resolve_reader_link(ROOT, self.catalogue, href)
+                for line, href in page["links"] if start <= line < end}
+
+    def errors(self, text, cross):
+        errors = []
+        for key, requirements in self.required.items():
+            works = [w for w in cross["works"] if w["key"] == key]
+            if len(works) != 1:
+                errors.append("primary-work:" + key)
+                continue
+            targets = self.targets(text, works[0].get("catalogue_entry", ""))
+            for source, fragments in requirements.items():
+                for fragment in fragments:
+                    if (cross["sources"][source]["path"], fragment) not in targets:
+                        errors.append("primary-chapter:" + key + ":" + fragment)
+        return errors
+
+    def test_existing_primary_works_reach_their_load_bearing_source_chapters(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+
+    def test_generic_source_or_other_valid_chapter_does_not_replace_argument(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        for key, requirements in self.required.items():
+            for source, fragments in requirements.items():
+                path = self.cross["sources"][source]["path"]
+                for fragment in fragments:
+                    href = "../../" + path + "#" + fragment
+                    with self.subTest(work=key, chapter=fragment):
+                        self.assertIn(href, self.text)
+                        changed = self.text.replace(href, "../../" + path)
+                        self.assertNotEqual(changed, self.text)
+                        self.assertIn("primary-chapter:" + key + ":" + fragment, self.errors(changed, self.cross))
+
+    def test_historical_positive_route_keeps_its_explicit_later_qualification(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        key = "ground-of-intelligibility"
+        fragment = "later-v11-authority-qualification"
+        href = "../../" + self.cross["sources"]["ground"]["path"] + "#" + fragment
+        changed = self.text.replace(href, "../../" + self.cross["sources"]["ground"]["path"] + "#42-the-chain-with-each-step-labeled")
+        self.assertNotEqual(changed, self.text)
+        self.assertIn("primary-chapter:" + key + ":" + fragment, self.errors(changed, self.cross))
+
+    def test_primary_curation_keeps_profile_owned_components_and_six_renderings(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        rendered = [w for w in self.cross["works"] if w.get("artifact_id") in self.artifacts]
+        self.assertEqual(len(rendered), 6)
+        for work in rendered:
+            self.assertEqual({self.cross["sources"][k]["path"] for k in work["source_keys"]},
+                             self.artifacts[work["artifact_id"]])
+        self.assertEqual(next(w for w in rendered if w["artifact_id"] == "notation-gallery")["role"], "supporting-reference")
+
+    def test_primary_argument_maps_are_support_not_new_papers(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        required = {
+            "ground-of-intelligibility": "companion/ARGUMENT-MAP-ORTHABILITY.md",
+            "dynamic-orthability": "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+        }
+        for key, path in required.items():
+            work = next(w for w in self.cross["works"] if w["key"] == key)
+            support = {self.cross["sources"][k]["path"] for k in work.get("supporting_source_keys", [])}
+            self.assertIn(path, support)
+            for other in self.cross["works"]:
+                self.assertNotIn(path, {self.cross["sources"][k]["path"] for k in other["source_keys"]})
+
+    def test_work_omission_cannot_be_hidden_by_leaving_pdf_links(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        for key in self.required:
+            altered = deepcopy(self.cross)
+            altered["works"] = [w for w in altered["works"] if w["key"] != key]
+            self.assertIn("primary-work:" + key, self.errors(self.text, altered))
+
+
 if __name__ == "__main__":
     unittest.main()

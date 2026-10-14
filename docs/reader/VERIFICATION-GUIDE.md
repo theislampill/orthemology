@@ -22,6 +22,14 @@ A claim that a PDF matches its source, a theorem follows from stated assumptions
 
 The [result/evidence owners][evidence] and [T20 source recovery guide][recovery] supply the scope for concrete results. Do not replace that scope with one badge for an entire page.
 
+## Checking a primary-work claim at its actual level
+
+Use the [five principal-work descriptions](PAPER-CATALOGUE.md#core-exposition-and-formal-reference) to locate the source chapter before choosing evidence. A definition in the formal reference is not automatically a theorem about every implementation. The [episode signature](../../theory/orthemic-core-formalization.md#22a-endpoint-plus-bounded-trace) determines what a record contains; the source's governance determines which trace and pathway checks apply. A correct answer does not settle every required check, and a finite adverse control is not an empirical validation of the framework.
+
+For a philosophical or theological statement, first identify its bearer, sense and inferential role. The [orthability step map](../../companion/ARGUMENT-MAP-ORTHABILITY.md) separates the affirmative reductio from additional attribute premises. The [seven Speech bearers](../../companion/orthability-divine-attributes-and-speech-athari.md#21-seven-speech-bearers) prevent transferring a predicate about the reciter's created act to the revealed Word in the manuscript's Atharī account. Existing [source-status records](../../references/source-status.yaml) concern their particular passages and roles; a reader synopsis does not turn partial source access into new authentication. Review the [later authority note](../../companion/orthability-and-the-ground-of-intelligibility.md#later-v11-authority-qualification) with the argument it qualifies.
+
+The [primary curation record](../project-closure/reader-refactor-issue-35/PRIMARY-WORK-COVERAGE.md) states what this refactor actually read. Chapter-link checks establish a navigable route, not that the reader accepted the argument or that a different source's status was inherited.
+
 ## Inspecting a selected mathematical result
 
 For the [finite-mediator bound](RESULT-INDEX.md#finite-mediator), read the statement, the complete-mediation assumption and the ordinary proof in the linked paper. A small controller program is not automatically the mediator that the theorem assumes.

@@ -10,6 +10,14 @@ Orthemology's [main exposition][main] distinguishes a concrete case, the repeata
 
 The wider research cannot be reduced to an audit checklist. The sample below includes an affirmative account of recognition and correction, ordinary tensor-moment theorems, differential geometry, quantitative coordination limits and a connection between linguistic interpretation and empirical feasibility. These have different hypotheses and source roles. Reading one does not confer acceptance on all the others.
 
+## How the principal works fit together
+
+Begin with the [main exposition](PAPER-CATALOGUE.md#main-exposition) for the concrete classification-and-correction lifecycle, then the [formal reference](PAPER-CATALOGUE.md#formal-reference) for its record and composition contracts. The positive proposal is to preserve both the answer and the way it was produced, so that the repair addresses the actual defect. It is not a demand to formalise every thought before recognising anything.
+
+The [ground-of-intelligibility companion](PAPER-CATALOGUE.md#ground-of-intelligibility) asks a different question: what must be presupposed for true evaluation and correction to be possible at all? The [dynamic companion](PAPER-CATALOGUE.md#dynamic-orthability) distinguishes available correction from an actor's ability to discover and learn it. The [Atharī companion](PAPER-CATALOGUE.md#atharī-companion) adds its expressly revelational, creed-internal account of divine Speech and created reception. These are connected research questions, not successive levels of software certification.
+
+**A substantive connection between avenues 1, 2, 3 and 8:** the explicit evaluation conditions studied by semantic fidelity make visible—but do not themselves settle—the norm-fixing and source questions. The principal arguments separate local rules, objective evaluability and creaturely representations. The step from these distinctions to a productive ground or to an attribute requires the premise named by that argument; the step from capacity for disclosure to actual Speech requires the companion's separate revelational basis. The [catalogue routes](PAPER-CATALOGUE.md#philosophical-and-theological-manuscripts) expose both the positive arguments and the qualifications, rather than treating the avenue names as the connection.
+
 ## Recognition, sound cognition and correction
 
 **Question:** How can a person recognise something correctly without first proving that every cognitive faculty is reliable, and what can reasoning contribute when recognition is obstructed?

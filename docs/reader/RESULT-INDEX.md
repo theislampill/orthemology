@@ -10,6 +10,12 @@ This is a **selected result lookup**, not a replacement scientific registry. Exi
 
 For background and editions, use the [work catalogue](PAPER-CATALOGUE.md). For the meaning of proof/review/replay labels, use the [verification guide](VERIFICATION-GUIDE.md).
 
+## Primary definitions and argument steps
+
+Not every useful contribution is a theorem entry. The [main exposition](PAPER-CATALOGUE.md#main-exposition) contributes a lifecycle and verdict discipline; the [formal reference](PAPER-CATALOGUE.md#formal-reference) specifies its structured records and composition conditions. Their [result/pathway distinction](../../manuscript/orthemma-ortheme-systems-revised-draft.md#84-the-result--pathway-matrix) makes a non-factive adequacy assessment compatible with a separately determined output verdict. It does not identify whole-episode pathway adequacy with factive, claim-relative strict soundness. Missing applicability or evidence assessments do not become passes merely because the answer is correct.
+
+For the philosophical chain, use [steps 1–11 and the disclosure qualification](../../companion/ARGUMENT-MAP-ORTHABILITY.md#the-chain-companion-42), together with the [manuscript's authority appendix](../../companion/orthability-and-the-ground-of-intelligibility.md#later-v11-authority-qualification). For correction trajectories, use the [eight modalities](../../companion/dynamic-orthing-noetic-learning-and-orthability.md#81-eight-modalities-that-must-not-collapse) and separate [ARG-node map](../../companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml). These are existing distinctions and argument identifiers, not newly minted scientific results or kernel-checked conclusions. Their substantive work descriptions have one home in the [catalogue](PAPER-CATALOGUE.md#philosophical-and-theological-manuscripts).
+
 ## Finite mediator
 
 **Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Ordinary proof, section 5][coordination].

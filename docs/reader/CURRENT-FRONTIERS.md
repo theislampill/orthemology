@@ -10,6 +10,12 @@ A research question, a missing source, a proposed application and an unfinished 
 
 For repository integration and publication standing, the existing [STATUS.md](../../STATUS.md) remains the project-level entrance. For this preview's incomplete editorial work, use the [qualification record][qualification].
 
+## Primary-work questions are not one completion status
+
+The [principal exposition](PAPER-CATALOGUE.md#main-exposition) proposes separate tests of the classification/handling machinery, the added episode record and the proposed terminology. Its [empirical programme](../../manuscript/orthemma-ortheme-systems-revised-draft.md#13-empirical-program) does not claim those trials have run. Advancing that particular question requires the corresponding observation, not a source hash, an attractive term or an inference from later work on a different problem.
+
+For the foundational companions, consult the [labelled step map](../../companion/ARGUMENT-MAP-ORTHABILITY.md) and the ground manuscript's [later authority qualification](../../companion/orthability-and-the-ground-of-intelligibility.md#later-v11-authority-qualification), not only its concluding rhetoric. The dynamic [structured argument owner](../../companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml) separately classifies the regularity-to-norm premise, modal status, Wisdom and disclosure steps. A model that learns more successfully does not alone discharge those premises. These are the named works' boundaries; they neither erase later source-bound affirmative appraisals nor adopt them into an older manuscript without a stated relation.
+
 ## Recognition and foundational application
 
 The [Sound Reason account][sound] positively relates basic recognition, proper cognitive function, tawātur as cognitive vindication and corrective reasoning. The [retained-passage report][retained] retains source-bound affirmative foundational appraisals rather than requiring an indefinitely prior proof of every cognitive act.
