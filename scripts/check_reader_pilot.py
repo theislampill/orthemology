@@ -24,7 +24,7 @@ import yaml
 ROLES = {
     "manuscript", "research-note", "component", "composite-reference",
     "preserved-edition", "source-substrate", "synthesis", "review",
-    "supporting-reference", "application-proposal",
+    "supporting-reference", "application-proposal", "research-software",
 }
 PROBES = {"recognition-correction", "tensor-geometry", "cross-avenue"}
 

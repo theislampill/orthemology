@@ -103,6 +103,14 @@ The [collective-observation paper](PAPER-CATALOGUE.md#what-final-answers-can-ide
 
 The positive contribution is an observation contract and statistical decision services, not just a warning about underdetermination. Known separation supports finite error bounds; without it, a one-sided sequential detector has a different lawful stopping promise. The [worked applications](APPLICATIONS.md#designing-a-collective-observation-without-claiming-attribution) explain the role of the extra observation and the no-null-answer boundary. Applying the mathematics to actual groups still requires a warranted model and observation design; that bridge is not supplied by the group's success rate.
 
+## What a demonstrated success supports
+
+The [Fifteenth programme report](PAPER-CATALOGUE.md#fifteenth-programme-report) connects several avenues through a precise question: *what has this evidence established about this subject?* A measured group improvement is a genuine performance finding even when the contributing members remain unidentified. Likewise, a supported construction role can be renewed without having established preservation of a person's identity, an entire stateful organisation or independence from continuing infrastructure.
+
+The [empirical reanalysis work](PAPER-CATALOGUE.md#portable-reanalysis-and-the-paired-comparison) therefore complements, rather than supplies the participant data for, the [collective-observation mathematics](PAPER-CATALOGUE.md#what-final-answers-can-identify). This connects **avenue 6's collective diagnosis** with **avenue 12's empirical evidence**, and the report's continuation assessments connect **avenues 5 and 7**. In each case the extra attribution needs evidence addressing the extra claim; the narrower positive result is not discarded.
+
+For norm-fixing, the same report's [local-standard assessment](../../experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md#a-proposal-for-natural-standards) offers an affirmative criterion of fittingness without equating a local norm, warranted belief about it, practical authority and identification of its ultimate source. Read it as a dated, witness-specific contribution alongside the existing [recognition and foundational route](#recognition-sound-cognition-and-correction), not as a replacement for later research.
+
 ## The original twelve avenues
 
 The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.

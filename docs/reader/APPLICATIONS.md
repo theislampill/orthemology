@@ -145,6 +145,18 @@ When the marginals and positive separation are unknown, the paper's exact-real s
 
 The next design decision is therefore what service is needed: a known-gap fixed-sample test, a one-sided sequential detector, or a two-answer procedure under genuinely stronger separation assumptions. Actual causal attribution additionally needs a warranted mechanism model. Linked association alone does not select an actual participant's causal role, and a floating-point implementation needs its own conservative numerical qualification.
 
+## Using a reanalysis without turning it into causal attribution
+
+The [portable reanalysis work](PAPER-CATALOGUE.md#portable-reanalysis-and-the-paired-comparison) offers a concrete pattern: preserve the paired experimental unit and comparison direction, check input identities before parsing, retain the specified weighting and missingness treatment, compare separately written numerical cores, and expose only the declared aggregate output. Its [driver](../../experiments/orthemology-v5-successors/source-store/20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94/reanalyse.py) checks timing missingness without using it to remove response observations, and protects the input files against output overwrite, including a hard-linked destination.
+
+That procedure can reproduce the supported performance contrast without recovering the unrecorded private responses in immediate discussion. The [linked-observation design](#designing-a-collective-observation-without-claiming-attribution) is a distinct proposal for discriminating specified mechanisms; it is not a finding already latent in a second copy of the aggregate. A repeat computation is not another participant sample.
+
+## Assessing a supported continuation claim
+
+The report's [finite-construction assessments](../../experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md#finite-construction-and-renewed-function) supply a useful claim ladder: a running successor; renewed ability to perform the declared construction role; preservation or adequate reacquisition of consequential state; further continuation; and independence from a specified source or support. Evidence for one level should not be made to answer all the others. Nor should support dependence erase a narrower capacity actually evidenced.
+
+This connects to [governed learning and transport](#learning-without-silently-changing-the-analysis): preserving an executable role does not automatically transport every claim, commitment or analysis binding. The report's two external-study assessments remain at their own protocols and witnesses. This guide does not execute self-replication, endorse the agentic outlines as deployed systems or claim a same-person criterion.
+
 ## From reading a proposal to using an implementation
 
 For any application reached through this guide, identify whether the target is a manuscript, worked fixture, reference implementation, executable package, or an empirical result. Follow the target package's actual maintained entry point and its declared environment.

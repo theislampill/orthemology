@@ -122,6 +122,11 @@ class ReaderPilotTests(unittest.TestCase):
     def reject(self, errors, code):
         self.assertTrue(any(e.startswith(code + ":") for e in errors), errors)
 
+    def test_a_research_software_work_has_a_distinct_honest_role(self):
+        altered = deepcopy(self.cross)
+        altered["works"][1]["role"] = "research-software"
+        self.assertEqual(self.check(cross=altered), [])
+
     def test_valid_composite_and_distinct_related_edition(self):
         self.assertEqual(self.check(), [])
 
@@ -1083,6 +1088,142 @@ class FifteenthCompendiumCoverageTests(unittest.TestCase):
         missing = {key for key in selected if "`" + key + "`" not in index}
         self.assertEqual(missing, set(), "Names alone do not establish the fidelity of the accompanying summaries")
 
+
+class ReportReanalysisCoverageTests(unittest.TestCase):
+    """Bounded report/software coverage from original owners, not a new registry."""
+    @classmethod
+    def setUpClass(cls):
+        import re
+        spec = importlib.util.spec_from_file_location("report_reader_check", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        cls.prefix = "docs/project-closure/reader-refactor-issue-35/"
+        cls.cross = json.loads((ROOT / (cls.prefix + "CROSSWALK.json")).read_text())
+        cls.owners = json.loads((ROOT / (cls.prefix + "OWNER-MAP.json")).read_text())
+        cls.base = cls.owners["baseline"]["commit"]
+        cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
+        cls.text = (ROOT / cls.catalogue).read_text()
+        def original(path):
+            return subprocess.check_output(["git", "show", cls.base + ":" + path], cwd=ROOT).decode()
+        def linked(guide, label):
+            match = re.search(r"\[" + re.escape(label) + r"\]\(([^)]+)\)", original(guide))
+            if match is None:
+                raise AssertionError("Original owner no longer declares " + label)
+            return cls.mod.resolve_reader_link(ROOT, guide, match.group(1))[0]
+        cls.group = "experiments/orthemology-v5-successors/groups/t15-reanalysis/README.md"
+        attribution = "experiments/orthemology-v5-successors/groups/t15-attribution/README.md"
+        cls.report = linked(attribution, "Fifteenth main report")
+        cls.readme = linked(cls.group, "Original portable-package instructions")
+        checksums = linked(cls.group, "Original package checksums")
+        cls.members = {checksums}
+        cls.member_hashes = {}
+        for line in original(checksums).splitlines():
+            digest, name = line.split(None, 1)
+            path = "experiments/orthemology-v5-successors/source-store/" + digest + "/" + Path(name).name
+            body = subprocess.check_output(["git", "show", cls.base + ":" + path], cwd=ROOT)
+            if hashlib.sha256(body).hexdigest() != digest:
+                raise AssertionError("Original package-member identity mismatch")
+            cls.members.add(path)
+            cls.member_hashes[path] = digest
+        cls.integration = {
+            linked(cls.group, label) for label in (
+                "fresh aggregate", "numerical validation", "execution summary", "environment identities")
+        }
+        cls.input_path = linked(cls.group, "Exact official input identities and parsing scope")
+        cls.input_names = {v["name"] for v in json.loads(original(cls.input_path))["required_inputs"].values()}
+        cls.fragments = {
+            "finite-construction-and-renewed-function", "a-causal-totality-argument",
+            "a-proposal-for-natural-standards", "occurrence-sensitive-language-and-the-present-stopping-point",
+        }
+        if not cls.fragments <= cls.mod.markdown_index(original(cls.report))["anchors"]:
+            raise AssertionError("Expected report sections absent from the original baseline")
+
+    def work(self, cross, path):
+        keys = {k for k, v in cross["sources"].items() if v["path"] == path}
+        matches = [w for w in cross["works"] if keys.intersection(w.get("source_keys", []))]
+        return matches[0] if len(matches) == 1 else None
+
+    def endpoints(self, text, owner, anchor):
+        page = self.mod.markdown_index(text)
+        chosen = [h for h in page["headings"] if h[0] == anchor]
+        if len(chosen) != 1:
+            return set()
+        _, level, start = chosen[0]
+        end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+        return {self.mod.resolve_reader_link(ROOT, owner, href)
+                for line, href in page["links"] if start <= line < end}
+
+    def errors(self, cross, text):
+        errors = []
+        for path in (self.report, self.readme):
+            work = self.work(cross, path)
+            if work is None:
+                errors.append("missing-distinct-work:" + path)
+                continue
+            entry = work.get("catalogue_entry", "")
+            if not entry.startswith(self.catalogue + "#") or (path, "") not in self.endpoints(text, self.catalogue, entry.partition("#")[2]):
+                errors.append("missing-work-route:" + path)
+        work = self.work(cross, self.readme)
+        if work is not None:
+            keys = work.get("source_keys", []) + work.get("supporting_source_keys", [])
+            bound = {cross["sources"][k]["path"] for k in keys if k in cross["sources"]}
+            for path in sorted((self.members | self.integration | {self.group}) - bound):
+                errors.append("missing-package-component:" + path)
+            if work["role"] != "research-software":
+                errors.append("wrong-software-role")
+        return errors
+
+    def test_report_and_software_have_distinct_work_routes(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        report, software = self.work(self.cross, self.report), self.work(self.cross, self.readme)
+        self.assertNotEqual(report["key"], software["key"])
+        self.assertEqual(report["role"], "synthesis")
+        self.assertIn(self.report, self.owners["required_work_sources"])
+        self.assertIn(self.readme, self.owners["required_work_sources"])
+
+    def test_all_original_package_members_and_replay_records_are_bound(self):
+        self.assertEqual(len(self.members), 12)
+        self.assertEqual(len(self.integration), 4)
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        paths = {s["path"]: s for s in self.cross["sources"].values()}
+        for path, digest in self.member_hashes.items():
+            self.assertEqual(paths[path]["sha256"], digest)
+
+    def test_each_omitted_component_or_work_is_detected(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for path in sorted(self.members | self.integration):
+            altered = deepcopy(self.cross)
+            altered["sources"] = {k:v for k,v in altered["sources"].items() if v["path"] != path}
+            with self.subTest(omitted=path):
+                self.assertTrue(self.errors(altered, self.text))
+        for path in (self.report, self.readme):
+            altered = deepcopy(self.cross)
+            key = self.work(altered, path)["key"]
+            altered["works"] = [w for w in altered["works"] if w["key"] != key]
+            self.assertIn("missing-distinct-work:" + path, self.errors(altered, self.text))
+
+    def test_source_assessments_have_actual_section_routes(self):
+        owner = "docs/reader/RESULT-INDEX.md"
+        text = (ROOT / owner).read_text()
+        targets = self.endpoints(text, owner, "dated-report-assessments")
+        for fragment in self.fragments:
+            self.assertIn((self.report, fragment), targets)
+            href = "../../" + self.report + "#" + fragment
+            changed = text.replace(href, "../../" + self.report)
+            self.assertNotEqual(changed, text)
+            self.assertNotIn((self.report, fragment), self.endpoints(changed, owner, "dated-report-assessments"))
+        for result_id in ("D18-T15-EMPIRICAL", "D15-T15-KOONS-TOTALITY", "D15-T15-LOCAL-NATURAL-STANDARDS"):
+            self.assertIn("`" + result_id + "`", text)
+
+    def test_software_is_not_duplicated_by_each_aggregate_or_fit_file(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        work = self.work(self.cross, self.readme)
+        for other in self.cross["works"]:
+            if other["key"] != work["key"]:
+                principal = {self.cross["sources"][k]["path"] for k in other["source_keys"]}
+                self.assertFalse(principal.intersection(self.members))
+        bound_names = {Path(v["path"]).name for v in self.cross["sources"].values()}
+        self.assertFalse(bound_names.intersection(self.input_names), "External participant inputs are not public reader bodies")
 
 if __name__ == "__main__":
     unittest.main()

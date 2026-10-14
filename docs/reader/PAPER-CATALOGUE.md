@@ -323,6 +323,30 @@ Same-trial linked passive evidence, even one threshold bit, separates the stipul
 
 These are ordinary mathematical arguments about an observation design, not a fitted participant model, a new human experiment or a certified floating-point classifier. The [separate reanalysis guide][t15-reanalysis-guide] must not be mistaken for empirical identification of the paper's constructed mechanisms. The [recorded verification][t15-final-verification] does not become fresh independent review merely because the paper is now easier to find.
 
+## Programme reports and empirical research software
+
+### Fifteenth programme report
+
+**Fifteenth Orthemology research — Semantic identity collective attribution and foundational warrant.** [Read the dated report](../../experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md) · [Six-paper mathematical companion](#six-papers-in-the-fifteenth-mathematical-compendium).
+
+This report connects its mathematical results to the programme's questions without treating shared words such as *identity* or *source* as shared conclusions. It distinguishes formal semantics, numerical personal identity, actual causal warrant, empirical performance and normative assessment. Its twelve-avenue map separates inherited achievements, the Fifteenth increment and what could advance each remaining question. The report is a synthesis, not a second edition of the mathematical compendium or another proof of every theorem in it.
+
+The source assessments give finite, supported construction-role renewal positive weight while distinguishing consequential-state preservation, further renewal, infrastructure independence and numerical personal identity. Pan and RepliBench are assessed separately; the report records an unresolved disagreement between displayed RepliBench rates instead of selecting one. These are the report's assessments of the named witnesses, not new verification of the external studies by this reader layer.
+
+Its foundational discussion preserves reason-responsive correction and genuine received agency. The Koons assessment credits a prima-facie causal rationale and the conditional passage to a particular necessary bearer, while retaining the all-parts-dependence and actual-participation questions. The Foot assessment credits activity-relative local fittingness beyond typicality or preference, while retaining its reference-class and practical-scope limits. These source-specific assessments belong to this dated report; they neither erase later affirmative research nor become a blanket current verdict. [Precise assessment sections](RESULT-INDEX.md#dated-report-assessments).
+
+### Portable reanalysis and the paired comparison
+
+**Portable reanalysis software.** [Original package instructions](../../experiments/orthemology-v5-successors/source-store/55f26bac8864c6e3279debaf821d1c714abbcff6f22f5364a654823ae6a61b70/README.md) · [Aggregate computation source](../../experiments/orthemology-v5-successors/source-store/20110e73fd822e21651064578946cdf910edc493c973953b2c7d1bb74481dd94/reanalyse.py) · [Source and replay guide](../../experiments/orthemology-v5-successors/groups/t15-reanalysis/README.md) · [Recorded aggregate](../../experiments/orthemology-v5-successors/groups/t15-reanalysis/FRESH_AGGREGATE.json).
+
+This is one research-software work supporting the published-data comparison, not another mathematical paper or participant sample. It uses two separately written numerical cores—multistart BFGS and an observed-Hessian method with Fisher-scoring checks—behind a shared local-file interface. Packaging is not a third independent implementation. The original checksum list identifies twelve package components when the list itself is included; scripts, synthetic tests and aggregate references remain components of that one work.
+
+For the same **15 paired dyads**, the retained aggregate gives mean sensitivities of approximately **3.438 (private-vote-first, IND)** and **4.150 (immediate discussion, INF)**. The paired increase is **0.713**, with **t(14) = 2.704**, two-sided **p = 0.0171**, and the stated 95% interval **[0.147, 1.278]**. These are sensitivity units, not percentage points. The exact values and numerical agreement are owned by the linked source records, not recomputed participant findings in this catalogue.
+
+The two fits reconcile the original workbook estimates while retaining the negative slope and keeping timing missingness from discarding choice trials. This strengthens the procedure-relative performance comparison under its source contract. It does **not** identify individual contributions: private responses were not recorded in INF, and announcing the answer does not isolate its causal source. The adjacent [collective-observation paper](#what-final-answers-can-identify) addresses a different, model-conditional identification question rather than fitting these participants.
+
+The [original provenance](../../experiments/orthemology-v5-successors/source-store/60755eff76d1f0b1cc1fcd56aef8a4b8bf91b17fee744ed20b6c6260e0e8f33e/BINDING.json) and [separate replay record](../../experiments/orthemology-v5-successors/groups/t15-reanalysis/EXECUTION_SUMMARY.json) keep historical and later execution evidence apart. Their matching aggregate bytes do not create independent observations. Participant inputs stay external to this repository; [inspection and reproduction boundaries](VERIFICATION-GUIDE.md#reanalysis-evidence-without-importing-participant-records) explain the supported route.
+
 ## Recognition and correction
 
 **The Epistemological Architecture of Sound Reason.** [Preserved source substrate][sound].

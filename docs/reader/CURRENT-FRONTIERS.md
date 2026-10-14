@@ -89,6 +89,14 @@ The [Fifteenth observation argument](PAPER-CATALOGUE.md#what-final-answers-can-i
 
 The next applicable work concerns warranted mechanisms and linked, conditionally comparable observations; recording error and participant effects; defensible separation assumptions; and numerically qualified implementations of the exact-real service. The one-sided detector's lack of a terminating null answer is a mathematical boundary on its contract, not an accidentally unimplemented branch. The separate reanalysis and the constructed models remain distinct evidence until a justified connection is supplied.
 
+## Source assessments and stronger attributions
+
+The [Fifteenth report](PAPER-CATALOGUE.md#fifteenth-programme-report) identifies substantive questions that are narrower than “all foundations are open”: does a causal argument's warranted content establish the required dependence relation and the same bearer's participation; what fixes a proposed natural standard's reference class; and which particular state or renewed capacity survives a continuation? Its [assessment sections](RESULT-INDEX.md#dated-report-assessments) preserve the positive source arguments as well as those limits.
+
+These are dated report-specific questions. Consult the later source-owned assessments and [existing foundational frontier owner](../provenance/v5-successors/FOUNDATIONAL_FRONTIER.json) before treating any one as the final status of the programme. The reader layer must neither transplant an old open label onto a later affirmative result nor promote an older conditional finding beyond its assumptions.
+
+For the [published-data reanalysis](RESULT-INDEX.md#published-data-reanalysis), a further independent computation would still use the same observations. Experimental replication, actual-member attribution and external specialist assessment each require their own evidence. The refactor does not reopen data collection or import private trial records to fill a navigation gap.
+
 ## Source availability and editorial completion
 
 The [source recovery guide][recovery] distinguishes recovered proof bodies from held or unavailable material and from historical evidence whose original scope remains limited. Its record of binary variants without decoded-equivalence qualification must not become a claim that their texts are all duplicates.
