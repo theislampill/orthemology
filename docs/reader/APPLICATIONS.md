@@ -171,6 +171,14 @@ Historical wrappers and archive-relative commands can describe a different works
 
 Remaining application material in other research collections still needs work-level reconciliation. The fifty-file directory mapping does not establish that all repository applications have been examined, run or accepted.
 
+## Choose an inquiry without erasing its target
+
+The [revision-cost work](PAPER-CATALOGUE.md#the-related-reflexive-revision-manuscript) has a positive efficiency example: with four address bits and sixteen data bits, read the address and then its selected bit. Five adaptive queries suffice, whereas a fixed individual-bit query set must include all twenty bits. This is the source's exact probe-cost comparison, not measured elapsed time or a promise that all adaptive inquiry wins.
+
+The [composition work](PAPER-CATALOGUE.md#information-and-composition) explains why this style of reasoning needs a different model when probing changes the subject. In its three-initial-state example, each pair can be separated by some experiment; either first action can nevertheless merge opposite initial labels irreversibly. A known *current* state after erasure does not recover the *initial* answer. Resettable copies would change that example's premises. The paired result is useful when choosing a diagnostic or a software inspection: establish what the operation preserves before treating all individually informative probes as one safe strategy.
+
+For a revision of the testing method itself, the source separately asks whether the predecessor permits the change and whether retained evidence still answers the successor's question. Neither an old receipt nor a cheaper representation supplies its own authority. These are model-based design lessons, not measurements of this repository's maintenance cost.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

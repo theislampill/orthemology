@@ -111,6 +111,12 @@ Within the refactor, the [owner map][owner-map] routes the full baseline candida
 
 The full frontier page will need the original obligation, argument and supersession owners across the declared collections. Until then, the selected questions above must not masquerade as all of Orthemology's open research.
 
+## From exact inquiry models to a real revision process
+
+The [composition and priced-probe papers](PAPER-CATALOGUE.md#information-and-composition) already provide positive finite decision criteria. The remaining application work is not to describe those criteria as merely proposed, but to establish that a target system satisfies their input contracts. Exact non-destructive probes, destructive deterministic actions, stochastic observations, changing permissions and continuous state do not share one theorem automatically. A runtime cost estimate must also account for model construction and policy computation rather than presenting the source's probe sum as total implementation cost.
+
+The decisive PDF's exact relationship to its differently titled TeX remains a publication-provenance question. Reading both improves the catalogue description; it does not silently resolve that question or require a scientific-research restart.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

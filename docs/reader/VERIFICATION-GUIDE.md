@@ -148,6 +148,12 @@ python scripts/validate_internal_references.py
 
 These are selected integration checks, not a substitute for the complete [.github/workflows/validate.yml][ci] contract. Preserve the authored state, existing scientific owners and all required gates. [Decision 0014][decision14] explains the source-digest and convergence rules. A passing pilot or a populated set of headings is not the final refactor.
 
+## Checking the composition and revision lineage
+
+The [catalogue](PAPER-CATALOGUE.md#information-and-composition) supplies commit-pinned TeX line links for the exact source statements. They identify baseline text, not generated Markdown headings. The focused reader tests derive those lines from protected source markers and reject a generic file link or a different valid line in its place. This checks location; it does not certify the argument.
+
+The four-page decisive-revision PDF was read directly for its own description. That is a reading of preserved output, not a clean rebuild, exact-source attribution or new formal verification. The lineage's unverified-build qualification still governs. A PDF and related TeX can make similar statements without their build relationship having been established.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

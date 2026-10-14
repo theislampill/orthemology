@@ -144,6 +144,12 @@ Earlier consolidation, final-Sixth continuations, Seventh–Twentieth successors
 
 For a named manuscript use the [work catalogue](PAPER-CATALOGUE.md). For an exact claim use the [result index](RESULT-INDEX.md). The [verification guide](VERIFICATION-GUIDE.md) explains what each kind of evidence can and cannot establish.
 
+## What an inquiry must preserve
+
+The [composition and revision manuscripts](PAPER-CATALOGUE.md#information-and-composition) connect representation sufficiency, observation and permitted correction. A joint property can be compatible with local records without following from them. A method can sometimes repair its access, but a useful first observation is not enough when the action destroys another distinction needed for the original question.
+
+This gives a concrete bridge between restoration, provenance-resilient continuation and semantic fidelity (avenues 4, 5 and 8): preserve the target-relevant alternatives through the permitted inquiry, not merely the latest output. Applying that bridge requires a justified state/observation model, the relevant initial-state target and the actual permissions. The finite priced-probe account has a **non-destructive/resettable** contract; the composition paper's labelled-belief account treats state-changing operations. They cannot be substituted for one another without establishing the additional premises. See the [worked contrast](APPLICATIONS.md#choose-an-inquiry-without-erasing-its-target).
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

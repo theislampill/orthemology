@@ -312,6 +312,20 @@ These collections must remain separately discoverable when the full index is com
 
 The independent [candidate/owner map][owner-map] retains all baseline paths, including substantive candidates outside those obvious paper directories. The next stage must reconcile the actual works and results against that population. It must not silently treat the selected entries above as comprehensive coverage.
 
+## Information sufficiency and the price of a decision
+
+The [information/composition work](PAPER-CATALOGUE.md#information-and-composition) supplies three different source-located criteria. The [relational theorem](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex#L81) asks whether a property is possible under exact local preservation or forced by the records. The [channel proposition](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex#L202) asks whether all feasible laws with one record have the same output law. The [finite-decision theorem](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex#L289) asks whether one observation-based strategy can decide the initial label despite state-changing actions. These are not three names for a single guarantee.
+
+The [budgeted manuscript](PAPER-CATALOGUE.md#the-related-reflexive-revision-manuscript) instead prices exact non-destructive or resettable probes. Its [recurrence and theorem](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex#L47) give, for nonempty remaining possibilities `S`,
+
+```text
+V_g(S) = 0  if g is constant on S
+otherwise:
+V_g(S) = min_h (c_h + max_a V_g(S_h,a))
+```
+
+Only informative authorised probes enter the minimum; an empty minimum is infinity. The theorem is relative to the supplied finite model, fixed meanings and positive probe costs. The [evidence-reuse section](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex#L86) changes the target explicitly rather than carrying an old PASS into a new decision. These entries use the original source headings, not newly allocated scientific IDs or fresh formal-proof claims.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

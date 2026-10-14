@@ -1348,5 +1348,93 @@ class PrimaryWorkCurationTests(unittest.TestCase):
             self.assertIn("primary-work:" + key, self.errors(self.text, altered))
 
 
+
+class InformationRevisionCurationTests(unittest.TestCase):
+    """Source-located TeX statements, without inventing exact PDF provenance."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("information_revision_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        folder = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.cross = json.loads((folder / "CROSSWALK.json").read_text())
+        cls.base = json.loads((folder / "OWNER-MAP.json").read_text())["baseline"]["commit"]
+        cls.catalogue = "docs/reader/PAPER-CATALOGUE.md"
+        cls.text = (ROOT / cls.catalogue).read_text()
+        # Line ranges derive from the protected baseline, not the reader output.
+        cls.blocks = {
+            "information-composition": ("information", (
+                (r"\begin{theorem}[Relational strengthening]", r"\paragraph{The information criterion.}"),
+                (r"\begin{proposition}[Output determination on the feasible support]", None),
+                (r"\begin{theorem}[Sure finite decision]", None))),
+            "reflexive-revision": ("reflexive", (
+                (r"\section{Minimum evidence cost}", None),
+                (r"\section{Evidence reuse and reflexive revision}", None),
+                (r"\section{Behavioural parity leaves delivery undecided}", None))),
+        }
+        cls.expected = {}
+        for key, (source, blocks) in cls.blocks.items():
+            path = cls.cross["sources"][source]["path"]
+            body = subprocess.check_output(["git", "show", cls.base + ":" + path], cwd=ROOT).decode()
+            lines = body.splitlines()
+            urls = []
+            for marker, _ in blocks:
+                starts = [i + 1 for i, line in enumerate(lines) if line.startswith(marker)]
+                if len(starts) != 1:
+                    raise AssertionError("Original TeX statement marker not unique: " + marker)
+                first = starts[0]
+                urls.append("https://github.com/theislampill/orthemology/blob/" + cls.base + "/" + path + "#L" + str(first))
+            cls.expected[key] = set(urls)
+
+    def links(self, text, entry):
+        if not entry.startswith(self.catalogue + "#"):
+            return set()
+        page = self.mod.markdown_index(text)
+        chosen = [h for h in page["headings"] if h[0] == entry.partition("#")[2]]
+        if len(chosen) != 1:
+            return set()
+        _, level, start = chosen[0]
+        end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= level), page["line_count"])
+        return {href for line, href in page["links"] if start <= line < end}
+
+    def errors(self, text, cross):
+        errors = []
+        for key, urls in self.expected.items():
+            works = [w for w in cross["works"] if w["key"] == key]
+            if len(works) != 1:
+                errors.append("work:" + key)
+                continue
+            actual = self.links(text, works[0].get("catalogue_entry", ""))
+            errors.extend("statement:" + url for url in sorted(urls - actual))
+        return errors
+
+    def test_existing_manuscripts_reach_their_original_statements(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+
+    def test_generic_or_wrong_tex_line_does_not_replace_the_statement(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        for urls in self.expected.values():
+            for href in urls:
+                for replacement in (href.partition("#")[0], href.partition("#")[0] + "#L1"):
+                    with self.subTest(target=href, replacement=replacement):
+                        changed = self.text.replace(href, replacement)
+                        self.assertNotEqual(changed, self.text)
+                        self.assertIn("statement:" + href, self.errors(changed, self.cross))
+
+    def test_preserved_pdf_and_related_tex_keep_distinct_work_roles(self):
+        self.assertEqual(self.errors(self.text, self.cross), [])
+        for key in self.expected:
+            altered = deepcopy(self.cross)
+            altered["works"] = [w for w in altered["works"] if w["key"] != key]
+            self.assertIn("work:" + key, self.errors(self.text, altered))
+        works = {w["key"]: w for w in self.cross["works"]}
+        self.assertEqual(works["decisive-revision"]["source_keys"], ["decisive-pdf"])
+        self.assertEqual(works["decisive-revision"]["role"], "preserved-edition")
+        self.assertEqual(works["reflexive-revision"]["source_keys"], ["reflexive"])
+        relations = [r for r in self.cross["relations"] if r.get("from") == "reflexive" and r.get("to") == "decisive-pdf"]
+        self.assertTrue(relations)
+        self.assertTrue(all(r["kind"] == "related-source" and r["basis"] == "lineage" for r in relations))
+
+
 if __name__ == "__main__":
     unittest.main()

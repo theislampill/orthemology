@@ -2,7 +2,9 @@
 
 **IN PROGRESS — recovered reader candidate. Not a complete refactor, independent acceptance or merge request.**
 
-This is the mutable execution overview. The [first checkpoint's complete execution record](https://github.com/theislampill/orthemology/blob/4fbc9b3f064b8a9b5f9825509afafafc2de3c0e8/docs/project-closure/reader-refactor-issue-35/EXECUTION.md), commit history and Actions failures remain available unchanged. Later detail is in [CONTINUATION.md](CONTINUATION.md) and [PILOT-QUALIFICATION.md](PILOT-QUALIFICATION.md); their new observations do not retroactively enlarge earlier checks.
+**Current counted progress:** see [PROGRESS.md](PROGRESS.md). The counts and baseline below describe Recovery 03, not the latest curation checkpoint; later baselines and scope amendments remain in their committed continuation records.
+
+This is the historical execution framework. The [first checkpoint's complete execution record](https://github.com/theislampill/orthemology/blob/4fbc9b3f064b8a9b5f9825509afafafc2de3c0e8/docs/project-closure/reader-refactor-issue-35/EXECUTION.md), commit history and Actions failures remain available unchanged. Later detail is in [CONTINUATION.md](CONTINUATION.md) and [PILOT-QUALIFICATION.md](PILOT-QUALIFICATION.md); their new observations do not retroactively enlarge earlier checks.
 
 ## Authority and exact baseline
 
