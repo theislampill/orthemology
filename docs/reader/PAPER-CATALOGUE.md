@@ -949,3 +949,97 @@ A geometric acquisition schedule can therefore yield finite evaluated-report cos
 [Read the source](../../docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md). The density extension allows two-sided power-density bounds in punctured endpoint neighbourhoods, arbitrary finite measure in a compact interior, and separately treated endpoint atoms. It derives the same matching count-growth and deterministic-clock rates without conjugate posterior formulas. The retained empirical learner needs neither the prior nor its density constants.
 
 Both lower and upper endpoint controls matter; unspecified singular tails cannot be hidden outside the controlled density. Endpoint atoms have zero post-acquisition empirical cost and cannot simply be substituted into an infinite inverse-variance expression. Joint independence of the private seed from the sampled model and receipt-generating randomness is load-bearing. The theorem does not import the atom-free Beta argmax argument across atoms or authenticate an external data source.
+
+## Prior-sensitive learning, width and executable inference
+
+These works keep the same success question explicit: can one common policy, observing a complete finite receipt prefix at every positive index, achieve a finite expected lifetime count of failures of the stipulated literal parameter-dependent tolerance test? This is not automatically the same as almost-sure eventual correctness, ordinary prediction loss, a physical running-time bound, or a finite menu of known transition kernels. The [source/result owner](../provenance/v5-research-continuations/RESULT_STATUS.json) retains each original formal, ordinary and reviewed stage.
+
+### Spacing can decide whether a finite error budget exists
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/bcdb8f9926c09da4029afdbe18f549f5dbd69689ca785bc912c5927b49f21e01.md). For positive half-separated centres and weights proportional to the centres, the source's exact criterion is finiteness of the adjacent-gap sum `Σ r_i log(1/r_i)`, where `r_i = a_(i+1)/a_i`. It concerns actual counts under a constructed latent-parameter/receipt law, not an assumed sum of formal risks. One measurable policy works before the parameter is known; lower bounds include arbitrary independent seeded policies. Exact maximum-likelihood reduction, unimodality and adjacent testing bounds support the criterion in this stated power-weight family.
+
+[The original process review](../../docs/provenance/v5-research-continuations/notes/ae3468f21ba54e3f7860dfc95b49b497a1f16bcca9ba7501fa92e3132a9e45c6.md) also identifies a representative-point defect on null/infeasible ordered words: claimed pointwise Bayes optimality must be restricted to feasible words or repaired there. The integrated minimum and existence classification survive because those word masses vanish. Arbitrary weights, less separated supports, and component shapes are separate problems; the next works do not inherit this classification merely by having countable support.
+
+### Finite expected mistakes despite divergent inverse moments
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/36396f14a3c1bb3432f43107914a3c38a7a952e7d470803d719cb0d5c59f21f8.md). The explicit support `a_i = exp(-(i+1)^2)`, with weights `a_i/Z`, has a summable spacing series and therefore admits a common finite-count policy. Under that **same** latent law, both the first inverse moment and inverse-variance moment diverge, with no atom at either endpoint. This is an actual positive witness showing that the earlier sufficient inverse-moment condition is not necessary.
+
+The [recorded concrete review](../../docs/provenance/v5-research-continuations/notes/ce0c39b8d9a92e7dfebed02e558f19c6aea887fd6149b05909dcf9ea1d7a9f51.md) supplies its exact process and coherent-policy scope. The attached terminal declarations establish genuine formal component results; they are not a newly run compilation here. The support is exponential-quadratic over the reals, not the dyadic-square support of the later rational executable. Calling both computable does not identify their priors or programs.
+
+### What an arbitrary interior prior still permits
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/3361a6a8a930cc9ac26da5a1c0b2d3ff7cb4fc8ade28df38492aa12c89c8910c.md). The actual experiment samples one real parameter once, uses an independent private seed and iid innovations, and obliges reporting at every positive receipt index. A source-level empirical rule has an expected failure-count bound controlled by the prior's restricted inverse-variance moment. This extends the positive construction beyond smooth Beta densities, rather than requiring the parameter to be resampled at every stage.
+
+The source expressly does **not** infer impossibility when that sufficient moment condition fails. Endpoint mass, sparse priors and other criteria have their own theorems. [The original contract review](../../docs/provenance/v5-research-continuations/notes/5463cdd45018f6290a32e39e0daccf5be784e46bf3e91a9404140a928f3c7321.md) checks the actual conditional prefix law and preserves the difference between a measurable report family, finite expectation, and effective physical delivery.
+
+### Endpoint atoms can change the cost without changing the interface
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/263f4bcc9a50f73830f4d6826ccd70dca5527f09e1d1cf970cdee9a1c365f689.md). For the retained literal loss, an arbitrarily small atom at zero together with a divergent left inverse moment forces infinite expected total failure for every common measurable policy. A reflected statement treats one. An endpoint by itself is not fatal: pure zero, pure one and their endpoint-only mixture have the source's separate correct-report constructions after acquisition; finite interior inverse variance permits an explicit combined policy even with both endpoints present.
+
+The negative statement concerns prior-averaged expectation, not necessarily infinitely many errors on almost every run. It does not say that every endpoint-contaminated prior is impossible. [The recorded endpoint review](../../docs/provenance/v5-research-continuations/notes/8dc7c18a19c65f1ce087c4e64e4537d6961284d363903451ecd2a40fcda26497.md) identifies the actual-process formal endpoints, including the all-zero-word overlap mechanism and the positive cases.
+
+### The same report policy before and after contamination
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/2a585094e4cdb8c402854780aa9bb9fac3d8598349de448731acfb905c53150a.md). This bridge transports full observed words, their count functions and measurable seeded policies from the countable-tag construction to the real-parameter innovation experiment. It proves equality of actual expectations, not just agreement of parameter marginals. The concrete sparse prior then has a finite coherent witness, while every proper zero-atom contamination has infinite expected count for all policies on the **same** source space, loss and information interface.
+
+The end-to-end terminal theorem is attached with the [paired process review](../../docs/provenance/v5-research-continuations/notes/22c70614cb4a011790e348461f3e2fbea5e13b2eeb788dcd2124560fb0ef0f07.md). The mathematical witness need not be an extracted MAP program; complete replacement by the known endpoint is excluded from this proper-contamination claim. Transport of a law is not itself a new empirical experiment or a proof that a finite machine handles every input.
+
+### An exact benchmark for passive two-coin mistakes
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/f53131ceb1c9e4a92237a9cdf6e0813f947e098a2135daefea81c9e205c8a36d.md). The retained review provides an ordinary proof audit of the symmetric two-coin minimax value. With passive iid receipts, a fixed positive gap and a common causal policy, empirical majority with a first-observed-bit tie rule balances tagwise risks and simultaneously attains the post-acquisition optimum `1/(8δ²) − 1/2`. Charging a zero-receipt action and allowing independent randomisation changes the value to `1/(8δ²)`.
+
+Its argument extends the candidate's positive-gap range through the separately treated perfect-separation endpoint. A fixed tie preference can be Bayes-optimal without being minimax; adding two maxima would also give an invalid lower-bound argument. The exact ordinary proof and finite control receipts remain review evidence for that frozen candidate. They are not a Lean theorem, a fresh replay, a finite-memory implementation, or a guarantee for controlled acquisition.
+
+### Sparse learning can survive smooth local uncertainty
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/b3403229c91a718f3e8c61068649590ec090d208206d9922da2270f71e956658.md). Instead of one atom per centre, each component may be any probability law inside a sufficiently narrow relative interval. With the source's small-width promise, one coherent full-prefix classifier works for **all** those shapes precisely when the spacing series is finite. Uniform components therefore give an absolutely continuous finite-budget example with divergent inverse moments. Merely replacing atoms by densities does not destroy the positive result.
+
+The explicit selector clips its thresholds and floors the empirical mean at `1/n`, so an all-zero prefix still yields a defined finite decision. A naive nearest-positive-support argmin need not exist. This classification is ordinary mathematics; its narrower formal process and policy kernels are not a formal proof of every continuous-measure lifting. The wider admissible-width result and critical case are separate successors below.
+
+### The strict-width guarantee and its sharp quantifiers
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/767be5173842b1520af940db691120091d868677754e7b452a0c7467ece4665d.md). For `δ < ε` and the retained small-width bound, a shifted report works uniformly over every allowed component shape in sufficiently small tail clusters; a finite empirical head handles the others. The same spacing condition is necessary and sufficient for this distribution-free guarantee. The policy switches using the **observed selected** cluster, not the unknown true one. The upper bound deteriorates as the width margin shrinks.
+
+At critical or larger width, the negative result is **existential over component laws**, not universal: balanced incompatible endpoint pairs, or narrow absolutely continuous edge strips, can force every policy's expected count to diverge. The [final ordinary extension](../../docs/provenance/v5-research-continuations/notes/99847d69a9a9df978a7e596cc35b75b744e7661b72dd514d29bc3cf4d897cc6c.md) and [formal/ordinary scope review](../../docs/provenance/v5-research-continuations/notes/3cdf7cb6582b44a2198ce9527847416ee834aa7636999871081e1677600a9f60.md) distinguish genuine atomic actual-process formal endpoints from the ordinary positive continuous-shape theorem.
+
+### At critical width the internal shape matters
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/e2afa027d652771010f909eb34642d5512c102a34c85a0ef90ff466b9fd7e0ae.md). Uniform mass across the whole critical interval still has finite expected count exactly when the spacing sum is finite. Two overlapping accepted-report intervals permit a local left/right rule. Only thin edge regions risk the wrong choice; integrating their small component mass keeps the extra cost finite. This is a constructive positive theorem, not an extrapolation of strict width at equality.
+
+With the same centres, weights, tolerance and outer interval promise, concentrating mass into narrow edge strips instead gives the opposing all-policy lower bound. Both priors may be absolutely continuous and lack endpoint atoms. The shape promise is therefore material at the critical boundary; finite data cannot simply certify that a component is uniform. The positive theorem and its full continuous-mixture consequences retain their ordinary scope.
+
+### Stable finite horizons can conceal infinite lifetime cost
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/c079f7733904976a602adae47284062ad23141dd9c79b04652e3561e74692a50.md). For zero-atom contamination, the source derives an exact finite-horizon optimal increment from the maximum all-zero-word likelihood score. One deterministic tie-resolved MAP policy attains every finite-horizon optimum under the stated countable support contract; this is an existence result, not an exact-real implementation.
+
+For the exponential-square sparse support the long-horizon cost has a square-root-logarithmic leading law at each fixed proper contamination. Every finite-horizon optimum still approaches the original optimum as contamination vanishes, while every positive proper contamination has infinite lifetime cost. The two limits do not commute. The total cost need not increase monotonically to complete replacement: the known pure endpoint has zero positive-time cost. The exact clipping formula is special to endpoint contamination, not a general formula for interior contaminants.
+
+### Harmful perturbations need not add an endpoint atom
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/b1a029f0cd442ff623d9783c15e09260cd6063bf976290010b3fba07ec0548bf.md). A finite-budget centre prior can be perturbed by any positive proportion of an incompatible critical-pair prior, within an arbitrarily small total-variation neighbourhood, yet every common policy then has infinite expected lifetime count. A separate ordinary construction compares uniform critical components with edge-strip components, retaining absolute continuity and the same outer supports and weights.
+
+The all-policy quantifier permits redesigning the policy after the perturbed prior is specified; it is not merely failure of the old rule. At any fixed finite horizon, bounded counts still give a Lipschitz comparison. Atomic actual-process formal endpoints and ordinary continuous-prior consequences retain distinct evidence. This interior-contaminant construction includes complete replacement by its bad contaminant, unlike the pure-known-endpoint exception above.
+
+### Two successful priors may have no successful proper mixture
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/09fce51476c5dcf19b21ae90da0d7aa8251741ae0d0ef7e695925aea07c96812.md). Two rescaled interior point priors each admit a finite-expected-count policy with the **same** tolerance and report interface. Every proper mixture instead gives infinite expectation for every common policy. Exact normaliser rescaling and within-pair incompatibility, rather than a false assumption that all support points are mutually incompatible, drive the theorem. The attached actual-process declarations and [original review](../../docs/provenance/v5-research-continuations/notes/23eedf82a166d1f6ab49d6fb91b918b40c25130864204e8f48877337cb3f9e8b.md) establish the scoped formal/nonformal division.
+
+This does not contradict concavity of optimal Bayes cost, almost-sure eventual learning, or the finite-family controller theorem. Each of these two candidate priors contains infinitely many possible transition parameters. Revealing which side generated the run enables a finite-cost combined policy, but supplies a correlated observation—not an independent seed. The theorem blocks a generic black-box mixture guarantee under unchanged information, not every possible method of combination.
+
+### Almost-sure eventual correctness without a finite mean
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/fe422970716f0b5c83033f0f790a4548d55d538b798e9a47f05095d81ea6f39c.md). One common empirical report has a finite conditional expected count at every fixed interior parameter. Joint measurability and Fubini then lift the **zero probability of infinite count** to every interior-supported prior, without requiring the numerical conditional bound to be integrable. For the proper mixtures just described, that same rule makes only finitely many errors almost surely while every policy has infinite prior-averaged expectation.
+
+This is an independently derived ordinary addendum to the retained nonconvexity source, not another cohort or a restatement of the entire formal package. Its extra Lean probe checks the fixed-parameter bound; the arbitrary-prior almost-sure lifting remains ordinary. Parameter-dependent null sets are allowed. Neither a uniform deterministic deadline nor finite expected last-error time follows.
+
+### An executable rational witness with an honest resource boundary
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/6b796642b23d6280cfec717f7a762a55fe76a2fbc67b16f6c6b0fc1008599476.md). The source replaces real-log boundaries by exact integer/rational comparisons on dyadic-square centres `2^(-(i+1)^2)`. For a nonempty truthful prefix it inspects at most `ceil(log₂ n)+1` candidate indices. It computes neither an infinite normaliser nor an exact-real Bayes argmax. The ordinary argument preserves the sparse criterion with a stated larger conservative constant.
+
+The [runtime contract](../../docs/provenance/v5-research-continuations/notes/236f78b5ecc313f47085a765f26ef2f0482fdaff154c2aebb7393a8c01c59236.md) and [entry-point guide](../../docs/provenance/v5-research-continuations/notes/cab3e124b6ef2faad2c945c20d22d50e7fc2d1455367bcd4cb6dcf633908b3b9.md) distinguish an uncapped mathematical core from capped CLI/adapters. Candidate 3 also corrects a valid-input decimal-guard failure with chunked conversion, without changing a global interpreter guard. The [retained review](../../docs/provenance/v5-research-continuations/notes/251394f394fe75f9062aaa4dea33da2b3ffa3370572e14ba60e52ceb1c68a30b.md) credits those repairs while leaving physical memory, arrival-rate latency, prior authentication and interpreter/Lean extraction unproved. Critical-uniform mode cannot be substituted for strict-width arbitrary shapes. A supplied count summary represents receipts; it does not acquire or authenticate them.
+
+### Why a latent failure criterion is not an observed loss table
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/fe1b8f9c639009f4232ef03f6f18d26927ad5a06249b02dde3d0defd1a1c30e9.md). The source's actual literal indicator is zero at one interior Bernoulli parameter and one at another for the same report. Any common nonnegative next-bit score with expectation zero at a full-support parameter must be zero at both possible bits; its expectation cannot then become one. The attached `literal_no_common_next_bit_score` declaration imports the retained indicator rather than a lookalike.
+
+[The original comparison/review](../../docs/provenance/v5-research-continuations/notes/b6a6db5048293e4de7f286689ea635448ea61aec5f9a08acff0968892e10b5bb.md) relates this exact obstruction to ordinary prediction guarantees whose loss is indexed by observed outcomes. Countably many models are not the mismatch; the information/loss contract is. Fixed finite words do not remove full support. Signed, approximate or parameter-revealing scores, proper scoring rules and different feedback remain outside the obstruction. This is a source-attributed comparison, not a fresh audit or rejection of the external prediction literature.

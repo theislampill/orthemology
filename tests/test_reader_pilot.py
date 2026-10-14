@@ -1694,5 +1694,36 @@ class ContinuationControllerRoutesTests(ContinuationGeometryRoutesTests):
         self.assertEqual(len(actual_module), 1)
         self.assertTrue(actual_module <= paths)
 
+
+class ContinuationPriorRoutesTests(ContinuationGeometryRoutesTests):
+    """Read paths are derived from retained source owners, not file-extension counts."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owners = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git", "show", owners["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT))["sources"]
+        cls.expected = {}
+        for origin, member in [('323c03dcfc21b1cf6be7b0854926c52f7f2adf72049ee6e0aa076ae825e73318', 'README.md'), ('60d1cd83d5d27d1160402a1478d2ea20024101805d06a442cc757e7e798199a8', 'README.md'), ('a5ea2c5119482abdb1c0b0f59c24a573782707f3d9cae2662ef7af879f39693c', 'README.md'), ('ddbad6ca12d0392615684aca98fa45ebdeb32c0cde4c18cf052aa465e756e473', 'README.md'), ('c95f5175af02c4ac6405cd75200bf5298f7bd4f4b33e17183e61c6c9c9d227f5', 'README.md'), ('10954d525a8c5eb433805ecb86df0435ca8b2871514c0df749aaac1c61612e1e', 'REPORT.md'), ('e41706b14ab77d8c6e00a333ccb18f0d4d841bd36224b5134ec962b8ace7c2c5', 'inputs/CLUSTER_SMOOTHING_THEOREM.md'), ('e41706b14ab77d8c6e00a333ccb18f0d4d841bd36224b5134ec962b8ace7c2c5', 'inputs/WIDTH_BOUNDARY_FINAL.md'), ('e41706b14ab77d8c6e00a333ccb18f0d4d841bd36224b5134ec962b8ace7c2c5', 'inputs/CRITICAL_UNIFORM_THEOREM_FINAL.md'), ('e41706b14ab77d8c6e00a333ccb18f0d4d841bd36224b5134ec962b8ace7c2c5', 'inputs/CONTAMINATION_CROSSOVER.md'), ('e41706b14ab77d8c6e00a333ccb18f0d4d841bd36224b5134ec962b8ace7c2c5', 'inputs/NON_ENDPOINT_CONTAMINATION_FINAL.md'), ('15e2b6abb662c4df77254634da03cea567ec6e896d90c3fb9426d93a872a3feb', 'NONCONVEXITY_THEOREM.md'), ('c9f8099a9d4768f8d37c3d5a94b9828c63939635765c876f8a31bb3e57534e1c', 'ALMOST_SURE_ADDENDUM.md'), ('a64783ac9ab414e894d715a865828dce1695bb3b8842bcb10df46c799085ec8e', 'candidate/EFFECTIVE_WITNESS_THEOREM.md'), ('7871eae3c71aec59d246b81f6dccc67d1c6bedb40f6b8e8a460f1e998fff7815', 'PREDICTION_LOSS_COMPARISON.md')]:
+            paths = {v["path"] for v in rows if v["origin"] == origin and v["member"] == member and v.get("path")}
+            if len(paths) != 1:
+                raise AssertionError("Prior source is not uniquely owned: " + member)
+            cls.expected[origin[:12] + ":" + member] = paths.pop()
+
+    def test_rational_runtime_and_loss_obstruction_keep_distinct_source_components(self):
+        works = {w["key"]:w for w in self.cross["works"]}
+        for key, suffix, role in (
+            ("continuation-rational-prior", "/rational-v3/reference.py", "research-software"),
+            ("continuation-observed-loss", "/1d294f8542feba53501eedeae981a65d1aabc9f6fa185cf429775607d42ff8f0.lean", "research-note"),
+        ):
+            self.assertIn(key, works)
+            work = works[key]
+            self.assertEqual(work["role"], role)
+            paths = {self.cross["sources"][k]["path"] for k in
+                     work["source_keys"] + work.get("supporting_source_keys", [])}
+            self.assertTrue(any(path.endswith(suffix) for path in paths), paths)
+        self.assertEqual(works["continuation-two-coin-review"]["role"], "review")
+        self.assertEqual(len(works), len(self.cross["works"]))
+
 if __name__ == "__main__":
     unittest.main()
