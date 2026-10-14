@@ -185,6 +185,54 @@ def permitted_historical_status_pin(repo, row, body):
         return False
 
 
+
+# These are the existing Issue-35 implementation surfaces, not a science
+# exclusion by extension or directory name. A new original work even inside
+# docs/reader/ requires corpus admission; untracked scratch is not published.
+REFACTOR_EDIT_PATHS = {
+    "README.md", "STATUS.md", "CONTRIBUTING.md",
+    ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
+    "scripts/reader_census.py", "scripts/check_reader_pilot.py",
+    "tests/test_reader_census.py", "tests/test_reader_pilot.py",
+    "docs/current-state.yaml", "docs/provenance/RELEASE-MANIFEST.sha256",
+    "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
+    "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+} | {"docs/reader/" + name for name in (
+    "RESEARCH-ATLAS.md", "PAPER-CATALOGUE.md", "RESULT-INDEX.md",
+    "CURRENT-FRONTIERS.md", "APPLICATIONS.md", "VERIFICATION-GUIDE.md",
+)} | {"docs/project-closure/reader-refactor-issue-35/" + name for name in (
+    "EXECUTION.md", "CONTINUATION.md", "CENSUS.json", "OWNER-MAP.json",
+    "CROSSWALK.json", "PILOT.md", "PILOT-QUALIFICATION.md", "RECOVERY-04.md",
+    "APPLICATION-COVERAGE.md", "IDENTITY-COVERAGE.md", "FIFTEENTH-COVERAGE.md",
+    "REPORT-REANALYSIS-COVERAGE.md", "PRIMARY-WORK-COVERAGE.md", "PROGRESS.md",
+    "COLLECTION-COVERAGE.md",
+)}
+
+
+def check_corpus_currentness(repo, baseline):
+    """New/changed tracked sources cannot disappear behind a frozen census.
+
+    The index and worktree are compared with the approved source commit.
+    Operational reader edits stay under their existing exact owners/checks;
+    new or changed corpus material needs an explicit finite baseline/coverage
+    update. This is not a source classifier or an external-literature crawl.
+    """
+    result = subprocess.run(
+        ["git", "diff", "--no-ext-diff", "--no-textconv", "--no-renames",
+         "--name-only", "-z", baseline, "--"],
+        cwd=repo, capture_output=True, check=False,
+    )
+    if result.returncode:
+        return ["corpus-currentness: could not compare the approved corpus with the tracked candidate"]
+    try:
+        paths = result.stdout.decode("utf-8").rstrip("\0").split("\0")
+    except UnicodeError:
+        return ["corpus-currentness: a tracked change has an unrepresentable path"]
+    return ["corpus-currentness: " + path +
+            " requires source-baseline and work/support disposition review"
+            for path in sorted(set(paths) - REFACTOR_EDIT_PATHS) if path]
+
+
 def check(repo, owners, cross):
     """Return precise mechanical errors; an empty list is not semantic acceptance."""
     repo = Path(repo)
@@ -204,6 +252,7 @@ def check(repo, owners, cross):
     except (KeyError, ValueError, OSError, UnicodeError) as exc:
         fail("baseline", str(exc))
         return errors
+    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"]))
     indexed = {row["path"]: row for row in rows}
     errors.extend(check_collection_dispositions(rows, owners, cross))
     if owners["baseline"].get("tree"):

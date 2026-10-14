@@ -444,3 +444,13 @@ The original [result/evidence owner](../provenance/v5-research-continuations/RES
 **Exact scope controls:** [nudge versus endpoint](PAPER-CATALOGUE.md#nudges-coherent-directions-and-full-endpoint-repairs), [cross-context identity](PAPER-CATALOGUE.md#why-standards-must-stay-the-same-across-contexts), [nonlinear score transport](PAPER-CATALOGUE.md#faithful-score-transport-is-more-than-injective-encoding), and [the countable-success/finite-query boundary](PAPER-CATALOGUE.md#a-finite-query-restoration-obstruction-and-its-positive-sharpness).
 
 [The formalisation-scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
+
+## Critical geometry and actual-law learning results
+
+The [work sequence](PAPER-CATALOGUE.md#critical-repair-safe-certificates-and-the-cost-of-learning) separates these exact source-owned statements:
+
+- [Second-order minimax margin](PAPER-CATALOGUE.md#when-first-order-compatibility-is-not-enough), [zero-margin cubic obstruction](PAPER-CATALOGUE.md#an-exact-obstruction-hidden-by-a-zero-margin), [mixed-rank rescue](PAPER-CATALOGUE.md#joint-truth-constraints-can-rescue-an-isolated-block) and [full smooth-jet boundary](PAPER-CATALOGUE.md#even-all-baseline-derivatives-can-lose-the-exact-repair-answer).
+- [Executable rational anytime certificate](PAPER-CATALOGUE.md#an-executable-rational-certificate-under-an-actual-source-law), [always-issued empirical repair](PAPER-CATALOGUE.md#always-reporting-can-be-eventually-correct-without-all-time-safety) and [finite-issuance safety limit](PAPER-CATALOGUE.md#uniform-safety-limits-finite-endpoint-issuance).
+- [All-policy endpoint costs](PAPER-CATALOGUE.md#the-endpoint-cost-obstruction-applies-beyond-one-learner), [Beta finite-budget iff](PAPER-CATALOGUE.md#when-prior-averaged-lifetime-mistakes-are-finite), [optimal count-growth order](PAPER-CATALOGUE.md#a-prior-blind-learner-achieves-the-optimal-count-growth-order), [deterministic clock criterion](PAPER-CATALOGUE.md#changing-the-evaluation-clock-buys-a-different-budget) and [controlled-density extension](PAPER-CATALOGUE.md#which-non-beta-priors-retain-the-same-sharp-rates).
+
+The existing `T3-GEOMETRY`, `T3-SEMANTICS`, `T4-ENDPOINT` and `T4-PRIOR` families in the [continuation result owner](../provenance/v5-research-continuations/RESULT_STATUS.json) retain the corresponding collection-level evidence. A broad family status is not a proof of every linked ordinary statement; the work-specific guide, review and named formal components resolve that scope.

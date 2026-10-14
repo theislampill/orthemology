@@ -782,3 +782,97 @@ The supplied product-law and acquired-history controller chain proves that event
 [Read the source](../../docs/provenance/v5-research-continuations/notes/21f9e48328bfbf843b5f0371168f84c51768dec6260b3798fca4a461900aa006.md). The synthesis credits the new common-correction and precision results as genuine restrictions on admissible norm models, rather than mere bookkeeping. It separates norm compatibility, access and causal implementation from authority, original representation and the identity of an ultimate bearer. A fixed physical parameter can implement a repair without thereby establishing its normative authority.
 
 Its positive hosting conditional remains explicit: one persisting representational particular with one essential intellectual host entails that host's existence throughout the intended modal range. The geometry does not itself supply that first premise or identify the host with the proposed ground. The note treats endogenous functional-norm proposals as substantive rivals and asks for constitutive, bearer-identity, discriminating-intervention, abductive or authenticated-source bridges. These are this dated synthesis's philosophical assessments, not new verdicts on separately scoped later foundational work.
+
+## Critical repair, safe certificates and the cost of learning
+
+These Third/Fourth-return works refine the earlier compatibility and information results. The [continuation result owner](../provenance/v5-research-continuations/RESULT_STATUS.json) and [suite registry](../../experiments/orthemology-v5-continuations/registry.json) keep ordinary arguments, formal components and dated execution scopes separate. In particular, an author freeze saying “pending” need not describe a later scoped review; the linked evidence owners identify the relevant stage.
+
+### When first-order compatibility is not enough
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/9fea0e2238e657472dd44f65855fb07db1022f26f3f3484d83221ef40bcbb9a4.md). For a finite truth hull, an interior baseline, a finite family of C³ potentials with positive-definite Hessians on a neighbourhood of the hull, and one shared first-order projected direction, the note derives a finite linear programme for the second-order repair margin. Its optimum is attained; the actual minimax worsening satisfies `R(ε) = −τ* ε² + o(ε²)`.
+
+A positive margin constructs a common strict repair; a negative margin rules out even subquadratic-tolerance repair; zero is genuinely inconclusive. Localization of actual minimisers is proved, rather than assumed. Positive primal and negative dual certificates can be checked independently of a solver when their data have an exact rational representation. This does not turn arbitrary smooth-real input into a decidable representation. The general C³ localization/asymptotic remains ordinary mathematics; separate kernel modules cover narrower certificates and the explicit critical example.
+
+### An exact obstruction hidden by a zero margin
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/9c6025d6b5bdedaf238a6294e5801470756cdbf213c1696f91007fd0844ae5af.md). The explicit everywhere-positive quartic curvature gives second-order optimum zero at the stated complement-hull baseline, yet no common weak repair exists for every positive disturbance at most `1/100`. The ordinary argument exhibits a positive cubic excess; it is not a floating-point failure to find a feasible point.
+
+The matching positive-control family admits an exact repair at zero margin. Therefore treating every zero second-order margin as either success or failure is unsound. The separate CriticalZero scope and recorded kernel components prove the actual polynomial example and finite certificate claims, not the whole preceding C³ minimax theorem.
+
+### Joint truth constraints can rescue an isolated block
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/6b108a747a7674bd09ee0c34995cf877185913c270a15102ba7c0b3e9391b543.md). This six-coordinate Boolean construction has a rank-one dependency block beside a genuinely rank-three block, with no free singleton coordinates. Fixed score systems fail the isolated rank-one repair condition, yet the actual nonproduct truth hull admits a common strict repair at every relative-interior context and transverse direction. Corrections in the other constrained block provide the rescue.
+
+A product hull with the same affine/block, projection and Hessian data has the opposite repair answer. The actual joint truth set therefore matters. This does not refute the earlier classification whose constrained blocks all have rank at least two. The note’s ordinary freeze is followed by separately recorded MixedRepair/ProductObstruction kernel components; the later receipt must not be erased by quoting only the earlier “not kernel checked” sentence. Neither construction supplies empirical dependence or normative authority.
+
+### Even all baseline derivatives can lose the exact repair answer
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/7b8487cdf0e216631e0277a879cf8b869ea59c47f1c0fda2058341d1c191070f.md). Two globally smooth positive-curvature potentials have identical derivatives of every order at one coherent baseline. With a quadratic anchor, one admits common weak repair throughout a neighbourhood; the other admits none on the stated small positive ray. A flat perturbation makes its required positive worsening smaller than every fixed polynomial order.
+
+The information loss is in a full **jet at one point**, not a complete function or its local germ. Truth-only constants are handled explicitly by centring losses. Analytic germs have a different infinite-jet conclusion, and a supplied polynomial degree bound makes sufficiently many coefficients informative. Thus the result limits derivative-only exact classification while retaining useful approximate repair and exact function-level methods. It is an ordinary smooth construction, not a new kernel theorem or metaphysical verdict.
+
+### Rank-one repair, its family exception and its mathematical ancestry
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/2fcb5545ef8694c1ddb5f0c7af321fde0c5a4f5acd6fe79153864c876ee0d9bf.md). This substantive proof/source review identifies the two-coordinate differential comparison as a literal substitution into a classical mean-comparison theorem, with a finite-coordinate extension. It preserves the useful local-to-global endpoint-repair integration without asserting invention of a general comparison or Helly theorem.
+
+The review also explains why the higher-rank anchored-family upgrade cannot be copied to rank one: two score systems can each satisfy the anchor comparison while their mutual endpoint intervals are disjoint. It checks a nonproduct Boolean rescue, the second-order variational proof and the exact critical cubic obstruction. These are this recorded review’s findings on its named subjects. Its external source reading is not new bibliography verification by the present refactor.
+
+### An executable rational certificate under an actual source law
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/95a1f02e3b781d58a3262744be547088975f93342c9360ef39df70051f476e48.md). This research-software family connects a constructed Bernoulli selector, the contract’s weighted expected score, exact outward confidence brackets and an observed-prefix-only rational correction. For valid bounds `[l,u]`, write `m=(l+u)/2` and `d=(u−l)/2`. The source gives the unique minimax report `q*=1/2+mε−dε²` and an exact excess formula; valid-input rejection excludes every real coherent report at the requested tolerance.
+
+The actual-law theorem bounds the probability of any incorrectly **issued** report by δ. It allows abstention and does not promise finite issuance. Grouped and sequential Lean procedures are universally equal to the finite-word reference: that positive refinement is stronger than finite grid agreement. Their separate Python/host interface is not thereby universally verified. Subsequent incorrect-emission expectations retain the same abstention boundary. Source freshness, compliance and authority for an external audit service remain additional obligations.
+
+### What the audit confidence certificate actually certifies
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/8e655a5c33faf381524bc52428837661c85e7a1bb311e2183ddeb38646a09471.md). The worked protocol uses the same selector law to generate receipts and charge one complementary coordinate. Time-uniform inclusive-tail inversion supplies exact rational outer intervals; the deterministic certificate accepts only when the complete interval meets both truth-state expected-score inequalities. Its error spending is over the actual acquired prefixes, not duplicated or selectively logged records.
+
+The source proves finite eventual certification for fixed positive disturbance and an interior parameter under the stated increasing-precision conditions. Endpoints and faster-shrinking disturbances expose a different liveness boundary. Expected score improvement is not improvement on each realised selector draw. A new record identifier cannot establish independence, and a correct confidence calculation is not permission to change a completed charge or proof that an external source follows the assumed process.
+
+### Always reporting can be eventually correct without all-time safety
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/4819863f4222a789d63f531b94af7f4d2191191d1aefee4d5e0edd0a3524b93a.md). One observed-word-only empirical policy emits after every acquired-prefix opportunity. Under each fixed interior Bernoulli parameter and fixed positive disturbance, it is almost surely eventually strictly correct. Its expected lifetime literal mistake count is finite for that fixed parameter but has a lower bound diverging near either endpoint.
+
+The first report is wrong with probability one in every interior model. This does not contradict the separate abstaining certificate’s δ-safety. The later kernel cost supplement supplies an explicit nonuniform fourth-moment upper bound, and the separate endpoint-law review proves zero post-acquisition endpoint cost. Those successor scopes are attached to this work, not counted as additional discoveries. Counts are not excess magnitudes, last-error time or a parameter-uniform budget.
+
+### Improving expected loss while every possible report fails
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/6278b6dbc01e6ee019ed78a78a60b19c3c90a200d9023c621a2a7abc1cc69c8f.md). A short ordinary corollary keeps the two probability layers distinct: the score already averages the next selector charge, while this additional expectation averages the report over its training data. With the source’s two-receipt example, every possible emitted report fails at least one truth-state inequality, even though expected excess at each fixed truth is negative.
+
+The report distribution depends on the actual parameter through the data; a source-independent lottery cannot borrow that dependence. The result therefore distinguishes average performance, literal correctness of each report, and total mistake count. It is an algebraic interpretation of the retained moments, not a new statistical experiment or an independently compiled theorem endpoint.
+
+### Uniform safety limits finite endpoint issuance
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/7a0e5858c10c9504921ba6afa3c57709db2bdac1a7aeb86b0a7213b3cae8f485.md). For one measurable causal procedure, a common source-independent private seed and fixed positive disturbance, the probability of incorrect first issuance near a degenerate endpoint is bounded below by the endpoint’s finite-issuance probability. Thus almost-sure finite issuance there cannot coexist with a uniform error bound below one over the approaching parameters.
+
+The proof uses finite observed-prefix coupling and shrinking punctured success cells, not continuity of mutually singular infinite product laws or a stopping-time assumption about the last probe. It preserves constructive interior certification, compact-interior guarantees and eventual-correctness procedures that allow early mistakes. Soundness whenever a certificate is issued is not liveness; the theorem concerns the precise source/score contract, not all forms of learning.
+
+### The endpoint cost obstruction applies beyond one learner
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/196728a62cb7bdb24160b33c0ae3627a822f8b2b031fe033e275d6d284efa7df.md). The recovered ordinary successor fixes a report after exactly n receipts, including the initial report at n=0. It strengthens the empirical-policy observation to an all-policy statement: every common always-issued policy has expected literal failures diverging as the parameter approaches either endpoint. The proof combines exact finite-prefix trade-offs with lower semicontinuity; the stronger scaled lower constants retain their endpoint-correctness assumptions.
+
+Positive pointwise and compact-interior upper bounds remain. Two minimax examples also remain distinct: the pair `{0,1/2}` has optimal worst-model cost one, whereas `{0,1}` permits randomised cost one-half under its initial-report convention. These results are ordinary source-bound successors, not recovered missing Lean evidence or a general impossibility of eventual correction.
+
+### When prior-averaged lifetime mistakes are finite
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/285a7061f8f090946e27e5ff6bd7597b7a0f0472100c7e4b3cb57ea5ac12f6a7.md). One hidden parameter is drawn from Beta(a,b), then held fixed while passive receipts are acquired. Under the one-receipt-per-evaluated-report clock, a common always-issued policy has finite prior-averaged expected lifetime literal failures **exactly when a>1 and b>1**. The inherited empirical learner supplies sufficiency; the extreme-prefix posterior argument excludes every permitted randomised policy otherwise.
+
+The same learner can make only finitely many mistakes almost surely even when that prior expectation is infinite. The mixture is over one fixed model, not a new iid fair coin at every step. Endpoint atoms, arbitrary singular priors, adaptive reporting, loss magnitude and extra uncounted samples require different claims. The attached later ordinary review qualifies the result beyond its author-stage pending label; it does not add fresh kernel checking.
+
+### A prior-blind learner achieves the optimal count-growth order
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/3b8f7d96fa99674b73cb8f822cc3291d455c52879b2f1110630be67660883317.md). For the same passive Beta model, every permitted policy has per-index failure at least a positive constant times `n^(−a)+n^(−b)`, while the retained empirical learner has a matching upper order without knowing the prior shapes. Summation gives polynomial growth when the smaller exponent is below one, logarithmic growth at one, and a finite lifetime budget above one.
+
+Order optimality does not make that learner the exact Bayes optimum. A separate compact one-dimensional posterior optimisation gives the existence of one deterministic Bayes policy optimal for all finite horizons because reports do not alter future receipts. This is not a certified numerical argmax or a general control-dependent policy theorem. The initial clock, independent seed and literal two-truth failure event remain fixed.
+
+### Changing the evaluation clock buys a different budget
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/3b7cdb283b858339136beb1e0d62cbd32adce0ee9f0562db8961a9f819f52000.md). When report j is evaluated after a fixed deterministic nondecreasing receipt count n_j, finite expected evaluated-report failures are possible exactly when the series of `n_j^(−min(a,b))` converges. Repeated indices are charged repeatedly. The same empirical learner witnesses sufficiency; the all-policy lower rate establishes necessity.
+
+A geometric acquisition schedule can therefore yield finite evaluated-report cost for every proper Beta prior. It does not erase intermediate reports that the actual application still requires evaluating, nor cover data-dependent stopping times. The resource gained is more acquisition per evaluated report, not a cost-free improvement to the original physical clock.
+
+### Which non-Beta priors retain the same sharp rates
+
+[Read the source](../../docs/provenance/v5-research-continuations/notes/7d3cbeb8bcacdb5d28cb457801ba41de9b21f91542866fe5c5f13a4a632dadd9.md). The density extension allows two-sided power-density bounds in punctured endpoint neighbourhoods, arbitrary finite measure in a compact interior, and separately treated endpoint atoms. It derives the same matching count-growth and deterministic-clock rates without conjugate posterior formulas. The retained empirical learner needs neither the prior nor its density constants.
+
+Both lower and upper endpoint controls matter; unspecified singular tails cannot be hidden outside the controlled density. Endpoint atoms have zero post-acquisition empirical cost and cannot simply be substituted into an infinite inverse-variance expression. Joint independence of the private seed from the sampled model and receipt-generating randomness is load-bearing. The theorem does not import the atom-free Beta argmax argument across atoms or authenticate an external data source.

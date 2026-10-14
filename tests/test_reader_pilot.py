@@ -130,6 +130,53 @@ class ReaderPilotTests(unittest.TestCase):
     def test_valid_composite_and_distinct_related_edition(self):
         self.assertEqual(self.check(), [])
 
+
+    def test_new_tracked_work_cannot_hide_behind_the_frozen_census(self):
+        path = self.repo / "new-lab-area" / "substantive-note.unbuilt"
+        path.parent.mkdir(parents=True)
+        path.write_text("A synthetic new research work; no PDF is required.")
+        self.git("add", "new-lab-area/substantive-note.unbuilt")
+        self.reject(self.check(), "corpus-currentness")
+
+    def test_new_committed_checkpoint_requires_disposition_even_with_old_sources_unchanged(self):
+        path = self.repo / "research" / "later-checkpoint" / "new-result.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("A fixture-only new item, not an original scientific claim.")
+        self.git("add", "research/later-checkpoint/new-result.md")
+        self.git("commit", "-qm", "fixture new checkpoint")
+        self.reject(self.check(), "corpus-currentness")
+
+    def test_unbound_baseline_source_change_is_not_invisible(self):
+        path = self.repo / "fixture-theory" / "related.tex"
+        altered = deepcopy(self.cross)
+        altered["sources"].pop("fixture-theory/related.tex")
+        altered["works"] = [w for w in altered["works"] if w["key"] != "related"]
+        altered["relations"] = []
+        owners = deepcopy(self.owners)
+        owners["edition_constraints"] = []
+        self.assertEqual(self.check(owners=owners, cross=altered), [])
+        path.write_text(path.read_text()+"\nChanged the source outside the pilot slice.")
+        self.reject(self.check(owners=owners, cross=altered), "corpus-currentness")
+
+    def test_disposable_scratch_does_not_expand_the_tracked_corpus(self):
+        path = self.repo / "untracked-research-scratch.md"
+        path.write_text("Not admitted or committed to the public corpus.")
+        self.assertEqual(self.check(), [])
+
+    def test_admitted_reader_edit_does_not_require_a_scientific_rebaseline(self):
+        path = self.repo / "docs" / "reader" / "PAPER-CATALOGUE.md"
+        path.parent.mkdir(parents=True)
+        path.write_text("# Synthetic reader surface\nNot new original research.")
+        self.git("add", "docs/reader/PAPER-CATALOGUE.md")
+        self.assertEqual(self.check(), [])
+
+    def test_unknown_file_inside_reader_directory_is_not_a_blanket_exemption(self):
+        path = self.repo / "docs" / "reader" / "unregistered-paper.tex"
+        path.parent.mkdir(parents=True)
+        path.write_text("A hypothetical unregistered source.")
+        self.git("add", "docs/reader/unregistered-paper.tex")
+        self.reject(self.check(), "corpus-currentness")
+
     def test_missing_non_pdf_work(self):
         altered = deepcopy(self.cross)
         altered["works"] = [w for w in altered["works"] if w["key"] != "note"]
@@ -1583,6 +1630,25 @@ class ContinuationGeometryRoutesTests(unittest.TestCase):
             changed = self.text.replace("../../"+path, "../../"+replacement)
             self.assertNotEqual(changed,self.text)
             self.assertIn("source:" + member,self.errors(self.cross,changed))
+
+
+class ContinuationAuditCostRoutesTests(ContinuationGeometryRoutesTests):
+    """Reuse actual-route controls for the next independently named source family."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owners = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        raw = subprocess.check_output(["git", "show", owners["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT)
+        source_rows = json.loads(raw)["sources"]
+        required = [('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/geometry-delta-audit/author-freeze/SECOND_ORDER_REPAIR_LP.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/geometry-delta-audit/author-freeze/CRITICAL_SECOND_ORDER_CONTROL.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/geometry-delta-audit/author-freeze/MIXED_RANK_COUNTEREXAMPLE.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/root-research/FULL_JET_REPAIR_BOUNDARY.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/challenge/RANK_ONE_SOURCE_AND_PROOF_REVIEW.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/root-research/README.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/challenge/AUDIT_CONFIDENCE_PROOF.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/root-research/CONTINUUM_REPAIR_AND_ERROR_COST.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/root-research/EXPECTED_SCORE_VERSUS_REPORT_CORRECTNESS.md'), ('db6ccdc793a0a1a96b736cee6c55c47145b86b8f5f91d2dbb1cf80e7036b614e', 'tranche3/root-research/FINITE_ISSUANCE_BOUNDARY.md'), ('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/continuum/freeze-fresh-continuum-v1/FRESH_CONTINUUM_PROOF.md'), ('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/beta-budget/BETA_PRIOR_BUDGET_BOUNDARY.md'), ('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/beta-rates/FINITE_HORIZON_BETA_RATES.md'), ('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/beta-rates/DETERMINISTIC_REPORT_CLOCK_COROLLARY.md'), ('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/endpoint-density-rates/ENDPOINT_DENSITY_ROBUSTNESS.md')]
+        cls.expected = {}
+        for origin, member in required:
+            paths = {v["path"] for v in source_rows
+                     if v["origin"] == origin and v["member"] == member and v["path"]}
+            if len(paths) != 1:
+                raise AssertionError("Independent source owner not unique: " + member)
+            cls.expected[member] = paths.pop()
 
 if __name__ == "__main__":
     unittest.main()
