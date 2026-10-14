@@ -4,6 +4,22 @@
   "identity_note": "Keys are local navigation labels, not new scientific IDs. A composite edition and its source components are not independent discoveries.",
   "scope_note": "Source-bound catalogue: original pilot, manuscript families, the nine current Twelfth texts, and dispositions for the fifty-file application directory. Whole-corpus C03 coverage and independent review remain incomplete. Run 08 additionally maps the Thirteenth/Fourteenth identity lineage; this is not all successor research. Run 09 adds the six source-named Fifteenth compendium papers at their exact chapter routes, with selected substantive reading and separately scoped formal/reference support. This does not exhaust the Fifteenth tranche or the repository. Run 10 adds the separate Fifteenth programme report and twelve-member portable reanalysis work with its four integration records; external inputs remain outside the body population.",
   "sources": {
+    "v5-cvr": {"path": "experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md","sha256": "d8d8e96a89ca6baf01da0c8e01ef95f19197ad6f660e20621e8980b60c278cc8","read_scope": "Owner continuation: complete mathematical note, including finite/infinite laws, cell-extinction residual, supermartingale distinction and semantic/licence transport; no new formal proof or priority review."},
+    "v5-cvc": {"path": "experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md","sha256": "74333fb0f8232c6d91c0b8e6f8f15ad6d68a515d429bd044387c647d92689ee2","read_scope": "Owner continuation: complete statement, effective-presentation/threshold derivations and finite-state argument; no new machine formalisation or external literature acquisition."},
+    "v5-cvo": {"path": "experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md","sha256": "194799b28fdf3b63d6f774c59434b3d4511d32668da074cc0c5c89f1ced14b9e","read_scope": "Owner continuation: complete fixed-K calculus, dependency-locality assumption, transport proof, positive witnesses, Girard and implementation-refinement boundaries."},
+    "v5-v4-proofs": {"path": "experiments/orthemology-v5/source/PROOFS_V4.md","sha256": "bc410cac8d3c00b2d59eebeee8c482537978c03ebb6c8dfd599c317d91bef2d9","read_scope": "Owner continuation: Q1–Q8, O1–O4, R1–R2, S1–S2 statements, ordinary arguments and operational/sampling limitations; historical evidence is not freshly replayed."},
+    "v5-v3-manuscript": {"path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md","sha256": "a74c5e7b95d5aa1aa57356a2af042a7c65d8d881a9e33ca056e61c1ad2511472","read_scope": "Owner continuation: title/version, common definitions, section 2 atomicity/observational quotient and compactness arguments, section headings T05–T24 and their role in the preserved theorem index. Selected substantive reading, not every proof."},
+    "v5-v2-edition": {"path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md","sha256": "9dfd4b843360849f1986fa7d32a7a651caee984d17dc05810e27dca84ee89834","read_scope": "Owner continuation: complete status/success-condition and concrete-computation/code-universe passages (sections 1–3); version/source relation checked against V3 introduction. Historical edition, not a full reread."},
+    "v5-native-guide": {"path": "experiments/orthemology-v5/README.md","sha256": "99fe6941d945091a2fa072ac91b7f15a9a6a20ef62431285d768d011edc537b5","read_scope": "Owner continuation: complete native replay instructions, counts and exit-code/evidence scopes. No native scientific replay run."},
+    "v5-native-runner": {"path": "experiments/orthemology-v5/verify_repository.py","sha256": "9746d7e4f77064f4f202d4df7676712a1d8c4142dec31934ecc5d64708a34cb5","read_scope": "Owner continuation: structural inspection of native adapter entry points and read/write/external-staging role; not a whole-program refinement or fresh runtime execution."},
+    "v5-formal-amendment": {"path": "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json","sha256": "4bd2aab598af83edd1b873a7bb39aafd1d7c642267804d41a92da0fcfbec2228","read_scope": "Owner continuation: complete six-postimage amendment, 145/146 target recorded outcomes, axiom scopes and historical/derived distinction; inherited receipt, not fresh kernel execution."},
+    "v5-formal-guide": {"path": "experiments/orthemology-v5/formal_project/README.md","sha256": "afa80b786d910150627bfb3616f389e55dec61e94b69959c18820f4322ae7edb","read_scope": "Owner continuation: complete formal staging, lock, mandatory audit target and public-role map. Historical missing-build language is distinguished from the later amendment."},
+    "v5-convergence-owner": {"path": "experiments/orthemology-v5/THEOREM_CATALOGUE.json","sha256": "b49588ed88a71416ef6f5a27e0210b5322fae116ce819783dc8d20a1bbb2b804","read_scope": "Owner continuation: complete original convergence-family/preserved-ID registry; its scientific values are not rewritten."},
+    "v5-original-index": {"path": "docs/provenance/v5-consolidation/THEOREM_INDEX.md","sha256": "19be1642f5391853220df3f00dbbb32e71ddf0779ce8c3905418007c21493faf","read_scope": "Owner continuation: V4 T01–T24/Q/O/R/S and V5 CV-R/C/O rows plus lineage structure inspected. A lookup owner, not fresh semantic rereading of all its other origin-scoped entries."},
+    "v5-comparison": {"path": "experiments/orthemology-v5/comparison/ADVERSARIAL_COMPARISON.md","sha256": "feb6d36b9cbc4b47c90c689dde27a64f58eb5f7ebfebf7cfe1c8a1cadcc8d9c1","read_scope": "Owner continuation: sections A–E and stated prior-work/read-depth boundaries examined; the comparison is attributed and not a new external literature survey."},
+    "v5-prior-comparison": {"path": "experiments/orthemology-v5/source/PRIOR_ART_COMPARISON.md","sha256": "10689b75b9ac4633cc1d57deaf00fcc6a47cd1b5cb1645e944518757a03c48f7","read_scope": "Owner continuation: complete earlier P1–P5 and abstract-level comparison/qualification; retained as the earlier comparison text, not upgraded by later local reading."},
+    "v5-provenance-guide": {"path": "docs/provenance/v5-consolidation/README.md","sha256": "cf8a0b2f65ce14c5efbe1ec0f385ecff576a3201e294b284421e30a99ede72f9","read_scope": "Owner continuation: complete provenance, original-packet/derivative and historical/current boundary notes."},
+    "v5-remaining": {"path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md","sha256": "3327e55bccbf4ddc2c672505bf8fc0035645db895c3de26efccdd61ae878fbc4","read_scope": "Owner continuation: complete historical kernel, formal-math, refinement and novelty obligations; not a present verdict on all later continuations."},
     "orthability-step-map": {"path": "companion/ARGUMENT-MAP-ORTHABILITY.md","sha256": "c8b151d9c49ac6a28b97232713f34d307df5e1264082bf8514e6977897936b72","read_scope": "Run 11: complete 33-line step map, classifications, extra premises, rival exits and slide guard; no fresh primary-source authentication."},
     "dynamic-argument-map": {"path": "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml","sha256": "6c2b4fb235a2fed9c9b85d1d789391cd295835148fa467b3643390aec5bfd10b","read_scope": "Run 11: general policies, non-entailments, bearer boundaries and selected ARG-03/04/07/10/11/12/13 node records. Not an exhaustive source-status or argument review."},
 
@@ -178,6 +194,13 @@
     "t15-reanalysis-environment-json": {"path": "experiments/orthemology-v5-successors/groups/t15-reanalysis/ENVIRONMENT.json","sha256": "a2afb4fae85d40cb9a302069e7965b473efca704a01833627309a154d0764439","read_scope": "Run 10: complete public integration record read. Its dated replay, aggregate or environment observations remain inherited evidence, not execution by this refactor; private participant inputs and full logs were not imported."}
   },
   "works": [
+    {"key": "v5-internal-lineage","title": "Internal polymorphism, observational boundaries, and reflective probability","role": "manuscript","source_keys": ["v5-v3-manuscript"],"reading_forms": [{"source": "v5-v3-manuscript","relationship": "criticism-driven-version-3"},{"source": "v5-v2-edition","relationship": "preserved-predecessor-version-2"}],"placement": ["avenue 8","avenue 9","avenue 10"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#internal-polymorphism-and-observational-boundaries","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-v2-edition","v5-original-index"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-v4-continuation","title": "SAME v4 continuation: ordinary proofs and their exact scope","role": "research-note","source_keys": ["v5-v4-proofs"],"reading_forms": [{"source": "v5-v4-proofs","relationship": "authored-source"}],"placement": ["avenue 8","avenue 9","avenue 10"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-v4-proof-continuation","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-original-index","v5-formal-amendment"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-refinement","title": "Exact observation-refinement accounting","role": "research-note","source_keys": ["v5-cvr"],"reading_forms": [{"source": "v5-cvr","relationship": "authored-source"}],"placement": ["avenue 5","avenue 8","avenue 10"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#observation-refinement-and-the-infinite-residual","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-convergence-owner","v5-remaining"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-defect-computability","title": "Exact computability of the point-concentration defect","role": "research-note","source_keys": ["v5-cvc"],"reading_forms": [{"source": "v5-cvc","relationship": "authored-source"}],"placement": ["avenue 8","avenue 10"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#defect-computability-and-its-finite-state-exception","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-convergence-owner","v5-comparison"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-operational-transport","title": "A small revision-sensitive operational calculus","role": "research-note","source_keys": ["v5-cvo"],"reading_forms": [{"source": "v5-cvo","relationship": "authored-source"}],"placement": ["avenue 3","avenue 5","avenue 8","avenue 9"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#revision-sensitive-licences-and-semantic-transport","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-convergence-owner","v5-formal-amendment"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-native-package","title": "Repository-native v5 replay and reference package","role": "research-software","source_keys": ["v5-native-guide","v5-native-runner"],"reading_forms": [{"source": "v5-native-guide","relationship": "authored-source"},{"source": "v5-native-runner","relationship": "authored-source"}],"placement": ["avenue 8","avenue 9","avenue 10"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-native-reference-and-formal-audit-package","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-formal-guide","v5-formal-amendment","v5-provenance-guide","v5-remaining"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
+    {"key": "v5-adversarial-comparison","title": "Adversarial comparison of the convergence families","role": "review","source_keys": ["v5-comparison"],"reading_forms": [{"source": "v5-comparison","relationship": "authored-source"}],"placement": ["avenue 8","avenue 10","avenue 12"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-bounded-adversarial-comparison","source_sections": ["See the exact reading scope and original source/result owners in COLLECTION-COVERAGE.md."],"supporting_source_keys": ["v5-prior-comparison","v5-provenance-guide"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "Substantive description has one editorial home at catalogue_entry. Original scientific status and named result identifiers stay with their source owners."},
     {"key": "main-exposition","title": "Orthemma–Ortheme Systems: An Analysis-Relative Architecture for Auditable Classification and Handling","role": "manuscript","source_keys": ["main"],"reading_forms": [{"source": "render-orthemma-ortheme-systems-draft","relationship": "governed-rendering"},{"source": "main","relationship": "authoritative-source-component"}],"placement": ["core/reference"],"review_status": "AUTHOR_PREPARED; separate candidate review pending","artifact_id": "orthemma-ortheme-systems-draft","explanation": "Substantive contribution, source chapters and evidence boundaries at docs/reader/PAPER-CATALOGUE.md#main-exposition; actual reading scope in PRIMARY-WORK-COVERAGE.md. No new scientific assessment.","catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#main-exposition"},
     {"key": "formal-reference","title": "Orthemic core reference: formal core and multi-actor note","role": "composite-reference","source_keys": ["core","multi"],"reading_forms": [{"source": "render-orthemic-core-reference-draft","relationship": "governed-rendering"},{"source": "core","relationship": "authoritative-source-component"},{"source": "multi","relationship": "authoritative-source-component"}],"placement": ["core/reference"],"review_status": "AUTHOR_PREPARED; separate candidate review pending","artifact_id": "orthemic-core-reference-draft","explanation": "Substantive contribution, source chapters and evidence boundaries at docs/reader/PAPER-CATALOGUE.md#formal-reference; actual reading scope in PRIMARY-WORK-COVERAGE.md. No new scientific assessment.","catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#formal-reference"},
     {"key": "ground-of-intelligibility","title": "Orthability and the Ground of Intelligibility: A Transcendental Argument from Rule-Governed Resolution","role": "manuscript","source_keys": ["ground"],"reading_forms": [{"source": "render-orthability-ground-of-intelligibility-draft","relationship": "governed-rendering"},{"source": "ground","relationship": "authoritative-source-component"}],"placement": ["foundations"],"review_status": "AUTHOR_PREPARED; separate candidate review pending","artifact_id": "orthability-ground-of-intelligibility-draft","explanation": "Substantive contribution, source chapters and evidence boundaries at docs/reader/PAPER-CATALOGUE.md#ground-of-intelligibility; actual reading scope in PRIMARY-WORK-COVERAGE.md. No new scientific assessment.","catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#ground-of-intelligibility","supporting_source_keys": ["orthability-step-map"]},
@@ -403,5 +426,616 @@
     {"source": "app-source-latent-state-orthing-readme-md", "work": "app-latent", "role": "collection-guide"},
     {"source": "app-source-latent-state-orthing-update-coupling-schema-json", "work": "app-latent", "role": "schema"},
     {"source": "app-source-latent-state-orthing-update-coupling-yaml", "work": "app-latent", "role": "contract"}
-  ]
+  ],
+  "collection_dispositions": {
+  "v5-consolidation": {
+    "basis_sources": [
+      "v5-native-guide",
+      "v5-convergence-owner",
+      "v5-provenance-guide",
+      "v5-formal-amendment",
+      "v5-original-index"
+    ],
+    "reading_record": "docs/project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md#original-v5-consolidation",
+    "status": "AUTHOR_DISPOSITIONED; independent reconciliation pending",
+    "scope": "All 119 pinned paths have a work/support/history role. Code and large reconciliation ledgers received structural role inspection, not an exhaustive semantic or scientific replay. Referenced external bodies do not expand this population.",
+    "items": [
+      {
+        "path": "docs/provenance/v5-consolidation/CRITICISM_INDEX.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/HISTORICAL_DISPOSITIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/ORIGINAL_PACKET_CUSTODY.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/README.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/SOURCE_MAP.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/STATUS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/THEOREM_INDEX.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/VERIFIER_PARITY.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/CANONICAL_CONCEPT_OWNERS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/CLAIM_STATUS_LOCK.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/CONCEPT_CROSSWALK.jsonl",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/CONCEPT_RECONCILIATION_OBLIGATIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/CRITICISM_LINEAGE.jsonl",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/DUPLICATION_DECISIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/INDEX_COUNTS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/NON_EQUIVALENCES.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/NOTATION_SCOPE_MAP.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/PRESERVED_BRIDGE_LEDGER.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/PROOF_EVIDENCE_MAP.jsonl",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/RECONCILED_OBLIGATIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "docs/provenance/v5-consolidation/reconciliation/THEOREM_LINEAGE.jsonl",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/CRITICISM_DELTA.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/README.md",
+        "role": "work-source",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/REMAINING_OBLIGATIONS.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/SOURCE_MANIFEST.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/THEOREM_CATALOGUE.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/comparison/ADVERSARIAL_COMPARISON.md",
+        "role": "work-source",
+        "work": "v5-adversarial-comparison"
+      },
+      {
+        "path": "experiments/orthemology-v5/comparison/SOURCES.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/experiments/convergence.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/experiments/test_build_staging.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/experiments/test_convergence.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/CrossCheck.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/LOCK_PROVENANCE.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/README.md",
+        "role": "collection-guide",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/Verification.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/build.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/lake-manifest.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/formal_project/lakefile.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md",
+        "role": "work-source",
+        "work": "v5-operational-transport"
+      },
+      {
+        "path": "experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md",
+        "role": "work-source",
+        "work": "v5-defect-computability"
+      },
+      {
+        "path": "experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md",
+        "role": "work-source",
+        "work": "v5-refinement"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/ACCEPTANCE_STATUS.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/CRITICISM_LEDGER.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/DEPENDENCIES.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/LICENSES/Apache-2.0.txt",
+        "role": "reference-material",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/MANIFEST.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/OPERATIONAL_CONTRACT.md",
+        "role": "collection-guide",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/PRIOR_ART_COMPARISON.md",
+        "role": "historical-edition",
+        "work": "v5-adversarial-comparison"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/PROOFS_V4.md",
+        "role": "work-source",
+        "work": "v5-v4-continuation"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/REMAINING_OBLIGATIONS.md",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/SOURCES.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/THEOREM_CATALOGUE.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/TOOLCHAIN_LOCK.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/boundaries.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/build_gate.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/census.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/check_mutations.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/demonstrate.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/EXPORT_INDEX.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/diagonalSelf.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/falseSelector.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/falseSelfChoice.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/identity.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/identitySelf.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/reducedIdentity.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/trueSelector.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/examples/trueSelfChoice.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/extensions.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/formal_targets.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/guarded_sampler.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+        "role": "work-source",
+        "work": "v5-internal-lineage"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md",
+        "role": "historical-edition",
+        "work": "v5-internal-lineage"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean-toolchain",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/AlmostSureBoundary.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/AuditSupport.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/BoundaryResults.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/EffectsAndDependence.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/FiniteBridge.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/GeneratedExamples.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/HurkensBoundary.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/InternalPolymorphism.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/NormalisationAndNumerals.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/OperationalBoundary.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/OperationalKernel.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/lean/RelationalFragment.lean",
+        "role": "formal-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/ledgers/ACCEPTANCE_STATUS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/ledgers/CRITICISM_DISPOSITIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/ledgers/REMAINING_OBLIGATIONS.json",
+        "role": "provenance-record",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/observations.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/operational.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/productive.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/productive_observer.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/proof_export.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/reference.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_build_gate.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_extensions.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_final_boundaries.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_generated_examples.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_guarded_sampler.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_legacy_mutation_integrity.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_observation_revision.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_operational.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_productive_observer.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_proof_export.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_reference.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_reflective_sampler.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_required_audit.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_revision_transport.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_ticket_collision.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_v4_regressions.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/tests/test_v4_resources.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/v4_mutations.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/source/verify.py",
+        "role": "executable-component",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/tests/test_formal_audit_parser.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/tests/test_formal_source_amendment.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/tests/test_repository_integration.py",
+        "role": "test-fixture",
+        "work": "v5-native-package"
+      },
+      {
+        "path": "experiments/orthemology-v5/verify_repository.py",
+        "role": "work-source",
+        "work": "v5-native-package"
+      }
+    ]
+  }
+}
 }

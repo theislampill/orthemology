@@ -154,6 +154,12 @@ The [catalogue](PAPER-CATALOGUE.md#information-and-composition) supplies commit-
 
 The four-page decisive-revision PDF was read directly for its own description. That is a reading of preserved output, not a clean rebuild, exact-source attribution or new formal verification. The lineage's unverified-build qualification still governs. A PDF and related TeX can make similar statements without their build relationship having been established.
 
+## Original v5 reference versus mapped formal evidence
+
+The [native guide](../../experiments/orthemology-v5/README.md) defines static `--check`, runtime/kernel outcomes and fresh external staging. Its software and formal components have an explicit [original-to-derived amendment](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json). Inspect the exact postimage hashes and named target scopes before treating an old missing-build statement or a later successful receipt as applicable to your target.
+
+This refactor's path dispositions account for code, tests, ledgers, prior editions and mathematical notes without running the historical science again. The [coverage record](../project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md#original-v5-consolidation) states what was substantively read and what was only role-inspected. A mapped formal audit remains distinct from whole-Python refinement, primary-source authentication and independently accepted mathematics.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

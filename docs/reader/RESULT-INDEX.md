@@ -326,6 +326,18 @@ V_g(S) = min_h (c_h + max_a V_g(S_h,a))
 
 Only informative authorised probes enter the minimum; an empty minimum is infinity. The theorem is relative to the supplied finite model, fixed meanings and positive probe costs. The [evidence-reuse section](https://github.com/theislampill/orthemology/blob/0784acddd4770f1190f758f264ba52b2b110bd27/theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex#L86) changes the target explicitly rather than carrying an old PASS into a new decision. These entries use the original source headings, not newly allocated scientific IDs or fresh formal-proof claims.
 
+## Original v5 result families
+
+The [origin-scoped theorem/argument index](../provenance/v5-consolidation/THEOREM_INDEX.md) is the lookup owner for V4's T01–T24 and Q/O/R/S families, the three V5 extensions and the indexed inherited manuscript/argument lineages. Those records are not freshly registered here. For the three extensions use [their existing family owner](../../experiments/orthemology-v5/THEOREM_CATALOGUE.json) and these direct argument routes:
+
+**CV-R — refinement.** [Finite-chain identity](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md#2-finite-chain-theorem) · [infinite residual](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md#3-infinite-chain-a-necessary-residual) · [exact semantic certificate transport](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md#6-exact-certificate-transport-independent-of-software).
+
+**CV-C — computability.** [Exact threshold hierarchy](../../experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md#4-exact-threshold-hierarchy) · [finite-state decision procedure](../../experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md#5-finite-state-observers-exact-decidability-not-merely-an-upper-bound).
+
+**CV-O — operation.** [Persistent-licence transport](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#4-exact-licence-transport-theorem) · [positive execution witnesses](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#5-nonvacuity-composition-permission-changes-and-source-connection) · [exact runtime refinement gap](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#9-concrete-v4-map-and-exact-refinement-gap).
+
+The [catalogue](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-families) explains their different hypotheses and contribution. The [mapped formal receipt](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json) concerns its named declarations, not all these ordinary mathematical extensions. Later continuation collections must be consulted for later result-specific advances; an original unresolved item is not automatically the current frontier.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

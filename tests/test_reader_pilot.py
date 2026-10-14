@@ -1436,5 +1436,72 @@ class InformationRevisionCurationTests(unittest.TestCase):
         self.assertTrue(all(r["kind"] == "related-source" and r["basis"] == "lineage" for r in relations))
 
 
+
+class CollectionDispositionTests(unittest.TestCase):
+    """All paths in a completed collection need roles, not one paper per path."""
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location("collection_dispositions_under_test", MODULE)
+        self.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.mod)
+        self.directory = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        self.owners = json.loads((self.directory / "OWNER-MAP.json").read_text())
+        self.cross = json.loads((self.directory / "CROSSWALK.json").read_text())
+        self.rows = self.mod.entries_at(ROOT, self.owners["baseline"]["commit"])
+
+    def validate(self, cross):
+        checker = getattr(self.mod, "check_collection_dispositions", None)
+        self.assertTrue(callable(checker), "Whole-collection disposition contract is not implemented")
+        return checker(self.rows, self.owners, cross)
+
+    def test_original_consolidation_has_all_paths_and_distinct_work_roles(self):
+        self.assertIn("v5-consolidation", self.cross.get("collection_dispositions", {}),
+                      "The original consolidation has no substantive work/support disposition")
+        self.assertEqual(self.validate(self.cross), [])
+        group = self.cross["collection_dispositions"]["v5-consolidation"]
+        expected = {r["path"] for r in self.rows
+                    if r["path"].startswith(("experiments/orthemology-v5/", "docs/provenance/v5-consolidation/"))}
+        self.assertEqual({d["path"] for d in group["items"]}, expected)
+        self.assertLess(len({d["work"] for d in group["items"]}), len(expected))
+
+    def test_required_collection_cannot_disappear(self):
+        altered = deepcopy(self.cross)
+        altered.setdefault("collection_dispositions", {}).pop("v5-consolidation", None)
+        errors = self.validate(altered)
+        self.assertTrue(any(e.startswith("collection-missing:") for e in errors), errors)
+
+    def test_omitted_component_cannot_hide_behind_remaining_valid_links(self):
+        self.assertIn("v5-consolidation", self.cross.get("collection_dispositions", {}))
+        altered = deepcopy(self.cross)
+        before = len(altered["collection_dispositions"]["v5-consolidation"]["items"])
+        altered["collection_dispositions"]["v5-consolidation"]["items"].pop()
+        self.assertEqual(len(altered["collection_dispositions"]["v5-consolidation"]["items"]), before - 1)
+        self.assertTrue(any(e.startswith("collection-coverage:") for e in self.validate(altered)))
+
+    def test_disposition_cannot_point_to_an_absent_work(self):
+        self.assertIn("v5-consolidation", self.cross.get("collection_dispositions", {}))
+        altered = deepcopy(self.cross)
+        altered["collection_dispositions"]["v5-consolidation"]["items"][0]["work"] = "absent-fixture-work"
+        self.assertTrue(any(e.startswith("collection-work:") for e in self.validate(altered)))
+
+    def test_duplicate_component_and_unexplained_role_are_rejected(self):
+        self.assertIn("v5-consolidation", self.cross.get("collection_dispositions", {}))
+        altered = deepcopy(self.cross)
+        items = altered["collection_dispositions"]["v5-consolidation"]["items"]
+        items.append(deepcopy(items[0])); items[0]["role"] = "miscellaneous"
+        errors = self.validate(altered)
+        self.assertTrue(any(e.startswith("collection-duplicate:") for e in errors), errors)
+        self.assertTrue(any(e.startswith("collection-role:") for e in errors), errors)
+
+    def test_convergence_extensions_use_the_existing_proof_owners(self):
+        owner = json.loads((ROOT / "experiments/orthemology-v5/THEOREM_CATALOGUE.json").read_text())
+        for family in owner["convergence_families"]:
+            path = "experiments/orthemology-v5/" + family["proof"]
+            source_keys = {k for k,v in self.cross["sources"].items() if v["path"] == path}
+            works = [w for w in self.cross["works"] if source_keys.intersection(w["source_keys"])]
+            self.assertEqual(len(works), 1, family["id"] + " must reach its original proof as one work")
+            entry = works[0].get("catalogue_entry", "")
+            self.assertTrue(entry.startswith("docs/reader/PAPER-CATALOGUE.md#"))
+            self.assertIn(family["id"], (ROOT / "docs/reader/RESULT-INDEX.md").read_text())
+
 if __name__ == "__main__":
     unittest.main()

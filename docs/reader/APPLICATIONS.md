@@ -179,6 +179,12 @@ The [composition work](PAPER-CATALOGUE.md#information-and-composition) explains 
 
 For a revision of the testing method itself, the source separately asks whether the predecessor permits the change and whether retained evidence still answers the successor's question. Neither an old receipt nor a cheaper representation supplies its own authority. These are model-based design lessons, not measurements of this repository's maintenance cost.
 
+## Refinement budgets and licence renewal
+
+The source's [fair-bit example](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md#3-infinite-chain-a-necessary-residual) has zero defect at every finite observation and defect one at the complete stream. A prefix-testing service cannot claim that its finite checks establish the stronger full-stream certificate. Conversely, an almost-surely terminating observation with countably many outputs is a different, zero-defect outcome object under these assumptions.
+
+For reuse, the [operational transport theorem](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#4-exact-licence-transport-theorem) explains why disabling and re-enabling a permission cannot revive an old captured version. A new semantic transport proof may justify reissue, but is not itself the old licence. These are source-model illustrations, not measured deployments or a theorem about distributed revocation.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

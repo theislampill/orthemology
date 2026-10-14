@@ -71,6 +71,58 @@ def matches(path, selectors):
     return any(path.startswith(s) if s.endswith("/") else path == s for s in selectors)
 
 
+
+DISPOSITION_ROLES = {"work-source", "historical-edition", "formal-component",
+                     "executable-component", "test-fixture", "provenance-record",
+                     "reference-material", "collection-guide", "integration-adapter"}
+
+
+def check_collection_dispositions(rows, owners, cross):
+    """Check explicit editorial roles against the independent frozen denominator.
+
+    A disposition is not a reading receipt, scientific result, or acceptance.
+    Support paths retain their exact Git identity through baseline/path; hashes
+    and descriptions are not copied into another scientific source registry.
+    """
+    errors = []
+    groups = {g["key"]: g for g in owners.get("collections", [])}
+    declared = cross.get("collection_dispositions", {})
+    if not isinstance(declared, dict):
+        return ["collection-coverage: malformed collection dispositions"]
+    works = {w["key"] for w in cross.get("works", [])}
+    sources = cross.get("sources", {})
+    for required in owners.get("disposition_required_groups", []):
+        if required not in declared:
+            errors.append("collection-missing: " + required)
+    for name, record in declared.items():
+        if name not in groups or not isinstance(record, dict):
+            errors.append("collection-coverage: unknown or malformed group " + str(name))
+            continue
+        g = groups[name]
+        expected = {r["path"] for r in rows if matches(r["path"], g["include"])
+                    and not matches(r["path"], g.get("exclude", []))}
+        items = record.get("items", [])
+        if not isinstance(items, list) or not all(isinstance(i, dict) for i in items):
+            errors.append("collection-coverage: malformed items " + name)
+            continue
+        paths = [i.get("path") for i in items]
+        if len(paths) != len(set(paths)):
+            errors.append("collection-duplicate: " + name)
+        if set(paths) != expected:
+            errors.append("collection-coverage: " + name + " has missing or extra paths")
+        if not record.get("scope") or not record.get("reading_record"):
+            errors.append("collection-coverage: " + name + " lacks scope/reading record")
+        basis = record.get("basis_sources", [])
+        if not basis or any(k not in sources for k in basis):
+            errors.append("collection-coverage: " + name + " lacks source-owner basis")
+        for item in items:
+            if item.get("role") not in DISPOSITION_ROLES:
+                errors.append("collection-role: " + str(item.get("path")))
+            if item.get("work") not in works:
+                errors.append("collection-work: " + str(item.get("path")))
+    return errors
+
+
 def permitted_reader_ci_addition(repo, row, body):
     """Admit exactly the reviewed additive CI step, not mutable science owners.
 
@@ -153,6 +205,7 @@ def check(repo, owners, cross):
         fail("baseline", str(exc))
         return errors
     indexed = {row["path"]: row for row in rows}
+    errors.extend(check_collection_dispositions(rows, owners, cross))
     if owners["baseline"].get("tree"):
         actual_tree = subprocess.run(
             ["git", "rev-parse", owners["baseline"]["commit"] + "^{tree}"],

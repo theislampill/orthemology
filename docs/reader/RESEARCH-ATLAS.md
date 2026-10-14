@@ -150,6 +150,12 @@ The [composition and revision manuscripts](PAPER-CATALOGUE.md#information-and-co
 
 This gives a concrete bridge between restoration, provenance-resilient continuation and semantic fidelity (avenues 4, 5 and 8): preserve the target-relevant alternatives through the permitted inquiry, not merely the latest output. Applying that bridge requires a justified state/observation model, the relevant initial-state target and the actual permissions. The finite priced-probe account has a **non-destructive/resettable** contract; the composition paper's labelled-belief account treats state-changing operations. They cannot be substituted for one another without establishing the additional premises. See the [worked contrast](APPLICATIONS.md#choose-an-inquiry-without-erasing-its-target).
 
+## From observation refinement to warranted reuse
+
+Avenues **5, 8 and 10** meet in the original v5 convergence work: a representation may preserve each finite observation's guarantee yet lose an unrestricted guarantee at an infinite observation, while a relevant source revision can invalidate an issued licence even when the underlying inequality remains true. The [three mathematical extensions](PAPER-CATALOGUE.md#observation-refinement-and-the-infinite-residual) provide exact semantic debt, an effective-presentation boundary and an operational reuse criterion—not one overloaded pass flag.
+
+The constructive side matters: coherent finite debt is computable in appropriate restricted models; finite-state observers admit an exact decision procedure; unrelated revisions preserve a properly bound licence. Transferring these results to a cognitive or research system requires its actual observation laws, event repertoire, complete dependency reads and operational interpretation. No amount of version bookkeeping alone supplies those premises.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

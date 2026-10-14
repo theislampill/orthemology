@@ -117,6 +117,12 @@ The [composition and priced-probe papers](PAPER-CATALOGUE.md#information-and-com
 
 The decisive PDF's exact relationship to its differently titled TeX remains a publication-provenance question. Reading both improves the catalogue description; it does not silently resolve that question or require a scientific-research restart.
 
+## Original convergence questions and later evidence
+
+The [original remaining-obligations note](../../experiments/orthemology-v5/REMAINING_OBLIGATIONS.md) separates measure-theoretic formalisation, effective-observer classification, whole-runtime refinement and historical novelty. Its dated missing-compiler blockage is not the final word on the [later mapped-source audit](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json). Conversely, that audit does not supply the missing measure instantiation or universal parser/locking refinement.
+
+The [convergence catalogue routes](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-families) keep positive ordinary results intact. For subsequent progress, consult the distinct [v5 continuation result owner](../provenance/v5-research-continuations/RESULT_STATUS.json); no global currentness judgement is inferred from the age of a file or from the latest navigation commit.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

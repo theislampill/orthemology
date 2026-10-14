@@ -513,6 +513,51 @@ The [publication profile][profile] owns the six governed outputs and their sourc
 
 Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publication) for the relevant checks and citation route. The [collection directory](RESULT-INDEX.md#collection-owners) covers research owners outside this sample. Their omitted catalogue entries remain work to curate, not a declaration that they contain no unique scholarship.
 
+## Original v5 construction and convergence families
+
+The original consolidation is a research lineage and executable projection, not 119 papers. Its [origin-scoped index](../provenance/v5-consolidation/THEOREM_INDEX.md) supplies the earlier result IDs and hypotheses; the following works expose the arguments and code behind those records. Historical missing-compiler language must be read with the later [mapped-source amendment](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json), not silently applied to every later component.
+
+### Internal polymorphism and observational boundaries
+
+*Internal polymorphism, observational boundaries, and reflective probability*, version 3, constructs a universe of reduction-invariant sets of raw programs. A universally quantified code is itself in that universe and may instantiate its own quantifier, while its realiser remains one common program. That positive construction does not supply the full same-universe abstraction/application interface forbidden by Girard. The manuscript also states the positive-singleton atomicity criterion for unrestricted almost-sure conjunction and its observation-map and compactness qualifications. Continuous randomness hidden within a single observable class is not prohibited.
+
+[Read version 3](../../experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md#1-common-definitions-and-the-retained-construction) · [Atomicity and observation](../../experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md#2-the-sharp-probabilistic-boundary-almost-sure-universal-typing) · [Preserved version 2](../../experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/inherited_v2/MATHEMATICAL_PROOF.md). These are predecessor/version relationships in one manuscript lineage, not independent discoveries. The ordinary arguments, original formal candidates and later mapped formal receipts retain different scopes.
+
+### The v4 proof continuation
+
+The [v4 continuation](../../experiments/orthemology-v5/source/PROOFS_V4.md) extends that line with quantitative observation-refinement, finite invariant checks, revision-sensitive execution, finite logical relations, source-certificate export and a productive irrational-threshold sampler. Its positive result is useful execution in a declared language, with a known forbidden full-section interface kept separate; it is not a new foundational calculus merely because those properties are conjoined.
+
+Its [sampling argument](../../experiments/orthemology-v5/source/PROOFS_V4.md#v4-s1--productive-threshold-source-mass-and-cost) distinguishes almost-sure completion from completion on every stream, and expected random bits from CPU work. The source's later mathematical extensions are catalogued separately below. Formal component checking does not automatically formalise the measure theory or the complete Python runtime.
+
+### Observation refinement and the infinite residual
+
+**Existing family `V5::CV-R`.** [Exact observation-refinement accounting](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md) defines defect as the mass outside positive singleton atoms. For coherent measurable refinements, finite changes telescope into exact nonnegative debt. The [infinite-chain theorem](../../experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md#3-infinite-chain-a-necessary-residual) adds a residual for paths whose finite observation cells all have positive mass but whose limiting cell has zero mass. Every finite fair-bit prefix has zero defect; the complete fair stream has defect one.
+
+The full measurable event repertoire and singleton measurability are load-bearing. Zero defect is not equal information or zero entropy. Its exact budget-transport rule concerns the truth of a semantic bound; the authority of an old issued certificate is a different question. This source supplies ordinary mathematics, not a fresh measure-theoretic kernel proof.
+
+### Defect computability and its finite-state exception
+
+**Existing family `V5::CV-C`.** [Exact computability of the point-concentration defect](../../experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md) first fixes a total primitive-recursive synchronous observer presentation, then gives the rational-threshold hierarchy. Zero defect is `Π⁰₃`-complete and positive defect `Σ⁰₃`-complete in that presentation; the earlier non-halting subfamily is not the whole classification. Invalid syntax has a total declared meaning, so the result is not hiding a productivity promise.
+
+The constructive [finite-state exception](../../experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md#5-finite-state-observers-exact-decidability-not-merely-an-upper-bound) computes atomic mass as the probability of eventually entering an input-insensitive state relation. Finite Markov reachability and rational linear algebra then decide the thresholds. This is an ordinary proof with explicit prior-work/priority limits, not an assertion that all productive observers can be certified by a finite checker.
+
+### Revision-sensitive licences and semantic transport
+
+**Existing family `V5::CV-O`.** [A small revision-sensitive operational calculus](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md) supplies a nonempty typed plan system with useful primitives, composition and checked source application. Under complete captured dependencies, persistent issuance records and strictly increasing versions, its [licence-transport theorem](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#4-exact-licence-transport-theorem) says an old licence survives exactly when no captured dependency is touched. Restoring a permission's value does not restore its earlier version.
+
+A mathematically surviving probability bound can therefore need a newly issued operational licence. The source includes absent-rule and vocabulary dependencies, resource refusal, locking and issuer assumptions; it does not prove distributed revocation or the full Python/parser refinement. Its generic-wrapper comparison explains why the bare conjunction with internal polymorphism is an integration rather than established foundational novelty.
+
+### The native reference and formal audit package
+
+The [repository-native package](../../experiments/orthemology-v5/README.md) is one research-software work: inherited reference code, finite source and operational checks, a staged formal project, tests and a new integration adapter. Its [formal source amendment](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json) separately records 145 inherited targets and a 146-target shadow audit including the upstream cross-check. Those recorded mapped-source outcomes must neither be erased by an older README's missing-build account nor expanded into whole-runtime refinement or formal proofs of CV-R/C/CV-O.
+
+Use the [native entry point](../../experiments/orthemology-v5/verify_repository.py) and [formal staging instructions](../../experiments/orthemology-v5/formal_project/README.md) under their own toolchain and exit-code contract. Static `--check`, runtime-only success, actual kernel checks and a source-world application remain different observations. Original off-repository archives are not invented public downloads.
+
+### The bounded adversarial comparison
+
+[The convergence comparison](../../experiments/orthemology-v5/comparison/ADVERSARIAL_COMPARISON.md) and its [earlier v4 comparison](../../experiments/orthemology-v5/source/PRIOR_ART_COMPARISON.md) identify what is elementary or inherited, what the exact effective presentation adds, and what historical/specialist checking remains. This is a review/comparison work, not another proof of every result it discusses or a new literature survey performed by the reader refactor. Its references do not recursively expand this repository's corpus.
+
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [core]: ../../theory/orthemic-core-formalization.md
 [multi]: ../../theory/orthemic-multi-actor-conflict-note.md
