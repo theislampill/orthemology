@@ -1725,5 +1725,53 @@ class ContinuationPriorRoutesTests(ContinuationGeometryRoutesTests):
         self.assertEqual(works["continuation-two-coin-review"]["role"], "review")
         self.assertEqual(len(works), len(self.cross["works"]))
 
+
+
+class ContinuationFoundationalRoutesTests(ContinuationGeometryRoutesTests):
+    """Positive source arguments and exact selection contracts keep their owners."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owner = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git", "show", owner["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT))["sources"]
+        required = (
+            ("83f1a917b40a", "POSITIVE_GROUND_AND_KNOWLEDGE.md"),
+            ("83f1a917b40a", "COMPLETE_SELF_KNOWLEDGE_AND_EFFECTS.md"),
+            ("83f1a917b40a", "EXACT_MODAL_RESULT.md"),
+            ("eff5fada59f4", "UPSTREAM_SOURCE_ARGUMENT.md"),
+            ("0a74eb642cc6", "ARITHMETIC_CERTIFICATE.md"),
+            ("549ba6a7f094", "projections/zero-error-formal/ACTION_SUFFICIENT_DISCLOSURE.md"),
+        )
+        cls.expected = {}
+        for prefix, member in required:
+            paths = {r["path"] for r in rows if r["origin"].startswith(prefix)
+                     and r["member"] == member and r.get("path")}
+            if len(paths) != 1:
+                raise AssertionError("Unresolved original source: " + member)
+            cls.expected[prefix + ":" + member] = paths.pop()
+
+    def test_complete_act_argument_retains_noninferential_clarification(self):
+        works = {w["key"]: w for w in self.cross["works"]}
+        self.assertIn("continuation-creative-knowledge", works)
+        w = works["continuation-creative-knowledge"]
+        sources = self.cross["sources"]
+        support = [sources[k]["path"] for k in w.get("supporting_source_keys", [])]
+        self.assertTrue(any(p.endswith("bc92ae5f37ea73f1196696314646006b5fdfb693c0293c1c92c6d16ec8845308.md") for p in support), support)
+        self.assertTrue(any(p.endswith("c6378e90f5347069abaaa3e7d165a6029d6643cd1b551bdd31678906adea9cb1.lean") for p in support))
+        self.assertEqual(len(works), len(self.cross["works"]))
+
+    def test_arithmetic_evaluator_keeps_its_implementation_and_type_correction(self):
+        works = {w["key"]: w for w in self.cross["works"]}
+        self.assertIn("continuation-exact-confidence-budget", works)
+        w = works["continuation-exact-confidence-budget"]
+        self.assertEqual(w["role"], "research-software")
+        paths = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+        self.assertIn("experiments/orthemology-v5-continuations/reference/integer-v3/src/exact_budget.py", paths)
+        self.assertTrue(any(p.endswith("df3c0d9f67602b25449bde809132bf3d18e93cefdcded8336d9e0727e1edfee4.md") for p in paths))
+        # It is one software work, not a paper for each input, test or receipt.
+        own = [x for x in self.cross["works"] if any(self.cross["sources"][k]["path"].endswith("/integer-v3/src/exact_budget.py") for k in x["source_keys"])]
+        self.assertEqual(len(own), 1)
+
 if __name__ == "__main__":
     unittest.main()

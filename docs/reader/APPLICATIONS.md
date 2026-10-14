@@ -191,6 +191,12 @@ The [four-bit runtime wrapper](PAPER-CATALOGUE.md#from-supplied-machines-and-his
 
 For resource planning, use the cost actually proved. An [exponential logical-error bound](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets) says neither that the last error occurs early nor that physical waiting, memory or CPU are bounded. Likewise [correct receipt-law projection](PAPER-CATALOGUE.md#exact-rational-receipts-do-not-preserve-every-physical-stream-property) can discard nonatomic randomness in the physical output. These examples let an agent select a usable theorem contract rather than turn every successful implementation layer into a blanket guarantee.
 
+## Diagnosis, integrity information and safe selection
+
+Correctly learning a governing rule does not automatically identify a safe actuator. The [action-sufficient disclosure construction](PAPER-CATALOGUE.md#truthful-disclosure-that-selects-a-safe-action) separates these tasks and supplies a minimal zero-error message menu under a static fault model. The certificate must retain its referent and action binding: a correctly transmitted number can still select the wrong root after an unverified permutation. An authentic but false message is not an integrity certificate.
+
+The [integer confidence-budget evaluator](PAPER-CATALOGUE.md#exact-integer-confidence-budgets) is another positive bridge to use: it gives exact conservative arithmetic thresholds once the controller-law and parameter assumptions have been justified. It is not a replacement for checking those assumptions or a forecast of typical physical runtime.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

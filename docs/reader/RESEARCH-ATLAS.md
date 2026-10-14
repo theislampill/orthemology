@@ -162,6 +162,12 @@ The [support-changing construction](PAPER-CATALOGUE.md#support-changes-and-a-det
 
 The [source compiler](PAPER-CATALOGUE.md#from-supplied-machines-and-histories-to-literal-p02-execution) and [Boolean full-phase bridge](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge) then connect mathematical behaviour to actual syntax and decoded runtime history. This is a substantive connection among restoration, semantic fidelity and effective construction (avenues 4, 8 and 10). Its local certificates and environment matching matter: existence, source compilation, correct observations and physical-resource adequacy are different accomplishments. The [classical comparison](PAPER-CATALOGUE.md#classical-finite-memory-tools-and-the-hidden-badness-distinction) retains their established ancestry.
 
+## Productive sourcehood and truthful action selection
+
+The [Sixth sourcehood/Knowledge family](PAPER-CATALOGUE.md#original-productive-sourcehood-knowledge-and-action-selection) begins with an actual corrective exercise and asks what supplies its received productive and cognitive actuality. Original productive possession, one complete covering bearer, necessary existence and cognitive adequacy are related but distinct questions. The positive original-giver argument compares the cognitive excellence itself, not only a source's output capacity. Complete creative self-Knowledge then supplies a separately qualified route to Knowledge of effects; its logical consequence is not divine acquisition by inference.
+
+A concrete connection spans source/attribute questions and restoration: [truthful safe-action disclosure](PAPER-CATALOGUE.md#truthful-disclosure-that-selects-a-safe-action) can remove an intervention obstruction left by correct diagnosis. It requires integrity knowledge, truthful transmission and preserved action identity. That mathematics does not itself authenticate the proposed source or establish its actual communication. It shows what the additional epistemic relation contributes rather than treating “disclosure” as an interchangeable label for provenance.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

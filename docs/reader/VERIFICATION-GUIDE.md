@@ -166,6 +166,12 @@ Start from a [named controller work](PAPER-CATALOGUE.md#generated-controllers-ob
 
 [The final combined source-only replay guide](../../docs/provenance/v5-research-continuations/notes/ed3d671599c4d246dafb7f66bcdc1222d5e43e8667b9f527776e2181d6ff8081.md) distinguishes the runtime, phase and probability roots and requires external output paths. The [common exponential review](../../docs/provenance/v5-research-continuations/notes/a96b3fc7e9c37ccb4ef28fea5d652e2b4229a704b97b8d7531c5595a08cf1ad9.md) states its actual one-module/reused-object boundary. Original scientific checks and immutable source bodies must not be edited to match a simpler reader synopsis. This refactor inspects their interfaces; it does not newly compile the scientific closures.
 
+## Checking a foundational implication without changing its subject
+
+For the [sourcehood/Knowledge family](PAPER-CATALOGUE.md#original-productive-sourcehood-knowledge-and-action-selection), inspect the ordinary argument, exact model specification and original review separately. Preserve the noninferential clarification when reading the creative-Knowledge appendix: logical closure does not describe a source learning from premises. A formal counterinterpretation tests an entailment of its stated predicates; it is not automatically a metaphysically admissible rival.
+
+The [integer budget package](PAPER-CATALOGUE.md#exact-integer-confidence-budgets) also separates exact arithmetic verification from the controller theorem's stochastic applicability. Its record correction is about exact data types, not a new probability law. Follow the existing collection replay owner for supported execution, rather than running a historical archive-relative command as though it described the present checkout.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

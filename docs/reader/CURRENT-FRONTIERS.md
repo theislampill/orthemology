@@ -129,6 +129,12 @@ Do not leave the actual generated-controller exponential endpoint listed as whol
 
 The remaining problem is more specific: supply/extract the exact finite opaque-selector bindings, generalise the source/environment dimensions where warranted, and establish the chosen physical resource or information contract. The current theorem is conditional on those finite bindings and a fixed environment; it does not claim their automatic acquisition. Empirical sensors, deployment, arbitrary-policy reverse equivalence and physical defect preservation require separate evidence. The [controller comparison](PAPER-CATALOGUE.md#classical-finite-memory-tools-and-the-hidden-badness-distinction) also prevents attributing old finite-memory existence results to a new universal discovery.
 
+## Keep productive, cognitive and disclosure warrants separate
+
+The [Sixth foundational family](PAPER-CATALOGUE.md#original-productive-sourcehood-knowledge-and-action-selection) supplies affirmative productive-completion and cognitive-priority arguments, together with conditional formal implications. Its remaining warrants concern original possession, complete common coverage, the same bearer's modal status and intrinsic cognitive determination. Do not erase those positive arguments merely because their application is substantive; equally, do not replace that application by a graph or formal table. Later foundational assessments keep their own source scope rather than inheriting this earlier stage's global label.
+
+The [safe-action theorem](PAPER-CATALOGUE.md#truthful-disclosure-that-selects-a-safe-action) supplies a communication condition under exact diagnosis. Actual disclosure, truthfulness, authority and live root/action identity are separate receiving obligations. The zero-error statement does not settle the positive-error frontier, time-sensitive faults or newly available interventions.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
