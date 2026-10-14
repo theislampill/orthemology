@@ -1650,5 +1650,49 @@ class ContinuationAuditCostRoutesTests(ContinuationGeometryRoutesTests):
                 raise AssertionError("Independent source owner not unique: " + member)
             cls.expected[member] = paths.pop()
 
+
+class ContinuationControllerRoutesTests(ContinuationGeometryRoutesTests):
+    """The original source map supplies controller/work identity, not page names."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owners = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git", "show", owners["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT))["sources"]
+        cls.expected = {}
+        for origin,member in [('d0d3dffa3947bd06b101f267ef9cabeb559bd4e2d2ad4c3df7f80038307efd91', 'research/independent-review/markov-support/source/SUPPORT_CHANGING_MARKOV_THEOREM.md'), ('769dc45d15ba6d2ee4cdce41bd719b415591dc1667ab6e6bc834fa53477dc3b0', 'candidate-v1/THEOREM_CONTRACT.md'), ('f9b7614a84f0d21492f63f281165e7fa9bb1bcb4630218c70a9bf01024f7ff73', 'REPORT.md'), ('c86174f55f8474787ce124b2d1f8601e8b13ef0667242d6109ddaaaa8f0578b3', 'author-snapshot/PD_EXPTIME_HARDNESS_CANDIDATE.md'), ('4bd668ffbcfaa1a3f79dfc41d7078bc5a799d9c74b2063da04f21eeffbfe2904', 'THEOREM_AND_PROOF.md'), ('70677d135cd8957f5b527d555001eb8e53b0cc19652297709eb110e94f2a39be', 'prior-art/controller-comparison/CONTROLLER_PRIOR_ART_SYNTHESIS.md'), ('b5be7775f6d0b1d5628f8d100f4d0db3c3d44827472e3965c7bbd4cb04423b34', 'EXACT_RUNTIME_CONTRACT.md'), ('b5be7775f6d0b1d5628f8d100f4d0db3c3d44827472e3965c7bbd4cb04423b34', 'EXACT_RATIONAL_CONTRACT.md'), ('b5be7775f6d0b1d5628f8d100f4d0db3c3d44827472e3965c7bbd4cb04423b34', 'PHASE_SOURCE_CONTRACT.md')]:
+            paths = {v["path"] for v in rows if v["origin"] == origin and v["member"] == member and v["path"]}
+            if len(paths) != 1:
+                raise AssertionError("Pinned controller source owner is not unique: " + member)
+            cls.expected[origin[:12] + ":" + member] = paths.pop()
+
+    def test_later_formal_cost_and_source_composition_are_attached_not_lost(self):
+        expected = {
+            "continuation-generated-cost": ("S6F-19", "S6F-20", "S6F-21"),
+            "continuation-full-phase-runtime": ("S6F-22",),
+            "continuation-rational-law": ("S6F-23",),
+        }
+        works = {w["key"]: w for w in self.cross["works"]}
+        text = (ROOT / "docs/reader/RESULT-INDEX.md").read_text()
+        for key, result_ids in expected.items():
+            self.assertIn(key, works)
+            self.assertTrue(works[key].get("supporting_source_keys"))
+            for result in result_ids:
+                self.assertIn(result, text)
+        self.assertEqual(len(works), len(self.cross["works"]))
+
+    def test_controller_runtime_reading_route_retains_environment_and_law_owners(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        works = {w["key"]:w for w in self.cross["works"]}
+        work = works["continuation-full-phase-runtime"]
+        all_keys = work["source_keys"] + work.get("supporting_source_keys", [])
+        paths = {self.cross["sources"][k]["path"] for k in all_keys}
+        owner = json.loads((self.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git","show",owner["baseline"]["commit"]+
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"],cwd=ROOT))["sources"]
+        actual_module = {v["path"] for v in rows if v["member"].endswith("/FullControllerCanonicalLaw.lean") and v.get("path")}
+        self.assertEqual(len(actual_module), 1)
+        self.assertTrue(actual_module <= paths)
+
 if __name__ == "__main__":
     unittest.main()

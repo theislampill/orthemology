@@ -156,6 +156,12 @@ Avenues **5, 8 and 10** meet in the original v5 convergence work: a representati
 
 The constructive side matters: coherent finite debt is computable in appropriate restricted models; finite-state observers admit an exact decision procedure; unrelated revisions preserve a properly bound licence. Transferring these results to a cognitive or research system requires its actual observation laws, event repertoire, complete dependency reads and operational interpretation. No amount of version bookkeeping alone supplies those premises.
 
+## A controller, its information and its delivered implementation
+
+The [support-changing construction](PAPER-CATALOGUE.md#support-changes-and-a-deterministic-repair-policy) and [formal hidden-parity generator](PAPER-CATALOGUE.md#a-common-generated-policy-for-hidden-parity) turn lawful acquired observations into a common winning policy under specified models. The [actual-prefix restart](PAPER-CATALOGUE.md#restarting-from-the-actual-observed-prefix) supplies the conditioning that later cost proofs need; the [generated error-budget lineage](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets) supplies positive finite/exponential logical-cost guarantees.
+
+The [source compiler](PAPER-CATALOGUE.md#from-supplied-machines-and-histories-to-literal-p02-execution) and [Boolean full-phase bridge](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge) then connect mathematical behaviour to actual syntax and decoded runtime history. This is a substantive connection among restoration, semantic fidelity and effective construction (avenues 4, 8 and 10). Its local certificates and environment matching matter: existence, source compilation, correct observations and physical-resource adequacy are different accomplishments. The [classical comparison](PAPER-CATALOGUE.md#classical-finite-memory-tools-and-the-hidden-badness-distinction) retains their established ancestry.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

@@ -6,7 +6,7 @@
 
 The current owner-directed continuation began at `a67e04c6c5efc4fc316b2001a1b455c62e2b2963`, tree `327fbe8f92740a5f7879dca15e5298024266dc5f`; corpus baseline `0784acddd4770f1190f758f264ba52b2b110bd27`. Its [full normal CI run 38626098224](https://github.com/theislampill/orthemology/actions/runs/38626098224) was observed completed successfully. Later changes require their own result. Owner authority covers this branch and PR, not merge, scientific reclassification or independent self-approval.
 
-There are **95 catalogue work entries, 237 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
+There are **104 catalogue work entries, 274 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
 
 Counts below distinguish implementation delivered, required work remaining and independent acceptance. They overlap and must not be added into an artificial grand total.
 
@@ -17,7 +17,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 | C00 — Re-anchor and bind | Authorised feature branch, pinned corpus, write boundaries, baseline failures and repeated live checks. | Final separate reviewer binding and candidate/currentness review. |
 | C01 — Population and owners | 16,077 baseline paths in 26 disjoint routing groups, 73 discovery owners, no recursive external admissions. | Independent denominator/classification reconciliation. Full work semantics belong to C03, not this inventory count. |
 | C02 — Representative design | Composite reference, related editions, non-PDF mathematics and all three intellectual probes, with positive/adverse source readings. | Independent reader/design assessment; author-side mechanical checks cannot supply it. |
-| C03 — Full curation and navigation | Six pages, 95 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
+| C03 — Full curation and navigation | Six pages, 104 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
 | C04 — Maintenance and checks | Source/edition/route controls, multi-edition repair, targeted CI and repeatable state generation. | Complete all five M01–M05 change-footprint exercises and T01–T18 contracts; final-candidate qualification. |
 | C05 — Independent review | Evidence and candidate exist; independent review not performed. | Separate semantic/usability/engineering review, repair findings, final SHA/tree approval. |
 | C06 — Owner and public readback | Draft PR 36 exists. | Dot/owner assessment and integration decision; only after explicit merge authority, resulting-main and public-route readback. |
@@ -126,3 +126,7 @@ Fifteen further source-bound works are now represented, retaining the actual pos
 ### C04 maintenance repair during continuous curation
 
 M03/M05 identified and repaired a frozen-census false pass: new tracked scholarship or a changed unbound source now requires explicit baseline/disposition review. Ordinary admitted reader edits and untracked scratch do not trigger a blanket scholarly reread. Four corrected negative controls failed before the repair; six new fixture exercises and the actual candidate now pass. The complete five maintenance footprints and T01–T18 matrix remain to be assembled and qualified; unit counts are not completion evidence for those contracts.
+
+### Continuous execution: actual controller, cost and delivered source
+
+Nine work families now connect full-row Markov repair, global hidden parity, actual-prefix restart, PD complexity, positive exponential logical cost, classical finite-memory scope, literal P02 compilers, rational receipt laws and the final Boolean phase/canonical-law composition. Catalogue: **104 works / 274 source records**. The next continuation families are source-relative disclosure, prior/width/selection results and foundational arguments, before completing the remaining support dispositions. C03/C04 remain in progress; no independent acceptance is claimed.

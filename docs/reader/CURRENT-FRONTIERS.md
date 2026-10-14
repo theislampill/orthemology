@@ -123,6 +123,12 @@ The [original remaining-obligations note](../../experiments/orthemology-v5/REMAI
 
 The [convergence catalogue routes](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-families) keep positive ordinary results intact. For subsequent progress, consult the distinct [v5 continuation result owner](../provenance/v5-research-continuations/RESULT_STATUS.json); no global currentness judgement is inferred from the age of a file or from the latest navigation commit.
 
+## Exact controller advances and the remaining extraction problem
+
+Do not leave the actual generated-controller exponential endpoint listed as wholly open: the [pointwise and fixed-family formal successors](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets) provide it under their precise hypotheses. Likewise the [final Boolean source composition](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge) derives canonical history-law agreement that older contracts lacked.
+
+The remaining problem is more specific: supply/extract the exact finite opaque-selector bindings, generalise the source/environment dimensions where warranted, and establish the chosen physical resource or information contract. The current theorem is conditional on those finite bindings and a fixed environment; it does not claim their automatic acquisition. Empirical sensors, deployment, arbitrary-policy reverse equivalence and physical defect preservation require separate evidence. The [controller comparison](PAPER-CATALOGUE.md#classical-finite-memory-tools-and-the-hidden-badness-distinction) also prevents attributing old finite-memory existence results to a new universal discovery.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

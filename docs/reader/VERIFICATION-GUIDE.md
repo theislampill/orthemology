@@ -160,6 +160,12 @@ The [native guide](../../experiments/orthemology-v5/README.md) defines static `-
 
 This refactor's path dispositions account for code, tests, ledgers, prior editions and mathematical notes without running the historical science again. The [coverage record](../project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md#original-v5-consolidation) states what was substantively read and what was only role-inspected. A mapped formal audit remains distinct from whole-Python refinement, primary-source authentication and independently accepted mathematics.
 
+## Following the actual controller proof chain
+
+Start from a [named controller work](PAPER-CATALOGUE.md#generated-controllers-observation-laws-and-executable-delivery), then use its contract, the [source map](../provenance/v5-research-continuations/SOURCE_MAP.json), the [result state](../provenance/v5-research-continuations/RESULT_STATUS.json) and the [Sixth-final selection](../provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json). One later compiled module over exact qualified predecessors is meaningful evidence, but not a new cold build of the whole closure. A provided replay command is not an executed receipt.
+
+[The final combined source-only replay guide](../../docs/provenance/v5-research-continuations/notes/ed3d671599c4d246dafb7f66bcdc1222d5e43e8667b9f527776e2181d6ff8081.md) distinguishes the runtime, phase and probability roots and requires external output paths. The [common exponential review](../../docs/provenance/v5-research-continuations/notes/a96b3fc7e9c37ccb4ef28fea5d652e2b4229a704b97b8d7531c5595a08cf1ad9.md) states its actual one-module/reused-object boundary. Original scientific checks and immutable source bodies must not be edited to match a simpler reader synopsis. This refactor inspects their interfaces; it does not newly compile the scientific closures.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

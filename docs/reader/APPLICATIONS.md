@@ -185,6 +185,12 @@ The source's [fair-bit example](../../experiments/orthemology-v5/mathematics/REF
 
 For reuse, the [operational transport theorem](../../experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md#4-exact-licence-transport-theorem) explains why disabling and re-enabling a permission cannot revive an old captured version. A new semantic transport proof may justify reissue, but is not itself the old licence. These are source-model illustrations, not measured deployments or a theorem about distributed revocation.
 
+## Delivering a controller without changing what it observes
+
+The [four-bit runtime wrapper](PAPER-CATALOGUE.md#from-supplied-machines-and-histories-to-literal-p02-execution) marks accepted receipts and serialises the pre-receipt state/action. A waiting bit must not be treated as a fresh observation. The [full-phase compiler](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge) requires finite selector certificates and the actual environment binding before importing a decoded winning-law theorem. Giving the policy the model index or raw sampler state changes the information problem.
+
+For resource planning, use the cost actually proved. An [exponential logical-error bound](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets) says neither that the last error occurs early nor that physical waiting, memory or CPU are bounded. Likewise [correct receipt-law projection](PAPER-CATALOGUE.md#exact-rational-receipts-do-not-preserve-every-physical-stream-property) can discard nonatomic randomness in the physical output. These examples let an agent select a usable theorem contract rather than turn every successful implementation layer into a blanket guarantee.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

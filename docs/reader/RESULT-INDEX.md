@@ -338,6 +338,12 @@ The [origin-scoped theorem/argument index](../provenance/v5-consolidation/THEORE
 
 The [catalogue](PAPER-CATALOGUE.md#original-v5-construction-and-convergence-families) explains their different hypotheses and contribution. The [mapped formal receipt](../provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json) concerns its named declarations, not all these ordinary mathematical extensions. Later continuation collections must be consulted for later result-specific advances; an original unresolved item is not automatically the current frontier.
 
+## Controller and actual-law result routes
+
+**T4-MARKOV:** the [full-row/support-changing ordinary construction](PAPER-CATALOGUE.md#support-changes-and-a-deterministic-repair-policy). **T5-SCC / T5-RECORD:** the [global semantic endpoint, SCC region and explicit record](PAPER-CATALOGUE.md#a-common-generated-policy-for-hidden-parity). **T5-COMPLEXITY:** the [mixed-initial-belief posterior-deterministic complexity proof](PAPER-CATALOGUE.md#why-mixed-hidden-starts-can-make-control-exponentially-hard), not a formal complexity result for every neighbouring representation.
+
+**T6-COST and S6F-19 / S6F-20 / S6F-21:** the [same actual generated-cost lineage](PAPER-CATALOGUE.md#the-actual-generated-controller-has-finite-and-exponential-error-budgets), from ordinary proof through formal all moments, pointwise exponential composition and a fixed-family common open range. **S6F-22:** [Boolean source/canonical decoded law and parity](PAPER-CATALOGUE.md#a-complete-boolean-phase-source-with-a-canonical-law-bridge). **S6F-23:** [literal rational sampling and projection/defect separation](PAPER-CATALOGUE.md#exact-rational-receipts-do-not-preserve-every-physical-stream-property). The [existing result state](../provenance/v5-research-continuations/RESULT_STATUS.json) and [exact successor selection](../provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json) own evidence and adoption. Their historical fresh-component fields do not describe a new compilation in this refactor.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
