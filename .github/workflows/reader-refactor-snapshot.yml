@@ -27,18 +27,21 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/issue35-tenth"
-          echo "EVIDENCE_DIR=$RUNNER_TEMP/issue35-tenth" >> "$GITHUB_ENV"
+          export EVIDENCE_DIR="$RUNNER_TEMP/issue35-tenth"
+          mkdir -p "$EVIDENCE_DIR"
+          echo "EVIDENCE_DIR=$EVIDENCE_DIR" >> "$GITHUB_ENV"
           python - <<'PY'
           import base64,hashlib,json,lzma,os,subprocess,urllib.request
           from pathlib import Path
           import yaml
           base='e99faa8c2e03df1a2108b6fb1ab12a0ebbae7890'
+          previous='c9a2a8d91bf7b05802af4a6ad67df82c0eecf1fb'
           expected='839ab8c09ea3aec5220a4a7e2fa57381d3ccf737'
           oid='54c403b5c2215791a5de9404c4928994d3dcf668'
           def git(*args):return subprocess.check_output(['git',*args]).decode().strip()
-          if git('rev-parse','HEAD^')!=base or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):
+          if git('rev-parse','HEAD^')!=previous or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):
               raise SystemExit('Unexpected transport ancestry or worktree')
+          subprocess.run(['git','merge-base','--is-ancestor',base,'HEAD'],check=True)
           req=urllib.request.Request('https://api.github.com/repos/theislampill/orthemology/git/blobs/'+oid,headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+os.environ['GH_TOKEN']})
           with urllib.request.urlopen(req,timeout=45) as r:payload=json.load(r)
           body=base64.b64decode(payload['content'])
