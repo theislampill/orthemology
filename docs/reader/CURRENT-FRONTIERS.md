@@ -160,6 +160,13 @@ The [Eighth catalogue](PAPER-CATALOGUE.md#common-histories-shared-stores-and-act
 
 The work does not yet supply authentic clocks or observation acquisition, a whole shared-storage/native lifecycle join, arbitrary asynchronous or competing-policy progress, or execution of the classical shared interpreter. Finite bad-store insertions preserve its effect but do not bound delay or defeat an infinite adversarial prefix. An advance must identify the missing service/model relation rather than merely combine the existing theorems' names.
 
+
+## From independent finite evidence to an operational consumer
+
+The Ninth work already supplies [complete finite evidence for the specified common-policy existence predicate](PAPER-CATALOGUE.md#finite-common-policy-evidence-without-rerunning-synthesis), a [universal expression-machine correspondence](PAPER-CATALOGUE.md#expression-stacks-costs-and-the-python-trust-boundary) and an [actual finite initial-state controller](PAPER-CATALOGUE.md#finite-reconstruction-and-an-actual-initial-state-controller). Those are established source-scoped advances, not still-proposed interfaces simply because this refactor does not rerun them.
+
+The source leaves distinct receiving gaps: certificate-to-controller extraction and the absent shared-root/table encoding; a verified byte frontend and linked execution; active nonzero/reachable-idle entry; and authorised implementation of whole-history transport. Each has a different contract. Completing one should not be reported as completing all, or made an artificial prerequisite for understanding the positive result already supplied. Later collections may advance these dated frontiers and must be checked before a final current synthesis.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

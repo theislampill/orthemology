@@ -197,6 +197,13 @@ For the [Eighth sequence](PAPER-CATALOGUE.md#common-histories-shared-stores-and-
 
 The [shared interpreter clarification](../../experiments/orthemology-v5-successors/source-store/ac522e04a17cd99459c265883df2253716cf0ccd0779b1bd748fd0c0a2783f14/EXECUTION_CLARIFICATION.md) separates kernel-checked mathematical definitions from extraction/native evaluation. The separate [shared-root review supplement](../../experiments/orthemology-v5-successors/source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md) retains failed wrapper attempts and a withdrawn interpreter attribution. Neither source publication nor a new link check upgrades those historical executions.
 
+
+## Reading Ninth proof, replay and metadata evidence
+
+The [certificate work](PAPER-CATALOGUE.md#finite-common-policy-evidence-without-rerunning-synthesis) has three formal component scopes and a separately ordinary cost argument. Its corrected `d08-g1` descriptor is a **retained-evidence-only** view: the source-owned guide explicitly rejects advertising that descriptor as a runnable `--execute` route. The unchanged original driver/catalogue API is a different source-bound replay route requiring its pinned inputs and a fresh absent output. A correction to membership metadata supplies no additional process or independent evidence.
+
+For the [expression correspondence](PAPER-CATALOGUE.md#expression-stacks-costs-and-the-python-trust-boundary), the completed tail reused previously compiled products and finite observations while performing only its missing stages. Preserve the earlier failed attempts and do not count correlated views as independent runs. For the [initial controller](PAPER-CATALOGUE.md#finite-reconstruction-and-an-actual-initial-state-controller), compiled tuple assertions and formal endpoint statements have different scopes. Inspect both when a claim depends on actual emitted event counts; neither creates a CPython or physical-deployment theorem.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

@@ -193,6 +193,13 @@ The [Eighth history sequence](PAPER-CATALOGUE.md#common-histories-shared-stores-
 
 The shared-store study also shows why failure dependence and memory dependence are different. Copying a root label is not copying an independent store. Its receipt-preserving forward relation admits extra concrete vetoes; turning that one-way simulation into a two-way permission equivalence would lose the very phenomenon it captures. The required transfer still includes authentic policy, actual shared storage and the declared observation/service conditions—not simply matching field names.
 
+
+## Independent evidence and faithful implementation
+
+The [Ninth finite certificate calculus](PAPER-CATALOGUE.md#finite-common-policy-evidence-without-rerunning-synthesis) connects warranted common-policy reasoning (avenue 6) to specification fidelity and typed evidence (avenues 8–9): a recipient can check a submitted finite witness without trusting or repeating synthesis. The original rational input, all positive receipt branches and complete structured-input binding still matter. This is a constructive evidence interface, not merely a warning about trust.
+
+The [expression and runtime developments](PAPER-CATALOGUE.md#expression-stacks-costs-and-the-python-trust-boundary) address another link: whether a specified computation, error and emitted history are actually preserved by the presented implementation. These works do not automatically compose. No supplied table encoding connects the common-policy certificate to the separate 21-path runtime; a mathematical existence certificate is not an extracted controller. The [whole-command isomorphism](PAPER-CATALOGUE.md#bijective-whole-history-transport-is-not-in-place-permission) similarly preserves a correctly transformed history without granting in-place change authority.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

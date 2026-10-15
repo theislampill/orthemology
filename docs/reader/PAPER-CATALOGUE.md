@@ -876,6 +876,45 @@ The compiled reference composes the actual interpreted installer and document-re
 
 For the specific four-root, one-fault, four-path interface, two sufficiently stable authorised batches implement installation and subsequent draft repair. The recorded eight-macro-attempt/twenty-four-logical-phase upper bound excludes grant issuance, dissemination and residual older work, and is not a physical timing promise. The source's native executable and finite assertions are useful implementation evidence; the named kernel components do not certify arbitrary complete runtime histories. The later history, clock and batch developments should be read as separate extensions, not silently credited to this earlier work.
 
+
+## Independent evidence, faithful evaluation and finite controllers: the Ninth interfaces
+
+These four work families develop different links in a trustworthy computation: an independently checked existence certificate, faithful modeled expression execution, a finite implementation of an accepted initial history, and an invertible change of complete command identity. A result at one interface does not silently fill a gap at the others.
+
+### Finite common-policy evidence without rerunning synthesis
+
+The finite typed-data calculus supplies an actual [checker syntax][t09-syntax], [soundness proof][t09-soundness] and [completeness construction][t09-complete]. For a valid fixed finite rational hidden-model input and query, **an accepted finite body exists exactly when the inherited deterministic common lawful almost-sure parity policy exists**. Any admitted measurable-seed winning policy also yields existence of accepted finite syntax. The new contribution is the independently checked evidence interface, not another claim to have discovered the inherited winning-region theorem. A winning query does not make every submitted body valid.
+
+The checker validates positive dimensions and actual shape before enumeration, normalized rational rows, sparse menus with empty defaults, exact state/candidate keys, every submitted node and every positive receipt branch. Components require an attained even minimum and compare full numerical rows, not just positive supports. The path construction shortens repeated-state walks to at most `n−1` edges; equal endpoints admit an empty path. That bounds submitted evidence syntax, not stochastic hitting time.
+
+[Checked composition][t09-composition] validates both original bodies before canonicalisation, retaining literal obligations rather than unioning components into an unproved witness. A new parent needs a separately checked absent support and all child obligations. Raw merge/sort/link can discard a malformed duplicate, so they are not untrusted-entry admission APIs. The [bound envelope][t09-binding] requires actual structured-input equality before a fresh check; an old acceptance bit, equal label or digest is not a substitute. Even a harmless input revision can invalidate the old envelope while a newly checked body remains valid.
+
+The [ordinary verification-cost argument][t09-cost] is polynomial in **explicit materialised input, submitted AST and rational bit lengths**; certificates may themselves be exponential. It is neither a Lean machine-cost theorem nor a polynomial witness-size result. The [source-owned guide and evidence][t09-cert-guide] preserve formal components separately from that ordinary argument. A certificate does not extract a runnable controller or finite-state memory strategy. The separate 21-path shared-root runtime has no supplied encoding into these input tables. Model authority, a safe byte decoder, linked binary behaviour and physical safety remain additional application premises.
+
+### Expression stacks, costs and the Python trust boundary
+
+The [exact expression scope][t09-p1-scope] and [source/model map][t09-p1-map] connect a manually defined Lean stack machine to the pinned Python evaluator. The universal local result permits arbitrary pending work and pre-existing values: a successful expression leaves its value above the unchanged old value stack and does not execute the pending tail. It agrees with the expression semantics. Success costs one tick per leaf and two plus child costs per compound; a resource fault instead stops early with the same modeled error category and visible meter count. The [wording clarification][t09-p1-clarify] prevents treating available mathematical fuel as pops executed after failure.
+
+Every popped item ticks before dispatch, including ready visits. Binary children execute left then right and reduction pops right then left. Variables bypass width checking; binary arithmetic precedes its result check. Power checks exponent plus one **before** shifting and has a distinct exponent-storage fault. Thus an expression can return a large register value under a small width budget, while a host allocation can fail before a modeled binary-result rejection. Adequate finite ideal bounds depend on the actual input and need not be cheap or physically safe to compute.
+
+The admitted domain requires finite immutable correctly aritied tuples, exact builtin natural integers, ordinary dictionaries and valid natural budgets. Those are preconditions, not validations supplied by `Meter` or `eval_expr`; booleans, subclasses, malformed direct tuples and concurrent mutation are excluded. The [recorded theorem and finite evidence][t09-expression-guide] include independently written recursive-oracle and pending-stack controls, but AST/source identity and finite tests are not a verified CPython frontend. Parser, serializer, statements, loops, full runner and physical resource failures remain separate. The later tail-completion record preserves earlier failures and credits reused products only once.
+
+### Finite reconstruction and an actual initial-state controller
+
+The [finite primitive refinement][t09-refinement], [sampled-policy reconstruction][t09-history] and [uniform initial-state endpoint][t09-native] form one implementation lineage. Actual finite storage operations preserve shared-root mutation and distinct addressed-label receipts; a gate snapshot alone does not authenticate a policy. Callable reconstruction rejects missing or wrong-epoch samples, while proof-side finite representation recovers the **exact** accepted endpoint using full row-to-source equality. Successful reconstruction alone is guard-free: an illegal immediate completion can be reconstructed. Equal epochs or projected delivery events are weaker than authentic full policy inputs.
+
+The positive operational result fixes one public ordered program **before** every matching hidden environment and permitted finite service decoration. In the specified empty epoch-zero ABC fixture, seven holds followed by 21 trials yield exactly 259 logical events, one installation and zero repairs, with the exact installed Plant. The 20-trial, 247-event prefix has no effect. This is an actual accepted trace of emitted events, not inferred from synthetic success flags; missing/excess annotations and malformed reply-array lengths reject.
+
+The [original result and execution records][t09-controller-guide] distinguish fresh kernel components from compiled finite assertions. This entry point explicitly rejects even a valid epoch-one repair. Public-program independence does not imply transcript opacity, and the ABC installation is not the earlier 3,013-byte repair example. Arbitrary reachable-idle entry, unknown function-state serialisation, physical storage/time, arbitrary asynchronous fairness and standalone linked-C deployment are outside the supplied endpoint.
+
+### Bijective whole-history transport is not in-place permission
+
+The [transport reading guide][t09-transport-read], [selected-order involution][t09-transport] and [ordered-trace equivalence][t09-trace] give a separate mathematical result. For each chosen support, swap the old order with one coherently supplied duplicate-free order. Other orders and all non-order command fields survive. This is injective even when distinct commands have the same selected-label support; sorting every path instead would collapse identities.
+
+Transport every commitment, tombstone, receipt and corruption-payload key consistently. Then primitive operations commute with the transformation, and legal steps and complete finite traces hold **iff** they hold for the transported states and pointwise events. The same `badOpen` Boolean, typed effect and full non-key state fields are preserved. Reusing the changed command in an unchanged store can fail precisely because an old commitment or tombstone still has its old key.
+
+The [scoped proof and review route][t09-transport-evidence] does not authorise physical in-place conversion, signature reminting or old-key reuse. Counterstates carry their explicit reachability conditions. Raw native-list equality, arbitrary interface invariance, public-program composition, an executable serializer and actual authority remain separate questions. The isomorphism explains what must change together; it does not grant permission to make those changes.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [core]: ../../theory/orthemic-core-formalization.md
 [multi]: ../../theory/orthemic-multi-actor-conflict-note.md
@@ -1364,3 +1403,28 @@ All 1,200 collection paths now have explicit work/support/history dispositions i
 [t08-controller-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-protected-controller
 [t08-attained-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-attained-21st
 [t08-bad-store-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-finite-bad-store
+
+[t09-p1-scope]: ../../experiments/orthemology-v5-successors/source-store/81d31db2010d1e16f0f0f95fc8eefa264d7fd69dbf439908a61a27de43015339/P1_SCOPE.md
+[t09-p1-map]: ../../experiments/orthemology-v5-successors/source-store/f40bc24f587245f89eff67da47525e336e0b3731e07b77e4ac25f9f8498770ff/SOURCE_CORRESPONDENCE.md
+[t09-p1-review]: ../../experiments/orthemology-v5-successors/source-store/3ae1e9e04da476f9960d7d51b617dfaff77168fdc3571e9eaf723aa1cbdb24e2/SOURCE_REVIEW.md
+[t09-p1-accept]: ../../experiments/orthemology-v5-successors/source-store/c31578f82921ea6e25f3c338bebf0e78b2f91ab248c9fc707f86503a2c0ec0b5/ACCEPTANCE.md
+[t09-p1-clarify]: ../../experiments/orthemology-v5-successors/source-store/c0d90d203b0d069e9568b19fb7aa6e2560a19503ef59b80f017914ee48f94610/WORDING_CLARIFICATION.md
+[t09-g1-review]: ../../experiments/orthemology-v5-successors/source-store/cdad7bcf0ae847fa3319f164eb7a755a25a51a053982372664b68b92e8beb8a7/INDEPENDENT_REVIEW.md
+[t09-cost]: ../../experiments/orthemology-v5-successors/source-store/96b8f65fc920311e045f2b9145483d3ad432ac7adc48d01b0fa4df70152ebc51/COST_SCOPE.md
+[t09-soundness]: ../../experiments/orthemology-v5-successors/source-store/399829e271d3b6db65cfd077a68c15ad9a2e2f4d59d3957a2f30b6f2cd37a4ba/CertificateSoundness.lean
+[t09-complete]: ../../experiments/orthemology-v5-successors/source-store/94ad1e2f7d6e7ef106b108a79459a4b5103b15867711bebb7daea76005934953/CertificateCompleteness.lean
+[t09-syntax]: ../../experiments/orthemology-v5-successors/source-store/e41f1506d7b17c76bdc11929d6f31c73512549f55c7281f9ea85d37f597b372a/CertificateSyntax.lean
+[t09-binding]: ../../experiments/orthemology-v5-successors/source-store/206f1197ac41521668bfbb2939d6c817bfe1d114e7f32066e679ce038e999a82/CertificateBinding.lean
+[t09-composition]: ../../experiments/orthemology-v5-successors/source-store/7ef0cb1db2fffa67642c361520560fffc53cc0d8b39530bec92f56070a999c0e/CertificateComposition.lean
+[t09-native-review]: ../../experiments/orthemology-v5-successors/source-store/c040382cd3b5d7be31e243f837edbaf335d5f265c4e4e5e8ee38bd5d6c42ffcb/PUBLIC_ACCEPTANCE.md
+[t09-history]: ../../experiments/orthemology-v5-successors/source-store/80140a9767e9ff67492ce62f6e6a4dfba650a47514e4af9b9da063cb6a31856a/NativePolicyInputs.lean
+[t09-native]: ../../experiments/orthemology-v5-successors/source-store/c81047778b2ce6e696a3617c91b5bcf1355c8fbe4834942fdb46021a5b471d50/NativeUniformEffect.lean
+[t09-refinement]: ../../experiments/orthemology-v5-successors/source-store/4830ec8996c4c474f33ed7a8314e07ac369966ada1fab497aa2367d3514afad0/NativeRefinement.lean
+[t09-transport]: ../../experiments/orthemology-v5-successors/source-store/659e5f14e2ec2dcc52b66a8e3e94f7f95a8cf938feb1282bbcf3121afe8caafe/SelectedOrderTransport.lean
+[t09-trace]: ../../experiments/orthemology-v5-successors/source-store/5ccb05b0389b38070bc331b2d59aeb9894ece419a8d31d2cfae3f5bf735b8917/SharedTraceTransport.lean
+[t09-transport-read]: ../../experiments/orthemology-v5-successors/source-store/bcd09b50664b6041e13399040878262b6f1e34c54fce46564f91e3a6dfc5adb2/README.md
+[t09-transport-review]: ../../experiments/orthemology-v5-successors/source-store/ad8dd5d7ad058a5931c19d6b84da0164b29be577eefe541fa2c004b453387b88/ORDERED_COMMAND_TRANSPORT_ACCEPTANCE.md
+[t09-cert-guide]: ../../experiments/orthemology-v5-successors/groups/t09-certificates/README.md
+[t09-expression-guide]: ../../experiments/orthemology-v5-successors/groups/t09-expression/README.md
+[t09-controller-guide]: ../../experiments/orthemology-v5-successors/groups/t09-controller/README.md
+[t09-transport-evidence]: ../../experiments/orthemology-v5-successors/groups/t09-controller/README.md#t09-whole-command-transport

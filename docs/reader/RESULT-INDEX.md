@@ -384,6 +384,13 @@ The [six work families](PAPER-CATALOGUE.md#common-histories-shared-stores-and-ac
 
 Use [common/typed/lifecycle correspondence](PAPER-CATALOGUE.md#exact-common-histories-and-the-typed-lifecycle), [cancellation](PAPER-CATALOGUE.md#aggregate-cancellation-retains-partial-effects), [clock expiry](PAPER-CATALOGUE.md#expiry-is-not-clock-authentication), [actual batches and retry](PAPER-CATALOGUE.md#actual-batch-success-and-complete-envelope-freshness), [shared alias simulation](PAPER-CATALOGUE.md#shared-storage-is-not-independent-label-memory), or [protected schedules and finite corruption](PAPER-CATALOGUE.md#a-protected-schedule-is-not-an-unconditional-time-bound). These are different operation/representation contracts, not twelve independent implementations.
 
+
+## Ninth evidence and execution interfaces
+
+The [four Ninth work families](PAPER-CATALOGUE.md#independent-evidence-faithful-evaluation-and-finite-controllers-the-ninth-interfaces) locate ten original result scopes without inventing a new registry. `D08-01`–`D08-03` connect finite accepted certificate syntax, common-policy existence and same-input checked composition; `D08-04` is the separate ordinary explicit-input cost argument. `D08-05`–`D08-06` distinguish the universal expression-machine theorem from reviewed literal-Python correspondence and finite corroboration. `T09-FINITE-PRIMITIVES`, `T09-FINITE-HISTORY-REP` and `T09-ORDERED-INITIAL` concern actual finite operations, representation and the specified initial-state interpreter; `T09-WHOLE-COMMAND-TRANSPORT` is an invertible whole-history transformation, not the runtime itself.
+
+The constructive differences matter: existence of **some** accepted body is not acceptance of every body; exact modeled successful tick count is not a fault that keeps running; faithful reconstruction is not legality checking; one program before all admitted worlds is not hidden-world-dependent program choice. Follow each work's direct source and original evidence owner for its actual assumptions.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

@@ -2128,5 +2128,65 @@ class EighthHistoryWorkTests(unittest.TestCase):
         self.assertNotIn("scientific_status", w)
 
 
+
+
+class NinthInterfaceWorkTests(unittest.TestCase):
+    """Exact finite evidence, modeled evaluation and runtime remain distinct."""
+    EXPECTED = {**{f"D08-0{i}": "t09-finite-certificate-calculus" for i in range(1,5)},
+                "D08-05": "t09-expression-correspondence", "D08-06": "t09-expression-correspondence",
+                "T09-FINITE-HISTORY-REP": "t09-finite-native-controller",
+                "T09-FINITE-PRIMITIVES": "t09-finite-native-controller",
+                "T09-ORDERED-INITIAL": "t09-finite-native-controller",
+                "T09-WHOLE-COMMAND-TRANSPORT": "t09-whole-command-transport"}
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("ninth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["results"]}
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / "docs/provenance/v5-successors/SOURCE_MAP.json").read_text())["sources"]}
+
+    def test_exact_result_population_and_component_ownership(self):
+        self.assertEqual(set(self.EXPECTED), {k for k in self.results if k.startswith(("T09-", "D08-"))})
+        for rid,key in self.EXPECTED.items():
+            self.assertTrue(key in self.works, rid)
+            w=self.works[key];self.assertIn(rid,w.get("existing_result_ids",[]))
+            got={self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+            want={self.sources[s]["public_path"] for s in self.results[rid]["source_ids"]}
+            self.assertTrue(want <= got, (rid,sorted(want-got)))
+
+    def test_actual_reader_sections_reach_substantive_sources_and_evidence(self):
+        rel="docs/reader/PAPER-CATALOGUE.md";idx=self.mod.markdown_index((ROOT/rel).read_text())
+        for key in set(self.EXPECTED.values()):
+            self.assertTrue(key in self.works,key);w=self.works[key]
+            target,anchor=w["catalogue_entry"].split("#",1);self.assertEqual(target,rel)
+            h=next((h for h in idx["headings"] if h[0]==anchor),None);self.assertIsNotNone(h,key)
+            _,level,start=h;end=next((x[2] for x in idx["headings"] if x[2]>start and x[1]<=level),idx["line_count"])
+            reached={self.mod.resolve_reader_link(ROOT,rel,href)[0] for line,href in idx["links"]
+                     if start<=line<end and self.mod.resolve_reader_link(ROOT,rel,href) is not None}
+            want={self.cross["sources"][k]["path"] for k in w["source_keys"]}
+            self.assertTrue(want<=reached,(key,sorted(want-reached)))
+            self.assertTrue(any(p.startswith("experiments/orthemology-v5-successors/groups/t09-") for p in reached),key)
+
+    def test_composition_source_binding_and_cost_keep_separate_evidence(self):
+        key="t09-finite-certificate-calculus";self.assertTrue(key in self.works,key);w=self.works[key]
+        names={Path(self.cross["sources"][k]["path"]).name for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+        self.assertTrue({"CertificateBinding.lean","CertificateComposition.lean","COST_SCOPE.md","INDEPENDENT_REVIEW.md"}<=names)
+        self.assertNotIn("scientific_status",w)
+        key="t09-expression-correspondence";self.assertTrue(key in self.works,key);w=self.works[key]
+        names={Path(self.cross["sources"][k]["path"]).name for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+        self.assertTrue({"prcodec.py","P1_SCOPE.md","SOURCE_CORRESPONDENCE.md","WORDING_CLARIFICATION.md","PythonExprSafety.lean"}<=names)
+
+    def test_transport_is_a_distinct_work_not_controller_adoption(self):
+        a,b="t09-finite-native-controller","t09-whole-command-transport"
+        self.assertTrue(a in self.works and b in self.works)
+        self.assertNotEqual(self.works[a]["source_keys"],self.works[b]["source_keys"])
+        for key in (a,b):
+            self.assertNotIn("scientific_status",self.works[key])
+            self.assertTrue(self.works[key].get("supporting_source_keys"))
+
+
 if __name__ == "__main__":
     unittest.main()
