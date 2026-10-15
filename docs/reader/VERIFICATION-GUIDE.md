@@ -190,6 +190,13 @@ Start from the [result-specific guide](../../experiments/orthemology-v5-successo
 
 The guide also separates exact retained raw receipt identities from reviewed public summaries. A public summary can establish its own identity and source contract without revalidating private omitted log bytes. Failed historical attempts remain failures; a later audit-only continuation neither reruns the original producer nor creates additional independent executions. No receipt described there is a fresh scientific replay by this reader refactor.
 
+
+## Comparing a history theorem with its actual execution contract
+
+For the [Eighth sequence](PAPER-CATALOGUE.md#common-histories-shared-stores-and-actual-batches-the-eighth-sequence), inspect the named trace type and the concrete operations it admits before citing preservation or progress. The same epoch number need not authenticate the same policy; a false return need not be an identity transition; and a forward refinement need not preserve permission in reverse.
+
+The [shared interpreter clarification](../../experiments/orthemology-v5-successors/source-store/ac522e04a17cd99459c265883df2253716cf0ccd0779b1bd748fd0c0a2783f14/EXECUTION_CLARIFICATION.md) separates kernel-checked mathematical definitions from extraction/native evaluation. The separate [shared-root review supplement](../../experiments/orthemology-v5-successors/source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md) retains failed wrapper attempts and a withdrawn interpreter attribution. Neither source publication nor a new link check upgrades those historical executions.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

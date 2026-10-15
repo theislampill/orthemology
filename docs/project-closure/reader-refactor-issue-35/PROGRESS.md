@@ -6,7 +6,7 @@
 
 The current owner-directed continuation began at `a67e04c6c5efc4fc316b2001a1b455c62e2b2963`, tree `327fbe8f92740a5f7879dca15e5298024266dc5f`; corpus baseline `0784acddd4770f1190f758f264ba52b2b110bd27`. Its [full normal CI run 38626098224](https://github.com/theislampill/orthemology/actions/runs/38626098224) was observed completed successfully. Later changes require their own result. Owner authority covers this branch and PR, not merge, scientific reclassification or independent self-approval.
 
-There are **148 catalogue work entries, 413 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
+There are **154 catalogue work entries, 449 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
 
 Counts below distinguish implementation delivered, required work remaining and independent acceptance. They overlap and must not be added into an artificial grand total.
 
@@ -17,7 +17,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 | C00 — Re-anchor and bind | Authorised feature branch, pinned corpus, write boundaries, baseline failures and repeated live checks. | Final separate reviewer binding and candidate/currentness review. |
 | C01 — Population and owners | 16,077 baseline paths in 26 disjoint routing groups, 73 discovery owners, no recursive external admissions. | Independent denominator/classification reconciliation. Full work semantics belong to C03, not this inventory count. |
 | C02 — Representative design | Composite reference, related editions, non-PDF mathematics and all three intellectual probes, with positive/adverse source readings. | Independent reader/design assessment; author-side mechanical checks cannot supply it. |
-| C03 — Full curation and navigation | Six pages, 148 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
+| C03 — Full curation and navigation | Six pages, 154 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
 | C04 — Maintenance and checks | Source/edition/route controls, multi-edition repair, targeted CI and repeatable state generation. | Complete all five M01–M05 change-footprint exercises and T01–T18 contracts; final-candidate qualification. |
 | C05 — Independent review | Evidence and candidate exist; independent review not performed. | Separate semantic/usability/engineering review, repair findings, final SHA/tree approval. |
 | C06 — Owner and public readback | Draft PR 36 exists. | Dot/owner assessment and integration decision; only after explicit merge authority, resulting-main and public-route readback. |
@@ -30,7 +30,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 |---|---:|---|
 | Reader surfaces | 6 of 6 authored | Complete their corpus coverage and make the agreed entrance current. |
 | Current root entrance files | 0 of 3 refactored | README, STATUS and CONTRIBUTING; reconcile other editable current guides. |
-| Catalogue work records | 148 | Remaining count unknown until source-owned work/support disposition is completed. |
+| Catalogue work records | 154 | Remaining count unknown until source-owned work/support disposition is completed. |
 | Governed publication families | 6 of 6 routed | Final independent relationship/availability review; no invented build equivalence. |
 | Application files | 50 of 50 role-dispositioned | Final independent review of the ten works and supporting roles. |
 | Pilot reader journeys | 7 of 7 authored | Hosted/independent comprehension and exact-source qualification still needed. |
@@ -177,3 +177,9 @@ The next executable C03 unit is the remaining v5-successor collection, reusing t
 Six source-owned work entries and 25 original source bindings are implemented, bringing the catalogue to **148 works / 413 sources**. The completed continuation disposition is preserved unchanged. Criterion installation, charged interlocks, unknown-class attribution, opaque portfolios, finite-history safety and the compiled two-grant reference retain distinct scopes and direct argument/component routes. Three new source-family controls first failed and then passed; exact source/page binding checks passed locally. The exact native checkpoint supplies its own result. See COLLECTION-COVERAGE.md for the actual passages and adverse-reading controls.
 
 The Seventh six-work unit is author-curated; later typed history, clock, batch/controller and remaining successor material still requires its own disposition. C03 whole-corpus completion, root navigation, full C04 maintenance/control qualification and separate C05/C06 acceptance remain outstanding. Continue into the next successor family without repeating this one.
+
+## Recovered Seventh checkpoint and completed Eighth author-curation slice
+
+The interrupted Seventh content survived as exact native-tested tree `0e56ee603db0d0cdcc4c41c1aae9d70964dce4f8`. The previously created commit `851cc8a9444f7c28395fe2a56348dac85c712abb` had not reached the branch; its artifact and fourteen member hashes were checked and the connector advanced the ref with an expected-head lease. Recorded 151-test/native success is inherited evidence, not a fresh full local run. The local restored checkout matches the commit/tree, with recent ancestry deliberately shallow; original archives remain unchanged.
+
+Six Eighth work families now cover all twelve original result scopes through their actual narrative, formal-component and evidence owners. This is complete author curation of that named sequence, not all successor paths, C03 closure or independent acceptance. Earlier 148 work and 413 source-record values are unchanged. Next: Ninth expression/certificate/controller works and remaining successors, then the other bounded collections and C04 maintenance exercises. No owner continuation decision is required.

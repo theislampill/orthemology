@@ -501,6 +501,49 @@ The profile distinguishes independent type-convergent activity, provenance-prese
 
 The positive design admits plural local placements, bounded agreement with dissent and unresolved conflict—not only unanimous closure. Shared types provide no transport service by themselves; multiple operators imply neither independence nor truth or tawātur. This is an unimplemented downstream outline. Its local-authorisation, source-authenticity, semantic-reconstruction and execution-witness requirements are not bypassed by receiving or parsing a packet.
 
+
+## Common histories, shared stores and actual batches: the Eighth sequence
+
+The Eighth works ask whether several separately proved mechanisms really describe **the same history and state**. Their [original result/evidence guide][t08-guide] distinguishes twelve result scopes and four physical suites. Repeated imports or several result bindings do not create several independent replays. The following six work families retain the successive source contracts.
+
+### Exact common histories and the typed lifecycle
+
+Read the [bounded lifecycle argument][t08-lifecycle] and its [declaration guide][t08-theorem-guide]. The common interface exposes local admission and effects without assuming the safety conclusion. Exact inverse state/event maps recover every original finite history, including damaged states. The typed specialisation retains complete successors, ordered paths, nonces, custody and separate installation/repair counters. A fresh installation may leave the displayed rule unchanged while increasing its version/history; literal state idempotence would be false.
+
+A stronger `Aligned` relation, not the earlier weak snapshot, connects actual preparation, attempt, authentic certification and recorded or unrecorded delivery to primitive histories. False preparation can still leave commitments. The original raw epochs 2 and 3 remain unchanged; proof-side subtraction does not legitimise commands below the base. Initial alignment establishes the stated post-boundary class, not a fabricated prehistory. Correct numerical epoch shape alone does not authenticate the full policy. The bound 3,013-byte witness constructs genuine installation then repair; it does not discover a fault-free path or verify a physical observation/clock service. Exact results: [common correspondence][t08-common-evidence], [typed histories][t08-typed-evidence] and [actual-call lifecycle][t08-lifecycle-evidence].
+
+### Aggregate cancellation retains partial effects
+
+The [cancellation successor][t08-cancellation] extends the actual operation class rather than reading stronger claims into the old lifecycle. A valid call writes complete-envelope tombstones at intact responders **before** its Boolean threshold is decided. A false reply can therefore leave a durable partial effect. Distinct acknowledgements accumulated over several calls are not the same as the responder count in the current call.
+
+A true call yields an intact selected tombstone and blocks that exact full envelope over every later finite trace of the enlarged class. The converse Boolean implication fails. Cleanup does not undo an earlier landing; changing the path order, action, successor or nonce changes the command. The actor-string equality is a model property, not authentication of a real person. The [original declaration and review route][t08-cancel-evidence] retains these positive results without inventing a global nonce ban, authentic time acquisition or general progress theorem.
+
+### Expiry is not clock authentication
+
+The [reference-clock extension][t08-clock] explicitly introduces a new numerical update, absent from the accepted compiled service. Arbitrary set-time preserves structural alignment because the common state has no clock field. The separately named monotone trace class forbids backward time while permitting equal values and arbitrarily large forward jumps.
+
+Live admission implies `now < leaseEnd`. A fixed expired envelope remains rejected through every monotone continuation. The same unlanded, uncancelled envelope can revive after rollback outside that class; a genuine tombstone survives even rollback. Updating the world's annotation does not refresh the actor's stored observation. The [scoped formal result][t08-clock-evidence] is thus useful safety mathematics, not proof of clock authenticity, elapsed deadlines, bounded skew or service progress. A large valid numerical jump can exhaust a lease without doing work.
+
+### Actual batch success and complete-envelope freshness
+
+This is one evolving actual-batch work: read the [initial refinement][t08-batch], [native/source successor][t08-batch-successor], [exact surviving-trial characterisation][t08-batch-survival], and [corrected retry analysis][t08-batch-retry]. The unchanged four-path `runBatch` refines an actual operation history, retaining partial preparations and cleanup. For its fixed action and literal withholding flag, at most one landing occurs without needing the stronger alignment hypotheses. Existence of a landing is a separate result.
+
+With the specified actor/world admission to the same full successor and synchronised, unrevoked good-root policies, exactly one landing occurs **iff** a predicted envelope selects only good roots and has no pre-existing exact tombstone at those selected roots. This exact characterisation needs neither a global nonce high-water condition nor freshness of every trial. The surviving-path predicate is proof-side state information, not an observation oracle supplied to the actor. Fault-bound and authenticity assumptions for other alignment results remain their own.
+
+The corrected source retry is instructive: an actor can receive a new policy before the roots, fail all trials, and nevertheless tombstone its envelopes through cleanup. Later policy delivery alone does not rescue the same envelopes. A genuinely new valid envelope can recover; a separately authorised changed lease can do so even with old nonce numbers. This is not permission to alter a real grant. The [two-batch source projection][t08-native-evidence] retains the 3,013-byte installation/repair fixture and exact histories. It does not certify the surrounding IO runner, arbitrary interleavings or a physical retry service. The [batch result][t08-batch-evidence] preserves the distinction between a synthetic `closed=true` proposal-rejection record and an actual cancellation certificate.
+
+### Shared storage is not independent label memory
+
+Read [SharedAlias's result and limits][t08-shared] and the [retained review supplement][t08-shared-review]. One actual root's shared store can acquire a commitment through a selected label and expose it at an unselected alias. Literal pullback into independent label-local memories is therefore obstructed. The positive replacement is a **weak forward simulation**: exact plant/control and genuine receipts are retained, commitments are restricted to selected labels, and shared revocations/tombstones may add vetoes. Concrete permission implies abstract permission, not conversely.
+
+Under the fixed map and lifetime-fault contract, finite traces preserve genuine landing commands, requesters and times; typed admission and exact successor/custody/counter results follow. Internal proof-witness steps do not manufacture additional acknowledgements or form an actor-visible costed transcript. The compact seven-label witness readies five gate occurrences through four actual stores and demonstrates one ABC rule installation, not source-text repair. The [obstruction/simulation][t08-alias-evidence] and [typed consequences][t08-alias-typed-evidence] supply no hidden-map secrecy, opaque-search lower bound or complete shared runtime/lifecycle composition. The review supplement also preserves failed wrapper attempts and the explicit withdrawal of an unrecorded interpreter-version attribution.
+
+### A protected schedule is not an unconditional time bound
+
+The [shared-controller argument][t08-controller] gives a positive finite schedule without trusting success receipts or reading hidden faults: synchronise, then prepare, attempt, cancel and close every prescribed path. Authentic source admission, accurate starting observation, good service slots, fresh complete commands and a protected window are actual premises. The [execution clarification][t08-execution] identifies the whole interpreter as a classical/noncomputable mathematical reference—not an extracted or natively executed successor to the separate four-path source batch.
+
+For the fixed seven-label/five-label order, the reference counts 259 logical events; one admissible world makes the first 20 trials effect-free and the 21st attain the installation. This is [sharpness for that order/world][t08-attained-evidence], not optimality over all controllers. The [finite bad-store extension][t08-bad-store-evidence] permits any finite number of writes at the fixed bad roots while preserving the final good-state effect. Total length includes those added events and can be arbitrarily delayed; an infinite hostile prefix has no termination guarantee. Read the [protected-controller result][t08-controller-evidence] for the complete contract. Neither event counting nor unchanged source-gate code establishes a physical service deadline.
+
 ## Supporting reference, not another research article
 
 **Orthemology notation gallery.** [Markdown reference][gallery] · [Governed PDF][render-notation-gallery].
@@ -1295,3 +1338,29 @@ The [collection guide](../../experiments/orthemology-v5-continuations/README.md)
 This reference also gives an explicit **reported-result/availability route** for `T4-ENDPOINT`: the source owner credits recovered 59-byte incremental and 105-byte prefix programmes and their ordinary `(0,2)` cost, while the [recovery evidence account](../../docs/provenance/v5-research-continuations/notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md) denies that source recovery restores vanished fourth-tranche Lean or audit evidence. Consult those retained source records for the exact supported bodies and procedures; this entry does not manufacture an executable from the brief registry claim.
 
 All 1,200 collection paths now have explicit work/support/history dispositions in the [existing crosswalk](../project-closure/reader-refactor-issue-35/CROSSWALK.json). Shared Lean dependencies, tests, suite descriptors, receipts and repeated aliases route through this directory where no exclusive work attachment is warranted. They are not counted as additional papers, independent proofs or independent observations. [Reading and classification scope](../project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md#complete-v5-continuation-disposition) states what was actually examined.
+
+[t08-lifecycle]: ../../experiments/orthemology-v5-successors/source-store/50367da2d04f4e85b5c38f41d20db6e8f9ecb8a0bb245cf50365464e4b062e90/LIFECYCLE_ARGUMENT.md
+[t08-theorem-guide]: ../../experiments/orthemology-v5-successors/source-store/c443ac6238304a5d11e751e8ffc22fad80905e16b1459f8695bcaf0fdfc091ea/THEOREM_GUIDE.md
+[t08-cancellation]: ../../experiments/orthemology-v5-successors/source-store/485083cfa8c0510ca3af177abd23d6e51835bf0c91074797c9d9fc4a0920fc69/CANCELLATION_ARGUMENT.md
+[t08-clock]: ../../experiments/orthemology-v5-successors/source-store/26ec16efd3983558c87eeeda3029b65f653879600a9cb2bc2022243b77587966/REFERENCE_CLOCK_ARGUMENT.md
+[t08-batch]: ../../experiments/orthemology-v5-successors/source-store/18c76e8f23d2e55bf1ac6911920b865cb17641141d83b4f408c88083ca111793/BATCH_ARGUMENT.md
+[t08-batch-successor]: ../../experiments/orthemology-v5-successors/source-store/94cee25cff035891f95993a78ed56cdac6ec9dfc8353acfa2e0145dfa899d696/BATCH_SUCCESSOR_ARGUMENT.md
+[t08-batch-survival]: ../../experiments/orthemology-v5-successors/source-store/58765f52aba9d4493550d2df6b7cffdfbab1ec82146b4f2a60a8f403bb379bee/BATCH_SURVIVAL_ARGUMENT.md
+[t08-batch-retry]: ../../experiments/orthemology-v5-successors/source-store/a093c7ade358a41e7cec9f08053e81f30d6b35c3236d15f9c4da401b7c0e2a84/BATCH_RETRY_ARGUMENT_CORRECTED.md
+[t08-shared]: ../../experiments/orthemology-v5-successors/source-store/0ca71bec66a49f143354ad9107b31068766ff4bdfaaffd5f2143b347048dca44/RESULTS.md
+[t08-shared-review]: ../../experiments/orthemology-v5-successors/source-store/8d0d5c3934128136fbd69b70b8a0669fe055e5eb005797e25269a69157361657/PUBLIC_ACCEPTANCE.md
+[t08-controller]: ../../experiments/orthemology-v5-successors/source-store/b10874ca3f4e19c151944b91e2824b661af48d94e51bdd4013b1e8950dcf571d/ARGUMENT.md
+[t08-execution]: ../../experiments/orthemology-v5-successors/source-store/ac522e04a17cd99459c265883df2253716cf0ccd0779b1bd748fd0c0a2783f14/EXECUTION_CLARIFICATION.md
+[t08-guide]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md
+[t08-common-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-common-history
+[t08-typed-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-typed-history
+[t08-lifecycle-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-lifecycle-v4
+[t08-cancel-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-cancellation-v5
+[t08-clock-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-monotone-clock-v6
+[t08-batch-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-actual-batch
+[t08-native-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-native-two-batch
+[t08-alias-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-shared-obstruction
+[t08-alias-typed-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-shared-typed
+[t08-controller-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-protected-controller
+[t08-attained-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-attained-21st
+[t08-bad-store-evidence]: ../../experiments/orthemology-v5-successors/groups/t08-history/README.md#t08-finite-bad-store

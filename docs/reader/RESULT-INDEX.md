@@ -377,6 +377,13 @@ The original [six-result guide](../../experiments/orthemology-v5-successors/grou
 
 These are existing identifiers, not newly registered discoveries. A shared physical suite, copied receipt or formal dependency does not supply independent evidence each time it is linked.
 
+
+## Eighth operational-history results
+
+The [six work families](PAPER-CATALOGUE.md#common-histories-shared-stores-and-actual-batches-the-eighth-sequence) connect all twelve original `T08-*` scopes to their argument and proof owners. The [original Eighth guide](../../experiments/orthemology-v5-successors/groups/t08-history/README.md) supplies the exact declarations, assumptions, scoped review records and four physical-suite bindings; no result IDs are reassigned here.
+
+Use [common/typed/lifecycle correspondence](PAPER-CATALOGUE.md#exact-common-histories-and-the-typed-lifecycle), [cancellation](PAPER-CATALOGUE.md#aggregate-cancellation-retains-partial-effects), [clock expiry](PAPER-CATALOGUE.md#expiry-is-not-clock-authentication), [actual batches and retry](PAPER-CATALOGUE.md#actual-batch-success-and-complete-envelope-freshness), [shared alias simulation](PAPER-CATALOGUE.md#shared-storage-is-not-independent-label-memory), or [protected schedules and finite corruption](PAPER-CATALOGUE.md#a-protected-schedule-is-not-an-unconditional-time-bound). These are different operation/representation contracts, not twelve independent implementations.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

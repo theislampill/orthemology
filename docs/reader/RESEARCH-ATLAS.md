@@ -186,6 +186,13 @@ A useful connection across **restoration, provenance and semantic fidelity (aven
 
 The criterion installer can succeed while leaving the newly exposed document defect untouched. The interlock and root-attribution results then specify how genuinely distinct support and complete-command memories permit safe repair despite faults. The covering result prices the additional uncertainty at an opaque interface, and the finite-history work preserves the connection through actual intervening events. None of those interfaces creates the authority of the retained recovery standard. This local independence from metaphysical premises is not a denial of the separately catalogued affirmative foundational arguments.
 
+
+## When individually valid mechanisms do not yet share one model
+
+The [Eighth history sequence](PAPER-CATALOGUE.md#common-histories-shared-stores-and-actual-batches-the-eighth-sequence) connects restoration and provenance preservation with semantic fidelity (avenues 4, 5 and 8). Its contribution is a constructive answer to “which actual calls and state coordinates does this proof cover?” Exact common histories, stronger typed lifecycle alignment, full-command cancellation, numerical expiry and surviving batch trials each add a specified contract. A later extension is not evidence that an earlier type already expressed it.
+
+The shared-store study also shows why failure dependence and memory dependence are different. Copying a root label is not copying an independent store. Its receipt-preserving forward relation admits extra concrete vetoes; turning that one-way simulation into a two-way permission equivalence would lose the very phenomenon it captures. The required transfer still includes authentic policy, actual shared storage and the declared observation/service conditions—not simply matching field names.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

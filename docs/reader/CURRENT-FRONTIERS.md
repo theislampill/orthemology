@@ -153,6 +153,13 @@ The [Seventh sequence](PAPER-CATALOGUE.md#criterion-correction-and-charged-live-
 
 Do not leave a historical proof boundary open after its specifically named later extension has closed it, or credit a later result back to an earlier model with weaker fields. In particular, the original finite-history proof is not the typed plant history, a constant-clock model is not clock expiry, and safe holds alone do not prove progress. The forthcoming successor entries retain those separate scopes; the original [scoped result owner](../provenance/v5-successors/RESULT_STATUS.json) controls statement standing.
 
+
+## History refinement and shared-root service
+
+The [Eighth catalogue](PAPER-CATALOGUE.md#common-histories-shared-stores-and-actual-batches-the-eighth-sequence) distinguishes resolved source-model questions from remaining transfer. Aggregate cancellation, monotone-reference expiry, the exact four-path surviving-trial criterion and protected finite shared schedules have positive, separately scoped results. Earlier “not included” statements are historical boundaries, not grounds to suppress later constructions.
+
+The work does not yet supply authentic clocks or observation acquisition, a whole shared-storage/native lifecycle join, arbitrary asynchronous or competing-policy progress, or execution of the classical shared interpreter. Finite bad-store insertions preserve its effect but do not bound delay or defeat an infinite adversarial prefix. An advance must identify the missing service/model relation rather than merely combine the existing theorems' names.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

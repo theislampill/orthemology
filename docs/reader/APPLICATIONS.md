@@ -215,6 +215,13 @@ The [criterion-installer example](PAPER-CATALOGUE.md#installing-a-criterion-is-n
 
 For a fault-prone deployment, the [live-interlock and attribution studies](PAPER-CATALOGUE.md#charged-live-interlocks-and-repair-after-quiescence) identify additional conditions that an implementation must actually satisfy: genuine shared-dependency accounting, non-bypassable complete-command gates, durable cancellation, independently serviced control paths and the correct consent model. The model's constructive repair is not evidence that a real platform already implements those conditions.
 
+
+## Retrying a repaired process without replaying a cancelled command
+
+The [actual-batch work](PAPER-CATALOGUE.md#actual-batch-success-and-complete-envelope-freshness) offers a worked protocol-design lesson: failed attempts can change cancellation memory even when the target data are unchanged. Delivering a delayed policy therefore need not make the old actor's envelopes usable. The exact surviving-trial theorem states when another eligible path will land; it does not reveal the hidden fault map to a real client.
+
+This is an application of stated source-model theorems, not an implemented distributed service. A deployment must supply authentic policy/observations, full-command identity, durable root-wide memories and its actual service/interference contract. The [protected shared schedule](PAPER-CATALOGUE.md#a-protected-schedule-is-not-an-unconditional-time-bound) is a different classical reference construction, with logical event counts rather than physical deadlines.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

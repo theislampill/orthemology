@@ -2054,5 +2054,79 @@ class SeventhSourceFamilyTests(unittest.TestCase):
                     self.assertFalse(any(x["source_keys"] == [k] for x in self.cross["works"]), path)
 
 
+
+
+class EighthHistoryWorkTests(unittest.TestCase):
+    """The independently owned twelve results belong to six related works."""
+    EXPECTED = {
+        "T08-COMMON-HISTORY": "t08-common-lifecycle",
+        "T08-TYPED-HISTORY": "t08-common-lifecycle",
+        "T08-LIFECYCLE-V4": "t08-common-lifecycle",
+        "T08-CANCELLATION-V5": "t08-aggregate-cancellation",
+        "T08-MONOTONE-CLOCK-V6": "t08-reference-clock",
+        "T08-ACTUAL-BATCH": "t08-actual-batch",
+        "T08-NATIVE-TWO-BATCH": "t08-actual-batch",
+        "T08-SHARED-OBSTRUCTION": "t08-shared-alias",
+        "T08-SHARED-TYPED": "t08-shared-alias",
+        "T08-PROTECTED-CONTROLLER": "t08-protected-controller",
+        "T08-ATTAINED-21ST": "t08-protected-controller",
+        "T08-FINITE-BAD-STORE": "t08-protected-controller",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("eighth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["results"]}
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / "docs/provenance/v5-successors/SOURCE_MAP.json").read_text())["sources"]}
+
+    def test_original_eighth_results_reach_work_and_exact_formal_components(self):
+        self.assertEqual(set(self.EXPECTED), {k for k in self.results if k.startswith("T08-")})
+        for rid, key in self.EXPECTED.items():
+            self.assertTrue(key in self.works, rid)
+            w = self.works[key]
+            self.assertIn(rid, w.get("existing_result_ids", []))
+            got = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+            want = {self.sources[s]["public_path"] for s in self.results[rid]["source_ids"]}
+            self.assertTrue(want <= got, (rid, sorted(want - got)))
+
+    def test_each_work_has_direct_argument_and_scoped_evidence_routes(self):
+        rel = "docs/reader/PAPER-CATALOGUE.md"
+        idx = self.mod.markdown_index((ROOT / rel).read_text())
+        for key in set(self.EXPECTED.values()):
+            self.assertTrue(key in self.works, key)
+            w = self.works[key]
+            target, anchor = w["catalogue_entry"].split("#", 1)
+            self.assertEqual(target, rel)
+            heading = next((h for h in idx["headings"] if h[0] == anchor), None)
+            self.assertIsNotNone(heading, key)
+            _, level, start = heading
+            end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+            reached = {self.mod.resolve_reader_link(ROOT, rel, href)[0]
+                       for line, href in idx["links"] if start <= line < end
+                       and self.mod.resolve_reader_link(ROOT, rel, href) is not None}
+            self.assertTrue({self.cross["sources"][k]["path"] for k in w["source_keys"]} <= reached, key)
+            self.assertIn("experiments/orthemology-v5-successors/groups/t08-history/README.md", reached)
+
+    def test_successive_batch_and_clock_contracts_keep_distinct_sources(self):
+        for key in ["t08-common-lifecycle", "t08-aggregate-cancellation", "t08-reference-clock", "t08-actual-batch"]:
+            self.assertTrue(key in self.works, key)
+        paths = {Path(self.cross["sources"][k]["path"]).name
+                 for k in self.works["t08-actual-batch"]["source_keys"]}
+        self.assertEqual(paths, {"BATCH_ARGUMENT.md", "BATCH_SUCCESSOR_ARGUMENT.md", "BATCH_SURVIVAL_ARGUMENT.md", "BATCH_RETRY_ARGUMENT_CORRECTED.md"})
+        # A classical controller and its execution clarification are one work;
+        # the distinct source-level four-path implementation is not substituted.
+        self.assertTrue("t08-protected-controller" in self.works)
+        w = self.works["t08-protected-controller"]
+        names = {Path(self.cross["sources"][k]["path"]).name
+                 for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+        self.assertIn("EXECUTION_CLARIFICATION.md", names)
+        self.assertIn("BadStoreErasure.lean", names)
+        self.assertNotIn("scientific_status", w)
+
+
 if __name__ == "__main__":
     unittest.main()
