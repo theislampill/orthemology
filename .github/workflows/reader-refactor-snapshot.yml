@@ -1,40 +1,118 @@
-name: issue-35-resume-20261015
+name: issue-35-tenth-works
 on:
   push:
     branches: [refactor/issue-35-research-reader-20261012]
     paths: [.github/workflows/reader-refactor-snapshot.yml]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  recover:
+  qualify:
     if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v6
         with:
+          ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
-      - name: Export exact public Git objects, never credentials or runner state
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - name: Install unchanged locked dependencies
+        run: python -m pip install --quiet -r requirements-ci.lock.txt
+      - name: Reproduce the exact source-preserving candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          saved=d8fee1718dbeb30716df4e4e4129656441fff05a
-          test "$(git rev-parse HEAD^)" = "$saved"
-          test "$(git rev-parse "$saved^{tree}")" = f33339a1df6ec6e0373b053403b73016edf8b79d
-          out="$RUNNER_TEMP/issue35-resume-20261015"
-          mkdir -p "$out"
-          git update-ref refs/recovery/issue35-resume HEAD
-          git bundle create "$out/history.bundle" refs/recovery/issue35-resume
-          printf '%s\n' "$saved" > "$out/saved-head.txt"
-          git rev-parse HEAD > "$out/transport-head.txt"
-          git rev-parse 'HEAD^{tree}' > "$out/transport-tree.txt"
-          git rev-parse origin/main > "$out/main-head.txt"
-          git bundle verify "$out/history.bundle"
-          (cd "$out"; sha256sum history.bundle ./*.txt > SHA256SUMS)
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+          mkdir -p "$RUNNER_TEMP/issue35-tenth"
+          echo "EVIDENCE_DIR=$RUNNER_TEMP/issue35-tenth" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import base64,hashlib,json,lzma,os,subprocess,urllib.request
+          from pathlib import Path
+          import yaml
+          base='e99faa8c2e03df1a2108b6fb1ab12a0ebbae7890'
+          expected='839ab8c09ea3aec5220a4a7e2fa57381d3ccf737'
+          oid='54c403b5c2215791a5de9404c4928994d3dcf668'
+          def git(*args):return subprocess.check_output(['git',*args]).decode().strip()
+          if git('rev-parse','HEAD^')!=base or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):
+              raise SystemExit('Unexpected transport ancestry or worktree')
+          req=urllib.request.Request('https://api.github.com/repos/theislampill/orthemology/git/blobs/'+oid,headers={'Accept':'application/vnd.github+json','Authorization':'Bearer '+os.environ['GH_TOKEN']})
+          with urllib.request.urlopen(req,timeout=45) as r:payload=json.load(r)
+          body=base64.b64decode(payload['content'])
+          if payload['sha']!=oid or hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest()!=oid:raise SystemExit('Wrong transport blob')
+          raw=lzma.decompress(body)
+          if hashlib.sha256(raw).hexdigest()!='8310b9480db5b35cf8ad08b9cda3eeade9ef0906ac04c58a722606e629dd839b':raise SystemExit('Transport changed')
+          data=json.loads(raw)
+          if data['format']!='issue35-exact-patch-v1':raise SystemExit('Unknown transport format')
+          out=Path(os.environ['EVIDENCE_DIR']);(out/'authored-transport.json').write_bytes(raw)
+          before=yaml.safe_load(Path('docs/current-state.yaml').read_text())['authored']
+          subprocess.run(['git','apply','--index','--unidiff-zero'],input=data['patch'].encode(),check=True)
+          for p,h in data['expected_files'].items():
+              if hashlib.sha256(Path(p).read_bytes()).hexdigest()!=h:raise SystemExit('Authored bytes differ: '+p)
+          subprocess.run(['git','rm','--','.github/workflows/reader-refactor-snapshot.yml'],check=True)
+          subprocess.run(['python','-B','scripts/generate_current_state.py'],check=True)
+          if yaml.safe_load(Path('docs/current-state.yaml').read_text())['authored']!=before:raise SystemExit('Authored state changed')
+          subprocess.run(['python','-B','scripts/make_manifest.py'],check=True)
+          subprocess.run(['git','add','--','docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256'],check=True)
+          allowed=set(data['expected_files'])|{'docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256','.github/workflows/reader-refactor-snapshot.yml'}
+          if set(git('diff',base,'--name-only').splitlines())!=allowed:raise SystemExit('Unapproved write set')
+          if git('write-tree')!=expected:raise SystemExit('Local/native tree mismatch')
+          (out/'candidate.json').write_text(json.dumps({'parent':os.environ['GITHUB_SHA'],'tree':expected,'source_base':data['source_base'],'authored_files':sorted(data['expected_files'])},indent=2)+'\n')
+          print('Exact tested candidate:',expected)
+          PY
+      - name: Reader and existing integration qualification
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B tests/test_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/reader.txt"
+          python -B -O tests/test_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/reader-optimized.txt"
+          python -B tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census.txt"
+          python -B -O tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census-optimized.txt"
+          python -B scripts/check_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/bindings.txt"
+          python -B scripts/validate_t20_v6_projection.py 2>&1 | tee "$EVIDENCE_DIR/projection.txt"
+          python -B scripts/generate_current_state.py --check 2>&1 | tee "$EVIDENCE_DIR/drift.txt"
+          python -B scripts/validate_repo.py 2>&1 | tee "$EVIDENCE_DIR/hygiene.txt"
+          python -B scripts/validate_current_state.py 2>&1 | tee "$EVIDENCE_DIR/state.txt"
+          python -B scripts/validate_review_state.py 2>&1 | tee "$EVIDENCE_DIR/review.txt"
+          python -B scripts/validate_internal_references.py 2>&1 | tee "$EVIDENCE_DIR/references.txt"
+      - name: Upload the tested tree without advancing a branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64,json,os,subprocess,urllib.request
+          from pathlib import Path
+          out=Path(os.environ['EVIDENCE_DIR']);candidate=json.loads((out/'candidate.json').read_text())
+          def git(*args):return subprocess.check_output(['git',*args]).decode().strip()
+          if git('write-tree')!=candidate['tree']:raise SystemExit('Candidate drift after checks')
+          api='https://api.github.com/repos/theislampill/orthemology'
+          def request(path,data=None):
+              req=urllib.request.Request(api+path,data=None if data is None else json.dumps(data).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'},method='GET' if data is None else 'POST')
+              with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+          if request('/git/ref/heads/refactor/issue-35-research-reader-20261012')['object']['sha']!=os.environ['GITHUB_SHA']:raise SystemExit('Remote head advanced')
+          elements=[]
+          for p in candidate['authored_files']+['docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256']:
+              oid=request('/git/blobs',{'content':base64.b64encode(Path(p).read_bytes()).decode(),'encoding':'base64'})['sha']
+              mode,want,_=git('ls-files','-s','--',p).split(None,2)
+              if oid!=want:raise SystemExit('Uploaded blob differs: '+p)
+              elements.append({'path':p,'mode':mode,'type':'blob','sha':oid})
+          elements.append({'path':'.github/workflows/reader-refactor-snapshot.yml','mode':'100644','type':'blob','sha':None})
+          tree=request('/git/trees',{'base_tree':git('rev-parse','HEAD^{tree}'),'tree':elements})['sha']
+          if tree!=candidate['tree']:raise SystemExit('Uploaded tree differs')
+          (out/'uploaded-tree.json').write_text(json.dumps({'tree':tree,'parent':os.environ['GITHUB_SHA'],'branch_advanced':False},indent=2)+'\n')
+          print('Exact verified content tree uploaded:',tree)
+          PY
+          (cd "$EVIDENCE_DIR"; find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS)
+      - name: Preserve observed evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: issue35-resume-20261015-${{ github.sha }}
-          path: ${{ runner.temp }}/issue35-resume-20261015/
+          name: issue35-tenth-${{ github.sha }}
+          path: ${{ runner.temp }}/issue35-tenth/
           retention-days: 14
           if-no-files-found: error
