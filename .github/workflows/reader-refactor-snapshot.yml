@@ -36,7 +36,7 @@ jobs:
           def git(*a):return subprocess.check_output(['git',*a]).decode().strip()
           base='560a416255b45640d9bd108f0c006a1a8097fbc5'
           expected='7ce8214875dd56cb3d5550256fb9adacfcd1953b'
-          if git('rev-parse','HEAD^')!=base or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):
+          if git('rev-parse','HEAD^')!='31470a4b9ced03e1f8f3f5932a64b3013563ba79' or git('rev-parse','HEAD^^')!=base or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):
               raise SystemExit('Transport ancestry or checkout changed')
           oid='9e647dc073073dfe836fcc4144938a7cdecd51cd'
           req=urllib.request.Request('https://api.github.com/repos/theislampill/orthemology/git/blobs/'+oid,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
@@ -51,8 +51,23 @@ jobs:
           (out/'authored-transport.json').write_bytes(raw)
           before=yaml.safe_load(Path('docs/current-state.yaml').read_text())['authored']
           subprocess.run(['git','apply','--index','--recount','--unidiff-zero'],input=data['patch'].encode(),check=True)
-          fill=data['source_fill'];path=Path('docs/project-closure/reader-refactor-issue-35/CROSSWALK.json')
-          text=path.read_text();cross=json.loads(text);existing={v['path'] for k,v in cross['sources'].items() if k!='__ISSUE35_T20_SOURCE_FILL__'}
+          fill=data['source_fill'];path=Path('docs/project-closure/reader-refactor-issue-35/CROSSWALK.json');text=path.read_text()
+          # Replacing 134 source lines by a transport marker moved a zero-context
+          # insertion. Restore only these seven exact new rows to their tested
+          # position. The original expected content hash below stays unchanged.
+          order=['t20-church-probe','t20-scalar-fusion','t20-hase-negative-routes','t20-cnd-scope','t20-modal-union','t20-ground-extension','t20-grounded-support']
+          moved={};kept=[]
+          for line in text.splitlines(keepends=True):
+              if line.startswith('    {"key": '):
+                  key=json.loads(line.strip().rstrip(','))['key']
+                  if key in order:
+                      if key in moved:raise SystemExit('Duplicate transported work')
+                      moved[key]=line
+                      continue
+              kept.append(line)
+          if set(moved)!=set(order):raise SystemExit('Missing transported work')
+          text=''.join(kept).replace('  "works": [\n','  "works": [\n'+''.join(moved[k] for k in order),1)
+          cross=json.loads(text);existing={v['path'] for k,v in cross['sources'].items() if k!='__ISSUE35_T20_SOURCE_FILL__'}
           selected=json.loads(Path(fill['index']).read_text())['selected_sources'];added={}
           for component,primary in fill['components'].items():
               for source in selected:
