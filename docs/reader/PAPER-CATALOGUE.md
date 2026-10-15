@@ -774,6 +774,65 @@ The order of information can change the optimum even with identical roots and me
 
 The result keeps compulsory action, observability, independent unrevealed coins and the adversary's permitted timing explicit. Allowing abstention changes the problem; “minimax” is not permission to expose a person to harm. The model's informational limits are not assertions that an omniscient source lacks future knowledge. This mathematical timing note is distinct from the collection's administrative clock-rounding erratum.
 
+## Criterion correction and charged live repair
+
+These six related Seventh works make a concrete progression from correcting an interpreted rule to preserving its authorised execution through faults and version changes. Their particular models and later formal evidence are not interchangeable, and later successors receive separate entries.
+
+### Installing a criterion is not editing the draft
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/4df16d4432931594e928292b9b1535f195588d8ac5bd6af4ab5cd7aa1b0cf7c2/CRITERION_INSTALLATION_ARGUMENT.md) · [Related transport argument](../../experiments/orthemology-v5-successors/source-store/855b8f438e5d5f05b53e2d6ee151375a1601d3e568f53b31316b336f07f3def1/TRANSPORT_ARGUMENT.md) · [T07-CRITERION-V3 — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-criterion-v3).
+
+The installation work gives a **working rule-change transition**, not merely a suggestion to rename a checker. In a two-constructor language, `NORMALIZED_LF` wrongly accepts an extra trailing newline for an exact-byte recovery task, while `EXACT` accepts precisely the fixed source. The latter's adequacy holds for every candidate sequence, not just the tested examples. Installation updates only the interpreted rule, its version and its history. It intentionally leaves the defective draft untouched; that now-visible document defect needs a separately authorised repair.
+
+The accompanying transport argument explains why a recipient can reuse an adequacy proof without thereby acquiring another recipient's live permission. Source version, draft revision, installed-rule version and authority epoch are distinct. A copied rule can remain adequate after a grant expires. The cover-and-preserve result characterises uniform evidence-class transport under its stated predicate class, not every ordinary fallible warrant. **This is positive retained-standard correction:** the recovery target and reasons used to diagnose the weak rule survive the repair. It is not an established instance of overturning the entire authority basis, nor proof that an arbitrary updater or real grant system implements the typed transition.
+
+### Charged live interlocks and repair after quiescence
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/c33e271b68f0ab941bab29cf8ca679ea53d1d26c108071e2d7a313ae222022ab/MODEL_AND_PROOFS.md) · [T07-DYNAMIC-V2 — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-dynamic-v2).
+
+The dynamic model combines a physical-veto premise, versioned commands, revocation memory, cancellation and an executable repair strategy. With `n` genuine roots and a lifetime union of at most `B` faulty roots, a `q`-root path and `r`-root revocation set satisfy the declared safety and availability contract exactly when
+
+```text
+q + r > n + B
+q ≤ n − B,   r ≤ n − B.
+```
+
+The minimum is `n = 3B + 1`, with `q = r = 2B + 1`. This is **not a new universal distributed-systems threshold**: the source explicitly imports familiar quorum mathematics and contributes its exact place in the fully charged repair mechanism. Every actual landing must traverse the same complete-command live gates; clocks, control ports and active shared dependencies cannot be made trustworthy by naming them infrastructure.
+
+After a stable authorised descriptor is delivered and bounded intact service is available, exhaustive safe attempts repair the whole target, including safely cancelling withheld trials. The cap starts at that stable-delivery boundary, not at an unobserved global change. Safety permits endless holds; progress and persistence additionally need their stated horizon and service premises. Actual external consent must satisfy the source's reservation/closure contract—certificate arithmetic cannot redefine an owner's immediate withdrawal.
+
+### One unknown correlated-root class
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/a59fc17c52c53d341d19fbae37622056b682df5b3b771ddbb8b7ef76bbd28662/GENERAL_UNKNOWN_CLASS_THEOREM.md) · [T07-UNKNOWN-ROOT-ABC — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-unknown-root-abc).
+
+This work replaces knowledge of the exact root map with a warranted **family of possible maps**. Exactly one unknown class of `c` labels shares a root; the other labels are singletons. For `B ≥ 1` faulty actual roots, set `k = B + c − 1`. The argument derives robust root-image intersection from the maps themselves: every compatible map gives more than `B` shared roots exactly when the label intersection contains at least `B + c` labels. It handles an alias class bridging disjoint label sets and does not export this equivalence to the excluded zero-fault corner.
+
+For fixed, possibly nonuniform path and revocation families, robust safety plus availability is possible exactly when `m ≥ 3k + 1`. The resulting actual-root cost of the unresolved class is `2(c − 1)` beyond the known-map minimum. Cancellation and search use the same charged map/fault budget. The positive construction and lower bound concern that fixed observation-compatible interface; extra mapping probes, changing the family after discovery or root churn change the problem. The later A–C kernel development checks the combinatorial statements, not by itself the original D cancellation mechanism, E search result or real-world root attribution.
+
+### Opaque-repair portfolios and their cost
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/4d5425b42dad562700a7572a84a077dbcf9330de54b10dd6c755df0d10d8fde4/COVERING_TRADEOFF.md) · [T07-COVERING-OPAQUE — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-covering-opaque).
+
+An allowed path avoids the bad set exactly when its complement contains that set. This makes the minimum fixed portfolio a **covering design**, and the source proves the correspondence rather than defining an optimum into existence. For the known-root interface the attempt optimum is `C(n, n − q, B)`; the unknown-class version uses its separately justified maximal bad-label parameter. A positive target-achievement lower bound assumes the target starts defective—an already correct target needs no repair attempt.
+
+Under the complete opaque-failure observation contract, adaptively ordering trials or adding private randomness cannot improve the almost-sure worst-case cap for every fixed compatible world. The lower-bound world is chosen outside the private-coin quantifier. More independently justified roots can buy fewer attempts; copying an existing root cannot. The ordinary small-parameter frontier includes explicit witnesses and a separate incidence/repetition lower proof; a finite graph sublemma is not the whole argument's kernel certificate. The later covering kernel supplies quantified portfolio and search results at its named scope. Physical service, safe cleanup and wall-clock latency remain separate obligations.
+
+### Finite histories without an assumed safety invariant
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/7ae9af2dec2088c39766758f5565f2c2bd6536fbb7a9bd80f140087d3fb17a62/STATEMENT_AND_SOURCE.md) · [T07-FINITE-HISTORY — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-finite-history).
+
+The finite-history extension proves that **every admitted landing in an arbitrary allowed finite trace** has the current complete command, not merely that a hand-selected demonstration ends safely. A reached-state induction derives authentic local descriptors, monotone revocations, recorded acknowledgements and durable command tombstones. It does not assume safe landings in the invariant, expose the fault set to the guard or let the guard consult an omniscient global epoch.
+
+An intact overlap with an actual stored revocation certificate excludes stale execution; an intact cancellation acknowledger excludes every later copy of the same full command, nonce and path. Accepted repairs restore the whole table, and unchanged-epoch continuations preserve the goal. This is a positive safety and conditional persistence theorem, **not an eventual-service schedule**. Its original whole-table state space is not the later version/history-changing typed plant. The source/model correspondence and finite Python scenarios are not a general compiler correctness theorem.
+
+### Compiled installation and repair with distinct grants
+
+[Original argument](../../experiments/orthemology-v5-successors/source-store/fca4691e58cc5f05745eb0dd275783a167c1f8a2c3ef1488ffa01ef49bc0f36f/ARGUMENT.md) · [T07-COMPILED-COMPOSITION — proof and evidence scope](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md#t07-compiled-composition).
+
+The compiled reference composes the actual interpreted installer and document-repair transitions. It preserves source/custody fields and exact successor records while using a later, separately provided repair grant. The important repair to the earlier proof pattern is that these transitions are **not literally idempotent**: successful installation or repair increments a counter and history. Instead, the old expected version or revision prevents that fixed old action from landing again; fresh valid actions can still preserve the achieved goals while adding history.
+
+For the specific four-root, one-fault, four-path interface, two sufficiently stable authorised batches implement installation and subsequent draft repair. The recorded eight-macro-attempt/twenty-four-logical-phase upper bound excludes grant issuance, dissemination and residual older work, and is not a physical timing promise. The source's native executable and finite assertions are useful implementation evidence; the named kernel components do not certify arbitrary complete runtime histories. The later history, clock and batch developments should be read as separate extensions, not silently credited to this earlier work.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [core]: ../../theory/orthemic-core-formalization.md
 [multi]: ../../theory/orthemic-multi-actor-conflict-note.md

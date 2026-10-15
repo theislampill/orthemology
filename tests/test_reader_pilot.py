@@ -1988,5 +1988,71 @@ class ContinuationCollectionCompletionTests(unittest.TestCase):
         self.assertEqual(self.mod.check_collection_result_routes(ROOT, self.owners, self.cross), [])
 
 
+class SeventhSourceFamilyTests(unittest.TestCase):
+    """Source-owned result/component expectations, not a catalogue count."""
+    EXPECTED = {
+        "T07-CRITERION-V3": "t07-criterion-installation",
+        "T07-DYNAMIC-V2": "t07-live-interlocks",
+        "T07-UNKNOWN-ROOT-ABC": "t07-unknown-attribution",
+        "T07-COVERING-OPAQUE": "t07-opaque-covering",
+        "T07-FINITE-HISTORY": "t07-finite-history",
+        "T07-COMPILED-COMPOSITION": "t07-compiled-repair",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("seventh_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.work = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["results"]}
+        cls.original_sources = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/SOURCE_MAP.json").read_text())["sources"]}
+
+    def test_each_seventh_result_reaches_its_named_work_and_original_components(self):
+        for result_id, key in self.EXPECTED.items():
+            self.assertTrue(key in self.work, result_id)
+            w = self.work[key]
+            self.assertIn(result_id, w.get("existing_result_ids", []))
+            paths = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+            required = {self.original_sources[k]["public_path"] for k in self.results[result_id]["source_ids"]}
+            self.assertTrue(required <= paths, (result_id, sorted(required - paths)))
+
+    def test_seventh_catalogue_routes_to_substance_and_scoped_evidence(self):
+        text = (ROOT / "docs/reader/PAPER-CATALOGUE.md").read_text()
+        page = self.mod.markdown_index(text)
+        for result_id, key in self.EXPECTED.items():
+            self.assertTrue(key in self.work, key)
+            w = self.work[key]
+            rel, anchor = w["catalogue_entry"].split("#", 1)
+            self.assertEqual(rel, "docs/reader/PAPER-CATALOGUE.md")
+            start = next((h[2] for h in page["headings"] if h[0] == anchor), None)
+            self.assertIsNotNone(start, key)
+            end = next((h[2] for h in page["headings"] if h[2] > start and h[1] <= 3), page["line_count"])
+            paths = set()
+            for line, href in page["links"]:
+                if start <= line < end:
+                    target = self.mod.resolve_reader_link(ROOT, rel, href)
+                    if target: paths.add(target[0])
+            self.assertTrue({self.cross["sources"][k]["path"] for k in w["source_keys"]} <= paths, key)
+            self.assertIn("experiments/orthemology-v5-successors/groups/t07-technical/README.md", paths)
+
+    def test_theorem_components_and_old_reviews_do_not_multiply_seventh_works(self):
+        for result_id, key in self.EXPECTED.items():
+            self.assertTrue(key in self.work, key)
+            w = self.work[key]
+            self.assertIn(w["role"], {"research-note", "research-software"})
+            self.assertNotIn("scientific_status", w)
+            support = w.get("supporting_source_keys", [])
+            self.assertTrue(support)
+            # A support relation is not a blanket grant of independent-work credit.
+            primary = set(w["source_keys"])
+            for k in support:
+                path = self.cross["sources"][k]["path"]
+                if path.endswith(".lean"):
+                    self.assertNotIn(k, primary)
+                    self.assertFalse(any(x["source_keys"] == [k] for x in self.cross["works"]), path)
+
+
 if __name__ == "__main__":
     unittest.main()

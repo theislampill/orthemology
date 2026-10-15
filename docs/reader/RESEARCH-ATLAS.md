@@ -180,6 +180,12 @@ The [restoration/disclosure family](PAPER-CATALOGUE.md#safe-restoration-and-the-
 
 The progression from [two messages](PAPER-CATALOGUE.md#an-exact-two-message-frontier), through the [three-message family](PAPER-CATALOGUE.md#three-messages-and-four-corrupt-roots), to the [complete classification](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) preserves both constructive results and their changing proof dependencies. [Timing](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) explains why preserving report bytes or root identities is insufficient when the adversary gains different information. Operational provenance is therefore more than a label, while philosophical sourcehood and truthful revelation still require their own arguments.
 
+## Correct criteria need faithful, currently authorised execution
+
+A useful connection across **restoration, provenance and semantic fidelity (avenues 4, 5 and 8)** is developed by the [Seventh criterion and live-repair sequence](PAPER-CATALOGUE.md#criterion-correction-and-charged-live-repair). Correcting a rule's meaning, possessing its justification, identifying genuine support roots, holding a current permission and executing the intended transition are different achievements. The work supplies positive constructions for each declared interface rather than deriving them from a single evidence badge.
+
+The criterion installer can succeed while leaving the newly exposed document defect untouched. The interlock and root-attribution results then specify how genuinely distinct support and complete-command memories permit safe repair despite faults. The covering result prices the additional uncertainty at an opaque interface, and the finite-history work preserves the connection through actual intervening events. None of those interfaces creates the authority of the retained recovery standard. This local independence from metaphysical premises is not a denial of the separately catalogued affirmative foundational arguments.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

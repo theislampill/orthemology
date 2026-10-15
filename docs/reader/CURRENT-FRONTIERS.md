@@ -147,6 +147,12 @@ The positive-error paper's original unresolved general fixed-codebook classifica
 
 What stays separate is warranted application of the game: genuine original roots, static or mobile faults, conditional independence, the timing of information, compulsory action, safe containment and the actual selected target. The [restoration](PAPER-CATALOGUE.md#action-relevant-integrity-after-exact-diagnosis) and [timing](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) counterexamples expose these premises directly. They do not reopen the completed fixed mathematical classification merely because a different physical, epistemic or theological question remains.
 
+## From specified live repair to a warranted implementation
+
+The [Seventh sequence](PAPER-CATALOGUE.md#criterion-correction-and-charged-live-repair) already contains positive interpreted-rule correction, root-image arithmetic, covering/search and finite-history results. Treating all of it as an unimplemented idea would suppress established conditional work. The remaining application burdens are different: genuine physical mediation and service, accurate root attribution, current real permission and faithful source execution at the actual interface.
+
+Do not leave a historical proof boundary open after its specifically named later extension has closed it, or credit a later result back to an earlier model with weaker fields. In particular, the original finite-history proof is not the typed plant history, a constant-clock model is not clock expiry, and safe holds alone do not prove progress. The forthcoming successor entries retain those separate scopes; the original [scoped result owner](../provenance/v5-successors/RESULT_STATUS.json) controls statement standing.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

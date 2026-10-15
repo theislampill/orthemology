@@ -209,6 +209,12 @@ In the [action-integrity construction](PAPER-CATALOGUE.md#action-relevant-integr
 
 The [codebook results](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) can guide a stipulated action interface, but the [timing comparison](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) must travel with it. Independence established before an adversary observes a private choice cannot be carried past disclosure of that choice unchanged. These are source-bound design consequences, not claims that any current Orthemology runtime already implements the assumed containment or adversary model.
 
+## A rule update, a payload repair and an execution grant
+
+The [criterion-installer example](PAPER-CATALOGUE.md#installing-a-criterion-is-not-editing-the-draft) is useful when a system's current validator accepts something the retained task excludes. Installing the adequate rule changes actual decisions but does not silently grant permission to alter the rejected data. The [compiled two-stage reference](PAPER-CATALOGUE.md#compiled-installation-and-repair-with-distinct-grants) then supplies that separate operation under its own current grant.
+
+For a fault-prone deployment, the [live-interlock and attribution studies](PAPER-CATALOGUE.md#charged-live-interlocks-and-repair-after-quiescence) identify additional conditions that an implementation must actually satisfy: genuine shared-dependency accounting, non-bypassable complete-command gates, durable cancellation, independently serviced control paths and the correct consent model. The model's constructive repair is not evidence that a real platform already implements those conditions.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

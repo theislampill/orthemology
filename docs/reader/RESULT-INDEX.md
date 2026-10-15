@@ -362,6 +362,21 @@ The [destructive-action separation](../../docs/provenance/v5-research-continuati
 
 The [four optimised timing schedules](../../docs/provenance/v5-research-continuations/notes/fcfb1786cde8e3c12524d3f1769c7016e91a77e028e588a655af2b7e474776fe.md#four-schedules-and-their-exact-values) test a change in the available information, not only a change in a numerical parameter. Source titles and exact sections locate these results without inventing new scientific IDs. Their proof, computer-assisted certificate and review roles remain separate.
 
+## Seventh criterion, attribution and live-history results
+
+The original [six-result guide](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md) binds each statement to its exact assumptions, formal declarations, source/review objects and separately scoped execution evidence. Use the following work routes rather than assigning one proof status to the whole sequence.
+
+| Existing result identifier | Substantive reading route |
+|---|---|
+| `T07-CRITERION-V3` | [Interpreted criterion installation and separate draft repair](PAPER-CATALOGUE.md#installing-a-criterion-is-not-editing-the-draft) |
+| `T07-DYNAMIC-V2` | [Charged live interlocks and conditional repair](PAPER-CATALOGUE.md#charged-live-interlocks-and-repair-after-quiescence) |
+| `T07-UNKNOWN-ROOT-ABC` | [Actual roots versus uncertain interface labels](PAPER-CATALOGUE.md#one-unknown-correlated-root-class) |
+| `T07-COVERING-OPAQUE` | [Portfolio/search optimum under complete opaque observations](PAPER-CATALOGUE.md#opaque-repair-portfolios-and-their-cost) |
+| `T07-FINITE-HISTORY` | [Safety derived over arbitrary allowed finite histories](PAPER-CATALOGUE.md#finite-histories-without-an-assumed-safety-invariant) |
+| `T07-COMPILED-COMPOSITION` | [The separately scoped native two-stage composition](PAPER-CATALOGUE.md#compiled-installation-and-repair-with-distinct-grants) |
+
+These are existing identifiers, not newly registered discoveries. A shared physical suite, copied receipt or formal dependency does not supply independent evidence each time it is linked.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

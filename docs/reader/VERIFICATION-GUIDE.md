@@ -184,6 +184,12 @@ The [four-corrupt/three-message family](PAPER-CATALOGUE.md#three-messages-and-fo
 
 The [complete fixed-codebook theorem](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) instead names an external hypergraph theorem and two recorded ordinary reviews, with a required endpoint clarification. Reading those records does not mean the external primary paper was reacquired or reverified in this task. A reviewer should test the shared-random/fixed-codebook and timing distinctions against the actual model, because valid links alone will not detect a summary that silently changes the game.
 
+## Reading mixed proof and execution evidence in the Seventh sequence
+
+Start from the [result-specific guide](../../experiments/orthemology-v5-successors/groups/t07-technical/README.md), then the linked argument and formal declaration. A declared-suite receipt can coexist with **component-only credit for a mixed scientific claim**: running the entire package does not turn its ordinary argument, finite scenarios or external applicability premises into one kernel theorem. Attribution A–C, covering/search, original histories and compiled composition have different theorem scopes.
+
+The guide also separates exact retained raw receipt identities from reviewed public summaries. A public summary can establish its own identity and source contract without revalidating private omitted log bytes. Failed historical attempts remain failures; a later audit-only continuation neither reruns the original producer nor creates additional independent executions. No receipt described there is a fresh scientific replay by this reader refactor.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json
