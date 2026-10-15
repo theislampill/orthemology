@@ -135,6 +135,12 @@ The [Sixth foundational family](PAPER-CATALOGUE.md#original-productive-sourcehoo
 
 The [safe-action theorem](PAPER-CATALOGUE.md#truthful-disclosure-that-selects-a-safe-action) supplies a communication condition under exact diagnosis. Actual disclosure, truthfulness, authority and live root/action identity are separate receiving obligations. The zero-error statement does not settle the positive-error frontier, time-sensitive faults or newly available interventions.
 
+## Keep the affirmative ascent and its particular bridges distinct
+
+The [Sixth-final necessity/world-bridge family](PAPER-CATALOGUE.md#necessity-objective-correction-and-attribute-ascent) makes progress by distinguishing actual received efficacy, sufficient original production, completeness of actual origination, the same bearer's existential necessity and distinctive cognitive/practical perfections. Its stronger claims require their stated explanatory, origin-closure and modal warrants. Merely renaming a supplied condition as “complete” does not establish its application; merely proposing a rival does not defeat a substantive affirmative argument. Its dated R5 assessment remains attached to that argument and is not a blanket present verdict about later T20 appraisals.
+
+[Objective fittingness and common repair](PAPER-CATALOGUE.md#objective-norm-fixing-and-warranted-common-repair) already support useful local conclusions. Remaining authority and proper-function questions concern the evidence fixing the relevant bearer, end, history and obligation. [The practical-perfection continuation](PAPER-CATALOGUE.md#practical-perfection-and-the-malicious-source-challenge) separately tests the transition from actual eligible excellence to intrinsic completeness, including mixed motives and authoritative truthfulness. These bridges must be discussed at their own source scopes, not flattened into either universal verification or universal failure.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

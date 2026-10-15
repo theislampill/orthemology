@@ -168,6 +168,12 @@ The [Sixth sourcehood/Knowledge family](PAPER-CATALOGUE.md#original-productive-s
 
 A concrete connection spans source/attribute questions and restoration: [truthful safe-action disclosure](PAPER-CATALOGUE.md#truthful-disclosure-that-selects-a-safe-action) can remove an intervention obstruction left by correct diagnosis. It requires integrity knowledge, truthful transmission and preserved action identity. That mathematics does not itself authenticate the proposed source or establish its actual communication. It shows what the additional epistemic relation contributes rather than treating “disclosure” as an interchangeable label for provenance.
 
+## From a warranted correction to its original adequacy
+
+The [necessity and attribute family](PAPER-CATALOGUE.md#necessity-objective-correction-and-attribute-ascent) develops a connection across avenues 1, 2, 3 and 4. A judgement's fittingness to its target, its epistemic warrant and the reality of the process delivering it are distinct aspects of one actual correction. The positive source argument asks for adequate original production of that whole occurrence, not just a relabelling of its outcome. The [necessity argument](PAPER-CATALOGUE.md#original-actuality-and-existential-necessity) then makes its additional modal burden visible; the [world-bridge family](PAPER-CATALOGUE.md#warranted-correction-and-complete-actual-origination) distinguishes completed effects from their whole actual origination.
+
+The [norm-fixing work](PAPER-CATALOGUE.md#objective-norm-fixing-and-warranted-common-repair) supplies immediate constructive value: justified target-preserving repairs can compose, under stated semantic and dependency conditions, without awaiting global agreement on every foundational question. [Agency, Wisdom and disclosure](PAPER-CATALOGUE.md#original-sourcehood-agency-wisdom-and-disclosure) concern further real perfections and warrants, not merely more powerful classification machinery. These are connected affirmative arguments with separate premises, not a claim that a successful finite controller proves every conclusion in the ascent.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

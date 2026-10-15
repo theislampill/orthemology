@@ -1773,5 +1773,63 @@ class ContinuationFoundationalRoutesTests(ContinuationGeometryRoutesTests):
         own = [x for x in self.cross["works"] if any(self.cross["sources"][k]["path"].endswith("/integer-v3/src/exact_budget.py") for k in x["source_keys"])]
         self.assertEqual(len(own), 1)
 
+
+
+class ContinuationNormAndAttributeRoutesTests(ContinuationGeometryRoutesTests):
+    """Preserve the source-owned positive arguments and their distinct burdens."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owner = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git", "show", owner["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT))["sources"]
+        members = (
+            "selected-source-union/tranche6/foundations/intrinsic-necessity/freeze-v2/INTRINSIC_NECESSITY_ARGUMENT.md",
+            "selected-source-union/tranche6/foundations/world-bridge/freeze-v2/WORLD_BRIDGE_ARGUMENT.md",
+            "selected-source-union/tranche6/foundations/world-bridge/freeze-v1/ACT_ONTOLOGY_AND_COMPLETENESS.md",
+            "selected-source-union/tranche6/foundations/world-bridge/freeze-v2/EXTERNAL_TERMINUS_AND_ORIGIN_CLOSURE.md",
+            "selected-source-union/tranche6/foundations/norm-fixing/freeze-v2/ARGUMENT.md",
+            "projections/attributes-delivery/ATTRIBUTE_ASCENT.md",
+            "projections/motivation-value-v2/MOTIVATION_VALUE_AND_MALICIOUS_SOURCE.md",
+        )
+        cls.expected = {}
+        cls.original_paths = {}
+        for member in members:
+            paths = {r["path"] for r in rows if r["origin"].startswith("549ba6a7f094")
+                     and r["member"] == member and r.get("path")}
+            if len(paths) != 1:
+                raise AssertionError("Ambiguous or absent source owner: " + member)
+            cls.expected[member] = paths.pop()
+        for r in rows:
+            if r["origin"].startswith("549ba6a7f094") and r.get("path"):
+                cls.original_paths[r["member"]] = r["path"]
+
+    def test_world_bridge_keeps_its_act_and_external_termination_components(self):
+        works = {w["key"]: w for w in self.cross["works"]}
+        self.assertIn("continuation-world-bridge", works)
+        w = works["continuation-world-bridge"]
+        paths = {self.cross["sources"][k]["path"] for k in w["source_keys"]}
+        expected = {path for member, path in self.expected.items() if "/world-bridge/" in member}
+        self.assertEqual(paths, expected)
+        support = {self.cross["sources"][k]["path"] for k in w.get("supporting_source_keys", [])}
+        self.assertIn(self.original_paths["selected-source-union/tranche6/foundations/world-bridge/freeze-v1/PREMISE_AND_RIVAL_MAP.md"], support)
+        # Constituents stay discoverable without manufacturing duplicate work credit.
+        for path in expected:
+            containing = [x for x in self.cross["works"] if path in {self.cross["sources"][k]["path"] for k in x["source_keys"]}]
+            self.assertEqual(len(containing), 1)
+
+    def test_norm_and_attribute_maps_remain_support_not_separate_verdicts(self):
+        works = {w["key"]: w for w in self.cross["works"]}
+        for key, members in (
+            ("continuation-objective-norms", ("selected-source-union/tranche6/foundations/norm-fixing/freeze-v2/ADVERSARIAL_BRIDGES.md", "selected-source-union/tranche6/foundations/norm-fixing/freeze-v2/SEMANTIC_WARRANT_TESTS.md")),
+            ("continuation-attribute-wisdom", ("projections/attributes-delivery/DEPENDENCIES_AND_DISCRIMINATION.md",)),
+        ):
+            self.assertIn(key, works)
+            support = {self.cross["sources"][k]["path"] for k in works[key].get("supporting_source_keys", [])}
+            for member in members:
+                path = self.original_paths[member]
+                self.assertIn(path, support)
+                self.assertFalse(any(path in {self.cross["sources"][k]["path"] for k in x["source_keys"]} for x in self.cross["works"]))
+
 if __name__ == "__main__":
     unittest.main()

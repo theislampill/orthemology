@@ -197,6 +197,12 @@ Correctly learning a governing rule does not automatically identify a safe actua
 
 The [integer confidence-budget evaluator](PAPER-CATALOGUE.md#exact-integer-confidence-budgets) is another positive bridge to use: it gives exact conservative arithmetic thresholds once the controller-law and parameter assumptions have been justified. It is not a replacement for checking those assumptions or a forecast of typical physical runtime.
 
+## Common correction before complete foundational agreement
+
+The [semantic-repair account](PAPER-CATALOGUE.md#objective-norm-fixing-and-warranted-common-repair) shows why an archive and its derived transcription may need different operations. Preserve the original source unchanged; correct the transcription against it. That is a genuine joint repair once the two bearers and their targets are distinguished, not permission to force the same bytes simultaneously to remain and change. Under uncertainty, a “repair” justified for one hidden interpretation is insufficient when other retained interpretations can still make it wrong.
+
+The same precision prevents overreach from the foundational work. A fault-tolerant implementation may need several operationally independent components even while its metaphysical source account affirms one complete Creator. Conversely, a diagram with many operational inputs does not establish many original metaphysical sources. The [world-bridge](PAPER-CATALOGUE.md#warranted-correction-and-complete-actual-origination) and [attribute](PAPER-CATALOGUE.md#original-sourcehood-agency-wisdom-and-disclosure) texts state the different dependence relations instead of identifying them by vocabulary alone.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

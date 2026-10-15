@@ -172,6 +172,12 @@ For the [sourcehood/Knowledge family](PAPER-CATALOGUE.md#original-productive-sou
 
 The [integer budget package](PAPER-CATALOGUE.md#exact-integer-confidence-budgets) also separates exact arithmetic verification from the controller theorem's stochastic applicability. Its record correction is about exact data types, not a new probability law. Follow the existing collection replay owner for supported execution, rather than running a historical archive-relative command as though it described the present checkout.
 
+## Qualifying the philosophical ascent without changing its subject
+
+For the [necessity and attribute family](PAPER-CATALOGUE.md#necessity-objective-correction-and-attribute-ascent), compare the actual argument, its named constituents and its premise map. Ask whether a reader has silently substituted actual independence for existential sufficiency, endpoint supply for complete actual origination, or knowledge of a good for perfect practical orientation. Those substitutions can survive a valid URL and a matching hash; rejecting them requires source-based reading.
+
+The norm-fixing source's semantic retractions also require a real warranted relation to the target and lawful implementation, not just algebra on sets labelled “correct”. Its discrimination appendix gives concrete source/intervention questions. The attribute map's computational checks have their stated finite scope; they are not independent tests of the philosophical truth, primary-text authenticity or actual revelation. Existing scientific judgments remain at their owners, and the current refactor is not authorised to revise them.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json
