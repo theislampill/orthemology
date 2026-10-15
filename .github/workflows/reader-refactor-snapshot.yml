@@ -1,0 +1,38 @@
+name: issue35 exact recovery
+on:
+  push:
+    branches: [refactor/issue-35-research-reader-20261012]
+    paths: [.github/workflows/reader-refactor-snapshot.yml]
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+jobs:
+  snapshot:
+    if: github.repository == 'theislampill/orthemology'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Export only public Git objects and work-order records
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = 924493b171ca0bd54df20727c7e47820817affdb
+          test "$(git rev-parse HEAD^^{tree})" = 9232b3b700b08427fc8f80935171f78c4d78549b
+          mkdir -p "$RUNNER_TEMP/issue35-recovery"
+          git bundle create "$RUNNER_TEMP/issue35-recovery/public-history.bundle" HEAD
+          git rev-parse HEAD HEAD^{tree} > "$RUNNER_TEMP/issue35-recovery/IDENTITY.txt"
+          gh api repos/theislampill/orthemology/issues/35 > "$RUNNER_TEMP/issue35-recovery/issue35.json"
+          gh api --paginate repos/theislampill/orthemology/issues/35/comments > "$RUNNER_TEMP/issue35-recovery/issue35-comments.json"
+          gh api repos/theislampill/orthemology/pulls/36 > "$RUNNER_TEMP/issue35-recovery/pr36.json"
+          cd "$RUNNER_TEMP/issue35-recovery"
+          sha256sum public-history.bundle IDENTITY.txt issue35.json issue35-comments.json pr36.json > SHA256SUMS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: issue35-exact-public-recovery
+          path: ${{ runner.temp }}/issue35-recovery/
+          retention-days: 14
