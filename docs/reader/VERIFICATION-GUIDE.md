@@ -268,3 +268,10 @@ For the completed continuation disposition, use the [collection reference](PAPER
 The 676 retained Lean paths are proof/dependency components, not 676 new papers or freshly checked theorems. The 116 suite descriptors are integration adapters, not scholarly works. Historical source-member aliases remain in the original source map even where one public body has several incoming identities. Existing replay helpers and locked environments govern execution; a spaced archive-relative command in an immutable note is not automatically a command for the current checkout.
 
 For the new raw-tape and moment routes, inspect the actual probability-law and tail inputs. For the recursive and indexed-runtime routes, inspect common-policy quantifiers, feasible history guards, literal initial state, acquired-prefix clock and the fuel/output distinction. The reader checks validate bindings and the declared ID population; they do not replace those source-based reviews or rerun the original formal suites.
+
+
+## Sixteenth volume, proof recovery and independent scope
+
+For a Sixteenth claim, begin at its [constituent work](PAPER-CATALOGUE.md#sixteenth-renewal-certificates-and-supplied-controllers), then the original claim map and source index. The [recovery reference](PAPER-CATALOGUE.md#sixteenth-proof-recovery-and-signed-controller-source-assurance) explains why the 111-module core and the separate 116-module signed/controller closure must not be added as disjoint evidence. It also preserves the different fixture provenance classes, written versus formal results and separate JSON/Python interface.
+
+The [reanalysis entry](PAPER-CATALOGUE.md#sixteenth-social-learning-game-reanalysis) points to its existing exact input and replay contract. No participant input, original PDF or compiler object is republished merely to make a reading route convenient. Replaying this refactor’s reader tests does not replay those mathematical or empirical studies.

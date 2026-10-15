@@ -2319,5 +2319,88 @@ class EleventhWorkAndEvidenceTests(unittest.TestCase):
         nucleus=self.works.get("t11-telescope-nucleus"); self.assertIsNotNone(nucleus)
         self.assertNotEqual(nucleus["source_keys"],w["source_keys"])
 
+
+class SixteenthConstituentWorkTests(unittest.TestCase):
+    """Check the original paper/claim/component routes, not proof or comprehension."""
+    EXPECTED = {'T16-RENEWAL': 't16-certified-renewal', 'T16-RANDOMISED-ZERO': 't16-private-random-renewal', 'T16-POPULATION': 't16-closed-generation-populations', 'T16-COMPETENCE': 't16-renewal-competence', 'T16-LOOKAHEAD': 't16-finite-lookahead', 'T16-SYNTHESIS-REDUCTION': 't16-policy-certification', 'T16-SYNTHESIS-CLASSIFICATIONS': 't16-policy-certification', 'T16-UNARY-CHECKER': 't16-unary-equality', 'T16-UNARY-SPARSE': 't16-unary-equality', 'T16-CURRENT-HAS': 't16-compiled-identity-obstruction', 'T16-BRIDGE-HASPLUS': 't16-compiled-identity-obstruction', 'T16-HASC-SOUND': 't16-certificate-extension', 'T16-HASC-CLOSED': 't16-certificate-extension', 'T16-TEMPORAL': 't16-temporal-witness', 'T16-ALMOST-SURE': 't16-almost-sure-renewal', 'T16-SIGNED-SERVICE': 't16-signed-synthesis', 'T16-DIRECT-CONTROLLER': 't16-submitted-controller', 'T16-SOURCE-ASSESSMENT': 't16-research-report', 'T16-OCCURRENCE': 't16-research-report', 'T16-EMPIRICAL': 't16-game-reanalysis', 'T16-CORE-ASSURANCE': 't16-proof-recovery-reference'}
+    READER = "experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md"
+    GUIDE = "experiments/orthemology-v5-successors/groups/t16-successor/README.md"
+    SOURCE_INDEX = "experiments/orthemology-v5-successors/groups/t16-successor/SOURCE_INDEX.json"
+    CLAIM_MAP = "experiments/orthemology-v5-successors/groups/t16-successor/CLAIM_MAP.json"
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("sixteenth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / cls.CLAIM_MAP).read_text())["results"]}
+        cls.sources = {r["id"]:r for r in json.loads((ROOT / cls.SOURCE_INDEX).read_text())["sources"]}
+
+    def test_twenty_one_original_scopes_have_sixteen_work_destinations(self):
+        self.assertEqual(set(self.EXPECTED), set(self.results))
+        self.assertEqual(len(set(self.EXPECTED.values())), 16)
+        for rid,key in self.EXPECTED.items():
+            self.assertTrue(key in self.works,rid)
+            self.assertIn(rid,self.works[key].get("existing_result_ids",[]))
+            self.assertNotIn("scientific_status",self.works[key])
+        # Thirteen papers, one report, software and source-assurance reference.
+        mathematical={self.EXPECTED[k] for k in self.EXPECTED if self.results[k]["paper"]!="report"}
+        self.assertEqual(len(mathematical),13)
+
+    def test_original_thirteen_headings_are_direct_substantive_reading_routes(self):
+        index=self.mod.markdown_index((ROOT/self.READER).read_text())
+        chapters=[h[0] for h in index["headings"] if h[1]==1][1:-1]
+        self.assertEqual(len(chapters),13)
+        rel="docs/reader/PAPER-CATALOGUE.md";page=self.mod.markdown_index((ROOT/rel).read_text())
+        got=[]
+        for key in dict.fromkeys(self.EXPECTED.values()):
+            self.assertTrue(key in self.works,key);work=self.works[key]
+            node,anchor=work["catalogue_entry"].split("#",1);self.assertEqual(node,rel)
+            h=next((h for h in page["headings"] if h[0]==anchor),None);self.assertIsNotNone(h,key)
+            _,level,start=h;end=next((q[2] for q in page["headings"] if q[2]>start and q[1]<=level),page["line_count"])
+            targets={t for line,href in page["links"] if start<=line<end
+                     if (t:=self.mod.resolve_reader_link(ROOT,rel,href)) is not None}
+            self.assertIn((self.GUIDE,""),targets,key)
+            for s in work["source_keys"]:
+                self.assertTrue(any(t[0]==self.cross["sources"][s]["path"] for t in targets),key)
+            if key not in {"t16-research-report","t16-game-reanalysis","t16-proof-recovery-reference"}:
+                found=[t[1] for t in targets if t[0]==self.READER and t[1] in chapters]
+                self.assertEqual(len(found),1,key);got+=found
+        self.assertEqual(set(got),set(chapters))
+
+    def test_claim_owned_components_remain_bound_without_recounting_the_volume(self):
+        for rid,key in self.EXPECTED.items():
+            self.assertTrue(key in self.works,rid);w=self.works[key]
+            paths={self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+            self.assertIn(self.SOURCE_INDEX,paths)
+            self.assertIn(self.CLAIM_MAP,paths)
+            if rid!="T16-CORE-ASSURANCE":
+                wanted={self.sources[k]["public_path"] for k in self.results[rid]["source_ids"]}
+                self.assertTrue(wanted<=paths,(rid,sorted(wanted-paths)))
+        self.assertNotIn("t16-mathematical-volume",self.works)
+        self.assertNotIn("t16-hasc-theorem-map",self.works)
+
+    def test_hasC_map_supports_the_same_paper_and_keeps_both_scope_ids(self):
+        key="t16-certificate-extension";self.assertTrue(key in self.works,key)
+        w=self.works[key];self.assertEqual(set(w["existing_result_ids"]),{"T16-HASC-SOUND","T16-HASC-CLOSED"})
+        paths={self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+        self.assertTrue(any(Path(p).name=="UnaryCertificateSoundness.lean" for p in paths),sorted(paths))
+        self.assertNotEqual(w["key"],self.EXPECTED["T16-CURRENT-HAS"])
+
+    def test_reanalysis_and_proof_recovery_are_not_extra_mathematical_papers(self):
+        for key,role in {"t16-game-reanalysis":"research-software","t16-proof-recovery-reference":"supporting-reference","t16-research-report":"synthesis"}.items():
+            self.assertTrue(key in self.works,key);self.assertEqual(self.works[key]["role"],role)
+            self.assertNotIn("scientific_status",self.works[key])
+        self.assertNotEqual(self.works["t16-game-reanalysis"]["source_keys"],self.works["t16-research-report"]["source_keys"])
+
+    def test_signed_and_submitted_controller_share_support_not_work_identity(self):
+        for rid in ("T16-SIGNED-SERVICE","T16-DIRECT-CONTROLLER"):
+            key=self.EXPECTED[rid];self.assertTrue(key in self.works,key)
+            w=self.works[key]
+            paths={self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+            self.assertTrue(any(Path(p).name=="PROOF_SCOPE_AND_OWNERSHIP.md" for p in paths))
+        self.assertNotEqual(self.EXPECTED["T16-SIGNED-SERVICE"],self.EXPECTED["T16-DIRECT-CONTROLLER"])
+
 if __name__ == "__main__":
     unittest.main()

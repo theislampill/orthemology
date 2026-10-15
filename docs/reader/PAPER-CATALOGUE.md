@@ -1520,3 +1520,169 @@ All 1,200 collection paths now have explicit work/support/history dispositions i
 [t09-expression-guide]: ../../experiments/orthemology-v5-successors/groups/t09-expression/README.md
 [t09-controller-guide]: ../../experiments/orthemology-v5-successors/groups/t09-controller/README.md
 [t09-transport-evidence]: ../../experiments/orthemology-v5-successors/groups/t09-controller/README.md#t09-whole-command-transport
+
+
+## Sixteenth renewal, certificates and supplied controllers
+
+The retained companion has thirteen constituent papers and a final HasC theorem map. The entries below separate those papers from their programme report, empirical software and source-assurance reference. The existing [claim map][t16-claim-map] and [source index][t16-source-index] own their twenty-one result scopes and exact supporting objects; neither the shared volume nor each proof module gains separate paper credit.
+
+### Finite certified renewal and effective selection of continuing lineages
+
+[Read the constituent paper][t16-certified-renewal] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The paper constructs a decidable rooted binary renewal tree with a uniformly computable certified plan for every requested finite horizon and a mathematical infinite lineage, but no single computable irrevocable infinite lineage. Its fixed authorised zero-input environment and delayed state-transfer semantics make this a renewal construction, not merely a list of unrelated finite objects. Permission revocation has its own orderly-stop behaviour.
+
+The positive selection theorem is equally important: a computable path exists exactly when a rooted pruned computably enumerable subtree exists (equivalently, an appropriate decidable one). Pruning supplies an effectively discoverable successor at every stage. A width-two family has individually computable paths without a uniform selector; pointwise convergence of finite plans need not supply a computable stabilisation modulus or nested lineage. These distinctions do not cancel finite-horizon competence or assert that every practical renewal system fails. The family, dependency and coherent-selection hypotheses determine the contract.
+
+### Randomised renewal in the explicit diagonal lineage
+
+[Read the constituent paper][t16-private-random-renewal] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** In the particular explicit diagonal lineage, every computable irrevocable transducer using private fair coins has probability zero of generating an infinite admissible path. Partial-output tapes are allowed and count as failures. The argument exploits finite output cylinders rather than assuming a machine already supplies an infinite sequence on every tape.
+
+This is a stronger property of the constructed tree, not a theorem that every computable tree without computable paths has measure-zero path set. Nor does it apply unchanged to noncomputable advice or externally informative observations. The later almost-sure paper in this volume gives the exact general probability-one equivalence under its own fixed-tree/private-randomness interface.
+
+### A finite width population does not supply the missing renewal
+
+[Read the constituent paper][t16-closed-generation-populations] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** A uniformly bounded-width population cannot complete every generation of the diagonal lineage when each generation is finite, closed once completed and parent-coherent. Private randomisation does not rescue that bounded closed-generation contract with positive probability in the explicit construction.
+
+A positive contrast prevents overstatement: enumerating all nodes breadth first yields an unbounded-width service that completes every finite generation, although it selects no persistent infinite lineage. A bound on devices simultaneously active is not automatically a bound on a completed generation. Backtracking, reopened generations and checkpoint policies must therefore be analysed under their actual rules rather than silently imported into this theorem.
+
+### What the continuation result says about preserving competence
+
+[Read the constituent paper][t16-renewal-competence] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** This interpretative paper separates a certified finite plan, the availability of every further finite continuation, and one effectively maintained indefinite lineage. The finite successes are genuine. A finite three-generation promise does not need an infinite continuation theorem, while repeating finite evidence does not by itself produce a single coherent renewing policy.
+
+The note does not refute a full invariant that already includes a warranted sustaining procedure and its continuing dependencies. Its application is a discipline for specifying what competence is preserved, over what horizon, with which active supplier and policy. It supplies an interpretation of the construction, not an additional theorem about all human cognition or personal identity.
+
+### Every effective finite lookahead still leaves the selection boundary
+
+[Read the constituent paper][t16-finite-lookahead] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** Any supplied total computable, finite-valued lookahead demand, even one growing with the entire history, can be installed as a decidable finite-admissibility condition without changing the diagonal tree’s infinite paths. The strengthened system retains arbitrarily long effective finite plans and still has no computable infinite selection.
+
+The demand’s totality is an input premise, not a decision procedure for arbitrary supplied code. The lookahead witness concerns extensions in the original tree, not recursively certified viability in the strengthened tree. Thus arbitrarily large finite forecasts do not silently become an infinite supplier of coherent choices. The finite controller implementations retain their actual enumeration conventions rather than acquiring a different lexicographic algorithm from the prose.
+
+### Deciding and certifying effective renewal policies
+
+[Read the constituent paper][t16-policy-certification] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** In the specified syntax-total primitive-recursive tree representation, infinite-path existence is Π⁰₁-complete and computable-path existence is Σ⁰₃-complete, including the stated promise restriction. Validity of a supplied ordinary computable path or enumerated pruned witness has a different quantifier/totality burden. Consequently a sound effective finite certificate discipline cannot be complete for the unrestricted computable-policy existence question.
+
+This does not erase the constructive restricted services: a supplied pruned witness supports extraction, and a bounded finite-graph problem can have a complete terminating solver. The classification depends on what the input language guarantees. Replacing its syntax-total presentation with arbitrary possibly non-total tree code changes the infinite-path index question. The source distinguishes the kernel-checked constructive reduction from the ordinary hierarchy arguments; a classification proof is not a practical runtime or an executable general selector.
+
+### Unary equality conditionals and exact finite semantic identity
+
+[Read the constituent paper][t16-unary-equality] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** For one natural-number input, natural constants, addition, multiplication and arbitrarily nested equality conditionals whose children stay in that grammar, the exact function class is an eventual natural-coefficient polynomial with finitely many exceptional values. A canonical polynomial/exception representation yields all-input equality checking and a concrete counterexample when equality fails.
+
+The written sparse comparison and the checked dense root bound are distinct procedures; a sparse comparison bound assumes the exceptional maps have already been produced. The function “return 7 at input 2, otherwise return the input” is a genuine extension beyond the older restricted unary languages, without expressing unrestricted parity or truncated predecessor. The result is not multivariate semantic identity, recognition of arbitrary raw programs, or a formal parser theorem. The literal source compiler and the separate Python/JSON reference preserve their different representation contracts.
+
+### Semantic completeness and current identity in the exact compiler image
+
+[Read the constituent paper][t16-compiled-identity-obstruction] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The exact source compiler maps the variable and its addition-by-zero variant to semantically equal, already typed endpoints, but the original all-rule `Has` and `HasPlus` calculi still lack any proof of the resulting internal identity. This is not just failure of the proposed proof `I`: conversion reflection and two distinct normal source terms exclude every candidate proof under the stated old rules.
+
+Normal-form difference is relevant only with that conversion argument; arbitrary syntactic inequality is insufficient. The semantic equality checker and the relevant interpreted `F`/`G` claims remain positive. The paper distinguishes this exact compiler-image obstruction from a broader uninhabited-type claim and from separately introduced `HasE` or `HasC` judgements. It does not retroactively modify the old calculus to make the desired proof available.
+
+### A sound full rule certificate extension for unary semantic identity
+
+[Read the constituent paper][t16-certificate-extension] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The separately named `HasC` extension retains the original two context, seven formula and eighteen typing constructors and adds a finite unary-identity certificate rule. The full mutual soundness result ranges over the represented formed contexts under the original `H`/`E` law hypotheses; existing derivations embed without turning this into a conservativity claim.
+
+The exact completeness equivalence is **closed-context**: compiled unary equality, a successful checker, interpreted equality and existence of a `HasC` proof coincide there, with an explicit proof supplied in the positive direction. Under an assumed false identity, a nonempty context can contain its variable proof while lacking a satisfying `H` valuation, so the checker converse cannot be extended to all contexts. The separate final HasC theorem map documents this same paper, not a fourteenth article. `HasC`, `HasE` and other source calculi retain their individual rules and identities.
+
+[Exact theorem map][t16-hasc-map] · [full formal scope][t16-core-scope].
+
+### The time available to witness absence of a bearer
+
+[Read the constituent paper][t16-temporal-witness] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The paper studies one and the same bearer across its actual history. If possible absence must have an actual-time witness and the relevant actual presence must be preserved, the absence witness has to precede every actual presence. A bearer actually present at an attained first instant then satisfies the specified necessity criterion. A beginningless history can instead use the appropriate same-bearer coinitial presence premise.
+
+The premise burden matters: strict-past preservation alone leaves an equality case; a finite age bound need not provide an attained first instant; some bearer at each time need not be the same bearer. The source’s rationale invokes anchored possibility and settled actuality, but its world application still requires those claims to be warranted. A necessary actual participant is not, solely thereby, the unique complete unreceived supplier of everything. This positive temporal route keeps its scope and is not a later blanket verdict on sourcehood.
+
+### Almost sure private randomisation and effective committed continuation
+
+[Read the constituent paper][t16-almost-sure-renewal] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** For a fixed rooted prefix-closed tree and effective irrevocable output with private fair coins, an almost-sure successful policy exists exactly when a computable path exists, equivalently when a suitable c.e. pruned subtree exists. The positive-probability finite-output prefixes can be enumerated and are viable and pruned under the probability-one hypothesis, yielding effective deterministic continuation.
+
+A separate nested-cylinder construction also finds a computable successful tape for the original machine; it is not the claim that any fixed seed works. The sharp probability-one premise cannot be replaced by merely high success probability: counterexamples below one retain the no-computable-path obstruction. Randomness interacting with informative external observations, resource bounds or another game interface is not removed by this theorem.
+
+### Finite signed certification and program producing synthesis
+
+[Read the constituent paper][t16-signed-synthesis] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** On the stated finite hidden-static-model input with exact rational transitions and a fully observed state, a finite signed certification service enumerates the complete certificate-body domain and returns either an accepted body or a checkable structural refutation of every body. Source fields, labels, orders and unused nodes remain bound to the exact input; the reflected formula is not obtained by treating the final checker result as an unexplained atom.
+
+For valid input with nonempty live support, the negative result excludes a common lawful almost-sure parity policy, using the inherited necessity theorem for the broader policy class. Invalid input and empty support are separate cases, not impossibility certificates. Finite termination is a mathematical guarantee, not a tractability claim; the recorded native enumeration covers the stated small domain. This work is the signed decision/synthesis interface. The following paper separately proves that its submitted positive body produces the promised actual policy.
+
+[Separate signed/controller proof ownership][t16-controller-scope].
+
+### Direct extraction from submitted finite parity certificates
+
+[Read the constituent paper][t16-submitted-controller] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The compiler consumes the literal accepted finite certificate body and produces a common history-dependent controller whose induced original history law is lawful and almost surely satisfies the parity objective for each live actual model. The common policy is fixed before that actual-model quantifier; no true-model oracle is supplied to it.
+
+The proof concerns the controller actually returned by the submitted implementation, not merely existence of another successful controller. Its code is finite and each step terminates, while histories and counters can grow without a fixed bound. It is therefore not automatically a finite-state machine, a uniform deadline guarantee or transport of every older cost bound. The signed service and direct-controller source closure is separately qualified, with inherited modules shared rather than counted twice.
+
+[Separate signed/controller proof ownership][t16-controller-scope].
+
+### Orthemology Sixteenth Research Report
+
+[Read the source][t16-report] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** The dated report relates the thirteen mathematical papers to the wider sourcehood, recipient-warrant, norm-fixing and competence questions. Its foundational assessment preserves affirmative reasoning about original productive adequacy and intrinsic acts while separating actual non-reception, essential independence, intrinsic necessity and identification of a common original source. A model that denies a granted complete supplier is not automatically a counterexample under that grant; application still owes warrant for the grant.
+
+The occurrence section keeps complete source-relative readings separate from partial records and from textual-person variants; it does not license Cartesian recombination or claim a new critical edition. The empirical section distinguishes scoring outcomes, active-answer agreement and size-standardised comparisons, rather than inferring a causal mechanism from one aggregate score. Original bibliographic/source assessments and later scientific developments keep their own dates and scopes. The report’s three final document reviews are described in the source but their absent bodies are not treated as newly inspected evidence here.
+
+### Sixteenth social-learning game reanalysis
+
+[Read the source][t16-reanalysis] · [Original collection and evidence scope][t16-guide].
+
+**Contribution.** This source-only package implements the Sixteenth game-log analyses, separate from the earlier Fifteenth reanalysis and from the research report describing its results. It provides a pinned environment, exact input-manifest checks, a replay entrypoint, analysis/contrast/sensitivity code and synthetic test fixtures. The two required external input files are identified rather than silently downloaded or republished; the output directory must meet the package’s fresh-output rules.
+
+Its recorded results distinguish a game’s negative score from correctness among the active answerers and keep missing/tied roster information visible. The stated size-standardised contrasts and sensitivity ranges are descriptive estimands, not identified causal effects. The retained full-replay and independent-replay records refer to those historical executions. This curation did not rerun the analysis, reacquire participant inputs or upgrade synthetic smoke tests into empirical replication.
+
+### Sixteenth proof recovery and signed-controller source assurance
+
+[Read the source][t16-core] · [Original collection and evidence scope][t16-guide].
+
+**Purpose.** This is the source-assurance and replay reference for the companion, not another mathematical paper. The preserved core contains 111 own-module sources, including inherited material; the signed/direct-controller closure is a separate 116-module closure with overlapping inherited dependencies. Those counts are not additive independent formal results.
+
+The recovery guide distinguishes historical exact identities, recovered full fixture payloads without historical digest matches, a regenerated-and-reviewed fixture, and the newly derived audit controls. The formal scope retains ordinary written results alongside checked declarations and distinguishes them from the separate Python/JSON representation. Recorded compiler/library trust boundaries and source-build observations remain explicit. Inherited reviews are evidence with their own objects and dates, not fresh independent review of this refactor. Use the existing source index and claim map to recover the full component population rather than duplicating a scientific manifest in this catalogue.
+
+[Core scope][t16-core-scope] · [fixture recovery][t16-recovery] · [Python/JSON boundary][t16-python-reference] · [signed/controller closure][t16-controller-scope].
+
+[t16-guide]: ../../experiments/orthemology-v5-successors/groups/t16-successor/README.md
+[t16-claim-map]: ../../experiments/orthemology-v5-successors/groups/t16-successor/CLAIM_MAP.json
+[t16-source-index]: ../../experiments/orthemology-v5-successors/groups/t16-successor/SOURCE_INDEX.json
+[t16-core-scope]: ../../experiments/orthemology-v5-successors/source-store/16b94ff32abefcd72d84455b06b045963112d7ffb2b8204d217dc6713097daf5/SCOPE.md
+[t16-recovery]: ../../experiments/orthemology-v5-successors/source-store/64509a4f5bafcea6e6e7ed26dfea4d31ef42f10bbc701582b7642ae8dead5c81/RECOVERY_SCOPE.md
+[t16-controller-scope]: ../../experiments/orthemology-v5-successors/source-store/65442422f143b6aaf2a305cfd139a736b965e481555965d722b564231a64711d/PROOF_SCOPE_AND_OWNERSHIP.md
+[t16-python-reference]: ../../experiments/orthemology-v5-successors/source-store/373659d652481787fc1e9499261ee931b2e9150d003e640f9ae035258f6722fe/README.md
+[t16-report]: ../../experiments/orthemology-v5-successors/source-store/a59f7555e3f32f6869c55c28013a7dc94ee14a744494cf9e4a34eccf9770de78/SIXTEENTH_REPORT.md
+[t16-reanalysis]: ../../experiments/orthemology-v5-successors/source-store/69719284fe2764e2c7a85d223ba4bf7b4e5067ae6efcab544ba547412233a947/README.md
+[t16-core]: ../../experiments/orthemology-v5-successors/source-store/ab95d684c03c6921a2cc1dfe92dcaf39949da97c15bf9e76853758abaf7015a3/README.md
+[t16-certified-renewal]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#finite-certified-renewal-and-effective-selection-of-continuing-lineages
+[t16-private-random-renewal]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#randomised-renewal-in-the-explicit-diagonal-lineage
+[t16-closed-generation-populations]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#a-finite-width-population-does-not-supply-the-missing-renewal
+[t16-renewal-competence]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#what-the-continuation-result-says-about-preserving-competence
+[t16-finite-lookahead]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#every-effective-finite-lookahead-still-leaves-the-selection-boundary
+[t16-policy-certification]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#deciding-and-certifying-effective-renewal-policies
+[t16-unary-equality]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#unary-equality-conditionals-and-exact-finite-semantic-identity
+[t16-compiled-identity-obstruction]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#semantic-completeness-and-current-identity-in-the-exact-compiler-image
+[t16-certificate-extension]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#a-sound-full-rule-certificate-extension-for-unary-semantic-identity
+[t16-hasc-map]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#exact-hasc-theorem-map
+[t16-temporal-witness]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#the-time-available-to-witness-absence-of-a-bearer
+[t16-almost-sure-renewal]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#almost-sure-private-randomisation-and-effective-committed-continuation
+[t16-signed-synthesis]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#finite-signed-certification-and-program-producing-synthesis
+[t16-submitted-controller]: ../../experiments/orthemology-v5-successors/source-store/10903b3260522cec902c7213a1b93a2c3280922126994c76f95755baadc2a91e/FULL_READER_TEXT_v5.md#direct-extraction-from-submitted-finite-parity-certificates
