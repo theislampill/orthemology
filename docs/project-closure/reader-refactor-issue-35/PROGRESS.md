@@ -6,15 +6,13 @@
 
 The public scientific corpus is pinned at `0784acddd4770f1190f758f264ba52b2b110bd27`. The feature branch is `refactor/issue-35-research-reader-20261012`, draft PR 36. The owner authorises continuous source-preserving C03/C04 execution with regular real checkpoints, then genuinely separate review. No merge, issue closure, scientific reclassification or owner acceptance is authorised.
 
-The catalogue now contains **195 work entries and 711 bound source records**. There are **six of six reader pages authored**, **six of six governed publication families routed**, and **seven of seven pilot journeys authored**. Root README, STATUS and CONTRIBUTING are **zero of three refactored**. These are delivered units, not a whole-corpus or independent-comprehension certificate. The final number of distinct substantive works is not yet established: renderings, components, results and checkpoints are different objects, so no work-count completion percentage is supported.
+The catalogue now contains **198 work entries and 727 bound source records**. There are **six of six reader pages authored**, **six of six governed publication families routed**, and **seven of seven pilot journeys authored**. Root README, STATUS and CONTRIBUTING are **zero of three refactored**. These are delivered units, not a whole-corpus or independent-comprehension certificate. The final number of distinct substantive works is not yet established: renderings, components, results and checkpoints are different objects, so no work-count completion percentage is supported.
 
-### Latest saved evidence and this increment
+### Latest recovered evidence and current increment
 
-The interrupted execution had already committed Seventeenth at `10d96790b1f9c4de17bafe672f9d0a27291c397b`, tree `2fd413585bdf5998c0afcb67000d06b3ab42961c`. Its normal full CI run **38726230458** was freshly read as successful. A read-only public-history recovery reproduced the exact saved tree; its archive and all five member hashes matched. No completed sourcehood, continuation or Seventh–Seventeenth curation was restarted.
+The live branch was recovered at `34d90ac0c8fa5bee0ad2773df832da092b396259`, tree `14169a4b6aa30c9a604ef81ec25834529c13f5c7`. Its full normal CI `38731350891` was observed successful. Exact Git bundles restored unchanged content; earlier completed units were not restarted.
 
-The Eighteenth increment adds **six source-owned works** retaining all **eleven original result scopes**: one-change parity mathematics, the rational Lean semantic endpoint, HasE countercontrols, exact implementations, the dated foundational appraisal and the source/validation guide. All 189 previous work values and 700 source records remain unchanged. The five new missing-work/role/section/source controls failed before curation and passed afterwards; actual reader bindings pass. Native and full normal CI must report their own exact-tree results rather than borrow the predecessor's green run.
-
-The complete report, source guide, two principal Lean endpoint modules and implementation/verification guides were read. Mathematical-companion reading is explicitly selective in COLLECTION-COVERAGE. Imported proof modules, external primary works, participant data and original scientific execution were not newly replayed or authenticated. The original group's full support/path reconciliation remains part of the successor completion task.
+Nineteenth now has three source-owned works retaining eight original result scopes and all sixteen indexed source attachments: the common-source/attestation report, the source-evidence guide and the Arabic reading index. All 195 previous work values and 711 source values are unchanged. The complete report/guide and relevant premise records were read; the broader reading index has explicitly bounded method/structure inspection. Four controls first failed for absent curation; new checkpoint results must be recorded from observed runs. This is not a new scientific replay or independent appraisal.
 
 ## Seven obligations and their exits
 
@@ -34,7 +32,7 @@ Three preparation/design stages have usable implementation evidence; C03 and C04
 
 The original v5 consolidation (**119 paths**), v5 continuation collection (**1,200 paths and 68 result identifiers**) and applications (**50 paths / ten works**) have explicit complete author dispositions. Their source reading, exceptions and support decisions are preserved in the crosswalk and coverage records; independent review is still owed.
 
-Primary manuscript/formal-reference/companion and composition/revision entries have already been deepened. The original Twelfth texts, Thirteenth/Fourteenth identity sequence, Fifteenth compendium/report/reanalysis and Seventh–Eleventh work families have substantive entries. Sixteenth adds thirteen source-named mathematical papers and its distinct report/software/recovery reference. Seventeenth adds four source-owned works; Eighteenth adds six. Neither creates one paper per result or metadata file. Reopen an adequately completed unchanged entry only for a material fidelity or maintenance issue.
+Primary manuscript/formal-reference/companion and composition/revision entries have already been deepened. The original Twelfth texts, Thirteenth/Fourteenth identity sequence, Fifteenth compendium/report/reanalysis and Seventh–Eleventh work families have substantive entries. Sixteenth adds thirteen source-named mathematical papers and its distinct report/software/recovery reference. Seventeenth adds four source-owned works; Eighteenth adds six; Nineteenth adds one report and two supporting references. Neither creates one paper per result or metadata file. Reopen an adequately completed unchanged entry only for a material fidelity or maintenance issue.
 
 The large successor population still needs its final exact work/support/result reconciliation. Completed principal-paper reading must not be repeated just because a remaining package disposition or later source collection is being checked. Conversely, a collection-level link does not complete an unexamined work.
 
@@ -59,7 +57,7 @@ Baseline path counts below are the independently fixed denominator, not paper co
 | `publication-and-renderings` | 34 | All six governed reading forms routed; retain generated/build/sidecar roles for the rest. |
 | `v5-consolidation` | 119 | AUTHOR-CURATED COMPLETE: 119/119 work/support/history paths. Independent reconciliation remains. |
 | `v5-continuations` | 1,200 | AUTHOR-CURATED COMPLETE: 1,200/1,200 paths and 68/68 original result routes. Do not repeat completed curation. |
-| `v5-successors` | 2,661 | Seventh–Eighteenth principal work families now have source-bound routes. Finish Nineteenth–Twentieth, the remaining collection/source/support reconciliation and exact result-family coverage. |
+| `v5-successors` | 2,661 | Seventh–Nineteenth principal work families now have source-bound routes. Finish Twentieth, the remaining collection/source/support reconciliation and exact result-family coverage. |
 | `t20-live` | 2,067 | CP01–CP23/S01 collection is linked but not substantively mapped in this crosswalk. |
 | `t20-v6` | 6,363 | Selected synthesis/foundation/tensor/geometry joins treated; most source-owned work remains to disposition. |
 | `epistemic-tuples-source-fidelity` | 3 | Reading companion bound; complete notation/diagram/manifest support treatment remains distinct from original work. |

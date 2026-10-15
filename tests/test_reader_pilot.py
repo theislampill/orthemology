@@ -2540,5 +2540,71 @@ class EighteenthWorkAndRepresentationTests(unittest.TestCase):
         self.assertIn("the-foundational-result-and-the-closed-extension", {a for p, a in self.targets("t18-foundational-report")})
         self.assertIn("restricting-the-final-type-does-not-repair-the-method", {a for p, a in self.targets("t18-hase-countercontrols")})
 
+class NineteenthSourceAndWarrantTests(unittest.TestCase):
+    """Source-bound report/reference roles; not a philosophical truth test."""
+    GROUP = "experiments/orthemology-v5-successors/groups/t19-successor"
+    KEYS = {"t19-common-source-appraisal", "t19-source-evidence-guide", "t19-arabic-reading-index"}
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("nineteenth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.claims = json.loads((ROOT / cls.GROUP / "CLAIM_MAP.json").read_text())["results"]
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / cls.GROUP / "SOURCE_INDEX.json").read_text())["sources"]}
+
+    def work(self, key):
+        self.assertTrue(key in self.works, key); return self.works[key]
+
+    def paths(self, key):
+        w = self.work(key)
+        return {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+
+    def targets(self, key):
+        rel, anchor = self.work(key)["catalogue_entry"].split("#", 1)
+        idx = self.mod.markdown_index((ROOT / rel).read_text())
+        h = next((h for h in idx["headings"] if h[0] == anchor), None)
+        self.assertIsNotNone(h, key)
+        _, level, start = h
+        end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+        return {t for line, href in idx["links"] if start <= line < end
+                if (t := self.mod.resolve_reader_link(ROOT, rel, href)) is not None}
+
+    def test_eight_original_scopes_have_one_appraisal_owner_not_eight_papers(self):
+        w = self.work("t19-common-source-appraisal")
+        self.assertEqual(len(self.claims), 8)
+        self.assertEqual(set(w["existing_result_ids"]), {c["id"] for c in self.claims})
+        for c in self.claims:
+            self.assertTrue({self.sources[k]["public_path"] for k in c["source_ids"]} <= self.paths(w["key"]), c["id"])
+        self.assertNotIn("scientific_status", w)
+
+    def test_report_and_source_references_remain_distinct_with_all_components(self):
+        self.assertEqual(self.work("t19-common-source-appraisal")["role"], "synthesis")
+        for key in self.KEYS - {"t19-common-source-appraisal"}:
+            self.assertEqual(self.work(key)["role"], "supporting-reference")
+            self.assertEqual(self.work(key).get("existing_result_ids", []), [])
+        paths = set().union(*(self.paths(k) for k in self.KEYS))
+        self.assertTrue({s["public_path"] for s in self.sources.values()} <= paths)
+        for key in self.KEYS:
+            got = self.targets(key)
+            self.assertIn((self.GROUP + "/README.md", ""), got)
+            for k in self.work(key)["source_keys"]:
+                self.assertTrue(any(p == self.cross["sources"][k]["path"] for p, a in got), key)
+
+    def test_positive_common_source_and_obligation_transfer_have_exact_sections(self):
+        paths = {self.cross["sources"][k]["path"] for k in self.work("t19-common-source-appraisal")["source_keys"]}
+        got = {a for p, a in self.targets("t19-common-source-appraisal") if p in paths}
+        self.assertTrue({"the-present-judgement", "the-positive-causal-rationale",
+                         "from-local-coverage-to-the-connected-field",
+                         "a-positive-route-with-independent-evidential-content",
+                         "avenue-3-and-rightful-guidance"} <= got)
+
+    def test_index_preserves_scope_and_revision_method_not_fresh_primary_reading(self):
+        got = {a for p, a in self.targets("t19-arabic-reading-index")}
+        self.assertTrue({"scope-of-this-index", "how-later-readings-revise-earlier-entries"} <= got)
+        self.assertIn("Arabic_Volume_Reading_Index.json", {Path(p).name for p in self.paths("t19-arabic-reading-index")})
+
+
 if __name__ == "__main__":
     unittest.main()
