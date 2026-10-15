@@ -1,0 +1,107 @@
+name: issue-35-ninth-interfaces
+on:
+  push:
+    branches: [refactor/issue-35-research-reader-20261012]
+    paths: [.github/workflows/reader-refactor-snapshot.yml]
+permissions:
+  contents: write
+jobs:
+  qualify:
+    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - run: python -m pip install --quiet -r requirements-ci.lock.txt
+      - name: Apply only the exact tested reader changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/issue35-ninth"
+          echo "EVIDENCE_DIR=$RUNNER_TEMP/issue35-ninth" >> "$GITHUB_ENV"
+          python - <<'PY'
+          import base64,hashlib,json,lzma,os,subprocess,urllib.request
+          from pathlib import Path
+          import yaml
+          def git(*a):return subprocess.check_output(['git',*a]).decode().strip()
+          base='9f892022d2d13bfa12986240c26303c9fb798c89'
+          expected='f33339a1df6ec6e0373b053403b73016edf8b79d'
+          oid='104c1c525c11876726b17f905dd475f25285b1a9'
+          if git('rev-parse','HEAD^')!=base or git('rev-parse','HEAD')!=os.environ['GITHUB_SHA'] or git('status','--porcelain'):raise SystemExit('Wrong or dirty checkpoint')
+          req=urllib.request.Request('https://api.github.com/repos/theislampill/orthemology/git/blobs/'+oid,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+          with urllib.request.urlopen(req,timeout=45) as r:p=json.load(r)
+          packed=base64.b64decode(p['content'])
+          if p['sha']!=oid or hashlib.sha1(b'blob '+str(len(packed)).encode()+b'\0'+packed).hexdigest()!=oid:raise SystemExit('Wrong blob')
+          raw=lzma.decompress(packed)
+          if hashlib.sha256(raw).hexdigest()!='3cf488b95de60f080d0c698efd38e6c3ebaa19509c8f545f698faccedee59abe':raise SystemExit('Wrong payload')
+          data=json.loads(raw)
+          if data['format']!='issue35-exact-patch-v1' or data['base']!=base or data['tree']!=expected:raise SystemExit('Wrong contract')
+          out=Path(os.environ['RUNNER_TEMP'])/'issue35-ninth';(out/'authored-transport.json').write_bytes(raw)
+          before=yaml.safe_load(Path('docs/current-state.yaml').read_text())['authored']
+          subprocess.run(['git','apply','--index','--unidiff-zero'],input=data['patch'].encode(),check=True)
+          for f,h in data['expected_files'].items():
+              if hashlib.sha256(Path(f).read_bytes()).hexdigest()!=h:raise SystemExit('Wrong authored bytes: '+f)
+          subprocess.run(['git','rm','--','.github/workflows/reader-refactor-snapshot.yml'],check=True)
+          subprocess.run(['python','-B','scripts/generate_current_state.py'],check=True)
+          if yaml.safe_load(Path('docs/current-state.yaml').read_text())['authored']!=before:raise SystemExit('Authored state changed')
+          subprocess.run(['python','-B','scripts/make_manifest.py'],check=True)
+          subprocess.run(['git','add','--','docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256'],check=True)
+          allowed=set(data['expected_files'])|{'docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256'}
+          if set(git('diff',base,'--name-only').splitlines())!=allowed or git('write-tree')!=expected:raise SystemExit('Scope/tree mismatch')
+          (out/'candidate.json').write_text(json.dumps({'parent':os.environ['GITHUB_SHA'],'tree':expected,'source_base':data['source_base'],'authored_files':sorted(data['expected_files'])},indent=2)+'\n')
+          PY
+      - name: Focused curation qualification; normal CI retains the full suite
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B tests/test_reader_pilot.py NinthInterfaceWorkTests 2>&1 | tee "$EVIDENCE_DIR/reader-focused.txt"
+          python -B -O tests/test_reader_pilot.py NinthInterfaceWorkTests 2>&1 | tee "$EVIDENCE_DIR/reader-focused-optimized.txt"
+          python -B tests/test_reader_census.py 2>&1 | tee "$EVIDENCE_DIR/census.txt"
+          python -B scripts/check_reader_pilot.py 2>&1 | tee "$EVIDENCE_DIR/bindings.txt"
+          python -B scripts/validate_t20_v6_projection.py 2>&1 | tee "$EVIDENCE_DIR/projection.txt"
+          python -B scripts/generate_current_state.py --check 2>&1 | tee "$EVIDENCE_DIR/drift.txt"
+          python -B scripts/validate_repo.py 2>&1 | tee "$EVIDENCE_DIR/hygiene.txt"
+          python -B scripts/validate_current_state.py 2>&1 | tee "$EVIDENCE_DIR/state.txt"
+          python -B scripts/validate_review_state.py 2>&1 | tee "$EVIDENCE_DIR/review.txt"
+          python -B scripts/validate_internal_references.py 2>&1 | tee "$EVIDENCE_DIR/references.txt"
+      - name: Upload exact checked content without advancing the branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import os,json,base64,subprocess,urllib.request
+          from pathlib import Path
+          out=Path(os.environ['EVIDENCE_DIR']);c=json.loads((out/'candidate.json').read_text())
+          def git(*a):return subprocess.check_output(['git',*a]).decode().strip()
+          if git('write-tree')!=c['tree']:raise SystemExit('Post-check drift')
+          def request(path,data=None):
+              req=urllib.request.Request('https://api.github.com/repos/theislampill/orthemology'+path,data=None if data is None else json.dumps(data).encode(),headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'},method='GET' if data is None else 'POST')
+              with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+          if request('/git/ref/heads/refactor/issue-35-research-reader-20261012')['object']['sha']!=os.environ['GITHUB_SHA']:raise SystemExit('Concurrent branch advance')
+          elements=[]
+          for p in c['authored_files']+['docs/current-state.yaml','docs/provenance/RELEASE-MANIFEST.sha256']:
+              oid=request('/git/blobs',{'content':base64.b64encode(Path(p).read_bytes()).decode(),'encoding':'base64'})['sha']
+              mode,want,_=git('ls-files','-s','--',p).split(None,2)
+              if oid!=want:raise SystemExit('Wrong uploaded bytes: '+p)
+              elements.append({'path':p,'mode':mode,'type':'blob','sha':oid})
+          elements.append({'path':'.github/workflows/reader-refactor-snapshot.yml','mode':'100644','type':'blob','sha':None})
+          actual=request('/git/trees',{'base_tree':git('rev-parse','HEAD^{tree}'),'tree':elements})['sha']
+          if actual!=c['tree']:raise SystemExit('Wrong uploaded tree')
+          (out/'uploaded-tree.json').write_text(json.dumps({'tree':actual,'parent':os.environ['GITHUB_SHA'],'branch_advanced':False},indent=2)+'\n')
+          print('Exact checked content tree uploaded:',actual)
+          PY
+          (cd "$EVIDENCE_DIR"; find . -type f ! -name SHA256SUMS -print0 | LC_ALL=C sort -z | xargs -0 sha256sum > SHA256SUMS)
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: issue35-ninth-${{ github.sha }}
+          path: ${{ runner.temp }}/issue35-ninth/
+          retention-days: 14
+          if-no-files-found: error
