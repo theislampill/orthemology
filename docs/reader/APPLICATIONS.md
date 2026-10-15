@@ -203,6 +203,12 @@ The [semantic-repair account](PAPER-CATALOGUE.md#objective-norm-fixing-and-warra
 
 The same precision prevents overreach from the foundational work. A fault-tolerant implementation may need several operationally independent components even while its metaphysical source account affirms one complete Creator. Conversely, a diagram with many operational inputs does not establish many original metaphysical sources. The [world-bridge](PAPER-CATALOGUE.md#warranted-correction-and-complete-actual-origination) and [attribute](PAPER-CATALOGUE.md#original-sourcehood-agency-wisdom-and-disclosure) texts state the different dependence relations instead of identifying them by vocabulary alone.
 
+## Selecting a safe repair is not the same as diagnosing a defect
+
+In the [action-integrity construction](PAPER-CATALOGUE.md#action-relevant-integrity-after-exact-diagnosis), an accurate unanimous report need not reveal which actuator is safe. Repeating the same report or copying one root adds no new integrity. The constructive alternative is to justify containment: if a failed attempt genuinely does nothing and preserves future options, trying enough distinct roots can restore the whole rule. A “failure” label without those semantics is insufficient.
+
+The [codebook results](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) can guide a stipulated action interface, but the [timing comparison](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) must travel with it. Independence established before an adversary observes a private choice cannot be carried past disclosure of that choice unchanged. These are source-bound design consequences, not claims that any current Orthemology runtime already implements the assumed containment or adversary model.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md

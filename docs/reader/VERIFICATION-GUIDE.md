@@ -178,6 +178,12 @@ For the [necessity and attribute family](PAPER-CATALOGUE.md#necessity-objective-
 
 The norm-fixing source's semantic retractions also require a real warranted relation to the target and lawful implementation, not just algebra on sets labelled “correct”. Its discrimination appendix gives concrete source/intervention questions. The attribute map's computational checks have their stated finite scope; they are not independent tests of the philosophical truth, primary-text authenticity or actual revelation. Existing scientific judgments remain at their owners, and the current refactor is not authorised to revise them.
 
+## Distinguish exact certificates from source-relative reviews
+
+The [four-corrupt/three-message family](PAPER-CATALOGUE.md#three-messages-and-four-corrupt-roots) separates ordinary arguments from three finite exact certificate trees proving continuous-domain lower bounds. Its author verifier uses assertions; do not treat an optimised run that omits them as replay evidence. Its retained independent verifier and review have their own explicit checking scope. The refactor's normal/optimised tests validate reader behaviour, not those original certificates.
+
+The [complete fixed-codebook theorem](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) instead names an external hypergraph theorem and two recorded ordinary reviews, with a required endpoint clarification. Reading those records does not mean the external primary paper was reacquired or reverified in this task. A reviewer should test the shared-random/fixed-codebook and timing distinctions against the actual model, because valid links alone will not detect a summary that silently changes the game.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json

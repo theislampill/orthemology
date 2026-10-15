@@ -715,6 +715,63 @@ This continuation grants the challenging rival considerable strength—original 
 
 The paper distinguishes defeasible evaluative recognition, objective value and a metaphysical exclusion based on original priority and completeness. **Some real beneficence does not alone prove necessary, unrestricted impeccability**; the mixed-source case and extension to intrinsic practical completeness receive explicit additional treatment. Full knowledge does not mechanically cause good motivation, freedom from need is not freedom from every end, and privation does not make actual malicious agency disappear. False authoritative attestation supplies a particularly sharp role-relative defect, but truthfulness is not inferred from communication capacity alone. The argument therefore preserves affirmative grounds for Wisdom while stating the actual burdens of the strongest rival, rather than conferring a new scientific verdict by catalogue placement.
 
+## Safe restoration and the exact cost of action disclosure
+
+These works ask what a recipient needs to act correctly when some original roots can be corrupt. They distinguish knowing the right repair, possessing a safe way to perform it, receiving a useful message and controlling when an adversary learns the selected action. The same word “disclosure” does not make these operational games a proof of actual revelation or recipient warrant.
+
+### Action-relevant integrity after exact diagnosis
+
+[Read the complete argument](../../docs/provenance/v5-research-continuations/notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md) · [Destructive-root separation](../../docs/provenance/v5-research-continuations/notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md#3-destructive-root-architecture-exact-separation-theorem) · [Constructive fail-silent contrast](../../docs/provenance/v5-research-continuations/notes/9f42b862f0c1fd75d0d8558fd9d4be8b70ed49d2b2284c64e3832b4dc42bce63.md#4-fail-silent-architecture-a-substantive-positive-contrast).
+
+Exact identification of a defective rule need not identify a safe route for repairing it. The source constructs a whole-rule repair problem with `n = 2f + 1` authenticated roots and at most `f` static corrupt roots. A majority can disclose the correct repair while a truthful root still might be corrupt. With unanimous reports, the best compulsory first-attempt strategy has worst-case unsafe probability `f/n`; waiting forever instead fails restoration. After `k` dissenting reports, the corresponding risk is `(f-k)/(n-k)`. The latter formula uses the source's binary reporting, common-knowledge and static-root assumptions, not a universal confidence rule.
+
+The positive result changes the available action semantics rather than pretending better diagnosis suffices. When justified containment restricts a corrupt attempt to doing nothing, all root actions are either the required repair or identity. Their commuting, idempotent, option-preserving structure lets any `f+1` **distinct actual roots** restore without identifying all corrupt roots or trusting a success announcement. A shared vulnerable enforcer can invalidate this premise; copied reports are not new roots. These results connect diagnosis, persistent whole-rule repair and the actual fault model. A finite simulated control is not evidence of an implemented physical restoration architecture.
+
+### Positive-error disclosure and shared randomness
+
+[Read the two contracts and proofs](../../docs/provenance/v5-research-continuations/notes/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.md) · [Complete shared-random frontier](../../docs/provenance/v5-research-continuations/notes/052b34c2ae9594c118465c0b12b03aa1b93ccc71486183b7aad907820ca87b54.md#5-complete-frontier-with-shared-randomness) · [Recorded scoped ordinary review](../../docs/provenance/v5-research-continuations/notes/2345ce91be761877205ec312de101aeab84d44982b858554d975584f9ee7e4bc.md).
+
+There are `u` possible action roots, `b` corrupt ones with `0 ≤ b < u`, and `M ≥ 1` complete messages. An informed cooperative sender knows the corrupt set; the receiver must select a root. A fixed codebook assigns a lottery to each message. With shared randomness, the sender also sees a randomly selected codebook before choosing the message, while the corrupt set was committed independently beforehand. These are different information resources, not alternative names for the same receiver coin.
+
+The paper gives constructive fixed-codebook bounds and an exact shared-random value: `binom(b,M)/binom(u,M)` for `1 ≤ M ≤ b`, and zero for `M ≥ b+1`. A uniformly sampled menu of `M` distinct roots attains the shared bound: the sender uses an intact root whenever the menu contains one. The exceptional event is that the whole menu is corrupt. This is a worst-case static-corruption result, not a prior claim that roots fail independently. At `(u,b,M)=(8,3,2)`, shared randomness gives `3/28`, below the fixed-codebook optimum `1/4`. Earlier incompleteness of the general fixed case is historical: the complete later result below resolves that stated classification.
+
+### An exact two-message frontier
+
+[Read the theorem and its hypotheses](../../docs/provenance/v5-research-continuations/notes/6adf2975e5eb92a7d20800ac69c5083ba15842e252f196c5194db14c721c6a01.md#theorem) · [Constructive interpretation](../../docs/provenance/v5-research-continuations/notes/6adf2975e5eb92a7d20800ac69c5083ba15842e252f196c5194db14c721c6a01.md#constructive-interpretation).
+
+For two fixed messages the best arbitrary probability rows achieve exactly the best two disjoint uniformly weighted blocks. The source proves the lower bound through ordinal quotas and **two** chain matroids, then transfers it to arbitrary real probabilities by summation by parts. It also supplies a constructive rational interpretation. Examples include values `1/3` at `(u,b)=(7,3)` and `3/8` at `(11,5)`. This is a genuine exact classification, not merely a probability-grid search. Extending the two-matroid proof to three would require an invalid inference; the separate three-message work supplies its own argument.
+
+### Three messages and four corrupt roots
+
+[Read the elementary odd-universe theorem](../../docs/provenance/v5-research-continuations/notes/23d208a45f35240cae5c15f20ed33faab581b2b68ca211b4238cf8bd4c13df82.md#theorem) · [Read the complete b=4, M=3 extension](../../docs/provenance/v5-research-continuations/notes/196cd14d8755ade8e9490fba7a77d2d942d6a0b2b646251f0ca5264b99709502.md#theorem) · [Recorded independent certificate/proof review](../../docs/provenance/v5-research-continuations/notes/78cec40e65446228c25605abb047efb148b61c9dd5800e74146e0215f870a58d.md).
+
+The odd-universe result proves `1/s` for `u=2s+1`, `b=4`, `M=3`, with its separately treated small endpoint. The extension covers every `u ≥ 5`, giving `1/floor((u-1)/2)`. A singleton plus two nearly equal uniform blocks attains the value. Most regimes have ordinary proofs; the three even universes `u=8,10,12` use finite exact rational dual-certificate trees that cover the continuous probability domain. That distinction preserves the actual evidence instead of calling a finite numerical grid a universal proof.
+
+The retained [author checker](../../experiments/orthemology-v5-continuations/support-source/859583035289eeed556695bd39c881c3fdcf9b382b843d15613fdf35f5aebfd4.py), [independent checker](../../experiments/orthemology-v5-continuations/support-source/cecb4253268826e60168d7515ebb1e14bb550da4e7a4967f8cf7dc6e294705cd.py) and [certificate 129dad49](../../experiments/orthemology-v5-continuations/support-source/129dad49ba10349e4574f861895d280c789fb6f97c42509adb126b5104a083c2.json), [certificate fc703bd3](../../experiments/orthemology-v5-continuations/support-source/fc703bd37d65086f1f070b958f4fc5048f5d0bef5686c0ccd55694a255f01cc0.json), [certificate efad8b9e](../../experiments/orthemology-v5-continuations/support-source/efad8b9e207d7e736b8284d5c4a9e516d012f5c2f3c1130d0e865dc002a5971b.json), [certificate d6c32408](../../experiments/orthemology-v5-continuations/support-source/d6c3240834d91e9c8c945ad8029286dc43dbae02ce005def613f1a7d7b7a8502.json) are supporting components, not extra papers. The recorded review distinguishes assertion-based author code, which must not be run under optimisation, from the explicit-check independent verifier. No certificate was freshly replayed by this curation. The smaller general-game cases are not silently advertised as satisfying the additional `u ≥ 2b+1` constraint of the inherited diagnosis application.
+
+### The complete fixed-codebook classification
+
+[Read the model and theorem](../../docs/provenance/v5-research-continuations/notes/dcbaf45a6a43878061f33259605be18510a6ba09f816514c8a9a36112570ebde.md#model-and-theorem) · [Required range clarification](../../docs/provenance/v5-research-continuations/notes/ca20fe4c55bf906d578c43f92bd44399cd0f59af5265db7276a2a4a0f353f3f8.md) · [Recorded broad review](../../docs/provenance/v5-research-continuations/notes/34eb5ea04eba65aa1049718b772010a5a3a951280d41b63e03131e3b1248f63a.md) · [Recorded arithmetic/semantics review](../../docs/provenance/v5-research-continuations/notes/5ef69e148d510f5ed907251c268b97793fe3abc8c0b17f2ee3e42ef85700042b.md).
+
+For every `u > b ≥ 0` and `M ≥ 1`, the paper gives an exact fixed-codebook value and an attaining partition policy, including arbitrary overlapping real probability rows. In the range `1 ≤ M ≤ b+1`, put `N=b-M+1`; then
+
+```text
+V_fixed = max  floor((qN+M-1)/u) / q
+          1 ≤ q ≤ u-M+1
+```
+
+For `M ≥ b+1` the value is zero, with extra unused messages allowed. These endpoint conventions also cover `b=0` and `M>u`; an empty maximum or a `0/0` binomial quotient is not evaluated. The optimal codebook can use disjoint uniform blocks even though the competing class permits arbitrary real rows. The value needs a linear number of rational candidates; recovering an optimal partition has a stated dynamic programme, not a claim of constant-cost real arithmetic or free delivery.
+
+Its universal lower bound explicitly depends on the published **all-integer partition-Kneser hypergraph theorem** under the named hypotheses, not an unjustified prime-only variant or an extension of two-matroid intersection. Root copies in this proof are combinatorial devices, not additional independent integrity sources. The two retained scoped ordinary reviews accept this classification with the range clarification; the historical `pending` source path does not override them. Neither this account nor those source reviews constitute new external novelty certification, fresh formalisation, independent review of the present refactor, or a theorem about every possible communication resource.
+
+### When the information and corruption arrive
+
+[Read the four schedules](../../docs/provenance/v5-research-continuations/notes/fcfb1786cde8e3c12524d3f1769c7016e91a77e028e588a655af2b7e474776fe.md#four-schedules-and-their-exact-values) · [Recorded timing-deletion review](../../docs/provenance/v5-research-continuations/notes/042b3587ffc374867bead681da780a5c683c80a44039f4d6373cb9c98839cf7a.md).
+
+The order of information can change the optimum even with identical roots and message counts. The paper separately optimises four games: corruption before shared randomness; corruption after the codebook but before the message; corruption after the full message but before a private draw; and corruption after the realised root is exposed. At `(u,b,M)=(8,3,2)` the respective values are `3/28`, `1/4`, `3/8` and `1`. These are four resource-constrained optima, not four success rates for one unchanged protocol. In particular, transplanting the earlier random-menu protocol into an adversary that sees that menu may do worse than redesigning a fixed codebook.
+
+The result keeps compulsory action, observability, independent unrevealed coins and the adversary's permitted timing explicit. Allowing abstention changes the problem; “minimax” is not permission to expose a person to harm. The model's informational limits are not assertions that an omniscient source lacks future knowledge. This mathematical timing note is distinct from the collection's administrative clock-rounding erratum.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [core]: ../../theory/orthemic-core-formalization.md
 [multi]: ../../theory/orthemic-multi-actor-conflict-note.md

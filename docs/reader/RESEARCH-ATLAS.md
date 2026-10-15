@@ -174,6 +174,12 @@ The [necessity and attribute family](PAPER-CATALOGUE.md#necessity-objective-corr
 
 The [norm-fixing work](PAPER-CATALOGUE.md#objective-norm-fixing-and-warranted-common-repair) supplies immediate constructive value: justified target-preserving repairs can compose, under stated semantic and dependency conditions, without awaiting global agreement on every foundational question. [Agency, Wisdom and disclosure](PAPER-CATALOGUE.md#original-sourcehood-agency-wisdom-and-disclosure) concern further real perfections and warrants, not merely more powerful classification machinery. These are connected affirmative arguments with separate premises, not a claim that a successful finite controller proves every conclusion in the ascent.
 
+## Diagnosis, safe action and disclosure resources
+
+The [restoration/disclosure family](PAPER-CATALOGUE.md#safe-restoration-and-the-exact-cost-of-action-disclosure) connects restoration and provenance with collective diagnosis, identity and computability (avenues 4–7 and 10). Knowing which whole rule is wrong, having a persistent safe repair path and possessing a sufficiently informative message are different achievements. The positive fail-silent construction gives restoration without complete fault identification, under justified containment; the exact codebook theorems quantify the price of limited action-directed information.
+
+The progression from [two messages](PAPER-CATALOGUE.md#an-exact-two-message-frontier), through the [three-message family](PAPER-CATALOGUE.md#three-messages-and-four-corrupt-roots), to the [complete classification](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification) preserves both constructive results and their changing proof dependencies. [Timing](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) explains why preserving report bytes or root identities is insufficient when the adversary gains different information. Operational provenance is therefore more than a label, while philosophical sourcehood and truthful revelation still require their own arguments.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

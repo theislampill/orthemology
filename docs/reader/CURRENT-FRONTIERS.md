@@ -141,6 +141,12 @@ The [Sixth-final necessity/world-bridge family](PAPER-CATALOGUE.md#necessity-obj
 
 [Objective fittingness and common repair](PAPER-CATALOGUE.md#objective-norm-fixing-and-warranted-common-repair) already support useful local conclusions. Remaining authority and proper-function questions concern the evidence fixing the relevant bearer, end, history and obligation. [The practical-perfection continuation](PAPER-CATALOGUE.md#practical-perfection-and-the-malicious-source-challenge) separately tests the transition from actual eligible excellence to intrinsic completeness, including mixed motives and authoritative truthfulness. These bridges must be discussed at their own source scopes, not flattened into either universal verification or universal failure.
 
+## A completed fixed-game frontier is not every disclosure problem
+
+The positive-error paper's original unresolved general fixed-codebook classification is answered by the later [complete theorem and retained scope clarification](PAPER-CATALOGUE.md#the-complete-fixed-codebook-classification). Its older `pending` locator and the earlier narrower results must not erase that positive resolution. The [three-message extension](PAPER-CATALOGUE.md#three-messages-and-four-corrupt-roots) also remains useful because its proof has a different dependency and computer-assisted boundary.
+
+What stays separate is warranted application of the game: genuine original roots, static or mobile faults, conditional independence, the timing of information, compulsory action, safe containment and the actual selected target. The [restoration](PAPER-CATALOGUE.md#action-relevant-integrity-after-exact-diagnosis) and [timing](PAPER-CATALOGUE.md#when-the-information-and-corruption-arrive) counterexamples expose these premises directly. They do not reopen the completed fixed mathematical classification merely because a different physical, epistemic or theological question remains.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

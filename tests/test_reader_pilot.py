@@ -1831,5 +1831,71 @@ class ContinuationNormAndAttributeRoutesTests(ContinuationGeometryRoutesTests):
                 self.assertIn(path, support)
                 self.assertFalse(any(path in {self.cross["sources"][k]["path"] for k in x["source_keys"]} for x in self.cross["works"]))
 
+
+
+class ContinuationDisclosureRoutesTests(ContinuationGeometryRoutesTests):
+    """The source-owned lineage keeps changes of game and evidence visible."""
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        owner = json.loads((cls.directory / "OWNER-MAP.json").read_text())
+        rows = json.loads(subprocess.check_output(["git", "show", owner["baseline"]["commit"] +
+            ":docs/provenance/v5-research-continuations/SOURCE_MAP.json"], cwd=ROOT))["sources"]
+        members = (
+            "projections/restoration-v1/ARGUMENT.md",
+            "projections/positive-error-v2/POSITIVE_ERROR_FRONTIERS.md",
+            "projections/two-message-v2/TWO_MESSAGE_THEOREM.md",
+            "projections/odd-three-v1/ODD_THREE_MESSAGE_THEOREM.md",
+            "addenda/b4-m3-bounded-evidence-v1/author/B4_M3_EXACT_FRONTIER.md",
+            "pending/projections/full-private-frontier-pending/GENERAL_FIXED_FRONTIER.md",
+            "projections/timing-review/timing-v1/TIMING_RESOURCE_BOUNDARIES.md",
+        )
+        cls.original_paths = {r["member"]:r["path"] for r in rows
+            if r["origin"].startswith("549ba6a7f094") and r.get("path")}
+        cls.expected = {m:cls.original_paths[m] for m in members}
+
+    def test_three_message_extension_retains_the_ordinary_and_certified_parts(self):
+        works = {w["key"]:w for w in self.cross["works"]}
+        self.assertIn("continuation-three-message", works)
+        w = works["continuation-three-message"]
+        paths = {self.cross["sources"][k]["path"] for k in w["source_keys"]}
+        self.assertEqual(paths, {self.original_paths[m] for m in (
+            "projections/odd-three-v1/ODD_THREE_MESSAGE_THEOREM.md",
+            "addenda/b4-m3-bounded-evidence-v1/author/B4_M3_EXACT_FRONTIER.md")})
+        support = {self.cross["sources"][k]["path"] for k in w.get("supporting_source_keys", [])}
+        self.assertIn(self.original_paths["addenda/b4-m3-bounded-evidence-v1/review/INDEPENDENT_REVIEW.md"], support)
+        certs = {p for m,p in self.original_paths.items() if m.startswith(
+            "addenda/b4-m3-bounded-evidence-v1/author/") and m.endswith(".json")}
+        self.assertGreaterEqual(len(certs), 3)
+        self.assertTrue(certs <= support)
+        for path in certs:
+            self.assertFalse(any(path in {self.cross["sources"][k]["path"] for k in x["source_keys"]}
+                                 for x in self.cross["works"]))
+
+    def test_general_classification_keeps_its_range_clarification_and_actual_reviews(self):
+        works = {w["key"]:w for w in self.cross["works"]}
+        self.assertIn("continuation-complete-fixed-codebook", works)
+        w = works["continuation-complete-fixed-codebook"]
+        support = {self.cross["sources"][k]["path"] for k in w.get("supporting_source_keys", [])}
+        for member in (
+            "addenda/full-frontier-acceptance-v1/GENERAL_SCOPE_CLARIFICATION_V1.md",
+            "addenda/full-frontier-acceptance-v1/reviews/broad-review/INDEPENDENT_REVIEW.md",
+            "addenda/full-frontier-acceptance-v1/reviews/arithmetic-review/GENERAL_PRIVATE_ARITHMETIC_REVIEW_V1.md",
+        ):
+            self.assertIn(self.original_paths[member], support)
+        # An old pending path and a new acceptance record are different evidence roles.
+        self.assertEqual(len(w["source_keys"]), 1)
+        self.assertNotEqual(w["review_status"], "INDEPENDENT_REFACTOR_ACCEPTANCE")
+
+    def test_timing_route_uses_the_mathematical_note_not_the_clock_erratum(self):
+        works = {w["key"]:w for w in self.cross["works"]}
+        self.assertIn("continuation-timing-resources", works)
+        w = works["continuation-timing-resources"]
+        actual = {self.cross["sources"][k]["path"] for k in w["source_keys"]}
+        self.assertEqual(actual, {self.original_paths["projections/timing-review/timing-v1/TIMING_RESOURCE_BOUNDARIES.md"]})
+        self.assertNotIn(self.original_paths["projections/frontier-review-continuation/author-addenda/ROOT_TIMING_ERRATUM.md"], actual)
+        support = {self.cross["sources"][k]["path"] for k in w.get("supporting_source_keys", [])}
+        self.assertIn(self.original_paths["projections/timing-review/TIMING_RESOURCE_REVIEW_V1.md"], support)
+
 if __name__ == "__main__":
     unittest.main()
