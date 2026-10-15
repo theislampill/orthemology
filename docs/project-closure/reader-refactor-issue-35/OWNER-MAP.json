@@ -217,7 +217,8 @@
         "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json"
       ],
       "candidate_paths": 1200,
-      "candidate_role": "Checkpoint-3 families and final-sixth overlays retain distinct selections, suites and evidence."
+      "candidate_role": "Checkpoint-3 families and final-sixth overlays retain distinct selections, suites and evidence.",
+      "result_owner": "experiments/orthemology-v5-continuations/registry.json"
     },
     {
       "key": "v5-successors",
@@ -499,6 +500,7 @@
   "baseline_change_note": "Recovery 04 includes merged PR 37. Prior census and owner map remain in exact pre-reconciliation Git history; this is not evidence of rereading unchanged scientific bodies.",
   "required_work_sources_scope": "Known substantive source and component requirements from inspected baseline owners. This growing subset is not the full candidate denominator; every baseline path remains assigned separately.",
   "disposition_required_groups": [
-    "v5-consolidation"
+    "v5-consolidation",
+    "v5-continuations"
   ]
 }

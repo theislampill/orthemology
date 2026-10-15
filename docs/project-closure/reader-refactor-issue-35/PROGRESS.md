@@ -6,7 +6,7 @@
 
 The current owner-directed continuation began at `a67e04c6c5efc4fc316b2001a1b455c62e2b2963`, tree `327fbe8f92740a5f7879dca15e5298024266dc5f`; corpus baseline `0784acddd4770f1190f758f264ba52b2b110bd27`. Its [full normal CI run 38626098224](https://github.com/theislampill/orthemology/actions/runs/38626098224) was observed completed successfully. Later changes require their own result. Owner authority covers this branch and PR, not merge, scientific reclassification or independent self-approval.
 
-There are **136 catalogue work entries, 360 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
+There are **142 catalogue work entries, 388 bound source records and six authored reader pages** after this increment. A PDF, source file, component, result and checkpoint are different objects. The final number of substantive works in the corpus is **not yet established**, so neither a total-paper completion percentage nor a precise number of uncatalogued papers is supported.
 
 Counts below distinguish implementation delivered, required work remaining and independent acceptance. They overlap and must not be added into an artificial grand total.
 
@@ -17,7 +17,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 | C00 — Re-anchor and bind | Authorised feature branch, pinned corpus, write boundaries, baseline failures and repeated live checks. | Final separate reviewer binding and candidate/currentness review. |
 | C01 — Population and owners | 16,077 baseline paths in 26 disjoint routing groups, 73 discovery owners, no recursive external admissions. | Independent denominator/classification reconciliation. Full work semantics belong to C03, not this inventory count. |
 | C02 — Representative design | Composite reference, related editions, non-PDF mathematics and all three intellectual probes, with positive/adverse source readings. | Independent reader/design assessment; author-side mechanical checks cannot supply it. |
-| C03 — Full curation and navigation | Six pages, 136 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
+| C03 — Full curation and navigation | Six pages, 142 works, source/edition/component bindings and the bounded slices listed below. | Remaining work-family/support dispositions, fuller avenue/frontier coverage and root/current-navigation consolidation. |
 | C04 — Maintenance and checks | Source/edition/route controls, multi-edition repair, targeted CI and repeatable state generation. | Complete all five M01–M05 change-footprint exercises and T01–T18 contracts; final-candidate qualification. |
 | C05 — Independent review | Evidence and candidate exist; independent review not performed. | Separate semantic/usability/engineering review, repair findings, final SHA/tree approval. |
 | C06 — Owner and public readback | Draft PR 36 exists. | Dot/owner assessment and integration decision; only after explicit merge authority, resulting-main and public-route readback. |
@@ -30,7 +30,7 @@ Counts below distinguish implementation delivered, required work remaining and i
 |---|---:|---|
 | Reader surfaces | 6 of 6 authored | Complete their corpus coverage and make the agreed entrance current. |
 | Current root entrance files | 0 of 3 refactored | README, STATUS and CONTRIBUTING; reconcile other editable current guides. |
-| Catalogue work records | 136 | Remaining count unknown until source-owned work/support disposition is completed. |
+| Catalogue work records | 142 | Remaining count unknown until source-owned work/support disposition is completed. |
 | Governed publication families | 6 of 6 routed | Final independent relationship/availability review; no invented build equivalence. |
 | Application files | 50 of 50 role-dispositioned | Final independent review of the ten works and supporting roles. |
 | Pilot reader journeys | 7 of 7 authored | Hosted/independent comprehension and exact-source qualification still needed. |
@@ -60,7 +60,7 @@ The middle counts below are mechanical file/binding counts, **not semantic compl
 | `examples` | 15 | 0 | Fifteen example files still need their final work/support disposition. |
 | `publication-and-renderings` | 34 | 6 | All six governed reading forms routed; retain generated/build/sidecar roles for the rest. |
 | `v5-consolidation` | 119 | 16 | All 119 paths have work/support/history dispositions; seven source-bound work entries added. Independent reconciliation remains. |
-| `v5-continuations` | 1,200 | 173 | Geometry, cost/controller/prior and sourcehood/Knowledge/selection families have substantive routes; complete return/support disposition remains in progress. |
+| `v5-continuations` | 1,200 | 201 | All 1,200 paths have explicit work/support/history roles and all 68 existing result IDs have scoped work/availability routes; completed author disposition, independent reconciliation pending. |
 | `v5-successors` | 2,661 | 61 | Selected Twelfth–Fifteenth and earlier probes treated; substantial other tranche/owner material remains. |
 | `t20-live` | 2,067 | 0 | CP01–CP23/S01 collection is linked but not substantively mapped in this crosswalk. |
 | `t20-v6` | 6,363 | 11 | Selected synthesis/foundation/tensor/geometry joins treated; most source-owned work remains to disposition. |
@@ -160,3 +160,13 @@ The later complete classification and its range clarification supersede the earl
 Six new route/relationship controls first failed and then passed after implementation. The actual crosswalk/page checker passed. Complete suite/native evidence belongs to the exact published checkpoint. The previous norm/attribute head is `2370eb9bd1664d9635e90de720da1ca11f3f4d23`, tree `1be494bc5d235bc045ef83bb9fb7148aff442a74`; its focused native qualification passed, while normal run `38658877299` was in progress at the latest read. No predecessor result is silently transferred.
 
 Next executable task: reconcile remaining v5-continuation work, report, variant and support dispositions against the independent original source map, then proceed to the next incomplete collection. C03/C04 remain open; root consolidation and separate review are still owed. No new owner permission is needed for ordinary continuation.
+
+## Recovered disclosure and completed v5-continuation disposition
+
+The previous interrupted run had saved and tested the six restoration/disclosure entries but had not advanced the branch to their uploaded tree. Their verified 13-member evidence archive and exact candidate tree were recovered; the actual content was committed as `92a2b535bc31d2541bd654576614d9650905d3cf` (tree `aaae66fedd92b326aa4e0e03520c5724cbb28e0c`). A subsequent read-only history transport restored the exact checkout, not the research from chat prose. The older sourcehood/Knowledge and five-family foundational curation had already been committed and was not repeated.
+
+**The v5-continuation collection is now 1,200/1,200 path-dispositioned at author level, with 68/68 existing result IDs linked to their appropriate work or explicit reported-result/availability reference.** Six further entries cover raw-tape concentration, affine-tail consequences, canonical recursive-policy equivalence, literal indexed runtime, the dated Sixth synthesis and the source/execution directory. The two reference/synthesis entries are labelled as such, not new proved discoveries. Actual prefix-law and stopped-cost proof components were attached to two existing works without duplicating them. Original result claims and verdicts remain at their existing owners.
+
+All other 134 prior work records remain unchanged; exact prior source records are preserved. Source readings and role boundaries are in [COLLECTION-COVERAGE.md](COLLECTION-COVERAGE.md#complete-v5-continuation-disposition). Six new completion controls first failed, then passed. The 142 inherited tests are not automatically credited to this changed tree; its proportionate and full qualification results must be observed at the next checkpoint.
+
+The next executable C03 unit is the remaining v5-successor collection, reusing the completed Twelfth–Fifteenth and prior probe work rather than reopening it. T20 live/v6, AR8R, experiments, support disposition, full subject/frontier coverage and root/current-navigation consolidation remain. C04 maintenance/control qualification and C05/C06 independent/owner steps remain open. No new independent closure or merge is claimed.

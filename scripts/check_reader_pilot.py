@@ -123,6 +123,50 @@ def check_collection_dispositions(rows, owners, cross):
     return errors
 
 
+
+def check_collection_result_routes(repo, owners, cross):
+    """Resolve editorial work routes against the collection's actual result owner.
+
+    No theorem extraction, new scientific identifiers, copied claims or copied
+    verdicts. A public result's explicit availability/reference route can remain
+    useful without inventing a missing original source body.
+    """
+    errors = []
+    work_ids = {w["key"] for w in cross.get("works", [])}
+    records = cross.get("collection_dispositions", {})
+    if not isinstance(records, dict):
+        return ["result-routes: malformed collection dispositions"]
+    for group in owners.get("collections", []):
+        owner_path = group.get("result_owner")
+        if not owner_path:
+            continue
+        record = records.get(group["key"], {})
+        if (owner_path not in group.get("owners", [])
+                or record.get("result_owner") != owner_path):
+            errors.append("result-owner: " + group["key"])
+            continue
+        try:
+            original = json.loads(safe_path(Path(repo), owner_path).read_text(),
+                                  object_pairs_hook=unique_object)
+            rows = original["results"]
+            ids = [r["id"] for r in rows]
+            if not ids or len(ids) != len(set(ids)):
+                raise ValueError("empty or duplicate original result IDs")
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            errors.append("result-owner: " + group["key"] + ": " + str(exc))
+            continue
+        routes = record.get("result_routes", {})
+        if not isinstance(routes, dict) or set(routes) != set(ids):
+            errors.append("result-routes: " + group["key"] + " omitted or invented a result ID")
+            continue
+        for result_id, destinations in routes.items():
+            if (not isinstance(destinations, list) or not destinations
+                    or any(not isinstance(w, str) or w not in work_ids for w in destinations)
+                    or len(destinations) != len(set(destinations))):
+                errors.append("result-work: " + result_id)
+    return errors
+
+
 def permitted_reader_ci_addition(repo, row, body):
     """Admit exactly the reviewed additive CI step, not mutable science owners.
 
@@ -255,6 +299,7 @@ def check(repo, owners, cross):
     errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"]))
     indexed = {row["path"]: row for row in rows}
     errors.extend(check_collection_dispositions(rows, owners, cross))
+    errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
         actual_tree = subprocess.run(
             ["git", "rev-parse", owners["baseline"]["commit"] + "^{tree}"],

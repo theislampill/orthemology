@@ -1897,5 +1897,96 @@ class ContinuationDisclosureRoutesTests(ContinuationGeometryRoutesTests):
         support = {self.cross["sources"][k]["path"] for k in w.get("supporting_source_keys", [])}
         self.assertIn(self.original_paths["projections/timing-review/TIMING_RESOURCE_REVIEW_V1.md"], support)
 
+
+class ContinuationCollectionCompletionTests(unittest.TestCase):
+    """Declared source collection, not catalogue size, supplies the denominator."""
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("continuation_complete_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        d = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((d / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((d / "CROSSWALK.json").read_text())
+        cls.rows = cls.mod.entries_at(ROOT, cls.owners["baseline"]["commit"])
+        cls.registry_path = "experiments/orthemology-v5-continuations/registry.json"
+        cls.registry = json.loads((ROOT / cls.registry_path).read_text())
+        cls.work = {w["key"]: w for w in cls.cross["works"]}
+
+    def test_entire_continuation_population_has_exact_roles(self):
+        records = self.cross.get("collection_dispositions", {})
+        self.assertIn("v5-continuations", records)
+        self.assertIn("v5-continuations", self.owners.get("disposition_required_groups", []))
+        expected = {r["path"] for r in self.rows if r["path"].startswith((
+            "experiments/orthemology-v5-continuations/", "docs/provenance/v5-research-continuations/"))}
+        record = records["v5-continuations"]
+        self.assertEqual({i["path"] for i in record["items"]}, expected)
+        self.assertEqual(len(record["items"]), len(expected))
+        self.assertEqual(self.mod.check_collection_dispositions(self.rows, self.owners, self.cross), [])
+        changed = deepcopy(self.cross)
+        changed["collection_dispositions"]["v5-continuations"]["items"].pop()
+        self.assertTrue(self.mod.check_collection_dispositions(self.rows, self.owners, changed))
+
+    def test_every_declared_result_has_a_work_route_without_new_scientific_ids(self):
+        self.assertTrue(hasattr(self.mod, "check_collection_result_routes"), "Missing independent result-owner route check")
+        record = self.cross["collection_dispositions"]["v5-continuations"]
+        self.assertEqual(set(record["result_routes"]), {x["id"] for x in self.registry["results"]})
+        self.assertEqual(self.mod.check_collection_result_routes(ROOT, self.owners, self.cross), [])
+        for mutation in ("missing", "unknown-result", "unknown-work", "wrong-owner"):
+            changed = deepcopy(self.cross)
+            routes = changed["collection_dispositions"]["v5-continuations"]["result_routes"]
+            if mutation == "missing": routes.pop("T6-CONCENTRATION")
+            elif mutation == "unknown-result": routes["NEW-UNREGISTERED-SCIENCE"] = ["continuation-raw-concentration"]
+            elif mutation == "unknown-work": routes["T6-MOMENTS"] = ["nonexistent-work"]
+            else: changed["collection_dispositions"]["v5-continuations"]["result_owner"] = "docs/notation-gallery.md"
+            self.assertTrue(self.mod.check_collection_result_routes(ROOT, self.owners, changed), mutation)
+
+    def test_formal_concentration_and_moment_works_remain_distinct(self):
+        expected = {
+            "continuation-raw-concentration": "211febf4a1cf053563e4cefd1adc21a4778932bc6e39c9c414c09c9020e86853.md",
+            "continuation-affine-moments": "2d7ec3409db14cb075da9d60a8c0ebdcd564de32f3994a5e227fffacb31d4a42.md",
+        }
+        for key, filename in expected.items():
+            self.assertIn(key, self.work)
+            w = self.work[key]
+            self.assertEqual(w["role"], "research-note")
+            self.assertEqual(len(w["source_keys"]), 1)
+            self.assertTrue(self.cross["sources"][w["source_keys"][0]]["path"].endswith(filename))
+            path, anchor = w["catalogue_entry"].split("#", 1)
+            idx = self.mod.markdown_index((ROOT / path).read_text())
+            self.assertIn(anchor, idx["anchors"])
+            self.assertGreaterEqual(len(w["supporting_source_keys"]), 2)
+
+    def test_original_restart_and_actual_cost_keep_their_proof_interfaces(self):
+        expected = {
+            "continuation-observed-restart": "1547d34d2a53302e070e7a02131f242f9cb1d80f6aa0f96fc478844f630703a3.lean",
+            "continuation-generated-cost": "8b4014de8d7ae893631060dbe780cce434bccbce16524e6303e2c692f3fce46b.lean",
+        }
+        for key, filename in expected.items():
+            paths = {self.cross["sources"][s]["path"] for s in self.work[key]["supporting_source_keys"]}
+            self.assertTrue(any(p.endswith(filename) for p in paths), key)
+            self.assertFalse(any(filename in w["title"] for w in self.cross["works"]))
+
+    def test_shared_collection_records_and_future_agenda_are_not_proofs(self):
+        self.assertIn("continuation-corpus-reference", self.work)
+        self.assertIn("continuation-sixth-handoff", self.work)
+        self.assertEqual(self.work["continuation-corpus-reference"]["role"], "supporting-reference")
+        self.assertEqual(self.work["continuation-sixth-handoff"]["role"], "synthesis")
+        record = self.cross["collection_dispositions"]["v5-continuations"]
+        self.assertEqual(record["result_routes"]["S6F-01"], ["continuation-corpus-reference"])
+        self.assertEqual(record["result_routes"]["S6F-26"], ["continuation-sixth-handoff"])
+        self.assertTrue(any(i["role"] == "historical-edition" for i in record["items"]))
+        self.assertTrue(any(i["role"] == "formal-component" for i in record["items"]))
+
+    def test_original_collection_owner_is_not_a_copied_scientific_ledger(self):
+        self.assertIn("v5-continuations", self.cross.get("collection_dispositions", {}))
+        record = self.cross["collection_dispositions"]["v5-continuations"]
+        self.assertEqual(record["result_owner"], self.registry_path)
+        for item in record["items"]:
+            self.assertNotIn("claim", item)
+            self.assertNotIn("scientific_status", item)
+        self.assertEqual(self.mod.check_collection_result_routes(ROOT, self.owners, self.cross), [])
+
+
 if __name__ == "__main__":
     unittest.main()
