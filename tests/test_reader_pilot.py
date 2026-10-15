@@ -2461,5 +2461,84 @@ class SeventeenthWorkAndWarrantTests(unittest.TestCase):
         self.assertTrue(any(Path(self.cross["sources"][v["source"]]["path"]).name=="Mathematical_Companion_Content_v2.md" for v in math["reading_forms"]))
         self.assertTrue(any(Path(self.cross["sources"][v.get("basis","")]["path"]).name=="RELATED_ARTIFACTS.json" for v in self.cross["relations"] if v.get("from") in {x["source"] for x in math["reading_forms"]} and v.get("basis") in self.cross["sources"]))
 
+
+
+class EighteenthWorkAndRepresentationTests(unittest.TestCase):
+    """The source-owned one-change, formal, software and appraisal contracts."""
+    GROUP = "experiments/orthemology-v5-successors/groups/t18-successor"
+    KEYS = {"t18-one-change-parity", "t18-semantic-endpoint", "t18-hase-countercontrols",
+            "t18-exact-implementations", "t18-foundational-report", "t18-source-validation-guide"}
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("eighteenth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.claims = json.loads((ROOT / cls.GROUP / "CLAIM_MAP.json").read_text())["results"]
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / cls.GROUP / "SOURCE_INDEX.json").read_text())["sources"]}
+
+    def work(self, key):
+        self.assertTrue(key in self.works, key); return self.works[key]
+
+    def paths(self, key):
+        w = self.work(key)
+        return {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+
+    def targets(self, key):
+        w = self.work(key); rel, anchor = w["catalogue_entry"].split("#", 1)
+        idx = self.mod.markdown_index((ROOT / rel).read_text())
+        heading = next((h for h in idx["headings"] if h[0] == anchor), None)
+        self.assertIsNotNone(heading, key)
+        _, level, start = heading
+        end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+        return {t for line, href in idx["links"] if start <= line < end
+                if (t := self.mod.resolve_reader_link(ROOT, rel, href)) is not None}
+
+    def test_eleven_original_results_keep_six_work_roles_and_exact_sources(self):
+        for key in self.KEYS: self.work(key)
+        self.assertEqual(len(self.claims), 11)
+        for claim in self.claims:
+            rid = claim["id"]
+            key = ("t18-semantic-endpoint" if rid == "T18-RATIONAL-LEAN-ENDPOINT" else
+                   "t18-hase-countercontrols" if rid.startswith("T18-HASE-") else
+                   "t18-exact-implementations" if rid == "T18-IMPLEMENTATION-QUALIFICATION" else
+                   "t18-foundational-report" if rid == "T18-NONCAUSAL-EXTENSION-STOP" else
+                   "t18-one-change-parity")
+            self.assertIn(rid, self.work(key).get("existing_result_ids", []))
+            self.assertTrue({self.sources[s]["public_path"] for s in claim["source_ids"]} <= self.paths(key), rid)
+            self.assertNotIn("scientific_status", self.work(key))
+
+    def test_main_bodies_and_original_collection_are_directly_readable(self):
+        for key in self.KEYS:
+            w = self.work(key); got = self.targets(key)
+            self.assertIn((self.GROUP + "/README.md", ""), got, key)
+            for source in w["source_keys"]:
+                self.assertTrue(any(path == self.cross["sources"][source]["path"] for path, anchor in got), key)
+
+    def test_mathematics_has_input_certificate_and_uniformity_sections(self):
+        paths = {self.cross["sources"][s]["path"] for s in self.work("t18-one-change-parity")["source_keys"]}
+        actual = {anchor for path, anchor in self.targets("t18-one-change-parity") if path in paths}
+        self.assertTrue({"2-the-operational-model", "4-the-finite-certificate-and-main-theorem",
+                         "11-real-kernels-and-the-boundary-of-representation",
+                         "12-common-priorities-permit-uniform-support-only-synthesis"} <= actual)
+
+    def test_formal_and_python_work_preserve_distinct_endpoints(self):
+        formal = self.work("t18-semantic-endpoint"); software = self.work("t18-exact-implementations")
+        self.assertEqual(formal["role"], "research-software")
+        self.assertEqual(software["role"], "research-software")
+        self.assertNotEqual(formal["source_keys"], software["source_keys"])
+        self.assertIn("HiddenChangeSemanticEndpoint.lean", {Path(p).name for p in self.paths(formal["key"])})
+        self.assertTrue({"API.md", "VERIFICATION_SUMMARY.md", "COMPONENT_STATUS.json"} <=
+                        {Path(p).name for p in self.paths(software["key"])})
+        self.assertIn("InhabitedEndpointControl.lean", {Path(p).name for p in self.paths("t18-hase-countercontrols")})
+
+    def test_report_and_source_guide_do_not_duplicate_mathematical_credit(self):
+        self.assertEqual(self.work("t18-foundational-report")["role"], "synthesis")
+        self.assertEqual(self.work("t18-source-validation-guide")["role"], "supporting-reference")
+        self.assertEqual(self.work("t18-source-validation-guide").get("existing_result_ids", []), [])
+        self.assertIn("the-foundational-result-and-the-closed-extension", {a for p, a in self.targets("t18-foundational-report")})
+        self.assertIn("restricting-the-final-type-does-not-repair-the-method", {a for p, a in self.targets("t18-hase-countercontrols")})
+
 if __name__ == "__main__":
     unittest.main()
