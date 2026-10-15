@@ -206,6 +206,12 @@ The [Tenth occurrence and completion works](PAPER-CATALOGUE.md#occurrence-comple
 
 This connection contributes a constructive choice: retain an adequate task-specific witness, arrange a genuinely usable evidence service, or prove the relevant strict bound—rather than demand maximal retention. It requires the actual source/boundary map, correct role interpretation, access/cost contract and the right question. The bounded-release application additionally needs its organised-reliance and due-care premises. Neither a source name nor a convergence theorem supplies all those bridges.
 
+## Exact substitution makes a representation usable
+
+The [raw-index substitution work](PAPER-CATALOGUE.md#literal-substitution-in-the-original-raw-index-judgement) keeps the code being transformed, not merely its interpreted answer. The [typed-context nucleus](PAPER-CATALOGUE.md#typed-telescopes-with-derived-heterogeneous-soundness) then derives soundness and contextual substitution from finite typing rules. [Recursive All](PAPER-CATALOGUE.md#recursive-dependent-all-with-two-distinct-binder-sorts) supplies the stronger binder and mixed-substitution construction under its stated contracts.
+
+This connects **semantic fidelity (8)** with **type-theoretic completion (9)** and **effective representation (10)**. Exact syntax and code equations support reusing a derivation through substitution and contextual J; an erased proof does not automatically retain the construction history needed by another translation. The [normalisation boundary](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source) adds a concrete discriminator: a typed source can return every argument like an identity yet have no raw-convertible finite-source representative. Target inhabitation, source convertibility, PER equality and the existence of a serialised checker are different claims. The positive theorems remain useful precisely because the translation contract specifies which is preserved.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

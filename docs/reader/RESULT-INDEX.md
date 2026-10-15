@@ -407,6 +407,19 @@ The work routes below group constituent claims without minting new IDs. Exact as
 
 A compact completion can be uniquely determined while an exact query remains beyond any uniformly complete finite-proof service. Conversely, robust strict claims can have finite witnesses without recovering the whole state. The article’s origin-sensitive read cost and the release paper’s due-care application use additional source, service and normative premises; numerical cost is not itself authority.
 
+## Eleventh exact substitution, context and representation results
+
+These four existing IDs keep their original formal component scope. Repeated namespace names do not establish identical definitions. [Eleventh source, result and suite guide](../../experiments/orthemology-v5-successors/groups/t11-types/README.md)
+
+| Original result | Work, assumptions and source evidence |
+|---|---|
+| `T11-RAW-INDEX-SUBSTITUTION` | [Constructive substitution in the unchanged raw-index judgement](PAPER-CATALOGUE.md#literal-substitution-in-the-original-raw-index-judgement) |
+| `T11-TYPED-TELESCOPE-NUCLEUS` | [Finite typed-telescope nucleus and exact representation](PAPER-CATALOGUE.md#typed-telescopes-with-derived-heterogeneous-soundness) |
+| `T11-DEPENDENT-ALL` | [Recursive dependent All and mixed substitution](PAPER-CATALOGUE.md#recursive-dependent-all-with-two-distinct-binder-sorts) |
+| `T11-NORMALIZATION-BOUNDARY` | [Polymorphic identity source-normalisation boundary](PAPER-CATALOGUE.md#an-identity-application-without-a-normal-unapplied-source) |
+
+The positive result is an exact syntactic/semantic preservation theorem for a specified grammar, not “every formalisation is correct”. The normalisation witness preserves the same source term across its positive typing and negative raw-representation statements. Later identity and restricted-checker entries retain their separate questions and calculi.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md

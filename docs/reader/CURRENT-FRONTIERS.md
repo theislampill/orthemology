@@ -173,6 +173,12 @@ The [Tenth completion correction](PAPER-CATALOGUE.md#backward-completion-is-not-
 
 For [source-context reacquisition](PAPER-CATALOGUE.md#open-context-effects-and-the-cost-of-reacquisition), actual interpretation, authenticated boundary identities and adequate permitted responses remain application burdens. A richer response or remembered verdict changes the mathematical cost model and must be credited. The [printed/source-version assessments](PAPER-CATALOGUE.md#the-bounded-printed-collation-is-a-dated-source-assessment) keep their dated positive findings and unresolved witness questions; the refactor performs no new external source-acquisition campaign.
 
+## Typed substitution has advanced; full dependent completion is another task
+
+The [Eleventh work sequence](PAPER-CATALOGUE.md#typed-contexts-substitution-and-source-representation-the-eleventh-works) supplies exact raw substitution, a finite typed-context nucleus and recursive dependent All with heterogeneous soundness and mixed substitution. Those are established source-scoped constructions in their reported formal environments, not still merely proposed extensions.
+
+The remaining broad questions concern universes, unrestricted rules, frontend/serialised proof transformation and adoption of a specified calculus; none follows from sharing a namespace. The same sequence proves a source-Conv-preserving finite-reification obstruction without claiming that the identity target is uninhabited. Later identity calculi and specialised complete checkers must therefore be compared at their actual targets, not treated as inconsistent global answers to one undifferentiated “completion” question.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

@@ -2260,5 +2260,64 @@ class TenthWorkAndEvidenceTests(unittest.TestCase):
         self.assertNotEqual(self.works["t10-occurrence-reacquisition"]["source_keys"],
                             self.works["t10-occurrence-reference"]["source_keys"])
 
+
+
+class EleventhWorkAndEvidenceTests(unittest.TestCase):
+    """Source-owned calculus distinctions, not new formal theorem acceptance."""
+    EXPECTED = {
+        "T11-RAW-INDEX-SUBSTITUTION": "t11-raw-index-substitution",
+        "T11-TYPED-TELESCOPE-NUCLEUS": "t11-telescope-nucleus",
+        "T11-DEPENDENT-ALL": "t11-dependent-all",
+        "T11-NORMALIZATION-BOUNDARY": "t11-source-normalisation",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("eleventh_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["results"]}
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / "docs/provenance/v5-successors/SOURCE_MAP.json").read_text())["sources"]}
+
+    def test_exact_four_calculus_work_routes_keep_all_owned_components(self):
+        self.assertEqual(set(self.EXPECTED), {r for r in self.results if r.startswith("T11-")})
+        for rid,key in self.EXPECTED.items():
+            self.assertTrue(key in self.works, rid)
+            w=self.works[key]; self.assertIn(rid,w.get("existing_result_ids",[]))
+            got={self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+            want={self.sources[k]["public_path"] for k in self.results[rid]["source_ids"]}
+            self.assertTrue(want<=got,(rid,sorted(want-got)))
+            self.assertNotIn("scientific_status",w)
+
+    def test_substantive_guide_and_review_routes_are_in_each_work_section(self):
+        rel="docs/reader/PAPER-CATALOGUE.md"; idx=self.mod.markdown_index((ROOT/rel).read_text())
+        for key in self.EXPECTED.values():
+            self.assertTrue(key in self.works,key); w=self.works[key]
+            page,anchor=w["catalogue_entry"].split("#",1); self.assertEqual(page,rel)
+            heading=next((x for x in idx["headings"] if x[0]==anchor),None); self.assertIsNotNone(heading,key)
+            _,level,start=heading
+            end=next((x[2] for x in idx["headings"] if x[2]>start and x[1]<=level),idx["line_count"])
+            reached={t[0] for line,href in idx["links"] if start<=line<end
+                     if (t:=self.mod.resolve_reader_link(ROOT,rel,href)) is not None}
+            self.assertTrue({self.cross["sources"][k]["path"] for k in w["source_keys"]}<=reached,key)
+            self.assertIn("experiments/orthemology-v5-successors/groups/t11-types/README.md",reached)
+            self.assertTrue(any(Path(x).name=="REVIEW.md" for x in reached),key)
+
+    def test_normalisation_keeps_the_same_exposed_witness_and_controls(self):
+        key="t11-source-normalisation";self.assertTrue(key in self.works,key)
+        w=self.works[key]
+        names={Path(self.cross["sources"][k]["path"]).name for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+        self.assertTrue({"PolymorphicNormalizationBoundary.lean","IndependentBoundaryControls.lean","REVIEW.md"}<=names)
+        self.assertNotEqual(w["source_keys"],self.works["t11-dependent-all"]["source_keys"])
+
+    def test_recursive_all_keeps_mixed_substitution_and_legacy_qualification(self):
+        key="t11-dependent-all";self.assertTrue(key in self.works,key)
+        w=self.works[key]
+        names={Path(self.cross["sources"][k]["path"]).name for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+        self.assertTrue({"AllMixedAlgebra.lean","AllLegacyDerivations.lean","AllStructural.lean","IndependentMalformedReplacement.lean"}<=names)
+        nucleus=self.works.get("t11-telescope-nucleus"); self.assertIsNotNone(nucleus)
+        self.assertNotEqual(nucleus["source_keys"],w["source_keys"])
+
 if __name__ == "__main__":
     unittest.main()

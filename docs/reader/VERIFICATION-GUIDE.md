@@ -204,6 +204,12 @@ The [certificate work](PAPER-CATALOGUE.md#finite-common-policy-evidence-without-
 
 For the [expression correspondence](PAPER-CATALOGUE.md#expression-stacks-costs-and-the-python-trust-boundary), the completed tail reused previously compiled products and finite observations while performing only its missing stages. Preserve the earlier failed attempts and do not count correlated views as independent runs. For the [initial controller](PAPER-CATALOGUE.md#finite-reconstruction-and-an-actual-initial-state-controller), compiled tuple assertions and formal endpoint statements have different scopes. Inspect both when a claim depends on actual emitted event counts; neither creates a CPython or physical-deployment theorem.
 
+## Matching a typed result to the exact calculus
+
+For the [Eleventh sequence](PAPER-CATALOGUE.md#typed-contexts-substitution-and-source-representation-the-eleventh-works), inspect the actual source grammar and theorem signature before reusing a namespace label. The public P01DF and research raw-index P01DF owners are distinct. P01TC's opaque finite All leaf does not supply P01AC's recursive All rules; HasPlus/HasE are separately named later judgements.
+
+The linked original reviews report source-only rebuilds and exact declaration/axiom checks. Their reported independent acceptance is preserved as **historical research evidence**, not a fresh independent review of this reader refactor. The first substitution adapter failure and corrected retry also remain discoverable through the original collection guide. A support certificate covers the retained typing tree and displayed conversion endpoints, not the recoverable provenance of arbitrary hidden Prop-valued proof intermediates.
+
 [profile]: ../publication-profile.yaml
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
 [evidence]: ../provenance/v5-successors/EVIDENCE_BINDINGS.json
