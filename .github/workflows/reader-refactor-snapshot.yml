@@ -1,0 +1,42 @@
+name: issue-35-resume-eleventh
+on:
+  push:
+    branches: [refactor/issue-35-research-reader-20261012]
+    paths: [.github/workflows/reader-refactor-snapshot.yml]
+permissions:
+  contents: read
+jobs:
+  recover:
+    if: github.repository == 'theislampill/orthemology' && github.ref == 'refs/heads/refactor/issue-35-research-reader-20261012'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Export exact public recovery objects
+        shell: bash
+        run: |
+          set -euo pipefail
+          saved=d862bdde9df2405d255798fedb729409aec9761d
+          predecessor=e9050c1213753a7fd272c4c2d1b8e5579f51ce70
+          test "$(git rev-parse HEAD^)" = "$saved"
+          test "$(git rev-parse "$saved^{tree}")" = d4814c35d28095ba20822701f7ce938ec27a44c8
+          git merge-base --is-ancestor "$predecessor" "$saved"
+          out="$RUNNER_TEMP/issue35-resume-eleventh"
+          mkdir -p "$out"
+          git update-ref refs/recovery/issue35-current HEAD
+          git bundle create "$out/history.bundle" refs/recovery/issue35-current "^$predecessor"
+          printf '%s\n' "$saved" > "$out/saved-head.txt"
+          git rev-parse HEAD > "$out/transport-head.txt"
+          git rev-parse 'HEAD^{tree}' > "$out/transport-tree.txt"
+          git rev-parse origin/main > "$out/main-head.txt"
+          (cd "$out"; sha256sum ./*.bundle ./*.txt > SHA256SUMS)
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: issue35-resume-eleventh-${{ github.sha }}
+          path: ${{ runner.temp }}/issue35-resume-eleventh/
+          retention-days: 14
+          if-no-files-found: error
