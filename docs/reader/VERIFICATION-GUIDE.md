@@ -275,3 +275,12 @@ For the new raw-tape and moment routes, inspect the actual probability-law and t
 For a Sixteenth claim, begin at its [constituent work](PAPER-CATALOGUE.md#sixteenth-renewal-certificates-and-supplied-controllers), then the original claim map and source index. The [recovery reference](PAPER-CATALOGUE.md#sixteenth-proof-recovery-and-signed-controller-source-assurance) explains why the 111-module core and the separate 116-module signed/controller closure must not be added as disjoint evidence. It also preserves the different fixture provenance classes, written versus formal results and separate JSON/Python interface.
 
 The [reanalysis entry](PAPER-CATALOGUE.md#sixteenth-social-learning-game-reanalysis) points to its existing exact input and replay contract. No participant input, original PDF or compiler object is republished merely to make a reading route convenient. Replaying this refactor’s reader tests does not replay those mathematical or empirical studies.
+
+
+## Seventeenth source reading, finite proofs and aggregate software
+
+For a Seventeenth appraisal, read the [report and its explicit disagreements](PAPER-CATALOGUE.md#seventeenth-foundational-research-original-being-perfection-and-warranted-uptake) alongside the [source guide](PAPER-CATALOGUE.md#guide-to-the-six-foundational-sources-and-their-interpretative-relationships). Page-reading metadata, repeated electronic witnesses and source-scope tests do not authenticate all original texts. A reviewer must preserve whose appraisal is affirmative, what its premises are, and which dissent actually survives.
+
+The [mathematical companion](PAPER-CATALOGUE.md#finite-inference-under-assignment-uncertainty) contains ordinary finite proofs, not a newly compiled Lean development. Its earlier substantive text, final authorship/date additions and derived Markdown rendering have a documented relationship; they are not three independent papers.
+
+The [software guide](PAPER-CATALOGUE.md#seventeenth-closed-placement-inquiry-and-exact-supporting-calculations) separates synthetic/aggregate checks from independently pinned manifest verification, original raw-row replay and external DOCX verification. Its public components omit participant data and actual-outcome orchestration. A successful refactor check cannot supply those missing observations or authenticate the external theorem used by the post-inspection certificate. Restore the original indexed package layout before using its own runner; a single source-store file is not that executable directory.

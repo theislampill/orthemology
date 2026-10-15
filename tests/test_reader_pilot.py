@@ -2402,5 +2402,64 @@ class SixteenthConstituentWorkTests(unittest.TestCase):
             self.assertTrue(any(Path(p).name=="PROOF_SCOPE_AND_OWNERSHIP.md" for p in paths))
         self.assertNotEqual(self.EXPECTED["T16-SIGNED-SERVICE"],self.EXPECTED["T16-DIRECT-CONTROLLER"])
 
+
+class SeventeenthWorkAndWarrantTests(unittest.TestCase):
+    """Preserve source-owned work, model and historical-evidence boundaries."""
+    GROUP="experiments/orthemology-v5-successors/groups/t17-successor"
+    @classmethod
+    def setUpClass(cls):
+        spec=importlib.util.spec_from_file_location("seventeenth_reader",MODULE)
+        cls.mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.mod)
+        cls.cross=json.loads((ROOT/"docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works={w["key"]:w for w in cls.cross["works"]}
+        cls.claims=json.loads((ROOT/cls.GROUP/"CLAIM_MAP.json").read_text())["results"]
+        cls.sources={s["id"]:s for s in json.loads((ROOT/cls.GROUP/"SOURCE_INDEX.json").read_text())["sources"]}
+        cls.keys={"t17-foundational-report","t17-foundational-source-guide","t17-finite-assignment-inference","t17-closed-placement-evidence"}
+    def work(self,key):
+        self.assertTrue(key in self.works,key);return self.works[key]
+    def targets(self,key):
+        w=self.work(key);rel,anchor=w["catalogue_entry"].split("#",1)
+        page=self.mod.markdown_index((ROOT/rel).read_text())
+        h=next((x for x in page["headings"] if x[0]==anchor),None);self.assertIsNotNone(h,key)
+        _,level,start=h;end=next((x[2] for x in page["headings"] if x[2]>start and x[1]<=level),page["line_count"])
+        return {t for line,href in page["links"] if start<=line<end if (t:=self.mod.resolve_reader_link(ROOT,rel,href)) is not None}
+    def paths(self,key):
+        w=self.work(key);return {self.cross["sources"][k]["path"] for k in w["source_keys"]+w.get("supporting_source_keys",[])}
+    def test_eleven_owned_result_scopes_do_not_become_eleven_papers(self):
+        for key in self.keys:self.work(key)
+        expected={c["id"]:("t17-finite-assignment-inference" if c["id"] in {"T17-ASSIGNMENT-UNCERTAINTY","T17-BLOCK-ORBIT-CONTRACT"} else "t17-closed-placement-evidence" if c["id"]=="T17-CLOSED-PLACEMENT-CHECK" else "t17-foundational-report") for c in self.claims}
+        self.assertEqual(len(expected),11)
+        for c in self.claims:
+            w=self.work(expected[c["id"]]);self.assertIn(c["id"],w.get("existing_result_ids",[]));self.assertNotIn("scientific_status",w)
+            self.assertTrue({self.sources[s]["public_path"] for s in c["source_ids"]}<=self.paths(w["key"]),c["id"])
+    def test_report_source_guide_mathematics_and_software_keep_distinct_roles(self):
+        roles={"t17-foundational-report":"synthesis","t17-foundational-source-guide":"supporting-reference","t17-finite-assignment-inference":"manuscript","t17-closed-placement-evidence":"research-software"}
+        for k,v in roles.items():self.assertEqual(self.work(k)["role"],v)
+        self.assertNotEqual(self.work("t17-foundational-report")["source_keys"],self.work("t17-foundational-source-guide")["source_keys"])
+        self.assertTrue(set(self.work("t17-foundational-source-guide").get("existing_result_ids",[]))==set())
+    def test_each_work_reaches_actual_bodies_and_the_unchanged_source_owner(self):
+        for key in self.keys:
+            w=self.work(key);targets=self.targets(key)
+            self.assertIn((self.GROUP+"/README.md",""),targets,key)
+            for k in w["source_keys"]:self.assertTrue(any(p==self.cross["sources"][k]["path"] for p,a in targets),key)
+    def test_probability_contract_and_positive_epistemic_routes_have_precise_sections(self):
+        expected={
+            "t17-foundational-report":{"ordinary-reports-can-warrant-belief","objective-fittingness-and-the-scope-of-authority"},
+            "t17-foundational-source-guide":{"actual-knowledge-and-the-role-of-basic-cognition","tawatur-and-cumulative-warrant"},
+            "t17-finite-assignment-inference":{"2-the-finite-experiment-and-conditioning-contract","7-sharp-recursion-for-sequential-interval-bounds","12-conditional-inference-from-block-complement-symmetry"}}
+        for key,anchors in expected.items():
+            paths={self.cross["sources"][s]["path"] for s in self.work(key)["source_keys"]}
+            got={a for p,a in self.targets(key) if p in paths};self.assertTrue(anchors<=got,(key,sorted(anchors-got)))
+    def test_all_supplied_components_have_roles_without_raw_data_or_new_lean_claim(self):
+        for k in self.keys:self.work(k)
+        union=set().union(*(self.paths(k) for k in self.keys))
+        self.assertTrue({s["public_path"] for s in self.sources.values()}<=union)
+        w=self.work("t17-closed-placement-evidence");names={Path(p).name for p in self.paths(w["key"])}
+        self.assertTrue({"FINITE_MATH_SCOPE.md","post_inspection_tail_certificate.json","verify_manifest.py","run_checks.py"}<=names)
+        self.assertFalse(any(p.endswith(".lean") for p in self.paths(w["key"])))
+        math=self.work("t17-finite-assignment-inference")
+        self.assertTrue(any(Path(self.cross["sources"][v["source"]]["path"]).name=="Mathematical_Companion_Content_v2.md" for v in math["reading_forms"]))
+        self.assertTrue(any(Path(self.cross["sources"][v.get("basis","")]["path"]).name=="RELATED_ARTIFACTS.json" for v in self.cross["relations"] if v.get("from") in {x["source"] for x in math["reading_forms"]} and v.get("basis") in self.cross["sources"]))
+
 if __name__ == "__main__":
     unittest.main()
