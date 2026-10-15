@@ -575,3 +575,16 @@ The [one-change manuscript](PAPER-CATALOGUE.md#one-hidden-change-finite-certific
 ## Nineteenth sourcehood and warranted assertion scopes
 
 The [single Nineteenth research report](PAPER-CATALOGUE.md#common-original-provision-and-warranted-attestation) carries eight distinct [original result scopes](../../experiments/orthemology-v5-successors/groups/t19-successor/CLAIM_MAP.json): causal nonduplication, source-mode adequacy, mediate original attribution, common connected-field provision, intentional attestation, the bounded al-Walīd reception case, obligation-assertion testimony and source-occurrence controls. Its linked source guide and reading index supply retrieval/evidence roles, not additional independent confirmation or new theorem credit. Exact statements, judgement qualifications and result identifiers remain in that owner.
+
+## Twentieth formal and grounded-support results
+
+The current [successor result owner](../provenance/v5-successors/RESULT_STATUS.json) retains scientific scope. Its initial [T20 claim map](../../experiments/orthemology-v5-successors/groups/t20-successor/CLAIM_MAP.json) is historical where later source-context records revise a specific appraisal. These links do not create new result registrations.
+
+- `T20-CHURCH-RAW-PROBE` — [Generic Church probe and an inhabited extensional endpoint](PAPER-CATALOGUE.md#generic-church-probe-and-an-inhabited-extensional-endpoint).
+- `T20-SCALAR-FUSION-IFF` — [Fixed-witness scalar fusion for the literal compiler identity](PAPER-CATALOGUE.md#fixed-witness-scalar-fusion-for-the-literal-compiler-identity).
+- `T20-CND-ESSENTIALITY-SCOPE` — [Causal nonduplication and retained productive originality](PAPER-CATALOGUE.md#causal-nonduplication-and-retained-productive-originality).
+- `T20-MODAL-CROSSING-COMPLETENESS` — [Modal crossings and the exact source-equality consequence boundary](PAPER-CATALOGUE.md#modal-crossings-and-the-exact-source-equality-consequence-boundary).
+- `T20-ORIGINAL-GROUND-ROBUSTNESS` — [Adjoining a ground while preserving an existing productive field](PAPER-CATALOGUE.md#adjoining-a-ground-while-preserving-an-existing-productive-field).
+- `T20-GROUNDED-CONTINUATION-SUPPORT` — [Grounded derivations, retraction and late source-root identification](PAPER-CATALOGUE.md#grounded-derivations-retraction-and-late-source-root-identification).
+
+- `T20-HASE-FURTHER-FAILED-ROUTES` — [Three tested negative routes](PAPER-CATALOGUE.md#after-fixed-witnesses-three-tested-negative-routes), an existing written-method result, not exhaustive noninhabitation.

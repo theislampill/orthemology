@@ -119,6 +119,13 @@ The [empirical reanalysis work](PAPER-CATALOGUE.md#portable-reanalysis-and-the-p
 
 For norm-fixing, the same report's [local-standard assessment](../../experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md#a-proposal-for-natural-standards) offers an affirmative criterion of fittingness without equating a local norm, warranted belief about it, practical authority and identification of its ultimate source. Read it as a dated, witness-specific contribution alongside the existing [recognition and foundational route](#recognition-sound-cognition-and-correction), not as a replacement for later research.
 
+
+## Exact proof questions and changing support
+
+Twentieth’s [Church probe](PAPER-CATALOGUE.md#generic-church-probe-and-an-inhabited-extensional-endpoint) and [scalar-fusion equivalence](PAPER-CATALOGUE.md#fixed-witness-scalar-fusion-for-the-literal-compiler-identity) establish positive formal bridges without silently changing the compiler’s target. A fixed witness simplifies the question, not the entire proof search. The [grounded-support theorem](PAPER-CATALOGUE.md#grounded-derivations-retraction-and-late-source-root-identification) supplies a complementary positive result: keep the complete minimal alternatives and one archive can serve every later fixed source-root map.
+
+**Connection across avenues 5, 8 and 9:** source-root identification, exact typing interfaces and present support all depend on retaining the structure required by the later operation. A cheap label-level summary need not preserve the root-level optimum, just as a proof’s normal syntax need not preserve the derivation that gave it its target type. These are different proved or analysed contracts, not an asserted universal equivalence between logics, provenance and cognition.
+
 ## The original twelve avenues
 
 The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.

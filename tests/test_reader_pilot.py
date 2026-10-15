@@ -2606,5 +2606,83 @@ class NineteenthSourceAndWarrantTests(unittest.TestCase):
         self.assertIn("Arabic_Volume_Reading_Index.json", {Path(p).name for p in self.paths("t19-arabic-reading-index")})
 
 
+class TwentiethFormalWorkTests(unittest.TestCase):
+    """Exact source/work/section contracts, not semantic or proof acceptance."""
+    GROUP = "experiments/orthemology-v5-successors/groups/t20-successor"
+    EXPECTED = {
+        "t20-church-probe": ("generic-church-probe", "T20-CHURCH-RAW-PROBE"),
+        "t20-scalar-fusion": ("exact-scalar-fusion", "T20-SCALAR-FUSION-IFF"),
+        "t20-hase-negative-routes": ("literal-HasE-written-negative-route", "T20-HASE-FURTHER-FAILED-ROUTES"),
+        "t20-cnd-scope": ("CND-essential-independence-scope", "T20-CND-ESSENTIALITY-SCOPE"),
+        "t20-modal-union": ("modal-union-v2", "T20-MODAL-CROSSING-COMPLETENESS"),
+        "t20-ground-extension": ("existential-ground", "T20-ORIGINAL-GROUND-ROBUSTNESS"),
+        "t20-grounded-support": ("grounded-attestation", "T20-GROUNDED-CONTINUATION-SUPPORT"),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("twentieth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.claims = {r["id"]: r for r in json.loads((ROOT / cls.GROUP / "CLAIM_MAP.json").read_text())["results"]}
+        cls.sources = json.loads((ROOT / cls.GROUP / "SOURCE_INDEX.json").read_text())["selected_sources"]
+        cls.by_id = {s["id"]: s for s in cls.sources}
+
+    def work(self, key):
+        self.assertTrue(key in self.works, "Missing substantive work: " + key)
+        return self.works[key]
+
+    def targets(self, key):
+        rel, anchor = self.work(key)["catalogue_entry"].split("#", 1)
+        idx = self.mod.markdown_index((ROOT / rel).read_text())
+        h = next((h for h in idx["headings"] if h[0] == anchor), None)
+        self.assertIsNotNone(h, key)
+        _, level, start = h
+        end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+        return {t for line, href in idx["links"] if start <= line < end
+                if (t := self.mod.resolve_reader_link(ROOT, rel, href)) is not None}
+
+    def test_seven_distinct_works_preserve_declared_result_owners(self):
+        for key, (component, result_id) in self.EXPECTED.items():
+            with self.subTest(work=key):
+                w = self.work(key)
+                self.assertEqual(w.get("existing_result_ids", []), [result_id] if result_id else [])
+                self.assertNotIn("scientific_status", w)
+                self.assertNotEqual(w["role"], "application-proposal")
+
+    def test_every_declared_component_is_attached_without_extra_work_credit(self):
+        for key, (component, _) in self.EXPECTED.items():
+            with self.subTest(work=key):
+                w = self.work(key)
+                actual = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+                expected = {s["public_path"] for s in self.sources if s["component"] == component}
+                self.assertTrue(expected <= actual, "Missing source component: " + key)
+
+    def test_original_result_evidence_and_direct_reading_routes_survive(self):
+        for key, (_, result_id) in self.EXPECTED.items():
+            with self.subTest(work=key):
+                w = self.work(key); targets = self.targets(key)
+                self.assertIn((self.GROUP + "/README.md", ""), targets)
+                for source in w["source_keys"]:
+                    self.assertTrue(any(p == self.cross["sources"][source]["path"] for p, _ in targets), key)
+                if result_id:
+                    paths = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+                    self.assertTrue({self.by_id[k]["public_path"] for k in self.claims[result_id]["source_ids"]} <= paths)
+
+    def test_scientific_owner_not_local_expectation_defines_result_registration(self):
+        for key, (component, _) in self.EXPECTED.items():
+            with self.subTest(work=key):
+                source_ids = {r["id"] for r in self.sources if r["component"] == component}
+                declared = {r["id"] for r in self.claims.values() if source_ids.intersection(r.get("source_ids", []))}
+                self.assertEqual(set(self.work(key).get("existing_result_ids", [])), declared)
+
+    def test_fixed_witness_and_negative_route_have_different_source_sections(self):
+        self.assertIn("exact-statement", {a for p, a in self.targets("t20-scalar-fusion")})
+        self.assertIn("what-each-direction-does", {a for p, a in self.targets("t20-scalar-fusion")})
+        self.assertIn("route-one-fixed-proof-syntax-does-not-give-introduction-inversion", {a for p, a in self.targets("t20-hase-negative-routes")})
+        self.assertIn("result-of-this-pass", {a for p, a in self.targets("t20-hase-negative-routes")})
+
+
 if __name__ == "__main__":
     unittest.main()
