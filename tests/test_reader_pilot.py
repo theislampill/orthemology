@@ -2188,5 +2188,77 @@ class NinthInterfaceWorkTests(unittest.TestCase):
             self.assertTrue(self.works[key].get("supporting_source_keys"))
 
 
+
+class TenthWorkAndEvidenceTests(unittest.TestCase):
+    """The independent Tenth result owner determines this work-family boundary."""
+    EXPECTED = {
+        "T10-OCCURRENCE-EFFECTS": "t10-occurrence-reacquisition",
+        "T10-READ-COST": "t10-occurrence-reacquisition",
+        "T10-INTERVAL-QUOTIENT": "t10-occurrence-reacquisition",
+        "T10-TWO-CARD-FRONTIER": "t10-bounded-handoff",
+        "T10-MODEL-CHECKER": "t10-occurrence-reference",
+        "T10-UNIFORM-COMPLETION": "t10-law-completion",
+        "T10-NONUNIFORM-COMPLETION": "t10-law-completion",
+        "T10-COMPLETION-WRITTEN-FRONTIER": "t10-law-completion",
+        "T10-ROBUST-COMPACT-CERTIFICATES": "t10-finite-limit-warrant",
+        "T10-EXACT-THRESHOLD-BOUNDARY": "t10-finite-limit-warrant",
+        "T10-PRINTED-COLLATION": "t10-printed-collation",
+        "T10-SOURCE-VERSION": "t10-source-version",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("tenth_reader", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        cls.cross = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json").read_text())
+        cls.works = {w["key"]: w for w in cls.cross["works"]}
+        cls.results = {r["id"]: r for r in json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["results"]}
+        cls.sources = {s["id"]: s for s in json.loads((ROOT / "docs/provenance/v5-successors/SOURCE_MAP.json").read_text())["sources"]}
+
+    def test_all_original_tenth_results_reach_real_work_and_component_owners(self):
+        self.assertEqual(set(self.EXPECTED), {r for r in self.results if r.startswith("T10-")})
+        for rid, key in self.EXPECTED.items():
+            self.assertTrue(key in self.works, rid)
+            w = self.works[key]
+            self.assertIn(rid, w.get("existing_result_ids", []))
+            got = {self.cross["sources"][k]["path"] for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+            want = {self.sources[k]["public_path"] for k in self.results[rid]["source_ids"]}
+            self.assertTrue(want <= got, (rid, sorted(want-got)))
+
+    def test_reader_entries_reach_original_arguments_not_only_collection_labels(self):
+        rel = "docs/reader/PAPER-CATALOGUE.md"
+        idx = self.mod.markdown_index((ROOT / rel).read_text())
+        for key in set(self.EXPECTED.values()):
+            self.assertTrue(key in self.works, key)
+            w = self.works[key]; target, anchor = w["catalogue_entry"].split("#", 1)
+            self.assertEqual(target, rel)
+            h = next((h for h in idx["headings"] if h[0] == anchor), None)
+            self.assertIsNotNone(h, key)
+            _, level, start = h
+            end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+            reached = {t[0] for line, href in idx["links"] if start <= line < end
+                       if (t := self.mod.resolve_reader_link(ROOT, rel, href)) is not None}
+            want = {self.cross["sources"][k]["path"] for k in w["source_keys"]}
+            self.assertTrue(want <= reached, (key, sorted(want-reached)))
+            self.assertIn("experiments/orthemology-v5-successors/groups/t10-technical/README.md", reached)
+
+    def test_inverse_limit_formal_parts_and_ordinary_correction_remain_together(self):
+        self.assertTrue("t10-law-completion" in self.works)
+        w = self.works["t10-law-completion"]
+        names = {Path(self.cross["sources"][k]["path"]).name for k in w["source_keys"] + w.get("supporting_source_keys", [])}
+        self.assertTrue({"INVERSE_LIMIT_AND_CONVERGENCE_CORRECTION.md", "LawCompletionCompact.lean",
+                         "LawCompletionBranches.lean", "IndexedCompletionCompact.lean",
+                         "IndexedCompletionForgetting.lean", "IndexedCompletionDiameter.lean"} <= names)
+        self.assertNotIn("scientific_status", w)
+
+    def test_finite_reference_and_source_assessments_do_not_gain_paper_or_replay_credit(self):
+        for key, role in {"t10-occurrence-reference": "research-software",
+                          "t10-printed-collation": "supporting-reference",
+                          "t10-source-version": "supporting-reference"}.items():
+            self.assertTrue(key in self.works, key); self.assertEqual(self.works[key]["role"], role)
+            self.assertNotIn("scientific_status", self.works[key])
+        self.assertNotEqual(self.works["t10-occurrence-reacquisition"]["source_keys"],
+                            self.works["t10-occurrence-reference"]["source_keys"])
+
 if __name__ == "__main__":
     unittest.main()

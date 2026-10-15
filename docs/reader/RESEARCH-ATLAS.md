@@ -200,6 +200,12 @@ The [Ninth finite certificate calculus](PAPER-CATALOGUE.md#finite-common-policy-
 
 The [expression and runtime developments](PAPER-CATALOGUE.md#expression-stacks-costs-and-the-python-trust-boundary) address another link: whether a specified computation, error and emitted history are actually preserved by the presented implementation. These works do not automatically compose. No supplied table encoding connects the common-policy certificate to the separate 21-path runtime; a mathematical existence certificate is not an extracted controller. The [whole-command isomorphism](PAPER-CATALOGUE.md#bijective-whole-history-transport-is-not-in-place-permission) similarly preserves a correctly transformed history without granting in-place change authority.
 
+## From preserved source context to usable finite warrant
+
+The [Tenth occurrence and completion works](PAPER-CATALOGUE.md#occurrence-completion-and-finite-warrant-the-tenth-works) connect **avenues 5, 8, 10 and 11** through an explicit question: what must survive a handoff for the recipient’s particular decision to remain possible? Source-sensitive effects identify the required original contexts. Adequate permitted observations determine an exact read cost under the declared locality contract. Compact-limit results separate a determined infinite state from the finite evidence sufficient for a robust question about it.
+
+This connection contributes a constructive choice: retain an adequate task-specific witness, arrange a genuinely usable evidence service, or prove the relevant strict bound—rather than demand maximal retention. It requires the actual source/boundary map, correct role interpretation, access/cost contract and the right question. The bounded-release application additionally needs its organised-reliance and due-care premises. Neither a source name nor a convergence theorem supplies all those bridges.
+
 [main]: ../../manuscript/orthemma-ortheme-systems-revised-draft.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

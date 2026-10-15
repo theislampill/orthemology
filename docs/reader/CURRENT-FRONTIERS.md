@@ -167,6 +167,12 @@ The Ninth work already supplies [complete finite evidence for the specified comm
 
 The source leaves distinct receiving gaps: certificate-to-controller extraction and the absent shared-root/table encoding; a verified byte frontend and linked execution; active nonzero/reachable-idle entry; and authorised implementation of whole-history transport. Each has a different contract. Completing one should not be reported as completing all, or made an artificial prerequisite for understanding the positive result already supplied. Later collections may advance these dated frontiers and must be checked before a final current synthesis.
 
+## Completion and source-context questions
+
+The [Tenth completion correction](PAPER-CATALOGUE.md#backward-completion-is-not-pointwise-forward-convergence) already supplies the compact positive equivalences; it must not be relabelled wholly open because some extensions remain ordinary-only. Applying the result requires the stated state space and quantifier order. The [finite-warrant addendum](PAPER-CATALOGUE.md#a-computable-completion-and-its-exact-query-need-different-evidence) retains both effective robust witnesses and the exact-zero uniform obstruction. A new boundary question should name its representation and target, not request a universal equality service already excluded by the admitted family.
+
+For [source-context reacquisition](PAPER-CATALOGUE.md#open-context-effects-and-the-cost-of-reacquisition), actual interpretation, authenticated boundary identities and adequate permitted responses remain application burdens. A richer response or remembered verdict changes the mathematical cost model and must be credited. The [printed/source-version assessments](PAPER-CATALOGUE.md#the-bounded-printed-collation-is-a-dated-source-assessment) keep their dated positive findings and unresolved witness questions; the refactor performs no new external source-acquisition campaign.
+
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [concrete]: ../../companion/CONCRETE-AND-SOUND-REASON.md

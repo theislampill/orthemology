@@ -391,6 +391,22 @@ The [four Ninth work families](PAPER-CATALOGUE.md#independent-evidence-faithful-
 
 The constructive differences matter: existence of **some** accepted body is not acceptance of every body; exact modeled successful tick count is not a fault that keeps running; faithful reconstruction is not legality checking; one program before all admitted worlds is not hidden-world-dependent program choice. Follow each work's direct source and original evidence owner for its actual assumptions.
 
+## Tenth source-context, completion and finite-warrant results
+
+The work routes below group constituent claims without minting new IDs. Exact assumptions, ordinary/formal/finite scope and historical attempts remain in the [original Tenth result, review and replay scopes](../../experiments/orthemology-v5-successors/groups/t10-technical/README.md).
+
+| Existing result scope | Work and substantive reading route |
+|---|---|
+| `T10-SOURCE-VERSION` | [Bibliographic identity and the proof-marked source witness](PAPER-CATALOGUE.md#bibliographic-identity-is-not-a-verified-final-pdf) |
+| `T10-PRINTED-COLLATION` | [Bounded printed-source collation for the occurrence example](PAPER-CATALOGUE.md#the-bounded-printed-collation-is-a-dated-source-assessment) |
+| `T10-ROBUST-COMPACT-CERTIFICATES`, `T10-EXACT-THRESHOLD-BOUNDARY` | [From compact completion to finite recipient warrant](PAPER-CATALOGUE.md#a-computable-completion-and-its-exact-query-need-different-evidence) |
+| `T10-UNIFORM-COMPLETION`, `T10-NONUNIFORM-COMPLETION`, `T10-COMPLETION-WRITTEN-FRONTIER` | [Backward completion, forward convergence and dependent inverse limits](PAPER-CATALOGUE.md#backward-completion-is-not-pointwise-forward-convergence) |
+| `T10-MODEL-CHECKER` | [Finite source-context continuation checker](PAPER-CATALOGUE.md#finite-source-context-reference-software) |
+| `T10-TWO-CARD-FRONTIER` | [Which source witnesses make a bounded handoff adequate?](PAPER-CATALOGUE.md#a-bounded-handoff-needs-the-right-witness-not-maximal-retention) |
+| `T10-OCCURRENCE-EFFECTS`, `T10-READ-COST`, `T10-INTERVAL-QUOTIENT` | [Open-context continuation and source-ordered reacquisition](PAPER-CATALOGUE.md#open-context-effects-and-the-cost-of-reacquisition) |
+
+A compact completion can be uniquely determined while an exact query remains beyond any uniformly complete finite-proof service. Conversely, robust strict claims can have finite witnesses without recovering the whole state. The article’s origin-sensitive read cost and the release paper’s due-care application use additional source, service and normative premises; numerical cost is not itself authority.
+
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
