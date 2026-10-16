@@ -30,7 +30,7 @@ The first increment’s five controls and reading remain inherited evidence. The
 | C01 — Population and owners | 16,077 baseline paths; 26 disjoint groups; 73 discovery-owner paths; no recursive external admissions. | Independent denominator and role/disposition reconciliation. Inventory alone is not semantic coverage. |
 | C02 — Representative design | Composite/ambiguous editions, non-PDF works and required positive epistemic, tensor/geometric and cross-avenue journeys. | Independent comprehension, source-fidelity and usability assessment. |
 | C03 — Full curation and navigation | Six pages and the source-bound work families below. | Every substantive work/support disposition; all declared result collections; complete intended subject/frontier treatment; root and existing mutable-navigation consolidation; exact J01–J07 routes. |
-| C04 — Maintenance and controls | Explicit source/edition/currentness/route checks, multi-edition repair, new-work/unbound-source detection and CI integration. | All five M01–M05 actual change-footprint exercises, all eighteen T01–T18 mechanical/semantic contracts, final-candidate complete checks. |
+| C04 — Maintenance and controls | Explicit source/edition/currentness/route checks, multi-edition repair, new-work/unbound-source detection and CI integration. | M01–M05 are author-executed and repeatable; final-candidate native/full qualification, all eighteen T01–T18 contracts and independent maintenance review remain. |
 | C05 — Independent review | Exact candidate and accumulated source/evidence records available. | A genuinely separate reviewer/context, blocking-finding repair and exact final SHA/tree qualification. Not performed by this implementer. |
 | C06 — Owner decision/readback | Draft PR exists and remains unmerged. | Dot/owner assessment; only after explicit integration authority, merge and resulting-main/public-route readback. |
 
@@ -77,20 +77,14 @@ Baseline path counts below are the independently fixed denominator, not paper co
 | `archive` | 10 | Ten preserved history files need explicit historical/support disposition, not rewritten bodies. |
 | `repository-support` | 286 | 286 code/schema/test/CI files need their applicable work/support/exclusion routes, not individual-paper entries. |
 
-## C04 work still required
+## C04 executed maintenance and remaining qualification
 
-**M01:** add/change an edition through its actual owner and one work, without duplicating a paper or changing unrelated explanations. The multi-edition repair and controls exist; finish the complete change-footprint record.
-
-**M02:** correct a scoped result at its real owner, update the result lookup, and review only materially affected descriptions. Do not require six independently rewritten versions of one fact.
-
-**M03:** introduce a substantive work outside obvious paper directories. Frozen-census mutation controls now detect a new tracked work; finish its source/disposition/catalogue maintenance exercise.
-
-**M04:** admit a checkpoint that repeats earlier works and adds one new work. Reuse established equivalences without duplicate paper or independent-evidence credit; document the actual edit footprint.
-
-**M05:** change a bound scientific conclusion. Exact source/currentness checks detect drift; verify that the affected synopsis is reviewed and unrelated pages need no gratuitous rewrite.
+**M01–M05 have now been executed in disposable Git fixtures**, not merely described. The existing `MaintenanceFootprintTests` records source-owner edits, intermediate rejections, complete file-hash footprints and unaffected pages. Edition addition preserves one composite work; an added scoped result updates its owned lookup and only the affected synopsis; a new non-PDF work cannot evade discovery; a repeated checkpoint preserves known work identities/provenance and adds only the genuine new work; and changing a supporting statement cannot be made current by lookup regeneration or a hash-only repair. Five exercises and the enlarged 214-test reader suite passed locally in both modes. See COLLECTION-COVERAGE.md for exact footprints, environment and limits; native/final-candidate qualification remains separately required.
 
 Consolidate T01–T18 against their actual contracts: coverage, format/composite identities, historical/current scope, wrong-source routes, protected bodies, alias inflation, currentness, preservation and the three intellectual omission/overclaim controls. Existing author semantic counter-readings are concrete review inputs, not independent acceptance. The final tests must run against the finished candidate rather than borrow a previous green tree.
 
 ## Immediate continuation
+
+Do not redo the five completed maintenance exercises from prose; run their existing tests on the eventual exact candidate and assess their recorded footprint. The author controls do not replace C05.
 
 The frozen Twentieth component families and the three-root refactor are reusable. Proceed directly to the later Twentieth reader/context layers and final successor disposition; do not repeat the earlier principal-paper reading. Continue T20 live/v6, AR8R/proposals and experimental packets plus the remaining support groups. Complete the subject/frontier and root/navigation work as those inputs stabilise. Run M01–M05 alongside that implementation, then prepare one coherent exact-candidate C05 review. No ordinary owner-continuation question or arbitrary checkpoint-count stop is required.

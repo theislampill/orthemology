@@ -2905,5 +2905,322 @@ class RootNavigationAndMaintenanceTests(unittest.TestCase):
             ROOT, row, body.replace(b"No force-pushes", b"Permit force-pushes")))
 
 
+class MaintenanceFootprintTests(unittest.TestCase):
+    """M01--M05 execute changes in disposable repositories, never real science.
+
+    Receipts count independent edits, not test functions. The rendering bodies
+    are explicit synthetic stand-ins; no PDF build or scientific replay is
+    inferred. Semantic review remains separate from these mechanical checks.
+    """
+    git = ReaderPilotTests.git
+    reject = ReaderPilotTests.reject
+    EVIDENCE = 'docs/project-closure/reader-refactor-issue-35/'
+    OWNER_FILE = EVIDENCE + 'OWNER-MAP.json'
+    CROSS_FILE = EVIDENCE + 'CROSSWALK.json'
+    CATALOGUE = 'docs/reader/PAPER-CATALOGUE.md'
+    ATLAS = 'docs/reader/RESEARCH-ATLAS.md'
+    LOOKUP = 'docs/reader/RESULT-INDEX.md'
+    RESULT_OWNER = 'fixture-theory/result-owner.json'
+
+    def setUp(self):
+        ReaderPilotTests.setUp(self)
+        self.results = {'results': [{'id': 'fixture-R1', 'title': 'Scoped fixture',
+                                   'source': 'fixture-theory/note.md#note'}]}
+        self.write(self.RESULT_OWNER, json.dumps(self.results, indent=2) + '\n')
+        self.git('add', self.RESULT_OWNER)
+        self.git('commit', '-qm', 'fixture result owner')
+        self.owners['baseline']['commit'] = self.git('rev-parse', 'HEAD').strip()
+        self.bind(self.RESULT_OWNER)
+        group = self.owners['collections'][0]
+        group['owners'].append(self.RESULT_OWNER)
+        group['result_owner'] = self.RESULT_OWNER
+        self.cross['works'][1]['existing_result_ids'] = ['fixture-R1']
+        self.cross['collection_dispositions'] = {'fixture-theory': {
+            'scope': 'Disposable maintenance fixture only.',
+            'reading_record': 'Known synthetic statements and explicit exercise changes.',
+            'basis_sources': ['fixture-theory/lineage.md', self.RESULT_OWNER],
+            'result_owner': self.RESULT_OWNER,
+            'result_routes': {'fixture-R1': ['note']},
+            'items': [
+                {'path': p, 'role': role, 'work': work} for p, role, work in (
+                    ('fixture-theory/core.md', 'work-source', 'core'),
+                    ('fixture-theory/multi.md', 'formal-component', 'core'),
+                    ('fixture-theory/note.md', 'work-source', 'note'),
+                    ('fixture-theory/related.tex', 'work-source', 'related'),
+                    ('fixture-theory/edition.pdf', 'historical-edition', 'edition'),
+                    ('fixture-theory/lineage.md', 'collection-guide', 'related'),
+                    (self.RESULT_OWNER, 'provenance-record', 'note'),
+                )],
+        }}
+        self.write(self.CATALOGUE,
+                   '# Fixture catalogue\n\n## Composite core\n'
+                   '[Core](../../fixture-theory/core.md#core) and '
+                   '[component](../../fixture-theory/multi.md#multi).\n'
+                   '[Rendering](../../artifacts/core.pdf).\n\n'
+                   '## Substantive note\nA substantive work without a PDF.\n'
+                   '[Source](../../fixture-theory/note.md#note).\n')
+        self.write(self.ATLAS, '# Fixture atlas\n\n## Existing subject\n'
+                   '[Substantive note](PAPER-CATALOGUE.md#substantive-note).\n')
+        for name in ('CURRENT-FRONTIERS.md', 'APPLICATIONS.md', 'VERIFICATION-GUIDE.md'):
+            self.write('docs/reader/' + name,
+                       '# Distinct fixture reader\n'
+                       '[Scoped original work](PAPER-CATALOGUE.md#substantive-note).\n')
+        self.cross['reader_journeys'] = [
+            {'id': 'J%02d' % i, 'entry': self.CATALOGUE + '#substantive-note',
+             'source_keys': ['fixture-theory/note.md'],
+             'source_fragments': {'fixture-theory/note.md': 'note'}}
+            for i in range(1, 8)]
+        self.persist()
+        self.derive_lookup()
+        self.assertEqual(self.check(), [])
+        self.initial = self.snapshot()
+        self.initial_work_count = len(self.cross['works'])
+        self.observed_red = []
+
+    def write(self, path, body):
+        target = self.repo / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(body, encoding='utf-8')
+
+    def append(self, path, body):
+        self.write(path, (self.repo / path).read_text(encoding='utf-8') + body)
+
+    def bind(self, path, scope='Synthetic fixture source; changed statement examined in exercise.'):
+        self.cross['sources'][path] = {
+            'path': path, 'sha256': hashlib.sha256((self.repo / path).read_bytes()).hexdigest(),
+            'read_scope': scope}
+
+    def persist(self):
+        self.write(self.OWNER_FILE, json.dumps(self.owners, indent=2) + '\n')
+        self.write(self.CROSS_FILE, json.dumps(self.cross, indent=2) + '\n')
+
+    def readback(self):
+        # Exercise the persisted owner files, not only transient Python objects.
+        return (json.loads((self.repo / self.OWNER_FILE).read_text()),
+                json.loads((self.repo / self.CROSS_FILE).read_text()))
+
+    def check(self):
+        owners, cross = self.readback()
+        return self.mod.check(self.repo, owners, cross) + self.mod.check_reader_pages(self.repo, cross)
+
+    def red(self, code):
+        errors = self.check()
+        self.reject(errors, code)
+        self.observed_red.append(code)
+
+    def reanchor(self, paths):
+        # Only named fixture science is committed. Reader owners are not source
+        # authorities and cannot become their own corpus digest inputs.
+        self.git('add', '--', *paths)
+        self.git('commit', '-qm', 'explicit finite fixture source admission')
+        self.owners['baseline']['commit'] = self.git('rev-parse', 'HEAD').strip()
+        for path in paths:
+            self.bind(path)
+
+    def derive_lookup(self):
+        # Read the actual fixture result owner. Do not copy status judgements
+        # into five prose surfaces; the original statement remains one owner.
+        original = json.loads((self.repo / self.RESULT_OWNER).read_text())
+        routes = self.cross['collection_dispositions']['fixture-theory']['result_routes']
+        lines = ['# Fixture result lookup', '']
+        for row in original['results']:
+            self.assertIn(row['id'], routes)
+            lines.append('**' + row['id'] + '** [' + row['title'] + '](../../' +
+                         row['source'] + '); work `' + routes[row['id']][0] + '`.')
+        self.write(self.LOOKUP, '\n'.join(lines) + '\n')
+
+    def snapshot(self):
+        return {p.relative_to(self.repo).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                for p in self.repo.rglob('*') if p.is_file()
+                and '.git' not in p.relative_to(self.repo).parts}
+
+    def record(self, exercise, expected, facts, edited_sections, generated=(), limitations=()):
+        self.persist()
+        self.assertEqual(self.check(), [])
+        after = self.snapshot()
+        changed = sorted(p for p in set(self.initial) | set(after)
+                         if self.initial.get(p) != after.get(p))
+        self.assertEqual(set(changed), set(expected), 'Unexpected maintenance footprint')
+        before_check = self.snapshot()
+        self.assertEqual(self.check(), [])
+        self.assertEqual(self.snapshot(), before_check, 'Validation must remain read-only')
+        # A second projection from the unchanged result owner must converge.
+        before_lookup = (self.repo / self.LOOKUP).read_bytes()
+        self.derive_lookup()
+        self.assertEqual((self.repo / self.LOOKUP).read_bytes(), before_lookup)
+        receipt = {
+            'exercise': exercise, 'scope': 'executed disposable fixture; not real scientific change',
+            'independent_facts': facts, 'manually_edited_sections': edited_sections,
+            'changed_files': changed, 'derived_outputs': list(generated),
+            'unchanged_reader_pages': sorted('docs/reader/' + p for p in self.mod.READER_PAGES
+                                             if 'docs/reader/' + p not in changed),
+            'observed_rejections': self.observed_red,
+            'checks': ['persisted owner/source/publication check', 'six-page real-link check',
+                       'seven fixture source routes', 'exact file footprint',
+                       'read-only validation', 'second lookup generation byte equality'],
+            'work_count_before': self.initial_work_count,
+            'work_count_after': len(self.cross['works']),
+            'before_changed_sha256': {p: self.initial.get(p) for p in changed},
+            'after_changed_sha256': {p: after.get(p) for p in changed},
+            'limitations': list(limitations), 'outcome': 'PASS'}
+        print('MAINTENANCE_RECEIPT ' + json.dumps(receipt, sort_keys=True))
+
+    def test_m01_existing_work_adds_one_rendering_not_another_paper(self):
+        profile = 'fixture-docs/profile.yaml'
+        edition = 'artifacts/core-second.pdf'
+        self.append(profile, '- artifact_id: core-second\n'
+                    '  sources: [fixture-theory/core.md, fixture-theory/multi.md]\n'
+                    '  profile_kind: technical-paper\n')
+        self.write(edition, 'synthetic second governed rendering, not a real PDF')
+        self.git('add', profile, edition)
+        self.red('corpus-currentness')
+        self.reanchor([profile, edition])
+        self.persist()
+        self.red('artifact')
+        self.cross['works'][0]['reading_forms'] = [
+            {'source': 'artifacts/core.pdf', 'relationship': 'governed-rendering'},
+            {'source': edition, 'artifact_id': 'core-second', 'relationship': 'governed-rendering'}]
+        self.append(self.CATALOGUE, '\n## Additional core reading form\n'
+                    '[Second rendering](../../artifacts/core-second.pdf). Same composite work.\n')
+        self.assertEqual(len(self.cross['works']), self.initial_work_count)
+        self.record('M01', [profile, edition, self.OWNER_FILE, self.CROSS_FILE, self.CATALOGUE],
+                    ['one governed edition of the existing composite with unchanged component owners'],
+                    {profile: ['artifact binding'], self.CROSS_FILE: ['one work reading_forms; source bindings'],
+                     self.OWNER_FILE: ['finite fixture source admission'],
+                     self.CATALOGUE: ['additional reading form']},
+                    limitations=['Rendering bytes are an explicit stand-in; this exercise is not a PDF rebuild.'])
+
+    def test_m02_result_owner_changes_lookup_and_only_affected_synopsis(self):
+        source = 'fixture-theory/note.md'
+        self.append(source, '\n## Added scope\nA new synthetic bound requires n at least two.\n')
+        self.results['results'].append({'id': 'fixture-R2', 'title': 'Additional scoped bound',
+                                       'source': source + '#added-scope'})
+        self.write(self.RESULT_OWNER, json.dumps(self.results, indent=2) + '\n')
+        self.red('result-routes')
+        self.red('source-drift')
+        self.reanchor([source, self.RESULT_OWNER])
+        self.cross['collection_dispositions']['fixture-theory']['result_routes']['fixture-R2'] = ['note']
+        self.cross['works'][1]['existing_result_ids'].append('fixture-R2')
+        self.append(self.CATALOGUE, '\n## Additional note result\n'
+                    '[Scoped extension](../../fixture-theory/note.md#added-scope) requires n at least two.\n')
+        self.derive_lookup()
+        self.record('M02', [source, self.RESULT_OWNER, self.OWNER_FILE, self.CROSS_FILE,
+                            self.CATALOGUE, self.LOOKUP],
+                    ['one additional scoped result inside the existing note and subject'],
+                    {source: ['new statement and its hypothesis'], self.RESULT_OWNER: ['new result record'],
+                     self.OWNER_FILE: ['finite fixture source admission'],
+                     self.CROSS_FILE: ['existing work result route; changed source bindings'],
+                     self.CATALOGUE: ['affected synopsis addendum only']}, generated=[self.LOOKUP])
+
+    def test_m03_new_non_pdf_work_is_detected_then_admitted_once(self):
+        source = 'fixture-unexpected/substantive-note.unbuilt'
+        self.write(source, '# Fixture outside paper roots\nA synthetic substantive construction.\n')
+        self.git('add', source)
+        self.red('corpus-currentness')
+        self.reanchor([source])
+        self.persist()
+        self.red('unassigned-source')
+        self.owners['collections'].append({'key': 'fixture-unexpected', 'include': ['fixture-unexpected/'],
+                                          'exclude': [], 'owners': [source]})
+        self.owners['required_work_sources'].append(source)
+        self.persist()
+        self.red('missing-work')
+        self.cross['works'].append({'key': 'new-note', 'title': 'New fixture note',
+                                   'role': 'research-note', 'source_keys': [source]})
+        self.append(self.CATALOGUE, '\n## New fixture note\n'
+                    '[Original construction](../../fixture-unexpected/substantive-note.unbuilt).\n')
+        self.append(self.ATLAS, '\n[New work in this subject](PAPER-CATALOGUE.md#new-fixture-note).\n')
+        self.assertEqual(len(self.cross['works']), self.initial_work_count + 1)
+        self.record('M03', [source, self.OWNER_FILE, self.CROSS_FILE, self.CATALOGUE, self.ATLAS],
+                    ['one substantive non-PDF work in a previously unknown root'],
+                    {source: ['new source'], self.OWNER_FILE: ['new finite collection and required source'],
+                     self.CROSS_FILE: ['one new work and source'], self.CATALOGUE: ['new work synopsis'],
+                     self.ATLAS: ['existing subject link to the new contribution']})
+
+    def test_m04_repeated_checkpoint_bodies_keep_aliases_not_new_work_credit(self):
+        prefix = 'fixture-checkpoint/'
+        copies = {'core-copy.md': ('fixture-theory/core.md', 'core'),
+                  'note-copy.md': ('fixture-theory/note.md', 'note')}
+        for filename, (original, _) in copies.items():
+            self.write(prefix + filename, (self.repo / original).read_text())
+        source = prefix + 'new-item.md'
+        index = prefix + 'INDEX.json'
+        self.write(source, '# Checkpoint addition\nOne genuinely new synthetic work.\n')
+        aliases = [{'path': prefix + filename, 'original': original, 'work': work}
+                   for filename, (original, work) in copies.items()]
+        self.write(index, json.dumps({'retained_aliases': aliases, 'new_items': [source]}, indent=2) + '\n')
+        paths = [index, source] + [a['path'] for a in aliases]
+        self.git('add', *paths)
+        self.red('corpus-currentness')
+        self.reanchor(paths)
+        self.owners['collections'].append({'key': 'fixture-checkpoint', 'include': [prefix],
+                                          'exclude': [], 'owners': [index]})
+        self.owners['required_work_sources'].append(source)
+        self.cross['works'].append({'key': 'checkpoint-addition', 'title': 'Checkpoint addition',
+                                   'role': 'research-note', 'source_keys': [source]})
+        for a in aliases:
+            self.assertEqual((self.repo / a['path']).read_bytes(), (self.repo / a['original']).read_bytes())
+            work = next(w for w in self.cross['works'] if w['key'] == a['work'])
+            work.setdefault('supporting_source_keys', []).append(a['path'])
+            self.cross['relations'].append({'from': a['original'], 'to': a['path'],
+                                           'kind': 'retained-provenance-alias', 'basis': index})
+        self.cross['collection_dispositions']['fixture-checkpoint'] = {
+            'scope': 'Known copies plus one addition; no extra independent-evidence credit.',
+            'reading_record': 'Exact fixture alias index, body comparison and new item examined.',
+            'basis_sources': [index],
+            'items': [{'path': a['path'], 'role': 'historical-edition', 'work': a['work']} for a in aliases]
+                     + [{'path': source, 'role': 'work-source', 'work': 'checkpoint-addition'},
+                        {'path': index, 'role': 'provenance-record', 'work': 'checkpoint-addition'}]}
+        self.append(self.CATALOGUE, '\n## Checkpoint addition\n'
+                    '[New item](../../fixture-checkpoint/new-item.md#checkpoint-addition); '
+                    '[retained aliases](../../fixture-checkpoint/INDEX.json) remain with their old works.\n')
+        self.persist()
+        valid = deepcopy(self.cross)
+        self.cross['collection_dispositions']['fixture-checkpoint']['items'].pop(0)
+        self.persist()
+        self.red('collection-coverage')
+        self.cross = valid
+        self.assertEqual(len(self.cross['works']), self.initial_work_count + 1)
+        self.assertEqual(len(json.loads((self.repo / index).read_text())['retained_aliases']), 2)
+        self.record('M04', paths + [self.OWNER_FILE, self.CROSS_FILE, self.CATALOGUE],
+                    ['checkpoint contains two explicitly identified copied bodies and one new work'],
+                    {index: ['two retained provenance aliases and one addition'],
+                     self.OWNER_FILE: ['finite checkpoint admission'],
+                     self.CROSS_FILE: ['existing-work copy attachments; one new work; complete dispositions'],
+                     self.CATALOGUE: ['new item and provenance route']},
+                    limitations=['Work equivalence uses the explicit fixture provenance owner, not byte equality alone.'])
+
+    def test_m05_source_change_blocks_stale_synopsis_until_explicit_review(self):
+        source = 'fixture-theory/note.md'
+        old = (self.repo / source).read_text()
+        corrected = old.replace('A substantive work without a PDF.',
+                                'A corrected synthetic claim holds only for nonempty inputs.')
+        self.assertNotEqual(old, corrected)
+        self.write(source, corrected)
+        self.red('source-drift')
+        before_refresh = self.snapshot()
+        self.derive_lookup()
+        self.persist()
+        self.assertEqual(self.snapshot(), before_refresh,
+                         'Lookup regeneration cannot inspect or repair the changed synopsis')
+        self.red('source-drift')
+        # A manual hash-only change still cannot evade the independent source pin.
+        self.bind(source)
+        self.persist()
+        self.red('baseline-source')
+        self.reanchor([source])
+        self.bind(source, 'Reviewed corrected synthetic statement: only nonempty inputs; note synopsis updated.')
+        body = (self.repo / self.CATALOGUE).read_text()
+        self.assertIn('A substantive work without a PDF.', body)
+        self.write(self.CATALOGUE, body.replace('A substantive work without a PDF.',
+                                                'The corrected fixture claim requires nonempty inputs.'))
+        self.record('M05', [source, self.OWNER_FILE, self.CROSS_FILE, self.CATALOGUE],
+                    ['one corrected supporting statement narrows the note to nonempty inputs'],
+                    {source: ['corrected statement'], self.OWNER_FILE: ['explicit finite source readmission'],
+                     self.CROSS_FILE: ['reviewed source binding and exact read scope'],
+                     self.CATALOGUE: ['the affected synopsis, not every subject page']},
+                    limitations=['Mechanical identity checks cannot authenticate a dishonest claim of reading; C05 must review fidelity.'])
+
+
 if __name__ == "__main__":
     unittest.main()
