@@ -23,8 +23,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          test "$(git rev-parse HEAD^)" = f96ca1069a312a81244625cea733c387e8561538
-          test "$(git diff --name-only HEAD^ HEAD)" = .github/workflows/reader-refactor-snapshot.yml
+          test "$(git rev-parse HEAD^)" = 140d4e0d37d0d3168c98c8e250452aa35697a167
+          test "$(git diff --name-only f96ca1069a312a81244625cea733c387e8561538 HEAD)" = .github/workflows/reader-refactor-snapshot.yml
           mkdir -p "$RUNNER_TEMP/issue35-t20"
           python - <<'PY'
           import base64, hashlib, json, lzma, os, pathlib, subprocess
@@ -43,7 +43,16 @@ jobs:
           marker = '\nfrom pathlib import Path\nimport hashlib,json,importlib.util\n'
           if p['recipe'].count(marker) != 1:
               raise SystemExit('ambiguous recipe boundary')
-          tests, _, curation = p['recipe'].partition(marker)
+          # Transport-only 3.11 compatibility: native run 38977782098 rejected
+          # the nested escaped-apostrophe expression before applying any content.
+          old = "{f'[collection\\'s later source-context successor](../../{group}/README.md#dated-source-context-successor)'}"
+          new = "[collection's later source-context successor](../../{group}/README.md#dated-source-context-successor)"
+          if p['recipe'].count(old) != 1:
+              raise SystemExit('unexpected compatibility substitution population')
+          recipe = p['recipe'].replace(old, new)
+          compile(recipe, 'py311-compatible-recipe', 'exec')
+          (out / 'transport-compatibility.json').write_text(json.dumps({'original_recipe_sha256': hashlib.sha256(p['recipe'].encode()).hexdigest(), 'compatible_recipe_sha256': hashlib.sha256(recipe.encode()).hexdigest(), 'old': old, 'new': new, 'expected_candidate_tree_unchanged': p['tree']}, indent=2) + '\n')
+          tests, _, curation = recipe.partition(marker)
           (out / 'payload.json').write_bytes(raw)
           (out / 'curation.py').write_text('BASE=' + repr(p['base']) + '\n' + marker + curation)
           exec(compile(tests, 'new-reader-controls', 'exec'), {})
