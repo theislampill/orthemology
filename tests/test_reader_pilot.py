@@ -2684,5 +2684,109 @@ class TwentiethFormalWorkTests(unittest.TestCase):
         self.assertIn("result-of-this-pass", {a for p, a in self.targets("t20-hase-negative-routes")})
 
 
+
+
+class RootNavigationAndMaintenanceTests(unittest.TestCase):
+    """Real three-root routes and negative controls, without a corpus rescan.
+
+    Text mutations are in-memory fixtures. No scientific owner is edited by
+    these tests and link resolution still uses the actual checkout.
+    """
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("root_reader_under_test", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        evidence = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.owners = json.loads((evidence / "OWNER-MAP.json").read_text())
+        cls.cross = json.loads((evidence / "CROSSWALK.json").read_text())
+        cls.texts = {p: (ROOT / p).read_text() for p in
+                     ("README.md", "STATUS.md", "CONTRIBUTING.md")}
+
+    def errors(self, texts=None):
+        self.assertTrue(hasattr(self.mod, "check_root_navigation"),
+                        "root routes and inherited-policy controls are absent")
+        return self.mod.check_root_navigation(ROOT, self.owners, self.cross,
+                                              texts=texts or self.texts)
+
+    def mutated(self, path, old, new):
+        self.assertIn(old, self.texts[path], "mutation must actually change the root")
+        texts = dict(self.texts)
+        texts[path] = texts[path].replace(old, new, 1)
+        return texts
+
+    def reject(self, texts, prefix):
+        errors = self.errors(texts)
+        self.assertTrue(any(e.startswith(prefix + ":") for e in errors), errors)
+
+    def test_three_roots_supply_real_research_and_maintenance_routes(self):
+        self.assertEqual(self.errors(), [])
+
+    def test_six_distinct_reader_destinations_not_six_valid_wrong_links(self):
+        for name in self.mod.READER_PAGES:
+            if name == "VERIFICATION-GUIDE.md":
+                wrong = "RESEARCH-ATLAS.md"
+            else:
+                wrong = "VERIFICATION-GUIDE.md"
+            with self.subTest(page=name):
+                texts = self.mutated("README.md", "(docs/reader/" + name + ")",
+                                     "(docs/reader/" + wrong + ")")
+                self.reject(texts, "root-route")
+
+    def test_fenced_link_decoy_does_not_restore_the_missing_route(self):
+        texts = self.mutated("README.md", "(docs/reader/RESULT-INDEX.md)",
+                             "(docs/reader/PAPER-CATALOGUE.md)")
+        texts["README.md"] += "\n```md\n[decoy](docs/reader/RESULT-INDEX.md)\n```\n"
+        self.reject(texts, "root-route")
+
+    def test_exact_source_section_is_not_replaced_by_an_existing_wrong_anchor(self):
+        texts = self.mutated("README.md", "examples/compaction-stale-steer.md#3-five-predicates-that-must-not-be-collapsed",
+                             "examples/compaction-stale-steer.md#1-the-pattern")
+        self.reject(texts, "root-example")
+
+    def test_generated_example_marker_is_not_hand_edited(self):
+        texts = self.mutated("README.md", "<!-- state:example-json-count -->nine",
+                             "<!-- state:example-json-count -->ten")
+        self.reject(texts, "root-state")
+
+    def test_generated_lane_block_is_not_erased_or_duplicated(self):
+        marker = "<!-- state:claim-status-by-lane -->"
+        self.reject(self.mutated("STATUS.md", marker, ""), "root-state")
+        self.reject(self.mutated("STATUS.md", marker, marker + "\n" + marker), "root-state")
+
+    def test_historical_snapshots_do_not_precede_the_research_entrance(self):
+        texts = dict(self.texts)
+        readme = texts["README.md"]
+        self.assertIn("## Integration history", readme)
+        start = readme.index("## Integration history")
+        texts["README.md"] = readme[start:] + "\n" + readme[:start]
+        self.reject(texts, "root-order")
+
+    def test_inherited_contributor_policy_cannot_be_changed_with_navigation(self):
+        texts = self.mutated("CONTRIBUTING.md", "No force-pushes to `main`.",
+                             "Force-pushes to `main` are permitted.")
+        self.reject(texts, "root-policy")
+
+    def test_absent_and_machine_local_links_are_rejected(self):
+        for target in ("fixture-missing-reader-root.md", "file:///fixture-private-note"):
+            with self.subTest(target=target):
+                texts = self.mutated("README.md", "(docs/reader/RESULT-INDEX.md)",
+                                     "(" + target + ")")
+                self.reject(texts, "root-link")
+
+    def test_contributor_admission_is_exact_path_and_preserves_original_bytes(self):
+        self.assertTrue(hasattr(self.mod, "permitted_contributor_navigation"))
+        base = self.owners["baseline"]["commit"]
+        oid = subprocess.check_output(["git", "rev-parse", base + ":CONTRIBUTING.md"],
+                                      cwd=ROOT).decode().strip()
+        row = {"path": "CONTRIBUTING.md", "git_oid": oid}
+        body = self.texts["CONTRIBUTING.md"].encode()
+        self.assertTrue(self.mod.permitted_contributor_navigation(ROOT, row, body))
+        self.assertFalse(self.mod.permitted_contributor_navigation(
+            ROOT, dict(row, path="fixture-other-policy.md"), body))
+        self.assertFalse(self.mod.permitted_contributor_navigation(
+            ROOT, row, body.replace(b"No force-pushes", b"Permit force-pushes")))
+
+
 if __name__ == "__main__":
     unittest.main()

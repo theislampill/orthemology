@@ -194,6 +194,29 @@ def permitted_reader_ci_addition(repo, row, body):
             and body == before.replace(anchor, addition + anchor, 1))
 
 
+
+CONTRIBUTOR_NAVIGATION_MARKER = b"\n<!-- reader-maintenance:issue-35 -->\n"
+
+
+def permitted_contributor_navigation(repo, row, body):
+    """Admit appended reader maintenance, never a change to inherited policy.
+
+    CONTRIBUTING is a discovery owner. Its original bytes remain a prefix and
+    its added section has an explicit boundary; this is not a hash refresh or
+    a directory-wide owner exemption. Root route checks qualify the links.
+    """
+    if row["path"] != "CONTRIBUTING.md":
+        return False
+    original = subprocess.run(["git", "cat-file", "blob", row["git_oid"]],
+                              cwd=repo, capture_output=True, check=False)
+    if original.returncode:
+        return False
+    before = original.stdout
+    return (body.startswith(before + CONTRIBUTOR_NAVIGATION_MARKER)
+            and body.count(CONTRIBUTOR_NAVIGATION_MARKER) == 1
+            and b"\n## Reader maintenance\n" in body[len(before):])
+
+
 def permitted_historical_status_pin(repo, row, body):
     """Admit one exact historical metadata reference, never rewritten science.
 
@@ -347,7 +370,8 @@ def check(repo, owners, cross):
             digest = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
             if (digest != row["git_oid"]
                     and not permitted_reader_ci_addition(repo, row, body)
-                    and not permitted_historical_status_pin(repo, row, body)):
+                    and not permitted_historical_status_pin(repo, row, body)
+                    and not permitted_contributor_navigation(repo, row, body)):
                 fail("owner", path + " changed; review its routing scope")
             mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
             if mode != row["mode"]:
@@ -621,6 +645,106 @@ def check_reader_pages(repo, cross):
                 fail("journey-target", name + " section does not directly reach " + expected)
     return errors
 
+
+
+def check_root_navigation(repo, owners, cross, texts=None):
+    """Check root-to-reader routes, source identities and inherited policy.
+
+    This is a navigation/byte-preservation contract, not reader comprehension
+    or scholarly acceptance. ``texts`` permits in-memory negative controls;
+    every target is still resolved against the real repository.
+    """
+    errors, indexes, targets, originals = [], {}, {}, {}
+    roots = ("README.md", "STATUS.md", "CONTRIBUTING.md")
+    bodies = texts if texts is not None else {
+        p: safe_path(repo, p).read_text(encoding="utf-8") for p in roots}
+    base = owners["baseline"]["commit"]
+    for path in roots:
+        original = subprocess.run(["git", "show", base + ":" + path],
+                                  cwd=repo, capture_output=True, check=False)
+        if original.returncode:
+            errors.append("root-baseline: " + path)
+            continue
+        originals[path] = original.stdout
+        if "file://" in bodies[path].lower():
+            errors.append("root-link: " + path + " contains a machine-local locator")
+        page = markdown_index(bodies[path])
+        indexes[path] = page
+        if not markdown_index(original.stdout.decode())["anchors"] <= page["anchors"]:
+            errors.append("root-anchor: " + path + " loses an existing section")
+        targets[path] = []
+        for line, href in page["links"]:
+            try:
+                target = resolve_reader_link(repo, path, href)
+                if target is None:
+                    continue
+                rel, fragment = target
+                if fragment:
+                    body = bodies[rel] if rel in bodies else safe_path(repo, rel).read_text()
+                    if not rel.endswith(".md") or fragment not in markdown_index(body)["anchors"]:
+                        raise ValueError("source section is absent")
+                targets[path].append((line, rel, fragment))
+            except (ValueError, OSError, UnicodeError) as exc:
+                errors.append("root-link: " + path + " -> " + str(href) + ": " + str(exc))
+    if len(originals) != len(roots):
+        return errors
+
+    readme = indexes["README.md"]
+    headings = {slug: (level, line) for slug, level, line in readme["headings"]}
+    required = ("what-to-read", "two-ideas-that-carry-the-theory", "a-worked-case",
+                "integration-history")
+    if (not set(required) <= headings.keys()
+            or not (headings.get("two-ideas-that-carry-the-theory", (0, 10**9))[1]
+                    < headings.get("integration-history", (0, -1))[1])
+            or not (headings.get("what-to-read", (0, 10**9))[1]
+                    < headings.get("integration-history", (0, -1))[1])):
+        errors.append("root-order: research and reading routes must precede integration history")
+    start = headings.get("what-to-read", (2, -1))[1]
+    end = next((line for _, level, line in readme["headings"] if line > start and level <= 2), -1)
+    front_routes = {path for line, path, fragment in targets["README.md"]
+                    if start < line < end and not fragment}
+    expected = {"docs/reader/" + name for name in READER_PAGES}
+    if not expected <= front_routes:
+        errors.append("root-route: missing distinct front-door destinations: " +
+                      ", ".join(sorted(expected - front_routes)))
+    # The existing reader check separately verifies the next leg to each exact
+    # primary source. Here each journey's page must be a direct root route.
+    for journey in cross.get("reader_journeys", []):
+        if journey["entry"].partition("#")[0] not in front_routes:
+            errors.append("root-journey: " + journey["id"] + " lacks a direct root entrance")
+    example = ("examples/compaction-stale-steer.md", "3-five-predicates-that-must-not-be-collapsed")
+    if example not in {(p, a) for _, p, a in targets["README.md"]}:
+        errors.append("root-example: the worked distinction must reach its actual source section")
+    for path, needed in {
+        "STATUS.md": {"docs/current-state.yaml", "docs/reader/CURRENT-FRONTIERS.md",
+                      "docs/reader/VERIFICATION-GUIDE.md"},
+        "CONTRIBUTING.md": {"docs/publication-profile.yaml", "docs/reader/VERIFICATION-GUIDE.md",
+                            "docs/project-closure/reader-refactor-issue-35/CROSSWALK.json"},
+    }.items():
+        if not needed <= {p for _, p, _ in targets[path]}:
+            errors.append("root-maintenance: " + path + " lacks its actual owners/reading routes")
+
+    markers = {"README.md": ("example-json-count", "decision-range"),
+               "STATUS.md": ("claim-status-by-lane",)}
+    for path, fields in markers.items():
+        for field in fields:
+            begin = "<!-- state:" + field + " -->"
+            finish = "<!-- /state:" + field + " -->"
+            before = originals[path].decode()
+            after = bodies[path]
+            if (any(text.count(marker) != 1 for text in (before, after) for marker in (begin, finish))
+                    or before.partition(begin)[2].partition(finish)[0]
+                    != after.partition(begin)[2].partition(finish)[0]):
+                errors.append("root-state: " + path + " altered or duplicated " + field)
+    before = originals["CONTRIBUTING.md"]
+    raw = b"blob " + str(len(before)).encode() + b"\0" + before
+    oid = hashlib.sha1(raw).hexdigest()
+    if not permitted_contributor_navigation(repo, {"path": "CONTRIBUTING.md", "git_oid": oid},
+                                             bodies["CONTRIBUTING.md"].encode()):
+        errors.append("root-policy: inherited CONTRIBUTING bytes must survive before the bounded addition")
+    return errors
+
+
 def unique_object(pairs):
     result = {}
     for key, value in pairs:
@@ -641,6 +765,7 @@ def main():
         cross = json.loads(safe_path(args.repo, args.crosswalk).read_text(), object_pairs_hook=unique_object)
         errors = check(args.repo, owners, cross)
         errors.extend(check_reader_pages(args.repo, cross))
+        errors.extend(check_root_navigation(args.repo, owners, cross))
     except (KeyError, ValueError, TypeError, OSError) as exc:
         parser.exit(2, "PILOT INPUT ERROR: " + str(exc) + "\n")
     for error in errors:

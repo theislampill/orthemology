@@ -6,9 +6,11 @@
 
 The public scientific corpus is pinned at `0784acddd4770f1190f758f264ba52b2b110bd27`. The feature branch is `refactor/issue-35-research-reader-20261012`, draft PR 36. The owner authorises continuous source-preserving C03/C04 execution with regular real checkpoints, then genuinely separate review. No merge, issue closure, scientific reclassification or owner acceptance is authorised.
 
-The catalogue now contains **205 work entries and 861 bound source records**. There are **six of six reader pages authored**, **six of six governed publication families routed**, and **seven of seven pilot journeys authored**. Root README, STATUS and CONTRIBUTING are **zero of three refactored**. These are delivered units, not a whole-corpus or independent-comprehension certificate. The final number of distinct substantive works is not yet established: renderings, components, results and checkpoints are different objects, so no work-count completion percentage is supported.
+The catalogue now contains **205 work entries and 861 bound source records**. There are **six of six reader pages authored**, **six of six governed publication families routed**, and **seven of seven pilot journeys authored**. Root README, STATUS and CONTRIBUTING are **three of three refactored**, with source-bound entry routes, preserved generated blocks and inherited contributor policy; exact-candidate independent qualification remains open. These are delivered units, not a whole-corpus or independent-comprehension certificate. The final number of distinct substantive works is not yet established: renderings, components, results and checkpoints are different objects, so no work-count completion percentage is supported.
 
 ### Latest recovered evidence and current increment
+
+The owner-handoff recovery matched 924493b and its successful full CI 38801885715. The subsequent root increment supplies all six reader entrances and a source-bound worked example before integration history, separates STATUS’s live owners from dated snapshots, and appends bounded maintenance instructions while preserving every original CONTRIBUTING byte. Ten new root controls passed normally and under optimisation; the real crosswalk/reader/root check passed. These observations do not replace exact-head full CI, final M01–M05 exercises or independent review. The collection record preserves the actual red controls, consequential repairs and recovery limits.
 
 The exact saved Nineteenth content `2c355404…` and tree `2ba52535…` were recovered; its full normal CI 38776259204 was freshly observed successful. The current increment adds seven Twentieth work families covering Church/scalar identity, method-specific negative routes, CND premise scope, modal-union completeness, original-ground extension and grounded retraction/late-root support. Seven existing result IDs and every selected component attachment retain their original owners. All earlier work/source values remain unchanged.
 
@@ -42,7 +44,7 @@ Baseline path counts below are the independently fixed denominator, not paper co
 
 | Existing group | Baseline paths | Disposition / next action |
 |---|---:|---|
-| `root-navigation-and-policy` | 11 | README, STATUS and CONTRIBUTING consolidation has not been implemented. |
+| `root-navigation-and-policy` | 11 | Three root documents refactored; original policy/state blocks and heading anchors preserved. Final independent root/collection disposition remains. |
 | `principal-manuscript` | 1 | Substantive entry exists; final source-based review still required. |
 | `formal-core` | 2 | Both components routed as one reference; final review still required. |
 | `lineage-h-continuation` | 1 | Existing source-scoped synopsis; final coverage/review remains. |
@@ -85,4 +87,4 @@ Consolidate T01–T18 against their actual contracts: coverage, format/composite
 
 ## Immediate continuation
 
-Publish the qualified Eighteenth increment and proceed directly to the Nineteenth–Twentieth source-owned families, then finish the successor disposition. Continue T20 live/v6, AR8R/proposals and experimental packets plus the remaining support groups. Complete the subject/frontier and root/navigation work as those inputs stabilise. Run M01–M05 alongside that implementation, then prepare one coherent exact-candidate C05 review. No ordinary owner-continuation question or arbitrary checkpoint-count stop is required.
+The saved Twentieth first increment and the three-root refactor are reusable. Proceed directly to the remaining Twentieth source-owned families and final successor disposition; do not repeat the earlier principal-paper reading. Continue T20 live/v6, AR8R/proposals and experimental packets plus the remaining support groups. Complete the subject/frontier and root/navigation work as those inputs stabilise. Run M01–M05 alongside that implementation, then prepare one coherent exact-candidate C05 review. No ordinary owner-continuation question or arbitrary checkpoint-count stop is required.

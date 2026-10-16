@@ -1,6 +1,6 @@
 # Research atlas
 
-> **C02 reader-design preview — partial coverage.** This branch tests the representative works mapped for Issue 35. It is not the completed C03 catalogue, a new scientific assessment, or the replacement for the current root guide. [Coverage and qualification](../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md).
+> **Source-bound reader guide — curation in progress.** These routes explain the mapped scholarship without replacing its source or scientific-status owners. Remaining collection coverage and separate review are recorded in [the implementation progress](../project-closure/reader-refactor-issue-35/PROGRESS.md); this is not a complete-corpus or scientific-acceptance certificate.
 
 [Atlas](RESEARCH-ATLAS.md) · [Works](PAPER-CATALOGUE.md) · [Results](RESULT-INDEX.md) · [Frontiers](CURRENT-FRONTIERS.md) · [Applications](APPLICATIONS.md) · [Verification](VERIFICATION-GUIDE.md)
 
