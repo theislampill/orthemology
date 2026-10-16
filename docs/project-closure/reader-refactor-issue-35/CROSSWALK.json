@@ -865,7 +865,1332 @@
     "continuation-current-collection-guide": {"path": "experiments/orthemology-v5-continuations/README.md", "sha256": "c0845d339f98a2df2d28ce6313630437fe2e994c2668188bf0ed5716a2fbffea", "read_scope": "Collection source/publication boundaries and reading/replay ownership examined; historical receipts retain their original scope."},
     "continuation-result-status-owner": {"path": "docs/provenance/v5-research-continuations/RESULT_STATUS.json", "sha256": "27b894acde5c8cac281254af73909ee1db2f6ad7055aec9e8cf28033bff79a91", "read_scope": "68 scoped result entries reconciled with registry identifiers and source availability; no scientific reclassification."},
     "continuation-sixth-final-owner": {"path": "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json", "sha256": "879879eaffdf04396577d113abb2d224b53e07e20a15f23c3f5b785b2291bd89", "read_scope": "Structural/source-owner inspection of selections, report bindings and final result records; not a fresh replay or separate scientific acceptance."},
-    "continuation-fourth-recovery-scope": {"path": "docs/provenance/v5-research-continuations/notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md", "sha256": "32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2", "read_scope": "Complete retained mathematical statement, construction outline and scope note read during continuation completion; recorded checks are historical, not a new replay."}
+    "continuation-fourth-recovery-scope": {"path": "docs/provenance/v5-research-continuations/notes/32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2.md", "sha256": "32266a84e5e96404970a7420dc690e71db78323281fd10805a899c6ca67b52e2", "read_scope": "Complete retained mathematical statement, construction outline and scope note read during continuation completion; recorded checks are historical, not a new replay."},
+    "t20-source-23a7774a478c2bf2": {
+      "path": "experiments/orthemology-v5-successors/source-store/6491a484a1c2a7346c8b5220369f39f6254eecf7dbeeb53fddc3768ff34d7632/BridgeContract.before.lean",
+      "sha256": "6491a484a1c2a7346c8b5220369f39f6254eecf7dbeeb53fddc3768ff34d7632",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-0fffd66d3c4fdec5": {
+      "path": "experiments/orthemology-v5-successors/source-store/abb02e1e99486b41ba17ea8a1e574b46a3b997a90312bac07ba37e2baee8c138/BridgeContract.lean",
+      "sha256": "abb02e1e99486b41ba17ea8a1e574b46a3b997a90312bac07ba37e2baee8c138",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fc878ccb307ac231": {
+      "path": "experiments/orthemology-v5-successors/source-store/751ceb0fb12d2515b96f72d9d75ab915d68c32eb7b4f6fa23bb8c0f7c90af22e/RejectedClaims.lean",
+      "sha256": "751ceb0fb12d2515b96f72d9d75ab915d68c32eb7b4f6fa23bb8c0f7c90af22e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-39ad7d19960423d9": {
+      "path": "experiments/orthemology-v5-successors/source-store/45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503/SourceIdentity.original.lean",
+      "sha256": "45ab18f7305033091f8fc31bb906d4c87866de47138df76637c6937440064503",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-88ff9b608a5de235": {
+      "path": "experiments/orthemology-v5-successors/source-store/be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8/BridgeControls.lean",
+      "sha256": "be1ba7d32e603bc2c4d725d9fc0425150b992aa24e0cab8c9a7807fcd36371a8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4d442acdce272386": {
+      "path": "experiments/orthemology-v5-successors/source-store/592791295999536ae5c78e11232bb5ddd7729929c2b48bfbd2945a0c7e90679f/ImportClosure.lean",
+      "sha256": "592791295999536ae5c78e11232bb5ddd7729929c2b48bfbd2945a0c7e90679f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ec8722655173ac56": {
+      "path": "experiments/orthemology-v5-successors/source-store/7b2e918998b21f0a2e2ac20deba04ebc15681b1352f74b3914ee0e37d361656f/InheritedImportClosure.lean",
+      "sha256": "7b2e918998b21f0a2e2ac20deba04ebc15681b1352f74b3914ee0e37d361656f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-68ff074666b713eb": {
+      "path": "experiments/orthemology-v5-successors/source-store/086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99/OriginalBearerBridge.lean",
+      "sha256": "086fb3bb7d7cd152b19ee2e6af47c25b92bd5b7825b0bfb9ee16a9ef7a56ba99",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-efb524879f020a10": {
+      "path": "experiments/orthemology-v5-successors/source-store/590cd5889cbd9c5cd77c0d0590e3f01712ca170d25c7ba22500c1a3cd0613ca2/ProofReadback.lean",
+      "sha256": "590cd5889cbd9c5cd77c0d0590e3f01712ca170d25c7ba22500c1a3cd0613ca2",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-251ab576b650d38b": {
+      "path": "experiments/orthemology-v5-successors/source-store/e89423e1188a2c9bc5abcd1f374483c47af48942fb75e9fd4ac53ad6de963a55/ReadbackAudit.lean",
+      "sha256": "e89423e1188a2c9bc5abcd1f374483c47af48942fb75e9fd4ac53ad6de963a55",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ca047c537844c95d": {
+      "path": "experiments/orthemology-v5-successors/source-store/51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54/SourceIdentityDerived.lean",
+      "sha256": "51b8a964e5854cd383afd5a862554126d4f8ebcf4a301e435ef795ac2c5cbb54",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-870520e72e6239a7": {
+      "path": "experiments/orthemology-v5-successors/source-store/593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284/IndependentScopeTests.lean",
+      "sha256": "593b0cde3c73b115080517bc818f5cf4273c433064aae5d1b809803d62baf284",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b9616bfa2cc3ee5a": {
+      "path": "experiments/orthemology-v5-successors/source-store/c5d21b92b79a708ffdaa89dfe55250b0adb788b92daa42b65a0d77180d7e4f2d/IndependentReadback.lean",
+      "sha256": "c5d21b92b79a708ffdaa89dfe55250b0adb788b92daa42b65a0d77180d7e4f2d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-92cdee166b1644ef": {
+      "path": "experiments/orthemology-v5-successors/source-store/3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8/BOUNDARY_LEDGER.json",
+      "sha256": "3a3049f26b5d866879fe6afeadc748d3cf159baaa68781e60d6f6422ec3ab4a8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4b3bb61a153375ae": {
+      "path": "experiments/orthemology-v5-successors/source-store/789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e/COUNTERMODEL_MATRIX.json",
+      "sha256": "789994129f9572eea5d93ed3ddb7be1a9b8b088434d0e1da452c602a617c018e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-56e1da773f9a235e": {
+      "path": "experiments/orthemology-v5-successors/source-store/34c4372bb2197b59695b67febb49aaa091e97190bf0c1d036c34fedac939570d/DECLARATIONS.json",
+      "sha256": "34c4372bb2197b59695b67febb49aaa091e97190bf0c1d036c34fedac939570d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-7498954fdd801722": {
+      "path": "experiments/orthemology-v5-successors/source-store/05a520f8160b28af5c8d90f3045424288c601e585344a09f71f7dc305dffd6be/DESIGN_AND_PLAN.md",
+      "sha256": "05a520f8160b28af5c8d90f3045424288c601e585344a09f71f7dc305dffd6be",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-83e7d602fae13015": {
+      "path": "experiments/orthemology-v5-successors/source-store/efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431/THEOREM_SOURCE_MAP.json",
+      "sha256": "efac446e787ccbb785890013a77a6546db150d364a00956c97d23d11e3e91431",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-102c0a6ef03f8058": {
+      "path": "experiments/orthemology-v5-successors/source-store/d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6/READBACKS.json",
+      "sha256": "d43dd18ed35047796208070736259d240f247037e2896535fb5dae5582853ba6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-091a8c2f5db0d9ac": {
+      "path": "experiments/orthemology-v5-successors/source-store/513bb5cb9f502c98aab0f7041f405dc655b16f19fa0f4b5bc7dfc8956e0c3a98/INHERITED_COMPARISON.json",
+      "sha256": "513bb5cb9f502c98aab0f7041f405dc655b16f19fa0f4b5bc7dfc8956e0c3a98",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-171cc9dd3bebd05f": {
+      "path": "experiments/orthemology-v5-successors/source-store/eaec3195d1c2654826e416ea34180165560d99e02c67fec84da001e498060199/VERIFICATION.json",
+      "sha256": "eaec3195d1c2654826e416ea34180165560d99e02c67fec84da001e498060199",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-13a7fafa9c37cfbc": {
+      "path": "experiments/orthemology-v5-successors/source-store/69a5cbb0f371b9149f13b6741572f259b3290e450d30008ae105eeab24264fa1/IMPORT_CLOSURES.json",
+      "sha256": "69a5cbb0f371b9149f13b6741572f259b3290e450d30008ae105eeab24264fa1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-77f234f1821317d6": {
+      "path": "experiments/orthemology-v5-successors/source-store/d27a04de5ff4b7584a7915c03a4e73d636bea39182e4cb34e98a43653a7261f6/IMPORT_ONLY.diff",
+      "sha256": "d27a04de5ff4b7584a7915c03a4e73d636bea39182e4cb34e98a43653a7261f6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-974e60a223e60c88": {
+      "path": "experiments/orthemology-v5-successors/source-store/0dea92c0a5b03ce1b9a6bed2535e05bb2a2fb1cfbf24f4c0d809ea2c1099d324/ENVIRONMENT_MISSING_UMBRELLA.log",
+      "sha256": "0dea92c0a5b03ce1b9a6bed2535e05bb2a2fb1cfbf24f4c0d809ea2c1099d324",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-150d23d7e897468d": {
+      "path": "experiments/orthemology-v5-successors/source-store/c30f7b8d7883c86e28310357b6aabac7dcdd891e5525feb4b47638aeb568bca1/TDD_RED.log",
+      "sha256": "c30f7b8d7883c86e28310357b6aabac7dcdd891e5525feb4b47638aeb568bca1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e5fdc26c6d8f5653": {
+      "path": "experiments/orthemology-v5-successors/source-store/91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611/TDD_GREEN.log",
+      "sha256": "91b3a6206f40afc28905b16088f1d23b8b9cd46800f178b9847ddac3e07ef611",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2b00b03c2317527a": {
+      "path": "experiments/orthemology-v5-successors/source-store/6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc/REVIEW.md",
+      "sha256": "6fc6b49f9999f78392548b0095bb865c06da4ea49d9fe00257c636e967dd53cc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fd7f8fc6287e1452": {
+      "path": "experiments/orthemology-v5-successors/source-store/b1eb2a072b0a63ae988afdb3fec983502e91d4d2d62a68b62c21afdb8c6f0e05/FINDINGS.json",
+      "sha256": "b1eb2a072b0a63ae988afdb3fec983502e91d4d2d62a68b62c21afdb8c6f0e05",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-354d569367ee0698": {
+      "path": "experiments/orthemology-v5-successors/source-store/82f1324fbd8b059bf2d0514698ce2d0ea1dca9ad3ecd32e917fbc6088f4060d8/INTEGRITY_VERIFICATION.json",
+      "sha256": "82f1324fbd8b059bf2d0514698ce2d0ea1dca9ad3ecd32e917fbc6088f4060d8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4b2f5ce5e18df3c0": {
+      "path": "experiments/orthemology-v5-successors/source-store/ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87/INDEPENDENT_SCOPE_VERIFICATION.json",
+      "sha256": "ab3e099392fdfde7a45cd501667c5a9107aa42030800d327a178e4e469d47c87",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-77baf34a978b12c9": {
+      "path": "experiments/orthemology-v5-successors/source-store/e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7/VERIFICATION.json",
+      "sha256": "e90d43c6c7a7f5f88eae103cc7d4c1b55627d4d0f857b6f6bc8433ebb56056f7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2ade98eec3f46214": {
+      "path": "experiments/orthemology-v5-successors/source-store/93fcbf5551dfc4affac79663d7f175db6d24f41c111eb95ebf54f60b3f2bbab6/IndependentReadback.log",
+      "sha256": "93fcbf5551dfc4affac79663d7f175db6d24f41c111eb95ebf54f60b3f2bbab6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-55f053cf132ec118": {
+      "path": "experiments/orthemology-v5-successors/source-store/c74ea6fd246fafd1b45dbaaa5d736ae7c7a12775c975065a85f360fefc04ff7a/replay.py",
+      "sha256": "c74ea6fd246fafd1b45dbaaa5d736ae7c7a12775c975065a85f360fefc04ff7a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2c84b1185787680e": {
+      "path": "experiments/orthemology-v5-successors/source-store/fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46/PROJECTION_NOTES.md",
+      "sha256": "fe9db442aaf977af1b536a04ed813df1ba67b44804063b72f29710b890211f46",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-8077a088c79ee99b": {
+      "path": "experiments/orthemology-v5-successors/source-store/930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138/README.md",
+      "sha256": "930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-cd0576a9ae8373bb": {
+      "path": "experiments/orthemology-v5-successors/source-store/a7bbe55e485799e9791b700f633714ca1c5a37f76d6568ea212e0913d065e6e8/BUILD.md",
+      "sha256": "a7bbe55e485799e9791b700f633714ca1c5a37f76d6568ea212e0913d065e6e8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3da1a9f7f0ea7182": {
+      "path": "experiments/orthemology-v5-successors/source-store/d071337ba68837f5f6315093c3e5c9853fdb4740d3873bea0f59704fbb8aa7dc/PROJECTION_MAP.json",
+      "sha256": "d071337ba68837f5f6315093c3e5c9853fdb4740d3873bea0f59704fbb8aa7dc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-073517ac42e1af75": {
+      "path": "experiments/orthemology-v5-successors/source-store/fb0b2db6631297ec332e7ede87593b8aab3a8631a803d036024ab46182ca19fd/SOURCE_PACKAGE.json",
+      "sha256": "fb0b2db6631297ec332e7ede87593b8aab3a8631a803d036024ab46182ca19fd",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-58338a9acfda84de": {
+      "path": "experiments/orthemology-v5-successors/source-store/2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1/AnchoredSourceBridge.lean",
+      "sha256": "2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a2a9a25b6c8456f9": {
+      "path": "experiments/orthemology-v5-successors/source-store/fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc/Controls.lean",
+      "sha256": "fca4cba14ab8494a3171701ec06b9bce00a17832348d8eeed1bc472d643c36dc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-7b568097a59b226b": {
+      "path": "experiments/orthemology-v5-successors/source-store/54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64/ModalAbilityControl.lean",
+      "sha256": "54f15a358a8356efc471ae6491f4c0204ac09658ccdc3fe99faada49989b1b64",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6e16343a38dc3efc": {
+      "path": "experiments/orthemology-v5-successors/source-store/bb5182b6c596507e4185c591fdbe309be123764844efa4e8cbccfcc372ce068d/APIContract.lean",
+      "sha256": "bb5182b6c596507e4185c591fdbe309be123764844efa4e8cbccfcc372ce068d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c712eafdee7b8823": {
+      "path": "experiments/orthemology-v5-successors/source-store/3571bc9ef4c07d61b060abb20991a11cf6d977ebe13ba7e8181cc3ad8cdcba10/Acceptance.lean",
+      "sha256": "3571bc9ef4c07d61b060abb20991a11cf6d977ebe13ba7e8181cc3ad8cdcba10",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f644d3320f411b3e": {
+      "path": "experiments/orthemology-v5-successors/source-store/7d99c43260f9ed90ae36740f17d94ef291f4e3d77a7fffce0d5985c9bf82d984/01_cnd_alone_forces_coverage.lean",
+      "sha256": "7d99c43260f9ed90ae36740f17d94ef291f4e3d77a7fffce0d5985c9bf82d984",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-dae398ec0b14c4d8": {
+      "path": "experiments/orthemology-v5-successors/source-store/21280060176dcbff943829f4fb4302d93613d7103362ab4ee6680f50639b35eb/02_drop_cnd_preserves_uniqueness.lean",
+      "sha256": "21280060176dcbff943829f4fb4302d93613d7103362ab4ee6680f50639b35eb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3f6054cb782425d3": {
+      "path": "experiments/orthemology-v5-successors/source-store/1ac39626c951d071727e0b66530b432628a0440af5fc820b8805b4799dbefb62/03_vacuous_mode_creates_anchor.lean",
+      "sha256": "1ac39626c951d071727e0b66530b432628a0440af5fc820b8805b4799dbefb62",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ac07a78502a43b6f": {
+      "path": "experiments/orthemology-v5-successors/source-store/90a18952c366bd62521fe6ba3c7ca5df17220cb04b0a4eee7212ae86e47f3926/04_local_mode_forces_global_without_connection.lean",
+      "sha256": "90a18952c366bd62521fe6ba3c7ca5df17220cb04b0a4eee7212ae86e47f3926",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-bd5d23d6fbb63de5": {
+      "path": "experiments/orthemology-v5-successors/source-store/a6250f28b59723d5fd7e491eb33e4d683e194527eadaca9d4996073babd24b31/05_arbitrary_graph_transfers_actual_provision.lean",
+      "sha256": "a6250f28b59723d5fd7e491eb33e4d683e194527eadaca9d4996073babd24b31",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cbd7cfd2c45bb2e4": {
+      "path": "experiments/orthemology-v5-successors/source-store/64b8ee9c29eb55bbcb508a2d0ae562e7927b57d2afeeb7a78b61f8dc10e62c8c/06_ignore_original_use.lean",
+      "sha256": "64b8ee9c29eb55bbcb508a2d0ae562e7927b57d2afeeb7a78b61f8dc10e62c8c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2357b350eafff6e9": {
+      "path": "experiments/orthemology-v5-successors/source-store/10362d056a0872e07ad0ebf0997f3c4cb4573f0b3a2714b57710a57d9af3db76/07_ignore_mode_role.lean",
+      "sha256": "10362d056a0872e07ad0ebf0997f3c4cb4573f0b3a2714b57710a57d9af3db76",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2a916b0eb079676e": {
+      "path": "experiments/orthemology-v5-successors/source-store/1040fe46e4a3dc0a233201651a8571188daaed33498a7ed243e985d0b2bff173/08_ignore_contributor_visibility.lean",
+      "sha256": "1040fe46e4a3dc0a233201651a8571188daaed33498a7ed243e985d0b2bff173",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d5b983aa4aa24f98": {
+      "path": "experiments/orthemology-v5-successors/source-store/444897f4778d2912b1562b950c78eb007cb26d9137386d31b583102ae32979cb/09_coarse_effect_is_full_account.lean",
+      "sha256": "444897f4778d2912b1562b950c78eb007cb26d9137386d31b583102ae32979cb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f70b1b9fe5227b09": {
+      "path": "experiments/orthemology-v5-successors/source-store/be0e8f348e1159e2a59ce7a7a64230897192ed7a52ea6c765139479e4bd89a71/10_separated_originals_meet_mode_at_mixed.lean",
+      "sha256": "be0e8f348e1159e2a59ce7a7a64230897192ed7a52ea6c765139479e4bd89a71",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-04569ca7887c4880": {
+      "path": "experiments/orthemology-v5-successors/source-store/a2281dc17e2ed61df033cb1dbfa74ceb3a123032c8bb9946c1f4bfb2b1498585/11_field_unity_excludes_outside_necessary_source.lean",
+      "sha256": "a2281dc17e2ed61df033cb1dbfa74ceb3a123032c8bb9946c1f4bfb2b1498585",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a6fca619e93d707e": {
+      "path": "experiments/orthemology-v5-successors/source-store/a8ccb8d0404a27d53f224c998f7867265a51e1a9f3a5e170cf1c429bb9ac5c7c/12_causal_provision_transfers_assertion_ownership.lean",
+      "sha256": "a8ccb8d0404a27d53f224c998f7867265a51e1a9f3a5e170cf1c429bb9ac5c7c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-70889559e883fcad": {
+      "path": "experiments/orthemology-v5-successors/source-store/14b8c6acf39d6b10ddc81a5d825dad8f166d708b61b0167d54bb9d61b7f0768a/13_artificial_bundle_is_admissible.lean",
+      "sha256": "14b8c6acf39d6b10ddc81a5d825dad8f166d708b61b0167d54bb9d61b7f0768a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fc3d9af1f42141a6": {
+      "path": "experiments/orthemology-v5-successors/source-store/90c1d550ec8fe54f0b822eb04e00e89a800f029dc233f14a66e01cea37e75f1d/14_conformance_without_classification.lean",
+      "sha256": "90c1d550ec8fe54f0b822eb04e00e89a800f029dc233f14a66e01cea37e75f1d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-252311ad58f86c5b": {
+      "path": "experiments/orthemology-v5-successors/source-store/07133955d39b64006882de25ee5bd58802d6085be11260f17c74b1031c934e77/15_norm_without_actual_conformance.lean",
+      "sha256": "07133955d39b64006882de25ee5bd58802d6085be11260f17c74b1031c934e77",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-083c9fed82ba92a2": {
+      "path": "experiments/orthemology-v5-successors/source-store/3d085cb341414d6558aa2fa77e6c8cb7964d2e112aba6ee37ac116287f28b51f/16_empty_inventory_provider_is_unique.lean",
+      "sha256": "3d085cb341414d6558aa2fa77e6c8cb7964d2e112aba6ee37ac116287f28b51f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b76ce50fdd47388e": {
+      "path": "experiments/orthemology-v5-successors/source-store/768c8045f5eab5ac399ac5d6aff9421863a4434d85be18277e255197a629b0dc/17_source_provision_authenticates_message.lean",
+      "sha256": "768c8045f5eab5ac399ac5d6aff9421863a4434d85be18277e255197a629b0dc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-255fcb57798f30a0": {
+      "path": "experiments/orthemology-v5-successors/source-store/49fa43a8cd2709652557e0b87d1e666581d949022747335feb1c4189106a875f/18_ability_entails_actual_solo.lean",
+      "sha256": "49fa43a8cd2709652557e0b87d1e666581d949022747335feb1c4189106a875f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e7d930091eb64561": {
+      "path": "experiments/orthemology-v5-successors/source-store/81e1ec9a98519b5cddfa3ec11f58a425b67e6a2f7def4301e071b6df074faeec/19_field_cnd_is_not_global_cnd.lean",
+      "sha256": "81e1ec9a98519b5cddfa3ec11f58a425b67e6a2f7def4301e071b6df074faeec",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b170db6cd0423d8b": {
+      "path": "experiments/orthemology-v5-successors/source-store/aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565/BoundaryChecks.lean",
+      "sha256": "aff90d7deb39a50d3818341e61d19e0a656aa238f23c9b80dde5d6a8e696a565",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9032dc8995365aa1": {
+      "path": "experiments/orthemology-v5-successors/source-store/41da9de5f1dc3b766e9b030244ebb907a740c9b5ea6f5d22288a16b07d5a3604/BoundaryReadback.lean",
+      "sha256": "41da9de5f1dc3b766e9b030244ebb907a740c9b5ea6f5d22288a16b07d5a3604",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f2e6b814580f9158": {
+      "path": "experiments/orthemology-v5-successors/source-store/f5f66328ee6046526db51044820f1fc00e9c2225fcb674c4dd4e67ce74c4c002/AllDeclarations.lean",
+      "sha256": "f5f66328ee6046526db51044820f1fc00e9c2225fcb674c4dd4e67ce74c4c002",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f6995170dcb52a56": {
+      "path": "experiments/orthemology-v5-successors/source-store/0c31bf4b234d7f45d22450501442fc76276b41af77ba58a2d88dfae73b3e4d2c/01-unqualified-coverage.lean",
+      "sha256": "0c31bf4b234d7f45d22450501442fc76276b41af77ba58a2d88dfae73b3e4d2c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3336cf2cec46dba5": {
+      "path": "experiments/orthemology-v5-successors/source-store/e7ae3acca14803815ecc1b7b9416a3c849478ae8c038a7d0c9b4e4ff9ce60660/02-graph-certifies-admissibility.lean",
+      "sha256": "e7ae3acca14803815ecc1b7b9416a3c849478ae8c038a7d0c9b4e4ff9ce60660",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a59c0802557c7193": {
+      "path": "experiments/orthemology-v5-successors/source-store/5f33e21014ceac003d0cbcb6a3ba0ae2aba533fd3135ff62581cac21c64fd8ea/03-coverage-certifies-inventory.lean",
+      "sha256": "5f33e21014ceac003d0cbcb6a3ba0ae2aba533fd3135ff62581cac21c64fd8ea",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ad97a2e044158378": {
+      "path": "experiments/orthemology-v5-successors/source-store/7354ce75cf35d5b52782044fd66c80bdfc18450f32270abc1395d233c56c32eb/04-invisible-anchor-suffices.lean",
+      "sha256": "7354ce75cf35d5b52782044fd66c80bdfc18450f32270abc1395d233c56c32eb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-acfb43973bf15d8c": {
+      "path": "experiments/orthemology-v5-successors/source-store/8fe8de563b5e5bc2da064800553ecc81889cc3ebc3875e5f80521829fa3ba1b1/05-field-enlargement-preserves-cnd.lean",
+      "sha256": "8fe8de563b5e5bc2da064800553ecc81889cc3ebc3875e5f80521829fa3ba1b1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4a317a48c9c1a35e": {
+      "path": "experiments/orthemology-v5-successors/source-store/061664e7e0503428c8c6548b6a3ce66fb3c01e2a672c01f0a4092792e3c6ff03/06-empty-field-global-uniqueness.lean",
+      "sha256": "061664e7e0503428c8c6548b6a3ce66fb3c01e2a672c01f0a4092792e3c6ff03",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4a5b57bde7194631": {
+      "path": "experiments/orthemology-v5-successors/source-store/f88f342ab555835088d7c593c65615a6e68a962b03742db31b65bcdbc4b2138f/07-two-qualified-components-common-source.lean",
+      "sha256": "f88f342ab555835088d7c593c65615a6e68a962b03742db31b65bcdbc4b2138f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fe6904b11a0a426c": {
+      "path": "experiments/orthemology-v5-successors/source-store/17a9e2144c663ef43c4f0e1d4bf402a5b87614f0f9ff054bbf56a26b8bd75705/08-ability-is-uninterpreted-universal.lean",
+      "sha256": "17a9e2144c663ef43c4f0e1d4bf402a5b87614f0f9ff054bbf56a26b8bd75705",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fb6cd079aa409e1f": {
+      "path": "experiments/orthemology-v5-successors/source-store/ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48/BOUNDARY_LEDGER.json",
+      "sha256": "ede9054fc8b954aaff02ee8d35c327327d0612ff6ee2ceee966b20d40419ca48",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-14c0f6eb37ac1080": {
+      "path": "experiments/orthemology-v5-successors/source-store/359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186/CONTROL_MATRIX.md",
+      "sha256": "359c1f4901773262e328d5acb1e4a247ea9f8dc1fb7add195e3be7563026d186",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-71bae5a7669633df": {
+      "path": "experiments/orthemology-v5-successors/source-store/5fdf1ae4c3744a2919e1da3908dbc5bd2911d1b2c044709c6b4f6db5d97bb7bc/DESIGN_AND_IMPLEMENTATION_PLAN.md",
+      "sha256": "5fdf1ae4c3744a2919e1da3908dbc5bd2911d1b2c044709c6b4f6db5d97bb7bc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-94400b33f3306854": {
+      "path": "experiments/orthemology-v5-successors/source-store/475566a4930f948273a4a03ca1abeef20204755a79d9c5d8af61dbaafd92d285/DEVELOPMENT_HISTORY.md",
+      "sha256": "475566a4930f948273a4a03ca1abeef20204755a79d9c5d8af61dbaafd92d285",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-20e84a29f18f060c": {
+      "path": "experiments/orthemology-v5-successors/source-store/d94722d6068c769ea84adbcf65ce7bc6a626f3fff34e85bee23bd55056d89782/INTEGRATION_MANIFEST.json",
+      "sha256": "d94722d6068c769ea84adbcf65ce7bc6a626f3fff34e85bee23bd55056d89782",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d009b02399a9223b": {
+      "path": "experiments/orthemology-v5-successors/source-store/2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e/SOURCE_AND_PREMISE_MAP.md",
+      "sha256": "2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-2cff7b6f3d113869": {
+      "path": "experiments/orthemology-v5-successors/source-store/4ac388c98f6aa197c4041b2d58eab9196161a20d04b0641152480a1fad965b71/BUILD_MANIFEST.json",
+      "sha256": "4ac388c98f6aa197c4041b2d58eab9196161a20d04b0641152480a1fad965b71",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9b40036237cfa0cf": {
+      "path": "experiments/orthemology-v5-successors/source-store/94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553/REVIEW.md",
+      "sha256": "94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-edc32e1b9ba8dbc1": {
+      "path": "experiments/orthemology-v5-successors/source-store/0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463/CLAIM_REVIEW.json",
+      "sha256": "0cf76b8b6602b7dbc6dc2d96cc2d2a810bc9e09978ba264ebb7a05d671a1a463",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b4f188696c0b31c3": {
+      "path": "experiments/orthemology-v5-successors/source-store/3d94310b95c7c4fe4a3a748a737fd8c0aa0476d9fc0e66b7af8dbcf06f352ed0/FINAL_VALIDATION.json",
+      "sha256": "3d94310b95c7c4fe4a3a748a737fd8c0aa0476d9fc0e66b7af8dbcf06f352ed0",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6ebb677bec5220ff": {
+      "path": "experiments/orthemology-v5-successors/source-store/294ae70f1f0ba25ae776f1c1c9b739045403ba07a74659f2cbcfe29ad5364f4e/INDEPENDENT_BUILD_MANIFEST.json",
+      "sha256": "294ae70f1f0ba25ae776f1c1c9b739045403ba07a74659f2cbcfe29ad5364f4e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ec23af2a25931d89": {
+      "path": "experiments/orthemology-v5-successors/source-store/3a9f68d3cde9b742a86aeee1a6b8631689085841df0a1c72779c8e08cfeca1e4/AXIOM_AUDIT.json",
+      "sha256": "3a9f68d3cde9b742a86aeee1a6b8631689085841df0a1c72779c8e08cfeca1e4",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1d931a7110cc6738": {
+      "path": "experiments/orthemology-v5-successors/source-store/0f8f16f8d45deba38c41ebfa4137e7836d069d4ff8f636088725027d711706bf/BOUNDARY_BUILD_MANIFEST.json",
+      "sha256": "0f8f16f8d45deba38c41ebfa4137e7836d069d4ff8f636088725027d711706bf",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b0e4e1bf348abc15": {
+      "path": "experiments/orthemology-v5-successors/source-store/0108c9613e2614c94b455673f0d9a3d48638ac4750e4e0c66c10b23cb6c66d39/AXIOM_AUDIT.json",
+      "sha256": "0108c9613e2614c94b455673f0d9a3d48638ac4750e4e0c66c10b23cb6c66d39",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c2a6c01e14d3e8e3": {
+      "path": "experiments/orthemology-v5-successors/source-store/7ee029de1846d269bcb22019269407efedf7b029d1622783702536fdc9acffe1/reproduce.py",
+      "sha256": "7ee029de1846d269bcb22019269407efedf7b029d1622783702536fdc9acffe1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-74653c740600a156": {
+      "path": "experiments/orthemology-v5-successors/source-store/0ff5b6519190744335ab79a4d5007f863bf49b54ecb35f671801871d7af8fbad/README.md",
+      "sha256": "0ff5b6519190744335ab79a4d5007f863bf49b54ecb35f671801871d7af8fbad",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-f53d815c6f38c4b8": {
+      "path": "experiments/orthemology-v5-successors/source-store/ebe74dfb9043e4b3f86bf874a1bd6868c7c24d9bf3f4120e338c8e36772a6114/BUILD.md",
+      "sha256": "ebe74dfb9043e4b3f86bf874a1bd6868c7c24d9bf3f4120e338c8e36772a6114",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fe0e06424c0fc1f8": {
+      "path": "experiments/orthemology-v5-successors/source-store/c1a8213fccddb23313f98954069b7ef1cc7b8616ab6a921296b9a23d10b9443e/PROJECTION_MAP.json",
+      "sha256": "c1a8213fccddb23313f98954069b7ef1cc7b8616ab6a921296b9a23d10b9443e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-57e13b3d5126f8f4": {
+      "path": "experiments/orthemology-v5-successors/source-store/176aab18562d99af16ee889ac7bc3ccfbc72f9460a5a4396d6207f0f49a3468d/SOURCE_PACKAGE.json",
+      "sha256": "176aab18562d99af16ee889ac7bc3ccfbc72f9460a5a4396d6207f0f49a3468d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f2650eddf6c742c2": {
+      "path": "experiments/orthemology-v5-successors/source-store/b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f/VeracityBoundary.lean",
+      "sha256": "b199d8d367d296e34582aa7241a34db0fe5bcd5aaf70d57b8008e4adf506043f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-bf824cc57230a567": {
+      "path": "experiments/orthemology-v5-successors/source-store/91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23/VeracityControls.lean",
+      "sha256": "91d2717e4f9faebbed5e4f10055793a608231a33eefb7df477acdd7890a84d23",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4f7d732d0c6b8a94": {
+      "path": "experiments/orthemology-v5-successors/source-store/ed26c6ab2a4db2e52add5bd51fb9cf864a50daef1c8b8e9111f5bbd4f8e4d99c/APIContract.lean",
+      "sha256": "ed26c6ab2a4db2e52add5bd51fb9cf864a50daef1c8b8e9111f5bbd4f8e4d99c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9a26bd6ba9bae0bb": {
+      "path": "experiments/orthemology-v5-successors/source-store/90a3df329b7425f8cc010779173a3e3d32e6828efe16977e199f58bf37f7a878/Acceptance.lean",
+      "sha256": "90a3df329b7425f8cc010779173a3e3d32e6828efe16977e199f58bf37f7a878",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6267d3b2e866f2c2": {
+      "path": "experiments/orthemology-v5-successors/source-store/f537e312607c342e5e02cd99d4bf0a0043f1820d8c2634f90a147387112d1e2f/false_T0_without_A.lean",
+      "sha256": "f537e312607c342e5e02cd99d4bf0a0043f1820d8c2634f90a147387112d1e2f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-33404f2a0bafeddd": {
+      "path": "experiments/orthemology-v5-successors/source-store/b615e51ebe8b7eb1c9fd866883e5b32833ccfaa642680917db1ad959b2d59f40/false_T0_without_C.lean",
+      "sha256": "b615e51ebe8b7eb1c9fd866883e5b32833ccfaa642680917db1ad959b2d59f40",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c72237f24ed3c9c0": {
+      "path": "experiments/orthemology-v5-successors/source-store/da56a2a7710a2e7a44dc9ccfb40cb99bd7f778fbee5022552ccbffe8600906aa/false_T0_without_D.lean",
+      "sha256": "da56a2a7710a2e7a44dc9ccfb40cb99bd7f778fbee5022552ccbffe8600906aa",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4965a0e67b3f2da2": {
+      "path": "experiments/orthemology-v5-successors/source-store/8c07f41b6ca9be33e6fd5ef611563ec2f961eaea0415ae49d4983cc258396da5/false_T0_without_K.lean",
+      "sha256": "8c07f41b6ca9be33e6fd5ef611563ec2f961eaea0415ae49d4983cc258396da5",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f169d4e71ebdb2e7": {
+      "path": "experiments/orthemology-v5-successors/source-store/aed205437af9e1132b8fe7770bc0da6206bcff72a488775ec367892802475404/false_T0_without_N.lean",
+      "sha256": "aed205437af9e1132b8fe7770bc0da6206bcff72a488775ec367892802475404",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-704893a444609802": {
+      "path": "experiments/orthemology-v5-successors/source-store/8866cffb16fbe16622c7e20f7a8c050de8281e5537cfcf374d6309b245716eb7/false_T0_without_P.lean",
+      "sha256": "8866cffb16fbe16622c7e20f7a8c050de8281e5537cfcf374d6309b245716eb7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4b4b8741dfbc6e5f": {
+      "path": "experiments/orthemology-v5-successors/source-store/9b67464088df3fa2291e6ec62180fba7c7d288120f580b5acc874b87821d3945/strong_truth_implies_weak_truth.lean",
+      "sha256": "9b67464088df3fa2291e6ec62180fba7c7d288120f580b5acc874b87821d3945",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-8e5eb705cee5eaae": {
+      "path": "experiments/orthemology-v5-successors/source-store/528a89e4b00a3c7df927009934f8649af1388526696617d79396a2fcaaf6953e/truthfulness_implies_conformance.lean",
+      "sha256": "528a89e4b00a3c7df927009934f8649af1388526696617d79396a2fcaaf6953e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-aa456f699c6bb9e5": {
+      "path": "experiments/orthemology-v5-successors/source-store/397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a/IndependentBoundaryTests.lean",
+      "sha256": "397cfb115df42e82cc5b02ea96887fa81bf0c0b8378262df172719908159573a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2d7954091fd31cd8": {
+      "path": "experiments/orthemology-v5-successors/source-store/66a65bccac2ce4bf448b9d198dc575684b1bd4f44ea679c70bef36418bb140e1/IndependentBoundaryReadback.lean",
+      "sha256": "66a65bccac2ce4bf448b9d198dc575684b1bd4f44ea679c70bef36418bb140e1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fdb2e0ae899c5c8d": {
+      "path": "experiments/orthemology-v5-successors/source-store/35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531/SOURCE_PREMISE_MAP.json",
+      "sha256": "35389213070a880489a048fe663de5dc0abc50f5350fb98c83554e1b3b712531",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-476c3b141031706c": {
+      "path": "experiments/orthemology-v5-successors/source-store/4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099/THEOREM_MAP.md",
+      "sha256": "4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-7dbf9a5b6dd428f9": {
+      "path": "experiments/orthemology-v5-successors/source-store/7c6417cfffb384080b6645179d0d7c107fdb6700d5d21cc9e37cddca05c36e53/PROPOSED_CONTROLS.md",
+      "sha256": "7c6417cfffb384080b6645179d0d7c107fdb6700d5d21cc9e37cddca05c36e53",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b007023872cd92dd": {
+      "path": "experiments/orthemology-v5-successors/source-store/c165c117a8af0422126c83b84e9a516d22e4871e3008cce7b06176d8a129c96d/IMPLEMENTATION_PLAN.md",
+      "sha256": "c165c117a8af0422126c83b84e9a516d22e4871e3008cce7b06176d8a129c96d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4df50423cc83b41c": {
+      "path": "experiments/orthemology-v5-successors/source-store/efe193b34bacf18acb9a6951cbdadeba5f7eb895f9a3fa7c549ce0b7fa623e28/PROGRESS.md",
+      "sha256": "efe193b34bacf18acb9a6951cbdadeba5f7eb895f9a3fa7c549ce0b7fa623e28",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fe7749f459c9b2bd": {
+      "path": "experiments/orthemology-v5-successors/source-store/86862535f4aa3f85762ba925b8168976a0c047366a4eccf878485f3f21ae0a2d/FINAL_STATUS.json",
+      "sha256": "86862535f4aa3f85762ba925b8168976a0c047366a4eccf878485f3f21ae0a2d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f1ba8c3fc4f183bf": {
+      "path": "experiments/orthemology-v5-successors/source-store/e71cd1aa00f5155fcfe1222ca02e10fbbbf4cddb41a062d573e7b6840d289e9c/VERIFICATION.json",
+      "sha256": "e71cd1aa00f5155fcfe1222ca02e10fbbbf4cddb41a062d573e7b6840d289e9c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-0c870f5746e442a2": {
+      "path": "experiments/orthemology-v5-successors/source-store/10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499/REVIEW_REPORT.md",
+      "sha256": "10180085332d82a58f31ca8fd7bc819c3be85ec3c8c999ee0d9b8d0bcbc9d499",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-45b67f626e46a6b9": {
+      "path": "experiments/orthemology-v5-successors/source-store/4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32/REVIEW_RESULT.json",
+      "sha256": "4edc9e480ff668151725d238a5ce000c793fc3fd0ad522b365ac6b93a63ccc32",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1cf08cda253fdacc": {
+      "path": "experiments/orthemology-v5-successors/source-store/b2637640b2bff52587a2c67a197c90489fa30f47c246d4a6433656c9cb8dee1f/INDEPENDENT_AXIOM_CHECK.json",
+      "sha256": "b2637640b2bff52587a2c67a197c90489fa30f47c246d4a6433656c9cb8dee1f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-46c0942a4684b184": {
+      "path": "experiments/orthemology-v5-successors/source-store/8b203eacb775c90a0e9d7416945508b34fa892a01a5bcf362f48eb4514dbca67/OBJECT_IDENTITY_CHECK.json",
+      "sha256": "8b203eacb775c90a0e9d7416945508b34fa892a01a5bcf362f48eb4514dbca67",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b4b8e7d423c938bb": {
+      "path": "experiments/orthemology-v5-successors/source-store/682c484603c87342d28c1baf24e741c52f6746eb7f7909a9edc99dbf56712bd3/PARAGRAPH_NUMBERING_CHECK.json",
+      "sha256": "682c484603c87342d28c1baf24e741c52f6746eb7f7909a9edc99dbf56712bd3",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f2157383f8e9c754": {
+      "path": "experiments/orthemology-v5-successors/source-store/9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b/REVIEW_VERIFICATION.json",
+      "sha256": "9326e3982851a9a3fb91009ecb88967e85e84c56ba36d3e275983d2421389f2b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-857cb4942afc37ce": {
+      "path": "experiments/orthemology-v5-successors/source-store/08836d9ff986e559d15a9e1863b8b9ad3507bfbc37766604e4b123b326243b54/SOURCE_CHECK.json",
+      "sha256": "08836d9ff986e559d15a9e1863b8b9ad3507bfbc37766604e4b123b326243b54",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-95c7d88abfd5a07d": {
+      "path": "experiments/orthemology-v5-successors/source-store/020fa3cf3f0a935d3ca2d4d5cf1ffb460d975a8d7e47505d82591edb367a42c4/SOURCE_LOCATORS.json",
+      "sha256": "020fa3cf3f0a935d3ca2d4d5cf1ffb460d975a8d7e47505d82591edb367a42c4",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9b8a96e09408ba77": {
+      "path": "experiments/orthemology-v5-successors/source-store/b238906841a9aeee8ed711a7fa3269158bf3678621c973ff858855eb49962017/CHANGE_RECORD.md",
+      "sha256": "b238906841a9aeee8ed711a7fa3269158bf3678621c973ff858855eb49962017",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2882fef0e814de81": {
+      "path": "experiments/orthemology-v5-successors/source-store/2a16d76acbe3682cb5ca5acf63a194d06fe08d968dcb174184d7393b59ce9a5e/PROPOSED_DESIGN.md",
+      "sha256": "2a16d76acbe3682cb5ca5acf63a194d06fe08d968dcb174184d7393b59ce9a5e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-0ee47f9b7968363a": {
+      "path": "experiments/orthemology-v5-successors/source-store/4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9/ERRATUM.md",
+      "sha256": "4771f0bf2183fe9dddddb6014eba9b77253ee912be2ef7be91c7c4352b3c63c9",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-aa9349dee406e6a2": {
+      "path": "experiments/orthemology-v5-successors/source-store/eee71e3493dc316593b1258caaa6d33f6b1d16db9a100ce072a1a16a4ce9979e/BODY_PARAGRAPH_CHECK.json",
+      "sha256": "eee71e3493dc316593b1258caaa6d33f6b1d16db9a100ce072a1a16a4ce9979e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-df71493aebbf98bb": {
+      "path": "experiments/orthemology-v5-successors/source-store/364cc13c3b57486054b18e064c976c3ab86d502284fdea676fc3719dfdbab3b6/ERRATUM_MANIFEST.json",
+      "sha256": "364cc13c3b57486054b18e064c976c3ab86d502284fdea676fc3719dfdbab3b6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e5f9eb371039ff58": {
+      "path": "experiments/orthemology-v5-successors/source-store/25c92ccdb6fced0b74b9b57a791aaf5a89899c6d771b84cf04d37d6305aa4180/reproduce.py",
+      "sha256": "25c92ccdb6fced0b74b9b57a791aaf5a89899c6d771b84cf04d37d6305aa4180",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-19d8919ef0646ef5": {
+      "path": "experiments/orthemology-v5-successors/source-store/ec62c0a1a93cbaba745c4e4a50d0622c42014dbe43b9547a47644e6190d98aa0/README.md",
+      "sha256": "ec62c0a1a93cbaba745c4e4a50d0622c42014dbe43b9547a47644e6190d98aa0",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-c557d9ebf2812a2c": {
+      "path": "experiments/orthemology-v5-successors/source-store/d2b75cf61f11c7d6f2427590271408cd7661fd179d6d0111333b9758a27b9313/BUILD.md",
+      "sha256": "d2b75cf61f11c7d6f2427590271408cd7661fd179d6d0111333b9758a27b9313",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-821d9944d5a6982a": {
+      "path": "experiments/orthemology-v5-successors/source-store/96571aed70944971215bfaf25178029dde199794e19d4e20c338b50d55b7558b/PROJECTION_MAP.json",
+      "sha256": "96571aed70944971215bfaf25178029dde199794e19d4e20c338b50d55b7558b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-5852505ce5ab7be4": {
+      "path": "experiments/orthemology-v5-successors/source-store/a6e0eff07b86c9876073eca5da4f02489146289e0970c456fd1bb59dd7b66ff2/SOURCE_PACKAGE.json",
+      "sha256": "a6e0eff07b86c9876073eca5da4f02489146289e0970c456fd1bb59dd7b66ff2",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b33af05dc3680ac1": {
+      "path": "experiments/orthemology-v5-successors/source-store/319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46/JointFiniteInterpretation.lean",
+      "sha256": "319720f83ac8e7d7c5dc44735e4562e90028eec33f1c9efe9cb5e57d6c229d46",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-650a7c2086ee2eeb": {
+      "path": "experiments/orthemology-v5-successors/source-store/2fda3d33ec98eb042447e474e94002b06e3cdecded56f7c41f66e5367776e0c7/APIContract.before.lean",
+      "sha256": "2fda3d33ec98eb042447e474e94002b06e3cdecded56f7c41f66e5367776e0c7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9d64eeb1c0294b83": {
+      "path": "experiments/orthemology-v5-successors/source-store/452c2ba9f52f3c1868c530aba55d9ca6cf5ebb2911f0dd526a0ca40138621b64/Acceptance.lean",
+      "sha256": "452c2ba9f52f3c1868c530aba55d9ca6cf5ebb2911f0dd526a0ca40138621b64",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a712c8d4b5e2f1cf": {
+      "path": "experiments/orthemology-v5-successors/source-store/1f02206c0fe4740d8b459c6eca1a6e7ba7d329f18a5b3eb66b78b0765c011b3d/RejectedClaims.lean",
+      "sha256": "1f02206c0fe4740d8b459c6eca1a6e7ba7d329f18a5b3eb66b78b0765c011b3d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c813881001d7b073": {
+      "path": "experiments/orthemology-v5-successors/source-store/13ee75ddf64ec213665d3b97a3b2375626c11a7b707c155cf72d9b9ee30bbc31/ReadbackAudit.lean",
+      "sha256": "13ee75ddf64ec213665d3b97a3b2375626c11a7b707c155cf72d9b9ee30bbc31",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6846b0482c60af2e": {
+      "path": "experiments/orthemology-v5-successors/source-store/15d5d11887a21d94547257fbec89396214c1a34d6afba5641819b6eea57c238b/ProofReadback.lean",
+      "sha256": "15d5d11887a21d94547257fbec89396214c1a34d6afba5641819b6eea57c238b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-409a5af57c559df6": {
+      "path": "experiments/orthemology-v5-successors/source-store/ae48b48fa73ad70f54ea9c0929474063de527891262e00e44575f8432bcda426/ImportClosure.lean",
+      "sha256": "ae48b48fa73ad70f54ea9c0929474063de527891262e00e44575f8432bcda426",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a15b222d2eea1fa7": {
+      "path": "experiments/orthemology-v5-successors/source-store/137f149d87d6adceb7b67fb90cba00358cd1f3fccd0a73235919dcb0345c8bd9/DECLARATIONS.json",
+      "sha256": "137f149d87d6adceb7b67fb90cba00358cd1f3fccd0a73235919dcb0345c8bd9",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ce61cf2328e3d320": {
+      "path": "experiments/orthemology-v5-successors/source-store/a0d07af4f8b13de752ae38ff322f970c790c2a90fbfbbb9b52cd5400f7c9957a/THEOREMS.json",
+      "sha256": "a0d07af4f8b13de752ae38ff322f970c790c2a90fbfbbb9b52cd5400f7c9957a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b69095340e3a8984": {
+      "path": "experiments/orthemology-v5-successors/source-store/e410fa131e61102006cdced05d3cb36ffd4a8cb0bc0d6b08b2c5ae77eb7c37ac/BOUNDARY_LEDGER.json",
+      "sha256": "e410fa131e61102006cdced05d3cb36ffd4a8cb0bc0d6b08b2c5ae77eb7c37ac",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-aa62440ece7c2f78": {
+      "path": "experiments/orthemology-v5-successors/source-store/725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e/THEOREM_MAP.md",
+      "sha256": "725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-21f6a36a7826bb97": {
+      "path": "experiments/orthemology-v5-successors/source-store/599503b4add6d142b152caa1adb3d79b4386e0d44124ebd2a8d190213139dbac/FINAL_STATUS.json",
+      "sha256": "599503b4add6d142b152caa1adb3d79b4386e0d44124ebd2a8d190213139dbac",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1f46777c5e9126c1": {
+      "path": "experiments/orthemology-v5-successors/source-store/fe5de0909a64fcd9526cf4ecc8d84a454eb1f6ab56f786a093a80fe480be63fd/DEVELOPMENT_HISTORY.md",
+      "sha256": "fe5de0909a64fcd9526cf4ecc8d84a454eb1f6ab56f786a093a80fe480be63fd",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ea5e8d2b99d39092": {
+      "path": "experiments/orthemology-v5-successors/source-store/608fe6ff3eff57c1a1a218737ccc59ff2495ce6708d2997be4c728589b8c8b87/DESIGN.md",
+      "sha256": "608fe6ff3eff57c1a1a218737ccc59ff2495ce6708d2997be4c728589b8c8b87",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-23284931db72e507": {
+      "path": "experiments/orthemology-v5-successors/source-store/2b2c6c478ff8562b19a531cfb5adf1495714ef11cddd1355e0923a7f59d09116/MAPPING_AND_COMPATIBILITY.md",
+      "sha256": "2b2c6c478ff8562b19a531cfb5adf1495714ef11cddd1355e0923a7f59d09116",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c1ca24c0e6a05d1c": {
+      "path": "experiments/orthemology-v5-successors/source-store/823af6786abe024470e794b8362c14e79937c56f4ce26a97f143e01504d77936/INTEGRATION_MANIFEST.json",
+      "sha256": "823af6786abe024470e794b8362c14e79937c56f4ce26a97f143e01504d77936",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-20e23c5d74427cff": {
+      "path": "experiments/orthemology-v5-successors/source-store/8f883c57cb6a04467a2388c51c0c639859a0a267bf6444ce41c7270166772df6/VERIFICATION.json",
+      "sha256": "8f883c57cb6a04467a2388c51c0c639859a0a267bf6444ce41c7270166772df6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d430dc2ef1951aca": {
+      "path": "experiments/orthemology-v5-successors/source-store/a6d92b3dbe9df0378dac0e8e5167e89424be4d337e0ff5773724332de732be4a/AXIOM_AUDIT.json",
+      "sha256": "a6d92b3dbe9df0378dac0e8e5167e89424be4d337e0ff5773724332de732be4a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-56164ebeca720ac1": {
+      "path": "experiments/orthemology-v5-successors/source-store/fbde59362f6734f63a2d0639ac56ee04736a5376572407043ae3b43799a30b15/READBACKS.json",
+      "sha256": "fbde59362f6734f63a2d0639ac56ee04736a5376572407043ae3b43799a30b15",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-59f1ed146c95eaa2": {
+      "path": "experiments/orthemology-v5-successors/source-store/890ae20a8b3689baf6893247c45b30873af17a9f5d987fda169b93e8d38d09fb/PROOF_READBACKS.json",
+      "sha256": "890ae20a8b3689baf6893247c45b30873af17a9f5d987fda169b93e8d38d09fb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-96463304a2a71e76": {
+      "path": "experiments/orthemology-v5-successors/source-store/0d5c3c1274b2ff54d2cf2d558d4a16b0dd232469ba5ea1bb7c9d48bca4d8c82b/REJECTIONS.json",
+      "sha256": "0d5c3c1274b2ff54d2cf2d558d4a16b0dd232469ba5ea1bb7c9d48bca4d8c82b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-87a792bb7e3a5c23": {
+      "path": "experiments/orthemology-v5-successors/source-store/134a108baa85d72701b136d245b68f5d34729eaa65ea16e8af5cd7223f1bc11e/IMPORT_CLOSURE.json",
+      "sha256": "134a108baa85d72701b136d245b68f5d34729eaa65ea16e8af5cd7223f1bc11e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fae0d1088269373b": {
+      "path": "experiments/orthemology-v5-successors/source-store/7e422f2f631ddf5e5115127429a0c832797cbfbae291005e0a61d8f848b862df/FAILURE.json",
+      "sha256": "7e422f2f631ddf5e5115127429a0c832797cbfbae291005e0a61d8f848b862df",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-c72a6bf8bbd99bd6": {
+      "path": "experiments/orthemology-v5-successors/source-store/b8824f2226bf4224148dc6318518d69814c0f69ad7ac579c6c568533570581aa/FINAL_TESTS.log",
+      "sha256": "b8824f2226bf4224148dc6318518d69814c0f69ad7ac579c6c568533570581aa",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-59541ad643404d80": {
+      "path": "experiments/orthemology-v5-successors/source-store/35acd9b89f20d225b8bc664542532539685a3df73a9617822bef2415ffb09840/test_reproduce.py",
+      "sha256": "35acd9b89f20d225b8bc664542532539685a3df73a9617822bef2415ffb09840",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1ae6f4f0e78a7170": {
+      "path": "experiments/orthemology-v5-successors/source-store/3d9280634839e58bf0ab0af8327556e888cb02d7a652b35e67b58880454273d0/DEPENDENCY_OBJECTS.json",
+      "sha256": "3d9280634839e58bf0ab0af8327556e888cb02d7a652b35e67b58880454273d0",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-827ff2b3c4805a2c": {
+      "path": "experiments/orthemology-v5-successors/source-store/2c1ce075b1746e37dc0ec291219245d0b56a0c97cf2d1c91872bbb1b36f438af/INPUT_BINDINGS.json",
+      "sha256": "2c1ce075b1746e37dc0ec291219245d0b56a0c97cf2d1c91872bbb1b36f438af",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-43e632601c74c09e": {
+      "path": "experiments/orthemology-v5-successors/source-store/1116a595b33f58513655ffc2024663be813e7267e75eb512b4a2ab2e479ee255/reproduce.py",
+      "sha256": "1116a595b33f58513655ffc2024663be813e7267e75eb512b4a2ab2e479ee255",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-36973056a4f72770": {
+      "path": "experiments/orthemology-v5-successors/source-store/477bd9137234f58941b4e43996fd271716a75767c77fa41a80f9d70fdb659876/README.md",
+      "sha256": "477bd9137234f58941b4e43996fd271716a75767c77fa41a80f9d70fdb659876",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-a0cb9caa3cf080ea": {
+      "path": "experiments/orthemology-v5-successors/source-store/cd0ccf86e8ed05d5dfd41dcc27c43b93cbad0706ae90283e638bf5bc4b7e7ce8/PROJECTION_NOTES.md",
+      "sha256": "cd0ccf86e8ed05d5dfd41dcc27c43b93cbad0706ae90283e638bf5bc4b7e7ce8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-7743a5ba4a3da6e1": {
+      "path": "experiments/orthemology-v5-successors/source-store/41cce914dc45906bd7ac5d608f942bc8835ea8989307b54d5644204a2c923de6/BUILD.md",
+      "sha256": "41cce914dc45906bd7ac5d608f942bc8835ea8989307b54d5644204a2c923de6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d3ff854d68f869b6": {
+      "path": "experiments/orthemology-v5-successors/source-store/82f42029e6ba8dbbb46f907053b9e672529c062f5d551e210cb402a792796bce/PROJECTION_MAP.json",
+      "sha256": "82f42029e6ba8dbbb46f907053b9e672529c062f5d551e210cb402a792796bce",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4cbd70eed3ee4d50": {
+      "path": "experiments/orthemology-v5-successors/source-store/b1be89dd2b3dc715dad8e764e7ba271abc7645209d0dabae7d0bf7862d301f6a/SOURCE_PACKAGE.json",
+      "sha256": "b1be89dd2b3dc715dad8e764e7ba271abc7645209d0dabae7d0bf7862d301f6a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e06af7156116bdc4": {
+      "path": "experiments/orthemology-v5-successors/source-store/3047c2ad1ec477ef12ed5cc25857cbf556128a436130dce23512ce2194aa3b75/IndependentJoiningTests.lean",
+      "sha256": "3047c2ad1ec477ef12ed5cc25857cbf556128a436130dce23512ce2194aa3b75",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-854bc2eb411dc6ba": {
+      "path": "experiments/orthemology-v5-successors/source-store/2b58232056bb4778d00ce6b5c0ee03f65969c0a846a099b23f983af3ccaad07e/IndependentReadback.lean",
+      "sha256": "2b58232056bb4778d00ce6b5c0ee03f65969c0a846a099b23f983af3ccaad07e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4089aab7da6cbfef": {
+      "path": "experiments/orthemology-v5-successors/source-store/4121dad5720f9e7bfbfda760a18c0f76d5647738b0234442251424aa98f6910b/IndependentRejectedClaims.lean",
+      "sha256": "4121dad5720f9e7bfbfda760a18c0f76d5647738b0234442251424aa98f6910b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ddc7ea721aae8f2c": {
+      "path": "experiments/orthemology-v5-successors/source-store/007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a/REVIEW.md",
+      "sha256": "007aaa9b95ca4fe9d8507292a8228f6c26e1ae8230ef570f0d688332cf43098a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f7fd0f6c5342b0c5": {
+      "path": "experiments/orthemology-v5-successors/source-store/3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8/CLAIM_REVIEW.json",
+      "sha256": "3ac78afa1fb2ef530398b1b0adfbfd9ac5fbaf30dc5b658f55f22d7120f8dfc8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a6e1378f4ecaf14b": {
+      "path": "experiments/orthemology-v5-successors/source-store/7ba65ba59baad65106c6668d92c7c13d97db97040b2fad45b316d95791562ab8/INVENTORY_CHECK.json",
+      "sha256": "7ba65ba59baad65106c6668d92c7c13d97db97040b2fad45b316d95791562ab8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-af106b85642c7922": {
+      "path": "experiments/orthemology-v5-successors/source-store/2f03dddcd5f59a9e611e41a47c6e2399199284c11683c01ed58674a7b2103781/INDEPENDENT_THEOREMS.json",
+      "sha256": "2f03dddcd5f59a9e611e41a47c6e2399199284c11683c01ed58674a7b2103781",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ff0b98f7113c4e09": {
+      "path": "experiments/orthemology-v5-successors/source-store/68fa1d303645dfe5837aee958b55fc52428a49c4a852ba00755c36c361ae0830/FINAL_INTEGRITY.json",
+      "sha256": "68fa1d303645dfe5837aee958b55fc52428a49c4a852ba00755c36c361ae0830",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9e03b5894b78b6c6": {
+      "path": "experiments/orthemology-v5-successors/source-store/f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5/REVIEW_VERIFICATION.json",
+      "sha256": "f416a193ac826ce67cd5512591b02a46050f386809fe0e3c11a0261074652ed5",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e0e5449a4c7a1327": {
+      "path": "experiments/orthemology-v5-successors/source-store/a6d92b3dbe9df0378dac0e8e5167e89424be4d337e0ff5773724332de732be4a/AXIOMS.json",
+      "sha256": "a6d92b3dbe9df0378dac0e8e5167e89424be4d337e0ff5773724332de732be4a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-8bfc87a218b01935": {
+      "path": "experiments/orthemology-v5-successors/source-store/c8815ba8168fa9876fa9239c9b16a41b847af29b17f1638072d1980ad005ee12/JOINING_VERIFICATION.json",
+      "sha256": "c8815ba8168fa9876fa9239c9b16a41b847af29b17f1638072d1980ad005ee12",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b3d9350033e140ce": {
+      "path": "experiments/orthemology-v5-successors/source-store/ff2f2a2219212a41f8d851a52b4e3c79d99ccf4dba4ed966331e2ef3b1d4dce0/IndependentReadback.log",
+      "sha256": "ff2f2a2219212a41f8d851a52b4e3c79d99ccf4dba4ed966331e2ef3b1d4dce0",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-75e6048cf024e8dc": {
+      "path": "experiments/orthemology-v5-successors/source-store/369e2dc5bf48c99f72292eeeefdb84931dc44c16076c6845a5e62e02efa6966f/IndependentRejectedClaims.log",
+      "sha256": "369e2dc5bf48c99f72292eeeefdb84931dc44c16076c6845a5e62e02efa6966f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-aa89a95cdb4c6e01": {
+      "path": "experiments/orthemology-v5-successors/source-store/0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2/TraceControls.lean",
+      "sha256": "0df33942b13f157d7952adb89c43d6f9934892c52af8c5d511973945e2b2dea2",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6cec0f800eb98dc5": {
+      "path": "experiments/orthemology-v5-successors/source-store/5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b/RationalFixtures.lean",
+      "sha256": "5593eb52e66142b99d7f592845fd92096583a3f6cb9fe273ffa306843ddbab6b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-0f52d0a75b19646b": {
+      "path": "experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReadbackAudit.lean",
+      "sha256": "0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-230f923e27c763e5": {
+      "path": "experiments/orthemology-v5-successors/source-store/b9cb6fbaf5600b6d719189970e7d5e9b4e9775cec97b807a99c307cc2156608b/ImportClosure.lean",
+      "sha256": "b9cb6fbaf5600b6d719189970e7d5e9b4e9775cec97b807a99c307cc2156608b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-5d40a7c7e2b59cb2": {
+      "path": "experiments/orthemology-v5-successors/source-store/52629f9272dd0add48d3147181afa580a92c787bb1ee243d0a1b1d9fc4098a59/Contract.lean",
+      "sha256": "52629f9272dd0add48d3147181afa580a92c787bb1ee243d0a1b1d9fc4098a59",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f623e953adf1a8ce": {
+      "path": "experiments/orthemology-v5-successors/source-store/4876dc54600a3be1aeb9d9e110215aba97ea8a89df3427575e2289886b45b2e8/RejectedClaims.lean",
+      "sha256": "4876dc54600a3be1aeb9d9e110215aba97ea8a89df3427575e2289886b45b2e8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-8b0a011de5c4b39b": {
+      "path": "experiments/orthemology-v5-successors/source-store/f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3/ReviewerCounterchecks.lean",
+      "sha256": "f29664167903378504944fe0284ae707a0c3461dafe876378de848d08914b3e3",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-4c621c6db1b4956d": {
+      "path": "experiments/orthemology-v5-successors/source-store/1f09019b5a648cff39428d578bb0ced9b1f656b80c1aa3cf9629c4d8383f08f7/ReviewerExtraReadback.lean",
+      "sha256": "1f09019b5a648cff39428d578bb0ced9b1f656b80c1aa3cf9629c4d8383f08f7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-7717f82fb5cf2f3b": {
+      "path": "experiments/orthemology-v5-successors/source-store/5bc8179739972f45b932c6b4c8fa61a9508f11cc85bb2eb0bf5332e9f2268919/ReviewerImports.lean",
+      "sha256": "5bc8179739972f45b932c6b4c8fa61a9508f11cc85bb2eb0bf5332e9f2268919",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-670da76e8a67963b": {
+      "path": "experiments/orthemology-v5-successors/source-store/0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c/ReviewerReadback.lean",
+      "sha256": "0e0636bf2cbd583b0a7193d9cc5985bdca6c5e52a0c895f01e9cd71b5677e34c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2fb8f51684babff5": {
+      "path": "experiments/orthemology-v5-successors/source-store/df56b3c1d519e0ce0098f44f9939d8f84d66097632ef3d2eaf32500007d8f1c7/DECLARATIONS.json",
+      "sha256": "df56b3c1d519e0ce0098f44f9939d8f84d66097632ef3d2eaf32500007d8f1c7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b829ac9f606f5b33": {
+      "path": "experiments/orthemology-v5-successors/source-store/f941d25975a820392c9e084b7992fda92e4e42925e31b93177cbc1386d31431e/VERIFICATION.json",
+      "sha256": "f941d25975a820392c9e084b7992fda92e4e42925e31b93177cbc1386d31431e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-956b77e34a460c57": {
+      "path": "experiments/orthemology-v5-successors/source-store/71d8a7dbad45b57a6774b3843877a6883309415b3a048458e4e3e7f6418587bb/READBACKS.json",
+      "sha256": "71d8a7dbad45b57a6774b3843877a6883309415b3a048458e4e3e7f6418587bb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b2223a7e36a3ad49": {
+      "path": "experiments/orthemology-v5-successors/source-store/98cc440e94a7188ec34a686616e853cddea13e8889b22f725fc9b7cb396ec259/IMPORT_BINDINGS.json",
+      "sha256": "98cc440e94a7188ec34a686616e853cddea13e8889b22f725fc9b7cb396ec259",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-072105ca4d6a8f2e": {
+      "path": "experiments/orthemology-v5-successors/source-store/81a75b5512016ad79b253378012e7dcc96df5f359651fd68e53e1d6cfc3aeb19/COPY_CONTROL_RECEIPT.json",
+      "sha256": "81a75b5512016ad79b253378012e7dcc96df5f359651fd68e53e1d6cfc3aeb19",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3be8f06a55cdcd70": {
+      "path": "experiments/orthemology-v5-successors/source-store/ec7445ea35790630a8aa4759a77db4f932c145b09e31568d3f90d3717e053452/OWNERSHIP_AND_IMPLEMENTATION_PLAN.md",
+      "sha256": "ec7445ea35790630a8aa4759a77db4f932c145b09e31568d3f90d3717e053452",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-7a25eaf6d62e6259": {
+      "path": "experiments/orthemology-v5-successors/source-store/cbeb39d4f21f0516c67d754fafaeab1f69633b8230fcb827917eb7191062c54f/FAILURE.txt",
+      "sha256": "cbeb39d4f21f0516c67d754fafaeab1f69633b8230fcb827917eb7191062c54f",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ab32ca10e87b1624": {
+      "path": "experiments/orthemology-v5-successors/source-store/4cb0ae796c84461ed6f7106f81f0902e83073380407e2ad604364fb7e5a48303/FAILURE.txt",
+      "sha256": "4cb0ae796c84461ed6f7106f81f0902e83073380407e2ad604364fb7e5a48303",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2ba3948d5e75d3c9": {
+      "path": "experiments/orthemology-v5-successors/source-store/73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723/REVIEW.md",
+      "sha256": "73d79019e20da7fcf602d64f01e664a8c927d9dc664ff2fb7894c0a27b94e723",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1ab3923d8e47b006": {
+      "path": "experiments/orthemology-v5-successors/source-store/b8cbf708630aa9f4701477c3d95d7eb9e025b041b1383d258552970b3a37b453/REVIEW.json",
+      "sha256": "b8cbf708630aa9f4701477c3d95d7eb9e025b041b1383d258552970b3a37b453",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-323b9dec416035d0": {
+      "path": "experiments/orthemology-v5-successors/source-store/fdf4f753a98c682dacdfc10ea31731616f27a14477fddd473ce713ce0084f07b/SOURCE_SCOPE.json",
+      "sha256": "fdf4f753a98c682dacdfc10ea31731616f27a14477fddd473ce713ce0084f07b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ba9539cd68f273e9": {
+      "path": "experiments/orthemology-v5-successors/source-store/c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c/COUNTERCHECKS.json",
+      "sha256": "c7020513c083a11369321aa4cac3293ccdbe40ac5bc0fc0df16f65e6fd90763c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a685c908f4f1a00c": {
+      "path": "experiments/orthemology-v5-successors/source-store/dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c/EXTRA_KERNEL_RECEIPT.json",
+      "sha256": "dbffc52311696797c1cc6efb0b269e50644540398acb436a8713acad1bc5fc4c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-afd74d4cebdd1665": {
+      "path": "experiments/orthemology-v5-successors/source-store/312e79bd666e200759dda04c84083e8e73cd1f217416502acf1615c28ecb2c1a/EXTRA_READBACKS.json",
+      "sha256": "312e79bd666e200759dda04c84083e8e73cd1f217416502acf1615c28ecb2c1a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-46eb58deaf88281b": {
+      "path": "experiments/orthemology-v5-successors/source-store/c0bbc32c3107968e84690948d08f14d23d83df4fa4d0578e30925c8abd694dc7/INDEPENDENT_REPLAY.json",
+      "sha256": "c0bbc32c3107968e84690948d08f14d23d83df4fa4d0578e30925c8abd694dc7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f1589515c9f3a977": {
+      "path": "experiments/orthemology-v5-successors/source-store/777603573b0e42e753902f21b1964238d02593096a402ea8eccc93143b43e82c/IMPORT_BINDINGS.json",
+      "sha256": "777603573b0e42e753902f21b1964238d02593096a402ea8eccc93143b43e82c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e736c184bbb17f74": {
+      "path": "experiments/orthemology-v5-successors/source-store/ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598/MODEL_DERIVATION_AND_PROPOSAL.md",
+      "sha256": "ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-44f5d67b4ae6ce7f": {
+      "path": "experiments/orthemology-v5-successors/source-store/7f520dc11ad7a7e800c80e5c2ca0a053e25542c96569fc3b60d4d1be9db2384c/replay.py",
+      "sha256": "7f520dc11ad7a7e800c80e5c2ca0a053e25542c96569fc3b60d4d1be9db2384c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-715a68ea63d29b52": {
+      "path": "experiments/orthemology-v5-successors/source-store/9cee4f5fb0df7d349d48ca1d3b8eace02cc2de13121b8bb87618a2a05d6a676a/check_copy_controls.py",
+      "sha256": "9cee4f5fb0df7d349d48ca1d3b8eace02cc2de13121b8bb87618a2a05d6a676a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-686131a3c6856dfc": {
+      "path": "experiments/orthemology-v5-successors/source-store/712e63830b4e8d1deeb988118a7283a11bd0e840e4b147c37aa5f40aff53290c/independent_counterchecks.py",
+      "sha256": "712e63830b4e8d1deeb988118a7283a11bd0e840e4b147c37aa5f40aff53290c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2f0623ad64fccafa": {
+      "path": "experiments/orthemology-v5-successors/source-store/a0f78f8aa5b928561fd533e9084a0d3e18e9c7ce3775504e5ebdfd06ffeea03a/README.md",
+      "sha256": "a0f78f8aa5b928561fd533e9084a0d3e18e9c7ce3775504e5ebdfd06ffeea03a",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-7a2bd6dbb524907e": {
+      "path": "experiments/orthemology-v5-successors/source-store/54a99626504268b0c1682bfab5389cfefcc7a8d2b26a06ebf46574e25e6fd276/PROJECTION_NOTES.md",
+      "sha256": "54a99626504268b0c1682bfab5389cfefcc7a8d2b26a06ebf46574e25e6fd276",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9c6f443d59a6c730": {
+      "path": "experiments/orthemology-v5-successors/source-store/e8fab8a60d60a6707e7550adc0ffb25c19c230b4a194041c93e051d69d98e271/BUILD.md",
+      "sha256": "e8fab8a60d60a6707e7550adc0ffb25c19c230b4a194041c93e051d69d98e271",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fc6f5d00d74a7a60": {
+      "path": "experiments/orthemology-v5-successors/source-store/aaa0d2b9443982c339a8a53305cf02f839afe4156e9d43768e382f9976a6638b/PROJECTION_MAP.json",
+      "sha256": "aaa0d2b9443982c339a8a53305cf02f839afe4156e9d43768e382f9976a6638b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6aa63bffd5444699": {
+      "path": "experiments/orthemology-v5-successors/source-store/62b262ea053c080d2549c9851d8d652819ad7350a447b9a67f89a8264cd87c1d/SOURCE_PACKAGE.json",
+      "sha256": "62b262ea053c080d2549c9851d8d652819ad7350a447b9a67f89a8264cd87c1d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-32d7a92e718bd8e2": {
+      "path": "experiments/orthemology-v5-successors/source-store/aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e/AVENUE_SYNTHESIS.md",
+      "sha256": "aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-b961403c6844f884": {
+      "path": "experiments/orthemology-v5-successors/source-store/e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064/FAMILY245_TRANSFER_DECISION.json",
+      "sha256": "e5130804cf16bdc28b840a3a0db071f2164523598c69e8df2179e9c6f73ed064",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-a12d44cb3c5d92e1": {
+      "path": "experiments/orthemology-v5-successors/source-store/057167d8f8821c1a8fb667816dcf66d600495d661fb2d5d57f5b32bd6050d3b2/README.md",
+      "sha256": "057167d8f8821c1a8fb667816dcf66d600495d661fb2d5d57f5b32bd6050d3b2",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-388637eb87eb0b62": {
+      "path": "experiments/orthemology-v5-successors/source-store/1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4/CORPUS_AND_TRANSFER_SCOPE.md",
+      "sha256": "1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-b4c14339590c322a": {
+      "path": "experiments/orthemology-v5-successors/source-store/5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8/SOURCE_IDENTITIES.json",
+      "sha256": "5b0cf5f4686a09f79750a8ec440a7ffbddbcee11efa4290055f836579f8847f8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-5621ec340fcede63": {
+      "path": "experiments/orthemology-v5-successors/source-store/b1bd296a8794d9555f07838813bcd1f237a76c50932fcbf56bc99b6ec11464fc/PROJECTION_NOTES.md",
+      "sha256": "b1bd296a8794d9555f07838813bcd1f237a76c50932fcbf56bc99b6ec11464fc",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-2242907a96f7f6b7": {
+      "path": "experiments/orthemology-v5-successors/source-store/5a7d3f81132e3cb32ce0cf396c5dff33eb709f0236ca302027cc4e0db7a5a04c/PROJECTION_MAP.json",
+      "sha256": "5a7d3f81132e3cb32ce0cf396c5dff33eb709f0236ca302027cc4e0db7a5a04c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cada03e71c78921e": {
+      "path": "experiments/orthemology-v5-successors/source-store/74079e6b65feac1649b3723bc54a3c12513a8718ffb46e89823dec8de0dda2ea/SOURCE_PACKAGE.json",
+      "sha256": "74079e6b65feac1649b3723bc54a3c12513a8718ffb46e89823dec8de0dda2ea",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ab7cbfd858598805": {
+      "path": "experiments/orthemology-v5-successors/source-store/c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888/FAMILY104_TRANSFER_DECISION.json",
+      "sha256": "c0a95db2f5bd9c766fee73ae5cfe8aee344b7c1ce28af67fbfad21774d6d5888",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6caccc6d9d01e8ac": {
+      "path": "experiments/orthemology-v5-successors/source-store/445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814/FAMILY104_READING_VALIDATION.json",
+      "sha256": "445a436bf38edd8045c92c5633b8c141c116ca1d8dda6a2c420651070083e814",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-828f2dcd942aac4a": {
+      "path": "experiments/orthemology-v5-successors/source-store/2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb/FAMILY104_CURRENT_SCOPE.md",
+      "sha256": "2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-17fa04a96da80e7a": {
+      "path": "experiments/orthemology-v5-successors/source-store/8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a/PRODUCTIVE_COMPLETENESS.lean",
+      "sha256": "8765c137491f2f5e2cd9e0c699987c53fcbb00b9cc9e90b49712ec124e97906a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-fc5e38890c03a0e9": {
+      "path": "experiments/orthemology-v5-successors/source-store/ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3/UPSTREAM_GROUND.lean",
+      "sha256": "ed447b67a6cd54b901384cca59eb94cd339d6a2f6c5cd2dbe3a77803c0b0ddd3",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1c5170dfdfa33cfb": {
+      "path": "experiments/orthemology-v5-successors/source-store/261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea/CONNECTED_UNITY.lean",
+      "sha256": "261ba4fbf10ee9d8baf1e4330bd9e842b23a0ffcbcadf3f3338cc2f47e240eea",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-16ab6738270db556": {
+      "path": "experiments/orthemology-v5-successors/source-store/b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988/INFINITE_FORK.lean",
+      "sha256": "b47fc7376e7ec701edabd721775d45db944d6ee2c312273dadf61559fa897988",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-f0dafac2eb689499": {
+      "path": "experiments/orthemology-v5-successors/source-store/db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6/SIXTH_REVIEWER.lean",
+      "sha256": "db96ef53e43355b052b9305011e5e8c0f3987b7ad12345a46564e0b5c3f94ad6",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-bab9b601a59c599b": {
+      "path": "experiments/orthemology-v5-successors/source-store/e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7/INTEGRATED_CONTINGENCY.lean",
+      "sha256": "e8a34f77ddea0dc2696c16a33fb2f89330958cc17ea2e011dfd269b125b26cd7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-b6b7dd4a0604570d": {
+      "path": "experiments/orthemology-v5-successors/source-store/546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3/KNOWLEDGE_SCOPE.lean",
+      "sha256": "546c9e7d6c71021867105caee9f1a5b86a6a2c63b1d5eeb4bfac1bd59e0ffed3",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-83b7939eb26a4877": {
+      "path": "experiments/orthemology-v5-successors/source-store/980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74/COVERAGE_BOUNDARY.lean",
+      "sha256": "980fd23bf14834dbc34b3b214f8b3a7e6912b4f5020e82a6d6c72c0b499caf74",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ac89688d8928b2b1": {
+      "path": "experiments/orthemology-v5-successors/source-store/44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60/CONCLUSION_PREMISE_STATUS_MAP.json",
+      "sha256": "44e69512498f1873c96caf862bc7c7522c194f92648ef1be73b7760947320d60",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-ae2c79c503668a61": {
+      "path": "experiments/orthemology-v5-successors/source-store/e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a/INTEGRATION_MANIFEST.json",
+      "sha256": "e04f52d913a43b225175be690029f81381679f75fda67e6fe2e1653eab150c5a",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cbcb1f5a7ee40e31": {
+      "path": "experiments/orthemology-v5-successors/source-store/f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d/SOURCE_INDEX.json",
+      "sha256": "f78573c3646e3a47ddbf30bc8e31616cd2b39a4ea1aaece9c3ee4528d51ca17d",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-68dd8adef53a8295": {
+      "path": "experiments/orthemology-v5-successors/source-store/6bbc7bd4410ef82d9492b0bebd5cfdc4f44a63237f1d3c54a22818c290e77f8a/SOURCE_INDEX.md",
+      "sha256": "6bbc7bd4410ef82d9492b0bebd5cfdc4f44a63237f1d3c54a22818c290e77f8a",
+      "read_scope": "Source/evidence index structure and custody/public roles inspected, not complete rereading of indexed bodies."
+    },
+    "t20-source-5123df645395762e": {
+      "path": "experiments/orthemology-v5-successors/source-store/aea9b652a05ae10c269666676cae68d1e9846a78d43ffd2bbd850d773e279f8f/README.md",
+      "sha256": "aea9b652a05ae10c269666676cae68d1e9846a78d43ffd2bbd850d773e279f8f",
+      "read_scope": "Scope and current-disposition paragraphs inspected; no fresh proof replay."
+    },
+    "t20-source-8a18f5c6f22b2350": {
+      "path": "experiments/orthemology-v5-successors/source-store/5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1/SYNTHESIS.md",
+      "sha256": "5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-11a9e937b80bc0c8": {
+      "path": "experiments/orthemology-v5-successors/source-store/a95a85f6a8c429b57b4688d22bb63ad53dfe04d7e1c05f2f68d76d3d42893a40/ELI5_ELI14.md",
+      "sha256": "a95a85f6a8c429b57b4688d22bb63ad53dfe04d7e1c05f2f68d76d3d42893a40",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3ab994ee6eabe8c3": {
+      "path": "experiments/orthemology-v5-successors/source-store/35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7/HISTORICAL_VALIDATION.json",
+      "sha256": "35d2e2c6ca10ddd4d4d0de0017c3abccdc9b9afe63dd8ced805fef6b66ef7ad7",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d4cc82cf15513e0e": {
+      "path": "experiments/orthemology-v5-successors/source-store/48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4/PROJECTION_NOTES.md",
+      "sha256": "48f29f77d16ea3723af95bdd77a92914051f1038e067763fe9ae486b4592b9b4",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-627f43265a7aaedc": {
+      "path": "experiments/orthemology-v5-successors/source-store/1479c927dcd200a5b6b0507e3cd06b7362b53d85be989d0d93f96cf31e4c33f5/PROJECTION_MAP.json",
+      "sha256": "1479c927dcd200a5b6b0507e3cd06b7362b53d85be989d0d93f96cf31e4c33f5",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-886937d60e1fdaa0": {
+      "path": "experiments/orthemology-v5-successors/source-store/22ccf88616c2839bf1d39531049153c48ce151d5b89067a76a3b5bc5a4a7c3bb/SOURCE_PACKAGE.json",
+      "sha256": "22ccf88616c2839bf1d39531049153c48ce151d5b89067a76a3b5bc5a4a7c3bb",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cdb355a4b8745bc9": {
+      "path": "experiments/orthemology-v5-successors/source-store/35562fca2e81a165288f648f05b14d9a8cfd881b357fa0597c10bfd8ebb27098/DEPENDENCY_DAG.json",
+      "sha256": "35562fca2e81a165288f648f05b14d9a8cfd881b357fa0597c10bfd8ebb27098",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-e1b24566a194eb6c": {
+      "path": "experiments/orthemology-v5-successors/source-store/073213786dc73e5dad11ca2b0465e28ae9e93ab337644f31f072233df19b2e6b/EXISTING_FORMAL_MAP.json",
+      "sha256": "073213786dc73e5dad11ca2b0465e28ae9e93ab337644f31f072233df19b2e6b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-5e2211c561bc37d9": {
+      "path": "experiments/orthemology-v5-successors/source-store/c43eeea4ce1b402d67d4c41a77dede0e796838485b7c6a2926e9ab0be96dfbd5/EXISTING_FORMAL_MAP.md",
+      "sha256": "c43eeea4ce1b402d67d4c41a77dede0e796838485b7c6a2926e9ab0be96dfbd5",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cf84a8d53e1ef04d": {
+      "path": "experiments/orthemology-v5-successors/source-store/6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd/PREMISE_REGISTRY.md",
+      "sha256": "6b4ba4e87e46b5a284311d69d82c40df7ab608a48651dabf22003a786510dcbd",
+      "read_scope": "Complete heading/node-role inventory inspected; no claim of complete semantic reading of all 1,417 lines."
+    },
+    "t20-source-5560feb3da3a0495": {
+      "path": "experiments/orthemology-v5-successors/source-store/77f72947f698aa7f0a34d34478bc08801114b4f341d572424c45b1efa1f50ec8/PRE_FORMAL_ISSUES.json",
+      "sha256": "77f72947f698aa7f0a34d34478bc08801114b4f341d572424c45b1efa1f50ec8",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-93002733f1c36e23": {
+      "path": "experiments/orthemology-v5-successors/source-store/74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b/PRE_FORMAL_ISSUES.md",
+      "sha256": "74c8b4b1a47c916e39f1f78ac34d7c54a8019a84008e3ccf7f83962514b9459b",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-99ce5ef545e04e6e": {
+      "path": "experiments/orthemology-v5-successors/source-store/38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4/RECONSTRUCTION.md",
+      "sha256": "38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4",
+      "read_scope": "Selected substantive reading: lines 1–58 (scope, A–C) and 142–170 (readiness, integrity and anchored/visibility interfaces); remaining headings/structure inspected, not a complete rereading."
+    },
+    "t20-source-e4d43bfac2f44a91": {
+      "path": "experiments/orthemology-v5-successors/source-store/7e67f15566c6828231563aa434d9c4050f42f6351300646c224d6f99ad612343/SOURCE_BINDING_CHECK.json",
+      "sha256": "7e67f15566c6828231563aa434d9c4050f42f6351300646c224d6f99ad612343",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d28dac775d9dc4dd": {
+      "path": "experiments/orthemology-v5-successors/source-store/6baec9b031b508a5c4b8f4fa79af6200f3b35fcd1a6b4ad71975c758d247d35e/VALIDATION.json",
+      "sha256": "6baec9b031b508a5c4b8f4fa79af6200f3b35fcd1a6b4ad71975c758d247d35e",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-1afb0926ab2c289b": {
+      "path": "experiments/orthemology-v5-successors/source-store/34acc872e50997b1d9a0cc84cdbec329dc0628593915c04aba324422749970a4/CURRENT_APPRAISAL_OVERLAY.json",
+      "sha256": "34acc872e50997b1d9a0cc84cdbec329dc0628593915c04aba324422749970a4",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-8b77c0d15275cfe8": {
+      "path": "experiments/orthemology-v5-successors/source-store/4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c/SOURCE_LOCATORS.json",
+      "sha256": "4f365005680ede0dbef993054ca64ae01b8f57bbeb7233da86b4c0fe57372d3c",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-980ef6ca1e39601a": {
+      "path": "experiments/orthemology-v5-successors/source-store/8c798c3b3ad28f2307999c2fdad7f43197f0f1ecd766faf637dff4081d700476/verify.py",
+      "sha256": "8c798c3b3ad28f2307999c2fdad7f43197f0f1ecd766faf637dff4081d700476",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-485fd10ae59b742e": {
+      "path": "experiments/orthemology-v5-successors/source-store/b8f9fbef3967b031833f681292e3d60e09b5b12f98372702ef3566820c90ea19/PROJECTION_NOTES.md",
+      "sha256": "b8f9fbef3967b031833f681292e3d60e09b5b12f98372702ef3566820c90ea19",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-cd545781c5ecdd1e": {
+      "path": "experiments/orthemology-v5-successors/source-store/f0b7b1b9979c39bde84512283d38d317e7a68d43f4747bee80276431c4124fc2/README.md",
+      "sha256": "f0b7b1b9979c39bde84512283d38d317e7a68d43f4747bee80276431c4124fc2",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-d13c49c28a7b7673": {
+      "path": "experiments/orthemology-v5-successors/source-store/2553df0040ec627a5a8a094757ef59f969cb87cf3ea6d8a2ad03145e7c893c46/PROJECTION_MAP.json",
+      "sha256": "2553df0040ec627a5a8a094757ef59f969cb87cf3ea6d8a2ad03145e7c893c46",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-6411c861a58609e2": {
+      "path": "experiments/orthemology-v5-successors/source-store/3c9129b99b8c9e24be823417211a7944dcc6c8b9a593948489ac6497e1eff733/SOURCE_PACKAGE.json",
+      "sha256": "3c9129b99b8c9e24be823417211a7944dcc6c8b9a593948489ac6497e1eff733",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-9f8fb71c9a5b6839": {
+      "path": "experiments/orthemology-v5-successors/source-store/992fe4cd09f8f45f441093ed02ca64d619f94d699044bb699eece622481359d1/PRIOR_FORMAL_REUSE.json",
+      "sha256": "992fe4cd09f8f45f441093ed02ca64d619f94d699044bb699eece622481359d1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-92ae7d991b410719": {
+      "path": "experiments/orthemology-v5-successors/source-store/5294984b11900429f942dba675ac74a68d9b3edc67ae777391284c4ff190f2ae/REUSE_AND_NEW_BRIDGES.json",
+      "sha256": "5294984b11900429f942dba675ac74a68d9b3edc67ae777391284c4ff190f2ae",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-3e3163260098d7d9": {
+      "path": "experiments/orthemology-v5-successors/source-store/a5d770b8880481cdc60205131bc0a5c11ee95ca101628de8e1169acd55c6ce42/REUSE_MAP.md",
+      "sha256": "a5d770b8880481cdc60205131bc0a5c11ee95ca101628de8e1169acd55c6ce42",
+      "read_scope": "Selected substantive reading: lines 1–52 and 123–175 (main finding, A–C, veracity, source index, controls and receipt limits); other objective headings structurally inspected."
+    },
+    "t20-source-e9b61e068b2e2bed": {
+      "path": "experiments/orthemology-v5-successors/source-store/816733ded4434e444cb176d9375d27f2324ee5ca594c47ab6a93acc342ea6f09/READ_ONLY_VALIDATION.json",
+      "sha256": "816733ded4434e444cb176d9375d27f2324ee5ca594c47ab6a93acc342ea6f09",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-d5e7f55a97fbb811": {
+      "path": "experiments/orthemology-v5-successors/source-store/cced042c17127037864e6041eff099f5063ef98a4b2bb4558cced57bd756ddb8/README.md",
+      "sha256": "cced042c17127037864e6041eff099f5063ef98a4b2bb4558cced57bd756ddb8",
+      "read_scope": "Complete source statement, explanation and limitations read in this continuation; reported proof/review execution remains inherited, not a fresh replay."
+    },
+    "t20-source-e587afc6f68c3333": {
+      "path": "experiments/orthemology-v5-successors/source-store/bfb15506d146415fc16950303d0095b17cd38f1dabb1958d12bee0aa3fd94311/PROJECTION_MAP.json",
+      "sha256": "bfb15506d146415fc16950303d0095b17cd38f1dabb1958d12bee0aa3fd94311",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-source-edc7e2e96518c6c3": {
+      "path": "experiments/orthemology-v5-successors/source-store/00be19a7990eb0987d93315b4cdf47ea2331173a091f1adac93afcaae5fbc8d1/SOURCE_PACKAGE.json",
+      "sha256": "00be19a7990eb0987d93315b4cdf47ea2331173a091f1adac93afcaae5fbc8d1",
+      "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    }
   },
   "works": [
     {"key": "t20-church-probe","title": "Generic Church probe and an inhabited extensional endpoint","role": "research-note","source_keys": ["t20-source-8cf25050b734cfb6"],"reading_forms": [{"source": "t20-source-8cf25050b734cfb6","relationship": "retained-source-reading-projection"}],"supporting_source_keys": ["t20-source-5766e36edfc614a4","t20-source-4523fa2c0e587f9f","t20-source-a4207c5fcb3bd565","t20-source-a1575caef959118a","t20-source-cce82a6df8d258df","t20-source-1c71ac997c3716a5","t20-source-8fbc4d105b661526","t20-source-e1946be03a1ae860","t20-source-34051d9fd3ca6bd0","t20-source-281c84b8285dd1db","t20-source-55de1794f378036e","t20-source-8a2d70b5993e965f","t20-source-f9ae2c3641df6cb3","t20-source-ab7da5101bf8ed12"],"existing_result_ids": ["T20-CHURCH-RAW-PROBE"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#generic-church-probe-and-an-inhabited-extensional-endpoint","placement": ["Twentieth research","exact formal and interpretative interfaces"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound description. Original T20 source/result/review owners retain their scientific scope; this entry creates no scientific identifier or verdict."},
@@ -1072,7 +2397,530 @@
     {"key": "t18-hase-countercontrols","title": "Eighteenth HasE transport and inhabited-endpoint countercontrols","role": "research-software","source_keys": ["successor-source-62e773ff23d795"],"reading_forms": [{"source": "successor-source-62e773ff23d795","relationship": "preserved-formal-source"}],"supporting_source_keys": ["successor-source-2a2b88b4ccebdc","successor-source-3965d1101b5cdb","successor-source-57f9cfa1cbbdd9","successor-source-648083c207aac4","successor-source-66cafd97183fc6","successor-source-759a0a69610c9f"],"existing_result_ids": ["T18-HASE-U-DOMAIN-CONTROL","T18-HASE-INHABITED-J-CONTROL"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#eighteenth-hase-transport-and-inhabited-endpoint-countercontrols","placement": ["formal and executable interfaces","avenue 8","avenue 9"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound account. The original Eighteenth result/source/evidence owners retain their scientific and execution scope; this is not new scientific registration."},
     {"key": "t18-exact-implementations","title": "Exact hidden-change implementations and recovered-composite qualification","role": "research-software","source_keys": ["successor-source-8e586acbe12708","successor-source-57f9cfa1cbbdd9"],"reading_forms": [{"source": "successor-source-8e586acbe12708","relationship": "retained-source-reading-projection"},{"source": "successor-source-57f9cfa1cbbdd9","relationship": "retained-source-reading-projection"}],"supporting_source_keys": ["successor-source-2a2b88b4ccebdc","successor-source-3965d1101b5cdb","successor-source-648083c207aac4","successor-source-66cafd97183fc6","successor-source-759a0a69610c9f","successor-source-81a5f9376fcb2b"],"existing_result_ids": ["T18-IMPLEMENTATION-QUALIFICATION"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#exact-hidden-change-implementations-and-recovered-composite-qualification","placement": ["formal and executable interfaces","avenue 8","avenue 9"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound account. The original Eighteenth result/source/evidence owners retain their scientific and execution scope; this is not new scientific registration."},
     {"key": "t18-foundational-report","title": "Eighteenth foundational appraisal and the closed noncausal extension","role": "synthesis","source_keys": ["successor-source-2a2b88b4ccebdc"],"reading_forms": [{"source": "successor-source-2a2b88b4ccebdc","relationship": "retained-source-reading-projection"}],"supporting_source_keys": ["successor-source-3965d1101b5cdb"],"existing_result_ids": ["T18-NONCAUSAL-EXTENSION-STOP"],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#eighteenth-foundational-appraisal-and-the-closed-noncausal-extension","placement": ["foundations","source interpretation","avenue 1","avenue 2"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound account. The original Eighteenth result/source/evidence owners retain their scientific and execution scope; this is not new scientific registration."},
-    {"key": "t18-source-validation-guide","title": "Eighteenth source and validation guide","role": "supporting-reference","source_keys": ["successor-source-3965d1101b5cdb"],"reading_forms": [{"source": "successor-source-3965d1101b5cdb","relationship": "retained-source-reading-projection"}],"supporting_source_keys": ["successor-source-2a2b88b4ccebdc"],"existing_result_ids": [],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#eighteenth-source-and-validation-guide","placement": ["foundations","source interpretation","avenue 1","avenue 2"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound account. The original Eighteenth result/source/evidence owners retain their scientific and execution scope; this is not new scientific registration."}
+    {"key": "t18-source-validation-guide","title": "Eighteenth source and validation guide","role": "supporting-reference","source_keys": ["successor-source-3965d1101b5cdb"],"reading_forms": [{"source": "successor-source-3965d1101b5cdb","relationship": "retained-source-reading-projection"}],"supporting_source_keys": ["successor-source-2a2b88b4ccebdc"],"existing_result_ids": [],"catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#eighteenth-source-and-validation-guide","placement": ["foundations","source interpretation","avenue 1","avenue 2"],"review_status": "AUTHOR_CURATED; independent candidate review pending","explanation": "The catalogue owns the source-bound account. The original Eighteenth result/source/evidence owners retain their scientific and execution scope; this is not new scientific registration."},
+    {
+      "key": "t20-original-bearer-bridge",
+      "title": "From an original resource to the same necessary bearer",
+      "role": "research-note",
+      "source_keys": [
+        "t20-source-8077a088c79ee99b",
+        "t20-source-7498954fdd801722"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-8077a088c79ee99b",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-7498954fdd801722",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-23a7774a478c2bf2",
+        "t20-source-0fffd66d3c4fdec5",
+        "t20-source-fc878ccb307ac231",
+        "t20-source-39ad7d19960423d9",
+        "t20-source-88ff9b608a5de235",
+        "t20-source-4d442acdce272386",
+        "t20-source-ec8722655173ac56",
+        "t20-source-68ff074666b713eb",
+        "t20-source-efb524879f020a10",
+        "t20-source-251ab576b650d38b",
+        "t20-source-ca047c537844c95d",
+        "t20-source-870520e72e6239a7",
+        "t20-source-b9616bfa2cc3ee5a",
+        "t20-source-92cdee166b1644ef",
+        "t20-source-4b3bb61a153375ae",
+        "t20-source-56e1da773f9a235e",
+        "t20-source-83e7d602fae13015",
+        "t20-source-102c0a6ef03f8058",
+        "t20-source-091a8c2f5db0d9ac",
+        "t20-source-171cc9dd3bebd05f",
+        "t20-source-13a7fafa9c37cfbc",
+        "t20-source-77f234f1821317d6",
+        "t20-source-974e60a223e60c88",
+        "t20-source-150d23d7e897468d",
+        "t20-source-e5fdc26c6d8f5653",
+        "t20-source-2b00b03c2317527a",
+        "t20-source-fd7f8fc6287e1452",
+        "t20-source-354d569367ee0698",
+        "t20-source-4b2f5ce5e18df3c0",
+        "t20-source-77baf34a978b12c9",
+        "t20-source-2ade98eec3f46214",
+        "t20-source-55f053cf132ec118",
+        "t20-source-2c84b1185787680e",
+        "t20-source-cd0576a9ae8373bb",
+        "t20-source-3da1a9f7f0ea7182",
+        "t20-source-073517ac42e1af75"
+      ],
+      "existing_result_ids": [
+        "T20-TYPED-ORIGINAL-BEARER-ABC"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#from-an-original-resource-to-the-same-necessary-bearer",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-anchored-source-bridge",
+      "title": "A fixed source across a connected productive field",
+      "role": "research-note",
+      "source_keys": [
+        "t20-source-74653c740600a156",
+        "t20-source-d009b02399a9223b"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-74653c740600a156",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-d009b02399a9223b",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-58338a9acfda84de",
+        "t20-source-a2a9a25b6c8456f9",
+        "t20-source-7b568097a59b226b",
+        "t20-source-6e16343a38dc3efc",
+        "t20-source-c712eafdee7b8823",
+        "t20-source-f644d3320f411b3e",
+        "t20-source-dae398ec0b14c4d8",
+        "t20-source-3f6054cb782425d3",
+        "t20-source-ac07a78502a43b6f",
+        "t20-source-bd5d23d6fbb63de5",
+        "t20-source-cbd7cfd2c45bb2e4",
+        "t20-source-2357b350eafff6e9",
+        "t20-source-2a916b0eb079676e",
+        "t20-source-d5b983aa4aa24f98",
+        "t20-source-f70b1b9fe5227b09",
+        "t20-source-04569ca7887c4880",
+        "t20-source-a6fca619e93d707e",
+        "t20-source-70889559e883fcad",
+        "t20-source-fc3d9af1f42141a6",
+        "t20-source-252311ad58f86c5b",
+        "t20-source-083c9fed82ba92a2",
+        "t20-source-b76ce50fdd47388e",
+        "t20-source-255fcb57798f30a0",
+        "t20-source-e7d930091eb64561",
+        "t20-source-b170db6cd0423d8b",
+        "t20-source-9032dc8995365aa1",
+        "t20-source-f2e6b814580f9158",
+        "t20-source-f6995170dcb52a56",
+        "t20-source-3336cf2cec46dba5",
+        "t20-source-a59c0802557c7193",
+        "t20-source-ad97a2e044158378",
+        "t20-source-acfb43973bf15d8c",
+        "t20-source-4a317a48c9c1a35e",
+        "t20-source-4a5b57bde7194631",
+        "t20-source-fe6904b11a0a426c",
+        "t20-source-fb6cd079aa409e1f",
+        "t20-source-14c0f6eb37ac1080",
+        "t20-source-71bae5a7669633df",
+        "t20-source-94400b33f3306854",
+        "t20-source-20e84a29f18f060c",
+        "t20-source-2cff7b6f3d113869",
+        "t20-source-9b40036237cfa0cf",
+        "t20-source-edc32e1b9ba8dbc1",
+        "t20-source-b4f188696c0b31c3",
+        "t20-source-6ebb677bec5220ff",
+        "t20-source-ec23af2a25931d89",
+        "t20-source-1d931a7110cc6738",
+        "t20-source-b0e4e1bf348abc15",
+        "t20-source-c2a6c01e14d3e8e3",
+        "t20-source-2c84b1185787680e",
+        "t20-source-f53d815c6f38c4b8",
+        "t20-source-fe0e06424c0fc1f8",
+        "t20-source-57e13b3d5126f8f4"
+      ],
+      "existing_result_ids": [
+        "T20-ANCHORED-FIELD-SOURCE"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#a-fixed-source-across-a-connected-productive-field",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-veracity-dependencies",
+      "title": "Owned token truth and the separate veracity premises",
+      "role": "research-note",
+      "source_keys": [
+        "t20-source-19d8919ef0646ef5",
+        "t20-source-476c3b141031706c"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-19d8919ef0646ef5",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-476c3b141031706c",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-f2650eddf6c742c2",
+        "t20-source-bf824cc57230a567",
+        "t20-source-4f7d732d0c6b8a94",
+        "t20-source-9a26bd6ba9bae0bb",
+        "t20-source-6267d3b2e866f2c2",
+        "t20-source-33404f2a0bafeddd",
+        "t20-source-c72237f24ed3c9c0",
+        "t20-source-4965a0e67b3f2da2",
+        "t20-source-f169d4e71ebdb2e7",
+        "t20-source-704893a444609802",
+        "t20-source-4b4b8741dfbc6e5f",
+        "t20-source-8e5eb705cee5eaae",
+        "t20-source-aa456f699c6bb9e5",
+        "t20-source-2d7954091fd31cd8",
+        "t20-source-fdb2e0ae899c5c8d",
+        "t20-source-7dbf9a5b6dd428f9",
+        "t20-source-b007023872cd92dd",
+        "t20-source-4df50423cc83b41c",
+        "t20-source-fe7749f459c9b2bd",
+        "t20-source-f1ba8c3fc4f183bf",
+        "t20-source-0c870f5746e442a2",
+        "t20-source-45b67f626e46a6b9",
+        "t20-source-1cf08cda253fdacc",
+        "t20-source-46c0942a4684b184",
+        "t20-source-b4b8e7d423c938bb",
+        "t20-source-f2157383f8e9c754",
+        "t20-source-857cb4942afc37ce",
+        "t20-source-95c7d88abfd5a07d",
+        "t20-source-9b8a96e09408ba77",
+        "t20-source-2882fef0e814de81",
+        "t20-source-0ee47f9b7968363a",
+        "t20-source-aa9349dee406e6a2",
+        "t20-source-df71493aebbf98bb",
+        "t20-source-e5f9eb371039ff58",
+        "t20-source-2c84b1185787680e",
+        "t20-source-c557d9ebf2812a2c",
+        "t20-source-821d9944d5a6982a",
+        "t20-source-5852505ce5ab7be4"
+      ],
+      "existing_result_ids": [
+        "T20-VERACITY-DEPENDENCY-AUDIT"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#owned-token-truth-and-the-separate-veracity-premises",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-same-bearer-joint-model",
+      "title": "Joining the three interfaces on literally the same bearer",
+      "role": "research-note",
+      "source_keys": [
+        "t20-source-36973056a4f72770",
+        "t20-source-aa62440ece7c2f78"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-36973056a4f72770",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-aa62440ece7c2f78",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-b33af05dc3680ac1",
+        "t20-source-650a7c2086ee2eeb",
+        "t20-source-9d64eeb1c0294b83",
+        "t20-source-a712c8d4b5e2f1cf",
+        "t20-source-c813881001d7b073",
+        "t20-source-6846b0482c60af2e",
+        "t20-source-409a5af57c559df6",
+        "t20-source-ca047c537844c95d",
+        "t20-source-68ff074666b713eb",
+        "t20-source-58338a9acfda84de",
+        "t20-source-f2650eddf6c742c2",
+        "t20-source-39ad7d19960423d9",
+        "t20-source-a15b222d2eea1fa7",
+        "t20-source-ce61cf2328e3d320",
+        "t20-source-b69095340e3a8984",
+        "t20-source-21f6a36a7826bb97",
+        "t20-source-1f46777c5e9126c1",
+        "t20-source-ea5e8d2b99d39092",
+        "t20-source-23284931db72e507",
+        "t20-source-c1ca24c0e6a05d1c",
+        "t20-source-20e23c5d74427cff",
+        "t20-source-d430dc2ef1951aca",
+        "t20-source-56164ebeca720ac1",
+        "t20-source-59f1ed146c95eaa2",
+        "t20-source-96463304a2a71e76",
+        "t20-source-87a792bb7e3a5c23",
+        "t20-source-fae0d1088269373b",
+        "t20-source-c72a6bf8bbd99bd6",
+        "t20-source-59541ad643404d80",
+        "t20-source-1ae6f4f0e78a7170",
+        "t20-source-827ff2b3c4805a2c",
+        "t20-source-43e632601c74c09e",
+        "t20-source-a0cb9caa3cf080ea",
+        "t20-source-7743a5ba4a3da6e1",
+        "t20-source-d3ff854d68f869b6",
+        "t20-source-4cbd70eed3ee4d50",
+        "t20-source-e06af7156116bdc4",
+        "t20-source-854bc2eb411dc6ba",
+        "t20-source-4089aab7da6cbfef",
+        "t20-source-ddc7ea721aae8f2c",
+        "t20-source-f7fd0f6c5342b0c5",
+        "t20-source-a6e1378f4ecaf14b",
+        "t20-source-af106b85642c7922",
+        "t20-source-ff0b98f7113c4e09",
+        "t20-source-9e03b5894b78b6c6",
+        "t20-source-e0e5449a4c7a1327",
+        "t20-source-8bfc87a218b01935",
+        "t20-source-b3d9350033e140ce",
+        "t20-source-75e6048cf024e8dc"
+      ],
+      "existing_result_ids": [
+        "T20-JOINT-SAME-BEARER-MODEL"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#joining-the-three-interfaces-on-literally-the-same-bearer",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-copied-trace-observation",
+      "title": "Copied deletion traces and what fresh observations add",
+      "role": "research-note",
+      "source_keys": [
+        "t20-source-2f0623ad64fccafa",
+        "t20-source-e736c184bbb17f74"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-2f0623ad64fccafa",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-e736c184bbb17f74",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-aa89a95cdb4c6e01",
+        "t20-source-6cec0f800eb98dc5",
+        "t20-source-0f52d0a75b19646b",
+        "t20-source-230f923e27c763e5",
+        "t20-source-5d40a7c7e2b59cb2",
+        "t20-source-f623e953adf1a8ce",
+        "t20-source-8b0a011de5c4b39b",
+        "t20-source-4c621c6db1b4956d",
+        "t20-source-7717f82fb5cf2f3b",
+        "t20-source-670da76e8a67963b",
+        "t20-source-2fb8f51684babff5",
+        "t20-source-b829ac9f606f5b33",
+        "t20-source-956b77e34a460c57",
+        "t20-source-b2223a7e36a3ad49",
+        "t20-source-072105ca4d6a8f2e",
+        "t20-source-3be8f06a55cdcd70",
+        "t20-source-7a25eaf6d62e6259",
+        "t20-source-ab32ca10e87b1624",
+        "t20-source-2ba3948d5e75d3c9",
+        "t20-source-1ab3923d8e47b006",
+        "t20-source-323b9dec416035d0",
+        "t20-source-ba9539cd68f273e9",
+        "t20-source-a685c908f4f1a00c",
+        "t20-source-afd74d4cebdd1665",
+        "t20-source-46eb58deaf88281b",
+        "t20-source-f1589515c9f3a977",
+        "t20-source-44f5d67b4ae6ce7f",
+        "t20-source-715a68ea63d29b52",
+        "t20-source-686131a3c6856dfc",
+        "t20-source-7a2bd6dbb524907e",
+        "t20-source-9c6f443d59a6c730",
+        "t20-source-fc6f5d00d74a7a60",
+        "t20-source-6aa63bffd5444699"
+      ],
+      "existing_result_ids": [
+        "T20-TRACE-OBSERVATION-COPYING"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#copied-deletion-traces-and-what-fresh-observations-add",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-external-transfer-assessment",
+      "title": "External theorem relevance is not a completed transfer",
+      "role": "review",
+      "source_keys": [
+        "t20-source-388637eb87eb0b62",
+        "t20-source-828f2dcd942aac4a",
+        "t20-source-32d7a92e718bd8e2"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-388637eb87eb0b62",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-828f2dcd942aac4a",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-source-32d7a92e718bd8e2",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-b961403c6844f884",
+        "t20-source-a12d44cb3c5d92e1",
+        "t20-source-b4c14339590c322a",
+        "t20-source-5621ec340fcede63",
+        "t20-source-2242907a96f7f6b7",
+        "t20-source-cada03e71c78921e",
+        "t20-source-ab7cbfd858598805",
+        "t20-source-6caccc6d9d01e8ac"
+      ],
+      "existing_result_ids": [
+        "T20-PTS-NORMALIZATION-TRANSFER",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#external-theorem-relevance-is-not-a-completed-transfer",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-foundational-synthesis",
+      "title": "The dated foundational audit and its conditional achievements",
+      "role": "synthesis",
+      "source_keys": [
+        "t20-source-8a18f5c6f22b2350"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-8a18f5c6f22b2350",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-17fa04a96da80e7a",
+        "t20-source-fc5e38890c03a0e9",
+        "t20-source-1c5170dfdfa33cfb",
+        "t20-source-16ab6738270db556",
+        "t20-source-f0dafac2eb689499",
+        "t20-source-bab9b601a59c599b",
+        "t20-source-b6b7dd4a0604570d",
+        "t20-source-83b7939eb26a4877",
+        "t20-source-ac89688d8928b2b1",
+        "t20-source-ae2c79c503668a61",
+        "t20-source-cbcb1f5a7ee40e31",
+        "t20-source-68dd8adef53a8295",
+        "t20-source-5123df645395762e",
+        "t20-source-11a9e937b80bc0c8",
+        "t20-source-3ab994ee6eabe8c3",
+        "t20-source-d4cc82cf15513e0e",
+        "t20-source-627f43265a7aaedc",
+        "t20-source-886937d60e1fdaa0"
+      ],
+      "existing_result_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-dated-foundational-audit-and-its-conditional-achievements",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-premise-dependency-map",
+      "title": "Historical premise and dependency reconstruction",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-source-99ce5ef545e04e6e"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-99ce5ef545e04e6e",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-cdb355a4b8745bc9",
+        "t20-source-e1b24566a194eb6c",
+        "t20-source-5e2211c561bc37d9",
+        "t20-source-cf84a8d53e1ef04d",
+        "t20-source-5560feb3da3a0495",
+        "t20-source-93002733f1c36e23",
+        "t20-source-e4d43bfac2f44a91",
+        "t20-source-d28dac775d9dc4dd",
+        "t20-source-1afb0926ab2c289b",
+        "t20-source-8b77c0d15275cfe8",
+        "t20-source-980ef6ca1e39601a",
+        "t20-source-485fd10ae59b742e",
+        "t20-source-cd545781c5ecdd1e",
+        "t20-source-d13c49c28a7b7673",
+        "t20-source-6411c861a58609e2"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#historical-premise-and-dependency-reconstruction",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-prior-formal-reuse",
+      "title": "Prior formal ownership before the new bridges",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-source-3e3163260098d7d9"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-source-3e3163260098d7d9",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-source-9f8fb71c9a5b6839",
+        "t20-source-92ae7d991b410719",
+        "t20-source-e9b61e068b2e2bed",
+        "t20-source-485fd10ae59b742e",
+        "t20-source-d5e7f55a97fbb811",
+        "t20-source-e587afc6f68c3333",
+        "t20-source-edc7e2e96518c6c3"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#prior-formal-ownership-before-the-new-bridges",
+      "placement": [
+        "Twentieth research",
+        "same-bearer and exact transfer interfaces"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    }
   ],
   "relations": [
     {"from": "successor-source-a57f45fd85863f","to": "successor-source-506aea882b2af6","kind": "same-substantive-mathematics-with-declared-authorship-date-and-rendering-changes","basis": "successor-source-e256e50ff30068"},
@@ -1191,7 +3039,7 @@
     }
   ],
   "reader_journey_scope": "Pre-merge sample routes from the six reader pages. Root-navigation replacement, independent comprehension review and complete C03 coverage remain outstanding. Link checks do not certify semantic claims.",
-  "curation_stage": "C03 incremental curation; Twelfth current-text slice and application directory mapped; full corpus incomplete",
+  "curation_stage": "C03 author curation: frozen Twentieth selected component families mapped; later Twentieth reading/context layers and whole-corpus reconciliation remain open.",
   "application_dispositions": [
     {"source": "app-source-agentic-runtime-collective-somnus-transclusion-profile-yaml", "work": "app-collective", "role": "work-source"},
     {"source": "app-source-agentic-runtime-hermes-writeback-adoption-profile-yaml", "work": "app-writeback", "role": "work-source"},

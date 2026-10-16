@@ -2736,6 +2736,73 @@ class TwentiethFormalWorkTests(unittest.TestCase):
 
 
 
+class TwentiethRemainingFamilyTests(unittest.TestCase):
+    """The original finite selection, not catalogue totals, defines this unit.
+
+    These are source/role/route regression checks, not independent scholarly
+    review, theorem replay, or a certificate for the later reader addenda.
+    """
+    GROUP = TwentiethFormalWorkTests.GROUP
+    EXPECTED = {
+        "t20-original-bearer-bridge": ("original-bearer-bridge", "research-note"),
+        "t20-anchored-source-bridge": ("anchored-source-bridge", "research-note"),
+        "t20-veracity-dependencies": ("veracity-boundary", "research-note"),
+        "t20-same-bearer-joint-model": ("joint-foundational-model", "research-note"),
+        "t20-copied-trace-observation": ("math122-observation-controls", "research-note"),
+        "t20-external-transfer-assessment": ("openai-corpus-transfer-synthesis", "review"),
+        "t20-foundational-synthesis": ("foundational-final-synthesis", "synthesis"),
+        "t20-premise-dependency-map": ("foundational-dependency-dag", "supporting-reference"),
+        "t20-prior-formal-reuse": ("foundational-prior-formal-reuse", "supporting-reference"),
+    }
+    setUpClass = classmethod(TwentiethFormalWorkTests.setUpClass.__func__)
+    work = TwentiethFormalWorkTests.work
+    targets = TwentiethFormalWorkTests.targets
+
+    def test_each_remaining_source_family_has_its_substantive_role(self):
+        for key, (component, role) in self.EXPECTED.items():
+            with self.subTest(work=key):
+                work = self.work(key)
+                self.assertEqual(work["role"], role)
+                self.assertNotIn("scientific_status", work)
+                ids = {r["id"] for r in self.sources if r["component"] == component}
+                owned = {r["id"] for r in self.claims.values() if ids.intersection(r.get("source_ids", []))}
+                self.assertEqual(set(work.get("existing_result_ids", [])), owned)
+
+    def test_complete_frozen_selection_is_attached_without_new_paper_per_file(self):
+        keys = set(self.EXPECTED) | set(TwentiethFormalWorkTests.EXPECTED)
+        components = {v[0] for v in self.EXPECTED.values()} | {v[0] for v in TwentiethFormalWorkTests.EXPECTED.values()}
+        self.assertEqual(components, {s["component"] for s in self.sources})
+        attached = set()
+        for key in sorted(keys):
+            work = self.work(key)
+            paths = {self.cross["sources"][s]["path"] for s in work["source_keys"] + work.get("supporting_source_keys", [])}
+            component = (self.EXPECTED.get(key) or TwentiethFormalWorkTests.EXPECTED[key])[0]
+            self.assertTrue({s["public_path"] for s in self.sources if s["component"] == component} <= paths, key)
+            attached.update(paths)
+        self.assertTrue({s["public_path"] for s in self.sources} <= attached)
+        self.assertEqual(set(self.claims), set().union(*(set(self.work(k).get("existing_result_ids", [])) for k in keys)))
+
+    def test_primary_arguments_have_real_direct_section_and_evidence_routes(self):
+        for key in self.EXPECTED:
+            with self.subTest(work=key):
+                work = self.work(key)
+                targets = self.targets(key)
+                self.assertIn((self.GROUP + "/README.md", ""), targets)
+                primary = {self.cross["sources"][s]["path"] for s in work["source_keys"]}
+                self.assertTrue(primary <= {p for p, _ in targets}, key)
+                self.assertTrue(any(p in primary and anchor for p, anchor in targets), "No substantive section: " + key)
+                support = {self.cross["sources"][s]["path"] for s in work.get("supporting_source_keys", [])}
+                self.assertTrue(support.intersection(p for p, _ in targets), "No support/evidence route: " + key)
+
+    def test_each_original_result_retains_its_exact_source_evidence(self):
+        for key in self.EXPECTED:
+            with self.subTest(work=key):
+                work = self.work(key)
+                paths = {self.cross["sources"][s]["path"] for s in work["source_keys"] + work.get("supporting_source_keys", [])}
+                for result_id in work.get("existing_result_ids", []):
+                    self.assertTrue({self.by_id[s]["public_path"] for s in self.claims[result_id]["source_ids"]} <= paths, result_id)
+
+
 class RootNavigationAndMaintenanceTests(unittest.TestCase):
     """Real three-root routes and negative controls, without a corpus rescan.
 

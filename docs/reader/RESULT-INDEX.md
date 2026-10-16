@@ -588,3 +588,23 @@ The current [successor result owner](../provenance/v5-successors/RESULT_STATUS.j
 - `T20-GROUNDED-CONTINUATION-SUPPORT` — [Grounded derivations, retraction and late source-root identification](PAPER-CATALOGUE.md#grounded-derivations-retraction-and-late-source-root-identification).
 
 - `T20-HASE-FURTHER-FAILED-ROUTES` — [Three tested negative routes](PAPER-CATALOGUE.md#after-fixed-witnesses-three-tested-negative-routes), an existing written-method result, not exhaustive noninhabitation.
+
+## Twentieth remaining selected result families
+
+The original [frozen claim owner](../../experiments/orthemology-v5-successors/groups/t20-successor/CLAIM_MAP.json) retains these identifiers, statements and limits; the [current collection guide](../../experiments/orthemology-v5-successors/groups/t20-successor/README.md) distinguishes later appraisal layers. Supporting maps have no additional result credit.
+
+**`T20-TYPED-ORIGINAL-BEARER-ABC`** — Typed original-resource bridge preserving one actual bearer through ABC. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#from-an-original-resource-to-the-same-necessary-bearer).
+
+**`T20-ANCHORED-FIELD-SOURCE`** — Guarded fixed-source coverage and field-relative uniqueness. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#a-fixed-source-across-a-connected-productive-field).
+
+**`T20-VERACITY-DEPENDENCY-AUDIT`** — Exact token-truth and veracity dependencies without conflating D and N. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#owned-token-truth-and-the-separate-veracity-premises).
+
+**`T20-JOINT-SAME-BEARER-MODEL`** — One finite interpretation joins literal ABC, field source and assertion owner. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#joining-the-three-interfaces-on-literally-the-same-bearer).
+
+**`T20-TRACE-OBSERVATION-COPYING`** — Sharp finite copied-trace observation and attribution controls. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#copied-deletion-traces-and-what-fresh-observations-add).
+
+**`T20-PTS-NORMALIZATION-TRANSFER`** — Bounded negative applicability of upstream PTS normalization to exact HasE. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#external-theorem-relevance-is-not-a-completed-transfer).
+
+**`T20-CONTROLLER-COMPLETENESS-TRANSFER`** — No new controller-completeness transfer from ordinary game endpoints. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#external-theorem-relevance-is-not-a-completed-transfer).
+
+**`T20-FOUNDATIONAL-PREMISE-SYNTHESIS`** — Source-bound foundational synthesis with dated premise appraisal. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#the-dated-foundational-audit-and-its-conditional-achievements).
