@@ -218,12 +218,12 @@ def permitted_contributor_navigation(repo, row, body):
 
 
 def permitted_historical_status_pin(repo, row, body):
-    """Admit one exact historical metadata reference, never rewritten science.
+    """Admit two exact historical navigation-body bindings, not new identities.
 
-    The current status index acquired this work order's candidate classification.
-    T20 still owns its original bytes. Resolve that one REUSE record at the
-    existing T20 baseline, using the resolver's already supported historical form.
-    No other record, eligibility, count, source/public hash or status may change.
+    The live status index and contributor guide have authorised reader additions.
+    T20 retains both original bodies at its original baseline, using the existing
+    resolver's historical REUSE form. No source/public hash, length, role, count,
+    eligibility, scientific claim or unrelated record may change.
     """
     if row["path"] != "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json":
         return False
@@ -234,19 +234,27 @@ def permitted_historical_status_pin(repo, row, body):
     try:
         expected = json.loads(original.stdout, object_pairs_hook=unique_object)
         candidate = json.loads(body, object_pairs_hook=unique_object)
-        identity = "94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074"
-        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
-        if len(selected) != 1:
-            return False
-        source = selected[0]
-        if (source.get("disposition") != "REUSE"
-                or source.get("repository_path") != "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml"
-                or source.get("source_bytes") != 5312
-                or source.get("public_bytes") != 5312
-                or source.get("public_sha256") != identity):
-            return False
-        source.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
-                      git_blob="d4ec27e7da404b830f1a6fe687809c1cf2011413")
+        bindings = (
+            ("94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074",
+             "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml", 5312,
+             "d4ec27e7da404b830f1a6fe687809c1cf2011413"),
+            ("5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1",
+             "CONTRIBUTING.md", 3392,
+             "790eb3546a0db6627d3a51df43b1e178f464b067"),
+        )
+        for identity, path, size, blob in bindings:
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE"
+                    or source.get("repository_path") != path
+                    or source.get("source_bytes") != size
+                    or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+                          git_blob=blob)
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False

@@ -620,6 +620,10 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         row = next(r for r in value["objects"] if r["source_sha256"] == self.identity)
         row.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
                    git_blob="d4ec27e7da404b830f1a6fe687809c1cf2011413")
+        contributor = next(r for r in value["objects"] if r["source_sha256"] ==
+                           "5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1")
+        contributor.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+                           git_blob="790eb3546a0db6627d3a51df43b1e178f464b067")
         return value, row
 
     def permitted(self, value):
@@ -652,6 +656,52 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         row["git_blob"] = "0" * 40
         self.assertFalse(self.permitted(value))
 
+
+    def test_actual_manifest_binds_both_original_bodies_not_mutable_roots(self):
+        expected, _ = self.candidate()
+        actual = json.loads((ROOT / self.manifest_path).read_bytes())
+        self.assertTrue(actual == expected, "historical contributor source still follows the mutable root")
+
+    def test_contributor_pin_is_required_and_only_exact_metadata_is_admitted(self):
+        identity = "5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1"
+        value, _ = self.candidate()
+        self.assertTrue(self.permitted(value))
+        for field, replacement in (("repository_revision", "HEAD"),
+                                   ("git_blob", "0" * 40),
+                                   ("repository_path", "README.md"),
+                                   ("public_sha256", "0" * 64),
+                                   ("source_bytes", 7858),
+                                   ("role", "reclassified")):
+            with self.subTest(field=field):
+                changed = deepcopy(value)
+                next(r for r in changed["objects"] if r["source_sha256"] == identity)[field] = replacement
+                self.assertFalse(self.permitted(changed))
+        missing = deepcopy(value)
+        row = next(r for r in missing["objects"] if r["source_sha256"] == identity)
+        del row["repository_revision"]
+        del row["git_blob"]
+        self.assertFalse(self.permitted(missing), "removing historical binding must fail")
+
+    def test_contributor_original_is_byte_identical_and_live_policy_is_preserved(self):
+        identity = "5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1"
+        value, _ = self.candidate()
+        row = next(r for r in value["objects"] if r["source_sha256"] == identity)
+        original = subprocess.check_output(["git", "show", row["repository_revision"] + ":CONTRIBUTING.md"], cwd=ROOT)
+        blob = subprocess.check_output(["git", "rev-parse", row["repository_revision"] + ":CONTRIBUTING.md"], cwd=ROOT).decode().strip()
+        self.assertEqual(blob, row["git_blob"])
+        self.assertEqual(len(original), 3392)
+        self.assertEqual(hashlib.sha256(original).hexdigest(), identity)
+        live = (ROOT / "CONTRIBUTING.md").read_bytes()
+        self.assertTrue(live.startswith(original))
+        self.assertNotEqual(live, original)
+        self.assertTrue(self.permitted(value), "intact historical body and live navigation must coexist")
+
+    def test_arbitrary_additional_historical_pin_is_not_an_admitted_escape(self):
+        value, _ = self.candidate()
+        row = next(r for r in value["objects"] if r["disposition"] == "REUSE" and
+                   "repository_revision" not in r)
+        row["repository_revision"] = "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"
+        self.assertFalse(self.permitted(value))
 
 
 class TwelfthCollectionCoverageTests(unittest.TestCase):
