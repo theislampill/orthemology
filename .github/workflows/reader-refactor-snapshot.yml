@@ -1,0 +1,146 @@
+name: issue35 Twentieth component qualification
+on:
+  push:
+    branches: [refactor/issue-35-research-reader-20261012]
+    paths: [.github/workflows/reader-refactor-snapshot.yml]
+permissions:
+  contents: write
+jobs:
+  qualify:
+    if: github.repository == 'theislampill/orthemology'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11.9'
+      - run: pip install --quiet -r requirements-ci.lock.txt
+      - name: Verify immutable recipe and install only the new failing controls
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = f96ca1069a312a81244625cea733c387e8561538
+          test "$(git diff --name-only HEAD^ HEAD)" = .github/workflows/reader-refactor-snapshot.yml
+          mkdir -p "$RUNNER_TEMP/issue35-t20"
+          python - <<'PY'
+          import base64, hashlib, json, lzma, os, pathlib, subprocess
+          out = pathlib.Path(os.environ['RUNNER_TEMP']) / 'issue35-t20'
+          sha = '2c7ac441e219e09f55fcd3c527f1b9fdc9610611'
+          result = json.loads(subprocess.check_output(['gh', 'api', 'repos/theislampill/orthemology/git/blobs/' + sha]))
+          blob = base64.b64decode(result['content'])
+          if hashlib.sha1(b'blob ' + str(len(blob)).encode() + b'\0' + blob).hexdigest() != sha:
+              raise SystemExit('transport blob identity mismatch')
+          raw = lzma.decompress(base64.b64decode(blob, validate=True))
+          if hashlib.sha256(raw).hexdigest() != 'df5eaa159c3d9ed31296baf7ae2670ea45f7804d509d7c8b812fb7ecbb48abd5':
+              raise SystemExit('recipe identity mismatch')
+          p = json.loads(raw)
+          if p['base'] != 'f96ca1069a312a81244625cea733c387e8561538':
+              raise SystemExit('unexpected source baseline')
+          marker = '\nfrom pathlib import Path\nimport hashlib,json,importlib.util\n'
+          if p['recipe'].count(marker) != 1:
+              raise SystemExit('ambiguous recipe boundary')
+          tests, _, curation = p['recipe'].partition(marker)
+          (out / 'payload.json').write_bytes(raw)
+          (out / 'curation.py').write_text('BASE=' + repr(p['base']) + '\n' + marker + curation)
+          exec(compile(tests, 'new-reader-controls', 'exec'), {})
+          PY
+      - name: Observe the missing work and source routes before implementation
+        run: |
+          set -euo pipefail
+          set +e
+          python -B tests/test_reader_pilot.py TwentiethRemainingFamilyTests > "$RUNNER_TEMP/issue35-t20/red.log" 2>&1
+          code=$?
+          set -e
+          test "$code" = 1
+          grep -q 'Ran 4 tests' "$RUNNER_TEMP/issue35-t20/red.log"
+          grep -q 'FAILED (failures=28)' "$RUNNER_TEMP/issue35-t20/red.log"
+      - name: Apply reviewed curation and require the exact locally tested tree
+        run: |
+          set -euo pipefail
+          python "$RUNNER_TEMP/issue35-t20/curation.py"
+          rm .github/workflows/reader-refactor-snapshot.yml
+          git add -u
+          python -B scripts/generate_current_state.py
+          python -B scripts/make_manifest.py
+          git add docs/current-state.yaml docs/provenance/RELEASE-MANIFEST.sha256
+          python - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          out = pathlib.Path(os.environ['RUNNER_TEMP']) / 'issue35-t20'
+          p = json.loads((out / 'payload.json').read_bytes())
+          actual = set(subprocess.check_output(['git', 'diff', '--cached', '--name-only', p['base']], text=True).splitlines())
+          if actual != set(p['sha256']):
+              raise SystemExit('changed path allowlist mismatch')
+          for rel, expected in p['sha256'].items():
+              if hashlib.sha256(pathlib.Path(rel).read_bytes()).hexdigest() != expected:
+                  raise SystemExit('tested byte mismatch: ' + rel)
+          tree = subprocess.check_output(['git', 'write-tree'], text=True).strip()
+          if tree != p['tree']:
+              raise SystemExit('tested tree mismatch')
+          (out / 'identity.json').write_text(json.dumps({'base': p['base'], 'tree': tree, 'transport_head': os.environ['GITHUB_SHA'], 'scope': p['scope']}, indent=2) + '\n')
+          (out / 'candidate.patch').write_bytes(subprocess.check_output(['git', 'diff', '--cached', '--binary', p['base']]))
+          print('Exact local/native candidate tree:', tree)
+          PY
+      - name: Complete reader and unchanged production projection controls
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/issue35-t20"
+          python -B tests/test_reader_census.py 2>&1 | tee "$out/census.log"
+          python -B -O tests/test_reader_census.py 2>&1 | tee "$out/census-optimized.log"
+          python -B tests/test_reader_pilot.py 2>&1 | tee "$out/reader.log"
+          python -B -O tests/test_reader_pilot.py 2>&1 | tee "$out/reader-optimized.log"
+          python -B scripts/check_reader_pilot.py 2>&1 | tee "$out/reader-check.log"
+          python -B tests/test_t20_v6_projection.py 2>&1 | tee "$out/projection.log"
+          python -B -O tests/test_t20_v6_projection.py 2>&1 | tee "$out/projection-optimized.log"
+          python -B scripts/validate_t20_v6_projection.py 2>&1 | tee "$out/projection-check.log"
+      - name: Preserve existing state, hygiene and reference gates
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/issue35-t20"
+          python -B scripts/generate_current_state.py --check 2>&1 | tee "$out/drift.log"
+          python -B scripts/validate_repo.py 2>&1 | tee "$out/hygiene.log"
+          python -B scripts/validate_current_state.py 2>&1 | tee "$out/state.log"
+          python -B scripts/validate_review_state.py 2>&1 | tee "$out/review-state.log"
+          python -B scripts/validate_internal_references.py 2>&1 | tee "$out/references.log"
+          before=$(git write-tree)
+          python -B scripts/generate_current_state.py
+          python -B scripts/make_manifest.py
+          git add docs/current-state.yaml docs/provenance/RELEASE-MANIFEST.sha256
+          test "$(git write-tree)" = "$before"
+      - name: Export tested public Git objects without moving a branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, hashlib, json, os, pathlib, subprocess
+          out = pathlib.Path(os.environ['RUNNER_TEMP']) / 'issue35-t20'
+          p = json.loads((out / 'payload.json').read_bytes())
+          if subprocess.check_output(['git', 'write-tree'], text=True).strip() != p['tree']:
+              raise SystemExit('candidate changed after testing')
+          def api(endpoint, body):
+              return json.loads(subprocess.check_output(['gh', 'api', '--method', 'POST', 'repos/theislampill/orthemology' + endpoint, '--input', '-'], input=json.dumps(body).encode()))
+          elements = []
+          for rel in sorted(p['sha256']):
+              data = pathlib.Path(rel).read_bytes()
+              sha = hashlib.sha1(b'blob ' + str(len(data)).encode() + b'\0' + data).hexdigest()
+              result = api('/git/blobs', {'encoding': 'base64', 'content': base64.b64encode(data).decode()})
+              if result['sha'] != sha:
+                  raise SystemExit('uploaded blob differs: ' + rel)
+              elements.append({'path': rel, 'mode': '100644', 'type': 'blob', 'sha': sha})
+          tree = api('/git/trees', {'base_tree': p['base_tree'], 'tree': elements})['sha']
+          if tree != p['tree']:
+              raise SystemExit('uploaded tree differs')
+          (out / 'uploaded-tree.json').write_text(json.dumps({'tree': tree, 'files': sorted(p['sha256']), 'remote_ref_moved': False}, indent=2) + '\n')
+          (out / 'SHA256SUMS').write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest() + '  ' + f.name + '\n' for f in sorted(out.iterdir()) if f.is_file() and f.name != 'SHA256SUMS'))
+          print('Tested tree exported; remote branch unchanged:', tree)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: issue35-twentieth-components
+          path: ${{ runner.temp }}/issue35-t20/
+          retention-days: 14
