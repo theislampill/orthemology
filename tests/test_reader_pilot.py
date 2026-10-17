@@ -3694,6 +3694,133 @@ class MathMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
                 self.assertFalse(covered(altered))
 
 
+class MathematicalCompanionRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
+    """Exposition preserves original proof owners and documentary QA limits."""
+    PART = "math-companion"
+    KEY = "t20-mathematical-companion"
+    PRIMARY_ALIASES = ["t20/reports/MATHEMATICAL_COMPANION.md"]
+    QA_ALIAS = "t20/reports/MATHEMATICAL_COMPANION_QA.json"
+    NARRATIVE_COMPANIONS = {PRIMARY_ALIASES[0]: QA_ALIAS}
+    EXPECTED = {KEY: ("supporting-reference", {PART}, PRIMARY_ALIASES)}
+    CATALOGUE_ANCHOR = "the-twentieth-mathematical-companion-and-its-original-result-owners"
+    VERIFICATION_HEADING = "checking-the-mathematical-companion-and-its-document-qa"
+    METHOD_ANCHOR = "finding-the-source-evidence"
+    OWNER_KEYS = {
+        "t20-original-bearer-bridge", "t20-anchored-source-bridge",
+        "t20-veracity-dependencies", "t20-same-bearer-joint-model",
+        "t20-foundational-synthesis", "t20-prior-formal-reuse",
+        "t20-church-probe", "t20-scalar-fusion", "t20-cnd-scope",
+        "t20-modal-union", "t20-ground-extension", "t20-grounded-support",
+        "t20-copied-trace-observation", "t20-external-transfer-assessment",
+        "t20-cooperation-context",
+    }
+
+    def errors(self, cross, text):
+        errors = MethodologyRoutesMixin.errors(self, cross, text)
+        primary = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
+        supports = {r["public_path"] for r in self.selected
+                    if r["part"] == self.PART and r["owner_archive_path"] not in self.PRIMARY_ALIASES}
+        for work in cross["works"]:
+            paths = {cross["sources"][s]["path"] for s in work["source_keys"]}
+            paths |= {cross["sources"][f["source"]]["path"] for f in work.get("reading_forms", [])}
+            if paths & supports:
+                errors.append("companion-support-promoted")
+            if work["key"] != self.KEY and primary in paths:
+                errors.append("companion-duplicate-primary")
+        return errors
+
+    def test_support_or_a_copied_primary_cannot_become_a_second_work(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        work = next(w for w in self.cross["works"] if w["key"] == self.KEY)
+        selected_paths = {r["public_path"] for r in self.selected if r["part"] == self.PART}
+        for key in work["source_keys"] + work["supporting_source_keys"]:
+            if self.cross["sources"][key]["path"] not in selected_paths:
+                continue
+            with self.subTest(source=key):
+                altered = deepcopy(self.cross)
+                duplicate = deepcopy(work)
+                duplicate.update(key="fixture-companion-duplicate", source_keys=[key],
+                                 supporting_source_keys=[],
+                                 reading_forms=[{"source": key, "relationship": "retained-source-reading-projection"}])
+                altered["works"].append(duplicate)
+                error = "companion-duplicate-primary" if key in work["source_keys"] else "companion-support-promoted"
+                self.assertIn(error, self.errors(altered, self.text))
+
+    def test_exposition_and_original_owner_routes_reject_plausible_retargeting(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        works = {w["key"]: w for w in self.cross["works"]}
+        source = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
+        sections = {
+            "part-1-what-the-computer-checked", "part-2-foundational-audit-synthesis",
+            "part-3-further-mathematical-results", "appraisal-distinction-on-7-october-2026",
+            "exact-hase-scalar-fusion-reduction", "modal-union-consequence-completeness",
+            "original-ground-extension-and-preservation",
+            "a-productive-nonduplication-route-to-essential-nonreceipt",
+            "grounded-support-retraction-and-later-root-aliasing",
+            "the-deletion-observation-control",
+            "external-results-considered-without-false-transfer-credit",
+        }
+        required = {(source, anchor) for anchor in sections}
+        required |= {(page, works[k]["catalogue_entry"].split("#", 1)[1])
+                     for k in self.OWNER_KEYS}
+        required |= {(r["public_path"], "") for r in self.selected
+                     if r["part"] == self.PART and r["owner_archive_path"] not in self.PRIMARY_ALIASES}
+        reached = lambda body: self.section_targets(body, page, self.CATALOGUE_ANCHOR)
+        self.assertTrue(required <= reached(self.text), required - reached(self.text))
+        for path, anchor in required:
+            with self.subTest(path=path, anchor=anchor):
+                href = "#" + anchor if path == page else "../../" + path + ("#" + anchor if anchor else "")
+                changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
+                self.assertNotEqual(changed, self.text)
+                self.assertFalse(required <= reached(changed))
+
+    def test_document_qa_and_derivation_do_not_admit_an_unavailable_edition(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        records = {r["owner_archive_path"]: r for r in self.selected if r["part"] == self.PART}
+        qa = json.loads((ROOT / records[self.QA_ALIAS]["public_path"]).read_text())
+        eq = json.loads((ROOT / records["t20/reports/MATHEMATICAL_COMPANION_EQUATIONS.json"]["public_path"]).read_text())
+        derivation = json.loads((ROOT / records["t20/reports/MATHEMATICAL_COMPANION_DERIVATION.json"]["public_path"]).read_text())
+        primary = records[self.PRIMARY_ALIASES[0]]
+        self.assertEqual(primary["projection"], "EXACT")
+        for alias, row in records.items():
+            if alias != self.PRIMARY_ALIASES[0]:
+                self.assertEqual(row["projection"], "DERIVED")
+                self.assertNotEqual(row["original_sha256"], row["public_sha256"])
+        self.assertFalse(qa["scientific_replay"])
+        self.assertTrue(qa["Microsoft_Word_application_UI_render"].startswith("NOT_RUN"))
+        self.assertTrue(all(not p["image_body_included"] for p in qa["pages"]))
+        self.assertEqual(qa["source"]["sha256"], primary["public_sha256"])
+        self.assertEqual(eq["source"], qa["source"])
+        self.assertEqual(derivation["output"], qa["source"])
+        self.assertEqual(len(eq["equations"]), qa["native_editable_OMML_equations"])
+        self.assertTrue(any(r.get("body_included") is False for r in derivation["inputs"]))
+        work = next(w for w in self.cross["works"] if w["key"] == self.KEY)
+        self.assertEqual(len(work["reading_forms"]), 1)
+        self.assertTrue(all(self.cross["sources"][f["source"]]["path"].endswith(".md")
+                            for f in work["reading_forms"]))
+        # A recorded final-document identity is not an admitted public edition.
+        altered = deepcopy(self.cross)
+        altered["sources"]["fixture-unavailable-word-edition"] = {
+            "path": qa["final_document"]["path"], "sha256": qa["final_document"]["sha256"],
+            "read_scope": "Isolated unavailable-edition promotion control."}
+        candidate = next(w for w in altered["works"] if w["key"] == self.KEY)
+        candidate["reading_forms"].append({"source": "fixture-unavailable-word-edition",
+                                           "relationship": "retained-source-reading-projection"})
+        self.assertIn("methodology-reading-forms", self.errors(altered, self.text))
+        page = "docs/reader/VERIFICATION-GUIDE.md"
+        body = (ROOT / page).read_text()
+        required = {(r["public_path"], "") for a, r in records.items() if a not in self.PRIMARY_ALIASES}
+        required.add((primary["public_path"], "appraisal-distinction-on-7-october-2026"))
+        reached = lambda text: self.section_targets(text, page, self.VERIFICATION_HEADING)
+        self.assertTrue(required <= reached(body), required - reached(body))
+        for path, anchor in required:
+            href = "../../" + path + ("#" + anchor if anchor else "")
+            changed = body.replace("(" + href + ")", "(PAPER-CATALOGUE.md)")
+            self.assertNotEqual(changed, body)
+            self.assertFalse(required <= reached(changed))
+
+
 class LateResultLedgerSupportTests(unittest.TestCase):
     """A successor documentary case supports the already-owned typed control."""
     GROUP = TwentiethFormalWorkTests.GROUP
