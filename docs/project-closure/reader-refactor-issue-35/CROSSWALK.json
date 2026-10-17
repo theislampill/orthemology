@@ -2505,6 +2505,31 @@
       "path": "experiments/orthemology-v5-successors/source-store/3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274/VALIDATION.json",
       "sha256": "3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274",
       "read_scope": "Scoped original-author validation summary and its review, omitted-log, public-replay and zero-new-credit limits read. Its historical PASS is not this refactor's fresh validation or independent philosophical acceptance."
+    },
+    "t20-context-5717ee6ed62fd3f7": {
+      "path": "experiments/orthemology-v5-successors/source-store/866e0d85f3524013ce7e5e6df1907fe184139259028d6e9b4ded91379893f0fa/DRIVE_CORPUS.md",
+      "sha256": "866e0d85f3524013ce7e5e6df1907fe184139259028d6e9b4ded91379893f0fa",
+      "read_scope": "Complete narrative read: six supplied objects, inherited and later reading chronology, all nine source-use areas, voices, dated appraisals and reproducibility limits. Methodological synthesis only; no source-book reading, acquisition or replay."
+    },
+    "t20-context-54e2547b81a9945f": {
+      "path": "experiments/orthemology-v5-successors/source-store/6d020b39ac31311ec388678c79dd342ea6b5ee6144e1565e37b16a8d66d11761/DRIVE_CORPUS.json",
+      "sha256": "6d020b39ac31311ec388678c79dd342ea6b5ee6144e1565e37b16a8d66d11761",
+      "read_scope": "Six-object identities and reading histories, counting rules, overlap families, all nine result/question links, dated appraisal and access limits examined against the narrative; no new reading or mathematical ownership inferred."
+    },
+    "t20-context-5146d047e43c95a1": {
+      "path": "experiments/orthemology-v5-successors/source-store/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b/T17_SIX_SOURCE_COVERAGE.json",
+      "sha256": "4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b",
+      "read_scope": "Inherited coverage structure, all six object identities and page/range totals, visual scope, cover-gap repair and explicit limits inspected. Exact public coverage member, not a fresh reading or source-body authentication."
+    },
+    "t20-context-5990988da3647d59": {
+      "path": "experiments/orthemology-v5-successors/source-store/4e41aaebbcd30e448cad2b3ac006511c219386e3a0b93d92c416f2ffef04c382/SOURCE_BINDINGS.json",
+      "sha256": "4e41aaebbcd30e448cad2b3ac006511c219386e3a0b93d92c416f2ffef04c382",
+      "read_scope": "All 32 evidence-record bindings, six original supplied-object identities, two original local source-byte checks and coverage-member/internal-record distinction inspected; originals and selected projections retain different roles."
+    },
+    "t20-context-38e8f101248fdf31": {
+      "path": "experiments/orthemology-v5-successors/source-store/3cfc7b197a1c39b4f2c0b67ac3922e8875027b930a59c443fac22a9987e6a1b4/VERIFICATION.json",
+      "sha256": "3cfc7b197a1c39b4f2c0b67ac3922e8875027b930a59c443fac22a9987e6a1b4",
+      "read_scope": "Original 106-check receipt, check categories, artifact identities and publication/scope limits inspected. Attributed original validation, with no public author-verifier replay or new scientific execution."
     }
   },
   "works": [
@@ -3455,6 +3480,35 @@
       ],
       "review_status": "AUTHOR_CURATED; independent candidate review pending",
       "explanation": "One retrospective methodological reference with two narrative components and four supporting JSON projections. It maps original reading/formal relationships without acquiring result ownership or new reading/proof credit. The catalogue owns the synopsis; original result and dated assessment owners retain their scope."
+    },
+    {
+      "key": "t20-drive-corpus-methodology",
+      "title": "Six supplied Drive inputs, inherited reading and T20 use",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-context-5717ee6ed62fd3f7"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-5717ee6ed62fd3f7",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-54e2547b81a9945f",
+        "t20-context-5146d047e43c95a1",
+        "t20-context-5990988da3647d59",
+        "t20-context-38e8f101248fdf31",
+        "t20-context-50e3ae6b35c1b914"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#six-supplied-drive-inputs-inherited-reading-and-t20-use",
+      "placement": [
+        "Later Twentieth methodology",
+        "Inherited source reading, source use and verification scope"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "One methodological reference joins five projections about six supplied inputs, inherited T17 reading and subsequent T20 utilisation. Four JSON supports do not become new works; result/question labels confer no theorem ownership. The catalogue owns this synopsis while original reading, mathematical and dated assessment owners retain their credit."
     }
   ],
   "relations": [
@@ -3574,7 +3628,7 @@
     }
   ],
   "reader_journey_scope": "Pre-merge sample routes from the six reader pages. Root-navigation replacement, independent comprehension review and complete C03 coverage remain outstanding. Link checks do not certify semantic claims.",
-  "curation_stage": "C03 author curation: frozen Twentieth components, the later cooperation/emergence/activity context and the six-source Arabic methodology family mapped. Other later reading/methodology families and whole-corpus reconciliation remain open.",
+  "curation_stage": "C03 author curation: frozen Twentieth components, later cooperation/emergence/activity context, and Arabic and Drive methodological-core families mapped. Other later reading/methodology families and whole-corpus reconciliation remain open.",
   "application_dispositions": [
     {"source": "app-source-agentic-runtime-collective-somnus-transclusion-profile-yaml", "work": "app-collective", "role": "work-source"},
     {"source": "app-source-agentic-runtime-hermes-writeback-adoption-profile-yaml", "work": "app-writeback", "role": "work-source"},

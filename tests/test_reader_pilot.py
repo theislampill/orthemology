@@ -3337,22 +3337,13 @@ class LateTwentiethContextRoutesTests(unittest.TestCase):
                 self.assertTrue(all(not self.cross["sources"][s]["path"].endswith(".docx") for s in w["source_keys"]))
 
 
-class ArabicMethodologyRoutesTests(unittest.TestCase):
-    """The six-source method audit stays one reference, not new proof credit.
+class MethodologyRoutesMixin:
+    """Original selection, native reader routes and support/credit boundaries.
 
-    Original context selection determines the population independently of the
-    reader output. These controls exercise real reader links and source roles;
-    they do not certify the source's philosophical or historical judgements.
+    Family classes supply their exact aliases and verification section. This
+    reuses the Arabic controls without inferring scholarly truth from prose.
     """
     GROUP = TwentiethFormalWorkTests.GROUP
-    KEY = "t20-arabic-reading-methodology"
-    PRIMARY_ALIASES = [
-        "t20/methodology/arabic/ARABIC_READING_METHOD.md",
-        "t20/methodology/arabic/CROSS_STREAM_CASES.md",
-    ]
-    EXPECTED = {
-        KEY: ("supporting-reference", {"arabic"}, PRIMARY_ALIASES),
-    }
     setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
 
     def errors(self, cross, text):
@@ -3365,12 +3356,14 @@ class ArabicMethodologyRoutesTests(unittest.TestCase):
         primaries = {self.aliases[a]["public_path"] for a in self.PRIMARY_ALIASES}
         forms = {cross["sources"][f["source"]]["path"]
                  for f in work.get("reading_forms", [])}
+        if {cross["sources"][s]["path"] for s in work["source_keys"]} != primaries:
+            errors.append("methodology-primary-components")
         if forms != primaries:
             errors.append("methodology-reading-forms")
         attached = {cross["sources"][s]["path"]: cross["sources"][s]
                     for s in work["source_keys"] + work.get("supporting_source_keys", [])}
         for row in self.selected:
-            if row["part"] == "arabic" and row["public_path"] in attached:
+            if row["part"] == self.PART and row["public_path"] in attached:
                 if attached[row["public_path"]]["sha256"] != row["public_sha256"]:
                     errors.append("methodology-source-identity:" + row["owner_archive_path"])
         return errors
@@ -3396,7 +3389,7 @@ class ArabicMethodologyRoutesTests(unittest.TestCase):
     def test_each_support_component_and_its_public_identity_are_required(self):
         self.assertEqual(self.errors(self.cross, self.text), [])
         for row in self.selected:
-            if row["part"] != "arabic" or row["owner_archive_path"] in self.PRIMARY_ALIASES:
+            if row["part"] != self.PART or row["owner_archive_path"] in self.PRIMARY_ALIASES:
                 continue
             with self.subTest(alias=row["owner_archive_path"]):
                 altered = deepcopy(self.cross)
@@ -3405,6 +3398,8 @@ class ArabicMethodologyRoutesTests(unittest.TestCase):
                            if altered["sources"][s]["path"] == row["public_path"])
                 work["supporting_source_keys"].remove(key)
                 self.assertIn("context-coverage:" + self.KEY, self.errors(altered, self.text))
+                work["source_keys"].append(key)
+                self.assertIn("methodology-primary-components", self.errors(altered, self.text))
                 altered = deepcopy(self.cross)
                 self.assertNotEqual(altered["sources"][key]["sha256"], "0" * 64)
                 altered["sources"][key]["sha256"] = "0" * 64
@@ -3431,28 +3426,77 @@ class ArabicMethodologyRoutesTests(unittest.TestCase):
         self.assertEqual(self.errors(self.cross, self.text), [])
         page = "docs/reader/VERIFICATION-GUIDE.md"
         text = (ROOT / page).read_text()
-        heading = "checking-what-a-source-reading-receipt-establishes"
+        heading = self.VERIFICATION_HEADING
         required = {
-            (self.aliases[self.PRIMARY_ALIASES[0]]["public_path"], "reading-stages"),
-            ("docs/reader/PAPER-CATALOGUE.md", "arabic-reading-methodology-and-source-formal-feedback"),
+            (self.aliases[self.PRIMARY_ALIASES[0]]["public_path"], self.METHOD_ANCHOR),
+            ("docs/reader/PAPER-CATALOGUE.md", self.CATALOGUE_ANCHOR),
             (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", ""),
         }
 
         def reached(body):
-            idx = self.mod.markdown_index(body)
-            found = next((h for h in idx["headings"] if h[0] == heading), None)
-            if found is None:
-                return set()
-            _, level, start = found
-            end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
-            return {t for line, href in idx["links"] if start <= line < end
-                    if (t := self.mod.resolve_reader_link(ROOT, page, href)) is not None}
+            return self.section_targets(body, page, heading)
 
         self.assertTrue(required <= reached(text))
         path = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
-        changed = text.replace("../../" + path + "#reading-stages", "PAPER-CATALOGUE.md")
+        changed = text.replace("../../" + path + "#" + self.METHOD_ANCHOR, "PAPER-CATALOGUE.md")
         self.assertNotEqual(changed, text)
         self.assertFalse(required <= reached(changed))
+
+
+    def section_targets(self, text, page, heading):
+        idx = self.mod.markdown_index(text)
+        found = next((h for h in idx["headings"] if h[0] == heading), None)
+        if found is None:
+            return set()
+        _, level, start = found
+        end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+        return {t for line, href in idx["links"] if start <= line < end
+                if (t := self.mod.resolve_reader_link(ROOT, page, href)) is not None}
+
+
+class ArabicMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
+    """The six-source Arabic audit stays one reference, not new proof credit."""
+    PART = "arabic"
+    KEY = "t20-arabic-reading-methodology"
+    PRIMARY_ALIASES = [
+        "t20/methodology/arabic/ARABIC_READING_METHOD.md",
+        "t20/methodology/arabic/CROSS_STREAM_CASES.md",
+    ]
+    EXPECTED = {KEY: ("supporting-reference", {PART}, PRIMARY_ALIASES)}
+    CATALOGUE_ANCHOR = "arabic-reading-methodology-and-source-formal-feedback"
+    VERIFICATION_HEADING = "checking-what-a-source-reading-receipt-establishes"
+    METHOD_ANCHOR = "reading-stages"
+
+
+class DriveMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
+    """Five audit projections connect inherited reading to existing owners."""
+    PART = "drive"
+    KEY = "t20-drive-corpus-methodology"
+    PRIMARY_ALIASES = ["t20/methodology/drive/DRIVE_CORPUS.md"]
+    EXPECTED = {KEY: ("supporting-reference", {PART}, PRIMARY_ALIASES)}
+    CATALOGUE_ANCHOR = "six-supplied-drive-inputs-inherited-reading-and-t20-use"
+    VERIFICATION_HEADING = "checking-the-six-input-drive-corpus-audit"
+    METHOD_ANCHOR = "what-was-actually-read-and-revisited"
+
+    def test_catalogue_exposes_support_and_existing_reading_result_owners(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        works = {w["key"]: w for w in self.cross["works"]}
+        peers = ["t17-foundational-source-guide", "t20-original-bearer-bridge",
+                 "t20-anchored-source-bridge", "t20-veracity-dependencies",
+                 "t20-copied-trace-observation", "t20-foundational-synthesis",
+                 "t20-cooperation-context"]
+        required = {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in peers}
+        required |= {(r["public_path"], "") for r in self.selected
+                     if r["part"] == self.PART and r["owner_archive_path"] not in self.PRIMARY_ALIASES}
+        reached = lambda text: self.section_targets(text, page, self.CATALOGUE_ANCHOR)
+        self.assertTrue(required <= reached(self.text))
+        for path, anchor in required:
+            with self.subTest(path=path, anchor=anchor):
+                href = "#" + anchor if path == page else "../../" + path
+                changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
+                self.assertNotEqual(changed, self.text)
+                self.assertFalse(required <= reached(changed))
 
 
 if __name__ == "__main__":
