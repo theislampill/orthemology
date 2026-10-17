@@ -3337,5 +3337,123 @@ class LateTwentiethContextRoutesTests(unittest.TestCase):
                 self.assertTrue(all(not self.cross["sources"][s]["path"].endswith(".docx") for s in w["source_keys"]))
 
 
+class ArabicMethodologyRoutesTests(unittest.TestCase):
+    """The six-source method audit stays one reference, not new proof credit.
+
+    Original context selection determines the population independently of the
+    reader output. These controls exercise real reader links and source roles;
+    they do not certify the source's philosophical or historical judgements.
+    """
+    GROUP = TwentiethFormalWorkTests.GROUP
+    KEY = "t20-arabic-reading-methodology"
+    PRIMARY_ALIASES = [
+        "t20/methodology/arabic/ARABIC_READING_METHOD.md",
+        "t20/methodology/arabic/CROSS_STREAM_CASES.md",
+    ]
+    EXPECTED = {
+        KEY: ("supporting-reference", {"arabic"}, PRIMARY_ALIASES),
+    }
+    setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
+
+    def errors(self, cross, text):
+        errors = LateTwentiethContextRoutesTests.errors(self, cross, text)
+        work = next((w for w in cross["works"] if w["key"] == self.KEY), None)
+        if work is None:
+            return errors
+        if work.get("existing_result_ids") != []:
+            errors.append("methodology-result-credit")
+        primaries = {self.aliases[a]["public_path"] for a in self.PRIMARY_ALIASES}
+        forms = {cross["sources"][f["source"]]["path"]
+                 for f in work.get("reading_forms", [])}
+        if forms != primaries:
+            errors.append("methodology-reading-forms")
+        attached = {cross["sources"][s]["path"]: cross["sources"][s]
+                    for s in work["source_keys"] + work.get("supporting_source_keys", [])}
+        for row in self.selected:
+            if row["part"] == "arabic" and row["public_path"] in attached:
+                if attached[row["public_path"]]["sha256"] != row["public_sha256"]:
+                    errors.append("methodology-source-identity:" + row["owner_archive_path"])
+        return errors
+
+    def test_complete_methodology_family_has_native_primary_and_support_routes(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+
+    def test_missing_reference_or_promotion_to_a_new_result_is_rejected(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        altered = deepcopy(self.cross)
+        altered["works"] = [w for w in altered["works"] if w["key"] != self.KEY]
+        self.assertIn("missing-work:" + self.KEY, self.errors(altered, self.text))
+        for field, value, error in [
+                ("role", "research-note", "role:" + self.KEY),
+                ("existing_result_ids", ["T20-CHURCH-RAW-PROBE"], "methodology-result-credit")]:
+            with self.subTest(field=field):
+                altered = deepcopy(self.cross)
+                work = next(w for w in altered["works"] if w["key"] == self.KEY)
+                self.assertNotEqual(work[field], value)
+                work[field] = value
+                self.assertIn(error, self.errors(altered, self.text))
+
+    def test_each_support_component_and_its_public_identity_are_required(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for row in self.selected:
+            if row["part"] != "arabic" or row["owner_archive_path"] in self.PRIMARY_ALIASES:
+                continue
+            with self.subTest(alias=row["owner_archive_path"]):
+                altered = deepcopy(self.cross)
+                work = next(w for w in altered["works"] if w["key"] == self.KEY)
+                key = next(s for s in work["supporting_source_keys"]
+                           if altered["sources"][s]["path"] == row["public_path"])
+                work["supporting_source_keys"].remove(key)
+                self.assertIn("context-coverage:" + self.KEY, self.errors(altered, self.text))
+                altered = deepcopy(self.cross)
+                self.assertNotEqual(altered["sources"][key]["sha256"], "0" * 64)
+                altered["sources"][key]["sha256"] = "0" * 64
+                self.assertIn("methodology-source-identity:" + row["owner_archive_path"],
+                              self.errors(altered, self.text))
+
+    def test_existing_json_cannot_replace_the_narrative_reading_route(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for alias in self.PRIMARY_ALIASES:
+            with self.subTest(alias=alias):
+                path = self.aliases[alias]["public_path"]
+                wrong = self.aliases[alias.removesuffix(".md") + ".json"]["public_path"]
+                changed = self.text.replace("../../" + path, "../../" + wrong)
+                self.assertNotEqual(changed, self.text)
+                self.assertIn("source-route:" + alias, self.errors(self.cross, changed))
+                altered = deepcopy(self.cross)
+                work = next(w for w in altered["works"] if w["key"] == self.KEY)
+                source_key = next(s for s in work["supporting_source_keys"]
+                                  if altered["sources"][s]["path"] == wrong)
+                work["reading_forms"][0]["source"] = source_key
+                self.assertIn("methodology-reading-forms", self.errors(altered, self.text))
+
+    def test_verification_route_reaches_the_method_and_original_context_owner(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        page = "docs/reader/VERIFICATION-GUIDE.md"
+        text = (ROOT / page).read_text()
+        heading = "checking-what-a-source-reading-receipt-establishes"
+        required = {
+            (self.aliases[self.PRIMARY_ALIASES[0]]["public_path"], "reading-stages"),
+            ("docs/reader/PAPER-CATALOGUE.md", "arabic-reading-methodology-and-source-formal-feedback"),
+            (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", ""),
+        }
+
+        def reached(body):
+            idx = self.mod.markdown_index(body)
+            found = next((h for h in idx["headings"] if h[0] == heading), None)
+            if found is None:
+                return set()
+            _, level, start = found
+            end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+            return {t for line, href in idx["links"] if start <= line < end
+                    if (t := self.mod.resolve_reader_link(ROOT, page, href)) is not None}
+
+        self.assertTrue(required <= reached(text))
+        path = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
+        changed = text.replace("../../" + path + "#reading-stages", "PAPER-CATALOGUE.md")
+        self.assertNotEqual(changed, text)
+        self.assertFalse(required <= reached(changed))
+
+
 if __name__ == "__main__":
     unittest.main()

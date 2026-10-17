@@ -2475,6 +2475,36 @@
       "path": "experiments/orthemology-v5-successors/source-store/ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc/MANIFEST.json",
       "sha256": "ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc",
       "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-6ff2339b77e15c43": {
+      "path": "experiments/orthemology-v5-successors/source-store/1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219/ARABIC_READING_METHOD.md",
+      "sha256": "1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219",
+      "read_scope": "Complete 167-line methodological narrative read: five reading categories, selected-body timing, all twelve premise topics, repetition controls and the dated 14:34 appraisal. No new primary Arabic reading, authentication or proof replay."
+    },
+    "t20-context-9062271bfd50c48f": {
+      "path": "experiments/orthemology-v5-successors/source-store/f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04/ARABIC_READING_METHOD.json",
+      "sha256": "f7171879244b4660b547bcb75bb3b1c5007c570cc4403050636452744535ff04",
+      "read_scope": "Supporting schema, stage/phase and topic structure, selected context examples, reading-index identity and no-new-reading/dated-assessment fields inspected. Not a fresh receipt for the bound primary bodies."
+    },
+    "t20-context-e9ffb40592fd57b8": {
+      "path": "experiments/orthemology-v5-successors/source-store/182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8/CROSS_STREAM_CASES.md",
+      "sha256": "182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8",
+      "read_scope": "Complete 141-line narrative read, including all eleven source/formal cases and the handoff rule. Documented design, contextual return, retrospective alignment and unimplemented transfer retain distinct credit; no fresh formal replay."
+    },
+    "t20-context-25313d1f7aa2581e": {
+      "path": "experiments/orthemology-v5-successors/source-store/a9bbeb51d33e7e60c82a8228582502e6e40aabc559f95b77fdac3e9826d98597/CROSS_STREAM_CASES.json",
+      "sha256": "a9bbeb51d33e7e60c82a8228582502e6e40aabc559f95b77fdac3e9826d98597",
+      "read_scope": "Supporting case structure, chronology classes, reading-index identity, original proof-credit and result-ledger join rules inspected. Not an independent certification of declarations or historical research chronology."
+    },
+    "t20-context-b86036261725cd58": {
+      "path": "experiments/orthemology-v5-successors/source-store/c42bc9ed720bc810df050b38592d980a265e312098ba0356c77a8bea51daf062/SOURCE_BINDINGS.json",
+      "sha256": "c42bc9ed720bc810df050b38592d980a265e312098ba0356c77a8bea51daf062",
+      "read_scope": "Structure of the 93 original-record bindings, separate projection identities and availability/replay boundaries inspected. Custody identity does not select an original body; no claim to have newly read every bound input."
+    },
+    "t20-context-4e1edcf17b602dd8": {
+      "path": "experiments/orthemology-v5-successors/source-store/3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274/VALIDATION.json",
+      "sha256": "3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274",
+      "read_scope": "Scoped original-author validation summary and its review, omitted-log, public-replay and zero-new-credit limits read. Its historical PASS is not this refactor's fresh validation or independent philosophical acceptance."
     }
   },
   "works": [
@@ -3390,6 +3420,41 @@
       ],
       "review_status": "AUTHOR_CURATED; independent candidate review pending",
       "explanation": "The catalogue owns this bounded synopsis. The original result ledger and dated context history own statements and their scientific standing; inherited reviews are not C05 review of this refactor."
+    },
+    {
+      "key": "t20-arabic-reading-methodology",
+      "title": "Arabic reading methodology and source/formal feedback",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-context-6ff2339b77e15c43",
+        "t20-context-e9ffb40592fd57b8"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-6ff2339b77e15c43",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-context-e9ffb40592fd57b8",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-9062271bfd50c48f",
+        "t20-context-25313d1f7aa2581e",
+        "t20-context-b86036261725cd58",
+        "t20-context-4e1edcf17b602dd8",
+        "t20-context-50e3ae6b35c1b914",
+        "t20-context-71c9fe92c94a1873"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#arabic-reading-methodology-and-source-formal-feedback",
+      "placement": [
+        "Later Twentieth methodology",
+        "Source reading, premise formulation and scoped verification"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "One retrospective methodological reference with two narrative components and four supporting JSON projections. It maps original reading/formal relationships without acquiring result ownership or new reading/proof credit. The catalogue owns the synopsis; original result and dated assessment owners retain their scope."
     }
   ],
   "relations": [
@@ -3509,7 +3574,7 @@
     }
   ],
   "reader_journey_scope": "Pre-merge sample routes from the six reader pages. Root-navigation replacement, independent comprehension review and complete C03 coverage remain outstanding. Link checks do not certify semantic claims.",
-  "curation_stage": "C03 author curation: frozen Twentieth selected component families mapped; later Twentieth reading/context layers and whole-corpus reconciliation remain open.",
+  "curation_stage": "C03 author curation: frozen Twentieth components, the later cooperation/emergence/activity context and the six-source Arabic methodology family mapped. Other later reading/methodology families and whole-corpus reconciliation remain open.",
   "application_dispositions": [
     {"source": "app-source-agentic-runtime-collective-somnus-transclusion-profile-yaml", "work": "app-collective", "role": "work-source"},
     {"source": "app-source-agentic-runtime-hermes-writeback-adoption-profile-yaml", "work": "app-writeback", "role": "work-source"},
