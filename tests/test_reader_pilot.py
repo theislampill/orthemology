@@ -3694,5 +3694,200 @@ class MathMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
                 self.assertFalse(covered(altered))
 
 
+class LateResultLedgerSupportTests(unittest.TestCase):
+    """A successor documentary case supports the already-owned typed control."""
+    GROUP = TwentiethFormalWorkTests.GROUP
+    KEY = "t20-emergence-type-control"
+    RESULT_ID = "T20-EMERGENCE-TYPE-CONTROL"
+    PART = "result-ledger-v2"
+    PREFIX = "t20/methodology/result-ledger/"
+    NOTE_ALIAS = PREFIX + "RESULT_EVIDENCE_SUCCESSOR_NOTE_v2.md"
+    LEDGER_ALIAS = PREFIX + "RESULT_EVIDENCE_LEDGER_v2.json"
+    ORIGINAL_ALIAS = PREFIX + "RESULT_EVIDENCE_LEDGER.json"
+    EXPECTED = {KEY: ("research-note", {"ontology", PART},
+                     LateTwentiethContextRoutesTests.EXPECTED[KEY][2])}
+    CATALOGUE_HEADING = "late-evidence-handoff-for-the-typed-emergence-control"
+    VERIFICATION_HEADING = "checking-the-late-result-evidence-handoff"
+    section_targets = MethodologyRoutesMixin.section_targets
+
+    @classmethod
+    def setUpClass(cls):
+        LateTwentiethContextRoutesTests.setUpClass.__func__(cls)
+        owners = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json").read_text())
+        def original(path):
+            return json.loads(subprocess.check_output(
+                ["git", "show", owners["baseline"]["commit"] + ":" + path], cwd=ROOT))
+        cls.original_ledger = original(cls.aliases[cls.ORIGINAL_ALIAS]["public_path"])
+        cls.successor = original(cls.aliases[cls.LEDGER_ALIAS]["public_path"])
+        cls.bindings = original(cls.aliases[cls.PREFIX + "SOURCE_BINDINGS_v2.json"]["public_path"])
+        native = original("docs/provenance/v5-successors/RESULT_STATUS.json")
+        cls.native_status = next(r for r in native["statuses"] if r["id"] == cls.RESULT_ID)
+
+    def errors(self, cross, text):
+        errors = LateTwentiethContextRoutesTests.errors(self, cross, text)
+        work = next((w for w in cross["works"] if w["key"] == self.KEY), None)
+        if work is None:
+            return errors
+        primaries = {self.aliases[a]["public_path"] for a in self.EXPECTED[self.KEY][2]}
+        paths = lambda keys: {cross["sources"][s]["path"] for s in keys}
+        if paths(work["source_keys"]) != primaries:
+            errors.append("late-control-primary-components")
+        if paths(f["source"] for f in work.get("reading_forms", [])) != primaries or any(
+                f["relationship"] != "retained-source-reading-projection" for f in work["reading_forms"]):
+            errors.append("late-control-reading-forms")
+        result_owners = [w["key"] for w in cross["works"]
+                         if self.RESULT_ID in w.get("existing_result_ids", [])]
+        if work["existing_result_ids"] != [self.RESULT_ID] or result_owners != [self.KEY]:
+            errors.append("late-control-result-credit")
+        selected = [r for r in self.selected if r["part"] == self.PART]
+        support = paths(work.get("supporting_source_keys", []))
+        if not {r["public_path"] for r in selected} <= support:
+            errors.append("late-support-coverage")
+        for row in selected:
+            for key in work.get("supporting_source_keys", []):
+                source = cross["sources"][key]
+                if source["path"] == row["public_path"] and source["sha256"] != row["public_sha256"]:
+                    errors.append("late-support-identity:" + row["owner_archive_path"])
+        late_paths = {r["public_path"] for r in selected}
+        for candidate in cross["works"]:
+            if late_paths & paths(candidate["source_keys"] +
+                                  [f["source"] for f in candidate.get("reading_forms", [])]):
+                errors.append("late-support-promoted-to-work")
+        return errors
+
+    def test_complete_successor_family_supports_the_existing_control(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        selected = [r for r in self.selected if r["part"] == self.PART]
+        self.assertEqual(len(selected), 4)
+        self.assertEqual({r["selection_layer"] for r in selected}, {"methodology-successors"})
+        for field, value, error in [
+                ("role", "supporting-reference", "role:" + self.KEY),
+                ("existing_result_ids", [], "late-control-result-credit")]:
+            altered = deepcopy(self.cross)
+            next(w for w in altered["works"] if w["key"] == self.KEY)[field] = value
+            self.assertIn(error, self.errors(altered, self.text))
+
+    def test_each_support_identity_and_nonprimary_role_are_required(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for row in [r for r in self.selected if r["part"] == self.PART]:
+            with self.subTest(alias=row["owner_archive_path"]):
+                key = next(k for k,v in self.cross["sources"].items() if v["path"] == row["public_path"])
+                altered = deepcopy(self.cross)
+                work = next(w for w in altered["works"] if w["key"] == self.KEY)
+                work["supporting_source_keys"].remove(key)
+                self.assertIn("late-support-coverage", self.errors(altered, self.text))
+                altered = deepcopy(self.cross)
+                altered["sources"][key]["sha256"] = "0" * 64
+                self.assertIn("late-support-identity:" + row["owner_archive_path"], self.errors(altered, self.text))
+                for field in ["source_keys", "reading_forms"]:
+                    altered = deepcopy(self.cross)
+                    work = next(w for w in altered["works"] if w["key"] == self.KEY)
+                    work[field].append(key if field == "source_keys" else {
+                        "source": key, "relationship": "retained-source-reading-projection"})
+                    self.assertIn("late-support-promoted-to-work", self.errors(altered, self.text))
+                altered = deepcopy(self.cross)
+                duplicate = deepcopy(next(w for w in altered["works"] if w["key"] == self.KEY))
+                duplicate.update({"key": "fixture-inflated-successor", "title": "Fixture duplicated documentary support",
+                                  "role": "supporting-reference", "source_keys": [key], "reading_forms": [],
+                                  "supporting_source_keys": [], "existing_result_ids": []})
+                altered["works"].append(duplicate)
+                self.assertIn("late-support-promoted-to-work", self.errors(altered, self.text))
+
+    def test_frozen_rows_and_captured_receiving_absence_keep_their_owners(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        old = self.original_ledger["results"]
+        self.assertEqual(len(old), 15)
+        self.assertEqual(self.successor["results"][:15], old)
+        self.assertEqual(len(self.successor["results"]), 16)
+        late = self.successor["results"][-1]
+        self.assertEqual(late["result_id"], self.RESULT_ID)
+        self.assertEqual(late["registration_state"], "PROPOSED_OWNER_NATIVE_ADMISSION_PENDING")
+        self.assertEqual(self.successor["counting_boundary"]["t20_native_result_owners_at_capture"], 15)
+        self.assertEqual(self.successor["counting_boundary"]["late_proposed_owners"], 1)
+        captured = late["fresh_and_inherited"]["receiving_native_status"]
+        self.assertEqual(captured["registration"], "NOT_REGISTERED_AT_CAPTURE")
+        self.assertIsNone(captured["independent_evidence_count"])
+        self.assertEqual(self.native_status["fresh_evidence"], "NOT_RUN")
+        self.assertEqual(self.native_status["independent_evidence_count"], 0)
+        self.assertIn(self.RESULT_ID, self.claims)
+        case = self.successor["late_cross_stream_case"]
+        self.assertEqual(case["case_id"], "OTC-X01")
+        self.assertTrue(case["new_primary_reading"] and case["new_kernel_replay"])
+        self.assertFalse(case["new_primary_reading_by_this_ledger_assembler"])
+        self.assertFalse(case["new_kernel_replay_by_this_ledger_assembler"])
+        works = {w["key"]: w for w in self.cross["works"]}
+        for result in old:
+            result_id = result["result_id"]
+            self.assertIn(result_id, works[ResultLedgerMethodologyRoutesTests.OWNER_WORKS[result_id]]["existing_result_ids"])
+        # Documentary aliases preserve nineteen included paths, not 23 bodies.
+        inputs = self.bindings["late_input_bindings"]
+        included = [r["included_projection"] for r in inputs if "included_projection" in r]
+        omitted = [r for r in inputs if r.get("body_included") is False]
+        self.assertEqual((len(inputs), len(included), len({r["owner_archive_path"] for r in included}), len(omitted)),
+                         (23, 21, 19, 2))
+        for row in included:
+            source = self.aliases[row["owner_archive_path"]]
+            self.assertEqual((row["sha256"], row["bytes"]), (source["public_sha256"], source["public_bytes"]))
+
+    def required_catalogue_targets(self):
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        note = self.aliases[self.NOTE_ALIAS]["public_path"]
+        required = {(note, a) for a in ["what-changed", "new-source-credit-and-its-limit", "evidence-and-receiving-boundary"]}
+        required |= {(r["public_path"], "") for r in self.selected if r["part"] == self.PART and r["owner_archive_path"] != self.NOTE_ALIAS}
+        works = {w["key"]: w for w in self.cross["works"]}
+        peers = [self.KEY, "t20-result-method-handoff", "t20-arabic-reading-methodology",
+                 "t20-divine-action-context", "t20-cooperation-context"]
+        peers += [ResultLedgerMethodologyRoutesTests.OWNER_WORKS[result_id]
+                  for result_id in self.successor["late_application_scope_overlay"]["existing_result_ids"]]
+        required |= {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in peers}
+        required |= {(self.GROUP + "/CONTEXT_SOURCE_INDEX.json", ""),
+                     (self.GROUP + "/LATE_RESULT_MAP.json", ""),
+                     ("docs/provenance/v5-successors/RESULT_STATUS.json", "")}
+        for alias in ["t20/ontology-type-control/ACT_PRODUCT_CONTEXT.json",
+                      "t20/ontology-type-control/SOURCE_BINDINGS.json",
+                      "t20/ontology-type-control/EXECUTION_RECEIPT.json",
+                      "t20/ontology-type-control/review/EXECUTION_RECEIPT.json",
+                      "t20/ontology-type-control/review/SOURCE_BINDINGS.json",
+                      "t20/ontology-type-control/review/REVIEW.json"]:
+            required.add((self.aliases[alias]["public_path"], ""))
+        return required
+
+    def test_scoped_catalogue_exposes_the_delta_case_overlay_and_status_owners(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        required = self.required_catalogue_targets()
+        reached = lambda text: self.section_targets(text, page, self.CATALOGUE_HEADING)
+        self.assertTrue(required <= reached(self.text))
+        for path, anchor in required:
+            with self.subTest(path=path, anchor=anchor):
+                href = ("#" + anchor if path == page else
+                        "../provenance/v5-successors/RESULT_STATUS.json" if path.startswith("docs/provenance/") else
+                        "../../" + path + ("#" + anchor if anchor else ""))
+                changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
+                self.assertNotEqual(changed, self.text)
+                self.assertFalse(required <= reached(changed))
+
+    def test_verification_keeps_historical_pending_and_present_ownership_separate(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        page = "docs/reader/VERIFICATION-GUIDE.md"
+        text = (ROOT / page).read_text()
+        required = {(self.aliases[self.NOTE_ALIAS]["public_path"], "evidence-and-receiving-boundary"),
+                    (self.aliases[self.LEDGER_ALIAS]["public_path"], ""),
+                    (self.aliases[self.ORIGINAL_ALIAS]["public_path"], ""),
+                    ("docs/reader/PAPER-CATALOGUE.md", self.CATALOGUE_HEADING),
+                    (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", ""),
+                    (self.GROUP + "/LATE_RESULT_MAP.json", ""),
+                    ("docs/provenance/v5-successors/RESULT_STATUS.json", "")}
+        reached = lambda body: self.section_targets(body, page, self.VERIFICATION_HEADING)
+        self.assertTrue(required <= reached(text))
+        for path, anchor in required:
+            href = ("PAPER-CATALOGUE.md#" + anchor if path == "docs/reader/PAPER-CATALOGUE.md" else
+                    "../provenance/v5-successors/RESULT_STATUS.json" if path.startswith("docs/provenance/") else
+                    "../../" + path + ("#" + anchor if anchor else ""))
+            changed = text.replace("(" + href + ")", "(PAPER-CATALOGUE.md)")
+            self.assertNotEqual(changed, text)
+            self.assertFalse(required <= reached(changed))
+
+
 if __name__ == "__main__":
     unittest.main()
