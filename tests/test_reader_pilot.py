@@ -7,10 +7,12 @@ The real reader and generated-publication paths still exercise their actual
 production contracts; the repository reference gate is unchanged.
 """
 from copy import deepcopy
+import difflib
 import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import posixpath
 import subprocess
 import tempfile
 import unittest
@@ -3344,6 +3346,7 @@ class MethodologyRoutesMixin:
     reuses the Arabic controls without inferring scholarly truth from prose.
     """
     GROUP = TwentiethFormalWorkTests.GROUP
+    ADDITIONAL_READING_ALIASES = ()
     setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
 
     def errors(self, cross, text):
@@ -3358,7 +3361,9 @@ class MethodologyRoutesMixin:
                  for f in work.get("reading_forms", [])}
         if {cross["sources"][s]["path"] for s in work["source_keys"]} != primaries:
             errors.append("methodology-primary-components")
-        if forms != primaries:
+        expected_forms = primaries | {self.aliases[a]["public_path"]
+                                      for a in self.ADDITIONAL_READING_ALIASES}
+        if forms != expected_forms:
             errors.append("methodology-reading-forms")
         attached = {cross["sources"][s]["path"]: cross["sources"][s]
                     for s in work["source_keys"] + work.get("supporting_source_keys", [])}
@@ -3831,6 +3836,17 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
     READBACK_TEXT_ALIAS = "t20/reports/REPORT_FINAL_SOURCE_READBACK.md"
     REPORT_SOURCE_KEY = "t20-context-5e119dcd4fa30ec7"
     READBACK_SOURCE_KEY = "t20-context-efd1da7e8edf7f31"
+    V2_ALIAS = "t20/reports/REPORT_v2.md"
+    V2_QA_ALIAS = "t20/reports/REPORT_v2_QA_MANIFEST.json"
+    V2_READBACK_TEXT_ALIAS = "t20/reports/REPORT_GUIDE_V2_READBACK.md"
+    V2_READBACK_ALIAS = "t20/reports/REPORT_GUIDE_V2_READBACK.json"
+    ADDITIONAL_READING_ALIASES = (V2_ALIAS,)
+    SUCCESSOR_ALIASES = (V2_ALIAS, V2_QA_ALIAS, V2_READBACK_TEXT_ALIAS, V2_READBACK_ALIAS)
+    ORIGINAL_SUPPORT_KEYS = ("t20-context-187307ed2144d821", READBACK_SOURCE_KEY,
+                             "t20-context-47f0fbeaf04dfc44", "t20-context-50e3ae6b35c1b914")
+    SUCCESSOR_RELATION = "expanded-reading-edition-preserves-dated-assessment"
+    V2_CATALOGUE_HEADING = "the-expanded-report-v2-and-its-separately-owned-additions"
+    V2_VERIFICATION_HEADING = "checking-report-v2-and-shared-successor-source-readback"
     NARRATIVE_COMPANIONS = {PRIMARY_ALIASES[0]: QA_ALIAS}
     EXPECTED = {KEY: ("synthesis", {PART}, PRIMARY_ALIASES)}
     CATALOGUE_ANCHOR = "the-twentieth-final-report-and-its-dated-research-assessment"
@@ -3857,6 +3873,11 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
                 ["git", "show", owners["baseline"]["commit"] + ":" + path], cwd=ROOT))
         cls.qa = original(cls.QA_ALIAS)
         cls.readback = original(cls.READBACK_ALIAS)
+        cls.v2_qa = original(cls.V2_QA_ALIAS)
+        cls.v2_readback = original(cls.V2_READBACK_ALIAS)
+
+    def source_key(self, alias):
+        return "t20-context-" + hashlib.sha256(self.aliases[alias]["public_path"].encode()).hexdigest()[:16]
 
     def errors(self, cross, text):
         errors = MethodologyRoutesMixin.errors(self, cross, text)
@@ -3865,11 +3886,31 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
             return errors
         family = {r["public_path"] for r in self.selected if r["part"] == self.PART}
         primary = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
-        supports = family - {primary}
+        successors = {self.aliases[a]["public_path"] for a in self.SUCCESSOR_ALIASES}
+        edition_paths = {primary, self.aliases[self.V2_ALIAS]["public_path"]}
+        supports = (family | successors) - edition_paths
         attached = {cross["sources"][s]["path"]
                     for s in work["source_keys"] + work.get("supporting_source_keys", [])}
-        if not attached <= family | {self.GROUP + "/CONTEXT_SOURCE_INDEX.json"}:
+        if not attached <= family | successors | {self.GROUP + "/CONTEXT_SOURCE_INDEX.json"}:
             errors.append("report-family-boundary")
+        expected_support = list(self.ORIGINAL_SUPPORT_KEYS) + [self.source_key(a) for a in self.SUCCESSOR_ALIASES]
+        if work.get("supporting_source_keys") != expected_support:
+            errors.append("report-ordered-support-preservation")
+        expected_forms = [{"source": k, "relationship": "retained-source-reading-projection"}
+                          for k in (self.REPORT_SOURCE_KEY, self.source_key(self.V2_ALIAS))]
+        if work.get("reading_forms") != expected_forms:
+            errors.append("report-ordered-reading-forms")
+        for alias in self.SUCCESSOR_ALIASES:
+            row = self.aliases[alias]
+            bound = cross["sources"].get(self.source_key(alias))
+            if (bound is None or bound.get("path") != row["public_path"]
+                    or bound.get("sha256") != row["public_sha256"] or not bound.get("read_scope")):
+                errors.append("report-successor-identity:" + alias)
+        relations = [r for r in cross["relations"] if r.get("from") == self.REPORT_SOURCE_KEY
+                     and r.get("to") == self.source_key(self.V2_ALIAS)]
+        if relations != [{"from": self.REPORT_SOURCE_KEY, "to": self.source_key(self.V2_ALIAS),
+                          "kind": self.SUCCESSOR_RELATION, "basis": self.source_key(self.V2_READBACK_ALIAS)}]:
+            errors.append("report-successor-relation")
         if (work["source_keys"] != [self.REPORT_SOURCE_KEY]
                 or self.READBACK_SOURCE_KEY not in work.get("supporting_source_keys", [])):
             errors.append("report-existing-binding-reuse")
@@ -3882,7 +3923,7 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
             paths |= {cross["sources"][f["source"]]["path"] for f in candidate.get("reading_forms", [])}
             if paths & supports:
                 errors.append("report-support-promoted")
-            if candidate["key"] != self.KEY and primary in paths:
+            if candidate["key"] != self.KEY and edition_paths & paths:
                 errors.append("report-duplicate-primary")
         return errors
 
@@ -3923,7 +3964,7 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
                 altered["works"].append(duplicate)
                 error = "report-duplicate-primary" if key in work["source_keys"] else "report-support-promoted"
                 self.assertIn(error, self.errors(altered, self.text))
-        later = next(r for r in self.selected if r["owner_archive_path"] == "t20/reports/REPORT_v2.md")
+        later = next(r for r in self.selected if r["owner_archive_path"] == "t20/reading/GUIDE_v2.md")
         self.assertNotEqual(later["part"], self.PART)
         altered = deepcopy(self.cross)
         altered["sources"]["fixture-later-report"] = {
@@ -4046,6 +4087,307 @@ class FinalReportRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
             changed = body.replace("(" + href + ")", "(PAPER-CATALOGUE.md)")
             self.assertNotEqual(changed, body)
             self.assertFalse(required <= reached(changed))
+
+    def test_expanded_report_is_one_work_with_exact_ordered_editions_and_support(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        # Other authorised families may grow without changing this report's
+        # identity: both reading editions belong to this same unique work.
+        for alias in self.PRIMARY_ALIASES + list(self.ADDITIONAL_READING_ALIASES):
+            path = self.aliases[alias]["public_path"]
+            owners = [w["key"] for w in self.cross["works"]
+                      if path in {self.cross["sources"][k]["path"] for k in
+                                  w["source_keys"] + [f["source"] for f in w.get("reading_forms", [])]}]
+            self.assertEqual(owners, [self.KEY], alias)
+        expected = [(258, self.V2_ALIAS, 53358), (262, self.V2_QA_ALIAS, 10194),
+                    (260, self.V2_READBACK_TEXT_ALIAS, 3925), (261, self.V2_READBACK_ALIAS, 17333)]
+        for index, alias, size in expected:
+            self.assertEqual((self.selected[index]["owner_archive_path"], self.selected[index]["public_bytes"]),
+                             (alias, size))
+            row = self.aliases[alias]
+            body = (ROOT / row["public_path"]).read_bytes()
+            self.assertEqual((len(body), hashlib.sha256(body).hexdigest()), (size, row["public_sha256"]))
+            keys = [k for k, v in self.cross["sources"].items() if v["path"] == row["public_path"]]
+            self.assertEqual(keys, [self.source_key(alias)])
+
+    def test_successor_identity_relation_credit_and_old_support_reject_mutation(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for alias in self.SUCCESSOR_ALIASES:
+            for field, value in [("path", self.aliases[self.QA_ALIAS]["public_path"]),
+                                 ("sha256", "0" * 64), ("read_scope", "")]:
+                with self.subTest(alias=alias, field=field):
+                    altered = deepcopy(self.cross)
+                    altered["sources"][self.source_key(alias)][field] = value
+                    self.assertIn("report-successor-identity:" + alias, self.errors(altered, self.text))
+        for mutation in ("remove", "kind", "basis"):
+            altered = deepcopy(self.cross)
+            relation = next(r for r in altered["relations"] if r.get("kind") == self.SUCCESSOR_RELATION)
+            if mutation == "remove":
+                altered["relations"].remove(relation)
+            else:
+                relation[mutation] = "unqualified-successor" if mutation == "kind" else self.READBACK_SOURCE_KEY
+            self.assertIn("report-successor-relation", self.errors(altered, self.text))
+        for rid in ("T20-EMERGENCE-TYPE-CONTROL", "T20-FIXTURE-INVENTED-REPORT-RESULT"):
+            altered = deepcopy(self.cross)
+            next(w for w in altered["works"] if w["key"] == self.KEY)["existing_result_ids"] = [rid]
+            self.assertIn("methodology-result-credit", self.errors(altered, self.text))
+        for key in self.ORIGINAL_SUPPORT_KEYS + tuple(self.source_key(a) for a in self.SUCCESSOR_ALIASES):
+            altered = deepcopy(self.cross)
+            next(w for w in altered["works"] if w["key"] == self.KEY)["supporting_source_keys"].remove(key)
+            self.assertIn("report-ordered-support-preservation", self.errors(altered, self.text))
+
+    def test_either_report_edition_cannot_become_another_work_or_documentary_primary(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        work = next(w for w in self.cross["works"] if w["key"] == self.KEY)
+        for alias in self.PRIMARY_ALIASES + list(self.SUCCESSOR_ALIASES):
+            key = self.REPORT_SOURCE_KEY if alias in self.PRIMARY_ALIASES else self.source_key(alias)
+            for field in ("source_keys", "reading_forms"):
+                altered = deepcopy(self.cross)
+                duplicate = deepcopy(work)
+                duplicate.update(key="fixture-v2-credit", source_keys=[], reading_forms=[], supporting_source_keys=[])
+                duplicate[field] = [key] if field == "source_keys" else [
+                    {"source": key, "relationship": "retained-source-reading-projection"}]
+                altered["works"].append(duplicate)
+                error = "report-duplicate-primary" if alias in self.PRIMARY_ALIASES + [self.V2_ALIAS] else "report-support-promoted"
+                self.assertIn(error, self.errors(altered, self.text))
+        for alias in (self.QA_ALIAS, self.V2_QA_ALIAS, self.V2_READBACK_TEXT_ALIAS, self.V2_READBACK_ALIAS):
+            altered = deepcopy(self.cross)
+            candidate = next(w for w in altered["works"] if w["key"] == self.KEY)
+            key = next(k for k, v in altered["sources"].items() if v["path"] == self.aliases[alias]["public_path"])
+            candidate["reading_forms"][1]["source"] = key
+            self.assertIn("report-ordered-reading-forms", self.errors(altered, self.text))
+
+    def report_preservation_errors(self, original, revised):
+        old, new = original.splitlines(True), revised.splitlines(True)
+        operations = difflib.SequenceMatcher(None, old, new, autojunk=False).get_opcodes()
+        changed = [op for op in operations if op[0] != "equal"]
+        expected = [("replace", 10, 11, 10, 11), ("insert", 79, 79, 79, 93),
+                    ("insert", 190, 190, 204, 240)]
+        preserved = sum(sum(map(len, old[i:j])) for op, i, j, _, _ in operations if op == "equal")
+        errors = []
+        if changed != expected or preserved != 41018:
+            errors.append("report-v2-byte-preservation")
+        heading = b"## Current philosophical assessment\n"
+        def assessment(body):
+            start = body.index(heading)
+            end = body.find(b"\n## ", start + len(heading))
+            return body[start:] if end < 0 else body[start:end]
+        if assessment(original) != assessment(revised):
+            errors.append("report-v2-philosophical-assessment")
+        return errors
+
+    def test_actual_report_bytes_establish_the_precise_successor_delta(self):
+        original = (ROOT / self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]).read_bytes()
+        revised = (ROOT / self.aliases[self.V2_ALIAS]["public_path"]).read_bytes()
+        self.assertEqual(self.report_preservation_errors(original, revised), [])
+        self.assertIn("report-v2-byte-preservation", self.report_preservation_errors(
+            original, revised.replace(b"The sources' affirmative", b"The sources' unsupported", 1)))
+        self.assertIn("report-v2-philosophical-assessment", self.report_preservation_errors(
+            original, revised.replace(b"The sources' affirmative", b"The sources' unsupported", 1)))
+        record = self.v2_readback["preservation"][0]
+        for label, alias in (("baseline", self.PRIMARY_ALIASES[0]), ("successor", self.V2_ALIAS)):
+            row = self.aliases[alias]
+            self.assertEqual(record[label]["included_projection"], {
+                "owner_archive_path": alias, "sha256": row["public_sha256"], "bytes": row["public_bytes"]})
+        self.assertEqual(record["allowed_replacement_baseline_line"], 11)
+        self.assertEqual(record["changes"], [
+            {"operation": "replace", "old_line_start": 11, "old_line_end": 11, "new_line_start": 11, "new_line_end": 11},
+            {"operation": "insert", "old_line_start": 80, "old_line_end": 79, "new_line_start": 80, "new_line_end": 93},
+            {"operation": "insert", "old_line_start": 191, "old_line_end": 190, "new_line_start": 205, "new_line_end": 240}])
+
+    def successor_record_errors(self, qa, readback):
+        errors = []
+        for field, alias in (("source", self.V2_ALIAS), ("source_review", self.V2_READBACK_ALIAS)):
+            row = self.aliases[alias]
+            if qa[field]["included_record"] != {"owner_archive_path": alias,
+                    "sha256": row["public_sha256"], "bytes": row["public_bytes"]}:
+                errors.append("report-v2-qa-identity:" + field)
+        if (qa["source_review"]["historical_original_identity"]["sha256"] !=
+                self.aliases[self.V2_READBACK_ALIAS]["original_sha256"]
+                or qa["original_document_record_sha256"] != self.aliases[self.V2_QA_ALIAS]["original_sha256"]
+                or readback["original_review_receipt_sha256"] != self.aliases[self.V2_READBACK_ALIAS]["original_sha256"]):
+            errors.append("report-v2-original-public-distinction")
+        if (qa["science_runs"] is not False or readback["proofs_replayed_by_this_reviewer"] is not False
+                or readback["scientific_sources_changed_by_this_reviewer"] is not False
+                or readback["methodology_new_reading_or_science_credit"] != 0):
+            errors.append("report-v2-retrospective-execution-scope")
+        if (readback["predecessor_15_result_objects_raw_json_preserved"] is not True
+                or readback["current_1434_philosophical_section_verbatim_preserved"] is not True):
+            errors.append("report-v2-historical-preservation-scope")
+        return errors
+
+    def test_successor_qa_and_shared_readback_keep_actor_identity_and_scope(self):
+        qa, readback = self.v2_qa, self.v2_readback
+        self.assertEqual(self.successor_record_errors(qa, readback), [])
+        for record, field in (("qa", "science_runs"), ("readback", "proofs_replayed_by_this_reviewer"),
+                              ("readback", "scientific_sources_changed_by_this_reviewer"),
+                              ("readback", "methodology_new_reading_or_science_credit")):
+            changed_qa, changed_readback = deepcopy(qa), deepcopy(readback)
+            (changed_qa if record == "qa" else changed_readback)[field] = True if field != "methodology_new_reading_or_science_credit" else 1
+            self.assertIn("report-v2-retrospective-execution-scope", self.successor_record_errors(changed_qa, changed_readback))
+        changed = deepcopy(qa)
+        changed["source_review"]["included_record"]["sha256"] = self.aliases[self.V2_READBACK_ALIAS]["original_sha256"]
+        self.assertIn("report-v2-qa-identity:source_review", self.successor_record_errors(changed, readback))
+        changed = deepcopy(qa)
+        changed["source"]["included_record"]["sha256"] = self.aliases[self.PRIMARY_ALIASES[0]]["public_sha256"]
+        self.assertIn("report-v2-qa-identity:source", self.successor_record_errors(changed, readback))
+        for field in ("predecessor_15_result_objects_raw_json_preserved",
+                      "current_1434_philosophical_section_verbatim_preserved"):
+            changed = deepcopy(readback)
+            changed[field] = False
+            self.assertIn("report-v2-historical-preservation-scope", self.successor_record_errors(qa, changed))
+        self.assertEqual((qa["authored_records_exact"], qa["native_numbered_items"],
+                          qa["relative_references_as_exact_labels_and_literal_paths"], qa["page_count"]), (140, 12, 9, 14))
+        self.assertEqual(len(qa["pages"]), 14)
+        self.assertTrue(all(p["original_body_included"] is False for p in qa["pages"]))
+        self.assertTrue(all(qa[k]["original_body_included"] is False
+                            for k in ("source_finalisation", "content_qa", "build_receipt")))
+        bindings = readback["source_bindings"]
+        included = [b["included_projection"] for b in bindings if "included_projection" in b]
+        omitted = [b for b in bindings if b["historical_original"].get("body_included") is False]
+        self.assertEqual((len(bindings), len(included), len(omitted)), (20, 18, 2))
+        for binding in included:
+            row = self.aliases[binding["owner_archive_path"]]
+            self.assertEqual((binding["sha256"], binding["bytes"]), (row["public_sha256"], row["public_bytes"]))
+        altered = deepcopy(self.cross)
+        altered["sources"]["fixture-v2-owner-word"] = {
+            "path": qa["document"]["included_record"]["owner_archive_path"],
+            "sha256": qa["document"]["included_record"]["sha256"], "read_scope": "Unavailable owner-only Word control."}
+        candidate = next(w for w in altered["works"] if w["key"] == self.KEY)
+        candidate["reading_forms"].append({"source": "fixture-v2-owner-word", "relationship": "retained-source-reading-projection"})
+        self.assertIn("report-ordered-reading-forms", self.errors(altered, self.text))
+
+    def section_body(self, text, heading):
+        idx = self.mod.markdown_index(text)
+        found = next((h for h in idx["headings"] if h[0] == heading), None)
+        self.assertIsNotNone(found, heading)
+        _, level, start = found
+        end = next((h[2] for h in idx["headings"] if h[2] > start and h[1] <= level), idx["line_count"])
+        return "".join(text.splitlines(True)[start:end])
+
+    def test_expanded_catalogue_and_verification_reject_scoped_route_substitution(self):
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        guide = "docs/reader/VERIFICATION-GUIDE.md"
+        body = (ROOT / guide).read_text()
+        works = {w["key"]: w for w in self.cross["works"]}
+        source_targets = {(self.aliases[a]["public_path"], "") for a in self.SUCCESSOR_ALIASES + tuple(self.PRIMARY_ALIASES)}
+        owners = {"t20-emergence-type-control", "t20-arabic-reading-methodology", "t20-drive-corpus-methodology",
+                  "t20-math-utilisation-methodology", "t20-result-method-handoff", "t20-cooperation-context"}
+        owner_targets = {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in owners}
+        for text, rel, heading, required in (
+                (self.text, page, self.V2_CATALOGUE_HEADING, source_targets | owner_targets),
+                (body, guide, self.V2_VERIFICATION_HEADING, source_targets)):
+            reached = lambda value: self.section_targets(value, rel, heading)
+            self.assertTrue(required <= reached(text), required - reached(text))
+            for path, anchor in required:
+                href = "#" + anchor if path == rel else ("../../" + path + ("#" + anchor if anchor else ""))
+                changed = text.replace("(" + href + ")", "(PAPER-CATALOGUE.md)")
+                self.assertNotEqual(changed, text)
+                self.assertFalse(required <= reached(changed))
+        index = self.mod.markdown_index(self.text)
+        original = next(h for h in index["headings"] if h[0] == self.CATALOGUE_ANCHOR)
+        expanded = next(h for h in index["headings"] if h[0] == self.V2_CATALOGUE_HEADING)
+        self.assertGreater(expanded[1], original[1])
+        self.assertIn(self.section_body(self.text, self.V2_CATALOGUE_HEADING), self.section_body(self.text, self.CATALOGUE_ANCHOR))
+
+    def report_bridge_errors(self, section, references, expected_rows):
+        errors = []
+        for literal, row in zip(references, expected_rows):
+            matches = [line for line in section.splitlines() if "`" + literal + "`" in line]
+            if len(matches) != 1:
+                errors.append("report-v2-bridge-row:" + literal)
+                continue
+            targets = [self.mod.resolve_reader_link(ROOT, "docs/reader/VERIFICATION-GUIDE.md", href)
+                       for _, href in self.mod.markdown_index(matches[0])["links"]]
+            if targets != [(row["public_path"], "")]:
+                errors.append("report-v2-bridge-pair:" + literal)
+        return errors
+
+    def test_nine_literal_report_references_have_exact_public_bridge_rows(self):
+        report = (ROOT / self.aliases[self.V2_ALIAS]["public_path"]).read_text()
+        references = [href for _, href in self.mod.markdown_index(report)["links"] if href.startswith("../")]
+        self.assertEqual(len(references), 9)
+        expected_rows = [self.selected[i] for i in (233, 234, 231, 232, 213, 215, 219, 224, 254)]
+        aliases = [posixpath.normpath(posixpath.join("t20/reports", href)) for href in references]
+        self.assertEqual(aliases, [r["owner_archive_path"] for r in expected_rows])
+        text = (ROOT / "docs/reader/VERIFICATION-GUIDE.md").read_text()
+        section = self.section_body(text, self.V2_VERIFICATION_HEADING)
+        reached = self.section_targets(text, "docs/reader/VERIFICATION-GUIDE.md", self.V2_VERIFICATION_HEADING)
+        self.assertEqual(self.report_bridge_errors(section, references, expected_rows), [])
+        for literal, row in zip(references, expected_rows):
+            self.assertIn((row["public_path"], ""), reached)
+            changed = section.replace("(../../" + row["public_path"] + ")", "(PAPER-CATALOGUE.md)")
+            self.assertNotEqual(changed, section)
+            self.assertIn("report-v2-bridge-pair:" + literal,
+                          self.report_bridge_errors(changed, references, expected_rows))
+        # Swapping two valid public targets preserves the complete target set;
+        # each literal must still bind its own source on that same table row.
+        first, second = ("(../../" + row["public_path"] + ")" for row in expected_rows[:2])
+        changed = section.replace(first, "FIXTURE_BRIDGE_SWAP").replace(second, first).replace("FIXTURE_BRIDGE_SWAP", second)
+        original_targets = {href for _, href in self.mod.markdown_index(section)["links"]}
+        changed_targets = {href for _, href in self.mod.markdown_index(changed)["links"]}
+        self.assertEqual(original_targets, changed_targets)
+        errors = self.report_bridge_errors(changed, references, expected_rows)
+        self.assertEqual(set(errors), {"report-v2-bridge-pair:" + literal for literal in references[:2]})
+
+    def test_report_v2_keeps_historical_owner_counts_and_original_comprehension_tasks(self):
+        readback = self.v2_readback
+        self.assertTrue(readback["predecessor_15_result_objects_raw_json_preserved"])
+        self.assertTrue(readback["current_1434_philosophical_section_verbatim_preserved"])
+        # Existing source-owned ledger tests establish the fifteen frozen rows,
+        # proposed sixteenth control and present native owner separately.
+        self.assertEqual(len(ResultLedgerMethodologyRoutesTests.OWNER_WORKS), 15)
+        guide = (ROOT / "docs/reader/VERIFICATION-GUIDE.md").read_text()
+        section = self.section_body(guide, self.V2_VERIFICATION_HEADING)
+        targets = self.section_targets(guide, "docs/reader/VERIFICATION-GUIDE.md", self.V2_VERIFICATION_HEADING)
+        self.assertIn(("docs/provenance/v5-successors/RESULT_STATUS.json", ""), targets)
+        # Unavailable images and author-reported page checks cannot become a
+        # new curation render or a scientific execution claim.
+        self.assertTrue("author-reported" in section.lower() or "author reported" in section.lower())
+        tasks = self.section_body(guide, "independent-reader-comprehension-tasks-for-the-final-candidate")
+        # section_body includes the trailing blank line before the next peer
+        # heading. The frozen protocol digest uses that same slice convention.
+        self.assertEqual(hashlib.sha256(tasks.encode()).hexdigest(),
+                         "b45ff7603fbeb4e701d4b86f7aa65f66ea3044722986525ed68042f61e16ba28")
+
+    def ledger_ownership_errors(self, original, successor, native):
+        errors = []
+        if (len(original["results"]) != 15 or len(successor["results"]) != 16
+                or successor["results"][:15] != original["results"]
+                or successor["counting_boundary"]["t20_native_result_owners_at_capture"] != 15
+                or successor["counting_boundary"]["late_proposed_owners"] != 1):
+            errors.append("report-v2-historical-owner-count")
+        late = successor["results"][-1]
+        captured = late["fresh_and_inherited"]["receiving_native_status"]
+        if (late["result_id"] != "T20-EMERGENCE-TYPE-CONTROL"
+                or late["registration_state"] != "PROPOSED_OWNER_NATIVE_ADMISSION_PENDING"
+                or captured["registration"] != "NOT_REGISTERED_AT_CAPTURE"
+                or captured["independent_evidence_count"] is not None
+                or native["research_disposition"] != "CANDIDATE"
+                or native["fresh_evidence"] != "NOT_RUN" or native["independent_evidence_count"] != 0):
+            errors.append("report-v2-captured-current-owner-conflation")
+        return errors
+
+    def test_fifteen_historical_owners_and_proposed_control_reject_currentness_conflation(self):
+        prefix = "t20/methodology/result-ledger/"
+        def record(alias):
+            return json.loads((ROOT / self.aliases[alias]["public_path"]).read_text())
+        original = record(prefix + "RESULT_EVIDENCE_LEDGER.json")
+        successor = record(prefix + "RESULT_EVIDENCE_LEDGER_v2.json")
+        statuses = json.loads((ROOT / "docs/provenance/v5-successors/RESULT_STATUS.json").read_text())["statuses"]
+        native = next(s for s in statuses if s["id"] == "T20-EMERGENCE-TYPE-CONTROL")
+        self.assertEqual(self.ledger_ownership_errors(original, successor, native), [])
+        changed = deepcopy(successor)
+        changed["counting_boundary"]["t20_native_result_owners_at_capture"] = 16
+        self.assertIn("report-v2-historical-owner-count", self.ledger_ownership_errors(original, changed, native))
+        changed = deepcopy(successor)
+        changed["results"][-1]["fresh_and_inherited"]["receiving_native_status"]["independent_evidence_count"] = 0
+        self.assertIn("report-v2-captured-current-owner-conflation", self.ledger_ownership_errors(original, changed, native))
+        changed_native = deepcopy(native)
+        changed_native["fresh_evidence"] = "PASS"
+        self.assertIn("report-v2-captured-current-owner-conflation", self.ledger_ownership_errors(original, successor, changed_native))
+        changed_native = deepcopy(native)
+        changed_native["research_disposition"] = "HISTORICAL"
+        self.assertIn("report-v2-captured-current-owner-conflation", self.ledger_ownership_errors(original, successor, changed_native))
 
 
 class LateResultLedgerSupportTests(unittest.TestCase):
