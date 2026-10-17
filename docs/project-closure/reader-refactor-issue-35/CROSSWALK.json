@@ -4,6 +4,10 @@
   "identity_note": "Keys are local navigation labels, not new scientific IDs. A composite edition and its source components are not independent discoveries.",
   "scope_note": "Source-bound catalogue: original pilot, manuscript families, the nine current Twelfth texts, and dispositions for the fifty-file application directory. Whole-corpus C03 coverage and independent review remain incomplete. Run 08 additionally maps the Thirteenth/Fourteenth identity lineage; this is not all successor research. Run 09 adds the six source-named Fifteenth compendium papers at their exact chapter routes, with selected substantive reading and separately scoped formal/reference support. This does not exhaust the Fifteenth tranche or the repository. Run 10 adds the separate Fifteenth programme report and twelve-member portable reanalysis work with its four integration records; external inputs remain outside the body population.",
   "sources": {
+    "t20-context-a6abad41348edc1e": {"path": "experiments/orthemology-v5-successors/source-store/fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd/MATH_UTILISATION.md","sha256": "fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd","read_scope": "Complete narrative read: component-level inspection, local copying application, PTS/controller transfer assessments, all priority-family questions, chronology and source/verification limits. Retrospective methodology; no new upstream manuscript reading, proof or replay."},
+    "t20-context-bceed1194e543b67": {"path": "experiments/orthemology-v5-successors/source-store/d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5/MATH_UTILISATION.json","sha256": "d0e73b80d86fd9367c434e7711cb1bb40d5e0f61821db03392b5cd2590b61ff5","read_scope": "All 53 component records examined for exact manuscript/application roles, reading/formal/transfer status, semantic mappings, results and limitations; coverage, chronology corrections, seven-step local application chain and gaps inspected. Recorded upstream and local evidence remain distinct; no new research credit."},
+    "t20-context-3a55a8731f99a57b": {"path": "experiments/orthemology-v5-successors/source-store/182307031547748730ab7ca741e07edbc64f9d4422258d536b969c5d87e7d651/MATH_SOURCE_BINDINGS.json","sha256": "182307031547748730ab7ca741e07edbc64f9d4422258d536b969c5d87e7d651","read_scope": "Source pin, 34 evidence identities, 85 upstream material identities and original/public output bindings inspected; prepared aliases distinguished from custody-only records and acquisition from reading. Selected public bytes verified; no upstream acquisition, unavailable receipt-body reading or scientific replay."},
+    "t20-context-3569d533b875812f": {"path": "experiments/orthemology-v5-successors/source-store/d988a97a3c22e4afb2a36e824e9614ff42e77f0961b29ed5a5eb3d841931d04c/MATH_VALIDATION.json","sha256": "d988a97a3c22e4afb2a36e824e9614ff42e77f0961b29ed5a5eb3d841931d04c","read_scope": "Complete retrospective validation read: component/coverage arithmetic, scoped identity and status checks, original author outputs versus selected public projections, explicit 33-module wording correction and zero-new-reading/replay attribution. Historical validation is not a fresh scientific result."},
     "t20-source-5766e36edfc614a4": {"path": "experiments/orthemology-v5-successors/source-store/bf38aee1b94f5a489cd0271dc40ef03e0dd7f40ebc52f703ef038a59a2ab1e88/DEPENDENCY_OBJECTS.json","sha256": "bf38aee1b94f5a489cd0271dc40ef03e0dd7f40ebc52f703ef038a59a2ab1e88","read_scope": "Exact component membership and public identity checked against the original selected-source index; supporting-role binding, not a claim of complete source reading or fresh execution."},
     "t20-source-4523fa2c0e587f9f": {"path": "experiments/orthemology-v5-successors/source-store/8d14dbc1e1f6841f5e0ca901848717b7f7c7c75ae9ae0dbbb1eba1c668e849ed/FILE_MANIFEST.json","sha256": "8d14dbc1e1f6841f5e0ca901848717b7f7c7c75ae9ae0dbbb1eba1c668e849ed","read_scope": "Exact component membership and public identity checked against the original selected-source index; supporting-role binding, not a claim of complete source reading or fresh execution."},
     "t20-source-a4207c5fcb3bd565": {"path": "experiments/orthemology-v5-successors/source-store/cee078b39cc253dba315757a25d8d648beea5ed0a79b3ce398f727baf9c01514/PREDECESSOR_CLOSURE.json","sha256": "cee078b39cc253dba315757a25d8d648beea5ed0a79b3ce398f727baf9c01514","read_scope": "Exact component membership and public identity checked against the original selected-source index; supporting-role binding, not a claim of complete source reading or fresh execution."},
@@ -3558,6 +3562,34 @@
       ],
       "review_status": "AUTHOR_CURATED; independent candidate review pending",
       "explanation": "One original methodological handoff joins fifteen existing result owners across fourteen existing work destinations. Its three JSON companions remain support. The reference gains no result ownership or fresh scientific evidence; dated original/canonical assessments, later cooperation context and the separate result-ledger-v2 family retain their own boundaries. The current result owner is linked separately from historical input snapshots."
+    },
+    {
+      "key": "t20-math-utilisation-methodology",
+      "title": "Mathematical reading, local applications and transfer limits",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-context-a6abad41348edc1e"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-a6abad41348edc1e",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-bceed1194e543b67",
+        "t20-context-3a55a8731f99a57b",
+        "t20-context-3569d533b875812f",
+        "t20-context-50e3ae6b35c1b914"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#mathematical-reading-local-applications-and-transfer-limits",
+      "placement": [
+        "Later Twentieth methodology",
+        "Exact component inspection, local mathematical applications and transfer obligations"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "One retrospective methodology reference joins four public projections. Fifty-two upstream manuscript records and one separately developed local application retain their own reading, execution and result ownership; three JSON supports do not become research works. The catalogue owns this account of positive applications and conditional leads without adding upstream reading, theorem-transfer or replay credit."
     }
   ],
   "relations": [

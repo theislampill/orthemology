@@ -3595,5 +3595,104 @@ class ResultLedgerMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCa
         self.assertIn("later-ledger-in-original-family", self.errors(altered, self.text))
 
 
+class MathMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
+    """Exact component inspection and local applications keep their owners."""
+    PART = "math"
+    KEY = "t20-math-utilisation-methodology"
+    PRIMARY_ALIASES = ["t20/methodology/math/MATH_UTILISATION.md"]
+    LEDGER_ALIAS = "t20/methodology/math/MATH_UTILISATION.json"
+    EXPECTED = {KEY: ("supporting-reference", {PART}, PRIMARY_ALIASES)}
+    CATALOGUE_ANCHOR = "mathematical-reading-local-applications-and-transfer-limits"
+    VERIFICATION_HEADING = "checking-mathematical-reading-and-transfer-credit"
+    METHOD_ANCHOR = "coverage-and-inspection-levels"
+    CORE_WORKS = {
+        "arabic": "t20-arabic-reading-methodology",
+        "drive": "t20-drive-corpus-methodology",
+        "math": KEY,
+        "result-ledger": "t20-result-method-handoff",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        LateTwentiethContextRoutesTests.setUpClass.__func__(cls)
+        owners = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json").read_text())
+        def original(path):
+            return subprocess.check_output(["git", "show", owners["baseline"]["commit"] + ":" + path],
+                                           cwd=ROOT, text=True)
+        cls.ledger = json.loads(original(cls.aliases[cls.LEDGER_ALIAS]["public_path"]))
+        cls.method_text = original(cls.aliases[cls.PRIMARY_ALIASES[0]]["public_path"])
+
+    def test_component_questions_reach_exact_method_sections_and_existing_owners(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        components = self.ledger["components"]
+        manuscripts = [r for r in components if r["component_kind"] == "upstream_manuscript"]
+        local = [r for r in components if r["component_kind"] == "local_orthemology_application"]
+        self.assertEqual((len(components), len(manuscripts), len(local)), (53, 52, 1))
+        families = {r["family_id"] for r in manuscripts}
+        self.assertEqual(families, set(self.ledger["coverage"]["family_priority_ids"]))
+        self.assertEqual(len(families), 18)
+        self.assertEqual(local[0]["id"], "MATH-122-APPLICATION")
+        for status in ["FORMAL_SOURCE_REPLAYED", "ORTHEMOLOGY_TRANSFER_PROVED"]:
+            self.assertEqual({r["id"] for r in components if status in r["statuses"]}, {local[0]["id"]})
+        self.assertTrue(all(r["replay_status"]["upstream"] == "NOT_RUN" and
+                            not r["direct_upstream_theorem_transfer"] for r in components))
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        method = self.aliases[self.PRIMARY_ALIASES[0]]["public_path"]
+        headings = {h[0] for h in self.mod.markdown_index(self.method_text)["headings"]}
+        sections = {self.METHOD_ANCHOR, "boundaries-and-source-binding",
+                    "all-remaining-priority-manuscripts",
+                    "two-further-manuscripts-affected-the-method-comparison"}
+        # The 373 lemma shares a narrative section with the targeted 235 lemma;
+        # 235's remaining abstract-only manuscripts have their own family section.
+        for family in families - {373}:
+            matches = {h for h in headings if h.startswith("family-" + str(family) + "-")}
+            self.assertEqual(len(matches), 1, family)
+            sections |= matches
+        self.assertTrue(sections <= headings)
+        required = {(method, h) for h in sections}
+        required |= {(r["public_path"], "") for r in self.selected if r["part"] == self.PART
+                     and r["owner_archive_path"] not in self.PRIMARY_ALIASES}
+        works = {w["key"]: w for w in self.cross["works"]}
+        peers = ["t20-copied-trace-observation", "t20-external-transfer-assessment",
+                 "information-composition", "t09-finite-certificate-calculus",
+                 "t16-signed-synthesis", "t16-submitted-controller",
+                 "t20-scalar-fusion", "t20-hase-negative-routes"]
+        required |= {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in peers}
+        for result_id in ["T20-TRACE-OBSERVATION-COPYING", "T20-PTS-NORMALIZATION-TRANSFER",
+                          "T20-CONTROLLER-COMPLETENESS-TRANSFER"]:
+            owner = ResultLedgerMethodologyRoutesTests.OWNER_WORKS[result_id]
+            self.assertIn(result_id, works[owner]["existing_result_ids"])
+        reached = lambda body: self.section_targets(body, page, self.CATALOGUE_ANCHOR)
+        self.assertTrue(required <= reached(self.text))
+        for path, anchor in required:
+            with self.subTest(path=path, anchor=anchor):
+                href = ("#" + anchor if path == page else
+                        "../../" + path + ("#" + anchor if anchor else ""))
+                changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
+                self.assertNotEqual(changed, self.text)
+                self.assertFalse(required <= reached(changed))
+
+    def test_original_nineteen_source_core_is_complete_without_later_context_credit(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        core = [r for r in self.selected if r.get("selection_layer") == "methodology-core"]
+        self.assertEqual(len(core), 19)
+        self.assertEqual({r["part"] for r in core}, set(self.CORE_WORKS))
+        def covered(cross):
+            works = {w["key"]: w for w in cross["works"]}
+            return all(any(cross["sources"][s]["path"] == row["public_path"] and
+                           cross["sources"][s]["sha256"] == row["public_sha256"]
+                           for s in works[self.CORE_WORKS[row["part"]]]["source_keys"] +
+                           works[self.CORE_WORKS[row["part"]]].get("supporting_source_keys", []))
+                       for row in core)
+        self.assertTrue(covered(self.cross))
+        for row in core:
+            with self.subTest(alias=row["owner_archive_path"]):
+                altered = deepcopy(self.cross)
+                work = next(w for w in altered["works"] if w["key"] == self.CORE_WORKS[row["part"]])
+                for field in ["source_keys", "supporting_source_keys"]:
+                    work[field] = [s for s in work[field] if altered["sources"][s]["path"] != row["public_path"]]
+                self.assertFalse(covered(altered))
+
+
 if __name__ == "__main__":
     unittest.main()
