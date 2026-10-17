@@ -3411,7 +3411,9 @@ class MethodologyRoutesMixin:
         for alias in self.PRIMARY_ALIASES:
             with self.subTest(alias=alias):
                 path = self.aliases[alias]["public_path"]
-                wrong = self.aliases[alias.removesuffix(".md") + ".json"]["public_path"]
+                companion = getattr(self, "NARRATIVE_COMPANIONS", {}).get(
+                    alias, alias.removesuffix(".md") + ".json")
+                wrong = self.aliases[companion]["public_path"]
                 changed = self.text.replace("../../" + path, "../../" + wrong)
                 self.assertNotEqual(changed, self.text)
                 self.assertIn("source-route:" + alias, self.errors(self.cross, changed))
@@ -3497,6 +3499,100 @@ class DriveMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
                 changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
                 self.assertNotEqual(changed, self.text)
                 self.assertFalse(required <= reached(changed))
+
+
+class ResultLedgerMethodologyRoutesTests(MethodologyRoutesMixin, unittest.TestCase):
+    """The original fifteen-result handoff routes existing owners once each."""
+    PART = "result-ledger"
+    KEY = "t20-result-method-handoff"
+    PRIMARY_ALIASES = ["t20/methodology/result-ledger/METHOD_INTEGRATION_HANDOFF.md"]
+    LEDGER_ALIAS = "t20/methodology/result-ledger/RESULT_EVIDENCE_LEDGER.json"
+    NARRATIVE_COMPANIONS = {PRIMARY_ALIASES[0]: LEDGER_ALIAS}
+    EXPECTED = {KEY: ("supporting-reference", {PART}, PRIMARY_ALIASES)}
+    CATALOGUE_ANCHOR = "the-original-fifteen-result-evidence-and-method-handoff"
+    VERIFICATION_HEADING = "checking-original-result-credit-and-receiving-execution"
+    METHOD_ANCHOR = "receiving-and-finalisation-boundary"
+    OWNER_WORKS = {
+        "T20-CHURCH-RAW-PROBE": "t20-church-probe",
+        "T20-CND-ESSENTIALITY-SCOPE": "t20-cnd-scope",
+        "T20-SCALAR-FUSION-IFF": "t20-scalar-fusion",
+        "T20-MODAL-CROSSING-COMPLETENESS": "t20-modal-union",
+        "T20-ORIGINAL-GROUND-ROBUSTNESS": "t20-ground-extension",
+        "T20-GROUNDED-CONTINUATION-SUPPORT": "t20-grounded-support",
+        "T20-HASE-FURTHER-FAILED-ROUTES": "t20-hase-negative-routes",
+        "T20-TYPED-ORIGINAL-BEARER-ABC": "t20-original-bearer-bridge",
+        "T20-ANCHORED-FIELD-SOURCE": "t20-anchored-source-bridge",
+        "T20-VERACITY-DEPENDENCY-AUDIT": "t20-veracity-dependencies",
+        "T20-PTS-NORMALIZATION-TRANSFER": "t20-external-transfer-assessment",
+        "T20-TRACE-OBSERVATION-COPYING": "t20-copied-trace-observation",
+        "T20-JOINT-SAME-BEARER-MODEL": "t20-same-bearer-joint-model",
+        "T20-CONTROLLER-COMPLETENESS-TRANSFER": "t20-external-transfer-assessment",
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS": "t20-foundational-synthesis",
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        LateTwentiethContextRoutesTests.setUpClass.__func__(cls)
+        owner_path = ROOT / "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json"
+        baseline = json.loads(owner_path.read_text())["baseline"]["commit"]
+        def original(path):
+            return json.loads(subprocess.check_output(["git", "show", baseline + ":" + path], cwd=ROOT))
+        cls.ledger = original(cls.aliases[cls.LEDGER_ALIAS]["public_path"])
+        cls.frozen_claims = original(cls.GROUP + "/CLAIM_MAP.json")["results"]
+
+    def errors(self, cross, text):
+        errors = MethodologyRoutesMixin.errors(self, cross, text)
+        work = next((w for w in cross["works"] if w["key"] == self.KEY), None)
+        if work is not None:
+            attached = {cross["sources"][s]["path"] for s in
+                        work["source_keys"] + work.get("supporting_source_keys", [])}
+            later = {r["public_path"] for r in self.selected if r["part"] == "result-ledger-v2"}
+            if attached & later:
+                errors.append("later-ledger-in-original-family")
+        return errors
+
+    def test_all_original_owners_and_support_have_scoped_reader_routes(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        owner_ids = [r["result_id"] for r in self.ledger["results"]]
+        self.assertEqual(len(owner_ids), len(set(owner_ids)))
+        self.assertEqual(set(owner_ids), {r["id"] for r in self.frozen_claims})
+        self.assertEqual(set(self.OWNER_WORKS), set(owner_ids))
+        works = {w["key"]: w for w in self.cross["works"]}
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        required = set()
+        for result_id, key in self.OWNER_WORKS.items():
+            self.assertIn(result_id, works[key]["existing_result_ids"])
+            rel, anchor = works[key]["catalogue_entry"].split("#", 1)
+            self.assertEqual(rel, page)
+            required.add((rel, anchor))
+        # Two transfer findings share one work; the later appraisal is separate.
+        self.assertEqual(len(required), 14)
+        required.add((page, works["t20-cooperation-context"]["catalogue_entry"].split("#", 1)[1]))
+        required |= {(r["public_path"], "") for r in self.selected if r["part"] == self.PART
+                     and r["owner_archive_path"] not in self.PRIMARY_ALIASES}
+        required.add((self.GROUP + "/CLAIM_MAP.json", ""))
+        required.add(("docs/provenance/v5-successors/RESULT_STATUS.json", ""))
+        reached = lambda text: self.section_targets(text, page, self.CATALOGUE_ANCHOR)
+        self.assertTrue(required <= reached(self.text))
+        for path, anchor in required:
+            with self.subTest(path=path, anchor=anchor):
+                href = "#" + anchor if path == page else (
+                    "../provenance/v5-successors/RESULT_STATUS.json" if path.startswith("docs/provenance/") else "../../" + path)
+                changed = self.text.replace("(" + href + ")", "(VERIFICATION-GUIDE.md)")
+                self.assertNotEqual(changed, self.text)
+                self.assertFalse(required <= reached(changed))
+
+    def test_later_ledger_cannot_be_counted_as_original_family_support(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        later = next(r for r in self.selected if r["part"] == "result-ledger-v2")
+        altered = deepcopy(self.cross)
+        key = "fixture-later-ledger-binding"
+        self.assertNotIn(key, altered["sources"])
+        altered["sources"][key] = {"path": later["public_path"], "sha256": later["public_sha256"],
+                                   "read_scope": "Fixture-only later-family admission."}
+        work = next(w for w in altered["works"] if w["key"] == self.KEY)
+        work["supporting_source_keys"].append(key)
+        self.assertIn("later-ledger-in-original-family", self.errors(altered, self.text))
 
 
 if __name__ == "__main__":

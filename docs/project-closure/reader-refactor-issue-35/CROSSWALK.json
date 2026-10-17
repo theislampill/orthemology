@@ -2530,6 +2530,26 @@
       "path": "experiments/orthemology-v5-successors/source-store/3cfc7b197a1c39b4f2c0b67ac3922e8875027b930a59c443fac22a9987e6a1b4/VERIFICATION.json",
       "sha256": "3cfc7b197a1c39b4f2c0b67ac3922e8875027b930a59c443fac22a9987e6a1b4",
       "read_scope": "Original 106-check receipt, check categories, artifact identities and publication/scope limits inspected. Attributed original validation, with no public author-verifier replay or new scientific execution."
+    },
+    "t20-context-5af16ebcd552bb13": {
+      "path": "experiments/orthemology-v5-successors/source-store/d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2/METHOD_INTEGRATION_HANDOFF.md",
+      "sha256": "d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2",
+      "read_scope": "Complete original fifteen-owner narrative read, including each positive scoped result, original checks, inherited credit, rejected transfer and remaining application obligation. Dated 14:34 appraisal and receiving NOT_RUN boundary retained; no new science or primary-source reading."
+    },
+    "t20-context-b6e9b4afe83911db": {
+      "path": "experiments/orthemology-v5-successors/source-store/87d09884accfd207240e10d520289cc99947c6a59d1b8ce3adb3b1a8fa880671/RESULT_EVIDENCE_LEDGER.json",
+      "sha256": "87d09884accfd207240e10d520289cc99947c6a59d1b8ce3adb3b1a8fa880671",
+      "read_scope": "All fifteen owner records examined for scope, original/frozen provenance, declaration and receipt roles, inherited/receiving evidence, Arabic/Drive/math joins and residual obligations; twenty-four synthesis conclusions and chronology controls inspected. No transfer, proof or receiving execution credit added."
+    },
+    "t20-context-ff5bfa168f0270e7": {
+      "path": "experiments/orthemology-v5-successors/source-store/79ad56d83c7585468eebf02286ef86471576e8d16898b96376545b03ac912475/SOURCE_BINDINGS.json",
+      "sha256": "79ad56d83c7585468eebf02286ef86471576e8d16898b96376545b03ac912475",
+      "read_scope": "Bounded ninety-five cited alias records and seventeen historical input identities inspected for original/public projection correspondence and source/receipt ownership. Original input snapshots are not presumed current registry or later projection bytes; no new body admission."
+    },
+    "t20-context-5a0b281a7b2c3b44": {
+      "path": "experiments/orthemology-v5-successors/source-store/3a4d76f7b6e713bc0e68758cb354e5ed92005fc96357a3d20da5c6b5c5ac67fa/VALIDATION.json",
+      "sha256": "3a4d76f7b6e713bc0e68758cb354e5ed92005fc96357a3d20da5c6b5c5ac67fa",
+      "read_scope": "Complete original source/reference/signature validation receipt read, including fifteen-owner equality, preserved frozen/canonical difference, original/public output identities and zero fresh receiving execution. Original author validation is not rerun or promoted to C05 acceptance."
     }
   },
   "works": [
@@ -3509,6 +3529,35 @@
       ],
       "review_status": "AUTHOR_CURATED; independent candidate review pending",
       "explanation": "One methodological reference joins five projections about six supplied inputs, inherited T17 reading and subsequent T20 utilisation. Four JSON supports do not become new works; result/question labels confer no theorem ownership. The catalogue owns this synopsis while original reading, mathematical and dated assessment owners retain their credit."
+    },
+    {
+      "key": "t20-result-method-handoff",
+      "title": "The original fifteen-result evidence and method handoff",
+      "role": "supporting-reference",
+      "source_keys": [
+        "t20-context-5af16ebcd552bb13"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-5af16ebcd552bb13",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-b6e9b4afe83911db",
+        "t20-context-ff5bfa168f0270e7",
+        "t20-context-5a0b281a7b2c3b44",
+        "t20-context-50e3ae6b35c1b914",
+        "t20-context-d71b24a06b989098"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#the-original-fifteen-result-evidence-and-method-handoff",
+      "placement": [
+        "Later Twentieth methodology",
+        "Original result ownership, evidence stages and application obligations"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "One original methodological handoff joins fifteen existing result owners across fourteen existing work destinations. Its three JSON companions remain support. The reference gains no result ownership or fresh scientific evidence; dated original/canonical assessments, later cooperation context and the separate result-ledger-v2 family retain their own boundaries. The current result owner is linked separately from historical input snapshots."
     }
   ],
   "relations": [
@@ -3628,7 +3677,7 @@
     }
   ],
   "reader_journey_scope": "Pre-merge sample routes from the six reader pages. Root-navigation replacement, independent comprehension review and complete C03 coverage remain outstanding. Link checks do not certify semantic claims.",
-  "curation_stage": "C03 author curation: frozen Twentieth components, later cooperation/emergence/activity context, and Arabic and Drive methodological-core families mapped. Other later reading/methodology families and whole-corpus reconciliation remain open.",
+  "curation_stage": "C03 author curation: frozen Twentieth components, later cooperation/emergence/activity context, and Arabic, Drive and original result-ledger methodological families mapped. Math methodology, later handoff/report families and whole-corpus reconciliation remain open.",
   "application_dispositions": [
     {"source": "app-source-agentic-runtime-collective-somnus-transclusion-profile-yaml", "work": "app-collective", "role": "work-source"},
     {"source": "app-source-agentic-runtime-hermes-writeback-adoption-profile-yaml", "work": "app-writeback", "role": "work-source"},
