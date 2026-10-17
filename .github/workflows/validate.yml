@@ -24,6 +24,13 @@ jobs:
           python scripts/validate_dependency_lock.py
       - name: Repository hygiene + honesty checks
         run: python scripts/validate_repo.py
+      - name: Reader pilot source, edition and navigation controls (not semantic acceptance)
+        run: |
+          python -B tests/test_reader_census.py
+          python -B -O tests/test_reader_census.py
+          python -B tests/test_reader_pilot.py
+          python -B -O tests/test_reader_pilot.py
+          python -B scripts/check_reader_pilot.py
       - name: T20 v6 independent public projection and source boundaries
         run: |
           python -B tests/test_t20_v6_projection.py

@@ -33,3 +33,37 @@ Never commit: raw transcripts, session identifiers, absolute local paths, privat
 ## Mechanics
 
 Run `python scripts/validate_repo.py` plus the validators in `.github/workflows/validate.yml` before pushing. No force-pushes to `main`.
+
+<!-- reader-maintenance:issue-35 -->
+
+## Reader maintenance
+
+The existing policies above remain unchanged. The six reader pages are navigation and explanation over source owners, not a second scientific registry. Start at the [verification guide](docs/reader/VERIFICATION-GUIDE.md) and the [work/source crosswalk](docs/project-closure/reader-refactor-issue-35/CROSSWALK.json). An editorial work key is not a scientific result identifier or an acceptance decision.
+
+### Edit the actual owner
+
+For a substantive argument, edit the original manuscript or research source under the applicable scientific authorisation, not its catalogue synopsis. For a governed rendering, consult [the publication profile](docs/publication-profile.yaml): Markdown source owners, generated LaTeX, source sidecars and preserved PDFs are different objects. Do not edit generated LaTeX as prose, infer an exact PDF build from a related TeX file, or repin a publication simply because navigation changed.
+
+For reader-only changes, edit the affected explanation and its one crosswalk relationship. Existing scientific result/status owners retain their identifiers, assumptions and evidence levels. Reviews, manifests, duplicate checkpoint copies and software components do not become independent papers. Maintain the original source path, edition and limitation next to the reading route.
+
+### Five ordinary changes and their bounded footprint
+
+**M01 — Edition:** update the actual publication/edition owner and the existing work’s reading form; preserve a distinct edition when its identity or build relation differs. Do not duplicate the work or rewrite unrelated reader pages.
+
+**M02 — Scoped result:** change the original result owner only under scientific authority, then refresh its result route and materially affected explanations. The atlas, catalogue and frontier page are not six independent copies of one status fact.
+
+**M03 — New non-PDF work:** a substantive source outside familiar paper directories still enters the finite corpus. Review the approved source baseline and owner population, assign a work or justified support role, and add its source-bound reading route. Updating a hash alone is not source review.
+
+**M04 — Repeated checkpoint:** reuse established work and source equivalences, retain the checkpoint’s custody/edition identity, and curate genuinely new work. A copied argument is not another independent result or proof receipt.
+
+**M05 — Changed conclusion:** inspect the changed source passage, then review its bound synopsis and dependent routes. Do not silence the source-currentness failure by merely replacing its checksum. Unrelated explanations need no gratuitous rewrite.
+
+The [collection reading and maintenance record](docs/project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md) retains actual exercises and qualifications; the instructions here are not a claim that all five final-candidate exercises have already passed. Resolve changed scope at the existing owner rather than admitting external bibliographies recursively.
+
+### Generate and verify through the existing tools
+
+Stage intended additions/removals before generation, because the source digest and manifest use tracked paths. Run `python scripts/generate_current_state.py`, then `python scripts/make_manifest.py`; preserve the authored state block and inspect the generated diff. Neither output may contain a demand to equal its own containing commit hash.
+
+Run `python -B tests/test_reader_census.py`, `python -B tests/test_reader_pilot.py` and `python -B scripts/check_reader_pilot.py` for reader identity, edition and route controls. Also run `python scripts/generate_current_state.py --check`, `python scripts/validate_current_state.py`, `python scripts/validate_internal_references.py` and the unchanged mandatory gates in [the actual CI workflow](.github/workflows/validate.yml). Repeating generation must leave the candidate unchanged. Use the workflow’s pinned environment when claiming native qualification; a different local interpreter is not the same environment.
+
+A historical command in a source archive is evidence of that source’s procedure, not automatically a supported command for this checkout. Respect public/private input boundaries and do not run a broad scientific replay merely to validate a documentation link. Mechanical checks do not establish scholarly comprehension, empirical validity, independent review or owner acceptance.
