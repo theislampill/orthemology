@@ -608,3 +608,10 @@ The original [frozen claim owner](../../experiments/orthemology-v5-successors/gr
 **`T20-CONTROLLER-COMPLETENESS-TRANSFER`** — No new controller-completeness transfer from ordinary game endpoints. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#external-theorem-relevance-is-not-a-completed-transfer).
 
 **`T20-FOUNDATIONAL-PREMISE-SYNTHESIS`** — Source-bound foundational synthesis with dated premise appraisal. [Source-bound argument, hypotheses and evidence](PAPER-CATALOGUE.md#the-dated-foundational-audit-and-its-conditional-achievements).
+
+
+## Later Twentieth result and context qualifications
+
+**T20-EMERGENCE-TYPE-CONTROL** — [Typed emergence, fresh tokens and the chosen activity gap](PAPER-CATALOGUE.md#typed-emergence-fresh-acts-created-effects-and-a-stipulated-activity-gap). The [original late map](../../experiments/orthemology-v5-successors/groups/t20-successor/LATE_RESULT_MAP.json) owns the formal interpretation; the [current successor ledger](../provenance/v5-successors/RESULT_STATUS.json) and [context history](../provenance/v5-successors/T20_CONTEXT_REAPPRAISAL_HISTORY.json) preserve its later historical-application boundary without changing the original theorem.
+
+**T20-FOUNDATIONAL-PREMISE-SYNTHESIS** already appears above for its frozen component. Its [later cooperation/context reassessment](PAPER-CATALOGUE.md#cooperation-complete-efficacy-and-the-later-common-source-reassessment) is a subsequent source-bound appraisal of the same registered result, **not another result credit**. The [finite context selection](../../experiments/orthemology-v5-successors/groups/t20-successor/CONTEXT_SOURCE_INDEX.json) distinguishes that added reading from a proof replay or a new result row.

@@ -3222,5 +3222,120 @@ class MaintenanceFootprintTests(unittest.TestCase):
                     limitations=['Mechanical identity checks cannot authenticate a dishonest claim of reading; C05 must review fidelity.'])
 
 
+
+class LateTwentiethContextRoutesTests(unittest.TestCase):
+    """The original context selection and result owner define this finite unit.
+
+    Source routes and preserved roles are testable; philosophical warrant,
+    historical authentication and independent C05 acceptance are not inferred.
+    """
+    GROUP = TwentiethFormalWorkTests.GROUP
+    EXPECTED = {
+        "t20-cooperation-context": (
+            "synthesis", {"cooperation", "warrant-review", "scope"},
+            ["t20/cooperation-reassessment/SOURCE_ARGUMENT.md",
+             "t20/cooperation-reassessment/MODEL_AUDIT.md",
+             "t20/cooperation-reassessment/ROOT_REASSESSMENT.md"]),
+        "t20-emergence-type-control": (
+            "research-note", {"ontology"},
+            ["t20/ontology-type-control/AUDIT.md",
+             "t20/ontology-type-control/OriginationTypeControl.lean"]),
+        "t20-divine-action-context": (
+            "review", {"causal-action", "uthaymin"},
+            ["t20/targeted-final-loci/causal-action/LOCUS_AUDIT.md",
+             "t20/targeted-final-loci/uthaymin/LOCUS_AUDIT.md"]),
+    }
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location("late_twentieth_routes", MODULE)
+        cls.mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(cls.mod)
+        directory = ROOT / "docs/project-closure/reader-refactor-issue-35"
+        cls.cross = json.loads((directory / "CROSSWALK.json").read_text())
+        owners = json.loads((directory / "OWNER-MAP.json").read_text())
+        def original(path):
+            return json.loads(subprocess.check_output(
+                ["git", "show", owners["baseline"]["commit"] + ":" + path], cwd=ROOT))
+        cls.selected = original(cls.GROUP + "/CONTEXT_SOURCE_INDEX.json")["public_sources"]
+        cls.aliases = {s["owner_archive_path"]: s for s in cls.selected}
+        cls.claims = {r["id"]: r for r in original("docs/provenance/v5-successors/RESULT_STATUS.json")["results"]}
+        cls.source_rows = {r["id"]: r for r in original("docs/provenance/v5-successors/SOURCE_MAP.json")["sources"]}
+        cls.text = (ROOT / "docs/reader/PAPER-CATALOGUE.md").read_text()
+
+    def errors(self, cross, text):
+        errors = []
+        works = {w["key"]: w for w in cross["works"]}
+        idx = self.mod.markdown_index(text)
+        for key, (role, parts, primaries) in self.EXPECTED.items():
+            w = works.get(key)
+            if not w:
+                errors.append("missing-work:" + key); continue
+            if w["role"] != role:
+                errors.append("role:" + key)
+            attached = {cross["sources"][s]["path"] for s in w["source_keys"] + w.get("supporting_source_keys", [])}
+            expected = {s["public_path"] for s in self.selected if s["part"] in parts}
+            if not expected <= attached:
+                errors.append("context-coverage:" + key)
+            rel, _, anchor = w.get("catalogue_entry", "").partition("#")
+            h = next((h for h in idx["headings"] if h[0] == anchor), None)
+            if rel != "docs/reader/PAPER-CATALOGUE.md" or h is None:
+                errors.append("entry:" + key); continue
+            _, level, start = h
+            end = next((v[2] for v in idx["headings"] if v[2] > start and v[1] <= level), idx["line_count"])
+            targets = {t for line, href in idx["links"] if start <= line < end
+                       if (t := self.mod.resolve_reader_link(ROOT, rel, href)) is not None}
+            for alias in primaries:
+                path = self.aliases[alias]["public_path"]
+                if path not in {cross["sources"][s]["path"] for s in w["source_keys"]}:
+                    errors.append("primary:" + alias)
+                if path not in {p for p, _ in targets}:
+                    errors.append("source-route:" + alias)
+            if not any(a for p,a in targets if p in {self.aliases[n]["public_path"] for n in primaries}):
+                errors.append("section:" + key)
+            if (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", "") not in targets:
+                errors.append("context-owner:" + key)
+        return errors
+
+    def test_late_context_and_typed_control_are_not_hidden_in_old_component_routes(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+
+    def test_removing_a_late_work_preserves_links_but_fails_coverage(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for key in self.EXPECTED:
+            altered = deepcopy(self.cross)
+            altered["works"] = [w for w in altered["works"] if w["key"] != key]
+            self.assertIn("missing-work:" + key, self.errors(altered, self.text))
+
+    def test_existing_wrong_source_and_dropped_context_support_are_rejected(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        for key, (_, parts, primary) in self.EXPECTED.items():
+            path = self.aliases[primary[0]]["public_path"]
+            wrong = self.aliases[next(v[2][0] for k,v in self.EXPECTED.items() if k != key)]["public_path"]
+            changed = self.text.replace("../../" + path, "../../" + wrong)
+            self.assertNotEqual(changed, self.text)
+            self.assertIn("source-route:" + primary[0], self.errors(self.cross, changed))
+            altered = deepcopy(self.cross)
+            work = next(w for w in altered["works"] if w["key"] == key)
+            work["supporting_source_keys"] = []
+            self.assertIn("context-coverage:" + key, self.errors(altered, self.text))
+
+    def test_late_result_keeps_original_formal_evidence_and_distinct_current_context(self):
+        self.assertEqual(self.errors(self.cross, self.text), [])
+        work = next(w for w in self.cross["works"] if w["key"] == "t20-emergence-type-control")
+        result_id = "T20-EMERGENCE-TYPE-CONTROL"
+        self.assertEqual(work["existing_result_ids"], [result_id])
+        paths = {self.cross["sources"][s]["path"] for s in work["source_keys"] + work.get("supporting_source_keys", [])}
+        required = {self.source_rows[s]["public_path"] for s in self.claims[result_id]["source_ids"]}
+        self.assertTrue(required <= paths)
+        for role, parts, primaries in self.EXPECTED.values():
+            for alias in primaries:
+                self.assertTrue(any(self.cross["sources"][s]["path"] == self.aliases[alias]["public_path"]
+                                    for w in self.cross["works"] for s in w["source_keys"]))
+        # No owner-only DOCX is smuggled into the declared public reading forms.
+        for w in self.cross["works"]:
+            if w["key"] in self.EXPECTED:
+                self.assertTrue(all(not self.cross["sources"][s]["path"].endswith(".docx") for s in w["source_keys"]))
+
+
 if __name__ == "__main__":
     unittest.main()

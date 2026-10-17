@@ -2190,6 +2190,291 @@
       "path": "experiments/orthemology-v5-successors/source-store/00be19a7990eb0987d93315b4cdf47ea2331173a091f1adac93afcaae5fbc8d1/SOURCE_PACKAGE.json",
       "sha256": "00be19a7990eb0987d93315b4cdf47ea2331173a091f1adac93afcaae5fbc8d1",
       "read_scope": "Finite source-index and component-role inspection only; no complete body reading, fresh execution or independent qualification claimed."
+    },
+    "t20-context-ffcb4f2974295b89": {
+      "path": "experiments/orthemology-v5-successors/groups/t20-successor/README.md",
+      "sha256": "58a321c775874919b166e1963871d033d436e834c21d12367b5358ba8059fa08",
+      "read_scope": "Original collection/result/history owner inspected for exact selection, currentness and evidence scope; no scientific re-registration or new execution."
+    },
+    "t20-context-50e3ae6b35c1b914": {
+      "path": "experiments/orthemology-v5-successors/groups/t20-successor/CONTEXT_SOURCE_INDEX.json",
+      "sha256": "cb2acbc6c3dc795c91ef18192a2077d7cba513761eec291a01b99c7ef178b31e",
+      "read_scope": "Original collection/result/history owner inspected for exact selection, currentness and evidence scope; no scientific re-registration or new execution."
+    },
+    "t20-context-a54aa7343c45e65c": {
+      "path": "experiments/orthemology-v5-successors/groups/t20-successor/LATE_RESULT_MAP.json",
+      "sha256": "78e3bfaa73b0d44d18e5a2547fe4eaabafff94e788f8bfa42144c83f551d6c68",
+      "read_scope": "Original collection/result/history owner inspected for exact selection, currentness and evidence scope; no scientific re-registration or new execution."
+    },
+    "t20-context-d71b24a06b989098": {
+      "path": "docs/provenance/v5-successors/RESULT_STATUS.json",
+      "sha256": "3e5917699c40b50fbd22ee4120b365b70bc32123b27d6ff9dac8eee9b1c5192e",
+      "read_scope": "Original collection/result/history owner inspected for exact selection, currentness and evidence scope; no scientific re-registration or new execution."
+    },
+    "t20-context-2152781ca95abe3a": {
+      "path": "docs/provenance/v5-successors/T20_CONTEXT_REAPPRAISAL_HISTORY.json",
+      "sha256": "2bef695ce95711b3cb30540e429dd578024cbd25ca357e0ec76f9ebccc09e8d5",
+      "read_scope": "Original collection/result/history owner inspected for exact selection, currentness and evidence scope; no scientific re-registration or new execution."
+    },
+    "t20-context-0b68b4e04d63ca41": {
+      "path": "experiments/orthemology-v5-successors/source-store/3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05/SOURCE_ARGUMENT.md",
+      "sha256": "3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05",
+      "read_scope": "Selected argument stages, complete-power and same-bearer quantifiers, premise-preservation matrix, final reconciliation and reassessment conclusions read. Witness records and the inherited warrant review were checked at their declared roles/limits; no new primary-text authentication."
+    },
+    "t20-context-ecf7fbe62ac0ce2c": {
+      "path": "experiments/orthemology-v5-successors/source-store/aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67/MODEL_AUDIT.md",
+      "sha256": "aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67",
+      "read_scope": "Selected argument stages, complete-power and same-bearer quantifiers, premise-preservation matrix, final reconciliation and reassessment conclusions read. Witness records and the inherited warrant review were checked at their declared roles/limits; no new primary-text authentication."
+    },
+    "t20-context-98024c1af5d8a2a9": {
+      "path": "experiments/orthemology-v5-successors/source-store/3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c/ROOT_REASSESSMENT.md",
+      "sha256": "3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c",
+      "read_scope": "Selected argument stages, complete-power and same-bearer quantifiers, premise-preservation matrix, final reconciliation and reassessment conclusions read. Witness records and the inherited warrant review were checked at their declared roles/limits; no new primary-text authentication."
+    },
+    "t20-context-9e0e296f60121506": {
+      "path": "experiments/orthemology-v5-successors/source-store/5225d5028cc8c6f0989c3363aeef29d81c9c76a9a3ba5cf167f7f4f6b4822526/PREMISE_MAP.json",
+      "sha256": "5225d5028cc8c6f0989c3363aeef29d81c9c76a9a3ba5cf167f7f4f6b4822526",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-5a9f58117bdcc39f": {
+      "path": "experiments/orthemology-v5-successors/source-store/6044a7b5b78e5cbb1891e9fe9a348b9348142a6ef0ad6e03b700c5d8d64e169c/DIRECT_READING_RECEIPT.json",
+      "sha256": "6044a7b5b78e5cbb1891e9fe9a348b9348142a6ef0ad6e03b700c5d8d64e169c",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-6aa73187c91cdd44": {
+      "path": "experiments/orthemology-v5-successors/source-store/b81cabc1187f91ecf0881cf7d44337eae1a7494d3b6c5ca7c0deae31f03f097c/MODEL_AUDIT.json",
+      "sha256": "b81cabc1187f91ecf0881cf7d44337eae1a7494d3b6c5ca7c0deae31f03f097c",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-348f49ac0d3c8f04": {
+      "path": "experiments/orthemology-v5-successors/source-store/598e7fa0b00649b52f9e2879902e27a4051c004c67052e23ff7355ac724fff6d/ROOT_READING_RECEIPT.json",
+      "sha256": "598e7fa0b00649b52f9e2879902e27a4051c004c67052e23ff7355ac724fff6d",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-bb6e2bb0179f0b04": {
+      "path": "experiments/orthemology-v5-successors/source-store/f75458925a91eba498182217fe4b045349d23591c98433210783e54b136d99fe/REVIEW.md",
+      "sha256": "f75458925a91eba498182217fe4b045349d23591c98433210783e54b136d99fe",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-61f16475efb4c8b6": {
+      "path": "experiments/orthemology-v5-successors/source-store/6ff423aac85003b457a0ab92a802e74d0fc383db3e93ca9e6dd18e2dcbe1d43c/EVIDENCE_BINDINGS.json",
+      "sha256": "6ff423aac85003b457a0ab92a802e74d0fc383db3e93ca9e6dd18e2dcbe1d43c",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-90226fc480da0577": {
+      "path": "experiments/orthemology-v5-successors/source-store/fce3d1d34a84ec8b7bcc8be099f6d5ca98387ba770c1fb4c4eb90a532bc2d1d6/VERIFICATION_RECEIPT.json",
+      "sha256": "fce3d1d34a84ec8b7bcc8be099f6d5ca98387ba770c1fb4c4eb90a532bc2d1d6",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-af8a858a42c785cc": {
+      "path": "experiments/orthemology-v5-successors/source-store/a813631452c93dc9fa9696ac92f194edb86e2c2eb13ce749321710002018ff16/CONTEXT_SCOPE.md",
+      "sha256": "a813631452c93dc9fa9696ac92f194edb86e2c2eb13ce749321710002018ff16",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-9cf05a485c9c30c5": {
+      "path": "experiments/orthemology-v5-successors/source-store/8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27/ROOT_CURRENT_APPRAISAL_20261007_143400.md",
+      "sha256": "8b60a62d8956549cdd3a0e22f7101b0bbbc140840e49740cdc248e443f43af27",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-da3cd62a14f60946": {
+      "path": "experiments/orthemology-v5-successors/source-store/56faca3c16d90d05ff56fa8a0cf93931cfdd08055e64817e31da560c54bf2839/ROOT_CURRENT_APPRAISAL_20261007_143400.json",
+      "sha256": "56faca3c16d90d05ff56fa8a0cf93931cfdd08055e64817e31da560c54bf2839",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-1ee6445bb96feebf": {
+      "path": "experiments/orthemology-v5-successors/source-store/06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8/AUDIT.md",
+      "sha256": "06a7ee700f8f6a18d2618d1693159d192054bef63e1f31c4520ec02aedd199d8",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-ff0bd70503d17806": {
+      "path": "experiments/orthemology-v5-successors/source-store/94116a152d1bfcc2b434322c75c31357cf9cbe7b84ad5db0c2920ac976b04f95/RESPONSE.md",
+      "sha256": "94116a152d1bfcc2b434322c75c31357cf9cbe7b84ad5db0c2920ac976b04f95",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-5e119dcd4fa30ec7": {
+      "path": "experiments/orthemology-v5-successors/source-store/c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd/REPORT.md",
+      "sha256": "c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-efd1da7e8edf7f31": {
+      "path": "experiments/orthemology-v5-successors/source-store/ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871/REPORT_FINAL_SOURCE_READBACK.md",
+      "sha256": "ce69a2ea0642ea26272d0d3635af5a880f801e4b82e1859ed9aa8813d14e4871",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-74dd60aa0a891963": {
+      "path": "experiments/orthemology-v5-successors/source-store/7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4/GUIDE.md",
+      "sha256": "7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-71c9fe92c94a1873": {
+      "path": "experiments/orthemology-v5-successors/source-store/95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998/READING_INDEX.json",
+      "sha256": "95f8c77ed7ebd217a5108669ad911ee00a5e92d17c7aab641c8f1f10a7ddf998",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-c574e25d03cec9b6": {
+      "path": "experiments/orthemology-v5-successors/source-store/3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50/LOCUS_AUDIT.md",
+      "sha256": "3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-4d720e9c85d59c23": {
+      "path": "experiments/orthemology-v5-successors/source-store/82619f3eea7ba76ed830531f8a8f76daba0bbd4835aa7934892557ea01b89740/LOCUS_AUDIT.json",
+      "sha256": "82619f3eea7ba76ed830531f8a8f76daba0bbd4835aa7934892557ea01b89740",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-81e36052bbb4764a": {
+      "path": "experiments/orthemology-v5-successors/source-store/763a7bbaf28a7bc2f06af67738aa6c9f3abeeaa68ba65c36db1181a4f9acc2c7/READING_RECEIPTS.json",
+      "sha256": "763a7bbaf28a7bc2f06af67738aa6c9f3abeeaa68ba65c36db1181a4f9acc2c7",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-f83473ce0f254c98": {
+      "path": "experiments/orthemology-v5-successors/source-store/3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b/LOCUS_AUDIT.md",
+      "sha256": "3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-0a444f7d0ca89652": {
+      "path": "experiments/orthemology-v5-successors/source-store/14ba010537414ceb6373ec27fe629242a6ea71af51fbe9fabcfc7c0bb74d353f/LOCUS_AUDIT.json",
+      "sha256": "14ba010537414ceb6373ec27fe629242a6ea71af51fbe9fabcfc7c0bb74d353f",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-70c71ceb610ef4fa": {
+      "path": "experiments/orthemology-v5-successors/source-store/0443ae4deb08dd50440d607ea73dcb00a3b73c384ec62b94083756f4fa28d9d7/SOURCE_IDENTITY.json",
+      "sha256": "0443ae4deb08dd50440d607ea73dcb00a3b73c384ec62b94083756f4fa28d9d7",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-ac4b8ef175b2fd0d": {
+      "path": "experiments/orthemology-v5-successors/source-store/f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73/TEXT_READ_RECEIPTS.json",
+      "sha256": "f928dec56b29ac9297bf84a66118418f6c4d8309dda5314a31e21f319dd75e73",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-18bfc1546a5417da": {
+      "path": "experiments/orthemology-v5-successors/source-store/762a40fb887cab90cedc153d068fbe92aea97ccb3bd31b6490213a00ec118f33/IMAGE_READ_RECEIPTS.json",
+      "sha256": "762a40fb887cab90cedc153d068fbe92aea97ccb3bd31b6490213a00ec118f33",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-918e944b80428de4": {
+      "path": "experiments/orthemology-v5-successors/source-store/054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101/PAGE_CORRESPONDENCE.json",
+      "sha256": "054c0d46bfa050d5146664154b73dc0777afae16af6d8d7b4d3325505c6fb101",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-352dc901e361c4f6": {
+      "path": "experiments/orthemology-v5-successors/source-store/24a5764f673b548d74352bc7418808569f4c18b1af7b4a91f2fa46df3a40a22b/PREMISE_EDGES.json",
+      "sha256": "24a5764f673b548d74352bc7418808569f4c18b1af7b4a91f2fa46df3a40a22b",
+      "read_scope": "Original current result-owner evidence component attached without replacing its prior classification, statement or historical receipt. No fresh scientific replay."
+    },
+    "t20-context-4b35bfe9a4c02fe6": {
+      "path": "experiments/orthemology-v5-successors/source-store/e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05/AUDIT.md",
+      "sha256": "e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05",
+      "read_scope": "Complete 61-line audit and 152-line OriginationTypeControl.lean read; source typing, modal/actual quantifiers and selected historical execution scope examined. The kernel was not replayed in this refactor."
+    },
+    "t20-context-f515c97a28e8f390": {
+      "path": "experiments/orthemology-v5-successors/source-store/e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe/OriginationTypeControl.lean",
+      "sha256": "e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe",
+      "read_scope": "Complete 61-line audit and 152-line OriginationTypeControl.lean read; source typing, modal/actual quantifiers and selected historical execution scope examined. The kernel was not replayed in this refactor."
+    },
+    "t20-context-315ed4198d90db68": {
+      "path": "experiments/orthemology-v5-successors/source-store/171f38cd4bb5fc3c44cde69be7c3a04718322db771ec27b3a66d897d829ae7e3/DEFINITION_BINDINGS.json",
+      "sha256": "171f38cd4bb5fc3c44cde69be7c3a04718322db771ec27b3a66d897d829ae7e3",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-aa73bc461b028682": {
+      "path": "experiments/orthemology-v5-successors/source-store/fd3f503d6f1dd9ce5b164300154c9b4cc4cd477ed026804ff754338452815bd6/SOURCE_BINDINGS.json",
+      "sha256": "fd3f503d6f1dd9ce5b164300154c9b4cc4cd477ed026804ff754338452815bd6",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-0139809d08156ebc": {
+      "path": "experiments/orthemology-v5-successors/source-store/6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60/OverreachRejected.lean",
+      "sha256": "6dfd3ab5400bad336045e449400bb50f5066c003cf10c9413b447b8d36d09c60",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-c1166beeb763476f": {
+      "path": "experiments/orthemology-v5-successors/source-store/5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b/lean-version.log",
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-3aa628a3cb160604": {
+      "path": "experiments/orthemology-v5-successors/source-store/862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d/final-check.log",
+      "sha256": "862f03ed380abb3763d3629b215afd1558db964979196fc2eee56d7b7404751d",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-d5b59a0785d5b045": {
+      "path": "experiments/orthemology-v5-successors/source-store/4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2/overreach-rejection.log",
+      "sha256": "4d9dfb6202b1db5e0c84204e6bd37fffeca656fa96be634a4a4148cc5c1b28e2",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-74c9346787af3012": {
+      "path": "experiments/orthemology-v5-successors/source-store/7d551a8bed8a04c435a8c0e9da8d0ae895bc193bd428ea9bab1221468da55dc2/first-check.log",
+      "sha256": "7d551a8bed8a04c435a8c0e9da8d0ae895bc193bd428ea9bab1221468da55dc2",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-1241dd1c3075bb3d": {
+      "path": "experiments/orthemology-v5-successors/source-store/79d636ad07747e88f5fe3621d360dee3008a0aded61224fd93fce27c332739a2/direct-imports.log",
+      "sha256": "79d636ad07747e88f5fe3621d360dee3008a0aded61224fd93fce27c332739a2",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-43b2cebbfd4d770a": {
+      "path": "experiments/orthemology-v5-successors/source-store/4690dbd95f752e80c1eed8cff5788b73088893493cc802acc18ffe32921dba1c/EXECUTION_RECEIPT.json",
+      "sha256": "4690dbd95f752e80c1eed8cff5788b73088893493cc802acc18ffe32921dba1c",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-2441c8fab1419f81": {
+      "path": "experiments/orthemology-v5-successors/source-store/176884b53175d142365a74b4d3a1832ff9f4e0dc2730000e327cb377a4dd1de5/ACT_PRODUCT_CONTEXT.json",
+      "sha256": "176884b53175d142365a74b4d3a1832ff9f4e0dc2730000e327cb377a4dd1de5",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-613e6f6df5f02996": {
+      "path": "experiments/orthemology-v5-successors/source-store/e15e041b39a94b0a63f6553b6d6c5072b2229328bda23a4e5232803c0b6aae67/README.md",
+      "sha256": "e15e041b39a94b0a63f6553b6d6c5072b2229328bda23a4e5232803c0b6aae67",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-c0d2319722e54e6f": {
+      "path": "experiments/orthemology-v5-successors/source-store/91fffcff6c40dfe9d25979f2f295636afa7927fd6f6e989b99fdbe06fa2621cf/REPRODUCE.md",
+      "sha256": "91fffcff6c40dfe9d25979f2f295636afa7927fd6f6e989b99fdbe06fa2621cf",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-2d40e3bf4fe91cdd": {
+      "path": "experiments/orthemology-v5-successors/source-store/cb3e43c7463ac02be9a528a6403e4bde5bd48b87a6113841950bde6b07c740b5/METADATA_CORRECTION.json",
+      "sha256": "cb3e43c7463ac02be9a528a6403e4bde5bd48b87a6113841950bde6b07c740b5",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-9d39902794ae00dc": {
+      "path": "experiments/orthemology-v5-successors/source-store/b790f73a1b03704eeffcb3ad431ebeb6399f642cd376d0fbe25f90e1bdf514a5/SPAN_VALIDATION.json",
+      "sha256": "b790f73a1b03704eeffcb3ad431ebeb6399f642cd376d0fbe25f90e1bdf514a5",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-264a134cf542c58e": {
+      "path": "experiments/orthemology-v5-successors/source-store/3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86/REVIEW.md",
+      "sha256": "3afc19f45c2b17f175acb36672352c64ef8623b4179af095c4fb3aadf9033a86",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-2c703150654f9f61": {
+      "path": "experiments/orthemology-v5-successors/source-store/f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7/ReviewerProbes.lean",
+      "sha256": "f176d255baf686b29e4516dfd5796907ed3345befa0370d9812f57faeab826b7",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-d7f7389148983c80": {
+      "path": "experiments/orthemology-v5-successors/source-store/0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797/probes.log",
+      "sha256": "0335244aeb3668c4f81d7be83aea5d91bbbdb214762e733933503712ae5ad797",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-9bf89b5d289e2a64": {
+      "path": "experiments/orthemology-v5-successors/source-store/16ee01f25a93117b0dd893bfb06b2f73a974594ef794650aada7e1231266b6d3/SOURCE_BINDINGS.json",
+      "sha256": "16ee01f25a93117b0dd893bfb06b2f73a974594ef794650aada7e1231266b6d3",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-eb532c8781d3180b": {
+      "path": "experiments/orthemology-v5-successors/source-store/8b3627450a5d90bc3d2e093425894fc785f816721ded33ebed532755a6faffff/EXECUTION_RECEIPT.json",
+      "sha256": "8b3627450a5d90bc3d2e093425894fc785f816721ded33ebed532755a6faffff",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-1da16d3de2bc667d": {
+      "path": "experiments/orthemology-v5-successors/source-store/5ea6ba565b18e0d20d064f7672d3cab80c5be674c67eef53abd5226ad31a5659/REVIEW.json",
+      "sha256": "5ea6ba565b18e0d20d064f7672d3cab80c5be674c67eef53abd5226ad31a5659",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
+    },
+    "t20-context-351ac7f43e7a33f8": {
+      "path": "experiments/orthemology-v5-successors/source-store/ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc/MANIFEST.json",
+      "sha256": "ccf9167bbb612d800a14b528407c6952101f5d217767922f4f074068277ee5fc",
+      "read_scope": "Exact public alias and role attached through the original context index. Supporting notes, receipts, model/code or witness metadata were structurally inspected, not credited as another independent work or a fresh execution."
     }
   },
   "works": [
@@ -2920,6 +3205,191 @@
       ],
       "review_status": "AUTHOR_CURATED; independent candidate review pending",
       "explanation": "The catalogue owns this source-bound account; original component, result, source and review owners retain their scientific scope. Historical staging labels are not current denials of later work."
+    },
+    {
+      "key": "t20-cooperation-context",
+      "title": "Cooperation, complete efficacy and the later common-source reassessment",
+      "role": "synthesis",
+      "source_keys": [
+        "t20-context-0b68b4e04d63ca41",
+        "t20-context-ecf7fbe62ac0ce2c",
+        "t20-context-98024c1af5d8a2a9"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-0b68b4e04d63ca41",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-context-ecf7fbe62ac0ce2c",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-context-98024c1af5d8a2a9",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-0a444f7d0ca89652",
+        "t20-context-18bfc1546a5417da",
+        "t20-context-1ee6445bb96feebf",
+        "t20-context-2152781ca95abe3a",
+        "t20-context-348f49ac0d3c8f04",
+        "t20-context-352dc901e361c4f6",
+        "t20-context-4d720e9c85d59c23",
+        "t20-context-50e3ae6b35c1b914",
+        "t20-context-5a9f58117bdcc39f",
+        "t20-context-5e119dcd4fa30ec7",
+        "t20-context-61f16475efb4c8b6",
+        "t20-context-6aa73187c91cdd44",
+        "t20-context-70c71ceb610ef4fa",
+        "t20-context-71c9fe92c94a1873",
+        "t20-context-74dd60aa0a891963",
+        "t20-context-81e36052bbb4764a",
+        "t20-context-90226fc480da0577",
+        "t20-context-918e944b80428de4",
+        "t20-context-9cf05a485c9c30c5",
+        "t20-context-9e0e296f60121506",
+        "t20-context-a54aa7343c45e65c",
+        "t20-context-ac4b8ef175b2fd0d",
+        "t20-context-af8a858a42c785cc",
+        "t20-context-bb6e2bb0179f0b04",
+        "t20-context-c574e25d03cec9b6",
+        "t20-context-d71b24a06b989098",
+        "t20-context-da3cd62a14f60946",
+        "t20-context-efd1da7e8edf7f31",
+        "t20-context-f83473ce0f254c98",
+        "t20-context-ff0bd70503d17806",
+        "t20-context-ffcb4f2974295b89",
+        "t20-source-3ab994ee6eabe8c3",
+        "t20-source-8a18f5c6f22b2350",
+        "t20-source-ac89688d8928b2b1",
+        "t20-source-ae2c79c503668a61",
+        "t20-source-cbcb1f5a7ee40e31",
+        "t20-source-d4cc82cf15513e0e"
+      ],
+      "existing_result_ids": [
+        "T20-FOUNDATIONAL-PREMISE-SYNTHESIS"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#cooperation-complete-efficacy-and-the-later-common-source-reassessment",
+      "placement": [
+        "Later Twentieth source context",
+        "Necessary being, common provision and semantic fidelity"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this bounded synopsis. The original result ledger and dated context history own statements and their scientific standing; inherited reviews are not C05 review of this refactor."
+    },
+    {
+      "key": "t20-emergence-type-control",
+      "title": "Typed emergence: fresh acts, created effects and a stipulated activity gap",
+      "role": "research-note",
+      "source_keys": [
+        "t20-context-4b35bfe9a4c02fe6",
+        "t20-context-f515c97a28e8f390"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-4b35bfe9a4c02fe6",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-context-f515c97a28e8f390",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-0139809d08156ebc",
+        "t20-context-0a444f7d0ca89652",
+        "t20-context-1241dd1c3075bb3d",
+        "t20-context-18bfc1546a5417da",
+        "t20-context-1da16d3de2bc667d",
+        "t20-context-2152781ca95abe3a",
+        "t20-context-2441c8fab1419f81",
+        "t20-context-264a134cf542c58e",
+        "t20-context-2c703150654f9f61",
+        "t20-context-2d40e3bf4fe91cdd",
+        "t20-context-315ed4198d90db68",
+        "t20-context-348f49ac0d3c8f04",
+        "t20-context-351ac7f43e7a33f8",
+        "t20-context-352dc901e361c4f6",
+        "t20-context-3aa628a3cb160604",
+        "t20-context-43b2cebbfd4d770a",
+        "t20-context-4d720e9c85d59c23",
+        "t20-context-50e3ae6b35c1b914",
+        "t20-context-613e6f6df5f02996",
+        "t20-context-70c71ceb610ef4fa",
+        "t20-context-74c9346787af3012",
+        "t20-context-81e36052bbb4764a",
+        "t20-context-918e944b80428de4",
+        "t20-context-98024c1af5d8a2a9",
+        "t20-context-9bf89b5d289e2a64",
+        "t20-context-9d39902794ae00dc",
+        "t20-context-a54aa7343c45e65c",
+        "t20-context-aa73bc461b028682",
+        "t20-context-ac4b8ef175b2fd0d",
+        "t20-context-af8a858a42c785cc",
+        "t20-context-c0d2319722e54e6f",
+        "t20-context-c1166beeb763476f",
+        "t20-context-c574e25d03cec9b6",
+        "t20-context-d5b59a0785d5b045",
+        "t20-context-d71b24a06b989098",
+        "t20-context-d7f7389148983c80",
+        "t20-context-eb532c8781d3180b",
+        "t20-context-f83473ce0f254c98",
+        "t20-context-ffcb4f2974295b89"
+      ],
+      "existing_result_ids": [
+        "T20-EMERGENCE-TYPE-CONTROL"
+      ],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#typed-emergence-fresh-acts-created-effects-and-a-stipulated-activity-gap",
+      "placement": [
+        "Later Twentieth source context",
+        "Necessary being, common provision and semantic fidelity"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this bounded synopsis. The original result ledger and dated context history own statements and their scientific standing; inherited reviews are not C05 review of this refactor."
+    },
+    {
+      "key": "t20-divine-action-context",
+      "title": "Divine-action source audits and the stronger activity premise",
+      "role": "review",
+      "source_keys": [
+        "t20-context-f83473ce0f254c98",
+        "t20-context-c574e25d03cec9b6"
+      ],
+      "reading_forms": [
+        {
+          "source": "t20-context-f83473ce0f254c98",
+          "relationship": "retained-source-reading-projection"
+        },
+        {
+          "source": "t20-context-c574e25d03cec9b6",
+          "relationship": "retained-source-reading-projection"
+        }
+      ],
+      "supporting_source_keys": [
+        "t20-context-0a444f7d0ca89652",
+        "t20-context-18bfc1546a5417da",
+        "t20-context-2152781ca95abe3a",
+        "t20-context-352dc901e361c4f6",
+        "t20-context-4d720e9c85d59c23",
+        "t20-context-50e3ae6b35c1b914",
+        "t20-context-70c71ceb610ef4fa",
+        "t20-context-81e36052bbb4764a",
+        "t20-context-918e944b80428de4",
+        "t20-context-a54aa7343c45e65c",
+        "t20-context-ac4b8ef175b2fd0d",
+        "t20-context-d71b24a06b989098",
+        "t20-context-ffcb4f2974295b89"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#divine-action-source-audits-and-the-stronger-activity-premise",
+      "placement": [
+        "Later Twentieth source context",
+        "Necessary being, common provision and semantic fidelity"
+      ],
+      "review_status": "AUTHOR_CURATED; independent candidate review pending",
+      "explanation": "The catalogue owns this bounded synopsis. The original result ledger and dated context history own statements and their scientific standing; inherited reviews are not C05 review of this refactor."
     }
   ],
   "relations": [
