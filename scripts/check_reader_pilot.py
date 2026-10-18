@@ -91,9 +91,34 @@ def check_collection_dispositions(rows, owners, cross):
         return ["collection-coverage: malformed collection dispositions"]
     works = {w["key"] for w in cross.get("works", [])}
     sources = cross.get("sources", {})
-    for required in owners.get("disposition_required_groups", []):
+    required_groups = set(owners.get("disposition_required_groups", []))
+    if cross.get("coverage_stage") == "reader-candidate":
+        required_groups.update(groups)
+    for required in sorted(required_groups):
         if required not in declared:
             errors.append("collection-missing: " + required)
+    primary_paths = set(owners.get("required_work_sources", []))
+    primary_works, work_paths = {}, {}
+    if any(isinstance(record, dict) and "supporting_population" in record
+           for record in declared.values()):
+        for work in cross.get("works", []):
+            keys, forms = work.get("source_keys", []), work.get("reading_forms", [])
+            supporting = work.get("supporting_source_keys", [])
+            if any(not isinstance(refs, list) for refs in (keys, forms, supporting)):
+                errors.append("collection-source: malformed source references " + str(work.get("key")))
+                continue
+            keys = keys + [form.get("source") if isinstance(form, dict) else None for form in forms]
+            for references, primary in ((keys, True), (supporting, False)):
+                for key in references:
+                    source = sources.get(key) if isinstance(key, str) else None
+                    if (not isinstance(source, dict) or not isinstance(source.get("path"), str)
+                            or not source["path"]):
+                        errors.append("collection-source: undefined source " + str(key))
+                        continue
+                    work_paths.setdefault(work["key"], set()).add(source["path"])
+                    if primary:
+                        primary_paths.add(source["path"])
+                        primary_works.setdefault(source["path"], set()).add(work["key"])
     for name, record in declared.items():
         if name not in groups or not isinstance(record, dict):
             errors.append("collection-coverage: unknown or malformed group " + str(name))
@@ -106,19 +131,77 @@ def check_collection_dispositions(rows, owners, cross):
             errors.append("collection-coverage: malformed items " + name)
             continue
         paths = [i.get("path") for i in items]
+        if any(not isinstance(path, str) or not path for path in paths):
+            errors.append("collection-coverage: malformed item paths " + name)
+            continue
         if len(paths) != len(set(paths)):
             errors.append("collection-duplicate: " + name)
-        if set(paths) != expected:
+        if "supporting_population" in record:
+            # Only residual support/history is implicit. Sources and reading
+            # forms stay explicit even when their work spans several groups.
+            required = {path for path in primary_paths if matches(path, g["include"])
+                        and not matches(path, g.get("exclude", []))}
+            if set(paths) - expected or required - set(paths):
+                errors.append("collection-coverage: " + name + " has extra paths or omitted work sources")
+            primary_roles = {"work-source", "historical-edition", "formal-component",
+                             "executable-component", "collection-guide"}
+            for item in items:
+                if item["path"] in required:
+                    if (not isinstance(item.get("work"), str)
+                            or item["work"] not in primary_works.get(item["path"], set())):
+                        errors.append("collection-work: " + item["path"] + " is not bound to its declared work")
+                    if not isinstance(item.get("role"), str) or item["role"] not in primary_roles:
+                        errors.append("collection-role: " + item["path"] + " needs a primary or component role")
+            support = record["supporting_population"]
+            if not isinstance(support, dict):
+                errors.append("collection-coverage: malformed supporting population " + name)
+            else:
+                has_destination = False
+                if "work_keys" in support:
+                    work_keys = support["work_keys"]
+                    related_works = {key for key, paths in work_paths.items() if paths & expected}
+                    if (not isinstance(work_keys, list) or not work_keys
+                            or any(not isinstance(key, str) or key not in related_works for key in work_keys)
+                            or len(work_keys) != len(set(work_keys))):
+                        errors.append("collection-work: invalid or unrelated supporting population " + name)
+                    else:
+                        has_destination = True
+                if "owner_paths" in support:
+                    owner_paths = support["owner_paths"]
+                    if (not isinstance(owner_paths, list) or not owner_paths
+                            or any(not isinstance(path, str) or path not in g.get("owners", [])
+                                   for path in owner_paths)
+                            or len(owner_paths) != len(set(owner_paths))):
+                        errors.append("collection-owner: invalid supporting population " + name)
+                    else:
+                        has_destination = True
+                if not has_destination:
+                    errors.append("collection-coverage: " + name + " lacks a work or owner support destination")
+                roles = support.get("roles")
+                support_roles = DISPOSITION_ROLES - {"work-source", "historical-edition"}
+                if (not isinstance(roles, list) or not roles
+                        or any(not isinstance(role, str) or role not in support_roles for role in roles)
+                        or len(roles) != len(set(roles))):
+                    errors.append("collection-role: invalid supporting population " + name)
+                scope_note = support.get("scope_note")
+                if not isinstance(scope_note, str) or not scope_note.strip():
+                    errors.append("collection-coverage: " + name + " lacks supporting population scope")
+        elif set(paths) != expected:
             errors.append("collection-coverage: " + name + " has missing or extra paths")
         if not record.get("scope") or not record.get("reading_record"):
             errors.append("collection-coverage: " + name + " lacks scope/reading record")
         basis = record.get("basis_sources", [])
-        if not basis or any(k not in sources for k in basis):
+        if (not isinstance(basis, list) or not basis
+                or any(not isinstance(key, str) or key not in sources for key in basis)):
             errors.append("collection-coverage: " + name + " lacks source-owner basis")
+        elif "supporting_population" in record and any(
+                not isinstance(sources[key], dict) or sources[key].get("path") not in g.get("owners", [])
+                for key in basis):
+            errors.append("collection-coverage: " + name + " basis must name actual collection owners")
         for item in items:
-            if item.get("role") not in DISPOSITION_ROLES:
+            if not isinstance(item.get("role"), str) or item["role"] not in DISPOSITION_ROLES:
                 errors.append("collection-role: " + str(item.get("path")))
-            if item.get("work") not in works:
+            if not isinstance(item.get("work"), str) or item["work"] not in works:
                 errors.append("collection-work: " + str(item.get("path")))
     return errors
 
@@ -318,8 +401,8 @@ def check(repo, owners, cross):
         fail("schema", "Unknown owner map")
     if cross.get("schema") != "orthemology-reader-crosswalk-v1":
         fail("schema", "Unknown crosswalk")
-    if cross.get("coverage_stage") != "representative-pilot":
-        fail("stage", "This checker qualifies a representative pilot only")
+    if cross.get("coverage_stage") not in ("representative-pilot", "reader-candidate"):
+        fail("stage", "This checker qualifies a representative pilot or reader candidate only")
     if owners.get("external_body_admissions") != []:
         fail("external", "This baseline contract admits no external bodies")
     try:
@@ -614,6 +697,15 @@ def check_reader_pages(repo, cross):
             except (ValueError, OSError, UnicodeError) as exc:
                 fail("reader-link", rel + " -> " + str(href) + ": " + str(exc))
         resolved_links[rel] = targets
+    if cross.get("coverage_stage") == "reader-candidate":
+        # This establishes destination existence. Section-to-work identity
+        # remains a separate, per-entry reading qualification.
+        for work in cross.get("works", []):
+            entry = work.get("catalogue_entry", "")
+            rel, separator, fragment = entry.partition("#") if isinstance(entry, str) else ("", "", "")
+            if (rel != "docs/reader/PAPER-CATALOGUE.md" or rel not in indexes
+                    or not separator or not fragment or fragment not in indexes[rel]["anchors"]):
+                fail("catalogue-entry", str(work.get("key")) + " lacks an existing catalogue section")
     journeys = cross.get("reader_journeys", [])
     ids = [j.get("id") for j in journeys if isinstance(j, dict)]
     if set(ids) != JOURNEYS or len(ids) != len(JOURNEYS) or len(ids) != len(journeys):

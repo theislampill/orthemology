@@ -1,4 +1,36 @@
-# Issue 35 — pilot qualification and preview boundary
+# Issue 35 — reader qualification
+
+## C03/C04 integrated candidate — 18 October 2026
+
+**IN_PROGRESS.** The owner-amended scholarly candidate contains 448 work/collection entries and 1,620 source bindings across all 26 frozen owner groups. The [current execution handoff](PROGRESS.md) and [coverage record](COLLECTION-COVERAGE.md#18-october-scholarly-coverage-candidate) identify the actual implementation and review boundary. The containing SHA/tree and subsequent hosted-CI conclusion are recorded in [draft PR #36](https://github.com/theislampill/orthemology/pull/36), avoiding a self-referential commit claim.
+
+### Compact ownership controls and separate technical review
+
+The C04 implementation retains explicit primary/reading-form items while assigning residual history to relevant work or actual collection owners. The original two exhaustive disposition records are unchanged. No scientific body, result ID, protection rule, publication pin or existing CI gate is weakened.
+
+The separate AI/model reviewer `/root/independent_technical_review` did not author the patch. It independently reproduced four false passes in the first version: an unrelated existing work assigned to a primary source, a support-only primary role, an unrelated residual work, and an unrelated existing basis source. The replacement rejects all four while accepting valid shared sources, native components and owner-only history groups. Independent execution of the repaired tests against the first version produced **29 assertion failures across 15 tests, zero errors**; the repaired focused set passed **81/81 normally and 81/81 under optimisation**. The live 448-entry/26-group disposition snapshot also passed, with both older exhaustive records equal to the published parent.
+
+Reviewed replacement patch SHA-256: `084582e11a9cb055f3e6376efdebd0d0ddf6fa7853ea002707ca10816af2a25f`. Its resulting checker is `bd5ac31409970f4decf02db1d1ddf14bfa57dd28c3c8cf7ca6de1863b4f7306b`; tests are `3711c629ccb0565de6ee73bd1e6a0a5000bdf94e13eed23bce4199d27c19c09a`. That review qualifies this bounded repair, not whole-corpus semantics or final C05 acceptance. The existing result-owner logic is unchanged. Generic catalogue validation establishes anchor existence; exact per-entry source identity remains an independent reading obligation.
+
+### Observed integrated checks
+
+In Python 3.12.14, all **311 reader tests, ten census tests and twenty T20 projection tests passed separately in normal and optimised modes**. The first reader run exposed two failures because a compatibility anchor entered the frozen reader-task section. Moving it inside its intended following section restored the exact original protocol; both targeted checks and both complete suites then passed. No prepared question or adjudication rule changed. The later result-index text repair was followed by **22 passing continuation/navigation tests** and source-owner comparison. These local results do not substitute for the unchanged hosted Python 3.11.9 workflow.
+
+Repeated current-state/manifest generation was byte-identical. Generation check, state convergence (including tamper/recovery controls), current-state, review-state, repository preservation and internal references all passed. Production reader and T20 projection gates passed normally and under optimisation; `git diff --check` passed. These gates are rerun after the final review-text and qualification-record edits before publication. Full hosted CI for that exact published revision remains separately observed. Completed M01–M05 remain reused; no new manual maintenance exercise was opened.
+
+### Independent scholarly review in progress
+
+Separate mathematical, philosophical and learning/critical-repair model reviewers compare authored summaries, relationships and currentness with their actual sources. Their preliminary findings have prompted meaningful repairs: explicit calibration/acquisition premises; provisional warranted common-source belief; positive lunar lower-link evidence with its distinct unresolved limits; the Fable constant-profile caveat; exact quartic, limit and parameter conventions; restored general-prior and endpoint-atom classifications; correct same-interface review attribution; and replacement of unsupported SC labels by the original T5/T6 result owners. The changes are reader corrections, not source repairs or new science.
+
+The further inherited-source checks distinguish a recorded withholding fixture from all service decorations, inverse state maps from timestamp-erasing events, and proved lawful finite action/region closure from the tail parity objective. Each correction follows the controlling source body; the source files themselves are unchanged.
+
+All five prepared independent-reader tasks remain **NOT_RUN** until a separate reader records answers before seeing the adjudication material. Final C05 must bind all review scopes, repair readbacks and actual reader journeys to the exact candidate. This is internal AI/model review, not external human peer review. C06 remains owner-controlled.
+
+---
+
+## Retained pilot qualification record
+
+The following C02/recovery record is historical. Its partial-preview instructions, old counts, pending-state statements and interpreter observations describe those earlier checkpoints; the current candidate and obligations are stated above. Original source-based answer keys and adverse readings remain preserved for subsequent adjudication.
 
 **IN PROGRESS. This record does not declare the full refactor, C02 independent acceptance or C03 complete.**
 

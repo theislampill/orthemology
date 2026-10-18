@@ -1,6 +1,6 @@
 # Verification, source inspection and maintenance
 
-> **Source-bound reader guide — curation in progress.** These routes explain the mapped scholarship without replacing its source or scientific-status owners. Remaining collection coverage and separate review are recorded in [the implementation progress](../project-closure/reader-refactor-issue-35/PROGRESS.md); this is not a complete-corpus or scientific-acceptance certificate.
+> **Reader candidate.** [Scope and review state](../project-closure/reader-refactor-issue-35/PROGRESS.md). Each cited work retains its own scientific standing.
 
 [Atlas](RESEARCH-ATLAS.md) · [Works](PAPER-CATALOGUE.md) · [Results](RESULT-INDEX.md) · [Frontiers](CURRENT-FRONTIERS.md) · [Applications](APPLICATIONS.md) · [Verification](VERIFICATION-GUIDE.md)
 
@@ -103,7 +103,9 @@ For each task retain the start page, visited links/anchors, exact target identit
 
 The reviewer adjudicates the recorded answers against the actual source passages. The existing [mechanical controls and semantic countercontrol record](../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md#mechanical-controls-and-maintenance-finding) shows that a fabricated universal human-cognition claim could retain valid mechanical routes. These prepared tasks make the independent comprehension obligation testable; they do not discharge it or replace the remaining C05 coverage, preservation, usability and maintenance review.
 
-## Checking this reader pilot
+## Checking reader sources and navigation
+
+<a id="checking-this-reader-pilot"></a>
 
 From the repository root, with the existing locked Python dependencies:
 
@@ -115,7 +117,7 @@ python -B -O tests/test_reader_pilot.py
 python -B scripts/check_reader_pilot.py
 ```
 
-These checks compare the representative crosswalk with its bounded candidate/owner population, bind exact sources, preserve composite and edition relationships, and reject specified omissions and mutations. **They do not establish complete work coverage or semantic fidelity.** A misleading explanation with valid source links can still pass mechanical checks; source-based reader review is therefore required.
+These checks compare the crosswalk with the frozen candidate/owner population, bind exact sources, preserve composite and edition relationships, and reject specified omissions and mutations. A reader candidate must disposition every owner group and retain an existing catalogue anchor for every work. Compact support records must still expose actual primary sources and reading forms; anchor existence alone does not prove section-to-work identity. **They do not establish complete work coverage or semantic fidelity.** A misleading explanation with valid source links can still pass mechanical checks; source-based reader review is therefore required.
 
 The optimisation runs above apply to these new validator tests. They are not an instruction to run historical scientific scripts under optimisation: assertion-based controls can lose checks in that mode, as the source recovery guide warns.
 
@@ -314,6 +316,18 @@ For [HasE](PAPER-CATALOGUE.md#eighteenth-hase-transport-and-inhabited-endpoint-c
 
 Use the [Arabic methodology reference](PAPER-CATALOGUE.md#arabic-reading-methodology-and-source-formal-feedback) to distinguish the selected body, the reading act and the claim that depends on it. The [original reading categories](../../experiments/orthemology-v5-successors/source-store/1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219/ARABIC_READING_METHOD.md#reading-stages) require actual evidence for a continuous first pass, a local return, a post-completion return or a question-triggered return. A triggered return can overlap the timing categories. A retrospective synthesis has its own value but adds no new primary-reading or proof-replay receipt.
 
+The [reading categories](../../experiments/orthemology-v5-successors/source-store/1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219/ARABIC_READING_METHOD.md#reading-stages) retain the actual scope and timing of each receipt:
+
+| Category | What the record must establish |
+|---|---|
+| AR-S1 | A continuous first pass over the selected received body; extraction and visual reading keep their separate scope. |
+| AR-S1R | A local return while the wider first traversal is still under way. |
+| AR-S2 | A direct primary return after the selected structure was understood as a whole; a section or volume does not stand for an entire historical work. |
+| AR-S3 | An evidenced question or model triggered a primary return. This can overlap AR-S1R or AR-S2; it is not simply the next step. |
+| AR-S4 | Synthesis of existing records, with no new primary-reading or proof-replay credit. This supplement has that role. |
+
+This distinction changes how a reader assesses the work. The [selected-body controls](../../experiments/orthemology-v5-successors/source-store/1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219/ARABIC_READING_METHOD.md#what-the-completed-studies-actually-show) identify a documented post-completion Darʾ return, distinguish several section/volume returns made during a larger traversal, and withhold a blanket post-completion label where the timing is not established. A later synthesis can improve understanding without becoming another primary reading or an independent witness.
+
 For a claimed source-to-theorem connection, inspect the case's **Return and chronology** and **Still open** sections. [The sign/delegation case](../../experiments/orthemology-v5-successors/source-store/182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8/CROSS_STREAM_CASES.md#ar-x05-use-signs-and-delegated-acts-at-their-actual-scope) preserves earlier primary returns while leaving its specialised formal transfer unimplemented. [The copied-observation case](../../experiments/orthemology-v5-successors/source-store/182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8/CROSS_STREAM_CASES.md#ar-x06-repeated-traces-do-not-identify-their-source-or-occurrence) supplies an interpretative link, not an Arabic premise of its statistical result. Relevance, date order and declaration names do not by themselves establish discovery history or fresh execution.
 
 Resolve the supplied aliases through the [finite context/source owner](../../experiments/orthemology-v5-successors/groups/t20-successor/CONTEXT_SOURCE_INDEX.json); a custody hash does not supply an omitted body. The [validation summary](../../experiments/orthemology-v5-successors/source-store/3a6e8f9587b050f8093dc48d15cc468b41b3c5a9afbfe5e167ad22707926f274/VALIDATION.json) is an attributed original-author record with an omitted complete check log and no claimed public replay. Keep its recorded scope separate from a new reader-test result. The supplement's retained 14:34 appraisal and the later cooperation reassessment also have different dated owners.
@@ -321,6 +335,8 @@ Resolve the supplied aliases through the [finite context/source owner](../../exp
 ## Checking the six-input Drive-corpus audit
 
 Start with the [Drive methodology reference](PAPER-CATALOGUE.md#six-supplied-drive-inputs-inherited-reading-and-t20-use) and its [original reading/return table](../../experiments/orthemology-v5-successors/source-store/866e0d85f3524013ce7e5e6df1907fe184139259028d6e9b4ded91379893f0fa/DRIVE_CORPUS.md#what-was-actually-read-and-revisited). Match the exact supplied object and one-based PDF coordinates before assessing the source use. The inherited T17 union, selected T18 returns, T20 *Oneness* receipt and separate Arabic witness are different evidence sets. The audit's reconciliation adds no new book reading or independent witness. The [T17 source guide](PAPER-CATALOGUE.md#guide-to-the-six-foundational-sources-and-their-interpretative-relationships) retains its original interpretative responsibility.
+
+The [inherited T17 coverage member](../../experiments/orthemology-v5-successors/source-store/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b/T17_SIX_SOURCE_COVERAGE.json) attests collective substantive reading of **1,393/1,393 supplied pages**, including the supplied ancillary material, with **190 distinct pages visually inspected**. It is neither one person's six-book claim nor an every-page image check. T18 revisited 188 distinct supplied pages and visually checked 22. Only *Oneness* has a retained fresh T20 exact-English-object receipt: all extracted text and thirteen selected image positions, including blanks and the five diagrams. These returns add no new page to the inherited supplied-page union. Later Arabic reading has its own object and coordinate system; it cannot be counted as another reading of an English translation. The audit itself adds zero primary-reading credit.
 
 Follow the [direct coverage member](../../experiments/orthemology-v5-successors/source-store/4833ff7cf28db11f9f39972feaf46961fb67d8f7b6e43561f24e68288f932e7b/T17_SIX_SOURCE_COVERAGE.json) and [source bindings](../../experiments/orthemology-v5-successors/source-store/4e41aaebbcd30e448cad2b3ac006511c219386e3a0b93d92c416f2ffef04c382/SOURCE_BINDINGS.json). E## identifies an original evidence record; B## identifies an original source-body check. Their original hashes differ in role from the selected public-projection hashes resolved by the [finite context/source owner](../../experiments/orthemology-v5-successors/groups/t20-successor/CONTEXT_SOURCE_INDEX.json). The coverage member's own byte hash and its internal coverage-record identifier also refer to different records. No one of these identifiers supplies an omitted original body.
 
@@ -462,4 +478,52 @@ The four original `part: source-guide` support entries 205–208 belong to the e
 
 **Verify each role's own Word/QA pairing.** The historical map selects [report v1](PAPER-CATALOGUE.md#the-twentieth-final-report-and-its-dated-research-assessment), this guide v1 and the unchanged [mathematical companion v2](PAPER-CATALOGUE.md#the-twentieth-mathematical-companion-and-its-original-result-owners). The separate QA records give 11, 18 and 19 pages; the map records their 48-page aggregate. Every `original_qa_record` has `body_included: false` and a distinct included public QA identity. The later current map explicitly retains the original/public v1 map identities, selects revised report/guide roles and totals 53 pages. Neither a swapped QA pairing nor replacement by the later map preserves the historical assertion. Document QA PASS does not establish scientific correctness, public availability of Word/image bodies, new rendering or current research adoption.
 
-This route allows a reader to compare a claim with its actual study, a conditional result with its assumptions, or an open question with the evidence it needs. Mechanical identity/route controls do not observe that comprehension. The existing [five independent-reader tasks](#independent-reader-comprehension-tasks-for-the-final-candidate) and J01–J07/T01–T18 contracts remain unchanged, with observations NOT_RUN until genuinely separate C05 review. The original four-record support tail is author-curated; the original six-source source-guide family remains unfinished because whole-index curation is still open.
+This route allows a reader to compare a claim with its actual study, a conditional result with its assumptions, or an open question with the evidence it needs. Mechanical identity/route controls do not observe that comprehension. The existing [five independent-reader tasks](#independent-reader-comprehension-tasks-for-the-final-candidate) and J01–J07/T01–T18 contracts remain unchanged, with observations NOT_RUN until genuinely separate C05 review. The original support tail is author-curated. [The source-study appraisals](PAPER-CATALOGUE.md#source-studies-and-historically-distinct-appraisals) now provide the substantive collection routes; remaining support objects have explicit collection ownership under the owner amendment, without claiming every-body reading.
+
+### Reading Twentieth source and evidence records
+
+The [live collection guide](../../research/t20-live-20261009/README.md) preserves the checkpoint sequence and supplement. Within a family, a report's revised form, frozen reviewed copy, implementation companion and receipt can have different evidential roles. A result-bound internal review applies to its stated version; it is not external peer review. Checkpoint membership and matching hashes establish a source route, not an additional discovery.
+
+The [v6 guide](../../research/t20-v6-20261012/README.md) points to the [fifteen contribution records](../../research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json) and the chapter owners. Those owners distinguish ordinary proof, formal source, historical compiler evidence, finite control and source interpretation. In particular, C09's earlier review is bound to earlier prose: the current finite-history statement must be read at its own current hash. The same precision applies to excluded original bodies and reused sources. A later synthesis may accurately reconcile their recorded results without making the unavailable bodies public or supplying a new complete reading of them.
+
+The reader crosswalk records the scope of the present curation. Complete principal-body reading, targeted argument reading, current-claim inspection and owner/index-grounded support disposition are separate levels. Original scientific owners and their exact source/result indexes retain the finer distinctions; no replay or whole-support-body reading follows merely from a new catalogue link.
+
+
+## Reading AR8R proof and study evidence
+
+For a mathematical claim, start with the source note's typed setting and conclusion. Then use the collection's correction or status owner to determine which evidence applies to that version. The [OSW-15 source-to-formal guide][c03-ar8r-osw] makes the relevant question precise: does the checked formal proposition represent the intended source claim under justified hypothesis, conclusion and object correspondences?
+
+Two AR8R examples make this distinction useful. [Fable's T299 correction][c03-ar8r-fable-correction] records a scoped Lean formalisation and a counterexample to a stronger interpretation of the historical prose. Its factorisation result does not certify the historical packet end to end. The [V14 synthesis Lean file][c03-ar8r-synthesis-lean] contains complete proofs for attained-image factorisation, the off-range decoder guard, coordinatewise guard recovery and joint refinement. Its [receipt][c03-ar8r-synthesis-receipt] records a standalone check with a declared toolchain and axioms. This reader pass inspected that proof source and receipt without rerunning Lean or establishing a project-wide build.
+
+The [exact proposal index][c03-ar8r-deep-index] and [semantic-reissue owners][c03-ar8r-bw] are different routes to a text. Exact snapshots preserve their bytes and histories; a semantic reissue preserves a declared reconstruction without recovering unavailable original wording. The [six-lane corrections][c03-ar8r-six] retain failed originals, separately repaired Lean files, incomplete central replay and finite-check limitations. A corrected receipt governs the claim it names; it does not validate every note in its folder.
+
+For studies, use the [canonical experiment status][c03-experiment-status]. FCSP-2 and ER-2 are prepared public packets without observed results. Terminology Pilot 0 is feasibility-only, and later stages are drafts. The [historical AR8R synthetic pilot][c03-ar8r-pilot] is a separate completed, negative internal study with support-overlapping, non-case-paired evidence. Mock runs, synthetic power inputs and checks of constructed signatures do not create treatment effects or external empirical validation.
+
+The crosswalk records this curation's actual reading scope. Complete owner indexes give direct note navigation; only specified bodies and proof sources were read in detail. Index-based dispositions are not proof-review credit, and the preserved theorem-origin counts do not measure independent discoveries.
+
+[c03-ar8r-bw]: ../project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md
+[c03-ar8r-deep-index]: ../project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml
+[c03-ar8r-fable-correction]: ../project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-CORRECTION-RECEIPT-V1.md
+[c03-ar8r-osw]: ../project-closure/ar8r-v11/governance/ORTHEMOLOGICAL-SPECIFICATION-WARRANT-OSW-15.md
+[c03-ar8r-pilot]: ../project-closure/ar8r-v11/experiments/t299-t300-negative-synthetic-pilot.md
+[c03-ar8r-six]: ../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md
+[c03-ar8r-synthesis-lean]: ../project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/CodexFibreSynthesis.lean
+[c03-ar8r-synthesis-receipt]: ../project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/lean/LEAN_RECEIPT.json
+[c03-experiment-status]: ../../experiments/experiment-status.yaml
+
+
+## Architecture and scholarly reference routes
+
+Several short reference texts help explain the existing works. They belong with those works and subjects; they add no independent paper or research verdict.
+
+| Reader question | Reference and its contribution |
+|---|---|
+| What does the formal core record? | The [architecture overview](../architecture-overview.md) connects a concrete occurrence, its observation and an inferred profile to the declared analysis and versioned episode. This makes a correct classification of the wrong version a specific, inspectable error. |
+| How do the different kinds of claim relate? | The [six-layer map](../architecture/ORTHEMOLOGY-LAYER-MAP.md) separates formal definitions, application extensions, philosophical arguments, school-labeled theology and empirical designs. Its dated labels describe that map; each work’s source owner supplies its research standing. |
+| What does the implemented reference contract establish? | [Decision 0012](../decisions/0012-reference-model-semantic-contract.md) explains nonempty constitutive fields, resolvable references, governance-token bindings and separate claim/episode assessments. The reported controls reject specified malformed records within a bundle. They do not establish store-wide consistency or semantic completeness. |
+| Why compare a learning trajectory with its endpoint? | The [latent-variable literature note](../related-work/LATENT-STATE-INFERENCE-AND-ORTHEMOLOGY.md) distinguishes observation, hidden state, representation and profile. Its bounded comparison shows how the same endpoint criterion can leave different pathways unresolved; the cited studies supply a neighboring illustration, with no evidential transfer to Orthemology’s ontology or metaphysics. Read it with [the latent-state application](PAPER-CATALOGUE.md#latent-state-learning-and-governed-updates). |
+| What does the historical LLM example support? | The [R7E witness](../project-closure/r7e-sol/R7E-LLM-MEDIATED-ORTHING-WITNESS.md) preserves an affirmative role classification and partially supported bounded realizability account. Missing original journals and identity bindings limit reconstruction; this record does not establish a live Somnus deployment. |
+
+For a scholarly attribution, start at the [current sourcing view](../sourcing/CURRENT-SOURCING-LEDGER.md), which names the actual authority for each claim family. Bibliographic identity, directly checked wording, compilation access and an author’s inference are different claims. A valid record or working link does not establish fresh source authentication.
+
+Some historical records also explain consequential choices. The [R2 related-work review](../project-closure/reviews/REVIEW-B-RELATED-WORK.md) concedes inherited facets while preserving the main paper’s occurrence-centered integration proposal and testable utility hypothesis. The [strict-soundness correction](../decisions/0011-claim-relative-reasoning-path-and-strict-soundness.md) separates claim-relevant reasoning from later routing or closure. [Decision 0007](../decisions/0007-profile-space-definition.md) follows the separately deferred profile-space definition and distinguishes a candidate set from one partial profile. These remain source history and reference support of the existing exposition and formal reference; their dated tests and reviews receive no fresh-execution credit here.

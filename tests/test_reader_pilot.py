@@ -305,6 +305,26 @@ class ReaderPilotTests(unittest.TestCase):
         altered["coverage_stage"] = "complete"
         self.reject(self.check(cross=altered), "stage")
 
+    def test_reader_candidate_requires_every_owner_group_disposition(self):
+        altered = deepcopy(self.cross)
+        altered["coverage_stage"] = "reader-candidate"
+        altered["collection_dispositions"] = {}
+        rows = self.mod.entries_at(self.repo, self.base)
+        for group in self.owners["collections"]:
+            altered["collection_dispositions"][group["key"]] = {
+                "scope": "Synthetic collection disposition, not semantic acceptance.",
+                "reading_record": "Fixture-only reading record.",
+                "basis_sources": [group["owners"][0]],
+                "items": [{"path": row["path"], "role": "reference-material", "work": "core"}
+                          for row in rows if self.mod.matches(row["path"], group["include"])],
+            }
+        self.assertEqual(self.check(cross=altered), [])
+        for group in self.owners["collections"]:
+            with self.subTest(group=group["key"]):
+                missing = deepcopy(altered)
+                missing["collection_dispositions"].pop(group["key"])
+                self.reject(self.check(cross=missing), "collection-missing")
+
     def test_check_is_read_only(self):
         before = {p.relative_to(self.repo): p.read_bytes()
                   for p in self.repo.rglob("*") if p.is_file() and ".git" not in p.parts}
@@ -472,6 +492,244 @@ class ReaderPilotTests(unittest.TestCase):
 
 
 
+class CompactCollectionDispositionTests(unittest.TestCase):
+    """Residual support cannot conceal actual or independently required works."""
+    def setUp(self):
+        spec = importlib.util.spec_from_file_location("compact_collection_under_test", MODULE)
+        self.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.mod)
+        self.paths = ["fixture-collection/paper.md", "fixture-collection/edition.pdf",
+                      "fixture-collection/required.md", "fixture-collection/history.json",
+                      "fixture-collection/check.py", "fixture-other/paper.md"]
+        self.rows = [{"path": path} for path in self.paths]
+        self.owners = {
+            "collections": [{"key": "collection", "include": ["fixture-collection/"],
+                             "exclude": [], "owners": [self.paths[3]]}],
+            "disposition_required_groups": ["collection"],
+            "required_work_sources": [self.paths[2]],
+        }
+        self.cross = {
+            "sources": {key: {"path": path} for key, path in
+                        zip(["paper", "edition", "required", "basis", "check", "outside"],
+                            self.paths)},
+            "works": [{"key": "paper", "source_keys": ["paper", "required"],
+                       "reading_forms": [{"source": "edition", "relationship": "preserved-edition"}]},
+                      {"key": "outside", "source_keys": ["outside"]}],
+            "collection_dispositions": {"collection": {
+                "scope": "Synthetic scholarly work and residual support.",
+                "reading_record": "Fixture-only reading record.",
+                "basis_sources": ["basis"],
+                "items": [{"path": path, "role": role, "work": "paper"}
+                          for path, role in zip(self.paths[:3],
+                                                ["work-source", "historical-edition", "work-source"])],
+                "supporting_population": {
+                    "work_keys": ["paper"], "roles": ["provenance-record", "test-fixture"],
+                    "scope_note": "Frozen paths outside the explicit scholarly items retain support roles.",
+                },
+            }},
+        }
+
+    def check(self, cross=None):
+        return self.mod.check_collection_dispositions(self.rows, self.owners, cross or self.cross)
+
+    def reject(self, errors, code):
+        self.assertTrue(any(error.startswith(code + ":") for error in errors), errors)
+
+    def test_compact_support_population_covers_only_the_residual_frozen_paths(self):
+        self.assertEqual(self.check(), [])
+        full = deepcopy(self.cross)
+        record = full["collection_dispositions"]["collection"]
+        record.pop("supporting_population")
+        record["items"].extend({"path": path, "role": "provenance-record", "work": "paper"}
+                               for path in self.paths[3:5])
+        self.assertEqual(self.check(full), [])
+        record["items"].pop()
+        self.reject(self.check(full), "collection-coverage")
+
+    def test_support_population_cannot_hide_work_reading_form_or_owner_required_source(self):
+        self.assertEqual(self.check(), [])
+        for path in self.paths[:3]:
+            with self.subTest(path=path):
+                altered = deepcopy(self.cross)
+                record = altered["collection_dispositions"]["collection"]
+                record["items"] = [item for item in record["items"] if item["path"] != path]
+                self.reject(self.check(altered), "collection-coverage")
+
+    def test_support_population_requires_defined_distinct_works_roles_and_scope(self):
+        self.assertEqual(self.check(), [])
+        cases = [("work_keys", [], "collection-work"),
+                 ("work_keys", ["absent-work"], "collection-work"),
+                 ("work_keys", ["paper", "paper"], "collection-work"),
+                 ("work_keys", "paper", "collection-work"),
+                 ("roles", [], "collection-role"),
+                 ("roles", ["miscellaneous"], "collection-role"),
+                 ("roles", ["work-source"], "collection-role"),
+                 ("roles", ["historical-edition"], "collection-role"),
+                 ("roles", ["provenance-record", "provenance-record"], "collection-role"),
+                 ("scope_note", "  ", "collection-coverage")]
+        for field, value, code in cases:
+            with self.subTest(field=field, value=value):
+                altered = deepcopy(self.cross)
+                altered["collection_dispositions"]["collection"]["supporting_population"][field] = value
+                self.reject(self.check(altered), code)
+        for value in (None, [], "support"):
+            with self.subTest(population=value):
+                altered = deepcopy(self.cross)
+                altered["collection_dispositions"]["collection"]["supporting_population"] = value
+                self.reject(self.check(altered), "collection-coverage")
+
+    def test_compact_records_reject_duplicate_extra_or_invalid_items(self):
+        self.assertEqual(self.check(), [])
+        for change, code in [("duplicate", "collection-duplicate"),
+                             ("extra", "collection-coverage"),
+                             ("work", "collection-work"), ("role", "collection-role")]:
+            with self.subTest(change=change):
+                altered = deepcopy(self.cross)
+                items = altered["collection_dispositions"]["collection"]["items"]
+                if change == "duplicate":
+                    items.append(deepcopy(items[0]))
+                elif change == "extra":
+                    items.append({"path": self.paths[-1], "work": "paper", "role": "work-source"})
+                else:
+                    items[0][change] = "undefined"
+                self.reject(self.check(altered), code)
+
+    def test_compact_records_reject_undefined_source_references(self):
+        self.assertEqual(self.check(), [])
+        for field in ("source_keys", "reading_forms", "basis_sources"):
+            with self.subTest(field=field):
+                altered = deepcopy(self.cross)
+                if field == "source_keys":
+                    altered["works"][0][field].append("undefined-source")
+                elif field == "reading_forms":
+                    altered["works"][0][field][0]["source"] = "undefined-source"
+                else:
+                    altered["collection_dispositions"]["collection"][field] = ["undefined-source"]
+                self.reject(self.check(altered), "collection-coverage" if field == "basis_sources"
+                            else "collection-source")
+
+    def test_compact_primary_items_require_their_actual_bound_work(self):
+        self.assertEqual(self.check(), [])
+        for path in self.paths[:3]:
+            with self.subTest(path=path):
+                altered = deepcopy(self.cross)
+                item = next(i for i in altered["collection_dispositions"]["collection"]["items"]
+                            if i["path"] == path)
+                item["work"] = "outside"
+                self.reject(self.check(altered), "collection-work")
+        unbound = deepcopy(self.cross)
+        unbound["works"][0]["source_keys"].remove("required")
+        self.reject(self.check(unbound), "collection-work")
+
+    def test_shared_primary_and_reading_form_allow_either_bound_work(self):
+        self.assertEqual(self.check(), [])
+        shared = deepcopy(self.cross)
+        shared["works"][1]["source_keys"].append("paper")
+        shared["works"][1]["reading_forms"] = [{"source": "edition", "relationship": "preserved-edition"}]
+        for item in shared["collection_dispositions"]["collection"]["items"][:2]:
+            item["work"] = "outside"
+        self.assertEqual(self.check(shared), [])
+
+    def test_compact_primary_roles_preserve_scholarly_and_component_dispositions(self):
+        self.assertEqual(self.check(), [])
+        for role in ("work-source", "historical-edition", "formal-component",
+                     "executable-component", "collection-guide", "test-fixture",
+                     "provenance-record", "reference-material", "integration-adapter"):
+            with self.subTest(role=role):
+                altered = deepcopy(self.cross)
+                for item in altered["collection_dispositions"]["collection"]["items"]:
+                    item["role"] = role
+                if role in ("test-fixture", "provenance-record", "reference-material", "integration-adapter"):
+                    self.reject(self.check(altered), "collection-role")
+                else:
+                    self.assertEqual(self.check(altered), [])
+
+    def test_compact_basis_sources_must_all_name_declared_collection_owners(self):
+        self.assertEqual(self.check(), [])
+        for basis in (["paper"], ["outside"], ["basis", "outside"]):
+            with self.subTest(basis=basis):
+                altered = deepcopy(self.cross)
+                altered["collection_dispositions"]["collection"]["basis_sources"] = basis
+                self.reject(self.check(altered), "collection-coverage")
+
+    def test_support_work_destinations_require_a_bound_path_inside_the_group(self):
+        self.assertEqual(self.check(), [])
+        for owners_also_present in (False, True):
+            with self.subTest(owners_also_present=owners_also_present):
+                altered = deepcopy(self.cross)
+                support = altered["collection_dispositions"]["collection"]["supporting_population"]
+                support["work_keys"] = ["outside"]
+                if owners_also_present:
+                    support["owner_paths"] = [self.paths[3]]
+                self.reject(self.check(altered), "collection-work")
+        for field, value in (("source_keys", ["outside", "paper"]),
+                             ("reading_forms", [{"source": "edition", "relationship": "preserved-edition"}]),
+                             ("supporting_source_keys", ["check"])):
+            with self.subTest(binding=field):
+                spanning = deepcopy(self.cross)
+                spanning["works"][1][field] = value
+                spanning["collection_dispositions"]["collection"]["supporting_population"]["work_keys"] = ["outside"]
+                self.assertEqual(self.check(spanning), [])
+
+    def test_supporting_source_references_must_resolve(self):
+        self.cross["works"][1]["supporting_source_keys"] = ["check"]
+        self.cross["collection_dispositions"]["collection"]["supporting_population"]["work_keys"] = ["outside"]
+        self.assertEqual(self.check(), [])
+        for value in (["undefined-source"], [None], None, "check"):
+            with self.subTest(value=value):
+                altered = deepcopy(self.cross)
+                altered["works"][1]["supporting_source_keys"] = value
+                self.reject(self.check(altered), "collection-source")
+
+    def test_pure_support_collection_can_route_through_its_existing_owner(self):
+        self.rows = [row for row in self.rows if row["path"] in self.paths[3:]]
+        self.owners["required_work_sources"] = []
+        self.cross["works"] = [self.cross["works"][1]]
+        record = self.cross["collection_dispositions"]["collection"]
+        record["items"] = []
+        record["supporting_population"].pop("work_keys")
+        record["supporting_population"]["owner_paths"] = [self.paths[3]]
+        self.assertEqual(self.check(), [])
+
+    def test_owner_only_support_keeps_all_primary_and_independent_required_paths_explicit(self):
+        support = self.cross["collection_dispositions"]["collection"]["supporting_population"]
+        support.pop("work_keys")
+        support["owner_paths"] = [self.paths[3]]
+        self.assertEqual(self.check(), [])
+        for path in self.paths[:3]:
+            with self.subTest(path=path):
+                altered = deepcopy(self.cross)
+                if path == self.paths[2]:
+                    altered["works"][0]["source_keys"].remove("required")
+                record = altered["collection_dispositions"]["collection"]
+                record["items"] = [item for item in record["items"] if item["path"] != path]
+                self.reject(self.check(altered), "collection-coverage")
+
+    def test_owner_paths_are_validated_even_when_a_valid_work_destination_remains(self):
+        self.cross["collection_dispositions"]["collection"]["supporting_population"]["owner_paths"] = [self.paths[3]]
+        self.assertEqual(self.check(), [])
+        for value in (None, [], self.paths[3], ["undefined-owner"], [self.paths[0]],
+                      [self.paths[-1]], [self.paths[3], self.paths[3]], [self.paths[3], self.paths[-1]], [{}]):
+            with self.subTest(value=value):
+                altered = deepcopy(self.cross)
+                altered["collection_dispositions"]["collection"]["supporting_population"]["owner_paths"] = value
+                self.reject(self.check(altered), "collection-owner")
+        altered = deepcopy(self.cross)
+        support = altered["collection_dispositions"]["collection"]["supporting_population"]
+        support.pop("work_keys")
+        support.pop("owner_paths")
+        self.reject(self.check(altered), "collection-coverage")
+
+    def test_exhaustive_records_retain_their_existing_work_role_and_basis_semantics(self):
+        record = self.cross["collection_dispositions"]["collection"]
+        record.pop("supporting_population")
+        record["items"].extend({"path": path, "role": "provenance-record", "work": "paper"}
+                               for path in self.paths[3:5])
+        record["items"][0].update(work="outside", role="test-fixture")
+        record["basis_sources"] = ["outside"]
+        self.assertEqual(self.check(), [])
+
+
 class ReaderPageRouteTests(unittest.TestCase):
     """Real Markdown link parsing; semantic truth deliberately remains outside it."""
     def setUp(self):
@@ -520,6 +778,39 @@ class ReaderPageRouteTests(unittest.TestCase):
         self.assertTrue(any(e.startswith(code + ":") for e in errors), errors)
 
     def test_valid_reference_style_links_and_source_fragments(self):
+        self.assertEqual(self.check(), [])
+
+    def test_reader_candidate_requires_a_real_catalogue_anchor_for_every_work(self):
+        self.cross["coverage_stage"] = "reader-candidate"
+        self.cross["works"] = [{"key": key, "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#" + anchor}
+                               for key, anchor in (("first", "overview"), ("second", "fixture-work"))]
+        page = self.page("PAPER-CATALOGUE.md")
+        page.write_text(page.read_text() + '\n<a id="fixture-work"></a>\nA second scholarly entry.\n')
+        self.assertEqual(self.check(), [])
+        for work in self.cross["works"]:
+            with self.subTest(work=work["key"]):
+                altered = deepcopy(self.cross)
+                next(w for w in altered["works"] if w["key"] == work["key"]).pop("catalogue_entry")
+                errors = self.check(altered)
+                self.assertTrue(any(error.startswith("catalogue-entry:") for error in errors), errors)
+
+    def test_reader_candidate_rejects_absent_unsafe_or_fenced_catalogue_entries(self):
+        self.cross["coverage_stage"] = "reader-candidate"
+        self.cross["works"] = [{"key": "paper", "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#overview"}]
+        page = self.page("PAPER-CATALOGUE.md")
+        page.write_text(page.read_text() + '\n```html\n<a id="fenced-entry"></a>\n```\n')
+        self.assertEqual(self.check(), [])
+        for entry in (None, "", "docs/reader/PAPER-CATALOGUE.md", "docs/reader/PAPER-CATALOGUE.md#",
+                      "docs/reader/PAPER-CATALOGUE.md#absent", "docs/reader/PAPER-CATALOGUE.md#fenced-entry",
+                      "fixture-missing/catalogue.md#overview", "../outside.md#overview",
+                      "https://example.invalid/catalogue#overview"):
+            with self.subTest(entry=entry):
+                altered = deepcopy(self.cross)
+                altered["works"][0]["catalogue_entry"] = entry
+                errors = self.check(altered)
+                self.assertTrue(any(error.startswith("catalogue-entry:") for error in errors), errors)
+        self.cross["coverage_stage"] = "representative-pilot"
+        self.cross["works"][0].pop("catalogue_entry")
         self.assertEqual(self.check(), [])
 
     def test_missing_reader_page(self):

@@ -1,6 +1,6 @@
 # Research atlas
 
-> **Source-bound reader guide — curation in progress.** These routes explain the mapped scholarship without replacing its source or scientific-status owners. Remaining collection coverage and separate review are recorded in [the implementation progress](../project-closure/reader-refactor-issue-35/PROGRESS.md); this is not a complete-corpus or scientific-acceptance certificate.
+> **Reader candidate.** [Scope and review state](../project-closure/reader-refactor-issue-35/PROGRESS.md). Each cited work retains its own scientific standing.
 
 [Atlas](RESEARCH-ATLAS.md) · [Works](PAPER-CATALOGUE.md) · [Results](RESULT-INDEX.md) · [Frontiers](CURRENT-FRONTIERS.md) · [Applications](APPLICATIONS.md) · [Verification](VERIFICATION-GUIDE.md)
 
@@ -8,7 +8,18 @@
 
 Orthemology's [main exposition][main] distinguishes a concrete case, the repeatable state-type used to describe it, and the governing standard bound to that case. Its question is not only whether a conclusion is correct, but whether the reasoning and handling that produced it were adequate under the declared analysis. The [formal reference](PAPER-CATALOGUE.md#formal-reference) develops the framework and a separate multi-actor component.
 
-The wider research cannot be reduced to an audit checklist. The sample below includes an affirmative account of recognition and correction, ordinary tensor-moment theorems, differential geometry, quantitative coordination limits and a connection between linguistic interpretation and empirical feasibility. These have different hypotheses and source roles. Reading one does not confer acceptance on all the others.
+The wider research cannot be reduced to an audit checklist. The research includes an affirmative account of recognition and correction, ordinary tensor-moment theorems, differential geometry, quantitative coordination limits and a connection between linguistic interpretation and empirical feasibility. These have different hypotheses and source roles. Reading one does not confer acceptance on all the others.
+
+## Explore a research question
+
+| Question | Start here |
+|---|---|
+| What makes a judgment or correction adequate? | [The framework](#how-the-principal-works-fit-together) · [recognition and correction](#recognition-sound-cognition-and-correction) |
+| What information determines a state or a future response? | [Tensor histories and geometry](#tensor-histories-and-information-geometry) · [Twentieth observation and action contracts](#twentieth-connections-through-the-observation-and-action-contract) |
+| How much coordination or evidence is necessary? | [Coordination limits](#coordination-and-information-requirements) · [finite warranted inquiry](#from-preserved-source-context-to-usable-finite-warrant) |
+| What do the foundational arguments establish? | [Productive sourcehood](#productive-sourcehood-and-truthful-action-selection) · [necessity and original adequacy](#from-a-warranted-correction-to-its-original-adequacy) |
+| When does a representation preserve its proof obligations? | [Answers and proofs](#when-representations-preserve-answers-but-lose-proofs) · [typed identity](#exact-proof-questions-and-changing-support) |
+| What if the correct standard is uncertain? | [AR8R restoration](#restoration-when-the-correct-standard-is-itself-uncertain) · [joint feasibility across avenues](#a-connection-across-research-avenues) |
 
 ## How the principal works fit together
 
@@ -145,9 +156,11 @@ The [existing twelve-avenue owner][avenues] retains the programme's research que
 | 11 — Occurrence-sensitive language | Source, force, version, bearer, composition and joint reading determine the relevant claim. |
 | 12 — Empirical and specialist validation | Source reading, reported experiments, reproduction and qualified external assessment are different evidence. |
 
-## Coverage beyond this sample
+<a id="coverage-beyond-this-sample"></a>
 
-Earlier consolidation, final-Sixth continuations, Seventh–Twentieth successors, later T20 checkpoints and AR8R research/proposals remain part of the bounded population. Their separate owners are linked from the [result collection directory](RESULT-INDEX.md#collection-owners). None is excluded merely for lacking a PDF or living in a historical-looking directory.
+## How the collections connect
+
+The catalogue connects the original consolidation, final-Sixth continuations, Seventh–Twentieth successors, T20 live/v6 families and AR8R research/proposals. Their separate owners are linked from the [result collection directory](RESULT-INDEX.md#collection-owners). None is excluded merely for lacking a PDF or living in a historical-looking directory.
 
 For a named manuscript use the [work catalogue](PAPER-CATALOGUE.md). For an exact claim use the [result index](RESULT-INDEX.md). The [verification guide](VERIFICATION-GUIDE.md) explains what each kind of evidence can and cannot establish.
 
@@ -312,3 +325,55 @@ The [joint interpretation](PAPER-CATALOGUE.md#joining-the-three-interfaces-on-li
 ## Avenues 1, 2 and 8: when a mathematical separation fits an argument
 
 The [later Twentieth context work](PAPER-CATALOGUE.md#cooperation-complete-efficacy-and-the-later-common-source-reassessment) joins necessary-being/common-source inquiry to semantic fidelity. Keeping the same object, power profile and determining act fixed is part of testing a premise, not an optional label. The [typed emergence construction](PAPER-CATALOGUE.md#typed-emergence-fresh-acts-created-effects-and-a-stipulated-activity-gap) supplies a concrete example: fresh intrinsic acts and created effects have different predicates, and continued capacity can coexist with a stipulated activity gap in a reduced signature. The [source audits](PAPER-CATALOGUE.md#divine-action-source-audits-and-the-stronger-activity-premise) then identify additional premises under which that gap no longer represents the intended doctrine. This contribution clarifies what an application must preserve; it does not turn formal consistency into metaphysical actuality or historical authentication.
+
+### Twentieth connections through the observation and action contract
+
+The live calibration sequence makes a useful concrete reading path: [exact prime-coded population probabilities](../../research/t20-live-20261009/checkpoints/CP01/t20-next-frontier-20261008/single-calibration-design/RESULT.md) → [persistent-group moments](../../research/t20-live-20261009/checkpoints/CP02/t20-next-frontier-20261008/grouped-mixture-identification/RESULT.md) → [retained-threshold joint observations](../../research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-panel-replay-robustness/RESULT.md) → [the full skyline channel](../../research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/RESULT.md). Each step changes the information actually available. An exact law, a valid Cauchy name, a finite noisy sample and a retained joint experiment have different recovery theorems. Their source-bound positive results and impossibilities should therefore be read together.
+
+The continuation path connects [shared-witness tensor operations](../../research/t20-live-20261009/checkpoints/CP08/t20-next-frontier-20261008/qualitative-tensor-transport/RESULT.md), [graph-local parity access](../../research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/RESULT.md), [contextual reset quotients](../../research/t20-v6-20261012/research-v6/root_math/multivalued_reset/RESULT.md) and [the cost of additional moment directions](../../research/t20-v6-20261012/research-v6/root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md). The quotient is determined by the permitted future questions and actions. [Hidden-coordinate activation](../../research/t20-v6-20261012/research-v6/type_collective/cumulative_damping_prose/ACTIVATION_BOUNDARY.md) explains why even an entire old moment history can cease to be sufficient after a new operation is admitted. This is a mathematical connection with a specified mechanism, not a claim that all the instruments model the same physical system.
+
+The inquiry path runs from [missing-support/check-cost frontiers](../../research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md) to [finite grounded certificate compilation](../../research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/RESULT.md) and [source work lost by erasure](../../research/t20-v6-20261012/research-v6/type_collective/ERASURE_WORK_BOUNDARY.md). It distinguishes a proof's accepted output from the evidence and work needed to obtain it. The actual HasE identity outcome belongs to [the exact original-calculus controls](../../research/t20-v6-20261012/sources/1654c2cc234cc2eb8155d9b84590dd3b2b884cc01ce62f1a8b9779aa9d59cda9/IdentityReviewControls.lean); [HasJ's separate semantic boundary](../../research/t20-v6-20261012/research-v6/type_collective/JOINT_COMPLETENESS_BOUNDARY.md) owns the later completion question. The philosophical source arguments in [the current foundational claim index](../../research/t20-v6-20261012/research-v6/foundations/CURRENT_FOUNDATIONAL_CLAIMS.json) retain affirmative recognition, original adequacy and normative reasons while explaining which bridges are philosophical premises rather than consequences of those formal constructions.
+
+For inherited controllers, empirical appraisals, occurrence interpretation and operational preservation, the [v6 synthesis](../../research/t20-v6-20261012/research-v6/synthesis/WHOLE_CORPUS_SYNTHESIS.md) and [historical family crosswalk](../../research/t20-v6-20261012/research-v5/CUMULATIVE_CROSSWALK.json) supply the chapter route. The scientific connections do not convert repeated source copies into independent observations or historical review receipts into fresh proof evidence.
+
+
+## Restoration when the correct standard is itself uncertain
+
+AR8R supplies a useful connection between source interpretation, norm selection and temporal control. A reminder can elicit the expected answer without restoring the disposition it is meant to address. Conversely, restoration may occur before a report changes. The [PMR-001 source finding][c03-ar8r-pmr-fitrah] therefore distinguishes disposition, recognition, articulated belief and assent. The [Specialist B analysis][c03-ar8r-spb4] adds rival causal explanations such as memorisation, compliance and temporary suppression of a defeater. Those distinctions determine what an application must represent and measure.
+
+[Deep CQ's robust-viability proposal][c03-ar8r-cq] gives a finite mathematical form to another difficulty: the operative standard may be uncertain. Let `S` be a finite state set and `H` a nonempty finite family of candidate standards. Each `h` specifies a target region `T_h`, eligible actions `A_h(s)` and deterministic transitions `F_h(s,a)`. Define the common target and common actions by intersection. A common action is usable only if every currently retained standard permits it. For a region `X`, write
+
+\[
+\operatorname{Pre}_H(X)=\{s:\exists a\in\bigcap_{h\in H}A_h(s)\;\forall h\in H,\;F_h(s,a)\in X\}.
+\]
+
+The greatest fixed point
+
+\[
+V_H=\nu X\left[\left(\bigcap_{h\in H}T_h\right)\cap\operatorname{Pre}_H(X)\right]
+\]
+
+is the region from which one memoryless common policy can remain in every target indefinitely. The least fixed point
+
+\[
+W_H=\mu Z\,[V_H\cup\operatorname{Pre}_H(Z)]
+\]
+
+is the region from which such a policy can force finite entry into that viable region. A finite rank supplies the entry argument. These are claims about arbitrary switching between the retained standards, with the current state observable; they are stronger requirements than choosing a separate successful policy for each fixed standard. If two standards permit disjoint action sets, each can be individually workable while no common action exists.
+
+[Deep CR's source-restriction proposal][c03-ar8r-cr] supplies the connecting result. Suppose independently justified source constraints reduce `H` to a **nonempty** `H′`, and every retained standard keeps its original targets, actions and transitions. Fewer standards weaken the universal requirements: common actions and common target regions can expand, and `V_H ⊆ V_H′` and `W_H ⊆ W_H′`. This makes explicit one way better source discrimination could increase the available restoration policy. The theorem does not prove that the source restriction is true or that a particular human being instantiates the finite model.
+
+| Contribution | What it supplies | Premise still needed for an application |
+|---|---|---|
+| Source finding and interpretation | Separates latent disposition, recognition and reporting; gives source-relative constraints on candidate standards. | Authenticated source use, interpretation and a justified connection to the intended subject. |
+| Robust temporal control | Computes a common viable region and its finite-entry basin in the declared finite system. | Adequate state and action model, observable state, common eligibility and the intended switching semantics. |
+| Causal and empirical discrimination | [T299 and its correction][c03-ar8r-t299] expose why the observed change and its causal explanation can diverge. | A correctly specified landing target and a study that can distinguish restoration from the relevant alternatives. |
+
+The connection is conditional but substantive: interpreting sources can change the admitted model class; that change can alter the policy region; the resulting policy still needs a target-faithful causal and empirical interpretation. The [six-lane intake][c03-ar8r-six] keeps the source notes, mathematical proposals, finite checks and unrun experiments at those separate evidential scopes.
+
+[c03-ar8r-cq]: ../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cq/PMR-007_DEEP_ROUND_CQ_NORM_UNCERTAIN_ROBUST_RESTORATION_V2.md
+[c03-ar8r-cr]: ../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/central/source-files/PROPOSAL_ARTIFACTS/deep_cr/PMR-007_DEEP_ROUND_CR_FITRAH_SOURCE_RESTRICTION_AND_RESTORATION_V2.md
+[c03-ar8r-pmr-fitrah]: ../project-closure/ar8r-v11/post-merge-pmr001-source/FITRAH_REMINDER_RESTORATION_SOURCE_FINDING_PMR001.md
+[c03-ar8r-six]: ../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md
+[c03-ar8r-spb4]: ../project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/specialist-b/source-files/05_ROUND_4_FITRAH_OCCLUSION_RESTORATION.md
+[c03-ar8r-t299]: ../project-closure/ar8r-v11/theorems/ar8r-t299-matched-intervention-burden-landing.md

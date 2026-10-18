@@ -1,14 +1,25 @@
 # Applications and interpretation boundaries
 
-> **Source-bound reader guide — curation in progress.** These routes explain the mapped scholarship without replacing its source or scientific-status owners. Remaining collection coverage and separate review are recorded in [the implementation progress](../project-closure/reader-refactor-issue-35/PROGRESS.md); this is not a complete-corpus or scientific-acceptance certificate.
+> **Reader candidate.** [Scope and review state](../project-closure/reader-refactor-issue-35/PROGRESS.md). Each cited work retains its own scientific standing.
 
 [Atlas](RESEARCH-ATLAS.md) · [Works](PAPER-CATALOGUE.md) · [Results](RESULT-INDEX.md) · [Frontiers](CURRENT-FRONTIERS.md) · [Applications](APPLICATIONS.md) · [Verification](VERIFICATION-GUIDE.md)
 
 ## Start with what is being preserved
 
-An application should say what its variables represent, what operation is being performed, and what would make that operation adequate. The sample below contains **source-argued epistemic interpretation**, **ordinary mathematical constructions**, and **worked source-relative examples**. They are not interchangeable levels of implementation or empirical evidence.
+An application should say what its variables represent, what operation is being performed, and what would make that operation adequate. The studies below contain **source-argued epistemic interpretation**, **ordinary mathematical constructions**, and **worked source-relative examples**. They are not interchangeable levels of implementation or empirical evidence.
 
 The [application work catalogue](PAPER-CATALOGUE.md#application-studies-contracts-and-runtime-outlines) now accounts for the fifty files in the baseline `applications/` directory as ten work-level entries and their supporting records. That is one bounded collection, not every application scattered across the research corpus. The [DAEE crosswalk][daee], [latent-state application][latent] and [agentic-runtime guide][agentic] remain their scoped source entrances.
+
+## Choose an application
+
+| Intended use | Reading route |
+|---|---|
+| Explain a cognition or correction claim | [Recognition](#recognition-and-corrective-reasoning) · [a legitimate HOLD](#a-corrective-step-that-legitimately-ends-in-hold) |
+| Represent a standard or learn a latent state | [Noetic representations](#noetic-representations-and-numerical-dynamics) · [governed learning](#learning-without-silently-changing-the-analysis) |
+| Coordinate people or software | [Coordination records](#coordination-records) · [agentic outlines](#agentic-coordination-and-writeback-outlines) |
+| Interpret incomplete or occurrence-dependent evidence | [Joint feasibility across avenues](#joint-feasibility-across-avenues) |
+| Design an empirical study or use a reanalysis | [Collective observations](#designing-a-collective-observation-without-claiming-attribution) · [reanalysis](#using-a-reanalysis-without-turning-it-into-causal-attribution) |
+| Reuse an answer, instruction or restoration proposal | [AR8R authority and persistence](#ar8r-applications-the-answer-its-authority-and-its-persistence) |
 
 ## Choose the repair after separating the defects
 
@@ -338,3 +349,24 @@ The [Python interface](PAPER-CATALOGUE.md#exact-hidden-change-implementations-an
 The [Twentieth deletion-trace application](PAPER-CATALOGUE.md#copied-deletion-traces-and-what-fresh-observations-add) compares the words 00 and 01 at retention probability 1/4. Copying one realised trace any positive number of times leaves optimal equal-prior discrimination at 5/8. Taking fresh independent masks of that same fixed word gives the written success formula `1-(1-p)^M/2`. The finite copied-channel result has retained formal/review evidence; that all-M fresh-product contrast is not promoted to a new general Lean theorem.
 
 This connects restoration and copying/identity without treating them as the same problem: copies may preserve availability, but new discrimination needs a changed information channel. Even perfect word recovery does not identify its historical speaker or a particular retained character's original position. Real application additionally needs the specified channel, sampling resources, contextual interpretation and source/authority evidence. The example is not an empirical model of testimony or a reduction of tawatur's cognitive-vindication role to counting independent reports.
+
+## AR8R applications: the answer, its authority and its persistence
+
+A practical use of the [V14 fibre synthesis][c03-ar8r-synthesis] is to ask two questions about the same received artifact. Does the visible profile determine the answer `Q`? Does it also determine the applicability or authority guard `G`? The source proves that the pair `(Q,G)` is recoverable exactly when each coordinate is recoverable. A profile can therefore determine the answer while leaving the authority to apply it unresolved.
+
+The [PMR-001 recipient contract][c03-ar8r-pmr-adoption] illustrates this case. Two recipients receive the same artifact, but one has the compatible version and the other does not. Receipt alone cannot determine adoption. The contract adds applicability, authority, version, evidence, capability, permission and closed invalidators. A system implementing that contract would need observations or evidence for each relevant coordinate and a local recheck when the recipient context changes. The paper supplies the conditional contract and countermodel; it does not supply an implemented agent runtime.
+
+The [stale-steer worked example][c03-example-stale] gives a complementary temporal case: a recovered instruction may be authentic yet superseded. Repair concerns the instruction's current force and governing binding. The [sensory-aliasing worked example][c03-example-aliasing] gives a different cause of uncertainty: an honest observation can leave several materially different candidate states possible. There, resolving the consequence-relevant state distinction or withholding the dependent claim is the appropriate response. The same outwardly cautious answer can thus reflect different defects and require different repairs.
+
+For restoration across time, [Deep CQ and CR](RESEARCH-ATLAS.md#restoration-when-the-correct-standard-is-itself-uncertain) connect a declared norm family to a common policy region and explain when justified source restriction enlarges it. A successful application must establish that its state, action, standard and causal definitions match the intended task. A one-time output match does not discharge that obligation.
+
+The empirical programme provides separate designs for testing incremental value: [FCSP-2][c03-fcsp] tests the reasoning machinery against a matched ordinary baseline, [ER-2][c03-er] tests explicit episode records at matched case information, and [terminology Pilot 0 v2][c03-term-pilot] assesses instrumentation before later efficacy or adoption decisions. The [status owner][c03-experiment-status] records no run for those public packets; they remain research designs rather than demonstrated applications.
+
+[c03-ar8r-pmr-adoption]: ../project-closure/ar8r-v11/post-merge-pmr001-source/PMR_AGCOM_01_CANDIDATE.md
+[c03-ar8r-synthesis]: ../project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/AR8R-CODEX-CORPUS-SYNTHESIS-V14.md
+[c03-er]: ../../experiments/episode-reification-v2/PROTOCOL.md
+[c03-example-aliasing]: ../../examples/latent-state-sensory-aliasing.md
+[c03-example-stale]: ../../examples/compaction-stale-steer.md
+[c03-experiment-status]: ../../experiments/experiment-status.yaml
+[c03-fcsp]: ../../experiments/false-closure-selective-prediction-v2/PROTOCOL.md
+[c03-term-pilot]: ../../terminology/pilot0-v2/EXECUTION-SPEC.md

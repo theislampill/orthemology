@@ -6,8 +6,8 @@
   },
   "entries_sha256": "93bfe22dc9b785c46bef388920280aa7668fefaef37c000301071c7fc7fc7bde",
   "external_body_admissions": [],
-  "scope_note": "Complete tracked source-candidate routing, not a complete substantive work catalogue or new theorem registry.",
-  "review_state": "AUTHOR_RECONCILED; independent semantic coverage review remains pending",
+  "scope_note": "Complete tracked source-candidate routing under the 18 October owner amendment. Distinct scholarship and significant subjects have work/collection dispositions; historical support remains with authoritative owners and is not counted as individual papers or complete semantic readings.",
+  "review_state": "AUTHOR_WORK_SUBJECT_RECONCILED; independent exact-candidate review pending",
   "collections": [
     {
       "key": "root-navigation-and-policy",
@@ -239,7 +239,8 @@
         "docs/provenance/v5-successors/TWELVE_AVENUES.json"
       ],
       "candidate_paths": 2661,
-      "candidate_role": "Seventh-through-Twentieth scoped result owners; not the entire later public corpus."
+      "candidate_role": "Seventh-through-Twentieth scoped result owners; not the entire later public corpus.",
+      "result_owner": "docs/provenance/v5-successors/RESULT_STATUS.json"
     },
     {
       "key": "t20-live",
@@ -396,7 +397,9 @@
       "exclude": [],
       "owners": [
         ".github/workflows/validate.yml",
-        "CONTRIBUTING.md"
+        "CONTRIBUTING.md",
+        "requirements-ci.lock.txt",
+        "docs/project-state-inputs.yaml"
       ],
       "candidate_paths": 286,
       "candidate_role": "Verification and schema implementations, fixtures and workflow owners; source candidates remain visible."
@@ -532,6 +535,30 @@
   "required_work_sources_scope": "Known substantive source and component requirements from inspected baseline owners. This growing subset is not the full candidate denominator; every baseline path remains assigned separately.",
   "disposition_required_groups": [
     "v5-consolidation",
-    "v5-continuations"
+    "v5-continuations",
+    "root-navigation-and-policy",
+    "principal-manuscript",
+    "formal-core",
+    "lineage-h-continuation",
+    "lineage-h-formalisation",
+    "lineage-h-ics-v5",
+    "lineage-h-moat-e3",
+    "lineage-h-modal",
+    "lineage-h-reflexive-v3",
+    "companion",
+    "applications",
+    "examples",
+    "publication-and-renderings",
+    "v5-successors",
+    "t20-live",
+    "t20-v6",
+    "epistemic-tuples-source-fidelity",
+    "ar8r-research-and-proposals",
+    "experimental-packets",
+    "documentation-and-other-history",
+    "references",
+    "terminology",
+    "archive",
+    "repository-support"
   ]
 }

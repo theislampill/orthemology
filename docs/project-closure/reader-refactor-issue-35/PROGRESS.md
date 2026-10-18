@@ -1,50 +1,51 @@
 # Issue 35 — execution handoff
 
-**IN_PROGRESS. PR #36 is draft, open and unmerged.** This is the current recovery record; detailed earlier source curation and verification remain in [COLLECTION-COVERAGE.md](COLLECTION-COVERAGE.md) and Git history.
+**IN_PROGRESS. The scholarly coverage candidate is assembled; final qualification and independent review remain. PR #36 is draft, open and unmerged.**
 
-## Authority and recovery
+## Authority and verified publication
 
-The [18 October owner scope amendment](CONTINUATION.md#owner-scope-amendment--18-october-2026) makes scholarly readability the objective and authorises substantial continued batches. It replaces separate semantic processing of every historical support file with explicit work/collection ownership. Scientific fidelity, protected-source preservation, actual reader journeys, independent review and owner-controlled integration remain required.
+The [18 October owner amendment](CONTINUATION.md#owner-scope-amendment--18-october-2026) makes scholarly readability the objective and permits work/collection ownership of supporting history. It preserves scientific fidelity, source protection, actual reader journeys and independent review. C06 remains owner-controlled.
 
-| Item | Independently recovered state |
+| Item | Recovered and verified state |
 |---|---|
 | Repository / issue / PR | `theislampill/orthemology` / [#35](https://github.com/theislampill/orthemology/issues/35) / [draft #36](https://github.com/theislampill/orthemology/pull/36) |
 | Branch | `refactor/issue-35-research-reader-20261012` |
-| Last verified published HEAD | `ae9a90ce8f120b111bc9105e5de0e9c5b4139570` |
-| Tree | `18c69b67b39a3b5f84046337398cc9ece5e319cc` |
-| Full hosted CI | [39081870485](https://github.com/theislampill/orthemology/actions/runs/39081870485), freshly read **completed / success** |
-| Preserved scientific corpus | `0784acddd4770f1190f758f264ba52b2b110bd27`; 16,077 paths in 26 owner groups, not 16,077 papers |
+| Last published checkpoint | `94947c4729b39ce4c785b61af7191f23f437c04b` |
+| Exact tree / parent | `cd8822e06a311dcbfa770ab834d99ba652a33ad9` / `ae9a90ce8f120b111bc9105e5de0e9c5b4139570` |
+| Hosted checkpoint CI | [39100392303](https://github.com/theislampill/orthemology/actions/runs/39100392303), **SUCCESS**, completed 18 October at 05:48 UTC and independently read back |
+| Last inherited full-CI success | `ae9a90ce8f120b111bc9105e5de0e9c5b4139570`, [39081870485](https://github.com/theislampill/orthemology/actions/runs/39081870485) |
+| Preserved scientific corpus | `0784acddd4770f1190f758f264ba52b2b110bd27`; 16,077 paths in 26 groups |
 
-The replaced executor's **eight staged support-tail files were recovered intact**. They add four supporting source bindings under the existing historical source guide, with no new work/result or primary-reading credit. The original workspace was retained; the continuation works in a separate copy. The recovered test and source-review records remain distinguishable from fresh qualification. Its obsolete instruction to stop after two units is superseded by the owner amendment.
+The replaced executor's eight staged support-tail files were recovered intact and published in `94947c4`, together with direct manuscript/PDF choices and the owner amendment. Exact GitHub tree/blob identities and both full progress bodies matched; the commit was imported locally with an identical staged tree and a clean checkout. The containing-commit state check passed. That checkpoint passed 293 reader, ten census and twenty projection tests separately in ordinary and optimised Python, plus production, state, preservation and reference gates. Its full hosted workflow subsequently passed; the local and hosted observations remain separately identified.
 
-## Completed reader content to retain
+## Scholarly work now assembled
 
-The six reader pages, six governed publication families, principal manuscript/formal-reference/companions, composition and revision manuscripts, and the root README/STATUS/CONTRIBUTING routes already exist. The current entrance adds direct paper/PDF choices and a question-led catalogue directory.
+The integrated candidate has **448 work/collection entries and 1,620 bound sources**. Counts describe editorial records, not independent papers, results or new proof executions.
 
-Previously completed author-curation includes the original v5 consolidation, v5 continuations and their 68 result routes, applications, Seventh–Nineteenth principal families, frozen Twentieth component families, and the Arabic/Drive/mathematical/result-ledger/report/guide studies. The recovered guide support tail brings the current working catalogue to **224 works / 1,223 bound sources**. Counts describe editorial records and are not independent-evidence or novelty counts.
+- **Successors:** 42 new scholarly routes, 27 existing-work updates and all 262 existing result IDs reconciled. Foundational arguments, programme reports, source-study appraisals and significant semantic controls are now directly readable.
+- **T20 live/v6:** 22 new family entries, covering 23 checkpoints plus S01, all fifteen v6 contributions, 34 current foundation claims and eighteen inherited families. Earlier C02/R04 and other pilot works retain their homes. Later HasE/FullPER results qualify the older open-target description; HasJ remains separate.
+- **AR8R:** 160 work/collection dispositions and 139 direct note routes, grouped by scientific subject. Exact/reconstructed notes, later reissues, source/recipient warrant, robust restoration, corrected T299 scope, companion history, experiments and terminology designs retain their distinct standing.
+- **Other collections:** prior lineage manuscripts, governed reading products and applications remain. Five useful reference/support additions attach to existing works. All 26 groups have explicit scholarly-source items and preserved support ownership; the two earlier exhaustive groups are unchanged.
 
-**Do not repeat completed M01–M05.** Their disposable-fixture execution and native evidence remain preserved. Earlier scoped mathematical/formal evidence keeps its original standing; reader checks do not replay or upgrade the science.
+The six reader pages have question-led directories, shorter candidate notices, direct family/primary links and source-grounded currentness corrections. Scholarly content stays visible; reading-history counts and receipt details move to the existing verification guide or optional disclosures. No scientific source body or original result ID changed.
 
-## Active substantial batches
+**Do not repeat completed M01–M05 or restart the earlier curation.** Per-source reading scopes and the [current coverage record](COLLECTION-COVERAGE.md#18-october-scholarly-coverage-candidate) distinguish full, targeted and index-level work. Historical support obligations removed by the amendment are SCOPE_AMENDED, not falsely passed.
 
-| Bundle | Reader-facing result required | Current state |
-|---|---|---|
-| Successor completion | Omitted foundational, evidence/control and source-study subjects; exact routes for all 262 existing result IDs. | Contributor bundle prepared; integration and qualification pending. |
-| T20 live and v6 | Main scientific family readings, all existing v6 contribution roles, exact identity/geometry/restoration/frontier relationships. | Source curation in progress; no complete-collection claim yet. |
-| AR8R and other research designs | Historical theorem packets and later corrections; exact/semantic proposal series; companion, experiment and terminology roles. | Contributor bundle prepared; integration and qualification pending. |
-| Supporting collections | Work/collection ownership with substantive exceptions, public lookup and honest reading scope. | Implement under the owner amendment; no claim that every historical record was read. |
+## Actual qualification and review state
 
-Source-grounded contributor input is authoring work, not independent C05 review. Integrate by key, preserving earlier source/work identities and relationships; do not replace the shared crosswalk with a contributor snapshot.
+| Stage | State and remaining action |
+|---|---|
+| C03 | Author work/subject reconciliation assembled. Final independent coverage acceptance remains. |
+| C04 | The repaired compact-owner controls and all six local suites passed: 311 reader, ten census and twenty projection tests separately in ordinary and optimised Python. The index-text repair passed 22 affected continuation/navigation tests. Repeated generation was byte-identical; state convergence, preservation, review-state and reference gates passed. Full CI for the containing published candidate remains a separate observed gate. |
+| C05 | Fresh independent math, philosophy and technical model reviewers are working. Preliminary findings have been repaired or assigned. They are not yet exact-candidate acceptance. All five prepared independent-reader tasks remain NOT_RUN until actually executed. |
+| C06 | Owner-controlled; no merge, release, PR-ready transition, scientific adoption or issue closure. |
 
-## Qualification and review state
+Independent source findings refined calibration and acquisition hypotheses, restored FND-007's provisional warranted-belief conclusion, preserved the lunar study's positive transmission evidence and remaining upper-source/publicity limits, and exposed Fable's local constant-profile inconsistency. Inherited learning corrections restore conditional classifications, exact limits and source attribution. Unsupported SC result labels were replaced by the original T5/T6 owners. Technical review required real source-to-work and collection-owner checks for compact dispositions. Anchor existence alone does not establish identity or comprehension. All findings remain subject to final independent repair readback.
 
-- **C03:** in progress. Direct reading improvements and recovered work are being qualified; the three substantive bundles remain to integrate.
-- **C04:** the recovered-support/direct-reading candidate passed 293 reader, 10 census and 20 projection tests separately in ordinary and optimised Python 3.12.14. Both production readers/projection checks passed; generated state converged, and state, review-state, repository, internal-reference and whitespace gates passed. Existing maintenance exercises and controls are retained. Full hosted CI for this containing checkpoint is pending publication; the prior green HEAD does not qualify new changes.
-- **C05:** NOT_RUN on the eventual complete candidate. The five prepared independent-reader tasks have not yet been executed by final independent reviewers. Their text and the J01–J07/T01–T18 contracts are retained.
-- **C06:** owner-controlled and unauthorised. No merge, release, issue closure or scientific adoption.
+Further inherited-source corrections distinguish the Ninth's recorded withholding fixture from every admitted service decoration, exact inverse states from timestamp-erasing event correspondence, and proved controller lawfulness/region closure from the infinite parity objective. Scientific sources remain intact.
 
 ## Next meaningful step
 
-Publish and verify the recovered-support/direct-reading checkpoint; integrate the prepared successor, T20 and AR8R bundles at scholarly-family level; complete compact collection support dispositions and run the existing controls. Then bind separate scholarly, technical and reader-comprehension reviews to the exact candidate. Publish qualified work before any session handoff; describe unpublished local work as local only.
+Publish this substantial integrated checkpoint and observe its full hosted workflow. Give that exact SHA/tree to the fresh reviewers. Complete the five unassisted reader tasks and the remaining independent inherited-summary review; repair consequential findings and requalify the final tree. Stop only at the owner-controlled integration boundary or an accurately reported mandatory blocker.
 
-The PR description is the external, non-circular location for the latest containing commit's exact SHA/tree and hosted CI. At each material checkpoint, update this handoff with the last independently verified published state and the actual remaining work.
+The PR description is the non-circular receipt for the latest containing SHA/tree, complete CI conclusion and final review bindings. Never describe unpublished local work or an earlier green head as a qualified later GitHub checkpoint.
