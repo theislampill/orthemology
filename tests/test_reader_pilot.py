@@ -4584,6 +4584,435 @@ class LateResultLedgerSupportTests(unittest.TestCase):
             self.assertNotEqual(changed, text)
             self.assertFalse(required <= reached(changed))
 
+class SourceReadingGuideRoutesTests(unittest.TestCase):
+    """One guide, two dated reading editions; documentary scope is not science."""
+    GROUP = TwentiethFormalWorkTests.GROUP
+    KEY = "t20-source-reading-guide"
+    ORIGINAL = "t20/reading/GUIDE.md"
+    V2 = "t20/reading/GUIDE_v2.md"
+    QA = "t20/reports/GUIDE_v2_QA_MANIFEST.json"
+    REVIEW_MD = "t20/reports/REPORT_GUIDE_V2_READBACK.md"
+    REVIEW = "t20/reports/REPORT_GUIDE_V2_READBACK.json"
+    CURRENT = "t20/reports/CURRENT_DOCUMENTS_v2.json"
+    INDEX = "t20/reading/READING_INDEX.json"
+    QUESTIONS = "t20/reading/SPECIALIST_REVIEW_QUESTIONS.md"
+    SUPPORT = (V2, QA, REVIEW_MD, REVIEW, CURRENT, INDEX)
+    NEW = (V2, QA, CURRENT)
+    CATALOGUE = "the-twentieth-source-guide-and-its-expanded-reading-edition"
+    VERIFICATION = "checking-the-source-guide-editions-and-reading-boundaries"
+    RELATION = "expanded-reading-edition-preserves-dated-assessment"
+    OWNER_KEYS = ("t20-arabic-reading-methodology", "t20-drive-corpus-methodology",
+                  "t20-math-utilisation-methodology", "t20-result-method-handoff",
+                  "t20-emergence-type-control", "t20-divine-action-context",
+                  "t20-cooperation-context", "t20-final-research-report")
+    setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
+    section_targets = MethodologyRoutesMixin.section_targets
+    section_body = FinalReportRoutesTests.section_body
+    source_key = FinalReportRoutesTests.source_key
+
+    def record(self, alias):
+        return json.loads((ROOT / self.aliases[alias]["public_path"]).read_text())
+
+    def work(self, cross):
+        return next((w for w in cross["works"] if w["key"] == self.KEY), None)
+
+    def guide_errors(self, cross):
+        errors = []
+        work = self.work(cross)
+        if work is None:
+            return ["guide-missing-work"]
+        keys = [self.source_key(a) for a in self.SUPPORT] + ["t20-context-50e3ae6b35c1b914"]
+        if work.get("role") != "supporting-reference" or work.get("existing_result_ids") != []:
+            errors.append("guide-role-or-result-credit")
+        if work.get("source_keys") != [self.source_key(self.ORIGINAL)]:
+            errors.append("guide-original-primary")
+        forms = [{"source": self.source_key(a), "relationship": "retained-source-reading-projection"}
+                 for a in (self.ORIGINAL, self.V2)]
+        if work.get("reading_forms") != forms:
+            errors.append("guide-ordered-editions")
+        if work.get("supporting_source_keys") != keys:
+            errors.append("guide-finite-ordered-support")
+        for alias in (self.ORIGINAL,) + self.SUPPORT:
+            row = self.aliases[alias]
+            key = self.source_key(alias)
+            source = cross["sources"].get(key)
+            if (source is None or source.get("path") != row["public_path"]
+                    or source.get("sha256") != row["public_sha256"] or not source.get("read_scope")):
+                errors.append("guide-source-identity:" + alias)
+            if [k for k, s in cross["sources"].items() if s.get("path") == row["public_path"]] != [key]:
+                errors.append("guide-source-alias:" + alias)
+        editions = {self.aliases[a]["public_path"] for a in (self.ORIGINAL, self.V2)}
+        documentary = {self.aliases[a]["public_path"] for a in (self.QA, self.REVIEW_MD, self.REVIEW, self.CURRENT, self.INDEX)}
+        for candidate in cross["works"]:
+            paths = {cross["sources"].get(k, {}).get("path") for k in candidate.get("source_keys", [])}
+            paths |= {cross["sources"].get(f.get("source"), {}).get("path") for f in candidate.get("reading_forms", [])}
+            if candidate["key"] != self.KEY and editions & paths:
+                errors.append("guide-duplicate-edition")
+            if documentary & paths:
+                errors.append("guide-documentary-primary")
+        expected = {"from": self.source_key(self.ORIGINAL), "to": self.source_key(self.V2),
+                    "kind": self.RELATION, "basis": self.source_key(self.REVIEW)}
+        relations = [r for r in cross["relations"] if r.get("from") == expected["from"] and r.get("to") == expected["to"]]
+        if relations != [expected]:
+            errors.append("guide-successor-relation")
+        for owner, aliases in (("t20-cooperation-context", (self.ORIGINAL, self.INDEX)),
+                               ("t20-arabic-reading-methodology", (self.INDEX,)),
+                               ("t20-final-research-report", (self.REVIEW_MD, self.REVIEW))):
+            existing = next(w for w in cross["works"] if w["key"] == owner)
+            if not {self.source_key(a) for a in aliases} <= set(existing.get("supporting_source_keys", [])):
+                errors.append("guide-existing-support:" + owner)
+        return errors
+
+    def required_routes(self):
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        works = {w["key"]: w for w in self.cross["works"]}
+        targets = {(self.aliases[a]["public_path"], "") for a in (self.ORIGINAL,) + self.SUPPORT + (self.QUESTIONS,)}
+        targets |= {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in self.OWNER_KEYS}
+        targets |= {(page, "late-evidence-handoff-for-the-typed-emergence-control"),
+                    (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", "")}
+        return targets
+
+    def test_one_reference_has_exact_editions_support_and_preserved_existing_edges(self):
+        self.assertEqual(self.guide_errors(self.cross), [])
+
+    def test_missing_work_role_credit_forms_and_support_reject_mutation(self):
+        self.assertEqual(self.guide_errors(self.cross), [])
+        changed = deepcopy(self.cross)
+        changed["works"] = [w for w in changed["works"] if w["key"] != self.KEY]
+        self.assertIn("guide-missing-work", self.guide_errors(changed))
+        for field, value, error in (("role", "research-note", "guide-role-or-result-credit"),
+                ("existing_result_ids", ["T20-EMERGENCE-TYPE-CONTROL"], "guide-role-or-result-credit"),
+                ("existing_result_ids", ["T20-INVENTED-GUIDE-RESULT"], "guide-role-or-result-credit"),
+                ("source_keys", [self.source_key(self.V2)], "guide-original-primary"),
+                ("reading_forms", list(reversed(self.work(self.cross)["reading_forms"])), "guide-ordered-editions")):
+            changed = deepcopy(self.cross)
+            self.work(changed)[field] = value
+            self.assertIn(error, self.guide_errors(changed))
+        for key in self.work(self.cross)["supporting_source_keys"]:
+            changed = deepcopy(self.cross)
+            self.work(changed)["supporting_source_keys"].remove(key)
+            self.assertIn("guide-finite-ordered-support", self.guide_errors(changed))
+
+    def test_exact_public_bindings_reject_wrong_existing_source_and_alias_copy(self):
+        self.assertEqual(self.guide_errors(self.cross), [])
+        for alias in (self.ORIGINAL,) + self.SUPPORT:
+            key = self.source_key(alias)
+            for field, value in (("path", self.aliases["t20/reports/REPORT_v2.md"]["public_path"]),
+                                 ("sha256", "0" * 64), ("read_scope", "")):
+                changed = deepcopy(self.cross)
+                changed["sources"][key][field] = value
+                self.assertIn("guide-source-identity:" + alias, self.guide_errors(changed))
+            changed = deepcopy(self.cross)
+            changed["sources"]["fixture-guide-alias"] = deepcopy(changed["sources"][key])
+            self.assertIn("guide-source-alias:" + alias, self.guide_errors(changed))
+
+    def test_duplicate_editions_and_documentary_credit_cannot_hide_under_aliases(self):
+        self.assertEqual(self.guide_errors(self.cross), [])
+        for alias in (self.ORIGINAL,) + self.SUPPORT:
+            for field in ("source_keys", "reading_forms"):
+                changed = deepcopy(self.cross)
+                key = self.source_key(alias)
+                changed["sources"]["fixture-guide-alias"] = deepcopy(changed["sources"][key])
+                duplicate = deepcopy(self.work(changed))
+                duplicate.update(key="fixture-guide-credit", source_keys=[], reading_forms=[], supporting_source_keys=[])
+                duplicate[field] = ["fixture-guide-alias"] if field == "source_keys" else [
+                    {"source": "fixture-guide-alias", "relationship": "retained-source-reading-projection"}]
+                changed["works"].append(duplicate)
+                error = "guide-duplicate-edition" if alias in (self.ORIGINAL, self.V2) else "guide-documentary-primary"
+                self.assertIn(error, self.guide_errors(changed))
+        for mutation in ("remove", "kind", "basis", "duplicate"):
+            changed = deepcopy(self.cross)
+            relation = next(r for r in changed["relations"] if r.get("from") == self.source_key(self.ORIGINAL)
+                            and r.get("to") == self.source_key(self.V2))
+            if mutation == "remove":
+                changed["relations"].remove(relation)
+            elif mutation == "duplicate":
+                changed["relations"].append(deepcopy(relation))
+            else:
+                relation[mutation] = "unqualified-successor" if mutation == "kind" else self.source_key(self.QA)
+            self.assertIn("guide-successor-relation", self.guide_errors(changed))
+
+    def test_catalogue_and_verification_route_every_identity_and_existing_owner(self):
+        required = self.required_routes()
+        for page, heading in (("docs/reader/PAPER-CATALOGUE.md", self.CATALOGUE),
+                              ("docs/reader/VERIFICATION-GUIDE.md", self.VERIFICATION)):
+            text = (ROOT / page).read_text()
+            reached = lambda body: self.section_targets(body, page, heading)
+            self.assertTrue(required <= reached(text), required - reached(text))
+            for target in required:
+                changed_lines = []
+                for line in text.splitlines(True):
+                    changed = line
+                    for _, href in self.mod.markdown_index(line)["links"]:
+                        if self.mod.resolve_reader_link(ROOT, page, href) == target:
+                            changed = changed.replace("(" + href + ")", "(RESULT-INDEX.md)")
+                    changed_lines.append(changed)
+                changed = "".join(changed_lines)
+                self.assertNotEqual(changed, text)
+                self.assertFalse(required <= reached(changed), target)
+
+    def bridge_errors(self, section, references):
+        errors = []
+        for literal in dict.fromkeys(references):
+            alias = posixpath.normpath(posixpath.join("t20/reading", literal))
+            row = self.aliases[alias]
+            matches = [line for line in section.splitlines() if "`" + literal + "`" in line]
+            targets = [] if len(matches) != 1 else [self.mod.resolve_reader_link(
+                ROOT, "docs/reader/VERIFICATION-GUIDE.md", href)
+                for _, href in self.mod.markdown_index(matches[0])["links"]]
+            if targets != [(row["public_path"], "")]:
+                errors.append("guide-bridge:" + literal)
+        return errors
+
+    def test_eleven_relative_occurrences_have_ten_exact_paired_bridge_rows(self):
+        source = (ROOT / self.aliases[self.V2]["public_path"]).read_text()
+        references = [href for _, href in self.mod.markdown_index(source)["links"] if not href.startswith(("http:", "https:", "#"))]
+        self.assertEqual((len(references), len(set(references)), references.count("READING_INDEX.json")), (11, 10, 2))
+        text = (ROOT / "docs/reader/VERIFICATION-GUIDE.md").read_text()
+        section = self.section_body(text, self.VERIFICATION)
+        self.assertEqual(self.bridge_errors(section, references), [])
+        rows = [self.aliases[posixpath.normpath(posixpath.join("t20/reading", literal))]
+                for literal in dict.fromkeys(references)]
+        for literal, row in zip(dict.fromkeys(references), rows):
+            changed = section.replace("(../../" + row["public_path"] + ")", "(PAPER-CATALOGUE.md)")
+            self.assertNotEqual(changed, section)
+            self.assertIn("guide-bridge:" + literal, self.bridge_errors(changed, references))
+        first, second = ["(../../" + row["public_path"] + ")" for row in rows[:2]]
+        changed = section.replace(first, "FIXTURE_GUIDE_SWAP").replace(second, first).replace("FIXTURE_GUIDE_SWAP", second)
+        self.assertEqual({href for _, href in self.mod.markdown_index(section)["links"]},
+                         {href for _, href in self.mod.markdown_index(changed)["links"]})
+        self.assertEqual(set(self.bridge_errors(changed, references)),
+                         {"guide-bridge:" + literal for literal in list(dict.fromkeys(references))[:2]})
+
+    def projection(self, alias):
+        row = self.aliases[alias]
+        return {"owner_archive_path": alias, "sha256": row["public_sha256"], "bytes": row["public_bytes"]}
+
+    def record_errors(self, qa, current, review):
+        errors = []
+        if qa["schema"] != "t20-successor-guide-document-qa-v2":
+            errors.append("guide-qa-schema")
+        for field, alias in (("source", self.V2), ("source_review", self.REVIEW)):
+            if qa[field]["included_record"] != self.projection(alias):
+                errors.append("guide-qa-public:" + field)
+        if (qa["source_review"]["historical_original_identity"]["sha256"] != self.aliases[self.REVIEW]["original_sha256"]
+                or qa["original_document_record_sha256"] != self.aliases[self.QA]["original_sha256"]):
+            errors.append("guide-original-public-distinction")
+        expected_counts = (255, 20, 11, 62, 20)
+        if tuple(qa[k] for k in ("authored_records_exact", "external_hyperlinks_exact",
+                "relative_references_as_exact_labels_and_literal_paths", "arabic_codepoints_exact_in_source_order", "page_count")) != expected_counts:
+            errors.append("guide-document-counts")
+        if (len(qa["pages"]) != 20 or any(p["original_body_included"] is not False for p in qa["pages"])
+                or qa["render_route"]["qa_only_pdf"]["original_body_included"] is not False):
+            errors.append("guide-render-body-limit")
+        if (qa["source_edited"] is not False or qa["scientific_replay"] is not False
+                or current["scientific_replay"] is not False or current["qa_renders_selected_for_delivery"] is not False
+                or review["methodology_new_reading_or_science_credit"] != 0
+                or review["proofs_replayed_by_this_reviewer"] is not False
+                or review["scientific_sources_changed_by_this_reviewer"] is not False):
+            errors.append("guide-retrospective-science-scope")
+        if review["current_1434_philosophical_section_verbatim_preserved"] is not True:
+            errors.append("guide-dated-appraisal")
+        if tuple(review[k] for k in ("ontology_author_theorems", "ontology_author_selected_readbacks",
+                "ontology_author_semantic_rejections", "ontology_reviewer_probes",
+                "ontology_final_review_bound_files_verified")) != (9, 7, 2, 7, 26):
+            errors.append("guide-separately-dated-ontology-credit")
+        roles = current["current_documents"]
+        if current["schema"] != "t20-current-three-role-documents-v2":
+            errors.append("guide-current-schema")
+        expected_roles = [("research report", "current v2 successor"),
+                          ("source and reading guide", "current v2 successor"),
+                          ("mathematical companion", "current unchanged mathematical v2")]
+        if [(r["role"], r["status"]) for r in roles] != expected_roles:
+            errors.append("guide-document-role-selection")
+        if [r["page_count"] for r in roles] != [14, 20, 19] or current["total_current_pages"] != 53:
+            errors.append("guide-current-document-pages")
+        qa_roles = {"research report": "t20/reports/REPORT_v2_QA_MANIFEST.json",
+                    "source and reading guide": self.QA,
+                    "mathematical companion": "t20/reports/MATHEMATICAL_COMPANION_QA.json"}
+        for row in roles:
+            alias = qa_roles.get(row["role"])
+            if (alias is None or row["qa"]["included_record"] != self.projection(alias)
+                    or row["qa"]["historical_original_identity"]["sha256"] != self.aliases[alias]["original_sha256"]):
+                errors.append("guide-current-role-qa")
+        for role, alias in (("research report", "t20/reports/REPORT_v2.md"), ("source and reading guide", self.V2)):
+            rows = [r for r in roles if r["role"] == role]
+            if len(rows) != 1 or rows[0]["source"]["included_record"] != self.projection(alias):
+                errors.append("guide-current-source:" + role)
+        guides = [r for r in roles if r["role"] == "source and reading guide"]
+        if len(guides) == 1:
+            guide = guides[0]
+            if (guide["qa"]["included_record"] != self.projection(self.QA)
+                    or guide["qa"]["historical_original_identity"]["sha256"] != self.aliases[self.QA]["original_sha256"]):
+                errors.append("guide-current-qa-identity")
+            if guide["document"] != qa["document"]:
+                errors.append("guide-owner-word-identity")
+        if [(r["role"], r["status"]) for r in current["retained_historical_documents"]] != [
+                ("research report", "retained historical v1"), ("source and reading guide", "retained historical v1")]:
+            errors.append("guide-retained-history")
+        return errors
+
+    def test_document_qa_current_map_and_shared_review_have_distinct_mutable_controls(self):
+        qa, current, review = self.record(self.QA), self.record(self.CURRENT), self.record(self.REVIEW)
+        self.assertEqual(self.record_errors(qa, current, review), [])
+        cases = [(0, ("schema",), "t20-successor-report-document-qa-v2", "guide-qa-schema"),
+                 (0, ("source", "included_record"), self.projection("t20/reports/REPORT_v2.md"), "guide-qa-public:source"),
+                 (0, ("source_review", "included_record", "sha256"), self.aliases[self.REVIEW]["original_sha256"], "guide-qa-public:source_review"),
+                 (0, ("source_review", "historical_original_identity", "sha256"), self.aliases[self.REVIEW]["public_sha256"], "guide-original-public-distinction"),
+                 (0, ("original_document_record_sha256",), self.aliases[self.QA]["public_sha256"], "guide-original-public-distinction"),
+                 (0, ("pages", 0, "original_body_included"), True, "guide-render-body-limit"),
+                 (1, ("current_documents", 1, "qa", "included_record", "sha256"), self.aliases[self.QA]["original_sha256"], "guide-current-qa-identity"),
+                 (1, ("current_documents", 1, "source", "included_record"), self.projection("t20/reports/REPORT_v2.md"), "guide-current-source:source and reading guide"),
+                 (1, ("current_documents", 2, "status"), "current v2 successor", "guide-document-role-selection"),
+                 (1, ("current_documents", 1, "role"), "scientific result owner", "guide-document-role-selection"),
+                 (1, ("current_documents", 2, "qa"), current["current_documents"][0]["qa"], "guide-current-role-qa"),
+                 (1, ("schema",), "current-scientific-owner-admission", "guide-current-schema"),
+                 (1, ("total_current_pages",), 54, "guide-current-document-pages"),
+                 (1, ("retained_historical_documents", 1, "status"), "current v2 successor", "guide-retained-history"),
+                 (2, ("current_1434_philosophical_section_verbatim_preserved",), False, "guide-dated-appraisal"),
+                 (2, ("ontology_author_selected_readbacks",), 0, "guide-separately-dated-ontology-credit")]
+        cases += [(0, (k,), 256, "guide-document-counts") for k in ("authored_records_exact", "external_hyperlinks_exact",
+                   "relative_references_as_exact_labels_and_literal_paths", "arabic_codepoints_exact_in_source_order", "page_count")]
+        cases += [(n, (k,), 1 if k == "methodology_new_reading_or_science_credit" else True, "guide-retrospective-science-scope")
+                  for n, fields in ((0, ("source_edited", "scientific_replay")),
+                                    (1, ("scientific_replay", "qa_renders_selected_for_delivery")),
+                                    (2, ("methodology_new_reading_or_science_credit", "proofs_replayed_by_this_reviewer", "scientific_sources_changed_by_this_reviewer")))
+                  for k in fields]
+        for number, path, value, error in cases:
+            records = [deepcopy(qa), deepcopy(current), deepcopy(review)]
+            target = records[number]
+            for part in path[:-1]:
+                target = target[part]
+            target[path[-1]] = value
+            self.assertIn(error, self.record_errors(*records), path)
+
+    def preservation_errors(self, original, revised):
+        changes = difflib.SequenceMatcher(None, original.splitlines(True), revised.splitlines(True), autojunk=False).get_opcodes()
+        errors = []
+        if [op for op in changes if op[0] != "equal"] != [("replace", 8, 9, 8, 9), ("insert", 13, 13, 13, 29)]:
+            errors.append("guide-v2-delta")
+        preserved = sum(sum(map(len, original.splitlines(True)[i:j])) for op, i, j, _, _ in changes if op == "equal")
+        if preserved != 63254:
+            errors.append("guide-v2-preserved-bytes")
+        heading = b"## Relation to the final judgement\n"
+        def appraisal(body):
+            start = body.index(heading)
+            end = body.find(b"\n## ", start + len(heading))
+            return body[start:] if end < 0 else body[start:end]
+        if appraisal(original) != appraisal(revised):
+            errors.append("guide-v2-appraisal")
+        return errors
+
+    def test_actual_guide_delta_and_shared_receipt_preserve_dated_appraisal(self):
+        original = (ROOT / self.aliases[self.ORIGINAL]["public_path"]).read_bytes()
+        revised = (ROOT / self.aliases[self.V2]["public_path"]).read_bytes()
+        self.assertEqual(self.preservation_errors(original, revised), [])
+        changed = revised.replace(b"I provisionally accept an actual Necessary Being.", b"I certify an actual Necessary Being.", 1)
+        self.assertIn("guide-v2-appraisal", self.preservation_errors(original, changed))
+        self.assertIn("guide-v2-preserved-bytes", self.preservation_errors(original, changed))
+        receipt = self.record(self.REVIEW)["preservation"][1]
+        self.assertEqual(receipt["baseline"]["included_projection"], self.projection(self.ORIGINAL))
+        self.assertEqual(receipt["successor"]["included_projection"], self.projection(self.V2))
+        self.assertEqual(receipt["allowed_replacement_baseline_line"], 9)
+        self.assertEqual(receipt["changes"], [
+            {"operation": "replace", "old_line_start": 9, "old_line_end": 9, "new_line_start": 9, "new_line_end": 9},
+            {"operation": "insert", "old_line_start": 14, "old_line_end": 13, "new_line_start": 14, "new_line_end": 29}])
+
+    def test_owner_primary_and_prepared_comprehension_protocol_are_preserved(self):
+        owners = json.loads((ROOT / "docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json").read_text())
+        self.assertEqual(owners["required_work_sources"].count(self.aliases[self.ORIGINAL]["public_path"]), 1)
+        text = (ROOT / "docs/reader/VERIFICATION-GUIDE.md").read_text()
+        tasks = self.section_body(text, "independent-reader-comprehension-tasks-for-the-final-candidate")
+        self.assertEqual(hashlib.sha256(tasks.encode()).hexdigest(),
+                         "b45ff7603fbeb4e701d4b86f7aa65f66ea3044722986525ed68042f61e16ba28")
+
+    def index_scope_errors(self, index):
+        """Only selected index fields; this does not claim reading its full body."""
+        errors = []
+        summary = index["final_scope_summary"]
+        counts = ("source_work_entries", "completed_ordered_study_groups", "principal_return_points_in_ordered_groups",
+                  "broader_return_points_in_ordered_groups", "witness_objects", "original_evidence_records",
+                  "records_with_verified_public_aliases")
+        if tuple(summary[k] for k in counts) != (13, 8, 42, 48, 42, 200, 132):
+            errors.append("guide-index-distinct-count-units")
+        if (summary["all_primary_reading_credit_remains_with_original_receipts"] is not True
+                or summary["no_new_primary_reading_by_this_compilation"] is not True
+                or index["public_projection"]["new_primary_reading_credit"] != 0
+                or index["public_projection"]["source_body_selection"] is not False):
+            errors.append("guide-index-compilation-not-body-admission")
+        if (index["schema_version"] != 1 or index["status"] != "FINAL_COMPLETED_SOURCE_GUIDE_INDEX"
+                or index["as_of_utc"] != "2026-10-07T14:49:59Z"
+                or index["current_appraisal"]["as_of_utc"] != "2026-10-07T14:34:00Z"
+                or index["current_appraisal"]["universal_source_mode"] != "Sufficient warrant withheld."):
+            errors.append("guide-index-dated-scope")
+        groups = ("DAR", "MINHAJ", "SAWAIQ", "SHIFA", "JAMI6", "MIFTAH", "NUBUWWAT", "SAFADIYYA")
+        works = {w["id"]: w for w in index["works"]}
+        if set(works) != set(groups) | {"ASBAHANI", "AKMALIYYA", "ALDA", "RICHARD", "ONENESS"}:
+            errors.append("guide-index-groups-and-earlier-returns")
+        bounded = {
+            "ASBAHANI": "Bounded Twentieth rereading of the historically indexed volume",
+            "RICHARD": "Selected comparison; not a whole-book study",
+            "DAR": "Selected received bodies completed",
+            "MINHAJ": "Selected received bodies completed",
+            "SAWAIQ": "Entire selected received original electronic body completed; historical composition incomplete",
+            "JAMI6": "All eighteen received treatises and modern contents traversed by mixed electronic and image reading; complete historical originals not claimed",
+            "NUBUWWAT": "Entire selected received electronic body completed; bounded critical-edition controls only"}
+        if any(works.get(key, {}).get("status") != status for key, status in bounded.items()):
+            errors.append("guide-index-work-specific-body-limits")
+        coordinates = index["coordinate_conventions"]
+        if (coordinates["Dar8"] != "Stable V08-P0001–V08-P1873 paragraph IDs; exact character offsets in the recorded extraction, zero-based and end-exclusive."
+                or coordinates["Dar9"] != "Physical newline numbers in the retained Islamicbook section text; not printed page labels."
+                or coordinates["PDF"] != "One-based positions in the specifically hashed PDF; printed front matter and main-text sequences are named separately."):
+            errors.append("guide-index-coordinate-units")
+        return errors
+
+    def test_targeted_index_fields_reject_group_body_credit_and_chronology_inflation(self):
+        # These targeted fields support this guide's limited index use. No
+        # completion inference is drawn from its empty pending_studies array.
+        index = self.record(self.INDEX)
+        self.assertEqual(self.index_scope_errors(index), [])
+        cases = [(("final_scope_summary", "completed_ordered_study_groups"), 13, "guide-index-distinct-count-units"),
+                 (("final_scope_summary", "source_work_entries"), 8, "guide-index-distinct-count-units"),
+                 (("final_scope_summary", "all_primary_reading_credit_remains_with_original_receipts"), False, "guide-index-compilation-not-body-admission"),
+                 (("public_projection", "source_body_selection"), True, "guide-index-compilation-not-body-admission"),
+                 (("public_projection", "new_primary_reading_credit"), 1, "guide-index-compilation-not-body-admission"),
+                 (("as_of_utc",), "2026-10-07T16:49:45Z", "guide-index-dated-scope"),
+                 (("current_appraisal", "universal_source_mode"), "Accepted by current document selection", "guide-index-dated-scope"),
+                 (("coordinate_conventions", "Dar9"), index["coordinate_conventions"]["PDF"], "guide-index-coordinate-units")]
+        for path, value, error in cases:
+            changed = deepcopy(index)
+            target = changed
+            for key in path[:-1]:
+                target = target[key]
+            target[path[-1]] = value
+            self.assertIn(error, self.index_scope_errors(changed), path)
+        changed = deepcopy(index)
+        next(w for w in changed["works"] if w["id"] == "RICHARD")["status"] = "Complete whole-book study"
+        self.assertIn("guide-index-work-specific-body-limits", self.index_scope_errors(changed))
+
+    def test_unavailable_owner_word_and_unselected_original_family_are_not_new_forms(self):
+        self.assertEqual(self.guide_errors(self.cross), [])
+        qa = self.record(self.QA)
+        changed = deepcopy(self.cross)
+        changed["sources"]["fixture-owner-only-guide-word"] = {
+            "path": qa["document"]["included_record"]["owner_archive_path"],
+            "sha256": qa["document"]["included_record"]["sha256"],
+            "read_scope": "Isolated unavailable owner-only Word admission control."}
+        self.work(changed)["reading_forms"].append({"source": "fixture-owner-only-guide-word",
+                                                   "relationship": "retained-source-reading-projection"})
+        self.assertIn("guide-ordered-editions", self.guide_errors(changed))
+        # Test this work's finite support contract, not a permanent global ban
+        # on later separately authorised curation of the four original records.
+        for number in (205, 206, 207, 208):
+            row = self.selected[number]
+            changed = deepcopy(self.cross)
+            changed["sources"]["fixture-larger-guide-family"] = {
+                "path": row["public_path"], "sha256": row["public_sha256"],
+                "read_scope": "Isolated original-family over-admission control."}
+            self.work(changed)["supporting_source_keys"].append("fixture-larger-guide-family")
+            self.assertIn("guide-finite-ordered-support", self.guide_errors(changed))
+
+
 
 if __name__ == "__main__":
     unittest.main()
