@@ -2,6 +2,22 @@
 
 **IN PROGRESS. Resume the existing work; this is not a new research programme or independent acceptance.**
 
+## Owner scope amendment — 18 October 2026
+
+The owner's **Owner Continuation — Finish Orthemology's Research-Reader Refactor** authorises continued source-preserving implementation on the existing branch through substantial C03/C04 batches and genuinely separate C05 review. It supersedes the earlier two-unit stopping limits. The intended output is a readable scholarly library: distinct substantive works and subjects, clear primary reading forms, source-grounded arguments and mathematical results, and intelligible assumptions, limitations and research status.
+
+The following is a narrow amendment to the treatment of historical supporting populations in §§5, 8 and 9 of Issue 35. It does not replace that work order's intellectual or preservation requirements.
+
+- **Scholarly population:** determine work and subject coverage through the independently frozen census, authoritative scientific indexes, work owners and collection summaries. A substantive work may have components and editions. A research collection may provide a grouped reading route to its constituent notes. Neither paths nor source aliases are paper counts.
+- **Supporting population:** repeated source copies, witness and bibliographic records, manifests, receipts, generated artifacts and process history may be dispositioned through their existing work or collection owner. Continuous source studies remain scholarly support within their named subjects. Intellectually significant exceptions require explicit reader routes. This replaces the earlier requirement to undertake a separate complete semantic reading and hand-written disposition of each supporting object solely to finish the refactor.
+- **Traceability and disclosure:** retain exact source bindings for authored summaries and the actual authoritative lookup for each grouped population. State whether a source was read completely, through selected passages, or through its owner/index. Index inspection is not body reading; author-reported checks are not fresh execution. Historical support obligations removed by this amendment are **scope-amended**, not passed or retrospectively performed.
+- **Unchanged acceptance:** meaningful coverage, scientific ownership/status, all protected source bytes and modes, public availability, source-faithful summaries, actual J01–J07 journeys, T01–T18 discrimination, existing CI and independent review remain required. The five prepared reader tasks remain NOT_RUN until a separate reader executes them. Completed M01–M05 are reused.
+- **Authority:** no merge, release, ready-for-review transition, Issue 35 closure, scientific adoption or paper submission is authorised. C06 remains owner-controlled. C05 must identify its separate reviewer context and exact candidate.
+
+Execution uses the existing six reader pages, crosswalk, owner map and checks. The current implementation plan is to recover the unpublished support-tail unit; improve direct paper/subject navigation; reconcile the remaining successor, T20 live/v6 and AR8R scholarship in coherent batches; qualify preservation, routes and hosted CI; then obtain independent scholarly, technical and comprehension review. The sole integrator owns shared files. Bounded contributors return source-grounded curation input; their authorship does not count as independent acceptance.
+
+The current concise recovery record is [PROGRESS.md](PROGRESS.md). Earlier plans and observations below retain their historical scope.
+
 ## Authority and recovered state
 
 The owner renewed branch implementation authority and requested regular GitHub checkpoints and five-point progress summaries, including the next action. The existing limits in [EXECUTION.md](EXECUTION.md) and [Issue 35](https://github.com/theislampill/orthemology/issues/35) remain binding. Keep PR 36 draft. No merge, release, scientific reclassification or T21 authority is granted.

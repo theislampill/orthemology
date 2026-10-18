@@ -4597,6 +4597,8 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
     INDEX = "t20/reading/READING_INDEX.json"
     QUESTIONS = "t20/reading/SPECIALIST_REVIEW_QUESTIONS.md"
     SUPPORT = (V2, QA, REVIEW_MD, REVIEW, CURRENT, INDEX)
+    TAIL = (QUESTIONS, "t20/reading/READING_INDEX_VALIDATION.json",
+            "t20/reports/GUIDE_QA_MANIFEST.json", "t20/reports/FINAL_DOCUMENTS.json")
     NEW = (V2, QA, CURRENT)
     CATALOGUE = "the-twentieth-source-guide-and-its-expanded-reading-edition"
     VERIFICATION = "checking-the-source-guide-editions-and-reading-boundaries"
@@ -4604,7 +4606,8 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
     OWNER_KEYS = ("t20-arabic-reading-methodology", "t20-drive-corpus-methodology",
                   "t20-math-utilisation-methodology", "t20-result-method-handoff",
                   "t20-emergence-type-control", "t20-divine-action-context",
-                  "t20-cooperation-context", "t20-final-research-report")
+                  "t20-cooperation-context", "t20-final-research-report",
+                  "t20-mathematical-companion")
     setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
     section_targets = MethodologyRoutesMixin.section_targets
     section_body = FinalReportRoutesTests.section_body
@@ -4622,6 +4625,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
         if work is None:
             return ["guide-missing-work"]
         keys = [self.source_key(a) for a in self.SUPPORT] + ["t20-context-50e3ae6b35c1b914"]
+        keys += [self.source_key(a) for a in self.TAIL]
         if work.get("role") != "supporting-reference" or work.get("existing_result_ids") != []:
             errors.append("guide-role-or-result-credit")
         if work.get("source_keys") != [self.source_key(self.ORIGINAL)]:
@@ -4632,7 +4636,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
             errors.append("guide-ordered-editions")
         if work.get("supporting_source_keys") != keys:
             errors.append("guide-finite-ordered-support")
-        for alias in (self.ORIGINAL,) + self.SUPPORT:
+        for alias in (self.ORIGINAL,) + self.SUPPORT + self.TAIL:
             row = self.aliases[alias]
             key = self.source_key(alias)
             source = cross["sources"].get(key)
@@ -4642,7 +4646,8 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
             if [k for k, s in cross["sources"].items() if s.get("path") == row["public_path"]] != [key]:
                 errors.append("guide-source-alias:" + alias)
         editions = {self.aliases[a]["public_path"] for a in (self.ORIGINAL, self.V2)}
-        documentary = {self.aliases[a]["public_path"] for a in (self.QA, self.REVIEW_MD, self.REVIEW, self.CURRENT, self.INDEX)}
+        documentary = {self.aliases[a]["public_path"] for a in
+                       (self.QA, self.REVIEW_MD, self.REVIEW, self.CURRENT, self.INDEX) + self.TAIL}
         for candidate in cross["works"]:
             paths = {cross["sources"].get(k, {}).get("path") for k in candidate.get("source_keys", [])}
             paths |= {cross["sources"].get(f.get("source"), {}).get("path") for f in candidate.get("reading_forms", [])}
@@ -4666,7 +4671,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
     def required_routes(self):
         page = "docs/reader/PAPER-CATALOGUE.md"
         works = {w["key"]: w for w in self.cross["works"]}
-        targets = {(self.aliases[a]["public_path"], "") for a in (self.ORIGINAL,) + self.SUPPORT + (self.QUESTIONS,)}
+        targets = {(self.aliases[a]["public_path"], "") for a in (self.ORIGINAL,) + self.SUPPORT + self.TAIL}
         targets |= {(page, works[k]["catalogue_entry"].split("#", 1)[1]) for k in self.OWNER_KEYS}
         targets |= {(page, "late-evidence-handoff-for-the-typed-emergence-control"),
                     (self.GROUP + "/CONTEXT_SOURCE_INDEX.json", "")}
@@ -4695,7 +4700,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
 
     def test_exact_public_bindings_reject_wrong_existing_source_and_alias_copy(self):
         self.assertEqual(self.guide_errors(self.cross), [])
-        for alias in (self.ORIGINAL,) + self.SUPPORT:
+        for alias in (self.ORIGINAL,) + self.SUPPORT + self.TAIL:
             key = self.source_key(alias)
             for field, value in (("path", self.aliases["t20/reports/REPORT_v2.md"]["public_path"]),
                                  ("sha256", "0" * 64), ("read_scope", "")):
@@ -4708,7 +4713,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
 
     def test_duplicate_editions_and_documentary_credit_cannot_hide_under_aliases(self):
         self.assertEqual(self.guide_errors(self.cross), [])
-        for alias in (self.ORIGINAL,) + self.SUPPORT:
+        for alias in (self.ORIGINAL,) + self.SUPPORT + self.TAIL:
             for field in ("source_keys", "reading_forms"):
                 changed = deepcopy(self.cross)
                 key = self.source_key(alias)
@@ -4990,7 +4995,7 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
         next(w for w in changed["works"] if w["id"] == "RICHARD")["status"] = "Complete whole-book study"
         self.assertIn("guide-index-work-specific-body-limits", self.index_scope_errors(changed))
 
-    def test_unavailable_owner_word_and_unselected_original_family_are_not_new_forms(self):
+    def test_unavailable_owner_word_and_unselected_support_remain_outside_finite_forms(self):
         self.assertEqual(self.guide_errors(self.cross), [])
         qa = self.record(self.QA)
         changed = deepcopy(self.cross)
@@ -5001,17 +5006,380 @@ class SourceReadingGuideRoutesTests(unittest.TestCase):
         self.work(changed)["reading_forms"].append({"source": "fixture-owner-only-guide-word",
                                                    "relationship": "retained-source-reading-projection"})
         self.assertIn("guide-ordered-editions", self.guide_errors(changed))
-        # Test this work's finite support contract, not a permanent global ban
-        # on later separately authorised curation of the four original records.
-        for number in (205, 206, 207, 208):
-            row = self.selected[number]
+        # The authorised four-document tail is now part of this finite support
+        # contract. An extra report receipt or repeated existing support is not.
+        for alias in ("t20/reports/REPORT_QA_MANIFEST.json", self.V2):
             changed = deepcopy(self.cross)
-            changed["sources"]["fixture-larger-guide-family"] = {
-                "path": row["public_path"], "sha256": row["public_sha256"],
-                "read_scope": "Isolated original-family over-admission control."}
-            self.work(changed)["supporting_source_keys"].append("fixture-larger-guide-family")
+            self.work(changed)["supporting_source_keys"].append(self.source_key(alias))
             self.assertIn("guide-finite-ordered-support", self.guide_errors(changed))
 
+
+class SourceGuideSupportTailTests(unittest.TestCase):
+    """Finite historical support receipt controls, without replaying their claims."""
+    GROUP = SourceReadingGuideRoutesTests.GROUP
+    KEY = SourceReadingGuideRoutesTests.KEY
+    TAIL = ("t20/reading/SPECIALIST_REVIEW_QUESTIONS.md",
+            "t20/reading/READING_INDEX_VALIDATION.json",
+            "t20/reports/GUIDE_QA_MANIFEST.json",
+            "t20/reports/FINAL_DOCUMENTS.json")
+    setUpClass = classmethod(LateTwentiethContextRoutesTests.setUpClass.__func__)
+    source_key = FinalReportRoutesTests.source_key
+    record = SourceReadingGuideRoutesTests.record
+    work = SourceReadingGuideRoutesTests.work
+    section_body = FinalReportRoutesTests.section_body
+    ORIGINAL = SourceReadingGuideRoutesTests.ORIGINAL
+    V2 = SourceReadingGuideRoutesTests.V2
+    INDEX = SourceReadingGuideRoutesTests.INDEX
+    CURRENT = SourceReadingGuideRoutesTests.CURRENT
+    QUESTIONS, VALIDATION, QA, FINAL = TAIL
+    QUESTION_PAIRS = (("the-scope-of-causal-nonduplication", "h02-ability-to-act-alone-and-actual-whole-production"),
+                      ("necessary-agreement-and-productive-conditioning", "m03-agreement-and-voluntary-particularisation"),
+                      ("textual-verification-priorities", "s05-textual-controls-that-affect-inference"),
+                      ("dated-current-position-and-comparative-defeaters", "relation-to-the-final-judgement"))
+    QUALIFICATIONS = (
+        (QUESTIONS, ("Prepared questions are not answered external specialist review.",
+                     "A provisional assessment is neither an established theorem nor an unresolved question merely because it appears in this document.")),
+        (VALIDATION, ("Complete check logs and the finite source-list body are omitted; no new primary reading or scientific replay follows.",)),
+        (QA, ("this curation performs no visual review or rendering.",)),
+        (FINAL, ("Neither map owns their science or proves current research adoption.",)))
+
+    def tail_errors(self, cross):
+        errors = []
+        work = self.work(cross)
+        expected = [self.source_key(a) for a in SourceReadingGuideRoutesTests.SUPPORT]
+        expected += ["t20-context-50e3ae6b35c1b914"]
+        expected += [self.source_key(a) for a in self.TAIL]
+        if work is None or work.get("supporting_source_keys") != expected:
+            errors.append("tail-exact-ordered-support")
+        for alias in self.TAIL:
+            row = self.aliases[alias]
+            source = cross["sources"].get(self.source_key(alias), {})
+            if (source.get("path") != row["public_path"]
+                    or source.get("sha256") != row["public_sha256"]
+                    or not source.get("read_scope")):
+                errors.append("tail-source:" + alias)
+        return errors
+
+    def test_original_tail_has_exact_selected_support(self):
+        self.assertEqual(self.tail_errors(self.cross), [])
+
+    def projection(self, alias):
+        row = self.aliases[alias]
+        return {"owner_archive_path": alias, "sha256": row["public_sha256"], "bytes": row["public_bytes"]}
+
+    def changed(self, record, path, value):
+        result = deepcopy(record)
+        target = result
+        for key in path[:-1]:
+            target = target[key]
+        target[path[-1]] = value
+        return result
+
+    def validation_errors(self, record):
+        errors = []
+        if (record["schema"] != "t20-public-reading-index-validation-summary-v1"
+                or record["as_of_utc"] != "2026-10-07T14:49:59Z"
+                or record["original_validation_sha256"] != self.aliases[self.VALIDATION]["original_sha256"]):
+            errors.append("tail-validation-identity")
+        expected = [{"owner_archive_path": alias,
+                     "original_sha256": self.aliases[alias]["original_sha256"],
+                     "projected_sha256": self.aliases[alias]["public_sha256"],
+                     "projected_bytes": self.aliases[alias]["public_bytes"]}
+                    for alias in (self.ORIGINAL, self.INDEX, self.QUESTIONS)]
+        if record["selected_documents"] != expected:
+            errors.append("tail-validation-selected-originals")
+        counts = ("source_work_entries", "completed_ordered_study_groups", "principal_return_points_in_ordered_groups",
+                  "broader_return_points_in_ordered_groups", "witness_objects", "original_evidence_records",
+                  "records_with_verified_public_aliases")
+        if tuple(record["final_summary"][k] for k in counts) != (13, 8, 42, 48, 42, 200, 132):
+            errors.append("tail-validation-distinct-counts")
+        if (record["author_recorded_checks"] != 6359 or record["author_final_consistency_checks"] != 392
+                or record["author_recorded_all_passed"] is not True):
+            errors.append("tail-validation-reported-checks")
+        credit_fields = ("new_compilation_reading_credit", "new_primary_reading_credit_by_this_compilation",
+                         "new_compilation_primary_reading_credit", "new_compilation_primary_reading_credit",
+                         "new_compilation_primary_reading_credit", "new_compilation_reading_credit")
+        supplements = record["supplements"]
+        if (len(supplements) != len(credit_fields)
+                or any(row.get(field) != 0 for row, field in zip(supplements, credit_fields))
+                or record["new_primary_reading_credit"] != 0
+                or record["substantive_review"]["additional_primary_credit"] != 0
+                or record["no_source_records_modified"] is not True
+                or record["final_summary"]["all_primary_reading_credit_remains_with_original_receipts"] is not True
+                or record["final_summary"]["no_new_primary_reading_by_this_compilation"] is not True):
+            errors.append("tail-validation-inherited-reading")
+        if (record["source_list_body_included"] is not False
+                or any(row["body_included"] is not False for field in
+                       ("historical_predecessor_inputs", "historical_supporting_records") for row in record[field])):
+            errors.append("tail-validation-omitted-originals")
+        if record["verification_scope"] != (
+                "Body-free summary of reported author validation plus curation identity/reference checks. "
+                "The complete check log remains a separately hashed original; no scientific replay or new primary reading is credited."):
+            errors.append("tail-validation-receipt-not-replay")
+        return errors
+
+    def test_validation_selection_rejects_public_original_and_edition_swaps(self):
+        record = self.record(self.VALIDATION)
+        self.assertEqual(self.validation_errors(record), [])
+        cases = [(("schema",), "t20-current-three-role-documents-v2", "tail-validation-identity"),
+                 (("original_validation_sha256",), self.aliases[self.VALIDATION]["public_sha256"], "tail-validation-identity"),
+                 (("as_of_utc",), "2026-10-07T16:49:45Z", "tail-validation-identity"),
+                 (("selected_documents", 1, "original_sha256"), self.aliases[self.INDEX]["public_sha256"], "tail-validation-selected-originals"),
+                 (("selected_documents", 1, "projected_sha256"), self.aliases[self.INDEX]["original_sha256"], "tail-validation-selected-originals"),
+                 (("selected_documents", 0, "owner_archive_path"), self.V2, "tail-validation-selected-originals"),
+                 (("selected_documents", 0, "projected_sha256"), self.aliases[self.V2]["public_sha256"], "tail-validation-selected-originals"),
+                 (("selected_documents", 2), record["selected_documents"][0], "tail-validation-selected-originals"),
+                 (("source_list_body_included",), True, "tail-validation-omitted-originals"),
+                 (("historical_predecessor_inputs", 0, "body_included"), True, "tail-validation-omitted-originals"),
+                 (("historical_supporting_records", 1, "body_included"), True, "tail-validation-omitted-originals")]
+        for path, value, error in cases:
+            with self.subTest(path=path):
+                self.assertIn(error, self.validation_errors(self.changed(record, path, value)))
+
+    def test_validation_counts_and_historical_receipts_cannot_award_fresh_reading_or_replay(self):
+        record = self.record(self.VALIDATION)
+        self.assertEqual(self.validation_errors(record), [])
+        cases = [(("final_summary", "completed_ordered_study_groups"), 13, "tail-validation-distinct-counts"),
+                 (("final_summary", "source_work_entries"), 8, "tail-validation-distinct-counts"),
+                 (("author_recorded_checks",), 392, "tail-validation-reported-checks"),
+                 (("author_final_consistency_checks",), 6359, "tail-validation-reported-checks"),
+                 (("author_recorded_all_passed",), False, "tail-validation-reported-checks"),
+                 (("new_primary_reading_credit",), 1, "tail-validation-inherited-reading"),
+                 (("substantive_review", "additional_primary_credit"), 1, "tail-validation-inherited-reading"),
+                 (("no_source_records_modified",), False, "tail-validation-inherited-reading"),
+                 (("final_summary", "all_primary_reading_credit_remains_with_original_receipts"), False, "tail-validation-inherited-reading"),
+                 (("final_summary", "no_new_primary_reading_by_this_compilation"), False, "tail-validation-inherited-reading"),
+                 (("verification_scope",), "The current reader executor independently replayed all scientific and author checks.", "tail-validation-receipt-not-replay")]
+        credit_fields = ("new_compilation_reading_credit", "new_primary_reading_credit_by_this_compilation",
+                         "new_compilation_primary_reading_credit", "new_compilation_primary_reading_credit",
+                         "new_compilation_primary_reading_credit", "new_compilation_reading_credit")
+        cases += [(("supplements", n, field), 1, "tail-validation-inherited-reading")
+                  for n, field in enumerate(credit_fields)]
+        for path, value, error in cases:
+            with self.subTest(path=path):
+                self.assertIn(error, self.validation_errors(self.changed(record, path, value)))
+
+    def qa_errors(self, qa):
+        errors = []
+        if (qa["schema"] != "t20-final-source-guide-document-qa-v1"
+                or qa["created_at_utc"] != "2026-10-07T14:49:32.567322+00:00"
+                or qa["original_qa_manifest_sha256"] != self.aliases[self.QA]["original_sha256"]):
+            errors.append("tail-v1-qa-identity")
+        if qa["source"] != self.projection(self.ORIGINAL):
+            errors.append("tail-v1-qa-original-guide")
+        current = self.record(self.CURRENT)
+        original_guide = next(r for r in current["retained_historical_documents"] if r["role"] == "source and reading guide")
+        if qa["document"] != original_guide["document"]["included_record"]:
+            errors.append("tail-v1-qa-historical-word")
+        counts = ("authored_content_records", "external_hyperlinks_exact", "relative_link_labels_and_paths_preserved",
+                  "arabic_codepoints_preserved_in_order", "page_count")
+        if tuple(qa[k] for k in counts) != (247, 20, 4, 62, 18):
+            errors.append("tail-v1-qa-counts")
+        pages = qa["page_inspections"]
+        if (len(pages) != 18 or [p["page"] for p in pages] != list(range(1, 19))
+                or any(p["result"] != "PASS" or p["final_render_identical_to_individually_viewed_image"] is not True for p in pages)):
+            errors.append("tail-v1-qa-reported-pages")
+        if (any(p["image_body_included"] is not False for p in pages)
+                or any(qa[k]["original_record_body_included"] is not False for k in
+                       ("content_qa", "build_receipt", "layout_correction", "source_narrative_approval"))
+                or qa["historical_first_builds_retained_separately_not_included"] is not True):
+            errors.append("tail-v1-qa-omitted-bodies")
+        if (qa["science_rerun"] is not False
+                or qa["acceptance_scope"] != "Document content, links, typography and rendering only."):
+            errors.append("tail-v1-qa-documentary-scope")
+        expected_corrections = ["Author-approved removal of one hyphen from the SF04 heading; all body text unchanged.",
+                                "Kept the SF06 locator paragraph with its following explanation, avoiding a stranded section opening."]
+        if qa["corrections"] != expected_corrections:
+            errors.append("tail-v1-qa-specific-corrections")
+        companion = next(r for r in current["current_documents"] if r["role"] == "mathematical companion")
+        if qa["mathematical_companion_unchanged"] != companion["document"]["included_record"]:
+            errors.append("tail-v1-qa-unchanged-companion")
+        return errors
+
+    def test_original_guide_qa_rejects_v2_identity_and_unperformed_body_or_science_admission(self):
+        qa = self.record(self.QA)
+        current = self.record(self.CURRENT)
+        guide_v2 = next(r for r in current["current_documents"] if r["role"] == "source and reading guide")
+        self.assertEqual(self.qa_errors(qa), [])
+        cases = [(("schema",), "t20-successor-guide-document-qa-v2", "tail-v1-qa-identity"),
+                 (("original_qa_manifest_sha256",), self.aliases[self.QA]["public_sha256"], "tail-v1-qa-identity"),
+                 (("source",), self.projection(self.V2), "tail-v1-qa-original-guide"),
+                 (("document",), guide_v2["document"]["included_record"], "tail-v1-qa-historical-word"),
+                 (("authored_content_records",), 255, "tail-v1-qa-counts"),
+                 (("relative_link_labels_and_paths_preserved",), 11, "tail-v1-qa-counts"),
+                 (("page_count",), 20, "tail-v1-qa-counts"),
+                 (("page_inspections", 0, "page"), 18, "tail-v1-qa-reported-pages"),
+                 (("page_inspections", 0, "result"), "NOT_RUN", "tail-v1-qa-reported-pages"),
+                 (("page_inspections", 0, "image_body_included"), True, "tail-v1-qa-omitted-bodies"),
+                 (("historical_first_builds_retained_separately_not_included",), False, "tail-v1-qa-omitted-bodies"),
+                 (("science_rerun",), True, "tail-v1-qa-documentary-scope"),
+                 (("acceptance_scope",), "Fresh scientific and independent visual acceptance.", "tail-v1-qa-documentary-scope"),
+                 (("corrections",), ["Applied the v2 locator keepNext correction to 37 paragraphs."], "tail-v1-qa-specific-corrections"),
+                 (("mathematical_companion_unchanged",), qa["document"], "tail-v1-qa-unchanged-companion")]
+        cases += [((key, "original_record_body_included"), True, "tail-v1-qa-omitted-bodies")
+                  for key in ("content_qa", "build_receipt", "layout_correction", "source_narrative_approval")]
+        for path, value, error in cases:
+            with self.subTest(path=path):
+                self.assertIn(error, self.qa_errors(self.changed(qa, path, value)))
+
+    def final_errors(self, record):
+        errors = []
+        if (record["schema"] != "t20-three-final-documents-v1"
+                or record["created_at_utc"] != "2026-10-07T14:49:32.567962+00:00"
+                or record["original_delivery_binding_sha256"] != self.aliases[self.FINAL]["original_sha256"]):
+            errors.append("tail-v1-final-identity")
+        rows = record["documents"]
+        expected_roles = ["research report", "source and reading guide", "mathematical companion"]
+        if [r["role"] for r in rows] != expected_roles:
+            errors.append("tail-v1-final-role-order")
+        if record["total_pages"] != 48 or record["all_document_qa_passed"] is not True:
+            errors.append("tail-v1-final-reported-total")
+        qa_aliases = {"research report": "t20/reports/REPORT_QA_MANIFEST.json",
+                      "source and reading guide": self.QA,
+                      "mathematical companion": "t20/reports/MATHEMATICAL_COMPANION_QA.json"}
+        current = self.record(self.CURRENT)
+        comparison = {r["role"]: r for r in current["retained_historical_documents"]}
+        comparison["mathematical companion"] = next(r for r in current["current_documents"]
+                                                    if r["role"] == "mathematical companion")
+        for row in rows:
+            role = row["role"]
+            alias = qa_aliases.get(role)
+            if alias is None:
+                continue
+            if row["document"] != comparison[role]["document"]["included_record"]:
+                errors.append("tail-v1-final-word:" + role)
+            original = row["original_qa_record"]
+            if (original["sha256"] != self.aliases[alias]["original_sha256"]
+                    or original["bytes"] != comparison[role]["qa"]["historical_original_identity"]["bytes"]
+                    or original["body_included"] is not False
+                    or row["public_qa_record"] != self.projection(alias)):
+                errors.append("tail-v1-final-qa-pair:" + role)
+        return errors
+
+    def test_historical_role_map_rejects_cross_role_swaps_and_current_v2_substitution(self):
+        record = self.record(self.FINAL)
+        current = self.record(self.CURRENT)
+        guide_v2 = next(r for r in current["current_documents"] if r["role"] == "source and reading guide")
+        self.assertEqual(self.final_errors(record), [])
+        cases = [(("schema",), "t20-current-three-role-documents-v2", "tail-v1-final-identity"),
+                 (("original_delivery_binding_sha256",), self.aliases[self.FINAL]["public_sha256"], "tail-v1-final-identity"),
+                 (("total_pages",), 53, "tail-v1-final-reported-total"),
+                 (("all_document_qa_passed",), False, "tail-v1-final-reported-total"),
+                 (("documents", 1, "role"), "scientific result owner", "tail-v1-final-role-order"),
+                 (("documents", 1, "document"), guide_v2["document"]["included_record"], "tail-v1-final-word:source and reading guide"),
+                 (("documents", 1, "public_qa_record"), guide_v2["qa"]["included_record"], "tail-v1-final-qa-pair:source and reading guide")]
+        for n, row in enumerate(record["documents"]):
+            error = "tail-v1-final-qa-pair:" + row["role"]
+            cases += [(("documents", n, "original_qa_record", "sha256"), row["public_qa_record"]["sha256"], error),
+                      (("documents", n, "public_qa_record", "sha256"), row["original_qa_record"]["sha256"], error),
+                      (("documents", n, "original_qa_record", "body_included"), True, error)]
+        for path, value, error in cases:
+            with self.subTest(path=path):
+                self.assertIn(error, self.final_errors(self.changed(record, path, value)))
+        # Retain the same two valid QA identities while attaching each to the
+        # wrong document role. A mere set-of-links check would miss this swap.
+        swapped = deepcopy(record)
+        for field in ("original_qa_record", "public_qa_record"):
+            swapped["documents"][0][field], swapped["documents"][1][field] = (
+                swapped["documents"][1][field], swapped["documents"][0][field])
+        self.assertEqual({row["public_qa_record"]["sha256"] for row in record["documents"]},
+                         {row["public_qa_record"]["sha256"] for row in swapped["documents"]})
+        self.assertEqual(set(self.final_errors(swapped)),
+                         {"tail-v1-final-qa-pair:research report", "tail-v1-final-qa-pair:source and reading guide"})
+
+    def question_pair_errors(self, section, page):
+        """Check these explicit source pairs, not arbitrary philosophical prose."""
+        blocks, paragraph = [], []
+        for line in section.splitlines():
+            if not line.strip() or line.lstrip().startswith("|"):
+                if paragraph:
+                    blocks.append("\n".join(paragraph))
+                    paragraph = []
+                if line.lstrip().startswith("|"):
+                    blocks.append(line)
+            else:
+                paragraph.append(line)
+        if paragraph:
+            blocks.append("\n".join(paragraph))
+        questions = self.aliases[self.QUESTIONS]["public_path"]
+        original = self.aliases[self.ORIGINAL]["public_path"]
+        linked_blocks = [[self.mod.resolve_reader_link(ROOT, page, href)
+                          for _, href in self.mod.markdown_index(block)["links"]] for block in blocks]
+        errors = []
+        for question, guide in self.QUESTION_PAIRS:
+            pairs = []
+            for links in linked_blocks:
+                for n, target in enumerate(links):
+                    if target == (questions, question):
+                        # Another question stops the relation; a collection of
+                        # valid destinations alone does not identify its ground.
+                        pairs.append(next((dest for dest in links[n + 1:]
+                                           if dest is not None and dest[0] in (questions, original)), None))
+            if pairs != [(original, guide)]:
+                errors.append("tail-question-pair:" + question)
+        return errors
+
+    def test_prepared_questions_reach_their_specific_original_arguments_and_textual_controls(self):
+        questions = self.aliases[self.QUESTIONS]["public_path"]
+        original = self.aliases[self.ORIGINAL]["public_path"]
+        for alias, number in ((self.QUESTIONS, 0), (self.ORIGINAL, 1)):
+            anchors = {h[0] for h in self.mod.markdown_index((ROOT / self.aliases[alias]["public_path"]).read_text())["headings"]}
+            self.assertTrue({pair[number] for pair in self.QUESTION_PAIRS} <= anchors)
+        for page, heading in (("docs/reader/PAPER-CATALOGUE.md", "original-guide-questions-and-documentary-support"),
+                              ("docs/reader/VERIFICATION-GUIDE.md", "checking-the-original-support-records")):
+            section = self.section_body((ROOT / page).read_text(), heading)
+            self.assertEqual(self.question_pair_errors(section, page), [])
+            for question, guide in self.QUESTION_PAIRS:
+                question_href = "(../../" + questions + "#" + question + ")"
+                original_href = "(../../" + original + "#" + guide + ")"
+                for href in (question_href, original_href):
+                    changed = section.replace(href, "(PAPER-CATALOGUE.md)")
+                    self.assertNotEqual(changed, section)
+                    self.assertIn("tail-question-pair:" + question, self.question_pair_errors(changed, page))
+                changed = section.replace(original_href,
+                    "(../../" + self.aliases[self.V2]["public_path"] + "#" + guide + ")")
+                self.assertIn("tail-question-pair:" + question, self.question_pair_errors(changed, page))
+            first, second = ["(../../" + original + "#" + pair[1] + ")" for pair in self.QUESTION_PAIRS[:2]]
+            swapped = section.replace(first, "FIXTURE_TAIL_PAIR").replace(second, first).replace("FIXTURE_TAIL_PAIR", second)
+            self.assertEqual({href for _, href in self.mod.markdown_index(section)["links"]},
+                             {href for _, href in self.mod.markdown_index(swapped)["links"]})
+            self.assertEqual(set(self.question_pair_errors(swapped, page)),
+                             {"tail-question-pair:" + pair[0] for pair in self.QUESTION_PAIRS[:2]})
+
+    def qualification_errors(self, section):
+        """Preserve four reviewed, source-specific table qualifications."""
+        page = "docs/reader/PAPER-CATALOGUE.md"
+        errors = []
+        for alias, clauses in self.QUALIFICATIONS:
+            target = (self.aliases[alias]["public_path"], "")
+            rows = [line for line in section.splitlines() if line.lstrip().startswith("|") and
+                    target in [self.mod.resolve_reader_link(ROOT, page, href)
+                               for _, href in self.mod.markdown_index(line)["links"]]]
+            if len(rows) != 1 or any(clause not in rows[0] for clause in clauses):
+                errors.append("tail-reader-qualification:" + alias)
+        return errors
+
+    def test_source_specific_reader_qualifications_reject_false_review_and_execution_credit(self):
+        section = self.section_body((ROOT / "docs/reader/PAPER-CATALOGUE.md").read_text(),
+                                    "original-guide-questions-and-documentary-support")
+        self.assertEqual(self.qualification_errors(section), [])
+        substitutions = (
+            (self.QUESTIONS, self.QUALIFICATIONS[0][1][0], "Specialists answered and accepted these conclusions."),
+            (self.QUESTIONS, self.QUALIFICATIONS[0][1][1], "Every statement in this document remains an unanswered question."),
+            (self.VALIDATION, self.QUALIFICATIONS[1][1][0], "The current executor replayed the complete log and established whole-index reading."),
+            (self.QA, self.QUALIFICATIONS[2][1][0], "this curation independently rendered and visually inspected every page."),
+            (self.FINAL, self.QUALIFICATIONS[3][1][0], "This map establishes scientific correctness and current research adoption."))
+        for alias, original, false_claim in substitutions:
+            changed = section.replace(original, false_claim)
+            self.assertNotEqual(changed, section)
+            self.assertIn("tail-reader-qualification:" + alias, self.qualification_errors(changed))
+        qa_clause, final_clause = self.QUALIFICATIONS[2][1][0], self.QUALIFICATIONS[3][1][0]
+        swapped = section.replace(qa_clause, "FIXTURE_TAIL_QUALIFICATION").replace(final_clause, qa_clause).replace(
+            "FIXTURE_TAIL_QUALIFICATION", final_clause)
+        self.assertEqual({href for _, href in self.mod.markdown_index(section)["links"]},
+                         {href for _, href in self.mod.markdown_index(swapped)["links"]})
+        self.assertEqual(set(self.qualification_errors(swapped)),
+                         {"tail-reader-qualification:" + self.QA, "tail-reader-qualification:" + self.FINAL})
 
 
 if __name__ == "__main__":

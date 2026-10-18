@@ -1,6 +1,42 @@
 # Orthemology
 
-Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated. It gives first-class, auditable structure to a familiar but usually implicit architecture:
+Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated.
+
+## What to read
+
+Start with a paper or a research question. Each link below opens a primary reading form; the catalogue supplies the argument, assumptions and edition notes.
+
+| Start here | Read | What it investigates |
+|---|---|---|
+| **The main framework** | [Manuscript](manuscript/orthemma-ortheme-systems-revised-draft.md) · [PDF](artifacts/orthemma-ortheme-systems-draft.pdf) | Correctness, evidence and correction in a concrete episode; why a correct answer and an adequate method are different achievements. |
+| **The formal reference** | [Composite PDF](artifacts/orthemic-core-reference-draft.pdf) · [Core](theory/orthemic-core-formalization.md) · [Multi-actor extension](theory/orthemic-multi-actor-conflict-note.md) | The records, verdicts and composition conditions that make the framework precise. |
+| **Information and composition** | [Paper PDF](theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf) · [Catalogue](docs/reader/PAPER-CATALOGUE.md#information-and-composition) | What local observations determine, what they leave unknown, and when a lawful change of access can settle a question. |
+| **Inquiry and retained information** | [Continuation-complete manuscript](theory/lineages/h-continuation/continuation_complete_orthing.md) | Sharp information loss, predictive memory and what a representation must preserve for future inquiries. |
+| **Foundations and intelligibility** | [Manuscript](companion/orthability-and-the-ground-of-intelligibility.md) · [PDF](artifacts/orthability-ground-of-intelligibility-draft.pdf) | A labelled philosophical argument from genuine evaluability, with its substantive premises and later qualifications. |
+| **Learning and correction** | [Dynamic orthability manuscript](companion/dynamic-orthing-noetic-learning-and-orthability.md) · [PDF](artifacts/dynamic-orthing-noetic-learning-orthability-draft.pdf) | The difference between a possible correction, one an actor can discover, and guaranteed convergence. |
+
+These works are research drafts with different evidence scopes. For later recognition, tensor geometry, formal identity, sourcehood and restoration research, choose a subject in the atlas or a work in the catalogue.
+
+**Research atlas:** [questions, recognition, correction and the twelve avenues](docs/reader/RESEARCH-ATLAS.md).
+
+**Work catalogue:** [manuscripts, mathematical works, sources, components and editions](docs/reader/PAPER-CATALOGUE.md).
+
+**Result index:** [particular statements, assumptions and evidence](docs/reader/RESULT-INDEX.md).
+
+**Current frontiers:** [live questions, conditional bridges and useful continuations](docs/reader/CURRENT-FRONTIERS.md).
+
+**Applications:** [substantive applications and cross-avenue contributions](docs/reader/APPLICATIONS.md).
+
+**Verification guide:** [source ownership, proof scope, runnable checks and maintenance](docs/reader/VERIFICATION-GUIDE.md).
+
+For sustained reading, start with the [main exposition](manuscript/orthemma-ortheme-systems-revised-draft.md), then the [formal reference and its two components](docs/reader/PAPER-CATALOGUE.md#formal-reference). The main manuscript is not a summary of every later research collection. The atlas also gives positive source-bound accounts of [recognition and corrective cognition](docs/reader/RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction) and [tensor histories and information geometry](docs/reader/RESEARCH-ATLAS.md#tensor-histories-and-information-geometry); the applications page explains [joint feasibility across avenues](docs/reader/APPLICATIONS.md#joint-feasibility-across-avenues).
+
+**Reader-refactor boundary:** these routes reuse the existing scholarship. Remaining collection dispositions and separate review are tracked in the [implementation record](docs/project-closure/reader-refactor-issue-35/PROGRESS.md); a working link is not a complete-corpus or scientific-acceptance certificate.
+
+
+## Working vocabulary
+
+The framework gives explicit structure to these roles:
 
 | Term (candidate) | Ordinary-language meaning | Pillar example |
 |---|---|---|
@@ -21,25 +57,6 @@ The final assertion ("this pillar is orthogonal") is a **placement claim** judge
 
 **Ground truth is analysis-relative.** Which state-types a case *truly* instantiates is defined relative to a declared, versioned **analysis** `A` (boundary, task, repertoires, loss, tolerance, representation and merger families): `O*(m; A)`. The familiar task-relative notation (`O*_T(m)`) survives only as explicitly scoped shorthand once a single analysis is fixed — it is an abbreviation, not a second ontology. The case itself and its worldly facts are not created by the analysis; only the state-type description is indexed.
 
-## What to read
-
-Choose a question or work first; the original arguments remain at their existing source owners.
-
-**Research atlas:** [questions, recognition, correction and the twelve avenues](docs/reader/RESEARCH-ATLAS.md).
-
-**Work catalogue:** [manuscripts, mathematical works, sources, components and editions](docs/reader/PAPER-CATALOGUE.md).
-
-**Result index:** [particular statements, assumptions and evidence](docs/reader/RESULT-INDEX.md).
-
-**Current frontiers:** [live questions, conditional bridges and useful continuations](docs/reader/CURRENT-FRONTIERS.md).
-
-**Applications:** [substantive applications and cross-avenue contributions](docs/reader/APPLICATIONS.md).
-
-**Verification guide:** [source ownership, proof scope, runnable checks and maintenance](docs/reader/VERIFICATION-GUIDE.md).
-
-For sustained reading, start with the [main exposition](manuscript/orthemma-ortheme-systems-revised-draft.md), then the [formal reference and its two components](docs/reader/PAPER-CATALOGUE.md#formal-reference). The main manuscript is not a summary of every later research collection. The atlas also gives positive source-bound accounts of [recognition and corrective cognition](docs/reader/RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction) and [tensor histories and information geometry](docs/reader/RESEARCH-ATLAS.md#tensor-histories-and-information-geometry); the applications page explains [joint feasibility across avenues](docs/reader/APPLICATIONS.md#joint-feasibility-across-avenues).
-
-**Reader-refactor boundary:** these routes reuse the existing scholarship. Remaining collection dispositions and separate review are tracked in the [implementation record](docs/project-closure/reader-refactor-issue-35/PROGRESS.md); a working link is not a complete-corpus or scientific-acceptance certificate.
 
 ## A worked case
 
