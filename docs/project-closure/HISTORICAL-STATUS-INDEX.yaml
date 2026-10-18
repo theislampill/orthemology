@@ -12,6 +12,12 @@ statuses:
   superseded: historical record whose operative content is replaced by a named successor
   interruption-provenance: containment/provenance evidence of the R4 model-substitution event; never current state
 rules:
+- prefix: docs/project-closure/reader-refactor-issue-35/
+  status: current-candidate
+  note: >-
+    owner-authorised Issue 35 implementation on draft PR 36; resumable source-bound
+    curation and checkpoint records, not independent sign-off, completed corpus
+    coverage, merged current state, scientific acceptance or T21 authority
 - path: docs/project-closure/HISTORICAL-STATUS-INDEX.yaml
   status: current
 - path: docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md

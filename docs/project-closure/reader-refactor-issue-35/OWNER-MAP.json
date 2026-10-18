@@ -1,0 +1,564 @@
+{
+  "schema": "orthemology-reader-owner-map-v1",
+  "baseline": {
+    "commit": "0784acddd4770f1190f758f264ba52b2b110bd27",
+    "tree": "38b18f38db2e38dabe1ec391c07c0b0f2b20d574"
+  },
+  "entries_sha256": "93bfe22dc9b785c46bef388920280aa7668fefaef37c000301071c7fc7fc7bde",
+  "external_body_admissions": [],
+  "scope_note": "Complete tracked source-candidate routing under the 18 October owner amendment. Distinct scholarship and significant subjects have work/collection dispositions; historical support remains with authoritative owners and is not counted as individual papers or complete semantic readings.",
+  "review_state": "AUTHOR_WORK_SUBJECT_RECONCILED; independent exact-candidate review pending",
+  "collections": [
+    {
+      "key": "root-navigation-and-policy",
+      "include": [
+        ".editorconfig",
+        ".gitattributes",
+        ".gitignore",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "OPEN-DECISIONS.md",
+        "README.md",
+        "STATUS.md",
+        "TODO.md",
+        "VERSION",
+        "requirements-ci.lock.txt"
+      ],
+      "exclude": [],
+      "owners": [
+        "CONTRIBUTING.md",
+        "docs/project-state-inputs.yaml"
+      ],
+      "candidate_paths": 11,
+      "candidate_role": "Mutable entrance/control documents; not a scientific catalogue."
+    },
+    {
+      "key": "principal-manuscript",
+      "include": [
+        "manuscript/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Principal maintained manuscript and its rendering bindings."
+    },
+    {
+      "key": "formal-core",
+      "include": [
+        "theory/"
+      ],
+      "exclude": [
+        "theory/lineages/"
+      ],
+      "owners": [
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 2,
+      "candidate_role": "Formal components, separate from mathematical manuscript lineages."
+    },
+    {
+      "key": "lineage-h-continuation",
+      "include": [
+        "theory/lineages/h-continuation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-continuation/continuation_complete_orthing.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-formalisation",
+      "include": [
+        "theory/lineages/h-formalisation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-formalisation/orthing_formalisation_v1.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-ics-v5",
+      "include": [
+        "theory/lineages/h-ics-v5/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-ics-v5/README.md"
+      ],
+      "candidate_paths": 4,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-moat-e3",
+      "include": [
+        "theory/lineages/h-moat-e3/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-moat-e3/the_last_moat_e3.tex"
+      ],
+      "candidate_paths": 23,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-modal",
+      "include": [
+        "theory/lineages/h-modal/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-modal/orthability_modal_grounding.md"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "lineage-h-reflexive-v3",
+      "include": [
+        "theory/lineages/h-reflexive-v3/"
+      ],
+      "exclude": [],
+      "owners": [
+        "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex"
+      ],
+      "candidate_paths": 1,
+      "candidate_role": "Distinct manuscript lineage; included files are candidate sources/components, not automatically independent works."
+    },
+    {
+      "key": "companion",
+      "include": [
+        "companion/"
+      ],
+      "exclude": [],
+      "owners": [
+        "companion/README.md",
+        "companion/DYNAMIC-ORTHABILITY-ARGUMENT-MAP.yaml",
+        "docs/publication-profile.yaml"
+      ],
+      "candidate_paths": 12,
+      "candidate_role": "Separate philosophical and school-labelled manuscripts, arguments and objections."
+    },
+    {
+      "key": "applications",
+      "include": [
+        "applications/"
+      ],
+      "exclude": [],
+      "owners": [
+        "applications/agentic-runtime/README.md",
+        "applications/daee-epistemics/README.md",
+        "applications/latent-state-orthing/README.md"
+      ],
+      "candidate_paths": 50,
+      "candidate_role": "Application proposals, worked systems and typed interpretation boundaries."
+    },
+    {
+      "key": "examples",
+      "include": [
+        "examples/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/semantic-roles.yaml"
+      ],
+      "candidate_paths": 15,
+      "candidate_role": "Worked examples and source schema roles, not empirical validation."
+    },
+    {
+      "key": "publication-and-renderings",
+      "include": [
+        "publication/",
+        "artifacts/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/publication-profile.yaml",
+        "docs/provenance/v5-consolidation/PUBLICATION_SOURCE_REVIEW.json"
+      ],
+      "candidate_paths": 34,
+      "candidate_role": "Generated reading/build alternatives and sidecars; no format multiplication."
+    },
+    {
+      "key": "v5-consolidation",
+      "include": [
+        "experiments/orthemology-v5/",
+        "docs/provenance/v5-consolidation/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/provenance/v5-consolidation/README.md",
+        "docs/provenance/v5-consolidation/THEOREM_INDEX.md",
+        "docs/provenance/v5-consolidation/SOURCE_MAP.json",
+        "docs/provenance/v5-consolidation/FORMAL_SOURCE_AMENDMENT.json"
+      ],
+      "candidate_paths": 119,
+      "candidate_role": "Origin-scoped theorem/argument/definition index, native adapter and original-to-derived source boundaries."
+    },
+    {
+      "key": "v5-continuations",
+      "include": [
+        "experiments/orthemology-v5-continuations/",
+        "docs/provenance/v5-research-continuations/"
+      ],
+      "exclude": [],
+      "owners": [
+        "experiments/orthemology-v5-continuations/registry.json",
+        "docs/provenance/v5-research-continuations/README.md",
+        "docs/provenance/v5-research-continuations/RESULT_STATUS.json",
+        "docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json",
+        "docs/provenance/v5-research-continuations/SOURCE_MAP.json",
+        "docs/provenance/v5-research-continuations/SUPERSESSION.json",
+        "docs/provenance/v5-research-continuations/EVIDENCE_BINDINGS.json"
+      ],
+      "candidate_paths": 1200,
+      "candidate_role": "Checkpoint-3 families and final-sixth overlays retain distinct selections, suites and evidence.",
+      "result_owner": "experiments/orthemology-v5-continuations/registry.json"
+    },
+    {
+      "key": "v5-successors",
+      "include": [
+        "experiments/orthemology-v5-successors/",
+        "docs/provenance/v5-successors/"
+      ],
+      "exclude": [],
+      "owners": [
+        "experiments/orthemology-v5-successors/registry.json",
+        "docs/provenance/v5-successors/RESULT_STATUS.json",
+        "docs/provenance/v5-successors/SOURCE_MAP.json",
+        "docs/provenance/v5-successors/EVIDENCE_BINDINGS.json",
+        "docs/provenance/v5-successors/SUPERSESSION.json",
+        "docs/provenance/v5-successors/OBLIGATION_CROSSWALK.json",
+        "docs/provenance/v5-successors/CALCULUS_MAP.json",
+        "docs/provenance/v5-successors/FOUNDATIONAL_FRONTIER.json",
+        "docs/provenance/v5-successors/TWELVE_AVENUES.json"
+      ],
+      "candidate_paths": 2661,
+      "candidate_role": "Seventh-through-Twentieth scoped result owners; not the entire later public corpus.",
+      "result_owner": "docs/provenance/v5-successors/RESULT_STATUS.json"
+    },
+    {
+      "key": "t20-live",
+      "include": [
+        "research/t20-live-20261009/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/t20-live-20261009/README.md",
+        "research/t20-live-20261009/INDEX.json"
+      ],
+      "candidate_paths": 2067,
+      "candidate_role": "Twenty-three numbered checkpoints and S01; a collection index is not a new theorem register."
+    },
+    {
+      "key": "t20-v6",
+      "include": [
+        "research/t20-v6-20261012/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/t20-v6-20261012/README.md",
+        "research/t20-v6-20261012/SOURCE_RECOVERY.md",
+        "research/t20-v6-20261012/CURRENT_SOURCE_GRAPH.json",
+        "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
+        "research/t20-v6-20261012/research-v6/synthesis/CROSS_CONTRIBUTIONS.json",
+        "research/t20-v6-20261012/research-v6/synthesis/CORRECTION_SUPERSESSION_INDEX.json"
+      ],
+      "candidate_paths": 6363,
+      "candidate_role": "Repaired public selection, reused objects and qualified contributions; unavailable/held identities remain outside body reading."
+    },
+    {
+      "key": "epistemic-tuples-source-fidelity",
+      "include": [
+        "research/source-fidelity/"
+      ],
+      "exclude": [],
+      "owners": [
+        "research/source-fidelity/epistemic-tuples/README.md",
+        "research/source-fidelity/epistemic-tuples/FIDELITY.json"
+      ],
+      "candidate_paths": 3,
+      "candidate_role": "Reading transcription and diagram attached to the existing work; held PDF and separate ET05 scientific correction keep their own standing."
+    },
+    {
+      "key": "ar8r-research-and-proposals",
+      "include": [
+        "docs/project-closure/ar8r-v11/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/project-closure/ar8r-v11/README.md",
+        "docs/project-closure/ar8r-v11/AR8R-V11-EVIDENCE-CATALOG.yaml",
+        "docs/project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml",
+        "docs/project-closure/ar8r-v11/AR8R-V11-RECONCILIATION-LEDGER.yaml",
+        "docs/project-closure/ar8r-v11/provenance/AR8R-CANONICAL-THEOREM-ORIGIN-REGISTRY-V5-PUBLIC-SANITIZED.yaml",
+        "docs/project-closure/ar8r-v11/provenance/AR8R-THEOREM-FAMILY-REGISTRY-V1.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/codex-corpus-synthesis-v14/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/external-challenges/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bw-cj-semantic-reissue/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/PROPOSED_RESULT_INDEX.yaml",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-rounds11-20/README.md",
+        "docs/project-closure/ar8r-v11/post-merge-proposals/six-lane-v14-intake/README.md"
+      ],
+      "candidate_paths": 2796,
+      "candidate_role": "Theorem origins, fable research, programmes and PMR/reissue/intake collections are retained separately; no adoption is inferred."
+    },
+    {
+      "key": "experimental-packets",
+      "include": [
+        "experiments/"
+      ],
+      "exclude": [
+        "experiments/orthemology-v5/",
+        "experiments/orthemology-v5-continuations/",
+        "experiments/orthemology-v5-successors/"
+      ],
+      "owners": [
+        "experiments/README.md",
+        "experiments/experiment-status.yaml"
+      ],
+      "candidate_paths": 143,
+      "candidate_role": "Designed study packets and scoped smoke/control material; packet status owner remains authoritative."
+    },
+    {
+      "key": "documentation-and-other-history",
+      "include": [
+        "docs/"
+      ],
+      "exclude": [
+        "docs/provenance/v5-consolidation/",
+        "docs/provenance/v5-research-continuations/",
+        "docs/provenance/v5-successors/",
+        "docs/project-closure/ar8r-v11/"
+      ],
+      "owners": [
+        "docs/architecture-overview.md",
+        "docs/decision-status.yaml",
+        "docs/math-source-inventory.yaml"
+      ],
+      "candidate_paths": 239,
+      "candidate_role": "Includes substantive architecture, source notes and historical assessment candidates; not an administrative exclusion."
+    },
+    {
+      "key": "references",
+      "include": [
+        "references/"
+      ],
+      "exclude": [],
+      "owners": [
+        "references/source-status.yaml"
+      ],
+      "candidate_paths": 3,
+      "candidate_role": "Bibliography and source-status owners; bibliography links do not recursively admit new bodies."
+    },
+    {
+      "key": "terminology",
+      "include": [
+        "terminology/"
+      ],
+      "exclude": [],
+      "owners": [
+        "terminology/README.md"
+      ],
+      "candidate_paths": 31,
+      "candidate_role": "Candidate terminology, designed comparisons and frozen packet roles."
+    },
+    {
+      "key": "archive",
+      "include": [
+        "archive/"
+      ],
+      "exclude": [],
+      "owners": [
+        "docs/provenance/document-history.md"
+      ],
+      "candidate_paths": 10,
+      "candidate_role": "Preserved historical evidence; no dismissal of unique substantive work by directory name."
+    },
+    {
+      "key": "repository-support",
+      "include": [
+        "scripts/",
+        "tests/",
+        "schemas/",
+        ".github/"
+      ],
+      "exclude": [],
+      "owners": [
+        ".github/workflows/validate.yml",
+        "CONTRIBUTING.md",
+        "requirements-ci.lock.txt",
+        "docs/project-state-inputs.yaml"
+      ],
+      "candidate_paths": 286,
+      "candidate_role": "Verification and schema implementations, fixtures and workflow owners; source candidates remain visible."
+    }
+  ],
+  "required_work_sources": [
+    "companion/CONCRETE-AND-SOUND-REASON.md",
+    "companion/dynamic-orthing-noetic-learning-and-orthability.md",
+    "companion/orthability-and-the-ground-of-intelligibility.md",
+    "companion/orthability-divine-attributes-and-speech-athari.md",
+    "docs/notation-gallery.md",
+    "experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md",
+    "experiments/orthemology-v5-successors/source-store/0cfd5385fed9e21656d5e724c3e78e7ac5ca53ed45801fe7e81f77a7e3b3b96b/PUBLIC_CANDIDATE_v1.md",
+    "experiments/orthemology-v5-successors/source-store/2f27715c0283542e48dace818236f4afd4c1d953af7c5af3ac66ff04a308db42/RESULT.md",
+    "experiments/orthemology-v5-successors/source-store/438b0f2f0ce979da7293c22f87e16782cfb24a65cc6bbe55222454b3ccaa8b3a/FINITE_FORWARD_INTERVENTIONS_v1.md",
+    "experiments/orthemology-v5-successors/source-store/6130a832114b87dcdefbdf60841fe8785f62549ee175adf7dbf25670f880430d/QUANTITATIVE_AND_CAPTURE_PUBLIC_v1.md",
+    "experiments/orthemology-v5-successors/source-store/6d83bd91e8b85803150c18da26068d4cd56c6da0fadc453ce268ef0008670b48/INTEGER_TOTAL_REPORT_PROTOCOL_v3.md",
+    "experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md",
+    "experiments/orthemology-v5-successors/source-store/8bb522943f659e2f50a97fe8987f48d851a7fc1577f020995ac43dc31ebfe115/MISSING_OUTCOME_ANALYSIS_v1.md",
+    "experiments/orthemology-v5-successors/source-store/c24a896b6aa4119bdbbbee92efbbe55c0765745c9b901221f716a06f6e230942/BOUNDED_ACCESS_AND_DIACHRONIC_COHERENCE_v3.md",
+    "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+    "manuscript/orthemma-ortheme-systems-revised-draft.md",
+    "research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md",
+    "research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md",
+    "research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md",
+    "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md",
+    "research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md",
+    "research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md",
+    "research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md",
+    "research/t20-v6-20261012/sources/a81201d5cb53b8c6d3d5eaf47abc704286f879cf78579421d6db6e0800fc5255/Epistemic_Tuples_and_Intra_Agential_Equilibrium.txt",
+    "theory/lineages/h-continuation/continuation_complete_orthing.md",
+    "theory/lineages/h-formalisation/orthing_formalisation_v1.md",
+    "theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.tex",
+    "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+    "theory/lineages/h-moat-e3/claim_table.tex",
+    "theory/lineages/h-moat-e3/composition.tex",
+    "theory/lineages/h-moat-e3/contract_refinement.tex",
+    "theory/lineages/h-moat-e3/edition3_changes.tex",
+    "theory/lineages/h-moat-e3/edition3_evaluation.tex",
+    "theory/lineages/h-moat-e3/edition3_examples.tex",
+    "theory/lineages/h-moat-e3/evaluation.tex",
+    "theory/lineages/h-moat-e3/governance.tex",
+    "theory/lineages/h-moat-e3/joint_case.tex",
+    "theory/lineages/h-moat-e3/large_model_audit.tex",
+    "theory/lineages/h-moat-e3/new_examples.tex",
+    "theory/lineages/h-moat-e3/ns_residual.tex",
+    "theory/lineages/h-moat-e3/orthemic.tex",
+    "theory/lineages/h-moat-e3/precision_contracts.tex",
+    "theory/lineages/h-moat-e3/processor_census.tex",
+    "theory/lineages/h-moat-e3/progress.tex",
+    "theory/lineages/h-moat-e3/references.tex",
+    "theory/lineages/h-moat-e3/related_work.tex",
+    "theory/lineages/h-moat-e3/representations.tex",
+    "theory/lineages/h-moat-e3/stateful_witness.tex",
+    "theory/lineages/h-moat-e3/substitution_profile.tex",
+    "theory/lineages/h-moat-e3/the_last_moat_e3.tex",
+    "theory/lineages/h-moat-e3/uncertain_channels.tex",
+    "theory/lineages/h-modal/orthability_modal_grounding.md",
+    "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+    "theory/orthemic-core-formalization.md",
+    "theory/orthemic-multi-actor-conflict-note.md",
+    "applications/agentic-runtime/COLLECTIVE-SOMNUS-TRANSCLUSION-PROFILE.yaml",
+    "applications/agentic-runtime/HERMES-WRITEBACK-ADOPTION-PROFILE.yaml",
+    "applications/agentic-runtime/SOMNUS-CANDIDATE-INVENTORY.yaml",
+    "applications/daee-epistemics/EPISTEMOLOGICAL-AND-METAPHYSICAL-BOUNDARY.md",
+    "applications/daee-epistemics/META-NOETIC-MEMETICS-AND-DYNAMIC-ORTHING.md",
+    "applications/daee-epistemics/MULTI-TARGET-NOETIC-ORTHING.md",
+    "applications/daee-epistemics/NOETIC-ORTHING-APPLICATION.md",
+    "applications/daee-epistemics/SEMANTIC-OPERATOR-CONTRACT.yaml",
+    "applications/daee-epistemics/SOUND-DESCENT-MODEL-COMPARISON.md",
+    "applications/latent-state-orthing/DYNAMIC-ORTHING-AND-LATENT-STATE-LEARNING.md",
+    "experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md",
+    "experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md",
+    "experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md",
+    "experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md",
+    "experiments/orthemology-v5-successors/source-store/2c16dbf40f6a945785b51ddc230a0e1f78004fe716a0412492b4345be8c95734/Finite_Certificates_and_Inhabitation_Limits_for_P01AC_and_HasPlus_v1.md",
+    "experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean",
+    "experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean",
+    "experiments/orthemology-v5-successors/source-store/34393b10d6a7447b0d802cb2aa65f6ec93d3f20446d0de97a9c4e292e59081f2/Orthemology_Fifteenth_Mathematical_Compendium_v1_20261005.md",
+    "experiments/orthemology-v5-successors/source-store/69051582e889b364891ee1e6b59782fe025c0334eaa423e9fd822e5f256f08ee/Orthemology_Fifteenth_Research_Final_v1_20261005.md",
+    "experiments/orthemology-v5-successors/source-store/55f26bac8864c6e3279debaf821d1c714abbcff6f22f5364a654823ae6a61b70/README.md",
+    "experiments/orthemology-v5/source/history/Orthemology_v3_Critical_Handoff/inputs/v3/MATHEMATICAL_PROOF.md",
+    "experiments/orthemology-v5/source/PROOFS_V4.md",
+    "experiments/orthemology-v5/mathematics/REFINEMENT_CALCULUS.md",
+    "experiments/orthemology-v5/mathematics/DEFECT_COMPUTABILITY.md",
+    "experiments/orthemology-v5/mathematics/ABSTRACT_OWOU.md",
+    "experiments/orthemology-v5/README.md",
+    "experiments/orthemology-v5/verify_repository.py",
+    "experiments/orthemology-v5/comparison/ADVERSARIAL_COMPARISON.md",
+    "experiments/orthemology-v5-successors/source-store/930d562958832a8cdc4001145092565d31d7efa2ba67e20e39b83ebac0f6e138/README.md",
+    "experiments/orthemology-v5-successors/source-store/05a520f8160b28af5c8d90f3045424288c601e585344a09f71f7dc305dffd6be/DESIGN_AND_PLAN.md",
+    "experiments/orthemology-v5-successors/source-store/0ff5b6519190744335ab79a4d5007f863bf49b54ecb35f671801871d7af8fbad/README.md",
+    "experiments/orthemology-v5-successors/source-store/2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e/SOURCE_AND_PREMISE_MAP.md",
+    "experiments/orthemology-v5-successors/source-store/ec62c0a1a93cbaba745c4e4a50d0622c42014dbe43b9547a47644e6190d98aa0/README.md",
+    "experiments/orthemology-v5-successors/source-store/4f41fc4a556fe1747498250142a51a7e6ce898412d3f3b1617cb94c62f774099/THEOREM_MAP.md",
+    "experiments/orthemology-v5-successors/source-store/477bd9137234f58941b4e43996fd271716a75767c77fa41a80f9d70fdb659876/README.md",
+    "experiments/orthemology-v5-successors/source-store/725e3e507f9e77d0f387966da7871a93a81979e6548fb35c7fd5023291afcf8e/THEOREM_MAP.md",
+    "experiments/orthemology-v5-successors/source-store/a0f78f8aa5b928561fd533e9084a0d3e18e9c7ce3775504e5ebdfd06ffeea03a/README.md",
+    "experiments/orthemology-v5-successors/source-store/ab2729c1927d164129161f785e1eaa3f4b71c6e32b2eb94f93d17c4cc3f06598/MODEL_DERIVATION_AND_PROPOSAL.md",
+    "experiments/orthemology-v5-successors/source-store/1db37f08cdb7a7d8e31fef95b48e4c6720c29f1550ca0549d8e7905bc9aff5e4/CORPUS_AND_TRANSFER_SCOPE.md",
+    "experiments/orthemology-v5-successors/source-store/2dcdece2b95688d09b736bc46fe1258a05ecf93a2dfd05f322637511a3e3edbb/FAMILY104_CURRENT_SCOPE.md",
+    "experiments/orthemology-v5-successors/source-store/aebc492c7e8267ceee96527a2a66ab24df7d735adcd15f2d0ffcf5cf64dcdf2e/AVENUE_SYNTHESIS.md",
+    "experiments/orthemology-v5-successors/source-store/5f681f5d2002094ee249dbc6de29478ae4f478b51665cee6f3147aa066f8d4e1/SYNTHESIS.md",
+    "experiments/orthemology-v5-successors/source-store/38820a6eb210e1a58b6d9e6df59dfe716a4fe338bde5afe272169f096c6607b4/RECONSTRUCTION.md",
+    "experiments/orthemology-v5-successors/source-store/a5d770b8880481cdc60205131bc0a5c11ee95ca101628de8e1169acd55c6ce42/REUSE_MAP.md",
+    "experiments/orthemology-v5-successors/source-store/3ce900f8e6720713d4d4767df95e86b0ca31e30e9054547604c0f762dced5b05/SOURCE_ARGUMENT.md",
+    "experiments/orthemology-v5-successors/source-store/aad1327aa577fa6edb2b90477481cd2849b6ffe1701c27a3ddfdec69d15b8e67/MODEL_AUDIT.md",
+    "experiments/orthemology-v5-successors/source-store/3f049a92d1da97dcbd2b4e8126d1c566543138ad274cb9334d5e9ea759b3033c/ROOT_REASSESSMENT.md",
+    "experiments/orthemology-v5-successors/source-store/e9e55a70a8a84323d76514f095227067a7b962f6c718daa6e75ce2b4dbf83e05/AUDIT.md",
+    "experiments/orthemology-v5-successors/source-store/e3e5480db5b874448b7f4448ce6bce66e426995afbcb45e31ce61f755e03fdfe/OriginationTypeControl.lean",
+    "experiments/orthemology-v5-successors/source-store/3f82732faadc37cca6de77a1c1b65983c11568dddbd1990a84e7d182571a7e3b/LOCUS_AUDIT.md",
+    "experiments/orthemology-v5-successors/source-store/3deb84870b2d2de2da472946031d2886e06d03efbc76e9e2b6c6ff968e738b50/LOCUS_AUDIT.md",
+    "experiments/orthemology-v5-successors/source-store/1aedc48f3e7507cb0f14921fcd0905c1f7a89137ed8cabb5450a316903635219/ARABIC_READING_METHOD.md",
+    "experiments/orthemology-v5-successors/source-store/182829543432a0f771f552f74cb3bc2896e5b7e536c0e93bac231b0a3935aef8/CROSS_STREAM_CASES.md",
+    "experiments/orthemology-v5-successors/source-store/866e0d85f3524013ce7e5e6df1907fe184139259028d6e9b4ded91379893f0fa/DRIVE_CORPUS.md",
+    "experiments/orthemology-v5-successors/source-store/d2bf1a9cbfb1e78b79e4ef630fb9c44ba6fb36067557658a6a432e63245fb7c2/METHOD_INTEGRATION_HANDOFF.md",
+    "experiments/orthemology-v5-successors/source-store/fd16c7ddcbb724e2170b5682414f476cf6e71e7ffb82c49d2ddbcb52d4068cfd/MATH_UTILISATION.md",
+    "experiments/orthemology-v5-successors/source-store/40e374a62246636ffdbd424f517094dbaa7a7d00cc177675bed19377598e44fd/MATHEMATICAL_COMPANION.md",
+    "experiments/orthemology-v5-successors/source-store/c8611b26ae09858c157059c1ed83690a586c98da5ac5a6aae8412ede077661cd/REPORT.md",
+    "experiments/orthemology-v5-successors/source-store/7b728e2675cfb232ef160c730babee3f13c844a9b3e09ceabb471d579c975bd4/GUIDE.md"
+  ],
+  "publication_profile": "docs/publication-profile.yaml",
+  "edition_constraints": [
+    {
+      "source": "theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex",
+      "rendering": "theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf",
+      "permitted_relation": "related-source",
+      "basis": "theory/lineages/h-ics-v5/README.md"
+    }
+  ],
+  "owner_binding_policy": "Each declared owner must match its exact blob identity in the pinned Git tree; no second checksum inventory is authored.",
+  "baseline_change_note": "Recovery 04 includes merged PR 37. Prior census and owner map remain in exact pre-reconciliation Git history; this is not evidence of rereading unchanged scientific bodies.",
+  "required_work_sources_scope": "Known substantive source and component requirements from inspected baseline owners. This growing subset is not the full candidate denominator; every baseline path remains assigned separately.",
+  "disposition_required_groups": [
+    "v5-consolidation",
+    "v5-continuations",
+    "root-navigation-and-policy",
+    "principal-manuscript",
+    "formal-core",
+    "lineage-h-continuation",
+    "lineage-h-formalisation",
+    "lineage-h-ics-v5",
+    "lineage-h-moat-e3",
+    "lineage-h-modal",
+    "lineage-h-reflexive-v3",
+    "companion",
+    "applications",
+    "examples",
+    "publication-and-renderings",
+    "v5-successors",
+    "t20-live",
+    "t20-v6",
+    "epistemic-tuples-source-fidelity",
+    "ar8r-research-and-proposals",
+    "experimental-packets",
+    "documentation-and-other-history",
+    "references",
+    "terminology",
+    "archive",
+    "repository-support"
+  ]
+}
