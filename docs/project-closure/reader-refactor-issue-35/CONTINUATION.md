@@ -18,6 +18,12 @@ Execution uses the existing six reader pages, crosswalk, owner map and checks. T
 
 The current concise recovery record is [PROGRESS.md](PROGRESS.md). Earlier plans and observations below retain their historical scope.
 
+## Final candidate review evidence — 18 October 2026
+
+The existing qualification and coverage records retain the substantive review summary, acceptance predicates and implementation handoff. One additional admitted path, `docs/project-closure/reader-refactor-issue-35/C05-REVIEW.json`, preserves the separate reviewers' actual reports, source-reading scopes, candidate bindings and reader-task evidence. Its purpose is to make C05 review recoverable from GitHub, without copying scientific source bodies or creating another catalogue or status registry. The final containing SHA/tree, full CI conclusion and subsequent independent delta readback are bound non-circularly in PR #36.
+
+This evidence path is an ordinary documentation addition within the owner's continued refactor authority. It grants no new scientific, publication, merge or closure authority. Author curation, index-level checks, bounded source comparisons, unassisted comprehension and hosted execution remain separately labelled.
+
 ## Authority and recovered state
 
 The owner renewed branch implementation authority and requested regular GitHub checkpoints and five-point progress summaries, including the next action. The existing limits in [EXECUTION.md](EXECUTION.md) and [Issue 35](https://github.com/theislampill/orthemology/issues/35) remain binding. Keep PR 36 draft. No merge, release, scientific reclassification or T21 authority is granted.

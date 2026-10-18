@@ -23,13 +23,15 @@ The catalogue is arranged by intellectual subject. Read the short route below, t
 | Identification, source warrant and restoration under uncertainty | [AR8R research](#ar8r-identification-correction-and-warranted-application) · [recovered notes](#ar8r-recovered-transfer-and-restoration-notes) · [research designs](#research-designs-for-machinery-records-and-vocabulary) |
 | Source studies, literature and historical document context | [Supporting reference](#supporting-reference-not-another-research-article) · [source-study appraisals](#source-studies-and-historically-distinct-appraisals) · [Twentieth reading methodology](#later-twentieth-reading-methodology) |
 
-The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or collection. The [frontier guide](CURRENT-FRONTIERS.md) separates established statements at their stated scope from conditional applications and open research. Curation and independent review are still in progress; [the handoff](../project-closure/reader-refactor-issue-35/PROGRESS.md) identifies the remaining work.
+The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or collection. The [frontier guide](CURRENT-FRONTIERS.md) separates established statements at their stated scope from conditional applications and open research. The [editorial scope and qualification record](../project-closure/reader-refactor-issue-35/PROGRESS.md) identifies the coverage, review state and source-reading limits.
 
 ## Core exposition and formal reference
 
 ### Main exposition
 
 **Orthemma–Ortheme Systems: An Analysis-Relative Architecture for Auditable Classification and Handling.** Read the [Markdown manuscript][main] or its [governed PDF][render-orthemma-ortheme-systems-draft].
+
+For the typeset result/pathway matrix, open section 8.4 on PDF pages 14–15. GitHub's Markdown preview currently rejects a notation macro and requires horizontal scrolling for that table.
 
 **Why read it:** this is the principal account of how one concrete occurrence moves through observation, competing descriptions, evidence, placement, routing and correction. An *orthemma* is the situated occurrence; its *orthemes* are repeatable, consequence-bearing state-types under a declared analysis. The actual profile is distinct from both an observation and an actor’s inferred placement. Analysis-relativity does not let the actor manufacture what is true.
 
@@ -155,7 +157,7 @@ The manuscript’s broader programme includes joint-support and minimal-cut anal
 
 **The Last Moat, Third Edition: Physical Realisability, Cross-Substrate Communication, and Holarchic Agency.** [Root TeX manuscript][last-moat] · [Edition 3 changes and evidence ledger][last-moat-changes].
 
-This is **one componentised manuscript**. Its root includes twenty-two TeX components, all retained in the crosswalk as components, not twenty-two additional papers. The root and included files belong together for authoring; this catalogue does not assert that a governed PDF or a freshly verified build exists for it.
+This is **one componentised manuscript**. Its root includes twenty-two [TeX components](../../theory/lineages/h-moat-e3/), all retained in the crosswalk as components, not twenty-two additional papers. The root and included files belong together for authoring; this catalogue does not assert that a governed PDF or a freshly verified build exists for it.
 
 The work asks when an organised process can preserve a specified stateful contract while replacing its original host. It distinguishes behavioural realisation from copying weights, the joint realisation from each constituent, and role/classification claims from evidence maturity. Its introduction and revision ledger describe a useful paired contrast: a declared parity-memory witness supplies two models and state-preserving handovers, whereas two individually correct processors and a correct packet channel can still fail continuation if the exported information omits consequential hidden state.
 
@@ -555,7 +557,7 @@ Under the fixed map and lifetime-fault contract, finite traces preserve genuine 
 
 The [shared-controller argument][t08-controller] gives a positive finite schedule without trusting success receipts or reading hidden faults: synchronise, then prepare, attempt, cancel and close every prescribed path. Authentic source admission, accurate starting observation, good service slots, fresh complete commands and a protected window are actual premises. The [execution clarification][t08-execution] identifies the whole interpreter as a classical/noncomputable mathematical reference—not an extracted or natively executed successor to the separate four-path source batch.
 
-For the fixed seven-label/five-label order, the reference counts 259 logical events; one admissible world makes the first 20 trials effect-free and the 21st attain the installation. This is [sharpness for that order/world][t08-attained-evidence], not optimality over all controllers. The [finite bad-store extension][t08-bad-store-evidence] permits any finite number of writes at the fixed bad roots while preserving the final good-state effect. Total length includes those added events and can be arbitrarily delayed; an infinite hostile prefix has no termination guarantee. Read the [protected-controller result][t08-controller-evidence] for the complete contract. Neither event counting nor unchanged source-gate code establishes a physical service deadline.
+For the fixed seven-label/five-label order, the reference counts 259 logical events; one admissible world makes the first 20 trials leave the Plant unchanged and the 21st attain the installation. This is [sharpness for that order/world][t08-attained-evidence], not optimality over all controllers. The [finite bad-store extension][t08-bad-store-evidence] permits any finite number of writes at the fixed bad roots while preserving the final good-state effect. Total length includes those added events and can be arbitrarily delayed; an infinite hostile prefix has no termination guarantee. Read the [protected-controller result][t08-controller-evidence] for the complete contract. Neither event counting nor unchanged source-gate code establishes a physical service deadline.
 
 ## Additional successor works and source collections
 
@@ -662,11 +664,13 @@ The calibration programme first characterizes an exact interaction anchor, sampl
 
 ### Retained-threshold replay and robust count testing
 
+The [calibration reconciliation](../../research/t20-v6-20261012/research-v6/root_math/calibrated_prose/REPORT.md) connects the retained-replay results to the wider identification programme.
+
 Unknown within-route dependence admits genuine Joe-copula aliases even when fresh endpoint laws and coordinate calibrations agree. Retaining the same thresholds across different commands exposes a joint law that fresh independent probes do not reveal. [The robust four-probability panel](../../research/t20-live-20261009/checkpoints/CP07/t20-next-frontier-20261008/finite-panel-replay-robustness/RESULT.md) uses $t=1/[3(n+1)]$ and a simultaneous error box of radius $1/[10000(n+1)^2]$ to separate a specified count from every wrong positive finite count. Its finite-sample rule tests the reference model; a same-count nonreference model can reject. The [adaptive-rate bounds](../../research/t20-live-20261009/checkpoints/CP07/READ_FIRST.md) and [charged adaptive-second-face extension](../../research/t20-live-20261009/checkpoints/CP08/READ_FIRST.md) preserve the fourth-power hard-pair barrier for their exact replay instruments. Known/selectable true rates, independent groups, charged first probes and unconditional terminal correctness matter; none of these results certifies arbitrary global copula independence from a finite grid.
 
 ### Sharp skyline information and finite geometric readout
 
-For the specified $n$ versus $n+1$ hard pair, [the sharp skyline theorem](../../research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/RESULT.md) obtains $D(Q_0\Vert Q_1)\sim\log^2(m)/(4m^4)$ and $H^2(Q_0,Q_1)\sim\log^2(m)/(8m^4)$, where $m=n+1$ and this Hellinger convention has no factor $1/2$. An alternative-only stratum makes the opposite KL divergence infinite; it is retained in the experiment. Exact-skyline testing therefore has fixed-confidence independent-vector complexity $\Theta(n^4/\log^2 n)$. [The finite rational score](../../research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/RESULT.md) matches that vector order eventually, with expected total probes $O(n^4)$ and a separate worst-case bound. Its cutoff $n_0$ is not effective in the retained result, so it supplies neither an automatic all-$n$ budget nor total-query optimality. [The final checkpoint guide](../../research/t20-live-20261009/checkpoints/CP12/READ_FIRST.md) identifies the completed bound and preserves CP10–11's weaker estimates as history.
+For the specified $n$ versus $n+1$ hard pair, [the sharp skyline theorem](../../research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/sharp-skyline-information/RESULT.md) obtains $D(Q_0 \parallel Q_1) \sim \log^2(m)/(4m^4)$ and $H^2(Q_0,Q_1)\sim\log^2(m)/(8m^4)$, where $m=n+1$ and this Hellinger convention has no factor $1/2$. An alternative-only stratum makes the opposite KL divergence infinite; it is retained in the experiment. Exact-skyline testing therefore has fixed-confidence independent-vector complexity $\Theta(n^4/\log^2 n)$. [The finite rational score](../../research/t20-live-20261009/checkpoints/CP12/t20-next-frontier-20261008/finite-geometric-score/RESULT.md) matches that vector order eventually, with expected total probes $O(n^4)$ and a separate worst-case bound. Its cutoff $n_0$ is not effective in the retained result, so it supplies neither an automatic all-$n$ budget nor total-query optimality. [The final checkpoint guide](../../research/t20-live-20261009/checkpoints/CP12/READ_FIRST.md) identifies the completed bound and preserves CP10–11's weaker estimates as history.
 
 ### Qualitative tensors and shared-witness semantics
 
@@ -714,7 +718,7 @@ The [rational basing continuation](../../research/t20-live-20261009/checkpoints/
 
 ### Conditioning error and finite mediation
 
-[V6-C01](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) proves the common-likelihood bound $\operatorname{TV}(B_Lp,B_Lq)\le\min(1,\delta/\max(A,B))$ for $0\le L\le1$, positive normalizers $A,B$, and $\delta=\operatorname{TV}(p,q)$. A distinct relative-likelihood error term and endpoint transport term can be added; the joint sum is not claimed sharp and the likelihood itself still needs warrant. [V6-C04](../../research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md) adds a sharp one-horizon event-TV allowance to the inherited finite-mediator Gaussian capture bound: $\min\{1,2\Phi(NL/(2\sqrt n))-1+\eta\}$. The mediator must be complete, have at most $N$ values and satisfy the stated conditional-independence/reference-law contract. The construction does not preserve a prescribed output marginal or produce a coherent all-horizon process.
+[V6-C01](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) proves the common-likelihood bound $\operatorname{TV}(B_Lp,B_Lq)\le\min(1,\delta/\max(A,B))$ for $0\le L\le1$, positive normalizers $A,B$, and $\delta=\operatorname{TV}(p,q)$. A distinct relative-likelihood error term and endpoint transport term can be added; the joint sum is not claimed sharp and the likelihood itself still needs warrant. [V6-C04](../../research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md) adds a sharp one-horizon event-TV allowance to the inherited finite-mediator Gaussian capture bound: $\min\{1,2\Phi(NL/(2n^{1/2}))-1+\eta\}$. The mediator must be complete, have at most $N$ values and satisfy the stated conditional-independence/reference-law contract. The construction does not preserve a prescribed output marginal or produce a coherent all-horizon process.
 
 ### Additional moment directions, reset quotients and hidden activation
 
@@ -758,6 +762,8 @@ The [canonical historical registry][c03-ar8r-origin] is the source directory for
 The [later recovery overlay][c03-ar8r-recovery] is necessary when interpreting that older registry. It distinguishes recovered exact payloads from the T150 role-preserving replacement, the T366 semantic reconstruction and unresolved historical identities. Exact recovery also leaves T354's formal defect in place. This composite route preserves the scientific corpus and its status distinctions without converting each custody row or family relationship into another paper.
 
 ### AR8R recovered transfer and restoration notes
+
+The [direct note lookup](RESULT-INDEX.md#ar8r-research-notes-direct-source-lookup) opens every retained exact note by its existing title or label.
 
 The [V8 collection][c03-ar8r-v8] preserves eighteen exact historical notes, with [direct source paths and audit status for each identity][c03-ar8r-v8-index]. Together they make several substantive distinctions that are easy to lose in a summary of the programme.
 
@@ -810,7 +816,11 @@ The PMR-001 notes make affirmative conditional arguments as well as identifying 
 
 The [PMR-002–006 synthesis][c03-ar8r-pmr2-report] and [dependency discussion][c03-ar8r-pmr2-reread] extend this work across qiyās eligibility, translation, contextual meaning, representation alignment, attribution, common knowledge and the distinct stages of Speech capacity, occurrence, qualification, naming and revealed content. They publicly describe eleven scoped outputs and their corrected dispositions. This retained selection supplies the reports, rather than all eleven complete proof/model packets.
 
+**Language, identity and warrant-bearing communication programme.** Its five source discussions concern [agentic communication](../project-closure/ar8r-v11/programs/agentic-communication.md), [translation and version custody](../project-closure/ar8r-v11/programs/language-translation-and-version-custody.md), [identity and evidential independence](../project-closure/ar8r-v11/programs/tac-sac-identity-and-independence.md), [grammar and articulability](../project-closure/ar8r-v11/programs/uncreated-grammar-and-articulability.md), and [temporal restoration and provenance](../project-closure/ar8r-v11/programs/daee-temporal-restoration-and-provenance.md). They distinguish the scoped results already supplied from the source, interpretation, implementation and world-directed evidence still required by each programme. Receiving an artifact, preserving a selected meaning, establishing identity and warranting an action remain different achievements.
+
 ### AR8R correction, unification and the source ascent
+
+Read the [Track T and source-ascent programme](../project-closure/ar8r-v11/programs/candidate-n-r5-track-t-and-source-ascent.md) and its [P597–P620 source-ascent assessment](../project-closure/ar8r-v11/programs/p597-p620-source-ascent-status.md) for the source-ascent components and their stated status.
 
 **[Candidate E: recursive corrigibility][c03-ar8r-candidate-e]** asks where the authority for a radical correction comes from when the current standard is itself defective. Under its objective-correction and authority-adequacy premises, that same defeated token basis cannot supply all of the correction's authority. Its alternatives include a retained higher rule, a standard extending across states, a holistic normative fixed point, a primitive normative fact, or abandoning the stipulated objective reading. The partition does not choose a function theory or establish teleology.
 
@@ -830,6 +840,8 @@ Three useful starting points are modal-lineage transport (`PMR-007-MLT-1`), wher
 
 ### AR8R proper function, semantics and architecture proposals
 
+Open the individual notes by title or label in the [direct note lookup](RESULT-INDEX.md#ar8r-research-notes-direct-source-lookup).
+
 The [Deep A–BK index][c03-ar8r-deep-index] preserves 63 further notes alongside the ten earlier rounds. Earlier Round 11–20 and A–AP snapshots remain preserved editions of this growing series, rather than additional discoveries. The index's existing titles, typed settings and limitations provide the full directory; the following are subject routes into it.
 
 | Research question | Starting work and contribution |
@@ -843,7 +855,9 @@ These are finite or otherwise explicitly scoped research proposals. The formal c
 
 ### AR8R later semantic reissues
 
-The [Deep BL–BV collection][c03-ar8r-bl] and [Deep BW–CJ collection][c03-ar8r-bw] preserve later research in a different reading form: semantic reissues, with the original ephemeral proof/checker bodies unavailable to the degrees stated by their owners. BL–BU has summary-level custody rather than recovered individual theorem identities. **[Deep BV's common-intervention criterion][c03-ar8r-bv]** asks whether a target is constant on the complete intervention-profile fibres of a finite declared model class. Its common interventions need compatible semantics and a target-independent implementation in every compared architecture.
+Open the individual reissued notes by title or label in the [direct note lookup](RESULT-INDEX.md#ar8r-research-notes-direct-source-lookup).
+
+The [Deep BL–BV collection][c03-ar8r-bl] and [Deep BW–CJ collection][c03-ar8r-bw] preserve later research in a different reading form: semantic reissues, with the original ephemeral proof/checker bodies unavailable to the degrees stated by their owners. The [retained BL–BU report](../project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-bl-bv-semantic-reissue/source-files/PMR-007_DEEP_BL_BU_OWNER_REPORT.md) has summary-level custody rather than recovered individual theorem identities. **[Deep BV's common-intervention criterion][c03-ar8r-bv]** asks whether a target is constant on the complete intervention-profile fibres of a finite declared model class. Its common interventions need compatible semantics and a target-independent implementation in every compared architecture.
 
 The fourteen [BW–CJ notes][c03-ar8r-bw-index] extend that question to finite adaptive intervention laws, eligible anchor cover, resource constraints, source interpretation, norm orientation, distributed attribute bearers, and content/fittingness-sensitive control. For example, the anchor-cover construction makes exact identification equivalent to covering every same-profile/different-target pair with independently eligible separating information. Its minimal cost is relative to the supplied factor registry and costs.
 
@@ -851,13 +865,15 @@ The collection's correction is material: the original CI/CJ PASS counted unexecu
 
 ### AR8R six-lane research
 
+Open the Central and Specialist notes by title or label in the [direct note lookup](RESULT-INDEX.md#ar8r-research-notes-direct-source-lookup).
+
 The [six-lane intake][c03-ar8r-six] brings together Central CK–CT, Specialist A's formal/computational notes, Specialist B's source/noetic notes and bounded dispositions of three external research reports. The underlying notes remain separate works. The public collection links their local indexes and [correction owners][c03-ar8r-six]; it does not adopt the proposals.
 
 **[Switching-standard robust viability (Deep CQ)][c03-ar8r-cq]** is a particularly useful mathematical starting point. A finite family of candidate standards supplies target regions, eligible actions and deterministic transitions. One state-feedback policy must work under arbitrary switching between standards. A greatest fixed point identifies states that can remain in every target forever; its least-fixed-point attractor identifies states from which a common policy can force finite entry. **[Deep CR][c03-ar8r-cr]** then explains how a justified, nonempty restriction of the candidate standards can enlarge those regions when the remaining targets and dynamics are inherited unchanged. Its source-relative restriction and world-directed applicability are separate premises.
 
 Specialist A's [minimum collision-cover note][c03-ar8r-spa10], [history-state construction][c03-ar8r-spa11] and [predictive quotient][c03-ar8r-spa12] connect evidence selection, finite adaptive behaviour and depth-specific memory requirements. The [Specialist B restoration note][c03-ar8r-spb4] distinguishes latent rehabilitation from memorisation, compliance, altered reporting or transient suppression of a defeater, and specifies the additional measurement and causal work a study would need.
 
-Read these with the intake corrections: [Central replay is incomplete][c03-ar8r-central-correction]; [Specialist A R7/R9 need an off-range decoder guard][c03-ar8r-spa-correction]; [Specialist B lacks its supplied checker and has thinner formal signatures than portions of its prose][c03-ar8r-spb-correction]. Separately preserved Lean repairs have their own bounded receipts. The [two external challenge packets][c03-ar8r-challenges] are useful challenges with explicit limitations, not successful external acceptance of the programme.
+Read these with the intake corrections: [Central replay is incomplete][c03-ar8r-central-correction]; [Specialist A R7/R9 need an off-range decoder guard][c03-ar8r-spa-correction]; [Specialist B lacks its supplied checker and has thinner formal signatures than portions of its prose][c03-ar8r-spb-correction]. Separately preserved Lean repairs have their own bounded receipts. Read [Challenger A on common intervention](../project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-a-common-intervention/source-files/BOUNDED_CHALLENGER_A_COMMON_INTERVENTION_PACKET.md) and [Challenger B on formal ancestry and the source boundary](../project-closure/ar8r-v11/post-merge-proposals/external-challenges/challenger-b-formal-ancestry/source-files/BOUNDED_CHALLENGER_B_DEEP_BV_FORMAL_ANCESTRY_SOURCE_FIREWALL_PROPOSAL.md), with their [collection's qualifications][c03-ar8r-challenges]. These are useful challenges with explicit limitations, not successful external acceptance of the programme.
 
 ### AR8R a common mathematical layer and its guards
 
@@ -867,7 +883,7 @@ Its [complete Lean source][c03-ar8r-synthesis-lean] also shows that constancy of
 
 ### AR8R Fable specification and rival cores
 
-The [corrected Fable R1 collection][c03-ar8r-fable] contains five substantive lines of work: the T299 interpretation, two rival core models, a separation index, countermodels and an OSM source-reading attempt. Their evidence levels differ.
+The [corrected Fable R1 collection][c03-ar8r-fable] contains five substantive lines of work: the [T299 specification-defect study](../project-closure/ar8r-v11/fable-research/AR8R-FABLE-R1-T299-SPECIFICATION-DEFECTS.md), two rival core models, a separation index, countermodels and an OSM source-reading attempt. Their evidence levels differ.
 
 **[The rival cores][c03-ar8r-fable-cores]** ask different questions. The profile core asks whether a target is uniform on an observed class; its central factorisation characterisation has a scoped Lean result. The provenance calculus asks whether a certificate retains the required roots through transport. Its calibration example illustrates how the same visible profile may remain while a deployment lacks the calibration warrant. The latter calculus, the example's tabulated verdicts, the proposed robustness laws and much of the surrounding mathematics are author-recorded `DERIVED_BUT_UNVERIFIED` material. The rival-core note also contains a local inconsistency: its claim that a constant profile certifies every system conflicts with its own criterion. A constant profile certifies only a target constant on the declared backgrounds; the reader uses that scoped criterion.
 
@@ -1008,7 +1024,7 @@ The publication profile classifies this as a diagnostic reference. It helps insp
 
 The [publication profile][profile] owns the six governed outputs and their source components. Generated files under `publication/latex/` are build inputs derived from the substantive source owners, not places to revise the prose independently. Other preserved PDFs, such as the two lineage editions above, retain their distinct provenance rather than being silently absorbed into this pipeline.
 
-Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publication) for the relevant checks and citation route. The [collection directory](RESULT-INDEX.md#collection-owners) covers research owners outside this sample. Their omitted catalogue entries remain work to curate, not a declaration that they contain no unique scholarship.
+Use the [verification guide](VERIFICATION-GUIDE.md#reading-and-editing-a-publication) for the relevant checks and citation route. The [collection directory](RESULT-INDEX.md#collection-owners) leads to the wider research owners and their distinct substantive reading routes. The catalogue's [subject directory](#how-to-use-this-catalogue) brings those works together without treating every supporting record as a separate paper.
 
 ## Original v5 construction and convergence families
 

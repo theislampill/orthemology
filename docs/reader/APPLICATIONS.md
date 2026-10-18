@@ -180,7 +180,7 @@ For any application reached through this guide, identify whether the target is a
 
 Historical wrappers and archive-relative commands can describe a different workspace. The [source recovery guide][recovery] distinguishes exact source export from actual execution and retains unavailable-input boundaries. A source-resolver success is not evidence that a controller, cognitive model or experiment works.
 
-Remaining application material in other research collections still needs work-level reconciliation. The fifty-file directory mapping does not establish that all repository applications have been examined, run or accepted.
+Applications from the wider research collections are reached through this guide's subject sections and their catalogue entries. The fifty-file native directory is one part of that coverage. Each work retains its own reading and evidence scope; a catalogue route does not establish that an application has been run or accepted.
 
 ## Choose an inquiry without erasing its target
 

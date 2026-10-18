@@ -287,7 +287,7 @@ These are scoped findings in the [Fifteenth programme report](../../experiments/
 
 ## Collection owners
 
-These collections must remain separately discoverable when the full index is completed. Their presence here is a coverage route, not proof that every contained result has been substantively re-read for this preview.
+These collections retain separate reading routes and scientific owners. Their representation in this index does not imply that every contained proof body was independently re-read or re-proved; the linked source-reading and review records state the actual scope.
 
 ### Original v5 consolidation
 

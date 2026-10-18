@@ -31,7 +31,7 @@ These works are research drafts with different evidence scopes. For later recogn
 
 For sustained reading, start with the [main exposition](manuscript/orthemma-ortheme-systems-revised-draft.md), then the [formal reference and its two components](docs/reader/PAPER-CATALOGUE.md#formal-reference). The main manuscript is not a summary of every later research collection. The atlas also gives positive source-bound accounts of [recognition and corrective cognition](docs/reader/RESEARCH-ATLAS.md#recognition-sound-cognition-and-correction) and [tensor histories and information geometry](docs/reader/RESEARCH-ATLAS.md#tensor-histories-and-information-geometry); the applications page explains [joint feasibility across avenues](docs/reader/APPLICATIONS.md#joint-feasibility-across-avenues).
 
-**Reader-refactor boundary:** these routes reuse the existing scholarship. Remaining collection dispositions and separate review are tracked in the [implementation record](docs/project-closure/reader-refactor-issue-35/PROGRESS.md); a working link is not a complete-corpus or scientific-acceptance certificate.
+**Reader-refactor boundary:** these routes reuse the existing scholarship. The [implementation record](docs/project-closure/reader-refactor-issue-35/PROGRESS.md) identifies the completed collection coverage, scoped independent review and exact candidate qualification. Each work retains its own scientific standing; navigation coverage does not certify every proof or application.
 
 
 ## Working vocabulary

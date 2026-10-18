@@ -139,7 +139,7 @@ Twentieth’s [Church probe](PAPER-CATALOGUE.md#generic-church-probe-and-an-inha
 
 ## The original twelve avenues
 
-The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. The following is a navigation orientation, not a claim that naming the avenues completes their scholarly coverage. The detailed routes above are the representative design test; the remaining breadth is still a C03 obligation.
+The [existing twelve-avenue owner][avenues] retains the programme's research questions and result associations. Use the table for orientation, then follow the subject routes above or the [work catalogue](PAPER-CATALOGUE.md) for substantive arguments and primary reading forms. The [coverage and qualification record](../project-closure/reader-refactor-issue-35/PROGRESS.md) states the editorial population and review boundary; an avenue label alone is not evidence of a contribution.
 
 | Avenue | Research question or distinction retained from its owner |
 |---|---|

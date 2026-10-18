@@ -85,6 +85,8 @@ These find and resolve the exact declared public source. They do not execute its
 
 Held or unavailable identities remain held or unavailable. A public manifest row, transformed locator or archived command is not permission to reconstruct private research or pretend a missing historical execution was observed.
 
+**Recorded reader exercise:** the [current qualification record][qualification] reports the executed five-task exercise, its independent adjudication and exact-candidate limits. The unchanged protocol immediately below retains its preparation-time label; that label is not the current execution status.
+
 ## Independent reader comprehension tasks for the final candidate
 
 **Preparation only — NOT_RUN.** These five tasks refine the existing [J01–J07 pilot contracts](../project-closure/reader-refactor-issue-35/PILOT.md) and T01–T18 source/interpretation controls. They add no acceptance stage or terminology requirement and do not constitute C05 review or measured learner uptake.
@@ -121,7 +123,7 @@ These checks compare the crosswalk with the frozen candidate/owner population, b
 
 The optimisation runs above apply to these new validator tests. They are not an instruction to run historical scientific scripts under optimisation: assertion-based controls can lose checks in that mode, as the source recovery guide warns.
 
-The [pilot qualification record][qualification] separates actually observed runs, local rendering, existing evidence, remaining review and the complete RLGWO acceptance predicates.
+The [reader qualification record][qualification] separates actually observed runs, rendered navigation, existing evidence, independent review and the RLGWO acceptance predicates.
 
 ## Checking an application contract without overstating it
 
@@ -415,7 +417,7 @@ The QA at **16:39:49 UTC** reports 140 authored records, twelve native numbered 
 
 Follow the [existing emergence owner](PAPER-CATALOGUE.md#typed-emergence-fresh-acts-created-effects-and-a-stipulated-activity-gap) and [late handoff](PAPER-CATALOGUE.md#late-evidence-handoff-for-the-typed-emergence-control) for original scientific evidence and later qualifications. A source reviewer checking twenty-six bound author/reviewer files did not perform twenty-six new scientific executions. Seven additional review probes are not seven new source-level author theorems. Documentary acceptance does not establish actual necessary-object uniqueness, metaphysical possibility or complete agency semantics. Likewise, the unchanged historical 261/3,539 totals and receiving NOT_RUN fields do not decide a later candidate's current status. Use the [native result-status owner](../provenance/v5-successors/RESULT_STATUS.json) and that candidate's own admission and execution records: the registered emergence control retains receiving CANDIDATE, fresh evidence NOT_RUN and independent evidence count zero.
 
-The existing [independent-reader tasks](#independent-reader-comprehension-tasks-for-the-final-candidate) remain NOT_RUN. These edition, identity and route checks prepare inspectable evidence; they do not observe reader comprehension or perform independent C05 review.
+The existing [independent-reader task protocol](#independent-reader-comprehension-tasks-for-the-final-candidate) is unchanged. Its actual executions and source-based adjudication are recorded in the [current reader qualification][qualification]. Edition, identity and route checks prepare inspectable evidence; reader comprehension requires the separately recorded answers and review.
 
 ### Checking the source guide editions and reading boundaries
 
@@ -478,7 +480,7 @@ The four original `part: source-guide` support entries 205–208 belong to the e
 
 **Verify each role's own Word/QA pairing.** The historical map selects [report v1](PAPER-CATALOGUE.md#the-twentieth-final-report-and-its-dated-research-assessment), this guide v1 and the unchanged [mathematical companion v2](PAPER-CATALOGUE.md#the-twentieth-mathematical-companion-and-its-original-result-owners). The separate QA records give 11, 18 and 19 pages; the map records their 48-page aggregate. Every `original_qa_record` has `body_included: false` and a distinct included public QA identity. The later current map explicitly retains the original/public v1 map identities, selects revised report/guide roles and totals 53 pages. Neither a swapped QA pairing nor replacement by the later map preserves the historical assertion. Document QA PASS does not establish scientific correctness, public availability of Word/image bodies, new rendering or current research adoption.
 
-This route allows a reader to compare a claim with its actual study, a conditional result with its assumptions, or an open question with the evidence it needs. Mechanical identity/route controls do not observe that comprehension. The existing [five independent-reader tasks](#independent-reader-comprehension-tasks-for-the-final-candidate) and J01–J07/T01–T18 contracts remain unchanged, with observations NOT_RUN until genuinely separate C05 review. The original support tail is author-curated. [The source-study appraisals](PAPER-CATALOGUE.md#source-studies-and-historically-distinct-appraisals) now provide the substantive collection routes; remaining support objects have explicit collection ownership under the owner amendment, without claiming every-body reading.
+This route allows a reader to compare a claim with its actual study, a conditional result with its assumptions, or an open question with the evidence it needs. Mechanical identity/route controls do not observe that comprehension. The existing [five independent-reader tasks](#independent-reader-comprehension-tasks-for-the-final-candidate) and J01–J07/T01–T18 contracts remain unchanged; the [current qualification record][qualification] identifies actual independent task outcomes and their scope. The original support tail is author-curated. [The source-study appraisals](PAPER-CATALOGUE.md#source-studies-and-historically-distinct-appraisals) now provide the substantive collection routes; remaining support objects have explicit collection ownership under the owner amendment, without claiming every-body reading.
 
 ### Reading Twentieth source and evidence records
 

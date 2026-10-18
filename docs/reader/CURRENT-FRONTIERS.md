@@ -41,7 +41,7 @@ The distinct [concrete/sound note][concrete] retains its own narrower source qua
 
 The [tensor predecessor][tensor] records a bridge limitation beyond its quadratic/sum-of-squares conditions. The [coercive-polynomial successor][coercive] explicitly addresses that bridge in Theorem G. Its conclusion follows under the full path regularity, normalisation, all-polynomial square-positivity and coercivity hypotheses.
 
-The new reading surface must therefore not present “general coercive representability is still only proposed” as the unqualified current account of these two works. Conversely, it must not treat the successor as a finite-data algorithm or a newly checked Lean theorem.
+The written successor establishes the stronger coercive conclusion at that conditional scope. It does not supply a finite-data reconstruction algorithm or a new Lean check.
 
 **What still requires work for an application:** relate any finite observation or truncated record to the full functional hypotheses; justify the intended variables and dynamics; and retain the distinction between a unique law for a complete path and potentially multiple paths for an initial record. These are different targets from the bridge already addressed in the written successor. See the [source-located theorem](RESULT-INDEX.md#tensor-moments).
 
@@ -82,7 +82,7 @@ The [corrective-control example](APPLICATIONS.md#a-corrective-step-that-legitima
 
 The [learning contract][app-coupling] requires explicit per-claim transport across analysis changes and preserves earlier versions. Extending an implementation means supplying and checking those transport/invalidation/reopening obligations, not asserting that all old verdicts remain current. Neither the early route-ranked G1/G2 account nor the actual later Fisher construction should be used as a blanket status for all noetic dynamics.
 
-The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimplemented outlines. Their next work is proposal-specific source and authority verification followed by bounded implementation and testing; publishing these profiles does not satisfy it. These engineering/interpretation obligations are distinct from proving another theorem or reclassifying any original philosophical argument. Full repository-wide application coverage is also still an editorial obligation of this refactor.
+The [agentic-runtime profiles][app-runtime-outlines] explicitly remain unimplemented outlines. Their next work is proposal-specific source and authority verification followed by bounded implementation and testing; publishing these profiles does not satisfy it. These engineering/interpretation obligations are distinct from proving another theorem or reclassifying any original philosophical argument. The [application catalogue](PAPER-CATALOGUE.md#application-studies-contracts-and-runtime-outlines) distinguishes these proposals from supplied worked examples and mathematical contributions.
 
 ## Identity obstructions, repairs and later checkers
 
@@ -92,7 +92,7 @@ The [separate HasE extension][t14-repair] advances a different target: deriving 
 
 The [finite-certificate paper][t14-certificates] also separates a total check of a supplied finite annotated proof from bare proof search. Its restricted-conversion hypotheses and imported computability premise must accompany a use of the undecidability argument. The [Fifteenth identity collection][t15-group-followup] already records separately scoped exact finite coefficient-checker and certificate developments. Therefore neither “no checker exists anywhere” nor “all semantic equality is now decidable” is a faithful frontier description.
 
-This page records the inspected Thirteenth/Fourteenth sequence and the existence and scope of the named later owner. It does not claim exhaustive curation or fresh verification of the much larger Fifteenth compendium. That remaining reading belongs to the full catalogue task, not to a repetition of the earlier mathematics.
+The [six-paper Fifteenth compendium](PAPER-CATALOGUE.md#six-papers-in-the-fifteenth-mathematical-compendium) now has distinct reading entries for its observation, identity and finite-checking results. Its written theorems, formal components and finite implementations retain their separate scopes. The later work advances specific questions in the Thirteenth/Fourteenth sequence; it does not replace every earlier result.
 
 ## Restricted completeness is established at a specific interface
 
@@ -118,9 +118,9 @@ For the [published-data reanalysis](RESULT-INDEX.md#published-data-reanalysis), 
 
 The [source recovery guide][recovery] distinguishes recovered proof bodies from held or unavailable material and from historical evidence whose original scope remains limited. Its record of binary variants without decoded-equivalence qualification must not become a claim that their texts are all duplicates.
 
-Within the refactor, the [owner map][owner-map] routes the full baseline candidate population, but the representative crosswalk does not yet classify every substantive work. Completing those dispositions, broader avenue explanations and source-specific update rules remains **editorial work**, not permission to reconstruct missing research or rebuild a scientific registry.
+The [owner map][owner-map] and [work catalogue](PAPER-CATALOGUE.md) route the declared scholarly works and collections. The [coverage record](../project-closure/reader-refactor-issue-35/COLLECTION-COVERAGE.md#18-october-scholarly-coverage-candidate) identifies source-reading depths, supporting populations and significant missing-body boundaries. An editorial disposition does not reconstruct missing research or grant a new scientific verdict.
 
-The full frontier page will need the original obligation, argument and supersession owners across the declared collections. Until then, the selected questions above must not masquerade as all of Orthemology's open research.
+The questions on this page lead to the original argument, obligation and currentness owners. They are an orientation to source-specific research boundaries, not a replacement status registry or an exhaustive list of every possible future inquiry.
 
 ## From exact inquiry models to a real revision process
 
@@ -162,7 +162,7 @@ What stays separate is warranted application of the game: genuine original roots
 
 The [Seventh sequence](PAPER-CATALOGUE.md#criterion-correction-and-charged-live-repair) already contains positive interpreted-rule correction, root-image arithmetic, covering/search and finite-history results. Treating all of it as an unimplemented idea would suppress established conditional work. The remaining application burdens are different: genuine physical mediation and service, accurate root attribution, current real permission and faithful source execution at the actual interface.
 
-Do not leave a historical proof boundary open after its specifically named later extension has closed it, or credit a later result back to an earlier model with weaker fields. In particular, the original finite-history proof is not the typed plant history, a constant-clock model is not clock expiry, and safe holds alone do not prove progress. The forthcoming successor entries retain those separate scopes; the original [scoped result owner](../provenance/v5-successors/RESULT_STATUS.json) controls statement standing.
+Do not leave a historical proof boundary open after its specifically named later extension has closed it, or credit a later result back to an earlier model with weaker fields. In particular, the original finite-history proof is not the typed plant history, a constant-clock model is not clock expiry, and safe holds alone do not prove progress. The successor entries retain those separate scopes; the original [scoped result owner](../provenance/v5-successors/RESULT_STATUS.json) controls statement standing.
 
 
 ## History refinement and shared-root service
