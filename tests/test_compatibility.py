@@ -207,6 +207,310 @@ class NamedReading(unittest.TestCase):
         implicit=self.run_cli("show","--source","reviews/geometry.md")
         self.assertNotEqual(implicit.returncode,0)
 
+    def test_read_delivers_every_primary_and_review_byte_with_explicit_status(self):
+        result=self.run_cli("read","--work",self.work["id"])
+        self.assertEqual(result.returncode,0,result.stderr)
+        records=[json.loads(line) for line in result.stdout.splitlines()]
+        self.assertEqual(records[0]["type"],"begin")
+        self.assertEqual(records[-1]["type"],"end")
+        self.assertEqual([r["sequence"] for r in records],list(range(len(records))))
+        payloads={}
+        for r in records:
+            if r["type"]=="chunk":
+                payloads.setdefault(r["payload"],[]).append(r)
+        decoded={}
+        for key,parts in payloads.items():
+            content=b""
+            for part in parts:
+                self.assertEqual(part["offset"],len(content))
+                raw=part["text"].encode("utf-8")
+                self.assertEqual(part["bytes"],len(raw))
+                self.assertLessEqual(len(raw),8192)
+                self.assertEqual(part["sha256"],hashlib.sha256(raw).hexdigest())
+                content+=raw
+            decoded[key]=content
+        descriptors=[r for r in records if r["type"]=="payload"]
+        self.assertEqual(descriptors[1].get("source",{}).get("path"),"papers/geometry.md")
+        self.assertEqual(descriptors[2].get("source",{}).get("role"),"review")
+        self.assertEqual(decoded[1],self.primary)
+        self.assertEqual(decoded[2],self.review)
+        context=json.loads(decoded[0])
+        self.assertEqual(context["status"]["catalogue_review_status"],"conditional ordinary proof")
+        self.assertEqual(context["sources"][0]["sha256"],self.rows[0]["sha256"])
+        self.assertEqual(context["sources"][1]["role"],"review")
+        self.assertEqual(records[-1]["reader_receipt"],"NOT_CONFIRMED")
+        self.assertFalse(records[-1]["execution_credit"])
+
+    def test_read_chunks_preserve_unicode_bom_crlf_and_large_complete_body(self):
+        data=("\ufeff# Long source\r\n"+("fiṭrah ∀x → source-grounded correction.\r\n"*2000)).encode("utf-8")
+        self.primary=data
+        changed=row(self.rows[0]["path"],data)
+        self.rows[0]=changed
+        self.work["sources"][0]=dict(changed,role="primary",version="a"*40)
+        self.manifest["occurrences"]=self.rows
+        (self.root/"corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache/"objects"/changed["sha256"]).write_bytes(data)
+        self.write_work()
+        result=self.run_cli("read","--work",self.work["id"],"--chunk-bytes","4096")
+        self.assertEqual(result.returncode,0,result.stderr)
+        records=[json.loads(line) for line in result.stdout.splitlines()]
+        parts=[r for r in records if r["type"]=="chunk" and r["payload"]==1]
+        self.assertGreater(len(parts),20)
+        self.assertTrue(all(0<len(p["text"].encode("utf-8"))<=4096 for p in parts))
+        self.assertEqual(b"".join(p["text"].encode("utf-8") for p in parts),data)
+
+    def test_read_preflights_missing_review_without_partial_success_stream(self):
+        (self.cache/"objects"/self.rows[1]["sha256"]).unlink()
+        result=self.run_cli("read","--work",self.work["id"])
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn("NOT_CACHED",result.stderr)
+        self.assertEqual(result.stdout,"")
+
+    def test_read_receiver_rejects_omission_substitution_duplication_and_wrong_work(self):
+        result=self.run_cli("read","--work",self.work["id"],"--chunk-bytes","64")
+        self.assertEqual(result.returncode,0,result.stderr)
+        records=[json.loads(line) for line in result.stdout.splitlines()]
+        target=self.root/"received.jsonl"
+        def verify(rows,work=None):
+            target.write_text("\n".join(json.dumps(x) for x in rows)+"\n")
+            return self.run_cli("verify-reading","--work",work or self.work["id"],"--input",str(target))
+        good=verify(list(reversed(records)))
+        self.assertEqual(good.returncode,0,good.stderr)
+        receipt=json.loads(good.stdout)
+        self.assertTrue(receipt["complete_received_bytes"])
+        self.assertEqual(receipt["scientific_comprehension"],"NOT_ASSESSED")
+        bad_sets=[records[:-1],records+[records[1]],records[:2]+records[3:]]
+        altered=json.loads(json.dumps(records))
+        chunk=next(r for r in altered if r["type"]=="chunk" and r["payload"]==1)
+        chunk["text"]="x"+chunk["text"][1:]
+        chunk["sha256"]=hashlib.sha256(chunk["text"].encode()).hexdigest()
+        bad_sets.append(altered)
+        forged=json.loads(json.dumps(records))
+        forged[0]["scientific_acceptance"]=True
+        encoded=lambda value:json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()
+        forged[-1]["stream_sha256"]=hashlib.sha256(b"".join(encoded(r)+b"\n" for r in forged[:-1])).hexdigest()
+        bad_sets.append(forged)
+        for bad in bad_sets:
+            with self.subTest(kind=len(bad)):
+                rejected=verify(bad)
+                self.assertNotEqual(rejected.returncode,0,rejected.stdout)
+                self.assertNotIn('"complete_received_bytes": true',rejected.stdout)
+        self.assertNotEqual(verify(records,"different-work").returncode,0)
+
+
+    def test_read_bounds_serialized_frames_even_with_escape_heavy_text(self):
+        data=(bytes([92])*30000)+b" exact final source line\n"
+        self.primary=data
+        changed=row(self.rows[0]["path"],data);self.rows[0]=changed
+        self.work["sources"][0]=dict(changed,role="primary",version="a"*40)
+        self.manifest["occurrences"]=self.rows
+        (self.root/"corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache/"objects"/changed["sha256"]).write_bytes(data)
+        self.write_work()
+        result=self.run_cli("read","--work",self.work["id"])
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertTrue(all(len(line.encode("utf-8"))<=12288 for line in result.stdout.splitlines()))
+        records=[json.loads(line) for line in result.stdout.splitlines()]
+        self.assertEqual(b"".join(r["text"].encode() for r in records if r["type"]=="chunk" and r["payload"]==1),data)
+
+
+    def test_read_receiver_bounds_raw_input_and_rejects_special_files(self):
+        result=self.run_cli("read","--work",self.work["id"])
+        self.assertEqual(result.returncode,0,result.stderr)
+        target=self.root/"received.jsonl"
+        target.write_text(" "*1048576+result.stdout)
+        padded=self.run_cli("verify-reading","--work",self.work["id"],"--input",str(target))
+        self.assertNotEqual(padded.returncode,0,"oversized raw record was accepted")
+        self.assertIn("READING_RECEIPT",padded.stderr)
+        fifo=self.root/"input-fifo"
+        if hasattr(os,"mkfifo"):
+            os.mkfifo(fifo)
+            cmd=[sys.executable,"-B",str(CLI),"--root",str(self.root),"--cache",str(self.cache),
+                 "--offline","--no-git-source","verify-reading","--work",self.work["id"],"--input",str(fifo)]
+            try:
+                blocked=subprocess.run(cmd,capture_output=True,text=True,timeout=2)
+            except subprocess.TimeoutExpired:
+                self.fail("receipt verification blocked on a non-regular file")
+            self.assertNotEqual(blocked.returncode,0)
+            self.assertIn("READING_RECEIPT",blocked.stderr)
+        target.write_text(result.stdout)
+        link=self.root/"input-link";link.symlink_to(target)
+        rejected=self.run_cli("verify-reading","--work",self.work["id"],"--input",str(link))
+        self.assertNotEqual(rejected.returncode,0)
+
+    def test_read_receiver_malformed_record_type_is_attributable(self):
+        result=self.run_cli("read","--work",self.work["id"])
+        self.assertEqual(result.returncode,0,result.stderr)
+        records=[json.loads(line) for line in result.stdout.splitlines()]
+        records[1]["type"]=[]
+        target=self.root/"bad-type.jsonl"
+        target.write_text("\n".join(json.dumps(r) for r in records)+"\n")
+        rejected=self.run_cli("verify-reading","--work",self.work["id"],"--input",str(target))
+        self.assertNotEqual(rejected.returncode,0)
+        self.assertIn("READING_RECEIPT",rejected.stderr)
+        self.assertNotIn("Traceback",rejected.stderr)
+
+
+    def test_read_receiver_deep_json_rejects_without_traceback(self):
+        target=self.root/"deep.jsonl"
+        target.write_text("["*3000+"0"+"]"*3000+"\n")
+        rejected=self.run_cli("verify-reading","--work",self.work["id"],"--input",str(target))
+        self.assertNotEqual(rejected.returncode,0)
+        self.assertIn("READING_RECEIPT",rejected.stderr)
+        self.assertNotIn("Traceback",rejected.stderr)
+        self.assertEqual(rejected.stdout,"")
+
+    def test_read_spool_pages_deliver_large_body_without_monolithic_stdout(self):
+        data=(b"Complete source body with exact hypotheses and limitations.\n"*24000)
+        changed=row(self.rows[0]["path"],data);self.rows[0]=changed
+        self.work["sources"][0]=dict(changed,role="primary",version="a"*40)
+        self.manifest["occurrences"]=self.rows
+        (self.root/"corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache/"objects"/changed["sha256"]).write_bytes(data);self.write_work()
+        with tempfile.TemporaryDirectory(dir=os.environ.get("ORTHEMOLOGY_TEST_TMPDIR")) as external:
+            spool=Path(external)/"reading.jsonl"
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(spool))
+            self.assertEqual(result.returncode,0,result.stderr)
+            self.assertLess(len(result.stdout.encode()),12288)
+            descriptor=json.loads(result.stdout)
+            self.assertGreater(descriptor["bytes"],780143)
+            self.assertGreater(len(descriptor["pages"]),10)
+            wire=b""
+            for page in descriptor["pages"]:
+                received=self.run_cli("reading-page","--input",str(spool),
+                    "--offset",str(page["offset"]),"--bytes",str(page["bytes"]),
+                    "--sha256",page["sha256"])
+                self.assertEqual(received.returncode,0,received.stderr)
+                raw=received.stdout.encode()
+                self.assertEqual(len(raw),page["bytes"])
+                self.assertLessEqual(len(raw),98304)
+                self.assertEqual(hashlib.sha256(raw).hexdigest(),page["sha256"])
+                wire+=raw
+            self.assertEqual(wire,spool.read_bytes())
+            self.assertEqual(hashlib.sha256(wire).hexdigest(),descriptor["sha256"])
+            records=[json.loads(line) for line in wire.splitlines()]
+            self.assertEqual(b"".join(r["text"].encode() for r in records
+                if r["type"]=="chunk" and r["payload"]==1),data)
+            self.assertEqual(records[-1]["reader_receipt"],"NOT_CONFIRMED")
+            checked=self.run_cli("verify-reading","--work",self.work["id"],"--input",str(spool))
+            self.assertEqual(checked.returncode,0,checked.stderr)
+
+    def test_read_spool_refuses_overwrite_checkout_and_partial_missing_source(self):
+        with tempfile.TemporaryDirectory(dir=os.environ.get("ORTHEMOLOGY_TEST_TMPDIR")) as external:
+            spool=Path(external)/"reading.jsonl";spool.write_bytes(b"retain exact original")
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(spool))
+            self.assertNotEqual(result.returncode,0);self.assertIn("EXISTS",result.stderr)
+            self.assertEqual(spool.read_bytes(),b"retain exact original");self.assertEqual(result.stdout,"")
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(self.root/"bad.jsonl"))
+            self.assertNotEqual(result.returncode,0);self.assertIn("OUTPUT_BOUNDARY",result.stderr)
+            missing=Path(external)/"must-not-exist.jsonl"
+            (self.cache/"objects"/self.rows[1]["sha256"]).unlink()
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(missing))
+            self.assertNotEqual(result.returncode,0);self.assertEqual(result.stdout,"")
+            self.assertFalse(missing.exists())
+
+    def test_reading_page_rejects_corruption_ranges_symlinks_and_fifo(self):
+        with tempfile.TemporaryDirectory(dir=os.environ.get("ORTHEMOLOGY_TEST_TMPDIR")) as external:
+            spool=Path(external)/"reading.jsonl"
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(spool))
+            self.assertEqual(result.returncode,0,result.stderr)
+            page=json.loads(result.stdout)["pages"][0]
+            def receive(path=spool,offset=page["offset"],size=page["bytes"],digest=page["sha256"]):
+                return self.run_cli("reading-page","--input",str(path),"--offset",str(offset),
+                    "--bytes",str(size),"--sha256",digest)
+            for kwargs in ({"offset":-1},{"size":98305},{"size":0},{"digest":"0"*64},
+                           {"offset":1},{"size":page["bytes"]+1}):
+                with self.subTest(kwargs=kwargs):
+                    rejected=receive(**kwargs)
+                    self.assertNotEqual(rejected.returncode,0);self.assertEqual(rejected.stdout,"")
+            link=Path(external)/"link";link.symlink_to(spool)
+            self.assertNotEqual(receive(path=link).returncode,0)
+            if hasattr(os,"mkfifo"):
+                fifo=Path(external)/"fifo";os.mkfifo(fifo)
+                rejected=receive(path=fifo)
+                self.assertNotEqual(rejected.returncode,0)
+            spool.write_bytes(b"x"+spool.read_bytes()[1:])
+            self.assertNotEqual(receive().returncode,0)
+
+    def test_query_metrics_cover_discovery_and_fulltext_without_changing_results(self):
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            for index,args in enumerate((["list"],["search","dimension"],["search","norm","--full-text"])):
+                before=self.run_cli(*args)
+                metrics=Path(area)/f"query-{index}.json"
+                result=self.run_cli(*args,"--metrics",str(metrics))
+                self.assertEqual(result.returncode,before.returncode,result.stderr)
+                self.assertEqual(result.stdout,before.stdout)
+                record=json.loads(metrics.read_text())
+                self.assertEqual(record["operation"],args[0])
+                self.assertEqual(record["network_received_payload_bytes"],0)
+                self.assertIsNone(record["network_wire_bytes"])
+                self.assertTrue(set(record["source_routes"].values())<={"verified-object-cache"})
+                if "--full-text" in args:
+                    self.assertEqual(set(record["source_routes"].values()),{"verified-object-cache"})
+                    self.assertTrue(any("papers/geometry.md" in key for key in record["source_routes"]))
+                # This baseline catalogue fixture can be listed/searched directly;
+                # a zero-source metadata query must not invent a download.
+                self.assertEqual(record["reader_receipt"],"NOT_CONFIRMED")
+                self.assertGreaterEqual(record["preflight_seconds"],0)
+                saved=metrics.read_bytes()
+                again=self.run_cli(*args,"--metrics",str(metrics))
+                self.assertNotEqual(again.returncode,0);self.assertIn("EXISTS",again.stderr)
+                self.assertEqual(again.stdout,"");self.assertEqual(metrics.read_bytes(),saved)
+
+    def test_query_metrics_refuse_checkout_before_source_access(self):
+        (self.cache/"objects"/self.rows[1]["sha256"]).unlink()
+        result=self.run_cli("search","norm","--full-text","--metrics",str(self.root/"bad-metrics.json"))
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn("OUTPUT_BOUNDARY",result.stderr)
+        self.assertEqual(result.stdout,"")
+        self.assertFalse((self.root/"bad-metrics.json").exists())
+
+    def test_read_metrics_measure_provider_payload_without_claiming_reader_receipt(self):
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            metrics=Path(area)/"reading-metrics.json"
+            result=self.run_cli("read","--work",self.work["id"],"--metrics",str(metrics))
+            self.assertEqual(result.returncode,0,result.stderr)
+            record=json.loads(metrics.read_text())
+            self.assertEqual(record["network_received_payload_bytes"],0)
+            self.assertIsNone(record["network_wire_bytes"])
+            self.assertEqual(set(record["source_routes"].values()),{"verified-object-cache"})
+            self.assertEqual(record["reader_receipt"],"NOT_CONFIRMED")
+            self.assertGreaterEqual(record["preflight_seconds"],0)
+            saved=metrics.read_bytes()
+            again=self.run_cli("read","--work",self.work["id"],"--metrics",str(metrics))
+            self.assertNotEqual(again.returncode,0)
+            self.assertIn("EXISTS",again.stderr)
+            self.assertEqual(again.stdout,"")
+            self.assertEqual(metrics.read_bytes(),saved)
+
+    def test_read_metrics_refuse_checkout_and_symlink_destinations(self):
+        inside=self.root/"must-not-create.json"
+        result=self.run_cli("read","--work",self.work["id"],"--metrics",str(inside))
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn("OUTPUT_BOUNDARY",result.stderr)
+        self.assertFalse(inside.exists())
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            link=Path(area)/"linked";link.symlink_to(self.root,target_is_directory=True)
+            result=self.run_cli("read","--work",self.work["id"],"--metrics",str(link/"must-not-create.json"))
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn("UNSAFE_PATH",result.stderr)
+            self.assertFalse(inside.exists())
+
+    def test_read_wrong_edition_and_review_absence_never_confer_acceptance(self):
+        wrong=self.run_cli("read","--work",self.work["id"],"--version","b"*40)
+        self.assertNotEqual(wrong.returncode,0)
+        self.assertEqual(wrong.stdout,"")
+        self.work["sources"][1]["review_kind"]="historical_source_fidelity"
+        self.write_work()
+        good=self.run_cli("read","--work",self.work["id"])
+        self.assertEqual(good.returncode,0,good.stderr)
+        records=[json.loads(line) for line in good.stdout.splitlines()]
+        context=json.loads("".join(r["text"] for r in records if r["type"]=="chunk" and r["payload"]==0))
+        self.assertEqual(context["review_availability"],"NOT_IDENTIFIED")
+        self.assertFalse(context["scientific_acceptance_inferred"])
+        self.assertNotIn(self.review.decode().strip(),"".join(r.get("text","") for r in records if r.get("payload",0)>0))
+
+
 
 
 class CurrentEditionReading(unittest.TestCase):

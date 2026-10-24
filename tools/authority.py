@@ -472,6 +472,58 @@ def work_reading_links(provider, work, documents=None):
                 source=_public_reference(provider,ref["sha256"],mappings)
                 if "path" not in source:raise AuthorityError("AUTHORITY_CURRENTNESS","exact public currentness report unavailable")
                 sources.append({**source,"role":"currentness","binding_owners":[{**owner,"json_pointer":ptr+"/current_report_routes/"+str(k)}]})
+
+    artifact=work["original_record"].get("artifact_id")
+    if artifact:
+        if not isinstance(artifact,str) or not re.fullmatch(r"[a-z0-9-]+",artifact):
+            raise AuthorityError("AUTHORITY_ARTIFACT","unsafe governed artifact identity")
+        path="artifacts/"+artifact+".sources.json"
+        data=read(path)
+        if data.get("artifact_id")!=artifact:
+            raise AuthorityError("AUTHORITY_ARTIFACT","source sidecar names another artifact")
+        primary={(s["path"],s["sha256"]) for s in work["sources"] if s["role"]=="primary"}
+        markdown=set(data.get("source_hashes",{}).get("markdown",{}).items())
+        if not primary & markdown:
+            raise AuthorityError("AUTHORITY_ARTIFACT","rendered edition has no exact primary manuscript target")
+        def bound(locator):
+            identity=_baseline_owner(provider,locator["path"])
+            if identity["sha256"]!=locator["sha256"]:
+                raise AuthorityError("AUTHORITY_ARTIFACT","governed artifact/input identity differs")
+            return identity
+        pdf=bound({"path":"artifacts/"+data["pdf"],"sha256":data["pdf_sha256"]})
+        package=bound(data["source_package"])
+        manifest=bound(data["source_manifest"])
+        profile=bound(data["publication_profile"])
+        # Status is supplied in complete original forms. The dated build-sidecar
+        # snapshot is not an assertion about current GitHub integration/adoption.
+        owner=_baseline_owner(provider,path)
+        for identity in (owner,profile):
+            provider.read_bytes(identity["path"],BASELINE)
+            sources.append({**{k:v for k,v in identity.items() if k!="json_pointer"},
+                            "role":"status","binding_owners":[owner],
+                            "status_scope":"publication/source qualification; dated candidate snapshot is not current adoption"})
+        links.append({"kind":"source_owned_rendering","owner":owner,
+                      "artifact":pdf,"source_package":package,"source_manifest":manifest,
+                      "publication_profile":profile,"source_commit":data["source_commit"],
+                      "source_tree":data["source_tree"],"candidate_status":data.get("candidate_status"),
+                      "source_tree_equivalence":data.get("source_tree_equivalence"),
+                      "scientific_adoption_inferred":False,
+                      "scope":"governed rendering and source-input identity, not independent scientific review or acceptance"})
+    proposal_prefix="docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-bk/"
+    if any(s["role"]=="primary" and s["path"].startswith(proposal_prefix) for s in work["sources"]):
+        path="docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md"
+        owner=_baseline_owner(provider,path)
+        # This exact external source controls repository-adoption interpretation
+        # while leaving all frozen candidate/version labels and aliases intact.
+        provider.read_bytes(path,BASELINE)
+        sources.append({**{k:v for k,v in owner.items() if k!="json_pointer"},
+                        "role":"status","binding_owners":[owner],
+                        "status_scope":"external proposal-custody and adoption boundary"})
+        links.append({"kind":"source_owned_adoption_boundary","owner":owner,
+                      "applies_to_primary_occurrences":[s["path"] for s in work["sources"]
+                           if s["role"]=="primary" and s["path"].startswith(proposal_prefix)],
+                      "scientific_adoption_inferred":False,
+                      "scope":"read the external currentness boundary together with frozen candidate labels; copying or a newer revision grants no adoption"})
     return sources,links
 
 def verify_work_reading_links(provider,work,documents=None):

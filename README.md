@@ -41,6 +41,103 @@ python tools/corpus.py --cache ../research-cache --offline show --work "Finite-a
 
 `search --full-text` reports the actual searched and unavailable populations. `fetch --all` deliberately caches the full public baseline (310,686,293 logical bytes); it is separate from an ordinary reading session. Source caches and restored proof environments live outside the ordinary checkout. Named `materialise` requires `--context reading` for a reading bundle or `--context replay` plus an explicit verified history source for a complete historical source workspace; neither choice executes a proof.
 
+### Complete delivery to an AI reader
+
+A long terminal response can be truncated by the receiving interface even when the source file was saved correctly. The `read` route emits the complete scholarly selection and its source-owned identity/status as bounded UTF-8 JSONL records. It preserves BOMs, line endings and every source byte. Each record has a sequence number; each source has byte offsets and hashes. No proof toolchain is needed.
+
+```sh
+python tools/corpus.py read --work "Normal forms and transport for supplied certified selectors"
+python tools/corpus.py verify-reading --work "Normal forms and transport for supplied certified selectors" --input RECEIVED_RECORDS.jsonl
+```
+
+A tool client must deliver **every record automatically as a separate bounded response**. Do not print the entire stream as one budgeted tool response. Reordered notifications can be reconstructed by sequence; missing, duplicated, altered or substituted records fail verification. Verification establishes the bytes supplied to the verifier, not that a reader saw or understood them. A missing controlling review remains missing.
+
+For ChatGPT code-mode, this is the ordinary named-reading adapter. Set `work` to the title returned by search and use the checkout/cache already selected for the session. This is one deliberate reading request; internal polling and frame notifications are automatic transport events. Any later manual source selection or recovery open is an additional action.
+
+```javascript
+const work = "Normal forms and transport for supplied certified selectors";
+const root = "/absolute/path/to/orthemology";
+const cache = "/absolute/path/to/research-cache";
+const spool = "/absolute/path/outside-checkout/new-reading.jsonl";
+const metrics = "/absolute/path/outside-checkout/new-reading-metrics.json";
+const execution = {}; // Add only the host options authorised for this workspace.
+const quote = value => "'" + String(value).replaceAll("'", "'\"'\"'") + "'";
+const started = Date.now();
+async function invoke(argv) {
+  let result = await tools.exec_command({
+    ...execution, cmd: argv.map(quote).join(" "), workdir: root,
+    max_output_tokens: 60000, yield_time_ms: 1000
+  });
+  let output = result.output;
+  while (result.session_id) {
+    result = await tools.write_stdin({
+      session_id: result.session_id, chars: "",
+      max_output_tokens: 60000, yield_time_ms: 1000
+    });
+    output += result.output;
+  }
+  return {output, exit_code: result.exit_code};
+}
+const prepared = await invoke([
+  "python", "-B", "tools/corpus.py", "--cache", cache, "--no-git-source",
+  "read", "--work", work, "--spool", spool, "--metrics", metrics
+]);
+if (prepared.exit_code !== 0 && prepared.exit_code !== 3)
+  throw new Error("Reading failed; no complete material may be inferred.");
+const descriptor = JSON.parse(prepared.output);
+let expectedOffset = 0;
+for (const page of descriptor.pages) {
+  if (page.offset !== expectedOffset || page.bytes < 1 || page.bytes > 98304)
+    throw new Error("Invalid reading page population.");
+  expectedOffset += page.bytes;
+}
+if (expectedOffset !== descriptor.bytes)
+  throw new Error("Incomplete reading page index.");
+const pages = await Promise.allSettled(descriptor.pages.map(page => invoke([
+  "python", "-B", "tools/corpus.py", "reading-page", "--input", spool,
+  "--offset", page.offset, "--bytes", page.bytes, "--sha256", page.sha256
+])));
+const byteLength = text => Array.from(text).reduce((n, c) => {
+  const cp = c.codePointAt(0);
+  return n + (cp < 128 ? 1 : cp < 2048 ? 2 : cp < 65536 ? 3 : 4);
+}, 0);
+const frames = [];
+for (let i = 0; i < pages.length; i++) {
+  const page = pages[i];
+  if (page.status !== "fulfilled" || page.value.exit_code !== 0 ||
+      byteLength(page.value.output) !== descriptor.pages[i].bytes)
+    throw new Error("Missing, failed or truncated page; do not report receipt.");
+  const lines = page.value.output.split("\n");
+  if (lines.pop() !== "") throw new Error("Incomplete final record.");
+  frames.push(...lines.map(line => JSON.parse(line)));
+}
+if (frames[0].type !== "begin" || frames.at(-1).type !== "end" ||
+    frames.at(-1).records !== frames.length || descriptor.records !== frames.length ||
+    frames.some((frame, index) => frame.sequence !== index))
+  throw new Error("Incomplete reading transport; do not report receipt.");
+store("orthemology-reading:" + spool, {descriptor, frames});
+const label = frames[0].title + " @ " + frames[0].version;
+for (const frame of frames) {
+  if (frame.type === "chunk")
+    notify(label + " — reading frame " + frame.sequence + "; payload " + frame.payload +
+           "; source bytes [" + frame.offset + "," +
+           (frame.offset + frame.bytes) + "); SHA-256 " + frame.sha256 +
+           "\n" + frame.text);
+  else notify(JSON.stringify(frame));
+}
+text({offered_records: frames.length, complete_sources: frames.at(-1).complete_sources,
+      elapsed_to_offer_seconds: (Date.now() - started) / 1000,
+      actual_reader_receipt: "AWAITING_READER_ACKNOWLEDGEMENT"});
+```
+
+The adapter first writes one new external JSONL spool and receives a small page index. It retrieves whole-record pages in parallel, each at most 98,304 bytes, before offering every frame. This bounds the subprocess response as well as the displayed notifications. Existing files are never overwritten. A failed page, changed source, malformed record or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
+
+Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. It leaves wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter separately times source retrieval, bounded captures and notification offers; actual receipt and cold/warm qualification still require the receiving reader's evidence.
+
+The client must retain raw records and the actually presented frames, disclose any omission marker, and acknowledge complete per-source coverage before claiming receipt. The supplied record stream can be checked with `verify-reading`. That check explicitly does not certify scholarly comprehension, review completeness, acceptance, or cold/warm performance. Binary sources require their appropriate full-document reader; `show --output NEW_DIRECTORY` preserves their exact files without pretending to render them as text.
+
+Research objectives, works, manuscript revisions, results, source occurrences and rendered editions remain distinct. The full source-owned record accompanies named readings. Governed manuscript routes separately expose their artifact/input commit, dated candidate snapshot and publication qualifications. Proposal routes carry the existing external adoption boundary; a newer candidate, equal-byte copy or successful build cannot promote it to accepted theory.
+
 ## Edit, reproduce and preserve
 
 [Contributing](CONTRIBUTING.md) explains source ownership, new editions and review. The [reproducibility guide](docs/reader/REPRODUCIBILITY.md) separates reading, exact restoration, actual proof/experiment execution and publication.

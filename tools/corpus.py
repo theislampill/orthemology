@@ -8,9 +8,12 @@ from __future__ import annotations
 import argparse
 import difflib
 import json
+import os
+import stat
+import time
 from pathlib import Path
 import sys
-from source_provider import SourceError, SourceProvider, atomic_bytes
+from source_provider import SourceError, SourceProvider, atomic_bytes, sha256, load_json, _reject_links
 from search import (load_works, find_work, metadata_search, fulltext_search,
                     verify_work, work_edition, check_binding, scholarly_sources, source_edition)
 from rehydrate import materialise, restore, verify_workspace
@@ -99,6 +102,294 @@ def show(provider,name,version=None,role="primary",include_status=False,output=N
         print("\nUnavailable exact source: "+missing["original_sha256"]+" ("+missing["availability"]+"); no substitute body used.")
     print("\nReading scope: exact selected source bodies; no research code executed.")
     return 3 if unavailable else 0
+
+def _record_bytes(value):
+    return json.dumps(value,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode("utf-8")
+
+def _reading_material(provider,name,version=None):
+    """Source-owned complete scholarly selection, without a new status decision."""
+    edition=work_edition(provider,name,version)
+    sources=_selected(edition,"reading",True)
+    unavailable=[s for s in sources if "path" not in s]
+    if any(s["role"]=="primary" for s in unavailable):
+        raise SourceError("IDENTITY_ONLY","exact canonical body unavailable; no public summary substituted")
+    bodies=[]
+    for source in sources:
+        if "path" not in source:continue
+        data=provider.read_bytes(source["path"],source.get("version"))
+        try:
+            text=data.decode("utf-8")
+        except UnicodeError as exc:
+            raise SourceError("BINARY_SOURCE","this text transport cannot render a binary source; use show --output for exact reading files") from exc
+        if "\0" in text:
+            raise SourceError("BINARY_SOURCE","binary source requires an appropriate document reader")
+        bodies.append((source,data))
+    reviews=[s for s in sources if s["role"]=="review" and s.get("review_kind")!="historical_source_fidelity"]
+    context={
+        "work":{"id":edition["work"]["id"],"title":edition["work"]["title"],
+                "source_owned_role":edition["work"].get("role"),
+                "record_type":edition["work"].get("record_type","catalogue_work")},
+        "version":edition["version"],"kind":edition["kind"],
+        "predecessor":edition["predecessor"],"status":edition["status"],
+        "scope":edition["scope"],"source_owner_record":edition["metadata"],
+        "sources":sources,"reading_links":edition["work"].get("reading_links",[]),
+        "unavailable_sources":unavailable,
+        "review_availability":"BOUND_SOURCE_REVIEW" if reviews else "NOT_IDENTIFIED",
+        "review_scope":"Read the exact target, premises, independence and limits of each bound review; a review role alone does not establish comprehensive controlling review or adoption.",
+        "scientific_acceptance_inferred":False,
+        "identity_scope":"A research objective, work, manuscript candidate, source, result and published edition are not interchangeable. Relations and status come from the exact source owners, never the newest title, storage or a successful build.",
+        "execution_credit":False}
+    return context,bodies
+
+def _utf8_parts(data,limit):
+    """Bound wire content without losing BOM, CRLF or a split Unicode codepoint."""
+    start=0
+    while start<len(data):
+        end=min(start+limit,len(data))
+        while True:
+            while end<len(data) and data[end]&0xc0==0x80:end-=1
+            if end==start:break
+            encoded=json.dumps(data[start:end].decode("utf-8"),ensure_ascii=False).encode("utf-8")
+            if len(encoded)<=12000:break
+            end=start+max(1,(end-start)//2)
+        if end==start:raise SourceError("READING_FRAME","chunk cannot contain a complete Unicode codepoint")
+        yield start,data[start:end]
+        start=end
+
+def reading_records(provider,name,version=None,chunk_bytes=8192):
+    """Preflight first; one named request can automatically deliver bounded frames.
+
+    Consumers must offer every frame independently, retain sequence numbers and
+    check complete receipt. An emitter cannot attest what a human/AI has seen.
+    """
+    if type(chunk_bytes) is not int or not 64<=chunk_bytes<=8192:
+        raise SourceError("READING_FRAME","chunk bytes must be between 64 and 8192")
+    context,bodies=_reading_material(provider,name,version)
+    payloads=[("context",_record_bytes(context),None)]+[("source",data,
+        {**{k:source[k] for k in ("path","sha256","git_blob","bytes","mode","role")},
+         "version":source.get("version",provider.baseline["commit"])}) for source,data in bodies]
+    records=[]
+    def append(record):
+        framed={"sequence":len(records),**record}
+        if len(_record_bytes(framed))>12288:
+            raise SourceError("READING_FRAME","serialized record exceeds transport bound")
+        records.append(framed)
+    append({"type":"begin","format":"orthemology-reading-1","work":context["work"]["id"],
+            "title":context["work"]["title"],"version":context["version"],
+            "payload_count":len(payloads),"chunk_bytes":chunk_bytes})
+    for index,(kind,data,identity) in enumerate(payloads):
+        parts=list(_utf8_parts(data,chunk_bytes))
+        append({"type":"payload","payload":index,"kind":kind,"bytes":len(data),
+                "sha256":sha256(data),"chunks":len(parts),"source":identity})
+        for offset,part in parts:
+            append({"type":"chunk","payload":index,"offset":offset,"bytes":len(part),
+                    "sha256":sha256(part),"text":part.decode("utf-8")})
+    digest=sha256(b"".join(_record_bytes(r)+b"\n" for r in records))
+    append({"type":"end","records":len(records)+1,"stream_sha256":digest,
+            "source_bodies":len(bodies),"source_bytes":sum(len(data) for _,data in bodies),
+            "complete_sources":not context["unavailable_sources"],
+            "reader_receipt":"NOT_CONFIRMED","execution_credit":False})
+    return records
+
+def verify_reading_records(provider,name,records,version=None):
+    """Check receiver-supplied frames against exact source owners and full bodies.
+
+    Frames may arrive out of order, but duplicates, holes, substituted bodies,
+    versions, status or truncation cannot produce a byte-complete receipt.
+    This does not attest actual presentation or scholarly comprehension.
+    """
+    def reject(detail):
+        raise SourceError("READING_RECEIPT",detail)
+    if not isinstance(records,list) or not records:reject("no delivered records")
+    if any(not isinstance(r,dict) or type(r.get("sequence")) is not int for r in records):
+        reject("each record needs an integer sequence")
+
+    fields={
+        "begin":{"sequence","type","format","work","title","version","payload_count","chunk_bytes"},
+        "payload":{"sequence","type","payload","kind","bytes","sha256","chunks","source"},
+        "chunk":{"sequence","type","payload","offset","bytes","sha256","text"},
+        "end":{"sequence","type","records","stream_sha256","source_bodies","source_bytes",
+               "complete_sources","reader_receipt","execution_credit"}}
+    integers={"sequence","payload","bytes","chunks","offset","records","source_bodies","source_bytes","payload_count","chunk_bytes"}
+    for record in records:
+        if not isinstance(record.get("type"),str) or set(record)!=fields.get(record["type"],set()):
+            reject("unknown, missing or misleading record fields")
+        if any(type(value) is not int or value<0 for key,value in record.items() if key in integers):
+            reject("invalid integer field")
+        if any(type(record[key]) is not bool for key in ("complete_sources","execution_credit") if key in record):
+            reject("invalid completion/credit field")
+        if len(_record_bytes(record))>12288:reject("serialized record exceeds transport bound")
+    sequences=[r["sequence"] for r in records]
+    if len(set(sequences))!=len(sequences) or set(sequences)!=set(range(len(records))):
+        reject("duplicate or missing record sequence")
+    ordered=sorted(records,key=lambda r:r["sequence"])
+    begin,end=ordered[0],ordered[-1]
+    if begin.get("type")!="begin" or begin.get("format")!="orthemology-reading-1" or end.get("type")!="end":
+        reject("opening or terminal record missing")
+    limit=begin.get("chunk_bytes")
+    if type(limit) is not int or not 64<=limit<=8192:reject("invalid chunk bound")
+    if end.get("records")!=len(ordered) or end.get("stream_sha256")!=sha256(
+            b"".join(_record_bytes(r)+b"\n" for r in ordered[:-1])):
+        reject("incomplete or altered stream")
+    context,bodies=_reading_material(provider,name,version)
+    if (begin.get("work"),begin.get("title"),begin.get("version"))!=(
+            context["work"]["id"],context["work"]["title"],context["version"]):
+        reject("wrong named work or edition")
+    expected=[("context",_record_bytes(context),None)]+[("source",data,
+        {**{k:source[k] for k in ("path","sha256","git_blob","bytes","mode","role")},
+         "version":source.get("version",provider.baseline["commit"])}) for source,data in bodies]
+    if begin.get("payload_count")!=len(expected):reject("source population differs")
+    position=1
+    for index,(kind,data,identity) in enumerate(expected):
+        if position>=len(ordered)-1:reject("missing payload")
+        descriptor=ordered[position];position+=1
+        if (descriptor.get("type"),descriptor.get("payload"),descriptor.get("kind"),
+                descriptor.get("bytes"),descriptor.get("sha256"),descriptor.get("source"))!=("payload",index,kind,len(data),sha256(data),identity):
+            reject("payload identity or scientific context differs")
+        chunks=descriptor.get("chunks")
+        if type(chunks) is not int or chunks<0:reject("invalid chunk population")
+        received=bytearray()
+        for _ in range(chunks):
+            if position>=len(ordered)-1:reject("missing source chunk")
+            record=ordered[position];position+=1
+            if record.get("type")!="chunk" or record.get("payload")!=index or record.get("offset")!=len(received):
+                reject("chunk offset or source differs")
+            if not isinstance(record.get("text"),str):reject("chunk text absent")
+            raw=record["text"].encode("utf-8")
+            if not 0<len(raw)<=limit or record.get("bytes")!=len(raw) or record.get("sha256")!=sha256(raw):
+                reject("chunk corrupt or outside advertised bound")
+            received.extend(raw)
+        if bytes(received)!=data:reject("incomplete or substituted source bytes")
+    if position!=len(ordered)-1:reject("unexpected payload or trailing data")
+    expected_end={"type":"end","records":len(ordered),"stream_sha256":end["stream_sha256"],
+                  "source_bodies":len(bodies),"source_bytes":sum(len(data) for _,data in bodies),
+                  "complete_sources":not context["unavailable_sources"],
+                  "reader_receipt":"NOT_CONFIRMED","execution_credit":False,"sequence":len(ordered)-1}
+    if end!=expected_end:reject("unsupported emitter completion/acceptance claim")
+    return {"work":context["work"]["id"],"version":context["version"],
+            "records":len(ordered),"stream_sha256":end["stream_sha256"],
+            "complete_received_bytes":True,"complete_sources":not context["unavailable_sources"],
+            "source_bodies":len(bodies),"source_bytes":end["source_bytes"],
+            "review_availability":context["review_availability"],
+            "presentation_assessed":False,"scientific_comprehension":"NOT_ASSESSED",
+            "scope":"receiver-supplied records match complete exact source-owned reading; actual display and reading require separate evidence",
+            "execution_credit":False}
+
+def _regular_read(path):
+    """Open only a real regular file, without following links or waiting on FIFOs."""
+    path=_reject_links(Path(path).absolute())
+    fd=os.open(path,os.O_RDONLY|getattr(os,"O_NONBLOCK",0)|getattr(os,"O_NOFOLLOW",0))
+    try:
+        if not stat.S_ISREG(os.fstat(fd).st_mode):
+            raise SourceError("READING_RECEIPT","input must be a regular file")
+        return os.fdopen(fd,"rb")
+    except BaseException:
+        os.close(fd)
+        raise
+
+def _reading_json(raw):
+    try:
+        return load_json(raw)
+    except RecursionError as exc:
+        raise SourceError("READING_RECEIPT","record exceeds supported JSON nesting") from exc
+
+def load_reading_records(provider,name,path,version=None):
+    """Bound raw untrusted input before JSON parsing or whole-file allocation."""
+    with _regular_read(path) as source:
+        context,bodies=_reading_material(provider,name,version)
+        sizes=[len(_record_bytes(context))]+[len(data) for _,data in bodies]
+        # Smallest allowed chunks contain at least 61 UTF-8 bytes except tails.
+        # Bound escaping and descriptor overhead without trusting received counts.
+        budget=65536+6*sum(sizes)+1024*sum((size+60)//61+3 for size in sizes)
+        if os.fstat(source.fileno()).st_size>budget:
+            raise SourceError("READING_RECEIPT","input exceeds complete-work transport budget")
+        records=[];total=0
+        while True:
+            line=source.readline(12290)
+            if not line:break
+            total+=len(line)
+            raw=line[:-1] if line.endswith(b"\n") else line
+            if not raw or len(raw)>12288 or total>budget:
+                raise SourceError("READING_RECEIPT","empty or oversized raw record")
+            records.append(_reading_json(raw))
+        return records
+
+def _new_reading_output(provider,path):
+    path=_reject_links(Path(path).absolute())
+    resolved=path.resolve()
+    if resolved==provider.root or provider.root in resolved.parents:
+        raise SourceError("OUTPUT_BOUNDARY","reading outputs belong outside the ordinary checkout")
+    if path.exists():
+        raise SourceError("EXISTS",str(path))
+    return path
+
+def _exclusive_reading_bytes(provider,path,data):
+    """A failed/partial transport never replaces an existing receiver artifact."""
+    path=_new_reading_output(provider,path)
+    path.parent.mkdir(parents=True,exist_ok=True)
+    _reject_links(path)
+    fd=os.open(path,os.O_WRONLY|os.O_CREAT|os.O_EXCL|getattr(os,"O_NOFOLLOW",0),0o600)
+    try:
+        with os.fdopen(fd,"wb") as output:
+            output.write(data);output.flush();os.fsync(output.fileno())
+    except BaseException:
+        path.unlink(missing_ok=True)
+        raise
+    return path
+
+def reading_spool(provider,path,records):
+    """One external JSONL spool; bounded whole-record pages, never frame folders."""
+    lines=[_record_bytes(record)+b"\n" for record in records]
+    wire=b"".join(lines);pages=[];offset=0;page=b""
+    for line in lines:
+        if page and len(page)+len(line)>98304:
+            pages.append({"offset":offset,"bytes":len(page),"sha256":sha256(page)})
+            offset+=len(page);page=b""
+        page+=line
+    if page:
+        pages.append({"offset":offset,"bytes":len(page),"sha256":sha256(page)})
+    result={"format":"orthemology-reading-spool-1","path":str(Path(path).absolute()),
+            "bytes":len(wire),"sha256":sha256(wire),"records":len(records),
+            "work":records[0]["work"],"title":records[0]["title"],"version":records[0]["version"],
+            "complete_sources":records[-1]["complete_sources"],"pages":pages,
+            "reader_receipt":"NOT_CONFIRMED","execution_credit":False}
+    # Keep the initial tool result bounded too; exceptionally large works need
+    # a document reader with its own measured complete-delivery contract.
+    if len(_record_bytes(result))>12288:
+        raise SourceError("READING_FRAME","reading exceeds this adapter index bound; no partial spool created")
+    _exclusive_reading_bytes(provider,path,wire)
+    return result
+
+def reading_page(path,offset,size,digest):
+    if type(offset) is not int or offset<0 or type(size) is not int or not 1<=size<=98304:
+        raise SourceError("READING_RECEIPT","invalid bounded page range")
+    if not isinstance(digest,str) or len(digest)!=64 or any(c not in "0123456789abcdef" for c in digest):
+        raise SourceError("READING_RECEIPT","invalid expected page identity")
+    with _regular_read(path) as source:
+        if offset+size>os.fstat(source.fileno()).st_size:
+            raise SourceError("READING_RECEIPT","page extends beyond the received spool")
+        if offset:
+            source.seek(offset-1)
+            if source.read(1)!=b"\n":
+                raise SourceError("READING_RECEIPT","page does not start at a record boundary")
+        source.seek(offset);data=source.read(size)
+    if len(data)!=size or sha256(data)!=digest or not data.endswith(b"\n"):
+        raise SourceError("READING_RECEIPT","page is corrupt, incomplete or outside its exact boundary")
+    for line in data.splitlines():
+        if not line or len(line)>12288:
+            raise SourceError("READING_RECEIPT","page contains an invalid record boundary")
+        _reading_json(line)
+    return data
+
+def query_metrics(provider,path,started,operation,query=None):
+    if path is None:return
+    record={"operation":operation,"query":query,
+            "network_received_payload_bytes":provider.network_bytes,"network_wire_bytes":None,
+            "source_routes":provider.sources_used,"preflight_seconds":time.perf_counter()-started,
+            "provider_offline":provider.offline,"git_source_enabled":provider.git_repo is not None,
+            "os_cache_state":"NOT_MEASURED","reader_receipt":"NOT_CONFIRMED",
+            "scope":"query and source-owner received application payload bytes; excludes TLS/wire, presentation, attention and comprehension"}
+    _exclusive_reading_bytes(provider,path,_record_bytes(record)+b"\n")
 
 def fetch_named(provider,name,version=None,historical=False):
     """Cache complete verified reading and exact source-owner dependency reads."""
@@ -203,16 +494,30 @@ def main(argv=None):
     sub=parser.add_subparsers(dest="command",required=True)
     listing=sub.add_parser("list",help="substantive work names and exact selected editions")
     listing.add_argument("--subject")
+    listing.add_argument("--metrics",type=Path,help="new external file for query payload and source routes")
     searching=sub.add_parser("search",help="metadata or explicit full-text source search")
     searching.add_argument("query");searching.add_argument("--subject")
     searching.add_argument("--full-text",action="store_true");searching.add_argument("--all-versions",action="store_true")
     searching.add_argument("--work");searching.add_argument("--version")
+    searching.add_argument("--metrics",type=Path,help="new external file for query payload and source routes")
     reading=sub.add_parser("show",help="complete primary text and source-owned review/status")
     reading_name=reading.add_mutually_exclusive_group(required=True)
     reading_name.add_argument("--work");reading_name.add_argument("--source")
     reading.add_argument("--version")
     reading.add_argument("--role",choices=("primary","support","review","status","currentness","reading","historical","all"),default="primary")
     reading.add_argument("--include-status",action="store_true");reading.add_argument("--output",type=Path)
+
+    framed=sub.add_parser("read",help="complete scholarly reading as bounded, sequenced UTF-8 JSONL frames")
+    framed.add_argument("--work",required=True);framed.add_argument("--version")
+    framed.add_argument("--chunk-bytes",type=int,default=8192)
+    framed.add_argument("--metrics",type=Path,help="new external file for provider payload/routes/preflight metrics")
+    framed.add_argument("--spool",type=Path,help="new external JSONL file; return a bounded page index instead of full stdout")
+    page=sub.add_parser("reading-page",help="read one authenticated bounded page of an external reading spool")
+    page.add_argument("--input",type=Path,required=True);page.add_argument("--offset",type=int,required=True)
+    page.add_argument("--bytes",dest="page_bytes",type=int,required=True);page.add_argument("--sha256",required=True)
+    received=sub.add_parser("verify-reading",help="verify delivered frames against exact work, edition, status and complete source bytes")
+    received.add_argument("--work",required=True);received.add_argument("--version")
+    received.add_argument("--input",type=Path,required=True)
     compare=sub.add_parser("compare",help="compare explicitly indexed editions, never nearest versions")
     compare.add_argument("--work",required=True);compare.add_argument("--from",dest="old",required=True)
     compare.add_argument("--to",dest="new",required=True)
@@ -238,10 +543,16 @@ def main(argv=None):
     parse_args,replay_tail=_replay_parse(sys.argv[1:] if argv is None else argv)
     args=parser.parse_args(parse_args)
     try:
+        if args.command=="reading-page":
+            sys.stdout.buffer.write(reading_page(args.input,args.offset,args.page_bytes,args.sha256))
+            return 0
         provider=SourceProvider(args.root,args.cache,args.offline,git_repo=False if args.no_git_source else None)
         if args.command in ("list","search"):
+            if args.metrics:_new_reading_output(provider,args.metrics)
+            query_started=time.perf_counter()
             if args.command=="search" and args.full_text:
                 result=fulltext_search(provider,args.query,args.all_versions,args.work,args.version)
+                query_metrics(provider,args.metrics,query_started,args.command,args.query)
                 for match in result["matches"]:
                     print(f"{match['path']}@{match['version']}:{match['line']}: {match['text']}")
                 print(f"Coverage: selected={result['selected']} searched={result['searched']} binary={result['binary']} unavailable={len(result['unavailable'])}")
@@ -252,6 +563,7 @@ def main(argv=None):
             if args.command=="search" and (args.version or args.all_versions or args.work):
                 raise SourceError("SEARCH_MODE","--version, --work and --all-versions require --full-text")
             rows=metadata_search(provider,getattr(args,"query",""),args.subject)
+            query_metrics(provider,args.metrics,query_started,args.command,getattr(args,"query",None))
             for row in rows:
                 print(row["title"]+"\n  "+row["id"]+" @ "+row.get("version",provider.baseline["commit"]))
             claims=sum(row.get("record_type")=="source_owned_claim" for row in rows)
@@ -259,6 +571,34 @@ def main(argv=None):
             print(f"{len(rows)-claims-preserved} named work editions; {claims} source-owned claim readings; {preserved} preserved-source readings. Named routes do not enumerate every research work.")
         elif args.command=="show":
             return show(provider,args.work,args.version,args.role,args.include_status,args.output,args.source)
+
+        elif args.command=="read":
+            outputs=[path for path in (args.metrics,args.spool) if path is not None]
+            if len({str(path.absolute()) for path in outputs})!=len(outputs):
+                raise SourceError("OUTPUT_BOUNDARY","metrics and source spool must have separate destinations")
+            for path in outputs:_new_reading_output(provider,path)
+            started=time.perf_counter()
+            records=reading_records(provider,args.work,args.version,args.chunk_bytes)
+            elapsed=time.perf_counter()-started
+            if args.metrics:
+                metrics={"work":records[0]["work"],"version":records[0]["version"],
+                         "network_received_payload_bytes":provider.network_bytes,"network_wire_bytes":None,
+                         "source_routes":provider.sources_used,"preflight_seconds":elapsed,
+                         "provider_offline":provider.offline,"git_source_enabled":provider.git_repo is not None,
+                         "os_cache_state":"NOT_MEASURED","reader_receipt":"NOT_CONFIRMED",
+                         "scope":"received application payload bytes and source preflight only; excludes TLS/wire, presentation, attention and comprehension"}
+                _exclusive_reading_bytes(provider,args.metrics,_record_bytes(metrics)+b"\n")
+            if args.spool:
+                print(_record_bytes(reading_spool(provider,args.spool,records)).decode("utf-8"))
+            else:
+                for record in records:
+                    print(_record_bytes(record).decode("utf-8"),flush=True)
+            return 0 if records[-1]["complete_sources"] else 3
+        elif args.command=="verify-reading":
+            records=load_reading_records(provider,args.work,args.input,args.version)
+            receipt=verify_reading_records(provider,args.work,records,args.version)
+            _print_json(receipt)
+            return 0 if receipt["complete_sources"] else 3
         elif args.command=="compare":
             def edition(version):
                 selected=work_edition(provider,args.work,version)

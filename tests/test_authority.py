@@ -77,6 +77,52 @@ class ScientificAuthority(unittest.TestCase):
         self.assertIn("FullPER",str(church.get("reading_links")))
         self.assertIn("independently nonderivable",str(church.get("reading_links")))
 
+
+    def test_manuscript_rendering_retains_dated_artifact_status_and_separate_source_input(self):
+        works,_=authority.generate(self.provider)
+        manuscript=next(w for w in works if w["compatibility"]["legacy_key"]=="main-exposition")
+        self.assertEqual(manuscript["role"],"manuscript")
+        links=[x for x in manuscript.get("reading_links",[]) if x["kind"]=="source_owned_rendering"]
+        self.assertEqual(len(links),1,"governed manuscript input/status route is missing")
+        link=links[0]
+        self.assertEqual(link["artifact"]["sha256"],"e98bd813ce177af6f8a080f7cf5fe1786beb1b3971748717b4b2de727314fce8")
+        self.assertEqual(link["source_commit"],"1db15916a3965ccbba101969341bad4cb44ba22b")
+        self.assertNotEqual(link["source_commit"],authority.BASELINE)
+        self.assertFalse(link["candidate_status"]["timeless_state"])
+        self.assertEqual(link["candidate_status"]["observed_at_utc"],"2026-07-21T18:10:22Z")
+        self.assertFalse(link["scientific_adoption_inferred"])
+        status_paths={s["path"] for s in manuscript["sources"] if s["role"]=="status"}
+        self.assertIn("artifacts/orthemma-ortheme-systems-draft.sources.json",status_paths)
+        self.assertIn("docs/publication-profile.yaml",status_paths)
+        profile=self.provider.read_bytes("docs/publication-profile.yaml").decode()
+        self.assertIn("not-peer-reviewed",profile)
+        self.assertIn("candidate-terminology-not-adopted",profile)
+        preserved=next(w for w in works if w["compatibility"]["legacy_key"]=="decisive-revision")
+        self.assertEqual(preserved["role"],"preserved-edition")
+        self.assertFalse(any(x["kind"]=="source_owned_rendering" for x in preserved.get("reading_links",[])),
+                         "unverified same-title TeX must not become an equivalent published edition")
+
+    def test_candidate_result_and_goal_keep_external_adoption_boundary_and_aliases(self):
+        works,_=authority.generate(self.provider)
+        chosen=[w for w in works if w["compatibility"]["legacy_key"]=="ar8r-pmr-007-anh-1"]
+        self.assertEqual(len(chosen),1)
+        work=chosen[0]
+        self.assertEqual(work["role"],"research-note")
+        self.assertEqual(work["original_record"]["existing_result_ids"],["PMR-007-ANH-1"])
+        links=[x for x in work.get("reading_links",[]) if x["kind"]=="source_owned_adoption_boundary"]
+        self.assertEqual(len(links),1,"external adoption correction must accompany the candidate")
+        self.assertFalse(links[0]["scientific_adoption_inferred"])
+        bound=[s for s in work["sources"] if s["role"]=="status"]
+        correction=next(s for s in bound if s["path"].endswith("PMR007-DEEP-A-BK-ADOPTION-BOUNDARY-CORRECTION.md"))
+        body=self.provider.read_bytes(correction["path"]).decode()
+        self.assertIn("No proposal in this snapshot is adopted repository theory.",body)
+        primary=next(s for s in work["sources"] if s["role"]=="primary")
+        self.assertEqual(primary["sha256"],"2642ef2391225ed4502630da978dc91d5c2b795d8e405e5ede965ef12f5d8fa6")
+        aliases=[r for r in self.provider.occurrences.values() if r["sha256"]==primary["sha256"]]
+        self.assertEqual(len(aliases),2)
+        from search import work_edition
+        with self.assertRaises(Exception):work_edition(self.provider,work["id"],"V1")
+
     def test_generated_ordinary_commands_never_request_historical_all(self):
         views=authority.render_views(*authority.generate(self.provider))
         self.assertFalse(any("--role all" in line for line in views["START_HERE.md"].splitlines() if line.startswith("python ")))
