@@ -360,6 +360,115 @@ class NamedReading(unittest.TestCase):
         self.assertNotIn("Traceback",rejected.stderr)
         self.assertEqual(rejected.stdout,"")
 
+
+    def _readme_adapter_result(self):
+        """Run the shipped JS adapter; only the external process transport is mocked."""
+        import shutil
+        node = shutil.which("node")
+        if node is None:
+            self.skipTest("Node.js is required for the code-mode adapter test, not source reading")
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            spool = Path(area) / "reading.jsonl"
+            produced = self.run_cli("read", "--work", self.work["id"], "--spool", str(spool),
+                                    "--inline-bytes", "1048576")
+            self.assertEqual(produced.returncode, 0, produced.stderr)
+            fixture = json.loads(produced.stdout)
+            program = r"""
+const fs=require("fs"),vm=require("vm");
+const input=JSON.parse(fs.readFileSync(0,"utf8")), fixture=input.fixture;
+const fence=String.fromCharCode(96).repeat(3);
+let source=input.readme.split(fence+"javascript\n")[1].split(fence)[0];
+source=source.replace(/const work = .*?\n/,"const work = "+JSON.stringify(fixture.work)+";\n")
+  .replace(/const spool = .*?\n/,"const spool = "+JSON.stringify(fixture.path)+";\n");
+const notifications=[],texts=[],stored=new Map(),calls=[];
+const tools={exec_command:async options=>{
+  calls.push(options.cmd);
+  if(!options.cmd.includes("'read'")||!options.cmd.includes("'--inline-bytes' '1048576'"))
+    throw Error("Unexpected mock process route");
+  return {output:JSON.stringify(fixture)+"\n",exit_code:0};
+},write_stdin:async()=>{throw Error("Unexpected polling");}};
+(async()=>{
+  let error=null;
+  try {await new vm.Script("(async()=>{"+source+"\n})()").runInNewContext({
+    tools,store:(key,value)=>stored.set(key,value),
+    notify:value=>notifications.push(value),text:value=>texts.push(value)
+  });} catch(e) {error=String(e);}
+  console.log(JSON.stringify({error,notifications,texts,calls,
+    reading:stored.get("orthemology-reading:"+fixture.path),
+    delivery:stored.get("orthemology-reading-delivery:"+fixture.path)}));
+})().catch(e=>{console.error(e.stack);process.exitCode=2;});
+"""
+            result = subprocess.run([node, "-e", program], input=json.dumps({
+                "fixture": fixture, "readme": (ROOT / "README.md").read_text()}),
+                capture_output=True, text=True, timeout=30)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return fixture, json.loads(result.stdout)
+
+    def test_readme_adapter_delivers_all_frames_in_bounded_groups(self):
+        data = ("\ufeff" + 'fiṭrah 🙂 "\\\\\r\n' * 1500).encode()
+        changed = row(self.rows[0]["path"], data)
+        self.rows[0] = changed
+        self.work["sources"][0] = dict(changed, role="primary", version="a"*40)
+        self.manifest["occurrences"] = self.rows
+        (self.root / "corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache / "objects" / changed["sha256"]).write_bytes(data)
+        self.write_work()
+        fixture, result = self._readme_adapter_result()
+        self.assertIsNone(result["error"])
+        self.assertEqual(result["reading"]["frames"], fixture["inline_frames"])
+        messages = result["notifications"]
+        self.assertGreater(len(messages), 0)
+        self.assertLess(len(messages), fixture["records"])
+        delivery = result["delivery"]
+        self.assertEqual(len(delivery["groups"]), len(messages))
+        sequences = []
+        for group, message in zip(delivery["groups"], messages):
+            raw = message.encode()
+            self.assertEqual(group["text"], message)
+            self.assertEqual(group["bytes"], len(raw))
+            self.assertLessEqual(len(raw), 12288)
+            self.assertEqual(group["sha256"], hashlib.sha256(raw).hexdigest())
+            previous_end = 0
+            for member in group["members"]:
+                self.assertGreaterEqual(member["offset"], previous_end)
+                end = member["offset"] + member["bytes"]
+                self.assertLessEqual(end, len(raw))
+                text = raw[member["offset"]:end].decode()
+                frame = fixture["inline_frames"][member["sequence"]]
+                if frame["type"] == "chunk":
+                    self.assertEqual(text.split("\n", 1)[1], frame["text"])
+                else:
+                    self.assertEqual(json.loads(text), frame)
+                sequences.append(member["sequence"])
+                previous_end = end
+        self.assertEqual(sequences, list(range(fixture["records"])))
+        final = result["texts"][-1]
+        self.assertEqual(final["offered_records"], fixture["records"])
+        self.assertEqual(final["offered_source_groups"], len(messages))
+        self.assertEqual(final["offered_diagnostic_events"], 0)
+        self.assertEqual(final["offered_notifications"], len(messages))
+        self.assertEqual(final["actual_reader_receipt"], "AWAITING_READER_ACKNOWLEDGEMENT")
+        self.assertEqual(len(result["calls"]), 1)
+
+    def test_readme_adapter_rejects_rendered_overflow_before_any_notification(self):
+        self.work["title"] = "t" * 5000
+        data = b"x" * 8192
+        changed = row(self.rows[0]["path"], data)
+        self.rows[0] = changed
+        self.work["sources"][0] = dict(changed, role="primary", version="a"*40)
+        self.manifest["occurrences"] = self.rows
+        (self.root / "corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache / "objects" / changed["sha256"]).write_bytes(data)
+        self.write_work()
+        fixture, result = self._readme_adapter_result()
+        self.assertTrue(all(len(json.dumps(frame, ensure_ascii=False, sort_keys=True,
+                            separators=(",", ":")).encode()) <= 12288
+                            for frame in fixture["inline_frames"]))
+        self.assertIsNotNone(result["error"])
+        self.assertIn("Rendered reading frame exceeds", result["error"])
+        self.assertEqual(result["notifications"], [])
+        self.assertEqual(result["texts"], [])
+
     def test_inline_reading_is_exact_and_response_bounded(self):
         with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
             spool=Path(area)/"reading.jsonl"

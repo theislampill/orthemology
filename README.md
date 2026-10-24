@@ -50,7 +50,7 @@ python tools/corpus.py read --work "Normal forms and transport for supplied cert
 python tools/corpus.py verify-reading --work "Normal forms and transport for supplied certified selectors" --input RECEIVED_RECORDS.jsonl
 ```
 
-A tool client must deliver **every record automatically as a separate bounded response**. Do not print the entire stream as one budgeted tool response. Reordered notifications can be reconstructed by sequence; missing, duplicated, altered or substituted records fail verification. Verification establishes the bytes supplied to the verifier, not that a reader saw or understood them. A missing controlling review remains missing.
+A tool client must deliver **every logical record automatically in bounded source notifications**. Consecutive whole records may share one bounded group; each record retains its sequence and exact content. Do not print the entire stream as one budgeted tool response. Reordered notifications can be reconstructed by sequence; missing, duplicated, altered or substituted records fail verification. Verification establishes the bytes supplied to the verifier, not that a reader saw or understood them. A missing controlling review remains missing.
 
 For ChatGPT code-mode, this is the ordinary named-reading adapter. Set `work` to the title returned by search and use the checkout/cache already selected for the session. This is one deliberate reading request; internal polling and frame notifications are automatic transport events. Any later manual source selection or recovery open is an additional action.
 
@@ -263,26 +263,67 @@ if (!frames) {
 }
 ensure((prepared.exit_code === 0) === descriptor.complete_sources, "Exit/completeness mismatch.");
 store("orthemology-reading:"+spool,{descriptor,frames,fallback});
-if (fallback) notify(fallback);
-const label=frames[0].title+" @ "+frames[0].version;
-for (const frame of frames) {
-  if (frame.type === "chunk")
-    notify(label+" — reading frame "+frame.sequence+"; payload "+frame.payload+
+function renderReadingFrame(frame, label) {
+  return frame.type === "chunk" ?
+    label+" — reading frame "+frame.sequence+"; payload "+frame.payload+
       "; source bytes ["+frame.offset+","+(frame.offset+frame.bytes)+"); SHA-256 "+frame.sha256+
-      "\n"+frame.text);
-  else notify(JSON.stringify(frame));
+      "\n"+frame.text : JSON.stringify(frame);
 }
-text({offered_records:frames.length,complete_sources:frames.at(-1).complete_sources,
+function groupReadingFrames(frames, label) {
+  const limit=12288, groups=[];
+  const items=frames.map(frame=>({sequence:frame.sequence,text:renderReadingFrame(frame,label)}));
+  function pack(members, index) {
+    let text="Orthemology reading group "+index+"; logical frames "+
+      members[0].sequence+"–"+members.at(-1).sequence+"\n";
+    const bindings=[];
+    for (const member of members) {
+      const bytes=utf8(member.text).length;
+      text+="[reading frame "+member.sequence+"; "+bytes+" UTF-8 bytes]\n";
+      const offset=utf8(text).length;
+      text+=member.text+"\n[/reading frame "+member.sequence+"]\n";
+      bindings.push({sequence:member.sequence,offset,bytes});
+    }
+    return {index,text,members:bindings,bytes:utf8(text).length};
+  }
+  let pending=[];
+  for (const item of items) {
+    const extended=pack([...pending,item],groups.length);
+    if (extended.bytes<=limit) { pending.push(item); continue; }
+    ensure(pending.length>0,"Rendered reading frame exceeds the notification limit.");
+    groups.push(pack(pending,groups.length));
+    pending=[item];
+    ensure(pack(pending,groups.length).bytes<=limit,
+      "Rendered reading frame exceeds the notification limit.");
+  }
+  if (pending.length) groups.push(pack(pending,groups.length));
+  const sequences=groups.flatMap(group=>group.members.map(member=>member.sequence));
+  ensure(sequences.length===frames.length && sequences.every((n,i)=>n===frames[i].sequence) &&
+    groups.every(group=>group.bytes<=limit),"Incomplete or oversized reading delivery.");
+  return groups.map(group=>({...group,sha256:digest(group.text)}));
+}
+const label=frames[0].title+" @ "+frames[0].version;
+const groups=groupReadingFrames(frames,label); // Preflight every complete rendered message.
+store("orthemology-reading-delivery:"+spool,{
+  format:"orthemology-reading-delivery-1",state:"DELIVERY_PLAN_NOT_RECEIPT",
+  max_source_group_bytes:12288,
+  logical_records:frames.length,groups
+});
+if (fallback) notify(fallback);
+for (const group of groups) notify(group.text);
+text({offered_records:frames.length,offered_source_groups:groups.length,
+  offered_diagnostic_events:fallback ? 1 : 0,offered_notifications:groups.length+(fallback ? 1 : 0),
+  delivery_format:"BOUNDED_WHOLE_FRAME_GROUPS",
+  complete_sources:frames.at(-1).complete_sources,
   elapsed_to_offer_seconds:(Date.now()-started)/1000,delivery:fallback ? "RECOVERED_PAGES" :
     Array.isArray(descriptor.inline_frames) ? "INLINE" : "PAGES",
   actual_reader_receipt:"AWAITING_READER_ACKNOWLEDGEMENT"});
 ```
 
-The adapter first writes one new external JSONL spool. If the complete serialized response fits 1,048,576 UTF-8 bytes, it validates and offers every frame from that single capture. Otherwise it retrieves authenticated whole-record pages in parallel, each at most 98,304 bytes. The limit includes the envelope, JSON escaping and final newline. An incomplete or malformed initial capture is retained and permits one explicit source-owner-checked reading-index recovery using the original title/ID, edition and spool path. It cannot select a replacement work from corrupt response fields. Complete frame, source, context and hash checks precede every notification. Existing files are never overwritten. A failed page, changed source, failed owner check or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
+The adapter first writes one new external JSONL spool. If the complete serialized response fits 1,048,576 UTF-8 bytes, it validates and offers every frame from that single capture. Otherwise it retrieves authenticated whole-record pages in parallel, each at most 98,304 bytes. The limit includes the envelope, JSON escaping and final newline. An incomplete or malformed initial capture is retained and permits one explicit source-owner-checked reading-index recovery using the original title/ID, edition and spool path. It cannot select a replacement work from corrupt response fields. Complete frame, source, context and hash checks precede every source notification. The adapter then groups consecutive complete rendered frame messages into source notifications of at most 12,288 UTF-8 bytes, including every header and separator. It preflights all groups before offering any source text. An oversized single rendered frame stops the offer; no text is split or shortened. The stored delivery plan binds each member by sequence and exact UTF-8 offset/length, so source text that resembles a frame header is not a parsing authority. Logical records, source groups and recovery diagnostic events are counted separately; the source-group byte cap does not claim to bound a separate diagnostic event. A delivery plan records intended output. Only the final summary after every notification call returns records a complete offer, and neither establishes actual reader receipt. Existing files are never overwritten. A failed page, changed source, failed owner check or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
 
 Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. The source-route map records the last successful route for each logical path, not every transfer event; a cached reread cannot erase earlier bytes from the cumulative payload total. Metrics leave wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter times the combined source-retrieval, bounded-capture and notification-offer interval; source preflight is recorded separately in the metrics file. Actual receipt and cold/warm qualification still require the receiving reader's evidence.
 
-The client must retain raw records and the actually presented frames, disclose any omission marker, and acknowledge complete per-source coverage before claiming receipt. The supplied record stream can be checked with `verify-reading`. That check explicitly does not certify scholarly comprehension, review completeness, acceptance, or cold/warm performance. Binary sources require their appropriate full-document reader; `show --output NEW_DIRECTORY` preserves their exact files without pretending to render them as text.
+The client must retain raw records, the source-group delivery plan and the actually presented groups/frames, disclose any omission marker, and acknowledge complete per-source coverage before claiming receipt. The supplied record stream can be checked with `verify-reading`. That check explicitly does not certify scholarly comprehension, review completeness, acceptance, or cold/warm performance. Binary sources require their appropriate full-document reader; `show --output NEW_DIRECTORY` preserves their exact files without pretending to render them as text.
 
 Research objectives, works, manuscript revisions, results, source occurrences and rendered editions remain distinct. The full source-owned record accompanies named readings. Governed manuscript routes separately expose their artifact/input commit, dated candidate snapshot and publication qualifications. Proposal routes carry the existing external adoption boundary; a newer candidate, equal-byte copy or successful build cannot promote it to accepted theory.
 
