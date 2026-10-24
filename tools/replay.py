@@ -442,6 +442,21 @@ def acquire_release_tag(session,repo,row):
     session.receipt.setdefault("release_tags",[]).append(receipt);session.save()
     return receipt
 
+def acquire_locked_package_reference(session,repo,row,lean_version):
+    """Preserve the two reviewed toolchains' distinct reference contracts."""
+    if lean_version=="4.19.0":
+        return acquire_release_tag(session,repo,row)
+    require(lean_version=="4.32.2" and row.get("name")=="proofwidgets"
+            and row.get("inputRev")=="main","unreviewed package reference contract")
+    require(re.fullmatch("[0-9a-f]{40}",row.get("rev","")) is not None
+            and git(repo,"rev-parse","HEAD")==row["rev"],"wrong locked package revision")
+    receipt={"name":row["name"],"declared_input_ref":row["inputRev"],
+             "revision":row["rev"],"selection":"locked-commit","remote_branch_resolved":False,
+             "scope":"historical input-ref metadata; exact manifest commit selected; no current-branch or release-tag claim"}
+    session.receipt.setdefault("package_ref_contracts",[]).append(receipt);session.save()
+    return receipt
+
+
 def provision(provider,spec,case,session,python):
     """Explicit network acquisition into a fresh external directory; no home install."""
     import shutil
@@ -494,7 +509,7 @@ def provision(provider,spec,case,session,python):
             session.run(["git","-C",repo,"checkout","--quiet","--detach","FETCH_HEAD"],session.out)
             require(git(repo,"rev-parse","HEAD")==row["rev"],"wrong acquired dependency")
             if row["name"]=="proofwidgets":
-                acquire_release_tag(session,repo,row)
+                acquire_locked_package_reference(session,repo,row,case["lean"])
         result["MATHLIB_DIR"]=str(mathlib)
         session.run([binary/"lake","exe","cache","get"],mathlib,timeout=3600)
         modules=set()

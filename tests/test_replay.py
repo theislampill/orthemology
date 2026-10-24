@@ -53,6 +53,24 @@ class ConsumerControls(unittest.TestCase):
                 replay.acquire_release_tag(session,checkout,
                     {"name":"proofwidgets","inputRev":"v9.9.9","rev":wanted})
             self.assertEqual(run("rev-parse","HEAD",cwd=checkout),wanted)
+            from unittest.mock import patch
+            # The separate 4.32.2 lock records historical inputRev=main but
+            # selects an immutable commit. Never resolve or fetch current main.
+            with patch.object(session,"run",side_effect=AssertionError("unexpected branch fetch")):
+                raw=replay.acquire_locked_package_reference(session,checkout,
+                    {"name":"proofwidgets","inputRev":"main","rev":wanted},"4.32.2")
+                self.assertEqual(raw["revision"],wanted)
+                self.assertEqual(raw["selection"],"locked-commit")
+                self.assertFalse(raw["remote_branch_resolved"])
+                with self.assertRaisesRegex(ValueError,"revision"):
+                    replay.acquire_locked_package_reference(session,checkout,
+                        {"name":"proofwidgets","inputRev":"main","rev":"0"*40},"4.32.2")
+                with self.assertRaisesRegex(ValueError,"release tag"):
+                    replay.acquire_locked_package_reference(session,checkout,
+                        {"name":"proofwidgets","inputRev":"main","rev":wanted},"4.19.0")
+                with self.assertRaisesRegex(ValueError,"reference contract"):
+                    replay.acquire_locked_package_reference(session,checkout,
+                        {"name":"proofwidgets","inputRev":"unreviewed-branch","rev":wanted},"4.32.2")
 
     def test_lake_prefixed_multiline_axiom_inventories_bind_original_names(self):
         source="import T299.Basic\nopen AR8R.T299\n#print axioms positive\n#print axioms empty\n"
