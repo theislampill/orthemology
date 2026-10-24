@@ -70,7 +70,7 @@ def show(provider,name,version=None,role="primary",include_status=False,output=N
     print("# "+edition["work"]["title"])
     print("\nExact edition: "+edition["version"])
     if include_status:
-        label={"baseline":"Source-owned catalogue status","claim":"Source-owned claim record","source":"Source access status"}.get(edition["kind"],"Source-owned edition status")
+        label={"baseline":"Source-owned catalogue status","claim":"Source-owned claim record","source_reading":"Preserved source-owner scope","source":"Source access status"}.get(edition["kind"],"Source-owned edition status")
         print("\n"+label+": "+json.dumps(edition["status"],ensure_ascii=False))
         print(edition["scope"])
         if edition["predecessor"]:
@@ -255,7 +255,8 @@ def main(argv=None):
             for row in rows:
                 print(row["title"]+"\n  "+row["id"]+" @ "+row.get("version",provider.baseline["commit"]))
             claims=sum(row.get("record_type")=="source_owned_claim" for row in rows)
-            print(f"{len(rows)-claims} named work editions; {claims} source-owned claim readings. Named routes do not enumerate every research work.")
+            preserved=sum(row.get("record_type")=="source_owned_reading" for row in rows)
+            print(f"{len(rows)-claims-preserved} named work editions; {claims} source-owned claim readings; {preserved} preserved-source readings. Named routes do not enumerate every research work.")
         elif args.command=="show":
             return show(provider,args.work,args.version,args.role,args.include_status,args.output,args.source)
         elif args.command=="compare":

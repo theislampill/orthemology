@@ -324,6 +324,7 @@ def current_projection(provider, baseline_works):
 # These are existing public scientific owners, not a new status registry.
 SELECTOR_OWNER = "docs/provenance/v5-successors/fragments/D06.json"
 RESULT_CURRENTNESS = "research/t20-v6-20261012/metadata/FINAL_REGISTERED_RESULT_DISPOSITIONS.json"
+TRANSPORT_CLAIMS = "research/t20-v6-20261012/sources/e0a09157ed82520d74c8750581aacb44bf4d47af746ab7dae5c3ffd437645b05/MATERIAL_CLAIMS.json"
 
 def _baseline_owner(provider, path, json_pointer=""):
     row=provider.resolve(path, context=BASELINE)
@@ -388,6 +389,40 @@ def verify_claim(provider, claim, expected=None):
     if expected.get(claim["id"])!=claim:
         raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","claim reading differs from exact original owner/public mapping")
     return claim["original_record"]
+
+def source_reading_projection(provider, public_map=None):
+    """Expose a previously uncatalogued primary through its exact claim owner.
+
+    The title is the original locked primary heading; this route selects a
+    preserved source edition, not the current or accepted edition of a programme.
+    """
+    document=load_json(provider.read_bytes(TRANSPORT_CLAIMS,BASELINE))
+    matches=[(i,c) for i,c in enumerate(document["claims"]) if c["id"]=="ET-05"]
+    if len(matches)!=1:
+        raise AuthorityError("AUTHORITY_POPULATION","historical revision source owner")
+    index,claim=matches[0]
+    pm=public_map if public_map is not None else load_json(provider.read_bytes(PUBLIC_MAP,BASELINE))
+    mappings={r["source_sha256"]:r for r in pm["objects"]}
+    sources=[{**_public_reference(provider,ref["sha256"],mappings),"role":"primary",
+              "owner_pointer":"/canonical_sources/"+str(i)}
+             for i,ref in enumerate(claim["canonical_sources"])]
+    title="Historical source revision composed with forward continuation"
+    return [{"record_type":"source_owned_reading","id":slug(title),"title":title,
+             "version":BASELINE,"aliases":[claim["title"],"Source revision with retained historical state"],
+             "subjects":["source revision","retained state","probability","historical evidence"],
+             "owner":_baseline_owner(provider,TRANSPORT_CLAIMS,"/claims/"+str(index)),
+             "original_record":claim,"sources":sources,
+             "source_owned_status":{"owner_status":document["status"],
+                "source_record":claim,
+                "currentness":"preserved exact source reading; no current-edition or adoption selection"},
+             "compatibility":{"legacy_claim_id":claim["id"],
+                "legacy_semantic_owner":claim["semantic_owner"]}}]
+
+def verify_source_reading(provider, reading, expected=None):
+    expected=expected if expected is not None else {r["id"]:r for r in source_reading_projection(provider)}
+    if expected.get(reading["id"])!=reading:
+        raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","preserved reading differs from exact material-claim owner")
+    return reading["original_record"]
 
 def work_reading_links(provider, work, documents=None):
     """Join only explicit result/review/source and currentness owner relations."""
@@ -563,6 +598,7 @@ def generate(provider):
             work["sources"].extend(extra)
             work["reading_links"]=links
     auth=claim_projection(provider,claims,pm)
+    auth.extend(source_reading_projection(provider,pm))
     for i,av in enumerate(avs):
         matched=[works[n]["id"] for n,w in enumerate(c["works"]) if set(w.get("existing_result_ids",[]))&set(av["result_ids"])]
         title=av["scope"].split(". ")[0]
@@ -781,7 +817,7 @@ def render_views(works,authority):
     start+=code('python tools/corpus.py search "Fisher"',command("fisher-audit"))
     start+="\nThis route retains the complete classification source, fixed-fibre corollary, and conditional ordinary review. Their scopes differ; the corollary review does not newly prove the norm identity.\n\n"
     start+=code('python tools/corpus.py search "recognition"',command("t20-recognition-basing"))
-    start+="\nThe historical catalogue preserves 448 work records and 1,620 exact source bindings, including works without result identifiers. Another 34 source-owned claim readings have their own named routes. These populations are not every research work in the public source corpus. Use --role historical or --role all to read historical source-fidelity reports explicitly. Ordinary scholarly reading, named fetch and full-text search exclude them. These reports retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.\n\nSee [current science](CURRENT_SCIENCE.md), [frontiers](RESEARCH_FRONTIERS.md), and [reproduction](REPRODUCIBILITY.md).\n"
+    start+="\nThe historical catalogue preserves 448 work records and 1,620 exact source bindings, including works without result identifiers. Another 34 foundational claim readings and a preserved historical-source revision reading have their own named routes. These populations are not every research work in the public source corpus. Use --role historical or --role all to read historical source-fidelity reports explicitly. Ordinary scholarly reading, named fetch and full-text search exclude them. These reports retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.\n\nSee [current science](CURRENT_SCIENCE.md), [frontiers](RESEARCH_FRONTIERS.md), and [reproduction](REPRODUCIBILITY.md).\n"
     science="# Current science and source-owned claims\n\n"+intro
     science+="The current sources affirm productive adequacy, intrinsic necessity, source-relative normative obligations, basic recognition, and cumulative warrant at their defended philosophical scopes. Earlier neutral-deduction ceilings do not erase later affirmative appraisals; those appraisals are not premise-free kernel proofs.\n\n"
     science+="The [current claim owner](../../foundations/current-claims.json) contains the complete original statements and all status fields. The following presentation removes only insider owner labels; it makes no change to scientific scope.\n\n"
@@ -819,7 +855,7 @@ def render_views(works,authority):
     repro+="## Read without replay\n\nReading complete sources does not require Lean, an experiment, or automatic expansion of the historical tree. Exact bindings record logical path, commit, SHA-256, Git blob, byte length, and mode. Moved exact bodies preserve their edition; changed prose or links are declared derivatives.\n\n"
     repro+=code(command("fisher-audit")+' --version '+BASELINE)
     repro+="\nFetch deliberately through an authorized route before offline use:\n\n"+code('python tools/corpus.py --offline --cache /path/to/source-cache search "productive adequacy" --full-text --all-versions')
-    repro+="\nMetadata search covers named catalogue works and the 34 claim readings. Ordinary full-text search covers their explicitly bound scholarly bodies, including nested claim qualifications and currentness. It is not the complete historical research population. All full-text searches use local verified sources and report uncached/private identities; they do not download missing archives.\n\n"
+    repro+="\nMetadata search covers named catalogue works, the 34 foundational claim readings and the separately scoped preserved-source reading. Ordinary full-text search covers their explicitly bound scholarly bodies, including nested claim qualifications and currentness. It is not the complete historical research population. All full-text searches use local verified sources and report uncached/private identities; they do not download missing archives.\n\n"
     repro+=code('python tools/corpus.py search "source revision" --full-text --all-versions',
                 'python tools/corpus.py show --source EXACT_PATH_FROM_SEARCH --version '+BASELINE)
     repro+="\nThe explicit --all-versions mode searches every declared public source occurrence, including historical reports, with path and edition in each match. Copy that path into show --source to read its entire verified body. An unindexed source or wrong edition fails closed. Named fetch caches the scholarly reading and its verification owners; add --historical only for historical source-fidelity bodies.\n"

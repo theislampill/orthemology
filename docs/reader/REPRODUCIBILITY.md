@@ -18,7 +18,7 @@ Fetch deliberately through an authorized route before offline use:
 python tools/corpus.py --offline --cache /path/to/source-cache search "productive adequacy" --full-text --all-versions
 ```
 
-Metadata search covers named catalogue works and the 34 claim readings. Ordinary full-text search covers their explicitly bound scholarly bodies, including nested claim qualifications and currentness. It is not the complete historical research population. All full-text searches use local verified sources and report uncached/private identities; they do not download missing archives.
+Metadata search covers named catalogue works, the 34 foundational claim readings and the separately scoped preserved-source reading. Ordinary full-text search covers their explicitly bound scholarly bodies, including nested claim qualifications and currentness. It is not the complete historical research population. All full-text searches use local verified sources and report uncached/private identities; they do not download missing archives.
 
 ```bash
 python tools/corpus.py search "source revision" --full-text --all-versions

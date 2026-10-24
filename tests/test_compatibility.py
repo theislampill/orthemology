@@ -374,6 +374,34 @@ class PublicOwnerRoutes(unittest.TestCase):
         self.assertEqual(listing.returncode,0,listing.stderr)
         self.assertIn("448 named work editions; 34 source-owned claim readings",listing.stdout)
 
+    def test_retained_state_source_revision_has_exact_named_primary_and_scope(self):
+        from search import metadata_search, work_edition
+        title="Historical source revision composed with forward continuation"
+        found=metadata_search(self.provider,"retained state source revision")
+        self.assertTrue(any(r["title"]==title for r in found))
+        edition=work_edition(self.provider,title)
+        self.assertEqual(edition["kind"],"source_reading")
+        primary=[s for s in edition["sources"] if s["role"]=="primary"]
+        self.assertEqual(len(primary),1)
+        self.assertEqual(primary[0]["sha256"],"06053c55e5b4484b605a203cd90315dbe90615753bb25dbd64862b4c4a1849d2")
+        result=self.run_cli("show","--work",title,"--role","reading","--include-status")
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertIn(self.provider.read_bytes(primary[0]["path"],primary[0]["version"]).decode().strip(),result.stdout)
+        self.assertIn("proposed baseline; owner acceptance pending",result.stdout)
+        self.assertIn("No separate review newly established by this track",result.stdout)
+        self.assertIn("Controlling scientific review: NOT IDENTIFIED",result.stdout)
+
+    def test_retained_state_route_rejects_changed_status_title_and_source(self):
+        import copy
+        from search import find_work,verify_work
+        work=find_work(self.provider,"Historical source revision composed with forward continuation")
+        changed=copy.deepcopy(work);changed["source_owned_status"]["owner_status"]="accepted"
+        retitled=copy.deepcopy(work);retitled["title"]="Unrelated primary theorem"
+        swapped=copy.deepcopy(work);swapped["sources"][0]["sha256"]="a"*64
+        for row in (changed,retitled,swapped):
+            with self.assertRaisesRegex(Exception,"AUTHORITY_PROJECTION_DRIFT"):
+                verify_work(self.provider,row)
+
     def test_full_claim_body_and_nested_qualification_are_exact(self):
         from search import work_edition
         handle="essential-whole-existence-independence"

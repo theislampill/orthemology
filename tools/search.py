@@ -28,8 +28,25 @@ def load_claims(provider):
         raise SourceError("DUPLICATE_KEY","named claim reading")
     return claims
 
+def load_source_readings(provider):
+    path=provider.root/"corpus/authority.jsonl"
+    if not path.exists():return []
+    rows=[load_json(line) for line in path.read_bytes().splitlines() if line.strip()]
+    selected=[r for r in rows if r.get("record_type")=="source_owned_reading"]
+    if len({r["id"] for r in selected})!=len(selected):
+        raise SourceError("DUPLICATE_KEY","preserved source reading")
+    return selected
+
+def verify_source_readings(provider, readings):
+    from authority import source_reading_projection, verify_source_reading
+    if readings:
+        expected={r["id"]:r for r in source_reading_projection(provider)}
+        if set(expected)!={r["id"] for r in readings}:
+            raise SourceError("AUTHORITY_POPULATION","preserved reading population differs from owner")
+        for reading in readings:verify_source_reading(provider,reading,expected)
+
 def load_readings(provider):
-    return load_works(provider)+load_claims(provider)
+    return load_works(provider)+load_claims(provider)+load_source_readings(provider)
 
 def scholarly_sources(sources):
     return [s for s in sources if s.get("review_kind")!="historical_source_fidelity"
@@ -66,6 +83,9 @@ def check_binding(provider,source):
     return row
 
 def verify_work(provider,work,owner_cache=None):
+    if work.get("record_type")=="source_owned_reading":
+        from authority import verify_source_reading
+        return verify_source_reading(provider,work)
     if work.get("record_type")=="source_owned_claim":
         from authority import verify_claim
         return verify_claim(provider,work)
@@ -119,6 +139,11 @@ def work_edition(provider,name,version=None):
             return {"work":work,"version":provider.baseline["commit"],"sources":work["sources"],
                     "metadata":original,"kind":"claim","predecessor":False,"status":original,
                     "scope":"exact source-owned claim record; all status axes retained; no new scientific adoption"}
+        if work.get("record_type")=="source_owned_reading":
+            return {"work":work,"version":provider.baseline["commit"],"sources":work["sources"],
+                    "metadata":original,"kind":"source_reading","predecessor":False,
+                    "status":work["source_owned_status"],
+                    "scope":"preserved source and exact material-claim scope; no new review, adoption or currentness selection"}
         is_current=work.get("version",provider.baseline["commit"])!=provider.baseline["commit"]
         return {"work":work,"version":work.get("version",provider.baseline["commit"]),"sources":work["sources"],
                 "metadata":original,"kind":"current" if is_current else "baseline","predecessor":False,
@@ -157,11 +182,13 @@ def metadata_search(provider,query="",subject=None):
     found=[]
     claims=load_claims(provider)
     verify_claims(provider,claims)
-    for work in load_works(provider)+claims:
+    readings=load_source_readings(provider)
+    verify_source_readings(provider,readings)
+    for work in load_works(provider)+claims+readings:
         public=" ".join([work["title"],work["id"],*work.get("subjects",[])]).casefold()
         original=work.get("original_record",{})
         searchable=public+" "+json.dumps(original,ensure_ascii=False).casefold()
-        if work.get("record_type")=="source_owned_claim":searchable+=" "+" ".join(work.get("aliases",[])).casefold()
+        if work.get("record_type") in ("source_owned_claim","source_owned_reading"):searchable+=" "+" ".join(work.get("aliases",[])).casefold()
         if all(term in searchable for term in terms) and (subject is None or subject.casefold() in public):
             found.append(work)
     return found
@@ -207,11 +234,13 @@ def _fulltext_local(provider,query,all_versions=False,work=None,version=None):
         # Search all explicitly selected editions without choosing one by date.
         # Include preserved predecessor bodies as separately labelled editions.
         rows=load_works(provider)
+        readings=load_source_readings(provider)
+        verify_source_readings(provider,readings)
         claims=load_claims(provider)
         verify_claims(provider,claims)
         owner_cache={}
         for row in rows:verify_work(provider,row,owner_cache)
-        selected_sources=[s for w in rows+claims for s in scholarly_sources(w["sources"])]
+        selected_sources=[s for w in rows+claims+readings for s in scholarly_sources(w["sources"])]
         bindings={(s["path"],s.get("version",provider.baseline["commit"])) for s in selected_sources if "path" in s}
         if version is not None:
             bindings={item for item in bindings if item[1]==version}
@@ -242,6 +271,6 @@ def _fulltext_local(provider,query,all_versions=False,work=None,version=None):
                 matches.append({"path":path,"version":context,"line":number,"text":line})
     return {"matches":matches,"selected":len(bindings)+len(unavailable_identities),"searched":decoded,"binary":binary,"unavailable":unavailable,
             "scope":("Complete declared public corpus mode, including historical sources." if all_versions else
-                     "Named scholarly corpus: catalogue work and source-owned claim bindings; historical fidelity excluded. Not every research work.")
+                     "Named scholarly corpus: catalogue work, source-owned claim and preserved reading bindings; historical fidelity excluded. Not every research work.")
                     +" Local verified sources only; no downloads. Use --all-versions for the complete declared corpus; show --source PATH --version VERSION for a full matched report. PDF/images/binary require their ordinary reading form.",
             "complete":not unavailable}
