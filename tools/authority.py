@@ -320,32 +320,138 @@ def current_projection(provider, baseline_works):
     return records,events
 
 
-def generate(provider):
-    """Return deterministic (448 work rows, source-owned authority rows)."""
-    if provider.manifest.get("baseline",{}).get("commit") != BASELINE:
-        raise AuthorityError("AUTHORITY_VERSION","this source map requires the bound public baseline")
-    owners={}
-    def read(p):
-        if p not in owners:
-            owners[p]=load_json(provider.read_bytes(p,context=BASELINE))
-        return owners[p]
-    moves=provider.manifest.get("profiles",{}).get("ordinary",{}).get("existing_paths")
-    if not isinstance(moves,dict) or not moves:
-        raise AuthorityError("AUTHORITY_PROFILE","ordinary existing-path map is required")
-    def record(p):
-        try: row=provider.occurrences[p]
-        except KeyError as exc:
-            raise AuthorityError("AUTHORITY_SOURCE",p) from exc
+
+# These are existing public scientific owners, not a new status registry.
+SELECTOR_OWNER = "docs/provenance/v5-successors/fragments/D06.json"
+RESULT_CURRENTNESS = "research/t20-v6-20261012/metadata/FINAL_REGISTERED_RESULT_DISPOSITIONS.json"
+
+def _baseline_owner(provider, path, json_pointer=""):
+    row=provider.resolve(path, context=BASELINE)
+    return {**{k:row[k] for k in ("path","sha256","git_blob","bytes","mode")},
+            "version":BASELINE,"json_pointer":json_pointer}
+
+def _owned_hashes(value, prefix=""):
+    """Yield only explicitly SHA-owned source objects and their JSON pointers."""
+    if isinstance(value,dict):
+        if isinstance(value.get("sha256"),str):
+            yield prefix,value
+        for key,item in value.items():
+            yield from _owned_hashes(item,prefix+"/"+pointer_key(key))
+    elif isinstance(value,list):
+        for index,item in enumerate(value):
+            yield from _owned_hashes(item,prefix+"/"+str(index))
+
+def _public_reference(provider, digest, mappings):
+    mapping=mappings.get(digest)
+    if not mapping or not mapping.get("repository_path"):
+        return {"original_sha256":digest,"availability":"identity_only" if mapping else "unresolved_public_binding",
+                "public_mapping":mapping,"body_recovered":False}
+    # Never substitute a public derivative or summary for an exact original.
+    if mapping.get("public_sha256")!=digest:
+        return {"original_sha256":digest,"availability":"exact_original_unavailable",
+                "public_mapping":mapping,"body_recovered":False}
+    row=provider.resolve(mapping["repository_path"],context=BASELINE)
+    if row["sha256"]!=digest:
+        raise AuthorityError("AUTHORITY_IDENTITY","public mapping/lock mismatch")
+    return {**{k:row[k] for k in ("path","sha256","git_blob","bytes","mode")},
+            "version":BASELINE,"original_sha256":digest,"public_mapping":mapping}
+
+def claim_projection(provider, claims=None, public_map=None):
+    claims=claims if claims is not None else load_json(provider.read_bytes(CLPATH,BASELINE))
+    public_map=public_map if public_map is not None else load_json(provider.read_bytes(PUBLIC_MAP,BASELINE))
+    mappings={x["source_sha256"]:x for x in public_map["objects"]}
+    projected=[]
+    for index,claim in enumerate(claims["claims"]):
+        by_digest={}
+        for ptr,ref in _owned_hashes(claim):
+            digest=ref["sha256"]
+            role="primary" if ptr=="/canonical_source" else "support" if ptr.startswith("/supporting_sources/") else "currentness"
+            # The claim owner explicitly lists this named REVIEW.md as support;
+            # retain it as a bounded review, not an inferred universal acceptance.
+            is_review=ptr.startswith("/supporting_sources/") and Path(ref.get("original_read_path","")).name.upper()=="REVIEW.MD"
+            if is_review:role="review"
+            if digest not in by_digest:
+                by_digest[digest]={**_public_reference(provider,digest,mappings),"role":role,"owner_pointers":[]}
+                if is_review:
+                    by_digest[digest].update(review_kind="source_owned_claim_review",review_scope=claim["review_status"],
+                                             reviewed_canonical_sha256=claim["canonical_source"]["sha256"])
+            by_digest[digest]["owner_pointers"].append(ptr)
+        projected.append({"record_type":"source_owned_claim","id":slug(claimnames[index]),"title":claimnames[index],
+            "version":BASELINE,"aliases":["Abraham","revivification"] if index==16 else [],"subjects":["foundations"],
+            "owner":_baseline_owner(provider,CLPATH,"/claims/"+str(index)),
+            "original_record":claim,"sources":list(by_digest.values()),
+            "compatibility":{"legacy_claim_id":claim["id"],"legacy_semantic_owner":claim["semantic_owner"]}})
+    return projected
+
+def verify_claim(provider, claim, expected=None):
+    expected=expected if expected is not None else {r["id"]:r for r in claim_projection(provider)}
+    if expected.get(claim["id"])!=claim:
+        raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","claim reading differs from exact original owner/public mapping")
+    return claim["original_record"]
+
+def work_reading_links(provider, work, documents=None):
+    """Join only explicit result/review/source and currentness owner relations."""
+    documents=documents if documents is not None else {}
+    def read(path):
+        if path not in documents:documents[path]=load_json(provider.read_bytes(path,BASELINE))
+        return documents[path]
+    result_ids=set(work["original_record"].get("existing_result_ids",[]))
+    sources=[];links=[]
+    selector_ids=result_ids & {"D06-04","D06-05","D06-06"}
+    if selector_ids:
+        data=read(SELECTOR_OWNER)
+        srcs={x["id"]:(i,x) for i,x in enumerate(data["sources"])}
+        reviews={x["id"]:(i,x) for i,x in enumerate(data["reviews"])}
+        primaries={s["sha256"] for s in work["sources"] if s["role"]=="primary"}
+        for index,result in enumerate(data["results"]):
+            if result["id"] not in selector_ids:continue
+            for review_id in result["review_ids"]:
+                review_index,review=reviews[review_id]
+                source_index,source=srcs[review["source_id"]]
+                reviewed={srcs[key][1]["public_sha256"] for key in review["reviewed_source_ids"]}
+                if not primaries & reviewed:
+                    raise AuthorityError("AUTHORITY_REVIEW_TARGET","review has no exact primary target in this work")
+                exact=_baseline_owner(provider,source["public_path"])
+                if exact["sha256"]!=review["review_sha256"] or exact["sha256"]!=source["public_sha256"]:
+                    raise AuthorityError("AUTHORITY_REVIEW_IDENTITY","review source/hash mismatch")
+                owners=[_baseline_owner(provider,SELECTOR_OWNER,ptr) for ptr in
+                        ("/results/"+str(index),"/reviews/"+str(review_index),"/sources/"+str(source_index))]
+                sources.append({k:v for k,v in {**exact,"role":"review","review_kind":"source_owned_scientific",
+                                "binding_owners":owners,"review_scope":review["scope"],"review_target":review["target"]}.items() if k!="json_pointer"})
+                links.append({"kind":"source_owned_scientific_review","owners":owners,
+                              "result":result,"review":review})
+    if "T20-CHURCH-RAW-PROBE" in result_ids:
+        data=read(RESULT_CURRENTNESS)
+        matches=[(i,r) for i,r in enumerate(data["records"]) if r["id"]=="T20-CHURCH-RAW-PROBE"]
+        if len(matches)!=1:raise AuthorityError("AUTHORITY_CURRENTNESS","Church result owner is not unique")
+        index,result=matches[0]
+        mappings={x["source_sha256"]:x for x in read(PUBLIC_MAP)["objects"]}
+        for j,route in enumerate(result["exact_current_owner_result_routes"]):
+            record=route["owner_result_record"]
+            ptr="/records/"+str(index)+"/exact_current_owner_result_routes/"+str(j)+"/owner_result_record"
+            owner=_baseline_owner(provider,RESULT_CURRENTNESS,ptr)
+            links.append({"kind":"source_owned_currentness","owner":owner,
+                          "current_result":record["current_result"],"later_changes_and_limits":record["later_changes_and_limits"],
+                          "evidence_ceiling":record["evidence_ceiling"]})
+            for k,ref in enumerate(record["current_report_routes"]):
+                source=_public_reference(provider,ref["sha256"],mappings)
+                if "path" not in source:raise AuthorityError("AUTHORITY_CURRENTNESS","exact public currentness report unavailable")
+                sources.append({**source,"role":"currentness","binding_owners":[{**owner,"json_pointer":ptr+"/current_report_routes/"+str(k)}]})
+    return sources,links
+
+def verify_work_reading_links(provider,work,documents=None):
+    sources,links=work_reading_links(provider,work,documents)
+    actual=[s for s in work["sources"] if s.get("binding_owners")]
+    if actual!=sources or work.get("reading_links",[])!=links:
+        raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","work review/currentness links differ from exact source owners")
+    return links
+
+
+def catalogue_projection(provider,c):
+    """Rebuild the complete baseline catalogue route without unrelated owners."""
+    def record(path):
+        row=provider.occurrences[path]
         return {k:row[k] for k in ("path","sha256","git_blob","bytes","mode")}
-    def owner(p,ptr=""):
-        return {**record(p),"version":BASELINE,"json_pointer":ptr}
-    c=read(CWPATH)
-    claims=read(CLPATH)
-    pm=read(PUBLIC_MAP)
-    read(GRAPH)
-    avs=read(AVPATH)["avenues"]
-    if len(c.get("works",[]))!=448 or len(c.get("sources",{}))!=1620 or len(claims.get("claims",[]))!=34 or len(avs)!=12:
-        raise AuthorityError("AUTHORITY_POPULATION","expected 448 works, 1620 bindings, 34 claims, 12 avenues")
     names=[named(i,w) for i,w in enumerate(c["works"])]
     slugs=[slug(t) for t in names]
     coll=Counter(slugs)
@@ -401,27 +507,62 @@ def generate(provider):
         })
     if emitted != set(c["sources"]):
         raise AuthorityError("AUTHORITY_BINDINGS","not every original binding survived")
-    by_sha={x["source_sha256"]:x for x in pm["objects"]}
-    auth=[]
-    for i,cl in enumerate(claims["claims"]):
-        refs=[]
-        for j,item in enumerate([cl["canonical_source"]]+cl.get("supporting_sources",[])):
-            digest=item["sha256"]
-            mapping=by_sha.get(digest)
-            role="primary" if j==0 else "support"
-            if mapping and mapping.get("repository_path"):
-                rr=record(mapping["repository_path"])
-                if rr["sha256"]!=mapping["public_sha256"]:
-                    raise AuthorityError("AUTHORITY_IDENTITY","public mapping/lock mismatch")
-                refs.append({**rr,"role":role,"original_sha256":digest,"public_mapping":mapping})
-            else:
-                refs.append({"role":role,"original_sha256":digest,"availability":"identity_only" if mapping else "unresolved_public_binding","public_mapping":mapping,"body_recovered":False})
-        auth.append({
-            "record_type":"source_owned_claim","id":slug(claimnames[i]),"title":claimnames[i],
-            "owner":{"path":CLPATH,"sha256":record(CLPATH)["sha256"],"json_pointer":"/claims/"+str(i)},
-            "original_record":cl,"sources":refs,
-            "compatibility":{"legacy_claim_id":cl["id"],"legacy_semantic_owner":cl["semantic_owner"]}
-        })
+    return works,unassigned
+
+def verify_baseline_work(provider,work,documents=None):
+    """Reject a different valid source, role, title, alias or omitted binding."""
+    documents=documents if documents is not None else {}
+    key=("canonical_baseline_routes",BASELINE)
+    if key not in documents:
+        c=load_json(provider.read_bytes(CWPATH,BASELINE))
+        documents[key]={row["id"]:row for row in catalogue_projection(provider,c)[0]}
+    expected=documents[key].get(work["id"])
+    if expected is None:
+        raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","unknown baseline named route")
+    expected=load_json(canonical_bytes(expected))
+    extra,links=work_reading_links(provider,expected,documents)
+    if links:
+        expected["sources"].extend(extra)
+        expected["reading_links"]=links
+    for source in expected["sources"]:source.setdefault("version",BASELINE)
+    if expected!=work:
+        raise AuthorityError("AUTHORITY_PROJECTION_DRIFT","baseline route differs from exact source-derived membership/title/roles")
+    return expected
+
+def generate(provider):
+    """Return deterministic (448 work rows, source-owned authority rows)."""
+    if provider.manifest.get("baseline",{}).get("commit") != BASELINE:
+        raise AuthorityError("AUTHORITY_VERSION","this source map requires the bound public baseline")
+    owners={}
+    def read(p):
+        if p not in owners:
+            owners[p]=load_json(provider.read_bytes(p,context=BASELINE))
+        return owners[p]
+    moves=provider.manifest.get("profiles",{}).get("ordinary",{}).get("existing_paths")
+    if not isinstance(moves,dict) or not moves:
+        raise AuthorityError("AUTHORITY_PROFILE","ordinary existing-path map is required")
+    def record(p):
+        try: row=provider.occurrences[p]
+        except KeyError as exc:
+            raise AuthorityError("AUTHORITY_SOURCE",p) from exc
+        return {k:row[k] for k in ("path","sha256","git_blob","bytes","mode")}
+    def owner(p,ptr=""):
+        return {**record(p),"version":BASELINE,"json_pointer":ptr}
+    c=read(CWPATH)
+    claims=read(CLPATH)
+    pm=read(PUBLIC_MAP)
+    read(GRAPH)
+    avs=read(AVPATH)["avenues"]
+    if len(c.get("works",[]))!=448 or len(c.get("sources",{}))!=1620 or len(claims.get("claims",[]))!=34 or len(avs)!=12:
+        raise AuthorityError("AUTHORITY_POPULATION","expected 448 works, 1620 bindings, 34 claims, 12 avenues")
+    works,unassigned=catalogue_projection(provider,c)
+    handles={w["compatibility"]["legacy_key"]:w["id"] for w in works}
+    for work in works:
+        extra,links=work_reading_links(provider,work,owners)
+        if links:
+            work["sources"].extend(extra)
+            work["reading_links"]=links
+    auth=claim_projection(provider,claims,pm)
     for i,av in enumerate(avs):
         matched=[works[n]["id"] for n,w in enumerate(c["works"]) if set(w.get("existing_result_ids",[]))&set(av["result_ids"])]
         title=av["scope"].split(". ")[0]
@@ -565,6 +706,8 @@ def load(root):
 
 def validate(provider, works=None, authority=None, include_views=False):
     """Reject missing rows, altered owners/statuses, and unsupported promotion."""
+    from rehydrate import validate_working_sources
+    working=validate_working_sources(provider)
     if works is None or authority is None: works,authority=load(provider.root)
     expected_works,expected_authority=generate(provider)
     if len(works)!=len(expected_works):
@@ -604,7 +747,7 @@ def validate(provider, works=None, authority=None, include_views=False):
             p=provider.root/"docs"/"reader"/name
             if not p.exists() or p.read_text(encoding="utf-8")!=body:
                 raise AuthorityError("AUTHORITY_STALE_VIEW",name)
-    return {"result":"PASS","scope":"projection fidelity only; no new scientific acceptance","works":len(works),"baseline_works":448,"current_editions":len(works)-448,"bindings":1620,"claims":34,"avenues":12,"baseline":BASELINE}
+    return {"result":"PASS","scope":"projection fidelity only; no new scientific acceptance","works":len(works),"baseline_works":448,"current_editions":len(works)-448,"bindings":1620,"claims":34,"avenues":12,"baseline":BASELINE,"working_sources":working}
 
 def render_views(works,authority):
     """Derived reader prose; every changing claim comes from original owners."""
@@ -613,9 +756,9 @@ def render_views(works,authority):
     claims=[r for r in authority if r["record_type"]=="source_owned_claim"]
     routes=[r for r in authority if r["record_type"]=="subject_route"]
     def show(key):
-        return "python tools/corpus.py show --work "+B+bykey[key]["title"]+B+" --role all --include-status"
+        return "python tools/corpus.py show --work "+B+bykey[key]["title"]+B+" --role reading --include-status"
     def command(key):
-        return 'python tools/corpus.py show --work "'+bykey[key]["title"]+'" --role all --include-status'
+        return 'python tools/corpus.py show --work "'+bykey[key]["title"]+'" --role reading --include-status'
     def code(*lines):
         return B*3+"bash\n"+"\n".join(lines)+"\n"+B*3+"\n"
     def prose(text):
@@ -634,11 +777,11 @@ def render_views(works,authority):
     start+="Begin with the [main paper](../../papers/correctness-reasoning-and-systems.md), [orthability argument](../../foundations/orthability-and-the-ground-of-intelligibility.md), [current arguments](../../foundations/current-arguments.md), and [dynamic orthing and noetic learning](../../foundations/dynamic-orthing-noetic-learning-and-orthability.md).\n\n"
     start+="## Programme avenues\n\n"
     for r in routes: start+="- **"+r["title"]+"** — "+r["description"].split(". ",1)[-1]+"\n"
-    start+="\n## Full primary text, review, and status\n\nStart with a subject or title. Open all roles together; no hash knowledge or proof toolchain is required for reading.\n\n"
+    start+="\n## Full primary text, review, and status\n\nStart with a subject or title. Open the full scholarly reading, including support, review and explicit currentness; no hash knowledge or proof toolchain is required for reading.\n\n"
     start+=code('python tools/corpus.py search "Fisher"',command("fisher-audit"))
     start+="\nThis route retains the complete classification source, fixed-fibre corollary, and conditional ordinary review. Their scopes differ; the corollary review does not newly prove the norm identity.\n\n"
     start+=code('python tools/corpus.py search "recognition"',command("t20-recognition-basing"))
-    start+="\nThe catalogue preserves 448 records and 1,620 exact source bindings, including works without result identifiers. Historical source-fidelity reviews retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.\n\nSee [current science](CURRENT_SCIENCE.md), [frontiers](RESEARCH_FRONTIERS.md), and [reproduction](REPRODUCIBILITY.md).\n"
+    start+="\nThe historical catalogue preserves 448 work records and 1,620 exact source bindings, including works without result identifiers. Another 34 source-owned claim readings have their own named routes. These populations are not every research work in the public source corpus. Use --role historical or --role all to read historical source-fidelity reports explicitly. Ordinary scholarly reading, named fetch and full-text search exclude them. These reports retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.\n\nSee [current science](CURRENT_SCIENCE.md), [frontiers](RESEARCH_FRONTIERS.md), and [reproduction](REPRODUCIBILITY.md).\n"
     science="# Current science and source-owned claims\n\n"+intro
     science+="The current sources affirm productive adequacy, intrinsic necessity, source-relative normative obligations, basic recognition, and cumulative warrant at their defended philosophical scopes. Earlier neutral-deduction ceilings do not erase later affirmative appraisals; those appraisals are not premise-free kernel proofs.\n\n"
     science+="The [current claim owner](../../foundations/current-claims.json) contains the complete original statements and all status fields. The following presentation removes only insider owner labels; it makes no change to scientific scope.\n\n"
@@ -648,6 +791,11 @@ def render_views(works,authority):
         for r in claims[a:b]:
             o=r["original_record"]
             science+="### "+r["title"]+"\n\n"+prose(o["exact_statement"])+"\n\n"
+            canonical=next(source for source in r["sources"] if source["role"]=="primary")
+            reading_role="reading" if "path" in canonical else "status"
+            science+=code("python tools/corpus.py show --work "+r["id"]+" --role "+reading_role+" --include-status")+"\n"
+            if "path" not in canonical:
+                science+="The exact canonical body is identity-only. This command reads its source-owned status record; no public summary is substituted for the original.\n\n"
             science+="**Scope:** "+prose(o["scope"])+"\n\n"
             if o.get("hypotheses"): science+="**Premises:** "+"; ".join(prose(x) for x in o["hypotheses"])+"\n\n"
     science+="## Mathematical sources and applications\n\n"
@@ -671,6 +819,14 @@ def render_views(works,authority):
     repro+="## Read without replay\n\nReading complete sources does not require Lean, an experiment, or automatic expansion of the historical tree. Exact bindings record logical path, commit, SHA-256, Git blob, byte length, and mode. Moved exact bodies preserve their edition; changed prose or links are declared derivatives.\n\n"
     repro+=code(command("fisher-audit")+' --version '+BASELINE)
     repro+="\nFetch deliberately through an authorized route before offline use:\n\n"+code('python tools/corpus.py --offline --cache /path/to/source-cache search "productive adequacy" --full-text --all-versions')
+    repro+="\nMetadata search covers named catalogue works and the 34 claim readings. Ordinary full-text search covers their explicitly bound scholarly bodies, including nested claim qualifications and currentness. It is not the complete historical research population. All full-text searches use local verified sources and report uncached/private identities; they do not download missing archives.\n\n"
+    repro+=code('python tools/corpus.py search "source revision" --full-text --all-versions',
+                'python tools/corpus.py show --source EXACT_PATH_FROM_SEARCH --version '+BASELINE)
+    repro+="\nThe explicit --all-versions mode searches every declared public source occurrence, including historical reports, with path and edition in each match. Copy that path into show --source to read its entire verified body. An unindexed source or wrong edition fails closed. Named fetch caches the scholarly reading and its verification owners; add --historical only for historical source-fidelity bodies.\n"
+    repro+="\n## Deliberate workspace restoration\n\nNamed materialisation requires a choice. A reading bundle contains complete selected scholarly bodies at their original paths; it is not an executable dependency closure. A replay context restores the full exact public baseline and its verified Git history, including build helpers and original relative paths. Toolchains and external dependencies still require the separate replay gate.\n\n"
+    repro+=code('python tools/corpus.py materialise --profile WORK_HANDLE --context reading --dest ../reading-bundle',
+                'python tools/corpus.py materialise --profile WORK_HANDLE --context replay --bundle /path/to/verified-history.bundle --dest ../historical-workspace')
+    repro+="\nUse an explicitly entitled existing Git repository with --history-from-git instead of --bundle when appropriate. Missing history, an unavailable source, or an unindexed current edition fails before the destination is published. No restoration earns scientific execution credit.\n"
     repro+="\nMissing or restricted bytes must produce an exact unavailable result; never substitute another edition, a semantic reissue, a summary, or a nearby hash. Historical source reading and present byte verification remain distinct.\n\n## Compare and maintain\n\n"
     repro+=code("python tools/corpus.py compare --work WORK_HANDLE --from OLD_COMMIT --to NEW_COMMIT","python tools/corpus.py resolve --legacy-path ORIGINAL_PATH --context "+BASELINE)
     repro+="\nUse actual indexed editions. Preserve the predecessor and change the responsible scientific owner before regenerating derived views. Attribution correction should not rewrite frozen copies. A new status must identify actor, exact claim/edition, evidence, review, and scope. Legacy paths support citation recovery; ordinary discovery uses subject names.\n\n## Replay and publication\n\nA fresh proof or experiment binds exact helpers, source closure, toolchain, packages, command, permitted axioms, complete output, and observed result. Exporting declarations, restoring files, or checking finite examples does not earn full execution. Conditional formal entailment does not establish actual-world premises; finite controls do not validate human restoration. Timeout and missing dependencies are inconclusive or blocked.\n\nA publication must bind reviewed source editions, deterministic builds, and rendered mathematics. Keep the old publication/source package. A compact tree is not the original publication identity, and a local build is not hosted publication. This scientific projection makes no claim of fresh kernel, empirical, or PDF-build acceptance.\n"

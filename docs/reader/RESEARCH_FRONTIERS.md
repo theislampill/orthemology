@@ -187,7 +187,7 @@ The radical-correction and derivational-unification candidates remain deferred f
 
 ```bash
 python tools/corpus.py search "square positivity" --full-text --all-versions
-python tools/corpus.py show --work "Cumulative scientific synthesis" --role all --include-status
+python tools/corpus.py show --work "Cumulative scientific synthesis" --role reading --include-status
 ```
 
 Check the exact statement, hypotheses, evidence, correction, and current scope before calling a result open. A stronger application or certificate can be useful while the existing theorem retains its original credit. New decisions must name a responsible owner, exact predecessor, evidence/review, and actual change; regenerate this view from that owner.

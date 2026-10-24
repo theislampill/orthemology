@@ -396,6 +396,64 @@ class CorpusIntegrity(unittest.TestCase):
             r.assemble(self.provider(),dest)
         self.assertFalse(dest.exists())
 
+    def scientific_profile_fixture(self):
+        self.cache_bytes()
+        self.manifest["profiles"]={"ordinary":{"initial_target":2,
+            "existing_paths":{"papers/theorem.md":"foundations/current-claims.json"},
+            "new_paths":["tools/cli.py"]}}
+        self.write_manifest()
+        (self.repo/"tools").mkdir();(self.repo/"tools/cli.py").write_text("pass\n")
+        target=self.repo/"foundations/current-claims.json";target.parent.mkdir();target.write_bytes(self.a)
+        return target
+
+    def test_working_scientific_drift_rejected_before_assembly(self):
+        target=self.scientific_profile_fixture()
+        target.write_bytes(b"A different unsupported scientific assertion.\n")
+        r=importlib.import_module("rehydrate")
+        with self.assertRaisesRegex(Exception,"WORKING_SOURCE"):
+            r.validate_working_sources(self.provider())
+        with self.assertRaisesRegex(Exception,"WORKING_SOURCE"):
+            r.assemble(self.provider(),self.root/"thin")
+        self.assertFalse((self.root/"thin").exists())
+
+    def test_scientific_source_cannot_be_exempted_as_editorial_interface(self):
+        target=self.scientific_profile_fixture()
+        target.write_bytes(b"An editorially promoted scientific claim.\n")
+        self.manifest["profiles"]["ordinary"]["working_interfaces"]={
+            "foundations/current-claims.json":record("foundations/current-claims.json",target.read_bytes())}
+        self.write_manifest()
+        with self.assertRaisesRegex(Exception,"INTERFACE|WORKING_SOURCE"):
+            importlib.import_module("rehydrate").assemble(self.provider(),self.root/"thin")
+        self.assertFalse((self.root/"thin").exists())
+
+    def test_declared_current_scientific_edition_is_preserved_without_acceptance_claim(self):
+        target=self.scientific_profile_fixture()
+        new=b"A separately declared proposed research edition.\n";target.write_bytes(new)
+        row=record("foundations/current-claims.json",new,version="proposal-2")
+        self.manifest["current_sources"]=[row]
+        self.manifest["current_works"]=[{"path":row["path"],"version":"proposal-2"}]
+        self.write_manifest()
+        r=importlib.import_module("rehydrate")
+        receipt=r.assemble(self.provider(),self.root/"thin")
+        self.assertEqual((self.root/"thin"/row["path"]).read_bytes(),new)
+        self.assertEqual(receipt["mappings"][0]["origin"],"declared-exact-current-edition")
+        target.write_bytes(b"Undeclared subsequent change")
+        with self.assertRaisesRegex(Exception,"WORKING_SOURCE"):
+            r.validate_working_sources(self.provider())
+
+    def test_materialised_alias_tree_matches_independent_git_tree(self):
+        import subprocess
+        self.cache_bytes();alias=self.alias_owners()
+        r=importlib.import_module("rehydrate");dest=self.root/"alias-workspace"
+        result=r.materialise(self.provider(),[alias],dest)
+        def git(*args):
+            return subprocess.check_output(["git","-C",str(dest),*args],
+                stderr=subprocess.DEVNULL,text=True).strip()
+        git("init","-b","fixture");git("add","--",alias)
+        self.assertEqual(result["tree"],git("write-tree"))
+        self.assertEqual(result["files"],1)
+        self.assertEqual((dest/alias).read_bytes(),self.a)
+
     def test_missing_preflight_leaves_no_completion_receipt(self):
         r = importlib.import_module("rehydrate")
         dest = self.root / "missing"

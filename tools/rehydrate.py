@@ -67,7 +67,7 @@ def verify_workspace(provider, destination, paths=None, require_receipt=True):
         verify_bytes(row, file.read_bytes())
         if file.stat().st_mode & 0o777 != int(row["mode"], 8) & 0o777:
             raise SourceError("CORRUPT", f"mode: {path}")
-        rows.append(row)
+        rows.append({**row, "path": path})
     tree = tree_identity(rows)
     if paths is None and provider.baseline.get("tree") and tree != provider.baseline["tree"]:
         raise SourceError("CORRUPT", "restored Git tree differs")
@@ -292,6 +292,81 @@ def _rewrite_reading_links(data, original, target, mapping, provider):
         text = pattern.sub(lambda m:m[1]+address(m[2],True)+m[3],text)
     return text.encode("utf-8")
 
+WORKING_INTERFACE_OWNERS = {
+    ".github/workflows/validate.yml": ".github/workflows/validate.yml",
+    "CONTRIBUTING.md": "CONTRIBUTING.md", "README.md": "README.md", "STATUS.md": "STATUS.md",
+    "tools/replay_corpus.py": "scripts/replay_v5_successors.py",
+    "tools/export_proof.py": "scripts/resolve_t20_v6_source.py",
+    "tools/validate_corpus.py": "scripts/validate_v5_successors.py",
+}
+
+
+def _working_sources(provider, fill_missing=False):
+    """Prepare mapped sources only from an explicit, exact ownership contract."""
+    profile=provider.manifest.get("profiles",{}).get("ordinary",{})
+    mapping=profile.get("existing_paths",{})
+    interfaces=profile.get("working_interfaces",{})
+    inverse={target:original for original,target in mapping.items()}
+    for target,identity in interfaces.items():
+        if (target not in WORKING_INTERFACE_OWNERS
+                or inverse.get(target)!=WORKING_INTERFACE_OWNERS[target]
+                or not isinstance(identity,dict) or identity.get("path")!=target
+                or not {"bytes","sha256","git_blob","mode"}<=set(identity)):
+            raise SourceError("WORKING_INTERFACE","unadmitted editorial/engineering exemption: "+str(target))
+    selected={}
+    for locator in provider.manifest.get("current_works",[]):
+        selected.setdefault(locator.get("path"),[]).append(locator.get("version"))
+    files={};origins=[];absent=[]
+    for original,target in mapping.items():
+        row=provider.resolve_legacy(original);file=_reject_links(provider.root/target)
+        present=file.is_file()
+        if not present and not fill_missing:
+            absent.append(target);continue
+        if target in interfaces:
+            if not present:
+                raise SourceError("UNAVAILABLE","declared current interface is missing: "+target)
+            identity=interfaces[target];data=verify_bytes(identity,file.read_bytes())
+            mode=identity["mode"];origin="declared-editorial-or-engineering-interface"
+        else:
+            data=file.read_bytes() if present else None
+            editions=[provider.current_sources[(target,version)]
+                      for version in selected.get(target,[])
+                      if (target,version) in provider.current_sources
+                      and data is not None
+                      and provider.current_sources[(target,version)]["sha256"]==sha256(data)]
+            if len(editions)>1:
+                raise SourceError("WORKING_SOURCE","ambiguous physical current edition: "+target)
+            if editions:
+                identity=editions[0];data=verify_bytes(identity,data)
+                mode=identity["mode"];origin="declared-exact-current-edition"
+            else:
+                baseline=provider.read_bytes(original)
+                derived=_rewrite_reading_links(baseline,original,target,mapping,provider)
+                if data is not None and data not in (baseline,derived):
+                    raise SourceError("WORKING_SOURCE",
+                        "unbound scientific/source change: "+target+
+                        "; declare an exact current edition and source owner before regenerating")
+                data=derived;mode=row["mode"];origin="baseline-with-navigation-derivative"
+        if present and (file.stat().st_mode&0o777)!=(int(mode,8)&0o777):
+            raise SourceError("WORKING_SOURCE","unbound current mode: "+target)
+        files[target]=(data,mode)
+        origins.append({"original":original,"target":target,"original_sha256":row["sha256"],
+                        "current_sha256":sha256(data),"origin":origin,
+                        "changed_bytes":sha256(data)!=row["sha256"]})
+    return files,origins,absent
+
+
+def validate_working_sources(provider):
+    """Reject divergence of present mapped sources; missing ones stay archival.
+
+    This check does not grant scientific acceptance to an explicitly declared
+    edition. Its source-owned adoption/review checks remain in authority.py.
+    """
+    files,origins,absent=_working_sources(provider,fill_missing=False)
+    return {"present_verified":len(files),"absent_archival_paths":absent,
+            "scope":"exact present-source ownership; no scientific adoption"}
+
+
 def assemble(provider, destination):
     """Assemble the declared ordinary profile in isolation, without pruning a branch."""
     profile = provider.manifest.get("profiles",{}).get("ordinary",{})
@@ -310,24 +385,7 @@ def assemble(provider, destination):
     dest = _reject_links(Path(destination).absolute())
     if dest.exists():
         raise SourceError("EXISTS",str(dest))
-    files = {}
-    origins = []
-    for original,target in mapping.items():
-        row = provider.resolve_legacy(original)
-        current = _reject_links(provider.root / target)
-        if current.is_file():
-            data = current.read_bytes()
-            # Already-authored current interfaces/prose are explicit profile members.
-            origin = "declared-current-source"
-            if data == provider.read_bytes(original):
-                data = _rewrite_reading_links(data,original,target,mapping,provider)
-        else:
-            data = _rewrite_reading_links(provider.read_bytes(original),original,target,mapping,provider)
-            origin = "baseline-with-navigation-derivative"
-        files[target] = (data,row["mode"])
-        origins.append({"original":original,"target":target,"original_sha256":row["sha256"],
-                        "current_sha256":sha256(data),"origin":origin,
-                        "changed_bytes":sha256(data)!=row["sha256"]})
+    files,origins,_ = _working_sources(provider,fill_missing=True)
     for path in additions:
         file = _reject_links(provider.root/path)
         if not file.is_file():

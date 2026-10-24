@@ -23,20 +23,20 @@ Begin with the [main paper](../../papers/correctness-reasoning-and-systems.md), 
 
 ## Full primary text, review, and status
 
-Start with a subject or title. Open all roles together; no hash knowledge or proof toolchain is required for reading.
+Start with a subject or title. Open the full scholarly reading, including support, review and explicit currentness; no hash knowledge or proof toolchain is required for reading.
 
 ```bash
 python tools/corpus.py search "Fisher"
-python tools/corpus.py show --work "Finite-audit Fisher descent: exact criterion and sharp cardinality threshold" --role all --include-status
+python tools/corpus.py show --work "Finite-audit Fisher descent: exact criterion and sharp cardinality threshold" --role reading --include-status
 ```
 
 This route retains the complete classification source, fixed-fibre corollary, and conditional ordinary review. Their scopes differ; the corollary review does not newly prove the norm identity.
 
 ```bash
 python tools/corpus.py search "recognition"
-python tools/corpus.py show --work "Recognition, operative basing and source-specific attestation" --role all --include-status
+python tools/corpus.py show --work "Recognition, operative basing and source-specific attestation" --role reading --include-status
 ```
 
-The catalogue preserves 448 records and 1,620 exact source bindings, including works without result identifiers. Historical source-fidelity reviews retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.
+The historical catalogue preserves 448 work records and 1,620 exact source bindings, including works without result identifiers. Another 34 source-owned claim readings have their own named routes. These populations are not every research work in the public source corpus. Use --role historical or --role all to read historical source-fidelity reports explicitly. Ordinary scholarly reading, named fetch and full-text search exclude them. These reports retain their original candidate and reading scope; they do not replace work-specific scientific review. Unavailable primary or controlling review text must remain visibly unavailable.
 
 See [current science](CURRENT_SCIENCE.md), [frontiers](RESEARCH_FRONTIERS.md), and [reproduction](REPRODUCIBILITY.md).

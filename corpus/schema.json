@@ -142,6 +142,24 @@
               "items": {
                 "$ref": "#/$defs/path"
               }
+            },
+            "working_interfaces": {
+              "type": "object",
+              "description": "Exact identities of the seven admitted editorial/engineering replacements. Cannot exempt scientific source changes.",
+              "propertyNames": {
+                "enum": [
+                  ".github/workflows/validate.yml",
+                  "CONTRIBUTING.md",
+                  "README.md",
+                  "STATUS.md",
+                  "tools/export_proof.py",
+                  "tools/replay_corpus.py",
+                  "tools/validate_corpus.py"
+                ]
+              },
+              "additionalProperties": {
+                "$ref": "#/$defs/identity"
+              }
             }
           },
           "additionalProperties": false

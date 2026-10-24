@@ -2,7 +2,7 @@
 from __future__ import annotations
 import argparse, importlib.util, json, os, re, signal, subprocess, sys, time
 from pathlib import Path
-from source_provider import SourceError, SourceProvider, safe_path, sha256
+from source_provider import SourceError, SourceProvider, safe_path, sha256, _reject_links
 from rehydrate import restore, verify_workspace, tree_identity
 BASELINE="a7ff0e33d1a299db640041c46b1af81ca70851f6"
 TREE="9cd3f787299b774513f68837112d5f138b093dbd"
@@ -74,7 +74,7 @@ def clean_environment(home,tmp,python=None):
 
 class Session:
     def __init__(self,out,python=None,timeout=1800):
-        self.out=Path(out).absolute()
+        self.out=_reject_links(Path(out).absolute()).resolve()
         require(not self.out.exists(),"output already exists; receipt reuse prohibited")
         self.out.mkdir(parents=True)
         self.env=clean_environment(self.out/"home",self.out/"tmp",python);self.timeout=timeout
@@ -272,6 +272,264 @@ def run_fable(context,case,spec,session,args):
         require(git(repo,"rev-parse","HEAD")==row["revision"] and not git(repo,"status","--porcelain","--untracked-files=no"),"official Fable source changed")
     session.receipt.update(status="FRESH_REPAIRED_FABLE_KERNEL_SLICE",execution_credit=True,objects=objects,official_packages=official)
 
+# Evidence transport is separate from scientific scope. Only these four exact
+# original schemas own nested evidence; arbitrary result-tree copying is forbidden.
+class _EvidenceCollection:
+    def __init__(self, context, results):
+        self.context=Path(context);self.results=Path(results);self.files={};self.bindings={}
+    def source(self, rel):
+        raw=_reject_links(self.context/safe_path(rel)).read_bytes()
+        self.bindings[rel]={"sha256":sha256(raw),"bytes":len(raw)}
+        return raw
+    def add(self, rel, digest=None, role="command-log"):
+        path=_reject_links(self.results/safe_path(rel))
+        require(path.is_file(),"missing evidence file: "+rel)
+        require(path.suffix in (".log",".txt",".json"),"non-evidence body prohibited: "+rel)
+        raw=path.read_bytes()
+        require(digest is None or (isinstance(digest,str) and re.fullmatch("[0-9a-f]{64}",digest)
+                and sha256(raw)==digest),"evidence hash mismatch: "+rel)
+        row={"path":rel,"sha256":sha256(raw),"bytes":len(raw),"role":role,
+             "binding":"original-receipt-sha256" if digest is not None else "fresh-transport-sha256"}
+        require(rel not in self.files,"duplicate evidence selection: "+rel)
+        self.files[rel]=(raw,row)
+        return raw
+    def json(self, rel, role="original-receipt"):
+        return json.loads(self.add(rel,role=role))
+    def finish(self, case, session, counts):
+        destination=_reject_links(session.out/"evidence")
+        require(not destination.exists(),"evidence destination already exists")
+        require(self.files and counts,"empty evidence population")
+        # Validate everything before creating the export directory. Copy only
+        # the exact bytes read and checked, never a recursive result/source tree.
+        destination.mkdir()
+        for rel,(raw,row) in sorted(self.files.items()):
+            target=destination/rel;target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_bytes(raw)
+        manifest={"schema":"orthemology-replay-evidence-transport-v1",
+                  "case":case["id"],"source_bindings":self.bindings,"counts":counts,
+                  "scope":case["scope"],"execution_credit":False,
+                  "meaning":"Complete selected original logs/results; scope and controls remain those of original receipts.",
+                  "excluded_bodies":["source inputs","compiled objects","dependency caches","archives","Git history"],
+                  "files":[row for raw,row in self.files.values()]}
+        write_json(destination/"MANIFEST.json",manifest)
+        digest=sha256((destination/"MANIFEST.json").read_bytes())
+        verify_evidence_transport(destination,digest)
+        session.receipt["evidence_transport"]={"path":"evidence/MANIFEST.json","sha256":digest,
+                                              "files":len(self.files),"counts":counts}
+        session.save()
+        return manifest
+
+def verify_evidence_transport(directory, expected_manifest_sha256):
+    """Check downloaded evidence against the RUN.json commitment, without credit."""
+    directory=_reject_links(Path(directory))
+    raw=_reject_links(directory/"MANIFEST.json").read_bytes()
+    require(isinstance(expected_manifest_sha256,str) and sha256(raw)==expected_manifest_sha256,
+            "transport manifest does not match session commitment")
+    doc=json.loads(raw)
+    require(doc.get("schema")=="orthemology-replay-evidence-transport-v1","unknown evidence transport")
+    rows=doc.get("files")
+    require(isinstance(rows,list) and rows and len({r["path"] for r in rows})==len(rows),
+            "empty or duplicate evidence manifest")
+    expected={"MANIFEST.json"}
+    for row in rows:
+        rel=safe_path(row["path"]);path=_reject_links(directory/rel)
+        require(path.suffix in (".log",".txt",".json") and rel!="MANIFEST.json","prohibited evidence member")
+        require(path.is_file(),"transport evidence missing: "+rel)
+        body=path.read_bytes()
+        require(len(body)==row["bytes"] and sha256(body)==row["sha256"],"transport evidence changed: "+rel)
+        expected.add(rel)
+    actual=set()
+    for path in directory.rglob("*"):
+        _reject_links(path)
+        require(path.is_dir() or path.is_file(),"nonregular evidence member")
+        if path.is_file():actual.add(path.relative_to(directory).as_posix())
+    require(actual==expected,"unmanifested or missing transported evidence")
+    return doc
+
+def _source_literal(collection, rel, name):
+    import ast
+    tree=ast.parse(collection.source(rel))
+    values=[ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign)
+            and any(isinstance(t,ast.Name) and t.id==name for t in n.targets)]
+    require(len(values)==1,"missing exact source literal: "+name)
+    return values[0]
+
+def _native_command(collection, prefix, label, row, extras=()):
+    """Original write_run has no stream digests. Bind JSON + exact byte count now."""
+    record=collection.json(prefix+label+".json","command-record")
+    require(set(row)==set(record)|set(extras) and all(row[k]==v for k,v in record.items()),
+            "native command record/receipt differs: "+prefix+label)
+    require(record.get("status")=="EXIT" and record.get("exit_code")==0 and record.get("ok") is True,
+            "native command did not pass: "+prefix+label)
+    out=collection.add(prefix+label+".stdout.txt")
+    err=collection.add(prefix+label+".stderr.txt")
+    require(type(record.get("output_bytes")) is int and len(out)+len(err)==record["output_bytes"],
+            "native command streams truncated: "+prefix+label)
+    out.decode("utf-8");err.decode("utf-8")
+    return out.decode(),err.decode()
+
+def _native_evidence(collection, result):
+    base="experiments/orthemology-v5/"
+    contract=json.loads(collection.source(base+"source/formal_targets.json"))
+    rows=contract["modules"];targets=[t for r in rows for t in r["targets"]]
+    require(len(rows)==12 and len(set(targets))==len(targets)==145,"native required target population differs")
+    packages=json.loads(collection.source(base+"formal_project/lake-manifest.json"))["packages"]
+    require(len(packages)==len({p["name"] for p in packages})==9,"native dependency population differs")
+    for rel in ("source/verify.py","formal_project/build.py"):
+        collection.source(base+rel)
+    # Re-use the unchanged original type-and-axiom parser from verified context.
+    collection.source(base+"source/build_gate.py")
+    spec=importlib.util.spec_from_file_location("_transport_original_build_gate",
+                                               collection.context/base/"source/build_gate.py")
+    gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate)
+    require(result.get("overall")=="NATIVE_REFERENCE_AND_KERNEL_PASS" and result.get("kernel_verified") is True
+            and result.get("original_packet_replay") is False,"wrong original native scope")
+    labels=["v4","mathematical_normal","mathematical_optimised","build_staging_normal","build_staging_optimised","formal"]
+    require(len(result.get("commands",[]))==6,"native parent command population differs")
+    streams={name:_native_command(collection,"",name,row) for name,row in zip(labels,result["commands"])}
+    v4=collection.json("v4/VERIFICATION.json")
+    formal=collection.json("formal/FORMAL_RECEIPT.json")
+    require(json.loads(streams["v4"][0])==v4 and json.loads(streams["formal"][0])==formal,
+            "native child receipt does not match actual parent-captured stdout")
+    require(v4.get("overall")=="REFERENCE_AND_REQUIRED_FORMAL_TARGETS_PASS"
+            and v4["lean"].get("kernel_verified") is True,"v4 kernel gate incomplete")
+    ordinary=["unit_tests","unit_tests_optimised","census","census_optimised",
+              "mutations","v4_mutations","positive_demonstration"]
+    for label in ordinary:
+        extra=("tests",) if label.startswith("unit_tests") else ("results",)
+        stdout,stderr=_native_command(collection,"v4/",label,v4[label],extra)
+        if extra==("results",):require(json.loads(stdout)==v4[label]["results"],"v4 result/log mismatch: "+label)
+        else:require(v4[label]["tests"]==183 and re.search(r"Ran 183 tests?\b",stderr),"v4 test log census differs")
+    lean=v4["lean"]
+    _native_command(collection,"v4/","LEAN_VERSION",lean["version_process"])
+    require(len(lean.get("builds",[]))==12,"v4 compile command population differs")
+    for row,record in zip(rows,lean["builds"]):
+        _native_command(collection,"v4/","LEAN_"+row["name"],record,("artifact",))
+    stdout,stderr=_native_command(collection,"v4/","LEAN_REQUIRED_AUDIT",lean["audit_process"])
+    require(gate.parse_audit(stdout,targets)==lean["declarations"],"v4 145-target readback differs")
+    require(len(lean["declarations"])==145,"v4 target population differs")
+    flabels=["lean_version","lake_build","mathlib_head"]+["dependency_"+p["name"] for p in packages]+["mandatory_audit"]
+    require(len(formal.get("commands",[]))==13 and formal.get("status")=="KERNEL_AND_INVENTORY_PASS"
+            and formal.get("kernel_verified") is True,"native formal command/kernel population differs")
+    formal_streams={name:_native_command(collection,"formal/",name,row)
+                    for name,row in zip(flabels,formal["commands"])}
+    audit="\n".join(formal_streams["mandatory_audit"])
+    require(gate.parse_audit(audit,targets+["OrthemologyConvergence.upstreamGirard"])==formal["axiom_audit"]
+            and len(formal["axiom_audit"])==146,"native formal 146-target readback differs")
+    require(sorted({a for r in formal["axiom_audit"].values() for a in r["axioms"]})==formal["actual_axiom_union"],
+            "native actual axiom union differs")
+    mutants=_source_literal(collection,base+"source/check_mutations.py","MUTATIONS")
+    mutants4=_source_literal(collection,base+"source/v4_mutations.py","MUTANTS")
+    require(len(mutants)==6 and len(mutants4)==10,"native mutation control population differs")
+    legacy=v4["mutations"]["results"]["results"];new=v4["v4_mutations"]["results"]["results"]
+    require([r["name"] for r in legacy]==[r[0] for r in mutants] and
+            [r["name"] for r in new]==[r[0] for r in mutants4],"native mutation result identity differs")
+    for expected,row in zip(mutants,legacy):
+        name=expected[0]
+        require(collection.json("v4/mutations/RECORD_"+name+".json","mutation-record")==row,
+                "native legacy mutation record differs")
+        positive=collection.add("v4/mutations/POSITIVE_"+name+".txt").decode()
+        negative=collection.add("v4/mutations/MUTATION_"+name+".txt").decode()
+        require(row["test"]==expected[-1] and row["positive_ok"] and row["detected"]
+                and re.search(r"Ran 1 test\b",positive) and re.search(r"Ran 1 test\b",negative)
+                and "AssertionError" in negative and "FAILED (failures=" in negative,
+                "native legacy mutation streams incomplete")
+    for expected,summary in zip(mutants4,new):
+        row=collection.json("v4/v4_mutations/"+expected[0]+".json","mutation-record")
+        require({k:row[k] for k in summary}==summary and row["test"]==expected[-1],
+                "native v4 mutation record differs")
+        require(row["positive_ok"] and row["detected_by_intended_test"]
+                and row["positive"]["exit_code"]==0 and row["negative"]["exit_code"]!=0
+                and "Ran 1 test" in row["positive"]["stderr"] and "Ran 1 test" in row["negative"]["stderr"]
+                and "AssertionError" in row["negative"]["stderr"] and "FAILED (failures=" in row["negative"]["stderr"],
+                "native v4 mutation child streams incomplete")
+    return {"parent_commands":6,"v4_commands":21,"formal_commands":13,
+            "v4_targets":145,"formal_targets":146,"legacy_mutants":6,"v4_mutants":10}
+
+def collect_original_evidence(context, case, session, result):
+    """Fail before whole-case credit unless exact original child evidence exists."""
+    collection=_EvidenceCollection(context,session.out/"results")
+    require(sha256(collection.source(case["runner"]["path"]))==case["runner"]["sha256"],
+            "evidence collector runner binding differs")
+    kind=case["kind"]
+    receipt_path="VERIFICATION.json" if kind=="native" else "RECEIPT.json"
+    require(collection.json(receipt_path)==result,"original receipt changed before evidence collection")
+    if kind=="native":
+        counts=_native_evidence(collection,result)
+    else:
+        raw=collection.source(case["descriptor"]["path"])
+        require(sha256(raw)==case["descriptor"]["sha256"],"evidence collector descriptor binding differs")
+        suite=json.loads(raw)
+        if kind=="finite-controls":
+            expected=suite["steps"];actual=result.get("steps",[])
+            require(len(expected)==len(actual)==case["step_count"]==21,"finite evidence step population differs")
+            require([r["id"] for r in expected]==[r["id"] for r in actual] and result["suite_id"]==suite["id"],
+                    "finite evidence step identities differ")
+            output_count=0
+            for declared,row in zip(expected,actual):
+                require(row["exit_code"]==0 and set(row["output_hashes"])==set(declared["outputs"]),
+                        "finite declared output population differs")
+                collection.add(row["id"]+".log",row["log_sha256"])
+                for name in declared["outputs"]:
+                    require(name.endswith(".json") and name not in {r["path"] for r in declared["files"]},
+                            "finite evidence output overlaps source")
+                    collection.add(row["id"]+"/"+name,row["output_hashes"][name],"generated-result")
+                    output_count+=1
+            require(output_count==8,"finite generated result population differs")
+            counts={"steps":21,"child_logs":21,"generated_outputs":8}
+        elif kind=="successor-python":
+            stages=suite["replay"]["stages"];evidence=result["replay_evidence"];actual=evidence["stage_results"]
+            require(len(stages)==case["stage_count"]==3 and len(actual)==4 and
+                    [r["id"] for r in actual]==["_prerequisites"]+[r["id"] for r in stages],
+                    "JSON reference stage population differs")
+            require(result["suite_id"]==suite["id"] and result["proof_scope"]=="FINITE" and result["outcome"]=="FINITE_ONLY",
+                    "JSON reference scope differs")
+            summary=[{k:r[k] for k in ("id","terminal","exit_code","log_sha256")} for r in actual]
+            require(result["stages"]==summary,"JSON reference stage summaries differ")
+            canonical=sha256(json.dumps({r["id"]:r["log_sha256"] for r in actual},
+                                        sort_keys=True,separators=(",",":"),allow_nan=False).encode())
+            require(result["log_sha256"]==canonical,"JSON reference aggregate log commitment differs")
+            require(all(not r["output_paths"] for r in stages) and not evidence["output_hashes"]
+                    and all(not r["output_hashes"] for r in actual),
+                    "fixed JSON reference unexpectedly declares generated outputs")
+            for row in actual:
+                require(row["terminal"]=="COMPLETED" and row["exit_code"]==0,"JSON reference child incomplete")
+                name="prerequisites" if row["id"]=="_prerequisites" else row["id"]
+                collection.add("logs/"+name+".log",row["log_sha256"])
+            require(set(evidence["tool_fingerprints"])=={"python"},"JSON reference tool population differs")
+            collection.add("logs/tool-python.log",evidence["tool_fingerprints"]["python"]["version_log_sha256"])
+            counts={"stages":3,"prerequisite_logs":1,"child_logs":3,"tool_logs":1,"generated_outputs":0}
+        elif kind=="continuation-lean":
+            modules=suite["module_order"];targets=[r["name"] for r in suite["targets"]]
+            actual=result.get("modules",[])
+            require(len(modules)==len(actual)==case["module_count"]==8 and
+                    len(targets)==len(set(targets))==case["target_count"]==148,
+                    "hidden parity compile/readback population differs")
+            require([r["module"] for r in actual]==modules and set(result["readbacks"])==set(targets)
+                    and result["original_controls"]=="NOT_RUN","hidden parity identities or scope differs")
+            for row in actual:
+                require(row["status"]=="FRESH_COMPILE" and row["exit_code"]==0,"hidden parity compile incomplete")
+                collection.add("logs/"+row["module"]+".log",row["log_sha256"])
+            raw=collection.add("logs/readback.log",result["readback_log_sha256"])
+            parser=load_original(Path(context),case["runner"]["path"],"_transport_original_continuation")
+            collection.source("scripts/validate_research_continuations.py")
+            require(parser.parse_readback(raw.decode(),targets)==result["readbacks"],"hidden parity exact readback differs")
+            compiler=collection.add("logs/compiler.log").decode().strip()
+            require(compiler==result["compiler_version"],"hidden parity compiler log differs")
+            pins=suite["pins"]["packages"]
+            require(len(pins)==len({p["name"] for p in pins})==9,"hidden parity dependency population differs")
+            require([r["name"] for r in result["dependency_checks"]]==[r["name"] for r in pins],
+                    "hidden parity dependency records differ")
+            for pin in pins:
+                require(collection.add("logs/"+pin["name"]+"-head.log").decode().strip()==pin["revision"],
+                        "hidden parity dependency head log differs")
+                require(not collection.add("logs/"+pin["name"]+"-status.log").decode().strip(),
+                        "hidden parity dependency dirty log")
+            counts={"modules":8,"targets":148,"compile_logs":8,"readback_logs":1,"environment_logs":19}
+        else:raise ValueError("no nested evidence transport schema for "+kind)
+    return collection.finish(case,session,counts)
+
+
 def run_case(context,case,spec,session,args):
     py=str(Path(args.python).absolute())
     session.receipt.update(case=case["id"],scope=case["scope"])
@@ -283,6 +541,7 @@ def run_case(context,case,spec,session,args):
         session.run([py,"-B",case["runner"]["path"],"--suite",case["selection"],"--lean-bin",args.lean_bin,"--mathlib",args.mathlib,"--out",session.out/"results"],context)
         result=json.loads((session.out/"results/RECEIPT.json").read_text())
         require(result.get("status")=="FRESH_KERNEL_COMPONENTS" and result.get("kernel_verified") is True,"runner did not grant fresh component scope")
+        collect_original_evidence(context,case,session,result)
         session.receipt.update(status=result["status"],execution_credit=True)
     elif kind in ("successor-python","finite-controls"):
         command=[py,"-B",case["runner"]["path"]]
@@ -294,6 +553,7 @@ def run_case(context,case,spec,session,args):
             require(all(x["exit_code"]==0 for x in result["steps"]),"failed finite control")
         else:
             require(result.get("outcome")=="FINITE_ONLY" and result.get("proof_scope")=="FINITE" and result.get("exit_code")==0,"wrong successor runtime scope")
+        collect_original_evidence(context,case,session,result)
         session.receipt.update(status=result.get("status",result.get("outcome")),execution_credit=True)
     elif kind=="native":
         if not args.historical_native:
@@ -311,6 +571,7 @@ def run_case(context,case,spec,session,args):
         result=json.loads((session.out/"results/VERIFICATION.json").read_text())
         session.receipt["original_native_receipt"]=result
         if result.get("overall")!="NATIVE_REFERENCE_AND_KERNEL_PASS": raise Blocked("required native kernel remains open")
+        collect_original_evidence(context,case,session,result)
         session.receipt.update(status=result["overall"],execution_credit=True)
     elif kind=="publication":
         from publication import build
@@ -549,8 +810,9 @@ def main(argv=None):
         print(json.dumps({"cases":[x["id"] for x in spec["cases"]],"ci":[x["id"] for x in spec["workflow"]["steps"]],"integrity":list(spec["integrity_routes"]),"generators":[x["path"] for x in spec["generators"]]},indent=2));return 0
     require(args.out is not None,"fresh --out required")
     require(args.command=="provision" or bool(args.bundle)!=bool(args.history_from_git),"one explicit --bundle or --history-from-git required")
-    require(not args.out.absolute().is_relative_to(provider.root),"output must be external")
-    session=Session(args.out,args.python,args.timeout)
+    output=_reject_links(args.out.absolute()).resolve()
+    require(not output.is_relative_to(provider.root.resolve()),"output must be external")
+    session=Session(output,args.python,args.timeout)
     context=None
     try:
         if args.command=="provision":

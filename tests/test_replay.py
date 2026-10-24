@@ -126,6 +126,25 @@ class ConsumerControls(unittest.TestCase):
             p=SourceProvider(root,Path(folder)/"empty-cache",offline=True,git_repo=False)
             with self.assertRaises(SourceError): p.read_bytes(relative)
 
+    def test_output_boundary_rejects_parent_and_symlink_aliases_before_session(self):
+        from unittest.mock import patch
+        import types
+        with tempfile.TemporaryDirectory() as folder:
+            base=Path(folder);normal=base/"normal";normal.mkdir()
+            bridge=base/"bridge";bridge.mkdir()
+            link=base/"linked";link.symlink_to(normal,target_is_directory=True)
+            provider=types.SimpleNamespace(root=normal.resolve())
+            candidates=[bridge/".."/"normal"/"created",link/"created"]
+            for dest in candidates:
+                with self.subTest(destination=str(dest)):
+                    with patch.object(replay,"SourceProvider",return_value=provider), \
+                         patch.object(replay,"load_spec",return_value={}), \
+                         patch.object(replay,"Session",side_effect=AssertionError("session started")):
+                        with self.assertRaises((ValueError,SourceError)):
+                            replay.main(["--root",str(normal),"--cache",str(base/"cache"),
+                                "--out",str(dest),"provision","finite-foundation-controls"])
+                    self.assertFalse((normal/"created").exists())
+
     def test_borrowed_receipt_directory_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
             (Path(folder)/"RUN.json").write_text('{"status":"PASS"}')
@@ -260,5 +279,233 @@ class ConsumerControls(unittest.TestCase):
             root,artifact=self.package_fixture(folder);path=root/"artifacts"/(artifact+".source-manifest.json")
             manifest=json.loads(path.read_text());manifest["source_commit"]=replay.BASELINE;path.write_text(json.dumps(manifest))
             with self.assertRaisesRegex(ValueError,"reviewed publication commit"): package_members(root,artifact)
+
+
+class EvidenceTransportControls(unittest.TestCase):
+    """Synthetic log fixtures test transport only; they never earn proof credit."""
+    @classmethod
+    def setUpClass(cls):
+        cls.provider=SourceProvider(ROOT,CACHE,offline=True,git_repo=False)
+        cls.cases={r["id"]:r for r in cls.provider.manifest["replay"]["cases"]}
+    def setUp(self):
+        from types import SimpleNamespace
+        self.temp=tempfile.TemporaryDirectory(dir=os.environ.get("ORTHEMOLOGY_TEST_TMPDIR"))
+        self.folder=Path(self.temp.name);self.context=self.folder/"context";self.context.mkdir()
+        self.out=self.folder/"run";self.out.mkdir();self.results=self.out/"results";self.results.mkdir()
+        self.session=SimpleNamespace(out=self.out,receipt={},save=lambda:None,env={},run=lambda *a,**k:None)
+        self.old_helper=sys.modules.pop("validate_research_continuations",None)
+    def tearDown(self):
+        sys.modules.pop("validate_research_continuations",None)
+        if self.old_helper is not None:sys.modules["validate_research_continuations"]=self.old_helper
+        self.temp.cleanup()
+    def source(self,rel):
+        p=self.context/rel;p.parent.mkdir(parents=True,exist_ok=True)
+        raw=self.provider.read_bytes(rel);p.write_bytes(raw);return raw
+    def put(self,rel,raw):
+        p=self.results/rel;p.parent.mkdir(parents=True,exist_ok=True)
+        p.write_bytes(raw.encode() if isinstance(raw,str) else raw);return replay.sha256(p.read_bytes())
+    def put_json(self,rel,row):
+        self.put(rel,json.dumps(row,sort_keys=True))
+    def case(self,id):
+        case=self.cases[id];self.source(case["runner"]["path"])
+        if case["kind"]!="native":
+            return case,json.loads(self.source(case["descriptor"]["path"]))
+        return case,None
+    def finite(self):
+        case,suite=self.case("finite-foundation-controls");steps=[]
+        for row in suite["steps"]:
+            step={"id":row["id"],"exit_code":0,"log_sha256":self.put(row["id"]+".log","finite fixture log\n"),
+                  "source_hashes":{},"output_hashes":{}}
+            for name in row["outputs"]:step["output_hashes"][name]=self.put(row["id"]+"/"+name,'{"fixture":true}\n')
+            steps.append(step)
+        result={"status":"PASS_NATIVE_CONTROLS","suite_id":suite["id"],"steps":steps}
+        self.put_json("RECEIPT.json",result);return case,result
+    def json_reference(self):
+        case,suite=self.case("json-certificate-reference");rows=[]
+        for id in ["_prerequisites"]+[r["id"] for r in suite["replay"]["stages"]]:
+            name="prerequisites" if id=="_prerequisites" else id
+            rows.append({"id":id,"terminal":"COMPLETED","exit_code":0,
+                         "log_sha256":self.put("logs/"+name+".log","JSON fixture log\n"),"output_hashes":{}})
+        summary=[{k:r[k] for k in ("id","terminal","exit_code","log_sha256")} for r in rows]
+        result={"suite_id":suite["id"],"proof_scope":"FINITE","outcome":"FINITE_ONLY","exit_code":0,
+                "stages":summary,"log_sha256":replay.sha256(json.dumps(
+                    {r["id"]:r["log_sha256"] for r in rows},sort_keys=True,separators=(",",":")).encode()),
+                "replay_evidence":{"stage_results":rows,"output_hashes":{},
+                    "tool_fingerprints":{"python":{"version_log_sha256":self.put("logs/tool-python.log","Python fixture\n")}}}}
+        self.put_json("RECEIPT.json",result);return case,result
+    def hidden(self):
+        case,suite=self.case("hidden-parity-pruning");self.source("scripts/validate_research_continuations.py")
+        modules=[{"module":n,"status":"FRESH_COMPILE","exit_code":0,
+                  "log_sha256":self.put("logs/"+n+".log","")} for n in suite["module_order"]]
+        readbacks={};text=""
+        for row in suite["targets"]:
+            n=row["name"];readbacks[n]={"type":n+" : True","axioms":[]}
+            text+=f"CONTINUATION_BEGIN {n}\n{n} : True\n'{n}' does not depend on any axioms\nCONTINUATION_END {n}\n"
+        result={"status":"FRESH_KERNEL_COMPONENTS","kernel_verified":True,"modules":modules,"readbacks":readbacks,
+                "original_controls":"NOT_RUN","readback_log_sha256":self.put("logs/readback.log",text),
+                "compiler_version":"fixture compiler","dependency_checks":[]}
+        self.put("logs/compiler.log","fixture compiler\n")
+        for pin in suite["pins"]["packages"]:
+            self.put("logs/"+pin["name"]+"-head.log",pin["revision"]+"\n")
+            self.put("logs/"+pin["name"]+"-status.log","")
+            result["dependency_checks"].append({"name":pin["name"]})
+        self.put_json("RECEIPT.json",result);return case,result
+    def native(self):
+        import ast
+        case,_=self.case("native-reference-and-formal");base="experiments/orthemology-v5/"
+        for rel in ["source/formal_targets.json","formal_project/lake-manifest.json","source/verify.py",
+                    "formal_project/build.py","source/build_gate.py","source/check_mutations.py","source/v4_mutations.py"]:
+            self.source(base+rel)
+        rows=json.loads((self.context/base/"source/formal_targets.json").read_text())["modules"]
+        targets=[n for r in rows for n in r["targets"]]
+        packages=json.loads((self.context/base/"formal_project/lake-manifest.json").read_text())["packages"]
+        def audit(names):
+            result={};text=""
+            for n in names:
+                body=f"{n} : True\n'{n}' does not depend on any axioms"
+                text+=f"AUDIT_BEGIN {n}\n{body}\nAUDIT_END {n}\n"
+                result[n]={"axioms":[],"type_and_axiom_text":body}
+            return text,result
+        def cmd(prefix,label,stdout="",stderr=""):
+            record={"status":"EXIT","exit_code":0,"ok":True,"output_bytes":len((stdout+stderr).encode()),
+                    "command":["fixture",label],"cwd":"fixture","elapsed_seconds":0}
+            self.put_json(prefix+label+".json",record)
+            self.put(prefix+label+".stdout.txt",stdout);self.put(prefix+label+".stderr.txt",stderr)
+            return record
+        def literals(rel,name):
+            return next(ast.literal_eval(n.value) for n in ast.parse((self.context/base/rel).read_bytes()).body
+                        if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id==name for t in n.targets))
+        old=[];new=[]
+        for r in literals("source/check_mutations.py","MUTATIONS"):
+            row={"name":r[0],"test":r[-1],"positive_ok":True,"detected":True}
+            old.append(row);self.put_json("v4/mutations/RECORD_"+r[0]+".json",row)
+            self.put("v4/mutations/POSITIVE_"+r[0]+".txt","Ran 1 test\nOK\n")
+            self.put("v4/mutations/MUTATION_"+r[0]+".txt","Ran 1 test\nAssertionError\nFAILED (failures=1)\n")
+        for r in literals("source/v4_mutations.py","MUTANTS"):
+            row={"name":r[0],"test":r[-1],"positive_ok":True,"detected_by_intended_test":True}
+            new.append(dict(row));row["positive"]={"exit_code":0,"stderr":"Ran 1 test\nOK\n"}
+            row["negative"]={"exit_code":1,"stderr":"Ran 1 test\nAssertionError\nFAILED (failures=1)\n"}
+            self.put_json("v4/v4_mutations/"+r[0]+".json",row)
+        v4={"overall":"REFERENCE_AND_REQUIRED_FORMAL_TARGETS_PASS"}
+        for label in ["unit_tests","unit_tests_optimised","census","census_optimised","mutations","v4_mutations","positive_demonstration"]:
+            if label.startswith("unit_tests"):v4[label]={**cmd("v4/",label,stderr="Ran 183 tests\n"),"tests":183}
+            else:
+                result={"results":old} if label=="mutations" else {"results":new} if label=="v4_mutations" else {"fixture":True}
+                v4[label]={**cmd("v4/",label,json.dumps(result)),"results":result}
+        text,decl=audit(targets)
+        v4["lean"]={"kernel_verified":True,"declarations":decl,
+                    "version_process":cmd("v4/","LEAN_VERSION"),
+                    "builds":[{**cmd("v4/","LEAN_"+r["name"]),"artifact":{}} for r in rows],
+                    "audit_process":cmd("v4/","LEAN_REQUIRED_AUDIT",text)}
+        text,decl=audit(targets+["OrthemologyConvergence.upstreamGirard"])
+        labels=["lean_version","lake_build","mathlib_head"]+["dependency_"+p["name"] for p in packages]+["mandatory_audit"]
+        formal={"status":"KERNEL_AND_INVENTORY_PASS","kernel_verified":True,"axiom_audit":decl,"actual_axiom_union":[],
+                "commands":[cmd("formal/",n,text if n=="mandatory_audit" else "") for n in labels]}
+        self.put_json("v4/VERIFICATION.json",v4);self.put_json("formal/FORMAL_RECEIPT.json",formal)
+        labels=["v4","mathematical_normal","mathematical_optimised","build_staging_normal","build_staging_optimised","formal"]
+        result={"overall":"NATIVE_REFERENCE_AND_KERNEL_PASS","kernel_verified":True,"original_packet_replay":False,
+                "commands":[cmd("",n,json.dumps(v4) if n=="v4" else json.dumps(formal) if n=="formal" else "") for n in labels]}
+        self.put_json("VERIFICATION.json",result);return case,result
+    def collect(self,pair):
+        return replay.collect_original_evidence(self.context,*pair[:1],self.session,pair[1])
+    def test_all_four_exact_nonzero_transport_populations(self):
+        for factory,count in [(self.finite,30),(self.json_reference,6),(self.hidden,29),(self.native,151)]:
+            with self.subTest(factory=factory.__name__):
+                # Every fixture lives in a fresh directory; never reuse a receipt.
+                self.tearDown();self.setUp()
+                pair=factory();self.put("source/DO_NOT_EXPORT.py","private source sentinel")
+                self.put("build/DO_NOT_EXPORT.olean","compiled object sentinel")
+                doc=self.collect(pair)
+                self.assertEqual(len(doc["files"]),count)
+                self.assertFalse(doc["execution_credit"])
+                self.assertNotIn("execution_credit",self.session.receipt)
+                self.assertTrue(all(not r["path"].startswith(("source/","build/")) for r in doc["files"]))
+                replay.verify_evidence_transport(self.out/"evidence",self.session.receipt["evidence_transport"]["sha256"])
+    def test_every_finite_log_and_generated_output_is_required(self):
+        pair=self.finite()
+        required=[p for p in self.results.rglob("*") if p.is_file() and p.name!="RECEIPT.json"]
+        self.assertEqual(len(required),29)
+        for path in required:
+            with self.subTest(path=path.relative_to(self.results).as_posix()):
+                raw=path.read_bytes();path.unlink()
+                with self.assertRaises((ValueError,OSError)):self.collect(pair)
+                self.assertFalse((self.out/"evidence").exists())
+                path.write_bytes(raw+b"corruption")
+                with self.assertRaisesRegex(ValueError,"hash mismatch"):self.collect(pair)
+                path.write_bytes(raw)
+    def test_every_json_child_log_is_required(self):
+        pair=self.json_reference()
+        for path in (self.results/"logs").iterdir():
+            with self.subTest(path=path.name):
+                raw=path.read_bytes();path.unlink()
+                with self.assertRaises((ValueError,OSError)):self.collect(pair)
+                path.write_bytes(raw+b"corruption")
+                with self.assertRaisesRegex(ValueError,"hash mismatch"):self.collect(pair)
+                path.write_bytes(raw)
+    def test_zero_population_and_removed_declared_output_rejected(self):
+        for kind in ("finite","json_reference","hidden"):
+            with self.subTest(kind=kind):
+                self.tearDown();self.setUp();pair=getattr(self,kind)()
+                result=pair[1]
+                if kind=="finite":result["steps"]=[]
+                elif kind=="json_reference":result["replay_evidence"]["stage_results"]=[]
+                else:result["modules"]=[]
+                self.put_json("RECEIPT.json",result)
+                with self.assertRaisesRegex(ValueError,"population"):self.collect(pair)
+        self.tearDown();self.setUp();pair=self.finite()
+        row=next(r for r in pair[1]["steps"] if r["output_hashes"]);row["output_hashes"]={}
+        self.put_json("RECEIPT.json",pair[1])
+        with self.assertRaisesRegex(ValueError,"output population"):self.collect(pair)
+    def test_hidden_readback_and_environment_streams_are_required(self):
+        pair=self.hidden();log=self.results/"logs/readback.log";raw=log.read_bytes()
+        log.write_bytes(raw[:-10])
+        with self.assertRaisesRegex(ValueError,"hash mismatch"):self.collect(pair)
+        log.write_bytes(raw);(self.results/"logs/compiler.log").unlink()
+        with self.assertRaises((ValueError,OSError)):self.collect(pair)
+    def test_hidden_receipt_rehash_cannot_mask_missing_target(self):
+        pair=self.hidden();log=self.results/"logs/readback.log";raw=log.read_text()
+        log.write_text(raw[:raw.rfind("CONTINUATION_BEGIN")])
+        pair[1]["readback_log_sha256"]=replay.sha256(log.read_bytes());self.put_json("RECEIPT.json",pair[1])
+        with self.assertRaises(ValueError):self.collect(pair)
+    def test_native_stream_truncation_and_missing_nested_mutation_are_rejected(self):
+        pair=self.native();path=self.results/"formal/mandatory_audit.stdout.txt";raw=path.read_bytes()
+        path.write_bytes(raw[:-1])
+        with self.assertRaisesRegex(ValueError,"streams truncated"):self.collect(pair)
+        path.write_bytes(raw)
+        path=next((self.results/"v4/v4_mutations").iterdir());path.unlink()
+        with self.assertRaises((ValueError,OSError)):self.collect(pair)
+    def test_native_rehashed_command_cannot_mask_missing_target(self):
+        pair=self.native();path=self.results/"formal/mandatory_audit.stdout.txt";raw=path.read_text()
+        path.write_text(raw[:raw.rfind("AUDIT_BEGIN")])
+        formal=json.loads((self.results/"formal/FORMAL_RECEIPT.json").read_text())
+        formal["commands"][-1]["output_bytes"]=len(path.read_bytes())
+        self.put_json("formal/mandatory_audit.json",formal["commands"][-1]);self.put_json("formal/FORMAL_RECEIPT.json",formal)
+        stdout=json.dumps(formal);self.put("formal.stdout.txt",stdout)
+        pair[1]["commands"][-1]["output_bytes"]=len(stdout.encode())
+        self.put_json("formal.json",pair[1]["commands"][-1]);self.put_json("VERIFICATION.json",pair[1])
+        with self.assertRaisesRegex(ValueError,"audit coverage"):self.collect(pair)
+    def test_symlink_child_log_rejected_without_export(self):
+        pair=self.finite();path=self.results/(pair[1]["steps"][0]["id"]+".log")
+        target=self.folder/"outside.log";target.write_bytes(path.read_bytes());path.unlink();path.symlink_to(target)
+        with self.assertRaises(SourceError):self.collect(pair)
+        self.assertFalse((self.out/"evidence").exists())
+    def test_transported_evidence_rejects_loss_corruption_and_unlisted_body(self):
+        self.collect(self.json_reference());directory=self.out/"evidence"
+        digest=self.session.receipt["evidence_transport"]["sha256"]
+        path=directory/"logs/tool-python.log";raw=path.read_bytes();path.unlink()
+        with self.assertRaises((ValueError,OSError)):replay.verify_evidence_transport(directory,digest)
+        path.write_bytes(raw+b"corrupt")
+        with self.assertRaisesRegex(ValueError,"changed"):replay.verify_evidence_transport(directory,digest)
+        path.write_bytes(raw);(directory/"foreign.json").write_text("{}")
+        with self.assertRaisesRegex(ValueError,"unmanifested"):replay.verify_evidence_transport(directory,digest)
+    def test_whole_case_credit_is_not_granted_when_transport_is_missing(self):
+        from types import SimpleNamespace
+        from unittest.mock import patch
+        pair=self.finite();(self.results/"knowledge.log").unlink()
+        args=SimpleNamespace(python=sys.executable)
+        with patch.object(replay,"python_preflight",return_value={"fixture":True}):
+            with self.assertRaises((ValueError,OSError)):
+                replay.run_case(self.context,pair[0],{},self.session,args)
+        self.assertFalse(self.session.receipt.get("execution_credit",False))
 
 if __name__=="__main__": unittest.main()

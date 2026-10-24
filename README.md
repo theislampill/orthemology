@@ -28,7 +28,7 @@ python tools/corpus.py search "necessary being"
 python tools/corpus.py show --work "Finite-audit Fisher descent: exact criterion and sharp cardinality threshold" --include-status
 ```
 
-The last command reads the complete selected primary texts and identified review, with the source-owned status. Use `--role all` to include supporting documents or `--output NEW_DIRECTORY` to save complete reading forms, including PDFs. A missing controlling review is disclosed; it does not confer acceptance.
+The last command reads the complete selected primary texts and identified review, with the source-owned status. Use `--role reading` for the scholarly selection or `--output NEW_DIRECTORY` to save complete reading forms, including PDFs. Historical source-fidelity reports are available explicitly with `--role historical` or `--role all`. A missing controlling review is disclosed; it does not confer acceptance.
 
 Source access verifies the exact edition against SHA-256 and Git blob identities. It can read retained Git history, an explicitly supplied verified cache, or the existing public source at its pinned commit. Reading does not silently reconstruct the old repository.
 
@@ -39,7 +39,7 @@ python tools/corpus.py --cache ../research-cache fetch --work "Finite-audit Fish
 python tools/corpus.py --cache ../research-cache --offline show --work "Finite-audit Fisher descent: exact criterion and sharp cardinality threshold" --include-status
 ```
 
-`search --full-text` reports the actual searched and unavailable populations. `fetch --all` deliberately caches the full public baseline (310,686,293 logical bytes); it is separate from an ordinary reading session. Source caches and restored proof environments live outside the ordinary checkout.
+`search --full-text` reports the actual searched and unavailable populations. `fetch --all` deliberately caches the full public baseline (310,686,293 logical bytes); it is separate from an ordinary reading session. Source caches and restored proof environments live outside the ordinary checkout. Named `materialise` requires `--context reading` for a reading bundle or `--context replay` plus an explicit verified history source for a complete historical source workspace; neither choice executes a proof.
 
 ## Edit, reproduce and preserve
 

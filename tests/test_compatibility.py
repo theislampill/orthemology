@@ -106,10 +106,57 @@ class NamedReading(unittest.TestCase):
 
     def test_baseline_materialisation_still_restores_exact_sources(self):
         destination=self.root/"baseline-workspace"
-        result=self.run_cli("materialise","--profile",self.work["id"],"--version","a"*40,"--dest",str(destination))
+        result=self.run_cli("materialise","--profile",self.work["id"],"--version","a"*40,"--context","reading","--dest",str(destination))
         self.assertEqual(result.returncode,0,result.stderr)
         self.assertEqual((destination/"papers/geometry.md").read_bytes(),self.primary)
         self.assertEqual((destination/"reviews/geometry.md").read_bytes(),self.review)
+
+    def test_named_workspace_requires_explicit_context_and_replay_history(self):
+        for extra in ([],["--context","replay"]):
+            destination=self.root/"must-not-exist"
+            result=self.run_cli("materialise","--profile",self.work["id"],"--dest",str(destination),*extra)
+            self.assertNotEqual(result.returncode,0,result.stdout)
+            self.assertIn("WORKSPACE_CONTEXT" if not extra else "HISTORY_REQUIRED",result.stderr)
+            self.assertFalse(destination.exists())
+
+    def test_reading_bundle_does_not_claim_replay_dependency_closure(self):
+        destination=self.root/"reading-only"
+        result=self.run_cli("materialise","--profile",self.work["id"],"--context","reading","--dest",str(destination))
+        self.assertEqual(result.returncode,0,result.stderr)
+        receipt=json.loads(result.stdout)
+        self.assertEqual(receipt["context"],"reading")
+        self.assertFalse(receipt["dependency_closure"])
+        self.assertFalse(receipt["execution_credit"])
+        self.assertFalse((destination/".git").exists())
+
+    def test_named_replay_restores_all_baseline_sources_and_exact_history(self):
+        source=self.root/"git-source";source.mkdir()
+        def git(*args):
+            return subprocess.check_output(["git","-C",str(source),*args],text=True,stderr=subprocess.DEVNULL).strip()
+        git("init","-q","-b","main")
+        git("config","user.email","fixture@example.invalid");git("config","user.name","Fixture")
+        for item in self.rows:
+            target=source/item["path"];target.parent.mkdir(parents=True,exist_ok=True)
+            target.write_bytes((self.cache/"objects"/item["sha256"]).read_bytes())
+        git("add",".");git("commit","-qm","Exact tiny baseline")
+        commit=git("rev-parse","HEAD");tree=git("rev-parse","HEAD^{tree}")
+        self.manifest["baseline"].update(commit=commit,tree=tree)
+        bundle=self.root/"history.bundle";git("bundle","create",str(bundle),"--all")
+        raw=bundle.read_bytes()
+        self.manifest["history"]={"sha256":hashlib.sha256(raw).hexdigest(),"bytes":len(raw)}
+        for item in self.work["sources"]+[self.work["owner"]]:item["version"]=commit
+        (self.root/"corpus/archives.lock.json").write_text(json.dumps(self.manifest));self.write_work()
+        destination=self.root/"complete-replay-context"
+        result=self.run_cli("materialise","--profile",self.work["id"],"--context","replay","--bundle",str(bundle),"--dest",str(destination))
+        self.assertEqual(result.returncode,0,result.stderr)
+        receipt=json.loads(result.stdout)
+        self.assertEqual(receipt["context"],"replay")
+        self.assertTrue(receipt["dependency_closure"])
+        self.assertFalse(receipt["execution_credit"])
+        self.assertEqual(receipt["tree"],tree)
+        self.assertEqual((destination/"catalogue.json").read_bytes(),(source/"catalogue.json").read_bytes())
+        self.assertEqual(subprocess.check_output(["git","-C",str(destination),"rev-parse","HEAD"],text=True).strip(),commit)
+        self.assertTrue(receipt["history"])
 
     def test_replay_inherits_global_context_and_preserves_child_option_order(self):
         import importlib.util
@@ -129,16 +176,37 @@ class NamedReading(unittest.TestCase):
                                     "--timeout","19","--bundle","fixture.bundle","list"]])
 
 
-    def test_historical_fidelity_review_is_not_controlling_scientific_review(self):
+    def test_historical_fidelity_is_explicit_not_ordinary_reading_search_or_fetch(self):
         self.work["sources"][1]["review_kind"]="historical_source_fidelity"
         self.write_work()
-        result=self.run_cli("show","--work",self.work["id"],"--include-status")
+        ordinary=self.run_cli("show","--work",self.work["id"],"--include-status")
+        self.assertEqual(ordinary.returncode,0,ordinary.stderr)
+        self.assertNotIn(self.review.decode().strip(),ordinary.stdout)
+        self.assertIn("Controlling scientific review: NOT IDENTIFIED",ordinary.stdout)
+        for role in ("all","historical"):
+            explicit=self.run_cli("show","--work",self.work["id"],"--role",role,"--include-status")
+            self.assertEqual(explicit.returncode,0,explicit.stderr)
+            self.assertIn(self.review.decode().strip(),explicit.stdout)
+        found=self.run_cli("search","norm identity","--full-text")
+        self.assertEqual(found.returncode,0,found.stderr)
+        self.assertNotIn("reviews/geometry.md@",found.stdout)
+        all_found=self.run_cli("search","norm identity","--full-text","--all-versions")
+        self.assertIn("reviews/geometry.md@",all_found.stdout)
+        fetched=self.run_cli("fetch","--work",self.work["id"])
+        self.assertEqual(fetched.returncode,0,fetched.stderr)
+        self.assertNotIn(self.rows[1]["path"],[r["path"] for r in json.loads(fetched.stdout)["sources"]])
+
+    def test_direct_verified_source_read_and_wrong_context(self):
+        result=self.run_cli("show","--source","reviews/geometry.md","--version","a"*40)
         self.assertEqual(result.returncode,0,result.stderr)
-        self.assertIn("## Historical source-fidelity review",result.stdout)
-        self.assertIn("Controlling scientific review: NOT IDENTIFIED",result.stdout)
-        self.assertIn("does not establish controlling scientific review or current adoption",result.stdout)
         self.assertIn(self.review.decode().strip(),result.stdout)
-        self.assertNotIn("Scientific review binding identified;",result.stdout)
+        wrong=self.run_cli("show","--source","reviews/geometry.md","--version","b"*40)
+        self.assertNotEqual(wrong.returncode,0)
+        missing=self.run_cli("show","--source","unindexed.md","--version","a"*40)
+        self.assertNotEqual(missing.returncode,0)
+        implicit=self.run_cli("show","--source","reviews/geometry.md")
+        self.assertNotEqual(implicit.returncode,0)
+
 
 
 class CurrentEditionReading(unittest.TestCase):
@@ -283,6 +351,102 @@ class CurrentEditionReading(unittest.TestCase):
         self.assertNotEqual(result.returncode,0)
         self.assertIn("AUTHORITY_PROJECTION_DRIFT",result.stderr)
         self.assertNotIn("Complete reading",result.stdout)
+
+
+class PublicOwnerRoutes(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from source_provider import SourceProvider
+        cls.provider=SourceProvider(ROOT,cache=os.environ.get("ORTHEMOLOGY_TEST_CACHE"),offline=True,git_repo=False)
+
+    def run_cli(self,*args):
+        return subprocess.run([sys.executable,"-B",str(CLI),"--root",str(ROOT),
+            "--cache",str(self.provider.cache),"--offline","--no-git-source",*args],capture_output=True,text=True)
+
+    def test_named_claim_population_and_content_discovery(self):
+        from search import metadata_search, load_claims
+        claims=load_claims(self.provider)
+        self.assertEqual(len(claims),34)
+        for query in ("Abraham","revivification","productive adequacy"):
+            found=metadata_search(self.provider,query)
+            self.assertTrue(any(r.get("record_type")=="source_owned_claim" for r in found),query)
+        listing=self.run_cli("list")
+        self.assertEqual(listing.returncode,0,listing.stderr)
+        self.assertIn("448 named work editions; 34 source-owned claim readings",listing.stdout)
+
+    def test_full_claim_body_and_nested_qualification_are_exact(self):
+        from search import work_edition
+        handle="essential-whole-existence-independence"
+        edition=work_edition(self.provider,handle)
+        self.assertEqual(edition["kind"],"claim")
+        result=self.run_cli("show","--work",handle,"--role","reading","--include-status")
+        self.assertEqual(result.returncode,0,result.stderr)
+        nested=[r for r in edition["sources"] if any(p.startswith("/latest_own_activity_qualification/") for p in r["owner_pointers"])]
+        self.assertEqual(len(nested),3)
+        for source in nested:
+            body=self.provider.read_bytes(source["path"],source["version"]).decode("utf-8-sig")
+            self.assertIn(body.strip(),result.stdout)
+        self.assertIn("Controlling scientific review: NOT IDENTIFIED",result.stdout)
+
+    def test_private_canonical_refuses_body_but_owner_status_is_readable(self):
+        handle="pure-perfection-eligibility-and-participant-sensitive-ends"
+        denied=self.run_cli("show","--work",handle,"--role","reading")
+        self.assertNotEqual(denied.returncode,0)
+        self.assertIn("IDENTITY_ONLY",denied.stderr)
+        self.assertNotIn("Complete",denied.stdout)
+        status=self.run_cli("show","--work",handle,"--role","status")
+        self.assertEqual(status.returncode,0,status.stderr)
+        self.assertIn("Source-owned claim record",status.stdout)
+
+    def test_church_reading_exposes_source_owned_later_settlement(self):
+        from search import load_works
+        church=next(w for w in load_works(self.provider) if w["compatibility"]["legacy_key"]=="t20-church-probe")
+        result=self.run_cli("show","--work",church["id"],"--include-status")
+        self.assertEqual(result.returncode,0,result.stderr)
+        self.assertIn("independently nonderivable",result.stdout)
+        self.assertIn("faithful FullPER validity",result.stdout)
+        for source in church["sources"]:
+            if source["role"]=="currentness":
+                self.assertIn(self.provider.read_bytes(source["path"],source["version"]).decode().strip(),result.stdout)
+        self.assertNotIn("## Historical source-fidelity review",result.stdout)
+
+    def test_claim_projection_and_work_review_route_tampering_rejected(self):
+        import copy
+        from search import load_claims, load_works, verify_work
+        claim=copy.deepcopy(load_claims(self.provider)[7])
+        claim["sources"]=[s for s in claim["sources"] if not any(p.startswith("/latest_own_activity_qualification/") for p in s["owner_pointers"])]
+        with self.assertRaisesRegex(Exception,"AUTHORITY_PROJECTION_DRIFT"):verify_work(self.provider,claim)
+        selector=copy.deepcopy(next(w for w in load_works(self.provider) if w["compatibility"]["legacy_key"]=="successor-certified-selector"))
+        selector["sources"]=[s for s in selector["sources"] if s.get("review_kind")!="source_owned_scientific"]
+        with self.assertRaisesRegex(Exception,"AUTHORITY_PROJECTION_DRIFT"):verify_work(self.provider,selector)
+
+    def test_valid_source_swap_wrong_role_title_and_omitted_review_fail(self):
+        import copy
+        from search import load_works, verify_work
+        works=load_works(self.provider)
+        fisher=next(w for w in works if w["compatibility"]["legacy_key"]=="fisher-audit")
+        unrelated=next(row for path,row in self.provider.occurrences.items() if path.endswith("README.md") and path not in {s["path"] for s in fisher["sources"]})
+        swapped=copy.deepcopy(fisher)
+        swapped["sources"][0]={**unrelated,"role":"primary","version":self.provider.baseline["commit"]}
+        wrongrole=copy.deepcopy(fisher);wrongrole["sources"][0]["role"]="review"
+        wrongtitle=copy.deepcopy(fisher);wrongtitle["title"]="Unsupported substituted title"
+        omitted=copy.deepcopy(fisher);omitted["sources"]=[x for x in omitted["sources"] if x["role"]!="review"]
+        for variant in (swapped,wrongrole,wrongtitle,omitted):
+            with self.subTest(kind=variant["title"],count=len(variant["sources"])):
+                with self.assertRaisesRegex(Exception,"AUTHORITY_PROJECTION_DRIFT"):verify_work(self.provider,variant)
+
+    def test_explicit_claim_transfer_review_is_not_reported_unlocated(self):
+        from search import work_edition
+        edition=work_edition(self.provider,"cumulative-indications-and-knowledge")
+        self.assertTrue(any(s["role"]=="review" and s.get("original_sha256","").startswith("775b7fb") for s in edition["sources"]))
+
+    def test_named_fulltext_has_qualification_and_no_historical_report(self):
+        from search import fulltext_search
+        result=fulltext_search(self.provider,"occasion",work="essential-whole-existence-independence")
+        self.assertTrue(result["complete"])
+        self.assertTrue(result["matches"])
+        self.assertFalse(any("C05-REVIEW" in m["path"] for m in result["matches"]))
+        self.assertIn("Not every research work",result["scope"])
 
 if __name__ == "__main__":
     unittest.main()
