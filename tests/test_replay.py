@@ -54,6 +54,20 @@ class ConsumerControls(unittest.TestCase):
                     {"name":"proofwidgets","inputRev":"v9.9.9","rev":wanted})
             self.assertEqual(run("rev-parse","HEAD",cwd=checkout),wanted)
 
+    def test_lake_prefixed_multiline_axiom_inventories_bind_original_names(self):
+        source="import T299.Basic\nopen AR8R.T299\n#print axioms positive\n#print axioms empty\n"
+        output=("info: T299/Receipts.lean:7:0: 'AR8R.T299.positive' depends on axioms: [propext,\n"
+                " Classical.choice,\n Quot.sound]\n"
+                "info: T299/Receipts.lean:8:0: 'AR8R.T299.empty' does not depend on any axioms\n")
+        got=replay.fable_inventories(output,source,2)
+        self.assertEqual(got,{"AR8R.T299.positive":["propext","Classical.choice","Quot.sound"],"AR8R.T299.empty":[]})
+        for bad in (output.replace("AR8R.T299.empty","AR8R.T299.foreign"),
+                    output.replace("AR8R.T299.empty","AR8R.T299.positive"),
+                    output.replace("Quot.sound","sorryAx"),
+                    output[:output.index("info: T299/Receipts.lean:8")]):
+            with self.subTest(output=bad):
+                with self.assertRaises(ValueError):replay.fable_inventories(bad,source,2)
+
     def test_complete_workflow_population_and_fixed_cases(self):
         self.assertEqual(len(self.spec["workflow"]["steps"]),71)
         self.assertEqual(sum(len(x["command"].splitlines()) for x in self.spec["workflow"]["steps"]),158)

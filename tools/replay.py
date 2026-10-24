@@ -200,6 +200,26 @@ def historical_native(context,case,session,python):
     return revision
 
 
+def fable_inventories(output, source, count):
+    """Bind Lake's prefixed diagnostics to every original receipt declaration."""
+    namespaces=re.findall(r"^open ([A-Za-z0-9_.]+)\s*$",source,re.M)
+    targets=re.findall(r"^#print axioms ([A-Za-z0-9_.]+)\s*$",source,re.M)
+    require(len(namespaces)==1 and len(targets)==count and len(set(targets))==count,
+            "Fable original receipt declaration population differs")
+    expected={name if name.startswith(namespaces[0]+".") else namespaces[0]+"."+name for name in targets}
+    pattern=r"^(?:info: [^\n]+:[0-9]+:[0-9]+: )?'([^']+)' (does not depend on any axioms|depends on axioms:\s*\[([^\]]*)\])\s*$"
+    found={}
+    for name,statement,listed in re.findall(pattern,output,re.M):
+        require(name not in found,"duplicate Fable axiom inventory")
+        axioms=[item.strip() for item in listed.split(",") if item.strip()]
+        require(set(axioms)<={"propext","Classical.choice","Quot.sound"},
+                "unsupported Fable axiom in original inventory")
+        found[name]=axioms
+    require(set(found)==expected and len(found)==count,"incomplete or substituted Fable original axiom inventories")
+    require(not re.search(r"\bsorryAx\b|\bPANIC\b|\berror:",output),"invalid Fable compiler diagnostic")
+    return found
+
+
 def run_fable(context,case,spec,session,args):
     """Build the repaired formal slice through its original Lake target."""
     import shutil
@@ -232,9 +252,10 @@ def run_fable(context,case,spec,session,args):
     lock_hash=sha256((project/"lake-manifest.json").read_bytes())
     env={"PATH":str(Path(args.lean_bin).absolute())+os.pathsep+session.env["PATH"]}
     output=session.run([lake,"build","T299"],project,env=env)
-    inventories=re.findall(r"^'([^']+)' (?:does not depend on any axioms|depends on axioms:\s*\[[^\]]*\])\s*$",output,re.M)
-    require(len(inventories)==case["axiom_inventory_count"],"incomplete Fable original axiom inventories")
-    require(not re.search(r"\bsorryAx\b|\bPANIC\b|\berror:",output),"invalid Fable compiler diagnostic")
+    inventories=fable_inventories(output,(project/"T299/Receipts.lean").read_text(),case["axiom_inventory_count"])
+    write_json(session.out/"ORIGINAL-AXIOM-INVENTORIES.json",inventories)
+    session.receipt["original_axiom_inventories"]=inventories
+    session.save()
     for path,digest in initial.items(): require(sha256((project/path).read_bytes())==digest,"Fable source changed")
     require(sha256((project/"lake-manifest.json").read_bytes())==lock_hash,"Lake changed the reviewed package lock")
     audit="import T299\n"

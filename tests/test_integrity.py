@@ -61,6 +61,68 @@ class CorpusIntegrity(unittest.TestCase):
         self.assertNotEqual(p.resolve_legacy(self.rows[0]["path"], "a"*40)["path"],
                             p.resolve_legacy(self.rows[2]["path"], "a"*40)["path"])
 
+    def alias_owners(self, disposition="REUSE", public_sha=None, conflict=False):
+        from source_provider import sha256
+        claim_path = "research/t20-v6-20261012/research-v6/foundations/CURRENT_FOUNDATIONAL_CLAIMS.json"
+        map_path = "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
+        alias = "historical-catalogue/objects/exact-theorem"
+        claims = {"claims":[{"canonical_source":{"canonical_byte_home":alias,"sha256":digest(self.a)},
+                             "supporting_sources":[{"original_read_path":"older/theorem-source.md",
+                              "canonical_byte_home":alias,"sha256":digest(self.a)}]}]}
+        if conflict:
+            claims["claims"].append({"canonical_source":{"canonical_byte_home":alias,"sha256":digest(self.b)}})
+        mapping = {"objects":[{"source_sha256":digest(self.a),"public_sha256":public_sha or digest(self.a),
+                              "repository_path":"papers/theorem.md","disposition":disposition}]}
+        for path,obj in ((claim_path,claims),(map_path,mapping)):
+            data=json.dumps(obj).encode()
+            self.rows.append(record(path,data))
+            (self.cache/"objects").mkdir(exist_ok=True)
+            (self.cache/"objects"/sha256(data)).write_bytes(data)
+        self.manifest["baseline"]["files"]=len(self.rows)
+        self.write_manifest()
+        return alias
+
+    def test_source_owned_alias_resolves_exact_public_bytes_and_keeps_logical_path(self):
+        self.cache_bytes()
+        alias=self.alias_owners()
+        p=self.provider(git_repo=False)
+        row=p.resolve_legacy(alias,"a"*40)
+        self.assertEqual(row["path"],"papers/theorem.md")
+        self.assertEqual(row["legacy_path"],alias)
+        self.assertEqual(p.read_bytes(alias),self.a)
+        self.assertEqual(p.read_bytes("older/theorem-source.md"),self.a)
+        self.assertIn("json_pointer",row["alias_owners"][0])
+
+    def test_source_owned_alias_requires_exact_public_equivalence(self):
+        self.cache_bytes()
+        alias=self.alias_owners(public_sha=digest(self.b))
+        with self.assertRaisesRegex(Exception,"CORRUPT|NONEXACT"):
+            self.provider(git_repo=False).read_bytes(alias)
+
+    def test_alias_does_not_substitute_projected_or_held_body(self):
+        for disposition,expected in (("PROJECT","NONEXACT"),("IDENTITY_ONLY","IDENTITY_ONLY")):
+            with self.subTest(disposition=disposition):
+                self.setUp()
+                self.cache_bytes()
+                alias=self.alias_owners(disposition=disposition)
+                with self.assertRaisesRegex(Exception,expected):
+                    self.provider(git_repo=False).read_bytes(alias)
+
+    def test_conflicting_alias_owner_is_rejected(self):
+        self.cache_bytes()
+        alias=self.alias_owners(conflict=True)
+        with self.assertRaisesRegex(Exception,"COLLISION|CORRUPT"):
+            self.provider(git_repo=False).read_bytes(alias)
+
+    def test_alias_has_no_newest_or_hash_basename_fallback(self):
+        self.cache_bytes()
+        alias=self.alias_owners()
+        p=self.provider(git_repo=False)
+        with self.assertRaisesRegex(Exception,"AMBIGUOUS_VERSION"):
+            p.resolve_legacy(alias,"b"*40)
+        with self.assertRaisesRegex(Exception,"UNAVAILABLE"):
+            p.read_bytes("some-other-catalogue/"+digest(self.a))
+
     def test_missing_has_explicit_unavailable_state(self):
         p = self.provider()
         with self.assertRaisesRegex(Exception, "NOT_CACHED|UNAVAILABLE"):

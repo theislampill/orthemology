@@ -147,6 +147,7 @@ class SourceProvider:
         self.offline = offline
         self.git_repo = None if git_repo is False else Path(git_repo or self.root)
         self._pack_cache = {}
+        self._alias_cache = None
         self.network_bytes = 0
         self.sources_used = {}
 
@@ -154,10 +155,73 @@ class SourceProvider:
         safe_path(path)
         if context is not None and context != self.baseline["commit"]:
             raise SourceError("AMBIGUOUS_VERSION", "supply an indexed exact edition; no latest fallback")
-        try:
+        if path in self.occurrences:
             return dict(self.occurrences[path])
-        except KeyError as exc:
-            raise SourceError("UNAVAILABLE", f"unindexed exact path: {path}") from exc
+        return self._resolve_source_alias(path)
+
+    def _resolve_source_alias(self, path):
+        """Resolve only aliases explicitly declared by preserved source owners.
+
+        The current claim register supplies logical names; the public projection
+        supplies eligibility and exact byte mapping. A matching digest elsewhere
+        in the repository is not by itself an alias or publication authority.
+        """
+        claim_path = "research/t20-v6-20261012/research-v6/foundations/CURRENT_FOUNDATIONAL_CLAIMS.json"
+        map_path = "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json"
+        if claim_path not in self.occurrences or map_path not in self.occurrences:
+            raise SourceError("UNAVAILABLE", f"unindexed exact path: {path}")
+        if self._alias_cache is None:
+            claims = load_json(self.read_bytes(claim_path, self.baseline["commit"]))
+            projection = load_json(self.read_bytes(map_path, self.baseline["commit"]))
+            mappings = {}
+            for item in projection.get("objects", []):
+                digest = item.get("source_sha256")
+                if not re.fullmatch("[0-9a-f]{64}", digest or "") or digest in mappings:
+                    raise SourceError("CORRUPT", "ambiguous public source mapping")
+                mappings[digest] = item
+            aliases = {}
+            for number, claim in enumerate(claims.get("claims", [])):
+                refs = [("canonical_source", claim.get("canonical_source", {}))]
+                refs += [(f"supporting_sources/{i}", ref)
+                         for i, ref in enumerate(claim.get("supporting_sources", []))]
+                if claim.get("canonical_reading_binding"):
+                    refs.append(("canonical_reading_binding", claim["canonical_reading_binding"]))
+                for pointer, ref in refs:
+                    digest = ref.get("sha256")
+                    if not re.fullmatch("[0-9a-f]{64}", digest or ""):
+                        raise SourceError("CORRUPT", "claim alias has no exact identity")
+                    names = [ref[key] for key in ("canonical_byte_home", "original_read_path", "path") if ref.get(key)]
+                    for name in names:
+                        safe_path(name)
+                        if name in aliases and aliases[name]["sha256"] != digest:
+                            raise SourceError("COLLISION", f"conflicting source-owned alias: {name}")
+                        if name in self.occurrences and self.occurrences[name]["sha256"] != digest:
+                            raise SourceError("COLLISION", f"alias disagrees with baseline occurrence: {name}")
+                        entry = aliases.setdefault(name, {"sha256":digest,"owners":[]})
+                        owner = {"path":claim_path,"sha256":self.occurrences[claim_path]["sha256"],
+                                 "json_pointer":f"/claims/{number}/{pointer}"}
+                        if owner not in entry["owners"]:
+                            entry["owners"].append(owner)
+            self._alias_cache = (aliases, mappings)
+        aliases, mappings = self._alias_cache
+        entry = aliases.get(path)
+        if entry is None:
+            raise SourceError("UNAVAILABLE", f"unindexed exact path: {path}")
+        mapping = mappings.get(entry["sha256"])
+        if mapping is None:
+            raise SourceError("UNAVAILABLE", "source-owned alias has no public eligibility mapping")
+        disposition = mapping.get("disposition")
+        if disposition in ("IDENTITY_ONLY", "NOT_PUBLISHED"):
+            raise SourceError("IDENTITY_ONLY", f"original body not available for public recovery: {path}")
+        if disposition not in ("REUSE", "ADD_EXACT") or mapping.get("public_sha256") != entry["sha256"]:
+            raise SourceError("NONEXACT_PROJECTION", f"public projection is not the original alias bytes: {path}")
+        target = mapping.get("repository_path")
+        row = self.occurrences.get(target)
+        if row is None or row["sha256"] != entry["sha256"]:
+            raise SourceError("CORRUPT", "source alias/public occurrence mismatch")
+        return {**row,"legacy_path":path,"alias_owners":entry["owners"],
+                "eligibility_owner":{"path":map_path,"sha256":self.occurrences[map_path]["sha256"]},
+                "alias_scope":"exact source-owned public equivalence; no scientific adoption"}
 
     def resolve(self, path, context=None):
         safe_path(path)
@@ -250,7 +314,7 @@ class SourceProvider:
             raise SourceError("NOT_CACHED", f"exact current edition unavailable: {path}")
         for pack in (row["pack"], self.manifest.get("fallback_pack")):
             if pack:
-                data = self._pack_bytes(pack, path)
+                data = self._pack_bytes(pack, row["path"])
                 if data is not None:
                     self.sources_used[path] = f"verified-archive:{pack}"
                     return verify_bytes(row, data)
@@ -263,7 +327,7 @@ class SourceProvider:
         if self.manifest.get("repository") != "https://github.com/theislampill/orthemology":
             raise SourceError("UNAVAILABLE", "unapproved source repository")
         url = ("https://raw.githubusercontent.com/theislampill/orthemology/"
-               + self.baseline["commit"] + "/" + urllib.parse.quote(path, safe="/"))
+               + self.baseline["commit"] + "/" + urllib.parse.quote(row["path"], safe="/"))
         try:
             with urllib.request.urlopen(url, timeout=30) as response:
                 data = response.read(row["bytes"] + 1)
