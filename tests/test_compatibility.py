@@ -360,6 +360,84 @@ class NamedReading(unittest.TestCase):
         self.assertNotIn("Traceback",rejected.stderr)
         self.assertEqual(rejected.stdout,"")
 
+    def test_inline_reading_is_exact_and_response_bounded(self):
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            spool=Path(area)/"reading.jsonl"
+            result=self.run_cli("read","--work",self.work["id"],"--spool",str(spool),
+                                "--inline-bytes","1048576")
+            self.assertEqual(result.returncode,0,result.stderr)
+            response=json.loads(result.stdout);frames=response["inline_frames"]
+            self.assertIsInstance(frames,list)
+            self.assertLessEqual(len(result.stdout.encode()),1048576)
+            canonical=lambda r:json.dumps(r,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()
+            self.assertEqual(b"".join(canonical(r)+b"\n" for r in frames),spool.read_bytes())
+            self.assertEqual(frames[-1]["reader_receipt"],"NOT_CONFIRMED")
+            recovered=self.run_cli("reading-index","--work",self.work["id"],"--input",str(spool))
+            self.assertEqual(recovered.returncode,0,recovered.stderr)
+            descriptor=json.loads(recovered.stdout)
+            self.assertNotIn("inline_frames",descriptor)
+            self.assertLessEqual(len(recovered.stdout.encode()),12289)
+            self.assertEqual(descriptor["sha256"],response["sha256"])
+            self.assertEqual(descriptor["pages"],response["pages"])
+
+    def test_inline_cap_counts_envelope_unicode_escaping_and_final_newline(self):
+        data=("\ufeff"+("\\fiṭrah\r\n"*1500)).encode()
+        changed=row(self.rows[0]["path"],data);self.rows[0]=changed
+        self.work["sources"][0]=dict(changed,role="primary",version="a"*40)
+        self.manifest["occurrences"]=self.rows
+        (self.root/"corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache/"objects"/changed["sha256"]).write_bytes(data);self.write_work()
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            def run(index,limit):
+                spool=Path(area)/f"reading-{index:03}.jsonl"
+                result=self.run_cli("read","--work",self.work["id"],"--spool",str(spool),
+                                    "--inline-bytes",str(limit))
+                self.assertEqual(result.returncode,0,result.stderr)
+                return result,json.loads(result.stdout)
+            first,_=run(0,1048576);second,_=run(1,len(first.stdout.encode()))
+            exact_size=len(second.stdout.encode())
+            exact,desc=run(2,exact_size)
+            self.assertEqual(len(exact.stdout.encode()),exact_size)
+            self.assertIsInstance(desc["inline_frames"],list)
+            small,desc=run(3,exact_size-1)
+            self.assertIsNone(desc["inline_frames"])
+            self.assertEqual(desc["inline_omitted"],"serialized response exceeds inline budget")
+            self.assertEqual(desc["reader_receipt"],"NOT_CONFIRMED")
+            self.assertLess(len(small.stdout.encode()),exact_size)
+
+    def test_inline_controls_refuse_invalid_budget_or_no_spool(self):
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            for value,extra in (("-1",True),("1048577",True),("1048576",False)):
+                path=Path(area)/"must-not-exist.jsonl"
+                args=["read","--work",self.work["id"],"--inline-bytes",value]
+                if extra:args+=["--spool",str(path)]
+                result=self.run_cli(*args)
+                self.assertNotEqual(result.returncode,0);self.assertIn("READING_FRAME",result.stderr)
+                self.assertEqual(result.stdout,"");self.assertFalse(path.exists())
+
+    def test_reading_index_authenticates_selected_owner_and_rejects_replaced_spool(self):
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            spool=Path(area)/"reading.jsonl"
+            good=self.run_cli("read","--work",self.work["id"],"--spool",str(spool))
+            self.assertEqual(good.returncode,0,good.stderr)
+            wrong=self.run_cli("reading-index","--work","other-work","--input",str(spool))
+            self.assertNotEqual(wrong.returncode,0);self.assertEqual(wrong.stdout,"")
+            raw=spool.read_bytes()
+            frames=[json.loads(line) for line in raw.splitlines()]
+            body=next(r for r in frames if r["type"]=="chunk" and r["payload"]==1)
+            body["text"]="x"+body["text"][1:];body["sha256"]=hashlib.sha256(body["text"].encode()).hexdigest()
+            canonical=lambda r:json.dumps(r,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode()
+            frames[-1]["stream_sha256"]=hashlib.sha256(b"".join(canonical(r)+b"\n" for r in frames[:-1])).hexdigest()
+            spool.write_bytes(b"".join(canonical(r)+b"\n" for r in frames))
+            bad=self.run_cli("reading-index","--work",self.work["id"],"--input",str(spool))
+            self.assertNotEqual(bad.returncode,0);self.assertEqual(bad.stdout,"")
+            spool.write_bytes(raw[:-1])
+            partial=self.run_cli("reading-index","--work",self.work["id"],"--input",str(spool))
+            self.assertNotEqual(partial.returncode,0);self.assertEqual(partial.stdout,"")
+            spool.write_bytes(raw)
+            wrong_version=self.run_cli("reading-index","--work",self.work["id"],"--version","b"*40,"--input",str(spool))
+            self.assertNotEqual(wrong_version.returncode,0);self.assertEqual(wrong_version.stdout,"")
+
     def test_read_spool_pages_deliver_large_body_without_monolithic_stdout(self):
         data=(b"Complete source body with exact hypotheses and limitations.\n"*24000)
         changed=row(self.rows[0]["path"],data);self.rows[0]=changed

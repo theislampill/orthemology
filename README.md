@@ -55,7 +55,8 @@ A tool client must deliver **every record automatically as a separate bounded re
 For ChatGPT code-mode, this is the ordinary named-reading adapter. Set `work` to the title returned by search and use the checkout/cache already selected for the session. This is one deliberate reading request; internal polling and frame notifications are automatic transport events. Any later manual source selection or recovery open is an additional action.
 
 ```javascript
-const work = "Normal forms and transport for supplied certified selectors";
+const work = "Normal forms and transport for supplied certified selectors"; // Exact listed title or ID.
+const version = null; // Or an explicitly selected indexed edition.
 const root = "/absolute/path/to/orthemology";
 const cache = "/absolute/path/to/research-cache";
 const spool = "/absolute/path/outside-checkout/new-reading.jsonl";
@@ -63,74 +64,221 @@ const metrics = "/absolute/path/outside-checkout/new-reading-metrics.json";
 const execution = {}; // Add only the host options authorised for this workspace.
 const quote = value => "'" + String(value).replaceAll("'", "'\"'\"'") + "'";
 const started = Date.now();
-async function invoke(argv) {
+async function invoke(argv, budget=60000) {
   let result = await tools.exec_command({
     ...execution, cmd: argv.map(quote).join(" "), workdir: root,
-    max_output_tokens: 60000, yield_time_ms: 1000
+    max_output_tokens: budget, yield_time_ms: 1000
   });
   let output = result.output;
   while (result.session_id) {
     result = await tools.write_stdin({
       session_id: result.session_id, chars: "",
-      max_output_tokens: 60000, yield_time_ms: 1000
+      max_output_tokens: budget, yield_time_ms: 1000
     });
     output += result.output;
   }
   return {output, exit_code: result.exit_code};
 }
-const prepared = await invoke([
-  "python", "-B", "tools/corpus.py", "--cache", cache, "--no-git-source",
-  "read", "--work", work, "--spool", spool, "--metrics", metrics
-]);
-if (prepared.exit_code !== 0 && prepared.exit_code !== 3)
-  throw new Error("Reading failed; no complete material may be inferred.");
-const descriptor = JSON.parse(prepared.output);
-let expectedOffset = 0;
-for (const page of descriptor.pages) {
-  if (page.offset !== expectedOffset || page.bytes < 1 || page.bytes > 98304)
-    throw new Error("Invalid reading page population.");
-  expectedOffset += page.bytes;
+const utf8 = text => {
+  const bytes = [];
+  for (const c of text) {
+    const n = c.codePointAt(0);
+    if (n >= 0xd800 && n <= 0xdfff) throw new Error("Invalid Unicode.");
+    if (n < 128) bytes.push(n);
+    else if (n < 2048) bytes.push(192 | n >> 6, 128 | n & 63);
+    else if (n < 65536) bytes.push(224 | n >> 12, 128 | n >> 6 & 63, 128 | n & 63);
+    else bytes.push(240 | n >> 18, 128 | n >> 12 & 63, 128 | n >> 6 & 63, 128 | n & 63);
+  }
+  return bytes;
+};
+// SHA-256 is a transport check here, not a substitute for the source provider.
+const sha256 = input => {
+  const bytes = [...input], bits = bytes.length * 8;
+  bytes.push(128);
+  while (bytes.length % 64 !== 56) bytes.push(0);
+  for (let i = 7; i >= 0; i--) bytes.push(Math.floor(bits / 2 ** (8 * i)) & 255);
+  const k = [
+    0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
+    0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,
+    0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
+    0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,
+    0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,
+    0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2
+  ];
+  const h = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const rotate = (n, b) => n >>> b | n << (32 - b);
+  for (let offset = 0; offset < bytes.length; offset += 64) {
+    const w = new Uint32Array(64);
+    for (let i = 0; i < 16; i++) w[i] = bytes[offset+4*i]<<24 | bytes[offset+4*i+1]<<16 | bytes[offset+4*i+2]<<8 | bytes[offset+4*i+3];
+    for (let i = 16; i < 64; i++) {
+      const x=w[i-15], y=w[i-2];
+      w[i]=(rotate(x,7)^rotate(x,18)^x>>>3)+w[i-16]+(rotate(y,17)^rotate(y,19)^y>>>10)+w[i-7];
+    }
+    let [a,b,c,d,e,f,g,j]=h;
+    for (let i = 0; i < 64; i++) {
+      const t1=(j+(rotate(e,6)^rotate(e,11)^rotate(e,25))+((e&f)^(~e&g))+k[i]+w[i])>>>0;
+      const t2=((rotate(a,2)^rotate(a,13)^rotate(a,22))+((a&b)^(a&c)^(b&c)))>>>0;
+      j=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=b;b=a;a=(t1+t2)>>>0;
+    }
+    [a,b,c,d,e,f,g,j].forEach((v,i)=>{h[i]=(h[i]+v)>>>0;});
+  }
+  return h.map(n=>n.toString(16).padStart(8,"0")).join("");
+};
+const canonical = value => {
+  if (Array.isArray(value)) return "[" + value.map(canonical).join(",") + "]";
+  if (value && typeof value === "object")
+    return "{" + Object.keys(value).sort().map(k=>JSON.stringify(k)+":"+canonical(value[k])).join(",") + "}";
+  if (typeof value === "number" && !Number.isSafeInteger(value)) throw new Error("Invalid integer.");
+  return JSON.stringify(value);
+};
+const digest = text => sha256(utf8(text));
+const ensure = (condition, detail) => { if (!condition) throw new Error(detail); };
+const integer = value => Number.isSafeInteger(value) && value >= 0;
+const hash = value => typeof value === "string" && /^[0-9a-f]{64}$/.test(value);
+const sameFields = (record, fields) => record && !Array.isArray(record) &&
+  Object.keys(record).sort().join(",") === fields.split(" ").sort().join(",");
+function validateIndex(d, selection, spool, version) {
+  const fields = "format path bytes sha256 records work title version complete_sources pages reader_receipt execution_credit";
+  let extra = "";
+  if (Object.hasOwn(d, "inline_frames")) extra += " inline_frames";
+  if (Object.hasOwn(d, "inline_omitted")) extra += " inline_omitted";
+  ensure(sameFields(d, fields + extra), "Invalid index fields.");
+  ensure(d.format === "orthemology-reading-spool-1" && d.path === spool &&
+    (d.work === selection || d.title === selection) && (!version || d.version === version) &&
+    typeof d.work === "string" && typeof d.title === "string" && typeof d.version === "string" &&
+    integer(d.bytes) && integer(d.records) && d.records >= 3 && hash(d.sha256) &&
+    typeof d.complete_sources === "boolean" && d.reader_receipt === "NOT_CONFIRMED" &&
+    d.execution_credit === false && Array.isArray(d.pages), "Wrong reading identity or unsupported claim.");
+  let offset = 0;
+  for (const page of d.pages) {
+    ensure(sameFields(page,"offset bytes sha256") && page.offset === offset &&
+      integer(page.bytes) && page.bytes > 0 && page.bytes <= 98304 && hash(page.sha256), "Invalid page index.");
+    offset += page.bytes;
+  }
+  ensure(offset === d.bytes, "Incomplete page population.");
 }
-if (expectedOffset !== descriptor.bytes)
-  throw new Error("Incomplete reading page index.");
-const pages = await Promise.allSettled(descriptor.pages.map(page => invoke([
-  "python", "-B", "tools/corpus.py", "reading-page", "--input", spool,
-  "--offset", page.offset, "--bytes", page.bytes, "--sha256", page.sha256
-])));
-const byteLength = text => Array.from(text).reduce((n, c) => {
-  const cp = c.codePointAt(0);
-  return n + (cp < 128 ? 1 : cp < 2048 ? 2 : cp < 65536 ? 3 : 4);
-}, 0);
-const frames = [];
-for (let i = 0; i < pages.length; i++) {
-  const page = pages[i];
-  if (page.status !== "fulfilled" || page.value.exit_code !== 0 ||
-      byteLength(page.value.output) !== descriptor.pages[i].bytes)
-    throw new Error("Missing, failed or truncated page; do not report receipt.");
-  const lines = page.value.output.split("\n");
-  if (lines.pop() !== "") throw new Error("Incomplete final record.");
-  frames.push(...lines.map(line => JSON.parse(line)));
+function validateFrames(d, frames) {
+  ensure(Array.isArray(frames) && frames.length === d.records, "Incomplete frame population.");
+  const fields = {
+    begin:"sequence type format work title version payload_count chunk_bytes",
+    payload:"sequence type payload kind bytes sha256 chunks source",
+    chunk:"sequence type payload offset bytes sha256 text",
+    end:"sequence type records stream_sha256 source_bodies source_bytes complete_sources reader_receipt execution_credit"
+  };
+  frames.forEach((r,i)=>ensure(r && sameFields(r,fields[r.type] || "") &&
+    r.sequence === i && utf8(canonical(r)).length <= 12288, "Invalid frame sequence or fields."));
+  const begin=frames[0], end=frames.at(-1);
+  ensure(begin.type === "begin" && begin.format === "orthemology-reading-1" &&
+    begin.work === d.work && begin.title === d.title && begin.version === d.version &&
+    integer(begin.payload_count) && begin.payload_count > 0 &&
+    integer(begin.chunk_bytes) && begin.chunk_bytes >= 64 && begin.chunk_bytes <= 8192 &&
+    end.type === "end" && end.records === frames.length && end.complete_sources === d.complete_sources &&
+    end.reader_receipt === "NOT_CONFIRMED" && end.execution_credit === false, "Incomplete identity/completion record.");
+  const lines=frames.map(canonical), wire=lines.join("\n")+"\n", raw=utf8(wire);
+  ensure(raw.length === d.bytes && sha256(raw) === d.sha256 &&
+    digest(lines.slice(0,-1).join("\n")+"\n") === end.stream_sha256, "Altered or truncated reading stream.");
+  for (const page of d.pages)
+    ensure(sha256(raw.slice(page.offset,page.offset+page.bytes)) === page.sha256, "Changed page binding.");
+  let position=1, sourceBytes=0, context;
+  for (let i=0; i<begin.payload_count; i++) {
+    const p=frames[position++];
+    ensure(p && p.type === "payload" && p.payload === i && p.kind === (i ? "source" : "context") &&
+      integer(p.bytes) && integer(p.chunks) && hash(p.sha256), "Invalid source population.");
+    let body="", bytes=0;
+    for (let j=0; j<p.chunks; j++) {
+      const c=frames[position++];
+      ensure(c && c.type === "chunk" && c.payload === i && c.offset === bytes &&
+        typeof c.text === "string" && integer(c.bytes) && c.bytes > 0 &&
+        c.bytes <= begin.chunk_bytes && utf8(c.text).length === c.bytes &&
+        digest(c.text) === c.sha256, "Corrupt or missing source chunk.");
+      body += c.text; bytes += c.bytes;
+    }
+    ensure(bytes === p.bytes && digest(body) === p.sha256, "Incomplete source body.");
+    if (i) {
+      ensure(sameFields(p.source,"path sha256 git_blob bytes mode role version") &&
+        p.source.sha256 === p.sha256 && p.source.bytes === p.bytes, "Source identity differs.");
+      sourceBytes += bytes;
+    } else {
+      ensure(p.source === null, "Unexpected context source.");
+      context=JSON.parse(body);
+    }
+  }
+  ensure(position === frames.length-1 && end.source_bodies === begin.payload_count-1 &&
+    end.source_bytes === sourceBytes && context.work.id === d.work && context.work.title === d.title &&
+    context.version === d.version && Array.isArray(context.unavailable_sources) &&
+    (context.unavailable_sources.length === 0) === d.complete_sources, "Scientific context or source population differs.");
+  return frames;
 }
-if (frames[0].type !== "begin" || frames.at(-1).type !== "end" ||
-    frames.at(-1).records !== frames.length || descriptor.records !== frames.length ||
-    frames.some((frame, index) => frame.sequence !== index))
-  throw new Error("Incomplete reading transport; do not report receipt.");
-store("orthemology-reading:" + spool, {descriptor, frames});
-const label = frames[0].title + " @ " + frames[0].version;
+
+const selected = ["--work",work,...(version ? ["--version",version] : [])];
+const base = ["python","-B","tools/corpus.py","--cache",cache,"--no-git-source"];
+const prepared = await invoke([...base,"read",...selected,"--spool",spool,
+  "--metrics",metrics,"--inline-bytes","1048576"],300000);
+store("orthemology-reading-capture:"+spool,prepared);
+ensure(prepared.exit_code === 0 || prepared.exit_code === 3,
+  "Source read failed; preserve the error. No complete material may be inferred.");
+let descriptor, frames, fallback = null;
+try {
+  descriptor=JSON.parse(prepared.output);
+  validateIndex(descriptor,work,spool,version);
+  if (Array.isArray(descriptor.inline_frames)) {
+    ensure(utf8(prepared.output).length <= 1048576, "Inline response exceeds its bound.");
+    frames=validateFrames(descriptor,descriptor.inline_frames);
+  } else {
+    ensure(descriptor.inline_frames === null &&
+      descriptor.inline_omitted === "serialized response exceeds inline budget" &&
+      utf8(prepared.output).length <= 12289, "Malformed inline omission.");
+  }
+} catch (error) {
+  fallback={event:"INITIAL_CAPTURE_REJECTED",reason:String(error)};
+  store("orthemology-reading-recovery:"+spool,{prepared,fallback});
+  // Authenticate the known spool against the original name/edition, not fields
+  // taken from the rejected response. There is one recovery, never recursive retry.
+  const recovered=await invoke([...base,"reading-index",...selected,"--input",spool],12000);
+  ensure(recovered.exit_code === 0 || recovered.exit_code === 3, "Owner-checked recovery failed.");
+  ensure(utf8(recovered.output).length <= 12289, "Recovered index exceeds its bound.");
+  descriptor=JSON.parse(recovered.output);
+  validateIndex(descriptor,work,spool,version);
+  store("orthemology-reading-recovery:"+spool,{prepared,fallback,recovered});
+}
+if (!frames) {
+  const pages=await Promise.allSettled(descriptor.pages.map(page=>invoke([
+    "python","-B","tools/corpus.py","reading-page","--input",spool,
+    "--offset",page.offset,"--bytes",page.bytes,"--sha256",page.sha256
+  ])));
+  store("orthemology-reading-pages:"+spool,pages);
+  frames=[];
+  for (let i=0; i<pages.length; i++) {
+    const page=pages[i], expected=descriptor.pages[i];
+    ensure(page.status === "fulfilled" && page.value.exit_code === 0 &&
+      utf8(page.value.output).length === expected.bytes &&
+      digest(page.value.output) === expected.sha256, "Missing, corrupt or truncated page.");
+    const lines=page.value.output.split("\n");
+    ensure(lines.pop() === "", "Incomplete final record.");
+    frames.push(...lines.map(line=>JSON.parse(line)));
+  }
+  validateFrames(descriptor,frames);
+}
+ensure((prepared.exit_code === 0) === descriptor.complete_sources, "Exit/completeness mismatch.");
+store("orthemology-reading:"+spool,{descriptor,frames,fallback});
+if (fallback) notify(fallback);
+const label=frames[0].title+" @ "+frames[0].version;
 for (const frame of frames) {
   if (frame.type === "chunk")
-    notify(label + " — reading frame " + frame.sequence + "; payload " + frame.payload +
-           "; source bytes [" + frame.offset + "," +
-           (frame.offset + frame.bytes) + "); SHA-256 " + frame.sha256 +
-           "\n" + frame.text);
+    notify(label+" — reading frame "+frame.sequence+"; payload "+frame.payload+
+      "; source bytes ["+frame.offset+","+(frame.offset+frame.bytes)+"); SHA-256 "+frame.sha256+
+      "\n"+frame.text);
   else notify(JSON.stringify(frame));
 }
-text({offered_records: frames.length, complete_sources: frames.at(-1).complete_sources,
-      elapsed_to_offer_seconds: (Date.now() - started) / 1000,
-      actual_reader_receipt: "AWAITING_READER_ACKNOWLEDGEMENT"});
+text({offered_records:frames.length,complete_sources:frames.at(-1).complete_sources,
+  elapsed_to_offer_seconds:(Date.now()-started)/1000,delivery:fallback ? "RECOVERED_PAGES" :
+    Array.isArray(descriptor.inline_frames) ? "INLINE" : "PAGES",
+  actual_reader_receipt:"AWAITING_READER_ACKNOWLEDGEMENT"});
 ```
 
-The adapter first writes one new external JSONL spool and receives a small page index. It retrieves whole-record pages in parallel, each at most 98,304 bytes, before offering every frame. This bounds the subprocess response as well as the displayed notifications. Existing files are never overwritten. A failed page, changed source, malformed record or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
+The adapter first writes one new external JSONL spool. If the complete serialized response fits 1,048,576 UTF-8 bytes, it validates and offers every frame from that single capture. Otherwise it retrieves authenticated whole-record pages in parallel, each at most 98,304 bytes. The limit includes the envelope, JSON escaping and final newline. An incomplete or malformed initial capture is retained and permits one explicit source-owner-checked reading-index recovery using the original title/ID, edition and spool path. It cannot select a replacement work from corrupt response fields. Complete frame, source, context and hash checks precede every notification. Existing files are never overwritten. A failed page, changed source, failed owner check or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
 
 Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. The source-route map records the last successful route for each logical path, not every transfer event; a cached reread cannot erase earlier bytes from the cumulative payload total. Metrics leave wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter times the combined source-retrieval, bounded-capture and notification-offer interval; source preflight is recorded separately in the metrics file. Actual receipt and cold/warm qualification still require the receiving reader's evidence.
 

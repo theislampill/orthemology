@@ -337,8 +337,8 @@ def _exclusive_reading_bytes(provider,path,data):
         raise
     return path
 
-def reading_spool(provider,path,records):
-    """One external JSONL spool; bounded whole-record pages, never frame folders."""
+def _reading_index(path,records):
+    """Describe canonical records without trusting a received index."""
     lines=[_record_bytes(record)+b"\n" for record in records]
     wire=b"".join(lines);pages=[];offset=0;page=b""
     for line in lines:
@@ -357,7 +357,39 @@ def reading_spool(provider,path,records):
     # a document reader with its own measured complete-delivery contract.
     if len(_record_bytes(result))>12288:
         raise SourceError("READING_FRAME","reading exceeds this adapter index bound; no partial spool created")
+    return result,wire
+
+def reading_spool(provider,path,records,inline_bytes=None):
+    """One exact spool; optionally return the complete bounded population inline."""
+    if inline_bytes is not None and (type(inline_bytes) is not int or not 0<=inline_bytes<=1048576):
+        raise SourceError("READING_FRAME","inline budget must be between 0 and 1048576")
+    result,wire=_reading_index(path,records)
+    if inline_bytes is not None:
+        inline={**result,"inline_frames":records}
+        # Count the actual response, not just source/spool bytes: include the
+        # envelope, JSON escaping, array separators and final printed newline.
+        if len(_record_bytes(inline))+1<=inline_bytes:
+            result=inline
+        else:
+            result={**result,"inline_frames":None,
+                    "inline_omitted":"serialized response exceeds inline budget"}
+            if len(_record_bytes(result))>12288:
+                raise SourceError("READING_FRAME","reading exceeds this adapter index bound; no partial spool created")
     _exclusive_reading_bytes(provider,path,wire)
+    return result
+
+def reading_index(provider,name,path,version=None):
+    """Recover a bounded index from original selection and authenticated bytes."""
+    records=load_reading_records(provider,name,path,version)
+    verify_reading_records(provider,name,records,version)
+    ordered=sorted(records,key=lambda record:record["sequence"])
+    result,expected=_reading_index(path,ordered)
+    with _regular_read(path) as source:
+        # One bounded reread rejects reordering, omitted final newline and any
+        # replacement between parsing and authentication. Page hashes protect
+        # later capture; a self-declared spool digest is never an identity root.
+        if os.fstat(source.fileno()).st_size!=len(expected) or source.read(len(expected)+1)!=expected:
+            raise SourceError("READING_RECEIPT","spool differs from the complete canonical selected reading")
     return result
 
 def reading_page(path,offset,size,digest):
@@ -512,6 +544,10 @@ def main(argv=None):
     framed.add_argument("--chunk-bytes",type=int,default=8192)
     framed.add_argument("--metrics",type=Path,help="new external file for provider payload/routes/preflight metrics")
     framed.add_argument("--spool",type=Path,help="new external JSONL file; return a bounded page index instead of full stdout")
+    framed.add_argument("--inline-bytes",type=int,help="with --spool, inline the complete response only within this bounded UTF-8 budget (0..1048576)")
+    index=sub.add_parser("reading-index",help="recover an owner-checked bounded index for an existing canonical reading spool")
+    index.add_argument("--work",required=True);index.add_argument("--version")
+    index.add_argument("--input",type=Path,required=True)
     page=sub.add_parser("reading-page",help="read one authenticated bounded page of an external reading spool")
     page.add_argument("--input",type=Path,required=True);page.add_argument("--offset",type=int,required=True)
     page.add_argument("--bytes",dest="page_bytes",type=int,required=True);page.add_argument("--sha256",required=True)
@@ -573,6 +609,8 @@ def main(argv=None):
             return show(provider,args.work,args.version,args.role,args.include_status,args.output,args.source)
 
         elif args.command=="read":
+            if args.inline_bytes is not None and (args.spool is None or not 0<=args.inline_bytes<=1048576):
+                raise SourceError("READING_FRAME","--inline-bytes requires --spool and a budget between 0 and 1048576")
             outputs=[path for path in (args.metrics,args.spool) if path is not None]
             if len({str(path.absolute()) for path in outputs})!=len(outputs):
                 raise SourceError("OUTPUT_BOUNDARY","metrics and source spool must have separate destinations")
@@ -589,11 +627,15 @@ def main(argv=None):
                          "scope":"received application payload bytes and source preflight only; excludes TLS/wire, presentation, attention and comprehension"}
                 _exclusive_reading_bytes(provider,args.metrics,_record_bytes(metrics)+b"\n")
             if args.spool:
-                print(_record_bytes(reading_spool(provider,args.spool,records)).decode("utf-8"))
+                print(_record_bytes(reading_spool(provider,args.spool,records,args.inline_bytes)).decode("utf-8"))
             else:
                 for record in records:
                     print(_record_bytes(record).decode("utf-8"),flush=True)
             return 0 if records[-1]["complete_sources"] else 3
+        elif args.command=="reading-index":
+            descriptor=reading_index(provider,args.work,args.input,args.version)
+            print(_record_bytes(descriptor).decode("utf-8"))
+            return 0 if descriptor["complete_sources"] else 3
         elif args.command=="verify-reading":
             records=load_reading_records(provider,args.work,args.input,args.version)
             receipt=verify_reading_records(provider,args.work,records,args.version)
