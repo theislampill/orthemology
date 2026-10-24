@@ -21,6 +21,39 @@ class ConsumerControls(unittest.TestCase):
         provider.occurrences=dict(self.provider.occurrences)
         return provider
 
+    def test_exact_upstream_release_tag_survives_pinned_shallow_acquisition(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);origin=root/"origin";origin.mkdir()
+            def run(*args,cwd=origin):
+                return subprocess.check_output(["git",*map(str,args)],cwd=cwd,
+                                               stderr=subprocess.DEVNULL,text=True).strip()
+            run("init","-b","main");(origin/"source").write_text("Exact official fixture.\n")
+            run("add","source");run("-c","user.name=Fixture","-c","user.email=fixture@example.test",
+                                     "-c","commit.gpgsign=false","commit","-m","official fixture")
+            wanted=run("rev-parse","HEAD");run("tag","v0.0.57")
+            (origin/"source").write_text("Different source.\n");run("add","source")
+            run("-c","user.name=Fixture","-c","user.email=fixture@example.test",
+                "-c","commit.gpgsign=false","commit","-m","different fixture")
+            run("tag","v9.9.9")
+            checkout=root/"checkout";checkout.mkdir();run("init",cwd=checkout)
+            run("remote","add","origin",origin,cwd=checkout)
+            run("fetch","--depth","1","origin",wanted,cwd=checkout)
+            run("checkout","--detach","FETCH_HEAD",cwd=checkout)
+            before=subprocess.run(["git","describe","--tags","--exact-match","HEAD"],
+                                  cwd=checkout,capture_output=True)
+            self.assertNotEqual(before.returncode,0)
+            session=replay.Session(root/"run")
+            got=replay.acquire_release_tag(session,checkout,
+                    {"name":"proofwidgets","inputRev":"v0.0.57","rev":wanted})
+            self.assertEqual(got["revision"],wanted)
+            self.assertEqual(run("describe","--tags","--exact-match","HEAD",cwd=checkout),"v0.0.57")
+            self.assertEqual(run("status","--porcelain",cwd=checkout),"")
+            with self.assertRaisesRegex(ValueError,"release tag.*revision"):
+                replay.acquire_release_tag(session,checkout,
+                    {"name":"proofwidgets","inputRev":"v9.9.9","rev":wanted})
+            self.assertEqual(run("rev-parse","HEAD",cwd=checkout),wanted)
+
     def test_complete_workflow_population_and_fixed_cases(self):
         self.assertEqual(len(self.spec["workflow"]["steps"]),71)
         self.assertEqual(sum(len(x["command"].splitlines()) for x in self.spec["workflow"]["steps"]),158)

@@ -74,22 +74,16 @@ jobs:
     name: Exact representative replay (${{ matrix.case }})
     # One named push requests a qualification campaign; ordinary follow-up
     # pushes and duplicate PR events do not repeat expensive suites.
-    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[qualify-replay]'))
+    # Scoped repair markers rerun only the affected Lean or publication family;
+    # successful unchanged selections retain their explicitly scoped evidence.
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && (contains(github.event.head_commit.message, '[qualify-replay]') || contains(github.event.head_commit.message, '[qualify-lean]') || contains(github.event.head_commit.message, '[qualify-publication]')))
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     strategy:
       fail-fast: false
       max-parallel: 2
       matrix:
-        case:
-          - family-computability
-          - erased-certificate-work-boundary
-          - hidden-parity-pruning
-          - json-certificate-reference
-          - finite-foundation-controls
-          - native-reference-and-formal
-          - fibre-certification
-          - governed-manuscript-publication
+        case: ${{ fromJSON(contains(github.event.head_commit.message, '[qualify-lean]') && '["family-computability","erased-certificate-work-boundary","hidden-parity-pruning","native-reference-and-formal","fibre-certification"]' || contains(github.event.head_commit.message, '[qualify-publication]') && '["governed-manuscript-publication"]' || '["family-computability","erased-certificate-work-boundary","hidden-parity-pruning","json-certificate-reference","finite-foundation-controls","native-reference-and-formal","fibre-certification","governed-manuscript-publication"]') }}
     steps:
       - uses: actions/checkout@v6
         with:

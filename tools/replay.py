@@ -404,6 +404,23 @@ def apply_ci_paths(session,path):
     if additions: session.env["PATH"]=os.pathsep.join(reversed(additions))+os.pathsep+session.env["PATH"]
     path.write_text("")
 
+def acquire_release_tag(session,repo,row):
+    """Receive the actual locked upstream tag; never manufacture a local tag."""
+    tag=row.get("inputRev")
+    require(isinstance(tag,str) and re.fullmatch(r"v[0-9]+(?:[.][0-9]+)+(?:[-.][A-Za-z0-9]+)*",tag),
+            "missing exact upstream release tag in pinned manifest")
+    ref="refs/tags/"+tag
+    session.run(["git","-C",repo,"check-ref-format",ref],session.out)
+    session.run(["git","-C",repo,"fetch","--depth","1","origin",ref+":"+ref],
+                session.out,timeout=300)
+    revision=git(repo,"rev-parse",ref+"^{commit}")
+    require(revision==row["rev"],"upstream release tag differs from pinned revision")
+    require(git(repo,"rev-parse","HEAD")==row["rev"],"release tag acquisition moved pinned revision")
+    receipt={"name":row["name"],"tag":tag,"revision":revision,
+             "scope":"exact upstream tag required by Lake release resolution"}
+    session.receipt.setdefault("release_tags",[]).append(receipt);session.save()
+    return receipt
+
 def provision(provider,spec,case,session,python):
     """Explicit network acquisition into a fresh external directory; no home install."""
     import shutil
@@ -455,6 +472,8 @@ def provision(provider,spec,case,session,python):
             session.run(["git","-C",repo,"fetch","--depth","1","origin",row["rev"]],session.out,timeout=300)
             session.run(["git","-C",repo,"checkout","--quiet","--detach","FETCH_HEAD"],session.out)
             require(git(repo,"rev-parse","HEAD")==row["rev"],"wrong acquired dependency")
+            if row["name"]=="proofwidgets":
+                acquire_release_tag(session,repo,row)
         result["MATHLIB_DIR"]=str(mathlib)
         session.run([binary/"lake","exe","cache","get"],mathlib,timeout=3600)
         modules=set()
@@ -523,11 +542,14 @@ def main(argv=None):
         if not session.receipt.get("native_edition"): session.receipt["post_source_verification"]=verify_workspace(provider,context)
         session.save();return 0
     except (Blocked,FileNotFoundError) as exc:
-        session.receipt.update(status="BLOCKED",error=str(exc),execution_credit=False);session.save();return 2
+        session.receipt.update(status="BLOCKED",error=str(exc),execution_credit=False);session.save()
+        print("BLOCKED: "+str(exc)+"; evidence: "+str(session.out/"RUN.json"),file=sys.stderr);return 2
     except TimeoutError as exc:
-        session.receipt.update(status="RESOURCE_INCONCLUSIVE",error=str(exc),execution_credit=False);session.save();return 1
+        session.receipt.update(status="RESOURCE_INCONCLUSIVE",error=str(exc),execution_credit=False);session.save()
+        print("RESOURCE_INCONCLUSIVE: "+str(exc)+"; evidence: "+str(session.out/"RUN.json"),file=sys.stderr);return 1
     except (ValueError,OSError,SourceError,ProcessFailure,subprocess.SubprocessError) as exc:
-        session.receipt.update(status="FAILED",error=str(exc),execution_credit=False);session.save();return 1
+        session.receipt.update(status="FAILED",error=str(exc),execution_credit=False);session.save()
+        print("FAILED: "+str(exc)+"; evidence: "+str(session.out/"RUN.json"),file=sys.stderr);return 1
 
     finally:
         if context is not None:
