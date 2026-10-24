@@ -1,0 +1,423 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Information, Composition, and Self-Revision: Local Descriptions and Operative Access},pdfsubject={Determination by local information and its preservation or alteration under operative self-revision},pdfauthor={},pdfkeywords={composition, marginal information, observational equivalence, self-revision, adaptive state identification}}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{2em}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Information, Composition, and Self-Revision}
+\fancyhead[R]{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cM}{\mathcal M}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cW}{\mathcal W}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Th}{\operatorname{Th}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\E}{\mathbb E}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+\begin{document}
+\begin{center}
+{\Large\bfseries Information, Composition, and Self-Revision}\\[4pt]
+{\large Local Descriptions and Operative Access}
+\end{center}
+\vspace{-5pt}
+\thispagestyle{plain}
+\begin{abstract}
+Local descriptions can permit a global invariant without determining whether the realised composition satisfies it. We characterise that distinction for finite relations and probability marginals, using one parity family in both settings. A linear-record criterion identifies when a specified transition has the same output law for every compatible input. Applied to an observing method, it yields equivalent conditions under which adaptive reconstruction preserves an observational ambiguity. An exact finite belief-state criterion addresses whether available actions can resolve an initial-state decision without irreversibly erasing needed distinctions. A reconnection example and a destructive-experiment counterexample separate these cases; a version-bound workflow applies the criteria to composed operations. Chemical and quantum examples delimit interpretation. The results distinguish a joint invariant from evidence for it, and a method's immediate access from its reachable repertoire. Neither mathematical compatibility nor successful inquiry certifies the model's premises, authorises the operation, or establishes improvement.
+\end{abstract}
+
+\section{Information about a composition}\label{sec:relations}
+Three binary components may occur jointly as
+\phantomsection\label{eq:three}
+\[
+K_0=\{000,011,101,110\},\qquad K_1=\{001,010,100,111\}.
+\]
+Every component takes both values and every pair takes all four combinations in either relation. Yet the first requires even parity and the second odd parity. Complete pair records do not decide which joint rule holds. Theorem~\ref{thm:parity} extends this example to arbitrary orders and probabilities; Section~\ref{sec:reconnection} shows how a method can reconstruct its access to the same distinction. What connects composition and observation is \emph{determination by a specified record}.
+
+\paragraph{The information criterion.}\label{par:factorisation}
+Let $\Omega$ be a nonempty set of possible systems, $\lambda:\Omega\to Z$ a record with known meaning, and $g:\Omega\to\{0,1\}$ a fixed decision. Then
+\begin{equation}\label{eq:factorisation}
+g=f\circ\lambda\text{ for some }f
+\quad\Longleftrightarrow\quad
+\lambda(w)=\lambda(v)\ \Longrightarrow\ g(w)=g(v).
+\end{equation}
+Here $f$ is defined on $\lambda(\Omega)$. Necessity is immediate; for sufficiency assign each fibre its common decision value. Deriving an unwritten consequence need not require new observation; separating alternatives merged by the record does. This set-theoretic factorisation needs no finiteness and gives no computability or cost guarantee~\cite{cost}. The constructions below use finite configuration spaces, although their probability-law families can be infinite. The same criterion also applies to admission over situations involving method descriptions of unbounded finite length (Section~\ref{sec:admission}); it supplies no algorithm for that unrestricted case.
+
+To apply it to composition, fix finite nonempty $X_1,\ldots,X_n$, $n\geq2$, and $X=\prod_iX_i$. A system is a nonempty relation $K\subseteq X$ of permitted joint configurations, not one observed configuration. Coordinates may encode states or bounded histories with fixed meanings. A relation can permit nondeterminism or have no input--output division.
+
+Let $\cH$ cover $\{1,\ldots,n\}$ by nonempty scopes, and let $R_S\subseteq\prod_{i\in S}X_i$ be exact nonempty descriptions. With coordinate projections $\pi_S$, define
+\begin{align}
+\cF_{\cH}(R)&=\{K\subseteq X:K\ne\varnothing,\ \pi_SK=R_S\text{ for every }S\in\cH\},\label{eq:family}\\
+J&=\bigcap_{S\in\cH}\pi_S^{-1}(R_S).\label{eq:join}
+\end{align}
+The natural join $J$ is standard~\cite{beeri,fagin}. Projection equality retains prohibitions \emph{and} possibilities, unlike safety inclusion alone. It asserts neither independent choice---local tuples can require different global completions---nor physical persistence through time.
+
+Every compatible $K$ lies in $J$, and
+\begin{equation}\label{eq:consistency}
+\cF_{\cH}(R)\ne\varnothing\quad\Longleftrightarrow\quad
+\pi_SJ=R_S\quad(S\in\cH).
+\end{equation}
+Indeed, $R_S=\pi_SK\subseteq\pi_SJ\subseteq R_S$ proves necessity; taking $K=J$ proves sufficiency. Assume consistency below. Inconsistent descriptions do not license vacuous guarantees. The record $\lambda_{\cH}(K)=(\pi_SK)_{S\in\cH}$ has fibre $\cF_{\cH}(R)$; the decision whether $K\subseteq P$ is an instance of~\eqref{eq:factorisation}.
+
+\section{Compatibility, warrant, and refinement}\label{sec:determination}
+For a predicate $p:X\to\{0,1\}$ put $P=\{x:p(x)=1\}$. It is an invariant of $K$ when $K\subseteq P$. A local predicate is compared on this common domain by lifting it through $\pi_S$: every invariant of $R_S$ thereby becomes an invariant of every compatible $K$.
+
+\begin{theorem}[Relational strengthening]\label{thm:relational}
+Put $G=J\cap P$. A compatible composition guaranteeing $p$ exists exactly when
+\begin{equation}\label{eq:existence}
+\pi_SG=R_S\quad(S\in\cH).
+\end{equation}
+Then $G$ is the largest such composition. Every compatible composition guarantees $p$ exactly when
+\begin{equation}\label{eq:entailment}
+J\subseteq P.
+\end{equation}
+\end{theorem}
+\begin{proof}
+If a compatible $K$ guarantees $p$, then $K\subseteq G\subseteq J$, so
+$R_S=\pi_SK\subseteq\pi_SG\subseteq\pi_SJ=R_S$.
+Conversely,~\eqref{eq:existence} makes $G$ nonempty and compatible, and it guarantees $p$. Every such $K$ lies in $G$. Finally, $J$ is compatible and contains every compatible relation, proving~\eqref{eq:entailment}.
+\end{proof}
+Thus a guarantee is \emph{automatic} if $J\subseteq P$; \emph{optional} if $J\nsubseteq P$ but~\eqref{eq:existence} holds; and \emph{impossible under exact preservation} if~\eqref{eq:existence} fails. Optionality means one compatible relation guarantees $p$ and another permits a violation, not necessarily that another guarantees $\neg p$. Impossibility means some local tuple lacks a $p$-satisfying completion, not that $P$ is empty. With unrestricted binary singletons, equality of two bits is optional, constant truth is automatic, and fixing the first bit to zero is impossible as a guarantee.
+
+For specified $K\in\cF_{\cH}(R)$, a \emph{further invariant relative to $\cH$} satisfies
+\begin{equation}\label{eq:further}
+K\subseteq P\quad\text{but}\quad J\nsubseteq P.
+\end{equation}
+A witness $x\in J\setminus P$ meets every local restriction but is excluded by $K$. Selecting $G$ establishes compatibility, not actual coupling. An independently warranted exclusive-OR device law establishes the three-bit example; ranges or desires do not.
+
+With $\Th(K)=\{P\subseteq X:K\subseteq P\}$,
+\begin{equation}\label{eq:theory}
+\Th(J)\subseteq\Th(K),\qquad
+\Th(J)\subsetneq\Th(K)\ \Longleftrightarrow\ K\subsetneq J.
+\end{equation}
+If $x\in J\setminus K$, excluding $x$ witnesses strictness. This orders semantic constraints, not names or value. A strict restriction need not add a predicate from a separately chosen relevant family; it can lose a valuable joint capability while preserving every local one. $K=J$ is also legitimate.
+
+\phantomsection\label{eq:fibre}For $x\in J$ let $F_S(x)=\{y\in J:\pi_Sy=\pi_Sx\}$.
+\begin{proposition}[Unique determination]\label{prop:unique}
+$\cF_{\cH}(R)=\{J\}$ exactly when each $x\in J$ has some scope $S$ with $F_S(x)=\{x\}$.
+\end{proposition}
+\begin{proof}
+Such an $x$ must be present: every compatible relation must realise $\pi_Sx$, whose only completion is $x$. If this holds for all $x$, that relation is $J$. Otherwise some $x$ has an alternative completion in every scope fibre. Deleting $x$ leaves a nonempty relation with unchanged projections, contradicting uniqueness.
+\end{proof}
+An independently known lossless decomposition $K=J$ recovers that particular $K$. The proposition instead asks whether local descriptions force it among all compatible relations. A justified restriction on candidate systems may suffice without this unrestricted criterion; it is an additional premise. Materialising $J$ may be exponentially expensive.
+
+\begin{proposition}[Refinement of the information baseline]\label{prop:scope}
+If $\cH\subseteq\cH'$, descriptions $R'$ extend $R$ on the same $X$, and $\cF_{\cH'}(R')\ne\varnothing$, then
+\begin{equation}\label{eq:refinement}
+\cF_{\cH'}(R')\subseteq\cF_{\cH}(R),\qquad J'\subseteq J.
+\end{equation}
+Automaticity and impossibility persist. Optionality may become automatic, remain optional, or become impossible.
+\end{proposition}
+\begin{proof}
+The larger set of projection equalities implies the smaller set, as do the tuple restrictions. The existential and universal tests are therefore restricted to a smaller nonempty family. For all three outcomes, start with three unrestricted binary singletons and $p(x)=[x_1=x_2]$. Add the pair description $\{00,11\}$, the full pair description, or $\{01,10\}$, respectively.
+\end{proof}
+If an actual $K^*$ guarantees $p$, true additional projections of that same $K^*$ cannot make $p$ impossible: $K^*$ remains a witness. Its furtherness can disappear as the baseline becomes sufficient. Discarding scopes can create apparent furtherness without changing the system. Replacing scopes by smaller ones is information loss only with corresponding projected descriptions; changing coordinate meanings is not refinement. Scope dependence here is consonant with Ryan's account~\cite{ryan}, without adopting its metaphysical conclusions.
+
+\section{Probability and the same compositional ambiguity}\label{sec:probability}
+\phantomsection\label{eq:simplex}Support forgets weights. Let $\Delta(X)=\{\mu:X\to\mathbb R_{\geq0}:\sum_x\mu(x)=1\}$. Configurations embed as $\delta_x$; a relation is not a pure strategy. Independent choices $\sigma_i\in\Delta(X_i)$ give a product law. For an observable $u$,
+\begin{equation}\label{eq:mixed}
+U(\sigma_1,\ldots,\sigma_n)=\sum_xu(x)\prod_i\sigma_i(x_i),
+\qquad \E_\mu[u]=\sum_xu(x)\mu(x).
+\end{equation}
+The first is multilinear, affine on each simplex: Nash's ``polylinear'' form~\cite{nash}. The second is linear in an arbitrary joint law; coupling requires allowing correlations. Neither supplies a game, incentive constraints, correlated equilibrium or physical transformation. Nash's existence argument additionally uses compact convex strategy spaces and best-response/fixed-point structure.
+
+For specified local laws $m_S$ let
+\begin{equation}\label{eq:marginal}
+\mu_S(x_S)=\sum_{x:\pi_Sx=x_S}\mu(x),\qquad
+\cM_{\cH}(m)=\{\mu\in\Delta(X):\mu_S=m_S\ (S\in\cH)\}.
+\end{equation}
+This marginal-extension problem has established ancestry~\cite{vorobev}. When nonempty, $\cM_{\cH}(m)$ is a compact convex polytope. Nonnegativity gives
+\begin{equation}\label{eq:support}
+\supp(\mu_S)=\pi_S(\supp\mu),
+\end{equation}
+since a finite sum is positive exactly when some summand is. A compatible law thus supplies compatible supports, but not conversely for prescribed weights. Agreement on overlapping scopes is not sufficient either.
+
+For every pair of three binary variables, prescribe
+\begin{equation}\label{eq:incompatible}
+m_{ij}(00)=m_{ij}(11)=\tfrac1{20},\qquad
+m_{ij}(01)=m_{ij}(10)=\tfrac9{20}.
+\end{equation}
+All singleton marginals are fair and pair supports full. Yet each triple has at most two disagreeing pairs, whereas the marginals demand an expected $27/10>2$. No joint law exists. This violates the next proposition's nonempty-family premise; it is not an additional status within it.
+
+\begin{proposition}[Probabilistic feasibility and warrant]\label{prop:probability}
+For $\cM=\cM_{\cH}(m)\ne\varnothing$, $P\subseteq X$, and $\alpha\in[0,1]$, put
+\begin{equation}\label{eq:bounds}
+L_P=\min_{\mu\in\cM}\mu(P),\qquad U_P=\max_{\mu\in\cM}\mu(P).
+\end{equation}
+The requirement $\mu(P)\geq\alpha$ is automatic exactly when $L_P\geq\alpha$, optional exactly when $L_P<\alpha\leq U_P$, and impossible exactly when $U_P<\alpha$. Almost-sure guarantees set $\alpha=1$.
+\end{proposition}
+\begin{proof}
+The objective is continuous and linear on a nonempty compact polytope, so its extrema are attained. The minimum tests every feasible law and the maximum the existence of one, giving the alternatives.
+\end{proof}
+No greatest normalised law replaces $J$: pointwise $\mu\leq\nu$ implies equality. Conditioning on $P$ can change marginals. The test is therefore linear optimisation, potentially exponentially large, not intersection and renormalisation. An impossible almost-sure guarantee can still have positive probability. An expectation is determined exactly when its extrema coincide; an optional guarantee still needs evidence of the realised coupling.
+
+\subsection{A shared witness at every order}\label{sec:parity}
+Higher-order parity dependence is familiar~\cite{schneidman}. One calculation identifies both missing co-occurrence and missing probability information.
+\begin{theorem}[Parity and all proper subsystems]\label{thm:parity}
+For $n\geq2$, write $\chi(x)=(-1)^{x_1+\cdots+x_n}$ on $\{0,1\}^n$, and set
+\begin{equation}\label{eq:paritylaws}
+K_b=\{x:x_1\oplus\cdots\oplus x_n=b\},\qquad
+\mu_t(x)=2^{-n}(1+t\chi(x)),\quad -1\leq t\leq1.
+\end{equation}
+$K_0,K_1$ project fully onto every proper scope and satisfy opposite parity invariants. All $\mu_t$ have uniform proper marginals, but
+\begin{equation}\label{eq:paritymoments}
+\E_{\mu_t}[\chi]=t,\qquad \mu_t(K_0)=(1+t)/2.
+\end{equation}
+Interior parameters have the same full support; the endpoints are uniform on $K_0$ and $K_1$, respectively.
+\end{theorem}
+\begin{proof}
+Extend any proper-scope assignment by choosing all but one remaining bit freely and the last for parity $b$. Thus both relations project fully. For the laws, $|t|\leq1$ gives nonnegativity and $\sum_x\chi(x)=0$ gives normalisation. Summing over an omitted bit cancels $\chi$, leaving mass $2^{-|S|}$. Since $\chi^2=1$, its expectation is $t$; use $\ind_{K_0}=(1+\chi)/2$ for the event probability. Positivity and endpoint supports follow directly.
+\end{proof}
+Joining all proper projections yields the full product, losing parity entirely. For any fixed scope bound $k\geq1$, take $n=k+1$ to defeat universal completeness. Interior laws share support and almost-sure configuration invariants while differing statistically. Processing these identical records cannot separate them.
+
+A full observation of one actual configuration determines its parity, not an invariant of an otherwise unrestricted relation. It distinguishes $K_0$ from $K_1$ only when these are independently established as exhaustive alternatives. Interaction laws or justified lossless model restrictions supply additional information, not exceptions to the obstruction.
+
+\section{Operations on information left undetermined}\label{sec:transformation}
+Unlike refinement of a description, a transition changes configurations. Fixed systems can have probabilities; deterministic or set-valued dynamics can change constituent kinds. These extensions are independent. Temporal coordinates alone supply no generating law or endpoint identity criteria.
+
+Let finite nonempty $X^-,X^+$ describe antecedents and successors, possibly with different factorisations. A relation $C\subseteq X^-\times X^+$ specifies allowed transitions. A kernel $T(y\mid x)\geq0$, $\sum_yT(y\mid x)=1$, supported on $C$ requires a successor for each modelled input and induces
+\begin{equation}\label{eq:pushforward}
+(T_*\mu)(y)=\sum_{x\in X^-}T(y\mid x)\mu(x).
+\end{equation}
+A map $f$ is the special case $T(y\mid x)=\ind_{\{f(x)=y\}}$; identical endpoint spaces are permitted. Meanings of retained and changed identities must be supplied. Nonempty $C$ establishes model possibility, not occurrence.
+
+A linear record $A\mu$ may collect marginals (Section~\ref{sec:probability}) or group probabilities by a reported observation (Section~\ref{sec:congruence}). Both retain total mass: equal records imply equal mass. Do inputs with the same record necessarily produce the same output law?
+
+\begin{proposition}[Output determination on the feasible support]\label{prop:channel}
+Let $A$ be a linear record map on signed laws on $X^-$, with $\ker A\subseteq\{d:\sum_xd(x)=0\}$, and let $\cM=\{\mu\in\Delta(X^-):A\mu=m\}\ne\varnothing$. Set
+\begin{equation}\label{eq:directions}
+D=\Span\{\mu-\nu:\mu,\nu\in\cM\},\qquad
+S=\bigcup_{\mu\in\cM}\supp\mu.
+\end{equation}
+The output law is constant on $\cM$ exactly when $T_*D=\{0\}$, and
+\begin{equation}\label{eq:activekernel}
+D=\{d\in\ker A:d(x)=0\text{ for }x\notin S\}.
+\end{equation}
+If a feasible law is strictly positive on $X^-$, constancy is equivalent to $\ker A\subseteq\ker T_*$.
+\end{proposition}
+\begin{proof}
+Linearity gives the first equivalence. Feasible differences belong to $\ker A$ and vanish off $S$. Conversely, average one feasible law positive at each $x\in S$, obtaining $\mu_0$ positive throughout $S$. For $d\in\ker A$ supported there, the hypothesis gives $\sum_xd(x)=0$. Finiteness permits $\varepsilon>0$ with $\mu_0\pm\varepsilon d$ nonnegative, normalised and feasible. Their difference $2\varepsilon d$ proves~\eqref{eq:activekernel}. Full positivity makes $S=X^-$.
+\end{proof}
+The directions in $D$ represent input differences the record leaves unresolved; output determination requires the channel to erase them all. The support qualification matters. Binary singleton marginals concentrated at zero force $\cM=\{\delta_{00}\}$, so every channel is constant on it. Yet the unrestricted marginal kernel contains $(1,-1,-1,1)$, in order $00,01,10,11$, which the identity channel does not annihilate. This is not a feasible direction at that boundary.
+
+A parity-output channel sends $\mu_1,\mu_{-1}$ to opposite point masses; a reset sends all inputs to one output. A process can expose, preserve, or erase joint information. These are claims about specified transitions, not proof that a device or physical process implements them.
+
+\paragraph{Preserving an observable.}\label{par:conservation}
+For specified $q^-:X^-\to V$ and $q^+:X^+\to V$, suppose $q^+(y)=q^-(x)$ whenever $T(y\mid x)>0$. Then
+\begin{equation}\label{eq:conservation}
+(q^+)_*(T_*\mu)=(q^-)_*\mu.
+\end{equation}
+Indeed, summing~\eqref{eq:pushforward} over $q^+(y)=v$ gives $\sum_{x:q^-(x)=v}\mu(x)$. This preserves the distribution of the specified observable, not the entire output law. Conservation is a process premise to check, not a consequence of local completeness; Section~\ref{sec:chemistry} illustrates it.
+
+\paragraph{The bridge to an observing method.}\label{par:bridge}
+Equation~\eqref{eq:factorisation} tests constancy of an answer on a record fibre; Proposition~\ref{prop:channel} tests constancy of an output law on a linear-record fibre. For an action reconstructing an observing method, the question becomes whether its \emph{next observation} factors through the present one. The next theorem makes this connection without identifying systems, configurations and laws.
+
+\section{Self-revision and operative access}\label{sec:self}
+An incoming tradition can supply propositions and descriptions of operations: ways of questioning, communicating, testing, coordinating and revising. An admitted operation may become part of the machinery interpreting subsequent intake, including intake about that machinery. A product of composition thereby becomes an operator of later composition, including reconstruction of that machinery. An initial interpreter and inherited history are presupposed, not created from nothing. Reflection and reconfigurable feedback architectures provide computational precedents~\cite{foote,vogel}.
+
+Represent a coupled situation by $w=(M,e)$, with operative method configuration $M$ and environment $e$. Operations may alter either. This is open and operative: a request is not a response, a predicted effect is not its observation, and receiving an operation is not permission to execute it. The mathematical issue is what those interactions can distinguish.
+
+\subsection{When reconstruction preserves the obstruction}\label{sec:congruence}
+Fix finite nonempty $W$, observations $\ell:W\to Z$, and a finite common repertoire $\cA$ of authorised deterministic maps $a:W\to W$. Their meanings are model premises. A fixed $\ell(M,e)$ can include a changing sensor configuration $M$; finite $W$ bounds the represented changes.
+
+The controller has a common known initial control state and chooses an action or verdict from observation--action history. \emph{Equal histories must force equal choices}, including changes to its code or memory. This is the observation-based restriction, not a requirement to print code: hidden initial advice about the true state would violate it. There is no unmodelled noise, autonomous drift or reset. The target is $g(w_0)$ for the initial state, not $g(w_t)$ after mutation. Uniform soundness requires a verdict correct for every initial possibility compatible with its history.
+
+\begin{theorem}[Observation congruence]\label{thm:congruence}
+For each action $a$, the following are equivalent:
+\begin{align}
+\ell(w)=\ell(v)&\ \Longrightarrow\ \ell(a(w))=\ell(a(v)),\label{eq:congruence}\\
+\ell\circ a&=\bar a\circ\ell\quad\text{for some }\bar a:\ell(W)\to\ell(W),\label{eq:quotientaction}\\
+\ker L&\subseteq\ker(La_*),\qquad L=\ell_* .\label{eq:linearcongruence}
+\end{align}
+If they hold for every $a\in\cA$, every observation-based controller has identical histories and terminating verdicts from equally observed initial states. No such controller can soundly decide a target separating two of those states.
+\end{theorem}
+\begin{proof}
+Under~\eqref{eq:congruence}, define $\bar a(\ell(w))=\ell(a(w))$; this is well-defined. Conversely,~\eqref{eq:quotientaction} implies~\eqref{eq:congruence}. The signed-measure kernel $\ker L$ is spanned by $\delta_w-\delta_v$ from equal-observation pairs. Their images under $La_*$ vanish exactly under~\eqref{eq:congruence}. Finally, equal histories force the same choice; equal observations remain equal after that action. Induction gives identical histories, and a common verdict cannot equal opposite target values.
+\end{proof}
+An action's observable output is a transition channel. Proposition~\ref{prop:channel} tests constancy on a fixed observation marginal; doing so on every observation fibre gives~\eqref{eq:linearcongruence}. Factorisation through the old record is exactly what prevents the action from supplying a new distinction.
+
+This standard invariance argument belongs beside the established theory of adaptive state identification~\cite{bos}. Congruence is sufficient for a target's non-identifiability, not necessary. Its failure can separate irrelevant states or destroy another needed distinction. It forbids neither deductions from sufficient premises nor a common remedy acceptable in every unresolved case. An informative relation may be internal or environmental; its location is not the criterion.
+
+\subsection{The same composition made observable}\label{sec:reconnection}
+Take an external composition independently known to be $K_0$ or $K_1$ from Theorem~\ref{thm:parity}. Encode its parity law by a stable bit $b$. A method's setting $s=0$ exposes only the identical proper-scope descriptions; $s=1$ connects a joint parity observation. Relabelling these observations gives the four-state model
+\begin{equation}\label{eq:reconnection}
+W=\{(s,b):s,b\in\{0,1\}\},\qquad
+\ell(s,b)=(s,sb),\qquad u(s,b)=(1,b).
+\end{equation}
+A concrete method combines a scope-record interpreter, an authorised connector implementing $u$, and a reader reporting $\ell$. On the observation $(0,0)$ it leaves the answer unresolved, reconnects, reads again, and returns the second coordinate of $(1,b)$; if already connected, it returns that coordinate directly. The connector supplies no verdict and the disconnected reader cannot distinguish the alternatives. Their composition decides while reconstructing its own observation path. These are specified interfaces, not a tested apparatus. In particular,
+\begin{equation}\label{eq:gain}
+D(s)=\ind\{\ell(s,0)\ne\ell(s,1)\},\qquad D(0)=0,\quad D(1)=1.
+\end{equation}
+For $d=\delta_{(0,0)}-\delta_{(0,1)}$, $Ld=0$ but $Lu_*d\ne0$. The operation violates the precise preservation condition of Theorem~\ref{thm:congruence}; it is not a counterexample to it.
+
+The example assumes an accurate joint observation and the exhaustive two-relation hypothesis. A single sample cannot establish an invariant of an unrestricted unknown relation. No claim of real sensor reliability or safe reconnection follows from specifying these maps. Their primitive meanings remain fixed while the arrangement changes; exact pre/post projection equality is not asserted.
+
+This is an increase in \emph{immediate} access. The predecessor, with its inherited repertoire, already had a reachable way to discriminate. Reconstruction actualises that capability; it does not create evidence from nothing or demonstrate an expansion beyond every previously reachable operation. New repertoire intake would require additional semantics. Here inherited material helps constitute the method, which uses it to reconstruct itself; evidence comes through the changed relation to the world, not through self-endorsement.
+
+\subsection{A strategy must preserve the needed distinctions}\label{sec:belief}
+An action exposing one distinction can erase another. Let $C_0\subseteq W$ be nonempty and $g:C_0\to\{0,1\}$. After initial observation $z$, retain a labelled belief
+\begin{equation}\label{eq:initialbelief}
+B_z=\{(w,g(w)):w\in C_0,\ \ell(w)=z\}.
+\end{equation}
+The label records the answer about the \emph{initial} state, even when different initial states merge. For a current belief $B$ and next observation $z$, set
+\begin{equation}\label{eq:beliefupdate}
+B_{a,z}=\{(a(w),b):(w,b)\in B,\ \ell(a(w))=z\}.
+\end{equation}
+The symbolic alternatives guide action; the actual response selects the successor. Consider nonempty beliefs whose current states share an observation. Let $\cW_0$ consist exactly of those with a single answer label, and define
+\begin{equation}\label{eq:attractor}
+\begin{split}
+\cW_{k+1}&=\cW_k\cup\{B:\exists a\in\cA\ \forall z\text{ with }B_{a,z}\ne\varnothing,\ B_{a,z}\in\cW_k\},\\
+\cW_*&=\bigcup_{k\geq0}\cW_k.
+\end{split}
+\end{equation}
+\begin{theorem}[Sure finite decision]\label{thm:decision}
+There exists a uniformly sound controller terminating on every possibility in $B$ exactly when $B\in\cW_*$. The initial problem is solvable exactly when every nonempty $B_z$ belongs to $\cW_*$.
+\end{theorem}
+\begin{proof}
+A rank-zero belief permits its single label as verdict. At positive least rank choose a witnessing action; every successor has smaller rank, so the policy terminates soundly. Conversely, a sound policy terminating on a finite belief has a finite maximum run length: each initial state--label pair has one deterministic run. At length zero only one label is possible. Induction on maximum length places each successor in the preceding rank set and hence places the original belief in~\eqref{eq:attractor}. Apply this after each initial observation.
+\end{proof}
+This established backward-reachability construction~\cite{bos} stabilises over at most $2^{2|W|}-1$ nonempty labelled beliefs. It is not an undecidability result or a total engineering-cost optimum: model construction has its own cost. Noise, stochasticity or unbounded dynamics need further arguments. State-dependent permissions would require legality in every remaining state and explicit modelling of observable refusals.
+
+\paragraph{A destructive experiment.}\label{par:destructive}
+Let initial states $p,q,r$ share observation $?$, with $g(p)=g(q)=0$, $g(r)=1$. Add two absorbing states $t_0,t_1$ observed as $0,1$. Actions $a,b$ fix the absorbing states and act as follows:
+\begin{center}
+\begin{tabular}{c@{\qquad}cc@{\qquad}c}
+\toprule Initial state & $a$ & $b$ & Required initial label\\\midrule
+$p$ & $t_1$ & $t_0$ & $0$\\
+$q$ & $t_0$ & $t_1$ & $0$\\
+$r$ & $t_0$ & $t_0$ & $1$\\\bottomrule
+\end{tabular}
+\end{center}
+Every pair is separately distinguishable: $a$ separates $p,q$ and $p,r$; $b$ separates $q,r$. But starting with $a$ may merge $(q,0),(r,1)$ into $\{(t_0,0),(t_0,1)\}$ forever; starting with $b$ may merge $(p,0),(r,1)$. No policy solves the whole population, although both actions violate congruence. These are five states, three initially possible. A known current state after erasure does not determine its initial label. Resettable copies would change the problem.
+
+In contrast, the reconnection belief has rank one: its first action separates without destructive ambiguity. Pairwise distinguishing experiments and one successful strategy have different quantifier orders. This difference matters whenever an inquiry changes the composition it examines, including its own observing machinery.
+
+\subsection{A version-bound workflow}\label{sec:workflow}
+Consider three supplied operation interfaces: a dispatcher for two independently qualified jobs; an interrupt handler that records a reported fault; and an acceptance operation guarded by evidence. Guarded execution has established semantics~\cite{dijkstra}; these interfaces are a specified example, not a reconstruction of an entire engineering tradition.
+
+Let $Q=\{\alpha,\beta\}$ label immutable candidate versions, including their material acceptance context; a label is not reused for changed content or context. At one acceptance boundary, $q\in Q$ is current, $e_i\in E=Q\cup\{\bot\}$ is job $i$'s verification receipt, $b\in\{0,1\}$ records an interrupt, and $c\in\{\mathtt{open},\mathtt{complete}\}$ is the boundary verdict. The meaning of $e_i=r$ is that job $i$ was verified for candidate $r$; $\bot$ means no receipt. Version-bound acceptance checks these receipts against the current candidate identity at the protected boundary. Accuracy of receipt meaning is a premise, not established by the token.
+
+Jobs may finish in either order or overlap under the \emph{noninterference assumption}: neither invalidates state or evidence required by the other. This is an implementation premise, not a consequence of the interface names. The handler sets $b=1$ on a reported fault. Acceptance compares both receipts with the current candidate and checks $b=0$ at the same protected boundary; deferral remains available. These rules permit exactly the boundary records
+\begin{equation}\label{eq:workflow}
+\begin{split}
+X_{\rm rec}&=Q\times E^2\times\{0,1\}\times\{\mathtt{open},\mathtt{complete}\},\\
+K_{\rm gate}&=\{(q,e_1,e_2,b,c)\in X_{\rm rec}:\ c=\mathtt{complete}\Rightarrow(b=0\land e_1=e_2=q)\}.
+\end{split}
+\end{equation}
+Take singleton record scopes with full coordinate ranges. Their join is $X_{\rm rec}$. Every such local possibility survives in $K_{\rm gate}$: choose $c=\mathtt{open}$ to realise any input coordinate; realise $c=\mathtt{complete}$ by matching both receipts and clearing $b$. Yet $(\beta,\alpha,\alpha,0,\mathtt{complete})$ belongs to the join and not $K_{\rm gate}$. The acceptance implication is therefore a further invariant by~\eqref{eq:further}. Its warrant is the joint guard, not the local ranges. This preserves the declared record projections, not every temporal property of the mechanisms. It establishes neither eventual completion nor a speedup from parallelism.
+
+For readiness, omit $c$ and write $y=(q,e_1,e_2,b)$, $g(y)=\ind\{b=0\land e_1=e_2=q\}$. A coarse report and a binding-aware report are
+\begin{equation}\label{eq:workflowaccess}
+\ell_0(y)=(b,\ind\{e_1\ne\bot\},\ind\{e_2\ne\bot\}),\qquad
+\ell_1(y)=(q,e_1,e_2,b).
+\end{equation}
+The states $(\beta,\alpha,\alpha,0)$ and $(\beta,\beta,\beta,0)$ share $\ell_0$ but require opposite readiness decisions. Equation~\eqref{eq:factorisation} rules out deciding $g$ from that report. Under observation-congruent actions, reformatting it cannot help (Theorem~\ref{thm:congruence}). An inherited, authorised connector to the stored candidate bindings changes access to $\ell_1$, just as in Section~\ref{sec:reconnection}; a subsequent read decides $g$ without changing the candidates or receipts. A connection acknowledgement alone does not. Inherited dispatch, interruption and verification operations can thus participate in a method that reconstructs its own reading interface, rather than merely processing another report.
+
+All guard-relevant state $(q,e_1,e_2,b)$ must remain stable from a coherent read through the verdict's effect, or be jointly revalidated with publication as one atomic operation. Otherwise an interrupt or receipt change after the check can permit a stale completion. Linearizability supplies a standard specification of an indivisible effect amid concurrent operations~\cite{herlihywing}; it must cover the combined guard-and-publication operation, not merely individual field reads. The verdict concerns the state at that effect, not uninterrupted validity until or after the response. A later material change opens a new acceptance boundary; it does not rewrite the old verdict's scope. Noninterference, receipt accuracy, interface reliability and boundary protection require evidence in an implementation~\cite{abadi}. The construction certifies none of them.
+
+\subsection{Permission and subsequent warrant}\label{sec:admission}\label{par:authority}
+Permission to construct or measure a method is not admission for use. Fix a proposed revision, a nonempty space $\Omega$ of relevant situations, its admission predicate $h:\Omega\to\{0,1\}$, and a record map $\lambda_{\rm adm}:\Omega\to Z_{\rm adm}$ with justified meaning. The predicate encodes the declared purpose, constraints and authority; an unspecified purpose leaves it unspecified. For an observed $r\in\lambda_{\rm adm}(\Omega)$, uniformly sound admission on that record requires
+\begin{equation}\label{eq:admission}
+\lambda_{\rm adm}^{-1}(\{r\})\subseteq h^{-1}(\{1\}).
+\end{equation}
+This is the positive-verdict case of~\eqref{eq:factorisation}, not a requirement to decide every other fibre. In the workflow, holding other conditions fixed, an admission predicate may be $h(y,\eta)=g(y)\eta$, where $\eta$ records current permission to issue the verdict. Accurate receipt matching decides $g$; a record omitting $\eta$ need not decide $h$. The two situations with ready $y$ and opposite permissions witness the missing distinction.
+
+The situation space may include method descriptions of arbitrarily large finite length. The set-theoretic admission condition remains valid there without supplying a finite decision procedure. For a successor decision $h'$, prior acceptance does not establish constancy on the relevant fibre. Apply~\eqref{eq:factorisation} to its actual record map, which may differ from $\lambda_{\rm adm}$; changed record meanings require a justified transfer, not mere reuse of the old value~\cite{cost}. Revision of the admission rule requires predecessor-governed justification, not the successor's sole endorsement. Sound inquiry warrants its target under justified premises; neither its verdict nor reflection verifies those premises. Sure termination concerns one fixed decision, not convergence across changing purposes.
+
+\section{Boundaries of the interpretation}\label{sec:interpretation}
+Relational, probabilistic and operational models above answer different parts of one information problem. Physical identity and quantum state structure impose additional requirements; they are not further stages that every synthesis must traverse.
+
+\subsection{Material continuity without molecular persistence}\label{sec:chemistry}
+The idealised reaction $2\mathrm H_2+\mathrm O_2\longrightarrow2\mathrm H_2\mathrm O$ does not arrange intact reactant molecules inside water. Consumed molecules cease to be particulars of their former molecular kinds while elemental inventory can persist~\cite{iupac}. The net equation specifies no order of bond changes, one-step mechanism or complete conversion; hydrogen combustion requires a kinetic network~\cite{li}.
+
+For nonnegative integer counts $z=(a,b,c)$ of $\mathrm H_2,\mathrm O_2,\mathrm H_2\mathrm O$, put
+\begin{equation}\label{eq:chemistry}
+q(z)=(2a+2c,\,2b+c),\qquad v=(-2,-1,2).
+\end{equation}
+Admissible $z,z+v$ have $q(z+v)=q(z)$. Thus $(2,1,0)$ and $(0,0,2)$ share inventory $(4,2)$ but not molecular inventory. Fixed elemental inventory makes the count space finite. This is bookkeeping, not a reaction simulation or a derivation of electron dynamics, energy exchange, rates or individually labelled nuclear persistence.
+
+This is an instance of the conserved-observable identity~\eqref{eq:conservation}, not preservation of every antecedent predicate or evidence that the reaction occurs.
+
+Atomic labels alone do not establish equality of exact local state descriptions: bonding and electronic organisation may change. A molecule is also not a bulk sample; phase, polarity and solvent behaviour need their own boundaries and evidence. ``Recombination'' can describe conserved material without molecular persistence; not every interaction is destruction. This allows a reading in terms of material basis, possibility and actualisation, but supplies no theory of substance by itself.
+
+\subsection{Quantum structure is not classical randomisation}\label{sec:quantum}
+A finite-dimensional quantum state is a density operator on $\bigotimes_i H_i$, with reductions obtained by partial trace. Pure states are included; separability concerns convex mixtures of product states~\cite{peres}. For example,
+\begin{equation}\label{eq:quantum}
+\rho=|\Phi^+\rangle\langle\Phi^+|,\quad |\Phi^+\rangle=\frac{|00\rangle+|11\rangle}{\sqrt2},
+\qquad \sigma=\tfrac12|00\rangle\langle00|+\tfrac12|11\rangle\langle11|.
+\end{equation}
+Both single-qubit reductions are $I_2/2$. The pure $\rho$ is entangled: a pure separable state is a product and has pure reductions. The displayed mixture makes $\sigma$ separable. With bit flip $B|0\rangle=|1\rangle$, $B|1\rangle=|0\rangle$,
+\begin{equation}\label{eq:quantumobservable}
+\tr(\rho(B\otimes B))=1,\qquad \tr(\sigma(B\otimes B))=0.
+\end{equation}
+The global distinction survives equal local reductions, but its tensor-product and measurement semantics are not supplied by assigning weights to classical configurations. This is a boundary example, not a quantum marginal theory or preparation protocol.
+
+Bell-local models already admit stochastic responses:
+\begin{equation}\label{eq:bell}
+P(a,b\mid s,t)=\int P_A(a\mid s,\lambda)P_B(b\mid t,\lambda)\,d\eta(\lambda),
+\end{equation}
+with setting-independent $\eta$ and the stated conditional factorisation. Quantum predictions can violate constraints on this entire class~\cite{chsh,abramsky}. Each measurement context can still have an ordinary outcome law; the obstruction concerns a common local explanation. Some contextuality obstructions are already possibilistic~\cite{abramsky}. Thus neither randomisation alone nor rejection of all relational analysis resolves the issue. The incompatibility in~\eqref{eq:incompatible} similarly tests a common joint law, but without a physical measurement scenario it is not a Bell experiment.
+
+\paragraph{What is not a metaphysical consequence.}\label{par:metaphysics}
+Furtherness in~\eqref{eq:further} is relative to local descriptions, not irreducibility from a complete microdescription including interactions~\cite{chalmers}, nor Bedau's simulation-only derivability~\cite{bedau}. Calling the whole a component changes the question. Model compatibility does not establish physical or metaphysical possibility, substantial forms, irreducible causal powers or consciousness. Probability and constituent transformation are independent, not ordered by metaphysical depth.
+
+\section{From inherited descriptions to reconstructed methods}\label{sec:conclusion}
+The argument separates four questions, not four competing descriptions of one object:
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}X@{}}
+\toprule
+Question & Required distinction\\\midrule
+Compatibility / warrant & Some compatible composition guarantees an invariant / every compatible composition does (Theorem~\ref{thm:relational}).\\[2pt]
+Determination / conservation & The full output law / a specified observable (Proposition~\ref{prop:channel}; \eqref{eq:conservation}).\\[2pt]
+Distinguishability / strategy & Separate pairwise experiments / one policy for all possibilities (Theorem~\ref{thm:decision}).\\[2pt]
+Access / justified use & An observable distinction / warranted premises, permission and admission (Sections~\ref{sec:reconnection} and~\ref{sec:admission}; \eqref{eq:admission}).\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Synthesis requires common adequate semantics and surviving environmental assumptions~\cite{abadi}. Provenance preserves identities and limits, not the simultaneous truth of incompatible requirements. A further invariant needs a derivation and baseline-relative witness; actual coupling needs operative evidence. An inventory supplies neither, and no application must instantiate every formalism.
+
+The join, correlation, marginal and state-identification techniques have established antecedents~\cite{beeri,schneidman,vorobev,bos}; their novelty is not claimed. The operational theorems require finite states, deterministic actions and exact observations. Continuous families of probability laws on finite spaces do not resolve noisy control, continuous-state dynamics, stochastic feedback, changing permissions or physical mechanisms.
+
+Inherited operations can reconstruct the method receiving later material. This self-application remains communicative and evidence-bound: a new constraint, statistic or immediate capability establishes neither improvement nor authority. Purpose, permission, cost and warranted use remain separate.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{cost} \emph{The Cost of a Decisive Revision: Evidence, Reuse, and Self-Application}. Companion manuscript, 4 pp., Sections 1--3.
+\bibitem{beeri} C. Beeri, R. Fagin, D. Maier and M. Yannakakis. On the desirability of acyclic database schemes. \emph{Journal of the ACM} 30(3), 479--513 (1983). \doi{10.1145/2402.322389}.
+\bibitem{fagin} R. Fagin. Multivalued dependencies and a new normal form for relational databases. \emph{ACM Transactions on Database Systems} 2(3), 262--278 (1977). \doi{10.1145/320557.320571}.
+\bibitem{ryan} A. J. Ryan. Emergence is coupled to scope, not level. \emph{Complexity} 13(2), 67--77 (2007). \doi{10.1002/cplx.20203}. Author preprint: arXiv:nlin/0609011.
+\bibitem{nash} J. F. Nash, Jr. Equilibrium points in n-person games. \emph{Proceedings of the National Academy of Sciences} 36(1), 48--49 (1950). \doi{10.1073/pnas.36.1.48}.
+\bibitem{vorobev} N. N. Vorob'ev. Consistent families of measures and their extensions. \emph{Theory of Probability and Its Applications} 7(2), 147--163 (1962). \doi{10.1137/1107014}.
+\bibitem{schneidman} E. Schneidman, S. Still, M. J. Berry II and W. Bialek. Network information and connected correlations. \emph{Physical Review Letters} 91, 238701 (2003). \doi{10.1103/PhysRevLett.91.238701}. Author preprint: arXiv:physics/0307072, pp. 1--2.
+\bibitem{foote} B. Foote and R. E. Johnson. Reflective facilities in Smalltalk-80. \emph{ACM SIGPLAN Notices} 24(10), 327--335 (1989). \doi{10.1145/74878.74911}.
+\bibitem{vogel} T. Vogel and H. Giese. Model-driven engineering of self-adaptive software with EUREMA. \emph{ACM Transactions on Autonomous and Adaptive Systems} 8(4), Article 18, 33 pp. (2014). \doi{10.1145/2555612}. Author-deposited version: arXiv:1805.07353.
+\bibitem{bos} P. van den Bos and F. Vaandrager. State identification for labeled transition systems with inputs and outputs. \emph{Science of Computer Programming} 209, 102678 (2021). \doi{10.1016/j.scico.2021.102678}. Author preprint: arXiv:1907.11034.
+\bibitem{iupac} IUPAC. \emph{Compendium of Chemical Terminology (Gold Book)}, 5th ed. (2025), online version 5.0.0. Entries ``chemical reaction'' and ``molecular entity''. \doi{10.1351/goldbook.C01033}; \doi{10.1351/goldbook.M03986}. Consulted 6 September 2026.
+\bibitem{li} J. Li, Z. Zhao, A. Kazakov and F. L. Dryer. An updated comprehensive kinetic model of hydrogen combustion. \emph{International Journal of Chemical Kinetics} 36(10), 566--575 (2004). \doi{10.1002/kin.20026}.
+\bibitem{peres} A. Peres. Separability criterion for density matrices. \emph{Physical Review Letters} 77, 1413--1415 (1996). \doi{10.1103/PhysRevLett.77.1413}. Author preprint: arXiv:quant-ph/9604005.
+\bibitem{chsh} J. F. Clauser, M. A. Horne, A. Shimony and R. A. Holt. Proposed experiment to test local hidden-variable theories. \emph{Physical Review Letters} 23, 880--884 (1969). \doi{10.1103/PhysRevLett.23.880}.
+\bibitem{abramsky} S. Abramsky and A. Brandenburger. The sheaf-theoretic structure of non-locality and contextuality. \emph{New Journal of Physics} 13, 113036 (2011). \doi{10.1088/1367-2630/13/11/113036}. Author preprint: arXiv:1102.0264, Sections 5--6 and Theorem 8.1.
+\bibitem{chalmers} D. J. Chalmers. Strong and weak emergence. In P. Clayton and P. Davies (eds.), \emph{The Re-Emergence of Emergence}, 244--254. Oxford University Press (2008 edition; original volume 2006), Section 1. \doi{10.1093/acprof:oso/9780199544318.003.0011}.
+\bibitem{bedau} M. A. Bedau. Weak emergence. \emph{Philosophical Perspectives} 11, 375--399 (1997). \doi{10.1111/0029-4624.31.s11.17}.
+\bibitem{abadi} M. Abadi and L. Lamport. Composing specifications. \emph{ACM Transactions on Programming Languages and Systems} 15(1), 73--132 (1993). \doi{10.1145/151646.151649}.
+\bibitem{dijkstra} E. W. Dijkstra. Guarded commands, nondeterminacy and formal derivation of programs. \emph{Communications of the ACM} 18(8), 453--457 (1975). \doi{10.1145/360933.360975}. Author manuscript EWD472, Sections 1--2.
+\bibitem{herlihywing} M. P. Herlihy and J. M. Wing. Linearizability: a correctness condition for concurrent objects. \emph{ACM Transactions on Programming Languages and Systems} 12(3), 463--492 (1990). \doi{10.1145/78969.78972}. Sections 1.1 and 2.2.
+\end{thebibliography}
+\end{document}

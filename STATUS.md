@@ -1,60 +1,18 @@
-# STATUS
+# Scientific status
 
-## Read status at the responsible owner
+Orthemology's public repository contains philosophical arguments, research manuscripts, ordinary mathematical proofs, formal components, finite controls, applications, negative findings, reviews and historical evidence. Their evidential standing is work-specific.
 
-Repository integration, the date of a source, the scope of a proof receipt, independent review and scientific acceptance are different facts. The [research frontiers](docs/reader/CURRENT-FRONTIERS.md) explain outstanding questions and conditional advances; the [verification guide](docs/reader/VERIFICATION-GUIDE.md) explains which evidence supports which claim. Neither reader page replaces a scientific-status owner.
+The [current-science projection](docs/reader/CURRENT_SCIENCE.md) and [named corpus interface](docs/reader/START_HERE.md) derive statements, hypotheses, reviews, adoption boundaries, corrections and residuals from the existing source owners. They do not establish a second acceptance registry.
 
-The canonical project-level revision and authored status wording remain in [docs/current-state.yaml](docs/current-state.yaml). For later research, follow the [cross-collection result routes](docs/reader/RESULT-INDEX.md) to the original result and collection owners. In particular, the [T20 live collection](research/t20-live-20261009/README.md) and [T20 v6 collection](research/t20-v6-20261012/README.md) have separate contribution, public-selection and adoption boundaries; neither silently supersedes the frozen successor registries.
+- A source identity proves which bytes are being read.
+- An ordinary proof must retain its stated assumptions and mathematical review.
+- A formal claim must identify the exact source, toolchain, target/type and allowed axioms. An old receipt or exported project is not fresh execution.
+- A finite control does not establish a general theorem or world-directed warrant.
+- A proposed manuscript and a reviewed/adopted result remain distinct.
+- A public projection or summary does not recover a restricted original.
 
-The reader refactor itself is an implementation in progress, not an accepted scientific revision. Its [progress and remaining gates](docs/project-closure/reader-refactor-issue-35/PROGRESS.md) distinguish completed author curation, mechanical checks, separate review and the owner’s integration decision.
+Read a primary work and its controlling review together. The named interface discloses missing reviews and unavailable editions; it never substitutes a nearby version.
 
-## Project-level status and qualifications
+The original [public status record](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/STATUS.md) remains exact historical evidence, including its draft, peer-review and empirical-validation boundaries. Current consolidation changes storage and interfaces, not scientific acceptance.
 
-**Draft / research-stage (revision R6, 2026-07-20).** This repository is a versioned working state, published honestly with its open decisions on record. The authoritative machine-readable statement of the current revision, counts, statuses, review state, and burdens is [docs/current-state.yaml](docs/current-state.yaml); this file, VERSION, README, the primary document headers, and OPEN-DECISIONS are checked against it in CI.
-
-> **Current review state (R6, 2026-07-20): fresh-session repository review completed; not external human peer review; not empirically validated.** The R4 revision was produced as a mixed-provenance candidate under a mid-run model-provenance dispute (recorded, unadjudicated, in [docs/project-closure/r4/AUTONOMOUS-R4-STATE.json](docs/project-closure/r4/AUTONOMOUS-R4-STATE.json) and [docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md](docs/project-closure/r4/MODEL-SUBSTITUTION-INTERRUPTION-PR3.md)). A fresh-session review then reproduced the substitution boundary, re-reviewed the pre- and post-substitution ranges hunk by hunk, selectively recovered the quarantined work, repaired its findings, and merged PR #3 through protected CI — sign-off: [docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md](docs/project-closure/r4-fresh-fable-review/FABLE-REVIEW-SIGNOFF.md). The later R7E Sol reviewed lineage reached protected `main` through the verified cascade recorded in [docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md](docs/project-closure/r7e-sol/R7E-SOL-MERGED-MAIN-VERIFICATION.md). These reviews concern repository formal, schema, source-record, and build integrity. Git integration is **not** theory or terminology adoption, **not** external human peer review, **not** empirical validation, and **not** legal/publication closure; those remain open exactly as listed below. Historical candidate reports remain intact and are classified in [docs/project-closure/HISTORICAL-STATUS-INDEX.yaml](docs/project-closure/HISTORICAL-STATUS-INDEX.yaml).
-
-- **Not peer reviewed.**
-- **No completed empirical validation** — no designed public experiment packet has been run. The V11 reconciliation separately records one historical internal eight-seed synthetic T299/T300 pilot with a negative result at its tested evidential class; it supplies no external framework-validation, theorem, or meniscus credit. Deterministic validators remain internally conformance-checked over declared schemas, examples, fixtures, and adversarial operators (never a mathematical consistency proof). This is not a completed paper program in the empirical sense.
-- **Terminology not adopted** — orthemma, ortheme, metaortheme, metaorthemma, and orthing are candidate coinages; the pilot-0 v2 packet is **READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018); NOT RUN; NO TERM ADOPTED**. `orthable` is excluded from the operational core.
-- **Companion papers are complete DRAFTS, not settled results** — the school-neutral paper's conclusions are conditional on labeled premises with named unresolved exits; the Atharī paper is explicitly school-internal and never presented as neutral.
-- **Sourcing: the machine registry is authoritative for its declared claim families** — [`references/source-status.yaml`](references/source-status.yaml) carries per-claim statuses for the families it declares (`CIR-*`, `ELT-*`, `ATH-*`, `LAT-*`, `EXT-*`, `ETY-*`, `AM-*`); paper prose must agree with it bidirectionally, and blanket source-status statements are no longer used. Broader current sourcing state starts at the consolidated view [`docs/sourcing/CURRENT-SOURCING-LEDGER.md`](docs/sourcing/CURRENT-SOURCING-LEDGER.md) (R3 overlays are current where they regrade; the R2 ledgers are historical baselines with banners — Decision 0019); the Qurʾānic registry is [`references/quran-loci.yaml`](references/quran-loci.yaml). A green offline validator establishes record shape and internal agreement, never source truth.
-- **Internal casebook/longitudinal records are private and not independently auditable** — they motivate the design and validate nothing.
-- **Draft PDFs are drafts** — byte-reproducible, DRAFT-stamped, commit-pinned; no numbered release, DOI, or archival claim exists.
-- **License: OPEN DECISION** — none chosen; default copyright applies.
-- **Citation metadata: OPEN DECISION** — no CITATION.cff; cite by commit per [docs/CITING.md](docs/CITING.md).
-
-**Correction carried by R4 (SELF-1):** the R2 and R3 closeout prose reported the pilot-0 **v1** freeze hash as `ece0412f…`. The committed `terminology/pilot0/FREEZE-HASH.txt` has recorded `988a6522498df73ad1c7b0f73961a054ff20862d50fff6d644d0274877412772` since it was created, and `freeze_pilot0.py --check` has always passed against it. The packet was never wrong; three R3 documents and two closeout messages mis-stated the value. The historical documents' bodies are preserved; the correction is recorded here, in the R4 correction ledger, and is now machine-checked by `validate_current_state.py`.
-
-## Claim status by lane
-
-Exact per-lane claim wording, generated-format and machine-checked against `authored.claim_status_wording` in [docs/current-state.yaml](docs/current-state.yaml):
-
-<!-- state:claim-status-by-lane -->
-- formal: internally conformance-checked current specification over the declared definitions, schemas, positive and adversarial fixtures, and source-status contract; acknowledged open parameters; no proof of consistency, completeness, or utility
-- manuscript: complete research draft, source-verified to the stated threshold; not peer reviewed; not empirically validated
-- companion_school_neutral: complete conditional philosophical draft; no claim of universal proof
-- companion_athari: complete, source-verified-to-threshold, explicitly Athari/Taymiyyan school-internal draft; comparative positions accurately sourced; not a neutral theological conclusion
-- terminology: v2 instrument READY_FOR_HUMAN_MATCHING_REVIEW (Decision 0018), not run; no term adopted
-- empirical: designed public experiment packets not run / open; one separately classified historical internal synthetic AR8R pilot is negative at its tested evidential class and supplies no external framework-validation credit
-- pdfs: reproducibly built and visually inspected draft artifacts
-- legal_publication: open on license, identity, peer review, and external submission
-<!-- /state:claim-status-by-lane -->
-
-Reconciliation state: **D1/M1/O2** (owner decisions, R1) and decisions **0004–0015** remain intact and are not reopened. Remaining owner-only burdens: [OPEN-DECISIONS.md](OPEN-DECISIONS.md).
-
-## Historical integration snapshots
-
-The following retained accounts describe their dated candidate, preparation or receiving-integration scopes. “Current”, “isolated branch” and local execution limits inside a snapshot refer to that account, not an automatically refreshed view of this branch. The [pre-refactor status](https://github.com/theislampill/orthemology/blob/924493b171ca0bd54df20727c7e47820817affdb/STATUS.md) preserves their earlier placement. Read later evidence at its actual owner rather than erase an old qualification or transfer it to every successor.
-
-**2026-10-07 through-Twentieth candidate:** the [current layer](docs/architecture/V5-RESEARCH-SUCCESSORS-07-15.md) preserves both Sixth evidence trees and the exact PR-30 base while adding scoped Seventeenth–Twentieth sources. The [status ledger](docs/provenance/v5-successors/RESULT_STATUS.json) contains 262 results and the [source map](docs/provenance/v5-successors/SOURCE_MAP.json) 3,828 source identities; 37 suites and 44 native receipts are retained. All new receiving-integration scientific execution remains NOT_RUN. Original research executions retain their exact affirmative scope. The final dated assessment provisionally accepts Necessary Being and a complete original source of the relevant actual connected order, with lower confidence in the latter; universal SourceMode remains withheld. [Earlier assessments](docs/provenance/v5-successors/T20_ASSESSMENT_HISTORY.json), T19 history and conditional theorem credit remain intact. Exact-tree workflow, review and clean-apply outcomes are separately supplied with the local archive patch. The mandatory fresh exact-environment PDF rebuild remains blocked locally. No push, PR, merge, external human review, empirical validation or calculus adoption follows.
-
-The [Sixteenth successor](experiments/orthemology-v5-successors/groups/t16-successor/README.md) adds 21 scoped results and 641 source identities. Its supplied core/controller reviews and scientific executions are inherited; no fresh T16 kernel or empirical replay is claimed. The earlier 195 result statements and 44 execution receipts remain unchanged. Final document-review bodies referenced but absent from the supply remain reported, not inspected acceptances.
-
-**2026-10-02 v5 continuation overlay — historical frontier:** the [research continuation](docs/architecture/V5-RESEARCH-CONTINUATIONS.md) includes tranches 1–5 and the final sixth return. The [successor ledger](docs/provenance/v5-research-continuations/SIXTH_FINAL_OVERLAY.json) preserves all 42 checkpoint-3 families and adds 26 source-specific navigation groups. Actual chronological bad-count, all natural moments and a common positive open exponential range now have fresh formal components under their fixed finite-family premises. The complete fixed-codebook disclosure frontier is ordinary reviewed mathematics with an external partition-Kneser dependency. Runtime v8 covers the declared two-model/two-state/two-action instance; general extraction remains open. Seventh is prospective. Existing theory, terminology, empirical, philosophical and owner-only burdens below retain their scope.
-
-AR8R V11 Task 7 reconciliation status: expanded public owners and exact-source custody are implemented on the isolated branch and remain subject to final validation and independent whole-diff review. Candidate E/G remain `DEFERRED_INSUFFICIENT_AUDIT`; all ten PMR results remain owner-pending proposals; T354 remains formally blocked; the Ten Advances count remains `CONFLICTING_38_42`; and the Connes-rigidity dispute remains `UNRESOLVED_PENDING_OPERATOR_ALGEBRA_SPECIALIST_REVIEW`. No Lean build/kernel authority, integrated champion, meniscus, or natural closure is claimed.
-
-The final separately sealed methodological/control/document successor adds 53 public texts and one integration-only scope record. Exactly one new source-bound result, T20-EMERGENCE-TYPE-CONTROL, describes a chosen unbounded indexed interpretation; all 261 prior result/status records are preserved. Retrospective reading/methodology and packaging receive no new result or native scientific-execution credit. Current document roles and historical predecessors are linked from the Twentieth guide.
-
-The separately dated source-context successor adds 21 selected public records and one receiving-scope record, for 262 results / 3,828 sources. The existing foundational-synthesis and emergence-control owners bind the new reconstruction and application limits, with exact prior statements retained. All statuses, old sources, proof conclusions, 37 suites and 44 receipts remain unchanged. The Twentieth guide links the current reassessment and the preserved report/guide history.
+The public baseline does not establish a complete exact-version map for externally held Papers 1–11 or pending private scholarship. Those boundaries remain explicit. No private research is imported by this refactor.

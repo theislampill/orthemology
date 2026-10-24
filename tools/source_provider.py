@@ -125,6 +125,20 @@ class SourceProvider:
                 raise SourceError("SCHEMA", f"invalid identity: {row.get('path')}")
         self.occurrences = {r["path"]: r for r in rows}
         self.baseline = self.manifest["baseline"]
+        self.current_sources = {}
+        current_rows = self.manifest.get("current_sources", [])
+        validate_paths(dict.fromkeys(r["path"] for r in current_rows))
+        for row in current_rows:
+            version = row.get("version")
+            key = (row["path"], version)
+            if (not isinstance(version, str) or not version or len(version) > 256
+                    or version == self.baseline["commit"] or key in self.current_sources
+                    or row.get("mode") not in ("100644", "100755")
+                    or not isinstance(row.get("bytes"), int) or row["bytes"] < 0
+                    or not re.fullmatch("[0-9a-f]{64}", row.get("sha256", ""))
+                    or not re.fullmatch("[0-9a-f]{40}", row.get("git_blob", ""))):
+                raise SourceError("SCHEMA", "invalid/duplicate current edition")
+            self.current_sources[key] = row
         if not re.fullmatch("[0-9a-f]{40}", self.baseline.get("commit", "")):
             raise SourceError("SCHEMA", "baseline commit must be exact")
         self.cache = _reject_links(Path(cache).absolute() if cache else
@@ -146,7 +160,13 @@ class SourceProvider:
             raise SourceError("UNAVAILABLE", f"unindexed exact path: {path}") from exc
 
     def resolve(self, path, context=None):
-        return self.resolve_legacy(path, context)
+        safe_path(path)
+        if context is None or context == self.baseline["commit"]:
+            return self.resolve_legacy(path, context)
+        try:
+            return dict(self.current_sources[(path, context)])
+        except KeyError as exc:
+            raise SourceError("AMBIGUOUS_VERSION", "unindexed exact current edition") from exc
 
     def _pack_bytes(self, pack_name, path):
         info = self.manifest.get("packs", {}).get(pack_name)
@@ -190,16 +210,16 @@ class SourceProvider:
             self._pack_cache[pack_name] = (signature, contents)
         return self._pack_cache[pack_name][1].get(path)
 
-    def _git_bytes(self, row):
+    def _git_bytes(self, row, current=False):
         if self.git_repo is None:
             return None
         result = subprocess.run(["git", "-C", str(self.git_repo), "cat-file", "blob",
-                                 f"{self.baseline['commit']}:{row['path']}"],
+                                 row["git_blob"] if current else f"{self.baseline['commit']}:{row['path']}"],
                                 capture_output=True)
         return result.stdout if result.returncode == 0 else None
 
     def read_bytes(self, path, context=None):
-        row = self.resolve_legacy(path, context)
+        row = self.resolve(path, context)
         access = row.get("access", "public")
         if access == "restricted":
             raise SourceError("RESTRICTED", path)
@@ -211,6 +231,23 @@ class SourceProvider:
         if obj.exists():
             self.sources_used[path] = "verified-object-cache"
             return verify_bytes(row, obj.read_bytes())
+        if context is not None and context != self.baseline["commit"]:
+            current = _reject_links(self.root / row["path"])
+            working = current.read_bytes() if current.is_file() else None
+            if working is not None and sha256(working) == row["sha256"]:
+                data = verify_bytes(row, working)
+                self.sources_used[path] = "declared-working-edition"
+                return data
+            # A previously committed exact edition remains recoverable after a
+            # path is edited or a cache is lost. The declared blob selects bytes;
+            # neither HEAD nor a newer file selects scholarly currentness.
+            data = self._git_bytes(row, current=True)
+            if data is not None:
+                self.sources_used[path] = "pinned-current-git-blob"
+                return verify_bytes(row, data)
+            if working is not None:
+                raise SourceError("CORRUPT", f"working bytes differ from exact edition: {path}")
+            raise SourceError("NOT_CACHED", f"exact current edition unavailable: {path}")
         for pack in (row["pack"], self.manifest.get("fallback_pack")):
             if pack:
                 data = self._pack_bytes(pack, path)

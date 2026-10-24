@@ -1,0 +1,36 @@
+\section{Substitution claims form a profile, not a ladder}\label{sec:substitution}
+\subsection{What counts as a different processor class?}
+A material, a computing mechanism, an architecture and a failure domain are different classifications. A silicon photonic processor can use silicon material while implementing an optical transformation rather than transistor logic. Digital and analogue describe representations or operating regimes, not an exhaustive material classification. A CPU-to-GPU change can alter architecture without escaping a shared electrical supply, facility or administrative dependency.
+
+Fix a classification $\mathcal C$ of the role-relevant implementations and retain it in every substitution claim. For a compared role $j$, a fixed class map $c_j$ assigns the same label exactly to the implementations treated as equivalent for that comparison. A class-change claim requires $c_j(r)\ne c_j(s)$ as well as the relevant conformance and transfer obligations. The classification can describe material, mechanism, architecture, or a declared combination. It must say which role is compared: optical transmission is not optical execution. A hybrid processor is described by its essential role-bearing components, rather than classified from whichever component supplies the most striking label. Supporting electronics, preparation and readout are included in the resource account.
+
+A claim should therefore have the form
+\begin{equation}\label{eq:profile3}
+ \mathsf{Sub}(r\rightsquigarrow s\,;\Gamma,\mathcal C,H_0,\mathcal E),
+\end{equation}
+where $\Gamma$ is the fixed contract, $H_0$ the support intended to become unnecessary, and $\mathcal E$ the evidence class. Replacing one processor, replacing every processor of a mechanism class, and removing every dependence on a named original host are separate predicates on this record. One can be true while another is false.
+
+\subsection{The informal T0--T5 vocabulary, repaired}
+The T-labels arose in the post-Edition-2 discussion, not in the second-edition manuscript. They are retained as historical shorthand for \emph{axes}, not ordered stages:
+\begin{center}\small
+\begin{tabular}{@{}p{0.08\textwidth}p{0.29\textwidth}p{0.55\textwidth}@{}}\toprule
+Label & Question & Additional declaration needed \\\midrule
+T0 & Component substitution & Which component and which behaviour remain unchanged?\\
+T1 & Host substitution & Which complete dependency set excludes the original host?\\
+T2 & Carrier-class substitution & Which propagation mechanism changes, with which endpoints?\\
+T3 & Processor-class substitution & Which actual computation moves across which declared class boundary?\\
+T4 & Heterogeneous recomposition & Which joint interfaces, state and resources remain valid together?\\
+T5 & Online reconfiguration & Which causal selection policy, observations and transition certificates govern switching?\\\bottomrule
+\end{tabular}
+\end{center}
+Online selection among two conventional replicas does not imply processor-class substitution. An optical coprocessor can change a processing mechanism while remaining dependent on its original host for memory and control. The profile is therefore only partially ordered by explicitly proved implications. Higher T-number does not mean greater intelligence, consciousness, autonomy or empirical maturity.
+
+\subsection{Evidence maturity is a separate coordinate}
+We distinguish five records: a specified mathematical model; a proved model-level correspondence; an executed simulation or finite check; a reported physical implementation at stated conditions; and a paired, stateful physical handover with the original support removed. These are not five automatic consequences of writing one diagram. A published physical logic element can supply a processor-role precedent without supplying the paired-handover record. A simulation can compare two equations while both numerical programmes execute on the same actual computer.
+
+The focused literature assessment in Section~\ref{sec:census} consequently avoids the sentence ``no T3 instance exists anywhere.'' The label is underdetermined without $\Gamma$ and $\mathcal C$, and physical stateful computation is already demonstrated in several engineered media. The stronger result sought by a particular continuation claim may still lack a witness. Its proper status is attached to that claim and the examined sources, not extrapolated to every possible implementation.
+
+\subsection{Ordinary redundancy is a baseline, not a disproof}
+An ordinary company or replicated service may satisfy a useful low-complexity contract. It need not satisfy every proposed contract, survive arbitrary personnel loss, or maintain a complete execution history after replacement. Familiar examples should be retained as positive controls when adequately specified. Their familiarity prevents extravagant novelty claims; it does not invalidate a framework that correctly includes them.
+
+The possible contribution of this framework is narrower than a new species of entity: it is an auditable account connecting realisation, access, state export, evidence transport, composition, resources and maintained behaviour. Contract-based system design already supplies substantial composition and refinement machinery \citep{contracts}. Accordingly, comparative evaluation must include a strong contract-and-provenance baseline. The scientific question is whether the additional organisation of evidence improves assessment at matched cost, not whether a specialist could possibly rediscover an omitted constraint.

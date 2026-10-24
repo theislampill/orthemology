@@ -34,9 +34,9 @@ to be observed. This is fixture NT3's forbidden move.
 
 ## Every claim names its target
 
-Machine form: [`NOETIC-TARGET-MAP.schema.json`](NOETIC-TARGET-MAP.schema.json)
-(+ [`.example.json`](NOETIC-TARGET-MAP.example.json)); fixtures
-[`NOETIC-TARGET-FIXTURES.yaml`](NOETIC-TARGET-FIXTURES.yaml); gate
+Machine form: [`NOETIC-TARGET-MAP.schema.json`](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/applications/daee-epistemics/NOETIC-TARGET-MAP.schema.json)
+(+ [`.example.json`](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/applications/daee-epistemics/NOETIC-TARGET-MAP.example.json)); fixtures
+[`NOETIC-TARGET-FIXTURES.yaml`](https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/applications/daee-epistemics/NOETIC-TARGET-FIXTURES.yaml); gate
 `scripts/validate_noetic_targets.py`. Each claim records target
 (identity+version), target type, evidence IDs, evidence scope, analysis, status,
 uncertainty, and non-claims — reusing the existing claim ledger where sufficient.

@@ -204,6 +204,136 @@ class CorpusIntegrity(unittest.TestCase):
             r.restore(self.provider(), self.root / "restored")
         self.assertEqual(moves[-1], ".corpus-receipt.json")
 
+    def test_history_loss_invalidates_prior_completion(self):
+        self.cache_bytes()
+        import subprocess
+        import shutil
+        r = importlib.import_module("rehydrate")
+        source = self.root / "history-source"
+        source.mkdir()
+        for row, data in zip(self.rows, (self.a,self.b,self.a)):
+            file = source / row["path"]
+            file.parent.mkdir(parents=True,exist_ok=True)
+            file.write_bytes(data)
+        def git(*args):
+            return subprocess.check_output(["git","-C",str(source),*args],
+                                           stderr=subprocess.DEVNULL,text=True).strip()
+        git("init","-b","main")
+        git("add",".")
+        git("-c","user.name=Fixture","-c","user.email=fixture@example.test",
+            "-c","commit.gpgsign=false","commit","-m","restoration fixture")
+        self.manifest["baseline"]["commit"] = git("rev-parse","HEAD")
+        self.manifest["baseline"]["tree"] = git("rev-parse","HEAD^{tree}")
+        bundle = self.root / "fixture.bundle"
+        git("bundle","create",str(bundle),"refs/heads/main")
+        raw = bundle.read_bytes()
+        self.manifest["history"] = {"bytes":len(raw),"sha256":digest(raw)}
+        self.manifest["required_git_objects"] = [self.rows[0]["git_blob"]]
+        self.write_manifest()
+        p = self.provider()
+        dest = self.root / "restored-history"
+        r.restore(p,dest,with_history=True,bundle=bundle)
+        shutil.move(str(dest/".git"),str(self.root/"saved-history"))
+        with self.assertRaisesRegex(Exception,"HISTORY|CORRUPT"):
+            r.verify_workspace(p,dest)
+
+        second = self.root / "from-existing-git"
+        receipt = r.restore(p,second,with_history=True,git_repository=source)
+        self.assertEqual(receipt["tree"],self.manifest["baseline"]["tree"])
+        self.assertTrue(receipt["history"])
+        self.assertFalse((second/".git/objects/info/alternates").exists())
+        self.assertEqual(r.verify_workspace(p,second)["tree"],receipt["tree"])
+
+    def test_explicit_current_edition_and_preserved_predecessor(self):
+        new = b"A newly proposed research finding.\n"
+        entry = record("research/new-finding.md",new,version="proposal-1")
+        self.manifest["current_sources"] = [entry]
+        self.write_manifest()
+        path = self.repo / entry["path"]
+        path.parent.mkdir(parents=True);path.write_bytes(new)
+        p = self.provider()
+        self.assertEqual(p.read_bytes(entry["path"],context="proposal-1"),new)
+        with self.assertRaisesRegex(Exception,"UNAVAILABLE"):
+            p.read_bytes(entry["path"])
+        with self.assertRaisesRegex(Exception,"AMBIGUOUS_VERSION|UNAVAILABLE"):
+            p.read_bytes(entry["path"],context="proposal-2")
+        (self.cache/"objects").mkdir()
+        (self.cache/"objects"/entry["sha256"]).write_bytes(new)
+        path.write_text("different later text")
+        self.assertEqual(p.read_bytes(entry["path"],context="proposal-1"),new)
+
+    def test_current_edition_cannot_borrow_changed_working_bytes(self):
+        new = b"An exact proposal."
+        entry = record("research/new.md",new,version="proposal-1")
+        self.manifest["current_sources"]=[entry];self.write_manifest()
+        path=self.repo/entry["path"];path.parent.mkdir();path.write_text("other")
+        with self.assertRaisesRegex(Exception,"CORRUPT"):
+            self.provider().read_bytes(entry["path"],context="proposal-1")
+
+    def test_committed_current_predecessor_survives_cache_loss(self):
+        import subprocess
+        original=b"Exact first proposed edition.\n"
+        entry=record("research/current.md",original,version="proposal-1",access="public")
+        self.manifest["current_sources"]=[entry];self.write_manifest()
+        path=self.repo/entry["path"];path.parent.mkdir();path.write_bytes(original)
+        def git(*args):
+            return subprocess.check_output(["git","-C",str(self.repo),*args],
+                                           stderr=subprocess.DEVNULL,text=True).strip()
+        git("init","-b","main");git("add",entry["path"])
+        git("-c","user.name=Fixture","-c","user.email=fixture@example.test",
+            "-c","commit.gpgsign=false","commit","-m","exact proposed source")
+        path.write_bytes(b"A different unselected edition.\n")
+        provider=self.provider()
+        self.assertEqual(provider.read_bytes(entry["path"],context="proposal-1"),original)
+        self.assertEqual(provider.sources_used[entry["path"]],"pinned-current-git-blob")
+        with self.assertRaisesRegex(Exception,"CORRUPT"):
+            self.provider(git_repo=False).read_bytes(entry["path"],context="proposal-1")
+
+    def test_assembly_refuses_omitted_current_primary_owner(self):
+        self.cache_bytes()
+        self.manifest["profiles"]={"ordinary":{"initial_target":2,
+            "existing_paths":{"papers/theorem.md":"paper.md"},"new_paths":["tools/cli.py"]}}
+        self.manifest["current_works"]=[{"path":"research/new.md","version":"proposal-1"}]
+        self.write_manifest()
+        (self.repo/"tools").mkdir();(self.repo/"tools/cli.py").write_text("pass\n")
+        r=importlib.import_module("rehydrate")
+        with self.assertRaisesRegex(Exception,"PROFILE"):
+            r.assemble(self.provider(),self.root/"thin")
+        self.assertFalse((self.root/"thin").exists())
+
+    def test_small_candidate_counts_every_file_and_rewrites_source_links(self):
+        self.a = b"Theorem. [Review](../reviews/theorem.md). [Earlier](../historical/copy.md). [Archive](../historical/).\n"
+        self.rows[0] = record("papers/theorem.md",self.a)
+        self.rows[2] = record("historical/copy.md",self.a)
+        self.manifest["occurrences"] = self.rows
+        self.manifest["profiles"] = {"ordinary":{"initial_target":3,
+            "existing_paths":{"papers/theorem.md":"mathematics/theorem.md",
+                              "reviews/theorem.md":"mathematics/review.md"},
+            "new_paths":["tools/cli.py"]}}
+        self.write_manifest();self.cache_bytes()
+        (self.repo/"tools").mkdir()
+        (self.repo/"tools/cli.py").write_text("print(1)\n")
+        r=importlib.import_module("rehydrate")
+        dest=self.root/"thin"
+        report=r.assemble(self.provider(),dest)
+        self.assertEqual(report["files"],3)
+        self.assertEqual(len([p for p in dest.rglob("*") if p.is_file()]),3)
+        text=(dest/"mathematics/theorem.md").read_text()
+        self.assertIn("[Review](review.md)",text)
+        self.assertIn("github.com/theislampill/orthemology/blob/"+"a"*40+"/historical/copy.md",text)
+        self.assertIn("github.com/theislampill/orthemology/tree/"+"a"*40+"/historical",text)
+        self.assertFalse((dest/"historical").exists())
+
+    def test_small_candidate_fails_before_writing_missing_new_interface(self):
+        self.cache_bytes()
+        self.manifest["profiles"]={"ordinary":{"initial_target":2,
+            "existing_paths":{"papers/theorem.md":"paper.md"},"new_paths":["tools/missing.py"]}}
+        self.write_manifest()
+        r=importlib.import_module("rehydrate");dest=self.root/"thin"
+        with self.assertRaisesRegex(Exception,"UNAVAILABLE"):
+            r.assemble(self.provider(),dest)
+        self.assertFalse(dest.exists())
+
     def test_missing_preflight_leaves_no_completion_receipt(self):
         r = importlib.import_module("rehydrate")
         dest = self.root / "missing"

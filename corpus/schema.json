@@ -1,0 +1,427 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Orthemology archive lock v1",
+  "description": "Structural schema for archives.lock.json. Actual bytes, identity, authority, paths, closure and replay are verified by the named source-owning Python tools; passing JSON Schema alone grants no preservation or scientific acceptance.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "repository",
+    "baseline",
+    "audit",
+    "occurrences",
+    "packs",
+    "profiles",
+    "custody",
+    "publication_boundary",
+    "fallback_pack",
+    "history",
+    "required_git_objects",
+    "historical_sources",
+    "replay"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "repository": {
+      "const": "https://github.com/theislampill/orthemology"
+    },
+    "baseline": {
+      "type": "object",
+      "required": [
+        "commit",
+        "tree",
+        "files",
+        "directories",
+        "logical_bytes"
+      ],
+      "properties": {
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "tree": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "files": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "directories": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "logical_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "audit": {
+      "type": "object",
+      "required": [
+        "package_sha256",
+        "dispositions_sha256",
+        "work_review_sha256",
+        "scope"
+      ],
+      "properties": {
+        "package_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "dispositions_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "work_review_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "occurrences": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/identity"
+          },
+          {
+            "required": [
+              "pack"
+            ]
+          }
+        ]
+      }
+    },
+    "packs": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/pack"
+      }
+    },
+    "profiles": {
+      "type": "object",
+      "required": [
+        "ordinary"
+      ],
+      "properties": {
+        "ordinary": {
+          "type": "object",
+          "required": [
+            "initial_target",
+            "existing_paths",
+            "new_paths"
+          ],
+          "properties": {
+            "initial_target": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "existing_paths": {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": {
+                "$ref": "#/$defs/path"
+              }
+            },
+            "new_paths": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "$ref": "#/$defs/path"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "baseline": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "custody": {
+      "type": "object",
+      "required": [
+        "state",
+        "external_distribution_authorised",
+        "source_route",
+        "removal_gate"
+      ],
+      "properties": {
+        "state": {
+          "type": "string"
+        },
+        "external_distribution_authorised": {
+          "type": "boolean"
+        },
+        "source_route": {
+          "type": "string"
+        },
+        "removal_gate": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "publication_boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fallback_pack": {
+      "type": "string",
+      "minLength": 1
+    },
+    "history": {
+      "type": "object",
+      "required": [
+        "file",
+        "bytes",
+        "sha256",
+        "ref",
+        "objects",
+        "scope"
+      ],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/path"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "ref": {
+          "type": "string"
+        },
+        "objects": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scope": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "required_git_objects": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{40}$"
+      }
+    },
+    "historical_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "revision",
+          "path",
+          "git_blob",
+          "bytes",
+          "sha256",
+          "verified"
+        ],
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "path": {
+            "$ref": "#/$defs/path"
+          },
+          "git_blob": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "verified": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "replay": {
+      "type": "object",
+      "description": "Fixed cases, original CI inventory and toolchain contracts are additionally verified by tools/replay.py."
+    },
+    "current_sources": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/identity"
+          },
+          {
+            "required": [
+              "version",
+              "access"
+            ]
+          }
+        ]
+      }
+    },
+    "current_works": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "version"
+        ],
+        "properties": {
+          "path": {
+            "$ref": "#/$defs/path"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          },
+          "json_pointer": {
+            "type": "string",
+            "pattern": "^/"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Canonical relative NFC POSIX path; tools/source_provider.py enforces traversal, case, link and file/directory collision rules."
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "path",
+        "git_blob",
+        "sha256",
+        "bytes",
+        "mode"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/path"
+        },
+        "git_blob": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mode": {
+          "enum": [
+            "100644",
+            "100755"
+          ]
+        },
+        "pack": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_path": {
+          "$ref": "#/$defs/path"
+        },
+        "access": {
+          "enum": [
+            "public",
+            "restricted",
+            "identity-only"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "additionalProperties": false
+    },
+    "pack": {
+      "type": "object",
+      "required": [
+        "file",
+        "bytes",
+        "sha256",
+        "members",
+        "full_baseline",
+        "custody",
+        "publication"
+      ],
+      "properties": {
+        "file": {
+          "$ref": "#/$defs/path"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "members": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "full_baseline": {
+          "type": "boolean"
+        },
+        "custody": {
+          "type": "string",
+          "minLength": 1
+        },
+        "publication": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "x-semantic-invariants": {
+    "source_provider": "Exact occurrence count, canonical paths, case/file-directory collisions, full member population, modes, SHA-256 and Git blob; no version fallback or restricted-source substitution.",
+    "rehydrate": "Exclusive destinations, full-byte/tree checks and completion-last receipt; declared Git history is independently rechecked on consumption.",
+    "authority": "works.jsonl and authority.jsonl are generated projections. Each full original owner and current source decision is verified; a locator cannot grant scientific status.",
+    "maintenance": "Current source JSON frontmatter/schema orthemology-work-v1 owns title/statement/hypotheses/scope/status. New findings are proposed. Accepted corrections/supersessions and reviewed manuscript preparation require a complete target/predecessor review, adopted decision and scoped owner appointment; tests use explicit simulations.",
+    "replay": "Exact environment, helper/source closure, complete outputs, original denominators and fresh execution are distinct from source export, historical receipts and finite controls.",
+    "custody": "Local construction and pinned public source reading do not establish independently received archive custody. External distribution and removal retain separate gates."
+  }
+}

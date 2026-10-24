@@ -1,0 +1,339 @@
+{
+  "current_claim_owner": "CURRENT_FOUNDATIONAL_CLAIMS.json",
+  "correction_owner": "residual_admission/CORRECTIONS.json",
+  "claims": [
+    {
+      "id": "FND-001",
+      "canonical_sha256": "4da3849144d33d0df00dc55d7eb66afe60529a59869f04c564c1ea6923454a45",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC01",
+        "RC02",
+        "RC03",
+        "RC08",
+        "RC09",
+        "RC10",
+        "RC12",
+        "RC14",
+        "RC15",
+        "RC17",
+        "RC18",
+        "RC19",
+        "RC20",
+        "RC21",
+        "RC24"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-002",
+      "canonical_sha256": "2b55dc76e9fbe03d7ae7494be0bf3224df3279969e99e203ce24ee642c90e5f7",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC04",
+        "RC05",
+        "RC06",
+        "RC07",
+        "RC08",
+        "RC11"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-003",
+      "canonical_sha256": "d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-004",
+      "canonical_sha256": "3c2a84275c2259a4001b513822ea3bf8959450416f74abb0cc6209fc61f13393",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-005",
+      "canonical_sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-006",
+      "canonical_sha256": "ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-007",
+      "canonical_sha256": "677b095e02660ecb3da81ef5f5efa2f0e56e598078522dcdc732763aebb605ec",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC13",
+        "RC15"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-008",
+      "canonical_sha256": "735eaf9802be4e21c4bb97cca13f469ed1611a51c1bdf731dadf79e6f0fd2f74",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-009",
+      "canonical_sha256": "c75c18ecf32547ad7e37dba2ddf5e49245e8d7205cca6d40d796af6f81c582cc",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-010",
+      "canonical_sha256": "9634d9c5007ac99dafa8d5ef6a0228d9439a86d1ed8e8fa14c3224aa1668e565",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-011",
+      "canonical_sha256": "0df98323e518afcd9f0ad040f27d87b4c12293385def29f741013c4199038eb8",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-012",
+      "canonical_sha256": "e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC13",
+        "RC15"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-013",
+      "canonical_sha256": "c27a15e83f07b1a2df9019482e8e16218245cf60506c26cc317d01bcc9af3f3b",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-014",
+      "canonical_sha256": "bc52640a35a01ba9f444905f14e9dac5a47e44d42189371736cd5bd33a719448",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-015",
+      "canonical_sha256": "f16f5e9cb35e5fa47475c3ce1fbcecabdef1233323e973d5a55620dd75696da2",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-016",
+      "canonical_sha256": "5e7f610d273cf53867b27b7f0fcb9dc6bb60300ac578ba82ebd885606f0c0dfb",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-017",
+      "canonical_sha256": "cdc8c2e9d5c8cc6f71da89ac4e675e202a8507196fd63b2a82446e884ad17747",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-018",
+      "canonical_sha256": "100b39820c58d53c8427036d313f7da85c493cf3401efef72d03862db3b42ed0",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-019",
+      "canonical_sha256": "8c80c45563dfbe303cd991541366448eb6e18703867feb9b55a98ac27d6b9961",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-020",
+      "canonical_sha256": "2bdf7b1a909f941e8a6c50bc0753f81a1c870e4499c441939af19c9c6c9f015a",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-021",
+      "canonical_sha256": "0aaa42d79f59f488b0e15eecd5f9c7aabbfb6d18a14362cf02c393750eeec845",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-022",
+      "canonical_sha256": "2bf74872c63480fcc448a545d01e7057acc6369488921ffc2defc22a734ec91e",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-023",
+      "canonical_sha256": "3844658535768c2ab2b21e20f409faf97c41cb47a22e9512745dd38fb47f03e9",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC04",
+        "RC05",
+        "RC06",
+        "RC07",
+        "RC08",
+        "RC11",
+        "RC25"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-024",
+      "canonical_sha256": "2796523a017f191bbc715e7fc221b7ae4af25aa84f0a0a3bd19cead1761c2b2d",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-025",
+      "canonical_sha256": "267a4acf8a75aaeabb6f3e58bba1db4895e25cbc4c1866222a3c7d4f968ab8cb",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-026",
+      "canonical_sha256": "f404d45cf567171c7e6cf4f4839242cd100acf6605316aa7d03bbed7da94e987",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16",
+        "RC25"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-027",
+      "canonical_sha256": "673c3a43b5908f353a59f165963c48e422dbde96070a4b81a0d9167315d1cfe2",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-028",
+      "canonical_sha256": "d4fa5448932b5ec8989f50ee013db1e47c92de11b4d09700beb06cfb72025fc9",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-029",
+      "canonical_sha256": "8b9d6cce24bcd2249b7d23acab8b0b03e95a4190e47d80d07b78063b316d5389",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-030",
+      "canonical_sha256": "6be261c3950828564f04e555e671f9ea88b27ae6dd5ced3364f7abbc5d599582",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-031",
+      "canonical_sha256": "5905da8fadb69aaf0619260f6742449de7eb20f7e88ad00a73ea9771159b29ee",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC04",
+        "RC05",
+        "RC06",
+        "RC07",
+        "RC08",
+        "RC11"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-032",
+      "canonical_sha256": "744868122f609ae1e8e94e2033907d62b239f661631d2c2a4f51faaae4010b35",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC14",
+        "RC16"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-033",
+      "canonical_sha256": "bbdc851b30f0f033a51006e5725304ec502a8b46be944ac90b0efce588d20dc7",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    },
+    {
+      "id": "FND-034",
+      "canonical_sha256": "3b9e88d275bc4e9fb75b04349dc7c55c11ea8e25b5db183d3961ba4f54a0cd03",
+      "current_positive_or_scoped_disposition_preserved": true,
+      "relevant_corrections": [
+        "RC01",
+        "RC02",
+        "RC03",
+        "RC08",
+        "RC09",
+        "RC10",
+        "RC12",
+        "RC14",
+        "RC15",
+        "RC21",
+        "RC22",
+        "RC23",
+        "RC24",
+        "RC25",
+        "RC26",
+        "RC27"
+      ],
+      "reconciliation": "Canonical exact statement and source scope retained; corrections address a specified weak inference, mathematical interface, historical record or implementation assurance. No generic neutral reset."
+    }
+  ],
+  "implementation_assurance_note": "RC17 bounds early neutral-model checker assurance. No current FND claim is withdrawn merely because a historical assurance field is literal or a validator schema is weak.",
+  "latest_source_context_owner": "CURRENT_FOUNDATIONAL_CLAIMS.json#continuous_source_context_currentness",
+  "latest_owned_realization_owner": "CURRENT_FOUNDATIONAL_CLAIMS.json#late_own_activity_supersession",
+  "late_source_currentness_crosswalks": [
+    "particular_source_closure/CURRENTNESS_CROSSWALK.json",
+    "explanation_continuation/CURRENTNESS_CROSSWALK.json",
+    "a_ap_structured/REPORT.md"
+  ],
+  "latest_correction_count": 27
+}

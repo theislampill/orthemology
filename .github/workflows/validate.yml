@@ -2,11 +2,14 @@ name: validate
 on:
   push:
   pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  validate:
-    runs-on: ubuntu-latest
+  thin:
+    name: Current corpus and thin candidate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
         with:
@@ -14,247 +17,160 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.11.9"
-      - name: Provision and verify exact PDF infrastructure
-        run: python scripts/provision_ci_infrastructure.py
-      - name: Install exact version-locked dependencies (requirements-ci.lock.txt; no live web checks anywhere in CI)
-        run: pip install --quiet -r requirements-ci.lock.txt
-      - name: Dependency lock consistency
+      - name: Install the exact original Python dependency lock
         run: |
-          python tests/test_dependency_lock.py
-          python scripts/validate_dependency_lock.py
-      - name: Repository hygiene + honesty checks
-        run: python scripts/validate_repo.py
-      - name: Reader pilot source, edition and navigation controls (not semantic acceptance)
+          git show a7ff0e33d1a299db640041c46b1af81ca70851f6:requirements-ci.lock.txt > "$RUNNER_TEMP/requirements-ci.lock.txt"
+          python -m pip install --quiet -r "$RUNNER_TEMP/requirements-ci.lock.txt"
+      - name: Structural archive-lock schema
+        run: python -c 'import json,jsonschema; schema=json.load(open("corpus/schema.json")); lock=json.load(open("corpus/archives.lock.json")); jsonschema.Draft202012Validator.check_schema(schema); jsonschema.Draft202012Validator(schema).validate(lock)'
+      - name: Build verified local source packs from pinned Git objects
+        run: python -B tools/rehydrate.py --root "$GITHUB_WORKSPACE" --cache "$RUNNER_TEMP/source-cache" build-packs --dest "$RUNNER_TEMP/packs"
+      - name: Assemble the actual approved 125-file candidate
         run: |
-          python -B tests/test_reader_census.py
-          python -B -O tests/test_reader_census.py
-          python -B tests/test_reader_pilot.py
-          python -B -O tests/test_reader_pilot.py
-          python -B scripts/check_reader_pilot.py
-      - name: T20 v6 independent public projection and source boundaries
+          python -B tools/rehydrate.py --root "$GITHUB_WORKSPACE" --cache "$RUNNER_TEMP/packs" assemble --dest "$RUNNER_TEMP/thin" > "$RUNNER_TEMP/thin-assembly.json"
+          python -c 'import json,os,pathlib; d=json.load(open(os.environ["RUNNER_TEMP"]+"/thin-assembly.json")); root=pathlib.Path(os.environ["RUNNER_TEMP"])/"thin"; files=[p for p in root.rglob("*") if p.is_file()]; assert d["files"]==125 and len(files)==125, (d,len(files)); assert not (root/".git").exists(); assert not (root/"research/t20-v6-20261012/sources").exists(); assert not (root/"experiments/orthemology-v5-successors/source-store").exists()'
+      - name: All five current test families in the thin candidate
+        env:
+          ORTHEMOLOGY_CACHE: ${{ runner.temp }}/packs
+          ORTHEMOLOGY_TEST_CACHE: ${{ runner.temp }}/packs
+          ORTHEMOLOGY_TEST_ROOT: ${{ runner.temp }}/thin
         run: |
-          python -B tests/test_t20_v6_projection.py
-          python -B -O tests/test_t20_v6_projection.py
-          python -B scripts/validate_t20_v6_projection.py
-      - name: Epistemic Tuples source-reading fidelity
-        run: python -B tests/test_epistemic_tuples_fidelity.py
-      - name: Fable R1 claim-language and source-relation gates
-        run: python scripts/validate_fable_r1_claim_language.py
-      - name: AR8R V8 recovery provenance and payload hashes
-        run: python scripts/validate_ar8r_recovery.py
-      - name: AR8R V11 campaign reconciliation and publication boundary
+          cd "$RUNNER_TEMP/thin"
+          python -B -m unittest discover -s tests -p test_integrity.py -v
+          python -B -m unittest discover -s tests -p test_compatibility.py -v
+          python -B -m unittest discover -s tests -p test_authority.py -v
+          python -B -m unittest discover -s tests -p test_replay.py -v
+          python -B -m unittest discover -s tests -p test_maintenance.py -v
+      - name: Source-owned authority projection from archived inputs
+        run: python -B "$RUNNER_TEMP/thin/tools/authority.py" --root "$RUNNER_TEMP/thin" --cache "$RUNNER_TEMP/packs" --offline validate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: thin-candidate-evidence
+          path: ${{ runner.temp }}/thin-assembly.json
+          retention-days: 14
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11.9"
+      - name: Run all 71 original steps in the exact reconstructed source context
         run: |
-          python tests/test_ar8r_v11_reconciliation.py
-          python scripts/validate_ar8r_reconciliation.py
-          python tests/test_pmr007_deep_bk_public_snapshot.py
-          python scripts/validate_pmr007_deep_bk_public_snapshot.py
-          python tests/test_pmr007_deep_bv_semantic_reissue.py
-          python scripts/validate_pmr007_deep_bv_semantic_reissue.py
-          python tests/test_pmr007_deep_bw_cj_semantic_reissue.py
-          python scripts/validate_pmr007_deep_bw_cj_semantic_reissue.py
-          python tests/test_ar8r_external_challenges.py
-          python scripts/validate_ar8r_external_challenges.py
-          python tests/test_ar8r_six_lane_v14_intake.py
-          python scripts/validate_ar8r_six_lane_v14_intake.py
-          python tests/test_ar8r_codex_corpus_synthesis_v14.py
-          python scripts/validate_ar8r_codex_corpus_synthesis_v14.py
-      - name: Generated project state — drift check (R4, Decision 0014)
-        run: python scripts/generate_current_state.py --check
-      - name: v5 continuation source isolation and evidence boundaries (Decision 0037)
+          python -B tools/replay.py --root "$GITHUB_WORKSPACE" --cache "$RUNNER_TEMP/source-cache" --history-from-git "$GITHUB_WORKSPACE" --out "$RUNNER_TEMP/legacy-validation" --keep-going --timeout 3600 ci all
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: original-validation-evidence
+          path: |
+            ${{ runner.temp }}/legacy-validation/RUN.json
+            ${{ runner.temp }}/legacy-validation/command-*.log
+          retention-days: 14
+  qualify:
+    name: Exact representative replay (${{ matrix.case }})
+    # One named push requests a qualification campaign; ordinary follow-up
+    # pushes and duplicate PR events do not repeat expensive suites.
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.message, '[qualify-replay]'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        case:
+          - family-computability
+          - erased-certificate-work-boundary
+          - hidden-parity-pruning
+          - json-certificate-reference
+          - finite-foundation-controls
+          - native-reference-and-formal
+          - fibre-certification
+          - governed-manuscript-publication
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11.9"
+      - name: Verify lossless archive extraction tools
         run: |
-          python -B tests/test_research_continuations.py
-          python -B -O tests/test_research_continuations.py
-          python -B tests/test_research_continuation_replay.py
-          python -B -O tests/test_research_continuation_replay.py
-          python -B scripts/validate_research_continuations.py
-      - name: Sixth-final preservation and isolated controls (Decision 0038)
+          command -v zstd || (sudo apt-get update && sudo apt-get install --yes zstd)
+          command -v dpkg-deb
+      - name: Build exact packs and assemble the thin replay candidate
         run: |
-          python -B tests/test_research_continuation_successors.py
-          python -B -O tests/test_research_continuation_successors.py
-          python -B tests/test_continuation_controls.py
-          python -B -O tests/test_continuation_controls.py
-          python -B scripts/replay_continuation_controls.py --suite sixth-foundations --out "$RUNNER_TEMP/v5-sixth-foundations"
-          python -B scripts/replay_continuation_controls.py --suite sixth-foundations-addenda --out "$RUNNER_TEMP/v5-sixth-foundations-addenda"
-          python -B scripts/replay_continuation_controls.py --suite sixth-cost-controls --out "$RUNNER_TEMP/v5-sixth-cost-controls"
-      - name: State-contract convergence proof (commit boundary + tamper controls)
-        run: python scripts/validate_state_convergence.py
-      - name: Public state surfaces agree with the generated state
-        run: python scripts/validate_current_state.py
-      - name: Review-state contract + historical supersession (R5, Decision 0016)
-        run: python scripts/validate_review_state.py
-      - name: R7E Sol independent-review control plane (Decision 0034)
-        run: python tests/test_r7e_sol_review_state.py
-      - name: Complete R7 candidate-topology contract (Decision 0034)
-        run: python tests/test_candidate_state.py
-      - name: R7E provenance and immutable candidate-ledger contract (Decision 0034)
+          python -B tools/rehydrate.py --root "$GITHUB_WORKSPACE" --cache "$RUNNER_TEMP/source-cache" build-packs --dest "$RUNNER_TEMP/packs"
+          python -B tools/rehydrate.py --root "$GITHUB_WORKSPACE" --cache "$RUNNER_TEMP/packs" assemble --dest "$RUNNER_TEMP/thin" > "$RUNNER_TEMP/thin-replay-assembly.json"
+      - name: Deny old loose sources in the disposable qualification checkout
         run: |
-          python tests/test_candidate_provenance.py
-          python scripts/validate_candidate_provenance.py
-      - name: Bounded waking/somnic contracts and residual-recurrence fixtures (Decision 0035)
+          python -c 'import hashlib,json,os,subprocess
+          from pathlib import Path
+          checkout=Path(os.environ["GITHUB_WORKSPACE"]).resolve()
+          thin=Path(os.environ["RUNNER_TEMP"])/"thin"
+          lock=json.loads((thin/"corpus/archives.lock.json").read_text())
+          profile=lock["profiles"]["ordinary"]
+          paths=sorted(list(profile["existing_paths"].values())+profile["new_paths"])
+          assert profile["initial_target"]==125 and len(paths)==len(set(paths))==125
+          assert all(not p.startswith("/") and ".." not in p.split("/") and not any(c in p for c in "*?[]\\\n\r") for p in paths)
+          def inventory(root):
+              result=set()
+              for base,dirs,files in os.walk(root):
+                  if Path(base)==root and ".git" in dirs: dirs.remove(".git")
+                  for name in dirs+files: assert not (Path(base)/name).is_symlink()
+                  result.update((Path(base)/name).relative_to(root).as_posix() for name in files)
+              return result
+          assert inventory(thin)==set(paths), "assembled candidate differs from declared 125 paths"
+          tracked=set(subprocess.check_output(["git","ls-files","-z"],cwd=checkout).decode().split("\0"))-{""}
+          assert set(paths)<=tracked, "every ordinary candidate path must be committed before qualification"
+          patterns="".join("/"+path+"\n" for path in paths)
+          subprocess.run(["git","sparse-checkout","init","--no-cone"],cwd=checkout,check=True)
+          subprocess.run(["git","sparse-checkout","set","--no-cone","--stdin"],cwd=checkout,input=patterns,text=True,check=True)
+          assert inventory(checkout)==set(paths), "old loose inputs remain in qualification checkout"
+          for rel in ["research/t20-v6-20261012","experiments/orthemology-v5-successors/source-store","experiments/orthemology-v5-continuations/source-store","manuscript/orthemma-ortheme-systems-revised-draft.md"]:
+              assert not (checkout/rel).exists(), "legacy loose source remains: "+rel
+          assert not subprocess.check_output(["git","status","--porcelain"],cwd=checkout).strip()
+          baseline=lock["baseline"]["commit"]
+          assert subprocess.check_output(["git","rev-parse",baseline+"^{tree}"],cwd=checkout,text=True).strip()==lock["baseline"]["tree"]
+          receipt={"scope":"physical source isolation; scientific execution remains separate","files":125,"profile_paths_sha256":hashlib.sha256(patterns.encode()).hexdigest(),"baseline":baseline,"baseline_tree":lock["baseline"]["tree"],"old_loose_sources_absent":True,"history_access":"explicit verified Git-object route only"}
+          (Path(os.environ["RUNNER_TEMP"])/"thin-replay-isolation.json").write_text(json.dumps(receipt,indent=2)+"\n")
+          print(json.dumps(receipt,sort_keys=True))
+          '
+      - name: Acquire the exact public environment in a fresh isolated directory
+        env:
+          REPLAY_CASE: ${{ matrix.case }}
         run: |
-          python tests/test_somnic_orthing.py
-          python scripts/validate_somnic_orthing.py
-      - name: Generated candidate-state overlay — drift check
-        run: python scripts/generate_candidate_state.py --check
-      - name: Public/private evidence boundary (R5, Decision 0017)
-        run: python scripts/validate_evidence_boundary.py
-      - name: Source-status registry + prose agreement (R4, Decision 0013)
-        run: python scripts/validate_source_status.py
-      - name: Verdict semantics (registry-driven fixtures)
-        run: python scripts/validate_verdict_semantics.py --fixtures tests/verdict-fixtures.json
-      - name: Notation registry
-        run: python scripts/validate_notation.py
-      - name: Type/token semantic roles + orthability senses
-        run: python scripts/validate_type_token_semantics.py
-      - name: Concrete/sound-reason fixtures
-        run: python scripts/validate_reason_fixtures.py
-      - name: Claim-relative reasoning paths CR-9..CR-15 + omission attack (Decision 0011)
-        run: python scripts/validate_claim_reasoning_paths.py
-      - name: Decision status / supersession registry (0009 -> 0011 machine-checked)
-        run: python scripts/validate_decision_dependencies.py
-      - name: Latent-state boundary fixtures LS-1..LS-7 (R4, Decision 0015)
-        run: python scripts/validate_latent_state_fixtures.py
-      - name: JSON schemas + machine-readable examples
-        run: python scripts/validate_schemas.py
-      - name: Cross-record semantics
-        run: python scripts/validate_cross_record_semantics.py
-      - name: Negative fixtures + invalid-record corpus
-        run: python scripts/validate_negative_fixtures.py
-      - name: Recursive path-aware mutation testing (per-family scope printed)
-        run: python scripts/validate_recursive_mutations.py
-      - name: Task 14 adversarial inventory, runner, and report contract
-        run: python tests/test_task14_adversarial_program.py
-      - name: ReqPath governance derivation (incl. omission attack)
-        run: python scripts/derive_reqpath.py
-      - name: Registry-generated surfaces are current (no drift)
-        run: python scripts/generate_from_registry.py --check
-      - name: Qurʾān locus registry consistency (offline)
-        run: python scripts/validate_quran_loci.py
-      - name: Citation/source-ledger completeness (field presence only)
-        run: python scripts/validate_claim_sources.py
-      - name: Cross-document consistency
-        run: python scripts/validate_cross_document_consistency.py
-      - name: Internal references resolve (no ghost script/fixture citations)
+          python -B "$RUNNER_TEMP/thin/tools/replay.py" --root "$RUNNER_TEMP/thin" --cache "$RUNNER_TEMP/packs" --offline --no-git-source --out "$RUNNER_TEMP/environment" --timeout 3600 provision "$REPLAY_CASE"
+          python -c 'import json,os; d=json.load(open(os.environ["RUNNER_TEMP"]+"/environment/ENV.json")); f=open(os.environ["GITHUB_ENV"],"a"); [f.write(k+"="+d[k]+"\n") for k in ("REPLAY_PYTHON","LEAN_BIN","MATHLIB_DIR")]; f.close()'
+      - name: Run unchanged original scientific gate with explicit scope
+        env:
+          REPLAY_CASE: ${{ matrix.case }}
+        shell: bash
         run: |
-          python tests/test_internal_references.py
-          python scripts/validate_internal_references.py
-      - name: Experiment-packet readiness + no-run guard (R6, Decision 0018)
-        run: python scripts/validate_experiment_readiness.py
-      - name: Sourcing-state classification + navigation (R6, Decision 0019)
-        run: python scripts/validate_sourcing_state.py
-      - name: Companion references resolve (R6)
-        run: python scripts/validate_companion_references.py
-      - name: daee crosswalk + notation firewall (R7, Decision 0021)
-        run: python scripts/validate_daee_crosswalk.py
-      - name: Current DAEE runtime crosswalk (R7D, Phase G)
-        run: python scripts/validate_daee_current_crosswalk.py
-      - name: Noetic-application fixtures + example (R7, Decision 0021)
-        run: python scripts/validate_noetic_application.py
-      - name: Experiment methods / READY_TO_RUN gate (R7, Decision 0022)
-        run: python scripts/validate_experiment_methods.py
-      - name: Math source discipline + notation-gallery drift (R7B, Decision 0023)
-        run: |
-          python tests/test_math_source_validator.py
-          python scripts/validate_math_source.py
-      - name: Math pipeline unit tests (R7B, Decision 0023)
-        run: python tests/test_math_pipeline.py
-      - name: PDF math-glyph regression gate (R7B, Decision 0023)
-        run: python scripts/validate_pdf_math.py
-      - name: Dynamic orthing / latent-state learning (R7B, Decision 0024)
-        run: python scripts/validate_dynamic_orthing.py
-      - name: Meta-noetic memetics + sound descent adjudication (R7B, Decision 0025)
-        run: python scripts/validate_meta_noetic_memetics.py
-      - name: Project layer map + firewall (R7B, Phase H)
-        run: python scripts/validate_layer_map.py
-      - name: Candidate-state / pre-merge decision status (R7C 0026; R7D 0029 live-head gate)
-        run: python scripts/validate_candidate_state.py
-      - name: Public experiment-readiness conformance (R7D, Decision 0029)
-        run: python scripts/validate_public_readiness.py
-      - name: Semantic decision references (R7D, Decision 0029)
-        run: python scripts/validate_decision_references.py
-      - name: Multi-target noetic orthing + claim bearers (R7C, Decision 0027)
-        run: python scripts/validate_noetic_targets.py
-      - name: Evidence-bound multi-target noetic claims (R7D, Decision 0030)
-        run: python scripts/validate_noetic_claims.py
-      - name: Represented standards + memetic ecology (R7C, Decision 0028)
-        run: python scripts/validate_memetic_ecology.py
-      - name: Governed corrective search + transition witness (R7D, Decision 0033)
-        run: python scripts/validate_corrective_transition.py
-      - name: Typed DAEE semantic-operator contract (R7E Task 6)
-        run: |
-          python tests/test_semantic_operator_contract.py
-          python scripts/validate_semantic_operator_contract.py
-      - name: Dynamic-orthability argument map (R7D, Phase J)
-        run: python scripts/validate_argument_map.py
-      - name: FCSP-2 packet smoke tests (deterministic; no result)
-        run: python experiments/false-closure-selective-prediction-v2/tests/test_smoke.py
-      - name: ER-2 packet smoke tests (deterministic; no result)
-        run: python experiments/episode-reification-v2/tests/test_smoke.py
-      - name: Historical R6 packet smoke tests (still deterministic; no result)
-        run: |
-          python experiments/false-closure-selective-prediction/tests/test_smoke.py
-          python experiments/episode-reification/tests/test_smoke.py
-      - name: Terminology packet freeze hashes (v1 immutable + v2)
-        run: |
-          python scripts/freeze_pilot0.py --check
-          python scripts/freeze_pilot0.py --packet pilot0-v2 --check
-      - name: Terminology matching audit (pilot0-v2)
-        run: python scripts/audit_terminology_matching.py
-      - name: Release manifest matches tree
-        run: |
-          python scripts/make_manifest.py
-          git diff --exit-code docs/provenance/RELEASE-MANIFEST.sha256
-      - name: PDF clean rebuild, byte-equality with committed artifacts, text-structure QA
-        run: python scripts/build_pdfs.py --check
-      - name: Seventh-Twentieth successor source and status integrity
-        run: |
-          python -B tests/test_v5_successors.py
-          python -B -O tests/test_v5_successors.py
-          python -B tests/test_v5_successor_replay.py
-          python -B -O tests/test_v5_successor_replay.py
-          python -B tests/test_v5_d04_replay.py
-          python -B -O tests/test_v5_d04_replay.py
-          python -B tests/test_v5_operational_assets_v1.py
-          python -B -O tests/test_v5_operational_assets_v1.py
-          python -B tests/test_v5_covering_continuation.py
-          python -B -O tests/test_v5_covering_continuation.py
-          python -B tests/test_v5_covering_dispatch.py
-          python -B -O tests/test_v5_covering_dispatch.py
-          python -B tests/test_v5_covering_execution.py
-          python -B -O tests/test_v5_covering_execution.py
-          python -B tests/test_v5_covering_receipt.py
-          python -B -O tests/test_v5_covering_receipt.py
-          python -B tests/test_v5_d04_public_receipt.py
-          python -B -O tests/test_v5_d04_public_receipt.py
-          python -B tests/test_v5_p1_tail.py
-          python -B -O tests/test_v5_p1_tail.py
-          python -B tests/test_v5_p1_tail_finish.py
-          python -B -O tests/test_v5_p1_tail_finish.py
-          python -B tests/test_v5_selector_dispatch.py
-          python -B -O tests/test_v5_selector_dispatch.py
-          python -B tests/test_v5_selector_executor.py
-          python -B -O tests/test_v5_selector_executor.py
-          python -B tests/test_successor_references.py
-          python -B -O tests/test_successor_references.py
-          python -B scripts/validate_v5_successors.py
-          python -B -O scripts/validate_v5_successors.py
-          python tests/test_v5_g1_membership.py
-          python -O tests/test_v5_g1_membership.py
-          python -B tests/test_v5_sixteenth_boundary.py
-          python -B -O tests/test_v5_sixteenth_boundary.py
-          python -B tests/test_v5_repository_scope.py
-          python -B -O tests/test_v5_repository_scope.py
-          python -B tests/test_v5_twentieth_boundary.py
-          python -B -O tests/test_v5_twentieth_boundary.py
-          python -B tests/test_v5_twentieth_data.py
-          python -B -O tests/test_v5_twentieth_data.py
-          python -B tests/test_v5_twentieth_references.py
-          python -B -O tests/test_v5_twentieth_references.py
-          python -B tests/test_v5_twentieth_selected.py
-          python -B -O tests/test_v5_twentieth_selected.py
-          python -B tests/test_v5_twentieth_addendum.py
-          python -B -O tests/test_v5_twentieth_addendum.py
-          python -B tests/test_v5_twentieth_reader_references.py
-          python -B -O tests/test_v5_twentieth_reader_references.py
-          python -B tests/test_v5_twentieth_late_append.py
-          python -B -O tests/test_v5_twentieth_late_append.py
+          args=(--root "$RUNNER_TEMP/thin" --cache "$RUNNER_TEMP/packs" --offline --no-git-source --history-from-git "$GITHUB_WORKSPACE" --python "$REPLAY_PYTHON" --out "$RUNNER_TEMP/replay" --timeout 5400)
+          if [[ -n "$LEAN_BIN" ]]; then args+=(--lean-bin "$LEAN_BIN" --mathlib "$MATHLIB_DIR"); fi
+          if [[ "$REPLAY_CASE" == native-reference-and-formal ]]; then args+=(--historical-native); fi
+          python -B "$RUNNER_TEMP/thin/tools/replay.py" "${args[@]}" case "$REPLAY_CASE"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: representative-${{ matrix.case }}
+          path: |
+            ${{ runner.temp }}/thin-replay-assembly.json
+            ${{ runner.temp }}/thin-replay-isolation.json
+            ${{ runner.temp }}/environment/ENV.json
+            ${{ runner.temp }}/environment/RUN.json
+            ${{ runner.temp }}/environment/command-*.log
+            ${{ runner.temp }}/replay/RUN.json
+            ${{ runner.temp }}/replay/command-*.log
+            ${{ runner.temp }}/replay/READBACKS.json
+            ${{ runner.temp }}/replay/RENDER_MANIFEST.json
+            ${{ runner.temp }}/replay/render-review/page-*.png
+            ${{ runner.temp }}/replay/results/RECEIPT.json
+            ${{ runner.temp }}/replay/results/VERIFICATION.json
+            ${{ runner.temp }}/replay/results/v4/VERIFICATION.json
+            ${{ runner.temp }}/replay/results/formal/FORMAL_RECEIPT.json
+          retention-days: 14
