@@ -177,8 +177,13 @@ def work_edition(provider,name,version=None):
     return {"work":baseline or carrier,"version":version,"sources":prior["sources"],"metadata":metadata,
             "kind":kind,"predecessor":True,"status":status,"scope":prior["scope"]}
 
+def _metadata_words(text):
+    # Treat typographical word separators alike in metadata discovery only.
+    # Exact name/version selection and scientific full-text search stay literal.
+    return text.casefold().translate(str.maketrans({c:" " for c in "-_‐‑–—"}))
+
 def metadata_search(provider,query="",subject=None):
-    terms=query.casefold().split()
+    terms=_metadata_words(query).split()
     found=[]
     claims=load_claims(provider)
     verify_claims(provider,claims)
@@ -189,7 +194,8 @@ def metadata_search(provider,query="",subject=None):
         original=work.get("original_record",{})
         searchable=public+" "+json.dumps(original,ensure_ascii=False).casefold()
         if work.get("record_type") in ("source_owned_claim","source_owned_reading"):searchable+=" "+" ".join(work.get("aliases",[])).casefold()
-        if all(term in searchable for term in terms) and (subject is None or subject.casefold() in public):
+        searchable=_metadata_words(searchable)
+        if all(term in searchable for term in terms) and (subject is None or _metadata_words(subject) in _metadata_words(public)):
             found.append(work)
     return found
 

@@ -377,8 +377,9 @@ class PublicOwnerRoutes(unittest.TestCase):
     def test_retained_state_source_revision_has_exact_named_primary_and_scope(self):
         from search import metadata_search, work_edition
         title="Historical source revision composed with forward continuation"
-        found=metadata_search(self.provider,"retained state source revision")
-        self.assertTrue(any(r["title"]==title for r in found))
+        for query in ("retained state source revision","retained-state source-revision","retained–state source_revision"):
+            found=metadata_search(self.provider,query)
+            self.assertTrue(any(r["title"]==title for r in found),query)
         edition=work_edition(self.provider,title)
         self.assertEqual(edition["kind"],"source_reading")
         primary=[s for s in edition["sources"] if s["role"]=="primary"]
