@@ -1,26 +1,43 @@
 # Orthemology
 
-Orthemology investigates the conditions of correct judgement, adequate reasoning and production, warranted recognition, objective standards, and source-grounded correction. Its philosophical arguments, mathematical results, formal proofs and applications retain their own premises and evidence scopes.
+Orthemology investigates correct judgement, adequate reasoning and production, warranted recognition, objective standards, and source-grounded correction. Its philosophical arguments, mathematical results, formal proofs and applications retain their own premises and evidence scopes.
 
-## Read the research
+## Read the scholarship
 
-| Question | Start with the primary source |
+Open the works directly in GitHub or in a normal Markdown, LaTeX or PDF reader. The consolidated works contain their arguments and proofs; no retrieval application is required.
+
+| Subject | Direct scholarly work |
 |---|---|
-| How do correctness, evidence and correction fit together? | [The main paper](papers/correctness-reasoning-and-systems.md) |
-| What makes things intelligible and genuinely evaluable? | [Orthability and the ground of intelligibility](foundations/orthability-and-the-ground-of-intelligibility.md) · [current foundational arguments](foundations/current-arguments.md) |
-| What follows about necessary being, productive adequacy and divine attributes? | [Modal grounding](foundations/modal-grounding/orthability-and-modal-grounding.md) · [attributes and speech](foundations/orthability-divine-attributes-and-speech-athari.md) |
-| How do proper function, recognition, warrant and correction relate? | [Concrete and sound reason](foundations/concrete-and-sound-reason.md) · [dynamic orthing and noetic learning](foundations/dynamic-orthing-noetic-learning-and-orthability.md) |
-| What must representations retain for future inquiry? | [Continuation-complete inquiry](mathematics/continuation/continuation-complete-inquiry.md) · [information, composition and revision](mathematics/information-and-revision/information-composition-and-self-revision.pdf) |
-| How are collective judgement and formal reasoning governed? | [Formal core](mathematics/formal-foundations/core-formalization.md) · [collective inquiry](mathematics/collective-inquiry/conflict-and-shared-standards.md) |
-| What are the substantive applications? | [DAEE epistemics](applications/daee-epistemics/README.md) |
+| Prediction, decision value and information geometry | [Information retained by inquiry: prediction, decisions, and Fisher dynamics](mathematics/information-and-inquiry.md) — complete predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher descent and minimal retained information |
+| Received existence, productive adequacy and necessary being | [Received actuality, original adequacy, and intrinsic necessity](foundations/received-actuality-and-intrinsic-necessity.md) — the affirmative argument, its conditional proofs, strongest competing accounts and qualifications |
+| Correctness, reasoning and systems | [The public main manuscript](manuscript/orthemma-ortheme-systems-revised-draft.md) |
+| Orthability and metaphysical grounding | [Orthability and the ground of intelligibility](companion/orthability-and-the-ground-of-intelligibility.md) · [modal grounding](theory/lineages/h-modal/orthability_modal_grounding.md) |
+| Divine attributes and objective standards | [Attributes and speech](companion/orthability-divine-attributes-and-speech-athari.md) |
+| Proper function, recognition, warrant and correction | [Concrete and sound reason](companion/CONCRETE-AND-SOUND-REASON.md) · [dynamic orthing and noetic learning](companion/dynamic-orthing-noetic-learning-and-orthability.md) |
+| Continuation and revision | [Continuation-complete inquiry](theory/lineages/h-continuation/continuation_complete_orthing.md) · [information, composition and self-revision](theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf) |
+| Logic and collective inquiry | [Formal core](theory/orthemic-core-formalization.md) · [conflict and shared standards](theory/orthemic-multi-actor-conflict-note.md) |
+| Applications | [DAEE epistemics](applications/daee-epistemics/README.md) |
 
-The [reading guide](docs/reader/START_HERE.md) covers the programme's twelve avenues. [Current science](docs/reader/CURRENT_SCIENCE.md) presents affirmative arguments with their premises and qualifications; [research frontiers](docs/reader/RESEARCH_FRONTIERS.md) distinguishes established results from genuine open questions.
+The first two works are new public expositions. Their [independent scientific review and incorporation record](docs/scientific-consolidation-review.md) distinguishes source fidelity, new deductions, corrections and the remaining retirement gates. They do not silently amend accepted papers or confer owner acceptance. The other links open existing public works at their existing scientific status.
 
-These guides are generated from existing scientific owners. A preserved source, a correct file hash, an ordinary mathematical argument, a finite control, a kernel-checked theorem and a scientific adoption decision are different forms of evidence. See [status](STATUS.md).
+Accepted Papers 1–10 and the original unfinished n-person noetic-field objective of Paper 11 remain central to the programme. Accepted editions retain their identity and authority. Constructive-correction companions are distinct proposed works; they do not displace the original objective. Where controlling editions are private, public consolidation records that dependency and requires a separate scholarly receiving and release decision before importing their text.
 
-## Find a complete work and its review
+## Contribute and reproduce
 
-Python 3.11 or later is sufficient for ordinary source reading; no proof toolchain is needed.
+[Contributing](CONTRIBUTING.md) requires each contribution to improve its proper scholarly home. Preserve necessary proofs, significant counterexamples and independent reasoning; incorporate corrections instead of accumulating permanent research-wave reports. Review material revisions and preserve predecessor editions through Git and applicable evidence custody.
+
+The [reproducibility guide](docs/reader/REPRODUCIBILITY.md) covers exact historical restoration and declared execution environments. A mathematical proof, finite control, kernel check, source-reading record and owner adoption decision establish different things. [Status](STATUS.md) records that distinction.
+
+[R-0002](https://github.com/theislampill/orthemology/issues/38) and [draft PR #39](https://github.com/theislampill/orthemology/pull/39) govern the ongoing scientific consolidation. Redundant original files remain until their substantive incorporation, consumer migration and applicable preservation are independently qualified. The earlier small-tree simulation and retrieval tests are supporting historical engineering evidence, not completion of the scientific refactor.
+
+<details>
+<summary>Optional historical search, recovery and preserved delivery utilities</summary>
+
+The catalogue below describes preserved source editions. Use the direct scholarly links above for the consolidated expositions. These utilities remain available for exact historical verification and advanced inspection; they are not the corpus's reading interface or a scientific acceptance authority.
+
+### Historical source lookup and exact recovery
+
+These optional utilities inspect preserved source editions and recovery records. They require Python 3.11 or later; the scholarly documents above require no such tool.
 
 ```sh
 python tools/corpus.py list --subject geometry
@@ -41,7 +58,7 @@ python tools/corpus.py --cache ../research-cache --offline show --work "Finite-a
 
 `search --full-text` reports the actual searched and unavailable populations. `fetch --all` deliberately caches the full public baseline (310,686,293 logical bytes); it is separate from an ordinary reading session. Source caches and restored proof environments live outside the ordinary checkout. Named `materialise` requires `--context reading` for a reading bundle or `--context replay` plus an explicit verified history source for a complete historical source workspace; neither choice executes a proof.
 
-### Complete delivery to an AI reader
+### Optional complete delivery of historical sources to an AI reader
 
 A long terminal response can be truncated by the receiving interface even when the source file was saved correctly. The `read` route emits the complete scholarly selection and its source-owned identity/status as bounded UTF-8 JSONL records. It preserves BOMs, line endings and every source byte. Each record has a sequence number; each source has byte offsets and hashes. No proof toolchain is needed.
 
@@ -52,7 +69,7 @@ python tools/corpus.py verify-reading --work "Normal forms and transport for sup
 
 A tool client must deliver **every logical record automatically in bounded source notifications**. Consecutive whole records may share one bounded group; each record retains its sequence and exact content. Do not print the entire stream as one budgeted tool response. Reordered notifications can be reconstructed by sequence; missing, duplicated, altered or substituted records fail verification. Verification establishes the bytes supplied to the verifier, not that a reader saw or understood them. A missing controlling review remains missing.
 
-For ChatGPT code-mode, this is the ordinary named-reading adapter. Set `work` to the title returned by search and use the checkout/cache already selected for the session. This is one deliberate reading request; internal polling and frame notifications are automatic transport events. Any later manual source selection or recovery open is an additional action.
+The preserved ChatGPT code-mode adapter can deliver a historical named edition. Set `work` to its listed title and use the selected checkout/cache. It is optional and does not define ordinary scholarly reading or an accessibility action-count requirement.
 
 ```javascript
 const work = "Normal forms and transport for supplied certified selectors"; // Exact listed title or ID.
@@ -388,22 +405,10 @@ The adapter first writes one new external JSONL spool. If the complete serialize
 
 To read the **same authenticated edition again in this client session**, set `repeat = true` and rerun the same named-reading adapter with the same root, cache, work, requested version and spool values. Every frame is revalidated, regrouped and newly offered; a previous display or ACK is not reused as receipt. This route reads no new process or source payload. Its admission is tied to the original provider fetch, selected edition and complete snapshot, and is stored only after all notification calls returned. The original fallback, if any, remains provenance and is not reported as a new recovery. An identifiable selection invalidates its previous admission before mode/snapshot validation or delivery; missing, changed or interrupted session state fails explicitly. Set `repeat = false` and choose new spool/metrics paths for a fresh provider/currentness check. A null requested version in repeat mode stays pinned to the edition resolved by the original fetch. The session snapshot is trusted data from this originating client, not an independently authenticated archive or protection against a compromised client rewriting its admission. It carries the original source-owned status and review scope with **prior-fetch-only currentness**. It confers no new entitlement, scientific acceptance, actual receipt or timing qualification. All lookup, validation, hashing, grouping and offers still count within a measured repeat request.
 
-Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. The source-route map records the last successful route for each logical path, not every transfer event; a cached reread cannot erase earlier bytes from the cumulative payload total. Metrics leave wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter times the combined source-retrieval, bounded-capture and notification-offer interval; source preflight is recorded separately in the metrics file. Actual receipt and cold/warm qualification still require the receiving reader's evidence.
+Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. The source-route map records the last successful route for each logical path, not every transfer event; a cached reread cannot erase earlier bytes from the cumulative payload total. Metrics leave wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter times the combined source-retrieval, bounded-capture and notification-offer interval; source preflight is recorded separately in the metrics file. Actual receipt requires the receiving reader's evidence. Earlier cold/warm measurements are historical engineering evidence, not current accessibility acceptance criteria.
 
 The client must retain raw records, the source-group delivery plan and the actually presented groups/frames, disclose any omission marker, and acknowledge complete per-source coverage before claiming receipt. The supplied record stream can be checked with `verify-reading`. That check explicitly does not certify scholarly comprehension, review completeness, acceptance, or cold/warm performance. Binary sources require their appropriate full-document reader; `show --output NEW_DIRECTORY` preserves their exact files without pretending to render them as text.
 
 Research objectives, works, manuscript revisions, results, source occurrences and rendered editions remain distinct. The full source-owned record accompanies named readings. Governed manuscript routes separately expose their artifact/input commit, dated candidate snapshot and publication qualifications. Proposal routes carry the existing external adoption boundary; a newer candidate, equal-byte copy or successful build cannot promote it to accepted theory.
 
-## Edit, reproduce and preserve
-
-[Contributing](CONTRIBUTING.md) explains source ownership, new editions and review. The [reproducibility guide](docs/reader/REPRODUCIBILITY.md) separates reading, exact restoration, actual proof/experiment execution and publication.
-
-```sh
-python tools/corpus.py --help
-python tools/replay.py --help
-python tools/authority.py validate --root .
-```
-
-Historic paths and research labels remain resolvable as exact citations and replay inputs. Ordinary navigation uses the subject and argument. Original manuscripts, proofs, reviews, negative findings and historical source identities remain preserved.
-
-The repository consolidation is being implemented and qualified through [R-0002](https://github.com/theislampill/orthemology/issues/38) and its [draft implementation PR](https://github.com/theislampill/orthemology/pull/39). That work reuses the completed reader refactor; it does not change scientific acceptance.
+</details>
