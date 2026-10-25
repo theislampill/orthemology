@@ -707,5 +707,47 @@
         "scientific-consolidation-review"
       ]
     }
+  ],
+  "historical_source_bindings": [
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "15e864dd9b9a31a5203f31fe9b080261afc7de4e",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "18b3ceb2bcca924387899a9d51f3fd035967eac7",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "18b3ceb2bcca924387899a9d51f3fd035967eac7",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "512266ec363346b6302292f69dafad32f1e067a9",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/REPORT.md",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "cf657a78f972b7f98190139b2275a3381d288b66",
+      "role": "historical-source",
+      "reading_source": "consolidated-recognition-and-restoration",
+      "basis": "scientific-consolidation-review"
+    }
   ]
 }

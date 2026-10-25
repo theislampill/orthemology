@@ -14,6 +14,11 @@ import sys
 import subprocess
 from functools import lru_cache
 
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
+    historical_source_bytes, source_bytes,
+)
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PREFIX = 'research/t20-v6-20261012'
 MANIFEST = PREFIX + '/PUBLIC_PROJECTION_MANIFEST.json'
@@ -129,7 +134,9 @@ def check_object(root, row):
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('source symlink or escaped root')
-        if row.get('repository_revision') is not None:
+        if relative.as_posix() in HISTORICAL_PROSE:
+            body = source_bytes(root, row)
+        elif row.get('repository_revision') is not None:
             if disposition != 'REUSE' or row['repository_revision'] != BASE:
                 raise ValueError('invalid pinned historical reuse')
             body = subprocess.check_output(['git', 'show', BASE + ':' + relative.as_posix()], cwd=root)
@@ -158,6 +165,52 @@ def check_object(root, row):
             errors.append('unqualified binary source')
     return errors
 
+
+def check_preserved_roots(root, objects):
+    """Keep every protected baseline obligation, admitting only five exact D's.
+
+    The original bodies and both proof occurrences authenticate before an
+    absence can be admitted. Changed bytes, modes, renames or other removals
+    are not historical-source dispositions. All source-universe rows remain.
+    """
+    errors, authenticated = [], set()
+    for path, (blob, identity, size) in HISTORICAL_PROSE.items():
+        try:
+            if path in HISTORICAL_PROSE_PUBLIC_PATHS:
+                row = objects.get(identity, {})
+                if row.get('repository_path') != path:
+                    raise ValueError('historical public source path differs')
+                source_bytes(root, row)
+            else:
+                historical_source_bytes(root, path, HISTORICAL_PROSE_REVISION, blob)
+            authenticated.add(path)
+        except (KeyError, OSError, ValueError, subprocess.CalledProcessError) as exc:
+            errors.append('historical prose: ' + path + ': ' + str(exc))
+    protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
+                 'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
+                 'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
+                 'research/t20-live-20261009']
+    # Check both boundaries: a staged M/T/A must not disappear behind a
+    # combined worktree D or an unstaged return to original bytes.
+    for cached in (True, False):
+        result = subprocess.run(
+            ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
+             '--no-ext-diff', '--no-textconv', '--no-renames', '--name-status',
+             '-z', BASE, '--', *protected],
+            cwd=root, capture_output=True, check=False)
+        try:
+            changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
+            if result.returncode or len(changes) % 2:
+                raise ValueError('protected baseline comparison unavailable')
+            if any(status != 'D' or path not in authenticated
+                   for status, path in zip(changes[::2], changes[1::2])):
+                errors.append('preserved v5 or prior T20 baseline changed')
+        except (ValueError, UnicodeError):
+            errors.append('preserved v5 or prior T20 baseline comparison unavailable')
+
+    return list(dict.fromkeys(errors))
+
+
 def validate(root=ROOT):
     manifest_bytes = (root / MANIFEST).read_bytes()
     manifest = json.loads(manifest_bytes)
@@ -177,12 +230,7 @@ def validate(root=ROOT):
         errors.append('selection count or saved reuse differs')
     baseline_paths = set(subprocess.check_output(
         ['git', 'ls-tree', '-r', '--name-only', BASE], cwd=root, text=True).splitlines())
-    protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
-                 'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
-                 'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
-                 'research/t20-live-20261009']
-    if subprocess.check_output(['git', 'diff', '--name-only', BASE, '--'] + protected, cwd=root):
-        errors.append('preserved v5 or prior T20 baseline changed')
+    errors.extend(check_preserved_roots(root, by_hash))
     for path, binding in _origin_records(str(root)).items():
         owner = by_hash.get(binding['source_sha256'], {})
         if owner.get('repository_path') != path or owner.get('public_sha256') != binding['public_sha256']:

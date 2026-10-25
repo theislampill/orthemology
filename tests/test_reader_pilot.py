@@ -14,11 +14,13 @@ import json
 from pathlib import Path
 import posixpath
 import subprocess
+import sys
 import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / "scripts" / "check_reader_pilot.py"
+sys.path.insert(0, str(MODULE.parent))
 
 
 class ReaderPilotTests(unittest.TestCase):
@@ -159,6 +161,24 @@ class ReaderPilotTests(unittest.TestCase):
         self.assertEqual(self.check(owners=owners, cross=altered), [])
         path.write_text(path.read_text()+"\nChanged the source outside the pilot slice.")
         self.reject(self.check(owners=owners, cross=altered), "corpus-currentness")
+
+
+    def test_wrong_staged_source_cannot_hide_under_its_original_worktree_copy(self):
+        path = self.repo / 'fixture-theory/core.md'
+        original = path.read_bytes()
+        path.write_bytes(original + b'\nwrong staged edition\n')
+        self.git('add', '--', 'fixture-theory/core.md')
+        path.write_bytes(original)
+        self.assertEqual(self.git('diff', '--name-only', self.base, '--', 'fixture-theory/core.md'), '')
+        self.reject(self.check(), 'corpus-currentness')
+
+    def test_staged_new_source_cannot_hide_by_removing_its_worktree_copy(self):
+        path = self.repo / 'fixture-theory/new-index-only.md'
+        path.write_bytes(b'new source without an owner\n')
+        self.git('add', '--', 'fixture-theory/new-index-only.md')
+        path.unlink()
+        self.assertEqual(self.git('diff', '--name-only', self.base, '--', 'fixture-theory/new-index-only.md'), '')
+        self.reject(self.check(), 'corpus-currentness')
 
     def test_disposable_scratch_does_not_expand_the_tracked_corpus(self):
         path = self.repo / "untracked-research-scratch.md"
@@ -952,8 +972,17 @@ class HistoricalMetadataPinTests(unittest.TestCase):
 
     def test_actual_manifest_binds_both_original_bodies_not_mutable_roots(self):
         expected, _ = self.candidate()
+        # Preserve the exact original document, adding only the separately
+        # qualified four prose history bindings alongside the two old pins.
+        for path in HistoricalProseReaderTests.PATHS:
+            for row in expected["objects"]:
+                if row.get("repository_path") == path:
+                    row.update(repository_revision=HistoricalProseReaderTests.BASE,
+                               git_blob=subprocess.check_output(
+                                   ["git", "rev-parse", HistoricalProseReaderTests.BASE + ":" + path],
+                                   cwd=ROOT, text=True).strip())
         actual = json.loads((ROOT / self.manifest_path).read_bytes())
-        self.assertTrue(actual == expected, "historical contributor source still follows the mutable root")
+        self.assertEqual(actual, expected, "historical owner metadata changed outside the finite bindings")
 
     def test_contributor_pin_is_required_and_only_exact_metadata_is_admitted(self):
         identity = "5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1"
@@ -5892,6 +5921,216 @@ class ScholarlyAdditionTests(unittest.TestCase):
             altered = deepcopy(owners)
             altered["baseline_work_population"] = value
             self.reject(self.check(altered, cross), "source-addition")
+
+
+
+class HistoricalProseReaderTests(unittest.TestCase):
+    """Explicit history keeps identity, readable scholarship and the old census."""
+
+    BASE = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+    PATHS = (
+        'research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md',
+        'research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md',
+        'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md',
+        'research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md',
+        'research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/REPORT.md',
+    )
+    KEY = 't20-c03-52631c602c1c8fed'
+
+    @classmethod
+    def setUpClass(cls):
+        spec = importlib.util.spec_from_file_location('reader_finite_history', MODULE)
+        cls.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.mod)
+        directory = ROOT / 'docs/project-closure/reader-refactor-issue-35'
+        cls.original_owners = json.loads((directory / 'OWNER-MAP.json').read_text())
+        cls.original_cross = json.loads((directory / 'CROSSWALK.json').read_text())
+        cls.indexed = {r['path']: r for r in cls.mod.entries_at(
+            ROOT, cls.original_owners['baseline']['commit'])}
+        cls.bindings = [dict(
+            path=path, repository_revision=cls.BASE,
+            git_blob=subprocess.check_output(['git', 'rev-parse', cls.BASE + ':' + path],
+                                             cwd=ROOT, text=True).strip(),
+            role='historical-source', reading_source='consolidated-recognition-and-restoration',
+            basis='scientific-consolidation-review') for path in cls.PATHS]
+        cls.additions, errors = cls.mod.check_source_additions(
+            ROOT, cls.indexed, cls.original_owners, cls.original_cross)
+        if errors:
+            raise AssertionError(errors)
+
+    def setUp(self):
+        self.owners = deepcopy(self.original_owners)
+        self.owners['historical_source_bindings'] = deepcopy(self.bindings)
+        self.cross = deepcopy(self.original_cross)
+
+    def history(self):
+        gate = getattr(self.mod, 'check_historical_sources', None)
+        self.assertTrue(callable(gate), 'finite historical source owner is not implemented')
+        return gate(ROOT, self.indexed, self.owners, self.cross, self.additions)
+
+    def test_explicit_bindings_authenticate_all_five_original_occurrences(self):
+        before = deepcopy((self.owners, self.cross))
+        admitted, errors = self.history()
+        self.assertEqual(errors, [])
+        self.assertEqual(set(admitted), set(self.PATHS))
+        self.assertEqual((self.owners, self.cross), before, 'verification may not rewrite its evidence')
+        self.assertEqual(self.owners['baseline_work_population']['count'], 448)
+        self.assertEqual(len(self.cross['sources']), 1629)
+
+    def test_full_reader_uses_explicit_history_for_missing_predecessors(self):
+        saved = {}
+        for path in self.PATHS:
+            node = ROOT
+            for part in path.split('/'):
+                node = node / part
+                self.assertFalse(node.is_symlink(), "unsafe initial historical path")
+            saved[path] = ((node.read_bytes(), node.stat().st_mode & 0o777)
+                           if node.exists() else (None, None))
+            if saved[path][0] is not None:
+                self.assertEqual(saved[path][0], subprocess.check_output(
+                    ['git', 'show', self.BASE + ':' + path], cwd=ROOT))
+                self.assertFalse(saved[path][1] & 0o111, "wrong initial historical Git mode")
+        try:
+            for path in self.PATHS:
+                if (ROOT / path).exists():
+                    (ROOT / path).unlink()
+            errors = self.mod.check(ROOT, self.owners, self.cross)
+            self.assertEqual(errors, [])
+            self.assertTrue(all(not (ROOT / path).exists() for path in self.PATHS),
+                            'absence changed during reader validation')
+        finally:
+            for path, (body, mode) in saved.items():
+                node = ROOT / path
+                if body is None:
+                    if node.exists() or node.is_symlink():
+                        node.unlink()
+                else:
+                    node.write_bytes(body)
+                    node.chmod(mode)
+
+    def test_missing_duplicate_and_extra_dispositions_are_rejected(self):
+        for change in ('missing', 'duplicate', 'extra'):
+            with self.subTest(change=change):
+                self.owners['historical_source_bindings'] = deepcopy(self.bindings)
+                rows = self.owners['historical_source_bindings']
+                if change == 'missing':
+                    rows.pop()
+                elif change == 'duplicate':
+                    rows.append(deepcopy(rows[0]))
+                else:
+                    rows.append(dict(rows[0], path='README.md'))
+                self.assertTrue(self.history()[1])
+
+    def test_revision_blob_role_and_current_source_require_exact_owner_binding(self):
+        for field, value in (('repository_revision', 'HEAD'), ('git_blob', '0' * 40),
+                             ('path', '../report.md'), ('role', 'work-source'),
+                             ('reading_source', self.KEY), ('basis', self.KEY)):
+            with self.subTest(field=field):
+                self.owners['historical_source_bindings'] = deepcopy(self.bindings)
+                self.owners['historical_source_bindings'][0][field] = value
+                self.assertTrue(self.history()[1])
+
+    def test_old_source_requires_explicit_historical_reading_form_and_incorporation(self):
+        for change in ('form', 'relation'):
+            with self.subTest(change=change):
+                self.cross = deepcopy(self.original_cross)
+                if change == 'form':
+                    for work in self.cross['works']:
+                        for form in work.get('reading_forms', []):
+                            if form.get('source') == self.KEY:
+                                form['relationship'] = 'authored-source'
+                else:
+                    self.cross['relations'] = [r for r in self.cross['relations']
+                                               if r.get('from') != self.KEY]
+                self.assertTrue(self.history()[1])
+
+    def test_wrong_current_scholarship_cannot_be_replaced_by_historical_evidence(self):
+        path = ROOT / self.cross['sources']['consolidated-recognition-and-restoration']['path']
+        body = path.read_bytes()
+        try:
+            path.write_bytes(body + b'\nwrong current edition\n')
+            self.assertTrue(self.history()[1])
+        finally:
+            path.write_bytes(body)
+
+    def test_projection_owner_allows_only_four_exact_additional_history_pins(self):
+        original = json.loads(subprocess.check_output(
+            ['git', 'show', self.owners['baseline']['commit'] + ':' +
+             'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'], cwd=ROOT))
+        legacy = HistoricalMetadataPinTests()
+        legacy.original = original
+        legacy.identity = '94fb4c0a0fbe7406570711b222ac0e5dbc7493867cd28cb6f0ef08c6fea99074'
+        candidate, _ = legacy.candidate()
+        for binding in self.bindings:
+            if binding['path'] == self.PATHS[2]:
+                continue
+            row = next(r for r in candidate['objects'] if r.get('repository_path') == binding['path'])
+            row.update(repository_revision=self.BASE, git_blob=binding['git_blob'])
+        manifest_path = 'research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json'
+        owner = self.indexed[manifest_path]
+        self.assertTrue(self.mod.permitted_historical_status_pin(ROOT, owner, json.dumps(candidate).encode()))
+        changed = deepcopy(candidate)
+        row = next(r for r in changed['objects'] if r.get('repository_path') == self.PATHS[0])
+        row['repository_revision'] = 'HEAD'
+        self.assertFalse(self.mod.permitted_historical_status_pin(ROOT, owner, json.dumps(changed).encode()))
+        changed = deepcopy(candidate)
+        next(r for r in changed['objects'] if r.get('repository_path') == self.PATHS[0]).pop('git_blob')
+        self.assertFalse(self.mod.permitted_historical_status_pin(ROOT, owner, json.dumps(changed).encode()))
+
+
+    def test_staged_historical_identity_and_conflict_cannot_hide_in_worktree(self):
+        path = self.PATHS[0]
+        node = ROOT / path
+        self.assertFalse(node.is_symlink())
+        saved_body = node.read_bytes() if node.exists() else None
+        saved_mode = node.stat().st_mode & 0o777 if node.exists() else None
+        original_body = subprocess.check_output(['git', 'show', self.BASE + ':' + path], cwd=ROOT)
+        if saved_body is not None:
+            self.assertEqual(saved_body, original_body)
+            self.assertEqual(saved_mode, 0o644)
+        index = Path(subprocess.check_output(['git', 'rev-parse', '--git-path', 'index'],
+                                            cwd=ROOT, text=True).strip())
+        if not index.is_absolute():
+            index = ROOT / index
+        saved_index = index.read_bytes()
+        original = next(row['git_blob'] for row in self.bindings if row['path'] == path)
+        wrong = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'],
+                                        cwd=ROOT, input=b'wrong staged historical body\n').decode().strip()
+        link = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'],
+                                       cwd=ROOT, input=b'REPORT.md').decode().strip()
+        try:
+            for kind, mode, blob in (('blob', '100644', wrong), ('mode', '100755', original),
+                                     ('symlink', '120000', link), ('unmerged', None, None)):
+                for present in (False, True):
+                    with self.subTest(kind=kind, present=present):
+                        index.write_bytes(saved_index)
+                        subprocess.run(['git', 'update-index', '--force-remove', '--', path], cwd=ROOT, check=True)
+                        if mode:
+                            subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                                            mode + ',' + blob + ',' + path], cwd=ROOT, check=True)
+                        else:
+                            entries = ''.join('100644 ' + oid + ' ' + stage + '\t' + path + '\n'
+                                              for oid, stage in ((original, '1'), (wrong, '2'), (original, '3')))
+                            subprocess.run(['git', 'update-index', '--index-info'], cwd=ROOT,
+                                           input=entries.encode(), check=True)
+                        if present:
+                            node.write_bytes(original_body)
+                            node.chmod(0o644)
+                        elif node.exists():
+                            node.unlink()
+                        errors = self.mod.check(ROOT, self.owners, self.cross)
+                        self.assertTrue(any(e.startswith('historical-source: ' + path) for e in errors), errors)
+                        self.assertEqual(node.exists(), present, 'reader verification changed physical presence')
+        finally:
+            index.write_bytes(saved_index)
+            if saved_body is None:
+                if node.exists():
+                    node.unlink()
+            else:
+                node.write_bytes(saved_body)
+                node.chmod(saved_mode)
+        self.assertEqual(index.read_bytes(), saved_index)
+
 
 
 if __name__ == "__main__":

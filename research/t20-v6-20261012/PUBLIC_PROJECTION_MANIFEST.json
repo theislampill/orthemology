@@ -77223,7 +77223,9 @@
       "repository_path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md",
       "public_sha256": "3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b",
       "public_bytes": 1939,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "18b3ceb2bcca924387899a9d51f3fd035967eac7"
     },
     {
       "source_sha256": "3cd099bdef54c2eb86cb5d946335fd1172110975937ccb7d60b7105f442731d2",
@@ -96029,7 +96031,9 @@
       "repository_path": "research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md",
       "public_sha256": "4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c",
       "public_bytes": 15381,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "15e864dd9b9a31a5203f31fe9b080261afc7de4e"
     },
     {
       "source_sha256": "4be11866f6b49e9b1ba75909fb26346d096d09f1c75a5b5f4f53f11c20216fdc",
@@ -104446,7 +104450,9 @@
       "repository_path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/REPORT.md",
       "public_sha256": "52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be",
       "public_bytes": 15839,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "cf657a78f972b7f98190139b2275a3381d288b66"
     },
     {
       "source_sha256": "5263721d379b04ff62d95965d7dbf6106c4921c43d5ca869a0132d520c344f5f",
@@ -191404,7 +191410,9 @@
       "repository_path": "research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md",
       "public_sha256": "9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d",
       "public_bytes": 1587,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "512266ec363346b6302292f69dafad32f1e067a9"
     },
     {
       "source_sha256": "9426c1e1e2a0455b8be8af0978d54242491be47a7c4ac2925ebfe3127b3a4055",

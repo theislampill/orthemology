@@ -20,6 +20,11 @@ from urllib.parse import unquote, urlsplit
 from markdown_it import MarkdownIt
 import yaml
 
+from resolve_t20_v6_source import (
+    HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
+    historical_source_bytes,
+)
+
 
 ROLES = {
     "manuscript", "research-note", "component", "composite-reference",
@@ -301,7 +306,7 @@ def permitted_contributor_navigation(repo, row, body):
 
 
 def permitted_historical_status_pin(repo, row, body):
-    """Admit two exact historical navigation-body bindings, not new identities.
+    """Admit exact navigation and finite historical-prose bindings, not identities.
 
     The live status index and contributor guide have authorised reader additions.
     T20 retains both original bodies at its original baseline, using the existing
@@ -338,6 +343,21 @@ def permitted_historical_status_pin(repo, row, body):
                 return False
             source.update(repository_revision="7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
                           git_blob=blob)
+        if candidate == expected:
+            return True  # The original two-navigation-binding contract remains valid.
+        for path in HISTORICAL_PROSE_PUBLIC_PATHS:
+            blob, identity, size = HISTORICAL_PROSE[path]
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE"
+                    or source.get("repository_path") != path
+                    or source.get("source_bytes") != size
+                    or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
@@ -352,6 +372,10 @@ REFACTOR_EDIT_PATHS = {
     ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
     "scripts/reader_census.py", "scripts/check_reader_pilot.py",
     "tests/test_reader_census.py", "tests/test_reader_pilot.py",
+    # Exact existing integrity owners changed for the finite history contract;
+    # this does not admit any new source path or predecessor modification.
+    "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
+    "tests/test_t20_v6_projection.py",
     "docs/current-state.yaml", "docs/provenance/RELEASE-MANIFEST.sha256",
     "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
     "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
@@ -498,29 +522,107 @@ def check_source_additions(repo, baseline_rows, owners, cross):
     return admitted, errors
 
 
-def check_corpus_currentness(repo, baseline, admitted_paths=()):
+
+def check_historical_sources(repo, baseline_rows, owners, cross, additions):
+    """Bind exactly reviewed originals to history and physically readable science.
+
+    Original path identities and source/work entries stay in the frozen census.
+    This finite source-owner disposition is not scientific review, custody or
+    permission to delete. Only a validated absent original can cross currentness.
+    """
+    declared = owners.get("historical_source_bindings", [])
+    if declared == []:
+        return {}, []
+    fields = {"path", "repository_revision", "git_blob", "role", "reading_source", "basis"}
+    if (not isinstance(declared, list) or len(declared) != len(HISTORICAL_PROSE)
+            or any(not isinstance(row, dict) or set(row) != fields
+                   or not isinstance(row.get("path"), str) for row in declared)
+            or {row["path"] for row in declared} != set(HISTORICAL_PROSE)):
+        return {}, ["historical-source: expected the five distinct qualified path dispositions"]
+    admitted, errors = {}, []
+    sources = cross.get("sources", {})
+    for binding in declared:
+        path = binding["path"]
+        try:
+            blob, identity, size = HISTORICAL_PROSE[path]
+            original = baseline_rows.get(path, {})
+            if (original.get("kind"), original.get("mode"), original.get("git_oid"),
+                    original.get("bytes")) != ("blob", "100644", blob, size):
+                raise ValueError("original census identity differs")
+            if binding["role"] != "historical-source":
+                raise ValueError("the original needs an explicit historical-only role")
+            current = sources.get(binding["reading_source"], {})
+            review = sources.get(binding["basis"], {})
+            scholarly = additions.get(current.get("path"), {})
+            support = additions.get(review.get("path"), {})
+            if (scholarly.get("key") != binding["reading_source"]
+                    or scholarly.get("role") != "work-source"
+                    or binding["basis"] not in scholarly.get("supporting_source_keys", [])
+                    or support.get("key") != binding["basis"] or support.get("role") != "review"):
+                raise ValueError("current scholarship and its existing review owner are required")
+            for source, admission in ((current, scholarly), (review, support)):
+                node = safe_path(repo, source["path"])
+                body = node.read_bytes()
+                mode = "100755" if node.stat().st_mode & 0o111 else "100644"
+                if (hashlib.sha256(body).hexdigest(), len(body), mode) != (
+                        admission["sha256"], admission["bytes"], admission["mode"]):
+                    raise ValueError("current scholarly or review edition differs")
+            for key, source in sources.items():
+                if source.get("path") != path:
+                    continue
+                if source.get("sha256") != identity:
+                    raise ValueError("original reader source identity differs")
+                forms = [form for work in cross.get("works", [])
+                         for form in work.get("reading_forms", [])
+                         if isinstance(form, dict) and form.get("source") == key]
+                expected = {"from": key, "to": binding["reading_source"],
+                            "kind": "logical-content-incorporated-historical-source-retained",
+                            "basis": binding["basis"]}
+                relations = [r for r in cross.get("relations", []) if r.get("from") == key
+                             and r.get("kind") == expected["kind"]]
+                if forms != [{"source": key, "relationship": "historical-source"}] or relations != [expected]:
+                    raise ValueError("reader source lacks its exact historical/incorporation relationship")
+                if any(key in j.get("source_keys", []) for j in cross.get("reader_journeys", [])):
+                    raise ValueError("an ordinary journey still requires this physical source")
+            admitted[path] = historical_source_bytes(
+                repo, path, binding["repository_revision"], binding["git_blob"])
+        except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+            errors.append("historical-source: " + path + ": " + str(exc))
+    return admitted, errors
+
+
+def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
-    The index and worktree are compared with the approved source commit.
-    Operational reader edits stay under their existing exact owners/checks;
-    new corpus material needs a finite source/work/support admission; changes
-    to baseline sources retain their original guards. This is not a source
-    classifier or an external-literature crawl.
+    Compare the index and actual worktree separately with the approved commit.
+    A combined diff alone can hide a staged change behind worktree absence or
+    restored bytes. Operational reader edits retain their exact owners/checks;
+    new corpus material needs a finite source/work/support admission. This is
+    not a source classifier or an external-literature crawl.
     """
-    result = subprocess.run(
-        ["git", "diff", "--no-ext-diff", "--no-textconv", "--no-renames",
-         "--name-only", "-z", baseline, "--"],
-        cwd=repo, capture_output=True, check=False,
-    )
-    if result.returncode:
-        return ["corpus-currentness: could not compare the approved corpus with the tracked candidate"]
-    try:
-        paths = result.stdout.decode("utf-8").rstrip("\0").split("\0")
-    except UnicodeError:
-        return ["corpus-currentness: a tracked change has an unrepresentable path"]
-    return ["corpus-currentness: " + path +
-            " requires source-baseline and work/support disposition review"
-            for path in sorted(set(paths) - REFACTOR_EDIT_PATHS - set(admitted_paths)) if path]
+    errors = []
+    editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
+    for cached in (True, False):
+        result = subprocess.run(
+            ["git", "diff", *(["--cached"] if cached else []),
+             "--no-ext-diff", "--no-textconv", "--no-renames",
+             "--name-status", "-z", baseline, "--"],
+            cwd=repo, capture_output=True, check=False,
+        )
+        if result.returncode:
+            return ["corpus-currentness: could not compare the approved corpus with the index/worktree candidate"]
+        try:
+            values = result.stdout.decode("utf-8").rstrip("\0").split("\0") if result.stdout else []
+            if len(values) % 2:
+                raise ValueError("malformed tracked change")
+        except (UnicodeError, ValueError):
+            return ["corpus-currentness: a tracked change has an unrepresentable path or status"]
+        errors.extend("corpus-currentness: " + path +
+                      " requires source-baseline and work/support disposition review"
+                      for status, path in zip(values[::2], values[1::2])
+                      if path not in editable and not
+                      (status == "D" and path in HISTORICAL_PROSE and path in historical_paths))
+    return list(dict.fromkeys(errors))
 
 
 def check(repo, owners, cross):
@@ -545,7 +647,9 @@ def check(repo, owners, cross):
     indexed = {row["path"]: row for row in rows}
     additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
     errors.extend(addition_errors)
-    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions))
+    historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
+    errors.extend(historical_errors)
+    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions, historical))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -608,7 +712,7 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
-            body = safe_path(repo, path).read_bytes()
+            body = historical[path] if path in historical else safe_path(repo, path).read_bytes()
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
@@ -621,7 +725,8 @@ def check(repo, owners, cross):
             if oid != row["git_oid"]:
                 fail("baseline-source" if path in indexed else "source-addition",
                      path + " differs from the independently bound source")
-            mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
+            mode = ("100644" if path in historical else
+                    "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644")
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")
         if hashlib.sha256(body).hexdigest() != source.get("sha256"):

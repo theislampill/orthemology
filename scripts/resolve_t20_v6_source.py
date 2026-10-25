@@ -11,12 +11,99 @@ import hashlib
 import json
 import pathlib
 import re
+import stat
 import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PREFIX = 'research/t20-v6-20261012'
 PUBLIC = {'ADD_EXACT', 'PROJECT', 'REUSE'}
 CURRENT_GRAPH_SHA256 = 'ce15fabe3966d210aadbbf51b0d1213c45d6f9397a3dfebbaa66257afc32b5ff'
+
+
+# Exactly reviewed historical-only prose, not a suffix/directory exemption.
+# Ordinary reading uses the existing recognition chapter; original identities
+# and the duplicate CP20 proof occurrence remain independently authenticated.
+HISTORICAL_PROSE_REVISION = '7efc6217c090b92d65f2c4cb8b011c18eb96bf7c'
+HISTORICAL_PROSE = {
+    'research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/REPORT.md':
+        ('15e864dd9b9a31a5203f31fe9b080261afc7de4e',
+         '4bd8f0e5bcac178bf9eb890544fcba9fd60f6a1d08cdf2e0cc12bb6d2c4b4c1c', 15381),
+    'research/t20-live-20261009/checkpoints/CP19/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md':
+        ('18b3ceb2bcca924387899a9d51f3fd035967eac7',
+         '3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b', 1939),
+    'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md':
+        ('18b3ceb2bcca924387899a9d51f3fd035967eac7',
+         '3ccb73001c99c976e728817ca9fca75ab128e6538578068f51333e5321f41b5b', 1939),
+    'research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/VARIABLE_SHARING_REDUCTION.md':
+        ('512266ec363346b6302292f69dafad32f1e067a9',
+         '9420d38627e0dea98af9e8838485fb68ab08feb184ae254953f08585cfe2e71d', 1587),
+    'research/t20-live-20261009/checkpoints/CP20/compound-ground-necessity-20261009/REPORT.md':
+        ('cf657a78f972b7f98190139b2275a3381d288b66',
+         '52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be', 15839),
+}
+# The inherited duplicate is a path obligation, not an extra manifest object.
+HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
+    path for path in HISTORICAL_PROSE
+    if path != 'research/t20-live-20261009/checkpoints/CP20/necessary-truth-operative-basing-20261009/RELEVANT_PROOF.md')
+
+
+def historical_source_bytes(root, path, revision, git_blob):
+    """Authenticate one finite original and reject any unsafe or wrong copy.
+
+    Missing physical prose may use the pinned original Git object. A present
+    copy must still match. No source is written, no fallback follows a failed
+    read, and these checks do not qualify custody or historical execution.
+    """
+    binding = HISTORICAL_PROSE.get(path)
+    if not binding or revision != HISTORICAL_PROSE_REVISION or git_blob != binding[0]:
+        raise ValueError('unqualified historical prose binding')
+    root = pathlib.Path(root)
+    blob, identity, size = binding
+
+    def git(*args):
+        result = subprocess.run(
+            ['git', '--no-replace-objects', '--literal-pathspecs', *args],
+            cwd=root, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError('required historical Git objects unavailable')
+        return result.stdout
+
+    if git('cat-file', '-t', revision) != b'commit\n':
+        raise ValueError('historical revision is not the pinned commit')
+    expected_entry = ('100644 blob ' + blob + '\t' + path + '\0').encode()
+    if git('ls-tree', '-z', revision, '--', path) != expected_entry:
+        raise ValueError('historical path, blob or mode differs')
+    body = git('cat-file', 'blob', blob)
+    raw = b'blob ' + str(len(body)).encode() + b'\0' + body
+    if (len(body), digest(body), hashlib.sha1(raw).hexdigest()) != (size, identity, blob):
+        raise ValueError('historical source bytes differ')
+
+    # A combined baseline/worktree diff can show D while the index contains a
+    # wrong blob, mode or unresolved merge. Bind the actual staged original too.
+    indexed = git('ls-files', '--stage', '-z', '--', path)
+    expected_index = ('100644 ' + blob + ' 0\t' + path + '\0').encode()
+    if indexed not in (b'', expected_index):
+        raise ValueError('historical source index is conflicted or differs from its pinned original')
+
+    target, entry = root, None
+    parts = path.split('/')
+    for index, part in enumerate(parts):
+        target = target / part
+        try:
+            entry = target.lstat()
+        except FileNotFoundError:
+            entry = None
+            continue
+        if stat.S_ISLNK(entry.st_mode):
+            raise ValueError('historical source path contains a symlink')
+        if index < len(parts) - 1 and not stat.S_ISDIR(entry.st_mode):
+            raise ValueError('historical source ancestor is not a directory')
+    if entry is not None:
+        if not stat.S_ISREG(entry.st_mode) or entry.st_mode & 0o111:
+            raise ValueError('historical source is not a regular nonexecutable file')
+        if target.read_bytes() != body:
+            raise ValueError('present historical source differs from its pinned edition')
+    return body
 
 
 def digest(body):
@@ -27,7 +114,16 @@ def source_bytes(root, row):
     path = pathlib.PurePosixPath(row['repository_path'])
     if path.is_absolute() or '..' in path.parts or '\\' in str(path):
         raise ValueError('unsafe source path')
-    if row.get('repository_revision'):
+    if str(path) in HISTORICAL_PROSE:
+        blob, identity, size = HISTORICAL_PROSE[str(path)]
+        if (row['repository_path'] != str(path) or str(path) not in HISTORICAL_PROSE_PUBLIC_PATHS
+                or row.get('disposition') != 'REUSE'
+                or row.get('source_sha256') != identity or row.get('source_bytes') != size):
+            raise ValueError('historical public source owner differs')
+        body = historical_source_bytes(root, str(path), row.get('repository_revision'), row.get('git_blob'))
+    elif row.get('repository_revision'):
+        if row['repository_revision'] != HISTORICAL_PROSE_REVISION:
+            raise ValueError('invalid pinned historical reuse')
         body = subprocess.check_output(['git', 'show', row['repository_revision'] + ':' + str(path)], cwd=root)
     else:
         target = root / path
