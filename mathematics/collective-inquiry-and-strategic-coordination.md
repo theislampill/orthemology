@@ -1484,7 +1484,7 @@ Fix $`\lambda\in E_\theta(U)`$. Include the private seed in the length-$`N`$ pre
 
 ```math
 \rho(dz)
-\prod_{s<N}
+\prod_{s\lt{}N}
  \mathbf 1\{a_s=\pi(z,h_s)\}
  P_{\theta,a_s}(y_s).
 ```
@@ -1492,7 +1492,7 @@ Fix $`\lambda\in E_\theta(U)`$. Include the private seed in the length-$`N`$ pre
 The indicator factors are identical under the two models, and every observation factor is strictly positive. Hence their seed-and-prefix laws are mutually absolutely continuous. On the part associated with a compatible history $`h`$, the density ratio is the positive finite number
 
 ```math
-\prod_{s<N}
+\prod_{s\lt{}N}
  \frac{P_{\theta,a_s}(y_s)}{P_{\lambda,a_s}(y_s)}.
 ```
 
@@ -1505,7 +1505,7 @@ Integrating that common nonnegative continuation probability against the two equ
 Choose one nonempty self-verifying set $`U_\lambda`$ for each candidate $`\lambda`$, and fix an ordering of its elements. Its ordered list is a plan. At a completed-plan boundary, compute the acquired likelihood
 
 ```math
-L_t(\lambda)=\prod_{s<t}P_{\lambda,a_s}(y_s),
+L_t(\lambda)=\prod_{s\lt{}t}P_{\lambda,a_s}(y_s),
 ```
 
 choose a maximizing candidate using a fixed tie rule, and load its plan. Execute one action at a time until that plan is empty, acquiring and recording fresh feedback after every action. Then choose a new maximizing candidate from the enlarged history. A change of likelihood ranking during a plan does not cancel its remaining actions. [33]
