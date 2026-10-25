@@ -57,6 +57,7 @@ For ChatGPT code-mode, this is the ordinary named-reading adapter. Set `work` to
 ```javascript
 const work = "Normal forms and transport for supplied certified selectors"; // Exact listed title or ID.
 const version = null; // Or an explicitly selected indexed edition.
+const repeat = false; // True reoffers this session's same verified edition; it does not refresh currentness.
 const root = "/absolute/path/to/orthemology";
 const cache = "/absolute/path/to/research-cache";
 const spool = "/absolute/path/outside-checkout/new-reading.jsonl";
@@ -214,55 +215,107 @@ function validateFrames(d, frames) {
 
 const selected = ["--work",work,...(version ? ["--version",version] : [])];
 const base = ["python","-B","tools/corpus.py","--cache",cache,"--no-git-source"];
-const prepared = await invoke([...base,"read",...selected,"--spool",spool,
-  "--metrics",metrics,"--inline-bytes","1048576"],300000);
-store("orthemology-reading-capture:"+spool,prepared);
-ensure(prepared.exit_code === 0 || prepared.exit_code === 3,
-  "Source read failed; preserve the error. No complete material may be inferred.");
-let descriptor, frames, fallback = null;
+const protocol = "orthemology-reading-client-2";
+ensure([root,cache,work,spool].every(x=>typeof x==="string" && x.length>0) &&
+  (version === null || typeof version === "string" && version.length>0), "Invalid reading request.");
+const request = {root,cache,work,version,spool};
+const sessionKey = "orthemology-reading-session:"+canonical([root,cache,work,version]);
+const admissionKey = sessionKey+":admission";
+let saved, admission;
 try {
-  descriptor=JSON.parse(prepared.output);
-  validateIndex(descriptor,work,spool,version);
-  if (Array.isArray(descriptor.inline_frames)) {
-    ensure(utf8(prepared.output).length <= 1048576, "Inline response exceeds its bound.");
-    frames=validateFrames(descriptor,descriptor.inline_frames);
-  } else {
-    ensure(descriptor.inline_frames === null &&
-      descriptor.inline_omitted === "serialized response exceeds inline budget" &&
-      utf8(prepared.output).length <= 12289, "Malformed inline omission.");
+  ensure(typeof repeat === "boolean", "Invalid reading mode.");
+  if (repeat) {
+    ensure(typeof load === "function", "This client cannot reopen a session snapshot.");
+    saved=load(sessionKey); admission=load(admissionKey);
   }
-} catch (error) {
-  fallback={event:"INITIAL_CAPTURE_REJECTED",reason:String(error)};
-  store("orthemology-reading-recovery:"+spool,{prepared,fallback});
-  // Authenticate the known spool against the original name/edition, not fields
-  // taken from the rejected response. There is one recovery, never recursive retry.
-  const recovered=await invoke([...base,"reading-index",...selected,"--input",spool],12000);
-  ensure(recovered.exit_code === 0 || recovered.exit_code === 3, "Owner-checked recovery failed.");
-  ensure(utf8(recovered.output).length <= 12289, "Recovered index exceeds its bound.");
-  descriptor=JSON.parse(recovered.output);
+} finally {
+  // No new failed/interrupted attempt may borrow an earlier complete offer.
+  store(sessionKey,null); store(admissionKey,null);
+}
+let descriptor, frames, fallback=null, origin;
+if (repeat) {
+  ensure(sameFields(admission,"format state protocol request resolved_version origin snapshot_sha256") &&
+    admission.format==="orthemology-reading-session-admission-1" &&
+    admission.state==="OFFERED_NOT_RECEIVED" && admission.protocol===protocol &&
+    canonical(admission.request)===canonical(request) && hash(admission.snapshot_sha256),
+    "No compatible completed-offer admission; request a fresh source read.");
+  ensure(sameFields(saved,"format state protocol request origin descriptor frames") &&
+    saved.format==="orthemology-reading-session-1" && saved.state==="OFFERED_NOT_RECEIVED" &&
+    saved.protocol===protocol && canonical(saved.request)===canonical(request) &&
+    digest(canonical(saved))===admission.snapshot_sha256,
+    "Changed or missing session snapshot; no source offer is permitted.");
+  origin=saved.origin;
+  ensure(sameFields(origin,"source_read_started_ms source_delivery initial_fallback resolved_version source_exit_code") &&
+    integer(origin.source_read_started_ms) &&
+    ["INLINE","PAGES","RECOVERED_PAGES"].includes(origin.source_delivery) &&
+    (origin.initial_fallback===null ||
+      sameFields(origin.initial_fallback,"event reason") &&
+      origin.initial_fallback.event==="INITIAL_CAPTURE_REJECTED" &&
+      typeof origin.initial_fallback.reason==="string") &&
+    ((origin.initial_fallback!==null)===(origin.source_delivery==="RECOVERED_PAGES")) &&
+    canonical(origin)===canonical(admission.origin),
+    "Missing or unsupported original provider provenance.");
+  descriptor=saved.descriptor;
   validateIndex(descriptor,work,spool,version);
-  store("orthemology-reading-recovery:"+spool,{prepared,fallback,recovered});
-}
-if (!frames) {
-  const pages=await Promise.allSettled(descriptor.pages.map(page=>invoke([
-    "python","-B","tools/corpus.py","reading-page","--input",spool,
-    "--offset",page.offset,"--bytes",page.bytes,"--sha256",page.sha256
-  ])));
-  store("orthemology-reading-pages:"+spool,pages);
-  frames=[];
-  for (let i=0; i<pages.length; i++) {
-    const page=pages[i], expected=descriptor.pages[i];
-    ensure(page.status === "fulfilled" && page.value.exit_code === 0 &&
-      utf8(page.value.output).length === expected.bytes &&
-      digest(page.value.output) === expected.sha256, "Missing, corrupt or truncated page.");
-    const lines=page.value.output.split("\n");
-    ensure(lines.pop() === "", "Incomplete final record.");
-    frames.push(...lines.map(line=>JSON.parse(line)));
+  frames=validateFrames(descriptor,saved.frames);
+  ensure(descriptor.version===admission.resolved_version && descriptor.version===origin.resolved_version &&
+    origin.source_exit_code===(descriptor.complete_sources ? 0 : 3),
+    "Session edition or original completeness differs.");
+  // Original fallback evidence remains in origin; it is not a new recovery event.
+} else {
+  const sourceReadStarted=Date.now();
+  const prepared = await invoke([...base,"read",...selected,"--spool",spool,
+    "--metrics",metrics,"--inline-bytes","1048576"],300000);
+  store("orthemology-reading-capture:"+spool,prepared);
+  ensure(prepared.exit_code === 0 || prepared.exit_code === 3,
+    "Source read failed; preserve the error. No complete material may be inferred.");
+  try {
+    descriptor=JSON.parse(prepared.output);
+    validateIndex(descriptor,work,spool,version);
+    if (Array.isArray(descriptor.inline_frames)) {
+      ensure(utf8(prepared.output).length <= 1048576, "Inline response exceeds its bound.");
+      frames=validateFrames(descriptor,descriptor.inline_frames);
+    } else {
+      ensure(descriptor.inline_frames === null &&
+        descriptor.inline_omitted === "serialized response exceeds inline budget" &&
+        utf8(prepared.output).length <= 12289, "Malformed inline omission.");
+    }
+  } catch (error) {
+    fallback={event:"INITIAL_CAPTURE_REJECTED",reason:String(error)};
+    store("orthemology-reading-recovery:"+spool,{prepared,fallback});
+    // Authenticate the known spool against the original name/edition, not fields
+    // taken from the rejected response. There is one recovery, never recursive retry.
+    const recovered=await invoke([...base,"reading-index",...selected,"--input",spool],12000);
+    ensure(recovered.exit_code === 0 || recovered.exit_code === 3, "Owner-checked recovery failed.");
+    ensure(utf8(recovered.output).length <= 12289, "Recovered index exceeds its bound.");
+    descriptor=JSON.parse(recovered.output);
+    validateIndex(descriptor,work,spool,version);
+    store("orthemology-reading-recovery:"+spool,{prepared,fallback,recovered});
   }
-  validateFrames(descriptor,frames);
+  if (!frames) {
+    const pages=await Promise.allSettled(descriptor.pages.map(page=>invoke([
+      "python","-B","tools/corpus.py","reading-page","--input",spool,
+      "--offset",page.offset,"--bytes",page.bytes,"--sha256",page.sha256
+    ])));
+    store("orthemology-reading-pages:"+spool,pages);
+    frames=[];
+    for (let i=0; i<pages.length; i++) {
+      const page=pages[i], expected=descriptor.pages[i];
+      ensure(page.status === "fulfilled" && page.value.exit_code === 0 &&
+        utf8(page.value.output).length === expected.bytes &&
+        digest(page.value.output) === expected.sha256, "Missing, corrupt or truncated page.");
+      const lines=page.value.output.split("\n");
+      ensure(lines.pop() === "", "Incomplete final record.");
+      frames.push(...lines.map(line=>JSON.parse(line)));
+    }
+    validateFrames(descriptor,frames);
+  }
+  ensure((prepared.exit_code === 0) === descriptor.complete_sources, "Exit/completeness mismatch.");
+  origin={source_read_started_ms:sourceReadStarted,
+    source_delivery:fallback ? "RECOVERED_PAGES" : Array.isArray(descriptor.inline_frames) ? "INLINE" : "PAGES",
+    initial_fallback:fallback,resolved_version:descriptor.version,source_exit_code:prepared.exit_code};
 }
-ensure((prepared.exit_code === 0) === descriptor.complete_sources, "Exit/completeness mismatch.");
-store("orthemology-reading:"+spool,{descriptor,frames,fallback});
+store("orthemology-reading:"+spool,{descriptor,frames,fallback,origin});
 function renderReadingFrame(frame, label) {
   return frame.type === "chunk" ?
     label+" — reading frame "+frame.sequence+"; payload "+frame.payload+
@@ -303,6 +356,11 @@ function groupReadingFrames(frames, label) {
 }
 const label=frames[0].title+" @ "+frames[0].version;
 const groups=groupReadingFrames(frames,label); // Preflight every complete rendered message.
+const compactDescriptor={...descriptor};
+delete compactDescriptor.inline_frames; delete compactDescriptor.inline_omitted;
+const snapshot={format:"orthemology-reading-session-1",state:"OFFERED_NOT_RECEIVED",
+  protocol,request,origin,descriptor:compactDescriptor,frames};
+const snapshotDigest=digest(canonical(snapshot));
 store("orthemology-reading-delivery:"+spool,{
   format:"orthemology-reading-delivery-1",state:"DELIVERY_PLAN_NOT_RECEIPT",
   max_source_group_bytes:12288,
@@ -310,16 +368,25 @@ store("orthemology-reading-delivery:"+spool,{
 });
 if (fallback) notify(fallback);
 for (const group of groups) notify(group.text);
+// This admission is written only after every offer returned, never from a capture or plan.
+store(sessionKey,snapshot);
+store(admissionKey,{format:"orthemology-reading-session-admission-1",state:"OFFERED_NOT_RECEIVED",
+  protocol,request,resolved_version:descriptor.version,origin,snapshot_sha256:snapshotDigest});
 text({offered_records:frames.length,offered_source_groups:groups.length,
   offered_diagnostic_events:fallback ? 1 : 0,offered_notifications:groups.length+(fallback ? 1 : 0),
   delivery_format:"BOUNDED_WHOLE_FRAME_GROUPS",
   complete_sources:frames.at(-1).complete_sources,
-  elapsed_to_offer_seconds:(Date.now()-started)/1000,delivery:fallback ? "RECOVERED_PAGES" :
-    Array.isArray(descriptor.inline_frames) ? "INLINE" : "PAGES",
+  elapsed_to_offer_seconds:(Date.now()-started)/1000,
+  delivery:repeat ? "VERIFIED_SESSION_EDITION" : origin.source_delivery,
+  fresh_provider_check:!repeat,currentness:repeat ? "PRIOR_FETCH_ONLY" : "PROVIDER_CHECKED_THIS_REQUEST",
+  origin,source_completeness_exit:origin.source_exit_code,
   actual_reader_receipt:"AWAITING_READER_ACKNOWLEDGEMENT"});
 ```
 
 The adapter first writes one new external JSONL spool. If the complete serialized response fits 1,048,576 UTF-8 bytes, it validates and offers every frame from that single capture. Otherwise it retrieves authenticated whole-record pages in parallel, each at most 98,304 bytes. The limit includes the envelope, JSON escaping and final newline. An incomplete or malformed initial capture is retained and permits one explicit source-owner-checked reading-index recovery using the original title/ID, edition and spool path. It cannot select a replacement work from corrupt response fields. Complete frame, source, context and hash checks precede every source notification. The adapter then groups consecutive complete rendered frame messages into source notifications of at most 12,288 UTF-8 bytes, including every header and separator. It preflights all groups before offering any source text. An oversized single rendered frame stops the offer; no text is split or shortened. The stored delivery plan binds each member by sequence and exact UTF-8 offset/length, so source text that resembles a frame header is not a parsing authority. Logical records, source groups and recovery diagnostic events are counted separately; the source-group byte cap does not claim to bound a separate diagnostic event. A delivery plan records intended output. Only the final summary after every notification call returns records a complete offer, and neither establishes actual reader receipt. Existing files are never overwritten. A failed page, changed source, failed owner check or index overflow stops delivery; no partial success is inferred. Spool files are temporary reading outputs, not archives or independent custody. Remove them when the reading and its required evidence retention are finished.
+
+
+To read the **same authenticated edition again in this client session**, set `repeat = true` and rerun the same named-reading adapter with the same root, cache, work, requested version and spool values. Every frame is revalidated, regrouped and newly offered; a previous display or ACK is not reused as receipt. This route reads no new process or source payload. Its admission is tied to the original provider fetch, selected edition and complete snapshot, and is stored only after all notification calls returned. The original fallback, if any, remains provenance and is not reported as a new recovery. An identifiable selection invalidates its previous admission before mode/snapshot validation or delivery; missing, changed or interrupted session state fails explicitly. Set `repeat = false` and choose new spool/metrics paths for a fresh provider/currentness check. A null requested version in repeat mode stays pinned to the edition resolved by the original fetch. The session snapshot is trusted data from this originating client, not an independently authenticated archive or protection against a compromised client rewriting its admission. It carries the original source-owned status and review scope with **prior-fetch-only currentness**. It confers no new entitlement, scientific acceptance, actual receipt or timing qualification. All lookup, validation, hashing, grouping and offers still count within a measured repeat request.
 
 Optional `--metrics NEW_FILE` on `list`, `search` or `read` records verified source routes, received application payload bytes and preflight duration. Use separate metrics files for discovery and reading: a cold query can retrieve source-owner records before the selected document is read, so reading metrics alone do not measure that earlier transfer. The source-route map records the last successful route for each logical path, not every transfer event; a cached reread cannot erase earlier bytes from the cumulative payload total. Metrics leave wire/TLS bytes, OS cache state, presentation and comprehension explicitly unmeasured. The adapter times the combined source-retrieval, bounded-capture and notification-offer interval; source preflight is recorded separately in the metrics file. Actual receipt and cold/warm qualification still require the receiving reader's evidence.
 

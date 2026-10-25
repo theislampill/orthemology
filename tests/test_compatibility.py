@@ -700,6 +700,304 @@ const tools={exec_command:async options=>{
 
 
 
+    def _session_adapter_result(self, steps, second_edition=False):
+        """Exercise shipped JS with real source frames and mocked process transport."""
+        import shutil
+        node = shutil.which("node")
+        if node is None:
+            self.skipTest("Node.js is required for the code-mode adapter test, not source reading")
+        with tempfile.TemporaryDirectory(dir=self.root.parent) as area:
+            spool = Path(area) / "reading.jsonl"
+            produced = self.run_cli("read", "--work", self.work["id"], "--spool", str(spool),
+                                    "--inline-bytes", "1048576")
+            self.assertIn(produced.returncode, (0, 3), produced.stderr)
+            fixture = json.loads(produced.stdout)
+            fixtures = [fixture]
+            if second_edition:
+                self.manifest["baseline"]["commit"] = "b"*40
+                self.work["owner"]["version"] = "b"*40
+                for source in self.work["sources"]:
+                    source["version"] = "b"*40
+                (self.root / "corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+                self.write_work()
+                second = self.run_cli("read", "--work", self.work["id"], "--spool", str(spool)+".second",
+                                      "--inline-bytes", "1048576")
+                self.assertIn(second.returncode, (0, 3), second.stderr)
+                fixtures.append(json.loads(second.stdout))
+            program = r"""
+const fs=require("fs"),vm=require("vm");
+const input=JSON.parse(fs.readFileSync(0,"utf8")),fixture=input.fixture;
+const fence=String.fromCharCode(96).repeat(3);
+const original=input.readme.split(fence+"javascript\n")[1].split(fence)[0];
+const stored=new Map(),copy=x=>x===undefined?undefined:JSON.parse(JSON.stringify(x)),results=[];
+const sessions=()=>[...stored.entries()].filter(([k,v])=>v&&v.format==="orthemology-reading-session-1");
+const crypto=require("crypto");
+const canon=x=>Array.isArray(x)?"["+x.map(canon).join(",")+"]":
+ x&&typeof x==="object"?"{"+Object.keys(x).sort().map(k=>JSON.stringify(k)+":"+canon(x[k])).join(",")+"}":JSON.stringify(x);
+const sha=x=>crypto.createHash("sha256").update(x).digest("hex");
+const framesRaw=frames=>Buffer.from(frames.map(canon).join("\n")+"\n");
+const transportValidators=new vm.Script("(()=>{"+
+ original.split("const selected = [")[0]+"\nreturn {validateIndex,validateFrames};})()").runInNewContext({});
+function rewriteContext(entry){
+ const f=entry.frames,p=f[1];if(p.kind!=="context"||p.chunks!==1)throw Error("Fixture context must have one chunk");
+ const c=f[2],context=JSON.parse(c.text);context.scientific_acceptance_inferred=true;
+ c.text=canon(context);c.bytes=Buffer.byteLength(c.text);c.sha256=sha(c.text);
+ p.bytes=c.bytes;p.sha256=c.sha256;
+ f.at(-1).stream_sha256=sha(f.slice(0,-1).map(canon).join("\n")+"\n");
+ const raw=framesRaw(f),d=entry.descriptor;d.bytes=raw.length;d.sha256=sha(raw);
+ d.pages=[{offset:0,bytes:raw.length,sha256:sha(raw)}];
+ if(raw.length>98304)throw Error("Fixture exceeds its single page");
+ transportValidators.validateIndex(d,d.work,d.path,d.version);
+ transportValidators.validateFrames(d,f);
+}
+let invocation=0,activeFixture=fixture;
+(async()=>{
+ for(const step of input.steps){
+  let coherentTransportValid=false;
+  if(step.tamper==="clear")stored.clear();
+  for(const [key,value] of [...stored.entries()]){
+   if(value&&value.format==="orthemology-reading-session-admission-1"){
+    if(step.tamper==="admission_absent")stored.delete(key);
+    if(step.tamper==="admission_format")stored.set(key,{...value,protocol:"unsupported-client"});
+   }
+  }
+  for(const [key,old] of sessions()){
+   const entry=copy(old);
+   if(step.tamper==="format")entry.format="unsupported-reading-session";
+   if(step.tamper==="state")entry.state="RECEIVED";
+   if(step.tamper==="drop")entry.frames.pop();
+   if(step.tamper==="duplicate")entry.frames.splice(1,0,entry.frames[1]);
+   if(step.tamper==="body")entry.frames.find(r=>r.type==="chunk").text+="changed";
+   if(step.tamper==="edition")entry.descriptor.version="b".repeat(40);
+   if(step.tamper==="coherent_context"){rewriteContext(entry);coherentTransportValid=true;}
+   if(step.tamper==="provenance")delete entry.origin;
+   if(step.tamper==="type"){stored.set(key,[]);continue;}
+   stored.set(key,entry);
+  }
+  const options={
+   work:step.work||fixture.work,version:step.version===undefined?null:step.version,
+   root:step.root||"/test/orthemology",cache:step.cache||"/test/source-cache",
+   spool:step.spool||fixture.path,repeat:Object.hasOwn(step,"repeat")?step.repeat:false
+  };
+  let source=original;
+  for(const [name,value] of Object.entries(options))
+   source=source.replace(new RegExp("const "+name+" = .*?\\n"),
+       "const "+name+" = "+JSON.stringify(value)+";\n");
+  const notifications=[],texts=[],calls=[];
+  const tools={exec_command:async arg=>{
+   calls.push(arg.cmd);
+   if(arg.cmd.includes("'read'")){
+    activeFixture=copy(input.fixtures[Math.min(invocation++,input.fixtures.length-1)]);
+    activeFixture.path=options.spool;
+    return {output:step.recover?"{truncated":JSON.stringify(activeFixture)+"\n",
+            exit_code:activeFixture.complete_sources?0:3};
+   }
+   if(arg.cmd.includes("'reading-index'")){
+    const d=copy(activeFixture);delete d.inline_frames;delete d.inline_omitted;
+    return {output:JSON.stringify(d)+"\n",exit_code:d.complete_sources?0:3};
+   }
+   if(arg.cmd.includes("'reading-page'")){
+    const offset=Number(arg.cmd.match(/'--offset' '(\d+)'/)[1]);
+    const bytes=Number(arg.cmd.match(/'--bytes' '(\d+)'/)[1]);
+    return {output:framesRaw(activeFixture.inline_frames).subarray(offset,offset+bytes).toString("utf8"),exit_code:0};
+   }
+   throw Error("Unexpected provider command");
+  },write_stdin:async()=>{throw Error("Unexpected polling");}};
+  let error=null;
+  try{await new vm.Script("(async()=>{"+source+"\n})()").runInNewContext({
+   tools,store:(k,v)=>stored.set(k,copy(v)),load:k=>copy(stored.get(k)),
+   notify:value=>{if(step.throw_after===notifications.length)throw Error("Interrupted offer");
+                 notifications.push(copy(value));},
+   text:value=>texts.push(copy(value))
+  });}catch(e){error=String(e);}
+  results.push({error,notifications,texts,calls,coherent_transport_valid:coherentTransportValid,sessions:copy(sessions().map(([k,v])=>v))});
+ }
+ console.log(JSON.stringify({results}));
+})().catch(e=>{console.error(e.stack);process.exitCode=2;});
+"""
+            readme_path = ROOT / "README.md"
+            result = subprocess.run([node, "-e", program], input=json.dumps({
+                "fixture": fixture, "fixtures": fixtures, "readme": readme_path.read_text(), "steps": steps}),
+                capture_output=True, text=True, timeout=30)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            return fixture, json.loads(result.stdout)["results"]
+
+    def test_session_repeat_reoffers_exact_bytes_without_provider_and_refresh_still_fetches(self):
+        fixture, results = self._session_adapter_result([
+            {}, {"repeat": True}, {"spool": "/test/new-refresh.jsonl"}])
+        cold, warm, refresh = results
+        for result in results:
+            self.assertIsNone(result["error"], result["error"])
+        self.assertEqual(warm["calls"], [], "same-edition repeat must not retransmit from a process")
+        self.assertEqual(warm["notifications"], cold["notifications"])
+        self.assertEqual(len(cold["calls"]), 1)
+        self.assertEqual(len(refresh["calls"]), 1, "a fresh/current request must still call the provider")
+        self.assertEqual(warm["sessions"][0]["frames"], fixture["inline_frames"])
+        self.assertEqual(warm["texts"][-1]["delivery"], "VERIFIED_SESSION_EDITION")
+        self.assertFalse(warm["texts"][-1]["fresh_provider_check"])
+        self.assertEqual(warm["texts"][-1]["actual_reader_receipt"], "AWAITING_READER_ACKNOWLEDGEMENT")
+        self.assertTrue(refresh["texts"][-1]["fresh_provider_check"])
+
+    def test_session_repeat_rejects_missing_wrong_or_corrupt_snapshot_before_offer(self):
+        cases = [
+            {"tamper": "clear"}, {"work": "Another scholarly work"},
+            {"root": "/other-checkout"}, {"cache": "/other-cache"},
+            {"version": "b"*40}, {"spool": "/other-snapshot.jsonl"},
+            {"tamper": "format"}, {"tamper": "state"}, {"tamper": "drop"},
+            {"tamper": "duplicate"}, {"tamper": "body"}, {"tamper": "edition"},
+            {"tamper": "type"}, {"tamper": "provenance"},
+            {"tamper": "admission_absent"}, {"tamper": "admission_format"},
+        ]
+        for case in cases:
+            with self.subTest(case=case):
+                _, results = self._session_adapter_result([{}, dict(case, repeat=True)])
+                cold, rejected = results
+                self.assertIsNone(cold["error"])
+                self.assertIsNotNone(rejected["error"], "invalid snapshot must be an attributable failure")
+                self.assertEqual(rejected["calls"], [])
+                self.assertEqual(rejected["notifications"], [])
+                self.assertEqual(rejected["texts"], [])
+
+    def test_interrupted_fresh_offer_invalidates_prior_repeat_admission(self):
+        data = b"x"*30000
+        changed = row(self.rows[0]["path"], data)
+        self.rows[0] = changed
+        self.work["sources"][0] = dict(changed, role="primary", version="a"*40)
+        self.manifest["occurrences"] = self.rows
+        (self.root / "corpus/archives.lock.json").write_text(json.dumps(self.manifest))
+        (self.cache / "objects" / changed["sha256"]).write_bytes(data)
+        self.write_work()
+        _, results = self._session_adapter_result([
+            {}, {"spool": "/test/interrupted.jsonl", "throw_after": 1},
+            {"repeat": True, "spool": "/test/interrupted.jsonl"}])
+        cold, interrupted, rejected = results
+        self.assertIsNone(cold["error"])
+        self.assertIn("Interrupted offer", interrupted["error"])
+        self.assertEqual(len(interrupted["notifications"]), 1)
+        self.assertEqual(interrupted["texts"], [])
+        self.assertEqual(interrupted["sessions"], [])
+        self.assertIsNotNone(rejected["error"])
+        self.assertEqual(rejected["calls"], [])
+        self.assertEqual(rejected["notifications"], [])
+        self.assertEqual(rejected["texts"], [])
+
+    def test_session_repeat_preserves_review_absence_and_no_adoption(self):
+        self.work["sources"][1]["review_kind"] = "historical_source_fidelity"
+        self.write_work()
+        fixture, results = self._session_adapter_result([{}, {"repeat": True}])
+        cold, warm = results
+        self.assertIsNone(cold["error"])
+        self.assertIsNone(warm["error"])
+        self.assertEqual(warm["calls"], [])
+        self.assertEqual(warm["notifications"], cold["notifications"])
+        frames = warm["sessions"][0]["frames"]
+        self.assertEqual(frames, fixture["inline_frames"])
+        context = json.loads("".join(r["text"] for r in frames
+                                     if r["type"] == "chunk" and r["payload"] == 0))
+        self.assertEqual(context["review_availability"], "NOT_IDENTIFIED")
+        self.assertFalse(context["scientific_acceptance_inferred"])
+        self.assertEqual(warm["texts"][-1]["actual_reader_receipt"], "AWAITING_READER_ACKNOWLEDGEMENT")
+
+    def test_session_repeat_rejects_coherent_status_replacement_against_original_admission(self):
+        _, results = self._session_adapter_result([{}, {"repeat": True, "tamper": "coherent_context"}])
+        cold, rejected = results
+        self.assertIsNone(cold["error"])
+        self.assertTrue(rejected["coherent_transport_valid"],
+                        "contrary fixture must pass the original index/frame transport checks")
+        self.assertIsNotNone(rejected["error"])
+        self.assertEqual(rejected["calls"], [])
+        self.assertEqual(rejected["notifications"], [])
+        self.assertEqual(rejected["texts"], [])
+
+    def test_interrupted_repeat_invalidates_its_admission(self):
+        _, results = self._session_adapter_result([
+            {}, {"repeat": True, "throw_after": 0}, {"repeat": True}])
+        cold, interrupted, rejected = results
+        self.assertIsNone(cold["error"])
+        self.assertIn("Interrupted offer", interrupted["error"])
+        self.assertEqual(interrupted["calls"], [])
+        self.assertEqual(interrupted["notifications"], [])
+        self.assertEqual(interrupted["texts"], [])
+        self.assertEqual(interrupted["sessions"], [])
+        self.assertIsNotNone(rejected["error"])
+        self.assertEqual(rejected["calls"], [])
+        self.assertEqual(rejected["notifications"], [])
+
+    def test_session_repeat_keeps_identity_only_source_exit_three(self):
+        # Identity-only entries belong to the real source-owned claim schema,
+        # not the generic catalogue-work fixture above.
+        from source_provider import SourceProvider
+        provider = SourceProvider(ROOT, cache=os.environ.get("ORTHEMOLOGY_TEST_CACHE"),
+                                  offline=True, git_repo=False)
+        self.work = {"id": "Common original source of a connected created field"}
+        self.run_cli = lambda *args: subprocess.run([
+            sys.executable, "-B", str(CLI), "--root", str(ROOT), "--cache", str(provider.cache),
+            "--offline", "--no-git-source", *args], capture_output=True, text=True)
+        fixture, results = self._session_adapter_result([{}, {"repeat": True}])
+        self.assertFalse(fixture["complete_sources"])
+        cold, warm = results
+        self.assertIsNone(cold["error"])
+        self.assertIsNone(warm["error"])
+        self.assertEqual(warm["calls"], [])
+        self.assertEqual(warm["notifications"], cold["notifications"])
+        self.assertFalse(warm["texts"][-1]["complete_sources"])
+        self.assertEqual(warm["texts"][-1]["source_completeness_exit"], 3)
+        self.assertEqual(warm["sessions"][0]["frames"], fixture["inline_frames"])
+
+    def test_null_version_repeat_stays_on_its_resolved_edition_until_explicit_refresh(self):
+        fixture, results = self._session_adapter_result([
+            {}, {"repeat": True},
+            {"spool": "/test/new-edition.jsonl"},
+            {"repeat": True, "spool": "/test/new-edition.jsonl"},
+            {"repeat": True, "spool": "/test/new-edition.jsonl", "version": "a"*40},
+        ], second_edition=True)
+        cold, old_repeat, refresh, new_repeat, mismatched = results
+        for result in results[:4]:
+            self.assertIsNone(result["error"])
+        self.assertEqual(old_repeat["calls"], [])
+        self.assertEqual(old_repeat["sessions"][0]["descriptor"]["version"], fixture["version"])
+        self.assertEqual(old_repeat["notifications"], cold["notifications"])
+        self.assertEqual(len(refresh["calls"]), 1)
+        self.assertEqual(new_repeat["calls"], [])
+        self.assertEqual(new_repeat["sessions"][0]["descriptor"]["version"], "b"*40)
+        self.assertEqual(new_repeat["notifications"], refresh["notifications"])
+        self.assertNotEqual(new_repeat["notifications"], old_repeat["notifications"])
+        self.assertIsNotNone(mismatched["error"])
+        self.assertEqual(mismatched["calls"], [])
+        self.assertEqual(mismatched["notifications"], [])
+
+    def test_session_repeat_preserves_recovery_origin_without_new_recovery_event(self):
+        _, results = self._session_adapter_result([{"recover": True}, {"repeat": True}])
+        cold, warm = results
+        self.assertIsNone(cold["error"])
+        self.assertIsNone(warm["error"])
+        self.assertEqual(cold["texts"][-1]["delivery"], "RECOVERED_PAGES")
+        self.assertEqual(cold["texts"][-1]["offered_diagnostic_events"], 1)
+        self.assertEqual(warm["calls"], [])
+        self.assertEqual(warm["notifications"], [x for x in cold["notifications"] if isinstance(x, str)])
+        self.assertEqual(warm["texts"][-1]["offered_diagnostic_events"], 0)
+        self.assertEqual(warm["texts"][-1]["origin"]["source_delivery"], "RECOVERED_PAGES")
+        self.assertEqual(warm["texts"][-1]["origin"]["initial_fallback"]["event"], "INITIAL_CAPTURE_REJECTED")
+        self.assertFalse(warm["texts"][-1]["fresh_provider_check"])
+
+    def test_malformed_repeat_mode_invalidates_identifiable_admission(self):
+        for invalid in ("true", None, 1, {}):
+            with self.subTest(invalid=invalid):
+                _, results = self._session_adapter_result([{}, {"repeat": invalid}, {"repeat": True}])
+                cold, rejected, later = results
+                self.assertIsNone(cold["error"])
+                self.assertEqual(len(cold["sessions"]), 1)
+                self.assertIsNotNone(rejected["error"])
+                self.assertEqual(rejected["calls"], [])
+                self.assertEqual(rejected["notifications"], [])
+                self.assertEqual(rejected["texts"], [])
+                self.assertEqual(rejected["sessions"], [])
+                self.assertIsNotNone(later["error"])
+                self.assertEqual(later["calls"], [])
+                self.assertEqual(later["notifications"], [])
+
+
+
 class CurrentEditionReading(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
