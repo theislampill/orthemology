@@ -273,7 +273,7 @@ In particular $`a_n(t)\le n!/t^n`$. On a compact interior time interval, choose 
 Choose the positive time $`s`$ in the hypothesis and a probability representative $`\rho_s`$. The finite measure $`\lambda_s=a_0(s)\rho_s`$ has moments $`a_r(s)`$. By the nonnegative exponential series and (10),
 ```math
 \int x^r e^{bx}\,d\lambda_s(x)\le a_r(s-b),
-\qquad 0<b<s.
+\qquad 0\lt{}b\lt{}s.
 \quad\text{(11)}\quad
 ```
 Thus $`G(u)=\int e^{(s-u)x}\,d\lambda_s`$ is analytic for every $`u>0`$. At $`u=s`$ all its derivatives agree with those of $`a_0`$. The identity theorem gives $`G(u)=a_0(u)`$ throughout $`0<u<T`$, and differentiation gives all the other coordinates. As $`u\downarrow0`$, monotone convergence yields
@@ -290,7 +290,7 @@ The uniqueness is attached to the **complete realizable path**, not merely to it
 The distinction cannot be removed by checking individual signs. Let $`b(t)=1-\varepsilon e^{-1/t}`$ for $`t>0`$, extend it smoothly by $`b(0)=1`$, and take $`0<\varepsilon<1`$. Put $`a_r=(-1)^r b^{(r)}`$ and $`m_r=a_r/b`$. These solve the hierarchy and start from the valid record of $`\delta_0`$, but
 ```math
 a_2(t)=\varepsilon e^{-1/t}\frac{2t-1}{t^4}<0
-\quad (0<t<1/2).
+\quad (0\lt{}t<1/2).
 ```
 This is a formal solution outside the positive cone. Conversely, $`a_0=(T-t)/T`$, $`a_1=1/T`$, and $`a_r=0`$ for $`r\ge2`$ give nonnegative coordinates on $`[0,T)`$ but negative variance. Their initial sequence is already invalid, so this second example does not settle what can happen from a valid initial record. The next construction does. These classification and boundary arguments incorporate [the scalar realizability proof][scalar-source].
 
@@ -419,7 +419,7 @@ The second identity follows by repeatedly applying the first to a polynomial. It
 **Proof.** A constant shift changes $`a`$ but not $`L`$. With $`h\ge0`$, the backward Taylor argument gives
 ```math
 \sum_{n=0}^{N}\frac{b^n}{n!}A_t(q^2h^n)
- \le A_{t-b}(q^2),\qquad 0<b\le t.
+ \le A_{t-b}(q^2),\qquad 0\lt{}b\le t.
 \quad\text{(18)}\quad
 ```
 It proves interior analyticity of $`A_t(q^2)`$, hence of every $`A_t(p)`$ by
@@ -582,7 +582,7 @@ $`\int q^2e^{-th}\,d\mu<\infty`$ for every polynomial $`q`$. On the interior of 
 **Corollary 14 (null ideals and finite Gram ranks).** Every normalized square-positive solution of the autonomous hierarchy, even without an assumed initial representing measure, satisfies
 ```math
 I_t:=\{q:L_t(q^2)=0\}=I_0
-\quad(0\le t<T).
+\quad(0\le t\lt{}T).
 \quad\text{(24)}\quad
 ```
 For every fixed finite polynomial family, its Gram matrix has the same kernel and rank throughout the interval.
@@ -718,7 +718,7 @@ For a time-varying test $`\psi_t`$ with common compact support, continuous time 
 ```
 Choose $`\psi_u=\phi e^{K_{s,u}}`$. Its derivative cancels the energy term, giving
 ```math
-\nu_s=e^{K_{s,t}}\nu_t,\qquad 0<s<t<T.
+\nu_s=e^{K_{s,t}}\nu_t,\qquad 0\lt{}s\lt{}t\lt{}T.
 \quad\text{(32)}\quad
 ```
 Initially this is equality against compactly supported tests. Both sides are locally finite positive measures, so exhaustion by compact sets makes it a global equality and proves finiteness of the right side.
@@ -1228,7 +1228,7 @@ The later public work goes beyond existence and a terminating-search proof. For 
 ```math
 H(z,u,v)=z^{2048}F(u,v),
 \qquad
--3^{2097161}<L_1(H)<-\frac43.
+-3^{2097161}\lt{}L_1(H)<-\frac43.
 \quad\text{(56)}\quad
 ```
 It has four monomials, total degree $`2054`$, and is nonnegative everywhere. This is the square choice $`q=z^{1024}`$ in (54). The analytic bounds are given here, while the exact finite hidden-arithmetic input remains a separately retained computational dependency.
@@ -1258,7 +1258,7 @@ For the lattice exponent $`h(j)=2048j-j^2/2-e^{2j}`$, the sum over $`j\le2`$ is 
 $`h(j+1)-h(j)=2048-j-1/2-(e^2-1)e^{2j}<-1`$.
 Thus the remaining tail is less than $`2e^{5204}`$. The two outer contributions together are less than $`e^{5740}`$, since $`e^{536}>4`$. Dividing by $`S\ge1`$ yields
 ```math
-J_{2048}(1)<2e^{5740}<e^{5741}.
+J_{2048}(1)<2e^{5740}\lt{}e^{5741}.
 ```
 Since $`2^{171}<e^{171}`$, the witness numerator satisfies
 $`W_1<-e^{5957}+e^{5912}<-2`$.

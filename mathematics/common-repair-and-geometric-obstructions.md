@@ -659,7 +659,7 @@ where the coordinate functions $`w_i`$ are shared across standards. This is the 
 
 ```math
 \left|\frac{d}{ds}\log\frac{r_k(s)}{r_\ell(s)}\right|
-\leq\frac1{s(1-s)}\qquad(0<s<1).
+\leq\frac1{s(1-s)}\qquad(0\lt{}s<1).
 \quad\text{(35)}\quad
 ```
 
@@ -1393,7 +1393,7 @@ Write $`L=u_1-u_0=\varepsilon+\varepsilon^2`$. On this interval,
 $`1\leq K'(u)\leq e^{h(s_0+\varepsilon)}`$, so
 
 ```math
-0<R_1(\varepsilon)\leq J_\varepsilon
+0\lt{}R_1(\varepsilon)\leq J_\varepsilon
 \leq\frac L2\left(e^{h(s_0+\varepsilon)}-1\right)
 \leq(\varepsilon+\varepsilon^2)e^{-1/\varepsilon^2}
 \quad\text{(80)}\quad

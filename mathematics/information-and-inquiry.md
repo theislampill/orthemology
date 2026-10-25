@@ -277,7 +277,7 @@ A constant audit cost subtracts a constant. Outcome-dependent costs introduce th
 For a binary target, take conditional target-one probabilities
 
 ```math
-(1/4,1/2,3/4),\qquad w=(a,1-2a,a),\quad 0<a<1/2.
+(1/4,1/2,3/4),\qquad w=(a,1-2a,a),\quad 0\lt{}a<1/2.
 ```
 
 Every joint cell is positive and $`q=1/2`$ for every $`a`$. Posterior answers and feasibility agree for all words.
@@ -450,7 +450,7 @@ This proves actual source-flow descent. It does not generally prove continuity o
 **Proof.** Choose distinct $`t_j\in(0,1)`$ and $`0<\delta<1/[r(r-1)]`$. Let
 
 ```math
-p_i(t)=1/r+\delta t^i\ (i<r),\qquad
+p_i(t)=1/r+\delta t^i\ (i\lt{}r),\qquad
 p_r(t)=1/r-\delta\sum_{i=1}^{r-1}t^i.
 ```
 

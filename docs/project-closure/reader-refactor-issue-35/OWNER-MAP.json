@@ -586,9 +586,9 @@
       "key": "consolidated-information-and-inquiry",
       "path": "mathematics/information-and-inquiry.md",
       "mode": "100644",
-      "git_oid": "3f485b058a43aa1e5cb40ed9ee699218d83d54df",
-      "bytes": 81009,
-      "sha256": "4240bd2814d7b6812949dbe5414cfbbb917825d61a6c3e09338e2f4c5f52ed6f",
+      "git_oid": "170210336194a051197aece74bdd6e24da9e2ac8",
+      "bytes": 81017,
+      "sha256": "cd4f8f9fa8dfc9c727f0fffed7a64de5d4316009ac8901f9e88cbe8e48cf7479",
       "role": "work-source",
       "work_keys": [
         "information-retained-by-inquiry"
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "b6663f9601078f0c47b6009fdb0a2df78945fc2c",
-      "bytes": 65593,
-      "sha256": "434bd079b2fff7948f6066f960099a1a56ad3786ad89d8a121ff044fdf5e0cf5",
+      "git_oid": "a28227ba851e50de4c2bfcab02391e44239efd4a",
+      "bytes": 83446,
+      "sha256": "77af83403d00edf503dd65f39b2e0b36c3a7a24f95f07eacac75ea9ec87ca25b",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -612,7 +612,8 @@
         "encodings-and-witnesses",
         "collective-inquiry-and-strategic-coordination",
         "tensor-moments-and-corrective-dynamics",
-        "common-repair-and-geometric-obstructions"
+        "common-repair-and-geometric-obstructions",
+        "objective-normativity-and-corrective-cognition"
       ],
       "supporting_source_keys": []
     },
@@ -650,9 +651,9 @@
       "key": "consolidated-collective-inquiry",
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
       "mode": "100644",
-      "git_oid": "170ebf83b35a3663fdd5ff68c96ffc7a2701a91d",
-      "bytes": 88263,
-      "sha256": "f6e3a2b654cfd77d06fabd390981a1f0237effae81cb80d704ff157891273df7",
+      "git_oid": "6e097bf4b7766b4c30588636f3ad0d5266ada3c0",
+      "bytes": 88267,
+      "sha256": "df1b72c11a9977f4ab7bb57bed29c61b66270be5365d838f29d07578fae0986b",
       "role": "work-source",
       "work_keys": [
         "collective-inquiry-and-strategic-coordination"
@@ -665,9 +666,9 @@
       "key": "consolidated-tensor-moments",
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "mode": "100644",
-      "bytes": 127838,
-      "sha256": "058d103978521831500c7087301a3cb1977d154f0a031776e6b89e6e336c134c",
-      "git_oid": "3e6cf017a57cfe1e4c0a9cafaf58065fcef16cc0",
+      "bytes": 127878,
+      "sha256": "90d9691356d113368206331b083108854a3a1d3e11c8015d0dcb18194f002c97",
+      "git_oid": "cbeb1f4d22bed60a8ba57d435af937cc608a0fdd",
       "role": "work-source",
       "work_keys": [
         "tensor-moments-and-corrective-dynamics"
@@ -680,12 +681,27 @@
       "key": "consolidated-common-repair",
       "path": "mathematics/common-repair-and-geometric-obstructions.md",
       "mode": "100644",
-      "bytes": 85909,
-      "sha256": "ddee6a298cd1b071aefaeccd5dd8f3f0c800bd202e8cb443c0d6d127dfabffbe",
-      "git_oid": "677f24996bcf193bb9843e0f95f4b64a13eb747c",
+      "bytes": 85917,
+      "sha256": "a4bba4539162aac8c67fa32a5cc1eaf810f2a7846e4c38b8f0d557fed1eea31b",
+      "git_oid": "7a3c89549bb7b75bec7c1f9e0aeee06705c742a7",
       "role": "work-source",
       "work_keys": [
         "common-repair-and-geometric-obstructions"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-objective-normativity",
+      "path": "foundations/objective-normativity-and-corrective-cognition.md",
+      "mode": "100644",
+      "bytes": 130323,
+      "sha256": "62aacbe7128aa73d7f77f110e0ba0ae0f22e18160a358ef733dab46798184250",
+      "git_oid": "2c47601c97dfe20749b29d9dda7bf99c20131a8c",
+      "role": "work-source",
+      "work_keys": [
+        "objective-normativity-and-corrective-cognition"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"

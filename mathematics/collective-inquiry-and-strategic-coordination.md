@@ -282,7 +282,7 @@ Give two players actions 0 and 1 and payoffs
 
 ```math
 u_i(x,s)=\mathbf1\{s_i=B(x)\}
-+c\mathbf1\{s_1=s_2\},\qquad 0<c<1.
++c\mathbf1\{s_1=s_2\},\qquad 0\lt{}c<1.
 ```
 
 **Proposition 8 — Hidden reference games.** The reference games have unique equilibria $`(0,0)`$ and $`(1,1)`$. For any fixed independent mixed recommendation, each player has regret at least $`(1-c)/2`$ in at least one of the two games. [8, Proposition 6][r8]
