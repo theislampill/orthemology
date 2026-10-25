@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
+A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
 
 ## 1. Shared inquiry and distributed access
 
@@ -531,7 +531,7 @@ N\ge\left\lceil\frac{2\sqrt n}{L}
 
 When $`p\le\eta`$ there is no positive alphabet-size conclusion; when $`L=0`$ one only obtains $`p\le\eta`$; and $`p-\eta=1`$ is impossible for finite $`N,L`$. The Gaussian marginal and complete-mediation assumptions belong to $`Q`$. Allowing finite additivity in the event-transport step does not transport Gaussian entropy or conditional independence to $`P`$. All attainment claims retain their fixed-horizon and retrospective scope. [10][r10]
 
-## 7. Equilibrium and temporal learning
+## 7. Temporal learning, coordinated restoration and model transfer
 
 ### 7.1 A mixed equilibrium need not restore a target
 
@@ -575,6 +575,516 @@ For deterministic finite dynamics, a related result identifies the evaluation th
 Equality of fixed points and maxima alone is weaker. Take $`X=\{0,1,2\}`$, $`W=(1,0,0)`$ and $`G(0)=0,G(1)=2,G(2)=1`$. Its only fixed point is its unique maximum, but the other states cycle forever. Weak ascent permits a nonmaximal fixed point; dropping target closure permits later exit; dropping pointwise fixation can leave a cycle entirely inside the maximizing set. Distinguishing these conditions preserves the difference between convergence of states and satisfaction of a target.
 
 Finally, a finite ordinal-potential game has no infinite strict-improvement path: each unilateral improvement strictly raises one common potential on a finite set. This is the classical finite-improvement property. It does not cover idle transitions, changing games or disturbances without further hypotheses. [15, Lemma 2.3][potential]
+
+### 7.3 The exact cost of incompatible response marginals
+
+The independent-deployment example leaves a constructive question: when can a coordinator retain the agents' specified marginal responses while making their joint response appropriate? Fix finite nonempty response sets $`A,B`$, probability laws $`\mu,\nu`$, and a supplied target relation $`R\subseteq A\times B`$. A coupling is a nonnegative joint table $`\kappa`$ with those two complete marginals. This section initially permits every pair in $`A\times B`$; hard exclusions are an additional constraint. For $`U\subseteq A`$, let
+
+```math
+R[U]=\{b\in B:\text{some }a\in U\text{ satisfies }(a,b)\in R\},
+\qquad
+\delta(\mu,\nu,R)=
+\max_{U\subseteq A}\bigl(\mu(U)-\nu(R[U])\bigr).
+```
+
+The empty subset gives $`\delta\ge0`$, and $`\delta\le1`$. Zero-probability atoms are allowed in this mathematical statement. [17, §1][r13]
+
+**Theorem (sharp marginal obstruction).** The minimum target-violation probability over all couplings is exactly $`\delta(\mu,\nu,R)`$. In particular, a coupling supported on $`R`$ exists if and only if
+
+```math
+\mu(U)\le\nu(R[U])
+\quad\text{for every }U\subseteq A.
+```
+
+**Proof.** Under any coupling, mass starting in $`U`$ can stay within the relation only by arriving in $`R[U]`$. That arrival region has total capacity $`\nu(R[U])`$, so at least $`\mu(U)-\nu(R[U])`$ of the mass must violate the relation. Maximizing over $`U`$ proves the lower bound.
+
+For attainment, form a finite transportation network. A source supplies row $`a`$ with capacity $`\mu(a)`$, a column $`b`$ drains to the sink with capacity $`\nu(b)`$, and every pair in $`R`$ has a row-to-column edge of capacity 2. A cut of capacity at most one exists. Thus a minimum cut cannot cross a relation edge. If $`U`$ is its source-side row set, its source-side column set must contain $`R[U]`$; among these choices, taking exactly $`R[U]`$ minimizes the cut. Its capacity is
+
+```math
+\sum_{a\notin U}\mu(a)+\sum_{b\in R[U]}\nu(b)
+=1-\mu(U)+\nu(R[U]).
+```
+
+The max-flow/min-cut theorem therefore supplies an $`R`$-supported subcoupling of mass $`1-\delta`$. [22][flow] Its residual row masses $`r_a`$ and column masses $`s_b`$ are nonnegative and each total $`\delta`$. If $`\delta=0`$, the subcoupling is already complete. Otherwise add the table $`r_as_b/\delta`$. A positive residual row and positive residual column cannot be related: adding the smaller residual along that relation edge would augment the maximum flow. The added mass therefore lies entirely outside $`R`$, and its total is exactly $`\delta`$. Both full marginals are restored. ∎
+
+For binary agreement, $`R=\{(0,0),(1,1)\}`$, the deficit is $`|\mu(0)-\nu(0)|`$. Marginals $`(4/5,1/5)`$ and $`(1/5,4/5)`$ force disagreement probability $`3/5`$. The joint table with masses $`1/5,3/5,0,1/5`$ in the order $`00,01,10,11`$ attains it. Equal fair marginals have zero deficit, even though independent sampling disagrees with probability $`1/2`$. The marginals do not determine the deployed coupling.
+
+#### Licenses and incentives restrict the available couplings
+
+If only pairs in a set $`L\subseteq A\times B`$ are licensed, the admissible joint law must be supported on $`L`$. The unrestricted deficit remains a lower bound but need not be attainable. With fair binary marginals and target $`R=\{(0,0)\}`$, the unrestricted optimum is $`1/2`$. If $`(1,1)`$ is forbidden, the marginal equations force both diagonal masses to zero. The only licensed law gives each off-diagonal pair mass $`1/2`$, and its target violation is one. An unavailable completion cannot be repaired by interpreting a probability constraint as permission.
+
+Incentive compatibility is a further condition when the response loci are strategic players. For scalar payoffs $`u_1,u_2`$, a common recommendation law is a correlated equilibrium when obeying a received recommendation is at least as profitable as switching it. The first player's inequalities are
+
+```math
+\sum_{b\in B}\kappa(a,b)
+\bigl(u_1(a,b)-u_1(a',b)\bigr)\ge0
+\quad(a,a'\in A),
+```
+
+with the corresponding column inequalities for the second player. These are the unconditional form of recommendation-conditional comparisons; a recommendation of zero mass creates no additional obligation. Correlated equilibrium belongs to established game theory. [23][aumann] The information contract here gives each player its own recommendation and the declared game. Additional current private signals, sequential observation of other actions or a richer deviation menu require the appropriate conditional incentive constraints. These inequalities do not automatically cover that enlarged game. [17, §4][r13] [21, §C2][r17]
+
+In matching pennies, let player 1 receive one for agreement and player 2 one for disagreement. A fair diagonal coupling implements agreement perfectly but gives player 2 a profitable deviation from each recommendation. With fixed fair marginals, write the four masses as $`t,1/2-t,1/2-t,t`$. Player 1's obedience requires $`t\ge1/4`$; player 2's requires $`t\le1/4`$. Hence the only compliant joint law is uniform and its agreement-target violation is $`1/2`$. If both players instead receive one for agreement, the diagonal law is an equilibrium. Feasibility of correlation does not determine its incentive properties.
+
+For general binary marginals $`p=\mu(0)`$ and $`q=\nu(0)`$, every coupling is
+
+```math
+\kappa=
+\begin{pmatrix}
+t&p-t\\
+q-t&1-p-q+t
+\end{pmatrix},
+\qquad
+\max(0,p+q-1)\le t\le\min(p,q).
+```
+
+Each hard exclusion forces a cell to zero, and each recommendation inequality gives a linear bound on $`t`$. Their intersection is a closed interval or is empty. Target-violation mass is affine in $`t`$, so an endpoint minimizes it whenever the interval is nonempty. Requiring the inequalities under every member of a declared finite collection of payoff standards gives an exact robust version. Averaging standards instead requires its own justified probability interpretation. Neither calculation establishes the authority of the supplied standards.
+
+More generally, let $`\mathcal C`$ be the nonempty compact polytope of couplings satisfying the supplied marginals, licenses and incentive inequalities. Then
+
+```math
+\delta^*=\min_{\kappa\in\mathcal C}\kappa(R^c)
+```
+
+exists and satisfies $`\delta\le\delta^*`$. An empty feasible polytope means that the response contract is not implementable; it is not assigned an artificial infinite violation probability. A selected joint table still needs a realizable sampler and the channels through which recommendations or coordinated actions are implemented.
+
+Pairwise compatibility also falls short of global compatibility. For three binary loci with fair marginals, each pair has a perfectly anticorrelated coupling. No triple can make all three pairs different, since three binary values cannot be pairwise distinct. Every pairwise marginal test passes while the proposed global target is empty. Multiway coordination needs an actual joint law. A shared random source can supply correlation but does not multiply independent evidence or create new permission to coordinate. [17, §5][r13]
+
+### 7.4 Restoration under dependent repeated responses
+
+The stationary independent case in Theorem 14 has an exact extension to history-dependent responses. Let $`(\mathcal F_t)_{t\ge0}`$ be a filtration containing the decision history before the next response. At time $`t`$, the target $`R_t`$, response marginals $`\mu_t,\nu_t`$ and any admissible coupling polytope are measurable with respect to $`\mathcal F_t`$. The realized response pair is recorded by $`\mathcal F_{t+1}`$. In particular,
+
+```math
+V_t=\{(A_t,B_t)\notin R_t\}\in\mathcal F_{t+1},
+\qquad
+p_t=\Pr(V_t\mid\mathcal F_t).
+```
+
+The next pair must have the specified marginals **conditional on this decision history**. Unconditional one-time marginal statements are insufficient. Under this contract $`p_t\ge\delta_t=\delta(\mu_t,\nu_t,R_t)`$, or $`p_t\ge\delta_t^*`$ for the constrained problem. No independence across time is assumed. [17, §2][r13]
+
+**Theorem (adapted-event restoration threshold).** Almost surely,
+
+```math
+\{V_t\text{ occurs only finitely often}\}
+=
+\left\{\sum_{t=0}^{\infty}p_t\lt{}\infty\right\}.
+```
+
+On paths where the compensator diverges, the accumulated violation count is asymptotic to that compensator. This is Lévy's conditional Borel–Cantelli theorem, with the adaptation premise made explicit. [24, Theorem 11][conditional-bc]
+
+**Proof.** Put $`C_n=\sum_{t<n}\mathbf1_{V_t}`$ and $`H_n=\sum_{t<n}p_t`$. The differences $`D_{t+1}=\mathbf1_{V_t}-p_t`$ have conditional mean zero. Since $`H_{t+1}=H_t+p_t`$ is already $`\mathcal F_t`$-measurable,
+
+```math
+Z_n=\sum_{t\lt{}n}\frac{D_{t+1}}{1+H_{t+1}}
+```
+
+is a square-integrable martingale. Its conditional increment variance is at most $`p_t/(1+H_{t+1})^2`$. The decreasing function $`(1+x)^{-2}`$ gives the pathwise bound
+
+```math
+\sum_{t\lt{}n}\frac{p_t}{(1+H_{t+1})^2}
+\le\sum_{t\lt{}n}\int_{H_t}^{H_{t+1}}\frac{dx}{(1+x)^2}
+\le1.
+```
+
+Thus $`\sup_n\mathbb E Z_n^2\le1`$, and the square-integrable martingale convergence theorem gives convergence of $`Z_n`$ almost surely. Fix a path on that convergence event and write $`b_t=1+H_{t+1}`$, a positive nondecreasing sequence.
+
+If $`H_\infty=\infty`$, summation by parts, or equivalently Kronecker's lemma applied to the convergent series $`\sum D_{t+1}/b_t`$, gives
+
+```math
+\frac{C_n-H_n}{1+H_n}\longrightarrow0,
+\qquad
+\frac{C_n}{H_n}\longrightarrow1.
+```
+
+For completeness, this summation argument separates finitely many initial terms from a tail whose partial sums have magnitude at most an arbitrary $`\varepsilon`$. The weighted tail, divided by its final nondecreasing weight, has magnitude at most $`2\varepsilon`$; the initial contribution tends to zero.
+
+If $`H_\infty<\infty`$, the weights $`b_t`$ are bounded and their total variation is finite. The same summation-by-parts identity now shows that $`\sum D_{t+1}`$ converges: the convergent partial sums of $`D_{t+1}/b_t`$ are multiplied by bounded endpoint weights, and the remaining series is bounded by their supremum times the total variation of $`b_t`$. Therefore $`C_n=H_n+\sum_{t<n}D_{t+1}`$ has a finite limit. A nondecreasing integer-valued count with a finite limit can increase only finitely often. These two cases establish the event equality. ∎
+
+In particular, a nonsummable deficit forces infinitely many target violations on the event $`\sum_t\delta_t=\infty`$. A fixed positive deficit is sufficient but unnecessary: $`\delta_t=1/(t+2)`$ also has a divergent sum. Conversely, an implementation with summable actual conditional violation probabilities eventually remains in the target almost surely.
+
+For a deterministic schedule of marginals and targets, with every pair available and every selected finite coupling implementable, an eventually-target implementation exists **if and only if** $`\sum_t\delta_t<\infty`$. Necessity follows from the pointwise lower bound. For sufficiency, select a minimizing coupling at each time; its conditional violation probability is exactly $`\delta_t`$. The same equivalence holds with $`\delta_t^*`$ for deterministic nonempty licensed or incentive-constrained polytopes. The statement is about the specified schedule and sampler, not existence of a finite-memory realization. In an endogenous context, the current coupling can alter future marginals, polytopes and deficits. Minimizing today's violation does not prove dynamic optimality.
+
+Two elementary schedules make the boundary explicit. Let the first response equal 0 with probability $`\delta_t`$ and the second always equal 1; the target is agreement. The conditional violation probability is necessarily $`\delta_t`$. With $`\delta_t=1/(t+2)^2`$, violations are finite almost surely, and
+
+```math
+\Pr(\text{some violation at or after }N)
+\le\sum_{t=N}^{\infty}\frac1{(t+2)^2}
+\le\frac1{N+1}.
+```
+
+Every fixed late time still has a positive violation probability, so there is no deterministic last-violation horizon. With $`\delta_t=1/(t+2)`$, the probability of no violation in a block starting at $`N`$ with length $`m`$ is
+
+```math
+\prod_{t=N}^{N+m-1}\left(1-\frac1{t+2}\right)
+=\frac{N+1}{N+m+1}.
+```
+
+The product follows by conditional multiplication because the conditional hazards have the stated deterministic values. Its limit is zero, and violations recur infinitely often. Both deficits are positive and tend to zero; their summability separates the conclusions.
+
+#### Public certification and physical restoration are different events
+
+The filtration condition is essential. Suppose one unobserved bit $`Z`$ is fixed forever and is bad with probability $`1/2`$. Under a public filtration with no information about it, its conditional bad probability is always $`1/2`$. Yet infinitely many actual bad occurrences have probability $`1/2`$, not one. The repeated physical events are not measurable in the next public sigma-algebra, so the theorem does not apply there. Revealing $`Z`$ creates an adapted filtration but changes its conditional probabilities to zero or one. One cannot combine the enlarged filtration with the old half-probabilities. [17, §3][r13]
+
+A finite plant also separates physical persistence from a demanding public certificate. Let the target states be $`\{0,2\}`$, start at 2, and give all states the same observation. State 0 remains at 0; state 1 moves to 0; state 2 stays at 2 with probability $`1/2`$ and moves to each of 0 and 1 with probability $`1/4`$. Every supported path has at most one bad visit, because its only bad state is 1 and that state immediately enters the absorbing good state. Physical eventual persistence is therefore sure, even on zero-probability supported infinite paths.
+
+After one step the public support belief is $`\{0,1,2\}`$, and it remains that set forever. A certificate demanding that the next entire support belief lie inside the target consequently rejects the sole response at every time. Its certified target relation is empty and has Hall deficit one. This is correct evidence that the chosen public certificate is never met. It is not evidence that physical restoration is impossible. The actual bad-state probability at time $`t\ge1`$ is $`2^{-(t-1)}/4`$.
+
+The same distinction applies when a previously proved finite-memory safety certificate permits only actions whose every observation successor stays in its certified winning region. A realizable joint law supported on those permitted actions preserves that certificate. Positive deficit obstructs the particular prescribed-marginal certificate implementation; it does not refute another bound, another winning policy, or actual target persistence. Establishing public knowledge of restoration is a stronger task than establishing restoration itself.
+### 7.5 Transferring a restorative controller without a hidden-state oracle
+
+A controller that succeeds in one stochastic model need not remain valid after its observations, action interface or disturbance law change. Preserving the list of possible transitions is insufficient for an almost-sure claim. Even exact transition couplings are insufficient if their proposed action translator consults hidden information. The following finite-model contract separates the probability proof, the information available to the implemented controller, and the destination's independent authorization. It consolidates the exact transfer result and its later private/public-memory refinement. [18, §§2–6][r14] [19, §1][r15]
+
+#### Models, policies and information
+
+Let the source have finite hidden state set $`X`$, finite actions $`A`$, observation map $`o_A:X\to O_A`$, initial law $`\mu_A`$, and finite nonempty disturbance menus $`D_A(x,a)`$. A disturbance $`d`$ selects a full transition distribution $`P_A^d(\,\cdot\mid x,a)`$. Define a destination with $`Y,B,o_B,\mu_B,D_B,P_B`$ in the same way. Each law includes every outcome, favorable or otherwise. Stochastic observations can be represented by adding the emitted observation to the plant state, provided the **joint** transition law is retained. This representation does not turn observations sharing one provenance root into independent copies.
+
+A source behavioral policy $`\sigma`$ assigns a distribution on the next action to every finite source observation/action history. It may use the entire history. Its current action is sampled freshly after that history is fixed; it does not expose future action coins stored in advance. After the current action, the source adversary can use the complete source state/action history and choose a randomized member of the current disturbance menu. A guarantee against this full-history adversary class is a premise of the transfer theorem.
+
+The destination interface has a finite controller-available mode set $`Q`$ and a projection $`\pi:Q\to P`$ onto its public mode. It specifies:
+
+| Interface component | Information used |
+|---|---|
+| Initial mode $`q_0(o)`$ | Initial destination observation. |
+| Reconstructed source observation $`\eta(q,o)`$ | Controller mode and current destination observation. |
+| Admitted source-action menu $`M(q,o)\subseteq A`$ | The same controller information. |
+| Executed action $`b=\tau(q,o,a)`$ | Controller mode, observation and its sampled virtual source action. |
+| Next controller mode $`q'=u(q,o,a,b,o')`$ | Available controller information and the new observation. |
+| Destination warrant $`J_B(\pi(q),o,b)`$ | The declared public mode, observation and actual destination action. |
+
+The word “public” carries a mathematical obligation. There must be a function $`v`$ such that, on every used update,
+
+```math
+\pi\bigl(u(q,o,a,b,o')\bigr)
+=v\bigl(\pi(q),o,b,o'\bigr).
+```
+
+Thus the public projection is reconstructible from the actual destination trace. Several virtual actions can translate to the same executed action; the controller may remember which one it sampled, but an external observer need not know it. If the entire mode is declared public, $`\pi`$ is the identity and the update cannot distinguish private virtual actions hidden by the same public trace. Publicly logging those actions would change the observation contract.
+
+The source policy must put all its probability on $`M(q,o)`$ at every reachable interface history. This includes the histories under all permitted disturbances, not just the successful sampled examples. It is a policy-conformance premise, separate from verification of the finite plant tables.
+
+The fibre criterion in Proposition 3 applies equally to action kernels: an implementation depending only on information $`I(h)`$ realizes a prescribed kernel $`K(h)`$ exactly when $`K`$ is constant on every fibre of $`I`$. A local hidden-state witness saying that **some** matching action exists for each hidden pair does not ensure a single available-information rule. Reconstructing the full source observation is a convenient sufficient condition here. A coarser reconstruction can suffice for a particular policy, but only after its action and memory updates are proved to factor through that coarser history.
+
+#### A full probabilistic certificate
+
+Supply a relation $`R\subseteq X\times Y\times Q`$. At every $`(x,y,q)\in R`$, with $`o=o_B(y)`$, require all of the following.
+
+1. **Information:** $`\eta(q,o)=o_A(x)`$.
+2. **Meaning and authority:** destination badness implies source badness; source safety implies destination safety. For every $`a\in M(q,o)`$, the source action is eligible at $`x`$, its translation $`b`$ is eligible at $`y`$, and the supplied public warrant $`J_B(\pi(q),o,b)`$ holds. Any additional task-readout preservation is another explicit relation, not an inference from the safe/bad labels.
+3. **Every destination disturbance has a full match:** for every $`a\in M(q,o)`$ and $`d_B\in D_B(y,b)`$, there are $`d_A\in D_A(x,a)`$ and a coupling $`\kappa_{x,y,q,a,d_B}`$ satisfying
+
+```math
+\begin{aligned}
+\sum_{y'}\kappa(x',y')&=P_A^{d_A}(x'\mid x,a),\\
+\sum_{x'}\kappa(x',y')&=P_B^{d_B}(y'\mid y,b),\\
+\kappa(x',y')>0
+&\ \Longrightarrow
+\bigl(x',y',u(q,o,a,b,o_B(y'))\bigr)\in R.
+\end{aligned}
+```
+
+4. **Complete initial laws match:** a coupling $`\kappa_0`$ has marginals $`\mu_A,\mu_B`$ and positive mass only on pairs with $`(x,y,q_0(o_B(y)))\in R`$.
+
+The existential source disturbance and coupling can depend on the related hidden triple and the selected destination disturbance. The implemented translator and mode update cannot inspect that hidden proof data. A populated source memory, learned history or migration memento also needs an initial-law/interface match; matching the current plant output alone does not authorize discarding it.
+
+For rational finite tables, the matching problem for a fixed candidate source disturbance is exact transportation feasibility. The retained implementation searches over individual source disturbance kernels. Allowing a convex mixture of such kernels could give a weaker sufficient certificate against the randomized source adversary, but that additional search is not supplied by the checker. Neither successful transport nor its numerical feasibility certifies the truth or authority of the input labels.
+
+#### The implemented controller and the path-law proof
+
+Initialize $`q=q_0(o_B(y_0))`$ and the virtual source history with $`\eta(q,o_B(y_0))`$ and the explicitly matched initial source memory. At each step sample $`a`$ from $`\sigma`$ on that virtual history, execute $`b=\tau(q,o,a)`$, retain the virtual action $`a`$, receive $`o'`$, update $`q'`$, and append $`a,\eta(q',o')`$ to the virtual history. The implementation never observes or samples the proof's hidden source state.
+
+**Theorem (exact restorative transfer).** Under the certificate, public-projection and policy-conformance premises, suppose the source policy has only finitely many bad visits almost surely against every permitted randomized full-source-history adversary. Then the implemented destination policy has only finitely many bad visits almost surely against every destination adversary. Source sure safety also transfers under the safety implication. Destination eligibility and public warrant are separately supplied at every reachable interface state.
+
+Here “only finitely many bad visits” is a temporal property of the actual path. It does not assert a publicly recognized entry into an invariant core or a deterministic bound on the last bad time.
+
+**Proof.** First suppose each plant has a single disturbance kernel for each state/action pair. Build a joint process from $`\kappa_0`$. At each related triple and joint finite past, draw $`a`$ from the source policy, translate it, and draw $`(x',y')`$ from the full coupling. The relation's observation identity proves inductively that the source observation/action history is exactly the destination controller's virtual history. Thus the action kernel in the construction is the actual implemented kernel on both sides; it is not secretly conditioned on hidden $`x`$ or later success.
+
+The probability of a finite joint cylinder is the product of the initial mass, its successive policy probabilities and its coupling probabilities. All factors are nonnegative, and summing one-step extensions gives back the cylinder's mass. Summing each transition over $`y'`$ gives the complete source kernel. Because the action probability depends only on the source observation/action history, summing all destination histories leaves exactly the source controlled finite-history law. Summing instead over $`x'`$ gives the complete destination kernel. The controller mode and virtual action history are retained on the destination side, so this second marginal is the actual implemented destination law. No unfavorable branch is removed or renormalized.
+
+These consistent finite-cylinder laws define a probability measure on infinite joint histories. All recorded states, actions and interface modes range over finite alphabets; unbounded behavioral memory is represented by finite histories rather than an additional arbitrary memory alphabet. To see the measure-extension condition directly, every finite union of cylinders is closed in the compact product of these finite discrete alphabets. A decreasing sequence of nonempty such sets has nonempty intersection. Consequently a decreasing sequence with empty intersection eventually has zero cylinder-algebra mass, supplying continuity at the empty set and the standard extension to the generated sigma-algebra. Cylinders determine that extension uniquely.
+
+The relation holds initially and is preserved by every positive joint transition. A countable intersection therefore makes it hold at every time with probability one. On that event, every destination bad visit is a source bad visit, and
+
+```math
+\Pr_B(\text{bad infinitely often})
+\le
+\Pr_A(\text{bad infinitely often}).
+```
+
+The right side is zero by hypothesis.
+
+Now fix an arbitrary nonanticipating destination adversary, allowing it to see the full destination state history and the controller's past/current virtual actions and available memory. In the joint construction it chooses $`d_B`$ first; the certificate then supplies $`d_A`$ and the coupling. The destination marginal is still exactly the selected adversary's process.
+
+The chosen source disturbance can depend on the latent destination history. Condition on a positive-probability finite source state/action history $`h`$ and its already sampled current action $`a`$. Let $`\lambda_d(h,a)`$ be the conditional probability that the construction selected disturbance $`d`$. Then
+
+```math
+\Pr(X_{t+1}=x'\mid h,a)
+=\sum_{d\in D_A(x_t,a)}
+\lambda_d(h,a)P_A^d(x'\mid x_t,a).
+```
+
+This is an allowed randomized full-source-history adversary. At each finite time the conditioning is a ratio over finite sets; zero-probability histories can be assigned arbitrary legal choices. It does not condition on any future event. The source action kernel remains $`\sigma`$, since it was drawn freshly from the source observation/action history before either disturbance was selected. The source marginal is therefore a law covered by the robust source hypothesis, so the same event inclusion proves restoration.
+
+For sure safety, a supported unsafe destination finite history would have positive probability under some legal disturbance choices. The exact joint lift would contain a supported source finite history ending in a related unsafe destination state. The safety implication forces that source state to be unsafe, contradicting source sure safety. The same lifting argument places every reachable destination history under the certificate's eligibility and warrant clauses. Their truth is an assumption supplied to the certificate, not established by the probabilistic argument. ∎
+
+The randomized source-adversary class is necessary for this proof. If that adversary were restricted to public observations rather than full source histories, the induced conditional mixture might use information unavailable to it. A transfer theorem for that narrower adversary class needs an additional compatibility argument. It cannot inherit this conclusion by changing the word “adversary.”
+
+#### Why support, information and authority remain separate
+
+Several finite counterexamples isolate the independent hypotheses. [18, §6][r14]
+
+* **A support simulation can lose all restoration probability.** Let source bad state $`b`$ stay at $`b`$ or enter an absorbing good state $`g`$, each with probability $`1/2`$. Let destination bad state $`B`$ remain there forever, with a separate absorbing good state $`G`$. The relation pairs $`b`$ with $`B`$ and $`g`$ with $`G`$. Every destination edge has a source support match, and badness reflects. The source restores almost surely; the destination fails surely. A relation-supported full coupling at $`(b,B)`$ is impossible because half the source mass must go to $`g`$ while all destination mass goes to $`B`$. Conditioning on the source self-loop would erase half the law at each step.
+* **Matching actions can require unavailable information.** A fixed fair hidden bit $`h`$ is visible to the source and invisible to the destination. Each round guesses 0 or 1, and the state is bad exactly when the guess differs from $`h`$. Physical transitions under identical guesses can be coupled exactly. The source always guesses $`h`$; a destination with the same observation under both bits has the same action-sequence law under either. The disjoint events “eventually all guesses are 0” and “eventually all guesses are 1” cannot both have probability one. A hidden-pair-dependent choice of the matching guess is an oracle, not an implementation.
+* **A coupling does not create destination permission.** In any valid finite certificate, deleting one required public warrant entry leaves the transition marginals untouched while invalidating the action's authority clause.
+* **One matched initial pair does not match two initial laws.** If a source begins with probability one at $`b`$, a destination law assigning half its mass to an unrelated $`G`$ cannot be matched merely because $`(b,B)`$ is a valid pair.
+* **A sufficient certificate need not exist whenever both systems restore.** One-action geometric-exit systems with exit probabilities $`1/2`$ and $`1/3`$ both restore almost surely, but their identity relation cannot couple their distinct one-step laws. A policy that never uses a source observation distinction can also transfer through a policy-specific coarsening even if full observation reconstruction fails.
+
+These counterexamples preserve a constructive result: with a verified information interface and full laws, transfer is possible. Rejection of this particular certificate is not a general impossibility theorem for all controllers, relations or information-preserving translations.
+
+#### Finite memory and the timing of randomization
+
+If the source policy has an $`M`$-state realization with fixed initial memory, deterministic updates from its observation/action history and fresh current-action draws, the destination construction needs at most $`|Q|M`$ memory states, apart from the convention for storing the current observation. A history-dependent policy that uses an unbounded counter remains unbounded. A supplied external clock is memory, not a free finite-state implementation.
+
+An arbitrary randomized-memory realization cannot be substituted under a changed memory-exposure contract. A finite prediction game shows why. Its plant has a prediction state $`P`$, locked-prediction states $`Q_0,Q_1`$ and an absorbing good state $`G`$; all other states are bad. Observations distinguish $`P,Q,G`$ but hide the subscript of $`Q_h`$. A controller samples a fair private bit $`r`$ before each prediction phase and waits. The disturbance then chooses $`h`$ and moves to $`Q_h`$. The controller responds $`r`$; a mismatch enters $`G`$, while a match returns to $`P`$ and refreshes the private bit. No disturbance choice after the response can revise the locked prediction.
+
+For every nonanticipating full-plant/action-history adversary blind to the current bit, $`r`$ is conditionally fair when the prediction is made. Failure through $`n`$ rounds therefore has probability $`2^{-n}`$, and restoration is almost sure. An adversary allowed to inspect the pre-sampled bit instead chooses $`h=r`$ and keeps the system bad forever. Identical plant kernels and identity couplings do not fix that change of information.
+
+Sampling the bit freshly at $`Q_h`$, after the prediction is locked, removes the exposed future randomness and restores the behavioral theorem's guarantee. The historical correction accordingly restricts the finite-memory product bound or requires a separate proof that the realization preserves the behavioral action kernel under the declared memory exposure. This counterexample concerns implementation equivalence; it does not refute the fresh-action transfer theorem. [21, §F1][r17]
+
+Probabilistic simulation, full transition liftings and controller refinement have established mathematical ancestry. Haesaert, Soudjani and Abate's exact relation includes both transition and initial-law liftings; its interface may depend on both model states. The observation-restricted construction above adds a specific sufficient information contract and independently supplied destination authority. Their approximate finite-horizon theorem includes an accumulating probability error; it does not by itself assert exact infinite-horizon persistence. [25, Definition 6 and Theorem 3][refinement]
+### 7.6 Composing transfers while keeping warrant public
+
+Passing a controller through two valid interfaces creates a further information question. Something publicly visible at the intermediate plant may become a privately remembered virtual action at the final plant. It cannot automatically remain part of the final public warrant. The private/public split in §7.5 makes this distinction explicit and supports exact composition. [19, §§2–4][r15]
+
+Consider a source $`A`$ whose state $`x\in\{0,1\}`$ is observed and whose action $`a`$ sets the next state to $`a`$. An intermediate plant $`B`$ has state $`y\in\{0,1\}`$ and the same state-setting actions, but only a constant observation. The first interface translates $`b=a`$ and tracks $`y`$ through a public mode updated from the actually executed action $`b`$. It reconstructs the source observation exactly. A final plant $`C`$ has one state, one observation and one action, tick. The second interface translates either $`B`$ action to tick and reconstructs $`B`$'s constant observation with a constant mode. Start $`A`$ and $`B`$ at 0; all states and actions in this structural example are supplied as good, safe and licensed.
+
+Both individual interfaces have full deterministic couplings and all-public modes. In the composite, however, two different virtual actions produce the same actual $`C`$ trace while requiring different reconstructed $`A`$ observations. The mode tracking the original state is controller-private at $`C`$. Keeping it public would make the supplied two-action interface invalid. This is not an impossibility result for every particular constant policy; it is a failure of closure for the stated all-public interface class.
+
+#### The composite interface
+
+Let a valid split interface from $`A`$ to $`B`$ have private mode $`q\in Q_1`$, projection $`\pi_1`$, relation $`R_{AB}`$ and functions $`\eta_1,\tau_1,u_1`$. Let an interface from $`B`$ to $`C`$ have mode $`r\in Q_2`$, projection $`\pi_2`$, relation $`R_{BC}`$ and functions $`\eta_2,\tau_2,u_2`$. The middle plant is one and the same model, including observations, transition kernels, eligibility, safe/bad meanings and initial law. A correspondence between differently represented middle models would need a separately proved transport; the retained constructor requires exact equality.
+
+Require menu compatibility: whenever the first interface permits a source action at a relevant composite information state, its translated $`B`$ action belongs to the second interface's menu. Silently deleting an incompatible source action would change the policy-conformance obligation.
+
+Use the product private mode $`(q,r)`$ and the final public projection
+
+```math
+\pi(q,r)=\pi_2(r).
+```
+
+For current $`C`$ observation $`o`$ and source action $`a`$, define
+
+```math
+\begin{aligned}
+o_B&=\eta_2(r,o),&
+\eta((q,r),o)&=\eta_1(q,o_B),\\
+b&=\tau_1(q,o_B,a),&
+c&=\tau_2(r,o,b).
+\end{aligned}
+```
+
+After receiving $`o'`$, the available update is
+
+```math
+r'=u_2(r,o,b,c,o'),\qquad
+o_B'=\eta_2(r',o'),\qquad
+q'=u_1(q,o_B,a,b,o_B').
+```
+
+The relation uses one common middle witness:
+
+```math
+R_{AC}=
+\{(x,w,(q,r)):
+\exists y,\ (x,y,q)\in R_{AB}
+\text{ and }(y,w,r)\in R_{BC}\}.
+```
+
+Initialize $`r`$ from the actual $`C`$ observation, reconstruct the initial $`B`$ observation, and initialize $`q`$ from it. The original source controller retains the memory its policy requires.
+
+**Theorem (composition with a private product mode).** These formulas define a valid source-to-final split interface. They preserve full probability laws, source-to-final badness and safety implications, and the final destination's independently supplied public warrant. The restorative-transfer theorem applies under its original robust policy premises.
+
+**Proof.** Fix a related triple $`(x,w,(q,r))`$, choose a middle witness $`y`$, and fix an admitted source action and a final disturbance. The second certificate supplies a middle kernel $`P_B`$ and a coupling $`\kappa_{BC}`$ with the selected $`P_C`$. For that **same** middle kernel, the first certificate supplies a source kernel $`P_A`$ and a coupling $`\kappa_{AB}`$. Define
+
+```math
+\lambda(x',y',w')=
+\begin{cases}
+\displaystyle
+\frac{\kappa_{AB}(x',y')\kappa_{BC}(y',w')}{P_B(y')},
+&P_B(y')>0,\\[6pt]
+0,&P_B(y')=0,
+\end{cases}
+\qquad
+\kappa_{AC}(x',w')=\sum_{y'}\lambda(x',y',w').
+```
+
+At a zero middle mass, both couplings already have zero mass, so no probability is discarded. Summing gives
+
+```math
+\sum_{w'}\kappa_{AC}(x',w')
+=\sum_{y'}\kappa_{AB}(x',y')=P_A(x'),
+\qquad
+\sum_{x'}\kappa_{AC}(x',w')=P_C(w').
+```
+
+Whenever a triple mass is positive, the second relation guarantees that the reconstructed next middle observation is the actual $`o_B(y')`$. The displayed $`q',r'`$ are therefore exactly the component updates at the same successor $`y'`$. Both component successor relations hold, proving support in $`R_{AC}`$. The middle state is a proof witness; the implementation computes its interface from $`q,r,a,o,o'`$ and never inspects that state.
+
+Glue the initial couplings by the same formula, now using the common full middle initial marginal. Their observation identities ensure agreement of the prescribed initial modes. If those middle priors differed, this calculation would not provide both marginals.
+
+Observation reconstruction composes through the common middle witness. The final public projection is reconstructible because the second interface's projection update depends only on its public mode and actual final trace; it is independent of any hidden identity of the virtual middle action. Pointwise,
+
+```math
+\mathrm{Bad}_C\Longrightarrow\mathrm{Bad}_B
+\Longrightarrow\mathrm{Bad}_A,
+\qquad
+\mathrm{Safe}_A\Longrightarrow\mathrm{Safe}_B
+\Longrightarrow\mathrm{Safe}_C.
+```
+
+Final action eligibility and warrant come from the second interface at $`\pi_2(r)`$. The intermediate warrant is not substituted for final authorization. All hypotheses of §7.5 are satisfied. ∎
+
+With an $`M`$-state source realization having deterministic history updates and fresh action draws, the product implementation needs at most $`|Q_1||Q_2|M`$ controller-memory states. The random-memory exposure qualification remains unchanged. The finite relation certificate does not turn an unbounded source policy into a finite-memory one.
+
+The theorem composes the supplied safe/bad meanings, not arbitrary task identity. If additional readout relations are to compose through the same middle witness, that claim needs its own statement and proof. Replacing such a claim by equality of coarse output labels can be a stronger and unjustified assertion. The composition of correct kernels likewise does not establish that real evidence has those kernels or that its final use is authorized.
+
+### 7.7 Approximation needs an occupancy bound or a genuine return
+
+Exact relatedness can be relaxed in more than one way, and the distinction matters for eventual persistence. A bound on leaving a relation concerns departures. Restoration concerns the amount of time spent in bad states. A single departure can occupy the entire remaining future. [20, §§1–3][r16]
+
+#### One departure can destroy eventual persistence
+
+Let a source consist of one always-good state. A destination begins at good state $`S`$. At time $`t`$, while at $`S`$, it enters an absorbing bad state $`F`$ with probability
+
+```math
+\delta_t=\frac1{(t+2)^2},
+```
+
+and otherwise remains at $`S`$. Relate the source state only to $`S`$. Every path has at most one departure, and its conditional departure hazard is bounded by a summable deterministic sequence. Nonetheless the no-departure probability after $`n`$ transitions is
+
+```math
+\prod_{k=2}^{n+1}\left(1-\frac1{k^2}\right)
+=\prod_{k=2}^{n+1}\frac{(k-1)(k+1)}{k^2}
+=\frac{n+2}{2(n+1)}
+\longrightarrow\frac12.
+```
+
+Thus restoration succeeds with probability exactly $`1/2`$. On the remaining paths, the single departure produces infinitely many bad visits. Conditional Borel–Cantelli correctly guarantees finitely many departures; it does not guarantee finite bad occupancy. With any constant fault probability $`\delta>0`$, no-departure probability is $`(1-\delta)^n\to0`$, so arbitrarily small constant local error can destroy almost-sure restoration entirely.
+
+#### An exact law can tolerate summably many occupancy defects
+
+Sometimes only the target-preservation part of an interface is approximate. Let $`S`$ be an invariant relation on which the information reconstruction, full probability-law coupling and destination authority of §7.5 remain valid at every time. Let $`R\subseteq S`$ be the subrelation on which destination badness implies source badness. In the full joint proof filtration, let
+
+```math
+E_t=\{(X_t,Y_t,q_t)\notin R\}.
+```
+
+Suppose these events are adapted and
+
+```math
+\sum_{t=0}^{\infty}
+\Pr(E_{t+1}\mid\mathcal F_t)\lt{}\infty
+\quad\text{almost surely}.
+```
+
+**Proposition (finite occupancy defects).** If the source restores almost surely, the destination does also.
+
+**Proof.** Exact gluing on $`S`$ supplies the actual source and destination marginals for all time. The adapted-event theorem implies only finitely many $`E_t`$. At every time,
+
+```math
+\mathrm{Bad}_B(Y_t)
+\Longrightarrow
+\mathrm{Bad}_A(X_t)\ \text{or}\ E_t.
+```
+
+Both exceptional time sets on the right are finite almost surely. ∎
+
+No public detector for $`E_t`$ is needed in this particular theorem, since the implemented information interface and authority stay valid even during the mismatch. Its probabilities must nevertheless be conditioned on a filtration to which the physical events are adapted. A coarser public conditional probability cannot be substituted without that premise. If leaving the target-preserving relation also destroys observation reconstruction or invalidates controller memory, the invariant-interface premise fails and this proof is unavailable.
+
+#### An executable regenerative repair
+
+A genuinely broken interface requires a recovery policy and a legitimate restart. Retain discrete time, finite state/action/observation alphabets and controller memory determined by finite histories, possibly unbounded. Recovery may be history-dependent. This ensures countably many possible finite entry histories; a model with arbitrary continuous random recovery memory needs a corresponding regular-conditional-kernel formulation.
+
+Assume the destination distinguishes running and recovery modes. A fault flag $`D_t`$ is generated after transition $`t`$, is observable by time $`t+1`$, and begins recovery. Conservative flags are permitted. The following four obligations are separate.
+
+1. **Finite conditional fault budget.** For the full nonanticipating joint filtration, $`D_t\in\mathcal F_{t+1}`$ and predictable $`\delta_t\ge0`$ satisfy
+
+```math
+\Pr(D_t\mid\mathcal F_t)\le\delta_t,
+\qquad
+\sum_t\delta_t\lt{}\infty
+\quad\text{almost surely}.
+```
+
+2. **Sound public detection while running.** Before a flag, the implementation uses the observation-compatible translated policy. Every running step has full source and destination marginals, including the actual flag/observation process. A no-flag successor remains in the relation and preserves the information interface, public projection and badness implication. A flagged successor may leave it. An existential hidden coupling does not itself implement a detector: the flag must be available through the declared destination interface.
+3. **Almost-sure finite recovery.** From every reachable recovery entry and every allowed conditional law, a specified executable recovery policy reaches a public reentry point in finite time with conditional probability one. It may visit bad states during recovery. Any required sure safety and action authority must hold independently on all recovery actions and possible outcomes. If flags are suppressed during recovery, this recovery contract must already cover its disturbances; they cannot disappear from the obligations.
+4. **Complete reentry law and memory.** At every reached controller-information reentry history $`h`$, the actual conditional destination law has a full initial coupling with a source law $`\mu_A^h`$ in a declared winning family. The policy $`\sigma^h`$, chosen from available information, restores almost surely for that family against the same full-source-history adversary class. Its reconstructed history, memory, mode and authority are reset or transferred through an explicit valid interface. If several hidden or environment-conditioned laws are compatible with $`h`$, the statement must hold for each induced law. Selecting one favorable initial pair is insufficient.
+
+The initial state must have a valid running entry or an initial recovery satisfying the same almost-sure completion condition.
+
+**Theorem (regenerative restoration).** Under these premises, the destination has only finitely many bad visits almost surely. The conclusion does not assert finite expected recovery duration or a deterministic cutoff time.
+
+**Proof.** The conditional fault budget and §7.4 give only finitely many flags almost surely. Every recovery entry has conditional probability zero of never completing. Because entry times and finite histories form a countable population, the union of those noncompletion events is null. Thus, outside a null set, some final running episode begins at a finite time and receives no further flag.
+
+It remains to justify that final episode without changing its law by conditioning on future success. Fix an episode index $`j`$ and a positive-probability reentry history $`h`$. Start the full source/destination coupling supplied by the reentry contract and use the running step couplings until the first flag. If a flag occurs, continue the **proof's source process only**, from its actual source state and memory, with its original source policy and any legal source disturbance. This auxiliary continuation is not an extra destination operation.
+
+Before the flag, summing the full coupling gives the legal source marginal. After it, the autonomous continuation remains legal by construction. As in §7.5, marginalizing destination-dependent source-disturbance choices produces an allowed randomized full-source-history adversary. Consequently this unconditioned source continuation has probability zero of infinitely many bad visits.
+
+On the event that the episode never flags, the auxiliary continuation is never used: relatedness and badness reflection hold throughout. Hence
+
+```math
+\Pr\bigl(
+\text{episode }j\text{ never flags and the destination is bad infinitely often}
+\mid h
+\bigr)=0.
+```
+
+This is an event inclusion inside a process with the correct unconditioned marginal. It does not assert that conditioning the source process on no future flag preserves its original law. Sum these null events over the countably many episode indices and entry histories. Almost every path has one candidate final episode, so its destination cannot be bad infinitely often. The finite number of earlier finite-length running and recovery episodes contributes only finitely many visits. ∎
+
+The last fault time is generally not a stopping time. The proof therefore does not invoke a restart or strong-Markov argument at that last time. Observable recovery entries and reentries can be stopping times, but the countable-episode argument is what identifies the final one without postselection. No independence between episodes is assumed.
+
+#### Recovery distinguishes three temporal guarantees
+
+First replace the absorbing failure state in the square-hazard example by an observed recovery state. From recovery return to $`S`$ with probability $`\rho=1/2`$ per step. With the stipulated safety and licenses, the fault budget remains summable, each recovery is geometric, and reentry restarts the always-good source. Regenerative restoration therefore has probability one.
+
+This particular example gives more than the general theorem. If $`r_t`$ is its probability of occupying recovery at time $`t`$, then
+
+```math
+r_{t+1}=(1-r_t)\delta_t+(1-\rho)r_t
+\le\delta_t+(1-\rho)r_t,\qquad r_0=0.
+```
+
+Unrolling and summing the nonnegative terms yields
+
+```math
+\sum_{t=0}^{\infty}r_t
+\le\frac1{\rho}\sum_{t=0}^{\infty}\delta_t\lt{}\infty.
+```
+
+The expected total bad occupancy is finite here. The time-dependent hazard schedule needs its unbounded time index; this is not an automatically time-homogeneous finite-state implementation.
+
+Second, almost-sure finite recovery need not have finite expectation. In recovery, let elapsed counter $`k`$ return on the next step with probability $`1/(k+2)`$ and otherwise increment. For its positive-integer duration $`T`$,
+
+```math
+\Pr(T>n)=
+\prod_{k=0}^{n-1}\left(1-\frac1{k+2}\right)
+=\frac1{n+1}\longrightarrow0,
+\qquad
+\mathbb ET=\sum_{n=0}^{\infty}\Pr(T>n)=\infty.
+```
+
+One such recovery followed by an always-good running mode satisfies eventual persistence while its expected bad occupancy is infinite. This policy uses unbounded elapsed-time memory; it is not a counterexample about a fixed finite homogeneous Markov chain.
+
+Third, successful recovery after every fault does not guarantee that faults eventually cease. With fixed fault probability $`\delta>0`$ from $`S`$ and fixed return probability $`\rho>0`$ from recovery, the finite two-state chain is irreducible. Its stationary recovery mass solves $`r=(1-r)\delta+(1-\rho)r`$, giving
+
+```math
+r=\frac{\delta}{\delta+\rho}>0.
+```
+
+Recovery is visited infinitely often almost surely. Thus recovery can work each time while permanent correctness fails. Conversely, the finite-fault budget is sufficient rather than necessary for every architecture: infinitely many harmless flags need not create actual bad visits or destroy a winning interface. [20, §4][r16]
+
+#### Mathematical and executable scope
+
+The retained finite implementations check supplied coupling tables, private/public projections and compatible compositions using exact rational data. Their transportation witnesses expose both marginals; composition requires the same middle law; the independent tests preserve the hidden-information, missing-warrant and exposed-future-coin counterexamples. Finite-history and recurrence probes give bounded implementation evidence. They are not proofs of infinite-horizon measure statements, automatic synthesis of every interface or recovery controller, or validation of an actual cognitive system. The proofs above supply the stated infinite conclusions from their declared premises. [17][r13] [18][r14] [19][r15] [20][r16] [21][r17]
+
+The remaining practical work is concrete: establish the actual joint kernels and provenance dependence, prove policy-menu conformance under all admitted disturbances, realize the sampler and information interface, supply destination warrant, and—for regenerative use—implement sound fault detection and a complete conditional reentry-law/memory contract. The ordinary research does not provide a general recovery synthesizer, an unrestricted migration decision procedure, a formal-kernel proof of these probability theorems, or permission to infer scientific truth from a finite checker. Preserving those distinctions makes the conditional results usable without overstating their reach.
 
 ## 8. What final judgments identify about evidence use
 
@@ -967,13 +1477,15 @@ The results distinguish four objects often conflated in discussion of collective
 
 The five-state example separates distributed possession from individual or collective integration. The local-policy criterion then identifies the exact informational condition for a proposed response. Finite game theory adds preferences and unilateral incentives, while vector equilibrium makes the adopted improvement relation explicit. A stable profile has neither truth nor hard feasibility built into it: those require specified targets, joint-law constraints and an appropriate mechanism. The parity and Gaussian bounds quantify two different coordination tasks without collapsing either into a general physical law.
 
-Temporal restoration introduces another obligation. An equilibrium of a stationary decision problem is not a convergence proof for repeated practice. Independent randomization can leave failures recurring forever. A valid progress argument supplies a target-preserving dynamic and a rank or potential suited to it. Conversely, an observed pattern of successful final answers may be insufficient to identify the evidence used to generate those answers. Identification requires a channel sensitive to the causal distinction, while a worthwhile inquiry further requires a declared decision problem and acceptable cost.
+Temporal restoration introduces another obligation. An equilibrium of a stationary decision problem is not a convergence proof for repeated practice. Independent randomization can leave failures recurring forever. A valid progress argument supplies a target-preserving dynamic and a rank or potential suited to it. More general dependent deployment requires the actual conditional violation law and a filtration that observes the relevant events. Transferring a restorative policy requires complete probability marginals, implementable information and destination authority; approximation additionally needs control of bad occupancy or a genuine recovery and reentry mechanism. Conversely, an observed pattern of successful final answers may be insufficient to identify the evidence used to generate those answers. Identification requires a channel sensitive to the causal distinction, while a worthwhile inquiry further requires a declared decision problem and acceptable cost.
 
 Several substantial questions remain open at the intended applied level. Which evidence coordinates and improvement relations are warranted for a particular scholarly task? Which cognitive or institutional operations can be defended as the strategic loci of a model? What actual records mediate coordination, and what dependencies bypass a proposed information cut? Which recording errors and intervention assumptions are empirically supported? These cannot be settled by declaring a tuple, invoking Nash's theorem, measuring an outcome curve or assigning a compression score.
 
 A reproducible application must expose the conditions on which its result depends: coordinate orientation and units; source and extraction identity; inquiry and version; local views and permitted actions; payoffs or comparison cones; the strict-improvement convention; mixture and deployment semantics; and the kind of conclusion claimed. A certificate for one layer cannot certify another merely by changing its name. [5, §§8–9][r5]
 
 The mathematical conclusions here are conditional statements with their proofs and counterexamples, not claims of general novelty, fitted psychological mechanisms or completed empirical validation. The epistemic-profile architecture remains a proposal with corrected mathematical consequences. The accepted Orthemology papers retain their own editions and authority. The unfinished objective of a general n-person noetic field, and any distinct constructive-correction companions, remain separate scientific work; this chapter neither substitutes for that objective nor imports private manuscript bodies.
+
+The stochastic-transfer and recovery sections are ordinary mathematical consolidations of public research and its explicit correction for adversarial exposure of pre-sampled random memory. They preserve the supplied model and authority assumptions. Their finite implementations and historical probe results remain separate evidence; this exposition neither repeats those executions nor upgrades their formal or empirical status.
 
 ## References and source editions
 
@@ -996,6 +1508,16 @@ The numbered project sources below identify public research editions. They estab
 15. Dov Monderer and Lloyd S. Shapley. “Potential Games.” *Games and Economic Behavior* 14 (1996): 124–143. The ordinal-potential definition and finite-improvement result used here are in §2, especially Lemma 2.3. [Primary paper][potential].
 16. Shaojian Qu, Ying Ji and Mark Goh. “The Robust Weighted Multi-Objective Game.” *PLOS ONE* 10, no. 9 (2015): e0138970. [doi:10.1371/journal.pone.0138970][weighted].
 
+17. Orthemology public research. *Correlated response policies and the exact limit of marginal restoration*. Ordinary proofs of the sharp coupling obstruction, adapted-event threshold and constrained-response qualifications. [Exact public edition][r13].
+18. Orthemology public research. *Causal stochastic migration with an implementable information interface*. Corrected exact-coupling and controller-information treatment, including its finite-memory qualification. [Exact public edition][r14].
+19. Orthemology public research. *Composing migration interfaces without turning private memory into public warrant*. Split public/private mode and exact same-middle-law composition. [Exact public edition][r15].
+20. Orthemology public research. *Approximate migration: finite departures need an actual return mechanism*. Occupancy-defect and regenerative restoration results with their complete conditional reentry obligations. [Exact public edition][r16].
+21. Orthemology public research. *Cross-lane adversarial synthesis review*, §F1 and §§C2, C4, 30 September 2026. The exposed-future-coin counterexample and the relevant stochastic proof qualifications are incorporated here; the review's other mathematical and philosophical assessments remain separate. [Exact public review][r17].
+22. L. R. Ford, Jr., and D. R. Fulkerson. “Maximal Flow Through a Network.” *Canadian Journal of Mathematics* 8 (1956): 399–404. [doi:10.4153/CJM-1956-045-5][flow].
+23. Robert J. Aumann. “Subjectivity and Correlation in Randomized Strategies.” *Journal of Mathematical Economics* 1, no. 1 (1974): 67–96. [doi:10.1016/0304-4068(74)90037-8][aumann]. [Author-hosted reprint][aumann-reprint].
+24. Chandra Nair. *Probability Theory: Lecture Notes 6*. 18 December 2019. Theorem 11 states Lévy's extension of the Borel–Cantelli lemmas; its preceding martingale result and Lemma 5 support the convergence argument. [Author's notes][conditional-bc].
+25. Sofie Haesaert, S. Esmaeil Zadeh Soudjani and Alessandro Abate. *Verification of General Markov Decision Processes by Approximate Similarity Relations and Policy Refinement*. Author preprint, arXiv:1605.09557v1, 2016. Definition 6 and §§3.3–4.2 distinguish exact law lifting, state-dependent interfaces and finite-horizon approximate refinement. [Primary preprint][refinement].
+
 [r1]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-multi-actor-conflict-note.md
 [r2]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-core-formalization.md
 [r3]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/experiments/orthemology-v5-successors/source-store/a73f2cac6cb027d65c46ce6923e80bfed72a3591789779b57cc5578cdb359f84/FIVE_STATE_MODEL.md
@@ -1012,3 +1534,13 @@ The numbered project sources below identify public research editions. They estab
 [kakutani]: https://doi.org/10.1215/S0012-7094-41-00838-4
 [potential]: https://people.csail.mit.edu/jrennie/trg/papers/monderer-potential-96.pdf
 [weighted]: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0138970
+[r13]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/7163cb536782ccb8a91a10be4b91cdcc1113bbab3c467d6ac66dee0d59cb0caf/correlated_restoration.md
+[r14]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/e3a1087fae58f515c03ac1cb6f7420302abfde06e53d38f1a44ea2519bd3b157/stochastic_refinement.md
+[r15]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/c363575fa62fd4ffead857b0ab9c8e1d7b0b81320721b8cf7389cea84417eea1/private_interface_composition.md
+[r16]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/38fe5921cd3415625ad5e4de4084b6f81bc6658455aa51f1972fb2456ce69da7/regenerative_refinement.md
+[r17]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/66a75aa4aff97954421c969818b167cb369344cc5bb4e2b63587c193f66d07ab/REPORT.md
+[flow]: https://doi.org/10.4153/CJM-1956-045-5
+[aumann]: https://doi.org/10.1016/0304-4068(74)90037-8
+[aumann-reprint]: https://ma.huji.ac.il/raumann/pdf/Subjectivity%20and%20Correlation.pdf
+[conditional-bc]: https://chandra.ie.cuhk.edu.hk/courses/Probability/ln6.pdf
+[refinement]: https://arxiv.org/pdf/1605.09557v1
