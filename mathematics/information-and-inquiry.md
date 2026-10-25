@@ -694,21 +694,15 @@ with $`\rho(C)=\infty`$ if no cover exists.
 
 1. If the encoder knows the exact state, a feasible deterministic protocol on $`C`$ exists exactly when $`\rho(C)<\infty`$; its minimum message alphabet then has size $`\rho(C)`$. Over all observed cells, feasibility means $`R<\infty`$, and the minimum common size is
 
-   ```math
-   R=\max_{o\in\omega(S)}\rho(\omega^{-1}(o)).
-   ```
+   $`R=\max_{o\in\omega(S)}\rho(\omega^{-1}(o)).`$
 
 2. If the encoder knows only $`\eta(s)`$, for a supplied map $`\eta:S\to E`$, a message map $`c:\eta(S)\to M`$ is feasible exactly when every nonempty bucket
 
-   ```math
-   B(o,m)=\{s:\omega(s)=o,\ c(\eta(s))=m\}
-   ```
+   $`B(o,m)=\{s:\omega(s)=o,\ c(\eta(s))=m\}`$
 
    satisfies
 
-   ```math
-   \bigcap_{s\in B(o,m)}\mathcal A(s)\ne\varnothing.
-   ```
+   $`\bigcap_{s\in B(o,m)}\mathcal A(s)\ne\varnothing.`$
 
    The minimum alphabet is the minimum number of used messages over such maps; no compatible map means impossibility.
 
@@ -723,9 +717,7 @@ Several strict boundaries follow.
 - If $`\mathrm{act}:K\to U`$ retains only a surface action, then the action-cover number is at most $`\rho(C)`$: projecting any certificate cover gives an action cover. The inequality is strict for $`\mathcal A(s_0)=\{k_0\}`$ and $`\mathcal A(s_1)=\{k_1\}`$ with distinct certificates but $`\mathrm{act}(k_0)=\mathrm{act}(k_1)`$. Agreement on an action need not preserve its source, version or authority. If two same-byte version contexts require respectively an old-version execution certificate and a new-version hold/revalidation certificate, with no common admitted fallback, their cover number is two. One truthful distinguishing bit is then necessary and sufficient only when the encoder actually knows the relevant version.
 - For a nonempty finite set of possible model completions $`\Theta(s)`$, robust admissibility is
 
-  ```math
-  \mathcal A_{\rm all}(s)=\bigcap_{\theta\in\Theta(s)}\mathcal A_\theta(s).
-  ```
+  $`\mathcal A_{\rm all}(s)=\bigcap_{\theta\in\Theta(s)}\mathcal A_\theta(s).`$
 
   A union is unsound: completions admitting only $`k_0`$ and only $`k_1`$ admit no common robust output. On fixed state and certificate sets, shrinking admissible sets can only increase the cover requirement, possibly to infinity.
 
