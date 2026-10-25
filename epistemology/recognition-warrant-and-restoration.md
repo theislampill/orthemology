@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A correct answer does not identify the cognitive achievement that produced it. Perception, inference, testimony, recollection, newly acquired recognition and compliance can converge on the same sentence while differing in their grounds. Conversely, a person may retain knowledge after losing an argument, fail to act on something known, or gain a valuable mode of encounter without first having lacked warranted belief. This chapter develops a unified account of those distinctions. It preserves the affirmative case for basic recognition and truth-directed proper function; explains how local rational correction can proceed through surviving cognitive capacities; separates the defeat of a particular ground from forgetting, falsity and loss of permission; and states what evidence would be needed to identify restoration. Complete finite arguments show why an output profile can fail to identify its epistemic or causal target, why sensitivity need not pass to a weaker proposition, and why lower-order marginal change is neither necessary nor sufficient for a specified restoration. The philosophical arguments retain their source and theological scope. The mathematical results establish consequences of explicit models; they do not measure a person's fiṭrah, prove a complete theory of knowledge, or authenticate a historical recognition episode.
+A correct answer does not identify the cognitive achievement that produced it. Perception, inference, testimony, recollection, newly acquired recognition and compliance can converge on the same sentence while differing in their grounds. Conversely, a person may retain knowledge after losing an argument, fail to act on something known, or gain a valuable mode of encounter without first having lacked warranted belief. This chapter develops a unified account of those distinctions. It preserves the affirmative case for basic recognition and truth-directed proper function; explains how local rational correction can proceed through surviving cognitive capacities; separates the defeat of a particular ground from forgetting, falsity and loss of permission; and states what evidence would be needed to identify restoration. Complete finite arguments show why an output profile can fail to identify its epistemic or causal target, why sensitivity need not pass to a weaker proposition, and why lower-order marginal change is neither necessary nor sufficient for a specified restoration. Relevant-logic proofs distinguish genuinely relevant grounds from a complete conjunction of merely material premises, while preserving the difference between an internal conditional, derivability and actual knowledge. The philosophical arguments retain their source and theological scope. The mathematical results establish consequences of explicit models; they do not measure a person's fiṭrah, prove a complete theory of knowledge, or authenticate a historical recognition episode.
 
 **Edition and scope.** This is a new public, source-bound exposition of Orthemology's research on recognition and corrective inquiry. It does not replace or silently revise the accepted edition of Paper 2, any other accepted paper, or a private manuscript. Its arguments and examples are presented here in full at their stated scope. Earlier source assessments inform this synthesis; independent qualification of this edition and owner adoption are separate decisions.
 
@@ -156,6 +156,323 @@ To obtain an epistemological conflict, additional premises are indispensable. Gr
 The strongest alternative concerns the ground of the inference. If the fact P itself is the operative reason for Q, it is absent at every not-Q world because P entails Q. Therefore $`S(P,Q)`$ holds. This removes the displayed sensitivity failure without proving that this factive ground was actually used or that sensitivity is sufficient for knowledge. The disagreement concerns the proper individuation of the reason, not whether a true P can coexist with a false Q.
 
 The ordering also matters. Insert a world at distance $`3/2`$ where Q, A and e are all false. The nearest not-P world remains $`w_1`$, but the nearest not-Q world becomes the inserted world; both sensitivity tests now pass. No empirical conclusion follows without a justified interpretation of the alternatives and the operative ground. The underlying closure dispute belongs to the published exchange between Dretske and Hawthorne; the finite example is an expository reconstruction, not a new refutation of a view that openly accepts restricted transmission. [8, 19]
+
+### 4.3 Necessary conclusions and different senses of implication
+
+A necessary conclusion raises a further difficulty for a sensitivity account. If ordinary possibility excludes every state in which the conclusion is false, a test based only on such states can become vacuous. Proposition 2 exposes the corresponding problem for a truth probability: competent calculation and irrelevant assent can both receive probability one. An account that distinguishes them must attend to the ground and its actual use. That does not require treating a false arithmetic proposition as an ordinary metaphysical possibility.
+
+Adams, Barker and Clarke distinguish true belief supported by actually operative, sensitive reasons from stronger conditions involving the subject's appraisal and resistance to defeat. Known facts as well as experiences can serve as reasons. In their account, a fact used in a new inference need not transmit every earlier experience through which the subject acquired knowledge of that fact. The later belief's ground therefore cannot be identified merely by tracing every causal predecessor of its acquisition. Their treatment of necessary truths appeals to relevant conditionals; their arithmetic example grants sensitive testimony and a subsequent intellectual experience. Those grants describe a substantive sufficient case. The necessity of the answer alone does not establish them. [30, especially pp. 16 n.19 and 24–27]
+
+Barker and Adams also explicitly state an implication-to-counterfactual bridge in their discussion of closure. They restrict the intended inference to a competent, immediate use of a known premise; permit combined reasons; and exclude using a supposedly known fact whose knowledge presupposes the very conclusion at issue. Their account treats basing and the subjunctive relation as primitive rather than promising a reduction of every epistemic notion. A criticism that simply announces a missing bridge or a missing reductive definition would therefore misstate the account. The legitimate question is what justifies that bridge for the kind of implication and the complete actual ground being used. [31, pp. 222 n.1, 225 nn.12–13, 226–228 and n.21]
+
+The following distinctions make that question precise. Let P be a premise and N a target.
+
+| Relation | What it says | What it does not supply by itself |
+|---|---|---|
+| The material conditional $`P\supset N:=\neg P\lor N`$ is true at a valuation | That valuation does not make P true and N false | A connection between the contents or the subject's operative reasons |
+| $`P\models_{\mathrm{CL}}N`$ | Every classical valuation satisfying P also satisfies N | A relevant object-language conditional or a fact about actual cognitive use |
+| $`\Gamma\vdash_R N`$ | N is derivable in the specified calculus from the premises in $`\Gamma`$ | An unrestricted deduction theorem internalizing that derivation as $`B\to_R N`$ |
+| $`P\to_R N`$ | The indicated relevant conditional is an object-language formula | An epistemic interpretation of P, N, or the conditional |
+| N is known through P | A subject has the appropriate true belief and epistemic relation to its actual ground | A classification recoverable from designation in a logical matrix alone |
+
+A relevant conditional can enter an account of a counterfactual without the symbols themselves settling that philosophical interpretation. The calculations below use the standard propositional calculus R, with the exact axioms stated in §4.4. They test proposed logical implications within that calculus. They do not identify every R algebra as a model of the richer account of knowledge. Likewise, an R theorem provides a precise target that follows without premises; calling it a theorem does not equate all philosophical necessities with provability in R. [32–36]
+
+This distinction becomes decisive when $`N=Q\to_R Q`$. Identity makes N an R theorem, so N is derivable from every premise set. Nevertheless, an internal formula $`B\to_R N`$ can fail. There is no contradiction between these claims: one concerns derivation of N, the other derivation or designation of a different formula containing an implication. The negative result in §4.6 preserves the first claim throughout.
+
+### 4.4 A positive theorem for genuinely relevant grounds
+
+The positive case should be proved before testing weaker replacements. Work in the constant-free propositional language with conjunction, disjunction, negation and relevant implication. In this subsection, $`\to`$ abbreviates $`\to_R`$. Formula letters in the axiom table permit arbitrary substitution. The axiomatization is that displayed by Bimbó, Dunn and Ferenz; neither an actuality operator nor an optional truth constant or fusion connective is added. [32, pp. 176–177]
+
+| Scheme | Formula |
+|---|---|
+| A1 | $`X\to X`$ |
+| A2 | $`(X\to Y)\to((Z\to X)\to(Z\to Y))`$ |
+| A3 | $`(X\to(X\to Y))\to(X\to Y)`$ |
+| A4 | $`(X\to(Y\to Z))\to(Y\to(X\to Z))`$ |
+| A5 | $`(X\to((Y\to W)\to Z))\to((Y\to W)\to(X\to Z))`$ |
+| A6 | $`(X\land Y)\to X`$ |
+| A7 | $`(X\land Y)\to Y`$ |
+| A8 | $`((Z\to X)\land(Z\to Y))\to(Z\to(X\land Y))`$ |
+| A9 | $`(((X\to X)\land(Y\to Y))\to Z)\to Z`$ |
+| A10 | $`X\to(X\lor Y)`$ |
+| A11 | $`X\to(Y\lor X)`$ |
+| A12 | $`((X\to Z)\land(Y\to Z))\to((X\lor Y)\to Z)`$ |
+| A13 | $`(X\land(Y\lor Z))\to((X\land Y)\lor(X\land Z))`$ |
+| A14 | $`(X\to\neg X)\to\neg X`$ |
+| A15 | $`(X\to\neg Y)\to(Y\to\neg X)`$ |
+| A16 | $`\neg\neg X\to X`$ |
+
+The two rules are **modus ponens**, from X and $`X\to Y`$ infer Y, and **adjunction**, from X and Y infer $`X\land Y`$. These rules, rather than an unrestricted rule for introducing a conditional from a derivation under an assumption, govern the proofs below.
+
+**Proposition 3A — The complete relevant ground supports sensitivity.** For arbitrary formulas P and N, put $`H=P\to_R N`$ and $`B=P\land H`$. Then R proves both
+
+```math
+B\to_R N,
+\qquad
+\neg N\to_R\neg B.
+```
+
+**Proof.** The following derivation supplies every axiom instance and use of modus ponens. “MP i, j” uses the conditional at line i and its antecedent at line j. The abbreviations H and B stand for the formulas just defined; they are not additional axioms. [34–35]
+
+| Line | Formula | Justification |
+|---:|---|---|
+| 1 | $`B\to P`$ | A6 |
+| 2 | $`B\to H`$ | A7 |
+| 3 | $`H\to((B\to P)\to(B\to N))`$ | A2 |
+| 4 | $`[H\to((B\to P)\to(B\to N))]\to[(B\to P)\to(H\to(B\to N))]`$ | A4 |
+| 5 | $`(B\to P)\to(H\to(B\to N))`$ | MP 4, 3 |
+| 6 | $`H\to(B\to N)`$ | MP 5, 1 |
+| 7 | $`[H\to(B\to N)]\to[(B\to H)\to(B\to(B\to N))]`$ | A2 |
+| 8 | $`(B\to H)\to(B\to(B\to N))`$ | MP 7, 6 |
+| 9 | $`B\to(B\to N)`$ | MP 8, 2 |
+| 10 | $`[B\to(B\to N)]\to(B\to N)`$ | A3 |
+| 11 | $`B\to N`$ | MP 10, 9 |
+| 12 | $`\neg N\to\neg N`$ | A1 |
+| 13 | $`(\neg N\to\neg N)\to(N\to\neg\neg N)`$ | A15 |
+| 14 | $`N\to\neg\neg N`$ | MP 13, 12 |
+| 15 | $`(N\to\neg\neg N)\to[(B\to N)\to(B\to\neg\neg N)]`$ | A2 |
+| 16 | $`(B\to N)\to(B\to\neg\neg N)`$ | MP 15, 14 |
+| 17 | $`B\to\neg\neg N`$ | MP 16, 11 |
+| 18 | $`(B\to\neg\neg N)\to(\neg N\to\neg B)`$ | A15 |
+| 19 | $`\neg N\to\neg B`$ | MP 18, 17 |
+
+Line 11 establishes the first formula and line 19 the second. No assumption about the necessity of N was used. The proof therefore applies to arbitrary substitutions for P and N. ∎
+
+Conjunction projections supply both components of B. Composition and exchange use the conditional component; contraction discharges the repeated use of B. The last part derives the required contraposition without importing a classical equivalence as a new rule. This explains why the whole ground matters: the proof uses P **and** its relevant connection to N.
+
+An epistemic application adds separate facts. The subject must know the relevant contents without presupposing the conclusion, actually use them in a competent inference, and thereby believe N on the combined factive ground. The interpretation of the relevant conditional must also fit the intended counterfactual account. Under those conditions the theorem supplies the sensitivity component of the proposed analysis; it does not manufacture the knowledge of the premises, the basing relation, or their competent use. In the account's stated sufficient case, the resulting true belief can therefore qualify as generic knowledge. A constant assenter who does not use the known facts has not met that case description merely by reporting the same answer. [30–31, 34]
+
+The arithmetic example in §3.4 makes the additional content visible. From $`7+4=11`$, equality preservation under adding one yields $`(7+4)+1=11+1`$. The identities $`(7+4)+1=7+5`$ and $`11+1=12`$ then yield $`7+5=12`$. A competent use of independently known laws explains how the conclusion can be reached. The propositional proof above is not a formalization of relevant arithmetic proving all those nonlogical laws or their particular conditional. It either takes the appropriate relevant implication as justified input or applies after an independently justified relevant derivation supplies it. The classical observation that every premise entails an independent logical theorem cannot replace that input.
+
+There is also no demand that the learner articulate this entire logical or epistemological analysis. The theorem explains the relation attributed to an actual ground. It does not add reflective self-certification to every ordinary act of knowing. Nor can an observer insert N itself as a supposedly known ground to explain the learner's first knowledge of N. The non-presupposition condition excludes that shortcut.
+
+### 4.5 Why a premise-only countermodel is insufficient
+
+A smaller algebra separates material truth from relevant implication but also exhibits a serious limit of that separation. Use values
+
+```math
+D_4=\{-2,-1,1,2\},\qquad D_4^+=\{1,2\}.
+```
+
+The positive values are **designated**. Negation sends x to $`-x`$; conjunction and disjunction are ordinary minimum and maximum in the displayed order. Define the conditional by
+
+```math
+I_4(x,y)=
+\begin{cases}
+\max(-x,y),&x\le y,\\
+\min(-x,y),&x>y.
+\end{cases}
+```
+
+Its complete table is small enough to inspect directly.
+
+| $`I_4`$ | $`-2`$ | $`-1`$ | $`1`$ | $`2`$ |
+|---|---:|---:|---:|---:|
+| $`-2`$ | 2 | 2 | 2 | 2 |
+| $`-1`$ | −2 | 1 | 1 | 2 |
+| $`1`$ | −2 | −1 | 1 | 2 |
+| $`2`$ | −2 | −2 | −2 | 2 |
+
+The predecessor finite controls verified designation of the stated R axiom schemes and preservation by both rules for this algebra. The resulting soundness claim is a finite axiom-and-rule check followed by induction on proofs, not a completeness theorem or a model of cognitive episodes. The retained checker and independent review record those historical checks; no new execution is implied by presenting the table here. [34, 38–39]
+
+Let $`N=Q\to_R Q`$ and assign $`Q=1`$, $`P=2`$. The target has value 1, and its negation has value −1. The material conditional $`M=\neg P\lor N`$ has value 1. Yet both $`P\to_R N`$ and $`\neg N\to_R\neg P`$ have value −2. Thus designation of P and M does not force either of these **premise-only** relevant conditionals. The target is an R identity theorem. Its classical counterpart $`Q\supset Q`$ is also a theorem and follows classically from every premise; that comparison does not convert an arbitrary classical consequence into the relevant connection that failed here. The two arrows retain their different interpretations.
+
+It would be a mistake to stop there. If M was also used as a reason, omitting it would fail to examine the complete ground. Put $`B_m=P\land M`$. At the same valuation, $`B_m=1`$, and both $`B_m\to_R N`$ and $`\neg N\to_R\neg B_m`$ are designated. This is not an accidental rescue of one row.
+
+**Proposition 3B — The four-valued control preserves every positive target's full material ground.** For every $`p\in D_4`$ and every $`n\in\{1,2\}`$, let
+
+```math
+b=\min\bigl(p,\max(-p,n)\bigr).
+```
+
+Then $`I_4(b,n)`$ and $`I_4(-n,-b)`$ are positive.
+
+**Proof.** If $`p\le n`$, then $`\max(-p,n)\ge p`$, so $`b=p\le n`$. If $`p>n`$, the only possibility is $`p=2,n=1`$, giving $`b=1=n`$. Consequently $`b\le n`$ in every case. The first branch of the conditional gives
+
+```math
+I_4(b,n)=\max(-b,n)>0.
+```
+
+Also $`-n\le-b`$, so
+
+```math
+I_4(-n,-b)=\max(n,-b)>0.
+```
+
+Both inequalities follow from $`n>0`$. ∎
+
+For the identity target, n is positive at every valuation of Q, so the proposition includes the whole identity case. The algebra therefore cannot supply the stronger counterexample to a complete material ground. Conversely, success in this one sound algebra does not prove that the corresponding formulas are theorems of R. The larger countermodel below resolves exactly that remaining question. It strengthens the negative result without retracting the valid positive theorem or misreporting this failed attempted counterexample. [34, 36, 38]
+
+### 4.6 A countermodel to the complete material-ground shortcut
+
+The required stronger algebra is an eight-valued matrix described by Standefer, who attributes its variable-sharing construction to the Anderson–Belnap tradition. His stated soundness for R, rather than an assumed cognitive interpretation, is the technical premise used here. The formulas use only the propositional reduct of that construction. [33, Theorem 4 and Table 2, pp. 270–271]
+
+Its values are
+
+```math
+V=\{-3,-2,-1,-0,+0,+1,+2,+3\},
+\qquad
+V^+=\{+0,+1,+2,+3\}.
+```
+
+These are eight **labels**, including two distinct labels $`-0`$ and $`+0`$. They are not the real numbers in their usual order. Negation exchanges the matching signed labels. For conjunction and disjunction, identify the values with the following subsets of a three-element set and take intersection and union.
+
+| Value | Subset |
+|---|---|
+| $`-3`$ | $`\varnothing`$ |
+| $`-2`$ | $`\{\beta\}`$ |
+| $`-1`$ | $`\{\alpha\}`$ |
+| $`-0`$ | $`\{\alpha,\beta\}`$ |
+| $`+0`$ | $`\{\gamma\}`$ |
+| $`+1`$ | $`\{\alpha,\gamma\}`$ |
+| $`+2`$ | $`\{\beta,\gamma\}`$ |
+| $`+3`$ | $`\{\alpha,\beta,\gamma\}`$ |
+
+Negation is still the signed-label exchange just specified, not an instruction to use ordinary set complement. This subset presentation makes the lattice operations explicit while preserving the source's distinct negation operation. Designation amounts to containing $`\gamma`$. It therefore has the usual Boolean behavior under conjunction, disjunction and negation, even though the relevant conditional carries more structure.
+
+The conditional is defined by the entire following table; the row is its antecedent and the column its consequent.
+
+| $`\to_R`$ | $`-3`$ | $`-2`$ | $`-1`$ | $`-0`$ | $`+0`$ | $`+1`$ | $`+2`$ | $`+3`$ |
+|---|---|---|---|---|---|---|---|---|
+| $`-3`$ | +3 | +3 | +3 | +3 | +3 | +3 | +3 | +3 |
+| $`-2`$ | −3 | +2 | −3 | +2 | −3 | −3 | +2 | +3 |
+| $`-1`$ | −3 | −3 | +1 | +1 | −3 | +1 | −3 | +3 |
+| $`-0`$ | −3 | −3 | −3 | +0 | −3 | −3 | −3 | +3 |
+| $`+0`$ | −3 | −2 | −1 | −0 | +0 | +1 | +2 | +3 |
+| $`+1`$ | −3 | −3 | −1 | −1 | −3 | +1 | −3 | +3 |
+| $`+2`$ | −3 | −2 | −3 | −2 | −3 | −3 | +2 | +3 |
+| $`+3`$ | −3 | −3 | −3 | −3 | −3 | −3 | −3 | +3 |
+
+Soundness means that every instance of an R axiom is designated and both inference rules preserve designation. Induction on a derivation then shows that every theorem is designated under every valuation, and that formulas derived from designated assumptions remain designated. The historical author and independent controls checked the displayed sixteen schemes and the two rules with this exact finite table; they did not claim a proof-assistant kernel verification. The table, lattice and specified calculus are the mathematical content needed to inspect the countermodel. [33, 36, 38–39]
+
+**Proposition 3C — Full material grounds do not force an internal relevant implication, even for an identity theorem.** Let P and Q be different propositional atoms and put
+
+```math
+N=Q\to_R Q,\qquad
+M=\neg P\lor N,\qquad
+B_m=P\land M.
+```
+
+There is a valuation in an R-sound matrix at which P, N, M and $`B_m`$ are all designated, their negations are all undesignated, but both $`B_m\to_R N`$ and $`\neg N\to_R\neg B_m`$ are undesignated.
+
+**Proof.** Assign $`P=+1`$ and $`Q=+2`$. The diagonal entry gives $`N=+2`$, so $`\neg N=-2`$. Since $`\neg P=-1`$, the subset union defining M gives
+
+```math
+M=\{\alpha\}\cup\{\beta,\gamma\}
+  =\{\alpha,\beta,\gamma\}=+3.
+```
+
+Taking the meet with P gives $`B_m=+1`$. Thus $`\neg M=-3`$ and $`\neg B_m=-1`$. The two relevant table entries are
+
+```math
+(+1)\to_R(+2)=-3,
+\qquad
+(-2)\to_R(-1)=-3.
+```
+
+They evaluate the claimed full-ground implication and sensitivity formula respectively. Every asserted designation and undesignation now follows from the explicit labels. ∎
+
+The diagonal of the table is designated everywhere, and the negation of every diagonal entry is undesignated. Hence the target really is the required identity theorem; the example does not evade the question by assigning a false or inconsistently designated target. Moreover, it does not omit M: $`B_m`$ is the conjunction of both proposed material premises.
+
+Let $`\Gamma=\{P,M\}`$. The valuation shows that neither $`B_m\to_R N`$ nor $`\neg N\to_R\neg B_m`$ follows from $`\Gamma`$ by the stated calculus. Adding $`B_m`$ and N to that premise set does not change this refutation, because all four remain designated at the same valuation. Nevertheless,
+
+```math
+\vdash_R N,\qquad
+\Gamma\vdash_R N,\qquad
+B_m\vdash_R N.
+```
+
+The target is also a semantic consequence of every premise set in this matrix. The negative result must therefore not be stated as “the complete ground does not entail N.” It concerns the internal relevant implication and the separately displayed sensitivity formula. Replacing either by ordinary consequence would erase the result's central distinction.
+
+### 4.7 A complementary structural proof
+
+The explicit valuation is sufficient for Proposition 3C. A variable-sharing argument explains why the obstruction extends beyond that particular identity target. It is a different proof presentation, not a second independently interpreted epistemic model.
+
+**Variable-sharing lemma.** If a constant-free formula $`X\to_R Y`$ is an R theorem, X and Y share at least one propositional atom.
+
+**Proof.** In the eight-valued matrix, the sets
+
+```math
+S_1=\{-1,+1\},\qquad S_2=\{-2,+2\}
+```
+
+are separately closed under negation, meet, join and relevant implication. Negation exchanges the two members of each pair. For meet and join each pair is a chain in the specified subset lattice. For implication, the two restricted tables both have the pattern
+
+```math
+\begin{array}{c|cc}
+&-i&+i\\\hline
+-i&+i&+i\\
++i&-i&+i
+\end{array}
+\qquad(i=1,2).
+```
+
+Every conditional with antecedent in $`S_1`$ and consequent in $`S_2`$ has value −3, as the four relevant entries of the full table show. If X and Y have disjoint atoms, assign every atom of X to $`S_1`$ and every atom of Y to $`S_2`$. Structural induction keeps the value of X in the first pair and Y in the second. Their conditional is then undesignated. Soundness excludes theoremhood. Constant-freeness matters: the argument assigns each atomic starting value and does not admit extra logical constants or operators with values outside the relevant pair. ∎ [33, 37]
+
+**Proposition 3D — The material-ground schema has a variable-sharing obstruction.** Let P be an atom and N a constant-free formula containing no P. Put $`M=\neg P\lor N`$ and $`B_m=P\land M`$. Then $`B_m\to_R N`$ is not an R theorem. In particular, this applies when N is a theorem on disjoint atoms, such as $`Q\to_R Q`$.
+
+**Proof.** Put $`C=P\land\neg P`$. Here C is an auxiliary formula in a metatheoretic proof, not an asserted actual premise or a purportedly known contradiction. The following derivation proves $`C\to_R B_m`$ and displays what would follow if $`B_m\to_R N`$ were a theorem. Again the table abbreviates $`\to_R`$ by $`\to`$.
+
+| Line | Formula | Justification |
+|---:|---|---|
+| 1 | $`C\to P`$ | A6 |
+| 2 | $`C\to\neg P`$ | A7 |
+| 3 | $`\neg P\to M`$ | A10 |
+| 4 | $`(\neg P\to M)\to((C\to\neg P)\to(C\to M))`$ | A2 |
+| 5 | $`(C\to\neg P)\to(C\to M)`$ | MP 4, 3 |
+| 6 | $`C\to M`$ | MP 5, 2 |
+| 7 | $`(C\to P)\land(C\to M)`$ | Adjunction 1, 6 |
+| 8 | $`((C\to P)\land(C\to M))\to(C\to B_m)`$ | A8 |
+| 9 | $`C\to B_m`$ | MP 8, 7 |
+| 10 | $`B_m\to N`$ | Supposed theorem, for reductio |
+| 11 | $`(B_m\to N)\to((C\to B_m)\to(C\to N))`$ | A2 |
+| 12 | $`(C\to B_m)\to(C\to N)`$ | MP 11, 10 |
+| 13 | $`C\to N`$ | MP 12, 9 |
+
+If line 10 were an R theorem, every line would be an R theorem. But line 13 has only P in its antecedent and none in its consequent, contrary to the lemma. Therefore line 10 is not a theorem. ∎ [36–37]
+
+The proof does not assume that N is false, nor that the material premises can describe an actual knower of a contradiction. It isolates a restriction on internal implication. The identity-target instance is both a necessary-target control and an example of the general obstruction. Proposition 3C separately establishes failure of the sensitivity formula under the complete designated grounds; the variable-sharing proof need not be inflated into an additional epistemological claim to be useful.
+
+### 4.8 What proposed repairs actually change
+
+The complete-ground countermodel distinguishes several repairs that otherwise sound alike. At its valuation, duplicating P or M or regrouping their conjunction does not change $`B_m=+1`$. Adding the formula $`\neg(P\land\neg P)`$ also leaves that value unchanged: $`P\land\neg P=-1`$, so its negation is +1. Neither repetition nor this explicit consistency formula repairs the failed conditional.
+
+Replacing M by the relevant conditional $`H=P\to_R N`$ is a substantive strengthening. At the countervaluation, H has value −3, so the new combined ground $`P\land H`$ is undesignated. The example therefore does not meet the strengthened premise. Proposition 3A proves the general positive result for that genuinely relevant ground; the larger matrix does not overturn it.
+
+Adding the target itself is another change. At the same valuation,
+
+```math
+B_m\land N=+0,\qquad
+(B_m\land N)\to_R N=+2,\qquad
+\neg N\to_R\neg(B_m\land N)=+2.
+```
+
+This removes the displayed algebraic failure. It does not explain the subject's first knowledge of N if treating N as a known reason already presupposes that knowledge. An independently acquired route to N can matter, but its actual availability and use must be established rather than inserted after the fact.
+
+Classical equivalence cannot silently substitute for either repair. In Boolean logic,
+
+```math
+P\land(\neg P\lor N)
+\quad\text{is equivalent to}\quad P\land N.
+```
+
+In the displayed eight-valued algebra, the first expression has value +1 and the second +0. They agree in designation here, but they are not interchangeable values in a relevant conditional. Ordinary classical reasoning about a conclusion's truth remains available at its stated level; it does not thereby establish every internal relevant conditional demanded by a stronger account.
+
+The strongest philosophical reply is therefore intact. The intended implication may be substantively relevant, with an independently justified counterfactual interpretation; or the account may impose an additional bridge restricting its admissible models beyond bare R. Barker and Adams expressly include such a bridge, and Adams, Barker and Clarke explicitly appeal to relevant conditionals. An arbitrary R-sound matrix need not satisfy that stronger theory. The result shows that the bridge is extra to the material truth conditions and R alone; it does not show that the bridge is incoherent or that the authors intended a merely material reading. [30–31, 34, 36]
+
+### 4.9 Scope of the epistemological conclusion
+
+Neither finite matrix includes predicates for knowing, cognitive competence, actual basing, proper function, or a subject's justified response to a defeater. Assigning designated values to purported grounds consequently cannot establish a subject-level counterexample to knowledge closure. Such a counterexample would have to satisfy the source theory's complete antecedent, including genuine knowledge and competent non-presupposing use, and then establish failure of its conclusion. The present countermodel establishes a logical non-entailment required to distinguish proposed arguments for closure, not that stronger epistemic result.
+
+A related failed attempt reinforces this limit. Suppose two experiential reasons are assigned different intensional values and a separate annotation calls one competent and the other a guess. Swapping their values can swap a sensitivity verdict while leaving those annotations untouched. Unless the model connects the descriptions of competence and actual use to the intensional interpretation, it has not tested the fully specified routes. The earlier finite control preserved this underdetermination; it supplied no new refutation of an account that already distinguishes relevant grounding from constant assent. [34, 38]
+
+For an initial nonfactive seeming E, its occurrence, its content N, and the fact that the subject bases belief on E do not by themselves prove $`\neg N\to_R\neg E`$. A sufficient-case account may posit that relation. Applying it to a particular cognitive capacity then requires an independently warranted interpretation of the capacity, the episode and the relevant circumstances. The source's reference to existing conditions and laws constrains its implicative subjunctive; it is not an independently supplied procedure that identifies all such conditions in every case. The same limit applies to the mathematical testimony and intellectual experience in its example. [30–31, 34]
+
+The resulting open question is substantive: what makes this actual reason appropriately related to this target, and what evidence warrants that attribution? It is not answered by freely reassigning matrix values or increasing a table's size. Conversely, our lack of a complete reductive explanation is not a first-order defeater for a learner's independently warranted mathematical knowledge. Nor is a general proper-function requirement silently a fourth clause in the cited account's generic-knowledge definition. A stronger appraisal must be defended as such. On that account, errors on other questions do not automatically remove every locally grounded instance of generic knowledge. Its distinction between generic knowledge and stronger subject-perspective standings also prevents treating every misleading defeater as an automatic loss of all knowledge.
+
+Necessary theological recognition is subject to the same evidential restraint. The algebra neither posits a metaphysically possible state in which a necessary Creator does not exist nor measures a person's recognition. It cannot substitute a contingent prediction for the necessary target, or turn an unexplained capacity into a refuted one. The affirmative source-relative arguments and the distinctions between acquisition, present exercise and reflective explanation in §§2–3 remain separate from this formal test.
+
+What has been established is a coherent pair of results. Complete relevant grounds have the positive proof in Proposition 3A. Complete **material** grounds, even with a theorem as their target, do not in R alone provide the internal implication or sensitivity that the positive proof uses. Propositions 3B–3D identify why an initially plausible counterexample was insufficient, supply the corrected countermodel, and explain its structural source. All of these results concern the grounds and relations actually specified. None licenses silently changing a known premise, deleting an operative component, presupposing the target, or converting an algebraic designation into a verdict about a person's knowledge.
 
 ## 5. Particular recognition and cumulative grounds
 
@@ -325,6 +642,8 @@ Fair scrutiny also concerns how a claim is presented. Ibn al-Qayyim's discussion
 
 The positive account developed here has three connected parts. First, sound first-order cognition can warrant belief without waiting for a complete reflective theory. Second, inquiry can improve that cognition through actual known contents, better interpretation, additional evidence, local correction and more adequate encounter. Third, the reach of every achievement remains tied to its object: truth does not alone establish basing, a true source does not automatically confer every recipient's warrant, and successful output does not identify restoration.
 
+The logical results sharpen the same discipline. A relevant connection used with a known premise supplies a positive inferential route; a necessary target and materially true premises alone do not supply that connection. The failure concerns the specified internal conditional, not the target's derivability or an independently established instance of knowledge. Retaining the complete ground and its actual use is essential to both the positive argument and a fair negative test.
+
 The unresolved questions are substantive. A complete theory of operative basing remains contested; the inspected historical sources do not newly identify an initial Creator-recognition episode; source-relative fiṭrah claims do not yet supply a validated neutral measurement; and the formal examples do not establish causal efficacy in people or trained systems. These limits preserve the distinctions needed to investigate those questions. They do not erase the positive arguments already available or convert uncertainty about an explanation into an automatic defeater of ordinary knowledge.
 
 ## Sources and attribution
@@ -367,5 +686,18 @@ The following references identify substantive predecessors by title and exact Gi
 27. Orthemology. *Lower-order alignment and causal restoration*. Git blob `d13c504037255a6bd1a0a8c8d10aa3c6ae7baf3d`, in the [pinned public source edition][public-source-edition].
 28. Orthemology. *Truthful guidance, intended content and continuing access*. Git blobs `bebe846f6a921ed66ef07d67e182f41132bc432c`, `9937501e7a7c376026c26c1ce863522a9a699a26`, in the [pinned public source edition][public-source-edition].
 29. Orthemology. *Responsive demonstration after affirmed belief*. Git blob `29102e45882eb30b187973b1d0ffab4f3cc421aa`, in the [pinned public source edition][public-source-edition].
+
+### Further sources on relevant inference and epistemic grounds
+
+30. Fred Adams, John A. Barker and Murray Clarke. “Knowledge as Fact-Tracking True Belief.” *Manuscrito* 40(4), 2017, 1–30. DOI: [10.1590/0100-6045.2017.V40N4.FA](https://doi.org/10.1590/0100-6045.2017.V40N4.FA), [public article](https://www.scielo.br/j/man/a/JS5dxNB79fZvM9pJxRk3HzF/?format=pdf&ilang=pt_BR&lang=en). The relevant loci concern actual reasons, inference, note 19, and the relevant-conditional treatment of necessary truths, especially 24–27. Receipt of those loci does not stand for reading every cited antecedent.
+31. John A. Barker and Fred Adams. “Epistemic Closure and Skepticism.” *Logos & Episteme* 1(2), 2010, 221–246, [journal PDF](https://logos-and-episteme.acadiasi.ro/wp-content/uploads/2015/02/EPISTEMIC-CLOSURE-AND-SKEPTICISM.pdf). Relevant loci: 222 n.1; 225 nn.12–13; 226–228, especially 228 n.21. The stated implication-to-counterfactual bridge is explicit in the source.
+32. Katalin Bimbó, J. Michael Dunn and Nicholas Ferenz. “Two manuscripts, one by Routley, one by Meyer: The origins of the Routley–Meyer semantics for relevance logics.” *Australasian Journal of Logic* 15(2), 2018, 171–209. DOI: [10.26686/ajl.v15i2.4066](https://doi.org/10.26686/ajl.v15i2.4066), [journal PDF](https://ojs.wgtn.ac.nz/ajl/article/download/4066/4314/). The exact R axiom schemes and inference rules used here are Definition 1.1 on 176–177; this is a specific primary-source use rather than whole-paper reading credit.
+33. Shawn Standefer. “Actual Issues for Relevant Logics.” *Ergo* 7(8), 2020, 241–276. DOI: [10.3998/ergo.12405314.0007.008](https://doi.org/10.3998/ergo.12405314.0007.008), [author PDF](https://shawn-standefer.github.io/pdfs/actual.pdf). Theorem 4 and Table 2, 270–271, supply the source-controlled eight-valued construction and its R soundness. Standefer credits the earlier Anderson–Belnap argument; this chapter does not claim fresh receipt of the original book's corresponding pages.
+34. Orthemology. *Necessary truth sensitivity and operative factive grounds*. Git blob `15e864dd9b9a31a5203f31fe9b080261afc7de4e`, in the [pinned public source edition][public-source-edition].
+35. Orthemology. *Relevant factive-ground derivation*. Git blob `18b3ceb2bcca924387899a9d51f3fd035967eac7`, in the [pinned public source edition][public-source-edition]. The same mathematical body occurs in two original locations; it is one proof, not independent corroboration by duplication.
+36. Orthemology. *Full material grounds and necessary targets in System R*. Git blob `cf657a78f972b7f98190139b2275a3381d288b66`, in the [pinned public source edition][public-source-edition]. Its logical results and scope corrections are incorporated here; its comparisons with separate research subjects do not receive incorporation credit from this chapter.
+37. Orthemology. *Variable-sharing reduction for a complete material ground*. Git blob `512266ec363346b6302292f69dafad32f1e067a9`, in the [pinned public source edition][public-source-edition].
+38. Orthemology. *Independent reviews of relevant factive grounds and of the complete material-ground countermodel*. Git blobs `3cd0c0e14555bff15d6330e8d370ed973370a1f0` and `06c55230d94f3d33c683dceef0e46fac7a1b77cb`, in the [pinned public source edition][public-source-edition]. These historical assessments qualify their identified predecessors, not this new edition automatically.
+39. Orthemology. *Finite and syntactic verification sources for relevant-ground derivations and countermodels*. Author/checker Git blobs `eb286b579e9623019ed9d8e83f879b353e87f1ff` and `0ee6ad92faab953fa513dc5754dfc88e6a8111b8`; independent/checker Git blobs `e43f97484b910ca766b8ed8c2f37156e05633847` and `5dd45b6da09394d289379a5c5ff55eb142741c42`, in the [pinned public source edition][public-source-edition]. These executable controls remain separately retained; the present exposition does not claim that it reran them or replaces their functions with prose.
 
 [public-source-edition]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6

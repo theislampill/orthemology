@@ -564,7 +564,7 @@
   "baseline_work_population": {
     "count": 448,
     "keys_sha256": "70350e41b3d0273da7020e96ce7e061097989ec76819188bac738f4135f9f800",
-    "scope": "The 448 historical reader work/collection entries remain separately bound. The five new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
+    "scope": "The 448 historical reader work/collection entries remain separately bound. The new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
   },
   "source_additions": [
     {
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "61e889d75f114fc45e5c624fa52c57832c4309d8",
-      "bytes": 107898,
-      "sha256": "2f1700c3cfb7f3f00e5281fe5b07b44502e93ba8d94cfd6cd753b8457185d970",
+      "git_oid": "c5934015201a9dcb61a78befcd2dc08151b02015",
+      "bytes": 113593,
+      "sha256": "ca585eadf71dc0b34ca6674658f75ccba7977387d622174043a97c665407dc0a",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -621,9 +621,9 @@
       "key": "consolidated-recognition-and-restoration",
       "path": "epistemology/recognition-warrant-and-restoration.md",
       "mode": "100644",
-      "git_oid": "0a88017bd145b4b9f0f8f55a5ca05e79da80982a",
-      "bytes": 63239,
-      "sha256": "5c67fd14796625437050f5424b825689e5a332e52520ab8007dbc375a5ba3e27",
+      "git_oid": "884b3e3a43d52fa4255c3c766fe921c0df52ab40",
+      "bytes": 95831,
+      "sha256": "685c305a0af58e950a724b103638bb1e780213581480f8e62a542feca39b4cbb",
       "role": "work-source",
       "work_keys": [
         "recognition-warrant-and-restoration"
