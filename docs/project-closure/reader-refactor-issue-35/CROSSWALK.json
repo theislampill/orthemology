@@ -8116,13 +8116,23 @@
     },
     "scientific-consolidation-review": {
       "path": "docs/scientific-consolidation-review.md",
-      "sha256": "d479946edb6f66ef54375676981ab905941fbcd8a4036283a202483c844820eb",
-      "read_scope": "Complete compact incorporation companion reviewed for exact work identities, 33 distinct bounded prose-body mappings, original and new failed drafts, affected rechecks, partial-source and missing-object boundaries, and held removal/custody. The three ordinary work-table rows bind their exact paths, SHA-256 identities and bytes. This is shared review support, not a fourth scholarly work or whole-order qualification. Actual GitHub rendering and exact integration remain separately recorded post-publication checks."
+      "sha256": "a47056fd7830995d60b8b3b2a018e13674659e4605efcea77bed13f189fb1492",
+      "read_scope": "Complete shared incorporation companion with five exact work editions, 43 distinct bounded whole scientific prose bodies 546691 bytes, and a separately bounded 51939-byte constituent of a retained larger compendium. All earlier and new failed drafts, exact scientific reviews, partial/missing-source limits and held removal/custody remain explicit. It is review support, not a sixth scholarly work or whole-order qualification. Exact integration and actual GitHub presentation remain separately received checks."
     },
     "consolidated-recognition-and-restoration": {
       "path": "epistemology/recognition-warrant-and-restoration.md",
       "sha256": "5c67fd14796625437050f5424b825689e5a332e52520ab8007dbc375a5ba3e27",
       "read_scope": "Complete 63239-byte chapter and all29 public predecessor bodies independently read. Five written propositions checked analytically with bounded independent sensitivity, causal-guard and parity/mixture calculations. Two substantive initial omissions repaired; exact affected recheck preserves all54 math payloads. Eleven bounded bodies fully incorporated at their scientific scope; eighteen remain partial. Original missing payloads not received. No protected reader instruments, private manuscripts, fresh empirical study, owner adoption or accepted-edition amendment."
+    },
+    "consolidated-encodings-and-witnesses": {
+      "path": "logic/encodings-and-witnesses.md",
+      "sha256": "48333def0673977a593c46c19e1cf29b68e7184650da6cd4740633505bb986b2",
+      "read_scope": "Complete revised chapter independently read by root against all 49 full public predecessor bodies. Author reading was 47 full plus 2 scoped, a separate declaration. Two semantic-premise/proof gaps and two minor wording defects repaired and independently rechecked with exact nine-replacement recovery. Five bounded whole scientific prose bodies 45887 bytes qualified; formal, partial and historical-review sources retained. No new kernel replay, private-body import, protected-reader adjudication, accepted-edition replacement or owner adoption. Actual GitHub rendering and physical retirement remain separate. The presentation successor changes only paired LaTeX delimiter sizing in one formula; separate independent exact-equivalence review binds the same mathematics, prose, references and incorporation scope. The first native reference-check failure remains preserved; no checker is weakened."
+    },
+    "consolidated-collective-inquiry": {
+      "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
+      "sha256": "f6e3a2b654cfd77d06fabd390981a1f0237effae81cb80d704ff157891273df7",
+      "read_scope": "Complete revised chapter and twenty mathematical results independently checked against eight full public bodies and eight bounded portions from sixteen exact received files. Two real initial defects repaired and affected recheck passed; all 703 original math payloads preserved with seven qualifiers added. Five whole scientific bodies 66105 bytes qualified, plus one 51939-byte constituent whose larger compendium remains retained. Broader works, original manuscript edition, independent reviews and private accepted papers remain separate. No empirical study, new historical replay, deletion, custody or owner-adoption claim."
     }
   },
   "works": [
@@ -22322,6 +22332,54 @@
       ],
       "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
       "explanation": "A directly readable public scholarly treatment containing actual arguments and finite proofs. Exact independent source incorporation qualifies only this edition and its declared bounded populations. Accepted editions and broader partially used works retain their distinct scope; custody, actual removal and owner adoption remain separate."
+    },
+    {
+      "key": "encodings-and-witnesses",
+      "title": "Impredicative Encodings, Typed Identity and Proof Witnesses",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-encodings-and-witnesses"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-encodings-and-witnesses",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A directly readable public scholarly treatment containing actual arguments, proofs, counterexamples and source attribution. Exact independent review qualifies this edition and its stated bounded incorporation population. Accepted editions, formal evidence and broader partially used works retain their separate status. Custody, physical removal and owner adoption remain separate gates."
+    },
+    {
+      "key": "collective-inquiry-and-strategic-coordination",
+      "title": "Collective inquiry: information, strategy and coordinated judgment",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-collective-inquiry"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-collective-inquiry",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A directly readable public scholarly treatment containing actual arguments, proofs, counterexamples and source attribution. Exact independent review qualifies this edition and its stated bounded incorporation population. Accepted editions, formal evidence and broader partially used works retain their separate status. Custody, physical removal and owner adoption remain separate gates."
     }
   ],
   "relations": [

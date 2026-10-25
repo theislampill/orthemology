@@ -32,6 +32,8 @@ These directly readable treatments contain the arguments and proofs reconciled f
 - [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees.
 - [Received actuality, intrinsic necessity, and original source unity](../../foundations/received-actuality-and-intrinsic-necessity.md): productive adequacy, same-bearer necessity, connected-field coverage, explanatory countermodels and centered knowledge.
 - [Recognition, warrant, defeat and restoration](../../epistemology/recognition-warrant-and-restoration.md): basic recognition, local correction, proper function, cumulative grounds, defeat, source authority and exact finite limits of restoration claims.
+- [Impredicative encodings, typed identity and proof witnesses](../../logic/encodings-and-witnesses.md): the dependent source calculus, literal arithmetic compiler, fixed witnesses, closed-term identity decisions, complete models and exact proof boundaries.
+- [Collective inquiry: information, strategy and coordinated judgment](../../mathematics/collective-inquiry-and-strategic-coordination.md): distributed access, scalar and vector games, coordination capacity, temporal progress, causal identification, statistical discrimination and the value of an informative inquiry.
 
 The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
 

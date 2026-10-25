@@ -1,6 +1,6 @@
 # Orthemology
 
-Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated.
+Orthemology is a research programme on the conditions of intelligibility, evaluation and warranted cognition. Its scholarship connects metaphysical arguments about grounding and necessary being, accounts of normativity and cognitive correction, and mathematical studies of information, inquiry, collective judgement and formal proof. Individual works state their assumptions, conclusions and scientific status.
 
 ## Consolidated scholarly works
 
@@ -11,6 +11,8 @@ These complete public expositions contain the arguments and proofs in ordinary M
 | Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. |
 | Received existence, necessary being and original-source unity | [Received actuality, intrinsic necessity, and original source unity](foundations/received-actuality-and-intrinsic-necessity.md): affirmative arguments, complete conditional proofs, connected-field coverage, explanatory countermodels and their limits. |
 | Recognition, knowledge and corrective inquiry | [Recognition, warrant, defeat and restoration](epistemology/recognition-warrant-and-restoration.md): positive cognitive grounds, proper function, cumulative evidence, surviving warrant, and complete finite restoration/identification proofs. |
+| Logical identity, impredicative encodings and formal witnesses | [Impredicative encodings, typed identity and proof witnesses](logic/encodings-and-witnesses.md): the actual dependent calculus, compiler and fixed-witness proofs, closed-term decisions, full model constructions and their exact nonderivability boundaries. |
+| Collective inquiry, strategy and coordination | [Collective inquiry: information, strategy and coordinated judgment](mathematics/collective-inquiry-and-strategic-coordination.md): distributed evidence, vector equilibria, hard constraints, sharp coordination bounds and complete statistical identification and inquiry-value arguments. |
 
 The [independent scientific review and incorporation record](docs/scientific-consolidation-review.md) identifies exact editions, predecessor coverage, corrected failures and remaining removal gates. These are new consolidated expositions; they do not silently amend an accepted paper or confer owner adoption. The sources below remain available during the scientific consolidation.
 
@@ -23,7 +25,7 @@ Start with a paper or a research question. Each link below opens a primary readi
 | Start here | Read | What it investigates |
 |---|---|---|
 | **The main framework** | [Manuscript](manuscript/orthemma-ortheme-systems-revised-draft.md) · [PDF](artifacts/orthemma-ortheme-systems-draft.pdf) | Correctness, evidence and correction in a concrete episode; why a correct answer and an adequate method are different achievements. |
-| **The formal reference** | [Composite PDF](artifacts/orthemic-core-reference-draft.pdf) · [Core](theory/orthemic-core-formalization.md) · [Multi-actor extension](theory/orthemic-multi-actor-conflict-note.md) | The records, verdicts and composition conditions that make the framework precise. |
+| **The formal reference** | [Composite PDF](artifacts/orthemic-core-reference-draft.pdf) · [Core](theory/orthemic-core-formalization.md) · [Collective inquiry](mathematics/collective-inquiry-and-strategic-coordination.md#1-shared-inquiry-and-distributed-access) | The records, verdicts and composition conditions that make the framework precise. |
 | **Information and composition** | [Paper PDF](theory/lineages/h-ics-v5/information-composition-and-self-revision-v5.pdf) · [Catalogue](docs/reader/PAPER-CATALOGUE.md#information-and-composition) | What local observations determine, what they leave unknown, and when a lawful change of access can settle a question. |
 | **Inquiry and retained information** | [Continuation-complete manuscript](theory/lineages/h-continuation/continuation_complete_orthing.md) | Sharp information loss, predictive memory and what a representation must preserve for future inquiries. |
 | **Foundations and intelligibility** | [Manuscript](companion/orthability-and-the-ground-of-intelligibility.md) · [PDF](artifacts/orthability-ground-of-intelligibility-draft.pdf) | A labelled philosophical argument from genuine evaluability, with its substantive premises and later qualifications. |

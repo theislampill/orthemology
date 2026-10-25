@@ -564,7 +564,7 @@
   "baseline_work_population": {
     "count": 448,
     "keys_sha256": "70350e41b3d0273da7020e96ce7e061097989ec76819188bac738f4135f9f800",
-    "scope": "The 448 historical reader work/collection entries remain separately bound. The three new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
+    "scope": "The 448 historical reader work/collection entries remain separately bound. The five new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
   },
   "source_additions": [
     {
@@ -601,14 +601,16 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "ac74d97a3a4db576aac34c6206bd1f96662ce03f",
-      "bytes": 27149,
-      "sha256": "d479946edb6f66ef54375676981ab905941fbcd8a4036283a202483c844820eb",
+      "git_oid": "afac3fa24fa71ce19a07a68021943fbff095a007",
+      "bytes": 38049,
+      "sha256": "a47056fd7830995d60b8b3b2a018e13674659e4605efcea77bed13f189fb1492",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
         "information-retained-by-inquiry",
-        "recognition-warrant-and-restoration"
+        "recognition-warrant-and-restoration",
+        "encodings-and-witnesses",
+        "collective-inquiry-and-strategic-coordination"
       ],
       "supporting_source_keys": []
     },
@@ -622,6 +624,36 @@
       "role": "work-source",
       "work_keys": [
         "recognition-warrant-and-restoration"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-encodings-and-witnesses",
+      "path": "logic/encodings-and-witnesses.md",
+      "mode": "100644",
+      "git_oid": "dcdd71779645cae05f048cbece109d503df7d479",
+      "bytes": 84841,
+      "sha256": "48333def0673977a593c46c19e1cf29b68e7184650da6cd4740633505bb986b2",
+      "role": "work-source",
+      "work_keys": [
+        "encodings-and-witnesses"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-collective-inquiry",
+      "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
+      "mode": "100644",
+      "git_oid": "170ebf83b35a3663fdd5ff68c96ffc7a2701a91d",
+      "bytes": 88263,
+      "sha256": "f6e3a2b654cfd77d06fabd390981a1f0237effae81cb80d704ff157891273df7",
+      "role": "work-source",
+      "work_keys": [
+        "collective-inquiry-and-strategic-coordination"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"
