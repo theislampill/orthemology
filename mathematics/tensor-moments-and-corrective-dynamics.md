@@ -871,7 +871,7 @@ There is a distinct direct proof for quadratic controlled energies that is usefu
 ```math
 B^m-\prod_{j=1}^{m}g_{u_j}
  =\sum_{i=1}^{m}B^{m-i}(B-g_{u_i})
-        \prod_{j<i}g_{u_j}
+        \prod_{j\lt i}g_{u_j}
 ```
 is SOS. Uniform Gaussian factorial bounds therefore imply
 ```math

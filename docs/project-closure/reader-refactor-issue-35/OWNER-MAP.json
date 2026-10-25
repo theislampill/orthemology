@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "e90ca0b95cfcdc5fb120a1e27b05747e4a723c1b",
-      "bytes": 54657,
-      "sha256": "007243aae5aadcd69eeab55ebd8ca67173591bff4fcadace4eeab64c51159f78",
+      "git_oid": "b7d683d47078cc7d2b7b960054e6a879605cf079",
+      "bytes": 55443,
+      "sha256": "73c23a04e474c734fa4a93f4f1c449053b7c04ea05bddf1efda89a26e5e8548f",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -664,9 +664,9 @@
       "key": "consolidated-tensor-moments",
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "mode": "100644",
-      "bytes": 127107,
-      "sha256": "3c64e7dfe18cf1a91e8a72e0c0c5e8d2ec5a030bd0239708592098450f77444f",
-      "git_oid": "a7aff1b5a35b65934f5fae125390290ccea34c80",
+      "bytes": 127110,
+      "sha256": "3f5fe1c9bd0b81fb4a75af1cf2881f6bfe3ce9368e71622b289c230923b11da8",
+      "git_oid": "bb6038518780b72fe305914667dca2438c700acf",
       "role": "work-source",
       "work_keys": [
         "tensor-moments-and-corrective-dynamics"
