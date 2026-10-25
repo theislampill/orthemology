@@ -569,6 +569,164 @@ For ontological scope, a unique role bearer can have proper parts under the decl
 
 The finite mathematics thus supplies exact conditions for preserving the candidate whose philosophical grounds have been separately argued. It does not reconstruct possible worlds from observations or extend finite conjunctions automatically to infinitely many worlds. Standing capacity, an act-kind, an individual act and a created effect remain different types; neither an empty act extension nor a permanent possibility supplies a necessary particular. No premise that every emergent act is created, no automatic inference from a new relation to borrowed perfection, and no actuality-from-possibility principle enters these proofs. In particular, this account of labels and witnesses neither completes the unfinished programme for an n-person noetic field nor replaces its original scientific objective.
 
+### 10.11 Attribute incidence and a common bearer
+
+Coherent transport answers whether local descriptions can retain one selected individual. It does not decide which attributes that individual bears or what an attribute is. Those questions should be separated even before modal transport is considered. The relevant finite incidence arguments can be stated without selecting a theory of properties. They make explicit both the force of a common-bearer conclusion and the information it leaves open. [Attribute incidence and bearer integration][attribute-incidence] [Property interpretation and bearer underdetermination][property-interpretation]
+
+Let $`A`$ be a finite nonempty set of attribute coordinates and $`B`$ a finite nonempty set of eligible bearers at a fixed world, time and respect. Let $`I\subseteq B\times A`$ be the independently interpreted incidence relation. Write
+
+```math
+B_a=\{b\in B:I(b,a)\},\qquad
+L(I)\iff\forall a\in A\ \exists b\in B\ I(b,a),\qquad
+C(I)\iff\exists b\in B\ \forall a\in A\ I(b,a).
+```
+
+The interpretation of $`I`$ must specify whether an entry means actual possession, a standing capacity, a qualified exercise, or merely a functional role. These predicates cannot be substituted for one another because they share a label. Where attribution requires guards, the admitted entry must satisfy those guards in the same interpretation. Neither an incidence matrix nor the following proof supplies that substantive interpretation.
+
+There is a useful intermediate measure. A subset $`S\subseteq B`$ **covers the attributes** when every attribute is borne by at least one member of $`S`$. Define
+
+```math
+\beta(I)=\min\{|S|:S\subseteq B,\ \forall a\in A\ \exists b\in S\ I(b,a)\},
+```
+
+with $`\beta(I)=\infty`$ when there is no cover. This is the minimum number of bearers needed for the represented package; it measures neither causal integration nor the number of substances in reality. [Attribute-bearer cover criterion][attribute-cover]
+
+**Incidence and cover proposition.** Under the stated finite nonempty-domain assumptions,
+
+```math
+L(I)\iff\beta(I)\lt\infty,
+\qquad
+C(I)\iff\bigcap_{a\in A}B_a\ne\varnothing
+       \iff\beta(I)=1.
+```
+
+The number of common bearers is $`\left|\bigcap_{a\in A}B_a\right|`$. Thus existence and uniqueness are different conditions.
+
+**Proof.** A cover supplies an incident bearer for every attribute, so it implies $`L(I)`$. Conversely, if every attribute has a bearer, the finite set $`B`$ itself is a cover. A common bearer belongs to every $`B_a`$ and its singleton covers the attributes. Conversely, a one-member cover has a member incident to every attribute. Because $`A`$ is nonempty, the empty subset cannot cover it; hence a one-member cover makes the minimum exactly one. Finally, common bearers are precisely the members of the displayed intersection, which proves the counting and uniqueness statement. □
+
+The distinctions have small exact controls. With two attributes and $`B_K=\{u\}`$, $`B_W=\{v\}`$, where $`u\ne v`$, local availability holds and $`\beta=2`$, but there is no common bearer. With three attributes and
+
+```math
+B_K=\{u,v\},\qquad B_W=\{v,w\},\qquad B_P=\{u,w\},
+```
+
+each pair of attributes has a common bearer, while the total intersection is empty and $`\beta=2`$. If every attribute instead has bearer set $`\{u,v\}`$, then $`\beta=1`$ but there are two common bearers. If some $`B_a`$ is empty, no cover exists. These are controls for arbitrary incidence systems; no additional geometric or logical intersection principle has been assumed. The nonempty-attribute assumption is material: an empty attribute family has an empty cover of size zero, although every available bearer satisfies its universal condition vacuously. [Attribute incidence, local and pairwise controls][attribute-incidence]
+
+A positive attribution argument can establish more than local availability. Suppose an independently fixed interpreted bearer $`d\in B`$ satisfies every $`\operatorname{Guard}_a(d)`$, and the accepted rules give $`\operatorname{Guard}_a(d)\Rightarrow I(d,a)`$ for each $`a`$. Applying each rule gives every $`I(d,a)`$, and therefore $`C(I)`$ with witness $`d`$. The inference is valid. What the common target supplies is **sameness of subject across the applications**; the guards and rules still supply its attributes. Merely reusing a title or printed name does not establish that sameness. If the applications concern separately introduced $`d_a`$, one needs an identity or common-realization argument before exchanging the quantifiers. [Attribute incidence, fixed-target argument; historical rereview][attribute-incidence] [Bearer-integration rereview][attribute-incidence-review]
+
+### 10.12 Bearer granularity and the information retained by a profile
+
+Once the complete incidence relation and bearer identity are fixed, common-bearer existence is determined. A rival with no common bearer cannot preserve those very data and change $`C(I)`$. This corrects an ambiguity in treating distributed realization as another interpretation of the *same incidence reduct*. Distributed realization can preserve a coarser observation or performance profile while changing incidence. It is not a counterexample to the incidence proposition. [Property interpretation, shared reduct and plural-realization control][property-interpretation]
+
+The distinction is invariant under harmless changes of labels. Suppose $`f:B\to B'`$ is a bijection, the attribute coordinates retain their meanings, and $`I'(f(b),a)\iff I(b,a)`$. Then $`B'_a=f(B_a)`$. A member of every $`B'_a`$ has a unique inverse image belonging to every $`B_a`$, so
+
+```math
+\bigcap_{a\in A}B'_a=f\left(\bigcap_{a\in A}B_a\right).
+```
+
+Consequently common-bearer existence and its exact number are preserved. A subset covers before relabelling exactly when its image covers afterwards, and the bijection preserves its size. Hence $`\beta(I')=\beta(I)`$ as well. This is a change of coordinates within the same incidence interpretation.
+
+A change in granularity is different. Let $`q:B\to C`$ be a surjection assigning fine-grained bearers to system labels. Define the coarse relation by
+
+```math
+J(c,a)\iff\exists b\in B\,[q(b)=c\land I(b,a)].
+```
+
+This relation means that *some bearer assigned to the system has the attribute*. It does not say that the system directly instantiates the original attribute in the original respect.
+
+**Granularity proposition.** If $`S`$ covers $`I`$, then $`q(S)`$ covers $`J`$. Thus $`\beta(J)\le\beta(I)`$, using the extended order with $`\infty`$ greatest. Common-bearer existence can become true under this operation even when it was false before.
+
+**Proof.** For every $`a`$, choose the witness $`b\in S`$ supplied by its cover condition. Then $`J(q(b),a)`$, and $`q(b)\in q(S)`$. Therefore $`q(S)`$ is a cover and has at most $`|S|`$ members. Taking a minimum proves the finite case; the case $`\beta(I)=\infty`$ is immediate from the extended order. For strict change, take three bearers $`b_K,b_W,b_P`$, each bearing exactly its named attribute, and map all three to one system label $`c`$. The fine-grained package has $`\beta(I)=3`$ and no common bearer, whereas all three $`J(c,a)`$ hold and $`\beta(J)=1`$. □
+
+This is precisely a change from $`\exists b\,\forall a\,I(b,a)`$ to the weaker requirement that, for each attribute, some potentially different bearer lies in the chosen system. It can be an appropriate description of a collective. What it cannot do is establish that the collective is the individual required by an argument whose predication remains bearer-local. In particular, coarse relabelling does not identify the three original bearers. Nor can this existential aggregation conjure an entirely uninstantiated attribute: if no fine-grained bearer has $`a`$, then no coarse system has $`a`$ under the displayed definition.
+
+An external profile can omit bearer assignment altogether. Consider three functional modules with binary input $`x`$ and values $`k=x`$, $`w=k`$, $`p=w`$. Observe only the input-output map $`x\mapsto p`$. Assigning all three modules to one bearer and assigning them to three distinct bearers gives the same map, $`p=x`$, and the same module-level transition equations. Under direct role incidence, however, the first assignment has a common bearer and the second has none. This construction proves a limitation of that specified observation map, conditional on admitting both bearer assignments. It does not establish that two concrete physical or metaphysical realizations are possible, or that a functional input register is genuine knowledge. If the observation includes the full bearer-incidence relation, the pair is already distinguished.
+
+Even a common bearer need not make one represented operation guide another. Compare the preceding equations with $`k=x`$, $`w=x`$, $`p=w`$, placing all modules on one bearer in both systems. Their ordinary input-output maps agree, but the second selection reads $`x`$ directly rather than the value of $`k`$. An intervention fixing $`k=1-x`$ while retaining $`x`$ makes the first output $`1-x`$ and the second $`x`$. Thus a suitable additional causal test distinguishes this particular pair, whereas additional unperturbed trials do not. This is an elementary specified mechanism, not an experiment already performed, a general consciousness test, or a sufficient analysis of acting for an apprehended reason. It identifies the extra causal information that mere possession and ordinary success can omit. The stronger practical comparison remains the one developed in section 12.4.
+
+### 10.13 Connected attribute arguments and numerical co-reference
+
+A connected argument can link different attribute roles without identifying their bearers. Conversely, co-instantiation can hold without a derivation connecting the attributes. To state this precisely, let $`V`$ be a finite nonempty set of role coordinates and $`\mathcal H`$ a family of nonempty dependency supports, each a subset of $`V`$. Join two distinct coordinates when some support contains both. The resulting undirected graph records which roles participate together in the selected dependencies; it does not by itself record the variables or individuals appearing in the complete propositions. [Source-derivation integration, connectedness and bearer semantics][source-incidence]
+
+**Connected-support proposition.** This graph is connected if and only if every partition of $`V`$ into at least two nonempty blocks has a support meeting more than one block.
+
+**Proof.** If the graph is connected, choose vertices in different blocks and a path between them. Some consecutive pair lies in different blocks. A support containing that pair crosses the partition. Conversely, if the graph is disconnected, take its connected components as blocks. Any support with vertices in different components would itself connect them, so no support crosses this nontrivial partition. □
+
+That theorem concerns the selected representation. It neither establishes a unique representation of a source nor proves that the dependencies are true. A graph mixing attributes, actions and methodological eligibility conditions must keep those sorts distinct; a guard is not another bearer merely because it is a node. The received source analysis required precisely this correction, together with separation of textual co-reference from worldly identity. [Source-incidence correction, scope and node sorts][source-incidence-correction]
+
+The numerical limit needs an actual model construction. Use one bearer variable $`x_v`$ and unary role predicate $`P_v`$ for each role $`v`$. For every ordered support $`h=(v_1,\ldots,v_m)`$, add a relation $`T_h`$ of the corresponding arity. Consider only the weak relational assertion
+
+```math
+\exists (x_v)_{v\in V}\left[
+\bigwedge_{v\in V}P_v(x_v)\ \land
+\bigwedge_{h=(v_1,\ldots,v_m)\in\mathcal H}
+T_h(x_{v_1},\ldots,x_{v_m})\right],
+```
+
+where the finite tuple of quantifiers ranges over the bearer domain. No further axioms of these relation symbols are imposed. If a selected representation also contains method guards, hold their separately typed values true; do not turn them into bearer variables.
+
+**Bearer-partition construction.** Every partition $`\Pi`$ of the role set has a model of this weak assertion whose role-bearing individuals are exactly the blocks of $`\Pi`$.
+
+**Proof.** Let the bearer domain be the set of blocks and write $`[v]`$ for the block containing $`v`$. Set $`P_v=\{[v]\}`$. Interpret $`T_h`$ as the singleton containing the tuple $`([v_1],\ldots,[v_m])`$. Assign $`x_v=[v]`$. Every unary conjunct and every relational conjunct is then true. The registered support family is unchanged. Its graph can therefore be connected while the partition is discrete and the role bearers are all distinct. If the partition has more than one block, no individual belongs to every $`P_v`$; if it has one block, its member bears them all. □
+
+The hypothesis is deliberately exact. **Absence of an equality symbol is not enough** to license this construction for an arbitrary theory. The equality-free sentence $`\exists x\,(P(x)\land Q(x))`$ already requires a common bearer through its one variable. Likewise, $`\exists x\,P(x)`$ together with $`\forall x\,(P(x)\Rightarrow Q(x))`$ supplies one. Fixed relation interpretations, functional constraints, typing conditions or other premises can also prevent arbitrary bearer assignments. The construction applies when the stated weak relational expansions are actually admissible. A role graph that has forgotten the variable bindings of a richer source cannot establish that the richer source permits those expansions.
+
+For the converse separation, take one bearer $`g`$, make every role predicate true of it, and register no cross-role dependencies. Common incidence holds, although a role graph with at least two vertices is disconnected. Adding all the selected dependencies can give a connected, common-bearer description; the two facts still have different premises. A source with genuine cross-role arguments is consequently richer than a flat list of labels, without connectedness doing the additional work of an identity proof.
+
+Textual co-reference can supply that identity premise **within an accepted source interpretation**. If a correctly reconstructed proposition attributes the relevant roles to one referent, a realization denying the co-reference fails that proposition. This is a legitimate restriction of the model class, conditional on the proposition and its applicability. It is not a derivation of its truth from graph topology. The source analysis also separates the creed's propositions, the commentator's endorsement or correction, translation adequacy and external application. Its particular criticism of an argument from shared necessary-existence predication does not refute every unity argument. The generic-versus-numerical distinction already established in section 2 remains in force. [Source-derivation integration and its corrections][source-incidence] [Source-incidence correction][source-incidence-correction]
+
+### 10.14 Property interpretation beyond incidence
+
+Fix an incidence structure $`R=(B,A,I)`$. An **interpretation expansion** retains this structure while adding whatever objects, relations and semantic commitments a proposed account of attributes requires. Its data should state the truth conditions of predication, bearer identity, causal and modal commitments, and any relevant source or function premises. Merely naming an expansion “realist,” “conceptualist” or “powers-based” does not establish those commitments or their coherence. [Property interpretation, interpretation profiles][property-interpretation]
+
+Some elementary expansions illustrate what the reduct omits. A predicate-only presentation uses unary predicates $`P_a(b)\iff I(b,a)`$ and adds no attribute objects. An object presentation adds a separate sort $`U=\{u_a:a\in A\}`$ and stipulates $`\operatorname{Inst}(b,u_a)\iff I(b,a)`$. A particularized-quality presentation instead adds the tokens
+
+```math
+T=\{(b,a):I(b,a)\},
+```
+
+with bearer map $`\operatorname{bearer}(b,a)=b`$ and kind map $`\operatorname{kind}(b,a)=a`$. A bearer has an $`a`$-token exactly when $`I(b,a)`$; tokens of the same kind can be related by the stipulated resemblance relation. For example, if two bearers have one shared role, the object presentation has one role object instantiated twice, whereas the particularized presentation has two tokens with different bearers. Both recover the same incidence facts. In each case the verification is immediate from the defining equivalence, and the common-bearer set remains $`\bigcap_aB_a`$.
+
+These are explicit limited presentations, not proofs of a complete metaphysical theory of universals or tropes. Reifying a predicate symbol does not establish a universal's reality; indexing a pair does not establish a concrete quality. Nor does reproducing finite resemblance judgments establish identity of all intensional, causal or modal facts. The constructions show exactly why the incidence table alone fails to adjudicate those additional commitments when the proposed class admits the different expansions.
+
+A scheme-indexed presentation can similarly use a relation $`\operatorname{Class}(s,b,a)`$ with $`\operatorname{Class}(s_0,b,a)\iff I(b,a)`$ at the recorded scheme $`s_0`$. The recorded table need not determine its extension at other schemes, or settle whether the classification depends constitutively on an intellect. Conversely, if the admitted interpretation independently requires scheme-independent truth, an expansion violating that requirement is excluded; it cannot be reintroduced by pointing only to agreement at $`s_0`$. Powers and pattern interpretations likewise require independently specified manifestation, causal or pattern structure. A bare finite table does not establish dispositional essence, sparse naturalness or explanatory compressibility. These qualifications preserve the rivals as questions requiring substantive comparison, without certifying every named theory as a realization of every table.
+
+Likewise, the occurrence of every attribute on one bearer leaves open whether that co-instantiation is primitive or grounded, whether the bearer is concrete or abstract under the intended semantics, and whether a further source predicate applies to it. A connected syntactic derivation is not already a metaphysical grounding relation. The same incidence structure can support incompatible additional assignments to these omitted coordinates only when the admitted class genuinely permits those assignments; the table alone supplies neither their truth nor their possibility. The concrete-resource and original-source arguments earlier in this chapter therefore retain their own interpretation premises.
+
+The general identification condition is elementary but useful. Let $`\mathcal M`$ be the admitted class of interpreted models, let $`\pi:\mathcal M\to\mathcal P`$ be the registered information profile, and let $`\tau:\mathcal M\to Q`$ be the particular conclusion to be identified. The profile may include incidence, specified responses to interventions, and other independently interpreted data. Identification means there is a function $`f:\pi(\mathcal M)\to Q`$ with $`\tau=f\circ\pi`$.
+
+**Profile criterion.** Such a function exists if and only if every two admitted models with the same profile have the same target value.
+
+**Proof.** A factorization gives $`\tau(M)=f(\pi(M))=f(\pi(N))=\tau(N)`$ whenever the profiles agree. Conversely, assign to each realized profile the common target value of its models. The assumed agreement makes this assignment well-defined and gives the required factorization. The empty admitted class has an empty realized profile and supplies no actual model or conclusion. □
+
+In particular, two genuinely admitted expansions with the same recorded incidence and responses but different ontology conclusions obstruct identification by that profile. Merely placing opposite labels on two tuples does not establish their admission as complete metaphysical theories. The result is conditional on their actual interpretation and on every imposed constraint. This is an application of the profile criterion already used in the normativity and recognition treatments, with no new mathematical novelty claimed. [Property interpretation, bounded underdetermination conclusion][property-interpretation]
+
+If additional observations have values determined by $`\pi`$ alone, equal-profile models still agree on them: composing each observation function with the same profile gives the same answer. Further instances of an invariant kind of measurement therefore cannot separate that pair. An added intervention or semantic premise can change the situation by distinguishing the pair, or by independently excluding one member from the admitted class. It need not separate every other pair. The module intervention in section 10.12 provides one explicit example of the former possibility; an independently warranted same-subject proposition provides an example of the latter for bearer incidence.
+
+The ontology of attributes and mind-body reduction ask different questions. The first concerns what, if anything, attributes are; the second concerns whether the relevant mental attributes reduce to physical ones. A thin incidence signature containing neither a reduction relation nor constraints on it cannot settle that second question. Adding either truth value for a free reduction claim while keeping its incidence reduct fixed demonstrates formal independence at that thin scope. It does not show that every fully developed theory of properties admits both reductions or their denials. Likewise, a stance on mental irreducibility does not, by itself, choose between the object and particularized-quality presentations. The missing work is the account's actual reduction and ontology commitments. [Property interpretation, distinct axes and reduction control][property-interpretation]
+
+Function fixation is another distinct question. A specified causal contribution, selected history, design relation or source-relative normative purpose must have its own content and warrant. Even when one of those relations fixes a function, no bare incidence theorem decides whether its bearer has universals, tropes or powers. Defining the function-fixing relation so that only a favored ontology can satisfy it would assume the proposed conclusion unless the restrictive definition has independent justification. The affirmative function arguments and their negative controls are developed in the normativity work; this observation neither replaces them nor reopens their already qualified results. A source-relative account of an intrinsic disposition likewise needs a separate property interpretation if that is the question being asked. [Property interpretation, function and ontology][property-interpretation]
+
+### 10.15 Guarded attribution and the scope of the result
+
+The received attribute study places its source-based inference under six conditions: intrinsic excellence; deficiency of total absence in the relevant respect; removal of essential creaturely limitation; the relevant source relation; attribution to the bearer rather than a mere conduit; and attribution without equating the source's mode with the creature's. Those are stated premises of a school-relative a-fortiori argument. The fixed-target proof in section 10.11 explains how several such valid applications can converge on one subject, while locating their common reference separately from the local eligibility conditions. It gives no warrant to omit a guard merely because an attribute is observed in a creature. [Attribute incidence and its source-ancestry note][attribute-incidence] [Source-relative bearer attribution][attribute-source-note]
+
+A bearer-local predication rule can exclude transferring an attribute to a conduit while leaving the general ontology of that attribute open. Predicate truth can be restricted to the qualified locus, a particularized quality to its bearer, or instantiation to the relevant individual. These presentations can agree on the local prohibition. Their agreement does not authenticate every additional ontology or remove an ontology-specific source constraint. The source claim is used at the public study's declared translated-source scope; the present argument does not claim fresh receipt or authentication of its exact translation, Arabic text or wider apparatus. The ordinary incidence proofs above require none of those unavailable primary bytes. [Property interpretation, attribute-locus rule][property-interpretation] [Source-relative bearer attribution][attribute-source-note]
+
+Nor does one bearer of knowledge, volition, power and life supply every later conclusion about speech. Speech capacity and actual speech remain different; actual speech and a praiseworthy qualification remain different; capacity does not itself authorize a divine name; an occurrence does not identify a revelation; and a created expression does not establish the source-relative predication of uncreated content. Each step needs the corresponding occurrence, normative, naming, semantic or source premise. Formal articulability or command-response behavior alone supplies none of those theological identifications. These are limits on the stated premises, not a denial of a fuller source argument that supplies the missing premises. [Attribute incidence, speech distinctions][attribute-incidence]
+
+The same allocation applies to the other kinds of unity. A common incidence bearer does not by itself have to be mereologically simple, necessarily retain its attributes, or satisfy the identity and existence conditions across worlds. Sections 10.5–10.10 already give the exact transport conditions and counterexamples. Causal integration requires more than common incidence, and informed agency requires more than a causal connection carrying arbitrary signals. Section 12.4 supplies the separate positive argument about understanding and owning a fitting reason. Neither the new finite examples nor a general powers label settles that argument.
+
+The positive conclusions are therefore exact. A sound fixed-subject attribution gives a common bearer; complete incidence determines whether one exists; an independently justified co-reference premise can exclude distributed assignments; and a suitable causal intervention can distinguish mechanisms which ordinary performance leaves together. A substantive property theory can also restrict the admissible expansions through warranted constitutive, causal, modal or source commitments. Its restrictions must be assessed as arguments, rather than treated as consequences of an impoverished profile.
+
+These limits do not retract the affirmative source-unity judgment in sections 9–10.4. That judgment uses actual original production, the nominated received field, fitting original efficacy, mediation and nonduplication. Those premises contain more than local role availability or external response equality. A control satisfying only the weaker incidence or role-graph conditions is not a countermodel to that stronger argument. Conversely, the stronger argument should identify the independently warranted interpretation and premise that excludes a proposed rival. The present results make that comparison more precise: they show what the weak representation proves, what it erases, and where additional evidence or argument can change the conclusion.
+
+#### Source and edition note for these subsections
+
+The property-interpretation report and the corrected attribute-incidence treatment are public proposal sources. The bearer-cover statement is received in a later semantic reissue whose original ephemeral packet and per-result review files were lost; the subsequent intake retains a bounded qualification gap. The present text supplies the elementary proofs directly. It does not recover that missing evidence, turn a historical summary into independent verification, or grant adoption to the proposal. The source-derivation report contributes the connected-support and bearer-assignment distinction at the corrected scope stated here; its broader source graph and source-authentication obligations remain separately retained. [Bearer-cover reissue][attribute-cover] [Independent intake and evidence limits][attribute-cover-intake]
+
+The exact source identities and complete-versus-partial incorporation claims belong in the accompanying verification evidence. None of these subsections changes an accepted paper, authenticates a private manuscript, or completes the unfinished original n-person-field objective.
+
 ## 11. What a complete explanatory fact does—and does not—establish
 
 Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
@@ -896,3 +1054,12 @@ Subsections 2.1 and 12.4 add the public causal-background and particular-agency 
 [coecke-bases]: https://arxiv.org/abs/0810.0812
 [dasgupta-individuals]: https://shamik.net/papers/dasgupta%20individuals.pdf
 [dasgupta-bare-necessities]: https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf
+
+[attribute-incidence]: https://api.github.com/repos/theislampill/orthemology/git/blobs/338c4809ab1f33db070c3a7a5a97335227dede73
+[property-interpretation]: https://api.github.com/repos/theislampill/orthemology/git/blobs/664af108889e5acd76a10f069ddce2e4538f3abd
+[attribute-cover]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e779c6a7c06f68025ad6f7a4e65e1f504e113317
+[source-incidence]: https://api.github.com/repos/theislampill/orthemology/git/blobs/3532d8647279ab6bedddcccd6c787025bfe7a0f0
+[source-incidence-correction]: https://api.github.com/repos/theislampill/orthemology/git/blobs/029ad98cdb592f8fa2351f7fe49a7d5018f08793
+[attribute-cover-intake]: https://api.github.com/repos/theislampill/orthemology/git/blobs/cf6ea86bfb942cd052c6c630120576e214420483
+[attribute-incidence-review]: https://api.github.com/repos/theislampill/orthemology/git/blobs/e26f0769592e365759ccdf811d7255015570327e
+[attribute-source-note]: https://api.github.com/repos/theislampill/orthemology/git/blobs/7e77724b867d234cd9f71dfa1bafe91b0fcd1b74
