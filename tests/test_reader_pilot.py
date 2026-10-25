@@ -194,7 +194,8 @@ class ReaderPilotTests(unittest.TestCase):
 
     def test_scholarly_display_maintenance_keeps_a_finite_source_boundary(self):
         for directory, name in (("scripts", "validate_math_source.py"),
-                                ("tests", "test_math_source_validator.py")):
+                                ("tests", "test_math_source_validator.py"),
+                                ("docs/project-closure/r7e-sol", "R7E-SOL-ADVERSARIAL-REPORT.md")):
             path = self.repo / directory / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text("# Synthetic maintenance owner, not a scientific source.\n")
@@ -204,6 +205,16 @@ class ReaderPilotTests(unittest.TestCase):
         unexpected.write_text("# Synthetic unadmitted research software.\n")
         self.git("add", "--", str(unexpected.relative_to(self.repo)))
         self.reject(self.check(), "corpus-currentness")
+        self.git("reset", "--", str(unexpected.relative_to(self.repo)))
+        unexpected.unlink()
+        self.assertEqual(self.check(), [])
+        neighboring = self.repo / "docs" / "project-closure" / "r7e-sol" / "UNREGISTERED-REPORT.md"
+        neighboring.write_text("# Synthetic unadmitted neighboring report.\n")
+        self.git("add", "--", str(neighboring.relative_to(self.repo)))
+        self.reject(self.check(), "corpus-currentness")
+        self.git("reset", "--", str(neighboring.relative_to(self.repo)))
+        neighboring.unlink()
+        self.assertEqual(self.check(), [])
 
     def test_unknown_file_inside_reader_directory_is_not_a_blanket_exemption(self):
         path = self.repo / "docs" / "reader" / "unregistered-paper.tex"

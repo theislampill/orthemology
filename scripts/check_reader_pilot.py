@@ -420,6 +420,7 @@ REFACTOR_EDIT_PATHS = {
     # Existing source-display integrity owner and its focused regression tests;
     # scholarly bodies still require their exact source/work/review admission.
     "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
+    "docs/project-closure/r7e-sol/R7E-SOL-ADVERSARIAL-REPORT.md",
     "docs/current-state.yaml", "docs/provenance/RELEASE-MANIFEST.sha256",
     "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
     "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",
