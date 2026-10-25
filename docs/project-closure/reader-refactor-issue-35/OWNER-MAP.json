@@ -586,9 +586,9 @@
       "key": "consolidated-information-and-inquiry",
       "path": "mathematics/information-and-inquiry.md",
       "mode": "100644",
-      "git_oid": "37356a3146cc1707c9e4f522fa364422d9b755e5",
-      "bytes": 80684,
-      "sha256": "d89e2b9c72b3af105448ad21e6f9d1111a0e3ad96b63a22990ff2f1e0bc77bca",
+      "git_oid": "3f485b058a43aa1e5cb40ed9ee699218d83d54df",
+      "bytes": 81009,
+      "sha256": "4240bd2814d7b6812949dbe5414cfbbb917825d61a6c3e09338e2f4c5f52ed6f",
       "role": "work-source",
       "work_keys": [
         "information-retained-by-inquiry"
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "b7d683d47078cc7d2b7b960054e6a879605cf079",
-      "bytes": 55443,
-      "sha256": "73c23a04e474c734fa4a93f4f1c449053b7c04ea05bddf1efda89a26e5e8548f",
+      "git_oid": "b6663f9601078f0c47b6009fdb0a2df78945fc2c",
+      "bytes": 65593,
+      "sha256": "434bd079b2fff7948f6066f960099a1a56ad3786ad89d8a121ff044fdf5e0cf5",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -611,7 +611,8 @@
         "recognition-warrant-and-restoration",
         "encodings-and-witnesses",
         "collective-inquiry-and-strategic-coordination",
-        "tensor-moments-and-corrective-dynamics"
+        "tensor-moments-and-corrective-dynamics",
+        "common-repair-and-geometric-obstructions"
       ],
       "supporting_source_keys": []
     },
@@ -664,12 +665,27 @@
       "key": "consolidated-tensor-moments",
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
       "mode": "100644",
-      "bytes": 127110,
-      "sha256": "3f5fe1c9bd0b81fb4a75af1cf2881f6bfe3ce9368e71622b289c230923b11da8",
-      "git_oid": "bb6038518780b72fe305914667dca2438c700acf",
+      "bytes": 127838,
+      "sha256": "058d103978521831500c7087301a3cb1977d154f0a031776e6b89e6e336c134c",
+      "git_oid": "3e6cf017a57cfe1e4c0a9cafaf58065fcef16cc0",
       "role": "work-source",
       "work_keys": [
         "tensor-moments-and-corrective-dynamics"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-common-repair",
+      "path": "mathematics/common-repair-and-geometric-obstructions.md",
+      "mode": "100644",
+      "bytes": 85909,
+      "sha256": "ddee6a298cd1b071aefaeccd5dd8f3f0c800bd202e8cb443c0d6d127dfabffbe",
+      "git_oid": "677f24996bcf193bb9843e0f95f4b64a13eb747c",
+      "role": "work-source",
+      "work_keys": [
+        "common-repair-and-geometric-obstructions"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"

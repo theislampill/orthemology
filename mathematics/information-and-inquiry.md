@@ -40,7 +40,7 @@ Its conditional probability and posterior target law are
 
 ```math
 \Pr_x(w)=\frac{uM_wx}{ux},\qquad
-q_w(x)=\frac{CM_wx}{uM_wx}\quad\text{if }uM_wx>0.               \tag{1}
+q_w(x)=\frac{CM_wx}{uM_wx}\quad\text{if }uM_wx>0.               \quad\text{(1)}\quad
 ```
 
 At zero denominator the observation is impossible: no posterior is invented. Nonnegativity implies $`uM_wx=0\Rightarrow M_wx=0`$.
@@ -53,13 +53,13 @@ Define
 
 ```math
 W_0=\mathrm{span}(\{u\}\cup\mathrm{rows}\,C),\qquad
-W_{h+1}=W_h+\sum_aW_hM_a.                                    \tag{2}
+W_{h+1}=W_h+\sum_aW_hM_a.                                    \quad\text{(2)}\quad
 ```
 
 **Theorem 1 — Exact predictive reduction.** The sequence stabilizes at the least invariant row space $`W`$ containing $`W_0`$. For a full-row-rank basis matrix $`B`$ of $`W`$, there are unique matrices and coefficients satisfying
 
 ```math
-BM_a=T_aB,\qquad u=\nu B,\qquad C=LB.                         \tag{3}
+BM_a=T_aB,\qquad u=\nu B,\qquad C=LB.                         \quad\text{(3)}\quad
 ```
 
 For normalized $`x,y`$, equality $`Bx=By`$ is equivalent to equality of every future word probability and every feasible-word target posterior. The reduced state $`z=Bx`$ has admissible cone
@@ -71,7 +71,7 @@ K=B\mathbb R_+^n=\mathrm{cone}\{Be_i\}
 and, on the normalized slice $`\nu z=1`$, exact update
 
 ```math
-z\longmapsto\frac{T_az}{\nu T_az}\quad\text{if }\nu T_az>0.    \tag{4}
+z\longmapsto\frac{T_az}{\nu T_az}\quad\text{if }\nu T_az>0.    \quad\text{(4)}\quad
 ```
 
 **Proof.** Induction shows that $`W_h`$ is the span of $`uM_w`$ and $`cM_w`$ for words of length at most $`h`$ and rows $`c`$ of $`C`$. Every strict inclusion increases dimension, giving at most $`n-\dim W_0`$ strict increases. Equality at one stage gives invariance, so later growth is impossible. Every invariant space containing $`W_0`$ contains the entire sequence. Invariance and full row rank give (3).
@@ -114,7 +114,7 @@ On the known-bad slice, in the order $`(\Theta,D)=(0,0),(0,1),(1,0),(1,1)`$, the
 
 ```math
 \pi_0=(2/5,1/10,1/10,2/5),\qquad
-\pi_1=(1/10,2/5,2/5,1/10).                                   \tag{5}
+\pi_1=(1/10,2/5,2/5,1/10).                                   \quad\text{(5)}\quad
 ```
 
 Both target and audit marginals are uniform. Nevertheless $`D=1`$ gives target-one posterior $`4/5`$ or $`1/5`$. The missing datum is a joint numerator, not an audit marginal.
@@ -122,7 +122,7 @@ Both target and audit marginals are uniform. Nevertheless $`D=1`$ gives target-o
 Use the moments of $`1,\tau,\delta,\tau\delta`$, with $`\tau=(-1)^\Theta`$ and $`\delta=(-1)^D`$. Write them $`(m,t,d,h)`$. Multiplying by the projector $`(1+s\delta)/2`$, $`s=(-1)^b`$, yields
 
 ```math
-m'=(m+sd)/2,\quad t'=(t+sh)/2,\quad d'=sm',\quad h'=st'.       \tag{6}
+m'=(m+sd)/2,\quad t'=(t+sh)/2,\quad d'=sm',\quad h'=st'.       \quad\text{(6)}\quad
 ```
 
 When $`m'>0`$, the target-one posterior is $`(1-t'/m')/2`$. The vector $`(1,0,0,2)`$, despite plausible separate marginals, reconstructs signed masses $`(3/4,-1/4,-1/4,3/4)`$ and can yield a negative posterior. It is excluded by the admissible cone.
@@ -142,7 +142,7 @@ The instruments differ. Also, rank four for arbitrary laws on $`(\Theta,D)`$ doe
 The known-bad model has a general form. Let $`\Theta,Y`$ be independent fair bits, and let the verifier satisfy $`\Pr(V=\Theta\mid\Theta,Y)=\alpha\in(0,1)`$. Thus its error is conditionally independent of the report given the target. Put $`D=Y\mathbin{\mathsf{xor}}V`$ and $`\rho=2\alpha-1`$. Then
 
 ```math
-\Pr(\Theta=t,Y=y,D=d)=\frac{1+\rho(-1)^{t+y+d}}8.              \tag{24}
+\Pr(\Theta=t,Y=y,D=d)=\frac{1+\rho(-1)^{t+y+d}}8.              \quad\text{(24)}\quad
 ```
 
 Summing any index eliminates the signed term, so every one-variable and two-variable marginal is uniform. Yet
@@ -174,7 +174,7 @@ $`0<\epsilon<\min_\theta p(\theta)/q(\theta)`$, define
 
 ```math
 P_\epsilon(\theta,1)=\epsilon q(\theta),\qquad
-P_\epsilon(\theta,0)=p(\theta)-\epsilon q(\theta).             \tag{25}
+P_\epsilon(\theta,0)=p(\theta)-\epsilon q(\theta).             \quad\text{(25)}\quad
 ```
 
 Every cell is positive, the target marginal remains exactly $`p`$, and
@@ -207,7 +207,7 @@ Let $`U`$ be the least row space containing the $`d_c`$ and invariant under righ
 **Theorem 2 — Posterior comparison.** Live nonnegative $`x,y`$ are posterior-equivalent exactly when their feasible-word languages agree and
 
 ```math
-v(x\otimes y)=0\quad\text{for every }v\in U.                  \tag{7}
+v(x\otimes y)=0\quad\text{for every }v\in U.                  \quad\text{(7)}\quad
 ```
 
 **Proof.** On a common feasible word, posterior equality is equivalent to
@@ -243,7 +243,7 @@ Q=[p_1\ \cdots\ p_k],\qquad q=Qw.
 The posterior-only signature is
 
 ```math
-F(w,P)=(p_1,\ldots,p_k,q).                                    \tag{8}
+F(w,P)=(p_1,\ldots,p_k,q).                                    \quad\text{(8)}\quad
 ```
 
 The empty word returns $`q`$; a nonempty constant audit word returns its $`p_j`$; a word with distinct audit labels is impossible. Thus (8), together with feasibility, gives all future posterior answers for this fixed-audit repertoire.
@@ -251,7 +251,7 @@ The empty word returns $`q`$; a nonempty constant audit word returns its $`p_j`$
 At fixed $`P,q`$, the hidden weights form
 
 ```math
-W_{P,q}=\{w>0:Qw=q\}.                                        \tag{9}
+W_{P,q}=\{w>0:Qw=q\}.                                        \quad\text{(9)}\quad
 ```
 
 Assume this set is nonempty and $`q`$ is normalized. Column stochasticity already implies $`\sum_jw_j=1`$. Every difference of representatives lies in $`\ker Q`$; conversely, for $`w^0\in W_{P,q}`$ and $`v\in\ker Q`$, the vectors $`w^0\pm\epsilon v`$ remain in the fibre for sufficiently small $`\epsilon>0`$.
@@ -267,7 +267,7 @@ For two feasible outcomes, distinct posterior columns determine the audit weight
 For a Bayes-risk function $`H`$, finite at the relevant laws, set $`h_j=H(p_j)`$. Expected improvement is
 
 ```math
-H(q)-\sum_jw_jH(p_j).                                        \tag{10}
+H(q)-\sum_jw_jH(p_j).                                        \quad\text{(10)}\quad
 ```
 
 A constant audit cost subtracts a constant. Outcome-dependent costs introduce their own expectation vector. On a restricted reachable family, use the span of actual admissible weight differences instead of the full $`\ker Q`$. On a boundary face, restrict to active support when the relative fibre has a positive point. These qualifications prevent a sufficient whole-fibre criterion from becoming a false necessity on smaller domains. [3]
@@ -329,7 +329,7 @@ Expanding $`d\mu_{ji}=p_{ji}\,dw_j+w_j\,dp_{ji}`$, with $`\sum_i dp_{ji}=0`$, gi
 ```math
 g((\delta w,\delta P),(\eta w,\eta P))
 =\sum_j\frac{\delta w_j\eta w_j}{w_j}
-+\sum_jw_j\sum_i\frac{\delta p_{ji}\eta p_{ji}}{p_{ji}}.       \tag{11}
++\sum_jw_j\sum_i\frac{\delta p_{ji}\eta p_{ji}}{p_{ji}}.       \quad\text{(11)}\quad
 ```
 
 The cross terms vanish. Since
@@ -343,7 +343,7 @@ and the inverse simplex Fisher operator is $`C(p)`$, negative gradient descent i
 
 ```math
 \dot w_j=-w_j\langle h,p_j-q\rangle,\qquad
-\dot p_j=-C(p_j)h-\frac{a_j}{w_j}.                            \tag{12}
+\dot p_j=-C(p_j)h-\frac{a_j}{w_j}.                            \quad\text{(12)}\quad
 ```
 
 The covariance decomposition
@@ -356,7 +356,7 @@ then yields
 
 ```math
 \dot q=-C(q)h-\sum_ja_j,\qquad
-\dot\mu_{ji}=-\mu_{ji}(h_i-\langle q,h\rangle)-a_{ji}.          \tag{13}
+\dot\mu_{ji}=-\mu_{ji}(h_i-\langle q,h\rangle)-a_{ji}.          \quad\text{(13)}\quad
 ```
 
 The objective decreases:
@@ -365,7 +365,7 @@ The objective decreases:
 \dot E=
 -\sum_jw_j\langle h,p_j-q\rangle^2
 -\sum_j\frac{(J_j+w_jh)^\mathsf TC(p_j)(J_j+w_jh)}{w_j}
-\leq0.                                                       \tag{14}
+\leq0.                                                       \quad\text{(14)}\quad
 ```
 
 For positive $`p`$,
@@ -386,7 +386,7 @@ An index $`j`$ is **variable** at $`(P,q)`$ if some two weights in (9) differ in
 \exists v\in\ker Q:\ v_j\ne0
 \quad\Longleftrightarrow\quad
 \mathrm{rank}(Q\text{ with column }j\text{ deleted})
-=\mathrm{rank}\,Q.                                      \tag{15}
+=\mathrm{rank}\,Q.                                      \quad\text{(15)}\quad
 ```
 
 Indeed a kernel vector with nonzero $`j`$-component expresses column $`j`$ as a linear combination of the others, and conversely. Small positive kernel perturbations establish the fibre equivalence.
@@ -394,7 +394,7 @@ Indeed a kernel vector with nonzero $`j`$-component expresses column $`j`$ as a 
 **Theorem 4 — Pointwise Fisher descent.** The full projected velocity $`(\dot P,\dot q)`$ is independent of the representative $`w\in W_{P,q}`$ exactly when
 
 ```math
-C(p_j)J_j=0\quad\text{for every variable index }j.            \tag{16}
+C(p_j)J_j=0\quad\text{for every variable index }j.            \quad\text{(16)}\quad
 ```
 
 **Proof.** Equation (13) for $`\dot q`$ has no weight dependence. In each separately retained conditional slot in (12), the only such dependence is $`a_j/w_j`$. If $`w_j`$ varies, equality forces $`a_j=0`$; if it is fixed, its denominator is already determined. No cancellation between different conditional slots is possible. $`\square`$
@@ -432,7 +432,7 @@ Writing $`V`$ for the source field, (13) now gives
 
 ```math
 \sum_j(\lambda_j-1)V_{ji}(z)=0,\qquad
-V(T_\lambda z)=T_\lambda V(z).                               \tag{17}
+V(T_\lambda z)=T_\lambda V(z).                               \quad\text{(17)}\quad
 ```
 
 The first equality follows because both its $`z`$-term and its $`a_j`$-term vanish. Thus the field is tangent to the affine slice. Restriction to that embedded submanifold and source uniqueness make the slice invariant for the entire maximal trajectory; it is relatively closed and has no additional boundary within the positive source domain.
@@ -486,7 +486,7 @@ For $`E=\phi(q)`$, equations (12)–(13) reduce to
 
 ```math
 \dot w_j=-w_j\langle h(q),p_j-q\rangle,\qquad
-\dot p_j=-C(p_j)h(q),\qquad \dot q=-C(q)h(q).                  \tag{18}
+\dot p_j=-C(p_j)h(q),\qquad \dot q=-C(q)h(q).                  \quad\text{(18)}\quad
 ```
 
 Unlike a merely set-theoretic projected field, the $`(P,q)`$ equations are $`C^1`$ on all of $`A`$ when $`\phi`$ is $`C^2`$.
@@ -503,7 +503,7 @@ Tilting the joint law by its target coordinate gives
 ```math
 \mu'_{ji}=\frac{\ell_i\mu_{ji}}{Z_q(\ell)},\quad
 p'_j=L_\ell(p_j),\quad q'=L_\ell(q),\quad
-w'_j=\frac{w_jZ_{p_j}(\ell)}{Z_q(\ell)}.                      \tag{19}
+w'_j=\frac{w_jZ_{p_j}(\ell)}{Z_q(\ell)}.                      \quad\text{(19)}\quad
 ```
 
 Thus the signature update needs only $`P,q`$. Composition multiplies tilt vectors coordinatewise; reciprocal tilts invert the operation, and a common positive scalar is irrelevant. Rank and the set of variable indices are unchanged because $`Q'`$ is obtained by invertible diagonal row and column scalings.
@@ -587,7 +587,7 @@ The first conditional velocity is $`(-3/4,3/4)`$ at $`w`$ and $`(-3/2,3/2)`$ at 
 For a general linear readout there is a useful separate criterion. Let $`U_0\subseteq\mathbb R^n`$ be open, $`L:\mathbb R^n\to\mathbb R^m`$ have full row rank, and $`G(x)`$ be a smooth positive-definite metric. For every smooth objective $`j(Lx)`$, the projected negative gradient is
 
 ```math
--LG(x)^{-1}L^\mathsf T\nabla j(Lx).                           \tag{20}
+-LG(x)^{-1}L^\mathsf T\nabla j(Lx).                           \quad\text{(20)}\quad
 ```
 
 It depends only on $`Lx`$, for every such objective, if and only if the cometric
@@ -615,7 +615,7 @@ The necessity quantifies over all objectives. One objective can be insensitive t
 Let $`E`$ be a nonempty finite set of declared information states. Each state has a visible record $`r(s)`$, a required label, enabled actions, costs, and a joint outcome/next-state kernel $`K_a(s,o,t)`$. A partition preserves the contract if equal-block states have equal records, labels, permissions, costs, and, for every block $`D`$,
 
 ```math
-\sum_{t\in D}K_a(s,o,t)=\sum_{t\in D}K_a(s',o,t).              \tag{21}
+\sum_{t\in D}K_a(s,o,t)=\sum_{t\in D}K_a(s',o,t).              \quad\text{(21)}\quad
 ```
 
 This is a joint-kernel requirement, stronger than unrestricted equality of selected traces.
@@ -643,7 +643,7 @@ Fix the positive fibre (9), and let a finite matrix $`H`$ list required expectat
 ```math
 s=\mathrm{rank}(H|_N)
 =\mathrm{rank}\,\begin{bmatrix}Q\\H\end{bmatrix}
--\mathrm{rank}\,Q.                                      \tag{22}
+-\mathrm{rank}\,Q.                                      \quad\text{(22)}\quad
 ```
 
 **Corollary 9 — Exact continuous utility supplement.** On this fixed fibre, $`s`$ continuous real coordinates are necessary and sufficient to recover $`Hw`$, allowing arbitrary decoders. A finite-valued exact supplement exists if and only if $`s=0`$.
@@ -658,7 +658,7 @@ For a conditional coordinate $`p_{ji}`$, (11) gives its ambient Fisher squared g
 
 ```math
 \|\mathrm{grad}_g\,p_{ji}\|^2
-=\frac{p_{ji}(1-p_{ji})}{w_j}.                               \tag{23}
+=\frac{p_{ji}(1-p_{ji})}{w_j}.                               \quad\text{(23)}\quad
 ```
 
 The numerator is known and strictly positive. Retaining these norms for a fixed target coordinate $`i`$ and $`j=1,\ldots,k-1`$ recovers those weights; normalization recovers the last. Thus any record preserving the signature and this norm family is injective on the whole source domain. No regularity assumption on that record is needed for this reconstruction.

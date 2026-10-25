@@ -8111,13 +8111,13 @@
     },
     "consolidated-information-and-inquiry": {
       "path": "mathematics/information-and-inquiry.md",
-      "sha256": "d89e2b9c72b3af105448ad21e6f9d1111a0e3ad96b63a22990ff2f1e0bc77bca",
-      "read_scope": "Complete 80684-byte public presentation successor independently compared against its exact previously qualified edition: every mathematical expression, proof, argument, citation and status boundary preserved under the declared typography changes. The compact review records the original source-incorporation scopes, failures, corrected scientific reviews and complete presentation-preservation review. Live GitHub rendering is separately verified after publication. No external human review, new historical/kernel replay, owner adoption or accepted-edition amendment is claimed."
+      "sha256": "4240bd2814d7b6812949dbe5414cfbbb917825d61a6c3e09338e2f4c5f52ed6f",
+      "read_scope": "Complete 80684-byte public presentation successor independently compared against its exact previously qualified edition: every mathematical expression, proof, argument, citation and status boundary preserved under the declared typography changes. The compact review records the original source-incorporation scopes, failures, corrected scientific reviews and complete presentation-preservation review. Live GitHub rendering is separately verified after publication. No external human review, new historical/kernel replay, owner adoption or accepted-edition amendment is claimed. Subsequent equation-number presentation repair preserves every formula, reference number, proof, prose and citation by exact reverse-byte comparison; independent annotation equivalence is separately qualified. Actual observed835e62b numbered-layout failure remains retained; published successor rendering is a separate check."
     },
     "scientific-consolidation-review": {
       "path": "docs/scientific-consolidation-review.md",
-      "sha256": "73c23a04e474c734fa4a93f4f1c449053b7c04ea05bddf1efda89a26e5e8548f",
-      "read_scope": "Complete shared incorporation companion with six exact work editions,65 distinct bounded complete prose bodies890288 bytes,and a separately bounded51939-byte constituent of a retained larger compendium. All earlier and new failed drafts,exact scientific reviews,partial/missing-source limits and held removal/custody remain explicit. It is review support,not a seventh scholarly work or whole-order qualification. Exact integration and actual GitHub presentation remain separately received checks."
+      "sha256": "434bd079b2fff7948f6066f960099a1a56ad3786ad89d8a121ff044fdf5e0cf5",
+      "read_scope": "Complete shared incorporation companion with seven exact scholarly editions,81 distinct bounded complete prose bodies1003147bytes,and a separately bounded51939-byte constituent of a retained compendium. All genuine failed drafts, source limits, actual presentation failures and prior review pins remain explicit. New scientific and annotation qualifications are separately bound; this is supporting review evidence,not an eighth scholarly work or whole-order acceptance. Actual integration,source receiving,GitHub rendering,custody and removal remain separate gates."
     },
     "consolidated-recognition-and-restoration": {
       "path": "epistemology/recognition-warrant-and-restoration.md",
@@ -8136,8 +8136,13 @@
     },
     "consolidated-tensor-moments": {
       "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
-      "sha256": "3f5fe1c9bd0b81fb4a75af1cf2881f6bfe3ce9368e71622b289c230923b11da8",
-      "read_scope": "Complete scholarly chapter with 23 proved results independently compared against 39 fully read public bodies,502269 bytes. Final v3 closes four findings; the false positivity comparison and its initial review miss remain preserved. All1067 earlier math payloads plus eight actual witness expressions yield1075. Twenty-two complete bounded prose editions343597 bytes qualify for scientific incorporation;17 supporting,formal,review or partial bodies158672 bytes remain retained. Exact arithmetic inputs are received public Git objects; no fresh computation,kernel replay,complete seven-file execution-packet receipt,private-body receiving,owner adoption or deletion is claimed. Actual published rendering and integration remain separate checks. A separately reviewed presentation successor changes only paired delimiter sizing in one equation after an actual unchanged-checker failure; the entire scientific v3 is exactly recoverable by reversing that spelling. All1075 expression frames,prose and31 source references are preserved; the counterexample count is correctly two. Actual GitHub Preview subsequently rejected one product identity. A second independently reviewed equivalent notation repair changes only the product-index relation spelling; all prior science and source-incorporation boundaries remain exact. Actual successful rendering is a separate publication observation."
+      "sha256": "058d103978521831500c7087301a3cb1977d154f0a031776e6b89e6e336c134c",
+      "read_scope": "Complete scholarly chapter with 23 proved results independently compared against 39 fully read public bodies,502269 bytes. Final v3 closes four findings; the false positivity comparison and its initial review miss remain preserved. All1067 earlier math payloads plus eight actual witness expressions yield1075. Twenty-two complete bounded prose editions343597 bytes qualify for scientific incorporation;17 supporting,formal,review or partial bodies158672 bytes remain retained. Exact arithmetic inputs are received public Git objects; no fresh computation,kernel replay,complete seven-file execution-packet receipt,private-body receiving,owner adoption or deletion is claimed. Actual published rendering and integration remain separate checks. A separately reviewed presentation successor changes only paired delimiter sizing in one equation after an actual unchanged-checker failure; the entire scientific v3 is exactly recoverable by reversing that spelling. All1075 expression frames,prose and31 source references are preserved; the counterexample count is correctly two. Actual GitHub Preview subsequently rejected one product identity. A second independently reviewed equivalent notation repair changes only the product-index relation spelling; all prior science and source-incorporation boundaries remain exact. Actual successful rendering is a separate publication observation. Subsequent equation-number presentation repair preserves every formula, reference number, proof, prose and citation by exact reverse-byte comparison; independent annotation equivalence is separately qualified. Actual observed835e62b numbered-layout failure remains retained; published successor rendering is a separate check."
+    },
+    "consolidated-common-repair": {
+      "path": "mathematics/common-repair-and-geometric-obstructions.md",
+      "sha256": "ddee6a298cd1b071aefaeccd5dd8f3f0c800bd202e8cb443c0d6d127dfabffbe",
+      "read_scope": "Complete scholarly chapter with nine theorem proofs and81 numbered equations independently compared against29 fully read public bodies184093bytes. Sixteen complete bounded prose bodies112859bytes qualify for scientific incorporation; two reviews15180bytes and11 Lean bodies56054bytes remain retained. Four original prose bodies were not received and receive no whole-reading or retirement credit. All27 exact rational controls passed in the independent scientific review; no fresh kernel compilation. Later annotation-only repair preserves all831 mathematical frames, full prose and citations under exact inverse comparison. Actual GitHub rendering, source receiving and integration remain separate checks. No private-paper adoption, owner acceptance, custody or deletion is claimed."
     }
   },
   "works": [
@@ -22396,6 +22401,30 @@
       "reading_forms": [
         {
           "source": "consolidated-tensor-moments",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A directly readable public scholarly treatment containing actual arguments, proofs, counterexamples and source attribution. Exact independent review qualifies this edition and its stated bounded incorporation population. Accepted editions, formal evidence and broader partially used works retain their separate status. Custody, physical removal and owner adoption remain separate gates."
+    },
+    {
+      "key": "common-repair-and-geometric-obstructions",
+      "title": "Common repair and the geometry of coherent forecasts",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-common-repair"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-common-repair",
           "relationship": "authored-synthesis"
         }
       ],

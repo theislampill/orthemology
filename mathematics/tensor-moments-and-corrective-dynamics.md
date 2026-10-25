@@ -48,7 +48,7 @@ A **coordinatewise $`C^1`$ hierarchy** means that every polynomial coordinate is
 \frac{d}{dt}L_t(p)
  =-L_t(hp)+L_t(h)L_t(p),
 \qquad p\in\mathbb R[x_1,\ldots,x_d].
-\tag{1}
+\quad\text{(1)}\quad
 ```
 
 The finite sum defining $`hp`$ makes every equation meaningful. Whether a solution of these equations is an actual law-level evolution is a theorem to prove, not a definition to smuggle in.
@@ -71,7 +71,7 @@ For a fixed covector $`g\in\mathbb R^m`$, consider $`J_g(p)=g\cdot Kp`$. Its neg
 
 ```math
 \dot p_i=-p_i\bigl(g\cdot k_i-g\cdot q\bigr).
-\tag{2}
+\quad\text{(2)}\quad
 ```
 
 Indeed, the displayed vector has zero sum and its Fisher pairing with every tangent vector $`a`$ is $`-\sum_i(g\cdot k_i)a_i=-dJ_g(a)`$. This verifies the constrained gradient directly. The Fisher–Shahshahani interpretation of replicator dynamics is classical; see [Harper](#references). The present concern is what a coarse record retains about that dynamics.
@@ -92,7 +92,7 @@ Define $`M_0=1`$ and $`M_r=\sum_jw_j\kappa_j^{\otimes r}`$. Let $`\iota_g`$ cont
 \dot M_r=-\iota_gM_{r+1}+(g\cdot M_1)M_r,
 \qquad
 \dot q=-(M_2-qq^{\mathsf T})g.
-\tag{3}
+\quad\text{(3)}\quad
 ```
 
 There is no factor $`r+1`$ in this contraction convention. Symmetry here reflects repeated numerical coordinates in a product; it does not symmetrize distinct semantic roles. Since contracting every slot with the all-ones vector gives one, all tensor grades are nonzero even for this finite support.
@@ -113,7 +113,7 @@ Their values on the support are Kronecker deltas, hence $`w_j=\sum_r c_{jr}s_r`$
 ```math
 M_k=\sum_{r=0}^{N-1}
        \left(\sum_{j=1}^N c_{jr}\kappa_j^{\otimes k}\right)s_r.
-\tag{4}
+\quad\text{(4)}\quad
 ```
 
 In particular, this replaces the top missing grade in (3). The resulting system is conjugate to the aggregate equation on the image of the positive simplex. Arbitrary tensor tuples outside that image are not admitted states. For $`N=1`$, the known support and degree-zero mass already determine the stationary law. ∎
@@ -132,7 +132,7 @@ w_j(t)=
      {\sum_\ell w_\ell(0)e^{-U(t)\cdot\kappa_\ell}},
 \qquad
 \mathcal T_a\mathcal T_b=\mathcal T_{a+b}.
-\tag{5}
+\quad\text{(5)}\quad
 ```
 
 Finite cumulative controls preserve strictly positive weights. The endpoint depends on the cumulative covector, although the intervening observation history can depend on the schedule. A scalar component parallel to the all-ones vector is a normalization gauge.
@@ -188,7 +188,7 @@ For $`\mu\in\mathcal P_\infty([0,\infty))`$, set
 A_r(t)=\int x^r e^{-tx}\,d\mu(x),\quad
 Z(t)=A_0(t),\quad
 m_r(t)=\frac{A_r(t)}{Z(t)},\quad t\ge0.
-\tag{6}
+\quad\text{(6)}\quad
 ```
 
 Every integral is finite and $`Z(t)>0`$. Dominated differentiation, including the right boundary derivative, gives $`A_r^{(k)}=(-1)^kA_{r+k}`$ and
@@ -196,7 +196,7 @@ Every integral is finite and $`Z(t)>0`$. Dominated differentiation, including th
 ```math
 m_r'=-m_{r+1}+m_1m_r,\qquad
 m_1'=-\mathrm{Var}_{\mathcal T_t\mu}(X).
-\tag{7}
+\quad\text{(7)}\quad
 ```
 
 At zero, the bound $`|(e^{-ux}-1)/u|\le x`$ justifies the first derivative; higher moments give the rest. The actual laws obey the semigroup rule and have exactly the same null sets as their initial law at every finite time.
@@ -212,7 +212,7 @@ Let $`f(x)=e^{-(\log x)^2/2}/(x\sqrt{2\pi})`$ on $`x>0`$, and define
 ```math
 d\mu_\pm(x)=f(x)
  \left(1\pm\frac12\sin(2\pi\log x)\right)\,dx.
-\tag{8}
+\quad\text{(8)}\quad
 ```
 
 These are distinct positive probabilities. For every integer $`n\ge0`$,
@@ -243,7 +243,7 @@ An exact repair is to retain the Laplace profile itself:
 Z_{\mathcal T_u\mu}(s)=\frac{Z_\mu(s+u)}{Z_\mu(u)},
 \qquad
 E_{\mathcal T_u\mu}X=-\frac{Z_\mu'(u)}{Z_\mu(u)}.
-\tag{9}
+\quad\text{(9)}\quad
 ```
 
 Even the countable values $`Z_\mu(n)`$ determine the law set-theoretically, since they are the moments of $`e^{-X}\in[0,1]`$. That does not provide an error modulus for the unbounded observable $`-\log y`$ near zero. A complete exact record, a computable inverse, and a stable finite-data procedure remain distinct. The proofs and limits in this section incorporate [the unbounded continuation analysis][moment-boundary-source].
@@ -266,7 +266,7 @@ a_0(t)=\exp\!\left(-\int_0^t m_1(u)\,du\right),
 Then $`a_r'=-a_{r+1}`$ and all $`a_r`$ are nonnegative. Iterating the equations makes every coordinate smooth. Taylor's formula backwards from $`t`$ to $`t-b\ge0`$, with its integral remainder of positive sign, gives
 ```math
 \sum_{k=0}^{N}\frac{b^k}{k!}a_{r+k}(t)\le a_r(t-b).
-\tag{10}
+\quad\text{(10)}\quad
 ```
 In particular $`a_n(t)\le n!/t^n`$. On a compact interior time interval, choose a common shorter backward distance. Applied to each fixed $`r`$, (10) bounds its derivatives by $`C_r n!b^{-n}`$, proving real analyticity there.
 
@@ -274,7 +274,7 @@ Choose the positive time $`s`$ in the hypothesis and a probability representativ
 ```math
 \int x^r e^{bx}\,d\lambda_s(x)\le a_r(s-b),
 \qquad 0<b<s.
-\tag{11}
+\quad\text{(11)}\quad
 ```
 Thus $`G(u)=\int e^{(s-u)x}\,d\lambda_s`$ is analytic for every $`u>0`$. At $`u=s`$ all its derivatives agree with those of $`a_0`$. The identity theorem gives $`G(u)=a_0(u)`$ throughout $`0<u<T`$, and differentiation gives all the other coordinates. As $`u\downarrow0`$, monotone convergence yields
 ```math
@@ -303,7 +303,7 @@ This is a formal solution outside the positive cone. Conversely, $`a_0=(T-t)/T`$
 \rho=\frac{\eta_K-w\delta_0}{1-w},
 \qquad
 c_0=1,\quad c_r=\frac{e^{r^2/2}}{1-w}\ (r\ge1)
-\tag{12}
+\quad\text{(12)}\quad
 ```
 is a determinate probability sequence. Full deletion matters: the theorem used here is not an assertion about arbitrary partial subtraction.
 
@@ -313,7 +313,7 @@ a_0(t)=\frac{B_0(t)-w}{1-w},
 \qquad
 a_r(t)=\frac{B_r(t)}{1-w}\ (r\ge1),
 \qquad m_r(t)=\frac{a_r(t)}{a_0(t)}.
-\tag{13}
+\quad\text{(13)}\quad
 ```
 Since $`B_0(t)\ge1-te^{1/2}`$, the denominator is positive for
 $`0\le t<T_0=(1-w)/(2e^{1/2})`$. Every coordinate is positive, the equations $`a_r'=-a_{r+1}`$ hold, and the initial record is (12).
@@ -333,7 +333,7 @@ w_N=
 w=\prod_{j=1}^{\infty}(1-q^j),
 \qquad
 0\le w_N-w\le\frac{q^{N+1}}{1-q}.
-\tag{14}
+\quad\text{(14)}\quad
 ```
 For the determinant identity, factor the powers $`q^{-i^2/2}`$ and $`q^{-j^2/2}`$ from rows and columns, leaving a Vandermonde matrix in $`q^{-j}`$; the ratio cancels all but the displayed factors. Extremality makes the orthogonal polynomials complete in $`L^2(\eta_K)`$. Evaluation at the atom has squared norm $`1/w`$, so Parseval identifies the decreasing Christoffel limit with $`w`$. The final error bound follows from $`1-\prod(1-u_j)\le\sum u_j`$. This gives exact names for (12)–(13), not merely a nonconstructive counterexample.
 
@@ -359,7 +359,7 @@ The predecessor calculation also gave an actual low-degree witness at $`t=1/10`$
 **Theorem 8 (Stieltjes–Carleman recovery).** Suppose a coordinatewise nonnegative scalar hierarchy has a valid initial Stieltjes record $`c`$ satisfying
 ```math
 \sum_{n=1}^{\infty}c_n^{-1/(2n)}=\infty.
-\tag{15}
+\quad\text{(15)}\quad
 ```
 Then the hierarchy is the actual tilt of its unique initial law.
 
@@ -384,7 +384,7 @@ d_n\le\bigl(s c_n^{1/n}+n\bigr)^n,
 d_n^{-1/(2n)}
  \ge\frac1{\sqrt2}
        \min\{s^{-1/2}c_n^{-1/(2n)},\,n^{-1/2}\}.
-\tag{16}
+\quad\text{(16)}\quad
 ```
 The sequence $`b_n=c_n^{-1/(2n)}`$ is nonincreasing. Cauchy condensation proves divergence of the right-hand series: at the dyadic indices its condensed terms are the minimum of the divergent terms $`s^{-1/2}2^k b_{2^k}`$ and $`2^{k/2}`$. If the latter bound is active infinitely often, the terms do not even tend to zero; if it is active only finitely often, divergence is inherited from the first series. The minimum is itself nonincreasing before condensation.
 
@@ -410,7 +410,7 @@ Then
 ```math
 A_t'(p)=-A_t(hp),\qquad
 A_t^{(n)}(p)=(-1)^nA_t(h^np).
-\tag{17}
+\quad\text{(17)}\quad
 ```
 The second identity follows by repeatedly applying the first to a polynomial. It requires no unbounded-operator calculus.
 
@@ -420,7 +420,7 @@ The second identity follows by repeatedly applying the first to a polynomial. It
 ```math
 \sum_{n=0}^{N}\frac{b^n}{n!}A_t(q^2h^n)
  \le A_{t-b}(q^2),\qquad 0<b\le t.
-\tag{18}
+\quad\text{(18)}\quad
 ```
 It proves interior analyticity of $`A_t(q^2)`$, hence of every $`A_t(p)`$ by
 $`p=((p+1)^2-(p-1)^2)/4`$. Choose the one representative $`\rho_s`$ and set $`\lambda_s=a(s)\rho_s`$. Monotone convergence in (18) gives
@@ -435,7 +435,7 @@ The supplied path determines its continued moment record even when it does not i
 \quad\Longleftrightarrow\quad
 h_*(p\mu)=h_*(p\nu)
 \ \text{as finite signed measures for every polynomial }p.
-\tag{19}
+\quad\text{(19)}\quad
 ```
 Indeed, equality of the normalized path fixes the unnormalizer from $`L_t(h)`$ and hence fixes every integral $`\int p e^{-th}\,d\mu`$. Signed Laplace uniqueness gives (19); the reverse implication is immediate. Thus the set of paths from a fixed initial moment record is its representing fibre modulo (19). Inverse multiplication by the positive weight identifies the law-level lifts of any one complete path with the representing fibre at any positive time. A unique lift is equivalent to determinacy at one, and then at every, positive time. A determinate initial record guarantees a unique path, but the converse fails for a constant energy: every initial representative then gives the same constant record.
 
@@ -447,7 +447,7 @@ A_s(q^2h^{2n})
  \le C_q\,\frac{(2n)!}{b^{2n}},
 \qquad
 C_q=\frac{A_{s-b}(q^2)+A_{s+b}(q^2)}2.
-\tag{20}
+\quad\text{(20)}\quad
 ```
 
 **Proof.** For $`f(t)=A_t(q^2)`$, (17) gives
@@ -469,7 +469,7 @@ This is an interior assertion. The flat examples at zero remain possible outside
 ```math
 \Lambda(q^2h^{2n})\le C_q(2n)!b^{-2n}
 \quad(n\ge0).
-\tag{21}
+\quad\text{(21)}\quad
 ```
 Then $`\Lambda`$ has a positive joint representing measure.
 
@@ -552,7 +552,7 @@ $`h_*(q^2\mu)`$ on $`\mathbb R`$ is Hamburger-determinate. Then throughout the s
 ```math
 A_t(p)=\int p(x)e^{-th(x)}\,d\mu(x),\qquad
 L_t(p)=\frac{\int p e^{-th}\,d\mu}{\int e^{-th}\,d\mu}.
-\tag{22}
+\quad\text{(22)}\quad
 ```
 In particular, the existence of the square-positive path forces all these weighted integrals to be finite. No positive-time joint representative is assumed.
 
@@ -563,7 +563,7 @@ For sufficiently close positive times $`u,v`$, the analytic function
 $`v\mapsto\int e^{-(v-u)z}\,d\sigma_u^q(z)`$ has exactly the derivatives of $`A_v(q^2)`$ at $`u`$. Equality near $`u`$ and differentiation identify all moments at $`v`$. The scalar measures are determinate there, so
 ```math
 \sigma_v^q(dz)=e^{-(v-u)z}\sigma_u^q(dz).
-\tag{23}
+\quad\text{(23)}\quad
 ```
 A common smaller time radius on any compact interior interval follows from (20); a finite chain of overlapping neighborhoods extends (23) between any two positive times.
 
@@ -583,7 +583,7 @@ $`\int q^2e^{-th}\,d\mu<\infty`$ for every polynomial $`q`$. On the interior of 
 ```math
 I_t:=\{q:L_t(q^2)=0\}=I_0
 \quad(0\le t<T).
-\tag{24}
+\quad\text{(24)}\quad
 ```
 For every fixed finite polynomial family, its Gram matrix has the same kernel and rank throughout the interval.
 
@@ -636,21 +636,21 @@ K_{s,t}(x)=\int_s^t g_u(x)\,du,\qquad R(x)=|x|^2.
 Assume that for each $`t>0`$ there is $`c(t)>0`$ with
 ```math
 K_{0,t}-c(t)R\ \text{SOS}.
-\tag{25}
+\quad\text{(25)}\quad
 ```
 No regularity of the chosen $`c`$, no lower bound proportional to $`t`$, and no coercivity on every subinterval is assumed.
 
 **Theorem 15 (cumulative damping).** Every normalized square-positive coordinatewise $`C^1`$ solution of
 ```math
 L_t'(p)=-L_t(h_tp)+L_t(h_t)L_t(p)
-\tag{26}
+\quad\text{(26)}\quad
 ```
 under these assumptions has the form
 ```math
 L_t(p)=\frac{\int p(x)e^{-H_t(x)}\,d\mu(x)}
              {\int e^{-H_t(x)}\,d\mu(x)},
 \qquad H_t=\int_0^t h_u\,du,
-\tag{27}
+\quad\text{(27)}\quad
 ```
 for a unique $`\mu\in\mathcal P_\infty(\mathbb R^d)`$ attached to the complete path. Every positive-time record is determinate. The paths from a fixed valid initial record are in bijection with its representing laws.
 
@@ -662,7 +662,7 @@ Then $`A_t'(p)=-A_t(g_tp)`$ and $`0<a(t)\le1`$.
 $`A_s(p)=A_t(p)+\int_s^tA_u(pg_u)\,du`$. For every finite $`N`$ this gives
 ```math
 A_s(p)=\sum_{k=0}^{N}\frac{A_t(pK_{s,t}^{\,k})}{k!}+E_{N+1}(s,t;p),
-\tag{28}
+\quad\text{(28)}\quad
 ```
 where
 ```math
@@ -677,14 +677,14 @@ For $`p=q^2`$, the remainder is nonnegative, since products of SOS polynomials a
 $`K_{0,t}^n-c^nR^n`$ is SOS by the difference-of-powers factorization. Hence
 ```math
 \sum_{n=0}^{N}\frac{c^n}{n!}A_t(q^2R^n)\le A_0(q^2).
-\tag{29}
+\quad\text{(29)}\quad
 ```
 The coordinate moments obey
 $`L_t(x_i^{2n})\le n!/[a(t)c^n]`$.
 The multivariate Carleman existence and uniqueness theorem therefore supplies a unique positive-time probability $`\rho_t`$. Let $`\nu_t=a(t)\rho_t`$. Taking the **whole partial sum** in (29) and then using monotone convergence gives the endpoint estimate
 ```math
 \int q^2e^{cR}\,d\nu_t\le A_0(q^2).
-\tag{30}
+\quad\text{(30)}\quad
 ```
 Using only the separate factorial bounds would prove this at smaller rates, not automatically at the endpoint $`c`$.
 
@@ -699,7 +699,7 @@ If $`|g_t(x)|\le B(1+|x|^D)`$ uniformly on this interval, the derivative remaind
 \frac{B|\xi|^k}{k!}
 \left(\frac{\sqrt{k!}}{c^{k/2}}
       +\frac{\sqrt{(k+D)!}}{c^{(k+D)/2}}\right).
-\tag{31}
+\quad\text{(31)}\quad
 ```
 Both tend to zero uniformly for $`t`$ and for $`\xi`$ in a compact set. For the last term, the ratio is
 $`|\xi|\sqrt{k+D+1}/(\sqrt c\,(k+1))\to0`$.
@@ -719,7 +719,7 @@ For a time-varying test $`\psi_t`$ with common compact support, continuous time 
 Choose $`\psi_u=\phi e^{K_{s,u}}`$. Its derivative cancels the energy term, giving
 ```math
 \nu_s=e^{K_{s,t}}\nu_t,\qquad 0<s<t<T.
-\tag{32}
+\quad\text{(32)}\quad
 ```
 Initially this is equality against compactly supported tests. Both sides are locally finite positive measures, so exhaustion by compact sets makes it a global equality and proves finiteness of the right side.
 
@@ -748,7 +748,7 @@ a(t)=\frac{3t(t^2+4)}{4(t^2+3)},
 K_{0,t}-c(t)(x^2+y^2)
  =a(t)\left(x+\frac{2t(t^2+3)}{3(t^2+4)}y\right)^2
   +\frac{t^5}{12(t^2+3)(t^2+4)}y^2.
-\tag{33}
+\quad\text{(33)}\quad
 ```
 At each instant the energy vanishes along $`\lambda(-t,1)`$, so no scalar shift can make it dominate a positive radial quadratic there. Moreover $`c(t)`$ is of order $`t^3`$ at zero, not bounded below by a positive multiple of $`t`$. Thus this example lies genuinely beyond instantaneous radial coercivity.
 
@@ -768,7 +768,7 @@ $`v_t=(\partial_t\Phi_t)\circ\Psi_t`$.
 Suppose the pulled-back energy $`k_t=h_t\circ\Phi_t`$ satisfies Theorem 15. A square-positive functional solving
 ```math
 L_t'(p)=L_t(v_t\cdot\nabla p)-L_t(h_tp)+L_t(h_t)L_t(p)
-\tag{34}
+\quad\text{(34)}\quad
 ```
 then has the law
 ```math
@@ -776,7 +776,7 @@ then has the law
  \frac{e^{-\int_0^t k_s\,ds}\mu}
       {\int e^{-\int_0^t k_s\,ds}\,d\mu}
 \right).
-\tag{35}
+\quad\text{(35)}\quad
 ```
 
 Indeed, set $`M_t(q)=L_t(q\circ\Psi_t)`$. The inverse relation gives
@@ -798,7 +798,7 @@ Write the state as $`(z,y)\in\mathbb R^r\times\mathbb R^k`$, with $`r\ge1`$. Sup
 ```math
 K_t(z)=\int_0^t g_u(z)\,du,\qquad
 K_t-c(t)|z|^2\ \text{SOS},\quad c(t)>0\ (t>0).
-\tag{36}
+\quad\text{(36)}\quad
 ```
 The full functional still acts on **all** polynomials in $`z`$ and $`y`$, and is assumed square-positive on that entire algebra. The schedule has the same coefficient continuity and local degree bounds as in §7. An admissible scalar shift may be made as before.
 
@@ -810,13 +810,13 @@ Partial control does not justify asserting joint existence first and disintegrat
 ```math
 \int f(z)\,d\sigma_{t,b}(z)=A_t(f(z)b(y))
 \quad\text{for every polynomial }f.
-\tag{37}
+\quad\text{(37)}\quad
 ```
 For hidden squares these measures are positive. On every compact interior interval they have uniform Gaussian absolute-moment bounds and satisfy
 ```math
 \sigma_{u,b}=e^{K_s-K_u}\sigma_{s,b}
 \quad(s,u>0).
-\tag{38}
+\quad\text{(38)}\quad
 ```
 
 **Proof.** The same finite Volterra expansion as (28) gives
@@ -832,7 +832,7 @@ It has the moments (37), and
 ```math
 \int e^{c(t)|z|^2}\,d|\sigma_{t,b}|
  \le M_b,\qquad M_b=\frac{A_0(b^2)+1}{2}.
-\tag{39}
+\quad\text{(39)}\quad
 ```
 A finite signed measure with a Gaussian absolute moment is determined by its polynomial moments. Indeed, its Fourier transform has an everywhere convergent Taylor expansion, using the same factorial estimates as in (31). Thus polarization gives a unique signed measure, is linear in $`b`$, and agrees with the positive representative when $`b`$ is a square.
 
@@ -849,7 +849,7 @@ This proof does not choose any family of joint measures. The scalar projections 
 ```math
 \rho_t=\frac{e^{-K_t(z)}\mu(dz,dy)}
                  {\int e^{-K_t(z)}\,d\mu}
-\tag{40}
+\quad\text{(40)}\quad
 ```
 for some $`\mu\in\mathcal P_\infty(\mathbb R^{r+k})`$. Every representative at that time gives exactly one such lift. Positive-time joint representability is therefore an all-or-none property along the path.
 
@@ -891,7 +891,7 @@ For an actual initial law define the finite signed measures
 m_{\mu,\alpha}
   =(\pi_z)_*(y^\alpha\mu),
 \qquad \alpha\in\mathbb N^k.
-\tag{41}
+\quad\text{(41)}\quad
 ```
 They record the controlled distribution and all hidden polynomial averages conditional on the controlled variable, in an integrated form.
 
@@ -931,7 +931,7 @@ The distinction between squares and all nonnegative polynomials is essential, no
 ```math
 F(u,v)=1+u^4v^2+u^2v^4-u^2v^2\ge\frac34,
 \qquad \Lambda(F)=-1.
-\tag{42}
+\quad\text{(42)}\quad
 ```
 Consequently $`\Lambda`$ has no positive representing measure.
 
@@ -969,7 +969,7 @@ B_n=
 B_{n-1}+w_nw_n^{\mathsf T}&-w_n\\
 -w_n^{\mathsf T}&1
 \end{pmatrix}.
-\tag{43}
+\quad\text{(43)}\quad
 ```
 Direct block multiplication proves $`A_nB_n=I`$. The quadratic form identity
 ```math
@@ -997,7 +997,7 @@ A_t(p)=\int
  \Lambda_k\!\bigl(p(z,\cdot)\bigr)e^{-K_t(z)}\,d\gamma_r(z),
 \qquad
 L_t=\frac{A_t}{A_t(1)}.
-\tag{44}
+\quad\text{(44)}\quad
 ```
 Every evaluation is a finite sum of Gaussian polynomial integrals. Dominated differentiation proves the hierarchy. For a nonzero joint polynomial, its hidden polynomial is nonzero on a nonempty open set of the remaining variables; the Gaussian measure gives that set positive mass and the hidden functional is strictly square-positive there. Hence $`L_t(p^2)>0`$ for every nonzero $`p`$. Yet $`L_t(F)=-1`$ for every time, so no joint law exists.
 
@@ -1017,14 +1017,14 @@ D_{\alpha,R}
  =\frac1{\alpha!\,R^n}
    \sum_{0\le j\le\alpha}
     (-1)^{n-|j|}\binom{\alpha}{j}\delta_{Rj}.
-\tag{45}
+\quad\text{(45)}\quad
 ```
 Repeated finite differences give
 $`\int x^\beta\,dD_{\alpha,R}=\delta_{\alpha\beta}`$ whenever $`|\beta|\le n`$. Indeed, a lower total degree has some coordinate below its difference order; at equal degree, the only surviving multiindex is $`\beta=\alpha`$, with value one. For $`m\ge0`$,
 ```math
 \int |x|^m\,d|D_{\alpha,R}|
  \le\frac{2^n n^m}{\alpha!}\,R^{m-n}.
-\tag{46}
+\quad\text{(46)}\quad
 ```
 
 Suppose degrees below $`n`$ have already been matched. Let $`r_\alpha`$ be the degree-$`n`$ residuals, put
@@ -1047,7 +1047,7 @@ Apply the lemma to the functional $`\Lambda`$ in Theorem 19. The positive measur
 ```math
 \beta_1=\frac1S\sum_{j\in\mathbb Z}e^{-j^2/2}\delta_{e^j},
 \qquad S=\sum_{j\in\mathbb Z}e^{-j^2/2}.
-\tag{47}
+\quad\text{(47)}\quad
 ```
 For every integer $`m\ge0`$, shifting the index in the sum gives
 $`\int z^m\,d\beta_1=e^{m^2/2}=\int z^m\,d\alpha_1`$.
@@ -1061,7 +1061,7 @@ Use the positive measures $`P_k,N_k`$ from Lemma 20, with $`\Lambda_k=P_k-N_k`$,
 \qquad
 A_t=\frac{\alpha_t\otimes\Lambda_k+\beta_t\otimes N_k}{C},
 \qquad L_t=\frac{A_t}{A_t(1)}.
-\tag{48}
+\quad\text{(48)}\quad
 ```
 The expression defines a polynomial functional; it is not asserted to be a positive joint measure. Its mass
 $`A_t(1)=(\alpha_t(1)+n_0\beta_t(1))/C`$ is positive. Strict positivity on every nonzero square follows from the first tensor term: the controlled law has positive density on an open half-space, the remaining Gaussian factors are positive on open sets, and $`\Lambda`$ is strictly square-positive. The second term is positive. Finite polynomial expansion and domination by the original all-moment measures justify the hierarchy and all needed derivatives.
@@ -1074,7 +1074,7 @@ Fix $`t>0`$. If a positive measure $`\nu`$ represented $`A_t`$, then the control
 $`\sigma=(\pi_z)_*(F\nu)`$ would be positive, since $`F\ge3/4`$. Cauchy–Schwarz with $`F^2`$ gives a Gaussian absolute moment for $`\sigma`$ at a smaller rate. Its polynomial moments, from (48), are those of
 ```math
 w_t=\frac{-\alpha_t+N_k(F)\beta_t}{C}.
-\tag{49}
+\quad\text{(49)}\quad
 ```
 The latter signed measure also has a Gaussian absolute moment. Signed moment uniqueness therefore gives $`\sigma=w_t`$. But
 $`w_t(E^c)=-\alpha_t(1)/C<0`$, contradicting positivity. Hence no positive-time representative exists. ∎
@@ -1123,7 +1123,7 @@ They are Lipschitz with constant $`(1+N)^2`$, and $`c_N^r`$ has Lipschitz consta
 ```math
 m_r-\frac{m_{r+1}}N
  \le\int c_N^r\,d\lambda\le m_r.
-\tag{50}
+\quad\text{(50)}\quad
 ```
 The tail inequality $`x^r-\min(x,N)^r\le x^{r+1}/N`$ proves necessity. Conversely, the upper bound for $`r=1`$ excludes an atom at $`y=1`$. Monotone convergence and both bounds as $`N\to\infty`$ give exactly every prescribed moment.
 
@@ -1135,7 +1135,7 @@ For tilted moments, let $`U>t`$ be rational and use the clipped integrand
 $`c_R(y)^r e^{-t c_R(y)}`$. For $`r\ge1`$ it is bounded by $`R^r`$ and has the explicit Lipschitz bound
 ```math
 \bigl[rR^{r-1}+UR^r\bigr]\bigl(1+R\bigr)^2.
-\tag{51}
+\quad\text{(51)}\quad
 ```
 For $`r=0`$ use $`U(1+R)^2`$. Changing $`t`$ by $`\Delta t`$ changes the clipped integral by at most $`R^{r+1}|\Delta t|`$. The unclipped tail error is at most $`2m_{r+1}/R`$ for $`r\ge1`$, and at most $`m_1/R`$ for $`r=0`$. This computes
 $`A_r(t)=\int x^r e^{-tx}d\mu`$, including $`t=0`$ without trying to decide whether a real input is exactly zero.
@@ -1163,7 +1163,7 @@ A calibrated Fisher jet can be another input format, but only with its actual-la
 ```math
 m_{n+1}=\sum_{j=0}^{n}\binom nj\,\kappa_{j+1}m_{n-j},
 \qquad m_0=1.
-\tag{52}
+\quad\text{(52)}\quad
 ```
 The second relation follows by differentiating the exponential generating identity between moments and cumulants coefficient by coefficient; only finitely many quantities enter each coefficient. It converts a uniform calibrated jet name into a moment name. An uncalibrated metric jet does not determine the missing mean or parameter scale, and no nonsingular inverse mean coordinate is automatically supplied.
 
@@ -1201,7 +1201,7 @@ and $`S\ge1`$. Thus all these quantities and the full coordinates
 L_t(z^mu^av^b)=
 \frac{\Lambda(u^av^b)I_m(t)+N(u^av^b)J_m(t)}
      {I_0(t)+n_0J_0(t)}
-\tag{53}
+\quad\text{(53)}\quad
 ```
 are uniformly computable. Jensen's inequality supplies the positive denominator bound
 $`I_0+n_0J_0\ge(1+n_0)e^{-te^2}`$.
@@ -1211,12 +1211,12 @@ Set $`B=N(F)`$ and, for a rational polynomial $`q`$, put
 W_t(q)=-I_t(q^2)+B J_t(q^2),
 \qquad
 L_t(q^2F)=\frac{W_t(q)}{I_0+n_0J_0}.
-\tag{54}
+\quad\text{(54)}\quad
 ```
 The existence argument after Theorem 21 gives a real polynomial with negative $`W_t`$; finite-degree continuity gives a rational one. Enumerate rational polynomials and precision requests, dovetailing strict negative upper bounds. The search terminates at every fixed rational positive time. It is $`q^2F`$ that is nonnegative; $`q`$ need not be. If the certified intervals are $`W_t\in[w_l,w_h]`$ with $`w_h<0`$ and denominator $`D\in[d_l,d_h]`$ with $`d_l>0`$, the correct normalized interval is
 ```math
 L_t(q^2F)\in[w_l/d_l,\ w_h/d_h].
-\tag{55}
+\quad\text{(55)}\quad
 ```
 The order of the denominator endpoints reflects the negative numerator.
 
@@ -1229,7 +1229,7 @@ The later public work goes beyond existence and a terminating-search proof. For 
 H(z,u,v)=z^{2048}F(u,v),
 \qquad
 -3^{2097161}<L_1(H)<-\frac43.
-\tag{56}
+\quad\text{(56)}\quad
 ```
 It has four monomials, total degree $`2054`$, and is nonnegative everywhere. This is the square choice $`q=z^{1024}`$ in (54). The analytic bounds are given here, while the exact finite hidden-arithmetic input remains a separately retained computational dependency.
 
