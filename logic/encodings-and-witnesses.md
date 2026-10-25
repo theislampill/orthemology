@@ -378,12 +378,12 @@ This is equality of the actual compiler endpoints, including heterogeneous relat
 
 ### 5.4 Extending the interpretation to the whole source calculus
 
-The above reduct becomes a sound interpretation of all twenty source rules under explicit semantic admissibility conditions. A type valuation $`\rho`$ assigns a binary relation on $`D`$ to each type parameter. It is **admissible** when every $`\rho(\alpha)`$ is a conversion-saturated PER, hence belongs to $`\mathcal P`$. A term environment $`\eta`$ assigns an element of $`D`$ to each term-variable coordinate. The recursive interpretation can be defined even for arbitrary relation valuations; the soundness conclusions below apply only to admissible valuations and the specified context environments. Interpret types by relations $`\llbracket A\rrbracket_{\rho,\eta}`$:
+The above reduct becomes a sound interpretation of all twenty source rules under explicit semantic admissibility conditions. A type valuation $`\rho`$ assigns a binary relation on $`D`$ to each type parameter. It is **admissible** when every $`\rho(\alpha)`$ is a conversion-saturated PER, hence belongs to $`\mathcal P`$. A term environment $`\eta`$ assigns an element of $`D`$ to each term-variable coordinate. The recursive interpretation can be defined even for arbitrary relation valuations; the soundness conclusions below apply only to admissible valuations and the specified context environments. Interpret types by relations $`\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}`$:
 
 ```math
-\llbracket\alpha\rrbracket_{\rho,\eta}=\rho(\alpha),
-\qquad\llbracket\bot\rrbracket_{\rho,\eta}=\varnothing,
-\qquad\llbracket\mathrm{Raw}\rrbracket_{\rho,\eta}=\simeq.
+\mathopen{\lbrack\!\lbrack}\alpha\mathclose{\rbrack\!\rbrack}_{\rho,\eta}=\rho(\alpha),
+\qquad\mathopen{\lbrack\!\lbrack}\bot\mathclose{\rbrack\!\rbrack}_{\rho,\eta}=\varnothing,
+\qquad\mathopen{\lbrack\!\lbrack}\mathrm{Raw}\mathclose{\rbrack\!\rbrack}_{\rho,\eta}=\simeq.
 ```
 
 For a dependent family with domain relation $`A`$ and fibers $`B(a)`$, use
@@ -405,14 +405,14 @@ B(\pi_1z)(\pi_2z,\pi_2w).
 The fibers satisfy $`A(a,b)\Rightarrow B(a)=B(b)`$. This is proved for formed source families by the simultaneous soundness induction; it is not added as a new source-rule premise. Interpret identity evidence by
 
 ```math
-\llbracket\mathrm{Id}_A(p,q)\rrbracket_{\rho,\eta}(r,s)
+\mathopen{\lbrack\!\lbrack}\mathrm{Id}_A(p,q)\mathclose{\rbrack\!\rbrack}_{\rho,\eta}(r,s)
 \quad\Longleftrightarrow\quad
-\llbracket A\rrbracket_{\rho,\eta}
-  (\llbracket p\rrbracket_\eta,\llbracket q\rrbracket_\eta)
+\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}
+  (\mathopen{\lbrack\!\lbrack} p\mathclose{\rbrack\!\rbrack}_\eta,\mathopen{\lbrack\!\lbrack} q\mathclose{\rbrack\!\rbrack}_\eta)
 \ \text{ and }\ r\simeq I\ \text{ and }\ s\simeq I.
 ```
 
-Interpret $`\forall\alpha.B`$ by intersection of $`\llbracket B\rrbracket`$ over every PER assigned to $`\alpha`$. Terms are interpreted compositionally, independently of their types or derivations. In particular, type instantiation changes a relation, not the erased term.
+Interpret $`\forall\alpha.B`$ by intersection of $`\mathopen{\lbrack\!\lbrack} B\mathclose{\rbrack\!\rbrack}`$ over every PER assigned to $`\alpha`$. Terms are interpreted compositionally, independently of their types or derivations. In particular, type instantiation changes a relation, not the erased term.
 
 We must also specify which environments satisfy a context. Fix a default environment $`\eta_*`$, the constant inert-zero environment in the formal source. Write $`\mathrm{Supp}^{\rho}_{\Gamma}(\eta)`$ for context support and $`\mathrm{Rel}^{\rho}_{\Gamma}(\eta,\xi)`$ for context relatedness. Their empty-context clauses are
 
@@ -429,23 +429,23 @@ For a telescope extended by a type $`A`$ over its tail $`\Gamma`$, use the recur
 \mathrm{Supp}^{\rho}_{A::\Gamma}(a::\eta)
 \ \Longleftrightarrow\
 \mathrm{Supp}^{\rho}_{\Gamma}(\eta)
-\ \text{ and }\ \llbracket A\rrbracket_{\rho,\eta}(a,a),
+\ \text{ and }\ \mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}(a,a),
 ```
 
 ```math
 \mathrm{Rel}^{\rho}_{A::\Gamma}(a::\eta,b::\xi)
 \ \Longleftrightarrow\
 \mathrm{Rel}^{\rho}_{\Gamma}(\eta,\xi)
-\ \text{ and }\ \llbracket A\rrbracket_{\rho,\eta}(a,b).
+\ \text{ and }\ \mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}(a,b).
 ```
 
 Here $`a::\eta`$ adds the new head value and shifts the existing coordinates. The head type is interpreted at the left tail environment, as in the actual dependent telescope relation. No arbitrary assignment of raw values is presumed to satisfy a context.
 
-**Theorem 5 — source soundness.** Let $`\rho`$ be admissible. For each formed source context $`\Gamma`$, the relation $`\mathrm{Rel}^{\rho}_{\Gamma}`$ is a PER whose support is exactly $`\mathrm{Supp}^{\rho}_{\Gamma}`$; in particular, related environments are both supported. If $`A`$ is formed over $`\Gamma`$ and $`\mathrm{Supp}^{\rho}_{\Gamma}(\eta)`$, then $`\llbracket A\rrbracket_{\rho,\eta}`$ is a saturated PER. If instead we have context-related $`\eta,\xi`$, their interpretations of that formed type are equal: $`\llbracket A\rrbracket_{\rho,\eta}=\llbracket A\rrbracket_{\rho,\xi}`$. Finally, if $`\Gamma\vdash_E p:A`$ and $`\mathrm{Rel}^{\rho}_{\Gamma}(\eta,\xi)`$, then
+**Theorem 5 — source soundness.** Let $`\rho`$ be admissible. For each formed source context $`\Gamma`$, the relation $`\mathrm{Rel}^{\rho}_{\Gamma}`$ is a PER whose support is exactly $`\mathrm{Supp}^{\rho}_{\Gamma}`$; in particular, related environments are both supported. If $`A`$ is formed over $`\Gamma`$ and $`\mathrm{Supp}^{\rho}_{\Gamma}(\eta)`$, then $`\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}`$ is a saturated PER. If instead we have context-related $`\eta,\xi`$, their interpretations of that formed type are equal: $`\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}=\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\xi}`$. Finally, if $`\Gamma\vdash_E p:A`$ and $`\mathrm{Rel}^{\rho}_{\Gamma}(\eta,\xi)`$, then
 
 ```math
-\llbracket A\rrbracket_{\rho,\eta}
-  (\llbracket p\rrbracket_\eta,\llbracket p\rrbracket_\xi).
+\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}_{\rho,\eta}
+  (\mathopen{\lbrack\!\lbrack} p\mathclose{\rbrack\!\rbrack}_\eta,\mathopen{\lbrack\!\lbrack} p\mathclose{\rbrack\!\rbrack}_\xi).
 ```
 
 **Proof.** Using the stated telescope recursion, prove context PER laws and the equivalence of support with self-relatedness, type PER laws and coherence at the specified environments, and term relatedness simultaneously over the actual finite formation and typing rules. The empty telescope is supported by its fixed default environment. These are semantic premises and induction conclusions, not new formation or typing rules.
@@ -473,8 +473,8 @@ The full interpretation gives a positive theorem about actual source terms, stro
 Reify an open semantic term by replacing each variable generator with the corresponding polynomial variable, each primitive constant with its atom, and each application with polynomial application. Induction on a semantic conversion gives polynomial conversion of the reifications. For an original raw atom that contains an application, repeated use of the packing equation yields the required reification. Consequently,
 
 ```math
-\llbracket u\rrbracket_{\mathrm{var}}
-\simeq\llbracket v\rrbracket_{\mathrm{var}}
+\mathopen{\lbrack\!\lbrack} u\mathclose{\rbrack\!\rbrack}_{\mathrm{var}}
+\simeq\mathopen{\lbrack\!\lbrack} v\mathclose{\rbrack\!\rbrack}_{\mathrm{var}}
 \quad\Longrightarrow\quad u\simeq_+v.
 ```
 
@@ -729,16 +729,16 @@ This argument includes instantiations at $`N`$ itself, dependent pair types, and
 Interpret the actual source polynomials compositionally in $`D_h`$, mapping the source's inert constants to $`a_0,a_1`$. Interpret products, sums and identities exactly as in section 5, now with $`\approx`$ and universal quantification over $`\mathcal U`$. The essential change is
 
 ```math
-\llbracket\mathrm{Raw}\rrbracket_h=\top.
+\mathopen{\lbrack\!\lbrack}\mathrm{Raw}\mathclose{\rbrack\!\rbrack}_h=\top.
 ```
 
-Here a type valuation $`\rho`$ is **admissible** exactly when $`\rho(\alpha)\in\mathcal U`$ for every type parameter. Define $`\mathrm{Supp}^{h,\rho}_{\Gamma}`$ and $`\mathrm{Rel}^{h,\rho}_{\Gamma}`$ by the same context recursion as in section 5.4, using the present interpretation $`\llbracket-\rrbracket_h`$ and the constant $`a_0`$ default environment. Thus context support and relatedness concern this carrier and its eligible relations; they are not inherited from the different full-PER model.
+Here a type valuation $`\rho`$ is **admissible** exactly when $`\rho(\alpha)\in\mathcal U`$ for every type parameter. Define $`\mathrm{Supp}^{h,\rho}_{\Gamma}`$ and $`\mathrm{Rel}^{h,\rho}_{\Gamma}`$ by the same context recursion as in section 5.4, using the present interpretation $`\mathopen{\lbrack\!\lbrack}-\mathclose{\rbrack\!\rbrack}_h`$ and the constant $`a_0`$ default environment. Thus context support and relatedness concern this carrier and its eligible relations; they are not inherited from the different full-PER model.
 
-**Theorem 10 — homogeneous source soundness.** Let $`\rho`$ be admissible for $`\mathcal U`$. For each formed source context $`\Gamma`$, $`\mathrm{Rel}^{h,\rho}_{\Gamma}`$ is a PER with support exactly $`\mathrm{Supp}^{h,\rho}_{\Gamma}`$. If $`A`$ is formed over $`\Gamma`$ and $`\mathrm{Supp}^{h,\rho}_{\Gamma}(\eta)`$, then $`\llbracket A\rrbracket^h_{\rho,\eta}\in\mathcal U`$, so it is a saturated PER. At context-related $`\eta,\xi`$, the interpretations of the formed type are equal. For every actual derivation $`\Gamma\vdash_E p:A`$ and every $`\mathrm{Rel}^{h,\rho}_{\Gamma}(\eta,\xi)`$, we have
+**Theorem 10 — homogeneous source soundness.** Let $`\rho`$ be admissible for $`\mathcal U`$. For each formed source context $`\Gamma`$, $`\mathrm{Rel}^{h,\rho}_{\Gamma}`$ is a PER with support exactly $`\mathrm{Supp}^{h,\rho}_{\Gamma}`$. If $`A`$ is formed over $`\Gamma`$ and $`\mathrm{Supp}^{h,\rho}_{\Gamma}(\eta)`$, then $`\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}^h_{\rho,\eta}\in\mathcal U`$, so it is a saturated PER. At context-related $`\eta,\xi`$, the interpretations of the formed type are equal. For every actual derivation $`\Gamma\vdash_E p:A`$ and every $`\mathrm{Rel}^{h,\rho}_{\Gamma}(\eta,\xi)`$, we have
 
 ```math
-\llbracket A\rrbracket^h_{\rho,\eta}
-  (\llbracket p\rrbracket^h_\eta,\llbracket p\rrbracket^h_\xi).
+\mathopen{\lbrack\!\lbrack} A\mathclose{\rbrack\!\rbrack}^h_{\rho,\eta}
+  (\mathopen{\lbrack\!\lbrack} p\mathclose{\rbrack\!\rbrack}^h_\eta,\mathopen{\lbrack\!\lbrack} p\mathclose{\rbrack\!\rbrack}^h_\xi).
 ```
 
 No formation, coherence or typing conclusion is asserted for valuations outside $`\mathcal U`$ or for term environments unsupported by the relevant context.
