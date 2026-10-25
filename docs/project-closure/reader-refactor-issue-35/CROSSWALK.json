@@ -8106,8 +8106,8 @@
     },
     "consolidated-foundations": {
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
-      "sha256": "0b895201472eebf820b25dbbc707a0aa25b3ee2b31f232157ec6a769f8885d08",
-      "read_scope": "Complete 42986-byte public presentation successor independently compared against its exact previously qualified edition: every mathematical expression, proof, argument, citation and status boundary preserved under the declared typography changes. The compact review records the original source-incorporation scopes, failures, corrected scientific reviews and complete presentation-preservation review. Live GitHub rendering is separately verified after publication. No external human review, new historical/kernel replay, owner adoption or accepted-edition amendment is claimed."
+      "sha256": "c50d731b9b7c043d7aae4f7b63a27d6d49f2c86c0b70d03a66d6b28d1abfac58",
+      "read_scope": "Complete extended public edition independently read and compared against actual public arguments, proofs, corrections and reviews. Existing sections1–8 preserve the prior qualified science; new sections9–12 incorporate eight additional complete bounded prose bodies. The first candidate had five real source/coverage/status/bibliographic findings; the exact repaired edition passes the affected recheck. Larger works, supporting formal sources and unavailable canonical editions retain separate scopes. No new Arabic authentication, kernel replay, owner adoption or accepted-edition amendment is claimed."
     },
     "consolidated-information-and-inquiry": {
       "path": "mathematics/information-and-inquiry.md",
@@ -8116,8 +8116,13 @@
     },
     "scientific-consolidation-review": {
       "path": "docs/scientific-consolidation-review.md",
-      "sha256": "52b1b7549a3a644323a9589cb3818a0dc0aee59f39e7fc4027eaf64a2f57f591",
-      "read_scope": "Complete compact incorporation and independent-review companion inspected. Its ordinary table binds the exact paths, SHA-256 identities and byte counts of both new public works; it preserves first-draft failures, scoped source reading, corrections, independent review identities and unfulfilled retirement conditions. It is support for the two expositions, not a third scholarly work, an adopted scientific verdict or whole-corpus qualification."
+      "sha256": "d479946edb6f66ef54375676981ab905941fbcd8a4036283a202483c844820eb",
+      "read_scope": "Complete compact incorporation companion reviewed for exact work identities, 33 distinct bounded prose-body mappings, original and new failed drafts, affected rechecks, partial-source and missing-object boundaries, and held removal/custody. The three ordinary work-table rows bind their exact paths, SHA-256 identities and bytes. This is shared review support, not a fourth scholarly work or whole-order qualification. Actual GitHub rendering and exact integration remain separately recorded post-publication checks."
+    },
+    "consolidated-recognition-and-restoration": {
+      "path": "epistemology/recognition-warrant-and-restoration.md",
+      "sha256": "5c67fd14796625437050f5424b825689e5a332e52520ab8007dbc375a5ba3e27",
+      "read_scope": "Complete 63239-byte chapter and all29 public predecessor bodies independently read. Five written propositions checked analytically with bounded independent sensitivity, causal-guard and parity/mixture calculations. Two substantive initial omissions repaired; exact affected recheck preserves all54 math payloads. Eleven bounded bodies fully incorporated at their scientific scope; eighteen remain partial. Original missing payloads not received. No protected reader instruments, private manuscripts, fresh empirical study, owner adoption or accepted-edition amendment."
     }
   },
   "works": [
@@ -22248,7 +22253,7 @@
     },
     {
       "key": "received-actuality-and-intrinsic-necessity",
-      "title": "Received actuality, original adequacy, and intrinsic necessity",
+      "title": "Received actuality, intrinsic necessity, and original source unity",
       "role": "synthesis",
       "source_keys": [
         "consolidated-foundations"
@@ -22293,6 +22298,30 @@
       ],
       "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
       "explanation": "A new directly readable public exposition containing the consolidated arguments and proofs. Its exact review supports this edition only; historical predecessor works retain their distinct scope and accepted paper editions are not silently amended."
+    },
+    {
+      "key": "recognition-warrant-and-restoration",
+      "title": "Recognition, warrant, defeat and restoration",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-recognition-and-restoration"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-recognition-and-restoration",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A directly readable public scholarly treatment containing actual arguments and finite proofs. Exact independent source incorporation qualifies only this edition and its declared bounded populations. Accepted editions and broader partially used works retain their distinct scope; custody, actual removal and owner adoption remain separate."
     }
   ],
   "relations": [

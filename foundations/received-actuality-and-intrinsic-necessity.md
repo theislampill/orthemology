@@ -1,8 +1,8 @@
-# Received Actuality, Original Adequacy, and Intrinsic Necessity
+# Received Actuality, Intrinsic Necessity, and Original Source Unity
 
 ## Abstract
 
-An account of received actuality must distinguish the production of an effect from the existential adequacy of the resources that produce it. A local explanation may correctly describe how available materials and powers yield a new product while leaving their own received actuality outside its scope. The argument developed here asks what a complete productive account must cover, how an original intrinsic resource supports an actual bearer, and why complete intrinsic adequacy warrants necessity of that same bearer. Its two substantive judgments are global productive adequacy and the modal reach of intrinsic existential sufficiency. The conditional resource-to-bearer inference is given explicitly, while the warrant for those judgments is argued philosophically. Two challenges receive separate treatment: autonomous collective explanation without an original productive resource, and an unreceived original whose own existence is brute and contingent. Neither challenge is answered by changing its terminology or weakening its proposed ontology. The resulting position is an affirmative, defeasible argument for the same actual original's intrinsic necessity, with the precise contribution and limits of each step preserved.
+An account of received actuality must distinguish the production of an effect from the existential adequacy of the resources that produce it. A local explanation may correctly describe how available materials and powers yield a new product while leaving their own received actuality outside its scope. The argument developed here asks what a complete productive account must cover, how an original intrinsic resource supports an actual bearer, and why complete intrinsic adequacy warrants necessity of that same bearer. Its two substantive judgments are global productive adequacy and the modal reach of intrinsic existential sufficiency. The conditional resource-to-bearer inference is given explicitly, while the warrant for those judgments is argued philosophically. Two challenges receive separate treatment: autonomous collective explanation without an original productive resource, and an unreceived original whose own existence is brute and contingent. Neither challenge is answered by changing its terminology or weakening its proposed ontology. The resulting position is an affirmative, defeasible argument for the same actual original's intrinsic necessity, with the precise contribution and limits of each step preserved. The continuation develops the separate argument for one complete original source of the actual connected field, proves the local and propagation results, and reconciles explanatory countermodels and truthful self-knowledge with the affirmative appraisal. Generic explanation, productive provision and individual bearer identity remain distinct.
 
 *Editorial status: this is a new exposition consolidating the named arguments and their recorded corrections. It does not add owner adoption, independent acceptance of this edition, a new formal verification, or fresh authentication of the underlying Arabic sources.*
 
@@ -183,23 +183,291 @@ The positive side's advantage is its account of adequate existential provision. 
 
 Neither a modal table permitting B's absence nor the word “brute” independently warrants the proposed reality's possibility. Equally, repeating “insufficient” does not answer a reasoned objection to the adequacy judgment. A substantive undercutter can challenge the reliability or application of that judgment without constructing an entire competing cosmology. A positive defeating case would have to defend the relevant complete intrinsic account, or its denial, at the same existential target. The recorded argument offers affirmative reasons for its judgment and retains its conclusion on that record; the mere fact that the judgment can be denied is not a reason to return automatically to suspension. [Direct anti-brute return, “The strongest rival and fair adjudication”; affirmative intrinsic-necessity argument, §8; current claim FND-006][s3] [Affirmative intrinsic-necessity argument][s1] [Foundational claims][s8]
 
-## 9. Conclusion
+## 9. Original productive unity
 
-The received-actuality argument has an ordered structure. The ordinary generation case supplies a concrete interpretation of received productive reality. Global productive adequacy concerns the complete field, including derivative suppliers' own received actuality. The resource-to-bearer proof then preserves an actual original under the declared concrete-resource and receipt meanings. The intrinsic-adequacy argument concerns the existence of that same bearer and expressly carries the further modal judgment. These are connected contributions with different premises. [Current claims FND-003–006][s8]
+### 9.1 The target of the unity argument
 
-The strongest collective alternative contests the exhaustive productive application; the strongest brute-original alternative contests the sufficiency judgment at an unreceived terminus. Their objections should be answered at those points. Collective explanatory form alone does not establish the absence of original productive resources, and conditional instantiation or a bearer-presupposing exercise does not complete the original's own existential account. The remaining modal force is openly defended as a positive rational judgment, with affirmative and defeasible warrant in the current source record. [Productive totality, §§7–8; affirmative intrinsic-necessity argument, §§5–8][s4] [Affirmative intrinsic-necessity argument][s1]
+An actual original is not yet a unique complete original provider. Section 3 establishes a relevant unreceived resource intrinsic to an actual bearer. Section 7 carries that same bearer through the necessity argument. Neither inference establishes that every requisite of every effect belongs to this bearer's original provision. The additional unity argument concerns **complete actual original production of the same numerical effect, in the same state and productive respect**. Standing capacity, an unused alternative, proximate performance, and an explanation of a true proposition are different relations. [Common-source comparison, §§2–4][u-review]
 
-The conclusion is intrinsic necessity of the same actual original, not a replacement witness selected for each alternative. It does not by itself identify a unique source, establish personal attributes, or necessitate every effect. Nor do those limits retract separately established results. In particular, the later currentness account preserves the already affirmative essential-independence judgment; this chapter's bounded necessity treatment does not reopen that separate argument. The contribution of this edition is the complete exposition of the present inference and its recorded corrections. [Affirmative intrinsic-necessity argument, §7; restored result and operation decision, §§1–2][s1] [Restored result and operation decision][s7]
+Fix an effect e and the productive respect under consideration. Its full productive account includes the relevant resources, means, receptive conditions and preservation actually involved. An agent's ability to produce an indistinguishable endpoint in another history is not its actual provision of this history. Equally, two distinct intrinsic exercises do not become one act because they contribute to one effect. A shared episode, an intrinsic act, a power and its bearer must remain distinct. This permits genuine received agency: a creature can perform an act using powers whose original productive basis is supplied by another. Common original provision does not make every creaturely act the original's own performance or assertion. [Original-production exclusivity, §§1–2, 5][u-local] [Productive mediation and source perfection][u-field]
+
+The strongest duplicate-production proposal should be stated without weakening it. It alleges two distinct original bearers, each actually and sufficiently producing the same whole effect, neither borrowing completion from the other, with neither idle, partially effective, or merely capable of replacing the other. The contradiction “if A alone produces the whole, B does not also produce it” does not decide this proposal: **exclusive** production is precisely what the proposal denies. Nor does recording both alleged sources in an exhaustive history itself prove that each needed the other. The question is whether two differentiated original contributions can each be the entire original productive content of this same effect. [Productive mediation and source perfection, discussion of primitive double sufficiency][u-field]
+
+### 9.2 Actual efficacy and nonduplication
+
+The source's positive rationale concerns the individuation of productive work. A real additional producer contributes actual efficacy: work, material, an operative capacity, reinforcement, receptivity or preservation. An unused backup does not contribute simply because it could have acted. An additional contribution need not be separately observable, spatially disjoint or numerically measurable. The point is that it has determinate productive content. [Original-production exclusivity, §§2–4][u-local]
+
+Ibn Taymiyya's argument in *Jāmiʿ al-masāʾil*, VI, 94–98, distinguishes the two intrinsic acts and then advances a further claim about their external effects. That second claim must not disappear inside the first. His discussion of cooperation allows contributions to be inseparably mixed; numerical difference in the agents does not by itself yield two separable visible products. The discussion explicitly considers agreement. In *Majmūʿ al-fatāwā*, XX, 175–181, the work performed is compared while relevant operation, will, movement and instruments are held fixed. An apparent unchanged output under an added helper can otherwise reflect a change in the first producer's actual operation. These are arguments for retaining real efficacy in the productive account, not a deduction that every additional act must increase a scalar quantity. [Original-production exclusivity, §§2.1–2.2][u-local] [Primary electronic discussion, XX, 174–184][u-majmu]
+
+The actuality of an effective exercise also matters to the perfection argument. Merely retaining a power does not vindicate every way of exercising it. Conversely, not exercising a power at an unfitting time is not incapacity. The source distinguishes standing qualification, an original mode of agency, an enduring kind of activity, and a particular act at its appropriate occasion. An essential mode may govern every fitting exercise without making each particular exercise eternal or obligatory. It would therefore be invalid to infer reception of the bearer's entire existence from reception in any one state. The stronger conclusion requires the substantive judgment that foreign completion of the relevant original agency conflicts with its essential perfection. [Productive mediation and source perfection, “Four levels of perfection” and the discussion of *Minhāj*][u-field]
+
+The resulting local inference can be isolated exactly. Let q denote the entire external productive content of e in the fixed respect. Let c(A) denote A's actual original contribution to that content. Assume:
+
+1. The alleged contributions are genuine, effective and coequal at the original level.
+2. An entire original attribution to A means c(A) = q.
+3. Distinct such original contributors have distinct external productive contents in this effect and respect.
+
+**Local exclusivity.** At most one bearer has the entire original attribution under these conditions.
+
+**Proof.** If A and B both have it, then c(A) = q = c(B). Condition 3 excludes A and B being distinct. Thus A = B. □
+
+The third condition is the substantive **local nonduplication judgment**. It is not derived merely from distinct intrinsic acts, different source labels, efficient nonreceipt, or the fact that each act has some positive effect. Even small different contributions contained within equal whole contributions would not establish inequality of those wholes. Disjoint nonzero entire contributions would suffice, but are stronger than the actual nonidentity premise. Nothing in the proof requires a unique atomisation of all causal work. [Original-production exclusivity, §§3–3.1][u-local]
+
+Its positive warrant joins actual efficacy, differentiated productive contribution and the adequacy of entire original provision. Explanatory economy supplements that rationale; absence of a demonstrated rival does not create it. The appraisal remains affirmative and defeasible. A conceptual undercutter may challenge the rationale without constructing an entire rival universe. Conversely, a relation table containing two labelled source arrows does not independently warrant two genuine entire original productions. Such a table can locate the disputed premise without settling its metaphysical truth. [Original-production exclusivity, §§4–7][u-local]
+
+Ibn al-Qayyim's account preserves an important asymmetry. A received agent can make a real partial contribution through power, will, instruments and receptive conditions whose actuality is provided at the original level. One effect can accordingly have original creation and genuine derivative performance. This is compatible with the local exclusion of **coequal entire original** duplication. Neither a general ban on multiple causes nor an identification of cognition with production follows. Origin essentialism also cannot decide the issue unaided: an essentially plural origin is available as a proposal unless single originality has already been justified. [Original-production exclusivity, §§2.4, 5–6][u-local]
+
+The same passage quotes Abū al-Ḥusayn's proposed distinction between two productive relations terminating in one effect, supported by the analogy of one object known by two knowers. Ibn al-Qayyim's respondent rejects that distinction alone as a warrant for two independently complete original productions. The positive alternative is asymmetric inclusion: the creature's actual power is itself originally supplied while remaining a genuine partial cause. This does not derive productive nonduplication from two thin occurrence implications, or deny that knowledge can operate in agency. The disputed causal judgment and its source-supported rationale remain necessary; the two-knowers analogy does not settle the original-level productive relation merely by sharing its terminus. [Original-production exclusivity, §2.4][u-local]
+
+### 9.3 Concentrated capacity and eligibility
+
+The source's argument about concentrating powers must be retained alongside actual efficacy. If compatible powers jointly accomplish some source-neutral work, their concentration in one bearer need not reduce that productive capacity. The argument is about possible possession of the powers, not a temporal merger of two necessary beings. It supplies a positive reason to regard independent productive adequacy as an intelligible excellence. [Consolidation of powers and eligibility, “The argument that must be credited”][u-concentration]
+
+Three conclusions remain distinct:
+
+| Question | What would answer it |
+|---|---|
+| Can the same external work be accomplished with concentrated powers? | A warranted account of those powers and the work they produce. |
+| Can each particular existing contributor acquire that fuller power? | A further claim about that bearer's eligibility; a possible different bearer is insufficient. |
+| Would every end valued by the original participants survive? | An account of those ends, including any that require two particular participants. |
+
+The third conclusion is not needed for the first. A good constituted by two agents' participation can disappear while all source-neutral external work remains producible. Nor may the two originals' intrinsic acts be silently classified as created outputs just to make the external product require plurality. On the other side, possible concentration does not by itself show that each named bearer can acquire the concentrated powers while preserving its identity. [Consolidation of powers and eligibility][u-concentration]
+
+That last distinction is a limit of one inference, not a surviving general objection to the source's perfection argument. A comparative argument may disqualify an essentially restricted candidate without requiring that this very candidate could be upgraded. The later appraisal expressly corrects the earlier use of identity-preserving acquireability as a standalone objection. A candidate cannot make every restriction irrelevant merely by declaring the restriction essential to its own kind. Whether the compared excellence is pure, eligible and applicable at the stated scope remains substantive. [Public source-unity judgment, “Present assent and exact reservation”][u-judgment]
+
+A rival already credited with standing solo capacity does not need that capacity added by concentration. Its live question is whether its **actual joint manifestation** constitutes foreign completion of appropriate original efficacy. Conversely, an internally completed intention or a valued cooperative end does not establish entire actual original provision. The strongest rival retains distinct intrinsic powers and exercises, narrow efficient nonreceipt, primitive cognition and a conditional account of coordinated means. These are real credits. They do not yet establish complete original perfection, unrestricted sovereignty or the particular wisdom of every proposed undertaking. [Consolidation of powers and eligibility][u-concentration] [Public source-unity judgment][u-judgment]
+
+## 10. From actual provision to a common connected source
+
+### 10.1 Productive mediation and the local adequacy norm
+
+Suppose A originally supplies a resource actually employed by a derived agent H in producing an effect. H's genuine agency does not turn that received resource into a new original stock. A therefore belongs in the effect's original productive account. This attribution concerns actual productive ancestry, not mere temporal priority, knowledge, proximity or covariance. It does not make H's utterance an assertion owned by A. [Productive mediation and source perfection, “Three attributions”][u-field]
+
+Now suppose another original B supplies a requisite that A's actual undertaking uses. A's unused capacity to supply an alternative requisite does not provide the one actually used. Nor does an intermediary erase its original provenance. Calling a foreign productive input an “occasion” cannot remove its work; calling every explanatory condition a cause cannot establish productive donation either. Earlier acts, their resulting situations and later acts must remain distinct occurrences, even when the same bearer is involved. Collapsing them into a single bearer-node can manufacture a cycle. [Productive mediation and source perfection, “Shared products and later modification”][u-field]
+
+The further normative premise is that complete unborrowed provision is the fitting mode of a qualified original's actual productive role. A transformation illustrates its force and its limit: A may supply the whole intrinsic transformative exercise while B supplies the material. That gives a correct causal account of incomplete original coverage. To classify A's chosen role as defective requires the additional adequacy norm. The word “undertaking” must not prejudge that classification by silently assigning the whole composite task to A. The retained positive rationale appeals to the excellence of actual, self-sufficient original efficacy. The retained dissent asks why a freely chosen less comprehensive role could not be fitting. Both must be represented. [Productive mediation and source perfection, “Independence and the perfection of actual exercise” and “The substantive dissent”][u-field]
+
+### 10.2 An explicit propagation theorem
+
+The conditional proof uses three different domains: sources, actual occurrences, and productive contributions. Let F be a selected field of occurrences. Write R(e,c) when contribution c is in the inventory of actual requisites of e, and O(s,c) when s entirely originally supplies c. Define:
+
+```math
+\begin{aligned}
+\mathrm{Complete}(s,e)&\iff \forall c\,[R(e,c)\Rightarrow O(s,c)],\\
+\mathrm{Participates}(s,e)&\iff \exists c\,[R(e,c)\land O(s,c)],\\
+\mathrm{Overlap}(e,f)&\iff \exists c\,[R(e,c)\land R(f,c)].
+\end{aligned}
+```
+
+The occurrence and contribution inventory must be interpreted independently. “Every supplied operative contribution is listed” cannot establish that the contribution domain contains all relevant reality. The applied account needs actual occurrence, sound and exhaustive requisites, the correct original level, the relevant productive history and all operative branches. These are interpretation obligations, not consequences of the graph. [Anchored-source interface and premise map][u-anchor] [Interpretation and premise map][u-premises]
+
+Fix a qualified source g. Distinguish **classification** of a relevant incomplete role as defective from **conformance** of g's actual relevant roles to that norm. If every incomplete relevant role would be defective and no such role of g is defective, every relevant role is complete. This implication is a contradiction argument; it supplies no independent philosophical warrant for either premise. Further require:
+
+- Represented participation in an admitted occurrence is a real original contribution there.
+- Real original participation by g makes the adequacy norm applicable to g in that occurrence.
+- g actually originally participates at an anchor a in F.
+- Every occurrence in F can be reached from a by a finite sequence of overlaps within F.
+
+**Coverage theorem.** Under those assumptions, g completely originally supplies every occurrence in F. Causal nonduplication is not required for this coverage conclusion.
+
+**Proof.** The actual anchor and role-applicability premise make g's role at a relevant, hence complete. Suppose g is complete at e and e overlaps f through c. Then O(g,c), so g has represented participation at f. Use-soundness makes this real original participation, role-applicability makes it relevant, and adequacy of the role makes g complete at f. Induction along the finite overlap path from a proves completeness at every nominated occurrence. The path of length zero retains the anchor conclusion. No bound on the number of occurrences, temporal beginning, well-founded productive ancestry or qualification of rival sources is used. □ [Anchored-source interface, coverage proofs][u-anchor]
+
+Overlap is symmetric incidence, not reverse efficient causation. For example, two earlier contributions can both be requisites of a later mixed occurrence; the overlap path connects the earlier accounts through that occurrence without asserting that the later occurrence caused its past. Conversely, an arbitrary drawn edge or common subject matter is not a productive overlap. [Anchored-source interpretation and review][u-anchor-guide] [Independent bridge review][u-anchor-review]
+
+**Uniqueness extension.** Assume local nonduplication for every requisite in F: any two sources entirely originally supplying the same such c are identical. Every represented original participant in any occurrence of F then equals g.
+
+**Proof.** If s participates through c, then O(s,c). Coverage gives O(g,c) for this same c. Nonduplication gives s = g. □
+
+To extend this conclusion to **every actual original participant**, each must have a represented requisite witness. Call this visibility. Without it, an actual participant can be omitted from the inventory and evade the proof. The conclusion is about participation in F; an idle putative source or a source active only outside F is not identified by it. Global nonduplication is stronger than needed: only the nominated field's requisites enter the proof. [Anchored-source interface, represented and actual rival proofs][u-anchor]
+
+There is a separate vacuity issue for a source merely labelled complete. If an occurrence has no listed requisite, every source satisfies its completeness predicate. To prove uniqueness of such complete providers, the occurrence must have at least one requisite. A visible actual anchor supplies one; every subsequent overlap supplies one at the next occurrence. Therefore all occurrences in the connected field have nonempty inventories. Two complete providers then share an actually listed c and are identical by nonduplication. For this narrower uniqueness result, a positive anchor inventory is sufficient; full visibility is one way of establishing it, not an irreducible additional requirement. [Anchored-source interface, positive-inventory proofs][u-anchor] [Independent bridge review][u-anchor-review]
+
+The theorem also exposes how much the local norm does. With the fixed soundness, role, anchor and connectivity premises, satisfaction of the relevant completeness norm is equivalent to global coverage: the forward implication is the theorem, and the reverse implication is immediate by restriction to relevant roles. A participation-to-completeness formulation similarly becomes equivalent to coverage when the anchor has represented participation. This is useful transparency. It is not an independent proof of the norm or a reason to call the interpretation arbitrary. The philosophical arguments in sections 9–10.1 must do that work. [Anchored-source interface, equivalence proofs][u-anchor]
+
+### 10.3 An abstract gluing result and its counterexamples
+
+A shorter set formulation is helpful when complete local providers have already been established. For each target e in a nonempty field E, let U(e) be the set of sources completely adequate for e, with the same bearer identity and productive respect throughout. Suppose every U(e) is a singleton. Suppose a graph connects E by finite undirected paths and its used edges satisfy:
+
+```math
+U(e)\cap U(f)\ne\varnothing.
+```
+
+**Gluing theorem.** There is one source g such that U(e) = {g} for every e in E.
+
+**Proof.** Choose an anchor e₀ and its unique provider g. Two singleton sets with a common member are equal. Equality therefore propagates along every finite path from e₀. All U(e) equal {g}. Existence comes from the nonempty anchor and its singleton; uniqueness follows at that anchor. No finite bound on E or choice of an infinite family of providers is needed. □ [Common-source comparison, §1][u-review]
+
+This result must not replace its own hypotheses with weaker ones. Local **at-most-one** production does not supply an inhabitant of U(e). A relevant original resource is not already a complete provider. Ordinary causal interaction is not already overlap of complete provider sets. Topological connectedness under an unrelated topology is not graph connectivity. With several graph components, the proof gives a source per component, without deciding whether those sources agree. With E empty, all sources are vacuously globally adequate, so uniqueness can fail. A one-target field needs local existence and uniqueness but no edge. [Common-source comparison, §§1–4][u-review]
+
+Without the singleton premise, even pairwise overlap does not suffice: {a,b}, {b,c} and {a,c} have nonempty pairwise intersections but no common member. A different sufficient theorem uses a compact source space with closed adequacy sets satisfying the **finite intersection property**. If their total intersection were empty, their open complements would cover the compact space; a finite subcover would contradict that property. This proves existence, not uniqueness. No philosophical application has established the required topology or compactness merely by using this theorem. [Common-source comparison, §1][u-review]
+
+Under singletonhood, declaring a connected relation of “having the same provider” already amounts to declaring all providers equal. Independently evidenced sparse productive overlap can provide a useful argument; defining an agreement relation after the desired conclusion cannot provide new unity warrant. The gluing result is an exposition of an inherited conditional route, not a new discovery of the underlying philosophy. [Common-source comparison, §§1, 3–4][u-review]
+
+### 10.4 The affirmative judgment and its exact scope
+
+The current public appraisal affirms one complete original source of the relevant actual productively connected created order at a defeasible research standard. Its reasons combine original actuality, necessity and independence with actual adequate efficacy, the original mode's perfection, faithful mediation and local nonduplication. This is stronger than an unspecified preference. It is not a demonstration of the impossibility of every plural-original reality. The conditional theorems show how particular premises support coverage and identity; they neither create the cumulative warrant nor retract it because some premises remain philosophically disputed. [Public source-unity judgment][u-judgment] [Common-source comparison, §§3–4][u-review]
+
+The surviving reservation concerns unrestricted application of the efficacy norm to every proposed primitive, voluntarily joint original manifestation. The strongest proposed rival has genuine restricted explanatory and agency credits, but no independently warranted full original-perfection certificate. Failure to exhibit such a certificate is not itself a proof of unity. A well-directed undercutter need not provide a complete competing cosmos. A disconnected active original, an idle putative original, all possible realities and universal mastery over every possible peer require distinct arguments. A result for the nominated actual field should neither be erased nor extended to them silently. [Public source-unity judgment][u-judgment] [Productive mediation and source perfection, scope of the field conclusion][u-field]
+
+## 11. What a complete explanatory fact does—and does not—establish
+
+Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
+
+### 11.1 Self-explanation of a total explainer
+
+Let X be a nonempty domain of actual facts. Admit its total plurality F and the singleton of each fact. Write E(x,S) for x completely explaining a nonempty plurality S. The relevant complete-transitivity clause is:
+
+```math
+E(x,S)\land y\in S\land E(y,T)\ \Longrightarrow\ E(x,T).
+```
+
+**Total self-explanation.** Suppose E(Q,F), and Q's singleton has an actual complete explainer R. Complete transitivity implies E(Q,{Q}).
+
+**Proof.** Since R is actual, R belongs to F. Apply transitivity to E(Q,F), R ∈ F and E(R,{Q}). The resulting explanation is E(Q,{Q}). □
+
+Unrestricted plural sufficient reason provides the two required explanations, but the local theorem needs only these two instances. It requires neither a fusion fact representing F, output projection, partial transitivity nor a ban on extended circles. Alternatively, member projection alone gives the conclusion from E(Q,F) and Q ∈ F. Thus the transitivity clause is sufficient in the displayed package, not logically indispensable under every alternative package. Full self-explanation here means E(Q,{Q}); it does not mean that Q lacks a distinct explainer, that every proper part explains itself, or that Q is necessary, supernatural or a unique agent. [Plural-explanation analysis, totality proof and terminology][u-psr]
+
+All-actual-fact comprehension and nonemptiness are substantive assumptions. A restricted principle for basic natural facts does not automatically supply F. An empty domain can make universal conditional formulations vacuous. Likewise, a formal type of “facts” does not by itself warrant the intended universe of actual truths. The printed source proof's appeal to explanation of a member needs a projection bridge, and its circle restriction needs the stated nonparthood condition, not mere distinctness. The short proof above avoids those dependencies while preserving the source-relative existence conclusion. It does not establish novelty or the epistemological defense of sufficient reason. [Plural-explanation analysis, comparison with the printed proof][u-psr]
+
+### 11.2 Why sufficient reason without those bridges is weaker
+
+Use inclusive fact-parthood ≤ and define partial explanation on the **source side**:
+
+```math
+P(x,S)\iff\exists z\,[x\le z\land E(z,S)].
+```
+
+The circle restriction used here is:
+
+```math
+P(x,S)\land y\in S\land y\ne x\land y\not\le x
+\ \Longrightarrow\ \neg P(y,\{x\}).
+```
+
+It allows a target that is a part of its partial explainer. It is not a blanket prohibition of every cycle or of every form of partial self-explanation.
+
+Consider facts q₀,q₁,…, with all nonempty subsets admitted as pluralities. Define qₘ ≤ qₙ exactly when m ≥ n. For singletons let E(qₙ₊₁,{qₙ}) be the only complete explanations; for every plurality with at least two members let q₀ be its only complete explainer. Every nonempty plurality has an actual explainer, including infinite pluralities and the totality. Parthood is reflexive, transitive and antisymmetric. Exact source-side closure gives P(qₘ,{qₙ}) precisely when m ≥ n+1; every fact partially explains every multi-member plurality through q₀. [Plural-explanation analysis, countable control][u-psr]
+
+The circle restriction holds: if target qₖ is not part of qₘ, then k < m, whereas P(qₖ,{qₘ}) would require k ≥ m+1. No fact completely explains itself, since n ≠ n+1. No fact is a proper part of its own full singleton explainer either. Both transitivity clauses fail: q₀ explains {q₀,q₁}, and q₁ explains {q₀}, but q₀ neither fully nor partially explains {q₀}. Member projection fails on the same example. Thus unrestricted plural sufficient reason, source-side partial explanation and the circle restriction do not force full self-explanation after **both** transitivity clauses and output projection are removed. This is not a countermodel retaining the source's full package. [Plural-explanation analysis][u-psr]
+
+The chain has no disjoint remainders and fails ordinary supplementation. That limitation can be removed. Take the nonzero elements of an atomless bounded partial order with a top T. Let E(z,{x}) hold exactly when z is a nonzero proper part of x, and let T alone explain every plurality with at least two members. Atomlessness supplies each singleton explainer. The source-side definition then gives P(y,{x}) exactly when y is a proper part of x: one direction follows from y ≤ z < x; for the other take z = y. Every element partially explains each multi-member plurality through T. The same circle proof works, no fact explains itself, and a proper part a < T witnesses failure of both transitivity clauses and member projection through {T,a}. [Supplemented control][u-psr]
+
+A concrete realization uses all nonempty **regular open** subsets of the real line, ordered by inclusion. An open U is regular open when U equals the interior of its closure. Every nonempty such U contains two disjoint nonempty open intervals, giving a nonzero proper part. For strong supplementation, if U is not contained in regular open V, then U minus the closure of V is a nonempty open set: otherwise the openness of U would put it inside the interior of that closure, namely V. A nonempty interval within the difference is a part of U disjoint from V.
+
+For a nonempty family of regular open sets, let A be their union and J the interior of the closure of A. Because A is open, A ⊆ J ⊆ closure(A), so A and J have the same closure and J is regular open. It is the least regular open upper bound. An open region overlapping J intersects A because A is dense in J, and hence intersects a family member. The converse is immediate. J therefore satisfies the overlap condition for a fusion, not merely an upper-bound label. This supplies arbitrary nonempty fusions and strong supplementation while preserving the explanatory counterinterpretation. The generic order argument has retained formal verification; this regular-open realization is ordinary mathematical proof, not a newly kernel-checked topological development. Its complement is mereological, not propositional negation. [Plural-explanation analysis, strengthened realization][u-psr]
+
+### 11.3 Uniqueness requires the right membership
+
+Assume antisymmetry of parthood and the displayed circle restriction.
+
+**Mutual partial explanation.** If P(q,{r}) and P(r,{q}), then q = r.
+
+**Proof.** Suppose q ≠ r. Applying the circle restriction with source r and target q, the existing reverse explanation excludes q not being part of r; thus q ≤ r. Interchanging q and r gives r ≤ q. Antisymmetry gives q = r, a contradiction. □
+
+Now let partial explanation have its source-side definition, assume reflexive parthood and member projection for full explanation. If E(q,F), E(r,G), r ∈ F and q ∈ G, projection gives E(q,{r}) and E(r,{q}); reflexivity makes both partial. Hence q = r. For a shared target F it suffices that **both explainers belong to F**. Unrestricted sufficient reason for the nonempty all-actual-fact plurality then supplies existence and uniqueness of its full explanatory fact. Neither explanatory transitivity clause is needed. [Total-explainer uniqueness][u-unique]
+
+The membership condition cannot be dropped for a narrower target. A simple model has four distinct facts q,a,b,e with equality as parthood. q explains every nonempty plurality; a and b explain only {e}; e explains nothing. Partial and full explanation coincide. All nonempty predicate pluralities are admitted. Sufficient reason holds through q. Both transitivity clauses hold because the only target of a or b is e, which has no outgoing explanation. Projection holds, and no distinct reciprocal explanatory pair violates the circle restriction. q is the unique all-fact explainer, while the full explainers of {e} are exactly q,a,b. The model has no fusion for arbitrary distinct facts. [Total-explainer uniqueness, finite control][u-unique]
+
+Here too the mereological limitation can be removed. Take the fifteen nonempty subsets of a four-atom set, with inclusion as parthood. Denote its four atomic facts by q,a,b,e and use the same explanatory rule: q explains every nonempty plurality of facts, a and b only {e}, and all other facts nothing. Every full explainer is atomic, so its only nonzero part is itself; source-side partial and full explanation still coincide. Strong supplementation follows by taking an atom in x minus y whenever x is not contained in y. The union of a nonempty family is its least upper bound and its fusion: a fact overlaps the union exactly when it shares an atom with a family member. The transitivity, projection, sufficient-reason and circle checks above remain valid. Distribution to parts also holds: q explains every nonempty singleton, and e has no nonzero proper part. Thus proper parts, supplementation and arbitrary nonempty fusions coexist with three distinct explainers of {e}. [Supplemented-fusion uniqueness control][u-boolean]
+
+These controls prove relational non-entailment, not the possibility of a plural-original world. A target containing only a created field can omit candidate explainers, so the all-fact theorem cannot be transferred to it without a membership bridge. More fundamentally, a unique **explanatory fact** may concern several beings. No injective representation of individual bearers by facts has been assumed, and generic explanation has not been identified with productive origination. Neither the positive theorem nor the controls settle original-bearer unity. [Total-explainer uniqueness, semantic boundary][u-unique]
+
+### 11.4 The restricted particular-explanans bridge
+
+The restricted argument needs another direction of parthood kept visible. Write W(x) for wholly particular, H(x) for supernatural in the source's sense, and B(x) for W(x) and not H(x). A restricted sufficient-reason premise gives every nonempty plurality of B-facts an explainer y that is neither identical to nor a part of any target member. Assume a nonempty total basic-natural plurality N is available. It follows that y is not basic natural. It does **not** yet follow that some fact is supernatural: y might be nonparticular and contain a particular natural constituent. [Particular-explanans analysis, §§1–2][u-particular]
+
+Let b be a member of N. Member projection supplies E(y,{b}). Grant the strong useful reading of the particular-constituent premise: y contains a **wholly** particular p. If p were not supernatural, it would belong to N, and projection would give E(y,{p}). But p ≤ y is compatible with y not being a part of p. The stated externality excludes the opposite direction. A prohibition of basic **full** self-explanation also does not exclude p being a proper part of its own complete explainer. [Particular-explanans analysis][u-particular]
+
+A complete small control uses the three nonempty subsets of a two-atom set. Call the atoms b,u and their fusion c. Only b is wholly particular and basic natural; nothing is supernatural. Let the only full explanation be E(c,{b}). Partial explanations of {b} then have sources b,u,c. Restricted sufficient reason and its externality hold because c is neither b nor a part of b. The explainer contains the required particular constituent b, and b does not fully explain itself. Both transitivity clauses hold because b has no full outgoing explanation. Member-and-part projection adds nothing beyond the existing singleton edge. For the circle restriction, source b is exempt by identity, source c by b ≤ c, and source u has no prohibited reverse P(b,{u}). Strong supplementation and all nonempty fusions hold in the two-atom mereology. No proper part of c fully explains {b}, so ordinary part-minimality of explanation does not remove the control. An optional E(u,{u}) edge preserves these checks. Unrestricted sufficient reason fails, for example at {c}. [Particular-explanans analysis, three-fact control][u-particular]
+
+The edge E(c,{b}) is stipulated. No claim has been established that an explanandum-containing mixed fact is an adequate real explanation. The control isolates a missing explicit bridge; an independently defended semantic account of explanation may exclude the edge. Relevant inclusion of a **being** in a fact is also not automatically fact-parthood. Neither conjunction syntax nor the names of the predicates supply that interpretation. [Particular-explanans analysis, §4][u-particular]
+
+Two sufficient repairs are exact:
+
+- **Exclude basic proper-part self-explanation.** Suppose no basic natural p is a proper part of a full explainer of itself. The p supplied above, if natural, would be basic; it would be part of y, distinct from y by restricted externality, and fully explained by y. That contradicts the added condition. Therefore p is supernatural. Only member projection is needed; the transitivity and circle principles add no work to this deduction.
+- **Strengthen the selected explainer's externality.** Require that no member of N be part of y. A wholly particular constituent p ≤ y cannot then be basic natural, so it is supernatural. Once p is supplied, no further projection step is needed. Disjointness is sufficient but stronger than this condition.
+
+These are substantive sufficient repairs, not claims about a uniquely weakest premise. Their philosophical and epistemological warrant must be supplied. If the wholly particular starting fact is already supernatural the existence conclusion is immediate; otherwise it supplies the nonempty basic target. An empty basic class cannot be treated as an inhabited one. [Particular-explanans analysis, §5][u-particular]
+
+Retaining unrestricted all-fact explanation yields a different valid route. Suppose E(Q,F) for all actual facts, parthood is reflexive and antisymmetric, and a wholly particular constituent p ≤ Q is supplied by projecting to an actual particular target. If p ≠ Q, then Q is not part of p. Yet P(p,F), Q ∈ F and P(Q,{p}) hold, the last by member projection and reflexivity. They violate the circle restriction. Hence p = Q. Thus Q is wholly particular; projection gives E(Q,{Q}); and a prohibition of basic full self-explanation makes Q supernatural. No transitivity is needed. This stronger route imports all-fact explanation and comprehension absent from the restricted control; it is not a proof from restricted sufficient reason alone. [Particular-explanans analysis, §6][u-particular]
+
+### 11.5 The modal transport needs symmetry, not all of S5
+
+A further formal distinction concerns the modal strength of an explanatory argument. Let C mean that the relevant explanatory coverage obtains and S denote a proposed sufficient explanatory condition. Admit C → S and S → □C at the accessible worlds relevant to evaluation. On a symmetric accessibility relation, possibility of C entails actual C.
+
+**Proof.** If w accesses v and C holds at v, the two admitted implications give S and then □C at v. Symmetry gives accessibility from v back to w. Thus C holds at w. At w it is enough to assume □(C → S) and □(S → □C); global truth of the implications is stronger than needed. Equivalently, non-C at w implies necessary non-C there. The transport uses the dual form ◇□p → p of the familiar symmetry axiom. Neither reflexivity nor transitivity is needed. □ [Local modal-transport refinement][u-symmetry]
+
+Symmetry cannot simply be dropped in favour of reflexivity and transitivity. Take two worlds w₀,w₁ with edges w₀→w₀, w₀→w₁ and w₁→w₁. Let C and S be false at w₀ and true at w₁. Both explanatory implications hold everywhere, since w₁ accesses only itself. But C is possible and false at w₀. There is no empty-successor or terminal-box vacuity. This proves failure on that nonsymmetric frame, while the preceding proof establishes the general sufficient result. It is not a characterization of every frame or a metaphysical possibility certificate. [Local modal-transport refinement][u-symmetry]
+
+Reducing the modal frame assumption does not establish the necessary-coverage implication S → □C, explanatory exhaustiveness or the cross-world interpretation. A richer argument that first proves invariance of a substantive profile can still use stronger modal assumptions at that earlier step. This lemma begins after necessary adequacy is admitted; it does not turn thin coverage predicates into a counterexample preserving an independently warranted rich explanatory profile. [Local modal-transport refinement][u-symmetry]
+
+## 12. Self-knowledge, sovereignty and practical conformance
+
+### 12.1 Knowing whose act it is
+
+Complete truthful self-knowledge does not itself identify two original subjects. Consider a modal structure with worlds W, a fixed outer domain of bearers B, an existence relation, and interpreted powers, acts, reasons and productive support. Choose agents present throughout the represented modal range. A **center** (w,b) records a world and its distinguished agent. At that center, “I” denotes b. Ordinary bearer quantification still ranges over B, so centering does not delete a peer or supplier. A shift to agent a in that chosen persistent agent set evaluates the same formula at (w,a). B can know that A truthfully says “I am A” without B falsely self-ascribing A's identity. [Centered self-knowledge analysis, §§1–2][u-center]
+
+**Conservative centered enrichment.** Suppose the base theory has no epistemic commitments incompatible with the following expansion. At each center c give its knowledge operator exactly the epistemic alternative {c}; keep metaphysical accessibility separate, carrying the same agent from w to an accessible v. Then all old non-epistemic truths are unchanged, and every formula φ in the extended compositional language satisfies:
+
+```math
+K\varphi\ \longleftrightarrow\ \varphi
+```
+
+at its center.
+
+**Proof.** The old-language reduct is the original structure. Induction on old formulas preserves their truth; at the modal step the same metaphysical relation and bearer assignment are used. The knowledge clause checks φ at every epistemically accessible center, whose sole member is the current center. Hence knowledge and truth coincide, including iterated knowledge and perspective-shift formulas. No old bearer, act, productive support or modal quantifier was changed. □ [Centered self-knowledge analysis, §3][u-center]
+
+The construction preserves factivity, complete semantic knowledge and introspection. It does not repair a base theory already asserting false belief, certify a real intrinsic realization of cognition, or establish that action is **based on** recognized first-person reasons. A policy selecting an owned act and a record naming its subject can coexist without the recognized reason actually guiding selection. That practical basing relation requires its own interpretation. A stipulation that each knows “I alone provide the whole” simply imports whole provision by factivity; it does not derive it from generic self-knowledge. [Centered self-knowledge analysis, §§3–4][u-center]
+
+Consequently, a reduced two-source interpretation can retain truthful awareness of each proper act and of joint productive support. Neither agent must misidentify itself or claim sole provision. This demonstrates a limited semantic non-entailment. It does not establish that the enriched agents meet the complete original-perfection profile, or that their joint ontology is metaphysically possible. The existing positive common-source appraisal is not cancelled by this control. [Centered self-knowledge analysis, §§4, 7][u-center]
+
+Common reasons require a further distinction. Two policies can respond to the same fitting reason without one peer efficiently producing the other's will or a third efficient controller being introduced. Conversely, the shared reason does not automatically provide a complete explanation of why these particular agents instantiate those determinations. Shared reasons alone establish neither one numerical subject, a third original giver, nor reciprocal efficient donation. This preserves a genuine explanatory credit of the concordant proposal without certifying its entire original ontology or practical basing. [Centered self-knowledge analysis, §4][u-center]
+
+### 12.2 Three substantive routes to exclusion
+
+There are stronger contradiction arguments, each with an identifiable additional premise.
+
+**Universal mastery and unassailability.** Fix one respect of ultimate authority. Suppose every qualified original masters every distinct existing bearer, and no qualified original is mastered by a distinct bearer in that respect. Two distinct qualified originals A and B would give both A's mastery of B and its negation. This proves at most one; it supplies no existence. It requires neither an unwise possible quarrel nor a task of producing another necessary being while leaving that being unreceived. The substantive question is why the mastery domain includes every distinct bearer, rather than only created effects. Truthful self-recognition and thin nonreceipt do not establish that scope. [Centered self-knowledge analysis, §5A][u-center]
+
+**Complete productive history and proper unborrowed exercise.** Suppose every claimed complete original undertaking for x includes an actual proper unborrowed exercise of its source; completeness covers every mode genuinely belonging to x's actual full productive origin; and ultimate provision of a mode properly belonging unborrowed to t can be attributed to s only if s = t. If A and B both completely account for x, choose B's actual witness. A's history-completeness covers it, so the exclusion yields A = B. The interpretation must warrant that the intrinsic original exercise is indispensable to x's productive origin; it cannot be inserted into a list of created effects by fiat. Shared power or one common event is not automatically co-ownership of the same proper act. [Centered self-knowledge analysis, §5B][u-center]
+
+**Incompatible guarantees.** Let an A-choice guarantee outcomes in X and a B-choice guarantee outcomes in Y. If X and Y are disjoint and those particular choices have a common admissible completion, that completion would have to lie in their empty intersection. Thus the choices are not compossible. Full rectangular independence of every choice is stronger than needed, but some warranted compossibility is essential. Necessary concord does not supply it. Nor may “for every peer setting there is some own means” be exchanged for “one own means works for every peer setting.” Standing capacity, contextual control and actual whole-origin provision remain distinct. [Centered self-knowledge analysis, §5C][u-center]
+
+### 12.3 Recognition can mediate conformance
+
+A properly epistemic argument uses self-knowledge as a detector of an independently established defect. Suppose an irreducibly joint undertaking is in fact a constitutive pure defect of each relevant original's appropriate agency. Suppose each correctly recognizes that status as its own, and a perfectly practically ordered original never knowingly enacts such a defect. Actual enactment then contradicts practical conformance. Self-knowledge does inferential work when the conformance norm is about knowing enactment. [Centered self-knowledge analysis, §6][u-center]
+
+It does not establish the defect classification. A smaller product, unexercised standing capacity, newly attained fitting end, or freely chosen received means is not automatically a constitutive defect. The relevant original-efficacy argument must show why foreign completion in this actual role is incompatible with its proper mode. Equally, a valued cooperative good does not automatically vindicate the role. The question concerns real adequate agency, not a perfect original's vanity or desire for exclusive credit. This distinction preserves the source's positive perfection argument and the strongest rival's actual claims without manufacturing an epistemic shortcut. [Centered self-knowledge analysis, §§6–7][u-center] [Public source-unity judgment, “The de se proposal”][u-judgment]
+
+## 13. Conclusion
+
+The received-actuality argument establishes a relevant actual original under its defended productive interpretation, and the intrinsic-adequacy argument concerns the necessity of that same bearer. Original unity requires further work: differentiated actual efficacy, the fitting mode of complete original provision, faithful mediation and the genuine connected field. These contributions are compatible and cumulative, but their premises are not interchangeable. Local nonduplication gives at most one entire attribution; it does not create a complete provider. Connectivity propagates warranted coverage; it does not generate it.
+
+The resulting source-unity appraisal remains affirmative and defeasible at the actual connected-field scope. The strongest collective-grounding, brute-original and harmonious-plural proposals challenge different judgments. Their genuine explanatory or structural credits must survive, together with the reasons the retained appraisal finds insufficient for parity. The conditional proofs establish their stated inferences; they neither replace philosophical warrant nor certify every semantic application. Generic explanatory-fact uniqueness and complete centered knowledge supply no silent bridge to a unique original bearer.
+
+The separately affirmative essential-independence judgment also retains its inherited constitutive scope. The bounded necessity argument neither retracts that result nor independently establishes it by repeating a necessity proof; the later alternative productive route is distinct from its original rationale. [Intrinsic necessity: restored result and bounded operation decision, §§1–2][s7]
+
+The remaining questions are substantive: how complete original efficacy applies to a proposed primitive joint manifestation; how source individuation and actual requisite coverage are independently warranted; and what grounds a wider mastery or disconnected-domain conclusion. Those questions preserve the established actual-field result without expanding it into an unrestricted theorem. The synthesis does not alter accepted editions, supply new owner adoption, or claim that editorial unification is a new scientific discovery.
+
 
 ## Appendix: edition and evidence scope
 
-This chapter consolidates nine repository sources pinned to commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`: the productive-totality argument; the material-entry argument and its review; the intrinsic-necessity argument and its review; the direct anti-brute return; the later currentness account; the selected foundational claims; and the unchanged formal interface. Their exact byte identities were checked against that Git baseline. The argument and review bodies, formal source, and FND-003–006 fields have distinct reading scopes recorded in the accompanying incorporation evidence.
+Sections 1–8 consolidate nine repository sources pinned to commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`: the productive-totality argument; the material-entry argument and its review; the intrinsic-necessity argument and its review; the direct anti-brute return; the later currentness account; the selected foundational claims; and the unchanged formal interface. Their exact byte identities were checked against that Git baseline. The argument and review bodies, formal source, and FND-003–006 fields have distinct reading scopes recorded in the accompanying incorporation evidence.
 
 The final necessity review accepts report hash `ef593783c6eaea96aec43d24007244d614fb3f55b5ea4d18cf158e4751902c3a` after the modal-reach, exercise-scope, and incomplete-account corrections. The material review accepts `d222fa7f50135c5c9fb33f8ecd21e4d369598731f5b142db881e86d6a37abb32` after the field-target correction. The initial material report's hash is known, but its exact initial bytes were not preserved; no reproducible full diff is claimed.
 
 These are the sources' recorded review dispositions. The companion review record identifies this new editorial edition's exact text, independent findings and corrections; its review does not confer owner adoption or amend an accepted paper. It adds no fresh Arabic source authentication, manuscript collation, empirical observation, kernel execution, private-source import, or scientific adoption. It preserves the existing private and contextual holds without using their bodies.
 
+Sections 9–12 integrate the public original-production, mediated-provision, common-source, explanatory and centered-knowledge arguments cited below. The ordinary mathematical proofs are supplied here; retained Lean sources and historical checks remain supporting evidence, with no new kernel replay claimed. The independently read original-source core preserves its types and explicit semantic premises. The larger earlier field treatment and the common-source comparison have other substantive sections; their use here does not retire those complete works.
+
+The public unity appraisal is a received, privacy-qualified edition, not receipt of two earlier canonical bodies whose exact bytes remain unavailable. The compact incorporation record gives their precise identities and receiving limits. That boundary prevents this synthesis from claiming new authentication of the missing editions, while retaining the positive research-level judgment actually present in the public successor and independently compared sources. No private accepted paper was read or amended.
+
 ## References
+
+- Robert C. Koons and Alexander R. Pruss, “Skepticism and the principle of sufficient reason,” *Philosophical Studies* 178 (2021), 1079–1099; published online in 2020. [DOI: 10.1007/s11098-020-01482-3][u-kp]. Section 2 supplies the explanatory principles; the conditional reconstructions and controls above distinguish their additional assumptions.
+- Ibn Taymiyya, *Jāmiʿ al-masāʾil*, sixth collection, “Faṣl fī al-tawḥīd,” 94–98; edited by Muḥammad ʿUzayr Shams, Dār ʿĀlam al-Fawāʾid. [Received edition scan](https://csiislam.org/img/library_dine/c1473365dbab.pdf). The retained source return identifies the first-edition date 1429 AH through metadata rather than a visually verified dated colophon. This synthesis has not freshly inspected the scan.
+- Ibn Taymiyya, *Majmūʿ al-fatāwā*, XX, 174–184, especially 175–181: [electronic locus][u-majmu]. *Minhāj al-sunna al-nabawiyya*, II, 162–183 and III, 321, at the inherited loci discussed by the cited source studies: [productive efficacy](https://islamweb.net/ar/library/content/108/156/), [continuation](https://islamweb.net/ar/library/content/108/157/), [perfection](https://islamweb.net/ar/library/content/108/158/), and [act and effect](https://islamweb.net/ar/library/content/108/366/). These preserve the source studies' edition-page mappings; they are not newly authenticated transcriptions.
+- Ibn Taymiyya, *Sharḥ al-Aṣbahāniyya*, especially printed 411–419 on fitting action at its time and the relevant means/end distinctions, in the [edition used by the public source study](https://d1.islamhouse.com/data/ar/ih_books/single_01/ar_Explaining_Alasbahaneia.pdf). The disputed readings reported in that study are not silently corrected here.
+- Ibn al-Qayyim, *Shifāʾ al-ʿalīl*, [electronic division 002](https://www.islamicbook.ws/amma/shfa-alalil-002.html), electronic pages 143–147 and 150, especially the quoted objection and respondent's reply at 146. These are electronic passage identifiers, not freshly certified print-page references.
 
 - [Why complete original self adequacy warrants intrinsic necessity][s1].
 - [Bounded inference review of the affirmative necessity report][s2].
@@ -212,6 +480,36 @@ These are the sources' recorded review dispositions. The companion review record
 - [Original resource/bearer formal interface][s10].
 - Shamik Dasgupta (2009), [qualitative-first ontology argument][d09]; (2014), [collective grounding argument][d14]; (2016), [metaphysical rationalism and autonomy][d16]. These primary-paper links accompany the inherited comparison in the productive-totality source; they do not claim fresh complete readings.
 - [Billon (2023), indexed law-relative proposal][b23]. The inherited full-paper access limit is retained in section 4.
+
+- [Original-production exclusivity and its positive rationale][u-local].
+
+- [Actual original provision, mediation and source perfection; selected unity sections][u-field].
+
+- [Concentration of powers and eligibility for independence][u-concentration].
+
+- [Public source-unity appraisal and the comparative-eligibility correction][u-judgment].
+
+- [Anchored original-source bridge: retained formal source][u-anchor].
+
+- [Anchored bridge: interpretation and premise map][u-premises].
+
+- [Anchored bridge: interpretation and scope][u-anchor-guide].
+
+- [Independent review of the anchored bridge][u-anchor-review].
+
+- [Common-source bridge and affirmative warrant: independent comparison][u-review].
+
+- [Plural self-explanation: proof and independence controls][u-psr].
+
+- [Total-explainer uniqueness and the membership condition][u-unique].
+
+- [Narrow-target nonuniqueness with supplemented fusion mereology][u-boolean].
+
+- [The restricted particular-explanans bridge and exact repairs][u-particular].
+
+- [Centered self-knowledge and original sovereignty][u-center].
+
+- [The symmetry condition for local explanatory modal transport][u-symmetry].
 
 [s1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/affirmative-intrinsic-necessity-20261009/REPORT.md
 [s2]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/affirmative-intrinsic-necessity-20261009/REVIEW.md
@@ -227,3 +525,36 @@ These are the sources' recorded review dispositions. The companion review record
 [d14]: https://mail.shamik.net/papers/dasgupta%20on%20the%20plurality%20of%20grounds.pdf
 [d16]: https://www.philosophersannual.org/36articles/dasgupta-metaphysical.pdf
 [b23]: https://www.philosophie.ch/billon-2023
+
+[u-local]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/affirmative-original-exclusivity-20261009/REPORT.md
+
+[u-field]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/ca551178b117da992aa2de5c46bba14499d394125ba550626703b30a753caf3f/Orthemology_Nineteenth_Research_Final_v1_20261006.md
+
+[u-concentration]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/aa389c0c3f1439b8d3203b4b32858d65622d5b69aea3fd8afbed18ce66bf24e5/ADDENDUM.md
+
+[u-judgment]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/research-v6/privacy-qualified/ONENESS_WARRANT_JUDGEMENT_20261009.md
+
+[u-anchor]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2a3c7de1e7a9028345bae3d059d7cc6398f4067326e10db915d8d89b55fcb3d1/AnchoredSourceBridge.lean
+
+[u-premises]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/2f112bb4d0af7919ff5acd9593247d1ee83a702779f4c0d609a4333eabc12d0e/SOURCE_AND_PREMISE_MAP.md
+
+[u-anchor-guide]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0ff5b6519190744335ab79a4d5007f863bf49b54ecb35f671801871d7af8fbad/README.md
+
+[u-anchor-review]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/94dba791705477f49ed9949e3d437c1f04201a53dcb19429d4d72ab0d3d46553/REVIEW.md
+
+[u-review]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/e011396b48cb1470b5cfa9cae49b956838eb147a5f09de90804846d95577ac04/ASSESSMENT.md
+
+[u-psr]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP15/plural-explanation-theorem-audit/RESULT.md
+
+[u-unique]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP18/total-explainer-uniqueness/RESULT.md
+
+[u-boolean]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP18/total-explainer-uniqueness/BOOLEAN_SCOPE_ADDENDUM.md
+
+[u-particular]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP15/particular-explanans-bridge-audit/RESULT.md
+
+[u-center]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/de-se-sovereignty/RESULT.md
+
+[u-symmetry]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP21/complete-explanation-modal-review-20261009/symmetry-addendum.md
+
+[u-kp]: https://doi.org/10.1007/s11098-020-01482-3
+[u-majmu]: https://islamweb.net/ar/library/content/22/2032/

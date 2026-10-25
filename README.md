@@ -9,7 +9,8 @@ These complete public expositions contain the arguments and proofs in ordinary M
 | Subject | Scholarly treatment |
 |---|---|
 | Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. |
-| Received existence, productive adequacy and necessary being | [Received actuality, original adequacy, and intrinsic necessity](foundations/received-actuality-and-intrinsic-necessity.md): the affirmative argument, conditional proofs, strongest competing accounts, and qualifications. |
+| Received existence, necessary being and original-source unity | [Received actuality, intrinsic necessity, and original source unity](foundations/received-actuality-and-intrinsic-necessity.md): affirmative arguments, complete conditional proofs, connected-field coverage, explanatory countermodels and their limits. |
+| Recognition, knowledge and corrective inquiry | [Recognition, warrant, defeat and restoration](epistemology/recognition-warrant-and-restoration.md): positive cognitive grounds, proper function, cumulative evidence, surviving warrant, and complete finite restoration/identification proofs. |
 
 The [independent scientific review and incorporation record](docs/scientific-consolidation-review.md) identifies exact editions, predecessor coverage, corrected failures and remaining removal gates. These are new consolidated expositions; they do not silently amend an accepted paper or confer owner adoption. The sources below remain available during the scientific consolidation.
 

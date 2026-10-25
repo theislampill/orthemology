@@ -27,10 +27,11 @@ The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or c
 
 ## Consolidated scholarly works
 
-These directly readable treatments contain the arguments and proofs reconciled from their public predecessors. Their independent incorporation review is scoped; neither silently replaces an accepted paper edition or confers owner adoption.
+These directly readable treatments contain the arguments and proofs reconciled from their public predecessors. Their independent incorporation review is scoped; none silently replaces an accepted paper edition or confers owner adoption.
 
 - [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees.
-- [Received actuality, original adequacy, and intrinsic necessity](../../foundations/received-actuality-and-intrinsic-necessity.md): the productive-adequacy and same-bearer arguments, modal inference, corrected premises and strongest competing explanations.
+- [Received actuality, intrinsic necessity, and original source unity](../../foundations/received-actuality-and-intrinsic-necessity.md): productive adequacy, same-bearer necessity, connected-field coverage, explanatory countermodels and centered knowledge.
+- [Recognition, warrant, defeat and restoration](../../epistemology/recognition-warrant-and-restoration.md): basic recognition, local correction, proper function, cumulative grounds, defeat, source authority and exact finite limits of restoration claims.
 
 The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
 

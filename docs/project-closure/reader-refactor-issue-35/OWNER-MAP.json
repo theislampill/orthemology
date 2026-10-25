@@ -564,16 +564,16 @@
   "baseline_work_population": {
     "count": 448,
     "keys_sha256": "70350e41b3d0273da7020e96ce7e061097989ec76819188bac738f4135f9f800",
-    "scope": "The 448 historical reader work/collection entries remain separately bound. The two new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
+    "scope": "The 448 historical reader work/collection entries remain separately bound. The three new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
   },
   "source_additions": [
     {
       "key": "consolidated-foundations",
       "path": "foundations/received-actuality-and-intrinsic-necessity.md",
       "mode": "100644",
-      "git_oid": "cc15e92b88b5e7cc844739b16bcd01dccf9ed2e6",
-      "bytes": 42986,
-      "sha256": "0b895201472eebf820b25dbbc707a0aa25b3ee2b31f232157ec6a769f8885d08",
+      "git_oid": "bfefa94bd92c804fdecb1f24ad137ce5e9e1852b",
+      "bytes": 99563,
+      "sha256": "c50d731b9b7c043d7aae4f7b63a27d6d49f2c86c0b70d03a66d6b28d1abfac58",
       "role": "work-source",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity"
@@ -601,15 +601,31 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "a2ee752978d5de8f9c171cf466a1f0e90c86ed45",
-      "bytes": 25264,
-      "sha256": "52b1b7549a3a644323a9589cb3818a0dc0aee59f39e7fc4027eaf64a2f57f591",
+      "git_oid": "ac74d97a3a4db576aac34c6206bd1f96662ce03f",
+      "bytes": 27149,
+      "sha256": "d479946edb6f66ef54375676981ab905941fbcd8a4036283a202483c844820eb",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
-        "information-retained-by-inquiry"
+        "information-retained-by-inquiry",
+        "recognition-warrant-and-restoration"
       ],
       "supporting_source_keys": []
+    },
+    {
+      "key": "consolidated-recognition-and-restoration",
+      "path": "epistemology/recognition-warrant-and-restoration.md",
+      "mode": "100644",
+      "git_oid": "0a88017bd145b4b9f0f8f55a5ca05e79da80982a",
+      "bytes": 63239,
+      "sha256": "5c67fd14796625437050f5424b825689e5a332e52520ab8007dbc375a5ba3e27",
+      "role": "work-source",
+      "work_keys": [
+        "recognition-warrant-and-restoration"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
     }
   ]
 }
