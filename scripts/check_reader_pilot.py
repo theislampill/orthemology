@@ -376,6 +376,9 @@ REFACTOR_EDIT_PATHS = {
     # this does not admit any new source path or predecessor modification.
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
     "tests/test_t20_v6_projection.py",
+    # Existing source-display integrity owner and its focused regression tests;
+    # scholarly bodies still require their exact source/work/review admission.
+    "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
     "docs/current-state.yaml", "docs/provenance/RELEASE-MANIFEST.sha256",
     "docs/project-closure/HISTORICAL-STATUS-INDEX.yaml",
     "research/t20-v6-20261012/PUBLIC_PROJECTION_MANIFEST.json",

@@ -190,7 +190,7 @@ The original PDF’s publication hold remains in force. The companion’s readab
 
 ### Finite coordination information
 
-**A bounded information consequence for coordination explanations.** [Ordinary mathematical text][coordination] · [Twelfth collection guide][twelfth].
+**A bounded information consequence for coordination explanations.** [Current mathematical treatment, §§6.1–6.4][coordination] · [Twelfth collection guide][twelfth].
 
 The paper analyses the information needed by a complete coordination mediator. In its ordinary countably additive setting, a fixed positive bounded-capture probability forces logarithmic information growth with the horizon; terminal tightness yields the asymptotic coefficient one half, attained by a consistent Gaussian anchor. A uniformly bounded complete-record entropy cannot supply that dependence across all horizons. Its finite-alphabet capture result supplies a sharper exact fixed-horizon Gaussian bound and a matching construction. Its exact role and limitations appear in the [result entry](RESULT-INDEX.md#finite-mediator): a finite program description need not be a complete mediator, and single-horizon attainment does not establish one forward-causal history across all horizons.
 
@@ -733,7 +733,7 @@ The [rational basing continuation](../../research/t20-live-20261009/checkpoints/
 
 ### Conditioning error and finite mediation
 
-[V6-C01](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) proves the common-likelihood bound $\operatorname{TV}(B_Lp,B_Lq)\le\min(1,\delta/\max(A,B))$ for $0\le L\le1$, positive normalizers $A,B$, and $\delta=\operatorname{TV}(p,q)$. A distinct relative-likelihood error term and endpoint transport term can be added; the joint sum is not claimed sharp and the likelihood itself still needs warrant. [V6-C04](../../research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md) adds a sharp one-horizon event-TV allowance to the inherited finite-mediator Gaussian capture bound: $\min\{1,2\Phi(NL/(2n^{1/2}))-1+\eta\}$. The mediator must be complete, have at most $N$ values and satisfy the stated conditional-independence/reference-law contract. The construction does not preserve a prescribed output marginal or produce a coherent all-horizon process.
+[V6-C01](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) proves the common-likelihood bound $\operatorname{TV}(B_Lp,B_Lq)\le\min(1,\delta/\max(A,B))$ for $0\le L\le1$, positive normalizers $A,B$, and $\delta=\operatorname{TV}(p,q)$. A distinct relative-likelihood error term and endpoint transport term can be added; the joint sum is not claimed sharp and the likelihood itself still needs warrant. [V6-C04](../../mathematics/collective-inquiry-and-strategic-coordination.md#65-a-sharp-approximation-error-budget) adds a sharp one-horizon event-TV allowance to the inherited finite-mediator Gaussian capture bound: $\min\{1,2\Phi(NL/(2n^{1/2}))-1+\eta\}$. The mediator must be complete, have at most $N$ values and satisfy the stated conditional-independence/reference-law contract. The construction does not preserve a prescribed output marginal or produce a coherent all-horizon process.
 
 ### Additional moment directions, reset quotients and hidden activation
 
@@ -1504,7 +1504,7 @@ The [original source/kernel review](../../experiments/orthemology-v5-successors/
 [decisive-pdf]: ../../theory/lineages/h-ics-v5/the-cost-of-a-decisive-revision.pdf
 [reflexive]: ../../theory/lineages/h-reflexive-v3/reflexive_revision_evidence_budget_v3.tex
 [lineage]: ../../theory/lineages/h-ics-v5/README.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#6-complete-coordination-records-across-a-growing-horizon
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md

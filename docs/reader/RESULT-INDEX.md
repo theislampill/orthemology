@@ -29,7 +29,7 @@ For the philosophical chain, use [steps 1–11 and the disclosure qualification]
 
 ## Finite mediator
 
-**Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Ordinary proof, section 5][coordination].
+**Existing entry: `T12-FINITE-MEDIATOR`.** [Collection statement and evidence scope][twelfth] · [Current proof, §6.4](../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity).
 
 Let `S` have a centred Gaussian law of variance `n > 0`, let `M` have at most `N` values, and suppose `Y` and `S` are conditionally independent given `M`. For a fixed interval `I` of length `L ≥ 0` and a positive integer `N`,
 
@@ -127,7 +127,7 @@ If arbitrarily long fresh blocks bind the same terminal law, every bounded termi
 
 ### Information growth and complete coordination
 
-**`T12-COORDINATION-INFORMATION`.** [Coordination paper, sections 1–4][coordination]. In the **ordinary countably additive** setting, for fixed bounded interval length `L > 0`, common terminal capture `p > 0`, and binary entropy `h(p)` in nats,
+**`T12-COORDINATION-INFORMATION`.** [Current treatment, §§6.1–6.3][coordination]. In the **ordinary countably additive** setting, for fixed bounded interval length `L > 0`, common terminal capture `p > 0`, and binary entropy `h(p)` in nats,
 
 ```text
 I(Y_n; S_n) ≥ (p/2) log n
@@ -432,7 +432,7 @@ These four existing IDs keep their original formal component scope. Repeated nam
 The positive result is an exact syntactic/semantic preservation theorem for a specified grammar, not “every formalisation is correct”. The normalisation witness preserves the same source term across its positive typing and negative raw-representation statements. Later identity and restricted-checker entries retain their separate questions and calculi.
 
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
-[coordination]: ../../experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md
+[coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#6-complete-coordination-records-across-a-growing-horizon
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
 [fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
@@ -655,7 +655,7 @@ The source register owns these fifteen identifiers: eleven C contributions are n
 | V6-C01 | [Sharper common-likelihood conditioning and joint origin/factor error](../../research/t20-v6-20261012/research-v6/root_math/CONDITIONING_CROSS_CONTRIBUTION.md) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Positive normalisers, bounded common likelihood and shared ratio support; joint sum not claimed sharp; no source likelihood warrant. |
 | V6-C02 | [Continuous Fisher audit fibre versus finite sidecars](../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md) | [Fisher geometry and retained information](PAPER-CATALOGUE.md#fisher-geometry-and-retained-information) | Strict positive fixed conditional columns and ambient source-law Fisher norm contract; not a global varying-rank chart or requirement for posterior-answer-only preservation. |
 | V6-C03 | [Residual-spectrum cost of additional moment directions](../../research/t20-v6-20261012/research-v6/root_math/APPROXIMATE_CONTINUATION_AUGMENTATION.md) | [Additional moment directions, reset quotients and hidden activation](PAPER-CATALOGUE.md#additional-moment-directions-reset-quotients-and-hidden-activation) | Fixed linear acquisition, full probability simplex, declared accessible Walsh questions; positive-error spectral bound necessary only, no bit or sample complexity theorem. |
-| V6-C04 | [Robust finite-mediator capture](../../research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Complete conditional mediation, at most N mediator values, reference law contract; no prescribed output marginal or coherent all-horizon process. |
+| V6-C04 | [Robust finite-mediator capture](../../mathematics/collective-inquiry-and-strategic-coordination.md#65-a-sharp-approximation-error-budget) | [Conditioning error and finite mediation](PAPER-CATALOGUE.md#conditioning-error-and-finite-mediation) | Complete conditional mediation, at most N mediator values, reference law contract; no prescribed output marginal or coherent all-horizon process. |
 | V6-C05 | [Accepted source proofs with equal erasure and distinct work](../../research/t20-v6-20261012/research-v6/type_collective/ERASURE_WORK_BOUNDARY.md) | [Literal HasE independence and the limits of HasJ completion](PAPER-CATALOGUE.md#literal-hase-independence-and-the-limits-of-hasj-completion) | General fibre criterion inherited; no wall-clock, arbitrary derivation cost or actual epistemic warrant claim. |
 | V6-C06 | [Multivalued reset coordinate quotient](../../research/t20-v6-20261012/research-v6/root_math/multivalued_reset/RESULT.md) | [Additional moment directions, reset quotients and hidden activation](PAPER-CATALOGUE.md#additional-moment-directions-reset-quotients-and-hidden-activation) | Core/future-word equivalence kernel checked; quotient cardinality ordinary proof; action contract essential, no external novelty claim. |
 | V6-C07 | [Actual HasJ semantic incompleteness join](../../research/t20-v6-20261012/research-v6/type_collective/JOINT_COMPLETENESS_BOUNDARY.md) | [Literal HasE independence and the limits of HasJ completion](PAPER-CATALOGUE.md#literal-hase-independence-and-the-limits-of-hasj-completion) | Existing computability and soundness prerequisites; no semantic validity equals metaphysical truth; individual literal sources retain their own chronology. |

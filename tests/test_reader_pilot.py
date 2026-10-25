@@ -192,6 +192,19 @@ class ReaderPilotTests(unittest.TestCase):
         self.git("add", "docs/reader/PAPER-CATALOGUE.md")
         self.assertEqual(self.check(), [])
 
+    def test_scholarly_display_maintenance_keeps_a_finite_source_boundary(self):
+        for directory, name in (("scripts", "validate_math_source.py"),
+                                ("tests", "test_math_source_validator.py")):
+            path = self.repo / directory / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# Synthetic maintenance owner, not a scientific source.\n")
+            self.git("add", "--", str(path.relative_to(self.repo)))
+        self.assertEqual(self.check(), [])
+        unexpected = self.repo / "scripts" / "unregistered_research.py"
+        unexpected.write_text("# Synthetic unadmitted research software.\n")
+        self.git("add", "--", str(unexpected.relative_to(self.repo)))
+        self.reject(self.check(), "corpus-currentness")
+
     def test_unknown_file_inside_reader_directory_is_not_a_blanket_exemption(self):
         path = self.repo / "docs" / "reader" / "unregistered-paper.tex"
         path.parent.mkdir(parents=True)

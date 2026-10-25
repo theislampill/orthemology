@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. It also separates finite-memory accuracy from eventual correctness, distinguishes fixed hidden standards from a common observed objective, and gives the exact risk threshold for fresh switching innovations. For fixed finite models with positive controlled-observation laws, it gives an exact criterion for eventual correctness and a constructive history policy. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
+A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. It also separates finite-memory accuracy from eventual correctness, distinguishes fixed hidden standards from a common observed objective, and gives the exact risk threshold for fresh switching innovations. For fixed finite models with positive controlled-observation laws, it gives an exact criterion for eventual correctness and a constructive history policy. Allowing zero observation probabilities, a recursive certificate yields a lawful physical-action policy with finite expected total target errors. The converse identifies the same recursive certificate from any successful common policy, preserving positive-branch continuations and the guard on every earlier action. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
 
 ## 1. Shared inquiry and distributed access
 
@@ -1641,6 +1641,359 @@ Controlled testing and robust policies have substantial antecedents. Bovy and co
 
 The finite greatest-set test and the infinite-time policy theorem answer different computational questions. The policy uses growing acquired likelihoods; it supplies no general finite-memory bound, deterministic last-error time, finite zero-error declaration, expected physical error budget or arbitrary-real implementation. In particular, the historical finite enumeration and formal implementation evidence retain their own source and execution boundaries. The mathematical result concerns the stated observation laws, targets and permissions; empirical truth, normative warrant and the unfinished broader account of collective inquiry require their own arguments.
 
+### 7.12 Recursive restoration with zero observation probabilities
+
+An observation of zero probability under a candidate can remove that candidate altogether. The actions permitted after this elimination may differ from those permitted before it. A useful controller must therefore preserve the observation that caused the change, interrupt an obsolete plan immediately, and account for the action that produced that observation. A recursive certificate supplies these obligations and a finite expected error budget. Its constructive proof uses the original probabilities of continuing observations; conditioning on continued survival would remove part of the information. [36–38]
+
+#### The model and the recursive certificate
+
+Let $`\Theta,A,Y`$ be nonempty finite sets of fixed hidden models, actions and observations. For every $`\theta,a`$, the supplied law satisfies
+
+```math
+P_{\theta,a}(y)\ge0,\qquad
+\sum_{y\in Y}P_{\theta,a}(y)=1.
+```
+
+An action is chosen before its observation. Conditional on the entire acquired history, the controller's private seed and the current action, the next observation has this fixed law. Thus the observations are fresh controlled acquisitions. Their laws may have zeros. Targets $`G_\theta\subseteq A`$ are fixed. A public menu $`\Gamma(B)\subseteq A`$ is supplied for each live model support $`B\subseteq\Theta`$; it may change nonmonotonically as the support shrinks. These probability, target and permission premises remain distinct.
+
+For an action and its observed symbol, put
+
+```math
+B[a,y]=\{\eta\in B:P_{\eta,a}(y)>0\}.
+```
+
+Starting from a nonempty $`B_0`$, a finite history determines its support by these successive updates. Call the history **feasible** when its resulting support is nonempty. It is **action-consistent** with a policy when every recorded action equals the policy's action at the preceding record. Legality will be required at every feasible action-consistent history, for every seed. It is not a claim about invented action fields or histories impossible under every initially live model.
+
+Define a recursive certificate $`W(B)`$ by induction on $`|B|`$. The empty support is not certified. For nonempty $`B`$, each candidate $`\sigma\in B`$ must have a nonempty finite ordered action list $`v_{B,\sigma}`$ satisfying three requirements:
+
+1. Every action in the list belongs to $`\Gamma(B)`$.
+2. For every listed action $`a`$ and every symbol $`y`$, if $`B[a,y]`$ is nonempty and strictly smaller than $`B`$, then $`W(B[a,y])`$ holds.
+3. Either the list has a **progress witness**—some listed $`a`$ and $`y`$ with $`P_{\sigma,a}(y)>0`$ and $`B[a,y]\ne B`$—or it is **self-verifying among the live models**:
+
+```math
+\{a:a\text{ occurs in }v_{B,\sigma}\}\subseteq G_\sigma,
+```
+
+and every $`\eta\in B`$ whose full observation vectors agree with $`\sigma`$ at every listed action accepts every action in the list.
+
+The recursion refers only to smaller nonempty supports. A symbol impossible under every live model produces the empty set and does not require a certificate. The definition contains no successful-policy premise. Its universal continuation condition is stronger than finding one favorable exit. Action order and repeated occurrences will matter to the controller and its cost, even though acceptance and licensing depend only on which actions occur. [36]
+
+There is also a finite bottom-up test for this definition. After deciding smaller supports, retain precisely those actions in $`\Gamma(B)`$ for which every nonempty strict successor is certified. For each $`\sigma\in B`$, require either an available progress witness or a nonempty available action set that is self-verifying among $`B`$. This is equivalent to the list definition: a progress witness gives a singleton list; a self-verifying set can be listed in any fixed order. Conversely, each certified list supplies its progress witness or its underlying self-verifying set, and all its actions survive the continuation test. This is a combinatorial equivalence, without a policy-necessity conclusion. Equality and positivity of supplied exact probabilities are required operations; no general algorithm for comparing arbitrary represented real numbers follows. [36]
+
+#### One policy, with immediate interruption
+
+Choose one witnessing list for every certified support and every live candidate, with a fixed tie rule. This is a finite collection of finite choices. At entry to a support $`B`$, reset the within-phase likelihoods to one. At each completed-plan boundary, choose a live candidate maximizing the likelihood of the observations acquired since this phase began, and load its list. During a plan, retain the remaining suffix rather than recomputing the plan after each observation.
+
+After issuing each action $`a`$ and acquiring $`y`$, perform the exact support update. If the support remains $`B`$, retain the acquired observation and continue the suffix. If it changes, preserve the action and observation in the public history, abandon the entire remaining suffix, enter $`B[a,y]`$, and reset the within-phase likelihoods there. A completed plan with unchanged support is followed by a new likelihood choice. Resetting a likelihood calculation does not erase the public record used to establish the new support or count physical actions.
+
+The rule uses the supplied laws and acquired observations; it does not take the hidden true model as an input. It defines a deterministic history policy. It can ignore an arbitrary common private seed, so its existence holds for every common seed distribution. To make the policy total, give a fixed default response at infeasible or action-inconsistent records. The legality theorem does not cover those records; this choice of totalization need not match a source implementation's particular behavior there.
+
+On every feasible consistent history, induction shows that the current support is certified. Continuing observations preserve the support and its licensed suffix; a strict nonempty successor is certified by requirement 2 and receives a new licensed plan. Every issued action therefore belongs to the current menu. Under a true $`\theta\in B_0`$, the next symbol has positive $`P_{\theta,a}`$ probability almost surely, so the support retains $`\theta`$ at every time outside a single null event. Every strict change then lowers $`|B|-1`$, allowing at most $`|B_0|-1`$ changes.
+
+This is a policy in the stated physical experiment. The probability of any consistent finite acquired history under $`\theta`$ is the product of its selected-action observation probabilities, obtained by induction from the conditional acquisition law. On an exit, that product includes the exit-triggering symbol; it is neither discarded nor renormalized. Finite-history probabilities determine the law on infinite histories. No extra law-equality or independent policy-realization premise is supplied. [37–38]
+
+#### A survival-affinity estimate
+
+Fix a certified support $`B`$ and a live true model $`\theta`$. For an action $`a`$, let
+
+```math
+S_B(a)=\{y:B[a,y]=B\},\qquad
+\alpha_{B;\theta,\sigma}(a)=
+ \sum_{y\in S_B(a)}
+   \sqrt{P_{\theta,a}(y)P_{\sigma,a}(y)}.
+```
+
+For an ordered list $`v=(a_1,\ldots,a_\ell)`$, put
+
+```math
+c_{B;\theta,\sigma}(v)
+ =\prod_{i=1}^{\ell}\alpha_{B;\theta,\sigma}(a_i).
+```
+
+This is the affinity of the two subprobability laws for completing the whole list without changing support. Each factor lies in $`[0,1]`$ by Cauchy–Schwarz and normalization. The full-row affinity equals one only when the two probability vectors agree: equality in Cauchy–Schwarz makes their square-root vectors proportional, and their unit norms make them equal.
+
+Let $`b_{B,\theta}(\sigma)`$ be the number of occurrences in $`v_{B,\sigma}`$ that are outside $`G_\theta`$, counting multiplicity. If this number is positive, then
+
+```math
+c_{B;\theta,\sigma}(v_{B,\sigma})\lt{}1.
+```
+
+Indeed, suppose the certificate uses a progress witness at a listed action. Some positive $`\sigma`$ probability lies outside $`S_B(a)`$, so the mass of its restricted row is strictly less than one. Cauchy–Schwarz then makes that action's affinity strictly less than one, and the entire product is strictly less than one. If the certificate instead uses self-verification, a plan containing an action bad under the live $`\theta`$ cannot have identical observation vectors under $`\sigma`$ and $`\theta`$ at every listed action. At a differing action the full-row affinity is strictly less than one, hence so is the restricted affinity and the product.
+
+The argument retains both possible sources of a strict deficit: distinguishable continuing laws and positive probability of leaving the support. It remains valid when some probabilities vanish. [37]
+
+#### Finite expected error count in one phase
+
+Until the first strict support change, let $`L_j(\eta)`$ denote the likelihood under a live model $`\eta`$ of the acquired history at the start of plan $`j`$. Only completed continuing plans precede such a boundary. Their symbols have positive probability under every live model, so all these likelihoods are strictly positive.
+
+For a fixed candidate $`\sigma`$, define
+
+```math
+R_j^\sigma=
+ \mathbf 1\{\text{the phase is still active at boundary }j\}
+ \sqrt{\frac{L_j(\sigma)}{L_j(\theta)}}.
+```
+
+After the phase exits, set this potential to zero forever. At its initial boundary it equals one. Given an active boundary and the chosen list $`v`$, summing over all complete continuing symbol strings gives the exact conditional identity
+
+```math
+\mathbb E_\theta[R_{j+1}^\sigma\mid\mathcal F_j]
+ =R_j^\sigma\,c_{B;\theta,\sigma}(v).
+```
+
+For an exiting observation string the next potential is zero. For a continuing string, its true-model probability multiplies the square root of the likelihood ratio, producing the product of the square-root probability factors. Summing over its symbols yields the displayed product affinity. This calculation uses the unnormalized continuing mass. It does not condition the experiment on future survival.
+
+For the candidate's own plan, abbreviate $`c_\sigma=c_{B;\theta,\sigma}(v_{B,\sigma})`$. If $`b_{B,\theta}(\sigma)>0`$, set $`\delta_\sigma=1-c_\sigma>0`$. Every other chosen plan has affinity at most one. When the chosen candidate is $`\sigma`$, likelihood maximization gives $`L_j(\sigma)\ge L_j(\theta)`$ and hence $`R_j^\sigma\ge1`$. Therefore
+
+```math
+\mathbb E_\theta R_{j+1}^\sigma
+ \le \mathbb E_\theta R_j^\sigma
+  -\delta_\sigma
+      \Pr_\theta(\text{candidate }\sigma
+                     \text{ is selected at boundary }j).
+```
+
+Telescope this inequality from the initial value one, retain the nonnegative terminal potential, and let the finite horizon grow. The expected number of selections of this candidate during the phase is at most $`1/\delta_\sigma`$.
+
+A stopped execution of a plan incurs at most its full planned number of bad occurrences, including the action that triggered exit. Consequently the expected number of actual bad actions before the phase ends is bounded by
+
+```math
+C_{B,\theta}
+ =\sum_{\substack{\sigma\in B\\ b_{B,\theta}(\sigma)>0}}
+   \frac{b_{B,\theta}(\sigma)}
+        {1-c_{B;\theta,\sigma}(v_{B,\sigma})}
+ \lt{}\infty.
+```
+
+The conclusion also covers a phase that never exits. The proof neither assumes phase termination nor requires all candidates to be identified. It bounds precisely the actions that violate the true target. [37–38]
+
+#### The complete physical-time guarantee
+
+Define a finite bound by induction on support size:
+
+```math
+D_{B,\theta}
+ =C_{B,\theta}
+  +\max\Bigl(
+      \{0\}\cup
+      \{D_{B',\theta}:
+          \theta\in B'\subsetneq B,\ W(B')\}
+    \Bigr).
+```
+
+The maximum ranges over finitely many smaller certified supports. The bound is attached to the chosen witnesses; it is not an optimal cost claim.
+
+**Theorem (recursive constructive restoration).** If $`W(B_0)`$ holds, the single policy just constructed is licensed on every feasible action-consistent finite history, for every seed. Under each $`\theta\in B_0`$, its total number $`N_{\mathrm{bad}}`$ of physical actions outside $`G_\theta`$ satisfies
+
+```math
+\mathbb E_\theta N_{\mathrm{bad}}\le D_{B_0,\theta}\lt{}\infty,
+\qquad
+\Pr_\theta(N_{\mathrm{bad}}\ge k)
+ \le \frac{D_{B_0,\theta}}{k}
+ \quad(k\ge1).
+```
+
+In particular, almost surely all sufficiently late physical actions belong to $`G_\theta`$.
+
+**Proof.** The phase estimate holds conditionally after every actual finite entry history: future acquisitions have the stipulated conditional laws, and within-phase likelihoods restart at one. At a first support exit, the new nonempty support contains the true model and is certified. Induction on support size bounds the conditional future cost by its $`D_{B',\theta}`$. Summing over the countably many possible finite exit records, and adding the current phase's bound, proves the stated $`D_{B,\theta}`$ inequality. A phase with no exit contributes no later phase. This argument conditions at actual observed entries and exits, not at the unobservable last error or on never exiting again.
+
+For clarity, let $`e_j`$ be the number of actions actually executed in stopped plan $`j`$. Every loaded plan is nonempty, and an immediate exit still executes one action. Thus
+
+```math
+1\le e_j\le |v_j|,\qquad
+T_0=0,\qquad T_{j+1}=T_j+e_j.
+```
+
+These intervals cover the physical action clock and $`T_j`$ tends to infinity. The old suffix contributes no executed actions. The initial controller state has no completed-action record and is not counted as a block. Every later block contains its actual exit action when present. Summing block charges therefore counts all physical bad actions exactly; domination by the full planned charge supplies the bound already proved.
+
+Markov's inequality gives the count tail. Finite expectation of this nonnegative extended integer count implies that it is finite almost surely. A finite set of bad physical times has a finite maximum, which proves eventual target goodness. The controller continues to issue actions; no finite zero-error stopping declaration or observable final-error certificate follows. $`\square`$
+
+The source's canonical policy theorem has this finite expected physical-cost interface. The ordinary proof above supplies a direct phase calculation and the displayed support-chain bound; it is not a fresh execution of the source's formal development or a claim that two historical implementations have identical whole-state laws. [38]
+
+#### Positive cases and necessary boundaries
+
+**Revealing evidence and a newly forbidden suffix.** Take two models and actions $`q,r_0,r_1`$. The probe $`q`$ returns the model label with certainty; the repair actions always emit label zero under both models. Let $`G_i=\{r_i\}`$, let the initial menu be $`\{q,r_0\}`$, and let the singleton menus be $`\{r_0\}`$ and $`\{r_1\}`$. For both initial candidates, the list $`(q,r_0)`$ has progress and certified singleton successors. At a singleton, its correct repair is a self-verifying one-action list.
+
+The policy executes $`q`$, updates the support and then issues the corresponding repair forever. Exactly one bad action occurs. Under model one, executing the abandoned suffix $`r_0`$ would violate the new menu. Dropping the exit record would instead erase the one real bad action from the count. The support must use strict positivity: retaining a model whose label had zero probability would lose the inference that makes the new action licensed.
+
+**A partially revealing probe.** Let $`q`$ emit an eliminating symbol $`e`$ with probability $`1/2`$ under model zero and with probability zero under model one; otherwise it emits $`s`$. Take $`G_0=\{r_0\}`$, $`G_1=\{q\}`$, initial menu $`\{q\}`$ and menu $`\{r_0\}`$ after eliminating model one. Let the repair always emit the symbol s, and use the initial probe menu also at singleton model one. Both initial candidates can use the one-action plan $`q`$: candidate zero has progress, while candidate one has a live self-verifying plan because the full observation vectors differ. Under zero, the number of probes is geometric with mean two; under one, every action is already good.
+
+Conditional on observing only the continuing symbol, the normalized observation law is the same point mass under both models. Replacing the raw probabilities by these normalized rows would erase the survival information and the positive exit mass. The full stopped law and the affinity deficit keep both.
+
+**Every possible strict successor matters.** Consider three models. A sole initially permitted probe separates model zero from the pair $`\{1,2\}`$. The singleton zero has a permitted good action. At the pair $`\{1,2\}`$, suppose the only permitted action is bad for both models and has the same deterministic observation under each. The favorable singleton branch does not certify the initial support: the other nonempty successor cannot progress or self-verify. Under models one and two, any lawful policy remains bad forever. Requiring one successful branch would therefore give a false positive.
+
+**Impossible and forged histories.** An empty menu at a nonempty support cannot supply a nonempty licensed plan. An empty initial support cannot supply the theorem's certified starting point. Impossible observations need no continuation certificate, and a fabricated off-policy action can give a different inferred support from the controller's actual replay. The legality conclusion consequently retains both feasibility and action consistency. Legality for a fixed common menu can be stated without this support reconstruction; it is a different contract. [38]
+
+**Counting errors is different from locating the last error.** Section 7.7 already supplies almost-sure finite recovery with infinite expected bad occupancy. Conversely, finite expected bad count need not bound the expected time of the last bad action. In a one-model system with a permitted good action $`g`$ and bad action $`b`$, draw $`K\ge1`$ with $`\Pr(K=k)=2^{-k}`$, issue $`g`$ for $`2^K`$ times, issue $`b`$ once, and then issue $`g`$ forever. The bad count is one, while the expected last-error time is infinite because each summand $`2^{-k}2^k`$ in its expectation equals one. This does not contradict the theorem's count bound.
+
+The certificate and constructed policy concern finite fixed controlled laws, exact support updates and support-dependent menus. They do not handle arbitrary moving plants, general history-dependent resource constraints, copied observations, empirical validation of a sensor or authentication of a normative target. They use exact probability comparison and finite classical witness choice, without claiming a general executable procedure for arbitrary real inputs.
+
+A later source separately establishes necessity and an existence equivalence in the same finite seeded-policy interface. It also equates existence of an almost-surely restoring lawful policy with existence of a possibly different policy having finite expected bad count. That converse belongs to its own all-branch continuation and transfer argument; it is not derived here from the positive-probability criterion or from this constructive proof. Its existence statement does not upgrade every almost-surely successful policy to finite expected cost. [39]
+
+### 7.13 When recursive restoration is necessary
+
+The recursive certificate in §7.12 is also necessary for the same finite controlled-observation problem. Its necessity is a distinct result: zero-probability observations prevent the unrestricted finite-prefix transfer available under full support. The argument instead follows every feasible support-changing branch and transfers probability only on actions whose positive observations remain possible in the rival model. [39–40]
+
+Retain the nonempty finite sets $`\Theta,A,Y`$, fixed normalized nonnegative laws $`P_{\theta,a}`$, targets $`G_\theta`$, nonempty initial support $`B_0`$, exact support update and support-dependent menus $`\Gamma`$ of §7.12. Fix any common private-seed probability space $`(Z,\rho)`$. A measurable policy $`\pi(z,h)`$ chooses an action from the seed and acquired finite history; the next observation, conditional on this entire information and the chosen action, has law $`P_{\theta,a}`$. The seed law is the same under every hidden model. Legality means
+
+```math
+\pi(z,h)\in\Gamma(B(h))
+```
+
+for every seed and every feasible action-consistent history. The model parameter is not an input to this policy or seed selection.
+
+**Theorem (recursive characterization).** The following conditions are equivalent:
+
+1. The initial support has the recursive certificate $`W(B_0)`$.
+2. One common legal measurable policy has almost-sure eventual target goodness under every $`\theta\in B_0`$.
+3. One common legal measurable policy has finite expected total number of target-bad physical actions under every $`\theta\in B_0`$.
+
+The existential policy precedes the universal model quantifier in both policy statements. The policies in conditions 2 and 3 need not be the same. A deterministic common policy suffices whenever these conditions hold. The constructive implication from 1 to 3 and the implication from 3 to 2 are established in §7.12; the proof below establishes 2 to 1. [39–40]
+
+#### Fixing one common seed
+
+For a fixed seed $`z`$, let $`\Pr_\theta^{\pi_z}`$ be the law generated by $`\pi_z(h)=\pi(z,h)`$ and the fresh controlled observations. The common experiment is the explicit mixture
+
+```math
+\Pr_\theta^\pi(E)
+ =\int_Z \Pr_\theta^{\pi_z}(E)\,\rho(dz)
+```
+
+for measurable path events $`E`$. This follows from the common-seed construction and the finite-history product probabilities, then from extension to the generated path sigma algebra. It is not an arbitrary representation assumption about a separately supplied behavioral process.
+
+If eventual goodness has probability one under $`\theta`$, its fixed-seed probability is one for $`\rho`$-almost every seed. Intersect these full-measure seed sets over the finitely many initially live models. Their intersection still has measure one and is nonempty. Choose a single $`z_*`$ there. The resulting deterministic policy succeeds in every live model. Its pointwise legality follows from the original contract, which held for every seed. The seed is now fixed once, before any continuation or support induction. A model-dependent posterior over seeds is not used. [41]
+
+#### What a positive acquired prefix permits
+
+Use chronological histories in this proof. For a deterministic policy $`f`$, let $`h=((a_0,y_0),\ldots,(a_{n-1},y_{n-1}))`$ be action-consistent. Its probability under a model $`\theta`$ is
+
+```math
+p_\theta(h)=\prod_{s\lt{}n}P_{\theta,a_s}(y_s).
+```
+
+Induction over the acquisitions proves this formula. Exact support updating consequently gives
+
+```math
+B(h)=\{\theta\in B_0:p_\theta(h)\gt{}0\}.
+```
+
+Define the continuation by $`f_h(v)=f(h\frown v)`$, where $`\frown`$ appends a future acquired record. Its conditional future finite-history probabilities, given $`h`$ under any $`\theta\in B(h)`$, are precisely the products generated by $`f_h`$ and $`P_\theta`$. Each action is chosen before its next observation. Cylinder equality therefore identifies the entire continuation law.
+
+If $`f`$ succeeds almost surely, its conditional failure probability after a positive-probability prefix is zero. Thus the **same** continuation $`f_h`$ succeeds for every model remaining in $`B(h)`$. It is legal there as well: every feasible consistent future record $`v`$ yields a feasible consistent full record $`h\frown v`$, and
+
+```math
+B_{B_0}(h\frown v)=B_{B(h)}(v).
+```
+
+The public menu and original legality contract apply to that same support. No unobserved coordinate or hidden model selects the continuation. The source's newest-first storage convention writes the future before the retained older record; the acquired chronological order above expresses the identical causal continuation. [41,43]
+
+#### Transfer with a guard on the entire earlier path
+
+The needed replacement for full-support transfer is one-sided and restricted. Consider two fixed observation families $`P,Q`$ under one common seeded policy. Let $`U\subseteq D\subseteq A`$. Assume
+
+```math
+P_a(y)\gt{}0\ \Longrightarrow\ Q_a(y)\gt{}0
+ \quad(a\in D,\ y\in Y),
+\qquad
+P_a=Q_a\quad(a\in U).
+```
+
+Let $`C`$ be a common measurable action-path event on which every action lies in $`D`$ and every action after a deterministic time $`N`$ lies in $`U`$. Then
+
+```math
+\Pr_P^\pi(C)\gt{}0\quad\Longrightarrow\quad
+\Pr_Q^\pi(C)\gt{}0.
+```
+
+To prove this, split at the deterministic length $`N`$. Only prefixes whose recorded actions lie in $`D`$ can contribute. For such a prefix $`h`$, let $`I_h(z)`$ indicate that its actions are consistent with the seeded policy, and put $`p_P(h)=\prod_{s\lt{}N}P_{a_s}(y_s)`$; define $`p_Q`$ similarly. The implication on positive atoms gives
+
+```math
+p_P(h)\gt{}0\quad\Longrightarrow\quad p_Q(h)\gt{}0.
+```
+
+For a fixed seed and prefix, kill the future process before executing its first action outside $`U`$. Its kernels coincide under $`P`$ and $`Q`$. Hence there is one common measurable nonnegative continuation probability $`q_h(z)`$ for the section of $`C`$ after this prefix. Its measurability follows from the finite-cylinder construction and extension to measurable events. The event's probabilities are
+
+```math
+\Pr_P^\pi(C)
+ =\sum_{h:\,a_s\in D}
+    p_P(h)\int_Z I_h(z)q_h(z)\,\rho(dz),
+\qquad
+\Pr_Q^\pi(C)
+ =\sum_{h:\,a_s\in D}
+    p_Q(h)\int_Z I_h(z)q_h(z)\,\rho(dz).
+```
+
+The sum has finitely many prefixes. A positive term in the first expression gives a positive term in the second. This proves the implication. The proof keeps the entire common seed and acquired prefix; it neither treats the last exceptional action as a stopping time nor asserts absolute continuity of different infinite observation products. [42]
+
+The all-time restriction to $`D`$ is essential. Agreement or one-sided support on $`D`$ says nothing about a singular action outside $`D`$ in the earlier prefix. It cannot be replaced merely by eventual membership in $`D`$.
+
+The source also expresses this restriction by changing unused rows. Laws agreeing on $`D`$ give identical probabilities to every measurable action event restricted to staying in $`D`$ forever: kill at the first action outside $`D`$, compare the identical finite-cylinder kernels and then extend to their path laws. Thus replacing $`P_a`$ by $`Q_a`$ outside $`D`$ leaves such guarded events unchanged. The patched family is globally dominated at the level of one-step atoms, while the original unused rows may be singular. This explains the guard's role without asserting equality of the unrestricted path laws or domination of the original infinite row arrays. [42]
+
+#### A stable support supplies a self-verifying set
+
+Suppose the same policy succeeds under every model in a nonempty support $`B`$. Fix a true model $`\theta\in B`$ and an action set $`D`$ such that, under $`\theta`$, all actions lie in $`D`$ almost surely. Suppose also that
+
+```math
+P_{\theta,a}(y)\gt{}0
+ \ \Longrightarrow\
+P_{\eta,a}(y)\gt{}0
+\quad(\eta\in B,\ a\in D,\ y\in Y).
+```
+
+There is then a nonempty self-verifying set $`U\subseteq D\cap G_\theta`$ among the live models.
+
+Indeed, on every infinite action sequence over finite $`A`$, some nonempty set of actions recurs infinitely often. Almost-sure eventual goodness under $`\theta`$ puts this recurrent set inside $`G_\theta`$, and all-time membership in $`D`$ puts it inside $`D`$. Some exact recurrent set $`U`$ has positive probability. On that event, only finitely many actions fall outside $`U`$. For some deterministic $`N`$, the event
+
+```math
+C(U,N)=
+ \{a_t\in D\text{ for every }t;\
+   a_t\in U\text{ for every }t\ge N;\
+   \text{each }a\in U\text{ occurs infinitely often}\}
+```
+
+has positive probability under $`\theta`$.
+
+Fix a rival $`\eta\in B`$ agreeing with $`\theta`$ on every action in $`U`$. The guarded transfer just proved makes $`C(U,N)`$ positive under $`\eta`$ as well. If any member of $`U`$ were outside $`G_\eta`$, this event would contain infinitely many errors under $`\eta`$, contradicting its almost-sure success. Therefore every such rival accepts all of $`U`$, proving live self-verification. Exact recurrence matters: transferring only eventual membership in a larger set could silently drop the particular action rejected by the rival. [40,42]
+
+#### Necessity by induction over live supports
+
+Prove the claim simultaneously for every deterministic successful legal policy by strong induction on the size of its nonempty initial support $`B`$. The induction hypothesis therefore applies to each continuation policy on every smaller support. Fix such a policy for the current induction step. Let $`D(B)`$ be the set of actions in $`\Gamma(B)`$ whose every nonempty strict observation successor has a recursive certificate. This is exactly the bottom-up admissible-action set of §7.12.
+
+First, every action that this policy issues after a feasible consistent history with unchanged support $`B`$ belongs to $`D(B)`$. It belongs to $`\Gamma(B)`$ by legality. For every symbol $`y`$ whose successor $`B[a,y]`$ is nonempty and strict, the acquired-prefix argument supplies a common successful legal continuation on that successor. Its cardinality is smaller, so the induction hypothesis supplies $`W(B[a,y])`$. This argument examines **every** such symbol at **every** feasible same-support history, not one favorable realized path. Thus the action is in $`D(B)`$. [40,43]
+
+Now fix a candidate $`\sigma\in B`$. If some action in $`D(B)`$ has a progress witness under $`\sigma`$, this candidate satisfies the progress alternative in the stage certificate.
+
+Otherwise, for every $`a\in D(B)`$ and every $`y`$ with $`P_{\sigma,a}(y)\gt{}0`$, the support update must equal $`B`$: a strict change would itself be a progress witness. Starting at the empty history, induction over actual positive-probability acquisitions therefore preserves support $`B`$. At each stage, the policy's action is in $`D(B)`$ by the preceding paragraph. Taking the countable intersection over physical times shows that under $`\sigma`$ all actions remain in $`D(B)`$ almost surely. This derives the invariant from positive branches; it is not an assumed permanent-safety property.
+
+Furthermore, support preservation means that every live rival remains possible on each such positive symbol:
+
+```math
+P_{\sigma,a}(y)\gt{}0
+ \ \Longrightarrow\
+P_{\eta,a}(y)\gt{}0
+ \quad(\eta\in B,\ a\in D(B)).
+```
+
+The stable-support argument now supplies a nonempty self-verifying set within $`D(B)\cap G_\sigma`$. Thus this candidate satisfies the other stage alternative. Every candidate has either progress or such a self-verifying set, so the combinatorial equivalence in §7.12 gives $`W(B)`$. The singleton case is included: no nonempty strict successor exists, and the same stable argument supplies its certified actions. This completes the induction and the necessity proof. Together with the already proved construction, it establishes all three conditions of the theorem. $`\square`$
+
+**Positive observation laws as a special case.** If every observation probability is strictly positive, every support update preserves the entire live support. There are no progress witnesses or strict successors, and the recursive admissible menu is exactly $`\Gamma(B_0)`$. The certificate therefore reduces to the self-verifying-set criterion of §7.11, restricted to that common menu. The additional affinity argument in §7.12 supplies a policy with finite expected bad count also in this special case. Choosing an off-policy default inside the nonempty menu extends its legality to arbitrary histories. This budget is supplied by the additional argument; it is not an assertion that every almost-surely restoring policy has finite expected cost.
+
+#### Controls that distinguish the hypotheses
+
+**One-sided support can be enough.** Let $`D=\{a,b\}`$ and $`U=\{b\}`$. Under $`P`$, action $`a`$ emits zero surely; under $`Q`$, it emits zero or one with probability $`1/2`$ each. Action $`b`$ emits zero under both. A policy first issues $`a`$, then uses $`b`$ forever after zero and an action $`c\notin D`$ forever after one. The guarded event of staying in $`D`$ and using $`b`$ after time one has probability one under $`P`$ and $`1/2`$ under $`Q`$. The needed implication holds, although the positive supports of the first-action laws are not equal.
+
+**An earlier singular action defeats an unguarded tail claim.** Keep identical laws at $`b\in D`$, but let the initial action $`a\notin D`$ reveal the model perfectly. After one outcome choose $`b`$ forever, and after the other choose $`c\notin D`$ forever. Eventual membership in $`\{b\}`$ has probability one in the first model and zero in the second, despite complete agreement on $`D`$. The all-time guard excludes precisely this earlier unsupported acquisition.
+
+**Unused singular rows do not obstruct a guarded event.** Let the policy always issue $`b`$, with identical laws there, while an unused action $`u`$ emits zero surely under one model and one surely under the other. The complete arrays of potential observations for $`u`$ are singular. The policy's actual action laws are nevertheless the same constant sequence. Requiring domination of the original unused row laws would add an unnecessary hypothesis.
+
+**The seed cannot contain the hidden answer.** With identical observation laws under two models and disjoint singleton targets, give each model a different deterministic seed and let the policy choose the corresponding target action. This creates model-specific successful experiments but no common-seed solution. Their success does not contradict the theorem: the common seed distribution premise has been violated. The identical-law, disjoint-target obstruction remains the one already explained in §7.11.
+
+**Feasibility does not replace action consistency.** In a one-model system, let both actions $`g,b`$ be permitted, let every observation be zero, and let only $`g`$ be good. A policy chooses $`g`$ at the empty record and at every record containing only $`g`$, but chooses $`b`$ forever after any record containing $`b`$. Its actual behavior is always good. The fabricated prefix $`((b,0))`$ is feasible in the observation model but inconsistent with the policy; its continuation is bad forever. Thus the continuation lemma cannot be extended to arbitrary feasible records.
+
+A zero-mass observation branch likewise cannot inherit a success statement by conditioning on it. The exact support restriction removes that branch from every model for which it is impossible. Finally, nonempty $`B_0`$ is necessary: with no live models the policy's universal success and feasible-history legality conditions are vacuous, whereas $`W(\varnothing)`$ is false.
+
+This characterization concerns the stated finite fixed controlled laws, exact support menus and common causal history policy. It establishes neither a finite-memory bound nor a finite zero-error declaration, and it does not convert every successful policy into a finite-expectation one. The public menu and target assignments remain application premises. The source's formal closure and original reviewer controls retain their separate execution scope; the ordinary proof here does not claim a fresh kernel build or an unrestricted policy-realization theorem.
+
 ## 8. What final judgments identify about evidence use
 
 The previous sections ask what information a strategy or coordination mechanism needs. The converse question is different: what does a successful collective answer reveal about how the answer was produced? A group can produce informative, accurate answers without the available observations identifying each member's causal contribution. The following construction proves this limitation while preserving both a real two-input mechanism and a real one-input alternative. [11][r11]
@@ -2088,6 +2441,16 @@ The numbered project sources below identify public research editions. They estab
 33. Orthemology public research. *One causal history-policy law: finite full-support restoration iff* and *Explicit common static licence*. Exact public review objects: `8cfcd82cce15b5df64f964f81b2424c97fc1bb7c` and `dd8f4908d7a733aa8f08481da568318d458fc584`. Exact formal endpoint objects: `5d0d5d9a1cb0d9f6d3fdf1a12c113c7e22bda696` and `08be7df023329ae8e83b269433c48e55548c6570`. The historical source closures and incremental verification receipts retain their distinct scope; no fresh kernel build is claimed here.
 34. Eline M. Bovy, Caleb Probine, Marnix Suilen, Ufuk Topcu and Nils Jansen. *Multi-Environment POMDPs: Discrete Model Uncertainty Under Partial Observability*. arXiv:2510.23744v1, 2025, §§3–5, especially Theorem 5 and Appendix A.4. [Primary preprint](https://arxiv.org/html/2510.23744v1).
 35. Emilie Kaufmann, Olivier Cappé and Aurélien Garivier. “On the Complexity of Best-Arm Identification in Multi-Armed Bandit Models.” *Journal of Machine Learning Research* 17(1) (2016): 1–42, Lemma 1. [Published primary article](https://www.jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf).
+
+36. Orthemology public research. Recursive support certificates, live-model self-verification and the finite stage interface. Exact Git objects: `e7701448d95bdc8c60e539df3531f16b19ff9c4b`, `f6c5c5e49e7d2443d61310f84c522551d14cb155`, `aa0685e6ab327d463442ad81816e780e35e3fcac` and `1b5c1ce9787d0e4bd33f9b2b8d526caea4fcd127`.
+37. Orthemology public research. Guarded live-controller budgets, recursive phase extraction and physical-action decoding. Exact source objects: `182b9cb7df5dd153e0689fa875fe66bccbb9131d`, `7775998d720b8975bc6f44c12eb0bc0a2a5b4ffa`, `fa314059dcd26e131cb6f62be9434ba726fa593e` and `401cd2d590030834a5c30969dcf0ed2543acd0dd`. The earlier independent constructive review is the exact public object `38e462ee8c12a50cce8fd6bccf5ca3dde2597458`. Original execution and dependency evidence retain their own scope.
+38. Orthemology public research. Zero-support canonical causal sufficiency. Exact theorem object `5df005790b352fbef1025edf47f64777d8acdd7d`; exact public review object `f320596f12ed2fcaa197dd26ba3490704e56e1c8`. Its feasible action-consistent history contract, finite physical-cost conclusion and historical source qualification are distinct from a fresh kernel replay.
+39. Orthemology public research. Recursive same-policy-law equivalence. Exact theorem object `c96dd7ee08b6b4a69e64b215f4e90d051f0510a2`; exact public review object `ec10faa1fd2a0248945de137db28f9b1c8bcc8b4`. The necessity proof and its original dependency closure remain separate from the constructive treatment here.
+
+40. Orthemology public research. Recursive necessity, invariant safety and stable-support necessity. Exact Git objects: `669d9f1931717f0e9b15044cee87b4d456a632f7`, `2854f3900577895a322428c030f8361ab91745fd` and `c79c6bcf2fab2258a78c7d97f707d351c547583c`.
+41. Orthemology public research. Common-seed derandomization, deterministic acquired-history continuation and the independent head/tail law. Exact Git objects: `827b7258ca49c904a3a08fd344dbff8c0b00d02f`, `a7b647d2e962beca46b4256dd776bff9c555e9fa` and `b448bd272b30aff8ba694ac9e2e85f08be6fda81`. The exact canonical stack-law bridge is object `fd0f87524f95c5f807615a0bf89ed99cd3c173cb`.
+42. Orthemology public research. Relative finite-prefix transfer and transfer guarded by the actually visited action set. Exact Git objects: `293a90207a83252c9132ea7695403efbf554484c` and `dc99af6ec60084a53f318f5d8f1dac9e707d1b29`. The broader finite-query implementation and original source closure retain their own scope.
+43. Orthemology public research. Common winning continuations after positive acquired histories. Exact Git object: `937ae4e2933820e6036f042a9cefade4c9d34e1c`. The literal seeded-policy equivalence endpoints and their historical independent review are cited in reference 39.
 
 [r1]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-multi-actor-conflict-note.md
 [r2]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-core-formalization.md
