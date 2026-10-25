@@ -6,8 +6,8 @@ This compact record accompanies two directly readable public works. It records s
 
 | Work | Exact SHA-256 | Bytes | Independent disposition |
 |---|---|---:|---|
-| [Information retained by inquiry](../mathematics/information-and-inquiry.md) | `e84dff81e8c9a3139d8cf9c5bf89d2c1342b62640301f281e7802cd61331d191` | 79,242 | Ordinary mathematical proofs, ten complete prose-source incorporation scopes, partial additional sources, and checked mathematical syntax: PASS |
-| [Received actuality, original adequacy, and intrinsic necessity](../foundations/received-actuality-and-intrinsic-necessity.md) | `8430a2ee32b81ce81b9d08a7ed5136d51faf8d15cb6cd0f27f167d18c4c11155` | 42,926 | Bounded philosophical argument, source incorporation, corrected rival assessment and source-level legibility: PASS |
+| [Information retained by inquiry](../mathematics/information-and-inquiry.md) | `3f76145a3e9b151329d7628b61453281fb2ad5f38255937969157bc2398f6017` | 80,738 | Ordinary mathematical proofs, ten complete prose-source incorporation scopes, partial additional sources, and checked mathematical syntax: PASS |
+| [Received actuality, original adequacy, and intrinsic necessity](../foundations/received-actuality-and-intrinsic-necessity.md) | `0b895201472eebf820b25dbbc707a0aa25b3ee2b31f232157ec6a769f8885d08` | 42,986 | Bounded philosophical argument, source incorporation, corrected rival assessment and source-level legibility: PASS |
 
 Separate AI reviewers read the actual scholarly texts and substantive predecessors. These are independent agent reviews, not external human peer review or owner adoption. Each first draft received GAP-REVISE. The final dispositions follow the documented repairs below and do not apply retroactively.
 
@@ -60,7 +60,7 @@ The fourth primary, *Local closure and model-bound temporal certificates*, blob 
 
 The first expanded candidate, SHA-256 `58f2d8430b5393e2f84ed2c2772aea22aaa7b20b8179b331ff85ff5599893e60`, received **GAP-REVISE C1**. Its path-composition proposition omitted the zero-edge boundary condition. With no edges, discharged set empty and required set containing one obligation, the edge hypotheses were vacuous but the conclusion false. The corrected proposition requires a nonempty path, or the explicit initial requirement $T_0\subseteq D_0$ for a zero-edge path, and the proof supplies that base case. The original witness now fails the corrected premise; valid identity paths remain admitted. The complete recheck found exactly the declared correction plus two prose clarifications, with every other proof and source mapping unchanged.
 
-The corrected chapter contains **78 display formulas and 561 inline mathematical expressions**, all compiled with `amsmath` and `amssymb` without mathematical delimiter or overfull/underfull warnings. The original expanded review also inspected the relevant formula-rendering pages. This qualifies formula syntax and that rendering, not live GitHub rendering or a complete typeset publication. No accepted historical computational replay was repeated. Ordinary proof, finite corroboration, kernel certification, empirical adequacy, novelty, human peer review and owner adoption remain distinct.
+The pre-rendering corrected chapter contains **78 display formulas and 561 inline mathematical expressions**, all compiled with `amsmath` and `amssymb` without mathematical delimiter or overfull/underfull warnings. The original expanded review also inspected the relevant formula-rendering pages. This qualifies formula syntax and that rendering, not live GitHub rendering or a complete typeset publication. No accepted historical computational replay was repeated. Ordinary proof, finite corroboration, kernel certification, empirical adequacy, novelty, human peer review and owner adoption remain distinct.
 
 ## Philosophical incorporation
 
@@ -86,6 +86,16 @@ The initial chapter `60df80c2a2c670ca6424a4094a07bdd24fff16d17461de5266c9eb58487
 
 The intermediate edition `48ecd861a938170918864cac502255030ae12e03e300d28c581e3e212fa883d1` prompted two precision repairs: replace “enduring-shape examples” with the continuing-tree, silver and wax examples; and restrict an evidence-file baseline-URL check to the nine repository references, distinguishing four inherited external references. These findings remain recorded. The final three display formulas and 21 inline mathematical payloads match the initial reviewed formulas; all 13 reference labels resolve. No new Arabic authentication, full-paper reading, empirical observation or kernel execution is claimed.
 
+## Ordinary Markdown presentation and preserved science
+
+The current identities in the opening table combine the earlier source-incorporation reviews with an independent, complete comparison of the presentation successor. The preceding mathematical edition was `e84dff81e8c9a3139d8cf9c5bf89d2c1342b62640301f281e7802cd61331d191` (79,242 bytes), and the foundational edition was `8430a2ee32b81ce81b9d08a7ed5136d51faf8d15cb6cd0f27f167d18c4c11155` (42,926 bytes), both preserved at commit `72c2a0f36425c1190f1c1e0391c41afbebb1fbae`.
+
+Opening the actual GitHub preview of that mathematical edition exposed raw display TeX, mathematical escapes consumed by Markdown, and rejected named-operator commands. Those are genuine direct-reading failures. The earlier local LaTeX checks explicitly did not qualify GitHub rendering; their PASS is not substituted for this failed observation.
+
+The presentation successor uses ordinary fenced math blocks and protected inline delimiters. Independent review accounted for every expression: 78 display and 561 inline expressions in the mathematical work, and three display and 21 inline expressions in the foundational work. The only formula-payload changes are 43 named-operator typography substitutions in 28 expressions, preserving every operator name and meaning, and nine conventional thin spaces. All other mathematical payloads, prose, hypotheses, proof arguments, counterexamples, source citations and status boundaries are preserved. The four displays nested within theorem clauses or bullets retain their correct list ancestry.
+
+The independent comparison rejected in-memory controls that reversed a Fisher sign, removed the zero-edge condition, replaced a pinned reference or moved a theorem display outside its list item. This affected-edition PASS preserves the earlier substantive review through an explicitly checked presentation change. Actual complete GitHub rendering and hosted integration remain separate post-publication checks recorded in the controlling issue; this paragraph does not claim an unobserved live-page result. No accepted paper is edited and no mathematical result is newly adopted by changing its typography.
+
 ## Preserved independent review identities
 
 The complete initial reviews, exact first-draft copies, final rechecks, input identities and narrow computational evidence are retained in the owner-held continuation evidence. This compact record preserves the material findings directly in the repository; the scholarly arguments require none of that evidence packaging to be read.
@@ -98,10 +108,11 @@ The complete initial reviews, exact first-draft copies, final rechecks, input id
 | Corrected certificate and temporal increment, PASS | `a7c8bfce1b5d57bd8181011ab84348847c6e47acafc644d6a6e59dc58b1e008e` |
 | Initial philosophical review, GAP-REVISE | `6e8f3563a34a78e00fbe1694590794725c3f43145f152318fd5fd37dd22a2bd4` |
 | Final philosophical recheck, PASS | `8df6d2c41b8788be416d042b3e812f0843fbc59a430120785ca7159eb6377805` |
+| Complete scientific-content and Markdown-structure preservation, PASS | `8ec19c0a9c4830f72713b3041efade916e8466cb4a847cd4845b64527af30a67` |
 
 ## Physical disposition and remaining gates
 
-The reviewed prose consolidation now covers **fourteen predecessor files (218,231 bytes) in two scholarly works (122,168 bytes)**. The earlier published edition incorporated eleven sources; the certificate/temporal increment adds three further complete prose replacement candidates while updating the existing mathematical work. These are fourteen distinct source identities with bounded incorporation findings, not a claim that their broader source collections are fully consolidated.
+The reviewed prose consolidation now covers **fourteen predecessor files (218,231 bytes) in two scholarly works (123,724 bytes)**. The earlier published edition incorporated eleven sources; the certificate/temporal increment adds three further complete prose replacement candidates while updating the existing mathematical work. These are fourteen distinct source identities with bounded incorporation findings, not a claim that their broader source collections are fully consolidated.
 
 **No original file has been deleted.** The applicable exact-recovery and independent-custody gates remain unqualified. The amended [R-0002 work order](https://github.com/theislampill/orthemology/issues/38) requires an owner-selected preservation profile, actual entitled persistent and independently recoverable offline receiving, and complete obligation mapping. The twelve historical source/history containers total 153,550,979 bytes, but their actual compressed objects have not been received here. Conventional Git history plus necessary non-Git evidence is a proposed replacement profile, not an adopted or received backup. Neither local source availability nor this review record substitutes for custody.
 

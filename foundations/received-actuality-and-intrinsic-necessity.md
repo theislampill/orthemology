@@ -48,17 +48,17 @@ The retained formal interface separates a **target**, a **resource**, and a **be
 
 | Notation | Meaning in the declared interpretation |
 |---|---|
-| $a$ | The actual world |
-| $E(w,g)$ | Bearer g exists at world w |
-| $D_T(t)$ | Target t is received |
-| $A_R(r)$, $D_R(r)$ | Resource r is actual, and resource r is received |
-| $I(g,r)$ | Resource r is intrinsic to bearer g |
-| $V(r,t)$ | Resource r is relevant to target t |
-| $D_B(w,g)$ | g is wholly received at w in the specified existential respect |
+| $`a`$ | The actual world |
+| $`E(w,g)`$ | Bearer g exists at world w |
+| $`D_T(t)`$ | Target t is received |
+| $`A_R(r)`$, $`D_R(r)`$ | Resource r is actual, and resource r is received |
+| $`I(g,r)`$ | Resource r is intrinsic to bearer g |
+| $`V(r,t)`$ | Resource r is relevant to target t |
+| $`D_B(w,g)`$ | g is wholly received at w in the specified existential respect |
 
 The interface states three relevant premises:
 
-$$
+```math
 \begin{aligned}
 \text{Completion:}\quad
 &\forall t\,[D_T(t)\Rightarrow
@@ -70,11 +70,11 @@ $$
 &\forall g,r\,[E(a,g)\land I(g,r)\land D_B(a,g)
   \Rightarrow D_R(r)].
 \end{aligned}
-$$
+```
 
 **Conditional bearer result.** Given a received target t and these premises, there are a resource r and a bearer g such that r is actual, unreceived, and relevant to t; r is intrinsic to g; and g actually exists without whole receipt in the specified respect. [Interface, `original_bearer_of_completion`][s10]
 
-**Proof.** Completion applied to the actual received target supplies r with $V(r,t)$, $A_R(r)$, and $\neg D_R(r)$. Realisation supplies g with $E(a,g)$ and $I(g,r)$. Suppose $D_B(a,g)$. Support transport would then yield $D_R(r)$, contradicting the resource's unreceived status. Hence $\neg D_B(a,g)$. The same t, r, and g satisfy the complete witness statement. This is the reasoning implemented by `original_bearer_of_resource` followed by `original_bearer_of_completion`. [Original resource/bearer interface][s10]
+**Proof.** Completion applied to the actual received target supplies r with $`V(r,t)`$, $`A_R(r)`$, and $`\neg D_R(r)`$. Realisation supplies g with $`E(a,g)`$ and $`I(g,r)`$. Suppose $`D_B(a,g)`$. Support transport would then yield $`D_R(r)`$, contradicting the resource's unreceived status. Hence $`\neg D_B(a,g)`$. The same t, r, and g satisfy the complete witness statement. This is the reasoning implemented by `original_bearer_of_resource` followed by `original_bearer_of_completion`. [Original resource/bearer interface][s10]
 
 The proof uses no modal necessity premise. It also does not infer a bearer merely from the truth of a sentence: Realisation concerns the stated actual resource domain. Its support transport is a claim about receipt in the same existential respect, not about mere concomitance. The proof establishes the conditional inference; the argument for applying its premises to actual reality remains philosophical. In the field application, Completion receives its warrant from global productive adequacy, while the concrete-resource and receipt interpretations must be maintained through Realisation and transport. [Productive totality, §5; interface opening and definitions][s4] [Original resource/bearer interface][s10]
 
@@ -150,17 +150,17 @@ The existential and modal sufficiency judgments in steps 2–5 articulate the de
 
 The formal consequence is simpler than the philosophical appraisal. Write
 
-$$
+```math
 N(g)\equiv\forall w\,E(w,g).
-$$
+```
 
 The retained contingency-need premise is
 
-$$
+```math
 \forall g\,[E(a,g)\land\neg N(g)\Rightarrow D_B(a,g)].
-$$
+```
 
-**Conditional necessity result.** For the same actual g obtained in section 3, contingency-need and its established nonreceipt yield $N(g)$. **Proof:** if $\neg N(g)$, actuality and contingency-need give $D_B(a,g)$, contradicting $\neg D_B(a,g)$. Hence $N(g)$. This expresses the inherited necessity step used by the interface's composition theorem. [Interface, `ContingencyNeed` and `abc_same_witness`; productive totality, §5][s10] [Productive totality][s4]
+**Conditional necessity result.** For the same actual g obtained in section 3, contingency-need and its established nonreceipt yield $`N(g)`$. **Proof:** if $`\neg N(g)`$, actuality and contingency-need give $`D_B(a,g)`$, contradicting $`\neg D_B(a,g)`$. Hence $`N(g)`$. This expresses the inherited necessity step used by the interface's composition theorem. [Interface, `ContingencyNeed` and `abc_same_witness`; productive totality, §5][s10] [Productive totality][s4]
 
 The proof does not establish its philosophical premise. Worlds must represent genuine alternatives for the same bearer, and whole receipt must express the intended existential dependence. Arbitrarily chosen histories or a weaker dependence predicate do not receive that interpretation merely from the proof's validity. Conversely, re-proving the conditional implication would not strengthen the already developed philosophical warrant. [Direct anti-brute return, “Application to ContingencyNeed”; affirmative intrinsic-necessity argument, §7][s3] [Affirmative intrinsic-necessity argument][s1]
 
