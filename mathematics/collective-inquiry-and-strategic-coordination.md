@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. It also separates finite-memory accuracy from eventual correctness, distinguishes fixed hidden standards from a common observed objective, and gives the exact risk threshold for fresh switching innovations. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
+A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. It also separates finite-memory accuracy from eventual correctness, distinguishes fixed hidden standards from a common observed objective, and gives the exact risk threshold for fresh switching innovations. For fixed finite models with positive controlled-observation laws, it gives an exact criterion for eventual correctness and a constructive history policy. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
 
 ## 1. Shared inquiry and distributed access
 
@@ -1415,6 +1415,232 @@ Every later response is correct. The conditional **flip probability** is now the
 
 The hypotheses about standards, acquisition laws, target meanings and permissions are not observations established by these calculations. The results identify which memory and information contracts can support the specified objective, while leaving empirical identification and substantive cognitive or normative authority to their own evidence.
 
+### 7.11 Controlled observations and eventual correctness
+
+In §7.8, observations arrive without requiring an incorrect response. An inquiry can have a different structure: an action determines which observation is acquired, and the informative action may itself violate the target. Identifiability under unlimited experimentation then need not yield eventual permanent correctness. The following finite model characterizes when the available good actions can sustain the necessary discrimination. [32]
+
+#### Fixed models, acquired histories and good action sets
+
+Let $`\Theta,A,Y`$ be nonempty finite sets of fixed hidden models, actions and observations. For each $`\theta\in\Theta`$ and $`a\in A`$, a supplied probability vector satisfies
+
+```math
+P_{\theta,a}(y)>0,\qquad
+\sum_{y\in Y}P_{\theta,a}(y)=1.
+```
+
+The true model is chosen once. An action is issued before its observation. Conditional on the complete acquired history, the controller's private seed and the chosen action $`a_t`$, the next observation has law $`P_{\theta,a_t}`$. This is a condition on fresh acquisitions. Equal one-time marginals of copied observations do not satisfy it.
+
+A controller has one common probability space $`(Z,\rho)`$ for its private seed and one measurable policy
+
+```math
+\pi:Z\times(A\times Y)^*\longrightarrow A.
+```
+
+At time $`t`$ it issues $`a_t=\pi(z,h_t)`$, where $`h_t=((a_0,y_0),\ldots,(a_{t-1},y_{t-1}))`$. The seed is independent of the fresh feedback sources, and neither its law nor the policy depends on the true model. Memory is unrestricted. The length of the history supplies the time index, so no time-homogeneity assumption is imposed.
+
+Each model supplies a fixed target set $`G_\theta\subseteq A`$. Initially every action is stipulated safe and commonly permitted; an explicit additional permission restriction is treated below. Write $`\Pr_\theta^\pi`$ for the law generated by the policy and the controlled observations. Restoration means
+
+```math
+\Pr_\theta^\pi
+ \bigl(\exists N\ \forall t\ge N:\ a_t\in G_\theta\bigr)=1
+\quad\text{for every }\theta\in\Theta.
+```
+
+The existential policy quantifier precedes the universal model quantifier. A separate constant successful action for each model does not establish this common-policy requirement. An empty target set makes restoration impossible; allowing that degenerate case will be useful when permissions are imposed. The target sets, observation laws and permission judgments remain separate supplied premises.
+
+For $`U\subseteq A`$, define
+
+```math
+E_\theta(U)=
+ \{\lambda\in\Theta:
+       P_{\lambda,a}=P_{\theta,a}\text{ for every }a\in U\}.
+```
+
+A nonempty set $`U`$ is **self-verifying for the target at $`\theta`$** when
+
+```math
+U\subseteq G_\theta,
+\qquad
+U\subseteq G_\lambda\quad
+       \text{for every }\lambda\in E_\theta(U).
+```
+
+Thus a rival that rejects any action in $`U`$ must differ observationally on some action in $`U`$. The rival need not be identifiable if it accepts the whole set. Here “self-verifying” describes a property of the supplied finite model; it does not mean that the controller issues a finite certificate that its current actions are correct.
+
+**Theorem (controlled-observation restoration).** One common seeded history policy restores almost surely under every model if and only if each model has a nonempty self-verifying target set. Whenever the condition holds, a deterministic history policy suffices. [32–33]
+
+#### Necessity: transferring a recurrent set without stopping at its last exit
+
+Suppose a common policy restores. Under a fixed true model $`\theta`$, let $`U_\infty`$ be the actions used infinitely often. Finiteness of $`A`$ makes $`U_\infty`$ nonempty on every infinite action sequence. Restoration implies $`U_\infty\subseteq G_\theta`$ almost surely. There are only finitely many possible recurrent sets, so some nonempty $`U\subseteq G_\theta`$ occurs with positive probability. On that event, each action outside $`U`$ occurs only finitely often. Consequently, for some deterministic $`N`$,
+
+```math
+F(U,N)=\{a_t\in U\text{ for all }t\ge N,
+          \text{ and every }a\in U\text{ recurs infinitely often}\}
+```
+
+has positive $`\Pr_\theta^\pi`$ probability. No last-exit time is assumed to be a stopping time.
+
+Fix $`\lambda\in E_\theta(U)`$. Include the private seed in the length-$`N`$ prefix. For a finite history $`h=((a_s,y_s))_{s<N}`$, its joint law with the seed has the explicit form
+
+```math
+\rho(dz)
+\prod_{s<N}
+ \mathbf 1\{a_s=\pi(z,h_s)\}
+ P_{\theta,a_s}(y_s).
+```
+
+The indicator factors are identical under the two models, and every observation factor is strictly positive. Hence their seed-and-prefix laws are mutually absolutely continuous. On the part associated with a compatible history $`h`$, the density ratio is the positive finite number
+
+```math
+\prod_{s<N}
+ \frac{P_{\theta,a_s}(y_s)}{P_{\lambda,a_s}(y_s)}.
+```
+
+After a seed and prefix have been fixed, send the process to a common absorbing cemetery state at its first subsequent action outside $`U`$. The continuation kernels of these killed processes coincide: their policy is the same, and all observation laws for actions in $`U`$ agree. Equality on finite cylinders gives equality of their continuation laws. In particular, they assign the same conditional continuation probability to staying in $`U`$ forever and visiting each member infinitely often.
+
+Integrating that common nonnegative continuation probability against the two equivalent prefix measures transfers positivity of $`F(U,N)`$ to model $`\lambda`$. If some $`a\in U`$ were outside $`G_\lambda`$, this event would contain infinitely many errors under $`\lambda`$, contradicting restoration. Thus $`U\subseteq G_\lambda`$ for every $`\lambda\in E_\theta(U)`$. This proves necessity for the fixed $`\theta`$, and then for every model. Keeping the common seed in the prefix also proves the claim for seeded randomization without presuming a general policy-realization theorem. $`\square`$
+
+#### A constructive policy with the correct physical clock
+
+Choose one nonempty self-verifying set $`U_\lambda`$ for each candidate $`\lambda`$, and fix an ordering of its elements. Its ordered list is a plan. At a completed-plan boundary, compute the acquired likelihood
+
+```math
+L_t(\lambda)=\prod_{s<t}P_{\lambda,a_s}(y_s),
+```
+
+choose a maximizing candidate using a fixed tie rule, and load its plan. Execute one action at a time until that plan is empty, acquiring and recording fresh feedback after every action. Then choose a new maximizing candidate from the enlarged history. A change of likelihood ranking during a plan does not cancel its remaining actions. [33]
+
+This is a history policy, including on histories it would not itself generate. Start its queue at the plan chosen from the empty likelihood record. Upon appending any action/observation pair, remove one queue element; if the queue becomes empty, refill it using the likelihood of the enlarged record. On actual histories, the recorded action is the queue head. On arbitrary histories, the same recursion still defines a nonempty queue. Every plan is nonempty and finite, so the policy always has an action and never needs an arbitrary empty-queue default.
+
+For the probability argument, fix $`\theta`$ and take independent stacks $`(Y_{a,k})_{k\ge1}`$ with law $`P_{\theta,a}`$, one stack for each action. On its $`k`$th use, action $`a`$ consumes $`Y_{a,k}`$. The controller accesses no unused coordinate. Induction on acquired histories shows that each consistent finite history has exactly the product probability prescribed by the controlled-observation model: each new coordinate is independent of those already acquired and has the required action law. Thus this stack construction generates the actual policy law, rather than a different law whose good behavior is merely assumed to transfer. The general probability-law comparison in §§7.5–7.6 retains its broader scope.
+
+Let $`N_a(t)`$ count uses of action $`a`$ before time $`t`$. The acquired likelihood satisfies the exact identity
+
+```math
+\log\frac{L_t(\theta)}{L_t(\lambda)}
+ =\sum_{a\in A}\sum_{k=1}^{N_a(t)}
+     \log\frac{P_{\theta,a}(Y_{a,k})}
+                    {P_{\lambda,a}(Y_{a,k})}.
+```
+
+Multiplicity and actual acquisition counts matter in this equation. Replacing repeated uses by set membership, reusing a stack's first observation, or counting plans instead of actions changes the experiment.
+
+For each action, the strong law gives the limiting average of its log ratio as
+
+```math
+D_{\theta,\lambda}(a)
+ =\sum_{y\in Y}P_{\theta,a}(y)
+       \log\frac{P_{\theta,a}(y)}{P_{\lambda,a}(y)}.
+```
+
+This finite-alphabet strong law follows by applying the indicator argument in §7.8 to each symbol. All log increments are bounded because the alphabets are finite and the probabilities are positive. Jensen's inequality for the strictly concave logarithm gives $`D_{\theta,\lambda}(a)\ge0`$, with equality exactly when the two probability vectors agree: apply it to $`P_{\lambda,a}(y)/P_{\theta,a}(y)`$, whose $`P_{\theta,a}`$-weighted mean is one.
+
+Work on the probability-one intersection of these finitely many strong-law events. For every informative action, a sufficiently long stack-prefix sum is at least half its positive mean times its length. An action sampled finitely often contributes an eventually fixed finite amount; a noninformative action contributes zero. It follows that the total log ratio tends to positive infinity whenever at least one distinguishing action is sampled infinitely often. This reasoning uses complete stack-prefix limits and then evaluates them at the actual counts; it does not assume that adaptively selected observations form an unconditioned random subsequence.
+
+Call a candidate $`\lambda`$ harmful under $`\theta`$ if $`U_\lambda\nsubseteq G_\theta`$. Self-verification of $`U_\lambda`$ implies that some $`b\in U_\lambda`$ distinguishes $`\lambda`$ from $`\theta`$: otherwise $`\theta\in E_\lambda(U_\lambda)`$ would require $`U_\lambda\subseteq G_\theta`$. If this harmful candidate were selected at infinitely many plan boundaries, every action in its plan, including $`b`$, would be executed infinitely often. The log ratio above would then tend to positive infinity. Eventually $`L_t(\theta)>L_t(\lambda)`$, so $`\lambda`$ could no longer maximize likelihood at a boundary. This is a contradiction.
+
+Only finitely many harmful candidates exist, and each is chosen for finitely many plans almost surely. If $`T_j`$ is the start of plan $`j`$, then
+
+```math
+T_0=0,\qquad
+T_{j+1}=T_j+|U_{\lambda_j}|,
+\qquad 1\le |U_{\lambda_j}|\le |A|.
+```
+
+These intervals cover physical time and their endpoints tend to infinity. After the finitely many harmful plans have finished, every actual action belongs to $`G_\theta`$. The physical cutoff is the sum of the preceding plan lengths, not the number of plans. The same deterministic queue policy works under every true model, completing the sufficiency proof. $`\square`$
+
+The earlier construction selects a likelihood maximizer after every action and keeps a separate persistent cyclic pointer through each candidate's set. It is another valid policy: infinitely many selections of a harmful candidate again force every member of its cycle to be used infinitely often, and the same likelihood contradiction applies. Its persistent pointers must not be replaced by restarting the chosen plan at each action. The block policy just proved is the one realized by the later physical-history construction; the two algorithms are not claimed to have identical action laws. [32–33]
+
+#### The greatest good set and a finite decision procedure
+
+The union of two self-verifying sets for $`\theta`$ is self-verifying. A rival agreeing on the union agrees on each set and therefore accepts both. There is consequently a unique greatest such set, with the empty set used when none exists. It can be found without enumerating all subsets.
+
+Start with $`U_0=G_\theta`$ and iterate
+
+```math
+U_{k+1}
+ =U_k\cap\bigcap_{\lambda\in E_\theta(U_k)}G_\lambda.
+```
+
+The operation is contracting and monotone. If $`V\subseteq U`$, then $`E_\theta(U)\subseteq E_\theta(V)`$; hence every member surviving the intersection for $`V`$ also survives it for $`U`$. Any self-verifying $`V\subseteq G_\theta`$ remains in every iterate: a rival agreeing on $`U_k`$ agrees on $`V`$ and accepts all its actions. After at most $`|G_\theta|`$ strict deletions, the sequence stabilizes at a set $`K_\theta`$. A nonempty fixed point satisfies precisely the self-verification condition, and the preceding inclusion shows that it contains every other self-verifying set. Therefore
+
+```math
+\text{common almost-sure restoration exists}
+\quad\Longleftrightarrow\quad
+K_\theta\ne\varnothing\text{ for every }\theta.
+```
+
+Each deletion has a finite witness: a rival that agrees on every currently retained action but rejects the deleted action. The witnesses must be checked at their actual elimination stages. For $`n=|\Theta|`$, $`m=|A|`$ and $`d=|Y|`$, direct repeated rational-vector comparison takes $`O(n^2m^2d)`$ rational comparisons over all models. This counts comparisons of supplied exact probabilities, not bit operations, acquisition costs or authentication work. For arbitrary real inputs, exact equality and likelihood comparison remain mathematical operations; no general effective procedure for presenting such reals is assumed.
+
+Two rounds can be essential. In the following table, entries are the probabilities of observing one, with $`Y=\{0,1\}`$:
+
+| Model | $`G_\theta`$ | Action $`a`$ | Action $`b`$ |
+|---|---|---:|---:|
+| $`0`$ | $`\{a,b\}`$ | $`1/2`$ | $`1/2`$ |
+| $`1`$ | $`\{a\}`$ | $`1/2`$ | $`1/2`$ |
+| $`2`$ | $`\{b\}`$ | $`1/2`$ | $`2/3`$ |
+
+For model zero, the first step removes $`b`$ because model one agrees on both actions and rejects $`b`$. Once only $`a`$ remains, model two also becomes indistinguishable and removes $`a`$. Thus $`U_0=\{a,b\}`$, $`U_1=\{a\}`$, $`U_2=\varnothing`$. A single filtering pass would return a false positive.
+
+Three monotonicity statements follow directly from valid-set inclusion. Adding rival models can only shrink an old model's greatest set. Enlarging all target sets can only enlarge these sets. Applying a common observation garbling at each action preserves old equalities of observation laws and can add new equalities, so it can only shrink the greatest sets. The restoration interpretation of the last statement requires the garbled model to retain the theorem's stated observation hypotheses. None of these order statements selects the true target or establishes its authority. [32]
+
+#### A fixed permission menu
+
+Let $`\Gamma\subseteq A`$ be a supplied common static menu. Require $`\pi(z,h)\in\Gamma`$ for every seed and every finite history, including histories the policy never generates. Such a policy with almost-sure restoration under every model exists exactly when the greatest-set calculation for the restricted targets
+
+```math
+G_\theta^{\Gamma}=G_\theta\cap\Gamma
+```
+
+is nonempty for every model. [33]
+
+For necessity, all-time menu membership and eventual target membership imply eventual membership in $`G_\theta^\Gamma`$, so the theorem applies. For sufficiency, use its nonempty greatest sets as the queue plans. Every initial plan and every replacement plan lies in $`\Gamma`$, and every residual queue is a nonempty suffix of such a plan. Induction on arbitrary finite histories proves that every issued action is in $`\Gamma`$. This includes malformed histories containing earlier actions outside the menu. The queue never empties at a decision, so an out-of-menu fallback value cannot be used. Eventual membership in the restricted target implies eventual membership in the original target.
+
+If $`\Gamma`$ is empty or some target misses it, no such policy exists. Early target errors may still be permitted; eventual correctness alone does not establish all-time permission. The result concerns a fixed common menu. History-dependent or model-dependent permissions require another analysis, and no statistical concentration result authenticates the menu's authority.
+
+#### Positive and negative cases
+
+**Information available only through bad actions.** Take two models, actions $`r_0,r_1,q`$, and $`G_0=\{r_0\}`$, $`G_1=\{r_1\}`$. Both repair actions emit a fair bit under either model. The probe $`q`$ emits a Bernoulli bit of parameter $`1/3`$ under zero and $`2/3`$ under one. All actions are permitted, but $`q`$ is target-bad under both models. Neither singleton target is self-verifying, so no common almost-surely restorative policy exists, even with unrestricted memory and adaptive probing.
+
+Nevertheless, for any $`\delta>0`$, take $`2m`$ probe samples and commit to their majority, with $`m`$ chosen so that $`(8/9)^m\le\delta`$. The already proved calculation in §7.8 gives restoration probability at least $`1-\delta`$ under both models. Only finitely many probe actions occur, but a wrong commitment makes infinitely many subsequent errors. Arbitrarily high finite-confidence success is different from one probability-one guarantee. Infinite probing identifies the model almost surely and fails restoration because the probes remain bad. [32]
+
+**Good actions that sustain discrimination.** If both $`r_0`$ and $`r_1`$ instead have different positive observation laws under the two models, each singleton target becomes self-verifying. The constructive policy restores while continuing to acquire information through its eventual good actions. If only $`r_0`$ is informative while $`r_1`$ remains indistinguishable, only the first target has a valid set; there is still no policy restoring under both. The quantifier over every possible true model is essential.
+
+**Correct decisions without exact identification.** If two models have identical observation laws at every action but both accept $`c`$, the constant policy $`c`$ restores under both. Their disagreement about other actions and their unidentified model labels do not obstruct this decision. Conversely, identical complete observation laws and disjoint target sets give empty greatest sets, even though each model individually admits a successful constant action.
+
+**Why a plan cannot be restarted after every observation.** Let $`G_0=\{a,b\}`$ and $`G_1=\{c\}`$. At $`a`$ both models emit a fair bit; at each of $`b,c`$ they emit Bernoulli bits with respective parameters $`1/3,2/3`$. Both target sets are self-verifying. Choose model zero in a likelihood tie and order its plan as $`(a,b)`$. A rule that recomputes a maximizer after every action and always restarts its plan chooses $`a`$ forever: those observations never break the tie. It therefore fails under model one. The queue executes $`b`$ before replanning, and the persistent-pointer alternative also eventually reaches $`b`$. Their proofs rely on those actual actions, not just the existence of an informative member in an unexecuted plan.
+
+**Freshness and permissions remain separate.** Copying one biased root bit forever retains the same one-time marginals but violates the conditional fresh-observation premise; the common positive-probability report words give the impossibility proved in §7.8. Likewise, if only a universally licensed abstention survives the common menu and it belongs to neither target, restricting the targets to that menu yields empty greatest sets. Neither many repeated reports nor a high likelihood supplies a missing acquisition or permission.
+
+**Zero probabilities change the criterion.** Keep the opposing singleton targets and uninformative repair actions in the first example, but make $`q`$ reveal the true model exactly. One probe followed by the corresponding repair restores surely. The singleton good sets still fail the equality-based condition, because their own observation laws agree. The finite-prefix absolute-continuity premise has now failed: the probe has disjoint outcome supports. This is a counterexample to extending the stated necessity beyond its full-support domain; separate constructive results with zero probabilities do not establish the same unrestricted equivalence.
+
+#### A general obstruction after informative probing ends
+
+The deterministic-prefix argument has a useful extension beyond finite action spaces. Fix two models on common standard Borel action, observation and controller-record spaces. Fix one common measurable causal policy, including its randomization, and the corresponding regular continuation kernels. The record contains the acquired history and all private state needed for future policy behavior; its update rule and future randomization kernels are common. Let $`R`$ be a measurable class of nonprobe actions. Assume that the controlled observation kernels agree under both models whenever an action in $`R`$ is chosen at a common record. Assume also that their complete finite-prefix laws are mutually absolutely continuous. Finally, let $`B_\theta,B_\lambda`$ be disjoint measurable successful-tail events, each of which entails that only finitely many actions fall outside $`R`$. Then no common policy has probability-one success under both models. [32, §4]
+
+To prove this, suppose $`\Pr_\theta^\pi(B_\theta)=1`$. For some deterministic $`N`$,
+
+```math
+\Pr_\theta^\pi
+ \bigl(B_\theta\cap\{a_t\in R\text{ for all }t\ge N\}\bigr)>0.
+```
+
+Let $`\mu_\theta^N,\mu_\lambda^N`$ be the prefix laws. Kill the future process on leaving $`R`$. Equality of the common policy and nonprobe kernels gives one measurable subprobability continuation kernel $`Q_N`$ under both models. For the indicated full-path event, including its prefix-dependent success condition, its probabilities are
+
+```math
+\int Q_N(h,B_\theta)\,\mu_\theta^N(dh)
+\quad\text{and}\quad
+\int Q_N(h,B_\theta)\,\mu_\lambda^N(dh).
+```
+
+The first is positive, and $`\mu_\theta^N\ll\mu_\lambda^N`$ makes the second positive. The transferred paths lie outside $`B_\lambda`$, contradicting probability-one success there. Standard Borel spaces and the specified common continuation kernels make the disintegration and measurable-kernel statement meaningful; equivalent finite prefixes by themselves do not make arbitrary infinite-tail laws equivalent. No conditioning on the final probe is used. $`\square`$
+
+An independently proved fact that increasingly accurate repair sequences encode the hidden norm can supply the disjoint success events in this proposition. The proposition does not establish that geometric encoding or authenticate the norm-to-observation relation. It also does not exclude a finite-confidence rule, a singular revealing probe, or continued informative target-good behavior, all of which alter its premises.
+
+Controlled testing and robust policies have substantial antecedents. Bovy and collaborators study one policy under a fixed but unknown member of a finite family of partially observed models, with finite-horizon and discounted reward criteria and linear-program constructions. [34] Kaufmann, Cappé and Garivier give an adaptive bandit change-of-measure inequality at an almost-surely finite stopping time. [35, Lemma 1] Those settings help locate the present comparison; the last informative probe is not automatically a stopping time to which that lemma applies. The qualitative target-dependent criterion here also retains the distinction from the common observed-state parity objective discussed in §7.8. No historical priority claim follows.
+
+The finite greatest-set test and the infinite-time policy theorem answer different computational questions. The policy uses growing acquired likelihoods; it supplies no general finite-memory bound, deterministic last-error time, finite zero-error declaration, expected physical error budget or arbitrary-real implementation. In particular, the historical finite enumeration and formal implementation evidence retain their own source and execution boundaries. The mathematical result concerns the stated observation laws, targets and permissions; empirical truth, normative warrant and the unfinished broader account of collective inquiry require their own arguments.
+
 ## 8. What final judgments identify about evidence use
 
 The previous sections ask what information a strategy or coordination mechanism needs. The converse question is different: what does a successful collective answer reveal about how the answer was produced? A group can produce informative, accurate answers without the available observations identifying each member's causal contribution. The following construction proves this limitation while preserving both a real two-input mechanism and a real one-input alternative. [11][r11]
@@ -1857,6 +2083,11 @@ The numbered project sources below identify public research editions. They estab
 29. Martin E. Hellman and Thomas M. Cover. “Learning with Finite Memory.” *The Annals of Mathematical Statistics* 41, no. 3 (1970): 765–782. [doi:10.1214/aoms/1177696958][memory-origin].
 30. Tomer Berg, Or Ordentlich and Ofer Shayevitz. *Binary Hypothesis Testing with Deterministic Finite-Memory Decision Rules*. arXiv:2005.07445v1, 2020. §I, especially equations (4) and (9), specifies the average-error criterion and the classical randomized-machine comparison. [Primary preprint][memory-learning].
 31. Krishnendu Chatterjee, Laurent Doyen, Jean-François Raskin and Ocan Sankur. “The Value Problem for Multiple-Environment MDPs with Parity Objective.” *52nd International Colloquium on Automata, Languages, and Programming*, LIPIcs 334, article 150 (2025). The common observed-state objective and almost-sure finite-memory result used here are in §§2–3 and Theorem 4. [doi:10.4230/LIPIcs.ICALP.2025.150][memdp].
+
+32. Orthemology public research. *Controlled information and eventual restoration*. Complete bounded public mathematical note. Exact Git object: `13cd55f631f3335b7c5c164947fb88ebe56e8f72`. The source's original finite enumeration remains separate execution evidence.
+33. Orthemology public research. *One causal history-policy law: finite full-support restoration iff* and *Explicit common static licence*. Exact public review objects: `8cfcd82cce15b5df64f964f81b2424c97fc1bb7c` and `dd8f4908d7a733aa8f08481da568318d458fc584`. Exact formal endpoint objects: `5d0d5d9a1cb0d9f6d3fdf1a12c113c7e22bda696` and `08be7df023329ae8e83b269433c48e55548c6570`. The historical source closures and incremental verification receipts retain their distinct scope; no fresh kernel build is claimed here.
+34. Eline M. Bovy, Caleb Probine, Marnix Suilen, Ufuk Topcu and Nils Jansen. *Multi-Environment POMDPs: Discrete Model Uncertainty Under Partial Observability*. arXiv:2510.23744v1, 2025, §§3–5, especially Theorem 5 and Appendix A.4. [Primary preprint](https://arxiv.org/html/2510.23744v1).
+35. Emilie Kaufmann, Olivier Cappé and Aurélien Garivier. “On the Complexity of Best-Arm Identification in Multi-Armed Bandit Models.” *Journal of Machine Learning Research* 17(1) (2016): 1–42, Lemma 1. [Published primary article](https://www.jmlr.org/papers/volume17/kaufman16a/kaufman16a.pdf).
 
 [r1]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-multi-actor-conflict-note.md
 [r2]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-core-formalization.md
