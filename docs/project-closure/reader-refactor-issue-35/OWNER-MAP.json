@@ -748,6 +748,22 @@
       "role": "historical-source",
       "reading_source": "consolidated-recognition-and-restoration",
       "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "8c8b327bb642570307e50ddaef35850b508a80e6",
+      "role": "historical-source",
+      "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
     }
   ]
 }

@@ -986,7 +986,8 @@ class HistoricalMetadataPinTests(unittest.TestCase):
     def test_actual_manifest_binds_both_original_bodies_not_mutable_roots(self):
         expected, _ = self.candidate()
         # Preserve the exact original document, adding only the separately
-        # qualified four prose history bindings alongside the two old pins.
+        # qualified four prose bindings, three mediator/evidence bindings,
+        # and the two old pins.
         for path in HistoricalProseReaderTests.PATHS:
             for row in expected["objects"]:
                 if row.get("repository_path") == path:
@@ -994,6 +995,16 @@ class HistoricalMetadataPinTests(unittest.TestCase):
                                git_blob=subprocess.check_output(
                                    ["git", "rev-parse", HistoricalProseReaderTests.BASE + ":" + path],
                                    cwd=ROOT, text=True).strip())
+        for path, revision, blob in (
+            ("research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md",
+                "a7ff0e33d1a299db640041c46b1af81ca70851f6", "8c8b327bb642570307e50ddaef35850b508a80e6"),
+            ("experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
+                "a7ff0e33d1a299db640041c46b1af81ca70851f6", "a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5"),
+            ("scripts/validate_v5_successors.py",
+                "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "62457f5f61e6e433b7714948e1b0c2545a00fbb1"),
+        ):
+            row = next(r for r in expected["objects"] if r.get("repository_path") == path)
+            row.update(repository_revision=revision, git_blob=blob)
         actual = json.loads((ROOT / self.manifest_path).read_bytes())
         self.assertEqual(actual, expected, "historical owner metadata changed outside the finite bindings")
 
@@ -1074,7 +1085,15 @@ class TwelfthCollectionCoverageTests(unittest.TestCase):
                 for key in keys:
                     path = sources[key]["path"]
                     self.assertIn(path, self.owners["required_work_sources"])
-                    body = (ROOT / path).read_bytes()
+                    if key == "coordination":
+                        bindings = [row for row in self.owners["historical_source_bindings"]
+                                    if row["path"] == path]
+                        self.assertEqual(len(bindings), 1, "The incorporated source needs its exact owner binding")
+                        binding = bindings[0]
+                        body = self.mod.historical_source_bytes(
+                            ROOT, path, binding["repository_revision"], binding["git_blob"])
+                    else:
+                        body = (ROOT / path).read_bytes()
                     self.assertEqual(len(body), member["bytes"])
                     self.assertEqual(hashlib.sha256(body).hexdigest(), member["sha256"])
                 for work in represented:
@@ -1092,9 +1111,94 @@ class TwelfthCollectionCoverageTests(unittest.TestCase):
                         if start <= line < end:
                             target = self.mod.resolve_reader_link(ROOT, "docs/reader/PAPER-CATALOGUE.md", href)
                             if target is not None:
-                                linked.add(target[0])
-                    self.assertTrue(any(sources[key]["path"] in linked for key in keys),
-                                    "The named work section must directly reach its source")
+                                linked.add(target)
+                    self.assert_work_reading_route(work, keys, linked)
+
+    def assert_work_reading_route(self, work, keys, linked, cross=None):
+        cross = self.cross if cross is None else cross
+        sources = cross["sources"]
+        if work["key"] != "finite-mediator" and "coordination" not in keys:
+            self.assertTrue(any(sources[key]["path"] == path for key in keys
+                                for path, _ in linked),
+                            "An unincorporated work must directly reach its source")
+            return
+        # The whole coordination work now reads through Collective Inquiry §6;
+        # J04 separately retains the narrower finite-capacity result in §6.4.
+        # This exact, reviewed source relationship is not a general permission
+        # to replace an original with any synthesis or collection link.
+        self.assertEqual(work["key"], "finite-mediator")
+        self.assertEqual(keys, {"coordination"})
+        self.assertEqual(work["source_keys"], ["coordination"])
+        self.assertEqual(work.get("reading_forms"), [
+            {"source": "coordination", "relationship": "historical-source"}])
+        self.assertEqual([r for r in cross["relations"] if r.get("from") == "coordination"], [{
+            "from": "coordination", "to": "consolidated-collective-inquiry",
+            "kind": "logical-content-incorporated-historical-source-retained",
+            "basis": "scientific-consolidation-review",
+        }])
+        self.assertIn("scientific-consolidation-review", sources)
+        current = sources.get("consolidated-collective-inquiry", {})
+        target = ("mathematics/collective-inquiry-and-strategic-coordination.md",
+                  "6-complete-coordination-records-across-a-growing-horizon")
+        self.assertEqual(current.get("path"), target[0])
+        self.assertIn(target, linked, "The named work must reach its complete incorporated treatment")
+        self.assertIn(target[1], self.mod.markdown_index((ROOT / target[0]).read_text())["anchors"])
+
+    def test_current_coordination_route_requires_its_exact_incorporation(self):
+        work = next(w for w in self.cross["works"] if w["key"] == "finite-mediator")
+        target = ("mathematics/collective-inquiry-and-strategic-coordination.md",
+                  "6-complete-coordination-records-across-a-growing-horizon")
+        self.assert_work_reading_route(work, {"coordination"}, {target})
+        for linked in (set(), {(target[0], "")},
+                       {(target[0], "64-exact-finite-alphabet-capacity")},
+                       {(target[0], "absent-section")},
+                       {(self.cross["sources"]["coordination"]["path"], "")},
+                       {("docs/reader/RESULT-INDEX.md", "finite-mediator")}):
+            with self.subTest(linked=linked), self.assertRaises(AssertionError):
+                self.assert_work_reading_route(work, {"coordination"}, linked)
+        for change in ("form", "missing-relation", "duplicate-relation", "kind",
+                       "basis", "destination", "source-path", "missing-review", "work-source"):
+            altered = deepcopy(self.cross)
+            candidate = next(w for w in altered["works"] if w["key"] == "finite-mediator")
+            relation = next(r for r in altered["relations"] if r.get("from") == "coordination")
+            if change == "form":
+                candidate["reading_forms"][0]["relationship"] = "authored-source"
+            elif change == "missing-relation":
+                altered["relations"].remove(relation)
+            elif change == "duplicate-relation":
+                altered["relations"].append(deepcopy(relation))
+            elif change in ("kind", "basis", "destination"):
+                relation[{"kind": "kind", "basis": "basis", "destination": "to"}[change]] = "unrelated"
+            elif change == "source-path":
+                altered["sources"]["consolidated-collective-inquiry"]["path"] = "docs/reader/RESULT-INDEX.md"
+            elif change == "missing-review":
+                del altered["sources"]["scientific-consolidation-review"]
+            else:
+                candidate["source_keys"] = ["consolidated-collective-inquiry"]
+            with self.subTest(change=change), self.assertRaises(AssertionError):
+                self.assert_work_reading_route(candidate, {"coordination"}, {target}, altered)
+
+    def test_unincorporated_twelfth_sources_still_require_their_own_links(self):
+        target = ("mathematics/collective-inquiry-and-strategic-coordination.md",
+                  "6-complete-coordination-records-across-a-growing-horizon")
+        for member in self.members:
+            keys = {k for k, v in self.cross["sources"].items() if v["sha256"] == member["sha256"]}
+            if "coordination" in keys:
+                continue
+            for work in self.cross["works"]:
+                if not keys.intersection(work["source_keys"]):
+                    continue
+                with self.subTest(source=member["path"]):
+                    own = {(self.cross["sources"][key]["path"], "") for key in keys}
+                    self.assert_work_reading_route(work, keys, own)
+                    altered = deepcopy(self.cross)
+                    altered["relations"].extend({
+                        "from": key, "to": "consolidated-collective-inquiry",
+                        "kind": "logical-content-incorporated-historical-source-retained",
+                        "basis": "scientific-consolidation-review",
+                    } for key in keys)
+                    with self.assertRaises(AssertionError):
+                        self.assert_work_reading_route(work, keys, {target}, altered)
 
     def test_source_review_does_not_become_another_independent_theorem(self):
         works = [w for w in self.cross["works"] if w["key"] == "t12-concentration-review"]
@@ -6144,6 +6248,92 @@ class HistoricalProseReaderTests(unittest.TestCase):
                 node.chmod(saved_mode)
         self.assertEqual(index.read_bytes(), saved_index)
 
+
+
+
+class ReadOnlyCurrentnessDiffTests(unittest.TestCase):
+    """Tiny Git fixtures for diff's stat-cache side effect, not corpus acceptance."""
+
+    def setUp(self):
+        import os
+        from unittest.mock import patch
+        self.env = patch.dict(os.environ, {"GIT_OPTIONAL_LOCKS": "0",
+                              "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull})
+        self.env.start()
+        self.addCleanup(self.env.stop)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name)
+        self.relative = "fixture-read-only/source.txt"
+        self.node = self.repo / self.relative
+        self.node.parent.mkdir(parents=True)
+        self.original = b"synthetic unchanged source\n"
+        self.node.write_bytes(self.original)
+        self._git("init", "-q")
+        self._git("config", "diff.autoRefreshIndex", "true")
+        self._git("add", "--", self.relative)
+        self._git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                  "commit", "-qm", "synthetic baseline")
+        self.baseline = self._git("rev-parse", "HEAD").decode().strip()
+        self.initial = self._snapshot()
+
+        spec = importlib.util.spec_from_file_location("read_only_currentness_owner", MODULE)
+        self.mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.mod)
+        self.rejection = ["corpus-currentness: " + self.relative +
+                          " requires source-baseline and work/support disposition review"]
+
+    def _gate(self):
+        return self.mod.check_corpus_currentness(self.repo, self.baseline)
+
+    def _git(self, *args):
+        return subprocess.run(["git", *args], cwd=self.repo, capture_output=True, check=True).stdout
+
+    def _snapshot(self):
+        raw = (self.repo / ".git" / "index").read_bytes()
+        info = self.node.stat()
+        return {
+            "raw_index_sha256": hashlib.sha256(raw).hexdigest(), "raw_index_bytes": len(raw),
+            "logical_entries": self._git("ls-files", "--stage", "-z").decode(),
+            "flags": self._git("ls-files", "-v", "-z").decode(),
+            "debug_metadata": self._git("ls-files", "--debug", "-z").decode(),
+            "source_sha256": hashlib.sha256(self.node.read_bytes()).hexdigest(),
+            "physical_stat": {"mode": info.st_mode & 0o777, "inode": info.st_ino,
+                              "device": info.st_dev, "size": info.st_size,
+                              "ctime_ns": info.st_ctime_ns, "mtime_ns": info.st_mtime_ns},
+        }
+
+    def _require_read_only(self, expected):
+        before = self._snapshot()
+        result = self._gate()
+        after = self._snapshot()
+        self._diff_observation = {"initial": self.initial, "before": before,
+                                  "after": after, "result": result}
+        self.assertEqual(result, expected)
+        for key in ("logical_entries", "flags", "source_sha256", "physical_stat"):
+            self.assertEqual(before[key], after[key], key)
+        self.assertEqual(before["raw_index_sha256"], after["raw_index_sha256"],
+                         "read-only diff refreshed the raw index")
+        self.assertEqual(before["debug_metadata"], after["debug_metadata"])
+
+    def test_stat_only_replacement_preserves_exact_index(self):
+        import os
+        info = self.node.stat()
+        replacement = self.node.with_name("replacement.tmp")
+        replacement.write_bytes(self.original)
+        replacement.chmod(info.st_mode & 0o777)
+        os.utime(replacement, ns=(info.st_atime_ns, info.st_mtime_ns - 2_000_000_000))
+        replacement.replace(self.node)
+        self.assertEqual(self.node.read_bytes(), self.original)
+        self.assertEqual(self._snapshot()["logical_entries"], self.initial["logical_entries"])
+        self._require_read_only([])
+
+    def test_staged_tamper_cannot_hide_behind_original_worktree(self):
+        self.node.write_bytes(b"synthetic staged tampering\n")
+        self._git("add", "--", self.relative)
+        self.node.write_bytes(self.original)
+        self.assertNotEqual(self._snapshot()["logical_entries"], self.initial["logical_entries"])
+        self._require_read_only(self.rejection)
 
 
 if __name__ == "__main__":

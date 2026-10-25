@@ -9,10 +9,13 @@ import argparse
 import collections
 import hashlib
 import json
+import os
 import pathlib
 import re
 import stat
+import struct
 import subprocess
+import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 PREFIX = 'research/t20-v6-20261012'
@@ -41,6 +44,29 @@ HISTORICAL_PROSE = {
         ('cf657a78f972b7f98190139b2275a3381d288b66',
          '52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be', 15839),
 }
+# Two independently incorporated mediator bodies have a later exact audit anchor.
+# The original five source revisions and their identities remain unchanged.
+MEDIATOR_PROSE_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+MEDIATOR_COORDINATION = 'experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md'
+MEDIATOR_APPROXIMATION = 'research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md'
+MEDIATOR_PROSE = {
+    MEDIATOR_COORDINATION: ('a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5',
+        'c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7', 13985),
+    MEDIATOR_APPROXIMATION: ('8c8b327bb642570307e50ddaef35850b508a80e6',
+        '6d8c1b108c74df4638da79a147e6480b6edb9c2b562028c0d17758ab08d45406', 4388),
+}
+HISTORICAL_PROSE.update(MEDIATOR_PROSE)
+HISTORICAL_PROSE_REVISIONS = {
+    path: MEDIATOR_PROSE_REVISION if path in MEDIATOR_PROSE else HISTORICAL_PROSE_REVISION
+    for path in HISTORICAL_PROSE}
+HISTORICAL_PROSE_DISPOSITIONS = {
+    path: 'ADD_EXACT' if path == MEDIATOR_APPROXIMATION else 'REUSE'
+    for path in HISTORICAL_PROSE}
+MEDIATOR_GUIDE = 'experiments/orthemology-v5-successors/groups/t12-written/README.md'
+MEDIATOR_GUIDE_BLOB = '7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838'
+MEDIATOR_GUIDE_SHA256 = 'e86297f6ff2e0b8abce4fd8d1fe66e57c64e43e83ecec664422b4ed7abf3440e'
+MEDIATOR_GUIDE_BYTES = 18763
+
 # The inherited duplicate is a path obligation, not an extra manifest object.
 HISTORICAL_PROSE_PUBLIC_PATHS = tuple(
     path for path in HISTORICAL_PROSE
@@ -55,9 +81,11 @@ def historical_source_bytes(root, path, revision, git_blob):
     read, and these checks do not qualify custody or historical execution.
     """
     binding = HISTORICAL_PROSE.get(path)
-    if not binding or revision != HISTORICAL_PROSE_REVISION or git_blob != binding[0]:
+    if not binding or revision != HISTORICAL_PROSE_REVISIONS[path] or git_blob != binding[0]:
         raise ValueError('unqualified historical prose binding')
     root = pathlib.Path(root)
+    if path in MEDIATOR_PROSE:
+        require_mediator_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -106,6 +134,211 @@ def historical_source_bytes(root, path, revision, git_blob):
     return body
 
 
+def _regular_current_bytes(root, path):
+    target = pathlib.Path(root)
+    for part in path.split('/'):
+        target = target / part
+        if target.is_symlink():
+            raise ValueError('current mediator dependency contains a symlink')
+    entry = target.stat()
+    if not stat.S_ISREG(entry.st_mode) or entry.st_mode & 0o111:
+        raise ValueError('current mediator dependency is not regular nonexecutable data')
+    return target.read_bytes()
+
+
+def mediator_guide_source_bytes(root, *, allow_original=False):
+    """Keep the original guide identity and admit exactly three pinned links.
+
+    The guide must remain physically present. This is a finite navigation
+    adaptation, never another prose absence or an unbounded source fallback.
+    """
+    root = pathlib.Path(root)
+    def git(*args):
+        result = subprocess.run(['git', '--no-replace-objects', '--literal-pathspecs', *args],
+                                cwd=root, capture_output=True, check=False)
+        if result.returncode:
+            raise ValueError('required guide Git objects unavailable')
+        return result.stdout
+    expected = ('100644 blob ' + MEDIATOR_GUIDE_BLOB + '\t' + MEDIATOR_GUIDE + '\0').encode()
+    if git('cat-file', '-t', MEDIATOR_PROSE_REVISION) != b'commit\n' or git(
+            'ls-tree', '-z', MEDIATOR_PROSE_REVISION, '--', MEDIATOR_GUIDE) != expected:
+        raise ValueError('original guide revision/path/blob/mode differs')
+    original = git('cat-file', 'blob', MEDIATOR_GUIDE_BLOB)
+    if (len(original), digest(original)) != (MEDIATOR_GUIDE_BYTES, MEDIATOR_GUIDE_SHA256):
+        raise ValueError('original guide identity differs')
+    old = ('../../source-store/' + MEDIATOR_COORDINATION.split('/source-store/', 1)[1]).encode()
+    new = ('https://github.com/theislampill/orthemology/blob/' + MEDIATOR_PROSE_REVISION +
+           '/' + MEDIATOR_COORDINATION).encode()
+    if original.count(old) != 3:
+        raise ValueError('original guide does not contain its three bound links')
+    adapted = original.replace(old, new)
+    current = _regular_current_bytes(root, MEDIATOR_GUIDE)
+    if current != adapted and not (allow_original and current == original):
+        raise ValueError('guide is not the exact three-link navigation adaptation')
+    adapted_blob = hashlib.sha1(b'blob ' + str(len(adapted)).encode() + b'\0' + adapted).hexdigest()
+    indexed = git('ls-files', '--stage', '-z', '--', MEDIATOR_GUIDE)
+    choices = {('100644 ' + blob + ' 0\t' + MEDIATOR_GUIDE + '\0').encode(): data
+               for blob, data in ((MEDIATOR_GUIDE_BLOB, original), (adapted_blob, adapted))}
+    if indexed not in choices:
+        raise ValueError('guide index is absent, conflicted or has an unqualified edition/mode')
+    indexed_blob = indexed.split()[1].decode()
+    if git('cat-file', 'blob', indexed_blob) != choices[indexed]:
+        raise ValueError('guide staged object is unavailable or differs')
+    return original
+
+
+def require_mediator_context(root):
+    """Require the existing current scholarship, review and explicit source roles."""
+    root = pathlib.Path(root)
+    owner_path = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    cross_path = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    try:
+        owners = json.loads(_regular_current_bytes(root, owner_path))
+        cross = json.loads(_regular_current_bytes(root, cross_path))
+        expected_bindings = [dict(path=path, repository_revision=MEDIATOR_PROSE_REVISION,
+            git_blob=MEDIATOR_PROSE[path][0], role='historical-source',
+            reading_source='consolidated-collective-inquiry', basis='scientific-consolidation-review')
+            for path in MEDIATOR_PROSE]
+        bindings = [r for r in owners['historical_source_bindings'] if r['path'] in MEDIATOR_PROSE]
+        if len(bindings) != 2 or any(bindings.count(row) != 1 for row in expected_bindings):
+            raise ValueError('both exact mediator source dispositions are required')
+        for key, path, role in (
+            ('consolidated-collective-inquiry', 'mathematics/collective-inquiry-and-strategic-coordination.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [r for r in owners['source_additions'] if r['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current mediator reading owner')
+            admission, source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or source['sha256'] != digest(current)):
+                raise ValueError('current mediator scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current mediator work has lost its review owner')
+        for key, path in (('coordination', MEDIATOR_COORDINATION),
+                          ('t20-c03-6d8c1b108c74df46', MEDIATOR_APPROXIMATION)):
+            source = cross['sources'][key]
+            forms = [f for w in cross['works'] for f in w.get('reading_forms', []) if f.get('source') == key]
+            relation = {'from': key, 'to': 'consolidated-collective-inquiry',
+                        'kind': 'logical-content-incorporated-historical-source-retained',
+                        'basis': 'scientific-consolidation-review'}
+            relations = [r for r in cross['relations'] if r.get('from') == key and r.get('kind') == relation['kind']]
+            if (source['path'] != path or source['sha256'] != MEDIATOR_PROSE[path][1]
+                    or forms != [{'source': key, 'relationship': 'historical-source'}]
+                    or relations != [relation]
+                    or any(key in j.get('source_keys', []) for j in cross['reader_journeys'])):
+                raise ValueError('mediator source has lost its exact current reading relationship')
+        mediator_guide_source_bytes(root)
+    except (KeyError, TypeError, UnicodeError) as error:
+        raise ValueError('malformed mediator current-owner contract') from error
+
+
+def _require_self_contained_index_v2(body):
+    """Accept the bounded SHA-1 v2 format without shared or opaque dependencies."""
+    end = len(body) - 20
+    if (end < 12 or body[:4] != b'DIRC'
+            or struct.unpack('>I', body[4:8])[0] != 2
+            or hashlib.sha1(body[:end]).digest() != body[end:]):
+        raise ValueError('unsupported index format')
+    count = struct.unpack('>I', body[8:12])[0]
+    offset = 12
+    if count > (end - offset) // 64:
+        raise ValueError('invalid index entry count')
+    for _ in range(count):
+        start = offset
+        if offset + 62 > end:
+            raise ValueError('truncated index entry')
+        flags = struct.unpack('>H', body[offset + 60:offset + 62])[0]
+        name = offset + 62
+        stop = body.find(b'\0', name, end)
+        if (flags & 0x4000 or stop <= name
+                or (flags & 0xFFF) != min(stop - name, 0xFFF)):
+            raise ValueError('unsupported index entry')
+        offset = start + ((stop + 1 - start + 7) // 8) * 8
+        if offset > end or any(body[stop:offset]):
+            raise ValueError('invalid index padding')
+    while offset < end:
+        if offset + 8 > end:
+            raise ValueError('truncated index extension')
+        signature = body[offset:offset + 4]
+        size = struct.unpack('>I', body[offset + 4:offset + 8])[0]
+        # No split-index link, sparse index, monitor/cache dependency, or
+        # unknown extension is interpreted or silently rebuilt here.
+        if signature not in {b'TREE', b'REUC', b'EOIE', b'IEOT'}:
+            raise ValueError('unsupported index dependency')
+        offset += 8 + size
+        if offset > end:
+            raise ValueError('truncated index extension payload')
+
+
+def readonly_git_diff(root, command):
+    """Run an existing diff against an exact private index, preserving its mtime.
+
+    Git's normal stat-only filtering remains enabled. Any refresh is confined
+    to the disposable copy. Unsupported inputs return an unavailable comparison;
+    the active index is never rewritten or restored by this helper.
+    """
+    command = list(command)
+
+    def unavailable():
+        return subprocess.CompletedProcess(command, 128, b'',
+                                           b'read-only index comparison unavailable')
+
+    def query(*args):
+        return subprocess.run(['git', '--no-replace-objects', *args],
+                              cwd=root, capture_output=True, check=False)
+
+    def state(info):
+        return (info.st_dev, info.st_ino, info.st_mode, info.st_size,
+                info.st_mtime_ns, info.st_ctime_ns)
+
+    if command[:2] != ['git', 'diff'] and command[:3] != ['git', '--no-replace-objects', 'diff']:
+        return unavailable()
+    try:
+        split = query('config', '--type=bool', '--get', 'core.splitIndex')
+        if not ((split.returncode == 1 and not split.stdout)
+                or (split.returncode == 0 and split.stdout == b'false\n')):
+            return unavailable()
+        algorithm = query('rev-parse', '--show-object-format=storage')
+        location = query('rev-parse', '--path-format=absolute', '--git-path', 'index')
+        if algorithm.returncode or algorithm.stdout != b'sha1\n' or location.returncode:
+            return unavailable()
+        active = pathlib.Path(os.fsdecode(location.stdout.removesuffix(b'\n')))
+        if not active.is_absolute():
+            return unavailable()
+        initial = active.lstat()
+        if not stat.S_ISREG(initial.st_mode):
+            return unavailable()
+        with active.open('rb') as source:
+            if state(os.fstat(source.fileno())) != state(initial):
+                return unavailable()
+            body = source.read()
+            if len(body) != initial.st_size or state(active.lstat()) != state(initial):
+                return unavailable()
+            _require_self_contained_index_v2(body)
+            with tempfile.TemporaryDirectory(prefix='readonly-git-index-') as directory:
+                shadow = pathlib.Path(directory) / 'index'
+                shadow.write_bytes(body)
+                shadow.chmod(0o600)
+                os.utime(shadow, ns=(initial.st_atime_ns, initial.st_mtime_ns))
+                if shadow.read_bytes() != body or shadow.stat().st_mtime_ns != initial.st_mtime_ns:
+                    return unavailable()
+                env = dict(os.environ, GIT_INDEX_FILE=str(shadow))
+                result = subprocess.run(command, cwd=root, env=env,
+                                        capture_output=True, check=False)
+            source.seek(0)
+            if (state(active.lstat()) != state(initial)
+                    or state(os.fstat(source.fileno())) != state(initial)
+                    or source.read() != body):
+                return unavailable()
+            return result
+    except (OSError, ValueError):
+        return unavailable()
+
+
 def digest(body):
     return hashlib.sha256(body).hexdigest()
 
@@ -117,7 +350,7 @@ def source_bytes(root, row):
     if str(path) in HISTORICAL_PROSE:
         blob, identity, size = HISTORICAL_PROSE[str(path)]
         if (row['repository_path'] != str(path) or str(path) not in HISTORICAL_PROSE_PUBLIC_PATHS
-                or row.get('disposition') != 'REUSE'
+                or row.get('disposition') != HISTORICAL_PROSE_DISPOSITIONS[str(path)]
                 or row.get('source_sha256') != identity or row.get('source_bytes') != size):
             raise ValueError('historical public source owner differs')
         body = historical_source_bytes(root, str(path), row.get('repository_revision'), row.get('git_blob'))

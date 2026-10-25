@@ -16,7 +16,8 @@ from functools import lru_cache
 
 from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
-    historical_source_bytes, source_bytes,
+    historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
+    HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, readonly_git_diff,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -167,7 +168,7 @@ def check_object(root, row):
 
 
 def check_preserved_roots(root, objects):
-    """Keep every protected baseline obligation, admitting only five exact D's.
+    """Keep every protected baseline obligation and its finite typed changes.
 
     The original bodies and both proof occurrences authenticate before an
     absence can be admitted. Changed bytes, modes, renames or other removals
@@ -182,10 +183,16 @@ def check_preserved_roots(root, objects):
                     raise ValueError('historical public source path differs')
                 source_bytes(root, row)
             else:
-                historical_source_bytes(root, path, HISTORICAL_PROSE_REVISION, blob)
+                historical_source_bytes(root, path, HISTORICAL_PROSE_REVISIONS[path], blob)
             authenticated.add(path)
         except (KeyError, OSError, ValueError, subprocess.CalledProcessError) as exc:
             errors.append('historical prose: ' + path + ': ' + str(exc))
+    guide_authenticated = False
+    try:
+        mediator_guide_source_bytes(root, allow_original=True)
+        guide_authenticated = True
+    except (ValueError, OSError):
+        pass  # A guide change is never excused when this finite check fails.
     protected = ['experiments/orthemology-v5', 'experiments/orthemology-v5-continuations',
                  'experiments/orthemology-v5-successors', 'docs/provenance/v5-consolidation',
                  'docs/provenance/v5-research-continuations', 'docs/provenance/v5-successors',
@@ -193,22 +200,41 @@ def check_preserved_roots(root, objects):
     # Check both boundaries: a staged M/T/A must not disappear behind a
     # combined worktree D or an unstaged return to original bytes.
     for cached in (True, False):
-        result = subprocess.run(
+        result = readonly_git_diff(root,
             ['git', '--no-replace-objects', 'diff', *(['--cached'] if cached else []),
              '--no-ext-diff', '--no-textconv', '--no-renames', '--name-status',
-             '-z', BASE, '--', *protected],
-            cwd=root, capture_output=True, check=False)
+             '-z', BASE, '--', *protected])
         try:
             changes = result.stdout.decode('utf-8').rstrip('\0').split('\0') if result.stdout else []
             if result.returncode or len(changes) % 2:
                 raise ValueError('protected baseline comparison unavailable')
-            if any(status != 'D' or path not in authenticated
+            if any(not ((status == 'D' and path in authenticated) or
+                        (status == 'M' and path == MEDIATOR_GUIDE and guide_authenticated))
                    for status, path in zip(changes[::2], changes[1::2])):
                 errors.append('preserved v5 or prior T20 baseline changed')
         except (ValueError, UnicodeError):
             errors.append('preserved v5 or prior T20 baseline comparison unavailable')
 
     return list(dict.fromkeys(errors))
+
+
+def check_public_inventory(root, rows, controls):
+    """Keep every manifest row; authenticate the one finite ADD_EXACT absence."""
+    declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
+    expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
+    actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
+    if MEDIATOR_APPROXIMATION in expected and MEDIATOR_APPROXIMATION not in actual:
+        selected = [r for r in rows if r.get('repository_path') == MEDIATOR_APPROXIMATION]
+        try:
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate approximation owner')
+            source_bytes(root, selected[0])
+        except (KeyError, OSError, ValueError, subprocess.CalledProcessError):
+            return ['public inventory has an unqualified historical absence']
+        expected.remove(MEDIATOR_APPROXIMATION)
+    if actual != expected:
+        return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]
+    return []
 
 
 def validate(root=ROOT):
@@ -251,7 +277,6 @@ def validate(root=ROOT):
             elif row['disposition'] in ('REUSE', 'ADD_EXACT', 'PROJECT') and by_hash[dependency]['disposition'] not in ('REUSE', 'ADD_EXACT', 'PROJECT'):
                 errors.append('declared publication dependency is not available: ' + row['source_sha256'])
     # Manifest inventory is explicit; generated controls and navigation are separate.
-    declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
     controls_bytes = (root / PREFIX / 'PUBLIC_CONTROLS.json').read_bytes()
     controls = json.loads(controls_bytes)
     for label, body in [('manifest', manifest_bytes), ('control inventory', controls_bytes)]:
@@ -266,10 +291,7 @@ def validate(root=ROOT):
         text = body.decode('utf-8')
         if private_locators(text) or private_uuid(text, sha256(body)) or re.search(r'(?:library-file:|project-file:|sandbox:/|libfile_[A-Za-z0-9]{12,}|file-[A-Za-z0-9]{16,})', text):
             errors.append('private identifier in public control: ' + relative)
-    expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
-    actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
-    if actual != expected:
-        errors.append('public inventory differs: ' + str(sorted(actual ^ expected)[:10]))
+    errors.extend(check_public_inventory(root, rows, controls))
     register_bytes = (root / PREFIX / 'research-v6/synthesis/CROSS_CONTRIBUTIONS.json').read_bytes()
     register = json.loads(register_bytes)
     if sha256(register_bytes) != CONTRIBUTION_REGISTER:

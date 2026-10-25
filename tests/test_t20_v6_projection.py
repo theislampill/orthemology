@@ -582,5 +582,462 @@ class HistoricalProseRootTests(unittest.TestCase):
 
 
 
+
+class MediatorOwnerMigrationTests(unittest.TestCase):
+    """Two exact prose admissions cannot weaken current or historical owners."""
+
+    REV = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+    COORD = 'experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md'
+    APPROX = 'research/t20-v6-20261012/research-v6/type_collective/ROBUST_FINITE_MEDIATOR_BOUND.md'
+    GUIDE = 'experiments/orthemology-v5-successors/groups/t12-written/README.md'
+    CHAPTER = 'mathematics/collective-inquiry-and-strategic-coordination.md'
+    REVIEW = 'docs/scientific-consolidation-review.md'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    BLOBS = {COORD: 'a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5',
+             APPROX: '8c8b327bb642570307e50ddaef35850b508a80e6'}
+
+    @classmethod
+    def setUpClass(cls):
+        import importlib.util
+        import subprocess
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        cls.reader = check_reader_pilot
+        cls.resolver = resolve_t20_v6_source
+        spec = importlib.util.spec_from_file_location(
+            'mediator_v5_owner', projection.ROOT / 'scripts/validate_v5_successors.py')
+        cls.v5 = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(cls.v5)
+        cls.objects = pathlib.Path(subprocess.check_output(
+            ['git', 'rev-parse', '--git-path', 'objects'], cwd=projection.ROOT,
+            text=True).strip())
+        if not cls.objects.is_absolute():
+            cls.objects = projection.ROOT / cls.objects
+        cls.original = {p: subprocess.check_output(
+            ['git', 'show', cls.REV + ':' + p], cwd=projection.ROOT)
+            for p in (cls.COORD, cls.APPROX, cls.GUIDE)}
+        manifest = json.loads((projection.ROOT / projection.MANIFEST).read_bytes())
+        cls.manifest_rows = {p: next(r for r in manifest['objects']
+                                    if r.get('repository_path') == p)
+                             for p in (cls.COORD, cls.APPROX)}
+        cls.source_row = next(r for r in json.loads((projection.ROOT /
+            'docs/provenance/v5-successors/SOURCE_MAP.json').read_bytes())['sources']
+                              if r.get('id') == 'T12-SOURCE-COORDINATION')
+        projection_rows = json.loads((projection.ROOT /
+            'docs/provenance/v5-successors/PUBLIC_PROJECTION.json').read_bytes())['allowlist']
+        cls.allowlist = [r for r in projection_rows if r['path'] in (cls.COORD, cls.GUIDE)]
+        cls.indexed = {r['path']: r for r in cls.reader.entries_at(projection.ROOT, cls.REV)}
+
+    def setUp(self):
+        from copy import deepcopy
+        import subprocess
+        self.tmp = tempfile.TemporaryDirectory(prefix='mediator-owner-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = pathlib.Path(self.tmp.name)
+        subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+        (self.root / '.git/objects/info/alternates').write_text(str(self.objects.resolve()) + '\n')
+        for name in (self.CHAPTER, self.REVIEW, self.OWNER, self.CROSS,
+                     'epistemology/recognition-warrant-and-restoration.md'):
+            self.put(name, (projection.ROOT / name).read_bytes())
+        for name in (self.COORD, self.APPROX):
+            self.put(name, self.original[name])
+        old = ('../../source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/'
+               'BOUNDED_COORDINATION_INFORMATION_v1.md').encode()
+        new = ('https://github.com/theislampill/orthemology/blob/' + self.REV + '/' + self.COORD).encode()
+        self.assertEqual(self.original[self.GUIDE].count(old), 3)
+        self.guide = self.original[self.GUIDE].replace(old, new)
+        self.put(self.GUIDE, self.guide)
+        subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                        '100644,7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838,' + self.GUIDE],
+                       cwd=self.root, check=True)
+        self.owners = json.loads((self.root / self.OWNER).read_bytes())
+        for name in (self.COORD, self.APPROX):
+            self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
+                                                        if r['path'] != name]
+            self.owners['historical_source_bindings'].append(dict(
+                path=name, repository_revision=self.REV, git_blob=self.BLOBS[name],
+                role='historical-source', reading_source='consolidated-collective-inquiry',
+                basis='scientific-consolidation-review'))
+        self.put(self.OWNER, (json.dumps(self.owners) + '\n').encode())
+        self.cross = json.loads((self.root / self.CROSS).read_bytes())
+        self.additions = {r['path']: r for r in self.owners['source_additions']}
+        self.rows = {p: dict(deepcopy(self.manifest_rows[p]), repository_revision=self.REV,
+                             git_blob=self.BLOBS[p]) for p in (self.COORD, self.APPROX)}
+        self.bundle = dict(sources=[deepcopy(self.source_row)], reviews=[], projection_reviews=[],
+                           public_allowlist=deepcopy(self.allowlist))
+
+    def put(self, name, data):
+        node = self.root / name
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(data)
+        node.chmod(0o644)
+
+    def resolve(self, path, row=None):
+        return self.resolver.source_bytes(self.root, self.rows[path] if row is None else row)
+
+    def reject(self, path, row=None):
+        selected = self.rows[path] if row is None else row
+        self.assertTrue(check_object(self.root, selected))
+        import subprocess
+        with self.assertRaises((ValueError, OSError, subprocess.CalledProcessError)):
+            self.resolve(path, selected)
+
+    def v5_check(self):
+        sources, _, _ = self.v5._sources(self.bundle, self.root)
+        self.v5._allowlist(self.bundle, self.root, sources)
+
+    def test_two_distinct_dispositions_authenticate_exact_present_and_absent_bodies(self):
+        for path in (self.COORD, self.APPROX):
+            with self.subTest(path=path):
+                self.assertEqual(check_object(self.root, self.rows[path]), [])
+                self.assertEqual(self.resolve(path), self.original[path])
+                (self.root / path).unlink()
+                self.assertEqual(check_object(self.root, self.rows[path]), [])
+                self.assertEqual(self.resolve(path), self.original[path])
+                self.assertFalse((self.root / path).exists(), 'a check must not restore prose')
+
+    def test_reader_authenticates_seven_bound_paths_and_the_same_current_science(self):
+        admitted, errors = self.reader.check_historical_sources(
+            self.root, self.indexed, self.owners, self.cross, self.additions)
+        self.assertEqual(errors, [])
+        self.assertEqual(len(admitted), 7)
+        self.assertEqual(admitted[self.COORD], self.original[self.COORD])
+        self.assertEqual(admitted[self.APPROX], self.original[self.APPROX])
+
+    def test_v5_exact_source_and_full_allowlist_keep_rows_when_one_body_is_absent(self):
+        from copy import deepcopy
+        saved = deepcopy(self.bundle)
+        try:
+            self.v5_check()
+            (self.root / self.COORD).unlink()
+            self.v5_check()
+        except (ValueError, OSError) as error:
+            self.fail('finite source-owned admission missing: ' + str(error))
+        self.assertEqual(self.bundle, saved)
+        self.assertFalse((self.root / self.COORD).exists())
+
+    def test_changed_current_chapter_or_review_rejects_all_new_history(self):
+        for path in (self.CHAPTER, self.REVIEW):
+            with self.subTest(path=path):
+                original = (self.root / path).read_bytes()
+                try:
+                    self.put(path, original + b'\nwrong current edition\n')
+                    for source in (self.COORD, self.APPROX):
+                        self.reject(source)
+                    with self.assertRaises((ValueError, OSError)):
+                        self.v5_check()
+                    self.assertTrue(self.reader.check_historical_sources(
+                        self.root, self.indexed, self.owners, self.cross, self.additions)[1])
+                finally:
+                    self.put(path, original)
+
+    def test_wrong_original_bytes_modes_or_symlinks_cannot_hide_behind_history(self):
+        for path in (self.COORD, self.APPROX):
+            target = self.root / path
+            for kind in ('bytes', 'executable', 'symlink'):
+                with self.subTest(path=path, kind=kind):
+                    try:
+                        if kind == 'bytes':
+                            target.write_bytes(self.original[path] + b'changed\n')
+                        elif kind == 'executable':
+                            target.chmod(0o755)
+                        else:
+                            target.unlink()
+                            target.symlink_to('missing-original')
+                        self.reject(path)
+                    finally:
+                        if target.is_symlink(): target.unlink()
+                        self.put(path, self.original[path])
+
+    def test_exact_revision_blob_role_and_lengths_are_required(self):
+        for path in (self.COORD, self.APPROX):
+            for field, value in (
+                    ('repository_revision', projection.BASE), ('repository_revision', 'HEAD'),
+                    ('git_blob', '0' * 40), ('source_sha256', '0' * 64),
+                    ('public_sha256', '0' * 64), ('source_bytes', 1), ('public_bytes', 1),
+                    ('disposition', 'ADD_EXACT' if path == self.COORD else 'REUSE')):
+                with self.subTest(path=path, field=field):
+                    self.reject(path, dict(self.rows[path], **{field: value}))
+
+    def test_missing_pinned_objects_reject_even_when_bodies_are_present(self):
+        (self.root / '.git/objects/info/alternates').unlink()
+        for path in (self.COORD, self.APPROX): self.reject(path)
+
+    def test_undeclared_similar_absence_receives_no_history_fallback(self):
+        row = dict(self.rows[self.COORD], repository_path=self.COORD.replace('v1.md', 'v2.md'))
+        self.reject(self.COORD, row)
+
+    def test_staged_tampering_cannot_hide_behind_absent_new_prose(self):
+        import subprocess
+        wrong = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'],
+            cwd=self.root, input=b'wrong staged source\n').decode().strip()
+        for path in (self.COORD, self.APPROX):
+            target = self.root / path
+            target.unlink()
+            try:
+                for kind, mode, blob in [('blob', '100644', wrong),
+                                         ('mode', '100755', self.BLOBS[path]),
+                                         ('link', '120000', wrong), ('conflict', None, None)]:
+                    with self.subTest(path=path, kind=kind):
+                        subprocess.run(['git', 'update-index', '--force-remove', '--', path],
+                                       cwd=self.root, check=True)
+                        if mode:
+                            subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                                            mode + ',' + blob + ',' + path], cwd=self.root, check=True)
+                        else:
+                            rows = ''.join('100644 ' + oid + ' ' + stage + '\t' + path + '\n'
+                                for oid, stage in [(self.BLOBS[path], '1'), (wrong, '2'),
+                                                   (self.BLOBS[path], '3')])
+                            subprocess.run(['git', 'update-index', '--index-info'], cwd=self.root,
+                                           input=rows.encode(), check=True)
+                        self.reject(path)
+                        self.assertFalse(target.exists())
+            finally:
+                subprocess.run(['git', 'update-index', '--force-remove', '--', path],
+                               cwd=self.root, check=True)
+                self.put(path, self.original[path])
+
+    def test_guide_missing_or_nonliteral_navigation_change_rejects_new_admission(self):
+        for variant in (None, self.original[self.GUIDE], self.guide + b'changed prose\n',
+                        self.guide.replace(self.REV.encode(), b'HEAD', 1)):
+            with self.subTest(variant='missing' if variant is None else len(variant)):
+                try:
+                    if variant is None: (self.root / self.GUIDE).unlink()
+                    else: self.put(self.GUIDE, variant)
+                    for path in (self.COORD, self.APPROX): self.reject(path)
+                    with self.assertRaises((ValueError, OSError)): self.v5_check()
+                finally:
+                    self.put(self.GUIDE, self.guide)
+
+    def test_guide_wrong_staged_mode_cannot_hide_behind_valid_navigation(self):
+        import subprocess
+        blob = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'],
+                                       cwd=self.root, input=self.guide).decode().strip()
+        subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                        '100755,' + blob + ',' + self.GUIDE], cwd=self.root, check=True)
+        for path in (self.COORD, self.APPROX): self.reject(path)
+        with self.assertRaises((ValueError, OSError)): self.v5_check()
+
+    def test_v5_allowlist_still_rejects_an_undeclared_extra_file(self):
+        self.put('experiments/orthemology-v5-successors/source-store/unlisted/extra.md', b'extra\n')
+        with self.assertRaises((ValueError, OSError)): self.v5_check()
+
+    def test_v5_missing_unqualified_source_is_not_a_qualified_absence(self):
+        from copy import deepcopy
+        row = deepcopy(self.source_row)
+        row['id'] = 'UNQUALIFIED-COPY'
+        row['public_path'] = row['public_path'].replace('v1.md', 'v2.md')
+        self.bundle['sources'].append(row)
+        entry = next(x for x in self.bundle['public_allowlist'] if x['path'] == self.COORD)
+        self.bundle['public_allowlist'].append(dict(entry, path=row['public_path'], source_ids=[row['id']]))
+        with self.assertRaises((ValueError, OSError)): self.v5_check()
+
+    def test_add_exact_inventory_authenticates_only_the_one_declared_absence(self):
+        from copy import deepcopy
+        rows = [deepcopy(self.rows[p]) for p in (self.COORD, self.APPROX)]
+        controls = {'files': {}}
+        saved = deepcopy(rows)
+        self.put(projection.MANIFEST, b'{}\n')
+        self.put(projection.PREFIX + '/PUBLIC_CONTROLS.json', b'{}\n')
+        self.assertEqual(projection.check_public_inventory(self.root, rows, controls), [])
+        (self.root / self.APPROX).unlink()
+        self.assertEqual(projection.check_public_inventory(self.root, rows, controls), [])
+        self.assertEqual(rows, saved)
+        self.assertFalse((self.root / self.APPROX).exists())
+        wrong = deepcopy(rows)
+        wrong[1]['git_blob'] = '0' * 40
+        self.assertTrue(projection.check_public_inventory(self.root, wrong, controls))
+        extra = self.APPROX.replace('.md', '_extra.md')
+        self.put(extra, b'undeclared extra file\n')
+        self.assertTrue(projection.check_public_inventory(self.root, rows, controls))
+        (self.root / extra).unlink()
+        declared_missing = dict(rows[1], repository_path=extra)
+        self.assertTrue(projection.check_public_inventory(self.root, rows + [declared_missing], controls))
+
+
+
+class ReadOnlyPreservedRootDiffTests(unittest.TestCase):
+    """Isolate real Git diffs; no original source or public manifest is opened."""
+
+    def setUp(self):
+        import os
+        from unittest.mock import patch
+        self.env = patch.dict(os.environ, {"GIT_OPTIONAL_LOCKS": "0",
+                              "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull})
+        self.env.start()
+        self.addCleanup(self.env.stop)
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = pathlib.Path(self.tmp.name)
+        self.relative = "experiments/orthemology-v5/fixture-source.txt"
+        self.node = self.repo / self.relative
+        self.node.parent.mkdir(parents=True)
+        self.original = b"synthetic unchanged source\n"
+        self.node.write_bytes(self.original)
+        self._git("init", "-q")
+        self._git("config", "diff.autoRefreshIndex", "true")
+        self._git("add", "--", self.relative)
+        self._git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+                  "commit", "-qm", "synthetic baseline")
+        self.baseline = self._git("rev-parse", "HEAD").decode().strip()
+        self.initial = self._snapshot()
+
+        self.rejection = ["preserved v5 or prior T20 baseline changed"]
+
+    def _gate(self):
+        with patch.object(projection, "BASE", self.baseline), \
+             patch.object(projection, "HISTORICAL_PROSE", {}), \
+             patch.object(projection, "mediator_guide_source_bytes",
+                          side_effect=ValueError("no synthetic guide admission")):
+            return projection.check_preserved_roots(self.repo, {})
+
+    def _git(self, *args):
+        import subprocess
+        return subprocess.run(["git", *args], cwd=self.repo, capture_output=True, check=True).stdout
+
+    def _snapshot(self):
+        raw = (self.repo / ".git" / "index").read_bytes()
+        info = self.node.stat()
+        return {
+            "raw_index_sha256": hashlib.sha256(raw).hexdigest(), "raw_index_bytes": len(raw),
+            "logical_entries": self._git("ls-files", "--stage", "-z").decode(),
+            "flags": self._git("ls-files", "-v", "-z").decode(),
+            "debug_metadata": self._git("ls-files", "--debug", "-z").decode(),
+            "source_sha256": hashlib.sha256(self.node.read_bytes()).hexdigest(),
+            "physical_stat": {"mode": info.st_mode & 0o777, "inode": info.st_ino,
+                              "device": info.st_dev, "size": info.st_size,
+                              "ctime_ns": info.st_ctime_ns, "mtime_ns": info.st_mtime_ns},
+        }
+
+    def _require_read_only(self, expected):
+        before = self._snapshot()
+        result = self._gate()
+        after = self._snapshot()
+        self._diff_observation = {"initial": self.initial, "before": before,
+                                  "after": after, "result": result}
+        self.assertEqual(result, expected)
+        for key in ("logical_entries", "flags", "source_sha256", "physical_stat"):
+            self.assertEqual(before[key], after[key], key)
+        self.assertEqual(before["raw_index_sha256"], after["raw_index_sha256"],
+                         "read-only diff refreshed the raw index")
+        self.assertEqual(before["debug_metadata"], after["debug_metadata"])
+
+    def test_stat_only_replacement_preserves_exact_index(self):
+        import os
+        info = self.node.stat()
+        replacement = self.node.with_name("replacement.tmp")
+        replacement.write_bytes(self.original)
+        replacement.chmod(info.st_mode & 0o777)
+        os.utime(replacement, ns=(info.st_atime_ns, info.st_mtime_ns - 2_000_000_000))
+        replacement.replace(self.node)
+        self.assertEqual(self.node.read_bytes(), self.original)
+        self.assertEqual(self._snapshot()["logical_entries"], self.initial["logical_entries"])
+        self._require_read_only([])
+
+    def test_staged_tamper_cannot_hide_behind_original_worktree(self):
+        self.node.write_bytes(b"synthetic staged tampering\n")
+        self._git("add", "--", self.relative)
+        self.node.write_bytes(self.original)
+        self.assertNotEqual(self._snapshot()["logical_entries"], self.initial["logical_entries"])
+        self._require_read_only(self.rejection)
+
+
+    def test_racy_content_preserves_index_mtime_and_cleans_private_copies(self):
+        import os
+        import subprocess
+        self._git("config", "core.trustctime", "false")
+        self._git("config", "core.checkStat", "minimal")
+        index = self.repo / ".git" / "index"
+        stamp = self.node.stat().st_mtime_ns
+        self.node.write_bytes(b"X" + self.original[1:])
+        os.utime(self.node, ns=(stamp, stamp))
+        os.utime(index, ns=(stamp, stamp))
+        original_run = subprocess.run
+        copies = []
+
+        def observe(command, *args, **kwargs):
+            if "diff" in command:
+                self.assertIn("GIT_INDEX_FILE", kwargs.get("env", {}))
+                shadow = pathlib.Path(kwargs["env"]["GIT_INDEX_FILE"])
+                self.assertNotEqual(shadow, index)
+                self.assertEqual(shadow.read_bytes(), index.read_bytes())
+                self.assertEqual(shadow.stat().st_mtime_ns, index.stat().st_mtime_ns)
+                copies.append(shadow)
+            return original_run(command, *args, **kwargs)
+
+        with patch.object(subprocess, "run", side_effect=observe):
+            self._require_read_only(self.rejection)
+        self.assertEqual(len(copies), 2)
+        self.assertTrue(all(not p.parent.exists() for p in copies))
+
+    def test_exception_cleans_private_copy_without_real_index_write(self):
+        import subprocess
+        import resolve_t20_v6_source as source
+        helper = getattr(source, "readonly_git_diff", None)
+        self.assertTrue(callable(helper), "disposable-index comparison is not implemented")
+        before = self._snapshot()
+        original_run = subprocess.run
+        copies = []
+
+        def interrupt(command, *args, **kwargs):
+            if "diff" in command:
+                shadow = pathlib.Path(kwargs["env"]["GIT_INDEX_FILE"])
+                self.assertTrue(shadow.exists())
+                copies.append(shadow)
+                raise RuntimeError("synthetic interrupted diff")
+            return original_run(command, *args, **kwargs)
+
+        with patch.object(subprocess, "run", side_effect=interrupt):
+            with self.assertRaisesRegex(RuntimeError, "synthetic interrupted diff"):
+                helper(self.repo, ["git", "diff", "--name-status", "-z", self.baseline, "--"])
+        after = self._snapshot()
+        self._diff_observation = {"before": before, "after": after,
+                                  "result": "expected synthetic interruption"}
+        self.assertEqual(before, after)
+        self.assertEqual(len(copies), 1)
+        self.assertFalse(copies[0].parent.exists())
+
+    def test_unsupported_index_dependencies_fail_before_diff(self):
+        import struct
+        import subprocess
+        import resolve_t20_v6_source as source
+        helper = getattr(source, "readonly_git_diff", None)
+        self.assertTrue(callable(helper), "disposable-index comparison is not implemented")
+        index = self.repo / ".git" / "index"
+        original = index.read_bytes()
+        linked = original[:-20] + b"link" + struct.pack(">I", 20) + b"\0" * 20
+        versioned = original[:4] + struct.pack(">I", 3) + original[8:-20]
+        cases = (("split-extension", linked + hashlib.sha1(linked).digest(), False),
+                 ("unsupported-version", versioned + hashlib.sha1(versioned).digest(), False),
+                 ("enabled-split-config", original, True))
+        original_run = subprocess.run
+        observed = []
+
+        def no_diff(command, *args, **kwargs):
+            self.assertNotIn("diff", command, "unsupported index reached comparison")
+            return original_run(command, *args, **kwargs)
+
+        try:
+            for label, data, split in cases:
+                with self.subTest(kind=label):
+                    index.write_bytes(data)
+                    self._git("config", "core.splitIndex", "true" if split else "false")
+                    with patch.object(subprocess, "run", side_effect=no_diff):
+                        result = helper(self.repo, ["git", "diff", "--name-status",
+                                                   "-z", self.baseline, "--"])
+                    self.assertNotEqual(result.returncode, 0)
+                    self.assertEqual(result.stdout, b"")
+                    self.assertEqual(index.read_bytes(), data)
+                    observed.append({"kind": label, "returncode": result.returncode,
+                                     "before_sha256": hashlib.sha256(data).hexdigest(),
+                                     "after_sha256": hashlib.sha256(index.read_bytes()).hexdigest()})
+        finally:
+            index.write_bytes(original)
+            self._git("config", "core.splitIndex", "false")
+        self._diff_observation = {"unsupported_cases": observed,
+                                  "restored_fixture_index": index.read_bytes() == original}
+
+
 if __name__ == '__main__':
     unittest.main()

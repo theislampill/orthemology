@@ -140850,7 +140850,9 @@
       "public_bytes": 4388,
       "publication_basis": "owner_authorized_original_research_projection",
       "locator_changes": 0,
-      "navigation_changes": 0
+      "navigation_changes": 0,
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "8c8b327bb642570307e50ddaef35850b508a80e6"
     },
     {
       "source_sha256": "6d8d087396ee1abb0ccfbbbdb877703a4508584d828eeb7b7dd84189d868c954",
@@ -257866,7 +257868,9 @@
       "repository_path": "experiments/orthemology-v5-successors/source-store/c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7/BOUNDED_COORDINATION_INFORMATION_v1.md",
       "public_sha256": "c77bb25b5b3072294a16fb8678441c30a62ec917cad59957193350af80973ff7",
       "public_bytes": 13985,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5"
     },
     {
       "source_sha256": "c77d3e3edce10015b5f52375cff900a8a73b0540fdb7713a26147d666d824af2",
@@ -325748,7 +325752,9 @@
       "repository_path": "scripts/validate_v5_successors.py",
       "public_sha256": "fc70d3afba7df52044a67a4d77de438e929a8e44e8b58bff4f2cc808e8f0e185",
       "public_bytes": 51484,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "62457f5f61e6e433b7714948e1b0c2545a00fbb1"
     },
     {
       "source_sha256": "fc75296c1d72a41669b78d3b72958b2fc11e3a2673bb2479263e2d9718c34582",

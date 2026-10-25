@@ -22,7 +22,8 @@ import yaml
 
 from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
-    historical_source_bytes,
+    historical_source_bytes, HISTORICAL_PROSE_REVISIONS, HISTORICAL_PROSE_DISPOSITIONS,
+    MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
 )
 
 
@@ -346,6 +347,8 @@ def permitted_historical_status_pin(repo, row, body):
         if candidate == expected:
             return True  # The original two-navigation-binding contract remains valid.
         for path in HISTORICAL_PROSE_PUBLIC_PATHS:
+            if path in MEDIATOR_PROSE:
+                continue
             blob, identity, size = HISTORICAL_PROSE[path]
             selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
             if len(selected) != 1:
@@ -358,6 +361,24 @@ def permitted_historical_status_pin(repo, row, body):
                     or source.get("public_sha256") != identity):
                 return False
             source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Retain the independently qualified original five-path contract.
+        extra = [(path, HISTORICAL_PROSE[path], HISTORICAL_PROSE_REVISIONS[path],
+                  HISTORICAL_PROSE_DISPOSITIONS[path]) for path in MEDIATOR_PROSE]
+        extra.append(("scripts/validate_v5_successors.py",
+                      ("62457f5f61e6e433b7714948e1b0c2545a00fbb1",
+                       "fc70d3afba7df52044a67a4d77de438e929a8e44e8b58bff4f2cc808e8f0e185", 51484),
+                      HISTORICAL_PROSE_REVISION, "REUSE"))
+        for path, (blob, identity, size), revision, disposition in extra:
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != disposition or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=revision, git_blob=blob)
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
@@ -375,7 +396,7 @@ REFACTOR_EDIT_PATHS = {
     # Exact existing integrity owners changed for the finite history contract;
     # this does not admit any new source path or predecessor modification.
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
-    "tests/test_t20_v6_projection.py",
+    "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
     # Existing source-display integrity owner and its focused regression tests;
     # scholarly bodies still require their exact source/work/review admission.
     "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
@@ -537,11 +558,14 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     if declared == []:
         return {}, []
     fields = {"path", "repository_revision", "git_blob", "role", "reading_source", "basis"}
-    if (not isinstance(declared, list) or len(declared) != len(HISTORICAL_PROSE)
+    if (not isinstance(declared, list)
             or any(not isinstance(row, dict) or set(row) != fields
-                   or not isinstance(row.get("path"), str) for row in declared)
-            or {row["path"] for row in declared} != set(HISTORICAL_PROSE)):
-        return {}, ["historical-source: expected the five distinct qualified path dispositions"]
+                   or not isinstance(row.get("path"), str) for row in declared)):
+        return {}, ["historical-source: malformed finite path dispositions"]
+    paths = {row["path"] for row in declared}
+    if (len(paths) != len(declared) or paths not in
+            (set(HISTORICAL_PROSE) - set(MEDIATOR_PROSE), set(HISTORICAL_PROSE))):
+        return {}, ["historical-source: expected the original five or all seven exact path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:
@@ -594,7 +618,7 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
     return admitted, errors
 
 
-def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=()):
+def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths=(), navigation_paths=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     Compare the index and actual worktree separately with the approved commit.
@@ -606,11 +630,10 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     errors = []
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
     for cached in (True, False):
-        result = subprocess.run(
+        result = readonly_git_diff(repo,
             ["git", "diff", *(["--cached"] if cached else []),
              "--no-ext-diff", "--no-textconv", "--no-renames",
              "--name-status", "-z", baseline, "--"],
-            cwd=repo, capture_output=True, check=False,
         )
         if result.returncode:
             return ["corpus-currentness: could not compare the approved corpus with the index/worktree candidate"]
@@ -624,7 +647,8 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                       " requires source-baseline and work/support disposition review"
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
-                      (status == "D" and path in HISTORICAL_PROSE and path in historical_paths))
+                      ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
+                       or (status == "M" and path == MEDIATOR_GUIDE and path in navigation_paths)))
     return list(dict.fromkeys(errors))
 
 
@@ -652,7 +676,14 @@ def check(repo, owners, cross):
     errors.extend(addition_errors)
     historical, historical_errors = check_historical_sources(repo, indexed, owners, cross, additions)
     errors.extend(historical_errors)
-    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions, historical))
+    navigation = {}
+    if MEDIATOR_GUIDE in indexed:
+        try:
+            navigation[MEDIATOR_GUIDE] = mediator_guide_source_bytes(repo, allow_original=True)
+        except (ValueError, OSError) as exc:
+            fail("navigation-source", MEDIATOR_GUIDE + ": " + str(exc))
+    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions,
+                                          historical, navigation))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -715,7 +746,8 @@ def check(repo, owners, cross):
     for key, source in sources.items():
         try:
             path = source["path"]
-            body = historical[path] if path in historical else safe_path(repo, path).read_bytes()
+            body = (historical[path] if path in historical else navigation[path]
+                    if path in navigation else safe_path(repo, path).read_bytes())
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue

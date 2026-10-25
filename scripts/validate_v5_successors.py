@@ -18,6 +18,11 @@ import re
 import subprocess
 from urllib.parse import urlsplit, urlunsplit
 
+_source_spec = importlib.util.spec_from_file_location(
+    '_v5_historical_source_helpers', Path(__file__).with_name('resolve_t20_v6_source.py'))
+_source = importlib.util.module_from_spec(_source_spec)
+_source_spec.loader.exec_module(_source)
+
 _spec = importlib.util.spec_from_file_location(
     '_v5_predecessor_helpers', Path(__file__).with_name('validate_research_continuations.py'))
 _legacy = importlib.util.module_from_spec(_spec)
@@ -312,10 +317,16 @@ def _sources(bundle, root):
                     'CUSTODY_ONLY source has public payload')
             continue
         digest(row['public_sha256']); integer(row['public_bytes'])
-        path = path_in(root, row['public_path'])
+        path = path_in(root, row['public_path'], exists=row['public_path'] != _source.MEDIATOR_COORDINATION)
         prefix = AREA + '/source-store/' + row['public_sha256'] + '/'
         require(row['public_path'].startswith(prefix), 'Wrong public source content-addressed path')
-        raw = path.read_bytes()
+        if row['public_path'] == _source.MEDIATOR_COORDINATION:
+            require(row['id'] == 'T12-SOURCE-COORDINATION' and row['projection'] == 'EXACT',
+                    'Wrong finite mediator source role')
+            raw = _source.historical_source_bytes(root, _source.MEDIATOR_COORDINATION,
+                _source.MEDIATOR_PROSE_REVISION, _source.MEDIATOR_PROSE[_source.MEDIATOR_COORDINATION][0])
+        else:
+            raw = path.read_bytes()
         require(len(raw) == row['public_bytes'] and hashlib.sha256(raw).hexdigest() == row['public_sha256'],
                 'Changed public source hash or bytes')
         require(path.suffix.lower() not in {'.zip', '.7z', '.tar', '.gz'}, 'Private archive payload is not public source')
@@ -357,19 +368,33 @@ def _sources(bundle, root):
 
 def _allowlist(bundle, root, sources):
     rows = indexed(bundle['public_allowlist'], 'path')
+    authenticated_absent = set()
     for name, row in rows.items():
         keys(row, {'path', 'sha256', 'bytes', 'kind', 'source_ids'})
         enum(row['kind'], {'SOURCE', 'AUTHORED', 'METADATA', 'VALIDATOR', 'TEST'})
         refs(row['source_ids'], sources, 'allowlist source')
-        path = path_in(root, name)
-        require(sha(path) == digest(row['sha256']) and path.stat().st_size == integer(row['bytes']),
+        path = path_in(root, name, exists=name != _source.MEDIATOR_COORDINATION)
+        if name == _source.MEDIATOR_COORDINATION:
+            require(row['kind'] == 'SOURCE' and row['source_ids'] == ['T12-SOURCE-COORDINATION'],
+                    'Wrong finite mediator allowlist role')
+            raw = _source.historical_source_bytes(root, name, _source.MEDIATOR_PROSE_REVISION, _source.MEDIATOR_PROSE[name][0])
+            if not path.exists():
+                authenticated_absent.add(name)
+        elif name == _source.MEDIATOR_GUIDE:
+            require(row['kind'] == 'AUTHORED' and row['source_ids'] == []
+                    and row['sha256'] == _source.MEDIATOR_GUIDE_SHA256 and row['bytes'] == _source.MEDIATOR_GUIDE_BYTES,
+                    'Original guide allowlist identity changed')
+            raw = _source.mediator_guide_source_bytes(root)
+        else:
+            raw = path.read_bytes()
+        require(hashlib.sha256(raw).hexdigest() == digest(row['sha256']) and len(raw) == integer(row['bytes']),
                 'Changed public allowlist payload')
         if row['kind'] == 'SOURCE':
             require(bool(row['source_ids']), 'Source allowlist row has no source identity')
             require(all(sources[sid]['public_path'] == name and sources[sid]['public_sha256'] == row['sha256']
                         for sid in row['source_ids']), 'Allowlist source association mismatch')
         if path.suffix.lower() in {'.md', '.json', '.py', '.lean', '.tex', '.txt', '.yaml', '.yml', '.tsv', '.csv'}:
-            check_public_text(path.read_text(encoding='utf-8'))
+            check_public_text(raw.decode('utf-8'))
     present = set()
     for relative in [AREA + '/source-store', AREA + '/groups']:
         folder = root / relative
@@ -380,7 +405,7 @@ def _allowlist(bundle, root, sources):
                 if path.is_file():
                     present.add(path.relative_to(root).as_posix())
     covered = {name for name in rows if any(name.startswith(AREA + '/' + part + '/') for part in ['source-store', 'groups'])}
-    require(present == covered, 'Public allowlist inventory is incomplete')
+    require(present == covered - authenticated_absent, 'Public allowlist inventory is incomplete')
     for source in sources.values():
         if source['public_path'] is not None:
             require(source['public_path'] in rows and source['id'] in rows[source['public_path']]['source_ids'],
