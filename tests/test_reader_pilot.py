@@ -987,7 +987,7 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         expected, _ = self.candidate()
         # Preserve the exact original document, adding only the separately
         # qualified four prose bindings, three mediator/evidence bindings,
-        # and the two old pins.
+        # two math-code evidence bindings, and the two old pins.
         for path in HistoricalProseReaderTests.PATHS:
             for row in expected["objects"]:
                 if row.get("repository_path") == path:
@@ -1002,6 +1002,10 @@ class HistoricalMetadataPinTests(unittest.TestCase):
                 "a7ff0e33d1a299db640041c46b1af81ca70851f6", "a949e7e8fdb1fcf386d3580a034d9cb14f34e7d5"),
             ("scripts/validate_v5_successors.py",
                 "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "62457f5f61e6e433b7714948e1b0c2545a00fbb1"),
+            ("tests/test_math_source_validator.py",
+                "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "dcb9a7171c3f82114936c36529093674e98417ca"),
+            ("scripts/validate_math_source.py",
+                "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "7a72d773ca5248b26383624ee1837448b9a2479c"),
         ):
             row = next(r for r in expected["objects"] if r.get("repository_path") == path)
             row.update(repository_revision=revision, git_blob=blob)

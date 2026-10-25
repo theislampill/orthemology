@@ -76211,7 +76211,9 @@
       "repository_path": "tests/test_math_source_validator.py",
       "public_sha256": "3c04cf4922e82d9a587b5d6c1105906cb3a18ecfb6fbb358cada239e8300a6f3",
       "public_bytes": 5084,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "dcb9a7171c3f82114936c36529093674e98417ca"
     },
     {
       "source_sha256": "3c051eea29f3bbf0f95976fa56964467d4d5c53423bbe1633176134d611f1292",
@@ -76512,7 +76514,9 @@
       "repository_path": "scripts/validate_math_source.py",
       "public_sha256": "3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a",
       "public_bytes": 38178,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "7a72d773ca5248b26383624ee1837448b9a2479c"
     },
     {
       "source_sha256": "3c562d9b10782b632465afdf9633d6b70c2eae3053c37e08617d33c7a5c7401c",

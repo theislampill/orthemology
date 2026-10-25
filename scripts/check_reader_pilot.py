@@ -307,7 +307,7 @@ def permitted_contributor_navigation(repo, row, body):
 
 
 def permitted_historical_status_pin(repo, row, body):
-    """Admit exact navigation and finite historical-prose bindings, not identities.
+    """Admit exact navigation and finite historical-source bindings, not identities.
 
     The live status index and contributor guide have authorised reader additions.
     T20 retains both original bodies at its original baseline, using the existing
@@ -379,6 +379,26 @@ def permitted_historical_status_pin(repo, row, body):
                     or source.get("public_sha256") != identity):
                 return False
             source.update(repository_revision=revision, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the finite mediator and original-validator evidence form.
+        math_code = (
+            ("tests/test_math_source_validator.py",
+             "dcb9a7171c3f82114936c36529093674e98417ca",
+             "3c04cf4922e82d9a587b5d6c1105906cb3a18ecfb6fbb358cada239e8300a6f3", 5084),
+            ("scripts/validate_math_source.py",
+             "7a72d773ca5248b26383624ee1837448b9a2479c",
+             "3c52ed4d872e7b3a6b1a35a0d3dd6624cd4b8052736cc55a78e055731d58177a", 38178),
+        )
+        for path, blob, identity, size in math_code:
+            selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+            if len(selected) != 1:
+                return False
+            source = selected[0]
+            if (source.get("disposition") != "REUSE" or source.get("repository_path") != path
+                    or source.get("source_bytes") != size or source.get("public_bytes") != size
+                    or source.get("public_sha256") != identity):
+                return False
+            source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
