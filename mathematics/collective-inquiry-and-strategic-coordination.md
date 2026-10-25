@@ -2,7 +2,7 @@
 
 ## Abstract
 
-A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
+A community can possess the premises of a conclusion without any member being able to integrate them. A game can have an equilibrium while its agents violate a hard joint constraint. Two groups can produce exactly the same answers while using different members' evidence. These are different failures, and each requires a different mathematical account. This chapter develops a common framework for them: shared occurrences with local observations; heterogeneous evidence with explicit comparison rules; locally implementable strategies; scalar and vector equilibria; complete coordination records; temporal deployment; and observations that identify actual contribution. It supplies finite counterexamples and proofs, including an exact positive-weight characterization of finite vector equilibria, coordination and information bounds, and a Gaussian nonidentification result with positive discrimination and inquiry-value counterparts. Its temporal treatment also establishes sharp constrained-coupling bounds, a conditional restoration threshold, exact transfer through implementable information interfaces, and recovery conditions that distinguish finite departures from permanent failure. It also separates finite-memory accuracy from eventual correctness, distinguishes fixed hidden standards from a common observed objective, and gives the exact risk threshold for fresh switching innovations. The results consolidate conditional public research. They do not establish a cognitive anatomy, a fitted social model, or the completion of an unfinished general noetic-field theory.
 
 ## 1. Shared inquiry and distributed access
 
@@ -1086,6 +1086,335 @@ The retained finite implementations check supplied coupling tables, private/publ
 
 The remaining practical work is concrete: establish the actual joint kernels and provenance dependence, prove policy-menu conformance under all admitted disturbances, realize the sampler and information interface, supply destination warrant, and—for regenerative use—implement sound fault detection and a complete conditional reentry-law/memory contract. The ordinary research does not provide a general recovery synthesizer, an unrestricted migration decision procedure, a formal-kernel proof of these probability theorems, or permission to infer scientific truth from a finite checker. Preserving those distinctions makes the conditional results usable without overstating their reach.
 
+### 7.8 Learning a hidden standard: memory, certainty and permission
+
+A fixed hidden standard can be statistically learnable even though no finite observation certifies it. The memory and objective of the learner then matter independently of the size of the physical plant. Consider a standard $`h\in\{0,1\}`$ chosen initially and held fixed. Conditional on $`h`$, the acquisitions $`Y_1,Y_2,\ldots`$ are independent, with
+
+```math
+\Pr_h(Y_t=1)=
+\begin{cases}
+1/3,&h=0,\\
+2/3,&h=1.
+\end{cases}
+```
+
+After seeing the current acquisition, the learner issues a response $`a_t\in\{0,1\}`$. Both responses are, for now, stipulated safe and permitted under both standards. A response is correct exactly when $`a_t=h`$. The physical observation/response state is finite; the learner's accumulated information need not be.
+
+Write $`\mathcal R_h`$ for eventual permanent correctness:
+
+```math
+\mathcal R_h
+=\{\exists N\ \forall t\ge N:\ a_t=h\}.
+```
+
+The statistical dependence of acquisitions on $`h`$, the assignment of a target response to $`h`$, and permission to issue either response are three supplied assumptions. The model derives no norm from a frequency. [26][r18]
+
+**Theorem (memory and certainty separate).** In this model:
+
+1. No policy is sure to satisfy $`\mathcal R_h`$ under both standards.
+2. One deterministic policy using unbounded memory satisfies $`\Pr_h(\mathcal R_h)=1`$ under both standards.
+3. No finite, time-homogeneous controller satisfies that almost-sure guarantee under both standards.
+4. For every $`\varepsilon>0`$, a finite controller achieves $`\Pr_h(\mathcal R_h)\ge1-\varepsilon`$ under both standards.
+5. No rule can identify the standard with zero error under both models by a declaration that occurs after finitely many acquisitions almost surely.
+
+Here a finite, time-homogeneous controller has a finite total internal state, a fixed initial law independent of the hidden standard, and fixed action and update kernels based on its available information. Randomized kernels are allowed. An unbounded clock, an externally changing transition table, or an increasing-precision register is additional memory. The physical state, any separately supplied current observation and any response needed to label correctness are included when compiling the controller into a finite chain.
+
+**Proof of the sure impossibility.** Every finite bit word has positive probability under both standards. In particular, the infinite all-zero word is admitted by both support models: every one of its finite prefixes is possible. A deterministic policy has the same response sequence on that word in both models. The sequence cannot be eventually always zero and eventually always one. For a randomized policy, the same argument fixes a common supported sequence of its internal choices. Sure success quantifies over those choices and supported observations, including paths of probability zero. ∎
+
+**Proof of almost-sure learning with unbounded memory.** After acquisitions $`1,\ldots,2m`$, choose their majority bit, resolving a tie as zero. Hold that response until the next even acquisition count. Let $`K_m`$ be the number of ones among the first $`2m`$ acquisitions. Under $`h=0`$, Markov's inequality gives
+
+```math
+\Pr_0(K_m\ge m)
+\le \frac{\mathbb E_0[2^{K_m}]}{2^m}
+=\frac{(4/3)^{2m}}{2^m}
+=\left(\frac89\right)^m.
+```
+
+An incorrect response under $`h=0`$ actually requires $`K_m>m`$, so this bound is conservative. Under $`h=1`$, the number of zeros has the same law as $`K_m`$ under $`h=0`$. It also bounds the adverse tie and every incorrect majority response. Thus the error probabilities of the successive update blocks have finite sum, at most
+
+```math
+\sum_{m=1}^{\infty}\left(\frac89\right)^m=8.
+```
+
+The first Borel–Cantelli implication gives only finitely many incorrect update blocks almost surely. These events overlap in their acquired data, but that implication requires no independence between the events. Each selected response is held for only two response times; the finite initial prefix is immaterial. Hence there are only finitely many incorrect responses. The cumulative sample count and tally are unbounded. By summing the error indicators, eight also bounds the expected number of incorrect update blocks under the stipulated model; it is not a bound on the last incorrect time. ∎
+
+**Proof of the finite-memory obstruction.** Fix one finite, time-homogeneous controller. Compile its total memory, available physical state and selected response into a finite Markov chain under each standard. Both acquisition probabilities are strictly positive. The two chains therefore have the same directed graph of positive transitions and the same reachable states from the common initial support, although their numerical transition probabilities differ.
+
+Recall why the eventual-correctness test for a fixed finite chain is a graph test. Every reachable state has a path into a bottom strongly connected component. Finiteness gives a common finite path-length bound and a positive lower bound on the probability of following one such path. Repeated conditional trials in blocks of that length show that a bottom component is entered almost surely. Inside a bottom component, the same argument gives a positive uniform chance of reaching any prescribed state in a bounded number of steps. For each fixed time, the chance of avoiding that state forever afterward is zero. Taking the countable union over starting times shows that every state of the component is visited infinitely often almost surely. Conversely, every reachable bottom component has a positive probability of being entered along a finite path.
+
+It follows that a finite chain is eventually always correct almost surely precisely when every reachable bottom component contains only correct-response states. Success under $`h=0`$ would require all states of each reachable bottom component to issue zero. Success under $`h=1`$ would require every state of those same nonempty components to issue one. The common graph makes the requirements incompatible. Randomized controller actions and updates merely contribute their positive edges to this graph; they do not remove the contradiction. ∎
+
+This obstruction does **not** say that every finite controller has restoration probability zero. A controller can acquire four samples and then commit to their majority, with ties resolved as zero. Its restoration probabilities are
+
+```math
+\begin{aligned}
+\Pr_1(\mathcal R_1)
+&=\binom43\left(\frac23\right)^3\frac13
+  +\left(\frac23\right)^4
+ =\frac{16}{27},\\
+\Pr_0(\mathcal R_0)
+&=1-\binom43\left(\frac13\right)^3\frac23
+     -\left(\frac13\right)^4
+ =\frac89.
+\end{aligned}
+```
+
+They are positive and below one. A finite machine may have different absorbing commitments, each reached with positive probability under both hypotheses. [21, §C3][r17]
+
+**Proof of finite-memory approximation.** Given $`0<\varepsilon<1`$, choose $`m`$ with $`(8/9)^m\le\varepsilon`$. Acquire $`2m`$ samples, then commit forever to their majority. The same finite-sample bound makes the wrong-commitment probability at most $`\varepsilon`$ under either standard. One implementation stores a pair $`(n,k)`$, where $`0\le n\le2m`$ and $`0\le k\le n`$, and uses two terminal commitment states. Consequently
+
+```math
+\frac{(2m+1)(2m+2)}2+2
+```
+
+states suffice. This is an upper bound, not a memory-optimality theorem. The memory size changes when the requested error changes. Arbitrarily good finite-memory approximation and one almost-surely successful finite-memory policy have different quantifiers. ∎
+
+**Proof of the finite-declaration obstruction.** Fix a finite sample count $`n`$ and a declaration $`d`$. For each word $`w\in\{0,1\}^n`$, let $`k_{n,d}(w)`$ be the probability, over the rule's own randomization, that it first stops at $`n`$ and declares $`d`$ on that word. The rule is the same under both standards, so this nonnegative factor is the same. The declaration probability under $`h`$ is
+
+```math
+\Pr_h(\tau=n,D=d)
+=\sum_{w\in\{0,1\}^n}\Pr_h(Y_{1:n}=w)\,k_{n,d}(w).
+```
+
+Every word probability is positive under both models. A declaration event has positive probability under one precisely when it has positive probability under the other. Declaring zero must therefore have zero probability under both models if zero error under $`h=1`$ is required; declaring one likewise has zero probability under both if zero error under $`h=0`$ is required. The countable union over $`n`$ cannot have probability one. Continued revisability is compatible with almost-sure eventual correctness; it does not provide a finite zero-error certificate that revision can safely end. ∎
+
+#### Acquisition roots and action authority
+
+Two changes to the model remove the constructive conclusion for different reasons.
+
+First, retain the biased one-time marginal law but draw only one bit $`Z`$ and report $`Y_t=Z`$ forever. Each of the two complete report words has positive probability under both standards. Conditional on either word, the learner has the same law of internal choices and responses in both models. Almost-sure correctness under both would require that common conditional response law to be concentrated both on eventual zero and on eventual one, which are disjoint events. It is impossible. Repeated reports of one acquisition do not supply the independent acquisitions used by the majority proof. One physical device can supply independent acquisitions if its actual stochastic and evidential model warrants them; the relevant quantity is independent acquisition events, not device count.
+
+Second, retain fresh acquisitions but permit response $`a`$ only when $`a=h`$. Add a response “abstain” that is always permitted but never correct. Both standards remain possible after every finite public history. A menu requiring eligibility for every still-possible standard therefore contains neither binary guess. Only abstention remains, so no permitted policy achieves restoration. A small probability of error does not eliminate a positive-support possibility or supply permission to disregard it. A risk-tolerant permission rule would change the model's substantive authority premise.
+
+The equal-support argument also has a precise limit. The two biased independent acquisition processes have the same one-step support, yet their different probabilities permit the unbounded-memory learner above. If the two biases are instead made equal while their targets remain opposite, their complete observation laws coincide. The induced response law of any common policy then cannot assign probability one to both disjoint eventual-response events. Thus unrestricted almost-sure learnability can change without any change of one-step support. The support test proved above applies to an already fixed finite homogeneous controller; it does not classify every unbounded strategy.
+
+#### Hidden objectives and a legitimate common-objective specialization
+
+The finite-memory obstruction is consistent with the theorem of Chatterjee, Doyen, Raskin and Sankur for multiple-environment Markov decision processes. Their model has a finite family of transition laws on a shared observed state space and **one common parity objective**. Their Theorem 4 establishes decidability of almost-sure winning and sufficiency of pure finite-memory strategies, with the stated exponential memory bound. [31, §§2–3][memdp]
+
+Here correctness depends on the unobserved standard. The same observed response state can be correct under one model and incorrect under the other. No single priority labeling of that observed state represents both targets. Adding the hidden standard to the acceptance label does not make it observed. The common-objective theorem cannot be applied by silently removing this distinction.
+
+A useful permitted specialization can nevertheless be stated exactly. Let $`x_t=(s_t,c_t)`$ be the complete finite observed state: $`s_t`$ records the physical state and $`c_t`$ the public evidence and permission state. Every additional public signal used by the policy or its eligibility test must be represented there. Let $`H_t`$ be the fixed environments still possible from the complete observed history, and write $`q_t=(x_t,H_t)`$. Require a known finite, time-homogeneous transition law $`K_h(x'\mid q,a)`$ for this complete observed successor under each fixed environment. This is a Markov premise about the entire compiled observation, not merely the physical marginal. If the public state has further history-dependent dynamics, they must admit the stipulated finite compilation before this specialization applies.
+
+Initialize $`H_0`$ using the complete initial observation. For initial laws $`\mu_h`$ on the finite observed state and admitted environment set $`\mathcal E`$, the exact support updates are
+
+```math
+H_0=\{h\in\mathcal E:\mu_h(x_0)>0\},
+\qquad
+H_{t+1}
+=\{h\in H_t:K_h(x_{t+1}\mid q_t,a_t)>0\}.
+```
+
+**Why the update is exact.** Fix a finite observed history and a common observation-based policy. The policy's action-selection factors are the same under each environment. Apart from those common factors, the history has likelihood
+
+```math
+\mu_h(x_0)
+\prod_{r=0}^{t-1}K_h(x_{r+1}\mid q_r,a_r).
+```
+
+On a history the policy can generate, an environment is possible exactly when each factor in this finite product is positive. The initial rule and successive updates express that condition by induction. In particular, a possible transition cannot remove its actual environment. The pair consisting of this successor observation and the deterministic live-set update also defines the finite transition law on $`q`$. Rows with $`h\notin H`$ may be completed arbitrarily: they are unreachable under environment $`h`$ from the compatible initial state.
+
+The physical marginal alone can lose a decisive observation. For example, take one physical state, one common action and two environments. The physical state stays fixed with probability one under both environments, while the next public state is $`c'=h`$. Observing $`c'=0`$ leaves only environment zero, and observing $`c'=1`$ leaves only environment one. A rule testing only the physical successor instead retains both. It produces a conservative superset, not the exact set needed by the stated compilation. A physical-only test is justified when the public update supplies no further support discrimination; a common deterministic update from the already observed physical transition is one sufficient restriction.
+
+Require the permitted action set $`\Gamma(q)`$ to be determined by the observed compiled state, including any robust eligibility and warrant conditions. Require also one common parity objective on that state. The complete transition law then yields a finite multiple-environment model with common action menus: the law varies with the fixed environment, while state meanings, available actions and objective do not. A state with no permitted action is a losing analysis dead end; representing it by a losing sink does not authorize a physical action.
+
+The cited common-objective theorem applies to this explicit model, starting from each observed initial state with its compatible environment set. Its complexity is measured on the compiled representation, not on an unspecified succinct permission language. Simultaneously satisfying all candidate targets can sometimes be expressed as a common objective. Satisfying only the actual hidden standard is a different requirement. Ongoing hidden physical state, switching environments, unbounded public memory or a target depending on the unknown environment removes the stated specialization.
+
+#### A whole trace can be nonatomic and still identify a target
+
+The acquisition example also separates a property of an entire observation law from success on one decision target. For a random observation $`V`$, let
+
+```math
+S_V=\{v:\Pr(V=v)>0\},
+\qquad
+d_{\mathrm{atom}}(V)=1-\Pr(V\in S_V).
+```
+
+All singletons here are measurable. The finite prefix $`Y_{1:n}`$ has a finite positive atomic law, so $`d_{\mathrm{atom}}(Y_{1:n})=0`$. For the complete trace and any fixed infinite word $`w`$,
+
+```math
+\Pr_h(Y=w)
+\le\Pr_h(Y_{1:n}=w_{1:n})
+\le\left(\frac23\right)^n
+\longrightarrow0.
+```
+
+Thus no complete word has positive mass and $`d_{\mathrm{atom}}(Y)=1`$, under either model or any mixture of the two.
+
+Nevertheless, the limiting empirical frequency identifies the standard almost surely. A short proof supplies the relevant convergence. Put $`T_n=\sum_{t=1}^nY_t`$ and let $`p=\Pr_h(Y_t=1)`$. At square sample sizes, Chebyshev's inequality gives, for every $`\delta>0`$,
+
+```math
+\Pr_h\!\left(\left|\frac{T_{k^2}}{k^2}-p\right|>\delta\right)
+\le\frac{p(1-p)}{\delta^2k^2}.
+```
+
+The right sides are summable. Borel–Cantelli, applied to a countable sequence of positive $`\delta`$ tending to zero, yields $`T_{k^2}/k^2\to p`$ almost surely. For $`k^2\le n\le(k+1)^2`$, monotonicity of the counts gives
+
+```math
+\frac{T_{k^2}}{(k+1)^2}
+\le\frac{T_n}{n}
+\le\frac{T_{(k+1)^2}}{k^2}.
+```
+
+Both bounds converge to $`p`$. Define a decoder to return zero on traces with limiting frequency $`1/3`$, one on those with limit $`2/3`$, and any fixed value elsewhere. These are measurable limit conditions. Under any prior giving both standards positive mass, the decoder equals the actual standard almost surely. It is not correct on every support-admitted trace, and it cannot be replaced by a finite zero-error stopping declaration.
+
+The atomic-mass defect of the complete trace therefore does not mean “no useful information” or “every decision target fails.” Its whole-observation property and this one-target identification claim have different quantifiers. Neither supplies the target's truth, empirical interpretation or action authority.
+
+### 7.9 High average accuracy can coexist with perpetual errors
+
+Finite-memory learning has several performance criteria. Let $`H_+`$ and $`H_-`$ give independent Bernoulli acquisitions with probabilities $`2/3`$ and $`1/3`$, respectively, with equal hypothesis priors. A time-average Bayes error is
+
+```math
+\overline e
+=\lim_{n\to\infty}\frac1n\sum_{t=1}^n
+\frac{\Pr_+(a_t=-)+\Pr_-(a_t=+)}2,
+```
+
+when the limit exists. Eventual correctness instead requires only finitely many errors on almost every path. The following exact family has arbitrarily small long-run average error as its memory grows, but restoration probability zero under each hypothesis. [27][r19]
+
+#### An exactly solvable finite learner
+
+Take $`S=L+1\ge2`$ memory states $`0,\ldots,L`$ and $`0<\varepsilon\le1`$. At an interior state, acquisition one moves right and acquisition zero moves left. At state zero, acquisition one moves to state one with additional probability $`\varepsilon`$; otherwise the learner stays at zero. At state $`L`$, acquisition zero moves left with additional probability $`\varepsilon`$; otherwise it stays at $`L`$. The extra randomization is fresh and independent of the acquisition.
+
+For acquisition bias $`0<p<1`$, all adjacent moves have positive probability, and the endpoints have positive self-loops. The chain is irreducible and aperiodic. Set $`r=p/(1-p)`$. Its unnormalized stationary weights are
+
+```math
+w_0=1,\qquad
+w_L=r^L,\qquad
+w_i=\varepsilon r^i\quad(1\le i\le L-1).
+```
+
+For $`S\ge3`$, detailed balance on the first edge reads $`1\cdot\varepsilon p=(\varepsilon r)(1-p)`$. Each edge between interior states has ratio $`r`$, and the last edge reads $`(\varepsilon r^{L-1})p=r^L\varepsilon(1-p)`$. For $`S=2`$ there is only one edge: both directions carry the extra factor, with rates $`\varepsilon p`$ and $`\varepsilon(1-p)`$. Their ratio is again $`r`$, so the endpoint weights above remain correct without an interior-state argument. Normalizing the weights gives the stationary law. [21, §C3][r17]
+
+For completeness, this law also describes the long-time distribution from any initial state. From any memory state $`i`$ to any $`j`$, there is a path through zero of length at most $`2L`$. Positive self-loops at zero pad it to exactly $`2L`$ steps. Consequently every entry of $`P^{2L}`$ is positive. If
+
+```math
+\alpha=\sum_j\min_i P^{2L}(i,j)>0,
+```
+
+each row contains the same subprobability vector of mass $`\alpha`$. Removing that common part leaves a stochastic residual of mass $`1-\alpha`$. The total-variation distance between two distributions contracts by at most $`1-\alpha`$ every such block. Thus the normalized stationary law is unique and every initial distribution converges to it. If $`\alpha=1`$, convergence after that block is immediate.
+
+Under $`H_+`$ the ratio is two; the stationary law under $`H_-`$ is its reflection about $`L/2`$. With equal priors, choose minus below the midpoint and plus above it. At an integer midpoint either fixed response or a fair random tie has the same Bayes error. Define
+
+```math
+D_L=\sum_{i=1}^{L-1}2^i=2^L-2,
+\qquad
+C_L=\sum_{1\le i\lt{}L/2}2^i
+ +\frac12\,2^{L/2}\mathbf1_{\{L\ {\rm even}\}}.
+```
+
+The posterior comparison follows directly from the stationary likelihood ratio $`2^{2i-L}`$. For any statewise decision, its equal-prior contribution to error is minimized by the more likely hypothesis. Equivalently, the minimum is half the sum of the smaller of the two stationary masses at each state. Reflection then gives
+
+```math
+E_S(\varepsilon)
+=\frac{1+\varepsilon C_L}
+       {1+2^L+\varepsilon D_L},
+\qquad
+\lim_{\varepsilon\downarrow0}E_S(\varepsilon)
+=\frac1{1+2^{S-1}}.
+```
+
+Distributional convergence makes both the limiting instantaneous Bayes error and its time average equal to this stationary value. The formula does not replace the pathwise objective.
+
+**Proposition (small average error, no restoration).** For every fixed $`S\ge2`$ and $`\varepsilon>0`$, the learner above has restoration probability zero under each hypothesis.
+
+**Proof.** Under $`H_+`$, state zero issues an incorrect response; under $`H_-`$, state $`L`$ does. The finite irreducible chain visits each state infinitely often almost surely, by the bounded-path argument in §7.8. Hence each hypothesis produces infinitely many incorrect responses with probability one. ∎
+
+For example, $`S=21`$ and $`\varepsilon=1/1000`$ give the exact stationary Bayes error
+
+```math
+E_{21}(1/1000)=\frac{1267}{524812787}
+\approx2.41\times10^{-6},
+```
+
+while the probability of eventual permanent correctness remains zero. The statement concerns actual repeated incorrect responses, not merely a failure to certify an otherwise correct trajectory.
+
+#### The zero-randomization limit changes the process
+
+Let $`S=3`$ and start at state one. For positive $`\varepsilon`$,
+
+```math
+E_3(\varepsilon)=\frac{1+\varepsilon}{5+2\varepsilon}.
+```
+
+At $`\varepsilon=0`$, both endpoints become absorbing. The first acquisition moves from state one to an endpoint and determines the permanent response. The error probability is then $`1/3`$ under either hypothesis. At every fixed $`n\ge1`$, the finite-step law is a polynomial in the transition entries, so its error $`e_n(\varepsilon)`$ converges to $`e_n(0)=1/3`$ as $`\varepsilon\downarrow0`$. Therefore
+
+```math
+\lim_{\varepsilon\downarrow0}\lim_{n\to\infty}e_n(\varepsilon)
+=\frac15,
+\qquad
+\lim_{n\to\infty}\lim_{\varepsilon\downarrow0}e_n(\varepsilon)
+=\frac13.
+```
+
+The restoration probability changes as well: it is zero for every positive $`\varepsilon`$, but $`2/3`$ at zero. Removing a positive transition changes recurrent classes. Approaching an error infimum therefore does not justify setting a parameter to zero while retaining the old qualitative conclusion.
+
+The classical finite-memory learning criterion is an asymptotic average error. For equal-prior, time-invariant randomized $`S`$-state tests of Bernoulli parameters $`0<q<p<1`$, the Hellman–Cover infimum is expressed using $`\gamma=p(1-q)/(q(1-p))`$ as $`(1+\gamma^{(S-1)/2})^{-1}`$. Berg, Ordentlich and Shayevitz state that criterion and the randomized infimum explicitly while studying deterministic machines. Here $`\gamma=4`$, matching the limit of the displayed family. The universal optimality assertion belongs to that literature; the calculation above proves this family's law and temporal behavior. [29][memory-origin]; [30, §I][memory-learning].
+
+A vanishing instantaneous error is also insufficient by itself: the harmonic error example in §7.4 has errors tending to zero but infinitely many errors almost surely. The majority construction instead has summable update errors. Conversely, the recovery example in §7.7 shows that finitely many bad visits almost surely need not have finite expected total. Average accuracy, convergence in probability, eventual correctness, expected error count and a finite zero-error declaration must therefore retain their separate definitions.
+
+### 7.10 Fresh switching innovations impose an irreducible conditional risk
+
+An unbounded tally can learn a fixed source frequency. It cannot predict a fresh, unobserved change after its current action has been selected. Let a binary standard evolve by
+
+```math
+h_t=h_{t-1}\mathbin{\oplus}B_t,
+\qquad t\ge0,
+```
+
+where $`\oplus`$ denotes exclusive-or and $`h_{-1}`$ is known. Before issuing $`a_t`$, the controller sees $`h_{t-1}`$ exactly but not $`B_t`$. Correctness means $`a_t=h_t`$. Both responses are initially stipulated safe and permitted under either next standard. [28][r20]
+
+Let $`\mathcal F_t`$ include the entire past, the selected action $`a_t`$, and all randomness used to select it. The innovation is not yet observed. Assume
+
+```math
+\Pr(B_t=1\mid\mathcal F_t)=p_t,
+\qquad
+0\le p_t\le\frac12,
+```
+
+for a prescribed deterministic schedule. The next sigma-algebra contains the realized innovation and standard as well as the next selected action. Thus $`E_t=\{a_t\ne h_t\}`$ belongs to $`\mathcal F_{t+1}`$. Conditioning after action selection prevents a shared current random source from secretly predicting an innovation still described as fresh.
+
+**Theorem (switching threshold).** There exists a nonanticipating policy with only finitely many mistakes almost surely under this model if and only if
+
+```math
+\sum_{t=0}^{\infty}p_t\lt{}\infty.
+```
+
+**Proof.** Conditional on $`\mathcal F_t`$, both the last standard and the selected response are known. Therefore
+
+```math
+\Pr(E_t\mid\mathcal F_t)=
+\begin{cases}
+p_t,&a_t=h_{t-1},\\
+1-p_t,&a_t\ne h_{t-1},
+\end{cases}
+\qquad
+\Pr(E_t\mid\mathcal F_t)\ge p_t.
+```
+
+If the prescribed sum diverges, the adapted conditional theorem of §7.4 gives infinitely many mistakes almost surely for every admitted policy, including randomized policies with unbounded memory. If the sum converges, choose $`a_t=h_{t-1}`$. A mistake then occurs exactly when $`B_t=1`$. Its probabilities have finite sum, so the first Borel–Cantelli implication gives only finitely many mistakes. The policy needs only the last observed standard; it need not store the schedule or know the current value of $`p_t`$. The environment's potentially time-dependent hazard law remains an explicit premise. ∎
+
+If the risks are instead endogenous or policy-dependent, the conditional lower-bound argument still applies on paths with divergent cumulative conditional risk. The deterministic-schedule existence equivalence does not prove that a greedy current predictor minimizes future endogenous risk.
+
+Several sharp changes of assumption locate this theorem's scope.
+
+**Persistent support uncertainty.** If $`0<p_t\le1/2`$ at every time, both next standards remain possible at every decision. No single response keeps every supported successor in the target. Thus there is no nonempty support-invariant target core for this response model and information timing. A summable positive schedule nonetheless permits eventual correctness almost surely. The support adversary can choose a contrary innovation at every step; almost-sure success is not sure success.
+
+**Earlier observation.** If the current $`h_t`$ is revealed before selection, $`a_t=h_t`$ is always correct. That conclusion belongs to an enlarged information channel.
+
+**Copied rather than fresh innovations.** Draw one bit $`Z\sim{\rm Bernoulli}(\varepsilon)`$, with $`0<\varepsilon<1/2`$, and put $`B_t=Z`$ for every time. Each unconditional flip marginal is still $`\varepsilon`$. After the first transition, the controller learns $`Z=h_0\oplus h_{-1}`$ and selects
+
+```math
+a_t=h_{t-1}\mathbin{\oplus}Z
+\qquad(t\ge1).
+```
+
+Every later response is correct. The conditional **flip probability** is now the known value $`\Pr(B_t=1\mid\mathcal F_t)=Z`$, whereas the chosen policy's conditional **error probability** is zero. These are different quantities. Summing the unchanged unconditional flip marginals would falsely invoke the fresh-innovation theorem.
+
+**Eligibility tied to the new standard.** If response $`a`$ is permitted only when $`a=h_t`$, both alternatives remain possible whenever $`0<p_t<1`$. Neither binary response is then eligible under every supported standard. A statistical predictor is not an authorized restoration policy merely because its expected errors are small. If such uncertainty persists and only an always-permitted, nontarget abstention is available, permitted eventual correctness fails. If uncertainty ceases, that separate eventual situation must be analyzed under its actual menu.
+
+The hypotheses about standards, acquisition laws, target meanings and permissions are not observations established by these calculations. The results identify which memory and information contracts can support the specified objective, while leaving empirical identification and substantive cognitive or normative authority to their own evidence.
+
 ## 8. What final judgments identify about evidence use
 
 The previous sections ask what information a strategy or coordination mechanism needs. The converse question is different: what does a successful collective answer reveal about how the answer was produced? A group can produce informative, accurate answers without the available observations identifying each member's causal contribution. The following construction proves this limitation while preserving both a real two-input mechanism and a real one-input alternative. [11][r11]
@@ -1479,6 +1808,8 @@ The five-state example separates distributed possession from individual or colle
 
 Temporal restoration introduces another obligation. An equilibrium of a stationary decision problem is not a convergence proof for repeated practice. Independent randomization can leave failures recurring forever. A valid progress argument supplies a target-preserving dynamic and a rank or potential suited to it. More general dependent deployment requires the actual conditional violation law and a filtration that observes the relevant events. Transferring a restorative policy requires complete probability marginals, implementable information and destination authority; approximation additionally needs control of bad occupancy or a genuine recovery and reentry mechanism. Conversely, an observed pattern of successful final answers may be insufficient to identify the evidence used to generate those answers. Identification requires a channel sensitive to the causal distinction, while a worthwhile inquiry further requires a declared decision problem and acceptable cost.
 
+Finite memory adds a further distinction between repeatedly being accurate and eventually making no more mistakes. Fixed hidden standards can be learned almost surely by an unbounded tally even when every finite homogeneous controller falls short of that guarantee. Fresh, unobserved switching innovations instead impose an irreducible current risk. In both settings the acquisition law and permitted response remain separate from the statistical inference.
+
 Several substantial questions remain open at the intended applied level. Which evidence coordinates and improvement relations are warranted for a particular scholarly task? Which cognitive or institutional operations can be defended as the strategic loci of a model? What actual records mediate coordination, and what dependencies bypass a proposed information cut? Which recording errors and intervention assumptions are empirically supported? These cannot be settled by declaring a tuple, invoking Nash's theorem, measuring an outcome curve or assigning a compression score.
 
 A reproducible application must expose the conditions on which its result depends: coordinate orientation and units; source and extraction identity; inquiry and version; local views and permitted actions; payoffs or comparison cones; the strict-improvement convention; mixture and deployment semantics; and the kind of conclusion claimed. A certificate for one layer cannot certify another merely by changing its name. [5, §§8–9][r5]
@@ -1486,6 +1817,8 @@ A reproducible application must expose the conditions on which its result depend
 The mathematical conclusions here are conditional statements with their proofs and counterexamples, not claims of general novelty, fitted psychological mechanisms or completed empirical validation. The epistemic-profile architecture remains a proposal with corrected mathematical consequences. The accepted Orthemology papers retain their own editions and authority. The unfinished objective of a general n-person noetic field, and any distinct constructive-correction companions, remain separate scientific work; this chapter neither substitutes for that objective nor imports private manuscript bodies.
 
 The stochastic-transfer and recovery sections are ordinary mathematical consolidations of public research and its explicit correction for adversarial exposure of pre-sampled random memory. They preserve the supplied model and authority assumptions. Their finite implementations and historical probe results remain separate evidence; this exposition neither repeats those executions nor upgrades their formal or empirical status.
+
+The learning sections likewise preserve the exact memory, observation, objective and permission hypotheses of their public sources. The common-objective specialization invokes the cited theorem within its stated model; it is not a newly implemented general synthesis procedure. The finite probes remain inspectable historical evidence, while the complete ordinary proofs above establish the stated mathematical conclusions.
 
 ## References and source editions
 
@@ -1512,11 +1845,18 @@ The numbered project sources below identify public research editions. They estab
 18. Orthemology public research. *Causal stochastic migration with an implementable information interface*. Corrected exact-coupling and controller-information treatment, including its finite-memory qualification. [Exact public edition][r14].
 19. Orthemology public research. *Composing migration interfaces without turning private memory into public warrant*. Split public/private mode and exact same-middle-law composition. [Exact public edition][r15].
 20. Orthemology public research. *Approximate migration: finite departures need an actual return mechanism*. Occupancy-defect and regenerative restoration results with their complete conditional reentry obligations. [Exact public edition][r16].
-21. Orthemology public research. *Cross-lane adversarial synthesis review*, §F1 and §§C2, C4, 30 September 2026. The exposed-future-coin counterexample and the relevant stochastic proof qualifications are incorporated here; the review's other mathematical and philosophical assessments remain separate. [Exact public review][r17].
+21. Orthemology public research. *Cross-lane adversarial synthesis review*, §F1 and §§C2–C4, 30 September 2026. The exposed-future-coin counterexample, relevant stochastic proof qualifications, hidden-standard learning boundaries and the two-state stationary-law correction are incorporated here; the review's other mathematical and philosophical assessments remain separate. [Exact public review][r17].
 22. L. R. Ford, Jr., and D. R. Fulkerson. “Maximal Flow Through a Network.” *Canadian Journal of Mathematics* 8 (1956): 399–404. [doi:10.4153/CJM-1956-045-5][flow].
 23. Robert J. Aumann. “Subjectivity and Correlation in Randomized Strategies.” *Journal of Mathematical Economics* 1, no. 1 (1974): 67–96. [doi:10.1016/0304-4068(74)90037-8][aumann]. [Author-hosted reprint][aumann-reprint].
 24. Chandra Nair. *Probability Theory: Lecture Notes 6*. 18 December 2019. Theorem 11 states Lévy's extension of the Borel–Cantelli lemmas; its preceding martingale result and Lemma 5 support the convergence argument. [Author's notes][conditional-bc].
 25. Sofie Haesaert, S. Esmaeil Zadeh Soudjani and Alessandro Abate. *Verification of General Markov Decision Processes by Approximate Similarity Relations and Policy Refinement*. Author preprint, arXiv:1605.09557v1, 2016. Definition 6 and §§3.3–4.2 distinguish exact law lifting, state-dependent interfaces and finite-horizon approximate refinement. [Primary preprint][refinement].
+
+26. Orthemology public research. *Hidden target standards can require infinite memory under ongoing observations*. Complete fixed-standard learning, memory, authority, common-objective and whole-trace distinctions. [Exact public edition][r18].
+27. Orthemology public research. *High long-run accuracy can coexist with zero restoration probability*. Exact stationary-error family and singular-limit counterexample; the two-state edge derivation is made explicit in §7.9. [Exact public edition][r19].
+28. Orthemology public research. *Fresh hidden switching: an exact conditional-error threshold*. Conditional innovation and observation/permission boundaries. [Exact public edition][r20].
+29. Martin E. Hellman and Thomas M. Cover. “Learning with Finite Memory.” *The Annals of Mathematical Statistics* 41, no. 3 (1970): 765–782. [doi:10.1214/aoms/1177696958][memory-origin].
+30. Tomer Berg, Or Ordentlich and Ofer Shayevitz. *Binary Hypothesis Testing with Deterministic Finite-Memory Decision Rules*. arXiv:2005.07445v1, 2020. §I, especially equations (4) and (9), specifies the average-error criterion and the classical randomized-machine comparison. [Primary preprint][memory-learning].
+31. Krishnendu Chatterjee, Laurent Doyen, Jean-François Raskin and Ocan Sankur. “The Value Problem for Multiple-Environment MDPs with Parity Objective.” *52nd International Colloquium on Automata, Languages, and Programming*, LIPIcs 334, article 150 (2025). The common observed-state objective and almost-sure finite-memory result used here are in §§2–3 and Theorem 4. [doi:10.4230/LIPIcs.ICALP.2025.150][memdp].
 
 [r1]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-multi-actor-conflict-note.md
 [r2]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-core-formalization.md
@@ -1544,3 +1884,10 @@ The numbered project sources below identify public research editions. They estab
 [aumann-reprint]: https://ma.huji.ac.il/raumann/pdf/Subjectivity%20and%20Correlation.pdf
 [conditional-bc]: https://chandra.ie.cuhk.edu.hk/courses/Probability/ln6.pdf
 [refinement]: https://arxiv.org/pdf/1605.09557v1
+
+[r18]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/8ca78e5825fbe7233842871910254dba6fd12da0293c71a7a569060e010564c0/hidden_standard_learning.md
+[r19]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/cb062c429d7d4cdd3a80d3250bceaa10dc47dc8743905ec15a1869f954809fd6/memory_accuracy_boundary.md
+[r20]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/7336cfa637b26bd82370c43e00601d3362291b6f4cb51b8563b49f66163799fb/switching_innovation_threshold.md
+[memory-origin]: https://doi.org/10.1214/aoms/1177696958
+[memory-learning]: https://arxiv.org/pdf/2005.07445v1
+[memdp]: https://drops.dagstuhl.de/storage/00lipics/lipics-vol334-icalp2025/html/LIPIcs.ICALP.2025.150/LIPIcs.ICALP.2025.150.html
