@@ -8116,8 +8116,8 @@
     },
     "scientific-consolidation-review": {
       "path": "docs/scientific-consolidation-review.md",
-      "sha256": "0702159ae2fff2bf3804796040155bfa74f999ba0a82a0c7c3acdec67f856671",
-      "read_scope": "Complete shared incorporation companion with five exact work editions, 43 distinct bounded whole scientific prose bodies 546691 bytes, and a separately bounded 51939-byte constituent of a retained larger compendium. All earlier and new failed drafts, exact scientific reviews, partial/missing-source limits and held removal/custody remain explicit. It is review support, not a sixth scholarly work or whole-order qualification. Exact integration and actual GitHub presentation remain separately received checks."
+      "sha256": "007243aae5aadcd69eeab55ebd8ca67173591bff4fcadace4eeab64c51159f78",
+      "read_scope": "Complete shared incorporation companion with six exact work editions,65 distinct bounded complete prose bodies890288 bytes,and a separately bounded51939-byte constituent of a retained larger compendium. All earlier and new failed drafts,exact scientific reviews,partial/missing-source limits and held removal/custody remain explicit. It is review support,not a seventh scholarly work or whole-order qualification. Exact integration and actual GitHub presentation remain separately received checks."
     },
     "consolidated-recognition-and-restoration": {
       "path": "epistemology/recognition-warrant-and-restoration.md",
@@ -8133,6 +8133,11 @@
       "path": "mathematics/collective-inquiry-and-strategic-coordination.md",
       "sha256": "f6e3a2b654cfd77d06fabd390981a1f0237effae81cb80d704ff157891273df7",
       "read_scope": "Complete revised chapter and twenty mathematical results independently checked against eight full public bodies and eight bounded portions from sixteen exact received files. Two real initial defects repaired and affected recheck passed; all 703 original math payloads preserved with seven qualifiers added. Five whole scientific bodies 66105 bytes qualified, plus one 51939-byte constituent whose larger compendium remains retained. Broader works, original manuscript edition, independent reviews and private accepted papers remain separate. No empirical study, new historical replay, deletion, custody or owner-adoption claim."
+    },
+    "consolidated-tensor-moments": {
+      "path": "mathematics/tensor-moments-and-corrective-dynamics.md",
+      "sha256": "3c64e7dfe18cf1a91e8a72e0c0c5e8d2ec5a030bd0239708592098450f77444f",
+      "read_scope": "Complete scholarly chapter with 23 proved results independently compared against 39 fully read public bodies,502269 bytes. Final v3 closes four findings; the false positivity comparison and its initial review miss remain preserved. All1067 earlier math payloads plus eight actual witness expressions yield1075. Twenty-two complete bounded prose editions343597 bytes qualify for scientific incorporation;17 supporting,formal,review or partial bodies158672 bytes remain retained. Exact arithmetic inputs are received public Git objects; no fresh computation,kernel replay,complete seven-file execution-packet receipt,private-body receiving,owner adoption or deletion is claimed. Actual published rendering and integration remain separate checks. A separately reviewed presentation successor changes only paired delimiter sizing in one equation after an actual unchanged-checker failure; the entire scientific v3 is exactly recoverable by reversing that spelling. All1075 expression frames,prose and31 source references are preserved; the counterexample count is correctly two."
     }
   },
   "works": [
@@ -22367,6 +22372,30 @@
       "reading_forms": [
         {
           "source": "consolidated-collective-inquiry",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A directly readable public scholarly treatment containing actual arguments, proofs, counterexamples and source attribution. Exact independent review qualifies this edition and its stated bounded incorporation population. Accepted editions, formal evidence and broader partially used works retain their separate status. Custody, physical removal and owner adoption remain separate gates."
+    },
+    {
+      "key": "tensor-moments-and-corrective-dynamics",
+      "title": "Tensor moments and corrective dynamics",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-tensor-moments"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-tensor-moments",
           "relationship": "authored-synthesis"
         }
       ],

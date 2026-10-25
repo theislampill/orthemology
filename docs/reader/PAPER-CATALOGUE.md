@@ -34,6 +34,7 @@ These directly readable treatments contain the arguments and proofs reconciled f
 - [Recognition, warrant, defeat and restoration](../../epistemology/recognition-warrant-and-restoration.md): basic recognition, local correction, proper function, cumulative grounds, defeat, source authority and exact finite limits of restoration claims.
 - [Impredicative encodings, typed identity and proof witnesses](../../logic/encodings-and-witnesses.md): the dependent source calculus, literal arithmetic compiler, fixed witnesses, closed-term identity decisions, complete models and exact proof boundaries.
 - [Collective inquiry: information, strategy and coordinated judgment](../../mathematics/collective-inquiry-and-strategic-coordination.md): distributed access, scalar and vector games, coordination capacity, temporal progress, causal identification, statistical discrimination and the value of an informative inquiry.
+- [Tensor moments and corrective dynamics](../../mathematics/tensor-moments-and-corrective-dynamics.md): moment realizability, the arbitrary-coercive existence theorem, signed and time-dependent dynamics, hidden coordinates, nonmoment constructions, finite-prefix limits and effective recovery.
 
 The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
 
