@@ -25,6 +25,15 @@ The catalogue is arranged by intellectual subject. Read the short route below, t
 
 The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or collection. The [frontier guide](CURRENT-FRONTIERS.md) separates established statements at their stated scope from conditional applications and open research. The [editorial scope and qualification record](../project-closure/reader-refactor-issue-35/PROGRESS.md) identifies the coverage, review state and source-reading limits.
 
+## Consolidated scholarly works
+
+These directly readable treatments contain the arguments and proofs reconciled from their public predecessors. Their independent incorporation review is scoped; neither silently replaces an accepted paper edition or confers owner adoption.
+
+- [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees.
+- [Received actuality, original adequacy, and intrinsic necessity](../../foundations/received-actuality-and-intrinsic-necessity.md): the productive-adequacy and same-bearer arguments, modal inference, corrected premises and strongest competing explanations.
+
+The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
+
 ## Core exposition and formal reference
 
 ### Main exposition

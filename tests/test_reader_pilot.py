@@ -5673,5 +5673,226 @@ class SourceGuideSupportTailTests(unittest.TestCase):
                          {"tail-reader-qualification:" + self.QA, "tail-reader-qualification:" + self.FINAL})
 
 
+
+class ScholarlyAdditionTests(unittest.TestCase):
+    """Finite new scholarly editions retain the historical population boundary."""
+    setUp = ReaderPilotTests.setUp
+    git = ReaderPilotTests.git
+    check = ReaderPilotTests.check
+    reject = ReaderPilotTests.reject
+
+    def addition_fixture(self):
+        owners, cross = deepcopy(self.owners), deepcopy(self.cross)
+        keys = sorted(w["key"] for w in cross["works"])
+        owners["baseline_work_population"] = {
+            "count": len(keys),
+            "keys_sha256": hashlib.sha256(json.dumps(keys, separators=(",", ":")).encode()).hexdigest(),
+        }
+        paths = {"consolidated-core": "fixture-scholarly/core.md",
+                 "consolidated-note": "fixture-scholarly/note.md",
+                 "synthesis-review": "fixture-docs/synthesis-review.md"}
+        for key in ("consolidated-core", "consolidated-note"):
+            path = self.repo / paths[key]
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text("# " + key + "\nA complete fixture exposition, not an original result.\n")
+        review = "# Exact reviewed works\n\n| Work | SHA-256 | Bytes |\n|---|---|---:|\n"
+        for key in ("consolidated-core", "consolidated-note"):
+            body = (self.repo / paths[key]).read_bytes()
+            review += "| [" + key + "](../" + paths[key] + ") | `" + hashlib.sha256(body).hexdigest() + "` | " + str(len(body)) + " |\n"
+        (self.repo / paths["synthesis-review"]).write_text(review)
+        self.git("add", "--", *paths.values())
+        additions = []
+        for key, path in paths.items():
+            body = (self.repo / path).read_bytes()
+            work_keys = [key + "-work"] if key != "synthesis-review" else ["consolidated-core-work", "consolidated-note-work"]
+            support = ["synthesis-review"] if key != "synthesis-review" else []
+            additions.append({"key": key, "path": path, "mode": "100644",
+                              "git_oid": self.git("hash-object", path).strip(),
+                              "bytes": len(body), "sha256": hashlib.sha256(body).hexdigest(),
+                              "role": "work-source" if support else "review",
+                              "work_keys": work_keys, "supporting_source_keys": support})
+            cross["sources"][key] = {"path": path, "sha256": hashlib.sha256(body).hexdigest(),
+                                      "read_scope": "Complete fixture body and exact work/review binding inspected."}
+            if support:
+                cross["works"].append({"key": work_keys[0], "title": key, "role": "synthesis",
+                                       "source_keys": [key], "supporting_source_keys": support,
+                                       "reading_forms": [{"source": key, "relationship": "authored-synthesis"}]})
+        owners["source_additions"] = additions
+        return owners, cross
+
+    def test_exact_new_syntheses_and_shared_review_preserve_historical_denominator(self):
+        owners, cross = self.addition_fixture()
+        self.assertEqual(self.check(owners, cross), [])
+        self.assertEqual(owners["baseline"]["commit"], self.base)
+        self.assertEqual(owners["baseline_work_population"]["count"], len(self.cross["works"]))
+        self.assertEqual(len(cross["works"]), len(self.cross["works"]) + 2)
+        self.assertFalse({r["path"] for r in owners["source_additions"]} & self.mod.REFACTOR_EDIT_PATHS)
+
+    def test_missing_duplicate_or_extra_addition_is_rejected(self):
+        owners, cross = self.addition_fixture()
+        for change in ("missing", "duplicate", "extra"):
+            with self.subTest(change=change):
+                altered = deepcopy(owners)
+                if change == "missing":
+                    altered["source_additions"].pop()
+                elif change == "duplicate":
+                    altered["source_additions"].append(deepcopy(altered["source_additions"][0]))
+                else:
+                    extra = deepcopy(altered["source_additions"][0])
+                    extra["key"] = "undefined-addition"
+                    extra["path"] = "fixture-scholarly/absent.md"
+                    altered["source_additions"].append(extra)
+                self.reject(self.check(altered, cross), "source-addition")
+
+    def test_new_source_identity_requires_every_exact_field(self):
+        owners, cross = self.addition_fixture()
+        for field, wrong in (("path", "fixture-scholarly/note.md"), ("mode", "100755"),
+                             ("bytes", 1), ("git_oid", "0" * 40), ("sha256", "0" * 64)):
+            with self.subTest(field=field):
+                altered = deepcopy(owners)
+                altered["source_additions"][0][field] = wrong
+                self.reject(self.check(altered, cross), "source-addition")
+        altered = deepcopy(cross)
+        altered["sources"]["consolidated-core"]["sha256"] = "0" * 64
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_absent_reading_scope_and_aliased_source_are_rejected(self):
+        owners, cross = self.addition_fixture()
+        for scope in (None, "", " ", []):
+            altered = deepcopy(cross)
+            altered["sources"]["consolidated-core"]["read_scope"] = scope
+            self.reject(self.check(owners, altered), "source-addition")
+        altered = deepcopy(cross)
+        altered["sources"]["second-key-same-body"] = deepcopy(altered["sources"]["consolidated-core"])
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_untracked_missing_worktree_or_changed_index_is_not_admitted(self):
+        for change in ("untracked", "missing", "index"):
+            with self.subTest(change=change):
+                owners, cross = self.addition_fixture()
+                path = owners["source_additions"][0]["path"]
+                if change == "untracked":
+                    self.git("reset", "-q", "HEAD", "--", path)
+                elif change == "missing":
+                    (self.repo / path).unlink()
+                else:
+                    self.git("update-index", "--cacheinfo", "100644," + owners["source_additions"][1]["git_oid"] + "," + path)
+                self.reject(self.check(owners, cross), "source-addition")
+
+    def test_symlink_and_unsafe_additions_are_rejected(self):
+        owners, cross = self.addition_fixture()
+        path = self.repo / owners["source_additions"][0]["path"]
+        path.unlink()
+        path.symlink_to(self.repo / owners["source_additions"][1]["path"])
+        self.reject(self.check(owners, cross), "source-addition")
+        path.unlink()
+        owners, cross = self.addition_fixture()
+        for unsafe in ("../outside.md", "/absolute.md", ".git/config", "fixture-scholarly/../note.md"):
+            altered = deepcopy(owners)
+            altered["source_additions"][0]["path"] = unsafe
+            self.reject(self.check(altered, cross), "source-addition")
+
+    def test_work_and_review_support_require_the_exact_relationship(self):
+        owners, cross = self.addition_fixture()
+        for field, wrong in (("source_keys", ["consolidated-note"]), ("role", "review"),
+                             ("supporting_source_keys", []),
+                             ("supporting_source_keys", ["synthesis-review", "synthesis-review"]),
+                             ("supporting_source_keys", ["synthesis-review", "fixture-theory/lineage.md"]),
+                             ("supporting_source_keys", ["fixture-theory/lineage.md"])):
+            with self.subTest(field=field, wrong=wrong):
+                altered = deepcopy(cross)
+                altered["works"][-2][field] = wrong
+                self.reject(self.check(owners, altered), "source-addition")
+        altered = deepcopy(cross)
+        altered["works"].append({"key": "false-third-work", "title": "Review is not a work",
+                                 "role": "review", "source_keys": ["synthesis-review"]})
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_wrong_review_work_pair_and_undeclared_work_use_are_rejected(self):
+        owners, cross = self.addition_fixture()
+        altered = deepcopy(owners)
+        altered["source_additions"][-1]["work_keys"].pop()
+        self.reject(self.check(altered, cross), "source-addition")
+        altered = deepcopy(cross)
+        altered["works"][1]["supporting_source_keys"] = ["synthesis-review"]
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_refreshing_new_science_hashes_cannot_inherit_an_old_review(self):
+        owners, cross = self.addition_fixture()
+        row = owners["source_additions"][0]
+        path = self.repo / row["path"]
+        path.write_text(path.read_text() + "A changed conclusion requiring a new review.\n")
+        body = path.read_bytes()
+        self.git("add", "--", row["path"])
+        row.update(bytes=len(body), sha256=hashlib.sha256(body).hexdigest(),
+                   git_oid=self.git("hash-object", row["path"]).strip())
+        cross["sources"][row["key"]]["sha256"] = row["sha256"]
+        self.reject(self.check(owners, cross), "source-addition")
+
+    def test_review_row_cannot_swap_correct_hashes_between_work_paths(self):
+        owners, cross = self.addition_fixture()
+        row = owners["source_additions"][-1]
+        path = self.repo / row["path"]
+        first, second = [r["sha256"] for r in owners["source_additions"][:2]]
+        text = path.read_text().replace(first, "FIXTURE_HASH_SWAP").replace(second, first).replace("FIXTURE_HASH_SWAP", second)
+        path.write_text(text)
+        body = path.read_bytes()
+        self.git("add", "--", row["path"])
+        row.update(bytes=len(body), sha256=hashlib.sha256(body).hexdigest(),
+                   git_oid=self.git("hash-object", row["path"]).strip())
+        cross["sources"][row["key"]]["sha256"] = row["sha256"]
+        self.reject(self.check(owners, cross), "source-addition")
+
+    def test_baseline_sources_cannot_masquerade_as_additions(self):
+        owners, cross = self.addition_fixture()
+        row = owners["source_additions"][0]
+        source = cross["sources"]["fixture-theory/note.md"]
+        body = (self.repo / source["path"]).read_bytes()
+        row.update(path=source["path"], bytes=len(body), sha256=source["sha256"],
+                   git_oid=self.git("hash-object", source["path"]).strip())
+        cross["sources"][row["key"]] = deepcopy(source)
+        self.reject(self.check(owners, cross), "source-addition")
+
+    def test_historical_work_population_cannot_be_reset_or_substituted(self):
+        owners, cross = self.addition_fixture()
+        for field, wrong in (("count", len(cross["works"])), ("keys_sha256", "0" * 64)):
+            altered = deepcopy(owners)
+            altered["baseline_work_population"][field] = wrong
+            self.reject(self.check(altered, cross), "source-addition")
+        altered = deepcopy(cross)
+        altered["works"][1]["key"] = "substituted-historical-work"
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_new_tracked_science_beside_admitted_files_remains_rejected(self):
+        owners, cross = self.addition_fixture()
+        p = self.repo / "fixture-scholarly/unadmitted.md"
+        p.write_text("Another fixture source, outside the finite admission.\n")
+        self.git("add", "--", str(p.relative_to(self.repo)))
+        self.reject(self.check(owners, cross), "corpus-currentness")
+
+
+    def test_new_reading_forms_cannot_promote_review_or_substitute_an_old_source(self):
+        owners, cross = self.addition_fixture()
+        for forms in ([], [{"source": "fixture-theory/note.md", "relationship": "authored-synthesis"}],
+                      [{"source": "consolidated-core", "relationship": "governed-rendering"}]):
+            altered = deepcopy(cross)
+            altered["works"][-2]["reading_forms"] = forms
+            self.reject(self.check(owners, altered), "source-addition")
+        altered = deepcopy(cross)
+        altered["works"][1]["reading_forms"] = [{"source": "synthesis-review", "relationship": "authored-source"}]
+        self.reject(self.check(owners, altered), "source-addition")
+
+    def test_malformed_admission_and_historical_population_fail_closed(self):
+        owners, cross = self.addition_fixture()
+        for value in (None, {}, "unexpected"):
+            altered = deepcopy(owners)
+            altered["source_additions"] = value
+            self.reject(self.check(altered, cross), "source-addition")
+        for value in (None, [], "unexpected"):
+            altered = deepcopy(owners)
+            altered["baseline_work_population"] = value
+            self.reject(self.check(altered, cross), "source-addition")
+
+
 if __name__ == "__main__":
     unittest.main()

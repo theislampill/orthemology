@@ -8103,6 +8103,21 @@
       "path": "docs/provenance/document-history.md",
       "sha256": "a9ad0de240b83bef31ace4f46538b4188ef16ddcdd185b57520989be17b922a7",
       "read_scope": "Collection-owner identity and its declared routing role inspected. Used to locate existing supporting material; no new scholarly work, full support-body reading or scientific acceptance follows. The owner map retains the complete discovery-owner list."
+    },
+    "consolidated-foundations": {
+      "path": "foundations/received-actuality-and-intrinsic-necessity.md",
+      "sha256": "8430a2ee32b81ce81b9d08a7ed5136d51faf8d15cb6cd0f27f167d18c4c11155",
+      "read_scope": "Complete 42926-byte public consolidated exposition independently reread at this exact final identity; the compact scientific-consolidation review records actual predecessor reading scopes, initial failures, repairs and final bounded qualification. This does not claim external human review, fresh historical/kernel replay, owner adoption or alteration of an accepted paper edition."
+    },
+    "consolidated-information-and-inquiry": {
+      "path": "mathematics/information-and-inquiry.md",
+      "sha256": "e84dff81e8c9a3139d8cf9c5bf89d2c1342b62640301f281e7802cd61331d191",
+      "read_scope": "Complete 79242-byte public consolidated exposition independently reread at this exact final identity; the compact scientific-consolidation review records actual predecessor reading scopes, initial failures, repairs and final bounded qualification. This does not claim external human review, fresh historical/kernel replay, owner adoption or alteration of an accepted paper edition."
+    },
+    "scientific-consolidation-review": {
+      "path": "docs/scientific-consolidation-review.md",
+      "sha256": "b9694a3233d563e3cd3f534967a18e6634c0f773dc02130ee48c1dbc7e5ad179",
+      "read_scope": "Complete compact incorporation and independent-review companion inspected. Its ordinary table binds the exact paths, SHA-256 identities and byte counts of both new public works; it preserves first-draft failures, scoped source reading, corrections, independent review identities and unfulfilled retirement conditions. It is support for the two expositions, not a third scholarly work, an adopted scientific verdict or whole-corpus qualification."
     }
   },
   "works": [
@@ -22230,6 +22245,54 @@
       ],
       "review_status": "AUTHOR_CURATED; scoped independent review: C05-REVIEW.json",
       "explanation": "One scholarly work-family entry groups related questions and their distinct contributions. Existing scientific source owners, individual result IDs, evidence levels and historical versions remain authoritative. Per-source contributor reading scope is explicit; this is not complete support-body reading."
+    },
+    {
+      "key": "received-actuality-and-intrinsic-necessity",
+      "title": "Received actuality, original adequacy, and intrinsic necessity",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-foundations"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-foundations",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A new directly readable public exposition containing the consolidated arguments and proofs. Its exact review supports this edition only; historical predecessor works retain their distinct scope and accepted paper editions are not silently amended."
+    },
+    {
+      "key": "information-retained-by-inquiry",
+      "title": "Information retained by inquiry: prediction, decisions, Fisher dynamics, and certified action",
+      "role": "synthesis",
+      "source_keys": [
+        "consolidated-information-and-inquiry"
+      ],
+      "reading_forms": [
+        {
+          "source": "consolidated-information-and-inquiry",
+          "relationship": "authored-synthesis"
+        }
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ],
+      "existing_result_ids": [],
+      "catalogue_entry": "docs/reader/PAPER-CATALOGUE.md#consolidated-scholarly-works",
+      "placement": [
+        "Current public scholarly consolidation"
+      ],
+      "review_status": "SCOPED_INDEPENDENT_REVIEW; owner adoption not implied",
+      "explanation": "A new directly readable public exposition containing the consolidated arguments and proofs. Its exact review supports this edition only; historical predecessor works retain their distinct scope and accepted paper editions are not silently amended."
     }
   ],
   "relations": [

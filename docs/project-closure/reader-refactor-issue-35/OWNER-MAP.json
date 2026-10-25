@@ -560,5 +560,56 @@
     "terminology",
     "archive",
     "repository-support"
+  ],
+  "baseline_work_population": {
+    "count": 448,
+    "keys_sha256": "70350e41b3d0273da7020e96ce7e061097989ec76819188bac738f4135f9f800",
+    "scope": "The 448 historical reader work/collection entries remain separately bound. The two new public syntheses are additional expositions, not extra original discoveries or replacements for accepted paper editions."
+  },
+  "source_additions": [
+    {
+      "key": "consolidated-foundations",
+      "path": "foundations/received-actuality-and-intrinsic-necessity.md",
+      "mode": "100644",
+      "git_oid": "50ec0942fed810bebee6217e7e9588ca836568c8",
+      "bytes": 42926,
+      "sha256": "8430a2ee32b81ce81b9d08a7ed5136d51faf8d15cb6cd0f27f167d18c4c11155",
+      "role": "work-source",
+      "work_keys": [
+        "received-actuality-and-intrinsic-necessity"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-information-and-inquiry",
+      "path": "mathematics/information-and-inquiry.md",
+      "mode": "100644",
+      "git_oid": "5144bc611117d455e9ec425ab575a6aa93f8519e",
+      "bytes": 79242,
+      "sha256": "e84dff81e8c9a3139d8cf9c5bf89d2c1342b62640301f281e7802cd61331d191",
+      "role": "work-source",
+      "work_keys": [
+        "information-retained-by-inquiry"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "scientific-consolidation-review",
+      "path": "docs/scientific-consolidation-review.md",
+      "mode": "100644",
+      "git_oid": "b5d0ae5066980e58fab4e21e5184568d1fd0a3b6",
+      "bytes": 21957,
+      "sha256": "b9694a3233d563e3cd3f534967a18e6634c0f773dc02130ee48c1dbc7e5ad179",
+      "role": "review",
+      "work_keys": [
+        "received-actuality-and-intrinsic-necessity",
+        "information-retained-by-inquiry"
+      ],
+      "supporting_source_keys": []
+    }
   ]
 }

@@ -2,6 +2,19 @@
 
 Orthemology is a proposed theory of how concrete cases get correctly classified, handled, and audited by rule-governed processes — human, institutional, or automated.
 
+## Consolidated scholarly works
+
+These complete public expositions contain the arguments and proofs in ordinary Markdown. Open them directly; no custom retrieval software is required.
+
+| Subject | Scholarly treatment |
+|---|---|
+| Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. |
+| Received existence, productive adequacy and necessary being | [Received actuality, original adequacy, and intrinsic necessity](foundations/received-actuality-and-intrinsic-necessity.md): the affirmative argument, conditional proofs, strongest competing accounts, and qualifications. |
+
+The [independent scientific review and incorporation record](docs/scientific-consolidation-review.md) identifies exact editions, predecessor coverage, corrected failures and remaining removal gates. These are new consolidated expositions; they do not silently amend an accepted paper or confer owner adoption. The sources below remain available during the scientific consolidation.
+
+Accepted Papers 1–10 retain their exact accepted editions and authority. Paper 11's original n-person noetic-field objective remains unfinished, alongside distinct proposed constructive-correction companions. Private controlling editions require an authorised private scholarly receiving stage and separate public-release permission; a public summary cannot substitute for their actual content.
+
 ## What to read
 
 Start with a paper or a research question. Each link below opens a primary reading form; the catalogue supplies the argument, assumptions and edition notes.

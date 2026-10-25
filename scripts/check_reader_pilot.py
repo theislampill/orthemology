@@ -367,13 +367,145 @@ REFACTOR_EDIT_PATHS = {
 )}
 
 
-def check_corpus_currentness(repo, baseline):
+def check_source_additions(repo, baseline_rows, owners, cross):
+    """Bind finite new expositions and review support without rebasing history.
+
+    The owner map admits exact tracked objects. Existing crosswalk work/source
+    edges own their reading roles; a review table binds each exact new edition.
+    These mechanical bindings neither assess the science nor adopt its claims.
+    """
+    declared = owners.get("source_additions", [])
+    if declared == []:
+        return {}, []
+    errors, admitted, bindings = [], {}, {}
+    def fail(message):
+        errors.append("source-addition: " + message)
+    fields = {"key", "path", "mode", "git_oid", "bytes", "sha256", "role",
+              "work_keys", "supporting_source_keys"}
+    if not isinstance(declared, list):
+        return {}, ["source-addition: expected a finite list"]
+    sources = cross.get("sources", {})
+    works = cross.get("works", [])
+    paths = set()
+    for row in declared:
+        try:
+            if not isinstance(row, dict) or set(row) != fields:
+                raise ValueError("incomplete or unknown identity/relationship fields")
+            key, path = row["key"], row["path"]
+            if not isinstance(key, str) or not key or key in bindings or path in paths:
+                raise ValueError("duplicate or malformed source key/path")
+            if path in baseline_rows or path in REFACTOR_EDIT_PATHS:
+                raise ValueError("a baseline or operational path cannot masquerade as new scholarship")
+            node = safe_path(repo, path)
+            body = node.read_bytes()
+            if (row["mode"] not in ("100644", "100755")
+                    or type(row["bytes"]) is not int or row["bytes"] < 0
+                    or not isinstance(row["git_oid"], str)
+                    or not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", row["git_oid"])
+                    or not isinstance(row["sha256"], str)
+                    or not re.fullmatch(r"[0-9a-f]{64}", row["sha256"])):
+                raise ValueError("malformed exact source identity")
+            raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
+            oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
+            mode = "100755" if node.stat().st_mode & 0o111 else "100644"
+            if (len(body), hashlib.sha256(body).hexdigest(), oid, mode) != (
+                    row["bytes"], row["sha256"], row["git_oid"], row["mode"]):
+                raise ValueError("path/mode/bytes/blob/SHA identity differs")
+            tracked = subprocess.run(["git", "--literal-pathspecs", "ls-files", "--stage", "-z", "--", path],
+                                     cwd=repo, capture_output=True, check=False)
+            expected = (mode + " " + oid + " 0\t" + path + "\0").encode("utf-8")
+            if tracked.returncode or tracked.stdout != expected:
+                raise ValueError("source is untracked, conflicted, or differs from its index object")
+            source = sources.get(key)
+            if (not isinstance(source, dict) or source.get("path") != path
+                    or source.get("sha256") != row["sha256"]
+                    or not isinstance(source.get("read_scope"), str) or not source["read_scope"].strip()
+                    or [k for k, v in sources.items() if isinstance(v, dict) and v.get("path") == path] != [key]):
+                raise ValueError("source key, identity or actual read scope is missing, changed or aliased")
+            for name in ("work_keys", "supporting_source_keys"):
+                values = row[name]
+                if (not isinstance(values, list) or any(not isinstance(v, str) or not v for v in values)
+                        or len(values) != len(set(values))):
+                    raise ValueError("malformed or duplicate work/support references")
+            if (row["role"] not in ("work-source", "review") or not row["work_keys"]
+                    or (row["role"] == "work-source" and
+                        (len(row["work_keys"]) != 1 or not row["supporting_source_keys"]))
+                    or (row["role"] == "review" and row["supporting_source_keys"])):
+                raise ValueError("invalid scholarly or review-support role")
+            bindings[key] = row
+            paths.add(path)
+            admitted[path] = dict(row, kind="blob")
+        except (KeyError, TypeError, ValueError, OSError, UnicodeError) as exc:
+            fail(str(row.get("key") if isinstance(row, dict) else row) + ": " + str(exc))
+
+    primary = {key: row for key, row in bindings.items() if row["role"] == "work-source"}
+    added_works = {name for row in primary.values() for name in row["work_keys"]}
+    historical = sorted(w["key"] for w in works if w.get("key") not in added_works)
+    population = owners.get("baseline_work_population", {})
+    digest = hashlib.sha256(json.dumps(historical, separators=(",", ":")).encode()).hexdigest()
+    if (not isinstance(population, dict) or population.get("count") != len(historical)
+            or population.get("keys_sha256") != digest):
+        fail("historical work denominator or identities changed")
+    for key, row in bindings.items():
+        actual_primary = [w["key"] for w in works if key in w.get("source_keys", [])]
+        actual_support = [w["key"] for w in works if key in w.get("supporting_source_keys", [])]
+        actual_reading = [w["key"] for w in works if isinstance(w.get("reading_forms", []), list)
+                          and any(isinstance(f, dict) and f.get("source") == key
+                                  for f in w.get("reading_forms", []))]
+        if row["role"] == "review":
+            if actual_primary or actual_reading or sorted(actual_support) != sorted(row["work_keys"]):
+                fail(key + ": review is not bound exactly as support to its declared works")
+            continue
+        selected = [w for w in works if w.get("key") == row["work_keys"][0]]
+        if (actual_primary != row["work_keys"] or actual_reading != row["work_keys"]
+                or actual_support or len(selected) != 1
+                or selected[0].get("role") != "synthesis" or selected[0].get("source_keys") != [key]
+                or selected[0].get("reading_forms") != [{"source": key, "relationship": "authored-synthesis"}]
+                or selected[0].get("supporting_source_keys") != row["supporting_source_keys"]):
+            fail(key + ": missing, duplicate, extra or substituted work/support relationship")
+        for support_key in row["supporting_source_keys"]:
+            support = bindings.get(support_key)
+            if (not support or support["role"] != "review"
+                    or row["work_keys"][0] not in support["work_keys"]):
+                fail(key + ": required exact review support is absent")
+                continue
+            try:
+                # The existing compact review has one ordinary table row per
+                # reviewed work: local work link, exact SHA-256, logical bytes.
+                tokens = MarkdownIt("commonmark").enable("table").parse(
+                    safe_path(repo, support["path"]).read_text(encoding="utf-8"))
+                candidates, cells = [], None
+                for token in tokens:
+                    if token.type == "tr_open":
+                        cells = []
+                    elif token.type == "inline" and cells is not None:
+                        cells.append(token)
+                    elif token.type == "tr_close" and cells is not None:
+                        links = [resolve_reader_link(repo, support["path"], t.attrGet("href"))
+                                 for t in cells[0].children or [] if t.type == "link_open"] if cells else []
+                        if (row["path"], "") in links:
+                            candidates.append((cells, links))
+                        cells = None
+                if len(candidates) != 1:
+                    raise ValueError("missing or duplicate exact reviewed-work row")
+                cells, links = candidates[0]
+                if (len(cells) < 3 or links != [(row["path"], "")]
+                        or cells[1].content != chr(96) + row["sha256"] + chr(96)
+                        or cells[2].content.replace(",", "") != str(row["bytes"])):
+                    raise ValueError("review does not bind this work's exact source identity")
+            except (ValueError, OSError, UnicodeError) as exc:
+                fail(key + ": " + str(exc))
+    return admitted, errors
+
+
+def check_corpus_currentness(repo, baseline, admitted_paths=()):
     """New/changed tracked sources cannot disappear behind a frozen census.
 
     The index and worktree are compared with the approved source commit.
     Operational reader edits stay under their existing exact owners/checks;
-    new or changed corpus material needs an explicit finite baseline/coverage
-    update. This is not a source classifier or an external-literature crawl.
+    new corpus material needs a finite source/work/support admission; changes
+    to baseline sources retain their original guards. This is not a source
+    classifier or an external-literature crawl.
     """
     result = subprocess.run(
         ["git", "diff", "--no-ext-diff", "--no-textconv", "--no-renames",
@@ -388,7 +520,7 @@ def check_corpus_currentness(repo, baseline):
         return ["corpus-currentness: a tracked change has an unrepresentable path"]
     return ["corpus-currentness: " + path +
             " requires source-baseline and work/support disposition review"
-            for path in sorted(set(paths) - REFACTOR_EDIT_PATHS) if path]
+            for path in sorted(set(paths) - REFACTOR_EDIT_PATHS - set(admitted_paths)) if path]
 
 
 def check(repo, owners, cross):
@@ -410,8 +542,10 @@ def check(repo, owners, cross):
     except (KeyError, ValueError, OSError, UnicodeError) as exc:
         fail("baseline", str(exc))
         return errors
-    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"]))
     indexed = {row["path"]: row for row in rows}
+    additions, addition_errors = check_source_additions(repo, indexed, owners, cross)
+    errors.extend(addition_errors)
+    errors.extend(check_corpus_currentness(repo, owners["baseline"]["commit"], additions))
     errors.extend(check_collection_dispositions(rows, owners, cross))
     errors.extend(check_collection_result_routes(repo, owners, cross))
     if owners["baseline"].get("tree"):
@@ -478,14 +612,15 @@ def check(repo, owners, cross):
         except (KeyError, ValueError, OSError) as exc:
             fail("unsafe-source", str(key) + ": " + str(exc))
             continue
-        row = indexed.get(path)
+        row = indexed.get(path) or additions.get(path)
         if not row or row["kind"] != "blob" or row["mode"] not in ("100644", "100755"):
             fail("unsafe-source", path + " is outside the regular-file baseline")
         else:
             raw = b"blob " + str(len(body)).encode("ascii") + b"\0" + body
             oid = (hashlib.sha1(raw) if len(row["git_oid"]) == 40 else hashlib.sha256(raw)).hexdigest()
             if oid != row["git_oid"]:
-                fail("baseline-source", path + " differs from the independently pinned source")
+                fail("baseline-source" if path in indexed else "source-addition",
+                     path + " differs from the independently bound source")
             mode = "100755" if safe_path(repo, path).stat().st_mode & 0o111 else "100644"
             if mode != row["mode"]:
                 fail("source-mode", path + " changed executable mode")
