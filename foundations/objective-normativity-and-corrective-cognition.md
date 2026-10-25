@@ -522,7 +522,7 @@ The same distinction applies to a school-internal theological reconstruction. It
 **Proposition 5C (finite conditional rival filtering).** Let $`R`$ be a finite declared family of complete rival assignments for a finite predicate registry $`\Pi`$. Define
 
 ```math
-D(r)=\{q\in\Pi:r\text{ assigns }q\text{ false}}.
+D(r)=\{q\in\Pi:r\text{ assigns }q\text{ false}\}.
 ```
 
 For a selected set $`S\subseteq\Pi`$, every rival conflicts with at least one asserted member of $`S`$ if and only if $`S\cap D(r)\ne\varnothing`$ for every $`r\in R`$. Under warranted attribution, truth acceptance, referent identification, and applicability of those assertions, every such rival is excluded from the corresponding source-expanded class.
