@@ -83,6 +83,8 @@ A selected signaling practice can favor deception; a perfectly implemented objec
 
 The positive proper-function account is richer than the success-only account. Plantinga requires truth-directed functioning in an appropriate environment under a suitably successful design plan. His later discussion adds attention to the particular exercise's local setting: a normally functioning observer can read a stopped clock at the one moment its display is correct. He treats his more precise probabilistic repair as tentative and distinguishes some warrant from warrant sufficient for knowledge. This is a substantive constraint on epistemic luck, not an empirical diagnostic supplied by the present chapter. [7, 18]
 
+Plantinga also rejects a proposed counterfactual characterization of local favorability. The proposal says that, were this exercise to produce a belief in this local environment, the belief would be true. Footnote 194 requires the absence of a sufficiently close exercise of that kind with a false outcome; actual truth of antecedent and consequent alone does not settle the counterfactual. His counterexample is a driver who sees a real barn in a district containing many fake barns. By accident, mist screens the nearby fakes. On his stipulated comparison, the relevant counterfactual holds, yet the screening is accidental relative to the truth-directed functioning at issue. He therefore judges the belief insufficiently warranted for knowledge, not wholly unwarranted. The case challenges that particular sufficient condition, not every possible anti-luck theory. His subsequent probability proposal remains tentative, with a context-sensitive threshold; it is not a settled numerical test for a person's warrant. [7, 18]
+
 The source-relative fiṭrah account likewise includes an account of the disposition's origin, its proper aim, its sound exercise and relevant circumstances. Those premises can explain more within that account than a bare output statistic does. Their explanatory force remains conditional on their truth and application; the output does not independently prove them.
 
 ### 3.2 Operation, accuracy and warrant must not be collapsed
@@ -551,6 +553,97 @@ This sufficient-case argument does not define every possible form of knowledge. 
 A source-wide challenge can be broader than a proof-local challenge. If an authenticating argument warrants a source's truthfulness throughout a specified reporting domain, an authenticated false report inside that domain conflicts with the unrestricted premise. Different file identities do not prevent the conflict. A claim outside the domain, an inauthentic quotation or a mistranslated content does not supply the same counterexample. Source, interpretation and domain must first be correctly bound. [1, 16, 28]
 
 If every genuinely operative route within an established scope is defeated, and no adequate retention route survives, the affirmative appraisal must be suspended or withdrawn to that extent. This does not entail q's falsity. A finite catalogue with no eligible certificate establishes a statement about its catalogue; it does not by itself exhaust all human grounds. Actual uptake, memory and present basing are not reducible to the current inventory of files. [16]
+
+### 7.3 Recovering a retention appraisal from present records
+
+A record of the evidence presently available is not necessarily a record of how a subject acquired or retained a belief. This is a substantive limit even if the record is accurate and includes a posterior probability. The missing fact may concern the subject's actual use of a ground, rather than another proposition to be added to a list of supporting contents. The following application makes the limit conditional and exact. It applies Proposition 1 to the acquisition and retention distinction; it is not a new general theorem or a classification of an observed person. [16]
+
+Fix a finite nonempty set $`\mathcal H`$ of admitted acquisition and retention histories. Each history includes the episode and time of appraisal, the same proposition q, and a specified defeater d. Let $`C:\mathcal H\to\mathcal C`$ describe the complete **selected present record**: for example, the currently retained evidence items, their declared availability and any probability summary derived from them. “Complete” here means complete for the chosen record, not a complete description of the subject. Let $`T:\mathcal H\to\{0,1\}`$ express a separately justified target, such as whether a particular adequate ground B was actually acquired or exercised, remains appropriately operative or retained, and is independent of the dependence defeated by d. This is a target about B; it is not a proposed definition of every form of knowledge.
+
+**Conditional recovery claim.** The selected record determines T exactly on the admitted histories if and only if
+
+```math
+C(h)=C(h')\quad\Longrightarrow\quad T(h)=T(h')
+\qquad(h,h'\in\mathcal H).
+```
+
+To prove necessity, suppose an exact appraisal $`f:C(\mathcal H)\to\{0,1\}`$ exists. If two histories have the same record, then $`T(h)=f(C(h))=f(C(h'))=T(h')`$. For sufficiency, assume the displayed implication. For each record actually realized by some history, assign the common target value of the histories producing it. The implication makes this assignment unambiguous, and it gives $`f(C(h))=T(h)`$ for every admitted h. This is precisely the fibre criterion, now applied to retention.
+
+Consequently, suppose the admitted histories include $`h_+`$ and $`h_-`$ with identical present evidence items and identical probability summaries, but with $`T(h_+)=1`$ and $`T(h_-)=0`$. No rule using only that selected record can return the correct target on both. Adding a probability summary already determined by the same items cannot remove the collision: a function of equal inputs has equal outputs. Neither a more confident label nor a more elaborate computation supplies the absent distinction.
+
+There is a possible epistemic instance of this pattern. One learner has acquired a result by a competent independent calculation and retains that ground; another has merely repeated the same result from the teacher whose relevant testimony is now defeated. Suppose their surviving documents and assigned probabilities coincide. If the actual acquisition, retention and defeat facts establish the specified difference, the records do not determine whether that independent ground survives. The conclusion does not assume that the second learner has no conceivable other ground. It concerns the particular retained route being appraised. Nor does imagining these two histories establish that either describes a real learner: their admissibility and the contrasting target values require evidence outside the selected record. [16–17]
+
+The same caution applies to a model that simply appends a Boolean field called “warranted.” Its two values can stipulate the desired answer without measuring or explaining it. A defensible additional observation must instead bear on the relevant episode: a competent acquisition, continuing retention or use, an actual connection to the same content, and the scope of the defeated dependency. The model's exact-recovery proof establishes only what follows once those meanings and admissible histories are justified. It does not authenticate them.
+
+### 7.4 Deleting a factor and observing a retraction
+
+A related distinction appears in probabilistic representations. Suppose a current assessment is computed by multiplying a prior by likelihood factors for the evidence items being retained. Removing an item and recomputing the product is a defined operation on that representation. Learning that an item has been retracted is a new observation. The two operations agree only under additional assumptions about what the retraction conveys and how the earlier evidence is represented. Neither operation, by itself, describes the erasure of a subject's knowledge or the loss of a learned capacity. [16]
+
+Here is an explanatory calculation, not a new empirical finding. Let $`\Theta\in\{0,1\}`$ be an ordinary uncertain hypothesis with equal prior probabilities. Let E be a possible observation, with
+
+```math
+\Pr(\Theta=1)=\Pr(\Theta=0)=\frac12,
+\qquad
+\Pr(E\mid\Theta=1)=\frac23,
+\qquad
+\Pr(E\mid\Theta=0)=\frac13.
+```
+
+Bayes' rule gives $`\Pr(\Theta=1\mid E)=2/3`$. A representation that retains only the prior and the likelihood factor for E returns to $`1/2`$ when that factor is deleted. This is an algebraic fact about the stated representation.
+
+Now let R denote an observed retraction after E. Suppose its conditional law is
+
+```math
+\Pr(R\mid\Theta=1,E)=\frac14,
+\qquad
+\Pr(R\mid\Theta=0,E)=1.
+```
+
+For completeness, set $`\Pr(R\mid\Theta=i,\neg E)=0`$ for both values of i. These specifications define a coherent finite joint distribution. Its nonzero and zero cases can be checked directly:
+
+| Hypothesis | Observation and subsequent event | Joint probability |
+|---|---|---:|
+| $`\Theta=1`$ | E and R | $`1/12`$ |
+| $`\Theta=1`$ | E and not-R | $`1/4`$ |
+| $`\Theta=1`$ | not-E and not-R | $`1/6`$ |
+| $`\Theta=0`$ | E and R | $`1/6`$ |
+| $`\Theta=0`$ | E and not-R | $`0`$ |
+| $`\Theta=0`$ | not-E and not-R | $`1/3`$ |
+
+The omitted not-E-and-R cases have probability zero. All entries are nonnegative and their sum is one. Conditioning on the actual observation of both E and R therefore gives
+
+```math
+\Pr(\Theta=1\mid E,R)
+=\frac{\Pr(\Theta=1,E,R)}{\Pr(E,R)}
+=\frac{1/12}{1/12+1/6}
+=\frac13.
+```
+
+The three values are distinct: the assessment after E is $`2/3`$; deletion of its factor returns $`1/2`$; receipt of R under the specified channel yields $`1/3`$. Thus an observed retraction need not return an assessment to its pre-observation state. In this model the retraction is more likely under the negative hypothesis, so it contributes information of its own.
+
+The converse warning also matters. Keep the same prior and E, but give R the same positive conditional probability $`a\in(0,1]`$ under both hypotheses, conditional on E. Then
+
+```math
+\Pr(\Theta=1\mid E,R)
+=\frac{a(1/3)}{a(1/3)+a(1/6)}
+=\frac23.
+```
+
+In this second model, receipt of R leaves the E-conditioned probability unchanged. The two models have the same assessment before R and different justified assessments after it. A bare notice that evidence has been withdrawn does not determine the update until the event's meaning and likelihood relation are supplied. R may denote a permission change, a reliability failure, a correction of content or something else; those descriptions cannot be interchanged without an argument.
+
+These calculations do not say that every discovery of unreliability is adequately treated by conditioning in a previously accepted model. If the discovery undermines that model's own likelihood assumptions, the assumptions themselves require revision. They also do not say that the original evidence must remain an admissible ground after an undercutter. The point is narrower: removing a formal factor, receiving a new event and revising a model are different operations. Their epistemic interpretation must track the actual source and failure, rather than being supplied by the arithmetic alone.
+
+### 7.5 What a bounded retention account must establish
+
+The negative result in §7.3 does not demand an unlimited transcript. It demands an adequate summary for the target and scope actually claimed. Histories may differ in incidental details while having exactly the same acquisition, continuing ground and defeater relations relevant to the appraisal. Such differences need not be retained. Conversely, present sufficiency for one question does not establish sufficiency for a later question about a source-wide undercutter, a new content or a changed action. The allowable questions and dependencies determine which distinctions matter. [16]
+
+For a fixed finite family of explicitly specified appraisals, the criterion can be stated without a new theory. A summary suffices for the family precisely when histories with equal summaries agree on **each** target. Necessity follows by applying any proposed decoder for each target to equal summaries. For sufficiency, define each target's decoder by its common value on a summary class, just as in §7.3. This gives a mathematical test of adequacy; defining the summary to be the desired target values is not, by itself, a practical way to obtain those values. The observations used to justify the summary still need their own warrant.
+
+A positive retention appraisal has corresponding substantive burdens. The content must be the same, or the relevant change in content and time must be identified. The alternative ground must have been acquired, retained or presently exercised by this subject, rather than merely being available to an observer. Any required continuity must survive the actual impairment; an earlier acquisition alone does not prove that memory is now intact. Finally, the reason defeating the original route must be traced to its genuine scope. A shared source or faculty can transmit defeat to apparently separate records, while two uses of the same proposition can rest on differently warranted grounds. These are reasons for a particular sufficient-case appraisal, not requirements that the subject recite a theory of their own cognition. [16–17]
+
+This account also preserves legitimate narrower results. A finite collection may correctly determine which of its certificates remain eligible and the cost of replacing them. A permission change may correctly alter what may be used or issued. Those outputs can be exact for their declared contracts while leaving actual acquisition, retention and basing unsettled. Conversely, losing the record that once certified a result does not automatically cancel a retained competence. Reconstructing a proof for an assessor establishes that the proof can be reconstructed; it does not establish that the learner has retained its ground. [16]
+
+The appropriate positive conclusion remains possible and substantial: where competent acquisition or present exercise, relevant continuity and independence from the actual defeater are established, the particular ground survives despite loss of another route or loss of its public record. Where those conditions are genuinely unsettled, the appraisal remains unsettled to that extent. Neither administrative deletion nor formal recoverability decides the matter on its own.
 
 ## 8. Source truth, recipient warrant and communicated authority
 
