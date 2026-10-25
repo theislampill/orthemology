@@ -353,6 +353,222 @@ The current public appraisal affirms one complete original source of the relevan
 
 The surviving reservation concerns unrestricted application of the efficacy norm to every proposed primitive, voluntarily joint original manifestation. The strongest proposed rival has genuine restricted explanatory and agency credits, but no independently warranted full original-perfection certificate. Failure to exhibit such a certificate is not itself a proof of unity. A well-directed undercutter need not provide a complete competing cosmos. A disconnected active original, an idle putative original, all possible realities and universal mastery over every possible peer require distinct arguments. A result for the nominated actual field should neither be erased nor extended to them silently. [Public source-unity judgment][u-judgment] [Productive mediation and source perfection, scope of the field conclusion][u-field]
 
+### 10.5 Coherent assignments across locally indexed worlds
+
+The preceding arguments keep one source fixed while following its actual productive contributions. A different question arises when proposed worlds are described in separate local coordinates: which local entries, if any, can consistently represent one selected bearer? Equal labels do not establish that correspondence, and a coherent correspondence does not by itself establish numerical identity. The finite construction below makes the missing mathematical structure explicit. It concerns a declared alignment of descriptions; the alignment graph is neither a causal graph nor the accessibility relation of a modal logic. [Finite modal identity transport, §§2–3][transport-proof]
+
+Let $`W`$ be a finite nonempty set of worlds with a nominated actual world $`a`$. Let $`\Gamma=(W,\mathcal E)`$ be a connected undirected graph. Each world has a finite outer domain $`D_w`$ of indices. For every oriented edge $`v\to w`$, supply a bijection $`g_{vw}:D_v\to D_w`$, with $`g_{wv}=g_{vw}^{-1}`$. Choose one orientation of each undirected edge and denote that set by $`\mathcal E^+`$. Connectedness makes the outer-domain cardinality $`n`$ common, possibly zero. An index available in the outer domain need not represent something existing at that world. Existence $`E_w\subseteq D_w`$, whole-existence reception $`C_w\subseteq D_w`$, and other predicates are separately specified. No equation such as $`g_{vw}(E_v)=E_w`$ is assumed: that would already impose persistence of existence.
+
+For arbitrary acceptance sets $`A_w\subseteq D_w`$, an accepted section is a tuple $`s=(s_w)_{w\in W}`$ satisfying both
+
+```math
+s_w\in A_w,
+\qquad s_w=g_{vw}(s_v)\quad\text{on every oriented edge}.
+```
+
+The choice $`A_w=E_w`$ asks for an everywhere-existing compatible assignment; $`A_w=E_w\setminus C_w`$ also requires nonreceipt. These are filters on a correspondence, not ingredients that define identity into existence.
+
+Choose a spanning tree rooted at $`a`$. Write $`t_w:D_a\to D_w`$ for the composite along its unique root-to-$`w`$ path, with $`t_a`$ the identity. For any oriented edge define the permutation of the root domain
+
+```math
+H_{vw}=t_w^{-1}\circ g_{vw}\circ t_v.
+```
+
+It follows the tree to $`v`$, crosses that edge, and returns along the tree from $`w`$. Tree edges give identity permutations. The permutations from the remaining edges, in one orientation each, generate all the closed-walk constraints. Their generated group is the rooted *holonomy group*. Define
+
+```math
+K=\bigcap_{(v,w)\in\mathcal E^+}\{b\in D_a:H_{vw}(b)=b\},
+\qquad
+F=K\cap\bigcap_{w\in W}t_w^{-1}(A_w).
+```
+
+**Section theorem.** Evaluation at $`a`$ gives a bijection between accepted sections and $`F`$. Its inverse is $`b\mapsto(t_w(b))_{w\in W}`$.
+
+**Proof.** The tree-edge equations force every section to satisfy $`s_w=t_w(s_a)`$. On a remaining edge the section equation becomes $`t_w(s_a)=g_{vw}(t_v(s_a))`$, or $`H_{vw}(s_a)=s_a`$. Its acceptance conditions are exactly $`s_a\in t_w^{-1}(A_w)`$. Hence $`s_a\in F`$. Conversely, a root value in $`F`$ gives a tuple satisfying every edge equation and every acceptance condition. Its actual-world component is the original root value, so the two maps are inverse. □
+
+This also gives an exact relation-tensor calculation. Let $`\delta(x,y)`$ be one when $`x=y`$ and zero otherwise. Then the Boolean expression
+
+```math
+\bigvee_{s\in\prod_{w\in W}D_w}
+\left(
+ \bigwedge_{w\in W}\mathbf 1_{A_w}(s_w)
+ \ \land\!
+ \bigwedge_{(v,w)\in\mathcal E^+}\delta(s_w,g_{vw}(s_v))
+\right)
+```
+
+is true exactly when $`F`$ is nonempty. Replacing disjunction and conjunction by natural-number addition and multiplication counts the accepted sections and therefore gives $`|F|`$. Each full tuple contributes once; independently choosing a witness at each world before enforcing the shared edge bindings would compute a different condition. For $`n\ge 1`$, explicit permutation tables, inverses, tree transports and filters can be constructed and checked in $`O(n(|W|+|\mathcal E|))`$ operations. Enumerating the full product of domains is an alternative specification, not that efficient algorithm. [Finite modal identity transport, Theorem 1][transport-proof]
+
+Although the chosen tree changes the displayed transports and generators, it changes neither the sections nor their actual-world values. Applying the theorem without filters shows that $`K`$ itself is tree-independent at the fixed root. On $`K`$, transport to a world is independent of the path; it need not be path-independent on every other index. The argument includes a one-world graph. If the common outer domain is empty, the nonempty world set ensures that there is no section or existential witness.
+
+### 10.6 Full charts, selected points, and the singleton correction
+
+Existence of one accepted section does not in general supply a full system of global coordinates. The following conditions are equivalent:
+
+1. Every rooted cycle permutation is the identity on all of $`D_a`$.
+2. A common set $`B`$ has bijective charts $`u_w:B\to D_w`$ with $`g_{vw}=u_w\circ u_v^{-1}`$ on each edge.
+3. There are injective maps $`j_w:D_w\to B`$ with $`j_w\circ g_{vw}=j_v`$, where $`B`$ is their common image.
+4. Every root index extends to exactly one section, without acceptance filters.
+
+**Proof.** If all cycle permutations are identity, choose $`B=D_a`$ and $`u_w=t_w`$; the definition of $`H_{vw}`$ gives the edge factorization. Conversely, chart factors cancel around a loop, leaving identity. Inverse charts give the injective maps in the third condition. Conversely, transporting an index around a rooted loop gives $`j_a\circ H=j_a`$, and injectivity forces $`H`$ to be identity. Edge compatibility and connectedness make the images of all $`j_w`$ equal. Finally, the section theorem without filters identifies the fourth condition with $`K=D_a`$, which is the first. □ [Finite modal identity transport, Theorem 2][transport-proof]
+
+The full-chart criterion is the finite permutation form of the standard synchronization result: full group-valued synchronization is equivalent to trivial holonomy. Gao, Brodzki and Mukherjee give that criterion and an elementary propagation argument in §2.1, Corollary 2.1. The point-valued question here is weaker: a nontrivial group action can fix one index without fixing all indices. No geometric classification, noisy estimation result or new discovery of synchronization is being claimed. [Gao, Brodzki and Mukherjee][gao-synchronization]
+
+For example, take a triangle whose domains are $`\{0,1,2\}`$, whose two tree maps are identity, and whose remaining edge swaps $`0`$ and $`1`$ while fixing $`2`$. There is exactly one section, the constant $`2`$ assignment. There is no full chart system respecting those edge maps. A loop interpreted as literal, faithful identity for every local item could not identify two distinct indices in one domain. The same loop can consistently describe a proposed counterpart matching or a faulty identification; the mathematical data alone do not choose among these interpretations.
+
+Separate loop witnesses are also insufficient. Partition six labels into pairs $`A,B,C`$. Let $`h_1`$ fix $`A`$ and swap within $`B,C`$; let $`h_2`$ fix $`B`$ and swap within $`A,C`$. They commute, and their product fixes $`C`$ while swapping within $`A,B`$. The four group elements have respectively six, two, two and two fixed labels, but no label is fixed by all four. Two triangles sharing the root realize the two generators with identity tree maps. Thus “each loop fixes some point” does not imply “some point is fixed by every loop.” The section theorem needs the latter, with the same point retained throughout. [Finite modal identity transport, §4][transport-proof]
+
+There is, however, a useful simplification under stronger local hypotheses. Suppose each acceptance set is a singleton, $`A_w=\{q_w\}`$, and each edge preserves acceptance: $`g_{vw}(A_v)\subseteq A_w`$. Then necessarily $`g_{vw}(q_v)=q_w`$. The tuple $`(q_w)`$ is the unique accepted section, and every rooted cycle fixes $`q_a`$ by composing these equations. A further independent selected-point holonomy assumption is unnecessary. A triangular swap with no fixed accepted point can illustrate failure when eligible fibres have several members, or when preservation fails; it cannot refute this singleton conclusion while retaining its hypotheses. This corrects the dependency interpretation of the earlier unity proposal, not the underlying graph theorem. It still establishes only a section of the declared correspondence. [Singleton-fibre correction][singleton-correction] [Unity and identity proposal, §§3–5][unity-proposal]
+
+Passive relabelling preserves all these conclusions. For bijections $`\pi_w:D_w\to D'_w`$, put
+
+```math
+g'_{vw}=\pi_w\circ g_{vw}\circ\pi_v^{-1},
+\qquad A'_w=\pi_w(A_w),
+\qquad t'_w=\pi_w\circ t_w\circ\pi_a^{-1}.
+```
+
+Adjacent inverse factors cancel, giving $`H'_{vw}=\pi_a\circ H_{vw}\circ\pi_a^{-1}`$ and $`F'=\pi_a(F)`$. Coordinatewise relabelling sends each accepted section bijectively to a new one, preserving both the Boolean answer and the count. Each world's other relations must be relabelled in every argument as well. This operation does not identify the valuations at different worlds: their existence and reception predicates may still differ arbitrarily. [Finite modal identity transport, gauge covariance][transport-proof]
+
+### 10.7 An invariant average need not identify any individual
+
+Linear and Boolean representations need an additional distinction. Give each local index $`x`$ a basis vector $`e_x`$, over either the real numbers or the Boolean semiring, and extend an edge permutation by $`P_{vw}e_x=e_{g_{vw}(x)}`$. A parallel family satisfies $`z_w=P_{vw}z_v`$. On a two-label triangle with a swap loop there is no point section, but $`e_0+e_1`$ is a nonzero parallel vector. Over the reals, $`(e_0+e_1)/2`$ is parallel and has coefficients summing to one. Even if every local existence filter accepts both labels, neither nonzeroness nor this normalization identifies a consistent individual. More generally, real vectors invariant under a permutation group are precisely those whose coefficients are constant on each orbit: invariance gives equality along orbit steps, and orbitwise constancy gives invariance. A nonempty finite orbit therefore supplies an invariant sum even when it contains no fixed point. [Finite modal identity transport, §4][transport-proof]
+
+Relative to the declared basis, define the linear copy map and augmentation by
+
+```math
+\Delta_w(e_x)=e_x\otimes e_x,
+\qquad \varepsilon_w(e_x)=1.
+```
+
+**Point criterion.** Over $`\mathbb R`$ or the Boolean semiring, the equations $`\Delta_w z=z\otimes z`$ and $`\varepsilon_w z=1`$ hold exactly when $`z=e_x`$ for one local index $`x`$.
+
+**Proof.** Write $`z=\sum_x c_xe_x`$. Comparing the coefficient of $`e_x\otimes e_y`$ for $`x\ne y`$ gives $`c_xc_y=0`$; comparing a diagonal coefficient gives $`c_x=c_x^2`$. Over the reals, an idempotent coefficient is zero or one. The off-diagonal equations leave at most one coefficient equal to one, and augmentation leaves exactly one. Over the Boolean semiring the off-diagonal equations likewise forbid two supported indices, while augmentation requires nonempty support. Conversely, each basis vector satisfies both equations. The augmentation excludes zero, including when the domain is empty. □
+
+Let $`M_{A_w}`$ be the diagonal map retaining exactly the coordinates in $`A_w`$. Adding $`M_{A_w}z_w=z_w`$ to parallelism and the point criterion gives precisely the accepted sections above: once $`z_w=e_{s_w}`$, the filter is membership and parallelism is the edge equation. The construction uses a standard basis-copy structure; Coecke, Pavlovic and Vicary describe the chosen-basis copy and deletion maps and the recovery of copyable basis elements. The elementary proof here separately establishes the real and Boolean cases and does not import their general Hilbert-space classification or a physical interpretation. [Coecke, Pavlovic and Vicary, introduction and §§2–3][coecke-bases]
+
+The coefficient assumptions are substantive. Over $`\mathbb Z/6\mathbb Z`$, the vector $`3e_0+4e_1`$ is normalized and copyable: $`3^2=3`$, $`4^2=4`$, $`3\cdot4=0`$ and $`3+4=1`$ modulo six. It is not one basis vector. The criterion is therefore not asserted for every ring. Nor is it independent of the declared basis. Permutations preserve copying and augmentation, since both sides send $`e_x`$ to the corresponding relabelled basis expression. Under a general invertible linear change, one must transport the copy map, augmentation, filters and interpretation together. Keeping an old “one nonzero coordinate” reading after an arbitrary basis change is not faithful. Copying an index is an algebraic operation on a representation; it neither creates another individual nor makes every distributed system a single bearer. [Finite modal identity transport, Theorem 3 and coefficient control][transport-proof]
+
+### 10.8 What full charts preserve in a modal description
+
+Assume full charts $`u_w:B\to D_w`$, and separately supply the interpretation that $`u_w(b)`$ represents the same bearer $`b`$ at every world, including worlds where it does not exist. Define global-coordinate predicates and relations by
+
+```math
+\begin{aligned}
+E(w,b)&\iff E_w(u_w(b)),\\
+C(w,b)&\iff C_w(u_w(b)),\\
+\mathrm{Dep}(w,c,b)&\iff \mathrm{Dep}_w(u_w(c),u_w(b)).
+\end{aligned}
+```
+
+Here $`\mathrm{Dep}_w(y,x)`$ is a specified whole-existence reception relation, not a name for every interaction. Let $`R`$ and $`T`$ be finite resource and target sets, distinct from the bearer domain. For an actual intrinsic-resource relation $`I_a`$, set $`I(b,r)\iff I_a(u_a(b),r)`$. An actual resource predicate is not thereby turned into a world-indexed resource-existence predicate. Optional renaming of resource or target indices must consistently rename every affected relation argument. [Finite modal identity transport, §5][transport-proof]
+
+An actual-anchored atom also needs a local interpretation at every evaluation world. For $`x\in D_w`$, define
+
+```math
+I_w^{a}(x,r)
+\iff I_a\bigl(u_a(u_w^{-1}(x)),r\bigr).
+```
+
+Thus $`I_w^{a}(u_w(b),r)`$ agrees with $`I_a(u_a(b),r)`$ and with the global $`I(b,r)`$. Apply the same pullback $`u_a\circ u_w^{-1}`$ to every bearer argument of any actual-anchored mixed atom, including when it occurs under a modality. Resource and target arguments stay in their declared fixed coordinates, or are converted by their separately stipulated coordinate maps. The superscript $`a`$ identifies the fixed actual relation; the subscript $`w`$ records only which local bearer coordinates are used to evaluate it. This does not assert a different intrinsic relation at each world. In contrast, genuinely world-indexed atoms such as $`E_w`$, $`C_w`$ and $`\mathrm{Dep}_w`$ use their valuations at the evaluation world; no constancy of those valuations is assumed.
+
+The conversion matters even when all local domains happen to use the same labels. Let $`W=\{a,v\}`$ and $`B=D_a=D_v=\{0,1\}`$, with $`u_a`$ the identity, $`u_v`$ the swap, and only $`a\mathcal A v`$. For one resource $`r`$, let $`I_a`$ hold only of $`(0,r)`$. At $`a`$, the globally interpreted formula $`\exists x\,(I(x,r)\land\Box I(x,r))`$ is true, witnessed by bearer $`0`$. Its local label at $`v`$ is $`1`$. Looking up the raw actual table at that destination label gives false and makes the displayed existential false, since bearer $`1`$ already fails the actual conjunct. The prescribed pullback takes destination label $`1`$ back to actual label $`0`$ and restores the correct truth value. With disjoint local domains, the raw lookup would not even have the declared type. This elementary example distinguishes the fixed actual relation from an accidental equality of coordinate labels.
+
+**Language-preservation proposition.** These charts preserve the declared finite relational first-order language with equality, Boolean connectives and bearer quantifiers. They also preserve its modal extension when the local assignment semantics is explicitly the chart-induced one.
+
+**Proof.** Interpret a global bearer assignment $`\beta`$ at $`w`$ as $`u_w\circ\beta`$. Atomic predicates agree by definition; equality agrees because the charts are injective. Boolean combinations preserve agreement. For a quantified variable, surjectivity makes every local value correspond to a global bearer value, and injectivity makes this reindexing exact. Thus both existential and universal quantification preserve truth. Now specify an accessibility relation $`\mathcal A`$ independently of $`\Gamma`$, and define the local box by
+
+```math
+\mathrm{Val}_v(\Box\varphi,\alpha_v)
+=\bigwedge_{w:\mathcal A(v,w)}
+ \mathrm{Val}_w\bigl(\varphi,
+   u_w\circ u_v^{-1}\circ\alpha_v\bigr).
+```
+
+The transported assignment is $`u_w\circ\beta`$ when $`\alpha_v=u_v\circ\beta`$. Consequently each modal destination uses the same global assignment. Induction on formulas, including nested modalities, proves the claim. Quantification only over existing bearers is expressed by adding the appropriate $`E_w`$ guard, which the same induction preserves. □
+
+This is a specified semantics whose preservation has been proved. It does not follow merely from an extensional translation that supplied no modal operators. Conventional nonempty-domain first-order semantics requires $`n>0`$. If empty outer domains are admitted instead, closed formulas can use the explicit conventions that an empty existential is false and an empty universal true; there are then no assignments to free bearer variables. The earlier section and tensor claims remain valid, but this is a different convention from a source semantics requiring a nonempty domain. [Finite modal identity transport and its independent review][transport-proof] [Modal-language review, §3][transport-review]
+
+Under the fixed outer domain, the two universal quantifiers over bearers and accessible worlds commute. Thus both directions between $`\forall x\,\Box P(x)`$ and $`\Box\forall x\,P(x)`$ hold for unguarded outer-domain quantification. The corresponding unrestricted assertion is false for existence-guarded quantifiers. Let only $`v`$ be accessible from $`a`$, with outer domain $`\{0,1\}`$, existing domain $`E_a=\{0\}`$, $`E_v=\{0,1\}`$, and $`P`$ true only of $`0`$ at $`v`$. Then $`\forall^{E_a}x\,\Box P(x)`$ is true, while $`\Box\forall^{E_v}x\,P(x)`$ is false. Reversing the existence sets makes the first false and the second true. Charts alone impose neither domain constancy for actual existence nor an S5 accessibility frame. [Modal-language review, guarded-quantifier controls][transport-review]
+
+In particular, the all-world same-bearer existence claim has the form
+
+```math
+\exists b\in B\ \forall w\in W:\ E_w(u_w(b)).
+```
+
+It differs from $`\forall w\in W\ \exists b\in B:\ E_w(u_w(b))`$, which permits a different witness in each world. The earlier resource-to-bearer argument already retains one witness; the new coordinates must implement that binding rather than replace it. For example, existence of an actual original resource with one uniformly existing, nonreceived bearer is expressed by
+
+```math
+\begin{aligned}
+\exists t,r,b\quad&
+ \mathrm{TargetReceived}(t)\land\mathrm{Relevant}(r,t)
+ \land\mathrm{ResourceActual}(r)\\
+&\land\neg\mathrm{ResourceReceived}(r)\land I_a(u_a(b),r)\\
+&\land\forall w\in W\,
+ \bigl(E_w(u_w(b))\land\neg C_w(u_w(b))\bigr).
+\end{aligned}
+```
+
+The same target, resource and bearer remain under one existential scope. This formula neither supplies the original-adequacy premises nor identifies $`C_w(x)`$ with “has a supplier” without a separate representation assumption. Where necessity instead ranges only over worlds accessible from $`a`$, actual existence must be retained explicitly if $`a`$ is not guaranteed accessible. An empty accessibility set makes the box vacuous; adding actual existence then gives actual existence, not a nonvacuous alternative-world result. [Finite modal identity transport, §§5, 7][transport-proof]
+
+### 10.9 Restricting bearers can erase the grounds of their reception
+
+A selected section has less preservation power than full charts. Let $`B_{\mathrm{sec}}`$ be the set of all compatible point sections. Evaluation $`s\mapsto s_w`$ is injective at every world: agreeing at one vertex forces agreement along every path. It need not be surjective. Thus replacing every local domain by these coherent sections can delete individuals needed as witnesses of other assertions.
+
+The three-label swap triangle illustrates the problem. Only the constant $`2`$ section survives. At $`a`$, let $`\mathrm{Dep}_a(0,2)`$ be the only supplier edge and let $`C_a(2)`$ be true. In the full local domain, $`2`$ has a supplier. In the retained domain containing only $`2`$, there is no supplier edge. Copying $`2`$'s existence and reception predicates faithfully does not preserve their asserted connection with the dependency relation. A resource borne only by $`0`$ likewise loses its realization witness. This is a failure of the proposed restriction, not a defect in a previously proved implication using the full bearer domain. [Finite modal identity transport, §5][transport-proof]
+
+Even full coherent identity does not justify restricting the supplier domain to necessary beings. Take two worlds $`a,v`$ and identity charts on $`\{b,c,d\}`$. Let $`b`$ exist at both, $`c`$ only at $`a`$, and $`d`$ only at $`v`$. Let the only supplier edges be $`\mathrm{Dep}_a(c,b)`$ and $`\mathrm{Dep}_v(d,b)`$. Both endpoints of each edge exist where that edge holds. The target is received at both worlds, with a changing supplier. Restriction to the necessarily existing domain $`\{b\}`$ removes both witnesses. Necessary existence of a target does not entail independence, and persistent receipt does not require one fixed supplier. These are separate predicates before any philosophical appraisal of the fixture's possibility.
+
+There is an exact smaller condition than retaining every local individual. Let $`j_w:B_{\mathrm{ret}}\to D_w`$ be injective retained-domain maps, and induce
+
+```math
+\mathrm{Dep}_{\mathrm{ret}}(w,c,b)
+\iff \mathrm{Dep}_w(j_w(c),j_w(b)).
+```
+
+**Witness-preservation theorem.** At a specified retained target $`b`$ and world $`w`$, local and retained supplier existence agree if and only if
+
+```math
+\bigl[\exists y\in D_w:\mathrm{Dep}_w(y,j_w(b))\bigr]
+\ \Longrightarrow
+\bigl[\exists c\in B_{\mathrm{ret}}:
+             \mathrm{Dep}_w(j_w(c),j_w(b))\bigr].
+```
+
+**Proof.** A retained supplier always maps to a local supplier by the definition of the induced relation. The only possibly missing direction is exactly the displayed implication. It therefore is equivalent to equality of the two existence truth values. Negating those values also preserves agreement. Conversely, agreement gives that local-to-retained implication. □
+
+Injectivity is appropriate when retained labels are to distinguish retained individuals; the elementary existential equivalence itself needs only the stated map and induced relation. Surjectivity is sufficient but stronger than necessary. If both retained $`c`$ and omitted $`d`$ supply a target, retaining $`c`$ preserves existence of a supplier, although supplier counts and claims about $`d`$ can change. Absence of a retained supplier is evidence of full local nonreceipt only when the displayed condition is justified at that target and world. [Finite modal identity transport, Theorem 4; review, §1][transport-proof] [Witness-preservation review][transport-review]
+
+Suppose the intended reception predicate satisfies $`C_w(x)\iff\exists y\,\mathrm{Dep}_w(y,x)`$. Copying $`C_w`$ preserves that representation only if the condition holds at every pair for which the equivalence is asserted. A contract quantified over all worlds and bearers cannot silently be replaced by a check only at actually existing targets. For actual resource realization, the analogous precise requirement is
+
+```math
+\bigl[\exists y\in D_a:\ E_a(y)\land I_a(y,r)\bigr]
+\ \Longrightarrow
+\bigl[\exists b\in B_{\mathrm{ret}}:
+ E_a(j_a(b))\land I_a(j_a(b),r)\bigr]
+```
+
+for each actual resource in the needed scope. This requires some suitable retained bearer, not every bearer of the resource. Neither condition establishes the philosophical truth of its local relations.
+
+Preserving these existential statements still does not preserve every premise. Retain a necessary bearer $`b`$ and omit an actual, contingent bearer $`c`$; let reception and dependency be empty, and let an actual resource be intrinsically borne by $`b`$. Both supplier preservation and actual realization hold. Yet the universal claim “every actual contingent bearer is received” is false in the full domain because of $`c`$ and true after restriction. The independent review supplies this control to distinguish the two existential conditions from preservation of an entire quantified theory. Removing counterexamples can make a universal statement easier to satisfy. Full language preservation above keeps its bijective-chart hypothesis. [Independent modal-transport review, §4][transport-review]
+
+### 10.10 What is—and is not—unified by the construction
+
+The correspondence itself is scientifically relevant information. On two worlds with outer domains $`\{0,1\}`$, identity alignment and empty dependency relations, set $`E_a=\{0\}`$. Compare $`E_v=\{0\}`$ with $`E_v=\{1\}`$. The structures at $`v`$ are isomorphic under a swap, so their same-world first-order sentences agree. Nevertheless, the first system has one bearer existing at both worlds and the second has none. A record of each world only up to independent local isomorphism cannot determine this same-bearer target. By contrast, passively swapping both $`E_v`$ and the alignment in the first system preserves its answer. Independent renaming of a valuation while holding correspondence fixed changes the represented data; simultaneous renaming of both does not. [Finite modal identity transport, §6][transport-proof]
+
+This limitation does not forbid a richer qualitative account from specifying its own correspondence, nor show that unnamed descriptions lack concrete bearers. Dasgupta's *Individuals* explicitly brackets the relevant a priori modal dispute, and its extensional language comparison leaves modal expansions for further work; its comparison models have nonempty domains. *The Bare Necessities* discusses qualitative individuating roles and counterpart semantics while separating necessitation from grounding. Those observations support a scope limit here, not a refutation of either account. A many-valued or nonfunctional counterpart relation is outside the bijection theorem, and a counterpart interpretation can have a different modal target. Successful modal truth preservation also supplies no semantics for essence, explanatory priority or grounding merely by preserving extensions. [Dasgupta 2009, pp. 37, 63 n. 40, 64][dasgupta-individuals] [Dasgupta 2011, §§4–5][dasgupta-bare-necessities]
+
+Several further notions of unity therefore need their own arguments. A unique eligible token at each world, a unique coherent section, numerical identity of its represented bearer, mereological simplicity, integrated agency, and universal productive scope are different conclusions. The earlier unity proposal separates them through useful conditional controls. Read in their corrected scope, these controls do not certify the metaphysical possibility of every named rival, and they do not cancel the later affirmative appraisal in section 10.4. [Unity and identity proposal, §§2–7; later reconciliation][unity-proposal] [Singleton-fibre correction and status reconciliation][singleton-correction]
+
+For numerical identity, one may give each world a different token, choose flat transports linking them uniquely, and still interpret the tokens as counterparts rather than one individual. The unique section then exists without the additional identity interpretation. Conversely, one may hold a bearer numerically fixed while changing its role predicate at another world. Persistence of the bearer does not establish persistence of every role. These controls distinguish what the stipulated relations say; they do not resolve the underlying theory of identity.
+
+For bearer-local roles, consider a system with three parts, one knowing, one selecting, and one realizing an outcome. Declaring a system token whose role predicate means “some part has this role” makes every role available to that system. It does not establish that one part has them all, or that the resulting aggregate is the individual required by another argument. A genuine organized collective may be an appropriate bearer for some purposes, but the change of granularity and incidence must be stated. Even one substrate that bears all the powers need not integrate apprehension, selection and realization in the same reason-guided episode. The affirmative agency comparison in section 12.4 concerns that stronger relation, not merely a list of capacities.
+
+For ontological scope, a unique role bearer can have proper parts under the declared mereology, and the same incidence data can leave competing theories of properties undecided. A common root may coexist with attributes realized only by coordinated nonroot members. A single source description can also admit two proposed mappings to different worldly referents; co-reference within the source does not authenticate either mapping. Finally, a unified and integrated agent may actualize only a proper subdomain. Extending that conclusion to universal Creatorhood needs its independently justified productive domain and bridge. None of these inferences is supplied by counting sections. The source proposal's translated attribute-locality premise is likewise source-relative; it is not a new primary verification or a consensus claim about a theological school. [Unity and identity proposal, controls and source scope][unity-proposal]
+
+The finite mathematics thus supplies exact conditions for preserving the candidate whose philosophical grounds have been separately argued. It does not reconstruct possible worlds from observations or extend finite conjunctions automatically to infinitely many worlds. Standing capacity, an act-kind, an individual act and a created effect remain different types; neither an empty act extension nor a permanent possibility supplies a necessary particular. No premise that every emergent act is created, no automatic inference from a new relation to borrowed perfection, and no actuality-from-possibility principle enters these proofs. In particular, this account of labels and witnesses neither completes the unfinished programme for an n-person noetic field nor replaces its original scientific objective.
+
 ## 11. What a complete explanatory fact does—and does not—establish
 
 Generic explanation provides independent logical comparisons. It must not silently replace productive provision or identify explanatory facts with individual bearers. The following results reconstruct the relevant explanatory principles of Koons and Pruss and the corpus's checked consequences and controls. They concern explicit relational assumptions; neither the proofs nor their counterinterpretations authenticate a metaphysical realization. [Koons and Pruss, §2][u-kp] [Plural-explanation analysis][u-psr]
@@ -661,3 +877,22 @@ Subsections 2.1 and 12.4 add the public causal-background and particular-agency 
 [dar-kind-and-individual]: https://www.islamweb.net/ar/library/content/413/694/تعليق-ابن-تيمية
 
 [dar-perfection-and-privation]: https://islamweb.net/ar/library/content/413/962/الوجه-التاسع-والعشرون
+
+### Additional mathematical and semantic sources
+
+- Tingran Gao, Jacek Brodzki and Sayan Mukherjee, *The Geometry of Synchronization Problems and Learning Group Actions*, 2019 version, §2.1, Corollary 2.1 and the following propagation remark. [Primary paper][gao-synchronization]
+- Bob Coecke, Dusko Pavlovic and Jamie Vicary, *A New Description of Orthogonal Bases*, 2008 preprint, introduction and §§2–3. [Primary paper][coecke-bases]
+- Shamik Dasgupta, “Individuals: An Essay in Revisionary Metaphysics,” *Philosophical Studies* 145 (2009), 35–67; selected scope statements on pp. 37, 63–64. [Author's copy][dasgupta-individuals]
+- Shamik Dasgupta, “The Bare Necessities,” *Philosophical Perspectives* 25 (2011), §§4–5; selected modal-role and grounding discussion. [Author's copy][dasgupta-bare-necessities]
+- [Finite modal identity transport: aligned tensors, sections, and bearer witnesses][transport-proof], and its [independent mathematical and semantic review][transport-review]. The new exposition includes complete finite proofs; the historical exact-control programs and their recorded executions remain separate evidence.
+- [Singleton-fibre dependency correction and source-status reconciliation][singleton-correction]. The correction is used at its stated scope; the broader report's other subjects remain separately received work.
+- *Unity, Common-Bearer Sections, Identity and Plural Realization*, frozen public proposal, [immutable Git object][unity-proposal], blob `d3f909c46b7b430d533c992351402faa98a50877` at baseline commit `a7ff0e33d1a299db640041c46b1af81ca70851f6`. Its conditional distinctions are used with the subsequent singleton correction, not adopted as a complete metaphysical theory.
+
+[transport-proof]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport/RESULT.md
+[transport-review]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP13/t20-next-frontier-20261008/modal-identity-transport-review/REVIEW.md
+[singleton-correction]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/research-v6/root_math/specialist_b_history/REPORT.md
+[unity-proposal]: https://api.github.com/repos/theislampill/orthemology/git/blobs/d3f909c46b7b430d533c992351402faa98a50877
+[gao-synchronization]: https://arxiv.org/abs/1610.09051v3
+[coecke-bases]: https://arxiv.org/abs/0810.0812
+[dasgupta-individuals]: https://shamik.net/papers/dasgupta%20individuals.pdf
+[dasgupta-bare-necessities]: https://shamik.net/papers/dasgupta%20the%20bare%20necessities.pdf
