@@ -8,7 +8,7 @@ These complete public expositions contain the arguments and proofs in ordinary M
 
 | Subject | Scholarly treatment |
 |---|---|
-| Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. |
+| Information, inquiry and certified action | [Information retained by inquiry](mathematics/information-and-inquiry.md): predictive reduction, posterior comparisons, inquiry-value counterexamples, Fisher dynamics, certificate selection and finite temporal guarantees. Graph-constrained information, exact inquiry costs and complete finite proof compilation extend the same work. |
 | Received existence, necessary being and original-source unity | [Received actuality, intrinsic necessity, and original source unity](foundations/received-actuality-and-intrinsic-necessity.md): affirmative arguments, complete conditional proofs, connected-field coverage, explanatory countermodels and their limits. |
 | Objective normativity, proper function and wise direction | [Objective normativity and corrective cognition](foundations/objective-normativity-and-corrective-cognition.md): complete philosophical arguments, finite calibration and intervention proofs, intrinsic reasons, actual authority, undertakings and stronger rival comparisons. |
 | Recognition, knowledge and corrective inquiry | [Recognition, warrant, defeat and restoration](epistemology/recognition-warrant-and-restoration.md): positive cognitive grounds, proper function, cumulative evidence, surviving warrant, and complete finite restoration/identification proofs. |

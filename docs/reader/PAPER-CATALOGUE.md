@@ -29,7 +29,7 @@ The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or c
 
 These directly readable treatments contain the arguments and proofs reconciled from their public predecessors. Their independent incorporation review is scoped; none silently replaces an accepted paper edition or confers owner adoption.
 
-- [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees.
+- [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees. Includes exact graph-action costs, persistent evidence frontiers, optimal further inquiry and finite tree/shared-proof compilation.
 - [Received actuality, intrinsic necessity, and original source unity](../../foundations/received-actuality-and-intrinsic-necessity.md): productive adequacy, same-bearer necessity, connected-field coverage, explanatory countermodels and centered knowledge.
 - [Objective normativity and corrective cognition](../../foundations/objective-normativity-and-corrective-cognition.md): intelligibility and function, truth-calibrated correction, intervention, intrinsic reasons, source-owned undertakings and the strongest inspected contemporary rivals.
 - [Recognition, warrant, defeat and restoration](../../epistemology/recognition-warrant-and-restoration.md): basic recognition, local correction, proper function, cumulative grounds, defeat, source authority and exact finite limits of restoration claims.

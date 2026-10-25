@@ -4,7 +4,7 @@
 
 ### Abstract
 
-A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport.
+A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport. Graph-constrained parity operations make the action dependence explicit: the exact connecting-tree cost determines which moments a finite horizon can reveal. For proof-producing inquiry, residual evidence supports and terminal checking prices give a canonical continuation summary and an exact finite completion criterion. Finite grounded rules compile that summary even in the presence of cycles, while shared proof graphs expose a limit of intermediate cost-only pruning.
 
 This is a consolidated exposition of the source mathematics cited below. Its proofs are ordinary mathematical arguments; computational corroboration, kernel certification, empirical interpretation, literature priority, and owner adoption are distinct. The edition and review boundary appears at the end.
 
@@ -22,7 +22,7 @@ This is a consolidated exposition of the source mathematics cited below. Its pro
 
 Full prediction preserves the values of bounded-depth adaptive policy trees when their terminal observables and costs are included. Posterior answers alone need not. Even an objective determined by retained answers can have a source gradient that depends on discarded information. Conversely, an individual objective may descend although an entire metric does not.
 
-These distinctions concern supplied mathematical models. They do not authenticate an actual source, establish its calibration, or equate a numerical loss with epistemic warrant.
+These distinctions concern supplied mathematical models. They do not authenticate an actual source, establish its calibration, or equate a numerical loss with epistemic warrant. The graph example in §2.4 concerns operational prediction; §§9.5–9.6 concern the missing premises and checking costs of admitted proofs. Neither converts a coordinate count into an acquisition price or supplies a source entitlement.
 
 ## 2. Finite instruments and exact predictive states
 
@@ -91,6 +91,152 @@ Put $`m=\dim W`$. On the full normalized simplex, exactly $`m-1`$ continuous rea
 A basis $`u,f_1,\ldots,f_{m-1}`$ gives sufficiency. For necessity select $`m`$ latent states with linearly independent basis-evaluation columns. Their nonconstant evaluation vectors are affinely independent, so all required expectations distinguish every law on the $`(m-1)`$-simplex supported on these states. Any exact encoder is injective there. On its relative interior, a continuous injection into $`\mathbb R^d`$ for $`d<m-1`$, followed by zero-padding, contradicts invariance of domain: the image would be open in $`\mathbb R^{m-1}`$ while lying in a lower-dimensional plane. The zero-dimensional case is immediate. [1], [10]
 
 This counts exact continuous coordinates, not bits, physical degrees of freedom, or finitely many reachable histories. It does not constrain discontinuous encodings of unlimited exact precision.
+
+### 2.4 How a constrained action graph changes the necessary information
+
+The permitted transformations can make a higher-order interaction accessible before a lower-order one. This is a precise obstruction to choosing retained moments solely by their order. It also gives a concrete finite-horizon version of the observable-space construction.
+
+Let $`G=(V,E_G)`$ be a finite simple undirected graph of named slots, with state space $`X=\{-1,+1\}^V`$. For each adjacent pair, both ordered elementary updates are available:
+
+```math
+(F_{ij}x)_i=x_ix_j,\qquad (F_{ij}x)_k=x_k\quad(k\ne i).
+```
+
+The contract is to predict each **individual terminal coordinate** after any fixed, silent sequence of at most $`h`$ such updates. The word is chosen independently of the hidden state; intermediate states are not observed. An individual sign's expectation determines its law, since its probability of $`-1`$ is $`(1-\mathbb E[x_i])/2`$. The contract does not request the joint law of several terminal coordinates. It counts sequential elementary gates, not parallel layers, physical storage bits, or acquisition cost. [21–22]
+
+For a subset $`S\subseteq V`$, define its Walsh character by $`\chi_S(x)=\prod_{v\in S}x_v`$, with $`\chi_\varnothing=1`$. Direct multiplication, using $`x_j^2=1`$, gives
+
+```math
+\chi_S\circ F_{ij}=
+\begin{cases}
+\chi_{S\mathbin{\triangle}\{j\}},&i\in S,\\
+\chi_S,&i\notin S.
+\end{cases}
+```
+
+Thus an active slot can toggle an adjacent slot in the character's support. Writing $`x_i=(-1)^{b_i}`$ identifies the update with the Boolean operation $`b_i\leftarrow b_i\mathbin{\mathrm{XOR}}b_j`$, a CNOT with control $`j`$ and target $`i`$. This algebraic correspondence carries no quantum or cognitive interpretation. Pulling back a terminal character reverses the chronological order of the state updates. All reversed words are still permitted and have the same length.
+
+For nonempty $`S`$, let $`\tau_G(S)`$ be the minimum cardinality of a connected induced vertex set containing $`S`$. Set it to $`+\infty`$ if no such set exists. Let $`d_G(S)`$ be the minimum number of updates whose pullback turns some unary character into $`\chi_S`$; the terminal coordinate may be chosen freely.
+
+**Theorem 1A — Exact graph-constrained parity cost.** For every nonempty $`S`$,
+
+```math
+d_G(S)=2\tau_G(S)-|S|-1.
+```
+
+If the terminal coordinate is fixed at $`r`$, the corresponding minimum is
+
+```math
+d_{G,r}(S)=2\tau_G(S\cup\{r\})-|S|-1.
+```
+
+An infinite connected-superset cost means that the character is unreachable. The empty support is never reached from a singleton.
+
+**Proof.** Consider any support path $`A_0=\{r\},A_1,\ldots,A_\ell=S`$ and its visited set $`U=\bigcup_t A_t`$. Every first appearance of a vertex other than $`r`$ attaches it to a currently active adjacent vertex. Consequently $`G[U]`$ is connected. If $`r\in S`$, each vertex of $`S\setminus\{r\}`$ must be toggled at least once, and each vertex of $`U\setminus S`$ at least twice. Therefore
+
+```math
+\ell\geq(|S|-1)+2(|U|-|S|)=2|U|-|S|-1.
+```
+
+If $`r\notin S`$, each vertex of $`S`$ must enter, $`r`$ must leave, and every other transient vertex must both enter and leave. This gives the same inequality:
+
+```math
+\ell\geq |S|+1+2(|U|-|S|-1)=2|U|-|S|-1.
+```
+
+Revisits and steps that leave the character unchanged cannot improve this bound. Since $`U`$ contains both $`S`$ and $`r`$, it proves the stated lower bounds.
+
+For attainment with a freely chosen coordinate, take a smallest connected superset $`U`$, a spanning tree of $`G[U]`$, and root it at some $`r\in S`$. Activate the vertices in parent-before-child order, using $`|U|-1`$ toggles. Then remove exactly $`U\setminus S`$ in decreasing depth, using its tree parent as the active neighbour. That parent remains active: it either belongs to $`S`$ or has not yet been removed. These removals cost $`|U|-|S|`$, giving the claimed total. With prescribed $`r\notin S`$, activate a minimum tree containing $`S\cup\{r\}`$ from $`r`$, then reroot the fully active tree at any member of $`S`$ before performing the same removals. Finally, every elementary gate is an invertible linear transvection on the binary support vector, so it cannot send a nonzero support to zero. $`\square`$
+
+The Steiner-tree cost and fill/eliminate construction are already present in the CNOT synthesis literature. Vandaele, Martiel, and Goubault de Brugière give the same formula for a chosen connecting tree; their practical algorithm approximates that tree. Here $`\tau_G`$ denotes the actual optimum, and the visited-set argument proves a lower bound against every permitted word. Neither the formula nor its synthesis ancestry is claimed as a new discovery. [23]
+
+#### Finite horizons, continuous coordinates, and saturation
+
+Put
+
+```math
+\mathcal R_h=\{S\ne\varnothing:d_G(S)\leq h\},\qquad
+\mathcal W_h=\mathrm{span}\{\chi_S:S\in\mathcal R_h\},\qquad
+\mathcal V_h=\mathrm{span}(\{1\}\cup\mathcal W_h).
+```
+
+The last space includes the mass coordinate, as the predictive space in §2.2 does. Walsh orthogonality gives
+
+```math
+\dim\mathcal W_h=|\mathcal R_h|,\qquad
+\dim\mathcal V_h=1+|\mathcal R_h|.
+```
+
+**Corollary 1B — Sharp finite-horizon information.** On the full probability simplex on $`X`$, the smallest dimension of a continuous exact encoder for this terminal-unary contract is $`|\mathcal R_h|`$. The decoder need not be continuous.
+
+**Proof.** Retaining the indicated moments proves sufficiency. For necessity, let $`q=|\mathcal R_h|`$ and, for $`\sum_S|a_S|<1`$, define
+
+```math
+p_a(x)=2^{-|V|}\left(1+\sum_{S\in\mathcal R_h}a_S\chi_S(x)\right).
+```
+
+These laws are strictly positive and normalized. Orthogonality gives $`\mathbb E_{p_a}[\chi_S]=a_S`$ for every retained support. An exact encoder is therefore injective on this continuously parametrized open subset of $`\mathbb R^q`$. If its dimension were smaller than $`q`$, the zero-padding argument from §2.3 would contradict invariance of domain. The case $`q=0`$ is immediate. $`\square`$
+
+This subtracts one from the **augmented** dimension, not from the raw span. It is an exact continuous-coordinate result for all laws; a constrained reachable law family or a discontinuous encoding needs its own analysis. Moreover, finite-horizon sufficiency is a remaining-horizon hierarchy:
+
+```math
+F_{ij}^*\mathcal V_{h-1}\subseteq\mathcal V_h.
+```
+
+It need not give $`F_{ij}^*\mathcal V_h\subseteq\mathcal V_h`$. Only saturation supplies the invariant space required for indefinite updating. The convention “at most $`h`$” also matters. If the graph has an edge, one can pad any singleton-starting support word with no-ops by orienting that edge so its first index is not the active singleton. With an edgeless graph and no explicit identity command, positive exact-length words do not exist, although the at-most-horizon contract still includes the initial unary observations.
+
+On the complete graph with $`n=|V|`$, every support is connected, so $`d_G(S)=|S|-1`$ and
+
+```math
+\dim\mathcal V_h=\sum_{k=0}^{\min(n,h+1)}\binom nk.
+```
+
+On a path, the connected hull of a support has $`L`$ vertices, where $`L=\max S-\min S+1`$. Its cost is $`2L-|S|-1`$. Counting supports by their two extreme vertices gives the exact profile
+
+```math
+\dim\mathcal V_h
+=1+n+\sum_{L=2}^{n}(n-L+1)
+\sum_{k=\max(2,2L-h-1)}^{L}\binom{L-2}{k-2},
+```
+
+where an inner sum with lower endpoint above $`L`$ is zero. There are $`n-L+1`$ intervals of length $`L`$ and $`\binom{L-2}{k-2}`$ supports of size $`k`$ whose hull is that interval; Theorem 1A gives the lower endpoint on $`k`$.
+
+For the four-vertex path $`1-2-3-4`$, the augmented dimensions at horizons $`0,1,2,3,4,5`$ are $`5,8,10,13,15,16`$. The full support costs only three gates, whereas the endpoint pair $`\{1,4\}`$ costs five. The accessible supports are therefore not downward closed. Chronological words $`F_{34},F_{23},F_{12}`$ and $`F_{12},F_{23},F_{34},F_{23},F_{12}`$ make the terminal first coordinate respectively the full parity and the endpoint parity.
+
+This distinction has an exact probabilistic witness. The two laws
+
+```math
+p_\pm(x)=\frac1{16}\bigl(1\pm\chi_{\{1,4\}}(x)\bigr)
+```
+
+are nonnegative and normalized. Every horizon-three moment agrees between them, including the full four-way moment, because the endpoint character is orthogonal to every accessible character. The five-gate endpoint readout instead has negative-sign probabilities $`0`$ and $`1`$. Any prediction based only on the common horizon-three data has worst-case absolute error at least $`1/2`$ on these two laws; the constant prediction $`1/2`$ attains that bound.
+
+For a star, a support containing the centre costs $`|S|-1`$; a singleton leaf costs zero; a support of $`k\geq2`$ leaves costs $`k+1`$. This follows immediately by including the centre in the minimum connected hull. The four-vertex star consequently has augmented profile $`5,8,11,15,16`$ through horizon four.
+
+More generally, if a tree $`T`$ has $`n\geq2`$ vertices and $`L_T`$ leaves, its saturation horizon is exactly
+
+```math
+h_{\rm sat}(T)=2n-L_T-1.
+```
+
+To prove the upper bound, let the hull of $`S`$ have $`m`$ vertices. An original leaf of $`T`$ lying in this minimal hull must belong to $`S`$, while at most $`n-m`$ original leaves lie outside it. Hence $`L_T\leq |S|+n-m`$ and
+
+```math
+d_T(S)=2m-|S|-1\leq n+m-L_T-1\leq2n-L_T-1.
+```
+
+Taking $`S`$ to be all original leaves attains equality: every edge of a finite tree lies on a path between leaves, so their hull is all of $`T`$. A one-vertex tree saturates at zero. For any connected graph on $`n\geq2`$ vertices, a spanning tree gives the universal upper bound $`2n-3`$; paths attain it. A connected graph eventually requires all $`2^n-1`$ law coordinates under this full-law contract, even though each individual question requests only one terminal coordinate.
+
+Disconnected graphs preserve a smaller and precisely described part of a law. A singleton-starting support never leaves its connected component, and every nonempty support within one component is reachable. For components $`B`$,
+
+```math
+\dim\mathcal V_\infty=1+\sum_B(2^{|B|}-1).
+```
+
+The saturated observables are exactly the functions $`c+\sum_B f_B(x_B)`$. Thus two initial laws are indistinguishable exactly when their component marginals agree. This does **not** assume independence: arbitrary cross-component dependence is permitted but invisible to the specified questions. Every tuple of component marginals is realizable by its product law, and Corollary 1B gives minimum continuous dimension $`\sum_B(2^{|B|}-1)`$. Two disjoint edges require six coordinates rather than the fifteen of their full joint law. Simultaneous joint readouts, recorded observations from several components, or feedback can introduce cross-component products and change this conclusion.
+
+The hypotheses identify the application boundary. A fixed terminal coordinate uses the fixed-root formula; directed-only gates, clean auxiliary slots, restoration of other coordinates, reset or noisy gates, hidden state-dependent control, and parallel scheduling specify different problems. The formal source separately proves the visited-set bound, connected-witness synthesis and local character identity. The Walsh geometry, whole-word semantic correspondence, continuous lower bound and saturation arguments above remain ordinary mathematical proofs rather than new kernel claims. [21–22], [30]
+
 
 ## 3. The information hidden between target and audit marginals
 
@@ -850,6 +996,265 @@ Two related comparisons preserve the same exact temporal scope. With menus and s
 These arguments explain how information, evidence and temporal obligations fit together without identifying them. Finite selection assumes an admissibility relation; temporal certification assumes an adequate transition model; evidence transport assumes its semantic and authority premises. None supplies the others by relabelling a successful output.
 
 
+### 9.5 Which missing evidence must survive, and what does completion cost?
+
+The certificate-selection problem in §9.4 begins with the outputs already admissible at each state. Inquiry has a further question: which acquisitions would make an actual proof available, and how expensive would it be to complete and check that proof? A present licence bit or a list of true propositions can lose precisely this information. A finite persistent-evidence model admits an exact answer. [24–25]
+
+#### Evidence, conclusions, and terminal checking
+
+Fix a claim and its version, a declared semantics and source commitments, and a finite set $`\mathcal Y`$ of scoped conclusions. These conclusions can include positive support, independently supported negation, inconsistency of a specified premise set, a syntax/type failure, semantic ambiguity, or absence of a certificate in a specified finite search at a fixed inventory/time snapshot. They are distinct output types and need not be mutually exclusive. The task supplies its substantive goal set $`\mathcal G\subseteq\mathcal Y`$. An always-available “defer” record does not count as resolution unless that bounded diagnosis is itself the requested goal.
+
+Let $`E`$ be a finite set of distinguishable evidence tokens. A token identifies content, source or acquisition route, target/version, scope, and authentication conditions. The usable inventory $`K\subseteq E`$ contains currently accessible authenticated tokens. Copying an artifact does not create a different premise or an independent source. Authentication establishes the declared identity and integrity conditions; the commitments under which its contents support a premise remain additional assumptions. A test that returns only uninterpreted or unauthenticated text can have an empty usable payload.
+
+Let $`\Gamma`$ be a finite admitted collection of inspectable valid derivations. For each $`\pi\in\Gamma`$, retain its evidence support $`S_\pi\subseteq E`$, exact conclusion $`v_\pi\in\mathcal Y`$, finite terminal assembly/checking price $`\kappa_\pi\geq0`$, and the derivation with its rule and interpretation references. A rule/scope check of an admitted derivation is guaranteed to succeed when its support meets the stipulated conditions. An unchecked candidate that may fail is an outcome-bearing inquiry step, not a guaranteed terminal action. The collection need not contain every proof of an unrestricted logic; all optimality statements initially concern exactly its permitted derivations. Section 9.6 gives a finite grammar for which that completeness assumption can be proved.
+
+If admitted source commitments support the leaves and each rule preserves the scoped judgement, induction over a derivation proves conditional soundness of the resulting conclusion. This does not authenticate the leaves, prove the commitments or show that any person believes, competently uses, or knows the conclusion. Availability of $`S_\pi`$ makes $`\pi`$ eligible for checking; completion requires actually producing and checking it and paying $`\kappa_\pi`$. Reuse of an already checked proof may instead have an explicit token and priced reuse rule. Authentication paid on acquisition is not silently charged again, and unexecuted terminal checking is not silently made free.
+
+Throughout this subsection, tokens remain valid, accessible and reusable; acquisitions do not revoke them or defeat previously admitted proofs. The semantics, source commitments, proof collection and prices stay fixed. Supports are sets, not consumable multisets. These persistence assumptions concern warrant conditions as well as artifact survival.
+
+#### The canonical residual frontier
+
+For each $`v`$, form the finite support–price set
+
+```math
+A_v(K)=\{(S_\pi\setminus K,\kappa_\pi):\pi\in\Gamma,\ v_\pi=v\}.
+```
+
+Say $`(D,c)`$ dominates $`(D',c')`$ when $`D\subseteq D'`$ and $`c\leq c'`$. Remove duplicate pairs and each strictly dominated pair; write $`R_v(K)`$ for the resulting Pareto frontier. A retained pair still needs a realizing derivation. Different proofs with the same pair are interchangeable only for the specified availability-and-cost observations.
+
+For additional evidence $`U\subseteq E`$, define
+
+```math
+F_{K,v}(U)
+=\min\{\kappa_\pi:S_\pi\subseteq K\cup U,\ v_\pi=v\},
+\qquad\min\varnothing=+\infty.
+```
+
+This is the least price of an eligible terminal proof, not a claim that checking has occurred.
+
+**Theorem 14 — Canonical proof-sensitive continuation.** The tuple $`(R_v(K))_{v\in\mathcal Y}`$ is the coarsest equivalence-class summary of inventories preserving every conclusion's least terminal checking price after every additional evidence set. More explicitly:
+
+```math
+F_{K,v}(U)=\min\{c:(D,c)\in R_v(K),\ D\subseteq U\},
+```
+
+and
+
+```math
+\bigl(\forall v, R_v(K)=R_v(K')\bigr)
+\quad\Longleftrightarrow\quad
+\bigl(\forall v,U, F_{K,v}(U)=F_{K',v}(U)\bigr).
+```
+
+Acquiring $`T`$ updates the frontier by subtraction and renormalization:
+
+```math
+R_v(K\cup T)
+=\mathrm{Pareto}\{(D\setminus T,c):(D,c)\in R_v(K)\}.
+```
+
+Thus equal frontier tuples remain equal after every common acquisition.
+
+**Proof.** Eligibility is equivalent to $`S_\pi\setminus K\subseteq U`$. A dominated pair cannot lower the minimum, proving recovery. Conversely, write $`f(U)=F_{K,v}(U)`$. The frontier can be recovered from the function itself:
+
+```math
+R_v(K)=
+\left\{(D,f(D)):
+ f(D)<\infty\ \text{and}\quad
+ f(D\setminus\{d\})>f(D)\ \text{for every }d\in D\right\}.
+```
+
+If $`(D,c)`$ is undominated, eligibility gives $`f(D)\leq c`$, while a strictly cheaper eligible pair would dominate it; hence $`f(D)=c`$. Any proper subset with price at most $`c`$ would likewise dominate it. For the converse, finiteness supplies an attaining pair $`(D',f(D))`$ with $`D'\subseteq D`$. If containment were proper, choose $`d\in D\setminus D'`$: the pair would remain eligible after deleting $`d`$, contrary to the strict inequality. Thus $`D'=D`$, and the same argument excludes every strict dominator. Immediate one-token deletions suffice because $`f`$ is antitone under inclusion. The empty-support deletion condition is vacuous, but finite price is still required.
+
+This inverse proves necessity as well as sufficiency of frontier equality. For updating, $`(S_\pi\setminus K)\setminus T=S_\pi\setminus(K\cup T)`$. Dominance survives subtraction, so deleting dominated pairs before or after acquisition has the same final effect. Equivalently,
+
+```math
+F_{K\cup T,v}(U)=F_{K,v}(T\cup U).
+```
+
+Finally, any summary from which every $`F_{K,v}(U)`$ can be decoded must distinguish inventories with different such functions; the inverse identifies exactly those classes, while recovery and updating construct a sufficient summary. This is uniqueness of the normalized frontier and its equivalence classes, not of their encoding. $`\square`$
+
+The finite-price condition matters. If an actual proof price $`+\infty`$ is identified with the same $`+\infty`$ used for infeasibility, a collection containing only an infinite-price empty-support proof and an empty collection have identical cost observations but different frontiers. The formal source avoids this collapse by adjoining a new top above every admitted price. [25], [31]
+
+Necessity quantifies over all additional sets $`U`$. It is operationally exact when each token has a permanently permitted single-token retrieval action, finite sequences are allowed, and a comparison continuation may request a token already held. Each $`U`$ is then obtainable by a sequence of $`|U|`$ ordinary acquisitions. With a restricted inquiry menu, frontier equality is still sufficient but may distinguish more states than necessary. A token that can never arrive supplies no actual distinguishing continuation. The coarsest quotient for such a menu must compare only its feasible continuations, response possibilities and prices.
+
+The frontier also does not preserve every provenance distinction or replace the proof and evidence themselves. A realizing witness must remain recoverable when the terminal action executes, with any retrieval cost explicitly priced. This is not a minimum physical-RAM theorem that treats an external source of the missing distinctions as free and uncounted memory.
+
+#### Exact feasibility and optimal inquiry cost
+
+Let $`\Omega`$ be a finite nonempty set of response scenarios. Each remaining test $`a`$ in a finite menu $`Q`$ has a fixed response $`o_a(x)`$ in scenario $`x`$, finite nonnegative acquisition/authentication price $`c_a`$, and usable payload $`\tau(a,o)\subseteq E`$. Tests can be used once, remain available until used, and have order-independent responses and payloads. The response model is not a truth oracle.
+
+A planning state is $`(K,B,Q)`$, with nonempty $`B\subseteq\Omega`$ the scenarios compatible with the transcript. For a feasible response $`o`$, put
+
+```math
+B_{a,o}=\{x\in B:o_a(x)=o\},\qquad
+(K,B,Q)\longmapsto
+(K\cup\tau(a,o),B_{a,o},Q\setminus\{a\}).
+```
+
+The policy chooses tests or a terminal proof from its observed history. It must finish with a checked $`\mathcal G`$-proof on every remaining scenario. Its cost is the worst-case sum of executed test prices plus the final checking price. Policies are deterministic; allowing randomization with a maximum also over random choices gives the same pathwise objective. Worst-case **expected** cost under private randomization is different.
+
+**Theorem 15 — Completion and least execution cost.** Put
+
+```math
+t_{\mathcal G}(K)
+=\min\{\kappa_\pi:S_\pi\subseteq K,\ v_\pi\in\mathcal G\}.
+```
+
+Then the minimum guaranteed execution cost is the finite Bellman recurrence
+
+```math
+D(K,B,Q)=\min\left\{
+t_{\mathcal G}(K),
+\ \min_{a\in Q}\left[
+c_a+\max_{o:B_{a,o}\ne\varnothing}
+D(K\cup\tau(a,o),B_{a,o},Q\setminus\{a\})
+\right]\right\}.
+```
+
+Every finite optimum is attained. Writing
+
+```math
+K_x^{\rm all}=K\cup\bigcup_{a\in Q}\tau(a,o_a(x)),
+```
+
+guaranteed finite completion is possible exactly when
+
+```math
+\forall x\in B\ \exists\pi\in\Gamma:
+\quad v_\pi\in\mathcal G\quad\text{and}\quad S_\pi\subseteq K_x^{\rm all}.
+```
+
+For fixed $`B,Q`$, equal complete per-conclusion frontiers preserve $`D`$, cost-optimal test actions and optimal abstract terminal conclusion/price choices. The concrete proof identifiers need not agree.
+
+**Proof.** Induct on $`|Q|`$. A successful policy either immediately checks an eligible goal proof or first executes some test $`a`$. In the latter case its worst continuation cost is at least the maximum of the optimum values over feasible responses. Conversely, choose a minimizing terminal proof or first test and recursively optimal policies at each feasible successor. Finitely many proofs, tests and responses ensure attainment of every finite choice. Even when a proof is eligible, a test may make a much cheaper proof available, so the recurrence must allow continued inquiry.
+
+For necessity of the completion criterion, follow a successful policy in any scenario $`x`$. Persistence and order independence place all its acquired evidence inside $`K_x^{\rm all}`$, so its terminal proof is available there. For sufficiency, execute every remaining test in a fixed order. Scenarios with the same full response transcript give the same payload inventory; the condition guarantees a goal proof in that inventory. Inspect the fixed finite collection, select one and check it. The sum of the finite test prices plus the largest proof price bounds this strategy's worst-case cost.
+
+Finally, Theorem 14 gives equal terminal costs and identical successor frontiers after each payload. The same $`B,Q`$ give the same feasible responses, prices and actions. Induction in the recurrence yields equal values and abstract optimal choices. A concrete witness must still be selected for its own inventory. $`\square`$
+
+The recurrence prices execution, not offline proof compilation or policy search, and it implies no polynomial complexity bound. Exact implementation additionally needs effectively represented, comparable prices, such as rationals; finite arbitrary real prices suffice for the mathematical minimum. A scenario failing the full-transcript condition is an obstruction to this stipulated proof-producing protocol. It does not establish that the target is false, unknowable by other means, or unresolvable after admitting different rules or tests.
+
+#### Sharp distinctions between available answers, memory, and search
+
+With one proof requiring $`E=\{e_1,\ldots,e_n\}`$ and terminal price $`k`$, the frontier is $`\{(E\setminus K,k)\}`$. All $`2^n`$ inventories are continuation-distinct. For $`K\ne K'`$, orient them so some $`e\in K\setminus K'`$ exists and acquire exactly $`E\setminus K`$. This common sequence, of at most $`n`$ single-token actions, completes the first inventory while leaving $`e`$ absent from the second. Thus an exact finite-state controller for all these continuations needs $`2^n`$ distinguishable states, or $`n`$ bits in a fixed-length binary encoding. Storing $`K`$ attains the bound. The present availability bit has only two values when $`n\geq1`$; for $`n\geq2`$ it loses distinctions. With unit retrieval prices, the current optimum $`n-|K|+k`$ also merges equally sized but differently populated inventories.
+
+A single frontier can itself be exponentially large. Include, for every $`D\subseteq E`$, a same-conclusion proof with support $`D`$ and price $`n-|D|`$. A smaller support has a larger price, so all $`2^n`$ pairs survive. This is maximal: at most the least price survives for a fixed support. If all prices are equal, the retained supports form an inclusion antichain and the sharp maximum is $`\binom n{\lfloor n/2\rfloor}`$. For completeness, each support $`D`$ occupies a fraction $`1/\binom n{|D|}`$ of permutations in which its elements are the initial $`|D|`$ positions. Two distinct antichain members cannot both be initial sets of one permutation. Consequently $`\sum_D1/\binom n{|D|}\leq1`$, which bounds the number of members by the central binomial coefficient; all subsets of middle size attain it. These are state and frontier bounds, not claims that every individual state needs an exponentially long encoding. [24–25]
+
+Terminal price changes legitimate dominance. A proof needing $`\{a\}`$ at price $`10`$ and another needing $`\{a,b\}`$ at price $`1`$ must both survive. At inventory $`\{a\}`$ their residual pairs are $`(\varnothing,10)`$ and $`(\{b\},1)`$. If obtaining $`b`$ costs one, acquisition plus the second check costs two, better than stopping at ten. Discarding the larger support solely because it contains the smaller one gives the wrong optimum.
+
+Certificate size also fails to price discovery. Suppose exactly one of $`n`$ locations holds an authenticated refutation witness. A unit-cost inspection supplies its location's token only when positive; any positive token supports a proof with fixed check price $`k`$. Every realized certificate needs one token, but worst-case search requires all $`n`$ tests: after $`n-1`$ negative inspections the remaining location can still be the witness, and the specified proof requires actually obtaining it. Inspecting all locations attains $`n+k`$. If an independently warranted promise together with the negative findings is instead admitted as a proof that avoids obtaining the last token, that is a different proof collection. The response model alone does not supply that inference licence. The distinction between certificates and query complexity is classical. [29]
+
+The randomized qualification is sharp even with two scenarios and two unit-cost tests. Let test one return the needed token only in scenario one, and test two only in scenario two; failed tests return no usable token and terminal checking is free. Every deterministic order has worst-case cost two. Uniformly randomizing the order has worst-case expected cost $`3/2`$, while its pathwise worst case remains two. Theorem 15 concerns the latter objective.
+
+Finally, equal displayed content need not mean equal evidential entitlement. An authenticated report $`e`$ of $`P`$ from an admitted source and an unauthenticated copy $`r`$ can display identical text. A rule requiring $`e`$ and an independently justified bridge $`b:P\Rightarrow Q`$ makes $`Q`$ available at $`K_1=\{e,b\}`$. A display containing $`r`$ with usable inventory only $`K_2=\{b\}`$ does not meet that rule. If all remaining tests merely repeat $`r`$, the second state cannot complete under this menu. The example does not make authenticated testimony automatically true or unauthenticated testimony automatically false; it isolates an explicit source-sensitive premise. A new warranted route can change the result.
+
+The coordinate counts of §§2–9.3 measure functions of a law. Evidence acquisition concerns identified tokens and scoped proofs. A single action may supply many tokens, or one necessary token may be unavailable or arbitrarily expensive. Rescaling one acquisition price changes $`D`$ without changing a retained observable span. No universal conversion from coordinate dimension to inquiry cost follows.
+
+#### Clarification, semantic cover, and version fidelity
+
+Semantic clarification can be a legitimate inquiry, but it has its own evidential burden. Fix a justified finite interpretation family $`I`$ for the submitted claim version; interpretation $`i`$ gives precise content $`q_i`$. An admitted proof $`s_J`$ may establish that the intended interpretation belongs to nonempty $`J\subseteq I`$. Under the rule requiring $`s_J`$ and a proof of $`\neg q_j`$ for each $`j\in J`$, the conclusion is that the intended content of this version is refuted. The negations must concern the same intended domain and version.
+
+**Proposition 16 — Semantic cover.** If $`s_J`$ uses support $`A`$ and the chosen refutation of each $`q_j`$ uses $`C_j`$, this rule produces support
+
+```math
+A\cup\bigcup_{j\in J}C_j.
+```
+
+Taking all admissible $`J`$, their semantic proofs and their premise-proof choices enumerates exactly the supports generated by the rule. Shared evidence is acquired once; the actual combined derivation determines its checking price.
+
+**Proof.** The support is the union of the rule's evidence leaves. Every admitted choice realizes that union, and every instance has such a choice. Soundness is conditional on $`s_J`$: the intended interpretation is one member of $`J`$, and its negation is among the proved premises. $`\square`$
+
+With two possible meanings, separate refutations of both, a common refuting certificate, and clarification followed by one refutation can have different costs. Theorem 15 compares those legitimate routes. An investigator's convenient reinterpretation supplies no $`s_J`$ and cannot erase the original task. Nor must every imaginable interpretation be investigated: admissibility of $`I`$ is a substantive input.
+
+The same discipline governs a proof carried across versions. A proof of $`(q_0,\sigma_0)`$ does not prove $`(q_1,\sigma_1)`$ merely because their displayed words agree. An admitted interpretation-transport proof adds its own support, scope and checking price. An untagged availability summary can otherwise merge a history containing that bridge with one lacking it, changing possible completion into impossible completion. Erasing tags need not lose a bridge token that is separately retained; the failure concerns the specified lossy summary. This finite application complements §9.4's version-transport proof without supplying its semantic or authority premises. It leaves actual philosophical conclusions and human operative basing to their proper evidence.
+
+Persistence is indispensable. If a proof requires $`p,q`$, a test obtaining $`p`$ expires $`q`$, and a test obtaining $`q`$ expires $`p`$, then the union of all historically returned tokens is $`\{p,q\}`$ but no reachable active inventory from the empty state contains both. The full-transcript criterion would be false for that model. Expiry, consumption, defeat, source withdrawal or changing permissions must be represented in an expanded state before a new Bellman theorem is applied; simple set subtraction and monotone accumulation cannot be inherited without proof.
+
+### 9.6 From finite inference rules to complete certificate frontiers
+
+The preceding theory starts with an admitted finite proof collection. It can cover **all finite derivations** of a declared finite grounded rule system, even when its dependency graph has cycles. The resulting theorem distinguishes two genuinely different checking costs: charging every occurrence in a tree and charging each shared node of a proof graph once. [26]
+
+#### The grounded-rule contract
+
+Let $`J`$ be a finite set of fully scoped judgements and $`E`$ a finite evidence universe; put $`n=|J|`$ and $`m=|E|`$. Let $`\mathcal R`$ be a finite set of ground rule instances. Each $`r\in\mathcal R`$ has a head $`h(r)\in J`$, a finite ordered premise list $`p_1(r),\ldots,p_{k(r)}(r)`$, local evidence requirement $`B(r)\subseteq E`$, and finite nonnegative checking price $`w(r)`$. The list may repeat a premise. Nullary rules are explicitly admitted leaves, including whatever evidence they require.
+
+A judgement includes every parameter needed for substitution of proofs: proposition or type, context, version, source restrictions, resource conditions and independence requirements. Each premise must accept **any valid proof of that same scoped judgement**. There are no hidden shape-, history-, or proof-dependent admission tests. Rules are positive operationally: content expressing a negation is allowed, but absence of a proof is not an evidence-producing rule, and a cycle alone is not a proof. Soundness of the admitted grammar remains a separate premise.
+
+Evidence is persistent and reusable, combined by union. Two repeated occurrences of $`P`$ permit reuse of one proof of $`P`$; they cannot encode a demand for two independent sources. Such a demand must survive in source-labelled judgements or an independently justified relation. If the necessary refinement makes $`J`$ infinite, the finite theorem does not apply. A finite printed list of schemata is not a finite set of their scoped ground instances.
+
+In the **tree contract**, every rule occurrence is checked and charged. For a tree with root rule $`r`$ and premise trees $`T_i`$,
+
+```math
+\mathrm{supp}(T)=B(r)\cup\bigcup_i\mathrm{supp}(T_i),\qquad
+c_{\rm tree}(T)=w(r)+\sum_i c_{\rm tree}(T_i).
+```
+
+Copying a subtree into two premise positions charges its checking twice while acquiring its evidence only once. In the **shared-graph contract**, a finite acyclic graph contains a rule at each node and one premise reference per ordered premise position. Every node is reachable from the root. Its support is the union of local requirements and its cost is the sum of local prices over distinct nodes. A price includes checking the node's own premise references; a repeated reference does not recheck the referenced subtree. These are declared terminal checking models, not empirical runtime claims. Compilation and final witness reconstruction/checking remain distinct operations.
+
+#### Cycles do not require an infinite tree catalogue
+
+**Theorem 17 — Finite tree compilation.** Under the grounded-rule and tree contracts, every finite proof of $`q`$ is dominated in support and cost by one of height at most $`n`$, where height counts rule nodes. The full frontier of all finite $`q`$-proofs is finite, attained, and has at most $`2^m`$ pairs. It is computed with actual witnesses after at most $`n`$ synchronous frontier rounds, starting from no proofs.
+
+**Proof of the height bound.** If two nodes on one branch carry the same scoped judgement, replace the ancestor's entire subtree by the descendant's subtree. Exact substitution makes the result legal. The replacement support is a subset, and its price is no greater because the deleted occurrences and side subtrees have nonnegative prices. The number of nodes strictly decreases even when a deleted loop has zero price. Repeat to termination. No judgement then repeats on a branch, so height is at most $`n`$.
+
+**Proof of finite attainment.** There are finitely many trees of bounded height over a finite grammar of finite arity. Let $`H_q`$ be those of height at most $`n`$. Every finite proof is dominated by a member of $`H_q`$, and every member of $`H_q`$ is dominated by a retained element of its finite normalized pair set. A retained pair cannot be strictly dominated by an unrestricted finite proof: reducing that proof would supply a strictly dominating member of $`H_q`$, a contradiction. Thus the finite normalized set is exactly the unrestricted frontier, and every globally undominated pair has a bounded-height realizing tree. At most one price survives for each of the $`2^m`$ supports.
+
+**Construction and proof of saturation.** Initialize $`A_0(q)=\varnothing`$. Form $`A_{h+1}(q)`$ by normalizing the union of $`A_h(q)`$ and all pairs
+
+```math
+\left(B(r)\cup\bigcup_{i=1}^{k(r)}S_i,
+       w(r)+\sum_{i=1}^{k(r)}c_i\right),
+\qquad h(r)=q,\quad (S_i,c_i)\in A_h(p_i(r)).
+```
+
+A nullary rule contributes $`(B(r),w(r))`$ by the empty-product convention. Store the actual rule and immutable child witnesses for every retained pair. Inductively, $`A_h(q)`$ is the normalized pair set of trees of height at most $`h`$. Replacing any child by a dominating child can only shrink the parent's union of supports and lower its additive price, so discarded child pairs cannot produce a uniquely undominated parent. Conversely, each generated pair has the displayed realizing tree. The height bound shows that $`A_n`$ is the unrestricted frontier; one further round changes no pair set. Equality of all pair sets at an earlier round is also a sound stopping test, since the recurrence then reproduces them forever. Witness identities need not match for this test. $`\square`$
+
+The antichains themselves need not grow by set inclusion: a better pair can replace an earlier pair. What grows is the upward closure of dominated possibilities. A chain of $`n`$ distinct judgements ending in a leaf shows the height bound is sharp. If maximum rule arity is $`a`$, a height-$`n`$ witness can still have $`1+a+\cdots+a^{n-1}`$ nodes, and exponentially many support/price alternatives can survive. No efficient scaling bound follows from finite termination.
+
+The theorem preserves Pareto possibilities, not every exact proof support. For example, a leaf proof of $`q`$ requiring $`a`$ and a self-rule additionally requiring $`b`$ give a two-node proof with support $`\{a,b\}`$ dominated by the leaf with support $`\{a\}`$. If a different task requires an **exact** support, delete an ancestor–descendant pair only when both judgement and subtree support agree. This preserves support, does not increase cost, and still decreases node count. Along a branch supports are nested and can strictly shrink at most $`m`$ times; within each of at most $`m+1`$ constant-support blocks, no judgement repeats after pruning. Height $`n(m+1)`$ therefore suffices to attain the minimum price of every occurring exact support. It does not enumerate every proof or preserve its full derivation structure.
+
+#### Sharing needs a whole-graph argument
+
+**Theorem 18 — Finite shared-graph compilation.** Under the shared-graph contract, every finite proof graph is dominated by one with at most one node for each fully scoped judgement. Its exact terminal frontier is consequently computable by finite rule-choice enumeration.
+
+**Proof.** Order the original graph topologically, premises before parents. For each judgement choose its earliest occurrence. At that selected node keep its original rule, but redirect every premise reference to the earliest occurrence of the required premise judgement. If the original premise has index $`i`$ and the selected parent index is $`j`$, its selected replacement has index at most $`i<j`$. Every redirected edge therefore still goes strictly earlier; the graph remains acyclic and every premise has the required scoped judgement. Use the selected occurrence of the original root judgement as root and discard unreachable selected nodes.
+
+The retained nodes are a subset of the original occurrences. Their local requirements and prices are unchanged, so union support and the sum of nonnegative prices cannot increase. There is at most one node per judgement. Enumerate one rule or “absent” for each judgement; from the proposed root, reject missing premises and recursion-stack cycles and keep the reachable subgraph. This finite family contains every reduced graph just constructed. Normalization therefore gives the exact frontier of all finite graphs, with a realizing graph for each retained pair. $`\square`$
+
+There are at most $`\prod_{q\in J}(1+|\{r:h(r)=q\}|)`$ rule selections. Root-unreachable choices are immaterial; an unsupported reachable self-loop is rejected rather than accepted as a zero-cost proof. No topological order needs to be guessed in advance. Repeated premise references may point to the same chosen node precisely because the contract permits that reuse.
+
+The tree recurrence nevertheless cannot be reused as a shared-graph optimizer. Consider judgements $`p,a,b,t`$, one evidence token $`e`$, and these rules:
+
+| Head | Premises | Local evidence | Local price |
+|---|---|---|---:|
+| $`p`$ | none | $`\{e\}`$ | 5 |
+| $`a`$ | $`p`$ | none | 0 |
+| $`a`$ | none | $`\{e\}`$ | 4 |
+| $`b`$ | $`p`$ | none | 0 |
+| $`t`$ | $`a,b`$ | none | 0 |
+
+Every terminal proof has support $`\{e\}`$. The standalone frontier for $`a`$ discards its route through $`p`$, of price five, in favour of the direct proof of price four. Tree checking makes the best $`t`$-proof cost $`4+5=9`$; copying the $`p`$-proof in both branches would cost ten. A shared graph instead uses one $`p`$-node for both $`a`$ and $`b`$, so its optimum is five. If intermediate graph proofs were pruned using only their standalone support and cost, that optimal sharing opportunity would already be lost, leaving nine.
+
+Local dominance is thus not preserved by contexts that can share internal checked nodes. A compositional graph method needs additional sharing information, or it can use the finite whole-graph enumeration above. Once the complete **terminal** graph frontier has been compiled, ordinary support/price normalization and Theorem 14 apply without change. This distinction concerns the declared once-per-node price; it is not a result about arbitrary caching, scheduling or machine execution.
+
+#### Scope and the interface back to inquiry
+
+Choose the tree or shared-graph checking contract, compile the frontier for each terminal judgement and retain its witnesses. Residualizing at inventory $`K`$ then gives exactly the least checking price over **all finite derivations of that admitted grammar** whose support lies in $`K\cup U`$. Every finite optimum is attained. An empty frontier means no finite proof in that grammar, not falsehood and not absence of a proof in a stronger logic. Theorem 15 can use these compiled witnesses without an independently postulated finite catalogue; source authentication and rule soundness still have to be supplied.
+
+The arguments use finiteness and nonnegative additive prices, not discreteness. They apply to finite nonnegative rational or real rule prices; effective exact compilation additionally requires effective addition and comparison. Several different failures must be kept separate:
+
+- A price-$`-1`$ self-rule and a price-zero leaf yield finite proof prices $`0,-1,-2,\ldots`$ with no minimum. Nonnegative-cost pruning fails.
+- Infinitely many nullary rules with one support and prices $`1,1/2,1/3,\ldots`$ have no least price despite all prices being positive. Finiteness of ground instances fails.
+- A finite schema list containing $`P(0)`$ and $`P(x)\Rightarrow P(s(x))`$ generates infinitely many scoped judgements. Printed finiteness does not establish finite grounding.
+- A total price $`1/(1+\text{number of nodes})`$ is nonnegative but violates fixed additive local pricing; looping syntax can then produce an unattained decreasing sequence.
+- Consumable evidence, erased source-independence conditions, order-sensitive authority or proof-dependent side conditions can invalidate exact substitution. They require a separately justified state and rule interface.
+
+In particular, neither theorem supplies a finite complete interface for unrestricted natural-language inference, dependent typing or impredicative proof systems. Contexts, types and conversion premises cannot be erased merely to manufacture finitely many judgement labels. The existence of a particular finite proof establishes neither that all relevant proofs fall in that finite grammar nor a subject's knowledge or use of its premises. The inherited open derivation and interpretation questions retain their status.
+
+Positive provenance and weighted deduction provide the mathematical ancestry: alternative derivations combine differently from joint premises, and recursive systems may need fixed-point semantics. Green, Karvounarakis and Tannen develop provenance semantics for positive queries and recursive Datalog; Goodman treats semiring deduction and explains why non-improving Viterbi loops can be omitted. Here the support/price order and explicit tree-versus-sharing contract support the self-contained finite arguments above. They make no field-wide originality claim. [27–28]
+
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -862,6 +1267,10 @@ Unresolved generalizations should be stated as such. This treatment does not cla
 
 The certificate-selection and temporal results have a separate finite contract. The message encoder must possess the stated information and supply it truthfully with whatever authorization the application requires. Admissibility, model completeness, source/version eligibility, semantic preservation and actually discharged obligations are premises to be independently established. A one-shot zero-error cover bound is not an expected-rate, privacy, interactive, cryptographic, distributed-synthesis or bounded-error result. The complete temporal characterization assumes a finite common-state game; the rank certificate under incomplete observation is sufficient only. Neither theorem authenticates a source, supplies common knowledge or independent provenance, establishes causal restoration in a real system, or transfers authority to act. Dynamic membership or changed states, observations, targets and transitions require a new adequate model rather than an unproved reuse of the old ranks.
 
+The graph continuation result fixes named binary slots, both edge orientations, silent state-independent words and individual terminal readouts. Its finite-horizon moment family can fail downward closure, and its invariant saturation can omit arbitrary cross-component dependence. A different output or action contract must be analyzed in its own right. The fixed-root strengthening and tree saturation formulas are exact within those stated restrictions.
+
+The proof-cost results require scoped valid derivations, separately warranted source commitments, persistent reusable evidence and the declared terminal checking contract. Their full-acquisition canonical quotient may be finer than a restricted test menu needs. A finite persistent menu gives the complete-transcript criterion; expiry or defeat defeats that simple criterion. Tree compilation tolerates cycles because it prunes finite derivations under exact substitution and nonnegative additive costs, not because cycles prove their own premises. Shared-node checking needs whole-graph information before terminal normalization. These results do not settle unrestricted logical completeness, source trust, semantics, actual cost calibration, or a human subject's epistemic basing.
+
 ## 11. Attribution, evidence, and edition boundary
 
 The predictive observable theorem and its continuous-coordinate proof are inherited from *Continuation-Complete Orthings*, with the established predictive-state ancestry in [8]. Support-sensitive fibre factorization is also developed in the information-and-revision lineage [7]. The audit transport, paired posterior test, fixed-audit classification, and inquiry-value separation are consolidated from [2]–[3]; their exact final source versions have separately bound ordinary reviews. The Fisher classification and its row-rescaling maximal-flow proof come from [4]. That source credits the row-rescaling proof to its finite-audit mathematical contributor; it is not counted as independent corroboration merely because the contributor also served in a review role. The finite and continuous supplement arguments reconcile [5–6].
@@ -873,6 +1282,14 @@ The historical sidecar review is conditional on the ambient norm identity and re
 Section 9.4 incorporates the complete-certificate relation-selection results [13], the repaired distinction between invariant-core entry and co-Büchi persistence [14], model-bound temporal-certificate guards [15], and versioned evidence composition and eligibility reopening [16]. The encoder-information, robust-completion and adversarial-channel boundaries preserve their substantive corrections. The observation-cell qualifier on label distance, explicit optimal five-bit code, inner-removal-rank completeness proof against history-dependent controllers, and fresh-hidden-branch construction are written out in this edition and require its own independent review. They are expository clarifications or deductions, with no new-priority claim. Witsenhausen's exact reconstruction, Orlitsky–Roche's asymptotic function computation, Karp's covering complexity, and Emerson–Jutla's parity-game fixed points supply classical antecedents under their respective premises [17–20]; the present finite statements are proved here.
 
 The four finite certificate/temporal sources have bounded later reviews and preserved earlier failure records. Those historical assessments do not qualify this new exposition by inheritance. Their public adoption boundary continues to distinguish scoped ordinary mathematical results from external review and owner adoption, which remain pending. The original standalone evidence-transport ancestor packets were not newly received; the source's indexed reconciliation is not represented as direct custody of those missing bodies. No private paper or accepted edition is replaced by these finite proposals.
+
+Section 2.4 incorporates the exact graph-constrained result [21] and the independent review's fixed-root formula, horizon convention, counting formulas and limiting cases [22]. The CNOT/Steiner construction has the established antecedent [23]. The full-law interpretation and explicit separating laws retain their distinct mathematical scope; no physical or metaphysical application premise is inferred from the gates.
+
+Sections 9.5–9.6 reconcile the complete warranted-completion treatment [24], its finite support/price kernel supplement [25], and the cyclic/shared rule-compilation treatment [26]. The proofs retain the reviewed corrections: finite admitted prices are distinguished from infeasibility, failed candidate checks are not guaranteed terminal actions, raw reports stay outside the authenticated inventory, a restricted menu need not realize all acquisitions, optimal abstract choices do not identify concrete witnesses, snapshot-negative outputs preserve their scope, and pathwise worst-case cost differs from randomized expected cost. The permutation proof of the equal-price frontier bound writes out a consequence stated in the predecessor's review. The provenance, weighted-deduction and certificate/search antecedents [27–29] are acknowledged without claiming general novelty.
+
+The exact formal source [30] proves the visited-support inequality, synthesis from a finite connected witness, the optimum under a minimum-witness premise, and the local character pullback identity. Its constructive connected-set predicate is not separately identified inside Lean with an imported graph-connectivity predicate, and its unlabelled idle constructor is harmless for an at-most horizon only. Whole physical-word correspondence, the probability-simplex/topological lower bound, fixed-root strengthening, graph counts and saturation remain written proofs. The finite support/price formalization [31] proves normalization, the inverse, necessity and persistent updating in an arbitrary linearly ordered price type with a newly adjoined infeasibility top. Its catalogue, supports and acquisitions are finite; the ambient token type need not be. It supplies original pairs, not admitted derivation objects, authentication or actual terminal execution.
+
+The predecessor reports and reviews record Lean 4.19 certification of these exact formal bodies with the standard dependencies `propext`, `Classical.choice` and `Quot.sound`, and preserve false-strengthening controls. Their historical execution claims remain bound to those sources and their recorded environments. Source inspection here is not a fresh kernel replay, an audit of cached transitive dependencies, or receipt of every historical raw log. The Bellman criterion, semantic cover, finite rule compilation, and tree/shared-graph distinction have ordinary proofs and bounded historical finite checks; they are not added to the kernel certificate by association. The earlier distinction between a finite proof and unrestricted logical or epistemic completeness remains in force. Referenced ancestor manuscripts outside the actual received population receive no new whole-document reading or replacement credit.
 
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
@@ -900,6 +1317,18 @@ The four finite certificate/temporal sources have bounded later reviews and pres
 19. Richard M. Karp. “Reducibility among Combinatorial Problems.” In R. E. Miller and J. W. Thatcher (eds.), *Complexity of Computer Computations*, Plenum Press, 1972, 85–103. DOI: [10.1007/978-1-4684-2001-2_9](https://doi.org/10.1007/978-1-4684-2001-2_9). Set Covering is item 6 of the completeness theorem; see the [authorized reprint][19], original p. 94.
 20. E. Allen Emerson and Charanjit S. Jutla. “Tree Automata, Mu-Calculus and Determinacy (Extended Abstract).” *Proceedings of the 32nd Annual Symposium on Foundations of Computer Science*, 1991, 368–377. DOI: [10.1109/SFCS.1991.185392](https://doi.org/10.1109/SFCS.1991.185392). The [author manuscript][20], §§4.1–4.2, supplies nested fixed-point and history-free parity-game ancestry; Theorem 12 proves the stated finite specialization directly.
 
+21. Orthemology. *Graph-constrained unary continuation and exact parity cost*. [Complete result][21].
+22. Orthemology. *Independent review of graph-restricted unary continuation masks*. [Exact review][22], including the fixed-root formula and finite-horizon counts.
+23. Vivien Vandaele, Simon Martiel, and Timothée Goubault de Brugière. *Phase polynomials synthesis algorithms for NISQ architectures and beyond*. arXiv:2104.00934v1 (2021), §§2 and 4.1. [Primary paper][23]. The connecting-tree formula is explicit on PDF p. 10.
+24. Orthemology. *Warranted completion with proof-sensitive memory and inquiry cost*. [Complete final result][24]. Its independently reviewed revision separates terminal eligibility from executed checking and retains the restricted-menu and randomized-objective qualifications.
+25. Orthemology. *Kernel certification of the canonical residual-certificate theorem*. [Exact scope report][25], covering the finite support/price theorem rather than the Bellman or epistemic claims.
+26. Orthemology. *Compiling certificate frontiers from finite grounded rules*. [Complete final result][26], with separate tree and shared-graph checking contracts.
+27. Todd J. Green, Grigoris Karvounarakis, and Val Tannen. “Provenance Semirings.” *Proceedings of the 26th ACM SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems* (2007), §§3–5. [Primary paper][27]. Positive annotations, derivation-tree semantics and recursive fixed points provide ancestry; the current Pareto statements are proved above.
+28. Joshua Goodman. “Semiring Parsing.” *Computational Linguistics* 25(4) (1999), 573–606, especially §3.2 and the discussion of non-improving Viterbi loops. [Primary paper][28].
+29. Harry Buhrman and Ronald de Wolf. “Complexity Measures and Decision Tree Complexity: A Survey.” *Theoretical Computer Science* 288(1) (2002), 21–43, introduction and §4.1. [Author manuscript][29]. This supplies the standard certificate/query distinction, not the source-entitlement premises of §9.5.
+30. Orthemology. *Graph continuation: finite support synthesis and observable identity*. [Exact Lean source][30]. The independent source review distinguishes formalized claims from the surrounding ordinary mathematics.
+31. Orthemology. *Finite certificate frontiers and persistent acquisition*. [Exact Lean source][31]. The separate positive controls distinguish cost-sensitive pruning, present-cost insufficiency and collapsed-infinity failure.
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -922,3 +1351,15 @@ Repository references identify exact public source editions, not mutable current
 [18]: https://9p.io/cm/ms/former/alon/papers/funcom.ps.gz
 [19]: https://www.cs.umd.edu/~gasarch/BLOGPAPERS/Karp.pdf
 [20]: https://www.cs.utexas.edu/users/emerson/Pubs/1991-10.ej.FOCS.ta-games-mu.ps
+
+[21]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/RESULT.md
+[22]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP19/graph-continuation-review-20261009/review.md
+[23]: https://arxiv.org/pdf/2104.00934
+[24]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-research-20261009/RESULT.md
+[25]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/RESULT.md
+[26]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/certificate-compilation-boundary-20261009/RESULT.md
+[27]: https://www.cs.ucdavis.edu/~green/papers/pods07.pdf
+[28]: https://aclanthology.org/J99-4004.pdf
+[29]: https://homepages.cwi.nl/~rdewolf/publ/qc/dectree.pdf
+[30]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/GraphContinuation.lean
+[31]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean
