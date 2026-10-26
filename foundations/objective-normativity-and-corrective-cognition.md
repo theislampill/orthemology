@@ -370,6 +370,70 @@ These controls explain the importance of a complete, fixed edge registry. Adding
 
 The proposition is consequently a finite, exact result conditional on the declared graph and independently warranted $`L`$. It does not discover truth-loss from the increments, certify a metaphysical source, or prove that a real subject's learning is globally sound. Its constructive content is that the whole finite calibration claim can be verified using a forest and the associated fundamental cycles.
 
+### 7.2 From an exact potential to a warranted correction
+
+The calibration theorem establishes a real mathematical achievement. It does not make “correction” one scalar property that silently includes source authenticity, truth, function, authority and a recipient's action. The public treatment of norm provenance distinguishes thirteen questions which can now be joined to the theorem and to the account of wise direction in §6. Their distinctness is semantic, not a claim that they are probabilistically independent or that every assignment of answers is possible. A substantive theory may entail relations between them; those entailments must be stated and defended. [S32]
+
+Fix the standard and its version, the graph and increment units, the function account, the proposed bearer, the episode and time, the recipient and the target proposition or action. These indices matter: a correct result for one recipient, environment or standard does not become a result for another by omitting the argument places.
+
+| Question | What a positive answer must establish |
+|---|---|
+| Declared increment | What each admitted transition's correction label means and how its value is obtained. |
+| Path independence | Exact differences of a potential on the registered graph, under the orientation and cycle conventions of §7. |
+| Transition coverage | Why the graph includes the transitions relevant to the claimed scope. |
+| Temporal validity | Why the standard and labels persist, or how they validly transport between versions. |
+| Standard provenance | Which source, objective or governing norm is actually being represented, at the specified edition and scope. |
+| Semantic fidelity | Whether the labels represent the intended correction relation accurately. |
+| World connection | Why the represented improvement is truth-conducive or otherwise fitting in the actual domain. |
+| Function fixation | Why this mechanism has the claimed function under the specified causal-role, selected-effect, personal-design, learned-objective, proper-function or fiṭrah account. |
+| Bearer applicability | Whether the norm and function apply to this bearer and this exercise. |
+| Apprehended reason | Whether the bearer actually selects because it apprehends the fitting reason. |
+| Authority | Whether the relevant prescriptive or revelational title is genuine and applies here. |
+| Recipient warrant | Whether this recipient has the required source-and-content route, uptake and defeat conditions. |
+| Execution | Whether the proposed correction is actually performed. |
+
+One can define successive assessment contracts by adjoining these conditions: mathematical exactness; covered and temporally valid operation; accurate representation of the standard; truth-connected operation; account-specific function; bearer-local reason integration; applicable authority; recipient readiness; and executed correction. These conjunctions are useful specifications of a **particular claimed achievement**. They are not universal definitions of normativity or a necessary ladder for every true judgment. A reflex correction can be truth-directed without the reflective reason-uptake demanded by a wise intentional action. A recipient can acquire ordinary knowledge without occupying a revelational authority relation. A truth-directed function can exist even if an investigator has not yet identified it. The conditions for the achievement and the investigator's evidence for them must also remain distinct. [S32; §§5–6]
+
+The mathematical positive result is correspondingly precise. Where the graph is adequately covered for the task, the increments satisfy §7, and an independently warranted stable standard supplies the truth-loss calibration, $`N(v)=c_C-L(v)`$ on each connected component C. Therefore the potential compares two states in the same component by exactly the warranted loss difference, independently of the path used to compare them. Across different components, the constants $`c_C`$ are independent; their relative ranking requires additional calibration. A potential does not acquire that missing information by being plotted on one common axis.
+
+This result joins formal consistency to an independently justified standard. It does not infer the standard from consistency. For example, a score faithfully representing a systematically misleading doctrine can be exact, stable and semantically faithful to that doctrine while failing its world connection. A truth-correlated score can lack the historical or constitutive function relation required by the proposed account. Conversely, a mechanism historically selected or personally designed for truth can fail in an unsuitable current environment. A component may perfectly perform a manipulative causal role. Observed reliability without the rest of a proper-function account is not that account's warrant. These controls preserve actual explanatory differences rather than treating all function vocabulary as equivalent. [S32]
+
+A learned objective needs its own function-fixing account: the relevant training or reward history must be connected to the identity of the objective now being pursued. Present success at that objective does not establish how it was acquired, that its target is true or fitting, or that it carries normative authority. The same empirical performance can therefore leave different historical and normative questions open. [S32]
+
+Other controls concern the stronger personal and practical relations. An impersonal exact optimizer can reach the stipulated correct states without apprehending them as reasons. Several agents can distribute source custody, discrimination, authority and execution without one bearer satisfying the complete local package. Formally, $`\forall r\,\exists b\,P(r,b)`$ does not imply $`\exists b\,\forall r\,P(r,b)`$: two roles assigned exclusively to two different bearers give an immediate counterexample. A genuinely integrated collective may satisfy an appropriate collective account, but that account is an additional premise. Likewise a personal author can select an arbitrary or vicious standard, and a praiseworthy output can arise accidentally. Neither authorship nor outcome quality alone gives the wise direction of §6. [S32]
+
+An abstract-order account with a concrete actualizer makes a further explicit allocation. It can place the standard, its semantic relations and its truth connection in the proposed abstract order, while assigning function, bearer application, uptake, authority relations, recipient warrant and execution to the concrete mechanism or agents. This allocation is a rival explanatory proposal, not a demonstration that an abstract entity speaks or that a mechanism apprehends reasons. The applicability of the abstract standard, ownership of the relevant acts and integration in one bearer remain distinct bridges. Its formal description alone neither proves those bridges nor refutes a stronger source account that supplies them. [S32]
+
+A genuine authority can also be inaccessible to a recipient; a warranted recipient can fail to act. The sourcehood treatment's [account of informed self-governance and authenticated disclosure](received-actuality-and-intrinsic-necessity.md#12-self-knowledge-sovereignty-and-practical-conformance) supplies richer affirmative arguments for some of those relations. The numerical countermodels do not refute premises they omit. Conversely, a theological attribution of Wisdom cannot fill an unmeasured human mechanism or actual communication merely by giving its coordinate a favorable name.
+
+The vector does not prove that information about several coordinates cannot be encoded in one number. A finite tuple can be encoded injectively, and a separately defended theory can define a composite score. The defect is using an uncalibrated number as evidence for meanings it does not establish, or erasing a distinction needed by the intended use. Similarly, observing that a conjunction is false need not identify which conjunct failed. With two requirements, the alternatives (0,1) and (1,0) both make the conjunction false while requiring different repairs. If each required coordinate is independently determined and its substantive bridge holds, their conjunction is determined too. That constructive composition is useful; the encoding itself supplies no missing evidence.
+
+The inherited norm-provenance proposal does not provide fresh execution evidence for its historical checker or a complete formalization of these indices. Its intake correction reports a narrower repaired formal signature and an absent checker source. The proposed Wisdom citation also has a corrected locator: PDF position 227 corresponds to printed page 221, not printed 227. That is a correction reported by the public intake, not a newly inspected translation page here. The source passage is not credited with stating this entire vector, and the six guarded a-fortiori conditions remain the project's synthesis unless a primary source jointly supports them. A complete philosophical or theological application still owes its actual source, world, bearer and recipient premises. [S32]
+
+### 7.3 Transporting a correction scale through time
+
+Per-version exactness alone does not establish that two versions represent the same norm. The missing comparison can be made constructive. Let $`N_0:V_0\to\mathbb R`$ and $`N_1:V_1\to\mathbb R`$ be exact potentials for two graph versions with fixed increment units. Let $`\phi:V_0\to V_1`$ be a justified bijective correspondence of the states being compared. Choose a spanning forest H on $`V_0`$ whose edges occur in the old graph and whose corresponding edges occur in the new graph. Suppose their increments agree:
+
+```math
+d_1(\phi(u),\phi(v))=d_0(u,v)
+\qquad ((u,v)\text{ an oriented edge of }H).
+```
+
+**Proposition — Exact temporal transport.** On every connected component C of H there is a constant $`k_C`$ such that
+
+```math
+N_1(\phi(v))=N_0(v)+k_C\qquad(v\in C).
+```
+
+Consequently all potential differences, and hence all rankings, within C are preserved. One matched value in C fixes its additive constant.
+
+**Proof.** Put $`F(v)=N_1(\phi(v))-N_0(v)`$. Exactness and increment agreement give $`F(v)-F(u)=0`$ on each forest edge. Every two vertices of C are joined by a forest path; telescoping gives equality of F along that path. Its common value is $`k_C`$. Subtracting two displayed equations preserves their difference, and one matched value determines the constant. ∎
+
+This is an elementary composition of the exact-potential argument with a warranted state correspondence. If H connects the whole comparison domain, every pairwise ranking there is preserved. If H is disconnected, only within-component comparisons follow. For example, old and new exact potentials on three states can be $`(0,1,2)`$ and $`(0,1,-1)`$. Their increment on the common edge from the first to the second state agrees, while the third state's ranking reverses. Each full version can have its own connected graph and zero cycle sums; an uncalibrated cross-version connection is still missing. [S9, S32]
+
+The converse holds at the same scope: if the pulled-back potentials differ by a constant on a component, every corresponding edge within it has the same increment. Hence a cross-version check can be reduced to a forest once both versions' exactness and the state correspondence are established. This reduces the mathematical comparison burden without replacing semantic validation. If the meaning of a state, loss, unit or target has changed, equality of the numbers is not sameness of the standard. An omitted transition can also invalidate a claimed whole-graph certificate without contradicting any earlier finite calculation. Actual truth calibration, function, authority and uptake therefore remain the separate questions in §7.2.
+
+
 ## 8. What interventions can distinguish
 
 A functional explanation may have consequences that ordinary observation cannot distinguish. A useful intervention must discriminate the competing explanations through the complete response relevant to the inquiry. Merely distinguishing a surface action can leave its target, source attribution, or normative mode unsettled. [S10]
@@ -1318,3 +1382,6 @@ The following subject descriptions identify the public Orthemology arguments use
 **S30.** Orthemology public research. *Isomorphism-natural semantics and interpretation rigidity*, revised public proposal. [Public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). Exact Git object: `757b0914dcbe7ac1319690c639916cc837913ea3`. The selector proof, semantic distinctions and controls are incorporated in §8.10, with the fixed-family direction of signature refinement corrected. Its secondary El-Tobgui attribution remains inherited at that scope, not a newly inspected medieval primary source.
 
 **S31.** Orthemology public research. *Semantic gauge, literal reference and constitutive interpretation*, revised public proposal. [Public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). Exact Git object: `fb0dd5524c9ef2ab6c9c968cf06eedf9cd3e1002`. The content-action obstruction, anchor condition and philosophical and experimental controls are incorporated in §8.10; the distinction between singleton orbits and identifying evidence fibres is explicit. The commuting-action consequence is a composition of these two source treatments, not an assertion of general mathematical novelty or owner adoption.
+
+
+**S32.** Orthemology public research. *Norm provenance, correction vectors and truth-connected function*. Exact Git object `e07ad6ae52dae67a8b2a341fe5e2c9377a1c9713`, with public intake correction `98781176fe14912cb0ee6d1c541793e4bb906aab` and proposal-status note `c2817d65685bac1984ab631ff0966b406c9afe31`, in the [public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). The vector and its countermodels are source-relative assessment proposals. Sections 7.2–7.3 supply the complete necessary mathematical arguments and retain the source, function, bearer, recipient and execution distinctions. No new execution of the absent historical checker or complete formal certificate is claimed.
