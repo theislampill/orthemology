@@ -37,6 +37,7 @@ These directly readable treatments contain the arguments and proofs reconciled f
 - [Collective inquiry: information, strategy and coordinated judgment](../../mathematics/collective-inquiry-and-strategic-coordination.md): distributed evidence, scalar and vector games, coordination bounds, statistical identification, conditional restoration, information-compatible transfer, finite-memory learning and fresh-innovation limits, with their complete proofs and counterexamples.
 - [Tensor moments and corrective dynamics](../../mathematics/tensor-moments-and-corrective-dynamics.md): moment realizability, the arbitrary-coercive existence theorem, signed and time-dependent dynamics, hidden coordinates, nonmoment constructions, finite-prefix limits and effective recovery.
 - [Common repair and the geometry of coherent forecasts](../../mathematics/common-repair-and-geometric-obstructions.md): quadratic and smooth rigidity, generalized means, minimax limits, coupled polynomial repair and counterexamples to local or score-only criteria.
+- [Source Context, Reacquisition, and Bounded Handoff](../../epistemology/source-context-and-reacquisition.md): exact open-fragment effects, role-sensitive source dependence, lawful reacquisition costs, interval and whole-card access, and a conditional responsibility argument.
 
 The [incorporation and review record](../scientific-consolidation-review.md) states the exact reviewed editions, source-replacement scope, failed findings and remaining physical-removal gates.
 

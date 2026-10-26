@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "f1a4003bfaaf8c8b0200653dd75d54b1fd3b966d",
-      "bytes": 193746,
-      "sha256": "545f15700fb8f29697fead80c71c0157a8c022e54b0de64f09b6e23fb2eb4806",
+      "git_oid": "1962d1005baf1e95697f0304ece25adec190aa0a",
+      "bytes": 202968,
+      "sha256": "fc2c3d3ff83e15f7f5b0e4f1b3ce349fec5d484c354fa43292cabf99bf4c60df",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -613,7 +613,8 @@
         "collective-inquiry-and-strategic-coordination",
         "tensor-moments-and-corrective-dynamics",
         "common-repair-and-geometric-obstructions",
-        "objective-normativity-and-corrective-cognition"
+        "objective-normativity-and-corrective-cognition",
+        "source-context-and-reacquisition"
       ],
       "supporting_source_keys": []
     },
@@ -702,6 +703,21 @@
       "role": "work-source",
       "work_keys": [
         "objective-normativity-and-corrective-cognition"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-source-context-and-reacquisition",
+      "path": "epistemology/source-context-and-reacquisition.md",
+      "mode": "100644",
+      "git_oid": "3b264b982289709e3c9dede414bac8cc1b45b578",
+      "bytes": 81829,
+      "sha256": "d2959f86dfa03f1ba82362702e9dcfeb275c5155c40afe82bf941446a8a6d60b",
+      "role": "work-source",
+      "work_keys": [
+        "source-context-and-reacquisition"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"

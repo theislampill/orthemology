@@ -6185,7 +6185,7 @@ class HistoricalProseReaderTests(unittest.TestCase):
         self.assertEqual(set(admitted), set(self.PATHS))
         self.assertEqual((self.owners, self.cross), before, 'verification may not rewrite its evidence')
         self.assertEqual(self.owners['baseline_work_population']['count'], 448)
-        self.assertEqual(len(self.cross['sources']), 1629)
+        self.assertEqual(len(self.cross['sources']), 1630)
 
     def test_full_reader_uses_explicit_history_for_missing_predecessors(self):
         saved = {}
