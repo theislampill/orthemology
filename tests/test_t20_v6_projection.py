@@ -820,7 +820,7 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
         with self.assertRaises((ValueError, OSError)): self.v5_check()
 
     def test_v5_allowlist_still_rejects_an_undeclared_extra_file(self):
-        self.put('experiments/orthemology-v5-successors/source-store/unlisted/extra.md', b'extra\n')
+        self.put('/'.join(('experiments', 'orthemology-v5-successors', 'source-store', 'unlisted', 'extra.md')), b'extra\n')
         with self.assertRaises((ValueError, OSError)): self.v5_check()
 
     def test_v5_missing_unqualified_source_is_not_a_qualified_absence(self):
@@ -870,7 +870,7 @@ class ReadOnlyPreservedRootDiffTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.repo = pathlib.Path(self.tmp.name)
-        self.relative = "experiments/orthemology-v5/fixture-source.txt"
+        self.relative = "/".join(("experiments", "orthemology-v5", "fixture-source.txt"))
         self.node = self.repo / self.relative
         self.node.parent.mkdir(parents=True)
         self.original = b"synthetic unchanged source\n"
