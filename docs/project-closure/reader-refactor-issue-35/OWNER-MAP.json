@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "1962d1005baf1e95697f0304ece25adec190aa0a",
-      "bytes": 202968,
-      "sha256": "fc2c3d3ff83e15f7f5b0e4f1b3ce349fec5d484c354fa43292cabf99bf4c60df",
+      "git_oid": "09c5939a7b612f8b0efd059c032784d1bb1918fe",
+      "bytes": 216737,
+      "sha256": "bba02eafcd0881f0a4f4569d216f5b78ad1742ed3e6f652e407bb9081b8e73b0",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -614,7 +614,8 @@
         "tensor-moments-and-corrective-dynamics",
         "common-repair-and-geometric-obstructions",
         "objective-normativity-and-corrective-cognition",
-        "source-context-and-reacquisition"
+        "source-context-and-reacquisition",
+        "measure-computability-and-finite-warrant"
       ],
       "supporting_source_keys": []
     },
@@ -712,12 +713,27 @@
       "key": "consolidated-source-context-and-reacquisition",
       "path": "epistemology/source-context-and-reacquisition.md",
       "mode": "100644",
-      "git_oid": "3b264b982289709e3c9dede414bac8cc1b45b578",
-      "bytes": 81829,
-      "sha256": "d2959f86dfa03f1ba82362702e9dcfeb275c5155c40afe82bf941446a8a6d60b",
+      "git_oid": "44997453e9499706c6c7491c4a198f25758dc840",
+      "bytes": 81721,
+      "sha256": "c057d7b15f40784ac9a638373ac21830c62eac2414822b36b4cdbdb288088c1d",
       "role": "work-source",
       "work_keys": [
         "source-context-and-reacquisition"
+      ],
+      "supporting_source_keys": [
+        "scientific-consolidation-review"
+      ]
+    },
+    {
+      "key": "consolidated-measure-computability-and-finite-warrant",
+      "path": "mathematics/measure-computability-and-finite-warrant.md",
+      "mode": "100644",
+      "git_oid": "ccf2e82779539172cbe461e09747ad447c7075f1",
+      "bytes": 49336,
+      "sha256": "ecef4a5caf06945c13774f957146e59b771f3344b01947f4b7b317078788c4db",
+      "role": "work-source",
+      "work_keys": [
+        "measure-computability-and-finite-warrant"
       ],
       "supporting_source_keys": [
         "scientific-consolidation-review"

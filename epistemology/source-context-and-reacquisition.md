@@ -71,9 +71,9 @@ The current context is $`s_0`$; the later entries are suspended parents. The str
 
 | Event | Concrete action |
 |---|---|
-| $`\operatorname{enter}(o)`$ | Prepend the original key $`o`$ |
-| $`\operatorname{leave}`$ | Remove the current context, requiring a remaining parent |
-| $`\operatorname{emit}(t)`$ | Associate fresh selected output occurrence $`t`$ with the current original key |
+| $`\mathrm{enter}(o)`$ | Prepend the original key $`o`$ |
+| $`\mathrm{leave}`$ | Remove the current context, requiring a remaining parent |
+| $`\mathrm{emit}(t)`$ | Associate fresh selected output occurrence $`t`$ with the current original key |
 
 An unselected emission has no effect on the selected output record. The full proposition carried by an output remains separate data; the effect records its source attribution. Every admitted execution keeps at least one stack frame after every prefix. The event skeleton and its relation to the source text are supplied interpretations. This machine is not a complete semantics of quotation, irony, belief, mixed quotation, or author commitment. [1, §§2–3]
 
@@ -103,9 +103,9 @@ Start with
 
 Process the events as follows:
 
-1. On $`\operatorname{enter}(o)`$, replace $`P`$ by $`[o]\mathbin{\|}P`$.
-2. On $`\operatorname{leave}`$ with nonempty $`P`$, remove its first element.
-3. On $`\operatorname{leave}`$ with empty $`P`$, replace $`k`$ by $`k+1`$ and then replace $`h`$ by $`\max(h,k+1)`$, using the new $`k`$.
+1. On $`\mathrm{enter}(o)`$, replace $`P`$ by $`[o]\mathbin{\|}P`$.
+2. On $`\mathrm{leave}`$ with nonempty $`P`$, remove its first element.
+3. On $`\mathrm{leave}`$ with empty $`P`$, replace $`k`$ by $`k+1`$ and then replace $`h`$ by $`\max(h,k+1)`$, using the new $`k`$.
 4. On a selected emission $`t`$, append $`(t,P_0)`$ when $`P`$ is nonempty, and append $`(t,I_k)`$ otherwise.
 5. An unselected emission leaves $`M`$ unchanged.
 
@@ -184,7 +184,7 @@ The formulas concatenate lists, not sets of roles. Their source keys preserve oc
 
 ### 2.3 Keyed exits and source-bound cuts
 
-Depth alone cannot validate a closing marker from another source or snapshot. A refinement replaces an unlabelled leave by $`\operatorname{exit}(o)`$, which first requires the current origin to equal the supplied original key $`o`$.
+Depth alone cannot validate a closing marker from another source or snapshot. A refinement replaces an unlabelled leave by $`\mathrm{exit}(o)`$, which first requires the current origin to equal the supplied original key $`o`$.
 
 Extend an effect by a finite conjunction $`C`$ of origin-reference equalities. If the symbolic current origin is a literal key $`a`$, an exit checks $`a=o`$. Unequal literals make the domain empty. If the current origin is $`I_j`$, the exit adds $`I_j=o`$ and then performs the leave update. Two distinct required keys for one incoming position also give an empty domain. Equality here is equality of the bound source, snapshot, and context occurrence, rather than equality of its proposition. [2, “Optional keyed exits”; 8, §1]
 
@@ -201,9 +201,9 @@ with the depth, emission, and outgoing-stack formulas above.
 For example, the suffix
 
 ```math
-\operatorname{exit}(f);\quad
-\operatorname{exit}(p);\quad
-\operatorname{emit}(z)
+\mathrm{exit}(f);\quad
+\mathrm{exit}(p);\quad
+\mathrm{emit}(z)
 ```
 
 has minimum depth three and requires $`I_0=f`$ and $`I_1=p`$. Its selected emission still refers to $`I_2`$. These checks do not identify $`I_2`$ with any particular original key $`a`$. A separate boundary witness must supply that map.
@@ -254,7 +254,7 @@ An actual context-path read may supply both. In the historical source case descr
 If a fixed adequate identity-acquisition protocol costs $`c_0`$ and also reveals roles on $`K`$, then, conditional on its actual holdings and absent a known relevant negative, the plan
 
 ```math
-c_0+\operatorname{cover}(L\setminus K,W)
+c_0+\mathrm{cover}(L\setminus K,W)
 ```
 
 completes the two phases whenever its cover is finite. The second term is exact under the hypotheses of the following theorem. The sum is not claimed optimal among all possible joint identity-and-role protocols. A different joint observation may reveal more information at a different price.
@@ -270,7 +270,7 @@ Let $`W`$ be a finite menu of presently available and permitted reads. A read $`
 For an unresolved demand $`L`$, define
 
 ```math
-\operatorname{cover}(L,W)=
+\mathrm{cover}(L,W)=
 \min\left\{
 \sum_{w\in F}c(w):
 F\subseteq W,\quad
@@ -295,11 +295,11 @@ Reads covering a key must also reveal an adequate witness for its role. Response
 
 The star has only $`|L|+1`$ required source assignments. A full product of independent binary roles is a sufficient stronger construction, but is not necessary for this proof. The word “independent” here must not conceal a missing observation premise: no probability distribution or stochastic independence assumption is being used.
 
-**Theorem 4 — Exact deterministic read cost.** Under the stated star, locality, adequacy, fixed-service, and total-decision assumptions, the minimum worst-case cost of a deterministic completing policy is $`\operatorname{cover}(L,W)`$. If the cover is infinite, no such policy exists.
+**Theorem 4 — Exact deterministic read cost.** Under the stated star, locality, adequacy, fixed-service, and total-decision assumptions, the minimum worst-case cost of a deterministic completing policy is $`\mathrm{cover}(L,W)`$. If the cover is infinite, no such policy exists.
 
 **Proof.** Follow any completing policy on $`s^*`$. If it terminates before reading a family covering $`L`$, choose an uncovered key $`o`$. The initial holdings agree with those on $`s^{(o)}`$. Induct over the reads on the $`s^*`$ path. Equal observations and determinism give the same next read, up to the admitted handle renaming. That read does not cover $`o`$, so locality supplies the same complete response. The induction therefore gives the same terminating decision in both sources. Their conjunctions differ, a contradiction.
 
-Consequently the all-positive path reads a cover. If a read is repeated, its repeated cost only increases the path cost; the distinct reads on that path still form a cover. The worst-case cost is at least $`\operatorname{cover}(L,W)`$. If no cover exists, the contradiction excludes every total completing policy.
+Consequently the all-positive path reads a cover. If a read is repeated, its repeated cost only increases the path cost; the distinct reads on that path still form a cover. The worst-case cost is at least $`\mathrm{cover}(L,W)`$. If no cover exists, the contradiction excludes every total completing policy.
 
 For a finite cover minimum, choose an attaining family, which exists because $`W`$ is finite. Read its members. Return false when an adequate witness gives a relevant zero; otherwise return true after all demanded roles have been covered. Adequacy makes every returned answer correct. The cost is at most the selected cover cost on every admitted source, and the all-positive source requires the full cover under this policy. The upper and lower bounds coincide. $`\square`$
 
@@ -378,7 +378,7 @@ F(i)=
 
 A minimum over an empty family is infinity. In this recurrence $`r(w)\geq i`$, so each finite candidate uses an already computed later suffix.
 
-**Proposition 6 — Exact interval cover.** Under the adequate-window assumption, $`F(1)=\operatorname{cover}(L,W)`$. Recording an attaining window at each finite entry yields a legal minimum-cost read plan. A direct table uses $`O(m|W|)`$ candidate evaluations after endpoints are known and $`O(m)`$ cost storage. [1, §6]
+**Proposition 6 — Exact interval cover.** Under the adequate-window assumption, $`F(1)=\mathrm{cover}(L,W)`$. Recording an attaining window at each finite entry yields a legal minimum-cost read plan. A direct table uses $`O(m|W|)`$ candidate evaluations after endpoints are known and $`O(m)`$ cost storage. [1, §6]
 
 **Proof.** A window covering $`\ell_i`$ covers every demanded position from $`i`$ to $`r(w)`$ by convexity. Combining it with a cover of the remaining suffix therefore gives a cover of the whole suffix from $`i`$. This proves that each finite recurrence candidate is attainable.
 
@@ -409,9 +409,9 @@ For $`n`$ demanded origins and a vector $`x\in\{0,1\}^n`$, form a source with a 
 All assignments have the same event shape
 
 ```math
-\operatorname{enter}(o_i);\
-\operatorname{emit}(t_i);\
-\operatorname{leave},
+\mathrm{enter}(o_i);\
+\mathrm{emit}(t_i);\
+\mathrm{leave},
 ```
 
 the same proposition strings, the same source-coordinate and equality pattern, and different omitted role tokens as required. Every copy of section $`i`$ retains the same original key and therefore the same role. The family does not assign contradictory roles to copies of one source context.
