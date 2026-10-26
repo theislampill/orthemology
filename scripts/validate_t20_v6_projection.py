@@ -17,7 +17,7 @@ from functools import lru_cache
 from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, source_bytes, MEDIATOR_GUIDE, mediator_guide_source_bytes,
-    HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, readonly_git_diff,
+    HISTORICAL_PROSE_REVISIONS, MEDIATOR_APPROXIMATION, FISHER_AUDIT, readonly_git_diff,
 )
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -223,15 +223,17 @@ def check_public_inventory(root, rows, controls):
     declared = {r['repository_path'] for r in rows if r['disposition'] in ('ADD_EXACT', 'PROJECT')}
     expected = declared | set(controls['files']) | {MANIFEST, PREFIX + '/PUBLIC_CONTROLS.json'}
     actual = {p.relative_to(root).as_posix() for p in (root / PREFIX).rglob('*') if p.is_file()}
-    if MEDIATOR_APPROXIMATION in expected and MEDIATOR_APPROXIMATION not in actual:
-        selected = [r for r in rows if r.get('repository_path') == MEDIATOR_APPROXIMATION]
+    for historical in (MEDIATOR_APPROXIMATION, FISHER_AUDIT):
+        if historical not in expected or historical in actual:
+            continue
+        selected = [r for r in rows if r.get('repository_path') == historical]
         try:
             if len(selected) != 1:
                 raise ValueError('missing or duplicate approximation owner')
             source_bytes(root, selected[0])
         except (KeyError, OSError, ValueError, subprocess.CalledProcessError):
             return ['public inventory has an unqualified historical absence']
-        expected.remove(MEDIATOR_APPROXIMATION)
+        expected.remove(historical)
     if actual != expected:
         return ['public inventory differs: ' + str(sorted(actual ^ expected)[:10])]
     return []

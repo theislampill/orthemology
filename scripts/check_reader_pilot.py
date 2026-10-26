@@ -24,6 +24,7 @@ from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, HISTORICAL_PROSE_REVISIONS, HISTORICAL_PROSE_DISPOSITIONS,
     MEDIATOR_PROSE, MEDIATOR_GUIDE, mediator_guide_source_bytes, readonly_git_diff,
+    ORIGINAL_HISTORICAL_PROSE_PATHS, FISHER_AUDIT, FISHER_PROSE_REVISION,
 )
 
 
@@ -347,7 +348,7 @@ def permitted_historical_status_pin(repo, row, body):
         if candidate == expected:
             return True  # The original two-navigation-binding contract remains valid.
         for path in HISTORICAL_PROSE_PUBLIC_PATHS:
-            if path in MEDIATOR_PROSE:
+            if path not in ORIGINAL_HISTORICAL_PROSE_PATHS:
                 continue
             blob, identity, size = HISTORICAL_PROSE[path]
             selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
@@ -399,6 +400,32 @@ def permitted_historical_status_pin(repo, row, body):
                     or source.get("public_sha256") != identity):
                 return False
             source.update(repository_revision=HISTORICAL_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the exact seven-path plus math-code evidence form.
+        blob, identity, size = HISTORICAL_PROSE[FISHER_AUDIT]
+        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+        if len(selected) != 1:
+            return False
+        source = selected[0]
+        if (source.get("disposition") != "ADD_EXACT" or source.get("repository_path") != FISHER_AUDIT
+                or source.get("source_bytes") != size or source.get("public_bytes") != size
+                or source.get("public_sha256") != identity):
+            return False
+        source.update(repository_revision=FISHER_PROSE_REVISION, git_blob=blob)
+        if candidate == expected:
+            return True  # Preserve the Fisher form before the legacy-test code pin.
+        identity = "77f9a6bb323345942a400353a614caeacb2546cc11cbde95cb082ca4acaf1a09"
+        selected = [r for r in expected["objects"] if r["source_sha256"] == identity]
+        if len(selected) != 1:
+            return False
+        source = selected[0]
+        if (source.get("disposition") != "REUSE"
+                or source.get("repository_path") != "tests/test_v5_twentieth_data.py"
+                or source.get("source_bytes") != 6819 or source.get("public_bytes") != 6819
+                or source.get("public_sha256") != identity):
+            return False
+        source.update(repository_revision=HISTORICAL_PROSE_REVISION,
+                      git_blob="e1bad4344f949d9ddbe32ca6c4e6bd4158515a86")
         return candidate == expected
     except (KeyError, TypeError, ValueError):
         return False
@@ -417,6 +444,7 @@ REFACTOR_EDIT_PATHS = {
     # this does not admit any new source path or predecessor modification.
     "scripts/resolve_t20_v6_source.py", "scripts/validate_t20_v6_projection.py",
     "tests/test_t20_v6_projection.py", "scripts/validate_v5_successors.py",
+    "tests/test_v5_twentieth_data.py",
     # Existing source-display integrity owner and its focused regression tests;
     # scholarly bodies still require their exact source/work/review admission.
     "scripts/validate_math_source.py", "tests/test_math_source_validator.py",
@@ -584,9 +612,11 @@ def check_historical_sources(repo, baseline_rows, owners, cross, additions):
                    or not isinstance(row.get("path"), str) for row in declared)):
         return {}, ["historical-source: malformed finite path dispositions"]
     paths = {row["path"] for row in declared}
+    original = set(ORIGINAL_HISTORICAL_PROSE_PATHS)
+    mediator = original | set(MEDIATOR_PROSE)
     if (len(paths) != len(declared) or paths not in
-            (set(HISTORICAL_PROSE) - set(MEDIATOR_PROSE), set(HISTORICAL_PROSE))):
-        return {}, ["historical-source: expected the original five or all seven exact path dispositions"]
+            (original, mediator, mediator | {FISHER_AUDIT})):
+        return {}, ["historical-source: expected exactly the original five, mediator seven or Fisher eight path dispositions"]
     admitted, errors = {}, []
     sources = cross.get("sources", {})
     for binding in declared:

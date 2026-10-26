@@ -195,6 +195,7 @@ class ReaderPilotTests(unittest.TestCase):
     def test_scholarly_display_maintenance_keeps_a_finite_source_boundary(self):
         for directory, name in (("scripts", "validate_math_source.py"),
                                 ("tests", "test_math_source_validator.py"),
+                                ("tests", "test_v5_twentieth_data.py"),
                                 ("docs/project-closure/r7e-sol", "R7E-SOL-ADVERSARIAL-REPORT.md")):
             path = self.repo / directory / name
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -214,6 +215,13 @@ class ReaderPilotTests(unittest.TestCase):
         self.reject(self.check(), "corpus-currentness")
         self.git("reset", "--", str(neighboring.relative_to(self.repo)))
         neighboring.unlink()
+        self.assertEqual(self.check(), [])
+        legacy_neighbor = self.repo / "tests" / "test_v5_twentieth_data_unregistered.py"
+        legacy_neighbor.write_text("# Synthetic unadmitted neighboring test owner.\n")
+        self.git("add", "--", str(legacy_neighbor.relative_to(self.repo)))
+        self.reject(self.check(), "corpus-currentness")
+        self.git("reset", "--", str(legacy_neighbor.relative_to(self.repo)))
+        legacy_neighbor.unlink()
         self.assertEqual(self.check(), [])
 
     def test_unknown_file_inside_reader_directory_is_not_a_blanket_exemption(self):
@@ -998,7 +1006,8 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         expected, _ = self.candidate()
         # Preserve the exact original document, adding only the separately
         # qualified four prose bindings, three mediator/evidence bindings,
-        # two math-code evidence bindings, and the two old pins.
+        # two math-code evidence bindings, the Fisher ADD_EXACT binding,
+        # the legacy guide-test code binding, and the two old pins.
         for path in HistoricalProseReaderTests.PATHS:
             for row in expected["objects"]:
                 if row.get("repository_path") == path:
@@ -1017,11 +1026,80 @@ class HistoricalMetadataPinTests(unittest.TestCase):
                 "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "dcb9a7171c3f82114936c36529093674e98417ca"),
             ("scripts/validate_math_source.py",
                 "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "7a72d773ca5248b26383624ee1837448b9a2479c"),
+            ("research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md",
+                "a7ff0e33d1a299db640041c46b1af81ca70851f6", "4dd0bce99ab60c34752bda1e4102341b67350c79"),
+            ("tests/test_v5_twentieth_data.py",
+                "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c", "e1bad4344f949d9ddbe32ca6c4e6bd4158515a86"),
         ):
             row = next(r for r in expected["objects"] if r.get("repository_path") == path)
             row.update(repository_revision=revision, git_blob=blob)
         actual = json.loads((ROOT / self.manifest_path).read_bytes())
         self.assertEqual(actual, expected, "historical owner metadata changed outside the finite bindings")
+
+    def test_fisher_pin_follows_all_prior_pins_without_resetting_the_manifest(self):
+        path = "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md"
+        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        legacy = next(r for r in value["objects"]
+                      if r.get("repository_path") == "tests/test_v5_twentieth_data.py")
+        legacy.pop("repository_revision")
+        legacy.pop("git_blob")
+        row = next(r for r in value["objects"] if r.get("repository_path") == path)
+        self.assertEqual((row["disposition"], row["repository_revision"], row["git_blob"]),
+                         ("ADD_EXACT", "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+                          "4dd0bce99ab60c34752bda1e4102341b67350c79"))
+        self.assertTrue(self.permitted(value))
+        old = deepcopy(value)
+        previous = next(r for r in old["objects"] if r.get("repository_path") == path)
+        previous.pop("repository_revision")
+        previous.pop("git_blob")
+        self.assertTrue(self.permitted(old), "the prior seven-path/math-code form must remain valid")
+        for field, replacement in (("repository_revision", "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c"),
+                                   ("repository_revision", "HEAD"), ("git_blob", "0" * 40),
+                                   ("disposition", "REUSE"), ("public_bytes", 29667),
+                                   ("public_sha256", "0" * 64), ("role", "reclassified")):
+            with self.subTest(field=field, replacement=replacement):
+                changed = deepcopy(value)
+                next(r for r in changed["objects"] if r.get("repository_path") == path)[field] = replacement
+                self.assertFalse(self.permitted(changed))
+        wrong = deepcopy(value)
+        prior = next(r for r in wrong["objects"] if r.get("repository_path") == "scripts/validate_math_source.py")
+        prior.pop("git_blob")
+        self.assertFalse(self.permitted(wrong), "Fisher cannot hide a missing prior evidence pin")
+
+    def test_legacy_guide_code_pin_follows_fisher_without_resetting_prior_forms(self):
+        path = "tests/test_v5_twentieth_data.py"
+        value = json.loads((ROOT / self.manifest_path).read_bytes())
+        row = next(r for r in value["objects"] if r.get("repository_path") == path)
+        self.assertEqual((row["disposition"], row["repository_revision"], row["git_blob"]),
+                         ("REUSE", "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+                          "e1bad4344f949d9ddbe32ca6c4e6bd4158515a86"))
+        self.assertTrue(self.permitted(value))
+        prior = deepcopy(value)
+        previous = next(r for r in prior["objects"] if r.get("repository_path") == path)
+        previous.pop("repository_revision")
+        previous.pop("git_blob")
+        self.assertTrue(self.permitted(prior), "the exact Fisher checkpoint must remain valid")
+        for field, replacement in (("repository_revision", "HEAD"),
+                                   ("repository_revision", "a7ff0e33d1a299db640041c46b1af81ca70851f6"),
+                                   ("git_blob", "0" * 40), ("repository_path", "tests/unrelated.py"),
+                                   ("source_bytes", 6820), ("public_bytes", 6820),
+                                   ("public_sha256", "0" * 64), ("role", "reclassified")):
+            with self.subTest(field=field, replacement=replacement):
+                wrong = deepcopy(value)
+                next(r for r in wrong["objects"] if r.get("repository_path") == path)[field] = replacement
+                self.assertFalse(self.permitted(wrong))
+        for earlier in (
+                "scripts/validate_math_source.py",
+                "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md"):
+            with self.subTest(missing_prior=earlier):
+                wrong = deepcopy(value)
+                missing = next(r for r in wrong["objects"] if r.get("repository_path") == earlier)
+                missing.pop("repository_revision")
+                missing.pop("git_blob")
+                self.assertFalse(self.permitted(wrong), "the later pin cannot hide a missing prior pin")
+        unrelated = deepcopy(value)
+        unrelated["objects"][0]["role"] = "reclassified"
+        self.assertFalse(self.permitted(unrelated))
 
     def test_contributor_pin_is_required_and_only_exact_metadata_is_admitted(self):
         identity = "5e00b728e533c019b656032a86b5427f820d281056c40d78df0d0cf2c1549bc1"

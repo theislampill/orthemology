@@ -586,9 +586,9 @@
       "key": "consolidated-information-and-inquiry",
       "path": "mathematics/information-and-inquiry.md",
       "mode": "100644",
-      "git_oid": "55c4a544d8e45d30d4a3a7c7fc6d02c3657d7a0e",
-      "bytes": 135000,
-      "sha256": "20b72ed0418d5b0adef6e3dc02f107064b4c6973572da3bf6b713a5562d87dab",
+      "git_oid": "e05760b3de06e4b6a87cf46f8cad5cffa4de95ed",
+      "bytes": 171471,
+      "sha256": "a3aa59b28bf1594d855fbe116c2d4b399351f86b410fad4f997fa5c5b0df2a6b",
       "role": "work-source",
       "work_keys": [
         "information-retained-by-inquiry"
@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "c08963282e609d8ddc95a1357e67d439bbe8446a",
-      "bytes": 186243,
-      "sha256": "d7d4b08fa80379af2e3fd04b8ce548111e48af5bf7747dad26f444128099a893",
+      "git_oid": "f1a4003bfaaf8c8b0200653dd75d54b1fd3b966d",
+      "bytes": 193746,
+      "sha256": "545f15700fb8f29697fead80c71c0157a8c022e54b0de64f09b6e23fb2eb4806",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -763,6 +763,14 @@
       "git_blob": "8c8b327bb642570307e50ddaef35850b508a80e6",
       "role": "historical-source",
       "reading_source": "consolidated-collective-inquiry",
+      "basis": "scientific-consolidation-review"
+    },
+    {
+      "path": "research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md",
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "4dd0bce99ab60c34752bda1e4102341b67350c79",
+      "role": "historical-source",
+      "reading_source": "consolidated-information-and-inquiry",
       "basis": "scientific-consolidation-review"
     }
   ]

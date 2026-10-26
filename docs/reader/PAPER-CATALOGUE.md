@@ -29,7 +29,7 @@ The [result index](RESULT-INDEX.md) is the shorter route to a named theorem or c
 
 These directly readable treatments contain the arguments and proofs reconciled from their public predecessors. Their independent incorporation review is scoped; none silently replaces an accepted paper edition or confers owner adoption.
 
-- [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees. Includes exact graph-action costs, persistent evidence frontiers, optimal further inquiry and finite tree/shared-proof compilation.
+- [Information retained by inquiry](../../mathematics/information-and-inquiry.md): predictive states, posterior equivalence, inquiry value, Fisher dynamics, certificate selection and finite temporal guarantees. Includes exact graph-action costs, persistent evidence frontiers, optimal further inquiry and finite tree/shared-proof compilation. The [unknown-standard treatment](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) adds repair precision, fresh-sample costs, positive persistent correction and the finite-harmful-probing boundary.
 - [Received actuality, intrinsic necessity, and original source unity](../../foundations/received-actuality-and-intrinsic-necessity.md): causal intelligibility and its limits, complete original-production arguments, connected-field coverage, explanatory countermodels, centered knowledge and informed practical agency.
 - [Objective normativity and corrective cognition](../../foundations/objective-normativity-and-corrective-cognition.md): intelligibility and function, truth-calibrated correction, intervention, intrinsic reasons, source-owned undertakings and the strongest inspected contemporary rivals.
 - [Recognition, warrant, defeat and restoration](../../epistemology/recognition-warrant-and-restoration.md): positive cognitive grounds, complete relevant-inference proofs and countermodels, necessary targets, proper function, cumulative evidence, surviving warrant and finite restoration/identification results.
@@ -208,7 +208,7 @@ The [tensor result entry](RESULT-INDEX.md#tensor-moments) distinguishes all-grad
 
 ### Fisher geometry and retained information
 
-**Finite-audit Fisher descent: exact criterion and sharp cardinality threshold.** [Source][fisher].
+**Finite-audit Fisher descent: exact criterion and sharp cardinality threshold.** [Read the complete inquiry and Fisher treatment, §§5–8](../../mathematics/information-and-inquiry.md#5-fixed-audits-and-the-value-of-inquiry) · [Full-source norm reconstruction, §9.3](../../mathematics/information-and-inquiry.md#93-the-full-source-metric-requires-all-hidden-weights) · [Original finite-audit edition][fisher].
 
 **When the finite sidecar theorem meets a continuous audit fibre.** [Corollary][sidecar] · [Existing ordinary review][sidecar-review].
 
@@ -1508,7 +1508,7 @@ The [original source/kernel review](../../experiments/orthemology-v5-successors/
 [twelfth]: ../../experiments/orthemology-v5-successors/groups/t12-written/README.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
 [sidecar-review]: ../../research/t20-v6-20261012/research-v6/type_collective/GEOMETRY_SIDECAR_REVIEW.md
 [sound]: ../../research/t20-v6-20261012/sources/55bc1626342a1d5863ec271f64a121bc1615aa796a542b513f042f536a2c1810/sound-reason-epistemology.md
@@ -1683,7 +1683,7 @@ Otherwise the leading unavoidable harm is linear, even though its absolute size 
 
 ### How a successful repair reveals a hidden norm
 
-[Read the source](../../docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md). For the weighted binary score, sufficiently accurate repair constrains the hidden weight to a narrowing interval. With fresh Bernoulli observations under the stipulated norm-to-signal law, this yields a finite-sample lower bound of inverse-square precision order, with confidence dependence. Copies of one observation are not new independent samples.
+[Read the complete treatment](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair), including the positive construction and limiting assumptions. The [original public source](../../docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md) retains its separate scientific and historical-evidence roles. For the weighted binary score, sufficiently accurate repair constrains the hidden weight to a narrowing interval. With fresh Bernoulli observations under the stipulated norm-to-signal law, this yields a finite-sample lower bound of inverse-square precision order, with confidence dependence. Copies of one observation are not new independent samples.
 
 The positive side uses an estimated, clipped weight to construct strict repairs on issued opportunities under the stated target-preserving observation licence and summable failure probabilities. Reusing growing samples does not by itself invalidate the summable-failure argument. Physical disturbance costs, permission and epistemic authentication of the signal relation are separate conditions. The stronger ordinary statistical bounds and selected formal identities retain their distinct verification scopes.
 
@@ -1695,7 +1695,7 @@ The counterexamples explain the boundary: when both relevant families are infini
 
 ### A finite-query restoration obstruction and its positive sharpness
 
-[Read the source](../../docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md). When increasingly accurate repairs encode a real norm parameter, but continued informative queries are target-bad, a shared causal controller satisfying the declared seed/oracle conditions can have positive eventual-success probability at only countably many parameters. The later source construction discharges an earlier common-reference premise for the actual causal evaluator, including its stated correlated-seed case.
+[Read the complete treatment](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair), including the positive construction and limiting assumptions. The [original public source](../../docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md) retains its separate scientific and historical-evidence roles. When increasingly accurate repairs encode a real norm parameter, but continued informative queries are target-bad, a shared causal controller satisfying the declared seed/oracle conditions can have positive eventual-success probability at only countably many parameters. The later source construction discharges an earlier common-reference premise for the actual causal evaluator, including its stated correlated-seed case.
 
 The order of quantifiers matters: each fixed controller has a countable success set, not one parameter defeating every controller. A blind initial guess attains exactly its atomic probability at the true parameter, showing sharpness for an arbitrary countable set. Sublinear additive-loss tolerance retains the obstruction; linear tolerance can change it. The proof does not misuse the last informative query as a stopping time.
 

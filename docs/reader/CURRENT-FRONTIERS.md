@@ -51,7 +51,7 @@ The [fixed-fibre sidecar result][sidecar] settles its exact contract: preserving
 
 That result does not settle all neighbouring questions. A finite discretisation changes the task to a restricted or approximate one. Posterior-answer-only preservation is weaker. A separately chosen reduced metric changes the contract. A globally continuous minimal chart across varying-rank strata is not asserted by the fixed-fibre corollary.
 
-**What advances a neighbouring question:** first specify which answers, velocities, norms or dynamics must be preserved, and which approximation is allowed. Do not infer a universal memory requirement from the strongest contract, or erase the actual geometric result merely because a noetic interpretation is not established. The [controlling source][fisher] separates these preservation levels.
+**What advances a neighbouring question:** first specify which answers, velocities, norms or dynamics must be preserved, and which approximation is allowed. Do not infer a universal memory requirement from the strongest contract, or erase the actual geometric result merely because a noetic interpretation is not established. The [current preservation analysis](../../mathematics/information-and-inquiry.md#8-preserving-one-objective-versus-preserving-an-entire-metric) separates these preservation levels; the [original finite-audit edition][fisher] remains separately available.
 
 ## Complete mediation and actual coordination
 
@@ -196,7 +196,7 @@ The remaining broad questions concern universes, unrestricted rules, frontend/se
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
 [qualification]: ../project-closure/reader-refactor-issue-35/PILOT-QUALIFICATION.md
@@ -227,6 +227,8 @@ The remaining broad questions concern universes, unrestricted rules, frontend/se
 [t15-group-followup]: ../../experiments/orthemology-v5-successors/groups/t15-identity/README.md
 
 ## From repair compatibility to justified application
+
+The complete [unknown-standard repair treatment](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) proves the finite-sample information cost, a positive construction with target-preserving observations, and the countability obstruction when informative probing is target-bad. Its actual causal-oracle proof includes correlated seeds with commonly dominated marginals. Applying these results still requires an authenticated signal law, meaningful score and target, licensed actions and the specified physical timing; formal source inspection is distinct from a fresh kernel or deployment.
 
 The [earlier continuation works](PAPER-CATALOGUE.md#continuation-repair-geometry-and-information) have positive analytic and controlled-restoration results; they are not all merely prospective geometric models. Their exact remaining application questions concern norm identity and authority, faithful representation, available signals, licensed actions and physical execution. The [source-bridge synthesis](PAPER-CATALOGUE.md#what-repair-geometry-contributes-to-the-source-question) states its philosophical alternatives and positive hosting conditional without claiming a general theorem of an ultimate intellectual bearer.
 

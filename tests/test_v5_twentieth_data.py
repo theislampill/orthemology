@@ -11,6 +11,7 @@ BASE = 'fd0903d99d657c35e32fddcc8864d2a77930cf40'
 PROV = 'docs/provenance/v5-successors/'
 sys.path.insert(0, str(ROOT / 'scripts'))
 import validate_v5_successors as validator
+from resolve_t20_v6_source import MEDIATOR_GUIDE, mediator_guide_source_bytes
 
 
 def read(name):
@@ -78,8 +79,15 @@ class TwentiethDataTests(unittest.TestCase):
                 expected = current[old['path']]
                 self.assertEqual(expected['kind'], 'AUTHORED')
                 self.assertEqual(expected['source_ids'], [])
-            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected['sha256'])
-            self.assertEqual(path.stat().st_size, expected['bytes'])
+            if old['path'] == MEDIATOR_GUIDE:
+                self.assertEqual(current[old['path']], old)
+                raw = mediator_guide_source_bytes(ROOT)
+                actual_bytes = len(raw)
+            else:
+                raw = path.read_bytes()
+                actual_bytes = path.stat().st_size
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), expected['sha256'])
+            self.assertEqual(actual_bytes, expected['bytes'])
         registry_path = 'experiments/orthemology-v5-successors/registry.json'
         before = json.loads(subprocess.check_output(['git', 'show', BASE + ':' + registry_path], cwd=ROOT))
         after = json.loads((ROOT / registry_path).read_text())

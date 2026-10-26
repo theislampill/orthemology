@@ -652,6 +652,10 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
                         '100644,7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838,' + self.GUIDE],
                        cwd=self.root, check=True)
         self.owners = json.loads((self.root / self.OWNER).read_bytes())
+        # Keep this fixture at its independently qualified seven-path scope.
+        self.owners['historical_source_bindings'] = [
+            r for r in self.owners['historical_source_bindings']
+            if r['path'] != FisherOwnerMigrationTests.PATH]
         for name in (self.COORD, self.APPROX):
             self.owners['historical_source_bindings'] = [r for r in self.owners['historical_source_bindings']
                                                         if r['path'] != name]
@@ -855,6 +859,276 @@ class MediatorOwnerMigrationTests(unittest.TestCase):
         declared_missing = dict(rows[1], repository_path=extra)
         self.assertTrue(projection.check_public_inventory(self.root, rows + [declared_missing], controls))
 
+
+
+class FisherOwnerMigrationTests(unittest.TestCase):
+    """One authentic ADD_EXACT original; no broader missing-file fallback."""
+
+    REV = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+    PATH = 'research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md'
+    BLOB = '4dd0bce99ab60c34752bda1e4102341b67350c79'
+    SHA = '178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b'
+    CHAPTER = 'mathematics/information-and-inquiry.md'
+    REVIEW = 'docs/scientific-consolidation-review.md'
+    OWNER = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    CROSS = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+
+    @classmethod
+    def setUpClass(cls):
+        import subprocess
+        import check_reader_pilot
+        import resolve_t20_v6_source
+        cls.reader, cls.resolver = check_reader_pilot, resolve_t20_v6_source
+        cls.objects = pathlib.Path(subprocess.check_output(
+            ['git', 'rev-parse', '--git-path', 'objects'], cwd=projection.ROOT,
+            text=True).strip())
+        if not cls.objects.is_absolute():
+            cls.objects = projection.ROOT / cls.objects
+        cls.original = subprocess.check_output(
+            ['git', 'show', cls.REV + ':' + cls.PATH], cwd=projection.ROOT)
+        cls.indexed = {r['path']: r for r in cls.reader.entries_at(projection.ROOT, cls.REV)}
+
+    def setUp(self):
+        import subprocess
+        self.tmp = tempfile.TemporaryDirectory(prefix='fisher-owner-')
+        self.addCleanup(self.tmp.cleanup)
+        self.root = pathlib.Path(self.tmp.name)
+        subprocess.run(['git', 'init', '-q', str(self.root)], check=True)
+        (self.root / '.git/objects/info/alternates').write_text(str(self.objects.resolve()) + '\n')
+        # Public current owners and chapters are copied as data, not executed.
+        # The other seven original prose paths stay absent in this fixture.
+        for name in (self.CHAPTER, self.REVIEW, self.OWNER, self.CROSS,
+                     'epistemology/recognition-warrant-and-restoration.md',
+                     MediatorOwnerMigrationTests.CHAPTER, MediatorOwnerMigrationTests.GUIDE):
+            self.put(name, (projection.ROOT / name).read_bytes())
+        self.put(self.PATH, self.original)
+        self.assertEqual((len(self.original), hashlib.sha256(self.original).hexdigest()),
+                         (29666, self.SHA))
+        subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                        '100644,' + self.BLOB + ',' + self.PATH], cwd=self.root, check=True)
+        subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                        '100644,7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838,' +
+                        MediatorOwnerMigrationTests.GUIDE], cwd=self.root, check=True)
+        self.owners = json.loads((self.root / self.OWNER).read_bytes())
+        self.cross = json.loads((self.root / self.CROSS).read_bytes())
+        self.additions = {r['path']: r for r in self.owners['source_additions']}
+        self.row = dict(source_sha256=self.SHA, source_bytes=29666,
+                        disposition='ADD_EXACT', repository_path=self.PATH,
+                        public_sha256=self.SHA, public_bytes=29666,
+                        repository_revision=self.REV, git_blob=self.BLOB)
+
+    def put(self, path, body):
+        node = self.root / path
+        node.parent.mkdir(parents=True, exist_ok=True)
+        node.write_bytes(body)
+        node.chmod(0o644)
+
+    def resolve(self, row=None):
+        return self.resolver.source_bytes(self.root, self.row if row is None else row)
+
+    def reject(self, row=None):
+        import subprocess
+        selected = self.row if row is None else row
+        self.assertTrue(check_object(self.root, selected))
+        with self.assertRaises((ValueError, OSError, subprocess.CalledProcessError)):
+            self.resolve(selected)
+
+    def test_authentic_present_absent_and_staged_absent_states_preserve_evidence(self):
+        from copy import deepcopy
+        import subprocess
+        saved = deepcopy(self.row)
+        for staged in (True, False):
+            if not staged:
+                subprocess.run(['git', 'update-index', '--force-remove', '--', self.PATH],
+                               cwd=self.root, check=True)
+            for present in (True, False):
+                with self.subTest(staged=staged, present=present):
+                    if present: self.put(self.PATH, self.original)
+                    else: (self.root / self.PATH).unlink()
+                    index = (self.root / '.git/index').read_bytes()
+                    self.assertEqual(check_object(self.root, self.row), [])
+                    self.assertEqual(self.resolve(), self.original)
+                    self.assertEqual((self.root / self.PATH).exists(), present)
+                    self.assertEqual((self.root / '.git/index').read_bytes(), index)
+                    self.assertEqual(self.row, saved)
+
+    def test_original_five_mediator_seven_and_fisher_eight_remain_distinct(self):
+        from copy import deepcopy
+        bindings = deepcopy(self.owners['historical_source_bindings'])
+        five = [r for r in bindings if r['repository_revision'] == projection.BASE]
+        seven = [r for r in bindings if r['path'] != self.PATH]
+        self.assertEqual((len(five), len(seven), len(bindings)), (5, 7, 8))
+        for selected in (five, seven, bindings):
+            with self.subTest(population=len(selected)):
+                self.owners['historical_source_bindings'] = deepcopy(selected)
+                self.put(self.OWNER, json.dumps(self.owners).encode())
+                admitted, errors = self.reader.check_historical_sources(
+                    self.root, self.indexed, self.owners, self.cross, self.additions)
+                self.assertEqual(errors, [])
+                self.assertEqual(set(admitted), {r['path'] for r in selected})
+                if len(selected) == 8:
+                    self.assertEqual(admitted[self.PATH], self.original)
+        fisher = next(r for r in bindings if r['path'] == self.PATH)
+        variants = (five + [fisher], bindings[:-2] + [fisher],
+                    bindings + [deepcopy(fisher)],
+                    [dict(fisher, path=self.PATH.replace('.md', '_unqualified.md'))] + seven)
+        for selected in variants:
+            with self.subTest(invalid_population=len(selected)):
+                self.owners['historical_source_bindings'] = deepcopy(selected)
+                self.put(self.OWNER, json.dumps(self.owners).encode())
+                self.assertTrue(self.reader.check_historical_sources(
+                    self.root, self.indexed, self.owners, self.cross, self.additions)[1])
+
+    def test_add_exact_revision_blob_path_hash_and_size_are_exact(self):
+        for field, value in (
+                ('repository_revision', projection.BASE), ('repository_revision', 'HEAD'),
+                ('repository_revision', '0' * 40), ('git_blob', '0' * 40),
+                ('source_sha256', '0' * 64), ('public_sha256', '0' * 64),
+                ('source_bytes', 29667), ('public_bytes', 29667), ('disposition', 'REUSE'),
+                ('repository_path', self.PATH.replace('.md', '_unqualified.md'))):
+            with self.subTest(field=field, value=value):
+                self.reject(dict(self.row, **{field: value}))
+
+    def test_present_bytes_do_not_replace_missing_authentic_git_objects(self):
+        (self.root / '.git/objects/info/alternates').unlink()
+        self.reject()
+
+    def test_wrong_physical_bytes_mode_directory_or_symlink_are_rejected(self):
+        target = self.root / self.PATH
+        for kind in ('bytes', 'executable', 'directory', 'symlink'):
+            with self.subTest(kind=kind):
+                try:
+                    if kind == 'bytes': target.write_bytes(self.original + b'changed\n')
+                    elif kind == 'executable': target.chmod(0o755)
+                    else:
+                        target.unlink()
+                        if kind == 'directory': target.mkdir()
+                        else: target.symlink_to('missing-original')
+                    self.reject()
+                finally:
+                    if target.is_symlink(): target.unlink()
+                    elif target.is_dir(): target.rmdir()
+                    self.put(self.PATH, self.original)
+        parent = target.parent
+        alternate = parent.with_name(parent.name + '-copy')
+        parent.rename(alternate)
+        try:
+            parent.symlink_to(alternate, target_is_directory=True)
+            self.reject()
+        finally:
+            parent.unlink()
+            alternate.rename(parent)
+
+    def test_wrong_staged_blob_mode_link_and_conflict_cannot_hide(self):
+        import subprocess
+        wrong = subprocess.check_output(['git', 'hash-object', '-w', '--stdin'],
+                    cwd=self.root, input=b'wrong staged Fisher source\n').decode().strip()
+        for present in (True, False):
+            if not present: (self.root / self.PATH).unlink()
+            for mode, blob in (('100644', wrong), ('100755', self.BLOB),
+                               ('120000', wrong), (None, None)):
+                with self.subTest(present=present, mode=mode):
+                    subprocess.run(['git', 'update-index', '--force-remove', '--', self.PATH],
+                                   cwd=self.root, check=True)
+                    if mode:
+                        subprocess.run(['git', 'update-index', '--add', '--cacheinfo',
+                                        mode + ',' + blob + ',' + self.PATH],
+                                       cwd=self.root, check=True)
+                    else:
+                        entries = ''.join('100644 ' + oid + ' ' + stage + '\t' + self.PATH + '\n'
+                            for oid, stage in ((self.BLOB, '1'), (wrong, '2'), (self.BLOB, '3')))
+                        subprocess.run(['git', 'update-index', '--index-info'],
+                                       cwd=self.root, input=entries.encode(), check=True)
+                    self.reject()
+                    self.assertEqual((self.root / self.PATH).exists(), present)
+
+    def test_changed_or_missing_current_chapter_and_review_reject_history(self):
+        for path in (self.CHAPTER, self.REVIEW):
+            original = (self.root / path).read_bytes()
+            for variant in ('changed', 'missing', 'executable', 'symlink'):
+                with self.subTest(path=path, variant=variant):
+                    try:
+                        if variant == 'changed': self.put(path, original + b'changed current prose\n')
+                        elif variant == 'executable': (self.root / path).chmod(0o755)
+                        else:
+                            (self.root / path).unlink()
+                            if variant == 'symlink': (self.root / path).symlink_to('missing-current')
+                        self.reject()
+                    finally:
+                        if (self.root / path).is_symlink(): (self.root / path).unlink()
+                        self.put(path, original)
+
+    def test_wrong_owner_source_form_relation_and_journey_reject_history(self):
+        from copy import deepcopy
+        for change in ('owner', 'binding', 'source', 'form', 'relation', 'journey', 'route'):
+            with self.subTest(change=change):
+                owners, cross = deepcopy(self.owners), deepcopy(self.cross)
+                if change == 'owner':
+                    next(r for r in owners['source_additions']
+                         if r['key'] == 'consolidated-information-and-inquiry')['git_oid'] = '0' * 40
+                elif change == 'binding':
+                    next(r for r in owners['historical_source_bindings']
+                         if r['path'] == self.PATH)['repository_revision'] = projection.BASE
+                elif change == 'source':
+                    cross['sources']['fisher']['sha256'] = '0' * 64
+                elif change == 'form':
+                    for work in cross['works']:
+                        for form in work.get('reading_forms', []):
+                            if form.get('source') == 'fisher': form['relationship'] = 'authored-source'
+                elif change == 'relation':
+                    cross['relations'] = [r for r in cross['relations']
+                        if not (r.get('from') == 'fisher' and r.get('kind') ==
+                                'logical-content-incorporated-historical-source-retained')]
+                elif change == 'journey':
+                    cross['reader_journeys'][0]['source_keys'].append('fisher')
+                else:
+                    next(j for j in cross['reader_journeys'] if j['id'] == 'J06')['source_keys'].remove(
+                        'consolidated-information-and-inquiry')
+                self.put(self.OWNER, json.dumps(owners).encode())
+                self.put(self.CROSS, json.dumps(cross).encode())
+                self.reject()
+        self.put(self.OWNER, json.dumps(self.owners).encode())
+        self.put(self.CROSS, json.dumps(self.cross).encode())
+
+    def test_inventory_admits_only_the_exact_authenticated_fisher_absence(self):
+        from copy import deepcopy
+        rows = [deepcopy(self.row)]
+        saved = deepcopy(rows)
+        self.put(projection.MANIFEST, b'{}\n')
+        self.put(projection.PREFIX + '/PUBLIC_CONTROLS.json', b'{}\n')
+        self.assertEqual(projection.check_public_inventory(self.root, rows, {'files': {}}), [])
+        (self.root / self.PATH).unlink()
+        self.assertEqual(projection.check_public_inventory(self.root, rows, {'files': {}}), [])
+        self.assertEqual(rows, saved)
+        self.assertFalse((self.root / self.PATH).exists())
+        wrong = [dict(self.row, repository_revision=projection.BASE)]
+        self.assertTrue(projection.check_public_inventory(self.root, wrong, {'files': {}}))
+        other = self.PATH.replace('.md', '_unqualified.md')
+        self.assertTrue(projection.check_public_inventory(
+            self.root, rows + [dict(self.row, repository_path=other)], {'files': {}}))
+        self.put(other, b'undeclared fixture source\n')
+        self.assertTrue(projection.check_public_inventory(self.root, rows, {'files': {}}))
+
+    def test_reader_pages_link_current_proof_and_keep_exact_original_section(self):
+        local = '../../mathematics/information-and-inquiry.md#'
+        expected = {
+            'RESEARCH-ATLAS.md': '6-the-categorical-fisher-dynamics-of-the-full-source',
+            'PAPER-CATALOGUE.md': '5-fixed-audits-and-the-value-of-inquiry',
+            'RESULT-INDEX.md': '6-the-categorical-fisher-dynamics-of-the-full-source',
+            'CURRENT-FRONTIERS.md': '8-preserving-one-objective-versus-preserving-an-entire-metric',
+        }
+        current = self.reader.markdown_index((self.root / self.CHAPTER).read_text())
+        original = 'https://github.com/theislampill/orthemology/blob/' + self.REV + '/' + self.PATH
+        for name, anchor in expected.items():
+            text = (projection.ROOT / 'docs/reader' / name).read_text()
+            links = [href for _, href in self.reader.markdown_index(text)['links']]
+            self.assertIn(local + anchor, links)
+            self.assertIn(anchor, current['anchors'])
+            self.assertIn(original, links)
+            self.assertNotIn('../../' + self.PATH, links)
+        text = (projection.ROOT / 'docs/reader/RESULT-INDEX.md').read_text()
+        self.assertIn(original + '#9-decisive-controls-and-the-connection-to-inquiry-value',
+                      [href for _, href in self.reader.markdown_index(text)['links']])
 
 
 class ReadOnlyPreservedRootDiffTests(unittest.TestCase):

@@ -44,6 +44,9 @@ HISTORICAL_PROSE = {
         ('cf657a78f972b7f98190139b2275a3381d288b66',
          '52631c602c1c8fede28dbe6da34480094caf6f441c1aec0293229cdfdf28a0be', 15839),
 }
+# Capture the original five-path contract before any later finite admissions.
+ORIGINAL_HISTORICAL_PROSE_PATHS = tuple(HISTORICAL_PROSE)
+
 # Two independently incorporated mediator bodies have a later exact audit anchor.
 # The original five source revisions and their identities remain unchanged.
 MEDIATOR_PROSE_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
@@ -62,6 +65,16 @@ HISTORICAL_PROSE_REVISIONS = {
 HISTORICAL_PROSE_DISPOSITIONS = {
     path: 'ADD_EXACT' if path == MEDIATOR_APPROXIMATION else 'REUSE'
     for path in HISTORICAL_PROSE}
+# This ADD_EXACT source is anchored at its actual original publication,
+# independently of the five REUSE sources and two mediator dispositions.
+FISHER_PROSE_REVISION = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+FISHER_AUDIT = 'research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md'
+HISTORICAL_PROSE[FISHER_AUDIT] = (
+    '4dd0bce99ab60c34752bda1e4102341b67350c79',
+    '178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b', 29666)
+HISTORICAL_PROSE_REVISIONS[FISHER_AUDIT] = FISHER_PROSE_REVISION
+HISTORICAL_PROSE_DISPOSITIONS[FISHER_AUDIT] = 'ADD_EXACT'
+
 MEDIATOR_GUIDE = 'experiments/orthemology-v5-successors/groups/t12-written/README.md'
 MEDIATOR_GUIDE_BLOB = '7c6a9bfdeaf8372d3ea73ff8a06f4aefb17ef838'
 MEDIATOR_GUIDE_SHA256 = 'e86297f6ff2e0b8abce4fd8d1fe66e57c64e43e83ecec664422b4ed7abf3440e'
@@ -86,6 +99,8 @@ def historical_source_bytes(root, path, revision, git_blob):
     root = pathlib.Path(root)
     if path in MEDIATOR_PROSE:
         require_mediator_context(root)
+    elif path == FISHER_AUDIT:
+        require_fisher_context(root)
     blob, identity, size = binding
 
     def git(*args):
@@ -134,15 +149,71 @@ def historical_source_bytes(root, path, revision, git_blob):
     return body
 
 
+def require_fisher_context(root):
+    """Bind this one Fisher source to the current inquiry chapter and review.
+
+    This is a finite reader/source-owner contract. It does not re-prove the
+    mathematics, retire the original, or qualify other incoming body links.
+    """
+    root = pathlib.Path(root)
+    owner_path = 'docs/project-closure/reader-refactor-issue-35/OWNER-MAP.json'
+    cross_path = 'docs/project-closure/reader-refactor-issue-35/CROSSWALK.json'
+    try:
+        owners = json.loads(_regular_current_bytes(root, owner_path))
+        cross = json.loads(_regular_current_bytes(root, cross_path))
+        expected = dict(path=FISHER_AUDIT, repository_revision=FISHER_PROSE_REVISION,
+            git_blob=HISTORICAL_PROSE[FISHER_AUDIT][0], role='historical-source',
+            reading_source='consolidated-information-and-inquiry',
+            basis='scientific-consolidation-review')
+        bindings = [r for r in owners['historical_source_bindings'] if r['path'] == FISHER_AUDIT]
+        if bindings != [expected]:
+            raise ValueError('the exact Fisher source disposition is required')
+        for key, path, role in (
+            ('consolidated-information-and-inquiry', 'mathematics/information-and-inquiry.md', 'work-source'),
+            ('scientific-consolidation-review', 'docs/scientific-consolidation-review.md', 'review')):
+            selected = [r for r in owners['source_additions'] if r['key'] == key]
+            if len(selected) != 1:
+                raise ValueError('missing or duplicate current Fisher reading owner')
+            admission, current_source = selected[0], cross['sources'][key]
+            current = _regular_current_bytes(root, path)
+            oid = hashlib.sha1(b'blob ' + str(len(current)).encode() + b'\0' + current).hexdigest()
+            if (admission['path'] != path or current_source['path'] != path or admission['role'] != role
+                    or admission['mode'] != '100644' or admission['git_oid'] != oid
+                    or admission['bytes'] != len(current) or admission['sha256'] != digest(current)
+                    or current_source['sha256'] != digest(current)):
+                raise ValueError('current Fisher scholarship or review edition differs')
+            if role == 'work-source' and 'scientific-consolidation-review' not in admission['supporting_source_keys']:
+                raise ValueError('current Fisher work has lost its review owner')
+        original = cross['sources']['fisher']
+        forms = [f for w in cross['works'] for f in w.get('reading_forms', [])
+                 if f.get('source') == 'fisher']
+        relation = {'from': 'fisher', 'to': 'consolidated-information-and-inquiry',
+                    'kind': 'logical-content-incorporated-historical-source-retained',
+                    'basis': 'scientific-consolidation-review'}
+        relations = [r for r in cross['relations'] if r.get('from') == 'fisher'
+                     and r.get('kind') == relation['kind']]
+        if (original['path'] != FISHER_AUDIT or original['sha256'] != HISTORICAL_PROSE[FISHER_AUDIT][1]
+                or forms != [{'source': 'fisher', 'relationship': 'historical-source'}]
+                or relations != [relation]
+                or any('fisher' in j.get('source_keys', []) for j in cross['reader_journeys'])):
+            raise ValueError('Fisher reader source is not explicitly historical-only')
+        journeys = [j for j in cross['reader_journeys'] if j.get('id') == 'J06']
+        if len(journeys) != 1 or journeys[0].get('source_keys') != [
+                'tensor', 'coercive', 'consolidated-information-and-inquiry', 'sidecar']:
+            raise ValueError('the Fisher journey must retain its exact current reading route')
+    except (KeyError, TypeError, UnicodeError) as exc:
+        raise ValueError('invalid current Fisher owner bindings') from exc
+
+
 def _regular_current_bytes(root, path):
     target = pathlib.Path(root)
     for part in path.split('/'):
         target = target / part
         if target.is_symlink():
-            raise ValueError('current mediator dependency contains a symlink')
+            raise ValueError('current reading dependency contains a symlink')
     entry = target.stat()
     if not stat.S_ISREG(entry.st_mode) or entry.st_mode & 0o111:
-        raise ValueError('current mediator dependency is not regular nonexecutable data')
+        raise ValueError('current reading dependency is not regular nonexecutable data')
     return target.read_bytes()
 
 

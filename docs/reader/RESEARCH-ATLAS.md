@@ -20,6 +20,7 @@ The wider research cannot be reduced to an audit checklist. The research include
 | What do the foundational arguments establish? | [Productive sourcehood](#productive-sourcehood-and-truthful-action-selection) · [necessity and original adequacy](#from-a-warranted-correction-to-its-original-adequacy) |
 | When does a representation preserve its proof obligations? | [Answers and proofs](#when-representations-preserve-answers-but-lose-proofs) · [typed identity](#exact-proof-questions-and-changing-support) |
 | What if the correct standard is uncertain? | [AR8R restoration](#restoration-when-the-correct-standard-is-itself-uncertain) · [joint feasibility across avenues](#a-connection-across-research-avenues) |
+| How much information does persistent repair require? | [Unknown standards, fresh-sample cost and finite harmful probing](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) |
 
 ## How the principal works fit together
 
@@ -55,7 +56,7 @@ Read the [three related works](PAPER-CATALOGUE.md#recognition-and-correction), t
 
 The [tensor-moment work][tensor] studies full symmetric polynomial-moment records and their evolution under polynomial damping. Its [coercive-polynomial successor][coercive] gives a stronger written representability and continuation result under the stated all-polynomial square-positivity and regularity assumptions. This is actual conditional mathematics, not a proposal to give a metaphorical tensor shape to a mind. The complete path can identify an initial law even where the initial moment record alone does not identify a path.
 
-The [finite-audit Fisher work][fisher] supplies an actual metric and gradient system on a positive joint probability law. Retaining conditional distributions and their mixture can discard source weights needed to preserve full ambient geometric observables. The [finite-sidecar corollary][sidecar] makes that loss precise on a fixed continuous audit-weight fibre.
+The [complete Fisher development](../../mathematics/information-and-inquiry.md#6-the-categorical-fisher-dynamics-of-the-full-source) supplies an actual metric and gradient system on a positive joint probability law. Retaining conditional distributions and their mixture can discard source weights needed to preserve full ambient geometric observables. The [finite-sidecar corollary][sidecar] makes that loss precise on a fixed continuous audit-weight fibre. The [original finite-audit edition][fisher] remains available at its exact published revision.
 
 **What these works contribute:** they specify different operation-preservation contracts, show when a retained representation is sufficient, and identify information that an exact supplement must retain. They do not assert that all interpretations need the strongest contract. A posterior-only task is weaker than preserving ambient Fisher norms.
 
@@ -238,7 +239,7 @@ This connects **semantic fidelity (8)** with **type-theoretic completion (9)** a
 [retained]: ../../research/t20-v6-20261012/research-v6/foundations/retained_passage40/REPORT.md
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
 [coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#64-exact-finite-alphabet-capacity
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md

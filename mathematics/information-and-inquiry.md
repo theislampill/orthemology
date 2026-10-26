@@ -4,7 +4,7 @@
 
 ### Abstract
 
-A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport. Graph-constrained parity operations make the action dependence explicit: the exact connecting-tree cost determines which moments a finite horizon can reveal. For proof-producing inquiry, residual evidence supports and terminal checking prices give a canonical continuation summary and an exact finite completion criterion. Finite grounded rules compile that summary even in the presence of cycles, while shared proof graphs expose a limit of intermediate cost-only pruning.
+A representation can preserve every conditional answer to an inquiry while losing the probabilities, values, or geometric dynamics associated with those answers. We develop these distinctions in related finite models. Invariant observable spaces give exact predictive states, including their admissible cones and a sharp continuous-coordinate bound. A synchronized tensor construction, together with a separate feasibility test, characterizes the weaker equivalence of all posterior answers. For a fixed audit, missing information forms an affine fibre of audit weights. This gives an exact expected-value criterion and a three-outcome example that reverses the preferred inquiry decision. For the categorical Fisher metric of the full joint law, we derive a different criterion, prove descent of maximal source trajectories, and establish a sharp threshold: with more audit outcomes than target states, every globally descending smooth objective is target-marginal-only on the signature image. Gram-determinant objectives show why the strict inequality is necessary. Finally, we determine the supplementary information required by finite, expected-value, and full-metric contracts, distinguish selecting a valid certificate from identifying a state, and give complete finite proofs for model-bound temporal guarantees and versioned evidence transport. Graph-constrained parity operations make the action dependence explicit: the exact connecting-tree cost determines which moments a finite horizon can reveal. For proof-producing inquiry, residual evidence supports and terminal checking prices give a canonical continuation summary and an exact finite completion criterion. Finite grounded rules compile that summary even in the presence of cycles, while shared proof graphs expose a limit of intermediate cost-only pruning. When the governing quadratic standard is unknown, shrinking disturbances impose a decoding requirement on every good repair. This yields finite-sample lower and upper bounds, and a countability obstruction to eventual exact correction when informative acts are target-bad. Common-reference and actual causal-oracle proofs identify the information premise precisely; sublinear tolerance and atomic blind guessing delimit the result.
 
 This is a consolidated exposition of the source mathematics cited below. Its proofs are ordinary mathematical arguments; computational corroboration, kernel certification, empirical interpretation, literature priority, and owner adoption are distinct. The edition and review boundary appears at the end.
 
@@ -1255,6 +1255,282 @@ In particular, neither theorem supplies a finite complete interface for unrestri
 Positive provenance and weighted deduction provide the mathematical ancestry: alternative derivations combine differently from joint premises, and recursive systems may need fixed-point semantics. Green, Karvounarakis and Tannen develop provenance semantics for positive queries and recursive Datalog; Goodman treats semiring deduction and explains why non-improving Viterbi loops can be omitted. Here the support/price order and explicit tree-versus-sharing contract support the self-contained finite arguments above. They make no field-wide originality claim. [27–28]
 
 
+### 9.7 Unknown standards: the information needed for persistent repair
+
+The earlier results ask what information a representation must retain once its prediction, value, geometry, or certificate contract is supplied. A different question arises when the rule governing correct repair is itself unknown. Selecting an admissible action need not generally identify a hidden state (§9.4). In the following family, however, increasingly exact repairs force the output to identify the standard. Finite information then limits not only confidence at one opportunity, but the probability of indefinite eventual correctness. The two source treatments [32–33] distinguish that obstruction from a positive construction when informative observations can be acquired without violating the target.
+
+#### Repair geometry and its decoding requirement
+
+Fix a supplied parameter *α* in (0,1), two truth vertices *v*<sub>i</sub> = (*i*,1−*i*) for *i* = 0,1, and the quadratic loss
+
+```math
+L_\alpha(x,v)=\alpha(x_1-v_1)^2+(1-\alpha)(x_2-v_2)^2.
+```
+
+At an opportunity with disturbance 0 < *ε* ≤ 1/4, the input is *b*<sub>ε</sub> = (1/2+*ε*,1/2). A coherent repair has the form *c* = (*q*,1−*q*), with 0 ≤ *q* ≤ 1. It is **good** if it weakly improves the loss at both truth vertices. This simultaneous requirement is stronger than improvement in an average taken under a declared distribution of truth states. The parameter is the supplied standard in this model; an observation channel related to it is an additional premise.
+
+Put *r*<sub>α</sub> = 1/2+*αε* and *D*<sub>α</sub> = *α*(1−*α*)*ε*². Completing the square gives, for each *i*,
+
+```math
+L_\alpha(b_\epsilon,v_i)=(r_\alpha-i)^2+D_\alpha,
+\qquad
+L_\alpha(c,v_i)=(q-i)^2. \quad\text{(26)}\quad
+```
+
+Thus a known standard permits the exact repair *q* = *r*<sub>α</sub>, with common improvement *D*<sub>α</sub>. It is strictly positive in the interior, and zero at the endpoint standards 0 and 1.
+
+**Lemma 19 — A good repair decodes the standard.** Every good repair satisfies
+
+```math
+|q-r_\alpha|\leq 2D_\alpha\leq\epsilon^2/2,
+\qquad
+\left|\frac{q-1/2}{\epsilon}-\alpha\right|\leq\epsilon/2. \quad\text{(27)}\quad
+```
+
+If *q* ≥ *r*<sub>α</sub>, goodness at *i* = 0 gives
+
+```math
+2r_\alpha(q-r_\alpha)+(q-r_\alpha)^2\leq D_\alpha.
+```
+
+If *q* < *r*<sub>α</sub>, goodness at *i* = 1 gives the same inequality with the linear term $`2(1-r_\alpha)(r_\alpha-q)`$. Since 1/2 ≤ *r*<sub>α</sub> ≤ 3/4, the relevant linear coefficient is at least 1/2. Discarding the nonnegative square proves the first bound; $`\alpha(1-\alpha)\leq1/4`$ and division by *ε* prove the rest. The calculation also holds for endpoint standards and for real *q* before imposing coherence. ∎
+
+Let *G*<sub>α,ε</sub> be the set of good coherent repairs. If two standards are separated by more than *ε*, their good-repair sets are disjoint: an output in their intersection would, by (27), decode within *ε*/2 of both. Equation (27) is a **necessary** condition. An arbitrary estimate within *ε*/2 need not produce a good repair; a separate sufficient bound is given below.
+
+#### A finite-sample lower bound and the meaning of a fresh observation
+
+For the next result, each informative probe returns a fresh independent Bernoulli(*α*) observation. Before issuing its repair, an algorithm may obtain at most *N* such observations at adaptively chosen times. Its other information and private randomization contain no additional parameter information. Equivalently, its transcript and output are a common measurable postprocessing of *N* independent probe outcomes and parameter-independent randomness. Any additional informative feedback requires a different, explicitly specified experiment.
+
+**Theorem 20 — Local finite-confidence cost.** For 0 < *ε* ≤ 1/4, put $`\alpha_- = 1/2-\epsilon`$ and $`\alpha_+ = 1/2+\epsilon`$. Every algorithm in this experiment has
+
+```math
+\begin{aligned}
+\max_{\alpha\in\{\alpha_-,\alpha_+\}}
+ P_\alpha\{q\notin G_{\alpha,\epsilon}\}
+&\geq \frac{1-\sqrt{1-(1-4\epsilon^2)^N}}{2}\\
+&\geq \frac{(1-4\epsilon^2)^N}{4}
+ \geq \frac14\exp\!\left(-\frac{16}{3}N\epsilon^2\right).
+\end{aligned} \quad\text{(28)}\quad
+```
+
+Consequently a guarantee of failure at most *δ* < 1/4 uniformly over $`\alpha\in[1/4,3/4]`$ requires
+
+```math
+N\geq \frac{3}{16\epsilon^2}\log\frac{1}{4\delta}. \quad\text{(29)}\quad
+```
+
+**Proof.** Use the output as a test: choose the minus alternative when $`q\in G_{\alpha_-,\epsilon}`$ and the plus alternative otherwise. The minus testing error equals the minus repair failure. Since the two good-repair sets are disjoint, the plus testing error is at most the plus repair failure. For any decision event *A* and transcript laws *P*<sub>−</sub>, *P*<sub>+</sub>, the sum of testing errors is
+
+```math
+P_-(A^{\mathsf c})+P_+(A)
+=1-(P_-(A)-P_+(A))
+\geq 1-\mathrm{TV}(P_-,P_+),
+```
+
+where total variation is the supremum of the absolute difference on measurable events. The larger repair failure is at least half this sum.
+
+Predrawing *N* coins is legitimate even if the algorithm actually stops earlier: unused coins are discarded by the same postprocessing rule under both alternatives. Common randomization and measurable postprocessing cannot increase total variation. For probability densities *p*, *s* with respect to a common dominating measure, write their affinity as $`F=\int\sqrt{ps}`$. Cauchy–Schwarz gives
+
+```math
+\mathrm{TV}(P,S)
+=\frac12\int|\sqrt p-\sqrt s|(\sqrt p+\sqrt s)
+\leq\sqrt{1-F^2}.
+```
+
+The one-coin affinity for the symmetric alternatives is $`\sqrt{1-4\epsilon^2}`$. Independence multiplies affinities, so $`F_N^2=(1-4\epsilon^2)^N`$. This proves the first line of (28), including *N* = 0. For 0 ≤ *u* ≤ 1, $`1-\sqrt{1-u}\geq u/2`$ gives the second bound. Finally,
+
+```math
+-\log(1-4\epsilon^2)
+\leq\frac{4\epsilon^2}{1-4\epsilon^2}
+\leq\frac{16}{3}\epsilon^2,
+```
+
+which gives the exponential bound and (29). ∎
+
+The first expression in (28) is an exact formula for a universal **lower bound**, not an assertion that it is the optimal testing risk. The finite Bernoulli experiment's actual optimal testing risk can be obtained from its binomial probabilities, including exact rational arithmetic for rational parameters; no new numerical experiment is asserted here. The alternatives vary with *ε*. This is a local minimax result, not a pointwise rate for every fixed standard or a general empirical law of cognition.
+
+Copies do not increase the sample count. If *k* records are functions of *N* original fresh outcomes and independent randomness, they remain a postprocessing of the same experiment, so (28) counts *N*, not *k*. A provenance label alone establishes neither authenticity nor independence. Additional conditionally informative observations must be evaluated using their actual conditional law.
+
+#### Positive correction when acquiring information preserves the target
+
+There is a matching order of growth for finite-confidence repair away from the degenerate endpoint standards. Fix 0 < *a* < 1/2, suppose $`\alpha\in[a,1-a]`$, and define *A* = *a*(1−*a*) and *c* = *A*/4. From *n* independent Bernoulli(*α*) observations, form the sample mean and clip it to [*a*,1−*a*], giving $`\widetilde\alpha`$. Return $`q=1/2+\epsilon\widetilde\alpha`$, which is coherent.
+
+On $`|\widetilde\alpha-\alpha|\leq c\epsilon`$, set *d* = *q*−*r*<sub>α</sub>. Then $`|d|\leq c\epsilon^2`$. Equation (26), with $`|r_\alpha-i|\leq1`$, shows that the improvement at either truth vertex is at least
+
+```math
+\begin{aligned}
+D_\alpha-2|d|-d^2
+&\geq \epsilon^2(A-2c-c^2\epsilon^2)\\
+&\geq \epsilon^2(A/2-A^2/256)>0.
+\end{aligned} \quad\text{(30)}\quad
+```
+
+Clipping cannot increase error when the true parameter is in the clipping interval. The Bernoulli concentration bound therefore gives
+
+```math
+P_\alpha\{\text{repair fails to improve both states strictly}\}
+\leq 2e^{-2nc^2\epsilon^2}. \quad\text{(31)}\quad
+```
+
+For completeness, this bound does not depend on an unproved normal approximation. For one Bernoulli variable *X*, the log moment-generating function $`K(\lambda)=\log\mathbb E e^{\lambda(X-\alpha)}`$ has $`K(0)=K'(0)=0`$ and second derivative equal to a tilted Bernoulli variance, at most 1/4. Hence $`K(\lambda)\leq\lambda^2/8`$ for either sign of *λ*. Independence and the exponential Markov inequality, optimized at $`\lambda=4u`$, give $`P\{\overline X-\alpha\geq u\}\leq e^{-2nu^2}`$; applying the same argument to the lower tail proves (31). This is the bounded-sum concentration argument associated with Hoeffding [34].
+
+**Proposition 21 — Eventual strict correction with target-preserving samples.** Let the disturbance sequence $`0<\epsilon_t\leq1/4`$ be deterministic, and choose $`0<\delta_t<1`$ with $`\sum_t\delta_t<\infty`$. At opportunity *t*, use at least
+
+```math
+n_t=\max_{0\leq s\leq t}
+\left\lceil\frac{\log(2/\delta_s)}{2c^2\epsilon_s^2}\right\rceil \quad\text{(32)}\quad
+```
+
+fresh observations from a common growing sample, and apply the preceding estimator. If these observations can be obtained through licensed actions that preserve the specified target, almost surely all sufficiently late issued repairs strictly improve both truth states.
+
+Indeed, (31) bounds failure at opportunity *t* by *δ*<sub>t</sub>. For every *T*, the probability of any failure after *T* is at most $`\sum_{t\geq T}\delta_t`$, which tends to zero. Thus only finitely many failures occur almost surely. Reusing a growing sample makes failures at different opportunities dependent; the summable union bound, or first Borel–Cantelli lemma, needs no independence between those failure events. ∎
+
+The availability and target-preservation premises matter. Equation (32) does not make harmful exploration harmless or grant access to a sensor. It concerns the correctness of issued actions at the declared opportunities. If every recurring disturbance itself counts as a bad physical state, infinitely many disturbances already prevent eventual uninterrupted physical coherence. Sampling and interstage latency must likewise be classified by the actual target contract.
+
+#### Finite harmful probing and eventual exact repair
+
+Now fix a deterministic sequence $`0<\epsilon_t\leq1/4`$ tending to zero. At each round, one shared measurable controller chooses either a **Probe**, which returns a fresh Bernoulli(*α*) result and is target-bad, or **Repair**(*q*), with 0 ≤ *q* ≤ 1. Given the observed history and chosen repair, the subsequent repair-feedback kernel is independent of *α*. Controller randomization is parameter-independent. Histories, actions and kernels are standard Borel; only the permitted observations carry parameter information.
+
+The trace records actual actions and actually received observations, and may include the controller's private seed. It excludes an unused parameter-dependent infinite oracle tail. Distinct infinite Bernoulli-product laws can be mutually singular even when the controller reads no bit; that fact is irrelevant to the information in its actual trace.
+
+Let *E*<sub>α</sub> mean that after some finite random round every action is a good repair. This is one eventual action target. In particular success entails finitely many probes, but the last probe is not presumed to be a stopping time.
+
+**Theorem 22 — Countability of positive eventual success.** For every shared controller in this model, the set
+
+```math
+\{\alpha\in(0,1):P_\alpha(E_\alpha)>0\}
+```
+
+is at most countable.
+
+**Proof.** Let *F* be the measurable event that only finitely many probes occur, and let *F*<sub>N</sub> be the event of no probe after the deterministic round *N*. Then $`F=\bigcup_NF_N`$. Fix the reference standard 1/2.
+
+For each *N*, the observed prefixes through round *N* have mutually absolutely continuous laws for any two interior standards. At each informative step both Bernoulli probabilities are positive; the controller and other feedback kernels are common. Thus a null prefix event under one law is null under the other, even with adaptive choices and a continuous private seed.
+
+After that fixed prefix, use a killed continuation: an attempted probe is sent to a common cemetery, while repair steps use their common feedback kernels. The event of surviving forever is exactly *F*<sub>N</sub>. Common measurable continuation kernels preserve absolute continuity of prefix measures, so the full trace laws restricted to *F*<sub>N</sub> are mutually absolutely continuous. A countable union gives
+
+```math
+P_\alpha|_F\ \ll\ P_{1/2}|_F
+\quad\text{and}\quad
+P_{1/2}|_F\ \ll\ P_\alpha|_F. \quad\text{(33)}\quad
+```
+
+This argument uses deterministic prefix lengths and killed continuations; it does not condition at a random “last probe.”
+
+On a repair round define $`z_t=(q_t-1/2)/\epsilon_t`$ and use any fixed value on probe rounds. By Lemma 19, on *E*<sub>α</sub> the sequence eventually satisfies $`|z_t-\alpha|\leq\epsilon_t/2`$, and hence converges to *α*. Let *Z* be its real limit when it exists and −1 otherwise. The convergence set and this limit are measurable, so
+
+```math
+E_\alpha\subseteq F\cap\{Z=\alpha\}. \quad\text{(34)}\quad
+```
+
+If the left event has positive *P*<sub>α</sub>-mass, one-way absolute continuity in (33) makes $`P_{1/2}(F\cap\{Z=\alpha\})`$ positive. The pushforward of the finite measure $`P_{1/2}|_F`$ by *Z* has at most countably many positive atoms: for each positive integer *k*, only finitely many disjoint atoms can have mass at least 1/*k*, and their union over *k* contains every positive atom. This proves the theorem. ∎
+
+Three consequences retain their distinct quantifiers. For each controller, Lebesgue-almost every interior standard has **zero**, not merely less than one, probability of eventual correct repair. Every nonatomic prior has prior-averaged success zero, provided the parameter/trace family and success event have the joint measurability needed to form that integral. Finally,
+
+```math
+\sup_{\pi}\inf_{\alpha\in(0,1)}
+ P_\alpha^\pi(E_\alpha)=0. \quad\text{(35)}\quad
+```
+
+The exceptional countable set may depend on the controller *π*. There is no assertion that one fixed parameter defeats every possible controller; a controller supplied that exact parameter can use (26).
+
+#### A common reference is enough
+
+The atom argument uses only one direction of (33). Its general content can be stated independently of the Bernoulli model [35].
+
+**Lemma 23 — Dominated exact readouts.** Let *F* be measurable, *Z* a measurable readout into a parameter space with measurable singletons, and *ν* a common finite measure. If $`\mu_\theta|_F\ll\nu|_F`$ for every parameter and $`E_\theta\subseteq F\cap\{Z=\theta\}`$, then only countably many parameters have $`\mu_\theta(E_\theta)>0`$. The same conclusion holds when *ν* is a countable sum of finite measures.
+
+For a finite reference this is the proof following (34). For the latter case, write $`\nu=\sum_j\nu_j`$ with each component finite. Positive mass of a readout fibre under *ν* entails positive mass under some component. Each component contributes countably many such fibres, so their union is countable. This countable-sum condition is often called *s-finiteness*; it must be established for any proposed component construction. ∎
+
+A useful observation-model condition follows. Suppose informative outputs use one **common countable alphabet** *Y*, and choose a probability *r* with positive mass on every element. An artificial environment can return *r* at each probe, while using the same controller and parameter-independent nonprobe feedback. Whatever the actual parameter-dependent probe kernels, including history dependence and zeros, each finite actual prefix law is absolutely continuous in the required direction with respect to this reference. The killed-continuation proof then gives domination on *F*, and Lemma 23 applies.
+
+The reference need not be a possible true standard. Adaptive real-valued choices of query are allowed when they are actions of the shared controller and all observations, including timing, satisfy the stated kernel contract. Alphabets that are separately countable for different parameters but have uncountable union do not supply a common countable alphabet. An unrecorded parameter-revealing side channel invalidates the model.
+
+More generally the same reasoning works when informative kernels have a common measurable dominating probability kernel, including many continuous noisy channels. A dominating measure alone must be accompanied by the measurable kernel construction needed for the path law. An exact real-valued observation of the parameter is a different case: uncountably many distinct point laws cannot all be dominated by one sigma-finite measure, since that would require uncountably many positive singleton masses. Such a sensor can identify a continuum standard in one query because it deletes the domination premise. Conversely a finite alphabet may reveal a member of a finite class exactly, but cannot create an uncountable positive-success set after only finitely many such queries under the common-reference contract.
+
+#### Domination for an actual causal oracle evaluator
+
+The preceding domination hypothesis is discharged by a concrete evaluator in the sources [36–39]. This is a broader observation model than the independent Bernoulli experiment used for (28). Its result concerns an arbitrary oracle law and does not transfer the Bernoulli sample-cost constants to that law.
+
+Let *S* be a standard Borel state space. A common measurable Boolean function *ask* decides whether the next oracle bit is read. A common transition function *next*, measurable in the state for each fixed bit, maps a state and a bit to a new state; on a nonquery step its bit argument is fixed to false. The initial state contains the private seed. For an infinite binary oracle *ω*, the actual counter *k*<sub>t</sub> starts at zero and the execution is
+
+```math
+\begin{aligned}
+a_t&=\mathrm{ask}(s_t),\\
+u_t&=
+ \begin{cases}\omega(k_t),&a_t=1,\\0,&a_t=0,\end{cases}\\
+s_{t+1}&=\mathrm{next}(s_t,u_t),
+\qquad k_{t+1}=k_t+a_t .
+\end{aligned} \quad\text{(36)}\quad
+```
+
+All score readouts *q*<sub>t</sub>(*s*<sub>t</sub>) are measurable and parameter-independent. Unlimited autonomous computation between queries is allowed; uncounted reads, a parameter-dependent transition, or an unmodeled informative output are not.
+
+**Theorem 24 — Finite-query trace domination.** Suppose each parameter chooses a joint law *μ*<sub>α</sub> of the seed and oracle whose seed marginal is absolutely continuous with respect to one fixed probability *ρ*. The seed and oracle may be correlated; the actual oracle may be dependent over time, singular or deterministic. The laws of the **actual trace**, restricted to finite-query executions, are all absolutely continuous with respect to the same evaluator driven by a *ρ*-distributed seed and an independent fair binary oracle. Therefore an eventual repair event that decodes the parameter, as in (34), has positive mass for at most countably many parameters.
+
+**Proof.** First prove a deterministic locality statement. If one run makes at most *N* queries, any oracle with the same first *N* bits and the same seed gives the same entire run. Induct on time, carrying equality of state and counter. On a nonquery step both transitions are the same. On a query step the counter in the bounded run is strictly less than *N*, so the common prefix supplies the same bit. The second run's boundedness follows from equality; it is not a second assumption.
+
+For a seed *s* and length-*N* word *w*, execute its extension by zeros. Let $`B_N(s,w)`$ say that this execution never asks beyond the *N* available bits. Locality in either direction shows that this event and the full trace on this event are the same for **every** infinite extension of *w*. Both are measurable: counter-boundedness is a countable intersection of measurable finite-time events, and each finite stage of the zero-extended run is measurable. Thus restriction to the event of at most *N* queries factors through a measurable function of (*s*,*w*).
+
+Let $`\widetilde\mu_{\alpha,N}`$ be the actual joint law of the seed and those first *N* bits, and let *u*<sub>N</sub> be the uniform law on the finite word set. Then
+
+```math
+\widetilde\mu_{\alpha,N}\ll\rho\otimes u_N. \quad\text{(37)}\quad
+```
+
+To see this without an independence assumption, a set null under the product reference has a *ρ*-null seed section for every word, since every word has positive reference mass. Each actual section has zero mass because the actual seed marginal is dominated by *ρ*. Taking the finite union proves (37). The same reasoning works for a countable word alphabet with a full-support reference.
+
+Restrict (37) to *B*<sub>N</sub> and push it through the measurable trace function. Under the reference product, this is exactly the trace law of the evaluator with a *ρ* seed and independent fair infinite oracle, restricted to at most *N* queries. The reference is the **same** law for all *N*. Countable union now proves domination on the finite-query event.
+
+Finally, the nondecreasing integer counter is bounded exactly when only finitely many increments occur, which is exactly eventual absence of queries. Combining this with eventual goodness makes the target “eventually no query and every output good” a single tail event. Lemma 19 supplies the exact limiting readout for shrinking disturbances, and Lemma 23 proves the conclusion. ∎
+
+This proof establishes domination of observed executions on the finite-query event. It makes no claim that the unused infinite actual oracle law is dominated by the infinite fair-coin law. Nor does an artificial reference sensor provide evidence that a real source is authentic. Probability language requires normalized input laws. The underlying domination and positive-mass argument can be formulated for more general measures under the same marginal domination; the corresponding formal endpoints have their own explicit premises, recorded in §11.
+
+#### Approximate scores and the scale at which the obstruction changes
+
+Allow nonnegative tolerance *η*<sub>t</sub> in **each** truth-state comparison:
+
+```math
+L_\alpha(c_t,v_i)\leq L_\alpha(b_{\epsilon_t},v_i)+\eta_t
+\quad(i=0,1). \quad\text{(38)}\quad
+```
+
+The proof of Lemma 19 with *D*<sub>α</sub>+*η* in place of *D*<sub>α</sub> yields
+
+```math
+\left|\frac{q_t-1/2}{\epsilon_t}-\alpha\right|
+\leq \frac{\epsilon_t}{2}+\frac{2\eta_t}{\epsilon_t}. \quad\text{(39)}\quad
+```
+
+**Corollary 25 — Sublinear tolerance retains the barrier.** If $`\epsilon_t\to0`$ and $`\eta_t/\epsilon_t\to0`$, eventual satisfaction of (38) still decodes the standard. Thus Theorem 22, or the broader common-reference and causal-evaluator conclusions, holds with eventual approximate goodness in place of exact goodness.
+
+The relative scale cannot be dropped [40]. The constant coherent output *q* = 1/2, without any query, satisfies (38) for every $`\alpha\in[0,1]`$ when *η* = *ε* ≥ 0. At the two vertices its excess losses are respectively $`-\alpha\epsilon-\alpha\epsilon^2`$ and $`\alpha\epsilon-\alpha\epsilon^2`$, each at most *ε*. Hence vanishing absolute tolerance alone does not retain the obstruction. This establishes an order-of-magnitude separation between the sublinear regime and a sufficient linear tolerance. It does not assert that every positive linear coefficient suffices or determine an exact minimax coefficient for arbitrary standard families.
+
+#### Sharpness and the finite-class contrast
+
+**Proposition 26 — Exact atomic success.** Draw one guess *g* from a probability law *ρ* supported on [0,1], never query, leave the guess unchanged, and issue $`q_t=1/2+g\epsilon_t`$. In the actual evaluator (36), for each true $`\alpha\in[0,1]`$,
+
+```math
+E_\alpha=\{g=\alpha\},
+\qquad P_\alpha(E_\alpha)=\rho(\{\alpha\}). \quad\text{(40)}\quad
+```
+
+If the guess is correct, (26) proves goodness at every round. If eventual goodness holds, (27) forces $`|g-\alpha|\leq\epsilon_t/2`$ eventually and hence *g* = *α*. This proves both identities. The output is coherent because the guess lies in [0,1] and *ε* ≤ 1/4. Arbitrary correlation with the unused oracle changes nothing. Strict improvement holds for a correct interior guess; the endpoint conclusion is weak goodness. ∎
+
+For any specified nonempty finite or countable set $`S\subseteq[0,1]`$, assign a positive atom to each member, with total mass one. The resulting controller has positive eventual success **exactly** on *S*. An enumeration and normalized positive weights give the usual countable construction; the empty exceptional set is realized by always querying. This is an ideal measurable construction. Effective implementation additionally needs an effective sampling representation and sufficient computability and precision for the chosen constants. A finite rational candidate set admits a direct effective version; neither an arbitrary noncomputable set nor a new software implementation is supplied here. The formal source proves the evaluator's exact atom formula, not a separate theorem constructing a measure from every countable set [41].
+
+For two distinct known **interior** candidate standards, the contrast is stronger than blind guessing. A finite Bernoulli batch distinguishes them with error at most any prescribed *δ* > 0: compare the sample mean with their midpoint and apply the two one-sided concentration bounds. Then commit to the chosen candidate's exact repair law forever. The finitely many initial harmful probes do not spoil the eventual target. Its success probability is at least 1−*δ* under both standards.
+
+No single controller can have success probability one under both standards in this harmful-probe model. Such success would put probability one on *F* and on one exact readout value under the first standard; mutual absolute continuity on *F* would force that same value almost surely under the other, contradicting its distinct required limit. Thus the finite two-standard **limit-sure** value is one, while an almost-sure policy for both does not exist. These are probabilities of an infinite eventual event. They are distinct from a finite-horizon error guarantee, and from the continuum minimax value zero in (35).
+
+#### Operational and philosophical scope
+
+The obstruction depends on the combination of shrinking disturbance, simultaneous score correctness, finitely many informative acts forced by the target, and a shared information contract. A known standard admits direct repair. Target-preserving informative feedback permits Proposition 21. A fixed nonvanishing disturbance or finitely many opportunities no longer forces exact identification by the output limit; this removes that proof mechanism without promising every alternative task solvable. Sufficiently relaxed tolerance, an exactly parameter-revealing sensor, or an action valid under every standard can likewise change the problem. Parameter-coded private randomness or a hidden norm oracle violates the original shared-controller premise; in the broader evaluator theorem its admissibility must be tested against the common marginal-domination condition.
+
+The model connects latent-parameter identification, metric-sensitive correction, persistent action targets and the distinction between fresh information and copied records. It does not establish that normative truth is statistically inferred from arbitrary frequencies: Bernoulli(*α*) is a stipulated informative channel for a stipulated loss parameter. An operationally identified metric supplies neither source authority nor an intellectual, personal, necessary or ultimate bearer of that metric. The mathematical conclusion states what an indefinite reliable-repair promise must supply in this model, and which changes of information or performance contract avoid its particular obstruction.
+
+
+
 ## 10. Assumptions, negative results, and open scope
 
 The positive-fibre and Fisher theorems quantify over the full strictly positive joint-law family. On a constrained reachable family, use its actual differences; the density proof may fail. For example, with three audit outcomes, a binary target, fixed weights $`w_j=1/3`$, and $`J=p_{1,1}`$, equation (12) has $`\dot w=0`$. The section is invariant and its signature is injective, so the flow descends there despite conditional dependence at fixed $`q`$. This does not contradict the full-domain rigidity theorem.
@@ -1270,6 +1546,8 @@ The certificate-selection and temporal results have a separate finite contract. 
 The graph continuation result fixes named binary slots, both edge orientations, silent state-independent words and individual terminal readouts. Its finite-horizon moment family can fail downward closure, and its invariant saturation can omit arbitrary cross-component dependence. A different output or action contract must be analyzed in its own right. The fixed-root strengthening and tree saturation formulas are exact within those stated restrictions.
 
 The proof-cost results require scoped valid derivations, separately warranted source commitments, persistent reusable evidence and the declared terminal checking contract. Their full-acquisition canonical quotient may be finer than a restricted test menu needs. A finite persistent menu gives the complete-transcript criterion; expiry or defeat defeats that simple criterion. Tree compilation tolerates cycles because it prunes finite derivations under exact substitution and nonnegative additive costs, not because cycles prove their own premises. Shared-node checking needs whole-graph information before terminal normalization. These results do not settle unrestricted logical completeness, source trust, semantics, actual cost calibration, or a human subject's epistemic basing.
+
+The unknown-standard results in §9.7 have a different information contract. Their finite-sample constants assume fresh independent Bernoulli observations; their countability conclusions require only the stated common-reference or causal-evaluator hypotheses. Finite harmful probing and infinitely many target-preserving samples support different targets and cannot be substituted for one another. Relative score tolerance, coherence, endpoint slack, measurable prior mixtures and effective realizability remain explicit. No result determines a real normative standard's authority or origin, or treats an unused oracle tail as observed evidence.
 
 ## 11. Attribution, evidence, and edition boundary
 
@@ -1290,6 +1568,14 @@ Sections 9.5–9.6 reconcile the complete warranted-completion treatment [24], i
 The exact formal source [30] proves the visited-support inequality, synthesis from a finite connected witness, the optimum under a minimum-witness premise, and the local character pullback identity. Its constructive connected-set predicate is not separately identified inside Lean with an imported graph-connectivity predicate, and its unlabelled idle constructor is harmless for an at-most horizon only. Whole physical-word correspondence, the probability-simplex/topological lower bound, fixed-root strengthening, graph counts and saturation remain written proofs. The finite support/price formalization [31] proves normalization, the inverse, necessity and persistent updating in an arbitrary linearly ordered price type with a newly adjoined infeasibility top. Its catalogue, supports and acquisitions are finite; the ambient token type need not be. It supplies original pairs, not admitted derivation objects, authentication or actual terminal execution.
 
 The predecessor reports and reviews record Lean 4.19 certification of these exact formal bodies with the standard dependencies `propext`, `Classical.choice` and `Quot.sound`, and preserve false-strengthening controls. Their historical execution claims remain bound to those sources and their recorded environments. Source inspection here is not a fresh kernel replay, an audit of cached transitive dependencies, or receipt of every historical raw log. The Bellman criterion, semantic cover, finite rule compilation, and tree/shared-graph distinction have ordinary proofs and bounded historical finite checks; they are not added to the kernel certificate by association. The earlier distinction between a finite proof and unrestricted logical or epistemic completeness remains in force. Referenced ancestor manuscripts outside the actual received population receive no new whole-document reading or replacement credit.
+
+Section 9.7 reconciles the complete public continuum-restoration exposition [32] and finite-information bridge [33]. The repair geometry, local-minimax experiment, copied-record boundary, target-preserving positive construction, finite-query obstruction, countable sharpness and philosophical limitations retain their separate premises. The explicit affinity proof, Bernoulli moment-generating-function argument, common-reference lemma and seed/finite-word factorization are written out here. Countability of atoms, contraction under measurable postprocessing, concentration and summable-event reasoning are established mathematical mechanisms; no field-wide novelty is claimed. The concentration antecedent is Hoeffding [34]. The original programme's latent identification, persistent restoration, metric and source-binding connections are expressed here by subject, without using its historical organizational labels as scientific structure.
+
+The two prose sources are public navigation-only projections. This edition incorporates those exact public bodies, not their private originals or custody diffs. The broader support README includes other composition and restoration results and is not replaced in full by this section. Historical “pending” sentences and later recorded formal successes have different scopes: later reports of compilation or copied-source review for particular causal modules do not retroactively certify every ordinary assertion in the initial prose.
+
+The selected formal sources [35–41] distinguish a generic dominated-readout theorem from a concrete evaluator that discharges the domination obligation. The locality proof bounds only one run. The actual finite-query measure construction uses finite words with positive reference mass; it does not dominate every infinite oracle law. The correlated-law construction permits seed/oracle dependence. Its earlier exact-restoration endpoints [38–39] specialize to a common probability seed marginal and probability input laws. Theorem 24 gives the dominated-marginal extension as an ordinary proof here; [40]'s approximate causal endpoint itself allows merely dominated seed marginals and does not require normalized input laws for its measure-theoretic countability conclusion. Probability interpretations impose normalization separately. The formal approximate score inequalities allow real outputs without an extra coherence premise, so the impossibility covers coherent outputs as a subset; the positive constructions here impose their stated range conditions. Source [41] proves the exact atom-mass identity for the literal zero-query evaluator, while the existence and effective-sampling qualifications for an arbitrary countable guessing law remain ordinary mathematics.
+
+These seven public formal bodies were inspected at source level. Their transitive dependency closure, including the imported restoration-countability bridge and Mathlib modules, was not newly read or built for this edition. The predecessor records compilation, axiom-readback and independent copied-source review at their original bounded scopes; source inspection, printed proof-check commands and this exposition's ordinary proofs are not fresh kernel execution or receipt of every historical raw log. In particular the statistical sample bounds, philosophical interpretation and the whole two-source incorporation are not added to a kernel certificate by association. The existing source/adoption and accepted-edition boundaries remain.
 
 **Edition status:** new source-bound consolidated exposition. The companion review record binds the exact text, source population, independent findings, corrections, and proposed predecessor retirement. Review of this exposition does not confer owner acceptance or silently amend an accepted paper. None of those records is needed to follow the mathematical arguments above.
 
@@ -1329,6 +1615,17 @@ The predecessor reports and reviews record Lean 4.19 certification of these exac
 30. Orthemology. *Graph continuation: finite support synthesis and observable identity*. [Exact Lean source][30]. The independent source review distinguishes formalized claims from the surrounding ordinary mathematics.
 31. Orthemology. *Finite certificate frontiers and persistent acquisition*. [Exact Lean source][31]. The separate positive controls distinguish cost-sensitive pruning, present-cost insufficiency and collapsed-infinity failure.
 
+32. Orthemology. *Continuum standards: the finite-information restoration barrier*. [Complete public projected exposition][32], including its common-reference, causal-evaluator, approximate-tolerance and blind-guess successors. Private originals and custody diffs are outside this edition's received body population.
+33. Orthemology. *Finite-information cost of unknown-standard repair*. [Complete public projected bridge][33]. Its geometric necessity, local-minimax cost and target-preserving sufficient construction have distinct hypotheses.
+34. Wassily Hoeffding. “Probability Inequalities for Sums of Bounded Random Variables.” *Journal of the American Statistical Association* 58(301) (1963). DOI: [10.1080/01621459.1963.10500830](https://doi.org/10.1080/01621459.1963.10500830). The needed Bernoulli specialization is proved above.
+35. Orthemology. *Countable Identification*. [Exact public Lean source][35], for common-reference exact readouts, restricted events and explicit countable-sum reference conditions.
+36. Orthemology. *Finite Query Locality*. [Exact public Lean source][36], for actual Boolean-query execution and one-run prefix locality.
+37. Orthemology. *Finite Query Measure*. [Exact public Lean source][37], for common trace domination from an independent seed and arbitrary actual oracle law, with its declared imported bridge.
+38. Orthemology. *Correlated Oracle Measure*. [Exact public Lean source][38], separating marginal domination from its specialized exact-restoration endpoint.
+39. Orthemology. *Eventual Causal Restoration*. [Exact public Lean source][39], for one eventual target on actual executions.
+40. Orthemology. *Approximate Repair Identification*. [Exact public Lean source][40], for relative-tolerance decoding, the causal countability endpoint and the no-information linear-tolerance counterexample.
+41. Orthemology. *Blind Guess Sharpness*. [Exact public Lean source][41], for the literal evaluator's exact atomic success mass.
+
 Repository references identify exact public source editions, not mutable current filenames. The broader works in references 1, 6, and 7 contain additional results and are not replaced in their entirety by this chapter.
 
 [1]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/theory/lineages/h-continuation/continuation_complete_orthing.md
@@ -1363,3 +1660,13 @@ Repository references identify exact public source editions, not mutable current
 [29]: https://homepages.cwi.nl/~rdewolf/publ/qc/dectree.pdf
 [30]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP19/graph-constrained-continuation-20261009/GraphContinuation.lean
 [31]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-live-20261009/checkpoints/CP23/warranted-discrimination-kernel-20261009/CertificateFrontier.lean
+
+[32]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/4878fd0a4cf6c952af7cdbcb7e8a386c2730ff9986b74b8e39bf9b5077815b0f.md
+[33]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/docs/provenance/v5-research-continuations/notes/002eab67237670bc990e3762cb0cce1f0de465987ba5aa48a5ccbd27d4ac302e.md
+[35]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/2df7c47363350f3eb58e07495b1b20319baab5847d3cc0998d7aef2d02a09720.lean
+[36]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/13eab28f535c45cdf0347e27913ebd5b18f5dda07f6dac8f2774afd2ad57c8c6.lean
+[37]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/f018854d64b5885a992b41c1180a551063dfe66603951901a9d2b65645883280.lean
+[38]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/2807aaf24bd997dd5b61acbbadef86d6dbae18ef3c986c7f49252e36fe26d4cb.lean
+[39]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/7551d3dbf744250a840e0cbb224654a6d8973da353aaa1f6cede18d64ea47a4d.lean
+[40]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/16f467976b9d30b5fe1bfa5997e7378dcf391e989d17aaed4e69224da0686261.lean
+[41]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-continuations/source-store/75d8ceba960b2ae9698515d20e05badd9257fcab10a8a60bf295aad36eb21395.lean

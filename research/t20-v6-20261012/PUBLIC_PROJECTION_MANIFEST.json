@@ -29205,7 +29205,9 @@
       "public_bytes": 29666,
       "publication_basis": "owner_authorized_original_research_projection",
       "locator_changes": 0,
-      "navigation_changes": 0
+      "navigation_changes": 0,
+      "repository_revision": "a7ff0e33d1a299db640041c46b1af81ca70851f6",
+      "git_blob": "4dd0bce99ab60c34752bda1e4102341b67350c79"
     },
     {
       "source_sha256": "178b01a82090cb6e754a4d0b567304d5e80d6bbb9592aee95f9f9b1d2dedbead",
@@ -154839,7 +154841,9 @@
       "repository_path": "tests/test_v5_twentieth_data.py",
       "public_sha256": "77f9a6bb323345942a400353a614caeacb2546cc11cbde95cb082ca4acaf1a09",
       "public_bytes": 6819,
-      "publication_basis": "exact_existing_public_repository_object"
+      "publication_basis": "exact_existing_public_repository_object",
+      "repository_revision": "7efc6217c090b92d65f2c4cb8b011c18eb96bf7c",
+      "git_blob": "e1bad4344f949d9ddbe32ca6c4e6bd4158515a86"
     },
     {
       "source_sha256": "77fa54173fa04c4d9b942cb668dbc080dd3b5062c563e29ed6850c5b1185d596",

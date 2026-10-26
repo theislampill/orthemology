@@ -65,7 +65,7 @@ The successor explicitly removes the predecessor's quadratic/sum-of-squares brid
 
 ## Fisher geometry
 
-**Existing corollary: `V6-C02`.** [Contribution owner][contributions] · [Fixed-fibre corollary][sidecar] · [Controlling finite-audit source, sections 2–3 and 9][fisher] · [Existing ordinary review][sidecar-review].
+**Existing corollary: `V6-C02`.** [Contribution owner][contributions] · [Fixed-fibre corollary][sidecar] · [Complete Fisher derivation and descent proof](../../mathematics/information-and-inquiry.md#6-the-categorical-fisher-dynamics-of-the-full-source) · [Original finite-audit edition, sections 2–3 and 9][fisher] · [Existing ordinary review][sidecar-review].
 
 The full-source geometry starts from a strictly positive joint law `mu[j,i] = w[j] p[j,i]`. Its categorical Fisher metric is
 
@@ -98,7 +98,7 @@ p₃ = (3/4, 1/4)
 
 Both weight vectors `(1/4, 1/2, 1/4)` and `(1/8, 3/4, 1/8)` give the same mixture `(1/2, 1/2)`. For the stipulated objective `J = p₁,₁`, however, the negative full-source Fisher velocity of `p₁` is respectively `(-3/4, 3/4)` and `(-3/2, 3/2)`. A record can therefore preserve the conditional answers and current mixture while failing to preserve their dynamics. The source’s [section 9 control][fisher-control] supplies the example; the refactor is not claiming a new experiment.
 
-The positive classification is also useful: for the source’s ambient `C2` objective on the full strictly positive domain, with more audit outcomes than target states, its negative full-source Fisher gradient flow projects consistently to the retained signature exactly when the restricted objective is a function of the current target alone. Here “descend” means the same projected dynamics for every admissible discarded-weight representative, not merely making a loss smaller. For this case the source supplies a closed target flow. Restricted source families, other metrics and the complementary cardinality regime have different conclusions. The [classification and assumptions][fisher] must accompany any application; numerical decrease is not itself epistemic warrant.
+The positive classification is also useful: for the source’s ambient `C2` objective on the full strictly positive domain, with more audit outcomes than target states, its negative full-source Fisher gradient flow projects consistently to the retained signature exactly when the restricted objective is a function of the current target alone. Here “descend” means the same projected dynamics for every admissible discarded-weight representative, not merely making a loss smaller. For this case the source supplies a closed target flow. Restricted source families, other metrics and the complementary cardinality regime have different conclusions. The [classification and assumptions](../../mathematics/information-and-inquiry.md#7-a-sharp-threshold-for-globally-descending-objectives) must accompany any application; numerical decrease is not itself epistemic warrant.
 
 
 ## Joint feasible readings and completions
@@ -435,7 +435,7 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 [coordination]: ../../mathematics/collective-inquiry-and-strategic-coordination.md#6-complete-coordination-records-across-a-growing-horizon
 [tensor]: ../../research/t20-v6-20261012/sources/449a28007af5a4d372d95be4d8f961a3ac577e723760f7a352327a05d4b6e17a/tensor-realizability-extension-20261010__RESULT.md
 [coercive]: ../../research/t20-v6-20261012/sources/204f63e544b1afd9538230f95f8ebfbc613b9847c579dfb901de6d10e40ebb10/coercive-square-positivity-20261010__RESULT.md
-[fisher]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
+[fisher]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md
 [sidecar]: ../../research/t20-v6-20261012/research-v6/root_math/FINITE_SIDECAR_GEOMETRY_BOUNDARY.md
 [sidecar-review]: ../../research/t20-v6-20261012/research-v6/type_collective/GEOMETRY_SIDECAR_REVIEW.md
 [join]: ../../research/t20-v6-20261012/research-v6/root_math/occurrence_feasibility_join/REPORT.md
@@ -462,7 +462,7 @@ The positive result is an exact syntactic/semantic preservation theorem for a sp
 [ar8r-post]: ../project-closure/ar8r-v11/AR8R-V11-POST-MERGE-EVIDENCE-CATALOG.yaml
 [experiment-status]: ../../experiments/experiment-status.yaml
 [owner-map]: ../project-closure/reader-refactor-issue-35/OWNER-MAP.json
-[fisher-control]: ../../research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
+[fisher-control]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/178adaf0d9c8f19f2d0eaf5b8118b157e582b356fa9dddfee6ba8ebe6e5da71b/finite-audit-gradient-classification.md#9-decisive-controls-and-the-connection-to-inquiry-value
 
 [t12-fresh]: ../../experiments/orthemology-v5-successors/source-store/09e145f0f1420b81f7852416f4849673126ea60faf249e575d33d4377ecbcbab/FRESH_HISTORIES_BOUNDED_OBSERVATION_AND_ORIGINAL_SUPPORT_v4.md
 [t12-concentration-review]: ../../experiments/orthemology-v5-successors/source-store/73bdb7a528a145fc409cf7cc6925b6210eda17808ba8e6c918ffd892f61953b8/INDEPENDENT_REVIEW_PUBLIC_v1.md
@@ -535,6 +535,8 @@ The original [result/evidence owner](../provenance/v5-research-continuations/RES
 **Precision and dynamics:** [first-order repair regret](PAPER-CATALOGUE.md#the-first-order-cost-of-unresolved-norm-conflict), [norm-information readout](PAPER-CATALOGUE.md#how-a-successful-repair-reveals-a-hidden-norm), [self-verifying support criterion](PAPER-CATALOGUE.md#self-verifying-actions-make-controlled-restoration-possible), and [the generated positive experiment](PAPER-CATALOGUE.md#a-generated-experiment-joins-score-repair-and-causal-control).
 
 **Exact scope controls:** [nudge versus endpoint](PAPER-CATALOGUE.md#nudges-coherent-directions-and-full-endpoint-repairs), [cross-context identity](PAPER-CATALOGUE.md#why-standards-must-stay-the-same-across-contexts), [nonlinear score transport](PAPER-CATALOGUE.md#faithful-score-transport-is-more-than-injective-encoding), and [the countable-success/finite-query boundary](PAPER-CATALOGUE.md#a-finite-query-restoration-obstruction-and-its-positive-sharpness).
+
+The complete [information-cost and persistent-repair proofs](../../mathematics/information-and-inquiry.md#97-unknown-standards-the-information-needed-for-persistent-repair) join the exact score-to-parameter decoding, finite-confidence lower bound, target-preserving positive learner, causal finite-query countability theorem, tolerance boundary and atomic sharpness. The original public prose and formal-source limits remain explicit in that treatment.
 
 [The formalisation-scope note](../../docs/provenance/v5-research-continuations/notes/71156aa5eb3f520e004fd15b3c8eb5a994bbf87c9735c00e0ea9c921f409e10e.md) is the named formal/ordinary distinction, not a blanket badge on all these papers.
 
