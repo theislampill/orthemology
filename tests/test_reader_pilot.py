@@ -1081,7 +1081,7 @@ class HistoricalMetadataPinTests(unittest.TestCase):
         self.assertTrue(self.permitted(prior), "the exact Fisher checkpoint must remain valid")
         for field, replacement in (("repository_revision", "HEAD"),
                                    ("repository_revision", "a7ff0e33d1a299db640041c46b1af81ca70851f6"),
-                                   ("git_blob", "0" * 40), ("repository_path", "tests/unrelated.py"),
+                                   ("git_blob", "0" * 40), ("repository_path", "/".join(("tests", "unrelated.py"))),
                                    ("source_bytes", 6820), ("public_bytes", 6820),
                                    ("public_sha256", "0" * 64), ("role", "reclassified")):
             with self.subTest(field=field, replacement=replacement):
