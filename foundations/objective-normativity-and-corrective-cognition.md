@@ -706,6 +706,141 @@ The results assume finite declared candidates, stable total maps, and exact comp
 
 The mathematical proofs and finite cases above stand independently of historical checking receipts. The corrected refinement condition is essential; historical finite trials cannot replace the general proof or authenticate the philosophical input. These results extend the existing account of cognition by locating precisely where warranted source content, new observation, or a substantive bridge can change a conclusion. They leave the positive arguments and their genuine unresolved premises available for direct assessment.
 
+### 8.10 Structural covariance, content recoding and semantic identification
+
+A structural rule can select an interpretation consistently across renamed copies without establishing what its contents refer to. Conversely, warranted reference information can distinguish interpretations that have the same structural pattern. The distinction is useful only when the relevant transformations, candidate interpretations and evidence are specified. The following finite treatment joins the public studies of natural interpretation and content recoding to the identification results of §§5.1 and 8.4. It retains their positive restrictions while repairing an ambiguous signature example and distinguishing removal of recoding ambiguity from identification by observation. [S30–S31]
+
+#### Natural selection across structural copies
+
+Let $`S=(X,\mathcal R)`$ be a finite relational structure and $`C`$ a finite content set. For every labelled copy $`S'`$ isomorphic to $`S`$, let $`I(S')`$ be a nonempty set of maps from its carrier to $`C`$. These are the *admissible interpretations*. If $`f:S'\to S''`$ is an isomorphism, transport an interpretation by
+
+```math
+(f_*\mu)(f(x))=\mu(x).
+```
+
+Assume transport carries $`I(S')`$ into $`I(S'')`$. Applying the assumption to the inverse isomorphism makes this a bijection. There is no action on $`C`$ in this structural transport: the content labels remain fixed. A natural selector assigns $`\sigma_{S'}\in I(S')`$ to every copy and satisfies $`f_*\sigma_{S'}=\sigma_{S''}`$ for every isomorphism. This is covariance across presentations, including invariance under automorphisms of any one presentation.
+
+Write $`G=\mathrm{Aut}(S)`$ and
+
+```math
+J=\mathrm{Fix}_G I(S)
+ =\{\mu\in I(S):g_*\mu=\mu\text{ for every }g\in G\}.
+```
+
+**Proposition (natural selectors and fixed interpretations).** Evaluation at $`S`$ gives a bijection between natural selectors on this one isomorphism class and the set $`J`$. Thus a selector exists exactly when $`J`$ is nonempty, and is unique exactly when $`J`$ has one member.
+
+**Proof.** Naturality at each $`g:S\to S`$ makes the selected interpretation fixed. Conversely, given $`\mu\in J`$ and an isomorphism $`f:S\to S'`$, put $`\sigma_{S'}=f_*\mu`$. If $`h:S\to S'`$ is another choice, $`h^{-1}f`$ belongs to $`G`$ and fixes $`\mu`$; hence $`f_*\mu=h_*\mu`$. This defines the family independently of choices. For $`k:S'\to S''`$, transport composition gives $`k_*\sigma_{S'}=(kf)_*\mu=\sigma_{S''}`$. Finally any natural selector with value $`\mu`$ at $`S`$ must take exactly these values at all copies. The constructions are inverse. ∎
+
+Equivalently, a fixed interpretation is constant on each orbit of the structural action on $`X`$. If $`y=g(x)`$, invariance gives $`\mu(y)=\mu(x)`$; if $`\mu`$ is constant on every orbit, the same equality proves invariance. The constraints defining $`I(S)`$ may rule out all such assignments or admit several. Two indistinguishable positions required to receive different contents give no fixed interpretation. If both constant interpretations into $`\{0,1\}`$ are admissible, they give two natural selectors. A rigid structure, whose automorphism group is trivial, has $`J=I(S)`$ and therefore supplies uniqueness only when the admissible family itself is a singleton. These are literal statements at the declared content-label level. A quotient of content assignments would pose a separately specified question.
+
+#### Structural marks and the direction of monotonicity
+
+Adding independently motivated structural relations or distinguished parameters reduces the automorphism group: for an expansion on the same carrier, $`H=\mathrm{Aut}(S^+)\subseteq G`$. If the admissible set $`I`$ is held fixed, then
+
+```math
+\mathrm{Fix}_G I\subseteq\mathrm{Fix}_H I.
+```
+
+Every interpretation invariant under all of $`G`$ is invariant under its subgroup. Thus adding structural marks can *increase* the number of natural interpretations. It does not, by itself, monotonically improve uniqueness. Conversely, removing marks cannot turn a single fixed interpretation into several fixed interpretations while the same admissible family is retained. The earlier example suggesting that direction needs either a changed admissible family or a different meaning of semantic multiplicity. [S30]
+
+A three-position example gives the full behavior. Begin with three structurally indistinguishable positions and let $`I`$ consist of the three binary assignments having exactly one value equal to one. The full permutation group fixes none. Mark one position: the remaining automorphism exchanges only the other two, and exactly the assignment placing one at the marked position is fixed. Mark all three positions separately: the automorphism group becomes trivial and all three assignments are fixed. Existence can therefore change from none to one, and uniqueness can subsequently be lost. Every family in this example is stable under its declared group.
+
+Changing the admissibility conditions is a different operation. A warranted rule that the marked position must receive a particular content can restrict $`I`$ and genuinely select a unique assignment. Its content and justification do the additional work. This preserves the source's positive point that explanatory resources matter, while locating exactly which resource produces the restriction.
+
+#### Content transformations and the evidence map
+
+Now equip $`C`$ with a declared finite algebra of relations, operations and constants, $`\Lambda`$. Let $`B`$ be independently warranted additional referential or semantic anchors expressed in that algebra. Its residual content group is
+
+```math
+\Gamma_B=\mathrm{Aut}(C,\Lambda\cup B).
+```
+
+These transformations act on interpretations by $`\mu\mapsto\gamma\circ\mu`$. Assume the comparison domain $`M\subseteq C^X`$ is stable under this action. Otherwise a proposed recoding may leave the admitted class and cannot be used as a same-class nonidentification witness without further argument. A content transformation preserves the admitted content structure; an arbitrary permutation that changes a designated truth constant or a relevant similarity relation is not necessarily admissible.
+
+Let $`E:M\to Z`$ be the complete eligible evidence map of one fixed comparison, and $`T:M\to D`$ its target. A common experiment, its intervention meanings and its output coding must be held fixed across candidates. Exact identification means $`T=d\circ E`$ for a function on the attained evidence values. It holds exactly when
+
+```math
+E(\mu)=E(\nu)\quad\Longrightarrow\quad T(\mu)=T(\nu)
+\qquad(\mu,\nu\in M),
+```
+
+by the fibre proof already given in Proposition 2. This condition also covers targets coarser than literal interpretation, such as one reference value or a truth classification.
+
+**Proposition (recoding obstruction and its positive converse).** Suppose $`E(\gamma\circ\mu)=E(\mu)`$ for every admitted $`\gamma,\mu`$. If $`T`$ changes somewhere on a residual content orbit, it is not identifiable from $`E`$. If, in addition, the evidence fibres are exactly those orbits, then $`T`$ is identifiable if and only if it is constant on every residual content orbit.
+
+**Proof.** Each orbit lies in an evidence fibre by invariance. Two orbit members with different targets therefore contradict the fibre criterion. Under the additional equality of fibres and orbits, an orbit-constant target is fibre-constant. Define the decoder at each attained evidence value to be the target of any member of its fibre; orbit constancy makes the definition well-defined. The reverse implication follows from the first part. ∎
+
+The added hypothesis in the converse is substantive: invariant evidence can merge several different orbits. Orbit invariance is therefore a necessary condition for identification under invariant evidence, not generally a sufficient one. This theorem is the existing fibre-factorization argument applied to a group action. It does not show that the actual world has indeterminate meaning.
+
+The same criterion gives a precise connection with evidence dissemination. If a copied or transformed record has the form $`H=h\circ E`$, every pair with equal old evidence still has equal forwarded records. A target-conflict pair unresolved by $`E`$ therefore remains unresolved by $`H`$, however many copies are made. If the full old evidence can be recovered by $`E=k\circ H`$, identification from the two records is equivalent, by composing the decoders in either direction. This is a deterministic information consequence, not an assertion that lineage roots or linear rank alone characterize semantics. The separate [copying and synchronisation account](../mathematics/collective-inquiry-and-strategic-coordination.md#14-copying-synchronisation-and-the-acquisition-of-evidence) specifies when roots and visible directions are retained; an additional measurement may enlarge the evidence beyond any function of the old record.
+
+A literal interpretation is free of residual recoding ambiguity at $`\mu`$ exactly when
+
+```math
+\Gamma_B\mu=\{\mu\}
+\quad\Longleftrightarrow\quad
+\gamma(c)=c\text{ for every }c\in\mu(X)
+\text{ and every }\gamma\in\Gamma_B.
+```
+
+Indeed, equality of the functions $`\gamma\circ\mu`$ and $`\mu`$ is precisely that pointwise condition. The residual group can still act nontrivially outside the image of $`\mu`$. By contrast, identifying the literal interpretation *from the observed evidence at this case* requires $`E^{-1}(E(\mu))=\{\mu\}`$. A singleton orbit need not make that fibre singleton.
+
+For an explicit counterexample, let $`X`$ have one position, let $`C=\{0,1\}`$ with both values designated, and admit the two possible interpretations. The residual content group is trivial, so both orbits are singletons. Let $`E`$ be constant. Their literal interpretations differ but their evidence does not, so no decoder identifies which is present. Removing a formal recoding symmetry has not supplied a measurement.
+
+#### What the two symmetry layers imply together
+
+The structural and content actions commute:
+
+```math
+g_*(\gamma\circ\mu)=\gamma\circ(g_*\mu).
+```
+
+Both sides evaluated at $`x`$ equal $`\gamma(\mu(g^{-1}x))`$. Suppose now that $`I(S)`$ is stable under both actions. Then its set $`J=\mathrm{Fix}_G I(S)`$ is stable under $`\Gamma_B`$: if $`g_*\mu=\mu`$, commutation gives $`g_*(\gamma\circ\mu)=\gamma\circ\mu`$.
+
+**Corollary (unique natural selection constrains content recoding).** Under joint stability, if $`J=\{\mu_*\}`$, every admitted content transformation fixes $`\mu_*`$.
+
+**Proof.** For every $`\gamma\in\Gamma_B`$, stability and commutation put $`\gamma\circ\mu_*`$ in $`J`$. Uniqueness makes it $`\mu_*`$. ∎
+
+This is a composed consequence of the two source results. It is stronger than treating the symmetry layers as wholly unrelated. Structural *rigidity* alone only makes $`J=I`$; structural *existence* only makes $`J`$ nonempty. Either can coexist with content ambiguity. But unique natural selection and unresolved content recoding cannot coexist under the joint stability hypotheses. If a purported unique selector chooses one content name while a declared content automorphism sends it to another admissible fixed interpretation, the uniqueness claim fails. If the second interpretation is excluded, that exclusion must appear in the independently justified admissible family or content structure.
+
+The corollary still does not identify arbitrary members of $`I`$ from arbitrary observations. For a concrete example let the structural group exchange two positions, let $`C=\{0,1,2\}`$, and let the content group exchange one and two while fixing zero. Take $`I=\{00,01,10,02,20\}`$, where the two digits give the contents at the two positions. The family is stable under both actions and its sole structurally fixed member is $`00`$, which the content group fixes. Constant evidence nevertheless leaves all five interpretations indistinguishable. If independently justified premises instead restrict the actual comparison domain to the singleton $`J=\{00\}`$, then every target on that domain is formally identified even by constant evidence. This is a real positive conclusion; the warrant for the restriction and its application to the case are doing the work. It does not authenticate those premises or identify an external referent solely from a formal name.
+
+#### When an additional anchor really helps
+
+Two monotonicities must be distinguished. Expanding $`B`$ to $`B'`$ gives $`\Gamma_{B'}\subseteq\Gamma_B`$ and hence smaller or equal residual orbits. Expanding the observed profile from $`E`$ to $`E'=(E,a)`$ gives smaller or equal evidence fibres. The first removes declared recoding symmetries; the second can resolve observations that the old experiment merged. An anchor may do both, but neither role follows just from naming it an anchor. The interpretation, eligibility and value of $`a`$ must remain fixed in the comparison, as in §§8.4–8.5.
+
+For a positive two-case example, use a one-position structure and equality-only contents $`\{c_0,c_1\}`$. Admit both interpretations and observe only their equality kernel, which is the one-entry matrix $`[1]`$ in both cases. The content swap is allowed and changes literal reference. An independently warranted designation of $`c_0`$ removes that swap. If evidence remains the constant kernel, the two interpretations still cannot be distinguished. If a warranted common test also supplies $`a(\mu)=1`$ exactly when $`\mu(x)=c_0`$, then $`(E,a)`$ has two singleton fibres and identifies the literal value. The positive result needs both the correct meaning of the test and access to its actual outcome.
+
+A source argument can instead establish a substantive restriction on the admissible class. If warranted source content identifies the intended referent and excludes an assignment, it changes the comparison as described in §8.6. The restriction can genuinely remove a rival. A preferred label introduced solely because it yields the desired conclusion supplies no independent warrant for that change. Likewise, naming a graph node “source,” retaining a source-shaped causal graph, or translating a role expression does not by itself establish which external entity it denotes. A warranted source-to-world map can supply that bridge; its existence is not ruled out by the group calculation.
+
+Interventions have the same discipline. If every intervention label and response code is transformed along with the contents, the resulting descriptions may remain the same experiment under recoding. A genuinely enlarged common experiment can break the old invariance when its actual responses distinguish formerly equivalent candidates. Giving different candidates different target definitions, label meanings or interventions does not establish this discrimination within one fixed experiment.
+
+#### Semantic form, constitutive content and its bearer
+
+The resulting distinctions support four separately assessable claims:
+
+| Claim | Exact question |
+|---|---|
+| Natural interpretation | Does a structurally invariant admissible interpretation exist, and is it unique? |
+| Content identification | Are the relevant residual recodings removed, and does eligible evidence isolate the required target? |
+| Constitutive semanticity | Does the semantic content belong intrinsically to the proposed ground, rather than being assigned by an external law or interpreter? |
+| Mental realization | Is that content realized in a mental or intellectual bearer, with any further required unity or agency? |
+
+The first two are answered by the declared finite model only at the stated scope. The latter two need further philosophical or empirical premises. A formal structure with a single marked position, fully designated contents and a singleton admissible interpretation can be expanded by assigning its interpretation through an external impersonal rule and setting the additional intrinsic-content and mental-host predicates false. It satisfies the uniqueness and recoding conditions without those predicates. If an account independently establishes constitutive content, a further implication to a mental host still needs its own premise: adding an intrinsic-content predicate to a formal description does not supply that implication by itself. These are counterinterpretations to an entailment from the specified vocabulary, not demonstrations that every such model is metaphysically possible. [S30–S31]
+
+Distributed and downstream realizations expose two additional gaps. Different subsystems can realize the restrictions of one interpretation to different parts of $`X`$, while no single bearer owns the whole interpretation. A joint assignment therefore does not identify a numerically single subject. Separately, a downstream mind can form notions representing an external impersonal order; the mental location of those notions does not make the represented order intrinsically mental. The natural-selector predecessor relates this second possibility to El-Tobgui's secondary reconstruction of Ibn Taymiyya's distinction between external particulars and mentally abstracted universals. That attribution is retained at the predecessor's secondary-source scope; it is not a new inspection of the medieval primary text or a source proof of an ultimate mind. [S30; see also §8.8]
+
+Local grammatical convergence has the same limit: several systems can realize one transition or similarity pattern while their admitted literal-reference assignments still vary. The invariant pattern is a positive common constraint, but selecting one ultimate mental grammar requires additional warranted premises. The same applies to proper function, personal agency, wisdom, necessary being, creatorhood or revelational identification. Those conclusions are not theorems of finite equivariance alone; the affirmative arguments elsewhere in this work and in the foundations and epistemology treatments remain available at their own premises.
+
+#### Representation studies and the exact scope of their evidence
+
+Huh and colleagues define representation alignment through similarity kernels and hypothesize convergence toward shared statistical structure. Their idealized analysis requires bijective observation projections, and their limitations include differing information across modalities, specialist systems, incomplete convergence and dependence on the alignment metric. [P27] These are substantive claims about representation learning, not by themselves a determination of literal reference. The mathematical application is exact only for transformations preserving the selected kernel: any content bijection preserves an equality kernel, and an orthogonal transformation preserves a real inner-product kernel because $`\langle Qu,Qv\rangle=\langle u,v\rangle`$. An arbitrary relabelling need not preserve every numerical similarity measure.
+
+The hippocampal study by Sun and colleagues reports progressive decorrelation into task-state representations. Its comparison gives the clone-structured causal graph model a stronger fit than the tested endpoint-only alternatives because it also reproduced the observed learning trajectory. [P28] That is a positive model constraint at the reported experimental scope. The implication drawn here is conditional: any remaining semantic transformations preserving that entire registered evidence still cannot be distinguished by it. The symmetry theorem neither denies the empirical result nor establishes that every possible expanded experiment has the same invariance.
+
+Neither study is rerun here. The first attribution uses the inspected preprint's definitions and limitation sections; the second retains the published study's abstract and model-comparison account at that bounded receiving scope. They supply no independent proof that the modeled content is constitutive of an ultimate ground or belongs to one intellectual subject. A proposed wider conclusion must identify the additional evidence or premise that removes the relevant alternative. An impersonal semantic law or a downstream interpreter survives a comparison that has not independently excluded it; a richer justified argument can change that comparison. The exact finite proofs make both the positive restriction and the remaining task explicit, without turning either into scientific adoption. [S30–S31]
+
+
 ## 9. Intrinsic reasons, fitting response, and the indifferent agent
 
 The preceding results leave room for substantive normative reasoning. They show where a descriptive or computational account has not supplied a target; they do not establish that normative judgments are unwarranted unless deduced from wholly norm-free premises. A reason can have independent prima facie warrant through what it is about: another person's actual good, an actual relation, a fitting acknowledgment, or a valid undertaking. The remaining work is to articulate that warrant and test its scope. [S11; S13–S17]
@@ -1112,6 +1247,10 @@ The exact public-source citations identify inherited arguments, corrected propos
 
 **P26.** McIntyre, James H. “Brute fact parsimony.” *Philosophical Studies*, published online 4 February 2026, §§2.2 and 3.1–3.4. [DOI and open article](https://doi.org/10.1007/s11098-026-02487-0).
 
+**P27.** Minyoung Huh, Brian Cheung, Tongzhou Wang and Phillip Isola. *The Platonic Representation Hypothesis*. arXiv:2405.07987v1 (13 May 2024), §2 preliminaries and §6. [Inspected preprint](https://arxiv.org/html/2405.07987v1). The cited scope is the kernel definition, convergence hypothesis and stated limitations, not a new experiment or a claim of universal convergence.
+
+**P28.** W. Sun and colleagues. *Learning produces an orthogonalized state machine in the hippocampus*. *Nature* (2025), [doi:10.1038/s41586-024-08548-w](https://www.nature.com/articles/s41586-024-08548-w). The abstract and published model-comparison account support the limited empirical attribution in §8.10; no complete experimental replication or fresh data analysis is claimed.
+
 ### Public research arguments
 
 The following subject descriptions identify the public Orthemology arguments used here. The Git object identities fix their exact editions within the [public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). They are authentication references for inherited material; the arguments necessary to read this work have been incorporated above. Source reading, independent review, adoption, and a document's physical disposition remain distinct.
@@ -1175,3 +1314,7 @@ The following subject descriptions identify the public Orthemology arguments use
 **S28.** Orthemology public research. Source, formal model, and world: a guarded account of wise agency, revised edition. Exact Git object: `2953270dc2a123fe5776c92666a7037fcfdf3be3`; concrete neutral kernel: `ffc8b62232dfc42ce07ea1aa43d8d458f5a4e8d3`; source/world assignments and controls: `1f81a89d311d51b6aa77c24c7c0b2f371e80af43`; source-authority note: `45ba6a9c1673df83c13e647152d04b488d43c2e1`. The concrete experiment, finite-policy specialization, guarded positive argument, and scoped controls are used. The general controller-transfer credit belongs to the existing collective-inquiry treatment. Historical executions remain distinct from the present semantic arguments and finite checks; no unavailable earlier kernel or original private source input is reconstructed by this exposition.
 
 **S29.** Orthemology public research. Derivational unification and carrier packaging. Exact Git object: `5b8730ceb698c2a15d8165f23aba851e47f7516f`. The profile-isomorphism argument, product consequence, substantive-unification conditions and bounded application are used. Original executable witnesses and the inherited comparison dossier retain their separate evidence roles. References P23–P26 support the limited literature attributions made here; no original execution or dossier reconstruction is claimed.
+
+**S30.** Orthemology public research. *Isomorphism-natural semantics and interpretation rigidity*, revised public proposal. [Public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). Exact Git object: `757b0914dcbe7ac1319690c639916cc837913ea3`. The selector proof, semantic distinctions and controls are incorporated in §8.10, with the fixed-family direction of signature refinement corrected. Its secondary El-Tobgui attribution remains inherited at that scope, not a newly inspected medieval primary source.
+
+**S31.** Orthemology public research. *Semantic gauge, literal reference and constitutive interpretation*, revised public proposal. [Public source edition](https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6). Exact Git object: `fb0dd5524c9ef2ab6c9c968cf06eedf9cd3e1002`. The content-action obstruction, anchor condition and philosophical and experimental controls are incorporated in §8.10; the distinction between singleton orbits and identifying evidence fibres is explicit. The commuting-action consequence is a composition of these two source treatments, not an assertion of general mathematical novelty or owner adoption.

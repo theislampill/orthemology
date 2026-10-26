@@ -19,7 +19,7 @@ Targets in different profile spaces cannot be compared by an untyped intersectio
 =\{m'\in\mathrm{Reach}(m):O_i(m')\in G_i\}.
 ```
 
-Two targets are jointly realizable precisely when $`\widetilde G_i(m)\cap\widetilde G_j(m)\ne\varnothing`$. The schema “win for the player in this role” can be invariant under a role exchange while the two instantiated win-targets are disjoint. Schema isomorphism is not target identity. Cooperation may use a shared analysis and target, or an explicit alignment between different profile spaces; partial joint realizability alone does not identify the objectives. Moreover, zero-sum payoffs allow a draw with payoffs $`(0,0)`$; opposed win-targets need not exhaust the terminal states. Actor-relative objectives also do not make every judgment actor-relative: whether an observed checksum matches a specified value can be the same question for every participant. [1, §§2–3][r1]
+Two targets are jointly realizable precisely when $`\widetilde G_i(m)\cap\widetilde G_j(m)\ne\varnothing`$. The schema “win for the player in this role” can be invariant under a role exchange while the two instantiated win-targets are disjoint. Schema isomorphism is not target identity. Cooperation may use a shared analysis and target, or an explicit alignment between different profile spaces; partial joint realizability alone does not identify the objectives. Moreover, zero-sum payoffs allow a draw with payoffs (0,0); opposed win-targets need not exhaust the terminal states. Actor-relative objectives also do not make every judgment actor-relative: whether an observed checksum matches a specified value can be the same question for every participant. [1, §§2–3][r1]
 
 ### 1.2 When component work forms one inquiry
 
@@ -35,11 +35,11 @@ Distributed availability, individual knowledge and operative integration can be 
 
 | State | Probability | *A* | *B* | *C* | *H* |
 |---:|---:|:---:|:---:|:---:|:---:|
-| 0 | $`1/10`$ | true | true | true | true |
-| 1 | $`2/10`$ | true | true | false | false |
-| 2 | $`2/10`$ | true | false | true | false |
-| 3 | $`2/10`$ | false | true | true | false |
-| 4 | $`3/10`$ | false | false | false | true |
+| 0 | 1/10 | true | true | true | true |
+| 1 | 2/10 | true | true | false | false |
+| 2 | 2/10 | true | false | true | false |
+| 3 | 2/10 | false | true | true | false |
+| 4 | 3/10 | false | false | false | true |
 
 Member 1 observes the truth values of $`A,B`$; member 2 observes $`A,C`$; member 3 observes $`B,C`$. Their complete information partitions are respectively
 
@@ -56,11 +56,156 @@ A\cap B\cap C=\{0\}\subsetneq H=\{0,4\},
 \qquad \Pr(H\mid A\cap B\cap C)=1.
 ```
 
-Thus a componentwise inventory accepting propositions known by a relevant majority can contain premises that jointly entail *H* while nobody has their joint information. The proper inclusion shows that *H* was not merely defined as the conjunction. Each actual private cell has probability $`3/10`$ and contains *H*-mass $`1/10`$, so every member's posterior is $`1/3`$.
+Thus a componentwise inventory accepting propositions known by a relevant majority can contain premises that jointly entail *H* while nobody has their joint information. The proper inclusion shows that *H* was not merely defined as the conjunction. Each actual private cell has probability 3/10 and contains *H*-mass 1/10, so every member's posterior is 1/3.
 
-Even the description “the private evidence disconfirms *H*” depends on the baseline. Unconditionally $`\Pr(H)=2/5`$, so the posterior $`1/3`$ is lower. If the common background first includes $`D=\{0,1,2,3\}`$, then $`\Pr(H\mid D)=1/7`$. The same private cells are contained in *D*, so their posterior remains $`1/3`$ and now represents an increase. Joint entailment and private ignorance have not changed.
+Even the description “the private evidence disconfirms *H*” depends on the baseline. Unconditionally $`\Pr(H)=2/5`$, so the posterior 1/3 is lower. If the common background first includes $`D=\{0,1,2,3\}`$, then $`\Pr(H\mid D)=1/7`$. The same private cells are contained in *D*, so their posterior remains 1/3 and now represents an increase. Joint entailment and private ignorance have not changed.
 
 The model does not announce the actual inventory to its participants. Publicly announcing that all three indicators are true—or that each belongs to this factive majority-knowledge inventory—would change their information. The additional premise that no easy communication, memory or inferential route supplies the missing indicator is also substantive; ignorance alone does not establish it. Finally, posterior probability is not outright belief, and inventory membership is not group knowledge. Belief thresholds, integration processes and standards of access require their own interpretation. The example proves a separation among these relations rather than a finding about a real organization. [3][r3]
+
+### 1.4 Copying, synchronisation and the acquisition of evidence
+
+Making evidence available to another participant can improve that participant's inquiry without creating another independent source. Synchronisation can also discard distinctions that the participants previously retained. Two complementary models make these effects exact: a lineage graph records which acquisitions an episode descends from, while a linear signature records which declared root directions remain visible. Neither model makes the authenticity, relevance or independence of its inputs true by definition. The following account incorporates the public lineage-root and synchronisation studies, including the latter's repair of a missing old-information term. [51–52]
+
+#### Acquisitions and inherited roots
+
+Let a finite directed acyclic graph represent episode tokens. Process its nodes in any order in which each predecessor occurs before its successor. Each node has a declared type and a set of authenticated root identifiers. An initial acquisition introduces a fresh root. More generally, if $`\mathrm{Pred}(v)`$ is the predecessor set, define
+
+```math
+H(v)=
+\begin{cases}
+\displaystyle\bigcup_{u\in\mathrm{Pred}(v)}H(u),
+ &v\text{ is a copy, transformation or synchronisation};\\[4pt]
+\displaystyle\left(\bigcup_{u\in\mathrm{Pred}(v)}H(u)\right)\cup\{r_v\},
+ &v\text{ is an authenticated acquisition}.
+\end{cases}
+```
+
+The identifier $`r_v`$ in the second line must be absent from the previously introduced root set. That is a condition of this model, to be justified when it is applied. A purported acquisition that merely supplies another name for an old source belongs to a different operation or needs alias resolution. A source-free transformation has an empty inherited set.
+
+**Proposition (root accounting).** After any initial segment of the construction, the union of the root sets of all constructed nodes is exactly the set of authenticated roots introduced by acquisitions in that segment. Appending a copy, transformation or synchronisation leaves this global set unchanged. Appending an acquisition adds exactly its fresh root.
+
+**Proof.** The empty construction has both sets empty. At a nonacquisition node, every inherited root already belongs to a predecessor and hence to the previous global set. Taking a union with the new node's set adds nothing. At an acquisition, the same reasoning applies to inherited roots and freshness adds exactly $`r_v`$. Induction proves the claim. ∎
+
+This global statement differs from availability at a particular recipient. If two predecessors have root sets $`\{a\}`$ and $`\{b\}`$, their synchronised successor has $`\{a,b\}`$, although neither predecessor had both. The global union remains $`\{a,b\}`$. If earlier nodes are subsequently discarded from the *accessible* collection, the accessible union can decrease; that pruning operation is not the append-only construction in the proposition. A transformation's inherited roots record its ancestry even when its output omits or cancels the information they once supplied.
+
+One acquisition followed by one hundred copies gives 101 episode tokens and one root. Equal root sets do not make the tokens, carriers or paths identical: two copies can occupy distinct devices and follow different intermediate routes. Conversely, different authenticated acquisition events need not be probabilistically independent. Two measurements may both read the same hidden bit Z, so their outcomes agree surely even when the events and their lineages are distinct. A common upstream cause can remain absent from the declared root graph. Authentication of events and adequacy of the causal model are separate requirements. A transformation can also expose an already implied conclusion or make old evidence usable; that cognitive improvement need not introduce another acquisition root.
+
+#### Linear signatures and information lost in synchronisation
+
+Fix a field F and a finite-dimensional root space V. A warranted application must first say what its coordinates mean, how aliases have been identified, and which distinctions matter to the claim. One construction starts with the free vector space on authenticated root identifiers and takes a fixed quotient by declared alias and claim-irrelevance relations. The algebra below assumes that choice; it does not certify it.
+
+Let the rows of a matrix A be the retained linear signatures in V. Write $`E=\mathrm{row}(A)`$. A linear synchronisation acts by left multiplication with a matrix B of compatible dimensions. Put
+
+```math
+S=\mathrm{row}(BA),\qquad
+\rho_{\mathrm{before}}=\dim E,\qquad
+\rho_{\mathrm{sync}}=\dim S,\qquad
+\delta=\dim E-\dim S.
+```
+
+Every row of $`BA`$ is a linear combination of rows of A, so $`S\subseteq E`$. Consequently $`\delta\geq0`$, with equality exactly when $`S=E`$. Appending duplicate rows preserves the span. More generally, a copying matrix preserves the full span if its selected rows span E; copying only one selected row can discard the others. A nonempty collection of copies of a nonzero row has rank one, whereas any number of copies of the zero row has rank zero. The unqualified rank-one wording of the earlier examples requires this nonzero hypothesis. [51]
+
+The lineage and linear models can coexist under an explicit compatibility condition. Suppose a node's raw signature is supported on the roots in $`H(v)`$, and the same fixed linear quotient sends every raw signature to V. For an accessible collection D of nodes,
+
+```math
+\dim\mathrm{span}\{a_v:v\in D\}
+\leq
+\dim q\!\left(\mathrm{span}\{e_r:r\in\bigcup_{v\in D}H(v)\}\right)
+\leq\left|\bigcup_{v\in D}H(v)\right|.
+```
+
+Indeed, each $`a_v`$ belongs to the middle subspace, and a linear image cannot have larger dimension than its generating set. Equality is not required. Combining signatures $`e_1,e_2`$ into the single row $`e_1+e_2`$ retains both lineage roots but only one visible direction. Cancellation can even produce a zero row while ancestry remains nonempty. The set-valued invariant therefore does not contradict a loss of linear rank.
+
+#### Old recovery and fresh innovation
+
+Let W be a separately authenticated finite-dimensional fresh-root space. Embed the synchronised span as $`S_0=S\oplus\{0\}\subseteq V\oplus W`$. Here an acquisition into the visible collection means a newly accessible signature; it need not be a root-introducing acquisition node in the lineage graph. Retrieving an earlier authenticated record can restore an old direction in V without introducing a new lineage root. Distinct authenticated events can also have signatures in the same old direction under the fixed alias or claim-relevance quotient. The application must declare that map: W records separately admitted fresh directions, not every newly available record or new event identifier. Later received signatures have row span
+
+```math
+Q=\mathrm{row}\,[C_{\mathrm{old}}\mid C_{\mathrm{fresh}}],
+\qquad U=S_0+Q.
+```
+
+The block notation refers to fixed bases of V and W. Define
+
+```math
+\begin{aligned}
+\rho_{\mathrm{after}}&=\dim U,\\
+\gamma_{\mathrm{total}}&=\dim U-\dim S_0,\\
+\gamma_{\mathrm{fresh}}&=\dim\pi_W(U)=\mathrm{rank}(C_{\mathrm{fresh}}),\\
+\gamma_{\mathrm{old}}&=\dim\bigl(U\cap(V\oplus\{0\})\bigr)-\dim S_0.
+\end{aligned}
+```
+
+Here $`\pi_W`$ is projection onto the fresh coordinates. The old term counts independently available *pure old-coordinate* directions beyond the synchronised span. It can include directions previously erased and old directions that were never present in E. A mixed acquisition need not reveal its old component separately.
+
+**Proposition (exact synchronisation and acquisition balance).** There is a short exact sequence
+
+```math
+0\longrightarrow
+\frac{U\cap(V\oplus\{0\})}{S_0}
+\longrightarrow
+\frac{U}{S_0}
+\overset{\overline\pi_W}{\longrightarrow}
+\pi_W(U)
+\longrightarrow0.
+```
+
+Therefore
+
+```math
+\gamma_{\mathrm{total}}
+=\gamma_{\mathrm{old}}+\gamma_{\mathrm{fresh}},
+\qquad
+\rho_{\mathrm{after}}
+=\rho_{\mathrm{before}}-\delta
+ +\gamma_{\mathrm{old}}+\gamma_{\mathrm{fresh}}.
+```
+
+**Proof.** Projection on U has kernel $`U\cap(V\oplus\{0\})`$ and image $`\pi_W(U)`$. Because $`S_0`$ lies in that kernel, $`\overline\pi_W(u+S_0)=\pi_W(u)`$ is well-defined. It is surjective, and its kernel is exactly the image of the first quotient under the inclusion map. That inclusion is injective. Rank-nullity on $`U/S_0`$ gives the first identity; substituting $`\dim S_0=\rho_{\mathrm{before}}-\delta`$ gives the second. ∎
+
+These are finite-dimensional identities, not new general linear-algebra theorems. They show positively how a synchronisation deficit can be repaired. The final rank reaches or exceeds the original rank precisely when $`\gamma_{\mathrm{old}}+\gamma_{\mathrm{fresh}}\geq\delta`$. Fresh contribution alone is sufficient when it reaches δ, but it is not necessary: recovered old information can supply the difference.
+
+There is a sharper distinction between restoring a dimension and restoring the old span. Let $`E_0=E\oplus\{0\}`$ and set
+
+```math
+\gamma_{\mathrm{recovered}}=\dim(U\cap E_0)-\dim S_0,
+\qquad
+\gamma_{\mathrm{previously\ absent}}
+=\dim\bigl(U\cap(V\oplus\{0\})\bigr)-\dim(U\cap E_0).
+```
+
+Both are nonnegative, their sum is $`\gamma_{\mathrm{old}}`$, and $`0\leq\gamma_{\mathrm{recovered}}\leq\delta`$. Moreover,
+
+```math
+E_0\subseteq U
+\quad\Longleftrightarrow\quad
+\gamma_{\mathrm{recovered}}=\delta.
+```
+
+The proof is the chain $`S_0\subseteq U\cap E_0\subseteq E_0`$ and equality of finite-dimensional nested spaces at equal dimension. This is a composed consequence of the balance model, not an additional source of empirical warrant. If $`V=E`$, every pure old innovation is recovery and $`\gamma_{\mathrm{old}}\leq\delta`$. If E is a proper subspace of V, newly accessed old directions can increase $`\gamma_{\mathrm{old}}`$ beyond the original deficit without recovering every lost direction.
+
+#### Controls that distinguish the quantities
+
+**Recovery with no fresh root.** Take A to have rows $`e_1,e_2`$ and let synchronisation retain only $`e_1`$. Retrieving the old $`e_2`$ record again gives $`\delta=1`$, $`\gamma_{\mathrm{old}}=1`$, $`\gamma_{\mathrm{fresh}}=0`$, and final rank two. A formula counting only fresh-root rank would wrongly predict one. This is the material repair of the predecessor's earlier formulation. [51]
+
+**Mixed rows do not split automatically.** With the same old span and synchronised row, acquire only $`e_2+f_1`$, where $`f_1\in W`$ is nonzero. Then $`U=\mathrm{span}\{e_1,e_2+f_1\}`$, so the old innovation is zero and the fresh innovation is one. Adding the separate row $`f_1`$ permits subtraction and exposes $`e_2`$: both innovations then equal one. In the first case, adding the separate ranks of the old and fresh blocks would count one mixed direction twice.
+
+**Equal rank without restoration.** Instead acquire only $`f_1`$. The final rank again equals two, but $`e_2\notin U`$ and $`\gamma_{\mathrm{recovered}}=0`$. A dimension certificate is weaker than preservation of the original subspace and, without a further model connecting signatures to a target, weaker still than restored diagnostic or corrective capacity.
+
+**Aliases and relevance.** For a fixed linear root-identification map $`R:V\to V'`$, the transformed span is $`R(E)`$ and
+
+```math
+\mathrm{rank}(AR)=\dim R(E)\leq\dim E.
+```
+
+Two displayed basis rows can collapse to one when $`R(e_1)=R(e_2)`$. Conversely, a raw new coordinate can increase rank while being irrelevant to the claim and disappearing in its declared quotient. These examples explain why root authentication and relevance must precede the intended interpretation of rank. Changing the quotient during a comparison changes the question.
+
+**Equal outputs from different roots.** The functional $`(x_1,x_2)\mapsto x_1+x_2`$ maps $`e_1`$ and $`e_2`$ to the same value although their root signatures span two dimensions. Equality of registered output is compatible with independent origins, just as many copies of one nonzero row are compatible with rank one. A synchronisation that makes every recipient retain only $`e_1+e_2`$ can increase widespread availability while lowering a previously visible rank-two collection to rank one.
+
+These controls separate episode count, accessible ancestry, visible root span, output agreement and claim-relative support. They apply equally to replicated testimony, repeated artifacts and copied theorem expositions. A separately authenticated proof or acquisition may add a genuine direction; an additional presentation alone does not establish that it has done so. In probabilistic applications the actual conditional law decides how informative an acquisition is. The repeated-one-bit counterexample in §7.8 and the sample-count argument in [Information and Inquiry](information-and-inquiry.md) make this distinction at the level of learnability and statistical evidence. Neither device count nor linear rank can be substituted for their independence hypotheses.
+
+The lineage predecessor reports a historical finite checker over 23,369 valid operation sequences of at most five nodes, 92,740 node checks, and seven rejected mutants. Its stated controls include invented roots under copying or synchronisation, root/carrier-count confusion, an inference from distinct roots to independence, an inference from equal root sets to numerical identity, and a collapse of capability, permission and warrant. Those are the source's execution declarations; no new run or independent receipt of its checker is asserted here. The induction and linear proofs above do not rely on the reported counts. They establish the stated accounting properties, while truth, competent testimony, warranted collective belief, common knowledge, personal identity and actual repair capacity require the appropriate additional premises. [51–52]
+
 
 ## 2. Evidence profiles and locally possible responses
 
@@ -97,7 +242,7 @@ f(\alpha)=d_2+\alpha(d_1-d_2).
 
 Its extrema occur at the endpoints. Opposite strict rankings occur precisely when $`\min(f(\ell),f(u))<0<\max(f(\ell),f(u))`$. Variation in the truth of “*x* strictly outranks *y*” needs only $`\min\le0<\max`$: a tie and a strict preference already disagree about that target. For $`d=(1,-1)`$ and $`\alpha\in[3/4,7/8]`$, the ranking never reverses despite the crossing coordinates. These statements disclose dependence on an evaluation rule; they do not establish that every mathematically permitted weighting has normative authority. [5, §1][r5] [6, §§1–3][r6]
 
-There are useful scalar positive cases. In a fixed binary-hypothesis model with positive likelihoods, a supplied prior $`\pi`$ gives
+There are useful scalar positive cases. In a fixed binary-hypothesis model with positive likelihoods, a supplied prior π gives
 
 ```math
 \Pr(H_1\mid x)=
@@ -148,7 +293,7 @@ The interpretation of a probability vector must also be explicit. Repeated rando
 
 **Proof.** The product $`P=\prod_i\Delta(S_i)`$ is nonempty, compact and convex. For fixed opponents, *U*<sub>*i*</sub> is affine in the player's mixture, so its maximizers form a nonempty compact convex set. Define the product best-response correspondence $`BR:P\rightrightarrows P`$. Its graph is closed: if opponent profiles and maximizing responses converge, continuity passes every maximizing inequality to the limit. Compactness of the codomain supplies upper hemicontinuity. Kakutani's fixed-point theorem gives $`p\in BR(p)`$, precisely the Nash inequalities. The fixed-point set is closed in compact *P*, hence compact. ∎
 
-This is the classical Nash–Kakutani argument, not a new existence theorem. Empty values, nonconvex domains, lack of compactness or a discontinuous best-response graph can invalidate its premises. For example, $`F(x)=x/2`$ has no fixed point on $`(0,1)`$; the flip has none on $`\{0,1\}`$; and $`F(0)=1,F(x)=0`$ for $`x>0`$ has none on $`[0,1]`$. A correspondence equal to $`\{1\}`$ below $`1/2`$, $`\{0\}`$ above it and $`\{0,1\}`$ at it has closed graph and nonempty compact values but no fixed point: its value at the midpoint is not convex. [5, §4][r5]
+This is the classical Nash–Kakutani argument, not a new existence theorem. Empty values, nonconvex domains, lack of compactness or a discontinuous best-response graph can invalidate its premises. For example, $`F(x)=x/2`$ has no fixed point on (0,1); the flip has none on $`\{0,1\}`$; and $`F(0)=1,F(x)=0`$ for $`x>0`$ has none on $`[0,1]`$. A correspondence equal to $`\{1\}`$ below 1/2, $`\{0\}`$ above it and $`\{0,1\}`$ at it has closed graph and nonempty compact values but no fixed point: its value at the midpoint is not convex. [5, §4][r5]
 
 Existence does not give a selection rule, uniqueness, an effective solver or convergence of play. The map $`F(x)=1-x`$ has a fixed point but its iterates from 0 alternate forever. A one-player payoff can even reward a false answer more highly than a true one. The unique equilibrium would then be false under the independently supplied truth predicate.
 
@@ -160,8 +305,8 @@ A different example separates correctness from inquiry value. Two researchers ch
 
 | Player 1 / Player 2 | *F* | *E* |
 |---|---|---|
-| *F* | $`(2,2)`$ | $`(5,0)`$ |
-| *E* | $`(0,5)`$ | $`(4,4)`$ |
+| *F* | (2,2) | (5,0) |
+| *E* | (0,5) | (4,4) |
 
 The action *F* strictly dominates *E*, so $`(F,F)`$ is the unique equilibrium, although $`(E,E)`$ benefits both more. Every outcome may disclose the same correct theorem while the fuller exposition supports more future inquiry. These are constructed payoffs, not measurements of researchers' motives. Truth, private incentives and prospective scientific value are different evaluations. [7, §8][r7]
 
@@ -180,7 +325,7 @@ E_{\mathrm{all}}&=\{p:\text{no unilateral gain lies in }
 \end{aligned}
 ```
 
-The first excludes improvement in some coordinate without deterioration in any; the second excludes improvement strictly in every coordinate. Thus $`E_{\mathrm{nd}}\subseteq E_{\mathrm{all}}`$. With one player choosing $`(0,0)`$ or $`(1,0)`$, every mixture belongs to the second set, while only the second pure outcome belongs to the first. The original manuscript used a nonzero nonnegative cone in one statement and every-coordinate-strict prose in another. The later analysis correctly separates them; neither interpretation should silently replace the other. [4, §7][r4] [5, §5][r5]
+The first excludes improvement in some coordinate without deterioration in any; the second excludes improvement strictly in every coordinate. Thus $`E_{\mathrm{nd}}\subseteq E_{\mathrm{all}}`$. With one player choosing (0,0) or (1,0), every mixture belongs to the second set, while only the second pure outcome belongs to the first. The original manuscript used a nonzero nonnegative cone in one statement and every-coordinate-strict prose in another. The later analysis correctly separates them; neither interpretation should silently replace the other. [4, §7][r4] [5, §5][r5]
 
 ### 4.2 Exact positive-weight characterization
 
@@ -200,7 +345,7 @@ For the converse, fix $`p\in E_{\mathrm{nd}}`$ and one player. Against the fixed
 
 The finitely generated cone *D* is closed and convex; *K* is compact and convex. Strict separation provides *w* with $`w\cdot d\le0`$ for all $`d\in D`$ and $`w\cdot z>0`$ on *K*. The first bound follows from conicity and $`0\in D`$; evaluating the second on the coordinate vectors shows every coordinate of *w* is positive. Thus every pure deviation, and therefore every mixed deviation, has nonpositive scalar gain. Choose such weights separately for each player. The selected profile is scalar Nash. ∎
 
-The weights can depend on both player and equilibrium. They are existence witnesses, not canonical epistemic trade-offs. The distinction between Pareto and weak Pareto criteria also appears in the weighted-game literature. Robust models that supply a set of possible weights solve a different optimization problem; their broader hypotheses do not replace this finite-polyhedral converse. [16][weighted] The zero-weight distinction is sharp: weights $`(0,1)`$ make both outcomes $`(0,0),(1,0)`$ optimal while the first is dominated.
+The weights can depend on both player and equilibrium. They are existence witnesses, not canonical epistemic trade-offs. The distinction between Pareto and weak Pareto criteria also appears in the weighted-game literature. Robust models that supply a set of possible weights solve a different optimization problem; their broader hypotheses do not replace this finite-polyhedral converse. [16][weighted] The zero-weight distinction is sharp: weights (0,1) make both outcomes $`(0,0),(1,0)`$ optimal while the first is dominated.
 
 Finite convexification matters. Among just the three pure outcomes $`(3,0),(1,1),(0,3)`$, the middle is Pareto efficient but maximizes no positive weighted sum. Once mixtures are allowed, the half-mixture of the extremes gives $`(1.5,1.5)`$ and dominates it. Even compact convex infinite payoff sets need not have the strictly positive support property. In
 
@@ -208,7 +353,7 @@ Finite convexification matters. Among just the three pure outcomes $`(3,0),(1,1)
 C=\{(x,y):0\le y\le1,\ -1\le x\le-y^2\},
 ```
 
-$`(0,0)`$ is efficient, but for any $`w_1,w_2>0`$, a sufficiently small $`t>0`$ gives $`w\cdot(-t^2,t)>0`$. Only a boundary weight such as $`(1,0)`$ supports the origin. The finite-polyhedral hypothesis cannot be replaced by compactness and convexity alone. [5, §5][r5]
+(0,0) is efficient, but for any $`w_1,w_2>0`$, a sufficiently small $`t>0`$ gives $`w\cdot(-t^2,t)>0`$. Only a boundary weight such as (1,0) supports the origin. The finite-polyhedral hypothesis cannot be replaced by compactness and convexity alone. [5, §5][r5]
 
 ### 4.3 Team optimality and a restrictive concavity condition
 
@@ -232,7 +377,7 @@ A sequential pipeline can instead consist of transformations and a terminal crit
 
 Coordinate permutations and coordinatewise strictly increasing bijections preserve deterministic coordinatewise order. Transporting schemas, units, admission rules and target readouts preserves their corresponding judgments. But applying a nonlinear transformation to pure payoffs before averaging need not preserve mixed equilibria. [5, §6][r5]
 
-For example, give player 1 payoff matrix $`\left(\begin{smallmatrix}0&2\\1&0\end{smallmatrix}\right)`$ and player 2 payoff matrix $`\left(\begin{smallmatrix}1&0\\0&1\end{smallmatrix}\right)`$. At the unique fully mixed equilibrium, row-0 probability is $`1/2`$ and column-0 probability is $`2/3`$: player 2 is indifferent at equal row probabilities, and player 1 satisfies $`2(1-q)=q`$. Squaring player 1's nonnegative pure payoffs preserves their order but changes its equation to $`4(1-q)=q`$, hence $`q=4/5`$.
+For example, give player 1 payoff matrix $`\left(\begin{smallmatrix}0&2\\1&0\end{smallmatrix}\right)`$ and player 2 payoff matrix $`\left(\begin{smallmatrix}1&0\\0&1\end{smallmatrix}\right)`$. At the unique fully mixed equilibrium, row-0 probability is 1/2 and column-0 probability is 2/3: player 2 is indifferent at equal row probabilities, and player 1 satisfies $`2(1-q)=q`$. Squaring player 1's nonnegative pure payoffs preserves their order but changes its equation to $`4(1-q)=q`$, hence $`q=4/5`$.
 
 By contrast, strategy relabellings and positive affine scalar payoff changes preserve Nash equilibria: they biject unilateral deviations and multiply each gain by a positive constant. For vector games, an invertible affine change $`V_i'=A_iV_i+b_i`$ preserves either specified improvement relation when the cone is transported to $`A_iC_i`$. A change of units $`e'=De`$ preserves a scalar score only if its weights change to $`w'=D^{-T}w`$. Retaining old weights after changing units changes the comparison rule. [5, §6][r5] [7, Proposition 8.4][r7]
 
@@ -285,7 +430,7 @@ u_i(x,s)=\mathbf1\{s_i=B(x)\}
 +c\mathbf1\{s_1=s_2\},\qquad 0\lt{}c<1.
 ```
 
-**Proposition 8 — Hidden reference games.** The reference games have unique equilibria $`(0,0)`$ and $`(1,1)`$. For any fixed independent mixed recommendation, each player has regret at least $`(1-c)/2`$ in at least one of the two games. [8, Proposition 6][r8]
+**Proposition 8 — Hidden reference games.** The reference games have unique equilibria (0,0) and (1,1). For any fixed independent mixed recommendation, each player has regret at least $`(1-c)/2`$ in at least one of the two games. [8, Proposition 6][r8]
 
 **Proof.** The correct action gains at least $`1-c>0`$ against either opponent action, so it is strictly dominant. If player *i* chooses 1 with probability *p*<sub>*i*</sub>, its wrong-action probabilities in the two games are *p*<sub>*i*</sub> and $`1-p_i`$. Deviation to the correct action gains at least $`1-c`$ times that probability. Their maximum is at least $`(1-c)/2`$. ∎
 
@@ -334,7 +479,7 @@ Indeed the expectation of the product sign is both $`\prod_i(1-2p_i)`$ and the d
 \Pr(z\notin F_+)\ge\frac{1-(1-2\eta)^n}{2},
 ```
 
-with equality when all $`p_i=\eta`$. Unbiased independent marginals give failure probability $`1/2`$, while the uniform law on $`F_+`$ has the same unary marginals and never fails. [8, §7][r8]
+with equality when all $`p_i=\eta`$. Unbiased independent marginals give failure probability 1/2, while the uniform law on $`F_+`$ has the same unary marginals and never fails. [8, §7][r8]
 
 **Proposition 10 — Exact shared-variable requirement.** If a finite shared variable *Z* generates the uniform law on $`F_+`$ through outputs conditionally independent given *Z*, then
 
@@ -423,7 +568,7 @@ I(Y_n;S_n)
 =\frac12\log(1+n/\tau^2).
 ```
 
-To see the cancellation, write the two normal log densities: their expected standardized quadratic terms are both one, leaving half the logarithm of the variance ratio. The asymptotic coefficient is exactly $`1/2`$. When $`\tau=0`$, the joint law lies on $`y=-s`$ and the product law gives that line zero mass, so information is infinite instead.
+To see the cancellation, write the two normal log densities: their expected standardized quadratic terms are both one, leaving half the logarithm of the variance ratio. The asymptotic coefficient is exactly 1/2. When $`\tau=0`$, the joint law lies on $`y=-s`$ and the product law gives that line zero mass, so information is infinite instead.
 
 This anchored construction does not make the state independent of future increments. Even conditional on *A*, the relation $`Y_n=A-S_n`$ remains. A finite description of that formula is not a finite information channel mediating its dependence. Nor is this example a fresh forward-innovation law. [9, §3][r9]
 
@@ -520,7 +665,7 @@ The one-event inequality $`|P(E)-Q(E)|\le\eta`$ already suffices. For every none
 
 **Proof.** The upper bound follows from $`P(E)\le Q(E)+\eta\le a+\eta`$ and $`P(E)\le1`$. No entropy or conditional probability under *P* is used.
 
-For $`L>0`$, take the extremizing *Q* above and let $`\delta=\min(\eta,1-a)`$. The Gaussian law is nonatomic, so choose a Borel set $`C\subseteq\mathbb R\setminus J`$ of mass $`\delta`$. Keep *S* unchanged. On *C*, replace the state by $`Y'=c-S`$ for a fixed $`c\in I`$; elsewhere leave it alone. The new law *P* has capture $`a+\delta`$. This coupling changes the pair only on a set of probability $`\delta`$, so event total variation is at most $`\delta`$. The capture event's probability changes by exactly $`\delta`$, proving equality and sharpness. For a nonempty singleton target, the same alteration on a Gaussian set of mass $`\eta`$ gives capture $`\eta`$ while every finite-mediator reference has capture zero. An empty target always has capture zero. ∎
+For $`L>0`$, take the extremizing *Q* above and let $`\delta=\min(\eta,1-a)`$. The Gaussian law is nonatomic, so choose a Borel set $`C\subseteq\mathbb R\setminus J`$ of mass δ. Keep *S* unchanged. On *C*, replace the state by $`Y'=c-S`$ for a fixed $`c\in I`$; elsewhere leave it alone. The new law *P* has capture $`a+\delta`$. This coupling changes the pair only on a set of probability δ, so event total variation is at most δ. The capture event's probability changes by exactly δ, proving equality and sharpness. For a nonempty singleton target, the same alteration on a Gaussian set of mass η gives capture η while every finite-mediator reference has capture zero. An empty target always has capture zero. ∎
 
 The modified law generally loses the reference's finite complete mediator; that is what the error allowance permits. If $`P(E)\ge p`$, $`L>0`$ and $`0<p-\eta<1`$, then
 
@@ -535,7 +680,7 @@ When $`p\le\eta`$ there is no positive alphabet-size conclusion; when $`L=0`$ on
 
 ### 7.1 A mixed equilibrium need not restore a target
 
-Suppose a finite joint response set *S* carries a fixed law $`\mu`$, sampled independently at each time, and let $`T\subseteq S`$ be a separately supplied target.
+Suppose a finite joint response set *S* carries a fixed law μ, sampled independently at each time, and let $`T\subseteq S`$ be a separately supplied target.
 
 **Theorem 14 — Repeated independent deployment.**
 
@@ -548,11 +693,11 @@ If $`\mu(T)<1`$, eventual target persistence has probability zero. [5, §7][r5]
 
 **Proof.** A target-supported law remains in the target at every time with probability one. Otherwise the bad probability is some $`p>0`$. For any fixed time *N*, the probability of no bad draw in the next *m* steps is $`(1-p)^m\to0`$. The probability of no bad draw after *N* is zero. Eventual persistence is the countable union of these null events over *N*. ∎
 
-In the two-player agreement game, both players independently mixing $`(1/2,1/2)`$ is Nash. Repeated independent deployment mismatches with probability $`1/2`$ each round and infinitely often almost surely. A shared fair bit choosing $`(0,0)`$ or $`(1,1)`$ has the same individual marginals and always agrees. It is a different joint law. Neither mechanism's agreement alone establishes truth, cognitive implementation or the authority of the common signal.
+In the two-player agreement game, both players independently mixing $`(1/2,1/2)`$ is Nash. Repeated independent deployment mismatches with probability 1/2 each round and infinitely often almost surely. A shared fair bit choosing (0,0) or (1,1) has the same individual marginals and always agrees. It is a different joint law. Neither mechanism's agreement alone establishes truth, cognitive implementation or the authority of the common signal.
 
 ### 7.2 What does guarantee progress?
 
-A separate temporal argument can establish entry and persistence. Suppose a licensed stochastic update process has a nonnegative integer rank *R*, an invariant target, no rank increase outside target, and conditional expected rank decrease at least $`\varepsilon>0`$ after every non-target history. Let $`\tau`$ be first target entry and $`R_0<\infty`$ the fixed initial rank. Then
+A separate temporal argument can establish entry and persistence. Suppose a licensed stochastic update process has a nonnegative integer rank *R*, an invariant target, no rank increase outside target, and conditional expected rank decrease at least $`\varepsilon>0`$ after every non-target history. Let τ be first target entry and $`R_0<\infty`$ the fixed initial rank. Then
 
 ```math
 \mathbb E\tau\le R_0/\varepsilon,
@@ -578,7 +723,7 @@ Finally, a finite ordinal-potential game has no infinite strict-improvement path
 
 ### 7.3 The exact cost of incompatible response marginals
 
-The independent-deployment example leaves a constructive question: when can a coordinator retain the agents' specified marginal responses while making their joint response appropriate? Fix finite nonempty response sets $`A,B`$, probability laws $`\mu,\nu`$, and a supplied target relation $`R\subseteq A\times B`$. A coupling is a nonnegative joint table $`\kappa`$ with those two complete marginals. This section initially permits every pair in $`A\times B`$; hard exclusions are an additional constraint. For $`U\subseteq A`$, let
+The independent-deployment example leaves a constructive question: when can a coordinator retain the agents' specified marginal responses while making their joint response appropriate? Fix finite nonempty response sets $`A,B`$, probability laws $`\mu,\nu`$, and a supplied target relation $`R\subseteq A\times B`$. A coupling is a nonnegative joint table κ with those two complete marginals. This section initially permits every pair in $`A\times B`$; hard exclusions are an additional constraint. For $`U\subseteq A`$, let
 
 ```math
 R[U]=\{b\in B:\text{some }a\in U\text{ satisfies }(a,b)\in R\},
@@ -605,13 +750,13 @@ For attainment, form a finite transportation network. A source supplies row *a* 
 =1-\mu(U)+\nu(R[U]).
 ```
 
-The max-flow/min-cut theorem therefore supplies an *R*-supported subcoupling of mass $`1-\delta`$. [22][flow] Its residual row masses *r*<sub>*a*</sub> and column masses *s*<sub>*b*</sub> are nonnegative and each total $`\delta`$. If $`\delta=0`$, the subcoupling is already complete. Otherwise add the table $`r_as_b/\delta`$. A positive residual row and positive residual column cannot be related: adding the smaller residual along that relation edge would augment the maximum flow. The added mass therefore lies entirely outside *R*, and its total is exactly $`\delta`$. Both full marginals are restored. ∎
+The max-flow/min-cut theorem therefore supplies an *R*-supported subcoupling of mass $`1-\delta`$. [22][flow] Its residual row masses *r*<sub>*a*</sub> and column masses *s*<sub>*b*</sub> are nonnegative and each total δ. If $`\delta=0`$, the subcoupling is already complete. Otherwise add the table $`r_as_b/\delta`$. A positive residual row and positive residual column cannot be related: adding the smaller residual along that relation edge would augment the maximum flow. The added mass therefore lies entirely outside *R*, and its total is exactly δ. Both full marginals are restored. ∎
 
-For binary agreement, $`R=\{(0,0),(1,1)\}`$, the deficit is $`|\mu(0)-\nu(0)|`$. Marginals $`(4/5,1/5)`$ and $`(1/5,4/5)`$ force disagreement probability $`3/5`$. The joint table with masses $`1/5,3/5,0,1/5`$ in the order $`00,01,10,11`$ attains it. Equal fair marginals have zero deficit, even though independent sampling disagrees with probability $`1/2`$. The marginals do not determine the deployed coupling.
+For binary agreement, $`R=\{(0,0),(1,1)\}`$, the deficit is $`|\mu(0)-\nu(0)|`$. Marginals $`(4/5,1/5)`$ and $`(1/5,4/5)`$ force disagreement probability 3/5. The joint table with masses $`1/5,3/5,0,1/5`$ in the order $`00,01,10,11`$ attains it. Equal fair marginals have zero deficit, even though independent sampling disagrees with probability 1/2. The marginals do not determine the deployed coupling.
 
 #### Licenses and incentives restrict the available couplings
 
-If only pairs in a set $`L\subseteq A\times B`$ are licensed, the admissible joint law must be supported on *L*. The unrestricted deficit remains a lower bound but need not be attainable. With fair binary marginals and target $`R=\{(0,0)\}`$, the unrestricted optimum is $`1/2`$. If $`(1,1)`$ is forbidden, the marginal equations force both diagonal masses to zero. The only licensed law gives each off-diagonal pair mass $`1/2`$, and its target violation is one. An unavailable completion cannot be repaired by interpreting a probability constraint as permission.
+If only pairs in a set $`L\subseteq A\times B`$ are licensed, the admissible joint law must be supported on *L*. The unrestricted deficit remains a lower bound but need not be attainable. With fair binary marginals and target $`R=\{(0,0)\}`$, the unrestricted optimum is 1/2. If (1,1) is forbidden, the marginal equations force both diagonal masses to zero. The only licensed law gives each off-diagonal pair mass 1/2, and its target violation is one. An unavailable completion cannot be repaired by interpreting a probability constraint as permission.
 
 Incentive compatibility is a further condition when the response loci are strategic players. For scalar payoffs $`u_1,u_2`$, a common recommendation law is a correlated equilibrium when obeying a received recommendation is at least as profitable as switching it. The first player's inequalities are
 
@@ -623,7 +768,7 @@ Incentive compatibility is a further condition when the response loci are strate
 
 with the corresponding column inequalities for the second player. These are the unconditional form of recommendation-conditional comparisons; a recommendation of zero mass creates no additional obligation. Correlated equilibrium belongs to established game theory. [23][aumann] The information contract here gives each player its own recommendation and the declared game. Additional current private signals, sequential observation of other actions or a richer deviation menu require the appropriate conditional incentive constraints. These inequalities do not automatically cover that enlarged game. [17, §4][r13] [21, §C2][r17]
 
-In matching pennies, let player 1 receive one for agreement and player 2 one for disagreement. A fair diagonal coupling implements agreement perfectly but gives player 2 a profitable deviation from each recommendation. With fixed fair marginals, write the four masses as $`t,1/2-t,1/2-t,t`$. Player 1's obedience requires $`t\ge1/4`$; player 2's requires $`t\le1/4`$. Hence the only compliant joint law is uniform and its agreement-target violation is $`1/2`$. If both players instead receive one for agreement, the diagonal law is an equilibrium. Feasibility of correlation does not determine its incentive properties.
+In matching pennies, let player 1 receive one for agreement and player 2 one for disagreement. A fair diagonal coupling implements agreement perfectly but gives player 2 a profitable deviation from each recommendation. With fixed fair marginals, write the four masses as $`t,1/2-t,1/2-t,t`$. Player 1's obedience requires $`t\ge1/4`$; player 2's requires $`t\le1/4`$. Hence the only compliant joint law is uniform and its agreement-target violation is 1/2. If both players instead receive one for agreement, the diagonal law is an equilibrium. Feasibility of correlation does not determine its incentive properties.
 
 For general binary marginals $`p=\mu(0)`$ and $`q=\nu(0)`$, every coupling is
 
@@ -695,7 +840,7 @@ If $`H_\infty=\infty`$, summation by parts, or equivalently Kronecker's lemma ap
 \frac{C_n}{H_n}\longrightarrow1.
 ```
 
-For completeness, this summation argument separates finitely many initial terms from a tail whose partial sums have magnitude at most an arbitrary $`\varepsilon`$. The weighted tail, divided by its final nondecreasing weight, has magnitude at most $`2\varepsilon`$; the initial contribution tends to zero.
+For completeness, this summation argument separates finitely many initial terms from a tail whose partial sums have magnitude at most an arbitrary ε. The weighted tail, divided by its final nondecreasing weight, has magnitude at most $`2\varepsilon`$; the initial contribution tends to zero.
 
 If $`H_\infty<\infty`$, the weights *b*<sub>*t*</sub> are bounded and their total variation is finite. The same summation-by-parts identity now shows that $`\sum D_{t+1}`$ converges: the convergent partial sums of $`D_{t+1}/b_t`$ are multiplied by bounded endpoint weights, and the remaining series is bounded by their supremum times the total variation of *b*<sub>*t*</sub>. Therefore $`C_n=H_n+\sum_{t<n}D_{t+1}`$ has a finite limit. A nondecreasing integer-valued count with a finite limit can increase only finitely often. These two cases establish the event equality. ∎
 
@@ -722,9 +867,9 @@ The product follows by conditional multiplication because the conditional hazard
 
 #### Public certification and physical restoration are different events
 
-The filtration condition is essential. Suppose one unobserved bit *Z* is fixed forever and is bad with probability $`1/2`$. Under a public filtration with no information about it, its conditional bad probability is always $`1/2`$. Yet infinitely many actual bad occurrences have probability $`1/2`$, not one. The repeated physical events are not measurable in the next public sigma-algebra, so the theorem does not apply there. Revealing *Z* creates an adapted filtration but changes its conditional probabilities to zero or one. One cannot combine the enlarged filtration with the old half-probabilities. [17, §3][r13]
+The filtration condition is essential. Suppose one unobserved bit *Z* is fixed forever and is bad with probability 1/2. Under a public filtration with no information about it, its conditional bad probability is always 1/2. Yet infinitely many actual bad occurrences have probability 1/2, not one. The repeated physical events are not measurable in the next public sigma-algebra, so the theorem does not apply there. Revealing *Z* creates an adapted filtration but changes its conditional probabilities to zero or one. One cannot combine the enlarged filtration with the old half-probabilities. [17, §3][r13]
 
-A finite plant also separates physical persistence from a demanding public certificate. Let the target states be $`\{0,2\}`$, start at 2, and give all states the same observation. State 0 remains at 0; state 1 moves to 0; state 2 stays at 2 with probability $`1/2`$ and moves to each of 0 and 1 with probability $`1/4`$. Every supported path has at most one bad visit, because its only bad state is 1 and that state immediately enters the absorbing good state. Physical eventual persistence is therefore sure, even on zero-probability supported infinite paths.
+A finite plant also separates physical persistence from a demanding public certificate. Let the target states be $`\{0,2\}`$, start at 2, and give all states the same observation. State 0 remains at 0; state 1 moves to 0; state 2 stays at 2 with probability 1/2 and moves to each of 0 and 1 with probability 1/4. Every supported path has at most one bad visit, because its only bad state is 1 and that state immediately enters the absorbing good state. Physical eventual persistence is therefore sure, even on zero-probability supported infinite paths.
 
 After one step the public support belief is $`\{0,1,2\}`$, and it remains that set forever. A certificate demanding that the next entire support belief lie inside the target consequently rejects the sole response at every time. Its certified target relation is empty and has Hall deficit one. This is correct evidence that the chosen public certificate is never met. It is not evidence that physical restoration is impossible. The actual bad-state probability at time $`t\ge1`$ is $`2^{-(t-1)}/4`$.
 
@@ -737,7 +882,7 @@ A controller that succeeds in one stochastic model need not remain valid after i
 
 Let the source have finite hidden state set *X*, finite actions *A*, observation map $`o_A:X\to O_A`$, initial law $`\mu_A`$, and finite nonempty disturbance menus $`D_A(x,a)`$. A disturbance *d* selects a full transition distribution $`P_A^d(\,\cdot\mid x,a)`$. Define a destination with $`Y,B,o_B,\mu_B,D_B,P_B`$ in the same way. Each law includes every outcome, favorable or otherwise. Stochastic observations can be represented by adding the emitted observation to the plant state, provided the **joint** transition law is retained. This representation does not turn observations sharing one provenance root into independent copies.
 
-A source behavioral policy $`\sigma`$ assigns a distribution on the next action to every finite source observation/action history. It may use the entire history. Its current action is sampled freshly after that history is fixed; it does not expose future action coins stored in advance. After the current action, the source adversary can use the complete source state/action history and choose a randomized member of the current disturbance menu. A guarantee against this full-history adversary class is a premise of the transfer theorem.
+A source behavioral policy σ assigns a distribution on the next action to every finite source observation/action history. It may use the entire history. Its current action is sampled freshly after that history is fixed; it does not expose future action coins stored in advance. After the current action, the source adversary can use the complete source state/action history and choose a randomized member of the current disturbance menu. A guarantee against this full-history adversary class is a premise of the transfer theorem.
 
 The destination interface has a finite controller-available mode set *Q* and a projection $`\pi:Q\to P`$ onto its public mode. It specifies:
 
@@ -757,7 +902,7 @@ The word “public” carries a mathematical obligation. There must be a functio
 =v\bigl(\pi(q),o,b,o'\bigr).
 ```
 
-Thus the public projection is reconstructible from the actual destination trace. Several virtual actions can translate to the same executed action; the controller may remember which one it sampled, but an external observer need not know it. If the entire mode is declared public, $`\pi`$ is the identity and the update cannot distinguish private virtual actions hidden by the same public trace. Publicly logging those actions would change the observation contract.
+Thus the public projection is reconstructible from the actual destination trace. Several virtual actions can translate to the same executed action; the controller may remember which one it sampled, but an external observer need not know it. If the entire mode is declared public, π is the identity and the update cannot distinguish private virtual actions hidden by the same public trace. Publicly logging those actions would change the observation contract.
 
 The source policy must put all its probability on $`M(q,o)`$ at every reachable interface history. This includes the histories under all permitted disturbances, not just the successful sampled examples. It is a policy-conformance premise, separate from verification of the finite plant tables.
 
@@ -789,7 +934,7 @@ For rational finite tables, the matching problem for a fixed candidate source di
 
 #### The implemented controller and the path-law proof
 
-Initialize $`q=q_0(o_B(y_0))`$ and the virtual source history with $`\eta(q,o_B(y_0))`$ and the explicitly matched initial source memory. At each step sample *a* from $`\sigma`$ on that virtual history, execute $`b=\tau(q,o,a)`$, retain the virtual action *a*, receive $`o'`$, update $`q'`$, and append $`a,\eta(q',o')`$ to the virtual history. The implementation never observes or samples the proof's hidden source state.
+Initialize $`q=q_0(o_B(y_0))`$ and the virtual source history with $`\eta(q,o_B(y_0))`$ and the explicitly matched initial source memory. At each step sample *a* from σ on that virtual history, execute $`b=\tau(q,o,a)`$, retain the virtual action *a*, receive $`o'`$, update $`q'`$, and append $`a,\eta(q',o')`$ to the virtual history. The implementation never observes or samples the proof's hidden source state.
 
 **Theorem (exact restorative transfer).** Under the certificate, public-projection and policy-conformance premises, suppose the source policy has only finitely many bad visits almost surely against every permitted randomized full-source-history adversary. Then the implemented destination policy has only finitely many bad visits almost surely against every destination adversary. Source sure safety also transfers under the safety implication. Destination eligibility and public warrant are separately supplied at every reachable interface state.
 
@@ -821,7 +966,7 @@ The chosen source disturbance can depend on the latent destination history. Cond
 \lambda_d(h,a)P_A^d(x'\mid x_t,a).
 ```
 
-This is an allowed randomized full-source-history adversary. At each finite time the conditioning is a ratio over finite sets; zero-probability histories can be assigned arbitrary legal choices. It does not condition on any future event. The source action kernel remains $`\sigma`$, since it was drawn freshly from the source observation/action history before either disturbance was selected. The source marginal is therefore a law covered by the robust source hypothesis, so the same event inclusion proves restoration.
+This is an allowed randomized full-source-history adversary. At each finite time the conditioning is a ratio over finite sets; zero-probability histories can be assigned arbitrary legal choices. It does not condition on any future event. The source action kernel remains σ, since it was drawn freshly from the source observation/action history before either disturbance was selected. The source marginal is therefore a law covered by the robust source hypothesis, so the same event inclusion proves restoration.
 
 For sure safety, a supported unsafe destination finite history would have positive probability under some legal disturbance choices. The exact joint lift would contain a supported source finite history ending in a related unsafe destination state. The safety implication forces that source state to be unsafe, contradicting source sure safety. The same lifting argument places every reachable destination history under the certificate's eligibility and warrant clauses. Their truth is an assumption supplied to the certificate, not established by the probabilistic argument. ∎
 
@@ -831,11 +976,11 @@ The randomized source-adversary class is necessary for this proof. If that adver
 
 Several finite counterexamples isolate the independent hypotheses. [18, §6][r14]
 
-* **A support simulation can lose all restoration probability.** Let source bad state *b* stay at *b* or enter an absorbing good state *g*, each with probability $`1/2`$. Let destination bad state *B* remain there forever, with a separate absorbing good state *G*. The relation pairs *b* with *B* and *g* with *G*. Every destination edge has a source support match, and badness reflects. The source restores almost surely; the destination fails surely. A relation-supported full coupling at $`(b,B)`$ is impossible because half the source mass must go to *g* while all destination mass goes to *B*. Conditioning on the source self-loop would erase half the law at each step.
+* **A support simulation can lose all restoration probability.** Let source bad state *b* stay at *b* or enter an absorbing good state *g*, each with probability 1/2. Let destination bad state *B* remain there forever, with a separate absorbing good state *G*. The relation pairs *b* with *B* and *g* with *G*. Every destination edge has a source support match, and badness reflects. The source restores almost surely; the destination fails surely. A relation-supported full coupling at $`(b,B)`$ is impossible because half the source mass must go to *g* while all destination mass goes to *B*. Conditioning on the source self-loop would erase half the law at each step.
 * **Matching actions can require unavailable information.** A fixed fair hidden bit *h* is visible to the source and invisible to the destination. Each round guesses 0 or 1, and the state is bad exactly when the guess differs from *h*. Physical transitions under identical guesses can be coupled exactly. The source always guesses *h*; a destination with the same observation under both bits has the same action-sequence law under either. The disjoint events “eventually all guesses are 0” and “eventually all guesses are 1” cannot both have probability one. A hidden-pair-dependent choice of the matching guess is an oracle, not an implementation.
 * **A coupling does not create destination permission.** In any valid finite certificate, deleting one required public warrant entry leaves the transition marginals untouched while invalidating the action's authority clause.
 * **One matched initial pair does not match two initial laws.** If a source begins with probability one at *b*, a destination law assigning half its mass to an unrelated *G* cannot be matched merely because $`(b,B)`$ is a valid pair.
-* **A sufficient certificate need not exist whenever both systems restore.** One-action geometric-exit systems with exit probabilities $`1/2`$ and $`1/3`$ both restore almost surely, but their identity relation cannot couple their distinct one-step laws. A policy that never uses a source observation distinction can also transfer through a policy-specific coarsening even if full observation reconstruction fails.
+* **A sufficient certificate need not exist whenever both systems restore.** One-action geometric-exit systems with exit probabilities 1/2 and 1/3 both restore almost surely, but their identity relation cannot couple their distinct one-step laws. A policy that never uses a source observation distinction can also transfer through a policy-specific coarsening even if full observation reconstruction fails.
 
 These counterexamples preserve a constructive result: with a verified information interface and full laws, transfer is possible. Rejection of this particular certificate is not a general impossibility theorem for all controllers, relations or information-preserving translations.
 
@@ -966,7 +1111,7 @@ and otherwise remains at *S*. Relate the source state only to *S*. Every path ha
 \longrightarrow\frac12.
 ```
 
-Thus restoration succeeds with probability exactly $`1/2`$. On the remaining paths, the single departure produces infinitely many bad visits. Conditional Borel–Cantelli correctly guarantees finitely many departures; it does not guarantee finite bad occupancy. With any constant fault probability $`\delta>0`$, no-departure probability is $`(1-\delta)^n\to0`$, so arbitrarily small constant local error can destroy almost-sure restoration entirely.
+Thus restoration succeeds with probability exactly 1/2. On the remaining paths, the single departure produces infinitely many bad visits. Conditional Borel–Cantelli correctly guarantees finitely many departures; it does not guarantee finite bad occupancy. With any constant fault probability $`\delta>0`$, no-departure probability is $`(1-\delta)^n\to0`$, so arbitrarily small constant local error can destroy almost-sure restoration entirely.
 
 #### An exact law can tolerate summably many occupancy defects
 
@@ -1161,7 +1306,7 @@ This obstruction does **not** say that every finite controller has restoration p
 
 They are positive and below one. A finite machine may have different absorbing commitments, each reached with positive probability under both hypotheses. [21, §C3][r17]
 
-**Proof of finite-memory approximation.** Given $`0<\varepsilon<1`$, choose *m* with $`(8/9)^m\le\varepsilon`$. Acquire $`2m`$ samples, then commit forever to their majority. The same finite-sample bound makes the wrong-commitment probability at most $`\varepsilon`$ under either standard. One implementation stores a pair $`(n,k)`$, where $`0\le n\le2m`$ and $`0\le k\le n`$, and uses two terminal commitment states. Consequently
+**Proof of finite-memory approximation.** Given $`0<\varepsilon<1`$, choose *m* with $`(8/9)^m\le\varepsilon`$. Acquire $`2m`$ samples, then commit forever to their majority. The same finite-sample bound makes the wrong-commitment probability at most ε under either standard. One implementation stores a pair $`(n,k)`$, where $`0\le n\le2m`$ and $`0\le k\le n`$, and uses two terminal commitment states. Consequently
 
 ```math
 \frac{(2m+1)(2m+2)}2+2
@@ -1248,7 +1393,7 @@ Nevertheless, the limiting empirical frequency identifies the standard almost su
 \le\frac{p(1-p)}{\delta^2k^2}.
 ```
 
-The right sides are summable. Borel–Cantelli, applied to a countable sequence of positive $`\delta`$ tending to zero, yields $`T_{k^2}/k^2\to p`$ almost surely. For $`k^2\le n\le(k+1)^2`$, monotonicity of the counts gives
+The right sides are summable. Borel–Cantelli, applied to a countable sequence of positive δ tending to zero, yields $`T_{k^2}/k^2\to p`$ almost surely. For $`k^2\le n\le(k+1)^2`$, monotonicity of the counts gives
 
 ```math
 \frac{T_{k^2}}{(k+1)^2}
@@ -1256,13 +1401,13 @@ The right sides are summable. Borel–Cantelli, applied to a countable sequence 
 \le\frac{T_{(k+1)^2}}{k^2}.
 ```
 
-Both bounds converge to *p*. Define a decoder to return zero on traces with limiting frequency $`1/3`$, one on those with limit $`2/3`$, and any fixed value elsewhere. These are measurable limit conditions. Under any prior giving both standards positive mass, the decoder equals the actual standard almost surely. It is not correct on every support-admitted trace, and it cannot be replaced by a finite zero-error stopping declaration.
+Both bounds converge to *p*. Define a decoder to return zero on traces with limiting frequency 1/3, one on those with limit 2/3, and any fixed value elsewhere. These are measurable limit conditions. Under any prior giving both standards positive mass, the decoder equals the actual standard almost surely. It is not correct on every support-admitted trace, and it cannot be replaced by a finite zero-error stopping declaration.
 
 The atomic-mass defect of the complete trace therefore does not mean “no useful information” or “every decision target fails.” Its whole-observation property and this one-target identification claim have different quantifiers. Neither supplies the target's truth, empirical interpretation or action authority.
 
 ### 7.9 High average accuracy can coexist with perpetual errors
 
-Finite-memory learning has several performance criteria. Let $`H_+`$ and $`H_-`$ give independent Bernoulli acquisitions with probabilities $`2/3`$ and $`1/3`$, respectively, with equal hypothesis priors. A time-average Bayes error is
+Finite-memory learning has several performance criteria. Let $`H_+`$ and $`H_-`$ give independent Bernoulli acquisitions with probabilities 2/3 and 1/3, respectively, with equal hypothesis priors. A time-average Bayes error is
 
 ```math
 \overline e
@@ -1274,7 +1419,7 @@ when the limit exists. Eventual correctness instead requires only finitely many 
 
 #### An exactly solvable finite learner
 
-Take $`S=L+1\ge2`$ memory states $`0,\ldots,L`$ and $`0<\varepsilon\le1`$. At an interior state, acquisition one moves right and acquisition zero moves left. At state zero, acquisition one moves to state one with additional probability $`\varepsilon`$; otherwise the learner stays at zero. At state *L*, acquisition zero moves left with additional probability $`\varepsilon`$; otherwise it stays at *L*. The extra randomization is fresh and independent of the acquisition.
+Take $`S=L+1\ge2`$ memory states $`0,\ldots,L`$ and $`0<\varepsilon\le1`$. At an interior state, acquisition one moves right and acquisition zero moves left. At state zero, acquisition one moves to state one with additional probability ε; otherwise the learner stays at zero. At state *L*, acquisition zero moves left with additional probability ε; otherwise it stays at *L*. The extra randomization is fresh and independent of the acquisition.
 
 For acquisition bias $`0<p<1`$, all adjacent moves have positive probability, and the endpoints have positive self-loops. The chain is irreducible and aperiodic. Set $`r=p/(1-p)`$. Its unnormalized stationary weights are
 
@@ -1292,7 +1437,7 @@ For completeness, this law also describes the long-time distribution from any in
 \alpha=\sum_j\min_i P^{2L}(i,j)>0,
 ```
 
-each row contains the same subprobability vector of mass $`\alpha`$. Removing that common part leaves a stochastic residual of mass $`1-\alpha`$. The total-variation distance between two distributions contracts by at most $`1-\alpha`$ every such block. Thus the normalized stationary law is unique and every initial distribution converges to it. If $`\alpha=1`$, convergence after that block is immediate.
+each row contains the same subprobability vector of mass α. Removing that common part leaves a stochastic residual of mass $`1-\alpha`$. The total-variation distance between two distributions contracts by at most $`1-\alpha`$ every such block. Thus the normalized stationary law is unique and every initial distribution converges to it. If $`\alpha=1`$, convergence after that block is immediate.
 
 Under $`H_+`$ the ratio is two; the stationary law under $`H_-`$ is its reflection about $`L/2`$. With equal priors, choose minus below the midpoint and plus above it. At an integer midpoint either fixed response or a fair random tie has the same Bayes error. Define
 
@@ -1331,13 +1476,13 @@ while the probability of eventual permanent correctness remains zero. The statem
 
 #### The zero-randomization limit changes the process
 
-Let $`S=3`$ and start at state one. For positive $`\varepsilon`$,
+Let $`S=3`$ and start at state one. For positive ε,
 
 ```math
 E_3(\varepsilon)=\frac{1+\varepsilon}{5+2\varepsilon}.
 ```
 
-At $`\varepsilon=0`$, both endpoints become absorbing. The first acquisition moves from state one to an endpoint and determines the permanent response. The error probability is then $`1/3`$ under either hypothesis. At every fixed $`n\ge1`$, the finite-step law is a polynomial in the transition entries, so its error $`e_n(\varepsilon)`$ converges to $`e_n(0)=1/3`$ as $`\varepsilon\downarrow0`$. Therefore
+At $`\varepsilon=0`$, both endpoints become absorbing. The first acquisition moves from state one to an endpoint and determines the permanent response. The error probability is then 1/3 under either hypothesis. At every fixed $`n\ge1`$, the finite-step law is a polynomial in the transition entries, so its error $`e_n(\varepsilon)`$ converges to $`e_n(0)=1/3`$ as $`\varepsilon\downarrow0`$. Therefore
 
 ```math
 \lim_{\varepsilon\downarrow0}\lim_{n\to\infty}e_n(\varepsilon)
@@ -1347,7 +1492,7 @@ At $`\varepsilon=0`$, both endpoints become absorbing. The first acquisition mov
 =\frac13.
 ```
 
-The restoration probability changes as well: it is zero for every positive $`\varepsilon`$, but $`2/3`$ at zero. Removing a positive transition changes recurrent classes. Approaching an error infimum therefore does not justify setting a parameter to zero while retaining the old qualitative conclusion.
+The restoration probability changes as well: it is zero for every positive ε, but 2/3 at zero. Removing a positive transition changes recurrent classes. Approaching an error infimum therefore does not justify setting a parameter to zero while retaining the old qualitative conclusion.
 
 The classical finite-memory learning criterion is an asymptotic average error. For equal-prior, time-invariant randomized *S*-state tests of Bernoulli parameters $`0<q<p<1`$, the Hellman–Cover infimum is expressed using $`\gamma=p(1-q)/(q(1-p))`$ as $`(1+\gamma^{(S-1)/2})^{-1}`$. Berg, Ordentlich and Shayevitz state that criterion and the randomized infimum explicitly while studying deterministic machines. Here $`\gamma=4`$, matching the limit of the displayed family. The universal optimality assertion belongs to that literature; the calculation above proves this family's law and temporal behavior. [29][memory-origin]; [30, §I][memory-learning].
 
@@ -1402,7 +1547,7 @@ Several sharp changes of assumption locate this theorem's scope.
 
 **Earlier observation.** If the current *h*<sub>*t*</sub> is revealed before selection, $`a_t=h_t`$ is always correct. That conclusion belongs to an enlarged information channel.
 
-**Copied rather than fresh innovations.** Draw one bit $`Z\sim{\rm Bernoulli}(\varepsilon)`$, with $`0<\varepsilon<1/2`$, and put $`B_t=Z`$ for every time. Each unconditional flip marginal is still $`\varepsilon`$. After the first transition, the controller learns $`Z=h_0\oplus h_{-1}`$ and selects
+**Copied rather than fresh innovations.** Draw one bit $`Z\sim{\rm Bernoulli}(\varepsilon)`$, with $`0<\varepsilon<1/2`$, and put $`B_t=Z`$ for every time. Each unconditional flip marginal is still ε. After the first transition, the controller learns $`Z=h_0\oplus h_{-1}`$ and selects
 
 ```math
 a_t=h_{t-1}\mathbin{\oplus}Z
@@ -1456,7 +1601,7 @@ E_\theta(U)=
        P_{\lambda,a}=P_{\theta,a}\text{ for every }a\in U\}.
 ```
 
-A nonempty set *U* is **self-verifying for the target at $`\theta`$** when
+A nonempty set *U* is **self-verifying for the target at θ** when
 
 ```math
 U\subseteq G_\theta,
@@ -1471,7 +1616,7 @@ Thus a rival that rejects any action in *U* must differ observationally on some 
 
 #### Necessity: transferring a recurrent set without stopping at its last exit
 
-Suppose a common policy restores. Under a fixed true model $`\theta`$, let $`U_\infty`$ be the actions used infinitely often. Finiteness of *A* makes $`U_\infty`$ nonempty on every infinite action sequence. Restoration implies $`U_\infty\subseteq G_\theta`$ almost surely. There are only finitely many possible recurrent sets, so some nonempty $`U\subseteq G_\theta`$ occurs with positive probability. On that event, each action outside *U* occurs only finitely often. Consequently, for some deterministic *N*,
+Suppose a common policy restores. Under a fixed true model θ, let $`U_\infty`$ be the actions used infinitely often. Finiteness of *A* makes $`U_\infty`$ nonempty on every infinite action sequence. Restoration implies $`U_\infty\subseteq G_\theta`$ almost surely. There are only finitely many possible recurrent sets, so some nonempty $`U\subseteq G_\theta`$ occurs with positive probability. On that event, each action outside *U* occurs only finitely often. Consequently, for some deterministic *N*,
 
 ```math
 F(U,N)=\{a_t\in U\text{ for all }t\ge N,
@@ -1498,11 +1643,11 @@ The indicator factors are identical under the two models, and every observation 
 
 After a seed and prefix have been fixed, send the process to a common absorbing cemetery state at its first subsequent action outside *U*. The continuation kernels of these killed processes coincide: their policy is the same, and all observation laws for actions in *U* agree. Equality on finite cylinders gives equality of their continuation laws. In particular, they assign the same conditional continuation probability to staying in *U* forever and visiting each member infinitely often.
 
-Integrating that common nonnegative continuation probability against the two equivalent prefix measures transfers positivity of $`F(U,N)`$ to model $`\lambda`$. If some $`a\in U`$ were outside $`G_\lambda`$, this event would contain infinitely many errors under $`\lambda`$, contradicting restoration. Thus $`U\subseteq G_\lambda`$ for every $`\lambda\in E_\theta(U)`$. This proves necessity for the fixed $`\theta`$, and then for every model. Keeping the common seed in the prefix also proves the claim for seeded randomization without presuming a general policy-realization theorem. $`\square`$
+Integrating that common nonnegative continuation probability against the two equivalent prefix measures transfers positivity of $`F(U,N)`$ to model λ. If some $`a\in U`$ were outside $`G_\lambda`$, this event would contain infinitely many errors under λ, contradicting restoration. Thus $`U\subseteq G_\lambda`$ for every $`\lambda\in E_\theta(U)`$. This proves necessity for the fixed θ, and then for every model. Keeping the common seed in the prefix also proves the claim for seeded randomization without presuming a general policy-realization theorem. $`\square`$
 
 #### A constructive policy with the correct physical clock
 
-Choose one nonempty self-verifying set $`U_\lambda`$ for each candidate $`\lambda`$, and fix an ordering of its elements. Its ordered list is a plan. At a completed-plan boundary, compute the acquired likelihood
+Choose one nonempty self-verifying set $`U_\lambda`$ for each candidate λ, and fix an ordering of its elements. Its ordered list is a plan. At a completed-plan boundary, compute the acquired likelihood
 
 ```math
 L_t(\lambda)=\prod_{s\lt{}t}P_{\lambda,a_s}(y_s),
@@ -1512,7 +1657,7 @@ choose a maximizing candidate using a fixed tie rule, and load its plan. Execute
 
 This is a history policy, including on histories it would not itself generate. Start its queue at the plan chosen from the empty likelihood record. Upon appending any action/observation pair, remove one queue element; if the queue becomes empty, refill it using the likelihood of the enlarged record. On actual histories, the recorded action is the queue head. On arbitrary histories, the same recursion still defines a nonempty queue. Every plan is nonempty and finite, so the policy always has an action and never needs an arbitrary empty-queue default.
 
-For the probability argument, fix $`\theta`$ and take independent stacks $`(Y_{a,k})_{k\ge1}`$ with law $`P_{\theta,a}`$, one stack for each action. On its *k*th use, action *a* consumes $`Y_{a,k}`$. The controller accesses no unused coordinate. Induction on acquired histories shows that each consistent finite history has exactly the product probability prescribed by the controlled-observation model: each new coordinate is independent of those already acquired and has the required action law. Thus this stack construction generates the actual policy law, rather than a different law whose good behavior is merely assumed to transfer. The general probability-law comparison in §§7.5–7.6 retains its broader scope.
+For the probability argument, fix θ and take independent stacks $`(Y_{a,k})_{k\ge1}`$ with law $`P_{\theta,a}`$, one stack for each action. On its *k*th use, action *a* consumes $`Y_{a,k}`$. The controller accesses no unused coordinate. Induction on acquired histories shows that each consistent finite history has exactly the product probability prescribed by the controlled-observation model: each new coordinate is independent of those already acquired and has the required action law. Thus this stack construction generates the actual policy law, rather than a different law whose good behavior is merely assumed to transfer. The general probability-law comparison in §§7.5–7.6 retains its broader scope.
 
 Let $`N_a(t)`$ count uses of action *a* before time *t*. The acquired likelihood satisfies the exact identity
 
@@ -1537,7 +1682,7 @@ This finite-alphabet strong law follows by applying the indicator argument in §
 
 Work on the probability-one intersection of these finitely many strong-law events. For every informative action, a sufficiently long stack-prefix sum is at least half its positive mean times its length. An action sampled finitely often contributes an eventually fixed finite amount; a noninformative action contributes zero. It follows that the total log ratio tends to positive infinity whenever at least one distinguishing action is sampled infinitely often. This reasoning uses complete stack-prefix limits and then evaluates them at the actual counts; it does not assume that adaptively selected observations form an unconditioned random subsequence.
 
-Call a candidate $`\lambda`$ harmful under $`\theta`$ if $`U_\lambda\nsubseteq G_\theta`$. Self-verification of $`U_\lambda`$ implies that some $`b\in U_\lambda`$ distinguishes $`\lambda`$ from $`\theta`$: otherwise $`\theta\in E_\lambda(U_\lambda)`$ would require $`U_\lambda\subseteq G_\theta`$. If this harmful candidate were selected at infinitely many plan boundaries, every action in its plan, including *b*, would be executed infinitely often. The log ratio above would then tend to positive infinity. Eventually $`L_t(\theta)>L_t(\lambda)`$, so $`\lambda`$ could no longer maximize likelihood at a boundary. This is a contradiction.
+Call a candidate λ harmful under θ if $`U_\lambda\nsubseteq G_\theta`$. Self-verification of $`U_\lambda`$ implies that some $`b\in U_\lambda`$ distinguishes λ from θ: otherwise $`\theta\in E_\lambda(U_\lambda)`$ would require $`U_\lambda\subseteq G_\theta`$. If this harmful candidate were selected at infinitely many plan boundaries, every action in its plan, including *b*, would be executed infinitely often. The log ratio above would then tend to positive infinity. Eventually $`L_t(\theta)>L_t(\lambda)`$, so λ could no longer maximize likelihood at a boundary. This is a contradiction.
 
 Only finitely many harmful candidates exist, and each is chosen for finitely many plans almost surely. If *T*<sub>*j*</sub> is the start of plan *j*, then
 
@@ -1553,7 +1698,7 @@ The earlier construction selects a likelihood maximizer after every action and k
 
 #### The greatest good set and a finite decision procedure
 
-The union of two self-verifying sets for $`\theta`$ is self-verifying. A rival agreeing on the union agrees on each set and therefore accepts both. There is consequently a unique greatest such set, with the empty set used when none exists. It can be found without enumerating all subsets.
+The union of two self-verifying sets for θ is self-verifying. A rival agreeing on the union agrees on each set and therefore accepts both. There is consequently a unique greatest such set, with the empty set used when none exists. It can be found without enumerating all subsets.
 
 Start with $`U_0=G_\theta`$ and iterate
 
@@ -1576,9 +1721,9 @@ Two rounds can be essential. In the following table, entries are the probabiliti
 
 | Model | $`G_\theta`$ | Action *a* | Action *b* |
 |---|---|---:|---:|
-| 0 | $`\{a,b\}`$ | $`1/2`$ | $`1/2`$ |
-| 1 | $`\{a\}`$ | $`1/2`$ | $`1/2`$ |
-| 2 | $`\{b\}`$ | $`1/2`$ | $`2/3`$ |
+| 0 | $`\{a,b\}`$ | 1/2 | 1/2 |
+| 1 | $`\{a\}`$ | 1/2 | 1/2 |
+| 2 | $`\{b\}`$ | 1/2 | 2/3 |
 
 For model zero, the first step removes *b* because model one agrees on both actions and rejects *b*. Once only *a* remains, model two also becomes indistinguishable and removes *a*. Thus $`U_0=\{a,b\}`$, $`U_1=\{a\}`$, $`U_2=\varnothing`$. A single filtering pass would return a false positive.
 
@@ -1594,13 +1739,13 @@ G_\theta^{\Gamma}=G_\theta\cap\Gamma
 
 is nonempty for every model. [33]
 
-For necessity, all-time menu membership and eventual target membership imply eventual membership in $`G_\theta^\Gamma`$, so the theorem applies. For sufficiency, use its nonempty greatest sets as the queue plans. Every initial plan and every replacement plan lies in $`\Gamma`$, and every residual queue is a nonempty suffix of such a plan. Induction on arbitrary finite histories proves that every issued action is in $`\Gamma`$. This includes malformed histories containing earlier actions outside the menu. The queue never empties at a decision, so an out-of-menu fallback value cannot be used. Eventual membership in the restricted target implies eventual membership in the original target.
+For necessity, all-time menu membership and eventual target membership imply eventual membership in $`G_\theta^\Gamma`$, so the theorem applies. For sufficiency, use its nonempty greatest sets as the queue plans. Every initial plan and every replacement plan lies in Γ, and every residual queue is a nonempty suffix of such a plan. Induction on arbitrary finite histories proves that every issued action is in Γ. This includes malformed histories containing earlier actions outside the menu. The queue never empties at a decision, so an out-of-menu fallback value cannot be used. Eventual membership in the restricted target implies eventual membership in the original target.
 
-If $`\Gamma`$ is empty or some target misses it, no such policy exists. Early target errors may still be permitted; eventual correctness alone does not establish all-time permission. The result concerns a fixed common menu. History-dependent or model-dependent permissions require another analysis, and no statistical concentration result authenticates the menu's authority.
+If Γ is empty or some target misses it, no such policy exists. Early target errors may still be permitted; eventual correctness alone does not establish all-time permission. The result concerns a fixed common menu. History-dependent or model-dependent permissions require another analysis, and no statistical concentration result authenticates the menu's authority.
 
 #### Positive and negative cases
 
-**Information available only through bad actions.** Take two models, actions $`r_0,r_1,q`$, and $`G_0=\{r_0\}`$, $`G_1=\{r_1\}`$. Both repair actions emit a fair bit under either model. The probe *q* emits a Bernoulli bit of parameter $`1/3`$ under zero and $`2/3`$ under one. All actions are permitted, but *q* is target-bad under both models. Neither singleton target is self-verifying, so no common almost-surely restorative policy exists, even with unrestricted memory and adaptive probing.
+**Information available only through bad actions.** Take two models, actions $`r_0,r_1,q`$, and $`G_0=\{r_0\}`$, $`G_1=\{r_1\}`$. Both repair actions emit a fair bit under either model. The probe *q* emits a Bernoulli bit of parameter 1/3 under zero and 2/3 under one. All actions are permitted, but *q* is target-bad under both models. Neither singleton target is self-verifying, so no common almost-surely restorative policy exists, even with unrestricted memory and adaptive probing.
 
 Nevertheless, for any $`\delta>0`$, take $`2m`$ probe samples and commit to their majority, with *m* chosen so that $`(8/9)^m\le\delta`$. The already proved calculation in §7.8 gives restoration probability at least $`1-\delta`$ under both models. Only finitely many probe actions occur, but a wrong commitment makes infinitely many subsequent errors. Arbitrarily high finite-confidence success is different from one probability-one guarantee. Infinite probing identifies the model almost surely and fails restoration because the probes remain bad. [32]
 
@@ -1674,7 +1819,7 @@ Define a recursive certificate $`W(B)`$ by induction on $`|B|`$. The empty suppo
 \{a:a\text{ occurs in }v_{B,\sigma}\}\subseteq G_\sigma,
 ```
 
-and every $`\eta\in B`$ whose full observation vectors agree with $`\sigma`$ at every listed action accepts every action in the list.
+and every $`\eta\in B`$ whose full observation vectors agree with σ at every listed action accepts every action in the list.
 
 The recursion refers only to smaller nonempty supports. A symbol impossible under every live model produces the empty set and does not require a certificate. The definition contains no successful-policy premise. Its universal continuation condition is stronger than finding one favorable exit. Action order and repeated occurrences will matter to the controller and its cost, even though acceptance and licensing depend only on which actions occur. [36]
 
@@ -1688,13 +1833,13 @@ After issuing each action *a* and acquiring *y*, perform the exact support updat
 
 The rule uses the supplied laws and acquired observations; it does not take the hidden true model as an input. It defines a deterministic history policy. It can ignore an arbitrary common private seed, so its existence holds for every common seed distribution. To make the policy total, give a fixed default response at infeasible or action-inconsistent records. The legality theorem does not cover those records; this choice of totalization need not match a source implementation's particular behavior there.
 
-On every feasible consistent history, induction shows that the current support is certified. Continuing observations preserve the support and its licensed suffix; a strict nonempty successor is certified by requirement 2 and receives a new licensed plan. Every issued action therefore belongs to the current menu. Under a true $`\theta\in B_0`$, the next symbol has positive $`P_{\theta,a}`$ probability almost surely, so the support retains $`\theta`$ at every time outside a single null event. Every strict change then lowers $`|B|-1`$, allowing at most $`|B_0|-1`$ changes.
+On every feasible consistent history, induction shows that the current support is certified. Continuing observations preserve the support and its licensed suffix; a strict nonempty successor is certified by requirement 2 and receives a new licensed plan. Every issued action therefore belongs to the current menu. Under a true $`\theta\in B_0`$, the next symbol has positive $`P_{\theta,a}`$ probability almost surely, so the support retains θ at every time outside a single null event. Every strict change then lowers $`|B|-1`$, allowing at most $`|B_0|-1`$ changes.
 
-This is a policy in the stated physical experiment. The probability of any consistent finite acquired history under $`\theta`$ is the product of its selected-action observation probabilities, obtained by induction from the conditional acquisition law. On an exit, that product includes the exit-triggering symbol; it is neither discarded nor renormalized. Finite-history probabilities determine the law on infinite histories. No extra law-equality or independent policy-realization premise is supplied. [37–38]
+This is a policy in the stated physical experiment. The probability of any consistent finite acquired history under θ is the product of its selected-action observation probabilities, obtained by induction from the conditional acquisition law. On an exit, that product includes the exit-triggering symbol; it is neither discarded nor renormalized. Finite-history probabilities determine the law on infinite histories. No extra law-equality or independent policy-realization premise is supplied. [37–38]
 
 #### A survival-affinity estimate
 
-Fix a certified support *B* and a live true model $`\theta`$. For an action *a*, let
+Fix a certified support *B* and a live true model θ. For an action *a*, let
 
 ```math
 S_B(a)=\{y:B[a,y]=B\},\qquad
@@ -1718,15 +1863,15 @@ Let $`b_{B,\theta}(\sigma)`$ be the number of occurrences in $`v_{B,\sigma}`$ th
 c_{B;\theta,\sigma}(v_{B,\sigma})\lt{}1.
 ```
 
-Indeed, suppose the certificate uses a progress witness at a listed action. Some positive $`\sigma`$ probability lies outside $`S_B(a)`$, so the mass of its restricted row is strictly less than one. Cauchy–Schwarz then makes that action's affinity strictly less than one, and the entire product is strictly less than one. If the certificate instead uses self-verification, a plan containing an action bad under the live $`\theta`$ cannot have identical observation vectors under $`\sigma`$ and $`\theta`$ at every listed action. At a differing action the full-row affinity is strictly less than one, hence so is the restricted affinity and the product.
+Indeed, suppose the certificate uses a progress witness at a listed action. Some positive σ probability lies outside $`S_B(a)`$, so the mass of its restricted row is strictly less than one. Cauchy–Schwarz then makes that action's affinity strictly less than one, and the entire product is strictly less than one. If the certificate instead uses self-verification, a plan containing an action bad under the live θ cannot have identical observation vectors under σ and θ at every listed action. At a differing action the full-row affinity is strictly less than one, hence so is the restricted affinity and the product.
 
 The argument retains both possible sources of a strict deficit: distinguishable continuing laws and positive probability of leaving the support. It remains valid when some probabilities vanish. [37]
 
 #### Finite expected error count in one phase
 
-Until the first strict support change, let $`L_j(\eta)`$ denote the likelihood under a live model $`\eta`$ of the acquired history at the start of plan *j*. Only completed continuing plans precede such a boundary. Their symbols have positive probability under every live model, so all these likelihoods are strictly positive.
+Until the first strict support change, let $`L_j(\eta)`$ denote the likelihood under a live model η of the acquired history at the start of plan *j*. Only completed continuing plans precede such a boundary. Their symbols have positive probability under every live model, so all these likelihoods are strictly positive.
 
-For a fixed candidate $`\sigma`$, define
+For a fixed candidate σ, define
 
 ```math
 R_j^\sigma=
@@ -1743,7 +1888,7 @@ After the phase exits, set this potential to zero forever. At its initial bounda
 
 For an exiting observation string the next potential is zero. For a continuing string, its true-model probability multiplies the square root of the likelihood ratio, producing the product of the square-root probability factors. Summing over its symbols yields the displayed product affinity. This calculation uses the unnormalized continuing mass. It does not condition the experiment on future survival.
 
-For the candidate's own plan, abbreviate $`c_\sigma=c_{B;\theta,\sigma}(v_{B,\sigma})`$. If $`b_{B,\theta}(\sigma)>0`$, set $`\delta_\sigma=1-c_\sigma>0`$. Every other chosen plan has affinity at most one. When the chosen candidate is $`\sigma`$, likelihood maximization gives $`L_j(\sigma)\ge L_j(\theta)`$ and hence $`R_j^\sigma\ge1`$. Therefore
+For the candidate's own plan, abbreviate $`c_\sigma=c_{B;\theta,\sigma}(v_{B,\sigma})`$. If $`b_{B,\theta}(\sigma)>0`$, set $`\delta_\sigma=1-c_\sigma>0`$. Every other chosen plan has affinity at most one. When the chosen candidate is σ, likelihood maximization gives $`L_j(\sigma)\ge L_j(\theta)`$ and hence $`R_j^\sigma\ge1`$. Therefore
 
 ```math
 \mathbb E_\theta R_{j+1}^\sigma
@@ -1816,7 +1961,7 @@ The source's canonical policy theorem has this finite expected physical-cost int
 
 The policy executes *q*, updates the support and then issues the corresponding repair forever. Exactly one bad action occurs. Under model one, executing the abandoned suffix *r*<sub>0</sub> would violate the new menu. Dropping the exit record would instead erase the one real bad action from the count. The support must use strict positivity: retaining a model whose label had zero probability would lose the inference that makes the new action licensed.
 
-**A partially revealing probe.** Let *q* emit an eliminating symbol *e* with probability $`1/2`$ under model zero and with probability zero under model one; otherwise it emits *s*. Take $`G_0=\{r_0\}`$, $`G_1=\{q\}`$, initial menu $`\{q\}`$ and menu $`\{r_0\}`$ after eliminating model one. Let the repair always emit the symbol s, and use the initial probe menu also at singleton model one. Both initial candidates can use the one-action plan *q*: candidate zero has progress, while candidate one has a live self-verifying plan because the full observation vectors differ. Under zero, the number of probes is geometric with mean two; under one, every action is already good.
+**A partially revealing probe.** Let *q* emit an eliminating symbol *e* with probability 1/2 under model zero and with probability zero under model one; otherwise it emits *s*. Take $`G_0=\{r_0\}`$, $`G_1=\{q\}`$, initial menu $`\{q\}`$ and menu $`\{r_0\}`$ after eliminating model one. Let the repair always emit the symbol s, and use the initial probe menu also at singleton model one. Both initial candidates can use the one-action plan *q*: candidate zero has progress, while candidate one has a live self-verifying plan because the full observation vectors differ. Under zero, the number of probes is geometric with mean two; under one, every action is already good.
 
 Conditional on observing only the continuing symbol, the normalized observation law is the same point mass under both models. Replacing the raw probabilities by these normalized rows would erase the survival information and the positive exit mass. The full stopped law and the affinity deficit keep both.
 
@@ -1834,7 +1979,7 @@ A later source separately establishes necessity and an existence equivalence in 
 
 The recursive certificate in §7.12 is also necessary for the same finite controlled-observation problem. Its necessity is a distinct result: zero-probability observations prevent the unrestricted finite-prefix transfer available under full support. The argument instead follows every feasible support-changing branch and transfers probability only on actions whose positive observations remain possible in the rival model. [39–40]
 
-Retain the nonempty finite sets $`\Theta,A,Y`$, fixed normalized nonnegative laws $`P_{\theta,a}`$, targets $`G_\theta`$, nonempty initial support *B*<sub>0</sub>, exact support update and support-dependent menus $`\Gamma`$ of §7.12. Fix any common private-seed probability space $`(Z,\rho)`$. A measurable policy $`\pi(z,h)`$ chooses an action from the seed and acquired finite history; the next observation, conditional on this entire information and the chosen action, has law $`P_{\theta,a}`$. The seed law is the same under every hidden model. Legality means
+Retain the nonempty finite sets $`\Theta,A,Y`$, fixed normalized nonnegative laws $`P_{\theta,a}`$, targets $`G_\theta`$, nonempty initial support *B*<sub>0</sub>, exact support update and support-dependent menus Γ of §7.12. Fix any common private-seed probability space $`(Z,\rho)`$. A measurable policy $`\pi(z,h)`$ chooses an action from the seed and acquired finite history; the next observation, conditional on this entire information and the chosen action, has law $`P_{\theta,a}`$. The seed law is the same under every hidden model. Legality means
 
 ```math
 \pi(z,h)\in\Gamma(B(h))
@@ -1861,11 +2006,11 @@ For a fixed seed *z*, let $`\Pr_\theta^{\pi_z}`$ be the law generated by $`\pi_z
 
 for measurable path events *E*. This follows from the common-seed construction and the finite-history product probabilities, then from extension to the generated path sigma algebra. It is not an arbitrary representation assumption about a separately supplied behavioral process.
 
-If eventual goodness has probability one under $`\theta`$, its fixed-seed probability is one for $`\rho`$-almost every seed. Intersect these full-measure seed sets over the finitely many initially live models. Their intersection still has measure one and is nonempty. Choose a single $`z_*`$ there. The resulting deterministic policy succeeds in every live model. Its pointwise legality follows from the original contract, which held for every seed. The seed is now fixed once, before any continuation or support induction. A model-dependent posterior over seeds is not used. [41]
+If eventual goodness has probability one under θ, its fixed-seed probability is one for ρ-almost every seed. Intersect these full-measure seed sets over the finitely many initially live models. Their intersection still has measure one and is nonempty. Choose a single $`z_*`$ there. The resulting deterministic policy succeeds in every live model. Its pointwise legality follows from the original contract, which held for every seed. The seed is now fixed once, before any continuation or support induction. A model-dependent posterior over seeds is not used. [41]
 
 #### What a positive acquired prefix permits
 
-Use chronological histories in this proof. For a deterministic policy *f*, let $`h=((a_0,y_0),\ldots,(a_{n-1},y_{n-1}))`$ be action-consistent. Its probability under a model $`\theta`$ is
+Use chronological histories in this proof. For a deterministic policy *f*, let $`h=((a_0,y_0),\ldots,(a_{n-1},y_{n-1}))`$ be action-consistent. Its probability under a model θ is
 
 ```math
 p_\theta(h)=\prod_{s\lt{}n}P_{\theta,a_s}(y_s).
@@ -1931,7 +2076,7 @@ The source also expresses this restriction by changing unused rows. Laws agreein
 
 #### A stable support supplies a self-verifying set
 
-Suppose the same policy succeeds under every model in a nonempty support *B*. Fix a true model $`\theta\in B`$ and an action set *D* such that, under $`\theta`$, all actions lie in *D* almost surely. Suppose also that
+Suppose the same policy succeeds under every model in a nonempty support *B*. Fix a true model $`\theta\in B`$ and an action set *D* such that, under θ, all actions lie in *D* almost surely. Suppose also that
 
 ```math
 P_{\theta,a}(y)\gt{}0
@@ -1942,7 +2087,7 @@ P_{\eta,a}(y)\gt{}0
 
 There is then a nonempty self-verifying set $`U\subseteq D\cap G_\theta`$ among the live models.
 
-Indeed, on every infinite action sequence over finite *A*, some nonempty set of actions recurs infinitely often. Almost-sure eventual goodness under $`\theta`$ puts this recurrent set inside $`G_\theta`$, and all-time membership in *D* puts it inside *D*. Some exact recurrent set *U* has positive probability. On that event, only finitely many actions fall outside *U*. For some deterministic *N*, the event
+Indeed, on every infinite action sequence over finite *A*, some nonempty set of actions recurs infinitely often. Almost-sure eventual goodness under θ puts this recurrent set inside $`G_\theta`$, and all-time membership in *D* puts it inside *D*. Some exact recurrent set *U* has positive probability. On that event, only finitely many actions fall outside *U*. For some deterministic *N*, the event
 
 ```math
 C(U,N)=
@@ -1951,9 +2096,9 @@ C(U,N)=
    \text{each }a\in U\text{ occurs infinitely often}\}
 ```
 
-has positive probability under $`\theta`$.
+has positive probability under θ.
 
-Fix a rival $`\eta\in B`$ agreeing with $`\theta`$ on every action in *U*. The guarded transfer just proved makes $`C(U,N)`$ positive under $`\eta`$ as well. If any member of *U* were outside $`G_\eta`$, this event would contain infinitely many errors under $`\eta`$, contradicting its almost-sure success. Therefore every such rival accepts all of *U*, proving live self-verification. Exact recurrence matters: transferring only eventual membership in a larger set could silently drop the particular action rejected by the rival. [40,42]
+Fix a rival $`\eta\in B`$ agreeing with θ on every action in *U*. The guarded transfer just proved makes $`C(U,N)`$ positive under η as well. If any member of *U* were outside $`G_\eta`$, this event would contain infinitely many errors under η, contradicting its almost-sure success. Therefore every such rival accepts all of *U*, proving live self-verification. Exact recurrence matters: transferring only eventual membership in a larger set could silently drop the particular action rejected by the rival. [40,42]
 
 #### Necessity by induction over live supports
 
@@ -1961,9 +2106,9 @@ Prove the claim simultaneously for every deterministic successful legal policy b
 
 First, every action that this policy issues after a feasible consistent history with unchanged support *B* belongs to $`D(B)`$. It belongs to $`\Gamma(B)`$ by legality. For every symbol *y* whose successor $`B[a,y]`$ is nonempty and strict, the acquired-prefix argument supplies a common successful legal continuation on that successor. Its cardinality is smaller, so the induction hypothesis supplies $`W(B[a,y])`$. This argument examines **every** such symbol at **every** feasible same-support history, not one favorable realized path. Thus the action is in $`D(B)`$. [40,43]
 
-Now fix a candidate $`\sigma\in B`$. If some action in $`D(B)`$ has a progress witness under $`\sigma`$, this candidate satisfies the progress alternative in the stage certificate.
+Now fix a candidate $`\sigma\in B`$. If some action in $`D(B)`$ has a progress witness under σ, this candidate satisfies the progress alternative in the stage certificate.
 
-Otherwise, for every $`a\in D(B)`$ and every *y* with $`P_{\sigma,a}(y)\gt{}0`$, the support update must equal *B*: a strict change would itself be a progress witness. Starting at the empty history, induction over actual positive-probability acquisitions therefore preserves support *B*. At each stage, the policy's action is in $`D(B)`$ by the preceding paragraph. Taking the countable intersection over physical times shows that under $`\sigma`$ all actions remain in $`D(B)`$ almost surely. This derives the invariant from positive branches; it is not an assumed permanent-safety property.
+Otherwise, for every $`a\in D(B)`$ and every *y* with $`P_{\sigma,a}(y)\gt{}0`$, the support update must equal *B*: a strict change would itself be a progress witness. Starting at the empty history, induction over actual positive-probability acquisitions therefore preserves support *B*. At each stage, the policy's action is in $`D(B)`$ by the preceding paragraph. Taking the countable intersection over physical times shows that under σ all actions remain in $`D(B)`$ almost surely. This derives the invariant from positive branches; it is not an assumed permanent-safety property.
 
 Furthermore, support preservation means that every live rival remains possible on each such positive symbol:
 
@@ -1980,7 +2125,7 @@ The stable-support argument now supplies a nonempty self-verifying set within $`
 
 #### Controls that distinguish the hypotheses
 
-**One-sided support can be enough.** Let $`D=\{a,b\}`$ and $`U=\{b\}`$. Under *P*, action *a* emits zero surely; under *Q*, it emits zero or one with probability $`1/2`$ each. Action *b* emits zero under both. A policy first issues *a*, then uses *b* forever after zero and an action $`c\notin D`$ forever after one. The guarded event of staying in *D* and using *b* after time one has probability one under *P* and $`1/2`$ under *Q*. The needed implication holds, although the positive supports of the first-action laws are not equal.
+**One-sided support can be enough.** Let $`D=\{a,b\}`$ and $`U=\{b\}`$. Under *P*, action *a* emits zero surely; under *Q*, it emits zero or one with probability 1/2 each. Action *b* emits zero under both. A policy first issues *a*, then uses *b* forever after zero and an action $`c\notin D`$ forever after one. The guarded event of staying in *D* and using *b* after time one has probability one under *P* and 1/2 under *Q*. The needed implication holds, although the positive supports of the first-action laws are not equal.
 
 **An earlier singular action defeats an unguarded tail claim.** Keep identical laws at $`b\in D`$, but let the initial action $`a\notin D`$ reveal the model perfectly. After one outcome choose *b* forever, and after the other choose $`c\notin D`$ forever. Eventual membership in $`\{b\}`$ has probability one in the first model and zero in the second, despite complete agreement on *D*. The all-time guard excludes precisely this earlier unsupported acquisition.
 
@@ -2287,7 +2432,7 @@ The fixed-design result does not, by itself, assert equality for every adaptive 
 
 This result allows genuine new answer trials: their conditional likelihood ratios are still one. It is not restricted to reusing the same answer record. But endogenous human designs, interventions, hidden-variable access, model-dependent missingness and retained internal records require a new argument; the conditional-freshness and common-policy assumptions cannot be inferred from the word “adaptive.”
 
-The same reasoning has a simpler static form. If the answer record has common law $`\mu`$ and an analysis or audit uses a common kernel *K*, its output law is
+The same reasoning has a simpler static form. If the answer record has common law μ and an analysis or audit uses a common kernel *K*, its output law is
 
 ```math
 \Pr(\text{analysis output}\in A)=\int K(d,A)\,\mu(dd)
@@ -2307,7 +2452,7 @@ The observational equivalence can be broken by retaining a within-trial link bet
 
 The readout is passive: recording *X*<sub>*W*</sub> or its binary threshold is assumed not to change the structural equations. All covariance comparisons below condition on the declared stimulus *x* and announcer *a*. Pooling trials with varying stimuli can create summary–answer or linked-bit–answer association even in *L*: although conditional covariance vanishes there, both conditional means can vary with the common stimulus. Such pooled association alone therefore cannot identify a member's causal contribution. The construction does not establish feasible passive access to an actual person's private state. [11, linked-record analysis][r11] [12, §3.1][r12]
 
-Set $`\sigma^2=v+r_a`$ and let $`\phi`$ be the standard normal density.
+Set $`\sigma^2=v+r_a`$ and let ϕ be the standard normal density.
 
 **Proposition 17 (a linked real-valued record).**
 
@@ -2352,7 +2497,7 @@ is strictly increasing and lies strictly between zero and one. Write $`\pi=\Pr(X
 
 The conclusion is separation in distribution, not perfect classification of one observed pair. Every one of the four binary pairs has positive probability under both mechanisms, including when output noise is zero. Every finite paired data string is therefore possible under both. The linked record supplies evidence, not a finite error-free selector.
 
-Now let a recording error independently flip *Q* with probability $`\varepsilon`$. With an independent Bernoulli error *E*,
+Now let a recording error independently flip *Q* with probability ε. With an independent Bernoulli error *E*,
 
 ```math
 Q'=Q+E-2QE,\qquad
@@ -2388,7 +2533,7 @@ and otherwise select *L*.
 
 Thus $`n\ge2\log(1/\eta)/\delta_0^2`$ suffices for each error to be at most $`\eta\in(0,1)`$.
 
-**Proof.** If *Z* is Bernoulli with mean *m*, put $`\psi(\lambda)=\log\mathbb E e^{\lambda(Z-m)}`$. Then $`\psi(0)=\psi'(0)=0`$ and $`\psi''(\lambda)`$ is the variance of a tilted Bernoulli variable, hence at most $`1/4`$. Integrating twice gives $`\psi(\lambda)\le\lambda^2/8`$ for every real $`\lambda`$. Independence, Markov's inequality and the choice $`\lambda=4t`$ give
+**Proof.** If *Z* is Bernoulli with mean *m*, put $`\psi(\lambda)=\log\mathbb E e^{\lambda(Z-m)}`$. Then $`\psi(0)=\psi'(0)=0`$ and $`\psi''(\lambda)`$ is the variance of a tilted Bernoulli variable, hence at most 1/4. Integrating twice gives $`\psi(\lambda)\le\lambda^2/8`$ for every real λ. Independence, Markov's inequality and the choice $`\lambda=4t`$ give
 
 ```math
 \Pr\!\left(\overline Z-m\ge t\right)
@@ -2414,7 +2559,7 @@ Rotational symmetry makes the angle of $`(U,V)`$ uniform. The two positive half-
 
 With $`n=216`$, choose *P* when the joint-positive count is at least 72. Each error is at most $`e^{-3}<1/20`$. These are parameters and guarantees of an exact illustrative model, not a report of performed trials or a recommendation for a particular empirical study.
 
-There is no comparable uniform finite guarantee over all positive separations. For binary variables with the same unary marginals, a covariance difference $`\delta`$ changes the four cells by $`(+\delta,-\delta,-\delta,+\delta)`$. The one-pair total variation distance is exactly $`2\delta`$. For *n* independent pairs, the product-law telescoping identity and the triangle inequality give total variation at most $`2n\delta`$. For any possibly randomized test, the sum of its two errors is therefore at least
+There is no comparable uniform finite guarantee over all positive separations. For binary variables with the same unary marginals, a covariance difference δ changes the four cells by $`(+\delta,-\delta,-\delta,+\delta)`$. The one-pair total variation distance is exactly $`2\delta`$. For *n* independent pairs, the product-law telescoping identity and the triangle inequality give total variation at most $`2n\delta`$. For any possibly randomized test, the sum of its two errors is therefore at least
 
 ```math
 1-2n\delta.
@@ -2443,7 +2588,7 @@ e_n=\sqrt{\frac{\log(6n(n+1)/\gamma)}{2n}},
 
 On stopping, declare a positive contribution witness, namely *P* within this specified pair of models. The procedure never declares *L*.
 
-**Theorem 19 (time-uniform positive detection).** Under *L*, the probability of ever stopping is at most $`\gamma`$. Under every fixed *P* with $`\delta>0`$, $`\tau<\infty`$ almost surely.
+**Theorem 19 (time-uniform positive detection).** Under *L*, the probability of ever stopping is at most γ. Under every fixed *P* with $`\delta>0`$, $`\tau<\infty`$ almost surely.
 
 **Proof.** Apply the two-sided bound proved above to each of the three Bernoulli means. At each time, each failure probability at tolerance *e*<sub>*n*</sub> is at most $`\gamma/(3n(n+1))`$. A union bound over the three means and all *n*, using $`\sum_{n\ge1}1/(n(n+1))=1`$, gives an event *G* of probability at least $`1-\gamma`$ on which all three mean errors are at most *e*<sub>*n*</sub> at every time. Since all means lie in $`[0,1]`$,
 
@@ -2466,10 +2611,10 @@ The inability to declare the null after a uniformly bounded amount of ambiguous 
 **Theorem 20 (null-termination obstruction).** Fix $`x=0,v=1,k=3,r_a=0`$ and allow independent recording errors $`0\le\varepsilon<1/2`$. There is no single nonanticipating sequential procedure whose terminal decision is either *L* or *P*, with common independent auxiliary randomization, satisfying all three conditions:
 
 1. It terminates almost surely under the single-input model.
-2. Its probability of declaring *P* under that model is at most $`\gamma`$.
-3. Under every two-input model in this family, its probability of declaring *L* is at most $`\zeta`$, where $`\gamma+\zeta<1`$.
+2. Its probability of declaring *P* under that model is at most γ.
+3. Under every two-input model in this family, its probability of declaring *L* is at most ζ, where $`\gamma+\zeta<1`$.
 
-**Proof.** Under the single-input model, each paired observation is uniform on the four cells, independently of $`\varepsilon`$; call this common null law *L*<sub>0</sub>. The alternative has the same fair marginals and covariance $`\delta=(1-2\varepsilon)/6\downarrow0`$.
+**Proof.** Under the single-input model, each paired observation is uniform on the four cells, independently of ε; call this common null law *L*<sub>0</sub>. The alternative has the same fair marginals and covariance $`\delta=(1-2\varepsilon)/6\downarrow0`$.
 
 Let *A*<sub>*N*</sub> be the event that the procedure declares *L* by time *N*. Null almost-sure termination and condition 2 give $`\Pr_{L_0}(\bigcup_N A_N)\ge1-\gamma`$. Choose $`\eta>0`$ with $`\gamma+\zeta+2\eta<1`$ and then a finite *N* with $`\Pr_{L_0}(A_N)>1-\gamma-\eta`$. Choose an alternative with $`2N\delta<\eta`$. Its first *N* pairs have total variation distance at most $`2N\delta`$ from the null. Appending the common independent seed and applying the common procedure cannot increase that distance. Consequently,
 
@@ -2513,7 +2658,7 @@ Give the two models equal prior probability and evaluate an estimate $`a\in[0,1]
 q(a-1)^2+(1-q)a^2=(a-q)^2+q(1-q).
 ```
 
-Thus the optimal estimate is the posterior itself, with risk $`q(1-q)`$. Before the query the risk is $`1/4`$.
+Thus the optimal estimate is the posterior itself, with risk $`q(1-q)`$. Before the query the risk is 1/4.
 
 A concordant pair, $`Q'=Y`$, gives posterior
 
@@ -2527,7 +2672,7 @@ and a discordant pair gives
 q_{\mathrm{different}}=\frac{1/4-\delta}{1/2-\delta}.
 ```
 
-The predictive probabilities of these events are respectively $`1/2+\delta`$ and $`1/2-\delta`$. Since the expected posterior is its prior $`1/2`$, the reduction in optimal expected squared loss is the posterior variance:
+The predictive probabilities of these events are respectively $`1/2+\delta`$ and $`1/2-\delta`$. Since the expected posterior is its prior 1/2, the reduction in optimal expected squared loss is the posterior variance:
 
 ```math
 V=\frac14-\mathbb E[q(1-q)]
@@ -2546,13 +2691,13 @@ V=
 =\frac{\delta^2}{1-4\delta^2}.
 ```
 
-| Independent bit-error probability | $`\delta`$ | Posterior after concordance | Posterior after discordance | Value *V* |
+| Independent bit-error probability | δ | Posterior after concordance | Posterior after discordance | Value *V* |
 |---:|---:|---:|---:|---:|
-| 0 | $`1/6`$ | $`5/8`$ | $`1/4`$ | $`1/32`$ |
-| $`1/4`$ | $`1/12`$ | $`4/7`$ | $`2/5`$ | $`1/140`$ |
-| $`1/2`$ | 0 | $`1/2`$ | $`1/2`$ | 0 |
+| 0 | 1/6 | 5/8 | 1/4 | 1/32 |
+| 1/4 | 1/12 | 4/7 | 2/5 | 1/140 |
+| 1/2 | 0 | 1/2 | 1/2 | 0 |
 
-At zero recording error the posterior expected risk is $`7/32`$, improving on $`1/4`$ by $`1/32`$. If the query costs $`c=1/64`$ in the same loss units, it is beneficial at zero error and not beneficial at error $`1/4`$. An answer-only query has value zero for discriminating this pair under the common observation contract, even if it is an authentic new trial. It can still be valuable for a different target, such as learning the stimulus.
+At zero recording error the posterior expected risk is 7/32, improving on 1/4 by 1/32. If the query costs $`c=1/64`$ in the same loss units, it is beneficial at zero error and not beneficial at error 1/4. An answer-only query has value zero for discriminating this pair under the common observation contract, even if it is an authentic new trial. It can still be valuable for a different target, such as learning the stimulus.
 
 The calculation assumes that the linked record is available at the stated cost and that the two-model prior and loss are appropriate for the decision. It does not establish either assumption, exclude additional candidate mechanisms, or choose the ethically or epistemically correct loss. Positive value in this model is not a global ranking of research programmes.
 
@@ -2564,13 +2709,13 @@ Suppose one concordant paired observation was initially evaluated with $`\vareps
 \frac{1/4+1/6}{1/4}=\frac53,
 ```
 
-which changes prior odds one to posterior probability $`5/8`$. If justified calibration later changes the same recording channel to $`\varepsilon=1/4`$, the correct likelihood ratio for this **same observation** becomes
+which changes prior odds one to posterior probability 5/8. If justified calibration later changes the same recording channel to $`\varepsilon=1/4`$, the correct likelihood ratio for this **same observation** becomes
 
 ```math
 \frac{1/4+1/12}{1/4}=\frac43,
 ```
 
-and its corrected posterior is $`4/7`$. Multiplying both ratios would give odds $`20/9`$ and probability $`20/29`$, falsely treating one record under two calibrations as two independent observations.
+and its corrected posterior is 4/7. Multiplying both ratios would give odds 20/9 and probability 20/29, falsely treating one record under two calibrations as two independent observations.
 
 The product can be appropriate for two genuinely independent records, one from each specified channel. It is inappropriate merely because a different copy, report or analysis presents the original observation. A root-aware record of what was observed must be joined to a scientific model of dependence; identity alone supplies no likelihood factorization.
 
@@ -2658,6 +2803,12 @@ The numbered project sources below identify public research editions. They estab
 48. Marnix Suilen, Marck van der Vegt and Sebastian Junges. *A PSPACE Algorithm for Almost-Sure Rabin Objectives in Multi-Environment MDPs*. arXiv:2407.07006v1 (2024), §§3–6. [Primary preprint](https://arxiv.org/html/2407.07006v1).
 49. Min Chen, Emilio Frazzoli, David Hsu and Wee Sun Lee. *POMDP-lite for Robust Robot Planning under Uncertainty*. arXiv:1602.04875v3 (2016), §§III–IV. [Primary preprint](https://arxiv.org/html/1602.04875v3).
 50. Xiaoming Duan, Yagiz Savas, Rui Yan, Zhe Xu and Ufuk Topcu. *On the Detection of Markov Decision Processes*. arXiv:2112.12338v1 (2021), §§I–IV. [Primary preprint](https://arxiv.org/html/2112.12338v1). This identifies the inspected preprint edition; the source's journal-version comparison and any later correction retain their own evidence boundaries.
+
+51. Orthemology public research. *Synchronisation deficit and provenance-innovation rank balance*, revised public proposal. [Public source edition][synchronisation-source]. Exact Git object: `360478ec98f93ca4d0281023fb86ed42287fbc32`. The finite-dimensional argument, old-recovery correction, counterexamples and application limits are incorporated in §1.4; the zero-row qualification is made explicit there.
+52. Orthemology public research. *Provenance-root nonmultiplicity under copying and synchronisation*. [Public source edition][lineage-source]. Exact Git object: `37cdc615db920ea2eb559b338a9b68acacdc4fac`. The lineage invariant and controls are incorporated in §1.4. Its historical checker counts remain source-reported execution evidence, not a fresh run or a new general theorem.
+
+[synchronisation-source]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
+[lineage-source]: https://github.com/theislampill/orthemology/commit/a7ff0e33d1a299db640041c46b1af81ca70851f6
 
 [r1]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-multi-actor-conflict-note.md
 [r2]: https://github.com/theislampill/orthemology/blob/44734e836f9d74905cfdab745ef7d1d6abe30a38/theory/orthemic-core-formalization.md
