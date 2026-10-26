@@ -10,6 +10,8 @@ The answer depends on what “identify” means. Raw conversion, an inhabitant o
 
 This chapter gives the proofs, including the concrete countermodel and the closure properties that make it a model of the whole calculus. Historical source and formal-verification citations support exact inspection; they are not substitutes for the arguments below.
 
+Section 10 compares these extensional results with the original and bridge-only judgments. It proves the earlier representation boundary and full-rule intensional identity criterion, retaining the different preservation conditions of each calculus.
+
 ## 1. Erased terms and the identity judgment
 
 ### 1.1 Application, conversion and abstraction
@@ -876,6 +878,800 @@ The worked example separates several obligations that are easily conflated in fo
 
 These are mathematical results about an explicit representation of proofs and programs. They show both the usefulness of extensional proof rules and the limits of deriving general witness principles from erased computation. They supply no direct theorem about metaphysical grounding, collective cognition, or an unfinished noetic-field research objective. Such applications would require a separate, explicit interpretation and its own evidence.
 
+## 10. Representation fidelity and the intensional identity boundary
+
+The distinction between a supplied program representation and the existence of any proof is already visible before extensionality is added. This section reconstructs that boundary in the original calculus, shows exactly what the atom/application bridge changes, and proves the older intensional identity theorem against which the positive extensional results must be compared. The proofs come from the complete opaque-atom, bridge, residual-identity and intensional-separation sources. Here F/G names the original unary and heterogeneous predicates, whose full universal-type conditions are used in section 10.5. Their order here is explanatory: the residual source's stopped argument is followed by the later argument that resolves it. It is not a newly open problem. [Opaque representation][opaque-source] [Bridge][bridge-source] [Historical residual question][residual-source] [Full-rule resolution][intensional-source]
+
+### 10.1 Three judgments on the same expressions
+
+Write $`\vdash_0`$ for the original judgment already used above, $`\vdash_+`$ for its bridge-only extension, and $`\vdash_E`$ for the extensional judgment of sections 1–9. These are three different finite inductive judgments on the same raw terms, polynomials, types and telescopes.
+
+| Judgment | Exact source name | Context / formation / typing constructors | Polynomial conversion |
+|---|---|---:|---|
+| $`\vdash_0`$ | P01AC.Has | 2 / 7 / 18 | The seven original constructors |
+| $`\vdash_+`$ | P01AC.Intensional.Plus.HasPlus | 2 / 7 / 18 | Those seven constructors and the atom/application bridge |
+| $`\vdash_E`$ | P01AC.ExtensionalRepair.HasE | 2 / 7 / 20 | The same bridge relation as $`\vdash_+`$ |
+
+The seven original conversion constructors are reflexivity, symmetry, transitivity, application congruence and the exposed polynomial $`I,K,S`$ contractions. The bridge is
+
+```math
+\mathrm{atom}(rs)\simeq_+
+\mathrm{app}(\mathrm{atom}(r),\mathrm{atom}(s)).
+```
+
+In moving from $`\vdash_0`$ to $`\vdash_+`$, only the conversion premises of identity introduction and proof-polynomial conversion are changed. Every formation premise, endpoint typing, finite image table, scope condition and dependent motive remains. The bridge is one additional conversion generator, not a nineteenth typing rule. Moving from $`\vdash_+`$ to $`\vdash_E`$ retains all eighteen typing rules and adds precisely the product and universal extensionality rules stated in section 1. [Original declarations][original-syntax] [Exact bridge declarations][bridge-definitions] [Extensional declarations][syntax]
+
+Mutual induction on context, formation and typing derivations gives inclusions into the next system. The inclusion of conversion certificates is an induction on their generators. Thus these inclusions preserve the literal context, polynomial and type:
+
+```math
+\Gamma\vdash_0 p:C
+\quad\Longrightarrow\quad
+\Gamma\vdash_+ p:C
+\quad\Longrightarrow\quad
+\Gamma\vdash_E p:C.
+```
+
+They preserve positive derivations. They do not carry a negative theorem into the larger system. Nor is a theorem requiring a $`\vdash_+`$ derivation a theorem about an arbitrary $`\vdash_E`$ derivation.
+
+We will use $`\zeta`$ for the constant inert-zero term environment. A polynomial is *scope-zero* when it contains no free term-variable node. Type parameters are a different sort: a type over the empty term telescope may still have free type parameters. The closed-identity theorem below retains that possibility and states all its formation, typing and term-scope premises explicitly.
+
+### 10.2 Whole-label replacement in the original calculus
+
+Let $`\mathrm{Finite}(a,C)`$ denote the actual seven-constructor finite derivation judgment of section 1, and define
+
+```math
+\mathrm{NoFinite}(a)
+\quad\Longleftrightarrow\quad
+\forall C\;\neg\mathrm{Finite}(a,C).
+```
+
+The finite grammar is unchanged throughout this comparison. Each of $`I,K,S`$ has a finite type, so $`\mathrm{NoFinite}(a)`$ implies that $`a`$ is different from those three primitive labels.
+
+Fix raw terms $`a,b`$. Define $`M=M_{a,b}`$ on polynomials by replacing the **whole label** of the atom $`a`$ by $`b`$, fixing other whole atom labels, fixing variables, and commuting with polynomial application:
+
+```math
+M(\mathrm{var}(n))=\mathrm{var}(n),\qquad
+M(\mathrm{atom}(r))=
+\begin{cases}
+\mathrm{atom}(b),&r=a,\\
+\mathrm{atom}(r),&r\ne a,
+\end{cases}
+```
+
+```math
+M(\mathrm{app}(p,q))=\mathrm{app}(Mp,Mq).
+```
+
+In particular, if another atom's raw label contains $`a`$ as a proper subterm, that label is left intact. Extend $`M`$ structurally to types by mapping identity-endpoint polynomials, and entrywise to telescopes and finite type-image lists.
+
+**Proposition 13 — whole-label preservation.** If $`\mathrm{NoFinite}(a)`$, then $`M_{a,b}`$ preserves every original context, formation and typing derivation:
+
+```math
+\mathrm{Ctx}_0(\Gamma)\Rightarrow\mathrm{Ctx}_0(M\Gamma),
+\qquad
+\Gamma\vdash_0 C\ \mathrm{type}
+\Rightarrow M\Gamma\vdash_0 MC\ \mathrm{type},
+```
+
+```math
+\Gamma\vdash_0 p:C
+\quad\Longrightarrow\quad
+M\Gamma\vdash_0 Mp:MC.
+```
+
+There is no normalization or finite-typability condition on the replacement $`b`$. [Whole-label proof][opaque-source]
+
+**Proof.** The map fixes the primitive atoms $`I,K,S`$. Structural induction gives its exact commuting laws with polynomial renaming and substitution, including the lifted substitution under a binder. It therefore commutes with type term-substitution, weakening, instantiation and the two-coordinate operation $`\mathrm{motiveAt}`$. Type-parameter renaming does not touch polynomial atoms. Structural induction through the mixed substitution consequently gives commutation with type renaming, type weakening, type instantiation and the type-weakened telescope. The finite-code translation $`\mathrm{fin}(C)`$ contains no identity-endpoint polynomials and is fixed.
+
+The map preserves free-variable tests and scope. The actual bracket compiler first tests absence of the bound variable and only then decomposes the polynomial. Since $`M`$ preserves that test, the absent-variable branch remains the same $`K`$ branch; the present variable and application branches use the same fixed $`I,S`$ atoms. Thus
+
+```math
+M([x]p)=[x]\bigl(Mp\bigr).
+```
+
+This is equality for this particular syntactic map and compiler. It is not a congruence theorem for arbitrary conversion between abstraction bodies. The displayed definitions of pairing, both projections and $`J`$ also commute with $`M`$ because they use only their polynomial arguments, application and the three fixed primitive atoms.
+
+Both lookup constructors are preserved: each changes its target by the actual term weakening, which commutes with $`M`$. Likewise the exact motive telescope
+$`\mathrm{Id}_{\mathrm{wk}(C)}(\mathrm{pren}(\mathrm{succ},x),\mathrm{var}(0))::C::\Gamma`$
+is mapped to the same construction on the mapped arguments. Bottom-default finite type tables obey
+
+```math
+M(\mathrm{typeImages}(\tau,n))
+=\mathrm{typeImages}(M\tau,n).
+```
+
+Their lengths and finite-code support bounds are unchanged.
+
+Induction over the seven original polynomial-conversion constructors preserves conversion. The equivalence and application cases are immediate; the three contraction cases use the fixed primitive atoms. In a transitivity proof, **every intermediate polynomial** is mapped. No provenance extraction or additional scope restriction on intermediates is required.
+
+Now perform simultaneous induction on the original mutual derivations. The two context cases use the mapped tail and formation premises. In formation, parameters, Bottom and Raw retain the context; products and sums retain the mapped domain and bound body; universal formation uses the mapped type-weakened context; identity formation retains the mapped carrier and both mapped endpoint typings. The eighteen typing cases are as follows.
+
+| Original rule or group | Preservation argument |
+|---|---|
+| Variable | Map its formed type and its exact weakened lookup. |
+| $`I,K,S`$ — three cases | Map every formation premise; the primitive proof atom is fixed and arrows commute with $`M`$. |
+| Finite import | Its unchanged certificate $`\mathrm{Finite}(r,C)`$ forces $`r\ne a`$. Reuse that certificate and support bound, map the finite type-image list and all formation premises, and use the commuting law for type substitution. |
+| Universal introduction | Map body typing in the type-weakened telescope; the erased polynomial remains the mapped one. |
+| Universal elimination | Map the universal type, replacement type, explicit result formation and typing; type instantiation commutes with $`M`$. |
+| Raw atom | The original rule admits the replacement raw atom, including when its label changes. |
+| Raw application | Map the two Raw typings and the Raw formation premise. |
+| Product introduction | Map the bound body and product formation, preserve the scope check, and use the literal bracket-compiler equality. |
+| Product elimination | Map both typings, product formation and explicit result formation; term instantiation commutes. |
+| Sum introduction | Map both component typings and formation premises; pairing and instantiation commute. |
+| First projection | Map the sum typing and both required formations; the projection commutes. |
+| Second projection | Map the sum typing and explicit indexed result formation; projection and instantiation commute. |
+| Identity introduction | Map the carrier identity formation, both endpoint typings and the complete original polynomial-conversion certificate; the proof atom $`I`$ is fixed. |
+| Proof erasure | Map the identity, its proof and Raw formation, then use the same rule. |
+| Identity elimination | Map all nine formation/typing premises, including the motive telescope, both motive instances, both endpoints, identity proof and base proof. The endpoint and proof coordinates both commute with $`M`$. |
+| Proof-polynomial conversion | Map the formed target, supplied typing, complete conversion certificate and conclusion scope. |
+
+The finite-import step is decisive: the proof does not attempt to transform a finite certificate for the forbidden atom. Such a certificate is excluded by $`\mathrm{NoFinite}(a)`$. These cases exhaust the declared rule populations and prove the proposition. $`\square`$
+
+No raw-algebra homomorphism property of $`r\mapsto M(\mathrm{atom}(r))`$ has been used. The map need not preserve raw application, raw reduction or raw conversion. The original typing and polynomial-conversion rules simply do not inspect a nonprimitive opaque label through those operations.
+
+### 10.3 Equal evaluation need not preserve a supplied typing
+
+Let
+
+```math
+D=SII,\qquad \Omega=DD,\qquad
+t=SK(K\Omega),\qquad
+A_{\mathrm{id}}=\forall\alpha.(\alpha\to\alpha).
+```
+
+Write $`w_t`$ for the exposed polynomial
+
+```math
+\mathrm{app}(\mathrm{app}(\mathrm{atom}(S),\mathrm{atom}(K)),
+\mathrm{app}(\mathrm{atom}(K),\mathrm{atom}(\Omega))).
+```
+
+Its evaluation is literally $`t`$ at every term environment.
+
+The inherited normalization boundary supplies
+
+```math
+[]\vdash_0 w_t:A_{\mathrm{id}},
+\qquad
+\mathrm{Finite}(I,\mathrm{identityCode}),
+\qquad
+\neg\exists u,C\;
+\bigl(\mathrm{Finite}(u,C)\land t\simeq u\bigr).
+```
+
+The first typing can also be read directly. At a free type parameter $`\alpha`$, Raw admits $`\Omega`$; $`K\Omega:\alpha\to\mathrm{Raw}`$ and $`K:\alpha\to\mathrm{Raw}\to\alpha`$ have the required types for $`S`$. Their exposed application has type $`\alpha\to\alpha`$, and universal introduction closes the type parameter. The target is therefore already inhabited independently by $`I`$.
+
+The stronger last statement is an inherited source-normalization theorem, not a result of a failed search. Every reduct of $`SK(Ku)`$ retains that wrapper and reduces only inside $`u`$; the source's $`\Omega`$ has no normal reduct. Hence $`t`$ has no normal reduct. A finite-typed $`u`$ has a normal reduct, and source confluence would turn $`t\simeq u`$ into a normal reduct of $`t`$, a contradiction. In particular $`\mathrm{NoFinite}(t)`$ holds. The inherited finite-normalization and confluence premises keep their own source and verification roles. [Exact normalization boundary][normalization-boundary]
+
+**Theorem 14 — prescribed representation failure.** The two scope-zero polynomials $`w_t`$ and $`\mathrm{atom}(t)`$ have the same evaluation at every environment, and $`w_t`$ is originally typed at $`A_{\mathrm{id}}`$, but
+
+```math
+[]\nvdash_0\mathrm{atom}(t):A_{\mathrm{id}}.
+```
+
+Nevertheless $`\mathrm{atom}(t)`$ satisfies both the original unary and full heterogeneous semantic predicates at that type. [Complete opaque-atom argument][opaque-source]
+
+**Proof.** Apply Proposition 13 with $`a=t`$ and $`b=K`$. The carrier $`A_{\mathrm{id}}`$ has no identity-endpoint polynomials, so it is fixed. An alleged typing of $`\mathrm{atom}(t)`$ would therefore give
+$`[]\vdash_0\mathrm{atom}(K):A_{\mathrm{id}}`$.
+
+Define the lawful PER consisting of the single conversion class of $`I`$:
+
+```math
+P_I(x,y)\quad\Longleftrightarrow\quad
+x\simeq I\ \land\ y\simeq I.
+```
+
+It is symmetric and transitive, and saturation follows from symmetry and transitivity of raw conversion. Original unary soundness applied to the alleged polymorphic typing of $`K`$, and then instantiated at $`P_I`$, says that $`K`$ preserves this relation. Taking the related inputs $`I,I`$ gives $`KI\simeq I`$. But $`KI`$ and $`I`$ are distinct raw normal forms: the former does not yet have the second argument needed for a $`K`$ contraction. Confluence rules out their conversion. This proves nonderivability.
+
+For semantic validity, apply the original heterogeneous fundamental theorem to the actual typing of $`w_t`$ at the empty telescope's zero-padded environment. Replace its evaluated value by the literally equal evaluation of $`\mathrm{atom}(t)`$. The unary argument is identical. The same supplied representation therefore satisfies the full original semantic conditions while having no original typing at this type. $`\square`$
+
+Using Raw alone would not give the rejection of $`K`$: the raw-conversion arrow relation is too weak. The singleton-class PER is the required test. Also, $`\mathrm{atom}(t)`$ still has type Raw by the original raw-atom rule.
+
+Consequently universal closed packing
+$`p\mapsto\mathrm{atom}(\mathrm{eval}(p,\zeta))`$
+does not preserve original typings at fixed types. The result concerns a prescribed representation. It does not show that the same raw program has no well-typed representation: $`w_t`$ is one. It does not refute completeness that permits choosing another representation, or finite representability up to a separately specified PER equality.
+
+The argument has a useful general form. Suppose $`\mathrm{NoFinite}(a)`$,
+$`[]\vdash_0 C\ \mathrm{type}`$,
+$`[]\vdash_0\mathrm{atom}(a):C`$, and, for the chosen $`b`$,
+
+```math
+M_{a,b}(C)=C.
+```
+
+Then Proposition 13 gives $`[]\vdash_0\mathrm{atom}(b):C`$. This **exact type-fixity equation** is the relevant condition. A convenient sufficient condition, uniform in $`b`$, is that no identity-endpoint polynomial in $`C`$ contains the whole atom $`a`$. Avoidance is tested structurally through the type and polynomial constructors; proper raw subterms hidden inside another atom label are not examined. Avoidance is sufficient, not necessary for the exact equation. Every finite-code type satisfies it.
+
+If some lawful original interpretation rejects some $`b`$ at $`C`$, unary soundness now forbids the original opaque typing of a nonfinite $`a`$ whenever this fixity condition holds. In ordinary classical mathematics, a resulting necessary condition is
+
+```math
+[]\vdash_0\mathrm{atom}(a):C
+\quad\Longrightarrow\quad
+\exists B\;\mathrm{Finite}(a,B),
+```
+
+provided the stated formation, avoidance and semantic-rejection hypotheses hold. The finite code $`B`$ need not be $`C`$ or its finite-code antecedent. This is neither a sufficient condition nor an extraction algorithm from a typing proof. Its existence formulation uses the classical passage from failure of $`\mathrm{NoFinite}(a)`$ to a finite certificate. At Raw every raw term is self-related, so the required semantic rejection is unavailable.
+
+A second witness makes the conversion boundary sharper. Put
+
+```math
+d=(KI)\Omega.
+```
+
+There is a root contraction $`d\longrightarrow I`$, so $`d`$ has a finite-typed representative at exactly the desired code $`\mathrm{identityCode}`$. But the three-step cycle of $`\Omega`$ can also be reduced inside the discarded argument, giving a cycle of $`d`$. Thus $`d`$ is weakly normalizing and not strongly normalizing. The inherited finite-typing normalization theorem implies $`\mathrm{NoFinite}(d)`$. Applying the same replacement argument and the same rejecting PER gives
+
+```math
+\exists v\;
+\bigl(\mathrm{Finite}(v,\mathrm{identityCode})\land d\simeq v\bigr),
+\qquad
+[]\nvdash_0\mathrm{atom}(d):A_{\mathrm{id}}.
+```
+
+The witness on the left is $`v=I`$. This defeats transport from a finite representative even when its finite code exactly matches the target. It is a failure of backward expansion or conversion transport between supplied opaque atoms. It is not a counterexample to forward subject reduction.
+
+The exposed polynomial $`K\,I\,\mathrm{atom}(\Omega)`$ remains originally typed at $`A_{\mathrm{id}}`$: its original polynomial $`K`$ contraction gives conversion to the already typed atom $`I`$, and the conversion rule can be used in reverse with the scope-zero check. It evaluates to $`d`$. This second example therefore also preserves existence of a different representation. The cycle and finite-normalization premise are inherited source facts; the conclusion about the supplied opaque atom is the whole-label consequence. [Discarded-loop argument and limits][opaque-source] [Literal cycle][discarded-loop-source]
+
+### 10.4 What the bridge repairs
+
+The prior dependent-All design had already identified the mismatch between an application of two atom polynomials and the single atom of their raw application, and explicitly excluded the bridge from the retained calculus. The bridge source records that design choice and assesses a hypothetical reconsideration of it. The following result inherits that assessment; it does not discover a previously unrecognized option or authorize an implementation migration. [Prior design and hypothetical scope][bridge-source]
+
+**Theorem 15 — closed conversion and typing transfer.** For scope-zero polynomials $`p,q`$,
+
+```math
+p\simeq_+q
+\quad\Longleftrightarrow\quad
+\mathrm{eval}(p,\zeta)\simeq\mathrm{eval}(q,\zeta).
+```
+
+Consequently, if
+$`[]\vdash_+ C\ \mathrm{type}`$,
+$`[]\vdash_+p:C`$,
+$`p,q`$ are scope-zero, and their evaluated raw terms are convertible, then
+$`[]\vdash_+q:C`$.
+The type is the same literal $`C`$; it may have free type parameters. [Bridge theorem][bridge-source]
+
+**Proof.** Induction on the eight conversion generators proves evaluation soundness at every environment. The seven old cases use raw equivalence, application congruence and the source contractions. In the bridge case both sides evaluate to the same raw application, so reflexivity suffices.
+
+For packing, induct on a scope-zero polynomial $`p`$. The variable case is impossible. An atom packs by reflexivity. In an application, pack each subpolynomial by induction, apply congruence and then the reverse bridge. This gives
+
+```math
+p\simeq_+\mathrm{atom}(\mathrm{eval}(p,\zeta)).
+```
+
+The same induction proves that its evaluation is independent of the environment.
+
+Next lift any raw one-step reduction to conversion between its two atoms. For the $`I,K,S`$ contractions, expose respectively one, two or three application nodes by the bridge and apply the corresponding polynomial contraction. In the $`S`$ case, repack the two inner applications and then the outer one. For a compatible left or right step, expose the outer application, use the induction conversion in the appropriate child and repack. These are all five source-step cases. Induction on raw conversion then proves
+
+```math
+r\simeq s
+\quad\Longrightarrow\quad
+\mathrm{atom}(r)\simeq_+\mathrm{atom}(s).
+```
+
+The reverse implication follows from evaluation soundness. Composing packing, raw-to-atom conversion and reverse packing proves the displayed closed-polynomial equivalence. The original scoped conversion rule of $`\vdash_+`$ then gives the typing consequence. $`\square`$
+
+This also repairs closed typing transport under literal evaluation equality, since equality supplies raw conversion. In particular, the embedded typing of $`w_t`$ now packs to $`\mathrm{atom}(t)`$ at $`A_{\mathrm{id}}`$. The exposed discarded-loop polynomial similarly packs to $`\mathrm{atom}(d)`$. Neither raw term acquires a direct finite derivation: the finite grammar and its normalization theorem have not changed.
+
+The failure of the old replacement invariant is visible in one bridge instance:
+
+```math
+\mathrm{atom}(d)\simeq_+
+\mathrm{app}(\mathrm{atom}(KI),\mathrm{atom}(\Omega)).
+```
+
+Replace only the whole label $`d`$ by $`K`$. The left evaluation becomes $`K`$ while the right stays $`d`$. If this transformed pair were still convertible, evaluation soundness and $`d\simeq I`$ would imply $`K\simeq I`$, contrary to normal-form uniqueness. The bridge exposes precisely the raw application structure that the old invariant was allowed to ignore.
+
+Original F/G soundness is preserved by a fresh mutual proof for the bridge judgment. Context and formation cases use their own smaller semantic induction conclusions; they are not assumed to have old formation certificates. All unchanged typing cases use the same semantic-rule arguments. For proof conversion, evaluation soundness supplies a raw conversion at each of the two environments, and two-sided saturation transfers the relation at the fixed type. For identity introduction, the old helper's literal signature requires old polynomial conversion and cannot simply be applied. Its mathematical proof needs only the two evaluation-conversion facts: typed endpoint membership and raw saturation supply carrier equality, while the introduced proof $`I`$ satisfies the proof clauses. Reproving that helper with the new conversion soundness supplies the remaining case. This is a new induction over the fresh grammar, not a reinterpretation of an old theorem's argument type. [Bridge soundness argument][bridge-source] [Original simultaneous induction][original-soundness] [Identity helper][original-term-lemmas]
+
+Scope-zero remains substantive. An open variable cannot pack into one fixed raw atom with its valuation-dependent value. A proposed conversion $`\mathrm{var}(0)\simeq_+\mathrm{atom}(r)`$, evaluated at environments giving that variable $`I`$ and $`K`$, would force $`I\simeq K`$. This excludes that fixed-atom proposal; it does not exclude a separately specified environment representation or translation between open syntaxes. The bridge theorem neither decides raw conversion nor identifies equality in an arbitrary PER with raw conversion. It transfers a supplied typing across the displayed raw relation and does not supply full semantic completeness.
+
+
+### 10.5 The identity question that packing leaves open
+
+Set
+
+```math
+k_{\mathrm{id}}=SKK,\qquad
+u=\mathrm{atom}(I),\qquad
+v=\mathrm{atom}(k_{\mathrm{id}}),\qquad
+B_{\mathrm{id}}=\mathrm{Id}_{A_{\mathrm{id}}}(u,v).
+```
+
+Both endpoints have original finite polymorphic identity typings. For $`I`$ the certificate is universal introduction over its usual arrow typing. For $`SKK`$, at a type variable $`X`$, instantiate the finite $`S`$ rule with types $`X`$, $`X\to X`$, $`X`$, then apply $`K:X\to(X\to X)\to X`$ and $`K:X\to X\to X`$. This yields $`SKK:X\to X`$, and finite universal introduction gives the required closed code. The original finite-import and formation rules therefore form $`B_{\mathrm{id}}`$ and type both endpoints at $`A_{\mathrm{id}}`$. These derivations embed into $`\vdash_+`$.
+
+To state the old semantic witness precisely, let $`F`$ and $`G`$ denote the original unary and heterogeneous predicates, respectively. They include the source's recursive uniformity conditions for universal types, not just an unqualified intersection of unary carriers. The actual endpoint typings supply each endpoint's own universal uniformity conjuncts. For every lawful PER $`P`$ and $`P`$-related inputs $`x,y`$,
+
+```math
+Ix\simeq x,\qquad k_{\mathrm{id}}y\simeq y
+\quad\Longrightarrow\quad P(Ix,k_{\mathrm{id}}y).
+```
+
+Saturation gives the last relation. Together with those inherited uniformity conjuncts, this proves
+
+```math
+F(A_{\mathrm{id}},\rho,\zeta,I,k_{\mathrm{id}})
+```
+
+for every lawful object environment $`\rho`$. It is the full inherited polymorphic witness, unpacked at this carrier.
+
+The old identity clauses are
+
+```math
+F(B_{\mathrm{id}},\rho,\zeta,r,s)
+\quad\Longleftrightarrow\quad
+F(A_{\mathrm{id}},\rho,\zeta,I,k_{\mathrm{id}})
+\land r\simeq I\land s\simeq I,
+```
+
+and
+
+```math
+G(B_{\mathrm{id}},R,\zeta,\zeta,r,s)
+\quad\Longleftrightarrow\quad
+F(A_{\mathrm{id}},R_{\mathrm{left}},\zeta,I,k_{\mathrm{id}})
+\land F(A_{\mathrm{id}},R_{\mathrm{right}},\zeta,I,k_{\mathrm{id}})
+\land r\simeq I\land s\simeq I.
+```
+
+Thus the single scope-zero polynomial $`\mathrm{atom}(I)`$ satisfies both full predicates at the formed closed type $`B_{\mathrm{id}}`$. In particular this does not replace heterogeneous validity by a unary surrogate. [Original predicate definitions][original-predicates] [Residual semantic witness][residual-source]
+
+On the other hand, $`I`$ and $`SKK`$ are distinct normal forms of the unchanged raw calculus. The $`S`$ expression has only two arguments. Confluence gives $`I\not\simeq SKK`$, so Theorem 15 excludes $`u\simeq_+v`$. This blocks direct identity introduction at $`B_{\mathrm{id}}`$.
+
+That observation alone was the precise stopping point of the residual source. An identity conclusion can also arise through $`J`$, application, universal elimination or conversion of an existing proof polynomial. Excluding one possible last rule is not a proof that every derivation is absent. The fact that old semantic proof witnesses convert to $`I`$ constrains the **proof source**; it does not force raw conversion of the **identity endpoints**. An earlier raw-index identity-admission theorem belongs to a different type grammar and supplies no unproved reverse translation of these derivations. The accepted legacy and nucleus comparisons also run into the original calculus; they do not supply an inverse translation of arbitrary bridge-only derivations. The whole-label argument also cannot fill the gap: both $`I`$ and $`SKK`$ have finite certificates, and its preservation step has already failed for the bridge.
+
+A tempting alternate interpretation fails for a concrete reason. Keep the old type and context relations, but strengthen the identity predicate by requiring raw conversion of its endpoints. In the original formed context $`[A_{\mathrm{id}}]`$, consider the formed family
+
+```math
+T(x)=\mathrm{Id}_{A_{\mathrm{id}}}(x,\mathrm{atom}(I)).
+```
+
+The variable and constant endpoints have the required original typings; a finite import supplies the constant in this formed context. The old context relation relates $`I::\zeta`$ and $`SKK::\zeta`$, because the head values are related at $`A_{\mathrm{id}}`$. Yet the strengthened fiber admits the proof source $`I`$ at the first environment and rejects it at the second. The endpoint memberships themselves still hold; raw endpoint conversion is what changes.
+
+Consequently that isolated modification violates the hereditary transport law for a formed family along the retained context relation. Dependent product, sum and $`J`$ soundness cannot be assumed for it. This counterexample does not exclude every intensional interpretation. It says that the rest of the type and context equalities must be changed coherently and the whole rule system then validated. The following construction does that. [Failed shortcut and exact stopped obligation][residual-source]
+
+### 10.6 A coherent interpretation of all eighteen rules
+
+The construction uses all raw-conversion-saturated subsets of the raw term set $`\mathbb T`$:
+
+```math
+\mathfrak S=
+\{X\subseteq\mathbb T:
+r\simeq s\Rightarrow(r\in X\Longleftrightarrow s\in X)\}.
+```
+
+Empty, the full raw set and every individual conversion class belong to $`\mathfrak S`$. This is an ordinary subset of a powerset. Saturation is also equivalent to the inherited unary Code's stability in both directions along each step: induct over conversion for one implication and restrict to a step for the other. The construction is not a new universe of arbitrary functions decoded as source programs. The intensional source explicitly credits the earlier P01 U11 study *Contextual dependence, J and the abstraction-congruence obstruction*, especially sections 1–3 and 5–7, for conversion-coherent unary codes and telescopes, dependent products and represented pairs, the identity predicate with both endpoint memberships and proof conversion to $`I`$, two-coordinate based $`J`$, and intersection All. That earlier study stopped before the full finite-syntax soundness theorem and retained the abstraction-congruence obstruction. The later source supplies the exact eighteen-rule proof reconstructed here. This preserves its attribution; it does not claim a fresh complete reading or revalidation of U11. [Full written construction and provenance][intensional-source]
+
+For $`\rho:\mathbb N\to\mathfrak S`$ and a total raw term environment $`\eta`$, define sets $`\lvert C\rvert_{\rho,\eta}`$ by structural recursion:
+
+```math
+\lvert\alpha_n\rvert_{\rho,\eta}=\rho(n),\qquad
+\lvert\bot\rvert_{\rho,\eta}=\varnothing,\qquad
+\lvert\mathrm{Raw}\rvert_{\rho,\eta}=\mathbb T,
+```
+
+```math
+f\in\lvert\Pi x:C.D\rvert_{\rho,\eta}
+\quad\Longleftrightarrow\quad
+\forall a\in\lvert C\rvert_{\rho,\eta},\
+fa\in\lvert D\rvert_{\rho,a::\eta},
+```
+
+```math
+z\in\lvert\Sigma x:C.D\rvert_{\rho,\eta}
+\quad\Longleftrightarrow\quad
+\exists a,b,\
+a\in\lvert C\rvert_{\rho,\eta}
+\land b\in\lvert D\rvert_{\rho,a::\eta}
+\land z\simeq\langle a,b\rangle,
+```
+
+```math
+r\in\lvert\mathrm{Id}_C(p,q)\rvert_{\rho,\eta}
+\quad\Longleftrightarrow\quad
+\mathrm{eval}(p,\eta)\in\lvert C\rvert_{\rho,\eta}
+\land\mathrm{eval}(q,\eta)\in\lvert C\rvert_{\rho,\eta}
+\land\mathrm{eval}(p,\eta)\simeq\mathrm{eval}(q,\eta)
+\land r\simeq I,
+```
+
+```math
+\lvert\forall\alpha.D\rvert_{\rho,\eta}
+=\bigcap_{X\in\mathfrak S}\lvert D\rvert_{X::\rho,\eta}.
+```
+
+Both endpoint memberships and the proof-source condition are present in the identity clause. The sum predicate uses an actual represented pair up to conversion. The universal clause is an intersection of sets obtained by recursion on the **smaller type expression** $`D`$; its quantifier over all saturated sets does not change that recursion.
+
+#### Saturation and coherence
+
+Every raw type, whether formed or not, denotes a member of $`\mathfrak S`$. Parameters use their assigned saturation, and Bottom and Raw are immediate. In a product, $`f\simeq g`$ implies $`fa\simeq ga`$ for each argument, so the body's saturation transfers membership. In a sum, keep the same witnesses and compose the represented-pair conversion. In an identity, endpoint conditions are independent of the witness and $`r\simeq I`$ is invariant under conversion of $`r`$. An intersection of saturated sets is saturated. These are all seven type cases.
+
+Write $`\eta\simeq\xi`$ when the environments are pointwise raw-convertible. A second structural induction proves
+
+```math
+\eta\simeq\xi
+\quad\Longrightarrow\quad
+\lvert C\rvert_{\rho,\eta}=\lvert C\rvert_{\rho,\xi}.
+\tag{10.1}
+```
+
+For products, the domain sets agree and, at each fixed argument $`a`$, the body environments $`a::\eta`$ and $`a::\xi`$ are pointwise convertible. The same argument retains the sum's witnesses. For an identity, structural induction on polynomials gives conversion of each evaluated endpoint across the two environments. Carrier coherence and saturation transfer both endpoint memberships, and equivalence of raw conversion transfers their mutual-conversion condition. Universal types use the body equality for each $`X::\rho`$. The other cases are independent of the term environment.
+
+The induced binary type relation is
+
+```math
+R_C^{\rho,\eta}(r,s)
+\quad\Longleftrightarrow\quad
+r\in\lvert C\rvert_{\rho,\eta}
+\land s\in\lvert C\rvert_{\rho,\eta}
+\land r\simeq s.
+```
+
+It is a saturated PER with the displayed set as support, and (10.1) makes it coherent. Crucially, **every** such relation refines raw conversion, including the product and universal relations. Both $`I`$ and $`SKK`$ can have product membership without being related by this binary relation. This coherently differs from the old extensional/parametric carrier relations; it is not a projection preserving all their equalities or heterogeneous links.
+
+#### The actual substitutions
+
+For a polynomial substitution $`\sigma`$, put $`\eta_\sigma(n)=\mathrm{eval}(\sigma(n),\eta)`$. Direct structural induction gives
+
+```math
+\mathrm{eval}(\mathrm{psub}(\sigma,p),\eta)
+=\mathrm{eval}(p,\eta_\sigma).
+\tag{10.2}
+```
+
+The variable case selects an image, the atom case leaves its raw label intact, and application uses the two induction equalities. The lifted substitution satisfies the literal image equation
+$`\mathrm{images}(\mathrm{pup}(\sigma),a::\eta)=a::\eta_\sigma`$.
+Induction over all seven type constructors therefore gives
+
+```math
+\lvert\mathrm{subst}(\sigma,C)\rvert_{\rho,\eta}
+=\lvert C\rvert_{\rho,\eta_\sigma}.
+\tag{10.3}
+```
+
+In an identity use (10.2) for both endpoints. Under a product or sum use the lifted image equation at each argument; All leaves the term substitution unchanged. In particular,
+
+```math
+\lvert\mathrm{wk}(C)\rvert_{\rho,a::\eta}
+=\lvert C\rvert_{\rho,\eta},\qquad
+\lvert\mathrm{inst}(D,p)\rvert_{\rho,\eta}
+=\lvert D\rvert_{\rho,\mathrm{eval}(p,\eta)::\eta},
+```
+
+```math
+\lvert\mathrm{motiveAt}(D,y,e)\rvert_{\rho,\eta}
+=\lvert D\rvert_{\rho,\mathrm{eval}(e,\eta)::\mathrm{eval}(y,\eta)::\eta}.
+\tag{10.4}
+```
+
+Proof is coordinate zero and endpoint is coordinate one. The source arrow is $`\Pi C.\mathrm{wk}(D)`$, so its interpretation is the set of raw terms taking arguments from $`\lvert C\rvert_{\rho,\eta}`$ into the **outer** set $`\lvert D\rvert_{\rho,\eta}`$; its codomain is not reevaluated at the introduced argument.
+
+Type renaming satisfies
+
+```math
+\lvert\mathrm{trename}(r,C)\rvert_{\rho,\eta}
+=\lvert C\rvert_{\rho\circ r,\eta}.
+\tag{10.5}
+```
+
+The identity endpoints are literally unchanged. In the All case, the lifted renaming fixes the fresh head and applies $`r`$ only to the tail. Hence
+$`\lvert\mathrm{twk}(C)\rvert_{X::\rho,\eta}=\lvert C\rvert_{\rho,\eta}`$.
+
+For simultaneous term/type substitution, evaluate the replacement type images in the original term environment:
+
+```math
+\mu(n)=\lvert\tau(n)\rvert_{\rho,\eta}.
+```
+
+Each is saturated by the preceding induction, even if $`\tau(n)`$ is term-dependent. The exact mixed law is
+
+```math
+\lvert\mathrm{mixed}(\sigma,\tau,C)\rvert_{\rho,\eta}
+=\lvert C\rvert_{\mu,\eta_\sigma}.
+\tag{10.6}
+```
+
+Here $`\mu`$ is evaluated at $`\eta`$, not at $`\eta_\sigma`$ or at a newly bound argument. The parameter case is its definition. The identity case uses the carrier induction and (10.2). Under a product or sum, the source lifts $`\sigma`$ and replaces each type image by $`\mathrm{wk}(\tau(n))`$. At $`a::\eta`$ the latter still interprets as $`\mu(n)`$ by (10.3), while the lifted term images are $`a::\eta_\sigma`$. Thus the body induction has exactly the required unchanged $`\mu`$. Under All, the source's lifted type images have a fresh parameter at zero and type-weakened old images afterwards. Equation (10.5) makes their interpretations exactly $`X::\mu`$, with the same term-image environment. Intersecting the body equality over $`X`$ completes the proof. Bottom and Raw are immediate.
+
+Taking the identity term substitution gives
+
+```math
+\lvert\mathrm{tsubst}(\tau,C)\rvert_{\rho,\eta}
+=\lvert C\rvert_{n\mapsto\lvert\tau(n)\rvert_{\rho,\eta},\eta},
+\qquad
+\lvert\mathrm{tinst}(D,C)\rvert_{\rho,\eta}
+=\lvert D\rvert_{\lvert C\rvert_{\rho,\eta}::\rho,\eta}.
+\tag{10.7}
+```
+
+These equations cover arbitrary source replacement types, including dependent types and nested universal types. They do not invoke an old F/G substitution theorem with unverified premises. [Literal type operations][original-syntax] [Polynomial operations and compiler][original-polynomials]
+
+#### Zero-padded contexts and both motive coordinates
+
+Define telescope membership by
+
+```math
+V_{[]}(\rho,\eta)\Longleftrightarrow\eta=\zeta,\qquad
+V_{C::\Gamma}(\rho,a::\eta)
+\Longleftrightarrow
+V_\Gamma(\rho,\eta)\land a\in\lvert C\rvert_{\rho,\eta}.
+```
+
+A declaration is interpreted at the tail environment before its binder is entered. No nonemptiness of a telescope is inferred from its formation.
+
+Define context relatedness recursively by requiring the two zero environments at the empty telescope and, at an extension, related tails and $`R_C`$-related heads in the left tail fiber. Induction on the telescope, using (10.1), shows that this is exactly
+
+```math
+V_\Gamma(\rho,\eta)\land V_\Gamma(\rho,\xi)\land\eta\simeq\xi.
+```
+
+It is therefore a PER on the admitted zero-padded environments. This is not a claim that arbitrary pointwise-convertible total environments preserve literal zero-padding; both displayed membership conditions are retained.
+
+The exact lookup lemma follows from its two constructors. At zero, the declaration's head membership is initially at the tail environment, and the result type is $`\mathrm{wk}(C)`$; (10.3) identifies that set at the extended environment. At successor, apply the lookup induction to the tail and then the same weakening equality. Thus
+
+```math
+\mathrm{Lookup}(\Gamma,n,C)\land V_\Gamma(\rho,\eta)
+\quad\Longrightarrow\quad
+\eta(n)\in\lvert C\rvert_{\rho,\eta}.
+\tag{10.8}
+```
+
+Lookup is not unshifted list access. Induction on the telescope also gives the precise All-context equation
+
+```math
+V_{\mathrm{twkTel}(\Gamma)}(X::\rho,\eta)
+\quad\Longleftrightarrow\quad
+V_\Gamma(\rho,\eta).
+\tag{10.9}
+```
+
+At an extension, use (10.5) for its type-weakened declaration; at the empty telescope both sides require $`\eta=\zeta`$. This is the context shift that prevents generalizing a fixed type-dependent term assumption.
+
+For $`J`$, put $`x_0=\mathrm{eval}(x,\eta)`$, $`y_0=\mathrm{eval}(y,\eta)`$ and $`e_0=\mathrm{eval}(e,\eta)`$. Unfold the actual motive telescope from section 10.2 and use weakening. Its membership condition at $`e_0::y_0::\eta`$ is exactly
+
+```math
+V_\Gamma(\rho,\eta)\land
+x_0,y_0\in\lvert C\rvert_{\rho,\eta}\land
+x_0\simeq y_0\land e_0\simeq I.
+\tag{10.10}
+```
+
+When this holds, both $`I::x_0::\eta`$ and $`e_0::y_0::\eta`$ are admitted motive environments and are pointwise convertible. The comparison uses the endpoint and proof coordinates separately. This is the transport fact used in the full typing proof.
+
+#### Finite import with the literal image table
+
+For a finite type code $`C`$, define $`J_\rho(C)`$ using $`\rho(n)`$ at a variable, the empty set at Bottom, the raw-term arrow at an arrow code, and intersection over all $`X\in\mathfrak S`$ at a universal code. Structural induction gives saturation and
+
+```math
+\lvert\mathrm{fin}(C)\rvert_{\rho,\eta}=J_\rho(C).
+\tag{10.11}
+```
+
+Finite-code renaming and substitution commute with $`J`$. At a type binder the lifted renaming fixes the fresh head; the lifted substitution supplies that fresh parameter and renames each old image under it. The finite instantiation equation is consequently
+
+```math
+J_\rho(\mathrm{instantiateType}(C,D))
+=J_{J_\rho(D)::\rho}(C).
+\tag{10.12}
+```
+
+**Finite soundness for this interpretation** follows by induction on all seven finite constructors, universally quantified over $`\rho`$.
+
+1. For $`I:C\to C`$, use $`Ia\simeq a`$ and saturation.
+2. For $`K:C\to D\to C`$, use $`Kab\simeq a`$ and saturation of the outer result set.
+3. For $`S`$, if $`f\in X\Rightarrow(Y\Rightarrow Z)`$, $`g\in X\Rightarrow Y`$ and $`a\in X`$, then $`fa(ga)\in Z`$; $`Sfga\simeq fa(ga)`$ gives the required membership.
+4. Application applies the function induction conclusion to the argument conclusion in the same environment.
+5. Universal introduction uses the single premise's induction conclusion at every $`X::\rho`$. The finite grammar has no term context to be improperly generalized.
+6. Universal elimination selects the saturated set $`J_\rho(D)`$ and uses (10.12). The code $`D`$ may itself contain a universal type.
+7. Reduction uses its actual finite reduction certificate, hence raw conversion, and saturation.
+
+For the outer typing rule, retain its literal finite list $`\tau`$, support bound, formed images, formed result and finite certificate. Let $`\bar\tau=\mathrm{typeImages}(\tau)`$ and
+$`\mu(n)=\lvert\bar\tau(n)\rvert_{\rho,\eta}`$.
+Out-of-range images are Bottom and therefore interpret as the empty set. Equations (10.7) and (10.11) give
+
+```math
+\lvert\mathrm{tsubst}(\bar\tau,\mathrm{fin}(C))\rvert_{\rho,\eta}
+=J_\mu(C).
+```
+
+The finite soundness induction supplies the imported raw term in exactly this set. Although the semantic argument works for arbitrary such saturated images, the syntactic rule still requires its original finite table, support bound and formation premises. A stronger semantic lemma is not authorization to remove them. [Seven-constructor finite grammar][finite-grammar]
+
+#### All typing constructors
+
+**Theorem 16 — intensional soundness.** If $`\Gamma\vdash_+p:C`$, then for every $`\rho:\mathbb N\to\mathfrak S`$ and every $`V_\Gamma(\rho,\eta)`$,
+
+```math
+\mathrm{eval}(p,\eta)\in\lvert C\rvert_{\rho,\eta}.
+```
+
+The same result holds for original $`\vdash_0`$ derivations by inclusion. [Full eighteen-rule proof][intensional-source]
+
+**Proof.** Use simultaneous induction on the actual mutual context, formation and typing derivations, with the typing conclusion quantified over both environments. The two context cases use the stated empty environment and extension. The seven formation cases use the already proved saturation and coherence for the corresponding raw constructors; All additionally uses (10.9), and identity retains its four-conjunct predicate and both endpoint typings. They assert no inhabitedness of an arbitrary formed context.
+
+For typing, the eighteen cases have the following proofs.
+
+1. **Variable.** Apply the actual lookup lemma (10.8); evaluation selects that coordinate.
+
+2. **$`I`$.** The arrow interpretation has the same domain and codomain set. For an argument in it, $`Ia\simeq a`$ and saturation prove membership.
+
+3. **$`K`$.** At the outer environment the source's weakened arrows interpret as $`X\Rightarrow(Y\Rightarrow X)`$. For $`a\in X,b\in Y`$, use $`Kab\simeq a`$. The weakenings keep $`X,Y`$ at that outer environment.
+
+4. **$`S`$.** At the same outer environment, its type interprets as
+$`(X\Rightarrow(Y\Rightarrow Z))\Rightarrow((X\Rightarrow Y)\Rightarrow(X\Rightarrow Z))`$.
+The memberships of $`f,g,a`$ put $`fa(ga)`$ in $`Z`$; its conversion from $`Sfga`$ finishes the case.
+
+5. **Finite import.** Apply the preceding seven-case finite proof with the actual finite image list and the mixed-substitution equation. No old semantic soundness theorem is substituted for this new interpretation.
+
+6. **Universal introduction.** For each saturated $`X`$, equation (10.9) makes the unchanged term environment admissible for the smaller derivation in the type-weakened telescope. Its induction conclusion puts the same evaluated polynomial in the body at $`X::\rho`$. Intersect over $`X`$.
+
+7. **Universal elimination.** The smaller derivation belongs to every body instance. Choose $`X=\lvert A\rvert_{\rho,\eta}`$ for the actual formed replacement type $`A`$; it is saturated. Equation (10.7) identifies the exact instantiated result, including term-dependent replacement types.
+
+8. **Raw atom.** Its evaluated raw label belongs to the full raw set.
+
+9. **Raw application.** Its evaluation is also a raw term. Both smaller Raw typings remain source-rule premises.
+
+10. **Product introduction.** For $`a`$ in the domain, telescope extension admits $`a::\eta`$. The body induction gives its evaluated body in the corresponding fiber. The exact bracket compiler satisfies
+$`\mathrm{eval}([x]b,\eta)a\longrightarrow^*\mathrm{eval}(b,a::\eta)`$:
+the absent-variable branch is one $`K`$ contraction, the variable branch is $`I`$, and the application branch is $`S`$ followed by the two compatible induction reductions. Saturation of that fiber proves function membership. The source scope condition remains, and no abstraction-congruence principle is used.
+
+11. **Product elimination.** Apply function membership to the evaluated typed argument. Equation (10.4) for instantiation makes the resulting fiber exactly the conclusion type.
+
+12. **Sum introduction.** The two smaller typings and instantiation equation give witnesses $`a,b`$ in the required domain and fiber. The literal pair polynomial evaluates to their represented pair.
+
+13. **First projection.** Choose witnesses $`a,b`$ from the sum induction conclusion. Conversion to their pair and the pair projection equation give $`\pi_1z\simeq a`$. Domain saturation proves the first projection typing.
+
+14. **Second projection.** The same witnesses give $`\pi_1z\simeq a`$ and $`\pi_2z\simeq b`$. Saturation puts $`\pi_2z`$ in the body fiber at $`a::\eta`$; coherence (10.1) changes it to the fiber at $`\pi_1z::\eta`$. The instantiation equation identifies the actual indexed target.
+
+15. **Identity introduction.** The endpoint induction conclusions give both memberships. Soundness of the actual eight-generator conversion certificate gives their raw conversion. The introduced witness is $`I\simeq I`$, completing all four conjuncts.
+
+16. **Proof erasure.** The evaluated proof is a raw term and hence lies in the Raw set. This does not manufacture an identity between endpoints at another carrier.
+
+17. **Identity elimination.** The identity-proof induction conclusion gives $`x_0,y_0`$ in the carrier, $`x_0\simeq y_0`$ and $`e_0\simeq I`$. The base-proof induction and (10.4) put its value $`d_0`$ in the motive fiber at $`I::x_0::\eta`$. Equation (10.10) admits both this environment and $`e_0::y_0::\eta`$; coherence (10.1), in **both coordinates**, transports $`d_0`$ to the latter fiber. This is precisely the target motive instance. The literal $`J`$ polynomial reduces by two $`K`$ contractions to $`d_0`$, so saturation of that target fiber proves the conclusion. Arbitrary syntactic proof dependence of the motive is covered because coherence was proved for every raw type.
+
+18. **Proof-polynomial conversion.** The supplied typing gives membership of the first evaluation. Eight-generator evaluation soundness gives raw conversion to the second evaluation, and saturation transfers membership at the unchanged formed target. The conclusion's original scope premise is retained.
+
+All cases are covered. The additional bridge has already been handled inside conversion soundness and creates no extra typing case. $`\square`$
+
+The relational consequence uses the newly defined context relation: apply the theorem to both admitted environments, use (10.1) to identify their type sets, and use polynomial evaluation's compatibility with pointwise raw conversion. This gives $`R_C`$-related evaluations. It does not claim arbitrary heterogeneous links between different type valuations, or preserve every equality of the old F/G model.
+
+
+### 10.7 Full-rule separation and the exact closed criterion
+
+Theorem 16 immediately reflects raw endpoint conversion from **any** identity derivation at an admitted environment:
+
+```math
+\Gamma\vdash_+r:\mathrm{Id}_C(p,q),\quad
+V_\Gamma(\rho,\eta)
+\quad\Longrightarrow\quad
+\mathrm{eval}(p,\eta)\simeq\mathrm{eval}(q,\eta).
+\tag{10.13}
+```
+
+For an empty term telescope, $`\eta=\zeta`$ is admitted. There is also an actual saturated type valuation, for example the constant empty-set valuation. Thus no hidden assumption of an inhabited arbitrary context is needed for closed reflection.
+
+Apply (10.13) to $`B_{\mathrm{id}}`$. Its endpoint atoms evaluate to $`I`$ and $`SKK`$, whose raw conversion is impossible. Therefore
+
+```math
+\neg\exists r\;[]\vdash_+r:B_{\mathrm{id}},
+\qquad
+\neg\exists r\;[]\vdash_0r:B_{\mathrm{id}}.
+```
+
+The second statement follows from the exact inclusion. The argument places no restriction on the chosen proof polynomial, its final rule or its use of $`J`$, finite import and other eliminations. Together with section 10.5's original F/G witness, this disproves the particular completeness implication from a formed closed type with a fully semantically valid closed polynomial to existence of some bridge-only syntactic inhabitant. It also disproves the stronger implication requiring that same polynomial as proof. Soundness of the original semantics is fully compatible with this failure of its converse.
+
+The inherited positive open-$`J`$ example remains intact. Its context includes an assumed identity between its endpoint variables. The old F/G context relation can admit a valuation assigning them $`I`$ and $`SKK`$. The new identity membership condition would require raw conversion of those values, so that particular valuation is not admitted by the new context. Theorem 16 still validates the open derivation at every environment the new context does admit. The old example supplies no closed inhabitant of its assumed identity. This is a difference between two sound interpretations' context domains, not a contradictory treatment of the same admitted input.
+
+**Theorem 17 — closed typed-identity criterion.** Retain exactly these five hypotheses in the bridge-only system:
+
+```math
+[]\vdash_+ C\ \mathrm{type},\qquad
+[]\vdash_+p:C,\qquad
+[]\vdash_+q:C,\qquad
+\mathrm{Scoped}(0,p),\qquad
+\mathrm{Scoped}(0,q).
+```
+
+Then the following are equivalent:
+
+```math
+\exists r\;[]\vdash_+r:\mathrm{Id}_C(p,q),
+```
+
+```math
+[]\vdash_+\mathrm{atom}(I):\mathrm{Id}_C(p,q),
+```
+
+```math
+\mathrm{eval}(p,\zeta)\simeq\mathrm{eval}(q,\zeta).
+```
+
+The carrier may have free type parameters. [Written criterion][intensional-source] [Exact formal theorem statements][intensional-theorems]
+
+**Proof.** From any inhabitant, Theorem 16 at the admitted empty-context environment gives the third statement. Conversely, the two scope-zero premises and Theorem 15 turn the third statement into the actual bridge conversion certificate $`p\simeq_+q`$. The supplied carrier formation and endpoint typings form their identity type; the actual identity-introduction constructor gives the second statement with witness $`\mathrm{atom}(I)`$. That specific witness implies existence. $`\square`$
+
+This is a criterion with supplied typings and the specified raw-conversion proposition. It does not decide that proposition, arbitrary typing or general inhabitation. The converse proof uses the bridge, and is not asserted for unchanged $`\vdash_0`$, arbitrary open endpoints or a richer identity theory. Nor does the fixed witness bound the derivations that might type it: proof normalization and the size of type justification remain separate, as in section 4.1.
+
+The criterion concerns endpoint conversion. The extensional proof-canonicalization result of section 4.1 concerns conversion of a **supplied identity proof** to $`I`$ at its existing type. They are different statements. Conflating them would incorrectly import (10.13) into the extensional calculus.
+
+### 10.8 The same identity is positive in the extensional calculus
+
+The current twenty-rule system has an explicit proof of the **same** type $`B_{\mathrm{id}}`$, with the same carrier and endpoint atoms:
+
+```math
+[]\vdash_E\mathrm{atom}(I):B_{\mathrm{id}}.
+\tag{10.14}
+```
+
+Here is the finite construction. At a free type parameter $`\alpha`$, the original finite imports supply both $`I`$ and $`SKK`$ at $`\alpha\to\alpha`$, in the empty telescope and in the formed telescope $`x:\alpha`$. These are actual original derivations, not an assumed weakening theorem for arbitrary extensional proofs. Application gives both scalar endpoints at $`\alpha`$.
+
+Expose the closed atom $`SKK`$ by two bridge instances. Applying it to the still-open variable $`x`$, the polynomial $`S`$ and $`K`$ contractions give
+
+```math
+\mathrm{atom}(I)x\simeq_+x,
+\qquad
+\mathrm{atom}(SKK)x
+\simeq_+Kx(Kx)
+\simeq_+x.
+```
+
+No closed-packing converse is applied to the open variable. Identity introduction therefore proves the scalar identity with proof atom $`I`$. Product introduction abstracts this proof to the literal polynomial $`KI`$, because the actual compiler's absent-variable branch has priority. The resulting typed section is
+
+```math
+[]\vdash_E KI:
+\Pi x:\alpha.\mathrm{Id}_\alpha
+\bigl(\mathrm{atom}(I)x,\mathrm{atom}(SKK)x\bigr).
+```
+
+One product-extensionality instance, with the endpoint typings and all formed/scoped family premises, gives
+
+```math
+[]\vdash_E I:
+\mathrm{Id}_{\alpha\to\alpha}
+\bigl(\mathrm{atom}(I),\mathrm{atom}(SKK)\bigr).
+```
+
+The two original finite polymorphic typings supply the outer endpoint premises at $`A_{\mathrm{id}}`$. The body proof is over the fresh type parameter, and the type-weakened empty telescope is still empty. One universal-extensionality instance gives (10.14). All endpoint and proof polynomials are scope-zero, and the arrow body has the required type scope. This is exactly one product and one universal extensionality application. [Literal finite witness with every guard][extensional-identity-witness]
+
+Raw conversion has not changed. The raw-indexed identity
+$`\mathrm{Id}_{\mathrm{Raw}}(\mathrm{atom}(I),\mathrm{atom}(SKK))`$
+is formed in $`E`$ but has no inhabitant: Theorem 5's faithful Raw interpretation would turn any such closed derivation into raw conversion between the two distinct normal forms. Proof erasure sends the proof of (10.14) to Raw; it does not move its endpoints to a new identity carrier. Thus (10.14) is increased typed identity power, not a new raw equation. [Exact distinction and retained older negatives][extensional-identity-consequences]
+
+This also exhibits the failure of the saturated-set interpretation to validate the added extensionality rules. Its product membership admits the endpoint functions and the pointwise identity section: at each argument their applications convert. Its product **relation**, however, additionally requires raw conversion of the function sources themselves. That requirement rejects $`I`$ and $`SKK`$. The eighteen-rule soundness theorem therefore has no unnoticed two-case extension to $`E`$.
+
+Section 6's identity between $`I`$ and $`SKK`$ at the Church carrier $`N`$ is another positive extensional result. The carrier there is different from $`A_{\mathrm{id}}`$. Construction (10.14) removes any need to explain the older separation merely by changing carriers: at the very same $`A_{\mathrm{id}}`$ and endpoints, the bridge-only and extensional proof systems give different inhabitation answers.
+
+### 10.9 What a proof translation must preserve
+
+**Proposition 18 — strict inclusions and distinct transfer obstructions.** As relations on literal context–polynomial–type triples,
+
+```math
+\{\Gamma\vdash_0p:C\}
+\subsetneq
+\{\Gamma\vdash_+p:C\}
+\subsetneq
+\{\Gamma\vdash_Ep:C\}.
+```
+
+The first strictness concerns a supplied representation. The second also separates existence of **any** proof at one fixed closed identity type.
+
+**Proof.** The inclusions were established in section 10.1. For the first, $`\mathrm{atom}(t)`$ is typed at $`A_{\mathrm{id}}`$ in the bridge-only system by packing, while Theorem 14 excludes the same original judgment. For the second, (10.14) inhabits $`B_{\mathrm{id}}`$ in $`E`$, while Theorem 17 and raw $`I/SKK`$ separation exclude every bridge-only proof there. $`\square`$
+
+This proposition composes inherited results; it is not a new discovery of either counterexample. Its usefulness is to distinguish two exact translation contracts.
+
+| Proposed transfer | What the displayed witness establishes |
+|---|---|
+| Every bridge-only derivation becomes an original derivation preserving the same context, proof polynomial and type | Impossible: the opaque $`\mathrm{atom}(t):A_{\mathrm{id}}`$ judgment is a counterexample. |
+| A bridge-only result may choose a different original polynomial with the same evaluated raw program | The opaque witness alone does not exclude this: its exposed $`w_t`$ is exactly such a representation. No general translation is constructed here. |
+| Every closed $`E`$ identity proof becomes some bridge-only proof at the same context, carrier, endpoint polynomials and identity type | Impossible, even when the output proof polynomial may change arbitrarily: $`B_{\mathrm{id}}`$ has no bridge-only inhabitant. |
+| The same identity-preserving transfer from $`E`$ to the original calculus | Impossible for the same $`B_{\mathrm{id}}`$, by original-to-bridge inclusion. |
+| A translation changes the type representation, identity endpoints, source rules or semantics | Outside these preservation contracts; no blanket impossibility is inferred. |
+
+The two negative identity-transfer statements require no assumption that a translation is computable. A total translation satisfying the stated preservation conditions would have to output an inhabitant of an empty source-judgment fiber. Allowing a different proof polynomial cannot do that. Conversely, changing the meaning or representation of the target identity is a different obligation and is not ruled out by this argument.
+
+These boundaries explain why a shared semantic interpretation does not itself supply a certificate translation. Old F/G validity passes across literal evaluation equality, yet original typing of the supplied opaque atom fails. Adding the bridge repairs that representation transfer at supplied closed typings, while old F/G validity still does not yield any bridge-only proof of $`B_{\mathrm{id}}`$. Adding typed extensionality supplies that particular identity but does not yield unrestricted semantic completeness: the exact compiler identity of sections 8–9 remains independent in $`E`$. Each statement uses its own unchanged source judgment and its own explicit input conditions.
+
+The scientific contribution of this section is the reconciled account: whole-label preservation and its exact fixity condition, closed bridge transport, the failure of the isolated identity-predicate shortcut, the full eighteen-rule model with both $`J`$ coordinates, and the resulting asymmetric translation consequences. The opaque and bridge results remain inherited from their original proofs; the old residual stop is resolved by the later intensional proof; the positive extensional witness is independently owned prior work. The comparison and organization are composed exposition. No new formal execution, completeness theorem, calculus adoption or historical-priority claim follows.
+
+
+
 ## References and formal sources
 
 ### Primary mathematical literature
@@ -897,6 +1693,10 @@ The following references bind this exposition to the public source edition at Gi
 - [Concrete operational model][case-operational]; [homogeneous closure][homogeneous]; [concrete universe][universe]; [finite closure controls][closure-controls]; [whole-source homogeneous soundness][henkin-soundness]; [exact compiler counterexample][counterexample]; [scalar noninhabitation][noninhabitation]; [literal identity consequence][identity-negative]; [mixed-PER control][mixed-control].
 - [Scalar no-negation proof][no-negation]; [independent exact-identity controls][identity-control]; [certificate grammar][certificate-syntax]; [certificate separation][certificate-separation].
 - [Independent scalar-fusion review][fusion-review] and [independent homogeneous-model review][model-review], with [the final bounded review reconciliation][final-review] and [exact identity delta review][identity-review]. These report historical source and kernel checks at their stated scopes. This exposition does not claim to have rerun them or to have rebuilt their inherited dependency closures.
+
+- [Whole-label opaque representation proof][opaque-source]; [exact hypothetical bridge][bridge-source]; [the historical residual identity argument][residual-source]; [the later complete intensional interpretation and closed criterion][intensional-source]. These four public written bodies retain their original ordinary-proof status, inherited prerequisites and historical order. The residual stop is resolved by the later proof.
+- [Original eighteen-rule declarations][original-syntax]; [exact bridge declarations and conversion theorem][bridge-definitions]; [finite import grammar][finite-grammar]; [literal polynomial operations][original-polynomials]; [original F/G predicates][original-predicates], [simultaneous soundness induction][original-soundness] and [identity/J semantic helpers][original-term-lemmas].
+- [Inherited normalization witness][normalization-boundary], [finite-normalization premise][normalization-premise], [raw confluence and normal-form separation][confluence-premise], and [the discarded-loop cycle][discarded-loop-source]; [later intensional theorem component][intensional-theorems]; [exact positive extensional identity witness][extensional-identity-witness] and [its distinct raw and old-calculus consequences][extensional-identity-consequences]. Inspection of these public definitions and specified proof premises is separate from a new Lean run or a complete recheck of their imported closures.
 
 [reynolds]: https://www.cs.cmu.edu/~crary/819-f09/Reynolds83.pdf
 [hrr]: https://www.dpmms.cam.ac.uk/~jmeh1/Research/Oldpapers/hrr90.pdf
@@ -943,3 +1743,22 @@ The following references bind this exposition to the public source edition at Gi
 [cross-typing]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/10051b9df50fce7fef173bbe1cffe111cdc70529a29386753b8c872bf4789ba8/CrossTypedObserver.lean
 [henkin-transport]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/3e3e4bcbea2c19c58df20cb7f83c7e5e9a41e7a4c9dcfab6085e09fc2025987a/SourceTransport.lean
 [identity-review]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/research/t20-v6-20261012/sources/0bccb4776a93509bfb004dbf08d1b7da89b8ae7637d6b066757f9b662f810047/REVIEW.md
+
+[opaque-source]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/b99fb16058f99ce5db66dd7a02e7515ede5157a002a6e76fc29d0f1bd8d65236/OPAQUE_ATOM_COMPLETENESS_PROOF_v3.md
+[bridge-source]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/02f2ba85547a0798288ec5d307f06fa5b239b8cb9e0faa4b7c7a6ba303097bbe/HYPOTHETICAL_ATOM_APPLICATION_BRIDGE_v2.md
+[residual-source]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/7ff286710275b8873e2847ef21b9a30e70c20f465b6bb680569b8f107b484f3e/RESIDUAL_IDENTITY_COMPLETENESS_FEASIBILITY_v1.md
+[intensional-source]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/5d58087eab7e247235ec159abc17f6dc6d5779dc7722518f06d5040b25414e3a/Intensional_Identity_Separation_and_Closed_Identity_Conversion.md
+[original-syntax]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/633c8de0c13b7fd2972710836ed6ab6bd85f7b86145e7c33a32fc38a7e6ddc46/AllSyntax.lean
+[bridge-definitions]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/37a270542756fe1f93e7cd07b12a777cd5977c17b97f656edbd358625c4d6333/IntensionalIdentityBridge.lean
+[finite-grammar]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/f75306d1a29cd76385058ca1a819910b1f635a63369d807d484ab6db981a0042/FiniteBridge.lean
+[original-polynomials]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/57bef4972e782bb85bc9f267bd899afdd09f65ebad610b107348db42b2b3b8b8/P01Polynomials.lean
+[original-predicates]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/8a8986200e9f4a6713238b77a1f23605201ee61552e55e72a2165eef05bab1d3/AllPredicates.lean
+[original-soundness]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/e5eabefb6f4d09efe592a53c2b9425707632d09f53241f7b4d0a5c30637bf4a7/AllSoundness.lean
+[original-term-lemmas]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/6158c711c97f461c0661fdd126a4458be3fabc853ca8bb4d059087e48406ce2e/AllTermLemmas.lean
+[normalization-boundary]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/dc41ea4ff297e4cd29501b1d1160195c2a1a4be2e91cbdd6f811bca1124152bc/PolymorphicNormalizationBoundary.lean
+[normalization-premise]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/9b1a18c1f189774d22858ba56bb77aecd5fc7506a08195c94fbb1873158a0e7e/P01Candidates.lean
+[confluence-premise]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/682ad4ce3fda2b69601f267e6c7cfd729d8004fbfdd95c60f12d24fb59bc303e/P01Confluence.lean
+[discarded-loop-source]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/13c3b0ba7aa7e57fd13bf1d61d28ef842755d5f5103ef9598d18cc885f4e2ca2/NormalisationAndNumerals.lean
+[intensional-theorems]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/48c216af205451ec75f6d761f0dbee97a0ba279dfaa386cfd125676b96d6975c/IntensionalIdentityTheorems.lean
+[extensional-identity-witness]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/0a4a840f4256c0586c6d3443009889887720d82a2afa1f93150c8eea058e9b29/ExtensionalRepairWitness.lean
+[extensional-identity-consequences]: https://github.com/theislampill/orthemology/blob/a7ff0e33d1a299db640041c46b1af81ca70851f6/experiments/orthemology-v5-successors/source-store/4cd35d7e986496a7306ee239d9b4f3a24666a7e3979f46d46700ca49a175fc51/ExtensionalRepairTheorems.lean

@@ -601,9 +601,9 @@
       "key": "scientific-consolidation-review",
       "path": "docs/scientific-consolidation-review.md",
       "mode": "100644",
-      "git_oid": "09c5939a7b612f8b0efd059c032784d1bb1918fe",
-      "bytes": 216737,
-      "sha256": "bba02eafcd0881f0a4f4569d216f5b78ad1742ed3e6f652e407bb9081b8e73b0",
+      "git_oid": "8860f4fb37cb915e57037b42e22f0de2469c1e8e",
+      "bytes": 230703,
+      "sha256": "50747f22c4f84052c676f85183f50b5ec514e1532925dbd78253a07bc990b45b",
       "role": "review",
       "work_keys": [
         "received-actuality-and-intrinsic-necessity",
@@ -638,9 +638,9 @@
       "key": "consolidated-encodings-and-witnesses",
       "path": "logic/encodings-and-witnesses.md",
       "mode": "100644",
-      "git_oid": "0e684f94200b6d15c73ee5f629094fb0775d7dfb",
-      "bytes": 85716,
-      "sha256": "8f452aa6e6516779c646e5484523fe40a8d43f2a4ea525a8b86ed81197fb3e98",
+      "git_oid": "e3e48b5655167cc829a4cf16449afd7ba666f96b",
+      "bytes": 151105,
+      "sha256": "1c15fb30066720a73f9367fc7c3db7caeb380d8d81bd78378cfc36e797998241",
       "role": "work-source",
       "work_keys": [
         "encodings-and-witnesses"
