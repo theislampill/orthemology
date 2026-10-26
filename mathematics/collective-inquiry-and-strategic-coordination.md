@@ -2011,7 +2011,7 @@ C(B,s,a,y)=\{\eta\in B:P_\eta(s,a,y)>0\}.
 The true model remains live almost surely. A supplied hard menu $`\Gamma(B,s)\subseteq A`$ may depend arbitrarily on the live support and visible state; it need not vary monotonically with B. An empty menu cannot sustain an infinite lawful continuation. As in §7.13, legality applies at every feasible action-consistent history from the declared initial condition. The policy has no extra information correlated with θ. Define its total number of errors by
 
 ```math
-\operatorname{Bad}_\theta
+\mathrm{Bad}_\theta
  =\sum_{t\ge0}\mathbf 1\{(S_t,A_t)\notin G_\theta\}.
 ```
 
@@ -2040,8 +2040,8 @@ Let $`T_\theta(W)`$ be the union of qualifying component states, and let $`E_\th
 **Theorem (stateful restoration).** For any nonempty initial support B and state s, the following conditions are equivalent:
 
 1. The state s belongs to *W*<sub>*B*</sub>.
-2. One common lawful history policy has finite $`\operatorname{Bad}_\theta`$ almost surely for every θ in B.
-3. One common lawful history policy has finite $`\mathbb E_\theta\operatorname{Bad}_\theta`$ for every θ in B.
+2. One common lawful history policy has finite $`\mathrm{Bad}_\theta`$ almost surely for every θ in B.
+3. One common lawful history policy has finite $`\mathbb E_\theta\mathrm{Bad}_\theta`$ for every θ in B.
 4. A computable deterministic common history policy has the property in 3.
 
 The policy is chosen before the universal model quantifier. Condition 4 uses the exact finite rational input. Its policy may ignore any prescribed common seed, including a constant seed. The original construction for 1 implies 3 uses fresh independent private action choices; the deterministic refinement below removes that additional resource requirement. The theorem supplies existence of a suitable finite-expectation policy, not finite expectation for every almost-surely winning policy. It does not require a finite observed certificate that no more errors will occur. [44–46]
@@ -2161,7 +2161,7 @@ For operation, a closed augmented class avoiding a possible exit would project t
 Per-row tapes remain independent with their actual row laws under this deterministic action schedule. The deterministic-count concentration, selected-count union, completed-event stopping argument and candidate-cycle proof therefore remain valid with L replaced by $`L_{\rm rr}`$. The resulting policy has
 
 ```math
-\mathbb E_\theta\operatorname{Bad}_\theta
+\mathbb E_\theta\mathrm{Bad}_\theta
  \le\frac{|B|(|B|+1)L_{\rm rr}(J_{\rm nav}+J_{\rm op})}
                {2(1-\varepsilon)}.
 ```
