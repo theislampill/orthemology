@@ -6,6 +6,7 @@ from __future__ import annotations
 import sys
 import csv
 import hashlib
+import os
 import re
 import subprocess
 from collections import Counter
@@ -211,6 +212,161 @@ V11_TERMINAL_MAP_FIELDS = {
 V11_GENERATED_SOURCE_UNIVERSE_NAMES = set(V11_TERMINAL_MAP_FIELDS) | {
     "AR8R-SOURCE-UNIVERSE-RECEIPT-V2.yaml",
 }
+
+
+# Finite byte-identical aliases examined for duplicate retirement.
+# Historical import counts, proposal boundaries and source manifests stay fixed.
+PMR007_DEEP_PREFIX = 'docs/project-closure/ar8r-v11/post-merge-proposals/pmr007-deep-a-ap'
+PMR007_DEEP_HISTORY = 'a7ff0e33d1a299db640041c46b1af81ca70851f6'
+PMR007_DEEP_MANIFEST_SHA256 = 'd4a4cf397835d1b0e4de2174e368c0953f10ac9dbfd70e0d8a595c00fa563183'
+# These six distinct historical members remain physically required. The root
+# SHA256SUMS is separately pinned and is not one of its own 830 member rows.
+PMR007_DEEP_DISTINCT_MEMBERS = frozenset({
+    'ARTIFACT_MANIFEST.json',
+    'OWNER_DECISIONS_REQUIRED.md',
+    'PRIVATE_DATA_EXCLUSION_REPORT.md',
+    'PROPOSED_LEAN_AND_FORMALIZATION_MAP/PMR007_FORMALIZATION_MAP.yaml',
+    'PROPOSED_RESULT_INDEX.yaml',
+    'README.md',
+})
+
+
+def _pmr007_deep_regular_file(repo: Path, relative: str) -> Path:
+    """Resolve a public snapshot member without accepting a symlink component."""
+    parts = relative.split("/")
+    if any(part in ("", ".", "..") for part in parts) or "\\" in relative:
+        raise ValueError("pmr007-deep-unsafe-member:" + relative)
+    path = repo
+    for part in parts:
+        path = path / part
+        if path.is_symlink():
+            raise ValueError("pmr007-deep-symlink-member:" + relative)
+    if not path.is_file():
+        raise ValueError("pmr007-deep-missing-member:" + relative)
+    return path
+
+
+def _pmr007_deep_original_members(repo: Path) -> dict[str, str]:
+    path = _pmr007_deep_regular_file(repo, PMR007_DEEP_PREFIX + "/SHA256SUMS")
+    data = path.read_bytes()
+    if hashlib.sha256(data).hexdigest() != PMR007_DEEP_MANIFEST_SHA256:
+        raise ValueError("pmr007-deep-original-manifest-changed")
+    members = {}
+    for line in data.decode("utf-8").splitlines():
+        digest, relative = line.split(maxsplit=1)
+        if relative in members or re.fullmatch(r"[0-9a-f]{64}", digest) is None:
+            raise ValueError("pmr007-deep-original-manifest-malformed")
+        members[relative] = digest
+    if len(members) != 830:
+        raise ValueError("pmr007-deep-original-manifest-coverage-mismatch")
+    return members
+
+
+def _pmr007_deep_duplicate_map(members: dict[str, str]) -> dict[str, str]:
+    """Derive only the reviewed 824-copy class from the fixed original manifest."""
+    if not PMR007_DEEP_DISTINCT_MEMBERS <= set(members):
+        raise ValueError("pmr007-deep-distinct-member-set-mismatch")
+    relatives = set(members) - PMR007_DEEP_DISTINCT_MEMBERS
+    if len(relatives) != 824:
+        raise ValueError("pmr007-deep-duplicate-class-coverage-mismatch")
+    canonical_prefix = PMR007_DEEP_PREFIX.replace("a-ap", "a-bk")
+    return {PMR007_DEEP_PREFIX + "/" + relative:
+            canonical_prefix + "/" + relative for relative in sorted(relatives)}
+
+
+def pmr007_deep_duplicate_paths(repo: Path = ROOT) -> set[str]:
+    """Qualify the finite redundant aliases against current copies and Git.
+
+    The 830-entry import manifest remains historical evidence. Each member
+    of the finite class has the same-relative retained A-BK body and context,
+    including scientific code and negative evidence; no new replay is claimed.
+    Original paths, modes and blobs remain at the pinned ordinary Git revision.
+    """
+    repo = Path(repo)
+    members = _pmr007_deep_original_members(repo)
+    duplicates = _pmr007_deep_duplicate_map(members)
+    sizes = {}
+    for alias, canonical in duplicates.items():
+        expected = members[alias.removeprefix(PMR007_DEEP_PREFIX + "/")]
+        current = _pmr007_deep_regular_file(repo, canonical)
+        data = current.read_bytes()
+        if current.stat().st_mode & 0o111:
+            raise ValueError("pmr007-deep-canonical-mode-changed:" + canonical)
+        if hashlib.sha256(data).hexdigest() != expected:
+            raise ValueError("pmr007-deep-canonical-hash-mismatch:" + canonical)
+        sizes[alias] = len(data)
+        target = repo / alias
+        if target.exists() or target.is_symlink():
+            target = _pmr007_deep_regular_file(repo, alias)
+            if target.stat().st_mode & 0o111:
+                raise ValueError("pmr007-deep-alias-mode-changed:" + alias)
+            if hashlib.sha256(target.read_bytes()).hexdigest() != expected:
+                raise ValueError("pmr007-deep-alias-hash-mismatch:" + alias)
+
+    # These native Git operations inspect only the finite public path set and
+    # object metadata. They do not execute source files, fetch, or read holds.
+    environment = dict(os.environ, GIT_NO_LAZY_FETCH="1", GIT_TERMINAL_PROMPT="0")
+    command = ["git", "--no-replace-objects", "-c", "core.fsmonitor=false"]
+    result = subprocess.run(
+        command + ["ls-tree", "-r", "-z", "--full-tree", PMR007_DEEP_HISTORY, "--",
+                   *sorted(set(duplicates) | set(duplicates.values()))],
+        cwd=repo, capture_output=True, check=False, env=environment,
+    )
+    if result.returncode:
+        raise ValueError("pmr007-deep-original-git-history-unavailable")
+    originals = {}
+    for raw in result.stdout.split(b"\0"):
+        if raw:
+            metadata, path = raw.split(b"\t", 1)
+            originals[path.decode("utf-8")] = tuple(metadata.decode("ascii").split())
+    objects = {}
+    for alias, canonical in duplicates.items():
+        original = originals.get(alias)
+        if (original is None or original[:2] != ("100644", "blob")
+                or originals.get(canonical) != original):
+            raise ValueError("pmr007-deep-original-git-identity-mismatch:" + alias)
+        objects[original[2]] = str(sizes[alias])
+    result = subprocess.run(
+        command + ["cat-file", "--batch-check"], cwd=repo,
+        input=("\n".join(sorted(objects)) + "\n").encode("ascii"),
+        capture_output=True, check=False, env=environment,
+    )
+    expected = [[oid, "blob", objects[oid]] for oid in sorted(objects)]
+    if result.returncode or [line.split() for line in result.stdout.decode("ascii").splitlines()] != expected:
+        raise ValueError("pmr007-deep-original-git-objects-unavailable")
+    return set(duplicates)
+
+
+def validate_pmr007_deep_snapshot(repo: Path = ROOT) -> list[str]:
+    """Check the exact import and only its specifically qualified duplicates."""
+    repo = Path(repo)
+    try:
+        members = _pmr007_deep_original_members(repo)
+        duplicates = pmr007_deep_duplicate_paths(repo)
+    except (ValueError, OSError, UnicodeError) as exc:
+        return [str(exc)]
+    issues = []
+    missing = set()
+    snapshot = repo / PMR007_DEEP_PREFIX
+    for relative, digest in members.items():
+        path = snapshot / relative
+        if not path.exists() and not path.is_symlink() and PMR007_DEEP_PREFIX + "/" + relative in duplicates:
+            missing.add(relative)
+            continue
+        try:
+            target = _pmr007_deep_regular_file(repo, PMR007_DEEP_PREFIX + "/" + relative)
+            if hashlib.sha256(target.read_bytes()).hexdigest() != digest:
+                issues.append("pmr007-deep-member-hash-mismatch:" + relative)
+        except (ValueError, OSError) as exc:
+            issues.append(str(exc))
+    actual = {
+        path.relative_to(snapshot).as_posix()
+        for path in snapshot.rglob("*")
+        if (path.is_file() or path.is_symlink()) and path != snapshot / "SHA256SUMS"
+    }
+    if actual != set(members) - missing:
+        issues.append("pmr007-deep-internal-sha256sums-coverage-mismatch")
+    return issues
 
 
 def _is_lower_sha256(value: Any) -> bool:
@@ -2838,29 +2994,7 @@ def validate_packet() -> list[str]:
             PMR007_DEEP_CORRECTION.read_text(encoding="utf-8"),
         )
     )
-    deep_sums = PMR007_DEEP_PROPOSAL / "SHA256SUMS"
-    deep_listed: set[str] = set()
-    if not deep_sums.is_file():
-        issues.append("pmr007-deep-missing-internal-sha256sums")
-    else:
-        for line in deep_sums.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            digest, relative = line.split(maxsplit=1)
-            relative = relative.lstrip("*").replace("\\", "/")
-            target = PMR007_DEEP_PROPOSAL / relative
-            deep_listed.add(relative)
-            if not target.is_file():
-                issues.append(f"pmr007-deep-missing-checksummed-member:{relative}")
-            elif hashlib.sha256(target.read_bytes()).hexdigest() != digest:
-                issues.append(f"pmr007-deep-member-hash-mismatch:{relative}")
-        deep_actual = {
-            path.relative_to(PMR007_DEEP_PROPOSAL).as_posix()
-            for path in PMR007_DEEP_PROPOSAL.rglob("*")
-            if path.is_file() and path.name != "SHA256SUMS"
-        }
-        if len(deep_listed) != 830 or deep_listed != deep_actual:
-            issues.append("pmr007-deep-internal-sha256sums-coverage-mismatch")
+    issues.extend(validate_pmr007_deep_snapshot(ROOT))
 
     deep_bk_receipt = load_yaml(PMR007_DEEP_BK_RECEIPT)
     deep_bk_execution = load_yaml(PMR007_DEEP_BK_EXECUTION)

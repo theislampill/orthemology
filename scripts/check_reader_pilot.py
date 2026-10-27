@@ -20,6 +20,10 @@ from urllib.parse import unquote, urlsplit
 from markdown_it import MarkdownIt
 import yaml
 
+from validate_ar8r_reconciliation import (
+    PMR007_DEEP_PREFIX, pmr007_deep_duplicate_paths,
+)
+
 from resolve_t20_v6_source import (
     HISTORICAL_PROSE, HISTORICAL_PROSE_PUBLIC_PATHS, HISTORICAL_PROSE_REVISION,
     historical_source_bytes, HISTORICAL_PROSE_REVISIONS, HISTORICAL_PROSE_DISPOSITIONS,
@@ -452,6 +456,10 @@ REFACTOR_EDIT_PATHS = {
     "README.md", "STATUS.md", "CONTRIBUTING.md",
     ".github/workflows/validate.yml", ".github/workflows/reader-refactor-snapshot.yml",
     "scripts/reader_census.py", "scripts/check_reader_pilot.py",
+    # Existing integrity owners for the finite A-AP duplicate retirement.
+    "scripts/validate_ar8r_reconciliation.py", "tests/test_ar8r_v11_reconciliation.py",
+    "docs/project-closure/ar8r-v11/SHA256SUMS",
+    "docs/project-closure/ar8r-v11/post-merge-proposals/PMR007-DEEP-A-AP-ADOPTION-BOUNDARY-CORRECTION.md",
     "tests/test_reader_census.py", "tests/test_reader_pilot.py",
     "tests/test_internal_references.py",
     # Exact existing integrity owners changed for the finite history contract;
@@ -697,6 +705,7 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
     """
     errors = []
     editable = REFACTOR_EDIT_PATHS | set(admitted_paths)
+    duplicate_paths = None
     for cached in (True, False):
         result = readonly_git_diff(repo,
             ["git", "diff", *(["--cached"] if cached else []),
@@ -711,11 +720,20 @@ def check_corpus_currentness(repo, baseline, admitted_paths=(), historical_paths
                 raise ValueError("malformed tracked change")
         except (UnicodeError, ValueError):
             return ["corpus-currentness: a tracked change has an unrepresentable path or status"]
+        if duplicate_paths is None and any(
+                status == "D" and path.startswith(PMR007_DEEP_PREFIX + "/")
+                for status, path in zip(values[::2], values[1::2])):
+            try:
+                duplicate_paths = pmr007_deep_duplicate_paths(Path(repo))
+            except (ValueError, OSError, UnicodeError) as exc:
+                errors.append("corpus-currentness: duplicate evidence: " + str(exc))
+                duplicate_paths = set()
         errors.extend("corpus-currentness: " + path +
                       " requires source-baseline and work/support disposition review"
                       for status, path in zip(values[::2], values[1::2])
                       if path not in editable and not
                       ((status == "D" and path in HISTORICAL_PROSE and path in historical_paths)
+                        or (status == "D" and path in (duplicate_paths or ()))
                         or (status == "M" and path in {MEDIATOR_GUIDE, *TYPED_GUIDES}
                             and path in navigation_paths)))
     return list(dict.fromkeys(errors))
